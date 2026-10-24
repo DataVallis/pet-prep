@@ -13,6 +13,7 @@ import { BEHAVIOUR_KINDS, PARENT_BEHAVIOUR_STRINGS, type BehaviourKind } from '@
 import { playTimelineText } from '@/modules/play/play';
 import { hasGroomingRoutine } from '@/modules/species/species';
 import { readReportSocialisation, socialisationTimelineText, type ReportSocialisation } from '@/modules/socialisation/socialisation';
+import { CARE_TASKS, careTaskTimelineText, readCareReminderReport, readCareReminders, type CareReminder, type CareReminderReportRow, type CareTaskKey } from '@/modules/careTasks/careTasks';
 import { t, tSpecies } from '@/i18n';
 import { strings } from '@/i18n/strings';
 
@@ -26,9 +27,20 @@ export type LightReason = 'game_over' | 'phase3_alarm' | 'fell_ill_today' | 'mis
  * `litter_change` (weekly), `grooming` (Maine Coon / Ragdoll / British Shorthair / Siberian / Norwegian Forest Cat / Bengal, weekly slots;
  * M5-R13: also a brushed dog — shown for a dog once the server counted a slot).
  */
-export type RoutineType = 'feed' | 'water' | 'clean' | 'walk' | 'training' | 'play' | 'litter_scoop' | 'litter_change' | 'grooming';
+export type RoutineType =
+  | 'feed'
+  | 'water'
+  | 'clean'
+  | 'walk'
+  | 'training'
+  | 'play'
+  | 'litter_scoop'
+  | 'litter_change'
+  | 'grooming'
+  // M5-R14 / R15 / R19 / R20: the child's breed care tasks (scored like grooming).
+  | CareTaskKey;
 
-export const ROUTINE_TYPES: readonly RoutineType[] = ['feed', 'water', 'clean', 'walk', 'training', 'play', 'litter_scoop', 'litter_change', 'grooming'];
+export const ROUTINE_TYPES: readonly RoutineType[] = ['feed', 'water', 'clean', 'walk', 'training', 'play', 'litter_scoop', 'litter_change', 'grooming', ...CARE_TASKS];
 
 /** The cat routine types (a dog's report never shows them unless the server counted one — M5-R13: a brushed dog's `grooming`). */
 export const CAT_ROUTINE_TYPES: readonly RoutineType[] = ['play', 'litter_scoop', 'litter_change', 'grooming'];
@@ -146,6 +158,8 @@ export interface ChildReport {
    * shown as its own row, never part of the score; null = none in the period / an older server.
    */
   socialisation: ReportSocialisation | null;
+  /** M5-R18 / R20: groomer / bath reminders of the report period (never scored). */
+  care_reminders: CareReminderReportRow[];
 }
 
 export type ReportDays = 7 | 30 | 84;
@@ -356,6 +370,8 @@ export function readChildReport(value: unknown): ChildReport | null {
         : [],
     ),
     socialisation: readReportSocialisation(value.socialisation),
+    // M5-R18 / R20: the parent's groomer / bath reminders (never scored); older servers → [].
+    care_reminders: readCareReminderReport(value.care_reminders),
   };
 }
 
@@ -368,8 +384,9 @@ export const ROUTINE_LABELS: Readonly<Record<RoutineType, string>> = strings('fa
 
 const DATE = strings('family', 'date');
 
-function hasTotals(t: TypeTotals): boolean {
-  return t.expected > 0 || t.done > 0 || t.missed > 0 || t.pending > 0;
+function hasTotals(t: TypeTotals | undefined): boolean {
+  // A totals map without a type (built before M5-R14 added the care types) has none.
+  return t !== undefined && (t.expected > 0 || t.done > 0 || t.missed > 0 || t.pending > 0);
 }
 
 /**
@@ -393,6 +410,8 @@ export function reportRoutineTypes(
     if (type === 'walk') return !cat;
     if (type === 'grooming') return cat && hasGroomingRoutine(breed);
     if (CAT_ROUTINE_TYPES.includes(type)) return cat;
+    // M5-R14 / R15 / R19 / R20: only when the server counted one (a breed with the task).
+    if ((CARE_TASKS as readonly string[]).includes(type)) return false;
     return true;
   });
 }
@@ -538,6 +557,9 @@ export function activityText(
   // M5-R17: "Nova izkušnja: nov zvok · Mia" (value = the experience code).
   const socialised = socialisationTimelineText(entry.activity_type, entry.actor_nickname, entry.value ?? null);
   if (socialised !== null) return socialised;
+  // M5-R14 / R15 / R18 / R19 / R20: "Ščetkanje zob · Mia", "Pasji frizer · Mama".
+  const careTask = careTaskTimelineText(entry.activity_type, entry.actor_nickname);
+  if (careTask !== null) return careTask;
   // M5-T12: "Mama Ana je vpisal(a) sprehod" — a parent's logged walk; no name → "Starš".
   if (entry.activity_type === 'parent_logged_walk') {
     return t('family:parentLoggedWalk', { name: entry.actor_nickname ?? t('family:parentFallback') });

@@ -1,0 +1,220 @@
+{
+  "common": {
+    "starting": "Kuža se pripravlja …",
+    "finishing": "Shranjujem …",
+    "again": "Poskusi znova",
+    "done": "Končano",
+    "noPenalty": "Nič hudega — nič slabega se ne zgodi. Takoj lahko poskusiš znova.",
+    "stored": "To je že shranjeno. Tako je šlo.",
+    "progress": "{{done}} / {{min}}",
+    "count": "Prešteto: {{strokes}}",
+    "stepA11y": "Korak {{n}}",
+    "reasons": {
+      "too_few_strokes": "Tokrat še ni bilo dovolj. Poskusi še enkrat — počasi in nežno.",
+      "not_spread": "Vsak korak potrebuje malo nege. Naslednjič vztrajaj do konca.",
+      "too_uniform": "Naredi to z roko, lepo mirno. Poskusi znova.",
+      "unknown": "Tokrat se ni štelo. Poskusi znova."
+    },
+    "brush": {
+      "holdHint": "Drži prst na kužku ali drži gumb spodaj.",
+      "swipeHint": "Nežno podrsaj s prstom sem in tja.",
+      "bar": "Opravljeno: {{percent}} %",
+      "clean": "Vse je čisto! Še trenutek …",
+      "action": "Očisti",
+      "holdA11yHint": "Drži za nadaljevanje."
+    },
+    "nails": {
+      "hint": "Tapni vsak kremplj enkrat — samo čisto konico.",
+      "holdHint": "Drži gumb: pristriže kremplj za krempljem.",
+      "clawA11y": "Kremplj {{n}} od {{total}}",
+      "clawDoneA11y": "Kremplj {{n}} od {{total}}, pristrižen",
+      "next": "Pristriži naslednji kremplj",
+      "nextA11yHint": "Pristriže naslednji kremplj. Drži za nadaljevanje.",
+      "allDone": "Vsi kremplji so pristriženi! Še trenutek …",
+      "leftPaw": "Leva sprednja tačka",
+      "rightPaw": "Desna sprednja tačka"
+    }
+  },
+  "tasks": {
+    "tooth_brushing": {
+      "title": "Umij zobke",
+      "chipA11y": "Umij kužku zobke.",
+      "intro": "Kužkova pasma potrebuje ščetkanje zob. Ščetkaj nežno s pasjo zobno ščetko — nikoli ne uporabi zobne paste za ljudi.",
+      "start": "Začni ščetkati",
+      "stroke": "Podrgni enkrat",
+      "strokeA11y": "Enkrat podrgni zobke",
+      "stageA11y": "Kužkov gobček. Podrsaj, da mu umiješ zobke.",
+      "steps": {
+        "1": "Sprednji zobje",
+        "2": "Leva stran",
+        "3": "Desna stran"
+      },
+      "successTitle": "Bleščeči zobki!",
+      "success": "Bravo — čisti zobje pomagajo, da kuža ostane zdrav.",
+      "failTitle": "Skoraj"
+    },
+    "fold_cleaning": {
+      "title": "Obriši gubice",
+      "chipA11y": "Obriši kužku kožne gube.",
+      "intro": "Kužkova pasma ima kožne gube, ki jih je treba nežno očistiti. Obriši jih z vlažno krpico, nato jih osuši.",
+      "start": "Začni brisati",
+      "stroke": "Obriši enkrat",
+      "strokeA11y": "Enkrat obriši gubice",
+      "stageA11y": "Kužkov obraz. Podrsaj, da obrišeš gubice.",
+      "steps": {
+        "1": "Nad smrčkom",
+        "2": "Lička",
+        "3": "Osuši"
+      },
+      "successTitle": "Čisto in suho!",
+      "success": "Bravo — čiste in suhe gubice so dobre za kožo.",
+      "failTitle": "Skoraj"
+    },
+    "ear_cleaning": {
+      "title": "Očisti ušesa",
+      "chipA11y": "Preglej in očisti kužku ušesa.",
+      "intro": "Kužkova pasma potrebuje pregled in čiščenje ušes. Poglej noter, nato nežno obriši samo zunanji del — v uho nikoli ne potiskaj ničesar.",
+      "start": "Začni čistiti",
+      "stroke": "Obriši enkrat",
+      "strokeA11y": "Enkrat obriši uho",
+      "stageA11y": "Kužkova ušesa. Podrsaj, da jih očistiš.",
+      "steps": {
+        "1": "Levo uho",
+        "2": "Desno uho",
+        "3": "Še zadnji pogled"
+      },
+      "successTitle": "Čista ušesa!",
+      "success": "Bravo — obe ušesi sta pregledani in očiščeni.",
+      "failTitle": "Skoraj"
+    },
+    "nail_trim": {
+      "title": "Pristriži kremplje",
+      "chipA11y": "Pristriži kužku kremplje.",
+      "intro": "Kužkova pasma potrebuje striženje krempljev. V resnici pri tem pomaga odrasel: samo čisto konico, nikoli rožnatega dela.",
+      "start": "Začni striči",
+      "stroke": "Pristriži kremplj",
+      "strokeA11y": "Pristriži naslednji kremplj",
+      "stageA11y": "Kužkove sprednje tačke. Tapni vsak kremplj.",
+      "steps": {
+        "1": "Vsak kremplj",
+        "2": "Vsak kremplj",
+        "3": "Vsak kremplj"
+      },
+      "successTitle": "Kremplji so pristriženi!",
+      "success": "Bravo — s kratkimi kremplji je hoja udobna.",
+      "failTitle": "Skoraj"
+    }
+  },
+  "period": {
+    "open": {
+      "week": "Ta teden: {{done}} od {{goal}}",
+      "twoWeeks": "Ta dva tedna: {{done}} od {{goal}}",
+      "month": "Ta mesec: {{done}} od {{goal}}",
+      "longer": "Tokrat: {{done}} od {{goal}}"
+    },
+    "done": {
+      "week": "Ta teden je vse opravljeno ✓",
+      "twoWeeks": "Za ta dva tedna je vse opravljeno ✓",
+      "month": "Ta mesec je vse opravljeno ✓",
+      "longer": "Zaenkrat je vse opravljeno ✓"
+    }
+  },
+  "frequency": {
+    "daily": "vsak dan",
+    "perWeek_one": "enkrat na teden",
+    "perWeek_two": "dvakrat na teden",
+    "perWeek_few": "{{count}}-krat na teden",
+    "perWeek_other": "{{count}}-krat na teden",
+    "perMonth_one": "enkrat na mesec",
+    "perMonth_two": "dvakrat na mesec",
+    "perMonth_few": "{{count}}-krat na mesec",
+    "perMonth_other": "{{count}}-krat na mesec",
+    "everyMonths_one": "vsak mesec",
+    "everyMonths_two": "vsaka dva meseca",
+    "everyMonths_few": "vsake {{count}} mesece",
+    "everyMonths_other": "vsakih {{count}} mesecev",
+    "everyWeeks_one": "vsak teden",
+    "everyWeeks_two": "vsaka dva tedna",
+    "everyWeeks_few": "vsake {{count}} tedne",
+    "everyWeeks_other": "vsakih {{count}} tednov",
+    "everyDays_one": "vsak dan",
+    "everyDays_two": "vsaka dva dneva",
+    "everyDays_few": "vsake {{count}} dni",
+    "everyDays_other": "vsakih {{count}} dni"
+  },
+  "errors": {
+    "care_task_not_available": "Kuža tega zdaj ne potrebuje.",
+    "care_task_period_done": "Zaenkrat je vse opravljeno. Naslednjič {{when}}.",
+    "care_task_period_done_no_time": "Zaenkrat je vse opravljeno. Bravo!",
+    "care_task_done_today": "Za danes je opravljeno. Spet {{when}}.",
+    "care_task_done_today_no_time": "Za danes je opravljeno. Spet jutri.",
+    "care_task_quiet_hours": "Kuža zdaj spi. Pusti ga počivati — lahko to narediš {{when}}.",
+    "care_task_quiet_hours_no_time": "Kuža zdaj spi. Pusti ga počivati — lahko to narediš po mirnih urah.",
+    "care_task_session_active": "To s kužkom zdaj dela nekdo drug. Poskusi {{when}}.",
+    "care_task_session_active_no_time": "To s kužkom zdaj dela nekdo drug. Poskusi malo kasneje."
+  },
+  "heat": {
+    "title": "Prevroče za sprehod",
+    "text": "Poletje je in sredina dneva. Kuža s sploščenim obrazom težko prenaša vročino — na sprehod pojdita v hladnem jutru ali zvečer in vzemi vodo.",
+    "short": "☀️ Prevroče — sprehod zjutraj ali zvečer"
+  },
+  "guide": {
+    "child": {
+      "tooth_brushing": "Umij mu zobke {{frequency}}.",
+      "fold_cleaning": "Obriši mu kožne gube {{frequency}}.",
+      "ear_cleaning": "Preglej in očisti mu ušesa {{frequency}}.",
+      "nail_trim": "Pristriži mu kremplje {{frequency}}.",
+      "groomer_visit": "Odrasel ga pelje k pasjemu frizerju {{frequency}}.",
+      "bath": "Odrasel ga okopa {{frequency}}.",
+      "heat": "Poleti ({{months}}) ne na sprehod med {{from}} in {{to}} — pojdita v hladnem jutru ali zvečer."
+    },
+    "parent": {
+      "tooth_brushing": "Otrok mu umije zobe {{frequency}}.",
+      "fold_cleaning": "Otrok mu obriše kožne gube {{frequency}}.",
+      "ear_cleaning": "Otrok mu pregleda in očisti ušesa {{frequency}}.",
+      "nail_trim": "Otrok mu pristriže kremplje {{frequency}}.",
+      "groomer_visit": "Opomnik za vas: pasji frizer {{frequency}} — opravljeno potrdite v aplikaciji.",
+      "bath": "Opomnik za vas: kopanje {{frequency}} — opravljeno potrdite v aplikaciji.",
+      "heat": "Poleti ({{months}}) aplikacija pred sprehodom med {{from}} in {{to}} opozori na vročino."
+    },
+    "months": {
+      "north": "junij–avgust",
+      "south": "december–februar"
+    }
+  },
+  "parent": {
+    "title": "Opomniki za nego",
+    "note": "Opomniki za vas. Ne vplivajo na oceno skrbi.",
+    "tasks": {
+      "groomer_visit": "Pasji frizer",
+      "bath": "Kopanje"
+    },
+    "every": "Priporočeno {{frequency}}",
+    "dueBy": "Do {{when}}",
+    "doneOn": "Opravljeno ✓ {{when}}",
+    "confirm": "Opravljeno",
+    "confirmA11y": "Označi kot opravljeno za to obdobje",
+    "error": "Ni uspelo. Poskusite znova.",
+    "reportTitle": "Opomniki za nego (za starše)",
+    "status": {
+      "done": "opravljeno",
+      "open": "odprto",
+      "not_done": "ni opravljeno"
+    }
+  },
+  "report": {
+    "tooth_brushing": "Ščetkanje zob",
+    "fold_cleaning": "Brisanje gub",
+    "ear_cleaning": "Čiščenje ušes",
+    "nail_trim": "Striženje krempljev"
+  },
+  "timeline": {
+    "brushed_teeth": "Ščetkanje zob",
+    "cleaned_folds": "Brisanje gub",
+    "cleaned_ears": "Čiščenje ušes",
+    "trimmed_nails": "Striženje krempljev",
+    "parent_groomer_visit": "Obisk pasjega frizerja",
+    "parent_bathed_pet": "Kopanje",
+    "by": "{{text}} · {{child}}"
+  }
+}

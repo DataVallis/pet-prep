@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BillingController;
 use App\Http\Controllers\BreedController;
 use App\Http\Controllers\BreedFactController;
+use App\Http\Controllers\CareReminderController;
 use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\ChildAuthController;
 use App\Http\Controllers\ChildContractController;
@@ -189,6 +190,9 @@ Route::middleware(['auth:sanctum', 'ability:parent', 'throttle:api'])
         Route::get('billing', [BillingController::class, 'index']);
         Route::post('pets/{pet}/challenge/activate', [BillingController::class, 'activate']);
 
+        // M5-R18 / R20: the parent confirms a groomer visit / bath reminder (never scored).
+        Route::post('pets/{pet}/care-reminders', [CareReminderController::class, 'confirm']);
+
         // M2-01d Responsibility Certificate: finished challenges of the family; generate the PDF.
         Route::get('certificates', [CertificateController::class, 'index']);
         Route::post('certificates/{certificate}/generate', [CertificateController::class, 'generate'])
@@ -267,6 +271,9 @@ Route::middleware(['auth:sanctum', 'ability:child', 'throttle:api'])
             Route::post('pet/scratching/finish', [ChildPetController::class, 'finishScratching']);
             // M5-R17 puppy socialisation: the weekly "new experience".
             Route::post('pet/socialisation', [ChildPetController::class, 'socialise']);
+            // M5-R14 / R15 / R19 / R20 breed care mini-games (teeth, folds, ears, nails).
+            Route::post('pet/care-task/start', [ChildPetController::class, 'startCareTask']);
+            Route::post('pet/care-task/finish', [ChildPetController::class, 'finishCareTask']);
             Route::post('pet/steps', [ChildPetController::class, 'steps']);
             Route::post('contract', [ChildContractController::class, 'store']);
         });

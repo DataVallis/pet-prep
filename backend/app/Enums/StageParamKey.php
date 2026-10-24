@@ -33,6 +33,14 @@ namespace App\Enums;
  *    samo opozorilo"): minutes after a meal during which the child app shows
  *    "wait with the walk, the dog is digesting" (GDV / bloat advice of an A/B
  *    source). Only a warning — steps still count, no score. No row = no warning.
+ *  - M5-R14 / R15 / R18 / R19 / R20 dog breed keys (David 2026-10-24): the breed
+ *    care tasks `*_FREQUENCY` = [times, period_days] (e.g. [7, 7] = every day,
+ *    [1, 28] = once a month — a month is 4 program weeks), only where the
+ *    breed's source states a frequency (no row = no task): TOOTH_BRUSHING,
+ *    FOLD_CLEANING, EAR_CLEANING, NAIL_TRIM (the child's mini-games) and
+ *    GROOMER_VISIT, BATH (parent reminders, never scored); NO_WALK_IN_HEAT
+ *    (true: flat-faced breeds whose source says "never in the heat of the day" —
+ *    the summer midday walk warning). See CareTask.
  */
 enum StageParamKey: string
 {
@@ -79,6 +87,24 @@ enum StageParamKey: string
     case SocialisationTasksPerWeek = 'socialisation_tasks_per_week';
     // M5-R16 dog (breed key): digestion warning after a meal (bloat / GDV advice)
     case MealExerciseGapMinutes = 'meal_exercise_gap_minutes';
+    // M5-R14 / R15 / R18 / R19 / R20 dog (breed keys): care task frequencies [times, period_days]
+    case ToothBrushingFrequency = 'tooth_brushing_frequency';
+    case FoldCleaningFrequency = 'fold_cleaning_frequency';
+    case EarCleaningFrequency = 'ear_cleaning_frequency';
+    case NailTrimFrequency = 'nail_trim_frequency';
+    case GroomerVisitFrequency = 'groomer_visit_frequency';
+    case BathFrequency = 'bath_frequency';
+    // M5-R14 dog (breed key): true = warn before a walk at summer midday (no weather data)
+    case NoWalkInHeat = 'no_walk_in_heat';
+
+    /** M5-R14 / R15 / R18 / R19 / R20: the care task frequency keys. */
+    public function isCareTaskFrequency(): bool
+    {
+        return in_array($this, [
+            self::ToothBrushingFrequency, self::FoldCleaningFrequency, self::EarCleaningFrequency,
+            self::NailTrimFrequency, self::GroomerVisitFrequency, self::BathFrequency,
+        ], true);
+    }
 
     public function isBreedLevel(): bool
     {
@@ -91,6 +117,8 @@ enum StageParamKey: string
             self::PlayMinGapMinutes, self::LitterScoopDeadlineHours, self::LitterFullChangeDays,
             self::GroomingSessionsPerWeek, self::ScratchingAfterMissedPlay,
             self::MealExerciseGapMinutes,
+            self::ToothBrushingFrequency, self::FoldCleaningFrequency, self::EarCleaningFrequency,
+            self::NailTrimFrequency, self::GroomerVisitFrequency, self::BathFrequency, self::NoWalkInHeat,
         ], true);
     }
 
@@ -147,7 +175,19 @@ enum StageParamKey: string
                 ? null : 'Expected whole tasks per week, 0–7.',
             self::MealExerciseGapMinutes => is_int($value) && $value >= 1 && $value <= 240
                 ? null : 'Expected whole minutes after a meal, 1–240.',
+            self::ToothBrushingFrequency, self::FoldCleaningFrequency, self::EarCleaningFrequency,
+            self::NailTrimFrequency, self::GroomerVisitFrequency, self::BathFrequency => self::validFrequency($value)
+                ? null : 'Expected [times, period_days]: whole numbers, 1 ≤ times ≤ 7, times ≤ period_days ≤ 120.',
+            self::NoWalkInHeat => is_bool($value) ? null : 'Expected true or false.',
         };
+    }
+
+    /** [times, period_days] — at most one per family-local day, so times ≤ period_days. */
+    public static function validFrequency(mixed $value): bool
+    {
+        return is_array($value) && array_is_list($value) && count($value) === 2
+            && is_int($value[0]) && is_int($value[1])
+            && $value[0] >= 1 && $value[0] <= 7 && $value[1] >= 1 && $value[1] <= 120 && $value[0] <= $value[1];
     }
 
     /**

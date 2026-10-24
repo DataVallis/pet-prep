@@ -49,8 +49,10 @@
 
 ## Odprto za Davida
 
+- **Rešeno 24. 10. 2026 (David, M5-R14 / R15 / R18 / R19 / R20 — PR #376):** naloga samo, kjer vir navaja pogostost (razpon → spodnja meja); mini-igre otroka po modelu česanja (pošten delež, reže, poročilo, brez kazni), pasji frizer in kopanje = opomnik staršu, ne šteje v oceno; samo novi psi. Za to pasmo — zgrajeno: ščetkanje zob vsak dan (mini-igra otroka); brez pogostosti v viru → brez naloge (dejstvo ostane v besedilu): čiščenje ušes, čiščenje gub. Spodnje točke M5-R14 / R15 / R18 / R19 / R20 so s tem zaprte.
+
 - **Meja starejšega psa 108 je začasna:** spodnja meja RKC (12 let). McMillan 2024 navaja 13,1 leta (prek Wikipedije, S352) → 118 mesecev; preveriti v tabeli Dogs Trust (S123), ko bo dosegljiva.
-- **Potrebe brez mehanike (needs-david):** ščetkanje zob **vsak dan** (PetMD S351) → **M5-R15**; čiščenje madežev solz okoli oči (PetMD S351, brez pogostosti) → **M5-R14** (nega obraza); redno čiščenje ušes (PetMD S351) → **M5-R20**.
+- **Potrebe brez mehanike (needs-david → rešeno 24. 10. 2026):** ščetkanje zob **vsak dan** (PetMD S351) → **M5-R15**; čiščenje madežev solz okoli oči (PetMD S351, brez pogostosti) → **M5-R14** (nega obraza); redno čiščenje ušes (PetMD S351) → **M5-R20**.
 - **Pasji frizer:** PetMD (S351) omenja redne obiske frizerja samo, če dlako držite kratko (brez pogostosti) → zabeleženo, ni potreba igre (M5-R18, če David želi).
 - **Otroci:** AKC (S350) in PetMD (S351) svetujeta nadzor z majhnimi otroki (PetMD: razigrani otroci lahko psička po nesreči poškodujejo) — brez oznake `older_children` / `fragile_older_children` (noben vir ne pravi »bolje za starejše otroke« ali »krhke kosti«). Ali naj dobi oznako?
 - **Ime:** »maltežan« ni preverjeno pri KZS.

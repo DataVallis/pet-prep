@@ -24,6 +24,12 @@ enum CareSessionKind: string
     /** "Odnesi na praskalnik in pohvali" (CAT_SPEC Q10) — M5-R06-05, ScratchingService. */
     case Scratching = 'scratching';
 
+    /** M5-R14 / R15 / R19 / R20 (David 2026-10-24): the child's breed care mini-games (CareTaskService). */
+    case ToothBrushing = 'tooth_brushing';
+    case FoldCleaning = 'fold_cleaning';
+    case EarCleaning = 'ear_cleaning';
+    case NailTrim = 'nail_trim';
+
     /**
      * @return list<string>
      */

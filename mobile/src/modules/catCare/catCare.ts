@@ -688,6 +688,12 @@ export const CAT_REFUSALS = [
   'care_session_invalid_input',
   // M5-T04: a clip of the game is not ready yet (»Igra se še pripravlja«).
   'media_not_ready',
+  // M5-R14 / R15 / R19 / R20: the dog's breed care mini-games (texts in `careTasks:errors`).
+  'care_task_not_available',
+  'care_task_period_done',
+  'care_task_done_today',
+  'care_task_quiet_hours',
+  'care_task_session_active',
 ] as const;
 export type CatRefusal = (typeof CAT_REFUSALS)[number];
 
@@ -704,6 +710,10 @@ const TIMED: ReadonlySet<CatRefusal> = new Set([
   'grooming_session_active',
   'scratching_session_active',
   'care_session_active',
+  'care_task_period_done',
+  'care_task_done_today',
+  'care_task_quiet_hours',
+  'care_task_session_active',
 ]);
 
 export function isCatRefusal(value: unknown): value is CatRefusal {
@@ -725,7 +735,12 @@ export function catRefusalMessage(reason: string | null, nextAllowedAt: string |
   if (!isCatRefusal(reason)) return t('cat:errors.unknown');
   if (reason === 'needs_cleaning') return ctx.scratchingOnly ? t('cat:errors.needs_scratcher_first') : t('cat:errors.needs_cleaning');
   // M5-R13: a brushed dog's own words ("kuža") where the cat's text names the cat.
-  const base = ctx.dog === true && DOG_GROOMING_REFUSALS.has(reason) ? 'child:grooming.errors' : 'cat:errors';
+  // M5-R14 / R15 / R19 / R20: the breed care tasks have their own texts.
+  const base = reason.startsWith('care_task_')
+    ? 'careTasks:errors'
+    : ctx.dog === true && DOG_GROOMING_REFUSALS.has(reason)
+      ? 'child:grooming.errors'
+      : 'cat:errors';
   if (TIMED.has(reason)) {
     const when = catWhen(nextAllowedAt, ctx.nowIso, ctx.timezone);
     // The keys are checked by the parity test; the typed `t` can't see template keys.

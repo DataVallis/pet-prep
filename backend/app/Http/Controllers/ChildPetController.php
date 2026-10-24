@@ -6,11 +6,13 @@ use App\Enums\CareSessionKind;
 use App\Http\Controllers\Concerns\HandlesChildPet;
 use App\Http\Requests\ChildPetRequest;
 use App\Http\Requests\FinishCareChoreRequest;
+use App\Http\Requests\FinishCareTaskRequest;
 use App\Http\Requests\FinishScratchingRequest;
 use App\Http\Requests\FinishTrainingRequest;
 use App\Http\Requests\FinishWandRequest;
 use App\Http\Requests\PlayRequest;
 use App\Http\Requests\SocialiseRequest;
+use App\Http\Requests\StartCareTaskRequest;
 use App\Http\Requests\StartTrainingRequest;
 use App\Http\Requests\StartWandRequest;
 use App\Http\Requests\SyncStepsRequest;
@@ -310,6 +312,39 @@ class ChildPetController extends Controller
         $pet = $this->childPet($request);
 
         return $this->actionResponse($this->activities->finishChore($pet, $request->user(), CareSessionKind::Grooming, $request->sessionId(), $request->strokes()), $pet, $request);
+    }
+
+    /**
+     * Breed care mini-game (M5-R14 / R15 / R19 / R20, David 2026-10-24): start
+     * `task` = tooth_brushing | fold_cleaning | ear_cleaning (30 s brush strokes)
+     * or nail_trim (12 s, one tap per claw) — only a dog whose breed's source
+     * states that task's frequency. 422 care_task_not_available | needs_cleaning |
+     * care_task_period_done | care_task_done_today | care_task_session_active |
+     * care_session_active | care_task_quiet_hours (the pet sleeps — checked
+     * first — or the session would run into quiet hours; next_allowed_at = when
+     * it wakes); 423 while locked.
+     *
+     * POST /api/child/pet/care-task/start
+     */
+    public function startCareTask(StartCareTaskRequest $request): JsonResponse
+    {
+        $pet = $this->childPet($request);
+
+        return $this->actionResponse($this->activities->startCareTask($pet, $request->user(), $request->task()), $pet, $request);
+    }
+
+    /**
+     * Breed care mini-game: finish with the strokes / claw taps. `accepted` =
+     * one of the period's sessions (a ledger slot); `rejected` = not enough (no
+     * penalty). 422 care_task_not_available | care_session_*; 423 while locked.
+     *
+     * POST /api/child/pet/care-task/finish
+     */
+    public function finishCareTask(FinishCareTaskRequest $request): JsonResponse
+    {
+        $pet = $this->childPet($request);
+
+        return $this->actionResponse($this->activities->finishCareTask($pet, $request->user(), $request->task(), $request->sessionId(), $request->strokes()), $pet, $request);
     }
 
     /**

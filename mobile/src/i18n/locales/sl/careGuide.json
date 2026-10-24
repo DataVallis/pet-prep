@@ -15,7 +15,9 @@
     "mess": "Pospravljanje",
     "play": "Igra",
     "litter": "Pesek",
-    "scratching": "Praskanje"
+    "scratching": "Praskanje",
+    "care": "Nega",
+    "heat": "Vročina"
   },
   "units": {
     "hours": "{{value}} h",

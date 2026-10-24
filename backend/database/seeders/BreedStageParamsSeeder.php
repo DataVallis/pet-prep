@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Enums\BreedType;
+use App\Enums\CareTask;
 use App\Enums\LifeStage;
 use App\Enums\StageParamKey;
 use App\Services\LifeStageService;
@@ -850,6 +851,128 @@ class BreedStageParamsSeeder extends Seeder
     public const PROPOSED_R13_BELGIAN_MALINOIS = 'predlog Claude 2026-10-14 (RKC »More than once a week« brez števila → 2, M5-R13, M5-R10-38) — čaka Davida';
 
     /**
+     * M5-R14 / R15 / R18 / R19 / R20 (David 2026-10-24): every breed care task row is
+     * David's decision »pogostost samo, kjer jo navaja vir« — the number is the source's
+     * (a range → its lower bound, i.e. the more frequent end).
+     */
+    public const CONFIRMED_R14_R20_CARE = 'potrdil David 24. 10. 2026 (M5-R14/R15/R18/R19/R20: naloga samo, kjer vir navaja pogostost; razpon → spodnja meja)';
+
+    /** Program days of the source's words (a month = 4 program weeks, so the 12-week program has 3 months). */
+    public const CARE_PERIOD_DAYS = [
+        'day' => 7, 'week' => 7, 'two_weeks' => 14, 'month' => 28, 'six_weeks' => 42, 'two_months' => 56, 'three_months' => 84,
+    ];
+
+    /**
+     * M5-R14 / R15 / R18 / R19 / R20: dog breed → task → [times, period (CARE_PERIOD_DAYS key),
+     * source id, verbatim quote (data.json — quote or notes of `ref`), data.json path (`ref`),
+     * how the words became the number]. ONLY breeds whose source states a frequency (David
+     * 2026-10-24); every other sourced need stays a fact in the care guide / register text.
+     * Child tasks: tooth_brushing, fold_cleaning, ear_cleaning, nail_trim (mini-games, ledger
+     * slots); parent reminders: groomer_visit, bath (never scored).
+     *
+     * @var array<string, array<string, array{0: int, 1: string, 2: string, 3: string, 4: string, 5: string}>>
+     */
+    public const DOG_CARE_TASKS = [
+        'bulldog' => [
+            'fold_cleaning' => [7, 'day', 'S180', 'their facial wrinkles will need daily cleaning.', 'proposed_game_parameters.bulldog.face_fold_cleaning', '"daily" → every day'],
+        ],
+        'yorkshire_terrier' => [
+            'tooth_brushing' => [7, 'day', 'S196', 'Owners are encouraged to undertake daily preventative home care to improve dental health e.g tooth brushing and to consider feeding specific dental diets to maintain oral hygiene.', 'proposed_game_parameters.yorkshire_terrier.tooth_brushing', '"daily … tooth brushing" → every day'],
+        ],
+        'pomeranian' => [
+            'groomer_visit' => [1, 'month', 'S251', 'taking the dog to a professional groomer every four to six weeks is highly recommended.', 'proposed_game_parameters.pomeranian.professional_grooming', '"every four to six weeks" → the lower bound, 4 weeks'],
+        ],
+        'english_springer_spaniel' => [
+            'groomer_visit' => [1, 'three_months', 'S285', 'They need grooming once or twice a week, plus clipping every 3 months.', 'proposed_game_parameters.english_springer_spaniel.professional_grooming', '"clipping every 3 months" → 12 program weeks'],
+        ],
+        'brittany' => [
+            'nail_trim' => [1, 'month', 'S301', 'Their nails tend to wear down naturally, but should be trimmed once a month as needed.', 'proposed_game_parameters.brittany.nail_trimming', '"once a month" → every 4 weeks'],
+        ],
+        'american_cocker_spaniel' => [
+            'ear_cleaning' => [1, 'week', 'S310', 'The ears must be checked weekly for problems.', 'proposed_game_parameters.american_cocker_spaniel.ear_care_bathing', '"weekly" → once a week'],
+            'groomer_visit' => [1, 'month', 'S310', 'Professional grooming and clipping is required once a month.', 'proposed_game_parameters.american_cocker_spaniel.professional_grooming', '"once a month" → every 4 weeks'],
+        ],
+        'belgian_malinois' => [
+            'tooth_brushing' => [7, 'day', 'S317', 'Like all dogs, the Belgian Malinois needs daily dental care', 'proposed_game_parameters.belgian_malinois.dental_care', '"daily dental care" → every day'],
+            'ear_cleaning' => [1, 'month', 'S317', 'For an otherwise healthy Belgian Malinois, clean their ears once a month with a vet-recommended ear cleaner or ear flush.', 'proposed_game_parameters.belgian_malinois.ear_care', '"once a month" → every 4 weeks'],
+        ],
+        'basset_hound' => [
+            'fold_cleaning' => [7, 'day', 'S323', 'However, because they have lots of excess skin, you’ll need to check the folds in their skin every day,', 'proposed_game_parameters.basset_hound.skin_fold_care', '"every day" → every day'],
+        ],
+        'english_cocker_spaniel' => [
+            'groomer_visit' => [1, 'three_months', 'S339', 'You may need to take them to a professional groomer every three months to get them clipped', 'proposed_game_parameters.english_cocker_spaniel.professional_grooming', '"every three months" → 12 program weeks'],
+        ],
+        'maltese' => [
+            'tooth_brushing' => [7, 'day', 'S351', 'Brushing their teeth every day using a dog-safe toothpaste and toothbrush is the best way to keep their teeth clean and healthy.', 'proposed_game_parameters.maltese.tooth_brushing', '"every day" → every day'],
+        ],
+        'pug' => [
+            'fold_cleaning' => [7, 'day', 'S359', "It's important to clean and dry the skin folds around your Pug's face daily.", 'proposed_game_parameters.pug.face_fold_cleaning', '"daily" → every day'],
+            'tooth_brushing' => [7, 'day', 'S359', "Brush your Pug's teeth every day with a dog-safe toothpaste and brush.", 'proposed_game_parameters.pug.tooth_brushing', '"every day" → every day'],
+        ],
+        'rough_collie' => [
+            'nail_trim' => [1, 'two_weeks', 'S368', 'They also need nail trimming about every other week, depending on wear.', 'proposed_game_parameters.rough_collie.nail_care', '"about every other week" → every 2 weeks'],
+            'bath' => [1, 'month', 'S368', 'Collies require at least weekly brushing and monthly bathing.', 'rough_collie.suitability.petmd_grooming', '"monthly bathing" → every 4 weeks'],
+        ],
+        'mastiff' => [
+            'fold_cleaning' => [7, 'day', 'S370', 'They need grooming just once a week, but their facial wrinkles will need daily cleaning.', 'proposed_game_parameters.mastiff.face_fold_cleaning', '"daily cleaning" → every day'],
+        ],
+        'shiba_inu' => [
+            'tooth_brushing' => [7, 'day', 'S381', "To prevent dental disease, it's important to brush your dog's teeth every day.", 'proposed_game_parameters.shiba_inu.tooth_brushing', '"every day" → every day'],
+        ],
+        'rhodesian_ridgeback' => [
+            'ear_cleaning' => [1, 'week', 'S392', 'Check and clean their ears weekly to prevent infections, and brush their teeth regularly or provide them with dental chews.', 'proposed_game_parameters.rhodesian_ridgeback.ear_care', '"weekly" → once a week (teeth "regularly" has no number → no task)'],
+            'bath' => [1, 'month', 'S391', 'Baths, at least once a month, will keep the hair glossy and healthy.', 'rhodesian_ridgeback.suitability.petmd_grooming', '"at least once a month" → every 4 weeks'],
+        ],
+        'papillon' => [
+            'tooth_brushing' => [7, 'day', 'S400', "Brush your Papillon's teeth every day to prevent periodontal disease.", 'proposed_game_parameters.papillon.tooth_brushing', '"every day" → every day'],
+            'ear_cleaning' => [1, 'week', 'S400', "Check your dog's ears every week for redness, debris, or signs of infection.", 'proposed_game_parameters.papillon.ear_care', '"every week" → once a week'],
+            'nail_trim' => [1, 'month', 'S400', 'Many Papillons need to have their nails trimmed every four to six weeks.', 'proposed_game_parameters.papillon.nail_trimming', '"every four to six weeks" → the lower bound, 4 weeks'],
+        ],
+        'portuguese_water_dog' => [
+            'tooth_brushing' => [7, 'day', 'S407', "brush their Portuguese Water Dog's teeth daily", 'proposed_game_parameters.portuguese_water_dog.tooth_brushing', '"daily" → every day'],
+            'groomer_visit' => [1, 'month', 'S407', 'a visit to the groomer every 4-6 weeks', 'portuguese_water_dog.suitability.petmd_grooming', '"every 4-6 weeks" (PetMD; PDSA S405 only "periodically") → the lower bound, 4 weeks'],
+        ],
+        'bichon_frise' => [
+            'ear_cleaning' => [1, 'month', 'S416', "Clean a Bichon Frise's ears once a month or as directed by your vet.", 'proposed_game_parameters.bichon_frise.ear_care', '"once a month" → every 4 weeks'],
+            'groomer_visit' => [1, 'two_months', 'S413', 'They need daily grooming and coat trimming is required every couple of months', 'proposed_game_parameters.bichon_frise.professional_grooming', '"every couple of months" → 2 months (8 program weeks)'],
+            'bath' => [1, 'month', 'S416', 'Bathe your Bichon at least monthly.', 'bichon_frise.suitability.petmd_ears', '"at least monthly" → every 4 weeks'],
+        ],
+        'newfoundland' => [
+            'bath' => [1, 'month', 'S424', 'Newfoundland dogs do best if bathed roughly once a month, but never more than once every two weeks.', 'proposed_game_parameters.newfoundland.ear_care', '"roughly once a month" → every 4 weeks (ear cleaning "at the vet\'s recommendation" → no task)'],
+        ],
+        'dalmatian' => [
+            'nail_trim' => [1, 'month', 'S431', 'As part of their regular care routine, Dalmatians need their nails trimmed monthly, and their teeth should be brushed at', 'proposed_game_parameters.dalmatian.nail_care', '"nails trimmed monthly" → every 4 weeks (the teeth frequency is cut off in the quote → no task)'],
+        ],
+        'samoyed' => [
+            'groomer_visit' => [1, 'six_weeks', 'S468', 'Professional grooming every six to eight weeks is recommended.', 'proposed_game_parameters.samoyed.professional_grooming', '"every six to eight weeks" → the lower bound, 6 weeks'],
+        ],
+        'scottish_terrier' => [
+            'groomer_visit' => [1, 'two_months', 'S474', 'Scotties need daily grooming and will require stripping and clipping by a professional groomer every two-three months.', 'proposed_game_parameters.scottish_terrier.professional_grooming', '"every two-three months" → the lower bound, 2 months (8 program weeks)'],
+        ],
+        'weimaraner' => [
+            'ear_cleaning' => [1, 'month', 'S481', "Use a vet-approved ear cleanser to clean your dog's ears once a month.", 'proposed_game_parameters.weimaraner.ear_care_bathing', '"once a month" → every 4 weeks'],
+            'bath' => [1, 'month', 'S481', 'Bathing your dog once a month is sufficient to keep their coat and skin healthy and hydrated.', 'weimaraner.suitability.petmd_grooming', '"once a month" → every 4 weeks'],
+        ],
+        'giant_schnauzer' => [
+            'ear_cleaning' => [1, 'week', 'S497', 'Their ears should be checked weekly for discharge, redness, or odors', 'proposed_game_parameters.giant_schnauzer.ear_checks', '"weekly" → once a week (the groomer "every few months" has no number → no reminder)'],
+        ],
+    ];
+
+    /**
+     * M5-R14 (David 2026-10-24): flat-faced breeds whose source says not to exercise them in
+     * the heat → `no_walk_in_heat` = true (summer midday warning, WalkHeatService). The Boxer's
+     * sources have no heat statement → no row.
+     *
+     * @var array<string, array{0: string, 1: string, 2: string}>
+     */
+    public const DOG_NO_WALK_IN_HEAT = [
+        'french_bulldog' => ['S81', 'As a flat-faced breed, French Bulldogs can overheat and struggle to breathe really quickly, especially in warmer weather.', 'french_bulldog.exercise.heat_and_walk_timing'],
+        'bulldog' => ['S180', 'they should never be exercised in the heat of the day as they are prone to overheating', 'proposed_game_parameters.bulldog.no_exercise_in_heat'],
+        'boston_terrier' => ['S259', 'but it’s important to remember that they should never be exercised in the heat of the day as they are prone to overheating.', 'proposed_game_parameters.boston_terrier.no_exercise_in_heat'],
+        'pug' => ['S357', 'You will also need to avoid exercising them in the heat as this can cause even more problems', 'proposed_game_parameters.pug.no_exercise_in_heat'],
+    ];
+
+    /**
      * M5-R13: dog breed → [sessions per week, source id, verbatim quote (data.json), confidence,
      * Claude's proposal?, David's own decision (null = the runbook rule)]. The mutt and the
      * Border Collie have no grooming statement → no row.
@@ -1268,6 +1391,16 @@ class BreedStageParamsSeeder extends Seeder
                 $add('all', 0, StageParamKey::MealExerciseGapMinutes, ...$gap);
             }
 
+            // M5-R14 / R15 / R18 / R19 / R20 (David 2026-10-24): breed care tasks — only where
+            // the source states a frequency; the heat warning for flat-faced breeds.
+            foreach (self::dogCareTasks($breed) as [$key, $value, $meta]) {
+                $add('all', 0, $key, $value, $meta);
+            }
+            $heat = self::dogNoWalkInHeat($breed);
+            if ($heat !== null) {
+                $add('all', 0, StageParamKey::NoWalkInHeat, ...$heat);
+            }
+
             // M5-R17 (David 2026-10-12): the puppy's weekly "new experience" — every dog
             // breed (»socializacija za vse mladičke«), sourced quote where data.json has one.
             $add('puppy', 0, StageParamKey::SocialisationTasksPerWeek, ...self::dogSocialisation($breed));
@@ -1310,6 +1443,61 @@ class BreedStageParamsSeeder extends Seeder
                 $david !== null => 'Runbook grooming rule (A–B → B: "once or twice a week" → 2), confirmed by David (2026-10-12). '.$matted,
                 default => 'Runbook grooming rule (once a week → 1, every day → 7, A–B → B). '.$matted,
             },
+        ]];
+    }
+
+    /**
+     * M5-R14 / R15 / R18 / R19 / R20: the breed's care task rows (DOG_CARE_TASKS) as
+     * [key, [times, period_days], meta]. Empty = no task with a sourced frequency.
+     *
+     * @return list<array{0: StageParamKey, 1: array{0: int, 1: int}, 2: array<string, mixed>}>
+     */
+    public static function dogCareTasks(BreedType $breed): array
+    {
+        $out = [];
+        foreach (self::DOG_CARE_TASKS[$breed->value] ?? [] as $task => [$times, $period, $sourceId, $quote, $ref, $reading]) {
+            $careTask = CareTask::from($task);
+            $days = self::CARE_PERIOD_DAYS[$period];
+            $out[] = [$careTask->stageParamKey(), [$times, $days], [
+                'unit' => $careTask->isChildTask()
+                    ? "[times, period_days] — the child's care mini-game ({$task}), at most 1 per day"
+                    : "[times, period_days] — reminder to the parent ({$task}), never scored",
+                'source_id' => $sourceId,
+                'confidence' => 'medium',
+                'verified' => true,
+                'ref' => $ref,
+                'decision' => self::CONFIRMED_R14_R20_CARE,
+                'quote' => $quote,
+                'notes' => "Source frequency {$reading}: {$times} per {$days} program days (a month = 4 program weeks).",
+            ]];
+        }
+
+        return $out;
+    }
+
+    /**
+     * M5-R14: `no_walk_in_heat` = true for a flat-faced breed whose source says not to
+     * exercise it in the heat (DOG_NO_WALK_IN_HEAT). Null = no row, no warning.
+     *
+     * @return array{0: bool, 1: array<string, mixed>}|null
+     */
+    public static function dogNoWalkInHeat(BreedType $breed): ?array
+    {
+        $row = self::DOG_NO_WALK_IN_HEAT[$breed->value] ?? null;
+        if ($row === null) {
+            return null;
+        }
+        [$sourceId, $quote, $ref] = $row;
+
+        return [true, [
+            'unit' => 'warn before a walk in summer (June–August, southern hemisphere December–February) 11:00–16:00 family time',
+            'source_id' => $sourceId,
+            'confidence' => 'high',
+            'verified' => true,
+            'ref' => $ref,
+            'decision' => self::CONFIRMED_R14_R20_CARE,
+            'quote' => $quote,
+            'notes' => 'No weather data (scope guard): calendar + clock in the family timezone. Only a warning — steps still count, no score (David 2026-10-24).',
         ]];
     }
 

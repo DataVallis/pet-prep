@@ -52,6 +52,15 @@ enum ClientFeature: string
     case Socialisation = 'socialisation';
 
     /**
+     * Breed care tasks (M5-R14 / R15 / R18 / R19 / R20, David 2026-10-24): the
+     * child's care mini-games (teeth, folds, ears, nails — POST
+     * /api/child/pet/care-task/start|finish), the parent's groomer / bath reminders
+     * (POST /api/parent/pets/{pet}/care-reminders) and the summer heat warning
+     * before a walk → `pets.care_tasks_enabled` (a NEW profiled dog, both devices).
+     */
+    case CareTasks = 'care_tasks';
+
+    /**
      * @return list<string>
      */
     public static function values(): array

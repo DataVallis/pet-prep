@@ -48,9 +48,11 @@
 
 ## Odprto za Davida
 
+- **Rešeno 24. 10. 2026 (David, M5-R14 / R15 / R18 / R19 / R20 — PR #376):** naloga samo, kjer vir navaja pogostost (razpon → spodnja meja); mini-igre otroka po modelu česanja (pošten delež, reže, poročilo, brez kazni), pasji frizer in kopanje = opomnik staršu, ne šteje v oceno; samo novi psi. Za to pasmo — zgrajeno: pasji frizer na 12 tednov (3 mesece) (opomnik staršu, ne šteje v oceno); brez pogostosti v viru → brez naloge (dejstvo ostane v besedilu): čiščenje ušes, striženje krempljev. Spodnje točke M5-R14 / R15 / R18 / R19 / R20 so s tem zaprte.
+
 - **Agresivnost (VetCompass):** novica RVC (S344) med najpogosteje zabeleženimi težavami pasme navaja tudi agresivnost (»potentially moody«). Zabeleženo v `data.json` (`behaviour.aggression_vetcompass`) brez oznake (ni ključa v besednjaku), oznaka »družino z otroki« ostane (PDSA / VCA, z nasvetom o nadzoru). Ali naj dobi oznako? (ugotovitev pregleda QA)
 - **Zobje:** VetCompass navaja parodontalno bolezen kot najpogostejšo težavo, a noben vir A/B ne daje nasveta za nego zob → brez potrebe po ščetkanju (M5-R15 ni povezan).
-- **Potrebe brez mehanike (needs-david):** pasji frizer za striženje približno vsake tri mesece pri razstavnem tipu (PDSA S339) → **M5-R18**; redno striženje krempljev (VCA S341) → **M5-R19**; redno čiščenje ušes (PetMD S340, VCA S341) → **M5-R20**.
+- **Potrebe brez mehanike (needs-david → rešeno 24. 10. 2026):** pasji frizer za striženje približno vsake tri mesece pri razstavnem tipu (PDSA S339) → **M5-R18**; redno striženje krempljev (VCA S341) → **M5-R19**; redno čiščenje ušes (PetMD S340, VCA S341) → **M5-R20**.
 - **Iskanje:** goli »Cocker Spaniel« / »koker španjel« vodi k angleški pasmi (glej Odločitve).
 - **Ime:** »angleški koker španjel« ni preverjeno pri KZS.
 - **Spletna stran:** novi besedili za ključ zdravja `familial_nephropathy` in testa `dna_aon` / `dna_fn` (besede Claude).

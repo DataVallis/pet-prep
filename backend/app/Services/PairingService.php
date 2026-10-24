@@ -394,6 +394,9 @@ class PairingService
             // M5-R17: puppy socialisation (the weekly "new experience") the same way —
             // profile + `socialisation` declared by the parent's PIN and the child's device.
             'socialisation_enabled' => $isDog && $arrivalAge !== null && $profile?->supports(ClientFeature::Socialisation) === true,
+            // M5-R14 / R15 / R18 / R19 / R20: breed care tasks (mini-games, parent reminders,
+            // heat warning) the same way — profile + `care_tasks` declared by both devices.
+            'care_tasks_enabled' => $isDog && $arrivalAge !== null && $profile?->supports(ClientFeature::CareTasks) === true,
             // M5-T08: new profiled pets get key images, loops and transitions (when entitled);
             // a legacy-profile pet keeps the pre-M5-T08 set. Existing pets stay on 1.
             // M5-T09 / T10: version 3 = + school / game phase clips.

@@ -18,6 +18,15 @@ import { t } from '@/i18n';
 import { clockText } from '@/modules/childPet/familyTime';
 import { isolatePetName } from '@/modules/petName/petName';
 import type { Species } from '@/modules/species/species';
+import { frequencyText, isCareReminder, isCareTask, type CareReminderKey, type CareTaskKey } from '@/modules/careTasks/careTasks';
+
+/** M5-R14 / R15 / R18 / R19 / R20: a sourced breed care task — who does it and how often. */
+export interface CareGuideTask {
+  task: CareTaskKey | CareReminderKey;
+  actor: 'child' | 'parent';
+  times: number;
+  period_days: number;
+}
 
 export interface CareGuideWindow {
   start: string;
@@ -38,6 +47,10 @@ export interface CareGuide {
   scratching: boolean;
   clean_within_hours: number;
   digestion_gap_minutes: number | null;
+  /** M5-R14 / R15 / R18 / R19 / R20: [] without one (older server too). */
+  care_tasks: CareGuideTask[];
+  /** M5-R14: flat-faced breed — no walks at summer midday; null otherwise. */
+  walk_heat: { months: number[]; from: string; to: string } | null;
 }
 
 export type CareGuideSectionKey =
@@ -51,6 +64,8 @@ export type CareGuideSectionKey =
   | 'litter'
   | 'scratching'
   | 'grooming'
+  | 'care'
+  | 'heat'
   | 'sleep'
   | 'mess';
 
@@ -105,6 +120,23 @@ export function readCareGuide(raw: unknown): CareGuide | null {
       ? { scoop_within_hours: num(raw.litter.scoop_within_hours) as number, change_every_days: num(raw.litter.change_every_days) ?? 0 }
       : null;
   const gap = num(raw.digestion_gap_minutes);
+  const careTasks = Array.isArray(raw.care_tasks)
+    ? raw.care_tasks.flatMap((c): CareGuideTask[] => {
+        if (!isObj(c) || !(isCareTask(c.task) || isCareReminder(c.task))) return [];
+        const times = num(c.times);
+        const days = num(c.period_days);
+        if (times === null || days === null || times <= 0 || days <= 0) return [];
+        return [{ task: c.task, actor: c.actor === 'parent' ? 'parent' : 'child', times, period_days: days }];
+      })
+    : [];
+  const heat =
+    isObj(raw.walk_heat) && Array.isArray(raw.walk_heat.months) && typeof raw.walk_heat.from === 'string' && typeof raw.walk_heat.to === 'string'
+      ? {
+          months: raw.walk_heat.months.filter((m): m is number => typeof m === 'number' && m >= 1 && m <= 12),
+          from: raw.walk_heat.from,
+          to: raw.walk_heat.to,
+        }
+      : null;
   return {
     species,
     meals: {
@@ -126,6 +158,8 @@ export function readCareGuide(raw: unknown): CareGuide | null {
     scratching: raw.scratching === true,
     clean_within_hours: num(raw.clean_within_hours) ?? 0,
     digestion_gap_minutes: gap !== null && gap > 0 ? gap : null,
+    care_tasks: careTasks,
+    walk_heat: heat !== null && heat.months.length > 0 && HHMM.test(heat.from) && HHMM.test(heat.to) ? heat : null,
   };
 }
 
@@ -229,6 +263,26 @@ export function careGuideSections(
   }
 
   if (guide.grooming) out.push({ key: 'grooming', label: label('grooming'), lines: [tr('grooming', { count: guide.grooming.per_week })] });
+
+  // M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks (child mini-games first, then the parent's reminders).
+  const care = [...guide.care_tasks.filter((c) => c.actor === 'child'), ...guide.care_tasks.filter((c) => c.actor === 'parent')];
+  const gtr = (key: string, options?: Record<string, unknown>): string =>
+    (t as unknown as (k: string, o?: Record<string, unknown>) => string)(`careTasks:guide.${audience}.${key}`, options);
+  if (care.length > 0) {
+    out.push({
+      key: 'care',
+      label: label('care'),
+      lines: care.map((c) => gtr(c.task, { frequency: frequencyText(c.times, c.period_days) })),
+    });
+  }
+  if (guide.walk_heat !== null) {
+    const months = t(guide.walk_heat.months.includes(1) ? 'careTasks:guide.months.south' : 'careTasks:guide.months.north');
+    out.push({
+      key: 'heat',
+      label: label('heat'),
+      lines: [gtr('heat', { months, from: clockText(guide.walk_heat.from), to: clockText(guide.walk_heat.to) })],
+    });
+  }
 
   const sleep: string[] = [];
   if (guide.sleep.night) sleep.push(tr('sleepNight', { start: clockText(guide.sleep.night.start), end: clockText(guide.sleep.night.end) }));

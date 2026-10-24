@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Enums\ActivityType;
 use App\Enums\CareRefusal;
 use App\Enums\CareSessionKind;
+use App\Enums\CareTask;
 use App\Enums\PetLockReason;
 use App\Enums\PlayKind;
 use App\Enums\SocialisationExperience;
@@ -94,6 +95,7 @@ class PetActivityService
         private CatChoreService $chores,
         private ScratchingService $scratching,
         private SocialisationService $socialisation,
+        private CareTaskService $careTasks,
     ) {}
 
     /**
@@ -836,6 +838,109 @@ class PetActivityService
             $this->logActivity($locked, $activity, $number, $child->id);
 
             return $this->result(ActionResult::ACCEPTED, $locked, extra: $extra);
+        });
+    }
+
+    // ──────────────────────────────────────────────────────────────
+    //  M5-R14 / R15 / R18 / R19 / R20 — breed care tasks
+    // ──────────────────────────────────────────────────────────────
+
+    /**
+     * Start a breed care mini-game (teeth, folds, ears, nails — CareTaskService).
+     * Locks first (423); refusals 422 (`next_allowed_at` where it ends). One
+     * `PetUpdated('care_task_started')`.
+     */
+    public function startCareTask(Pet $pet, User $child, CareTask $task): ActionResult
+    {
+        return $this->withLockedPet($pet, 'care_task_started', function (Pet $locked) use ($child, $task): ActionResult {
+            $now = now();
+
+            if ($reason = $locked->actionLockReasonFor($child)) {
+                return $this->locked($locked, $reason);
+            }
+            $this->decay->catchUpLocked($locked);
+
+            $started = $this->careTasks->start($locked, $child, $task, $now);
+            if ($started['refusal'] !== null) {
+                return $this->refused($locked, $started['refusal'], $started['next_allowed_at']);
+            }
+            if ($locked->isDirty()) {
+                $locked->saveQuietly();
+            }
+
+            return $this->result(ActionResult::ACCEPTED, $locked, extra: [
+                'session' => CareSessionPayload::careTask($started['session'], $locked->familyTimezone()),
+            ]);
+        });
+    }
+
+    /**
+     * Finish a breed care mini-game with the strokes / claw taps the app saw.
+     * Success → `accepted` and the task's activity row (value = its number in
+     * the period; the ledger slot, actor = the child). Not enough → `rejected`
+     * (200, nothing counts, start again at once; one `PetUpdated('care_task_finished')`).
+     * A repeat → `unchanged`. 422 care_task_not_available / care_session_*.
+     *
+     * @param  list<array{t: int}>  $strokes
+     */
+    public function finishCareTask(Pet $pet, User $child, CareTask $task, string $sessionId, array $strokes): ActionResult
+    {
+        $activity = $task->activityType();
+
+        return $this->withLockedPet($pet, $activity, function (Pet $locked) use ($child, $task, $sessionId, $strokes, $activity): ActionResult {
+            $now = now();
+
+            if ($reason = $locked->actionLockReasonFor($child)) {
+                return $this->locked($locked, $reason);
+            }
+            $this->decay->catchUpLocked($locked);
+
+            $finished = $this->careTasks->finish($locked, $child, $task, $sessionId, $strokes, $now);
+            if ($finished['refusal'] !== null) {
+                return $this->refused($locked, $finished['refusal']);
+            }
+            /** @var PetCareSession $session */
+            $session = $finished['session'];
+            $extra = ['result' => CareSessionPayload::careTaskResult($session)];
+            if ($finished['repeat']) {
+                return $this->unchanged(ActionResult::UNCHANGED, $locked, $extra);
+            }
+            if (! $finished['counted']) {
+                return $this->rejectedSession($locked, $extra, 'care_task_finished');
+            }
+
+            $number = $this->careTasks->numberInPeriod($locked, $task, $now->copy()->startOfSecond());
+            if ($locked->isDirty()) {
+                $locked->saveQuietly();
+            }
+            $this->logActivity($locked, $activity, $number, $child->id);
+
+            return $this->result(ActionResult::ACCEPTED, $locked, extra: $extra);
+        });
+    }
+
+    /**
+     * M5-R18 / R20: the parent confirms a reminder (groomer visit, bath) "done"
+     * for the current period — one activity row (actor = the parent, value = the
+     * period's number). Never a routine, score or stat. Already confirmed in this
+     * period → `unchanged`; no such reminder → 422 `care_task_not_available`.
+     * Allowed while the pet is locked (it is the parent's errand). One
+     * `PetUpdated('care_reminder_done')`.
+     */
+    public function confirmCareReminder(Pet $pet, User $parent, CareTask $task): ActionResult
+    {
+        return $this->withLockedPet($pet, $task->activityType(), function (Pet $locked) use ($parent, $task): ActionResult {
+            $now = now()->startOfSecond();
+            $reminder = $this->careTasks->reminderFor($locked, $task, $now);
+            if ($reminder === null) {
+                return $this->refused($locked, CareRefusal::CareTaskNotAvailable);
+            }
+            if ($reminder['done_at'] !== null) {
+                return $this->unchanged(ActionResult::UNCHANGED, $locked);
+            }
+            $this->logActivity($locked, $task->activityType(), $reminder['period']['index'] + 1, $parent->id);
+
+            return $this->result(ActionResult::ACCEPTED, $locked);
         });
     }
 

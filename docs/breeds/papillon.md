@@ -49,8 +49,10 @@
 
 ## Odprto za Davida
 
+- **Rešeno 24. 10. 2026 (David, M5-R14 / R15 / R18 / R19 / R20 — PR #376):** naloga samo, kjer vir navaja pogostost (razpon → spodnja meja); mini-igre otroka po modelu česanja (pošten delež, reže, poročilo, brez kazni), pasji frizer in kopanje = opomnik staršu, ne šteje v oceno; samo novi psi. Za to pasmo — zgrajeno: ščetkanje zob vsak dan (mini-igra otroka); čiščenje ušes enkrat na teden (mini-igra otroka); striženje krempljev enkrat na 4 tedne (mesec) (mini-igra otroka). Spodnje točke M5-R14 / R15 / R18 / R19 / R20 so s tem zaprte.
+
 - **Meja starejšega psa 108 je začasna:** spodnja meja RKC (12 let). McMillan 2024 navaja 14,5 leta (prek Wikipedije, S401) → 131 mesecev; PetMD 14–16 let → 126; preveriti v tabeli Dogs Trust (S123), ko bo dosegljiva.
-- **Potrebe brez mehanike (needs-david):** ščetkanje zob **vsak dan** (PetMD S400) → **M5-R15**; pregled ušes **vsak teden** (PetMD S400, tudi resice na ušesih, ki se rade zmršijo) → **M5-R20**; striženje krempljev **na 4–6 tednov** (PetMD S400) → **M5-R19**.
+- **Potrebe brez mehanike (needs-david → rešeno 24. 10. 2026):** ščetkanje zob **vsak dan** (PetMD S400) → **M5-R15**; pregled ušes **vsak teden** (PetMD S400, tudi resice na ušesih, ki se rade zmršijo) → **M5-R20**; striženje krempljev **na 4–6 tednov** (PetMD S400) → **M5-R19**.
 - **Otroci:** oznaka `children` temelji na PetMD (S400) »live well with … kids«; isti vir opozarja na zelo majhne otroke. Ali naj papijon dobi tudi oznako `older_children` (noben vir ne pravi izrecno »bolje za starejše otroke«)?
 - **Teža:** v igri razpon obeh kategorij FCI 1,5–5 kg; PDSA navaja 2–4 kg.
 - **Ime:** »papijon« ni preverjeno pri KZS.

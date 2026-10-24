@@ -256,6 +256,9 @@ export function makeChildState(
     certificate: null,
     // M5-R17 the puppy's weekly "new experience": null = no task this week.
     socialisation: null,
+    // M5-R14 / R15 / R19 / R20: no breed care task, no heat warning.
+    care_tasks: [],
+    walk_heat: null,
     // M5-T05: absent by default (like an older server) so HUD tests don't get the first-launch card;
     // pass `care_guide: makeCareGuide()` to `makeLiveChildState` to show it.
     care_guide: null as unknown as ChildPetState['care_guide'],
@@ -304,6 +307,9 @@ export interface LiveStateOverrides {
   scratching?: unknown;
   /** M5-R17 the puppy's weekly "new experience" (raw); omitted = absent (no task / older server). */
   socialisation?: unknown;
+  /** M5-R14 / R15 / R19 / R20 `care_tasks` / `walk_heat` (raw); omitted = none. */
+  care_tasks?: unknown;
+  walk_heat?: unknown;
   /** M5-T02 `sleep` (raw); default awake, `'absent'` drops the key (older server). */
   sleep?: unknown;
   /** M5-T05 `care_guide` (raw); omitted = null (older server, no »?« button). */
@@ -368,6 +374,41 @@ export function makeSocialisation(overrides: Record<string, unknown> = {}): Reco
  * not the loose strings `schema.ts` declares): Ljubljana family, 2026-10-04 12:00
  * local, mutt windows 06–10 / 17–21, fed this morning, water 1 of 3 used.
  */
+/** M5-R14 / R15 / R19 / R20: one `care_tasks` entry (raw); default = teeth, 7 per week, may start. */
+export function makeCareTask(overrides: Record<string, unknown> = {}): Record<string, unknown> {
+  return {
+    task: 'tooth_brushing',
+    times: 7,
+    period_days: 7,
+    done_this_period: 0,
+    period_started_at: '2026-10-01T08:00:00+02:00',
+    period_ends_at: '2026-10-08T08:00:00+02:00',
+    session_seconds: 30,
+    next_allowed_at: null,
+    blocked_reason: null,
+    can_start: true,
+    session: null,
+    session_running: false,
+    ...overrides,
+  };
+}
+
+/** A care task session (raw) as returned by `care-task/start`. */
+export function makeCareTaskSession(overrides: Record<string, unknown> = {}): Record<string, unknown> {
+  return {
+    id: '7e1f0c2a-3b4d-4e5f-8a9b-0c1d2e3f4a5b',
+    task: 'tooth_brushing',
+    started_at: '2026-10-04T12:00:00+02:00',
+    ends_at: '2026-10-04T12:00:30+02:00',
+    expires_at: '2026-10-04T12:01:30+02:00',
+    duration_ms: 30000,
+    min_strokes: 10,
+    segments: 3,
+    min_stroke_interval_ms: 150,
+    ...overrides,
+  };
+}
+
 export function makeLiveChildState(o: LiveStateOverrides = {}): ChildPetState {
   const base = makeChildState({ hunger_level: 60, thirst_level: 50, energy_level: 30, hygiene_level: 80, ...o.pet });
   const raw = {
@@ -417,6 +458,8 @@ export function makeLiveChildState(o: LiveStateOverrides = {}): ChildPetState {
     ...(o.grooming !== undefined ? { grooming: o.grooming } : {}),
     ...(o.scratching !== undefined ? { scratching: o.scratching } : {}),
     ...(o.socialisation !== undefined ? { socialisation: o.socialisation } : {}),
+    ...(o.care_tasks !== undefined ? { care_tasks: o.care_tasks } : {}),
+    ...(o.walk_heat !== undefined ? { walk_heat: o.walk_heat } : {}),
     sleep: o.sleep === 'absent' ? undefined : o.sleep === undefined ? base.sleep : o.sleep,
     ...(o.care_guide !== undefined ? { care_guide: o.care_guide } : {}),
     settings: { ...base.settings, ...o.settings },
@@ -591,6 +634,8 @@ export function makeFamilyPet(overrides: Partial<FamilyPetRaw> = {}): FamilyPetR
     care_guide: makeCareGuide() as unknown as FamilyPetRaw['care_guide'],
     // M5-T13: no birthday.
     birthday: null,
+    // M5-R18 / R20: no groomer / bath reminder.
+    care_reminders: [],
     traffic_light: { color: 'green', reasons: [] },
     care_score: { score: null, done: 0, expected: 0, illnesses: 0, since: '2026-10-01T08:00:00+00:00' },
     today: {

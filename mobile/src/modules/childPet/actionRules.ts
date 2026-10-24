@@ -26,6 +26,10 @@
  * |               |                                  | · PREPARING (`media_not_ready`)                                  |
  * | scoop (cat)   | `litter.can_scoop`               | lock · tray clean                                                |
  * | socialisation | `socialisation.can_record`       | lock · SLEEPING (`socialisation_quiet_hours`) · week done        |
+ * | tooth_brushing| `care_tasks[].can_start`         | lock · SLEEPING (`care_task_quiet_hours`, until wake) · done     |
+ * | fold_cleaning |  (M5-R14 / R15 / R19 / R20 —     |   today / this period · another game · a mess (clean first)      |
+ * | ear_cleaning  |   only breeds whose source       |                                                                  |
+ * | nail_trim     |   states the frequency)          |                                                                  |
  *
  * States: **sleeping** = the family's quiet hours (server `PetSleepService`; `sleep.asleep`,
  * wakes at `sleep.until`); **quiet hours** = the same moments (decay ×0.1, the parent covers
@@ -45,6 +49,7 @@ import { t } from '@/i18n';
 import type { ChildPetView, LockReason } from '@/modules/childPet/childPetView';
 import { familyClock } from '@/modules/childPet/familyTime';
 import { strings } from '@/i18n/strings';
+import { CARE_TASKS, type CareTaskKey } from '@/modules/careTasks/careTasks';
 
 export type HudAction =
   | 'feed'
@@ -58,7 +63,8 @@ export type HudAction =
   | 'grooming'
   | 'wand'
   | 'scoop'
-  | 'socialisation';
+  | 'socialisation'
+  | CareTaskKey;
 
 export const HUD_ACTIONS: readonly HudAction[] = [
   'feed',
@@ -73,6 +79,7 @@ export const HUD_ACTIONS: readonly HudAction[] = [
   'wand',
   'scoop',
   'socialisation',
+  ...CARE_TASKS,
 ];
 
 /**
@@ -153,6 +160,7 @@ const SLEEP_REASONS: ReadonlySet<string> = new Set([
   'wand_quiet_hours',
   'grooming_quiet_hours',
   'socialisation_quiet_hours',
+  'care_task_quiet_hours',
 ]);
 
 /** A server block: the sleeping reason (with its time, else the wake time) or the server's own. */
@@ -229,6 +237,18 @@ export function actionRule(view: ChildPetView, action: HudAction): ActionRule {
       const s = view.socialisation;
       if (s === null) return OFF;
       return lock ?? (s.can_record ? ON : fromServer(view, s.blocked_reason, s.next_allowed_at));
+    }
+    case 'tooth_brushing':
+    case 'fold_cleaning':
+    case 'ear_cleaning':
+    case 'nail_trim': {
+      // M5-R14 / R15 / R19 / R20 (David 2026-10-24): no care while the pet sleeps, like brushing.
+      const c = view.careTasks.find((x) => x.task === action);
+      if (c === undefined) return OFF;
+      if (lock) return lock;
+      if (c.can_start || c.session !== null) return ON;
+      if (view.sleep.asleep) return sleeping(view, c.blocked_reason === 'care_task_quiet_hours' ? (c.next_allowed_at ?? view.sleep.until) : view.sleep.until);
+      return fromServer(view, c.blocked_reason, c.next_allowed_at);
     }
   }
 }

@@ -38,6 +38,7 @@ import {
 } from '@/modules/behaviour/behaviour';
 import { readChildTraining, readPetTraining, type ChildTraining } from '@/modules/training/training';
 import { broadcastSocialisation, readChildSocialisation, type ChildSocialisation } from '@/modules/socialisation/socialisation';
+import { broadcastCareTasks, nextHeatChangeMs, readChildCareTasks, readWalkHeat, type ChildCareTask, type WalkHeat } from '@/modules/careTasks/careTasks';
 import { broadcastPlay, readChildPlay, type ChildPlay } from '@/modules/play/play';
 import { readChildCertificate, type ChildCertificate } from '@/modules/certificate/certificate';
 
@@ -214,6 +215,13 @@ export interface ChildPetView {
    * (not a puppy week, a breed / pet without it, a cat) and from an older server.
    */
   socialisation: ChildSocialisation | null;
+  /**
+   * M5-R14 / R15 / R19 / R20 the dog's breed care mini-games (teeth, folds, ears, nails); [] when
+   * the breed's source states no frequency, for a cat and from an older server.
+   */
+  careTasks: ChildCareTask[];
+  /** M5-R14 today's summer midday heat window (flat-faced breeds); null otherwise / older server. */
+  walkHeat: WalkHeat | null;
   /**
    * M5-T05 care guide (»Kako skrbim za …»): the numbers of the simulation's own rules for
    * this pet (`modules/careGuide`); null from an older server (no »?« button).
@@ -422,6 +430,9 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
     certificate: readChildCertificate((raw as { certificate?: unknown }).certificate),
     // M5-R17: older servers send no `socialisation` → null (no card).
     socialisation: readChildSocialisation((raw as { socialisation?: unknown }).socialisation),
+    // M5-R14 / R15 / R19 / R20: older servers send no `care_tasks` / `walk_heat` → none.
+    careTasks: readChildCareTasks((raw as { care_tasks?: unknown }).care_tasks),
+    walkHeat: readWalkHeat((raw as { walk_heat?: unknown }).walk_heat),
     // M5-T05: older servers send no `care_guide` → null.
     care_guide: readCareGuide((raw as { care_guide?: unknown }).care_guide),
     snapshotAtMs: msOf(raw.server_time),
@@ -541,6 +552,8 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
   const cat = broadcastCatCare(view.cat, b, lock.is_locked, isNewFamilyDay(view, b.emitted_at));
   // M5-R17: pet-level `can_record`; a lock turns it off.
   const socialisation = broadcastSocialisation(view.socialisation, b.socialisation, lock.is_locked);
+  // M5-R14 / R15 / R19 / R20: pet-level `can_start`; a lock turns it off; the own session stays.
+  const careTasks = broadcastCareTasks(view.careTasks, (b as { care_tasks?: unknown }).care_tasks, lock.is_locked);
 
   const next: ChildPetView = {
     ...view,
@@ -555,6 +568,7 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
     play,
     cat,
     socialisation,
+    careTasks,
     lastEmittedMs: emittedMs,
   };
 
@@ -756,7 +770,13 @@ export function nextRefreshDelay(view: ChildPetView, deviceNowMs: number): numbe
   const socialisationAt = view.lock.is_locked ? Number.NaN : at(view.socialisation?.next_allowed_at ?? view.socialisation?.week_ends_at);
   // M5-T02: the pet wakes — play and school open again (no broadcast marks the moment by itself).
   const wakeAt = view.sleep.asleep ? at(view.sleep.until) : Number.NaN;
-  const future = [nextWindow, windowEnd, water, accident, illnessEnd, trainingEnd, invitationEnd, wandAt, groomingAt, socialisationAt, wakeAt].filter(
+  // M5-R14 / R15 / R19 / R20: a care task opens again (next day / period, wake) — no broadcast marks it.
+  const careTaskAt = view.lock.is_locked
+    ? Number.NaN
+    : Math.min(...view.careTasks.map((c) => at(c.next_allowed_at)).filter((ms) => Number.isFinite(ms)), Number.POSITIVE_INFINITY);
+  // M5-R14: the heat warning turns on / off (the HUD re-renders by the clock; this keeps the state fresh).
+  const heatAt = nextHeatChangeMs(view.walkHeat, serverNow) ?? Number.NaN;
+  const future = [nextWindow, windowEnd, water, accident, illnessEnd, trainingEnd, invitationEnd, wandAt, groomingAt, socialisationAt, wakeAt, careTaskAt, heatAt].filter(
     (ms) => Number.isFinite(ms) && ms > serverNow,
   );
   future.push(familyCalendar(view.timezone, view.server_time).nextMidnight(serverNow));

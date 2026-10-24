@@ -51,7 +51,9 @@
 
 ## Odprto za Davida
 
-- **Potrebe brez mehanike (needs-david):** redni pregled ušes, ušesa čista in suha (PetMD S431) → **M5-R20**; striženje krempljev enkrat na mesec (PetMD S431) → **M5-R19**; ščetkanje zob (PetMD S431, citat odrezan) → **M5-R15**; vsaj dva sprehoda na dan, po možnosti tek v varnem ograjenem prostoru (PDSA S430) → **potrebna nova naloga v ROADMAP — David** (igra šteje korake na dan, ne števila sprehodov; kot pri šiba inu / rodezijskem ridgebacku).
+- **Rešeno 24. 10. 2026 (David, M5-R14 / R15 / R18 / R19 / R20 — PR #376):** naloga samo, kjer vir navaja pogostost (razpon → spodnja meja); mini-igre otroka po modelu česanja (pošten delež, reže, poročilo, brez kazni), pasji frizer in kopanje = opomnik staršu, ne šteje v oceno; samo novi psi. Za to pasmo — zgrajeno: striženje krempljev enkrat na 4 tedne (mesec) (mini-igra otroka); brez pogostosti v viru → brez naloge (dejstvo ostane v besedilu): čiščenje ušes, ščetkanje zob. Spodnje točke M5-R14 / R15 / R18 / R19 / R20 so s tem zaprte.
+
+- **Potrebe brez mehanike (needs-david → rešeno 24. 10. 2026):** redni pregled ušes, ušesa čista in suha (PetMD S431) → **M5-R20**; striženje krempljev enkrat na mesec (PetMD S431) → **M5-R19**; ščetkanje zob (PetMD S431, citat odrezan) → **M5-R15**; vsaj dva sprehoda na dan, po možnosti tek v varnem ograjenem prostoru (PDSA S430) → **potrebna nova naloga v ROADMAP — David** (igra šteje korake na dan, ne števila sprehodov; kot pri šiba inu / rodezijskem ridgebacku).
 - **Prehrana:** PetMD S431 »Speak with your veterinarian before putting your Dalmatian on a low-purine diet.« (sečni kamni) — odločitev veterinarja, v igri ni izbire hrane; le v ozadju.
 - **Seznam za vzreditelja:** stran RKC ne našteva testov; DNA test za hiperurikozurijo (HUU) ni bil najden pri viru A/B → ni dodan. Ob naslednjem zagonu preveriti stran RKC Breeds A–Z (naslov ni bil dovoljen).
 - **Ime:** »dalmatinec« ni preverjeno pri KZS (vir le Siol.net, tier C).

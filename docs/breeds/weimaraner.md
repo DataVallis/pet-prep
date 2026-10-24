@@ -52,6 +52,8 @@
 
 ## Odprto za Davida
 
+- **Rešeno 24. 10. 2026 (David, M5-R14 / R15 / R18 / R19 / R20 — PR #376):** naloga samo, kjer vir navaja pogostost (razpon → spodnja meja); mini-igre otroka po modelu česanja (pošten delež, reže, poročilo, brez kazni), pasji frizer in kopanje = opomnik staršu, ne šteje v oceno; samo novi psi. Za to pasmo — zgrajeno: čiščenje ušes enkrat na 4 tedne (mesec) (mini-igra otroka); kopanje enkrat na 4 tedne (mesec) (opomnik staršu, ne šteje v oceno). Spodnje točke M5-R14 / R15 / R18 / R19 / R20 so s tem zaprte.
+
 - **Potreba brez mehanike (needs-david, ROADMAP M5-R20):** čiščenje ušes 1× na mesec in kopanje 1× na mesec (PetMD S481).
 - **Mediana življenjske dobe:** tabele McMillan 2024 (Dogs Trust S123) ta zagon ni mogel odpreti; Wikipedija (S483, tier C) navaja mediano 12,8 leta iz McMillan 2024 → če jo potrdite v viru, bi bil starejši od 115 mesecev namesto 90 (nova podatkovna migracija).
 - **Različica dlake:** igra prikazuje kratkodlako različico; FCI priznava tudi dolgodlako (RKC »Short & long«).

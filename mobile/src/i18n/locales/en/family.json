@@ -16,7 +16,11 @@
     "play": "Play",
     "litter_scoop": "Litter",
     "litter_change": "Litter change",
-    "grooming": "Brushing"
+    "grooming": "Brushing",
+    "tooth_brushing": "Teeth",
+    "fold_cleaning": "Skin folds",
+    "ear_cleaning": "Ears",
+    "nail_trim": "Nails"
   },
   "score": {
     "routinesOf_one": "{{done}} of {{expected}} routine",

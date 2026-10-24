@@ -253,6 +253,8 @@ class Pet extends Model
         'grooming_enabled',
         // M5-R17: set once at creation (generate-pin + pin-login `features: ["socialisation"]`).
         'socialisation_enabled',
+        // M5-R14 / R15 / R18 / R19 / R20: set once at creation (generate-pin + pin-login `features: ["care_tasks"]`).
+        'care_tasks_enabled',
         // M3-11: plan chosen at creation (generate-pin `plan`). Payment state
         // (trial_ends_at, challenge_paid_*, payment_locked_at) is written only
         // by ChallengeService / Pet::giveBirth via forceFill.
@@ -321,6 +323,7 @@ class Pet extends Model
             'training_enabled' => 'boolean',
             'grooming_enabled' => 'boolean',
             'socialisation_enabled' => 'boolean',
+            'care_tasks_enabled' => 'boolean',
             'state_media_version' => 'integer',
             'training_learning_factor' => 'float',
             'hunger_level' => 'float',
@@ -712,6 +715,19 @@ class Pet extends Model
     public function socialisationEnabled(): bool
     {
         return (bool) $this->socialisation_enabled && ! $this->isLegacyProfile() && $this->isDog();
+    }
+
+    /**
+     * M5-R14 / R15 / R18 / R19 / R20 breed care tasks (David 2026-10-24): the
+     * child's care mini-games, the parent's groomer / bath reminders and the
+     * summer heat warning can apply — a profiled dog whose creating app builds
+     * (parent and child) declared `care_tasks`. Fixed at creation; existing
+     * pets: off. Which tasks a breed has are its `*_frequency` rows
+     * (CareTaskService::frequencyOn).
+     */
+    public function careTasksEnabled(): bool
+    {
+        return (bool) $this->care_tasks_enabled && ! $this->isLegacyProfile() && $this->isDog();
     }
 
     /** M5-R06: the dog rules (walk / steps, training, ball play) apply. */

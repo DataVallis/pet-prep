@@ -289,6 +289,9 @@ describe('life-stage data against data.json', function () {
             StageParamKey::GroomingSessionsPerWeek,
             // M5-R17: the puppy's weekly "new experience" with the breed's own PetMD quote (S453).
             StageParamKey::SocialisationTasksPerWeek,
+            // M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks / heat rule (the Border Collie has none).
+            StageParamKey::ToothBrushingFrequency, StageParamKey::FoldCleaningFrequency, StageParamKey::EarCleaningFrequency,
+            StageParamKey::NailTrimFrequency, StageParamKey::GroomerVisitFrequency, StageParamKey::BathFrequency, StageParamKey::NoWalkInHeat,
         ];
         $general = fn (string $slug) => collect(BreedStageParamsSeeder::rows())
             ->where('breed_slug', $slug)

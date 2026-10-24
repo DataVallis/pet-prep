@@ -243,3 +243,30 @@ describe('M5-T12 adapted mode — the walk is described in wheelchair pushes', (
     expect(plain.walk).toContain('steps');
   });
 });
+
+describe('M5-R14 / R15 / R18 / R19 / R20 breed care tasks and heat', () => {
+  const pug = makeCareGuide({
+    care_tasks: [
+      { task: 'fold_cleaning', actor: 'child', times: 7, period_days: 7 },
+      { task: 'groomer_visit', actor: 'parent', times: 1, period_days: 28 },
+      { task: 'tooth_brushing', actor: 'child', times: 7, period_days: 7 },
+    ],
+    walk_heat: { months: [6, 7, 8], from: '11:00', to: '16:00' },
+  });
+
+  it('lists the child tasks first, then the parent reminders, with the sourced frequency (child, sl)', () => {
+    const t = texts(pug);
+    expect(t.care).toBe('Obriši mu kožne gube vsak dan. Umij mu zobke vsak dan. Odrasel ga pelje k pasjemu frizerju enkrat na mesec.');
+    expect(t.heat).toBe('Poleti (junij–avgust) ne na sprehod med 11:00 in 16:00 — pojdita v hladnem jutru ali zvečer.');
+  });
+
+  it('words it for the parent and in English; no section without tasks', async () => {
+    const guide = readCareGuide(pug)!;
+    const parent = Object.fromEntries(careGuideSections(guide, 'parent').map((s) => [s.key, s.lines.join(' ')]));
+    expect(parent.care).toContain('Opomnik za vas: pasji frizer enkrat na mesec');
+    await i18n.changeLanguage('en');
+    expect(texts(pug).care).toBe('Wipe its skin folds every day. Brush its teeth every day. A grown-up takes it to the dog groomer once a month.');
+    expect(Object.keys(texts(makeCareGuide()))).not.toContain('care');
+    expect(Object.keys(texts(makeCareGuide()))).not.toContain('heat');
+  });
+});

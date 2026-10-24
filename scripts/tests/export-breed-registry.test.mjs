@@ -506,6 +506,11 @@ test('game numbers equal the seeded breed_stage_params rows', { skip: !(hasPhp &
       const dogGroom = g.rules.find((r) => r.key === 'grooming_rule');
       if (dogGroom) assert.equal(row(b.id, 'all', 'grooming_sessions_per_week'), dogGroom.params.per_week, `${b.id} grooming`);
       else assert.ok(!rows.some((x) => x.breed_slug === b.slug.en && x.key === 'grooming_sessions_per_week'), `${b.slug.en}: grooming row without a register rule`);
+      // M5-R14 / R15 / R18 / R19 / R20: care tasks both ways (only sourced frequencies).
+      const care = g.rules.filter((r) => r.key === 'care_task');
+      for (const r of care) assert.deepEqual(row(b.id, 'all', `${r.params.task}_frequency`), [r.params.times, r.params.period_days], `${b.id} ${r.params.task}`);
+      assert.equal(rows.filter((x) => x.breed_slug === b.slug.en && x.key.endsWith('_frequency')).length, care.length, `${b.slug.en}: care rows ≠ register rules`);
+      assert.equal(rows.some((x) => x.breed_slug === b.slug.en && x.key === 'no_walk_in_heat'), g.rules.some((r) => r.key === 'no_walk_in_heat'), `${b.slug.en}: heat rule`);
     } else {
       assert.equal(row(b.id, 'puppy', 'play_sessions_per_day'), puppy.activity.value);
       assert.equal(row(b.id, 'adult', 'play_sessions_per_day'), adult.activity.value);
@@ -2038,4 +2043,25 @@ test('Bloodhound (M5-R10-62): more than 2 hours (RKC), FCI height + weight, FCI 
   const json = JSON.stringify(d);
   // Never "hypoallergenic", never a percentage, a prevalence, a ratio or the survey median.
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|prevalence|times more likely|\d %\)|\d%|6\.75|six years and nine months/i);
+});
+
+test('M5-R14 / R15 / R18 / R19 / R20: care tasks only where the source states a frequency', () => {
+  const pug = registry.breeds.find((b) => b.id === 'pug');
+  assert.deepEqual(
+    pug.game.rules.filter((r) => r.key === 'care_task').map((r) => r.params),
+    [
+      { task: 'fold_cleaning', actor: 'child', times: 7, period_days: 7 },
+      { task: 'tooth_brushing', actor: 'child', times: 7, period_days: 7 },
+    ],
+  );
+  assert.deepEqual(pug.game.rules.find((r) => r.key === 'no_walk_in_heat').params, { months_north: [6, 7, 8], months_south: [12, 1, 2], from: '11:00', to: '16:00' });
+  const pom = registry.breeds.find((b) => b.id === 'pomeranian');
+  assert.deepEqual(pom.game.rules.find((r) => r.key === 'care_task').params, { task: 'groomer_visit', actor: 'parent', times: 1, period_days: 28 });
+  // A sourced need without a frequency gets no rule (Chihuahua teeth / ears, Boston Terrier nails, Boxer folds / heat).
+  for (const id of ['chihuahua', 'boston_terrier', 'boxer', 'shih_tzu']) {
+    const b = registry.breeds.find((x) => x.id === id);
+    const tasks = b.game.rules.filter((r) => r.key === 'care_task').map((r) => r.params.task);
+    assert.ok(!tasks.includes('tooth_brushing') && !tasks.includes('nail_trim') && !tasks.includes('fold_cleaning'), `${id}: ${tasks}`);
+  }
+  assert.ok(!registry.breeds.find((b) => b.id === 'boxer').game.rules.some((r) => r.key === 'no_walk_in_heat'));
 });

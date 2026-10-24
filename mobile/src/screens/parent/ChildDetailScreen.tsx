@@ -50,6 +50,8 @@ import PetMediaView from '@/components/PetMediaView';
 import ChallengeBuyButton from '@/components/parent/ChallengeBuyButton';
 import CertificateCard from '@/components/parent/CertificateCard';
 import LogWalkCard from '@/components/parent/LogWalkCard';
+import CareRemindersCard, { reminderDate } from '@/components/parent/CareRemindersCard';
+import { careReminderTitle } from '@/modules/careTasks/careTasks';
 import { canBuyChallenge } from '@/modules/plan/purchaseEntry';
 import { parentPetGrowthKey, useGrowthRefresh, useParentPetGrowth } from '@/hooks/queries/usePetGrowth';
 import PetAlbum from '@/components/PetAlbum';
@@ -307,6 +309,11 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
             </Pressable>
           )}
 
+          {/* M5-R18 / R20: groomer visit / bath reminders of breeds with a sourced frequency (never scored). */}
+          {pet !== null && (
+            <CareRemindersCard petId={pet.id} reminders={(pet as { care_reminders?: unknown }).care_reminders} timezone={family.timezone} />
+          )}
+
           {/* M5-R08: the parent sets / changes / removes the pet's name here (a label only). */}
           {pet !== null && (
             <Card testID="detail-pet-name">
@@ -460,6 +467,23 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
                     <Text style={styles.muted} testID="report-socialisation-note">
                       {t('socialisation:parent.notScored')}
                     </Text>
+                  </>
+                )}
+                {/* M5-R18 / R20: the parent's groomer / bath reminders — shown, never scored. */}
+                {data.care_reminders.length > 0 && (
+                  <>
+                    <Text style={styles.strong}>{t('careTasks:parent.reportTitle')}</Text>
+                    {data.care_reminders.map((r) => (
+                      <View key={`${r.task}-${r.period_started_at ?? ''}`} style={styles.typeRow} testID={`report-reminder-${r.task}-${r.status}`}>
+                        <Check color={C.accent} size={16} />
+                        <Text style={styles.typeLabel}>{careReminderTitle(r.task)}</Text>
+                        <Text style={styles.strong}>{t(`careTasks:parent.status.${r.status}`)}</Text>
+                        <Text style={[styles.muted, styles.flex, styles.right]}>
+                          {`${reminderDate(r.period_started_at, tz)} – ${reminderDate(r.period_ends_at, tz)}`}
+                        </Text>
+                      </View>
+                    ))}
+                    <Text style={styles.muted}>{t('careTasks:parent.note')}</Text>
                   </>
                 )}
               </Card>

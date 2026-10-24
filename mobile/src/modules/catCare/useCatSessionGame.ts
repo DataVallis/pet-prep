@@ -62,6 +62,7 @@ export const FINAL_FINISH_REFUSALS: ReadonlySet<string> = new Set([
   'wand_session_interrupted',
   'litter_not_available',
   'grooming_not_available',
+  'care_task_not_available',
   'scratching_not_needed',
   'care_session_invalid',
   'care_session_expired',

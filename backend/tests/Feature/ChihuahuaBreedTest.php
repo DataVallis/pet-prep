@@ -305,6 +305,9 @@ describe('life-stage data against data.json', function () {
             StageParamKey::SocialisationTasksPerWeek,
             // M5-R16: the 60-minute digestion warning (PDSA S277; the Border Collie has none).
             StageParamKey::MealExerciseGapMinutes,
+            // M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks / heat rule (the Border Collie has none).
+            StageParamKey::ToothBrushingFrequency, StageParamKey::FoldCleaningFrequency, StageParamKey::EarCleaningFrequency,
+            StageParamKey::NailTrimFrequency, StageParamKey::GroomerVisitFrequency, StageParamKey::BathFrequency, StageParamKey::NoWalkInHeat,
         ];
         $general = fn (string $slug) => collect(BreedStageParamsSeeder::rows())
             ->where('breed_slug', $slug)

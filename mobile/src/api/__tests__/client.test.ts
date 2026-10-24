@@ -136,7 +136,7 @@ describe('api client', () => {
       expect(init.method).toBe('POST');
       expect(init.headers.Authorization).toBeUndefined();
       // M5-R02: the child's device always declares what it can show (M5-R06-09: cats too).
-      expect(JSON.parse(String(init.body))).toEqual({ pin: '734912', device_name: 'iPhone', features: ['behaviour_events', 'training', 'species_cat', 'dog_grooming', 'socialisation'] });
+      expect(JSON.parse(String(init.body))).toEqual({ pin: '734912', device_name: 'iPhone', features: ['behaviour_events', 'training', 'species_cat', 'dog_grooming', 'socialisation', 'care_tasks'] });
       getItem.mockReset();
     });
 
@@ -181,7 +181,7 @@ describe('api client', () => {
       await api.generatePin({ child_id: 5, pet_id: 9, profile });
       const bodies = fetchMock.mock.calls.map(([, init]) => JSON.parse(String((init as Init).body)));
       expect(bodies).toEqual([
-        { child_id: 5, species: 'dog', breed: 'mutt', origin: 'adopted', age_stage: 'senior', plan: 'challenge', features: ['behaviour_events', 'training', 'species_cat', 'dog_grooming', 'socialisation'] },
+        { child_id: 5, species: 'dog', breed: 'mutt', origin: 'adopted', age_stage: 'senior', plan: 'challenge', features: ['behaviour_events', 'training', 'species_cat', 'dog_grooming', 'socialisation', 'care_tasks'] },
         { child_id: 5, pet_id: 9 },
       ]);
       getItem.mockReset();
@@ -196,7 +196,7 @@ describe('api client', () => {
         origin: 'bought',
         age_stage: 'puppy',
         plan: 'challenge',
-        features: ['behaviour_events', 'training', 'species_cat', 'dog_grooming', 'socialisation'],
+        features: ['behaviour_events', 'training', 'species_cat', 'dog_grooming', 'socialisation', 'care_tasks'],
       });
       // M5-R06-02: the breed is sent as chosen — no hard-coded mutt; the picker puts the
       // species' free breed on the free plan (a free cat is the domestic cat, never a mutt).
@@ -217,9 +217,9 @@ describe('api client', () => {
       // M5-R06-09: this build has the cat HUD → it declares species_cat. Whether a cat is
       // offered is the server's call (PETPREP_CATS_ENABLED); with it off the server ignores it.
       expect(CAT_UI_READY).toBe(true);
-      expect(CLIENT_FEATURES).toEqual(['behaviour_events', 'training', 'species_cat', 'dog_grooming', 'socialisation']);
-      expect(clientFeatures(false)).toEqual(['behaviour_events', 'training', 'dog_grooming', 'socialisation']);
-      expect(clientFeatures(true)).toEqual(['behaviour_events', 'training', 'species_cat', 'dog_grooming', 'socialisation']);
+      expect(CLIENT_FEATURES).toEqual(['behaviour_events', 'training', 'species_cat', 'dog_grooming', 'socialisation', 'care_tasks']);
+      expect(clientFeatures(false)).toEqual(['behaviour_events', 'training', 'dog_grooming', 'socialisation', 'care_tasks']);
+      expect(clientFeatures(true)).toEqual(['behaviour_events', 'training', 'species_cat', 'dog_grooming', 'socialisation', 'care_tasks']);
       const profile = { species: 'cat', breed: 'maine_coon', origin: 'bought', age_stage: 'puppy', plan: 'challenge' } as const;
       expect(generatePinBody({ child_id: 5, profile }, clientFeatures(true))).toEqual({
         child_id: 5,
@@ -228,7 +228,7 @@ describe('api client', () => {
         origin: 'bought',
         age_stage: 'puppy',
         plan: 'challenge',
-        features: ['behaviour_events', 'training', 'species_cat', 'dog_grooming', 'socialisation'],
+        features: ['behaviour_events', 'training', 'species_cat', 'dog_grooming', 'socialisation', 'care_tasks'],
       });
     });
 
@@ -239,10 +239,10 @@ describe('api client', () => {
 
       await expect(api.getBreedCatalogue()).resolves.toEqual(body);
       const [url, init] = fetchMock.mock.calls[0] as [string, Init];
-      expect(url).toMatch(/\/api\/breeds\?features\[\]=behaviour_events&features\[\]=training&features\[\]=species_cat&features\[\]=dog_grooming&features\[\]=socialisation$/);
+      expect(url).toMatch(/\/api\/breeds\?features\[\]=behaviour_events&features\[\]=training&features\[\]=species_cat&features\[\]=dog_grooming&features\[\]=socialisation&features\[\]=care_tasks$/);
       expect(init.method).toBe('GET');
       expect(breedCataloguePath(clientFeatures(true))).toBe(
-        '/api/breeds?features[]=behaviour_events&features[]=training&features[]=species_cat&features[]=dog_grooming&features[]=socialisation',
+        '/api/breeds?features[]=behaviour_events&features[]=training&features[]=species_cat&features[]=dog_grooming&features[]=socialisation&features[]=care_tasks',
       );
       expect(breedCataloguePath([], 'cat')).toBe('/api/breeds?species=cat');
       getItem.mockReset();

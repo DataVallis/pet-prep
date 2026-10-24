@@ -8,7 +8,7 @@
 import type { ReactNode } from 'react';
 import { ActivityIndicator, Pressable, StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
 import { Text } from '@/components/ui/Text';
-import { AlertTriangle, Beef, Brush, Droplet, Feather, Footprints, GraduationCap, Recycle, Shovel, Sparkles, WifiOff } from 'lucide-react-native';
+import { AlertTriangle, Beef, Brush, Droplet, Droplets, Ear, Feather, Footprints, GraduationCap, Recycle, Scissors, Shovel, Sparkles, WifiOff } from 'lucide-react-native';
 
 import { LIGHT_LABELS, type LightColor, type RoutineType } from '@/modules/family/scoring';
 import { fonts, light, meter, palette, radius } from '@/theme';
@@ -95,6 +95,11 @@ const ROUTINE_ICONS: Record<RoutineType, typeof Beef> = {
   litter_scoop: Shovel,
   litter_change: Recycle,
   grooming: Brush,
+  // M5-R14 / R15 / R19 / R20 (breed care tasks)
+  tooth_brushing: Sparkles,
+  fold_cleaning: Droplets,
+  ear_cleaning: Ear,
+  nail_trim: Scissors,
 };
 
 export function RoutineIcon({ type, color = C.accent, size = 16 }: { type: RoutineType; color?: string; size?: number }) {

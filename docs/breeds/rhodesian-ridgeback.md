@@ -49,7 +49,9 @@
 
 ## Odprto za Davida
 
-- **Potrebe brez mehanike (needs-david):** redno čiščenje zob ali žvečilke za zobe (Woodgreen S392) → **M5-R15**; tedenski pregled in čiščenje ušes (Woodgreen S392) in kopanje vsaj enkrat na mesec (PetMD S391) → **M5-R20**; **sprehod brez povodca samo v varno ograjenem prostoru** (AKC S393, PDSA S390) → za to še ni naloge v ROADMAP — **potrebna nova naloga (David)** (enako kot pri šiba inuju).
+- **Rešeno 24. 10. 2026 (David, M5-R14 / R15 / R18 / R19 / R20 — PR #376):** naloga samo, kjer vir navaja pogostost (razpon → spodnja meja); mini-igre otroka po modelu česanja (pošten delež, reže, poročilo, brez kazni), pasji frizer in kopanje = opomnik staršu, ne šteje v oceno; samo novi psi. Za to pasmo — zgrajeno: čiščenje ušes enkrat na teden (mini-igra otroka); kopanje enkrat na 4 tedne (mesec) (opomnik staršu, ne šteje v oceno); brez pogostosti v viru → brez naloge (dejstvo ostane v besedilu): ščetkanje zob. Spodnje točke M5-R14 / R15 / R18 / R19 / R20 so s tem zaprte.
+
+- **Potrebe brez mehanike (needs-david → rešeno 24. 10. 2026):** redno čiščenje zob ali žvečilke za zobe (Woodgreen S392) → **M5-R15**; tedenski pregled in čiščenje ušes (Woodgreen S392) in kopanje vsaj enkrat na mesec (PetMD S391) → **M5-R20**; **sprehod brez povodca samo v varno ograjenem prostoru** (AKC S393, PDSA S390) → za to še ni naloge v ROADMAP — **potrebna nova naloga (David)** (enako kot pri šiba inuju).
 - **Začetek starosti 90 mesecev je začasen** (spodnja meja RKC); McMillan 2024 prek Wikipedije navaja 12 let (→ 108). Preveriti dopolnilno tabelo McMillan 2024.
 - **`needs_mental_stimulation`:** ni dobesednega citata o potrebi → oznake ni; David lahko odloči drugače.
 - **Barva portreta:** rdeče pšenična kot najbolj tipična (brez vira za težo barv). Portret (PR #286, 2026-10-20) je narejen brez namestitve produkcije; greben v stranskem pogledu ni viden.

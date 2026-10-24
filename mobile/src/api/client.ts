@@ -325,7 +325,7 @@ export interface GenerateChildPinRequest {
  * A UI feature this app build can show for a new pet (backend `ClientFeature`; the schema
  * types it as `string` because unknown values are dropped server-side, not refused).
  */
-export type ClientFeature = 'behaviour_events' | 'training' | 'species_cat' | 'dog_grooming' | 'socialisation';
+export type ClientFeature = 'behaviour_events' | 'training' | 'species_cat' | 'dog_grooming' | 'socialisation' | 'care_tasks';
 
 /**
  * What a build declares: the behaviour events ("Pelji ven", luža, pregrizen copat — M5-R02,
@@ -338,9 +338,10 @@ export type ClientFeature = 'behaviour_events' | 'training' | 'species_cat' | 'd
 export function clientFeatures(catUiReady: boolean = CAT_UI_READY): readonly ClientFeature[] {
   // M5-R13: this build brushes a dog ("Počeši" chip + the stroke mini-game) → `dog_grooming`.
   // M5-R17: it shows the puppy's weekly "Nova izkušnja" card → `socialisation`.
+  // M5-R14 / R15 / R18 / R19 / R20: breed care mini-games, parent reminders, heat note → `care_tasks`.
   return catUiReady
-    ? ['behaviour_events', 'training', 'species_cat', 'dog_grooming', 'socialisation']
-    : ['behaviour_events', 'training', 'dog_grooming', 'socialisation'];
+    ? ['behaviour_events', 'training', 'species_cat', 'dog_grooming', 'socialisation', 'care_tasks']
+    : ['behaviour_events', 'training', 'dog_grooming', 'socialisation', 'care_tasks'];
 }
 
 /** This build's features (see {@link clientFeatures}). */
@@ -1194,6 +1195,25 @@ export const api = {
       body: { session_id: sessionId, strokes: strokes.map((t) => ({ t })) } satisfies components['schemas']['FinishCareChoreRequest'],
     }),
 
+  /**
+   * POST /api/child/pet/care-task/start {task} (M5-R14 / R15 / R19 / R20) — a breed care
+   * mini-game (teeth, folds, ears: brush strokes; nails: one tap per claw). 200 untyped →
+   * read with `readCatStartResponse` + `readCareTaskSession`. 422 `care_task_*` /
+   * `needs_cleaning` / `care_session_active` (+ `next_allowed_at`), 423 locked.
+   */
+  startCareTask: (task: components['schemas']['StartCareTaskRequest']['task']) =>
+    apiRequest<unknown>('/api/child/pet/care-task/start', {
+      method: 'POST',
+      body: { task } satisfies components['schemas']['StartCareTaskRequest'],
+    }),
+
+  /** POST /api/child/pet/care-task/finish {task, session_id, strokes[{t}]}. 422 `care_session_*` / `care_task_not_available`. */
+  finishCareTask: (task: components['schemas']['FinishCareTaskRequest']['task'], sessionId: string, strokes: readonly number[]) =>
+    apiRequest<unknown>('/api/child/pet/care-task/finish', {
+      method: 'POST',
+      body: { task, session_id: sessionId, strokes: strokes.map((t) => ({ t })) } satisfies components['schemas']['FinishCareTaskRequest'],
+    }),
+
   /** POST /api/child/pet/scratching/start — carry the cat to the scratcher (`land_at_ms`). 422 `scratching_not_needed` / `scratching_session_active` / `care_session_active`. */
   startScratching: () => apiRequest<unknown>('/api/child/pet/scratching/start', { method: 'POST' }),
 
@@ -1290,6 +1310,17 @@ export const api = {
    * unassigned challenge credit to this pet (idempotent: an already paid pet stays paid).
    * 409 `no_credit`, 422 free plan / already paid. Body read with `readPetPlan`.
    */
+  /**
+   * POST /api/parent/pets/{pet}/care-reminders {task} (M5-R18 / R20, parent only) — the parent
+   * confirms the groomer visit / bath done for the current period (never scored). 200
+   * `{status: accepted | unchanged, care_reminders}`; 422 `care_task_not_available`, 404 `pet_not_found`.
+   */
+  confirmCareReminder: (petId: number, task: components['schemas']['ConfirmCareReminderRequest']['task']) =>
+    apiRequest<unknown>(`/api/parent/pets/${petId}/care-reminders`, {
+      method: 'POST',
+      body: { task } satisfies components['schemas']['ConfirmCareReminderRequest'],
+    }),
+
   activateChallenge: (petId: number) =>
     apiRequest<unknown>(`/api/parent/pets/${petId}/challenge/activate`, { method: 'POST' }),
 

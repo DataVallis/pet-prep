@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Enums\ActivityType;
 use App\Enums\CareSessionKind;
+use App\Enums\CareTask;
 use App\Enums\HygieneEventKind;
 use App\Enums\HygieneEventStatus;
 use App\Enums\RoutineStatus;
@@ -88,6 +89,14 @@ use Throwable;
  *    PROGRAM time (like the walk); a payment lock already lengthens the
  *    period, so it is neither blocked nor period time (David 2026-10-12,
  *    »ne štej dvakrat«). A weekly routine is never pending past its day.
+ *  - tooth_brushing / fold_cleaning / ear_cleaning / nail_trim (M5-R14 / R15 /
+ *    R19 / R20, David 2026-10-24): the grooming model for the breed care tasks
+ *    of a dog with `care_tasks_enabled` — the program period of the task's
+ *    `period_days` (7 = a week, 28 = a month …) that ENDS on the date has
+ *    `times` slots (slot i = the period's i-th completed task, actor = its
+ *    child), capped like grooming at the days whose awake time leaves room for
+ *    one session (feasibleGroomingDays) and excused the same way. Only breeds
+ *    whose source states the frequency have a row (CareTask).
  *
  * Not expected at all: before birth (an unborn pet has none), before
  * FIRST_LEDGER_DATE, and — unless it was done anyway — any routine whose
@@ -148,6 +157,11 @@ class RoutineLedgerService
         ActivityType::ChangedLitter,
         ActivityType::GroomedPet,
         ActivityType::ResolvedScratching,
+        // M5-R14 / R15 / R19 / R20: the child's breed care mini-games (task slots).
+        ActivityType::BrushedTeeth,
+        ActivityType::CleanedFolds,
+        ActivityType::CleanedEars,
+        ActivityType::TrimmedNails,
     ];
 
     /** M5-R06-05: who scooped a litter use — the scoop itself, a cleaning of the accident, the weekly change. */
@@ -597,6 +611,11 @@ class RoutineLedgerService
             array_push($routines, ...$this->weeklyCatRoutines($pet, $in, $date, $dayStartUtc, $dayEndUtc, $born, $useNormal, $now));
         }
 
+        // M5-R14 / R15 / R19 / R20: the breed care tasks' period slots (the grooming model).
+        if ($this->hasCareTaskRoutines($pet)) {
+            array_push($routines, ...$this->careTaskRoutines($pet, $in, $date, $dayStartUtc, $dayEndUtc, $born, $useNormal, $now));
+        }
+
         $routines = array_values(array_filter($routines));
         $pending = array_filter($routines, fn (Routine $r) => $r->isPending());
         $settles = $dayEndUtc;
@@ -735,6 +754,87 @@ class RoutineLedgerService
         return array_values(array_filter($routines));
     }
 
+    /** M5-R14 / R15 / R19 / R20: a profiled dog created with `care_tasks_enabled`. */
+    private function hasCareTaskRoutines(Pet $pet): bool
+    {
+        return $pet->careTasksEnabled();
+    }
+
+    /**
+     * The child care task frequency of a date ([times, period_days]) or null.
+     *
+     * @return array{0: int, 1: int}|null
+     */
+    private function careTaskFrequency(Pet $pet, string $date, CareTask $task): ?array
+    {
+        $value = $this->lifeStages->stageValueOn($pet, $date, $task->stageParamKey())['value'] ?? null;
+
+        return StageParamKey::validFrequency($value) ? [$value[0], $value[1]] : null;
+    }
+
+    /**
+     * M5-R14 / R15 / R19 / R20: the slots of every child care task whose program
+     * period (of the task's `period_days`) ends on $date — `times` slots, opens at
+     * the period start, due at its end; capped at the days with room for one
+     * session (no care while the pet sleeps); excused when freezes cover ≥ 50 %
+     * of the period's non-quiet program time — exactly like grooming.
+     *
+     * @param  array<string, mixed>  $in
+     * @return list<Routine>
+     */
+    private function careTaskRoutines(Pet $pet, array $in, string $date, CarbonImmutable $dayStart, CarbonImmutable $dayEnd, CarbonImmutable $born, bool $useNormal, CarbonImmutable $now): array
+    {
+        $quiet = $in['quiet'];
+        $blocks = $in['blocks'];
+        $pauses = null;
+        $routines = [];
+
+        foreach (CareTask::childTasks() as $task) {
+            $frequency = $this->careTaskFrequency($pet, $date, $task);
+            if ($frequency === null) {
+                continue;
+            }
+            [$times, $days] = $frequency;
+            $ending = $this->lifeStages->programPeriodAt($pet, $dayEnd->subSecond(), $days);
+            if ($ending === null || $ending['index'] < 1 || $ending['start']->lessThan($dayStart) || $ending['start']->greaterThanOrEqualTo($dayEnd)) {
+                continue;
+            }
+            $period = $this->lifeStages->programPeriodAt($pet, $ending['start']->subSecond(), $days);
+            if ($period === null) {
+                continue;
+            }
+            $opens = $period['start']->lessThan($born) ? $born : $period['start'];
+            $due = $ending['start'];
+            if (! $opens->lessThan($due)) {
+                continue;
+            }
+            // »Spečo žival ne motimo«: a slot the quiet hours leave no day for is not expected.
+            $goal = min($times, CatChoreService::feasibleGroomingDays($quiet, $opens, $due, $pet->familyTimezone(), CareTaskService::neededSeconds($task), $times));
+            if ($goal <= 0) {
+                continue;
+            }
+            $pauses ??= $this->programPauses($pet);
+            $excused = $this->blockedShare($quiet, $blocks, $opens, $due, $useNormal, $pauses) >= self::WHOLE_DAY_EXCUSE_SHARE - 1e-9;
+            /** @var RoutineType $type */
+            $type = $task->routineType();
+            $activity = $task->activityType()->value;
+            $rows = array_values(array_filter(
+                $in['activities'],
+                fn ($a) => $a['type'] === $activity && $a['at']->greaterThanOrEqualTo($opens) && $a['at']->lessThan($due),
+            ));
+            for ($slot = 0; $slot < $goal; $slot++) {
+                $row = $rows[$slot] ?? null;
+                $routines[] = $this->resolve(
+                    $pet, $date, $type, $slot, $opens, $due,
+                    $row !== null ? ['at' => $row['at'], 'actor' => $row['actor']] : null,
+                    $blocks, $now, excused: $excused,
+                );
+            }
+        }
+
+        return array_values(array_filter($routines));
+    }
+
     /**
      * A litter use without a stored deadline yet (the tick fixes it right
      * after applying): `litter_scoop_deadline_hours` (4 h) outside quiet hours.
@@ -820,6 +920,22 @@ class RoutineLedgerService
             $changeDays = $this->lifeStages->stageValueOn($cat, $fromDate, StageParamKey::LitterFullChangeDays)['value'] ?? 0;
             foreach (array_unique([7, is_int($changeDays) && $changeDays > 0 ? $changeDays : 7]) as $days) {
                 $period = $this->lifeStages->programPeriodAt($cat, $before, $days);
+                if ($period !== null && $period['start']->subDay()->lessThan($lookbackUtc)) {
+                    $lookbackUtc = $period['start']->subDay();
+                }
+            }
+        }
+
+        // M5-R14 / R15 / R19 / R20: a care task period can be up to 120 days long — reach
+        // back to the start of every period that ends inside the range.
+        foreach ($pets->filter(fn (Pet $p) => $this->hasCareTaskRoutines($p) && ! $p->isUnborn()) as $dog) {
+            $before = CarbonImmutable::parse($fromDate, $dog->familyTimezone())->startOfDay()->subSecond();
+            foreach (CareTask::childTasks() as $task) {
+                $frequency = $this->careTaskFrequency($dog, $fromDate, $task);
+                if ($frequency === null) {
+                    continue;
+                }
+                $period = $this->lifeStages->programPeriodAt($dog, $before, $frequency[1]);
                 if ($period !== null && $period['start']->subDay()->lessThan($lookbackUtc)) {
                     $lookbackUtc = $period['start']->subDay();
                 }

@@ -26,7 +26,10 @@ use Carbon\CarbonInterface;
  *   change days (LitterService), scratching after a missed play day
  *   (ScratchingService);
  * - messes: the 2 h cleaning deadline (RoutineLedgerService::CLEAN_WITHIN_SECONDS);
- * - digestion: the breed's meal / exercise gap (CareScheduleService::digestingUntil source).
+ * - digestion: the breed's meal / exercise gap (CareScheduleService::digestingUntil source);
+ * - care tasks (M5-R14 / R15 / R18 / R19 / R20): the breed's sourced care tasks — who
+ *   (child mini-game / parent reminder) and how often (CareTaskService::frequencyOn);
+ * - walk heat (M5-R14): flat-faced breeds — no walk at summer midday (WalkHeatService).
  *
  * Pet facts only — no personal data. Null blocks = the rule does not apply.
  */
@@ -41,6 +44,8 @@ final class CareGuidePayload
      * @param  array{night: array{start: string, end: string}|null, school: array{start: string, end: string}|null}  $sleep
      * @param  array{sessions_per_day: int, min_gap_minutes: int}|null  $play
      * @param  array{scoop_within_hours: float|int, change_every_days: int}|null  $litter
+     * @param  list<array{task: string, actor: string, times: int, period_days: int}>  $careTasks
+     * @param  array{months: list<int>, from: string, to: string}|null  $walkHeat
      */
     public function __construct(
         public readonly string $species,
@@ -56,6 +61,8 @@ final class CareGuidePayload
         public readonly bool $scratching,
         public readonly int $cleanWithinHours,
         public readonly ?int $digestionGapMinutes,
+        public readonly array $careTasks = [],
+        public readonly ?array $walkHeat = null,
     ) {}
 
     public static function for(Pet $pet, ?CarbonInterface $now = null, ?PetProfilePayload $profile = null): self
@@ -90,6 +97,21 @@ final class CareGuidePayload
 
         $gap = $cat ? null : ($lifeStages->stageValueOn($pet, $today, StageParamKey::MealExerciseGapMinutes)['value'] ?? null);
 
+        $careTaskService = app(CareTaskService::class);
+        $careTasks = [];
+        foreach ($careTaskService->tasksOn($pet, $today) as $task) {
+            $frequency = $careTaskService->frequencyOn($pet, $today, $task);
+            if ($frequency !== null) {
+                $careTasks[] = ['task' => $task->value, 'actor' => $task->actor(), 'times' => $frequency['times'], 'period_days' => $frequency['period_days']];
+            }
+        }
+        $tz = $pet->familyTimezone();
+        $walkHeat = app(WalkHeatService::class)->appliesTo($pet, $today) ? [
+            'months' => array_map('intval', (array) config(WalkHeatService::isSouthern($tz) ? 'care_tasks.heat.summer_months_south' : 'care_tasks.heat.summer_months_north')),
+            'from' => (string) config('care_tasks.heat.from', '11:00'),
+            'to' => (string) config('care_tasks.heat.to', '16:00'),
+        ] : null;
+
         return new self(
             species: $pet->speciesValue()->value,
             lifeStage: $profile->lifeStage,
@@ -116,6 +138,8 @@ final class CareGuidePayload
             scratching: $scratching,
             cleanWithinHours: intdiv(RoutineLedgerService::CLEAN_WITHIN_SECONDS, 3600),
             digestionGapMinutes: is_int($gap) && $gap > 0 ? $gap : null,
+            careTasks: $careTasks,
+            walkHeat: $walkHeat,
         );
     }
 
@@ -144,7 +168,7 @@ final class CareGuidePayload
     }
 
     /**
-     * @return array{species: 'dog'|'cat', life_stage: 'puppy'|'young'|'adult'|'senior'|null, meals: array{per_day: int, by_child: int, by_parent: int, windows: list<array{start: string, end: string, parent_covered: bool}>}, steps: array{goal: int, exercise_minutes: int|null}|null, take_out: array{hold_hours: int}|null, water: array{refill_below: int, min_gap_minutes: int}|null, grooming: array{per_week: int}|null, sleep: array{night: array{start: string, end: string}|null, school: array{start: string, end: string}|null}, play: array{sessions_per_day: int, min_gap_minutes: int}|null, litter: array{scoop_within_hours: float|int, change_every_days: int}|null, scratching: bool, clean_within_hours: int, digestion_gap_minutes: int|null}
+     * @return array{species: 'dog'|'cat', life_stage: 'puppy'|'young'|'adult'|'senior'|null, meals: array{per_day: int, by_child: int, by_parent: int, windows: list<array{start: string, end: string, parent_covered: bool}>}, steps: array{goal: int, exercise_minutes: int|null}|null, take_out: array{hold_hours: int}|null, water: array{refill_below: int, min_gap_minutes: int}|null, grooming: array{per_week: int}|null, sleep: array{night: array{start: string, end: string}|null, school: array{start: string, end: string}|null}, play: array{sessions_per_day: int, min_gap_minutes: int}|null, litter: array{scoop_within_hours: float|int, change_every_days: int}|null, scratching: bool, clean_within_hours: int, digestion_gap_minutes: int|null, care_tasks: list<array{task: 'tooth_brushing'|'fold_cleaning'|'ear_cleaning'|'nail_trim'|'groomer_visit'|'bath', actor: 'child'|'parent', times: int, period_days: int}>, walk_heat: array{months: list<int>, from: string, to: string}|null}
      */
     public function toArray(): array
     {
@@ -225,6 +249,21 @@ final class CareGuidePayload
              * @var int|null
              */
             'digestion_gap_minutes' => $this->digestionGapMinutes,
+            /**
+             * M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+             * a mini-game in the app, parent = a reminder the parent confirms; `times` per
+             * `period_days` program days (7 = week, 28 = month). [] without one.
+             *
+             * @var list<array{task: 'tooth_brushing'|'fold_cleaning'|'ear_cleaning'|'nail_trim'|'groomer_visit'|'bath', actor: 'child'|'parent', times: int, period_days: int}>
+             */
+            'care_tasks' => $this->careTasks,
+            /**
+             * M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+             * and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+             *
+             * @var array{months: list<int>, from: string, to: string}|null
+             */
+            'walk_heat' => $this->walkHeat,
         ];
     }
 }

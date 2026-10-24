@@ -49,7 +49,9 @@
 
 ## Odprto za Davida
 
-- **Potrebe brez mehanike (needs-david):** kopanje približno enkrat na mesec in čiščenje ušes po nasvetu veterinarja (PetMD S424) → **M5-R20**; redno brisanje sline (PetMD S424) → **potrebna nova naloga v ROADMAP — David**.
+- **Rešeno 24. 10. 2026 (David, M5-R14 / R15 / R18 / R19 / R20 — PR #376):** naloga samo, kjer vir navaja pogostost (razpon → spodnja meja); mini-igre otroka po modelu česanja (pošten delež, reže, poročilo, brez kazni), pasji frizer in kopanje = opomnik staršu, ne šteje v oceno; samo novi psi. Za to pasmo — zgrajeno: kopanje enkrat na 4 tedne (mesec) (opomnik staršu, ne šteje v oceno); brez pogostosti v viru → brez naloge (dejstvo ostane v besedilu): čiščenje ušes. Spodnje točke M5-R14 / R15 / R18 / R19 / R20 so s tem zaprte.
+
+- **Potrebe brez mehanike (needs-david → rešeno 24. 10. 2026):** kopanje približno enkrat na mesec in čiščenje ušes po nasvetu veterinarja (PetMD S424) → **M5-R20**; redno brisanje sline (PetMD S424) → **potrebna nova naloga v ROADMAP — David**.
 - **Česanje: viri se razlikujejo** — PDSA »a daily task« (7× na teden, zgrajeno po pravilu), PetMD »at least once a week«. Če David želi manj kot vsak dan, je potrebna podatkovna migracija.
 - **Življenjska doba:** oznaka `shorter_lifespan` po pravilu (PDSA »Under 10 years«, PetMD 9–10 let), čeprav je mediana McMillan 2024 11,0 let (S123). Preveriti, ali naj oznaka ostane.
 - **RKC ni bil dosegljiv** (stran pasme, Breed Watch, DNA testi so vrnili napako): manjkajo polja RKC (velikost doma in vrta, linjenje, razpon življenjske dobe); oznaka `large_home` zato ni dodana. Seznam testov za vzreditelja je iz načrta BHCP 2018 (K29) — ob naslednjem zagonu preveriti stran RKC.

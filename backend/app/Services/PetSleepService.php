@@ -22,7 +22,9 @@ use Carbon\CarbonInterface;
  * `play_pet_sleeping`, M5-T02b), no training session (TrainingService →
  * 422 `training_pet_sleeping`), no brushing for a dog or a cat
  * (CatChoreService → 422 `grooming_quiet_hours`, checked first, M5-T02b —
- * David 2026-10-21 »spečo žival ne motimo«). The cat's wand and the puppy's
+ * David 2026-10-21 »spečo žival ne motimo«), no breed care task — teeth, folds,
+ * ears, nails (CareTaskService → 422 `care_task_quiet_hours`, checked first,
+ * David 2026-10-24). The cat's wand and the puppy's
  * socialisation keep their own quiet-hours refusals (they, like grooming,
  * also refuse a game that would run INTO quiet hours).
  */

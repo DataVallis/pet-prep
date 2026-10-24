@@ -57,6 +57,7 @@ class FamilyDashboardService
         private readonly PlayService $play,
         private readonly ChallengeCertificateService $certificates,
         private readonly SocialisationService $socialisation,
+        private readonly CareTaskService $careTasks,
     ) {}
 
     private const CHILD_ACTIONS = [
@@ -277,6 +278,10 @@ class FamilyDashboardService
                     'preparation' => PreparationPayload::for($pet, $slots)->toArray(),
                     // M5-T13: the pet's first birthday (the parent card shows it on the day).
                     'birthday' => BirthdayPayload::for($pet)?->toArray(),
+                    // M5-R18 / R20 (David 2026-10-24): groomer visit / bath reminders of the current
+                    // period — the parent confirms them (POST /api/parent/pets/{pet}/care-reminders);
+                    // never scored. [] when the breed's source gives no frequency.
+                    'care_reminders' => CareTasksPayload::reminders($pet),
                 ], $this->scores->petSummary($board, $pet));
             })->values()->all(),
         ];
@@ -389,6 +394,20 @@ class FamilyDashboardService
                 'start' => $board['starts'][$pet->id][$child->id] ?? null,
                 'end' => $board['ends'][$pet->id][$child->id] ?? null,
             ]) : null,
+            // M5-R18 / R20 (David 2026-10-24): the parent's groomer visit / bath reminders —
+            // one row per period overlapping the report (done / open / not_done), newest
+            // first. Shown, never scored (not in by_type, daily, missed, the Care Score or
+            // the light). The child's own care tasks (teeth, folds, ears, nails) are normal
+            // routines in by_type / missed.
+            'care_reminders' => $pet !== null ? array_map(fn (array $r): array => [
+                /** @var 'groomer_visit'|'bath' */
+                'task' => $r['task'],
+                'period_started_at' => $r['period_started_at']->setTimezone($tz)->toIso8601String(),
+                'period_ends_at' => $r['period_ends_at']->setTimezone($tz)->toIso8601String(),
+                'done_at' => $r['done_at']?->setTimezone($tz)->toIso8601String(),
+                /** @var 'done'|'open'|'not_done' */
+                'status' => $r['status'],
+            ], $this->careTasks->reminderHistory($pet, Carbon::parse($from, $tz)->startOfDay()->utc(), now())) : [],
         ];
     }
 

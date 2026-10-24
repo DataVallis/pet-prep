@@ -52,6 +52,8 @@
 
 ## Odprto za Davida
 
+- **Rešeno 24. 10. 2026 (David, M5-R14 / R15 / R18 / R19 / R20 — PR #376):** naloga samo, kjer vir navaja pogostost (razpon → spodnja meja); mini-igre otroka po modelu česanja (pošten delež, reže, poročilo, brez kazni), pasji frizer in kopanje = opomnik staršu, ne šteje v oceno; samo novi psi. Za to pasmo — zgrajeno: čiščenje ušes enkrat na teden (mini-igra otroka); brez pogostosti v viru → brez naloge (dejstvo ostane v besedilu): pasji frizer. Spodnje točke M5-R14 / R15 / R18 / R19 / R20 so s tem zaprte.
+
 - **Potreba brez mehanike (ROADMAP M5-R18):** strokovno trimanje (»stripping«) pri pasjem frizerju na dva do štiri mesece in redno striženje (PetMD S497, PDSA S496); nikoli britje.
 - **Potreba brez mehanike (ROADMAP M5-R20):** pregled ušes vsak teden (PetMD S497).
 - **Mediana življenjske dobe:** tabele McMillan 2024 (Dogs Trust S123) ta zagon ni mogel odpreti; Wikipedija (S498, tier C) navaja 12,1 leta iz McMillan 2024 → če jo potrdite v viru, bi bil starejši od 109 mesecev namesto 108 (nova podatkovna migracija).

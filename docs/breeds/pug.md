@@ -49,7 +49,9 @@
 
 ## Odprto za Davida
 
-- **Potrebe brez mehanike (needs-david):** čiščenje kožnih gub na obrazu **vsak dan** in brisanje oči (PetMD S359) ter nobenega gibanja v vročini (PDSA S357) → **M5-R14**; ščetkanje zob **vsak dan** (PetMD S359) → **M5-R15**; čiščenje ušes (PetMD S359, pogostost po nasvetu veterinarja) → **M5-R20**.
+- **Rešeno 24. 10. 2026 (David, M5-R14 / R15 / R18 / R19 / R20 — PR #376):** naloga samo, kjer vir navaja pogostost (razpon → spodnja meja); mini-igre otroka po modelu česanja (pošten delež, reže, poročilo, brez kazni), pasji frizer in kopanje = opomnik staršu, ne šteje v oceno; samo novi psi. Za to pasmo — zgrajeno: čiščenje gub vsak dan (mini-igra otroka); ščetkanje zob vsak dan (mini-igra otroka); opozorilo pred sprehodom poleti 11–16 h (brez kazni); brez pogostosti v viru → brez naloge (dejstvo ostane v besedilu): čiščenje ušes. Spodnje točke M5-R14 / R15 / R18 / R19 / R20 so s tem zaprte.
+
+- **Potrebe brez mehanike (needs-david → rešeno 24. 10. 2026):** čiščenje kožnih gub na obrazu **vsak dan** in brisanje oči (PetMD S359) ter nobenega gibanja v vročini (PDSA S357) → **M5-R14**; ščetkanje zob **vsak dan** (PetMD S359) → **M5-R15**; čiščenje ušes (PetMD S359, pogostost po nasvetu veterinarja) → **M5-R20**.
 - **Oči:** RKC Breed Watch (S356) navaja »Protruding eyes« in draženje oči, PDSA (S357) poškodbe oči zaradi plitvih očesnih votlin — v slovarju ni oznake za oči (samo `eyelid_problems` za veke). Po zgledu buldoga in francoskega buldoga brez oznake. Ali naj dobi novo oznako?
 - **Nasvet PDSA** »Our vets would strongly recommend opting for a breed with a normal snout or even a Pug cross-breed instead« je zabeležen v podatkih; v aplikaciji ga nosi le mirna oznaka o dihanju. Ali naj ga izbirnik pokaže izrecno?
 - **Ime:** »mops« ni preverjeno pri KZS.
