@@ -4,6 +4,7 @@ namespace App\Filament\Pages;
 
 use App\Enums\AdminAlertKind;
 use App\Filament\Widgets\AiBudgetBanner;
+use App\Filament\Widgets\SystemHealth\AppErrorsTable;
 use App\Filament\Widgets\SystemHealth\ErrorsPerHourChart;
 use App\Filament\Widgets\SystemHealth\FailedJobsTable;
 use App\Filament\Widgets\SystemHealth\SystemHealthStats;
@@ -35,7 +36,8 @@ use Throwable;
  * retry / forget. Chosen over Sentry / Grafana: no external service and no
  * error data leaves the server. M5-T19: header action »Test Discord« posts one
  * test message to the admin Discord channel (superadmin only, shows the result;
- * the webhook URL is never shown).
+ * the webhook URL is never shown). M5-05: »App errors« (AppErrorsTable) —
+ * crash / render-error reports from the mobile app, grouped by fingerprint.
  */
 class SystemHealth extends Page implements HasTable
 {
@@ -177,7 +179,8 @@ class SystemHealth extends Page implements HasTable
 
     protected function getFooterWidgets(): array
     {
-        return [FailedJobsTable::class];
+        // M5-05: mobile app crash / render-error reports.
+        return [AppErrorsTable::class, FailedJobsTable::class];
     }
 
     public function getHeaderWidgetsColumns(): int|array

@@ -76,6 +76,32 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/app-errors": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Report one app error (error boundary, uncaught JS error or unhandled
+         *     promise rejection). Works with or without a Bearer token: a valid
+         *     token only tells the server the role (parent | child); a missing,
+         *     expired or revoked token is ignored — never a 401 (the app must not
+         *     sign out because of an error report). Only the role is stored, never
+         *     the user. Throttled per IP (IPv6 /64) and per signed-in user.
+         *     204 on success; 422 for an invalid body; 429 when throttled
+         * @description POST /api/app-errors
+         */
+        post: operations["appError.store"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/login": {
         parameters: {
             query?: never;
@@ -1734,6 +1760,12 @@ export interface paths {
 export type webhooks = Record<string, never>;
 export interface components {
     schemas: {
+        /**
+         * AppErrorScope
+         * @description Where an app error report comes from (M5-05). Error-boundary scopes mirror the app's `RenderErrorScope` (`app`, `child-hud`, `locked-overlay`); the global handlers report `global` (ErrorUtils: uncaught JS error) and `unhandled-rejection` (promise without a catch). Mirrored in the `app_error_fingerprints_scope_check` constraint.
+         * @enum {string}
+         */
+        AppErrorScope: "app" | "child-hud" | "locked-overlay" | "global" | "unhandled-rejection";
         /** BreedCatalogResource */
         BreedCatalogResource: {
             /**
@@ -2440,6 +2472,33 @@ export interface components {
             password_confirmation: string;
         };
         /**
+         * ReportAppErrorRequest
+         * @description POST /api/app-errors (M5-05): one crash / render-error report from the
+         *     mobile app. With or without a token. Strict lengths and character sets on
+         *     every field — free text is limited to the error name, message and stack,
+         *     which the server scrubs again before storing. No props, state, names,
+         *     e-mails or ids are accepted (unknown keys are ignored).
+         */
+        ReportAppErrorRequest: {
+            scope: components["schemas"]["AppErrorScope"];
+            name: string;
+            message: string | null;
+            stack?: string | null;
+            fatal?: boolean | null;
+            /** @description e.g. "3.1.3"; same rule as the push device app version. */
+            app_version: string;
+            /** @description expo-updates runtimeVersion (fingerprint hash) / updateId (uuid) / git sha. */
+            runtime_version?: string | null;
+            update_id?: string | null;
+            build?: string | null;
+            platform: components["schemas"]["DevicePlatform"];
+            os_version?: string | null;
+            /** @description A screen / route NAME (e.g. "child-hud"), never a param or path. */
+            route?: string | null;
+            /** Format: date-time */
+            occurred_at: string;
+        };
+        /**
          * RevenueCatWebhookRequest
          * @description RevenueCat webhook body (M3-08). Authentication is the
          *     VerifyRevenueCatWebhook middleware (runs first, fails closed).
@@ -2819,6 +2878,29 @@ export interface operations {
                     };
                 };
             };
+        };
+    };
+    "appError.store": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["ReportAppErrorRequest"];
+            };
+        };
+        responses: {
+            /** @description No content */
+            204: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            422: components["responses"]["ValidationException"];
         };
     };
     "auth.login": {

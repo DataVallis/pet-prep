@@ -37,6 +37,19 @@ return [
         'hourly_buckets_days' => 14,
     ],
 
+    // M5-05: crash / render-error reports from the mobile app
+    // (POST /api/app-errors → app_error_* tables, App\Services\AppErrors).
+    'app_errors' => [
+        // Fingerprints, per-version rows and hourly buckets not seen for this long are deleted.
+        'retention_days' => 30,
+        // Reports per minute per client IP (IPv6 /64) and per signed-in user.
+        'per_minute' => 30,
+        // Discord `app_error_spike` when one fingerprint reaches this many reports in one clock hour.
+        'spike_per_hour' => 20,
+        // At most one Discord post per fingerprint in this many hours (new or spike).
+        'alert_cooldown_hours' => 24,
+    ],
+
     // Page thresholds.
     'heartbeat_stale_minutes' => 5,
     'stuck_ledger_days' => 2,

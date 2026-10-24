@@ -4,6 +4,7 @@ namespace App\Filament\Widgets\SystemHealth;
 
 use App\Filament\Resources\PetResource;
 use App\Models\User;
+use App\Services\AppErrors\AppErrorReportService;
 use App\Services\SystemHealth\SystemHealthService;
 use Filament\Widgets\StatsOverviewWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
@@ -59,6 +60,8 @@ class SystemHealthStats extends StatsOverviewWidget
         $beat = $health->lastHeartbeat();
         $stale = $health->heartbeatIsStale();
         $disk = $health->diskUsage();
+        // M5-05: mobile app crash / render-error reports.
+        $appErrors = app(AppErrorReportService::class)->windowSummary(24);
 
         return [
             Stat::make(__('admin.system_health.stats.errors'), $open24)
@@ -103,6 +106,10 @@ class SystemHealthStats extends StatsOverviewWidget
                 ->description(__('admin.system_health.stats.unchecked_desc'))
                 ->descriptionIcon('heroicon-m-question-mark-circle')
                 ->color($unchecked > 0 ? 'danger' : 'success'),
+            Stat::make(__('admin.app_errors.stats'), $appErrors['occurrences'])
+                ->description(__('admin.app_errors.stats_desc', ['count' => $appErrors['fingerprints']]))
+                ->descriptionIcon('heroicon-m-device-phone-mobile')
+                ->color($appErrors['occurrences'] > 0 ? 'warning' : 'success'),
             Stat::make(__('admin.system_health.stats.disk'), $disk === null ? '—' : $disk['used_percent'].' %')
                 ->description($disk === null
                     ? __('admin.system_health.stats.disk_unknown')

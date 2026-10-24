@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\AppErrorController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BillingController;
 use App\Http\Controllers\BreedController;
@@ -48,6 +49,12 @@ Route::post('auth/social', [AuthController::class, 'social'])
 // failed-attempt lockouts (per IP and global) in ChildPinLoginService.
 Route::post('child/pin-login', [ChildAuthController::class, 'pinLogin'])
     ->middleware('throttle:pin-login');
+
+// M5-05: crash / render-error reports from the app, with or without a token
+// (a token only gives the role; an invalid one is ignored, never a 401).
+// Throttled per IP (IPv6 /64) and per signed-in user.
+Route::post('app-errors', [AppErrorController::class, 'store'])
+    ->middleware('throttle:app-errors');
 
 /*
 |--------------------------------------------------------------------------
