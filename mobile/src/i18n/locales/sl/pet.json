@@ -149,6 +149,7 @@
       "italian_greyhound": "Del 12-tedenskega izziva · česanje 1× na teden",
       "giant_schnauzer": "Del 12-tedenskega izziva · česanje vsak dan",
       "bloodhound": "Del 12-tedenskega izziva · česanje 1× na teden",
+      "akita": "Del 12-tedenskega izziva · česanje 1× na teden",
       "domestic_cat": "Kratka dlaka · brezplačna",
       "maine_coon": "Dolga dlaka · česanje 3× na teden",
       "british_shorthair": "Kratka, gosta dlaka · česanje 1× na teden",
@@ -398,6 +399,12 @@
         "senior": "2 obroka na dan; krajši sprehod — 9.000 korakov na dan."
       },
       "bloodhound": {
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
+        "young": "2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
+        "adult": "2 obroka na dan; sprehod 12.000 korakov na dan.",
+        "senior": "2 obroka na dan; krajši sprehod — 9.000 korakov na dan."
+      },
+      "akita": {
         "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
         "young": "2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
         "adult": "2 obroka na dan; sprehod 12.000 korakov na dan.",
