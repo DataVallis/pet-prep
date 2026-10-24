@@ -61,7 +61,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "422b2ff1eb3d1dd086d77ba6ce9c3ecaab7e59ac6356482bec433a42073cd74e"
+      "sha256": "7a2422c8ebf9670668b5ae00f9ecb6153fa471661f72d0dc3ccf4d521c0a9f73"
     }
   },
   "suitability_vocabulary": {
@@ -34641,7 +34641,12 @@
           "S505"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "bloodhound.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
