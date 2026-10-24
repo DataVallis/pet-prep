@@ -436,6 +436,7 @@ const SPECIES = [
       { id: 'italian_greyhound', synonyms: { en: ['Italian Sighthound', 'Piccolo Levriero Italiano', 'Iggy'], sl: ['italijanski hrt', 'italijanski hrtek', 'mali italijanski hrt'] } },
       { id: 'giant_schnauzer', synonyms: { en: ['Riesenschnauzer', 'Munich Schnauzer'], sl: ['veliki šnavcer', 'veliki snavcer', 'riesenschnauzer'] } },
       { id: 'bloodhound', synonyms: { en: ['St. Hubert Hound', 'Chien de Saint-Hubert', 'Sleuth Hound'], sl: ['pes svetega Huberta', 'pes sv. Huberta', 'chien de saint-hubert'] } },
+      { id: 'akita', synonyms: { en: ['American Akita', 'Great Japanese Dog'], sl: ['ameriška akita', 'ameriska akita', 'akita'] } },
     ],
   },
   {
@@ -1767,6 +1768,31 @@ const DOG_FACTS = {
       ['ear_infections_prone', 'health.ears'],
     ],
   },
+  // M5-R10-63 (AKC Akita = FCI 344 American Akita). Height = FCI standard (S507, per sex), weight = PDSA 31–59 kg (S508;
+  // the FCI / AKC standards give no weight), lifespan = the PDSA band "Under 10 years" (S508) and the PetMD range 10–14
+  // years (S510) — both shown, they disagree (no shorter_lifespan chip); the Kennel Club / BSAVA 2004 survey median
+  // (S511, 28 deaths) is never exported. Exercise = PDSA "Minimum exercise (per day): 2 hours" (S508; the RKC page was
+  // not reachable). Coat / grooming / shedding = PDSA (no RKC key facts). FCI origin Japan (JP; developed in the USA).
+  // Not exported: adult_weight.salt_category (our assignment), lifespan.senior_from (derived), exercise.heat (breed text),
+  // health.skin (covered by the autoimmune / thyroid sentences), suitability.pdsa_professional_grooming (the groomer
+  // reminder rule carries it), petmd_ears (no frequency). No new health key.
+  akita: {
+    height: ['height.fci'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.pdsa', 'less_than'], ['lifespan.petmd', 'span']],
+    exercise: [['@proposed_game_parameters.akita.exercise_minutes_adult', 'at_least']],
+    coat: ['suitability.pdsa_coat_length'],
+    grooming: [['suitability.pdsa_grooming', 'grooming_frequency']],
+    shedding: ['suitability.pdsa_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia_arthritis', 'health.hip_dysplasia'],
+      ['bloat_gdv', 'health.gdv'],
+      ['eye_problems_pra_cataracts_entropion', 'health.eyes'],
+      ['autoimmune_conditions', 'health.autoimmune'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+    ],
+  },
 
 };
 
@@ -1803,6 +1829,7 @@ export const DOG_CARE_TASKS = {
   scottish_terrier: [['groomer_visit', 1, 56, 'proposed_game_parameters.scottish_terrier.professional_grooming']],
   weimaraner: [['ear_cleaning', 1, 28, 'proposed_game_parameters.weimaraner.ear_care_bathing'], ['bath', 1, 28, 'weimaraner.suitability.petmd_grooming']],
   giant_schnauzer: [['ear_cleaning', 1, 7, 'proposed_game_parameters.giant_schnauzer.ear_checks']],
+  akita: [['groomer_visit', 1, 84, 'proposed_game_parameters.akita.professional_grooming']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -2287,6 +2314,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.bloodhound.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.bloodhound.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.bloodhound.exercise_minutes_senior',
+  },
+  akita: {
+    adult_minutes: ['proposed_game_parameters.akita.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.akita.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.akita.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.akita.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.akita.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.akita.exercise_minutes_senior',
   },
 
 };
