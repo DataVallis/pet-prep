@@ -374,6 +374,13 @@ return [
         ['key' => 'white', 'value' => 'white', 'en' => 'White', 'sl' => 'Bel'],
         ['key' => 'fawn-white', 'value' => 'fawn broken with white', 'en' => 'Fawn and white', 'sl' => 'Rumenorjavo-bel'],
     ],
+    // M5-R10-61: Royal Kennel Club standard S494 / FCI S491, S493 — pure black, pepper and salt, black and silver
+    // ("Any other colour or combination of colours unacceptable.").
+    'giant_schnauzer' => [
+        ['key' => 'black', 'value' => 'solid black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'pepper-salt', 'value' => 'pepper and salt (banded grey) with a dark facial mask', 'en' => 'Pepper and salt', 'sl' => 'Poper in sol'],
+        ['key' => 'black-silver', 'value' => 'black and silver', 'en' => 'Black and silver', 'sl' => 'Črno-srebrn'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

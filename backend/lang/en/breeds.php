@@ -64,6 +64,7 @@ return [
     'scottish_terrier' => 'Scottish Terrier',
     'weimaraner' => 'Weimaraner',
     'italian_greyhound' => 'Italian Greyhound',
+    'giant_schnauzer' => 'Giant Schnauzer',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

@@ -64,6 +64,7 @@ return [
     'scottish_terrier' => 'Škotski terier',
     'weimaraner' => 'Weimarski ptičar',
     'italian_greyhound' => 'Mali italijanski hrt',
+    'giant_schnauzer' => 'Veliki šnavcer',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

@@ -579,8 +579,9 @@ describe('breed search', () => {
   it('M5-R10-27: finds the Miniature Schnauzer by its SL / EN / German names (with and without č)', () => {
     const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
     expect(find('miniature schnauzer')).toEqual(['miniature_schnauzer']);
-    expect(find('šnavcer')).toEqual(['miniature_schnauzer']);
-    expect(find('snavcer')).toEqual(['miniature_schnauzer']);
+    // M5-R10-61: … and the Giant Schnauzer (»veliki šnavcer«) shares the noun.
+    expect(find('šnavcer')).toEqual(['miniature_schnauzer', 'giant_schnauzer']);
+    expect(find('snavcer')).toEqual(['miniature_schnauzer', 'giant_schnauzer']);
     expect(find('Pritlikavi')).toEqual(['miniature_schnauzer']);
     expect(find('zwergschnauzer')).toEqual(['miniature_schnauzer']);
   });

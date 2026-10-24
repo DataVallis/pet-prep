@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "1525dfab3dd29e2dc89bb995fe727e72477e118518dbaf274111dce1326faa05"
+      "sha256": "9001be6dff885c20eda86fb314f47d79cde626bf0450d1802d223a7affcd3e02"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "152a891bff5dc40ccea12e042ee3559502920f1a1cd53851b9af5596b7794c53"
+      "sha256": "ba43be0e28b00c8fce53ab11ed2226251854e4d45a064753b1f2a51c12fb6713"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "7931624378e22ede3b2de62379b16b8dd951dd2e3a6ddfd5992dc3c02537f370"
+      "sha256": "3b6b0834bbe66c601eda1e90e8e996aaf48b27742f2eb8e0a33786c4a91332fe"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,20 +40,20 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "643ace6dd7c67f51410b22df42836dcd02d842a8c36f8a65e3cfc706c0f98921"
+      "sha256": "7593203300bc60b7c0a525dd80634e6dfd09430877b8185ea375c73b94ec9f3c"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "cc199c8ba193b2016f6d64a703cb051127268bfedb1a1b7094631d9c4bd51de8"
+      "sha256": "c3d40cd14c918686b77dbc7b1203d76ba156c0165edf78581643dc3d9347ab4a"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "f883889dc41d9b9ffc8e425a29bfc2673debe3d3c118df01bcfba7a1def9c436"
+      "sha256": "66b98093d1cea7fcc8400d82351359378283a7ee4000a7e476d957e300809517"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "78d88d89816484b3fbde01ae2328fe04d7db1239e94a3c0c13341597942d9909"
+      "sha256": "edac6879dea16007eff11b490b3b9ed4902371f9b2b5e507fc9d09f05cd1d231"
     },
     "app_release": {
       "path": "docs/research/app-release.json",
@@ -212,7 +212,7 @@
         }
       },
       "status": "available",
-      "breed_count": 56,
+      "breed_count": 57,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -33451,6 +33451,657 @@
       ]
     },
     {
+      "id": "giant_schnauzer",
+      "species": "dog",
+      "order": 56,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Giant Schnauzer",
+        "sl": "Veliki šnavcer"
+      },
+      "slug": {
+        "en": "giant-schnauzer",
+        "sl": "veliki-snavcer"
+      },
+      "synonyms": {
+        "en": [
+          "Riesenschnauzer",
+          "Munich Schnauzer"
+        ],
+        "sl": [
+          "veliki šnavcer",
+          "veliki snavcer",
+          "riesenschnauzer"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "daily"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S495"
+          ],
+          "ref": "giant_schnauzer.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              65,
+              70
+            ],
+            "female": [
+              60,
+              65
+            ]
+          },
+          "source_ids": [
+            "S494"
+          ],
+          "ref": "giant_schnauzer.height.rkc_standard",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              35,
+              47
+            ],
+            "female": [
+              35,
+              47
+            ]
+          },
+          "source_ids": [
+            "S492"
+          ],
+          "ref": "giant_schnauzer.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            15,
+            18
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "giant_schnauzer.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S495"
+          ],
+          "ref": "giant_schnauzer.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S495"
+          ],
+          "ref": "giant_schnauzer.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S495"
+          ],
+          "ref": "giant_schnauzer.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "every_day",
+          "source_ids": [
+            "S495"
+          ],
+          "ref": "giant_schnauzer.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "no",
+          "source_ids": [
+            "S495"
+          ],
+          "ref": "giant_schnauzer.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 28,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "giant_schnauzer.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 181,
+            "group": 2,
+            "section": 1,
+            "origin": "DE"
+          },
+          "source_ids": [
+            "S491"
+          ],
+          "ref": "giant_schnauzer.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S496"
+          ],
+          "ref": "giant_schnauzer.health.hip_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S496"
+          ],
+          "ref": "giant_schnauzer.health.gdv",
+          "confidence": "high"
+        },
+        {
+          "key": "heart_muscle_disease",
+          "source_ids": [
+            "S496"
+          ],
+          "ref": "giant_schnauzer.health.cardiomyopathy",
+          "confidence": "high"
+        },
+        {
+          "key": "hypothyroidism",
+          "source_ids": [
+            "S496"
+          ],
+          "ref": "giant_schnauzer.health.hypothyroidism",
+          "confidence": "high"
+        },
+        {
+          "key": "panosteitis",
+          "source_ids": [
+            "S496"
+          ],
+          "ref": "giant_schnauzer.health.panosteitis",
+          "confidence": "high"
+        },
+        {
+          "key": "urinary_incontinence",
+          "source_ids": [
+            "S496"
+          ],
+          "ref": "giant_schnauzer.health.urinary_incontinence",
+          "confidence": "high"
+        },
+        {
+          "key": "bladder_stones",
+          "source_ids": [
+            "S496"
+          ],
+          "ref": "giant_schnauzer.health.urolithiasis",
+          "confidence": "high"
+        },
+        {
+          "key": "osteochondritis",
+          "source_ids": [
+            "S497"
+          ],
+          "ref": "giant_schnauzer.health.osteochondritis_dissecans",
+          "confidence": "medium"
+        },
+        {
+          "key": "pra_eye_disease",
+          "source_ids": [
+            "S495"
+          ],
+          "ref": "giant_schnauzer.health.pra",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S495"
+            ],
+            "refs": [
+              "giant_schnauzer.exercise.adult",
+              "giant_schnauzer.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S496"
+            ],
+            "refs": [
+              "giant_schnauzer.suitability.pdsa_family"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S495"
+            ],
+            "refs": [
+              "giant_schnauzer.suitability.rkc_size_of_home"
+            ]
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S495"
+            ],
+            "refs": [
+              "giant_schnauzer.suitability.rkc_shedding"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S495"
+            ],
+            "refs": [
+              "giant_schnauzer.exercise.adult",
+              "giant_schnauzer.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S496"
+            ],
+            "refs": [
+              "giant_schnauzer.behaviour.experienced_owner"
+            ]
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S497"
+            ],
+            "refs": [
+              "giant_schnauzer.suitability.petmd_children",
+              "giant_schnauzer.behaviour.small_children"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S497"
+            ],
+            "refs": [
+              "giant_schnauzer.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S495",
+              "S496"
+            ],
+            "refs": [
+              "giant_schnauzer.suitability.rkc_grooming",
+              "giant_schnauzer.suitability.pdsa_grooming"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.2
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 7
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.giant_schnauzer.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S495"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S495 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.giant_schnauzer.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.giant_schnauzer.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S495"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S495)"
+          },
+          {
+            "ref": "proposed_game_parameters.giant_schnauzer.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 28, Above average tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.giant_schnauzer.grooming",
+            "basis_source_ids": [
+              "S495"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 7× na teden (RKC »Every day«; PDSA dnevno enako; PetMD tedensko kot alternativa); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S495"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S495"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S495"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S495"
+            ]
+          },
+          {
+            "key": "dna_prcd_pra",
+            "level": "minimum",
+            "source_ids": [
+              "S495"
+            ]
+          },
+          {
+            "key": "dna_dcm",
+            "level": "best_practice",
+            "source_ids": [
+              "S495"
+            ]
+          },
+          {
+            "key": "dna_pra5",
+            "level": "best_practice",
+            "source_ids": [
+              "S495"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S495"
+            ]
+          },
+          {
+            "key": "dna_huu",
+            "level": "best_practice",
+            "source_ids": [
+              "S495"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S495"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S491",
+        "S492",
+        "S494",
+        "S495",
+        "S496",
+        "S497",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -38006,6 +38657,48 @@
       "publisher": "PetMD — Teresa Kho-Pelfrey, DVM (published Feb. 8, 2023)",
       "title": "Italian Greyhound",
       "url": "https://www.petmd.com/dog/breeds/italian-greyhound"
+    },
+    {
+      "id": "S491",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — Group 2 (Pinscher and Schnauzer - Molossoid and Swiss Mountain and Cattledogs), RIESENSCHNAUZER (181)",
+      "url": "https://fci.be/en/nomenclature/2-Perros-tipo-pinscher-y-schnauzer-Molosoides-Perros-tipo-montana-y-boyeros-suizos-181.html"
+    },
+    {
+      "id": "S492",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard Nr. 181 RIESENSCHNAUZER (German, published 06.03.2007, PDF)",
+      "url": "https://dev.fci.be/Nomenclature/Standards/181g02-de.pdf"
+    },
+    {
+      "id": "S494",
+      "tier": "A",
+      "publisher": "The Royal Kennel Club",
+      "title": "Giant Schnauzer — breed standard (last updated 1 April 2026)",
+      "url": "https://www.royalkennelclub.com/breed-standards/working/giant-schnauzer/"
+    },
+    {
+      "id": "S495",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A to Z — Giant Schnauzer",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/giant-schnauzer/"
+    },
+    {
+      "id": "S496",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Giant Schnauzer breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/giant-schnauzer"
+    },
+    {
+      "id": "S497",
+      "tier": "B",
+      "publisher": "PetMD — Emily A. Fassbaugh, DVM (published Feb. 22, 2023)",
+      "title": "Giant Schnauzer",
+      "url": "https://www.petmd.com/dog/breeds/giant-schnauzer"
     },
     {
       "id": "C1",

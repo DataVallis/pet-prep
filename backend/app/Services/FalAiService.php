@@ -537,6 +537,15 @@ class FalAiService
                 .'small rose-shaped ears folded back, low-set long fine tail carried low, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-61: Royal Kennel Club standard (S494) — solid black as the anchor (pepper and salt with a dark mask and
+            // black and silver are the other standard colours); natural ears and tail, never cropped or docked.
+            BreedType::GiantSchnauzer => 'A friendly, alert Giant Schnauzer with a solid black coat, '
+                .'harsh, wiry, dense coat with bushy eyebrows and a beard, '
+                .'powerfully built, robust and sinewy, almost square, '
+                .'strong, long head with a flat forehead, blunt wedge-shaped muzzle, black nose, dark oval eyes, '
+                .'natural uncropped V-shaped ears folding forward, natural undocked sabre-shaped tail, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1278,6 +1287,18 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'short, fine, glossy coat',
                 'markings' => 'solid colour, at most white on the chest and feet, small rose-shaped ears, long fine low-carried tail',
+            ],
+            // M5-R10-61: Royal Kennel Club standard S494 colours (pure black, pepper and salt, black and silver; any other
+            // colour unacceptable).
+            BreedType::GiantSchnauzer => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'solid black',
+                    1 => 'pepper and salt with a dark facial mask',
+                    2 => 'black and silver',
+                },
+                'eye_color' => 'dark',
+                'fur_texture' => 'harsh, wiry, dense coat with bushy eyebrows and a beard',
+                'markings' => 'no white patches, natural uncropped V-shaped ears, natural undocked tail',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

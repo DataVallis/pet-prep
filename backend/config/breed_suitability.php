@@ -1617,5 +1617,35 @@ return [
             ],
         ],
 
+        // M5-R10-61: giant_schnauzer.* (S491–S499), runbook rules (data.json
+        // proposed_game_parameters.giant_schnauzer.suitability_tags). RKC key facts (S495) + PDSA (S496) + PetMD (S497).
+        // RKC Breed Watch Category 1 → no welfare chip. Never children / small_children (PDSA: families with older
+        // children; PetMD: not for small children → not_for_small_children, Weimaraner precedent), first_time_owner,
+        // apartment, other_pets (PetMD: not with small dogs or cats), chases_small_pets (no high-prey-drive statement).
+        'giant_schnauzer' => [
+            'suits' => [
+                // S495 "Exercise: More than 2 hours per day"
+                ['tag' => 'active_family', 'source_ids' => ['S495'], 'refs' => ['giant_schnauzer.exercise.adult', 'giant_schnauzer.suitability.rkc_exercise']],
+                // S496 "Giant Schnauzers can make lovable pets for families with older children, given the right socialisation as puppies."
+                ['tag' => 'family_pet', 'source_ids' => ['S496'], 'refs' => ['giant_schnauzer.suitability.pdsa_family']],
+                // S495 "Size of home: Large house"
+                ['tag' => 'large_home', 'source_ids' => ['S495'], 'refs' => ['giant_schnauzer.suitability.rkc_size_of_home']],
+                // S495 "Sheds: No"
+                ['tag' => 'low_shedding', 'source_ids' => ['S495'], 'refs' => ['giant_schnauzer.suitability.rkc_shedding']],
+            ],
+            'consider' => [
+                // S495 "Exercise: More than 2 hours per day"
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S495'], 'refs' => ['giant_schnauzer.exercise.adult', 'giant_schnauzer.suitability.rkc_exercise']],
+                // S496 "They're quite strong-minded, and are ideally suited to experienced dog owners."
+                ['tag' => 'experienced_owner', 'source_ids' => ['S496'], 'refs' => ['giant_schnauzer.behaviour.experienced_owner']],
+                // S497 "not recommended for first-time pet parents or families with small children, small dogs, or cats."
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S497'], 'refs' => ['giant_schnauzer.suitability.petmd_children', 'giant_schnauzer.behaviour.small_children']],
+                // S497 "Giant Schnauzers don't do well in apartments or in homes where people aren't home much."
+                ['tag' => 'needs_company', 'source_ids' => ['S497'], 'refs' => ['giant_schnauzer.behaviour.time_alone']],
+                // S495 "Grooming: Every day"; S496 "The coat of Giant Schnauzers requires daily grooming and regular trimming."
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S495', 'S496'], 'refs' => ['giant_schnauzer.suitability.rkc_grooming', 'giant_schnauzer.suitability.pdsa_grooming']],
+            ],
+        ],
+
     ],
 ];
