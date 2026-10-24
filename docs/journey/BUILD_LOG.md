@@ -9,6 +9,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-24 — Mediji ljubljenčkov pripravljeni za objektno shrambo (M4-05)
+
+**Kaj:** strežnik zna slike in videe ljubljenčkov hraniti v zasebnem vedru Hetzner Object Storage (EU) namesto na disku strežnika. Aplikacija dobi iste naše povezave z rokom; strežnik preveri pravice in telefon preusmeri na povezavo vedra, ki velja 5 minut. Obstoječe datoteke prenese ukaz, ki vsako datoteko preveri (MD5) in nič ne briše; nočna varnostna kopija vedro zrcali na drugo lokacijo. **Še ni vklopljeno** — preklopi David, ko ustvari vedri (*načrt* za vklop).
+**Zakaj je pomembno:** en strežnik ima 40 GB diska (ocena ~1.000–2.000 psov); vedro (~5 € na TB na mesec) to mejo odstrani in prenos videov ne obremenjuje več strežnika.
+- 💼 Investitorji: rast števila družin ne zahteva več večjega strežnika zaradi medijev; strošek shrambe raste linearno in nizko (~5 €/TB/mes, Hetzner cenik).
+- 👩 Starši: mediji ostanejo v EU, dostop imajo še vedno samo otroci-skrbniki in starši družine, povezave potečejo.
+- 🛠 Tehnično: Laravel + Flysystem S3 (aws-sdk-php), podpisan `/api/media` → 302 na presigned URL (≤ 300 s), predpomnilnik v aplikaciji ostane po poti + `v`, `media:move-to-object-storage --dry-run / --verify / --prune-local`, rclone zrcalo v drugo vedro s 35-dnevno hrambo izbrisanih.
+
 ## 2026-10-24 — Posodobitve »po zraku« delujejo; dokumenti usklajeni z resničnim stanjem
 
 **Kaj:** revizija vseh odprtih nalog v načrtu proti kodi in GitHubu. Ugotovitev: posodobitve aplikacije brez trgovine (OTA) že tečejo po vsakem posodabljanju strežnika — iPhone jih dobiva od 23. 10. 2026, Android pa pravilno počaka na novo gradnjo, ker se je spremenila izvorna koda. Dokument je trdil, da OTA »čaka na žeton«. Poleg tega je bilo v kodi že narejenih več nalog, ki so bile v načrtu odprte (podpis pogodbe s prstom, izbira pasme pred rojstvom, zaklep pri ustavitvi igre, 20 pasem, portreti pasem na spletu).

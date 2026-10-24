@@ -16,6 +16,12 @@
 #   * media: the app_storage volume mounted read-only, app/pet-media (tag
 #     `media`) — only new / changed files are uploaded (--ignore-ctime: deploys
 #     chown the volume, which changes ctime but not content).
+#   * media on object storage (M4-05, PET_MEDIA_DISK=s3 in /opt/petprep/.env): the
+#     bucket is mirrored with rclone (Docker image) to a SECOND bucket in another
+#     location (MEDIA_MIRROR_S3_* in backup.env) — `current/` = the live files,
+#     `deleted/<YYYY-MM-DD>/` = files deleted / overwritten that night, purged after
+#     35 days (same retention as restic). The volume step above keeps running for
+#     the local copies until they are pruned (media:move-to-object-storage --prune-local).
 #   * retention (David 2026-10-14: deleted families must leave the backups
 #     within 35 days): every snapshot of the last 35 days per tag, then prune
 #     (--keep-within 35d; daily + weekly buckets overlap in restic, so
@@ -32,6 +38,11 @@
 #     [AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY for an S3 repository]
 #     [BACKUP_HEALTHCHECK_URL=https://hc-ping.com/<uuid> — pinged on success,
 #      <url>/fail on failure, so a silent cron failure gets noticed]
+#     [only with PET_MEDIA_DISK=s3 — the media mirror bucket (another location than
+#      PET_MEDIA_S3_ENDPOINT, e.g. nbg1 when the media bucket is in fsn1):
+#      MEDIA_MIRROR_S3_BUCKET, MEDIA_MIRROR_S3_KEY, MEDIA_MIRROR_S3_SECRET,
+#      MEDIA_MIRROR_S3_ENDPOINT (default https://nbg1.your-objectstorage.com),
+#      MEDIA_MIRROR_S3_REGION (default nbg1)]
 #   /opt/petprep/backup-ssh/ (sftp only): config (Host storagebox …), id_ed25519,
 #     known_hosts. ssh runs as root in the container and would reject a
 #     ~/.ssh/config owned by the deploy user, so the config is passed with -F
@@ -41,7 +52,8 @@
 # Usage:
 #   backup-offsite.sh            nightly run (init repo if needed, db, media, retention, check on Sundays)
 #   backup-offsite.sh verify     restore test: latest `db` snapshot must be a complete pg_dump,
-#                                latest media snapshot must hold files when the volume has some
+#                                latest media snapshot must hold files when the volume has some;
+#                                with PET_MEDIA_DISK=s3 also: the mirror must hold files when the bucket has some
 #   backup-offsite.sh snapshots  list snapshots
 #
 # Exit codes: 0 ok · 1 failed (nothing on the server is changed either way).
@@ -63,6 +75,8 @@ DB_TIMEOUT="${PETPREP_BACKUP_DB_TIMEOUT:-1800}"
 MEDIA_TIMEOUT="${PETPREP_BACKUP_MEDIA_TIMEOUT:-21600}"
 SHORT_TIMEOUT="${PETPREP_BACKUP_SHORT_TIMEOUT:-3600}"
 RESTIC_IMAGE="restic/restic:0.17.3"
+RCLONE_IMAGE="rclone/rclone:1.68.2"
+MEDIA_RETENTION_DAYS=35
 CACHE_VOLUME="petprep-restic-cache"
 MEDIA_PATH="/data/app/pet-media"
 MODE="${1:-run}"
@@ -150,6 +164,66 @@ if [ -z "$DB_USER" ] || [ -z "$DB_NAME" ]; then
     fail "DB_USERNAME / DB_DATABASE not found in ${ENV_FILE}."
 fi
 
+# ---- M4-05: pet media on object storage → rclone mirror to a second bucket ---------
+app_env() { grep -E "^$1=" "$ENV_FILE" 2>/dev/null | tail -n 1 | cut -d '=' -f2- | tr -d '"' | tr -d "'" || true; }
+OBJECT_MEDIA=0
+[ "$(app_env PET_MEDIA_DISK)" = "s3" ] && OBJECT_MEDIA=1
+RCLONE_ENV="${PETPREP_ROOT}/backups/.offsite-rclone.env"
+MEDIA_SRC=""
+MEDIA_DST=""
+MIRROR_BUCKET=""
+MIRROR_PROBLEM=""
+if [ "$OBJECT_MEDIA" = "1" ]; then
+    src_bucket="$(app_env PET_MEDIA_S3_BUCKET)"
+    src_prefix="$(app_env PET_MEDIA_S3_PREFIX)"
+    src_prefix="${src_prefix:-pet-media}"
+    MIRROR_BUCKET="$(read_key MEDIA_MIRROR_S3_BUCKET)"
+    # A missing setting fails the run only at the mirror step — the DB is backed up first.
+    [ -n "$src_bucket" ] || MIRROR_PROBLEM="PET_MEDIA_DISK=s3 but PET_MEDIA_S3_BUCKET is missing in ${ENV_FILE}."
+    for key in MEDIA_MIRROR_S3_BUCKET MEDIA_MIRROR_S3_KEY MEDIA_MIRROR_S3_SECRET; do
+        if [ -z "$MIRROR_PROBLEM" ] && [ -z "$(read_key "$key")" ]; then
+            MIRROR_PROBLEM="pet media are on object storage (PET_MEDIA_DISK=s3) but ${key} is missing in ${BACKUP_ENV} (docs/PRODUCTION_DEPLOYMENT.md §6b)."
+        fi
+    done
+    src_endpoint="$(app_env PET_MEDIA_S3_ENDPOINT)"
+    src_region="$(app_env PET_MEDIA_S3_REGION)"
+    dst_endpoint="$(read_key MEDIA_MIRROR_S3_ENDPOINT)"
+    dst_region="$(read_key MEDIA_MIRROR_S3_REGION)"
+    # Credentials only in a 600 env-file for `docker --env-file` (never on a command line).
+    (
+        umask 077
+        {
+            echo "RCLONE_CONFIG_MEDIA_TYPE=s3"
+            echo "RCLONE_CONFIG_MEDIA_PROVIDER=Other"
+            echo "RCLONE_CONFIG_MEDIA_ACCESS_KEY_ID=$(app_env PET_MEDIA_S3_KEY)"
+            echo "RCLONE_CONFIG_MEDIA_SECRET_ACCESS_KEY=$(app_env PET_MEDIA_S3_SECRET)"
+            echo "RCLONE_CONFIG_MEDIA_ENDPOINT=${src_endpoint:-https://fsn1.your-objectstorage.com}"
+            echo "RCLONE_CONFIG_MEDIA_REGION=${src_region:-fsn1}"
+            echo "RCLONE_CONFIG_MIRROR_TYPE=s3"
+            echo "RCLONE_CONFIG_MIRROR_PROVIDER=Other"
+            echo "RCLONE_CONFIG_MIRROR_ACCESS_KEY_ID=$(read_key MEDIA_MIRROR_S3_KEY)"
+            echo "RCLONE_CONFIG_MIRROR_SECRET_ACCESS_KEY=$(read_key MEDIA_MIRROR_S3_SECRET)"
+            echo "RCLONE_CONFIG_MIRROR_ENDPOINT=${dst_endpoint:-https://nbg1.your-objectstorage.com}"
+            echo "RCLONE_CONFIG_MIRROR_REGION=${dst_region:-nbg1}"
+        } > "$RCLONE_ENV"
+    )
+    trap 'rm -f "$RCLONE_ENV"' EXIT
+    MEDIA_SRC="media:${src_bucket}/${src_prefix}"
+    MEDIA_DST="mirror:${MIRROR_BUCKET}/current"
+fi
+
+# rclone in a throw-away container (credentials from the env-file). $1 = timeout (s).
+rclone_run() {
+    local limit="$1"
+    shift
+    timeout --kill-after=60 "$limit" docker run --rm --env-file "$RCLONE_ENV" "$RCLONE_IMAGE" "$@" --s3-no-check-bucket </dev/null
+}
+
+# Number of objects under an rclone path (rclone size --json → "count").
+rclone_count() {
+    rclone_run "$SHORT_TIMEOUT" size --json "$1" | grep -o '"count":[0-9]*' | head -n 1 | cut -d ':' -f2
+}
+
 if [ "$MODE" = "verify" ]; then
     log "Restore test: latest DB snapshot…"
     # First 40 + last 20 lines of the dump (streamed, no temp file; pg_dump 18
@@ -170,6 +244,20 @@ if [ "$MODE" = "verify" ]; then
     # snapshot of a non-empty volume is not.
     if [ "$live" -gt 0 ] && [ "$saved" -eq 0 ]; then
         fail "latest media snapshot holds no files while the volume has ${live}."
+    fi
+    if [ "$OBJECT_MEDIA" = "1" ]; then
+        [ -z "$MIRROR_PROBLEM" ] || fail "$MIRROR_PROBLEM"
+        live_objects="$(rclone_count "$MEDIA_SRC" || true)"
+        mirrored="$(rclone_count "$MEDIA_DST" || true)"
+        case "${live_objects}${mirrored}" in ''|*[!0-9]*) fail "could not count the media bucket / mirror objects." ;; esac
+        log "Media objects: bucket ${live_objects}, mirror ${mirrored}."
+        if [ "$live_objects" -gt 0 ] && [ "$mirrored" -eq 0 ]; then
+            fail "media mirror holds no files while the bucket has ${live_objects}."
+        fi
+        # QA #374 m6: files added since last night are expected to be missing — not more than 5 %.
+        if [ $(( mirrored * 100 )) -lt $(( live_objects * 95 )) ]; then
+            fail "media mirror holds only ${mirrored} of ${live_objects} bucket files (< 95 %)."
+        fi
     fi
     log "Restore test passed."
     exit 0
@@ -237,6 +325,40 @@ log "DB snapshot ${db_id:0:8} stored."
 log "Pet media → restic…"
 restic_run "$MEDIA_TIMEOUT" backup "$MEDIA_PATH" --tag media --ignore-ctime --quiet || fail "media backup failed."
 
+# Media mirror problems are collected and reported AFTER the restic retention (QA #374 m5):
+# a bad night of the mirror must never skip pruning the restic snapshots (35-day rule).
+MIRROR_FAILURE=""
+if [ "$OBJECT_MEDIA" = "1" ]; then
+    [ -z "$MIRROR_PROBLEM" ] || fail "$MIRROR_PROBLEM"
+    today="$(date -u +%Y-%m-%d)"
+    live_objects="$(rclone_count "$MEDIA_SRC" || true)"
+    mirrored="$(rclone_count "$MEDIA_DST" || true)"
+    case "${live_objects}" in ''|*[!0-9]*) live_objects="" ;; esac
+    case "${mirrored}" in ''|*[!0-9]*) mirrored="" ;; esac
+    if [ -z "$live_objects" ] || [ -z "$mirrored" ]; then
+        MIRROR_FAILURE="could not count the media bucket / mirror objects — mirror not synced."
+    elif [ "$live_objects" -eq 0 ] && [ "$mirrored" -gt 0 ]; then
+        # QA #374 m6: an empty / wrong source must never empty the mirror.
+        MIRROR_FAILURE="media bucket is EMPTY but the mirror holds ${mirrored} files — sync skipped (wrong bucket / prefix? check before anything else)."
+    else
+        # Never delete more than 10 % of the mirror (min 50) in one night; a bigger loss stops for a human.
+        max_delete=$(( mirrored / 10 )); [ "$max_delete" -ge 50 ] || max_delete=50
+        log "Pet media bucket (${live_objects}) → mirror (${mirrored}) (rclone sync, max ${max_delete} deletions, changed / deleted files kept under deleted/${today})…"
+        rclone_run "$MEDIA_TIMEOUT" sync "$MEDIA_SRC" "$MEDIA_DST" --backup-dir "mirror:${MIRROR_BUCKET}/deleted/${today}" --max-delete "$max_delete" --fast-list --stats-one-line --stats 0 \
+            || MIRROR_FAILURE="media mirror (rclone sync) failed (more than ${max_delete} deletions are refused on purpose)."
+    fi
+    # Deleted families leave the mirror within 35 days, like the restic snapshots.
+    cutoff="$(date -u -d "${MEDIA_RETENTION_DAYS} days ago" +%Y-%m-%d)"
+    for day in $(rclone_run "$SHORT_TIMEOUT" lsf --dirs-only "mirror:${MIRROR_BUCKET}/deleted" || true); do
+        day="${day%/}"
+        case "$day" in [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]) ;; *) continue ;; esac
+        if [[ "$day" < "$cutoff" ]]; then
+            rclone_run "$SHORT_TIMEOUT" purge "mirror:${MIRROR_BUCKET}/deleted/${day}" \
+                || MIRROR_FAILURE="${MIRROR_FAILURE:+${MIRROR_FAILURE} }could not purge the media mirror's deleted/${day}."
+        fi
+    done
+fi
+
 log "Retention (all snapshots of the last 35 days per tag) + prune…"
 restic_run "$SHORT_TIMEOUT" forget --group-by host,tags --keep-within 35d --prune --quiet \
     || fail "retention / prune failed (the new snapshots are stored)."
@@ -245,6 +367,8 @@ if [ "$(date -u +%u)" = "7" ]; then
     log "Sunday: restic check (5 % data sample)…"
     restic_run "$MEDIA_TIMEOUT" check --read-data-subset=5% || fail "restic check found a problem."
 fi
+
+[ -z "$MIRROR_FAILURE" ] || fail "$MIRROR_FAILURE"
 
 mkdir -p "$(dirname "$STATUS_FILE")"
 date -u +%Y-%m-%dT%H:%M:%SZ > "$STATUS_FILE"

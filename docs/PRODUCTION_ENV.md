@@ -90,7 +90,14 @@ This document describes all environment variables used by the PetPrep production
 | `AI_QUALITY_VISION_ENABLED` | Optional | No | Turns on the AI vision part of the quality check (`media.profiles.vision.openrouter_vision_gemini_flash`, fal `openrouter/router/vision`, production budget). **Off by default: the per-token price is not verified** — David enables it after checking the cost on the fal dashboard; off → the free technical check alone decides (clips »not AI-checked«) | `false` |
 | `AI_QUALITY_VISION_PROFILE` | Optional | No | Vision profile key for the quality check | `openrouter_vision_gemini_flash` |
 | `FFMPEG_BINARY` / `FFPROBE_BINARY` | Optional | No | ffmpeg / ffprobe binaries of the quality check (the production image installs both on `PATH`) | `ffmpeg` / `ffprobe` |
-| `PET_MEDIA_DISK` | Optional | No | Filesystem disk for stored pet images / videos (M4-05); `pet_media` = `storage/app/pet-media` on the `app_storage` volume | `pet_media` |
+| `PET_MEDIA_DISK` | Optional | No | Where stored pet images / videos live (M4-05): unset / `local` / `pet_media` = `storage/app/pet-media` on the `app_storage` volume (served by Caddy); **`s3`** = the private bucket of `PET_MEDIA_S3_*` — `GET /api/media/*` then answers 302 to a short-lived presigned bucket URL. **David switches it only after `media:move-to-object-storage --verify`** (runbook DEPLOYMENT.md D23) | unset (`local`) |
+| `PET_MEDIA_S3_BUCKET` | With `s3` | No | Private Hetzner Object Storage bucket (also needed before the switch for the move command and the System health check) | — |
+| `PET_MEDIA_S3_KEY` / `PET_MEDIA_S3_SECRET` | With `s3` | **Yes** | S3 credentials of that bucket (Hetzner Console → Object Storage → credentials). Never in logs; also read by `backup-offsite.sh` for the mirror | — |
+| `PET_MEDIA_S3_ENDPOINT` | Optional | No | S3 endpoint of the bucket's location | `https://fsn1.your-objectstorage.com` |
+| `PET_MEDIA_S3_REGION` | Optional | No | Region / location name | `fsn1` |
+| `PET_MEDIA_S3_PATH_STYLE` | Optional | No | `true` = path-style URLs (`endpoint/bucket/key`); default virtual-hosted (`bucket.endpoint/key`) | `false` |
+| `PET_MEDIA_S3_PREFIX` | Optional | No | Key prefix inside the bucket (`pet-media/{pet_id}/…`, `pet-media/looks/{id}/…`) | `pet-media` |
+| `PET_MEDIA_S3_URL_TTL_SECONDS` | Optional | No | Lifetime of the presigned bucket URL the media route redirects to (60–3600; never past the signed `/api/media` URL's expiry) | `300` |
 | `PET_MEDIA_MAX_IMAGE_MB` | Optional | No | Largest image downloaded from fal | `25` |
 | `PET_MEDIA_MAX_VIDEO_MB` | Optional | No | Largest video downloaded from fal | `60` |
 | `PET_MEDIA_DOWNLOAD_TIMEOUT` | Optional | No | Seconds per download (capped at 80 — below the queue's `retry_after` 90) | `60` |
