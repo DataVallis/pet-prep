@@ -15,6 +15,7 @@ specialised subagents live in `.claude/agents/`.
 
 `prompt.md` is the historical build prompt. `docs/source/` are the original docs — background only.
 ⚠️ The old `HANDOFF` claim "100 % complete" was false; the audit is the truth.
+⚠️ **Before telling David something is not done, verify it against the code and GitHub (merged PRs, Actions runs / check-run annotations) — not only the docs** (David 2026-10-24: docs claimed OTA was blocked on `EXPO_TOKEN` while it already ran).
 
 ## Monorepo map
 - `backend/` — Laravel 11 API, PHP 8.5 (Sail), PostgreSQL 18, Reverb, Sanctum, Filament 3 (`/admin`), Scramble (`/docs/api`), Pest. See `backend/CLAUDE.md`.

@@ -6,25 +6,25 @@
 
 ## 1. Executive summary
 
-**Status 2026-10-22 (Claude, orchestrator, after the M5-T block):**
+**Status 2026-10-24 (Claude, after the docs-vs-reality audit `docs/roadmap-reality-audit`):** every open ROADMAP row and every item below was re-checked against code, merged PRs and GitHub Actions runs (not only docs).
 
-- **M5-T "Dodelava po testiranju s testerji" is complete in code** — every row in ROADMAP M5-T is ticked (T01–T14, T02b, T05b, T08b; **T07 cancelled** by David 21. 10.: Kling 3.0 Pro for every video, Nano Banana Pro (+ Edit) for every image). 19 PRs merged 2026-10-21 04:51 → 2026-10-22 04:38 UTC (#311–#332, see §6). **Nothing of M5-T has been verified on a phone, and no real fal call has been made yet for key images, loops, transitions, poses or phase clips** — all tested with Pest / Jest only.
-- **Production:** `https://api.petprep.si` (Hetzner CX23, Docker Compose + Caddy). Last production deploy: `eb2f3a60` (#326, M5-T12 QA) on 2026-10-21 18:09 UTC (manual Run workflow). **#327–#332 (M5-T08 / T08b / T11 / T09–T10) and the breed runs merged after it are on `main` only** — they ship with the next daily deploy (D21, `daily-deploy.yml`; GitHub fires the 04:00 UTC cron ~5 h late, ~09:00–10:00 UTC) or a manual deploy by David. Website `petprep.si` = repo `DataVallis/pet-prep-website` (privacy policy §3 Health + §4 adapted mode live since #85 / #86, 21. 10. 2026).
-- **App on phones:** last recorded store build **3.1.3** (`docs/research/app-release.json`, commit `02953801`, 2026-10-12, 29 breeds; `main` has 58 register breeds). **M5-T12 changed both native fingerprints** (ios `18c9650c…`, android `9a1b20a5…`) → **no JS OTA reaches the current store builds until the next store release** (checklist in `docs/engineering/DEPLOYMENT.md` "Next store release"). So the M5-T JS changes (take-out clock, message queue, care guide, preparation screen, birthday, brush, picture mode, state / phase media players) reach users only with that store build.
-- **AI cost per breed + colour + stage (fal list prices, DECISIONS 2026-10-21):** state set (M5-T08) 5,38 $; full dog incl. school + ball (M5-T09 / T10) **12,07 $** since the 5 s performing clips (2026-10-23; was 11,17 $), puppy with behaviour 13,49 $, cat 7,40 $, + ≤ 0,01 $ quality check per clip — once per shared look, 0 $ for later buyers of the same breed + colour. **David decided 22. 10.: production AI daily cap 25 $ / day** — he sets it in `/admin → AI budget` (env default stays 5 $, which would spread one new dog set over ~3 days).
-- **Realistic MVP completion: ~70 %** — game rules, parent / child apps, payments, health steps, AI media pipeline and admin are built; device verification of most of M5-R / M5-T, store release, legal review (M5-06), beta (M5-07) and test-account cleanup (M0-15) are missing.
+- **M5-T is complete in code** (T01–T17, T19 ticked; T18 quality check ships in *shadow* mode until David calibrates; T07 cancelled). **Nothing of M5-T has been verified on a phone, and no real fal call has been made yet** for key images, loops, transitions, poses or phase clips — Pest / Jest + CI only.
+- **Production:** `https://api.petprep.si` (Hetzner CX23, Docker Compose + Caddy). Last production deploy: `0ea329a6` (#371, M5-T19 Discord alerts) on 2026-10-24 08:25 UTC (run 40077989407); only docs (#372) are newer on `main`. Daily deploy D21 works (runs 21.–24. 10. green; GitHub fires the 04:00 UTC cron ~5 h late). Website `petprep.si` = repo `DataVallis/pet-prep-website` (terms 10. 10., privacy 21. 10. #85 / #86 + 22. 10. health disclosure #90).
+- **App on phones / OTA (M5-F10 done):** `EXPO_TOKEN` is set and `mobile-ota.yml` runs after **every** production deploy. **iOS gets every JS OTA** (an iOS production build with the current native fingerprint exists; first OTA 2026-10-23). **Android does not** — the OTA run correctly refuses: »New production build needed: android — native code changed (runtime `ffea7ec3…` has no production build). No OTA update was sent.« (run 40079359228, 2026-10-24). `docs/research/app-release.json` still records store build **3.1.3** (2026-10-12) because it is written only when both platforms got the update.
+- **AI cost per breed + colour + stage (fal list prices):** state set 5,38 $; full dog incl. school + ball **12,07 $**, puppy with behaviour 13,49 $, cat 7,40 $, + ≤ 0,01 $ quality check per clip — once per shared look. **David decided 22. 10.: production AI daily cap 25 $ / day** (set in `/admin → AI budget`; not verifiable from the repo).
+- **Realistic MVP completion: ~72 %** — game rules, parent / child apps, payments, health steps, AI media pipeline, admin, iOS OTA are built; device verification of most of M5-R / M5-T, Android production build, legal review (M5-06), Play Families / App Store Kids check and the 20–50-family beta (M5-07) are missing.
 
-| Milestone | ROADMAP checkboxes (incl. sub-items), 2026-10-22 | Realistic |
+| Milestone | ROADMAP checkboxes (incl. sub-items), 2026-10-24 | Realistic |
 |---|---|---|
-| M0 Repo hygiene | 9 done / 6 open (M0-06, M0-07, M0-09, M0-11, M0-12, M0-15) | ~60 % |
-| M1 Core loop | 18 done / 2 partial (M1-16, M1-19) / 4 open (M1-10, M1-11, M1-17, hard-stop sub-item) | ~85 % |
-| M2 Parent + auth | 19 done / 4 partial / 15 open (family model, PIN, social sign-in built; several sub-items open) | ~70 % |
-| M3 Notifications, sensors, payments | 7 done / 4 partial (M3-04 … M3-07) / 3 open (M3-01, M3-03, M3-10) | ~70 % (built, little device proof) |
-| M4 AI media | 10 done / 4 open (M4-05 object storage, M4-05b box, M4-06 fallback, M4-09 tokens) | ~75 % |
-| M5 Production + beta | 2 done / 3 partial (M5-03, M5-04, M5-09) / 4 open (M5-05, M5-06, M5-07, M5-08) | ~45 % |
-| M5-R Realism | 72 done / 8 partial / 12 open (M5-R07, R12, R14, R15, R18–R20 need David) | ~80 % |
-| M5-F Device fixes | 12 done / 1 open (M5-F10 OTA — `EXPO_TOKEN` + store build) | ~90 % |
-| M5-T Refinement | 19 done / 0 open (T07 cancelled; T15 AI budget warnings + T16 bulk media upgrade added 22. 10.) | code 100 %, **device 0 %** |
+| M0 Repo hygiene | 11 done / 1 partial (M0-06) / 3 open (M0-07, M0-11, M0-12); M0-15 dropped (David 24. 10.) | ~75 % |
+| M1 Core loop | 20 done / 4 partial (M1-10 no »24-h day« test, M1-11 no nav library, M1-17 responses hand-typed, M1-19) / 0 open | ~90 % |
+| M2 Parent + auth | 21 done / 6 partial / 11 open (M2-01b, M2-03 rest, M2-07, M2-08a/b, M2-10b, Facebook, several (D)) | ~75 % |
+| M3 Notifications, sensors, payments | 8 done / 5 partial (M3-01 no `expo-dev-client`, M3-04 … M3-07 not device-verified) / 1 open (M3-03 local reminders) | ~75 % |
+| M4 AI media | 10 done / 1 partial (M4-05b: only per-IP limit left) / 3 open (M4-05 object storage, M4-06 fallback, M4-09 tokens) | ~80 % |
+| M5 Production + beta | 3 done / 5 partial (M5-04, M5-05, M5-06, M5-07, M5-09) / 1 open (M5-08 analytics) | ~55 % |
+| M5-R Realism | 75 done / 5 partial / 11 open (R07, R09 parent + sources, R11-07, R12, R14, R15, R18–R20) | ~80 % |
+| M5-F Device fixes | 13 done / 0 open (M5-F10 OTA done 24. 10.) | 100 % |
+| M5-T Refinement | 21 done / 1 partial (T18 shadow mode) / 1 open (accessibility badge on the website) | code ~95 %, **device 0 %** |
 
 ## 2. Decisions
 
@@ -42,32 +42,28 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 3. Known bugs & debt
 
-**New / open after M5-T (2026-10-22):**
+*Re-checked 2026-10-24 against code / GitHub. »Unverified« = cannot be seen from the repo or Actions (server or store state) — ask David.*
 
-1. **No M5-T feature verified on a phone; no real fal call** for key images, loops (start frame only since 2026-10-23 — the old same start / end frame froze them), transitions, poses or phase clips. First real purchase on production is the first end-to-end test of the M5-T08–T10 pipeline (cost + quality).
-2. **No JS OTA reaches current store builds** (native fingerprint change by M5-T12) until the next store release — checklist in DEPLOYMENT.md: Play **Health apps declaration** add `READ_WHEELCHAIR_PUSHES`; App Store Connect **Health permission text** changed (re-check App Privacy answers).
-3. **AI daily cap:** David must set the production daily cap to **25 $** in `/admin → AI budget` (decided 22. 10.). Until then a new dog set (~12,07 $) completes over ~3 days (games / school later; game never locks — failed phase clip → old rules).
-3b. **Discord admin alerts (M5-T19) are live in production** — David set `DISCORD_ALERTS_WEBHOOK_URL` and the *Test Discord* message arrived (24. 10. 2026). A failed Discord post is not retried later (the bell keeps the alert).
-4. **Off-site backups (D5)** are built but still need David's one-time setup (PRODUCTION_DEPLOYMENT §6b), although the privacy policy already states that deleted data leaves backups within 35 days. No deletion log yet (a restore brings back families deleted after the snapshot).
-5. **Adapted mode (M5-T12):** which Android apps actually write Health Connect `WheelchairPushes` is unknown; turning the mode on mid-day keeps the day's max (pushes count only above steps already synced); a yesterday parent entry never rewrites closed routine rows.
-6. **School performing clip** is 5 s since 2026-10-23; it never starts more than 0,3 s before the cue and seeks into the clip when the window is short (ends at `obey_at − 100 ms`; QA #363 M2) — verify the seek on a device. **Quality check (2026-10-23):** runs in **shadow** mode (records only) until David calibrates the thresholds on real clips (`media:quality-check --dry-run`, `AI_QC_*`) and switches to enforce; AI vision part disabled until David verifies its price (`AI_QUALITY_VISION_ENABLED`).
-7. **Process:** orchestrator subagents often cannot spawn `qa-reviewer` themselves → the orchestrator must run QA. David merged #317 / #323 / #329 before their QA fixes landed (fixed in #318 / #326 / #331) — **recommendation: let Claude merge after the QA round.**
-8. **Daily deploy cron fires ~5 h late** (GitHub scheduled runs 09:08 / 09:59 UTC instead of 04:00) — the deploy itself works; users get merges late morning, not at 06:00.
-9. M5-T06 preparation timing has not been measured on production yet (admin »AI media« shows Preparation / Media pipeline times).
-
-**Older, still valid:**
-
+1. **No M5-T feature verified on a phone; no real fal call** for key images, loops (start frame only since 2026-10-23), transitions, poses or phase clips. The first real purchase on production is the first end-to-end test of the M5-T08–T10 pipeline (cost + quality).
+2. **Android gets no OTA** until a new Android production build exists (fingerprint changed by M5-T12; runs 39959822639 / 40023867950 / 40079359228). iOS OTA works. Store-release checklist in DEPLOYMENT.md: Play **Health apps declaration** with `READ_WHEELCHAIR_PUSHES`; App Store Connect Health text / App Privacy re-check. Google Play rejected 1.0 on 22. 10. (health data disclosure) → fixed on the website (#90), David re-submits.
+3. **AI daily cap 25 $** (David 22. 10.) — set in `/admin → AI budget`; *unverified* (database setting). With the env default 5 $ a new dog set (~12,07 $) completes over ~3 days.
+4. **Discord admin alerts (M5-T19) are live** — test message arrived (David 24. 10.). A failed Discord post is not retried (the bell keeps the alert).
+5. **Off-site backups (D5)** built (`scripts/backup-offsite.sh`); David's one-time setup (PRODUCTION_DEPLOYMENT §6b) and first restore test *unverified*. No deletion log (a restore brings back families deleted after the snapshot).
+6. **Adapted mode (M5-T12):** which Android apps write Health Connect `WheelchairPushes` is unknown; turning the mode on mid-day keeps the day's max; a yesterday parent entry never rewrites closed routine rows.
+7. **Quality check (M5-T18)** runs in **shadow** mode until David calibrates thresholds on real clips (`media:quality-check --dry-run`, `AI_QC_*`) and switches to enforce; AI vision part off until David verifies its price (`AI_QUALITY_VISION_ENABLED`). School performing clip 5 s with seek into the clip — verify the seek on a device.
+8. **Process:** orchestrator subagents often cannot spawn `qa-reviewer` → the orchestrator runs QA; let Claude merge only after the QA round (#317 / #323 / #329 were merged before their QA fixes).
+9. **Daily deploy cron fires ~5 h late** (scheduled runs 08:40–09:59 UTC instead of 04:00) — the deploy itself works.
 10. **Push registration edge case (Android):** a real token rotation arriving as the first event inside the 10 s echo window is taken as the echo → registered only at next app start / login.
-11. **No mobile crash reporter:** backend errors go to `/admin/system-health` (PR #281, instead of Sentry); RN render errors only reach the device console; external uptime check missing (M5-05).
-12. **Training:** schedule is sent to the app (modified app can fake praise — accepted by David); taps before an app restart are lost on resume; potty "asked to go out" only logged; minors m3 / m4 in DECISIONS.
-13. **Tests / tooling:** Pint may still fail repo-wide on untouched files (use `pint --test --dirty`); two Pest runs in one checkout share `storage/framework/testing/disks` (use separate worktrees); cold-cache Jest timeout in `ChildHudScreen.behaviour.test.tsx`; `actions/checkout@v4` on deprecated Node 20.
+11. **No mobile error reporting (M5-05):** backend errors go to `/admin/system-health` (PR #281); RN render errors only reach the device console (`mobile/src/utils/logRenderError.ts`, no network); no external uptime check.
+12. **Training:** schedule is sent to the app (a modified app can fake praise — accepted by David); taps before an app restart are lost on resume; potty "asked to go out" only logged.
+13. **Tests / tooling:** Pint may fail repo-wide on untouched files (use `pint --test --dirty`); two Pest runs in one checkout share `storage/framework/testing/disks` (use separate worktrees); cold-cache Jest timeout in `ChildHudScreen.behaviour.test.tsx`; `actions/checkout@v4` etc. forced from Node 20 to 24 (annotation on every run).
 14. **i18n (M1-18) not verified on a device** (Hermes plurals, Android channel names after a switch, iOS SL permission texts); English copy awaits David's read-through.
-15. **Security / hygiene before beta:** test accounts in the production DB (M0-15), EAS signing passwords in old repo history (M0-12), PHP 8.3 prod vs 8.5 Sail (M0-11), move `PRODUCTION_SSH_PRIVATE_KEY` into the `production` environment (DEPLOYMENT D20).
+15. **Security / hygiene before beta:** EAS signing passwords in old repo history (M0-12, *unverified* whether rotated); PHP 8.3 prod / CI vs 8.5 Sail (M0-11); `PRODUCTION_SSH_PRIVATE_KEY` is still read as a repository secret in `deploy-production.yml` (D20, environment secrets not readable through the proxy). Test accounts: `parent@test.com` / `child@test.com` (password `password`) should be deleted in `/admin → Users`; the superadmin needs a strong password (M0-15 itself dropped, David 24. 10.).
 16. **Android payments / sign-in (David):** RevenueCat Play service-account JSON, Android product in the current offering's package, Android OAuth client with the Play signing SHA-1.
-17. **OTA pipeline:** first production OTA sent 2026-10-23 for **iOS only** (`3fb6d12`, manual run; Android runtime `69eaf3ff…` has no production build → needs a new Android build). The automatic OTA after that deploy was skipped by a transient jobs-API answer — the plan now re-reads up to 5× (`fix/ota-plan-retry`). Not recorded in `app-release.json` (records only when both platforms got it); check `EXPO_TOKEN` and that the next store build gets recorded (`scripts/record-app-release.mjs`), otherwise the website register keeps showing newer breeds as »kmalu«.
-18. **Breeds are hard-coded in the app** — every new breed needs an app release to be pickable (candidate: server-driven breed catalogue).
-19. **Shared looks (M5-R21):** old look files stay after regenerate; regenerate does not fix earlier stages; `auto-` keys not migrated when a colour list is added later.
-20. **Media storage:** pet media on the server disk (`app_storage` volume); object storage + CDN (M4-05) before many families (SCALING.md).
+17. **Breeds are hard-coded in the app** (`mobile/src/modules/species/species.ts` `KNOWN_BREEDS`) — a new breed reaches iOS with the next OTA, Android only with a new build until Android has OTA (candidate: server-driven breed catalogue). `app-release.json` (website »V aplikaciji« / »Kmalu«) is recorded only when both platforms got the update.
+18. **Shared looks (M5-R21):** old look files stay after regenerate; regenerate does not fix earlier stages; `auto-` keys not migrated when a colour list is added later.
+19. **Media storage:** pet media on the server disk (`app_storage` volume); object storage + CDN (M4-05) before many families (SCALING.md); no per-IP connection limit in Caddy (M4-05b).
+20. **Small code debt found in the audit:** `backend/.env.example` lacks `REVERB_*` (M0-06); `pestphp/*` still in `require` (M0-07); `expo-dev-client` missing (M3-01); no »24-h day« integration test (M1-10); 9 services still call `isParent()` / `isChild()` (M2-03).
 
 ## 4. Environment & configuration
 
@@ -87,12 +83,15 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 5. Next steps (priority queue)
 
-1. **Device test of all M5-T features on a new native build** (David + Claude checklist from FEATURES rows M5-T01 … T14): take-out clock + message queue + ×, sleep rules + »7:00«, care guide (child + parent), games wait for media, preparation »Pripravljamo: …« + »Vse je pripravljeno«, brush scratch card + hold, birthday, adapted mode (iPhone PushCount / Android WheelchairPushes, parent walk entry), state media loops + transitions, picture mode, school + ball / wand phase clips. On confirmation → FEATURES status 📱 with date + build.
-2. **Next store release (iOS + Android)** per the DEPLOYMENT.md "Next store release" checklist (Play health declaration `READ_WHEELCHAIR_PUSHES`, App Store Health text / App Privacy), then record it in `docs/research/app-release.json` and confirm OTA works again (M5-F10: `EXPO_TOKEN`).
-3. **First real purchase on production** (after the deploy of #327–#332 and the 25 $ cap): watch `/admin → AI budget` ledger, »AI media« preparation time and media quality (key image consistency, loops that move visibly and come back close to the start pose, transitions, poses, 3 s phase clips, school cue timing); adjust prompts / clip timing with David.
-4. **Before the beta (ROADMAP):** M0-15 test accounts out of production, M5-06 legal review + App Store Kids / Play Families check (privacy policy text is live), M5-07 TestFlight + Play internal testing with 20–50 families, D5 off-site backups setup (David), M5-05 mobile error reporting. Open »čaka Davida« items: M5-R14 / R15 / R18 / R19 / R20 breed care needs, M5-R12 fetch spec.
+1. **Device test of all M5-T features** — on iOS now possible through OTA (David's iPhone; checklist from FEATURES rows M5-T01 … T19): take-out clock + message queue, sleep rules + »7:00«, care guide (child + parent), games wait for media, preparation screen, brush, birthday, adapted mode, state media loops + transitions, picture mode, school + ball / wand phase clips, easy gestures. On confirmation → FEATURES 📱 with date + build.
+2. **New Android production build** (EAS, `mobile/`) → Android gets OTA again; then Play re-submission (health declaration incl. `READ_WHEELCHAIR_PUSHES`, Data safety) and record the release (`scripts/record-app-release.mjs`).
+3. **First real purchase on production** (cap 25 $ set?): watch `/admin → AI budget` ledger, »AI media« preparation time and media quality; calibrate the quality check and switch it to enforce.
+4. **Before the beta:** M5-06 legal review + App Store Kids / Play Families check; M5-07 Play internal testing + 20–50 families (David adds testers); D5 off-site backup setup (David); M5-05 mobile error reporting + uptime check; delete the dev test accounts in `/admin → Users`. Open »čaka Davida«: M5-R14 / R15 / R18 / R19 / R20 breed care needs, M5-R12 fetch spec, M2-07 / M2-01 (D) rules for a new pet after game over.
 
 ## 6. Session log
+
+### 2026-10-24 (cloud, orchestrator) — docs vs reality audit (`docs/roadmap-reality-audit`)
+- David: docs said things were not done that were (M5-F10 »čaka EXPO_TOKEN« while `mobile-ota.yml` already ran after every deploy). Every open / partial ROADMAP row and HANDOFF §3 / §5 checked against code, `git log`, merged PRs and Actions annotations. Ticked: M0-09, M1-16, M2-04, M3-10, M5-03, M5-F10, M5-R10, M5-R11-03 / 04; M0-15 dropped (David: testers added by him; security note kept); partial with exact remainder: M0-06, M1-10, M1-11, M1-17, M2-09, M2-10, M3-01, M4-05b, M5-05, M5-06, M5-07; stale wording fixed (M5-R06, R06-09, M3-05, M3-07, M2-10c, backlog certificate). FEATURES: new OTA row, Facebook row instead of the contradicting »Apple / Google 🗓«, deploy / backup / error-reporting rows. DECISIONS row 2026-10-24; CLAUDE.md »verify before saying not done«. *Unverified (server / store state):* M0-12, M5-04 off-site setup, M5-09 reset, AI cap 25 $, D20.
 
 ### 2026-10-24 (cloud, backend) — M5-T19 admin alerts in Discord (`feat/M5-T19-discord-alerts`)
 - David 24. 10.: admin alerts go to Discord instead of e-mail (`MAIL_MAILER` stays `log`). Built `Alerts\DiscordWebhook` (10 s timeout, 429 → `retry_after`, never in a transaction, URL never in errors / logs) + `AdminAlertKind` / `AdminAlert`; `AiBudgetMonitor` posts every newly claimed budget / fal balance warning once after the bell (failure only reported); System health *Test Discord*. Task ID **M5-T19** (T17 / T18 were taken). Tests `DiscordAlertsTest`. **Debt:** a Discord post that fails is not retried (the bell has it). **David:** create the webhook (§5). Not verified on production.
@@ -136,9 +135,3 @@ Google Play rejected 1.0 (privacy policy missing a Health Data disclosure). Webs
 
 ### 2026-10-16 → 2026-10-20 (summary — details in the archive, "Archived 2026-10-22" §1)
 - Child no longer signed out every ~2 days (Keychain `AFTER_FIRST_UNLOCK`, 10-17); Android release fixes + first Android EAS build, Health Connect privacy rationale (10-19); System health page `/admin/system-health` and cat routine ledger hotfix (10-19); launch splash can no longer hang + HTTP/3 UDP 443 (10-19); MP4 faststart for fal videos, AI Lab clip comparison, emergency meal covers next window, local media cache (10-20); »Igraj kot« shared sessions fix (PR #321, 10-21). Breed runs M5-R10-41 … 56 (16 breeds) in `docs/breeds/`.
-
-### 2026-10-15 (cloud, devops) — D21 daily production deploy (`chore/daily-production-deploy`)
-- New `.github/workflows/daily-deploy.yml` + `scripts/daily-deploy.sh` (harness `scripts/tests/daily-deploy.test.sh`): 06:00 Europe/Ljubljana, dispatches CI & Deploy → Run workflow (target production) only when `main` is newer than production and its push CI is green. Manual deploys unchanged; agents still never dispatch. Next: watch the first 06:00 run (and that the Mobile OTA workflow_run still follows a bot-dispatched run).
-
-### 2026-10-15 — breed runs in their own files (`chore/breed-runs-own-files`)
-- Breed runs (night only) now write only their code/data/tests, `docs/breeds/<en-slug>.md`, the queue row and generated files; shared tests read breed lists from code; registry i18n hashes cover only used strings; runbook rewritten. Debt: per-breed blocks still appended in shared mobile tests and `BreedSuitabilityTest` (runbook says: own file from now on); no per-breed docs written for the existing 42 breeds (history stays in the shared docs).
