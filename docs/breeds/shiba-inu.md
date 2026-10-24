@@ -50,7 +50,7 @@
 
 ## Odprto za Davida
 
-- **Rešeno 24. 10. 2026 (David, M5-R14 / R15 / R18 / R19 / R20 — PR #PRNUM):** naloga samo, kjer vir navaja pogostost (razpon → spodnja meja); mini-igre otroka po modelu česanja (pošten delež, reže, poročilo, brez kazni), pasji frizer in kopanje = opomnik staršu, ne šteje v oceno; samo novi psi. Za to pasmo — zgrajeno: ščetkanje zob vsak dan (mini-igra otroka); brez pogostosti v viru → brez naloge (dejstvo ostane v besedilu): kopanje, čiščenje ušes. Spodnje točke M5-R14 / R15 / R18 / R19 / R20 so s tem zaprte.
+- **Rešeno 24. 10. 2026 (David, M5-R14 / R15 / R18 / R19 / R20 — PR #376):** naloga samo, kjer vir navaja pogostost (razpon → spodnja meja); mini-igre otroka po modelu česanja (pošten delež, reže, poročilo, brez kazni), pasji frizer in kopanje = opomnik staršu, ne šteje v oceno; samo novi psi. Za to pasmo — zgrajeno: ščetkanje zob vsak dan (mini-igra otroka); brez pogostosti v viru → brez naloge (dejstvo ostane v besedilu): kopanje, čiščenje ušes. Spodnje točke M5-R14 / R15 / R18 / R19 / R20 so s tem zaprte.
 
 - **Potrebe brez mehanike (needs-david → rešeno 24. 10. 2026):** vsakodnevno ščetkanje zob (PetMD S381) → **M5-R15**; čiščenje ušes enkrat na teden pri psu z alergijami in redno kopanje (PetMD S381) → **M5-R20**; **sprehod brez povodca samo v ograjenem prostoru** (AKC S383) → za to še ni naloge v ROADMAP — **potrebna nova naloga (David)**.
 - **Nova oznaka** `independent_experienced_owner` (besedilo Claude): ali jo David sprejme ali raje razširi obstoječo `experienced_owner` (ki pravi »močan pes«)?

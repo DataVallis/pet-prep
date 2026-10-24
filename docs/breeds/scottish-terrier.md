@@ -54,7 +54,7 @@
 
 ## Odprto za Davida
 
-- **Rešeno 24. 10. 2026 (David, M5-R14 / R15 / R18 / R19 / R20 — PR #PRNUM):** naloga samo, kjer vir navaja pogostost (razpon → spodnja meja); mini-igre otroka po modelu česanja (pošten delež, reže, poročilo, brez kazni), pasji frizer in kopanje = opomnik staršu, ne šteje v oceno; samo novi psi. Za to pasmo — zgrajeno: pasji frizer na 8 tednov (opomnik staršu, ne šteje v oceno). Spodnje točke M5-R14 / R15 / R18 / R19 / R20 so s tem zaprte.
+- **Rešeno 24. 10. 2026 (David, M5-R14 / R15 / R18 / R19 / R20 — PR #376):** naloga samo, kjer vir navaja pogostost (razpon → spodnja meja); mini-igre otroka po modelu česanja (pošten delež, reže, poročilo, brez kazni), pasji frizer in kopanje = opomnik staršu, ne šteje v oceno; samo novi psi. Za to pasmo — zgrajeno: pasji frizer na 8 tednov (opomnik staršu, ne šteje v oceno). Spodnje točke M5-R14 / R15 / R18 / R19 / R20 so s tem zaprte.
 
 - **Meja starejšega psa (90 mesecev, `verified=false`):** predlog Claude po spodnji meji PDSA »Over 10 years« — tabele McMillan 2024 (Dogs Trust S123) ta zagon ni mogel odpreti. Preverite vrstico za škotskega terierja; Wikipedija (tier C) navaja 12,7 leta → 114. Sprememba = urejanje v Filamentu ali podatkovna migracija (sejalnik le vstavlja).
 - **Potreba brez mehanike:** trimanje / striženje pri pasjem frizerju na 2–3 mesece (PDSA S474, PetMD S475) — ROADMAP M5-R18.

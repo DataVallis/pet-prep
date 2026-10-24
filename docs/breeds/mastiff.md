@@ -49,7 +49,7 @@
 
 ## Odprto za Davida
 
-- **Rešeno 24. 10. 2026 (David, M5-R14 / R15 / R18 / R19 / R20 — PR #PRNUM):** naloga samo, kjer vir navaja pogostost (razpon → spodnja meja); mini-igre otroka po modelu česanja (pošten delež, reže, poročilo, brez kazni), pasji frizer in kopanje = opomnik staršu, ne šteje v oceno; samo novi psi. Za to pasmo — zgrajeno: čiščenje gub vsak dan (mini-igra otroka); brez pogostosti v viru → brez naloge (dejstvo ostane v besedilu): kopanje, čiščenje ušes. Spodnje točke M5-R14 / R15 / R18 / R19 / R20 so s tem zaprte.
+- **Rešeno 24. 10. 2026 (David, M5-R14 / R15 / R18 / R19 / R20 — PR #376):** naloga samo, kjer vir navaja pogostost (razpon → spodnja meja); mini-igre otroka po modelu česanja (pošten delež, reže, poročilo, brez kazni), pasji frizer in kopanje = opomnik staršu, ne šteje v oceno; samo novi psi. Za to pasmo — zgrajeno: čiščenje gub vsak dan (mini-igra otroka); brez pogostosti v viru → brez naloge (dejstvo ostane v besedilu): kopanje, čiščenje ušes. Spodnje točke M5-R14 / R15 / R18 / R19 / R20 so s tem zaprte.
 
 - **Potrebe brez mehanike (needs-david → rešeno 24. 10. 2026):** vsakodnevno čiščenje gub na obrazu in redno čiščenje oči (PDSA S370, PetMD S374) → **M5-R14**; čiščenje ušes po vodi in kopanje na nekaj mesecev (PetMD S374) → **M5-R20**.
 - **RKC ni bil dosegljiv** (vsi naslovi — stran pasme, standard, Breed Watch — so vrnili napako): manjkajo polja RKC (velikost doma in vrta, česanje, linjenje, razpon življenjske dobe) in zdravstveni testi za vzreditelja (`not_found`). Velikost je zato PDSA »Large« (doga je pri RKC »Extra large«), oznaka `large_home` ni dodana. Ob naslednjem zagonu, ko bo RKC dosegljiv, preveriti.

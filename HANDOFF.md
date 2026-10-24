@@ -90,7 +90,7 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
-### 2026-10-24 (cloud, backend + mobile) — M5-R14 / R15 / R18 / R19 / R20 breed care tasks (`feat/M5-R14-R20-breed-care`, PR #PRNUM)
+### 2026-10-24 (cloud, backend + mobile) — M5-R14 / R15 / R18 / R19 / R20 breed care tasks (`feat/M5-R14-R20-breed-care`, PR #376)
 - David's four decisions built: child mini-games teeth / folds / ears / nails (grooming model, ledger slots, report, no penalty), parent reminders groomer / bath (»Opravljeno«, never scored), summer 11–16 h heat note for Bulldog / French Bulldog / Boston Terrier / Pug; tasks only where the source states a frequency (26 of 36 breeds with a sourced need). New dogs only (`care_tasks`). Not on a device yet. Next: device test (FEATURES rows M5-R14 … R20); David to answer the open implementation choices (month = 4 weeks, care slots in the Care Score, no push for reminders, existing dogs not enabled).
 
 ### 2026-10-24 (cloud, orchestrator) — docs vs reality audit (`docs/roadmap-reality-audit`)

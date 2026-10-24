@@ -48,7 +48,7 @@
 
 ## Odprto za Davida
 
-- **Rešeno 24. 10. 2026 (David, M5-R14 / R15 / R18 / R19 / R20 — PR #PRNUM):** naloga samo, kjer vir navaja pogostost (razpon → spodnja meja); mini-igre otroka po modelu česanja (pošten delež, reže, poročilo, brez kazni), pasji frizer in kopanje = opomnik staršu, ne šteje v oceno; samo novi psi. Za to pasmo — zgrajeno: pasji frizer na 12 tednov (3 mesece) (opomnik staršu, ne šteje v oceno); brez pogostosti v viru → brez naloge (dejstvo ostane v besedilu): čiščenje ušes, striženje krempljev. Spodnje točke M5-R14 / R15 / R18 / R19 / R20 so s tem zaprte.
+- **Rešeno 24. 10. 2026 (David, M5-R14 / R15 / R18 / R19 / R20 — PR #376):** naloga samo, kjer vir navaja pogostost (razpon → spodnja meja); mini-igre otroka po modelu česanja (pošten delež, reže, poročilo, brez kazni), pasji frizer in kopanje = opomnik staršu, ne šteje v oceno; samo novi psi. Za to pasmo — zgrajeno: pasji frizer na 12 tednov (3 mesece) (opomnik staršu, ne šteje v oceno); brez pogostosti v viru → brez naloge (dejstvo ostane v besedilu): čiščenje ušes, striženje krempljev. Spodnje točke M5-R14 / R15 / R18 / R19 / R20 so s tem zaprte.
 
 - **Agresivnost (VetCompass):** novica RVC (S344) med najpogosteje zabeleženimi težavami pasme navaja tudi agresivnost (»potentially moody«). Zabeleženo v `data.json` (`behaviour.aggression_vetcompass`) brez oznake (ni ključa v besednjaku), oznaka »družino z otroki« ostane (PDSA / VCA, z nasvetom o nadzoru). Ali naj dobi oznako? (ugotovitev pregleda QA)
 - **Zobje:** VetCompass navaja parodontalno bolezen kot najpogostejšo težavo, a noben vir A/B ne daje nasveta za nego zob → brez potrebe po ščetkanju (M5-R15 ni povezan).
