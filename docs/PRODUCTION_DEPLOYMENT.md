@@ -64,7 +64,7 @@ The stack runs as a single-server Docker Compose environment inside an isolated 
    - Proxies WebSocket upgrades and `/app/*`, `/apps/*` requests to `reverb:8080`.
    - Serves `public/` itself (Filament css/js `Cache-Control: public, max-age=2592000`, `/build/*` 1 year immutable, zstd/gzip for text).
    - Everything else → `php_fastcgi app:9000` (PHP-FPM).
-   - **Pet media:** `GET /api/media/{id}` is checked by Laravel (signature + authz); Laravel answers with an internal `X-Accel-Redirect` header and Caddy serves the file from `app_storage` mounted **read-only** at `/srv/storage` (Range / ETag / 304). The header never reaches a client. `PET_MEDIA_SERVE_VIA=php` switches back to streaming from PHP.
+   - **Pet media:** `GET /api/media/{id}` is checked by Laravel (signature + authz); Laravel answers with an internal `X-Accel-Redirect` header and Caddy serves the file from `app_storage` mounted **read-only** at `/srv/storage` (Range / ETag / 304). The header never reaches a client. `PET_MEDIA_SERVE_VIA=php` switches back to streaming from PHP. **Object storage (M4-05, only with `PET_MEDIA_DISK=s3`):** after the same checks Laravel answers `302` to a short-lived presigned URL of the private Hetzner bucket and the phone downloads from the bucket — Caddy and the `app_storage` volume are not involved (runbook DEPLOYMENT.md D23).
    - `deployment/Caddyfile` is a single-file bind mount (see §4 for how a changed file is rolled out).
 
 2. **Laravel Application (`petprep-app:production`, `backend/docker/production/Dockerfile`, M4-05b):**
@@ -81,7 +81,7 @@ The stack runs as a single-server Docker Compose environment inside an isolated 
    - Broadcasts `pet.updated` on the private channel `private-pet.{petId}` to the child app and the parent dashboard. Channel auth: `POST /api/broadcasting/auth` (Sanctum bearer token, served by `app`).
 
 4. **Queue Workers (`queue`, `queue-broadcasts`):**
-   - `queue`: `php artisan queue:work redis --queue=auth,default --tries=3 --timeout=90` (`auth` first — M2-10c Apple token revocation after an account deletion, the Apple code lives 5 min; then fal.ai reference images).
+   - `queue`: `php artisan queue:work redis --queue=auth,default,alerts --tries=3 --timeout=90` (`auth` first — M2-10c Apple token revocation after an account deletion, the Apple code lives 5 min; then fal.ai reference images; `alerts` last — M5-05 Discord posts about app errors, low priority, never ahead of real work).
    - `queue-broadcasts`: `php artisan queue:work redis --queue=broadcasts --tries=3 --backoff=2 --timeout=15` — delivers queued `PetUpdated` events to Reverb, so a Reverb outage never blocks the scheduler (M1-09).
    - Both restarted after each deployment (`queue:restart`).
 
@@ -261,6 +261,16 @@ ls -lh /opt/petprep/backups/
 
 Any S3 repository works instead (`RESTIC_REPOSITORY=s3:https://…/bucket` + `AWS_ACCESS_KEY_ID` / `AWS_SECRET_ACCESS_KEY` in `backup.env`, no `backup-ssh/`).
 
+**Pet media on object storage (M4-05, `PET_MEDIA_DISK=s3` in `/opt/petprep/.env`):** restic can only back up the volume, so the script additionally mirrors the media bucket with rclone (`rclone/rclone:1.68.2`, Docker) to a **second bucket in another location, in a separate Hetzner Console project with its own credentials** (QA #374 M4: the mirror keys live only in `backup.env` — never in `/opt/petprep/.env`, never mounted into the app containers — so a leaked app key cannot delete the backup) — add to `backup.env`:
+```
+MEDIA_MIRROR_S3_BUCKET=petprep-media-mirror
+MEDIA_MIRROR_S3_KEY=<access key of the mirror bucket>
+MEDIA_MIRROR_S3_SECRET=<secret>
+MEDIA_MIRROR_S3_ENDPOINT=https://nbg1.your-objectstorage.com
+MEDIA_MIRROR_S3_REGION=nbg1
+```
+(`_ENDPOINT` / `_REGION` default to nbg1.) Nightly, after the DB and the volume: `rclone sync` bucket → `mirror:<bucket>/current`, files deleted / overwritten that night go to `deleted/<YYYY-MM-DD>/`, folders older than 35 days are purged (same retention as restic). Guards: an **empty bucket while the mirror has files → no sync** (wrong bucket / prefix must never empty the mirror), at most 10 % of the mirror (min 50 files) deleted per night (`--max-delete`; more → the run fails for a human); mirror / purge failures are reported after the restic retention, so the 35-day rule still runs. The credentials reach rclone only through a 600 env-file that is removed at exit. Missing mirror keys → the DB is still backed up, then the run fails (fail ping). `verify` also checks that the mirror holds ≥ 95 % of the bucket's files. The volume step keeps running for the local copies until `--prune-local`.
+
 **Commands:** `backup-offsite.sh snapshots` (list), `backup-offsite.sh verify` (latest `db` snapshot is a complete pg_dump; latest media snapshot holds files when the volume has some) — **run `verify` monthly**. A run killed hard can leave a stale restic lock; restic ignores locks older than ~30 min, otherwise `docker run --rm -i --env-file /opt/petprep/backup.env -v /opt/petprep/backup-ssh:/root/.ssh:ro restic/restic:0.17.3 -o "sftp.command=ssh -F /root/.ssh/config storagebox -s sftp" unlock`. Restore: §7 "Off-site restore".
 
 ### 6a. One-off: reset all game data before the beta (DEPLOYMENT.md D17)
@@ -371,6 +381,8 @@ docker run --rm -i --env-file /opt/petprep/backup.env --hostname petprep-product
 docker run --rm -v backend_app_storage:/data alpine:3.20 chown -R 1000:1000 /data/app/pet-media   # user `petprep` of the PHP image
 docker compose -p backend -f compose.production.yaml exec app php artisan up
 ```
+
+**Pet media on object storage (M4-05):** the bucket is a separate service — after a lost server it is still there; only point the new server's `.env` at it. If the bucket itself is lost: create a new bucket, copy the mirror back (`docker run --rm --env-file <rclone env with both remotes, see backup-offsite.sh> rclone/rclone:1.68.2 copy mirror:petprep-media-mirror/current media:<new bucket>/pet-media`), set `PET_MEDIA_S3_BUCKET` and deploy.
 
 **Deleted accounts come back with a restore:** a family deleted after the snapshot is in the restored database again. There is no deletion log yet (open, DEPLOYMENT.md D5) — until there is, check the parent support inbox / admin notes for deletions since the snapshot date and delete those families again in the admin before `artisan up`.
 

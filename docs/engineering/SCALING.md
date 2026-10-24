@@ -14,8 +14,8 @@
 |---|---|
 | ✅ Pred zaprto beto (M4-05b) | **Caddy streže medije neposredno** z lokalnega diska (X-Accel-Redirect, Range / ETag), statične datoteke z dolgim predpomnjenjem — prenos videa ne zasede PHP. *Narejeno v kodi 2026-10-05.* |
 | ✅ 2026-10-20 (David) | **Telefon hrani kopijo medijev:** aplikacija vsak video / sliko prenese enkrat in ga predvaja s telefona (ime po datoteki, ne po podpisanem URL-ju), zato ponovni podpisi (~30 min) ne pomenijo novega prenosa; največ 300 MB na telefonu, ob odjavi se pobriše. Manj prometa na strežniku in kasneje na CDN-ju. |
-| Disk > 60 % ali > 1.000 psov | **Hetzner Object Storage** (S3, ~5 €/mes za 1 TB) za `pet_media`; podpisani URL-ji iz shrambe namesto prek API-ja (`PetMediaController` že zna preklopiti na PHP za ne-lokalni disk; za S3 se doda preusmeritev na podpisan URL). |
-| Uporabniki izven srednje Evrope ali > 5.000 družin | **CDN** pred shrambo (Bunny CDN ali Cloudflare), dolgi cache headerji (datoteke se ne spreminjajo), podpisani CDN URL-ji. |
+| Disk > 60 % ali > 1.000 psov | **Hetzner Object Storage** (S3, ~5 €/mes za 1 TB) za `pet_media` — ✅ *zgrajeno v kodi 24. 10. 2026 (M4-05), privzeto izklopljeno, preklopi David:* disk `pet_media_s3` (zasebno vedro, `PET_MEDIA_DISK=s3` + `PET_MEDIA_S3_*`); aplikacija še vedno dobi naš podpisani `/api/media/{id}` (pravice nespremenjene), strežnik po preverjanju odgovori s **302 na podpisan URL vedra (privzeto 5 min)** — bajti ne gredo več skozi strežnik ne disk. Prenos obstoječih datotek: `media:move-to-object-storage` (`--dry-run`, `--limit`, `--verify`, `--prune-local`; brez AI stroškov). Postopek: DEPLOYMENT.md D23. |
+| Uporabniki izven srednje Evrope ali > 5.000 družin | **CDN** pred shrambo (Bunny CDN ali Cloudflare), dolgi cache headerji (datoteke se ne spreminjajo), podpisani CDN URL-ji. *Možnosti (M4-05, še ne zgrajeno):* (a) Bunny Pull Zone z izvorom = zasebno vedro (Bunny podpiše zahtevke na S3) + Bunny token auth (`token` + `expires` v URL-ju, ključ samo na strežniku) — preusmeritev v `PetMediaController` gre na CDN namesto na vedro; (b) Cloudflare pred vedrom z Workerjem, ki preveri naš HMAC. Obe ohranita naše podpisane `/api/media` URL-je in predpomnilnik v aplikaciji (ključ = pot + `v`); dodati bi bilo treba samo graditelja CDN-URL-ja v `MediaStorage::presignedUrl()`. |
 | Napadi / sumljiv promet | Cloudflare (DDoS, WAF) pred `api.petprep.si`; rate limit na robu. Tudi **omejitev hkratnih povezav na IP** za medije (zdaj je le `throttle:media` 240/min v Laravelu). |
 
 ## 2. Aplikacijski strežniki
@@ -38,14 +38,14 @@
 | Sprožilec | Ukrep |
 |---|---|
 | Pred javno beto | **Varnostne kopije izven strežnika** — ✅ zgrajeno 14. 10. 2026 (`scripts/backup-offsite.sh`, restic → Hetzner Storage Box: baza + mediji ljubljenčkov vsako noč, šifrirano, hramba ≈ 35 dni, `verify` za preizkus obnove; čaka Davidovo enkratno nastavitev, PRODUCTION_DEPLOYMENT §6b). Še odprto: WAL arhiv za obnovo na točko v času (PITR). |
-| Mediji > 100 GB | Mediji ljubljenčkov iz Docker volumna v objektno shrambo (S3 / Hetzner Object Storage) s CDN; varnostna kopija potem z verzioniranjem vedra. |
+| Mediji > 100 GB | Mediji ljubljenčkov iz Docker volumna v objektno shrambo (S3 / Hetzner Object Storage) — ✅ koda 24. 10. 2026 (M4-05, §1). **Varnostna kopija vedra:** `backup-offsite.sh` ob `PET_MEDIA_DISK=s3` vsako noč z rclone zrcali vedro v **drugo vedro na drugi lokaciji** (npr. `nbg1`, `MEDIA_MIRROR_S3_*` v `backup.env`): `current/` = žive datoteke, `deleted/<datum>/` = izbrisane / prepisane, po 35 dneh pobrisane (enako kot restic). Verzioniranje vedra je lahko dodatna zaščita pred pomotnim brisanjem, a ni varnostna kopija (isto vedro, ista lokacija) in izbrisane družine bi ostale v starih verzijah — le s pravilom za iztek starih verzij (≤ 35 dni). |
 | Povezave PostgreSQL blizu `max_connections` | Vsak PHP proces (FPM, delavci, scheduler) ima lahko poleg glavne še 1 povezavo `system_health` (odpre se šele ob zabeleženi napaki; System health, 19. 10. 2026). Pred PgBouncerjem / več FPM delavci to upoštevaj ali nastavi `SYSTEM_HEALTH_ISOLATED_CONNECTION=false`. |
 | DB > 50 % RAM-a ali počasne poizvedbe | Postgres na svoj strežnik (ali upravljana baza), `pg_stat_statements`, indeksi. |
 | Veliko branja (dashboard, poročila) | Bralna replika za poročila; agregati (tedenski / 12-tedenski) materializirani. |
 | `activities_log` > 10 M vrstic | Particioniranje po mesecih, arhiviranje starih podatkov po poteku izziva (tudi zaradi GDPR minimizacije). |
 
 ## 5. Opazovanje in zanesljivost
-- Sledenje napak (npr. Sentry — **brez otrokovih podatkov**, preveriti z Davidom), uptime monitor, opozorila (tick zamuja, queue raste, disk, poraba AI).
+- Sledenje napak: **lasten »System health« namesto Sentryja** (David 19. 10. 2026) — napake strežnika od PR #281, napake mobilne aplikacije od M5-05 (`POST /api/app-errors`, tabele `app_error_*`, brez povezave z uporabnikom, stikalo »App error reports« privzeto izklopljeno). Rast je omejena: upsert na napako × različico × platformo, največ 200 novih prstnih odtisov na uro (nad tem `overflow`), Discord največ 10 objav na uro, hramba 30 dni. Še manjka: uptime monitor; opozorila (tick zamuja, queue raste, disk, poraba AI) so delno v System health / Discord.
 - Centralni logi z omejenim hranjenjem; nadzorna plošča metrik (p95, napake, aktivni psi, poraba AI na dan).
 - Obremenitveni test (k6) pred vsakim večjim lansiranjem: npr. 5.000 otrok × akcije + tick + WebSocket.
 - Staging okolje (kopija produkcije brez osebnih podatkov) — konec samodejnega deploya na `main` brez preverjanja (DEPLOYMENT D2).
@@ -81,3 +81,4 @@ Danes: 6 števk (1.000.000 kod), enkratna, velja 15 min, unikatna med odprtimi P
 | 2026-10-05 | Dokument ustvarjen; v delu produkcijski PHP runtime + Caddy za medije (M4-05b). | — |
 | 2026-10-05 | M4-05b v kodi: PHP-FPM + OPcache (lastna produkcijska slika), Caddy streže statične datoteke in medije (X-Accel-Redirect); §0, §1, §2 posodobljeni. Odprto: omejitev povezav na IP. | `feat/M4-05b-prod-runtime` |
 | 2026-10-14 | Varnostne kopije izven strežnika zgrajene (§4, D5); mediji v objektni shrambi zapisani kot naslednji korak (§4); omejitve PIN-a pri velikem obsegu (§5a). | `feat/D5-offsite-backups` |
+| 2026-10-24 | M4-05 objektna shramba v kodi (privzeto lokalni disk, preklopi David): disk `pet_media_s3`, 302 na podpisan URL vedra, `media:move-to-object-storage`, zrcaljenje vedra v varnostni kopiji, System health »Shramba medijev«; §1, §4 posodobljeni, CDN možnosti zapisane. | `feat/M4-05-object-storage` |

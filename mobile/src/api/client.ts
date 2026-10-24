@@ -10,6 +10,7 @@ import type { components, operations } from '@/api/schema';
 import type { Pet, QuietHours } from '@/types';
 import { CAT_UI_READY } from '@/config/features';
 import { isNetworkFailure, outageCauseForResponse, outageRetryAfterMs } from '@/modules/connectivity/serverOutage';
+import { setReportingAllowed } from '@/modules/errorReporting/errorQueue';
 import { useServerStatusStore } from '@/store/serverStatusStore';
 import { withTimeout } from '@/utils/withTimeout';
 
@@ -45,6 +46,11 @@ export interface UserResponse extends SessionUser {
    * mirrored in `pet.awaiting_contract`. null for a parent.
    */
   awaiting_contract?: boolean | null;
+  /**
+   * M5-05 (QA #375 B1): may the app queue / send error reports (superadmin switch,
+   * default off). Read by the api wrapper below → `modules/errorReporting`.
+   */
+  app_error_reports?: boolean;
 }
 
 /** `POST /api/login` response. */
@@ -106,6 +112,9 @@ export type RegisterDeviceRequest = components['schemas']['RegisterDeviceRequest
 /** `POST /api/devices` 200 body. The Expo token itself is never echoed. */
 export type RegisterDeviceResponse =
   operations['device.store']['responses'][200]['content']['application/json'];
+
+/** `POST /api/app-errors` body (M5-05). */
+export type AppErrorReportBody = components['schemas']['ReportAppErrorRequest'];
 
 /** Laravel validation error body (422). */
 export interface ValidationErrorBody {
@@ -690,6 +699,27 @@ interface RequestOptions {
    * request whose connection never opens otherwise waits indefinitely.
    */
   timeoutMs?: number;
+  /**
+   * M5-05: a 401 never calls the unauthorized handler (error reports must never sign the
+   * user out — the server ignores a bad token there anyway).
+   */
+  ignoreUnauthorized?: boolean;
+  /**
+   * M5-05 (QA #375 m2): this request's answer (or network failure) never feeds the
+   * "Updating PetPrep" outage banner — background error reports must not raise or
+   * clear it.
+   */
+  silentStatus?: boolean;
+}
+
+/** M5-05 (QA #375 B1): remember the server's error-report switch; never throws. */
+function noteErrorReportSwitch(user: UserResponse): UserResponse {
+  try {
+    setReportingAllowed(user.app_error_reports === true);
+  } catch {
+    // never break the session restore
+  }
+  return user;
 }
 
 /** Type-safe wrapper around fetch with auth header and JSON handling. */
@@ -736,17 +766,17 @@ async function sendRequest<T>(path: string, options: RequestOptions): Promise<T>
     });
   } catch (error) {
     // M5-F13: connection refused / reset while the server restarts (or no network).
-    if (isNetworkFailure(error)) useServerStatusStore.getState().noteOutageFailure('network', null);
+    if (isNetworkFailure(error) && !options.silentStatus) useServerStatusStore.getState().noteOutageFailure('network', null);
     throw error;
   }
 
   const data = await readJson(response);
-  reportServerAnswer(response, data);
+  if (!options.silentStatus) reportServerAnswer(response, data);
 
   if (!response.ok) {
     // QA m2 (2026-10-19): a 401 that arrives after this request was aborted (its timeout ran
     // out, the caller gave up) is never acted on — the caller already moved on.
-    if (response.status === 401 && token && unauthorizedHandler && !options.signal?.aborted) {
+    if (response.status === 401 && token && unauthorizedHandler && !options.signal?.aborted && !options.ignoreUnauthorized) {
       // Only if the rejected token is still the session's token: a late 401 for an
       // old token (e.g. after logout + a new login) must not log the new user out.
       const current = await getAuthToken().catch(() => null);
@@ -892,7 +922,7 @@ export const api = {
     }),
 
   /** M2-11: `GET /api/user` for a stored shared child session's token (checked before reuse). */
-  getUserWithToken: (token: string) => apiRequest<UserResponse>('/api/user', { token }),
+  getUserWithToken: (token: string) => apiRequest<UserResponse>('/api/user', { token }).then(noteErrorReportSwitch),
 
   /** POST /api/logout — Revoke the current token. Pass a signal to abort (offline logout). */
   logout: (signal?: AbortSignal) =>
@@ -1030,7 +1060,22 @@ export const api = {
    * GET /api/user — the authenticated user (flat object) with the active pet. The launch
    * restore passes `timeoutMs` (it must never wait forever, fix 2026-10-19).
    */
-  getUser: (options: { timeoutMs?: number } = {}) => apiRequest<UserResponse>('/api/user', options),
+  getUser: (options: { timeoutMs?: number } = {}) => apiRequest<UserResponse>('/api/user', options).then(noteErrorReportSwitch),
+
+  /**
+   * POST /api/app-errors (M5-05) — one crash / render-error report, 204. With the stored
+   * token when there is one (the server reads only the role from it), anonymous otherwise;
+   * a 401 never signs the user out. Only `modules/errorReporting` calls it.
+   */
+  reportAppError: (body: AppErrorReportBody, options: { token: string | null; timeoutMs: number }) =>
+    apiRequest<null>('/api/app-errors', {
+      method: 'POST',
+      body: { ...body },
+      ...(options.token ? { token: options.token } : { anonymous: true }),
+      timeoutMs: options.timeoutMs,
+      ignoreUnauthorized: true,
+      silentStatus: true,
+    }),
 
   /** GET /api/child/pet — the child's full pet state (read-only, also while locked / unborn). */
   getChildPet: () => apiRequest<ChildPetState>('/api/child/pet'),

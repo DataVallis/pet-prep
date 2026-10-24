@@ -4,8 +4,10 @@ namespace App\Enums;
 
 /**
  * Kinds of admin alerts that can be posted to the admin Discord channel
- * (M5-T19, David 2026-10-24). Only the AI budget and fal.ai balance kinds are
- * wired today (AiBudgetMonitor); new kinds (e.g. System health errors, failed
+ * (M5-T19, David 2026-10-24). AI budget and fal.ai balance kinds come from
+ * AiBudgetMonitor; the app error kinds (M5-05) from SendAppErrorAlert — a NEW
+ * mobile app error fingerprint, or one fingerprint reaching the hourly spike
+ * threshold (at most one post per fingerprint per day). New kinds (e.g. failed
  * deploys) are added here with their severity and admin page, then sent with
  * App\Services\Alerts\AdminAlert + DiscordWebhook from a queued job.
  */
@@ -15,6 +17,10 @@ enum AdminAlertKind: string
     case AiBudgetBlocked = 'ai_budget_blocked';
     case FalBalanceLow = 'fal_balance_low';
     case FalBalanceExhausted = 'fal_balance_exhausted';
+    case AppErrorNew = 'app_error_new';
+    case AppErrorSpike = 'app_error_spike';
+    /** QA #375 M1: app error posts above the global hourly cap, summed in one post. */
+    case AppErrorSuppressed = 'app_error_suppressed';
     case Test = 'test';
 
     public const COLOUR_INFO = 0x3B82F6;
@@ -27,8 +33,8 @@ enum AdminAlertKind: string
     public function severity(): string
     {
         return match ($this) {
-            self::AiBudgetWarning, self::FalBalanceLow => 'warning',
-            self::AiBudgetBlocked, self::FalBalanceExhausted => 'danger',
+            self::AiBudgetWarning, self::FalBalanceLow, self::AppErrorNew, self::AppErrorSuppressed => 'warning',
+            self::AiBudgetBlocked, self::FalBalanceExhausted, self::AppErrorSpike => 'danger',
             self::Test => 'info',
         };
     }
@@ -48,7 +54,7 @@ enum AdminAlertKind: string
     {
         return match ($this) {
             self::AiBudgetWarning, self::AiBudgetBlocked => '/admin/ai-budget',
-            self::FalBalanceLow, self::FalBalanceExhausted, self::Test => '/admin/system-health',
+            self::FalBalanceLow, self::FalBalanceExhausted, self::AppErrorNew, self::AppErrorSpike, self::AppErrorSuppressed, self::Test => '/admin/system-health',
         };
     }
 }

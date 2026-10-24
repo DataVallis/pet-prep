@@ -380,7 +380,7 @@ flowchart TD
   P --> L[audit log line<br/>family id + counts, no PII]
   F --> L
   L --> K[COMMIT]
-  K --> J[after commit: DeletePetMediaFiles job<br/>pet_media disk dirs of the deleted pets<br/>idempotent, skips pets that still exist]
+  K --> J[after commit: DeletePetMediaFiles job<br/>pet_media disk dirs of the deleted pets<br/>(on s3 also their local leftovers, M4-05)<br/>idempotent, skips pets that still exist]
   K --> R[200 status deleted, scope family / parent]
   R --> O[App: logout revoke=false<br/>→ StartScreen]
 ```
@@ -1366,6 +1366,26 @@ sequenceDiagram
   Note over API,Disk: production (PET_MEDIA_SERVE_VIA=caddy, M4-05b): PHP answers 200 + empty body +<br/>X-Accel-Redirect: /{pet}/{file} (path checked against a strict pattern);<br/>Caddy handle_response serves the file from /srv/storage/app/pet-media (read-only):<br/>200 / 206 / 304, Content-Type + Cache-Control private copied, nosniff — the header never reaches the app.<br/>Local dev / tests (php): BinaryFileResponse straight from PHP.
 ```
 
+### 10a-1. Pet media on object storage (M4-05, built 2026-10-24, off until David sets `PET_MEDIA_DISK=s3`)
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant App as App (expo-video / expo-image / mediaFileCache)
+  participant API as Laravel API (PetMediaController)
+  participant S3 as Hetzner Object Storage<br/>private bucket (pet-media/…)
+  participant Q as Queue worker
+  participant Mirror as mirror bucket (other location)
+  Q->>S3: StorePetMedia: putFileAs {pet}/{state}-gN.mp4 (faststart first)
+  App->>API: GET /api/media/{id}?expires&v&signature (cache key = path + v)
+  API->>API: signature + optional token → PetPolicy::listen (unchanged)
+  API-->>App: 403 (also < 5 s left) / 404 (no stored file) — or 302 Location: presigned bucket URL<br/>(≤ 300 s, ≤ expires, HEAD → HeadObject, no-store, no-referrer)
+  App->>S3: GET presigned URL (Range 206 for AVPlayer)
+  S3-->>App: bytes (Content-Type / inline / private max-age from the presign)
+  Note over API,S3: fal fetches start frames through the same redirect.<br/>media:move-to-object-storage copies the local files first (same keys, --verify MD5, never deletes);<br/>--prune-local only after the switch.
+  Q->>Mirror: nightly backup-offsite.sh: rclone sync → current/, deleted/<date>/ kept 35 days<br/>(empty bucket → no sync; ≤ 10 % deletions; mirror bucket in a separate Hetzner project)
+```
+
 ```mermaid
 flowchart LR
   F{"failure"} --> B["budget / fal balance / disabled"] --> BF["slot failed + reason<br/>pet playable without media"] --> RT["daily media:retry (00:23 UTC)<br/>or /admin → AI budget → Retry blocked media now<br/>within budget: images, then videos"]
@@ -2082,4 +2102,37 @@ sequenceDiagram
   P->>S: PATCH /parent/children/{child}/settings {adapted_mode: false}
   S->>DB: lock child row → flag false → lock pets of its push rows (id order) → pet_daily_steps unit pushes → steps
   S-->>P: 200 (one PetUpdated caretaker_settings_changed); counts, points and Care Score unchanged, logged walks kept
+```
+
+## 18. App error reports: app → own server → System health / Discord (M5-05, David 2026-10-19 »no Sentry«, built 2026-10-24)
+
+No third-party SDK; release builds only. The report carries technical facts only; the server keeps the role of the token, never the user.
+
+```mermaid
+sequenceDiagram
+  participant B as Error boundary / ErrorUtils / Hermes tracker
+  participant R as modules/errorReporting (reporter)
+  participant Q as Queue file (max 20, dedupe 10 min)
+  participant S as POST /api/app-errors
+  participant DB as app_error_fingerprints / _reports / _hours
+  participant J as SendAppErrorAlert (queued)
+  participant D as Discord
+  Note over R,S: switch »App error reports« (app_settings, default OFF) ← GET /api/user app_error_reports — off: nothing queued, nothing stored
+  B->>R: reportAppError(scope, error) — never throws
+  R->>Q: buildReport (scrubbed name / message ≤ 500 / stack ≤ 2 KB, versions, platform, screen name) + session role → write sync (cache folder)
+  Note over R,Q: same error within 10 min → skipped; > 20 → oldest dropped
+  R->>S: flush (2 s after a report · 5 s after launch · on foreground), oldest first, 10 s timeout, token only if the role still matches, silentStatus
+  alt 204 / 4xx for good
+    R->>Q: remove
+  else offline / 429 / 5xx
+    R->>Q: keep — backoff (Retry-After, else 60 s doubling ≤ 30 min)
+  end
+  S->>S: body ≤ 16 KB · throttle (signed in 30/min per IP + per user; signed out 10/min + 300/day per IP) · validate · token → role only (never 401)
+  S->>DB: scrub → fingerprint(name, message, first frame); > 200 new / h → overflow · upsert fingerprint +1, (version, platform) row +1 + sample, hour +1
+  alt new fingerprint or hourly bucket = 20
+    S->>J: dispatch(app_error_new | app_error_spike) on queue alerts
+    J->>DB: claim last_alerted_at (≤ 1 per fingerprint per 24 h); > 10 posts / h → counted, one suppressed summary
+    J->>D: embed: name, message, scope, versions, platforms, 24 h count — no user / family / pet
+  end
+  Note over DB: system-health:prune (03:29 UTC) deletes everything not seen for 30 days · /admin/system-health »App errors« (superadmin, 24 h / 7 d)
 ```

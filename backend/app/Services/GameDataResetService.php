@@ -64,6 +64,11 @@ class GameDataResetService
         // resolved_by → users is SET NULL.
         'system_errors',
         'system_error_hours',
+        // M5-05 mobile app error reports: operational log like system_errors,
+        // linked to no user (role only); expires after 30 days by itself.
+        'app_error_fingerprints',
+        'app_error_reports',
+        'app_error_hours',
     ];
 
     /** Tables where only some rows go (see keptQuery()). */

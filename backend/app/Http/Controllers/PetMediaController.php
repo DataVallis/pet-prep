@@ -7,7 +7,9 @@ use App\Models\PetMedia;
 use App\Models\PetMediaHistory;
 use App\Models\PetMediaQualityCheck;
 use App\Models\User;
+use App\Services\Media\MediaStorage;
 use App\Services\Media\PetMediaService;
+use Carbon\CarbonImmutable;
 use Dedoc\Scramble\Attributes\ExcludeRouteFromDocs;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
@@ -34,6 +36,14 @@ use Symfony\Component\HttpFoundation\Response;
  *    below — so a long video download never occupies a PHP-FPM worker. The
  *    header value is built only from the DB path, which must match
  *    SAFE_RELATIVE_PATH; anything else falls back to PHP streaming.
+ *
+ * Object storage (M4-05, PET_MEDIA_DISK=s3): after the same checks the answer is
+ * a `302` to a short-lived presigned URL of the private bucket
+ * (MediaStorage::presignedUrl(), ≤ PET_MEDIA_S3_URL_TTL_SECONDS and never past our
+ * own URL's expiry; HEAD → a presigned HeadObject; < 5 s left → 403) with `Cache-Control: no-store` — players / downloaders follow
+ * it (Range is answered by the bucket), the app's media cache keys on OUR URL
+ * (path + v), and the redirect itself is never cached past the presigned lifetime.
+ * No HEAD to the bucket per request: a missing object is the bucket's 404.
  */
 class PetMediaController extends Controller
 {
@@ -103,11 +113,28 @@ class PetMediaController extends Controller
             abort(403);
         }
 
+        $storage = app(MediaStorage::class);
+        $expires = (int) request()->query('expires', 0);
+
+        if ($storage->usesObjectStorage()) {
+            abort_unless($servable && $path !== '', 404);
+
+            $notAfter = $expires > 0 ? CarbonImmutable::createFromTimestampUTC($expires) : null;
+            // HEAD gets a presigned HeadObject (a presigned GET refuses HEAD); < 5 s left → 403.
+            $target = $storage->presignedUrl($path, $mime, $notAfter, request()->getMethod());
+            abort_if($target === null, 403);
+
+            return redirect()->away($target, 302, [
+                'Cache-Control' => 'no-store, private',
+                'Referrer-Policy' => 'no-referrer',
+            ]);
+        }
+
         $disk = $service->disk();
 
         abort_unless($servable && $path !== '' && $disk->exists($path), 404);
 
-        $maxAge = max(60, (int) request()->query('expires', 0) - now()->getTimestamp());
+        $maxAge = max(60, $expires - now()->getTimestamp());
         $headers = [
             'Content-Type' => $mime,
             'Cache-Control' => 'private, max-age='.min($maxAge, 5400),
