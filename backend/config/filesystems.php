@@ -49,6 +49,30 @@ return [
             'report' => false,
         ],
 
+        // M4-05 object storage: the same pet media in a PRIVATE S3-compatible bucket
+        // (Hetzner Object Storage). Used when PET_MEDIA_DISK=s3 (config/media.php) and by
+        // media:move-to-object-storage (copy target). Never public — the apps still get our
+        // signed GET /api/media/{media}, which answers with a short-lived presigned redirect.
+        'pet_media_s3' => [
+            'driver' => 's3',
+            'key' => env('PET_MEDIA_S3_KEY'),
+            'secret' => env('PET_MEDIA_S3_SECRET'),
+            'region' => env('PET_MEDIA_S3_REGION', 'fsn1'),
+            'bucket' => env('PET_MEDIA_S3_BUCKET'),
+            'endpoint' => env('PET_MEDIA_S3_ENDPOINT', 'https://fsn1.your-objectstorage.com'),
+            'use_path_style_endpoint' => filter_var(env('PET_MEDIA_S3_PATH_STYLE', false), FILTER_VALIDATE_BOOL),
+            // Key prefix inside the bucket: `pet-media/{pet_id}/…`, `pet-media/looks/{id}/…`.
+            'root' => env('PET_MEDIA_S3_PREFIX', 'pet-media'),
+            'visibility' => 'private',
+            'throw' => true,
+            'report' => false,
+            // S3-compatible stores (Hetzner) do not all accept the SDK's default
+            // CRC32 request checksums (aws-sdk-php ≥ 3.337) — send them only when required.
+            'request_checksum_calculation' => 'when_required',
+            'response_checksum_validation' => 'when_required',
+            'http' => ['connect_timeout' => 5, 'timeout' => 120],
+        ],
+
         // Responsibility certificates (M2-01d): private PDFs, served only through the
         // signed GET /api/certificates/{certificate}/pdf. `{pet_id}/certificate-{id}.pdf`.
         'certificates' => [

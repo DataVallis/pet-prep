@@ -5,6 +5,7 @@ namespace App\Filament\Widgets\SystemHealth;
 use App\Filament\Resources\PetResource;
 use App\Models\User;
 use App\Services\AppErrors\AppErrorReportService;
+use App\Services\Media\MediaStorage;
 use App\Services\SystemHealth\SystemHealthService;
 use Filament\Widgets\StatsOverviewWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
@@ -62,6 +63,9 @@ class SystemHealthStats extends StatsOverviewWidget
         $disk = $health->diskUsage();
         // M5-05: mobile app crash / render-error reports.
         $appErrors = app(AppErrorReportService::class)->windowSummary(24);
+        // M4-05: where pet media live + whether the bucket answers (cached 60 s).
+        $storage = app(MediaStorage::class)->status();
+        $bucket = (string) ($storage['bucket'] ?? '');
 
         return [
             Stat::make(__('admin.system_health.stats.errors'), $open24)
@@ -116,6 +120,20 @@ class SystemHealthStats extends StatsOverviewWidget
                     : __('admin.system_health.stats.disk_desc', ['free' => Number::fileSize($disk['free'], 1), 'total' => Number::fileSize($disk['total'], 1)]))
                 ->descriptionIcon('heroicon-m-server')
                 ->color($disk === null ? 'gray' : ($disk['used_percent'] >= (int) config('system_health.disk_warn_percent', 90) ? 'danger' : 'success')),
+            Stat::make(__('admin.system_health.stats.storage'), $storage['driver'] === 's3' ? __('admin.system_health.stats.storage_s3') : __('admin.system_health.stats.storage_local'))
+                ->description(match ($storage['reachable']) {
+                    true => __('admin.system_health.stats.storage_bucket_ok', ['bucket' => $bucket]),
+                    false => __('admin.system_health.stats.storage_bucket_down', ['bucket' => $bucket, 'error' => (string) $storage['error']]),
+                    null => __('admin.system_health.stats.storage_bucket_none'),
+                })
+                ->descriptionIcon('heroicon-m-circle-stack')
+                // Object storage live but the bucket down = media broken → red; a configured
+                // but unused bucket that fails = warning (fix before switching).
+                ->color(match (true) {
+                    $storage['reachable'] === false => $storage['driver'] === 's3' ? 'danger' : 'warning',
+                    $storage['driver'] === 's3' && $storage['reachable'] !== true => 'danger',
+                    default => 'success',
+                }),
         ];
     }
 }

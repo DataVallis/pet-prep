@@ -528,6 +528,17 @@ if [ -n "$rq" ] && [ "$rq" != "default" ]; then
     echo "ERROR: REDIS_QUEUE must be unset or 'default' in ${ENV_FILE} (found '${rq}')." >&2
     exit 1
 fi
+# M4-05 (QA #374 m7): pet media on object storage need the bucket and both keys —
+# otherwise every media request would fail after the switch.
+pmd=$(env_value PET_MEDIA_DISK)
+if [ "$pmd" = "s3" ]; then
+    for key in PET_MEDIA_S3_BUCKET PET_MEDIA_S3_KEY PET_MEDIA_S3_SECRET; do
+        if [ -z "$(env_value "$key")" ]; then
+            echo "ERROR: PET_MEDIA_DISK=s3 needs ${key} in ${ENV_FILE} (DEPLOYMENT.md D23). Nothing was changed." >&2
+            exit 1
+        fi
+    done
+fi
 # AI models (M4, David 2026-10-05): the defaults are nano_banana_pro / kling_v3_pro.
 # An old .env copied from .env.example may still pin flux_schnell / kling_v16_legacy
 # (removed — the app falls back to the default and logs an error). Warn, don't block.

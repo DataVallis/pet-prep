@@ -53,8 +53,11 @@ class PetGrowthService
             ->orderBy('id')
             ->get();
 
+        // QA #374 m4: on object storage trust the DB (no HEAD per album row).
+        $trustDb = app(MediaStorage::class)->usesObjectStorage();
+
         foreach ($history as $row) {
-            if (! $disk->exists($row->storage_path)) {
+            if (! $trustDb && ! $disk->exists($row->storage_path)) {
                 continue;
             }
 
@@ -62,7 +65,9 @@ class PetGrowthService
             $currentInHistory = $currentInHistory || $isCurrent;
             $takenAt = $row->taken_at !== null
                 ? CarbonImmutable::instance($row->taken_at)
-                : $this->media->fileModifiedAt($row->storage_path);
+                : ($trustDb
+                    ? ($row->archived_at !== null ? CarbonImmutable::instance($row->archived_at) : null)
+                    : $this->media->fileModifiedAt($row->storage_path));
 
             $entries[] = $this->entry(
                 $pet,
@@ -74,7 +79,7 @@ class PetGrowthService
             );
         }
 
-        if ($slot !== null && $currentPath !== null && ! $currentInHistory && $disk->exists($currentPath)) {
+        if ($slot !== null && $currentPath !== null && ! $currentInHistory && ($trustDb || $disk->exists($currentPath))) {
             $entries[] = $this->entry(
                 $pet,
                 $slot->generation,

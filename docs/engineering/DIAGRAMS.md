@@ -380,7 +380,7 @@ flowchart TD
   P --> L[audit log line<br/>family id + counts, no PII]
   F --> L
   L --> K[COMMIT]
-  K --> J[after commit: DeletePetMediaFiles job<br/>pet_media disk dirs of the deleted pets<br/>idempotent, skips pets that still exist]
+  K --> J[after commit: DeletePetMediaFiles job<br/>pet_media disk dirs of the deleted pets<br/>(on s3 also their local leftovers, M4-05)<br/>idempotent, skips pets that still exist]
   K --> R[200 status deleted, scope family / parent]
   R --> O[App: logout revoke=false<br/>→ StartScreen]
 ```
@@ -1364,6 +1364,26 @@ sequenceDiagram
   App->>API: GET /api/media/{id}?expires&v&signature (Range) — via Caddy → PHP-FPM
   API-->>App: 403 expired / tampered / other family token · 404 no stored file
   Note over API,Disk: production (PET_MEDIA_SERVE_VIA=caddy, M4-05b): PHP answers 200 + empty body +<br/>X-Accel-Redirect: /{pet}/{file} (path checked against a strict pattern);<br/>Caddy handle_response serves the file from /srv/storage/app/pet-media (read-only):<br/>200 / 206 / 304, Content-Type + Cache-Control private copied, nosniff — the header never reaches the app.<br/>Local dev / tests (php): BinaryFileResponse straight from PHP.
+```
+
+### 10a-1. Pet media on object storage (M4-05, built 2026-10-24, off until David sets `PET_MEDIA_DISK=s3`)
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant App as App (expo-video / expo-image / mediaFileCache)
+  participant API as Laravel API (PetMediaController)
+  participant S3 as Hetzner Object Storage<br/>private bucket (pet-media/…)
+  participant Q as Queue worker
+  participant Mirror as mirror bucket (other location)
+  Q->>S3: StorePetMedia: putFileAs {pet}/{state}-gN.mp4 (faststart first)
+  App->>API: GET /api/media/{id}?expires&v&signature (cache key = path + v)
+  API->>API: signature + optional token → PetPolicy::listen (unchanged)
+  API-->>App: 403 (also < 5 s left) / 404 (no stored file) — or 302 Location: presigned bucket URL<br/>(≤ 300 s, ≤ expires, HEAD → HeadObject, no-store, no-referrer)
+  App->>S3: GET presigned URL (Range 206 for AVPlayer)
+  S3-->>App: bytes (Content-Type / inline / private max-age from the presign)
+  Note over API,S3: fal fetches start frames through the same redirect.<br/>media:move-to-object-storage copies the local files first (same keys, --verify MD5, never deletes);<br/>--prune-local only after the switch.
+  Q->>Mirror: nightly backup-offsite.sh: rclone sync → current/, deleted/<date>/ kept 35 days<br/>(empty bucket → no sync; ≤ 10 % deletions; mirror bucket in a separate Hetzner project)
 ```
 
 ```mermaid

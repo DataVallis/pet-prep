@@ -646,7 +646,8 @@ describe('GET /api/media/{media}', function () {
         it('only applies to a local disk', function () {
             [, , $pet] = pmFamilyPet();
             $video = pmStored($pet, 'video', 'idle');
-            config(['filesystems.disks.pet_media.driver' => 's3']); // the fake disk instance is already resolved
+            // Another non-local driver (an s3 disk redirects instead — ObjectStorageMediaTest).
+            config(['filesystems.disks.pet_media.driver' => 'ftp']); // the fake disk instance is already resolved
 
             $this->get(pmPath(app(PetMediaService::class)->signedUrl($video)))->assertOk()->assertHeaderMissing('X-Accel-Redirect');
         });

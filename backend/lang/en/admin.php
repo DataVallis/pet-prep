@@ -430,6 +430,12 @@ return [
             'disk' => 'Disk used',
             'disk_desc' => ':free free of :total',
             'disk_unknown' => 'Disk size not available',
+            'storage' => 'Media storage',
+            'storage_local' => 'Local disk',
+            'storage_s3' => 'Object storage',
+            'storage_bucket_ok' => 'Bucket :bucket reachable',
+            'storage_bucket_down' => 'Bucket :bucket NOT reachable — :error',
+            'storage_bucket_none' => 'No bucket configured (PET_MEDIA_S3_*)',
         ],
         'chart' => [
             'heading' => 'Errors per hour (last 48 h)',
