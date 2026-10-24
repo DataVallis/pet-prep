@@ -363,6 +363,17 @@ return [
         ['key' => 'roe-grey', 'value' => 'roe grey', 'en' => 'Roe grey', 'sl' => 'Srnje siv'],
         ['key' => 'mouse-grey', 'value' => 'mouse grey', 'en' => 'Mouse grey', 'sl' => 'Mišje siv'],
     ],
+    // M5-R10-60: Kennel Club standard S485 — black, blue, cream, fawn, red, white, or any of these broken with white
+    // (never merle, brindle or tan markings).
+    'italian_greyhound' => [
+        ['key' => 'fawn', 'value' => 'fawn', 'en' => 'Fawn', 'sl' => 'Rumenorjav'],
+        ['key' => 'blue', 'value' => 'blue grey', 'en' => 'Blue grey', 'sl' => 'Modrosiv'],
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'cream', 'value' => 'cream', 'en' => 'Cream', 'sl' => 'Kremast'],
+        ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'white', 'value' => 'white', 'en' => 'White', 'sl' => 'Bel'],
+        ['key' => 'fawn-white', 'value' => 'fawn broken with white', 'en' => 'Fawn and white', 'sl' => 'Rumenorjavo-bel'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

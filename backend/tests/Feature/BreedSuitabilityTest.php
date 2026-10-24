@@ -439,9 +439,9 @@ it('gives the Yorkshire Terrier the new fragile_older_children tag, apartment, l
         ->and($yorkie['consider'])->not->toContain('sheds')->not->toContain('shorter_lifespan')
         ->not->toContain('hips_hind_legs')->not->toContain('brachycephalic_breathing')->not->toContain('sensitive_skin');
 
-    // Only the Yorkshire Terrier carries the new chip so far.
+    // Only the Yorkshire Terrier and the Italian Greyhound (PDSA S487 "bone fragility during growth", M5-R10-60) carry the chip so far.
     foreach (BreedType::cases() as $breed) {
-        if ($breed !== BreedType::YorkshireTerrier) {
+        if (! in_array($breed, [BreedType::YorkshireTerrier, BreedType::ItalianGreyhound], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('fragile_older_children');
         }
     }

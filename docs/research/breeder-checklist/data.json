@@ -2358,6 +2358,24 @@
           "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
         }
       ]
+    },
+    "italian_greyhound": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S486",
+        "level_quotes": {
+          "best_practice": "To support the breed’s health, responsible breeders should ensure they complete all tests in best practice."
+        }
+      },
+      "tests": [
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S486",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        }
+      ]
     }
   }
 }

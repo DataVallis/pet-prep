@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest / WeimaranerBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest / WeimaranerBreedTest / ItalianGreyhoundBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever / Samoyed / Scottish Terrier / Weimaraner rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever / Samoyed / Scottish Terrier / Weimaraner / Italian Greyhound rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -710,6 +710,16 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_WEIMARANER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-59)';
 
     /**
+     * M5-R10-60 Italian Greyhound (unattended run 2026-10-23, data.json proposed_game_parameters.italian_greyhound.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on
+     * 2026-10-10 — exercise 60 min (RKC S486 "Exercise: Up to 1 hour per day"), senior 45 min, puppy 10 min × age
+     * capped at 60, stages young 9 / adult 36 / senior 108 (0.75 × RKC lower bound "Over 12 years", S486 — the Dogs
+     * Trust McMillan 2024 table S123 could not be fetched), arrival 2 / 9 / 36 / 108, learning multiplier 0.7 (Coren
+     * rank 60, Fair); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_ITALIAN_GREYHOUND = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-60)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -873,6 +883,7 @@ class BreedStageParamsSeeder extends Seeder
         'samoyed' => [7, 'S467', 'They shed very often, but even when they’re not shedding they’ll need grooming on daily basis.', 'high', false],
         'scottish_terrier' => [7, 'S474', 'Scotties need daily grooming and will require stripping and clipping by a professional groomer every two-three months.', 'high', false],
         'weimaraner' => [1, 'S479', 'Grooming: Once a week', 'high', false],
+        'italian_greyhound' => [1, 'S486', 'Grooming: Once a week', 'high', false],
     ];
 
     /**
@@ -979,13 +990,14 @@ class BreedStageParamsSeeder extends Seeder
         'samoyed' => ['S469', 'As with all dog breeds, Samoyed puppies respond best to training and socialization early in life.'],
         'scottish_terrier' => ['S475', 'Socializing your Scottish Terrier puppy is important for having a well-mannered, confident dog.'],
         'weimaraner' => ['S480', 'Weimaraners tend to be a little cautious of unfamiliar dogs, so socialisation from a young age is really important.'],
+        'italian_greyhound' => ['S487', 'They can also be quite timid, so early socialisation is essential.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1649,6 +1661,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-59 (docs/research/dog-data/data.json weimaraner,
             // S477–S483; runbook rules in proposed_game_parameters.weimaraner).
             BreedType::Weimaraner => self::weimaranerProfile(),
+            // M5-R10-60 (docs/research/dog-data/data.json italian_greyhound,
+            // S484–S490; runbook rules in proposed_game_parameters.italian_greyhound).
+            BreedType::ItalianGreyhound => self::italianGreyhoundProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -5714,6 +5729,81 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'weimaraner.lifespan.rkc',
                 'quote' => 'Lifespan: Over 10 years',
                 'notes' => 'RKC breed page lower bound (S479). The McMillan 2024 table (Dogs Trust S123) could not be fetched (12.8 y only via Wikipedia, tier C); no VetCompass median. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Italian Greyhound (M5-R10-60). Stage boundaries, arrival ages, exercise minutes and the learning multiplier follow
+     * the runbook's standing rules (CONFIRMED_R10_ITALIAN_GREYHOUND); weight, growth, Coren rank and lifespan are sourced.
+     * The senior boundary uses the RKC lower bound "Over 12 years" (S486) — the Dogs Trust McMillan 2024 table (S123)
+     * could not be fetched (about 14 years only via Wikipedia, tier C) and no VetCompass median was found.
+     *
+     * @return array<string, mixed>
+     */
+    private static function italianGreyhoundProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_ITALIAN_GREYHOUND;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S486', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.italian_greyhound.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a toy dog reaches adult weight at 8–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lifespan lower bound "Over 12 years" (S486) = 9 y = 108 months. The Dogs Trust McMillan 2024 table (S123) could not be fetched (about 14 y only via Wikipedia, tier C); no VetCompass median was found. Not chosen: 84 (Dogs Trust > 7 y, S14), 126 (about 14 y via Wikipedia; PetMD 14–15 y lower bound).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.italian_greyhound.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (8–12 months for a toy dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S486', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.italian_greyhound.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 1 hour per day',
+                'notes' => 'RKC "Exercise: Up to 1 hour per day" (S486) → 60 min = 6,000 steps (runbook rule: "up to N" → N). PDSA "Minimum exercise (per day) 1 hour" (S487) agrees.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.italian_greyhound.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[3.6, 4.5], [
+                'unit' => 'kg', 'source_id' => 'S485', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'italian_greyhound.adult_weight.kc_standard',
+                'quote' => '3.6kg – 4.5kg.',
+                'notes' => 'Kennel Club breed standard (S485): 3.6–4.5 kg for both sexes. PDSA 3–4.5 kg (S487) — alternative.',
+            ]],
+            'growth_end' => [[8, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'italian_greyhound.growth.adult_weight_reached',
+                'quote' => 'Toy (5–12 pounds): 8–12 months',
+                'notes' => 'Size-class value, not breed-specific (KC 3.6–4.5 kg ≈ 7.9–9.9 lb, S485 — the Toy class of S10).',
+            ]],
+            'coren_rank' => [60, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'italian_greyhound.trainability.coren_rank',
+                'quote' => '60 | Italian Greyhound',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 60, tier "Fair Working/Obedience Intelligence" (ranks 55–69).',
+            ]],
+            'learning_multiplier' => [0.7, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.italian_greyhound.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 60 (S35) in the "Fair" tier (ranks 55–69) → 0.7. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12.0, [
+                'unit' => 'years', 'source_id' => 'S486', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'italian_greyhound.lifespan.rkc',
+                'quote' => 'Lifespan: Over 12 years',
+                'notes' => 'RKC breed page lower bound (S486). The McMillan 2024 table (Dogs Trust S123) could not be fetched (about 14 y only via Wikipedia, tier C); no VetCompass median. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

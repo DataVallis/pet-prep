@@ -166,6 +166,11 @@ return [
         // space). Not `brachycephalic_breathing` / `short_muzzle_breathing` — those name a short face. A calm chip, never a
         // number.
         'heat_sensitive' => 'consider',
+        // M5-R10-60 (runbook "new tag" rule, 2026-10-23): a thin-coated, slender dog that feels the cold (Italian Greyhound:
+        // PetMD S488 "However, their coat does not insulate them well, and combined with their slender bodies, they can be
+        // easily affected by the cold." — sweaters and coats). Not `heat_sensitive` (a thick coat in hot weather). A calm chip,
+        // never a number.
+        'cold_sensitive' => 'consider',
     ],
 
     'breeds' => [
@@ -1589,6 +1594,26 @@ return [
                 ['tag' => 'sheds', 'source_ids' => ['S479'], 'refs' => ['weimaraner.suitability.rkc_shedding']],
                 // S480 "They have a very strong prey drive and are likely to chase anything that moves!"
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S480'], 'refs' => ['weimaraner.behaviour.other_pets']],
+            ],
+        ],
+
+        // M5-R10-60: italian_greyhound.* (S484–S490), runbook rules (data.json
+        // proposed_game_parameters.italian_greyhound.suitability_tags). RKC key facts (S486) + PDSA (S487) + PetMD (S488).
+        // RKC Breed Watch Category 1 → no welfare chip. Never small_children (PDSA: bone fragility, not ideal with young
+        // children → fragile_older_children, Yorkshire Terrier precedent), other_pets (PDSA), apartment (RKC "Small house"),
+        // chases_small_pets (PetMD "have a prey drive" — not a high prey drive). New vocabulary key: cold_sensitive.
+        'italian_greyhound' => [
+            'suits' => [
+                // S488 "Though Italian Greyhounds do well with children who understand how to appropriately interact with dogs, …"
+                ['tag' => 'children', 'source_ids' => ['S488'], 'refs' => ['italian_greyhound.suitability.petmd_children', 'italian_greyhound.behaviour.family']],
+                // S486 "Sheds: No"
+                ['tag' => 'low_shedding', 'source_ids' => ['S486'], 'refs' => ['italian_greyhound.suitability.rkc_shedding']],
+            ],
+            'consider' => [
+                // S487 "Due to their bone fragility during growth, they may not be the ideal breed to live with other pets or young children."
+                ['tag' => 'fragile_older_children', 'source_ids' => ['S487'], 'refs' => ['italian_greyhound.behaviour.fragile_bones', 'italian_greyhound.suitability.pdsa_children']],
+                // S488 "However, their coat does not insulate them well, … they can be easily affected by the cold."
+                ['tag' => 'cold_sensitive', 'source_ids' => ['S488'], 'refs' => ['italian_greyhound.suitability.petmd_cold']],
             ],
         ],
 

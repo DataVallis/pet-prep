@@ -432,6 +432,7 @@ const SPECIES = [
       { id: 'samoyed', synonyms: { en: ['Sammy', 'Samoyede', 'Samoiedskaïa Sabaka'], sl: ['samojed', 'samojedski pes', 'sammy'] } },
       { id: 'scottish_terrier', synonyms: { en: ['Scottie', 'Aberdeen Terrier'], sl: ['scottie', 'škotski terier', 'skotski terier'] } },
       { id: 'weimaraner', synonyms: { en: ['Weimaraner Pointer', 'Weim'], sl: ['weimarski ptičar', 'weimarski pticar', 'vajmarski ptičar'] } },
+      { id: 'italian_greyhound', synonyms: { en: ['Italian Sighthound', 'Piccolo Levriero Italiano', 'Iggy'], sl: ['italijanski hrt', 'italijanski hrtek', 'mali italijanski hrt'] } },
     ],
   },
   {
@@ -1688,6 +1689,31 @@ const DOG_FACTS = {
       ['hypothyroidism', 'health.hypothyroidism'],
     ],
   },
+  // M5-R10-60. Height + weight = Kennel Club standard (S485), lifespan = the RKC band "Over 12 years" (S486; the McMillan
+  // 2024 table S123 could not be fetched, about 14 y only via Wikipedia), exercise = RKC "Up to 1 hour per day" (S486),
+  // coat / grooming / shedding = RKC key facts (S486). FCI origin Italy (IT). Not exported: the PDSA / PetMD alternatives,
+  // adult_weight.salt_category (our assignment), lifespan.senior_from (derived), the care needs cold_weather_coat /
+  // confined_off_lead (new ROADMAP task, David) and ear_eye_nail_care (M5-R20 / R19 / R14). New health key:
+  // periodontal_disease.
+  italian_greyhound: {
+    height: ['height.kc_standard'],
+    weight: [['adult_weight.kc_standard', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['periodontal_disease', 'health.periodontal_disease'],
+      ['epilepsy', 'health.epilepsy'],
+      ['kneecap_luxation', 'health.patella'],
+      ['pra_eye_disease', 'health.pra'],
+      ['autoimmune_conditions', 'health.autoimmune'],
+      ['legg_perthes', 'health.legg_calve_perthes'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+    ],
+  },
 
 };
 
@@ -2137,6 +2163,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.weimaraner.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.weimaraner.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.weimaraner.exercise_minutes_senior',
+  },
+  italian_greyhound: {
+    adult_minutes: ['proposed_game_parameters.italian_greyhound.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.italian_greyhound.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.italian_greyhound.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.italian_greyhound.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.italian_greyhound.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.italian_greyhound.exercise_minutes_senior',
   },
 
 };

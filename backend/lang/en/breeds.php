@@ -63,6 +63,7 @@ return [
     'samoyed' => 'Samoyed',
     'scottish_terrier' => 'Scottish Terrier',
     'weimaraner' => 'Weimaraner',
+    'italian_greyhound' => 'Italian Greyhound',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',
