@@ -61,7 +61,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "14b9ca8e26f99701cb5dde44152c9d3a1a8342a8b7718ecdd3fff522c3009054"
+      "sha256": "422b2ff1eb3d1dd086d77ba6ce9c3ecaab7e59ac6356482bec433a42073cd74e"
     }
   },
   "suitability_vocabulary": {
@@ -34007,7 +34007,12 @@
           "S495"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "giant-schnauzer.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
