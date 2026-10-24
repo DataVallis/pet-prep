@@ -17,6 +17,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 - 👩 Starši: mediji ostanejo v EU, dostop imajo še vedno samo otroci-skrbniki in starši družine, povezave potečejo.
 - 🛠 Tehnično: Laravel + Flysystem S3 (aws-sdk-php), podpisan `/api/media` → 302 na presigned URL (≤ 300 s), predpomnilnik v aplikaciji ostane po poti + `v`, `media:move-to-object-storage --dry-run / --verify / --prune-local`, rclone zrcalo v drugo vedro s 35-dnevno hrambo izbrisanih.
 
+## 2026-10-24 — Posodobitve »po zraku« delujejo; dokumenti usklajeni z resničnim stanjem
+
+**Kaj:** revizija vseh odprtih nalog v načrtu proti kodi in GitHubu. Ugotovitev: posodobitve aplikacije brez trgovine (OTA) že tečejo po vsakem posodabljanju strežnika — iPhone jih dobiva od 23. 10. 2026, Android pa pravilno počaka na novo gradnjo, ker se je spremenila izvorna koda. Dokument je trdil, da OTA »čaka na žeton«. Poleg tega je bilo v kodi že narejenih več nalog, ki so bile v načrtu odprte (podpis pogodbe s prstom, izbira pasme pred rojstvom, zaklep pri ustavitvi igre, 20 pasem, portreti pasem na spletu).
+**Zakaj je pomembno:** popravki za iPhone pridejo k družinam isti dan brez čakanja na App Store; načrt zdaj pove, kaj res manjka (pravni pregled, Android gradnja, beta z 20–50 družinami).
+- 🛠 Tehnično: Expo EAS Update s prstnim odtisom izvorne kode — GitHub Actions po vsakem deployu odloči »OTA ali nova gradnja« za vsako platformo posebej.
+
 ## 2026-10-24 — Opozorila za administratorje v Discord (M5-T19)
 
 **Kaj:** opozorila, ki so doslej prišla le v zvonček administracije (proračun za AI pri 80 % in 100 %, nizko ali porabljeno dobroimetje fal.ai), gredo zdaj — ko je nastavljen webhook — enkrat tudi v administratorski kanal Discord: rumeno ali rdeče sporočilo z zneski in povezavo na pravo stran administracije. Gumb »Test Discord« v »Zdravje sistema« preveri povezavo. Odločil David 24. 10. namesto e-pošte (produkcija nima poštnega strežnika).
