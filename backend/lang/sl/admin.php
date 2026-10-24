@@ -425,6 +425,12 @@ return [
             'disk' => 'Zasedenost diska',
             'disk_desc' => ':free prostega od :total',
             'disk_unknown' => 'Velikost diska ni na voljo',
+            'storage' => 'Shramba medijev',
+            'storage_local' => 'Lokalni disk',
+            'storage_s3' => 'Objektna shramba',
+            'storage_bucket_ok' => 'Vedro :bucket dosegljivo',
+            'storage_bucket_down' => 'Vedro :bucket NI dosegljivo — :error',
+            'storage_bucket_none' => 'Vedro ni nastavljeno (PET_MEDIA_S3_*)',
         ],
         'chart' => [
             'heading' => 'Napake na uro (zadnjih 48 h)',

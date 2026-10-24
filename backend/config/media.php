@@ -215,8 +215,21 @@ return [
     | apps get signed, expiring URLs to GET /api/media/{media}.
     */
     'storage' => [
-        // Private local disk (config/filesystems.php → storage/app/pet-media, Docker volume app_storage).
-        'disk' => env('PET_MEDIA_DISK', 'pet_media'),
+        // Where the files live (M4-05). PET_MEDIA_DISK=local (or the old value `pet_media`,
+        // default) = the private local disk storage/app/pet-media (Docker volume app_storage);
+        // `s3` = the private bucket of disk `pet_media_s3` (PET_MEDIA_S3_*, Hetzner Object
+        // Storage). Any other value is taken as a disk name (tests). David switches it.
+        'disk' => match ($petMediaDisk = (string) env('PET_MEDIA_DISK', 'pet_media')) {
+            '', 'local' => 'pet_media',
+            's3' => 'pet_media_s3',
+            default => $petMediaDisk,
+        },
+        // media:move-to-object-storage copies FROM this local disk TO the object disk.
+        'local_disk' => 'pet_media',
+        'object_disk' => 'pet_media_s3',
+        // Object storage: lifetime of the presigned URL GET /api/media/{media} redirects to
+        // (seconds, 60–3600; never longer than the rest of our own signed URL's lifetime).
+        'presigned_ttl_seconds' => min(3600, max(60, (int) env('PET_MEDIA_S3_URL_TTL_SECONDS', 300))),
         // petprep:reset-game-data (D17) empties the disk only when its root is
         // this directory (what scripts/reset-game-data.sh archives first).
         // null = storage_path('app/pet-media'); tests point it at the fake disk.
@@ -237,7 +250,8 @@ return [
         // authz, then answers with an empty body and an internal X-Accel-Redirect
         // header; Caddy intercepts it and serves the file from its read-only mount
         // of the storage volume (production default, set in compose.production.yaml).
-        // Only applies to a local disk — any other driver always streams via PHP.
+        // Only applies to a local disk; an object disk (s3) always answers with a 302 to a
+        // short-lived presigned bucket URL (the bytes never pass PHP or this server).
         'serve_via' => env('PET_MEDIA_SERVE_VIA', 'php') === 'caddy' ? 'caddy' : 'php',
         // fal fetches our stored reference image as the video start frame.
         'fal_fetch_ttl_minutes' => 360,

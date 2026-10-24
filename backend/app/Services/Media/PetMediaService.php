@@ -1866,10 +1866,19 @@ class PetMediaService
         return $deleted;
     }
 
-    /** Stored files of a deleted pet (rows go with the FK cascade). */
+    /**
+     * Stored files of a deleted pet (rows go with the FK cascade). M4-05: on object storage
+     * the local copies left from before the move (until `--prune-local`) go too, so a deleted
+     * family's media never stay on the server.
+     */
     public function deleteFilesOf(int $petId): void
     {
         $this->disk()->deleteDirectory((string) $petId);
+
+        $local = (string) config('media.storage.local_disk', 'pet_media');
+        if ($local !== (string) config('media.storage.disk', 'pet_media') && config("filesystems.disks.{$local}.driver") === 'local') {
+            Storage::disk($local)->deleteDirectory((string) $petId);
+        }
     }
 
     // ──────────────────────────────────────────────────────────────

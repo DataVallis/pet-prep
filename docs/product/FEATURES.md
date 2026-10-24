@@ -276,6 +276,7 @@ Samo za nove pse iz različice aplikacije, ki šolanje zna. **📱 Na telefonu 7
 | Funkcija | Kaj naredi | Za koga | Stanje | Roadmap ID | Od kdaj |
 |---|---|---|---|---|---|
 | Produkcija | `api.petprep.si`, Hetzner (EU), Docker + Caddy, PHP-FPM + OPcache, samodejni TLS. | — | ✅ | M5-01, M5-02, M4-05b | 2026-10-05 |
+| Mediji v objektni shrambi (pripravljeno, izklopljeno) | Slike in videi ljubljenčkov lahko živijo v zasebnem vedru **Hetzner Object Storage** (EU) namesto na disku strežnika; aplikacija dobi iste naše povezave, strežnik po preverjanju pravic preusmeri na povezavo vedra z rokom 5 min. Prenos obstoječih datotek z ukazom (preverjanje, brez brisanja), nočna kopija vedra na drugo lokacijo, v »System health« ploščica **»Shramba medijev«** (lokalni disk / objektna shramba, vedro dosegljivo). **Še ni vklopljeno** — preklopi David (DEPLOYMENT D23). | admin | 🛠 (izklopljeno) | M4-05 | 2026-10-24 |
 | Testi in samodejni deploy | Vsak predlog spremembe gre skozi teste; po združitvi v `main` se strežnik posodobi sam (samo zeleno). | — | ✅ | M0-08, M5-03 | 2026-10-06 |
 | Varnostna kopija baze | Pred vsakim deployem, 7 dni, isti disk. Dnevna kopija drugam in test obnove še manjkata. | — | ✅ (delno) | M5-04 | 2026-10-03 |
 | Odpornost aplikacije | Ob preobremenitvi počaka in sama poskusi znova, obdrži zadnje stanje; »Ups, nekaj se je zataknilo« z »Poskusi znova« namesto zrušitve. | otrok | ✅ | — (PR #45, #48) | 2026-10-06 |

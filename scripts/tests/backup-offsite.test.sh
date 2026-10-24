@@ -46,6 +46,12 @@ case "\$*" in
         else
             printf -- '$DUMP_OK'
         fi ;;
+    *"rclone/rclone"*" size --json "*)
+        if [[ "\$*" == *"mirror:"* ]] && [ -e "\$WORK/mirror-empty" ]; then echo '{"count":0,"bytes":0}'; else echo '{"count":4,"bytes":1234}'; fi ;;
+    *"rclone/rclone"*" lsf --dirs-only "*) printf '2020-01-01/\n%s/\nnot-a-date/\n' "\$(/bin/date -u +%Y-%m-%d)" ;;
+    *"rclone/rclone"*" sync "*)
+        cp "\$(echo "\$*" | sed -n 's/.*--env-file \([^ ]*\).*/\1/p')" "\$WORK/rclone-env-seen" 2>/dev/null || true
+        [ -e "\$WORK/rclone-fails" ] && exit 1 ;;
     *"restic/restic"*" ls "*)
         printf 'drwxr-xr-x 0 0 0 2026-10-14 /data/app/pet-media/12\n'
         if [[ "\$*" == *"--recursive"* ]]; then
@@ -191,6 +197,42 @@ check "overlapping run → touches nothing" '! grep -q "restic/restic" "$LOG"'
 # 12. Unknown mode.
 run nonsense
 check "unknown mode → exit 1 with usage" '[ "$rc" -eq 1 ] && grep -q "Usage" <<<"$out"'
+
+# 13. M4-05: media on object storage (PET_MEDIA_DISK=s3) → rclone mirror to a second bucket.
+cp "$WORK/root/.env" "$WORK/env.app.bak"
+cat >> "$WORK/root/.env" <<'ENV'
+PET_MEDIA_DISK=s3
+PET_MEDIA_S3_BUCKET=petprep-media
+PET_MEDIA_S3_KEY=src-key-id
+PET_MEDIA_S3_SECRET=src-secret
+ENV
+run
+check "s3 without mirror config → exit 1 with reason" '[ "$rc" -eq 1 ] && grep -q "MEDIA_MIRROR_S3_BUCKET is missing" <<<"$out"'
+check "s3 without mirror config → the DB is still backed up first" 'grep -q "tag --set db bbbbbbbb" "$LOG" && ! grep -q "rclone/rclone" "$LOG"'
+cat >> "$WORK/root/backup.env" <<'ENV'
+MEDIA_MIRROR_S3_BUCKET=petprep-media-mirror
+MEDIA_MIRROR_S3_KEY=dst-key-id
+MEDIA_MIRROR_S3_SECRET=dst-secret
+ENV
+run
+check "s3 run exits 0" '[ "$rc" -eq 0 ]'
+check "s3: bucket synced to mirror current/ with a dated deleted/ dir" 'grep -q "rclone/rclone:[0-9.]* sync media:petprep-media/pet-media mirror:petprep-media-mirror/current --backup-dir mirror:petprep-media-mirror/deleted/$(/bin/date -u +%Y-%m-%d)" "$LOG"'
+check "s3: secrets never on a command line" '! grep -q "src-secret\|dst-secret" "$LOG"'
+check "s3: rclone gets both remotes from the env-file" 'grep -q "RCLONE_CONFIG_MEDIA_SECRET_ACCESS_KEY=src-secret" "$WORK/rclone-env-seen" && grep -q "RCLONE_CONFIG_MIRROR_ENDPOINT=https://nbg1.your-objectstorage.com" "$WORK/rclone-env-seen"'
+check "s3: deleted/ older than 35 days purged, today and junk kept" 'grep -q "purge mirror:petprep-media-mirror/deleted/2020-01-01" "$LOG" && [ "$(grep -c " purge " "$LOG")" -eq 1 ]'
+check "s3: volume media still backed up (local copies until prune)" 'grep -q "backup /data/app/pet-media --tag media" "$LOG"'
+check "s3: rclone env-file removed" '[ ! -e "$WORK/root/backups/.offsite-rclone.env" ]'
+touch "$WORK/rclone-fails"
+run
+rm -f "$WORK/rclone-fails"
+check "s3: failed sync → exit 1 + fail ping, no status" '[ "$rc" -eq 1 ] && grep -q "media mirror (rclone sync) failed" <<<"$out" && grep -q "ping/fail" "$LOG"'
+run verify
+check "s3 verify counts bucket and mirror" '[ "$rc" -eq 0 ] && grep -q "Media objects: bucket 4, mirror 4" <<<"$out"'
+touch "$WORK/mirror-empty"
+run verify
+rm -f "$WORK/mirror-empty"
+check "s3 verify: empty mirror of a non-empty bucket fails" '[ "$rc" -eq 1 ] && grep -q "mirror holds no files" <<<"$out"'
+cp "$WORK/env.app.bak" "$WORK/root/.env"
 
 echo "backup-offsite harness: ${PASS} passed, ${FAIL} failed"
 [ "$FAIL" -eq 0 ]
