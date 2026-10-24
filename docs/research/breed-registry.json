@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "9001be6dff885c20eda86fb314f47d79cde626bf0450d1802d223a7affcd3e02"
+      "sha256": "19d0007dd9aee4ac5efbe011ebc056c73269328c95be6eb69910af1ef5d993ce"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "ba43be0e28b00c8fce53ab11ed2226251854e4d45a064753b1f2a51c12fb6713"
+      "sha256": "e04a9f97f4b1c66e2208180f36c86e4a6ec8f48af76e54bf50d8ae85bb937e89"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "3b6b0834bbe66c601eda1e90e8e996aaf48b27742f2eb8e0a33786c4a91332fe"
+      "sha256": "00188261bbe637890b5b0008f4a6ba130cd34e8442c1751ae4e6aba09b1976d7"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "7593203300bc60b7c0a525dd80634e6dfd09430877b8185ea375c73b94ec9f3c"
+      "sha256": "d3e37829a3acd70bf98a00e1d9a72bbc3cd411bee3c0514b8da715f3fe0fda4e"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "c3d40cd14c918686b77dbc7b1203d76ba156c0165edf78581643dc3d9347ab4a"
+      "sha256": "9fc61c0d663e557752096aa5a7f2f451fdee89b0b709364a8881c275d91e0525"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "66b98093d1cea7fcc8400d82351359378283a7ee4000a7e476d957e300809517"
+      "sha256": "a9faf5fd5b6f6740e615d0c18e046039551c184b6da771bb96861c7f530b7ff0"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -212,7 +212,7 @@
         }
       },
       "status": "available",
-      "breed_count": 57,
+      "breed_count": 58,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -34107,6 +34107,606 @@
       ]
     },
     {
+      "id": "bloodhound",
+      "species": "dog",
+      "order": 57,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Bloodhound",
+        "sl": "Bloodhound"
+      },
+      "slug": {
+        "en": "bloodhound",
+        "sl": "bloodhound"
+      },
+      "synonyms": {
+        "en": [
+          "St. Hubert Hound",
+          "Chien de Saint-Hubert",
+          "Sleuth Hound"
+        ],
+        "sl": [
+          "pes svetega Huberta",
+          "pes sv. Huberta",
+          "chien de saint-hubert"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S502"
+          ],
+          "ref": "bloodhound.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              64,
+              72
+            ],
+            "female": [
+              58,
+              66
+            ]
+          },
+          "source_ids": [
+            "S501"
+          ],
+          "ref": "bloodhound.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "qualifier": "about",
+          "value": {
+            "male": [
+              46,
+              54
+            ],
+            "female": [
+              40,
+              48
+            ]
+          },
+          "source_ids": [
+            "S501"
+          ],
+          "ref": "bloodhound.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            18,
+            24
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "bloodhound.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "less_than",
+          "value": 10,
+          "source_ids": [
+            "S502"
+          ],
+          "ref": "bloodhound.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S502"
+          ],
+          "ref": "bloodhound.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S502"
+          ],
+          "ref": "bloodhound.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S502"
+          ],
+          "ref": "bloodhound.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S502"
+          ],
+          "ref": "bloodhound.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 74,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "bloodhound.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 84,
+            "group": 6,
+            "section": 1,
+            "origin": "BE"
+          },
+          "source_ids": [
+            "S500"
+          ],
+          "ref": "bloodhound.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S503"
+          ],
+          "ref": "bloodhound.health.hip_elbow_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S503"
+          ],
+          "ref": "bloodhound.health.gdv",
+          "confidence": "high"
+        },
+        {
+          "key": "eyelids_turned",
+          "source_ids": [
+            "S503"
+          ],
+          "ref": "bloodhound.health.eyes",
+          "confidence": "high"
+        },
+        {
+          "key": "itchy_skin_allergy",
+          "source_ids": [
+            "S503"
+          ],
+          "ref": "bloodhound.health.skin",
+          "confidence": "high"
+        },
+        {
+          "key": "ear_infections_prone",
+          "source_ids": [
+            "S503"
+          ],
+          "ref": "bloodhound.health.ears",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S502"
+            ],
+            "refs": [
+              "bloodhound.exercise.adult",
+              "bloodhound.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S502"
+            ],
+            "refs": [
+              "bloodhound.suitability.rkc_size_of_home"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S502"
+            ],
+            "refs": [
+              "bloodhound.exercise.adult",
+              "bloodhound.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S503"
+            ],
+            "refs": [
+              "bloodhound.behaviour.experienced_owner"
+            ]
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S503"
+            ],
+            "refs": [
+              "bloodhound.behaviour.small_children"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S502"
+            ],
+            "refs": [
+              "bloodhound.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "drools",
+            "source_ids": [
+              "S503"
+            ],
+            "refs": [
+              "bloodhound.behaviour.drooling"
+            ]
+          },
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S502"
+            ],
+            "refs": [
+              "bloodhound.health.shorter_lifespan",
+              "bloodhound.lifespan.rkc"
+            ]
+          },
+          {
+            "tag": "eyelid_problems",
+            "source_ids": [
+              "S503"
+            ],
+            "refs": [
+              "bloodhound.health.eyes"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S503"
+            ],
+            "refs": [
+              "bloodhound.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 61
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 61
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.bloodhound.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S502"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S502 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.bloodhound.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.bloodhound.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S505"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 61 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+          },
+          {
+            "ref": "proposed_game_parameters.bloodhound.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.5 (Coren rank 74, Lowest tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.bloodhound.grooming",
+            "basis_source_ids": [
+              "S502"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Once a week«; PDSA tedensko enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S502",
+          "S505"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S502"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S502"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S502"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S502"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S502"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S500",
+        "S501",
+        "S502",
+        "S503",
+        "S505",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -38704,6 +39304,41 @@
       "publisher": "PetMD — Emily A. Fassbaugh, DVM (published Feb. 22, 2023)",
       "title": "Giant Schnauzer",
       "url": "https://www.petmd.com/dog/breeds/giant-schnauzer"
+    },
+    {
+      "id": "S500",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — CHIEN DE SAINT HUBERT (84)",
+      "url": "https://www.fci.be/en/nomenclature/CHIEN-DE-SAINT-HUBERT-84.html"
+    },
+    {
+      "id": "S501",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 84 CHIEN DE SAINT-HUBERT (Bloodhound), English (PDF)",
+      "url": "https://WWW.FCI.BE/Nomenclature/Standards/084g06-en.pdf"
+    },
+    {
+      "id": "S502",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A to Z — Bloodhound",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/hound/bloodhound/"
+    },
+    {
+      "id": "S503",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Bloodhound Breed Information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/bloodhound"
+    },
+    {
+      "id": "S505",
+      "tier": "B",
+      "publisher": "The Kennel Club",
+      "title": "Breed Health and Conservation Plan (BHCP): Bloodhound, version 3, June 2019 (PDF, hosted by the Association of Bloodhound Breeders)",
+      "url": "https://associationofbloodhoundbreeders.co.uk/_files/ugd/b32d2a_08b88158e662433e96c2435160de4818.pdf"
     },
     {
       "id": "C1",

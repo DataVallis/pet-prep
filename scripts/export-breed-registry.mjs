@@ -434,6 +434,7 @@ const SPECIES = [
       { id: 'weimaraner', synonyms: { en: ['Weimaraner Pointer', 'Weim'], sl: ['weimarski ptičar', 'weimarski pticar', 'vajmarski ptičar'] } },
       { id: 'italian_greyhound', synonyms: { en: ['Italian Sighthound', 'Piccolo Levriero Italiano', 'Iggy'], sl: ['italijanski hrt', 'italijanski hrtek', 'mali italijanski hrt'] } },
       { id: 'giant_schnauzer', synonyms: { en: ['Riesenschnauzer', 'Munich Schnauzer'], sl: ['veliki šnavcer', 'veliki snavcer', 'riesenschnauzer'] } },
+      { id: 'bloodhound', synonyms: { en: ['St. Hubert Hound', 'Chien de Saint-Hubert', 'Sleuth Hound'], sl: ['pes svetega Huberta', 'pes sv. Huberta', 'chien de saint-hubert'] } },
     ],
   },
   {
@@ -1742,6 +1743,29 @@ const DOG_FACTS = {
       ['pra_eye_disease', 'health.pra'],
     ],
   },
+  // M5-R10-62. Height = FCI ideal ± 4 cm (S501, per sex), weight = FCI 'about' (S501, per sex), lifespan = the RKC
+  // band "Under 10 years" (S502; the Kennel Club 2004 survey median S505 is a small, older owner survey → not exported;
+  // McMillan 2024 only via Wikipedia), exercise = RKC "More than 2 hours per day" (S502), coat / grooming / shedding =
+  // RKC key facts (S502). FCI origin Belgium (BE). Not exported: the PDSA alternatives, adult_weight.salt_category (our
+  // assignment), lifespan.median_kc_survey / senior_from (derived), the care needs skin_fold_care (M5-R14) and
+  // ear_checks (M5-R20), health.breed_watch / shorter_lifespan (chips). No new health key.
+  bloodhound: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', 'about']],
+    lifespan: [['lifespan.rkc', 'less_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_elbow_dysplasia', 'health.hip_elbow_dysplasia'],
+      ['bloat_gdv', 'health.gdv'],
+      ['eyelids_turned', 'health.eyes'],
+      ['itchy_skin_allergy', 'health.skin'],
+      ['ear_infections_prone', 'health.ears'],
+    ],
+  },
 
 };
 
@@ -2207,6 +2231,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.giant_schnauzer.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.giant_schnauzer.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.giant_schnauzer.exercise_minutes_senior',
+  },
+  bloodhound: {
+    adult_minutes: ['proposed_game_parameters.bloodhound.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.bloodhound.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.bloodhound.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.bloodhound.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.bloodhound.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.bloodhound.exercise_minutes_senior',
   },
 
 };

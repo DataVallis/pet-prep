@@ -32371,6 +32371,526 @@
       }
     }
   },
+  "bloodhound": {
+    "_note": "Added 2026-10-24 (M5-R10-62, unattended run — appended after the Giant Schnauzer: AKC 2024 No. 58 'Bloodhound', S174 full-list table fetched 2026-10-24 '58 | Bloodhound'). Quotes as returned by the web-fetch tool on 2026-10-24 (short quotes; fragments marked as such); paraphrase only in notes. Sources S500–S505 (reused S8, S10, S11, S14, S24, S35, S45, S174). No health percentages anywhere. Identity from the FCI nomenclature (S500, 'CHIEN DE SAINT HUBERT', No. 84, English 'BLOODHOUND', Belgium, valid standard 3/13/2001); height, weight, colours and appearance from the FCI standard in English (S501). RKC Breeds A–Z page (S502) reached: key facts, Breed Watch Category 2 and the health tests. PDSA (S503, its page says 'Category Three'). Lifespan: the RKC band 'Under 10 years' has no lower bound and the Dogs Trust McMillan 2024 table (S123) could not be fetched (9.3 years only via Wikipedia, S504, tier C) → the Kennel Club Breed Health and Conservation Plan's survey median (S505, 6 y 9 m) as the closest row; the senior boundary is Claude's suggestion (verified=false, open for David). Names: AKC / RKC / FCI English 'Bloodhound'; Slovenian »bloodhound« (also »pes svetega Huberta«, the FCI name Chien de Saint-Hubert) — no Slovenian source found, open for David.",
+    "identity": {
+      "value": "FCI No. 84, Group 6 Section 1.1 (Scent hounds, large sized hounds), Belgium",
+      "unit": "—",
+      "source_id": "S500",
+      "quote": "CHIEN DE SAINT HUBERT",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S500, as returned): breed name 'CHIEN DE SAINT HUBERT', number '84', English name 'BLOODHOUND', group 'n°6 - Scent hounds and related breeds', section 'Scent hounds', country of origin 'BELGIUM', valid standard '3/13/2001'. FCI standard in English (S501): 'Group 6 Scent hound and related breeds.', Section 1 Scent hounds, 1.1 Large sized hounds. Belgium is already in FCI_ORIGINS (BE, Belgian Malinois). Other names (Wikipedia S504, tier C): 'Chien de St. Hubert St. Hubert Hound Sleuth-hound'."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S502",
+      "quote": "Size: Large",
+      "confidence": "high",
+      "notes": "RKC breed page key fact (S502); PDSA (S503) 'Size: Large' (its page sits under 'large-dogs'). FCI 40–54 kg (S501) = 88–119 lb → mostly the 'Giant' class of S10 for growth. RKC places the breed in the Hound group."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            64,
+            72
+          ],
+          "female": [
+            58,
+            66
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S501",
+        "quote": "The ideal height is 68 cm for males.",
+        "confidence": "high",
+        "notes": "FCI standard No. 84 (S501, English, published 13.03.2001): ideal 68 cm for males and '62 cm for females.' with a tolerance of 4 cm either way (as returned) → males 64–72, females 58–66 cm. PDSA (S503) 'Average height: 61-66 cm'; Wikipedia (S504, tier C) males 64–72 cm, females 58–66 cm — agree."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            46,
+            54
+          ],
+          "female": [
+            40,
+            48
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S501",
+        "quote": "Males about 46 - 54 kg.",
+        "confidence": "high",
+        "notes": "FCI standard No. 84 (S501): 'Males about 46 - 54 kg.' and 'Females about 40 – 48 kg.' — the game range (adult_weight_kg). PDSA (S503) 'Average weight: 45-50 kg' — alternative.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                45,
+                50
+              ],
+              "female": [
+                45,
+                50
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S503",
+            "quote": "Average weight: 45-50 kg",
+            "notes": "PDSA key fact 'Average weight' (S503), one range for both sexes."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "VI (>40 kg, no curve)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 40–54 kg = the band '>40 (no curve)'. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "18–24 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Giant (over 100 pounds) | 18–24 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI males 46–54 kg (S501) = 101–119 lb → 'Giant'; females 40–48 kg = 88–106 lb (partly 'Large (59–99 pounds): 15–18 months' — alternative). Same 18–24 months as the Mastiff and the Newfoundland. The game is unaffected (the puppy cap of 120 min is reached at 12 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Bloodhound growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S502",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S502). PDSA (S503) 'Average lifespan: Under 10 years' agrees. Basis of the consider tag shorter_lifespan (no number in the chip). No lower bound → not usable for the senior boundary."
+      },
+      "pdsa": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S503",
+        "quote": "Average lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "PDSA key fact (S503). Same band as the RKC."
+      },
+      "median_kc_survey": {
+        "value": 6.75,
+        "unit": "years",
+        "source_id": "S505",
+        "quote": "The median age at death for Bloodhounds was six years and nine months",
+        "confidence": "medium",
+        "notes": "Kennel Club Breed Health and Conservation Plan, Bloodhound, version 3, June 2019 (S505), section 1, from the 2004 Purebred / pedigree dog health survey (82 deaths; the survey's methods are published in Adams et al. 2010, J Small Anim Pract 51:512–524, which gives no breed table in its abstract). An older, owner-reported UK survey — the closest breed median reachable in this run; never shown as a statistic in the app. Causes of death (research only): GDV the leading specific cause."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Dogs Trust table of McMillan et al. 2024 data (S123): not reachable this run (provenance refusal; the 'shortest and longest' PDF failed at its site). Wikipedia (S504, tier C): 'A 2024 UK study found a life expectancy of 9.3 years for the breed' — not verified in the paper or the table → open for David (0.75 × 9.3 × 12 = 83.7 → senior 84 if confirmed). UNSOURCED value."
+      },
+      "senior_from": {
+        "value": 5.0625,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × Kennel Club survey median 6.75 y (S505) → 0.75 × 6.75 = 5.06 y = 60.75 → 61 months. The runbook rule yields no value: McMillan 2024 not reachable (S123), no VetCompass median (the 2012 VetCompass poster S71 has no Bloodhound row; Adams 2010 abstract has no breed values), RKC 'Under 10 years' has no lower bound → closest row (Bernese Mountain Dog precedent): a published breed median, seeded verified=false (Claude's suggestion, open for David). Alternatives: McMillan 2024 9.3 y via Wikipedia (S504, tier C) → 84; Dogs Trust > 7 y (S14) = 84.",
+        "derived_from": [
+          "S11",
+          "S505"
+        ],
+        "months": 61,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S502",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S502), runbook first choice → 120 min. PDSA (S503) 'Minimum exercise (per day): 2 hours' and 'Your Bloodhound will need a minimum of two hours exercise every day' (fragment) agree."
+      },
+      "daily_text": {
+        "value": "a minimum of two hours every day; very active dogs with really high exercise needs",
+        "unit": "—",
+        "source_id": "S503",
+        "quote": "Bloodhounds are very active dogs with really high exercise needs.",
+        "confidence": "high",
+        "notes": "PDSA (S503); also 'Your Bloodhound will need a minimum of two hours exercise every day' (fragment)."
+      },
+      "after_meals": {
+        "value": "leave a gap between eating and exercising (GDV / bloat)",
+        "unit": "—",
+        "source_id": "S503",
+        "quote": "Remember to leave a gap between eating and exercising as this is thought to reduce the risk of GDV.",
+        "confidence": "high",
+        "notes": "PDSA (S503), feeding section; the same page lists GDV ('where a dog’s stomach bloats and twists around on itself, which can be fatal.', health.gdv). The source gives no length of the gap. → proposed_game_parameters.bloodhound.meal_exercise_gap (built, M5-R16)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "gentle, placid, kind and sociable with people; particularly attached to its owner",
+        "unit": "—",
+        "source_id": "S501",
+        "quote": "Gentle, placid, kind and sociable with people. Particularly attached to its owner.",
+        "confidence": "high",
+        "notes": "FCI standard (S501), behaviour / temperament. PDSA (S503): 'Bloodhounds are gentle and placid dogs known for their amazing sense of smell.'; 'They’re affectionate dogs and very easy-going in the home environment.'"
+      },
+      "experienced_owner": {
+        "value": "high maintenance because of the exercise needs — better suited to experienced owners; not for first-time owners",
+        "unit": "—",
+        "source_id": "S503",
+        "quote": "Bloodhounds are a high maintenance breed due their exercise needs, so are better suited to experienced owners",
+        "confidence": "high",
+        "notes": "PDSA (S503, fragment as returned); 'For this reason we wouldn’t recommend a Bloodhound if you’re a first time owner.' Basis of experienced_owner."
+      },
+      "family": {
+        "value": "gentle and placid; likely to get along with children of all ages, but not recommended with smaller children because of their size",
+        "unit": "—",
+        "source_id": "S503",
+        "quote": "This means that they are likely to get along with children of all ages, however due to their size",
+        "confidence": "medium",
+        "notes": "PDSA (S503, fragment as returned; continues 'we wouldn’t recommend having a Bloodhound if you have smaller children.' and 'They could accidentally knock them over.'). No explicit family-pet statement by an A/B source (Wikipedia S504 'excellent family pets' is tier C) → no family_pet / children chip."
+      },
+      "small_children": {
+        "value": "not recommended with smaller children — could knock them over",
+        "unit": "—",
+        "source_id": "S503",
+        "quote": "we wouldn’t recommend having a Bloodhound if you have smaller children.",
+        "confidence": "high",
+        "notes": "PDSA (S503, fragment). Basis of not_for_small_children; never small_children or children."
+      },
+      "time_alone": {
+        "value": "not known to suffer with separation anxiety; never alone for more than four hours (general PDSA advice)",
+        "unit": "—",
+        "source_id": "S503",
+        "quote": "Bloodhounds aren’t a breed known to suffer with separation anxiety.",
+        "confidence": "medium",
+        "notes": "PDSA (S503); 'you should never leave your dog alone for more than four hours' (fragment, general advice for all dogs). No breed-specific need → no needs_company / often_alone."
+      },
+      "other_pets": {
+        "value": "very high prey drive — not with smaller pets; fine with other dogs if socialised well",
+        "unit": "—",
+        "source_id": "S503",
+        "quote": "Bloodhounds do have a very high prey drive, so we wouldn’t advise keeping them with smaller pets.",
+        "confidence": "high",
+        "notes": "PDSA (S503): high prey drive → chases_small_pets (runbook rule, appended at the end of the consider list); 'As long as your Bloodhound has been socialised well from a young age, they should get along fine with other dogs.' (fragment). Never other_pets."
+      },
+      "socialisation": {
+        "value": "socialise from a young age with lots of people, dogs and experiences (can sometimes be nervous)",
+        "unit": "—",
+        "source_id": "S503",
+        "quote": "Generally speaking, Bloodhounds aren’t aggressive dogs but can sometimes be nervous so it’s important to socialise your Bloodhound from a young age with lots of people, dogs and experiences.",
+        "confidence": "high",
+        "notes": "PDSA (S503; returned in two consecutive fragments, joined here without change). A need (runbook M5-R17) → proposed_game_parameters.bloodhound.socialisation (DOG_SOCIALISATION row)."
+      },
+      "drooling": {
+        "value": "a drooler",
+        "unit": "—",
+        "source_id": "S503",
+        "quote": "You’ll find that your Bloodhound is a drooler",
+        "confidence": "high",
+        "notes": "PDSA (S503); 'If you don’t mind mopping up the drool then you should be fine!' Basis of drools (as the Mastiff and the Newfoundland)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No chewing statement found → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag. PDSA (S503): split the daily allowance into two meals (general advice)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 2 (S502: 'This breed can be affected by conformational concerns' — paraphrase as returned; the PDSA page S503 says 'Category Three'); welfare rule §3 → eyelid_problems. Breeder checklist: RKC minimum tests (genetic diversity, BVA/KC elbow and hip schemes) and Best Practice (BVA/KC/ISDS eye scheme) (S502).",
+      "hip_elbow_dysplasia": {
+        "value": "hip and elbow dysplasia",
+        "unit": "—",
+        "source_id": "S503",
+        "quote": "Hip dysplasia – where the hip joint doesn’t fit together perfectly, which will eventually lead to arthritis.",
+        "confidence": "high",
+        "notes": "PDSA (S503); also 'Elbow dysplasia – where the elbow joint doesn’t fit together perfectly, which will eventually lead to arthritis.' RKC minimum hip and elbow schemes (S502). Register health key hip_elbow_dysplasia."
+      },
+      "gdv": {
+        "value": "gastric dilatation-volvulus (GDV, bloat)",
+        "unit": "—",
+        "source_id": "S503",
+        "quote": "Gastric Dilatation Volvulus (GDV) – where a dog’s stomach bloats and twists around on itself, which can be fatal.",
+        "confidence": "high",
+        "notes": "PDSA (S503). The Kennel Club BHCP (S505) names it the leading specific cause of death in the 2004 survey (percentages research only). → meal_exercise_gap (M5-R16). Register health key bloat_gdv."
+      },
+      "eyes": {
+        "value": "eyelid problems (ectropion, entropion) and corneal ulcers",
+        "unit": "—",
+        "source_id": "S503",
+        "quote": "Eye problems – such as ectropion, entropion and corneal ulcers.",
+        "confidence": "high",
+        "notes": "PDSA (S503). RKC Best Practice eye scheme (S502). Basis of eyelid_problems (welfare rule). Register health key eyelids_turned."
+      },
+      "skin": {
+        "value": "atopy (itchy skin); skin folds to be kept clean and dry",
+        "unit": "—",
+        "source_id": "S503",
+        "quote": "Atopy – itchy skin caused by sensitivity to things in the environment (such as pollen, grass and dust mites).",
+        "confidence": "high",
+        "notes": "PDSA (S503); care: 'It’s important to make sure their skin folds are kept clean and dry and regularly check their ears for signs of infection.' Register health key itchy_skin_allergy."
+      },
+      "ears": {
+        "value": "ear infections",
+        "unit": "—",
+        "source_id": "S503",
+        "quote": "Ear infections.",
+        "confidence": "high",
+        "notes": "PDSA (S503) health list; care: regularly check the ears for signs of infection (suitability.pdsa_care). Register health key ear_infections_prone."
+      },
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 2 (conformational concerns); PDSA: Kennel Club Category Three",
+        "unit": "—",
+        "source_id": "S502",
+        "quote": "Category 2",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z page (S502): 'Category 2'; 'This breed can be affected by conformational concerns' (as returned, paraphrase); points of concern not returned. PDSA (S503): 'Bloodhounds are amongst a group of breeds classed as ‘Category Three’ by The Kennel Club.' / 'This means that they have been bred to look a certain way, which can cause them problems and discomfort.' The two sources differ in the category; both name conformational concerns → welfare rule §3 (eyelid_problems, the eye problems PDSA lists). Open for David: the current RKC category is 2."
+      },
+      "shorter_lifespan": {
+        "value": "a shorter life than most breeds — under ten years",
+        "unit": "—",
+        "source_id": "S502",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "RKC (S502) and PDSA (S503) 'Under 10 years'; Kennel Club survey median 6 y 9 m (S505) — research only. Basis of the consider tag shorter_lifespan — a calm chip, no number."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 74,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 74 | Bloodhound |",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-24): rank 74 'Bloodhound', tier 'Lowest Degree of Working/Obedience Intelligence' (ranks 70–79: 'Understanding of new commands: 80 to 100 repetitions or more.; Obey first command: 25% of the time or worse.;'). Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Lowest",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier 'Lowest Degree of Working/Obedience Intelligence' (ranks 70–79)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.bloodhound.learning_multiplier (0.5, runbook rule: Lowest tier, rank 74).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "large, massive scent hound, the most powerful of all scent hounds; supple, loose, elastic skin",
+        "unit": "—",
+        "source_id": "S501",
+        "quote": "Large-sized hound and massive leash hound, the most powerful of all the scent hounds.",
+        "confidence": "high",
+        "notes": "FCI standard (S501), general appearance; skin 'Supple over all the body, loose and elastic.'"
+      },
+      "colours": {
+        "value": [
+          "black_and_tan",
+          "liver_and_tan",
+          "red"
+        ],
+        "unit": "list",
+        "source_id": "S501",
+        "quote": "There are three distinct coat colours: the bicolours black and tan and liver and tan and the unicolour red.",
+        "confidence": "high",
+        "notes": "FCI standard (S501), colour; disqualifying 'Coat colours not matching the standard; excessive white markings' (paraphrase as returned). Wikipedia (S504) 'Black and tan, liver and tan or red'. Never merle, brindle, white or patches."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Black and tan first with the highest weight (the portrait default), then liver and tan, then red."
+      },
+      "coat": {
+        "value": "short, dense, quite harsh and weatherproof close-lying hair",
+        "unit": "—",
+        "source_id": "S501",
+        "quote": "On the body, the close-lying hair is short, dense, quite harsh and weatherproof.",
+        "confidence": "high",
+        "notes": "FCI standard (S501). RKC 'Coat length: Short' (S502)."
+      },
+      "nose": {
+        "value": "black or brown, always black on black and tan dogs",
+        "unit": "—",
+        "source_id": "S501",
+        "quote": "Black or brown, always black on black and tan dogs.",
+        "confidence": "high",
+        "notes": "FCI standard (S501)."
+      },
+      "eyes": {
+        "value": "dark brown or hazel (amber in dogs without a black saddle)",
+        "unit": "—",
+        "source_id": "S501",
+        "quote": "Dark brown or hazel, of a lighter hue (amber) in dogs without black saddle or mantle.",
+        "confidence": "high",
+        "notes": "FCI standard (S501). The game shows healthy eyelids (welfare rule — never drooping or turned)."
+      },
+      "ears": {
+        "value": "long, thin, supple, low-set folding ears covered in short, velvety hair",
+        "unit": "—",
+        "source_id": "S501",
+        "quote": "Thin and supple, covered in short hair, delicate and velvety to the touch",
+        "confidence": "high",
+        "notes": "FCI standard (S501, fragment)."
+      },
+      "tail": {
+        "value": "long, strong, thick, set high",
+        "unit": "—",
+        "source_id": "S501",
+        "quote": "Long, strong, thick, set high, in continuation of the dorsal line",
+        "confidence": "high",
+        "notes": "FCI standard (S501, fragment)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S502) and PDSA (S503). RKC key facts reached on 2026-10-24. Woodgreen and PetMD not attempted.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S502",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": "RKC key fact (S502)."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S502",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S502). Basis of active_family and long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S502",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "RKC key fact (S502) → large_home; never apartment."
+      },
+      "rkc_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S502",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S502)."
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S502",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S502) → brushing 1× a week (M5-R13 rule 'Once a week' → 1). PDSA (S503) weekly brush agrees. Not frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S502",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": "RKC key fact (S502); PDSA (S503) 'Coat length: Short'."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S502",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "RKC key fact (S502). Basis of sheds."
+      },
+      "rkc_lifespan": {
+        "value": "Under 10 years",
+        "unit": "—",
+        "source_id": "S502",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S502) → shorter_lifespan."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S502",
+        "quote": "Vulnerable native breed: Yes",
+        "confidence": "high",
+        "notes": "RKC key fact (S502). Background only."
+      },
+      "rkc_town_or_country": {
+        "value": "Country",
+        "unit": "—",
+        "source_id": "S502",
+        "quote": "Town or country: Country",
+        "confidence": "high",
+        "notes": "RKC key fact (S502)."
+      },
+      "pdsa_grooming": {
+        "value": "a weekly brush; a drooler",
+        "unit": "—",
+        "source_id": "S503",
+        "quote": "Their short fur means your Bloodhound will only need a weekly brush to keep on top of any dead hairs.",
+        "confidence": "high",
+        "notes": "PDSA (S503) → agrees with the RKC 'Once a week' (S502); 'You’ll find that your Bloodhound is a drooler' (behaviour.drooling)."
+      },
+      "pdsa_care": {
+        "value": "skin folds kept clean and dry; ears checked regularly for signs of infection",
+        "unit": "—",
+        "source_id": "S503",
+        "quote": "It’s important to make sure their skin folds are kept clean and dry and regularly check their ears for signs of infection.",
+        "confidence": "high",
+        "notes": "PDSA (S503). → proposed_game_parameters.bloodhound.skin_fold_care (no mechanic — ROADMAP M5-R14) and ear_checks (no mechanic — ROADMAP M5-R20)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -48399,6 +48919,329 @@
         "confidence": "high",
         "notes": "Colours of the Royal Kennel Club standard (S494) and FCI (S491, S493): pure black, pepper and salt (dark facial mask), black and silver. Weights unsourced in prompts. Black as the portrait default — Claude's choice (the standard prefers no colour; listed first by the RKC).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): black is the portrait default; standard colours only (black, pepper and salt, black and silver), natural ears and tail"
+      }
+    },
+    "bloodhound": {
+      "_note": "Unattended run M5-R10-62 (2026-10-24): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry — except the senior boundary (Claude's suggestion, verified=false). No new vocabulary key, no new register health key. Sourced needs built from day one: weekly brushing (RKC S502 'Grooming: Once a week', PDSA S503, M5-R13 → 1); puppy socialisation (PDSA S503 quote, M5-R17); the 'wait with the walk' digestion warning (PDSA S503 gap quote, M5-R16). Sourced needs without a game mechanic: skin folds kept clean and dry (PDSA S503) → ROADMAP M5-R14; regular ear checks (PDSA S503) → ROADMAP M5-R20. Exercise from RKC (S502, more than 2 hours; PDSA agrees). Senior 61 from the Kennel Club survey median 6 y 9 m (S505) — closest row, open for David (McMillan 2024 9.3 y only via Wikipedia → 84). RKC Breed Watch Category 2 / PDSA Category Three → eyelid_problems; in marketing.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S502",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'More than 2 hours per day' (S502). Rule: one number N ('more than N') → N = 120. PDSA (S503) 'Minimum exercise (per day): 2 hours' agrees.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S502 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S502",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 61
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 61 = round(0.75 × 6.75 y × 12) = round(60.75) (S11 + Kennel Club survey median 6 y 9 m, S505 — no McMillan 2024 value reachable, no VetCompass median, RKC 'Under 10 years' has no lower bound). The senior value is Claude's suggestion — see senior_boundary_months.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S505"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia_9_3_y": 84,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 61 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+      },
+      "senior_boundary_months": {
+        "value": 61,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "round(0.75 × 6.75 y × 12) = 61 (AAHA last 25 % of lifespan S11 × Kennel Club 2004 survey median 6 y 9 m, S505). The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value in this run: the Dogs Trust table S123 was refused by the fetch tool, no VetCompass Bloodhound median (S71 poster has no row), and the RKC band 'Under 10 years' has no lower bound. Closest row (Bernese Mountain Dog precedent) = a published breed median. Alternatives: McMillan 2024 9.3 y via Wikipedia (S504, tier C) → round(83.7) = 84; Dogs Trust > 7 y (S14) = 84. Seeded with verified=false (also the senior arrival age); the seeder is insert-only, so a later change needs a Filament edit or a data migration.",
+        "derived_from": [
+          "S11",
+          "S505"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia_9_3_y": 84,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "predlog Claude 2026-10-24 (najbližja vrstica pravila runbooka, M5-R10-62) — čaka Davida; ni potrjeno"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 61
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36); senior 61 follows the unconfirmed senior boundary (senior_boundary_months)"
+      },
+      "learning_multiplier": {
+        "value": 0.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 74 (S35), tier 'Lowest' (70–79) → 0.5 (as the Basset Hound r71, the Mastiff r72). No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.5 (Coren rank 74, Lowest tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources. PDSA (S503): split the daily allowance into two meals (general advice — the game keeps its meal windows).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S502",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "bloodhound.suitability.rkc_grooming. RKC 'Once a week' → 1 (runbook dog-grooming rule). PDSA (S503) 'Their short fur means your Bloodhound will only need a weekly brush to keep on top of any dead hairs.' agrees. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Once a week«; PDSA tedensko enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S503",
+        "quote": "Remember to leave a gap between eating and exercising as this is thought to reduce the risk of GDV.",
+        "confidence": "high",
+        "notes": "PDSA (S503), bloodhound.exercise.after_meals; the same page lists GDV (health.gdv). Built in M5-R16: 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S503",
+        "quote": "Generally speaking, Bloodhounds aren’t aggressive dogs but can sometimes be nervous so it’s important to socialise your Bloodhound from a young age with lots of people, dogs and experiences.",
+        "confidence": "high",
+        "notes": "bloodhound.behaviour.socialisation (PDSA S503, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PDSA S503)"
+      },
+      "skin_fold_care": {
+        "value": "skin folds kept clean and dry",
+        "unit": "skin-fold care (sourced need)",
+        "source_id": "S503",
+        "quote": "It’s important to make sure their skin folds are kept clean and dry and regularly check their ears for signs of infection.",
+        "confidence": "high",
+        "notes": "PDSA (S503), bloodhound.suitability.pdsa_care. The game has no skin-fold cleaning mechanic → ROADMAP M5-R14 (Bulldog / Pug / Mastiff precedent); no frequency in the source.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): mehanika čiščenja gub še ni zgrajena → ROADMAP M5-R14 (needs-david)"
+      },
+      "ear_checks": {
+        "value": "ears checked regularly for signs of infection",
+        "unit": "care routine (sourced need)",
+        "source_id": "S503",
+        "quote": "It’s important to make sure their skin folds are kept clean and dry and regularly check their ears for signs of infection.",
+        "confidence": "high",
+        "notes": "PDSA (S503), bloodhound.suitability.pdsa_care; ear infections in the health list (health.ears). The game has no ear mechanic → ROADMAP M5-R20.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): mehanike ni → ROADMAP M5-R20 (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-62); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S502"
+            ],
+            "refs": [
+              "bloodhound.exercise.adult",
+              "bloodhound.suitability.rkc_exercise"
+            ],
+            "quote": "S502 'Exercise: More than 2 hours per day'"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S502"
+            ],
+            "refs": [
+              "bloodhound.suitability.rkc_size_of_home"
+            ],
+            "quote": "S502 'Size of home: Large house'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S502"
+            ],
+            "refs": [
+              "bloodhound.exercise.adult",
+              "bloodhound.suitability.rkc_exercise"
+            ],
+            "quote": "S502 'Exercise: More than 2 hours per day'"
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S503"
+            ],
+            "refs": [
+              "bloodhound.behaviour.experienced_owner"
+            ],
+            "quote": "S503 'Bloodhounds are a high maintenance breed due their exercise needs, so are better suited to experienced owners'"
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S503"
+            ],
+            "refs": [
+              "bloodhound.behaviour.small_children"
+            ],
+            "quote": "S503 'we wouldn’t recommend having a Bloodhound if you have smaller children.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S502"
+            ],
+            "refs": [
+              "bloodhound.suitability.rkc_shedding"
+            ],
+            "quote": "S502 'Sheds: Yes'"
+          },
+          {
+            "tag": "drools",
+            "source_ids": [
+              "S503"
+            ],
+            "refs": [
+              "bloodhound.behaviour.drooling"
+            ],
+            "quote": "S503 'You’ll find that your Bloodhound is a drooler'"
+          },
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S502"
+            ],
+            "refs": [
+              "bloodhound.health.shorter_lifespan",
+              "bloodhound.lifespan.rkc"
+            ],
+            "quote": "S502 'Lifespan: Under 10 years'"
+          },
+          {
+            "tag": "eyelid_problems",
+            "source_ids": [
+              "S503"
+            ],
+            "refs": [
+              "bloodhound.health.eyes"
+            ],
+            "quote": "S503 'Eye problems – such as ectropion, entropion and corneal ulcers.'",
+            "note": "Welfare rule §3 (RKC Breed Watch Category 2, S502; PDSA Category Three, S503), as the Mastiff."
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S503"
+            ],
+            "refs": [
+              "bloodhound.behaviour.other_pets"
+            ],
+            "quote": "S503 'Bloodhounds do have a very high prey drive, so we wouldn’t advise keeping them with smaller pets.'",
+            "note": "Runbook rule (David 2026-10-12): high prey drive → appended at the end of the consider list."
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "No explicit family-pet statement by an A/B source (PDSA: gentle, likely to get along with children of all ages, but not with smaller children, S503); Wikipedia 'excellent family pets' is tier C.",
+          "children": "PDSA advises against smaller children (S503) → not_for_small_children; Giant Schnauzer precedent.",
+          "small_children": "PDSA: not recommended with smaller children (S503).",
+          "first_time_owner": "PDSA: not for a first-time owner (S503).",
+          "apartment": "RKC 'Large house' (S502).",
+          "other_pets": "PDSA: very high prey drive, not with smaller pets (S503) → chases_small_pets.",
+          "often_alone": "No breed-specific source; PDSA general advice (never more than four hours).",
+          "needs_company": "PDSA: not known to suffer with separation anxiety (S503).",
+          "frequent_grooming": "Once a week (S502, S503) — the criterion is more than once a week (skin-fold care is a separate need, M5-R14).",
+          "low_shedding": "RKC 'Sheds: Yes' (S502) → sheds.",
+          "sensitive_skin": "Atopy is in the PDSA health list (S503) but no A/B source names skin as a conformational concern of the breed → register health key only (open for David with the Breed Watch points).",
+          "hips_hind_legs": "Hip and elbow dysplasia are register health keys and breeder-checklist items (S502, S503); no Breed Watch hindquarter point returned.",
+          "needs_mental_stimulation": "No explicit statement on the pages read.",
+          "welfare": "RKC Breed Watch Category 2 (S502) / PDSA 'Category Three' (S503) → eyelid_problems; not flat-faced (no brachycephalic chip)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, large_home; consider long_daily_exercise, experienced_owner, not_for_small_children, sheds, drools, shorter_lifespan, eyelid_problems, chases_small_pets"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (no veterinary advice against advertising the breed type)",
+        "unit": "—",
+        "source_id": "S502",
+        "quote": "Category 2",
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 2 (S502; PDSA S503 'Category Three') → welfare chip in the app (eyelid_problems); the only veterinary advice against advertising a breed type is for flat-faced breeds (BVA S92). Marketing never promises health; never with small children (S503), never next to small pets (S503), never with exaggerated loose skin or drooping eyelids. Open for David: a Breed Watch breed in marketing.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (welfare chip, no veterinary advice against advertising)"
+      },
+      "ai_appearance": {
+        "value": "adult Bloodhound, black and tan (default); large, powerful scent hound with moderate loose skin (never exaggerated wrinkles); short, dense, weatherproof coat; long head with moderate folds; long, thin, velvety low-set ears; healthy eyes with normal eyelids (never drooping or turned); black nose; long, strong tail set high; never merle, brindle, white or patches",
+        "unit": "—",
+        "source_id": "S501",
+        "quote": "There are three distinct coat colours: the bicolours black and tan and liver and tan and the unicolour red.",
+        "confidence": "high",
+        "notes": "Colours of the FCI standard (S501): black and tan, liver and tan, red. Welfare (RKC Breed Watch Category 2, S502; PDSA eye problems, S503): moderate skin, eyelids in normal contact. Weights unsourced in prompts. Black and tan as the portrait default — Claude's choice (listed first by the FCI).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): black and tan is the portrait default; standard colours only (black and tan, liver and tan, red); moderate skin and healthy eyelids"
       }
     }
   }

@@ -1647,5 +1647,37 @@ return [
             ],
         ],
 
+        // M5-R10-62: bloodhound.* (S500–S505), runbook rules (data.json
+        // proposed_game_parameters.bloodhound.suitability_tags). RKC key facts (S502) + PDSA (S503).
+        // RKC Breed Watch Category 2 / PDSA "Category Three" → eyelid_problems (welfare rule, Mastiff precedent). Never
+        // family_pet / children (no explicit A/B family statement; PDSA: not with smaller children → not_for_small_children),
+        // first_time_owner, apartment, other_pets (very high prey drive → chases_small_pets, last), frequent_grooming (weekly).
+        'bloodhound' => [
+            'suits' => [
+                // S502 "Exercise: More than 2 hours per day"
+                ['tag' => 'active_family', 'source_ids' => ['S502'], 'refs' => ['bloodhound.exercise.adult', 'bloodhound.suitability.rkc_exercise']],
+                // S502 "Size of home: Large house"
+                ['tag' => 'large_home', 'source_ids' => ['S502'], 'refs' => ['bloodhound.suitability.rkc_size_of_home']],
+            ],
+            'consider' => [
+                // S502 "Exercise: More than 2 hours per day"
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S502'], 'refs' => ['bloodhound.exercise.adult', 'bloodhound.suitability.rkc_exercise']],
+                // S503 "Bloodhounds are a high maintenance breed due their exercise needs, so are better suited to experienced owners"
+                ['tag' => 'experienced_owner', 'source_ids' => ['S503'], 'refs' => ['bloodhound.behaviour.experienced_owner']],
+                // S503 "we wouldn’t recommend having a Bloodhound if you have smaller children."
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S503'], 'refs' => ['bloodhound.behaviour.small_children']],
+                // S502 "Sheds: Yes"
+                ['tag' => 'sheds', 'source_ids' => ['S502'], 'refs' => ['bloodhound.suitability.rkc_shedding']],
+                // S503 "You’ll find that your Bloodhound is a drooler"
+                ['tag' => 'drools', 'source_ids' => ['S503'], 'refs' => ['bloodhound.behaviour.drooling']],
+                // S502 "Lifespan: Under 10 years"
+                ['tag' => 'shorter_lifespan', 'source_ids' => ['S502'], 'refs' => ['bloodhound.health.shorter_lifespan', 'bloodhound.lifespan.rkc']],
+                // S503 "Eye problems – such as ectropion, entropion and corneal ulcers." (welfare rule §3)
+                ['tag' => 'eyelid_problems', 'source_ids' => ['S503'], 'refs' => ['bloodhound.health.eyes']],
+                // S503 "Bloodhounds do have a very high prey drive, so we wouldn’t advise keeping them with smaller pets."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S503'], 'refs' => ['bloodhound.behaviour.other_pets']],
+            ],
+        ],
+
     ],
 ];
