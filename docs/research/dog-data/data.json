@@ -32089,7 +32089,7 @@
         "source_id": "S496",
         "quote": "enlarged heart due to degeneration of the heart muscle.",
         "confidence": "high",
-        "notes": "PDSA (S496, fragment after 'Cardiomyopathy'). RKC Best Practice 'Dilated cardiomyopathy (DCM)' (S495); BSAVA (K35): 'a new official DNA testing scheme for dilated cardiomyopathy (DCM) in Giant Schnauzers' (fragment, 14 December 2018). Register health key dilated_cardiomyopathy."
+        "notes": "PDSA (S496, fragment after 'Cardiomyopathy'). RKC Best Practice 'Dilated cardiomyopathy (DCM)' (S495); BSAVA (K35): 'a new official DNA testing scheme for dilated cardiomyopathy (DCM) in Giant Schnauzers' (fragment, 14 December 2018). Register health key heart_muscle_disease."
       },
       "hypothyroidism": {
         "value": "hypothyroidism",

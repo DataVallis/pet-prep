@@ -433,6 +433,7 @@ const SPECIES = [
       { id: 'scottish_terrier', synonyms: { en: ['Scottie', 'Aberdeen Terrier'], sl: ['scottie', 'škotski terier', 'skotski terier'] } },
       { id: 'weimaraner', synonyms: { en: ['Weimaraner Pointer', 'Weim'], sl: ['weimarski ptičar', 'weimarski pticar', 'vajmarski ptičar'] } },
       { id: 'italian_greyhound', synonyms: { en: ['Italian Sighthound', 'Piccolo Levriero Italiano', 'Iggy'], sl: ['italijanski hrt', 'italijanski hrtek', 'mali italijanski hrt'] } },
+      { id: 'giant_schnauzer', synonyms: { en: ['Riesenschnauzer', 'Munich Schnauzer'], sl: ['veliki šnavcer', 'veliki snavcer', 'riesenschnauzer'] } },
     ],
   },
   {
@@ -1714,6 +1715,33 @@ const DOG_FACTS = {
       ['hypothyroidism', 'health.hypothyroidism'],
     ],
   },
+  // M5-R10-61. Height = Royal Kennel Club standard (S494, per sex), weight = FCI standard No. 181 (S492, the only standard
+  // with a weight), lifespan = the RKC band "Over 12 years" (S495; the McMillan 2024 table S123 could not be fetched,
+  // 12.1 y only via Wikipedia), exercise = RKC "More than 2 hours per day" (S495), coat / grooming / shedding = RKC key
+  // facts (S495). FCI origin Germany (DE). Not exported: height.fci and the PDSA / PetMD alternatives,
+  // adult_weight.salt_category (our assignment), lifespan.senior_from (derived), the care needs professional_grooming
+  // (M5-R18) and ear_checks (M5-R20). New health keys: panosteitis, urinary_incontinence, osteochondritis.
+  giant_schnauzer: {
+    height: ['height.rkc_standard'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia', 'health.hip_dysplasia'],
+      ['bloat_gdv', 'health.gdv'],
+      ['heart_muscle_disease', 'health.cardiomyopathy'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+      ['panosteitis', 'health.panosteitis'],
+      ['urinary_incontinence', 'health.urinary_incontinence'],
+      ['bladder_stones', 'health.urolithiasis'],
+      ['osteochondritis', 'health.osteochondritis_dissecans'],
+      ['pra_eye_disease', 'health.pra'],
+    ],
+  },
 
 };
 
@@ -2171,6 +2199,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.italian_greyhound.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.italian_greyhound.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.italian_greyhound.exercise_minutes_senior',
+  },
+  giant_schnauzer: {
+    adult_minutes: ['proposed_game_parameters.giant_schnauzer.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.giant_schnauzer.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.giant_schnauzer.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.giant_schnauzer.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.giant_schnauzer.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.giant_schnauzer.exercise_minutes_senior',
   },
 
 };
