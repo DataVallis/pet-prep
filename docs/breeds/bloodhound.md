@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `bloodhound` (viri S500–S505; ponovno S8, S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja iz S502 |
 | Izvor | FCI št. 84 »Chien de Saint-Hubert«, skupina 6, sekcija 1 (goniči, 1.1 veliki goniči), Belgija (S500) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 58. mesto »Bloodhound« (S174, prebrano 2026-10-24) |
-| PR-ji | pet-prep #369 (pasma) · portret: sledi · spletna stran: sledi |
+| PR-ji | pet-prep #369 (pasma, združen `4ae98bd`) · portret: PR ta (veja `feat/M5-R10-62-bloodhound-portrait`) · spletna stran: pet-prep-website, veja `feat/register-bloodhound` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -30,6 +30,7 @@
 | 2026-10-24 | pravilo runbooka (§3) | marketing: **v aplikaciji da, v marketingu da** — nikoli z majhnimi otroki ali ob manjših živalih, nikoli s pretirano ohlapno kožo ali povešenimi vekami, nikoli z obljubo o zdravju | veterinarsko odsvetovanje oglaševanja velja le za pse s sploščenim obrazom (BVA S92) | #369 |
 | 2026-10-24 | pravilo runbooka (§3) | barve za AI in izbirnik: **črno-rjav** (portret), jetrno-rjav, rdeč; nikoli lisast, progast ali bel; zmerna koža in zdrave veke | FCI S501 »There are three distinct coat colours: the bicolours black and tan and liver and tan and the unicolour red.« Uteži barv brez vira → `verified: false`; črno-rjava za portret je predlog Claude (prva barva standarda) | #369 |
 | 2026-10-24 | predlog Claude, David lahko spremeni | ime SL »Bloodhound« (slug `bloodhound`); iskalni ključi tudi »pes svetega Huberta«, »pes sv. Huberta«, »chien de saint-hubert«, »st. hubert hound«, »sleuth hound« | slovenskega vira (KZS) za ime ni bilo mogoče najti; FCI ime pasme je »Chien de Saint-Hubert« | #369 |
+| 2026-10-24 | pravilo runbooka (§8) | AI portret: realistična fotografija odraslega psa, črno-rjava kratka dlaka, zmerna koža brez pretiranih gub, zdrave oči, dolgi povešeni uhlji, siva studijska podlaga; sprejet v prvem poskusu (zagon 40070702038, koda `4ae98bd`, brez produkcijske namestitve, 0,15 $) | barva portreta = najtežja barva iz `breed_appearance.php` | portret |
 | 2026-10-24 | pravilo runbooka (§2.3) | seznam za vzreditelja — minimum: genetska raznolikost, komolci in kolki (BVA/KC); najboljša praksa: pregled oči BVA/KC/ISDS. Brez novega ključa | RKC S502 | #369 |
 | 2026-10-24 | pravilo runbooka | zdravstveni ključi registra (obstoječi): `hip_elbow_dysplasia`, `bloat_gdv`, `eyelids_turned`, `itchy_skin_allergy`, `ear_infections_prone`; brez odstotkov | PDSA S503, RKC S502 | #369 |
 
@@ -41,7 +42,7 @@
 | Pravila po starosti (2.000 → 12.000 korakov pri 12 mesecih, odrasel 12.000, starejši 9.000 od 61 meseca — predlog; 4 → 3 → 2 obroka) | 🛠 | 💶 izziv | M5-R10-62 | 2026-10-24 |
 | Česanje 1× na teden (rutina »Počeši«), »Nova izkušnja« za mladička, opozorilo »počakaj s sprehodom« po obroku | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R16 | 2026-10-24 |
 | Barva (izbirnik barve: črno-rjav, jetrno-rjav, rdeč) | 🛠 | 💶 izziv | M5-R21 | 2026-10-24 |
-| AI portret v registru | 🗓 | — | M5-R11-04 | — |
+| AI portret v registru (črno-rjav, sprejet v prvem poskusu, zagon 40070702038) | ✅ | — | M5-R11-04 | 2026-10-24 |
 | Stran na petprep.si (`/animals/dogs/bloodhound`, `/sl/zivali/psi/bloodhound`) | 🗓 »Kmalu«, dokler pasma ni v izdaji aplikacije (le s portretom) | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
