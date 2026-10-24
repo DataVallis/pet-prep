@@ -4,6 +4,7 @@ namespace App\Filament\Widgets\SystemHealth;
 
 use App\Filament\Resources\PetResource;
 use App\Models\User;
+use App\Services\AppErrors\AppErrorReportService;
 use App\Services\Media\MediaStorage;
 use App\Services\SystemHealth\SystemHealthService;
 use Filament\Widgets\StatsOverviewWidget;
@@ -60,6 +61,8 @@ class SystemHealthStats extends StatsOverviewWidget
         $beat = $health->lastHeartbeat();
         $stale = $health->heartbeatIsStale();
         $disk = $health->diskUsage();
+        // M5-05: mobile app crash / render-error reports.
+        $appErrors = app(AppErrorReportService::class)->windowSummary(24);
         // M4-05: where pet media live + whether the bucket answers (cached 60 s).
         $storage = app(MediaStorage::class)->status();
         $bucket = (string) ($storage['bucket'] ?? '');
@@ -107,6 +110,10 @@ class SystemHealthStats extends StatsOverviewWidget
                 ->description(__('admin.system_health.stats.unchecked_desc'))
                 ->descriptionIcon('heroicon-m-question-mark-circle')
                 ->color($unchecked > 0 ? 'danger' : 'success'),
+            Stat::make(__('admin.app_errors.stats'), $appErrors['occurrences'])
+                ->description(__('admin.app_errors.stats_desc', ['count' => $appErrors['fingerprints']]))
+                ->descriptionIcon('heroicon-m-device-phone-mobile')
+                ->color($appErrors['occurrences'] > 0 ? 'warning' : 'success'),
             Stat::make(__('admin.system_health.stats.disk'), $disk === null ? '—' : $disk['used_percent'].' %')
                 ->description($disk === null
                     ? __('admin.system_health.stats.disk_unknown')

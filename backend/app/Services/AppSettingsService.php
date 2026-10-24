@@ -95,6 +95,12 @@ class AppSettingsService
     public const QUALITY_CHECK_MODES = [self::QUALITY_OFF, self::QUALITY_SHADOW, self::QUALITY_ENFORCE];
 
     /** M5-T15: `{min_usd}` — warn the superadmins when the fal.ai balance drops below it. */
+    /**
+     * M5-05 (QA #375 B1): app error reports on / off — DEFAULT OFF until the privacy
+     * policy and the store privacy labels cover them. The app learns it from GET /api/user.
+     */
+    public const APP_ERROR_REPORTS_KEY = 'app_error_reports';
+
     public const FAL_BALANCE_ALERT_KEY = 'fal_balance_alert';
 
     /** M5-T15 default low-balance threshold (no row / empty), USD. */
@@ -370,6 +376,27 @@ class AppSettingsService
     {
         // No row already means "off", so saving "off" over no row is not a change.
         $this->store($actor, self::UNIQUE_MEDIA_KEY, ['enabled' => $enabled], ['enabled' => false]);
+    }
+
+    /**
+     * M5-05 (QA #375 B1): may the app send error reports? Default off (no row = off).
+     * `$fresh` reads the row itself (no cache).
+     */
+    public function appErrorReports(bool $fresh = false): bool
+    {
+        /** @var array{enabled?: bool} $value */
+        $value = $fresh
+            ? (AppSetting::find(self::APP_ERROR_REPORTS_KEY)?->value ?? [])
+            : Cache::remember(self::cacheKey(self::APP_ERROR_REPORTS_KEY), self::CACHE_TTL_SECONDS,
+                fn (): array => AppSetting::find(self::APP_ERROR_REPORTS_KEY)?->value ?? []);
+
+        return (bool) ($value['enabled'] ?? false);
+    }
+
+    /** Save the app error reports switch (superadmin), audit it and bust the cache. */
+    public function updateAppErrorReports(User $actor, bool $enabled): void
+    {
+        $this->store($actor, self::APP_ERROR_REPORTS_KEY, ['enabled' => $enabled], ['enabled' => false]);
     }
 
     /**

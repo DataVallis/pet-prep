@@ -114,7 +114,8 @@ services:
     <<: *php
     # `auth` first (M2-10c): Apple token revocation must run within the 5-minute
     # life of the authorization code, ahead of slow media jobs.
-    command: ["php", "artisan", "queue:work", "redis", "--queue=auth,default", "--tries=3", "--timeout=90", "--sleep=3"]
+    # `alerts` last (M5-05): Discord posts about app errors, low priority.
+    command: ["php", "artisan", "queue:work", "redis", "--queue=auth,default,alerts", "--tries=3", "--timeout=90", "--sleep=3"]
     # > --timeout=90: a running fal.ai / media download job finishes on SIGTERM
     # instead of being killed after Docker's default 10 s.
     stop_grace_period: 100s

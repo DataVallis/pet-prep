@@ -45,7 +45,7 @@
 | `activities_log` > 10 M vrstic | Particioniranje po mesecih, arhiviranje starih podatkov po poteku izziva (tudi zaradi GDPR minimizacije). |
 
 ## 5. Opazovanje in zanesljivost
-- Sledenje napak (npr. Sentry — **brez otrokovih podatkov**, preveriti z Davidom), uptime monitor, opozorila (tick zamuja, queue raste, disk, poraba AI).
+- Sledenje napak: **lasten »System health« namesto Sentryja** (David 19. 10. 2026) — napake strežnika od PR #281, napake mobilne aplikacije od M5-05 (`POST /api/app-errors`, tabele `app_error_*`, brez povezave z uporabnikom, stikalo »App error reports« privzeto izklopljeno). Rast je omejena: upsert na napako × različico × platformo, največ 200 novih prstnih odtisov na uro (nad tem `overflow`), Discord največ 10 objav na uro, hramba 30 dni. Še manjka: uptime monitor; opozorila (tick zamuja, queue raste, disk, poraba AI) so delno v System health / Discord.
 - Centralni logi z omejenim hranjenjem; nadzorna plošča metrik (p95, napake, aktivni psi, poraba AI na dan).
 - Obremenitveni test (k6) pred vsakim večjim lansiranjem: npr. 5.000 otrok × akcije + tick + WebSocket.
 - Staging okolje (kopija produkcije brez osebnih podatkov) — konec samodejnega deploya na `main` brez preverjanja (DEPLOYMENT D2).

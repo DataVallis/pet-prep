@@ -18,7 +18,7 @@ use Throwable;
 
 /**
  * Revoke the Sign in with Apple tokens of a deleted parent account (M2-10c,
- * App Store guideline 5.1.1(v)). Queue `auth` (worker: `--queue=auth,default`).
+ * App Store guideline 5.1.1(v)). Queue `auth` (worker: `--queue=auth,default,alerts`).
  *
  * Dispatched after the deletion commits, only for a parent with a linked
  * Apple identity whose app sent the sign-in's `authorization_code`:

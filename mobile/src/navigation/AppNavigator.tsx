@@ -20,6 +20,7 @@ import LockedScreen from '@/screens/LockedScreen';
 import ChildHudScreen from '@/screens/ChildHudScreen';
 import HudErrorBoundary from '@/components/HudErrorBoundary';
 import { logRenderError } from '@/utils/logRenderError';
+import { setErrorRoute, setErrorSession } from '@/modules/errorReporting/reporter';
 import ParentDashboardScreen from '@/screens/parent/ParentDashboardScreen';
 import { palette } from '@/theme';
 import { useDarkStatusBar } from '@/components/ui/useDarkStatusBar';
@@ -63,6 +64,16 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 
 const logHudError = (error: Error, info: ErrorInfo): void => logRenderError('child-hud', error, info);
 const logLockedError = (error: Error, info: ErrorInfo): void => logRenderError('locked-overlay', error, info);
+
+/** M5-05: which screen AppNavigator shows, as a short name for error reports. */
+export function routeName(role: string | null, parentLoginOpen: boolean, awaitingContract: boolean | null, locked: boolean): string {
+  if (role === null) return 'start';
+  if (role === 'parent') return 'parent-dashboard';
+  if (parentLoginOpen) return 'parent-login';
+  if (awaitingContract === null) return 'child-no-pet';
+  if (awaitingContract) return locked ? 'contract-locked' : 'contract';
+  return locked ? 'child-locked' : 'child-hud';
+}
 
 /** Logs the legacy child session out once, showing the start screen meanwhile. */
 function SignOutChildWithoutPet() {
@@ -135,6 +146,9 @@ export default function AppNavigator() {
   }, [parentLoginOpen, setParentLoginOpen]);
 
   if (bootStatus !== 'ready') {
+    // M5-05: the screen NAME in error reports (never a param / id).
+    setErrorRoute('splash');
+    setErrorSession(null);
     return (
       <>
         <SplashScreen mode={bootStatus} updating={serverUpdating} onRetry={retry} onLogout={splashSignOut.open} />
@@ -150,6 +164,10 @@ export default function AppNavigator() {
   // the lock screen before / above the HUD too. Never on the parent side (a family may have
   // a dog and a cat; parent helpers take the species explicitly).
   setTextSpecies(isAuthenticated && user.role !== 'parent' ? (pet?.species ?? null) : null);
+  // M5-05: the screen NAME in error reports (never a param / id).
+  setErrorRoute(routeName(isAuthenticated ? user.role : null, parentLoginOpen, pet === null ? null : isAwaitingContract(pet), isLocked));
+  // QA #375 m1: the role a queued report belongs to (its token is sent only while it matches).
+  setErrorSession(isAuthenticated && (user.role === 'parent' || user.role === 'child') ? user.role : null);
 
   return (
     <ErrorBoundary>

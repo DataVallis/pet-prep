@@ -84,12 +84,13 @@ Schedule::command('push:receipts')
     ->description('Check Expo push receipts and prune old push rows');
 
 // Daily (System health, David 2026-10-19): resolved errors > 30 days, any
-// error not seen for 90 days and hourly buckets > 14 days. 03:29 UTC.
+// error not seen for 90 days and hourly buckets > 14 days; M5-05 app error
+// reports not seen for 30 days. 03:29 UTC.
 Schedule::command('system-health:prune')
     ->dailyAt('03:29')
     ->withoutOverlapping()
     ->name('prune-system-errors')
-    ->description('Delete old resolved / stale rows of the system error log');
+    ->description('Delete old resolved / stale rows of the system error log and app error reports older than 30 days');
 
 // Every 5 min (M5-T15, David 2026-10-22): queue the AI budget warning check —
 // ≥ 80 % / 100 % of the production and AI Lab daily / monthly caps and a low

@@ -147,6 +147,27 @@ class AppServiceProvider extends ServiceProvider
             return Limit::perMinute(self::PIN_LOGIN_PER_MINUTE)->by('pin-login:'.ClientIp::rateLimitKey($request->ip()));
         });
 
+        // M5-05 app error reports: unauthenticated or any token. Per IP (IPv6
+        // /64) and per signed-in user (a token only resolves the user here —
+        // the route has no auth middleware). Live in testing too.
+        RateLimiter::for('app-errors', function (Request $request) {
+            $ip = 'app-errors:ip:'.ClientIp::rateLimitKey($request->ip());
+            $user = $request->user('sanctum');
+            if ($user === null) {
+                // QA #375 M1: signed out = no user limit applies → tighter per IP.
+                return [
+                    Limit::perMinute((int) config('system_health.app_errors.anonymous_per_minute'))->by($ip.':anon:minute'),
+                    Limit::perDay((int) config('system_health.app_errors.anonymous_per_day'))->by($ip.':anon:day'),
+                ];
+            }
+            $perMinute = (int) config('system_health.app_errors.per_minute');
+
+            return [
+                Limit::perMinute($perMinute)->by($ip),
+                Limit::perMinute($perMinute)->by('app-errors:user:'.$user->getAuthIdentifier()),
+            ];
+        });
+
         // Parent self-registration (M2-10a): unauthenticated, creates rows →
         // 5 per minute and 20 per hour per IP (IPv6 /64). Live in testing too
         // (like pin-login); tests that register more often vary the IP.

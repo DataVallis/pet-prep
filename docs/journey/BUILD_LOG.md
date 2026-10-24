@@ -9,6 +9,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-24 — Ko se aplikacija zatakne, to izvemo mi, ne pa tuje podjetje (M5-05)
+
+**Kaj:** mobilna aplikacija zdaj sama sporoči, ko se zaslon sesuje, ko pride do neujete napake ali ko obljuba (promise) ostane brez obravnave. Kratko tehnično poročilo (vrsta in besedilo napake, del sklada klicev, različica aplikacije, iOS / Android, ime zaslona) gre neposredno na strežnik PetPrep in se pokaže v »Zdravje sistema« → »Napake v aplikaciji«, nova napaka pa takoj tudi v kanalu Discord. Brez povezave telefon hrani do 20 poročil, ista napaka v 10 minutah gre samo enkrat; poročanje nikoli ne ustavi aplikacije. Pride s posodobitvijo OTA, brez nove gradnje. **Zaenkrat izklopljeno** — vklopimo ga, ko ga opisujejo politika zasebnosti in obrazca o zasebnosti v App Store in Google Play.
+**Zakaj je pomembno:** pred beto z 20–50 družinami moramo sesutja videti, preden jih starši prijavijo — brez Sentryja ali drugega zunanjega orodja (David, 19. 10.), torej noben podatek o napakah ne zapusti naših strežnikov.
+- 👩 Starši: poročilo ne vsebuje imen, e-pošte ali česar koli o ljubljenčku (telefonske številke, kode in parametri naslovov se izbrišejo že na telefonu); ne shranimo niti, kdo ga je poslal — samo, ali je bil prijavljen starš ali otrok. Po 30 dneh se izbriše.
+- 💼 Investitorji: lasten nadzor kakovosti aplikacije (napake po različicah in platformah, 24 h / 7 dni) brez stroška zunanjega orodja in brez deljenja podatkov otrok s tretjimi.
+- 🛠 Tehnično: React Native (meje napak, `ErrorUtils`, Hermes sledenje zavrnitvam), trajna vrsta v datoteki (zapis takoj, tudi tik pred sesutjem), Laravel (`POST /api/app-errors`, omejitev 30 / min na IP in uporabnika, prstni odtis napake, 3 tabele z združevanjem namesto vrstice na dogodek), Filament, Discord. Ni še preverjeno na telefonu.
+
 ## 2026-10-24 — Mediji ljubljenčkov pripravljeni za objektno shrambo (M4-05)
 
 **Kaj:** strežnik zna slike in videe ljubljenčkov hraniti v zasebnem vedru Hetzner Object Storage (EU) namesto na disku strežnika. Aplikacija dobi iste naše povezave z rokom; strežnik preveri pravice in telefon preusmeri na povezavo vedra, ki velja 5 minut. Obstoječe datoteke prenese ukaz, ki vsako datoteko preveri (MD5) in nič ne briše; nočna varnostna kopija vedro zrcali na drugo lokacijo. **Še ni vklopljeno** — preklopi David, ko ustvari vedri (*načrt* za vklop).
