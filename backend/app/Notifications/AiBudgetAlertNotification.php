@@ -2,7 +2,9 @@
 
 namespace App\Notifications;
 
+use App\Enums\AdminAlertKind;
 use App\Models\User;
+use App\Services\Alerts\AdminAlert;
 use App\Services\Media\AiBudgetMonitor;
 use App\Services\Media\AiBudgetStatus;
 use Filament\Notifications\Actions\Action;
@@ -17,6 +19,8 @@ use Illuminate\Notifications\Notification;
  * pet, family or child data. Sent synchronously from the queued
  * CheckAiBudgetAlerts job (already off the request and outside transactions),
  * the database channel first and mail separately (a mail failure is only reported).
+ * M5-T19: toAdminAlert() is the same warning for the admin Discord channel
+ * (App\Services\Alerts\DiscordWebhook), posted by AiBudgetMonitor after the bell.
  */
 class AiBudgetAlertNotification extends Notification
 {
@@ -28,6 +32,9 @@ class AiBudgetAlertNotification extends Notification
         public readonly string $bodyKey,
         public readonly array $params,
         public readonly bool $danger,
+        public readonly AdminAlertKind $kind,
+        /** @var array<string, string> field label key => value */
+        public readonly array $fields = [],
     ) {}
 
     public static function budget(AiBudgetStatus $status, int $threshold): self
@@ -46,6 +53,13 @@ class AiBudgetAlertNotification extends Notification
                 'period' => $status->periodKey,
             ],
             danger: $blocked,
+            kind: $blocked ? AdminAlertKind::AiBudgetBlocked : AdminAlertKind::AiBudgetWarning,
+            fields: [
+                'budget' => __('admin.ai_alerts.budgets.'.$status->budget.'_'.$status->period).' ('.$status->periodKey.')',
+                'used' => min(999, (int) floor($status->percent())).' %',
+                'spent' => '$'.sprintf('%.2f', $status->spentUsd).' / $'.sprintf('%.2f', $status->capUsd),
+                'left' => '$'.sprintf('%.2f', $status->leftUsd()),
+            ],
         );
     }
 
@@ -61,6 +75,11 @@ class AiBudgetAlertNotification extends Notification
                 'threshold' => sprintf('%.2f', $thresholdUsd),
             ],
             danger: $exhausted,
+            kind: $exhausted ? AdminAlertKind::FalBalanceExhausted : AdminAlertKind::FalBalanceLow,
+            fields: [
+                'balance' => $balanceUsd === null ? '—' : '$'.sprintf('%.2f', $balanceUsd),
+                'threshold' => '$'.sprintf('%.2f', $thresholdUsd),
+            ],
         );
     }
 
@@ -87,6 +106,17 @@ class AiBudgetAlertNotification extends Notification
     public function body(): string
     {
         return __($this->bodyKey, $this->params);
+    }
+
+    /** The same warning for the admin Discord channel (M5-T19) — amounts only. */
+    public function toAdminAlert(): AdminAlert
+    {
+        $fields = [];
+        foreach ($this->fields as $key => $value) {
+            $fields[__('admin.ai_alerts.fields.'.$key)] = $value;
+        }
+
+        return new AdminAlert($this->kind, $this->title(), $this->body(), $fields);
     }
 
     /**

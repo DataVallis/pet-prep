@@ -2,13 +2,18 @@
 
 namespace App\Filament\Pages;
 
+use App\Enums\AdminAlertKind;
 use App\Filament\Widgets\AiBudgetBanner;
 use App\Filament\Widgets\SystemHealth\ErrorsPerHourChart;
 use App\Filament\Widgets\SystemHealth\FailedJobsTable;
 use App\Filament\Widgets\SystemHealth\SystemHealthStats;
 use App\Models\SystemError;
 use App\Models\User;
+use App\Services\Alerts\AdminAlert;
+use App\Services\Alerts\DiscordWebhook;
+use App\Services\Alerts\DiscordWebhookException;
 use App\Services\SystemHealth\SystemHealthService;
+use Filament\Actions\Action;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 use Filament\Tables;
@@ -28,7 +33,9 @@ use Throwable;
  * heartbeat, disk), the AI budget / fal balance banner (M5-T15), errors per hour, the error list (from `system_errors`,
  * written by ErrorRecorder) with details + resolve, and failed jobs with
  * retry / forget. Chosen over Sentry / Grafana: no external service and no
- * error data leaves the server.
+ * error data leaves the server. M5-T19: header action »Test Discord« posts one
+ * test message to the admin Discord channel (superadmin only, shows the result;
+ * the webhook URL is never shown).
  */
 class SystemHealth extends Page implements HasTable
 {
@@ -104,6 +111,62 @@ class SystemHealth extends Page implements HasTable
         if (! static::canAccess()) {
             throw new AuthorizationException;
         }
+    }
+
+    /**
+     * @return list<Action>
+     */
+    protected function getHeaderActions(): array
+    {
+        return [
+            Action::make('testDiscord')
+                ->label(__('admin.system_health.discord.test'))
+                ->icon('heroicon-o-chat-bubble-left-right')
+                ->color('gray')
+                ->authorize(fn (): bool => static::canAccess())
+                ->requiresConfirmation()
+                ->modalHeading(__('admin.system_health.discord.test_heading'))
+                ->modalDescription(__('admin.system_health.discord.test_description'))
+                ->action(fn () => $this->sendDiscordTest()),
+        ];
+    }
+
+    public function sendDiscordTest(): void
+    {
+        $this->authorizeAccess();
+        $discord = app(DiscordWebhook::class);
+
+        if (! $discord->configured()) {
+            Notification::make()
+                ->title(__('admin.system_health.discord.not_configured'))
+                ->body(__('admin.system_health.discord.not_configured_body'))
+                ->warning()
+                ->send();
+
+            return;
+        }
+
+        try {
+            $discord->send(new AdminAlert(
+                AdminAlertKind::Test,
+                __('admin.system_health.discord.test_title'),
+                __('admin.system_health.discord.test_body'),
+            ));
+        } catch (DiscordWebhookException $e) {
+            report($e);
+            Notification::make()
+                ->title(__('admin.system_health.discord.failed'))
+                ->body($e->getMessage())
+                ->danger()
+                ->send();
+
+            return;
+        }
+
+        Notification::make()
+            ->title(__('admin.system_health.discord.sent'))
+            ->success()
+            ->send();
     }
 
     protected function getHeaderWidgets(): array

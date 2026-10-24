@@ -209,6 +209,14 @@ return [
     // M5-T15 (David 2026-10-22): AI budget warnings (banner + notifications).
     'ai_alerts' => [
         'open' => 'Open AI budget',
+        'fields' => [
+            'budget' => 'Budget',
+            'used' => 'Used',
+            'spent' => 'Spent / cap',
+            'left' => 'Left',
+            'balance' => 'fal.ai balance',
+            'threshold' => 'Warning below',
+        ],
         'budgets' => [
             'production_day' => 'Pets — today',
             'production_month' => 'Pets — this month',
@@ -384,6 +392,17 @@ return [
         'title' => 'System health',
         'badge_tooltip' => 'Open errors in the last 24 hours',
         'close' => 'Close',
+        'discord' => [
+            'test' => 'Test Discord',
+            'test_heading' => 'Send a test message to the admin Discord channel?',
+            'test_description' => 'Posts one test message through DISCORD_ALERTS_WEBHOOK_URL. AI budget and fal.ai balance warnings go to the same channel.',
+            'not_configured' => 'Discord is not configured',
+            'not_configured_body' => 'Set DISCORD_ALERTS_WEBHOOK_URL in /opt/petprep/.env (Discord channel → Integrations → Webhooks); it takes effect after the next deploy.',
+            'sent' => 'Test message sent to Discord',
+            'failed' => 'Discord test failed',
+            'test_title' => 'PetPrep test alert',
+            'test_body' => 'Test message from /admin → System health (sent by a superadmin). AI budget and fal.ai balance warnings will appear in this channel.',
+        ],
         'stats' => [
             'errors' => 'Open errors (24 h)',
             'errors_desc' => ':week open in the last 7 days',

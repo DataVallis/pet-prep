@@ -9,6 +9,13 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-24 — Opozorila za administratorje v Discord (M5-T19)
+
+**Kaj:** opozorila, ki so doslej prišla le v zvonček administracije (proračun za AI pri 80 % in 100 %, nizko ali porabljeno dobroimetje fal.ai), gredo zdaj — ko je nastavljen webhook — enkrat tudi v administratorski kanal Discord: rumeno ali rdeče sporočilo z zneski in povezavo na pravo stran administracije. Gumb »Test Discord« v »Zdravje sistema« preveri povezavo. Odločil David 24. 10. namesto e-pošte (produkcija nima poštnega strežnika).
+**Zakaj je pomembno:** opozorilo pride na telefon v trenutku, ne šele ko nekdo odpre administracijo — mediji novih kupcev ne obstanejo zaradi neopaženega praznega proračuna.
+- 💼 Investitorji: nadzor stroškov AI v realnem času (opozorilo pri 80 % proračuna takoj v ekipni kanal), brez dodatnega orodja ali stroška.
+- 🛠 Tehnično: Laravel, Discord webhook (vdelava z barvo, ponovitev ob 429 po `retry_after`), isto odpravljanje ponovitev kot obvestila v Filamentu; naštete vrste opozoril za kasnejše razširitve (napake, namestitve — *načrt*). Brez podatkov otrok.
+
 ## 2026-10-23 — Vsak AI posnetek je preverjen, preden ga otrok vidi
 
 **Kaj:** na testnem dobermančku v produkciji je posnetek »sedi« pokazal kužka, ki stoji, nato pa se mu v zadnjih ~0,7 s noge »stopijo« v sedečo pozo. David je odločil: vsak nov AI posnetek gre najprej skozi samodejno preverjanje — brezplačno tehnično (ffmpeg: zamrznjena slika, nenadni skoki, gibanje zgoščeno v zadnji četrtini, zadnja sličica proti končni pozi, dolžina) in AI pregled 6 sličic (anatomija, ista žival, dejanje se res zgodi, napake). Neuspešen posnetek se samodejno ustvari **enkrat** znova; če spet pade, ga otrok ne vidi (aplikacija pokaže pozo ali starejša pravila) in čaka na pregled v administraciji. Posnetki šole »izvaja« so zdaj dolgi **5 s** namesto 3 s, z navodilom za naravno gibanje (»počasi spusti zadnji del, najprej se zložijo zadnje noge …«).

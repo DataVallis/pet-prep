@@ -7,6 +7,7 @@ use App\Models\AiBudgetAlert;
 use App\Models\AiSpendLedger;
 use App\Models\User;
 use App\Notifications\AiBudgetAlertNotification;
+use App\Services\Alerts\DiscordWebhook;
 use App\Services\AppSettingsService;
 use Carbon\CarbonImmutable;
 use Illuminate\Support\Carbon;
@@ -35,6 +36,10 @@ use Throwable;
  *    gateway's `fal_balance` flag) once per day.
  *
  * Messages carry amounts only — never a pet, family or child.
+ *
+ * M5-T19 (David 2026-10-24): when DISCORD_ALERTS_WEBHOOK_URL is set, every
+ * warning that reached the bell is also posted once to the admin Discord
+ * channel (same claim → never a repeat; a Discord failure is only reported).
  */
 class AiBudgetMonitor
 {
@@ -54,6 +59,7 @@ class AiBudgetMonitor
         private readonly AiSpendGuard $guard,
         private readonly FalGateway $fal,
         private readonly AppSettingsService $settings,
+        private readonly DiscordWebhook $discord,
     ) {}
 
     /**
@@ -230,6 +236,8 @@ class AiBudgetMonitor
      * thrown — the other budgets are still checked). Once the bell row is
      * written the claim stays; the e-mail goes separately and a mail failure is
      * only reported (QA M2: no bell repeats every 5 minutes because of mail).
+     * Discord (M5-T19) follows the same rule: posted once after the bell, a
+     * failure is reported and never releases the claim or stops other budgets.
      *
      * @param  array{0: string, 1: string, 2: string, 3: list<int>}  $claimed
      */
@@ -262,7 +270,17 @@ class AiBudgetMonitor
             }
         }
 
-        Log::warning('AI budget warning sent', ['budget' => $budget, 'period' => $period, 'period_key' => $periodKey, 'thresholds' => $thresholds, 'admins' => $admins->count()]);
+        $discord = false;
+        if ($this->discord->configured()) {
+            try {
+                $this->discord->send($notification->toAdminAlert());
+                $discord = true;
+            } catch (Throwable $e) {
+                report($e);
+            }
+        }
+
+        Log::warning('AI budget warning sent', ['budget' => $budget, 'period' => $period, 'period_key' => $periodKey, 'thresholds' => $thresholds, 'admins' => $admins->count(), 'discord' => $discord]);
 
         return true;
     }

@@ -1315,6 +1315,7 @@ flowchart TD
   C -.-> BW[["M5-T15: ai:budget-check every 5 min → CheckAiBudgetAlerts (queued)<br/>AiBudgetMonitor: production + lab, day + month<br/>≥ 80 % warning · 100 % blocked (percent of the cap)"]]
   BW --> BD{"ai_budget_alerts row new?<br/>(budget, period, key, threshold)"}
   BD -- yes --> BN["AiBudgetAlertNotification → superadmins<br/>Filament bell (+ mail if MAIL_MAILER is real)"]
+  BN -- "bell written + DISCORD_ALERTS_WEBHOOK_URL set" --> DC["M5-T19: DiscordWebhook::send(toAdminAlert())<br/>one POST, embed yellow / red, link /admin/…<br/>429 → wait retry_after (≤ 10 s, 2×) · failure → report(), claim kept"]
   BD -- "no (already sent)" --> BX[nothing]
   BW --> FB["FalGateway::accountBalance()<br/>GET api.fal.ai/v1/account/billing?expand=credits (≤ every 15 min)<br/>low &lt; admin threshold (20 $) / exhausted → once a day"]
   BW -.-> BB["AiBudgetBanner: dashboard + System health<br/>green / yellow / red, link /admin/ai-budget"]
