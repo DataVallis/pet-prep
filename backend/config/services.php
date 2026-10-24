@@ -115,4 +115,13 @@ return [
         'revoke_url' => 'https://appleid.apple.com/auth/revoke',
     ],
 
+    /*
+    | M5-T19 (David 2026-10-24): admin alerts (AI budget, fal.ai balance) are also
+    | posted to this Discord channel webhook. Secret — never log or show it.
+    | Empty → no Discord posts (App\Services\Alerts\DiscordWebhook).
+    */
+    'discord' => [
+        'alerts_webhook_url' => env('DISCORD_ALERTS_WEBHOOK_URL'),
+    ],
+
 ];

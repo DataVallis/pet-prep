@@ -208,6 +208,14 @@ return [
     // M5-T15 (David 22. 10. 2026): opozorila proračuna za AI (pasica + obvestila).
     'ai_alerts' => [
         'open' => 'Odpri proračun za AI',
+        'fields' => [
+            'budget' => 'Proračun',
+            'used' => 'Porabljeno',
+            'spent' => 'Poraba / meja',
+            'left' => 'Ostane',
+            'balance' => 'Stanje fal.ai',
+            'threshold' => 'Opozorilo pod',
+        ],
         'budgets' => [
             'production_day' => 'Ljubljenčki — danes',
             'production_month' => 'Ljubljenčki — ta mesec',
@@ -383,6 +391,17 @@ return [
         'title' => 'Zdravje sistema',
         'badge_tooltip' => 'Odprte napake v zadnjih 24 urah',
         'close' => 'Zapri',
+        'discord' => [
+            'test' => 'Preizkusi Discord',
+            'test_heading' => 'Pošljem preizkusno sporočilo v administratorski kanal Discord?',
+            'test_description' => 'Pošlje eno preizkusno sporočilo prek DISCORD_ALERTS_WEBHOOK_URL. V isti kanal gredo opozorila proračuna za AI in stanja fal.ai.',
+            'not_configured' => 'Discord ni nastavljen',
+            'not_configured_body' => 'Nastavi DISCORD_ALERTS_WEBHOOK_URL v /opt/petprep/.env (kanal Discord → Integrations → Webhooks); velja po naslednji namestitvi.',
+            'sent' => 'Preizkusno sporočilo poslano v Discord',
+            'failed' => 'Preizkus Discorda ni uspel',
+            'test_title' => 'PetPrep preizkusno opozorilo',
+            'test_body' => 'Preizkusno sporočilo iz /admin → Zdravje sistema (poslal superadmin). V ta kanal bodo prihajala opozorila proračuna za AI in stanja fal.ai.',
+        ],
         'stats' => [
             'errors' => 'Odprte napake (24 h)',
             'errors_desc' => ':week odprtih v zadnjih 7 dneh',
