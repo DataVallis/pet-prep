@@ -60,7 +60,13 @@ class CareReminderPushService
     public function processDue(?CarbonInterface $now = null): array
     {
         $now = CarbonImmutable::instance($now ?? now())->utc();
+        // Only breeds with a groomer / bath row (most care breeds have child tasks only).
+        $breeds = CareTaskActivationService::breedsWithKeys(array_map(fn (CareTask $t) => $t->stageParamKey(), CareTask::parentTasks()));
+        if ($breeds === []) {
+            return ['pets' => 0, 'pushed' => 0];
+        }
         $pets = Pet::born()
+            ->whereIn('breed_type', $breeds)
             ->where('is_active', true)
             ->where('is_game_over', false)
             ->where('care_tasks_enabled', true)

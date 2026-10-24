@@ -55,11 +55,25 @@ class CareTaskActivationService
      */
     public function careBreeds(): array
     {
-        $keys = array_map(fn (StageParamKey $k) => $k->value, array_values(array_filter(
+        return self::breedsWithKeys(array_values(array_filter(
             StageParamKey::cases(),
             fn (StageParamKey $k) => $k->isCareTaskFrequency() || $k === StageParamKey::NoWalkInHeat,
         )));
-        $slugs = DB::table('breed_stage_params')->whereIn('key', $keys)->distinct()->pluck('breed_slug')->all();
+    }
+
+    /**
+     * BreedType values with a breed_stage_params row of any of $keys.
+     *
+     * @param  list<StageParamKey>  $keys
+     * @return list<string>
+     */
+    public static function breedsWithKeys(array $keys): array
+    {
+        $slugs = DB::table('breed_stage_params')
+            ->whereIn('key', array_map(fn (StageParamKey $k) => $k->value, $keys))
+            ->distinct()
+            ->pluck('breed_slug')
+            ->all();
 
         return array_values(array_map(
             fn (BreedType $b) => $b->value,
