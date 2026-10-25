@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `saint_bernard` (viri S527–S535; ponovno S8, S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja iz S529 |
 | Izvor | FCI št. 61 »St. Bernard«, skupina 2, sekcija 2.2 (molosi, gorski tip), Švica (S527) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 62. mesto »Saint Bernard« (S174, prebrano 2026-10-25) |
-| PR-ji | pet-prep #389 (pasma) · portret: PR po združitvi (veja `feat/M5-R10-66-saint-bernard-portrait`) · spletna stran: pet-prep-website, veja `feat/register-saint-bernard` |
+| PR-ji | pet-prep #389 (pasma, združen `53c8f72`) · portret: še ni (zagon 40220815367 ni uspel — glej »Odprto za Davida«) · spletna stran: šele s portretom |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -43,7 +43,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 63. meseca — predlog; 4 → 3 → 2 obroka) | 🛠 | 💶 izziv | M5-R10-66 | 2026-10-25 |
 | Česanje 3× na teden, »Nova izkušnja« za mladička, opozorilo »počakaj s sprehodom« po obroku, čiščenje ušes na 2 tedna | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R16 / M5-R20 | 2026-10-25 |
 | Barva (izbirnik barve: rdeče-bel, bel z rdečimi lisami, rdeče tigrasto-bel) | 🛠 | 💶 izziv | M5-R21 | 2026-10-25 |
-| AI portret v registru | 🗓 po združitvi (zagon `breed-portraits.yml`) | — | M5-R11-04 | — |
+| AI portret v registru | 🗓 čaka popravek `.env` na strežniku (zagon 40220815367 ni uspel) | — | M5-R11-04 | — |
 | Stran na petprep.si (`/animals/dogs/saint-bernard`, `/sl/zivali/psi/bernardinec`) | 🗓 »Kmalu«, dokler pasma ni v izdaji aplikacije (le s portretom) | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -54,6 +54,7 @@
 
 ## Odprto za Davida
 
+- **Portret ni narejen (needs-david, 2026-10-25):** `breed-portraits.yml` (zagon 40220815367, koda `53c8f72`, ponovljen enkrat) je na strežniku padel: »Failed to parse dotenv file. Encountered unexpected whitespace at [https://fsn1.your-objectstorage.com PET_MEDIA_S3_REGION=fsn1]«. V `/opt/petprep/.env` sta vrednost `PET_MEDIA_S3_ENDPOINT` in ključ `PET_MEDIA_S3_REGION` v isti vrstici (manjka prelom vrstice). Koraki: (1) `ssh` na strežnik, `sudo nano /opt/petprep/.env`; (2) poiščite vrstico s `https://fsn1.your-objectstorage.com PET_MEDIA_S3_REGION=fsn1` in jo razdelite v dve vrstici: `PET_MEDIA_S3_ENDPOINT=https://fsn1.your-objectstorage.com` in `PET_MEDIA_S3_REGION=fsn1`; (3) shranite (aplikacije ni treba ponovno namestiti za portret); (4) Actions → »Breed portraits« → Run workflow, `breeds` = `saint_bernard` — ali pa portret naredi naslednji nočni zagon (catch-up). Spletne strani pasme do portreta ne odpremo (David 2026-10-19).
 - **Meja starejšega psa (63 mesecev, `verified=false`):** predlog iz mediane ankete Kennel Club / BSAVA 2004 (7,0 leta, Adams 2010, S534 — vrstica tabele brez decimalnih vejic, branje Claude). Če potrdite McMillan 2024 (9,3 leta, zdaj le prek Wikipedije), bi bil starejši od 84 mesecev (podatkovna migracija ali urejanje v Filamentu).
 - **Česanje:** PDSA »vsaj trikrat na teden« (3, zgrajeno) proti PetMD »enkrat ali dvakrat na teden« (dnevno med menjavo dlake) — potrdite 3.
 - **Breed Watch kategorija 3:** oznaki `eyelid_problems` in `hips_hind_legs`; točke ugriz, zobovje in gibanje nimajo oznake. Pasma je po pravilu runbooka v marketingu — potrdite.
