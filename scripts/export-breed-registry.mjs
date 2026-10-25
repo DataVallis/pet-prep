@@ -437,6 +437,7 @@ const SPECIES = [
       { id: 'giant_schnauzer', synonyms: { en: ['Riesenschnauzer', 'Munich Schnauzer'], sl: ['veliki šnavcer', 'veliki snavcer', 'riesenschnauzer'] } },
       { id: 'bloodhound', synonyms: { en: ['St. Hubert Hound', 'Chien de Saint-Hubert', 'Sleuth Hound'], sl: ['pes svetega Huberta', 'pes sv. Huberta', 'chien de saint-hubert'] } },
       { id: 'akita', synonyms: { en: ['American Akita', 'Great Japanese Dog'], sl: ['ameriška akita', 'ameriska akita', 'akita'] } },
+      { id: 'cardigan_welsh_corgi', synonyms: { en: ['Welsh Corgi (Cardigan)', 'Welsh Corgi Cardigan', 'Cardigan', 'Cardi', 'Corgi'], sl: ['welsh corgi', 'cardigan', 'korgi', 'valižanski korgi'] } },
     ],
   },
   {
@@ -1793,6 +1794,27 @@ const DOG_FACTS = {
       ['hypothyroidism', 'health.hypothyroidism'],
     ],
   },
+  // M5-R10-64. Height = AKC standard (S517; FCI / RKC give only an ideal 30 cm), weight = AKC standard (S517; FCI / RKC
+  // give no number — PDSA's 9–12 kg covers both corgis and is not exported), lifespan = the RKC band 'Over 12 years'
+  // (S515), exercise = RKC 'Up to 1 hour per day' (S515). Not exported: height.fci (one ideal value), adult_weight.pdsa /
+  // salt_category, lifespan.mcmillan_2024 (only via Wikipedia), lifespan.senior_from (derived). Health keys as the Pembroke.
+  cardigan_welsh_corgi: {
+    height: ['height.akc'],
+    weight: [['adult_weight.akc', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia_arthritis', 'health.hip_dysplasia'],
+      ['back_disc_disease', 'health.back_ivdd'],
+      ['epilepsy', 'health.epilepsy'],
+      ['bleeding_disorder_vwd', 'health.von_willebrand'],
+      ['cataracts_lens_luxation', 'health.eyes'],
+    ],
+  },
 
 };
 
@@ -2322,6 +2344,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.akita.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.akita.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.akita.exercise_minutes_senior',
+  },
+  cardigan_welsh_corgi: {
+    adult_minutes: ['proposed_game_parameters.cardigan_welsh_corgi.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.cardigan_welsh_corgi.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.cardigan_welsh_corgi.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.cardigan_welsh_corgi.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.cardigan_welsh_corgi.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.cardigan_welsh_corgi.exercise_minutes_senior',
   },
 
 };

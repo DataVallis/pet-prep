@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "649db52702ae3f746fdf7a4504ecc9c26482ce27c40be7e7923e3edfd8e52b9e"
+      "sha256": "dfce2284aa864a97a1376c73b39bccae48b50f95aa83e9cc07fd2455d125a0d0"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "0a4286734c85ae6d1894fc7754a54904bbd37c9907d15baa073bbb777ed9fdc6"
+      "sha256": "c44da9b79e78e629e2730cf27733eca4b2463ba972f75e6017c0d739c2b2255a"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "44ddbd6b4817cce6f899a87530b922394ce932480f2544cec1992812a98646a2"
+      "sha256": "ed1b11579bbce1e03c0f506337475da0524065c9d0b55f6d3c7efd1ebf164d7f"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "da5bc4dd7e5d88d67af9535789977f6283a01c493c618cdbd520c93dc9ebfff8"
+      "sha256": "d16d95be97c6a15ed4a80ba9e38d3aa368651f280e722512c7ac673a22ba33db"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "ccd8646d0222ba8ff245308afe7e2817d87790a077188283c330d107e3e57aa2"
+      "sha256": "6178cd9e001d0628c216dce0ce1e718b5ab8611046a1470868954b120918fe73"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "c1ed2e4972bfa8a1b080d2278a547c0a92e6456afab1a40f57705476dbec6893"
+      "sha256": "6b04a5abcf98a6d68261dbdbc295ba5f3c7109d2fdbdcc63aaa89297d4892c09"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -212,7 +212,7 @@
         }
       },
       "status": "available",
-      "breed_count": 59,
+      "breed_count": 60,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -35959,6 +35959,535 @@
       ]
     },
     {
+      "id": "cardigan_welsh_corgi",
+      "species": "dog",
+      "order": 59,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Cardigan Welsh Corgi",
+        "sl": "Welsh corgi cardigan"
+      },
+      "slug": {
+        "en": "cardigan-welsh-corgi",
+        "sl": "welsh-corgi-cardigan"
+      },
+      "synonyms": {
+        "en": [
+          "Welsh Corgi (Cardigan)",
+          "Welsh Corgi Cardigan",
+          "Cardigan",
+          "Cardi",
+          "Corgi"
+        ],
+        "sl": [
+          "welsh corgi",
+          "cardigan",
+          "korgi",
+          "valižanski korgi"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S515"
+          ],
+          "ref": "cardigan_welsh_corgi.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              27,
+              32
+            ],
+            "female": [
+              27,
+              32
+            ]
+          },
+          "source_ids": [
+            "S517"
+          ],
+          "ref": "cardigan_welsh_corgi.height.akc",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              13.6,
+              17.2
+            ],
+            "female": [
+              11.3,
+              15.4
+            ]
+          },
+          "source_ids": [
+            "S517"
+          ],
+          "ref": "cardigan_welsh_corgi.adult_weight.akc",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "cardigan_welsh_corgi.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S515"
+          ],
+          "ref": "cardigan_welsh_corgi.lifespan.rkc",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S515"
+          ],
+          "ref": "cardigan_welsh_corgi.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S515"
+          ],
+          "ref": "cardigan_welsh_corgi.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S515"
+          ],
+          "ref": "cardigan_welsh_corgi.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S515"
+          ],
+          "ref": "cardigan_welsh_corgi.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 26,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "cardigan_welsh_corgi.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 38,
+            "group": 1,
+            "section": 2,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S513"
+          ],
+          "ref": "cardigan_welsh_corgi.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia_arthritis",
+          "source_ids": [
+            "S206"
+          ],
+          "ref": "cardigan_welsh_corgi.health.hip_dysplasia",
+          "confidence": "medium"
+        },
+        {
+          "key": "back_disc_disease",
+          "source_ids": [
+            "S206"
+          ],
+          "ref": "cardigan_welsh_corgi.health.back_ivdd",
+          "confidence": "medium"
+        },
+        {
+          "key": "epilepsy",
+          "source_ids": [
+            "S206"
+          ],
+          "ref": "cardigan_welsh_corgi.health.epilepsy",
+          "confidence": "medium"
+        },
+        {
+          "key": "bleeding_disorder_vwd",
+          "source_ids": [
+            "S206"
+          ],
+          "ref": "cardigan_welsh_corgi.health.von_willebrand",
+          "confidence": "medium"
+        },
+        {
+          "key": "cataracts_lens_luxation",
+          "source_ids": [
+            "S515"
+          ],
+          "ref": "cardigan_welsh_corgi.health.eyes",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [],
+        "consider": [
+          {
+            "tag": "may_herd_children",
+            "source_ids": [
+              "S206"
+            ],
+            "refs": [
+              "cardigan_welsh_corgi.behaviour.herding_children",
+              "cardigan_welsh_corgi.suitability.pdsa_children"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S515"
+            ],
+            "refs": [
+              "cardigan_welsh_corgi.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S206",
+              "S515"
+            ],
+            "refs": [
+              "cardigan_welsh_corgi.suitability.rkc_grooming",
+              "cardigan_welsh_corgi.suitability.pdsa_grooming"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 3
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.cardigan_welsh_corgi.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S515"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S515 'Up to 1 hour per day'; PDSA S206 'around an hour')"
+          },
+          {
+            "ref": "proposed_game_parameters.cardigan_welsh_corgi.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.cardigan_welsh_corgi.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S515"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S515)"
+          },
+          {
+            "ref": "proposed_game_parameters.cardigan_welsh_corgi.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 26, Excellent tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.cardigan_welsh_corgi.grooming",
+            "basis_source_ids": [
+              "S206"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2–3× na teden → 3; mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S206",
+          "S515"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_pra_rcd3",
+            "level": "best_practice",
+            "source_ids": [
+              "S515"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S515"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S515"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S515"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S206",
+        "S513",
+        "S515",
+        "S517",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -40640,6 +41169,27 @@
       "publisher": "The Kennel Club / BSAVA Scientific Committee",
       "title": "Purebred Dog Health Survey 2004 — breed reports (complete PDF, hosted by the Institute of Canine Biology)",
       "url": "https://www.instituteofcaninebiology.org/uploads/1/9/6/9/19691109/uk_kc_2004_breed_health_survey-_complete.pdf"
+    },
+    {
+      "id": "S513",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — WELSH CORGI (CARDIGAN) (38)",
+      "url": "https://www.fci.be/en/nomenclature/CARDIGAN-WELSH-CORGI-38.html"
+    },
+    {
+      "id": "S515",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A to Z — Welsh Corgi (Cardigan)",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/welsh-corgi-cardigan/"
+    },
+    {
+      "id": "S517",
+      "tier": "A",
+      "publisher": "Cardigan Welsh Corgi Club of America (AKC parent club)",
+      "title": "Official Standard of the Cardigan Welsh Corgi (approved December 13, 1994, effective January 31, 1995)",
+      "url": "https://cardigancorgis.com/cwcca/breed/standard/"
     },
     {
       "id": "C1",
