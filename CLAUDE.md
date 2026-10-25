@@ -99,6 +99,7 @@ Do NOT build: AR, GPS maps, weather API, LLM/vision vet, B2B QR coupons. (Cats a
 
 ## Orchestration
 **Long sessions (David, 2026-10-06):** when a session gets very long (older context already compacted into summaries) or after a larger finished block of work, run `/handoff` so `HANDOFF.md` is complete, then recommend David to start a new session; the new agent starts by reading `HANDOFF.md`.
+**Steps for David (2026-10-25):** When a merged change needs David to do something (credentials, env, store forms, admin switches), tell him the exact steps in the same message and add them to HANDOFF §1b — never only 'see DEPLOYMENT.md' (David 2026-10-25).
 Delegate by area: `backend-engineer`, `mobile-engineer`, `qa-reviewer` (independent review before merge), `devops` (Hetzner / Docker / CI), `growth-marketer` (copy, funnels, decks — Slovenian/English). Slash commands: `/handoff`, `/verify`, `/feature <ID>`, `/deploy`.
 
 ## Secrets & infra
