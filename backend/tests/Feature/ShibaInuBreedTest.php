@@ -136,8 +136,9 @@ describe('breed, config and database', function () {
 
         $refused = fn (array $values) => fn () => DB::transaction(fn () => DB::table('pets')->where('id', $pet->id)->update($values));
         expect($refused(['species' => 'cat']))->toThrow(QueryException::class)
-            // The Akita and the other Japanese spitz breeds are different breeds and no breed keys.
-            ->and($refused(['breed_type' => 'akita']))->toThrow(QueryException::class)
+            // The Japanese Akita Inu and the other Japanese spitz breeds are different breeds and no breed keys
+            // (`akita` is the American Akita since M5-R10-63, AkitaBreedTest).
+            ->and($refused(['breed_type' => 'akita_inu']))->toThrow(QueryException::class)
             ->and($refused(['breed_type' => 'shiba']))->toThrow(QueryException::class);
 
         $migration = require database_path('migrations/2026_12_24_120000_add_shiba_inu_breed.php');
