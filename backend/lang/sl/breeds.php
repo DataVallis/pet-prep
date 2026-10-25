@@ -67,6 +67,7 @@ return [
     'giant_schnauzer' => 'Veliki šnavcer',
     'bloodhound' => 'Bloodhound',
     'akita' => 'Ameriška akita',
+    'cardigan_welsh_corgi' => 'Welsh corgi cardigan',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',
