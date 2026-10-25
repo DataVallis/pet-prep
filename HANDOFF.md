@@ -26,6 +26,66 @@
 | M5-F Device fixes | 13 done / 0 open (M5-F10 OTA done 24. 10.) | 100 % |
 | M5-T Refinement | 21 done / 1 partial (T18 shadow mode) / 1 open (accessibility badge on the website) | code ~95 %, **device 0 %** |
 
+## 1b. Čaka Davida (konkretni koraki)
+
+*David 25. 10. 2026: vsak korak, ki ga mora narediti David, je tukaj z natančnimi kliki / vrsticami — ne samo »glej DEPLOYMENT.md«. Ko je korak narejen, ga Claude označi ✅ z datumom (in dokazom). Brez skrivnosti: `<…>` so vrednosti iz upravitelja gesel.*
+
+**Že narejeno:** ✅ Discord opozorila — `DISCORD_ALERTS_WEBHOOK_URL` nastavljen, testno sporočilo prispelo (24. 10.). ✅ `FAL_AI_BILLING_KEY` dodan v `/opt/petprep/.env` (22. 10.). ✅ Stavek o poročilih o napakah v politiki zasebnosti na petprep.si (pet-prep-website #98, združeno 24. 10.). ✅ `EXPO_TOKEN` (OTA teče po vsakem produkcijskem deployu).
+
+1. **Object Storage za medije ljubljenčkov (M4-05, D23)** — koda je v produkciji izklopljena, nič ne tvega, dokler ne narediš 1.3.
+   1. Hetzner Console → *Object Storage* → **Create bucket**: ime `petprep-media`, lokacija **fsn1**, visibility **Private**. Nato *Generate credentials* → access key + secret (prikazano samo enkrat → upravitelj gesel).
+   2. Na strežniku (`ssh -i ~/.ssh/petprep_deploy_key deploy@138.199.172.97`) dodaj v `/opt/petprep/.env` (`PET_MEDIA_DISK` še **ne** dodajaj):
+      ```
+      PET_MEDIA_S3_BUCKET=petprep-media
+      PET_MEDIA_S3_KEY=<access key>
+      PET_MEDIA_S3_SECRET=<secret>
+      PET_MEDIA_S3_ENDPOINT=https://fsn1.your-objectstorage.com
+      PET_MEDIA_S3_REGION=fsn1
+      ```
+      Deploy (GitHub → Actions → *CI & Deploy* → Run workflow, `main`, target `production` — ali počakaj na 06:00) → `/admin/system-health` ploščica **Media storage** mora biti zelena: *Local disk · Bucket petprep-media reachable* (rdeča / rumena = napačen ključ, endpoint ali ime).
+   3. **Zrcalo za varnostno kopijo:** v **ločenem Hetzner Console projektu** (drug projekt, ne isti!) → Object Storage → bucket `petprep-media-mirror`, lokacija **nbg1**, Private + svoji credentials. Vpiši jih **samo** v `/opt/petprep/backup.env` (nikoli v `.env`; `KEY=value`, brez narekovajev in komentarjev):
+      ```
+      MEDIA_MIRROR_S3_BUCKET=petprep-media-mirror
+      MEDIA_MIRROR_S3_KEY=<access key zrcala>
+      MEDIA_MIRROR_S3_SECRET=<secret zrcala>
+      MEDIA_MIRROR_S3_ENDPOINT=https://nbg1.your-objectstorage.com
+      MEDIA_MIRROR_S3_REGION=nbg1
+      ```
+      Zrcalo teče znotraj nočnega `backup-offsite.sh`, zato je predpogoj točka 7 (off-site varnostne kopije). Ključe vpiši najkasneje ob preklopu v 1.4 — pri `PET_MEDIA_DISK=s3` brez njih nočna kopija shrani bazo in nato glasno pade.
+   4. **Selitev — skupaj s Claudom, mirn večer:** koraki 3–8 runbooka `docs/engineering/DEPLOYMENT.md` »Pet media → object storage«: `media:move-to-object-storage --dry-run` → kopija + `--verify` → pavza AI (stikala state media + »School & game clips« off, AI budget dnevno 0, vrsta `default: 0`) → zadnji `--verify` → `PET_MEDIA_DISK=s3` v `.env` + deploy → `--verify` (`copied 0`) → AI nazaj → preveri 302 / 200 / 206 s `curl` → `backup-offsite.sh && backup-offsite.sh verify`. `--prune-local` šele po ≥ 1 tednu.
+2. **AI proračun** — `/admin` → *AI budget*: **dnevna meja 25 $** (odločeno 22. 10.; iz repoja se ne vidi, ali je vpisano — preveri, da polje ne kaže privzetih 5 $). **Mesečna meja: odloči pred zagonom** (pri 25 $ / dan je zgornja meja ~750 $ / mesec). Opozorilo stanja fal.ai: privzeto 20 $ (isti zaslon).
+3. **Naslednja izdaja v trgovinah (store release)** — ob naslednjem EAS buildu (Android je nujen: brez novega produkcijskega builda Android ne dobi OTA):
+   1. Google Play Console → *App content* → **Health apps** declaration → dodaj **`READ_WHEELCHAIR_PUSHES`** (poleg `READ_STEPS`; samo branje; namen: otrokov dnevni sprehod v prilagojenem načinu).
+   2. Google Play Console → *App content* → **Data safety** → *App info and performance* → **Crash logs** (+ *Diagnostics*): collected, not shared, not linked to an account, purpose *App functionality*, encrypted in transit.
+   3. App Store Connect → *App Privacy* → dodaj **Diagnostics → Crash Data** (+ *Other Diagnostic Data*): not linked to the user, not used for tracking, purpose *App Functionality*. Preveri tudi *Health & Fitness* (read only, not linked to tracking).
+   4. App Store Connect: besedilo dovoljenja za Zdravje (`NSHealthShareUsageDescription` EN + SL) je novo — omenja potiske vozička; pri oddaji ga preglej.
+   5. Po oddaji: `node scripts/record-app-release.mjs` (zapis izdaje za spletno stran) — lahko naredi Claude.
+4. **Po 3.2 + 3.3:** `/admin` → *Feature switches* → **»Poročila o napakah iz aplikacije«** → ON (store izdaja ni potrebna; koda pride z OTA). Preveri: napaka iz aplikacije se pokaže v `/admin/system-health` → »App errors« in v Discordu.
+5. **Test na napravi** — seznam v §5 točka 1 (vse M5-T funkcije; iOS prek OTA). Vsako potrjeno funkcijo sporoči Claudu → FEATURES 📱 z datumom in buildom.
+6. **Testni računi in admin geslo** — `/admin` → *Users* → izbriši `parent@test.com` in `child@test.com`; za `admin@petprep.io` nastavi močno geslo (upravitelj gesel).
+7. **Off-site varnostne kopije (D5) — enkratna nastavitev** (`docs/PRODUCTION_DEPLOYMENT.md` §6b):
+   1. Hetzner Console → naroči **Storage Box** (najmanjši; druga lokacija kot strežnik, npr. Helsinki) → vklopi **SSH support**, zapiši uporabnika (`u123456`).
+   2. Na strežniku kot `deploy`:
+      ```bash
+      mkdir -p /opt/petprep/backup-ssh && chmod 700 /opt/petprep/backup-ssh
+      ssh-keygen -t ed25519 -N '' -f /opt/petprep/backup-ssh/id_ed25519
+      ```
+      nato ustvari `/opt/petprep/backup-ssh/config` (blok `Host storagebox` s `HostName <u123456>.your-storagebox.de`, `User <u123456>`, `Port 23`, `IdentityFile /root/.ssh/id_ed25519`, `UserKnownHostsFile /root/.ssh/known_hosts`, `ServerAliveInterval 60`, `ServerAliveCountMax 5` — točno besedilo v §6b), potem
+      ```bash
+      ssh-keyscan -p 23 <u123456>.your-storagebox.de > /opt/petprep/backup-ssh/known_hosts
+      cat /opt/petprep/backup-ssh/id_ed25519.pub | ssh -p 23 <u123456>@<u123456>.your-storagebox.de install-ssh-key
+      ```
+   3. `/opt/petprep/backup.env` (`chmod 600`; `KEY=value`, brez narekovajev in komentarjev):
+      ```
+      RESTIC_REPOSITORY=sftp:storagebox:petprep
+      RESTIC_PASSWORD=<izhod: openssl rand -base64 48>
+      BACKUP_HEALTHCHECK_URL=https://hc-ping.com/<uuid>
+      ```
+      `RESTIC_PASSWORD` in celoten `/opt/petprep/.env` (APP_KEY!) shrani v upravitelj gesel — brez njiju kopije ni mogoče prebrati / obnoviti. Healthcheck (healthchecks.io, perioda 1 dan, grace 2 h) je neobvezen, a priporočen.
+   4. Prvi zagon + test obnove: `/opt/petprep/scripts/backup-offsite.sh && /opt/petprep/scripts/backup-offsite.sh verify`.
+   5. `crontab -e` (uporabnik `deploy`): `17 2 * * * /opt/petprep/scripts/backup-offsite.sh >> /opt/petprep/backups/offsite.log 2>&1`. Nato `verify` enkrat na mesec.
+8. **Pravni pregled pred javnim zagonom (M5-06)** — pogoji (petprep.si, 10. 10. + #97 24. 10.) in politika zasebnosti (21. 10. #85 / #86, 22. 10. #90, 24. 10. #98) da v pregled pravniku; nato App Store *Kids* / Google Play *Families* pregled. Pripombe pravnika → Claude popravi spletno stran.
+
 ## 2. Decisions
 
 All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top; ~73 rows still marked »čaka Davida«). Standing rules worth knowing before any work:
