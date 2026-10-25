@@ -2560,6 +2560,37 @@
         }
       ],
       "notes": "RKC breed page (dog-data S521, 2026-10-25): heading 'Pre-breeding health screening', subheading 'Best Practice schemes and tests' — DNA vWD2 (imported dogs must be tested; since 6 January 2025 imports qualify for registration only when clear / carrier / hereditarily clear of vWD2 — paraphrase), BVA/KC elbow, BVA/KC/ISDS eye and BVA/KC hip schemes; no minimum list returned. New test key: dna_vwd2."
+    },
+    "saint_bernard": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S529",
+        "quote": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding"
+      },
+      "tests": [
+        {
+          "key": "elbow_scheme",
+          "level": "minimum",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S529",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "minimum",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S529",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "minimum",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S529",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S529, 2026-10-25): the three tests are listed under the minimum recommendation (the page's heading reads 'Good Practice schemes and tests'; no Best Practice list). PDSA (S532) and PetMD (S533) name no further breeder test. No new test key."
     }
   }
 }

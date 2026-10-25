@@ -34447,6 +34447,591 @@
       }
     }
   },
+  "saint_bernard": {
+    "_note": "Added 2026-10-25 (M5-R10-66, unattended run — appended after the German Wirehaired Pointer: AKC 2024 No. 62 'Saint Bernard', S174 full-list table fetched 2026-10-25). Quotes as returned by the web-fetch tool on 2026-10-25 (PDSA and PetMD only in short quotes, 125-character limit; fragments marked as such); paraphrase only in notes. Sources S527–S535 (reused S10, S11, S14, S24, S35, S45, S174). No health percentages anywhere. Identity from the FCI nomenclature (S527, 'ST. BERNARD', No. 61, Switzerland, valid standard 4/4/2016); heights, colours and appearance from FCI-Standard N° 61 as reproduced in the World Union of Saint Bernard Clubs booklet (S528 — the fci.be PDF itself was refused by the fetch tool) and the Royal Kennel Club standard (S530). RKC Breeds A–Z page (S529) reached: key facts, Breed Watch Category 3 and the minimum health tests; the Breed Watch page (S531) gives the points of concern. PDSA (S532, 'Category Three'), PetMD (S533). Weight: no standard gives one → PDSA 54–81 kg (S532). Lifespan: RKC / PDSA 'Under 10 years' have no lower bound and the Dogs Trust McMillan 2024 table (S123) could not be fetched (9.3 years only via Wikipedia, S535, tier C) → the peer-reviewed Kennel Club / BSAVA 2004 survey median of Adams et al. 2010 (S534, 7.0 years) as the closest row; the senior boundary is Claude's suggestion (verified=false, open for David). Names: AKC 'Saint Bernard', RKC / FCI 'St. Bernard'; Slovenian »bernardinec« — no KZS page read, open for David.",
+    "identity": {
+      "value": "FCI No. 61, Group 2 Section 2.2 (Molossoid breeds, Mountain type), Switzerland",
+      "unit": "—",
+      "source_id": "S527",
+      "quote": "ST. BERNARD",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S527, as returned): English name 'ST. BERNARD', group 'n°2 - Pinscher and Schnauzer - Molossoid and Swiss Mountain and Cattledogs', section 'Molossian type' (subsection 'Mountain type'), country of origin 'SWITZERLAND', not subject to a working trial, definitive acceptance 8/28/1954, valid standard 4/4/2016. Switzerland is already in FCI_ORIGINS (CH, Bernese Mountain Dog). Other names (Wikipedia S535, tier C): 'Saint Bernhardog St. Bernhardshund Bernhardiner Alpine Spaniel'."
+    },
+    "size_class": {
+      "value": "giant",
+      "unit": "—",
+      "source_id": "S529",
+      "quote": "Size: Extra large",
+      "confidence": "high",
+      "notes": "RKC breed page key fact (S529) 'Extra large' → giant. PDSA (S532) 'Size: Large' (its page sits under 'large-dogs'); PDSA 54–81 kg = 119–179 lb → the 'Giant' class of S10 for growth. RKC places the breed in the Working group."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            70,
+            90
+          ],
+          "female": [
+            65,
+            80
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S528",
+        "quote": "For males minimum 70 cm, For females minimum 65 cm.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 61 (S528, as reproduced in the W.U.S.B. booklet): minimum 70 cm (males) / 65 cm (females); 'For males maximum 90 cm, For females maximum 80 cm.' — dogs above the maximum are not penalised if balanced and sound (paraphrase). RKC standard (S530) 'Minimum height: dogs 75 cms (30 ins), bitches 70 cms (28 ins).' (no maximum); PDSA (S532) 'Average height: 70-75 cm'; PetMD (S533) 'up to 30 inches tall at the shoulders' — alternatives."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            54,
+            81
+          ],
+          "female": [
+            54,
+            81
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S532",
+        "quote": "54kg-81kg",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average weight' (S532), one range for both sexes — the game range (adult_weight_kg). No standard gives a weight: FCI (S528) none (the W.U.S.B. booklet only gives a rough height-to-weight ratio, paraphrase), RKC (S530) none. PetMD (S533) 'The average weight of a Saint Bernard ranges from 120 to 180 pounds' (≈ 54–82 kg) agrees. Wikipedia (S535, tier C) males 64–82 kg, females 54–64 kg — background only.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                54,
+                82
+              ],
+              "female": [
+                54,
+                82
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S533",
+            "quote": "The average weight of a Saint Bernard ranges from 120 to 180 pounds, and they stand up to 30 inches tall at the shoulders.",
+            "confidence": "medium",
+            "notes": "PetMD (S533), 120–180 lb ≈ 54–82 kg, both sexes."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "VI (>40 kg, no curve)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 54–81 kg = the band '>40 (no curve)'. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "18–24 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Giant (over 100 pounds) | 18–24 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 54–81 kg (S532) = 119–179 lb → 'Giant'. Same 18–24 months as the Mastiff, the Newfoundland and the Bloodhound. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Saint Bernard growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S529",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S529). PDSA (S532) 'Average lifespan: Under 10 years' agrees; PetMD (S533) 'The life expectancy of a Saint Bernard dog is 8–10 years.' Basis of the consider tag shorter_lifespan (no number in the chip). No lower bound → not usable for the senior boundary."
+      },
+      "pdsa": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S532",
+        "quote": "Under 10 years",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average lifespan' (S532). Same band as the RKC."
+      },
+      "petmd": {
+        "value": "8–10",
+        "unit": "years",
+        "source_id": "S533",
+        "quote": "The life expectancy of a Saint Bernard dog is 8–10 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S533, US). Alternative only (0.75 × 8 y lower bound = 72 months)."
+      },
+      "median_kc_survey": {
+        "value": 7.0,
+        "unit": "years",
+        "source_id": "S534",
+        "quote": "Giant St Bernard 700700 53",
+        "confidence": "medium",
+        "notes": "Adams et al. 2010, 'Methods and mortality results of a health survey of purebred dogs in the UK', J Small Anim Pract 51:512–524 (S534, read through ResearchGate), Table 3 (the breeds with the lowest median age at death), St Bernard row as returned by the fetch tool with the decimal points lost: size 'Giant', bodyweight 70.0 kg, median age at death 7.00 years, 53 deaths (Claude's reading of '700700 53'). The Kennel Club / BSAVA 2004 purebred survey — owner-reported, older; the closest peer-reviewed breed median reachable in this run; never shown as a statistic in the app. Abstract (all breeds): 'The median age at death was 11 years and 3 months (minimum=2 months, maximum=23 years and 5 months) and it varied by breed.'"
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Dogs Trust table of McMillan et al. 2024 data (S123): not reachable this run (provenance refusal; the 'shortest and longest' PDF failed at its site; PMC returned a captcha). Wikipedia (S535, tier C): 'A 2024 UK study found a life expectancy of 9.3 years for the breed compared to an average of 12.7 for purebreeds' — not verified in the paper or the table → open for David (0.75 × 9.3 × 12 = 83.7 → senior 84 if confirmed). UNSOURCED value."
+      },
+      "senior_from": {
+        "value": 5.25,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × Adams 2010 survey median 7.0 y (S534) → 0.75 × 7.0 = 5.25 y = 63 months. The runbook rule yields no value: McMillan 2024 not reachable (S123), no VetCompass breed median found, RKC 'Under 10 years' has no lower bound → closest row (Bernese Mountain Dog / Bloodhound precedent): a published breed median, seeded verified=false (Claude's suggestion, open for David). Alternatives: McMillan 2024 9.3 y via Wikipedia (S535, tier C) → 84; Dogs Trust > 7 y (S14) = 84; PetMD lower bound 8 y (S533) → 72.",
+        "derived_from": [
+          "S11",
+          "S534"
+        ],
+        "months": 63,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S529",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S529), runbook first choice → 60 min. PDSA (S532) 'Minimum exercise per day: 1 hour' and 'To keep your Saint Bernard fit and healthy, they’ll need at least an hour of exercise every day once they’re fully grown.' agree; PetMD (S533) 'They have a moderate energy level and need at least one 30-minute walk a day.' (alternative, lower)."
+      },
+      "daily_text": {
+        "value": "at least an hour every day once fully grown",
+        "unit": "—",
+        "source_id": "S532",
+        "quote": "To keep your Saint Bernard fit and healthy, they’ll need at least an hour of exercise every day once they’re fully grown.",
+        "confidence": "high",
+        "notes": "PDSA (S532). 'Usually, Saint Bernards will likely be able to manage more.' (fragment)."
+      },
+      "after_meals": {
+        "value": "leave a gap after eating and before exercising (GDV / bloat)",
+        "unit": "—",
+        "source_id": "S532",
+        "quote": "Remember to leave a gap after eating and before exercising.",
+        "confidence": "high",
+        "notes": "PDSA (S532), feeding section; the same page lists GDV (health.gdv). PetMD (S533): 'Avoid exercise one hour before and one hour after a meal' (fragment) — the game uses David's 60 minutes either way. → proposed_game_parameters.saint_bernard.meal_exercise_gap (built, M5-R16)."
+      },
+      "heat": {
+        "value": "a thick, water-repellent coat — does not do well in the heat; keep cool in summer",
+        "unit": "—",
+        "source_id": "S532",
+        "quote": "They keep them cosy and warm and are water repellent, but this means Saint Bernards don’t do as well in the heat.",
+        "confidence": "high",
+        "notes": "PDSA (S532; the preceding sentence 'Their coats are great in snow and ice.'); 'they’ll need to take extra steps in summer to keep them cool.' (fragment). Basis of heat_sensitive (Samoyed precedent). Not a flat-faced breed → no 'no walk in the heat' rule (DOG_NO_WALK_IN_HEAT)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "friendly by nature; calm to lively; watchful",
+        "unit": "—",
+        "source_id": "S528",
+        "quote": "Friendly by nature. Temperament calm to lively; watchful.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 61 (S528), behaviour / temperament; aggression towards people disqualifies (paraphrase). RKC standard (S530): 'Steady, kindly, intelligent, courageous, trustworthy and benevolent.' PDSA (S532): 'Saint Bernards are known for being gentle giants and suit most families as long as you have the space for a large breed.'"
+      },
+      "family": {
+        "value": "great with people of all ages, including children; a popular family pet; supervise with smaller children (may knock them over)",
+        "unit": "—",
+        "source_id": "S532",
+        "quote": "They love nothing more than being with a family which is why so many people choose them as family pets.",
+        "confidence": "high",
+        "notes": "PDSA (S532). Also 'Saint Bernards are known for being great with people of all ages – which includes children.' and 'You should always supervise them with smaller children and adults unfamiliar with the breed, however,' / 'as they are so big they may accidentally knock them over, especially if they get a bit excited.' (fragments). PetMD (S533): 'Yes, Saint Bernards make great family dogs.' Basis of family_pet."
+      },
+      "children": {
+        "value": "great with children — supervise with smaller children",
+        "unit": "—",
+        "source_id": "S532",
+        "quote": "Saint Bernards are known for being great with people of all ages – which includes children.",
+        "confidence": "high",
+        "notes": "PDSA (S532); supervision caveat for smaller children (behaviour.family). PetMD (S533): 'They are extremely affectionate and do well around young children.' Basis of children (caveat kept); never small_children (PDSA caveat) and no not_for_small_children (PDSA advises supervision, not against). "
+      },
+      "time_alone": {
+        "value": "people-oriented — can develop separation anxiety if left alone for long periods; never alone more than four hours",
+        "unit": "—",
+        "source_id": "S533",
+        "quote": "As people-orientated dogs, Saint Bernards can develop separation anxiety if they're left alone for long periods of time.",
+        "confidence": "high",
+        "notes": "PetMD (S533). PDSA (S532): 'they should never be left for more than four hours on an average day.' (fragment). Basis of needs_company."
+      },
+      "other_pets": {
+        "value": "low prey drive (PetMD); take care introducing them to cats and small pets (PDSA)",
+        "unit": "—",
+        "source_id": "S533",
+        "quote": "Most Saint Bernards have a low prey drive and do well around other animals when socialized from a young age.",
+        "confidence": "medium",
+        "notes": "PetMD (S533). PDSA (S532): 'make sure you take care introducing them to cats and small pets' (fragment) and supervise the first introductions (paraphrase). Conflicting emphasis → neither other_pets nor chases_small_pets (no high-prey-drive quote)."
+      },
+      "socialisation": {
+        "value": "well socialised as puppies so they grow into confident and happy adults",
+        "unit": "—",
+        "source_id": "S532",
+        "quote": "It’s important that Saint Bernards are well socialised as puppies so they grow into confident and happy adults.",
+        "confidence": "high",
+        "notes": "PDSA (S532). PetMD (S533): 'Training and socialization from an early age is crucial when caring for a Saint Bernard.' A need (runbook M5-R17) → proposed_game_parameters.saint_bernard.socialisation (DOG_SOCIALISATION row)."
+      },
+      "training": {
+        "value": "ongoing, positive reward-based training; teach not to jump up from an early age",
+        "unit": "—",
+        "source_id": "S532",
+        "quote": "Training will have to be ongoing with Saint Bernards as they can pick up bad habits quickly",
+        "confidence": "high",
+        "notes": "PDSA (S532, fragment); 'Training your Saint Bernard not to jump up from an early age is vital.' PetMD (S533): 'Saint Bernards are kind, loving, and have a strong desire to please their families.'"
+      },
+      "drooling": {
+        "value": "known for drooling",
+        "unit": "—",
+        "source_id": "S532",
+        "quote": "Saint Bernards are also known for their drooling.",
+        "confidence": "high",
+        "notes": "PDSA (S532); 'If you have one, you’ll become very used to cleaning drool off their face, your floor and every other surface' (fragment). PetMD (S533): 'Make sure you keep the area around their mouth clean' (fragment). Basis of drools."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No chewing statement found → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag. PDSA (S532): split the daily allowance into two meals; treats no more than 10 % of calories (general advice)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 3 (S529, S531: eyelids not in normal contact with the eyeball, bite, dentition, movement, hind conformation); PDSA (S532) 'Category Three'. Welfare rule §3 → eyelid_problems and hips_hind_legs. Breeder checklist: RKC minimum tests — BVA/KC elbow and hip schemes, BVA/KC/ISDS eye scheme (S529).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 3 — eyelids, bite, dentition, movement, hind conformation",
+        "unit": "—",
+        "source_id": "S531",
+        "quote": "Eyelids not in normal contact with the eyeball, they are turned inwards or outwards",
+        "confidence": "high",
+        "notes": "RKC Breed Watch 'St. Bernard - Category 3' (S531), points of concern for special attention by judges: the eyelid point above, 'Incorrect bite', 'Incorrect dentition', 'Unsound movement', 'Incorrect hind conformation and/or poor rear movement'. RKC breed page (S529): Category 3. PDSA (S532): 'Saint Bernards are in a group of breeds classed as 'Category Three' by The Kennel Club.' (fragment) and 'This means they have health concerns due to the way they look.' Basis of eyelid_problems and hips_hind_legs."
+      },
+      "eyelids": {
+        "value": "eyelids turned inwards or outwards (entropion / ectropion)",
+        "unit": "—",
+        "source_id": "S531",
+        "quote": "Eyelids not in normal contact with the eyeball, they are turned inwards or outwards",
+        "confidence": "high",
+        "notes": "Breed Watch point (S531). FCI (S528) disqualifies ectropion or entropion (paraphrase); RKC standard (S530) 'Excessive haw unacceptable.'; PetMD (S533) lists entropion; PDSA (S532): 'Because of their shape and droopiness around their faces,' / 'you’ll need to clean your Saint Bernard’s eyes and skin folds regularly.' (fragments). Basis of eyelid_problems (welfare rule). Register health key eyelids_turned."
+      },
+      "hind_conformation": {
+        "value": "incorrect hind conformation and/or poor rear movement",
+        "unit": "—",
+        "source_id": "S531",
+        "quote": "Incorrect hind conformation and/or poor rear movement",
+        "confidence": "high",
+        "notes": "Breed Watch point (S531); hip and elbow dysplasia, cruciate ligament disease (health.hip_elbow_dysplasia, health.cruciate). Basis of hips_hind_legs (welfare rule, Mastiff precedent)."
+      },
+      "hip_elbow_dysplasia": {
+        "value": "hip and elbow dysplasia; osteochondrosis dissecans (OCD) of the elbow",
+        "unit": "—",
+        "source_id": "S532",
+        "quote": "Hip dysplasia – where hip joint that doesn’t fit together perfectly, which will eventually lead to arthritis.",
+        "confidence": "high",
+        "notes": "PDSA (S532); also 'Elbow dysplasia – where the elbow joint that doesn’t fit together perfectly, which will eventually lead to arthritis.' and 'Osteochondrosis dissecans (OCD) – a problem with the cartilage in the elbow causing joint pain and limping.' RKC minimum hip and elbow schemes (S529). Register health key hip_elbow_dysplasia."
+      },
+      "cruciate": {
+        "value": "cruciate ligament disease",
+        "unit": "—",
+        "source_id": "S532",
+        "quote": "Cruciate ligament disease – this can cause the knee joint to become very wobbly and painful.",
+        "confidence": "high",
+        "notes": "PDSA (S532). Research only (no register key)."
+      },
+      "gdv": {
+        "value": "gastric dilatation-volvulus (GDV, bloat)",
+        "unit": "—",
+        "source_id": "S532",
+        "quote": "Gastric Dilatation Volvulus (GDV) – where a dog’s tummy bloats and twists around on itself, which is an emergency and can be fatal.",
+        "confidence": "high",
+        "notes": "PDSA (S532). PetMD (S533) lists bloat / GDV and advises two or three smaller meals a day (paraphrase). → meal_exercise_gap (M5-R16). Register health key bloat_gdv."
+      },
+      "heart": {
+        "value": "dilated cardiomyopathy (DCM)",
+        "unit": "—",
+        "source_id": "S532",
+        "quote": "Dilated cardiomyopathy (DCM) - disease of the heart muscle that causes weakened contractions and poor pumping ability, leading to heart failure.",
+        "confidence": "high",
+        "notes": "PDSA (S532). Register health key heart_muscle_disease."
+      },
+      "cancer": {
+        "value": "certain cancers — especially bone cancer (osteosarcoma)",
+        "unit": "—",
+        "source_id": "S532",
+        "quote": "Certain cancers – especially aggressive bone cancer (osteosarcoma).",
+        "confidence": "high",
+        "notes": "PDSA (S532); PetMD (S533) lists osteosarcoma and lymphoma. Register health key certain_cancers."
+      },
+      "wobbler": {
+        "value": "wobbler syndrome",
+        "unit": "—",
+        "source_id": "S533",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S533) health list (paraphrase — the condition named, no sentence returned). Research only."
+      },
+      "skin_ears": {
+        "value": "skin problems around the lip folds; ear problems",
+        "unit": "—",
+        "source_id": "S532",
+        "quote": "Skin problems around their lip folds and ear problems.",
+        "confidence": "high",
+        "notes": "PDSA (S532). Care: 'You’ll also need to check their ears regularly to stop any nasties and give them a clean.' (suitability.pdsa_care); PetMD ear cleaning every two to three weeks (suitability.petmd_ears). No Breed Watch skin point → no sensitive_skin (Bloodhound precedent). Research only."
+      },
+      "shorter_lifespan": {
+        "value": "a shorter life than most breeds — under ten years",
+        "unit": "—",
+        "source_id": "S529",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "RKC (S529) and PDSA (S532) 'Under 10 years'; Adams 2010 survey median 7.0 y (S534) — research only. Basis of the consider tag shorter_lifespan — a calm chip, no number."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 65,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Saint Bernard",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-25): rank 65 shared by 'Scottish Terrier' and 'Saint Bernard' (as returned: '| 65 | Scottish Terrier |' then 'Saint Bernard'), tier 'Fair Working/Obedience Intelligence' (ranks 55–69). Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Fair",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier 'Fair Working/Obedience Intelligence' (ranks 55–69)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.saint_bernard.learning_multiplier (0.7, runbook rule: Fair tier, rank 65).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "large, well-proportioned mountain-rescue dog of great substance; two varieties — short-haired and long-haired",
+        "unit": "—",
+        "source_id": "S530",
+        "quote": "Well proportioned and of great substance.",
+        "confidence": "high",
+        "notes": "RKC standard (S530), general appearance; characteristics 'Distinctly marked, large-sized, mountain-rescue dog.' FCI (S528): 'There are two varieties of the St. Bernard : Short-haired variety (double coat, \"Stockhaar\") and Longhaired variety.'"
+      },
+      "colours": {
+        "value": [
+          "red_and_white",
+          "white_with_red_patches",
+          "red_brindle_and_white"
+        ],
+        "unit": "list",
+        "source_id": "S530",
+        "quote": "Orange, mahogany-brindle, red-brindle, white with patches on body of any of the above named colours.",
+        "confidence": "high",
+        "notes": "RKC standard (S530); markings 'White muzzle, white blaze on face, white collar, white chest, white forelegs,' / 'feet and end of tail, black shadings on face and ears.'; 'Any other colour or combination of colours unacceptable.' FCI (S528): white with red patches up to a clear to dark red mantle, brindle reddish-brown permissible, dark mask desirable; disqualifying 'Solid white or solid reddish-brown coat (absence of the primary colour),' and 'Coat of any other colour as well as flesh coloured nostrils.' Never solid white, solid red, black, merle or tricolour."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Red mantle with white markings and a dark mask first with the highest weight (the portrait default), then white with red patches, then red-brindle and white."
+      },
+      "coat": {
+        "value": "short-haired (smooth): dense, close-lying, coarse with plenty of undercoat; long-haired (rough): medium-length straight topcoat",
+        "unit": "—",
+        "source_id": "S528",
+        "quote": "Short-haired variety (stockhaar, double coat) : topcoat dense, smooth; close lying and coarse.",
+        "confidence": "high",
+        "notes": "FCI (S528); 'Long-haired variety : topcoat straight, of medium length with plenty of undercoat.' RKC (S530): roughs 'dense and flat, rather fuller round neck, thighs and tail well feathered.', smooths 'close and hound-like, slight feathering on thighs and tail.' RKC key fact 'Coat length: Short' (S529). The game portrait is the short-haired variety."
+      },
+      "nose": {
+        "value": "black, broad and square, nostrils well opened",
+        "unit": "—",
+        "source_id": "S528",
+        "quote": "Nose: black, broad and square. Nostrils well opened.",
+        "confidence": "high",
+        "notes": "FCI (S528). Not a flat-faced breed."
+      },
+      "eyes": {
+        "value": "medium size, dark brown to nut-brown, eyelids reasonably tight",
+        "unit": "—",
+        "source_id": "S530",
+        "quote": "Of medium size, neither deep set nor prominent, eyelids should be reasonably tight.",
+        "confidence": "high",
+        "notes": "RKC standard (S530); 'Excessive haw unacceptable.'; 'Dark in colour and not staring.'; 'There should be no excessive loose wrinkle on brow which would detract from a healthy eye.' FCI (S528): 'Natural tightness of lids desired.' The game shows tight, healthy eyelids (welfare rule)."
+      },
+      "ears": {
+        "value": "medium size, lying close to the cheeks",
+        "unit": "—",
+        "source_id": "S530",
+        "quote": "Medium size, lying close to cheeks, not heavily feathered.",
+        "confidence": "high",
+        "notes": "RKC standard (S530)."
+      },
+      "tail": {
+        "value": "long and heavy, carried low in repose, never curled over the back",
+        "unit": "—",
+        "source_id": "S530",
+        "quote": "Set on rather high, long, carried low when in repose, when excited or in motion should not curl over back.",
+        "confidence": "high",
+        "notes": "RKC standard (S530); FCI (S528) 'Set-on broad and strong. Tail long and heavy.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S529), PDSA (S532) and PetMD (S533). RKC key facts reached on 2026-10-25. Woodgreen not attempted.",
+      "rkc_size": {
+        "value": "Extra large",
+        "unit": "—",
+        "source_id": "S529",
+        "quote": "Size: Extra large",
+        "confidence": "high",
+        "notes": "RKC key fact (S529)."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S529",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S529) → 60 min. Not active_family / long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S529",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "RKC key fact (S529) → large_home; never apartment."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S529",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S529)."
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S529",
+        "quote": "Grooming: More than once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S529) — no number → PDSA 'at least three times a week' (S532) → brushing 3× a week (M5-R13 rule). Basis of frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S529",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": "RKC key fact (S529); PDSA (S532) 'Coat length: Short'."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S529",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "RKC key fact (S529). Basis of sheds."
+      },
+      "rkc_lifespan": {
+        "value": "Under 10 years",
+        "unit": "—",
+        "source_id": "S529",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S529) → shorter_lifespan."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S529",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S529). Background only."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S529",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "RKC key fact (S529)."
+      },
+      "pdsa_grooming": {
+        "value": "brush at least three times a week",
+        "unit": "—",
+        "source_id": "S532",
+        "quote": "Brushing them at least three times a week will help you keep on top of all the dead hair.",
+        "confidence": "high",
+        "notes": "PDSA (S532) → brushing 3× a week (M5-R13). PetMD (S533): 'However, both medium-coated and short-coated Saint Bernards should be brushed once or twice weekly.' and daily during heavy shedding (alternative, open for David)."
+      },
+      "pdsa_care": {
+        "value": "eyes and skin folds cleaned regularly; ears checked regularly and cleaned",
+        "unit": "—",
+        "source_id": "S532",
+        "quote": "You’ll also need to check their ears regularly to stop any nasties and give them a clean.",
+        "confidence": "high",
+        "notes": "PDSA (S532); also 'you’ll need to clean your Saint Bernard’s eyes and skin folds regularly.' (fragment) — no frequency → no fold-cleaning task (runbook »Breed care tasks«: no number → no task; fact in the breed text)."
+      },
+      "petmd_ears": {
+        "value": "ears cleaned every two to three weeks (and after baths and swims)",
+        "unit": "—",
+        "source_id": "S533",
+        "quote": "Cleaning their ears with a veterinarian-recommended ear cleaner every two to three weeks",
+        "confidence": "medium",
+        "notes": "PetMD (S533, start of the sentence as returned; continues '(and after all baths and swim sessions) will help prevent ear infections.'). → proposed_game_parameters.saint_bernard.ear_care (built, M5-R20: every 2 weeks, the lower bound)."
+      },
+      "petmd_grooming": {
+        "value": "frequent brushing, occasional bathing, regular nail trimming",
+        "unit": "—",
+        "source_id": "S533",
+        "quote": "They both require frequent coat brushing, occasional bathing, and regular nail trimming.",
+        "confidence": "medium",
+        "notes": "PetMD (S533). Bath 'occasional' and nails 'regular' have no number → no task (runbook »Breed care tasks«)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -51607,6 +52192,358 @@
         "confidence": "high",
         "notes": "Colours from the RKC / FCI / AKC standards (S522, S520, S523) — only those all three accept; never solid black or tricolour. Weights unsourced. Natural undocked tail (RKC S522 undocked description).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): liver roan with liver patches is the portrait default; natural undocked tail"
+      }
+    },
+    "saint_bernard": {
+      "_note": "Unattended run M5-R10-66 (2026-10-25): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry — except the senior boundary (Claude's suggestion, verified=false). No new vocabulary key, no new register health key. Sourced needs built from day one: brushing 3× a week (RKC 'More than once a week' → PDSA S532 'at least three times a week', M5-R13); puppy socialisation (PDSA S532 quote, M5-R17); the 'wait with the walk' digestion warning (PDSA S532 gap quote, M5-R16); ear cleaning every 2 weeks (PetMD S533 'every two to three weeks', M5-R20). No frequency in any source for eye / skin-fold cleaning, nails, teeth, baths or a groomer → no task. Exercise from RKC (S529, up to 1 hour; PDSA agrees). Senior 63 from the Adams 2010 survey median 7.0 y (S534) — closest row, open for David (McMillan 2024 9.3 y only via Wikipedia → 84). RKC Breed Watch Category 3 (S529, S531) → eyelid_problems, hips_hind_legs; in marketing.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S529",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'Up to 1 hour per day' (S529). Rule: one number N ('up to N') → N = 60. PDSA (S532) 'at least an hour' agrees; PetMD (S533) 'at least one 30-minute walk a day' — alternative.",
+        "alternatives": [
+          {
+            "value": 30,
+            "source_id": "S533",
+            "notes": "PetMD 'at least one 30-minute walk a day' (lower; the runbook prefers the RKC)"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S529 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S529",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 63
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 63 = round(0.75 × 7.0 y × 12) = 63 (S11 + Adams 2010 survey median 7.0 y, S534 — no McMillan 2024 value reachable, no VetCompass median, RKC 'Under 10 years' has no lower bound). The senior value is Claude's suggestion — see senior_boundary_months.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S534"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia_9_3_y": 84,
+          "senior_dogs_trust_7_y": 84,
+          "senior_petmd_lower_bound_8_y": 72
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 63 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+      },
+      "senior_boundary_months": {
+        "value": 63,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "round(0.75 × 7.0 y × 12) = 63 (AAHA last 25 % of lifespan S11 × Adams et al. 2010 Kennel Club / BSAVA survey median 7.0 y, S534). The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value in this run: the Dogs Trust table S123 was refused by the fetch tool, no VetCompass Saint Bernard median, and the RKC band 'Under 10 years' has no lower bound. Closest row (Bernese Mountain Dog / Bloodhound precedent) = a published breed median. Alternatives: McMillan 2024 9.3 y via Wikipedia (S535, tier C) → round(83.7) = 84; Dogs Trust > 7 y (S14) = 84; PetMD lower bound 8 y (S533) → 72. Seeded with verified=false (also the senior arrival age); the seeder is insert-only, so a later change needs a Filament edit or a data migration.",
+        "derived_from": [
+          "S11",
+          "S534"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia_9_3_y": 84,
+          "senior_dogs_trust_7_y": 84,
+          "senior_petmd_lower_bound_8_y": 72
+        },
+        "decision": "predlog Claude 2026-10-25 (najbližja vrstica pravila runbooka, M5-R10-66) — čaka Davida; ni potrjeno"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 63
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36); senior 63 follows the unconfirmed senior boundary (senior_boundary_months)"
+      },
+      "learning_multiplier": {
+        "value": 0.7,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 65 (S35), tier 'Fair' (55–69) → 0.7 (as the Pug r57, the Scottish Terrier r65). No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 65, Fair tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources. PDSA (S532): split the daily allowance into two meals; PetMD (S533) two or three smaller meals (general advice — the game keeps its meal windows).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 3,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S532",
+        "quote": "Brushing them at least three times a week will help you keep on top of all the dead hair.",
+        "confidence": "high",
+        "notes": "saint_bernard.suitability.pdsa_grooming. RKC (S529) 'Grooming: More than once a week' has no number → the most specific number of another A/B source: PDSA 'at least three times a week' → 3 (runbook »Dog grooming«). PetMD (S533) 'once or twice weekly' (daily while shedding) — alternative, open for David. Built in M5-R13; matted coat at ceil(3 / 2) = 2 missed.",
+        "alternatives": [
+          {
+            "value": 2,
+            "source_id": "S533",
+            "quote": "However, both medium-coated and short-coated Saint Bernards should be brushed once or twice weekly."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): RKC »More than once a week« brez števila → PDSA »at least three times a week« → 3; mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S532",
+        "quote": "Remember to leave a gap after eating and before exercising.",
+        "confidence": "high",
+        "notes": "PDSA (S532), saint_bernard.exercise.after_meals; the same page lists GDV (health.gdv). PetMD (S533) 'Avoid exercise one hour before and one hour after a meal' agrees. Built in M5-R16: 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S532",
+        "quote": "It’s important that Saint Bernards are well socialised as puppies so they grow into confident and happy adults.",
+        "confidence": "high",
+        "notes": "saint_bernard.behaviour.socialisation (PDSA S532, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PDSA S532)"
+      },
+      "ear_care": {
+        "value": "ears cleaned every two to three weeks",
+        "unit": "care routine (sourced need)",
+        "source_id": "S533",
+        "quote": "Cleaning their ears with a veterinarian-recommended ear cleaner every two to three weeks",
+        "confidence": "medium",
+        "notes": "PetMD (S533, start of the sentence as returned), saint_bernard.suitability.petmd_ears. Built: the child's ear-cleaning mini-game once every 2 program weeks (range → the lower bound; BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R20). PDSA (S532) 'check their ears regularly' has no number.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »every two to three weeks« → spodnja meja, 1× na 2 tedna"
+      },
+      "eye_fold_care": {
+        "value": "eyes and skin folds cleaned regularly; mouth kept clean of drool",
+        "unit": "care fact (no frequency)",
+        "source_id": "S532",
+        "quote": "you’ll need to clean your Saint Bernard’s eyes and skin folds regularly.",
+        "confidence": "high",
+        "notes": "PDSA (S532, fragment; preceded by 'Because of their shape and droopiness around their faces,') — no frequency; PetMD (S533) eyes 'as needed', mouth kept clean (no number). Runbook »Breed care tasks« (David 2026-10-24): no frequency → no task; the fact stays in the breed text and the register.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R14): brez pogostosti v viru → brez naloge (dejstvo v besedilu pasme)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-66); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S532"
+            ],
+            "refs": [
+              "saint_bernard.behaviour.family"
+            ],
+            "quote": "S532 'They love nothing more than being with a family which is why so many people choose them as family pets.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S532"
+            ],
+            "refs": [
+              "saint_bernard.behaviour.children"
+            ],
+            "quote": "S532 'Saint Bernards are known for being great with people of all ages – which includes children.'",
+            "note": "Supervision caveat for smaller children kept in notes (behaviour.family); never small_children."
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S529"
+            ],
+            "refs": [
+              "saint_bernard.suitability.rkc_size_of_home",
+              "saint_bernard.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S529 'Size of home: Large house' / 'Size of garden: Large garden'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S529"
+            ],
+            "refs": [
+              "saint_bernard.health.shorter_lifespan",
+              "saint_bernard.lifespan.rkc"
+            ],
+            "quote": "S529 'Lifespan: Under 10 years'"
+          },
+          {
+            "tag": "eyelid_problems",
+            "source_ids": [
+              "S531"
+            ],
+            "refs": [
+              "saint_bernard.health.eyelids",
+              "saint_bernard.health.breed_watch"
+            ],
+            "quote": "S531 'Eyelids not in normal contact with the eyeball, they are turned inwards or outwards'",
+            "note": "Welfare rule §3 (RKC Breed Watch Category 3, S529 / S531), as the Mastiff."
+          },
+          {
+            "tag": "hips_hind_legs",
+            "source_ids": [
+              "S531",
+              "S532"
+            ],
+            "refs": [
+              "saint_bernard.health.hind_conformation",
+              "saint_bernard.health.hip_elbow_dysplasia"
+            ],
+            "quote": "S531 'Incorrect hind conformation and/or poor rear movement'; S532 hip dysplasia",
+            "note": "Welfare rule §3 (Breed Watch hindquarter point), as the Mastiff."
+          },
+          {
+            "tag": "heat_sensitive",
+            "source_ids": [
+              "S532"
+            ],
+            "refs": [
+              "saint_bernard.exercise.heat"
+            ],
+            "quote": "S532 'They keep them cosy and warm and are water repellent, but this means Saint Bernards don’t do as well in the heat.'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S533"
+            ],
+            "refs": [
+              "saint_bernard.behaviour.time_alone"
+            ],
+            "quote": "S533 'As people-orientated dogs, Saint Bernards can develop separation anxiety if they're left alone for long periods of time.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S529"
+            ],
+            "refs": [
+              "saint_bernard.suitability.rkc_shedding"
+            ],
+            "quote": "S529 'Sheds: Yes'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S529",
+              "S532"
+            ],
+            "refs": [
+              "saint_bernard.suitability.rkc_grooming",
+              "saint_bernard.suitability.pdsa_grooming"
+            ],
+            "quote": "S529 'Grooming: More than once a week'; S532 'Brushing them at least three times a week will help you keep on top of all the dead hair.'"
+          },
+          {
+            "tag": "drools",
+            "source_ids": [
+              "S532"
+            ],
+            "refs": [
+              "saint_bernard.behaviour.drooling"
+            ],
+            "quote": "S532 'Saint Bernards are also known for their drooling.'"
+          }
+        ],
+        "not_proposed": {
+          "active_family": "RKC 'Up to 1 hour per day' (S529) — not a long-exercise breed.",
+          "long_daily_exercise": "60 min (S529).",
+          "small_children": "PDSA: supervise with smaller children — they may knock them over (S532); PetMD 'do well around young children' (S533) — the caveat wins.",
+          "not_for_small_children": "PDSA advises supervision, not against smaller children (S532) — Newfoundland precedent.",
+          "first_time_owner": "No statement on the pages read.",
+          "experienced_owner": "No statement on the pages read.",
+          "apartment": "RKC 'Large house' (S529).",
+          "other_pets": "PetMD low prey drive (S533) vs PDSA 'take care introducing them to cats and small pets' (S532) — conflicting.",
+          "chases_small_pets": "No high-prey-drive quote (PetMD: low prey drive).",
+          "often_alone": "PetMD separation anxiety (S533) → needs_company.",
+          "low_shedding": "RKC 'Sheds: Yes' (S529) → sheds.",
+          "sensitive_skin": "Lip-fold skin problems are in the PDSA health list (S532) but the Breed Watch points (S531) name no skin point → research only (Bloodhound precedent).",
+          "brachycephalic_breathing": "Not a flat-faced breed (FCI 'Nostrils well opened', S528).",
+          "welfare": "RKC Breed Watch Category 3 (S529, S531) → eyelid_problems, hips_hind_legs; bite / dentition / movement points have no chip."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children, large_home; consider shorter_lifespan, eyelid_problems, hips_hind_legs, heat_sensitive, needs_company, sheds, frequent_grooming, drools"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (no veterinary advice against advertising the breed type)",
+        "unit": "—",
+        "source_id": "S529",
+        "quote": "Category 3",
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 3 (S529, S531; PDSA S532 'Category Three') → welfare chips in the app (eyelid_problems, hips_hind_legs); the only veterinary advice against advertising a breed type is for flat-faced breeds (BVA S92). Marketing never promises health; never with small children unsupervised (S532), never with drooping eyelids, heavy loose facial skin or an overweight dog, never as a rescue / barrel dog cliché. Open for David: a Category 3 breed in marketing.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (welfare chips, no veterinary advice against advertising)"
+      },
+      "ai_appearance": {
+        "value": "adult short-haired Saint Bernard, red mantle with white markings (muzzle, blaze, collar, chest, feet, tail tip) and a dark mask (default); large, well-proportioned, powerful mountain dog; dense, close-lying double coat; tight, healthy eyelids with no visible haw; moderate lips and facial skin (never heavy, drooping or drooling); black nose; medium ears close to the cheeks; long heavy tail carried low; never solid white, solid red, black, merle or tricolour; no barrel",
+        "unit": "—",
+        "source_id": "S530",
+        "quote": "Orange, mahogany-brindle, red-brindle, white with patches on body of any of the above named colours.",
+        "confidence": "high",
+        "notes": "Colours of the RKC (S530) and FCI (S528) standards. Welfare (RKC Breed Watch Category 3, S531): eyelids in normal contact, moderate face, sound hindquarters. Weights unsourced in prompts. Red and white with a dark mask as the portrait default — Claude's choice (the most typical FCI mantle colouring, S528).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): red and white with a dark mask is the portrait default; standard colours only (red mantle / white with red patches / red-brindle and white); tight eyelids, moderate face (welfare)"
       }
     }
   }
