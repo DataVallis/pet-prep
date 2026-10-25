@@ -34,6 +34,7 @@
 
 1. **Object Storage za medije ljubljenčkov (M4-05, D23)** — koda je v produkciji izklopljena, nič ne tvega, dokler ne narediš 1.3.
    1. Hetzner Console → *Object Storage* → **Create bucket**: ime `petprep-media`, lokacija **fsn1**, visibility **Private**. Nato *Generate credentials* → access key + secret (prikazano samo enkrat → upravitelj gesel).
+   ✅ **1.1 in 1.2 narejeno (David 25. 10. 2026):** bucket `petprep-media` (fsn1, private) in ključi ustvarjeni, `PET_MEDIA_S3_BUCKET` / `_KEY` / `_SECRET` / `_ENDPOINT` / `_REGION` vpisani v `/opt/petprep/.env`. **Še odprto:** ploščica »Media storage« po naslednji namestitvi (preveri David), 1.3 zrcalo, nato selitev s Claudom.
    2. Na strežniku (`ssh -i ~/.ssh/petprep_deploy_key deploy@138.199.172.97`) dodaj v `/opt/petprep/.env` (`PET_MEDIA_DISK` še **ne** dodajaj):
       ```
       PET_MEDIA_S3_BUCKET=petprep-media
