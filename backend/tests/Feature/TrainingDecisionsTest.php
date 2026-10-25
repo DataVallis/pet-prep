@@ -274,7 +274,7 @@ describe('confirmed numbers (5 min, +1, −2)', function () {
         }
         expect(BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false)
             // M5-R10-12 / M5-R10-23 / M5-R10-32 / M5-R10-57: the Bernese (76), Cane Corso (84), Miniature American Shepherd (108) Samoyed (90), Scottish Terrier (90, M5-R10-58) Bloodhound (61, M5-R10-62) and Akita (89, M5-R10-63) senior boundaries are separate open proposals — LifeStageDataTest / their breed tests.
-            ->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'samoyed', 'scottish-terrier', 'bloodhound', 'akita']) // dogs; cats: CatLifeStageDataTest
+            ->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'samoyed', 'scottish-terrier', 'bloodhound', 'akita', 'saint-bernard']) // dogs; cats: CatLifeStageDataTest
             // M5-R13: the five "more than once a week" brushing rows (2/week) are Claude's proposals — DogGroomingTest / LifeStageDataTest.
             ->where('key', '!=', 'grooming_sessions_per_week')
             ->pluck('key')->unique()->values()->all())->toBe(['chewing_chance_per_day']);
@@ -375,7 +375,7 @@ describe('confirmed effects (potty 0.75, place 0.5)', function () {
         // The only open proposal left is M5-R02's teething chewing chance.
         expect(BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false)
             // M5-R10-12 / M5-R10-23 / M5-R10-32 / M5-R10-57: the Bernese (76), Cane Corso (84), Miniature American Shepherd (108) Samoyed (90), Scottish Terrier (90, M5-R10-58) Bloodhound (61, M5-R10-62) and Akita (89, M5-R10-63) senior boundaries are separate open proposals — LifeStageDataTest / their breed tests.
-            ->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'samoyed', 'scottish-terrier', 'bloodhound', 'akita']) // dogs; cats: CatLifeStageDataTest
+            ->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'samoyed', 'scottish-terrier', 'bloodhound', 'akita', 'saint-bernard']) // dogs; cats: CatLifeStageDataTest
             // M5-R13: the five "more than once a week" brushing rows (2/week) are Claude's proposals — DogGroomingTest / LifeStageDataTest.
             ->where('key', '!=', 'grooming_sessions_per_week')
             ->pluck('key')->unique()->values()->all())->toBe(['chewing_chance_per_day']);
@@ -413,7 +413,7 @@ describe('confirmed effects (potty 0.75, place 0.5)', function () {
         }
         expect(BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false)
             // M5-R10-12 / M5-R10-23 / M5-R10-32 / M5-R10-57: the Bernese (76), Cane Corso (84), Miniature American Shepherd (108) Samoyed (90), Scottish Terrier (90, M5-R10-58) Bloodhound (61, M5-R10-62) and Akita (89, M5-R10-63) senior boundaries are separate open proposals — LifeStageDataTest / their breed tests.
-            ->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'samoyed', 'scottish-terrier', 'bloodhound', 'akita']) // dogs; cats: CatLifeStageDataTest
+            ->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'samoyed', 'scottish-terrier', 'bloodhound', 'akita', 'saint-bernard']) // dogs; cats: CatLifeStageDataTest
             // M5-R13: the five "more than once a week" brushing rows (2/week) are Claude's proposals — DogGroomingTest / LifeStageDataTest.
             ->where('key', '!=', 'grooming_sessions_per_week')
             ->pluck('key')->unique()->values()->all())->toBe(['chewing_chance_per_day']);

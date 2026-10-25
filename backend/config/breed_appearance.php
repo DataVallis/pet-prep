@@ -574,6 +574,16 @@
 | undesirable") — liver roan weighted highest (the register portrait). Natural undocked tail "Reaching to the hocks"
 | (RKC S522). RKC Breed Watch Category 1 (S521). Colour weights unsourced → `verified => false`.
 |
+| Saint Bernard (M5-R10-66, docs/research/dog-data saint_bernard.appearance): "Well proportioned and of great
+| substance." (RKC standard S530); two varieties — the portrait shows the short-haired one (RKC key fact "Coat length:
+| Short", S529; FCI S528 "topcoat dense, smooth; close lying and coarse"). Colours: only those the standards list (RKC
+| S530 "Orange, mahogany-brindle, red-brindle, white with patches on body …"; FCI S528 white with red patches up to a
+| red mantle, brindle permissible) with the white markings (muzzle, blaze, collar, chest, feet, tail tip) — red mantle
+| with a dark mask weighted highest (the register portrait); never solid white, solid red, black, merle or tricolour.
+| Welfare breed (RKC Breed Watch Category 3, S531: eyelids turned inwards or outwards, hind conformation) → a `head`
+| trait with tight, healthy eyelids, no visible haw and moderate lips (never heavy, drooping or drooling) and sound,
+| well-angulated hindquarters in `build`. Colour weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -2972,6 +2982,41 @@ return [
             'tail' => ['natural undocked tail reaching to the hocks, carried straight or slightly sabre-like'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+
+    // M5-R10-66 (docs/research/dog-data/data.json saint_bernard.appearance; runbook rules 2026-10-10:
+    // standard colours only — S530 / S528; short-haired variety; welfare: tight eyelids, moderate face — S531).
+    'saint_bernard' => [
+        'display_name' => 'Saint Bernard',
+        // Colour frequencies are in no source (saint_bernard.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'Royal Kennel Club breed standard (S530), FCI-Standard N° 61 (S528, W.U.S.B. copy of https://fci.be/Nomenclature/Standards/061g02-en.pdf), RKC breed page (S529), RKC Breed Watch (S531) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S529 "Size: Extra large"; S528 "For males minimum 70 cm, For females minimum 65 cm."',
+            'build' => 'S530 "Well proportioned and of great substance."; S531 "Incorrect hind conformation and/or poor rear movement" (sound hindquarters — welfare)',
+            'coat_length' => 'S528 "Short-haired variety (stockhaar, double coat) : topcoat dense, smooth; close lying and coarse."; S529 "Coat length: Short"',
+            'coat_color' => 'S530 "Orange, mahogany-brindle, red-brindle, white with patches on body of any of the above named colours." (weights unsourced)',
+            'head' => 'S528 "Nose: black, broad and square. Nostrils well opened."; S530 "Excessive haw unacceptable."; S531 "Eyelids not in normal contact with the eyeball, they are turned inwards or outwards" (tight eyelids — welfare)',
+            'ear_carriage' => 'S530 "Medium size, lying close to cheeks, not heavily feathered."',
+            'eye_color' => 'S530 "Of medium size, neither deep set nor prominent, eyelids should be reasonably tight."',
+            'tail' => 'S530 "Set on rather high, long, carried low when in repose, when excited or in motion should not curl over back."',
+        ],
+        'traits' => [
+            'size' => ['giant'],
+            'build' => [['value' => 'giant, well-proportioned and powerful mountain dog with sound, well-angulated hindquarters', 'weight' => 3], 'massive but balanced body with a broad chest'],
+            'coat_length' => ['short-haired variety: dense, smooth, close-lying double coat'],
+            // RKC / FCI standards (S530, S528); red mantle with a dark mask weighted highest (the register portrait).
+            'coat_color' => [
+                ['value' => 'red mantle with white markings on the muzzle, blaze, collar, chest, feet and tail tip and a dark mask', 'weight' => 5],
+                ['value' => 'white with red patches', 'weight' => 3],
+                ['value' => 'red-brindle and white', 'weight' => 2],
+            ],
+            'head' => ['broad, powerful head with a black nose, moderate lips and tight, healthy eyelids — no visible haw, never heavy, drooping or drooling'],
+            'ear_carriage' => ['medium-sized ears lying close to the cheeks'],
+            'eye_color' => ['medium-sized dark brown eyes with tight eyelids'],
+            'tail' => ['long, heavy tail carried low'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',

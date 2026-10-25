@@ -69,6 +69,7 @@ return [
     'akita' => 'Ameriška akita',
     'cardigan_welsh_corgi' => 'Welsh corgi cardigan',
     'german_wirehaired_pointer' => 'Nemški ostrodlaki ptičar',
+    'saint_bernard' => 'Bernardinec',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',
