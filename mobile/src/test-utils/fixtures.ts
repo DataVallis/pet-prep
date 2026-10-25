@@ -235,6 +235,8 @@ export function makeChildState(
       last_watered_at: '',
       can_water: 'false',
       next_allowed_at: '',
+      // David 2026-10-25 (additive): display time of the next refill.
+      shown_at: null,
     },
     steps: { steps_today: 0, my_steps_today: 0, my_device_steps_today: 0, goal: 5000, energy_level: 100, adapted_mode: false },
     contract: { signed: true, signed_at: '2026-10-04T09:00:00+00:00' },
