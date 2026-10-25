@@ -771,6 +771,42 @@
             "prompt_hash": "sha256:834879e30dbdfbc23b0d6fba91db490ce550e7ccb55fe8232cb5a90f58e48787",
             "generated_at": "2026-10-24T06:34:36+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "akita",
+            "species": "dog",
+            "file": "dog/akita.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:a09c21e22426c2c62cf8cc2501e159c61b1b9a537fcf77a5b3f570c04765d6fc",
+            "generated_at": "2026-10-25T07:55:04+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "cardigan_welsh_corgi",
+            "species": "dog",
+            "file": "dog/cardigan-welsh-corgi.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:005868b7375455547930416cf25f8084a01c42301b8af74b9b0a3952eec492f1",
+            "generated_at": "2026-10-25T07:55:22+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "german_wirehaired_pointer",
+            "species": "dog",
+            "file": "dog/german-wirehaired-pointer.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:3f5fc38014d467c30de19a44493aa5e81b2185488017ab8ce103dfa6942d3862",
+            "generated_at": "2026-10-25T07:55:41+00:00",
+            "cost_usd": 0.15
         }
     ]
 }

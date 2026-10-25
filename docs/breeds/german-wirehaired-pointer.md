@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `german_wirehaired_pointer` (viri S519–S526; ponovno S8, S10, S11, S14, S24, S35, S45, S174 in PDSA S188 — ena stran za obe različici nemškega ptičarja); seznam za vzreditelja: 4 testi »Best Practice« (RKC S521) |
 | Izvor | FCI št. 98 »Deutsch Drahthaar«, skupina 7, sekcija 1.1 (celinski ptičarji, tip »braque«), Nemčija (S519) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 61. mesto »German Wirehaired Pointer« (S174, prebrano 2026-10-25) |
-| PR-ji | pet-prep #382 (pasma) · portret: po združitvi · spletna stran: le s portretom |
+| PR-ji | pet-prep #382 (pasma, združen `4670d9e`) · portret: #383 (zagon 40174556521) · spletna stran: pet-prep-website `feat/register-akita-cardigan-gwp` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -43,7 +43,7 @@
 | Česanje 2× na teden (rutina »Počeši«), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-10-25 |
 | Čiščenje ušes 1× na 4 tedne (otrokova mini-igra; za nove pse, obstoječi po posodobitvi aplikacije) | 🛠 | 💶 izziv | M5-R20 | 2026-10-25 |
 | Barva (izbirnik: rjavo-sivkast, rjavo-bel, rjav) | 🛠 | 💶 izziv | M5-R21 | 2026-10-25 |
-| AI portret v registru | 🗓 po združitvi (runbook §8) | — | M5-R11-04 | — |
+| AI portret v registru (jetrno-sivkast, sprejet v prvem poskusu, zagon 40174556521, PR #383; prvi poskus 40164191744 zavrnjen zaradi `composer.lock`) | ✅ | — | M5-R11-04 | 2026-10-25 |
 | Stran na petprep.si (`/animals/dogs/german-wirehaired-pointer`, `/sl/zivali/psi/nemski-ostrodlaki-pticar`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
