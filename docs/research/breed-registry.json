@@ -61,7 +61,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "39e6983d6618e8c564706e44528b5e21d248b51a962cf9417825e322f31e9b20"
+      "sha256": "6957ccce8b95b9833b09b736d472b970c5ec40d03ce8d79e60afff0b6898e81b"
     }
   },
   "suitability_vocabulary": {
@@ -37694,7 +37694,12 @@
           "S534"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "saint-bernard.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
