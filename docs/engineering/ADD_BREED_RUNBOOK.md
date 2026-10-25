@@ -264,9 +264,10 @@ node ../pet-prep/scripts/export-breed-registry.mjs --out "$PWD/src/content/regis
 
 The website must say "in the app" only for what users really have. `docs/research/app-release.json` = breeds of the JS bundle of the last production release; the export marks those `in_app`, every other built breed `coming_soon`. Never set `availability` by hand (only `'info_only'` for research-only breeds — the export fails otherwise).
 
-- **OTA:** `mobile-ota.yml` records it itself after an update reached iOS **and** Android (bot commit `chore(release): record OTA …` on `main`).
+- **OTA:** `mobile-ota.yml` records it itself after a production update reached **at least one** platform — iOS or Android is enough (David 2026-10-25; before: both) — bot commit `chore(release): record OTA <sha> (<platforms>) …` on `main`.
+- **Website follows by itself:** `pet-prep-website/.github/workflows/registry-sync.yml` (hourly + Run workflow) copies `docs/research/breed-registry.json` from pet-prep `main` when it differs, runs lint / build / tsc, commits `chore(register): sync …` to the website `main` and dispatches its "CI & Deploy". When the build fails (the export needs new words or a portrait the website does not have yet) it only warns — then the website breed PR (§9) carries the registry.
 - **Store build:** when David says which commit his EAS production build came from: `node scripts/record-app-release.mjs --kind store --commit <sha>` → re-export → PR.
-- **Every unattended run, before §1:** if `inputs.app_release.sha256` in the website's `src/content/registry/registry.json` differs from the export's, sync the website first: branch `chore/register-app-release-<date>`, re-export into the website (§9 command), build, PR, merge on green.
+- **Every unattended run, before §1 (fallback — normally registry-sync.yml has done it):** if `inputs.app_release.sha256` in the website's `src/content/registry/registry.json` differs from the export's, sync the website first: branch `chore/register-app-release-<date>`, re-export into the website (§9 command), build, PR, merge on green.
 - A breed merged in a run stays "Kmalu / Coming soon" on the site until the next release — that is correct, not a bug. Since D18 a production OTA is published only after a manual production deploy (or a manual OTA run with channel `production`); merges publish no OTA.
 
 ## 10. Queue and report

@@ -29,6 +29,10 @@ import { APP_RELEASE, breedsFromSpeciesTs, releasedBreeds } from '../record-app-
 const hasPhp = spawnSync('php', ['-v']).status === 0;
 const hasVendor = existsSync(resolve(ROOT, 'backend/vendor/autoload.php'));
 const registry = JSON.parse(renderRegistry());
+// Per-breed tests check availability against the recorded release (app-release.json), never a
+// fixed value: every OTA / store release flips breeds from coming_soon to in_app (2026-10-25).
+const releasedNow = releasedBreeds(JSON.parse(readFileSync(resolve(ROOT, APP_RELEASE), 'utf8')));
+const expectedAvailability = (id) => (releasedNow.has(id) ? 'in_app' : 'coming_soon');
 const data = {
   '': JSON.parse(readFileSync(resolve(ROOT, INPUTS.dog_data), 'utf8')),
   'cat-data:': JSON.parse(readFileSync(resolve(ROOT, INPUTS.cat_data), 'utf8')),
@@ -1307,7 +1311,7 @@ test('Boston Terrier (M5-R10-31): up to 1 hour (RKC), PDSA weight and height, FC
 test('Miniature American Shepherd (M5-R10-32): at least 1 hour (PetMD, game value), AKC weight chart, FCI height and group 1 section 1 USA, PetMD lifespan range, not ranked by Coren, no welfare chip, no frequent_grooming chip (sources conflict), FCI size small, brushing 2× a week', () => {
   const d = registry.breeds.find((b) => b.id === 'miniature_american_shepherd');
   assert.deepEqual(d.name, { en: 'Miniature American Shepherd', sl: 'Mali ameriški ovčar' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.equal(d.facets.size, 'small');
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'at_least', ['S269']]]);
   assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 367, group: 1, section: 1, origin: 'US' });
@@ -1332,7 +1336,7 @@ test('Miniature American Shepherd (M5-R10-32): at least 1 hour (PetMD, game valu
 test('Chihuahua (M5-R10-33): up to 30 minutes (RKC Smooth Coat), KC / PDSA weight, PDSA height, FCI group 9 section 6 Mexico, RKC "over 12 years" (never the young-population VetCompass median), Coren 67, no welfare chip, brushing 1× a week', () => {
   const d = registry.breeds.find((b) => b.id === 'chihuahua');
   assert.deepEqual(d.name, { en: 'Chihuahua', sl: 'Čivava' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.equal(d.facets.size, 'small');
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[30, 'up_to', ['S275']]]);
   assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 218, group: 9, section: 6, origin: 'MX' });
@@ -1357,7 +1361,7 @@ test('Chihuahua (M5-R10-33): up to 30 minutes (RKC Smooth Coat), KC / PDSA weigh
 test('English Springer Spaniel (M5-R10-34): more than 2 hours (RKC), PDSA weight, KC height, FCI group 8 section 2 Great Britain, McMillan 2024 median + RKC "over 10 years", Coren 13, no welfare chip, brushing 2× a week', () => {
   const d = registry.breeds.find((b) => b.id === 'english_springer_spaniel');
   assert.deepEqual(d.name, { en: 'English Springer Spaniel', sl: 'Angleški springer španjel' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.equal(d.facets.size, 'medium');
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[120, 'more_than', ['S284']]]);
   assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 125, group: 8, section: 2, origin: 'GB' });
@@ -1381,7 +1385,7 @@ test('English Springer Spaniel (M5-R10-34): more than 2 hours (RKC), PDSA weight
 test('Shetland Sheepdog (M5-R10-35): up to 1 hour (RKC), AKC weight, FCI height, FCI group 1 section 1 Great Britain, RKC "over 10 years", Coren 6, no welfare chip, brushing every day', () => {
   const d = registry.breeds.find((b) => b.id === 'shetland_sheepdog');
   assert.deepEqual(d.name, { en: 'Shetland Sheepdog', sl: 'Šetlandski ovčar' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.equal(d.facets.size, 'small');
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S291']]]);
   assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 88, group: 1, section: 1, origin: 'GB' });
@@ -1405,7 +1409,7 @@ test('Shetland Sheepdog (M5-R10-35): up to 1 hour (RKC), AKC weight, FCI height,
 test('Brittany (M5-R10-36): more than 2 hours (RKC), AKC standard weight, RKC height, FCI group 7 France, RKC "over 10 years", Coren 19, no welfare chip, brushing 1× a week', () => {
   const d = registry.breeds.find((b) => b.id === 'brittany');
   assert.deepEqual(d.name, { en: 'Brittany', sl: 'Bretonski ptičar' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.equal(d.facets.size, 'medium');
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[120, 'more_than', ['S298']]]);
   assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 95, group: 7, section: 1, origin: 'FR' });
@@ -1429,7 +1433,7 @@ test('Brittany (M5-R10-36): more than 2 hours (RKC), AKC standard weight, RKC he
 test('American Cocker Spaniel (M5-R10-37): more than 2 hours (RKC), AKC article weight, AKC ideal height, FCI group 8 USA, RKC "over 10 years", Coren 20, no welfare chip, brushing every day', () => {
   const d = registry.breeds.find((b) => b.id === 'american_cocker_spaniel');
   assert.deepEqual(d.name, { en: 'American Cocker Spaniel', sl: 'Ameriški koker španjel' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.equal(d.facets.size, 'small');
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[120, 'more_than', ['S305']]]);
   assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 167, group: 8, section: 2, origin: 'US' });
@@ -1453,7 +1457,7 @@ test('American Cocker Spaniel (M5-R10-37): more than 2 hours (RKC), AKC article 
 test('Belgian Malinois (M5-R10-38): more than 2 hours (RKC), FCI weight and height, FCI group 1 Belgium, RKC "over 10 years", Coren 22, no welfare chip, no family chip', () => {
   const d = registry.breeds.find((b) => b.id === 'belgian_malinois');
   assert.deepEqual(d.name, { en: 'Belgian Malinois', sl: 'Belgijski ovčar malinois' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.equal(d.facets.size, 'medium_large');
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[120, 'more_than', ['S314']]]);
   assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 15, group: 1, section: 1, origin: 'BE' });
@@ -1478,7 +1482,7 @@ test('Belgian Malinois (M5-R10-38): more than 2 hours (RKC), FCI weight and heig
 test('Basset Hound (M5-R10-39): up to 1 hour (RKC), PDSA weight, FCI height, FCI group 6 Great Britain, RKC "over 10 years", Coren 71, welfare health keys, POAG DNA test', () => {
   const d = registry.breeds.find((b) => b.id === 'basset_hound');
   assert.deepEqual(d.name, { en: 'Basset Hound', sl: 'Baset' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.equal(d.facets.size, 'medium_large');
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S321']]]);
   assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 163, group: 6, section: 1, origin: 'GB' });
@@ -1504,7 +1508,7 @@ test('Basset Hound (M5-R10-39): up to 1 hour (RKC), PDSA weight, FCI height, FCI
 test('Hungarian Vizsla (M5-R10-40): more than 2 hours (RKC), PDSA weight, FCI + AKC height, FCI group 7 Hungary, RKC "over 12 years", Coren 25, no welfare chip, hip / elbow screening', () => {
   const d = registry.breeds.find((b) => b.id === 'hungarian_vizsla');
   assert.deepEqual(d.name, { en: 'Hungarian Vizsla', sl: 'Madžarski kratkodlaki ptičar' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.equal(d.facets.size, 'large');
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[120, 'more_than', ['S328']]]);
   // A new FCI origin (Hungary).
@@ -1529,7 +1533,7 @@ test('Hungarian Vizsla (M5-R10-40): more than 2 hours (RKC), PDSA weight, FCI + 
 test('English Cocker Spaniel (M5-R10-41): up to 1 hour (RKC), PDSA weight, FCI + AKC height, FCI group 8 Great Britain, VetCompass median, Coren 18, no welfare chip, RKC tests', () => {
   const d = registry.breeds.find((b) => b.id === 'english_cocker_spaniel');
   assert.deepEqual(d.name, { en: 'English Cocker Spaniel', sl: 'Angleški koker španjel' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.equal(d.facets.size, 'small');
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S337']]]);
   assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 5, group: 8, section: 2, origin: 'GB' });
@@ -1553,7 +1557,7 @@ test('English Cocker Spaniel (M5-R10-41): up to 1 hour (RKC), PDSA weight, FCI +
 test('Maltese (M5-R10-42): up to 30 minutes (RKC), FCI weight + height, FCI group 9 Italy, RKC "over 12 years", Coren 59, no welfare chip, never hypoallergenic, RKC eye scheme', () => {
   const d = registry.breeds.find((b) => b.id === 'maltese');
   assert.deepEqual(d.name, { en: 'Maltese', sl: 'Maltežan' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.equal(d.facets.size, 'small');
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[30, 'up_to', ['S347']]]);
   // FCI patronage country Italy (origin: Central Mediterranean Area).
@@ -1577,7 +1581,7 @@ test('Maltese (M5-R10-42): up to 30 minutes (RKC), FCI weight + height, FCI grou
 test('Pug (M5-R10-43): up to 1 hour (RKC), FCI weight, PDSA height, FCI group 9 Great Britain, McMillan 11.6 y + RKC "over 10 years", Coren 57, flat-face and skin chips, RKC breed club tests + RFGS', () => {
   const d = registry.breeds.find((b) => b.id === 'pug');
   assert.deepEqual(d.name, { en: 'Pug', sl: 'Mops' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.equal(d.facets.size, 'small');
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S355']]]);
   // FCI patronage country Great Britain (origin: China).
@@ -1603,7 +1607,7 @@ test('Pug (M5-R10-43): up to 1 hour (RKC), FCI weight, PDSA height, FCI group 9 
 test('Rough Collie (M5-R10-44): up to 1 hour (RKC), AKC weight, FCI height, FCI group 1 Great Britain, RKC "over 12 years", Coren 16, herding / brushing / company chips, RKC eye + hip schemes and four DNA tests', () => {
   const d = registry.breeds.find((b) => b.id === 'rough_collie');
   assert.deepEqual(d.name, { en: 'Rough Collie', sl: 'Dolgodlaki škotski ovčar' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.equal(d.facets.size, 'large');
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S365']]]);
   assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 156, group: 1, section: 1, origin: 'GB' });
@@ -1627,7 +1631,7 @@ test('Rough Collie (M5-R10-44): up to 1 hour (RKC), AKC weight, FCI height, FCI 
 test('Mastiff (M5-R10-45): at least 1 hour (PDSA, RKC page not reachable), PDSA weight and height, FCI group 2 Great Britain, McMillan median + PDSA "under 10 years", Coren 72, Category 3 welfare chips, no RKC tests found', () => {
   const d = registry.breeds.find((b) => b.id === 'mastiff');
   assert.deepEqual(d.name, { en: 'Mastiff', sl: 'Angleški mastif' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.equal(d.facets.size, 'large');
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'at_least', ['S370']]]);
   assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 264, group: 2, section: 2, origin: 'GB' });
@@ -1649,7 +1653,7 @@ test('Mastiff (M5-R10-45): at least 1 hour (PDSA, RKC page not reachable), PDSA 
 test('Shiba Inu (M5-R10-46): up to 1 hour (RKC), AKC average weight, FCI height, FCI group 5 Japan, McMillan median + RKC "over 10 years", not ranked by Coren, new independent_experienced_owner chip, RKC best-practice hip scheme + GM1 / GM2 DNA tests', () => {
   const d = registry.breeds.find((b) => b.id === 'shiba_inu');
   assert.deepEqual(d.name, { en: 'Shiba Inu', sl: 'Šiba inu' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.equal(d.facets.size, 'small_medium');
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S378']]]);
   assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 257, group: 5, section: 5, origin: 'JP' });
@@ -1671,7 +1675,7 @@ test('Shiba Inu (M5-R10-46): up to 1 hour (RKC), AKC average weight, FCI height,
 test('Rhodesian Ridgeback (M5-R10-47): more than 2 hours (RKC), FCI weight + height, FCI group 6 South Africa, RKC "over 10 years", Coren 52, no welfare chip, dermoid sinus + hip / elbow + DNA JME / DM breeder checks', () => {
   const d = registry.breeds.find((b) => b.id === 'rhodesian_ridgeback');
   assert.deepEqual(d.name, { en: 'Rhodesian Ridgeback', sl: 'Rodezijski ridgeback' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.equal(d.facets.size, 'large');
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[120, 'more_than', ['S387']]]);
   // New FCI origin South Africa (ZA, FCI nomenclature S384 / standard S385).
@@ -1695,7 +1699,7 @@ test('Rhodesian Ridgeback (M5-R10-47): more than 2 hours (RKC), FCI weight + hei
 test('Papillon (M5-R10-48): up to 30 minutes (RKC), FCI weight span + height, FCI group 9 Belgium / France, RKC "over 12 years", Coren 8, no welfare chip, Pap-PRA1 / vWD1 / NAD breeder checks', () => {
   const d = registry.breeds.find((b) => b.id === 'papillon');
   assert.deepEqual(d.name, { en: 'Papillon', sl: 'Papijon' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.equal(d.facets.size, 'small');
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[30, 'up_to', ['S397']]]);
   // New FCI origin: the nomenclature names Belgium and France (S395) → BE-FR.
@@ -1719,7 +1723,7 @@ test('Papillon (M5-R10-48): up to 30 minutes (RKC), FCI weight span + height, FC
 test('Portuguese Water Dog (M5-R10-49): up to 1 hour (RKC), RKC standard weight + height, FCI group 8 Portugal, RKC "over 10 years", not ranked by Coren, no welfare chip, low shedding (never hypoallergenic), RKC breeder checks', () => {
   const d = registry.breeds.find((b) => b.id === 'portuguese_water_dog');
   assert.deepEqual(d.name, { en: 'Portuguese Water Dog', sl: 'Portugalski vodni pes' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.equal(d.facets.size, 'medium');
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S404']]]);
   // New FCI origin: Portugal (S402) → PT.
@@ -1743,7 +1747,7 @@ test('Portuguese Water Dog (M5-R10-49): up to 1 hour (RKC), RKC standard weight 
 test('Bichon Frise (M5-R10-50): up to 30 minutes (RKC), FCI height + PDSA weight, FCI group 9 Belgium / France, RKC "over 12 years", Coren 45, no welfare chip, low shedding (never hypoallergenic), RKC eye scheme + US club patella / hip checks', () => {
   const d = registry.breeds.find((b) => b.id === 'bichon_frise');
   assert.deepEqual(d.name, { en: 'Bichon Frise', sl: 'Kodrasti bišon' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.equal(d.facets.size, 'small');
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[30, 'up_to', ['S411']]]);
   // FCI 215: Belgium and France (S409) → BE-FR, as the Papillon.
@@ -1768,7 +1772,7 @@ test('Bichon Frise (M5-R10-50): up to 30 minutes (RKC), FCI height + PDSA weight
 test('Newfoundland (M5-R10-51): at least 60 minutes (PDSA), PDSA height + weight, FCI group 2 Canada, McMillan 2024 median + PDSA "under 10 years", Coren 34, Category 2 eyelid chip, daily brushing, Kennel Club BHCP breeder tests', () => {
   const d = registry.breeds.find((b) => b.id === 'newfoundland');
   assert.deepEqual(d.name, { en: 'Newfoundland', sl: 'Novofundlandec' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.equal(d.facets.size, 'large');
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'at_least', ['S423']]]);
   // FCI 50: Canada (S419) → CA, a new origin.
@@ -1792,7 +1796,7 @@ test('Newfoundland (M5-R10-51): at least 60 minutes (PDSA), PDSA height + weight
 test('Dalmatian (M5-R10-52): more than 2 hours (RKC), FCI height + PDSA weight, FCI group 6 Croatia, McMillan 2024 median + RKC "over 12 years", Coren 39, Category 1 (no welfare chip), weekly brushing, US breed club BAER + hip tests', () => {
   const d = registry.breeds.find((b) => b.id === 'dalmatian');
   assert.deepEqual(d.name, { en: 'Dalmatian', sl: 'Dalmatinec' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.equal(d.facets.size, 'large');
   assert.equal(d.facets.exercise, 'over_2h');
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[120, 'more_than', ['S429']]]);
@@ -1816,7 +1820,7 @@ test('Dalmatian (M5-R10-52): more than 2 hours (RKC), FCI height + PDSA weight, 
 test('Australian Cattle Dog (M5-R10-53): more than 2 hours (RKC), KC height + PDSA weight, FCI group 1 Australia, McMillan 2024 median + RKC "over 10 years", Coren 10, Category 1 (no welfare chip), weekly brushing, RKC parents\' tests', () => {
   const d = registry.breeds.find((b) => b.id === 'australian_cattle_dog');
   assert.deepEqual(d.name, { en: 'Australian Cattle Dog', sl: 'Avstralski govedar' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.equal(d.facets.size, 'medium');
   assert.equal(d.facets.exercise, 'over_2h');
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[120, 'more_than', ['S437']]]);
@@ -1840,7 +1844,7 @@ test('Australian Cattle Dog (M5-R10-53): more than 2 hours (RKC), KC height + PD
 test('Whippet (M5-R10-54): at least 60 minutes (PDSA), KC height + PDSA weight, FCI group 10 Great Britain, McMillan 2024 median + PDSA "over 12 years", Coren 51, no welfare chip, new sensitive_older_children chip, weekly brushing, US breed club + Kennel Club heart advice for the parents\' tests', () => {
   const d = registry.breeds.find((b) => b.id === 'whippet');
   assert.deepEqual(d.name, { en: 'Whippet', sl: 'Mali angleški hrt' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.equal(d.facets.size, 'medium');
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'at_least', ['S444']]]);
   // FCI 162: Great Britain (S442) → GB.
@@ -1865,7 +1869,7 @@ test('Whippet (M5-R10-54): at least 60 minutes (PDSA), KC height + PDSA weight, 
 test('Wirehaired Pointing Griffon (M5-R10-55): more than 2 hours (RKC), FCI height + PetMD weight, FCI group 7 France, RKC "over 10 years" (no McMillan row), Coren 46, no welfare chip, weekly brushing (VCA), RKC hip / elbow schemes for the parents\' tests', () => {
   const d = registry.breeds.find((b) => b.id === 'wirehaired_pointing_griffon');
   assert.deepEqual(d.name, { en: 'Wirehaired Pointing Griffon', sl: 'Francoski ostrodlaki ptičar' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.deepEqual(d.facets, { size: 'large', exercise: 'over_2h', grooming: 'several_weekly' });
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[120, 'more_than', ['S450']]]);
   // FCI 107: France (S448) → FR.
@@ -1888,7 +1892,7 @@ test('Wirehaired Pointing Griffon (M5-R10-55): more than 2 hours (RKC), FCI heig
 test('Chesapeake Bay Retriever (M5-R10-56): more than 2 hours (RKC), FCI height + weight, FCI group 8 USA, RKC "over 10 years", Coren 27, Breed Watch Category 1 (no welfare chip), weekly brushing (RKC), new health key exercise_induced_collapse, RKC parents\' tests incl. DNA DM', () => {
   const d = registry.breeds.find((b) => b.id === 'chesapeake_bay_retriever');
   assert.deepEqual(d.name, { en: 'Chesapeake Bay Retriever', sl: 'Chesapeake Bay retriver' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.deepEqual(d.facets, { size: 'large', exercise: 'over_2h', grooming: 'weekly' });
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[120, 'more_than', ['S459']]]);
   // FCI 263: United States of America (S457) → US.
@@ -1911,7 +1915,7 @@ test('Chesapeake Bay Retriever (M5-R10-56): more than 2 hours (RKC), FCI height 
 test('Samoyed (M5-R10-57): at least 2 hours (PDSA), FCI height, PDSA weight, FCI group 5 Russia (new origin RU), PDSA "over 10 years", Coren 33, no welfare chip, daily brushing, new chip heat_sensitive, new health key hereditary_nephritis, parents\' tests from the breed club', () => {
   const d = registry.breeds.find((b) => b.id === 'samoyed');
   assert.deepEqual(d.name, { en: 'Samoyed', sl: 'Samojed' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.deepEqual(d.facets, { size: 'medium', exercise: 'over_2h' });
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[120, 'at_least', ['S467']]]);
   // FCI 212: Northern Russia, Siberia (S463) → RU.
@@ -1935,7 +1939,7 @@ test('Samoyed (M5-R10-57): at least 2 hours (PDSA), FCI height, PDSA weight, FCI
 test('Scottish Terrier (M5-R10-58): 1 hour (PDSA), KC standard height + weight, FCI group 3 Great Britain, PDSA "over 10 years", Coren 65, no welfare chip, daily brushing, new health key scottie_cramp, parents\' tests from the breed club', () => {
   const d = registry.breeds.find((b) => b.id === 'scottish_terrier');
   assert.deepEqual(d.name, { en: 'Scottish Terrier', sl: 'Škotski terier' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.deepEqual(d.facets, { size: 'medium', exercise: 'h1_2' });
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'at_least', ['S474']]]);
   assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 73, group: 3, section: 2, origin: 'GB' });
@@ -1958,7 +1962,7 @@ test('Scottish Terrier (M5-R10-58): 1 hour (PDSA), KC standard height + weight, 
 test('Weimaraner (M5-R10-59): more than 2 hours (RKC), FCI height + weight, FCI group 7 Germany, RKC "over 10 years", Coren 21, Breed Watch Category 1 (no welfare chip), weekly brushing (RKC), new health key extra_eyelashes, RKC Best Practice parents\' tests', () => {
   const d = registry.breeds.find((b) => b.id === 'weimaraner');
   assert.deepEqual(d.name, { en: 'Weimaraner', sl: 'Weimarski ptičar' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[120, 'more_than', ['S479']]]);
   // FCI 99: Germany (S477) → DE.
   assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value.origin, 'DE');
@@ -1982,7 +1986,7 @@ test('Weimaraner (M5-R10-59): more than 2 hours (RKC), FCI height + weight, FCI 
 test('Italian Greyhound (M5-R10-60): up to 1 hour (RKC), KC standard height + weight, FCI group 10 Italy, RKC "over 12 years", Coren 60, Breed Watch Category 1 (no welfare chip), weekly brushing (RKC), new chip cold_sensitive, new health key periodontal_disease, RKC Best Practice eye test', () => {
   const d = registry.breeds.find((b) => b.id === 'italian_greyhound');
   assert.deepEqual(d.name, { en: 'Italian Greyhound', sl: 'Mali italijanski hrt' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S486']]]);
   // FCI 200: Italy (S484) → IT.
   assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 200, group: 10, section: 3, origin: 'IT' });
@@ -2004,7 +2008,7 @@ test('Italian Greyhound (M5-R10-60): up to 1 hour (RKC), KC standard height + we
 test('Giant Schnauzer (M5-R10-61): more than 2 hours (RKC), RKC standard height + FCI weight, FCI group 2 Germany, RKC "over 12 years", Coren 28, Breed Watch Category 1 (no welfare chip), daily brushing (RKC), new health keys panosteitis / urinary_incontinence / osteochondritis, RKC minimum + Best Practice tests', () => {
   const d = registry.breeds.find((b) => b.id === 'giant_schnauzer');
   assert.deepEqual(d.name, { en: 'Giant Schnauzer', sl: 'Veliki šnavcer' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[120, 'more_than', ['S495']]]);
   // FCI 181: Germany (S491) → DE.
   assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 181, group: 2, section: 1, origin: 'DE' });
@@ -2029,7 +2033,7 @@ test('Giant Schnauzer (M5-R10-61): more than 2 hours (RKC), RKC standard height 
 test('Bloodhound (M5-R10-62): more than 2 hours (RKC), FCI height + weight, FCI group 6 Belgium, RKC "under 10 years", Coren 74, Breed Watch Category 2 (eyelid chip), weekly brushing (RKC), senior 61 (provisional), RKC minimum + Best Practice tests', () => {
   const d = registry.breeds.find((b) => b.id === 'bloodhound');
   assert.deepEqual(d.name, { en: 'Bloodhound', sl: 'Bloodhound' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[120, 'more_than', ['S502']]]);
   // FCI 84: Belgium (S500) → BE.
   assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 84, group: 6, section: 1, origin: 'BE' });
@@ -2075,7 +2079,7 @@ test('M5-R14 / R15 / R18 / R19 / R20: care tasks only where the source states a 
 test('Akita (M5-R10-63): American type (FCI 344, Japan), PDSA minimum 2 hours, FCI height, PDSA weight, PDSA "under 10" and PetMD 10–14 years, Coren 54, weekly brushing, groomer every 12 weeks, senior 89 (provisional), no breeder tests reachable', () => {
   const d = registry.breeds.find((b) => b.id === 'akita');
   assert.deepEqual(d.name, { en: 'Akita', sl: 'Ameriška akita' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier]), [[120, 'at_least']]);
   // FCI 344: country of origin Japan (S506) → JP.
   assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 344, group: 5, section: 5, origin: 'JP' });
@@ -2098,7 +2102,7 @@ test('Akita (M5-R10-63): American type (FCI 344, Japan), PDSA minimum 2 hours, F
 test('Cardigan Welsh Corgi (M5-R10-64): up to 1 hour (RKC), AKC weight and height by sex, FCI 38 group 1 Great Britain, RKC "over 12 years", Coren 26, herding / shedding / brushing chips, three RKC Best Practice tests', () => {
   const d = registry.breeds.find((b) => b.id === 'cardigan_welsh_corgi');
   assert.deepEqual(d.name, { en: 'Cardigan Welsh Corgi', sl: 'Welsh corgi cardigan' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S515']]]);
   assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 38, group: 1, section: 2, origin: 'GB' });
   assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [13.6, 17.2], female: [11.3, 15.4] }, ['S517']]]);
@@ -2121,7 +2125,7 @@ test('Cardigan Welsh Corgi (M5-R10-64): up to 1 hour (RKC), AKC weight and heigh
 test('German Wirehaired Pointer (M5-R10-65): more than 2 hours (RKC), RKC standard weight and height by sex, FCI 98 group 7 Germany, RKC "over 10 years", Coren 44, monthly ear cleaning, four RKC Best Practice tests', () => {
   const d = registry.breeds.find((b) => b.id === 'german_wirehaired_pointer');
   assert.deepEqual(d.name, { en: 'German Wirehaired Pointer', sl: 'Nemški ostrodlaki ptičar' });
-  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.availability, expectedAvailability(d.id));
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[120, 'more_than', ['S521']]]);
   assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 98, group: 7, section: 1, origin: 'DE' });
   assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [25, 34], female: [20.5, 29] }, ['S522']]]);

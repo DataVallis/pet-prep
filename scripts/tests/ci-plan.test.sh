@@ -400,7 +400,10 @@ SHIM
 cat > "$TMP/obin/eas" <<'SHIM'
 #!/usr/bin/env bash
 echo "eas $* | API=${EXPO_PUBLIC_API_URL:-unset}" >> "$OTA_LOG"
-case "$1" in build:list) echo '[{"id":"b1"}]' ;; esac
+case "$1" in build:list)
+  # NO_BUILD_FOR=android → that platform has no build of the channel (native code changed).
+  if [[ -n "${NO_BUILD_FOR:-}" && "$*" == *"--platform ${NO_BUILD_FOR}"* ]]; then echo '[]'; else echo '[{"id":"b1"}]'; fi ;;
+esac
 SHIM
 chmod +x "$TMP/obin"/*
 ota_sh() { # ota_sh EAS_JSON ARGS... → rc; log $TMP/ota-sh.log, output $TMP/ota-sh.out
@@ -418,6 +421,19 @@ r=1; grep -q 'eas update --channel production --environment production --platfor
 check "… EXPO_PUBLIC_* of the profile exported" 0 "$r"
 r=1; grep -q '^released=true$' "$TMP/ota-sh.gho" && r=0
 check "… both platforms → released=true" 0 "$r"
+r=1; grep -q '^platforms=ios,android$' "$TMP/ota-sh.gho" && r=0
+check "… platforms=ios,android" 0 "$r"
+# David 2026-10-25: one platform on production is enough for "in the app" on the website.
+: > "$TMP/ota-sh.gho"
+check "only iOS has a production build → still publishes iOS" 0 "$(NO_BUILD_FOR=android ota_sh "$EAS_OK" --channel production)"
+r=1; grep -q 'eas update --channel production .*--platform ios' "$TMP/ota-sh.log" && ! grep -q 'eas update .*--platform android' "$TMP/ota-sh.log" && r=0
+check "… iOS updated, Android not" 0 "$r"
+r=1; grep -q '^released=true$' "$TMP/ota-sh.gho" && grep -q '^platforms=ios$' "$TMP/ota-sh.gho" && r=0
+check "… one platform → released=true, platforms=ios" 0 "$r"
+: > "$TMP/ota-sh.gho"
+check "dry run (iOS build only) → exit 0" 0 "$(NO_BUILD_FOR=android ota_sh "$EAS_OK" --channel production --dry-run)"
+r=0; grep -q 'released' "$TMP/ota-sh.gho" && r=1
+check "… dry run is never a release" 0 "$r"
 check "missing profile → exit 1" 1 "$(ota_sh '{"build":{"production":{"channel":"production"}}}' --channel preview)"
 r=0; [ -s "$TMP/ota-sh.log" ] && r=1
 check "… nothing published (no eas call)" 0 "$r"

@@ -19,8 +19,9 @@
 # OTA bundle talks to the same API / Reverb / RevenueCat as that build. `eas update
 # --environment <channel>` adds the EAS server variables of that environment on top
 # (they win for keys they define) — keep EXPO_PUBLIC_* there unset or identical.
-# Output (GITHUB_OUTPUT): released=true only when the PRODUCTION channel got the update
-# on both platforms (mobile-ota.yml then records it for the website register).
+# Output (GITHUB_OUTPUT): released=true when the PRODUCTION channel got the update on at
+# least one platform (David 2026-10-25), plus platforms=<comma list, e.g. ios>; mobile-ota.yml
+# then records it for the website register.
 set -euo pipefail
 
 MESSAGE="${1:?usage: mobile-ota.sh <message> [--dry-run] [--channel production|preview]}"
@@ -83,9 +84,11 @@ if [[ ${#needs_build[@]} -gt 0 ]]; then
   echo "New $CHANNEL build needed for: ${needs_build[*]}"
 fi
 
-# Both platforms got this bundle on the production channel → mobile-ota.yml records it in
-# docs/research/app-release.json, so the website register shows the new breeds as "in the
-# app" (David 2026-10-13). A preview update is never a release.
-if [[ "$CHANNEL" == production && ${#published[@]} -eq 2 ]]; then
-  echo "released=true" >>"${GITHUB_OUTPUT:-/dev/null}"
+# At least one platform got this bundle on the production channel → mobile-ota.yml records it
+# in docs/research/app-release.json, so the website register shows the new breeds as "in the
+# app" (David 2026-10-13; one platform is enough since 2026-10-25 — Android had no OTA from
+# 2026-10-21 and the site lagged iOS by ~40 breeds). A preview update is never a release.
+if [[ "$CHANNEL" == production && ${#published[@]} -gt 0 ]]; then
+  platforms="$(IFS=,; echo "${published[*]}")"
+  { echo "released=true"; echo "platforms=${platforms}"; } >>"${GITHUB_OUTPUT:-/dev/null}"
 fi
