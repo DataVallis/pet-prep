@@ -394,6 +394,16 @@ return [
         ['key' => 'brindle', 'value' => 'brindle with a black mask', 'en' => 'Brindle', 'sl' => 'Tigrast'],
         ['key' => 'white', 'value' => 'solid white with no mask', 'en' => 'White', 'sl' => 'Bel'],
     ],
+    // M5-R10-64: FCI standard S514 — blue merle, brindle, red, sable, tricolour with brindle / red points;
+    // white only as markings (never predominating).
+    'cardigan_welsh_corgi' => [
+        ['key' => 'red-white', 'value' => 'red with white markings on neck, chest and legs', 'en' => 'Red and white', 'sl' => 'Rdeče-bel'],
+        ['key' => 'brindle-white', 'value' => 'brindle with white markings', 'en' => 'Brindle and white', 'sl' => 'Tigrast z belo'],
+        ['key' => 'sable-white', 'value' => 'sable with white markings', 'en' => 'Sable and white', 'sl' => 'Sobolji z belo'],
+        ['key' => 'blue-merle', 'value' => 'blue merle with white markings', 'en' => 'Blue merle', 'sl' => 'Modro marmoriran'],
+        ['key' => 'tricolour-brindle', 'value' => 'tricolour with brindle points', 'en' => 'Tricolour, brindle points', 'sl' => 'Trobarven s tigrastimi oznakami'],
+        ['key' => 'tricolour-red', 'value' => 'tricolour with red points', 'en' => 'Tricolour, red points', 'sl' => 'Trobarven z rdečimi oznakami'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

@@ -2491,6 +2491,37 @@
       "status": "not_found",
       "tests": [],
       "notes": "RKC Breeds A–Z page (royalkennelclub.com …/utility/akita) refused by the fetch tool on 2026-10-24 (M5-R10-63) → no health-testing section. PDSA (dog-data S508) names conditions and advises a Kennel Club Assured Breeder and checking the health history of the puppy's parents and grandparents (paraphrase), but lists no test; PetMD (dog-data S510) names conditions only. Show the general dog checklist only."
+    },
+    "cardigan_welsh_corgi": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S515",
+        "quote": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding"
+      },
+      "tests": [
+        {
+          "key": "dna_pra_rcd3",
+          "level": "best_practice",
+          "name": "DNA test for progressive retinal atrophy (PRA-rcd3)",
+          "source_id": "S515",
+          "quote": "DNA test for progressive retinal atrophy (PRA-rcd3)"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S515",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S515",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S515, 2026-10-25): the three tests are listed under Best Practice; the minimum (Good Practice) list names only 'prioritising genetic diversity' (paraphrase), no test. The page adds that imported dogs must be PRA-rcd3 tested (paraphrase). PDSA (S206) refers to the Canine Health Schemes in general."
     }
   }
 }

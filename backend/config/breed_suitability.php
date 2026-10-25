@@ -1705,5 +1705,22 @@ return [
             ],
         ],
 
+        // M5-R10-64: cardigan_welsh_corgi.* (S513–S518), runbook rules (data.json
+        // proposed_game_parameters.cardigan_welsh_corgi.suitability_tags). RKC (S515) + PDSA (S206, one page
+        // for both corgi breeds). As the Pembroke: no `suits` tag has a source (RKC "Small house", 60 min, no
+        // family / children rating). Not a welfare-concern breed (RKC Breed Watch Category 1) → no welfare chip;
+        // PDSA's potential problems (IVDD, hip dysplasia) stay in research.
+        'cardigan_welsh_corgi' => [
+            'suits' => [],
+            'consider' => [
+                // S206 "They may nip at the heels of running children" (herding).
+                ['tag' => 'may_herd_children', 'source_ids' => ['S206'], 'refs' => ['cardigan_welsh_corgi.behaviour.herding_children', 'cardigan_welsh_corgi.suitability.pdsa_children']],
+                // S515 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S515'], 'refs' => ['cardigan_welsh_corgi.suitability.rkc_shedding']],
+                // S515 "Grooming: More than once a week"; S206 "grooming two-three times per week".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S515', 'S206'], 'refs' => ['cardigan_welsh_corgi.suitability.rkc_grooming', 'cardigan_welsh_corgi.suitability.pdsa_grooming']],
+            ],
+        ],
+
     ],
 ];

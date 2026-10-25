@@ -557,6 +557,15 @@
 | black mask weighted highest (the register portrait), then pinto, brindle, white; never merle or liver (disqualifying,
 | S507 / AKC S509). No Breed Watch category reachable (RKC page refused). Colour weights unsourced → `verified => false`.
 |
+| Cardigan Welsh Corgi (M5-R10-64, docs/research/dog-data cardigan_welsh_corgi.appearance): "Sturdy, tough, mobile,
+| capable of endurance." (FCI 38, 2026, S514; RKC S516); fairly long, strong body with a level topline; short or medium
+| coat of hard texture; erect, rather large ears; black nose; tail "Like a fox’s brush set in line with the body and
+| moderately long" — always undocked (RKC S515). Colours: blue merle, brindle, red, sable, tricolour with brindle points,
+| tricolour with red points, white markings never predominating (S514) — red with white markings weighted highest (the
+| register portrait); blue eyes only with blue merle. Moderate body length and enough ground clearance (PDSA S206 lists
+| intervertebral disc disease; Pembroke precedent). RKC Breed Watch Category 1 (S515). Colour weights unsourced →
+| `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -2886,6 +2895,43 @@ return [
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'markings', 'ear_carriage', 'eye_color', 'tail'],
     ],
 
+    // M5-R10-64 (docs/research/dog-data/data.json cardigan_welsh_corgi.appearance; runbook rules 2026-10-10:
+    // standard colours only — S514; blue merle is a standard colour here, white never predominating).
+    'cardigan_welsh_corgi' => [
+        'display_name' => 'Cardigan Welsh Corgi',
+        // Colour frequencies are in no source (cardigan_welsh_corgi.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 38 (S514, https://fci.be/Nomenclature/Standards/038g01-en.pdf), RKC breed standard (S516), RKC breed page (S515), PDSA (S206) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S515 "Size: Small"; S514 "Ideal height at withers: 30 cm."',
+            'build' => 'S514 "Sturdy, tough, mobile, capable of endurance."',
+            'coat_length' => 'S514 "Short or medium, of hard texture."',
+            'coat_color' => 'S514 "Accepted colours are blue merle, brindle, red, sable, tricolour with brindle points and tri colour with red points." (weights unsourced)',
+            'ear_carriage' => 'S514 "Erect, proportionately rather large to size of dog."',
+            'eye_color' => 'S514 "Medium size, clear, giving kindly, alert but watchful expression."',
+            'tail' => 'S514 "Like a fox’s brush set in line with the body and moderately long (to touch or nearly touch ground)."',
+            'body' => 'S514 "Fairly long and strong."; precaution (not a welfare breed): PDSA S206 lists intervertebral disc disease → moderate length, enough ground clearance',
+        ],
+        'traits' => [
+            'size' => ['small, low-set'],
+            'build' => [['value' => 'sturdy, tough and mobile', 'weight' => 3], 'strong and well balanced'],
+            'coat_length' => ['short to medium, hard-textured weatherproof coat with a good undercoat'],
+            // Standard colours only (S514); red highest → the register portrait. White never predominating.
+            'coat_color' => [
+                ['value' => 'red with white markings on neck, chest and legs', 'weight' => 4],
+                ['value' => 'brindle with white markings', 'weight' => 3],
+                ['value' => 'sable with white markings', 'weight' => 2],
+                'blue merle with white markings',
+                'tricolour with brindle points',
+                'tricolour with red points',
+            ],
+            'ear_carriage' => ['erect, rather large ears with slightly rounded tips'],
+            'eye_color' => ['medium-sized, dark, kindly but watchful'],
+            'tail' => ['long natural tail like a fox’s brush, carried low'],
+            'body' => ['fairly long, strong body with a level back and enough ground clearance, sturdy short legs'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'body'],
+    ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',
         // Colour names / weights are not in the standard (unsourced) — same rule as the Border Collie.

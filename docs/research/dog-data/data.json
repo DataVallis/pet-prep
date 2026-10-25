@@ -33392,6 +33392,515 @@
       }
     }
   },
+  "cardigan_welsh_corgi": {
+    "_note": "Added 2026-10-25 (M5-R10-64, unattended run — appended after the Akita: AKC 2024 No. 60, S174 table row '60 | Cardigan Welsh Corgi'). Quotes as returned by the web-fetch tool on 2026-10-25; spot-check before import (sources.md S513–S518, reused S10, S11, S14, S35, S45, S174, S206). FCI (S514, valid standard 08.09.2026) and the RKC breed standard (S516) give the same wording and no weight number ('In proportion to size'); weight from the AKC standard (S517, hosted by the AKC parent club CWCCA, Pug precedent S358). The RKC breed page (S515, royalkennelclub.com) gives the key facts and Breed Watch Category 1. PDSA (S206) has one 'Welsh Corgi' page for both corgi breeds — its quotes were captured verbatim on 2026-10-12 (Pembroke run) and its key facts re-checked on 2026-10-25 (same values, paraphrase). Lifespan: McMillan 2024 13.1 y only via Wikipedia (S518, tier C) → runbook rule: RKC lower bound 'Over 12 years' (S515). Not a welfare-concern breed: RKC Breed Watch Category 1 (S515). Woodgreen and AKC trait ratings not attempted.",
+    "identity": {
+      "value": "FCI No. 38, Group 1 Section 2 (Cattledogs (except Swiss Cattledogs)), Great Britain",
+      "unit": "—",
+      "source_id": "S513",
+      "quote": "Group: n°1 - Sheepdogs and Cattledogs (except Swiss Cattledogs); Section: Cattledogs (except Swiss Cattledogs); Country of origin: GREAT BRITAIN",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S513, fields as returned): 'WELSH CORGI (CARDIGAN)', number '38'; 'Not subject to a working trial according to the FCI breeds nomenclature'; definitive acceptance '11/12/1963'; valid standard '9/8/2026' (the English row of the page's table says 10/6/2026 — page inconsistent). Quote assembled from the nomenclature fields as returned. FCI standard (S514): utilization 'Herding & companion'. RKC group: Pastoral (S515). AKC name 'Cardigan Welsh Corgi' (S174)."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S515",
+      "quote": "Size: Small",
+      "confidence": "high",
+      "notes": "PDSA (S206, one page for both corgis) 'Size | Medium' — sources disagree; RKC preferred (runbook §2.2). AKC weight 25–38 lb (S517) lies mostly in the PetMD 'Medium (24–59 pounds)' class (S10)."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            30,
+            30
+          ],
+          "female": [
+            30,
+            30
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S514",
+        "quote": "Ideal height at withers: 30 cm.",
+        "confidence": "high",
+        "notes": "FCI (S514): one ideal height for both sexes. RKC standard (S516): 'Height: ideal 30 cms (12 ins) at shoulder.'"
+      },
+      "akc": {
+        "value": {
+          "male": [
+            27,
+            32
+          ],
+          "female": [
+            27,
+            32
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S517",
+        "quote": "Dogs and bitches should be from 10.5 to 12.5 inches at the withers when standing naturally.",
+        "confidence": "high",
+        "notes": "AKC standard (S517): 10.5–12.5 in = 26.7–31.8 cm, rounded to 27–32 cm (both sexes). PDSA (S206): 'Average height | 25-30 cm' (both corgi breeds)."
+      }
+    },
+    "adult_weight": {
+      "akc": {
+        "value": {
+          "male": [
+            13.6,
+            17.2
+          ],
+          "female": [
+            11.3,
+            15.4
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S517",
+        "quote": "Ideally, dogs should be from 30 to 38 pounds.",
+        "confidence": "high",
+        "notes": "AKC standard (S517): dogs 'Ideally, dogs should be from 30 to 38 pounds.' (13.6–17.2 kg); bitches 'bitches from 25 to 34 pounds.' (11.3–15.4 kg). Game range 11.3–17.2 kg (both sexes). FCI (S514): 'Weight: In proportion to size with overall balance the prime consideration.' — no number; RKC standard (S516) the same."
+      },
+      "pdsa": {
+        "value": [
+          9,
+          12
+        ],
+        "unit": "kg",
+        "source_id": "S206",
+        "quote": "Average weight | 9-12 kg",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S206), one range for both corgi breeds — lower than the AKC Cardigan standard; alternative only."
+      },
+      "salt_category": {
+        "value": "II",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8). Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. AKC 25–38 lb (S517), midpoint ≈ 31 lb → 'Medium (24–59 pounds)'; the lower end touches 'Small (12–24 pounds): 9–12 months' (alternative)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Cardigan Welsh Corgi growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S515",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "medium",
+        "notes": "RKC breed page (S515). PDSA key facts (S206): 'Average lifespan | Over 12 years' — same."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S135",
+        "quote": null,
+        "confidence": "low",
+        "notes": "McMillan et al. 2024: the published text (S135) names the Cardigan only in the Figure 5 phylogeny label (Pembroke run, 2026-10-12); Wikipedia (S518, tier C) 'a life expectancy of 13.1 years for the breed' (paraphrase of the returned text) citing McMillan 2024 — not verified in the paper or the Dogs Trust table (S123) → open for David (0.75 × 13.1 × 12 = 117.9 → senior 118 if confirmed). UNSOURCED value."
+      },
+      "senior_from": {
+        "value": 9.0,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × RKC lower bound 12 y (S515; PDSA 'Over 12 years' agrees, S206) → 0.75 × 12 = 9 y = 108 months. Runbook order: McMillan 2024 (only via Wikipedia, tier C) → VetCompass median (none found) → RKC lower bound. Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until a McMillan / VetCompass median is checked.",
+        "derived_from": [
+          "S11",
+          "S515"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S515",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "PDSA (S206): 'Welsh Corgis will need around an hour of exercise per day.' (key facts: 'Minimum exercise (per day) | 1 hour') — sources agree; RKC preferred (runbook rule)."
+      },
+      "energy": {
+        "value": "sturdy, tough, mobile, capable of endurance; alert, active and intelligent",
+        "unit": "—",
+        "source_id": "S514",
+        "quote": "Sturdy, tough, mobile, capable of endurance.",
+        "confidence": "high",
+        "notes": "FCI general appearance (S514); RKC standard (S516) the same sentence. FCI behaviour: 'Alert, active and intelligent.' Covered by the game's walk and play — nothing new to build."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "alert, intelligent, steady, not shy or aggressive",
+        "unit": "—",
+        "source_id": "S516",
+        "quote": "Alert, intelligent, steady, not shy or aggressive.",
+        "confidence": "high",
+        "notes": "RKC standard (S516) 'Temperament'. FCI (S514): 'Alert, active and intelligent.' (behaviour; FCI adds steadiness, neither shy nor aggressive — paraphrase). AKC (S517): 'Even-tempered, loyal, affectionate, and adaptable. Never shy nor vicious.' PDSA (S206, both corgis): 'Welsh Corgis are friendly, happy, fun-loving dogs.'"
+      },
+      "family": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No family-pet or children rating found (RKC S515 shows no such field; PDSA S206 only on nipping — see herding_children) → no family_pet / children / small_children tag."
+      },
+      "herding_children": {
+        "value": "may nip at the heels of running children; socialisation with children and training at a young age help",
+        "unit": "—",
+        "source_id": "S206",
+        "quote": "They may nip at the heels of running children",
+        "confidence": "medium",
+        "notes": "PDSA (S206, one page for both corgis): 'socialisation with children and training at a young age can help to overcome these possible problems.' Herding (heel-nipping) behaviour → consider tag may_herd_children (as the Pembroke). Socialisation from a young age = sourced need → proposed_game_parameters.cardigan_welsh_corgi.socialisation (M5-R17). RKC (S515): 'Traditional droving dog of Wales, short-legged and long-bodied'."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found (RKC S515 and PDSA S206 checked) → no often_alone tag."
+      },
+      "other_pets": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No statement about other pets (PDSA S206 checked) → no other_pets tag, no chases_small_pets."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. Not a welfare-concern breed: RKC Breed Watch Category 1 (S515; no breed-specific points of concern for judges, paraphrase of the returned text). PDSA (S206) introduces its list with 'The potential health problems that Welsh Corgis are prone to include:' (one page for both corgi breeds).",
+      "hip_dysplasia": {
+        "value": "hip dysplasia — loose hip joints leading to arthritis; parents hip-scored (BVA/KC scheme, RKC Best Practice)",
+        "unit": "—",
+        "source_id": "S206",
+        "quote": "Hip dysplasia – hip joint laxity as a result of poor development, which will eventually lead to arthritis.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S206). RKC breed page (S515) Best Practice: 'Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme'. Not a Breed Watch point → no hips_hind_legs chip (research only)."
+      },
+      "back_ivdd": {
+        "value": "intervertebral disc disease (back)",
+        "unit": "—",
+        "source_id": "S206",
+        "quote": "Intervertebral disc disease – abnormality of the discs that provide cushioning between the vertebrae (back bones).",
+        "confidence": "medium",
+        "notes": "PDSA health list (S206). Not a Breed Watch point and no A/B source ties the corgi's body shape to IVDD → no back_spine chip (research only, Pembroke precedent; open for David)."
+      },
+      "epilepsy": {
+        "value": "epilepsy",
+        "unit": "—",
+        "source_id": "S206",
+        "quote": "Epilepsy – a brain disorder which can lead to seizures.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S206)."
+      },
+      "von_willebrand": {
+        "value": "von Willebrand's disease (bleeding disorder)",
+        "unit": "—",
+        "source_id": "S206",
+        "quote": "Von Willebrand's disease – deficiency in blood platelet function resulting in excessive bleeding.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S206)."
+      },
+      "eyes": {
+        "value": "progressive retinal atrophy (PRA-rcd3), cataracts, lens luxation",
+        "unit": "—",
+        "source_id": "S515",
+        "quote": "DNA test for progressive retinal atrophy (PRA-rcd3)",
+        "confidence": "medium",
+        "notes": "RKC breed page (S515) Best Practice tests: 'DNA test for progressive retinal atrophy (PRA-rcd3)', 'Eye testing using the BVA/KC/ISDS Eye Scheme'. PDSA (S206): 'Cataracts – opacity of the lens of the eye – giving a 'cloudy' appearance.'; 'Lens luxation – dislocation of the lens of the eye.'"
+      },
+      "bladder_stones": {
+        "value": "bladder stones",
+        "unit": "—",
+        "source_id": "S206",
+        "quote": "Bladder stones – a collection of minerals that form in the bladder.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S206)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 26,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "26 | Cardigan Welsh Corgi",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35): row '26 | Cardigan Welsh Corgi' under 'Excellent Working Dogs' (ranks 11–26). Coren's own top / bottom-10 article (S34) does not list the breed."
+      },
+      "coren_tier": {
+        "value": "Excellent",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 5 to 15 repetitions.",
+        "confidence": "medium",
+        "notes": "S35 tier 'Excellent Working Dogs' (11–26)."
+      },
+      "training_notes": {
+        "value": "willing to please; training fairly easy",
+        "unit": "—",
+        "source_id": "S206",
+        "quote": "They are willing to please, so training should be fairly easy.",
+        "confidence": "medium",
+        "notes": "PDSA (S206, both corgis). Not a first-time-owner statement → no first_time_owner tag (Havanese / Pembroke precedent)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.cardigan_welsh_corgi.learning_multiplier (1.5, runbook rule: Excellent tier).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "sturdy, tough, mobile, capable of endurance; fairly long and strong body",
+        "unit": "—",
+        "source_id": "S514",
+        "quote": "Sturdy, tough, mobile, capable of endurance.",
+        "confidence": "high",
+        "notes": "RKC standard (S516) the same. FCI body (S514): 'Fairly long and strong.' RKC breed page (S515): 'Traditional droving dog of Wales, short-legged and long-bodied'. The game draws a moderate body (not exaggeratedly long or low)."
+      },
+      "colours": {
+        "value": [
+          "blue merle",
+          "brindle",
+          "red",
+          "sable",
+          "tricolour with brindle points",
+          "tricolour with red points"
+        ],
+        "unit": "list (with typical white markings)",
+        "source_id": "S514",
+        "quote": "Accepted colours are blue merle, brindle, red, sable, tricolour with brindle points and tri colour with red points.",
+        "confidence": "high",
+        "notes": "FCI (S514); RKC standard (S516): 'Blue merle, brindle, red, sable, tricolour with brindle points and tricolour with red points.' and 'Any other colour or combination of colours unacceptable.' White markings allowed on head, neck, chest, underparts, legs, feet and tail tip, never predominating (S514, paraphrase). Blue or blue-flecked eyes only in blue merles (S514, paraphrase). Merle IS a standard colour here (Australian Shepherd precedent)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Red with white markings first with the highest weight (portrait default), then brindle, sable, blue merle, tricolour with brindle points, tricolour with red points."
+      },
+      "coat": {
+        "value": "short or medium, hard texture, weatherproof, good undercoat",
+        "unit": "—",
+        "source_id": "S514",
+        "quote": "Short or medium, of hard texture.",
+        "confidence": "high",
+        "notes": "RKC (S516): 'Short or medium of hard texture.' RKC breed page (S515) 'Coat length: Short'."
+      },
+      "ears": {
+        "value": "erect, proportionately rather large, slightly rounded tips",
+        "unit": "—",
+        "source_id": "S514",
+        "quote": "Erect, proportionately rather large to size of dog.",
+        "confidence": "high",
+        "notes": "RKC (S516) the same."
+      },
+      "eyes": {
+        "value": "medium size, clear, kindly, alert but watchful; dark (blue only in blue merles)",
+        "unit": "—",
+        "source_id": "S514",
+        "quote": "Medium size, clear, giving kindly, alert but watchful expression.",
+        "confidence": "high",
+        "notes": "RKC (S516) the same. Dark preferred or blending with the coat, dark rims (S514, paraphrase)."
+      },
+      "nose": {
+        "value": "black, projects slightly; muzzle tapering moderately",
+        "unit": "—",
+        "source_id": "S514",
+        "quote": "Black, projects slightly and in no sense blunt.",
+        "confidence": "high",
+        "notes": "FCI muzzle (S514): 'Tapering moderately towards nose.' RKC (S516): 'Nose black.' Not flat-faced."
+      },
+      "tail": {
+        "value": "like a fox's brush, set in line with the body, moderately long; always undocked",
+        "unit": "—",
+        "source_id": "S514",
+        "quote": "Like a fox’s brush set in line with the body and moderately long (to touch or nearly touch ground).",
+        "confidence": "high",
+        "notes": "RKC standard (S516) the same. RKC breed page (S515): 'The Cardigan has always been undocked, and was once known affectionately as the Yard Dog'. AKC (S517): 'Tail- set fairly low on body line and reaching well below hock.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page fields (S515, royalkennelclub.com) and PDSA (S206, one page for both corgis). The RKC page shows no 'Good with children' field and no temperament text (as returned 2026-10-25). Woodgreen and AKC trait ratings not attempted.",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S515",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": "PDSA (S206): 'Size | Medium' (conflict — RKC preferred for size_class; no tag depends on size)."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S515",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Small house",
+        "unit": "—",
+        "source_id": "S515",
+        "quote": "Size of home: Small house",
+        "confidence": "high",
+        "notes": "Not 'Flat/ Apartment' → no apartment tag; not 'Large house' → no large_home tag."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S515",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S515",
+        "quote": "Grooming: More than once a week",
+        "confidence": "high",
+        "notes": "PDSA (S206): 'grooming two-three times per week' → frequent_grooming; sourced need → dog brushing (M5-R13), 3× a week."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S515",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": "PDSA (S206): 'Coat length | Short'."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S515",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "PDSA (S206) says nothing about shedding (no conflict). Basis of the sheds tag."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S515",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S515",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S515",
+        "quote": "Vulnerable native breed: Yes",
+        "confidence": "high",
+        "notes": "RKC breed page (S515): a vulnerable native British breed (few registrations). Background only — no chip."
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page shows no 'Good with children' field (as returned 2026-10-25)."
+      },
+      "pdsa_children": {
+        "value": "may nip at the heels of running children",
+        "unit": "—",
+        "source_id": "S206",
+        "quote": "They may nip at the heels of running children",
+        "confidence": "medium",
+        "notes": "Basis of may_herd_children (with behaviour.herding_children). Not a children rating → no children / small_children tag."
+      },
+      "pdsa_exercise": {
+        "value": "around an hour per day",
+        "unit": "—",
+        "source_id": "S206",
+        "quote": "Welsh Corgis will need around an hour of exercise per day.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_grooming": {
+        "value": "two to three times per week",
+        "unit": "—",
+        "source_id": "S206",
+        "quote": "Coat care is fairly minimal, with grooming two-three times per week usually enough to remove any dead hair.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_first_time_owner": {
+        "value": "willing to please; training fairly easy",
+        "unit": "—",
+        "source_id": "S206",
+        "quote": "They are willing to please, so training should be fairly easy.",
+        "confidence": "medium",
+        "notes": "Not a first-time-owner statement → no tag."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -50043,6 +50552,223 @@
         "confidence": "high",
         "notes": "Colours of the FCI standard (S507) / AKC standard (S509): any colour incl. white, pinto and brindle, with or without mask; disqualifying merle and liver. The game offers four typical standard colours (red fawn with a black mask, pinto, brindle, white). Weights unsourced in prompts. Red fawn with a black mask as the portrait default — Claude's choice.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): red fawn with a black mask is the portrait default; standard colours only (never merle or liver); natural erect ears and curled tail"
+      }
+    },
+    "cardigan_welsh_corgi": {
+      "_note": "Unattended run M5-R10-64 (2026-10-25): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Brushing 3× a week (PDSA S206 upper bound) and puppy socialisation (PDSA S206 quote) are built (M5-R13 / M5-R17). No care task: no source states a frequency for teeth, nails, ears, groomer or bath (§3 »Breed care tasks«). No meal / exercise gap quote.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S515",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'Up to 1 hour per day' (S515); PDSA 'around an hour of exercise per day' (S206) — agree. Rule: one number N ('up to N') → N = 60.",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S206",
+            "notes": "PDSA (key facts minimum 1 hour)"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S515 'Up to 1 hour per day'; PDSA S206 'around an hour')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S515",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) (S11 + RKC lower bound 'Over 12 years', S515; PDSA S206 the same). McMillan 2024 13.1 y only via Wikipedia (S518, tier C) → 118 if confirmed. Alternative: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S515"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84,
+          "senior_mcmillan_2024_via_wikipedia": 118
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S515)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 108)"
+      },
+      "learning_multiplier": {
+        "value": 1.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 26 (S35), tier 'Excellent' (11–26) → 1.5. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 26, Excellent tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 3,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S206",
+        "quote": "Coat care is fairly minimal, with grooming two-three times per week usually enough to remove any dead hair.",
+        "confidence": "high",
+        "notes": "PDSA (S206, one page for both corgis) 'two-three times per week'; RKC (S515) 'Grooming: More than once a week'. Upper bound 3 (runbook »Dog grooming«: 'A–B per week' → B). Matted coat at ceil(3 / 2) = 2 missed.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2–3× na teden → 3; mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S206",
+        "quote": "socialisation with children and training at a young age can help to overcome these possible problems.",
+        "confidence": "medium",
+        "notes": "PDSA (S206), after 'They may nip at the heels of running children'; quote from cardigan_welsh_corgi.behaviour.herding_children / suitability.pdsa_children notes (PDSA page shared with the Pembroke). Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija z otroki od malega, PDSA S206)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-64); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [],
+        "consider": [
+          {
+            "tag": "may_herd_children",
+            "source_ids": [
+              "S206"
+            ],
+            "refs": [
+              "cardigan_welsh_corgi.behaviour.herding_children",
+              "cardigan_welsh_corgi.suitability.pdsa_children"
+            ],
+            "quote": "S206 'They may nip at the heels of running children'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S515"
+            ],
+            "refs": [
+              "cardigan_welsh_corgi.suitability.rkc_shedding"
+            ],
+            "quote": "S515 'Sheds: Yes'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S515",
+              "S206"
+            ],
+            "refs": [
+              "cardigan_welsh_corgi.suitability.rkc_grooming",
+              "cardigan_welsh_corgi.suitability.pdsa_grooming"
+            ],
+            "quote": "S515 'Grooming: More than once a week'; S206 'grooming two-three times per week'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "No breed statement (RKC S515 no temperament text; PDSA S206 only 'friendly, happy, fun-loving').",
+          "children": "No rating; PDSA: may nip at the heels of running children (S206) → may_herd_children instead.",
+          "small_children": "No rating (S206 nipping).",
+          "first_time_owner": "'training should be fairly easy' (S206) is not a first-time-owner statement (Havanese precedent).",
+          "experienced_owner": "No source.",
+          "apartment": "RKC 'Small house' (S515), not 'Flat/ Apartment'.",
+          "large_home": "RKC 'Small house' (S515).",
+          "active_family": "RKC 'Up to 1 hour per day' (S515) — like the Dachshund, no tag.",
+          "long_daily_exercise": "60 min (S515).",
+          "other_pets": "No statement.",
+          "often_alone": "No source.",
+          "older_owners": "No source.",
+          "low_shedding": "RKC 'Sheds: Yes' (S515).",
+          "needs_mental_stimulation": "No breed-specific statement.",
+          "food_motivated_weight": "No breed-specific statement.",
+          "chews_when_bored": "No source.",
+          "secure_fencing": "No source.",
+          "shorter_lifespan": "RKC 'Over 12 years' (S515).",
+          "welfare": "RKC Breed Watch Category 1 (S515) → no welfare chip. PDSA lists IVDD and hip dysplasia among potential problems (S206) — research only, no chip (Pembroke precedent); open for David whether back_spine should apply.",
+          "chases_small_pets": "No prey-drive statement (PDSA S206 checked)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits —; consider may_herd_children (PDSA S206), sheds (RKC S515), frequent_grooming (RKC S515, PDSA S206)"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S515",
+        "quote": "Category 1",
+        "confidence": "medium",
+        "notes": "RKC Breed Watch Category 1 (S515; the page lists no breed-specific points of concern — paraphrase); no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). Marketing never promises health.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (not a welfare breed)"
+      },
+      "ai_appearance": {
+        "value": "adult Cardigan Welsh Corgi, red coat with white markings on neck, chest and legs, short to medium hard-textured weatherproof coat, erect rather large ears with slightly rounded tips, fox-like head with a moderately tapering muzzle, dark eyes, black nose, sturdy low-set body of moderate length with a level back and enough ground clearance, long natural tail like a fox's brush carried low",
+        "unit": "—",
+        "source_id": "S514",
+        "quote": "Accepted colours are blue merle, brindle, red, sable, tricolour with brindle points and tri colour with red points.",
+        "confidence": "high",
+        "notes": "Colours from the FCI / RKC standards (S514, S516); white never predominating. Weights unsourced. Natural tail (the Cardigan has always been undocked, S515). Moderate body length (not exaggeratedly long or low).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): red with white markings is the portrait default; fox-brush tail; moderate body"
       }
     }
   }

@@ -564,6 +564,14 @@ class FalAiService
                 .'small, strongly erect ears, large well-furnished tail curled over the back, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-64: FCI 38 (S514) / RKC (S516) — red with white markings as the anchor (the first
+            // colour of the game list); the Cardigan has always been undocked (RKC S515): fox-brush tail.
+            BreedType::CardiganWelshCorgi => 'An alert, steady Cardigan Welsh Corgi dog with a red coat and white markings on the neck, chest and legs, '
+                .'short to medium hard-textured weatherproof coat, erect, rather large ears with slightly rounded tips, '
+                .'fox-like head, dark eyes, black nose, sturdy body of moderate length with a level back and enough ground clearance, '
+                .'long natural tail like a fox\'s brush, carried low, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1339,6 +1347,18 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'thick double coat with a harsh, straight outer coat',
                 'markings' => 'never merle or liver, small strongly erect ears, large tail curled over the back',
+            ],
+            // M5-R10-64: FCI 38 (S514) colours — red, brindle, sable, blue merle, tricolour; white only as
+            // markings (never predominating); long fox-brush tail, never docked.
+            BreedType::CardiganWelshCorgi => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'red',
+                    1 => 'brindle',
+                    2 => 'sable',
+                },
+                'eye_color' => 'dark',
+                'fur_texture' => 'short to medium, hard-textured and weatherproof, with a good undercoat',
+                'markings' => 'white markings on the neck, chest and legs, never predominantly white, long fox-brush tail',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

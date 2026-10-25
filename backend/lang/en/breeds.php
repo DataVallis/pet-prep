@@ -67,6 +67,7 @@ return [
     'giant_schnauzer' => 'Giant Schnauzer',
     'bloodhound' => 'Bloodhound',
     'akita' => 'Akita',
+    'cardigan_welsh_corgi' => 'Cardigan Welsh Corgi',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',
