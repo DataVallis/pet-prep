@@ -807,6 +807,18 @@
             "prompt_hash": "sha256:3f5fc38014d467c30de19a44493aa5e81b2185488017ab8ce103dfa6942d3862",
             "generated_at": "2026-10-25T07:55:41+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "saint_bernard",
+            "species": "dog",
+            "file": "dog/saint-bernard.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:b029e4be4127165c0abb1ea53e16301edadf215fae782faec876ad03d2b8037b",
+            "generated_at": "2026-10-25T19:55:54+00:00",
+            "cost_usd": 0.15
         }
     ]
 }
