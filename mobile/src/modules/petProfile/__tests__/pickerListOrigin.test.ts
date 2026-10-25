@@ -4,9 +4,13 @@
  */
 import {
   BREED_PREVIEW_COUNT,
+  choiceWithOrigin,
   completeChoice,
   FALLBACK_CATALOGUE,
+  freeTrialLimits,
+  freeTrialText,
   originsFor,
+  soleOption,
   visibleBreeds,
   withValidOrigin,
   type CatalogueBreed,
@@ -47,14 +51,56 @@ describe('origin rule', () => {
     expect(originsFor({ ...base, species: 'cat', breed: 'maine_coon' }, cats)).toEqual(['bought', 'adopted']);
   });
 
-  it('withValidOrigin clears an origin that no longer fits, keeps one that does', () => {
-    expect(withValidOrigin({ ...base, plan: 'free' }, dogs).origin).toBeNull();
-    expect(withValidOrigin({ ...base, plan: 'free', origin: 'adopted' }, dogs).origin).toBe('adopted');
+  it('withValidOrigin (David 2026-10-25): the only origin is preselected, also over a stale "bought"', () => {
+    expect(withValidOrigin({ ...base, plan: 'free', origin: null }, dogs)).toMatchObject({ origin: 'adopted', originAuto: true });
+    expect(withValidOrigin({ ...base, plan: 'free' }, dogs)).toMatchObject({ origin: 'adopted', originAuto: true });
+    // A tapped "adopted" stays the parent's own choice.
+    expect(withValidOrigin({ ...base, plan: 'free', origin: 'adopted' }, dogs).originAuto).toBeUndefined();
     expect(withValidOrigin(base, dogs).origin).toBe('bought');
+  });
+
+  it('withValidOrigin: a preselected origin is cleared when several origins are possible again', () => {
+    const auto = withValidOrigin({ ...base, plan: 'free', origin: null }, dogs);
+    const back = withValidOrigin({ ...auto, plan: 'challenge', breed: 'border_collie' }, dogs);
+    expect(back).toMatchObject({ origin: null, originAuto: false });
+    // …but an origin the parent tapped is kept.
+    const tapped = choiceWithOrigin(auto, 'adopted');
+    expect(withValidOrigin({ ...tapped, plan: 'challenge', breed: 'border_collie' }, dogs)).toMatchObject({ origin: 'adopted', originAuto: false });
+  });
+
+  it('withValidOrigin: no plan yet → nothing preselected', () => {
+    expect(withValidOrigin({ ...base, plan: null, breed: null, origin: null }, dogs).origin).toBeNull();
+  });
+
+  it('soleOption: exactly one option → it, else null', () => {
+    expect(soleOption(['adopted'])).toBe('adopted');
+    expect(soleOption([])).toBeNull();
+    expect(soleOption(['bought', 'adopted'])).toBeNull();
   });
 
   it('completeChoice never sends a bought mutt', () => {
     expect(completeChoice({ ...base, plan: 'free' }, [], dogs)).toBeNull();
+    // Through the picker's normalisation the mutt is complete with the preselected adoption.
+    expect(completeChoice(withValidOrigin({ ...base, plan: 'free' }, dogs), [], dogs)).toMatchObject({ breed: 'mutt', origin: 'adopted' });
     expect(completeChoice({ ...base, plan: 'free', origin: 'adopted' }, [], dogs)).toMatchObject({ breed: 'mutt', origin: 'adopted' });
+  });
+});
+
+describe('free-trial notice (David 2026-10-25)', () => {
+  it('dog: five verified limits; cat: no dog-only care line', () => {
+    expect(freeTrialLimits('dog')).toEqual(['program', 'history', 'origin', 'media', 'care']);
+    expect(freeTrialLimits('cat')).toEqual(['program', 'history', 'origin', 'media']);
+  });
+
+  it('texts per species (Slovenian)', () => {
+    const dog = freeTrialText('dog');
+    expect(dog.title).toBe('Brezplačni mešanček je omejen preizkus');
+    expect(dog.items).toHaveLength(5);
+    expect(dog.items.join(' ')).toMatch(/zadnjih 7 dni/);
+    const kitty = freeTrialText('cat');
+    expect(kitty.title).toBe('Brezplačna domača mačka je omejen preizkus');
+    expect(kitty.items).toHaveLength(4);
+    expect(kitty.items.join(' ')).toMatch(/palico/);
+    expect(kitty.cta).toBe(dog.cta);
   });
 });

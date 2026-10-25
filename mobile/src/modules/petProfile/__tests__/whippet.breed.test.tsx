@@ -17,9 +17,7 @@ import {
 import { breedName, hasGroomingRoutine, isDefaultFreeBreed, readBreed, readSpecies } from '@/modules/species/species';
 
 function renderPicker(catalogue: BreedCatalogue | null, onConfirm = jest.fn()) {
-  render(<PetPickerStep childName="Maja" catalogue={catalogue} initial={INITIAL_PICKER_CHOICE} onConfirm={onConfirm} onBack={jest.fn()} />);
-  const toggle = screen.queryByTestId('breed-show-all');
-  if (toggle) fireEvent.press(toggle);
+  render(<PetPickerStep childName="Maja" catalogue={catalogue} initial={INITIAL_PICKER_CHOICE} onConfirm={onConfirm} onBack={jest.fn()} previewCount={Number.MAX_SAFE_INTEGER} />);
   return { onConfirm };
 }
 

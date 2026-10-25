@@ -13,6 +13,7 @@ import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 import { X } from 'lucide-react-native';
 
 import { Text, TextInput } from '@/components/ui/Text';
+import { FieldLabel, RequiredLegend, requiredA11yLabel } from '@/components/ui/RequiredLabel';
 import { PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import {
   CERTIFICATE_FORM_STRINGS as S,
@@ -86,9 +87,10 @@ export default function CertificateFormSheet({
     const length = certificateNameLength(values[field]);
     return (
       <View style={styles.field}>
-        <Text style={styles.label} nativeID={`${testID}-${field}-label`}>
+        {/* Both names are required (validateCertificateForm). */}
+        <FieldLabel required style={styles.label} nativeID={`${testID}-${field}-label`}>
           {label}
-        </Text>
+        </FieldLabel>
         <TextInput
           style={[styles.input, error !== undefined && styles.inputError]}
           value={values[field]}
@@ -99,7 +101,7 @@ export default function CertificateFormSheet({
           autoComplete="off"
           editable={!busy}
           returnKeyType="done"
-          accessibilityLabel={label}
+          accessibilityLabel={requiredA11yLabel(label)}
           accessibilityHint={S.nameHint}
           testID={`${testID}-${field}`}
         />
@@ -166,6 +168,7 @@ export default function CertificateFormSheet({
             </View>
           </View>
 
+          <RequiredLegend />
           {nameField('child_name', S.childName)}
           {nameField('pet_name', S.petName)}
           <Text style={styles.hint} testID={`${testID}-hint`}>

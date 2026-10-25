@@ -1186,12 +1186,34 @@ export function originsFor(choice: PickerChoice, breeds: readonly CatalogueBreed
 }
 
 /**
- * The choice with an origin the breed allows: an origin that no longer fits (e.g. "bought"
- * after switching to the free mutt) is cleared, never swapped silently — the parent picks again.
+ * The only option of a required choice, or null when there are none or several. A required
+ * choice with exactly one option is preselected (tester feedback, David 2026-10-25) — the
+ * parent never has to tap the only possible answer.
+ */
+export function soleOption<T>(options: readonly T[]): T | null {
+  return options.length === 1 ? options[0] : null;
+}
+
+/**
+ * The choice with an origin the breed allows (David 2026-10-25, tester feedback):
+ * - a single possible origin (the free mutt / domestic cat → adoption) is preselected and
+ *   marked `originAuto`;
+ * - when several origins become possible again (switch to a paid breed / back to no plan)
+ *   an origin the app preselected is cleared, so the parent decides — origin has no default;
+ * - an origin the parent tapped that no longer fits is cleared, never swapped silently.
  */
 export function withValidOrigin(choice: PickerChoice, breeds: readonly CatalogueBreed[]): PickerChoice {
-  if (choice.origin === null || originsFor(choice, breeds).includes(choice.origin)) return choice;
+  const options = originsFor(choice, breeds);
+  const only = soleOption(options);
+  if (only !== null) return choice.origin === only ? choice : { ...choice, origin: only, originAuto: true };
+  if (choice.originAuto === true) return { ...choice, origin: null, originAuto: false };
+  if (choice.origin === null || options.includes(choice.origin)) return choice;
   return { ...choice, origin: null };
+}
+
+/** The choice after the parent taps an origin (a deliberate choice, never `originAuto`). */
+export function choiceWithOrigin(choice: PickerChoice, origin: PetOrigin): PickerChoice {
+  return { ...choice, origin, originAuto: false };
 }
 
 /** What the parent has picked so far (species, plan, origin and age have no default — a deliberate choice). */
@@ -1207,6 +1229,12 @@ export interface PickerChoice {
    * a choice from before M5-R21 simply has none.
    */
   colour?: string | null;
+  /**
+   * True when the app preselected the origin because it was the only one (the free mutt /
+   * domestic cat → adoption, {@link withValidOrigin}); it is cleared again when the choice
+   * offers several origins. Optional: absent = the parent's own tap (or none).
+   */
+  originAuto?: boolean;
 }
 
 export const INITIAL_PICKER_CHOICE: PickerChoice = { species: null, plan: null, breed: null, origin: null, age_stage: null };
@@ -1418,4 +1446,51 @@ export function breedHint(breed: PetBreed): string {
 /** Age-at-arrival hint of a breed (dogs: meals + step goal; cats: arrival age only). */
 export function ageHint(breed: PetBreed, age: LifeStage): string {
   return PICKER_STRINGS.ageHints[breed][age];
+}
+
+/**
+ * What the free pet (mutt / domestic cat) lacks compared with a 12-week challenge breed — the
+ * notice under the plans when the free plan is chosen (tester feedback, David 2026-10-25: the
+ * free mutt is a limited trial, so testers don't take it for the whole app). ONLY facts the
+ * code enforces:
+ * - `program`: no 12-week progress (CareScoreService `progress` null for a free pet) and no
+ *   certificate (ChallengeCertificateService::processPet skips free pets);
+ * - `history`: the parent's history is the last 7 days (FamilyDashboardService::FREE_HISTORY_DAYS);
+ * - `origin`: adoption only ({@link originsFor}; server GeneratePinRequest stores a bought free
+ *   breed as adopted) and no coat colour ({@link coloursFor} — challenge breeds only);
+ * - `media`: the basic video tier, idle + sleeping (MediaEntitlementService::tierFor,
+ *   config media.video_states.basic) — no other state / behaviour clips, no state-media key
+ *   images and transitions, no school / game phase clips (full tier only);
+ * - `care` (dogs only): the mutt has no grooming row (BreedStageParamsSeeder::DOG_GROOMING)
+ *   and no breed care task row (DOG_CARE_TASKS) → no brushing, no teeth / ears / folds / nails.
+ */
+export type FreeTrialLimit = 'program' | 'history' | 'origin' | 'media' | 'care';
+
+export function freeTrialLimits(species: PetSpecies): readonly FreeTrialLimit[] {
+  return species === 'dog' ? ['program', 'history', 'origin', 'media', 'care'] : ['program', 'history', 'origin', 'media'];
+}
+
+export interface FreeTrialText {
+  title: string;
+  intro: string;
+  items: string[];
+  cta: string;
+}
+
+/** The free-trial notice of a species (cat texts override title, intro, origin and media). */
+export function freeTrialText(species: PetSpecies): FreeTrialText {
+  const F = PICKER_STRINGS.freeTrial;
+  const C = PICKER_STRINGS.cat.freeTrial;
+  const cat = species === 'cat';
+  const item = (limit: FreeTrialLimit): string => {
+    if (cat && limit === 'origin') return C.items.origin;
+    if (cat && limit === 'media') return C.items.media;
+    return F.items[limit];
+  };
+  return {
+    title: cat ? C.title : F.title,
+    intro: cat ? C.intro : F.intro,
+    items: freeTrialLimits(species).map(item),
+    cta: F.cta,
+  };
 }

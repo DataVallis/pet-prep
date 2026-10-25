@@ -117,7 +117,11 @@ describe('AddChildScreen', () => {
       renderWithQuery(<AddChildScreen onBack={jest.fn()} />);
 
       expect(screen.getByText(S.privacy)).toBeTruthy();
-      expect(screen.getByLabelText(S.nicknameLabel)).toBeTruthy();
+      // Required (tester feedback 2026-10-25): asterisk + spoken "obvezno"; the birth year is optional.
+      expect(screen.getByTestId('child-nickname').props.accessibilityLabel).toBe(`${S.nicknameLabel}, obvezno`);
+      expect(screen.getByTestId('child-nickname-label')).toHaveTextContent(`${S.nicknameLabel}*`);
+      expect(screen.getByTestId('child-birth-year').props.accessibilityLabel).toBe(S.birthYearLabel);
+      expect(screen.getByTestId('required-legend')).toHaveTextContent('* obvezno polje');
       expect(screen.getByLabelText(S.birthYearLabel)).toBeTruthy();
       expect(screen.queryByPlaceholderText(/e-pošt/i)).toBeNull();
 
@@ -598,12 +602,11 @@ describe('AddChildScreen', () => {
       expect(screen.queryByText(PICKER.breedMissing)).toBeNull();
       expect(screen.getByTestId('dog-picker-confirm').props.accessibilityState.disabled).toBe(true);
 
-      // The way out: the free plan. The mutt is adoption only (David 2026-10-12): "bought" is
-      // cleared, so the parent picks the origin again before confirming.
+      // The way out: the free plan. The mutt is adoption only (David 2026-10-12), and that only
+      // origin is preselected (David 2026-10-25), so the parent can confirm right away.
       fireEvent.press(screen.getByTestId('plan-option-free'));
       expect(screen.queryByText(PICKER.noPaidBreed)).toBeNull();
-      expect(screen.getByTestId('dog-picker-confirm').props.accessibilityState.disabled).toBe(true);
-      fireEvent.press(screen.getByTestId('origin-option-adopted'));
+      expect(screen.getByTestId('origin-option-adopted').props.accessibilityState.checked).toBe(true);
       expect(screen.getByTestId('dog-picker-confirm').props.accessibilityState.disabled).toBe(false);
     });
 

@@ -18,6 +18,7 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { ActivityIndicator, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { Text, TextInput } from '@/components/ui/Text';
+import { FieldLabel, RequiredLegend, requiredA11yLabel } from '@/components/ui/RequiredLabel';
 import { Cat, Check, CheckCircle, ChevronLeft, ChevronRight, Copy, Dog, KeyRound, Lock, PawPrint, RefreshCw, Smartphone } from 'lucide-react-native';
 
 import type { ChildPinResponse, NewPetProfile, PetBreed, PinLoginMode } from '@/api/client';
@@ -274,7 +275,10 @@ function ProfileStep({ onCreated }: { onCreated: (child: { id: number; name: str
     <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={styles.flex}>
       <ScrollView contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled">
         <View style={styles.formCard}>
-          <Text style={styles.fieldLabel}>{S.nicknameLabel}</Text>
+          <RequiredLegend />
+          <FieldLabel required style={styles.fieldLabel} testID="child-nickname-label">
+            {S.nicknameLabel}
+          </FieldLabel>
           <TextInput
             style={styles.input}
             value={nickname}
@@ -289,7 +293,7 @@ function ProfileStep({ onCreated }: { onCreated: (child: { id: number; name: str
             autoCorrect={false}
             autoComplete="off"
             editable={!create.isPending}
-            accessibilityLabel={S.nicknameLabel}
+            accessibilityLabel={requiredA11yLabel(S.nicknameLabel)}
             testID="child-nickname"
           />
 

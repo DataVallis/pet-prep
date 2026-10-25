@@ -77,6 +77,18 @@
         "hint": "Program, ki pokaže, ali je otrok pripravljen na psa, s plačljivo pasmo po izbiri, certifikatom in celotno zgodovino. Izziv se začne z nakupom: pes čaka, dokler izziva za tega psa ne kupite (lahko tudi pred podpisom pogodbe). Enkratno plačilo, brez naročnine. Bi najprej poskusili? Izberite brezplačnega mešančka."
       }
     },
+    "freeTrial": {
+      "title": "Brezplačni mešanček je omejen preizkus",
+      "intro": "Z njim spoznate osnovno skrb za psa. V primerjavi s pasmami v 12-tedenskem izzivu nima:",
+      "items": {
+        "program": "12-tedenskega programa in certifikata,",
+        "history": "celotne zgodovine — vidite zadnjih 7 dni,",
+        "origin": "izbire izvora in barve — pes je vedno posvojen iz zavetišča,",
+        "media": "vseh videov — samo mirovanje in spanje, brez posnetkov lakote, utrujenosti, bolezni, igre, šole in prehodov,",
+        "care": "česanja in posebnih neg, ki jih imajo številne pasme (zobje, ušesa, kožne gube, kremplji)."
+      },
+      "cta": "Za poln doživljaj izberite pasmo v 12-tedenskem izzivu."
+    },
     "planMissing": "Izberite načrt.",
     "breedFreeNote": "V brezplačnem načrtu je pes vedno mešanček. Plačljive pasme so del 12-tedenskega izziva.",
     "breedChallengeNote": "12-tedenski izziv je s plačljivo pasmo. Mešanček je pes brezplačnega načrta — zanj izberite »Brezplačni mešanček«.",
@@ -86,6 +98,8 @@
     "searchEmpty": "Nobena pasma se ne ujema z »{{query}}«.",
     "showAllBreeds": "Pokaži vse pasme ({{count}})",
     "showFewerBreeds": "Pokaži manj pasem",
+    "allBreedsTitle": "Vse pasme",
+    "allBreedsClose": "Zapri seznam pasem",
     "originAdoptionOnly": "{{breed}} ni čistokrvna pasma. Vzreditelji vzrejajo samo čistokrvne živali, zato je na voljo samo posvojitev.",
     "badgeFree": "Brezplačno",
     "badgeChallenge": "Izziv",
@@ -167,7 +181,7 @@
     "colourA11y": "Barva: {{colour}}",
     "lockedA11y": "{{breed}}, zaklenjeno — del plačljivega izziva",
     "lockedFreeOnlyA11y": "{{breed}}, ni na voljo — samo v brezplačnem načrtu",
-    "originTitle": "Od kod pride",
+    "originTitle": "Od kod prihaja",
     "origins": {
       "bought": "Kupljen (vzreditelj)",
       "adopted": "Posvojen (zavetišče)"
@@ -649,7 +663,15 @@
         "adult": "Zrela mačka",
         "senior": "Starejša mačka"
       },
-      "buyFirst": "12-tedenski izziv se začne z nakupom: kupite ga v »Nakupi / izziv« — pred ali po tem, ko {{name}} podpiše pogodbo. Do takrat muca čaka."
+      "buyFirst": "12-tedenski izziv se začne z nakupom: kupite ga v »Nakupi / izziv« — pred ali po tem, ko {{name}} podpiše pogodbo. Do takrat muca čaka.",
+      "freeTrial": {
+        "title": "Brezplačna domača mačka je omejen preizkus",
+        "intro": "Z njo spoznate osnovno skrb za muco. V primerjavi s pasmami v 12-tedenskem izzivu nima:",
+        "items": {
+          "origin": "izbire izvora in barve — muca je vedno posvojena,",
+          "media": "vseh videov — samo mirovanje in spanje, brez posnetkov lakote, utrujenosti, bolezni, igre s palico in prehodov."
+        }
+      }
     }
   },
   "breedSuitability": {

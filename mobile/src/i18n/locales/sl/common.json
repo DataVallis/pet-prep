@@ -28,5 +28,10 @@
     "submit": "Potrdi",
     "cancel": "Prekliči",
     "wrong": "Odgovor ni pravilen. Poskusite znova."
+  },
+  "required": {
+    "a11y": "{{label}}, obvezno",
+    "legend": "* obvezno polje",
+    "legendA11y": "Polja z zvezdico so obvezna."
   }
 }
