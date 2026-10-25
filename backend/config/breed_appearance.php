@@ -566,6 +566,14 @@
 | intervertebral disc disease; Pembroke precedent). RKC Breed Watch Category 1 (S515). Colour weights unsourced →
 | `verified => false`.
 |
+| German Wirehaired Pointer (M5-R10-65, docs/research/dog-data german_wirehaired_pointer.appearance): "Medium-sized
+| hunting dog, with wire hair completely covering skin." (RKC standard S522); harsh, wiry, flat-lying coat about 2–4 cm
+| with a dense undercoat (FCI 98, S520); medium, high-set ears; hazel or darker eyes; nose liver or black. Colours: only
+| those every standard read accepts — liver roan (FCI "brown roan", AKC "liver roan"), liver and white, solid liver; black
+| left out (AKC S523 "Any black in the coat is to be severely penalized."), never solid black or tricolour (RKC S522 "highly
+| undesirable") — liver roan weighted highest (the register portrait). Natural undocked tail "Reaching to the hocks"
+| (RKC S522). RKC Breed Watch Category 1 (S521). Colour weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -2931,6 +2939,39 @@ return [
             'body' => ['fairly long, strong body with a level back and enough ground clearance, sturdy short legs'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'body'],
+    ],
+
+    // M5-R10-65 (docs/research/dog-data/data.json german_wirehaired_pointer.appearance; runbook rules 2026-10-10:
+    // standard colours only — S522 / S520 / S523; natural undocked tail).
+    'german_wirehaired_pointer' => [
+        'display_name' => 'German Wirehaired Pointer',
+        // Colour frequencies are in no source (german_wirehaired_pointer.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'Royal Kennel Club breed standard (S522), FCI-Standard N° 98 (S520, https://fci.be/Nomenclature/Standards/098g07-en.pdf), AKC standard (S523), RKC breed page (S521) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S521 "Size: Large"; S522 "Medium-sized hunting dog, with wire hair completely covering skin."',
+            'build' => 'S522 "Powerful, strong, versatile hunting dog, excels in both field and water."',
+            'coat_length' => 'S520 "Wirehaired harsh, flat lying and dense."',
+            'coat_color' => 'S522 "Liver and white, solid liver, black and white. Solid black and tricoloured highly undesirable."; S523 "Any black in the coat is to be severely penalized." (weights unsourced)',
+            'ear_carriage' => 'S520 "Of medium size, set on high and wide, not twisted."',
+            'eye_color' => 'S522 "Medium-sized oval, hazel or darker, with eyelids closing properly, not protruding nor too deep set."',
+            'tail' => 'S522 "Reaching to the hocks and carried straight or slightly sabre fashion." (undocked)',
+        ],
+        'traits' => [
+            'size' => ['medium-large, athletic'],
+            'build' => [['value' => 'powerful, strong and athletic, slightly longer than tall', 'weight' => 3], 'lean and muscular'],
+            'coat_length' => ['harsh, wiry, flat-lying outer coat with a dense undercoat, a short beard and bushy eyebrows'],
+            // Standard colours accepted by every standard read (S522, S520, S523); liver roan highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'liver roan with solid liver patches and a liver head', 'weight' => 4],
+                ['value' => 'liver and white', 'weight' => 3],
+                'solid liver',
+            ],
+            'ear_carriage' => ['medium-sized, high-set hanging ears'],
+            'eye_color' => ['medium-sized, oval, hazel to dark brown'],
+            'tail' => ['natural undocked tail reaching to the hocks, carried straight or slightly sabre-like'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',

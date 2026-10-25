@@ -572,6 +572,14 @@ class FalAiService
                 .'long natural tail like a fox\'s brush, carried low, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-65: FCI 98 (S520) / RKC (S522) / AKC (S523) — liver roan with liver patches as the anchor (the first
+            // colour of the game list, accepted by every standard); natural undocked tail (RKC S522 undocked description).
+            BreedType::GermanWirehairedPointer => 'An alert, biddable German Wirehaired Pointer dog with a liver roan coat, solid liver patches and a liver head, '
+                .'harsh, wiry, flat-lying coat with a short beard and bushy eyebrows, medium-sized high-set ears, '
+                .'hazel to dark brown eyes, liver nose, long strong muzzle, athletic medium-large body slightly longer than tall, '
+                .'natural undocked tail reaching to the hocks, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1359,6 +1367,18 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'short to medium, hard-textured and weatherproof, with a good undercoat',
                 'markings' => 'white markings on the neck, chest and legs, never predominantly white, long fox-brush tail',
+            ],
+            // M5-R10-65: colours every standard read accepts (RKC S522, FCI S520, AKC S523) — liver roan, liver and white,
+            // solid liver; never black, solid black or tricolour; natural undocked tail.
+            BreedType::GermanWirehairedPointer => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'liver roan',
+                    1 => 'liver and white',
+                    2 => 'solid liver',
+                },
+                'eye_color' => 'hazel to dark brown',
+                'fur_texture' => 'harsh, wiry, flat-lying outer coat with a dense undercoat, short beard and eyebrows',
+                'markings' => 'liver head, never black, natural undocked tail reaching to the hocks',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

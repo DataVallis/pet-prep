@@ -1722,5 +1722,34 @@ return [
             ],
         ],
 
+        // M5-R10-65: german_wirehaired_pointer.* (S519–S526 + PDSA S188, one page for both German Pointers), runbook
+        // rules (data.json proposed_game_parameters.german_wirehaired_pointer.suitability_tags). RKC (S521) + PDSA (S188)
+        // + PetMD (S524). RKC Breed Watch Category 1 → no welfare chip. No frequent_grooming (RKC "More than once a week"
+        // vs PDSA "once or twice a week"), no experienced_owner (AKC S525 wording does not match the chip) — open for David.
+        'german_wirehaired_pointer' => [
+            'suits' => [
+                // S521 "Exercise: More than 2 hours per day"; S188 "over 2 hours ideally per day".
+                ['tag' => 'active_family', 'source_ids' => ['S521', 'S188'], 'refs' => ['german_wirehaired_pointer.exercise.adult', 'german_wirehaired_pointer.suitability.pdsa_exercise']],
+                // S524 "They can make great family dogs when trained and socialized from an early age."
+                ['tag' => 'family_pet', 'source_ids' => ['S524'], 'refs' => ['german_wirehaired_pointer.behaviour.family']],
+                // S524 "… do well with children who have been taught how to interact with animals." (supervise).
+                ['tag' => 'children', 'source_ids' => ['S524'], 'refs' => ['german_wirehaired_pointer.suitability.petmd_children']],
+                // S521 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S521'], 'refs' => ['german_wirehaired_pointer.suitability.rkc_size_of_home', 'german_wirehaired_pointer.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S521 "More than 2 hours per day"; S188 "over 2 hours ideally per day".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S521', 'S188'], 'refs' => ['german_wirehaired_pointer.exercise.adult', 'german_wirehaired_pointer.suitability.pdsa_exercise']],
+                // S524 "… they do need lots of exercise and mental stimulation to be happy."
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S524'], 'refs' => ['german_wirehaired_pointer.exercise.mental']],
+                // S524 "… your GWP should never be left alone for long periods."
+                ['tag' => 'needs_company', 'source_ids' => ['S524'], 'refs' => ['german_wirehaired_pointer.behaviour.time_alone']],
+                // S521 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S521'], 'refs' => ['german_wirehaired_pointer.suitability.rkc_shedding']],
+                // S524 "… this dog has a high prey drive due to their history as hunters".
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S524'], 'refs' => ['german_wirehaired_pointer.behaviour.other_pets']],
+            ],
+        ],
+
     ],
 ];
