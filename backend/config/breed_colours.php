@@ -411,6 +411,13 @@ return [
         ['key' => 'liver-white', 'value' => 'liver and white', 'en' => 'Liver and white', 'sl' => 'Rjavo-bel'],
         ['key' => 'liver', 'value' => 'solid liver', 'en' => 'Liver', 'sl' => 'Rjav'],
     ],
+    // M5-R10-66: RKC S530 / FCI S528 — red mantle, white with red patches, red-brindle and white; never solid white,
+    // solid red, black, merle or tricolour.
+    'saint_bernard' => [
+        ['key' => 'red-white', 'value' => 'red mantle with white markings on the muzzle, blaze, collar, chest, feet and tail tip and a dark mask', 'en' => 'Red and white', 'sl' => 'Rdeče-bel'],
+        ['key' => 'white-red', 'value' => 'white with red patches', 'en' => 'White with red patches', 'sl' => 'Bel z rdečimi lisami'],
+        ['key' => 'brindle-white', 'value' => 'red-brindle and white', 'en' => 'Red brindle and white', 'sl' => 'Rdeče tigrasto-bel'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

@@ -52,9 +52,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest / WeimaranerBreedTest / ItalianGreyhoundBreedTest / GiantSchnauzerBreedTest / BloodhoundBreedTest / AkitaBreedTest / CardiganWelshCorgiBreedTest / GermanWirehairedPointerBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest / WeimaranerBreedTest / ItalianGreyhoundBreedTest / GiantSchnauzerBreedTest / BloodhoundBreedTest / AkitaBreedTest / CardiganWelshCorgiBreedTest / GermanWirehairedPointerBreedTest / SaintBernardBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever / Samoyed / Scottish Terrier / Weimaraner / Italian Greyhound / Giant Schnauzer / Bloodhound / Akita / Cardigan Welsh Corgi / German Wirehaired Pointer rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever / Samoyed / Scottish Terrier / Weimaraner / Italian Greyhound / Giant Schnauzer / Bloodhound / Akita / Cardigan Welsh Corgi / German Wirehaired Pointer / Saint Bernard rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -790,6 +790,25 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_GERMAN_WIREHAIRED_POINTER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-65)';
 
     /**
+     * M5-R10-66 Saint Bernard (unattended run 2026-10-25, data.json proposed_game_parameters.saint_bernard.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on
+     * 2026-10-10 — exercise 60 min (RKC S529 "Exercise: Up to 1 hour per day"), senior 45 min, puppy 10 min × age capped
+     * at 60, stages young 9 / adult 36, arrival 2 / 9 / 36, learning multiplier 0.7 (Coren rank 65, Fair); care rates the
+     * Border Collie's. The senior boundary uses the closest rule row (Adams et al. 2010 survey median 7.0 y, S534 — RKC
+     * "Under 10 years" has no lower bound) and is NOT covered by the confirmation: see PROPOSED_R10_SAINT_BERNARD_SENIOR.
+     */
+    public const CONFIRMED_R10_SAINT_BERNARD = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-66)';
+
+    /**
+     * M5-R10-66 Saint Bernard senior boundary / senior arrival (63 months): Claude's suggestion from the closest rule row
+     * (0.75 × Adams et al. 2010 Kennel Club / BSAVA survey median 7.0 y, S534) — no runbook rule produced a value (the Dogs
+     * Trust McMillan 2024 table S123 could not be fetched, no VetCompass median, the RKC band "Under 10 years" has no lower
+     * bound), so the rows are verified=false until David decides (data.json
+     * proposed_game_parameters.saint_bernard.senior_boundary_months).
+     */
+    public const PROPOSED_R10_SAINT_BERNARD_SENIOR = 'predlog Claude 2026-10-25 (najbližja vrstica pravila runbooka, M5-R10-66) — čaka Davida';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1003,6 +1022,9 @@ class BreedStageParamsSeeder extends Seeder
         'german_wirehaired_pointer' => [
             'ear_cleaning' => [1, 'month', 'S524', "Regularly (once a month, or more frequently as instructed by your veterinarian) clean your dog's ears", 'proposed_game_parameters.german_wirehaired_pointer.ear_care', '"once a month" → every 4 weeks (hand-stripping "twice a year" is longer than every care period → no reminder; bath "rarely" has no number)'],
         ],
+        'saint_bernard' => [
+            'ear_cleaning' => [1, 'two_weeks', 'S533', 'Cleaning their ears with a veterinarian-recommended ear cleaner every two to three weeks', 'proposed_game_parameters.saint_bernard.ear_care', '"every two to three weeks" → the lower bound, every 2 weeks (eyes / skin folds "regularly", nails "regular", bath "occasional" have no number → no task)'],
+        ],
     ];
 
     /**
@@ -1087,6 +1109,7 @@ class BreedStageParamsSeeder extends Seeder
         'akita' => [1, 'S508', 'at minimum a weekly brush to help get rid of dead hairs.', 'medium', false],
         'cardigan_welsh_corgi' => [3, 'S206', 'Coat care is fairly minimal, with grooming two-three times per week usually enough to remove any dead hair.', 'high', false],
         'german_wirehaired_pointer' => [2, 'S188', "Shorthaired pointers will need grooming once or twice a week, with Wirehaired also needing 'stripping' occasionally.", 'medium', false],
+        'saint_bernard' => [3, 'S532', 'Brushing them at least three times a week will help you keep on top of all the dead hair.', 'high', false],
     ];
 
     /**
@@ -1125,6 +1148,7 @@ class BreedStageParamsSeeder extends Seeder
         'weimaraner' => ['S480', 'Remember to leave a gap between eating and exercising as this is thought to reduce the risk of GDV.'],
         'bloodhound' => ['S503', 'Remember to leave a gap between eating and exercising as this is thought to reduce the risk of GDV.'],
         'akita' => ['S508', 'Remember to leave a gap after eating and before exercising.'],
+        'saint_bernard' => ['S532', 'Remember to leave a gap after eating and before exercising.'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -1201,13 +1225,14 @@ class BreedStageParamsSeeder extends Seeder
         'akita' => ['S508', 'your dog will need to be well socialised from a young age'],
         'cardigan_welsh_corgi' => ['S206', 'socialisation with children and training at a young age can help to overcome these possible problems.'],
         'german_wirehaired_pointer' => ['S524', 'They can make great family dogs when trained and socialized from an early age.'],
+        'saint_bernard' => ['S532', 'It’s important that Saint Bernards are well socialised as puppies so they grow into confident and happy adults.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1954,6 +1979,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-65 (docs/research/dog-data/data.json german_wirehaired_pointer,
             // S519–S526 + PDSA S188; runbook rules in proposed_game_parameters.german_wirehaired_pointer).
             BreedType::GermanWirehairedPointer => self::germanWirehairedPointerProfile(),
+            // M5-R10-66 (docs/research/dog-data/data.json saint_bernard,
+            // S527–S535; runbook rules in proposed_game_parameters.saint_bernard).
+            BreedType::SaintBernard => self::saintBernardProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -6488,6 +6516,91 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'german_wirehaired_pointer.lifespan.rkc',
                 'quote' => 'Lifespan: Over 10 years',
                 'notes' => 'RKC breed page lower bound (S521); PDSA "Over 10 years" (S188) the same. McMillan 2024 13 y only via Wikipedia (S526, tier C); no VetCompass median. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Saint Bernard (M5-R10-66). Stage boundaries young / adult, arrival ages, exercise minutes and the learning
+     * multiplier follow the runbook's standing rules (CONFIRMED_R10_SAINT_BERNARD); weight, growth, Coren rank and
+     * lifespan are sourced. The senior boundary is Claude's suggestion (PROPOSED_R10_SAINT_BERNARD_SENIOR, verified=false).
+     *
+     * @return array<string, mixed>
+     */
+    private static function saintBernardProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_SAINT_BERNARD;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S534', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.saint_bernard.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a giant dog reaches adult weight at 18–24 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [63, [
+                    'unit' => 'months', 'source_id' => 'S11,S534', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.saint_bernard.senior_boundary_months', 'decision' => self::PROPOSED_R10_SAINT_BERNARD_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × Adams et al. 2010 Kennel Club / BSAVA survey median 7.0 y (S534) = 5.25 y = 63 months. The Dogs Trust McMillan 2024 table (S123) could not be fetched; no VetCompass median; the RKC band "Under 10 years" (S529) has no lower bound. Alternatives: McMillan 2024 9.3 y via Wikipedia (tier C, S535) → 84; Dogs Trust > 7 y (S14) → 84; PetMD lower bound 8 y (S533) → 72.',
+                ]],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 63],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.saint_bernard.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.saint_bernard.senior_boundary_months', 'decision' => self::PROPOSED_R10_SAINT_BERNARD_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 63 months (0.75 × 7.0 y, S534).',
+                ],
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (18–24 months for a giant dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S529', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.saint_bernard.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 1 hour per day',
+                'notes' => 'RKC "Exercise: Up to 1 hour per day" (S529) → 60 min = 6,000 steps (runbook rule: "up to N" → N). PDSA "at least an hour of exercise every day" (S532) agrees; PetMD "at least one 30-minute walk a day" (S533) — alternative.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.saint_bernard.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[54, 81], [
+                'unit' => 'kg', 'source_id' => 'S532', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'saint_bernard.adult_weight.pdsa',
+                'quote' => '54kg-81kg',
+                'notes' => 'PDSA "Average weight" (S532), one range for both sexes — no standard gives a weight (FCI S528, RKC S530). PetMD 120–180 lb ≈ 54–82 kg (S533) agrees.',
+            ]],
+            'growth_end' => [[18, 24], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'saint_bernard.growth.adult_weight_reached',
+                'quote' => 'Giant (over 100 pounds) | 18–24 months',
+                'notes' => 'Size-class value, not breed-specific (PDSA 54–81 kg ≈ 119–179 lb, S532 — the Giant class of S10).',
+            ]],
+            'coren_rank' => [65, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'saint_bernard.trainability.coren_rank',
+                'quote' => 'Saint Bernard',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 65 (shared with the Scottish Terrier), tier "Fair Working/Obedience Intelligence" (ranks 55–69).',
+            ]],
+            'learning_multiplier' => [0.7, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.saint_bernard.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 65 (S35) in the "Fair" tier (ranks 55–69) → 0.7. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [7.0, [
+                'unit' => 'years', 'source_id' => 'S534', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'saint_bernard.lifespan.median_kc_survey',
+                'quote' => 'Giant St Bernard 700700 53',
+                'notes' => 'Adams et al. 2010 (S534), Table 3, Kennel Club / BSAVA 2004 survey median 7.00 years (row extracted without decimals). RKC / PDSA "Under 10 years" (S529, S532); McMillan 2024 9.3 y only via Wikipedia (tier C). Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

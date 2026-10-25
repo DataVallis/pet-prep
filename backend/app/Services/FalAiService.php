@@ -580,6 +580,15 @@ class FalAiService
                 .'natural undocked tail reaching to the hocks, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-66: RKC standard (S530) / FCI 61 (S528) — short-haired variety, red mantle with white markings and a
+            // dark mask as the anchor (the first colour of the game list); welfare (Breed Watch S531): tight eyelids, moderate lips.
+            BreedType::SaintBernard => 'A calm, kindly Saint Bernard dog with a short, dense, close-lying red and white coat, '
+                .'red mantle with white muzzle, blaze, collar, chest, feet and tail tip and a dark mask, '
+                .'giant, well-proportioned powerful body with sound hindquarters, broad head with a black nose, '
+                .'moderate lips and tight, healthy eyelids, medium-sized dark brown eyes, medium ears lying close to the cheeks, '
+                .'long heavy tail carried low, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1379,6 +1388,18 @@ class FalAiService
                 'eye_color' => 'hazel to dark brown',
                 'fur_texture' => 'harsh, wiry, flat-lying outer coat with a dense undercoat, short beard and eyebrows',
                 'markings' => 'liver head, never black, natural undocked tail reaching to the hocks',
+            ],
+            // M5-R10-66: colours of the RKC (S530) and FCI (S528) standards — red mantle, white with red patches, red-brindle
+            // and white; never solid white, solid red, black, merle or tricolour; tight eyelids (Breed Watch S531).
+            BreedType::SaintBernard => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'red and white with a dark mask',
+                    1 => 'white with red patches',
+                    2 => 'red-brindle and white',
+                },
+                'eye_color' => 'dark brown, with tight healthy eyelids',
+                'fur_texture' => 'short, dense, smooth and close-lying double coat',
+                'markings' => 'white muzzle, blaze, collar, chest, feet and tail tip, never solid white or solid red',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

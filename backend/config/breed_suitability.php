@@ -1751,5 +1751,40 @@ return [
             ],
         ],
 
+        // M5-R10-66: saint_bernard.* (S527–S535), runbook rules (data.json
+        // proposed_game_parameters.saint_bernard.suitability_tags). RKC (S529) + PDSA (S532) + PetMD (S533). Welfare breed
+        // (RKC Breed Watch Category 3, S529 / S531) → eyelid_problems, hips_hind_legs (Mastiff precedent). `children` with the
+        // PDSA caveat (supervise with smaller children) — never small_children, no not_for_small_children (Newfoundland
+        // precedent). 60 min → no active_family / long_daily_exercise. No other_pets / chases_small_pets (PetMD low prey drive
+        // vs PDSA care with cats and small pets).
+        'saint_bernard' => [
+            'suits' => [
+                // S532 "They love nothing more than being with a family which is why so many people choose them as family pets."
+                ['tag' => 'family_pet', 'source_ids' => ['S532'], 'refs' => ['saint_bernard.behaviour.family']],
+                // S532 "Saint Bernards are known for being great with people of all ages – which includes children." (supervise smaller children).
+                ['tag' => 'children', 'source_ids' => ['S532'], 'refs' => ['saint_bernard.behaviour.children']],
+                // S529 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S529'], 'refs' => ['saint_bernard.suitability.rkc_size_of_home', 'saint_bernard.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S529 "Lifespan: Under 10 years".
+                ['tag' => 'shorter_lifespan', 'source_ids' => ['S529'], 'refs' => ['saint_bernard.health.shorter_lifespan', 'saint_bernard.lifespan.rkc']],
+                // Welfare rule: S531 Breed Watch "Eyelids not in normal contact with the eyeball, they are turned inwards or outwards".
+                ['tag' => 'eyelid_problems', 'source_ids' => ['S531'], 'refs' => ['saint_bernard.health.eyelids', 'saint_bernard.health.breed_watch']],
+                // Welfare rule: S531 "Incorrect hind conformation and/or poor rear movement"; S532 hip / elbow dysplasia.
+                ['tag' => 'hips_hind_legs', 'source_ids' => ['S531', 'S532'], 'refs' => ['saint_bernard.health.hind_conformation', 'saint_bernard.health.hip_elbow_dysplasia']],
+                // S532 "… but this means Saint Bernards don’t do as well in the heat."
+                ['tag' => 'heat_sensitive', 'source_ids' => ['S532'], 'refs' => ['saint_bernard.exercise.heat']],
+                // S533 "As people-orientated dogs, Saint Bernards can develop separation anxiety if they're left alone for long periods of time."
+                ['tag' => 'needs_company', 'source_ids' => ['S533'], 'refs' => ['saint_bernard.behaviour.time_alone']],
+                // S529 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S529'], 'refs' => ['saint_bernard.suitability.rkc_shedding']],
+                // S529 "Grooming: More than once a week"; S532 "Brushing them at least three times a week …".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S529', 'S532'], 'refs' => ['saint_bernard.suitability.rkc_grooming', 'saint_bernard.suitability.pdsa_grooming']],
+                // S532 "Saint Bernards are also known for their drooling."
+                ['tag' => 'drools', 'source_ids' => ['S532'], 'refs' => ['saint_bernard.behaviour.drooling']],
+            ],
+        ],
+
     ],
 ];
