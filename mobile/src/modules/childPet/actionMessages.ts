@@ -154,8 +154,10 @@ export function refusalMessage(reason: string | null, nextAllowedAt: string | nu
     case 'water_daily_limit':
       return s.waterDailyLimit;
     case 'water_too_soon': {
-      const next = nextAllowedAt ?? view?.water.next_allowed_at ?? null;
-      if (isLaterDay(next, now, tz)) return s.waterDailyLimit;
+      const raw = nextAllowedAt ?? view?.water.next_allowed_at ?? null;
+      const next = view ? waterShownAt(raw, view) : raw;
+      // A time that only moved to the wake-up keeps its hour ("jutri ob 7:00"); otherwise a later day = no time.
+      if (isLaterDay(next, now, tz) && next === raw) return s.waterDailyLimit;
       const when = whenText(next, now, tz);
       return when ? s.waterTooSoon(when) : s.waterTooSoonNoTime;
     }
@@ -257,7 +259,7 @@ export function confirmationNext(
       return when ? CHILD_ACTION_STRINGS.next.feed(when) : null;
     }
     case 'water': {
-      const next = view.water.next_allowed_at;
+      const next = waterShownAt(view.water.next_allowed_at, view);
       if (!next || isLaterDay(next, now, tz)) return null;
       const when = whenText(next, now, tz);
       return when ? CHILD_ACTION_STRINGS.next.water(when) : null;
@@ -339,11 +341,33 @@ export function feedHint(view: ChildPetView): string | null {
   return feedDockHint(view)?.a11y ?? null;
 }
 
-/** Dock hint under a disabled "Voda": "ob 15:30", "jutri" (the bowl lasts until tomorrow — M5-F11, no daily cap), "Najprej pospravi". */
+/**
+ * The water time the child sees (display only, David 2026-10-25): when the server's
+ * `next_allowed_at` falls while the pet sleeps (`view.sleep`: asleep now, wakes at `until`),
+ * the wake time is shown instead — a bowl "at 23:58" read like a midnight task while the pup
+ * sleeps until 7:00. Only the current sleep is known to the app (`sleep.until`); an awake pet,
+ * a sleep without a wake time or a time after the wake-up keep the server time. The refill rule
+ * itself is the server's and is untouched (a night tap after the threshold still works).
+ */
+export function waterShownAt(next: string | null, view: ChildPetView): string | null {
+  if (!next || !view.sleep.asleep || !view.sleep.until) return next;
+  const nextMs = Date.parse(next);
+  const wakeMs = Date.parse(view.sleep.until);
+  if (Number.isNaN(nextMs) || Number.isNaN(wakeMs)) return next;
+  return nextMs < wakeMs ? view.sleep.until : next;
+}
+
+/**
+ * Dock hint under a disabled "Voda": "ob 15:30", "jutri" (the bowl lasts until tomorrow — M5-F11,
+ * no daily cap), "Najprej pospravi". A time inside the pet's sleep shows the wake time
+ * ({@link waterShownAt}): "ob 7:00" or "jutri" + "7:00" (same two lines as feed).
+ */
 export function waterDockHint(view: ChildPetView): DockHint | null {
   if (view.water.can_water || view.lock.is_locked) return null;
   if (view.pet.needs_cleaning) return cleanFirstHint(view);
-  const next = view.water.next_allowed_at;
+  const raw = view.water.next_allowed_at;
+  const next = waterShownAt(raw, view);
+  if (next !== raw) return dockWhen(next, view.server_time, view.timezone);
   if (!next || isLaterDay(next, view.server_time, view.timezone)) return dockText(HUD_HINTS.tomorrow);
   return dockWhen(next, view.server_time, view.timezone);
 }

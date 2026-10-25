@@ -151,6 +151,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-10-25 (cloud, mobile) — water hint shows the wake time while the pet sleeps (`fix/water-hint-wake-time`)
+- David (device): pup at 20:52 showed »ob 23:58« under »Voda« while »Kuža spi do 7:00«. `waterShownAt` (`actionMessages.ts`) replaces a `next_allowed_at` before `sleep.until` (pet asleep now) with the wake time in the dock hint, a11y, `water_too_soon` toast and the »next time« line; backend rule untouched. Debt: the child view only knows the current sleep (no quiet-hours window), so an awake pet whose water time falls into tonight's sleep still shows the server time until it falls asleep (the sleep broadcast then refetches). Next: verify on device after OTA.
+
 ### 2026-10-25 (cloud, mobile) — child HUD: cards at the top so the dog is visible (`feat/pet-screen-cards-top`)
 - David: every HUD card / message (take-out clock, mess card + smaller »Pospravi in daj igračo«, notes, invitation, »Šola« / »Igra« / care chips, meals, toast, stale / updating banners, birthday hat) now sits in one stack `hud-top-stack` under the header, left of the metric column (`METRICS_RESERVED_RIGHT`; meters unchanged); only the dock is at the bottom. Order + bounding in pure `modules/hud/topStack.ts` (`STACK_PRIORITY`, ≤ 2 cards, rest behind »+N več« / »Manj«; chips always visible); `BehaviourPanel` props `cards` / `chips` replace `footer` / `bottom` / `right`; `layout.stackMaxHeight` keeps it above the dock. JS only (OTA). **Debt:** not yet checked on a phone (iPhone SE + Android, large fonts with the stack expanded may clip — `overflow: hidden` at `stackMaxHeight`); `layout.aboveDock` is now unused by the HUD.
 

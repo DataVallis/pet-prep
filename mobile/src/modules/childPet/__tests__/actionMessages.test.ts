@@ -9,7 +9,9 @@ import {
   lockMessage,
   refusalMessage,
   successMessage,
+  waterDockHint,
   waterHint,
+  waterShownAt,
 } from '@/modules/childPet/actionMessages';
 import { normalizeChildState } from '@/modules/childPet/childPetView';
 import { useServerStatusStore } from '@/store/serverStatusStore';
@@ -160,5 +162,56 @@ describe('HUD hints', () => {
       makeLiveChildState({ water: { can_water: false, remaining_today: 0, next_allowed_at: '2026-10-05T00:00:00+02:00' } }),
     );
     expect(waterHint(done)).toBe(HUD_HINTS.tomorrow);
+  });
+});
+
+describe('water time inside the pet\'s sleep shows the wake time (David 2026-10-25)', () => {
+  const WAKE = '2026-10-05T07:00:00+02:00';
+  const night = (nextAllowedAt: string, opts: { serverTime?: string; until?: string | null; asleep?: boolean } = {}) =>
+    normalizeChildState(
+      makeLiveChildState({
+        server_time: opts.serverTime ?? '2026-10-04T20:52:00+02:00',
+        water: { can_water: false, next_allowed_at: nextAllowedAt },
+        sleep: { asleep: opts.asleep ?? true, until: opts.until === undefined ? WAKE : opts.until },
+      }),
+    );
+
+  it('23:58 while the pup sleeps until 7:00 → "jutri" + "7:00" (dock, screen reader, refusal toast)', () => {
+    const view = night('2026-10-04T23:58:00+02:00');
+    expect(waterShownAt(view.water.next_allowed_at, view)).toBe(WAKE);
+    expect(waterDockHint(view)).toEqual({ day: 'jutri', text: '7:00', a11y: 'jutri ob 7:00' });
+    expect(waterHint(view)).toBe('jutri ob 7:00');
+    expect(refusalMessage('water_too_soon', '2026-10-04T23:58:00+02:00', view)).toBe(
+      CHILD_ACTION_STRINGS.refused.waterTooSoon('jutri ob 7:00'),
+    );
+  });
+
+  it('a threshold after midnight inside the sleep → "jutri 7:00", not a bare "jutri"', () => {
+    const view = night('2026-10-05T01:30:00+02:00');
+    expect(waterDockHint(view)).toEqual({ day: 'jutri', text: '7:00', a11y: 'jutri ob 7:00' });
+    expect(refusalMessage('water_too_soon', null, view)).toBe(CHILD_ACTION_STRINGS.refused.waterTooSoon('jutri ob 7:00'));
+  });
+
+  it('after midnight, before the wake-up today → "ob 7:00"', () => {
+    const view = night('2026-10-05T04:00:00+02:00', { serverTime: '2026-10-05T02:00:00+02:00' });
+    expect(waterDockHint(view)).toEqual({ day: null, text: 'ob 7:00', a11y: 'ob 7:00' });
+    expect(refusalMessage('water_too_soon', null, view)).toBe(CHILD_ACTION_STRINGS.refused.waterTooSoon('ob 7:00'));
+  });
+
+  it('awake pet / no wake time / a time after the wake-up keep the server time', () => {
+    const awake = night('2026-10-04T15:30:00+02:00', { serverTime: '2026-10-04T12:00:00+02:00', asleep: false, until: null });
+    expect(waterHint(awake)).toBe('ob 15:30');
+    const noUntil = night('2026-10-04T23:58:00+02:00', { until: null });
+    expect(waterHint(noUntil)).toBe('ob 23:58');
+    expect(refusalMessage('water_too_soon', null, noUntil)).toBe(CHILD_ACTION_STRINGS.refused.waterTooSoon('ob 23:58'));
+    const afterWake = night('2026-10-05T08:30:00+02:00');
+    expect(waterShownAt(afterWake.water.next_allowed_at, afterWake)).toBe('2026-10-05T08:30:00+02:00');
+    expect(waterHint(afterWake)).toBe(HUD_HINTS.tomorrow);
+    expect(refusalMessage('water_too_soon', null, afterWake)).toBe(CHILD_ACTION_STRINGS.refused.waterDailyLimit);
+  });
+
+  it('the "next time" line after a night refill also names the wake time when it is today', () => {
+    const view = night('2026-10-05T04:00:00+02:00', { serverTime: '2026-10-05T02:00:00+02:00' });
+    expect(confirmationNext('water', 'accepted', view)).toBe(CHILD_ACTION_STRINGS.next.water('ob 7:00'));
   });
 });
