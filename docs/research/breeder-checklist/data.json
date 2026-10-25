@@ -2486,6 +2486,11 @@
         }
       ],
       "notes": "RKC Breeds A–Z page (dog-data S502, 2026-10-24): minimum (Good Practice) — genetic diversity (inbreeding_coi), BVA/KC elbow and hip schemes; Best Practice — the BVA/KC/ISDS eye scheme. No new test key."
+    },
+    "akita": {
+      "status": "not_found",
+      "tests": [],
+      "notes": "RKC Breeds A–Z page (royalkennelclub.com …/utility/akita) refused by the fetch tool on 2026-10-24 (M5-R10-63) → no health-testing section. PDSA (dog-data S508) names conditions and advises a Kennel Club Assured Breeder and checking the health history of the puppy's parents and grandparents (paraphrase), but lists no test; PetMD (dog-data S510) names conditions only. Show the general dog checklist only."
     }
   }
 }

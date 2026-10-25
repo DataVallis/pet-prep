@@ -1679,5 +1679,31 @@ return [
             ],
         ],
 
+        // M5-R10-63: akita.* (S506–S512), runbook rules (data.json proposed_game_parameters.akita.suitability_tags).
+        // PDSA (S508) only — the RKC page was not reachable (no large_home / apartment). Never family_pet / children
+        // (PDSA: not with young children → not_for_small_children), first_time_owner, other_pets (high prey drive →
+        // chases_small_pets, last), frequent_grooming (PDSA weekly vs PetMD daily), shorter_lifespan (PDSA "Under 10 years"
+        // vs PetMD 10–14 years — conflicting sources). No Breed Watch category reachable → no welfare chip.
+        'akita' => [
+            'suits' => [
+                // S508 "Minimum exercise (per day): 2 hours"
+                ['tag' => 'active_family', 'source_ids' => ['S508'], 'refs' => ['akita.exercise.adult', 'akita.suitability.pdsa_exercise']],
+            ],
+            'consider' => [
+                // S508 "Minimum exercise (per day): 2 hours"
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S508'], 'refs' => ['akita.exercise.adult', 'akita.suitability.pdsa_exercise']],
+                // S508 "While Akitas adapt well to family life, they are also very large and therefore would do best with experienced owners."
+                ['tag' => 'experienced_owner', 'source_ids' => ['S508'], 'refs' => ['akita.behaviour.experienced_owner']],
+                // S508 "we wouldn’t recommend an Akita if you have young children"
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S508'], 'refs' => ['akita.behaviour.small_children']],
+                // S508 "we wouldn’t recommend leaving them alone as many don’t cope well with this"
+                ['tag' => 'needs_company', 'source_ids' => ['S508'], 'refs' => ['akita.behaviour.time_alone']],
+                // S508 "Although their fur is short, it's dense, so Akitas shed a lot!"
+                ['tag' => 'sheds', 'source_ids' => ['S508'], 'refs' => ['akita.suitability.pdsa_shedding']],
+                // S508 "Akitas were often used for hunting in the past and so have a high prey drive."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S508'], 'refs' => ['akita.behaviour.other_pets']],
+            ],
+        ],
+
     ],
 ];

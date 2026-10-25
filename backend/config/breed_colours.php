@@ -387,6 +387,13 @@ return [
         ['key' => 'liver-tan', 'value' => 'liver and tan', 'en' => 'Liver and tan', 'sl' => 'Jetrno-rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
     ],
+    // M5-R10-63: FCI standard S507 — any colour; the game offers red fawn with a black mask, pinto, brindle, white.
+    'akita' => [
+        ['key' => 'fawn', 'value' => 'red fawn with a black mask', 'en' => 'Red fawn', 'sl' => 'Rdečkasto plav'],
+        ['key' => 'pinto', 'value' => 'pinto (white with large, evenly placed patches on the head and body)', 'en' => 'Pinto', 'sl' => 'Lisast'],
+        ['key' => 'brindle', 'value' => 'brindle with a black mask', 'en' => 'Brindle', 'sl' => 'Tigrast'],
+        ['key' => 'white', 'value' => 'solid white with no mask', 'en' => 'White', 'sl' => 'Bel'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

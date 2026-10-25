@@ -66,6 +66,7 @@ return [
     'italian_greyhound' => 'Mali italijanski hrt',
     'giant_schnauzer' => 'Veliki šnavcer',
     'bloodhound' => 'Bloodhound',
+    'akita' => 'Ameriška akita',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

@@ -555,6 +555,15 @@ class FalAiService
                 .'long, thin, velvety low-set ears, long strong tail set high, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-63: FCI standard No. 344 (S507) — red fawn with a black mask as the anchor (pinto, brindle and white are
+            // other standard colours; never merle or liver); natural erect ears and curled tail.
+            BreedType::Akita => 'A dignified, calm Akita (American type) with a red fawn coat and a black mask, '
+                .'thick double coat with a harsh outer coat standing somewhat off the body, '
+                .'large, sturdy, well balanced dog with heavy bone, '
+                .'broad head forming a blunt triangle, deep muzzle, black nose, small dark brown eyes, '
+                .'small, strongly erect ears, large well-furnished tail curled over the back, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1319,6 +1328,17 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'short, dense, weatherproof coat with moderate loose skin',
                 'markings' => 'no excessive white, long low-set velvety ears, healthy eyelids',
+            ],
+            // M5-R10-63: FCI standard S507 colours (any colour incl. pinto, brindle and white; never merle or liver).
+            BreedType::Akita => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'red fawn with a black mask',
+                    1 => 'pinto (white with large, evenly placed patches)',
+                    2 => 'brindle with a black mask',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'thick double coat with a harsh, straight outer coat',
+                'markings' => 'never merle or liver, small strongly erect ears, large tail curled over the back',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
