@@ -439,6 +439,7 @@ const SPECIES = [
       { id: 'akita', synonyms: { en: ['American Akita', 'Great Japanese Dog'], sl: ['ameriška akita', 'ameriska akita', 'akita'] } },
       { id: 'cardigan_welsh_corgi', synonyms: { en: ['Welsh Corgi (Cardigan)', 'Welsh Corgi Cardigan', 'Cardigan', 'Cardi', 'Corgi'], sl: ['welsh corgi', 'cardigan', 'korgi', 'valižanski korgi'] } },
       { id: 'german_wirehaired_pointer', synonyms: { en: ['Deutsch Drahthaar', 'Drahthaar', 'German Wire-haired Pointing Dog', 'GWP'], sl: ['nemski ostrodlaki pticar', 'drahthaar', 'drahtar'] } },
+      { id: 'saint_bernard', synonyms: { en: ['St. Bernard', 'St Bernard', 'St. Bernhardshund', 'Bernhardiner', 'Alpine Mastiff'], sl: ['sveti bernard', 'pes svetega Bernarda', 'bernhardiner'] } },
     ],
   },
   {
@@ -1841,6 +1842,30 @@ const DOG_FACTS = {
       ['hypothyroidism', 'health.hypothyroidism'],
     ],
   },
+  // M5-R10-66. Height = FCI 61 minimum–maximum per sex (S528, W.U.S.B. copy of the FCI standard), weight = PDSA 54–81 kg
+  // (S532; no standard gives a weight), lifespan = the RKC band 'Under 10 years' (S529; the Adams 2010 survey median
+  // 7.0 y, S534, and McMillan 2024 via Wikipedia are never exported), exercise = RKC 'Up to 1 hour per day' (S529),
+  // coat / grooming / shedding = RKC key facts (S529). FCI origin Switzerland (CH). Not exported: height alternatives
+  // (RKC / PDSA / PetMD), adult_weight.salt_category (our assignment), lifespan.pdsa / petmd / median_kc_survey /
+  // senior_from, health.cruciate / wobbler / skin_ears (research only), the care fact eye_fold_care (no frequency → no
+  // task). No new health key.
+  saint_bernard: {
+    height: ['height.fci'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.rkc', 'less_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_elbow_dysplasia', 'health.hip_elbow_dysplasia'],
+      ['bloat_gdv', 'health.gdv'],
+      ['eyelids_turned', 'health.eyelids'],
+      ['heart_muscle_disease', 'health.heart'],
+      ['certain_cancers', 'health.cancer'],
+    ],
+  },
 
 };
 
@@ -1879,6 +1904,7 @@ export const DOG_CARE_TASKS = {
   giant_schnauzer: [['ear_cleaning', 1, 7, 'proposed_game_parameters.giant_schnauzer.ear_checks']],
   akita: [['groomer_visit', 1, 84, 'proposed_game_parameters.akita.professional_grooming']],
   german_wirehaired_pointer: [['ear_cleaning', 1, 28, 'proposed_game_parameters.german_wirehaired_pointer.ear_care']],
+  saint_bernard: [['ear_cleaning', 1, 14, 'proposed_game_parameters.saint_bernard.ear_care']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -2387,6 +2413,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.german_wirehaired_pointer.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.german_wirehaired_pointer.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.german_wirehaired_pointer.exercise_minutes_senior',
+  },
+  saint_bernard: {
+    adult_minutes: ['proposed_game_parameters.saint_bernard.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.saint_bernard.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.saint_bernard.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.saint_bernard.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.saint_bernard.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.saint_bernard.exercise_minutes_senior',
   },
 
 };

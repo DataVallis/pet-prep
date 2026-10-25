@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "66c00483bfe541d56a27554546daa6e403df50a24a9bc542ca636bb076605b74"
+      "sha256": "394658722f3733965f4a3ca7590ad8f32c3c38cbe1364642034c30b0152a6345"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "2a71c91b0a98814094d6895563e27f195ce58439ac61393b441e37899c362e89"
+      "sha256": "b5de8e7665ad29fa06a88b2639fac11ddc74cda96f0a2a6697a7a9d520d56075"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "2fabc56a8fa53e0ae3a4976cd43f55bcffca642da8b79563291ba1fc9376e388"
+      "sha256": "c19af52f6ddccd893f7647ef814241e19042ab6c5e8b09f3013b0bdba0301ca8"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "ae70d124332cf09fb21e546fe6086028aed48c2992eeb0dde8a32d83bed8e324"
+      "sha256": "de2bc49cdacc863558e9a0bab0a3eaa5f02ec67f52a12cf57ce17db42c68245f"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "00c99da9e7826bb52f9a5386646cf9e801cb539978bd683e5c55cf036e1bb7ba"
+      "sha256": "d7d1ff47468125fe095d2cb221aab5d6e7560d474f853de0194dadb8103b7749"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "3f4d6a167512c15915dbc8e139753f056d2d25cdeded3951289c810354d2ea59"
+      "sha256": "14214607073fc4df817ffa10e655f939e9c69b54956e6ed5db574e6e092a1ed0"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -212,7 +212,7 @@
         }
       },
       "status": "available",
-      "breed_count": 61,
+      "breed_count": 62,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -37129,6 +37129,632 @@
       ]
     },
     {
+      "id": "saint_bernard",
+      "species": "dog",
+      "order": 61,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Saint Bernard",
+        "sl": "Bernardinec"
+      },
+      "slug": {
+        "en": "saint-bernard",
+        "sl": "bernardinec"
+      },
+      "synonyms": {
+        "en": [
+          "St. Bernard",
+          "St Bernard",
+          "St. Bernhardshund",
+          "Bernhardiner",
+          "Alpine Mastiff"
+        ],
+        "sl": [
+          "sveti bernard",
+          "pes svetega Bernarda",
+          "bernhardiner"
+        ]
+      },
+      "facets": {
+        "size": "giant",
+        "exercise": "under_1h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "giant",
+          "source_ids": [
+            "S529"
+          ],
+          "ref": "saint_bernard.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              70,
+              90
+            ],
+            "female": [
+              65,
+              80
+            ]
+          },
+          "source_ids": [
+            "S528"
+          ],
+          "ref": "saint_bernard.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              54,
+              81
+            ],
+            "female": [
+              54,
+              81
+            ]
+          },
+          "source_ids": [
+            "S532"
+          ],
+          "ref": "saint_bernard.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            18,
+            24
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "saint_bernard.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "less_than",
+          "value": 10,
+          "source_ids": [
+            "S529"
+          ],
+          "ref": "saint_bernard.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S529"
+          ],
+          "ref": "saint_bernard.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S529"
+          ],
+          "ref": "saint_bernard.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S529"
+          ],
+          "ref": "saint_bernard.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S529"
+          ],
+          "ref": "saint_bernard.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 65,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "saint_bernard.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 61,
+            "group": 2,
+            "section": 2,
+            "origin": "CH"
+          },
+          "source_ids": [
+            "S527"
+          ],
+          "ref": "saint_bernard.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S532"
+          ],
+          "ref": "saint_bernard.health.hip_elbow_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S532"
+          ],
+          "ref": "saint_bernard.health.gdv",
+          "confidence": "high"
+        },
+        {
+          "key": "eyelids_turned",
+          "source_ids": [
+            "S531"
+          ],
+          "ref": "saint_bernard.health.eyelids",
+          "confidence": "high"
+        },
+        {
+          "key": "heart_muscle_disease",
+          "source_ids": [
+            "S532"
+          ],
+          "ref": "saint_bernard.health.heart",
+          "confidence": "high"
+        },
+        {
+          "key": "certain_cancers",
+          "source_ids": [
+            "S532"
+          ],
+          "ref": "saint_bernard.health.cancer",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S532"
+            ],
+            "refs": [
+              "saint_bernard.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S532"
+            ],
+            "refs": [
+              "saint_bernard.behaviour.children"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S529"
+            ],
+            "refs": [
+              "saint_bernard.suitability.rkc_size_of_home",
+              "saint_bernard.suitability.rkc_size_of_garden"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S529"
+            ],
+            "refs": [
+              "saint_bernard.health.shorter_lifespan",
+              "saint_bernard.lifespan.rkc"
+            ]
+          },
+          {
+            "tag": "eyelid_problems",
+            "source_ids": [
+              "S531"
+            ],
+            "refs": [
+              "saint_bernard.health.eyelids",
+              "saint_bernard.health.breed_watch"
+            ]
+          },
+          {
+            "tag": "hips_hind_legs",
+            "source_ids": [
+              "S531",
+              "S532"
+            ],
+            "refs": [
+              "saint_bernard.health.hind_conformation",
+              "saint_bernard.health.hip_elbow_dysplasia"
+            ]
+          },
+          {
+            "tag": "heat_sensitive",
+            "source_ids": [
+              "S532"
+            ],
+            "refs": [
+              "saint_bernard.exercise.heat"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S533"
+            ],
+            "refs": [
+              "saint_bernard.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S529"
+            ],
+            "refs": [
+              "saint_bernard.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S529",
+              "S532"
+            ],
+            "refs": [
+              "saint_bernard.suitability.rkc_grooming",
+              "saint_bernard.suitability.pdsa_grooming"
+            ]
+          },
+          {
+            "tag": "drools",
+            "source_ids": [
+              "S532"
+            ],
+            "refs": [
+              "saint_bernard.behaviour.drooling"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 63
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.7
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 63
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 3
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 14
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.saint_bernard.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S529"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S529 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.saint_bernard.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.saint_bernard.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S534"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 63 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+          },
+          {
+            "ref": "proposed_game_parameters.saint_bernard.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 65, Fair tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.saint_bernard.grooming",
+            "basis_source_ids": [
+              "S532"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): RKC »More than once a week« brez števila → PDSA »at least three times a week« → 3; mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.saint_bernard.ear_care",
+            "basis_source_ids": [
+              "S533"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »every two to three weeks« → spodnja meja, 1× na 2 tedna"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S529",
+          "S532",
+          "S533",
+          "S534"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "elbow_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S529"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S529"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S529"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S529"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S527",
+        "S528",
+        "S529",
+        "S531",
+        "S532",
+        "S533",
+        "S534",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -41859,6 +42485,55 @@
       "publisher": "PetMD — Zack Newman, reviewed by Barri J. Morrison, DVM (updated Oct. 20, 2023)",
       "title": "German Wirehaired Pointer",
       "url": "https://petmd.com/dog/breeds/german-wirehaired-pointer"
+    },
+    {
+      "id": "S527",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — ST. BERNARD (61)",
+      "url": "https://fci.be/en/nomenclature/ST-BERNARD-61.html"
+    },
+    {
+      "id": "S528",
+      "tier": "A",
+      "publisher": "FCI (reproduced by the World Union of Saint Bernard Clubs)",
+      "title": "FCI-Standard N° 61 — St. Bernard, valid 04.04.2016, in the W.U.S.B. education booklet (PDF, Fondation Barry)",
+      "url": "https://www.fondation-barry.ch/files/standard-fci_en.pdf"
+    },
+    {
+      "id": "S529",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A to Z — St. Bernard",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/st-bernard/"
+    },
+    {
+      "id": "S531",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breed Watch — St. Bernard - Category 3",
+      "url": "https://www.royalkennelclub.com/activities/heritage-sports/dog-showing/judging-dog-shows/breed-watch-health-and-welfare-of-show-dogs/st-bernard-category-3/"
+    },
+    {
+      "id": "S532",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Saint Bernard breed information",
+      "url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/saint-bernard"
+    },
+    {
+      "id": "S533",
+      "tier": "B",
+      "publisher": "PetMD — Michelle Diener, DVM, reviewed by Barri J. Morrison, DVM (updated Nov. 11, 2025)",
+      "title": "Saint Bernard",
+      "url": "https://www.petmd.com/dog/breeds/saint-bernard"
+    },
+    {
+      "id": "S534",
+      "tier": "A",
+      "publisher": "Journal of Small Animal Practice (2010), via ResearchGate",
+      "title": "Adams V. J. et al. Methods and mortality results of a health survey of purebred dogs in the UK. J Small Anim Pract 51:512–524, doi:10.1111/j.1748-5827.2010.00974.x",
+      "url": "https://www.researchgate.net/publication/47620165_Methods_and_mortality_results_of_a_health_survey_of_purebred_dogs_in_the_UK"
     },
     {
       "id": "C1",
