@@ -11,7 +11,7 @@
 | Izvor | FCI št. 344 »American Akita«, skupina 5, sekcija 5 (azijski špici in sorodne pasme), država izvora Japonska, razvita v ZDA (S506) |
 | Katera akita | AKC »Akita« = ameriški tip (FCI 344 »American Akita«, RKC »Akita«) — **ne** japonska akita inu (FCI 255, ločena pasma; S512) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 59. mesto »Akita« (S174, prebrano 2026-10-24) |
-| PR-ji | pet-prep #378 (pasma, združen `a9a7e8f`) · portret: **še ni** (zagon 40146982212 zavrnjen — `composer.lock` na `main` se razlikuje od produkcije) · spletna stran: čaka na portret |
+| PR-ji | pet-prep #378 (pasma, združen `a9a7e8f`) · portret: #383 (zagon 40174556521) · spletna stran: pet-prep-website `feat/register-akita-cardigan-gwp` |
 
 ## Odločitve (z viri in kdo je odločil)
 

@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `cardigan_welsh_corgi` (viri S513–S518; ponovno S8, S10, S11, S14, S35, S45, S174 in PDSA S206 — ena stran za oba korgija); seznam za vzreditelja: 3 testi »Best Practice« (RKC S515) |
 | Izvor | FCI št. 38 »Welsh Corgi (Cardigan)«, skupina 1, sekcija 2 (goniči goveda), Velika Britanija (S513) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 60. mesto »Cardigan Welsh Corgi« (S174, prebrano 2026-10-25) |
-| PR-ji | pet-prep #380 (pasma, združen `22fbc31`) · portret: **še ni** (zagon 40157509251 zavrnjen — `composer.lock` na `main` se razlikuje od produkcije) · spletna stran: čaka na portret |
+| PR-ji | pet-prep #380 (pasma, združen `22fbc31`) · portret: #383 (zagon 40174556521) · spletna stran: pet-prep-website `feat/register-akita-cardigan-gwp` |
 
 ## Odločitve (z viri in kdo je odločil)
 

@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `german_wirehaired_pointer` (viri S519–S526; ponovno S8, S10, S11, S14, S24, S35, S45, S174 in PDSA S188 — ena stran za obe različici nemškega ptičarja); seznam za vzreditelja: 4 testi »Best Practice« (RKC S521) |
 | Izvor | FCI št. 98 »Deutsch Drahthaar«, skupina 7, sekcija 1.1 (celinski ptičarji, tip »braque«), Nemčija (S519) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 61. mesto »German Wirehaired Pointer« (S174, prebrano 2026-10-25) |
-| PR-ji | pet-prep #382 (pasma) · portret: po združitvi · spletna stran: le s portretom |
+| PR-ji | pet-prep #382 (pasma, združen `4670d9e`) · portret: #383 (zagon 40174556521) · spletna stran: pet-prep-website `feat/register-akita-cardigan-gwp` |
 
 ## Odločitve (z viri in kdo je odločil)
 
