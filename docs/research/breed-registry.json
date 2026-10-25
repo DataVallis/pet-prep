@@ -61,7 +61,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "7a2422c8ebf9670668b5ae00f9ecb6153fa471661f72d0dc3ccf4d521c0a9f73"
+      "sha256": "39e6983d6618e8c564706e44528b5e21d248b51a962cf9417825e322f31e9b20"
     }
   },
   "suitability_vocabulary": {
@@ -35924,7 +35924,12 @@
           "S511"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "akita.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "not_found",
         "tests": [],
@@ -36430,7 +36435,12 @@
           "S515"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "cardigan-welsh-corgi.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
@@ -37048,7 +37058,12 @@
           "S524"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "german-wirehaired-pointer.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [

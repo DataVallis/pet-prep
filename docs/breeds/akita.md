@@ -45,7 +45,7 @@
 | Česanje 1× na teden (rutina »Počeši«), »Nova izkušnja« za mladička, opozorilo »počakaj s sprehodom« po obroku | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R16 | 2026-10-24 |
 | Opomnik staršu »pasji frizer« vsakih 12 tednov (ne šteje v oceno) | 🛠 | 💶 izziv | M5-R18 | 2026-10-24 |
 | Barva (izbirnik barve: rdečkasto plav, lisast, tigrast, bel) | 🛠 | 💶 izziv | M5-R21 | 2026-10-24 |
-| AI portret v registru | 🗓 čaka: zagon `breed-portraits.yml` 40146982212 je zavrnil kodo (`composer.lock` iz M4-05 še ni v produkciji); naredi ga naslednji zagon (dohitevanje portretov) po naslednji produkcijski namestitvi | — | M5-R11-04 | — |
+| AI portret v registru (rdeče plave barve s črno masko, sprejet v prvem poskusu, zagon 40174556521, PR #383) | ✅ | — | M5-R11-04 | 2026-10-25 |
 | Stran na petprep.si (`/animals/dogs/akita`, `/sl/zivali/psi/ameriska-akita`) | 🗓 »Kmalu«, dokler pasma ni v izdaji aplikacije (le s portretom) | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -63,4 +63,4 @@
 - **Družinski pes:** PDSA »incredibly loyal family pets« ob odsvetovanju majhnih otrok in priporočilu izkušenih lastnikov — brez oznake `family_pet` (precedens bloodhound / veliki šnavcer); potrdite.
 - **Ime:** »Ameriška akita« ni preverjeno pri KZS; EN ime je »Akita« (AKC / RKC).
 - **Barva portreta:** standard dovoli vse barve; rdečkasto plava s črno masko je predlog Claude.
-- **Portret (needs-david):** `breed-portraits.yml` (zagon 40146982212, koda `a9a7e8f`) je zavrnil zagon, ker se `composer.lock` na `main` (M4-05 shranjevanje v objektno shrambo, `16abf65`) razlikuje od produkcije. Po naslednji produkcijski namestitvi (dnevna ob 6.00 ali ročna) ga naredi dohitevanje portretov naslednjega zagona; spletna stran pasme do takrat ne izide (pravilo »brez slike ni strani«).
+- **Portret:** prvi poskus (zagon 40146982212) zavrnjen zaradi `composer.lock` iz M4-05, ki še ni bil v produkciji; po produkcijski namestitvi 2026-10-25 narejen v zagonu 40174556521 (koda `ff0ed6e`) in sprejet; PR #383.

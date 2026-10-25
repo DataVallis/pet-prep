@@ -40,7 +40,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 108 meseca; 4 → 3 → 2 obroka) | 🛠 | 💶 izziv | M5-R10-64 | 2026-10-25 |
 | Česanje 3× na teden (rutina »Počeši«), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-10-25 |
 | Barva (izbirnik: rdeče-bel, tigrast z belo, sobolji z belo, modro marmoriran, dve trobarvni) | 🛠 | 💶 izziv | M5-R21 | 2026-10-25 |
-| AI portret v registru | 🗓 čaka: zagon `breed-portraits.yml` 40157509251 je zavrnil kodo (`composer.lock` iz M4-05 še ni v produkciji); naredi ga naslednji zagon (dohitevanje portretov) po naslednji produkcijski namestitvi | — | M5-R11-04 | — |
+| AI portret v registru (rdeč z belimi oznakami, sprejet v prvem poskusu, zagon 40174556521, PR #383) | ✅ | — | M5-R11-04 | 2026-10-25 |
 | Stran na petprep.si (`/animals/dogs/cardigan-welsh-corgi`, `/sl/zivali/psi/welsh-corgi-cardigan`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -56,4 +56,4 @@
 - **Ime:** »Welsh corgi cardigan« ni preverjeno pri KZS.
 - **Barva portreta:** rdeča z belimi oznakami je predlog Claude (standard ne določa najpogostejše barve).
 - **Deljena stran PDSA:** citati PDSA (česanje, socializacija, ščipanje otrok) veljajo za oba korgija skupaj.
-- **Portret (needs-david):** `breed-portraits.yml` (zagon 40157509251, koda `22fbc31`) je zavrnil zagon, ker se `composer.lock` na `main` (M4-05, `16abf65`) razlikuje od produkcije. Po naslednji produkcijski namestitvi (dnevna ob 6.00 ali ročna) ga naredi dohitevanje portretov naslednjega zagona; spletna stran pasme do takrat ne izide (pravilo »brez slike ni strani«).
+- **Portret:** prvi poskus (zagon 40157509251) zavrnjen zaradi `composer.lock` iz M4-05, ki še ni bil v produkciji; po produkcijski namestitvi 2026-10-25 narejen v zagonu 40174556521 (koda `ff0ed6e`) in sprejet; PR #383.

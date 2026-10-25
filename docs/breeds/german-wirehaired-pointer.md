@@ -43,7 +43,7 @@
 | Česanje 2× na teden (rutina »Počeši«), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-10-25 |
 | Čiščenje ušes 1× na 4 tedne (otrokova mini-igra; za nove pse, obstoječi po posodobitvi aplikacije) | 🛠 | 💶 izziv | M5-R20 | 2026-10-25 |
 | Barva (izbirnik: rjavo-sivkast, rjavo-bel, rjav) | 🛠 | 💶 izziv | M5-R21 | 2026-10-25 |
-| AI portret v registru | 🗓 po združitvi (runbook §8) | — | M5-R11-04 | — |
+| AI portret v registru (jetrno-sivkast, sprejet v prvem poskusu, zagon 40174556521, PR #383; prvi poskus 40164191744 zavrnjen zaradi `composer.lock`) | ✅ | — | M5-R11-04 | 2026-10-25 |
 | Stran na petprep.si (`/animals/dogs/german-wirehaired-pointer`, `/sl/zivali/psi/nemski-ostrodlaki-pticar`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
