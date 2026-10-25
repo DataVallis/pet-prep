@@ -61,4 +61,21 @@ class PetSleepService
 
         return $at;
     }
+
+    /**
+     * The time the child is shown for a care moment (display only, David
+     * 2026-10-25 — the child state's `water.shown_at`): a moment the pet
+     * sleeps through (quiet hours, night or school window) is shown as its
+     * wake time, so a bowl due »ob 23:58« reads »jutri 7:00«. A moment while
+     * the pet is awake, or null, is returned as it is. The rule that decides
+     * when the action is allowed is never changed by this.
+     */
+    public function shownAt(Pet $pet, ?CarbonInterface $at, ?QuietHours $quiet = null): ?CarbonImmutable
+    {
+        if ($at === null) {
+            return null;
+        }
+
+        return $this->wakesAt($pet, $at, $quiet) ?? CarbonImmutable::instance($at)->utc();
+    }
 }

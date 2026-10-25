@@ -170,6 +170,12 @@ export interface ChildPetView {
     last_watered_at: string | null;
     can_water: boolean;
     next_allowed_at: string | null;
+    /**
+     * Display time of the next refill (David 2026-10-25): `next_allowed_at`, or the pet's wake
+     * time when that falls while it sleeps. Null with `next_allowed_at`, and from an older
+     * server (the app then falls back to its own rule — `waterShownAt`).
+     */
+    shown_at: string | null;
   };
   /** `adapted_mode` (M5-T12): this child counts wheelchair pushes instead of steps (1 : 1). */
   /**
@@ -400,6 +406,7 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
       last_watered_at: isoOrNull(raw.water.last_watered_at),
       can_water: bool(raw.water.can_water),
       next_allowed_at: isoOrNull(raw.water.next_allowed_at),
+      shown_at: isoOrNull(raw.water.shown_at),
     },
     steps: {
       steps_today: num(raw.steps.steps_today),

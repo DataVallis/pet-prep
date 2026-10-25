@@ -343,14 +343,20 @@ export function feedHint(view: ChildPetView): string | null {
 
 /**
  * The water time the child sees (display only, David 2026-10-25): when the server's
- * `next_allowed_at` falls while the pet sleeps (`view.sleep`: asleep now, wakes at `until`),
- * the wake time is shown instead — a bowl "at 23:58" read like a midnight task while the pup
- * sleeps until 7:00. Only the current sleep is known to the app (`sleep.until`); an awake pet,
- * a sleep without a wake time or a time after the wake-up keep the server time. The refill rule
- * itself is the server's and is untouched (a night tap after the threshold still works).
+ * `next_allowed_at` falls while the pet sleeps, the wake time is shown instead — a bowl
+ * "at 23:58" read like a midnight task while the pup sleeps until 7:00.
+ *
+ * The server decides it (`water.shown_at`, it knows the quiet hours — also tonight's sleep of
+ * a pet that is still awake). An older server sends no `shown_at`: then only the current sleep
+ * is known (`view.sleep`: asleep now, wakes at `until`); an awake pet, a sleep without a wake
+ * time or a time after the wake-up keep the server time. `next` other than the view's
+ * `next_allowed_at` (a refusal's own time) also uses that fallback. The refill rule itself is
+ * the server's and is untouched (a night tap after the threshold still works).
  */
 export function waterShownAt(next: string | null, view: ChildPetView): string | null {
-  if (!next || !view.sleep.asleep || !view.sleep.until) return next;
+  if (!next) return next;
+  if (view.water.shown_at && next === view.water.next_allowed_at) return view.water.shown_at;
+  if (!view.sleep.asleep || !view.sleep.until) return next;
   const nextMs = Date.parse(next);
   const wakeMs = Date.parse(view.sleep.until);
   if (Number.isNaN(nextMs) || Number.isNaN(wakeMs)) return next;

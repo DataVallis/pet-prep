@@ -20,6 +20,7 @@ use App\Services\Media\PetMediaService;
 use App\Services\Media\PreparationPayload;
 use App\Services\PetPlanPayload;
 use App\Services\PetProfilePayload;
+use App\Services\PetSleepService;
 use App\Services\PlayPayload;
 use App\Services\Results\WaterStatus;
 use App\Services\ScratchingPayload;
@@ -274,6 +275,15 @@ class ChildPetStateResource extends JsonResource
                 // Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                 // null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                 'next_allowed_at' => $iso($water?->nextAllowedAt),
+                /**
+                 * Display only (David 2026-10-25): the time the app shows for the next refill —
+                 * `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
+                 * hours, PetSleepService::shownAt — »jutri 7:00« instead of »ob 23:58«). Null with
+                 * `next_allowed_at`. The refill rule is `next_allowed_at`; this never changes it.
+                 *
+                 * @var string|null
+                 */
+                'shown_at' => $iso(app(PetSleepService::class)->shownAt($pet, $water?->nextAllowedAt)),
                 /**
                  * M5-F11: displayed thirst (%) at or below which water is allowed (breed
                  * `water_refill_below`, default 60).

@@ -210,6 +210,54 @@ describe('water time inside the pet\'s sleep shows the wake time (David 2026-10-
     expect(refusalMessage('water_too_soon', null, afterWake)).toBe(CHILD_ACTION_STRINGS.refused.waterDailyLimit);
   });
 
+  describe('server display time `water.shown_at` (David 2026-10-25)', () => {
+    const awakeAt2052 = (shownAt: string | null, nextAllowedAt = '2026-10-04T23:58:00+02:00') =>
+      normalizeChildState(
+        makeLiveChildState({
+          server_time: '2026-10-04T20:52:00+02:00',
+          water: { can_water: false, next_allowed_at: nextAllowedAt, shown_at: shownAt },
+          sleep: { asleep: false, until: null },
+        }),
+      );
+
+    it('awake at 20:52, threshold 23:58 inside tonight\'s sleep → the server\'s "jutri 7:00"', () => {
+      const view = awakeAt2052(WAKE);
+      expect(view.water.shown_at).toBe(WAKE);
+      expect(waterShownAt(view.water.next_allowed_at, view)).toBe(WAKE);
+      expect(waterDockHint(view)).toEqual({ day: 'jutri', text: '7:00', a11y: 'jutri ob 7:00' });
+      expect(refusalMessage('water_too_soon', '2026-10-04T23:58:00+02:00', view)).toBe(
+        CHILD_ACTION_STRINGS.refused.waterTooSoon('jutri ob 7:00'),
+      );
+    });
+
+    it('shown_at equal to next_allowed_at keeps the server time', () => {
+      const view = awakeAt2052('2026-10-04T15:30:00+02:00', '2026-10-04T15:30:00+02:00');
+      expect(waterHint({ ...view, server_time: '2026-10-04T12:00:00+02:00' })).toBe('ob 15:30');
+    });
+
+    it('wins over the app\'s own sleep rule while the pet sleeps', () => {
+      const view = normalizeChildState(
+        makeLiveChildState({
+          server_time: '2026-10-04T22:00:00+02:00',
+          water: { can_water: false, next_allowed_at: '2026-10-04T23:58:00+02:00', shown_at: '2026-10-05T06:30:00+02:00' },
+          sleep: { asleep: true, until: WAKE },
+        }),
+      );
+      expect(waterShownAt(view.water.next_allowed_at, view)).toBe('2026-10-05T06:30:00+02:00');
+    });
+
+    it('an older server (no shown_at) falls back: an awake pet keeps "ob 23:58"', () => {
+      const view = awakeAt2052(null);
+      expect(view.water.shown_at).toBeNull();
+      expect(waterHint(view)).toBe('ob 23:58');
+    });
+
+    it('a refusal time other than the view\'s next_allowed_at uses the fallback', () => {
+      const view = awakeAt2052(WAKE);
+      expect(waterShownAt('2026-10-04T22:10:00+02:00', view)).toBe('2026-10-04T22:10:00+02:00');
+    });
+  });
+
   it('the "next time" line after a night refill also names the wake time when it is today', () => {
     const view = night('2026-10-05T04:00:00+02:00', { serverTime: '2026-10-05T02:00:00+02:00' });
     expect(confirmationNext('water', 'accepted', view)).toBe(CHILD_ACTION_STRINGS.next.water('ob 7:00'));

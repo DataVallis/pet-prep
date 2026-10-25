@@ -4336,6 +4336,13 @@ export interface operations {
                                  */
                                 next_allowed_at: string;
                                 /**
+                                 * @description Display only (David 2026-10-25): the time the app shows for the next refill —
+                                 *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
+                                 *     hours, PetSleepService::shownAt — »jutri 7:00« instead of »ob 23:58«). Null with
+                                 *     `next_allowed_at`. The refill rule is `next_allowed_at`; this never changes it.
+                                 */
+                                shown_at: string | null;
+                                /**
                                  * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
                                  *     `water_refill_below`, default 60).
                                  */
@@ -5186,6 +5193,13 @@ export interface operations {
                              *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                              */
                             next_allowed_at: string;
+                            /**
+                             * @description Display only (David 2026-10-25): the time the app shows for the next refill —
+                             *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
+                             *     hours, PetSleepService::shownAt — »jutri 7:00« instead of »ob 23:58«). Null with
+                             *     `next_allowed_at`. The refill rule is `next_allowed_at`; this never changes it.
+                             */
+                            shown_at: string | null;
                             /**
                              * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
                              *     `water_refill_below`, default 60).
@@ -6058,6 +6072,13 @@ export interface operations {
                                  */
                                 next_allowed_at: string;
                                 /**
+                                 * @description Display only (David 2026-10-25): the time the app shows for the next refill —
+                                 *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
+                                 *     hours, PetSleepService::shownAt — »jutri 7:00« instead of »ob 23:58«). Null with
+                                 *     `next_allowed_at`. The refill rule is `next_allowed_at`; this never changes it.
+                                 */
+                                shown_at: string | null;
+                                /**
                                  * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
                                  *     `water_refill_below`, default 60).
                                  */
@@ -6926,6 +6947,13 @@ export interface operations {
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
                                 next_allowed_at: string;
+                                /**
+                                 * @description Display only (David 2026-10-25): the time the app shows for the next refill —
+                                 *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
+                                 *     hours, PetSleepService::shownAt — »jutri 7:00« instead of »ob 23:58«). Null with
+                                 *     `next_allowed_at`. The refill rule is `next_allowed_at`; this never changes it.
+                                 */
+                                shown_at: string | null;
                                 /**
                                  * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
                                  *     `water_refill_below`, default 60).
@@ -7796,6 +7824,13 @@ export interface operations {
                                  */
                                 next_allowed_at: string;
                                 /**
+                                 * @description Display only (David 2026-10-25): the time the app shows for the next refill —
+                                 *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
+                                 *     hours, PetSleepService::shownAt — »jutri 7:00« instead of »ob 23:58«). Null with
+                                 *     `next_allowed_at`. The refill rule is `next_allowed_at`; this never changes it.
+                                 */
+                                shown_at: string | null;
+                                /**
                                  * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
                                  *     `water_refill_below`, default 60).
                                  */
@@ -8665,6 +8700,13 @@ export interface operations {
                                  */
                                 next_allowed_at: string;
                                 /**
+                                 * @description Display only (David 2026-10-25): the time the app shows for the next refill —
+                                 *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
+                                 *     hours, PetSleepService::shownAt — »jutri 7:00« instead of »ob 23:58«). Null with
+                                 *     `next_allowed_at`. The refill rule is `next_allowed_at`; this never changes it.
+                                 */
+                                shown_at: string | null;
+                                /**
                                  * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
                                  *     `water_refill_below`, default 60).
                                  */
@@ -9533,6 +9575,13 @@ export interface operations {
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
                                 next_allowed_at: string;
+                                /**
+                                 * @description Display only (David 2026-10-25): the time the app shows for the next refill —
+                                 *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
+                                 *     hours, PetSleepService::shownAt — »jutri 7:00« instead of »ob 23:58«). Null with
+                                 *     `next_allowed_at`. The refill rule is `next_allowed_at`; this never changes it.
+                                 */
+                                shown_at: string | null;
                                 /**
                                  * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
                                  *     `water_refill_below`, default 60).
@@ -10407,6 +10456,13 @@ export interface operations {
                                  */
                                 next_allowed_at: string;
                                 /**
+                                 * @description Display only (David 2026-10-25): the time the app shows for the next refill —
+                                 *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
+                                 *     hours, PetSleepService::shownAt — »jutri 7:00« instead of »ob 23:58«). Null with
+                                 *     `next_allowed_at`. The refill rule is `next_allowed_at`; this never changes it.
+                                 */
+                                shown_at: string | null;
+                                /**
                                  * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
                                  *     `water_refill_below`, default 60).
                                  */
@@ -11279,6 +11335,13 @@ export interface operations {
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
                                 next_allowed_at: string;
+                                /**
+                                 * @description Display only (David 2026-10-25): the time the app shows for the next refill —
+                                 *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
+                                 *     hours, PetSleepService::shownAt — »jutri 7:00« instead of »ob 23:58«). Null with
+                                 *     `next_allowed_at`. The refill rule is `next_allowed_at`; this never changes it.
+                                 */
+                                shown_at: string | null;
                                 /**
                                  * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
                                  *     `water_refill_below`, default 60).
@@ -12153,6 +12216,13 @@ export interface operations {
                                  */
                                 next_allowed_at: string;
                                 /**
+                                 * @description Display only (David 2026-10-25): the time the app shows for the next refill —
+                                 *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
+                                 *     hours, PetSleepService::shownAt — »jutri 7:00« instead of »ob 23:58«). Null with
+                                 *     `next_allowed_at`. The refill rule is `next_allowed_at`; this never changes it.
+                                 */
+                                shown_at: string | null;
+                                /**
                                  * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
                                  *     `water_refill_below`, default 60).
                                  */
@@ -13021,6 +13091,13 @@ export interface operations {
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
                                 next_allowed_at: string;
+                                /**
+                                 * @description Display only (David 2026-10-25): the time the app shows for the next refill —
+                                 *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
+                                 *     hours, PetSleepService::shownAt — »jutri 7:00« instead of »ob 23:58«). Null with
+                                 *     `next_allowed_at`. The refill rule is `next_allowed_at`; this never changes it.
+                                 */
+                                shown_at: string | null;
                                 /**
                                  * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
                                  *     `water_refill_below`, default 60).
@@ -13895,6 +13972,13 @@ export interface operations {
                                  */
                                 next_allowed_at: string;
                                 /**
+                                 * @description Display only (David 2026-10-25): the time the app shows for the next refill —
+                                 *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
+                                 *     hours, PetSleepService::shownAt — »jutri 7:00« instead of »ob 23:58«). Null with
+                                 *     `next_allowed_at`. The refill rule is `next_allowed_at`; this never changes it.
+                                 */
+                                shown_at: string | null;
+                                /**
                                  * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
                                  *     `water_refill_below`, default 60).
                                  */
@@ -14764,6 +14848,13 @@ export interface operations {
                                  */
                                 next_allowed_at: string;
                                 /**
+                                 * @description Display only (David 2026-10-25): the time the app shows for the next refill —
+                                 *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
+                                 *     hours, PetSleepService::shownAt — »jutri 7:00« instead of »ob 23:58«). Null with
+                                 *     `next_allowed_at`. The refill rule is `next_allowed_at`; this never changes it.
+                                 */
+                                shown_at: string | null;
+                                /**
                                  * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
                                  *     `water_refill_below`, default 60).
                                  */
@@ -15632,6 +15723,13 @@ export interface operations {
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
                                 next_allowed_at: string;
+                                /**
+                                 * @description Display only (David 2026-10-25): the time the app shows for the next refill —
+                                 *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
+                                 *     hours, PetSleepService::shownAt — »jutri 7:00« instead of »ob 23:58«). Null with
+                                 *     `next_allowed_at`. The refill rule is `next_allowed_at`; this never changes it.
+                                 */
+                                shown_at: string | null;
                                 /**
                                  * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
                                  *     `water_refill_below`, default 60).
@@ -16506,6 +16604,13 @@ export interface operations {
                                  */
                                 next_allowed_at: string;
                                 /**
+                                 * @description Display only (David 2026-10-25): the time the app shows for the next refill —
+                                 *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
+                                 *     hours, PetSleepService::shownAt — »jutri 7:00« instead of »ob 23:58«). Null with
+                                 *     `next_allowed_at`. The refill rule is `next_allowed_at`; this never changes it.
+                                 */
+                                shown_at: string | null;
+                                /**
                                  * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
                                  *     `water_refill_below`, default 60).
                                  */
@@ -17374,6 +17479,13 @@ export interface operations {
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
                                 next_allowed_at: string;
+                                /**
+                                 * @description Display only (David 2026-10-25): the time the app shows for the next refill —
+                                 *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
+                                 *     hours, PetSleepService::shownAt — »jutri 7:00« instead of »ob 23:58«). Null with
+                                 *     `next_allowed_at`. The refill rule is `next_allowed_at`; this never changes it.
+                                 */
+                                shown_at: string | null;
                                 /**
                                  * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
                                  *     `water_refill_below`, default 60).
@@ -18248,6 +18360,13 @@ export interface operations {
                                  */
                                 next_allowed_at: string;
                                 /**
+                                 * @description Display only (David 2026-10-25): the time the app shows for the next refill —
+                                 *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
+                                 *     hours, PetSleepService::shownAt — »jutri 7:00« instead of »ob 23:58«). Null with
+                                 *     `next_allowed_at`. The refill rule is `next_allowed_at`; this never changes it.
+                                 */
+                                shown_at: string | null;
+                                /**
                                  * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
                                  *     `water_refill_below`, default 60).
                                  */
@@ -19116,6 +19235,13 @@ export interface operations {
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
                                 next_allowed_at: string;
+                                /**
+                                 * @description Display only (David 2026-10-25): the time the app shows for the next refill —
+                                 *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
+                                 *     hours, PetSleepService::shownAt — »jutri 7:00« instead of »ob 23:58«). Null with
+                                 *     `next_allowed_at`. The refill rule is `next_allowed_at`; this never changes it.
+                                 */
+                                shown_at: string | null;
                                 /**
                                  * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
                                  *     `water_refill_below`, default 60).
@@ -19990,6 +20116,13 @@ export interface operations {
                                  */
                                 next_allowed_at: string;
                                 /**
+                                 * @description Display only (David 2026-10-25): the time the app shows for the next refill —
+                                 *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
+                                 *     hours, PetSleepService::shownAt — »jutri 7:00« instead of »ob 23:58«). Null with
+                                 *     `next_allowed_at`. The refill rule is `next_allowed_at`; this never changes it.
+                                 */
+                                shown_at: string | null;
+                                /**
                                  * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
                                  *     `water_refill_below`, default 60).
                                  */
@@ -20862,6 +20995,13 @@ export interface operations {
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
                                 next_allowed_at: string;
+                                /**
+                                 * @description Display only (David 2026-10-25): the time the app shows for the next refill —
+                                 *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
+                                 *     hours, PetSleepService::shownAt — »jutri 7:00« instead of »ob 23:58«). Null with
+                                 *     `next_allowed_at`. The refill rule is `next_allowed_at`; this never changes it.
+                                 */
+                                shown_at: string | null;
                                 /**
                                  * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
                                  *     `water_refill_below`, default 60).
@@ -21736,6 +21876,13 @@ export interface operations {
                                  */
                                 next_allowed_at: string;
                                 /**
+                                 * @description Display only (David 2026-10-25): the time the app shows for the next refill —
+                                 *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
+                                 *     hours, PetSleepService::shownAt — »jutri 7:00« instead of »ob 23:58«). Null with
+                                 *     `next_allowed_at`. The refill rule is `next_allowed_at`; this never changes it.
+                                 */
+                                shown_at: string | null;
+                                /**
                                  * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
                                  *     `water_refill_below`, default 60).
                                  */
@@ -22609,6 +22756,13 @@ export interface operations {
                                  */
                                 next_allowed_at: string;
                                 /**
+                                 * @description Display only (David 2026-10-25): the time the app shows for the next refill —
+                                 *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
+                                 *     hours, PetSleepService::shownAt — »jutri 7:00« instead of »ob 23:58«). Null with
+                                 *     `next_allowed_at`. The refill rule is `next_allowed_at`; this never changes it.
+                                 */
+                                shown_at: string | null;
+                                /**
                                  * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
                                  *     `water_refill_below`, default 60).
                                  */
@@ -23481,6 +23635,13 @@ export interface operations {
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
                                 next_allowed_at: string;
+                                /**
+                                 * @description Display only (David 2026-10-25): the time the app shows for the next refill —
+                                 *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
+                                 *     hours, PetSleepService::shownAt — »jutri 7:00« instead of »ob 23:58«). Null with
+                                 *     `next_allowed_at`. The refill rule is `next_allowed_at`; this never changes it.
+                                 */
+                                shown_at: string | null;
                                 /**
                                  * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
                                  *     `water_refill_below`, default 60).
