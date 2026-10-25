@@ -1,8 +1,8 @@
 {
   "note": "What production app users have (store build or OTA update). Written by scripts/record-app-release.mjs — never by hand. The register export marks these breeds in_app; breeds on main but not here are coming_soon.",
   "kind": "ota",
-  "version": "3.1.8",
-  "commit": "340ff3b1dc97e9f80a67aecd39adb69924b61ec8",
+  "version": "3.1.9",
+  "commit": "fe006087c99fe5aa3d21ee03f1bac1d68f6e4276",
   "date": "2026-10-25",
   "breeds": [
     "mutt",
@@ -67,6 +67,7 @@
     "akita",
     "cardigan_welsh_corgi",
     "german_wirehaired_pointer",
+    "saint_bernard",
     "domestic_cat",
     "maine_coon",
     "british_shorthair",

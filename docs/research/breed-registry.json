@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "ccdf1fbfdacda2749778cdadef3f2e7555137bd2cddff1ecb66e3944a28f0580"
+      "sha256": "8e3300dc749184817bc317155ad95c504a00abf7344e4ada546bef6886c4987f"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -37132,7 +37132,7 @@
       "id": "saint_bernard",
       "species": "dog",
       "order": 61,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Saint Bernard",
         "sl": "Bernardinec"
