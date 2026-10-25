@@ -151,6 +151,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-10-25 (cloud, mobile) — add-child picker tester feedback (`fix/add-child-picker-feedback`)
+- »Pokaži vse pasme« → bottom sheet `BreedListSheet` (own search, × / swipe / backdrop / back, pick closes); sole required option preselected (`soleOption`, `withValidOrigin` + `originAuto`: free mutt / domestic cat → adopted, cleared again on a paid breed); shared required marker `components/ui/RequiredLabel` (picker, add-child nickname, certificate names, deletion form); »Od kod prihaja«; free-plan »omejen preizkus« notice (`freeTrialText`, code-verified limits only). JS only (OTA). **Debt:** login / signup / single-field cards (join family, log walk, pet name, quiet hours) have no asterisks (all fields required, no visible labels); the sheet's swipe works on its header only (the list scrolls). Not verified on a device.
+
 ### 2026-10-25 (cloud, devops) — website »V aplikaciji« = one platform is enough (`fix/website-in-app-one-platform` + pet-prep-website `chore/register-auto-sync`)
 - Cause: `mobile-ota.sh` set `released=true` only when the production OTA reached iOS **and** Android; Android refuses OTA since 2026-10-21 (no production build for runtime `ffea7ec3…`), so `app-release.json` stayed at store 3.1.3 (29 breeds) and petprep.si said »Kmalu« for 40 breeds iOS users have. David 2026-10-25: one platform is enough → `released=true` + `platforms=…` when ≥ 1 platform published; harness cases in `scripts/tests/ci-plan.test.sh`; per-breed export tests now compare availability with `app-release.json` instead of a fixed `coming_soon`.
 - Backfill: `record-app-release.mjs --kind ota --commit 340ff3b1` (last real iOS production OTA, run 40183068158; runs 40183235120 / 40184516243 were CI-push runs that published nothing) → OTA 3.1.8, 69 breeds; export: 40 breeds `coming_soon` → `in_app` (all 67 register breeds in_app).

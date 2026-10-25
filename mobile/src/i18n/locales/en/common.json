@@ -28,5 +28,10 @@
     "submit": "Confirm",
     "cancel": "Cancel",
     "wrong": "That's not right. Please try again."
+  },
+  "required": {
+    "a11y": "{{label}}, required",
+    "legend": "* required field",
+    "legendA11y": "Fields marked with an asterisk are required."
   }
 }

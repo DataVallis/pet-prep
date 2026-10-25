@@ -69,6 +69,18 @@
         "hint": "The programme that shows whether your child is ready for a dog, with a paid breed of your choice, a certificate and the full history. The challenge starts with a purchase: the dog waits until you buy it for this dog (also possible before the contract is signed). One-time payment, no subscription. Want to try first? Choose the free mixed breed."
       }
     },
+    "freeTrial": {
+      "title": "The free mutt is a limited trial",
+      "intro": "It shows the basics of caring for a dog. Compared with the breeds of the 12-week challenge, it has no:",
+      "items": {
+        "program": "12-week program or certificate,",
+        "history": "full history — you see the last 7 days,",
+        "origin": "choice of origin or coat colour — the dog is always adopted from a shelter,",
+        "media": "full video set — only idle and sleeping, no hungry, tired, sick, play, school or transition clips,",
+        "care": "brushing or the special care many breeds need (teeth, ears, skin folds, nails)."
+      },
+      "cta": "For the full experience, choose a breed in the 12-week challenge."
+    },
     "planMissing": "Choose a plan.",
     "breedFreeNote": "On the free plan the dog is always a mixed breed. Paid breeds are part of the 12-week challenge.",
     "breedChallengeNote": "The 12-week challenge is with a paid breed. The mixed breed is the free plan's dog — choose “Free mixed breed” for it.",
@@ -78,6 +90,8 @@
     "searchEmpty": "No breed matches “{{query}}”.",
     "showAllBreeds": "Show all breeds ({{count}})",
     "showFewerBreeds": "Show fewer breeds",
+    "allBreedsTitle": "All breeds",
+    "allBreedsClose": "Close the breed list",
     "originAdoptionOnly": "{{breed}} isn’t a pedigree breed. Breeders only raise pedigree animals, so adoption is the only option.",
     "badgeFree": "Free",
     "badgeChallenge": "Challenge",
@@ -641,7 +655,15 @@
         "adult": "Mature cat",
         "senior": "Senior cat"
       },
-      "buyFirst": "The 12-week challenge starts with a purchase: buy it under “Purchases / challenge” — before or after {{name}} signs the contract. Until then the cat waits."
+      "buyFirst": "The 12-week challenge starts with a purchase: buy it under “Purchases / challenge” — before or after {{name}} signs the contract. Until then the cat waits.",
+      "freeTrial": {
+        "title": "The free domestic cat is a limited trial",
+        "intro": "It shows the basics of caring for a cat. Compared with the breeds of the 12-week challenge, it has no:",
+        "items": {
+          "origin": "choice of origin or coat colour — the cat is always adopted,",
+          "media": "full video set — only idle and sleeping, no hungry, tired, sick, play, wand or transition clips."
+        }
+      }
     }
   },
   "breedSuitability": {

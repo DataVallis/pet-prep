@@ -2,6 +2,7 @@
  * M5-R06-02: species-aware picker — species step, server breed list with search,
  * badges, locked breeds, summary.
  */
+import { Modal } from 'react-native';
 import { fireEvent, render, screen } from '@testing-library/react-native';
 
 import PetPickerStep from '@/components/parent/PetPickerStep';
@@ -61,15 +62,20 @@ const DOGS_R10 = readBreedCatalogue({
 }) as BreedCatalogue;
 
 /**
- * Renders the picker. `showAll` (default) opens "Pokaži vse pasme" when the list is
- * collapsed, so the per-breed tests see every breed; the preview itself has its own tests.
+ * Renders the picker. `showAll` (default) lists every breed inline (`previewCount`), so the
+ * per-breed tests see every breed; the preview and the "Pokaži vse pasme" sheet have their own tests.
  */
 function renderPicker(catalogue: BreedCatalogue | null, onConfirm = jest.fn(), onBack = jest.fn(), showAll = true) {
   render(
-    <PetPickerStep childName="Maja" catalogue={catalogue} initial={INITIAL_PICKER_CHOICE} onConfirm={onConfirm} onBack={onBack} />,
+    <PetPickerStep
+      childName="Maja"
+      catalogue={catalogue}
+      initial={INITIAL_PICKER_CHOICE}
+      onConfirm={onConfirm}
+      onBack={onBack}
+      previewCount={showAll ? Number.MAX_SAFE_INTEGER : undefined}
+    />,
   );
-  const toggle = screen.queryByTestId('breed-show-all');
-  if (showAll && toggle) fireEvent.press(toggle);
   return { onConfirm, onBack };
 }
 
@@ -1845,13 +1851,59 @@ describe('PetPickerStep', () => {
       expect(screen.getByTestId('breed-show-all')).toHaveTextContent(`Pokaži vse pasme (${FALLBACK_CATALOGUE.breeds.length})`);
     });
 
-    it('"show all" lists every breed and "show fewer" folds it back', () => {
+    it('tester feedback 2026-10-25: "show all" opens the whole list in a sheet — the inline list stays short', () => {
+      renderPicker(FALLBACK_CATALOGUE, jest.fn(), jest.fn(), false);
+      expect(screen.queryByTestId('breed-sheet')).toBeNull();
+      fireEvent.press(screen.getByTestId('breed-show-all'));
+      expect(screen.getByTestId('breed-sheet')).toBeTruthy();
+      expect(ids()).toHaveLength(BREED_PREVIEW_COUNT);
+      expect(screen.getByText(`Vse pasme (${FALLBACK_CATALOGUE.breeds.length})`)).toBeTruthy();
+      expect(screen.queryByText('Pokaži manj pasem')).toBeNull();
+    });
+
+    it('the sheet closes with ×, the backdrop and Android back (search reset on reopen)', () => {
       renderPicker(FALLBACK_CATALOGUE, jest.fn(), jest.fn(), false);
       fireEvent.press(screen.getByTestId('breed-show-all'));
-      expect(ids()).toHaveLength(FALLBACK_CATALOGUE.breeds.length);
-      expect(screen.getByTestId('breed-show-all')).toHaveTextContent('Pokaži manj pasem');
+      const close = screen.getByTestId('breed-sheet-close');
+      expect(close.props.accessibilityLabel).toBe('Zapri seznam pasem');
+      fireEvent.changeText(screen.getByTestId('breed-sheet-search'), 'pembroke');
+      fireEvent.press(close);
+      expect(screen.queryByTestId('breed-sheet')).toBeNull();
       fireEvent.press(screen.getByTestId('breed-show-all'));
-      expect(ids()).toHaveLength(BREED_PREVIEW_COUNT);
+      expect(screen.getByTestId('breed-sheet-search').props.value).toBe('');
+      fireEvent.press(screen.getByTestId('breed-sheet-backdrop', { includeHiddenElements: true }));
+      expect(screen.queryByTestId('breed-sheet')).toBeNull();
+      fireEvent.press(screen.getByTestId('breed-show-all'));
+      fireEvent(screen.UNSAFE_getByType(Modal), 'requestClose');
+      expect(screen.queryByTestId('breed-sheet')).toBeNull();
+    });
+
+    it('a breed picked in the sheet is selected, the sheet closes and the breed shows in the short list', () => {
+      renderPicker(FALLBACK_CATALOGUE, jest.fn(), jest.fn(), false);
+      fireEvent.press(screen.getByTestId('plan-option-challenge'));
+      fireEvent.press(screen.getByTestId('breed-show-all'));
+      fireEvent.changeText(screen.getByTestId('breed-sheet-search'), 'pembroke');
+      expect(screen.getAllByTestId(/^breed-sheet-option-/).map((n) => n.props.testID)).toEqual(['breed-sheet-option-pembroke_welsh_corgi']);
+      fireEvent.press(screen.getByTestId('breed-sheet-option-pembroke_welsh_corgi'));
+      expect(screen.queryByTestId('breed-sheet')).toBeNull();
+      expect(screen.getByTestId('breed-option-pembroke_welsh_corgi').props.accessibilityState).toEqual({ checked: true, disabled: false });
+    });
+
+    it('a locked breed in the sheet explains itself and keeps the sheet open', () => {
+      renderPicker(FALLBACK_CATALOGUE, jest.fn(), jest.fn(), false);
+      fireEvent.press(screen.getByTestId('plan-option-free'));
+      fireEvent.press(screen.getByTestId('breed-show-all'));
+      fireEvent.changeText(screen.getByTestId('breed-sheet-search'), 'pembroke');
+      fireEvent.press(screen.getByTestId('breed-sheet-option-pembroke_welsh_corgi'));
+      expect(screen.getByTestId('breed-sheet')).toBeTruthy();
+      expect(screen.getByTestId('breed-sheet-locked-note')).toHaveTextContent(pickerText('dog').breedFreeNote);
+    });
+
+    it('the sheet search finds nothing → an empty note', () => {
+      renderPicker(FALLBACK_CATALOGUE, jest.fn(), jest.fn(), false);
+      fireEvent.press(screen.getByTestId('breed-show-all'));
+      fireEvent.changeText(screen.getByTestId('breed-sheet-search'), 'zzzz');
+      expect(screen.getByTestId('breed-sheet-empty')).toHaveTextContent(PICKER.searchEmpty('zzzz'));
     });
 
     it('search always covers the whole catalogue (no toggle while searching); the picked breed stays listed after the search', () => {
@@ -1870,25 +1922,6 @@ describe('PetPickerStep', () => {
         'breed-option-golden_retriever',
         'breed-option-pembroke_welsh_corgi',
       ]);
-    });
-
-    it('the open list also closes from the top ("Pokaži manj pasem" above the breeds, ≥ 44 px, labelled)', () => {
-      renderPicker(FALLBACK_CATALOGUE, jest.fn(), jest.fn(), false);
-      expect(screen.queryByTestId('breed-show-fewer-top')).toBeNull();
-      fireEvent.press(screen.getByTestId('breed-show-all'));
-      const top = screen.getByTestId('breed-show-fewer-top');
-      expect(top).toHaveTextContent('Pokaži manj pasem');
-      expect(top.props.accessibilityLabel).toBe('Pokaži manj pasem');
-      expect(top.props.accessibilityRole).toBe('button');
-      expect(top.props.accessibilityState).toEqual({ expanded: true });
-      // Above the first breed row.
-      const all = screen.getAllByTestId(/^(breed-show-fewer-top|breed-option-.*|breed-show-all)$/).map((n) => n.props.testID);
-      expect(all[0]).toBe('breed-show-fewer-top');
-      expect(all[all.length - 1]).toBe('breed-show-all');
-      fireEvent.press(top);
-      expect(ids()).toHaveLength(BREED_PREVIEW_COUNT);
-      expect(screen.queryByTestId('breed-show-fewer-top')).toBeNull();
-      expect(screen.getByTestId('breed-show-all')).toHaveTextContent(`Pokaži vse pasme (${FALLBACK_CATALOGUE.breeds.length})`);
     });
 
     it('a short catalogue has no toggle', () => {
@@ -1955,15 +1988,32 @@ describe('PetPickerStep', () => {
       );
     });
 
-    it('"bought" chosen for a paid breed is cleared (not swapped) when switching to the free mutt', () => {
+    it('David 2026-10-25: the free mutt preselects its only origin (adopted) — also over a "bought" of a paid breed', () => {
       renderPicker(FALLBACK_CATALOGUE);
       fireEvent.press(screen.getByTestId('plan-option-challenge'));
       fireEvent.press(screen.getByTestId('origin-option-bought'));
       fireEvent.press(screen.getByTestId('age-option-puppy'));
       expect(screen.getByTestId('dog-picker-confirm')).not.toBeDisabled();
       fireEvent.press(screen.getByTestId('plan-option-free'));
-      expect(screen.getByTestId('dog-picker-confirm')).toBeDisabled();
+      expect(screen.getByTestId('origin-option-adopted')).toBeChecked();
+      expect(screen.getByTestId('dog-picker-confirm')).not.toBeDisabled();
+    });
+
+    it('the preselected origin is cleared again when switching back to a paid breed (the parent decides)', () => {
+      renderPicker(FALLBACK_CATALOGUE);
+      fireEvent.press(screen.getByTestId('breed-option-mutt'));
+      expect(screen.getByTestId('origin-option-adopted')).toBeChecked();
+      fireEvent.press(screen.getByTestId('plan-option-challenge'));
       expect(screen.getByTestId('origin-option-adopted')).not.toBeChecked();
+      expect(screen.getByTestId('origin-option-bought')).not.toBeChecked();
+    });
+
+    it('an origin the parent tapped for the mutt stays when switching to a paid breed', () => {
+      renderPicker(FALLBACK_CATALOGUE);
+      fireEvent.press(screen.getByTestId('plan-option-free'));
+      fireEvent.press(screen.getByTestId('origin-option-adopted'));
+      fireEvent.press(screen.getByTestId('plan-option-challenge'));
+      expect(screen.getByTestId('origin-option-adopted')).toBeChecked();
     });
 
     it('a paid breed keeps both origins and no note', () => {
@@ -1973,6 +2023,62 @@ describe('PetPickerStep', () => {
       expect(screen.getByTestId('origin-option-adopted')).toBeTruthy();
       expect(screen.queryByTestId('origin-adoption-only')).toBeNull();
     });
+  });
+});
+
+describe('tester feedback 2026-10-25: required markers, "Od kod prihaja", free-trial notice', () => {
+  it('every required section has the asterisk and a spoken "obvezno"; one legend', () => {
+    renderPicker(FALLBACK_CATALOGUE);
+    for (const [id, label] of [
+      ['plan-title', 'Načrt'],
+      ['breed-title', 'Pasma'],
+      ['origin-title', 'Od kod prihaja'],
+      ['age-title', 'Starost ob prihodu'],
+    ] as const) {
+      const title = screen.getByTestId(id);
+      expect(title).toHaveTextContent(`${label}*`);
+      expect(title.props.accessibilityLabel).toBe(`${label}, obvezno`);
+      expect(title.props.accessibilityRole).toBe('header');
+    }
+    expect(screen.getAllByTestId('required-legend')).toHaveLength(1);
+    expect(screen.getByTestId('required-legend')).toHaveTextContent('* obvezno polje');
+  });
+
+  it('English: "Where it comes from", "…, required"', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      expect(screen.getByTestId('origin-title').props.accessibilityLabel).toBe('Where it comes from, required');
+      expect(screen.getByTestId('required-legend')).toHaveTextContent('* required field');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('the free plan shows the limited-trial notice (dog: five verified limits); the challenge does not', () => {
+    renderPicker(FALLBACK_CATALOGUE);
+    expect(screen.queryByTestId('free-trial-notice')).toBeNull();
+    fireEvent.press(screen.getByTestId('plan-option-free'));
+    const notice = screen.getByTestId('free-trial-notice');
+    expect(notice).toHaveTextContent(/Brezplačni mešanček je omejen preizkus/);
+    expect(notice).toHaveTextContent(/12-tedenskega programa in certifikata/);
+    expect(notice).toHaveTextContent(/zadnjih 7 dni/);
+    expect(notice).toHaveTextContent(/posvojen iz zavetišča/);
+    expect(notice).toHaveTextContent(/samo mirovanje in spanje/);
+    expect(notice).toHaveTextContent(/česanja/);
+    expect(notice).toHaveTextContent(/Za poln doživljaj izberite pasmo v 12-tedenskem izzivu/);
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    expect(screen.queryByTestId('free-trial-notice')).toBeNull();
+  });
+
+  it('cat: the notice speaks of the domestic cat, without the dog-only care line', () => {
+    renderPicker(BOTH);
+    fireEvent.press(screen.getByTestId('species-option-cat'));
+    fireEvent.press(screen.getByTestId('plan-option-free'));
+    const notice = screen.getByTestId('free-trial-notice');
+    expect(notice).toHaveTextContent(/Brezplačna domača mačka je omejen preizkus/);
+    expect(notice).toHaveTextContent(/muca je vedno posvojena/);
+    expect(notice).not.toHaveTextContent(/česanja/);
   });
 });
 

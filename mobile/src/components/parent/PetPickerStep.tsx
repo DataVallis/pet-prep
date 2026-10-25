@@ -7,14 +7,19 @@
  * 2. **Plan** — free / 12-week challenge (M3-09 / M3-13: the challenge starts with a purchase).
  * 3. **Breed** — the server's list (`GET /api/breeds`) with search (case- and
  *    diacritic-insensitive, synonyms) over the whole catalogue; without a search only the
- *    first few breeds show, the rest behind "Pokaži vse pasme" (David 2026-10-12, hundreds
- *    of breeds are coming); the open list has "Pokaži manj pasem" at its top and bottom. Free breed first with a "Brezplačno" badge, paid
+ *    first few breeds show; "Pokaži vse pasme (N)" opens the whole list in a bottom sheet with its
+ *    own search (David 2026-10-12 / tester feedback 2026-10-25: never a long inline list) —
+ *    closes with ×, a swipe down on its header, the backdrop or Android back; tapping a
+ *    pickable breed selects it and closes the sheet. Free breed first with a "Brezplačno" badge, paid
  *    breeds with "Izziv"; a breed the plan doesn't take is greyed and explained on tap (M5-F03).
  *    Each breed with sourced tags shows "Primerno za:" / "Upoštevajte:" chips (M5-R10).
  *    A paid breed with colours (M5-R21) shows "Barva": chips when there are several (the first
  *    preselected, so it never blocks), a plain line when there is only one; none for a free breed.
- * 4. **Origin** and **age at arrival**, as before (texts per species, T8). A non-pedigree
- *    breed (mutt, domestic cat) is adoption only — never "from a breeder" (David 2026-10-12).
+ * 4. **Origin** ("Od kod prihaja") and **age at arrival**, as before (texts per species, T8). A
+ *    non-pedigree breed (mutt, domestic cat) is adoption only — never "from a breeder" (David
+ *    2026-10-12) — and that only origin is preselected (`withValidOrigin`, David 2026-10-25).
+ *    The free plan shows a short "limited trial" notice under the plans ({@link freeTrialText}).
+ *    Required sections carry the shared asterisk (`FieldLabel required`) + one legend.
  * 5. **Summary** (species, breed, origin, age, plan) above "Ustvari kodo".
  *
  * Premium breeds need the challenge (server 422 `breed_locked` otherwise); the challenge
@@ -25,10 +30,13 @@
  * (`dog-picker*`) so existing flows stay stable.
  */
 
-import { useState } from 'react';
-import { ActivityIndicator, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { useContext, useState } from 'react';
+import { ActivityIndicator, Animated, FlatList, Modal, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 import { Text, TextInput } from '@/components/ui/Text';
-import { Cat, Check, Dog, Lock, Search } from 'lucide-react-native';
+import { FieldLabel, RequiredLegend } from '@/components/ui/RequiredLabel';
+import { useSwipeToClose } from '@/components/ui/useSwipeToClose';
+import { Cat, Check, Dog, Info, Lock, Search, X } from 'lucide-react-native';
 
 import type { NewPetProfile, PetBreed, PetSpecies } from '@/api/client';
 import { PARENT_COLORS as C } from '@/components/parent/ParentUi';
@@ -39,6 +47,7 @@ import {
   breedLockReason,
   breedsOf,
   choiceWithBreed,
+  choiceWithOrigin,
   choiceWithPlan,
   choiceWithSpecies,
   colourLabel,
@@ -46,6 +55,7 @@ import {
   completeChoice,
   considerLabel,
   freeBreedOf,
+  freeTrialText,
   hasSuitability,
   isBreedLocked,
   lockedBreedsFor,
@@ -72,7 +82,7 @@ import {
   withValidOrigin,
 } from '@/modules/petProfile/picker';
 import { breedName, foldForSearch, speciesName } from '@/modules/species/species';
-import { fonts, palette, tightTracking } from '@/theme';
+import { MIN_TOUCH, alpha, fonts, palette, radius, tightTracking } from '@/theme';
 
 interface PetPickerStepProps {
   childName: string;
@@ -89,6 +99,8 @@ interface PetPickerStepProps {
   /** A message to show on top (e.g. the server refused the last choice). */
   notice?: string | null;
   onConfirm: (profile: NewPetProfile, choice: PickerChoice) => void;
+  /** How many breeds the collapsed list shows (default {@link BREED_PREVIEW_COUNT}; tests list every breed inline). */
+  previewCount?: number;
   /** "Nazaj" → the previous step (new pet / join a pet); the current choice is handed back to keep it. */
   onBack?: (choice: PickerChoice) => void;
 }
@@ -143,6 +155,7 @@ function PickerBody({
   notice = null,
   onConfirm,
   onBack,
+  previewCount = BREED_PREVIEW_COUNT,
 }: PetPickerStepProps & { catalogue: BreedCatalogue }) {
   /**
    * Every choice goes through the plan ↔ breed rule (never a breed without its plan), the
@@ -156,8 +169,8 @@ function PickerBody({
   /** The locked breed the parent tapped last (explains why), null when none. */
   const [lockedTapped, setLockedTapped] = useState<PetBreed | null>(null);
   const [query, setQuery] = useState('');
-  /** "Pokaži vse pasme" opened (closes again on a species change). */
-  const [allBreeds, setAllBreeds] = useState(false);
+  /** "Pokaži vse pasme" sheet open (closes on a pick, ×, swipe, back or a species change). */
+  const [sheetOpen, setSheetOpen] = useState(false);
   const severalSpecies = catalogue.species.length > 1;
 
   if (stage === 'species' || choice.species === null) {
@@ -170,7 +183,7 @@ function PickerBody({
         onPick={(species) => {
           setLockedTapped(null);
           setQuery('');
-          setAllBreeds(false);
+          setSheetOpen(false);
           update((c) => choiceWithSpecies(c, species, serverLockedBreeds, breedsOf(catalogue, species)));
           setStage('details');
         }}
@@ -189,9 +202,9 @@ function PickerBody({
   const profile = completeChoice(choice, serverLockedBreeds, breeds);
   const challengeTitle = S.plans.challenge.title(challengePrice, challengePriceLoading);
   const shown = searchBreeds(breeds, query);
-  const listed = visibleBreeds(shown, query, allBreeds, choice.breed);
-  // The toggle only without a search (a search always lists every match).
-  const canToggleAll = foldForSearch(query) === '' && shown.length > BREED_PREVIEW_COUNT;
+  const listed = visibleBreeds(shown, query, false, choice.breed, previewCount);
+  // "Pokaži vse pasme" only without a search (a search always lists every match inline).
+  const canToggleAll = foldForSearch(query) === '' && shown.length > previewCount;
   const origins = originsFor(choice, breeds);
   const adoptionOnlyBreed = origins.length === 1 ? originBreed(choice, breeds) : null;
   const ageBreed = choice.breed ?? freeBreedOf(breeds);
@@ -203,6 +216,7 @@ function PickerBody({
         {T.title(childName)}
       </Text>
       <Text style={styles.intro}>{T.intro}</Text>
+      <RequiredLegend />
       {severalSpecies && (
         <Pressable
           onPress={() => setStage('species')}
@@ -223,9 +237,9 @@ function PickerBody({
         </View>
       )}
 
-      <Text style={styles.sectionTitle} accessibilityRole="header">
+      <FieldLabel required style={styles.sectionTitleText} containerStyle={styles.sectionTitleRow} accessibilityRole="header" testID="plan-title">
         {S.planTitle}
-      </Text>
+      </FieldLabel>
       {PICKER_PLANS.map((plan) => (
         <Option
           key={plan}
@@ -240,10 +254,11 @@ function PickerBody({
           testID={`plan-option-${plan}`}
         />
       ))}
+      {choice.plan === 'free' && <FreeTrialNotice species={species} />}
 
-      <Text style={styles.sectionTitle} accessibilityRole="header">
+      <FieldLabel required style={styles.sectionTitleText} containerStyle={styles.sectionTitleRow} accessibilityRole="header" testID="breed-title">
         {S.breedTitle}
-      </Text>
+      </FieldLabel>
       <View style={styles.searchBox}>
         <Search color={C.faint} size={16} />
         <TextInput
@@ -259,20 +274,6 @@ function PickerBody({
           testID="breed-search"
         />
       </View>
-      {canToggleAll && allBreeds && (
-        // The long list also closes from the top, so the parent never scrolls to the end to collapse it.
-        <Pressable
-          onPress={() => setAllBreeds(false)}
-          hitSlop={8}
-          accessibilityRole="button"
-          accessibilityLabel={S.showFewerBreeds}
-          accessibilityState={{ expanded: true }}
-          style={({ pressed }) => [styles.showAllButton, pressed && styles.pressed]}
-          testID="breed-show-fewer-top"
-        >
-          <Text style={styles.linkText}>{S.showFewerBreeds}</Text>
-        </Pressable>
-      )}
       {listed.map((entry) => (
         <BreedRow
           key={entry.breed}
@@ -293,17 +294,34 @@ function PickerBody({
       ))}
       {canToggleAll && (
         <Pressable
-          onPress={() => setAllBreeds((open) => !open)}
+          onPress={() => {
+            setLockedTapped(null);
+            setSheetOpen(true);
+          }}
           hitSlop={8}
           accessibilityRole="button"
-          accessibilityLabel={allBreeds ? S.showFewerBreeds : S.showAllBreeds(shown.length)}
-          accessibilityState={{ expanded: allBreeds }}
+          accessibilityLabel={S.showAllBreeds(shown.length)}
+          accessibilityState={{ expanded: sheetOpen }}
           style={({ pressed }) => [styles.showAllButton, pressed && styles.pressed]}
           testID="breed-show-all"
         >
-          <Text style={styles.linkText}>{allBreeds ? S.showFewerBreeds : S.showAllBreeds(shown.length)}</Text>
+          <Text style={styles.linkText}>{S.showAllBreeds(shown.length)}</Text>
         </Pressable>
       )}
+      <BreedListSheet
+        visible={sheetOpen}
+        breeds={breeds}
+        lockedBreeds={lockedBreeds}
+        lockReasonOf={(breed) => breedLockReason(breed, choice.plan, serverLockedBreeds, breeds)}
+        lockedNoteOf={(breed) => lockedNote(breedLockReason(breed, choice.plan, serverLockedBreeds, breeds), T)}
+        selected={choice.breed}
+        onPick={(breed) => {
+          setLockedTapped(null);
+          update((c) => choiceWithBreed(c, breed, breeds));
+          setSheetOpen(false);
+        }}
+        onClose={() => setSheetOpen(false)}
+      />
       {shown.length === 0 && (
         <Text style={styles.note} testID="breed-search-empty">
           {S.searchEmpty(query.trim())}
@@ -319,16 +337,16 @@ function PickerBody({
         <ColourChoice colours={colours} selected={choice.colour ?? null} onPick={(colour) => update((c) => ({ ...c, colour }))} />
       )}
 
-      <Text style={styles.sectionTitle} accessibilityRole="header">
+      <FieldLabel required style={styles.sectionTitleText} containerStyle={styles.sectionTitleRow} accessibilityRole="header" testID="origin-title">
         {S.originTitle}
-      </Text>
+      </FieldLabel>
       {origins.map((origin) => (
         <Option
           key={origin}
           title={T.origins[origin]}
           hint={T.originHints[origin]}
           selected={choice.origin === origin}
-          onPress={() => update((c) => ({ ...c, origin }))}
+          onPress={() => update((c) => choiceWithOrigin(c, origin))}
           testID={`origin-option-${origin}`}
         />
       ))}
@@ -338,9 +356,9 @@ function PickerBody({
         </Text>
       )}
 
-      <Text style={styles.sectionTitle} accessibilityRole="header">
+      <FieldLabel required style={styles.sectionTitleText} containerStyle={styles.sectionTitleRow} accessibilityRole="header" testID="age-title">
         {S.ageTitle}
-      </Text>
+      </FieldLabel>
       {PICKER_AGES.map((age) => (
         <Option
           key={age}
@@ -397,6 +415,147 @@ function lockedNote(reason: BreedLockReason | null, text: PickerText): string {
   if (reason === 'free_only') return text.breedChallengeNote;
   if (reason === 'challenge_only') return text.breedFreeNote;
   return text.breedLockedNote;
+}
+
+// ── Free plan: "limited trial" notice (David 2026-10-25) ──────────
+/** What the free pet lacks vs. a challenge breed — facts only, see {@link freeTrialText}. */
+function FreeTrialNotice({ species }: { species: PetSpecies }) {
+  const text = freeTrialText(species);
+  return (
+    <View style={styles.trialBox} testID="free-trial-notice" accessible accessibilityLabel={[text.title, text.intro, ...text.items, text.cta].join(' ')}>
+      <View style={styles.trialTitleRow}>
+        <Info color={C.link} size={16} />
+        <Text style={styles.trialTitle}>{text.title}</Text>
+      </View>
+      <Text style={styles.trialBody}>{text.intro}</Text>
+      {text.items.map((item) => (
+        <View key={item} style={styles.trialItem}>
+          <Text style={styles.trialBullet}>•</Text>
+          <Text style={[styles.trialBody, styles.flexShrink]}>{item}</Text>
+        </View>
+      ))}
+      <Text style={styles.trialCta}>{text.cta}</Text>
+    </View>
+  );
+}
+
+// ── "Pokaži vse pasme": the whole list in a bottom sheet ──────────
+interface BreedListSheetProps {
+  visible: boolean;
+  breeds: readonly CatalogueBreed[];
+  lockedBreeds: readonly PetBreed[];
+  lockReasonOf: (breed: PetBreed) => BreedLockReason | null;
+  lockedNoteOf: (breed: PetBreed) => string;
+  selected: PetBreed | null;
+  onPick: (breed: PetBreed) => void;
+  onClose: () => void;
+}
+
+/**
+ * Tester feedback (David 2026-10-25): the full catalogue never expands inline (endless scroll
+ * to its end or back to the top) — it opens here, with its own search, and closes any time
+ * with ×, a swipe down on the header, the backdrop or Android back. A pickable breed selects
+ * and closes; a locked one explains itself in the sheet.
+ */
+function BreedListSheet({ visible, onClose, ...rest }: BreedListSheetProps) {
+  return (
+    <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose} statusBarTranslucent>
+      {visible && <BreedListSheetBody onClose={onClose} {...rest} />}
+    </Modal>
+  );
+}
+
+function BreedListSheetBody({ breeds, lockedBreeds, lockReasonOf, lockedNoteOf, selected, onPick, onClose }: Omit<BreedListSheetProps, 'visible'>) {
+  const bottomInset = useContext(SafeAreaInsetsContext)?.bottom ?? 0;
+  const topInset = useContext(SafeAreaInsetsContext)?.top ?? 0;
+  const swipe = useSwipeToClose(onClose);
+  const [query, setQuery] = useState('');
+  const [lockedTapped, setLockedTapped] = useState<PetBreed | null>(null);
+  const shown = searchBreeds(breeds, query);
+  return (
+    <View style={[styles.sheetBackdrop, { paddingTop: topInset + 24 }]}>
+      <Pressable
+        style={StyleSheet.absoluteFill}
+        onPress={onClose}
+        accessible={false}
+        importantForAccessibility="no"
+        testID="breed-sheet-backdrop"
+      />
+      <Animated.View
+        style={[styles.sheet, { paddingBottom: 12 + bottomInset, transform: [{ translateY: swipe.dragY }] }]}
+        accessibilityViewIsModal
+        testID="breed-sheet"
+      >
+        <View {...swipe.panHandlers} style={styles.sheetHeader} testID="breed-sheet-header">
+          <View style={styles.handle} accessible={false} importantForAccessibility="no" />
+          <View style={styles.sheetTitleRow}>
+            <Text style={styles.sheetTitle} accessibilityRole="header">
+              {S.allBreedsTitle} ({shown.length})
+            </Text>
+            <Pressable
+              onPress={onClose}
+              hitSlop={8}
+              accessibilityRole="button"
+              accessibilityLabel={S.allBreedsClose}
+              style={({ pressed }) => [styles.sheetClose, pressed && styles.pressed]}
+              testID="breed-sheet-close"
+            >
+              <X color={C.text} size={20} />
+            </Pressable>
+          </View>
+          <View style={styles.searchBox}>
+            <Search color={C.faint} size={16} />
+            <TextInput
+              style={styles.searchInput}
+              value={query}
+              onChangeText={setQuery}
+              placeholder={S.searchPlaceholder}
+              placeholderTextColor={palette.n500}
+              autoCorrect={false}
+              autoCapitalize="none"
+              autoComplete="off"
+              accessibilityLabel={S.searchLabel}
+              testID="breed-sheet-search"
+            />
+          </View>
+          {lockedTapped !== null && (
+            <Text style={styles.lockedNote} testID="breed-sheet-locked-note">
+              {lockedNoteOf(lockedTapped)}
+            </Text>
+          )}
+        </View>
+        <FlatList
+          data={shown}
+          keyExtractor={(entry) => entry.breed}
+          keyboardShouldPersistTaps="handled"
+          contentContainerStyle={styles.sheetList}
+          initialNumToRender={12}
+          testID="breed-sheet-list"
+          ListEmptyComponent={
+            <Text style={styles.note} testID="breed-sheet-empty">
+              {S.searchEmpty(query.trim())}
+            </Text>
+          }
+          renderItem={({ item }) => (
+            <BreedRow
+              entry={item}
+              locked={isBreedLocked(item.breed, lockedBreeds)}
+              lockReason={lockReasonOf(item.breed)}
+              selected={selected === item.breed}
+              testIDPrefix="breed-sheet-option"
+              onPress={(locked) => {
+                if (locked) {
+                  setLockedTapped(item.breed);
+                  return;
+                }
+                onPick(item.breed);
+              }}
+            />
+          )}
+        />
+      </Animated.View>
+    </View>
+  );
 }
 
 // ── Step 1: species tiles ─────────────────────────────────────────
@@ -464,9 +623,11 @@ interface BreedRowProps {
   lockReason: BreedLockReason | null;
   selected: boolean;
   onPress: (locked: boolean) => void;
+  /** Test id prefix (`breed-option` inline, `breed-sheet-option` in the sheet). */
+  testIDPrefix?: string;
 }
 
-function BreedRow({ entry, locked, lockReason, selected, onPress }: BreedRowProps) {
+function BreedRow({ entry, locked, lockReason, selected, onPress, testIDPrefix = 'breed-option' }: BreedRowProps) {
   const name = breedName(entry.breed, entry.species);
   const checked = !locked && selected;
   const a11y = !locked ? name : lockReason === 'free_only' ? S.lockedFreeOnlyA11y(name) : S.lockedA11y(name);
@@ -480,7 +641,7 @@ function BreedRow({ entry, locked, lockReason, selected, onPress }: BreedRowProp
       accessibilityState={{ checked, disabled: locked }}
       accessibilityLabel={a11y}
       accessibilityHint={tagged ? suitabilityA11y(entry.suitability) : undefined}
-      testID={`breed-option-${entry.breed}`}
+      testID={`${testIDPrefix}-${entry.breed}`}
     >
       <View style={[styles.breedIcon, locked && styles.breedIconLocked]}>
         {entry.species === 'cat' ? <Cat color={C.muted} size={20} /> : <Dog color={C.muted} size={20} />}
@@ -561,9 +722,9 @@ function ColourChoice({
   }
   return (
     <View style={styles.colourSection}>
-      <Text style={styles.sectionTitle} accessibilityRole="header">
+      <FieldLabel required style={styles.sectionTitleText} containerStyle={styles.sectionTitleRow} accessibilityRole="header" testID="colour-title">
         {S.colourTitle}
-      </Text>
+      </FieldLabel>
       <Text style={styles.note}>{S.colourHint}</Text>
       <View style={styles.colourChips} accessibilityRole="radiogroup" accessibilityLabel={S.colourTitle} testID="colour-choice">
         {colours.map((colour) => {
@@ -651,6 +812,30 @@ const styles = StyleSheet.create({
   title: { fontSize: 18, letterSpacing: tightTracking(18), fontFamily: fonts.displayBold, color: C.text },
   intro: { fontSize: 14, lineHeight: 20, color: C.muted },
   sectionTitle: { marginTop: 12, fontSize: 13, fontWeight: '700', color: palette.n700, textTransform: 'uppercase', letterSpacing: 0.4 },
+  sectionTitleRow: { marginTop: 12 },
+  sectionTitleText: { fontSize: 13, fontWeight: '700', color: palette.n700, textTransform: 'uppercase', letterSpacing: 0.4 },
+  trialBox: { padding: 14, gap: 6, borderRadius: 16, backgroundColor: C.accentSoft, borderWidth: 1, borderColor: C.accentBorder },
+  trialTitleRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
+  trialTitle: { flexShrink: 1, fontSize: 14, fontWeight: '700', color: C.text },
+  trialBody: { fontSize: 13, lineHeight: 18, color: C.text },
+  trialItem: { flexDirection: 'row', gap: 6, paddingLeft: 4 },
+  trialBullet: { fontSize: 13, lineHeight: 18, color: C.muted },
+  trialCta: { marginTop: 2, fontSize: 13, lineHeight: 18, fontWeight: '700', color: C.link },
+  sheetBackdrop: { flex: 1, justifyContent: 'flex-end', backgroundColor: alpha(palette.black, 0.4) },
+  sheet: {
+    flex: 1,
+    paddingHorizontal: 16,
+    paddingTop: 8,
+    borderTopLeftRadius: radius.sheet,
+    borderTopRightRadius: radius.sheet,
+    backgroundColor: C.bg,
+  },
+  sheetHeader: { gap: 10, paddingBottom: 10 },
+  handle: { alignSelf: 'center', width: 44, height: 5, borderRadius: 3, backgroundColor: palette.n300 },
+  sheetTitleRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 12 },
+  sheetTitle: { flex: 1, fontSize: 18, fontFamily: fonts.displayBold, letterSpacing: tightTracking(18), color: C.text },
+  sheetClose: { width: MIN_TOUCH, height: MIN_TOUCH, alignItems: 'center', justifyContent: 'center' },
+  sheetList: { gap: 10, paddingBottom: 16 },
   tiles: { flexDirection: 'row', flexWrap: 'wrap', gap: 12, marginTop: 4 },
   tile: {
     flexGrow: 1,

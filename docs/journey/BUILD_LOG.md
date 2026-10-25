@@ -9,6 +9,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-25 — Izbirnik ljubljenčka po pripombah testerjev: seznam pasem v oknu, obvezna polja, pošten opis brezplačnega mešančka
+
+**Kaj:** Prvi testerji so pri »Dodaj otroka« naleteli na pet stvari, ki so isti dan v aplikaciji. »Pokaži vse pasme (59)« zdaj odpre **okno s celim seznamom in iskanjem** (zapre se z ×, potegom navzdol ali tipko nazaj; izbira pasme okno zapre) — prej se je seznam razprl v zaslon in je bilo treba neskončno drseti. Pri brezplačnem mešančku je »Posvojen (zavetišče)« edina možnost, zato je **izbrana sama**. Vsa obvezna polja imajo **zvezdico** in legendo »* obvezno polje« (tudi pri vzdevku otroka, certifikatu in brisanju). »Od kod pride« je postalo slovnično pravilno **»Od kod prihaja«**. Ko starš izbere brezplačni načrt, aplikacija prijazno pove, da je mešanček **omejen preizkus** — brez 12-tedenskega programa in certifikata, z zgodovino zadnjih 7 dni, samo posvojen, z osnovnimi videi (mirovanje, spanje) in brez nege po pasmi — ter povabi: »Za poln doživljaj izberite pasmo v 12-tedenskem izzivu.«
+**Zakaj je pomembno:** testerji, ki so preizkusili mešančka, so mislili, da je aplikacija revna — v resnici so videli preizkusno različico. Zdaj to vedo vnaprej, in to samo z dejstvi, ki jih aplikacija res uveljavlja.
+- 👩 Starši: manj tapkanja, jasno, kaj je obvezno, in pošteno, kaj dobite brezplačno in kaj z izzivom.
+- 💼 Investitorji: povratne informacije testerjev v enem dnevu v aplikaciji; brezplačni načrt zdaj jasno vodi k plačljivemu izzivu.
+- 🛠 Tehnično: `BreedListSheet` (Modal + `useSwipeToClose`), `soleOption` / `withValidOrigin` (`originAuto`), skupni `components/ui/RequiredLabel` (`FieldLabel`, `RequiredLegend`, `requiredA11yLabel`), `freeTrialText(species)`; vse samo JS (OTA). Na telefonu še ni preverjeno.
+
 ## 2026-10-25 — Spletna stran zdaj pove resnico tudi, ko ima novo pasmo samo iPhone
 
 **Kaj:** petprep.si je za 40 pasem pisal »Kmalu v aplikaciji«, čeprav jih uporabniki iPhona že imajo (prišle so s posodobitvijo prek zraka — OTA). Zapis izdaje se je zgodil samo, ko sta posodobitev dobila **oba** sistema, Android pa od 21. 10. čaka na novo gradnjo v trgovini. David je odločil: pasma je »v aplikaciji«, ko jo ima **vsaj ena** platforma. Zapis smo popravili za nazaj (OTA 3.1.8, 25. 10.): vseh 67 pasem v registru je zdaj »V aplikaciji«. Spletna stran se odslej posodobi **sama** — vsako uro preveri izvoz registra, ga zgradi in objavi.

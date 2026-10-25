@@ -16,6 +16,7 @@
 import { useEffect, useState } from 'react';
 import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
 import { Text, TextInput } from '@/components/ui/Text';
+import { FieldLabel, requiredA11yLabel } from '@/components/ui/RequiredLabel';
 import { Check } from 'lucide-react-native';
 
 import { PARENT_COLORS as C } from '@/components/parent/ParentUi';
@@ -186,7 +187,9 @@ export default function DeletionConfirmForm({
         </Text>
       ) : (
         <>
-          <Text style={styles.label}>{S.passwordLabel}</Text>
+          <FieldLabel required style={styles.label} containerStyle={styles.labelRow}>
+            {S.passwordLabel}
+          </FieldLabel>
           <TextInput
             style={styles.input}
             value={password}
@@ -198,13 +201,15 @@ export default function DeletionConfirmForm({
             autoCorrect={false}
             textContentType="password"
             editable={!busy}
-            accessibilityLabel={S.passwordLabel}
+            accessibilityLabel={requiredA11yLabel(S.passwordLabel)}
             testID={`${testID}-password`}
           />
         </>
       )}
 
-      <Text style={styles.label}>{S.confirmLabel}</Text>
+      <FieldLabel required style={styles.label} containerStyle={styles.labelRow}>
+        {S.confirmLabel}
+      </FieldLabel>
       <TextInput
         style={styles.input}
         value={confirmText}
@@ -214,7 +219,7 @@ export default function DeletionConfirmForm({
         autoCapitalize="characters"
         autoCorrect={false}
         editable={!busy}
-        accessibilityLabel={S.confirmLabel}
+        accessibilityLabel={requiredA11yLabel(S.confirmLabel)}
         testID={`${testID}-confirm`}
       />
 
@@ -292,7 +297,8 @@ const styles = StyleSheet.create({
   checkbox: { width: 22, height: 22, borderRadius: 6, borderWidth: 2, borderColor: palette.danger, alignItems: 'center', justifyContent: 'center' },
   checkboxOn: { backgroundColor: palette.danger },
   ackText: { flex: 1, fontSize: 13, lineHeight: 18, color: C.text },
-  label: { fontSize: 12, fontWeight: '700', color: C.muted, marginTop: 4 },
+  label: { fontSize: 12, fontWeight: '700', color: C.muted },
+  labelRow: { marginTop: 4 },
   reauthHint: { fontSize: 13, lineHeight: 18, color: C.text, marginTop: 4 },
   input: {
     height: 44,
