@@ -74,7 +74,8 @@ describe('M5-R10-55 Wirehaired Pointing Griffon', () => {
     expect(find('Wirehaired Pointing Griffon')).toEqual(['wirehaired_pointing_griffon']);
     expect(find('Korthals Griffon')).toEqual(['wirehaired_pointing_griffon']);
     expect(find('Francoski ostrodlaki ptičar')).toEqual(['wirehaired_pointing_griffon']);
-    expect(find('ostrodlaki pticar')).toEqual(['wirehaired_pointing_griffon']);
+    // M5-R10-65: »ostrodlaki ptičar« also finds the German Wirehaired Pointer (»nemški ostrodlaki ptičar«).
+    expect(find('ostrodlaki pticar')).toEqual(['wirehaired_pointing_griffon', 'german_wirehaired_pointer']);
     expect(find('grifon')).toEqual(['wirehaired_pointing_griffon']);
   });
 
