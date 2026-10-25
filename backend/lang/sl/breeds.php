@@ -68,6 +68,7 @@ return [
     'bloodhound' => 'Bloodhound',
     'akita' => 'Ameriška akita',
     'cardigan_welsh_corgi' => 'Welsh corgi cardigan',
+    'german_wirehaired_pointer' => 'Nemški ostrodlaki ptičar',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

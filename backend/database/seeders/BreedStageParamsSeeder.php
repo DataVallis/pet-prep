@@ -52,9 +52,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest / WeimaranerBreedTest / ItalianGreyhoundBreedTest / GiantSchnauzerBreedTest / BloodhoundBreedTest / AkitaBreedTest / CardiganWelshCorgiBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest / WeimaranerBreedTest / ItalianGreyhoundBreedTest / GiantSchnauzerBreedTest / BloodhoundBreedTest / AkitaBreedTest / CardiganWelshCorgiBreedTest / GermanWirehairedPointerBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever / Samoyed / Scottish Terrier / Weimaraner / Italian Greyhound / Giant Schnauzer / Bloodhound / Akita / Cardigan Welsh Corgi rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever / Samoyed / Scottish Terrier / Weimaraner / Italian Greyhound / Giant Schnauzer / Bloodhound / Akita / Cardigan Welsh Corgi / German Wirehaired Pointer rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -779,6 +779,17 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_CARDIGAN_WELSH_CORGI = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-64)';
 
     /**
+     * M5-R10-65 German Wirehaired Pointer (unattended run 2026-10-25, data.json
+     * proposed_game_parameters.german_wirehaired_pointer.*.decision): every value follows a standing
+     * rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 120 min (RKC S521 "Exercise: More than 2 hours per day"), senior 90 min, puppy 10 min ×
+     * age capped at 120, stages 9 / 36 / 90 (0.75 × RKC lower bound "Over 10 years", S521 — provisional
+     * until McMillan 2024 is checked from an A/B copy), arrival 2 / 9 / 36 / 90, learning multiplier 1.0
+     * (Coren 44, Average); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_GERMAN_WIREHAIRED_POINTER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-65)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -989,6 +1000,9 @@ class BreedStageParamsSeeder extends Seeder
         'akita' => [
             'groomer_visit' => [1, 'three_months', 'S508', 'You might like to get your Akita professionally groomed every three months or so.', 'proposed_game_parameters.akita.professional_grooming', '"every three months or so" → 12 program weeks (ear cleaning "occasional", PetMD S510, has no number → no task)'],
         ],
+        'german_wirehaired_pointer' => [
+            'ear_cleaning' => [1, 'month', 'S524', "Regularly (once a month, or more frequently as instructed by your veterinarian) clean your dog's ears", 'proposed_game_parameters.german_wirehaired_pointer.ear_care', '"once a month" → every 4 weeks (hand-stripping "twice a year" is longer than every care period → no reminder; bath "rarely" has no number)'],
+        ],
     ];
 
     /**
@@ -1072,6 +1086,7 @@ class BreedStageParamsSeeder extends Seeder
         'bloodhound' => [1, 'S502', 'Grooming: Once a week', 'high', false],
         'akita' => [1, 'S508', 'at minimum a weekly brush to help get rid of dead hairs.', 'medium', false],
         'cardigan_welsh_corgi' => [3, 'S206', 'Coat care is fairly minimal, with grooming two-three times per week usually enough to remove any dead hair.', 'high', false],
+        'german_wirehaired_pointer' => [2, 'S188', "Shorthaired pointers will need grooming once or twice a week, with Wirehaired also needing 'stripping' occasionally.", 'medium', false],
     ];
 
     /**
@@ -1185,13 +1200,14 @@ class BreedStageParamsSeeder extends Seeder
         'bloodhound' => ['S503', 'Generally speaking, Bloodhounds aren’t aggressive dogs but can sometimes be nervous so it’s important to socialise your Bloodhound from a young age with lots of people, dogs and experiences.'],
         'akita' => ['S508', 'your dog will need to be well socialised from a young age'],
         'cardigan_welsh_corgi' => ['S206', 'socialisation with children and training at a young age can help to overcome these possible problems.'],
+        'german_wirehaired_pointer' => ['S524', 'They can make great family dogs when trained and socialized from an early age.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1935,6 +1951,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-64 (docs/research/dog-data/data.json cardigan_welsh_corgi,
             // S513–S518 + PDSA S206; runbook rules in proposed_game_parameters.cardigan_welsh_corgi).
             BreedType::CardiganWelshCorgi => self::cardiganWelshCorgiProfile(),
+            // M5-R10-65 (docs/research/dog-data/data.json german_wirehaired_pointer,
+            // S519–S526 + PDSA S188; runbook rules in proposed_game_parameters.german_wirehaired_pointer).
+            BreedType::GermanWirehairedPointer => self::germanWirehairedPointerProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -6393,6 +6412,82 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'cardigan_welsh_corgi.lifespan.rkc',
                 'quote' => 'Lifespan: Over 12 years',
                 'notes' => 'RKC breed page lower bound (S515); PDSA "Over 12 years" (S206) the same. McMillan 2024 13.1 y only via Wikipedia (S518, tier C). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * German Wirehaired Pointer (M5-R10-65). Stage boundaries, arrival ages, exercise minutes and the learning
+     * multiplier follow the runbook's standing rules (CONFIRMED_R10_GERMAN_WIREHAIRED_POINTER); weight, growth, Coren
+     * rank and lifespan are sourced. The senior boundary uses the RKC lower bound "Over 10 years" (S521) — the Dogs
+     * Trust McMillan 2024 table (S123) could not be fetched (13 years only via Wikipedia, tier C) and no VetCompass
+     * median was found.
+     *
+     * @return array<string, mixed>
+     */
+    private static function germanWirehairedPointerProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_GERMAN_WIREHAIRED_POINTER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S521', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.german_wirehaired_pointer.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a large dog reaches adult weight at 15–18 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lifespan lower bound "Over 10 years" (S521; PDSA S188 the same) = 7.5 y = 90 months. The Dogs Trust McMillan 2024 table (S123) could not be fetched (13 y only via Wikipedia, tier C); no VetCompass median was found. Not chosen: 84 (Dogs Trust > 7 y, S14), 117 (13 y via Wikipedia). Provisional until McMillan 2024 is checked in an A/B copy.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.german_wirehaired_pointer.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (15–18 months for a large dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S521', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.german_wirehaired_pointer.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: More than 2 hours per day',
+                'notes' => 'RKC "Exercise: More than 2 hours per day" (S521) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PDSA "over 2 hours ideally per day" (S188) agrees.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.german_wirehaired_pointer.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[20.5, 34.0], [
+                'unit' => 'kg', 'source_id' => 'S522', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'german_wirehaired_pointer.adult_weight.rkc_standard',
+                'quote' => 'Weight: dogs: 25-34 kgs (55-75 lbs); bitches: 20.5-29 kgs (45-64 lbs).',
+                'notes' => 'Royal Kennel Club breed standard (S522): dogs 25–34 kg, bitches 20.5–29 kg → 20.5–34 kg for both sexes. FCI (S520) and AKC (S523) give no weight; PDSA 20–34 kg (S188, both German Pointers) agrees.',
+            ]],
+            'growth_end' => [[15, 18], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'german_wirehaired_pointer.growth.adult_weight_reached',
+                'quote' => 'Large (59–99 pounds): 15–18 months',
+                'notes' => 'Size-class value, not breed-specific (RKC 20.5–34 kg ≈ 45–75 lb, S522, midpoint ≈ 60 lb — the Large class of S10; bitches straddle Medium and Large).',
+            ]],
+            'coren_rank' => [44, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'german_wirehaired_pointer.trainability.coren_rank',
+                'quote' => 'German Wirehaired Pointer',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 44, tier "Average Working/Obedience Intelligence" (ranks 40–54).',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.german_wirehaired_pointer.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 44 (S35) in the "Average" tier (ranks 40–54) → 1.0. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10.0, [
+                'unit' => 'years', 'source_id' => 'S521', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'german_wirehaired_pointer.lifespan.rkc',
+                'quote' => 'Lifespan: Over 10 years',
+                'notes' => 'RKC breed page lower bound (S521); PDSA "Over 10 years" (S188) the same. McMillan 2024 13 y only via Wikipedia (S526, tier C); no VetCompass median. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

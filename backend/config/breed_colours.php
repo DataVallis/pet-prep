@@ -404,6 +404,13 @@ return [
         ['key' => 'tricolour-brindle', 'value' => 'tricolour with brindle points', 'en' => 'Tricolour, brindle points', 'sl' => 'Trobarven s tigrastimi oznakami'],
         ['key' => 'tricolour-red', 'value' => 'tricolour with red points', 'en' => 'Tricolour, red points', 'sl' => 'Trobarven z rdečimi oznakami'],
     ],
+    // M5-R10-65: colours every standard read accepts (RKC S522, FCI S520, AKC S523) — liver roan, liver and white,
+    // solid liver; never black, solid black or tricolour.
+    'german_wirehaired_pointer' => [
+        ['key' => 'liver-roan', 'value' => 'liver roan with solid liver patches and a liver head', 'en' => 'Liver roan', 'sl' => 'Rjavo-sivkast'],
+        ['key' => 'liver-white', 'value' => 'liver and white', 'en' => 'Liver and white', 'sl' => 'Rjavo-bel'],
+        ['key' => 'liver', 'value' => 'solid liver', 'en' => 'Liver', 'sl' => 'Rjav'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

@@ -2522,6 +2522,44 @@
         }
       ],
       "notes": "RKC breed page (dog-data S515, 2026-10-25): the three tests are listed under Best Practice; the minimum (Good Practice) list names only 'prioritising genetic diversity' (paraphrase), no test. The page adds that imported dogs must be PRA-rcd3 tested (paraphrase). PDSA (S206) refers to the Canine Health Schemes in general."
+    },
+    "german_wirehaired_pointer": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S521",
+        "quote": "Best Practice schemes and tests"
+      },
+      "tests": [
+        {
+          "key": "dna_vwd2",
+          "level": "best_practice",
+          "name": "DNA test for von Willebrand disease (vWD2)*",
+          "source_id": "S521",
+          "quote": "DNA test for von Willebrand disease (vWD2)*"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "best_practice",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S521",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S521",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S521",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S521, 2026-10-25): heading 'Pre-breeding health screening', subheading 'Best Practice schemes and tests' — DNA vWD2 (imported dogs must be tested; since 6 January 2025 imports qualify for registration only when clear / carrier / hereditarily clear of vWD2 — paraphrase), BVA/KC elbow, BVA/KC/ISDS eye and BVA/KC hip schemes; no minimum list returned. New test key: dna_vwd2."
     }
   }
 }

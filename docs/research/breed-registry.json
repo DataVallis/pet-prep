@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "dfce2284aa864a97a1376c73b39bccae48b50f95aa83e9cc07fd2455d125a0d0"
+      "sha256": "66c00483bfe541d56a27554546daa6e403df50a24a9bc542ca636bb076605b74"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "c44da9b79e78e629e2730cf27733eca4b2463ba972f75e6017c0d739c2b2255a"
+      "sha256": "2a71c91b0a98814094d6895563e27f195ce58439ac61393b441e37899c362e89"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "ed1b11579bbce1e03c0f506337475da0524065c9d0b55f6d3c7efd1ebf164d7f"
+      "sha256": "2fabc56a8fa53e0ae3a4976cd43f55bcffca642da8b79563291ba1fc9376e388"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "d16d95be97c6a15ed4a80ba9e38d3aa368651f280e722512c7ac673a22ba33db"
+      "sha256": "ae70d124332cf09fb21e546fe6086028aed48c2992eeb0dde8a32d83bed8e324"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "6178cd9e001d0628c216dce0ce1e718b5ab8611046a1470868954b120918fe73"
+      "sha256": "00c99da9e7826bb52f9a5386646cf9e801cb539978bd683e5c55cf036e1bb7ba"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "6b04a5abcf98a6d68261dbdbc295ba5f3c7109d2fdbdcc63aaa89297d4892c09"
+      "sha256": "3f4d6a167512c15915dbc8e139753f056d2d25cdeded3951289c810354d2ea59"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -212,7 +212,7 @@
         }
       },
       "status": "available",
-      "breed_count": 60,
+      "breed_count": 61,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -36488,6 +36488,632 @@
       ]
     },
     {
+      "id": "german_wirehaired_pointer",
+      "species": "dog",
+      "order": 60,
+      "availability": "coming_soon",
+      "name": {
+        "en": "German Wirehaired Pointer",
+        "sl": "Nemški ostrodlaki ptičar"
+      },
+      "slug": {
+        "en": "german-wirehaired-pointer",
+        "sl": "nemski-ostrodlaki-pticar"
+      },
+      "synonyms": {
+        "en": [
+          "Deutsch Drahthaar",
+          "Drahthaar",
+          "German Wire-haired Pointing Dog",
+          "GWP"
+        ],
+        "sl": [
+          "nemski ostrodlaki pticar",
+          "drahthaar",
+          "drahtar"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S521"
+          ],
+          "ref": "german_wirehaired_pointer.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              60,
+              67
+            ],
+            "female": [
+              56,
+              62
+            ]
+          },
+          "source_ids": [
+            "S522"
+          ],
+          "ref": "german_wirehaired_pointer.height.rkc_standard",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              25,
+              34
+            ],
+            "female": [
+              20.5,
+              29
+            ]
+          },
+          "source_ids": [
+            "S522"
+          ],
+          "ref": "german_wirehaired_pointer.adult_weight.rkc_standard",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            15,
+            18
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "german_wirehaired_pointer.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S521"
+          ],
+          "ref": "german_wirehaired_pointer.lifespan.rkc",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S521"
+          ],
+          "ref": "german_wirehaired_pointer.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S521"
+          ],
+          "ref": "german_wirehaired_pointer.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S521"
+          ],
+          "ref": "german_wirehaired_pointer.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S521"
+          ],
+          "ref": "german_wirehaired_pointer.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 44,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "german_wirehaired_pointer.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 98,
+            "group": 7,
+            "section": 1,
+            "origin": "DE"
+          },
+          "source_ids": [
+            "S519"
+          ],
+          "ref": "german_wirehaired_pointer.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia_arthritis",
+          "source_ids": [
+            "S188"
+          ],
+          "ref": "german_wirehaired_pointer.health.hip_dysplasia",
+          "confidence": "medium"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S188"
+          ],
+          "ref": "german_wirehaired_pointer.health.gdv",
+          "confidence": "medium"
+        },
+        {
+          "key": "bleeding_disorder_vwd",
+          "source_ids": [
+            "S188"
+          ],
+          "ref": "german_wirehaired_pointer.health.von_willebrand",
+          "confidence": "medium"
+        },
+        {
+          "key": "heart_muscle_disease",
+          "source_ids": [
+            "S188"
+          ],
+          "ref": "german_wirehaired_pointer.health.heart",
+          "confidence": "medium"
+        },
+        {
+          "key": "itchy_skin_allergy",
+          "source_ids": [
+            "S188"
+          ],
+          "ref": "german_wirehaired_pointer.health.atopy",
+          "confidence": "medium"
+        },
+        {
+          "key": "entropion_cherry_eye",
+          "source_ids": [
+            "S188"
+          ],
+          "ref": "german_wirehaired_pointer.health.eyes",
+          "confidence": "medium"
+        },
+        {
+          "key": "hypothyroidism",
+          "source_ids": [
+            "S188"
+          ],
+          "ref": "german_wirehaired_pointer.health.hypothyroidism",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S188",
+              "S521"
+            ],
+            "refs": [
+              "german_wirehaired_pointer.exercise.adult",
+              "german_wirehaired_pointer.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S524"
+            ],
+            "refs": [
+              "german_wirehaired_pointer.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S524"
+            ],
+            "refs": [
+              "german_wirehaired_pointer.suitability.petmd_children"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S521"
+            ],
+            "refs": [
+              "german_wirehaired_pointer.suitability.rkc_size_of_home",
+              "german_wirehaired_pointer.suitability.rkc_size_of_garden"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S188",
+              "S521"
+            ],
+            "refs": [
+              "german_wirehaired_pointer.exercise.adult",
+              "german_wirehaired_pointer.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S524"
+            ],
+            "refs": [
+              "german_wirehaired_pointer.exercise.mental"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S524"
+            ],
+            "refs": [
+              "german_wirehaired_pointer.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S521"
+            ],
+            "refs": [
+              "german_wirehaired_pointer.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S524"
+            ],
+            "refs": [
+              "german_wirehaired_pointer.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 2
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 28
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.german_wirehaired_pointer.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S521"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S521 'More than 2 hours per day'; PDSA S188 'over 2 hours')"
+          },
+          {
+            "ref": "proposed_game_parameters.german_wirehaired_pointer.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.german_wirehaired_pointer.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S521"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S521)"
+          },
+          {
+            "ref": "proposed_game_parameters.german_wirehaired_pointer.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 44, Average tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.german_wirehaired_pointer.grooming",
+            "basis_source_ids": [
+              "S188"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): RKC »More than once a week« brez števila → PDSA »once or twice a week« → 2; mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.german_wirehaired_pointer.ear_care",
+            "basis_source_ids": [
+              "S524"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »once a month« → 1× na 4 tedne (mesec = 4 programski tedni)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S188",
+          "S521",
+          "S524"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_vwd2",
+            "level": "best_practice",
+            "source_ids": [
+              "S521"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S521"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S521"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S521"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S521"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S188",
+        "S519",
+        "S521",
+        "S522",
+        "S524",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -41190,6 +41816,34 @@
       "publisher": "Cardigan Welsh Corgi Club of America (AKC parent club)",
       "title": "Official Standard of the Cardigan Welsh Corgi (approved December 13, 1994, effective January 31, 1995)",
       "url": "https://cardigancorgis.com/cwcca/breed/standard/"
+    },
+    {
+      "id": "S519",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — DEUTSCH DRAHTHAAR (98)",
+      "url": "https://www.fci.be/en/nomenclature/DEUTSCH-DRAHTHAAR-98.html"
+    },
+    {
+      "id": "S521",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A to Z — German Wirehaired Pointer",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/german-wirehaired-pointer/"
+    },
+    {
+      "id": "S522",
+      "tier": "A",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breed standard — German Wirehaired Pointer (last updated 1 April 2025)",
+      "url": "https://www.royalkennelclub.com/breed-standards/gundog/german-wirehaired-pointer/"
+    },
+    {
+      "id": "S524",
+      "tier": "B",
+      "publisher": "PetMD — Zack Newman, reviewed by Barri J. Morrison, DVM (updated Oct. 20, 2023)",
+      "title": "German Wirehaired Pointer",
+      "url": "https://petmd.com/dog/breeds/german-wirehaired-pointer"
     },
     {
       "id": "C1",

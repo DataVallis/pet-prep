@@ -33901,6 +33901,552 @@
       }
     }
   },
+  "german_wirehaired_pointer": {
+    "_note": "Added 2026-10-25 (M5-R10-65, unattended run — appended after the Cardigan Welsh Corgi: AKC 2024 No. 61, S174 table row '61 | German Wirehaired Pointer'). Quotes as returned by the web-fetch tool on 2026-10-25; spot-check before import (sources.md S519–S526, reused S10, S11, S14, S24, S35, S45, S174, S188). FCI 98 Deutsch Drahthaar (S519, S520 — standard of 25.10.2000, no weight); the Royal Kennel Club breed standard (S522, last updated 1 April 2025) gives heights and weights per sex → weight from S522. The RKC breed page (S521, royalkennelclub.com) gives the key facts, Breed Watch Category 1 and the Best Practice health tests; the fetch tool returned the key facts as label: value lines and the descriptions only as a summary (paraphrase). PDSA (S188) has one 'German Pointer' page for the shorthaired and wirehaired varieties (re-read 2026-10-25). Lifespan: no McMillan 2024 / VetCompass value reachable (13 y only via Wikipedia, S526, tier C) → runbook rule: RKC lower bound 'Over 10 years' (S521). Not a welfare-concern breed: RKC Breed Watch Category 1 (S521). Woodgreen and AKC trait ratings not attempted.",
+    "identity": {
+      "value": "FCI No. 98, Group 7 Section 1.1 (Continental Pointing Dogs, Braque type), Germany",
+      "unit": "—",
+      "source_id": "S519",
+      "quote": "Continental Pointing Dogs",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S519, fields as returned): 'DEUTSCH DRAHTHAAR' (English 'GERMAN WIRE-HAIRED POINTING DOG'), number '98', group 'n°7 - Pointing Dogs', section 'Continental Pointing Dogs' (subsection «Braque» type), country of origin 'GERMANY', subject to a working trial, definitive acceptance 11/26/1954, valid standard 10/25/2000. 'Germany' is already in FCI_ORIGINS (DE). RKC group: Gundog (S521). AKC name 'German Wirehaired Pointer' (S174)."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S521",
+      "quote": "Size: Large",
+      "confidence": "high",
+      "notes": "RKC breed page key fact (S521). PDSA (S188) 'Size | Large'; RKC standard (S522): 'Medium-sized hunting dog'."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            61,
+            68
+          ],
+          "female": [
+            57,
+            64
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S520",
+        "quote": "61 to 68 cm.",
+        "confidence": "high",
+        "notes": "FCI standard No. 98 (S520), height at withers: dogs '61 to 68 cm.', bitches '57 to 64 cm.' (as returned). RKC standard (S522): 'Ideal height at shoulder: dogs: 60-67 cms (23½-26½ ins); bitches: 56-62 cms (22-24½ ins).'; AKC (S523): 'The height of males should be from 24 to 26 inches at the withers.' — alternatives."
+      },
+      "rkc_standard": {
+        "value": {
+          "male": [
+            60,
+            67
+          ],
+          "female": [
+            56,
+            62
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S522",
+        "quote": "Ideal height at shoulder: dogs: 60-67 cms (23½-26½ ins); bitches: 56-62 cms (22-24½ ins).",
+        "confidence": "high",
+        "notes": "Royal Kennel Club breed standard (S522)."
+      }
+    },
+    "adult_weight": {
+      "rkc_standard": {
+        "value": {
+          "male": [
+            25,
+            34
+          ],
+          "female": [
+            20.5,
+            29
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S522",
+        "quote": "Weight: dogs: 25-34 kgs (55-75 lbs); bitches: 20.5-29 kgs (45-64 lbs).",
+        "confidence": "high",
+        "notes": "Royal Kennel Club breed standard (S522) — the only standard with a weight (FCI S520 and AKC S523 give none). Game range 20.5–34 kg (both sexes). PDSA (S188, both German Pointers) '20-34 kg'; PetMD (S524) 50–70 lb — alternatives."
+      },
+      "pdsa": {
+        "value": [
+          20,
+          34
+        ],
+        "unit": "kg",
+        "source_id": "S188",
+        "quote": "Average weight | 20-34 kg",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S188), one range for both German Pointer varieties; alternative only."
+      },
+      "salt_category": {
+        "value": "IV (15–<30 kg) / V (30–<40 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 20.5–34 kg spans the bands. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific: RKC weight 20.5–34 kg (45–75 lb, S522), midpoint ≈ 27 kg ≈ 60 lb → 'Large (59–99 pounds)'; bitches straddle Medium (12–15 months, alternative). The game is unaffected (the puppy cap of 120 min is reached at 12 months either way)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no German Wirehaired Pointer growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S521",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "medium",
+        "notes": "RKC breed page key fact (S521). PDSA (S188, both German Pointers) 'Average lifespan | Over 10 years' agrees; PetMD (S524): 'German Wirehaired Pointers are generally healthy dogs that live an average of 14–16 years' (fragment) — alternative without a median. Wikipedia (S526, tier C): 'A 2024 UK study found a median longevity of 13 years for the breed' — background only."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": null,
+        "confidence": "low",
+        "notes": "McMillan et al. 2024: the Dogs Trust breed table (S123) was not fetched (not in the fetch tool's provenance, as on earlier runs); Wikipedia (S526, tier C) cites a 2024 UK study with a median of 13 years — not verified in the paper or the table → open for David (0.75 × 13 × 12 = 117 → senior 117 if confirmed). UNSOURCED value."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × RKC lower bound 10 y (S521) → 0.75 × 10 = 7.5 y = 90 months. Runbook order: McMillan 2024 (not reachable, 13 y only via Wikipedia tier C) → VetCompass median (none found) → RKC lower bound. Alternatives: 84 (Dogs Trust > 7 y, S14); 117 (0.75 × 13 y via Wikipedia S526 — not chosen).",
+        "derived_from": [
+          "S11",
+          "S521"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S521",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S521) — the runbook's preferred source. PDSA (S188): 'German Pointers have high energy levels and will need plenty of exercise – over 2 hours ideally per day.' — agrees on 120. PetMD (S524): 'take them on a daily long walk and for longer hikes on the weekends' (no number)."
+      },
+      "mental": {
+        "value": "lots of exercise and mental stimulation",
+        "unit": "—",
+        "source_id": "S524",
+        "quote": "While they don't need to be hunters, they do need lots of exercise and mental stimulation to be happy.",
+        "confidence": "medium",
+        "notes": "PetMD (S524). AKC (S525): 'Giving GWPs a job to do can be helpful because it engages their minds and gives them a satisfying sense of purpose.' Basis of needs_mental_stimulation."
+      },
+      "recall": {
+        "value": "strong hunting instinct on walks — needs good recall training",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "for this reason they need to be trained well for recall.",
+        "confidence": "medium",
+        "notes": "PDSA (S188, both German Pointers; fragment). The game has the 'Pridi' (come) command already — nothing new to build (GSP precedent)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "gentle, affectionate and even tempered; alert, biddable and very loyal",
+        "unit": "—",
+        "source_id": "S522",
+        "quote": "Gentle, affectionate and even tempered. Alert, biddable and very loyal.",
+        "confidence": "high",
+        "notes": "RKC standard (S522) 'Temperament'. FCI (S520): 'neither sensitive when shots are fired nor shy or aggressive.' AKC (S523): 'at times aloof but not unfriendly toward strangers' (fragment)."
+      },
+      "family": {
+        "value": "great family dogs when trained and socialised from an early age; bond closely with their family",
+        "unit": "—",
+        "source_id": "S524",
+        "quote": "They can make great family dogs when trained and socialized from an early age.",
+        "confidence": "medium",
+        "notes": "PetMD (S524). Also 'GWPs form a close bond to their family and do well with children who have been taught how to interact with animals.' Basis of family_pet."
+      },
+      "time_alone": {
+        "value": "should never be left alone for long periods (separation anxiety)",
+        "unit": "—",
+        "source_id": "S524",
+        "quote": "but your GWP should never be left alone for long periods.",
+        "confidence": "medium",
+        "notes": "PetMD (S524, fragment); also 'Crate training them from an early age can help decrease separation anxiety,'. AKC (S525): 'They are happiest to spend a lot of time with their owners.' Basis of needs_company."
+      },
+      "other_pets": {
+        "value": "high prey drive — may not live well with cats or other small animals",
+        "unit": "—",
+        "source_id": "S524",
+        "quote": "because this dog has a high prey drive due to their history as hunters",
+        "confidence": "medium",
+        "notes": "PetMD (S524, fragments): '… they might not live well with cats or other small animals.' A named high prey drive → chases_small_pets (David 2026-10-12)."
+      },
+      "socialisation": {
+        "value": "train and socialise from an early age",
+        "unit": "—",
+        "source_id": "S524",
+        "quote": "They can make great family dogs when trained and socialized from an early age.",
+        "confidence": "medium",
+        "notes": "PetMD (S524) — a socialisation condition → proposed_game_parameters.german_wirehaired_pointer.socialisation (M5-R17)."
+      },
+      "experienced_owner": {
+        "value": "can be challenging for new dog owners or inexperienced trainers",
+        "unit": "—",
+        "source_id": "S525",
+        "quote": "This combination can be challenging for new dog owners or inexperienced trainers.",
+        "confidence": "medium",
+        "notes": "AKC (S525) — 'this combination' refers to traits named in a sentence the fetch tool did not return; no chip fits (experienced_owner reads 'powerful dog', independent_experienced_owner 'independent and stubborn') → no tag, open for David."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. Not a welfare-concern breed: RKC Breed Watch Category 1 (S521; no breed-specific points of concern for judges, paraphrase). PDSA (S188) lists potential health problems for both German Pointer varieties; PetMD (S524) names von Willebrand disease, hypothyroidism and hip and elbow dysplasia (headings).",
+      "hip_dysplasia": {
+        "value": "hip dysplasia — loose hip joints leading to arthritis; parents hip-scored (BVA/KC scheme, RKC Best Practice)",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "Hip dysplasia – hip joint laxity as a result of poor development, which will eventually lead to arthritis.",
+        "confidence": "medium",
+        "notes": "PDSA (S188). RKC breed page (S521) Best Practice: 'Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme' and the elbow scheme. Not a Breed Watch point → no hips_hind_legs chip."
+      },
+      "gdv": {
+        "value": "gastric dilatation volvulus (bloat) — an emergency, seen in large, deep-chested breeds",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "This is an emergency and requires urgent veterinary attention.",
+        "confidence": "medium",
+        "notes": "PDSA (S188): 'often known as 'bloat', this is a condition where the stomach twists, trapping the contents and gases.'; 'It's often seen in large, deep-chested breeds.' No advice to leave a gap after eating on the page → no meal_exercise_gap row (never invent a quote)."
+      },
+      "von_willebrand": {
+        "value": "von Willebrand's disease (bleeding disorder); DNA test vWD2 (RKC Best Practice)",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "Von Willebrand's disease – deficiency in blood platelet function resulting in excessive bleeding.",
+        "confidence": "medium",
+        "notes": "PDSA (S188); RKC (S521): 'DNA test for von Willebrand disease (vWD2)*' — imported dogs must be tested (paraphrase); PetMD (S524) heading 'Von Willebrand Disease'."
+      },
+      "heart": {
+        "value": "cardiomyopathy (heart muscle disease)",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "Cardiomyopathy – enlarged heart due to degeneration of the heart muscle.",
+        "confidence": "medium",
+        "notes": "PDSA (S188)."
+      },
+      "atopy": {
+        "value": "atopy (skin allergies)",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "Atopy – hypersensitivity to certain allergens, causing itching and skin trauma.",
+        "confidence": "medium",
+        "notes": "PDSA (S188). Not a Breed Watch point → no sensitive_skin chip."
+      },
+      "eyes": {
+        "value": "entropion (inward-turning eyelids), cherry eye",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "Entropion – inward turning eyelids.",
+        "confidence": "medium",
+        "notes": "PDSA (S188): 'Cherry eye – eversion of the nictitating membrane or 'third eyelid''. FCI (S520) lists entropion / ectropion as disqualifying faults. RKC Best Practice eye scheme (S521). Not a Breed Watch point → no eyelid_problems chip."
+      },
+      "hypothyroidism": {
+        "value": "hypothyroidism",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "Hypothyroidism – a condition in which there's a decrease in thyroid hormone production.",
+        "confidence": "medium",
+        "notes": "PDSA (S188); PetMD (S524) heading 'Hypothyroidism'."
+      },
+      "lymphoedema": {
+        "value": "lymphoedema",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "Lymphedema – swelling caused by improper drainage of the lymphatic system",
+        "confidence": "medium",
+        "notes": "PDSA (S188). Research only (not exported, GSP precedent)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 44,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "German Wirehaired Pointer",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-25): rank 44 'German Wirehaired Pointer', tier 'Average Working/Obedience Intelligence' (ranks 40–54). Coren's own article (S34) lists only the top and bottom 10. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Average Working/Obedience Intelligence",
+        "confidence": "medium",
+        "notes": "S35 tier heading as returned."
+      },
+      "training_notes": {
+        "value": "friendly and fairly easy to train; reward-based training",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "German Pointers in general are friendly and fairly easy to train.",
+        "confidence": "medium",
+        "notes": "PDSA (S188, both varieties). PetMD (S524): patient training with positive reinforcement (paraphrase). The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.german_wirehaired_pointer.learning_multiplier (1.0, runbook rule: Average tier, rank 44).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "medium-sized, powerful versatile hunting dog with wire hair completely covering the skin; slightly longer than tall",
+        "unit": "—",
+        "source_id": "S522",
+        "quote": "Medium-sized hunting dog, with wire hair completely covering skin.",
+        "confidence": "high",
+        "notes": "RKC standard (S522); also 'Overall should be slightly longer in body, compared to shoulder height.' FCI (S520): 'A pointing dog of noble appearance, with harsh coat completely protecting the skin'."
+      },
+      "colours": {
+        "value": [
+          "liver roan",
+          "liver and white",
+          "solid liver"
+        ],
+        "unit": "list",
+        "source_id": "S522",
+        "quote": "Liver and white, solid liver, black and white. Solid black and tricoloured highly undesirable.",
+        "confidence": "high",
+        "notes": "Only the colours every standard read accepts: RKC (S522) 'Liver and white, solid liver, black and white.' + 'Any other colour or combination of colours unacceptable.'; FCI (S520) 'Brown roan with or without patches.', 'Brown with or without white chest patch.' (also black roan, light roan) + 'No other colour is permitted.'; AKC (S523) 'liver and white, usually either liver and white spotted, liver roan,' and 'Any black in the coat is to be severely penalized.' → black roan / black and white left out (penalised by the AKC); never solid black or tricolour."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Liver roan with liver patches first with the highest weight (the portrait default — FCI 'brown roan' = AKC 'liver roan', Claude 2026-10-25), then liver and white, solid liver."
+      },
+      "coat": {
+        "value": "harsh, wiry, flat-lying outer coat about 2–4 cm with a dense water-resistant undercoat; beard and eyebrows",
+        "unit": "—",
+        "source_id": "S520",
+        "quote": "Wirehaired harsh, flat lying and dense.",
+        "confidence": "high",
+        "notes": "FCI (S520): 'Outer coat approximately 2 to 4 cm long; dense, water resistant undercoat.'; RKC (S522): 'Outer coat thicker and harsh, no longer than 4 cms (11/2 ins) long with a dense undercoat,'; AKC (S523): 'The distinctive outer coat is straight, harsh, wiry and flat lying, and is from one to two inches in length.' RKC key fact 'Coat length: Medium' (S521)."
+      },
+      "nose": {
+        "value": "liver or black (matching the coat); muzzle long, broad and strong",
+        "unit": "—",
+        "source_id": "S522",
+        "quote": "Nose liver or black.",
+        "confidence": "high",
+        "notes": "FCI (S520): 'Long, broad, strong, deep. Slight roman nose.' RKC (S522): 'Moderate stop, skull and muzzle of equal length with no overhanging lips.'"
+      },
+      "ears": {
+        "value": "medium-sized, set high",
+        "unit": "—",
+        "source_id": "S520",
+        "quote": "Of medium size, set on high and wide, not twisted.",
+        "confidence": "high",
+        "notes": "RKC (S522): 'Medium sized in relation to head, set high, when brought forward should reach corner of lips.'"
+      },
+      "eyes": {
+        "value": "medium-sized, oval, hazel or darker, lively alert expression",
+        "unit": "—",
+        "source_id": "S522",
+        "quote": "Medium-sized oval, hazel or darker, with eyelids closing properly, not protruding nor too deep set.",
+        "confidence": "high",
+        "notes": "FCI (S520): 'As dark as possible, neither too deep-set nor protruding, with an alert, lively expression.'"
+      },
+      "tail": {
+        "value": "natural undocked tail reaching to the hocks, carried straight or slightly sabre-like",
+        "unit": "—",
+        "source_id": "S522",
+        "quote": "Reaching to the hocks and carried straight or slightly sabre fashion.",
+        "confidence": "high",
+        "notes": "RKC (S522): 'Previously customarily docked.'; undocked as quoted. FCI (S520): 'Docked for the hunting purposes.' / where docking is prohibited the tail may be left natural (paraphrase). AKC (S523) describes docking. The game draws a natural tail (docking is banned in Slovenia and the UK for companion dogs; GSP / Brittany precedent, open for David)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page key facts (S521, returned as label: value lines), PDSA (S188, both German Pointer varieties) and PetMD (S524). The RKC page shows no 'Good with children' field.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S521",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S521",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S521",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "Basis of the large_home tag (with the garden)."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S521",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S521",
+        "quote": "Grooming: More than once a week",
+        "confidence": "high",
+        "notes": "No number → the runbook's next A/B number: PDSA (S188) 'once or twice a week' → brushing 2× a week (M5-R13; the same reading David confirmed for the German Shorthaired Pointer on 2026-10-12). Not frequent_grooming: RKC 'More than once a week' vs PDSA 'once or twice a week' is not clearly more than once (Brittany precedent; open for David)."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S521",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": "PDSA (S188): 'Coat length | Medium'."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S521",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "Basis of the sheds tag."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S521",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_town_or_country": {
+        "value": "Country",
+        "unit": "—",
+        "source_id": "S521",
+        "quote": "Town or country: Country",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S521",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S521",
+        "quote": "Category 1",
+        "confidence": "medium",
+        "notes": "RKC Breed Watch (S521): no breed-specific points of concern (paraphrase) → no welfare chip."
+      },
+      "pdsa_exercise": {
+        "value": "over 2 hours ideally per day",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "German Pointers have high energy levels and will need plenty of exercise – over 2 hours ideally per day.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_grooming": {
+        "value": "once or twice a week, plus occasional stripping",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "Shorthaired pointers will need grooming once or twice a week, with Wirehaired also needing 'stripping' occasionally.",
+        "confidence": "medium",
+        "notes": "PDSA (S188, captured verbatim 2026-10-11, re-read 2026-10-25): the wirehaired variety needs the same grooming plus stripping. Basis of the brushing value 2 (upper bound)."
+      },
+      "petmd_children": {
+        "value": "do well with children taught how to interact with animals; supervise",
+        "unit": "—",
+        "source_id": "S524",
+        "quote": "GWPs form a close bond to their family and do well with children who have been taught how to interact with animals.",
+        "confidence": "medium",
+        "notes": "PetMD (S524). Supervision caveat: 'As with every breed, all interactions between dogs and kids should be supervised.' Basis of children (explicit statement, caveat kept); not small_children."
+      },
+      "petmd_grooming": {
+        "value": "hand-stripping twice a year; rarely needs a bath; ears cleaned about once a month",
+        "unit": "—",
+        "source_id": "S524",
+        "quote": "Their fur needs to be stripped (hairs are removed at the root by hand instead of clipped) twice a year.",
+        "confidence": "medium",
+        "notes": "PetMD (S524). Bath: 'This breed rarely needs a bath, …' (no frequency → no bath reminder). Ears: 'Regularly (once a month, or more frequently as instructed by your veterinarian) clean your dog's ears' → ear cleaning once a month (M5-R20). Stripping twice a year: no program period (the challenge lasts 12 weeks; the longest care period is 3 months) → not built, open for David."
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page shows no 'Good with children' field (as returned 2026-10-25)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -50769,6 +51315,298 @@
         "confidence": "high",
         "notes": "Colours from the FCI / RKC standards (S514, S516); white never predominating. Weights unsourced. Natural tail (the Cardigan has always been undocked, S515). Moderate body length (not exaggeratedly long or low).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): red with white markings is the portrait default; fox-brush tail; moderate body"
+      }
+    },
+    "german_wirehaired_pointer": {
+      "_note": "Unattended run M5-R10-65 (2026-10-25): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. No new vocabulary key. Brushing 2× a week (PDSA S188 'once or twice a week' upper bound), puppy socialisation (PetMD S524 quote) and ear cleaning once a month (PetMD S524, M5-R20 child mini-game) are built. Not built: hand-stripping twice a year (PetMD S524) — no program period that long (open for David); no bath frequency ('rarely'); no meal / exercise gap quote.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S521",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'More than 2 hours per day' (S521); PDSA 'over 2 hours ideally per day' (S188) — agree. Rule: one number N ('more than N') → N = 120.",
+        "alternatives": [
+          {
+            "value": 120,
+            "source_id": "S188",
+            "notes": "PDSA (key facts minimum 2 hours)"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S521 'More than 2 hours per day'; PDSA S188 'over 2 hours')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S521",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + RKC lower bound 'Over 10 years', S521; PDSA S188 the same). McMillan 2024 13 y only via Wikipedia (S526, tier C) → 117 if confirmed. Alternative: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S521"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84,
+          "senior_mcmillan_2024_via_wikipedia": 117
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S521)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 44 (S35), tier 'Average' (40–54) → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 44, Average tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 2,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S188",
+        "quote": "Shorthaired pointers will need grooming once or twice a week, with Wirehaired also needing 'stripping' occasionally.",
+        "confidence": "medium",
+        "notes": "RKC (S521) 'Grooming: More than once a week' has no number → the most specific number of another A/B source: PDSA (S188, both German Pointers) 'once or twice a week' → upper bound 2 (runbook »Dog grooming«). The same quote and value David confirmed for the German Shorthaired Pointer (2026-10-12). Matted coat at ceil(2 / 2) = 1 missed.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): RKC »More than once a week« brez števila → PDSA »once or twice a week« → 2; mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S524",
+        "quote": "They can make great family dogs when trained and socialized from an early age.",
+        "confidence": "medium",
+        "notes": "PetMD (S524); quote from german_wirehaired_pointer.behaviour.socialisation. Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija od malega, PetMD S524)"
+      },
+      "ear_care": {
+        "value": "ears cleaned once a month",
+        "unit": "care routine (sourced need)",
+        "source_id": "S524",
+        "quote": "Regularly (once a month, or more frequently as instructed by your veterinarian) clean your dog's ears",
+        "confidence": "medium",
+        "notes": "PetMD (S524, start of the sentence as returned), german_wirehaired_pointer.suitability.petmd_grooming. Built: the child's ear-cleaning mini-game once every 4 program weeks (BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R20).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »once a month« → 1× na 4 tedne (mesec = 4 programski tedni)"
+      },
+      "hand_stripping": {
+        "value": "hand-stripping twice a year",
+        "unit": "care routine (sourced need, not built)",
+        "source_id": "S524",
+        "quote": "Their fur needs to be stripped (hairs are removed at the root by hand instead of clipped) twice a year.",
+        "confidence": "medium",
+        "notes": "PetMD (S524); PDSA (S188): 'stripping' occasionally. Twice a year is longer than the 12-week challenge and than every care period of the game (the longest is 3 months, CARE_PERIOD_DAYS) → no groomer reminder; open for David.",
+        "decision": "predlog Claude 2026-10-25: ni zgrajeno — obdobje pol leta je daljše od 12-tedenskega izziva in od najdaljšega obdobja nalog (3 mesece); čaka Davida"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-65); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S521",
+              "S188"
+            ],
+            "refs": [
+              "german_wirehaired_pointer.exercise.adult",
+              "german_wirehaired_pointer.suitability.pdsa_exercise"
+            ],
+            "quote": "S521 'Exercise: More than 2 hours per day'; S188 'over 2 hours ideally per day'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S524"
+            ],
+            "refs": [
+              "german_wirehaired_pointer.behaviour.family"
+            ],
+            "quote": "S524 'They can make great family dogs when trained and socialized from an early age.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S524"
+            ],
+            "refs": [
+              "german_wirehaired_pointer.suitability.petmd_children"
+            ],
+            "quote": "S524 '… do well with children who have been taught how to interact with animals.' (supervise)"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S521"
+            ],
+            "refs": [
+              "german_wirehaired_pointer.suitability.rkc_size_of_home",
+              "german_wirehaired_pointer.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S521 'Size of home: Large house' / 'Size of garden: Large garden'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S521",
+              "S188"
+            ],
+            "refs": [
+              "german_wirehaired_pointer.exercise.adult",
+              "german_wirehaired_pointer.suitability.pdsa_exercise"
+            ],
+            "quote": "S521 'More than 2 hours per day'; S188 'over 2 hours ideally per day'"
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S524"
+            ],
+            "refs": [
+              "german_wirehaired_pointer.exercise.mental"
+            ],
+            "quote": "S524 '… they do need lots of exercise and mental stimulation to be happy.'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S524"
+            ],
+            "refs": [
+              "german_wirehaired_pointer.behaviour.time_alone"
+            ],
+            "quote": "S524 '… your GWP should never be left alone for long periods.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S521"
+            ],
+            "refs": [
+              "german_wirehaired_pointer.suitability.rkc_shedding"
+            ],
+            "quote": "S521 'Sheds: Yes'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S524"
+            ],
+            "refs": [
+              "german_wirehaired_pointer.behaviour.other_pets"
+            ],
+            "quote": "S524 '… this dog has a high prey drive due to their history as hunters'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "No rating; PetMD asks for supervised interactions (S524).",
+          "first_time_owner": "No source; AKC: 'can be challenging for new dog owners' (S525).",
+          "experienced_owner": "AKC (S525) 'challenging for new dog owners or inexperienced trainers' — the chip's wording ('powerful dog') does not match the source; open for David.",
+          "apartment": "RKC 'Large house' (S521).",
+          "other_pets": "PetMD: may not live well with cats or other small animals (S524).",
+          "often_alone": "PetMD: never left alone for long periods (S524).",
+          "older_owners": "No source.",
+          "low_shedding": "RKC 'Sheds: Yes' (S521).",
+          "frequent_grooming": "RKC 'More than once a week' vs PDSA 'once or twice a week' — not clearly more than once (Brittany precedent); open for David.",
+          "food_motivated_weight": "No breed-specific statement.",
+          "chews_when_bored": "No source.",
+          "secure_fencing": "No source (AKC 'do well with a fenced yard' is not a fencing need).",
+          "shorter_lifespan": "RKC 'Over 10 years' (S521).",
+          "welfare": "RKC Breed Watch Category 1 (S521) → no welfare chip; PDSA's potential problems (hip dysplasia, GDV, entropion, atopy …) stay in research."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family (RKC S521, PDSA S188), family_pet, children (PetMD S524), large_home (RKC S521); consider long_daily_exercise (RKC S521, PDSA S188), needs_mental_stimulation, needs_company (PetMD S524), sheds (RKC S521), chases_small_pets (PetMD S524 high prey drive, David 2026-10-12)"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S521",
+        "quote": "Category 1",
+        "confidence": "medium",
+        "notes": "RKC Breed Watch Category 1 (S521; no breed-specific points of concern — paraphrase); no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). Marketing never promises health; never shows a docked tail as a goal.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (not a welfare breed)"
+      },
+      "ai_appearance": {
+        "value": "adult German Wirehaired Pointer, liver roan coat with solid liver patches and a liver head, harsh wiry flat-lying coat with a beard and bushy eyebrows, medium-sized high-set ears, hazel to dark brown eyes, liver nose, long strong muzzle, athletic medium-large body slightly longer than tall, natural undocked tail reaching to the hocks",
+        "unit": "—",
+        "source_id": "S522",
+        "quote": "Liver and white, solid liver, black and white. Solid black and tricoloured highly undesirable.",
+        "confidence": "high",
+        "notes": "Colours from the RKC / FCI / AKC standards (S522, S520, S523) — only those all three accept; never solid black or tricolour. Weights unsourced. Natural undocked tail (RKC S522 undocked description).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): liver roan with liver patches is the portrait default; natural undocked tail"
       }
     }
   }

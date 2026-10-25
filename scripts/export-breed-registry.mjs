@@ -438,6 +438,7 @@ const SPECIES = [
       { id: 'bloodhound', synonyms: { en: ['St. Hubert Hound', 'Chien de Saint-Hubert', 'Sleuth Hound'], sl: ['pes svetega Huberta', 'pes sv. Huberta', 'chien de saint-hubert'] } },
       { id: 'akita', synonyms: { en: ['American Akita', 'Great Japanese Dog'], sl: ['ameriška akita', 'ameriska akita', 'akita'] } },
       { id: 'cardigan_welsh_corgi', synonyms: { en: ['Welsh Corgi (Cardigan)', 'Welsh Corgi Cardigan', 'Cardigan', 'Cardi', 'Corgi'], sl: ['welsh corgi', 'cardigan', 'korgi', 'valižanski korgi'] } },
+      { id: 'german_wirehaired_pointer', synonyms: { en: ['Deutsch Drahthaar', 'Drahthaar', 'German Wire-haired Pointing Dog', 'GWP'], sl: ['nemski ostrodlaki pticar', 'drahthaar', 'drahtar'] } },
     ],
   },
   {
@@ -1815,6 +1816,31 @@ const DOG_FACTS = {
       ['cataracts_lens_luxation', 'health.eyes'],
     ],
   },
+  // M5-R10-65. Height + weight = Royal Kennel Club standard (S522, per sex — the only standard with a weight; FCI S520
+  // heights not exported), lifespan = the RKC band 'Over 10 years' (S521; the McMillan 2024 table S123 could not be
+  // fetched, 13 y only via Wikipedia), exercise = RKC 'More than 2 hours per day' (S521), coat / grooming / shedding = RKC
+  // key facts (S521). FCI origin Germany (DE). Not exported: height.fci, adult_weight.pdsa / salt_category,
+  // lifespan.mcmillan_2024, lifespan.senior_from (derived), health.lymphoedema (research only, GSP precedent), the
+  // care need hand_stripping (no program period — David). Health keys as the German Shorthaired Pointer + hypothyroidism.
+  german_wirehaired_pointer: {
+    height: ['height.rkc_standard'],
+    weight: [['adult_weight.rkc_standard', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia_arthritis', 'health.hip_dysplasia'],
+      ['bloat_gdv', 'health.gdv'],
+      ['bleeding_disorder_vwd', 'health.von_willebrand'],
+      ['heart_muscle_disease', 'health.heart'],
+      ['itchy_skin_allergy', 'health.atopy'],
+      ['entropion_cherry_eye', 'health.eyes'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+    ],
+  },
 
 };
 
@@ -1852,6 +1878,7 @@ export const DOG_CARE_TASKS = {
   weimaraner: [['ear_cleaning', 1, 28, 'proposed_game_parameters.weimaraner.ear_care_bathing'], ['bath', 1, 28, 'weimaraner.suitability.petmd_grooming']],
   giant_schnauzer: [['ear_cleaning', 1, 7, 'proposed_game_parameters.giant_schnauzer.ear_checks']],
   akita: [['groomer_visit', 1, 84, 'proposed_game_parameters.akita.professional_grooming']],
+  german_wirehaired_pointer: [['ear_cleaning', 1, 28, 'proposed_game_parameters.german_wirehaired_pointer.ear_care']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -2352,6 +2379,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.cardigan_welsh_corgi.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.cardigan_welsh_corgi.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.cardigan_welsh_corgi.exercise_minutes_senior',
+  },
+  german_wirehaired_pointer: {
+    adult_minutes: ['proposed_game_parameters.german_wirehaired_pointer.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.german_wirehaired_pointer.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.german_wirehaired_pointer.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.german_wirehaired_pointer.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.german_wirehaired_pointer.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.german_wirehaired_pointer.exercise_minutes_senior',
   },
 
 };
