@@ -17,6 +17,15 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 - 💼 Investitorji: povratne informacije testerjev v enem dnevu v aplikaciji; brezplačni načrt zdaj jasno vodi k plačljivemu izzivu.
 - 🛠 Tehnično: `BreedListSheet` (Modal + `useSwipeToClose`), `soleOption` / `withValidOrigin` (`originAuto`), skupni `components/ui/RequiredLabel` (`FieldLabel`, `RequiredLegend`, `requiredA11yLabel`), `freeTrialText(species)`; vse samo JS (OTA). Na telefonu še ni preverjeno.
 
+## 2026-10-25 — Spletna stran zdaj pove resnico tudi, ko ima novo pasmo samo iPhone
+
+**Kaj:** petprep.si je za 40 pasem pisal »Kmalu v aplikaciji«, čeprav jih uporabniki iPhona že imajo (prišle so s posodobitvijo prek zraka — OTA). Zapis izdaje se je zgodil samo, ko sta posodobitev dobila **oba** sistema, Android pa od 21. 10. čaka na novo gradnjo v trgovini. David je odločil: pasma je »v aplikaciji«, ko jo ima **vsaj ena** platforma. Zapis smo popravili za nazaj (OTA 3.1.8, 25. 10.): vseh 67 pasem v registru je zdaj »V aplikaciji«. Spletna stran se odslej posodobi **sama** — vsako uro preveri izvoz registra, ga zgradi in objavi.
+**Zakaj je pomembno:** register je izložba izdelka; »Kmalu« pri 40 pasmah, ki so že na telefonih, je pomenilo, da smo javno kazali manj, kot imamo, in da je bil vsak izid odvisen od ročnega dela.
+- 📣 Omrežja: »67 pasem psov in mačk — vse že v aplikaciji (iPhone).«
+- 👩 Starši: na strani pasme »V aplikaciji« zdaj pomeni, da jo lahko izberete (na Androidu nekatere pasme pridejo z naslednjo posodobitvijo v trgovini).
+- 💼 Investitorji: od zapisa izdaje do spletne strani brez ročnega koraka (≤ 1 ura).
+- 🛠 Tehnično: `mobile-ota.sh` → `released=true` pri ≥ 1 platformi (+ `platforms`), `record-app-release.mjs` za nazaj na `340ff3b1`, GitHub Actions `registry-sync.yml` v repoju spletne strani (javni repo, brez skrivnosti; lint + build + tsc, nato commit + dispatch deploya).
+
 ## 2026-10-24 — Nega po pasmi tudi za obstoječe pse in potisno obvestilo za frizerja (M5-R14 – R20, Davidovi odgovori)
 
 **Kaj:** David je odgovoril na odprta vprašanja nege po pasmi. Otrokove mini-igre (zobje, gube, ušesa, kremplji) štejejo v oceno skrbi kot česanje (potrjeno, preverjeno s testom). Starši ob začetku vsakega obdobja dobijo **potisno obvestilo** za pasjega frizerja oz. kopanje (enkrat na obdobje, ponoči počaka do konca tihih ur, ne po potrditvi). **Obstoječi psi** teh pasem (26 pasem psov ima vsaj eno nalogo ali opozorilo o vročini) dobijo nego **od naslednje polnoči**, ko imajo vsi otroci, ki zanje skrbijo, in vsaj en starš novo različico aplikacije — aplikacija zdaj ob vsaki zahtevi pove, kaj zna. Nikoli za nazaj: prvo obdobje pričakuje le sorazmerni del (pri yorkshirskem terierju, vklopljenem sredi tedna, npr. 4 ščetkanja namesto 7). Kodrasti bišon ostane pri frizerju na 8 tednov (PDSA). Po neodvisnem pregledu (PR #377) je David odločil še: **prvi opomnik za frizerja oz. kopanje pride šele po prvem polnem obdobju** — pri bišonu 8 tednov po rojstvu ali po vklopu, ne takoj.

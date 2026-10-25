@@ -12,7 +12,7 @@
 | Oznaka | Pomen |
 |---|---|
 | ✅ **V aplikaciji** | zgrajeno, v `main`, na strežniku (`api.petprep.si`) oz. v kodi aplikacije. **Aplikacija še ni v trgovinah**; zadnji TestFlight (1.24.4) je starejši od večine funkcij iz 6. in 7. 10. |
-| 🚚 **Izdano / še ne izdano** | ✅ pomeni »zgrajeno v `main`«, ne »na telefonu uporabnikov«. Kaj uporabniki res imajo (pasme), piše `docs/research/app-release.json` (zadnja gradnja v trgovini ali OTA); register na spletu iz njega kaže »V aplikaciji« ali »Kmalu« (David 13. 10. 2026). Trenutno: v3.1.3 — boksar, pritlikavi šnavcer, shih tzu, nemška doga, pomeranec, bostonski terier, mali ameriški ovčar, čivava, angleški springer španjel, šetlandski ovčar, bretonski ptičar, ameriški koker španjel in belgijski ovčar malinois še niso izdani. |
+| 🚚 **Izdano / še ne izdano** | ✅ pomeni »zgrajeno v `main`«, ne »na telefonu uporabnikov«. Kaj uporabniki res imajo (pasme), piše `docs/research/app-release.json` (zadnja gradnja v trgovini ali produkcijski OTA); register na spletu iz njega kaže »V aplikaciji« ali »Kmalu« (David 13. 10. 2026). Izdaja šteje, ko jo ima **vsaj ena** platforma, iOS ali Android (David 25. 10. 2026). Spletna stran se posodobi sama (`registry-sync.yml` v repoju spletne strani, vsako uro). Trenutno: OTA 3.1.8 (iOS, 25. 10. 2026) — vseh 67 pasem v registru je »V aplikaciji« (na iOS); Android novejše pasme dobi z naslednjo produkcijsko gradnjo. |
 | 📱 **Preverjeno na telefonu** | David je to videl na pravem telefonu (TestFlight / ročni preizkus), kot piše v `HANDOFF.md` ali `BUILD_LOG.md` |
 | 🛠 **Samo strežnik** | strežnik zna, aplikacija tega še ne prikaže |
 | 🗓 **Načrt** | načrtovano v roadmapu (ID v stolpcu) |

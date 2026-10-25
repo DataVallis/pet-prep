@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "16f27ba5454191e5e6198f17edfae7686198ee5a8172ab9a178717edb4177b79"
+      "sha256": "ccdf1fbfdacda2749778cdadef3f2e7555137bd2cddff1ecb66e3944a28f0580"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -13234,7 +13234,7 @@
       "id": "boxer",
       "species": "dog",
       "order": 21,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Boxer",
         "sl": "Boksar"
@@ -13882,7 +13882,7 @@
       "id": "miniature_schnauzer",
       "species": "dog",
       "order": 22,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Miniature Schnauzer",
         "sl": "Pritlikavi šnavcer"
@@ -14424,7 +14424,7 @@
       "id": "shih_tzu",
       "species": "dog",
       "order": 23,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Shih Tzu",
         "sl": "Shih tzu"
@@ -14936,7 +14936,7 @@
       "id": "great_dane",
       "species": "dog",
       "order": 24,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Great Dane",
         "sl": "Nemška doga"
@@ -15576,7 +15576,7 @@
       "id": "pomeranian",
       "species": "dog",
       "order": 25,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Pomeranian",
         "sl": "Pomeranec"
@@ -16160,7 +16160,7 @@
       "id": "boston_terrier",
       "species": "dog",
       "order": 26,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Boston Terrier",
         "sl": "Bostonski terier"
@@ -16683,7 +16683,7 @@
       "id": "miniature_american_shepherd",
       "species": "dog",
       "order": 27,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Miniature American Shepherd",
         "sl": "Mali ameriški ovčar"
@@ -17210,7 +17210,7 @@
       "id": "chihuahua",
       "species": "dog",
       "order": 28,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Chihuahua",
         "sl": "Čivava"
@@ -17806,7 +17806,7 @@
       "id": "english_springer_spaniel",
       "species": "dog",
       "order": 29,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "English Springer Spaniel",
         "sl": "Angleški springer španjel"
@@ -18443,7 +18443,7 @@
       "id": "shetland_sheepdog",
       "species": "dog",
       "order": 30,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Shetland Sheepdog",
         "sl": "Šetlandski ovčar"
@@ -19037,7 +19037,7 @@
       "id": "brittany",
       "species": "dog",
       "order": 31,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Brittany",
         "sl": "Bretonski ptičar"
@@ -19605,7 +19605,7 @@
       "id": "american_cocker_spaniel",
       "species": "dog",
       "order": 32,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "American Cocker Spaniel",
         "sl": "Ameriški koker španjel"
@@ -20213,7 +20213,7 @@
       "id": "belgian_malinois",
       "species": "dog",
       "order": 33,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Belgian Malinois",
         "sl": "Belgijski ovčar malinois"
@@ -20819,7 +20819,7 @@
       "id": "basset_hound",
       "species": "dog",
       "order": 34,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Basset Hound",
         "sl": "Baset"
@@ -21445,7 +21445,7 @@
       "id": "hungarian_vizsla",
       "species": "dog",
       "order": 35,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Hungarian Vizsla",
         "sl": "Madžarski kratkodlaki ptičar"
@@ -22083,7 +22083,7 @@
       "id": "english_cocker_spaniel",
       "species": "dog",
       "order": 36,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "English Cocker Spaniel",
         "sl": "Angleški koker španjel"
@@ -22772,7 +22772,7 @@
       "id": "maltese",
       "species": "dog",
       "order": 37,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Maltese",
         "sl": "Maltežan"
@@ -23332,7 +23332,7 @@
       "id": "pug",
       "species": "dog",
       "order": 38,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Pug",
         "sl": "Mops"
@@ -24021,7 +24021,7 @@
       "id": "rough_collie",
       "species": "dog",
       "order": 39,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Rough Collie",
         "sl": "Dolgodlaki škotski ovčar"
@@ -24631,7 +24631,7 @@
       "id": "mastiff",
       "species": "dog",
       "order": 40,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Mastiff",
         "sl": "Angleški mastif"
@@ -25208,7 +25208,7 @@
       "id": "shiba_inu",
       "species": "dog",
       "order": 41,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Shiba Inu",
         "sl": "Šiba inu"
@@ -25768,7 +25768,7 @@
       "id": "rhodesian_ridgeback",
       "species": "dog",
       "order": 42,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Rhodesian Ridgeback",
         "sl": "Rodezijski ridgeback"
@@ -26407,7 +26407,7 @@
       "id": "papillon",
       "species": "dog",
       "order": 43,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Papillon",
         "sl": "Papijon"
@@ -27057,7 +27057,7 @@
       "id": "portuguese_water_dog",
       "species": "dog",
       "order": 44,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Portuguese Water Dog",
         "sl": "Portugalski vodni pes"
@@ -27687,7 +27687,7 @@
       "id": "bichon_frise",
       "species": "dog",
       "order": 45,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Bichon Frise",
         "sl": "Kodrasti bišon"
@@ -28326,7 +28326,7 @@
       "id": "newfoundland",
       "species": "dog",
       "order": 46,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Newfoundland",
         "sl": "Novofundlandec"
@@ -28910,7 +28910,7 @@
       "id": "dalmatian",
       "species": "dog",
       "order": 47,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Dalmatian",
         "sl": "Dalmatinec"
@@ -29502,7 +29502,7 @@
       "id": "australian_cattle_dog",
       "species": "dog",
       "order": 48,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Australian Cattle Dog",
         "sl": "Avstralski govedar"
@@ -30119,7 +30119,7 @@
       "id": "whippet",
       "species": "dog",
       "order": 49,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Whippet",
         "sl": "Mali angleški hrt"
@@ -30655,7 +30655,7 @@
       "id": "wirehaired_pointing_griffon",
       "species": "dog",
       "order": 50,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Wirehaired Pointing Griffon",
         "sl": "Francoski ostrodlaki ptičar"
@@ -31216,7 +31216,7 @@
       "id": "chesapeake_bay_retriever",
       "species": "dog",
       "order": 51,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Chesapeake Bay Retriever",
         "sl": "Chesapeake Bay retriver"
@@ -31814,7 +31814,7 @@
       "id": "samoyed",
       "species": "dog",
       "order": 52,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Samoyed",
         "sl": "Samojed"
@@ -32425,7 +32425,7 @@
       "id": "scottish_terrier",
       "species": "dog",
       "order": 53,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Scottish Terrier",
         "sl": "Škotski terier"
@@ -32950,7 +32950,7 @@
       "id": "weimaraner",
       "species": "dog",
       "order": 54,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Weimaraner",
         "sl": "Weimarski ptičar"
@@ -33577,7 +33577,7 @@
       "id": "italian_greyhound",
       "species": "dog",
       "order": 55,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Italian Greyhound",
         "sl": "Mali italijanski hrt"
@@ -34119,7 +34119,7 @@
       "id": "giant_schnauzer",
       "species": "dog",
       "order": 56,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Giant Schnauzer",
         "sl": "Veliki šnavcer"
@@ -34792,7 +34792,7 @@
       "id": "bloodhound",
       "species": "dog",
       "order": 57,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Bloodhound",
         "sl": "Bloodhound"
@@ -35397,7 +35397,7 @@
       "id": "akita",
       "species": "dog",
       "order": 58,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Akita",
         "sl": "Ameriška akita"
@@ -35967,7 +35967,7 @@
       "id": "cardigan_welsh_corgi",
       "species": "dog",
       "order": 59,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Cardigan Welsh Corgi",
         "sl": "Welsh corgi cardigan"
@@ -36501,7 +36501,7 @@
       "id": "german_wirehaired_pointer",
       "species": "dog",
       "order": 60,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "German Wirehaired Pointer",
         "sl": "Nemški ostrodlaki ptičar"

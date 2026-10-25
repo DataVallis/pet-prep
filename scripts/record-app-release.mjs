@@ -12,7 +12,8 @@
  *
  * `--commit` = the commit the release was built from (default HEAD); the breed list is read from
  * that commit's mobile/src/modules/species/species.ts (BREED_SPECIES), the version from its
- * mobile/app.json unless `--version` is given. Record a release only when BOTH platforms have it.
+ * mobile/app.json unless `--version` is given. Record a release when at least ONE platform (iOS or
+ * Android) has it on production (David 2026-10-25 — before: both; Android had no OTA from 2026-10-21).
  */
 import { execFileSync } from 'node:child_process';
 import { writeFileSync } from 'node:fs';
