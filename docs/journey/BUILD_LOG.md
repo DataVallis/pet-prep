@@ -9,6 +9,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-25 — Pes je spet glavni: sporočila na vrh, spodaj samo gumbi
+
+**Kaj:** David je na iPhonu opazil, da kužka zaradi ikon skoraj ni videti: kartica »Kuža je pregriznil copat« z velikim gumbom, rdeče opozorilo »Pelji ven«, »Šola« / »Igra« in namigi so ležali čez sredino in spodnji del psa. Zdaj so vsa sporočila v ozkem stolpcu takoj pod imenom psa, levo od merilnikov; spodaj je samo vrstica gumbov Hrani / Voda / Pelji ven / Sprehod / Očisti. Najnujnejše je zgoraj, vidni sta največ dve kartici, ostalo odpre »+N več«.
+**Zakaj je pomembno:** PetPrep stoji na tem, da otrok skrbi za »živega« kužka — če ga ne vidi, je to samo seznam opravil.
+- 🧒 Otroci: tvoj kuža je zdaj viden cel; kaj moraš narediti, piše zgoraj pod njegovim imenom.
+- 👩 Starši: manj nereda na zaslonu, najpomembnejše opozorilo vedno prvo.
+- 🛠 Tehnično: `modules/hud/topStack.ts` (vrstni red po nujnosti, največ 2, »+N«), `BehaviourPanel` kot zgornji stolpec; samo JS (OTA). Na telefonu še ni preverjeno.
+
 ## 2026-10-25 — Izbirnik ljubljenčka po pripombah testerjev: seznam pasem v oknu, obvezna polja, pošten opis brezplačnega mešančka
 
 **Kaj:** Prvi testerji so pri »Dodaj otroka« naleteli na pet stvari, ki so isti dan v aplikaciji. »Pokaži vse pasme (59)« zdaj odpre **okno s celim seznamom in iskanjem** (zapre se z ×, potegom navzdol ali tipko nazaj; izbira pasme okno zapre) — prej se je seznam razprl v zaslon in je bilo treba neskončno drseti. Pri brezplačnem mešančku je »Posvojen (zavetišče)« edina možnost, zato je **izbrana sama**. Vsa obvezna polja imajo **zvezdico** in legendo »* obvezno polje« (tudi pri vzdevku otroka, certifikatu in brisanju). »Od kod pride« je postalo slovnično pravilno **»Od kod prihaja«**. Ko starš izbere brezplačni načrt, aplikacija prijazno pove, da je mešanček **omejen preizkus** — brez 12-tedenskega programa in certifikata, z zgodovino zadnjih 7 dni, samo posvojen, z osnovnimi videi (mirovanje, spanje) in brez nege po pasmi — ter povabi: »Za poln doživljaj izberite pasmo v 12-tedenskem izzivu.«

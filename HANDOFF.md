@@ -151,6 +151,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-10-25 (cloud, mobile) — child HUD: cards at the top so the dog is visible (`feat/pet-screen-cards-top`)
+- David: every HUD card / message (take-out clock, mess card + smaller »Pospravi in daj igračo«, notes, invitation, »Šola« / »Igra« / care chips, meals, toast, stale / updating banners, birthday hat) now sits in one stack `hud-top-stack` under the header, left of the metric column (`METRICS_RESERVED_RIGHT`; meters unchanged); only the dock is at the bottom. Order + bounding in pure `modules/hud/topStack.ts` (`STACK_PRIORITY`, ≤ 2 cards, rest behind »+N več« / »Manj«; chips always visible); `BehaviourPanel` props `cards` / `chips` replace `footer` / `bottom` / `right`; `layout.stackMaxHeight` keeps it above the dock. JS only (OTA). **Debt:** not yet checked on a phone (iPhone SE + Android, large fonts with the stack expanded may clip — `overflow: hidden` at `stackMaxHeight`); `layout.aboveDock` is now unused by the HUD.
+
 ### 2026-10-25 (cloud, mobile) — add-child picker tester feedback (`fix/add-child-picker-feedback`)
 - »Pokaži vse pasme« → bottom sheet `BreedListSheet` (own search, × / swipe / backdrop / back, pick closes); sole required option preselected (`soleOption`, `withValidOrigin` + `originAuto`: free mutt / domestic cat → adopted, cleared again on a paid breed); shared required marker `components/ui/RequiredLabel` (picker, add-child nickname, certificate names, deletion form); »Od kod prihaja«; free-plan »omejen preizkus« notice (`freeTrialText`, code-verified limits only). JS only (OTA). **Debt:** login / signup / single-field cards (join family, log walk, pet name, quiet hours) have no asterisks (all fields required, no visible labels); the sheet's swipe works on its header only (the list scrolls). Not verified on a device.
 

@@ -11,6 +11,10 @@
  * dock; an open accident / chewed slipper shows its scene (premium video, else an in-app
  * graphic) — an accident is cleaned with the cleaning game (puddles), a slipper with
  * "Pospravi in daj igračo", never by scrubbing.
+ * David 2026-10-25 »pes mora biti viden«: every card / chip / note / toast below sits in ONE compact
+ * stack directly under the header, left of the metric column (`hud-top-stack`; order and the "+N"
+ * overflow in `modules/hud/topStack.ts`) — only the action dock stays at the bottom, the dog's
+ * centre and lower half stay free. "Above the dock" in the notes below now means "in the top stack".
  * M5-R03: a pet with training gets a "Šola" chip above the dock (amber dot while today's
  * session is open) that opens the training mini-game (`modules/training/TrainingOverlay`).
  * M5-R04: "Obroki danes" chip row above the dock (today's windows, ✓, now, "nahrani starš")
@@ -113,11 +117,12 @@ import {
   onlyChewingOpen,
   takeOutCountdown,
 } from '@/modules/behaviour/behaviour';
-import BehaviourPanel from '@/components/BehaviourPanel';
+import BehaviourPanel, { type StackCard } from '@/components/BehaviourPanel';
 import MealWindowsRow from '@/components/MealWindowsRow';
 import { buildMealWindows } from '@/modules/childPet/mealWindows';
 import { lockStateFromView, normalizeChildState, type CareAction, type ChildPetView } from '@/modules/childPet/childPetView';
 import { computeHudLayout, METRICS_RESERVED_RIGHT, METRICS_RIGHT, type HudLayout } from '@/modules/hud/hudLayout';
+import { STACK_PRIORITY } from '@/modules/hud/topStack';
 import { WS_BADGE_STRINGS, wsBadge } from '@/modules/hud/wsBadge';
 import { formatSteps } from '@/modules/steps/stepCounter';
 import { useStepSync } from '@/modules/steps/useStepSync';
@@ -735,6 +740,49 @@ export default function ChildHudScreen() {
   const moodScene = moodSceneAt(view, playNow);
   // The free tier has no `playing` video: the usual one plays and the app draws hearts.
   const showHearts = moodScene !== null && hudVideoState !== 'playing' && !coveredByOverlay;
+  // David 2026-10-25: the stack's cards besides the countdown / scene / notice / meals (BehaviourPanel adds those).
+  const playBlockedShown =
+    entry.kind === 'button' && entry.block !== null && !(sleepNote !== undefined && entry.block === 'sleeping');
+  const stackCards: StackCard[] = [
+    ...(firstAid ? [{ key: 'first-aid', priority: STACK_PRIORITY.firstAid, node: <FirstAidNote /> }] : []),
+    ...(entry.kind === 'invitation'
+      ? [
+          {
+            key: 'invitation',
+            priority: STACK_PRIORITY.invitation,
+            node: (
+              <PlayInvitationCard
+                invitation={entry.invitation}
+                onAccept={(kind) => setPlayOverlay(kind)}
+                onDismiss={dismissInvitation}
+                reduceMotion={reduceMotion}
+              />
+            ),
+          },
+        ]
+      : []),
+    ...(digestion !== null ? [{ key: 'digestion', priority: STACK_PRIORITY.advice, node: <DigestionNote note={digestion} /> }] : []),
+    ...(heat ? [{ key: 'heat', priority: STACK_PRIORITY.advice, node: <HeatNote /> }] : []),
+    ...(sleepNote !== undefined
+      ? [{ key: 'sleep', priority: STACK_PRIORITY.hint, node: <PlayBlockedNote text={sleepNote} testID="hud-sleep-note" /> }]
+      : []),
+    ...(playBlockedShown && entry.kind === 'button' && entry.block !== null
+      ? [
+          {
+            key: 'play-blocked',
+            priority: STACK_PRIORITY.hint,
+            node: <PlayBlockedNote text={playBlockText(entry.block, playSleepsUntil, view.timezone, playNow)} />,
+          },
+        ]
+      : []),
+    ...chipNotes.map((note) => ({
+      key: `cat-note-${note.kind}`,
+      priority: STACK_PRIORITY.hint,
+      node: <CatHudNote text={note.text} testID={`hud-cat-note-${note.kind}`} />,
+    })),
+    ...(moodScene !== null ? [{ key: 'happy', priority: STACK_PRIORITY.happy, node: <HappyBadge /> }] : []),
+    ...(factChip ? [{ key: 'fact', priority: STACK_PRIORITY.fact, node: <FactChip onPress={facts.openChip} /> }] : []),
+  ];
   // Android: TalkBack must not reach the HUD under the album / training game (iOS: accessibilityViewIsModal).
   const hiddenUnderAlbum = showAlbum || showTraining || showPlay || showCatGame || showGuide || preparingNow
     ? ({ importantForAccessibility: 'no-hide-descendants', accessibilityElementsHidden: true } as const)
@@ -787,12 +835,6 @@ export default function ChildHudScreen() {
         />
 
         {showHearts && <HeartsLayer reduceMotion={reduceMotion} />}
-        {/* M5-T13: the party hat over the pet on its first birthday (drawn, no AI media). */}
-        {birthdayToday && !coveredByOverlay && (
-          <View pointerEvents="box-none" style={[styles.birthdayHatSlot, { top: layout.metricsTop }]}>
-            <BirthdayHat onPress={birthdayCard.open} reduceMotion={reduceMotion} />
-          </View>
-        )}
 
         {/* Glassmorphism top status bar */}
         <View style={[styles.topBar, { top: layout.headerTop }]} onLayout={onHeaderLayout} testID="hud-header">
@@ -885,72 +927,6 @@ export default function ChildHudScreen() {
             <ParentalGate {...childExit.gateProps} />
           </View>
         </View>
-
-        {serverUpdating && (
-          <ServerUpdatingBanner tone="dark" style={[styles.bannerSlot, { top: layout.bannerTop }]} testID="hud-server-updating" />
-        )}
-        {stale && (
-          // Left of the metric column (PR #30 review): never covers the bars.
-          <View pointerEvents="none" style={[styles.bannerSlot, { top: layout.bannerTop }]} testID="hud-stale-slot">
-            <View style={styles.staleBanner} testID="hud-stale">
-              <WifiOff color={palette.warnDark} size={14} />
-              <Text style={styles.staleText}>{HUD_STRINGS.stale}</Text>
-            </View>
-          </View>
-        )}
-
-        {/* Feedback messages (M5-T03 queue): one at a time, a tap closes it and the next follows.
-            An accepted care is a ✓ confirmation with a "next time" line (M5-T01). */}
-        {toast && (
-          <View pointerEvents="box-none" style={[styles.bannerSlot, styles.toastSlot, { top: layout.bannerTop + 40 }]} testID="hud-toast-slot">
-            <View key={toast.id} pointerEvents="box-none" style={styles.feedbackWrap}>
-              <Pressable
-                onPress={messages.dismiss}
-                accessibilityRole="button"
-                accessibilityLabel={toast.next ? `${toast.message} ${toast.next}` : toast.message}
-                accessibilityHint={HUD_STRINGS.toastDismissHint}
-                accessibilityLiveRegion="polite"
-                style={[
-                  styles.feedbackToast,
-                  toast.tone === 'info' && styles.feedbackToastInfo,
-                  toast.confirm === true && styles.feedbackConfirm,
-                  styles.feedbackWithClose,
-                ]}
-                testID="hud-toast"
-              >
-                {toast.confirm === true ? (
-                  <View style={styles.feedbackConfirmBody} testID="hud-toast-confirm">
-                    <View style={styles.feedbackConfirmRow}>
-                      <View style={styles.feedbackCheck}>
-                        <Check color={palette.mint} size={14} />
-                      </View>
-                      <Text style={[styles.feedbackText, styles.feedbackConfirmText]}>{toast.message}</Text>
-                    </View>
-                    {toast.next ? (
-                      <Text style={styles.feedbackNext} testID="hud-toast-next">
-                        {toast.next}
-                      </Text>
-                    ) : null}
-                  </View>
-                ) : (
-                  <Text style={styles.feedbackText}>{toast.message}</Text>
-                )}
-              </Pressable>
-              {/* Visible "×" (David 2026-10-21): a sibling of the message, so screen readers reach it; 44 pt hit area. */}
-              <Pressable
-                onPress={messages.dismiss}
-                accessibilityRole="button"
-                accessibilityLabel={HUD_STRINGS.toastClose}
-                style={styles.feedbackClose}
-                testID="hud-toast-close"
-              >
-                <View style={styles.feedbackCloseIcon}>
-                  <X color={palette.graphite} size={14} strokeWidth={2.5} />
-                </View>
-              </Pressable>
-            </View>
-          </View>
-        )}
 
         {/* Right-edge vertical progress sliders — sized to fit between header and dock */}
         {layout.metric.variant !== 'hidden' && (
@@ -1106,114 +1082,163 @@ export default function ChildHudScreen() {
           })}
         </View>
 
-        {/* M5-R02: puppy countdown and the scene of an open accident / chewed slipper, above the dock */}
-        {!locked && (
-          <BehaviourPanel
-            behaviour={view.behaviour}
-            countdown={countdown}
-            reduceMotion={reduceMotion}
-            videoState={hudVideoState}
-            onResolveChewing={() => runAction('resolve_chewing')}
-            resolveBusy={resolveChewing.isPending}
-            bottom={layout.aboveDock}
-            right={METRICS_RESERVED_RIGHT}
-            notice={mediaPending ? <MediaPendingNotice testID="hud-pet-media-pending" /> : null}
-            scratcher={
-              scratcherShown
-                ? {
-                    label: CAT_HUD_STRINGS.scratcher,
-                    a11y: CAT_HUD_STRINGS.scratcherA11y,
-                    // Locked never reaches here; off while the server refuses a carry (another
-                    // child's game) unless it is this child's own running carry (resumable).
-                    disabled: view.cat.scratching !== null && !view.cat.scratching.can_start && view.cat.scratching.session === null,
-                    onPress: () => openCat('scratching'),
-                  }
-                : null
-            }
-            footer={
-              hasTraining || entry.kind !== 'hidden' || moodScene !== null || chips.length > 0 || careTaskChips.length > 0 || socialisationChip || firstAid || digestion !== null || heat || factChip ? (
-                <>
-                  {factChip && (
-                    <View style={styles.chipRow}>
-                      <FactChip onPress={facts.openChip} />
+        {/* David 2026-10-25 »pes mora biti viden«: every message card sits in one compact stack under
+            the header, left of the metric column (modules/hud/topStack: most urgent first, ≤ 2 cards,
+            the rest behind "+N"); the dog's centre / lower half stays free, only the dock is at the bottom. */}
+        <View
+          pointerEvents="box-none"
+          style={[styles.topStack, { top: layout.bannerTop, maxHeight: layout.stackMaxHeight }]}
+          testID="hud-top-stack"
+        >
+          {serverUpdating && (
+            <ServerUpdatingBanner tone="dark" style={styles.stackBanner} testID="hud-server-updating" />
+          )}
+          {stale && (
+            // In the top stack, left of the metric column (PR #30 review): never covers the bars.
+            <View pointerEvents="none" style={styles.stackBanner} testID="hud-stale-slot">
+              <View style={styles.staleBanner} testID="hud-stale">
+                <WifiOff color={palette.warnDark} size={14} />
+                <Text style={styles.staleText}>{HUD_STRINGS.stale}</Text>
+              </View>
+            </View>
+          )}
+
+          {/* Feedback messages (M5-T03 queue): one at a time, a tap closes it and the next follows.
+              An accepted care is a ✓ confirmation with a "next time" line (M5-T01). Top of the stack,
+              so it pushes the cards down for a moment instead of covering them. */}
+          {toast && (
+            <View pointerEvents="box-none" style={styles.stackBanner} testID="hud-toast-slot">
+              <View key={toast.id} pointerEvents="box-none" style={styles.feedbackWrap}>
+                <Pressable
+                  onPress={messages.dismiss}
+                  accessibilityRole="button"
+                  accessibilityLabel={toast.next ? `${toast.message} ${toast.next}` : toast.message}
+                  accessibilityHint={HUD_STRINGS.toastDismissHint}
+                  accessibilityLiveRegion="polite"
+                  style={[
+                    styles.feedbackToast,
+                    toast.tone === 'info' && styles.feedbackToastInfo,
+                    toast.confirm === true && styles.feedbackConfirm,
+                    styles.feedbackWithClose,
+                  ]}
+                  testID="hud-toast"
+                >
+                  {toast.confirm === true ? (
+                    <View style={styles.feedbackConfirmBody} testID="hud-toast-confirm">
+                      <View style={styles.feedbackConfirmRow}>
+                        <View style={styles.feedbackCheck}>
+                          <Check color={palette.mint} size={14} />
+                        </View>
+                        <Text style={[styles.feedbackText, styles.feedbackConfirmText]}>{toast.message}</Text>
+                      </View>
+                      {toast.next ? (
+                        <Text style={styles.feedbackNext} testID="hud-toast-next">
+                          {toast.next}
+                        </Text>
+                      ) : null}
                     </View>
+                  ) : (
+                    <Text style={styles.feedbackText}>{toast.message}</Text>
                   )}
-                  {firstAid && <FirstAidNote />}
-                  {digestion !== null && <DigestionNote note={digestion} />}
-                  {heat && <HeatNote />}
-                  {moodScene !== null && <HappyBadge />}
-                  {entry.kind === 'invitation' && (
-                    <PlayInvitationCard
-                      invitation={entry.invitation}
-                      onAccept={(kind) => setPlayOverlay(kind)}
-                      onDismiss={dismissInvitation}
-                      reduceMotion={reduceMotion}
-                    />
-                  )}
-                  {(hasTraining || entry.kind === 'button' || chips.length > 0 || careTaskChips.length > 0 || socialisationChip) && (
-                    <View style={styles.chipRow}>
-                      {hasTraining && (
-                        <TrainingChip
-                          todayDone={view.training.today_done}
-                          pending={!trainingSleeps && showTrainingDot(view.training)}
-                          disabled={trainingSleeps}
-                          disabledReason={trainingSleeps ? rules.training.text : undefined}
-                          onPress={() => setTrainingVisible(true)} />
-                      )}
-                      {chips.map((chip) => (
-                        <CatHudChip
-                          key={chip.kind}
-                          chip={chip}
-                          disabled={chip.kind === 'grooming' && groomingSleeps}
-                          disabledReason={chip.kind === 'grooming' && groomingSleeps ? rules.grooming.text : undefined}
-                          onPress={() => openCat(chip.kind)}
+                </Pressable>
+                {/* Visible "×" (David 2026-10-21): a sibling of the message, so screen readers reach it; 44 pt hit area. */}
+                <Pressable
+                  onPress={messages.dismiss}
+                  accessibilityRole="button"
+                  accessibilityLabel={HUD_STRINGS.toastClose}
+                  style={styles.feedbackClose}
+                  testID="hud-toast-close"
+                >
+                  <View style={styles.feedbackCloseIcon}>
+                    <X color={palette.graphite} size={14} strokeWidth={2.5} />
+                  </View>
+                </Pressable>
+              </View>
+            </View>
+          )}
+
+          {/* M5-R02: puppy countdown and the scene of an open accident / chewed slipper. */}
+          {!locked && (
+            <BehaviourPanel
+              behaviour={view.behaviour}
+              countdown={countdown}
+              reduceMotion={reduceMotion}
+              videoState={hudVideoState}
+              onResolveChewing={() => runAction('resolve_chewing')}
+              resolveBusy={resolveChewing.isPending}
+              notice={mediaPending ? <MediaPendingNotice testID="hud-pet-media-pending" /> : null}
+              scratcher={
+                scratcherShown
+                  ? {
+                      label: CAT_HUD_STRINGS.scratcher,
+                      a11y: CAT_HUD_STRINGS.scratcherA11y,
+                      // Locked never reaches here; off while the server refuses a carry (another
+                      // child's game) unless it is this child's own running carry (resumable).
+                      disabled: view.cat.scratching !== null && !view.cat.scratching.can_start && view.cat.scratching.session === null,
+                      onPress: () => openCat('scratching'),
+                    }
+                  : null
+              }
+              cards={stackCards}
+              chips={
+                hasTraining || entry.kind === 'button' || chips.length > 0 || careTaskChips.length > 0 || socialisationChip ? (
+                  <View style={styles.chipRow} testID="hud-chip-row">
+                    {hasTraining && (
+                      <TrainingChip
+                        todayDone={view.training.today_done}
+                        pending={!trainingSleeps && showTrainingDot(view.training)}
+                        disabled={trainingSleeps}
+                        disabledReason={trainingSleeps ? rules.training.text : undefined}
+                        onPress={() => setTrainingVisible(true)} />
+                    )}
+                    {chips.map((chip) => (
+                      <CatHudChip
+                        key={chip.kind}
+                        chip={chip}
+                        disabled={chip.kind === 'grooming' && groomingSleeps}
+                        disabledReason={chip.kind === 'grooming' && groomingSleeps ? rules.grooming.text : undefined}
+                        onPress={() => openCat(chip.kind)}
+                      />
+                    ))}
+                    {careTaskChips.map((task) => {
+                      const sleeps = rules[task.task].reason === 'sleeping';
+                      return (
+                        <CareTaskChip
+                          key={task.task}
+                          task={task}
+                          disabled={sleeps}
+                          disabledReason={sleeps ? rules[task.task].text : undefined}
+                          onPress={() => openCareTask(task.task)}
                         />
+                      );
+                    })}
+                    {socialisationChip && view.socialisation !== null && (
+                      <SocialisationChip pending={view.socialisation.can_record} onPress={() => setSocialisationVisible(true)} />
+                    )}
+                    {entry.kind === 'button' &&
+                      (cat ? (
+                        // A cat only cuddles (CAT_SPEC §5.5): straight to the cuddle, no ball.
+                        <PlayChip
+                          block={entry.block}
+                          label={CAT_HUD_STRINGS.chips.cuddle}
+                          accessibilityLabel={CAT_HUD_STRINGS.chips.cuddleA11y}
+                          onPress={() => setPlayOverlay('cuddle')}
+                        />
+                      ) : (
+                        <PlayChip block={entry.block} onPress={() => setPlayOverlay('pick')} />
                       ))}
-                      {careTaskChips.map((task) => {
-                        const sleeps = rules[task.task].reason === 'sleeping';
-                        return (
-                          <CareTaskChip
-                            key={task.task}
-                            task={task}
-                            disabled={sleeps}
-                            disabledReason={sleeps ? rules[task.task].text : undefined}
-                            onPress={() => openCareTask(task.task)}
-                          />
-                        );
-                      })}
-                      {socialisationChip && view.socialisation !== null && (
-                        <SocialisationChip pending={view.socialisation.can_record} onPress={() => setSocialisationVisible(true)} />
-                      )}
-                      {entry.kind === 'button' &&
-                        (cat ? (
-                          // A cat only cuddles (CAT_SPEC §5.5): straight to the cuddle, no ball.
-                          <PlayChip
-                            block={entry.block}
-                            label={CAT_HUD_STRINGS.chips.cuddle}
-                            accessibilityLabel={CAT_HUD_STRINGS.chips.cuddleA11y}
-                            onPress={() => setPlayOverlay('cuddle')}
-                          />
-                        ) : (
-                          <PlayChip block={entry.block} onPress={() => setPlayOverlay('pick')} />
-                        ))}
-                    </View>
-                  )}
-                  {chipNotes.map((note) => (
-                    <CatHudNote key={note.kind} text={note.text} testID={`hud-cat-note-${note.kind}`} />
-                  ))}
-                  {sleepNote !== undefined && <PlayBlockedNote text={sleepNote} testID="hud-sleep-note" />}
-                  {entry.kind === 'button' && entry.block !== null && !(sleepNote !== undefined && entry.block === 'sleeping') && (
-                    <PlayBlockedNote text={playBlockText(entry.block, playSleepsUntil, view.timezone, playNow)} />
-                  )}
-                </>
-              ) : null
-            }
-            // Hidden by the panel while a scene card is open; one line on smaller screens.
-            meals={
-              mealWindows.length > 0 ? <MealWindowsRow items={mealWindows} compact={layout.metric.variant !== 'regular'} /> : null
-            }
-          />
-        )}
+                  </View>
+                ) : null
+              }
+              // Hidden by the panel while a scene card is open; one line on smaller screens.
+              meals={
+                mealWindows.length > 0 ? <MealWindowsRow items={mealWindows} compact={layout.metric.variant !== 'regular'} /> : null
+              }
+            />
+          )}
+          {/* M5-T13: the party hat on the pet's first birthday (drawn, no AI media), under the stack. */}
+          {birthdayToday && !coveredByOverlay && <BirthdayHat onPress={birthdayCard.open} reduceMotion={reduceMotion} />}
+        </View>
 
         {/* Conditional overlays (the lock overlay is rendered by AppNavigator above this screen) */}
         {isWalkModalVisible && !locked && !cat && (
@@ -1514,21 +1539,22 @@ const styles = StyleSheet.create({
   },
   /** M2-01d: the finished challenge — the one solid mint badge in the header. */
   certificateButton: { backgroundColor: palette.mint, borderRadius: 17 },
-  /** Row between the screen's left edge and the metric column; centres its pill. */
-  bannerSlot: {
+  /**
+   * David 2026-10-25: the top stack — under the header, between the screen's left edge and the
+   * metric column (never over the bars); toast, banners and cards in one column, left-aligned.
+   */
+  topStack: {
     position: 'absolute',
     left: 16,
     right: METRICS_RESERVED_RIGHT,
     zIndex: 25,
-    alignItems: 'center',
+    alignItems: 'flex-start',
+    gap: 6,
+    overflow: 'hidden',
   },
-  toastSlot: {
-    zIndex: 30,
-  },
-  birthdayHatSlot: {
-    position: 'absolute',
-    left: 20,
-    zIndex: 21,
+  /** A banner / the toast inside the top stack (as wide as its text, at most the column). */
+  stackBanner: {
+    maxWidth: '100%',
   },
   feedbackToast: {
     maxWidth: '100%',
@@ -1575,12 +1601,12 @@ const styles = StyleSheet.create({
   pressed: {
     opacity: 0.7,
   },
-  /** "Šola" + "Igra" side by side above the dock (M5-R05). */
+  /** "Šola" + "Igra" + breed care side by side under the stack's cards (M5-R05, David 2026-10-25). */
   chipRow: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'center',
-    gap: 8,
+    justifyContent: 'flex-start',
+    gap: 6,
   },
   centered: {
     alignItems: 'center',
