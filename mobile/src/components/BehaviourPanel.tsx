@@ -1,17 +1,19 @@
 /**
- * Behaviour panel of the child HUD (M5-R02), just above the action dock — near the dog:
+ * Behaviour panel = the child HUD's top stack (M5-R02; since David 2026-10-25 »pes mora biti
+ * viden« directly under the header, never over the dog's centre / lower half — only the action
+ * dock stays at the bottom). Order and bounding: `modules/hud/topStack` (most urgent first, at
+ * most 2 cards, the rest behind a "+N" pill; the chip row is always visible under the cards):
  * - the puppy's deadline (M5-T01: "Kuža mora ven v ~1 h 20 min." + "Pritisni »Pelji ven«, preden
  *   se čas izteče."), green → orange → red in the last 30 min — calm words, never an alarm;
  * - the scene of an open mess: the free-tier graphic (puddle / chewed slipper, drawn in
  *   `BehaviourGraphics`) unless the premium scene video is already on screen, a short kind
  *   caption, and for a chewed slipper the "Pospravi in daj igračo" button. An accident is
  *   cleaned with the existing cleaning game, so it has no button here.
- * Nothing renders for a legacy pet / older server (no clock, no events) unless a `footer`
- * (M5-R03 "Šola" chip) is passed — the chip then sits in the same column, nearest the dock.
- * M5-R04: `meals` ("Obroki danes") sits last, but only while no scene card is open — on a
- * small phone the scene card + meals + chip would crowd the dog.
- * M5-F06: `notice` ("Your pup is getting ready…" while the AI media is pending) sits on top
- * of the column, so it is stacked above the meals row and the dock instead of under them.
+ * Nothing renders for a legacy pet / older server (no clock, no events) unless `cards` or
+ * `chips` (M5-R03 "Šola" …) are passed.
+ * M5-R04: `meals` ("Obroki danes") is the least urgent card, and only while no scene card is open.
+ * M5-F06: `notice` ("Your pup is getting ready…" while the AI media is pending) is a card above
+ * the meals row.
  * M5-R06-08b: the cat's scratched sofa gets "Na praskalnik" (`scratcher`) — it opens the
  * scratching mini-game; cleaning never resolves it.
  */
@@ -19,7 +21,7 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { Animated, Pressable, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
-import { Cat, DoorOpen, ToyBrick } from 'lucide-react-native';
+import { Cat, ChevronDown, ChevronUp, DoorOpen, ToyBrick } from 'lucide-react-native';
 
 import { SceneGraphic } from '@/components/BehaviourGraphics';
 import {
@@ -31,6 +33,8 @@ import {
   type TakeOutLevel,
 } from '@/modules/behaviour/behaviour';
 import type { VideoState } from '@/modules/petMedia/petMedia';
+import { arrangeTopStack, STACK_PRIORITY, takeOutPriority, type StackEntry } from '@/modules/hud/topStack';
+import { t } from '@/i18n';
 import { alpha, palette } from '@/theme';
 
 export interface BehaviourPanelProps {
@@ -41,15 +45,13 @@ export interface BehaviourPanelProps {
   videoState: VideoState | null;
   onResolveChewing: () => void;
   resolveBusy: boolean;
-  /** `bottom` (HUD layout `aboveDock`). */
-  bottom: number;
-  /** Right edge kept free for the metric column. */
-  right: number;
-  /** Rendered after the countdown (M5-R03 "Šola" chip); the panel shows when only this is set. */
-  footer?: ReactNode;
-  /** M5-R04 "Obroki danes", closest to the dock; hidden while a scene card is open. */
+  /** More cards of the HUD (notes, invitation, …), sorted into the stack by `priority`. */
+  cards?: readonly StackCard[];
+  /** The chip row ("Šola", "Igra", breed care …): always visible under the cards. */
+  chips?: ReactNode;
+  /** M5-R04 "Obroki danes" (least urgent card); hidden while a scene card is open. */
   meals?: ReactNode;
-  /** M5-F06: a short notice at the top of the column (media "getting ready"); always shown. */
+  /** M5-F06: the media "getting ready" notice (a card above the meals row). */
   notice?: ReactNode;
   /**
    * M5-R06-08b: "Na praskalnik" on the scratched-sofa card (a cat with an open scratching);
@@ -58,6 +60,11 @@ export interface BehaviourPanelProps {
   scratcher?: { label: string; a11y: string; disabled: boolean; onPress: () => void } | null;
   /** System reduce motion: the clock resets without the short pop animation. */
   reduceMotion?: boolean;
+}
+
+/** One card of the top stack. */
+export interface StackCard extends StackEntry {
+  node: ReactNode;
 }
 
 /** M5-T01 clock colours: green (mint) → orange (warn) → red (danger) — dark-theme tokens. */
@@ -124,113 +131,178 @@ export default function BehaviourPanel({
   videoState,
   onResolveChewing,
   resolveBusy,
-  bottom,
-  right,
-  footer = null,
+  cards = [],
+  chips = null,
   meals = null,
   notice = null,
   scratcher = null,
   reduceMotion = false,
 }: BehaviourPanelProps) {
+  const [expanded, setExpanded] = useState(false);
   const scene = panelScene(behaviour);
   const chewing = hasOpenChewing(behaviour) || behaviour.can_resolve_chewing;
   // A slipper can be tidied up whatever scene is shown (e.g. a newer accident on top).
   const cardScene = scene ?? (chewing ? 'chewing' : scratcher !== null ? 'scratching' : null);
   const shownMeals = cardScene === null ? meals : null;
-  if (notice === null && countdown === null && cardScene === null && footer === null && shownMeals === null) return null;
-
   const resolveDisabled = !behaviour.can_resolve_chewing || resolveBusy;
 
-  return (
-    <View pointerEvents="box-none" style={[styles.slot, { bottom, right }]} testID="hud-behaviour">
-      {notice}
-      {cardScene !== null && (
+  const entries: StackCard[] = [];
+  if (countdown !== null) {
+    entries.push({
+      key: 'take-out',
+      priority: takeOutPriority(countdown.level),
+      node: <TakeOutClockPill countdown={countdown} resetKey={behaviour.take_out?.clock_started_at ?? null} reduceMotion={reduceMotion} />,
+    });
+  }
+  if (cardScene !== null) {
+    entries.push({
+      key: 'scene',
+      priority: STACK_PRIORITY.scene,
+      node: (
         <View style={styles.sceneCard} testID={`hud-scene-${cardScene}`}>
           {videoState !== cardScene && (
             <View accessible accessibilityRole="image" accessibilityLabel={BEHAVIOUR_STRINGS.sceneA11y[cardScene]}>
-              <SceneGraphic scene={cardScene} size={84} />
+              <SceneGraphic scene={cardScene} size={44} />
             </View>
           )}
-          <Text style={styles.sceneText}>{BEHAVIOUR_STRINGS.scene[cardScene]}</Text>
-          {chewing && (
-            <Pressable
-              testID="action-resolve-chewing"
-              accessibilityRole="button"
-              accessibilityState={{ disabled: resolveDisabled, busy: resolveBusy }}
-              disabled={resolveDisabled}
-              onPress={onResolveChewing}
-              style={({ pressed }) => [
-                styles.resolveButton,
-                resolveDisabled && styles.resolveDisabled,
-                pressed && !resolveDisabled && styles.pressed,
-              ]}
-            >
-              <ToyBrick color={palette.graphite} size={16} />
-              <Text style={styles.resolveText}>{BEHAVIOUR_STRINGS.resolveChewing}</Text>
-            </Pressable>
-          )}
-          {scratcher !== null && (
-            <Pressable
-              testID="action-scratcher"
-              accessibilityRole="button"
-              accessibilityLabel={scratcher.a11y}
-              accessibilityState={{ disabled: scratcher.disabled }}
-              disabled={scratcher.disabled}
-              onPress={scratcher.onPress}
-              style={({ pressed }) => [
-                styles.resolveButton,
-                scratcher.disabled && styles.resolveDisabled,
-                pressed && !scratcher.disabled && styles.pressed,
-              ]}
-            >
-              <Cat color={palette.graphite} size={16} />
-              <Text style={styles.resolveText}>{scratcher.label}</Text>
-            </Pressable>
-          )}
+          <View style={styles.sceneBody}>
+            <Text style={styles.sceneText} numberOfLines={2} maxFontSizeMultiplier={1.4}>
+              {BEHAVIOUR_STRINGS.scene[cardScene]}
+            </Text>
+            {chewing && (
+              <Pressable
+                testID="action-resolve-chewing"
+                accessibilityRole="button"
+                accessibilityState={{ disabled: resolveDisabled, busy: resolveBusy }}
+                disabled={resolveDisabled}
+                onPress={onResolveChewing}
+                hitSlop={6}
+                style={({ pressed }) => [
+                  styles.resolveButton,
+                  resolveDisabled && styles.resolveDisabled,
+                  pressed && !resolveDisabled && styles.pressed,
+                ]}
+              >
+                <ToyBrick color={palette.graphite} size={14} />
+                <Text style={styles.resolveText} numberOfLines={1} maxFontSizeMultiplier={1.3}>
+                  {BEHAVIOUR_STRINGS.resolveChewing}
+                </Text>
+              </Pressable>
+            )}
+            {scratcher !== null && (
+              <Pressable
+                testID="action-scratcher"
+                accessibilityRole="button"
+                accessibilityLabel={scratcher.a11y}
+                accessibilityState={{ disabled: scratcher.disabled }}
+                disabled={scratcher.disabled}
+                onPress={scratcher.onPress}
+                hitSlop={6}
+                style={({ pressed }) => [
+                  styles.resolveButton,
+                  scratcher.disabled && styles.resolveDisabled,
+                  pressed && !scratcher.disabled && styles.pressed,
+                ]}
+              >
+                <Cat color={palette.graphite} size={14} />
+                <Text style={styles.resolveText} numberOfLines={1} maxFontSizeMultiplier={1.3}>
+                  {scratcher.label}
+                </Text>
+              </Pressable>
+            )}
+          </View>
         </View>
+      ),
+    });
+  }
+  if (notice !== null) entries.push({ key: 'notice', priority: STACK_PRIORITY.notice, node: notice });
+  entries.push(...cards);
+  if (shownMeals !== null) entries.push({ key: 'meals', priority: STACK_PRIORITY.meals, node: shownMeals });
+
+  const stack = arrangeTopStack(entries, expanded);
+  // Nothing more to expand → the next overflow starts collapsed again.
+  useEffect(() => {
+    if (!stack.collapsible && expanded) setExpanded(false);
+  }, [stack.collapsible, expanded]);
+
+  if (entries.length === 0 && chips === null) return null;
+
+  return (
+    <View pointerEvents="box-none" style={styles.stack} testID="hud-behaviour">
+      {stack.visible.map((card) => (
+        <View key={card.key} pointerEvents="box-none" style={styles.cardSlot}>
+          {card.node}
+        </View>
+      ))}
+      {stack.collapsible && (
+        <Pressable
+          testID={expanded ? 'hud-top-stack-less' : 'hud-top-stack-more'}
+          accessibilityRole="button"
+          accessibilityLabel={
+            expanded ? t('child:hud.topStack.lessA11y') : t('child:hud.topStack.moreA11y', { count: stack.hiddenCount })
+          }
+          accessibilityState={{ expanded }}
+          hitSlop={10}
+          onPress={() => setExpanded((v) => !v)}
+          style={({ pressed }) => [styles.morePill, pressed && styles.pressed]}
+        >
+          {expanded ? (
+            <ChevronUp color={palette.n200} size={12} />
+          ) : (
+            <ChevronDown color={palette.n200} size={12} />
+          )}
+          <Text style={styles.moreText} maxFontSizeMultiplier={1.3}>
+            {expanded ? t('child:hud.topStack.less') : t('child:hud.topStack.more', { count: stack.hiddenCount })}
+          </Text>
+        </Pressable>
       )}
-      {countdown !== null && (
-        <TakeOutClockPill countdown={countdown} resetKey={behaviour.take_out?.clock_started_at ?? null} reduceMotion={reduceMotion} />
-      )}
-      {footer}
-      {shownMeals}
+      {chips}
     </View>
   );
 }
 
 /** Dark glass, like the header / dock; mint accent (danger only on the last-30-min clock, M5-T01). */
 const styles = StyleSheet.create({
-  slot: {
-    position: 'absolute',
-    left: 16,
-    zIndex: 15,
-    alignItems: 'center',
-    gap: 8,
+  /** Laid out by the HUD's top-stack slot (under the header, left of the metric column). */
+  stack: {
+    alignSelf: 'stretch',
+    alignItems: 'flex-start',
+    gap: 6,
+  },
+  cardSlot: {
+    maxWidth: '100%',
   },
   sceneCard: {
     maxWidth: '100%',
+    flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    borderRadius: 20,
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+    borderRadius: 16,
     backgroundColor: alpha(palette.graphite, 0.82),
     borderWidth: 1,
     borderColor: alpha(palette.white, 0.15),
   },
+  sceneBody: {
+    flexShrink: 1,
+    alignItems: 'flex-start',
+    gap: 6,
+  },
   sceneText: {
     color: palette.n200,
-    fontSize: 13,
+    fontSize: 12,
     fontWeight: '600',
-    textAlign: 'center',
   },
+  /** Compact CTA (32 pt + 6 pt hitSlop each side = 44 pt target). */
   resolveButton: {
+    maxWidth: '100%',
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
-    minHeight: 44,
-    paddingHorizontal: 18,
-    borderRadius: 22,
+    gap: 6,
+    minHeight: 32,
+    paddingHorizontal: 12,
+    borderRadius: 16,
     backgroundColor: palette.mint,
     borderWidth: 1,
     borderColor: alpha(palette.white, 0.25),
@@ -239,17 +311,18 @@ const styles = StyleSheet.create({
     opacity: 0.5,
   },
   resolveText: {
+    flexShrink: 1,
     color: palette.graphite,
-    fontSize: 14,
+    fontSize: 13,
     fontWeight: '800',
   },
   countdownPill: {
     maxWidth: '100%',
-    alignItems: 'center',
-    gap: 2,
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 14,
+    alignItems: 'flex-start',
+    gap: 1,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 12,
     backgroundColor: alpha(palette.graphite, 0.82),
     borderWidth: 1,
     borderColor: alpha(palette.mint, 0.3),
@@ -270,7 +343,23 @@ const styles = StyleSheet.create({
     color: palette.n300,
     fontSize: 11,
     fontWeight: '500',
-    textAlign: 'center',
+  },
+  morePill: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    minHeight: 24,
+    paddingHorizontal: 10,
+    paddingVertical: 3,
+    borderRadius: 12,
+    backgroundColor: alpha(palette.graphite, 0.82),
+    borderWidth: 1,
+    borderColor: alpha(palette.white, 0.15),
+  },
+  moreText: {
+    color: palette.n200,
+    fontSize: 11,
+    fontWeight: '700',
   },
   pressed: {
     transform: [{ scale: 0.96 }],

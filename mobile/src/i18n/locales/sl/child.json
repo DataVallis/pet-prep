@@ -2,6 +2,12 @@
   "hud": {
     "toastDismissHint": "Pritisni, da zapreš sporočilo.",
     "toastClose": "Zapri sporočilo",
+    "topStack": {
+      "more": "+{{count}} več",
+      "moreA11y": "Pokaži še druga obvestila ({{count}})",
+      "less": "Manj",
+      "lessA11y": "Skrij dodatna obvestila"
+    },
     "feed": "Hrani",
     "emergencyFeed": "Nujni obrok",
     "water": "Voda",

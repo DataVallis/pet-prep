@@ -1,10 +1,12 @@
 /**
  * Child HUD device fixes (TestFlight 3.0.0, 2026-10-07):
  * - M5-F05: the header is one short line; a tap opens a sheet with the full profile.
- * - M5-F06: "Kuža se pripravlja …" is stacked above the dock (top of the above-dock column,
- *   above "Obroki danes"), not drawn on the media where the meals row / dock covered it.
+ * - M5-F06: "Kuža se pripravlja …" is a card of the HUD's stack (above "Obroki danes"), not
+ *   drawn on the media where the meals row / dock covered it. Since David 2026-10-25 the stack
+ *   sits under the header (the dog stays visible), not above the dock.
  */
 import { fireEvent, screen, within } from '@testing-library/react-native';
+import { StyleSheet } from 'react-native';
 
 import { api } from '@/api/client';
 import ChildHudScreen from '@/screens/ChildHudScreen';
@@ -123,23 +125,24 @@ describe('ChildHudScreen header sheet (M5-F05)', () => {
 });
 
 describe('ChildHudScreen "getting ready" notice (M5-F06)', () => {
-  it('sits at the top of the above-dock column, above the meals row, at 375 × 667', async () => {
+  it('is a card of the top stack, above the meals row, at 375 × 667', async () => {
     await renderHud(makeLiveChildState({ pet: { profile: makePetProfile(), media: makeMedia({ status: 'pending' }) } }));
     const column = screen.getByTestId('hud-behaviour');
     const notice = within(column).getByTestId('hud-pet-media-pending');
     expect(within(notice).getByText(PET_MEDIA_STRINGS.pending)).toBeTruthy();
     // Nothing on the media itself any more (that copy sat behind the dock).
     expect(within(screen.getByTestId('hud-pet-media')).queryByText(PET_MEDIA_STRINGS.pending)).toBeNull();
-    // Top of the column = furthest from the dock; the meals row comes after it.
+    // The notice is more urgent than the meals row, so it comes first.
     // Queries return host elements in document order.
     const order: string[] = within(column)
       .getAllByTestId(/^hud-(pet-media-pending|meals(-compact)?)$/)
       .map((el) => String(el.props.testID));
     expect(order[0]).toBe('hud-pet-media-pending');
     expect(order.some((id) => id.startsWith('hud-meals'))).toBe(true);
-    // The column is positioned from the measured dock height (layout.aboveDock), never under it.
-    const style = Array.isArray(column.props.style) ? Object.assign({}, ...column.props.style) : column.props.style;
-    expect(style.bottom).toBeGreaterThan(134);
+    // David 2026-10-25: the stack hangs under the header (layout.bannerTop), not above the dock.
+    const style = StyleSheet.flatten(screen.getByTestId('hud-top-stack').props.style);
+    expect(style.top).toBeGreaterThanOrEqual(28 + 64);
+    expect(style.bottom).toBeUndefined();
   });
 
   it('large fonts: the notice text is capped (≤ 2 lines, ≤ 1.5× growth) so the column cannot reach the header', async () => {

@@ -2,6 +2,12 @@
   "hud": {
     "toastDismissHint": "Tap to close the message.",
     "toastClose": "Close message",
+    "topStack": {
+      "more": "+{{count}} more",
+      "moreA11y": "Show {{count}} more messages",
+      "less": "Less",
+      "lessA11y": "Hide the extra messages"
+    },
     "feed": "Feed",
     "emergencyFeed": "Emergency meal",
     "water": "Water",

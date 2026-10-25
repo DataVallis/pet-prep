@@ -3,7 +3,7 @@
  * in the family timezone, API actions with friendly messages, cleaning, live locks
  * (hard stop) and the contract route.
  */
-import { act, fireEvent, screen, waitFor } from '@testing-library/react-native';
+import { act, fireEvent, screen, waitFor, within } from '@testing-library/react-native';
 import { PARENTAL_GATE_STRINGS } from '@/components/ParentalGate';
 import { Dimensions, StyleSheet, type ViewStyle } from 'react-native';
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
@@ -454,8 +454,10 @@ describe('ChildHudScreen', () => {
     await renderHud();
     fireEvent.press(screen.getByTestId('action-water'));
     await screen.findByTestId('hud-toast');
-    const slot = StyleSheet.flatten(screen.getByTestId('hud-toast-slot').props.style) as ViewStyle;
-    expect(slot).toMatchObject({ position: 'absolute', left: 16, right: METRICS_RESERVED_RIGHT, alignItems: 'center' });
+    // David 2026-10-25: the toast is the first item of the top stack, which ends left of the bars.
+    const stack = StyleSheet.flatten(screen.getByTestId('hud-top-stack').props.style) as ViewStyle;
+    expect(stack).toMatchObject({ position: 'absolute', left: 16, right: METRICS_RESERVED_RIGHT });
+    expect(within(screen.getByTestId('hud-top-stack')).getByTestId('hud-toast-slot')).toBeTruthy();
     // The slot ends left of the measured column: right edge + bar width.
     expect(StyleSheet.flatten(screen.getByTestId('metric-hunger').props.style).width).toBe(METRIC_BAR_WIDTH);
     expect(StyleSheet.flatten(screen.getByTestId('hud-metrics').props.style).right).toBe(METRICS_RIGHT);

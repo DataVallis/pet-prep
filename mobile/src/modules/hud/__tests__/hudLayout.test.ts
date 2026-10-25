@@ -96,6 +96,15 @@ describe('computeHudLayout', () => {
     expect(l.bannerTop).toBe(l.headerTop + 64 + 6);
   });
 
+  it('David 2026-10-25: the top stack starts under the header and never reaches the dock', () => {
+    for (const { height, top, bottom } of DEVICES) {
+      const l = computeHudLayout({ screenHeight: height, insets: { top, bottom } });
+      expect(l.bannerTop).toBeGreaterThanOrEqual(l.headerTop + HEADER_HEIGHT_ESTIMATE);
+      expect(l.bannerTop + l.stackMaxHeight).toBeLessThanOrEqual(dockTop(height, l) - SPACING);
+    }
+    expect(computeHudLayout({ screenHeight: 150, insets: { top: 0, bottom: 0 } }).stackMaxHeight).toBe(0);
+  });
+
   it('never reports negative space and hides the column when nothing fits (landscape / split screen)', () => {
     const l = computeHudLayout({ screenHeight: 200, insets: { top: 0, bottom: 0 } });
     expect(l.metricsAvailable).toBe(0);

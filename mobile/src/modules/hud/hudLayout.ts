@@ -7,6 +7,11 @@
  * `top: 130` and 100 pt tracks (~750 pt for the column) — the 4th bar and its "100%"
  * ended up behind the dock on every device.
  *
+ * The message cards (take-out clock, mess card, notes, chips) are not between header and dock
+ * any more: since David 2026-10-25 they form the top stack under the header (`bannerTop`,
+ * `stackMaxHeight`), left of the metric column (`METRICS_RESERVED_RIGHT`), so the dog's centre
+ * and lower half stay free (order / "+N" in `topStack.ts`).
+ *
  * Inputs are the window height, the safe-area insets and (once measured via onLayout)
  * the real header / dock heights; the estimates below are used for the first frame.
  */
@@ -56,10 +61,15 @@ export interface HudLayout {
   metricsHeight: number;
   /** `bottom` of the action dock. */
   dockBottom: number;
-  /** `bottom` of content that sits just above the dock (M5-R02 behaviour panel). */
+  /** `bottom` of content that sits just above the dock. */
   aboveDock: number;
-  /** `top` of the "stale" banner / toast (just below the header). */
+  /**
+   * `top` of the top stack (toast, banners, behaviour cards, chips — David 2026-10-25), just
+   * below the header.
+   */
   bannerTop: number;
+  /** Height the top stack may take at most: down to just above the dock (never over it). */
+  stackMaxHeight: number;
   metric: MetricSizing;
 }
 
@@ -156,6 +166,7 @@ export function computeHudLayout({
   const metricsBottom = screenHeight - dockBottom - dockHeight - SPACING;
   const metricsAvailable = Math.max(0, metricsBottom - metricsTop);
   const metric = fitMetrics(metricsAvailable);
+  const bannerTop = headerTop + headerHeight + 6;
 
   return {
     headerTop,
@@ -164,7 +175,8 @@ export function computeHudLayout({
     metricsHeight: metricsColumnHeight(metric),
     dockBottom,
     aboveDock: dockBottom + dockHeight + SPACING,
-    bannerTop: headerTop + headerHeight + 6,
+    bannerTop,
+    stackMaxHeight: Math.max(0, metricsBottom - bannerTop),
     metric,
   };
 }
