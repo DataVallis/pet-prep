@@ -706,10 +706,11 @@ describe('breed search', () => {
 
   it('M5-R10-24: finds the Pembroke Welsh Corgi by its SL / EN names and nicknames', () => {
     const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
-    expect(find('corgi')).toEqual(['pembroke_welsh_corgi']);
-    expect(find('korgi')).toEqual(['pembroke_welsh_corgi']);
+    // M5-R10-64: the shared corgi names also find the Cardigan Welsh Corgi (listed after the Pembroke).
+    expect(find('corgi')).toEqual(['pembroke_welsh_corgi', 'cardigan_welsh_corgi']);
+    expect(find('korgi')).toEqual(['pembroke_welsh_corgi', 'cardigan_welsh_corgi']);
     expect(find('pembroke')).toEqual(['pembroke_welsh_corgi']);
-    expect(find('valizanski')).toEqual(['pembroke_welsh_corgi']);
+    expect(find('valizanski')).toEqual(['pembroke_welsh_corgi', 'cardigan_welsh_corgi']);
   });
 
   it('M5-R10-23: finds the Cane Corso by its SL / EN names and nicknames', () => {

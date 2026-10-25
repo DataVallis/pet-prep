@@ -1857,7 +1857,8 @@ describe('PetPickerStep', () => {
     it('search always covers the whole catalogue (no toggle while searching); the picked breed stays listed after the search', () => {
       renderPicker(FALLBACK_CATALOGUE, jest.fn(), jest.fn(), false);
       fireEvent.press(screen.getByTestId('plan-option-challenge'));
-      fireEvent.changeText(screen.getByTestId('breed-search'), 'korgi');
+      // 'pembroke', not 'korgi': since M5-R10-64 'korgi' also finds the Cardigan Welsh Corgi.
+      fireEvent.changeText(screen.getByTestId('breed-search'), 'pembroke');
       expect(ids()).toEqual(['breed-option-pembroke_welsh_corgi']);
       expect(screen.queryByTestId('breed-show-all')).toBeNull();
       fireEvent.press(screen.getByTestId('breed-option-pembroke_welsh_corgi'));
