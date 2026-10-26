@@ -22,6 +22,7 @@ Otrok v aplikaciji prosi za stvari za svojega ljubljenčka, na primer posteljo, 
 | S8 | **Brezplačni plan:** kupljena stvar doda samo svojo vsebino (npr. video igre z novo igračo); ostali videi ostanejo osnovni (miruje, spi). |
 | S9 | **Največ 3 odprte prošnje** na otroka; po »Ne zdaj« lahko otrok za isto stvar spet prosi po 7 dneh. |
 | S10 | **Ime funkcije: »Želje«** (EN »Wishes«). |
+| S12 | **Paket »Dobrodošlica za kužka« 15,99 €** (postelja + skledi + igrača; posamezno 17,97 €). Ni stvar v katalogu za otroka — starš ga vidi na seznamu »Želje« (npr. ko otrok prosi za eno od treh: »ali vse tri v paketu za 15,99 €«) in v ponudbi brez prošnje. Stvari, ki jih ljubljenček že ima, se ne podvojijo: paket je na voljo samo, ko nima nobene od treh (*predlog Claude*). Pri muci isti paket z mačjimi stvarmi (košara, skledi, igrača). |
 | S11 | **Nakup je nakup, vračila ni:** ob koncu igre (game over) ali izbrisu ljubljenčka nakup ostane porabljen (kot izziv, PAYMENTS_SPEC P5). |
 
 ## 3. Potek
