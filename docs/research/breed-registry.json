@@ -61,7 +61,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "e043d841bd97579d3cec4554e6ebfca4adf5683d582672b28847d97f5e746383"
+      "sha256": "116dffe9af5cd37b3cbba1574fab4cdd7703d47013a634c715722c5e7caf7c3d"
     }
   },
   "suitability_vocabulary": {
@@ -38852,7 +38852,12 @@
           "S549"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "airedale-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
