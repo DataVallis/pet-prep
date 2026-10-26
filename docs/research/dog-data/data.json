@@ -35032,6 +35032,567 @@
       }
     }
   },
+  "staffordshire_bull_terrier": {
+    "_note": "Added 2026-10-26 (M5-R10-67, unattended run — appended after the Saint Bernard: AKC 2024 No. 63 'Staffordshire Bull Terrier', S174 full-list table fetched 2026-10-26). Quotes as returned by the web-fetch tool on 2026-10-26 (PDSA, PetMD and the RKC pages only in short quotes, 125-character limit; longer sentences are paraphrased in notes and marked as such). Sources S536–S544 (reused S8, S10, S11, S14, S24, S35, S45, S174). No health percentages anywhere. Identity from the FCI nomenclature (S536, No. 76, Great Britain); appearance, colours, height and weight from FCI-Standard N° 76 (S537) and the Royal Kennel Club standard (S539). RKC Breeds A–Z page (S538) reached: key facts, Breed Watch Category 2 (points of concern not returned — the Breed Watch page was not in the fetch tool's provenance) and the health tests. PDSA (S540), PetMD (S541), RVC VetCompass news on Pegram et al. 2020 (S542). Lifespan: the Dogs Trust McMillan 2024 table (S123) not fetched (not in provenance), the 'shortest and longest' PDF failed at its site, PMC returned a captcha; McMillan 2024 '12 years' only via Wikipedia (S543, tier C) → RKC lower bound 'Over 12 years' (S538; PDSA the same) — the same senior month either way. Names: RKC / FCI / AKC 'Staffordshire Bull Terrier'; Slovenian »stafordširski bulterier« — no KZS page read, open for David.",
+    "identity": {
+      "value": "FCI No. 76, Group 3 Section 3 (Bull type Terriers), Great Britain",
+      "unit": "—",
+      "source_id": "S536",
+      "quote": "STAFFORDSHIRE BULL TERRIER",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S536, as returned): English name 'STAFFORDSHIRE BULL TERRIER', group 'n°3 - Terriers', section 'Bull type Terriers', country of origin 'GREAT BRITAIN', not subject to a working trial, definitive acceptance 10/21/1954, valid standard 9/8/2026 (the English row says 10/6/2026). Great Britain is already in FCI_ORIGINS (GB). Nicknames (Wikipedia S543, tier C): 'Stafford; Staffy;'."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S538",
+      "quote": "Size: Small",
+      "confidence": "high",
+      "notes": "RKC breed page key fact (S538) 'Small' → small (Cardigan Welsh Corgi precedent). PDSA (S540) 'Size: Medium' and PetMD (S541) 'This medium-size breed' — alternatives. FCI / RKC weight 11–17 kg = 24–38 lb → the 'Medium' class of S10 for growth."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            35.5,
+            40.5
+          ],
+          "female": [
+            35.5,
+            40.5
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S537",
+        "quote": "Desirable height at withers:35,5 to 40,5 cm, these heights being related to the weights.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 76 (S537), one range for both sexes, as returned (no space after the colon). RKC standard (S539): desirable height 36–41 cm (14–16 in) (paraphrase); PDSA (S540) 'Average height: 36-41 cm' — alternatives."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            12.7,
+            17
+          ],
+          "female": [
+            11,
+            15.4
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S537",
+        "quote": "Weight: Males: 12,7-17 kg.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 76 (S537): 'Weight: Males: 12,7-17 kg.' and 'Females: 11-15,4 kg.' (as returned) — the game range (adult_weight_kg). RKC standard (S539): dogs about 13–17 kg, bitches 11–15.4 kg (paraphrase); PDSA (S540) 'Average weight: 11-17 kg'; PetMD (S541) 24–38 lb.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                11,
+                17
+              ],
+              "female": [
+                11,
+                17
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S540",
+            "quote": "11-17 kg",
+            "confidence": "medium",
+            "notes": "PDSA key fact 'Average weight' (S540), both sexes."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "III (9–15 kg) / IV (15–30 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 11–17 kg spans bands III and IV. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI 11–17 kg (S537) = 24–38 lb → 'Medium'. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Staffordshire Bull Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S538",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S538). PDSA (S540) 'Average lifespan: Over 12 years' agrees; PetMD (S541) 'The average Staffordshire Bull Terrier lifespan is 12–14 years.' Lower bound 12 y → the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass median is reachable)."
+      },
+      "pdsa": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S540",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average lifespan' (S540). Same band as the RKC."
+      },
+      "petmd": {
+        "value": "12–14",
+        "unit": "years",
+        "source_id": "S541",
+        "quote": "The average Staffordshire Bull Terrier lifespan is 12–14 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S541, US). Alternative only (lower bound 12 y = the same senior month)."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Dogs Trust table of McMillan et al. 2024 data (S123): not fetched this run (not in the fetch tool's provenance; the 'shortest and longest' PDF failed at its site; PMC returned a captcha; the LJMU published version S376 was refused as not in provenance). Wikipedia (S543, tier C): the 2024 UK study estimated 12 years for the breed (paraphrase) — not verified in the paper or the table; 0.75 × 12 × 12 = 108, the same senior month as the RKC lower bound. UNSOURCED value."
+      },
+      "vetcompass": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S542",
+        "quote": null,
+        "confidence": "low",
+        "notes": "RVC VetCompass news on Pegram et al. 2020 (S542, 1,304 Staffordshire Bull Terriers vs 21,029 other dogs): no longevity value on the page; the paper on PMC returned a captcha. No VetCompass median used."
+      },
+      "senior_from": {
+        "value": 9.0,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × RKC lower bound 12 y (S538) → 0.75 × 12 = 9.0 y = 108 months. Provisional until McMillan 2024 / the Dogs Trust breed table (S123) is checked (12 y via Wikipedia S543 gives the same 108). Alternative: Dogs Trust > 7 y (S14) = 84.",
+        "derived_from": [
+          "S11",
+          "S538"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S538",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S538), runbook first choice → 60 min. PDSA (S540) 'Minimum exercise (per day): 1 hour' and 'Your Staffordshire Bull Terrier will need a minimum of an hour exercise every day.' agree; PetMD (S541): 'Bouts of exercise and long walks are important to meet their high energy levels,' (fragment)."
+      },
+      "daily_text": {
+        "value": "a minimum of an hour every day, split into a few walks with time to run off lead in a secure area",
+        "unit": "—",
+        "source_id": "S540",
+        "quote": "Your Staffordshire Bull Terrier will need a minimum of an hour exercise every day.",
+        "confidence": "high",
+        "notes": "PDSA (S540); 'This should be split into a few walks with time in a secure area to run and play off lead.'"
+      },
+      "heat": {
+        "value": "very averse to heat — limit outdoor exercise in warm weather, shade and water",
+        "unit": "—",
+        "source_id": "S541",
+        "quote": "Staffies are very averse to heat.",
+        "confidence": "high",
+        "notes": "PetMD (S541); 'Limit outdoor exercise in warm weather, and make sure they have plenty of shade and water.' PDSA (S540) does not cover heat. No heat_sensitive chip: its label names a thick coat (Samoyed / Saint Bernard) and this coat is short — open for David. Not a flat-faced breed (BVA S92) → no 'no walk in the heat' rule (DOG_NO_WALK_IN_HEAT)."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No gap-after-meals advice found (PDSA S540, PetMD S541 checked) → no meal_exercise_gap row."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "bold, fearless and totally reliable; courageous and tenacious; highly intelligent and affectionate",
+        "unit": "—",
+        "source_id": "S537",
+        "quote": "Bold, fearless and totally reliable.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 76 (S537), temperament; 'Traditionally of indomitable courage and tenacity.' and 'Highly intelligent and affectionate especially with children.' RKC standard (S539) the same wording. PDSA (S540): 'lively and energetic dogs who love company and cuddles from their owner' (fragment)."
+      },
+      "family": {
+        "value": "known as a wonderful family pet; in the right household the perfect family pet",
+        "unit": "—",
+        "source_id": "S538",
+        "quote": "Despite its rough and ready beginnings, the Staffordshire Bull Terrier is known as a wonderful family pet.",
+        "confidence": "high",
+        "notes": "RKC breed page (S538). PDSA (S540): 'In the right household, they can make the perfect family pets.' Basis of family_pet."
+      },
+      "children": {
+        "value": "highly intelligent and affectionate especially with children; tolerant and sweet-natured towards children — may not suit families with younger children (strength, energy)",
+        "unit": "—",
+        "source_id": "S537",
+        "quote": "Highly intelligent and affectionate especially with children.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 76 (S537) and RKC standard (S539), characteristics. PDSA (S540): 'Generally speaking, Staffies tend to be very tolerant and sweet-natured towards children.'; they are very energetic and may not realise their own strength, so they might not suit homes with younger children (paraphrase — the sentence is longer than the tool's quote limit). PetMD (S541): 'They are known for their gentle nature toward children'. AKC breed page (S544): 'a mild, playful companion with a special feel for kids.' Basis of children (caveat kept); never small_children (PDSA caveat). No not_for_small_children (the PDSA sentence was not returned verbatim — open for David)."
+      },
+      "time_alone": {
+        "value": "people-orientated — known to suffer with separation anxiety when left alone; never alone more than four hours",
+        "unit": "—",
+        "source_id": "S540",
+        "quote": "Because they are so people-orientated, Staffies are known to suffer with separation anxiety when left alone.",
+        "confidence": "high",
+        "notes": "PDSA (S540); 'You should never leave any dog alone for more than four hours' (fragment). Basis of needs_company."
+      },
+      "other_pets": {
+        "value": "very strong prey drive — not a good idea to have smaller pets around them; never unsupervised with other pets",
+        "unit": "—",
+        "source_id": "S540",
+        "quote": "Staffies have a very strong prey drive so it's not a good idea to have smaller pets around them.",
+        "confidence": "high",
+        "notes": "PDSA (S540); 'never leave your dog unsupervised with other pets.' (fragment). PetMD (S541): 'Puppy Staffies brought up with cats and other dogs generally do well with them, according to the SBTCA.' (alternative). A verbatim high prey drive → chases_small_pets; conflicting sources → no other_pets."
+      },
+      "socialisation": {
+        "value": "needs lots of patience and early socialisation; socialised from a young age with different people, dogs and experiences",
+        "unit": "—",
+        "source_id": "S541",
+        "quote": "But they do take lots of patience and early socialization!",
+        "confidence": "high",
+        "notes": "PetMD (S541). PDSA (S540): socialised from a young age with different people, dogs and experiences, a Staffie should grow into a confident dog (paraphrase — the sentence is longer than the tool's quote limit). A need (runbook M5-R17) → proposed_game_parameters.staffordshire_bull_terrier.socialisation (DOG_SOCIALISATION row, PetMD quote)."
+      },
+      "training": {
+        "value": "intelligent — picks up training quickly",
+        "unit": "—",
+        "source_id": "S540",
+        "quote": "Staffies are intelligent dogs who will pick up on their training quickly",
+        "confidence": "high",
+        "notes": "PDSA (S540, fragment). Not a first-time-owner statement → no first_time_owner tag (Havanese precedent)."
+      },
+      "chewing": {
+        "value": "known chewers — furniture and even walls when left to their own devices",
+        "unit": "—",
+        "source_id": "S540",
+        "quote": "They're known chewers, so left to their own devices this could be fatal for your furniture and even your walls!",
+        "confidence": "high",
+        "notes": "PDSA (S540). Basis of chews_when_bored."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag. PDSA (S540): a complete, balanced food to keep them slim; split the daily allowance into two meals; treats no more than 10 % of calories (general advice)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 2 (S538) — the points of concern were not returned (Breed Watch page not in provenance) → no welfare chip (Pomeranian / Shetland Sheepdog precedent, open for David). RVC VetCompass (S542): no evidence that the breed's overall health differs from other dogs (paraphrase); relative risks research only. Breeder checklist: RKC Good Practice 'Prioritising genetic diversity', Best Practice HC-HSF4-2, L-2-HGA, elbow and eye schemes (S538).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 2 — points of concern not returned",
+        "unit": "—",
+        "source_id": "S538",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC breed page (S538): Breed Watch Category 2; the page explains that points of concern may include features not specifically highlighted in the breed standard (paraphrase). The Breed Watch page (royalkennelclub.com …/staffordshire-bull-terrier-category-2/) was refused by the fetch tool (not in provenance) → no point recorded, no welfare chip; open for David."
+      },
+      "hip_dysplasia": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S540",
+        "quote": "Hip dysplasia – where the hip joint doesn't fit together perfectly, which will eventually lead to arthritis.",
+        "confidence": "high",
+        "notes": "PDSA (S540). PetMD (S541) lists elbow and hip dysplasia and luxating patella. RKC Best Practice elbow scheme (S538). Register health key hip_dysplasia_arthritis."
+      },
+      "skin": {
+        "value": "sensitive skin; allergies; demodex mites",
+        "unit": "—",
+        "source_id": "S540",
+        "quote": "Staffies can have sensitive skin, so ask your vet before choosing a dog shampoo.",
+        "confidence": "high",
+        "notes": "PDSA (S540); also 'Staffies can suffer from allergies and can also be affected by a skin condition caused by demodex mites.' RVC VetCompass (S542): atopic dermatitis and skin masses among the disorders with a higher risk (paraphrase; relative risks research only). No sensitive_skin chip: no Breed Watch skin point known (the chip follows a Breed Watch point so far) — open for David. Register health key itchy_skin_allergy."
+      },
+      "eyes": {
+        "value": "hereditary cataracts (HC-HSF4) and other eye conditions",
+        "unit": "—",
+        "source_id": "S540",
+        "quote": "Some eye conditions – there is currently testing available for some eye conditions.",
+        "confidence": "high",
+        "notes": "PDSA (S540). PetMD (S541) lists juvenile hereditary cataracts (JHC); RKC Best Practice 'DNA test for Hereditary cataracts (HC-HSF4-2)' and the eye scheme (S538). Register health key cataracts."
+      },
+      "l2hga": {
+        "value": "L-2-hydroxyglutaric aciduria (L-2-HGA) — an inherited metabolic disorder affecting the nervous system",
+        "unit": "—",
+        "source_id": "S540",
+        "quote": "L-2-hydroxyglutaric aciduria – a metabolic disorder that affects the nervous system.",
+        "confidence": "high",
+        "notes": "PDSA (S540); PetMD (S541) lists L-2-HGA; RKC Best Practice 'DNA test for L-2-hydroxyglutarate dehydrogenase (L-2-HGA)' (S538). New register health key l2hga_nervous_system."
+      },
+      "cancer": {
+        "value": "certain cancers",
+        "unit": "—",
+        "source_id": "S540",
+        "quote": "Certain cancers.",
+        "confidence": "high",
+        "notes": "PDSA (S540). Register health key certain_cancers."
+      },
+      "seizures": {
+        "value": "seizures among the disorders with a higher risk",
+        "unit": "—",
+        "source_id": "S542",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RVC VetCompass news (S542, Pegram et al. 2020): seizures, atopic dermatitis, skin mass and stiffness had a higher risk; lower risk for dental disease, heart murmur and patellar luxation (paraphrase). Research only (no register key, no number anywhere)."
+      },
+      "degenerative_myelopathy": {
+        "value": "degenerative myelopathy (DM)",
+        "unit": "—",
+        "source_id": "S541",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S541) health list (paraphrase — the condition named). Research only."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 49,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Staffordshire Bull Terrier",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-26): rank 49 shared by 'Dachshund' and 'Staffordshire Bull Terrier' (as returned: '| 49 | Dachshund |' then 'Staffordshire Bull Terrier'), tier 'Average Working/Obedience Intelligence' (ranks 40–54). Coren's own top / bottom-10 article (S34) does not list the breed."
+      },
+      "coren_tier": {
+        "value": "Average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier 'Average Working/Obedience Intelligence' (ranks 40–54)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.staffordshire_bull_terrier.learning_multiplier (1.0, runbook rule: Average tier, rank 49).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "smooth-coated, well balanced, of great strength for his size; muscular, active and agile",
+        "unit": "—",
+        "source_id": "S537",
+        "quote": "Smooth-coated, well balanced, of great strength for his size.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 76 (S537), general appearance; muscular, active and agile (paraphrase). RKC standard (S539) the same."
+      },
+      "colours": {
+        "value": [
+          "brindle",
+          "brindle_and_white",
+          "red",
+          "fawn",
+          "black",
+          "blue",
+          "white",
+          "red_and_white",
+          "black_and_white",
+          "blue_and_white",
+          "fawn_and_white"
+        ],
+        "unit": "list",
+        "source_id": "S537",
+        "quote": "White. Red, fawn, black, blue, or any one of these colours with white.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 76 (S537); 'Any shade of brindle or any shade of brindle with white.'; 'Black and tan or liver colour highly undesirable.' and 'Any other colour, including black and tan or liver, or combination of colours unacceptable.' RKC standard (S539) the same list and 'Any other colour, including black and tan or liver, or combination of colours unacceptable.' Never black and tan, liver, merle or tricolour."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Brindle first with the highest weight (the portrait default), then brindle and white, red, black and white, fawn, black, blue, the other with-white colours and white."
+      },
+      "coat": {
+        "value": "smooth, short and close",
+        "unit": "—",
+        "source_id": "S539",
+        "quote": "Smooth, short and close.",
+        "confidence": "high",
+        "notes": "RKC standard (S539); FCI (S537) the same (paraphrase). RKC key fact 'Coat length: Short' (S538)."
+      },
+      "head": {
+        "value": "short, deep through, broad skull, very pronounced cheek muscles, distinct stop, short foreface",
+        "unit": "—",
+        "source_id": "S539",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC standard (S539, paraphrase); FCI (S537) 'Short.' (head). Not a flat-faced breed (not on the BVA brachycephalic list, S92); the game shows a moderate muzzle."
+      },
+      "nose": {
+        "value": "black (as dark as possible in blue dogs), open nostrils",
+        "unit": "—",
+        "source_id": "S537",
+        "quote": "Black or as dark as possible in blue dogs, with open nostrils.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 76 (S537)."
+      },
+      "eyes": {
+        "value": "round, medium size, set to look straight ahead; dark preferred; dark eye rims",
+        "unit": "—",
+        "source_id": "S537",
+        "quote": "Round, of medium size, and set to look straight ahead.",
+        "confidence": "high",
+        "notes": "FCI (S537): 'Dark preferred but may bear some relation to coat colour.'; dark eye rims (paraphrase). RKC (S539) the same."
+      },
+      "ears": {
+        "value": "rose or half pricked, not large or heavy",
+        "unit": "—",
+        "source_id": "S537",
+        "quote": "Rose or half pricked, not large or heavy.",
+        "confidence": "high",
+        "notes": "FCI (S537) and RKC (S539); 'Full, drop or pricked ears highly undesirable.' Natural ears (never cropped)."
+      },
+      "tail": {
+        "value": "medium length, low set, tapering to a point, carried rather low — like an old-fashioned pump handle",
+        "unit": "—",
+        "source_id": "S537",
+        "quote": "Medium length, low set, tapering to a point and carried rather low.",
+        "confidence": "high",
+        "notes": "FCI (S537); 'Should not curl much and may be likened to an old-fashioned pump handle.' Natural tail (never docked)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S538), PDSA (S540) and PetMD (S541). RKC key facts reached on 2026-10-26. Woodgreen not attempted.",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S538",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": "RKC key fact (S538). PDSA (S540) 'Medium'."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S538",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S538) → 60 min. Not active_family / long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Small house",
+        "unit": "—",
+        "source_id": "S538",
+        "quote": "Size of home: Small house",
+        "confidence": "high",
+        "notes": "RKC key fact (S538) — not 'Flat/ Apartment' → no apartment tag (AKC's 'adapts to apartments' is not the runbook's apartment source); not large_home."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S538",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S538)."
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S538",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S538) → brushing 1× a week (M5-R13 rule 'Once a week' → 1). PDSA (S540) 'a weekly brush' agrees. Not frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S538",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": "RKC key fact (S538); PDSA (S540) 'Coat length: Short'."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S538",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "RKC key fact (S538); PDSA (S540) 'While they do shed, …'. Basis of sheds."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S538",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S538) → senior 108 (lower bound). Not shorter_lifespan."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S538",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S538). Background only."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S538",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "RKC key fact (S538)."
+      },
+      "pdsa_grooming": {
+        "value": "a weekly brush; low maintenance; bathing rarely needed",
+        "unit": "—",
+        "source_id": "S540",
+        "quote": "While they do shed, a weekly brush should help you to keep on top of the dead hair and keep their coat looking nice.",
+        "confidence": "high",
+        "notes": "PDSA (S540) → brushing 1× a week (M5-R13). 'It's unlikely that your Staffie will need bathing unless they've rolled in something nasty.' (fragment) — no bath frequency → no bath reminder. PetMD (S541): 'Though Staffies have a low-maintenance coat, they benefit from an occasional brushing and bath.' (no number)."
+      },
+      "pdsa_exercise": {
+        "value": "Minimum exercise (per day): 1 hour",
+        "unit": "—",
+        "source_id": "S540",
+        "quote": "1 hour",
+        "confidence": "high",
+        "notes": "PDSA key fact (S540) — agrees with the RKC (S538)."
+      },
+      "petmd_ears": {
+        "value": "ask the vet whether and how often to clean the ears",
+        "unit": "—",
+        "source_id": "S541",
+        "quote": "Your vet can help determine if—and how often—you should clean your dog’s ears.",
+        "confidence": "medium",
+        "notes": "PetMD (S541). No frequency → no ear-cleaning task (runbook »Breed care tasks«). PDSA (S540) names no teeth, nail or ear frequency (toothbrush only in the equipment list)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -52544,6 +53105,258 @@
         "confidence": "high",
         "notes": "Colours of the RKC (S530) and FCI (S528) standards. Welfare (RKC Breed Watch Category 3, S531): eyelids in normal contact, moderate face, sound hindquarters. Weights unsourced in prompts. Red and white with a dark mask as the portrait default — Claude's choice (the most typical FCI mantle colouring, S528).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): red and white with a dark mask is the portrait default; standard colours only (red mantle / white with red patches / red-brindle and white); tight eyelids, moderate face (welfare)"
+      }
+    },
+    "staffordshire_bull_terrier": {
+      "_note": "Unattended run M5-R10-67 (2026-10-26): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Brushing 1× a week (RKC S538 'Once a week', PDSA S540) and puppy socialisation (PetMD S541 quote) are built (M5-R13 / M5-R17). No care task: no source states a frequency for teeth, nails, ears, groomer or bath (§3 »Breed care tasks«). No meal / exercise gap quote.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S538",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'Up to 1 hour per day' (S538); PDSA 'a minimum of an hour exercise every day' (S540) — agree. Rule: one number N ('up to N') → N = 60.",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S540",
+            "notes": "PDSA (key facts minimum 1 hour)"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S538 'Up to 1 hour per day'; PDSA S540 'a minimum of an hour')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S538",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) (S11 + RKC lower bound 'Over 12 years', S538; PDSA S540 the same). McMillan 2024 12 y only via Wikipedia (S543, tier C) → also 108. Alternative: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S538"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84,
+          "senior_mcmillan_2024_via_wikipedia": 108
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S538)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 108)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 49 (S35), tier 'Average' (40–54) → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 49, Average tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S538",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S538) 'Once a week'; PDSA (S540) 'a weekly brush should help you to keep on top of the dead hair'. Rule 'Once a week' → 1. Matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S540",
+            "notes": "PDSA weekly brush"
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC S538 »Once a week«, PDSA S540); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S541",
+        "quote": "But they do take lots of patience and early socialization!",
+        "confidence": "high",
+        "notes": "PetMD (S541); quote from staffordshire_bull_terrier.behaviour.socialisation. PDSA (S540) advises socialising from a young age with different people, dogs and experiences (paraphrase). Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, zgodnja socializacija, PetMD S541)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-67); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S538"
+            ],
+            "refs": [
+              "staffordshire_bull_terrier.behaviour.family"
+            ],
+            "quote": "S538 'the Staffordshire Bull Terrier is known as a wonderful family pet.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S537"
+            ],
+            "refs": [
+              "staffordshire_bull_terrier.behaviour.children"
+            ],
+            "quote": "S537 'Highly intelligent and affectionate especially with children.'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "chews_when_bored",
+            "source_ids": [
+              "S540"
+            ],
+            "refs": [
+              "staffordshire_bull_terrier.behaviour.chewing"
+            ],
+            "quote": "S540 'They're known chewers'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S540"
+            ],
+            "refs": [
+              "staffordshire_bull_terrier.behaviour.time_alone"
+            ],
+            "quote": "S540 'Staffies are known to suffer with separation anxiety when left alone.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S538"
+            ],
+            "refs": [
+              "staffordshire_bull_terrier.suitability.rkc_shedding"
+            ],
+            "quote": "S538 'Sheds: Yes'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S540"
+            ],
+            "refs": [
+              "staffordshire_bull_terrier.behaviour.other_pets"
+            ],
+            "quote": "S540 'Staffies have a very strong prey drive'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "PDSA (S540): might not suit families with younger children (paraphrase) → never small_children.",
+          "not_for_small_children": "The PDSA sentence (S540) was not returned verbatim (longer than the quote limit) — a paraphrase is not enough; open for David.",
+          "first_time_owner": "'will pick up on their training quickly' (S540) is not a first-time-owner statement (Havanese precedent).",
+          "experienced_owner": "No source.",
+          "apartment": "RKC 'Small house' (S538), not 'Flat/ Apartment'.",
+          "large_home": "RKC 'Small house' (S538).",
+          "active_family": "RKC 'Up to 1 hour per day' (S538) — no tag.",
+          "long_daily_exercise": "60 min (S538).",
+          "other_pets": "PetMD 'do well with them' only when brought up with cats and dogs (S541) vs PDSA's very strong prey drive (S540) → conflict, no tag.",
+          "often_alone": "PDSA separation anxiety (S540) → needs_company instead.",
+          "older_owners": "No source.",
+          "low_shedding": "RKC 'Sheds: Yes' (S538).",
+          "frequent_grooming": "RKC 'Once a week' (S538).",
+          "needs_mental_stimulation": "No breed-specific statement.",
+          "food_motivated_weight": "No breed-specific statement.",
+          "secure_fencing": "PDSA 'a secure area to run and play off lead' (S540) is general exercise advice, not an escape statement (Husky precedent).",
+          "shorter_lifespan": "RKC 'Over 12 years' (S538).",
+          "welfare": "RKC Breed Watch Category 2 (S538) — the points of concern were not returned → no welfare chip (Pomeranian / Shetland Sheepdog precedent); open for David.",
+          "sensitive_skin": "PDSA 'Staffies can have sensitive skin' (S540) and VetCompass atopic dermatitis (S542) — but the chip has so far followed an RKC Breed Watch skin point (Westie, Bulldog, Basset, Pug, Mastiff) and the Breed Watch points of this breed were not returned → no chip; open for David.",
+          "heat_sensitive": "PetMD 'Staffies are very averse to heat.' (S541) — but the chip's label names a thick coat (»gost kožuh — slabo prenaša vročino«), and this is a short-coated breed → no chip; the fact stays in the breed text. Not flat-faced → no DOG_NO_WALK_IN_HEAT rule (runbook). Open for David: a short-coat heat chip or the heat rule for this breed."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet (RKC S538), children (FCI S537, caveat kept); consider chews_when_bored, needs_company (PDSA S540), sheds (RKC S538), chases_small_pets (PDSA S540 'very strong prey drive', at the end of the list)"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a flat-faced breed)",
+        "unit": "—",
+        "source_id": "S538",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC Breed Watch Category 2 (S538, points not returned); not on the BVA brachycephalic list — no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). Marketing never promises health; never with small pets or small children = Claude's proposal (PDSA S540 prey drive / younger children), open for David.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no veterinary advice against advertising the breed type)"
+      },
+      "ai_appearance": {
+        "value": "adult Staffordshire Bull Terrier, brindle short smooth close coat, muscular compact well-balanced body of great strength for its size, short deep head with a broad skull, pronounced cheek muscles, distinct stop and a short but not flat foreface, black nose with open nostrils, round dark eyes looking straight ahead, small rose or half-pricked ears, medium-length low-set tapering natural tail carried rather low",
+        "unit": "—",
+        "source_id": "S537",
+        "quote": "Any shade of brindle or any shade of brindle with white.",
+        "confidence": "high",
+        "notes": "Colours from the FCI / RKC standards (S537, S539) — never black and tan or liver. Weights unsourced. Natural ears and tail. Moderate, non-exaggerated head (welfare: open nostrils, visible muzzle).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): brindle is the portrait default; natural rose ears and tail; moderate head with a visible muzzle"
       }
     }
   }
