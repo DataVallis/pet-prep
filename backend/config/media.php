@@ -328,6 +328,9 @@ return [
         // Longest side of the stored WebP (never upscaled; the model's square size if smaller).
         'max_size' => 1200,
         'webp_quality' => 88,
+        // `breeds:portraits --colours` (David 2026-10-26): image-EDIT profile that recolours the
+        // default portrait into every other standard coat colour (config/breed_colours.php).
+        'colour_profile' => env('AI_BREED_PORTRAIT_COLOUR_PROFILE', 'nano_banana_pro_edit'),
         'traits' => [
             'labrador_retriever' => ['coat_color' => 'yellow'],
         ],

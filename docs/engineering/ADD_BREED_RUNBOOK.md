@@ -249,6 +249,24 @@ git commit -am "chore(research): register the <Breed> portrait in the breed regi
 ```
 Same commit: the breed doc (`docs/breeds/<en-slug>.md`: portrait row + PR number; `node scripts/breeds-index.mjs`) and the queue row → `done` (with PR numbers). No FEATURES / HANDOFF edit. PR, `CI OK`, merge (docs-only merges do not deploy). Delete nothing on the review branch.
 
+**Optional — colour variants (David 2026-10-26, first a test on `border_collie`; not part of an unattended breed run yet):**
+the website breed page will later show the breed in every standard coat colour. Once the default portrait is on
+`main`, `breed-portraits.yml` with `inputs[colours]=true` runs `breeds:portraits --colours`: for every colour of
+`config/breed_colours.php` except the one the default portrait shows (manifest `colour`; older entries: the coat
+colour of the portrait prompt, else the first colour) an **edit** of that portrait (Nano Banana Pro Edit,
+`media.breed_portraits.colour_profile`, the portrait as reference image) that changes only the coat colour /
+pattern → `<species>/<slug>--<colour-key>.webp` + manifest list `colour_variants` (colour, value, reference,
+profile, cost, generated_at). Cost = (colours − 1) × $0.15 (border collie: 6 × $0.15 = $0.90), AI Lab budget. The
+reference portraits come from `docs/research/breed-portraits` of `ref`. Check the cost first with
+`inputs[dry_run]=true`. Review every variant like the portrait (same dog, pose and backdrop; only the colour
+changed; the colour matches the standard); take only the variant files + their `colour_variants` entries from the
+review branch (the server manifest's `portraits` list can be older than `main`'s — keep `main`'s), then
+`node scripts/export-breed-registry.mjs` (the manifest hash is an export input; the variants are not exported yet).
+
+```bash
+gh api -X POST repos/DataVallis/pet-prep/actions/workflows/breed-portraits.yml/dispatches -f ref=main -f 'inputs[breeds]=border_collie' -F 'inputs[colours]=true' -F 'inputs[dry_run]=true'
+```
+
 ## 9. Website (DataVallis/pet-prep-website, from its `main`)
 
 ```bash
