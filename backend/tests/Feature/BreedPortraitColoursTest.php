@@ -113,6 +113,30 @@ describe('colour plan and prompt', function () {
         expect($cat)->not->toMatch('/\bdogs?\b/i')->toContain('Only the cat:');
     });
 
+    it('adds a colour note for dilute blue, blue merle, lilac, liver / chocolate and sable — and only there', function () {
+        $prompt = fn (string $value) => bpcService()->colourPrompt(BreedType::BorderCollie, ['key' => 'k', 'value' => $value]);
+
+        expect($prompt('blue and white'))
+            ->toContain('in that colour. Blue here is the dilute of black: the blue parts are a clearly slate blue-grey, visibly lighter and bluer than black, not black and not charcoal. Keep everything else')
+            ->not->toContain('merle pattern');
+        expect($prompt('blue merle and white'))->toContain('Blue merle is a merle pattern')->not->toContain('dilute of black');
+        expect(BreedPortraitService::colourHints('blue merle (silvery blue marbled with black, with white and tan markings)'))->toHaveCount(1);
+        expect(BreedPortraitService::colourHints('blue roan (black and white roaned)'))->toBe([])
+            ->and(BreedPortraitService::colourHints('blue speckled with black and tan markings on the head'))->toBe([]);
+        expect($prompt('lilac'))->toContain('Lilac is the dilute of chocolate');
+        expect($prompt('light liver brown'))->toContain('Liver / chocolate is a true brown');
+        expect($prompt('chocolate brown'))->toContain('Liver / chocolate is a true brown');
+        expect($prompt('sable and white'))->toContain('Sable means banded hairs');
+
+        // No hint → the prompt is byte-identical to the one the approved 2026-10-26
+        // variants were made from (hashes from docs/research/breed-portraits/manifest.json).
+        expect($prompt('red and white'))->toContain('in that colour. Keep everything else')
+            ->and(BreedPortraitService::promptHash(bpcService()->colourPrompt(BreedType::BorderCollie, ['key' => 'tricolour', 'value' => 'black, white and tan tricolour'])))
+            ->toBe('sha256:c09e3dcca700becf8a00f26f5435f14ac9e0d0629ff37fa2e9398ff432a3a7c8')
+            ->and(BreedPortraitService::promptHash(bpcService()->colourPrompt(BreedType::BorderCollie, ['key' => 'red-merle-white', 'value' => 'red merle and white'])))
+            ->toBe('sha256:c3e4070cd27185c488095ead9dc39a79590fe49e61a8da2cfbf7be51815cf2b1');
+    });
+
     it('needs an image-edit profile that makes a square image', function () {
         expect(bpcService()->colourProfile()->key)->toBe('nano_banana_pro_edit')
             ->and(fn () => bpcService()->colourProfile('nano_banana_pro'))->toThrow(InvalidArgumentException::class, 'image-edit profile')
@@ -206,6 +230,69 @@ describe('breeds:portraits --colours', function () {
             ->assertSuccessful();
         expect(AiSpendLedger::count())->toBe(12)
             ->and(bpcManifest($this->out)['colour_variants'])->toHaveCount(6);
+    });
+
+    it('--colour regenerates only the named colours, and an existing one only with --force', function () {
+        bpcReference($this->out);
+        fakeFalImageRun(endpoint: 'fal-ai/nano-banana-pro/edit', file: 'variant.png');
+
+        $this->artisan('breeds:portraits', ['--colours' => true, '--breed' => ['border_collie'], '--colour' => ['blue-white', 'sable-white'], '--out' => $this->out])
+            ->expectsOutputToContain('border_collie blue-white: wrote dog/border-collie--blue-white.webp')
+            ->expectsOutputToContain('Generated 2, failed 0')
+            ->assertSuccessful();
+        expect(array_column(bpcManifest($this->out)['colour_variants'], 'colour'))->toBe(['blue-white', 'sable-white'])
+            ->and(AiSpendLedger::count())->toBe(2);
+
+        $this->artisan('breeds:portraits', ['--colours' => true, '--breed' => ['border_collie'], '--colour' => ['blue-white'], '--out' => $this->out])
+            ->expectsOutputToContain('Nothing to generate.')
+            ->assertSuccessful();
+        expect(AiSpendLedger::count())->toBe(2);
+
+        $this->artisan('breeds:portraits', ['--colours' => true, '--breed' => ['border_collie'], '--colour' => ['blue-white'], '--force' => true, '--out' => $this->out])
+            ->expectsOutputToContain('Generated 1, failed 0')
+            ->assertSuccessful();
+        expect(AiSpendLedger::count())->toBe(3)
+            ->and(Http::recorded(fn (Request $r) => str_starts_with($r->url(), 'https://fal.run/'))->last()[0]->data()['prompt'])->toContain('dilute of black');
+    });
+
+    it('keeps an approved variant whose prompt changed (stale) unless --force names it', function () {
+        bpcReference($this->out);
+        fakeFalImageRun(endpoint: 'fal-ai/nano-banana-pro/edit', file: 'variant.png');
+        $this->artisan('breeds:portraits', ['--colours' => true, '--breed' => ['border_collie'], '--colour' => ['sable-white'], '--out' => $this->out])->assertSuccessful();
+
+        // A variant made from an older prompt (e.g. before COLOUR_HINTS).
+        $manifest = bpcManifest($this->out);
+        $manifest['colour_variants'][0]['prompt_hash'] = 'sha256:older';
+        file_put_contents($this->out.'/manifest.json', json_encode($manifest));
+        $bytes = file_get_contents($this->out.'/dog/border-collie--sable-white.webp');
+
+        $this->artisan('breeds:portraits', ['--colours' => true, '--breed' => ['border_collie'], '--colour' => ['sable-white'], '--out' => $this->out])
+            // One output line satisfies one expectation: the whole warning in one string.
+            ->expectsOutputToContain('border_collie sable-white: the prompt changed since dog/border-collie--sable-white.webp was generated — kept (an approved variant is never replaced silently); to regenerate it: --colours --force --breed=border_collie --colour=sable-white.')
+            ->expectsOutputToContain('Nothing to generate.')
+            ->assertSuccessful();
+
+        expect(AiSpendLedger::count())->toBe(1)
+            ->and(file_get_contents($this->out.'/dog/border-collie--sable-white.webp'))->toBe($bytes)
+            ->and(bpcManifest($this->out)['colour_variants'][0]['prompt_hash'])->toBe('sha256:older');
+    });
+
+    it('rejects an unknown --colour key, --colour without --colours, and warns for the default colour', function () {
+        bpcReference($this->out);
+        Http::fake();
+
+        $this->artisan('breeds:portraits', ['--colours' => true, '--breed' => ['border_collie'], '--colour' => ['purple'], '--out' => $this->out])
+            ->expectsOutputToContain('--colour: unknown colour key(s) for the selected breed(s): purple')
+            ->assertFailed();
+        $this->artisan('breeds:portraits', ['--breed' => ['border_collie'], '--colour' => ['blue-white'], '--out' => $this->out])
+            ->expectsOutputToContain('--colour needs --colours.')
+            ->assertFailed();
+        $this->artisan('breeds:portraits', ['--colours' => true, '--breed' => ['border_collie'], '--colour' => ['black-white'], '--dry-run' => true, '--out' => $this->out])
+            ->expectsOutputToContain('--colour=black-white: no variant to make')
+            ->expectsOutputToContain('To generate: 0 image(s)')
+            ->assertSuccessful();
+
+        Http::assertNothingSent();
     });
 
     it('reads the reference from --reference-dir and writes only to --out', function () {

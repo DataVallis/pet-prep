@@ -20,6 +20,7 @@ import {
   parseSourcesTable,
   portraitCopies,
   readInputs,
+  readColourVariants,
   readPortraitManifest,
   renderRegistry,
   slugify,
@@ -486,10 +487,12 @@ test('an UNSOURCED value can never become a fact', () => {
   assert.throws(() => buildRegistry({ ...texts, cat_data: JSON.stringify(cat) }), /UNSOURCED/);
 });
 
-test('JS parse of breed_suitability.php equals PHP itself', { skip: !hasPhp && 'php not installed' }, () => {
-  const file = resolve(ROOT, INPUTS.suitability);
-  const viaPhp = JSON.parse(execFileSync('php', ['-r', 'echo json_encode(require $argv[1]);', file], { encoding: 'utf8' }));
-  assert.deepEqual(parsePhpReturn(readFileSync(file, 'utf8')), viaPhp);
+test('JS parse of breed_suitability.php and breed_colours.php equals PHP itself', { skip: !hasPhp && 'php not installed' }, () => {
+  for (const key of ['suitability', 'breed_colours']) {
+    const file = resolve(ROOT, INPUTS[key]);
+    const viaPhp = JSON.parse(execFileSync('php', ['-r', 'echo json_encode(require $argv[1]);', file], { encoding: 'utf8' }));
+    assert.deepEqual(parsePhpReturn(readFileSync(file, 'utf8')), viaPhp, key);
+  }
 });
 
 test('game numbers equal the seeded breed_stage_params rows', { skip: !(hasPhp && hasVendor) && 'php or backend/vendor missing' }, () => {
@@ -601,6 +604,84 @@ test('portraits: every breed has a portrait key; the committed manifest (if any)
   for (const [, p] of readPortraitManifest(readFileSync(manifest, 'utf8'))) {
     assert.ok(existsSync(resolve(ROOT, PORTRAITS_DIR, p.file)), `${p.file} exists`);
   }
+  for (const [, byColour] of readColourVariants(readFileSync(manifest, 'utf8'))) {
+    for (const [, v] of byColour) assert.ok(existsSync(resolve(ROOT, PORTRAITS_DIR, v.file)), `${v.file} exists`);
+  }
+});
+
+// ─── colour variants (M5-R11-08, David 2026-10-26) — the website's contract ───
+
+const variantEntry = (colour, over = {}) => ({
+  breed: 'labrador_retriever',
+  species: 'dog',
+  colour,
+  colour_value: colour,
+  file: `dog/labrador-retriever--${colour}.webp`,
+  reference: 'dog/labrador-retriever.webp',
+  width: 1024,
+  height: 1024,
+  kind: 'ai_photo',
+  profile: 'nano_banana_pro_edit',
+  prompt_hash: 'sha256:abc',
+  generated_at: '2026-10-26T06:00:00+00:00',
+  cost_usd: 0.15,
+  ...over,
+});
+const withVariants = (portraits, variants) => JSON.stringify({ schema_version: 1, label: 'AI-generated photo', portraits, colour_variants: variants });
+
+test('colour variants: the committed Border Collie variants → portrait.colours in breed_colours order, default first', () => {
+  const bc = registry.breeds.find((b) => b.id === 'border_collie');
+  assert.deepEqual(bc.portrait.colours.map((c) => [c.key, c.file, c.default ?? false]), [
+    ['black-white', 'dog/border-collie.webp', true],
+    ['tricolour', 'dog/border-collie--tricolour.webp', false],
+    ['red-white', 'dog/border-collie--red-white.webp', false],
+    ['blue-white', 'dog/border-collie--blue-white.webp', false],
+    ['blue-merle-white', 'dog/border-collie--blue-merle-white.webp', false],
+    ['red-merle-white', 'dog/border-collie--red-merle-white.webp', false],
+    ['sable-white', 'dog/border-collie--sable-white.webp', false],
+  ]);
+  assert.deepEqual(bc.portrait.colours[0], { key: 'black-white', label: { en: 'Black and white', sl: 'Črno-bel' }, file: 'dog/border-collie.webp', default: true });
+  assert.deepEqual(Object.keys(bc.portrait.colours[1]), ['key', 'label', 'file']);
+  for (const c of bc.portrait.colours) assert.ok(existsSync(resolve(ROOT, PORTRAITS_DIR, c.file)), `${c.file} exists`);
+  // Breeds without variants have no `colours` key at all.
+  for (const b of registry.breeds.filter((x) => x.portrait && x.id !== 'border_collie')) assert.ok(!('colours' in b.portrait), `${b.id} has no colours`);
+  assert.equal(registry.inputs.breed_colours.path, INPUTS.breed_colours);
+});
+
+test('colour variants: only committed colours + the default (manifest colour, else the first colour), labels from breed_colours.php', () => {
+  const texts = readInputs();
+  const lab = (portrait, variants) => buildRegistry({ ...texts, portraits: withVariants([portrait], variants) }).breeds.find((b) => b.id === 'labrador_retriever').portrait;
+
+  const first = lab(portraitEntry(), [variantEntry('chocolate'), variantEntry('yellow')]);
+  assert.deepEqual(first.colours, [
+    { key: 'black', label: { en: 'Black', sl: 'Črn' }, file: 'dog/labrador-retriever.webp', default: true },
+    { key: 'yellow', label: { en: 'Yellow', sl: 'Rumen' }, file: 'dog/labrador-retriever--yellow.webp' },
+    { key: 'chocolate', label: { en: 'Chocolate', sl: 'Čokoladno rjav' }, file: 'dog/labrador-retriever--chocolate.webp' },
+  ]);
+  assert.deepEqual(lab(portraitEntry({ colour: 'yellow' }), [variantEntry('black')]).colours.map((c) => [c.key, c.default ?? false]), [['black', false], ['yellow', true]]);
+  assert.ok(!('colours' in lab(portraitEntry(), [])));
+
+  const reg = buildRegistry({ ...texts, portraits: withVariants([portraitEntry()], [variantEntry('chocolate')]) });
+  assert.doesNotMatch(JSON.stringify(reg.breeds), /generated_at|prompt_hash|cost_usd|colour_value/);
+  const copies = portraitCopies(reg, '/site/public').filter((c) => c.breed === 'labrador_retriever');
+  assert.deepEqual(copies.map((c) => [c.colour ?? null, c.from, c.to]), [
+    [null, resolve(ROOT, PORTRAITS_DIR, 'dog/labrador-retriever.webp'), '/site/public/animals/dogs/labrador-retriever.webp'],
+    ['chocolate', resolve(ROOT, PORTRAITS_DIR, 'dog/labrador-retriever--chocolate.webp'), '/site/public/animals/dogs/labrador-retriever--chocolate.webp'],
+  ]);
+});
+
+test('colour variants: a wrong variant fails loudly', () => {
+  const texts = readInputs();
+  const build = (portraits, variants) => () => buildRegistry({ ...texts, portraits: withVariants(portraits, variants) });
+  assert.throws(build([portraitEntry()], [variantEntry('purple')]), /colour purple: not a colour of/);
+  assert.throws(build([portraitEntry()], [variantEntry('black')]), /already shows this colour/);
+  assert.throws(build([portraitEntry({ colour: 'purple' })], [variantEntry('yellow')]), /portrait colour purple/);
+  assert.throws(build([], [variantEntry('yellow')]), /without a default portrait/);
+  assert.throws(build([portraitEntry()], [variantEntry('yellow', { file: 'dog/labrador-retriever-yellow.webp' })]), /file must be dog\/labrador-retriever--yellow/);
+  assert.throws(build([portraitEntry()], [variantEntry('yellow', { species: 'cat' })]), /species cat, expected dog/);
+  assert.throws(build([portraitEntry()], [variantEntry('yellow'), variantEntry('yellow')]), /duplicate colour variant/);
+  assert.throws(build([portraitEntry()], [variantEntry('yellow', { breed: 'poodle' })]), /poodle is not a breed of the register/);
+  assert.throws(() => buildRegistry({ ...texts, breed_colours: '<?php return [];', portraits: withVariants([portraitEntry()], [variantEntry('yellow')]) }), /no colour list in backend\/config\/breed_colours\.php/);
 });
 
 test('portraits: manifest entries become { file, width, height, kind }, missing ones stay null', () => {
@@ -648,8 +729,9 @@ test('portraits: --copy-portraits writes the registry and copies into <dir>/anim
     const res = spawnSync(process.execPath, [resolve(ROOT, 'scripts/export-breed-registry.mjs'), '--out', out, '--copy-portraits', dir], { encoding: 'utf8' });
     assert.equal(res.status, 0, res.stderr);
     assert.equal(readFileSync(out, 'utf8'), renderRegistry());
-    const n = registry.breeds.filter((b) => b.portrait).length;
+    const n = portraitCopies(registry, dir).length;
     assert.match(res.stdout, new RegExp(`${n} portrait\\(s\\) copied`));
+    assert.match(res.stdout, /copied border_collie blue-white → .*animals\/dogs\/border-collie--blue-white\.webp/);
     for (const c of portraitCopies(registry, dir)) assert.ok(existsSync(c.to), `${c.to} copied`);
     const missing = spawnSync(process.execPath, [resolve(ROOT, 'scripts/export-breed-registry.mjs'), '--out', out, '--copy-portraits', join(dir, 'nope')], { encoding: 'utf8' });
     assert.equal(missing.status, 1);

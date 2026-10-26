@@ -15,6 +15,8 @@
 # that portrait (`breeds:portraits --colours`). The reference portraits + manifest come from
 # docs/research/breed-portraits of `ref`, shipped read-only next to the code
 # (`--reference-dir`); output, review branch and artifact are the same as for portraits.
+# `colour_keys` (space separated, with `colours`): only those colours (`--colour=<key>`), e.g.
+# `blue-white` to redo one variant — an existing variant is replaced only with `force`.
 name: Breed portraits (AI, production server)
 
 on:
@@ -32,6 +34,10 @@ on:
         description: "Colour variants of the existing portraits (--colours, every other standard coat colour)"
         type: boolean
         default: false
+      colour_keys:
+        description: "With colours: only these colour keys of config/breed_colours.php, space separated (empty = every colour), e.g. blue-white. Existing variants still need force."
+        required: false
+        default: ""
       dry_run:
         description: "Only print prompts and cost (--dry-run)"
         type: boolean
@@ -70,6 +76,7 @@ jobs:
           BREEDS: ${{ inputs.breeds }}
           FORCE: ${{ inputs.force }}
           COLOURS: ${{ inputs.colours }}
+          COLOUR_KEYS: ${{ inputs.colour_keys }}
           DRY_RUN: ${{ inputs.dry_run }}
           RUN_ID: ${{ github.run_id }}
         run: |
@@ -84,6 +91,12 @@ jobs:
           if [ "$FORCE" = "true" ]; then ARGS="$ARGS --force"; fi
           if [ "$DRY_RUN" = "true" ]; then ARGS="$ARGS --dry-run"; fi
           if [ "$COLOURS" = "true" ]; then ARGS="$ARGS --colours --reference-dir=/opt/breed-portraits-reference"; fi
+          # Only colour keys (lower-case letters, digits, hyphen) may reach the remote shell.
+          for k in $COLOUR_KEYS; do
+            if [ "$COLOURS" != "true" ]; then echo "colour_keys needs colours"; exit 1; fi
+            if ! [[ "$k" =~ ^[a-z0-9-]+$ ]]; then echo "invalid colour key: $k"; exit 1; fi
+            ARGS="$ARGS --colour=$k"
+          done
           if ! [[ "$RUN_ID" =~ ^[0-9]+$ ]]; then echo "invalid run id"; exit 1; fi
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key

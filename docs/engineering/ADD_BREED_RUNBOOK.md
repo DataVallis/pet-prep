@@ -260,11 +260,26 @@ profile, cost, generated_at). Cost = (colours − 1) × $0.15 (border collie: 6 
 reference portraits come from `docs/research/breed-portraits` of `ref`. Check the cost first with
 `inputs[dry_run]=true`. Review every variant like the portrait (same dog, pose and backdrop; only the colour
 changed; the colour matches the standard); take only the variant files + their `colour_variants` entries from the
-review branch (the server manifest's `portraits` list can be older than `main`'s — keep `main`'s), then
-`node scripts/export-breed-registry.mjs` (the manifest hash is an export input; the variants are not exported yet).
+review branch (the server manifest's `portraits` list can be older than `main`'s — keep `main`'s; add the default
+portrait's `colour` key to its `main` entry if it has none), then `node scripts/export-breed-registry.mjs`: a breed
+with committed variants gets `portrait.colours` (ordered like `breed_colours.php`, each `{ key, label: { en, sl },
+file: "<species>/<slug>--<key>.webp" }` plus the default portrait `{ …, file: "<species>/<slug>.webp", default: true }`;
+no variants → no `colours`), and `--copy-portraits` copies the variant files to `public/animals/<species>/` as well.
+First breed on `main`: Border Collie, 6 variants (David approved 2026-10-26; PR M5-R11-08).
+
+**Redo single colours:** `inputs[colour_keys]` (space-separated `breed_colours` keys, with `colours`) passes
+`--colour=<key>` — only those colours are planned. An existing (approved) variant is never replaced without
+`inputs[force]=true`, also when its prompt changed (`stale` is reported and kept) — so `force` + `colour_keys` redoes
+exactly the named variants. **Colour hints** (`BreedPortraitService::COLOUR_HINTS`) add a sentence to the edit prompt
+for colours that models get wrong: dilute *blue* (slate blue-grey, visibly lighter than black — not for merle / roan /
+speckled / ticked blues), *blue merle* (blue-grey base with black patches), *lilac / lavender*, *liver / chocolate* and
+*sable*; colours without a hint keep a byte-identical prompt and hash. For the Border Collie the hints make
+`blue-white`, `blue-merle-white` and `sable-white` stale (kept; redo only what David rejects).
 
 ```bash
 gh api -X POST repos/DataVallis/pet-prep/actions/workflows/breed-portraits.yml/dispatches -f ref=main -f 'inputs[breeds]=border_collie' -F 'inputs[colours]=true' -F 'inputs[dry_run]=true'
+# redo one colour (blue-white came out almost black, David 2026-10-26):
+gh api -X POST repos/DataVallis/pet-prep/actions/workflows/breed-portraits.yml/dispatches -f ref=main -f 'inputs[breeds]=border_collie' -F 'inputs[colours]=true' -f 'inputs[colour_keys]=blue-white' -F 'inputs[force]=true'
 ```
 
 ## 9. Website (DataVallis/pet-prep-website, from its `main`)

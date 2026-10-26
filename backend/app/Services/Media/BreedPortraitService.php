@@ -47,7 +47,8 @@ use RuntimeException;
  * the coat colour / pattern. The reference portrait is sent as a base64 data URI
  * (it is a local file, not on a public host). Output
  * `<species>/<slug>--<colour-key>.webp`, manifest list `colour_variants`. Same
- * AI Lab budget, same square WebP pipeline.
+ * AI Lab budget, same square WebP pipeline. `--colour=<key>` (repeatable) limits a
+ * run to those colours; COLOUR_HINTS make dilute / brown / sable colours read right.
  */
 class BreedPortraitService
 {
@@ -70,12 +71,35 @@ class BreedPortraitService
      */
     public const COLOUR_EDIT_PROMPT = 'Edit this photograph of a {breed}: change ONLY the coat colour and pattern to {colour}, '
         .'a standard {breed} colour, with the colour distribution natural for this breed in that colour. '
-        .'Keep everything else exactly the same: the same {animal}, the same pose, body shape, proportions, coat length and fur texture, '
+        .'{colour_note}Keep everything else exactly the same: the same {animal}, the same pose, body shape, proportions, coat length and fur texture, '
         .'ear carriage, head position and expression, the same framing, crop and camera angle, the same soft diffused neutral studio light '
         .'and the same seamless light fog-grey (#F3F5F2) studio backdrop with its soft natural floor shadow, no coloured glow or coloured light. '
         .'Realistic 35mm photograph, sharp focus on the {animal}, true-to-life fur texture and colours. '
         .'Only the {animal}: no people, no children, no hands, no other animals, no text, no letters, no logo, no watermark, '
         .'no collar, no name tag, no props.';
+
+    /**
+     * Per-colour hints for the edit prompt (David 2026-10-26: the first blue-and-white
+     * Border Collie came out almost black). Matched on the lower-cased breed_colours
+     * `value`; every matching hint is added, in this order, as `{colour_note}` of
+     * COLOUR_EDIT_PROMPT. A colour without a match keeps its prompt (and prompt hash)
+     * byte-identical, so its committed variant does not become stale.
+     *  - `blue merle` is a merle pattern (black patches on a blue-grey base), not dilute;
+     *  - `blue` elsewhere = the dilute of black — except merle / roan / speckled / ticked
+     *    blues (a mix of black and white hairs, e.g. Cocker blue roan, Cattle Dog blue), whose
+     *    `value` already says what they look like;
+     *  - `lilac` / `lavender` = dilute of chocolate; `liver` / `chocolate` = solid brown;
+     *  - `sable` = banded hairs with black tips.
+     *
+     * @var list<array{match: string, except?: string, hint: string}>
+     */
+    public const COLOUR_HINTS = [
+        ['match' => '/\bblue merle\b/', 'hint' => 'Blue merle is a merle pattern: a light silvery blue-grey base coat marbled with irregular black patches; the blue-grey base must be clearly visible, not a mostly black coat.'],
+        ['match' => '/\bblue\b(?! merle)/', 'except' => '/\b(merle|roan|roaned|speckled|ticked)\b/', 'hint' => 'Blue here is the dilute of black: the blue parts are a clearly slate blue-grey, visibly lighter and bluer than black, not black and not charcoal.'],
+        ['match' => '/\b(lilac|lavender)\b/', 'hint' => 'Lilac is the dilute of chocolate: the lilac parts are a pale warm dove grey with a soft pinkish-brown tint, lighter than blue-grey, not brown and not cold grey.'],
+        ['match' => '/\b(liver|chocolate)\b/', 'hint' => 'Liver / chocolate is a true brown: the brown parts are a rich chocolate brown with a brown nose, not black and not red or ginger.'],
+        ['match' => '/\bsable\b/', 'hint' => 'Sable means banded hairs: a golden to red-tan base coat with darker black-tipped hairs shading the back, shoulders and head, not a solid colour and not black and tan.'],
+    ];
 
     /** Default output: the repo's docs/research/breed-portraits (relative to backend/). */
     public const DEFAULT_OUT = '../docs/research/breed-portraits';
@@ -428,7 +452,29 @@ class BreedPortraitService
         $animal = $breed->species() === Species::Cat ? 'cat' : 'dog';
         $name = (string) config("breed_appearance.{$breed->value}.display_name", str_replace('_', ' ', $breed->value).' '.$animal);
 
-        return strtr(self::COLOUR_EDIT_PROMPT, ['{breed}' => $name, '{animal}' => $animal, '{colour}' => $colour['value']]);
+        $hints = self::colourHints($colour['value']);
+        $note = $hints === [] ? '' : implode(' ', $hints).' ';
+
+        return strtr(self::COLOUR_EDIT_PROMPT, ['{breed}' => $name, '{animal}' => $animal, '{colour}' => $colour['value'], '{colour_note}' => $note]);
+    }
+
+    /**
+     * The COLOUR_HINTS that apply to a breed_colours `value` (in COLOUR_HINTS order).
+     *
+     * @return list<string>
+     */
+    public static function colourHints(string $value): array
+    {
+        $value = mb_strtolower($value);
+        $hints = [];
+
+        foreach (self::COLOUR_HINTS as $rule) {
+            if (preg_match($rule['match'], $value) === 1 && ! (isset($rule['except']) && preg_match($rule['except'], $value) === 1)) {
+                $hints[] = $rule['hint'];
+            }
+        }
+
+        return $hints;
     }
 
     /** Seed per breed + colour (stable across runs and machines). */
@@ -507,12 +553,16 @@ class BreedPortraitService
      * What a colour run would do: one row per breed colour except the default
      * portrait's colour. `generate` / `skip` / `stale` / `force` as plan();
      * `no-reference` when the default portrait is missing in $referenceDir
-     * (generate it first — nothing is sent for that breed).
+     * (generate it first — nothing is sent for that breed). `$only` (`--colour`,
+     * David 2026-10-26) keeps only those colour keys; null = every colour. An
+     * existing variant is still `skip` / `stale` without $force — naming a colour
+     * never regenerates an approved file by itself.
      *
      * @param  list<BreedType>  $breeds
+     * @param  list<string>|null  $only
      * @return list<array{breed: BreedType, colour: array{key: string, value: string}, default_colour: string, file: string, reference: string, reference_path: string, prompt: string, prompt_hash: string, action: string}>
      */
-    public function colourPlan(array $breeds, string $outDir, string $referenceDir, bool $force): array
+    public function colourPlan(array $breeds, string $outDir, string $referenceDir, bool $force, ?array $only = null): array
     {
         $references = $this->readManifest($referenceDir);
         $variants = $this->readColourManifest($outDir);
@@ -530,7 +580,7 @@ class BreedPortraitService
             $hasReference = is_file($referencePath);
 
             foreach ($this->colours($breed) as $colour) {
-                if ($colour['key'] === $default) {
+                if ($colour['key'] === $default || ($only !== null && ! in_array($colour['key'], $only, true))) {
                     continue;
                 }
 

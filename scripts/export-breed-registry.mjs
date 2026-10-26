@@ -71,6 +71,17 @@
  * (writes the registry as usual, then copies every portrait of the export into
  * <dir>/animals/<species slug>/). The registry JSON goes to src/content/registry/registry.json.
  *
+ * Colour variants (M5-R11-08, David 2026-10-26 — `breeds:portraits --colours`, manifest
+ * `colour_variants`, files <species>/<slug>--<colour key>.webp): a breed with at least one
+ * committed variant gets `portrait.colours`, ordered like backend/config/breed_colours.php:
+ *   { key, label: { en, sl }, file: "<species>/<slug>--<key>.webp" }   one per committed variant
+ *   { key, label: { en, sl }, file: "<species>/<slug>.webp", default: true }   the default portrait
+ * (labels = the app's colour-picker labels from breed_colours.php; the default portrait's colour
+ * = its manifest `colour`, else the breed's first colour — as BreedPortraitService). `file` here
+ * keeps the species folder of the manifest (unlike `portrait.file`); the website serves
+ * basename(file) from public/animals/<species.slug.en>/. No variants → no `colours` key.
+ * `--copy-portraits` copies the variant files too.
+ *
  * Usage: node scripts/export-breed-registry.mjs [--out F | --check | --stdout] [--copy-portraits DIR]
  * No dependencies (Node ≥ 20).
  */
@@ -96,6 +107,7 @@ export const INPUTS = {
   checklist_data: 'docs/research/breeder-checklist/data.json',
   checklist_sources: 'docs/research/breeder-checklist/sources.md',
   app_release: APP_RELEASE,
+  breed_colours: 'backend/config/breed_colours.php',
 };
 
 /** Optional input: AI breed portraits (`php artisan breeds:portraits`); missing → every portrait null. */
@@ -117,12 +129,12 @@ export const RESERVED_SLUGS = ['compare', 'primerjava'];
  * config change that this export cannot read safely fails loudly.
  * A PHP list becomes a JS array, an array with keys a plain object (key order kept).
  */
-export function parsePhpReturn(source) {
+export function parsePhpReturn(source, name = 'breed_suitability.php') {
   let i = 0;
   const n = source.length;
   const fail = (msg) => {
     const line = source.slice(0, i).split('\n').length;
-    throw new Error(`breed_suitability.php: ${msg} (line ${line})`);
+    throw new Error(`${name}: ${msg} (line ${line})`);
   };
 
   const skip = () => {
@@ -3097,6 +3109,8 @@ export function buildRegistry(texts) {
   };
 
   const portraits = readPortraitManifest(texts.portraits ?? null);
+  const variants = readColourVariants(texts.portraits ?? null);
+  const breedColours = parsePhpReturn(texts.breed_colours, 'breed_colours.php');
 
   const breeds = [];
   const species = SPECIES.map((sp) => {
@@ -3135,7 +3149,7 @@ export function buildRegistry(texts) {
         health,
         suitability: suitability.breeds[spec.id],
         game: g,
-        portrait: portraitFor(portraits, sp.id, spec.id, slug.en),
+        portrait: portraitFor(portraits, sp.id, spec.id, slug.en, variants.get(spec.id), breedColours[spec.id]),
         breeder_checklist: checklist.breeds[spec.id],
       };
       entry.source_ids = [...collectSourceIds([entry, general[sp.id], checklist.species[sp.id]])].sort(bySourceId);
@@ -3159,7 +3173,7 @@ export function buildRegistry(texts) {
     };
   });
 
-  for (const id of portraits.keys()) {
+  for (const id of new Set([...portraits.keys(), ...variants.keys()])) {
     if (!breeds.some((b) => b.id === id)) throw new Error(`${PORTRAIT_MANIFEST}: ${id} is not a breed of the register`);
   }
 
@@ -3226,19 +3240,64 @@ export function readPortraitManifest(text) {
   return out;
 }
 
-/** The export's `portrait` for one breed: { file (basename), width, height, kind } or null. */
-function portraitFor(portraits, speciesId, breedId, slugEn) {
-  const p = portraits.get(breedId);
-  if (!p) return null;
-  const where = `${PORTRAIT_MANIFEST} ${breedId}`;
+/** manifest.json `colour_variants` → Map(breed id → Map(colour key → entry)); null text / none → empty. */
+export function readColourVariants(text) {
+  const out = new Map();
+  if (text == null) return out;
+  const list = JSON.parse(text).colour_variants ?? [];
+  if (!Array.isArray(list)) throw new Error(`${PORTRAIT_MANIFEST}: colour_variants must be a list`);
+  for (const v of list) {
+    if (typeof v?.breed !== 'string' || typeof v?.colour !== 'string') throw new Error(`${PORTRAIT_MANIFEST}: colour variant without breed / colour`);
+    if (!out.has(v.breed)) out.set(v.breed, new Map());
+    if (out.get(v.breed).has(v.colour)) throw new Error(`${PORTRAIT_MANIFEST}: duplicate colour variant ${v.breed} ${v.colour}`);
+    out.get(v.breed).set(v.colour, v);
+  }
+  return out;
+}
+
+function checkImageEntry(p, where, speciesId, slugEn, suffix) {
   if (p.species !== speciesId) throw new Error(`${where}: species ${p.species}, expected ${speciesId}`);
   if (!PORTRAIT_KINDS.includes(p.kind)) throw new Error(`${where}: unknown kind ${p.kind}`);
   const m = /^([a-z]+)\/([a-z0-9-]+)\.(webp|png|jpg)$/.exec(String(p.file));
-  if (!m || m[1] !== speciesId || m[2] !== slugEn) throw new Error(`${where}: file must be ${speciesId}/${slugEn}.<webp|png|jpg>, got ${p.file}`);
+  if (!m || m[1] !== speciesId || m[2] !== slugEn + suffix) throw new Error(`${where}: file must be ${speciesId}/${slugEn}${suffix}.<webp|png|jpg>, got ${p.file}`);
   for (const k of ['width', 'height']) {
     if (!Number.isInteger(p[k]) || p[k] <= 0) throw new Error(`${where}: ${k} must be a positive integer`);
   }
-  return { file: basename(p.file), width: p.width, height: p.height, kind: p.kind };
+}
+
+/**
+ * The export's `portrait` for one breed: { file (basename), width, height, kind } or null,
+ * plus `colours` when the breed has committed colour variants (see the header).
+ */
+function portraitFor(portraits, speciesId, breedId, slugEn, variants, colourList) {
+  const p = portraits.get(breedId);
+  const where = `${PORTRAIT_MANIFEST} ${breedId}`;
+  if (!p) {
+    if (variants?.size) throw new Error(`${where}: colour variants without a default portrait`);
+    return null;
+  }
+  checkImageEntry(p, where, speciesId, slugEn, '');
+  const portrait = { file: basename(p.file), width: p.width, height: p.height, kind: p.kind };
+  if (!variants?.size) return portrait;
+
+  if (!Array.isArray(colourList) || colourList.length === 0) throw new Error(`${where}: colour variants but no colour list in ${INPUTS.breed_colours}`);
+  const keys = colourList.map((c) => c.key);
+  if (p.colour != null && !keys.includes(p.colour)) throw new Error(`${where}: portrait colour ${p.colour} is not in ${INPUTS.breed_colours}`);
+  const defaultKey = p.colour ?? keys[0];
+  for (const [key, v] of variants) {
+    const at = `${where} colour ${key}`;
+    if (!keys.includes(key)) throw new Error(`${at}: not a colour of ${INPUTS.breed_colours}`);
+    if (key === defaultKey) throw new Error(`${at}: the default portrait already shows this colour`);
+    checkImageEntry(v, at, speciesId, slugEn, `--${key}`);
+  }
+  portrait.colours = colourList
+    .filter((c) => c.key === defaultKey || variants.has(c.key))
+    .map((c) => {
+      const label = { en: c.en, sl: c.sl };
+      if (typeof label.en !== 'string' || typeof label.sl !== 'string') throw new Error(`${where} colour ${c.key}: label en / sl missing in ${INPUTS.breed_colours}`);
+      return c.key === defaultKey ? { key: c.key, label, file: p.file, default: true } : { key: c.key, label, file: variants.get(c.key).file };
+    });
+  return portrait;
 }
 
 /**
@@ -3249,11 +3308,22 @@ export function portraitCopies(registry, publicDir, root = ROOT) {
   const slugOf = Object.fromEntries(registry.species.map((s) => [s.id, s.slug.en]));
   return registry.breeds
     .filter((b) => b.portrait)
-    .map((b) => ({
-      breed: b.id,
-      from: resolve(root, PORTRAITS_DIR, b.species, b.portrait.file),
-      to: resolve(publicDir, 'animals', slugOf[b.species], b.portrait.file),
-    }));
+    .flatMap((b) => [
+      {
+        breed: b.id,
+        from: resolve(root, PORTRAITS_DIR, b.species, b.portrait.file),
+        to: resolve(publicDir, 'animals', slugOf[b.species], b.portrait.file),
+      },
+      // Colour variants (the default colour is the portrait above).
+      ...(b.portrait.colours ?? [])
+        .filter((c) => !c.default)
+        .map((c) => ({
+          breed: b.id,
+          colour: c.key,
+          from: resolve(root, PORTRAITS_DIR, c.file),
+          to: resolve(publicDir, 'animals', slugOf[b.species], basename(c.file)),
+        })),
+    ]);
 }
 
 /** Serialised registry: 2-space JSON + trailing newline (stable diffs). */
@@ -3289,7 +3359,8 @@ function main(argv) {
   writeFileSync(out, json);
   const reg = JSON.parse(json);
   const withPortrait = reg.breeds.filter((b) => b.portrait).length;
-  console.log(`export-breed-registry: wrote ${outRel} (${reg.species.length} species, ${reg.breeds.length} breeds, ${reg.sources.length} sources, ${withPortrait} portraits)`);
+  const variantCount = reg.breeds.reduce((n, b) => n + (b.portrait?.colours ?? []).filter((c) => !c.default).length, 0);
+  console.log(`export-breed-registry: wrote ${outRel} (${reg.species.length} species, ${reg.breeds.length} breeds, ${reg.sources.length} sources, ${withPortrait} portraits, ${variantCount} colour variants)`);
   const copyIdx = args.indexOf('--copy-portraits');
   if (copyIdx >= 0) {
     const dir = args[copyIdx + 1];
@@ -3301,7 +3372,7 @@ function main(argv) {
       if (!existsSync(c.from)) throw new Error(`portrait file missing: ${c.from}`);
       mkdirSync(dirname(c.to), { recursive: true });
       copyFileSync(c.from, c.to);
-      console.log(`export-breed-registry: copied ${c.breed} → ${c.to}`);
+      console.log(`export-breed-registry: copied ${c.breed}${c.colour ? ` ${c.colour}` : ''} → ${c.to}`);
     }
     console.log(`export-breed-registry: ${copies.length} portrait(s) copied (label them "AI-generated photo" on the site)`);
   }

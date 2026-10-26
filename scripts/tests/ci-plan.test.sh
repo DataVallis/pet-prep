@@ -173,6 +173,7 @@ pr_case "breed registry output: backend + scripts tests only" "$S_BTSCRIPTS" doc
 pr_case "breeder checklist: scripts tests only" "$S_SCRIPTS" docs/research/breeder-checklist/data.json docs/research/breeder-checklist/sources.md
 pr_case "breed portraits: scripts tests only" "$S_SCRIPTS" docs/research/breed-portraits/manifest.json docs/research/breed-portraits/dog/border-collie.webp
 pr_case "breed suitability config: backend + scripts" "$S_BSCRIPTS" backend/config/breed_suitability.php
+pr_case "breed colours config: backend + scripts" "$S_BSCRIPTS" backend/config/breed_colours.php
 pr_case "app pet strings: mobile + scripts" "backend=false mobile=true scripts=true image=false " mobile/src/i18n/locales/sl/pet.json
 pr_case "app breed names: mobile + scripts" "backend=false mobile=true scripts=true image=false " mobile/src/i18n/locales/en/family.json
 pr_case "cat research data: backend + scripts tests only" "$S_BTSCRIPTS" docs/research/cat-data/data.json
