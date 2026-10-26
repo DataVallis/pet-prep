@@ -831,6 +831,18 @@
             "prompt_hash": "sha256:70676d98b3a115d508d8e2e3dce72034e0b48beb077e1663b5a5d3b78f7385cd",
             "generated_at": "2026-10-26T01:03:27+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "airedale_terrier",
+            "species": "dog",
+            "file": "dog/airedale-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:bb50148b78f6d813b888caeb7b648692ee8c3c4fc79d54f1f791a5dfd207b294",
+            "generated_at": "2026-10-26T03:07:31+00:00",
+            "cost_usd": 0.15
         }
     ]
 }
