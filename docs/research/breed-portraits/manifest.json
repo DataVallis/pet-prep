@@ -2,7 +2,7 @@
     "schema_version": 1,
     "generator": "backend: php artisan breeds:portraits (M5-R11)",
     "label": "AI-generated photo",
-    "note": "AI-generated breed photos for the website animal register. Show them only with the label \"AI-generated photo\". Prompts come from breed config only (config/breed_appearance.php) — no pet or child data.",
+    "note": "AI-generated breed photos for the website animal register. Show them only with the label \"AI-generated photo\". Prompts come from breed config only (config/breed_appearance.php, config/breed_colours.php) — no pet or child data.",
     "portraits": [
         {
             "breed": "border_collie",
@@ -25,7 +25,7 @@
             "kind": "ai_photo",
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:b775a1b48d7073964cd089ace027151fbcf996769dba5b2294ffea224e9f9329",
-            "generated_at": "2026-10-10T05:47:20+00:00",
+            "generated_at": "2026-10-10T05:49:32+00:00",
             "cost_usd": 0.15
         },
         {
@@ -241,7 +241,7 @@
             "kind": "ai_photo",
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:af22b68d3e35cf939053cf9239b179237a49ca147683a99cb93c917c87706f28",
-            "generated_at": "2026-10-12T07:53:39+00:00",
+            "generated_at": "2026-10-12T07:54:57+00:00",
             "cost_usd": 0.15
         },
         {
@@ -449,90 +449,6 @@
             "cost_usd": 0.15
         },
         {
-            "breed": "bichon_frise",
-            "species": "dog",
-            "file": "dog/bichon-frise.webp",
-            "width": 1024,
-            "height": 1024,
-            "kind": "ai_photo",
-            "profile": "nano_banana_pro",
-            "prompt_hash": "sha256:66da27c74df89e793b1b3660a7188d3bda06200c9be9e918b67bc4e5e131b706",
-            "generated_at": "2026-10-20T15:58:47+00:00",
-            "cost_usd": 0.15
-        },
-        {
-            "breed": "maine_coon",
-            "species": "cat",
-            "file": "cat/maine-coon.webp",
-            "width": 1024,
-            "height": 1024,
-            "kind": "ai_photo",
-            "profile": "nano_banana_pro",
-            "prompt_hash": "sha256:11b566c9c80a122528b3af3603ee640679290feac95382d783abae9b976436f2",
-            "generated_at": "2026-10-10T05:48:13+00:00",
-            "cost_usd": 0.15
-        },
-        {
-            "breed": "british_shorthair",
-            "species": "cat",
-            "file": "cat/british-shorthair.webp",
-            "width": 1024,
-            "height": 1024,
-            "kind": "ai_photo",
-            "profile": "nano_banana_pro",
-            "prompt_hash": "sha256:8bdfc773797c813dfa20bf87e07bb0769d13580812b99c1e726a5ba000fe7160",
-            "generated_at": "2026-10-11T03:57:35+00:00",
-            "cost_usd": 0.15
-        },
-        {
-            "breed": "ragdoll",
-            "species": "cat",
-            "file": "cat/ragdoll.webp",
-            "width": 1024,
-            "height": 1024,
-            "kind": "ai_photo",
-            "profile": "nano_banana_pro",
-            "prompt_hash": "sha256:b1fd6435bb9b987064f80354be0e60ca76eac812424ff1864c8fc396e9325fd5",
-            "generated_at": "2026-10-11T07:07:20+00:00",
-            "cost_usd": 0.15
-        },
-        {
-            "breed": "siberian_cat",
-            "species": "cat",
-            "file": "cat/siberian-cat.webp",
-            "width": 1024,
-            "height": 1024,
-            "kind": "ai_photo",
-            "profile": "nano_banana_pro",
-            "prompt_hash": "sha256:aea1d8808a012aaa8174dc48b78c5ebfbf93473324d479e67e02a2a9be7a973c",
-            "generated_at": "2026-10-11T09:48:10+00:00",
-            "cost_usd": 0.15
-        },
-        {
-            "breed": "norwegian_forest_cat",
-            "species": "cat",
-            "file": "cat/norwegian-forest-cat.webp",
-            "width": 1024,
-            "height": 1024,
-            "kind": "ai_photo",
-            "profile": "nano_banana_pro",
-            "prompt_hash": "sha256:61736c12d2a0b0dc20013e3ba09fe0a2850e0844a6f2ebfd793addf63165134a",
-            "generated_at": "2026-10-11T12:58:50+00:00",
-            "cost_usd": 0.15
-        },
-        {
-            "breed": "bengal",
-            "species": "cat",
-            "file": "cat/bengal.webp",
-            "width": 1024,
-            "height": 1024,
-            "kind": "ai_photo",
-            "profile": "nano_banana_pro",
-            "prompt_hash": "sha256:345f688e858e33cf86ba38618f5eb48f80d9d0dda6af4e1dd38d42d5a5fe8655",
-            "generated_at": "2026-10-11T15:05:36+00:00",
-            "cost_usd": 0.15
-        },
-        {
             "breed": "maltese",
             "species": "dog",
             "file": "dog/maltese.webp",
@@ -626,6 +542,18 @@
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:b665974e692169deace109b4d0f749f321976744883745083fa6309b97ca8ccc",
             "generated_at": "2026-10-20T03:52:20+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "bichon_frise",
+            "species": "dog",
+            "file": "dog/bichon-frise.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:66da27c74df89e793b1b3660a7188d3bda06200c9be9e918b67bc4e5e131b706",
+            "generated_at": "2026-10-20T15:58:47+00:00",
             "cost_usd": 0.15
         },
         {
@@ -842,6 +770,170 @@
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:bb50148b78f6d813b888caeb7b648692ee8c3c4fc79d54f1f791a5dfd207b294",
             "generated_at": "2026-10-26T03:07:31+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "maine_coon",
+            "species": "cat",
+            "file": "cat/maine-coon.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:11b566c9c80a122528b3af3603ee640679290feac95382d783abae9b976436f2",
+            "generated_at": "2026-10-10T05:48:13+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "british_shorthair",
+            "species": "cat",
+            "file": "cat/british-shorthair.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:8bdfc773797c813dfa20bf87e07bb0769d13580812b99c1e726a5ba000fe7160",
+            "generated_at": "2026-10-11T03:57:35+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "ragdoll",
+            "species": "cat",
+            "file": "cat/ragdoll.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:b1fd6435bb9b987064f80354be0e60ca76eac812424ff1864c8fc396e9325fd5",
+            "generated_at": "2026-10-11T07:07:20+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "siberian_cat",
+            "species": "cat",
+            "file": "cat/siberian-cat.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:aea1d8808a012aaa8174dc48b78c5ebfbf93473324d479e67e02a2a9be7a973c",
+            "generated_at": "2026-10-11T09:48:10+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "norwegian_forest_cat",
+            "species": "cat",
+            "file": "cat/norwegian-forest-cat.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:61736c12d2a0b0dc20013e3ba09fe0a2850e0844a6f2ebfd793addf63165134a",
+            "generated_at": "2026-10-11T12:58:50+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "bengal",
+            "species": "cat",
+            "file": "cat/bengal.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:345f688e858e33cf86ba38618f5eb48f80d9d0dda6af4e1dd38d42d5a5fe8655",
+            "generated_at": "2026-10-11T15:05:36+00:00",
+            "cost_usd": 0.15
+        }
+    ],
+    "colour_variants": [
+        {
+            "breed": "border_collie",
+            "species": "dog",
+            "colour": "tricolour",
+            "colour_value": "black, white and tan tricolour",
+            "file": "dog/border-collie--tricolour.webp",
+            "reference": "dog/border-collie.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:c09e3dcca700becf8a00f26f5435f14ac9e0d0629ff37fa2e9398ff432a3a7c8",
+            "generated_at": "2026-10-26T06:02:22+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "border_collie",
+            "species": "dog",
+            "colour": "red-white",
+            "colour_value": "red and white",
+            "file": "dog/border-collie--red-white.webp",
+            "reference": "dog/border-collie.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:e2a4adef8af58cad6be70d4839f799f21287770f47e1101c2d7c8cf78798da39",
+            "generated_at": "2026-10-26T06:02:41+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "border_collie",
+            "species": "dog",
+            "colour": "blue-white",
+            "colour_value": "blue and white",
+            "file": "dog/border-collie--blue-white.webp",
+            "reference": "dog/border-collie.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:103eaaf678169e2e9b7efcf0f81f0719a8d1a83815c43fefcc83143afe581b2e",
+            "generated_at": "2026-10-26T06:02:59+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "border_collie",
+            "species": "dog",
+            "colour": "blue-merle-white",
+            "colour_value": "blue merle and white",
+            "file": "dog/border-collie--blue-merle-white.webp",
+            "reference": "dog/border-collie.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:0baf9e801786cb1e22e1415af2e72dab3169e5c79131833056b68847f1592ecb",
+            "generated_at": "2026-10-26T06:03:19+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "border_collie",
+            "species": "dog",
+            "colour": "red-merle-white",
+            "colour_value": "red merle and white",
+            "file": "dog/border-collie--red-merle-white.webp",
+            "reference": "dog/border-collie.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:c3e4070cd27185c488095ead9dc39a79590fe49e61a8da2cfbf7be51815cf2b1",
+            "generated_at": "2026-10-26T06:03:39+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "border_collie",
+            "species": "dog",
+            "colour": "sable-white",
+            "colour_value": "sable and white",
+            "file": "dog/border-collie--sable-white.webp",
+            "reference": "dog/border-collie.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:821687f6319f68246da6a2fe0cb2be3c3869f1a5281444dad9a5f285a584b2f3",
+            "generated_at": "2026-10-26T06:03:57+00:00",
             "cost_usd": 0.15
         }
     ]
