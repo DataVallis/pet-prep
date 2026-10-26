@@ -302,6 +302,15 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - [x] M5-T19 Opozorila za administratorje v kanal Discord (David 24. 10. 2026) — 2026-10-24, `feat/M5-T19-discord-alerts` (backend): ob nastavljenem `DISCORD_ALERTS_WEBHOOK_URL` gre vsako opozorilo iz zvončka superadminov (proračun za AI 80 % / 100 % produkcija + AI Lab, dnevni + mesečni; stanje fal.ai nizko / porabljeno) enkrat tudi v Discord (vdelava rumena / rdeča, zneski, povezava na stran administracije); isto odpravljanje ponovitev, napaka Discorda ne ustavi zvončka, ponovitev ob 429; gumb »Test Discord« v »System health«; vrste opozoril v `AdminAlertKind` za kasnejše razširitve. E-pošta ostane izklopljena (`MAIL_MAILER=log`). **Odprto:** David ustvari webhook in ga vpiše v `/opt/petprep/.env`
 - [ ] Značka dostopnosti v nogi petprep.si (David 23. 10.) — samo dejstva, ko je M5-T17 pri uporabnikih; brez 'certificirano' / WCAG
 
+## M6-W — »Želje« (David, 26. 10. 2026; spec `docs/product/SHOP_SPEC.md`)
+
+- [ ] M6-W01 Strežnik: katalog stvari (`shop_items`), prošnje (`pet_wishes`: največ 3 odprte na otroka, ponovna prošnja po 7 dneh), lastništvo (`pet_items`, ostanek priboljškov), API otrok / starš, push staršu (brez imena otroka)
+- [ ] M6-W02 Nakup: izdelki v App Store / Google Play prek RevenueCat (consumable, 5,99 € postelja / skledi / igrača, 2,99 € priboljški 10×), webhook → kredit → starš dodeli ljubljenčku; vračila ni (S11) — **QA: plačila**
+- [ ] M6-W03 AI vsebine stvari: slika + video na videz (pasma + barva + obdobje, skupno), novo obdobje → nova vsebina, AiSpendGuard, »na poti« do priprave; mešanček samo vsebino stvari (S8)
+- [ ] M6-W04 Aplikacija – otrok: »Želje« (katalog brez cen, »Prosi starša«, »Že ima«, »Mogoče kdaj drugič«), postelja v spanju, skledi pri hranjenju, igrača pri igri, gumb »Priboljšek«
+- [ ] M6-W05 Aplikacija – starš: seznam »Želje (N)« na nadzorni plošči, Kupi / Ne zdaj, nakup brez prošnje (presenečenje)
+- [ ] M6-W06 Ovratnica (S7: pozneje — nov videz za vsa stanja)
+
 ## Po MVP (backlog)
 
 - **Nadgradnja brezplačne živali v 12-tedenski izziv** (David 9. 10. 2026: *ne zdaj, kasneje*): danes izziv samo s plačljivo pasmo (M5-F03). Strežnik je pripravljen (M4-10): ob nakupu žival ohrani videz iz skupnega nabora, manjkajoči videi polnega nabora se shranijo na videz in so za naslednji nakup istega videza brezplačni (`FreePetLookPoolTest`). Manjka: pravilo izdelka (cena, program, certifikat za mešančka), API za nadgradnjo, aplikacija.
@@ -311,7 +320,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - Breed Matchmaker, "Real Cost of a Dog" kalkulator (tudi kot lead magnet na webu)
 - 7-dnevni Puppy Promoter badge (lahko že v M3, če je del paywall toka)
 - Second Chance reset (19,99 € consumable)
-- IAP ekonomija: veterinar, priboljški, igrače
+- IAP ekonomija: veterinar (S2: ne v »Željah«); priboljški in igrače → **M6-W**
 - B2B affiliate (Mr. Pet) — QR kuponi
 - ~~M5 Realistična simulacija~~ → premaknjeno v **M5-R** zgoraj (2026-10-05)
 - Skaliranje in nove države: glej `docs/engineering/SCALING.md` (sprožilci + ukrepi)
