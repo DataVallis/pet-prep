@@ -158,27 +158,27 @@ describe('calm countdown', () => {
 
   it('under 3 h: a deadline "mora ven v ~1 h 20 min." + how-to (M5-T01)', () => {
     const c = takeOutCountdown(makeTakeOut(), at('2026-10-04T13:00:00+02:00') - 80 * 60_000, TZ);
-    expect(c).toEqual({ line: 'Kuža mora ven v ~1 h 20 min.', hint: '~1 h 20 min', due: false, level: 'calm', howTo: HOW_TO });
+    expect(c).toEqual({ line: 'Kuža mora ven v ~1 h 20 min.', hint: '~1 h 20 min', due: false, level: 'calm', howTo: HOW_TO, short: 'Ven čez ~1 h 20 min' });
   });
 
   it('later (quiet hours in between): "najkasneje" + a family clock time', () => {
     const clock = makeTakeOut({ next_due_at: '2026-10-04T13:30:00+02:00' });
     const c = takeOutCountdown(clock, at('2026-10-04T07:00:00+02:00'), TZ);
-    expect(c).toEqual({ line: 'Kuža mora ven najkasneje ob 13:30.', hint: 'ob 13:30', due: false, level: 'calm', howTo: HOW_TO });
+    expect(c).toEqual({ line: 'Kuža mora ven najkasneje ob 13:30.', hint: 'ob 13:30', due: false, level: 'calm', howTo: HOW_TO, short: 'Ven najkasneje ob 13:30' });
     const tomorrow = takeOutCountdown(makeTakeOut({ next_due_at: '2026-10-05T07:10:00+02:00' }), at('2026-10-04T21:00:00+02:00'), TZ);
     expect(tomorrow?.line).toBe('Kuža mora ven najkasneje jutri ob 7:10.');
   });
 
   it('under a minute left: "wants to go out", not "~1 min"', () => {
     const c = takeOutCountdown(makeTakeOut(), at('2026-10-04T13:00:00+02:00') - 40_000, TZ);
-    expect(c).toEqual({ line: 'Kuža bi rad šel ven.', hint: 'zdaj', due: true, level: 'urgent', howTo: null });
+    expect(c).toEqual({ line: 'Kuža bi rad šel ven.', hint: 'zdaj', due: true, level: 'urgent', howTo: null, short: 'Kuža mora ven zdaj' });
     const justOver = takeOutCountdown(makeTakeOut(), at('2026-10-04T13:00:00+02:00') - 61_000, TZ);
     expect(justOver?.line).toBe('Kuža mora ven v ~1 min.');
   });
 
   it('due: a calm line, never an alarm', () => {
     const c = takeOutCountdown(makeTakeOut(), at('2026-10-04T13:05:00+02:00'), TZ);
-    expect(c).toEqual({ line: 'Kuža bi rad šel ven.', hint: 'zdaj', due: true, level: 'urgent', howTo: null });
+    expect(c).toEqual({ line: 'Kuža bi rad šel ven.', hint: 'zdaj', due: true, level: 'urgent', howTo: null, short: 'Kuža mora ven zdaj' });
     expect(c?.line).not.toMatch(/!|nujno|hitro/i);
   });
 });

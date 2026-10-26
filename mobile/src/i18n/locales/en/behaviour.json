@@ -28,7 +28,10 @@
       "chewing": "Chewed slipper",
       "scratching": "Scratched sofa"
     },
-    "cleanChewing": "Tidy the slipper"
+    "cleanChewing": "Tidy the slipper",
+    "takeOutShortIn": "Out within {{duration}}",
+    "takeOutShortAt": "Out {{when}} at the latest",
+    "takeOutShortNow": "Your pup needs out now"
   },
   "parent": {
     "title": "Behaviour",

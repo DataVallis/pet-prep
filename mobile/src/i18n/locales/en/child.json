@@ -6,7 +6,13 @@
       "more": "+{{count}} more",
       "moreA11y": "Show {{count}} more messages",
       "less": "Less",
-      "lessA11y": "Hide the extra messages"
+      "lessA11y": "Hide the extra messages",
+      "collapseA11y": "Hide messages",
+      "expandA11y": "Show messages ({{count}})",
+      "expandEmptyA11y": "Show messages",
+      "short": {
+        "firstAid": "Your cat is hungry"
+      }
     },
     "feed": "Feed",
     "emergencyFeed": "Emergency meal",
@@ -221,7 +227,8 @@
     "digesting": {
       "title": "Wait with the walk",
       "body": "Your pup is digesting. Wait a little before the walk.",
-      "until": "You can go for a walk at {{time}}."
+      "until": "You can go for a walk at {{time}}.",
+      "short": "Wait with the walk until {{time}}"
     }
   },
   "grooming": {

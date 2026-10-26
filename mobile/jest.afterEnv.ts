@@ -6,6 +6,7 @@
 import { channelAuthGate, childPetFetchGate } from '@/modules/childPet/refetchGovernor';
 import { useServerStatusStore } from '@/store/serverStatusStore';
 import { setMediaFileStoreForTests } from '@/modules/petMedia/mediaFileCache';
+import { resetTopStackPrefsForTests, setTopStackPrefsStoreForTests } from '@/modules/hud/topStackPrefs';
 
 beforeEach(() => {
   childPetFetchGate.reset();
@@ -14,4 +15,7 @@ beforeEach(() => {
   useServerStatusStore.getState().reset();
   // Local media copies (2026-10-20): off by default (remote URLs); tests opt in with a fake store.
   setMediaFileStoreForTests(null);
+  // David 2026-10-26: the HUD top stack's collapsed state is a device-wide store — start expanded.
+  setTopStackPrefsStoreForTests(null);
+  resetTopStackPrefsForTests();
 });

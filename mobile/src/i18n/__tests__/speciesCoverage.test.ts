@@ -41,6 +41,7 @@ const DOG_ONLY: Readonly<Record<string, string>> = {
   'behaviour:child.takeOutIn': 'potty training (take out) — dogs only',
   'behaviour:child.takeOutAt': 'potty training (take out) — dogs only',
   'behaviour:child.takeOutNow': 'potty training (take out) — dogs only',
+  'behaviour:child.takeOutShortNow': 'potty training (take out) — dogs only (collapsed HUD pill)',
   'behaviour:child.success.take_out': 'potty training (take out) — dogs only',
   'behaviour:child.unchanged.take_out': 'potty training (take out) — dogs only',
   'behaviour:child.success.resolve_chewing': 'chewed slipper — dogs only',

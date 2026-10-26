@@ -151,6 +151,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-10-26 (cloud, mobile) — child HUD top stack collapses (`feat/hud-top-stack-collapse`)
+- David (stack still covered the dog's head): round icon-only × (in line with the first card) or swipe up collapses the stack into one pill row (most urgent card's icon + `short` text, »+N«, ▾, then icon-only chips via `compact`); pill tap / swipe down expands. Urgent top card → red pill; a new urgent alert (`topStack.ts#alertTokens` / `reconcileAlerts`) auto-expands once. Persisted per device in `modules/hud/topStackPrefs.ts` (Zustand + SecureStore `petprep.hud_top_stack`). `BehaviourPanel` `chips` → `renderChips(compact)`, `notice` / `meals` / `cards` carry `short` + `icon`; `TakeOutCountdown.short`, `DigestionNoteText.short`. JS only (OTA). **Debt:** not checked on a phone (iPhone SE with 4+ chips wraps the collapsed row to two lines; LayoutAnimation on Android New Arch to verify; swipe-up uses PanResponder capture — check it doesn't fight the toast / invitation buttons).
+
 ### 2026-10-26 (cloud, backend) — M5-R11-08 Border Collie colour variants on main + `--colour` + export (`feat/M5-R11-08-colour-variants`)
 - 6 approved Border Collie variants (run 40277456276) + their `colour_variants` entries committed (portrait entry got `colour: black-white`); `breeds:portraits --colours --colour=<key>` / workflow input `colour_keys`; `COLOUR_HINTS` in the edit prompt (blue-white, blue-merle-white, sable-white now `stale` but kept — never replaced without `--force`); export `portrait.colours` (contract for the website) + `--copy-portraits` copies variants. **Next:** dispatch `colour_keys=blue-white force=true` for border_collie (one $0.15 edit), review, commit; website shows the colours. Debt: none new.
 

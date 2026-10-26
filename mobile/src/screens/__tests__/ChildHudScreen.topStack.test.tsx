@@ -10,7 +10,10 @@ import { api } from '@/api/client';
 import ChildHudScreen from '@/screens/ChildHudScreen';
 import { METRICS_RESERVED_RIGHT } from '@/modules/hud/hudLayout';
 import { useAppStore } from '@/store/appStore';
-import { makeBehaviourEvent, makeLiveChildState, makeMedia, makePet, makePetProfile, makeTakeOut } from '@/test-utils/fixtures';
+import { makeBehaviourEvent, makeLiveChildState, makeMedia, makePet, makePetProfile, makePlayState, makeTakeOut } from '@/test-utils/fixtures';
+import { resetTopStackPrefsForTests, setTopStackPrefsStoreForTests, useTopStackPrefs } from '@/modules/hud/topStackPrefs';
+import { verticalSwipe } from '@/test-utils/stackSwipe';
+import { palette } from '@/theme';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 
 configure({ defaultIncludeHiddenElements: true });
@@ -107,5 +110,97 @@ describe('ChildHudScreen top stack', () => {
     await renderHud(makeLiveChildState({ pet: { profile: makePetProfile() }, behaviour: { take_out: makeTakeOut(), can_take_out: true } }));
     expect(screen.getByTestId('hud-take-out-countdown')).toBeTruthy();
     expect(screen.queryByTestId('hud-top-stack-more')).toBeNull();
+  });
+});
+
+describe('ChildHudScreen collapsible top stack (David 2026-10-26)', () => {
+  const withPlay = () => {
+    const state = busyPuppy();
+    return { ...state, play: makePlayState() } as typeof state;
+  };
+
+  it('× (icon only, "Skrij sporočila") collapses the stack into one pill + icon-only chips', async () => {
+    await renderHud(withPlay());
+    const close = screen.getByTestId('hud-top-stack-collapse');
+    expect(close.props.accessibilityLabel).toBe('Skrij sporočila');
+    expect(within(close).queryByText(/Skrij/)).toBeNull();
+    expect(within(screen.getByTestId('hud-chip-row')).getByText('Igra')).toBeTruthy();
+
+    fireEvent.press(close);
+    const collapsed = screen.getByTestId('hud-top-stack-collapsed');
+    // No card bodies any more — only the pill (the most urgent card: the orange take-out clock) …
+    expect(screen.queryByTestId('hud-take-out-countdown')).toBeNull();
+    expect(screen.queryByTestId('hud-scene-chewing')).toBeNull();
+    const pill = within(collapsed).getByTestId('hud-top-stack-pill');
+    expect(within(pill).getByTestId('hud-top-stack-pill-text').props.children).toBe('Ven čez ~55 min');
+    expect(within(pill).getByText('+2')).toBeTruthy();
+    expect(pill.props.accessibilityLabel).toBe('Ven čez ~55 min. Pokaži sporočila (3)');
+    // … in the red style (urgent top card).
+    const pillStyle = StyleSheet.flatten(pill.props.style) as ViewStyle;
+    expect(pillStyle.borderColor).toBe(palette.dangerDark);
+    // The chips keep their action and full name, without the text.
+    const play = within(collapsed).getByTestId('hud-play-open');
+    expect(play.props.accessibilityLabel).toBeTruthy();
+    expect(within(play).queryByText('Igra')).toBeNull();
+    fireEvent.press(play);
+    expect(useAppStore.getState().playOverlay).toBe('pick');
+    // Remembered on the device.
+    expect(useTopStackPrefs.getState().collapsed).toBe(true);
+  });
+
+  it('tapping the pill expands it again', async () => {
+    await renderHud(withPlay());
+    fireEvent.press(screen.getByTestId('hud-top-stack-collapse'));
+    fireEvent.press(screen.getByTestId('hud-top-stack-pill'));
+    expect(screen.queryByTestId('hud-top-stack-collapsed')).toBeNull();
+    expect(screen.getByTestId('hud-take-out-countdown')).toBeTruthy();
+    expect(within(screen.getByTestId('hud-chip-row')).getByText('Igra')).toBeTruthy();
+    expect(useTopStackPrefs.getState().collapsed).toBe(false);
+  });
+
+  it('swipe up on the stack collapses it, swipe down on the pill row expands it; a tap-sized move does nothing', async () => {
+    await renderHud(withPlay());
+    expect(verticalSwipe(screen.getByTestId('hud-behaviour'), -4)).toBe(false);
+    expect(verticalSwipe(screen.getByTestId('hud-behaviour'), 30)).toBe(false);
+    expect(verticalSwipe(screen.getByTestId('hud-behaviour'), -60)).toBe(true);
+    expect(screen.getByTestId('hud-top-stack-collapsed')).toBeTruthy();
+
+    expect(verticalSwipe(screen.getByTestId('hud-behaviour'), -60)).toBe(false);
+    expect(verticalSwipe(screen.getByTestId('hud-behaviour'), 60)).toBe(true);
+    expect(screen.queryByTestId('hud-top-stack-collapsed')).toBeNull();
+    expect(screen.getByTestId('hud-take-out-countdown')).toBeTruthy();
+  });
+
+  it('starts collapsed when this device remembered it (no auto-expand for items already seen)', async () => {
+    const state = withPlay();
+    // First visit: collapse with the current alerts on screen.
+    await renderHud(state);
+    fireEvent.press(screen.getByTestId('hud-top-stack-collapse'));
+    const stored = { collapsed: true, seen: useTopStackPrefs.getState().seen };
+    screen.unmount();
+
+    resetTopStackPrefsForTests();
+    setTopStackPrefsStoreForTests({
+      getItemAsync: () => Promise.resolve(JSON.stringify(stored)),
+      setItemAsync: () => Promise.resolve(),
+    });
+    await renderHud(state);
+    expect(await screen.findByTestId('hud-top-stack-collapsed')).toBeTruthy();
+    expect(screen.queryByTestId('hud-take-out-countdown')).toBeNull();
+  });
+
+  it('only chips: collapsed shows the icon chips and a ▾ to expand', async () => {
+    // A legacy pet (no profile → no meals row) with play: no cards at all, only the "Igra" chip.
+    const state = makeLiveChildState({ pet: { profile: makePetProfile({ legacy: true }) } });
+    await renderHud({ ...state, play: makePlayState() } as typeof state);
+    expect(screen.queryByTestId('hud-top-stack-pill')).toBeNull();
+    const close = within(screen.getByTestId('hud-chip-row')).getByTestId('hud-top-stack-collapse');
+    fireEvent.press(close);
+    expect(screen.queryByTestId('hud-top-stack-pill')).toBeNull();
+    const expand = screen.getByTestId('hud-top-stack-expand');
+    expect(expand.props.accessibilityLabel).toBe('Pokaži sporočila');
+    expect(within(screen.getByTestId('hud-top-stack-collapsed')).getByTestId('hud-play-open')).toBeTruthy();
+    fireEvent.press(expand);
+    expect(within(screen.getByTestId('hud-chip-row')).getByText('Igra')).toBeTruthy();
   });
 });

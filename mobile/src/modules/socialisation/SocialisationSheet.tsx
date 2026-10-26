@@ -23,6 +23,7 @@ import {
   type ChildSocialisation,
   type SocialisationExperience,
 } from '@/modules/socialisation/socialisation';
+import { COMPACT_CHIP_HIT_SLOP, compactChipStyles } from '@/modules/hud/compactChip';
 import { t } from '@/i18n';
 import { MIN_TOUCH, alpha, dark, fonts, palette, radius, tightTracking } from '@/theme';
 
@@ -37,22 +38,24 @@ export interface SocialisationChipProps {
   /** Amber dot: the server would accept a record now. */
   pending: boolean;
   onPress: () => void;
+  /** Collapsed HUD top stack: icon only (the full name stays the a11y label). */
+  compact?: boolean;
 }
 
 /** "Nova izkušnja" — a glass chip like "Šola" / "Počeši". */
-export function SocialisationChip({ pending, onPress }: SocialisationChipProps) {
+export function SocialisationChip({ pending, onPress, compact = false }: SocialisationChipProps) {
   return (
     <Pressable
       testID="hud-socialisation-chip"
       accessibilityRole="button"
       accessibilityLabel={S.chipA11y}
       onPress={onPress}
-      hitSlop={6}
-      style={({ pressed }) => [styles.chip, pressed && styles.pressed]}
+      hitSlop={compact ? COMPACT_CHIP_HIT_SLOP : 6}
+      style={({ pressed }) => [styles.chip, compact && compactChipStyles.chip, pressed && styles.pressed]}
     >
       <Sparkles color={palette.mint} size={16} />
-      <Text style={styles.chipText}>{S.chip}</Text>
-      {pending && <View style={styles.badge} testID="hud-socialisation-chip-badge" />}
+      {!compact && <Text style={styles.chipText}>{S.chip}</Text>}
+      {pending && <View style={[styles.badge, compact && compactChipStyles.corner]} testID="hud-socialisation-chip-badge" />}
     </Pressable>
   );
 }

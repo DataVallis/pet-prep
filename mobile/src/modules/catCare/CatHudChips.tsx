@@ -11,6 +11,7 @@ import { Pressable, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
 import { Brush, Info, Recycle } from 'lucide-react-native';
 
+import { COMPACT_CHIP_HIT_SLOP, compactChipStyles } from '@/modules/hud/compactChip';
 import { CAT_HUD_STRINGS, type CatChip } from '@/modules/catCare/catHud';
 import { MIN_TOUCH, alpha, palette } from '@/theme';
 
@@ -21,9 +22,11 @@ export interface CatHudChipProps {
   disabled?: boolean;
   /** Why it is off (»💤 Muca spi do 7:00«) — read out with the button. */
   disabledReason?: string;
+  /** Collapsed HUD top stack: icon only (the full name stays the a11y label). */
+  compact?: boolean;
 }
 
-export function CatHudChip({ chip, onPress, disabled = false, disabledReason }: CatHudChipProps) {
+export function CatHudChip({ chip, onPress, disabled = false, disabledReason, compact = false }: CatHudChipProps) {
   const Icon = chip.kind === 'grooming' ? Brush : Recycle;
   return (
     <Pressable
@@ -34,12 +37,12 @@ export function CatHudChip({ chip, onPress, disabled = false, disabledReason }: 
       accessibilityState={{ disabled }}
       disabled={disabled}
       onPress={onPress}
-      hitSlop={6}
-      style={({ pressed }) => [styles.chip, pressed && styles.pressed, disabled && styles.disabled]}
+      hitSlop={compact ? COMPACT_CHIP_HIT_SLOP : 6}
+      style={({ pressed }) => [styles.chip, compact && compactChipStyles.chip, pressed && styles.pressed, disabled && styles.disabled]}
     >
       <Icon color={palette.mint} size={16} />
-      <Text style={styles.text}>{chip.label}</Text>
-      {chip.pending && <View style={styles.badge} testID={`hud-cat-chip-${chip.kind}-badge`} />}
+      {!compact && <Text style={styles.text}>{chip.label}</Text>}
+      {chip.pending && <View style={[styles.badge, compact && compactChipStyles.corner]} testID={`hud-cat-chip-${chip.kind}-badge`} />}
     </Pressable>
   );
 }

@@ -24,6 +24,7 @@ import {
   type PlayInvitation,
   type PlayKind,
 } from '@/modules/play/play';
+import { COMPACT_CHIP_HIT_SLOP, compactChipStyles } from '@/modules/hud/compactChip';
 import { MIN_TOUCH, alpha, palette } from '@/theme';
 
 export interface PlayChipProps {
@@ -32,9 +33,11 @@ export interface PlayChipProps {
   /** M5-R06-08b: a cat's chip reads "Crkljanje" (a cat only cuddles); default "Igra". */
   label?: string;
   accessibilityLabel?: string;
+  /** Collapsed HUD top stack: icon only (the full name stays the a11y label). */
+  compact?: boolean;
 }
 
-export function PlayChip({ block, onPress, label, accessibilityLabel }: PlayChipProps) {
+export function PlayChip({ block, onPress, label, accessibilityLabel, compact = false }: PlayChipProps) {
   const disabled = block !== null;
   return (
     <Pressable
@@ -45,10 +48,11 @@ export function PlayChip({ block, onPress, label, accessibilityLabel }: PlayChip
       accessibilityState={{ disabled }}
       disabled={disabled}
       onPress={onPress}
-      style={({ pressed }) => [styles.chip, pressed && styles.pressed, disabled && styles.disabled]}
+      hitSlop={compact ? COMPACT_CHIP_HIT_SLOP : undefined}
+      style={({ pressed }) => [styles.chip, compact && compactChipStyles.chip, pressed && styles.pressed, disabled && styles.disabled]}
     >
       <HandHeart color={palette.mint} size={16} />
-      <Text style={styles.chipText}>{label ?? PLAY_STRINGS.chip}</Text>
+      {!compact && <Text style={styles.chipText}>{label ?? PLAY_STRINGS.chip}</Text>}
     </Pressable>
   );
 }
