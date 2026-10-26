@@ -246,6 +246,8 @@ export const BEHAVIOUR_STRINGS = strings('behaviour', 'child', {
   takeOutAt: (when: string) => t('behaviour:child.takeOutAt', { when }),
   nextTakeOutIn: (duration: string) => t('behaviour:child.nextTakeOutIn', { duration }),
   nextTakeOutAt: (when: string) => t('behaviour:child.nextTakeOutAt', { when }),
+  takeOutShortIn: (duration: string) => t('behaviour:child.takeOutShortIn', { duration }),
+  takeOutShortAt: (when: string) => t('behaviour:child.takeOutShortAt', { when }),
 });
 
 /** Every scene has a caption and a screen-reader label (compile-time check). */
@@ -285,6 +287,11 @@ export interface TakeOutCountdown {
   level: TakeOutLevel;
   /** "Pritisni »Pelji ven«, preden se čas izteče." under the deadline (null when due — the line says it). */
   howTo: string | null;
+  /**
+   * David 2026-10-26: very short text for the collapsed HUD top stack's pill ("Ven čez ~2 h 25 min",
+   * "Ven najkasneje ob 13:30", "Kuža mora ven zdaj").
+   */
+  short: string;
 }
 
 export type TakeOutLevel = 'calm' | 'soon' | 'urgent';
@@ -313,19 +320,33 @@ export function takeOutCountdown(clock: TakeOutClock, serverNowMs: number, timez
   const minutes = (dueMs - serverNowMs) / 60_000;
   // Under a minute left: "~1 min" would be a race — the puppy simply wants out now.
   if (minutes < 1) {
-    return { line: BEHAVIOUR_STRINGS.takeOutNow, hint: BEHAVIOUR_STRINGS.hintNow, due: true, level: 'urgent', howTo: null };
+    return {
+      line: BEHAVIOUR_STRINGS.takeOutNow,
+      hint: BEHAVIOUR_STRINGS.hintNow,
+      due: true,
+      level: 'urgent',
+      howTo: null,
+      short: BEHAVIOUR_STRINGS.takeOutShortNow,
+    };
   }
   const level = takeOutLevel(minutes, clock.hold_hours);
   const howTo = BEHAVIOUR_STRINGS.takeOutHowTo;
   if (minutes <= TAKE_OUT_DURATION_MAX_MIN) {
     const d = durationText(minutes);
-    return { line: BEHAVIOUR_STRINGS.takeOutIn(d), hint: d, due: false, level, howTo };
+    return { line: BEHAVIOUR_STRINGS.takeOutIn(d), hint: d, due: false, level, howTo, short: BEHAVIOUR_STRINGS.takeOutShortIn(d) };
   }
   const nowIso = new Date(serverNowMs).toISOString();
   const when = whenText(clock.next_due_at, nowIso, timezone);
   const dock = dockWhen(clock.next_due_at, nowIso, timezone);
   if (when === null || dock === null) return null;
-  return { line: BEHAVIOUR_STRINGS.takeOutAt(when), hint: dock.day === null ? dock.text : dock, due: false, level, howTo };
+  return {
+    line: BEHAVIOUR_STRINGS.takeOutAt(when),
+    hint: dock.day === null ? dock.text : dock,
+    due: false,
+    level,
+    howTo,
+    short: BEHAVIOUR_STRINGS.takeOutShortAt(when),
+  };
 }
 
 /**

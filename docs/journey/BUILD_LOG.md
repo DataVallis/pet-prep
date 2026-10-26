@@ -9,6 +9,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-26 — Sporočila se umaknejo: × ali poteg navzgor
+
+**Kaj:** Tudi stolpec sporočil pod imenom je na iPhonu še pokrival kužkovo glavo. Zdaj ga otrok skrije z okroglim × ali s potegom navzgor: ostane ena tanka vrstica z najnujnejšim sporočilom v nekaj besedah (»Ven čez ~2 h 25 min«), številko ostalih (»+2«) in majhnimi okroglimi gumbi za »Šola«, »Igra« in nego. Dotik ali poteg navzdol vse spet pokaže. Če se zgodi kaj novega in nujnega (nered, rok »Pelji ven« postane rdeč), se sporočila sama enkrat odprejo — da otrok ne zamudi pomembnega. Telefon si zapomni izbiro.
+**Zakaj je pomembno:** Kuža je središče igre; otrok sam odloči, ali hoče gledati psa ali seznam, nujno pa ga vseeno najde.
+- 🧒 Otroci: potegni sporočila navzgor in vidiš celega kužka; ko je nujno, ti jih aplikacija sama pokaže.
+- 👩 Starši: manj nereda na zaslonu, a nujna opozorila se nikoli ne skrijejo potihoma (rdeča pilula, samodejno odprtje).
+- 🛠 Tehnično: `modules/hud/topStack.ts` (`collapsedSummary`, `alertTokens` / `reconcileAlerts`, kretnje), `topStackPrefs.ts` (Zustand + SecureStore), `BehaviourPanel` + čipi `compact`; samo JS (OTA). Na telefonu še ni preverjeno.
+
 ## 2026-10-25 — Pes je spet glavni: sporočila na vrh, spodaj samo gumbi
 
 **Kaj:** David je na iPhonu opazil, da kužka zaradi ikon skoraj ni videti: kartica »Kuža je pregriznil copat« z velikim gumbom, rdeče opozorilo »Pelji ven«, »Šola« / »Igra« in namigi so ležali čez sredino in spodnji del psa. Zdaj so vsa sporočila v ozkem stolpcu takoj pod imenom psa, levo od merilnikov; spodaj je samo vrstica gumbov Hrani / Voda / Pelji ven / Sprehod / Očisti. Najnujnejše je zgoraj, vidni sta največ dve kartici, ostalo odpre »+N več«.

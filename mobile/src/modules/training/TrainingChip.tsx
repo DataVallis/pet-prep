@@ -10,6 +10,7 @@ import { Pressable, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
 import { Check, GraduationCap } from 'lucide-react-native';
 
+import { COMPACT_CHIP_HIT_SLOP, compactChipStyles } from '@/modules/hud/compactChip';
 import { TRAINING_STRINGS } from '@/modules/training/training';
 import { alpha, palette } from '@/theme';
 
@@ -21,9 +22,11 @@ export interface TrainingChipProps {
   disabled?: boolean;
   /** M5-T02: why it is off (»💤 Kuža spi do 7:00«) — read out with the button. */
   disabledReason?: string;
+  /** Collapsed HUD top stack: icon only (the full name stays the a11y label). */
+  compact?: boolean;
 }
 
-export default function TrainingChip({ todayDone, pending, onPress, disabled = false, disabledReason }: TrainingChipProps) {
+export default function TrainingChip({ todayDone, pending, onPress, disabled = false, disabledReason, compact = false }: TrainingChipProps) {
   return (
     <Pressable
       testID="hud-training-open"
@@ -33,17 +36,17 @@ export default function TrainingChip({ todayDone, pending, onPress, disabled = f
       accessibilityState={{ disabled }}
       disabled={disabled}
       onPress={onPress}
-      hitSlop={6}
-      style={({ pressed }) => [styles.chip, pressed && styles.pressed, disabled && styles.disabled]}
+      hitSlop={compact ? COMPACT_CHIP_HIT_SLOP : 6}
+      style={({ pressed }) => [styles.chip, compact && compactChipStyles.chip, pressed && styles.pressed, disabled && styles.disabled]}
     >
       <GraduationCap color={palette.mint} size={16} />
-      <Text style={styles.text}>{TRAINING_STRINGS.entry}</Text>
+      {!compact && <Text style={styles.text}>{TRAINING_STRINGS.entry}</Text>}
       {todayDone ? (
-        <View style={styles.done} testID="hud-training-done">
+        <View style={[styles.done, compact && compactChipStyles.corner]} testID="hud-training-done">
           <Check color={palette.white} size={10} />
         </View>
       ) : pending ? (
-        <View style={styles.badge} testID="hud-training-badge" />
+        <View style={[styles.badge, compact && compactChipStyles.corner]} testID="hud-training-badge" />
       ) : null}
     </Pressable>
   );

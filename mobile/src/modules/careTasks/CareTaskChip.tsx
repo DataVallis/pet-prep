@@ -10,6 +10,7 @@ import { Pressable, StyleSheet, View } from 'react-native';
 import { Droplets, Ear, Scissors, Sparkles } from 'lucide-react-native';
 
 import { Text } from '@/components/ui/Text';
+import { COMPACT_CHIP_HIT_SLOP, compactChipStyles } from '@/modules/hud/compactChip';
 import { careTaskText, careTaskTitle, type ChildCareTask } from '@/modules/careTasks/careTasks';
 import { MIN_TOUCH, alpha, palette } from '@/theme';
 
@@ -20,9 +21,11 @@ export interface CareTaskChipProps {
   onPress: () => void;
   disabled?: boolean;
   disabledReason?: string;
+  /** Collapsed HUD top stack: icon only (the full name stays the a11y label). */
+  compact?: boolean;
 }
 
-export function CareTaskChip({ task, onPress, disabled = false, disabledReason }: CareTaskChipProps) {
+export function CareTaskChip({ task, onPress, disabled = false, disabledReason, compact = false }: CareTaskChipProps) {
   const Icon = ICONS[task.task];
   return (
     <Pressable
@@ -33,12 +36,12 @@ export function CareTaskChip({ task, onPress, disabled = false, disabledReason }
       accessibilityState={{ disabled }}
       disabled={disabled}
       onPress={onPress}
-      hitSlop={6}
-      style={({ pressed }) => [styles.chip, pressed && styles.pressed, disabled && styles.disabled]}
+      hitSlop={compact ? COMPACT_CHIP_HIT_SLOP : 6}
+      style={({ pressed }) => [styles.chip, compact && compactChipStyles.chip, pressed && styles.pressed, disabled && styles.disabled]}
     >
       <Icon color={palette.mint} size={16} />
-      <Text style={styles.text}>{careTaskTitle(task.task)}</Text>
-      {task.can_start && !disabled && <View style={styles.badge} testID={`hud-care-chip-${task.task}-badge`} />}
+      {!compact && <Text style={styles.text}>{careTaskTitle(task.task)}</Text>}
+      {task.can_start && !disabled && <View style={[styles.badge, compact && compactChipStyles.corner]} testID={`hud-care-chip-${task.task}-badge`} />}
     </Pressable>
   );
 }

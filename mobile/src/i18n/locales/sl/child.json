@@ -6,7 +6,13 @@
       "more": "+{{count}} več",
       "moreA11y": "Pokaži še druga obvestila ({{count}})",
       "less": "Manj",
-      "lessA11y": "Skrij dodatna obvestila"
+      "lessA11y": "Skrij dodatna obvestila",
+      "collapseA11y": "Skrij sporočila",
+      "expandA11y": "Pokaži sporočila ({{count}})",
+      "expandEmptyA11y": "Pokaži sporočila",
+      "short": {
+        "firstAid": "Muca je lačna"
+      }
     },
     "feed": "Hrani",
     "emergencyFeed": "Nujni obrok",
@@ -221,7 +227,8 @@
     "digesting": {
       "title": "Počakaj s sprehodom",
       "body": "Kuža prebavlja. S sprehodom še malo počakaj.",
-      "until": "Na sprehod lahko greš ob {{time}}."
+      "until": "Na sprehod lahko greš ob {{time}}.",
+      "short": "Počakaj s sprehodom do {{time}}"
     }
   },
   "grooming": {

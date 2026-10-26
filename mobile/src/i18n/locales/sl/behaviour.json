@@ -28,7 +28,10 @@
       "chewing": "Pregrizen copat",
       "scratching": "Opraskan kavč"
     },
-    "cleanChewing": "Pospravi copat"
+    "cleanChewing": "Pospravi copat",
+    "takeOutShortIn": "Ven čez {{duration}}",
+    "takeOutShortAt": "Ven najkasneje {{when}}",
+    "takeOutShortNow": "Kuža mora ven zdaj"
   },
   "parent": {
     "title": "Vedenje",

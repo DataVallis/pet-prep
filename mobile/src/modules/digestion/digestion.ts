@@ -20,6 +20,7 @@ import { familyClock } from '@/modules/childPet/familyTime';
 export const DIGESTION_STRINGS = strings('child', 'walk', {
   digesting: {
     until: (time: string) => t('child:walk.digesting.until', { time }),
+    short: (time: string) => t('child:walk.digesting.short', { time }),
   },
 }).digesting;
 
@@ -51,6 +52,8 @@ export interface DigestionNoteText {
   until: string | null;
   /** One sentence for screen readers. */
   a11y: string;
+  /** The collapsed HUD top stack's pill (David 2026-10-26): "Počakaj s sprehodom do 9:51" (title without a time). */
+  short: string;
 }
 
 /** The note's texts in the current language, or null when no warning shows now. */
@@ -60,5 +63,11 @@ export function digestionNote(view: ChildPetView, serverNowMs: number): Digestio
   const title = DIGESTION_STRINGS.title;
   const body = DIGESTION_STRINGS.body;
   const until = clock !== null ? DIGESTION_STRINGS.until(clock) : null;
-  return { title, body, until, a11y: [`${title}.`, body, until].filter((s) => s !== null).join(' ') };
+  return {
+    title,
+    body,
+    until,
+    a11y: [`${title}.`, body, until].filter((s) => s !== null).join(' '),
+    short: clock !== null ? DIGESTION_STRINGS.short(clock) : title,
+  };
 }

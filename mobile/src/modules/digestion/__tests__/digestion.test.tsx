@@ -121,12 +121,14 @@ describe('reading the server state', () => {
       body: 'Kuža prebavlja. S sprehodom še malo počakaj.',
       until: 'Na sprehod lahko greš ob 12:40.',
       a11y: 'Počakaj s sprehodom. Kuža prebavlja. S sprehodom še malo počakaj. Na sprehod lahko greš ob 12:40.',
+      short: 'Počakaj s sprehodom do 12:40',
     });
     await i18n.changeLanguage('en');
     expect(digestionNote(viewOf(corso()), T0)).toMatchObject({
       title: 'Wait with the walk',
       body: 'Your pup is digesting. Wait a little before the walk.',
       until: 'You can go for a walk at 12:40.',
+      short: 'Wait with the walk until 12:40',
     });
     expect(digestionNote(viewOf(corso()), Date.parse(UNTIL))).toBeNull();
   });

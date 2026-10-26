@@ -61,6 +61,12 @@ import {
   Settings,
   Award,
   BookOpen,
+  HandHeart,
+  Hourglass,
+  Info,
+  Moon,
+  Sun,
+  Utensils,
 } from 'lucide-react-native';
 import { useQueryClient } from '@tanstack/react-query';
 
@@ -119,7 +125,7 @@ import {
 } from '@/modules/behaviour/behaviour';
 import BehaviourPanel, { type StackCard } from '@/components/BehaviourPanel';
 import MealWindowsRow from '@/components/MealWindowsRow';
-import { buildMealWindows } from '@/modules/childPet/mealWindows';
+import { buildMealWindows, MEAL_STRINGS } from '@/modules/childPet/mealWindows';
 import { lockStateFromView, normalizeChildState, type CareAction, type ChildPetView } from '@/modules/childPet/childPetView';
 import { computeHudLayout, METRICS_RESERVED_RIGHT, METRICS_RIGHT, type HudLayout } from '@/modules/hud/hudLayout';
 import { STACK_PRIORITY } from '@/modules/hud/topStack';
@@ -134,7 +140,7 @@ import { ALBUM_STRINGS, hasAlbum } from '@/modules/petMedia/album';
 import { isMediaPending } from '@/modules/petMedia/petMedia';
 import CleaningOverlay from '@/components/CleaningOverlay';
 import MetricBar from '@/components/MetricBar';
-import PetMediaView, { MediaPendingNotice } from '@/components/PetMediaView';
+import PetMediaView, { MediaPendingNotice, PET_MEDIA_STRINGS } from '@/components/PetMediaView';
 import WalkTrackerOverlay from '@/modules/walk/WalkTrackerOverlay';
 import { usePushPromptOnFirstView } from '@/modules/push/usePushPromptOnFirstView';
 import { nextStageLine, originLine, stageLine } from '@/modules/petProfile/petProfile';
@@ -158,7 +164,7 @@ import { useReduceMotion } from '@/hooks/useReduceMotion';
 import { HappyBadge, PlayBlockedNote, PlayChip, PlayInvitationCard } from '@/modules/play/PlayChip';
 import HeartsLayer from '@/modules/play/HeartsLayer';
 import PlayOverlay from '@/modules/play/PlayOverlay';
-import { moodSceneAt, playBlockText, playEntry, playRefusalMessage, type PlayKind } from '@/modules/play/play';
+import { invitationTexts, MOOD_STRINGS, moodSceneAt, playBlockText, playEntry, playRefusalMessage, type PlayKind } from '@/modules/play/play';
 import { actionRules } from '@/modules/childPet/actionRules';
 import { usePlayClock } from '@/modules/play/usePlayClock';
 import DigestionNote from '@/modules/digestion/DigestionNote';
@@ -743,13 +749,23 @@ export default function ChildHudScreen() {
   // David 2026-10-25: the stack's cards besides the countdown / scene / notice / meals (BehaviourPanel adds those).
   const playBlockedShown =
     entry.kind === 'button' && entry.block !== null && !(sleepNote !== undefined && entry.block === 'sleeping');
+  const playBlockedText =
+    playBlockedShown && entry.kind === 'button' && entry.block !== null
+      ? playBlockText(entry.block, playSleepsUntil, view.timezone, playNow)
+      : null;
+  // David 2026-10-26: every card also gives the collapsed pill an icon + very short text.
   const stackCards: StackCard[] = [
-    ...(firstAid ? [{ key: 'first-aid', priority: STACK_PRIORITY.firstAid, node: <FirstAidNote /> }] : []),
+    ...(firstAid
+      ? [{ key: 'first-aid', priority: STACK_PRIORITY.firstAid, short: t('child:hud.topStack.short.firstAid'), icon: Info, node: <FirstAidNote /> }]
+      : []),
     ...(entry.kind === 'invitation'
       ? [
           {
             key: 'invitation',
             priority: STACK_PRIORITY.invitation,
+            short: invitationTexts(entry.invitation.kind).line,
+            icon: Heart,
+            iconColour: palette.raspberry,
             node: (
               <PlayInvitationCard
                 invitation={entry.invitation}
@@ -761,28 +777,84 @@ export default function ChildHudScreen() {
           },
         ]
       : []),
-    ...(digestion !== null ? [{ key: 'digestion', priority: STACK_PRIORITY.advice, node: <DigestionNote note={digestion} /> }] : []),
-    ...(heat ? [{ key: 'heat', priority: STACK_PRIORITY.advice, node: <HeatNote /> }] : []),
-    ...(sleepNote !== undefined
-      ? [{ key: 'sleep', priority: STACK_PRIORITY.hint, node: <PlayBlockedNote text={sleepNote} testID="hud-sleep-note" /> }]
+    ...(digestion !== null
+      ? [{ key: 'digestion', priority: STACK_PRIORITY.advice, short: digestion.short, icon: Hourglass, node: <DigestionNote note={digestion} /> }]
       : []),
-    ...(playBlockedShown && entry.kind === 'button' && entry.block !== null
-      ? [
-          {
-            key: 'play-blocked',
-            priority: STACK_PRIORITY.hint,
-            node: <PlayBlockedNote text={playBlockText(entry.block, playSleepsUntil, view.timezone, playNow)} />,
-          },
-        ]
+    ...(heat ? [{ key: 'heat', priority: STACK_PRIORITY.advice, short: t('careTasks:heat.title'), icon: Sun, node: <HeatNote /> }] : []),
+    ...(sleepNote !== undefined
+      ? [{ key: 'sleep', priority: STACK_PRIORITY.hint, short: sleepNote, icon: Moon, node: <PlayBlockedNote text={sleepNote} testID="hud-sleep-note" /> }]
+      : []),
+    ...(playBlockedText !== null
+      ? [{ key: 'play-blocked', priority: STACK_PRIORITY.hint, short: playBlockedText, icon: HandHeart, node: <PlayBlockedNote text={playBlockedText} /> }]
       : []),
     ...chipNotes.map((note) => ({
       key: `cat-note-${note.kind}`,
       priority: STACK_PRIORITY.hint,
+      short: note.text,
+      icon: Info,
       node: <CatHudNote text={note.text} testID={`hud-cat-note-${note.kind}`} />,
     })),
-    ...(moodScene !== null ? [{ key: 'happy', priority: STACK_PRIORITY.happy, node: <HappyBadge /> }] : []),
-    ...(factChip ? [{ key: 'fact', priority: STACK_PRIORITY.fact, node: <FactChip onPress={facts.openChip} /> }] : []),
+    ...(moodScene !== null
+      ? [{ key: 'happy', priority: STACK_PRIORITY.happy, short: MOOD_STRINGS.happy, icon: Heart, iconColour: palette.raspberry, node: <HappyBadge /> }]
+      : []),
+    ...(factChip
+      ? [{ key: 'fact', priority: STACK_PRIORITY.fact, short: t('facts:child.chip'), icon: BookOpen, node: <FactChip onPress={facts.openChip} /> }]
+      : []),
   ];
+  const hasChips = hasTraining || entry.kind === 'button' || chips.length > 0 || careTaskChips.length > 0 || socialisationChip;
+  // The chips; `compact` = the collapsed stack's icon-only buttons (same actions, full a11y labels).
+  const renderChips = (compact: boolean) => (
+    <>
+      {hasTraining && (
+        <TrainingChip
+          compact={compact}
+          todayDone={view.training.today_done}
+          pending={!trainingSleeps && showTrainingDot(view.training)}
+          disabled={trainingSleeps}
+          disabledReason={trainingSleeps ? rules.training.text : undefined}
+          onPress={() => setTrainingVisible(true)} />
+      )}
+      {chips.map((chip) => (
+        <CatHudChip
+          key={chip.kind}
+          compact={compact}
+          chip={chip}
+          disabled={chip.kind === 'grooming' && groomingSleeps}
+          disabledReason={chip.kind === 'grooming' && groomingSleeps ? rules.grooming.text : undefined}
+          onPress={() => openCat(chip.kind)}
+        />
+      ))}
+      {careTaskChips.map((task) => {
+        const sleeps = rules[task.task].reason === 'sleeping';
+        return (
+          <CareTaskChip
+            key={task.task}
+            compact={compact}
+            task={task}
+            disabled={sleeps}
+            disabledReason={sleeps ? rules[task.task].text : undefined}
+            onPress={() => openCareTask(task.task)}
+          />
+        );
+      })}
+      {socialisationChip && view.socialisation !== null && (
+        <SocialisationChip compact={compact} pending={view.socialisation.can_record} onPress={() => setSocialisationVisible(true)} />
+      )}
+      {entry.kind === 'button' &&
+        (cat ? (
+          // A cat only cuddles (CAT_SPEC §5.5): straight to the cuddle, no ball.
+          <PlayChip
+            compact={compact}
+            block={entry.block}
+            label={CAT_HUD_STRINGS.chips.cuddle}
+            accessibilityLabel={CAT_HUD_STRINGS.chips.cuddleA11y}
+            onPress={() => setPlayOverlay('cuddle')}
+          />
+        ) : (
+          <PlayChip compact={compact} block={entry.block} onPress={() => setPlayOverlay('pick')} />
+        ))}
+    </>
+  );
   // Android: TalkBack must not reach the HUD under the album / training game (iOS: accessibilityViewIsModal).
   const hiddenUnderAlbum = showAlbum || showTraining || showPlay || showCatGame || showGuide || preparingNow
     ? ({ importantForAccessibility: 'no-hide-descendants', accessibilityElementsHidden: true } as const)
@@ -1084,7 +1156,8 @@ export default function ChildHudScreen() {
 
         {/* David 2026-10-25 »pes mora biti viden«: every message card sits in one compact stack under
             the header, left of the metric column (modules/hud/topStack: most urgent first, ≤ 2 cards,
-            the rest behind "+N"); the dog's centre / lower half stays free, only the dock is at the bottom. */}
+            the rest behind "+N"); the dog's centre / lower half stays free, only the dock is at the bottom.
+            David 2026-10-26: the stack collapses (× / swipe up) into one slim pill row (BehaviourPanel). */}
         <View
           pointerEvents="box-none"
           style={[styles.topStack, { top: layout.bannerTop, maxHeight: layout.stackMaxHeight }]}
@@ -1166,7 +1239,11 @@ export default function ChildHudScreen() {
               videoState={hudVideoState}
               onResolveChewing={() => runAction('resolve_chewing')}
               resolveBusy={resolveChewing.isPending}
-              notice={mediaPending ? <MediaPendingNotice testID="hud-pet-media-pending" /> : null}
+              notice={
+                mediaPending
+                  ? { short: PET_MEDIA_STRINGS.pending, icon: Hourglass, node: <MediaPendingNotice testID="hud-pet-media-pending" /> }
+                  : null
+              }
               scratcher={
                 scratcherShown
                   ? {
@@ -1180,59 +1257,16 @@ export default function ChildHudScreen() {
                   : null
               }
               cards={stackCards}
-              chips={
-                hasTraining || entry.kind === 'button' || chips.length > 0 || careTaskChips.length > 0 || socialisationChip ? (
-                  <View style={styles.chipRow} testID="hud-chip-row">
-                    {hasTraining && (
-                      <TrainingChip
-                        todayDone={view.training.today_done}
-                        pending={!trainingSleeps && showTrainingDot(view.training)}
-                        disabled={trainingSleeps}
-                        disabledReason={trainingSleeps ? rules.training.text : undefined}
-                        onPress={() => setTrainingVisible(true)} />
-                    )}
-                    {chips.map((chip) => (
-                      <CatHudChip
-                        key={chip.kind}
-                        chip={chip}
-                        disabled={chip.kind === 'grooming' && groomingSleeps}
-                        disabledReason={chip.kind === 'grooming' && groomingSleeps ? rules.grooming.text : undefined}
-                        onPress={() => openCat(chip.kind)}
-                      />
-                    ))}
-                    {careTaskChips.map((task) => {
-                      const sleeps = rules[task.task].reason === 'sleeping';
-                      return (
-                        <CareTaskChip
-                          key={task.task}
-                          task={task}
-                          disabled={sleeps}
-                          disabledReason={sleeps ? rules[task.task].text : undefined}
-                          onPress={() => openCareTask(task.task)}
-                        />
-                      );
-                    })}
-                    {socialisationChip && view.socialisation !== null && (
-                      <SocialisationChip pending={view.socialisation.can_record} onPress={() => setSocialisationVisible(true)} />
-                    )}
-                    {entry.kind === 'button' &&
-                      (cat ? (
-                        // A cat only cuddles (CAT_SPEC §5.5): straight to the cuddle, no ball.
-                        <PlayChip
-                          block={entry.block}
-                          label={CAT_HUD_STRINGS.chips.cuddle}
-                          accessibilityLabel={CAT_HUD_STRINGS.chips.cuddleA11y}
-                          onPress={() => setPlayOverlay('cuddle')}
-                        />
-                      ) : (
-                        <PlayChip block={entry.block} onPress={() => setPlayOverlay('pick')} />
-                      ))}
-                  </View>
-                ) : null
-              }
+              renderChips={hasChips ? renderChips : null}
               // Hidden by the panel while a scene card is open; one line on smaller screens.
               meals={
-                mealWindows.length > 0 ? <MealWindowsRow items={mealWindows} compact={layout.metric.variant !== 'regular'} /> : null
+                mealWindows.length > 0
+                  ? {
+                      short: MEAL_STRINGS.title,
+                      icon: Utensils,
+                      node: <MealWindowsRow items={mealWindows} compact={layout.metric.variant !== 'regular'} />,
+                    }
+                  : null
               }
             />
           )}
@@ -1600,13 +1634,6 @@ const styles = StyleSheet.create({
   },
   pressed: {
     opacity: 0.7,
-  },
-  /** "Šola" + "Igra" + breed care side by side under the stack's cards (M5-R05, David 2026-10-25). */
-  chipRow: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'flex-start',
-    gap: 6,
   },
   centered: {
     alignItems: 'center',
