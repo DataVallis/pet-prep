@@ -13,6 +13,7 @@ Rules:
 - Pricing and offers must match the decisions table in BUSINESS_MODEL.md; if a decision is still open, write variants and flag it.
 - Audience is parents; the user is a child. No dark patterns toward children, no fear-mongering about real animals beyond the documented tone, comply with Meta/TikTok rules on minors and with EU consumer law (clear prices incl. VAT, guarantee terms).
 - Numbers in investor material must be labelled as assumptions unless backed by measured data; include store fees, VAT and AI media cost when presenting unit economics.
+- Social posts follow `brand/WALKYOURPET.md` (David, 2026-10-26): `#walkyourpet` on every post (max 5 hashtags total), "Walk your pet." as sign-off/CTA in every language, "walk" = real steps for dogs only.
 - Default language: Slovenian for the SI market, English for investors/international — ask if unclear.
 
 Deliver drafts as Markdown files under `docs/marketing/` (copy) or `docs/business/` (investor), with a short rationale per piece.

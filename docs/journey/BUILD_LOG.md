@@ -9,6 +9,17 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-26 — #walkyourpet: frazo so izumili otroci
+
+**Kaj:** Davidova otroka sta imela na obisku prijateljico. Ko so se odločali, ali gredo ven, je rekla napol slovensko, napol angleško: »Lahko bi šli **walk your pet**« 😁. David je odločil, da je to od zdaj znamčna fraza in hashtag PetPrep: `#walkyourpet` gre na vsako objavo, »Walk your pet.« je zadnja vrstica in poziv. Prvi Instagram story (»#walkyourpet is a thing now.«) je narejen. Pravila: `brand/WALKYOURPET.md`.
+**Zakaj je pomembno:** Najboljši slogani niso izmišljeni v pisarni. Otrok, ki aplikacijo pozna, je sam povezal ljubljenčka z odhodom ven — točno to, kar PetPrep hoče: pri psu so sprehodi v igri resnični koraki otroka.
+- 📣 Omrežja: `#walkyourpet` na vsaki objavi; zgodbe resničnih trenutkov »gremo ven zaradi ljubljenčka« (brez obrazov in imen otrok brez soglasja).
+- 💼 Investitorji: organski dokaz, da igra spremeni vedenje (otroci gredo ven), in mednarodna fraza, ki je ni treba prevajati.
+- 👩 Starši: aplikacija, zaradi katere otroci sami predlagajo, da gredo ven.
+- 🧒 Otroci: walk your pet!
+
+---
+
 ## 2026-10-26 — Sporočila se umaknejo: × ali poteg navzgor
 
 **Kaj:** Tudi stolpec sporočil pod imenom je na iPhonu še pokrival kužkovo glavo. Zdaj ga otrok skrije z okroglim × ali s potegom navzgor: ostane ena tanka vrstica z najnujnejšim sporočilom v nekaj besedah (»Ven čez ~2 h 25 min«), številko ostalih (»+2«) in majhnimi okroglimi gumbi za »Šola«, »Igra« in nego. Dotik ali poteg navzdol vse spet pokaže. Če se zgodi kaj novega in nujnega (nered, rok »Pelji ven« postane rdeč), se sporočila sama enkrat odprejo — da otrok ne zamudi pomembnega. Telefon si zapomni izbiro.

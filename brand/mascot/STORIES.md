@@ -3,6 +3,7 @@
 > Ready-to-use episodes for the Curio mascot. Rules: `brand/MASCOT.md` (Curio is always the pet, no mouth, prompting rules).
 > Workflow: image in Nano Banana Pro (unlimited, 9:16, attach `curio-reference-portrait.jpg` + `curio-reference-sheet.jpg`) → video in Kling 3.0 (start frame = that image, 9:16, 5 s, ~9 credits) → Claude edits (9:16, overlays in brand fonts, end card).
 > Update the status and the numbers after each post.
+> **Every post carries `#walkyourpet`** (within the 5-hashtag limit) — rules in `brand/WALKYOURPET.md` (David, 2026-10-26).
 
 ## Lessons from analytics
 - **The Promise (2026-10-13): 179 views, avg watch 2.5 s, 3.3 % watched full, 0 followers.** Viewers left before the Day 14 twist (at 2.4 s). The strongest moment must be in the first second; a two-line text hook over a still frame is too slow.
