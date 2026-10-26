@@ -151,6 +151,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-10-26 (cloud, backend) — M5-R11-08 breed portrait colour variants (`feat/breed-portrait-colours`)
+- `breeds:portraits --colours {--reference-dir=}` + `breed-portraits.yml` input `colours`: every other standard coat colour (`config/breed_colours.php`) as an edit of the existing portrait (`nano_banana_pro_edit`, reference as data URI, AI Lab), `<species>/<slug>--<colour>.webp`, manifest `colour_variants`; new portrait entries carry `colour`. Tests `BreedPortraitColoursTest`. **Next:** dry run then real run for `border_collie` (6 × $0.15), review the images; the export / website do not read the variants yet. Debt: the review branch copies the server manifest wholesale (its `portraits` list may be older than `main`'s) — take only the variant files + entries.
+
 ### 2026-10-25 (cloud, backend + mobile) — server sends the water display time (`fix/water-shown-at-sleep-window`)
 - Child state `water.shown_at` (`ChildPetStateResource` ← `PetSleepService::shownAt`): `next_allowed_at`, or the wake time when it falls while the pet sleeps (quiet hours, also tonight's sleep of a pet still awake — French Bulldog 20:52 / 23:58 → »jutri 7:00«). `waterShownAt` prefers it, old servers keep the #394 fallback. Rule unchanged. `schema.ts` hand-edited (generator needs a running backend). Tests `WaterShownAtTest`, `actionMessages.test.ts`. No new debt. Next: device check after deploy + OTA (needs both).
 

@@ -233,9 +233,9 @@ describe('breeds:portraits command', function () {
             ->and(array_column($manifest['portraits'], 'breed'))->toBe(bpPaidValues());
 
         $lab = $manifest['portraits'][1];
-        expect(array_keys($lab))->toBe(['breed', 'species', 'file', 'width', 'height', 'kind', 'profile', 'prompt_hash', 'generated_at', 'cost_usd'])
+        expect(array_keys($lab))->toBe(['breed', 'species', 'colour', 'file', 'width', 'height', 'kind', 'profile', 'prompt_hash', 'generated_at', 'cost_usd'])
             ->and($lab)->toMatchArray([
-                'breed' => 'labrador_retriever', 'species' => 'dog', 'file' => 'dog/labrador-retriever.webp',
+                'breed' => 'labrador_retriever', 'species' => 'dog', 'colour' => 'yellow', 'file' => 'dog/labrador-retriever.webp',
                 'width' => 1024, 'height' => 1024, 'kind' => 'ai_photo', 'profile' => 'nano_banana_pro',
                 'prompt_hash' => BreedPortraitService::promptHash(bpService()->prompt(BreedType::LabradorRetriever)),
                 'cost_usd' => 0.15,

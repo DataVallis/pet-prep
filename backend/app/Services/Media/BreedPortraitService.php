@@ -8,6 +8,7 @@ use App\Enums\LifeStage;
 use App\Enums\Species;
 use App\Services\BreedCatalogService;
 use App\Services\FalAiService;
+use finfo;
 use Illuminate\Support\Facades\File;
 use InvalidArgumentException;
 use RuntimeException;
@@ -37,6 +38,16 @@ use RuntimeException;
  * is the website register today; BreedPortraitTest checks it against the
  * committed export docs/research/breed-registry.json, whose SPECIES list in
  * scripts/export-breed-registry.mjs is the single definition of the register.
+ *
+ * Colour variants (`--colours`, David 2026-10-26: the website breed page will show
+ * the breed in every standard coat colour): for every colour of
+ * config/breed_colours.php except the one the default portrait already shows, an
+ * EDIT of that portrait (image-to-image, media.breed_portraits.colour_profile =
+ * Nano Banana Pro Edit, the same model family as the key images) that changes only
+ * the coat colour / pattern. The reference portrait is sent as a base64 data URI
+ * (it is a local file, not on a public host). Output
+ * `<species>/<slug>--<colour-key>.webp`, manifest list `colour_variants`. Same
+ * AI Lab budget, same square WebP pipeline.
  */
 class BreedPortraitService
 {
@@ -47,6 +58,24 @@ class BreedPortraitService
     public const MANIFEST = 'manifest.json';
 
     public const MANIFEST_SCHEMA = 1;
+
+    /** Separator between the breed slug and the colour key in a colour variant's file name. */
+    public const COLOUR_SEPARATOR = '--';
+
+    /**
+     * Edit prompt for a colour variant (`{breed}` = display name, `{animal}` =
+     * dog / cat, `{colour}` = breed_colours `value`). Only the coat colour and
+     * pattern change — the same animal, pose, framing, light and backdrop as the
+     * default portrait (PORTRAIT_STYLE).
+     */
+    public const COLOUR_EDIT_PROMPT = 'Edit this photograph of a {breed}: change ONLY the coat colour and pattern to {colour}, '
+        .'a standard {breed} colour, with the colour distribution natural for this breed in that colour. '
+        .'Keep everything else exactly the same: the same {animal}, the same pose, body shape, proportions, coat length and fur texture, '
+        .'ear carriage, head position and expression, the same framing, crop and camera angle, the same soft diffused neutral studio light '
+        .'and the same seamless light fog-grey (#F3F5F2) studio backdrop with its soft natural floor shadow, no coloured glow or coloured light. '
+        .'Realistic 35mm photograph, sharp focus on the {animal}, true-to-life fur texture and colours. '
+        .'Only the {animal}: no people, no children, no hands, no other animals, no text, no letters, no logo, no watermark, '
+        .'no collar, no name tag, no props.';
 
     /** Default output: the repo's docs/research/breed-portraits (relative to backend/). */
     public const DEFAULT_OUT = '../docs/research/breed-portraits';
@@ -322,6 +351,8 @@ class BreedPortraitService
         $entry = [
             'breed' => $breed->value,
             'species' => $breed->species()->value,
+            // The breed_colours key the portrait shows (the colour variants skip it).
+            'colour' => $this->colourKeyForValue($breed, $this->portraitTraits($breed)['coat_color'] ?? null),
             'file' => $file,
             'width' => $image['width'],
             'height' => $image['height'],
@@ -333,6 +364,262 @@ class BreedPortraitService
         ];
 
         $this->writeManifestEntry($outDir, $entry);
+
+        return $entry;
+    }
+
+    // ──────────────────────────────────────────────────────────────
+    //  Colour variants (`--colours`, David 2026-10-26)
+    // ──────────────────────────────────────────────────────────────
+
+    /**
+     * The breed's standard coat colours (config/breed_colours.php, picker order).
+     *
+     * @return list<array{key: string, value: string, en: string, sl: string}>
+     */
+    public function colours(BreedType $breed): array
+    {
+        return array_values(array_filter(
+            (array) config("breed_colours.{$breed->value}", []),
+            fn ($c) => is_array($c) && is_string($c['key'] ?? null) && is_string($c['value'] ?? null),
+        ));
+    }
+
+    /** The breed_colours key whose `value` is $coatColor, or null. */
+    public function colourKeyForValue(BreedType $breed, ?string $coatColor): ?string
+    {
+        foreach ($this->colours($breed) as $colour) {
+            if ($colour['value'] === $coatColor) {
+                return $colour['key'];
+            }
+        }
+
+        return null;
+    }
+
+    /**
+     * The colour the default portrait already shows: the manifest entry's
+     * `colour` (written since 2026-10-26); else the coat colour of the portrait
+     * prompt (portraitTraits — what the portrait was generated from); else the
+     * breed's first (default) colour. Null when the breed has no colour list.
+     *
+     * @param  array<string, mixed>|null  $portraitEntry  the reference manifest entry
+     */
+    public function defaultColourKey(BreedType $breed, ?array $portraitEntry = null): ?string
+    {
+        $keys = array_column($this->colours($breed), 'key');
+        if ($keys === []) {
+            return null;
+        }
+
+        $fromManifest = $portraitEntry['colour'] ?? null;
+        if (is_string($fromManifest) && in_array($fromManifest, $keys, true)) {
+            return $fromManifest;
+        }
+
+        return $this->colourKeyForValue($breed, $this->portraitTraits($breed)['coat_color'] ?? null) ?? $keys[0];
+    }
+
+    /**
+     * @param  array{key: string, value: string}  $colour
+     */
+    public function colourPrompt(BreedType $breed, array $colour): string
+    {
+        $animal = $breed->species() === Species::Cat ? 'cat' : 'dog';
+        $name = (string) config("breed_appearance.{$breed->value}.display_name", str_replace('_', ' ', $breed->value).' '.$animal);
+
+        return strtr(self::COLOUR_EDIT_PROMPT, ['{breed}' => $name, '{animal}' => $animal, '{colour}' => $colour['value']]);
+    }
+
+    /** Seed per breed + colour (stable across runs and machines). */
+    public static function colourSeedFor(BreedType $breed, string $colourKey): int
+    {
+        return (int) (crc32('breed-portrait:'.$breed->value.':'.$colourKey) & 0x7FFFFFFF);
+    }
+
+    /** "dog/border-collie--blue-merle-white.webp" — relative to the output directory. */
+    public static function relativeColourFile(BreedType $breed, string $colourKey, string $extension = 'webp'): string
+    {
+        return $breed->species()->value.'/'.$breed->slug().self::COLOUR_SEPARATOR.$colourKey.'.'.$extension;
+    }
+
+    /**
+     * The image EDIT profile for colour variants (media.breed_portraits.colour_profile
+     * unless one is named): enabled, takes an input image and an `aspect_ratio`.
+     */
+    public function colourProfile(?string $key = null): ModelProfile
+    {
+        $key = $key === null || $key === '' ? (string) config('media.breed_portraits.colour_profile', 'nano_banana_pro_edit') : $key;
+
+        if (! is_array(config("media.profiles.image.{$key}"))) {
+            throw new InvalidArgumentException("Unknown image profile {$key}.");
+        }
+
+        $profile = $this->profiles->image($key);
+
+        if (! $profile->enabled) {
+            throw new InvalidArgumentException("Image profile {$profile->key} is disabled.");
+        }
+
+        if (config("media.profiles.image.{$profile->key}.image_param") === null) {
+            throw new InvalidArgumentException("Image profile {$profile->key} does not edit an input image — colour variants need an image-edit profile.");
+        }
+
+        if (! array_key_exists('aspect_ratio', $profile->params)) {
+            throw new InvalidArgumentException("Image profile {$profile->key} has no aspect_ratio parameter — colour variants need a square (1:1) image.");
+        }
+
+        return $profile;
+    }
+
+    /**
+     * The edit input: colour prompt + the reference portrait (image_urls) + seed + square.
+     *
+     * @param  array{key: string, value: string}  $colour
+     * @return array<string, mixed>
+     */
+    public function colourInput(ModelProfile $profile, BreedType $breed, array $colour, string $referenceImage): array
+    {
+        $input = $profile->editInput($this->colourPrompt($breed, $colour), $referenceImage, self::colourSeedFor($breed, $colour['key']));
+        $input['aspect_ratio'] = '1:1';
+        $input['num_images'] = 1;
+
+        return $input;
+    }
+
+    /** A local image file as a base64 data URI (fal accepts data URIs for file inputs). */
+    public static function dataUri(string $path): string
+    {
+        $bytes = is_file($path) ? file_get_contents($path) : false;
+        if ($bytes === false || $bytes === '') {
+            throw new RuntimeException("Reference portrait {$path} could not be read.");
+        }
+
+        $mime = (string) (new finfo(FILEINFO_MIME_TYPE))->buffer($bytes);
+        if (! in_array($mime, ['image/webp', 'image/png', 'image/jpeg'], true)) {
+            throw new RuntimeException("Reference portrait {$path} is not an image ({$mime}).");
+        }
+
+        return 'data:'.$mime.';base64,'.base64_encode($bytes);
+    }
+
+    /**
+     * What a colour run would do: one row per breed colour except the default
+     * portrait's colour. `generate` / `skip` / `stale` / `force` as plan();
+     * `no-reference` when the default portrait is missing in $referenceDir
+     * (generate it first — nothing is sent for that breed).
+     *
+     * @param  list<BreedType>  $breeds
+     * @return list<array{breed: BreedType, colour: array{key: string, value: string}, default_colour: string, file: string, reference: string, reference_path: string, prompt: string, prompt_hash: string, action: string}>
+     */
+    public function colourPlan(array $breeds, string $outDir, string $referenceDir, bool $force): array
+    {
+        $references = $this->readManifest($referenceDir);
+        $variants = $this->readColourManifest($outDir);
+        $rows = [];
+
+        foreach ($breeds as $breed) {
+            $entry = $references[$breed->value] ?? null;
+            $default = $this->defaultColourKey($breed, is_array($entry) ? $entry : null);
+            if ($default === null) {
+                continue;
+            }
+
+            $reference = is_array($entry) && is_string($entry['file'] ?? null) ? $entry['file'] : self::relativeFile($breed);
+            $referencePath = $referenceDir.'/'.$reference;
+            $hasReference = is_file($referencePath);
+
+            foreach ($this->colours($breed) as $colour) {
+                if ($colour['key'] === $default) {
+                    continue;
+                }
+
+                $prompt = $this->colourPrompt($breed, $colour);
+                $hash = self::promptHash($prompt);
+                $variant = $variants[$breed->value.self::COLOUR_SEPARATOR.$colour['key']] ?? null;
+                $file = is_array($variant) && is_string($variant['file'] ?? null) ? $variant['file'] : self::relativeColourFile($breed, $colour['key']);
+                $exists = is_file($outDir.'/'.$file);
+
+                $action = match (true) {
+                    ! $hasReference => 'no-reference',
+                    ! $exists => 'generate',
+                    $force => 'force',
+                    ($variant['prompt_hash'] ?? null) !== $hash => 'stale',
+                    default => 'skip',
+                };
+
+                $rows[] = [
+                    'breed' => $breed,
+                    'colour' => ['key' => $colour['key'], 'value' => $colour['value']],
+                    'default_colour' => $default,
+                    'file' => $file,
+                    'reference' => $reference,
+                    'reference_path' => $referencePath,
+                    'prompt' => $prompt,
+                    'prompt_hash' => $hash,
+                    'action' => $action,
+                ];
+            }
+        }
+
+        return $rows;
+    }
+
+    /**
+     * Generate one colour variant: edit of the reference portrait (lab budget) →
+     * download → square WebP → file + `colour_variants` manifest entry.
+     *
+     * @param  array{key: string, value: string}  $colour
+     * @return array<string, mixed> the manifest entry
+     */
+    public function generateColour(BreedType $breed, array $colour, ModelProfile $profile, string $outDir, string $referencePath, string $reference): array
+    {
+        $prompt = $this->colourPrompt($breed, $colour);
+        $input = $this->colourInput($profile, $breed, $colour, self::dataUri($referencePath));
+        $call = $this->gateway->run($profile, $input, AiSpendPurpose::Lab, timeoutSeconds: 180);
+
+        $url = $call['body']['images'][0]['url'] ?? null;
+        if (! is_string($url) || ! $this->fal->isAllowedMediaUrl($url)) {
+            throw new RuntimeException('No usable image URL in the fal.ai answer (cost kept: $'.number_format($call['cost_usd'], 4).').');
+        }
+
+        $download = $this->downloader->download(
+            $url,
+            (int) config('media.storage.max_image_bytes', 25 * 1024 * 1024),
+            (array) config('media.storage.image_mimes', ['image/jpeg', 'image/png', 'image/webp']),
+        );
+
+        try {
+            $image = $this->toSquareWebp((string) file_get_contents($download['path']), $download['mime']);
+        } finally {
+            @unlink($download['path']);
+        }
+
+        $file = self::relativeColourFile($breed, $colour['key'], $image['extension']);
+        $this->writeAtomically($outDir.'/'.$file, $image['bytes']);
+
+        $old = $this->readColourManifest($outDir)[$breed->value.self::COLOUR_SEPARATOR.$colour['key']]['file'] ?? null;
+        if (is_string($old) && $old !== $file && is_file($outDir.'/'.$old)) {
+            @unlink($outDir.'/'.$old);
+        }
+
+        $entry = [
+            'breed' => $breed->value,
+            'species' => $breed->species()->value,
+            'colour' => $colour['key'],
+            'colour_value' => $colour['value'],
+            'file' => $file,
+            'reference' => $reference,
+            'width' => $image['width'],
+            'height' => $image['height'],
+            'kind' => self::KIND,
+            'profile' => $profile->key,
+            'prompt_hash' => self::promptHash($prompt),
+            'generated_at' => now()->utc()->toIso8601String(),
+            'cost_usd' => round($call['cost_usd'], 4),
+        ];
+
+        $this->writeColourManifestEntry($outDir, $entry);
 
         return $entry;
     }
@@ -382,9 +669,27 @@ class BreedPortraitService
      */
     public function readManifest(string $outDir): array
     {
+        return $this->readManifestDocument($outDir)['portraits'];
+    }
+
+    /**
+     * Colour variant entries keyed by "<breed>--<colour key>".
+     *
+     * @return array<string, array<string, mixed>>
+     */
+    public function readColourManifest(string $outDir): array
+    {
+        return $this->readManifestDocument($outDir)['colour_variants'];
+    }
+
+    /**
+     * @return array{portraits: array<string, array<string, mixed>>, colour_variants: array<string, array<string, mixed>>}
+     */
+    private function readManifestDocument(string $outDir): array
+    {
         $path = $outDir.'/'.self::MANIFEST;
         if (! is_file($path)) {
-            return [];
+            return ['portraits' => [], 'colour_variants' => []];
         }
 
         $data = json_decode((string) file_get_contents($path), true);
@@ -392,14 +697,21 @@ class BreedPortraitService
             throw new RuntimeException("{$path} is not a breed portrait manifest.");
         }
 
-        $out = [];
+        $portraits = [];
         foreach ($data['portraits'] as $entry) {
             if (is_array($entry) && is_string($entry['breed'] ?? null)) {
-                $out[$entry['breed']] = $entry;
+                $portraits[$entry['breed']] = $entry;
             }
         }
 
-        return $out;
+        $variants = [];
+        foreach ((array) ($data['colour_variants'] ?? []) as $entry) {
+            if (is_array($entry) && is_string($entry['breed'] ?? null) && is_string($entry['colour'] ?? null)) {
+                $variants[$entry['breed'].self::COLOUR_SEPARATOR.$entry['colour']] = $entry;
+            }
+        }
+
+        return ['portraits' => $portraits, 'colour_variants' => $variants];
     }
 
     /**
@@ -407,21 +719,55 @@ class BreedPortraitService
      */
     private function writeManifestEntry(string $outDir, array $entry): void
     {
-        $entries = $this->readManifest($outDir);
-        $entries[$entry['breed']] = $entry;
+        $document = $this->readManifestDocument($outDir);
+        $document['portraits'][$entry['breed']] = $entry;
 
-        // Stable order: enum order (species, then the register order), unknown keys last.
+        $this->writeManifest($outDir, $document['portraits'], $document['colour_variants']);
+    }
+
+    /**
+     * @param  array<string, mixed>  $entry
+     */
+    private function writeColourManifestEntry(string $outDir, array $entry): void
+    {
+        $document = $this->readManifestDocument($outDir);
+        $document['colour_variants'][$entry['breed'].self::COLOUR_SEPARATOR.$entry['colour']] = $entry;
+
+        $this->writeManifest($outDir, $document['portraits'], $document['colour_variants']);
+    }
+
+    /**
+     * @param  array<string, array<string, mixed>>  $portraits
+     * @param  array<string, array<string, mixed>>  $variants
+     */
+    private function writeManifest(string $outDir, array $portraits, array $variants): void
+    {
+        // Stable order: enum order (species, then the register order), unknown keys last;
+        // colour variants in breed order, then the breed_colours order.
         $order = array_flip(array_map(fn (BreedType $b) => $b->value, BreedType::cases()));
-        uksort($entries, fn ($a, $b) => [($order[$a] ?? PHP_INT_MAX), $a] <=> [($order[$b] ?? PHP_INT_MAX), $b]);
+        uksort($portraits, fn ($a, $b) => [($order[$a] ?? PHP_INT_MAX), $a] <=> [($order[$b] ?? PHP_INT_MAX), $b]);
+
+        $variantRank = function (array $entry) use ($order): array {
+            $keys = array_column((array) config('breed_colours.'.$entry['breed'], []), 'key');
+            $index = array_search($entry['colour'], $keys, true);
+
+            return [$order[$entry['breed']] ?? PHP_INT_MAX, (string) $entry['breed'], $index === false ? PHP_INT_MAX : $index, (string) $entry['colour']];
+        };
+        $variants = array_values($variants);
+        usort($variants, fn (array $a, array $b) => $variantRank($a) <=> $variantRank($b));
 
         $manifest = [
             'schema_version' => self::MANIFEST_SCHEMA,
             'generator' => 'backend: php artisan breeds:portraits (M5-R11)',
             'label' => self::LABEL,
             'note' => 'AI-generated breed photos for the website animal register. Show them only with the label "'
-                .self::LABEL.'". Prompts come from breed config only (config/breed_appearance.php) — no pet or child data.',
-            'portraits' => array_values($entries),
+                .self::LABEL.'". Prompts come from breed config only (config/breed_appearance.php, config/breed_colours.php) — no pet or child data.',
+            'portraits' => array_values($portraits),
         ];
+
+        if ($variants !== []) {
+            $manifest['colour_variants'] = $variants;
+        }
 
         $this->writeAtomically(
             $outDir.'/'.self::MANIFEST,

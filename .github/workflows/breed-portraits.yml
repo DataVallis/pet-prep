@@ -10,6 +10,11 @@
 # app / queue / scheduler containers keep running production's code untouched. The one-off
 # container builds its own config cache from the mounted config (entrypoint.sh). Refused when
 # `ref` changes composer.lock (new PHP dependencies need a real deploy first).
+# `colours` (David 2026-10-26): colour variants instead of the default portraits — every
+# standard coat colour of config/breed_colours.php except the default portrait's, edited from
+# that portrait (`breeds:portraits --colours`). The reference portraits + manifest come from
+# docs/research/breed-portraits of `ref`, shipped read-only next to the code
+# (`--reference-dir`); output, review branch and artifact are the same as for portraits.
 name: Breed portraits (AI, production server)
 
 on:
@@ -21,6 +26,10 @@ on:
         default: ""
       force:
         description: "Regenerate existing images (--force)"
+        type: boolean
+        default: false
+      colours:
+        description: "Colour variants of the existing portraits (--colours, every other standard coat colour)"
         type: boolean
         default: false
       dry_run:
@@ -60,6 +69,7 @@ jobs:
           SSH_USER: ${{ secrets.PRODUCTION_USER || 'deploy' }}
           BREEDS: ${{ inputs.breeds }}
           FORCE: ${{ inputs.force }}
+          COLOURS: ${{ inputs.colours }}
           DRY_RUN: ${{ inputs.dry_run }}
           RUN_ID: ${{ github.run_id }}
         run: |
@@ -73,6 +83,7 @@ jobs:
           done
           if [ "$FORCE" = "true" ]; then ARGS="$ARGS --force"; fi
           if [ "$DRY_RUN" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          if [ "$COLOURS" = "true" ]; then ARGS="$ARGS --colours --reference-dir=/opt/breed-portraits-reference"; fi
           if ! [[ "$RUN_ID" =~ ^[0-9]+$ ]]; then echo "invalid run id"; exit 1; fi
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
@@ -94,6 +105,12 @@ jobs:
             | ssh "${OPTS[@]}" "${SSH_USER}@${SSH_HOST}" "rm -rf '$REMOTE' && mkdir -p '$REMOTE' && tar -C '$REMOTE' -xzf - && chmod -R a+rX '$REMOTE'"
           MOUNTS=""
           for d in app config lang routes; do MOUNTS="$MOUNTS -v $REMOTE/$d:/var/www/html/$d:ro"; done
+          if [ "$COLOURS" = "true" ]; then
+            # The default portraits of `ref` are the edit references (read-only, outside storage/).
+            tar -C code/docs/research -czf - breed-portraits \
+              | ssh "${OPTS[@]}" "${SSH_USER}@${SSH_HOST}" "mkdir -p '$REMOTE/reference' && tar -C '$REMOTE/reference' -xzf - && chmod -R a+rX '$REMOTE/reference'"
+            MOUNTS="$MOUNTS -v $REMOTE/reference/breed-portraits:/opt/breed-portraits-reference:ro"
+          fi
           mkdir -p out
           # Action logs and artifacts can't be read from every client, so the output also
           # goes into one annotation per line and the images into a review branch.
