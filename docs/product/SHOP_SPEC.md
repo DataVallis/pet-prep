@@ -1,6 +1,6 @@
 # PetPrep — Trgovinica za ljubljenčka (osnutek, *načrt*)
 
-> Status: **osnutek specifikacije, nič še ni zgrajeno.** Ideja in odločitve: David 26. 10. 2026. Odprta vprašanja v §8 mora potrditi David, preden se začne gradnja. Nadgrajuje vrstico »Priboljški, veterinar, igrače (IAP)« (FEATURES ⏸) in BUSINESS_MODEL §3 (IAP).
+> Status: **specifikacija potrjena (David 26. 10. 2026), nič še ni zgrajeno.** Ideja in odločitve: David 26. 10. 2026. Nadgrajuje vrstico »Priboljški, veterinar, igrače (IAP)« (FEATURES ⏸) in BUSINESS_MODEL §3 (IAP).
 
 ## 1. Ideja
 
@@ -17,10 +17,16 @@ Otrok v aplikaciji prosi za stvari za svojega ljubljenčka, na primer posteljo, 
 | S3 | **Na voljo tudi v brezplačni verziji** (mešanček, domača mačka) in pri izzivu. |
 | S4 | **Otrok prosi iz kataloga brez cen**, z omejitvijo števila odprtih prošenj. Starš dobi obvestilo in seznam na nadzorni plošči. |
 | S5 | **Kupuje samo starš**, v starševski aplikaciji (zaščitena z geslom, enako kot izziv — PAYMENTS_SPEC). Otrok cen nikoli ne vidi. |
+| S6 | **Cene z maržo vsaj 300 %** (neto po DDV 22 % in proviziji trgovine 15 % ≥ 4× strošek AI vsebine v najslabšem primeru): **postelja, skledi, igrača 5,99 €**, **priboljški 2,99 € za 10**. Polna vsebina: v vsakem obdobju psa slika + video. |
+| S7 | **Ovratnica pozneje** (ne v prvi verziji): pomeni nov videz psa za vsa stanja (~12 $ na obdobje). |
+| S8 | **Brezplačni plan:** kupljena stvar doda samo svojo vsebino (npr. video igre z novo igračo); ostali videi ostanejo osnovni (miruje, spi). |
+| S9 | **Največ 3 odprte prošnje** na otroka; po »Ne zdaj« lahko otrok za isto stvar spet prosi po 7 dneh. |
+| S10 | **Ime funkcije: »Želje«** (EN »Wishes«). |
+| S11 | **Nakup je nakup, vračila ni:** ob koncu igre (game over) ali izbrisu ljubljenčka nakup ostane porabljen (kot izziv, PAYMENTS_SPEC P5). |
 
 ## 3. Potek
 
-1. **Otrok:** na zaslonu ljubljenčka gumb »Želje« odpre katalog s slikami in imeni, brez cen. Otrok tapne »Prosi starša«. Največ **3 odprte prošnje** naenkrat (*predlog, §8*); že kupljene trajne stvari so označene »Že ima«.
+1. **Otrok:** na zaslonu ljubljenčka gumb »Želje« odpre katalog s slikami in imeni, brez cen. Otrok tapne »Prosi starša«. Največ **3 odprte prošnje** naenkrat (S9); že kupljene trajne stvari so označene »Že ima«.
 2. **Starš:** dobi push »Otrok si želi posteljo za Suki« (brez imena otroka v obvestilu, kot vsa obvestila) in na nadzorni plošči vrstico »Želje (2)«. Seznam pokaže stvar, ceno iz trgovine, kdo je prosil in kdaj.
 3. Starš pri vsaki prošnji izbere **Kupi** (nakup v trgovini) ali **Ne zdaj** (otrok vidi prijazno »Mogoče kdaj drugič«, brez razlage o ceni). Kupi lahko tudi brez prošnje, kot presenečenje.
 4. **Po nakupu:** strežnik zapiše stvar k ljubljenčku in sproži generiranje vsebine (§5). Dokler ni pripravljena, otrok vidi »Postelja je na poti …«, nato pa obvestilo »Suki ima novo posteljo!«.
@@ -31,7 +37,6 @@ Otrok v aplikaciji prosi za stvari za svojega ljubljenčka, na primer posteljo, 
 |---|---|---|---|
 | Postelja | trajna | spanje (ključna slika + video spanja na postelji namesto na tleh) | oba (pri mački košara) |
 | Skledi (hrana, voda) | trajna | hranjenje / pitje | oba |
-| Ovratnica | trajna | vse slike psa od nakupa naprej (*preveri strošek: pomeni nov videz za vse stanje*) | pes |
 | Igrača (npr. žoga, vrv) | trajna | igra (video igre z igračo) | pes; mačka: miška / palica |
 | Priboljški (paket 10) | potrošna | gumb »Priboljšek« → kratek video, kako ga poje; porabi se 1 | oba |
 
@@ -44,7 +49,7 @@ Cene so **odprte** (§8); BUSINESS_MODEL §3 omenja igrače 1,49 € in pribolj�
 - Ko pes preide v novo obdobje (mladiček → mlad pes …), trajne stvari potrebujejo novo vsebino za novo obdobje (spet ~0,50 $, spet skupno).
 - **Priboljški:** en video »poje priboljšek« na videz, nato se ponavlja. Paket 10 ne pomeni 10 generacij.
 - Strošek gre skozi AiSpendGuard (dnevna meja). Če je meja dosežena, se vsebina ustvari naslednji dan, otrok pa medtem vidi »na poti«.
-- Brezplačni plan ima danes samo osnovni nabor videov (miruje, spi). Kupljena stvar doda **samo svoje** vsebine, ne odklene celotnega nabora (*predlog, §8*).
+- Brezplačni plan ima danes samo osnovni nabor videov (miruje, spi). Kupljena stvar doda **samo svoje** vsebine, ne odklene celotnega nabora (S8).
 
 ## 6. Tehnično (osnutek)
 
@@ -57,11 +62,6 @@ Cene so **odprte** (§8); BUSINESS_MODEL §3 omenja igrače 1,49 € in pribolj�
 
 Brez cen pri otroku, brez nakupov v otroški seji, brez vpliva na igro (S1), brez veterinarja in zdravil (S2), brez naključnih nagrad (loot box), brez oglasov.
 
-## 8. Odprto za Davida
+## 8. Odprto
 
-1. **Cene** po stvareh (npr. postelja 1,99 €, igrača 1,49 €, priboljški 0,99 € / 10?).
-2. **Število odprtih prošenj** na otroka (predlog 3) in ali otrok lahko prosi za isto stvar znova po »Ne zdaj« (predlog: po 7 dneh).
-3. **Ovratnica:** v prvi verziji ali kasneje? Pomeni nov videz psa za vsa stanja, zato je dražja.
-4. **Brezplačni plan:** ali kupljena stvar mešančku doda samo svoje vsebine (predlog) ali tudi kaj več.
-5. **Ime funkcije** v aplikaciji: »Želje«, »Trgovinica«, »Za Suki« …
-6. Ali stvar ostane, ko se igra konča (game over) ali se ljubljenček izbriše (predlog: kot pri izzivu — nakup ostane porabljen).
+Nič — vse odločitve so v §2 (David 26. 10. 2026). Pred gradnjo: preveriti cene fal.ai in tečaj, izdelke v App Store / Google Play (cenovni razredi 5,99 € in 2,99 €), pravila trgovin za otroške aplikacije (nakup samo za starševsko zaščito — že velja za izziv).
