@@ -2636,6 +2636,30 @@
         }
       ],
       "notes": "RKC breed page (dog-data S538, 2026-10-26): Good Practice lists 'Prioritising genetic diversity' (Dachshund precedent, key inbreeding_coi); the four tests are listed under Best Practice. New key dna_l2hga. PDSA (S540) notes that testing is available for some eye conditions."
+    },
+    "airedale_terrier": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S547",
+        "quote": "Best Practice schemes and tests"
+      },
+      "tests": [
+        {
+          "key": "elbow_scheme",
+          "level": "best_practice",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S547",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S547",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S547, 2026-10-26): heading 'Pre-breeding Health Screening', subheading 'Best Practice schemes and tests' — BVA/KC elbow and hip schemes; no minimum list; 'We don’t currently offer a breed-specific DNA testing package for this breed,' (individual DNA tests available — paraphrase). No new test key."
     }
   }
 }
