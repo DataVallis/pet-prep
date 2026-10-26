@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `airedale_terrier` (viri S545–S552; ponovno S8, S10, S11, S14, S35, S45, S123, S174); seznam za vzreditelja: 2 testa »Best Practice« (RKC S547) |
 | Izvor | FCI št. 7 »Airedale Terrier«, skupina 3, sekcija 1 (veliki in srednji terierji), Velika Britanija (S545) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 64. mesto »Airedale Terrier« (S174, prebrano 2026-10-26) |
-| PR-ji | pet-prep #398 (pasma) · portret: sledi · spletna stran: sledi |
+| PR-ji | pet-prep #398 (pasma, združen `e9ebfe8`) · portret: #399 (zagon 40262434765) · spletna stran: pet-prep-website `feat/register-airedale-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -44,7 +44,7 @@
 | Česanje vsak dan (rutina »Počeši«), »Nova izkušnja« za mladička, opozorilo 60 min po obroku | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R16 | 2026-10-26 |
 | Čiščenje ušes 1× na teden (otrok), opomnik za pasjega frizerja vsakih 12 tednov (starši) | 🛠 | 💶 izziv | M5-R20 / M5-R18 | 2026-10-26 |
 | Barva (izbirnik: 2 standardni barvi, privzeto rjav s črnim sedlom) | 🛠 | 💶 izziv | M5-R21 | 2026-10-26 |
-| AI portret v registru | 🗓 takoj po združitvi | — | M5-R11-04 | — |
+| AI portret v registru (rjav s črnim sedlom, sprejet v prvem poskusu, zagon 40262434765, PR #399) | ✅ | — | M5-R11-04 | 2026-10-26 |
 | Stran na petprep.si (`/animals/dogs/airedale-terrier`, `/sl/zivali/psi/airedalski-terier`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -61,4 +61,4 @@
 - **Teža:** noben standard je ne navaja; uporabljena PetMD 40–60 lb (18–27 kg), VCA navaja 50–70 lb.
 - **Mlajši otroci:** VCA: najbolje s »starejšimi, spoštljivimi otroki« — brez `small_children`; v marketingu ga ne kažite samega z majhnimi otroki (predlog Claude).
 - **Ime:** »Airedalski terier« ni preverjeno pri KZS.
-- **Barva portreta:** rjav s črnim sedlom je predlog Claude (standard ne določa najpogostejše barve).
+- **Barva portreta:** rjav s črnim sedlom je predlog Claude (standard ne določa najpogostejše barve). Portret: zagon 40262434765 (koda `e9ebfe8`, brez produkcijske namestitve), sprejet v prvem poskusu; PR #399.
