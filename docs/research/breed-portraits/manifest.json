@@ -819,6 +819,18 @@
             "prompt_hash": "sha256:b029e4be4127165c0abb1ea53e16301edadf215fae782faec876ad03d2b8037b",
             "generated_at": "2026-10-25T19:55:54+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "staffordshire_bull_terrier",
+            "species": "dog",
+            "file": "dog/staffordshire-bull-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:70676d98b3a115d508d8e2e3dce72034e0b48beb077e1663b5a5d3b78f7385cd",
+            "generated_at": "2026-10-26T01:03:27+00:00",
+            "cost_usd": 0.15
         }
     ]
 }

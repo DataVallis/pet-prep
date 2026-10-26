@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `staffordshire_bull_terrier` (viri S536–S544; ponovno S8, S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: genetska raznolikost (»Good Practice«) + 4 testi »Best Practice« (RKC S538) |
 | Izvor | FCI št. 76 »Staffordshire Bull Terrier«, skupina 3, sekcija 3 (terierji bulterierskega tipa), Velika Britanija (S536) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 63. mesto »Staffordshire Bull Terrier« (S174, prebrano 2026-10-26) |
-| PR-ji | pet-prep #396 (pasma) · portret: (sledi) · spletna stran: (sledi) |
+| PR-ji | pet-prep #396 (pasma, združen `d25de12`) · portret: #397 (zagon 40252257895) · spletna stran: pet-prep-website `feat/register-staffordshire-bull-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -40,7 +40,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 108 meseca; 4 → 3 → 2 obroka) | 🛠 | 💶 izziv | M5-R10-67 | 2026-10-26 |
 | Česanje 1× na teden (rutina »Počeši«), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-10-26 |
 | Barva (izbirnik: 11 standardnih barv, privzeto tigrast) | 🛠 | 💶 izziv | M5-R21 | 2026-10-26 |
-| AI portret v registru | 🗓 po združitvi (runbook §8) | — | M5-R11-04 | — |
+| AI portret v registru (tigrast, sprejet v prvem poskusu, zagon 40252257895, PR #397) | ✅ | — | M5-R11-04 | 2026-10-26 |
 | Stran na petprep.si (`/animals/dogs/staffordshire-bull-terrier`, `/sl/zivali/psi/stafordsirski-bulterier`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -57,4 +57,4 @@
 - **Občutljiva koža:** PDSA S540 »Staffies can have sensitive skin …« in VetCompass (atopijski dermatitis, S542) — oznaka `sensitive_skin` je doslej sledila točki Breed Watch, zato je ni; želite oznako?
 - **Mlajši otroci:** PDSA piše, da morda ni primeren za družine z mlajšimi otroki (moč, energija) — stavek ni bil vrnjen dobesedno, zato brez `not_for_small_children`; v marketingu ga ne kažite z majhnimi otroki ali malimi živalmi (predlog Claude).
 - **Ime:** »Stafordširski bulterier« ni preverjeno pri KZS.
-- **Barva portreta:** tigrasta je predlog Claude (standard ne določa najpogostejše barve).
+- **Barva portreta:** tigrasta je predlog Claude (standard ne določa najpogostejše barve). Portret: zagon 40252257895 (koda `d25de12`, brez produkcijske namestitve), sprejet v prvem poskusu; PR #397.
