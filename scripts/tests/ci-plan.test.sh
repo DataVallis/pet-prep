@@ -168,6 +168,7 @@ pr_case "dog research data: backend + scripts tests only" "$S_BTSCRIPTS" docs/re
 pr_case "dog research sources: backend + scripts tests only" "$S_BTSCRIPTS" docs/research/dog-data/sources.md
 pr_case "breed registry export: scripts tests only" "$S_SCRIPTS" scripts/export-breed-registry.mjs scripts/tests/export-breed-registry.test.mjs
 pr_case "daily deploy trigger: scripts tests only" "$S_SCRIPTS" scripts/daily-deploy.sh scripts/tests/daily-deploy.test.sh .github/workflows/daily-deploy.yml
+pr_case "CI ffmpeg installer: backend + scripts tests only" "$S_BTSCRIPTS" scripts/ci-install-ffmpeg.sh scripts/tests/ci-install-ffmpeg.test.sh
 pr_case "breed docs index: scripts tests only" "$S_SCRIPTS" scripts/breeds-index.mjs scripts/tests/breeds-index.test.mjs docs/breeds/hungarian-vizsla.md
 pr_case "breed registry output: backend + scripts tests only" "$S_BTSCRIPTS" docs/research/breed-registry.json
 pr_case "breeder checklist: scripts tests only" "$S_SCRIPTS" docs/research/breeder-checklist/data.json docs/research/breeder-checklist/sources.md

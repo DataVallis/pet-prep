@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Harness for scripts/daily-deploy.sh (D21 daily 06:00 production deploy) — no GitHub, no network.
+# Harness for scripts/daily-deploy.sh (D21 daily production deploy, 03:17 local since D24) — no GitHub, no network.
 #
 # A `gh` shim answers `gh api <path> --jq <filter>` by running the REAL jq filter of the
 # script over a JSON fixture chosen by the path, and records `gh workflow run …` instead
@@ -96,7 +96,7 @@ push_run() { # push_run SHA K STATUS CONCLUSION [REPO]: the push CI as seen by t
 run() {
   local rc=0 fix="$FIX"
   : > "$FIX/dispatch.log"
-  FIX="$fix" PATH="$TMP/bin:$PATH" EVENT_NAME="$1" SCHEDULE="${2:-}" DAILY_DEPLOY_NOW="${3:-2026-07-01T04:00:00Z}" \
+  FIX="$fix" PATH="$TMP/bin:$PATH" EVENT_NAME="$1" SCHEDULE="${2:-}" DAILY_DEPLOY_NOW="${3:-2026-07-01T01:17:00Z}" \
     DRY_RUN="${4:-false}" REPO="$REPO_NAME" GITHUB_STEP_SUMMARY="$fix/summary" \
     WAIT_SECONDS=300 POLL_SECONDS=60 MISSING_GRACE_SECONDS=120 \
     bash "$SCRIPT" >"$FIX/out" 2>&1 || rc=$?
@@ -105,39 +105,49 @@ run() {
 }
 DISPATCH="workflow run deploy-production.yml --repo ${REPO_NAME} --ref main -f target=production"
 
-echo "== a. 06:00 Europe/Ljubljana (schedule) =="
-# Summer (CEST, UTC+2): 04 UTC = 06 local → proceeds; 05 UTC = 07 → skips.
+echo "== a. 03:17 Europe/Ljubljana (schedule, D24) =="
+# Summer (CEST, UTC+2): 01:17 UTC = 03:17 local → proceeds; 02:17 UTC = 04:17 → skips.
 new_case "$NEW"; push_run "$NEW" 1 completed success
-run schedule '0 4 * * *' 2026-07-01T04:02:00Z
-check "CEST 04 UTC: exit" 0 "$o_rc"; check "CEST 04 UTC: dispatched" "$DISPATCH" "$o_dispatch"
+run schedule '17 1 * * *' 2026-07-01T01:19:00Z
+check "CEST 01 UTC: exit" 0 "$o_rc"; check "CEST 01 UTC: dispatched" "$DISPATCH" "$o_dispatch"
 new_case "$NEW"; push_run "$NEW" 1 completed success
-run schedule '0 5 * * *' 2026-07-01T05:01:00Z
-check "CEST 05 UTC: exit" 0 "$o_rc"; check "CEST 05 UTC: nothing dispatched" "" "$o_dispatch"
-contains "CEST 05 UTC: says why" "$FIX/out" "is 07:00 in Europe/Ljubljana"
-check "CEST 05 UTC: no API call" "" "$(cat "$FIX/gh.log" 2>/dev/null)"
-# Winter (CET, UTC+1): 05 UTC = 06 local → proceeds; 04 UTC = 05 → skips.
+run schedule '17 2 * * *' 2026-07-01T02:18:00Z
+check "CEST 02 UTC: exit" 0 "$o_rc"; check "CEST 02 UTC: nothing dispatched" "" "$o_dispatch"
+contains "CEST 02 UTC: says why" "$FIX/out" "is 04:17 in Europe/Ljubljana"
+check "CEST 02 UTC: no API call" "" "$(cat "$FIX/gh.log" 2>/dev/null)"
+# Winter (CET, UTC+1): 02:17 UTC = 03:17 local → proceeds; 01:17 UTC = 02:17 → skips.
 new_case "$NEW"; push_run "$NEW" 1 completed success
-run schedule '0 5 * * *' 2026-12-01T05:03:00Z
-check "CET 05 UTC: dispatched" "$DISPATCH" "$o_dispatch"
+run schedule '17 2 * * *' 2026-12-01T02:20:00Z
+check "CET 02 UTC: dispatched" "$DISPATCH" "$o_dispatch"
 new_case "$NEW"; push_run "$NEW" 1 completed success
-run schedule '0 4 * * *' 2026-12-01T04:03:00Z
-check "CET 04 UTC: nothing dispatched" "0 " "$o_rc $o_dispatch"
-# DST end day (Sun 2026-10-25, 01:00 UTC → CET): 05 UTC deploys, 04 UTC does not.
+run schedule '17 1 * * *' 2026-12-01T01:20:00Z
+check "CET 01 UTC: nothing dispatched" "0 " "$o_rc $o_dispatch"
+# DST end day (Sun 2026-10-25, 01:00 UTC → CET): 01:17 UTC is already CET (02:17) → skips; 02:17 UTC deploys.
 new_case "$NEW"; push_run "$NEW" 1 completed success
-run schedule '0 5 * * *' 2026-10-25T05:00:00Z
-check "DST-end day 05 UTC: dispatched" "$DISPATCH" "$o_dispatch"
-new_case "$NEW"; run schedule '0 4 * * *' 2026-10-25T04:00:00Z
-check "DST-end day 04 UTC: skipped" "0 " "$o_rc $o_dispatch"
-# GitHub started the 04 UTC run 70 min late (05:10 UTC, 07:10 CEST): still the 06:00 cron.
+run schedule '17 2 * * *' 2026-10-25T02:17:00Z
+check "DST-end day 02 UTC: dispatched" "$DISPATCH" "$o_dispatch"
+new_case "$NEW"; run schedule '17 1 * * *' 2026-10-25T01:17:00Z
+check "DST-end day 01 UTC: skipped" "0 " "$o_rc $o_dispatch"
+# DST start day (Sun 2026-03-29, 01:00 UTC → CEST): 01:17 UTC = 03:17 CEST deploys; 02:17 UTC = 04:17 skips.
 new_case "$NEW"; push_run "$NEW" 1 completed success
-run schedule '0 4 * * *' 2026-07-01T05:10:00Z
+run schedule '17 1 * * *' 2026-03-29T01:17:00Z
+check "DST-start day 01 UTC: dispatched" "$DISPATCH" "$o_dispatch"
+new_case "$NEW"; run schedule '17 2 * * *' 2026-03-29T02:17:00Z
+check "DST-start day 02 UTC: skipped" "0 " "$o_rc $o_dispatch"
+# GitHub started the 01:17 UTC run 5 h late (06:30 UTC, 08:30 CEST — as seen in October 2026):
+# still the 03:17 cron, still deploys once.
+new_case "$NEW"; push_run "$NEW" 1 completed success
+run schedule '17 1 * * *' 2026-07-01T06:30:00Z
 check "late scheduled run still deploys" "$DISPATCH" "$o_dispatch"
+# ... and the other cron, also late, does not deploy a second time.
+new_case "$NEW"; run schedule '17 2 * * *' 2026-07-01T07:40:00Z
+check "late other cron: skipped" "0 " "$o_rc $o_dispatch"
 # No cron string: the clock decides.
 new_case "$NEW"; push_run "$NEW" 1 completed success
-run schedule '' 2026-07-01T04:20:00Z
-check "no cron, 06:20 local: dispatched" "$DISPATCH" "$o_dispatch"
-new_case "$NEW"; run schedule '' 2026-07-01T05:20:00Z
-check "no cron, 07:20 local: skipped" "0 " "$o_rc $o_dispatch"
+run schedule '' 2026-07-01T01:40:00Z
+check "no cron, 03:40 local: dispatched" "$DISPATCH" "$o_dispatch"
+new_case "$NEW"; run schedule '' 2026-07-01T04:20:00Z
+check "no cron, 06:20 local (old hour): skipped" "0 " "$o_rc $o_dispatch"
 # workflow_dispatch ignores the hour.
 new_case "$NEW"; push_run "$NEW" 1 completed success
 run workflow_dispatch '' 2026-07-01T13:00:00Z
@@ -231,12 +241,23 @@ done
 
 echo "== workflow .github/workflows/daily-deploy.yml =="
 wf="$(cat "$WORKFLOW")"
-for want in "- cron: '0 4 * * *'" "- cron: '0 5 * * *'" "workflow_dispatch:" "dry_run:" "type: boolean" \
+for want in "- cron: '17 1 * * *'" "- cron: '17 2 * * *'" "workflow_dispatch:" "dry_run:" "type: boolean" \
             "contents: read" "actions: write" "GH_TOKEN: \${{ github.token }}" \
             "SCHEDULE: \${{ github.event.schedule }}" "bash scripts/daily-deploy.sh"; do
   case "$wf" in *"$want"*) r=0 ;; *) r=1 ;; esac
   check "workflow has: $want" 0 "$r"
 done
+case "$wf" in *"cron: '0 "*) r=1 ;; *) r=0 ;; esac
+check "no cron on minute :00 (most congested; D24)" 0 "$r"
+# Every cron must be 03:xx Europe/Ljubljana either in CET or in CEST, and the minute must match
+# the script's hour gate: one of them proceeds each day, the other exits.
+script_hour="$(sed -n 's/^DEPLOY_LOCAL_HOUR="\([0-9]*\)".*/\1/p' "$SCRIPT")"
+check "script deploy hour" 03 "$script_hour"
+while read -r cmin chour; do
+  cet=$(( (10#$chour + 1) % 24 )); cest=$(( (10#$chour + 2) % 24 ))
+  if (( cet == 10#$script_hour || cest == 10#$script_hour )); then r=0; else r=1; fi
+  check "cron '${cmin} ${chour}' is ${script_hour}:xx local in CET or CEST" 0 "$r"
+done < <(sed -n "s/^ *- cron: '\([0-9]*\) \([0-9]*\) .*/\1 \2/p" "$WORKFLOW")
 case "$wf" in *"secrets."*) r=1 ;; *) r=0 ;; esac
 check "workflow reads no secrets" 0 "$r"
 
