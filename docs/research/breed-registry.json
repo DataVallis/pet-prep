@@ -61,7 +61,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "6957ccce8b95b9833b09b736d472b970c5ec40d03ce8d79e60afff0b6898e81b"
+      "sha256": "e043d841bd97579d3cec4554e6ebfca4adf5683d582672b28847d97f5e746383"
     }
   },
   "suitability_vocabulary": {
@@ -38253,7 +38253,12 @@
           "S538"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "staffordshire-bull-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
