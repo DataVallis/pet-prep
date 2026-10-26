@@ -1812,5 +1812,32 @@ return [
             ],
         ],
 
+        // M5-R10-68: airedale_terrier.* (S545–S552), runbook rules (data.json
+        // proposed_game_parameters.airedale_terrier.suitability_tags). RKC (S547) + PetMD (S549) + VCA (S550); no PDSA page.
+        // RKC Breed Watch Category 1 → no welfare chip. `children` with the PetMD caveat ("if trained well") and VCA "older,
+        // respectful children" — never small_children. RKC "Large house" + "Large garden" → large_home. low_shedding from RKC
+        // "Sheds: No" — never hypoallergenic. 60 min → no active_family / long_daily_exercise. No other_pets (PetMD vs VCA
+        // "May be assertive"), no chases_small_pets (no prey-drive statement).
+        'airedale_terrier' => [
+            'suits' => [
+                // S549 "They make great family dogs and, if trained well, generally get along with children, dogs, and other pets."
+                ['tag' => 'family_pet', 'source_ids' => ['S549'], 'refs' => ['airedale_terrier.behaviour.family']],
+                // S549 the same sentence (if trained well); VCA S550 best with "older, respectful children".
+                ['tag' => 'children', 'source_ids' => ['S549'], 'refs' => ['airedale_terrier.behaviour.children']],
+                // S547 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S547'], 'refs' => ['airedale_terrier.suitability.rkc_size_of_home', 'airedale_terrier.suitability.rkc_size_of_garden']],
+                // S547 "Sheds: No".
+                ['tag' => 'low_shedding', 'source_ids' => ['S547'], 'refs' => ['airedale_terrier.suitability.rkc_shedding']],
+            ],
+            'consider' => [
+                // S550 "Airedale Terriers need daily exercise and mental engagement."
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S550'], 'refs' => ['airedale_terrier.exercise.mental']],
+                // S549 "But all that intelligence and spunk means they should not be left to their own devices for too long."
+                ['tag' => 'needs_company', 'source_ids' => ['S549'], 'refs' => ['airedale_terrier.behaviour.time_alone']],
+                // S547 "Grooming: Every day"; S549 "a good brushing a few times a week".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S547', 'S549'], 'refs' => ['airedale_terrier.suitability.rkc_grooming', 'airedale_terrier.suitability.petmd_grooming']],
+            ],
+        ],
+
     ],
 ];

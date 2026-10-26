@@ -383,7 +383,7 @@ return [
     ],
     // M5-R10-62: FCI standard S501 — black and tan, liver and tan, red.
     'bloodhound' => [
-        ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črno-rjav'],
+        ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Rjav s črnim sedlom'],
         ['key' => 'liver-tan', 'value' => 'liver and tan', 'en' => 'Liver and tan', 'sl' => 'Jetrno-rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
     ],
@@ -432,6 +432,11 @@ return [
         ['key' => 'blue-white', 'value' => 'blue and white', 'en' => 'Blue and white', 'sl' => 'Modro-bel'],
         ['key' => 'fawn-white', 'value' => 'fawn and white', 'en' => 'Fawn and white', 'sl' => 'Plavo-bel'],
         ['key' => 'white', 'value' => 'white', 'en' => 'White', 'sl' => 'Bel'],
+    ],
+    // M5-R10-68: FCI S546 / RKC S548 — body saddle black or grizzle, all other parts tan; any other colour unacceptable.
+    'airedale_terrier' => [
+        ['key' => 'black-tan', 'value' => 'black saddle and tan', 'en' => 'Black and tan', 'sl' => 'Rjav s črnim sedlom'],
+        ['key' => 'grizzle-tan', 'value' => 'grizzle saddle and tan', 'en' => 'Grizzle and tan', 'sl' => 'Rjav s sivim sedlom'],
     ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
