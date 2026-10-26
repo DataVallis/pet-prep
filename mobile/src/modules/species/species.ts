@@ -83,6 +83,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   cardigan_welsh_corgi: 'dog',
   german_wirehaired_pointer: 'dog',
   saint_bernard: 'dog',
+  staffordshire_bull_terrier: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -170,6 +171,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'cardigan_welsh_corgi',
   'german_wirehaired_pointer',
   'saint_bernard',
+  'staffordshire_bull_terrier',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */
