@@ -42,6 +42,8 @@ interface ControlsScreenProps {
   onAddChild: () => void;
   /** PIN for an existing child (pet choice or re-login on a new device). */
   onChildPin: (child: FamilyChild) => void;
+  /** M5-T12: open the child's page at »Vpiši sprehod«. */
+  onLogWalk?: (child: FamilyChild) => void;
   /** M5-F01: open the challenge paywall ("Purchases / challenge" row). */
   onOpenChallenge?: () => void;
   /** Confirmation owned by the parent screen (survives the join card disappearing). */
@@ -55,6 +57,7 @@ export default function ControlsScreen({
   family,
   onAddChild,
   onChildPin,
+  onLogWalk,
   onOpenChallenge,
   notice = null,
   onNotice,
@@ -73,7 +76,7 @@ export default function ControlsScreen({
       <ScrollView style={styles.flex} contentContainerStyle={styles.content}>
         {notice && <NoticeBanner text={joinNoticeText(notice)} closeLabel={CONTROLS_STRINGS.closeNotice} onClose={() => onNotice?.(null)} />}
         {family && family.children.length > 0 ? (
-          <FamilyChildrenCard family={family} onAddChild={onAddChild} onChildPin={onChildPin} />
+          <FamilyChildrenCard family={family} onAddChild={onAddChild} onChildPin={onChildPin} onLogWalk={onLogWalk} />
         ) : (
           <AddChildCard onPress={onAddChild} compact />
         )}

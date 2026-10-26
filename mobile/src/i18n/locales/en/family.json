@@ -212,9 +212,20 @@
       "hint": "Wheelchair pushes count instead of steps (1 push = 1 step). Goals and the Care Score stay the same. We don't ask or store why.",
       "on": "Adapted mode is on: the walk counts wheelchair pushes.",
       "off": "Adapted mode is off: the walk counts steps.",
-      "native": "Pushes need the newest PetPrep version on the child's phone (Apple Health with Wheelchair on and an Apple Watch, or Health Connect).",
+      "native": "Your child's phone needs the newest PetPrep version.",
       "error": "The setting wasn't saved. Please try again.",
-      "consent": "By turning it on you agree that we store only that adapted mode is on and, for each day, that pushes were counted. When you turn it off, we remove every push marker from the history (those days count as steps); points, the Care Score and logged walks stay the same."
+      "consent": "By turning it on you agree that we store only that adapted mode is on and, for each day, that pushes were counted. When you turn it off, we remove every push marker from the history (those days count as steps); points, the Care Score and logged walks stay the same.",
+      "sources": {
+        "title": "What counts pushes",
+        "ios": "On iPhone, only an Apple Watch counts pushes (in the Health app: Health Details → Wheelchair = Yes). The iPhone alone doesn't count pushes.",
+        "android": "On Android, you need a device or an app that records wheelchair pushes in Health Connect.",
+        "noWatch": "Without a watch you can log walk minutes on your child's page (Overview → child → Log a walk).",
+        "logWalk": "Log a walk"
+      },
+      "noPushesToday": {
+        "text": "No pushes yet today. Without an Apple Watch (or a Health Connect device), log the walk minutes.",
+        "button": "Log a walk"
+      }
     },
     "easyGestures": {
       "label": "Easier gestures",
