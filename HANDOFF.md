@@ -44,7 +44,7 @@
       PET_MEDIA_S3_ENDPOINT=https://fsn1.your-objectstorage.com
       PET_MEDIA_S3_REGION=fsn1
       ```
-      Deploy (GitHub → Actions → *CI & Deploy* → Run workflow, `main`, target `production` — ali počakaj na 06:00) → `/admin/system-health` ploščica **Media storage** mora biti zelena: *Local disk · Bucket petprep-media reachable* (rdeča / rumena = napačen ključ, endpoint ali ime).
+      Deploy (GitHub → Actions → *CI & Deploy* → Run workflow, `main`, target `production` — ali počakaj na dnevni deploy ob 03:17) → `/admin/system-health` ploščica **Media storage** mora biti zelena: *Local disk · Bucket petprep-media reachable* (rdeča / rumena = napačen ključ, endpoint ali ime).
    3. **Zrcalo za varnostno kopijo:** v **ločenem Hetzner Console projektu** (drug projekt, ne isti!) → Object Storage → bucket `petprep-media-mirror`, lokacija **nbg1**, Private + svoji credentials. Vpiši jih **samo** v `/opt/petprep/backup.env` (nikoli v `.env`; `KEY=value`, brez narekovajev in komentarjev):
       ```
       MEDIA_MIRROR_S3_BUCKET=petprep-media-mirror
@@ -98,7 +98,7 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 - **Thresholds follow the displayed value** (PRODUCT_SPEC §6). All wall-clock rules in the family's timezone; times shown as »7:00« everywhere (M5-T02b).
 - **Media rule »stanje → medij, nikoli obratno«:** what the child sees must match the state; Kling 3.0 Pro for video, Nano Banana Pro (+ Edit) for images; state clips 5 s, school / game clips 3 s (school performing 5 s since 2026-10-23); every new clip passes an automatic quality check first (one auto retry, then »Needs review«); existing pets never auto-upgrade (v1 / v2 keep their set; purchase or admin »Upgrade to state media« → v3).
 - **Product switches live in the superadmin panel** (`/admin → Feature switches`: cats, unique AI media per pet, state media, school & game clips) — not env.
-- **Deploys:** merge to `main` = CI only; production by the daily 06:00 run or David's manual Run workflow (agents never dispatch). Claude merges its own PRs after green CI (+ one QA round for risky areas).
+- **Deploys:** merge to `main` = CI only; production by the daily 03:17 run (D24; GitHub may start it later) or David's manual Run workflow (agents never dispatch). Claude merges its own PRs after green CI (+ one QA round for risky areas).
 - **Technical documentation gate (David 21. 10.):** code and its docs change in the same PR; PR body ends with `Docs updated:`.
 - **Breed runs** (unattended) document only in `docs/breeds/<slug>.md`.
 
@@ -150,7 +150,7 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 3. **First real purchase on production** (cap 25 $ set?): watch `/admin → AI budget` ledger, »AI media« preparation time and media quality; calibrate the quality check and switch it to enforce.
 4. **Before the beta:** M5-06 legal review + App Store Kids / Play Families check; M5-07 Play internal testing + 20–50 families (David adds testers); D5 off-site backup setup (David); M5-05 device check of the app error reports (built 24. 10.) + uptime check; delete the dev test accounts in `/admin → Users`. Open »čaka Davida«: M5-R12 fetch spec, M2-07 / M2-01 (D) rules for a new pet after game over.
 
-5. **Pending David's answers (asked 2026-10-26, orchestrator):** (a) colour-variant portraits for all other breeds (~215 images, ~33–40 $ AI Lab, over two nights) — Border Collie done and live; (b) daily deploy fires 10:45–12:00 instead of 06:00 (GitHub cron delay) — proposal: move cron to ~03:00; (c) CI flake: `Install ffmpeg` timed out (5 min) on deploy run 40311299855 2026-10-26 → nothing deployed that day; proposal: cache ffmpeg / longer timeout; (d) adapted mode on iPhone without Apple Watch counts 0 pushes — proposal: clearer hint in the app (today only a small line in the adapted-mode settings).
+5. **Pending David's answers (asked 2026-10-26, orchestrator):** (a) colour-variant portraits for all other breeds (~215 images, ~33–40 $ AI Lab, over two nights) — Border Collie done and live; (b) + (c) **done** (David approved 2026-10-26, DEPLOYMENT.md D24, PR `chore/daily-deploy-earlier-ffmpeg`): daily deploy cron moved to 03:17 Europe/Ljubljana (01:17 / 02:17 UTC, off the :00 rush; GitHub may still start it late), CI installs ffmpeg without apt (cached static build, retries, smoke test — `scripts/ci-install-ffmpeg.sh`); (d) adapted mode on iPhone without Apple Watch counts 0 pushes — proposal: clearer hint in the app (today only a small line in the adapted-mode settings).
 6. **M6-W »Želje«** (SHOP_SPEC, decisions S1–S12 done 2026-10-26): start with W01 (backend) + W04/W05 in parallel after the API contract; W02 needs David to create store products (5,99 € ×3, 2,99 €, 15,99 € bundle) — give him exact steps then.
 
 ## 6. Session log

@@ -1,17 +1,20 @@
 name: Daily production deploy
 
-# D21 (David 2026-10-15): every day at 06:00 Europe/Ljubljana, deploy production when main has
+# D21 (David 2026-10-15) + D24 (David 2026-10-26): every day at 03:17 Europe/Ljubljana, deploy production when main has
 # commits production does not run yet AND the push CI ("CI & Deploy") of the main head is
 # green — by starting exactly the manual path: CI & Deploy → Run workflow on main, target
 # production (full tests, deploy guard, deploy job, mobile OTA chain unchanged). Logic and
 # rules: scripts/daily-deploy.sh (harness scripts/tests/daily-deploy.test.sh).
-# GitHub cron is UTC only: 04:00 UTC = 06:00 CEST, 05:00 UTC = 06:00 CET; the script lets
-# only the matching one through. Turn it off: Actions → Daily production deploy → Disable workflow.
+# GitHub cron is UTC only: 01:17 UTC = 03:17 CEST, 02:17 UTC = 03:17 CET; the script lets
+# only the matching one through (judged by the cron string, so a late start still counts).
+# Why 03:17 (D24): at 04:00 / 05:00 UTC GitHub started the runs 4.5–6 h late (deploy at
+# 10:45–12:00 local); scheduled runs are best effort and :00 is the most congested minute,
+# so the cron is earlier and off the hour. GitHub may still start it late. Turn it off: Actions → Daily production deploy → Disable workflow.
 
 on:
   schedule:
-    - cron: '0 4 * * *'
-    - cron: '0 5 * * *'
+    - cron: '17 1 * * *'
+    - cron: '17 2 * * *'
   workflow_dispatch:
     inputs:
       dry_run:

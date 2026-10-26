@@ -1,17 +1,20 @@
 #!/usr/bin/env bash
-# Daily production deploy (.github/workflows/daily-deploy.yml, DEPLOYMENT.md D21, David 2026-10-15).
+# Daily production deploy (.github/workflows/daily-deploy.yml, DEPLOYMENT.md D21, David 2026-10-15;
+# moved from 06:00 to 03:17 by D24, David 2026-10-26).
 #
-# Every day at 06:00 Europe/Ljubljana: when main has commits that production does not run
+# Every day at 03:17 Europe/Ljubljana (GitHub may start a scheduled run hours late — at
+# 04:00 / 05:00 UTC they started 4.5–6 h late in October 2026): when main has commits that production does not run
 # yet AND the push CI of the main head is green, start exactly what David starts by hand —
 # "CI & Deploy" → Run workflow on main with target production. The dispatched run is an
 # ordinary workflow_dispatch run (GITHUB_TOKEN may start workflow_dispatch runs): full
 # tests, the deploy guard, the deploy job and the mobile-ota workflow_run chain behave as
 # for a manual run. Manual "Run workflow" is unchanged.
 #
-#   a. schedule: GitHub cron is UTC only; the workflow fires at 04:00 and 05:00 UTC. Only the
-#      cron whose hour is 06 in Europe/Ljubljana today proceeds (04 in CEST, 05 in CET),
+#   a. schedule: GitHub cron is UTC only; the workflow fires at 01:17 and 02:17 UTC. Only the
+#      cron whose hour is DEPLOY_LOCAL_HOUR (03) in Europe/Ljubljana today proceeds (01 UTC in
+#      CEST, 02 UTC in CET),
 #      the other exits 0. Judged by the cron (SCHEDULE), not the clock, so a scheduled run
-#      that GitHub starts late still counts; without SCHEDULE the current local hour must be 06.
+#      that GitHub starts late still counts; without SCHEDULE the current local hour must be 03.
 #   b. main head == head_sha of the last successful Run workflow run whose job "Deploy to
 #      Hetzner Production" succeeded (same lookup as ci-plan.sh last_deployed_sha) → exit 0.
 #   c. the newest push run of deploy-production.yml for the main head must have concluded
@@ -46,6 +49,7 @@ SLEEP="${DAILY_DEPLOY_SLEEP:-sleep}"
 NOW="${DAILY_DEPLOY_NOW:-now}"
 SUMMARY="${GITHUB_STEP_SUMMARY:-/dev/null}"
 LOCAL_TZ="Europe/Ljubljana"
+DEPLOY_LOCAL_HOUR="03" # D24 (David 2026-10-26); was 06 (D21). Keep in sync with the crons in daily-deploy.yml.
 
 log() { echo "daily-deploy: $*"; }
 summary() { echo "$*" >> "$SUMMARY"; }
@@ -73,7 +77,7 @@ summary ""
 summary "event \`${EVENT_NAME}\` · dry run \`${DRY_RUN}\`${SCHEDULE:+ · cron \`${SCHEDULE}\`}"
 summary ""
 
-# --- a. 06:00 Europe/Ljubljana --------------------------------------------------------
+# --- a. 03:xx Europe/Ljubljana --------------------------------------------------------
 if [ "$EVENT_NAME" = schedule ]; then
   if [ -n "$SCHEDULE" ]; then
     read -r cron_min cron_hour _ <<< "$SCHEDULE"
@@ -87,8 +91,8 @@ if [ "$EVENT_NAME" = schedule ]; then
     local_hour="$(TZ="$LOCAL_TZ" date -d "$NOW" +%H)"
     what="it is ${local_hour}:xx in ${LOCAL_TZ}"
   fi
-  if [ "$local_hour" != 06 ]; then
-    done_ok "${what}, not 06 — the other daily cron deploys (CET / CEST)."
+  if [ "$local_hour" != "$DEPLOY_LOCAL_HOUR" ]; then
+    done_ok "${what}, not ${DEPLOY_LOCAL_HOUR} — the other daily cron deploys (CET / CEST)."
   fi
   log "$what"
 fi

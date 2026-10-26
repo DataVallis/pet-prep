@@ -43,6 +43,8 @@
 #                           for the website; nothing ships → no image, no deploy)
 #                           scripts/daily-deploy.sh + its test + .github/workflows/daily-deploy.yml
 #                           (D21 daily deploy trigger; runs in Actions, nothing ships)
+#        backend + scripts  scripts/ci-install-ffmpeg.sh + its test (D24: ffmpeg for the backend
+#                           test job; runs in Actions, nothing ships → no image, no deploy)
 #   3. Tested tree (push to main only): a needed suite is skipped when a pull_request
 #      run of THIS workflow, from this repository (no forks), with conclusion success,
 #      ran that suite on the identical git tree — marker artifact
@@ -154,6 +156,7 @@ classify() {
       scripts/generate-api-types.mjs) need_mobile=true ;;
       scripts/export-breed-registry.mjs|scripts/tests/export-breed-registry.test.mjs) need_scripts=true ;; # website export, nothing ships
       scripts/daily-deploy.sh|scripts/tests/daily-deploy.test.sh|.github/workflows/daily-deploy.yml) need_scripts=true ;; # D21 daily deploy trigger (Actions only), nothing ships
+      scripts/ci-install-ffmpeg.sh|scripts/tests/ci-install-ffmpeg.test.sh) need_backend=true need_scripts=true ;; # D24 ffmpeg for the backend test job (Actions only), nothing ships
       scripts/breeds-index.mjs|scripts/tests/breeds-index.test.mjs|docs/breeds/*) need_scripts=true ;; # docs/breeds index (one doc per breed), nothing ships
       scripts/*) need_backend=true need_deploy=true need_scripts=true ;;
       mobile/src/i18n/locales/*/pet.json|mobile/src/i18n/locales/*/family.json) need_mobile=true need_scripts=true ;; # + breed registry labels / names
