@@ -151,6 +151,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-10-26 (cloud, backend) — M5-R11-08 Border Collie colour variants on main + `--colour` + export (`feat/M5-R11-08-colour-variants`)
+- 6 approved Border Collie variants (run 40277456276) + their `colour_variants` entries committed (portrait entry got `colour: black-white`); `breeds:portraits --colours --colour=<key>` / workflow input `colour_keys`; `COLOUR_HINTS` in the edit prompt (blue-white, blue-merle-white, sable-white now `stale` but kept — never replaced without `--force`); export `portrait.colours` (contract for the website) + `--copy-portraits` copies variants. **Next:** dispatch `colour_keys=blue-white force=true` for border_collie (one $0.15 edit), review, commit; website shows the colours. Debt: none new.
+
 ### 2026-10-26 (cloud, backend) — M5-R11-08 breed portrait colour variants (`feat/breed-portrait-colours`)
 - `breeds:portraits --colours {--reference-dir=}` + `breed-portraits.yml` input `colours`: every other standard coat colour (`config/breed_colours.php`) as an edit of the existing portrait (`nano_banana_pro_edit`, reference as data URI, AI Lab), `<species>/<slug>--<colour>.webp`, manifest `colour_variants`; new portrait entries carry `colour`. Tests `BreedPortraitColoursTest`. **Next:** dry run then real run for `border_collie` (6 × $0.15), review the images; the export / website do not read the variants yet. Debt: the review branch copies the server manifest wholesale (its `portraits` list may be older than `main`'s) — take only the variant files + entries.
 

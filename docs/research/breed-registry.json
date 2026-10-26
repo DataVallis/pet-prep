@@ -59,9 +59,13 @@
       "path": "docs/research/app-release.json",
       "sha256": "8e3300dc749184817bc317155ad95c504a00abf7344e4ada546bef6886c4987f"
     },
+    "breed_colours": {
+      "path": "backend/config/breed_colours.php",
+      "sha256": "907d2f6ee634ebcd65cdfdf66b8af0a794f9440786cb867676fed7f4f4575280"
+    },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "116dffe9af5cd37b3cbba1574fab4cdd7703d47013a634c715722c5e7caf7c3d"
+      "sha256": "7933e0e1a223854c492728d67fa435d1450c384df073b62afbcff3f5ef81e544"
     }
   },
   "suitability_vocabulary": {
@@ -1301,7 +1305,66 @@
         "file": "border-collie.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black-white",
+            "label": {
+              "en": "Black and white",
+              "sl": "Črno-bel"
+            },
+            "file": "dog/border-collie.webp",
+            "default": true
+          },
+          {
+            "key": "tricolour",
+            "label": {
+              "en": "Tricolour (black, white, tan)",
+              "sl": "Trobarven (črn, bel, rjavkast)"
+            },
+            "file": "dog/border-collie--tricolour.webp"
+          },
+          {
+            "key": "red-white",
+            "label": {
+              "en": "Red and white",
+              "sl": "Rdeče-bel"
+            },
+            "file": "dog/border-collie--red-white.webp"
+          },
+          {
+            "key": "blue-white",
+            "label": {
+              "en": "Blue and white",
+              "sl": "Modro-bel"
+            },
+            "file": "dog/border-collie--blue-white.webp"
+          },
+          {
+            "key": "blue-merle-white",
+            "label": {
+              "en": "Blue merle and white",
+              "sl": "Modri merle z belo"
+            },
+            "file": "dog/border-collie--blue-merle-white.webp"
+          },
+          {
+            "key": "red-merle-white",
+            "label": {
+              "en": "Red merle and white",
+              "sl": "Rdeči merle z belo"
+            },
+            "file": "dog/border-collie--red-merle-white.webp"
+          },
+          {
+            "key": "sable-white",
+            "label": {
+              "en": "Sable and white",
+              "sl": "Sobolji z belo"
+            },
+            "file": "dog/border-collie--sable-white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",

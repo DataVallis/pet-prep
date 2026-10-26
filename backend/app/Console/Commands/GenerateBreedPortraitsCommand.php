@@ -25,6 +25,8 @@ use Throwable;
  * variant per standard coat colour (config/breed_colours.php) except the one the
  * default portrait shows — an image EDIT of that portrait (the reference, read
  * from --reference-dir, default the output directory). See BreedPortraitService.
+ * `--colour=<key>` (repeatable) limits the run to those colours; an existing
+ * (approved) variant is only replaced with --force, also when its prompt changed.
  *
  * Runs synchronously on purpose: an operator tool for a handful of images, no
  * DB transaction is open around the fal call (FalGateway / MediaDownloader
@@ -41,6 +43,7 @@ class GenerateBreedPortraitsCommand extends Command
         {--out= : Output directory (absolute, or relative to backend/; default ../docs/research/breed-portraits)}
         {--profile= : Image profile from config/media.php (default: the reference-image profile; with --colours the colour edit profile)}
         {--colours : Colour variants: every standard coat colour except the one of the default portrait, edited from that portrait}
+        {--colour=* : With --colours: only these colour keys of config/breed_colours.php (repeatable); existing ones still need --force}
         {--reference-dir= : With --colours: where the default portraits + manifest are read (default: the output directory)}';
 
     protected $description = 'Generate AI breed photos for the website animal register (AI Lab budget)';
@@ -59,6 +62,7 @@ class GenerateBreedPortraitsCommand extends Command
             $profile = $colours ? $portraits->colourProfile($this->option('profile')) : $portraits->profile($this->option('profile'));
             $outDir = $this->outDir();
             $referenceDir = $colours ? $this->referenceDir($outDir) : $outDir;
+            $only = $this->colourKeys($portraits, $breeds, $colours);
         } catch (InvalidArgumentException $e) {
             $this->error($e->getMessage());
 
@@ -72,7 +76,7 @@ class GenerateBreedPortraitsCommand extends Command
         }
 
         if ($colours) {
-            return $this->handleColours($portraits, $guard, $breeds, $profile, $outDir, $referenceDir, $dryRun);
+            return $this->handleColours($portraits, $guard, $breeds, $profile, $outDir, $referenceDir, $dryRun, $only);
         }
 
         $plan = $portraits->plan($breeds, $outDir, (bool) $this->option('force'));
@@ -170,10 +174,11 @@ class GenerateBreedPortraitsCommand extends Command
 
     /**
      * @param  list<BreedType>  $breeds
+     * @param  list<string>|null  $only  --colour keys (null = every colour)
      */
-    private function handleColours(BreedPortraitService $portraits, AiSpendGuard $guard, array $breeds, ModelProfile $profile, string $outDir, string $referenceDir, bool $dryRun): int
+    private function handleColours(BreedPortraitService $portraits, AiSpendGuard $guard, array $breeds, ModelProfile $profile, string $outDir, string $referenceDir, bool $dryRun, ?array $only): int
     {
-        $plan = $portraits->colourPlan($breeds, $outDir, $referenceDir, (bool) $this->option('force'));
+        $plan = $portraits->colourPlan($breeds, $outDir, $referenceDir, (bool) $this->option('force'), $only);
         $todo = array_values(array_filter($plan, fn (array $r) => in_array($r['action'], ['generate', 'force'], true)));
         $unit = $profile->estimatedCostUsd();
         $total = $portraits->estimate($profile, count($todo));
@@ -185,6 +190,11 @@ class GenerateBreedPortraitsCommand extends Command
         foreach ($breeds as $breed) {
             if ($portraits->colours($breed) === []) {
                 $this->warn("{$breed->value}: no colour list in config/breed_colours.php — no colour variants.");
+            }
+        }
+        foreach ($only ?? [] as $key) {
+            if (! in_array($key, array_map(fn (array $r) => $r['colour']['key'], $plan), true)) {
+                $this->warn("--colour={$key}: no variant to make — it is the colour the default portrait already shows.");
             }
         }
 
@@ -211,7 +221,7 @@ class GenerateBreedPortraitsCommand extends Command
         $missing = [];
         foreach ($plan as $row) {
             if ($row['action'] === 'stale') {
-                $this->warn("{$row['breed']->value} {$row['colour']['key']}: the prompt changed since {$row['file']} was generated — use --force --colours --breed={$row['breed']->value} to regenerate.");
+                $this->warn("{$row['breed']->value} {$row['colour']['key']}: the prompt changed since {$row['file']} was generated — kept (an approved variant is never replaced silently); to regenerate it: --colours --force --breed={$row['breed']->value} --colour={$row['colour']['key']}.");
             }
             if ($row['action'] === 'no-reference') {
                 $missing[$row['breed']->value] = $row['reference'];
@@ -274,6 +284,35 @@ class GenerateBreedPortraitsCommand extends Command
         $this->line(sprintf('Generated %d, failed %d, estimated spend $%.4f (AI Lab).', $done, $failed, $spent));
 
         return $failed > 0 || $missing !== [] ? self::FAILURE : self::SUCCESS;
+    }
+
+    /**
+     * --colour keys: only with --colours, each a breed_colours key of at least one
+     * selected breed. Null = every colour.
+     *
+     * @param  list<BreedType>  $breeds
+     * @return list<string>|null
+     */
+    private function colourKeys(BreedPortraitService $portraits, array $breeds, bool $colours): ?array
+    {
+        $keys = array_values(array_unique(array_map('strval', (array) $this->option('colour'))));
+        if ($keys === []) {
+            return null;
+        }
+        if (! $colours) {
+            throw new InvalidArgumentException('--colour needs --colours.');
+        }
+
+        $known = [];
+        foreach ($breeds as $breed) {
+            array_push($known, ...array_column($portraits->colours($breed), 'key'));
+        }
+        $unknown = array_values(array_diff($keys, $known));
+        if ($unknown !== []) {
+            throw new InvalidArgumentException('--colour: unknown colour key(s) for the selected breed(s): '.implode(', ', $unknown).' (see config/breed_colours.php).');
+        }
+
+        return $keys;
     }
 
     /** --reference-dir (absolute, or relative to backend/), default the output directory. */

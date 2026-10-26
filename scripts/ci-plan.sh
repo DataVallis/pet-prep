@@ -34,7 +34,7 @@
 #                           backend/database/data/breed-facts must match; no image, no deploy — M5-R09b)
 #        mobile             mobile/**, scripts/generate-api-types.mjs, the workflow
 #        scripts            scripts/**, deployment/**, the workflow,
-#                           backend/config/breed_suitability.php, mobile/src/i18n/locales/*/{pet,family}.json,
+#                           backend/config/breed_suitability.php, backend/config/breed_colours.php, mobile/src/i18n/locales/*/{pet,family}.json,
 #                           docs/research/cat-data/** (also backend tests)
 #                           docs/research/breed-portraits/**, docs/research/breeder-checklist/** and docs/research/breed-registry.json
 #                           (inputs / output of scripts/export-breed-registry.mjs, M5-R11;
@@ -142,7 +142,7 @@ classify() {
     case "$f" in
       "$WORKFLOW_PATH") need_backend=true need_deploy=true need_mobile=true need_scripts=true ;;
       backend/README.md|backend/CLAUDE.md) ;; # docs next to the code
-      backend/config/breed_suitability.php) need_backend=true need_deploy=true need_scripts=true ;; # + breed registry export
+      backend/config/breed_suitability.php|backend/config/breed_colours.php) need_backend=true need_deploy=true need_scripts=true ;; # + breed registry export (suitability tags, portrait colour labels)
       backend/*) need_backend=true need_deploy=true ;;
       docs/research/dog-data/*) need_backend=true need_scripts=true ;; # test fixtures + export input, nothing ships
       docs/research/cat-data/*) need_backend=true need_scripts=true ;; # cat test fixtures + export input, nothing ships
