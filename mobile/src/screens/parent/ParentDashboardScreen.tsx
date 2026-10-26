@@ -59,7 +59,8 @@ type Tab = 'dashboard' | 'controls';
 type Overlay =
   | { kind: 'none' }
   | { kind: 'addChild'; child?: FamilyChild }
-  | { kind: 'child'; childId: number }
+  /** `logWalk`: opened from »Vpiši sprehod« → the detail scrolls to the log-walk card (M5-T12). */
+  | { kind: 'child'; childId: number; logWalk?: boolean }
   /** `backToChildId`: opened from a child's detail → "Back" returns there (M5-F01). */
   | { kind: 'challenge'; backToChildId?: number };
 
@@ -123,6 +124,10 @@ export default function ParentDashboardScreen() {
   const openAddChild = () => setOverlay({ kind: 'addChild' });
   const openChildPin = (child: FamilyChild) => setOverlay({ kind: 'addChild', child });
   const openChild = (child: FamilyChild) => setOverlay({ kind: 'child', childId: child.id });
+  const openLogWalk = (child: FamilyChild) => {
+    setActiveTab('dashboard');
+    setOverlay({ kind: 'child', childId: child.id, logWalk: true });
+  };
   const closeOverlay = () => setOverlay({ kind: 'none' });
   const openChallenge = (backToChildId?: number) => setOverlay({ kind: 'challenge', backToChildId });
 
@@ -202,6 +207,7 @@ export default function ParentDashboardScreen() {
           family={family}
           onBack={closeOverlay}
           onOpenChallenge={() => openChallenge(detailChild.id)}
+          focusLogWalk={overlay.logWalk === true}
         />
       );
     }
@@ -214,6 +220,7 @@ export default function ParentDashboardScreen() {
             family={family}
             onAddChild={openAddChild}
             onChildPin={openChildPin}
+            onLogWalk={openLogWalk}
             onOpenChallenge={() => openChallenge()}
             notice={notice}
             onNotice={setNotice}
@@ -283,6 +290,7 @@ export default function ParentDashboardScreen() {
                 pet={family ? petOfChild(child, family) : null}
                 timezone={family?.timezone ?? 'Europe/Ljubljana'}
                 onOpen={openChild}
+                onLogWalk={openLogWalk}
                 onChildPin={openChildPin}
                 onOpenChallenge={() => openChallenge()}
               />

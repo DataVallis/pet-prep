@@ -20,7 +20,7 @@
  * open, "ne vpliva na oceno skrbi") and its timeline entry ("Nova izkušnja: nov zvok · Mia").
  */
 
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
 import { ActivityIndicator, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
@@ -50,6 +50,8 @@ import PetMediaView from '@/components/PetMediaView';
 import ChallengeBuyButton from '@/components/parent/ChallengeBuyButton';
 import CertificateCard from '@/components/parent/CertificateCard';
 import LogWalkCard from '@/components/parent/LogWalkCard';
+import NoPushesHint from '@/components/parent/NoPushesHint';
+import { noPushesHintDue } from '@/modules/steps/adaptedPushHint';
 import CareRemindersCard, { reminderDate } from '@/components/parent/CareRemindersCard';
 import { careReminderTitle } from '@/modules/careTasks/careTasks';
 import { canBuyChallenge } from '@/modules/plan/purchaseEntry';
@@ -118,6 +120,11 @@ interface ChildDetailScreenProps {
   onBack: () => void;
   /** M5-F01: opens the challenge paywall; the button shows only while `canBuyChallenge(pet)`. */
   onOpenChallenge?: () => void;
+  /**
+   * M5-T12 (David 2026-10-26): opened from »Vpiši sprehod« (Nadzor / dashboard hint) — scroll to
+   * the log-walk card once it is laid out.
+   */
+  focusLogWalk?: boolean;
 }
 
 /** 12500 → "12.500" (sl) / "12,500" (en) — `common:format.thousands` (M1-18). */
@@ -195,7 +202,7 @@ function Timeline({ petId, family, species }: { petId: number; family: FamilyOve
   );
 }
 
-export default function ChildDetailScreen({ child, family, onBack, onOpenChallenge }: ChildDetailScreenProps) {
+export default function ChildDetailScreen({ child, family, onBack, onOpenChallenge, focusLogWalk = false }: ChildDetailScreenProps) {
   const [days, setDays] = useState<ReportDays>(7);
   const report = useChildReport(child.id, days);
   const data = report.data;
@@ -237,6 +244,20 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
   const growthQuery = useParentPetGrowth(growthPetId, showAlbum);
   const growth = growthQuery.isError ? null : (growthQuery.data ?? null);
   const onGrowthExpired = useGrowthRefresh(parentPetGrowthKey(growthPetId ?? 0));
+  // M5-T12: »Vpiši sprehod« — scroll target (y inside the scroll content) and the parent-only hint.
+  const scrollRef = useRef<ScrollView>(null);
+  const [logWalkY, setLogWalkY] = useState<number | null>(null);
+  const scrollToLogWalk = useCallback(() => {
+    if (logWalkY !== null) scrollRef.current?.scrollTo({ y: Math.max(0, logWalkY - 12), animated: true });
+  }, [logWalkY]);
+  const autoScrolled = useRef(false);
+  useEffect(() => {
+    if (!focusLogWalk || autoScrolled.current || logWalkY === null) return;
+    autoScrolled.current = true;
+    scrollToLogWalk();
+  }, [focusLogWalk, logWalkY, scrollToLogWalk]);
+  const showLogWalk = child.adapted_mode && pet !== null && !isCat;
+  const showNoPushes = showLogWalk && noPushesHintDue(child, pet, family.timezone);
 
   return (
     <View style={styles.root}>
@@ -255,7 +276,7 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
           <TrafficLightBadge color={(data?.traffic_light ?? child.traffic_light).color} />
         </View>
 
-        <ScrollView style={styles.flex} contentContainerStyle={styles.content}>
+        <ScrollView ref={scrollRef} style={styles.flex} contentContainerStyle={styles.content}>
           {/* M2-01d: the finished challenge first — certificate or report (→ the 84-day period). */}
           <CertificateCard
             certificate={child.certificate}
@@ -263,9 +284,13 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
             onOpenReport={() => setDays(84)}
             testID="detail-certificate"
           />
+          {/* M5-T12: no pushes yet today (after noon) — parent-only hint (David 2026-10-26). */}
+          {showNoPushes && <NoPushesHint onLogWalk={scrollToLogWalk} testID="detail-no-pushes" />}
           {/* M5-T12: in adapted mode the parent can log walk minutes (no Apple Watch needed). */}
-          {child.adapted_mode && pet !== null && !isCat && (
-            <LogWalkCard childId={child.id} timezone={family.timezone} testID="detail-log-walk" />
+          {showLogWalk && (
+            <View onLayout={(e) => setLogWalkY(e.nativeEvent.layout.y)} testID="detail-log-walk-anchor">
+              <LogWalkCard childId={child.id} timezone={family.timezone} testID="detail-log-walk" />
+            </View>
           )}
           {onOpenChallenge && canBuyChallenge(pet) && (
             <ChallengeBuyButton onPress={onOpenChallenge} childName={child.name} species={pet?.species ?? null} testID="detail-buy-challenge" />

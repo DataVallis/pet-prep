@@ -35,6 +35,7 @@ import {
   type FamilyOverview,
   type RevokeErrorKind,
 } from '@/modules/family/family';
+import { canLogWalk } from '@/modules/steps/adaptedPushHint';
 import { fonts, palette, tightTracking } from '@/theme';
 import { t, tPets } from '@/i18n';
 import { strings } from '@/i18n/strings';
@@ -60,9 +61,11 @@ interface FamilyChildrenCardProps {
   onAddChild: () => void;
   /** Open the PIN flow for this child (pet choice if unpaired, re-login PIN if paired). */
   onChildPin: (child: FamilyChild) => void;
+  /** M5-T12: open this child's page at »Vpiši sprehod« (adapted mode without an Apple Watch). */
+  onLogWalk?: (child: FamilyChild) => void;
 }
 
-export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: FamilyChildrenCardProps) {
+export default function FamilyChildrenCard({ family, onAddChild, onChildPin, onLogWalk }: FamilyChildrenCardProps) {
   const revoke = useRevokeChildDevices();
   const removeChild = useDeleteChild();
   const [confirmingId, setConfirmingId] = useState<number | null>(null);
@@ -246,7 +249,12 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
             )}
 
             {/* M5-T12: parent-only accessibility switch (pushes instead of steps). */}
-            <AdaptedModeRow childId={child.id} childName={child.name} enabled={child.adapted_mode} />
+            <AdaptedModeRow
+              childId={child.id}
+              childName={child.name}
+              enabled={child.adapted_mode}
+              onLogWalk={onLogWalk && canLogWalk(child, family) ? () => onLogWalk(child) : undefined}
+            />
             {/* M5-T17: »Lažje kretnje« — hold / button instead of swipes in the child's games. */}
             <EasyGesturesRow childId={child.id} childName={child.name} enabled={child.easy_gestures} />
             {/* M5-T11: »Prikaz: Video / Slika« of the child's app. */}
