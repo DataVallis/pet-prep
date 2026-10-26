@@ -332,7 +332,8 @@ Samo za nove pse iz različice aplikacije, ki šolanje zna. **📱 Na telefonu 7
 | Vstop v nakup izziva | Dokler izziv psa ni plačan (»čaka na nakup«, od M3-13 tudi še nerojen pes — starš kupi najprej): jasen gumb **»12-tedenski izziv — kupi«** na kartici otroka v Pregledu in v podrobnostih otroka ter vrstica **»Nakupi / izziv«** v Nadzoru (koliko psov čaka na nakup; tudi obnova nakupov). Vse odpre zaslon izziva. Značka plana ostane. Mešanček, brezplačni plan in plačan izziv gumba nimajo. | starš | ✅ | M5-F01, M3-13 | 2026-10-08 |
 | Plačljiva pasma (Border Collie) 💶 | Izbira na planu **izziv** (pes se ustvari brez nakupa vnaprej, igra se začne z nakupom — M3-13); na brezplačnem planu zaklenjena. **Izziv je samo s plačljivo pasmo** — mešanček je pes brezplačnega plana (M5-F03). | starš | ✅ | M5-R04, M3-11, M3-09, M5-F03 | 2026-10-07 |
 | Second Chance reset (19,99 €) | — | starš | ⏸ | backlog | — |
-| Priboljški, veterinar, igrače (IAP), garancija »Real-World Relief«, bonusi | — | starš | ⏸ | backlog | — |
+| Trgovinica za ljubljenčka (želje otroka → nakup starša) | *Načrt* (David 26. 10. 2026): otrok iz kataloga brez cen prosi za posteljo, sklede, ovratnico, igračo ali priboljške; staršu se prošnje nabirajo na nadzorni plošči, kupi jih v starševski aplikaciji; ljubljenček dobi unikatno AI vsebino. Samo videz, brez vpliva na igro; tudi v brezplačni verziji. Brez veterinarja in zdravil. Osnutek: `SHOP_SPEC.md`. | otrok, starš | 🗓 osnutek | backlog | 2026-10-26 |
+| Garancija »Real-World Relief«, bonusi | — | starš | ⏸ | backlog | — |
 | Partnerski kuponi (B2B) | Izključeno iz MVP. | partnerji | ⏸ | backlog | — |
 
 ## 13. Načrtovano in po MVP
