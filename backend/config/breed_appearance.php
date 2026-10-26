@@ -584,6 +584,15 @@
 | trait with tight, healthy eyelids, no visible haw and moderate lips (never heavy, drooping or drooling) and sound,
 | well-angulated hindquarters in `build`. Colour weights unsourced → `verified => false`.
 |
+| Staffordshire Bull Terrier (M5-R10-67, docs/research/dog-data staffordshire_bull_terrier.appearance): "Smooth-coated,
+| well balanced, of great strength for his size." (FCI 76, S537; RKC standard S539); coat "Smooth, short and close.";
+| ears "Rose or half pricked, not large or heavy."; tail "Medium length, low set, tapering to a point and carried rather
+| low." Colours: white, red, fawn, black, blue, any of these with white, any shade of brindle (with or without white)
+| (S537) — brindle weighted highest (the register portrait); never black and tan or liver ("unacceptable", S537 / S539).
+| Not a flat-faced breed, but a short foreface → a `head` trait with a short, clearly visible muzzle and open nostrils
+| (moderate, non-exaggerated). RKC Breed Watch Category 2 (S538, points not returned). Colour weights unsourced →
+| `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -3015,6 +3024,49 @@ return [
             'ear_carriage' => ['medium-sized ears lying close to the cheeks'],
             'eye_color' => ['medium-sized dark brown eyes with tight eyelids'],
             'tail' => ['long, heavy tail carried low'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+
+    // M5-R10-67 (docs/research/dog-data/data.json staffordshire_bull_terrier.appearance; runbook rules 2026-10-10:
+    // standard colours only — S537 / S539; never black and tan or liver; moderate head with a visible muzzle).
+    'staffordshire_bull_terrier' => [
+        'display_name' => 'Staffordshire Bull Terrier',
+        // Colour frequencies are in no source (staffordshire_bull_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 76 (S537, https://WWW.FCI.BE/Nomenclature/Standards/076g03-en.pdf), Royal Kennel Club breed standard (S539), RKC breed page (S538) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S538 "Size: Small"; S537 "Desirable height at withers:35,5 to 40,5 cm, these heights being related to the weights."',
+            'build' => 'S537 "Smooth-coated, well balanced, of great strength for his size."',
+            'coat_length' => 'S539 "Smooth, short and close."',
+            'coat_color' => 'S537 "White. Red, fawn, black, blue, or any one of these colours with white."; "Any shade of brindle or any shade of brindle with white." (weights unsourced)',
+            'head' => 'S537 "Black or as dark as possible in blue dogs, with open nostrils."; RKC S539 short foreface (paraphrase) — moderate, never flat-faced',
+            'ear_carriage' => 'S537 "Rose or half pricked, not large or heavy."',
+            'eye_color' => 'S537 "Round, of medium size, and set to look straight ahead."',
+            'tail' => 'S537 "Medium length, low set, tapering to a point and carried rather low."',
+        ],
+        'traits' => [
+            'size' => ['small to medium, compact'],
+            'build' => [['value' => 'muscular, active and agile, of great strength for its size', 'weight' => 3], 'well balanced, broad-chested and compact'],
+            'coat_length' => ['smooth, short and close coat'],
+            // FCI / RKC standards (S537, S539); brindle weighted highest (the register portrait).
+            'coat_color' => [
+                ['value' => 'brindle', 'weight' => 5],
+                ['value' => 'brindle and white', 'weight' => 4],
+                ['value' => 'red', 'weight' => 3],
+                ['value' => 'black and white', 'weight' => 2],
+                ['value' => 'fawn', 'weight' => 2],
+                ['value' => 'black', 'weight' => 2],
+                'blue',
+                'red and white',
+                'blue and white',
+                'fawn and white',
+                'white',
+            ],
+            'head' => ['short, deep head with a broad skull, pronounced cheek muscles, a distinct stop, a short but clearly visible muzzle and a black nose with open nostrils'],
+            'ear_carriage' => ['small rose or half-pricked ears'],
+            'eye_color' => ['round, medium-sized dark eyes looking straight ahead'],
+            'tail' => ['medium-length, low-set natural tail tapering to a point, carried rather low'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],

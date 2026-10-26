@@ -589,6 +589,15 @@ class FalAiService
                 .'long heavy tail carried low, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-67: FCI 76 (S537) / RKC standard (S539) — brindle as the anchor (the first colour of the game list);
+            // natural rose ears and tail; a moderate head with a visible muzzle (never flat-faced).
+            BreedType::StaffordshireBullTerrier => 'A bold, affectionate Staffordshire Bull Terrier dog with a smooth, short, close brindle coat, '
+                .'muscular, compact, well-balanced body of great strength for its size, '
+                .'short, deep head with a broad skull, pronounced cheek muscles, a distinct stop and a short but clearly visible muzzle, '
+                .'black nose with open nostrils, round dark eyes looking straight ahead, small rose or half-pricked ears, '
+                .'medium-length, low-set tapering natural tail carried rather low, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1400,6 +1409,18 @@ class FalAiService
                 'eye_color' => 'dark brown, with tight healthy eyelids',
                 'fur_texture' => 'short, dense, smooth and close-lying double coat',
                 'markings' => 'white muzzle, blaze, collar, chest, feet and tail tip, never solid white or solid red',
+            ],
+            // M5-R10-67: colours of the FCI (S537) and RKC (S539) standards — brindle, red, fawn, black, blue, white or any
+            // of these with white; never black and tan or liver (unacceptable); natural rose ears and tail.
+            BreedType::StaffordshireBullTerrier => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'brindle',
+                    1 => 'brindle and white',
+                    2 => 'red',
+                },
+                'eye_color' => 'dark',
+                'fur_texture' => 'smooth, short and close',
+                'markings' => 'never black and tan or liver, small rose ears, short but clearly visible muzzle, natural tapering tail',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

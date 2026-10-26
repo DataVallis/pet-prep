@@ -440,6 +440,7 @@ const SPECIES = [
       { id: 'cardigan_welsh_corgi', synonyms: { en: ['Welsh Corgi (Cardigan)', 'Welsh Corgi Cardigan', 'Cardigan', 'Cardi', 'Corgi'], sl: ['welsh corgi', 'cardigan', 'korgi', 'valižanski korgi'] } },
       { id: 'german_wirehaired_pointer', synonyms: { en: ['Deutsch Drahthaar', 'Drahthaar', 'German Wire-haired Pointing Dog', 'GWP'], sl: ['nemski ostrodlaki pticar', 'drahthaar', 'drahtar'] } },
       { id: 'saint_bernard', synonyms: { en: ['St. Bernard', 'St Bernard', 'St. Bernhardshund', 'Bernhardiner', 'Alpine Mastiff'], sl: ['sveti bernard', 'pes svetega Bernarda', 'bernhardiner'] } },
+      { id: 'staffordshire_bull_terrier', synonyms: { en: ['Staffie', 'Staffy', 'Stafford', 'SBT'], sl: ['stafordsirski bulterier', 'staffordshirski bulterier', 'staffie'] } },
     ],
   },
   {
@@ -1866,6 +1867,28 @@ const DOG_FACTS = {
       ['certain_cancers', 'health.cancer'],
     ],
   },
+  // M5-R10-67. Height = FCI 76 desirable 35.5–40.5 cm for both sexes (S537), weight = FCI 76 by sex (S537), lifespan = the
+  // RKC band 'Over 12 years' (S538; McMillan 2024 via Wikipedia is never exported), exercise = RKC 'Up to 1 hour per day'
+  // (S538), coat / grooming / shedding = RKC key facts (S538). FCI origin Great Britain (GB). Not exported: adult_weight.pdsa /
+  // salt_category, lifespan.pdsa / petmd / mcmillan_2024 / vetcompass / senior_from, health.breed_watch (no point returned),
+  // health.seizures / degenerative_myelopathy (research only). New health key l2hga_nervous_system.
+  staffordshire_bull_terrier: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia_arthritis', 'health.hip_dysplasia'],
+      ['itchy_skin_allergy', 'health.skin'],
+      ['cataracts', 'health.eyes'],
+      ['l2hga_nervous_system', 'health.l2hga'],
+      ['certain_cancers', 'health.cancer'],
+    ],
+  },
 
 };
 
@@ -2421,6 +2444,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.saint_bernard.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.saint_bernard.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.saint_bernard.exercise_minutes_senior',
+  },
+  staffordshire_bull_terrier: {
+    adult_minutes: ['proposed_game_parameters.staffordshire_bull_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.staffordshire_bull_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.staffordshire_bull_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.staffordshire_bull_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.staffordshire_bull_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.staffordshire_bull_terrier.exercise_minutes_senior',
   },
 
 };

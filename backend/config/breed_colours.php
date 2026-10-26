@@ -418,6 +418,21 @@ return [
         ['key' => 'white-red', 'value' => 'white with red patches', 'en' => 'White with red patches', 'sl' => 'Bel z rdečimi lisami'],
         ['key' => 'brindle-white', 'value' => 'red-brindle and white', 'en' => 'Red brindle and white', 'sl' => 'Rdeče tigrasto-bel'],
     ],
+    // M5-R10-67: FCI S537 / RKC S539 — white, red, fawn, black, blue, any of these with white, any shade of brindle (with
+    // or without white); never black and tan or liver.
+    'staffordshire_bull_terrier' => [
+        ['key' => 'brindle', 'value' => 'brindle', 'en' => 'Brindle', 'sl' => 'Tigrast'],
+        ['key' => 'brindle-white', 'value' => 'brindle and white', 'en' => 'Brindle and white', 'sl' => 'Tigrasto-bel'],
+        ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'black-white', 'value' => 'black and white', 'en' => 'Black and white', 'sl' => 'Črno-bel'],
+        ['key' => 'fawn', 'value' => 'fawn', 'en' => 'Fawn', 'sl' => 'Plav'],
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'blue', 'value' => 'blue', 'en' => 'Blue', 'sl' => 'Moder'],
+        ['key' => 'red-white', 'value' => 'red and white', 'en' => 'Red and white', 'sl' => 'Rdeče-bel'],
+        ['key' => 'blue-white', 'value' => 'blue and white', 'en' => 'Blue and white', 'sl' => 'Modro-bel'],
+        ['key' => 'fawn-white', 'value' => 'fawn and white', 'en' => 'Fawn and white', 'sl' => 'Plavo-bel'],
+        ['key' => 'white', 'value' => 'white', 'en' => 'White', 'sl' => 'Bel'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
