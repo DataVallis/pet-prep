@@ -9,6 +9,16 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-26 — Prilagojen način: aplikacija jasno pove, da potiske na iPhonu šteje samo Apple Watch
+
+**Kaj:** Na testu v družini je bil prilagojen način (potiski invalidskega vozička) vklopljen na iPhonu brez ure — dva dni 0 potiskov. Apple Zdravje potiske zapisuje samo z Apple Watch (Invalidski voziček = Da); sam iPhone jih ne šteje. Do zdaj je to pisalo v eni drobni vrstici. Zdaj je pod stikalom jasen okvir »Kdo šteje potiske« (iPhone: samo Apple Watch; Android: naprava ali aplikacija za Health Connect; brez ure: »Vpiši sprehod«), po 12:00 brez potiskov pa starš na kartici otroka vidi »Danes še ni potiskov« z gumbom »Vpiši sprehod«. Otroku tega ne kažemo.
+**Zakaj je pomembno:** Dostopnost ni samo stikalo — starš mora vedeti, kaj potrebuje, sicer kuža ostane brez sprehoda brez otrokove krivde.
+- 👩 Starši: če otrok uporablja voziček in nima ure, vpišete minute sprehoda — aplikacija vas sama opozori.
+- 🤝 Partnerji (organizacije za otroke z oviranostmi): jasna navodila, katera naprava šteje potiske.
+- 🛠 Tehnično: samo JS (gre z OTA), pravilo `noPushesHintDue` (prilagojen način, 0 korakov in vpisov danes, ≥ 12:00 družinskega časa) z Jest testi.
+
+---
+
 ## 2026-10-26 — #walkyourpet: frazo so izumili otroci
 
 **Kaj:** Davidova otroka sta imela na obisku prijateljico. Ko so se odločali, ali gredo ven, je rekla napol slovensko, napol angleško: »Lahko bi šli **walk your pet**« 😁. David je odločil, da je to od zdaj znamčna fraza in hashtag PetPrep: `#walkyourpet` gre na vsako objavo, »Walk your pet.« je zadnja vrstica in poziv. Prvi Instagram story (»#walkyourpet is a thing now.«) je narejen. Pravila: `brand/WALKYOURPET.md`.

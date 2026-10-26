@@ -222,9 +222,20 @@
       "hint": "Namesto korakov štejejo potiski invalidskega vozička (1 potisk = 1 korak). Cilji in ocena skrbi ostanejo enaki. Ne sprašujemo in ne shranjujemo, zakaj.",
       "on": "Prilagojen način je vklopljen: sprehod šteje potiske vozička.",
       "off": "Prilagojen način je izklopljen: sprehod šteje korake.",
-      "native": "Za potiske potrebuje otrokov telefon najnovejšo različico PetPrep (Zdravje z vklopljenim invalidskim vozičkom in Apple Watch ali Health Connect).",
+      "native": "Otrokov telefon potrebuje najnovejšo različico PetPrep.",
       "error": "Nastavitev ni shranjena. Poskusite znova.",
-      "consent": "Z vklopom privolite, da hranimo samo to, da je prilagojen način vklopljen, in pri posameznem dnevu, da so šteli potiski. Ko ga izklopite, iz zgodovine odstranimo vse oznake potiskov (ti dnevi štejejo kot koraki); točke, ocena skrbi in vpisani sprehodi ostanejo enaki."
+      "consent": "Z vklopom privolite, da hranimo samo to, da je prilagojen način vklopljen, in pri posameznem dnevu, da so šteli potiski. Ko ga izklopite, iz zgodovine odstranimo vse oznake potiskov (ti dnevi štejejo kot koraki); točke, ocena skrbi in vpisani sprehodi ostanejo enaki.",
+      "sources": {
+        "title": "Kdo šteje potiske",
+        "ios": "Na iPhonu potiske šteje samo Apple Watch (v aplikaciji Zdravje: Podatki o zdravju → Invalidski voziček = Da). Sam iPhone potiskov ne šteje.",
+        "android": "Na Androidu potrebujete napravo ali aplikacijo, ki zapisuje potiske invalidskega vozička v Health Connect.",
+        "noWatch": "Brez ure lahko vpišete minute sprehoda na strani otroka (Pregled → otrok → Vpiši sprehod).",
+        "logWalk": "Vpiši sprehod"
+      },
+      "noPushesToday": {
+        "text": "Danes še ni potiskov. Brez Apple Watch (ali naprave za Health Connect) vpišite minute sprehoda.",
+        "button": "Vpiši sprehod"
+      }
     },
     "easyGestures": {
       "label": "Lažje kretnje",

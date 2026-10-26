@@ -54,6 +54,8 @@ import { fonts, palette, tightTracking } from '@/theme';
 import { t, tSpecies } from '@/i18n';
 import { strings } from '@/i18n/strings';
 import { petLabel } from '@/modules/petName/petName';
+import NoPushesHint from '@/components/parent/NoPushesHint';
+import { noPushesHintDue } from '@/modules/steps/adaptedPushHint';
 
 /** All user-visible strings of the card (`parent:childCard`, M1-18). */
 export const CHILD_CARD_STRINGS = strings('parent', 'childCard', {
@@ -80,6 +82,8 @@ interface ChildOverviewCardProps {
   onChildPin: (child: FamilyChild) => void;
   /** M3-09: the plan badge of an unpaid challenge opens the paywall (pay any time, QA PR #67 m6). */
   onOpenChallenge?: () => void;
+  /** M5-T12: opens the child's page at »Vpiši sprehod« (the "no pushes today" hint). */
+  onLogWalk?: (child: FamilyChild) => void;
 }
 
 function WeekBars({ days }: { days: DayRow[] }) {
@@ -99,7 +103,7 @@ function WeekBars({ days }: { days: DayRow[] }) {
   );
 }
 
-export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChildPin, onOpenChallenge }: ChildOverviewCardProps) {
+export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChildPin, onOpenChallenge, onLogWalk }: ChildOverviewCardProps) {
   const id = child.id;
   const status = pet ? petStatus(pet) : null;
   /** M5-R06-08c: texts follow the species of the pet shown (a family may have a dog and a cat). */
@@ -131,6 +135,11 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
         </View>
         <TrafficLightBadge color={child.traffic_light.color} testID={`child-light-${id}-${child.traffic_light.color}`} />
       </View>
+
+      {/* M5-T12 (David 2026-10-26): adapted mode, no pushes yet today after noon — parent only. */}
+      {noPushesHintDue(child, pet, timezone) && (
+        <NoPushesHint onLogWalk={() => (onLogWalk ?? onOpen)(child)} testID={`child-no-pushes-${id}`} />
+      )}
 
       {/* M2-11: open this child's game on this phone (the parent is signed out; back = parent login). */}
       {pet !== null && <PlayAsChildButton child={child} />}
