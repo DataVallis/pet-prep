@@ -1786,5 +1786,31 @@ return [
             ],
         ],
 
+        // M5-R10-67: staffordshire_bull_terrier.* (S536–S544), runbook rules (data.json
+        // proposed_game_parameters.staffordshire_bull_terrier.suitability_tags). RKC (S538) + FCI (S537) + PDSA (S540) +
+        // PetMD (S541). RKC Breed Watch Category 2 with no point returned → no welfare chip (Pomeranian precedent); no
+        // sensitive_skin (no Breed Watch skin point known — open for David). `children` with the PDSA caveat (younger
+        // children) — never small_children. RKC "Small house" → no apartment / large_home. PDSA "very strong prey drive" →
+        // chases_small_pets at the end of the consider list; no other_pets (PetMD vs PDSA). No heat_sensitive: its label names a
+        // thick coat and this coat is short (PetMD S541 "very averse to heat" stays in the breed text — open for David).
+        'staffordshire_bull_terrier' => [
+            'suits' => [
+                // S538 "Despite its rough and ready beginnings, the Staffordshire Bull Terrier is known as a wonderful family pet."
+                ['tag' => 'family_pet', 'source_ids' => ['S538'], 'refs' => ['staffordshire_bull_terrier.behaviour.family']],
+                // S537 "Highly intelligent and affectionate especially with children." (PDSA: may not suit younger children).
+                ['tag' => 'children', 'source_ids' => ['S537'], 'refs' => ['staffordshire_bull_terrier.behaviour.children']],
+            ],
+            'consider' => [
+                // S540 "They're known chewers, so left to their own devices this could be fatal for your furniture and even your walls!"
+                ['tag' => 'chews_when_bored', 'source_ids' => ['S540'], 'refs' => ['staffordshire_bull_terrier.behaviour.chewing']],
+                // S540 "Because they are so people-orientated, Staffies are known to suffer with separation anxiety when left alone."
+                ['tag' => 'needs_company', 'source_ids' => ['S540'], 'refs' => ['staffordshire_bull_terrier.behaviour.time_alone']],
+                // S538 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S538'], 'refs' => ['staffordshire_bull_terrier.suitability.rkc_shedding']],
+                // S540 "Staffies have a very strong prey drive so it's not a good idea to have smaller pets around them."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S540'], 'refs' => ['staffordshire_bull_terrier.behaviour.other_pets']],
+            ],
+        ],
+
     ],
 ];

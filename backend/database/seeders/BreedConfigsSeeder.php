@@ -1397,6 +1397,27 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.saint_bernard',
                 'search_keywords' => ['saint bernard', 'st. bernard', 'st bernard', 'st bernhardshund', 'bernhardiner', 'bernardinec', 'sveti bernard', 'pes svetega bernarda'],
             ],
+            // M5-R10-67 Staffordshire Bull Terrier (docs/research/dog-data/data.json staffordshire_bull_terrier, sources
+            // S536–S544; runbook rules confirmed by David 2026-10-10: paid).
+            // daily_steps_required = the adult step goal (proposed_game_parameters.staffordshire_bull_terrier.step_goal_adult:
+            // 60 min × 100 steps/min — RKC S538 "Exercise: Up to 1 hour per day") — only the legacy-profile
+            // fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::StaffordshireBullTerrier->slug(),
+                'daily_steps_required' => 6000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 630,
+                'label_key' => 'breeds.staffordshire_bull_terrier',
+                'search_keywords' => ['staffordshire bull terrier', 'staffordshire', 'staffie', 'staffy', 'stafford', 'sbt', 'stafordširski bulterier', 'stafordsirski bulterier', 'staffordshirski bulterier'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and
