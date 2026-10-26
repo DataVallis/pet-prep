@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "8e3300dc749184817bc317155ad95c504a00abf7344e4ada546bef6886c4987f"
+      "sha256": "ff76f0dfd16b64b8085f0b357c6fb6bb927191376b3aef96f7853e75d7e879a5"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -37826,7 +37826,7 @@
       "id": "staffordshire_bull_terrier",
       "species": "dog",
       "order": 62,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Staffordshire Bull Terrier",
         "sl": "Stafordširski bulterier"
@@ -38396,7 +38396,7 @@
       "id": "airedale_terrier",
       "species": "dog",
       "order": 63,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Airedale Terrier",
         "sl": "Airedalski terier"
