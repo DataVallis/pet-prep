@@ -441,6 +441,7 @@ const SPECIES = [
       { id: 'german_wirehaired_pointer', synonyms: { en: ['Deutsch Drahthaar', 'Drahthaar', 'German Wire-haired Pointing Dog', 'GWP'], sl: ['nemski ostrodlaki pticar', 'drahthaar', 'drahtar'] } },
       { id: 'saint_bernard', synonyms: { en: ['St. Bernard', 'St Bernard', 'St. Bernhardshund', 'Bernhardiner', 'Alpine Mastiff'], sl: ['sveti bernard', 'pes svetega Bernarda', 'bernhardiner'] } },
       { id: 'staffordshire_bull_terrier', synonyms: { en: ['Staffie', 'Staffy', 'Stafford', 'SBT'], sl: ['stafordsirski bulterier', 'staffordshirski bulterier', 'staffie'] } },
+      { id: 'airedale_terrier', synonyms: { en: ['Airedale', 'King of Terriers', 'Waterside Terrier', 'Bingley Terrier'], sl: ['airedalski terier', 'airedale terier', 'erdelterier'] } },
     ],
   },
   {
@@ -1889,6 +1890,25 @@ const DOG_FACTS = {
       ['certain_cancers', 'health.cancer'],
     ],
   },
+  // M5-R10-68. Height = FCI 7 by sex (S546), weight = PetMD 40–60 lb (S549; no standard gives a weight), lifespan = the
+  // RKC band 'Over 10 years' (S547; McMillan 2024 via Wikipedia is never exported), exercise = RKC 'Up to 1 hour per day'
+  // (S547), coat / grooming / shedding = RKC key facts (S547). FCI origin Great Britain (GB). Not exported: adult_weight.salt_category,
+  // lifespan.petmd / vca / mcmillan_2024 / senior_from, health.breed_watch (Category 1, no point), health.other (research only).
+  airedale_terrier: {
+    height: ['height.fci'],
+    weight: [['adult_weight.petmd', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia_arthritis', 'health.hip_dysplasia'],
+      ['bloat_gdv', 'health.gdv'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+    ],
+  },
 
 };
 
@@ -1928,6 +1948,7 @@ export const DOG_CARE_TASKS = {
   akita: [['groomer_visit', 1, 84, 'proposed_game_parameters.akita.professional_grooming']],
   german_wirehaired_pointer: [['ear_cleaning', 1, 28, 'proposed_game_parameters.german_wirehaired_pointer.ear_care']],
   saint_bernard: [['ear_cleaning', 1, 14, 'proposed_game_parameters.saint_bernard.ear_care']],
+  airedale_terrier: [['ear_cleaning', 1, 7, 'proposed_game_parameters.airedale_terrier.ear_care'], ['groomer_visit', 1, 84, 'proposed_game_parameters.airedale_terrier.professional_grooming']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -2452,6 +2473,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.staffordshire_bull_terrier.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.staffordshire_bull_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.staffordshire_bull_terrier.exercise_minutes_senior',
+  },
+  airedale_terrier: {
+    adult_minutes: ['proposed_game_parameters.airedale_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.airedale_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.airedale_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.airedale_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.airedale_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.airedale_terrier.exercise_minutes_senior',
   },
 
 };

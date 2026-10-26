@@ -35593,6 +35593,510 @@
       }
     }
   },
+  "airedale_terrier": {
+    "_note": "Added 2026-10-26 (M5-R10-68, unattended run — appended after the Staffordshire Bull Terrier: AKC 2024 No. 64 'Airedale Terrier', S174 full-list table fetched 2026-10-26). Quotes as returned by the web-fetch tool on 2026-10-26 (PetMD, VCA and the RKC pages only in short quotes, 125-character limit; longer sentences are paraphrased in notes and marked as such). Sources S545–S552 (reused S8, S10, S11, S14, S35, S45, S123, S174). No health percentages anywhere. Identity from the FCI nomenclature (S545, No. 7, Great Britain); appearance, colours and height from FCI-Standard N° 7 (S546) and the Royal Kennel Club standard (S548); no standard gives a weight → PetMD 40–60 lb (S549, tier B). RKC Breeds A–Z page (S547) reached (royalkennelclub.com address without the trailing slash; the address with the slash failed at its site): key facts, Breed Watch Category 1 and the health tests. No PDSA breed page exists for the Airedale (PDSA large-dogs list checked). PetMD (S549), VCA Animal Hospitals (S550). Lifespan: the Dogs Trust McMillan 2024 table (S123) not fetched (not in provenance), the 'shortest and longest' PDF failed at its site; McMillan 2024 '12 years' only via Wikipedia (S551, tier C) → RKC lower bound 'Over 10 years' (S547). Names: RKC / FCI / AKC 'Airedale Terrier'; Slovenian »airedalski terier« — no KZS page read, open for David.",
+    "identity": {
+      "value": "FCI No. 7, Group 3 Section 1 (Large and medium sized Terriers), Great Britain",
+      "unit": "—",
+      "source_id": "S545",
+      "quote": "AIREDALE TERRIER",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S545, the page returned in French): name 'AIREDALE TERRIER', group 'n°3 - Terriers', section 'Terriers de grande et moyenne taille' (Large and medium sized Terriers), country of origin 'GRANDE-BRETAGNE' (Great Britain), working trial only for the countries that asked for it, definitive acceptance 28/05/1963, valid standard 08/09/2026. Great Britain is already in FCI_ORIGINS (GB). Other names (Wikipedia S551, tier C): Waterside Terrier, Bingley Terrier; nickname 'King of Terriers' (also PetMD S549)."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S547",
+      "quote": "Size: Large",
+      "confidence": "high",
+      "notes": "RKC breed page key fact (S547). FCI (S546): 'Largest of the Terriers' (general appearance). PetMD 40–60 lb (S549) = 18–27 kg → the 'Medium' class of S10 for growth (VCA S550 50–70 lb would straddle Medium / Large)."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            58,
+            61
+          ],
+          "female": [
+            56,
+            59
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S546",
+        "quote": "About 58 - 61 cm for males.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 7 (S546): 'About 58 - 61 cm for males.' and 'About 56 - 59 cm for females.' (as returned). RKC standard (S548): dogs about 58–61 cm (23–24 in), bitches about 56–59 cm (22–23 in) (paraphrase); AKC standard (S552): 'Dogs should measure approximately 23 inches in height at the shoulder; bitches, slightly less.'; PetMD (S549) about 23 inches; VCA (S550) 'Height: 23 inches'."
+      }
+    },
+    "adult_weight": {
+      "petmd": {
+        "value": {
+          "male": [
+            18.1,
+            27.2
+          ],
+          "female": [
+            18.1,
+            27.2
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S549",
+        "quote": "The Airedale stands about 23 inches at the shoulder and weighs 40–60 pounds.",
+        "confidence": "medium",
+        "notes": "PetMD (S549, US, vet-reviewed): 40–60 lb = 18.1–27.2 kg, both sexes — the game range (adult_weight_kg). No breed standard gives a weight (FCI S546, RKC S548, AKC S552 checked); no PDSA page. VCA (S550) 'Weight: 50 to 70 pounds' (22.7–31.8 kg) and Wikipedia (S551, tier C) males 18–23 kg / females 16–18 kg — alternatives.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                22.7,
+                31.8
+              ],
+              "female": [
+                22.7,
+                31.8
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S550",
+            "quote": "Height: 23 inches; Weight: 50 to 70 pounds",
+            "confidence": "medium",
+            "notes": "VCA Quick Facts (S550), both sexes."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "IV (15–30 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 18.1–27.2 kg lies in band IV. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PetMD 40–60 lb (S549) → almost entirely 'Medium' (24–59 lb). The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Airedale Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S547",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "medium",
+        "notes": "RKC breed page key fact (S547). PetMD (S549): 'The typical life expectancy for the King of Terriers is 10–13 years.'; VCA (S550) 'Lifespan: 11 to 14 years'. Lower bound 10 y → the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass median is reachable)."
+      },
+      "petmd": {
+        "value": "10–13",
+        "unit": "years",
+        "source_id": "S549",
+        "quote": "The typical life expectancy for the King of Terriers is 10–13 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S549, US). Alternative only (lower bound 10 y = the same senior month)."
+      },
+      "vca": {
+        "value": "11–14",
+        "unit": "years",
+        "source_id": "S550",
+        "quote": "Lifespan: 11 to 14 years",
+        "confidence": "medium",
+        "notes": "VCA Quick Facts (S550, US). Alternative only."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": null,
+        "confidence": "low",
+        "notes": "McMillan et al. 2024: the Dogs Trust breed table (S123) was not fetched (not in the fetch tool's provenance) and the 'shortest and longest' PDF failed at its site; Wikipedia (S551, tier C): 'A UK study found a life expectancy of 12 years for the breed.' (cites McMillan 2024) — not verified in the paper or the table → open for David (0.75 × 12 × 12 = 108 → senior 108 if confirmed). UNSOURCED value."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × RKC lower bound 10 y (S547) → 0.75 × 10 = 7.5 y = 90 months. Runbook order: McMillan 2024 (not reachable, 12 y only via Wikipedia tier C) → VetCompass median (none found) → RKC lower bound. Alternatives: 84 (Dogs Trust > 7 y, S14); 108 (0.75 × 12 y via Wikipedia S551 — not chosen).",
+        "derived_from": [
+          "S11",
+          "S547"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S547",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S547), runbook first choice → 60 min. PetMD (S549): 'Airedale dogs—and especially Airedale puppies—need exercise and benefit from several walks or games of fetch a day.' (no number); VCA (S550): 'Airedale Terriers need daily exercise and mental engagement.' (no number). No PDSA page."
+      },
+      "mental": {
+        "value": "daily exercise and mental engagement",
+        "unit": "—",
+        "source_id": "S550",
+        "quote": "Airedale Terriers need daily exercise and mental engagement.",
+        "confidence": "high",
+        "notes": "VCA (S550). PetMD (S549): 'But all that intelligence and spunk means they should not be left to their own devices for too long.'; smart dogs that do not do well with repetitive training sessions (paraphrase). Basis of needs_mental_stimulation."
+      },
+      "after_meals": {
+        "value": "avoid exercise right before and after mealtimes (bloat / GDV)",
+        "unit": "—",
+        "source_id": "S549",
+        "quote": "Because Airedale Terriers are susceptible to bloat, always avoid exercise right before and after mealtimes",
+        "confidence": "high",
+        "notes": "PetMD (S549, start of the sentence as returned — the full sentence is longer than the tool's quote limit); also 'This dangerous condition can be caused by eating too quickly or exercising immediately after eating.' (health.gdv). Basis of meal_exercise_gap (M5-R16)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "outgoing and confident, friendly, courageous and intelligent; alert at all times, not aggressive but fearless",
+        "unit": "—",
+        "source_id": "S546",
+        "quote": "Outgoing and confident, friendly, courageous, and intelligent.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 7 (S546), temperament; 'Alert at all times, not aggressive but fearless.' RKC standard (S548) the same (paraphrase). PetMD (S549): 'Airedales are more reserved than other terrier breeds, according to the breed club, but they aren't shy.' VCA (S550): alert, independent and highly capable, needs consistent training and regular activity (paraphrase)."
+      },
+      "family": {
+        "value": "great family dogs; if trained well generally get along with children, dogs and other pets",
+        "unit": "—",
+        "source_id": "S549",
+        "quote": "They make great family dogs and, if trained well, generally get along with children, dogs, and other pets.",
+        "confidence": "high",
+        "notes": "PetMD (S549). Basis of family_pet and children (the 'if trained well' caveat kept). VCA (S550): they 'prefer to stay involved in family routines.'"
+      },
+      "children": {
+        "value": "generally get along with children if trained well; best with older, respectful children",
+        "unit": "—",
+        "source_id": "S549",
+        "quote": "They make great family dogs and, if trained well, generally get along with children, dogs, and other pets.",
+        "confidence": "high",
+        "notes": "PetMD (S549). VCA (S550): best with 'older, respectful children' → never small_children; no not_for_small_children (no explicit statement against small children, Newfoundland precedent)."
+      },
+      "time_alone": {
+        "value": "should not be left to their own devices for too long",
+        "unit": "—",
+        "source_id": "S549",
+        "quote": "But all that intelligence and spunk means they should not be left to their own devices for too long.",
+        "confidence": "high",
+        "notes": "PetMD (S549); also 'be wary of leaving them in the backyard unattended' (fragment). VCA (S550): 'Moderate tolerance as adults, but boredom is a risk.' Basis of needs_company."
+      },
+      "other_pets": {
+        "value": "generally get along with other pets if trained well; may be assertive — supervision recommended",
+        "unit": "—",
+        "source_id": "S549",
+        "quote": "They make great family dogs and, if trained well, generally get along with children, dogs, and other pets.",
+        "confidence": "medium",
+        "notes": "PetMD (S549) positive; VCA (S550): 'May be assertive; supervision recommended.' → conflict, no other_pets. No prey-drive statement → no chases_small_pets."
+      },
+      "socialisation": {
+        "value": "well-trained and socialised Airedales make excellent and gentle family dogs",
+        "unit": "—",
+        "source_id": "S549",
+        "quote": "When well-trained and socialized, Airedale Terriers can make excellent and gentle family dogs.",
+        "confidence": "high",
+        "notes": "PetMD (S549). A condition (runbook M5-R17) → proposed_game_parameters.airedale_terrier.socialisation (DOG_SOCIALISATION row, PetMD quote)."
+      },
+      "training": {
+        "value": "smart — not suited to repetitive training; positive reinforcement",
+        "unit": "—",
+        "source_id": "S549",
+        "quote": "Like all dog breeds, Airedales do best with positive reinforcement.",
+        "confidence": "medium",
+        "notes": "PetMD (S549); smart puppies that will not do well with repetitive (and often boring) training sessions (paraphrase). VCA (S550): 'Consistent, patient, and reward-based training works best for this breed.' Not a first-time-owner statement → no first_time_owner / experienced_owner tag."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No explicit chewing statement: PetMD (S549) only advises teaching what is and is not a chew toy and engaging toys against boredom (paraphrase) → no chews_when_bored."
+      },
+      "food_motivation": {
+        "value": "never allow 24/7 access to food (breed club, via PetMD)",
+        "unit": "—",
+        "source_id": "S549",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PetMD (S549): high-quality, high-protein food; the breed club warns never to allow an Airedale 24/7 access to food (paraphrase). Not a food-motivation / weight-gain statement → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S547) — no points of concern → no welfare chip. Conditions from PetMD (S549) and VCA (S550); the hip-dysplasia figures of Wikipedia (S551) stay out (tier C, a percentage).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1 — no points of concern",
+        "unit": "—",
+        "source_id": "S547",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges,",
+        "confidence": "high",
+        "notes": "RKC breed page (S547); '… other than those covered routinely by The Kennel Club's breed standard.' → no welfare chip, in marketing."
+      },
+      "hip_dysplasia": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S549",
+        "quote": "Airedales can develop hip dysplasia, a hereditary condition where the hip joint develops abnormally, becoming loose",
+        "confidence": "high",
+        "notes": "PetMD (S549, fragment). VCA (S550): 'Hip disease, thyroid disease, and bleeding disorders are important breed concerns.'; RKC Best Practice hip and elbow schemes (S547). Register health key hip_dysplasia_arthritis."
+      },
+      "gdv": {
+        "value": "gastric dilatation-volvulus (bloat) — the largest terrier",
+        "unit": "—",
+        "source_id": "S549",
+        "quote": "As the largest breed of terrier, Airedales can develop gastric dilatation-volvulus (GDV), a severe form of bloat in dogs.",
+        "confidence": "high",
+        "notes": "PetMD (S549); 'This dangerous condition can be caused by eating too quickly or exercising immediately after eating.' Register health key bloat_gdv."
+      },
+      "hypothyroidism": {
+        "value": "hypothyroidism",
+        "unit": "—",
+        "source_id": "S549",
+        "quote": "Hypothyroidism occurs when a dog’s thyroid stops producing enough hormone, causing a slowdown in metabolism and other bodily",
+        "confidence": "high",
+        "notes": "PetMD (S549, fragment); VCA (S550) 'thyroid disease'. Register health key hypothyroidism."
+      },
+      "other": {
+        "value": "bleeding disorders (von Willebrand disease), elbow dysplasia, congenital heart defects, lymphoma, retinal conditions",
+        "unit": "—",
+        "source_id": "S550",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "VCA (S550) age-based list (paraphrase — the conditions named). Research only (no register key)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 29,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 29 | Airedale Terrier |",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-26): rank 29 'Airedale Terrier' (table row as returned), tier 'Above Average Working Dogs' (ranks 27–39). Coren's own top / bottom-10 article (S34) does not list the breed."
+      },
+      "coren_tier": {
+        "value": "Above average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier 'Above Average Working Dogs' (ranks 27–39)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.airedale_terrier.learning_multiplier (1.2, runbook rule: Above average tier, rank 29).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "largest of the Terriers — muscular, active, fairly cobby, without legginess or undue length of body",
+        "unit": "—",
+        "source_id": "S546",
+        "quote": "Largest of the Terriers, a muscular, active, fairly cobby dog, without suspicion of legginess or undue length of body.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 7 (S546), general appearance. RKC standard (S548) the same (paraphrase)."
+      },
+      "colours": {
+        "value": [
+          "black_and_tan",
+          "grizzle_and_tan"
+        ],
+        "unit": "list",
+        "source_id": "S546",
+        "quote": "Body saddle black or grizzle as is top of the neck and top surface of tail. All other parts tan.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 7 (S546): 'Any other colour or combination of colours unacceptable.' RKC standard (S548) the same (ears often a darker tan, a few white hairs between the forelegs acceptable — paraphrase); AKC standard (S552): 'The sides and upper parts of the body should be black or dark grizzle.' Two colours only: black saddle and tan, grizzle saddle and tan — never solid black, red, wheaten or any other colour."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Black saddle and tan first with the highest weight (the portrait default), then grizzle saddle and tan."
+      },
+      "coat": {
+        "value": "hard, dense and wiry, lying straight and close, with a shorter, softer undercoat",
+        "unit": "—",
+        "source_id": "S546",
+        "quote": "Hard, dense and wiry, not so long as to appear ragged.",
+        "confidence": "high",
+        "notes": "FCI (S546); 'curly or soft coat highly undesirable.' RKC standard (S548): lying straight and close with a shorter, softer undercoat (paraphrase). RKC key fact 'Coat length: Medium' (S547). VCA (S550): 'The wiry coat often needs periodic stripping or clipping.'"
+      },
+      "head": {
+        "value": "well balanced, long flat skull, no apparent difference in length between skull and foreface, free from wrinkles; strong muzzle, hardly visible stop",
+        "unit": "—",
+        "source_id": "S546",
+        "quote": "Well balanced, with no apparent difference in length between skull and foreface. Free from wrinkles.",
+        "confidence": "high",
+        "notes": "FCI (S546); RKC standard (S548): long, flat skull, foreface well filled before the eyes, stop hardly visible, tight lips (paraphrase)."
+      },
+      "nose": {
+        "value": "black",
+        "unit": "—",
+        "source_id": "S546",
+        "quote": "Black.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 7 (S546)."
+      },
+      "eyes": {
+        "value": "dark, relatively small, not prominent, full of terrier expression",
+        "unit": "—",
+        "source_id": "S546",
+        "quote": "Dark in colour, relatively small, not prominent, full of terrier expression, keenness and intelligence.",
+        "confidence": "high",
+        "notes": "FCI (S546); 'Light or bold eye undesirable.' RKC (S548) the same."
+      },
+      "ears": {
+        "value": "'V'-shaped with a side carriage, small",
+        "unit": "—",
+        "source_id": "S546",
+        "quote": "'V'-shaped with a side carriage, small but not out of proportion to size of dog.",
+        "confidence": "high",
+        "notes": "FCI (S546) and RKC (S548); 'Pendulous ears or ears set too high undesirable.' Natural ears (never cropped)."
+      },
+      "tail": {
+        "value": "set on high and carried gaily, of good strength and substance (docked or undocked)",
+        "unit": "—",
+        "source_id": "S546",
+        "quote": "Set on high and carried gaily. Good strength and substance.",
+        "confidence": "high",
+        "notes": "FCI (S546), docked and undocked; RKC standard (S548): tails were previously customarily docked (paraphrase). The game shows a natural, undocked tail."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S547), PetMD (S549) and VCA (S550). RKC key facts reached on 2026-10-26. No PDSA page; Woodgreen not attempted.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S547",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": "RKC key fact (S547)."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S547",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S547) → 60 min. Not active_family / long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S547",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "RKC key fact (S547). Basis of large_home (with the garden)."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S547",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S547). Basis of large_home."
+      },
+      "rkc_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S547",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "RKC key fact (S547) → brushing 7× a week (M5-R13 rule 'Every day' → 7). PetMD (S549) 'a good brushing a few times a week' (no number) — alternative. Basis of frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S547",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": "RKC key fact (S547)."
+      },
+      "rkc_shedding": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S547",
+        "quote": "Sheds: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S547). Basis of low_shedding (Portuguese Water Dog precedent) — never 'hypoallergenic'."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S547",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S547) → senior 90 (lower bound). Not shorter_lifespan."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S547",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S547). Background only."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S547",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "RKC key fact (S547)."
+      },
+      "petmd_grooming": {
+        "value": "brushing a few times a week at home; a professional groomer three or four times a year",
+        "unit": "—",
+        "source_id": "S549",
+        "quote": "At home, a good brushing a few times a week will keep your Airedale’s coat healthy—and make them feel loved.",
+        "confidence": "high",
+        "notes": "PetMD (S549); 'Airedale Terriers should go to a professional groomer three or four times a year, according to the breed club.' → groomer reminder every 3 months (§3 »Breed care tasks«, the lower bound of every 3–4 months). VCA (S550): periodic stripping or clipping; professional grooming helpful (no number). No bath frequency (PetMD: no need for a conditioner)."
+      },
+      "petmd_ears": {
+        "value": "a quick swab of the ears every week",
+        "unit": "—",
+        "source_id": "S549",
+        "quote": "A quick swab with a cotton ball or dog-specific ear cleaner every week should keep ears healthy and happy.",
+        "confidence": "high",
+        "notes": "PetMD (S549) → ear cleaning once a week (M5-R20). VCA (S550): 'Routine ear cleaning, nail trimming, and dental care are necessary.' (no frequency → no nail / tooth task)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -53357,6 +53861,282 @@
         "confidence": "high",
         "notes": "Colours from the FCI / RKC standards (S537, S539) — never black and tan or liver. Weights unsourced. Natural ears and tail. Moderate, non-exaggerated head (welfare: open nostrils, visible muzzle).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): brindle is the portrait default; natural rose ears and tail; moderate head with a visible muzzle"
+      }
+    },
+    "airedale_terrier": {
+      "_note": "Unattended run M5-R10-68 (2026-10-26): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. No new vocabulary key. Built: brushing 7× a week (RKC S547 'Every day', M5-R13), puppy socialisation (PetMD S549 quote, M5-R17), the meal / exercise gap (PetMD S549 quote, M5-R16), ear cleaning once a week (PetMD S549, M5-R20) and the groomer reminder every 3 months (PetMD S549 'three or four times a year', M5-R18). No tooth / nail / bath task: no source states a frequency.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S547",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'Up to 1 hour per day' (S547). Rule: one number N ('up to N') → N = 60. PetMD (S549) and VCA (S550) give no number.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S547 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S547",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + RKC lower bound 'Over 10 years', S547; PetMD S549 10–13 y). McMillan 2024 12 y only via Wikipedia (S551, tier C) → 108 if confirmed. Alternative: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S547"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84,
+          "senior_mcmillan_2024_via_wikipedia": 108
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S547)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.2,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 29 (S35), tier 'Above average' (27–39) → 1.2. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 29, Above average tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S547",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "RKC key fact (S547) 'Every day' → 7 (M5-R13 rule). PetMD (S549) 'a good brushing a few times a week' — no number, alternative. Matted coat at ceil(7 / 2) = 4 missed.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 7× na teden (RKC S547 »Every day«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S549",
+        "quote": "When well-trained and socialized, Airedale Terriers can make excellent and gentle family dogs.",
+        "confidence": "high",
+        "notes": "PetMD (S549); quote from airedale_terrier.behaviour.socialisation. Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, PetMD S549)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S549",
+        "quote": "Because Airedale Terriers are susceptible to bloat, always avoid exercise right before and after mealtimes",
+        "confidence": "high",
+        "notes": "PetMD (S549), airedale_terrier.exercise.after_meals; the same page lists GDV (health.gdv). Built in M5-R16: 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "ear_care": {
+        "value": "ears swabbed clean once a week",
+        "unit": "care routine (sourced need)",
+        "source_id": "S549",
+        "quote": "A quick swab with a cotton ball or dog-specific ear cleaner every week should keep ears healthy and happy.",
+        "confidence": "high",
+        "notes": "PetMD (S549), airedale_terrier.suitability.petmd_ears. Built: the child's ear-cleaning mini-game once every program week (BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R20).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »every week« → 1× na teden"
+      },
+      "professional_grooming": {
+        "value": "professional groomer three or four times a year (breed club, via PetMD); periodic stripping or clipping",
+        "unit": "visits (sourced need)",
+        "source_id": "S549",
+        "quote": "Airedale Terriers should go to a professional groomer three or four times a year, according to the breed club.",
+        "confidence": "medium",
+        "notes": "PetMD (S549), airedale_terrier.suitability.petmd_grooming. VCA (S550): 'The wiry coat often needs periodic stripping or clipping.' Built: the parent's groomer reminder every 12 program weeks (BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R18; never scored).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): »three or four times a year« = vsake 3–4 mesece → spodnja meja, 3 mesece (12 programskih tednov)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-68); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S549"
+            ],
+            "refs": [
+              "airedale_terrier.behaviour.family"
+            ],
+            "quote": "S549 'They make great family dogs'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S549"
+            ],
+            "refs": [
+              "airedale_terrier.behaviour.children"
+            ],
+            "quote": "S549 'if trained well, generally get along with children'"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S547"
+            ],
+            "refs": [
+              "airedale_terrier.suitability.rkc_size_of_home",
+              "airedale_terrier.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S547 'Size of home: Large house' / 'Size of garden: Large garden'"
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S547"
+            ],
+            "refs": [
+              "airedale_terrier.suitability.rkc_shedding"
+            ],
+            "quote": "S547 'Sheds: No'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S550"
+            ],
+            "refs": [
+              "airedale_terrier.exercise.mental"
+            ],
+            "quote": "S550 'Airedale Terriers need daily exercise and mental engagement.'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S549"
+            ],
+            "refs": [
+              "airedale_terrier.behaviour.time_alone"
+            ],
+            "quote": "S549 'they should not be left to their own devices for too long.'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S547",
+              "S549"
+            ],
+            "refs": [
+              "airedale_terrier.suitability.rkc_grooming",
+              "airedale_terrier.suitability.petmd_grooming"
+            ],
+            "quote": "S547 'Grooming: Every day'; S549 'a good brushing a few times a week'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "VCA (S550): best with 'older, respectful children' → never small_children.",
+          "not_for_small_children": "No explicit statement against small children (VCA 'older, respectful children' is a preference) — Newfoundland precedent; open for David.",
+          "first_time_owner": "No source.",
+          "experienced_owner": "VCA (S550) 'consistent training' is not an experienced-owner statement — no tag; open for David.",
+          "apartment": "RKC 'Large house' (S547), not 'Flat/ Apartment'.",
+          "active_family": "RKC 'Up to 1 hour per day' (S547) — no tag.",
+          "long_daily_exercise": "60 min (S547).",
+          "other_pets": "PetMD 'generally get along with … other pets' if trained well (S549) vs VCA 'May be assertive; supervision recommended.' (S550) → conflict, no tag.",
+          "chases_small_pets": "No prey-drive statement in the breed's sources.",
+          "often_alone": "PetMD (S549) not to be left to their own devices for too long → needs_company instead.",
+          "older_owners": "No source.",
+          "sheds": "RKC 'Sheds: No' (S547) → low_shedding instead.",
+          "chews_when_bored": "No explicit chewing statement (PetMD S549 only boredom / chew-toy training advice).",
+          "food_motivated_weight": "No breed-specific statement (PetMD: no 24/7 access to food — paraphrase).",
+          "secure_fencing": "PetMD (S549) 'be wary of leaving them in the backyard unattended' is not an escape statement — no tag.",
+          "shorter_lifespan": "RKC 'Over 10 years' (S547).",
+          "welfare": "RKC Breed Watch Category 1 (S547) — no points of concern → no welfare chip.",
+          "hips_hind_legs": "Hip dysplasia is listed (PetMD S549, VCA S550, RKC hip scheme S547) but there is no Breed Watch point → no welfare chip (Category 1 precedent, e.g. Hungarian Vizsla)."
+        }
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a flat-faced breed)",
+        "unit": "—",
+        "source_id": "S547",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges,",
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 1 (S547); not on the BVA brachycephalic list — no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). Marketing never promises health; never with small children unsupervised (VCA S550 'older, respectful children') = Claude's proposal, open for David.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no veterinary advice against advertising the breed type)"
+      },
+      "ai_appearance": {
+        "value": "adult Airedale Terrier, black saddle and tan, hard dense wiry coat lying straight and close, muscular active fairly cobby body, long flat skull with a strong, well-filled muzzle and hardly visible stop, black nose, small dark eyes full of terrier expression, small V-shaped ears carried to the side, high-set natural tail carried gaily",
+        "unit": "—",
+        "source_id": "S546",
+        "quote": "Body saddle black or grizzle as is top of the neck and top surface of tail. All other parts tan.",
+        "confidence": "high",
+        "notes": "Colours from the FCI / RKC standards (S546, S548) — black or grizzle saddle with tan only. Weights unsourced. Natural ears and an undocked tail.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): black saddle and tan is the portrait default; natural V-shaped ears and an undocked tail"
       }
     }
   }

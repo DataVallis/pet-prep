@@ -593,6 +593,14 @@
 | (moderate, non-exaggerated). RKC Breed Watch Category 2 (S538, points not returned). Colour weights unsourced →
 | `verified => false`.
 |
+| Airedale Terrier (M5-R10-68, docs/research/dog-data airedale_terrier.appearance): "Largest of the Terriers, a
+| muscular, active, fairly cobby dog, without suspicion of legginess or undue length of body." (FCI 7, S546; RKC standard
+| S548); coat "Hard, dense and wiry, not so long as to appear ragged."; ears "'V'-shaped with a side carriage, small but
+| not out of proportion to size of dog."; tail "Set on high and carried gaily." Colours: "Body saddle black or grizzle as is
+| top of the neck and top surface of tail. All other parts tan." (S546) — black saddle weighted highest (the register
+| portrait); "Any other colour or combination of colours unacceptable." Natural ears and an undocked tail. RKC Breed Watch
+| Category 1 (S547). Colour weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -3067,6 +3075,40 @@ return [
             'ear_carriage' => ['small rose or half-pricked ears'],
             'eye_color' => ['round, medium-sized dark eyes looking straight ahead'],
             'tail' => ['medium-length, low-set natural tail tapering to a point, carried rather low'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+
+    // M5-R10-68 (docs/research/dog-data/data.json airedale_terrier.appearance; runbook rules 2026-10-10:
+    // standard colours only — S546 / S548; black or grizzle saddle with tan; natural ears, undocked tail).
+    'airedale_terrier' => [
+        'display_name' => 'Airedale Terrier',
+        // Colour frequencies are in no source (airedale_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 7 (S546, https://fci.be/nomenclature/standards/007g03-en.pdf), Royal Kennel Club breed standard (S548), AKC standard (S552), RKC breed page (S547) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S547 "Size: Large"; S546 "About 58 - 61 cm for males."',
+            'build' => 'S546 "Largest of the Terriers, a muscular, active, fairly cobby dog, without suspicion of legginess or undue length of body."',
+            'coat_length' => 'S546 "Hard, dense and wiry, not so long as to appear ragged."',
+            'coat_color' => 'S546 "Body saddle black or grizzle as is top of the neck and top surface of tail. All other parts tan."; "Any other colour or combination of colours unacceptable." (weights unsourced)',
+            'head' => 'S546 "Well balanced, with no apparent difference in length between skull and foreface. Free from wrinkles."; nose "Black."',
+            'ear_carriage' => 'S546 "\'V\'-shaped with a side carriage, small but not out of proportion to size of dog."',
+            'eye_color' => 'S546 "Dark in colour, relatively small, not prominent, full of terrier expression, keenness and intelligence."',
+            'tail' => 'S546 "Set on high and carried gaily. Good strength and substance." (undocked)',
+        ],
+        'traits' => [
+            'size' => ['large terrier, tall and square'],
+            'build' => [['value' => 'muscular, active and fairly cobby, without legginess or undue length of body', 'weight' => 3], 'sturdy, well muscled and boned'],
+            'coat_length' => ['hard, dense, wiry coat lying straight and close, with a short beard and a trimmed terrier outline'],
+            // FCI / RKC standards (S546, S548); black saddle weighted highest (the register portrait).
+            'coat_color' => [
+                ['value' => 'black saddle and tan', 'weight' => 4],
+                'grizzle saddle and tan',
+            ],
+            'head' => ['long, flat, well-balanced head with a strong, well-filled muzzle, a hardly visible stop and a black nose'],
+            'ear_carriage' => ['small V-shaped ears folded and carried to the side'],
+            'eye_color' => ['small, dark eyes full of terrier expression'],
+            'tail' => ['natural undocked tail set on high and carried gaily'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],

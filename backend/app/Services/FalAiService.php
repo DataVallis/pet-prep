@@ -598,6 +598,14 @@ class FalAiService
                 .'medium-length, low-set tapering natural tail carried rather low, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-68: FCI 7 (S546) / RKC standard (S548) — black saddle and tan as the anchor (the first colour of the game
+            // list); natural V-shaped ears and an undocked tail.
+            BreedType::AiredaleTerrier => 'An alert, confident Airedale Terrier dog with a hard, dense, wiry tan coat and a black saddle over the back, '
+                .'top of the neck and top of the tail, large, muscular, fairly cobby terrier body with straight legs, '
+                .'long flat head with a strong, well-filled muzzle, short beard and a black nose, small dark eyes full of terrier expression, '
+                .'small V-shaped ears folded to the side, natural undocked tail set on high and carried gaily, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1421,6 +1429,18 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'smooth, short and close',
                 'markings' => 'never black and tan or liver, small rose ears, short but clearly visible muzzle, natural tapering tail',
+            ],
+            // M5-R10-68: colours of the FCI (S546) and RKC (S548) standards — black or grizzle saddle, all other parts tan;
+            // any other colour unacceptable; natural V-shaped ears and an undocked tail.
+            BreedType::AiredaleTerrier => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'tan with a black saddle',
+                    1 => 'tan with a grizzle saddle',
+                    2 => 'rich tan with a dark black saddle',
+                },
+                'eye_color' => 'dark',
+                'fur_texture' => 'hard, dense and wiry, lying straight and close',
+                'markings' => 'black or grizzle saddle on the back, top of the neck and top of the tail, all other parts tan, never solid black, natural undocked tail',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

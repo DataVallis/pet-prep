@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "b456e052eb64bd8957b25fdd88d0c394d91b784f8679a70b90c18e3d21fa994f"
+      "sha256": "3a29e670ee0088dd5427d0eddd53c5f4deb51ac73618a4e930655e510cbb8acb"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "ae4c735e6edf52c9b2b9bed913ef94b77259e13ae2525f92f61336316f9dc1b2"
+      "sha256": "8a287f9dd75f7428197340ed890704436f9b5985f1914ff0abebb19bbd1ee4ab"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "6bfaf4984545a5e210559188b50bb851b777877ccb2de7760c10f400aeb26389"
+      "sha256": "993060b6cdf3a8943297b3a548fba8edc78af02543d07a106d938b63dbf032e7"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "36f48a5dbea6b6222442b2e743fc9c6c8edab5e6ecddcced78fa1be1dcee5fb1"
+      "sha256": "a6715b7dc0040cb90355d4baa4e74cdb4d173913181270902c3c1020ad921579"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "1c56cfcfcbe08cc1c52dba48fe28118b3d565fb2a6592d0a4063a1ece386613e"
+      "sha256": "471bf9827fed3de80ec9d30c9f377ad9619c3909ab2d68df1073a8c282424f73"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "d6755e21b478c37f55bd856efe42c014c060b1476a7f3d093d9e9d1317eb11ed"
+      "sha256": "1cf0f712f0217cd164cd61e4d4087346af9a6f909368f876c9c11f37ef5de0a3"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -212,7 +212,7 @@
         }
       },
       "status": "available",
-      "breed_count": 63,
+      "breed_count": 64,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -38330,6 +38330,580 @@
       ]
     },
     {
+      "id": "airedale_terrier",
+      "species": "dog",
+      "order": 63,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Airedale Terrier",
+        "sl": "Airedalski terier"
+      },
+      "slug": {
+        "en": "airedale-terrier",
+        "sl": "airedalski-terier"
+      },
+      "synonyms": {
+        "en": [
+          "Airedale",
+          "King of Terriers",
+          "Waterside Terrier",
+          "Bingley Terrier"
+        ],
+        "sl": [
+          "airedalski terier",
+          "airedale terier",
+          "erdelterier"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "under_1h",
+        "grooming": "daily"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S547"
+          ],
+          "ref": "airedale_terrier.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              58,
+              61
+            ],
+            "female": [
+              56,
+              59
+            ]
+          },
+          "source_ids": [
+            "S546"
+          ],
+          "ref": "airedale_terrier.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              18.1,
+              27.2
+            ],
+            "female": [
+              18.1,
+              27.2
+            ]
+          },
+          "source_ids": [
+            "S549"
+          ],
+          "ref": "airedale_terrier.adult_weight.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "airedale_terrier.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S547"
+          ],
+          "ref": "airedale_terrier.lifespan.rkc",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S547"
+          ],
+          "ref": "airedale_terrier.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S547"
+          ],
+          "ref": "airedale_terrier.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "every_day",
+          "source_ids": [
+            "S547"
+          ],
+          "ref": "airedale_terrier.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "no",
+          "source_ids": [
+            "S547"
+          ],
+          "ref": "airedale_terrier.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 29,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "airedale_terrier.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 7,
+            "group": 3,
+            "section": 1,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S545"
+          ],
+          "ref": "airedale_terrier.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia_arthritis",
+          "source_ids": [
+            "S549"
+          ],
+          "ref": "airedale_terrier.health.hip_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S549"
+          ],
+          "ref": "airedale_terrier.health.gdv",
+          "confidence": "high"
+        },
+        {
+          "key": "hypothyroidism",
+          "source_ids": [
+            "S549"
+          ],
+          "ref": "airedale_terrier.health.hypothyroidism",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S549"
+            ],
+            "refs": [
+              "airedale_terrier.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S549"
+            ],
+            "refs": [
+              "airedale_terrier.behaviour.children"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S547"
+            ],
+            "refs": [
+              "airedale_terrier.suitability.rkc_size_of_home",
+              "airedale_terrier.suitability.rkc_size_of_garden"
+            ]
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S547"
+            ],
+            "refs": [
+              "airedale_terrier.suitability.rkc_shedding"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S550"
+            ],
+            "refs": [
+              "airedale_terrier.exercise.mental"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S549"
+            ],
+            "refs": [
+              "airedale_terrier.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S547",
+              "S549"
+            ],
+            "refs": [
+              "airedale_terrier.suitability.rkc_grooming",
+              "airedale_terrier.suitability.petmd_grooming"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.2
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "groomer_visit",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 84
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.airedale_terrier.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S547"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S547 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.airedale_terrier.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.airedale_terrier.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S547"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S547)"
+          },
+          {
+            "ref": "proposed_game_parameters.airedale_terrier.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 29, Above average tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.airedale_terrier.grooming",
+            "basis_source_ids": [
+              "S547"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 7× na teden (RKC S547 »Every day«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.airedale_terrier.ear_care",
+            "basis_source_ids": [
+              "S549"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »every week« → 1× na teden"
+          },
+          {
+            "ref": "proposed_game_parameters.airedale_terrier.professional_grooming",
+            "basis_source_ids": [
+              "S549"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): »three or four times a year« = vsake 3–4 mesece → spodnja meja, 3 mesece (12 programskih tednov)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S547",
+          "S549"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "elbow_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S547"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S547"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S547"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S545",
+        "S546",
+        "S547",
+        "S549",
+        "S550",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -43137,6 +43711,41 @@
       "publisher": "PDSA",
       "title": "Staffordshire Bull Terrier breed information",
       "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/staffordshire-bull-terrier"
+    },
+    {
+      "id": "S545",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — AIREDALE TERRIER (7)",
+      "url": "https://www.fci.be/EN/nomenclature/AIREDALE-TERRIER-7.html"
+    },
+    {
+      "id": "S546",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 7 Airedale Terrier, English (PDF)",
+      "url": "https://fci.be/nomenclature/standards/007g03-en.pdf"
+    },
+    {
+      "id": "S547",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A to Z — Airedale Terrier",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/airedale-terrier"
+    },
+    {
+      "id": "S549",
+      "tier": "B",
+      "publisher": "PetMD — Elise Schmelzer, reviewed by Barri J. Morrison, DVM (updated May 1, 2023)",
+      "title": "Airedale Terrier",
+      "url": "https://www.petmd.com/dog/breeds/airedale-terrier"
+    },
+    {
+      "id": "S550",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals (LifeLearn, last updated August 28, 2026)",
+      "title": "Airedale Terrier — dog breed page",
+      "url": "https://vcahospitals.com/know-your-pet/airedale-terrier"
     },
     {
       "id": "C1",

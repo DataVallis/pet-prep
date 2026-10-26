@@ -71,6 +71,7 @@ return [
     'german_wirehaired_pointer' => 'German Wirehaired Pointer',
     'saint_bernard' => 'Saint Bernard',
     'staffordshire_bull_terrier' => 'Staffordshire Bull Terrier',
+    'airedale_terrier' => 'Airedale Terrier',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

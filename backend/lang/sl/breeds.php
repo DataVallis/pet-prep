@@ -71,6 +71,7 @@ return [
     'german_wirehaired_pointer' => 'Nemški ostrodlaki ptičar',
     'saint_bernard' => 'Bernardinec',
     'staffordshire_bull_terrier' => 'Stafordširski bulterier',
+    'airedale_terrier' => 'Airedalski terier',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',
