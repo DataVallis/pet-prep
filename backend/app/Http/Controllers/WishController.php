@@ -129,7 +129,8 @@ class WishController extends Controller
         }
 
         return response()->json(array_merge(['status' => 'accepted'], $counts, [
-            // M6-W03 adds the treat clip; until then always null (the app shows the picture).
+            // M6-W03 adds the treat clip; until then always null (the app shows the picture). When set it
+            // will use the existing PetMedia shape (PetMediaPayload: signed `video_url` / `url`), never a fal URL.
             'media' => null,
             'state' => $state,
         ]));
