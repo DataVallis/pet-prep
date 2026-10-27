@@ -1839,5 +1839,29 @@ return [
             ],
         ],
 
+        // M5-R10-70: russell_terrier.* (S557–S564), runbook rules (data.json
+        // proposed_game_parameters.russell_terrier.suitability_tags). RKC (S559) + PDSA (S560) + PetMD (S561).
+        // RKC Breed Watch Category 1 → no welfare chip. PDSA "better suited to families with slightly older children" →
+        // older_children, never children / small_children. RKC "Flat/ Apartment" → apartment. 60 min → no active_family /
+        // long_daily_exercise. No needs_company (only the general PDSA four-hour rule).
+        'russell_terrier' => [
+            'suits' => [
+                // S560 "Jack Russells can make good family pets if they have been trained and socialised properly from a young age."
+                ['tag' => 'family_pet', 'source_ids' => ['S560'], 'refs' => ['russell_terrier.behaviour.family']],
+                // S560 "They are clever dogs who love people, making Jack Russells a popular choice for first-time owners."
+                ['tag' => 'first_time_owner', 'source_ids' => ['S560'], 'refs' => ['russell_terrier.suitability.pdsa_first_time_owner']],
+                // S559 "Size of home: Flat/ Apartment".
+                ['tag' => 'apartment', 'source_ids' => ['S559'], 'refs' => ['russell_terrier.suitability.rkc_size_of_home']],
+            ],
+            'consider' => [
+                // S560 "They're better suited to families with slightly older children who understand how to behave around dogs."
+                ['tag' => 'older_children', 'source_ids' => ['S560'], 'refs' => ['russell_terrier.behaviour.children', 'russell_terrier.suitability.pdsa_children']],
+                // S559 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S559'], 'refs' => ['russell_terrier.suitability.rkc_shedding']],
+                // S560 "Jack Russells have a very high prey drive and love to chase."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S560'], 'refs' => ['russell_terrier.behaviour.other_pets']],
+            ],
+        ],
+
     ],
 ];

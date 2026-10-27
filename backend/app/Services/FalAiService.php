@@ -606,6 +606,13 @@ class FalAiService
                 .'small V-shaped ears folded to the side, natural undocked tail set on high and carried gaily, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-70: FCI 345 (S558) — white predominant with tan markings as the anchor (the first colour of the game
+            // list); smooth coat, button / dropped ears and a natural undocked tail.
+            BreedType::RussellTerrier => 'A lively, alert Jack Russell (Russell) Terrier dog with a smooth, weatherproof, predominantly white coat '
+                .'and tan markings on the head and ears, small, strong, active and lithe working terrier body of medium length, '
+                .'black nose, small dark almond-shaped eyes with a keen expression, small button ears folded forward, '
+                .'natural undocked tail carried erect, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1441,6 +1448,18 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'hard, dense and wiry, lying straight and close',
                 'markings' => 'black or grizzle saddle on the back, top of the neck and top of the tail, all other parts tan, never solid black, natural undocked tail',
+            ],
+            // M5-R10-70: colours of the FCI standard (S558) — white must predominate with black and/or tan markings;
+            // button or dropped ears and a natural undocked tail.
+            BreedType::RussellTerrier => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'white with tan markings',
+                    1 => 'white with black and tan markings',
+                    2 => 'white with black markings',
+                },
+                'eye_color' => 'dark',
+                'fur_texture' => 'smooth, short and weatherproof',
+                'markings' => 'predominantly white body, markings mostly on the head, ears and around the tail, never mostly black or tan, button or dropped ears, natural undocked tail',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

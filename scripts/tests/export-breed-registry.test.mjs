@@ -178,6 +178,7 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.deepEqual(byId.saint_bernard.slug, { en: 'saint-bernard', sl: 'bernardinec' });
   assert.deepEqual(byId.staffordshire_bull_terrier.slug, { en: 'staffordshire-bull-terrier', sl: 'stafordsirski-bulterier' });
   assert.deepEqual(byId.airedale_terrier.slug, { en: 'airedale-terrier', sl: 'airedalski-terier' });
+  assert.deepEqual(byId.russell_terrier.slug, { en: 'jack-russell-terrier', sl: 'jack-russell-terier' });
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.deepEqual(byId.ragdoll.slug, { en: 'ragdoll', sl: 'ragdoll' });
   // M5-R10-16: "Siberian cat" in EN, so the slug never reads as the Siberian Husky's.
@@ -338,6 +339,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     saint_bernard: { adult: 6000, senior: 4500, seniorFrom: 63, learning: 0.7 },
     staffordshire_bull_terrier: { adult: 6000, senior: 4500, seniorFrom: 108, learning: 1 },
     airedale_terrier: { adult: 6000, senior: 4500, seniorFrom: 90, learning: 1.2 },
+    russell_terrier: { adult: 6000, senior: 4500, seniorFrom: 120, learning: 1 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -557,8 +559,9 @@ test('game numbers equal the seeded breed_stage_params rows', { skip: !(hasPhp &
 test('the app\'s brushed-cat and brushed-dog lists equal the seeded grooming rows (David 2026-10-11 / 12: nothing forgotten)', { skip: !(hasPhp && hasVendor) && 'php or backend/vendor missing' }, () => {
   const code = `require $argv[1]; echo json_encode(Database\\Seeders\\BreedStageParamsSeeder::allRows());`;
   const rows = JSON.parse(execFileSync('php', ['-r', code, resolve(ROOT, 'backend/vendor/autoload.php')], { encoding: 'utf8', cwd: resolve(ROOT, 'backend'), maxBuffer: 64 * 1024 * 1024 }));
-  // Seeded slugs → BreedType values (the German Shepherd's slug is german-shepherd-dog, the Poodle's poodle-standard).
-  const slugToBreed = { 'german-shepherd-dog': 'german_shepherd', 'poodle-standard': 'standard_poodle' };
+  // Seeded slugs → BreedType values (the German Shepherd's slug is german-shepherd-dog, the Poodle's poodle-standard,
+  // the Russell Terrier's jack-russell-terrier — M5-R10-70).
+  const slugToBreed = { 'german-shepherd-dog': 'german_shepherd', 'poodle-standard': 'standard_poodle', 'jack-russell-terrier': 'russell_terrier' };
   const seeded = [...new Set(rows.filter((x) => x.key === 'grooming_sessions_per_week').map((x) => slugToBreed[x.breed_slug] ?? x.breed_slug.replaceAll('-', '_')))].sort();
   const species = readFileSync(resolve(ROOT, 'mobile/src/modules/species/species.ts'), 'utf8');
   const list = (name) => {
@@ -571,7 +574,7 @@ test('the app\'s brushed-cat and brushed-dog lists equal the seeded grooming row
   assert.deepEqual([...cats, ...dogs].sort(), seeded);
   assert.deepEqual(cats, ['bengal', 'british_shorthair', 'maine_coon', 'norwegian_forest_cat', 'ragdoll', 'siberian_cat']);
   // M5-R13: every dog breed of the app except the mutt and the Border Collie (no grooming statement).
-  assert.equal(dogs.length, 63);
+  assert.equal(dogs.length, 64);
   assert.ok(!dogs.includes('mutt') && !dogs.includes('border_collie'));
 });
 
@@ -2299,4 +2302,27 @@ test('Airedale Terrier (M5-R10-68): up to 1 hour (RKC), PetMD weight, FCI height
   const json = JSON.stringify(d);
   // Never "hypoallergenic", never a percentage or the unverified McMillan value.
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|6\.22|brindle|wheaten/i);
+});
+
+test('Russell Terrier (M5-R10-70): FCI / RKC Jack Russell Terrier — up to 1 hour (RKC), FCI weight / height, FCI 345 group 3 Great Britain, McMillan median 13.3 + RKC "over 10 years", Coren 46, brushing once a week, teeth 3× a week, RKC PLL minimum + LOA / SCA / eye best practice', () => {
+  const d = registry.breeds.find((b) => b.id === 'russell_terrier');
+  assert.deepEqual(d.name, { en: 'Jack Russell Terrier', sl: 'Jack Russell terier' });
+  assert.equal(d.availability, expectedAvailability(d.id));
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S559']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 345, group: 3, section: 2, origin: 'GB' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [5, 6], female: [5, 6] }, ['S558']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[{ male: [25, 30], female: [25, 30] }, ['S558']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value, f.source_ids]), [['median', 13.3, ['S123']], ['more_than', 10, ['S559']]]);
+  assert.equal(d.facts.find((f) => f.field === 'coren_rank').value, 46);
+  assert.deepEqual(d.facts.find((f) => f.field === 'growth_end').value, [8, 12]);
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 6000, cap_month: 6 });
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 120 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 4500 } });
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['family_pet', 'first_time_owner', 'apartment']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['older_children', 'sheds', 'chases_small_pets']);
+  assert.deepEqual(d.health.map((h) => h.key), ['kneecap_luxation', 'primary_lens_luxation', 'inherited_ataxia', 'legg_perthes', 'deafness', 'periodontal_disease']);
+  assert.equal(d.breeder_checklist.status, 'listed');
+  assert.deepEqual(d.breeder_checklist.tests.map((t) => [t.key, t.level]), [['dna_pll', 'minimum'], ['dna_loa', 'best_practice'], ['dna_sca', 'best_practice'], ['eye_scheme', 'best_practice']]);
+  const json = JSON.stringify(d);
+  // Never "hypoallergenic", never a percentage or the VetCompass life-expectancy alternative.
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|12\.72|brindle|liver/i);
 });

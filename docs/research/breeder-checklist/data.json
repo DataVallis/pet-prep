@@ -2660,6 +2660,44 @@
         }
       ],
       "notes": "RKC breed page (dog-data S547, 2026-10-26): heading 'Pre-breeding Health Screening', subheading 'Best Practice schemes and tests' — BVA/KC elbow and hip schemes; no minimum list; 'We don’t currently offer a breed-specific DNA testing package for this breed,' (individual DNA tests available — paraphrase). No new test key."
+    },
+    "russell_terrier": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S559",
+        "quote": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding,"
+      },
+      "tests": [
+        {
+          "key": "dna_pll",
+          "level": "minimum",
+          "name": "DNA test for primary lens luxation (PLL)",
+          "source_id": "S559",
+          "quote": "DNA test for primary lens luxation (PLL)"
+        },
+        {
+          "key": "dna_loa",
+          "level": "best_practice",
+          "name": "DNA test for Late onset ataxia (LOA)",
+          "source_id": "S559",
+          "quote": "DNA test for Late onset ataxia (LOA)"
+        },
+        {
+          "key": "dna_sca",
+          "level": "best_practice",
+          "name": "DNA test for Spinocerebellar ataxia (SCA)",
+          "source_id": "S559",
+          "quote": "DNA test for Spinocerebellar ataxia (SCA)"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S559",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S559, 2026-10-27, the Jack Russell Terrier = the AKC Russell Terrier): Good Practice (the 'at a minimum' list) — DNA test for PLL; Best Practice — DNA tests for LOA and SCA and the BVA/KC/ISDS eye scheme. New keys dna_pll, dna_loa, dna_sca."
     }
   }
 }
