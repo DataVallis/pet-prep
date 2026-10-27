@@ -1,5 +1,5 @@
 /** M6-W04 HUD: »Želje« settings row + »Priboljšek« chip (only with treats; 422 limit text; hidden on an older server). */
-import { act, fireEvent, screen } from '@testing-library/react-native';
+import { act, fireEvent, screen, waitFor } from '@testing-library/react-native';
 
 import { ApiError, api } from '@/api/client';
 import ChildHudScreen from '@/screens/ChildHudScreen';
@@ -47,10 +47,7 @@ it('with treats: the chip shows; the daily limit gives the friendly text', async
   renderWithQuery(<ChildHudScreen />);
   await screen.findByTestId('hud-treat');
   fireEvent.press(screen.getByTestId('hud-treat'));
-  await act(async () => {
-    await new Promise((resolve) => setTimeout(resolve, 10));
-  });
-  expect(api.giveTreat).toHaveBeenCalledTimes(1);
+  await waitFor(() => expect(api.giveTreat).toHaveBeenCalledTimes(1));
   expect(await screen.findByText('Danes je dobil že dva priboljška, jutri spet.')).toBeTruthy();
 });
 
@@ -72,8 +69,6 @@ it('QA #416 m11: the state of a treat answer replaces the child pet cache (count
   // The next poll would still say 5 — the cache must come from the answer, not a refetch.
   (api.getChildPet as jest.Mock).mockReturnValue(new Promise(() => undefined));
   fireEvent.press(screen.getByTestId('hud-treat'));
-  await act(async () => {
-    await new Promise((resolve) => setTimeout(resolve, 10));
-  });
-  expect(screen.getByTestId('hud-treat')).toHaveTextContent(/4/);
+  await waitFor(() => expect(screen.getByTestId('hud-treat')).toHaveTextContent(/4/));
+  expect(api.getChildPet).toHaveBeenCalledTimes(1);
 });

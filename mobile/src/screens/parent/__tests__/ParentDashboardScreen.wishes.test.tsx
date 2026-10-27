@@ -41,7 +41,7 @@ describe('ParentDashboardScreen — Želje', () => {
     getParentDashboard.mockResolvedValue(makeScoredDashboard([makeScoredChild()], [PET7]));
     renderWithQuery(<ParentDashboardScreen />);
     await flush();
-    expect(screen.getByTestId('child-card-2')).toBeTruthy();
+    expect(await screen.findByTestId('child-card-2')).toBeTruthy();
     expect(screen.queryByTestId('dashboard-wishes')).toBeNull();
   });
 
@@ -49,7 +49,7 @@ describe('ParentDashboardScreen — Želje', () => {
     getParentDashboard.mockResolvedValue({ ...makeScoredDashboard([makeScoredChild()], [PET7]), wishes_open_count: 2 });
     renderWithQuery(<ParentDashboardScreen />);
     await flush();
-    expect(screen.getByText('Želje (2)')).toBeTruthy();
+    expect(await screen.findByText('Želje (2)')).toBeTruthy();
     fireEvent.press(screen.getByTestId('dashboard-wishes'));
     expect(screen.getByTestId('wishes-screen')).toBeTruthy();
   });
@@ -58,8 +58,7 @@ describe('ParentDashboardScreen — Želje', () => {
     getParentDashboard.mockResolvedValue({ ...makeScoredDashboard([makeScoredChild()], [PET7]), wishes_open_count: 1 });
     useAppStore.getState().setPushTarget({ petId: null, type: 'wish_created' });
     renderWithQuery(<ParentDashboardScreen />);
-    await flush();
-    expect(screen.getByTestId('wishes-screen')).toBeTruthy();
+    expect(await screen.findByTestId('wishes-screen')).toBeTruthy();
     expect(useAppStore.getState().pushTarget).toBeNull();
   });
 });

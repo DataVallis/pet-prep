@@ -1,5 +1,5 @@
 /** M6-W04 child »Želje«: no prices, »Prosi starša«, states, limit, refusals; treat error texts. */
-import { act, fireEvent, screen } from '@testing-library/react-native';
+import { act, fireEvent, screen, waitFor } from '@testing-library/react-native';
 
 import { ApiError, api } from '@/api/client';
 import { i18n } from '@/i18n';
@@ -52,7 +52,7 @@ describe('WishesSheet', () => {
     getChildWishes.mockResolvedValue(CATALOGUE);
     renderWithQuery(<WishesSheet visible onClose={jest.fn()} nowMs={NOW} />);
     await flush();
-    expect(screen.getByText('Pasja postelja')).toBeTruthy();
+    expect(await screen.findByText('Pasja postelja')).toBeTruthy();
     expect(screen.getByTestId('wish-ask-bed')).toBeTruthy();
     expect(screen.getByTestId('wish-status-bowls')).toHaveTextContent('Prošnja poslana');
     expect(screen.getByTestId('wish-status-toy_1')).toHaveTextContent('Mogoče kdaj drugič');
@@ -70,15 +70,15 @@ describe('WishesSheet', () => {
     fireEvent.press(screen.getByTestId('wish-ask-bed'));
     await flush();
     expect(createWish).toHaveBeenCalledWith('bed');
-    expect(screen.getByTestId('wishes-feedback')).toHaveTextContent('Prošnja je poslana! Starš jo bo videl.');
-    expect(screen.getByTestId('wish-status-bed')).toHaveTextContent('Prošnja poslana');
+    expect(await screen.findByTestId('wishes-feedback')).toHaveTextContent('Prošnja je poslana! Starš jo bo videl.');
+    await waitFor(() => expect(screen.getByTestId('wish-status-bed')).toHaveTextContent('Prošnja poslana'));
   });
 
   it('3 open wishes: message + the ask button is off', async () => {
     getChildWishes.mockResolvedValue({ ...CATALOGUE, open_count: 3 });
     renderWithQuery(<WishesSheet visible onClose={jest.fn()} nowMs={NOW} />);
     await flush();
-    expect(screen.getByTestId('wishes-limit')).toBeTruthy();
+    expect(await screen.findByTestId('wishes-limit')).toBeTruthy();
     expect(screen.getByTestId('wish-ask-bed')).toBeDisabled();
   });
 
@@ -89,14 +89,14 @@ describe('WishesSheet', () => {
     await flush();
     fireEvent.press(screen.getByTestId('wish-ask-bed'));
     await flush();
-    expect(screen.getByTestId('wishes-feedback')).toHaveTextContent('Odprte imaš že 3 prošnje. Počakaj, da starš odgovori.');
+    expect(await screen.findByTestId('wishes-feedback')).toHaveTextContent('Odprte imaš že 3 prošnje. Počakaj, da starš odgovori.');
   });
 
   it('old server (404 without reason) → "not here yet"', async () => {
     getChildWishes.mockRejectedValue(new ApiError('Not Found', 404, { message: 'Not Found' }));
     renderWithQuery(<WishesSheet visible onClose={jest.fn()} nowMs={NOW} />);
     await flush();
-    expect(screen.getByText('Želj tukaj še ni.')).toBeTruthy();
+    expect(await screen.findByText('Želj tukaj še ni.')).toBeTruthy();
   });
 });
 
