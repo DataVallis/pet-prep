@@ -36097,6 +36097,586 @@
       }
     }
   },
+  "russell_terrier": {
+    "_note": "Added 2026-10-27 (M5-R10-70, unattended run — appended after the Boykin Spaniel (blocked): AKC 2024 No. 66 'Russell Terrier', S174 full-list table fetched 2026-10-27). The AKC Russell Terrier is the breed the FCI (No. 345, S557/S558) and the Royal Kennel Club (S559) call the Jack Russell Terrier (origin England, developed in Australia) — not the longer-legged Parson Russell Terrier (FCI 339). Quotes as returned by the web-fetch tool on 2026-10-27 (125-character limit; longer sentences are paraphrased in notes and marked as such). Sources S557–S564 (reused S8, S10, S11, S14, S35, S45, S123, S174). No health percentages anywhere. Identity from the FCI nomenclature (S557, No. 345, Great Britain, country of development Australia); appearance, colours, height and weight from FCI-Standard N° 345 (S558). RKC Breeds A–Z page (S559) reached (royalkennelclub.com address with the trailing slash): key facts, Breed Watch Category 1 and the health tests. PDSA (S560), PetMD (S561, the AKC 'Russell Terrier' page), Dogs Trust breed page (S564). Lifespan: McMillan 2024 via the Dogs Trust breed table (S123, row 'Jack Russell Terrier 13.3') — runbook first choice; VetCompass life tables (Teng 2022, S562/S563: 12.72 y at age 0) as an alternative. Names: RKC / FCI 'Jack Russell Terrier', AKC 'Russell Terrier'; Slovenian »jack russell terier« — no KZS page read, open for David.",
+    "identity": {
+      "value": "FCI No. 345, Group 3 Section 2 (Small sized Terriers), Great Britain",
+      "unit": "—",
+      "source_id": "S557",
+      "quote": "JACK RUSSELL TERRIER",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S557): name 'JACK RUSSELL TERRIER', group 'n°3 - Terriers', section 'Small sized Terriers', country of origin 'GREAT BRITAIN', country of development 'AUSTRALIA', working trial only for the countries that asked for it, definitive acceptance 1/1/2003, valid standard 10/8/2012. Great Britain is already in FCI_ORIGINS (GB). FCI-Standard N° 345 (S558): 'ORIGIN: England.', 'COUNTRY OF DEVELOPMENT: Australia.' AKC name 'Russell Terrier' (S174, S561); the RKC recognised the breed in 2016 (S559: 'The Jack Russell Terrier was given official recognition by The Kennel Club in 2016.'). Not the Parson Russell Terrier (FCI 339)."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S559",
+      "quote": "Size: Small",
+      "confidence": "high",
+      "notes": "RKC breed page key fact (S559); PDSA (S560) 'Size | Small'. FCI weight 5–6 kg (S558) = 11–13 lb → the 'Toy' / 'Small' boundary of S10 for growth."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            25,
+            30
+          ],
+          "female": [
+            25,
+            30
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S558",
+        "quote": "Ideal Height at the withers: 25 cms to 30 cms.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 345 (S558), both sexes. PDSA (S560) 'Average height | 25-30 cm'; PetMD (S561) '10–12 inches tall' (25–30 cm)."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            5,
+            6
+          ],
+          "female": [
+            5,
+            6
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S558",
+        "quote": "and a 30 cms high dog should weigh 6 kgs.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 345 (S558): 'Weight: Being the equivalent of 1 kg to each 5 cms in height, i.e. a 25 cms high dog should weigh approximately 5 kgs' 'and a 30 cms high dog should weigh 6 kgs.' (as returned, two parts) → 5–6 kg for the 25–30 cm range, both sexes — the game range (adult_weight_kg).",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                4,
+                6
+              ],
+              "female": [
+                4,
+                6
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S560",
+            "quote": "Average weight | 4-6 kg",
+            "confidence": "high",
+            "notes": "PDSA key facts (S560), both sexes."
+          },
+          {
+            "value": {
+              "male": [
+                4.1,
+                6.8
+              ],
+              "female": [
+                4.1,
+                6.8
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S561",
+            "quote": "Their compact size (10–12 inches tall and 9–15 pounds) allowed them to be easily carried on horseback",
+            "confidence": "medium",
+            "notes": "PetMD (S561, fragment as returned): 9–15 lb = 4.1–6.8 kg, both sexes."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "I (<6.5 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 5–6 kg = the smallest band. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "8–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Toy (5–12 pounds): 8–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI 5–6 kg (S558) = 11–13 lb → mostly 'Toy (5–12 pounds)' (the upper end touches 'Small'). The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Jack Russell / Russell Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 13.3,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": "Jack Russell Terrier 13.3 13.2 - 13.3 19166 13497",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024 (Sci Rep) data as tabled by Dogs Trust (S123, header 'Breed Median Life Expectancy (Years) Lower and Upper 95% CI*' 'Total Number Individuals (Alive and Deceased) Number Deceased Individuals', as returned): median 13.3 y (95 % CI 13.2–13.3), 19,166 dogs, 13,497 deceased. Runbook first choice (McMillan 2024). The UK 'Jack Russell Terrier' population is the FCI / RKC breed = the AKC Russell Terrier (the Parson Russell Terrier has its own row, 13.8 y — not used)."
+      },
+      "vetcompass_2022": {
+        "value": 12.72,
+        "unit": "years",
+        "source_id": "S562",
+        "quote": "Jack Russell Terrier (12.72 years; 95% CI: 12.53−12.90) and French Bulldog (4.53 years; 95% CI: 4.14−5.01)",
+        "confidence": "high",
+        "notes": "Teng et al. 2022, Sci Rep 12:6415 (VetCompass life tables, S562 abstract as returned): life expectancy at age 0 — the longest of the breeds studied; RVC infographic (S563) 'Jack Russell Terrier (12.7 years)'. Alternative only (a life expectancy at age 0, not a median) → senior 114 (0.75 × 12.72 × 12 = 114.5 → 114) not chosen."
+      },
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S559",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "medium",
+        "notes": "RKC breed page key fact (S559); PDSA (S560) 'Average lifespan | Over 10 years'; PetMD (S561) 'life expectancy of 12–14 years'; Dogs Trust (S564) 'typically 10+ years'. Consistent with the McMillan median."
+      },
+      "petmd": {
+        "value": "12–14",
+        "unit": "years",
+        "source_id": "S561",
+        "quote": "The Russell Terrier is a generally healthy breed with a life expectancy of 12–14 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S561, US). Alternative only."
+      },
+      "senior_from": {
+        "value": 9.975,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 13.3 y (McMillan 2024 via S123) → 0.75 × 13.3 = 9.975 y = 119.7 → 120 months. Not chosen: 114 (VetCompass 2022 12.72 y, S562); 90 (RKC lower bound 10 y, S559); 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S123"
+        ],
+        "months": 120,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S559",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S559), runbook first choice → 60 min. PDSA (S560): 'Your Jack Russell Terrier will need a minimum of an hour exercise every day.' (60 as well); PetMD (S561, US 'Russell Terrier'): 'these high-energy dogs need at least 90 minutes to two hours of exercise every day' → 90, alternative (runbook: on conflict the RKC value). Dogs Trust (S564): daily walks, no number.",
+        "alternatives": [
+          {
+            "value": 60,
+            "unit": "minutes/day",
+            "source_id": "S560",
+            "quote": "Your Jack Russell Terrier will need a minimum of an hour exercise every day.",
+            "confidence": "high",
+            "notes": "PDSA (S560) 'a minimum of an hour' → 60."
+          },
+          {
+            "value": 90,
+            "unit": "minutes/day",
+            "source_id": "S561",
+            "quote": "these high-energy dogs need at least 90 minutes to two hours of exercise every day",
+            "confidence": "medium",
+            "notes": "PetMD (S561) range 90–120 → lower bound 90; not chosen (RKC preferred)."
+          }
+        ]
+      },
+      "energy": {
+        "value": "lively, really active dogs with bundles of energy",
+        "unit": "—",
+        "source_id": "S560",
+        "quote": "Jack Russells are really active dogs and despite their smaller size they have bundles of energy.",
+        "confidence": "high",
+        "notes": "PDSA (S560); also 'Jack Russell Terriers are lively little dogs who love to run and chase.' PetMD (S561): 'Russell Terriers are bright, boisterous dogs with brains and energy to spare.' Not active_family / long_daily_exercise (60 min, RKC)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "lively, alert and active, with a keen, intelligent expression; bold and fearless, friendly but quietly confident",
+        "unit": "—",
+        "source_id": "S558",
+        "quote": "A lively, alert and active Terrier with a keen, intelligent expression. Bold and fearless, friendly but quietly confident.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 345 (S558), behaviour / temperament. RKC (S559): 'will remain essentially a working Terrier both in type and temperament.' PDSA (S560): barks when excited — 'They tend to bark when they're excited (which is most of the time as they are such excitable dogs).'"
+      },
+      "family": {
+        "value": "can make good family pets if trained and socialised properly from a young age",
+        "unit": "—",
+        "source_id": "S560",
+        "quote": "Jack Russells can make good family pets if they have been trained and socialised properly from a young age.",
+        "confidence": "high",
+        "notes": "PDSA (S560). Basis of family_pet (the training / socialisation caveat kept). PetMD (S561): 'Affectionate and playful, Russells can get along great with kids who are old enough' (fragment)."
+      },
+      "children": {
+        "value": "better suited to families with slightly older children; can be less tolerant with younger or boisterous children",
+        "unit": "—",
+        "source_id": "S560",
+        "quote": "They're better suited to families with slightly older children who understand how to behave around dogs.",
+        "confidence": "high",
+        "notes": "PDSA (S560); also 'They can be less tolerant with younger or boisterous children and have been known to show their frustration by nipping.' PetMD (S561): 'Affectionate and playful, Russells can get along great with kids who are old enough' (the children should be old enough to play safely with a small, zealous pup — paraphrase). Basis of older_children (Chihuahua / Pomeranian precedent) — never children / small_children."
+      },
+      "time_alone": {
+        "value": "train the dog that it is OK to be alone — never more than four hours",
+        "unit": "—",
+        "source_id": "S560",
+        "quote": "You'll need to train your dog that it's OK to be alone and this should never be for more than four hours.",
+        "confidence": "high",
+        "notes": "PDSA (S560) — the general PDSA rule, no breed-specific separation statement → no needs_company tag. PetMD (S561): bored, lonely Russells more likely to develop unwanted behaviours (paraphrase)."
+      },
+      "other_pets": {
+        "value": "very high prey drive — smaller pets not recommended; not great companions for cats",
+        "unit": "—",
+        "source_id": "S560",
+        "quote": "Jack Russells have a very high prey drive and love to chase.",
+        "confidence": "high",
+        "notes": "PDSA (S560); 'We wouldn't recommend having smaller pets if you own a Jack Russell.' PetMD (S561): 'That prey drive is also why Russell Terriers don't make great companions for cats.'; 'Because of their high prey drive, outdoor time should always be spent either on a leash or within a securely fenced area.' Basis of chases_small_pets."
+      },
+      "socialisation": {
+        "value": "socialise from a young age with lots of different people, dogs and experiences",
+        "unit": "—",
+        "source_id": "S560",
+        "quote": "It's important to socialise your Jack Russell Terrier from a young age with lots of different people, dogs and experiences.",
+        "confidence": "high",
+        "notes": "PDSA (S560). A need (runbook M5-R17) → proposed_game_parameters.russell_terrier.socialisation (DOG_SOCIALISATION row, PDSA quote). PetMD (S561): 'Ideally, this should begin within the first 16 weeks of your puppy's life.'"
+      },
+      "training": {
+        "value": "clever dogs who love people — a popular choice for first-time owners",
+        "unit": "—",
+        "source_id": "S560",
+        "quote": "They are clever dogs who love people, making Jack Russells a popular choice for first-time owners.",
+        "confidence": "high",
+        "notes": "PDSA (S560). Basis of first_time_owner (Golden Retriever / Shih Tzu precedent). PetMD (S561): 'In cleverness, alertness, and boldness (among other traits), the Russell is off the charts.'"
+      },
+      "digging": {
+        "value": "love to dig — not ideal for a prized garden",
+        "unit": "—",
+        "source_id": "S560",
+        "quote": "They're really not ideal if you take a lot of pride in your garden because they love to dig.",
+        "confidence": "high",
+        "notes": "PDSA (S560). Background only: not an escape statement → no secure_fencing tag (open for David)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No explicit chewing statement in the breed's sources → no chews_when_bored."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific food-motivation / weight statement → no food_motivated_weight."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S559) — no points of concern → no welfare chip. Conditions from PDSA (S560) and PetMD (S561).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1 — no points of concern",
+        "unit": "—",
+        "source_id": "S559",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC breed page (S559); the rest of the sentence: only the routine concerns of the breed standard (paraphrase) → no welfare chip, in marketing."
+      },
+      "patellar_luxation": {
+        "value": "luxating patellas",
+        "unit": "—",
+        "source_id": "S560",
+        "quote": "Luxating patellas – the kneecaps slipping temporarily out of place.",
+        "confidence": "high",
+        "notes": "PDSA (S560); PetMD (S561) 'Patellar luxation'. Register health key kneecap_luxation."
+      },
+      "primary_lens_luxation": {
+        "value": "primary lens luxation",
+        "unit": "—",
+        "source_id": "S560",
+        "quote": "Primary Lens Luxation – a painful condition which causes blindness.",
+        "confidence": "high",
+        "notes": "PDSA (S560); PetMD (S561) 'Primary lens luxation'; RKC Good Practice DNA test for PLL (S559). Register health key primary_lens_luxation (new)."
+      },
+      "ataxia": {
+        "value": "late onset ataxia and spinocerebellar ataxia",
+        "unit": "—",
+        "source_id": "S560",
+        "quote": "Late Onset Ataxia – a condition which causes loss of balance and lack of coordination with gradually worsens.",
+        "confidence": "high",
+        "notes": "PDSA (S560); also 'Spinocerebellar Ataxia – a disease which causes the spinal cord to degenerate.' RKC Best Practice DNA tests LOA and SCA (S559). Register health key inherited_ataxia (new)."
+      },
+      "legg_perthes": {
+        "value": "Legg-Perthes disease",
+        "unit": "—",
+        "source_id": "S560",
+        "quote": "Leggs Perthes disease",
+        "confidence": "high",
+        "notes": "PDSA (S560, spelling as on the page). Register health key legg_perthes."
+      },
+      "deafness": {
+        "value": "congenital deafness",
+        "unit": "—",
+        "source_id": "S561",
+        "quote": "Congenital deafness",
+        "confidence": "medium",
+        "notes": "PetMD (S561) health list (as returned). Register health key deafness."
+      },
+      "periodontal_disease": {
+        "value": "periodontal disease",
+        "unit": "—",
+        "source_id": "S561",
+        "quote": "Periodontal disease",
+        "confidence": "medium",
+        "notes": "PetMD (S561) health list (as returned); the page recommends regular toothbrushing at home (paraphrase). Register health key periodontal_disease."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 46,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Jack Russell Terrier",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-27): rank 46 'Jack Russell Terrier', tier 'Average Working/Obedience Intelligence' (ranks 40–54). The page's text also says breeds not recognised by the AKC / CKC 'such as the Jack Russell Terrier' were excluded — internally inconsistent (open for David); unranked would give the same multiplier 1.0. Coren's own top / bottom-10 article (S34) does not list the breed."
+      },
+      "coren_tier": {
+        "value": "Average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier 'Average Working/Obedience Intelligence' (ranks 40–54)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.russell_terrier.learning_multiplier (1.0, runbook rule: Average tier, rank 46).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "a strong, active, lithe working terrier of great character with a flexible body of medium length",
+        "unit": "—",
+        "source_id": "S558",
+        "quote": "A strong, active, lithe working Terrier of great character with flexible body of medium length.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 345 (S558), general appearance."
+      },
+      "colours": {
+        "value": [
+          "white_and_tan",
+          "white_black_and_tan",
+          "white_and_black"
+        ],
+        "unit": "list",
+        "source_id": "S558",
+        "quote": "White must predominate with black and/or tan markings.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 345 (S558); 'The tan markings can be from the lightest tan to the richest tan (chestnut).' → three combinations: white with tan, white with black and tan (tricolour), white with black markings. White always predominates — never a mostly black, tan or brindle dog."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). White with tan markings first with the highest weight (the portrait default), then white with black and tan, then white with black."
+      },
+      "coat": {
+        "value": "smooth, broken or rough; weatherproof; not stripped out to appear smooth or broken",
+        "unit": "—",
+        "source_id": "S558",
+        "quote": "May be smooth, broken or rough. Must be weatherproof.",
+        "confidence": "high",
+        "notes": "FCI (S558); 'Coats should not be altered (stripped out) to appear smooth or broken.' RKC key fact 'Coat length: Short' (S559)."
+      },
+      "nose": {
+        "value": "black",
+        "unit": "—",
+        "source_id": "S558",
+        "quote": "Nose: Black.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 345 (S558)."
+      },
+      "eyes": {
+        "value": "small, dark, almond-shaped, not prominent, close-fitting eyelids with black rims",
+        "unit": "—",
+        "source_id": "S558",
+        "quote": "Small dark and with keen expression. Must not be prominent and eyelids should fit closely.",
+        "confidence": "high",
+        "notes": "FCI (S558); 'The eyelid rims should be pigmented black. Almond shaped.'"
+      },
+      "ears": {
+        "value": "button or dropped, of good texture and great mobility",
+        "unit": "—",
+        "source_id": "S558",
+        "quote": "Button or dropped of good texture and great mobility.",
+        "confidence": "high",
+        "notes": "FCI (S558)."
+      },
+      "tail": {
+        "value": "may droop at rest; erect when moving",
+        "unit": "—",
+        "source_id": "S558",
+        "quote": "May droop at rest. When moving should be erect and if docked the tip should be on the same level as ears.",
+        "confidence": "high",
+        "notes": "FCI (S558). The game shows a natural, undocked tail."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S559), PDSA (S560), PetMD (S561), Dogs Trust (S564). RKC key facts reached on 2026-10-27.",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S559",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": "RKC key fact (S559)."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S559",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S559) → 60 min. Not active_family / long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Flat/ Apartment",
+        "unit": "—",
+        "source_id": "S559",
+        "quote": "Size of home: Flat/ Apartment",
+        "confidence": "high",
+        "notes": "RKC key fact (S559). Basis of apartment (runbook: only from RKC »Flat/ Apartment«)."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S559",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S559)."
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S559",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S559) → brushing 1× a week (M5-R13 rule »Once a week« → 1). PDSA (S560) weekly brush; PetMD (S561) weekly — the same. Not frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S559",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": "RKC key fact (S559)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S559",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "RKC key fact (S559). Basis of sheds."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S559",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S559). Not shorter_lifespan."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S559",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S559). Background only."
+      },
+      "rkc_town_or_country": {
+        "value": "Country",
+        "unit": "—",
+        "source_id": "S559",
+        "quote": "Town or country: Country",
+        "confidence": "high",
+        "notes": "RKC key fact (S559). Background only (no tag)."
+      },
+      "pdsa_first_time_owner": {
+        "value": "a popular choice for first-time owners",
+        "unit": "—",
+        "source_id": "S560",
+        "quote": "They are clever dogs who love people, making Jack Russells a popular choice for first-time owners.",
+        "confidence": "high",
+        "notes": "PDSA (S560). Basis of first_time_owner."
+      },
+      "pdsa_children": {
+        "value": "better suited to families with slightly older children",
+        "unit": "—",
+        "source_id": "S560",
+        "quote": "They're better suited to families with slightly older children who understand how to behave around dogs.",
+        "confidence": "high",
+        "notes": "PDSA (S560). Basis of older_children."
+      },
+      "pdsa_grooming": {
+        "value": "a weekly brush",
+        "unit": "—",
+        "source_id": "S560",
+        "quote": "A weekly brush should be plenty to keep their coat looking healthy but the rough coated terriers may need",
+        "confidence": "high",
+        "notes": "PDSA (S560, as returned — the sentence continues beyond the tool's quote limit). Agrees with RKC 'Once a week'."
+      },
+      "petmd_grooming": {
+        "value": "smooth coats: a soft brush about once a week; rough and broken coats: a weekly brushing or combing",
+        "unit": "—",
+        "source_id": "S561",
+        "quote": "Smooth-coated Russell Terriers benefit from a session with a soft brush around once a week.",
+        "confidence": "high",
+        "notes": "PetMD (S561); 'Rough- and broken-coated Russells need a weekly brushing or combing to keep their fur in fine shape.' No bath, nail or ear frequency (bathing: ask your vet; ears: a consistent schedule from the vet — paraphrase)."
+      },
+      "petmd_teeth": {
+        "value": "brush the teeth at least three times a week",
+        "unit": "—",
+        "source_id": "S561",
+        "quote": "Can I brush a dog's teeth at least three times a week?",
+        "confidence": "medium",
+        "notes": "PetMD (S561), under the heading 'Considerations for Pet Parents' — a question prospective owners should be able to answer yes to; the page also recommends regular toothbrushing at home and lists periodontal disease (paraphrase). → tooth brushing 3× a week (§3 »Breed care tasks«, M5-R15)."
+      },
+      "dogs_trust_grooming": {
+        "value": "generally only needs an occasional brush",
+        "unit": "—",
+        "source_id": "S564",
+        "quote": "generally only needs an occasional brush",
+        "confidence": "medium",
+        "notes": "Dogs Trust breed page (S564), no number — alternative only."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -54137,6 +54717,259 @@
         "confidence": "high",
         "notes": "Colours from the FCI / RKC standards (S546, S548) — black or grizzle saddle with tan only. Weights unsourced. Natural ears and an undocked tail.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): black saddle and tan is the portrait default; natural V-shaped ears and an undocked tail"
+      }
+    },
+    "russell_terrier": {
+      "_note": "Unattended run M5-R10-70 (2026-10-27): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. No new vocabulary key. Built: brushing 1× a week (RKC S559 'Once a week', M5-R13), puppy socialisation (PDSA S560 quote, M5-R17) and tooth brushing 3× a week (PetMD S561, M5-R15). No meal gap (no quote), no ear / nail / bath / groomer task: no source states a frequency.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S559",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'Up to 1 hour per day' (S559). Rule: one number N ('up to N') → N = 60. PDSA (S560) 'a minimum of an hour' agrees; PetMD (S561) 90–120 → alternative.",
+        "alternatives": [
+          {
+            "value": 90,
+            "source_id": "S561",
+            "notes": "PetMD 'at least 90 minutes to two hours' → lower bound 90; not chosen (RKC preferred)."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S559 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S559",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 120
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 120 = round(0.75 × 13.3 y × 12) (S11 + McMillan 2024 median 13.3 y via the Dogs Trust table S123). Alternatives: 114 (VetCompass 2022 12.72 y, S562), 90 (RKC lower bound, S559), 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S123"
+        ],
+        "alternatives": {
+          "senior_vetcompass_2022": 114,
+          "senior_rkc_lower_bound": 90,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 120 (0.75 × 13.3 y, McMillan 2024 via S123)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 120
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 120)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 46 (S35), tier 'Average' (40–54) → 1.0 (unranked would also give 1.0). No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 46, Average tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S559",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S559) 'Once a week' → 1 (M5-R13 rule). PDSA (S560) 'A weekly brush …' and PetMD (S561) 'around once a week' / 'a weekly brushing or combing' agree. Matted coat at ceil(1 / 2) = 1 missed.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC S559 »Once a week«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S560",
+        "quote": "It's important to socialise your Jack Russell Terrier from a young age with lots of different people, dogs and experiences.",
+        "confidence": "high",
+        "notes": "PDSA (S560); quote from russell_terrier.behaviour.socialisation. Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, PDSA S560)"
+      },
+      "tooth_brushing": {
+        "value": "teeth brushed at least three times a week",
+        "unit": "care routine (sourced need)",
+        "source_id": "S561",
+        "quote": "Can I brush a dog's teeth at least three times a week?",
+        "confidence": "medium",
+        "notes": "PetMD (S561), russell_terrier.suitability.petmd_teeth ('Considerations for Pet Parents'). Built: the child's tooth-brushing mini-game 3× every program week (BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R15).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »at least three times a week« → 3× na teden"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-70); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S560"
+            ],
+            "refs": [
+              "russell_terrier.behaviour.family"
+            ],
+            "quote": "S560 'Jack Russells can make good family pets if they have been trained and socialised properly from a young age.'"
+          },
+          {
+            "tag": "first_time_owner",
+            "source_ids": [
+              "S560"
+            ],
+            "refs": [
+              "russell_terrier.suitability.pdsa_first_time_owner"
+            ],
+            "quote": "S560 'making Jack Russells a popular choice for first-time owners.'"
+          },
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S559"
+            ],
+            "refs": [
+              "russell_terrier.suitability.rkc_size_of_home"
+            ],
+            "quote": "S559 'Size of home: Flat/ Apartment'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "older_children",
+            "source_ids": [
+              "S560"
+            ],
+            "refs": [
+              "russell_terrier.behaviour.children",
+              "russell_terrier.suitability.pdsa_children"
+            ],
+            "quote": "S560 'They're better suited to families with slightly older children who understand how to behave around dogs.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S559"
+            ],
+            "refs": [
+              "russell_terrier.suitability.rkc_shedding"
+            ],
+            "quote": "S559 'Sheds: Yes'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S560"
+            ],
+            "refs": [
+              "russell_terrier.behaviour.other_pets"
+            ],
+            "quote": "S560 'Jack Russells have a very high prey drive and love to chase.'"
+          }
+        ],
+        "not_proposed": {
+          "children": "PDSA (S560): better suited to slightly older children, less tolerant with younger or boisterous children → older_children instead.",
+          "small_children": "PDSA (S560): less tolerant with younger children — never small_children.",
+          "not_for_small_children": "No explicit advice against small children (PDSA: 'better suited to … slightly older children') — older_children covers it (Chihuahua precedent).",
+          "other_pets": "PDSA (S560) 'We wouldn't recommend having smaller pets'; PetMD (S561) not great with cats → chases_small_pets instead.",
+          "active_family": "RKC 'Up to 1 hour per day' (S559) — no tag (PetMD 90–120 min is the alternative).",
+          "long_daily_exercise": "60 min (S559).",
+          "needs_company": "PDSA (S560) only the general four-hour rule — no breed-specific separation statement.",
+          "often_alone": "PDSA (S560) never more than four hours.",
+          "frequent_grooming": "RKC 'Once a week' (S559).",
+          "low_shedding": "RKC 'Sheds: Yes' (S559).",
+          "large_home": "RKC 'Flat/ Apartment' (S559).",
+          "secure_fencing": "PDSA (S560) 'they love to dig' is about the garden, not about escaping; PetMD (S561) 'on a leash or within a securely fenced area' follows from the prey drive — no tag, open for David.",
+          "experienced_owner": "PDSA (S560): a popular choice for first-time owners.",
+          "needs_mental_stimulation": "No explicit mental-stimulation statement (PetMD: brains and energy to spare — background).",
+          "shorter_lifespan": "RKC 'Over 10 years' (S559); McMillan 13.3 y (S123).",
+          "welfare": "RKC Breed Watch Category 1 (S559) — no points of concern → no welfare chip.",
+          "chews_when_bored": "No chewing statement.",
+          "food_motivated_weight": "No breed-specific statement."
+        }
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a flat-faced breed)",
+        "unit": "—",
+        "source_id": "S559",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 1 (S559); not on the BVA brachycephalic list — no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). Marketing never promises health; never with small children unsupervised (PDSA S560 'better suited to families with slightly older children') = Claude's proposal, open for David.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no veterinary advice against advertising the breed type)"
+      },
+      "ai_appearance": {
+        "value": "adult Jack Russell (Russell) Terrier, predominantly white smooth weatherproof coat with tan markings on the head, strong active lithe small working terrier with a flexible body of medium length, black nose, small dark almond-shaped eyes with a keen expression, button or dropped ears, natural tail carried erect",
+        "unit": "—",
+        "source_id": "S558",
+        "quote": "White must predominate with black and/or tan markings.",
+        "confidence": "high",
+        "notes": "Colours from the FCI standard (S558) — white predominant with black and/or tan markings only. Weights unsourced. Smooth coat for the portrait (broken and rough are also standard). Natural ears and an undocked tail.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): white with tan markings is the portrait default; button / dropped ears and an undocked tail"
       }
     }
   }
