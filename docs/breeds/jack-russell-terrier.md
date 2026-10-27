@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `russell_terrier` (viri S557–S564; ponovno S8, S10, S11, S14, S35, S45, S123, S174); seznam za vzreditelja: 1 test »minimum« + 3 »Best Practice« (RKC S559) |
 | Izvor | FCI št. 345 »Jack Russell Terrier«, skupina 3, sekcija 2 (mali terierji), Velika Britanija, razvita v Avstraliji (S557) — ni parson russell terier (FCI 339) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 66. mesto »Russell Terrier« (S174, prebrano 2026-10-27; 65. mesto boykin španjel je blokiran) |
-| PR-ji | pet-prep #412 (pasma) · portret: (sledi) · spletna stran: (sledi) |
+| PR-ji | pet-prep #412 (pasma, združen `6dbbc32`) · portret: #413 (zagon 40429933614) · spletna stran: pet-prep-website `feat/register-jack-russell-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -42,7 +42,7 @@
 | Česanje 1× na teden (rutina »Počeši«), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-10-27 |
 | Ščetkanje zob 3× na teden (otrok) | 🛠 | 💶 izziv | M5-R15 | 2026-10-27 |
 | Barva (izbirnik: 3 standardne barve, privzeto bel z rjavimi lisami) | 🛠 | 💶 izziv | M5-R21 | 2026-10-27 |
-| AI portret v registru | 🗓 po združitvi (§8) | — | M5-R11-04 | — |
+| AI portret v registru (bel z rjavimi lisami, sprejet v prvem poskusu, zagon 40429933614, PR #413) | ✅ | — | M5-R11-04 | 2026-10-27 |
 | Stran na petprep.si (`/animals/dogs/jack-russell-terrier`, `/sl/zivali/psi/jack-russell-terier`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -58,4 +58,4 @@
 - **Zobje 3× na teden:** vir je vprašanje v PetMD-jevem seznamu »Considerations for Pet Parents« (»Can I brush a dog's teeth at least three times a week?«) — brano kot pogostost po pravilu »Breed care tasks«.
 - **Coren:** Wikipedija ima JRT na 46. mestu, a v besedilu piše, da ni bil uvrščen; obe branji dasta učenje 1,0.
 - **Lovski nagon in vrt:** PetMD svetuje sprehode na povodcu ali v varno ograjenem prostoru, PDSA omenja kopanje — brez oznake `secure_fencing` (ni izjave o pobegu).
-- **Barva portreta:** bel z rjavimi lisami je predlog Claude (standard ne določa najpogostejše barve).
+- **Barva portreta:** bel z rjavimi lisami je predlog Claude (standard ne določa najpogostejše barve). Portret: zagon 40429933614 (koda `6dbbc32`, brez produkcijske namestitve), sprejet v prvem poskusu; PR #413.
