@@ -171,6 +171,11 @@ return [
         // easily affected by the cold." — sweaters and coats). Not `heat_sensitive` (a thick coat in hot weather). A calm chip,
         // never a number.
         'cold_sensitive' => 'consider',
+        // M5-R10-72 (runbook "new tag" rule, 2026-10-27): bare, hairless skin that needs protecting from the sun (Chinese
+        // Crested: PetMD S574 "Hairless areas of skin require special protection from the sun and cold temperature.").
+        // Not `sensitive_skin` (skin allergies / dermatitis, a Breed Watch welfare chip) and not `heat_sensitive` (a thick
+        // coat in hot weather). A calm chip, never a number.
+        'sun_protection' => 'consider',
     ],
 
     'breeds' => [
@@ -1897,5 +1902,28 @@ return [
             ],
         ],
 
+        // M5-R10-72: chinese_crested.* (S570–S575), runbook rules (data.json
+        // proposed_game_parameters.chinese_crested.suitability_tags). RKC (S572) + PetMD (S574); no PDSA page.
+        // PetMD "fits in well with most families, including those with kids and other pets" → family_pet, children (caveat:
+        // every interaction with kids supervised — never small_children) and other_pets. RKC "Flat/ Apartment" → apartment.
+        // Bare skin (PetMD) → the new sun_protection chip and cold_sensitive (Italian Greyhound precedent). No sheds chip: the
+        // RKC "Sheds: Yes" covers both varieties, the game shows the Hairless (open for David).
+        'chinese_crested' => [
+            'suits' => [
+                // S574 "fits in well with most families, including those with kids and other pets".
+                ['tag' => 'family_pet', 'source_ids' => ['S574'], 'refs' => ['chinese_crested.behaviour.family']],
+                // S574 same sentence; caveat "all interactions between kids and this breed should be supervised".
+                ['tag' => 'children', 'source_ids' => ['S574'], 'refs' => ['chinese_crested.behaviour.family', 'chinese_crested.behaviour.children']],
+                // S572 "Size of home: Flat/ Apartment" / "Size of garden: Small/ medium garden".
+                ['tag' => 'apartment', 'source_ids' => ['S572'], 'refs' => ['chinese_crested.suitability.rkc_size_of_home', 'chinese_crested.suitability.rkc_size_of_garden']],
+                // S574 "… including those with kids and other pets".
+                ['tag' => 'other_pets', 'source_ids' => ['S574'], 'refs' => ['chinese_crested.behaviour.other_pets']],
+            ],
+            'consider' => [
+                // S574 "Hairless areas of skin require special protection from the sun and cold temperature."
+                ['tag' => 'sun_protection', 'source_ids' => ['S574'], 'refs' => ['chinese_crested.health.bare_skin', 'chinese_crested.suitability.petmd_skin']],
+                ['tag' => 'cold_sensitive', 'source_ids' => ['S574'], 'refs' => ['chinese_crested.suitability.petmd_skin']],
+            ],
+        ],
     ],
 ];
