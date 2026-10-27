@@ -844,6 +844,19 @@
             "prompt_hash": "sha256:bb50148b78f6d813b888caeb7b648692ee8c3c4fc79d54f1f791a5dfd207b294",
             "generated_at": "2026-10-26T03:07:31+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "russell_terrier",
+            "species": "dog",
+            "colour": "white-tan",
+            "file": "dog/jack-russell-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:475fa61d276c665595d04307bcb594462d2739a94504a7b03de7441717261c99",
+            "generated_at": "2026-10-27T01:00:57+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
