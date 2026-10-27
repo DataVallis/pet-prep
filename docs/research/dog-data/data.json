@@ -55740,6 +55740,16 @@
             "quote": "S567 'Exercise: More than 2 hours per day'"
           },
           {
+            "tag": "short_muzzle_breathing",
+            "source_ids": [
+              "S568"
+            ],
+            "refs": [
+              "bullmastiff.health.brachycephaly_boas"
+            ],
+            "quote": "S568 'Brachycephalic obstructive airway syndrome (BOAS) – this can cause severe breathing problems' (… 'caused by their shorter faces.')"
+          },
+          {
             "tag": "not_for_small_children",
             "source_ids": [
               "S568"
@@ -55781,16 +55791,6 @@
               "bullmastiff.lifespan.pdsa"
             ],
             "quote": "S567 'Lifespan: Under 10 years'"
-          },
-          {
-            "tag": "short_muzzle_breathing",
-            "source_ids": [
-              "S568"
-            ],
-            "refs": [
-              "bullmastiff.health.brachycephaly_boas"
-            ],
-            "quote": "S568 'Brachycephalic obstructive airway syndrome (BOAS) – this can cause severe breathing problems' (… 'caused by their shorter faces.')"
           },
           {
             "tag": "drools",

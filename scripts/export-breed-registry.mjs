@@ -455,6 +455,7 @@ const SPECIES = [
       { id: 'staffordshire_bull_terrier', synonyms: { en: ['Staffie', 'Staffy', 'Stafford', 'SBT'], sl: ['stafordsirski bulterier', 'staffordshirski bulterier', 'staffie'] } },
       { id: 'airedale_terrier', synonyms: { en: ['Airedale', 'King of Terriers', 'Waterside Terrier', 'Bingley Terrier'], sl: ['airedalski terier', 'airedale terier', 'erdelterier'] } },
       { id: 'russell_terrier', synonyms: { en: ['Russell Terrier', 'Jack Russell', 'JRT'], sl: ['jack russell', 'jack rasel terier', 'džek rasel'] } },
+      { id: 'bullmastiff', synonyms: { en: ['Bull Mastiff', "Gamekeeper's Night Dog"], sl: ['bulmastif', 'bul mastif'] } },
     ],
   },
   {
@@ -1944,6 +1945,28 @@ const DOG_FACTS = {
       ['periodontal_disease', 'health.periodontal_disease'],
     ],
   },
+  // M5-R10-71. Height / weight = FCI 157 by sex (S566), lifespan = McMillan 2024 median 10.2 y via the Dogs Trust table
+  // (S123) + the RKC band 'Under 10 years' (S567), exercise = RKC 'More than 2 hours per day' (S567), coat / grooming = RKC
+  // key facts (S567). FCI origin Great Britain (GB). Not exported: adult_weight.salt_category, lifespan.pdsa / petmd /
+  // senior_from, suitability.rkc_shedding (RKC 'Sheds: Yes' conflicts with PDSA 'they don't shed much'), health.breed_watch
+  // (Category 2, no point returned), health.skin (research only).
+  bullmastiff: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'less_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: [],
+    food_motivation: null,
+    health: [
+      ['shorter_face_boas', 'health.brachycephaly_boas'],
+      ['bloat_gdv', 'health.gdv'],
+      ['hip_elbow_dysplasia', 'health.hip_elbow_dysplasia'],
+      ['eyelids_turned', 'health.eyelids'],
+      ['certain_cancers', 'health.cancer'],
+    ],
+  },
 
 };
 
@@ -1985,6 +2008,7 @@ export const DOG_CARE_TASKS = {
   saint_bernard: [['ear_cleaning', 1, 14, 'proposed_game_parameters.saint_bernard.ear_care']],
   airedale_terrier: [['ear_cleaning', 1, 7, 'proposed_game_parameters.airedale_terrier.ear_care'], ['groomer_visit', 1, 84, 'proposed_game_parameters.airedale_terrier.professional_grooming']],
   russell_terrier: [['tooth_brushing', 3, 7, 'proposed_game_parameters.russell_terrier.tooth_brushing']],
+  bullmastiff: [['fold_cleaning', 7, 7, 'proposed_game_parameters.bullmastiff.face_fold_cleaning']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -2525,6 +2549,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.russell_terrier.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.russell_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.russell_terrier.exercise_minutes_senior',
+  },
+  bullmastiff: {
+    adult_minutes: ['proposed_game_parameters.bullmastiff.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.bullmastiff.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.bullmastiff.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.bullmastiff.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.bullmastiff.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.bullmastiff.exercise_minutes_senior',
   },
 
 };
