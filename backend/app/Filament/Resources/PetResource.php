@@ -400,6 +400,9 @@ class PetResource extends Resource
     {
         return [
             RelationManagers\MediaRelationManager::class,
+            // M6-W01 »Želje« (read only).
+            RelationManagers\WishesRelationManager::class,
+            RelationManagers\ItemsRelationManager::class,
         ];
     }
 

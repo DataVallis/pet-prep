@@ -47,6 +47,8 @@ class GameDataResetService
         'migrations',
         // M2-01d certificate number counters: numbers are never reused (like sequences).
         'challenge_certificate_numbers',
+        // M6-W01: the »Želje« catalogue (seeded by its migration — reference data).
+        'shop_items',
         'breed_configs',
         'breed_stage_params',
         'breed_stage_param_changes',
@@ -89,6 +91,11 @@ class GameDataResetService
         'device_push_tokens',
         // payments
         'challenge_credits',
+        // M6-W01 / W02 »Želje« (treats → items → credits → purchase_events)
+        'pet_treat_events',
+        'pet_items',
+        'wish_credits',
+        'pet_wishes',
         'purchase_events',
         // AI spend + AI Lab (ledger → lab results → lab runs)
         'ai_spend_ledger',

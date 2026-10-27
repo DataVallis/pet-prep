@@ -181,6 +181,21 @@ function rgSeed(): array
         'family_id' => $family->id, 'purchase_event_id' => $purchaseId, 'product_id' => 'petprep_challenge_12w', 'purchased_at' => $now,
         'pet_id' => $pet->id, 'assigned_at' => $now, 'assigned_via' => 'parent',
     ]);
+    // M6-W01 / W02 »Želje«: a wish, a wish credit, an item and a treat go with the game data.
+    rgInsert('pet_wishes', ['pet_id' => $pet->id, 'child_user_id' => $child->id, 'item_key' => 'bed', 'status' => 'open']);
+    $wishPurchaseId = rgInsert('purchase_events', [
+        'event_id' => 'evt-'.Str::random(8), 'type' => 'NON_RENEWING_PURCHASE', 'payload' => json_encode(['x' => 1]),
+        'family_id' => $family->id,
+    ]);
+    $wishCreditId = rgInsert('wish_credits', [
+        'family_id' => $family->id, 'purchase_event_id' => $wishPurchaseId, 'product_id' => 'petprep_wish_treats_10', 'item_key' => 'treats',
+        'purchased_at' => $now, 'pet_id' => $pet->id, 'assigned_at' => $now, 'assigned_via' => 'parent',
+    ]);
+    $itemId = rgInsert('pet_items', [
+        'pet_id' => $pet->id, 'item_key' => 'treats', 'kind' => 'consumable', 'variant' => 'dog_treats', 'wish_credit_id' => $wishCreditId,
+        'quantity_total' => 10, 'quantity_left' => 9, 'acquired_at' => $now,
+    ]);
+    rgInsert('pet_treat_events', ['pet_id' => $pet->id, 'child_user_id' => $child->id, 'pet_item_id' => $itemId, 'given_at' => $now, 'local_date' => $today]);
     // M2-01d: a finished challenge (certificate row) goes with the game data.
     rgInsert('challenge_certificates', [
         'family_id' => $family->id, 'pet_id' => $pet->id, 'child_user_id' => $child->id, 'number' => 'PP-2026-000001',

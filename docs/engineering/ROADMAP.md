@@ -304,8 +304,8 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 
 ## M6-W — »Želje« (David, 26. 10. 2026; spec `docs/product/SHOP_SPEC.md`)
 
-- [ ] M6-W01 Strežnik: katalog stvari (`shop_items`), prošnje (`pet_wishes`: največ 3 odprte na otroka, ponovna prošnja po 7 dneh), lastništvo (`pet_items`, ostanek priboljškov), API otrok / starš, push staršu (brez imena otroka)
-- [ ] M6-W02 Nakup: izdelki v App Store / Google Play prek RevenueCat (consumable, 5,99 € postelja / skledi / igrača, 2,99 € priboljški 10×, 15,99 € paket »Dobrodošlica«), webhook → kredit → starš dodeli ljubljenčku; vračila ni (S11) — **QA: plačila**
+- [x] M6-W01 Strežnik (✅ 27. 10. 2026, PR `feat/M6-W01-wishes-backend`; pogodba `docs/engineering/WISHES_API.md`): katalog stvari (`shop_items`), prošnje (`pet_wishes`: največ 3 odprte na otroka, ponovna prošnja po 7 dneh), lastništvo (`pet_items`, ostanek priboljškov), API otrok / starš, push staršu (brez imena otroka)
+- [ ] M6-W02 *(delno 27. 10. 2026: strežnik narejen — `wish_credits`, webhook nakup / vračilo / prenos, `POST /api/parent/pets/{pet}/items/redeem`; **čaka:** izdelki v trgovinah + RevenueCat (David, HANDOFF §1b.9))* Nakup: izdelki v App Store / Google Play prek RevenueCat (consumable, 5,99 € postelja / skledi / igrača, 2,99 € priboljški 10×, 15,99 € paket »Dobrodošlica«), webhook → kredit → starš dodeli ljubljenčku; vračila ni (S11) — **QA: plačila**
 - [ ] M6-W03 AI vsebine stvari: slika + video na videz (pasma + barva + obdobje, skupno), novo obdobje → nova vsebina, AiSpendGuard, »na poti« do priprave; mešanček samo vsebino stvari (S8)
 - [x] M6-W04 Aplikacija – otrok: »Želje« (katalog brez cen, »Prosi starša«, »Že ima«, »Mogoče kdaj drugič«), postelja v spanju, skledi pri hranjenju, igrača pri igri, gumb »Priboljšek« — *aplikacija: katalog, prošnje, priboljšek (PR #416, 27. 10. 2026); postelja / skledi / igrača v medijih = W03*
 - [x] M6-W05 Aplikacija – starš: seznam »Želje (N)« na nadzorni plošči, Kupi / Ne zdaj, nakup brez prošnje (presenečenje) — *PR #416, 27. 10. 2026; nakup deluje, ko bodo izdelki v trgovinah (W02)*

@@ -25,6 +25,7 @@ use App\Http\Controllers\PetMediaController;
 use App\Http\Controllers\PetNameController;
 use App\Http\Controllers\QuietHoursController;
 use App\Http\Controllers\RevenueCatWebhookController;
+use App\Http\Controllers\WishController;
 use App\Http\Middleware\LimitRequestBody;
 use App\Http\Middleware\VerifyRevenueCatWebhook;
 use Illuminate\Support\Facades\Route;
@@ -190,6 +191,11 @@ Route::middleware(['auth:sanctum', 'ability:parent', 'throttle:api'])
         Route::get('billing', [BillingController::class, 'index']);
         Route::post('pets/{pet}/challenge/activate', [BillingController::class, 'activate']);
 
+        // M6-W01 / W02 »Želje«: the family's wish list, »Ne zdaj«, and putting a bought item on a pet.
+        Route::get('wishes', [WishController::class, 'parentIndex']);
+        Route::post('wishes/{wish}/decline', [WishController::class, 'decline']);
+        Route::post('pets/{pet}/items/redeem', [WishController::class, 'redeem']);
+
         // M5-R18 / R20: the parent confirms a groomer visit / bath reminder (never scored).
         Route::post('pets/{pet}/care-reminders', [CareReminderController::class, 'confirm']);
 
@@ -246,7 +252,13 @@ Route::middleware(['auth:sanctum', 'ability:child', 'throttle:api'])
         // M5-T11 »Prikaz: Video / Slika« — the child's own display preference.
         Route::patch('settings', [ChildSettingsController::class, 'update']);
 
+        // M6-W01 »Želje«: the child's wish catalogue for their pet.
+        Route::get('wishes', [WishController::class, 'childIndex']);
+
         Route::middleware('throttle:child-actions')->group(function () {
+            // M6-W01 »Želje«: wish for an item; give a treat (looks only, max 2 / day).
+            Route::post('wishes', [WishController::class, 'store']);
+            Route::post('pet/treat', [WishController::class, 'treat']);
             Route::post('pet/feed', [ChildPetController::class, 'feed']);
             Route::post('pet/water', [ChildPetController::class, 'water']);
             Route::post('pet/clean', [ChildPetController::class, 'clean']);

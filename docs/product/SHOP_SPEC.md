@@ -1,6 +1,6 @@
 # PetPrep — Trgovinica za ljubljenčka (osnutek, *načrt*)
 
-> Status: **specifikacija potrjena (David 26. 10. 2026), nič še ni zgrajeno.** Ideja in odločitve: David 26. 10. 2026. Nadgrajuje vrstico »Priboljški, veterinar, igrače (IAP)« (FEATURES ⏸) in BUSINESS_MODEL §3 (IAP).
+> Status: **specifikacija potrjena (David 26. 10. 2026); strežnik zgrajen 27. 10. 2026 (M6-W01 + strežniški del W02, API `docs/engineering/WISHES_API.md`), aplikacija 27. 10. 2026 (M6-W04 + W05); AI vsebine stvari (W03) še ne, nakup deluje, ko bodo izdelki v trgovinah (W02).** Dopolnitve 27. 10.: dve igrači na vrsto, priboljški največ 2 na dan, nakup iz želje gre ljubljenčku želje, brez stikala (DECISIONS). Ideja in odločitve: David 26. 10. 2026. Nadgrajuje vrstico »Priboljški, veterinar, igrače (IAP)« (FEATURES ⏸) in BUSINESS_MODEL §3 (IAP).
 
 ## 1. Ideja
 
@@ -28,7 +28,7 @@ Otrok v aplikaciji prosi za stvari za svojega ljubljenčka, na primer posteljo, 
 ## 3. Potek
 
 1. **Otrok:** na zaslonu ljubljenčka gumb »Želje« odpre katalog s slikami in imeni, brez cen. Otrok tapne »Prosi starša«. Največ **3 odprte prošnje** naenkrat (S9); že kupljene trajne stvari so označene »Že ima«.
-2. **Starš:** dobi push »Otrok si želi posteljo za Suki« (brez imena otroka v obvestilu, kot vsa obvestila) in na nadzorni plošči vrstico »Želje (2)«. Seznam pokaže stvar, ceno iz trgovine, kdo je prosil in kdaj.
+2. **Starš:** dobi push »Vaš otrok si želi posteljo.« z imenom ljubljenčka v naslovu (brez imen v besedilu, kot vsa obvestila; največ 1 na otroka na 10 minut) in na nadzorni plošči vrstico »Želje (2)«. Seznam pokaže stvar, ceno iz trgovine, kdo je prosil in kdaj.
 3. Starš pri vsaki prošnji izbere **Kupi** (nakup v trgovini) ali **Ne zdaj** (otrok vidi prijazno »Mogoče kdaj drugič«, brez razlage o ceni). Kupi lahko tudi brez prošnje, kot presenečenje.
 4. **Po nakupu:** strežnik zapiše stvar k ljubljenčku in sproži generiranje vsebine (§5). Dokler ni pripravljena, otrok vidi »Postelja je na poti …«, nato pa obvestilo »Suki ima novo posteljo!«.
 

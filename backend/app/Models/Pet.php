@@ -21,6 +21,7 @@ use App\Services\LifeStageService;
 use App\Services\PairingService;
 use App\Services\PetStatusPeriodService;
 use App\Services\PlayService;
+use App\Services\WishService;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Builder;
@@ -141,6 +142,8 @@ class Pet extends Model
             if (($pet->wasChanged('is_game_over') && $pet->is_game_over)
                 || ($pet->wasChanged('is_active') && ! $pet->is_active)) {
                 app(PlayService::class)->skipPending($pet);
+                // M6-W01: open wishes of a pet that ended are cancelled (no refund — S11).
+                WishService::cancelOpenOf($pet);
             }
             // A payment lock / payment just opened or closed a period (M3-11b).
             $pet->forgetProgramPauses();
@@ -594,6 +597,18 @@ class Pet extends Model
     public function contract(): HasOne
     {
         return $this->hasOne(PetContract::class)->oldestOfMany('signed_at');
+    }
+
+    /** M6-W01 »Želje«: the children's wishes for this pet. */
+    public function wishes(): HasMany
+    {
+        return $this->hasMany(PetWish::class);
+    }
+
+    /** M6-W01: items the pet owns (revoked rows included). */
+    public function items(): HasMany
+    {
+        return $this->hasMany(PetItem::class);
     }
 
     /**

@@ -192,6 +192,8 @@ final class PushCopy
             PushType::PetBirthday => $line('pet_birthday.'.$audience),
             // M5-R18 / R20: the parent's groomer / bath reminder (metric `<task>:<period>`); formal, no name.
             PushType::CareReminder => $line('care_reminder.'.(str_starts_with((string) $metric, 'bath') ? 'bath' : 'groomer_visit')),
+            // M6-W01: parents only, formal; `variant` = the item variant (dog_bed …) → its accusative form.
+            PushType::WishCreated => $line('wish_created.body', ['item' => $line('wish_items.'.(is_string($variant) && Lang::has("push.wish_items.{$variant}", $locale, false) ? $variant : 'other'))]),
         };
     }
 
