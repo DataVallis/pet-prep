@@ -137,8 +137,9 @@ describe('breed, config and database', function () {
 
         $refused = fn (array $values) => fn () => DB::transaction(fn () => DB::table('pets')->where('id', $pet->id)->update($values));
         expect($refused(['species' => 'cat']))->toThrow(QueryException::class)
-            // The Bullmastiff, the Neapolitan and the Tibetan Mastiff are different breeds and no breed keys.
-            ->and($refused(['breed_type' => 'bullmastiff']))->toThrow(QueryException::class)
+            // The Neapolitan and the Tibetan Mastiff are different breeds and no breed keys (the Bullmastiff is its own
+            // breed key since M5-R10-71).
+            ->and($refused(['breed_type' => 'neapolitan_mastiff']))->toThrow(QueryException::class)
             ->and($refused(['breed_type' => 'tibetan_mastiff']))->toThrow(QueryException::class);
 
         $migration = require database_path('migrations/2026_12_23_120000_add_mastiff_breed.php');

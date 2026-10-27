@@ -36677,6 +36677,578 @@
       }
     }
   },
+  "bullmastiff": {
+    "_note": "Added 2026-10-27 (M5-R10-71, unattended run — appended after the Russell Terrier: AKC 2024 No. 67 'Bullmastiffs', S174 full-list table fetched 2026-10-27). Quotes as returned by the web-fetch tool on 2026-10-27 (125-character limit; longer sentences are paraphrased in notes and marked as such). Sources S565–S569 (reused S8, S10, S11, S14, S35, S45, S92, S123, S174). No health percentages anywhere. Identity from the FCI nomenclature (S565, No. 157, Great Britain); appearance, colours, height and weight from FCI-Standard N° 157 (S566). RKC Breeds A–Z page (S567) reached (royalkennelclub.com address with the trailing slash): key facts, Breed Watch Category 2 (no individual point returned) and the health tests. PDSA (S568), PetMD (S569). Lifespan: McMillan 2024 via the Dogs Trust breed table (S123, row 'Bullmastiff 10.2') — runbook first choice. Names: RKC / FCI / AKC 'Bullmastiff'; Slovenian »bulmastif« — no KZS page read, open for David.",
+    "identity": {
+      "value": "FCI No. 157, Group 2 Section 2.1 (Molossoid breeds, Mastiff type), Great Britain",
+      "unit": "—",
+      "source_id": "S565",
+      "quote": "BULLMASTIFF",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S565, as returned): name 'BULLMASTIFF', number 157, group 'n°2 - Pinscher and Schnauzer - Molossoid and Swiss Mountain and Cattledogs', section 'Molossian type' (the Mastiff type subsection, as the Mastiff FCI 264), country of origin 'GREAT BRITAIN', not subject to a working trial, definitive acceptance 4/23/1955. FCI-Standard N° 157 (S566): 'ORIGIN: Great Britain.', utilization 'Watchdog.' Great Britain is already in FCI_ORIGINS (GB). RKC (S567): an old English guard breed of the 19th century, from the Bulldog and the Old English Mastiff (paraphrase)."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S567",
+      "quote": "Size: Large",
+      "confidence": "high",
+      "notes": "RKC breed page key fact (S567); PDSA (S568) 'Size | Large'. FCI 41–59 kg (S566) = 90–130 lb → between the 'Large' and 'Giant' classes of S10 for growth."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            64,
+            69
+          ],
+          "female": [
+            61,
+            66
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S566",
+        "quote": "Height at the withers: Males: 64 - 69 cms.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 157 (S566); 'Females: 61 - 66 cms.' PDSA (S568) 'Average height | 61-69 cm'; PetMD (S569) 24–27 inches (61–69 cm) — the same range."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            50,
+            59
+          ],
+          "female": [
+            41,
+            50
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S566",
+        "quote": "Weight: Males: 50 - 59 kgs.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 157 (S566); 'Females: 41 - 50 kgs.' → the game range (adult_weight_kg) by sex.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                41,
+                59
+              ],
+              "female": [
+                41,
+                59
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S568",
+            "quote": "Average weight | 41-59 kg",
+            "confidence": "high",
+            "notes": "PDSA key facts (S568), both sexes."
+          },
+          {
+            "value": {
+              "male": [
+                45.4,
+                59
+              ],
+              "female": [
+                45.4,
+                59
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S569",
+            "quote": "these dogs weigh 100–130 pounds and have a shoulder height of 24–27 inches, depending on their gender.",
+            "confidence": "medium",
+            "notes": "PetMD (S569, fragment as returned): 100–130 lb = 45.4–59 kg, both sexes."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "VI (>40 kg, no curve)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 41–59 kg = the band '>40 (no curve)'. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "18–24 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Giant (over 100 pounds) | 18–24 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI males 50–59 kg (≈ 110–130 lb) are 'Giant (over 100 pounds)'; females 41–50 kg (≈ 90–110 lb) straddle 'Large' and 'Giant' — the same split as the Rottweiler and the Cane Corso, so the same 18–24 months. The game is unaffected (the puppy cap of 120 min is reached at 12 months either way)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Bullmastiff growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 10.2,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": "Bullmastiff 10.2 9.9 - 10.5 2188 1169",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024 (Sci Rep) data as tabled by Dogs Trust (S123, header 'Breed Median Life Expectancy (Years) Lower and Upper 95% CI* Total Number Individuals (Alive and Deceased) Number Deceased Individuals', as returned): median 10.2 y (95 % CI 9.9–10.5), 2,188 dogs, 1,169 deceased. Runbook first choice (McMillan 2024). The published paper (S376) names the breed only as a tip of its phylogeny figure — no median in its text."
+      },
+      "rkc": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S567",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S567). PDSA (S568) 'Average lifespan | Under 10 years' agrees; PetMD (S569) 'The typical Bullmastiff lifespan is 7–9 years, as large dogs don't live as long as smaller breeds.' Basis of the consider tag shorter_lifespan (no number in the chip). No lower bound → not used for the senior boundary (the McMillan median is)."
+      },
+      "pdsa": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S568",
+        "quote": "Average lifespan | Under 10 years",
+        "confidence": "high",
+        "notes": "PDSA key fact (S568). Same band as the RKC."
+      },
+      "petmd": {
+        "value": "7–9",
+        "unit": "years",
+        "source_id": "S569",
+        "quote": "The typical Bullmastiff lifespan is 7–9 years, as large dogs don't live as long as smaller breeds.",
+        "confidence": "medium",
+        "notes": "PetMD (S569, US). Alternative only (0.75 × 7 y lower bound = 63 months)."
+      },
+      "senior_from": {
+        "value": 7.65,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 10.2 y (McMillan 2024 via S123) → 0.75 × 10.2 = 7.65 y = 91.8 → 92 months. Not chosen: 63 (PetMD lower bound 7 y, S569); 84 (Dogs Trust > 7 y, S14). The RKC / PDSA 'Under 10 years' has no lower bound.",
+        "derived_from": [
+          "S11",
+          "S123"
+        ],
+        "months": 92,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S567",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S567), runbook first choice → 120 min. PDSA (S568): 'Your Bullmastiff will need a minimum of two hours exercise every day.' (120 as well); PDSA key fact 'Minimum exercise (per day) | 2 hours'. PetMD (S569): 'Bullmastiffs need daily exercise, including long walks and playing within a fenced-in yard.' (no number).",
+        "alternatives": [
+          {
+            "value": 120,
+            "unit": "minutes/day",
+            "source_id": "S568",
+            "quote": "Your Bullmastiff will need a minimum of two hours exercise every day.",
+            "confidence": "high",
+            "notes": "PDSA (S568) 'a minimum of two hours' → 120."
+          }
+        ]
+      },
+      "split_and_hard_exercise": {
+        "value": "split into a few walks with off-lead time in a secure area; heavy-set — not too much hard exercise, not a running partner",
+        "unit": "—",
+        "source_id": "S568",
+        "quote": "As a heavy-set breed, you’ll also need to be careful that you don’t do too much hard exercise",
+        "confidence": "high",
+        "notes": "PDSA (S568); also 'Ideally, this will be split into a few walks with off-lead time in a secure area.' and 'a Bullmastiff isn’t a great choice of running partner!'; puppies must not be over-exercised (paraphrase). Background — the game counts steps, not intensity."
+      },
+      "after_meals": {
+        "value": "avoid exercise from one hour before to one hour after a meal (GDV / bloat)",
+        "unit": "—",
+        "source_id": "S569",
+        "quote": "Avoid exercise from one hour before to one hour after a meal.",
+        "confidence": "high",
+        "notes": "PetMD (S569), GDV prevention ('GDV is an extremely painful condition that can be fatal if emergency surgery is not performed immediately.'; 'Feed your dog two or three meals a day instead of one.'). PDSA (S568): 'Remember to leave at a gap after eating and before exercising.' (as returned) and 'Larger breeds like Bullmastiffs are at risk of GDV (bloat) so leaving this gap is really important.' → proposed_game_parameters.bullmastiff.meal_exercise_gap (built, M5-R16 — the game warns after a meal; the hour before a meal is not modelled)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "powerful, enduring, active and reliable; high-spirited, alert and faithful",
+        "unit": "—",
+        "source_id": "S566",
+        "quote": "Powerful; enduring, active and reliable. High-spirited, alert and faithful.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 157 (S566), behaviour / temperament; utilization 'Watchdog.' PetMD (S569): 'Bullmastiffs are docile and affectionate with family members, but they might take time to warm up to new people.'"
+      },
+      "family": {
+        "value": "very loyal to the family; better suited to adult-only households or families with older children",
+        "unit": "—",
+        "source_id": "S568",
+        "quote": "They are better suited to adult-only households or families with older children who understand how to behave around dogs.",
+        "confidence": "high",
+        "notes": "PDSA (S568); also 'While Bullmastiffs are very loyal to their families' and 'their large size and powerful build isn’t ideal for families with younger children.' (as returned, two fragments). PetMD (S569): 'Bullmastiffs have a kind temperament around family members, including children.' — conflicts with PDSA on young children → no children / family_pet chip; not_for_small_children from PDSA."
+      },
+      "children": {
+        "value": "large size and powerful build — not ideal for families with younger children",
+        "unit": "—",
+        "source_id": "S568",
+        "quote": "their large size and powerful build isn’t ideal for families with younger children.",
+        "confidence": "high",
+        "notes": "PDSA (S568, fragment as returned); supervision around children and vulnerable adults (paraphrase). Basis of not_for_small_children (Mastiff / Cane Corso precedent) — never children / small_children."
+      },
+      "time_alone": {
+        "value": "ideally someone around all the time to keep them company",
+        "unit": "—",
+        "source_id": "S568",
+        "quote": "Ideally, they need to be in a household where there is someone around all the time to keep them company.",
+        "confidence": "high",
+        "notes": "PDSA (S568); can suffer separation anxiety (paraphrase); the general rule 'You should never leave any dog alone for more than four hours'. A breed-specific company statement → needs_company (Boxer precedent)."
+      },
+      "other_pets": {
+        "value": "very strong prey drive — not recommended with smaller pets",
+        "unit": "—",
+        "source_id": "S568",
+        "quote": "Bullmastiffs have very strong prey drives, so we wouldn’t recommend having them with smaller pets.",
+        "confidence": "high",
+        "notes": "PDSA (S568); never leave them alone together even with a pet they grew up with (paraphrase). PetMD (S569): 'Bullmastiffs can also get along with other pets, but they must be socialized with them starting at an early age.' Basis of chases_small_pets (a named high / strong prey drive); no other_pets chip (conflict)."
+      },
+      "socialisation": {
+        "value": "socialise from a young age with lots of different people and experiences — super important",
+        "unit": "—",
+        "source_id": "S568",
+        "quote": "Socialising your Bullmastiff from a young age with lots of different people and experiences is super important.",
+        "confidence": "high",
+        "notes": "PDSA (S568); they can be suspicious of new people and animals (paraphrase). A need (runbook M5-R17) → proposed_game_parameters.bullmastiff.socialisation (DOG_SOCIALISATION row, PDSA quote)."
+      },
+      "experienced_owner": {
+        "value": "previous experience with the breed is a huge advantage; first-time owners may want training classes",
+        "unit": "—",
+        "source_id": "S568",
+        "quote": "previous experience with the breed is a huge advantage for owners.",
+        "confidence": "high",
+        "notes": "PDSA (S568, fragment as returned); 'If you’re a first time owner or don’t have much experience of the breed, you may want to go to training classes'; headstrong — start positive, reward-based training early (paraphrase). Basis of experienced_owner ('powerful dog — needs an experienced owner'; Rottweiler / Cane Corso precedent)."
+      },
+      "drooling": {
+        "value": "huge droolers",
+        "unit": "—",
+        "source_id": "S568",
+        "quote": "Be warned – Bullmastiffs are huge droolers!",
+        "confidence": "high",
+        "notes": "PDSA (S568); 'While they don’t shed much, they definitely make up for it in dribble.' PetMD (S569): 'Their jowls may need a daily wipe-down to remove excess drool or bits of dog food.' Basis of drools."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No explicit chewing statement in the breed's sources → no chews_when_bored."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific food-motivation / weight statement → no food_motivated_weight."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 2 (S567) — no individual point of concern returned. PDSA (S568) names brachycephalic obstructive airway syndrome 'caused by their shorter faces' → welfare chip short_muzzle_breathing (Boxer / Shih Tzu precedent) and the BVA marketing rule (S92). Conditions from PDSA (S568) and PetMD (S569).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 2",
+        "unit": "—",
+        "source_id": "S567",
+        "quote": "Category 2",
+        "confidence": "high",
+        "notes": "RKC breed page (S567): Breed Watch 'Category 2' with only the general wording ('Particular points of concern for individual breeds may include features not specifically highlighted in the breed standard including current issues.') — the breed's own points were not returned. Background only."
+      },
+      "brachycephaly_boas": {
+        "value": "brachycephalic obstructive airway syndrome (BOAS) — severe breathing problems caused by a shorter face",
+        "unit": "—",
+        "source_id": "S568",
+        "quote": "Brachycephalic obstructive airway syndrome (BOAS) – this can cause severe breathing problems",
+        "confidence": "high",
+        "notes": "PDSA (S568, the line as returned); the rest of the line: 'and is caused by their shorter faces.' Basis of short_muzzle_breathing (not brachycephalic_breathing — no source names a flat face or heat problems; PDSA has no heat advice → no DOG_NO_WALK_IN_HEAT row). Register health key shorter_face_boas."
+      },
+      "gdv": {
+        "value": "gastric dilatation volvulus ('bloat') — urgent vet care",
+        "unit": "—",
+        "source_id": "S568",
+        "quote": "Gastric Dilatation Volvulus (GDV) – where a dog’s tummy bloats and twists around on itself, which can be fatal.",
+        "confidence": "high",
+        "notes": "PDSA (S568); PetMD (S569) 'GDV is an extremely painful condition that can be fatal if emergency surgery is not performed immediately.' → meal_exercise_gap (M5-R16). Register health key bloat_gdv."
+      },
+      "hip_elbow_dysplasia": {
+        "value": "hip and elbow dysplasia",
+        "unit": "—",
+        "source_id": "S568",
+        "quote": "Hip dysplasia – where hip joint that doesn’t fit together perfectly, which will eventually lead to arthritis.",
+        "confidence": "high",
+        "notes": "PDSA (S568); 'Elbow dysplasia – where the elbow joint that doesn’t fit together perfectly, which will eventually lead to arthritis.' RKC minimum hip and elbow schemes (S567). No hips_hind_legs chip: no Breed Watch hind-leg point returned (open for David). Register health key hip_elbow_dysplasia."
+      },
+      "eyelids": {
+        "value": "eyelid problems — entropion and ectropion",
+        "unit": "—",
+        "source_id": "S568",
+        "quote": "Eyelid/eye problems – including entropion and ectropion where the eyelid rolls inwards or outwards, irritating the eye.",
+        "confidence": "high",
+        "notes": "PDSA (S568); also 'PPV (Persistent pupillary membrane) – a condition where additional skin is left across eye that may affect sight.' RKC minimum eye scheme (S567). No eyelid_problems chip: no Breed Watch eyelid point returned (open for David). Register health key eyelids_turned."
+      },
+      "skin": {
+        "value": "skin infections and conditions",
+        "unit": "—",
+        "source_id": "S568",
+        "quote": "A range of skin infections and conditions",
+        "confidence": "medium",
+        "notes": "PDSA (S568). Research only (not exported)."
+      },
+      "cancer": {
+        "value": "certain cancers",
+        "unit": "—",
+        "source_id": "S568",
+        "quote": "Certain cancers.",
+        "confidence": "medium",
+        "notes": "PDSA (S568). Register health key certain_cancers."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 69,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Bullmastiff",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-27): rank 69 'Bullmastiff', tier 'Fair Working/Obedience Intelligence' (ranks 55–69). Coren's own top / bottom-10 article (S34) does not list the breed."
+      },
+      "coren_tier": {
+        "value": "Fair",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier 'Fair Working/Obedience Intelligence' (ranks 55–69)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.bullmastiff.learning_multiplier (0.7, runbook rule: Fair tier, rank 69).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "powerful, symmetrical build showing great strength, but not cumbersome; sound and active",
+        "unit": "—",
+        "source_id": "S566",
+        "quote": "Powerful build, symmetrical, showing great strength, but not cumbersome; sound and active.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 157 (S566), general appearance."
+      },
+      "colours": {
+        "value": [
+          "fawn",
+          "red",
+          "brindle"
+        ],
+        "unit": "list",
+        "source_id": "S566",
+        "quote": "Any shade of brindle, fawn or red; colour to be pure and clear.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 157 (S566); 'A slight white marking on chest permissible.' 'Other white markings undesirable.' 'Black muzzle essential, toning off towards eyes, with dark markings around eyes contributing to expression.' → fawn, red or brindle, always with a black muzzle (mask). Never white patches, black, blue, merle or liver."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Fawn with a black mask first with the highest weight (the portrait default), then red, then brindle."
+      },
+      "coat": {
+        "value": "short and hard, weather-resistant, lying flat to the body",
+        "unit": "—",
+        "source_id": "S566",
+        "quote": "Short and hard, weather-resistant, lying flat to body.",
+        "confidence": "high",
+        "notes": "FCI (S566); 'Long, silky or woolly coats highly undesirable.' RKC key fact 'Coat length: Short' (S567)."
+      },
+      "muzzle": {
+        "value": "short, broad, blunt and square muzzle, black; nose broad with widely spreading nostrils",
+        "unit": "—",
+        "source_id": "S566",
+        "quote": "Nose broad with widely spreading nostrils; flat neither pointed nor turned up in profile.",
+        "confidence": "high",
+        "notes": "FCI (S566); muzzle 'blunt an cut off square, forming right angle with upper line of face' (as returned). Welfare (PDSA S568 BOAS from a shorter face): the game shows a moderate muzzle with open nostrils — never an exaggerated short face or heavy wrinkles."
+      },
+      "eyes": {
+        "value": "dark or hazel, medium size, set apart the width of the muzzle with a furrow between",
+        "unit": "—",
+        "source_id": "S566",
+        "quote": "Dark or hazel, of medium size, set apart the width of muzzle with furrow between.",
+        "confidence": "high",
+        "notes": "FCI (S566); 'Light or yellow eyes highly undesirable.' The game shows tight, normal eyelids."
+      },
+      "ears": {
+        "value": "V-shaped, folded back, set on wide and high",
+        "unit": "—",
+        "source_id": "S566",
+        "quote": "V-shaped, folded back, set on wide and high, level of occiput giving square appearance to skull.",
+        "confidence": "high",
+        "notes": "FCI (S566); 'Rose ears highly undesirable.'"
+      },
+      "tail": {
+        "value": "set high, strong at the root and tapering, reaching to the hocks, carried straight or curved",
+        "unit": "—",
+        "source_id": "S566",
+        "quote": "Set high, strong at root and tapering, reaching to hocks, carried straight or curved, but not hound fashion.",
+        "confidence": "high",
+        "notes": "FCI (S566); natural tail."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S567), PDSA (S568), PetMD (S569). RKC key facts reached on 2026-10-27.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S567",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": "RKC key fact (S567)."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S567",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S567) → 120 min. Basis of active_family / long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S567",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "RKC key fact (S567). Basis of large_home (with the large garden)."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S567",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S567). Basis of large_home."
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S567",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S567) → brushing 1× a week (M5-R13 rule »Once a week« → 1). PDSA (S568) weekly brush agrees; PetMD (S569) 'monthly brushing' → alternative. Not frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S567",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": "RKC key fact (S567)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S567",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "RKC key fact (S567). PDSA (S568): 'While they do shed (like any dog) it’s not known to be excessive.' and 'While they don’t shed much, they definitely make up for it in dribble.' → conflicting sources (sheds yes vs not much) → neither sheds nor low_shedding (runbook rule)."
+      },
+      "rkc_lifespan": {
+        "value": "Under 10 years",
+        "unit": "—",
+        "source_id": "S567",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S567). Basis of shorter_lifespan."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S567",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S567). Background only."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S567",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "RKC key fact (S567). Background only (no tag)."
+      },
+      "pdsa_exercise": {
+        "value": "a minimum of two hours exercise every day",
+        "unit": "—",
+        "source_id": "S568",
+        "quote": "Your Bullmastiff will need a minimum of two hours exercise every day.",
+        "confidence": "high",
+        "notes": "PDSA (S568). Agrees with the RKC."
+      },
+      "pdsa_children": {
+        "value": "better suited to adult-only households or families with older children",
+        "unit": "—",
+        "source_id": "S568",
+        "quote": "They are better suited to adult-only households or families with older children who understand how to behave around dogs.",
+        "confidence": "high",
+        "notes": "PDSA (S568). Basis of not_for_small_children (with behaviour.children)."
+      },
+      "pdsa_grooming": {
+        "value": "a weekly brush",
+        "unit": "—",
+        "source_id": "S568",
+        "quote": "A weekly brush should be more than enough to keep on top of dead hairs.",
+        "confidence": "high",
+        "notes": "PDSA (S568). Agrees with RKC 'Once a week'. 'You shouldn’t need to visit a groomer with your Bullmastiff unless they need a bath' (as returned) — no groomer / bath frequency."
+      },
+      "pdsa_face_care": {
+        "value": "keep the face clean and dry — might need daily attention",
+        "unit": "—",
+        "source_id": "S568",
+        "quote": "This might need daily attention to avoid getting any nasty infections.",
+        "confidence": "high",
+        "notes": "PDSA (S568); the sentence before: 'Remember to keep your Bullmastiff’s face clean and dry.' → face / skin-fold cleaning every day (§3 »Breed care tasks«, M5-R14; the source's 'might' is hedged — open for David). PetMD (S569): 'Their jowls may need a daily wipe-down to remove excess drool or bits of dog food.'"
+      },
+      "petmd_grooming": {
+        "value": "monthly brushing; only an occasional bath; frequent nail trims; ears — ask the vet",
+        "unit": "—",
+        "source_id": "S569",
+        "quote": "Aside from monthly brushing to reduce shedding, Bullmastiffs don't need much coat care.",
+        "confidence": "medium",
+        "notes": "PetMD (S569); 'they only need an occasional bath to keep them clean.'; 'a Bullmastiff needs frequent nail trims so the nails don't break off or split.'; 'Ask your vet about how often you need to clean your dog's ears with an ear cleaner'. No number for bath, nails or ears → no task (runbook §3)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -54970,6 +55542,314 @@
         "confidence": "high",
         "notes": "Colours from the FCI standard (S558) — white predominant with black and/or tan markings only. Weights unsourced. Smooth coat for the portrait (broken and rough are also standard). Natural ears and an undocked tail.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): white with tan markings is the portrait default; button / dropped ears and an undocked tail"
+      }
+    },
+    "bullmastiff": {
+      "_note": "Unattended run M5-R10-71 (2026-10-27): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. No new vocabulary key. Built: brushing 1× a week (RKC S567 'Once a week', M5-R13), meal / walk gap 60 min (PetMD S569, M5-R16), puppy socialisation (PDSA S568 quote, M5-R17) and face cleaning every day (PDSA S568 'might need daily attention', M5-R14 — hedged, open for David). No ear / nail / bath / groomer task: no source states a frequency. Not in marketing (BVA S92; BOAS from a shorter face, PDSA S568 — open for David, Boxer precedent).",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S567",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'More than 2 hours per day' (S567). Rule: one number N ('more than N') → N = 120. PDSA (S568) 'a minimum of two hours' agrees.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S567 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S567",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 92
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 92 = round(0.75 × 10.2 y × 12) = round(91.8) (S11 + McMillan 2024 median 10.2 y via the Dogs Trust table S123). Alternatives: 84 (Dogs Trust > 7 y, S14), 63 (PetMD lower bound 7 y, S569).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S123"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84,
+          "senior_petmd_lower_bound": 63
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 92 (0.75 × 10.2 y, McMillan 2024 via S123)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 92
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 92)"
+      },
+      "learning_multiplier": {
+        "value": 0.7,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 69 (S35), tier 'Fair' (55–69) → 0.7. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 69, Fair tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S567",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S567) 'Once a week' → 1 (M5-R13 rule). PDSA (S568) 'A weekly brush should be more than enough …' agrees; PetMD (S569) 'monthly brushing' is an alternative. Matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": "monthly",
+            "source_id": "S569",
+            "notes": "PetMD 'Aside from monthly brushing to reduce shedding' — fewer than the RKC; not chosen."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC S567 »Once a week«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source says an hour; 60 = David's decision)",
+        "source_id": "S569",
+        "quote": "Avoid exercise from one hour before to one hour after a meal.",
+        "confidence": "high",
+        "notes": "PetMD (S569), GDV prevention; bullmastiff.exercise.after_meals; PDSA (S568) 'leave at a gap after eating and before exercising' and GDV (health.gdv). Built in M5-R16: 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score. The hour before a meal is not modelled.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S568",
+        "quote": "Socialising your Bullmastiff from a young age with lots of different people and experiences is super important.",
+        "confidence": "high",
+        "notes": "PDSA (S568); quote from bullmastiff.behaviour.socialisation. Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, PDSA S568)"
+      },
+      "face_fold_cleaning": {
+        "value": "daily",
+        "unit": "face cleaning (sourced need)",
+        "source_id": "S568",
+        "quote": "This might need daily attention to avoid getting any nasty infections.",
+        "confidence": "medium",
+        "notes": "PDSA (S568), bullmastiff.suitability.pdsa_face_care ('Remember to keep your Bullmastiff’s face clean and dry.'); PetMD (S569) jowls 'may need a daily wipe-down'. Built: the child's face / skin-fold cleaning mini-game every day (BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R14). The source's 'might' is hedged — the frequency is stated, so the task is built (Mastiff precedent); open for David whether he wants it daily.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R14): »might need daily attention« → vsak dan (pogostost navedena; omahljiv izraz — odprto za Davida)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-71); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S567",
+              "S568"
+            ],
+            "refs": [
+              "bullmastiff.exercise.adult",
+              "bullmastiff.suitability.pdsa_exercise"
+            ],
+            "quote": "S567 'Exercise: More than 2 hours per day'; S568 'a minimum of two hours exercise every day.'"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S567"
+            ],
+            "refs": [
+              "bullmastiff.suitability.rkc_size_of_home",
+              "bullmastiff.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S567 'Size of home: Large house' / 'Size of garden: Large garden'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S567",
+              "S568"
+            ],
+            "refs": [
+              "bullmastiff.exercise.adult",
+              "bullmastiff.suitability.pdsa_exercise"
+            ],
+            "quote": "S567 'Exercise: More than 2 hours per day'"
+          },
+          {
+            "tag": "short_muzzle_breathing",
+            "source_ids": [
+              "S568"
+            ],
+            "refs": [
+              "bullmastiff.health.brachycephaly_boas"
+            ],
+            "quote": "S568 'Brachycephalic obstructive airway syndrome (BOAS) – this can cause severe breathing problems' (… 'caused by their shorter faces.')"
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S568"
+            ],
+            "refs": [
+              "bullmastiff.behaviour.children",
+              "bullmastiff.suitability.pdsa_children"
+            ],
+            "quote": "S568 'their large size and powerful build isn’t ideal for families with younger children.'"
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S568"
+            ],
+            "refs": [
+              "bullmastiff.behaviour.experienced_owner"
+            ],
+            "quote": "S568 'previous experience with the breed is a huge advantage for owners.'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S568"
+            ],
+            "refs": [
+              "bullmastiff.behaviour.time_alone"
+            ],
+            "quote": "S568 'Ideally, they need to be in a household where there is someone around all the time to keep them company.'"
+          },
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S567",
+              "S568"
+            ],
+            "refs": [
+              "bullmastiff.lifespan.rkc",
+              "bullmastiff.lifespan.pdsa"
+            ],
+            "quote": "S567 'Lifespan: Under 10 years'"
+          },
+          {
+            "tag": "drools",
+            "source_ids": [
+              "S568"
+            ],
+            "refs": [
+              "bullmastiff.behaviour.drooling"
+            ],
+            "quote": "S568 'Be warned – Bullmastiffs are huge droolers!'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S568"
+            ],
+            "refs": [
+              "bullmastiff.behaviour.other_pets"
+            ],
+            "quote": "S568 'Bullmastiffs have very strong prey drives, so we wouldn’t recommend having them with smaller pets.'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "No explicit family-pet statement: PDSA (S568) 'very loyal to their families' but better suited to adult-only households or older children.",
+          "children": "PetMD (S569) 'a kind temperament around family members, including children' conflicts with PDSA (S568) 'isn’t ideal for families with younger children' → no children chip; not_for_small_children instead.",
+          "small_children": "PDSA (S568): not ideal for younger children.",
+          "first_time_owner": "PDSA (S568): previous experience is a huge advantage → experienced_owner.",
+          "apartment": "RKC 'Large house' (S567).",
+          "other_pets": "PDSA (S568) very strong prey drives → chases_small_pets; PetMD (S569) 'can also get along with other pets' only with early socialisation — conflict, no suits chip.",
+          "often_alone": "PDSA (S568): someone around all the time → needs_company.",
+          "sheds": "RKC 'Sheds: Yes' (S567) vs PDSA (S568) 'they don’t shed much' / 'not known to be excessive' — conflicting sources → neither sheds nor low_shedding (runbook rule).",
+          "low_shedding": "See sheds.",
+          "frequent_grooming": "RKC 'Once a week' (S567).",
+          "needs_mental_stimulation": "No explicit mental-stimulation statement.",
+          "brachycephalic_breathing": "No source names a flat face or heat problems; the PDSA BOAS line names a shorter face → short_muzzle_breathing (Boxer / Shih Tzu precedent).",
+          "hips_hind_legs": "PDSA (S568) hip / elbow dysplasia and the RKC hip / elbow schemes (S567), but no Breed Watch hind-leg point was returned (Category 2, points not listed) → no welfare chip; open for David.",
+          "eyelid_problems": "PDSA (S568) entropion / ectropion and the RKC eye scheme (S567), but no Breed Watch eyelid point was returned → no welfare chip; open for David.",
+          "secure_fencing": "PDSA (S568) off-lead time 'in a secure area' and PetMD (S569) 'a fenced-in yard' are exercise advice, not an escape statement → no tag.",
+          "chews_when_bored": "No chewing statement.",
+          "food_motivated_weight": "No breed-specific statement."
+        }
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing / store screenshots / social: no",
+        "unit": "—",
+        "source_id": "S92",
+        "quote": "avoiding imagery of brachycephalic dogs in advertising, marketing materials and social media campaigns",
+        "confidence": "medium",
+        "notes": "BVA position, executive summary (S92). PDSA (S568) lists brachycephalic obstructive airway syndrome 'caused by their shorter faces' (bullmastiff.health.brachycephaly_boas) → the rule's brachycephalic exclusion, as for the moderately short-faced Boxer (S220) and the Shih Tzu (S236). Not on the BVA's own brachycephalic list (S236 Figure 1) and only moderately short-faced — open for David whether he wants it in marketing anyway (as he did for the Cavalier). If ever shown: never with small children, never with an exaggerated short face or heavy wrinkles.",
+        "decision": "pravilo runbooka (David 2026-10-10): v aplikaciji da, v marketingu / posnetkih zaslona ne (BVA S92; BOAS zaradi krajšega obraza po PDSA S568) — odprto za Davida (zmerno kratek gobček, kot boksar)"
+      },
+      "ai_appearance": {
+        "value": "adult Bullmastiff, short hard fawn coat lying flat with a black muzzle mask toning off towards the eyes, powerful symmetrical build showing great strength but not cumbersome, large square skull, moderate broad muzzle with open nostrils, dark or hazel medium-sized eyes with tight eyelids, V-shaped ears folded back, natural tail reaching to the hocks",
+        "unit": "—",
+        "source_id": "S566",
+        "quote": "Any shade of brindle, fawn or red; colour to be pure and clear.",
+        "confidence": "high",
+        "notes": "Colours from the FCI standard (S566) — fawn, red or brindle with an essential black muzzle; at most a slight white chest marking. Weights unsourced. Welfare (PDSA S568 BOAS): moderate, non-exaggerated muzzle with open nostrils, no heavy wrinkles, tight eyelids (`muzzle` trait).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): fawn with a black mask is the portrait default; moderate muzzle with open nostrils, natural ears and tail"
       }
     }
   }

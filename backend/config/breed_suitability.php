@@ -1863,5 +1863,39 @@ return [
             ],
         ],
 
+        // M5-R10-71: bullmastiff.* (S565–S569), runbook rules (data.json
+        // proposed_game_parameters.bullmastiff.suitability_tags). RKC (S567) + PDSA (S568) + PetMD (S569).
+        // RKC "More than 2 hours" → active_family / long_daily_exercise; RKC "Large house" + "Large garden" → large_home.
+        // PDSA "isn't ideal for families with younger children" → not_for_small_children, never children (PetMD conflicts).
+        // Welfare rule: PDSA BOAS "caused by their shorter faces" → short_muzzle_breathing (Boxer / Shih Tzu precedent, not the
+        // flat-face chip). Sheds: RKC "Yes" vs PDSA "don't shed much" → neither sheds nor low_shedding. No hips_hind_legs /
+        // eyelid_problems (no Breed Watch point returned — open for David).
+        'bullmastiff' => [
+            'suits' => [
+                // S567 "Exercise: More than 2 hours per day"; S568 "Your Bullmastiff will need a minimum of two hours exercise every day."
+                ['tag' => 'active_family', 'source_ids' => ['S567', 'S568'], 'refs' => ['bullmastiff.exercise.adult', 'bullmastiff.suitability.pdsa_exercise']],
+                // S567 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S567'], 'refs' => ['bullmastiff.suitability.rkc_size_of_home', 'bullmastiff.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S567 "Exercise: More than 2 hours per day".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S567', 'S568'], 'refs' => ['bullmastiff.exercise.adult', 'bullmastiff.suitability.pdsa_exercise']],
+                // Welfare rule: S568 "Brachycephalic obstructive airway syndrome (BOAS) – this can cause severe breathing problems" (… "caused by their shorter faces.").
+                ['tag' => 'short_muzzle_breathing', 'source_ids' => ['S568'], 'refs' => ['bullmastiff.health.brachycephaly_boas']],
+                // S568 "their large size and powerful build isn’t ideal for families with younger children."
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S568'], 'refs' => ['bullmastiff.behaviour.children', 'bullmastiff.suitability.pdsa_children']],
+                // S568 "previous experience with the breed is a huge advantage for owners."
+                ['tag' => 'experienced_owner', 'source_ids' => ['S568'], 'refs' => ['bullmastiff.behaviour.experienced_owner']],
+                // S568 "Ideally, they need to be in a household where there is someone around all the time to keep them company."
+                ['tag' => 'needs_company', 'source_ids' => ['S568'], 'refs' => ['bullmastiff.behaviour.time_alone']],
+                // S567 "Lifespan: Under 10 years"; S568 "Average lifespan | Under 10 years".
+                ['tag' => 'shorter_lifespan', 'source_ids' => ['S567', 'S568'], 'refs' => ['bullmastiff.lifespan.rkc', 'bullmastiff.lifespan.pdsa']],
+                // S568 "Be warned – Bullmastiffs are huge droolers!"
+                ['tag' => 'drools', 'source_ids' => ['S568'], 'refs' => ['bullmastiff.behaviour.drooling']],
+                // S568 "Bullmastiffs have very strong prey drives, so we wouldn’t recommend having them with smaller pets."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S568'], 'refs' => ['bullmastiff.behaviour.other_pets']],
+            ],
+        ],
+
     ],
 ];

@@ -73,6 +73,7 @@ return [
     'staffordshire_bull_terrier' => 'Stafordširski bulterier',
     'airedale_terrier' => 'Airedalski terier',
     'russell_terrier' => 'Jack Russell terier',
+    'bullmastiff' => 'Bulmastif',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

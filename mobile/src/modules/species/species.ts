@@ -86,6 +86,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   staffordshire_bull_terrier: 'dog',
   airedale_terrier: 'dog',
   russell_terrier: 'dog',
+  bullmastiff: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -176,6 +177,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'staffordshire_bull_terrier',
   'airedale_terrier',
   'russell_terrier',
+  'bullmastiff',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */
