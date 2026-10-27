@@ -2729,6 +2729,30 @@
         }
       ],
       "notes": "RKC breed page (dog-data S567, 2026-10-27): the three tests are listed under the minimum recommendation (the page's heading reads 'Good Practice schemes and tests'; no Best Practice list). PDSA (S568) recommends a Kennel Club Assured Breeder; PetMD (S569) names no breeder test. No new test key."
+    },
+    "chinese_crested": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S572",
+        "quote": "To support the breed’s health, responsible breeders should ensure they complete all tests in both categories."
+      },
+      "tests": [
+        {
+          "key": "dna_pll",
+          "level": "best_practice",
+          "name": "DNA test for Primary lens luxation (PLL)",
+          "source_id": "S572",
+          "quote": "DNA test for Primary lens luxation (PLL)"
+        },
+        {
+          "key": "dna_prcd_pra",
+          "level": "best_practice",
+          "name": "DNA test for Progressive retinal atrophy (prcd-PRA)",
+          "source_id": "S572",
+          "quote": "DNA test for Progressive retinal atrophy (prcd-PRA)"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S572, 2026-10-27): Good Practice (the 'at a minimum' list) names only 'Prioritising genetic diversity' (not a test → not listed); Best Practice — DNA tests for PLL and prcd-PRA. No new key."
     }
   }
 }

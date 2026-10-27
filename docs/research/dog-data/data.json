@@ -37249,6 +37249,504 @@
       }
     }
   },
+  "chinese_crested": {
+    "_note": "Added 2026-10-27 (M5-R10-72, unattended run — appended after the Bullmastiff: AKC 2024 No. 68 'Chinese Crested', S174 full-list table fetched 2026-10-27). Quotes as returned by the web-fetch tool on 2026-10-27 (125-character limit; longer passages are paraphrased in notes and marked as such). Sources S570–S575 (reused S10, S11, S14, S24, S35, S45, S92, S123, S174). No health percentages anywhere. Identity from the FCI nomenclature (S570, No. 288, China); FCI-Standard N° 288 (S571, published 08.09.2026) gives height but no weight; the RKC breed standard (S573) gives the upper weight bound 5.4 kg and PetMD (S574) the range 8–12 lb. RKC Breeds A–Z page (S572): key facts, Breed Watch Category 2 (no individual point returned) and the health tests. No PDSA, Woodgreen or Dogs Trust breed page found. Lifespan: McMillan 2024 via the Dogs Trust breed table (S123, row 'Chinese Crested 13.4') — runbook first choice. Two varieties (Hairless, Powder Puff): the game and the portrait show the Hairless variety (the breed's name-giving form); the Powder Puff is described in the register text only. Names: RKC / AKC 'Chinese Crested', FCI 'Chinese Crested Dog'; Slovenian »kitajski goli pes« (also »kitajski čopasti pes«) — no KZS page read, open for David.",
+    "identity": {
+      "value": "FCI No. 288, Group 9 Section 4 (Hairless Dogs), China",
+      "unit": "—",
+      "source_id": "S570",
+      "quote": "CHINESE CRESTED DOG",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S570, as returned): name 'CHINESE CRESTED DOG', number 288, group 'n°9, Companion and Toy Dogs', section 'Hairless Dogs' (section 4 of group 9), country of origin 'China', not subject to a working trial, definitive acceptance 7/17/1972. FCI-Standard N° 288 (S571): 'ORIGIN: China.', 'UTILIZATION: Companion Dog.' China (CN) is new in FCI_ORIGINS of the export (Tibet (China) = CN-XZ already exists)."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S572",
+      "quote": "Size: Small",
+      "confidence": "high",
+      "notes": "RKC breed page key fact (S572). FCI 23–33 cm (S571), RKC standard 'should not be over 5.4 kgs (12 lbs)' (S573) → Toy class of S10 for growth."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            28,
+            33
+          ],
+          "female": [
+            23,
+            30
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S571",
+        "quote": "Ideal height at the withers: Males: 28-33 cm. Females: 23–30 cm.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 288 (S571). RKC standard (S573) 'Ideal height in dogs: 28-33 cms (11-13 ins) at withers; bitches: 23-30 cms (9-12 ins) at withers.' — the same; AKC standard (S575) ideal size '11 to 13 inches'; PetMD (S574) 'Standing 11–13 inches tall'."
+      }
+    },
+    "adult_weight": {
+      "petmd": {
+        "value": {
+          "male": [
+            3.6,
+            5.4
+          ],
+          "female": [
+            3.6,
+            5.4
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S574",
+        "quote": "Standing 11–13 inches tall and weighing 8–12 pounds",
+        "confidence": "medium",
+        "notes": "PetMD (S574): 8–12 lb = 3.6–5.4 kg, both sexes → the game range (adult_weight_kg). The FCI standard (S571) gives no weight and the AKC standard (S575) none either; the RKC standard (S573) gives only an upper bound (alternative) — its 5.4 kg agrees with PetMD's 12 lb.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                null,
+                5.4
+              ],
+              "female": [
+                null,
+                5.4
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S573",
+            "quote": "Weight varies considerably, but should not be over 5.4 kgs (12 lbs).",
+            "confidence": "high",
+            "notes": "RKC breed standard (S573): upper bound only."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "I",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 3.6–5.4 kg = the band '<6.5' (I). Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "8–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Toy (5–12 pounds): 8–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. 3.6–5.4 kg = 8–12 lb → 'Toy (5–12 pounds)'. The game is unaffected (the puppy cap of 30 min is reached at 3 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Chinese Crested growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 13.4,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": "Chinese Crested 13.4 13.0 - 13.8 928 394",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024 (Sci Rep) data as tabled by Dogs Trust (S123, header 'Breed | Median Life Expectancy (Years) | Lower and Upper 95% CI* | Total Number Individuals (Alive and Deceased) | Number Deceased Individuals', as returned): median 13.4 y (95 % CI 13.0–13.8), 928 dogs, 394 deceased. Runbook first choice (McMillan 2024)."
+      },
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S572",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S572). Agrees with the McMillan median."
+      },
+      "petmd": {
+        "value": "13–18",
+        "unit": "years",
+        "source_id": "S574",
+        "quote": "this breed regularly lives to be 13–18 years old",
+        "confidence": "medium",
+        "notes": "PetMD (S574, US, fragment as returned). Alternative only."
+      },
+      "senior_from": {
+        "value": 10.05,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 13.4 y (McMillan 2024 via S123) → 0.75 × 13.4 = 10.05 y = 120.6 → 121 months. Not chosen: 108 (RKC lower bound 12 y, S572), 117 (PetMD lower bound 13 y, S574), 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S123"
+        ],
+        "months": 121,
+        "alternative": {
+          "value_years": 12,
+          "months": 108,
+          "derived_from": [
+            "S572"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 30",
+        "unit": "minutes/day",
+        "source_id": "S572",
+        "quote": "Exercise: Up to 30 minutes per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S572), runbook first choice → 30 min (one number N 'up to N' → N). PetMD (S574): 'It's easy to get them the relatively small amount of exercise they need to stay healthy' (no number). RKC Toy group text: 'They do not need a large amount of exercise and some can be finicky eaters.' No PDSA page.",
+        "alternatives": []
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No source advises a gap between meals and exercise → no meal_exercise_gap (M5-R16). PetMD (S574): 'Most Chinese Crested adults do well with two meals daily, one in the morning and one in the evening.'; puppies 'about three or four small daily feedings' (background)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "happy, never vicious; friendly toward everyone",
+        "unit": "—",
+        "source_id": "S571",
+        "quote": "Happy, never vicious.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 288 (S571) and RKC standard (S573) 'Happy, never vicious.'; AKC standard (S575) 'Gay and alert.'; PetMD (S574): 'They tend to be friendly toward everyone, even people they're just meeting.'"
+      },
+      "family": {
+        "value": "fits in well with most families, including those with kids and other pets",
+        "unit": "—",
+        "source_id": "S574",
+        "quote": "fits in well with most families, including those with kids and other pets",
+        "confidence": "medium",
+        "notes": "PetMD (S574, fragment as returned). Basis of family_pet, children (with the supervision caveat of behaviour.children) and other_pets."
+      },
+      "children": {
+        "value": "good with children, but every interaction should be supervised",
+        "unit": "—",
+        "source_id": "S574",
+        "quote": "all interactions between kids and this breed should be supervised",
+        "confidence": "medium",
+        "notes": "PetMD (S574, fragment as returned) — a small, fine-boned dog. Supervision caveat kept with the children chip (runbook: children with an explicit statement, caveat in notes); never small_children."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific time-alone statement found → no needs_company / often_alone."
+      },
+      "other_pets": {
+        "value": "fits in with other pets",
+        "unit": "—",
+        "source_id": "S574",
+        "quote": "fits in well with most families, including those with kids and other pets",
+        "confidence": "medium",
+        "notes": "PetMD (S574, fragment as returned). No prey-drive statement → no chases_small_pets. Basis of other_pets."
+      },
+      "socialisation": {
+        "value": "socialise the puppy early and consistently",
+        "unit": "—",
+        "source_id": "S574",
+        "quote": "socializing your Chinese Crested puppy early and consistently is important for her to be comfortable in new situations.",
+        "confidence": "high",
+        "notes": "PetMD (S574). A need (runbook M5-R17) → proposed_game_parameters.chinese_crested.socialisation (DOG_SOCIALISATION row, PetMD quote)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No explicit chewing statement → no chews_when_bored."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific food-motivation / weight statement → no food_motivated_weight. RKC Toy group: 'some can be finicky eaters' (group text, background)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 2 (S572) — no individual point of concern returned. Bare skin (sun and cold, PetMD S574) → consider chips sun_protection (new vocabulary key) and cold_sensitive. Not flat-faced → BVA marketing rule (S92) does not apply.",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 2",
+        "unit": "—",
+        "source_id": "S572",
+        "quote": "Category 2",
+        "confidence": "high",
+        "notes": "RKC breed page (S572): Breed Watch Category 2 with only the general wording ('Particular points of concern for individual breeds may include features not specifically highlighted in the breed standard', as returned) — the breed's own points were not returned (open for David). Background only."
+      },
+      "bare_skin": {
+        "value": "hairless skin needs protection from the sun and the cold",
+        "unit": "—",
+        "source_id": "S574",
+        "quote": "Hairless areas of skin require special protection from the sun and cold temperature.",
+        "confidence": "high",
+        "notes": "PetMD (S574); also 'Hairless dogs need additional care for their exposed skin' and (cut off as returned) 'If your hairless dog spends time in the sun, her skin needs to be protected with' — no frequency → no care task (runbook §3 »Breed care tasks«). Basis of sun_protection and cold_sensitive. Register health key bare_skin_sun_cold."
+      },
+      "patellar_luxation": {
+        "value": "patellar luxation (kneecap slipping out of place)",
+        "unit": "—",
+        "source_id": "S574",
+        "quote": "Patellar luxation is a common health concern found in Chinese Cresteds.",
+        "confidence": "high",
+        "notes": "PetMD (S574). Register health key patellar_luxation."
+      },
+      "eye_lens_retina": {
+        "value": "primary lens luxation and progressive retinal atrophy — DNA tests for breeding dogs",
+        "unit": "—",
+        "source_id": "S572",
+        "quote": "DNA test for Primary lens luxation (PLL)",
+        "confidence": "high",
+        "notes": "RKC breed page (S572), Best Practice tests: 'DNA test for Primary lens luxation (PLL)', 'DNA test for Progressive retinal atrophy (prcd-PRA)'. Register health key inherited_eye_disease."
+      },
+      "teeth": {
+        "value": "the hairless variety often lacks some teeth (forward-pointing canines; no penalty for missing teeth)",
+        "unit": "—",
+        "source_id": "S573",
+        "quote": "should not be penalised for absence of full dentition.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S573, fragment as returned): 'The hairless variety will have the primitive trait of forward pointing canines' … 'and should not be penalised for absence of full dentition.' PetMD (S574): 'Pet parents must brush their dog's teeth at home.' (no frequency → no tooth-brushing task). Research only (not exported)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 61,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Chinese Crested Dog",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-27): rank 61 'Chinese Crested Dog', tier 'Fair Working/Obedience Intelligence' (ranks 55–69). Coren's own top / bottom-10 article (S34) does not list the breed."
+      },
+      "coren_tier": {
+        "value": "Fair",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier 'Fair Working/Obedience Intelligence' (ranks 55–69)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.chinese_crested.learning_multiplier (0.7, runbook rule: Fair tier, rank 61).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "small, active and graceful; medium- to fine-boned; smooth hairless body with hair only on the head (crest), feet (socks) and tail (plume)",
+        "unit": "—",
+        "source_id": "S571",
+        "quote": "A small, active and graceful dog; medium-to fine-boned, smooth hairless body.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 288 (S571); two types — Deer (racy, fine-boned) and Cobby (heavier in body and bone) (paraphrase). RKC standard (S573): 'with hair on feet, head and tail only;' … 'or covered with a soft veil of hair.' (the Powder Puff)."
+      },
+      "varieties": {
+        "value": "Hairless (crest, socks, tail plume; otherwise bare skin) and Powder Puff (covered entirely with a veil of long soft hair) — the game shows the Hairless",
+        "unit": "—",
+        "source_id": "S571",
+        "quote": "covered entirely with a veil of long soft hair.",
+        "confidence": "high",
+        "notes": "FCI (S571): Hairless 'crest of hair on their head extending part way down their neck.' (fragment as returned); Powder Puff as quoted. Game decision: Hairless variety only (the breed's typical form); the Powder Puff appears in the register text."
+      },
+      "colours": {
+        "value": [
+          "pink skin with dark spots",
+          "solid dark slate skin",
+          "solid pink skin"
+        ],
+        "unit": "list",
+        "source_id": "S571",
+        "quote": "Any colour or combination of colours, except merle, which is unacceptable.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 288 (S571); RKC standard (S573) 'Any colour or combination of colours, except merle, which is unacceptable.'; AKC (S575) 'Any color or combination of colors.' Any colour is standard → the game uses three common skin colourings of the Hairless (pink with dark spots, solid dark slate, solid pink), each with white / cream crest, socks and plume. Never merle."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Pink skin with dark spots first with the highest weight (the portrait default), then solid dark slate, then solid pink."
+      },
+      "coat": {
+        "value": "hairless body; long, flowing, soft silky crest, socks and tail plume; skin fine-grained, smooth, warm to the touch",
+        "unit": "—",
+        "source_id": "S573",
+        "quote": "No large patches of hair anywhere on body. Skin fine-grained, smooth, warm to the touch.",
+        "confidence": "high",
+        "notes": "RKC standard (S573); FCI (S571) 'No large patches of hair anywhere on body.' and a long flowing crest preferred, a sparse one acceptable (paraphrase); AKC (S575) hair 'soft and silky, flowing to any length.' RKC key fact 'Coat length: Short' (S572)."
+      },
+      "muzzle": {
+        "value": "muzzle tapering slightly but never pointed, lean; narrow nose, any colour; lips tight and thin",
+        "unit": "—",
+        "source_id": "S573",
+        "quote": "Muzzle tapering slightly but never pointed, lean without flews.",
+        "confidence": "high",
+        "notes": "RKC standard (S573); 'Nose a prominent feature, narrow in keeping with muzzle.' 'Nose any colour.' 'Stop slightly pronounced but not extreme. Head smooth, without excess wrinkles.' Not a flat-faced breed."
+      },
+      "eyes": {
+        "value": "so dark as to appear black; medium, almond-shaped, set wide apart; little or no white showing",
+        "unit": "—",
+        "source_id": "S571",
+        "quote": "So dark as to appear black. Little or no white showing.",
+        "confidence": "high",
+        "notes": "FCI (S571); RKC (S573) 'Medium size, almond in shape. Set wide apart.'"
+      },
+      "ears": {
+        "value": "large and erect, set low, with or without fringe",
+        "unit": "—",
+        "source_id": "S573",
+        "quote": "Large and erect, with or without fringe, except in Powder Puffs where drop ears are permissible.",
+        "confidence": "high",
+        "notes": "RKC standard (S573); FCI (S571) 'Set low: highest point of base of ear level with outside corner of eye.'"
+      },
+      "tail": {
+        "value": "set high, long and tapering, fairly straight, with a long flowing plume on the lower two-thirds",
+        "unit": "—",
+        "source_id": "S573",
+        "quote": "Plume long and flowing, confined to lower two-thirds of tail. Sparse plume acceptable.",
+        "confidence": "high",
+        "notes": "RKC standard (S573); 'Set high, carried up or out when in motion. Long and tapering, fairly straight,' (FCI S571 the same)."
+      }
+    },
+    "suitability": {
+      "_note": "RKC key facts (S572) and PetMD (S574). No PDSA / Woodgreen page.",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S572",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": "RKC key fact (S572)."
+      },
+      "rkc_exercise": {
+        "value": "Up to 30 minutes per day",
+        "unit": "—",
+        "source_id": "S572",
+        "quote": "Exercise: Up to 30 minutes per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S572) → 30 min."
+      },
+      "rkc_size_of_home": {
+        "value": "Flat/ Apartment",
+        "unit": "—",
+        "source_id": "S572",
+        "quote": "Size of home: Flat/ Apartment",
+        "confidence": "high",
+        "notes": "RKC key fact (S572). Basis of apartment (with rkc_size_of_garden)."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S572",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S572)."
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S572",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S572) → brushing 1× a week (M5-R13)."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S572",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": "RKC key fact (S572)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S572",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "RKC key fact (S572) — the RKC key facts cover both varieties; the game shows the Hairless variety (hair only on head, feet and tail) → no sheds chip (Claude's reading, open for David); never low_shedding or hypoallergenic."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S572",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S572)."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S572",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S572). Background only."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S572",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "RKC key fact (S572). Background only (no tag)."
+      },
+      "petmd_skin": {
+        "value": "hairless skin needs protection from sun and cold",
+        "unit": "—",
+        "source_id": "S574",
+        "quote": "Hairless areas of skin require special protection from the sun and cold temperature.",
+        "confidence": "high",
+        "notes": "PetMD (S574). Basis of sun_protection and cold_sensitive (Italian Greyhound precedent for cold_sensitive)."
+      },
+      "petmd_grooming": {
+        "value": "Hairless: extra care for exposed skin; Powder Puff: brushing at least a few times a week",
+        "unit": "—",
+        "source_id": "S574",
+        "quote": "you'll need to brush your powderpuff at least a few times a week to prevent painful matting",
+        "confidence": "medium",
+        "notes": "PetMD (S574, fragment as returned) — the Powder Puff only; the game shows the Hairless (RKC 'Once a week' used). No bath frequency."
+      },
+      "petmd_nails": {
+        "value": "check the nails once a week, trim when they get long",
+        "unit": "—",
+        "source_id": "S574",
+        "quote": "Check your dog's toenails once a week and trim them back when they start getting a little long.",
+        "confidence": "high",
+        "notes": "PetMD (S574) → nail trimming once a week (§3 »Breed care tasks«, M5-R19; 'checked weekly' precedent: American Cocker / Papillon / Giant Schnauzer ears). The trim itself is conditional ('when they start getting a little long') — open for David."
+      },
+      "petmd_teeth_ears": {
+        "value": "brush the teeth at home; keep the ears clean",
+        "unit": "—",
+        "source_id": "S574",
+        "quote": "Pet parents must brush their dog's teeth at home.",
+        "confidence": "medium",
+        "notes": "PetMD (S574); 'Keeping your Chinese Crested's ears clean and the canals free of debris is essential for preventing ear infections.' No frequency for teeth or ears → no task (runbook §3)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -55850,6 +56348,267 @@
         "confidence": "high",
         "notes": "Colours from the FCI standard (S566) — fawn, red or brindle with an essential black muzzle; at most a slight white chest marking. Weights unsourced. Welfare (PDSA S568 BOAS): moderate, non-exaggerated muzzle with open nostrils, no heavy wrinkles, tight eyelids (`muzzle` trait).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): fawn with a black mask is the portrait default; moderate muzzle with open nostrils, natural ears and tail"
+      }
+    },
+    "chinese_crested": {
+      "_note": "Unattended run M5-R10-72 (2026-10-27): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. New vocabulary key: sun_protection (bare skin — PetMD S574). Built: brushing 1× a week (RKC S572 'Once a week', M5-R13), puppy socialisation (PetMD S574 quote, M5-R17) and nail trimming once a week (PetMD S574 'Check your dog's toenails once a week', M5-R19 — open for David). No meal gap (no source), no tooth / ear / bath / groomer task (no frequency). Sun cream: no frequency → the sun_protection chip and register text, no task. In marketing (not a welfare breed).",
+      "exercise_minutes_adult": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": "S572",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'Up to 30 minutes per day' (S572). Rule: one number N ('up to N') → N = 30. Ties the Havanese for the lowest step goal (3,000).",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min/day (RKC S572 'Up to 30 minutes per day')"
+      },
+      "step_goal_adult": {
+        "value": 3000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 30 min × 100 steps/min (S45) = 3,000.",
+        "derived_from": [
+          "S572",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min × 100 steps/min → 3,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 23,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 30) = round(22.5) = 23 min (half up) → 2,300 steps.",
+        "steps": 2300,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 23 min → 2,300 steps (75 % of 30, half up)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 30 reached at 3 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 30 min (reached at 3 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 121
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 121 = round(0.75 × 13.4 y × 12) = round(120.6) (S11 + McMillan 2024 median 13.4 y via the Dogs Trust table S123). Alternatives: 108 (RKC lower bound 12 y, S572), 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S123"
+        ],
+        "alternatives": {
+          "senior_rkc_lower_bound": 108,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 121 (0.75 × 13.4 y, McMillan 2024 via S123)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 121
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 121)"
+      },
+      "learning_multiplier": {
+        "value": 0.7,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 61 (S35), tier 'Fair' (55–69) → 0.7. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 61, Fair tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S572",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S572) 'Once a week' → 1 (M5-R13 rule) — crest, socks and plume of the Hairless. PetMD (S574) 'at least a few times a week' is for the Powder Puff only (alternative, not the game's variety). Matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": "a few times a week (Powder Puff)",
+            "source_id": "S574",
+            "notes": "PetMD — the Powder Puff variety; not chosen (the game shows the Hairless)."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC S572 »Once a week«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S574",
+        "quote": "socializing your Chinese Crested puppy early and consistently is important for her to be comfortable in new situations.",
+        "confidence": "high",
+        "notes": "PetMD (S574); quote from chinese_crested.behaviour.socialisation. Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, PetMD S574)"
+      },
+      "nail_trimming": {
+        "value": "weekly",
+        "unit": "nail trimming (sourced need)",
+        "source_id": "S574",
+        "quote": "Check your dog's toenails once a week and trim them back when they start getting a little long.",
+        "confidence": "medium",
+        "notes": "PetMD (S574), chinese_crested.suitability.petmd_nails. Built: the child's nail-trim mini-game once a week (BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R19). The weekly frequency is for checking; the trim is conditional — the 'checked weekly' precedent (ear care of the American Cocker, Papillon, Giant Schnauzer) is applied; open for David.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »Check … toenails once a week« → 1× na teden (pregled tedensko; striženje po potrebi — odprto za Davida)"
+      },
+      "sun_skin_care": {
+        "value": "sun protection for bare skin; no frequency",
+        "unit": "—",
+        "source_id": "S574",
+        "quote": "Hairless areas of skin require special protection from the sun and cold temperature.",
+        "confidence": "high",
+        "notes": "PetMD (S574), chinese_crested.health.bare_skin. No frequency → no care task (runbook §3 »Breed care tasks«); the consider chips sun_protection (new key) and cold_sensitive and the register text carry it.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka): brez pogostosti → brez naloge; čip in besedilo v registru"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-72); refs = JSON paths in this file. New vocabulary key: sun_protection. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S574"
+            ],
+            "refs": [
+              "chinese_crested.behaviour.family"
+            ],
+            "quote": "S574 'fits in well with most families, including those with kids and other pets'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S574"
+            ],
+            "refs": [
+              "chinese_crested.behaviour.family",
+              "chinese_crested.behaviour.children"
+            ],
+            "quote": "S574 'fits in well with most families, including those with kids and other pets' (caveat: 'all interactions between kids and this breed should be supervised')"
+          },
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S572"
+            ],
+            "refs": [
+              "chinese_crested.suitability.rkc_size_of_home",
+              "chinese_crested.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S572 'Size of home: Flat/ Apartment' / 'Size of garden: Small/ medium garden'"
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S574"
+            ],
+            "refs": [
+              "chinese_crested.behaviour.other_pets"
+            ],
+            "quote": "S574 'fits in well with most families, including those with kids and other pets'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "sun_protection",
+            "source_ids": [
+              "S574"
+            ],
+            "refs": [
+              "chinese_crested.health.bare_skin",
+              "chinese_crested.suitability.petmd_skin"
+            ],
+            "quote": "S574 'Hairless areas of skin require special protection from the sun and cold temperature.'"
+          },
+          {
+            "tag": "cold_sensitive",
+            "source_ids": [
+              "S574"
+            ],
+            "refs": [
+              "chinese_crested.suitability.petmd_skin"
+            ],
+            "quote": "S574 'Hairless areas of skin require special protection from the sun and cold temperature.'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "PetMD (S574): every interaction with kids should be supervised → children only, never small_children.",
+          "first_time_owner": "No first-time-owner statement.",
+          "often_alone": "No time-alone statement.",
+          "active_family": "RKC 'Up to 30 minutes per day' (S572).",
+          "large_home": "RKC 'Flat/ Apartment' (S572).",
+          "low_shedding": "RKC 'Sheds: Yes' (S572); never hypoallergenic.",
+          "sheds": "RKC 'Sheds: Yes' (S572) covers both varieties; the game shows the Hairless (hair only on head, feet and tail) → no chip (Claude's reading, open for David).",
+          "frequent_grooming": "RKC 'Once a week' (S572).",
+          "sensitive_skin": "The welfare chip is for skin allergies / dermatitis (Breed Watch); the Chinese Crested's sourced need is protection of bare skin → sun_protection + cold_sensitive.",
+          "chases_small_pets": "No prey-drive statement.",
+          "needs_company": "No company statement.",
+          "shorter_lifespan": "RKC 'Over 12 years' (S572).",
+          "hips_hind_legs": "PetMD (S574) patellar luxation is a knee, not a Breed Watch hind-leg point; Breed Watch Category 2 points not returned → no welfare chip; open for David.",
+          "chews_when_bored": "No chewing statement.",
+          "food_motivated_weight": "No breed-specific statement."
+        }
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a flat-faced breed)",
+        "unit": "—",
+        "source_id": "S572",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 2 (S572) without a returned point; not a flat-faced breed and no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92) → in marketing. Marketing never shows bare skin sunburnt, never as a fashion accessory or with small children unsupervised (Claude's proposal).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no veterinary advice against advertising the breed type)"
+      },
+      "ai_appearance": {
+        "value": "adult Chinese Crested, Hairless variety, pink skin with dark grey spots (the portrait default); small, graceful, fine-boned body; smooth bare skin with a long, soft, silky white crest on the head, white socks on the feet and a flowing white plume on the lower tail; large erect ears with light fringe; dark almond eyes set wide apart; lean, slightly tapering muzzle; never merle, never a Powder Puff",
+        "unit": "—",
+        "source_id": "S571",
+        "quote": "Any colour or combination of colours, except merle, which is unacceptable.",
+        "confidence": "high",
+        "notes": "FCI (S571), RKC standard (S573), AKC (S575). Weights unsourced. Healthy, un-sunburnt skin; natural (not shaved) Hairless.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only — any colour except merle; Hairless variety, pink skin with dark spots (default), solid dark slate, solid pink"
       }
     }
   }
