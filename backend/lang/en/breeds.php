@@ -74,6 +74,7 @@ return [
     'airedale_terrier' => 'Airedale Terrier',
     'russell_terrier' => 'Jack Russell Terrier',
     'bullmastiff' => 'Bullmastiff',
+    'chinese_crested' => 'Chinese Crested',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',
