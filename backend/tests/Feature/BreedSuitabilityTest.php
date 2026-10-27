@@ -601,6 +601,8 @@ it('gives chases_small_pets only to the ten breeds whose own entry quotes a high
         BreedType::GermanWirehairedPointer->value => 'german_wirehaired_pointer.behaviour.other_pets',
         // M5-R10-67: PDSA S540 "Staffies have a very strong prey drive …".
         BreedType::StaffordshireBullTerrier->value => 'staffordshire_bull_terrier.behaviour.other_pets',
+        // M5-R10-70: PDSA S560 "Jack Russells have a very high prey drive and love to chase."
+        BreedType::RussellTerrier->value => 'russell_terrier.behaviour.other_pets',
     ];
 
     foreach (BreedType::cases() as $breed) {
@@ -690,9 +692,9 @@ it('gives the Pomeranian the new older_children tag (AKC), apartment, family_pet
         ->and($pom['consider'])->not->toContain('fragile_older_children')->not->toContain('not_for_small_children')
         ->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')->not->toContain('hips_hind_legs');
 
-    // Only the Pomeranian, the Chihuahua (PDSA S277, M5-R10-33) and the Shiba Inu (AKC S383, M5-R10-46) carry older_children.
+    // Only the Pomeranian, the Chihuahua (PDSA S277, M5-R10-33), the Shiba Inu (AKC S383, M5-R10-46) and the Russell Terrier (PDSA S560, M5-R10-70) carry older_children.
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::Pomeranian, BreedType::Chihuahua, BreedType::ShibaInu], true)) {
+        if (! in_array($breed, [BreedType::Pomeranian, BreedType::Chihuahua, BreedType::ShibaInu, BreedType::RussellTerrier], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('older_children');
         }
     }

@@ -438,6 +438,12 @@ return [
         ['key' => 'black-tan', 'value' => 'black saddle and tan', 'en' => 'Black and tan', 'sl' => 'Rjav s črnim sedlom'],
         ['key' => 'grizzle-tan', 'value' => 'grizzle saddle and tan', 'en' => 'Grizzle and tan', 'sl' => 'Rjav s sivim sedlom'],
     ],
+    // M5-R10-70: FCI S558 — white must predominate with black and/or tan markings.
+    'russell_terrier' => [
+        ['key' => 'white-tan', 'value' => 'white with tan markings', 'en' => 'White and tan', 'sl' => 'Bel z rjavimi lisami'],
+        ['key' => 'tricolour', 'value' => 'white with black and tan markings', 'en' => 'Tricolour', 'sl' => 'Tribarven'],
+        ['key' => 'white-black', 'value' => 'white with black markings', 'en' => 'White and black', 'sl' => 'Bel s črnimi lisami'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

@@ -601,6 +601,13 @@
 | portrait); "Any other colour or combination of colours unacceptable." Natural ears and an undocked tail. RKC Breed Watch
 | Category 1 (S547). Colour weights unsourced → `verified => false`.
 |
+| Russell Terrier (M5-R10-70, docs/research/dog-data russell_terrier.appearance; FCI / RKC "Jack Russell Terrier"): "A
+| strong, active, lithe working Terrier of great character with flexible body of medium length." (FCI 345, S558); coat
+| "May be smooth, broken or rough. Must be weatherproof."; ears "Button or dropped of good texture and great mobility.";
+| colours "White must predominate with black and/or tan markings." — white with tan weighted highest (the register
+| portrait); smooth coat for the portrait (broken and rough are standard too). Natural tail. RKC Breed Watch Category 1
+| (S559). Colour weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -3109,6 +3116,41 @@ return [
             'ear_carriage' => ['small V-shaped ears folded and carried to the side'],
             'eye_color' => ['small, dark eyes full of terrier expression'],
             'tail' => ['natural undocked tail set on high and carried gaily'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+
+    // M5-R10-70 (docs/research/dog-data/data.json russell_terrier.appearance; runbook rules 2026-10-10:
+    // standard colours only — S558; white predominant with black and/or tan markings; natural tail).
+    'russell_terrier' => [
+        'display_name' => 'Jack Russell Terrier',
+        // Colour frequencies are in no source (russell_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 345 (S558, https://fci.be/Nomenclature/Standards/345g03-en.pdf), RKC breed page (S559), PDSA (S560) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S559 "Size: Small"; S558 "Ideal Height at the withers: 25 cms to 30 cms."',
+            'build' => 'S558 "A strong, active, lithe working Terrier of great character with flexible body of medium length."',
+            'coat_length' => 'S558 "May be smooth, broken or rough. Must be weatherproof."; S559 "Coat length: Short"',
+            'coat_color' => 'S558 "White must predominate with black and/or tan markings." (weights unsourced)',
+            'head' => 'S558 "Nose: Black."',
+            'ear_carriage' => 'S558 "Button or dropped of good texture and great mobility."',
+            'eye_color' => 'S558 "Small dark and with keen expression. Must not be prominent and eyelids should fit closely."',
+            'tail' => 'S558 "May droop at rest. When moving should be erect …" (undocked)',
+        ],
+        'traits' => [
+            'size' => ['small terrier, slightly longer than tall'],
+            'build' => [['value' => 'strong, active and lithe, with a flexible body of medium length', 'weight' => 3], 'compact, well-muscled small working terrier'],
+            'coat_length' => [['value' => 'smooth, short, weatherproof coat', 'weight' => 3], 'broken, slightly wiry weatherproof coat'],
+            // FCI standard (S558); white with tan weighted highest (the register portrait).
+            'coat_color' => [
+                ['value' => 'white with tan markings', 'weight' => 4],
+                ['value' => 'white with black and tan markings', 'weight' => 2],
+                'white with black markings',
+            ],
+            'head' => ['flat, moderately broad skull with a strong muzzle and a black nose'],
+            'ear_carriage' => ['small button or dropped ears folded forward'],
+            'eye_color' => ['small, dark, almond-shaped eyes with a keen expression'],
+            'tail' => ['natural undocked tail carried erect'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],
