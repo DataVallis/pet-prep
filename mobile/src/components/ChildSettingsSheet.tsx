@@ -8,6 +8,8 @@
  * - rows that used to be icons in the HUD top bar (David 2026-10-23, the bar truncated the
  *   name / stage / breed): **Album**, **Kako skrbim** (the M5-T05 care guide) and, last, the
  *   exit (**Odjava**, or »Nazaj k staršu« in a shared »Igraj kot« session).
+ * - **Želje** (M6-W04): the wish catalogue (`WishesSheet`) — not a care action, so it lives
+ *   here and not in the dock / top stack.
  * A row closes the sheet first. The album is an in-screen layer and opens at once; the care
  * guide and the exit open a `Modal` (care guide sheet, parental gate), so they run once this
  * sheet is gone (iOS `onDismiss`, else after the slide-out) — iOS can't present a modal while
@@ -19,7 +21,7 @@
 import { useCallback, useContext, useEffect, useRef, type ReactNode } from 'react';
 import { Modal, Pressable, StyleSheet, View } from 'react-native';
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
-import { ChevronRight, CircleQuestionMark, Images, LogOut, X } from 'lucide-react-native';
+import { ChevronRight, CircleQuestionMark, Gift, Images, LogOut, X } from 'lucide-react-native';
 
 import LanguageSwitch from '@/components/LanguageSwitch';
 import MediaDisplaySwitch from '@/components/MediaDisplaySwitch';
@@ -42,6 +44,8 @@ interface ChildSettingsSheetProps {
   album?: { label: string; onOpen: () => void };
   /** »Kako skrbim« row (care guide) — omitted on an older server without `care_guide`. */
   careGuide?: { label: string; hint: string; onOpen: () => void };
+  /** »Želje« row (M6-W04) — omitted on an older server without the `wishes` block. Opens a Modal. */
+  wishes?: { label: string; hint: string; onOpen: () => void };
   /** The exit row at the bottom (»Odjava« / »Nazaj k staršu«). */
   exit?: { label: string; onPress: () => void };
   testID?: string;
@@ -56,6 +60,7 @@ export default function ChildSettingsSheet({
   mediaDisplay,
   album,
   careGuide,
+  wishes,
   exit,
   testID = 'hud-settings-sheet',
 }: ChildSettingsSheetProps) {
@@ -142,7 +147,7 @@ export default function ChildSettingsSheet({
             </Text>
           )}
 
-          {(album || careGuide) && (
+          {(album || careGuide || wishes) && (
             <View style={styles.rows}>
               {album && (
                 <SettingsRow
@@ -162,6 +167,15 @@ export default function ChildSettingsSheet({
                   hint={careGuide.hint}
                   onPress={() => closeThen(careGuide.onOpen)}
                   testID="hud-care-guide-open"
+                />
+              )}
+              {wishes && (
+                <SettingsRow
+                  icon={<Gift color={palette.mint} size={18} />}
+                  label={wishes.label}
+                  hint={wishes.hint}
+                  onPress={() => closeThen(wishes.onOpen)}
+                  testID="hud-wishes-open"
                 />
               )}
             </View>

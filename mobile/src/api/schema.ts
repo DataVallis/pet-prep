@@ -856,6 +856,92 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/child/wishes": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** @description GET / POST /api/child/wishes (M6-W01): the pet's wish catalogue / ask a parent for an item (WISHES_API.md §3). */
+        get: operations["wish.childIndex"];
+        put?: never;
+        /** @description GET / POST /api/child/wishes (M6-W01): the pet's wish catalogue / ask a parent for an item (WISHES_API.md §3). */
+        post: operations["wish.store"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/child/pet/treat": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** @description POST /api/child/pet/treat (M6-W01): give one bought treat (max 2 per family day). */
+        post: operations["wish.treat"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/parent/wishes": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** @description GET /api/parent/wishes (M6-W01): open wishes, pets for a surprise purchase, unassigned wish credits. */
+        get: operations["wish.parentIndex"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/parent/wishes/{wish}/decline": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** @description POST /api/parent/wishes/{wish}/decline (M6-W01): »Ne zdaj«. */
+        post: operations["wish.decline"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/parent/pets/{pet}/items/redeem": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** @description POST /api/parent/pets/{pet}/items/redeem (M6-W02): assign a landed wish purchase to the pet (Idempotency-Key = store transaction id). */
+        post: operations["wish.redeem"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/child/pet/wand/start": {
         parameters: {
             query?: never;
@@ -2540,6 +2626,54 @@ export interface components {
              *     | `cuddle` <br/> Cuddles: stroking the dog with a finger. |
              */
             kind: components["schemas"]["PlayKind"];
+        };
+        /**
+         * PetItemRedeemRequest
+         * @description POST /api/parent/pets/{pet}/items/redeem (M6-W02).
+         */
+        PetItemRedeemRequest: {
+            product_id: string;
+            wish_id?: number | null;
+        };
+        /**
+         * StoreWishRequest
+         * @description POST /api/child/wishes (M6-W01).
+         */
+        StoreWishRequest: {
+            item_key: components["schemas"]["WishItemKey"];
+        };
+        /**
+         * WishItemKey
+         * @description Catalogue key of a wishable item (M6-W01). `welcome_bundle` is never wishable.
+         * @enum {string}
+         */
+        WishItemKey: "bed" | "bowls" | "toy_1" | "toy_2" | "treats";
+        /**
+         * WishItemStatus
+         * @enum {string}
+         */
+        WishItemStatus: "available" | "requested" | "declined_recently" | "owned";
+        /** ChildWishItem (M6-W01) */
+        ChildWishItem: {
+            key: components["schemas"]["WishItemKey"];
+            /** @enum {string} */
+            kind: "durable" | "consumable";
+            variant: string;
+            status: components["schemas"]["WishItemStatus"];
+            wish_id?: number;
+            requested_at?: string;
+            retry_at?: string;
+            media_ready?: boolean;
+            treats_left?: number;
+        };
+        /** ParentWishPetItem (M6-W01) */
+        ParentWishPetItem: {
+            key: string;
+            variant: string;
+            product_id: string;
+            owned?: boolean;
+            media_ready?: boolean;
+            treats_left?: number;
         };
         /**
          * RegisterDeviceRequest
@@ -5680,6 +5814,20 @@ export interface operations {
                                 from: string;
                                 to: string;
                             } | null;
+                        };
+                        /** @description M6-W01 wishes: owned durable items + treats. Missing from older servers. */
+                        wishes?: {
+                            open_count: number;
+                            items: {
+                                key: string;
+                                variant: string;
+                                media_ready: boolean;
+                            }[];
+                            treats: {
+                                left: number;
+                                given_today: number;
+                                daily_limit: number;
+                            };
                         };
                     };
                 };
@@ -25037,6 +25185,8 @@ export interface operations {
                             /** @description Ignored warnings and M5-R02 behaviour events (accident, chewing) are negative. */
                             is_positive: boolean;
                         }[];
+                        /** @description M6-W01: open wishes of every child of the family (missing from older servers). */
+                        wishes_open_count?: number;
                         weekly_performance: {
                             date: string;
                             completed: number;
@@ -26504,6 +26654,339 @@ export interface operations {
                 };
             };
             422: components["responses"]["ValidationException"];
+        };
+    };
+    "wish.childIndex": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        pet_id: number;
+                        /** @enum {string} */
+                        species: "dog" | "cat";
+                        open_count: number;
+                        open_limit: number;
+                        can_wish: boolean;
+                        /** @enum {string|null} */
+                        blocked_reason?: "game_over" | "payment_required" | null;
+                        items: components["schemas"]["ChildWishItem"][];
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        message: string;
+                        reason: "no_pet";
+                        retry_at?: string;
+                        next_at?: string;
+                    };
+                };
+            };
+        };
+    };
+    "wish.store": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["StoreWishRequest"];
+            };
+        };
+        responses: {
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        wish: {
+                            id: number;
+                            item_key: string;
+                            /** @constant */
+                            status: "open";
+                            created_at: string;
+                        };
+                        open_count: number;
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        message: string;
+                        reason: "wish_limit_reached" | "already_requested" | "already_owned" | "declined_recently" | "treats_still_left" | "unknown_item" | "bundle_not_wishable";
+                        retry_at?: string;
+                        next_at?: string;
+                    };
+                };
+            };
+            423: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        message: string;
+                        reason: "game_over" | "payment_required";
+                        retry_at?: string;
+                        next_at?: string;
+                    };
+                };
+            };
+        };
+    };
+    "wish.treat": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        treats_left: number;
+                        given_today: number;
+                        daily_limit: number;
+                        /** @description The treat clip when ready, else null (the app shows the picture). */
+                        media: unknown;
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        message: string;
+                        reason: "no_treats" | "treat_limit_today" | "pet_sleeping";
+                        retry_at?: string;
+                        next_at?: string;
+                    };
+                };
+            };
+            423: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        message: string;
+                        reason: string | null;
+                        retry_at?: string;
+                        next_at?: string;
+                    };
+                };
+            };
+        };
+    };
+    "wish.parentIndex": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        open_count: number;
+                        wishes: {
+                            id: number;
+                            pet_id: number;
+                            pet_name: string | null;
+                            species: string;
+                            child_id: number;
+                            child_name: string;
+                            item_key: string;
+                            variant: string;
+                            product_id: string;
+                            /** @constant */
+                            status: "open";
+                            created_at: string;
+                            bundle_product_id: string | null;
+                        }[];
+                        pets: {
+                            pet_id: number;
+                            pet_name: string | null;
+                            species: string;
+                            bundle_eligible: boolean;
+                            items: components["schemas"]["ParentWishPetItem"][];
+                        }[];
+                        unassigned_credits: {
+                            product_id: string;
+                            count: number;
+                        }[];
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+        };
+    };
+    "wish.decline": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                wish: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        wish: {
+                            id: number;
+                            /** @constant */
+                            status: "declined";
+                        };
+                        open_count: number;
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        message: string;
+                        reason: string;
+                        retry_at?: string;
+                        next_at?: string;
+                    };
+                };
+            };
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        message: string;
+                        reason: "wish_not_open";
+                        retry_at?: string;
+                        next_at?: string;
+                    };
+                };
+            };
+        };
+    };
+    "wish.redeem": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                pet: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["PetItemRedeemRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @enum {string} */
+                        status: "assigned" | "already_assigned";
+                        items: components["schemas"]["ParentWishPetItem"][];
+                        open_count: number;
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        message: string;
+                        reason: "pet_not_found";
+                        retry_at?: string;
+                        next_at?: string;
+                    };
+                };
+            };
+            409: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        message: string;
+                        reason: "no_credit";
+                        retry_at?: string;
+                        next_at?: string;
+                    };
+                };
+            };
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        message: string;
+                        reason: "already_owned" | "bundle_not_eligible" | "unknown_product" | "pet_not_active" | "wish_mismatch";
+                        retry_at?: string;
+                        next_at?: string;
+                    };
+                };
+            };
         };
     };
 }
