@@ -7,6 +7,7 @@ import {
   keysOfProduct,
   parentItemState,
   productIdsOf,
+  purchaseStillPossible,
   readChildWishes,
   readChildWishesState,
   readParentWishes,
@@ -145,15 +146,23 @@ const PARENT = {
       { key: 'treats', variant: 'dog_treats', product_id: 'petprep_wish_treats_10', treats_left: 0 },
     ] },
   ],
-  unassigned_credits: [{ product_id: 'petprep_wish_bed', count: 1 }, { product_id: 'petprep_challenge_12w', count: 1 }],
+  unassigned_credits: [{ product_id: 'petprep_wish_bed', count: 1, item_key: 'bed' }, { product_id: 'store_bed_v2', count: 2, item_key: 'bed' }, { product_id: 'petprep_wish_toy_1', count: 1 }, { product_id: 'other', count: 1 }],
 };
 
 describe('parent list', () => {
   const data = readParentWishes(PARENT)!;
 
-  it('reads wishes, pets and only wish credits', () => {
+  it('reads wishes, pets and credits by the server item_key (QA #416 m13, fallback = known ids)', () => {
     expect(data.wishes.map((w) => w.id)).toEqual([31, 32]);
-    expect(data.unassigned_credits).toEqual([{ product_id: 'petprep_wish_bed', count: 1 }]);
+    expect(data.unassigned_credits).toEqual([
+      { product_id: 'petprep_wish_bed', count: 1, item_key: 'bed' },
+      // A product id the app doesn't know is not filtered out — the server's key labels it.
+      { product_id: 'store_bed_v2', count: 2, item_key: 'bed' },
+      { product_id: 'petprep_wish_toy_1', count: 1, item_key: 'toy_1' },
+      { product_id: 'other', count: 1, item_key: null },
+    ]);
+    // Older payload without `bundle_product_id` on the pet → the known bundle id.
+    expect(data.pets[0].bundle_product_id).toBe('petprep_wish_bundle_welcome');
     expect(data.pets[0].items.map(parentItemState)).toEqual(['buy', 'on_the_way', 'buy']);
   });
 
@@ -167,6 +176,23 @@ describe('parent list', () => {
   it('asks the store for every product it may show', () => {
     expect(productIdsOf(data)).toEqual(['petprep_wish_bed', 'petprep_wish_bowls', 'petprep_wish_bundle_welcome', 'petprep_wish_toy_2', 'petprep_wish_treats_10']);
     expect(productIdsOf(null)).toEqual([]);
+  });
+
+  it('pets[].bundle_product_id from the server is used; not eligible → null', () => {
+    const custom = readParentWishes({ ...PARENT, pets: [{ ...PARENT.pets[0], bundle_product_id: 'store_bundle_v2' }, { pet_id: 13, species: 'cat', bundle_eligible: false, bundle_product_id: 'x', items: [] }] })!;
+    expect(custom.pets.map((p) => p.bundle_product_id)).toEqual(['store_bundle_v2', null]);
+    expect(productIdsOf(custom)).toContain('store_bundle_v2');
+  });
+
+  it('QA #416 m4: purchaseStillPossible on fresh data', () => {
+    expect(purchaseStillPossible(data, { petId: 12, productId: 'petprep_wish_bowls', wishId: 31 })).toBe('ok');
+    expect(purchaseStillPossible(data, { petId: 12, productId: 'petprep_wish_bowls', wishId: 99 })).toBe('wish_gone');
+    expect(purchaseStillPossible(data, { petId: 77, productId: 'petprep_wish_bed', wishId: null })).toBe('pet_gone');
+    expect(purchaseStillPossible(data, { petId: 12, productId: 'petprep_wish_toy_2', wishId: null })).toBe('owned');
+    expect(purchaseStillPossible(data, { petId: 12, productId: 'petprep_wish_treats_10', wishId: null })).toBe('ok');
+    expect(purchaseStillPossible(data, { petId: 12, productId: 'petprep_wish_bundle_welcome', wishId: null })).toBe('ok');
+    const notEligible = { ...data, pets: [{ ...data.pets[0], bundle_eligible: false }] };
+    expect(purchaseStillPossible(notEligible, { petId: 12, productId: 'petprep_wish_bundle_welcome', wishId: 31 })).toBe('bundle_not_eligible');
   });
 
   it('the bundle covers bed + bowls + toy_1', () => {

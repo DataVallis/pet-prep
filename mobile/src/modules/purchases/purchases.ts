@@ -446,7 +446,10 @@ export async function restorePurchases(): Promise<RestoreOutcome> {
   if (gen === generation) void queryClient.invalidateQueries({ queryKey: BILLING_KEY });
   // The challenge is a consumable: the store reports past purchases as transactions; the
   // server (credits) decides what is still usable.
-  return { status: activeEntitlementIds(info).length > 0 || (info.nonSubscriptionTransactions?.length ?? 0) > 0 ? 'restored' : 'nothing' };
+  // QA #416 m12: only challenge transactions count — wish items (M6-W05) are consumables the
+  // server tracks per pet; a past bed purchase must not read as a restored challenge.
+  const challengeTx = (info.nonSubscriptionTransactions ?? []).filter((tx) => tx.productIdentifier === CHALLENGE_PRODUCT_ID).length;
+  return { status: activeEntitlementIds(info).length > 0 || challengeTx > 0 ? 'restored' : 'nothing' };
 }
 
 /** Test hook: back to a fresh app run. */

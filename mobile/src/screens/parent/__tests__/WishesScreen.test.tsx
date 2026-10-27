@@ -75,8 +75,45 @@ describe('WishesScreen', () => {
     expect(screen.getByText('Vse tri za 15,99 €')).toBeTruthy();
     fireEvent.press(screen.getByTestId('wish-buy-31'));
     await flush();
-    expect(redeemPetItem).toHaveBeenCalledWith(12, { product_id: 'petprep_wish_bowls', wish_id: 31 }, 'tx-9');
+    expect(redeemPetItem).toHaveBeenCalledWith(12, { product_id: 'petprep_wish_bowls', wish_id: 31 }, 'tx-9', expect.anything());
     expect(screen.getByText('Kupljeno — stvar je dodana.')).toBeTruthy();
+  });
+
+  it('QA #416 m4: re-checks fresh data before the store sheet; already owned → clear text, nothing charged', async () => {
+    getParentWishes.mockResolvedValueOnce({ ...BODY, wishes: [] });
+    getProducts.mockResolvedValue([product('petprep_wish_bed', '5,99 €')]);
+    renderWithQuery(<WishesScreen family={null} onBack={jest.fn()} />);
+    await flush();
+    fireEvent.press(screen.getByTestId('surprise-pet-12'));
+    // Meanwhile another parent bought the bed.
+    getParentWishes.mockResolvedValue({ ...BODY, wishes: [], pets: [{ ...BODY.pets[0], bundle_eligible: false, items: [{ ...BODY.pets[0].items[0], owned: true }] }] });
+    fireEvent.press(screen.getByTestId('surprise-buy-12-bed'));
+    await flush();
+    expect(purchaseStoreProduct).not.toHaveBeenCalled();
+    expect(screen.getByText('Ljubljenček to stvar že ima. Nič ni bilo zaračunano.')).toBeTruthy();
+  });
+
+  it('QA #416 m4: a wish handled by another parent meanwhile → no purchase', async () => {
+    getParentWishes.mockResolvedValueOnce(BODY);
+    getProducts.mockResolvedValue([product('petprep_wish_bowls', '5,99 €')]);
+    renderWithQuery(<WishesScreen family={null} onBack={jest.fn()} />);
+    await flush();
+    getParentWishes.mockResolvedValue({ ...BODY, wishes: [] });
+    fireEvent.press(screen.getByTestId('wish-buy-31'));
+    await flush();
+    expect(purchaseStoreProduct).not.toHaveBeenCalled();
+    expect(screen.getByText('To prošnjo je že obravnaval drug starš. Nič ni bilo zaračunano.')).toBeTruthy();
+  });
+
+  it('QA #416 M2: a purchase still pending from earlier is redeemed for its own pet / wish when the screen opens', async () => {
+    const { savePendingPurchase } = jest.requireActual<typeof import('@/modules/wishes/pendingPurchases')>('@/modules/wishes/pendingPurchases');
+    await savePendingPurchase({ parentId: 1, petId: 12, wishId: 31, productId: 'petprep_wish_bowls', transactionId: 'tx-old', species: 'dog' });
+    getParentWishes.mockResolvedValue(BODY);
+    getProducts.mockResolvedValue([]);
+    redeemPetItem.mockResolvedValue({ status: 'assigned', items: [], open_count: 0 });
+    renderWithQuery(<WishesScreen family={null} onBack={jest.fn()} />);
+    await flush();
+    expect(redeemPetItem).toHaveBeenCalledWith(12, { product_id: 'petprep_wish_bowls', wish_id: 31 }, 'tx-old', expect.anything());
   });
 
   it('a cancelled store purchase never redeems', async () => {
@@ -103,6 +140,19 @@ describe('WishesScreen', () => {
     expect(screen.getByText('Prošnja je zavrnjena. Otrok vidi »Mogoče kdaj drugič«.')).toBeTruthy();
   });
 
+  it('QA #416 m5: »Ne zdaj« on a wish another parent handled → clear text + refetch', async () => {
+    getParentWishes.mockResolvedValue(BODY);
+    getProducts.mockResolvedValue([]);
+    declineWish.mockRejectedValue(new ApiError('x', 422, { reason: 'wish_not_open' }));
+    renderWithQuery(<WishesScreen family={null} onBack={jest.fn()} />);
+    await flush();
+    const before = getParentWishes.mock.calls.length;
+    fireEvent.press(screen.getByTestId('wish-decline-31'));
+    await flush();
+    expect(screen.getByText('To prošnjo je že obravnaval drug starš.')).toBeTruthy();
+    expect(getParentWishes.mock.calls.length).toBeGreaterThan(before);
+  });
+
   it('surprise: pick the pet first, then the item list shows', async () => {
     getParentWishes.mockResolvedValue({ ...BODY, wishes: [] });
     getProducts.mockResolvedValue([product('petprep_wish_bed', '5,99 €')]);
@@ -124,7 +174,7 @@ describe('WishesScreen', () => {
     fireEvent.press(screen.getByTestId('wishes-assign-petprep_wish_bed-12'));
     await flush();
     expect(purchaseStoreProduct).not.toHaveBeenCalled();
-    expect(redeemPetItem).toHaveBeenCalledWith(12, { product_id: 'petprep_wish_bed', wish_id: null }, null);
+    expect(redeemPetItem).toHaveBeenCalledWith(12, { product_id: 'petprep_wish_bed', wish_id: null }, null, expect.anything());
   });
 
   it('old server (404 without reason) → "not available yet", no retry button', async () => {

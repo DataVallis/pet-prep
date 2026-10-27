@@ -1369,9 +1369,15 @@ export const api = {
    * POST /api/parent/pets/{pet}/items/redeem — assign a landed wish purchase to the pet.
    * `Idempotency-Key` = the store transaction id when known. 409 `no_credit` = retry later.
    */
-  redeemPetItem: (petId: number, body: components['schemas']['PetItemRedeemRequest'], idempotencyKey: string | null) =>
+  redeemPetItem: (
+    petId: number,
+    body: components['schemas']['PetItemRedeemRequest'],
+    idempotencyKey: string | null,
+    options: { timeoutMs?: number } = {},
+  ) =>
     apiRequest<RedeemPetItemResponse>(`/api/parent/pets/${petId}/items/redeem`, {
       method: 'POST',
+      ...(options.timeoutMs !== undefined ? { timeoutMs: options.timeoutMs } : {}),
       body: { product_id: body.product_id, ...(body.wish_id != null ? { wish_id: body.wish_id } : {}) },
       ...(idempotencyKey ? { headers: { 'Idempotency-Key': idempotencyKey } } : {}),
     }),

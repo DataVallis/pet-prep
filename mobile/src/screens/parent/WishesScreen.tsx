@@ -28,10 +28,11 @@ import { speciesName } from '@/modules/species/species';
 import { fonts, palette, radius, tightTracking } from '@/theme';
 import WishIcon from '@/modules/wishes/WishIcon';
 import { isGoodResult, useWishPurchase, wishResultText, type WishPurchaseResult } from '@/modules/wishes/useWishPurchase';
+import { useAppStore } from '@/store/appStore';
+import { retryPendingPurchases } from '@/modules/wishes/redeem';
 import {
-  WISH_PRODUCT_IDS,
+  errorReason,
   isFeatureMissing,
-  keyOfProduct,
   parentItemState,
   productIdsOf,
   showBundleOffer,
@@ -40,11 +41,24 @@ import {
   type ParentWishPet,
 } from '@/modules/wishes/wishes';
 
-type Message = { kind: 'purchase'; result: WishPurchaseResult } | { kind: 'declined' } | { kind: 'declineFailed' };
+type Message =
+  | { kind: 'purchase'; result: WishPurchaseResult }
+  | { kind: 'declined' }
+  /** QA #416 m5: another parent bought / declined it first (404 / 422 `wish_not_open`). */
+  | { kind: 'handledElsewhere' }
+  | { kind: 'declineFailed' };
 
 function messageText(m: Message): string {
   if (m.kind === 'purchase') return wishResultText(m.result);
+  if (m.kind === 'handledElsewhere') return t('wishes:parent.result.handledElsewhere');
   return m.kind === 'declined' ? t('wishes:parent.result.declined') : t('wishes:parent.result.declineFailed');
+}
+
+/** QA #416 m5: a decline that lost the race with another parent (the wish is no longer open). */
+export function wishHandledElsewhere(error: unknown): boolean {
+  if (!(error instanceof ApiError)) return false;
+  const reason = errorReason(error);
+  return error.status === 404 || (error.status === 422 && (reason === 'wish_not_open' || reason === null));
 }
 
 /** "pon., 27. okt., 9:00" in the family's zone; '' when the date is unusable. */
@@ -77,6 +91,22 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
   }, []);
 
   const wishes = useParentWishes();
+  // QA #416 M2: purchases charged earlier but not yet on a pet (late webhook, app closed,
+  // offline) are redeemed again for their own pet / wish whenever this screen opens.
+  const parentId = useAppStore((s) => (s.user?.role === 'parent' ? s.user.id : null));
+  const refetchWishes = wishes.refetch;
+  useEffect(() => {
+    if (parentId === null) return;
+    let alive = true;
+    void retryPendingPurchases(parentId)
+      .then((settled) => {
+        if (alive && settled > 0) void refetchWishes();
+      })
+      .catch(() => undefined);
+    return () => {
+      alive = false;
+    };
+  }, [parentId, refetchWishes]);
   const data = wishes.data ?? null;
   const productIds = useMemo(() => productIdsOf(data), [data]);
   const products = useWishProducts(productIds);
@@ -123,7 +153,12 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
     setMessage(null);
     decline.mutate(wish.id, {
       onSuccess: () => setMessage({ kind: 'declined' }),
-      onError: () => setMessage({ kind: 'declineFailed' }),
+      onError: (error) => {
+        if (wishHandledElsewhere(error)) {
+          setMessage({ kind: 'handledElsewhere' });
+          void wishes.refetch();
+        } else setMessage({ kind: 'declineFailed' });
+      },
     });
   };
 
@@ -195,9 +230,9 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
               <>
                 <Text style={styles.sectionTitle}>{t('wishes:parent.creditsTitle')}</Text>
                 {data.unassigned_credits.map((credit) => {
-                  const key = keyOfProduct(credit.product_id);
+                  const key = credit.item_key;
                   const variant = key === null || key === 'welcome_bundle' ? 'welcome_bundle' : variantFor(key, null, 'dog');
-                  const name = t(`wishes:items.${variant}`);
+                  const name = key === null ? t('wishes:parent.unknownItem') : t(`wishes:items.${variant}`);
                   return (
                     <Card key={credit.product_id} testID={`wishes-credit-${credit.product_id}`}>
                       <View style={styles.itemRow}>
@@ -266,7 +301,7 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
                         productId: wish.bundle_product_id,
                         label: (price) => t('wishes:parent.bundle', { price }),
                         a11y: (price) => t('wishes:parent.bundleA11y', { pet, price }),
-                        onPress: () => buy(wish.bundle_product_id ?? WISH_PRODUCT_IDS.welcome_bundle, wish.pet_id, wish.id, wish.species),
+                        onPress: () => buy(wish.bundle_product_id ?? '', wish.pet_id, wish.id, wish.species),
                         testID: `wish-bundle-${wish.id}`,
                         secondary: true,
                       })}
@@ -310,17 +345,17 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
                 </View>
                 {surprise && (
                   <Card testID={`surprise-items-${surprise.pet_id}`}>
-                    {surprise.bundle_eligible && (
+                    {surprise.bundle_eligible && surprise.bundle_product_id !== null && (
                       <View style={styles.surpriseRow}>
                         <View style={styles.itemRow}>
                           <WishIcon variant="welcome_bundle" tone="light" size={44} />
                           <Text style={[styles.body, styles.bold]}>{t('wishes:items.welcome_bundle')}</Text>
                         </View>
                         {priceButton({
-                          productId: WISH_PRODUCT_IDS.welcome_bundle,
+                          productId: surprise.bundle_product_id,
                           label: (price) => t('wishes:parent.bundle', { price }),
                           a11y: (price) => t('wishes:parent.bundleA11y', { pet: petName(surprise.pet_id, surprise.pet_name, surprise.species), price }),
-                          onPress: () => buy(WISH_PRODUCT_IDS.welcome_bundle, surprise.pet_id, null, surprise.species),
+                          onPress: () => buy(surprise.bundle_product_id ?? '', surprise.pet_id, null, surprise.species),
                           testID: `surprise-buy-${surprise.pet_id}-welcome_bundle`,
                           secondary: true,
                         })}

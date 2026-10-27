@@ -98,7 +98,16 @@
       "alreadyOwned": "This pet already has that item. The purchase stays under “Who gets it?” for another pet.",
       "refused": "The item couldn't be added. The purchase stays under “Who gets it?”.",
       "declined": "Request declined. Your child sees “Maybe another time”.",
-      "declineFailed": "That didn't work. Please try again."
-    }
+      "declineFailed": "That didn't work. Please try again.",
+      "checkFailed": "Couldn't check the request just now. Nothing was charged — please try again.",
+      "handledElsewhere": "Another parent has already handled this request.",
+      "stale": {
+        "wish_gone": "Another parent has already handled this request. Nothing was charged.",
+        "pet_gone": "This pet can't receive items right now. Nothing was charged.",
+        "owned": "The pet already has this item. Nothing was charged.",
+        "bundle_not_eligible": "The pet already has one of the three items, so the welcome pack isn't available. Nothing was charged."
+      }
+    },
+    "unknownItem": "Item"
   }
 }

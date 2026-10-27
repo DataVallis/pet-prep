@@ -106,7 +106,16 @@
       "alreadyOwned": "Ta ljubljenček to stvar že ima. Nakup ostane pod »Komu?« za drugega ljubljenčka.",
       "refused": "Stvari ni bilo mogoče dodati. Nakup ostane pod »Komu?«.",
       "declined": "Prošnja je zavrnjena. Otrok vidi »Mogoče kdaj drugič«.",
-      "declineFailed": "Ni uspelo. Poskusite znova."
-    }
+      "declineFailed": "Ni uspelo. Poskusite znova.",
+      "checkFailed": "Prošnje zdaj ni bilo mogoče preveriti. Nič ni bilo zaračunano — poskusite znova.",
+      "handledElsewhere": "To prošnjo je že obravnaval drug starš.",
+      "stale": {
+        "wish_gone": "To prošnjo je že obravnaval drug starš. Nič ni bilo zaračunano.",
+        "pet_gone": "Ta ljubljenček zdaj ne more dobiti stvari. Nič ni bilo zaračunano.",
+        "owned": "Ljubljenček to stvar že ima. Nič ni bilo zaračunano.",
+        "bundle_not_eligible": "Ljubljenček že ima eno od treh stvari, zato paket »Dobrodošlica« ni na voljo. Nič ni bilo zaračunano."
+      }
+    },
+    "unknownItem": "Stvar"
   }
 }

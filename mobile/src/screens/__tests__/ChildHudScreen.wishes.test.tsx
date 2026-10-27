@@ -62,3 +62,18 @@ it('no treats left: no chip, but the »Želje« row is there', async () => {
   fireEvent.press(screen.getByTestId('hud-settings-open'));
   expect(screen.getByTestId('hud-wishes-open')).toBeTruthy();
 });
+
+it('QA #416 m11: the state of a treat answer replaces the child pet cache (counter updates at once)', async () => {
+  (api.getChildPet as jest.Mock).mockResolvedValue(withWishes(5));
+  const after = withWishes(4);
+  (api.giveTreat as jest.Mock).mockResolvedValue({ treats_left: 4, given_today: 1, daily_limit: 2, media: null, state: { ...after, server_time: '2026-10-04T12:01:00+02:00' } });
+  renderWithQuery(<ChildHudScreen />);
+  await screen.findByTestId('hud-treat');
+  // The next poll would still say 5 — the cache must come from the answer, not a refetch.
+  (api.getChildPet as jest.Mock).mockReturnValue(new Promise(() => undefined));
+  fireEvent.press(screen.getByTestId('hud-treat'));
+  await act(async () => {
+    await new Promise((resolve) => setTimeout(resolve, 10));
+  });
+  expect(screen.getByTestId('hud-treat')).toHaveTextContent(/4/);
+});

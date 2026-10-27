@@ -158,8 +158,6 @@ import { TreatChip, TreatClip, treatErrorText } from '@/modules/wishes/TreatChip
 import { showTreatButton } from '@/modules/wishes/wishes';
 import { useGiveTreat } from '@/hooks/queries/useWishes';
 
-/** M6-W04: hearts over the pet after a treat without a clip. */
-const TREAT_HEARTS_MS = 3_000;
 import { mediaModeOf } from '@/modules/display/display';
 import ChildCertificateSheet from '@/components/ChildCertificateSheet';
 import { CERTIFICATE_CHILD_STRINGS, childCertificateEntry } from '@/modules/certificate/certificate';
@@ -189,6 +187,9 @@ import { useFactMoment } from '@/modules/breedFacts/useFactMoment';
 import FactSheet from '@/modules/breedFacts/FactSheet';
 import FactChip from '@/modules/breedFacts/FactChip';
 import BreedGuideScreen from '@/modules/breedFacts/BreedGuideScreen';
+
+/** M6-W04: hearts over the pet after a treat without a clip. */
+const TREAT_HEARTS_MS = 3_000;
 
 /**
  * User-visible strings of the HUD (`child:hud`, M1-18). `autoRetry` sits under the error

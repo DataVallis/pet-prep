@@ -12,7 +12,7 @@
  *   sends keys only. Real item art is pending (M6-W03) — `WishIcon` draws placeholders.
  */
 
-import { ApiError } from '@/api/client';
+import { ApiError, type ChildPetState } from '@/api/client';
 
 // ──────────────────────────────────────────────────────────────
 //  Catalogue
@@ -61,6 +61,10 @@ const VARIANTS: Readonly<Record<WishItemKey, { dog: WishVariant; cat: WishVarian
 
 export function isWishItemKey(value: unknown): value is WishItemKey {
   return typeof value === 'string' && (WISH_ITEM_KEYS as readonly string[]).includes(value);
+}
+
+export function isShopKey(value: unknown): value is ShopKey {
+  return value === 'welcome_bundle' || isWishItemKey(value);
 }
 
 export function isKnownVariant(value: unknown): value is WishVariant {
@@ -279,6 +283,8 @@ export interface TreatResult {
   daily_limit: number;
   /** URL of the treat clip when the server sent one (W03), else null → picture + hearts. */
   clipUrl: string | null;
+  /** The answer's child pet state (QA #416 m11), set by `useGiveTreat`; absent = older contract. */
+  state?: ChildPetState | null;
 }
 
 /**
@@ -341,6 +347,8 @@ export interface ParentWishPet {
   pet_name: string | null;
   species: 'dog' | 'cat';
   bundle_eligible: boolean;
+  /** Store product of the welcome bundle for this pet (server field; fallback = the known id). */
+  bundle_product_id: string | null;
   items: ParentPetItem[];
 }
 
@@ -348,7 +356,14 @@ export interface ParentWishes {
   open_count: number;
   wishes: ParentWish[];
   pets: ParentWishPet[];
-  unassigned_credits: { product_id: string; count: number }[];
+  unassigned_credits: UnassignedCredit[];
+}
+
+export interface UnassignedCredit {
+  product_id: string;
+  count: number;
+  /** Catalogue key from the server (`item_key`); fallback = the known product id; null = unknown (generic label). */
+  item_key: ShopKey | null;
 }
 
 export function readParentPetItems(raw: unknown, species: 'dog' | 'cat'): ParentPetItem[] {
@@ -398,14 +413,21 @@ export function readParentWishes(raw: unknown): ParentWishes | null {
         const petId = num(p.pet_id);
         if (petId === null) return [];
         const species = p.species === 'cat' ? 'cat' : 'dog';
-        return [{ pet_id: petId, pet_name: str(p.pet_name), species, bundle_eligible: p.bundle_eligible === true, items: readParentPetItems(p.items, species) }];
+        const eligible = p.bundle_eligible === true;
+        // QA #416 m13: the server's `bundle_product_id`; an older payload without it → the known id.
+        const bundle = 'bundle_product_id' in p ? str(p.bundle_product_id) : eligible ? WISH_PRODUCT_IDS.welcome_bundle : null;
+        return [{ pet_id: petId, pet_name: str(p.pet_name), species, bundle_eligible: eligible, bundle_product_id: eligible ? bundle : null, items: readParentPetItems(p.items, species) }];
       })
     : [];
-  const credits = Array.isArray(raw.unassigned_credits)
+  // QA #416 m13: the server sends `item_key` per credit (it only lists wish credits) — no
+  // filtering by hard-coded product ids; an older payload without it falls back to the known ids.
+  const credits: UnassignedCredit[] = Array.isArray(raw.unassigned_credits)
     ? raw.unassigned_credits.filter(isObj).flatMap((c) => {
         const productId = str(c.product_id);
         const n = count(c.count);
-        return productId !== null && keyOfProduct(productId) !== null && n > 0 ? [{ product_id: productId, count: n }] : [];
+        if (productId === null || n === 0) return [];
+        const itemKey = isShopKey(c.item_key) ? c.item_key : keyOfProduct(productId);
+        return [{ product_id: productId, count: n, item_key: itemKey }];
       })
     : [];
   return { open_count: count(raw.open_count, wishes.length), wishes, pets, unassigned_credits: credits };
@@ -443,7 +465,38 @@ export function productIdsOf(data: ParentWishes | null): string[] {
   }
   for (const p of data?.pets ?? []) {
     for (const i of p.items) ids.add(i.product_id);
-    if (p.bundle_eligible) ids.add(WISH_PRODUCT_IDS.welcome_bundle);
+    if (p.bundle_eligible && p.bundle_product_id) ids.add(p.bundle_product_id);
   }
   return [...ids].sort();
+}
+
+// ──────────────────────────────────────────────────────────────
+//  QA #416 m4: is a purchase still possible on fresh data?
+// ──────────────────────────────────────────────────────────────
+
+export interface PurchaseTarget {
+  petId: number;
+  productId: string;
+  wishId: number | null;
+}
+
+/**
+ * Checked on a fresh `GET /api/parent/wishes` right before the store sheet opens (another
+ * parent may have bought / declined meanwhile):
+ * - `wish_gone` — the wish is no longer open;
+ * - `pet_gone` — the pet can't receive items any more;
+ * - `owned` — the pet already owns the (durable) item;
+ * - `bundle_not_eligible` — the pet owns one of the bundle's items now.
+ */
+export type PurchaseCheck = 'ok' | 'wish_gone' | 'pet_gone' | 'owned' | 'bundle_not_eligible';
+
+export function purchaseStillPossible(data: ParentWishes, target: PurchaseTarget): PurchaseCheck {
+  if (target.wishId !== null && !data.wishes.some((w) => w.id === target.wishId)) return 'wish_gone';
+  const pet = data.pets.find((p) => p.pet_id === target.petId);
+  if (!pet) return 'pet_gone';
+  const isBundle = pet.bundle_product_id === target.productId || keyOfProduct(target.productId) === 'welcome_bundle';
+  if (isBundle) return pet.bundle_eligible ? 'ok' : 'bundle_not_eligible';
+  const item = pet.items.find((i) => i.product_id === target.productId);
+  if (item && item.key !== 'treats' && item.owned) return 'owned';
+  return 'ok';
 }
