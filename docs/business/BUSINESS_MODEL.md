@@ -33,8 +33,8 @@ Odrasli uporabljajo isti izdelek brez spremembe aplikacije: račun starša → d
 ## 3. Backend monetizacija
 
 - **Second Chance reset** 19,99 € (ob game overu) / **Breed Downgrade** brezplačno.
-- **IAP consumables:** veterinar 1,99–2,99 € ("v resnici bi stalo 150 €"), priboljški 0,99 € / 10×.
-- **IAP non-consumables:** igrače 1,49 € (počasnejši upad gibanja), odklep pasem.
+- **»Želje« — nakupi stvari za ljubljenčka (odločeno 26. 10. 2026, zgrajeno 27. 10. 2026, `docs/product/SHOP_SPEC.md`):** otrok prosi iz kataloga brez cen, kupi samo starš. Postelja / skledi / igrača 5,99 € (dve igrači na vrsto), priboljški 2,99 € za 10, paket »Dobrodošlica« 15,99 €. **Samo videz** — ne vpliva na upad potreb, Care Score ali certifikat (S1); **veterinarja in zdravil ni** (S2, nikoli »plačaj, da rešiš psa«). Tudi v brezplačni verziji. Nadomešča prejšnji načrt (veterinar 1,99–2,99 €, priboljški 0,99 €, igrače 1,49 € s počasnejšim upadom). Nakup deluje, ko so izdelki v trgovinah (M6-W02); AI vsebine stvari M6-W03.
+- **Odklep pasem** je del 12-tedenskega izziva (49,99 €), ne ločen nakup.
 - **B2B affiliate:** ob certifikatu QR kupon partnerja (Mr. Pet, Zootic) — npr. 20 % na starter kit; PetPrep dobi CPA provizijo.
 - **Žetoni za AI medije (David, 4. 10. 2026, *načrt*):** osnovni nabor slike + videov ob rojstvu je vključen; za dodatne slike/videe starš kupi paket žetonov (npr. x videov, y slik). Cena paketa mora pokriti strošek modela z maržo (orientacijsko na fal.ai: slika ~0,03–0,05 $, video ~0,05–0,40 $ na sekundo glede na model — preveriti ob izbiri modela).
 - **Faza 2:** AI asistent 3,99 €/mes, affiliate trgovina, zavarovanja (lead gen), **veterinarji (AI prvi stik → preusmeritev na partnerskega veterinarja: lead-i, telemedicina, provizija ali članarina ambulante)**, booking provizije. Podrobno: `docs/product/PHASE2_SPEC.md`.
@@ -55,7 +55,7 @@ Odrasli uporabljajo isti izdelek brez spremembe aplikacije: račun starša → d
 | Lead → nakup | 10 % |
 | CAC | 15,00 € |
 | Cena core | 49,99 € |
-| Backend (15 % × 19,99 € + IAP) | +3,00 € |
+| Backend (15 % × 19,99 € + »Želje«) | +3,00 € *(predpostavka; »Želje« še brez meritev)* |
 | AOV | 52,99 € |
 | ROAS (front-end) | ~3,5× |
 
