@@ -857,6 +857,19 @@
             "prompt_hash": "sha256:475fa61d276c665595d04307bcb594462d2739a94504a7b03de7441717261c99",
             "generated_at": "2026-10-27T01:00:57+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "bullmastiff",
+            "species": "dog",
+            "colour": "fawn",
+            "file": "dog/bullmastiff.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:86808d50bdc8436fede477df36b77e547d0091df93c8c3203d27639783451f95",
+            "generated_at": "2026-10-27T03:29:38+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
