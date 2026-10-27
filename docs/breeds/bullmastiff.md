@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `bullmastiff` (viri S565–S569; ponovno S8, S10, S11, S14, S35, S45, S92, S123, S174); seznam za vzreditelja: 3 testi »minimum« (RKC S567) |
 | Izvor | FCI št. 157 »Bullmastiff«, skupina 2, sekcija 2.1 (molosi, tip mastifa), Velika Britanija (S565) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 67. mesto »Bullmastiffs« (S174, prebrano 2026-10-27) |
-| PR-ji | pet-prep #414 (pasma) · portret: po združitvi · spletna stran: po portretu |
+| PR-ji | pet-prep #414 (pasma, združen `6e37d65`) · portret: #415 (zagon 40444394564) · spletna stran: pet-prep-website `feat/register-bullmastiff` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -43,7 +43,7 @@
 | Česanje 1× na teden (rutina »Počeši«), opozorilo 60 min po obroku, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R16 / M5-R17 | 2026-10-27 |
 | Čiščenje obraza vsak dan (otrok) | 🛠 | 💶 izziv | M5-R14 | 2026-10-27 |
 | Barva (izbirnik: 3 standardne barve, privzeto plavo rjav s črno masko) | 🛠 | 💶 izziv | M5-R21 | 2026-10-27 |
-| AI portret v registru | 🗓 po združitvi | — | M5-R11-04 | — |
+| AI portret v registru (plavo rjav s črno masko, sprejet v prvem poskusu, zagon 40444394564, PR #415) | ✅ | — | M5-R11-04 | 2026-10-27 |
 | Stran na petprep.si (`/animals/dogs/bullmastiff`, `/sl/zivali/psi/bulmastif`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -58,4 +58,4 @@
 - **Čiščenje obraza vsak dan:** PDSA piše »might need daily attention« (omahljivo) — po pravilu »Breed care tasks« zgrajeno kot vsak dan; po želji redkeje ali brez naloge.
 - **Breed Watch kategorija 2:** posameznih točk skrbi RKC stran ni vrnila — zato brez oznak `hips_hind_legs` / `eyelid_problems` (PDSA navaja displazijo kolkov in komolcev ter entropij / ektropij). Če točke obstajajo, se oznaki dodata.
 - **Ime:** »Bulmastif« ni preverjeno pri KZS.
-- **Barva portreta:** plavo rjav s črno masko je predlog Claude (standard ne določa najpogostejše barve).
+- **Barva portreta:** plavo rjav s črno masko je predlog Claude (standard ne določa najpogostejše barve). Portret: zagon 40444394564 (koda `6e37d65`, brez produkcijske namestitve), sprejet v prvem poskusu — realistična fotografija, zmeren gobček z odprtimi nosnicami; PR #415.
