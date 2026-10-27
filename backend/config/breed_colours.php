@@ -444,6 +444,12 @@ return [
         ['key' => 'tricolour', 'value' => 'white with black and tan markings', 'en' => 'Tricolour', 'sl' => 'Tribarven'],
         ['key' => 'white-black', 'value' => 'white with black markings', 'en' => 'White and black', 'sl' => 'Bel s črnimi lisami'],
     ],
+    // M5-R10-71: FCI S566 — any shade of brindle, fawn or red, always with a black muzzle (mask).
+    'bullmastiff' => [
+        ['key' => 'fawn', 'value' => 'fawn with a black mask', 'en' => 'Fawn', 'sl' => 'Plavo rjav'],
+        ['key' => 'red', 'value' => 'red with a black mask', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'brindle', 'value' => 'brindle with a black mask', 'en' => 'Brindle', 'sl' => 'Tigrast'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

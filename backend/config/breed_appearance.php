@@ -608,6 +608,13 @@
 | portrait); smooth coat for the portrait (broken and rough are standard too). Natural tail. RKC Breed Watch Category 1
 | (S559). Colour weights unsourced → `verified => false`.
 |
+| Bullmastiff (M5-R10-71, docs/research/dog-data bullmastiff.appearance): "Powerful build, symmetrical, showing great
+| strength, but not cumbersome; sound and active." (FCI 157, S566); coat "Short and hard, weather-resistant, lying flat to
+| body."; colours "Any shade of brindle, fawn or red; colour to be pure and clear." with "Black muzzle essential" — fawn
+| weighted highest (the register portrait). Welfare (PDSA S568: BOAS "caused by their shorter faces"): a moderate muzzle
+| with clearly open nostrils, no heavy wrinkles, tight eyelids. Natural ears and tail. RKC Breed Watch Category 2 (S567).
+| Colour weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -3153,6 +3160,42 @@ return [
             'tail' => ['natural undocked tail carried erect'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+
+    // M5-R10-71 (docs/research/dog-data/data.json bullmastiff.appearance; runbook rules 2026-10-10:
+    // standard colours only — S566; fawn, red or brindle, always with a black muzzle; moderate muzzle, natural tail).
+    'bullmastiff' => [
+        'display_name' => 'Bullmastiff',
+        // Colour frequencies are in no source (bullmastiff.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 157 (S566, https://dev.fci.be/Nomenclature/Standards/157g02-en.pdf), RKC breed page (S567), PDSA (S568) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S567 "Size: Large"; S566 "Height at the withers: Males: 64 - 69 cms."',
+            'build' => 'S566 "Powerful build, symmetrical, showing great strength, but not cumbersome; sound and active."',
+            'coat_length' => 'S566 "Short and hard, weather-resistant, lying flat to body."',
+            'coat_color' => 'S566 "Any shade of brindle, fawn or red; colour to be pure and clear."; "Black muzzle essential" (weights unsourced; no white patches)',
+            'ear_carriage' => 'S566 "V-shaped, folded back, set on wide and high, level of occiput giving square appearance to skull."',
+            'eye_color' => 'S566 "Dark or hazel, of medium size, set apart the width of muzzle with furrow between." (welfare: tight eyelids, PDSA S568 entropion / ectropion)',
+            'tail' => 'S566 "Set high, strong at root and tapering, reaching to hocks, carried straight or curved, but not hound fashion."',
+            'muzzle' => 'S566 "Nose broad with widely spreading nostrils; flat neither pointed nor turned up in profile." (welfare: PDSA S568 BOAS — a moderate muzzle with open nostrils)',
+        ],
+        'traits' => [
+            'size' => ['large, powerful'],
+            'build' => [['value' => 'powerful, symmetrical build showing great strength but not cumbersome, sound and active', 'weight' => 3], 'muscular, deep-chested and square, standing on straight, strong legs'],
+            'coat_length' => ['short, hard, weather-resistant coat lying flat to the body'],
+            // Standard colours only (S566); fawn highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'fawn with a black mask', 'weight' => 50],
+                ['value' => 'red with a black mask', 'weight' => 30],
+                ['value' => 'brindle with a black mask', 'weight' => 20],
+            ],
+            'ear_carriage' => ['V-shaped ears folded back, set wide and high, giving a square look to the large skull'],
+            // Welfare (PDSA S568 entropion / ectropion): tight eyelids, no haw.
+            'eye_color' => ['dark or hazel medium-sized eyes with tight eyelids, set wide apart with a furrow between'],
+            'tail' => ['natural tail set high, strong at the root and tapering, reaching the hocks'],
+            'muzzle' => ['moderately short, broad, square black muzzle with a broad black nose, clearly open nostrils and no heavy wrinkles'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',

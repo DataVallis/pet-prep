@@ -613,6 +613,13 @@ class FalAiService
                 .'black nose, small dark almond-shaped eyes with a keen expression, small button ears folded forward, '
                 .'natural undocked tail carried erect, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-71: FCI 157 (S566) — fawn with a black mask as the anchor (the first colour of the game list); a moderate
+            // muzzle with open nostrils (PDSA S568 BOAS), natural ears and tail.
+            BreedType::Bullmastiff => 'A powerful, calm Bullmastiff dog with a short, hard fawn coat and a black muzzle mask toning off towards the eyes, '
+                .'large, symmetrical and strong but not cumbersome body, large square skull, moderately short broad muzzle with clearly open nostrils, '
+                .'dark medium-sized eyes with tight eyelids, V-shaped ears folded back, natural tail reaching the hocks, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1460,6 +1467,18 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'smooth, short and weatherproof',
                 'markings' => 'predominantly white body, markings mostly on the head, ears and around the tail, never mostly black or tan, button or dropped ears, natural undocked tail',
+            ],
+            // M5-R10-71: colours of the FCI standard (S566) — any shade of fawn, red or brindle with an essential black muzzle;
+            // moderate muzzle with open nostrils (PDSA S568), natural ears and tail.
+            BreedType::Bullmastiff => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'fawn with a black mask',
+                    1 => 'red with a black mask',
+                    2 => 'brindle with a black mask',
+                },
+                'eye_color' => 'dark or hazel',
+                'fur_texture' => 'short, hard and lying flat',
+                'markings' => 'black muzzle mask toning off towards the eyes, at most a slight white mark on the chest, no other white, moderate muzzle with open nostrils, natural tail',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
