@@ -11,7 +11,7 @@
 | Izvor | FCI št. 288 »Chinese Crested Dog«, skupina 9, sekcija 4 (gole pasme), Kitajska (S570) — Kitajska (CN) je nova država izvora v registru |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 68. mesto »Chinese Crested« (S174, prebrano 2026-10-27) |
 | Različici | gola (Hairless — čop, »nogavičke«, perjanica na repu) in »powder puff« (vsa pokrita z dolgo mehko dlako); igra in portret prikazujeta golo različico |
-| PR-ji | pet-prep #418 (pasma) · portret: (sledi) · spletna stran: (sledi, le s portretom) |
+| PR-ji | pet-prep #418 (pasma, združen `43d4f15`) · portret: #419 (zagon 40465529289) · spletna stran: pet-prep-website `feat/register-chinese-crested` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -45,7 +45,7 @@
 | Striženje krempljev 1× na teden (otrok) | 🛠 | 💶 izziv | M5-R19 | 2026-10-27 |
 | Zaščita kože pred soncem / mrazom | 🗓 le čip in besedilo v registru — mehanike ni | — | nova naloga (David) | — |
 | Barva (izbirnik: 3 standardne barve, privzeto rožnata s temnimi pegami) | 🛠 | 💶 izziv | M5-R21 | 2026-10-27 |
-| AI portret v registru | 🗓 sledi takoj po združitvi (§8) | — | M5-R11-04 | — |
+| AI portret v registru (gola različica, rožnata koža s temnimi pegami, sprejet v prvem poskusu, zagon 40465529289, PR #419) | ✅ | — | M5-R11-04 | 2026-10-27 |
 | Stran na petprep.si (`/animals/dogs/chinese-crested`, `/sl/zivali/psi/kitajski-goli-pes`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -62,4 +62,4 @@
 - **Čip `cold_sensitive`** ima besedilo »tanka dlaka — občutljiv na mraz« (iz italijanskega hrta) — za golega psa bi bilo natančneje »gola koža«; besedilo je skupno, zato ga run ni spreminjal.
 - **Breed Watch kategorija 2:** posameznih točk skrbi RKC stran ni vrnila (PetMD navaja izpah pogačice) — brez oznake dobrobiti.
 - **Ime:** »Kitajski goli pes« (tudi »kitajski čopasti pes«) ni preverjeno pri KZS.
-- **Barva portreta:** rožnata koža s temnimi pegami je predlog Claude (standard dovoli vse barve razen merle).
+- **Barva portreta:** rožnata koža s temnimi pegami je predlog Claude (standard dovoli vse barve razen merle). Portret: zagon 40465529289 (koda `43d4f15`, brez produkcijske namestitve), sprejet v prvem poskusu — realistična fotografija gole različice z belim čopom, »nogavičkami« in perjanico, zdrava koža; PR #419.
