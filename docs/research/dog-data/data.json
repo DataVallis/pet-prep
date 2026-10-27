@@ -37507,13 +37507,21 @@
         "confidence": "high",
         "notes": "PetMD (S574). Register health key patellar_luxation."
       },
-      "eye_lens_retina": {
-        "value": "primary lens luxation and progressive retinal atrophy — DNA tests for breeding dogs",
+      "lens_luxation": {
+        "value": "primary lens luxation — a DNA test for breeding dogs",
         "unit": "—",
         "source_id": "S572",
         "quote": "DNA test for Primary lens luxation (PLL)",
         "confidence": "high",
-        "notes": "RKC breed page (S572), Best Practice tests: 'DNA test for Primary lens luxation (PLL)', 'DNA test for Progressive retinal atrophy (prcd-PRA)'. Register health key inherited_eye_disease."
+        "notes": "RKC breed page (S572), Best Practice test. Register health key primary_lens_luxation."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy — a DNA test for breeding dogs",
+        "unit": "—",
+        "source_id": "S572",
+        "quote": "DNA test for Progressive retinal atrophy (prcd-PRA)",
+        "confidence": "high",
+        "notes": "RKC breed page (S572), Best Practice test. Register health key pra_inherited_blindness."
       },
       "teeth": {
         "value": "the hairless variety often lacks some teeth (forward-pointing canines; no penalty for missing teeth)",
