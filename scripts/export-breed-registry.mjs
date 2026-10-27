@@ -454,6 +454,7 @@ const SPECIES = [
       { id: 'saint_bernard', synonyms: { en: ['St. Bernard', 'St Bernard', 'St. Bernhardshund', 'Bernhardiner', 'Alpine Mastiff'], sl: ['sveti bernard', 'pes svetega Bernarda', 'bernhardiner'] } },
       { id: 'staffordshire_bull_terrier', synonyms: { en: ['Staffie', 'Staffy', 'Stafford', 'SBT'], sl: ['stafordsirski bulterier', 'staffordshirski bulterier', 'staffie'] } },
       { id: 'airedale_terrier', synonyms: { en: ['Airedale', 'King of Terriers', 'Waterside Terrier', 'Bingley Terrier'], sl: ['airedalski terier', 'airedale terier', 'erdelterier'] } },
+      { id: 'russell_terrier', synonyms: { en: ['Russell Terrier', 'Jack Russell', 'JRT'], sl: ['jack russell', 'jack rasel terier', 'džek rasel'] } },
     ],
   },
   {
@@ -1921,6 +1922,28 @@ const DOG_FACTS = {
       ['hypothyroidism', 'health.hypothyroidism'],
     ],
   },
+  // M5-R10-70 (AKC Russell Terrier = FCI / RKC Jack Russell Terrier). Height = FCI 345 (S558), weight = FCI 1 kg per 5 cm
+  // → 5–6 kg (S558), lifespan = McMillan 2024 median 13.3 y via the Dogs Trust table (S123) + the RKC band (S559), exercise
+  // = RKC 'Up to 1 hour per day' (S559), coat / grooming / shedding = RKC key facts (S559). FCI origin Great Britain (GB).
+  // Not exported: adult_weight.salt_category, lifespan.vetcompass_2022 / petmd / senior_from, health.breed_watch (Category 1).
+  russell_terrier: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['kneecap_luxation', 'health.patellar_luxation'],
+      ['primary_lens_luxation', 'health.primary_lens_luxation'],
+      ['inherited_ataxia', 'health.ataxia'],
+      ['legg_perthes', 'health.legg_perthes'],
+      ['deafness', 'health.deafness'],
+      ['periodontal_disease', 'health.periodontal_disease'],
+    ],
+  },
 
 };
 
@@ -1961,6 +1984,7 @@ export const DOG_CARE_TASKS = {
   german_wirehaired_pointer: [['ear_cleaning', 1, 28, 'proposed_game_parameters.german_wirehaired_pointer.ear_care']],
   saint_bernard: [['ear_cleaning', 1, 14, 'proposed_game_parameters.saint_bernard.ear_care']],
   airedale_terrier: [['ear_cleaning', 1, 7, 'proposed_game_parameters.airedale_terrier.ear_care'], ['groomer_visit', 1, 84, 'proposed_game_parameters.airedale_terrier.professional_grooming']],
+  russell_terrier: [['tooth_brushing', 3, 7, 'proposed_game_parameters.russell_terrier.tooth_brushing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -2493,6 +2517,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.airedale_terrier.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.airedale_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.airedale_terrier.exercise_minutes_senior',
+  },
+  russell_terrier: {
+    adult_minutes: ['proposed_game_parameters.russell_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.russell_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.russell_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.russell_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.russell_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.russell_terrier.exercise_minutes_senior',
   },
 
 };
