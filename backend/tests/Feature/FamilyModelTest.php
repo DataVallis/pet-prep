@@ -171,7 +171,7 @@ describe('migration backfill', function () {
         // M2-01d certificates reference families too.
         (require database_path('migrations/2026_11_30_120000_create_challenge_certificates.php'))->down();
         // M6-W01 wishes reference purchase_events / families / pets too.
-        (require database_path('migrations/2027_02_03_120000_create_wishes_tables.php'))->down();
+        (require database_path('migrations/2027_02_04_120000_create_wishes_tables.php'))->down();
         (require database_path('migrations/2026_10_19_120000_create_revenuecat_ledger.php'))->down();
         (require database_path('migrations/2026_10_04_150000_add_pin_only_child_profiles.php'))->down();
         $contracts->down();
@@ -239,7 +239,7 @@ describe('migration backfill', function () {
         // M2-01d certificates reference families too.
         (require database_path('migrations/2026_11_30_120000_create_challenge_certificates.php'))->down();
         // M6-W01 wishes reference purchase_events / families / pets too.
-        (require database_path('migrations/2027_02_03_120000_create_wishes_tables.php'))->down();
+        (require database_path('migrations/2027_02_04_120000_create_wishes_tables.php'))->down();
         (require database_path('migrations/2026_10_19_120000_create_revenuecat_ledger.php'))->down();
         (require database_path('migrations/2026_10_04_150000_add_pin_only_child_profiles.php'))->down();
         $contracts->down();
@@ -265,7 +265,7 @@ describe('migration backfill', function () {
         // M2-01d certificates reference families too.
         (require database_path('migrations/2026_11_30_120000_create_challenge_certificates.php'))->down();
         // M6-W01 wishes reference purchase_events / families / pets too.
-        (require database_path('migrations/2027_02_03_120000_create_wishes_tables.php'))->down();
+        (require database_path('migrations/2027_02_04_120000_create_wishes_tables.php'))->down();
         (require database_path('migrations/2026_10_19_120000_create_revenuecat_ledger.php'))->down();
         (require database_path('migrations/2026_10_04_150000_add_pin_only_child_profiles.php'))->down();
         $contracts->down();
