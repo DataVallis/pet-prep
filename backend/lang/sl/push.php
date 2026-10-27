@@ -258,4 +258,23 @@ return [
         'certificate' => '12-tedenski izziv PetPrep vašega otroka je končan! V aplikaciji ustvarite certifikat odgovornosti.',
         'report' => '12-tedenski izziv PetPrep vašega otroka se je končal. Poročilo o izzivu vas čaka v aplikaciji.',
     ],
+
+    // M6-W01 »Želje« (WISHES_API §6, David 27. 10. 2026): otrok si je zaželel stvar. Samo staršem, vikanje;
+    // naslov je ime ljubljenčka (če ga ima), besedilo nikoli ne omenja imen. Stvari v tožilniku.
+    'wish_created' => [
+        'body' => 'Vaš otrok si želi :item.',
+    ],
+    'wish_items' => [
+        'dog_bed' => 'posteljo',
+        'cat_basket' => 'košaro',
+        'dog_bowls' => 'skledi',
+        'cat_bowls' => 'skledi',
+        'dog_rope' => 'vrv za vlečenje',
+        'dog_squeaky' => 'piskajočo igračo',
+        'cat_mouse' => 'plišasto miško',
+        'cat_feather' => 'palico s peresi',
+        'dog_treats' => 'priboljške',
+        'cat_treats' => 'priboljške',
+        'other' => 'novo stvar',
+    ],
 ];

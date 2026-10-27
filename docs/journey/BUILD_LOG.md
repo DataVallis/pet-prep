@@ -9,6 +9,16 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-27 — »Želje«: strežnik je pripravljen
+
+**Kaj:** Otrok lahko (ko bo aplikacija nared) prosi za posteljo, sklede, igračo ali priboljške za svojega ljubljenčka — brez cen. Starš dobi obvestilo »Vaš otrok si želi posteljo.« (brez imen), seznam želja vidi na nadzorni plošči in izbere »Kupi« ali »Ne zdaj«. Pravila na strežniku: največ 3 odprte prošnje, po »Ne zdaj« spet čez 7 dni, priboljšek največ 2× na dan, kupljena stvar gre ljubljenčku želje. Pri vračilu v trgovini stvar izgine.
+**Zakaj je pomembno:** Otrok spozna, da ljubljenček stane tudi po nakupu in da odloča starš. Za PetPrep prvi prihodek tudi iz brezplačne verzije — brez »plačaj, da bo lažje« (stvari ne vplivajo na igro).
+- 👩 Starši: nakup je vedno vaš, otrok cen ne vidi; obvestilo največ enkrat na 10 minut.
+- 💼 Investitorji: drugi vir prihodka (5,99 € / 2,99 € / paket 15,99 €) poleg izziva, tudi pri brezplačnem planu.
+- 🛠 Tehnično: 5 novih tabel, 6 končnih točk, webhook RevenueCat za 6 izdelkov, idempotenten zahtevek z `Idempotency-Key`, 40 testov.
+
+---
+
 ## 2026-10-26 — Prilagojen način: aplikacija jasno pove, da potiske na iPhonu šteje samo Apple Watch
 
 **Kaj:** Na testu v družini je bil prilagojen način (potiski invalidskega vozička) vklopljen na iPhonu brez ure — dva dni 0 potiskov. Apple Zdravje potiske zapisuje samo z Apple Watch (Invalidski voziček = Da); sam iPhone jih ne šteje. Do zdaj je to pisalo v eni drobni vrstici. Zdaj je pod stikalom jasen okvir »Kdo šteje potiske« (iPhone: samo Apple Watch; Android: naprava ali aplikacija za Health Connect; brez ure: »Vpiši sprehod«), po 12:00 brez potiskov pa starš na kartici otroka vidi »Danes še ni potiskov« z gumbom »Vpiši sprehod«. Otroku tega ne kažemo.

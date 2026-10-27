@@ -29,6 +29,7 @@ use App\Services\SocialisationPayload;
 use App\Services\TrainingPayload;
 use App\Services\TrainingService;
 use App\Services\WandPayload;
+use App\Services\WishService;
 use Carbon\CarbonInterface;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -416,6 +417,8 @@ class ChildPetStateResource extends JsonResource
             'walk_heat' => CareTasksPayload::walkHeat($pet, $now),
             // M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose.
             'care_guide' => CareGuidePayload::for($pet, $now, $profile)->toArray(),
+            // M6-W01 »Želje«: open wishes of the viewing child, the pet's durable items, treats (left / today / limit).
+            'wishes' => app(WishService::class)->stateBlock($pet, $actor, $now),
         ];
     }
 }

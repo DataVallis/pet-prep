@@ -256,4 +256,23 @@ return [
         'certificate' => 'Your child’s 12-week PetPrep challenge is complete! Open the app to create the Certificate of Responsibility.',
         'report' => 'Your child’s 12-week PetPrep challenge has ended. The challenge report is waiting for you in the app.',
     ],
+
+    // M6-W01 »Wishes« (WISHES_API §6, David 2026-10-27): a child wished for an item. Parents only;
+    // title = the pet's name (when set), the body never names anyone.
+    'wish_created' => [
+        'body' => 'Your child is wishing for :item.',
+    ],
+    'wish_items' => [
+        'dog_bed' => 'a bed',
+        'cat_basket' => 'a basket',
+        'dog_bowls' => 'bowls',
+        'cat_bowls' => 'bowls',
+        'dog_rope' => 'a rope toy',
+        'dog_squeaky' => 'a squeaky toy',
+        'cat_mouse' => 'a plush mouse',
+        'cat_feather' => 'a feather wand',
+        'dog_treats' => 'treats',
+        'cat_treats' => 'treats',
+        'other' => 'something new',
+    ],
 ];

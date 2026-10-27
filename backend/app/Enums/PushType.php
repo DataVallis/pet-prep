@@ -101,10 +101,20 @@ enum PushType: string
      */
     case CareReminder = 'care_reminder';
 
+    /**
+     * M6-W01 »Želje« (WISHES_API §6, David 2026-10-27): a child wished for an item —
+     * the family's parents (formal copy, no names in the body; title = the pet's name
+     * when set). Metric = the wish id; data carries `wish_id`. Max one per child per
+     * 10 minutes (WishService); held over quiet hours; sent while the pet is
+     * hard-stopped / ill (wishing is not a care action); dropped when the wish is no
+     * longer open at delivery.
+     */
+    case WishCreated = 'wish_created';
+
     /** Phase 2 and above (not the walk reminder, not billing news): high priority, Android channel "alarm". */
     public function isUrgent(): bool
     {
-        return ! in_array($this, [self::SoftWarning, self::WalkReminder, self::PlayReminder, self::LitterReminder, self::TrialEnding, self::PaymentRequired, self::ChallengeCompleted, self::PetReady, self::PetBirthday, self::CareReminder], true);
+        return ! in_array($this, [self::SoftWarning, self::WalkReminder, self::PlayReminder, self::LitterReminder, self::TrialEnding, self::PaymentRequired, self::ChallengeCompleted, self::PetReady, self::PetBirthday, self::CareReminder, self::WishCreated], true);
     }
 
     /**
@@ -125,7 +135,7 @@ enum PushType: string
      */
     public function holdsOverQuietHours(): bool
     {
-        return $this->isLockNews() || $this === self::PetBirthday || $this === self::CareReminder;
+        return $this->isLockNews() || $this === self::PetBirthday || $this === self::CareReminder || $this === self::WishCreated;
     }
 
     /**
@@ -170,6 +180,8 @@ enum PushType: string
             self::PetBirthday => 12 * 3600,
             // A reminder for a period of weeks: still useful hours later.
             self::CareReminder => 12 * 3600,
+            // M6-W01: the wish waits on the list anyway.
+            self::WishCreated => 12 * 3600,
         };
     }
 }

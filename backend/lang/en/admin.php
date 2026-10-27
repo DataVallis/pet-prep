@@ -29,6 +29,8 @@ return [
         'stage_value_model' => 'life-stage value',
         'credits' => 'Challenge credits',
         'credit_model' => 'challenge credit',
+        'wish_credits' => 'Wish credits',
+        'wish_credit_model' => 'wish credit',
         'certificates' => 'Certificates',
         'certificate_model' => 'certificate',
         'breed_facts' => 'Breed facts',

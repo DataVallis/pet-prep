@@ -7,10 +7,12 @@ use App\Enums\ClientFeature;
 use App\Enums\HygieneEventKind;
 use App\Enums\PushType;
 use App\Enums\Species;
+use App\Enums\WishStatus;
 use App\Jobs\SendPushNotification;
 use App\Models\DevicePushToken;
 use App\Models\Pet;
 use App\Models\PetHygieneEvent;
+use App\Models\PetWish;
 use App\Models\PushNotification;
 use App\Models\PushTicket;
 use App\Models\QuietHours;
@@ -272,6 +274,16 @@ class NotificationService
         return $this->escalation($pet, PushType::CareReminder, $metric);
     }
 
+    /**
+     * M6-W01 »Želje«: a child wished for an item — to the family's parents, metric
+     * = the wish id. Called by WishService::create inside its transaction (queued
+     * after commit); WishService keeps it to one per child per 10 minutes.
+     */
+    public function wishCreated(Pet $pet, PetWish $wish): ?PushNotification
+    {
+        return $this->escalation($pet, PushType::WishCreated, (string) $wish->id);
+    }
+
     /** Minutes of outside-quiet time before a scoop deadline when the litter reminder is decided. */
     public const LITTER_REMINDER_MINUTES = 60;
 
@@ -409,7 +421,8 @@ class NotificationService
         $type = $notification->type;
 
         // The game moved on since the decision (PR #35 review, item 6).
-        if (! $type->isLockNews() && $this->petLocked($pet)) {
+        // M6-W01: wishing is not a care action — a hard stop / illness does not hold the parent's wish push.
+        if (! $type->isLockNews() && $type !== PushType::WishCreated && $this->petLocked($pet)) {
             $this->markSuppressed($notification, 'pet_locked');
 
             return;
@@ -434,6 +447,12 @@ class NotificationService
         // M5-R18 / R20: the parent confirmed the groomer / bath meanwhile (or the period is over).
         if ($type === PushType::CareReminder && ! app(CareReminderPushService::class)->stillDue($pet, (string) $notification->metric)) {
             $this->markSuppressed($notification, 'already_done');
+
+            return;
+        }
+        // M6-W01: the wish was bought / declined / cancelled meanwhile.
+        if ($type === PushType::WishCreated && $this->openWish($notification) === null) {
+            $this->markSuppressed($notification, 'already_decided');
 
             return;
         }
@@ -609,6 +628,8 @@ class NotificationService
             // M5-R18 / R20: the groomer / bath is the parent's errand — to the parents
             // whose app can show / confirm it (QA PR #377 m2); all parents when none can.
             PushType::CareReminder => $this->careReminderParents($pet),
+            // M6-W01: buying is the parent's business.
+            PushType::WishCreated => $parents(),
         };
 
         return $list->unique('user_id')->values()->all();
@@ -631,6 +652,10 @@ class NotificationService
         }
         // M5-R18 / R20: once per (task, period) — CareReminderPushService guards with the metric.
         if ($type === PushType::CareReminder) {
+            return false;
+        }
+        // M6-W01: one per wish; WishService limits it to one per child per 10 minutes.
+        if ($type === PushType::WishCreated) {
             return false;
         }
 
@@ -744,6 +769,12 @@ class NotificationService
     {
         $plain = ['variant' => null, 'replace' => []];
         $metric = $notification->metric;
+        // M6-W01: the item names come from the wish (variant per species).
+        if ($notification->type === PushType::WishCreated) {
+            $wish = $this->openWish($notification);
+
+            return $wish === null ? null : ['variant' => WishService::pushVariant($wish->item_key, $pet->speciesValue()), 'replace' => []];
+        }
         // M5-R06-04 (M3-12): the play reminder only when the wand game can start now.
         if ($notification->type === PushType::PlayReminder) {
             return $this->wand->startRefusal($pet, null, now()) === null ? $plain : null;
@@ -873,6 +904,17 @@ class NotificationService
             ->all();
     }
 
+    /** M6-W01: the still-open wish a `wish_created` push is about (metric = wish id). */
+    private function openWish(PushNotification $notification): ?PetWish
+    {
+        if (! ctype_digit((string) $notification->metric)) {
+            return null;
+        }
+
+        return PetWish::whereKey((int) $notification->metric)->where('pet_id', $notification->pet_id)
+            ->where('status', WishStatus::Open->value)->first();
+    }
+
     private function petLocked(Pet $pet): bool
     {
         return (bool) $pet->is_hard_stopped || ! $pet->is_active || (bool) $pet->is_game_over || $pet->isIll()
@@ -950,10 +992,10 @@ class NotificationService
             // David 2026-10-17: the pet's name as the title when set (else PetPrep).
             'title' => PushCopy::title($device->locale, $notification->pet?->name),
             'body' => PushCopy::body($type, $copy['metric'] ?? $notification->metric, $audience, $device->locale, $variant, $copy['replace'], $copy['species']),
-            'data' => [
+            'data' => array_merge([
                 'type' => $type->value,
                 'pet_id' => $notification->pet_id,
-            ],
+            ], $type === PushType::WishCreated ? ['wish_id' => (int) $notification->metric] : []),
             'sound' => 'default',
             'priority' => $type->isUrgent() ? 'high' : 'default',
             'channelId' => $type->androidChannel(),

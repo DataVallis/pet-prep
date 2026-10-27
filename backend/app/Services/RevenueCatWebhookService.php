@@ -28,8 +28,11 @@ use Illuminate\Support\Facades\Log;
  * stored with outcome `unknown_user` (HTTP 200 — RevenueCat retries non-2xx
  * forever).
  *
- * What: only the challenge consumable (`services.revenuecat.challenge_products`,
- * default `petprep_challenge_12w`):
+ * What: the challenge consumable (`services.revenuecat.challenge_products`,
+ * default `petprep_challenge_12w`) and (M6-W02) the »Želje« products
+ * (`services.revenuecat.wish_products` → WishCreditService: a purchase = one
+ * wish credit, never auto-assigned; a refund revokes it and removes the pet's
+ * items of that purchase; TRANSFER moves unassigned ones):
  *  - INITIAL_PURCHASE / NON_RENEWING_PURCHASE → one challenge credit for the
  *    family (ChallengeCreditService::create, auto-assigned when the family
  *    has exactly one unpaid challenge pet);
@@ -58,6 +61,7 @@ class RevenueCatWebhookService
     public function __construct(
         private readonly ChallengeCreditService $credits,
         private readonly FamilyService $families,
+        private readonly WishCreditService $wishCredits,
     ) {}
 
     /**
@@ -135,13 +139,19 @@ class RevenueCatWebhookService
         }
 
         $productId = self::stringOrNull($event['product_id'] ?? null);
-        if ($productId === null || ! in_array($productId, $this->challengeProducts(), true)) {
-            Log::warning('RevenueCatWebhook: not the challenge product', ['event_id' => $eventId, 'product_id' => $productId]);
+        // M6-W02: a wish product (»Želje«) — its own credits, never auto-assigned.
+        $wishKey = WishService::keyForProduct($productId);
+        if ($productId === null || ($wishKey === null && ! in_array($productId, $this->challengeProducts(), true))) {
+            Log::warning('RevenueCatWebhook: not a known product', ['event_id' => $eventId, 'product_id' => $productId]);
 
             return [PurchaseEventOutcome::UnknownProduct, $family->id];
         }
 
         DB::table('families')->where('id', $family->id)->lockForUpdate()->first(['id']);
+
+        if ($wishKey !== null) {
+            return [$this->wishEvent($family, $record, $event, $eventId, $type, $productId, $wishKey), $family->id];
+        }
 
         if (in_array($type, self::GRANTING, true)) {
             $this->credits->create($family, $record, [
@@ -169,6 +179,41 @@ class RevenueCatWebhookService
         );
 
         return [$revoked !== null ? PurchaseEventOutcome::Revoked : PurchaseEventOutcome::Ignored, $family->id];
+    }
+
+    /**
+     * M6-W02: a purchase / refund of a wish product (family row locked).
+     *
+     * @param  array<string, mixed>  $event
+     */
+    private function wishEvent(Family $family, PurchaseEvent $record, array $event, string $eventId, string $type, string $productId, string $wishKey): PurchaseEventOutcome
+    {
+        if (in_array($type, self::GRANTING, true)) {
+            $this->wishCredits->create($family, $record, [
+                'product_id' => $productId,
+                'item_key' => $wishKey,
+                'store' => self::stringOrNull($event['store'] ?? null),
+                'environment' => self::environment($event),
+                'transaction_id' => self::stringOrNull($event['transaction_id'] ?? null),
+            ], self::msToCarbon($event['purchased_at_ms'] ?? null) ?? now());
+
+            return PurchaseEventOutcome::Granted;
+        }
+
+        // A consumable never has an expiration: a CANCELLATION is a refund.
+        if ($type === 'CANCELLATION' && ($event['expiration_at_ms'] ?? null) !== null) {
+            return PurchaseEventOutcome::Recorded;
+        }
+
+        $revoked = $this->wishCredits->revokeForRefund(
+            $family,
+            $productId,
+            self::stringOrNull($event['transaction_id'] ?? null),
+            $eventId,
+            now()->startOfSecond(),
+        );
+
+        return $revoked !== null ? PurchaseEventOutcome::Revoked : PurchaseEventOutcome::Ignored;
     }
 
     /**
@@ -211,6 +256,8 @@ class RevenueCatWebhookService
         $moved = 0;
         foreach ($from as $family) {
             $moved += $this->credits->transferUnassigned($family, $to, now());
+            // M6-W02: unassigned wish credits move the same way.
+            $moved += $this->wishCredits->transferUnassigned($family, $to, now());
         }
 
         return [$moved > 0 ? PurchaseEventOutcome::Transferred : PurchaseEventOutcome::Recorded, $to->id];

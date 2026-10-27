@@ -96,6 +96,7 @@ class AccountExportService
                 'quiet_hours' => null,
                 'invites' => [],
                 'pets' => [],
+                'wish_purchases' => [],
                 'breed_facts' => $this->breedFacts([$parent->id], []),
                 'scores' => ['children' => [], 'pets' => []],
             ];
@@ -147,6 +148,18 @@ class AccountExportService
                     'used_by' => $r->used_by,
                 ])->all(),
             'pets' => $this->pets($petIds),
+            // M6-W02 »Želje«: the family's item purchases (store product, when, which pet).
+            'wish_purchases' => DB::table('wish_credits')->where('family_id', $family->id)->orderBy('purchased_at')->orderBy('id')
+                ->get(['product_id', 'item_key', 'store', 'purchased_at', 'pet_id', 'assigned_at', 'revoked_at'])
+                ->map(fn ($r) => [
+                    'product_id' => $r->product_id,
+                    'item_key' => $r->item_key,
+                    'store' => $r->store,
+                    'purchased_at' => $this->iso($r->purchased_at),
+                    'pet_id' => $r->pet_id,
+                    'assigned_at' => $this->iso($r->assigned_at),
+                    'revoked_at' => $this->iso($r->revoked_at),
+                ])->all(),
             // M5-R09b: which breed facts each member read; the child's automatic sheets.
             'breed_facts' => $this->breedFacts(array_merge($parentIds, $childIds), $petIds),
             'scores' => $this->scores($family, $parent),
@@ -165,7 +178,7 @@ class AccountExportService
         }
 
         $rows = 0;
-        foreach (['activities_log', 'pet_daily_steps', 'parent_walk_entries', 'pet_daily_walks', 'pet_daily_routines', 'pet_status_periods', 'pet_hygiene_events', 'pet_training_sessions', 'pet_care_sessions'] as $table) {
+        foreach (['activities_log', 'pet_daily_steps', 'parent_walk_entries', 'pet_daily_walks', 'pet_daily_routines', 'pet_status_periods', 'pet_hygiene_events', 'pet_training_sessions', 'pet_care_sessions', 'pet_wishes', 'pet_treat_events'] as $table) {
             $rows += DB::table($table)->whereIn('pet_id', $petIds)->count();
         }
         // M5-R05: free plays are exported as daily counts — only invitations are rows.
@@ -322,6 +335,10 @@ class AccountExportService
         $sessions = $byPet('pet_training_sessions', ['user_id', 'command', 'local_date', 'started_at', 'status', 'finished_at', 'taps', 'result', 'progress_gain'], 'started_at');
         // M5-R06-04 / 05: cat care sessions (wand play, grooming, litter change, scratching) — who, when, verdict.
         $careSessions = $byPet('pet_care_sessions', ['user_id', 'kind', 'local_date', 'started_at', 'status', 'finished_at', 'result'], 'started_at');
+        // M6-W01 »Želje«: wishes (ids only), owned items and treats given.
+        $wishes = $byPet('pet_wishes', ['child_user_id', 'item_key', 'status', 'decided_by_user_id', 'decided_at', 'created_at'], 'created_at');
+        $items = $byPet('pet_items', ['item_key', 'kind', 'variant', 'quantity_total', 'quantity_left', 'acquired_at', 'revoked_at'], 'acquired_at');
+        $treats = $byPet('pet_treat_events', ['child_user_id', 'given_at', 'local_date'], 'given_at');
         // M5-R05: invitations as rows (≤ 2 a day); free plays — unlimited — as one
         // count per day, child and kind, so play can never make the export too large.
         $plays = DB::table('pet_play_events')->whereIn('pet_id', $petIds)->where('source', 'invitation')
@@ -336,7 +353,7 @@ class AccountExportService
         // M2-01d: finished challenges (certificate / report) per pet, with the printed names.
         $certificates = ChallengeCertificate::whereIn('pet_id', $petIds)->orderBy('id')->get()->groupBy('pet_id');
 
-        return $pets->map(function (Pet $pet) use ($certificates, $caretakers, $contracts, $activities, $steps, $parentWalks, $walks, $routines, $periods, $hygiene, $skills, $sessions, $careSessions, $plays, $freePlays, $expires): array {
+        return $pets->map(function (Pet $pet) use ($certificates, $caretakers, $contracts, $activities, $steps, $parentWalks, $walks, $routines, $periods, $hygiene, $skills, $sessions, $careSessions, $plays, $freePlays, $expires, $wishes, $items, $treats): array {
             $dna = is_array($pet->pet_dna) ? $pet->pet_dna : [];
             $rows = fn (Collection $group) => $group->get($pet->id, collect());
             $album = $this->growth->albumFor($pet, $expires)->toArray()['growth'];
@@ -496,6 +513,29 @@ class AccountExportService
                 'growth' => $album,
                 'growth_expires_at' => $album === [] ? null : $expires->toIso8601String(),
                 // M2-01d: how each child's 12-week challenge on this pet ended; the PDF as a signed URL.
+                // M6-W01 »Želje«: the children's wishes, the items the pet owns, treats given.
+                'wishes' => $rows($wishes)->map(fn ($r) => [
+                    'child_id' => $r->child_user_id,
+                    'item_key' => $r->item_key,
+                    'status' => $r->status,
+                    'decided_by' => $r->decided_by_user_id,
+                    'decided_at' => $this->iso($r->decided_at),
+                    'created_at' => $this->iso($r->created_at),
+                ])->values()->all(),
+                'items' => $rows($items)->map(fn ($r) => [
+                    'item_key' => $r->item_key,
+                    'kind' => $r->kind,
+                    'variant' => $r->variant,
+                    'quantity_total' => (int) $r->quantity_total,
+                    'quantity_left' => (int) $r->quantity_left,
+                    'acquired_at' => $this->iso($r->acquired_at),
+                    'revoked_at' => $this->iso($r->revoked_at),
+                ])->values()->all(),
+                'treats_given' => $rows($treats)->map(fn ($r) => [
+                    'child_id' => $r->child_user_id,
+                    'given_at' => $this->iso($r->given_at),
+                    'local_date' => $this->date($r->local_date),
+                ])->values()->all(),
                 'certificates' => $certificates->get($pet->id, collect())->map(fn (ChallengeCertificate $c) => [
                     'child_id' => $c->child_user_id,
                     'outcome' => $c->outcome->value,
