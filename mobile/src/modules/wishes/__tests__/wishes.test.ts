@@ -72,6 +72,11 @@ describe('readChildWishes + childRowState', () => {
     expect(childRowState(item('bed'), blocked, NOW)).toBe('blocked');
     // Owned / requested stay visible even when blocked.
     expect(childRowState(item('bowls'), blocked, NOW)).toBe('requested');
+    // An unborn pet / unsigned contract (server `pet_not_started`) blocks wishing too.
+    const notStarted = readChildWishes({ ...CATALOGUE, can_wish: false, blocked_reason: 'pet_not_started' })!;
+    expect(notStarted.blocked_reason).toBe('pet_not_started');
+    expect(notStarted.can_wish).toBe(false);
+    expect(childRowState(item('bed'), notStarted, NOW)).toBe('blocked');
   });
 
   it('a cat gets cat variants when the server variant is unknown', () => {

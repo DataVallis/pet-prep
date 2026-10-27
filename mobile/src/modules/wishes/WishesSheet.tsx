@@ -41,6 +41,7 @@ export function wishErrorText(error: unknown): string {
       return t(`wishes:child.errors.${reason}`);
     case 'game_over':
     case 'payment_required':
+    case 'pet_not_started':
       return t('wishes:child.errors.blocked');
   }
   const failure = classifyActionError(error);

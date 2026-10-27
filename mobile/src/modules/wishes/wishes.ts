@@ -177,7 +177,7 @@ export interface ChildWishes {
   open_count: number;
   open_limit: number;
   can_wish: boolean;
-  blocked_reason: 'game_over' | 'payment_required' | null;
+  blocked_reason: 'game_over' | 'payment_required' | 'pet_not_started' | null;
   items: ChildWishItem[];
 }
 
@@ -205,7 +205,10 @@ export function readChildWishes(raw: unknown): ChildWishes | null {
         ];
       })
     : [];
-  const blocked = raw.blocked_reason === 'game_over' || raw.blocked_reason === 'payment_required' ? raw.blocked_reason : null;
+  const blocked =
+    raw.blocked_reason === 'game_over' || raw.blocked_reason === 'payment_required' || raw.blocked_reason === 'pet_not_started'
+      ? raw.blocked_reason
+      : null;
   return {
     pet_id: count(raw.pet_id),
     species,
