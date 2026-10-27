@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "57bbaf7a684b5653ac4219396ad3535309b610780d9050c1982c69119e874dca"
+      "sha256": "24e9ece94ab2ad95ee27bf83f0989350702c7eae5332f8b6d5555bc650bdaf63"
     }
   },
   "suitability_vocabulary": {
@@ -39504,7 +39504,12 @@
           "S561"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "jack-russell-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
