@@ -615,6 +615,13 @@
 | with clearly open nostrils, no heavy wrinkles, tight eyelids. Natural ears and tail. RKC Breed Watch Category 2 (S567).
 | Colour weights unsourced → `verified => false`.
 |
+| Chinese Crested (M5-R10-72, docs/research/dog-data chinese_crested.appearance): "A small, active and graceful dog;
+| medium-to fine-boned, smooth hairless body." (FCI 288, S571); Hairless variety only (crest, socks and tail plume; the
+| Powder Puff is register text only); colours "Any colour or combination of colours, except merle, which is
+| unacceptable." — three common skin colourings, pink with dark spots weighted highest (the register portrait). Healthy,
+| un-sunburnt bare skin (PetMD S574 sun / cold). RKC Breed Watch Category 2 (S572). Colour weights unsourced →
+| `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -3194,6 +3201,41 @@ return [
             'eye_color' => ['dark or hazel medium-sized eyes with tight eyelids, set wide apart with a furrow between'],
             'tail' => ['natural tail set high, strong at the root and tapering, reaching the hocks'],
             'muzzle' => ['moderately short, broad, square black muzzle with a broad black nose, clearly open nostrils and no heavy wrinkles'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+
+    // M5-R10-72 (docs/research/dog-data/data.json chinese_crested.appearance; runbook rules 2026-10-10:
+    // standard colours only — S571 any colour except merle; Hairless variety, healthy bare skin).
+    'chinese_crested' => [
+        'display_name' => 'Chinese Crested',
+        // Colour frequencies are in no source (chinese_crested.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 288 (S571, https://fci.be/Nomenclature/Standards/288g09-en.pdf), RKC breed standard (S573), RKC breed page (S572), PetMD (S574) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S572 "Size: Small"; S571 "Ideal height at the withers: Males: 28-33 cm. Females: 23–30 cm."',
+            'build' => 'S571 "A small, active and graceful dog; medium-to fine-boned, smooth hairless body."',
+            'coat_length' => 'S573 "No large patches of hair anywhere on body. Skin fine-grained, smooth, warm to the touch." (Hairless: crest, socks and plume)',
+            'coat_color' => 'S571 "Any colour or combination of colours, except merle, which is unacceptable." (weights unsourced; never merle)',
+            'ear_carriage' => 'S573 "Large and erect, with or without fringe, except in Powder Puffs where drop ears are permissible."',
+            'eye_color' => 'S571 "So dark as to appear black. Little or no white showing."',
+            'tail' => 'S573 "Plume long and flowing, confined to lower two-thirds of tail. Sparse plume acceptable."',
+            'muzzle' => 'S573 "Muzzle tapering slightly but never pointed, lean without flews."',
+        ],
+        'traits' => [
+            'size' => ['small, dainty'],
+            'build' => [['value' => 'small, active and graceful, medium- to fine-boned body', 'weight' => 3], 'slender, elegant body standing on fine, straight legs'],
+            'coat_length' => ['hairless body with smooth, healthy bare skin, a long soft silky crest on the head, hairy socks on the feet and a flowing plume on the tail'],
+            // Standard colours only (S571, never merle); pink with dark spots highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'pink skin with dark grey spots and white crest, socks and plume', 'weight' => 50],
+                ['value' => 'solid dark slate-grey skin with white crest, socks and plume', 'weight' => 30],
+                ['value' => 'solid pink skin with cream crest, socks and plume', 'weight' => 20],
+            ],
+            'ear_carriage' => ['large, erect ears set low, with a light fringe of hair'],
+            'eye_color' => ['very dark, almond-shaped eyes set wide apart'],
+            'tail' => ['long, tapering, fairly straight tail set high, with a long flowing plume on its lower two-thirds'],
+            'muzzle' => ['lean muzzle tapering slightly but never pointed, narrow nose, tight thin lips'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],

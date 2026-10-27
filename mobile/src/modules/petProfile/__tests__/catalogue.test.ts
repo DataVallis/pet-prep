@@ -471,7 +471,9 @@ describe('suitability tags (M5-R10)', () => {
     expect(SUITS_TAGS).toHaveLength(11);
     expect(SUITS_TAGS).toEqual(expect.arrayContaining(['family_pet', 'large_home', 'children', 'small_children']));
     expect(SUITS_TAGS).not.toContain('house_with_garden');
-    expect(CONSIDER_TAGS).toHaveLength(27);
+    expect(CONSIDER_TAGS).toHaveLength(28);
+    // M5-R10-72 (runbook new-tag rule): bare skin — needs sun protection (the Chinese Crested, PetMD S574); no numbers.
+    expect(CONSIDER_TAGS).toContain('sun_protection');
     // M5-R10-60 (runbook new-tag rule): thin coat — feels the cold (the Italian Greyhound, PetMD S488); no numbers.
     expect(CONSIDER_TAGS).toContain('cold_sensitive');
     // M5-R10-57 (runbook new-tag rule): thick coat — struggles in hot weather (the Samoyed, PetMD S469); no numbers.

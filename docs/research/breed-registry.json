@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "d92827c6fe43907ca95cc518c3a947fc047a02129f19cf62756be59c1b22a814"
+      "sha256": "af968833cdf7d09c566c4f3849f4fb4640fc4031bf5e84b6a3595a6e17036424"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "b88852d94a708c459c3149752cde262dd54cbc7758cd72abe6f8d2bc4b5b776a"
+      "sha256": "2fe60ff0af4ccfe9b10149cf72b66e7c81af8b737b30413d912aa3712480bd9e"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,31 +25,31 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "0bfc1139a266d169916271215be7a45e372af397ef1cacceebeeecbe39e865d4"
+      "sha256": "a0e7588e03f9fd86b9eb2bc94e567bd8b750725a021fc512928abad52e79de25"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
       "covers": "breedSuitability: suitsTitle, considerTitle and the label of every vocabulary tag",
-      "sha256": "de2d4eea4864dda510ea833886c13a281c20d2e613910c32668630e9c7781224"
+      "sha256": "10693a877cb55b42c65d0539ce24f0aa1851c56cef1968344241dd17384a5fbf"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
       "covers": "breedSuitability: suitsTitle, considerTitle and the label of every vocabulary tag",
-      "sha256": "fbc561fddc67b01026935293afdb9e2e00c731bb53089c21c4f27bc7857b33d8"
+      "sha256": "b3938f8eb34684ad14236dd281783e438a05c821b0395621017c23c664ee90bf"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "5f6116b1a046279f864f05654630f5892281e35432aa519ad4d86fbad2f0c6ec"
+      "sha256": "4c3f5d118bc90ca04fe1b711be777e73078b089a5d08a6a6cb0b1e740a481b33"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "fe56b52a58c1793564984a5fc9ff80fc5b743df2bff6ccc6fd8b78dbc80337ed"
+      "sha256": "6046f05861255c44804ea4e27557fa9e4c5b95c69c18022172f79f1316e2572a"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "55024836291406bdeeb60b909ec72268d32bcb5597648a2069a28e17de1c3110"
+      "sha256": "e826de698b90caca394a4a693176d474d2e4e842c6490a08d91a8d10a2f72a16"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "8758587241e4ca363c43ff14bc56cbf6afad5aaf76c45da86ee922597527f7ee"
+      "sha256": "37e01f9cee967f8d9c4b5467dd7a3db0399aece4397dba73ed4cbe5c97d609e7"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -106,7 +106,8 @@
     "sheds": "consider",
     "short_muzzle_breathing": "consider",
     "shorter_lifespan": "consider",
-    "small_children": "suits"
+    "small_children": "suits",
+    "sun_protection": "consider"
   },
   "suitability_labels": {
     "en": {
@@ -150,7 +151,8 @@
         "sheds": "sheds",
         "short_muzzle_breathing": "shorter muzzle — can have breathing problems",
         "shorter_lifespan": "shorter lifespan",
-        "small_children": "families with small children"
+        "small_children": "families with small children",
+        "sun_protection": "bare skin — needs sun protection"
       }
     },
     "sl": {
@@ -194,7 +196,8 @@
         "sheds": "izpada mu dlaka",
         "short_muzzle_breathing": "krajši gobček — lahko težje diha",
         "shorter_lifespan": "krajša življenjska doba",
-        "small_children": "družino z majhnimi otroki"
+        "small_children": "družino z majhnimi otroki",
+        "sun_protection": "gola koža — potrebuje zaščito pred soncem"
       }
     }
   },
@@ -216,7 +219,7 @@
         }
       },
       "status": "available",
-      "breed_count": 66,
+      "breed_count": 67,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -40194,6 +40197,565 @@
       ]
     },
     {
+      "id": "chinese_crested",
+      "species": "dog",
+      "order": 66,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Chinese Crested",
+        "sl": "Kitajski goli pes"
+      },
+      "slug": {
+        "en": "chinese-crested",
+        "sl": "kitajski-goli-pes"
+      },
+      "synonyms": {
+        "en": [
+          "Chinese Crested Dog",
+          "Crested",
+          "Hairless",
+          "Powder Puff"
+        ],
+        "sl": [
+          "kitajski čopasti pes",
+          "kitajski copasti pes",
+          "kitajski goli pes"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S572"
+          ],
+          "ref": "chinese_crested.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              28,
+              33
+            ],
+            "female": [
+              23,
+              30
+            ]
+          },
+          "source_ids": [
+            "S571"
+          ],
+          "ref": "chinese_crested.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              3.6,
+              5.4
+            ],
+            "female": [
+              3.6,
+              5.4
+            ]
+          },
+          "source_ids": [
+            "S574"
+          ],
+          "ref": "chinese_crested.adult_weight.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            8,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "chinese_crested.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 13.4,
+          "source_ids": [
+            "S123"
+          ],
+          "ref": "chinese_crested.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S572"
+          ],
+          "ref": "chinese_crested.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 30,
+          "source_ids": [
+            "S572"
+          ],
+          "ref": "chinese_crested.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S572"
+          ],
+          "ref": "chinese_crested.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S572"
+          ],
+          "ref": "chinese_crested.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 61,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "chinese_crested.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 288,
+            "group": 9,
+            "section": 4,
+            "origin": "CN"
+          },
+          "source_ids": [
+            "S570"
+          ],
+          "ref": "chinese_crested.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "bare_skin_sun_cold",
+          "source_ids": [
+            "S574"
+          ],
+          "ref": "chinese_crested.health.bare_skin",
+          "confidence": "high"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S574"
+          ],
+          "ref": "chinese_crested.health.patellar_luxation",
+          "confidence": "high"
+        },
+        {
+          "key": "primary_lens_luxation",
+          "source_ids": [
+            "S572"
+          ],
+          "ref": "chinese_crested.health.lens_luxation",
+          "confidence": "high"
+        },
+        {
+          "key": "pra_inherited_blindness",
+          "source_ids": [
+            "S572"
+          ],
+          "ref": "chinese_crested.health.pra",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S574"
+            ],
+            "refs": [
+              "chinese_crested.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S574"
+            ],
+            "refs": [
+              "chinese_crested.behaviour.family",
+              "chinese_crested.behaviour.children"
+            ]
+          },
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S572"
+            ],
+            "refs": [
+              "chinese_crested.suitability.rkc_size_of_home",
+              "chinese_crested.suitability.rkc_size_of_garden"
+            ]
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S574"
+            ],
+            "refs": [
+              "chinese_crested.behaviour.other_pets"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "sun_protection",
+            "source_ids": [
+              "S574"
+            ],
+            "refs": [
+              "chinese_crested.health.bare_skin",
+              "chinese_crested.suitability.petmd_skin"
+            ]
+          },
+          {
+            "tag": "cold_sensitive",
+            "source_ids": [
+              "S574"
+            ],
+            "refs": [
+              "chinese_crested.suitability.petmd_skin"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 3000,
+              "cap_month": 3
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 121
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 2300
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 3000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 30,
+              "steps": 3000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.7
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 121
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "nail_trim",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.chinese_crested.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S572"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min/day (RKC S572 'Up to 30 minutes per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.chinese_crested.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 23 min → 2,300 steps (75 % of 30, half up)"
+          },
+          {
+            "ref": "proposed_game_parameters.chinese_crested.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S123"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 121 (0.75 × 13.4 y, McMillan 2024 via S123)"
+          },
+          {
+            "ref": "proposed_game_parameters.chinese_crested.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 61, Fair tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.chinese_crested.grooming",
+            "basis_source_ids": [
+              "S572"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC S572 »Once a week«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.chinese_crested.nail_trimming",
+            "basis_source_ids": [
+              "S574"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »Check … toenails once a week« → 1× na teden (pregled tedensko; striženje po potrebi — odprto za Davida)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S123",
+          "S572",
+          "S574"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_pll",
+            "level": "best_practice",
+            "source_ids": [
+              "S572"
+            ]
+          },
+          {
+            "key": "dna_prcd_pra",
+            "level": "best_practice",
+            "source_ids": [
+              "S572"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S572"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S123",
+        "S570",
+        "S571",
+        "S572",
+        "S574",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -45099,6 +45661,34 @@
       "publisher": "PDSA",
       "title": "Bullmastiff — breed guide",
       "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/bullmastiff"
+    },
+    {
+      "id": "S570",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — CHINESE CRESTED DOG (288)",
+      "url": "https://www.fci.be/en/nomenclature/CHINESE-CRESTED-DOG-288.html"
+    },
+    {
+      "id": "S571",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 288 Chinese Crested Dog, English (PDF; date of publication of the official valid standard 08.09.2026)",
+      "url": "https://fci.be/Nomenclature/Standards/288g09-en.pdf"
+    },
+    {
+      "id": "S572",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A to Z — Chinese Crested",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/toy/chinese-crested/"
+    },
+    {
+      "id": "S574",
+      "tier": "B",
+      "publisher": "PetMD — Erica Vasquez, reviewed by Jennifer Coates, DVM (updated Jul. 20, 2023)",
+      "title": "Chinese Crested",
+      "url": "https://www.petmd.com/dog/breeds/chinese-crested"
     },
     {
       "id": "C1",

@@ -456,6 +456,7 @@ const SPECIES = [
       { id: 'airedale_terrier', synonyms: { en: ['Airedale', 'King of Terriers', 'Waterside Terrier', 'Bingley Terrier'], sl: ['airedalski terier', 'airedale terier', 'erdelterier'] } },
       { id: 'russell_terrier', synonyms: { en: ['Russell Terrier', 'Jack Russell', 'JRT'], sl: ['jack russell', 'jack rasel terier', 'džek rasel'] } },
       { id: 'bullmastiff', synonyms: { en: ['Bull Mastiff', "Gamekeeper's Night Dog"], sl: ['bulmastif', 'bul mastif'] } },
+      { id: 'chinese_crested', synonyms: { en: ['Chinese Crested Dog', 'Crested', 'Hairless', 'Powder Puff'], sl: ['kitajski čopasti pes', 'kitajski copasti pes', 'kitajski goli pes'] } },
     ],
   },
   {
@@ -480,7 +481,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', Portugal: 'PT', Canada: 'CA', Croatia: 'HR', Australia: 'AU', Russia: 'RU' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', China: 'CN', Portugal: 'PT', Canada: 'CA', Croatia: 'HR', Australia: 'AU', Russia: 'RU' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -1966,7 +1967,29 @@ const DOG_FACTS = {
       ['eyelids_turned', 'health.eyelids'],
       ['certain_cancers', 'health.cancer'],
     ],
+  },  // M5-R10-72. Height = FCI 288 by sex (S571), weight = PetMD 8–12 lb (S574; the FCI standard gives none), lifespan =
+  // McMillan 2024 median 13.4 y via the Dogs Trust table (S123) + the RKC band 'Over 12 years' (S572), exercise = RKC 'Up
+  // to 30 minutes per day' (S572), coat / grooming = RKC key facts (S572). FCI origin China (CN, new). Not exported:
+  // adult_weight.alternatives (RKC upper bound) / salt_category, lifespan.petmd / senior_from, suitability.rkc_shedding
+  // (RKC 'Sheds: Yes' covers both varieties; the app shows the Hairless — open for David), health.breed_watch (Category 2,
+  // no point returned), health.teeth (research only).
+  chinese_crested: {
+    height: ['height.fci'],
+    weight: [['adult_weight.petmd', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: [],
+    food_motivation: null,
+    health: [
+      ['bare_skin_sun_cold', 'health.bare_skin'],
+      ['kneecap_luxation', 'health.patellar_luxation'],
+      ['primary_lens_luxation', 'health.lens_luxation'],
+      ['pra_inherited_blindness', 'health.pra'],
+    ],
   },
+
 
 };
 
@@ -2009,6 +2032,7 @@ export const DOG_CARE_TASKS = {
   airedale_terrier: [['ear_cleaning', 1, 7, 'proposed_game_parameters.airedale_terrier.ear_care'], ['groomer_visit', 1, 84, 'proposed_game_parameters.airedale_terrier.professional_grooming']],
   russell_terrier: [['tooth_brushing', 3, 7, 'proposed_game_parameters.russell_terrier.tooth_brushing']],
   bullmastiff: [['fold_cleaning', 7, 7, 'proposed_game_parameters.bullmastiff.face_fold_cleaning']],
+  chinese_crested: [['nail_trim', 1, 7, 'proposed_game_parameters.chinese_crested.nail_trimming']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -2557,7 +2581,15 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.bullmastiff.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.bullmastiff.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.bullmastiff.exercise_minutes_senior',
+  },  chinese_crested: {
+    adult_minutes: ['proposed_game_parameters.chinese_crested.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.chinese_crested.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.chinese_crested.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.chinese_crested.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.chinese_crested.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.chinese_crested.exercise_minutes_senior',
   },
+
 
 };
 

@@ -171,6 +171,7 @@
       "airedale_terrier": "Del 12-tedenskega izziva · česanje vsak dan",
       "russell_terrier": "Del 12-tedenskega izziva · česanje 1× na teden",
       "bullmastiff": "Del 12-tedenskega izziva · česanje 1× na teden",
+      "chinese_crested": "Del 12-tedenskega izziva · česanje 1× na teden",
       "domestic_cat": "Kratka dlaka · brezplačna",
       "maine_coon": "Dolga dlaka · česanje 3× na teden",
       "british_shorthair": "Kratka, gosta dlaka · česanje 1× na teden",
@@ -467,6 +468,12 @@
         "adult": "2 obroka na dan; sprehod 12.000 korakov na dan.",
         "senior": "2 obroka na dan; krajši sprehod — 9.000 korakov na dan."
       },
+      "chinese_crested": {
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 3.000 pri 3 mesecih.",
+        "young": "2 obroka na dan; sprehod 3.000 korakov na dan (kot odrasel pes).",
+        "adult": "2 obroka na dan; sprehod 3.000 korakov na dan.",
+        "senior": "2 obroka na dan; krajši sprehod — 2.300 korakov na dan."
+      },
       "cardigan_welsh_corgi": {
         "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 6.000 pri 6 mesecih.",
         "young": "2 obroka na dan; sprehod 6.000 korakov na dan (kot odrasel pes).",
@@ -752,6 +759,7 @@
       "sensitive_older_children": "občutljiv pes — bolje za starejše otroke",
       "heat_sensitive": "gost kožuh — slabo prenaša vročino",
       "cold_sensitive": "tanka dlaka — občutljiv na mraz",
+      "sun_protection": "gola koža — potrebuje zaščito pred soncem",
       "independent_experienced_owner": "samostojen in trmast — najbolje z izkušenim lastnikom"
     }
   },
