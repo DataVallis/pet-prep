@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "24e9ece94ab2ad95ee27bf83f0989350702c7eae5332f8b6d5555bc650bdaf63"
+      "sha256": "63f873d0f8a9856525ffbcc9f58f67b84c8ef5f40af9790591ba0c7dcc89b4d5"
     }
   },
   "suitability_vocabulary": {
@@ -40130,7 +40130,12 @@
           "S568"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "bullmastiff.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
