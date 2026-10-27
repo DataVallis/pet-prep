@@ -544,7 +544,15 @@ describe('prompts (no personal data, no toy)', function () {
             $breed = $pose->species()->value === 'cat' ? 'maine_coon' : 'labrador_retriever';
             $text = $prompts->posePrompt($breed, $pose, $traits, LifeStage::Young);
             expect($text)->not->toContain('ball')->not->toContain('feather')->toContain('no people');
+
+            if ($pose !== PetPose::Empty) {
+                // Fix 2026-10-27: no half-old / half-new pose with extra legs.
+                expect($text)->toContain('exactly four legs and four paws');
+            }
         }
+
+        expect($prompts->posePrompt('labrador_retriever', PetPose::Sit, $traits, LifeStage::Young))
+            ->toContain('hindquarters resting on the floor')->toContain('sitting upright');
 
         foreach (PetPhaseClip::cases() as $clip) {
             $breed = $clip->species()->value === 'cat' ? 'maine_coon' : 'labrador_retriever';
