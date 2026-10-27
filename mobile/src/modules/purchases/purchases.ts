@@ -28,6 +28,7 @@ import Purchases, {
   type CustomerInfo,
   type PurchasesOfferings,
   type PurchasesPackage,
+  type PurchasesStoreProduct,
 } from 'react-native-purchases';
 
 import { queryClient } from '@/api/queryClient';
@@ -226,6 +227,7 @@ export async function resetPurchasesIdentity({ timeoutMs = PURCHASES_LOGOUT_TIME
   identifiedUserId = null;
   lastInfoSignature = null;
   purchaseInFlight = null;
+  productPurchaseInFlight = null;
   if (status !== 'disabled') setStatus('idle');
   if (!configured || !wasIdentified) return;
   let timer: ReturnType<typeof setTimeout> | undefined;
@@ -381,6 +383,54 @@ export function purchasePackage(pkg: PurchasesPackage, target: PurchaseTarget = 
   return promise;
 }
 
+// ──────────────────────────────────────────────────────────────
+//  Wish items (M6-W05): consumable store products bought by id
+// ──────────────────────────────────────────────────────────────
+
+/**
+ * Store products by id (localized `priceString` from the store — never a hard-coded price).
+ * A product the store doesn't have (not created yet) is simply missing from the answer.
+ * Parent only; throws {@link PurchasesUnavailableError} otherwise.
+ */
+export async function fetchStoreProducts(productIds: readonly string[]): Promise<PurchasesStoreProduct[]> {
+  const blocked = await blockedReason();
+  if (blocked !== null) throw new PurchasesUnavailableError(blocked);
+  if (productIds.length === 0) return [];
+  return Purchases.getProducts([...productIds], Purchases.PRODUCT_CATEGORY.NON_SUBSCRIPTION);
+}
+
+export type StoreProductOutcome =
+  /** `transactionId` = the store transaction (the redeem's `Idempotency-Key`); null when the SDK gave none. */
+  | { status: 'success'; transactionId: string | null; productId: string }
+  | { status: PurchaseFailure };
+
+let productPurchaseInFlight: Promise<StoreProductOutcome> | null = null;
+
+/**
+ * Buy one store product (parent only; same guards as {@link purchasePackage}: role check,
+ * lazy identify, double-tap guard, logout generation). Assigning it to a pet is the
+ * caller's job (`modules/wishes/redeem.ts`) — the server never auto-assigns wish credits.
+ */
+export function purchaseStoreProduct(product: PurchasesStoreProduct): Promise<StoreProductOutcome> {
+  if (productPurchaseInFlight) return productPurchaseInFlight;
+  if (purchaseInFlight) return Promise.resolve({ status: 'store_problem' });
+  const promise = (async (): Promise<StoreProductOutcome> => {
+    const blocked = await blockedReason();
+    if (blocked !== null) return { status: blocked };
+    try {
+      const result = await Purchases.purchaseStoreProduct(product);
+      const transactionId = typeof result.transaction?.transactionIdentifier === 'string' && result.transaction.transactionIdentifier !== '' ? result.transaction.transactionIdentifier : null;
+      return { status: 'success', transactionId, productId: result.productIdentifier || product.identifier };
+    } catch (error) {
+      return { status: mapPurchaseError(error) };
+    }
+  })().finally(() => {
+    if (productPurchaseInFlight === promise) productPurchaseInFlight = null;
+  });
+  productPurchaseInFlight = promise;
+  return promise;
+}
+
 /** Restore the store account's purchases onto the signed-in parent (parent only). */
 export async function restorePurchases(): Promise<RestoreOutcome> {
   const blocked = await blockedReason();
@@ -408,5 +458,6 @@ export function resetPurchasesForTests(): void {
   identifyInFlight = null;
   lastInfoSignature = null;
   purchaseInFlight = null;
+  productPurchaseInFlight = null;
   statusListeners.clear();
 }

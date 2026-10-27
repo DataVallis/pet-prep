@@ -155,6 +155,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-10-27 (cloud, mobile) — M6-W04 / W05 »Želje« app (`feat/M6-W04-wishes-app`)
+- Child »Želje« (settings-sheet row → catalogue sheet, no prices, »Prosi starša«, states, »Priboljšek« chip) + parent »Želje (N)« row / `wish_created` push → `WishesScreen` (store prices, »Ne zdaj«, bundle, surprise, »Komu?«, redeem 409 → 3 retries). Built against `WISHES_API.md`, `schema.ts` hand-edited; old servers hide it (404). Not on a phone; item art = placeholders until M6-W03; store products still missing (M6-W02).
+
 ### 2026-10-26 (cloud, orchestrator) — tester fixes, HUD layout, water time, colour portraits, Želje spec
 - Merged: website in-app = one platform + hourly registry sync (#386, web #101; verified live by David), add-child picker tester fixes (#387), HUD cards at top (#391, 📱 iPhone #393), water display time = wake time (#394 app, #395 server `water.shown_at`), HUD top stack collapse × / swipe (#404, not on a phone yet), Saint Bernard portrait + page (#392, web #104), colour-variant portraits: command (#400), `--colour` + export `portrait.colours` (#402), Border Collie blue redo (#403), website colour picker (web #107) + Border Collie variants live (web #108), Želje spec (#406, #407, #408).
 - Production: manual deploy 2026-10-25 19:26 UTC (David's request) OK; **daily deploy 2026-10-26 failed** (ffmpeg install timeout in Pest job, run 40311299855) → #394–#404 not yet in production / OTA; next daily run retries.

@@ -38,6 +38,9 @@ import ChallengeScreen from '@/screens/parent/ChallengeScreen';
 import ChallengeBanner from '@/components/parent/ChallengeBanner';
 import AddChildScreen from '@/screens/parent/AddChildScreen';
 import ChildDetailScreen from '@/screens/parent/ChildDetailScreen';
+import WishesScreen from '@/screens/parent/WishesScreen';
+import WishesRow from '@/components/parent/WishesRow';
+import { readWishesOpenCount } from '@/modules/wishes/wishes';
 import { t } from '@/i18n';
 import { catCount, petCountText } from '@/modules/species/species';
 import { strings } from '@/i18n/strings';
@@ -62,7 +65,9 @@ type Overlay =
   /** `logWalk`: opened from »Vpiši sprehod« → the detail scrolls to the log-walk card (M5-T12). */
   | { kind: 'child'; childId: number; logWalk?: boolean }
   /** `backToChildId`: opened from a child's detail → "Back" returns there (M5-F01). */
-  | { kind: 'challenge'; backToChildId?: number };
+  | { kind: 'challenge'; backToChildId?: number }
+  /** M6-W05 »Želje« (dashboard row or a tapped `wish_created` push). */
+  | { kind: 'wishes' };
 
 /** QA n3: where the "updating" pill sits — above the measured tab bar (0 when none) and the safe area. */
 export function updatingBannerBottom(tabBarHeight: number, safeBottom: number): number {
@@ -118,6 +123,8 @@ export default function ParentDashboardScreen() {
   const safeBottom = useContext(SafeAreaInsetsContext)?.bottom ?? 0;
   const noChild = isNoChildPaired(dashboard.data);
   const family = familyFromDashboard(dashboard.data);
+  // M6-W05: null on an older server → no »Želje« row.
+  const wishesOpenCount = readWishesOpenCount(dashboard.data);
   const children = family?.children ?? [];
   const livePetIds = (family?.pets ?? []).filter((p) => p.is_active && !p.is_game_over).map((p) => p.id);
 
@@ -147,7 +154,14 @@ export default function ParentDashboardScreen() {
   const pushTarget = useAppStore((s) => s.pushTarget);
   const setPushTarget = useAppStore((s) => s.setPushTarget);
   useEffect(() => {
-    if (pushTarget === null || dashboard.data === undefined) return;
+    if (pushTarget === null) return;
+    // M6-W05: a wish push opens the wish list (no pet / child in its data).
+    if (pushTarget.type === 'wish_created') {
+      setOverlay({ kind: 'wishes' });
+      setPushTarget(null);
+      return;
+    }
+    if (dashboard.data === undefined || pushTarget.petId === null) return;
     const child = pushTargetChild(children, pushTarget.petId, pushTarget.type ?? null);
     if (child) {
       setActiveTab('dashboard');
@@ -193,6 +207,18 @@ export default function ParentDashboardScreen() {
           family={family}
           onBack={() => {
             setOverlay(backTo !== undefined ? { kind: 'child', childId: backTo } : { kind: 'none' });
+            void dashboard.refetch();
+          }}
+        />
+      );
+    }
+
+    if (overlay.kind === 'wishes') {
+      return (
+        <WishesScreen
+          family={family}
+          onBack={() => {
+            closeOverlay();
             void dashboard.refetch();
           }}
         />
@@ -258,6 +284,9 @@ export default function ParentDashboardScreen() {
 
         <ScrollView style={styles.flex} contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
           <ChallengeBanner family={family} onOpen={() => openChallenge()} />
+          {wishesOpenCount !== null && children.length > 0 && (
+            <WishesRow count={wishesOpenCount} onPress={() => setOverlay({ kind: 'wishes' })} />
+          )}
           {notice && <NoticeBanner text={joinNoticeText(notice)} closeLabel={DASHBOARD_STRINGS.closeNotice} onClose={() => setNotice(null)} />}
           {dashboard.isError && !serverUpdating && (
             <ErrorBanner

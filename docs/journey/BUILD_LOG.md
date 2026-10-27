@@ -9,6 +9,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-27 — »Želje« v aplikaciji: otrok prosi, starš odloči
+
+**Kaj:** otrok v aplikaciji odpre »Želje« in pri stvareh za ljubljenčka (postelja, skledi, dve igrači, priboljški) tapne »Prosi starša« — brez ene same cene. Starš na nadzorni plošči vidi »Želje (N)«, pri vsaki prošnji izbere »Kupi« (cena iz trgovine) ali »Ne zdaj« (otrok vidi le »Mogoče kdaj drugič«), lahko kupi tudi presenečenje ali paket »Dobrodošlica«. Priboljšek ima svoj gumb na zaslonu ljubljenčka (največ dva na dan).
+**Zakaj:** otrok se nauči, da ljubljenček stane tudi po nakupu in da o denarju odloča starš (SHOP_SPEC S4/S5).
+**Kako povedati:** 👩 »Otrok prosi, vi odločite — cen nikoli ne vidi.« · 🧒 »Prosi starša za posteljo za svojega kužka.« · 💼 dodaten prihodek tudi v brezplačni verziji. *Nakup deluje, ko bodo izdelki v trgovinah (M6-W02); prave slike stvari so načrt (M6-W03).*
+
 ## 2026-10-26 — Prilagojen način: aplikacija jasno pove, da potiske na iPhonu šteje samo Apple Watch
 
 **Kaj:** Na testu v družini je bil prilagojen način (potiski invalidskega vozička) vklopljen na iPhonu brez ure — dva dni 0 potiskov. Apple Zdravje potiske zapisuje samo z Apple Watch (Invalidski voziček = Da); sam iPhone jih ne šteje. Do zdaj je to pisalo v eni drobni vrstici. Zdaj je pod stikalom jasen okvir »Kdo šteje potiske« (iPhone: samo Apple Watch; Android: naprava ali aplikacija za Health Connect; brez ure: »Vpiši sprehod«), po 12:00 brez potiskov pa starš na kartici otroka vidi »Danes še ni potiskov« z gumbom »Vpiši sprehod«. Otroku tega ne kažemo.
