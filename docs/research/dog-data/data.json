@@ -56351,7 +56351,7 @@
       }
     },
     "chinese_crested": {
-      "_note": "Unattended run M5-R10-72 (2026-10-27): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. New vocabulary key: sun_protection (bare skin — PetMD S574). Built: brushing 1× a week (RKC S572 'Once a week', M5-R13), puppy socialisation (PetMD S574 quote, M5-R17) and nail trimming once a week (PetMD S574 'Check your dog's toenails once a week', M5-R19 — open for David). No meal gap (no source), no tooth / ear / bath / groomer task (no frequency). Sun cream: no frequency → the sun_protection chip and register text, no task. In marketing (not a welfare breed).",
+      "_note": "Unattended run M5-R10-72 (2026-10-27): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. New vocabulary key: sun_protection (bare skin — PetMD S574). Built: brushing 1× a week (RKC S572 'Once a week', M5-R13), puppy socialisation (PetMD S574 quote, M5-R17) and nail trimming once a week (PetMD S574 'Check your dog's toenails once a week', M5-R19 — open for David). No meal gap (no source), no tooth / ear / bath / groomer task (no frequency). Sun cream / coat in the cold: no game mechanic → needs a new ROADMAP task (David; Italian Greyhound precedent), chips sun_protection + cold_sensitive meanwhile. In marketing (not a welfare breed).",
       "exercise_minutes_adult": {
         "value": 30,
         "unit": "minutes/day",
@@ -56502,8 +56502,8 @@
         "source_id": "S574",
         "quote": "Hairless areas of skin require special protection from the sun and cold temperature.",
         "confidence": "high",
-        "notes": "PetMD (S574), chinese_crested.health.bare_skin. No frequency → no care task (runbook §3 »Breed care tasks«); the consider chips sun_protection (new key) and cold_sensitive and the register text carry it.",
-        "decision": "potrdil David 2026-10-24 (pravilo runbooka): brez pogostosti → brez naloge; čip in besedilo v registru"
+        "notes": "PetMD (S574), chinese_crested.health.bare_skin. A sourced need without a game mechanic (no sun-cream / coat-in-the-cold routine exists; Italian Greyhound cold_weather_coat precedent) → needs a new ROADMAP task — David; until then the consider chips sun_protection (new key) and cold_sensitive and the register text carry it. No frequency in the source.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): mehanike (krema za sonce / plašček v mrazu) ni → nova naloga v ROADMAP — David; do takrat čipa sun_protection + cold_sensitive in besedilo v registru"
       },
       "suitability_tags": {
         "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-72); refs = JSON paths in this file. New vocabulary key: sun_protection. No percentages in the app.",
