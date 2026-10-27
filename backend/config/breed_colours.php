@@ -450,6 +450,13 @@ return [
         ['key' => 'red', 'value' => 'red with a black mask', 'en' => 'Red', 'sl' => 'Rdeč'],
         ['key' => 'brindle', 'value' => 'brindle with a black mask', 'en' => 'Brindle', 'sl' => 'Tigrast'],
     ],
+    // M5-R10-72: FCI S571 — any colour or combination of colours except merle; three common Hairless skin colourings,
+    // each with white / cream crest, socks and plume.
+    'chinese_crested' => [
+        ['key' => 'pink-spotted', 'value' => 'pink skin with dark grey spots and white crest, socks and plume', 'en' => 'Pink with dark spots', 'sl' => 'Rožnat s temnimi pegami'],
+        ['key' => 'slate', 'value' => 'solid dark slate-grey skin with white crest, socks and plume', 'en' => 'Dark slate', 'sl' => 'Temno skrilasto siv'],
+        ['key' => 'pink', 'value' => 'solid pink skin with cream crest, socks and plume', 'en' => 'Pink', 'sl' => 'Rožnat'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

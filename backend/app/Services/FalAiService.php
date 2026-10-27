@@ -620,6 +620,13 @@ class FalAiService
                 .'dark medium-sized eyes with tight eyelids, V-shaped ears folded back, natural tail reaching the hocks, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-72: FCI 288 (S571) — Hairless variety, pink skin with dark spots as the anchor (the first colour of the
+            // game list); healthy bare skin (PetMD S574), natural crest, socks and plume.
+            BreedType::ChineseCrested => 'A small, graceful Chinese Crested dog of the Hairless variety with smooth, healthy pink skin with dark grey spots, '
+                .'a long, soft, silky white crest on the head, white hairy socks on the feet and a flowing white plume on the tail, '
+                .'fine-boned elegant body, large erect ears with a light fringe, very dark almond-shaped eyes, lean slightly tapering muzzle, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1479,6 +1486,18 @@ class FalAiService
                 'eye_color' => 'dark or hazel',
                 'fur_texture' => 'short, hard and lying flat',
                 'markings' => 'black muzzle mask toning off towards the eyes, at most a slight white mark on the chest, no other white, moderate muzzle with open nostrils, natural tail',
+            ],
+            // M5-R10-72: any colour except merle (FCI S571) — three common Hairless skin colourings; healthy bare skin with a
+            // silky crest, socks and tail plume (never a Powder Puff).
+            BreedType::ChineseCrested => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'pink skin with dark grey spots, white crest, socks and plume',
+                    1 => 'solid dark slate-grey skin, white crest, socks and plume',
+                    2 => 'solid pink skin, cream crest, socks and plume',
+                },
+                'eye_color' => 'very dark, almost black',
+                'fur_texture' => 'hairless smooth skin with soft, silky long hair only on the head, feet and tail',
+                'markings' => 'bare body skin, long silky crest on the head, hairy socks, flowing tail plume, large erect ears, never merle',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
