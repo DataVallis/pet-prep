@@ -866,7 +866,8 @@ describe('GET /api/parent/dashboard (M2-05)', function () {
         $week = $count(7);
         $challenge = $count(84);
 
-        expect($challenge)->toBe($week)->toBeLessThanOrEqual(60);
+        // M6-W01: + 1 constant query for `wishes_open_count`.
+        expect($challenge)->toBe($week)->toBeLessThanOrEqual(61);
     });
 
     it('never shows another family', function () {
