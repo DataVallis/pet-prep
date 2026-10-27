@@ -53,7 +53,11 @@ enum PetPose: string
     public function prompt(): string
     {
         return match ($this) {
-            self::Sit => 'sitting upright on the floor in the same spot, front paws together, looking up attentively at the camera',
+            // Fix 2026-10-27 (David): a standing reference edited to "sit" came back half
+            // standing / half sitting with extra legs — describe the complete sit explicitly.
+            self::Sit => 'sitting upright on the floor in the same spot in a complete, natural sit: the hindquarters resting on the floor '
+                .'with both hind legs folded under the body, the chest up, both front legs straight and close together, '
+                .'looking up attentively at the camera',
             self::Come => 'standing close in front of the camera in the foreground of the room, looking up at the camera happily, tail raised',
             self::Place => 'lying down calmly on a small grey dog mat on the floor, head up, looking at the camera',
             self::Door => 'standing at a closed door at the side of the same room, nose close to the door, looking back over the shoulder at the camera',

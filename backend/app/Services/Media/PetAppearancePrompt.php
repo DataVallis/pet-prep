@@ -420,7 +420,14 @@ class PetAppearancePrompt
         .'identical eye colour, ears, size and age. Keep the same room, floor, background, natural light, camera position and framing; '
         .'the whole body stays in frame. Change only the pose.';
 
-    public const KEYFRAME_STYLE = 'Realistic 35mm photograph, sharp focus, true-to-life fur texture and colours. '
+    /**
+     * Pose images only (fix 2026-10-27, David): an edit of a standing reference image
+     * blended the old and the new pose (front half standing, rear sitting, six paws).
+     */
+    public const POSE_ANATOMY = 'Correct, natural %s anatomy: exactly four legs and four paws, one head and one tail; '
+        .'the whole body is in the new pose, no part of it is left in the pose of the reference image.';
+
+    public const KEYFRAME_STYLE ='Realistic 35mm photograph, sharp focus, true-to-life fur texture and colours. '
         .'Only the animal: no people, no children, no hands, no text, no watermark, no logo.';
 
     /**
@@ -522,6 +529,7 @@ class PetAppearancePrompt
         $subject = $traits !== [] ? $this->describe($breedKey, $traits, $stage) : $this->displayName($breedKey);
 
         return 'The same '.$noun.' as in the reference image ('.$subject.'), now '.$pose->prompt().'. '
+            .sprintf(self::POSE_ANATOMY, $noun).' '
             .self::KEYFRAME_KEEP.' No toys. '.self::KEYFRAME_STYLE;
     }
 

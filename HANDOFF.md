@@ -156,6 +156,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-10-27 (cloud) — fix: sit pose anatomy (`fix/sit-pose-anatomy`)
+- Sit pose images came back half standing / half sitting with six paws; `PetPose::Sit` prompt describes the full sit and pose prompts add `POSE_ANATOMY`. After deploy David regenerates the bad sit pose (Pet → AI media → pose `sit` → Regenerate); the school sit phase clips follow automatically.
+
 ### 2026-10-27 (cloud, mobile) — M6-W04 / W05 »Želje« app (`feat/M6-W04-wishes-app`)
 - Child »Želje« (settings-sheet row → catalogue sheet, no prices, »Prosi starša«, states, »Priboljšek« chip) + parent »Želje (N)« row / `wish_created` push → `WishesScreen` (store prices, »Ne zdaj«, bundle, surprise, »Komu?«, redeem 409 → 3 retries). Built against `WISHES_API.md`, `schema.ts` regenerated from the backend export; old servers hide it (404). Not on a phone; item art = placeholders until M6-W03; store products still missing (M6-W02).
 ### 2026-10-27 (cloud, backend) — M6-W01 + W02 (server) »Želje« (`feat/M6-W01-wishes-backend`)
