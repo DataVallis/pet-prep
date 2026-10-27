@@ -56,18 +56,18 @@ Server-side catalogue `shop_items` (seeded by a migration, not editable in the a
   ]
 }
 ```
-`status` ∈ `available` | `requested` | `declined_recently` | `owned` (durable only; treats always carry `treats_left` instead). Top level also always has `"can_wish": true | false` and, when false, `"blocked_reason": "game_over" | "payment_required"` (still 200, items listed so the child sees what the pet has). 404 `no_pet` when the child has no pet.
+`status` ∈ `available` | `requested` | `declined_recently` | `owned` (durable only; treats always carry `treats_left` instead). Top level also always has `"can_wish": true | false` and `"blocked_reason": "game_over" | "pet_not_started" | "payment_required" | null` (null while the child can wish; always present since QA #417; still 200, items listed so the child sees what the pet has). `pet_not_started` = the pet is not born yet or this child has not signed their contract. `open_count` here = the **child's** open wishes (all pets) — the number the limit of 3 counts. 404 `no_pet` when the child has no pet.
 
 ### `POST /api/child/wishes` `{ "item_key": "bed" }`
 - 201 `{ "wish": { "id", "item_key", "status": "open", "created_at" }, "open_count": 2 }` — and a push to the parents (§6).
 - 422 `reason` ∈ `wish_limit_reached`, `already_requested`, `already_owned`, `declined_recently` (+ `retry_at`), `treats_still_left`, `unknown_item`, `bundle_not_wishable`.
-- 423 `reason` ∈ `game_over`, `payment_required`.
+- 423 `reason` ∈ `game_over` (also an inactive pet), `pet_not_started` (unborn / this child's contract not signed — QA #417), `payment_required`.
 - Throttle: the existing `child-actions` limiter.
 
 ### `POST /api/child/pet/treat`
-- 200 `{ "treats_left": 7, "given_today": 1, "daily_limit": 2, "media": <PetMedia|null> }` (`media` = treat clip when ready, else null → app shows the picture).
-- 422 `no_treats`, `treat_limit_today` (+ `next_at` = next local midnight), `pet_sleeping` (same sleep rule as play).
-- 423 as other child actions (hard-stop, illness, game over).
+- 200 `{ "status": "accepted", "treats_left": 7, "given_today": 1, "daily_limit": 2, "media": <PetMedia|null>, "state": {…} }` (`media` = treat clip when ready — the existing PetMedia shape with signed `video_url` / `url` (M6-W03); until then always null → app shows the picture).
+- 422 `no_treats`, `treat_limit_today` (+ `next_at` = next local midnight), `pet_sleeping` (same sleep rule as play; `next_at` = wake time); refusals also carry `treats_left`, `given_today`, `daily_limit`, `state`.
+- 423 as other child actions (hard-stop, illness, game over, contract, payment) — `{reason, locked_until, state}`.
 
 ### Child pet state (`GET /api/child/pet`, `ChildPetStateResource`)
 New block:
@@ -78,7 +78,7 @@ New block:
   "treats": { "left": 8, "given_today": 0, "daily_limit": 2 }
 }
 ```
-`items` = durable items the pet owns (not revoked). Old apps ignore the block.
+`items` = durable items the pet owns (not revoked). **`open_count` here = open wishes for this pet (all children)** — the same number in HTTP and in `PetUpdated` broadcasts (QA #417 m9); the per-child count for the limit is on `GET /api/child/wishes`. Old apps ignore the block.
 
 ## 4. Parent endpoints (token ability `parent`)
 
@@ -95,44 +95,46 @@ New block:
   ],
   "pets": [
     { "pet_id": 12, "pet_name": "Suki", "species": "dog",
-      "bundle_eligible": true,
+      "bundle_eligible": true, "bundle_product_id": "petprep_wish_bundle_welcome",
       "items": [
         { "key": "bed", "variant": "dog_bed", "product_id": "petprep_wish_bed", "owned": false, "media_ready": false },
         { "key": "treats", "variant": "dog_treats", "product_id": "petprep_wish_treats_10", "treats_left": 0 }
       ] }
   ],
-  "unassigned_credits": [ { "product_id": "petprep_wish_bed", "count": 1 } ]
+  "unassigned_credits": [ { "product_id": "petprep_wish_bed", "item_key": "bed", "count": 1 } ]
 }
 ```
 - `wishes`: open wishes only, newest first. `bundle_product_id` is set when the wish is for bed / bowls / toy_1 and that pet is `bundle_eligible`.
-- `pets`: every active pet of the family that can receive items (not game over / deleted / `payment_required`), for the surprise purchase.
-- `unassigned_credits`: purchases the server has but that are not on a pet yet (e.g. the app closed after paying) — the app offers »Komu?« for them.
+- `pets`: every active pet of the family that can receive items (not game over / deleted / unborn / `payment_required`), for the surprise purchase. `bundle_product_id` = the bundle's store id while the pet is `bundle_eligible`, else null.
+- `unassigned_credits`: purchases (per product, with its `item_key`) the server has but that are not on a pet yet (e.g. the app closed after paying) — the app offers »Komu?« for them.
 - `pet_name` may be null (unnamed pet) → app shows species + breed as everywhere else.
 
 ### `POST /api/parent/wishes/{wish}/decline`
 200 `{ "wish": { "id", "status": "declined" }, "open_count": 1 }`. 404 for another family's wish; 422 `wish_not_open`.
 
 ### `POST /api/parent/pets/{pet}/items/redeem` `{ "product_id": "petprep_wish_bed", "wish_id": 31 }`
-Call right after a successful store purchase (like `challenge/activate`). Uses the family's **oldest unused** wish credit with that `product_id` for this pet.
+Call right after a successful store purchase (like `challenge/activate`). Uses the family's unused wish credit of that `product_id` whose store `transaction_id` equals the `Idempotency-Key` when there is one, else the **oldest unused** one.
 - 200 `{ "status": "assigned" | "already_assigned", "items": [ … pet's items like in `pets[].items` … ], "open_count": 1 }`. `wish_id` (optional) must be an open wish of this pet whose key the product covers → it becomes `bought`; any other open wish of this pet for a key the purchase covers becomes `cancelled`.
 - 409 `no_credit` — the purchase hasn't reached the server yet; retry (app: 3× with backoff, then »Nakup je zabeležen, stvar bo kmalu dodana« and the credit shows in `unassigned_credits`).
 - 422 `already_owned` (durable the pet already has — the credit stays unused for another pet), `bundle_not_eligible`, `unknown_product`, `pet_not_active`, `wish_mismatch`.
 - 404 `pet_not_found`.
-- Idempotency: the app sends `Idempotency-Key: <store transaction id>` when it has one; a repeat with the same key returns the first result (`already_assigned`).
+- Idempotency: the app sends `Idempotency-Key: <store transaction id>` when it has one; a repeat with the same key for the **same pet** returns `already_assigned` with that pet's items; the same key for **another pet** → 422 `wish_mismatch` (never the other pet's items).
+- `pet_not_active` also for an unborn pet (QA #417).
 
 ### Parent dashboard (`GET /api/parent/dashboard`)
 New top-level field `"wishes_open_count": 2` (all children, all pets of the family).
 
 ## 5. RevenueCat webhook (W02)
 
-- `INITIAL_PURCHASE` / `NON_RENEWING_PURCHASE` of a `wish_products` id → one `wish_credits` row for the family (same ledger `purchase_events`, new outcome stays `granted`). No auto-assignment by the webhook (the app redeems with the wish).
+- `INITIAL_PURCHASE` / `NON_RENEWING_PURCHASE` of a `wish_products` id → one `wish_credits` row for the family (same ledger `purchase_events`, new outcome stays `granted`). No auto-assignment by the webhook (the app redeems with the wish). The same store `transaction_id` resent under a new event id → no second credit (`recorded`; partial unique index on unrevoked `transaction_id`).
+- A product mapped to an item key that has no `shop_items` row (config typo) counts as unknown → `unknown_product` + error log (never a 500, so RevenueCat does not retry forever); redeem → 422 `unknown_product`.
 - `CANCELLATION` (no expiration) / `REFUND` → the credit is revoked; if assigned, the pet's item (or the pack's unused treats) is removed; an open wish is not re-opened.
 - `TRANSFER` → unassigned wish credits move like challenge credits.
 - SANDBOX follows `services.revenuecat.accept_sandbox`.
 
 ## 6. Push
 
-- Child wishes → push to every parent of the family who has the app (`PushCopy`, parent register formal): title = pet name when set, else »PetPrep«; body SL »Vaš otrok si želi {item_acc}.«, EN »Your child is wishing for {item}.« (never the child's or pet's name in the body). Data `{ "type": "wish_created", "wish_id": 31 }` → app opens the parent wishes list. Held over quiet hours like other parent pushes. Max one wish push per child per 10 minutes (the rest just land on the list).
+- Child wishes → push to every parent of the family who has the app (`PushCopy`, parent register formal): title = pet name when set, else »PetPrep«; body SL »Vaš otrok si želi {item_acc}.«, EN »Your child is wishing for {item}.« (never the child's or pet's name in the body). Data `{ "type": "wish_created", "pet_id": 12, "wish_id": 31 }` → app opens the parent wishes list. Held over quiet hours like other parent pushes. Max one wish push per child per 10 minutes, and while one of the child's wish pushes is still held over quiet hours no second one is created (the end of quiet hours releases at most one); the rest just land on the list. Dropped at delivery when the wish is no longer open.
 - Item ready (W03): child push »{Ime} ima novo posteljo!« — not in W01.
 
 ## 7. Data, privacy, admin

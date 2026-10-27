@@ -70,8 +70,7 @@ class WishCreditService
      */
     public function redeem(Pet $pet, User $parent, string $productId, ?int $wishId, ?string $idempotencyKey): array
     {
-        $itemKey = WishService::keyForProduct($productId);
-        $item = $itemKey !== null ? ShopItem::find($itemKey) : null;
+        $item = WishService::itemForProduct($productId);
         if ($item === null) {
             throw new WishException('unknown_product', 'This is not a wish product.');
         }
@@ -83,10 +82,16 @@ class WishCreditService
             if ($idempotencyKey !== null) {
                 $done = WishCredit::where('family_id', $locked->family_id)->where('redeem_key', $idempotencyKey)->first();
                 if ($done !== null) {
+                    // QA #417 m2: only for the pet the key was used for — never another pet's items.
+                    if ((int) $done->pet_id !== (int) $locked->id) {
+                        throw new WishException('wish_mismatch', 'This purchase was already put on another pet.');
+                    }
+
                     return ['status' => 'already_assigned', 'pet' => $locked, 'credit' => $done];
                 }
             }
 
+            // Game over / inactive, unborn (QA #417 m6), payment_required.
             if ($this->wishes->blockedReason($locked) !== null) {
                 throw new WishException('pet_not_active', 'This pet cannot receive items now.');
             }
@@ -108,13 +113,12 @@ class WishCreditService
                 throw new WishException('already_owned', 'The pet already has this item.');
             }
 
-            $credit = WishCredit::where('family_id', $locked->family_id)
-                ->where('product_id', $productId)
-                ->available()
-                ->orderBy('purchased_at')
-                ->orderBy('id')
-                ->lockForUpdate()
-                ->first();
+            // QA #417 m1: the purchase the key names (store transaction id) first, else the oldest unused one.
+            $available = fn () => WishCredit::where('family_id', $locked->family_id)->where('product_id', $productId)->available();
+            $credit = $idempotencyKey !== null
+                ? $available()->where('transaction_id', $idempotencyKey)->lockForUpdate()->first()
+                : null;
+            $credit ??= $available()->orderBy('purchased_at')->orderBy('id')->lockForUpdate()->first();
             if ($credit === null) {
                 throw new WishException('no_credit', 'The purchase has not reached the server yet.', 409);
             }

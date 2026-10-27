@@ -21,6 +21,7 @@ use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 /**
  * »Želje« (M6-W01, SHOP_SPEC, docs/engineering/WISHES_API.md): the child asks
@@ -72,9 +73,28 @@ class WishService
         return array_filter((array) config('services.revenuecat.wish_products', []), fn ($v, $k) => is_string($k) && is_string($v), ARRAY_FILTER_USE_BOTH);
     }
 
+    /** The configured item key of a store product (it may still lack a `shop_items` row — see itemForProduct). */
     public static function keyForProduct(?string $productId): ?string
     {
         return $productId === null ? null : (self::products()[$productId] ?? null);
+    }
+
+    /**
+     * The catalogue row a store product buys; null for an unknown product AND for a
+     * configured key without a `shop_items` row (config typo — QA #417 M1, logged).
+     */
+    public static function itemForProduct(?string $productId): ?ShopItem
+    {
+        $key = self::keyForProduct($productId);
+        if ($key === null) {
+            return null;
+        }
+        $item = ShopItem::find($key);
+        if ($item === null) {
+            Log::error('Wishes: a wish product maps to an item key without a shop_items row', ['product_id' => $productId, 'item_key' => $key]);
+        }
+
+        return $item;
     }
 
     /** The store product the app should sell for an item key (configured, else the catalogue default). */
@@ -85,11 +105,18 @@ class WishService
         return is_string($configured) ? $configured : $item->product_id;
     }
 
-    /** Why the pet cannot get wishes / items now (null = it can). */
-    public function blockedReason(Pet $pet): ?string
+    /**
+     * Why the pet cannot get wishes / items now (null = it can): `game_over` (also
+     * inactive), `pet_not_started` (unborn, or — with $child — that child has not
+     * signed their contract yet; QA #417 m6), `payment_required`.
+     */
+    public function blockedReason(Pet $pet, ?User $child = null): ?string
     {
         if ($pet->is_game_over || ! $pet->is_active) {
             return 'game_over';
+        }
+        if ($pet->isUnborn() || ($child !== null && $pet->caretakerNeedsContract($child))) {
+            return 'pet_not_started';
         }
 
         return $pet->awaitsPayment() ? 'payment_required' : null;
@@ -110,7 +137,7 @@ class WishService
         $owned = $this->ownedItems($pet);
         $treatsLeft = $this->treatsLeft($pet);
         $open = PetWish::where('pet_id', $pet->id)->where('status', WishStatus::Open->value)->get()->keyBy('item_key');
-        $blocked = $this->blockedReason($pet);
+        $blocked = $this->blockedReason($pet, $child);
         $iso = fn (?CarbonInterface $at): ?string => $at?->copy()->setTimezone($tz)->toIso8601String();
 
         $items = [];
@@ -165,8 +192,12 @@ class WishService
             $locked = Pet::whereKey($pet->id)->lockForUpdate()->firstOrFail();
             $now = now()->startOfSecond();
 
-            if (($blocked = $this->blockedReason($locked)) !== null) {
-                throw new WishException($blocked, $blocked === 'game_over' ? 'The pet is no longer in play.' : 'The game is waiting for a parent.', 423);
+            if (($blocked = $this->blockedReason($locked, $child)) !== null) {
+                throw new WishException($blocked, match ($blocked) {
+                    'game_over' => 'The pet is no longer in play.',
+                    'pet_not_started' => 'Sign the contract first.',
+                    default => 'The game is waiting for a parent.',
+                }, 423);
             }
             if ($item->isDurable() && $this->ownedItems($locked)->has($item->key)) {
                 throw new WishException('already_owned', 'The pet already has this item.');
@@ -253,7 +284,9 @@ class WishService
     }
 
     /**
-     * The `wishes` block of the child pet state.
+     * The `wishes` block of the child pet state. `open_count` = open wishes for
+     * THIS PET (all children; QA #417 m9) — the per-child count for the limit is
+     * on GET /api/child/wishes.
      *
      * @return array{open_count: int, items: list<array{key: string, variant: string, media_ready: bool}>, treats: array{left: int, given_today: int, daily_limit: int}}
      */
@@ -263,7 +296,7 @@ class WishService
         $owned = $this->ownedItems($pet);
 
         return [
-            'open_count' => $child !== null ? $this->openCountOfChild($child) : $this->openCountOfPet($pet),
+            'open_count' => $this->openCountOfPet($pet),
             'items' => $owned->filter(fn (PetItem $i) => $i->kind === ShopItem::KIND_DURABLE)
                 ->map(fn (PetItem $i): array => ['key' => $i->item_key, 'variant' => $i->variant, 'media_ready' => false])
                 ->values()->all(),
@@ -334,11 +367,12 @@ class WishService
                 'pet_name' => $p->name,
                 'species' => $p->speciesValue()->value,
                 'bundle_eligible' => $isEligible($p),
+                'bundle_product_id' => $bundle !== null && $isEligible($p) ? self::productFor($bundle) : null,
                 'items' => $this->parentItems($p, $catalogue),
             ])->all(),
             'unassigned_credits' => WishCredit::where('family_id', $family->id)->available()
-                ->selectRaw('product_id, count(*) as n')->groupBy('product_id')->orderBy('product_id')->get()
-                ->map(fn ($r): array => ['product_id' => (string) $r->product_id, 'count' => (int) $r->n])->all(),
+                ->selectRaw('product_id, item_key, count(*) as n')->groupBy('product_id', 'item_key')->orderBy('product_id')->get()
+                ->map(fn ($r): array => ['product_id' => (string) $r->product_id, 'item_key' => (string) $r->item_key, 'count' => (int) $r->n])->all(),
         ];
     }
 
@@ -453,18 +487,19 @@ class WishService
         return $retry->greaterThan($now) ? $retry : null;
     }
 
-    /** A wish push for this child went out (or is held) in the last PUSH_GAP_MINUTES. */
+    /**
+     * The child already has a wish push held over quiet hours (whatever its age — QA
+     * #417 m7: the end of quiet hours never releases more than one), or one queued /
+     * sent in the last PUSH_GAP_MINUTES.
+     */
     private function pushedRecently(User $child, CarbonInterface $now): bool
     {
         $since = CarbonImmutable::instance($now)->subMinutes(self::PUSH_GAP_MINUTES);
-        $recent = PetWish::where('child_user_id', $child->id)->where('created_at', '>', $since)->pluck('id')->map(fn ($id) => (string) $id);
-        if ($recent->isEmpty()) {
-            return false;
-        }
 
         return PushNotification::where('type', PushType::WishCreated->value)
-            ->whereIn('metric', $recent->all())
-            ->whereIn('status', [PushNotification::STATUS_SCHEDULED, PushNotification::STATUS_QUEUED, PushNotification::STATUS_SENT])
+            ->whereIn('metric', PetWish::where('child_user_id', $child->id)->selectRaw('CAST(id AS VARCHAR)'))
+            ->where(fn ($q) => $q->where('status', PushNotification::STATUS_SCHEDULED)
+                ->orWhere(fn ($q) => $q->whereIn('status', [PushNotification::STATUS_QUEUED, PushNotification::STATUS_SENT])->where('created_at', '>', $since)))
             ->exists();
     }
 

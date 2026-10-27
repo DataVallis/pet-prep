@@ -107,6 +107,8 @@ return new class extends Migration
             $table->index('transaction_id');
             $table->unique(['family_id', 'redeem_key']);
         });
+        // QA #417 m3: one unrevoked credit per store transaction (the webhook skips a resend first).
+        DB::statement('CREATE UNIQUE INDEX wish_credits_one_per_transaction ON wish_credits (transaction_id) WHERE transaction_id IS NOT NULL AND revoked_at IS NULL');
         DB::statement('ALTER TABLE wish_credits ADD CONSTRAINT wish_credits_environment_check CHECK (environment IS NULL OR environment IN ('.self::ENVIRONMENTS.'))');
         // pet_id may become null later (pet deleted → nullOnDelete): the credit stays used.
         DB::statement("ALTER TABLE wish_credits ADD CONSTRAINT wish_credits_assigned_check CHECK ((assigned_at IS NULL AND assigned_via IS NULL AND pet_id IS NULL) OR (assigned_at IS NOT NULL AND assigned_via IN ('parent')))");
@@ -179,6 +181,8 @@ return new class extends Migration
     {
         $list = implode(', ', array_map(fn (string $v) => "'".str_replace("'", "''", $v)."'", $values));
         DB::statement('ALTER TABLE push_notifications DROP CONSTRAINT IF EXISTS push_notifications_type_check');
-        DB::statement("ALTER TABLE push_notifications ADD CONSTRAINT push_notifications_type_check CHECK (type IN ({$list}))");
+        // QA #417 m8: NOT VALID first (no long lock while the existing rows are checked), then validate.
+        DB::statement("ALTER TABLE push_notifications ADD CONSTRAINT push_notifications_type_check CHECK (type IN ({$list})) NOT VALID");
+        DB::statement('ALTER TABLE push_notifications VALIDATE CONSTRAINT push_notifications_type_check');
     }
 };

@@ -6,6 +6,7 @@ use App\Enums\PurchaseEventOutcome;
 use App\Models\Family;
 use App\Models\PurchaseEvent;
 use App\Models\User;
+use App\Models\WishCredit;
 use Illuminate\Database\UniqueConstraintViolationException;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
@@ -139,8 +140,9 @@ class RevenueCatWebhookService
         }
 
         $productId = self::stringOrNull($event['product_id'] ?? null);
-        // M6-W02: a wish product (»Želje«) — its own credits, never auto-assigned.
-        $wishKey = WishService::keyForProduct($productId);
+        // M6-W02: a wish product (»Želje«) — its own credits, never auto-assigned. A configured
+        // key without a shop_items row counts as unknown (QA #417 M1 — never a 500 / endless retry).
+        $wishKey = WishService::itemForProduct($productId)?->key;
         if ($productId === null || ($wishKey === null && ! in_array($productId, $this->challengeProducts(), true))) {
             Log::warning('RevenueCatWebhook: not a known product', ['event_id' => $eventId, 'product_id' => $productId]);
 
@@ -189,6 +191,13 @@ class RevenueCatWebhookService
     private function wishEvent(Family $family, PurchaseEvent $record, array $event, string $eventId, string $type, string $productId, string $wishKey): PurchaseEventOutcome
     {
         if (in_array($type, self::GRANTING, true)) {
+            // QA #417 m3: the same store transaction resent under a new event id → no second credit.
+            $transactionId = self::stringOrNull($event['transaction_id'] ?? null);
+            if ($transactionId !== null && WishCredit::where('transaction_id', $transactionId)->whereNull('revoked_at')->exists()) {
+                Log::warning('RevenueCatWebhook: wish purchase already credited', ['event_id' => $eventId]);
+
+                return PurchaseEventOutcome::Recorded;
+            }
             $this->wishCredits->create($family, $record, [
                 'product_id' => $productId,
                 'item_key' => $wishKey,

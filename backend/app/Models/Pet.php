@@ -599,9 +599,6 @@ class Pet extends Model
         return $this->hasOne(PetContract::class)->oldestOfMany('signed_at');
     }
 
-    /**
-     * AI media slots (reference image + state videos, M4-03 / M4-05).
-     */
     /** M6-W01 »Želje«: the children's wishes for this pet. */
     public function wishes(): HasMany
     {
@@ -614,6 +611,9 @@ class Pet extends Model
         return $this->hasMany(PetItem::class);
     }
 
+    /**
+     * AI media slots (reference image + state videos, M4-03 / M4-05).
+     */
     public function media(): HasMany
     {
         return $this->hasMany(PetMedia::class);

@@ -27,7 +27,9 @@ use Illuminate\Http\Client\Factory as HttpFactory;
 use Illuminate\Http\Client\Request;
 use Illuminate\Routing\Middleware\ThrottleRequests;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Str;
 use Illuminate\Testing\TestResponse;
@@ -148,7 +150,7 @@ describe('catalogue', function () {
             ->assertJsonPath('open_count', 0)
             ->assertJsonPath('open_limit', 3)
             ->assertJsonPath('can_wish', true)
-            ->assertJsonMissingPath('blocked_reason')
+            ->assertJsonPath('blocked_reason', null)
             ->assertJsonPath('items.0', ['key' => 'bed', 'kind' => 'durable', 'variant' => 'dog_bed', 'status' => 'available'])
             ->assertJsonPath('items.2.variant', 'dog_rope')
             ->assertJsonPath('items.3.variant', 'dog_squeaky')
@@ -210,6 +212,7 @@ describe('child wishes', function () {
             ->assertJsonPath('wishes.0.bundle_product_id', 'petprep_wish_bundle_welcome')
             ->assertJsonPath('pets.0.pet_id', $pet->id)
             ->assertJsonPath('pets.0.bundle_eligible', true)
+            ->assertJsonPath('pets.0.bundle_product_id', 'petprep_wish_bundle_welcome')
             ->assertJsonPath('pets.0.items.0', ['key' => 'bed', 'variant' => 'dog_bed', 'product_id' => 'petprep_wish_bed', 'owned' => false, 'media_ready' => false])
             ->assertJsonPath('pets.0.items.4', ['key' => 'treats', 'variant' => 'dog_treats', 'product_id' => 'petprep_wish_treats_10', 'treats_left' => 0])
             ->assertJsonPath('unassigned_credits', []);
@@ -468,7 +471,7 @@ describe('webhook (W02)', function () {
             ->and(PurchaseEvent::where('event_id', $event['id'])->value('outcome')?->value)->toBe('granted');
 
         wiAs($parent);
-        getJson('/api/parent/wishes')->assertJsonPath('unassigned_credits', [['product_id' => 'petprep_wish_bed', 'count' => 1]]);
+        getJson('/api/parent/wishes')->assertJsonPath('unassigned_credits', [['product_id' => 'petprep_wish_bed', 'item_key' => 'bed', 'count' => 1]]);
     });
 
     it('stores an unknown product and a sandbox event (not accepted) without a credit', function () {
@@ -593,7 +596,7 @@ describe('redeem', function () {
         wiBuy($parent, 'petprep_wish_bundle_welcome');
         wiRedeem($parent, $pet, 'petprep_wish_bundle_welcome')->assertStatus(422)->assertJsonPath('reason', 'bundle_not_eligible');
         wiAs($parent);
-        getJson('/api/parent/wishes')->assertJsonPath('pets.0.bundle_eligible', false);
+        getJson('/api/parent/wishes')->assertJsonPath('pets.0.bundle_eligible', false)->assertJsonPath('pets.0.bundle_product_id', null);
     });
 });
 
@@ -635,5 +638,86 @@ describe('privacy and admin', function () {
             ->assertOk()->assertCanSeeTableRecords(PetWish::all());
         Livewire::test(ItemsRelationManager::class, ['ownerRecord' => $pet, 'pageClass' => EditPet::class])
             ->assertOk()->assertCanSeeTableRecords(PetItem::all());
+    });
+});
+
+// ─────────────────────────────────────────────────────────────────────────
+describe('QA #417 fixes', function () {
+    it('M1: a product mapped to a key without a shop_items row is unknown (webhook 200, redeem 422), logged', function () {
+        config(['services.revenuecat.wish_products' => ['petprep_wish_bed' => 'bed', 'petprep_wish_typo' => 'bedd']]);
+        Log::spy();
+        [$parent, , $pet] = wiFamily();
+        wiBuy($parent, 'petprep_wish_typo');
+        expect(PurchaseEvent::latest('id')->value('outcome')?->value)->toBe('unknown_product')
+            ->and(WishCredit::count())->toBe(0);
+        wiRedeem($parent, $pet, 'petprep_wish_typo')->assertStatus(422)->assertJsonPath('reason', 'unknown_product');
+        Log::shouldHaveReceived('error')->withArgs(fn ($m) => str_contains($m, 'without a shop_items row'));
+    });
+
+    it('m1: with an Idempotency-Key the credit of that store transaction is used, not the oldest', function () {
+        [$parent, , $pet] = wiFamily();
+        wiBuy($parent, 'petprep_wish_treats_10', ['transaction_id' => 'tx-old']);
+        Carbon::setTestNow(now()->addMinute());
+        wiBuy($parent, 'petprep_wish_treats_10', ['transaction_id' => 'tx-new']);
+        wiRedeem($parent, $pet, 'petprep_wish_treats_10', null, 'tx-new')->assertOk();
+        expect(WishCredit::where('transaction_id', 'tx-new')->value('pet_id'))->toBe($pet->id)
+            ->and(WishCredit::where('transaction_id', 'tx-old')->value('pet_id'))->toBeNull();
+    });
+
+    it('m2: a repeated key for another pet is wish_mismatch, never the other pet\'s items', function () {
+        [$parent, $child, $pet] = wiFamily();
+        $child2 = User::factory()->child()->create(['parent_id' => $parent->id]);
+        $pet2 = Pet::factory()->borderCollie()->create(['user_id' => $child2->id, 'born_at' => now()->subDay()]);
+        wiBuy($parent, 'petprep_wish_bed', ['transaction_id' => 'tx-a']);
+        wiRedeem($parent, $pet, 'petprep_wish_bed', null, 'tx-a')->assertOk()->assertJsonPath('status', 'assigned');
+        wiRedeem($parent, $pet2, 'petprep_wish_bed', null, 'tx-a')->assertStatus(422)->assertJsonPath('reason', 'wish_mismatch');
+        wiRedeem($parent, $pet, 'petprep_wish_bed', null, 'tx-a')->assertOk()->assertJsonPath('status', 'already_assigned')
+            ->assertJsonPath('items.0.owned', true);
+    });
+
+    it('m3: the same store transaction under a new event id gives no second credit', function () {
+        [$parent] = wiFamily();
+        wiBuy($parent, 'petprep_wish_bed', ['transaction_id' => 'tx-same']);
+        wiBuy($parent, 'petprep_wish_bed', ['transaction_id' => 'tx-same']);
+        expect(WishCredit::count())->toBe(1)
+            ->and(PurchaseEvent::latest('id')->value('outcome')?->value)->toBe('recorded');
+    });
+
+    it('m6: an unborn pet / a child without a signed contract cannot wish; the parent list and redeem skip such a pet', function () {
+        [$parent, $child, $pet] = wiFamily(fn ($f) => $f->unborn(), ['born_at' => null, 'last_decay_at' => null]);
+        wiWish($child, 'bed')->assertStatus(423)->assertJsonPath('reason', 'pet_not_started');
+        wiAs($child);
+        getJson('/api/child/wishes')->assertJsonPath('can_wish', false)->assertJsonPath('blocked_reason', 'pet_not_started');
+        wiAs($parent);
+        getJson('/api/parent/wishes')->assertJsonPath('pets', []);
+        wiBuy($parent);
+        wiRedeem($parent, $pet, 'petprep_wish_bed')->assertStatus(422)->assertJsonPath('reason', 'pet_not_active');
+    });
+
+    it('m7: quiet hours release at most one wish push per child, however old the held one is', function () {
+        config(['push.enabled' => true]);
+        Queue::fake([SendPushNotification::class]);
+        Carbon::setTestNow(Carbon::parse('2026-10-27 21:00:00', 'UTC')); // 22:00 local
+        [, $child] = wiFamily();
+        wiWish($child, 'bed')->assertCreated();
+        Carbon::setTestNow(Carbon::parse('2026-10-28 03:00:00', 'UTC')); // 04:00 local, still quiet
+        wiWish($child, 'bowls')->assertCreated();
+        expect(PushNotification::where('type', 'wish_created')->count())->toBe(1);
+    });
+
+    it('m9: the state block counts open wishes per pet (all children)', function () {
+        [$parent, $child, $pet] = wiFamily();
+        $child2 = User::factory()->child()->create(['parent_id' => $parent->id]);
+        app(FamilyService::class)->addCaretaker($pet, $child2, false);
+        wiWish($child, 'bed')->assertCreated();
+        wiWish($child2, 'bowls')->assertCreated();
+        wiAs($child);
+        getJson('/api/child/pet')->assertJsonPath('wishes.open_count', 2);
+        getJson('/api/child/wishes')->assertJsonPath('open_count', 1);
+    });
+
+    it('m8: the push type CHECK is valid and accepts wish_created', function () {
+        $row = DB::selectOne("SELECT convalidated FROM pg_constraint WHERE conname = 'push_notifications_type_check'");
+        expect($row->convalidated)->toBeTrue();
     });
 });
