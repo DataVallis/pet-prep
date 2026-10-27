@@ -38,6 +38,7 @@ import {
 } from '@/modules/behaviour/behaviour';
 import { readChildTraining, readPetTraining, type ChildTraining } from '@/modules/training/training';
 import { broadcastSocialisation, readChildSocialisation, type ChildSocialisation } from '@/modules/socialisation/socialisation';
+import { readChildWishesState, type ChildWishesState } from '@/modules/wishes/wishes';
 import { broadcastCareTasks, nextHeatChangeMs, readChildCareTasks, readWalkHeat, type ChildCareTask, type WalkHeat } from '@/modules/careTasks/careTasks';
 import { broadcastPlay, readChildPlay, type ChildPlay } from '@/modules/play/play';
 import { readChildCertificate, type ChildCertificate } from '@/modules/certificate/certificate';
@@ -226,6 +227,8 @@ export interface ChildPetView {
    * the breed's source states no frequency, for a cat and from an older server.
    */
   careTasks: ChildCareTask[];
+  /** M6-W04: owned items + treats (`state.wishes`); null = older server → no »Želje«, no »Priboljšek«. */
+  wishes: ChildWishesState | null;
   /** M5-R14 today's summer midday heat window (flat-faced breeds); null otherwise / older server. */
   walkHeat: WalkHeat | null;
   /**
@@ -440,6 +443,8 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
     // M5-R14 / R15 / R19 / R20: older servers send no `care_tasks` / `walk_heat` → none.
     careTasks: readChildCareTasks((raw as { care_tasks?: unknown }).care_tasks),
     walkHeat: readWalkHeat((raw as { walk_heat?: unknown }).walk_heat),
+    // M6-W04: older servers send no `wishes` → null.
+    wishes: readChildWishesState((raw as { wishes?: unknown }).wishes),
     // M5-T05: older servers send no `care_guide` → null.
     care_guide: readCareGuide((raw as { care_guide?: unknown }).care_guide),
     snapshotAtMs: msOf(raw.server_time),

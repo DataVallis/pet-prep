@@ -9,6 +9,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-27 — »Želje« v aplikaciji: otrok prosi, starš odloči
+
+**Kaj:** otrok v aplikaciji odpre »Želje« in pri stvareh za ljubljenčka (postelja, skledi, dve igrači, priboljški) tapne »Prosi starša« — brez ene same cene. Starš na nadzorni plošči vidi »Želje (N)«, pri vsaki prošnji izbere »Kupi« (cena iz trgovine) ali »Ne zdaj« (otrok vidi le »Mogoče kdaj drugič«), lahko kupi tudi presenečenje ali paket »Dobrodošlica«. Priboljšek ima svoj gumb na zaslonu ljubljenčka (največ dva na dan).
+**Zakaj:** otrok se nauči, da ljubljenček stane tudi po nakupu in da o denarju odloča starš (SHOP_SPEC S4/S5).
+**Kako povedati:** 👩 »Otrok prosi, vi odločite — cen nikoli ne vidi.« · 🧒 »Prosi starša za posteljo za svojega kužka.« · 💼 dodaten prihodek tudi v brezplačni verziji. *Nakup deluje, ko bodo izdelki v trgovinah (M6-W02); prave slike stvari so načrt (M6-W03).*
+
+---
+
 ## 2026-10-27 — »Želje«: strežnik je pripravljen
 
 **Kaj:** Otrok lahko (ko bo aplikacija nared) prosi za posteljo, sklede, igračo ali priboljške za svojega ljubljenčka — brez cen. Starš dobi obvestilo »Vaš otrok si želi posteljo.« (brez imen), seznam želja vidi na nadzorni plošči in izbere »Kupi« ali »Ne zdaj«. Pravila na strežniku: največ 3 odprte prošnje, po »Ne zdaj« spet čez 7 dni, priboljšek največ 2× na dan, kupljena stvar gre ljubljenčku želje. Pri vračilu v trgovini stvar izgine.

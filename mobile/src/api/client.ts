@@ -161,6 +161,17 @@ export interface RegisterErrorBody extends ValidationErrorBody {
   codes?: Partial<Record<string, RegisterErrorCode>>;
 }
 
+/** `GET /api/child/wishes` 200 (M6-W01) — read through `readChildWishes`. */
+export type ChildWishesResponse = operations['wish.childIndex']['responses'][200]['content']['application/json'];
+/** `POST /api/child/wishes` 201. */
+export type CreateWishResponse = operations['wish.store']['responses'][201]['content']['application/json'];
+/** `POST /api/child/pet/treat` 200 — read through `readTreatResult`. */
+export type GiveTreatResponse = operations['wish.treat']['responses'][200]['content']['application/json'];
+/** `GET /api/parent/wishes` 200 — read through `readParentWishes`. */
+export type ParentWishesResponse = operations['wish.parentIndex']['responses'][200]['content']['application/json'];
+export type DeclineWishResponse = operations['wish.decline']['responses'][200]['content']['application/json'];
+export type RedeemPetItemResponse = operations['wish.redeem']['responses'][200]['content']['application/json'];
+
 /** `GET /api/parent/dashboard` 200 response (union: paired / no pet / no child). */
 export type ParentDashboardResponse =
   operations['parentDashboard.dashboard']['responses'][200]['content']['application/json'];
@@ -717,6 +728,8 @@ interface RequestOptions {
    * clear it.
    */
   silentStatus?: boolean;
+  /** Extra request headers (M6-W02: `Idempotency-Key` of a wish redeem). */
+  headers?: Record<string, string>;
 }
 
 /** M5-05 (QA #375 B1): remember the server's error-report switch; never throws. */
@@ -760,6 +773,7 @@ async function sendRequest<T>(path: string, options: RequestOptions): Promise<T>
     // M5-R14 – R20 follow-up: what this build can show, on every request — the server
     // switches breed care tasks on for an existing dog only once its apps declare them.
     [CLIENT_FEATURES_HEADER]: CLIENT_FEATURES.join(','),
+    ...options.headers,
   };
 
   if (token) {
@@ -1329,6 +1343,43 @@ export const api = {
     apiRequest<unknown>(`/api/parent/pets/${petId}/care-reminders`, {
       method: 'POST',
       body: { task } satisfies components['schemas']['ConfirmCareReminderRequest'],
+    }),
+
+  // ── Wishes »Želje« (M6-W01 / W02, docs/engineering/WISHES_API.md) ──
+  // Bodies are read through `modules/wishes/wishes.ts` (loose: an older server has no routes → 404).
+
+  /** GET /api/child/wishes — the pet's catalogue (no prices). 404 `no_pet`; 404 without reason = old server. */
+  getChildWishes: () => apiRequest<ChildWishesResponse>('/api/child/wishes'),
+
+  /** POST /api/child/wishes — ask a parent for an item. 422 / 423 `reason` (WISHES_API §3). */
+  createWish: (itemKey: components['schemas']['CreateWishRequest']['item_key']) =>
+    apiRequest<CreateWishResponse>('/api/child/wishes', { method: 'POST', body: { item_key: itemKey } }),
+
+  /** POST /api/child/pet/treat — give one treat. 422 no_treats / treat_limit_today / pet_sleeping, 423 lock. */
+  giveTreat: () => apiRequest<GiveTreatResponse>('/api/child/pet/treat', { method: 'POST' }),
+
+  /** GET /api/parent/wishes — open wishes, pets for a surprise purchase, unassigned credits. */
+  getParentWishes: () => apiRequest<ParentWishesResponse>('/api/parent/wishes'),
+
+  /** POST /api/parent/wishes/{wish}/decline — »Ne zdaj«. */
+  declineWish: (wishId: number) =>
+    apiRequest<DeclineWishResponse>(`/api/parent/wishes/${wishId}/decline`, { method: 'POST' }),
+
+  /**
+   * POST /api/parent/pets/{pet}/items/redeem — assign a landed wish purchase to the pet.
+   * `Idempotency-Key` = the store transaction id when known. 409 `no_credit` = retry later.
+   */
+  redeemPetItem: (
+    petId: number,
+    body: components['schemas']['RedeemItemRequest'],
+    idempotencyKey: string | null,
+    options: { timeoutMs?: number } = {},
+  ) =>
+    apiRequest<RedeemPetItemResponse>(`/api/parent/pets/${petId}/items/redeem`, {
+      method: 'POST',
+      ...(options.timeoutMs !== undefined ? { timeoutMs: options.timeoutMs } : {}),
+      body: { product_id: body.product_id, ...(body.wish_id != null ? { wish_id: body.wish_id } : {}) },
+      ...(idempotencyKey ? { headers: { 'Idempotency-Key': idempotencyKey } } : {}),
     }),
 
   activateChallenge: (petId: number) =>

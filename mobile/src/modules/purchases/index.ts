@@ -9,6 +9,8 @@ export {
   getPurchasesStatus,
   mapPurchaseError,
   purchasePackage,
+  purchaseStoreProduct,
+  fetchStoreProducts,
   resetPurchasesIdentity,
   restorePurchases,
   PurchasesUnavailableError,
@@ -16,6 +18,7 @@ export {
   type PurchaseOutcome,
   type PurchasesStatus,
   type RestoreOutcome,
+  type StoreProductOutcome,
 } from './purchases';
 export { BILLING_KEY, billingPet, readBilling, type Billing, type PurchaseTarget } from './billing';
 export { purchaseOutcomeMessage, restoreOutcomeMessage } from './messages';

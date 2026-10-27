@@ -1,6 +1,6 @@
 # PetPrep — Trgovinica za ljubljenčka (osnutek, *načrt*)
 
-> Status: **specifikacija potrjena (David 26. 10. 2026); strežnik zgrajen 27. 10. 2026 (M6-W01 + strežniški del W02, API `docs/engineering/WISHES_API.md`), aplikacija in AI vsebine stvari (W03–W05) še ne.** Dopolnitve 27. 10.: dve igrači na vrsto, priboljški največ 2 na dan, nakup iz želje gre ljubljenčku želje, brez stikala (DECISIONS). Ideja in odločitve: David 26. 10. 2026. Nadgrajuje vrstico »Priboljški, veterinar, igrače (IAP)« (FEATURES ⏸) in BUSINESS_MODEL §3 (IAP).
+> Status: **specifikacija potrjena (David 26. 10. 2026); strežnik zgrajen 27. 10. 2026 (M6-W01 + strežniški del W02, API `docs/engineering/WISHES_API.md`), aplikacija 27. 10. 2026 (M6-W04 + W05); AI vsebine stvari (W03) še ne, nakup deluje, ko bodo izdelki v trgovinah (W02).** Dopolnitve 27. 10.: dve igrači na vrsto, priboljški največ 2 na dan, nakup iz želje gre ljubljenčku želje, brez stikala (DECISIONS). Ideja in odločitve: David 26. 10. 2026. Nadgrajuje vrstico »Priboljški, veterinar, igrače (IAP)« (FEATURES ⏸) in BUSINESS_MODEL §3 (IAP).
 
 ## 1. Ideja
 

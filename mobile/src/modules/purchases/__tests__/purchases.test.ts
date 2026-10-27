@@ -345,6 +345,14 @@ describe('restorePurchases', () => {
     expect(invalidate).toHaveBeenCalledWith({ queryKey: BILLING_KEY });
   });
 
+  it('QA #416 m12: only challenge transactions count as restored (wish items do not)', async () => {
+    const tx = (productIdentifier: string) => ({ transactionIdentifier: `tx-${productIdentifier}`, productIdentifier, purchaseDate: '2026-10-27T08:00:00Z' });
+    sdk.restorePurchases.mockResolvedValueOnce({ ...makeCustomerInfo(), nonSubscriptionTransactions: [tx('petprep_wish_bed')] });
+    await expect(restorePurchases()).resolves.toEqual({ status: 'nothing' });
+    sdk.restorePurchases.mockResolvedValueOnce({ ...makeCustomerInfo(), nonSubscriptionTransactions: [tx('petprep_wish_bed'), tx('petprep_challenge_12w')] });
+    await expect(restorePurchases()).resolves.toEqual({ status: 'restored' });
+  });
+
   it('maps errors (a cancel-like error is a store problem)', async () => {
     sdk.restorePurchases.mockRejectedValueOnce(makePurchasesError(PURCHASES_ERROR_CODE.NETWORK_ERROR));
     await expect(restorePurchases()).resolves.toEqual({ status: 'network' });

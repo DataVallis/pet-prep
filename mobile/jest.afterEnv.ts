@@ -7,6 +7,7 @@ import { channelAuthGate, childPetFetchGate } from '@/modules/childPet/refetchGo
 import { useServerStatusStore } from '@/store/serverStatusStore';
 import { setMediaFileStoreForTests } from '@/modules/petMedia/mediaFileCache';
 import { resetTopStackPrefsForTests, setTopStackPrefsStoreForTests } from '@/modules/hud/topStackPrefs';
+import { memoryPendingStore, setPendingPurchaseStoreForTests } from '@/modules/wishes/pendingPurchases';
 
 beforeEach(() => {
   childPetFetchGate.reset();
@@ -18,4 +19,6 @@ beforeEach(() => {
   // David 2026-10-26: the HUD top stack's collapsed state is a device-wide store — start expanded.
   setTopStackPrefsStoreForTests(null);
   resetTopStackPrefsForTests();
+  // QA #416 M2: pending wish purchases live in a device store — a fresh, empty one per test.
+  setPendingPurchaseStoreForTests(memoryPendingStore());
 });

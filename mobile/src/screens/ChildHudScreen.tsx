@@ -153,6 +153,11 @@ import BirthdayHat from '@/modules/birthday/BirthdayHat';
 import { showBirthdayHat } from '@/modules/birthday/birthday';
 import { useBirthdayCard } from '@/modules/birthday/birthdaySeen';
 import ChildSettingsSheet from '@/components/ChildSettingsSheet';
+import WishesSheet from '@/modules/wishes/WishesSheet';
+import { TreatChip, TreatClip, treatErrorText } from '@/modules/wishes/TreatChip';
+import { showTreatButton } from '@/modules/wishes/wishes';
+import { useGiveTreat } from '@/hooks/queries/useWishes';
+
 import { mediaModeOf } from '@/modules/display/display';
 import ChildCertificateSheet from '@/components/ChildCertificateSheet';
 import { CERTIFICATE_CHILD_STRINGS, childCertificateEntry } from '@/modules/certificate/certificate';
@@ -182,6 +187,9 @@ import { useFactMoment } from '@/modules/breedFacts/useFactMoment';
 import FactSheet from '@/modules/breedFacts/FactSheet';
 import FactChip from '@/modules/breedFacts/FactChip';
 import BreedGuideScreen from '@/modules/breedFacts/BreedGuideScreen';
+
+/** M6-W04: hearts over the pet after a treat without a clip. */
+const TREAT_HEARTS_MS = 3_000;
 
 /**
  * User-visible strings of the HUD (`child:hud`, M1-18). `autoRetry` sits under the error
@@ -463,6 +471,29 @@ export default function ChildHudScreen() {
   const [isProfileVisible, setProfileVisible] = useState(false);
   /** David 2026-10-12: the child can change the app language from the HUD, not only before sign-in. */
   const [isSettingsVisible, setSettingsVisible] = useState(false);
+  // M6-W04 »Želje«: the catalogue sheet (UI state) and the treat moment (clip or brief hearts).
+  const [isWishesVisible, setWishesVisible] = useState(false);
+  const [treatClip, setTreatClip] = useState<string | null>(null);
+  const [treatHearts, setTreatHearts] = useState(false);
+  const giveTreat = useGiveTreat();
+  useEffect(() => {
+    if (!treatHearts) return;
+    const id = setTimeout(() => setTreatHearts(false), TREAT_HEARTS_MS);
+    return () => clearTimeout(id);
+  }, [treatHearts]);
+  const closeTreatClip = useCallback(() => setTreatClip(null), []);
+  const handleTreat = useCallback(() => {
+    giveTreat.mutate(undefined, {
+      onSuccess: (result) => {
+        if (result.clipUrl !== null) setTreatClip(result.clipUrl);
+        else setTreatHearts(true);
+        showToast({ tone: 'ok', message: t('wishes:child.treat.given') });
+      },
+      onError: (error) => {
+        showToast({ tone: 'info', message: treatErrorText(error, queryClient.getQueryData<ChildPetView>(childPetKey) ?? null) });
+      },
+    });
+  }, [giveTreat, queryClient, showToast]);
   // M2-01d: the finished challenge (certificate / "the parent will prepare it" / kind note).
   const [isCertificateVisible, setCertificateVisible] = useState(false);
   // M5-R17: the puppy's weekly "Nova izkušnja" card (UI-only state, like the language sheet).
@@ -745,7 +776,7 @@ export default function ChildHudScreen() {
   const entry = coveredByOverlay ? ({ kind: 'hidden' } as const) : playEntry(view, playNow, dismissedInvitations);
   const moodScene = moodSceneAt(view, playNow);
   // The free tier has no `playing` video: the usual one plays and the app draws hearts.
-  const showHearts = moodScene !== null && hudVideoState !== 'playing' && !coveredByOverlay;
+  const showHearts = ((moodScene !== null && hudVideoState !== 'playing') || treatHearts) && !coveredByOverlay;
   // David 2026-10-25: the stack's cards besides the countdown / scene / notice / meals (BehaviourPanel adds those).
   const playBlockedShown =
     entry.kind === 'button' && entry.block !== null && !(sleepNote !== undefined && entry.block === 'sleeping');
@@ -801,7 +832,9 @@ export default function ChildHudScreen() {
       ? [{ key: 'fact', priority: STACK_PRIORITY.fact, short: t('facts:child.chip'), icon: BookOpen, node: <FactChip onPress={facts.openChip} /> }]
       : []),
   ];
-  const hasChips = hasTraining || entry.kind === 'button' || chips.length > 0 || careTaskChips.length > 0 || socialisationChip;
+  // M6-W04: »Priboljšek« only while the pet has treats (never over a lock).
+  const treatChip = showTreatButton(view.wishes, locked);
+  const hasChips = hasTraining || entry.kind === 'button' || chips.length > 0 || careTaskChips.length > 0 || socialisationChip || treatChip;
   // The chips; `compact` = the collapsed stack's icon-only buttons (same actions, full a11y labels).
   const renderChips = (compact: boolean) => (
     <>
@@ -853,6 +886,9 @@ export default function ChildHudScreen() {
         ) : (
           <PlayChip compact={compact} block={entry.block} onPress={() => setPlayOverlay('pick')} />
         ))}
+      {treatChip && view.wishes !== null && (
+        <TreatChip compact={compact} left={view.wishes.treats.left} species={pet.species} busy={giveTreat.isPending} onPress={handleTreat} />
+      )}
     </>
   );
   // Android: TalkBack must not reach the HUD under the album / training game (iOS: accessibilityViewIsModal).
@@ -1321,8 +1357,15 @@ export default function ChildHudScreen() {
         careGuide={
           view.care_guide !== null ? { label: t('careGuide:open'), hint: t('careGuide:openHint'), onOpen: careGuide.open } : undefined
         }
+        wishes={
+          view.wishes !== null ? { label: t('wishes:child.entry'), hint: t('wishes:child.entryA11y'), onOpen: () => setWishesVisible(true) } : undefined
+        }
         exit={{ label: childExit.shared ? PARENTAL_GATE_STRINGS.backToParent : HUD_STRINGS.logout, onPress: handleLogout }}
       />
+      {view.wishes !== null && (
+        <WishesSheet visible={isWishesVisible} onClose={() => setWishesVisible(false)} nowMs={() => Date.now() + view.clockSkewMs} />
+      )}
+      {treatClip !== null && <TreatClip url={treatClip} onClose={closeTreatClip} />}
       <ChildCertificateSheet
         visible={isCertificateVisible}
         certificate={view.certificate}

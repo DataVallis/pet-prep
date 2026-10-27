@@ -7,6 +7,7 @@
  *  - Tap, parent: ask the dashboard (store `pushTarget`) to open the detail of the
  *    child caring for that pet, and refetch the dashboard. `challenge_completed`
  *    (M2-01d) opens the child whose challenge ended — the certificate card is on top.
+ *    `wish_created` (M6-W05) opens the parent's wish list (and refetches it).
  */
 
 import type { QueryClient } from '@tanstack/react-query';
@@ -16,6 +17,7 @@ import { childPetKey } from '@/hooks/queries/useChildPet';
 import { parentDashboardKey } from '@/modules/family/live';
 import { isUrgentPush, parsePushData, type PushData } from '@/modules/push/pushData';
 import { useAppStore, type AppUser } from '@/store/appStore';
+import { PARENT_WISHES_KEY } from '@/modules/wishes/keys';
 
 let handlerConfigured = false;
 
@@ -57,6 +59,7 @@ export function routePushTap(
   } else {
     store.setPushTarget({ petId: push.petId, type: push.type });
     void queryClient.invalidateQueries({ queryKey: parentDashboardKey });
+    if (push.type === 'wish_created') void queryClient.invalidateQueries({ queryKey: PARENT_WISHES_KEY });
   }
   return push;
 }

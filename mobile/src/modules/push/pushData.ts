@@ -19,13 +19,21 @@ export const PUSH_TYPES = [
   'pet_birthday',
   // M5-R18 / R20: a groomer / bath period started (parents only, once per period).
   'care_reminder',
+  // M6-W01: a child wished for an item (parents only; data `{type, wish_id}` — no pet id).
+  'wish_created',
 ] as const;
 
 export type PushType = (typeof PUSH_TYPES)[number];
 
 export interface PushData {
   type: PushType;
-  petId: number;
+  /** The pet the push is about; null only for `wish_created` (its data carries `wish_id`). */
+  petId: number | null;
+}
+
+function positiveId(value: unknown): number | null {
+  const id = typeof value === 'string' ? Number(value) : value;
+  return typeof id === 'number' && Number.isInteger(id) && id > 0 ? id : null;
 }
 
 function isPushType(value: unknown): value is PushType {
@@ -35,10 +43,12 @@ function isPushType(value: unknown): value is PushType {
 /** Read a notification's `data`; anything that is not a PetPrep escalation push → null. */
 export function parsePushData(data: unknown): PushData | null {
   if (typeof data !== 'object' || data === null) return null;
-  const { type, pet_id: petId } = data as { type?: unknown; pet_id?: unknown };
+  const { type, pet_id: petId, wish_id: wishId } = data as { type?: unknown; pet_id?: unknown; wish_id?: unknown };
   if (!isPushType(type)) return null;
-  const id = typeof petId === 'string' ? Number(petId) : petId;
-  if (typeof id !== 'number' || !Number.isInteger(id) || id <= 0) return null;
+  const id = positiveId(petId);
+  // M6-W01: the wish push names no pet (WISHES_API §6) — it opens the parent's wish list.
+  if (type === 'wish_created') return positiveId(wishId) !== null || id !== null ? { type, petId: id } : null;
+  if (id === null) return null;
   return { type, petId: id };
 }
 
@@ -56,6 +66,7 @@ export function isUrgentPush(type: PushType | null | undefined): boolean {
     type !== 'challenge_completed' &&
     type !== 'pet_ready' &&
     type !== 'pet_birthday' &&
-    type !== 'care_reminder'
+    type !== 'care_reminder' &&
+    type !== 'wish_created'
   );
 }

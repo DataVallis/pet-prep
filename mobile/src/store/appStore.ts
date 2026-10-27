@@ -27,7 +27,8 @@ export interface AppUser {
 
 /** Where a tapped push should lead (parent app): the pet it is about. */
 export interface PushTarget {
-  petId: number;
+  /** null only for `wish_created` (M6-W05: opens the wish list, not a child). */
+  petId: number | null;
   /** The tapped push's type (M2-01d: `challenge_completed` opens the finished child). */
   type?: string;
 }

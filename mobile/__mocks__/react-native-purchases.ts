@@ -9,7 +9,7 @@ const internal = jest.requireActual<typeof import('@revenuecat/purchases-typescr
   '@revenuecat/purchases-typescript-internal',
 );
 
-export const { PURCHASES_ERROR_CODE, LOG_LEVEL, PACKAGE_TYPE } = internal;
+export const { PURCHASES_ERROR_CODE, LOG_LEVEL, PACKAGE_TYPE, PRODUCT_CATEGORY } = internal;
 
 type CustomerInfo = import('@revenuecat/purchases-typescript-internal').CustomerInfo;
 
@@ -46,6 +46,9 @@ const Purchases = {
   logOut: jest.fn(() => Promise.resolve(makeCustomerInfo())),
   getOfferings: jest.fn(() => Promise.resolve({ all: {}, current: null })),
   purchasePackage: jest.fn(() => Promise.resolve({ productIdentifier: 'mock', customerInfo: makeCustomerInfo(), transaction: {} })),
+  // M6-W05: wish items are bought by store product id.
+  getProducts: jest.fn(() => Promise.resolve([])),
+  purchaseStoreProduct: jest.fn(() => Promise.resolve({ productIdentifier: 'mock', customerInfo: makeCustomerInfo(), transaction: { transactionIdentifier: 'tx-mock' } })),
   restorePurchases: jest.fn(() => Promise.resolve(makeCustomerInfo())),
   getCustomerInfo: jest.fn(() => Promise.resolve(makeCustomerInfo())),
   addCustomerInfoUpdateListener: jest.fn(),
@@ -53,6 +56,7 @@ const Purchases = {
   PURCHASES_ERROR_CODE,
   LOG_LEVEL,
   PACKAGE_TYPE,
+  PRODUCT_CATEGORY,
 };
 
 export default Purchases;
