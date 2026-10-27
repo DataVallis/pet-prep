@@ -15,6 +15,7 @@ use App\Services\HardStopService;
 use App\Services\Media\PetMediaService;
 use App\Services\PetPlanPayload;
 use App\Services\PetProfilePayload;
+use App\Services\WishService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
@@ -65,6 +66,7 @@ class ParentDashboardController extends Controller
                 'quiet_hours' => null,
                 'recent_activities' => [],
                 'family' => null,
+                'wishes_open_count' => 0,
             ], 200);
         }
 
@@ -86,6 +88,8 @@ class ParentDashboardController extends Controller
                     : null,
                 'recent_activities' => [],
                 'family' => $familyData,
+                // M6-W01 »Želje«: open wishes of all children, all pets of the family.
+                'wishes_open_count' => app(WishService::class)->openCountOfFamily($family),
             ], 200);
         }
 
@@ -142,6 +146,8 @@ class ParentDashboardController extends Controller
                 ->get()),
             'weekly_performance' => $this->getWeeklyPerformance($pet, $family->timezone),
             'family' => $familyData,
+            // M6-W01 »Želje«: open wishes of all children, all pets of the family.
+            'wishes_open_count' => app(WishService::class)->openCountOfFamily($family),
         ], 200);
     }
 

@@ -28,6 +28,8 @@ return [
         'stage_value_model' => 'vrednost obdobja',
         'credits' => 'Krediti izzivov',
         'credit_model' => 'kredit izziva',
+        'wish_credits' => 'Krediti želja',
+        'wish_credit_model' => 'kredit želje',
         'certificates' => 'Certifikati',
         'certificate_model' => 'certifikat',
         'breed_facts' => 'Zanimivosti o pasmah',

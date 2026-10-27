@@ -69,6 +69,16 @@ return [
         // Store product ids of the consumable 12-week challenge (PAYMENTS_SPEC P1),
         // comma-separated. A purchase of one of them = one challenge credit.
         'challenge_products' => array_values(array_filter(array_map('trim', explode(',', (string) env('REVENUECAT_CHALLENGE_PRODUCTS', 'petprep_challenge_12w'))))),
+        // M6-W02 »Želje« store products: `product_id:item_key` pairs, comma-separated.
+        // A purchase of one of them = one wish credit (WishCreditService). Item keys:
+        // bed, bowls, toy_1, toy_2, treats, welcome_bundle (shop_items).
+        'wish_products' => collect(explode(',', (string) env('REVENUECAT_WISH_PRODUCTS',
+            'petprep_wish_bed:bed,petprep_wish_bowls:bowls,petprep_wish_toy_1:toy_1,petprep_wish_toy_2:toy_2,'
+            .'petprep_wish_treats_10:treats,petprep_wish_bundle_welcome:welcome_bundle')))
+            ->map(fn (string $pair): array => array_map('trim', explode(':', $pair, 2)))
+            ->filter(fn (array $p): bool => count($p) === 2 && $p[0] !== '' && $p[1] !== '')
+            ->mapWithKeys(fn (array $p): array => [$p[0] => $p[1]])
+            ->all(),
         // SANDBOX events are always stored; they grant / revoke only when this is true.
         'accept_sandbox' => (bool) env('REVENUECAT_ACCEPT_SANDBOX', env('APP_ENV', 'production') !== 'production'),
     ],
