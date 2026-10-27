@@ -264,6 +264,8 @@ export function makeChildState(
     // M5-T05: absent by default (like an older server) so HUD tests don't get the first-launch card;
     // pass `care_guide: makeCareGuide()` to `makeLiveChildState` to show it.
     care_guide: null as unknown as ChildPetState['care_guide'],
+    // M6-W04: older servers send no `wishes` — the default fixture leaves it out (no »Želje»).
+    wishes: undefined as unknown as ChildPetState['wishes'],
   };
 }
 

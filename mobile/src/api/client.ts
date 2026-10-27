@@ -1352,7 +1352,7 @@ export const api = {
   getChildWishes: () => apiRequest<ChildWishesResponse>('/api/child/wishes'),
 
   /** POST /api/child/wishes — ask a parent for an item. 422 / 423 `reason` (WISHES_API §3). */
-  createWish: (itemKey: components['schemas']['WishItemKey']) =>
+  createWish: (itemKey: components['schemas']['CreateWishRequest']['item_key']) =>
     apiRequest<CreateWishResponse>('/api/child/wishes', { method: 'POST', body: { item_key: itemKey } }),
 
   /** POST /api/child/pet/treat — give one treat. 422 no_treats / treat_limit_today / pet_sleeping, 423 lock. */
@@ -1371,7 +1371,7 @@ export const api = {
    */
   redeemPetItem: (
     petId: number,
-    body: components['schemas']['PetItemRedeemRequest'],
+    body: components['schemas']['RedeemItemRequest'],
     idempotencyKey: string | null,
     options: { timeoutMs?: number } = {},
   ) =>
