@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "63f873d0f8a9856525ffbcc9f58f67b84c8ef5f40af9790591ba0c7dcc89b4d5"
+      "sha256": "e3ca0c88b417fd07fb9701125b280f6e32a798308c601783ef3993ed4e4b51ab"
     }
   },
   "suitability_vocabulary": {
@@ -40704,7 +40704,12 @@
           "S574"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "chinese-crested.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [

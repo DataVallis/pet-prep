@@ -870,6 +870,19 @@
             "prompt_hash": "sha256:86808d50bdc8436fede477df36b77e547d0091df93c8c3203d27639783451f95",
             "generated_at": "2026-10-27T03:29:38+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "chinese_crested",
+            "species": "dog",
+            "colour": "pink-spotted",
+            "file": "dog/chinese-crested.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:e35dd0d627d88a4dd31cab27916fdbfeeeff06ac97240b4e16954d362f38da85",
+            "generated_at": "2026-10-27T07:11:14+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
