@@ -20,6 +20,9 @@ const getParentDashboard = api.getParentDashboard as jest.Mock;
 const getParentWishes = api.getParentWishes as jest.Mock;
 const PET7 = makeFamilyPet({ id: 7, caretakers: [{ child_id: 2, contract_signed: true }] });
 
+// The first render loads the RevenueCat mock + i18n bundles (~5 s cold on CI runners).
+jest.setTimeout(20_000);
+
 async function flush() {
   await act(async () => {
     await new Promise((resolve) => setTimeout(resolve, 20));

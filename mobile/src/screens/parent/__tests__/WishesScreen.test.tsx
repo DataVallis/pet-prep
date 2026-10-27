@@ -37,6 +37,9 @@ const BODY = {
 };
 const product = (identifier: string, priceString: string) => ({ identifier, priceString });
 
+// The first render loads the RevenueCat mock + i18n bundles (~5 s cold on CI runners).
+jest.setTimeout(20_000);
+
 async function flush() {
   for (let i = 0; i < 5; i += 1) {
     await act(async () => {
