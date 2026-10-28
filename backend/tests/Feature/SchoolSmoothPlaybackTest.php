@@ -11,6 +11,7 @@ use App\Models\PetTrainingSession;
 use App\Models\PetTrainingSkill;
 use App\Models\User;
 use App\Services\Media\Mp4FastStart;
+use App\Services\Media\ObjectStorageMover;
 use App\Services\Media\PetMediaPayload;
 use App\Services\Media\PetMediaService;
 use App\Services\Media\SchoolClipDerivativeService;
@@ -517,6 +518,14 @@ describe('payload and backfill', function () {
         sspLink($pet, $rows[3]);
         expect(app(SchoolClipDerivativeService::class)->dueSources(petId: $pet->id)->pluck('id')->all())->toBe([$rows[3]->id]);
         expect(AiSpendLedger::count())->toBe(0);
+    });
+
+    it('lets media:move-to-object-storage copy derived clips (referenced paths)', function () {
+        $look = sspLook();
+        $row = sspLookClip($look, 'school_sit_attention');
+        sspDerived($row->id, 'school_sit_attention_loop', 4.0, "looks/{$look->id}/school_sit_attention-puppy-g1-loop.mp4");
+
+        expect(app(ObjectStorageMover::class)->referencedPaths())->toContain("looks/{$look->id}/school_sit_attention-puppy-g1-loop.mp4");
     });
 
     it('is scheduled every 10 minutes', function () {
