@@ -156,6 +156,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-10-28 (cloud, backend) — school smooth playback server (`feat/school-smooth-backend`, app PR #430)
+- `SchoolClipDerivativeService` + `GenerateSchoolClipDerivative` + `media:school-derivatives` (every 10 min, ≤ 12 sources): ffmpeg loops / release in `pet_media_derivatives`, 0 $, payload `phases` / `phase_seconds`, `GET /api/media/{media}/derived/{key}`; `TrainingService` 6 cues with `perform_at_ms` / `release_at_ms`, pace × 8/6. Debt / waiting for David: a start reserves the pet's longest session (58–70 s) → ~4–6 sessions per 5 min (was 6), DECISIONS 2026-10-28.
+
 ### 2026-10-28 (cloud) — fix: daily deploy vs OTA `[skip ci]` commits (`fix/daily-deploy-skip-ci`)
 - Daily run #27 went red: main head was the OTA bot's `[skip ci]` docs commit (no push CI). `daily-deploy.sh` `ci_target()` skips such docs-only commits (DEPLOYMENT D25). Production already ran 7546269 (incl. the sit pose fix) — nothing was missing.
 

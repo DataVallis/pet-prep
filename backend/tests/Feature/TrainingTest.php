@@ -146,6 +146,18 @@ function trSession(User $child, string $utc, string $command = 'sit'): TestRespo
     return trFinish($child, $session['id'], trPerfectTaps($session))->assertOk();
 }
 
+/** Whole seconds a started session counts from the budget (its real length). */
+function trSeconds(array $session): int
+{
+    return intdiv($session['duration_ms'] + 999, 1000);
+}
+
+/** Seconds a session of $pet reserves before it starts (its longest possible length). */
+function trReserve(Pet $pet): int
+{
+    return app(TrainingService::class)->sessionSecondsFor($pet->fresh());
+}
+
 function trParam(StageParamKey $key, mixed $value): void
 {
     BreedStageParam::where('key', $key->value)->update(['value' => json_encode($value)]);
@@ -261,36 +273,48 @@ describe('client capability gate', function () {
 // ──────────────────────────────────────────────────────────────
 
 describe('session', function () {
-    it('returns a server schedule: 8 cues 6 s apart after a 2 s lead-in, obey 0.8–2.5 s after the cue, 1.5 s praise window', function () {
+    it('returns a server schedule: 6 cues after a 2 s lead-in, think 0.3–1.5 s, obey when the performing clip ends, 1.5 s praise window, release, calm', function () {
         [, $child, $pet] = trFamily();
         trAt('2026-10-08 08:00:00');
         Event::fake([PetUpdated::class]);
 
         $res = trStart($child, 'come')->assertOk()->assertJsonPath('status', 'accepted');
         $s = $res->json('session');
+        $started = Carbon::parse('2026-10-08 08:00:00', 'UTC');
 
         expect($s['command'])->toBe('come')
-            ->and($s['duration_ms'])->toBe(50000)
             ->and($s['praise_window_ms'])->toBe(1500)
             ->and($s['started_at'])->toBe('2026-10-08T10:00:00+02:00')
-            ->and($s['ends_at'])->toBe('2026-10-08T10:00:50+02:00')
-            ->and($s['expires_at'])->toBe('2026-10-08T10:01:50+02:00')
-            ->and($s['trials'])->toHaveCount(8)
-            ->and(array_column($s['trials'], 'cue_at_ms'))->toBe([2000, 8000, 14000, 20000, 26000, 32000, 38000, 44000])
+            ->and(abs(Carbon::parse($s['ends_at'])->diffInMilliseconds($started->copy()->addMilliseconds($s['duration_ms']))))->toBeLessThanOrEqual(1000)
+            ->and(Carbon::parse($s['expires_at'])->equalTo(Carbon::parse($s['ends_at'])->addSeconds(60)))->toBeTrue()
+            ->and($s['trials'])->toHaveCount(6)
+            ->and($s['trials'][0]['cue_at_ms'])->toBe(2000)
             ->and(array_column($s['trials'], 'obeys'))->toContain(true, false);
-        foreach ($s['trials'] as $t) {
+
+        // No stored clip: P = 3 000 ms, R = 2 500 ms (contract §B).
+        $next = 2000;
+        foreach ($s['trials'] as $i => $t) {
+            expect($t['index'])->toBe($i)->and($t['cue_at_ms'])->toBe($next)
+                ->and(array_keys($t))->toBe(['index', 'cue_at_ms', 'obeys', 'perform_at_ms', 'obey_at_ms', 'window_end_ms', 'release_at_ms']);
             if ($t['obeys']) {
-                expect($t['obey_at_ms'] - $t['cue_at_ms'])->toBeGreaterThanOrEqual(800)->toBeLessThanOrEqual(2500)
-                    ->and($t['window_end_ms'])->toBe($t['obey_at_ms'] + 1500);
+                expect($t['perform_at_ms'] - $t['cue_at_ms'])->toBeGreaterThanOrEqual(300)->toBeLessThanOrEqual(1500)
+                    ->and($t['obey_at_ms'])->toBe($t['perform_at_ms'] + 3000)
+                    ->and($t['window_end_ms'])->toBe($t['obey_at_ms'] + 1500)
+                    ->and($t['release_at_ms'])->toBe($t['window_end_ms']);
+                $next = $t['release_at_ms'] + 2500 + 700;
             } else {
-                expect($t['obey_at_ms'])->toBeNull()->and($t['window_end_ms'])->toBeNull();
+                expect($t['perform_at_ms'])->toBeNull()->and($t['obey_at_ms'])->toBeNull()
+                    ->and($t['window_end_ms'])->toBeNull()->and($t['release_at_ms'])->toBeNull();
+                $next = $t['cue_at_ms'] + 4500;
             }
         }
+        expect($s['duration_ms'])->toBe($next);
 
         $res->assertJsonPath('state.training.session.id', $s['id'])
             ->assertJsonPath('state.training.session.mine', true)
+            ->assertJsonPath('state.training.session.trials', $s['trials'])
             ->assertJsonPath('state.training.can_start', false)
-            ->assertJsonPath('state.training.daily_budget_left_seconds', 250);
+            ->assertJsonPath('state.training.daily_budget_left_seconds', 300 - trSeconds($s));
         // No routine yet: only a completed session counts.
         expect(ActivityLog::where('pet_id', $pet->id)->count())->toBe(0);
         Event::assertDispatchedTimes(PetUpdated::class, 1);
@@ -306,7 +330,7 @@ describe('session', function () {
         trAt('2026-10-08 08:00:30');
         trStart($child, 'place')->assertStatus(422)
             ->assertJsonPath('reason', 'training_session_active')
-            ->assertJsonPath('next_allowed_at', '2026-10-08T10:01:50+02:00');
+            ->assertJsonPath('next_allowed_at', $first['expires_at']);
         trStart($sibling)->assertStatus(422)->assertJsonPath('reason', 'training_session_active')
             ->assertJsonPath('state.training.session.mine', false);
         // The sibling cannot finish someone else's session.
@@ -314,7 +338,7 @@ describe('session', function () {
         trFinish($sibling, $first['id'], [])->assertStatus(422)->assertJsonPath('reason', 'training_session_invalid');
 
         // After the TTL the slot is free again; the old session expired (no progress, no routine).
-        trAt('2026-10-08 08:01:50');
+        Carbon::setTestNow(Carbon::parse($first['expires_at'])->utc());
         trStart($sibling)->assertOk();
         expect(PetTrainingSession::where('public_id', $first['id'])->value('status'))->toBe('expired');
         trFinish($child, $first['id'], trPerfectTaps($first))->assertStatus(422)->assertJsonPath('reason', 'training_session_expired');
@@ -325,17 +349,18 @@ describe('session', function () {
         [, $child, $pet] = trFamily();
         trAt('2026-10-08 08:00:00');
         $s = trStart($child)->assertOk()->json('session');
+        $ends = Carbon::parse($s['ends_at'])->utc();
 
-        trAt('2026-10-08 08:00:47');
+        Carbon::setTestNow($ends->copy()->subMilliseconds(2001));
         trFinish($child, $s['id'], [])->assertStatus(422)->assertJsonPath('reason', 'training_session_not_over');
-        trAt('2026-10-08 08:00:48');
+        Carbon::setTestNow($ends->copy()->subMilliseconds(2000));
         trFinish($child, $s['id'], [])->assertOk()->assertJsonPath('status', 'accepted');
 
         $late = trSession($child, '2026-10-08 09:00:00')->json('result.session_id');
         expect($late)->not->toBeNull();
         trAt('2026-10-08 10:00:00');
         $s2 = trStart($child)->assertOk()->json('session');
-        trAt('2026-10-08 10:01:51');
+        Carbon::setTestNow(Carbon::parse($s2['expires_at'])->utc()->addSecond());
         trFinish($child, $s2['id'], trPerfectTaps($s2))->assertStatus(422)->assertJsonPath('reason', 'training_session_expired');
         expect(PetTrainingSession::where('public_id', $s2['id'])->value('status'))->toBe('expired');
     });
@@ -344,9 +369,9 @@ describe('session', function () {
         [, $child, $pet] = trFamily();
         trAt('2026-10-08 08:00:00');
         $s = trStart($child)->assertOk()->json('session');
-        trAt('2026-10-08 08:00:50');
+        Carbon::setTestNow(Carbon::parse($s['ends_at'])->utc());
 
-        trFinish($child, $s['id'], [50001])->assertStatus(422)->assertJsonPath('reason', 'training_invalid_taps');
+        trFinish($child, $s['id'], [$s['duration_ms'] + 1])->assertStatus(422)->assertJsonPath('reason', 'training_invalid_taps');
         trFinish($child, $s['id'], [-1])->assertStatus(422)->assertJsonValidationErrors('taps.0');
         trFinish($child, $s['id'], ['soon'])->assertStatus(422)->assertJsonValidationErrors('taps.0');
         trFinish($child, $s['id'], range(1, 65))->assertStatus(422)->assertJsonValidationErrors('taps');
@@ -358,15 +383,17 @@ describe('session', function () {
         postJson('/api/child/pet/training/start', ['command' => 'roll_over'])->assertStatus(422)->assertJsonValidationErrors('command');
 
         // Still active and finishable after the refusals.
-        trFinish($child, $s['id'], [50000])->assertOk();
+        trFinish($child, $s['id'], [$s['duration_ms']])->assertOk();
     });
 
     it('refuses a start whose session + TTL would cross the family-local midnight (also on the 25-hour DST day)', function () {
         [, $child, $pet] = trFamily();
         withoutQuietHours($pet); // M5-T02: about the clock / budget, not sleep (no school while the pet sleeps)
 
-        // 23:58:00 local (CEST) + 50 s + 60 s TTL = 23:59:50 → ok; 23:58:11 → would end 00:00:01.
-        trAt('2026-10-08 21:58:11');
+        // The check reserves the longest session (58 s without stored clips) + 60 s TTL:
+        // 23:58:00 local (CEST) → 23:59:58 ok; 23:58:03 → would end 00:00:01.
+        expect(trReserve($pet))->toBe(58);
+        trAt('2026-10-08 21:58:03');
         trStart($child)->assertStatus(422)
             ->assertJsonPath('reason', 'training_day_ending')
             ->assertJsonPath('next_allowed_at', '2026-10-09T00:00:00+02:00')
@@ -375,7 +402,7 @@ describe('session', function () {
         trStart($child)->assertOk();
 
         // 2026-10-25 has 25 hours (CEST → CET at 03:00): its midnight is 23:00 UTC.
-        trAt('2026-10-25 22:58:11');
+        trAt('2026-10-25 22:58:03');
         trStart($child)->assertStatus(422)
             ->assertJsonPath('reason', 'training_day_ending')
             ->assertJsonPath('next_allowed_at', '2026-10-26T00:00:00+01:00');
@@ -394,9 +421,9 @@ describe('session', function () {
         // The parent pauses the game during the session, and lifts it again.
         trAt('2026-10-08 08:00:20');
         Pet::find($pet->id)->update(['is_hard_stopped' => true]);
-        trAt('2026-10-08 08:00:50');
+        Carbon::setTestNow(Carbon::parse($s['ends_at'])->utc());
         trFinish($child, $s['id'], trPerfectTaps($s))->assertStatus(423)->assertJsonPath('reason', 'hard_stopped');
-        trAt('2026-10-08 08:01:00');
+        Carbon::setTestNow(Carbon::parse($s['ends_at'])->utc()->addSeconds(5));
         Pet::find($pet->id)->update(['is_hard_stopped' => false]);
 
         trFinish($child, $s['id'], trPerfectTaps($s))->assertStatus(422)
@@ -409,10 +436,10 @@ describe('session', function () {
             ->and(trProgress($pet, TrainingCommand::Sit))->toBe(0.0);
 
         // A new session can start right away (slot freed, budget refunded).
-        trStart($child)->assertOk()->assertJsonPath('state.training.daily_budget_left_seconds', 250);
+        $again = trStart($child)->assertOk()->json('session');
 
         // A lock that began BEFORE the session (and ended) does not interrupt it.
-        expect(app(TrainingService::class)->usedSecondsOn($pet->fresh(), '2026-10-08'))->toBe(50);
+        expect(app(TrainingService::class)->usedSecondsOn($pet->fresh(), '2026-10-08'))->toBe(trSeconds($again));
     });
 
     it('gives the child their own running session with its schedule (resume after a restart), others only the summary', function () {
@@ -427,7 +454,7 @@ describe('session', function () {
         getJson('/api/child/pet')->assertOk()
             ->assertJsonPath('training.session.id', $s['id'])
             ->assertJsonPath('training.session.mine', true)
-            ->assertJsonPath('training.session.duration_ms', 50000)
+            ->assertJsonPath('training.session.duration_ms', $s['duration_ms'])
             ->assertJsonPath('training.session.praise_window_ms', 1500)
             ->assertJsonPath('training.session.min_reaction_ms', 150)
             ->assertJsonPath('training.session.trials', $s['trials']);
@@ -454,25 +481,32 @@ describe('session', function () {
             ->and(collect($sql)->filter(fn ($q) => str_contains($q, 'sum(') || str_contains($q, 'breed_stage_params'))->all())->toBe([]);
     });
 
-    it('limits the dog to 5 minutes of mini-game per family-local day (6 sessions of 50 s)', function () {
+    it('limits the dog to 5 minutes of mini-game per family-local day (a start reserves the longest session, each counts its real length)', function () {
         [, $child, $pet] = trFamily();
         withoutQuietHours($pet); // M5-T02: about the clock / budget, not sleep (no school while the pet sleeps)
-        for ($i = 0; $i < 6; $i++) {
+        $service = app(TrainingService::class);
+        $reserve = trReserve($pet);
+        $sessions = 0;
+        for ($i = 0; $i < 10 && $service->usedSecondsOn($pet, '2026-10-08') + $reserve <= 300; $i++) {
             trSession($child, sprintf('2026-10-08 08:%02d:00', $i * 2));
+            $sessions++;
         }
+        $used = $service->usedSecondsOn($pet, '2026-10-08');
+        // 6 cues of 33–58 s: at least 4 sessions fit, the last start left less than one reserve.
+        expect($sessions)->toBeGreaterThanOrEqual(4)->and($used + $reserve)->toBeGreaterThan(300)->and($used)->toBeLessThanOrEqual(300);
 
         trAt('2026-10-08 09:00:00');
         trStart($child)->assertStatus(422)
             ->assertJsonPath('reason', 'training_daily_budget_used')
             ->assertJsonPath('next_allowed_at', '2026-10-09T00:00:00+02:00')
-            ->assertJsonPath('state.training.daily_budget_left_seconds', 0)
+            ->assertJsonPath('state.training.daily_budget_left_seconds', 300 - $used)
             ->assertJsonPath('state.training.can_start', false);
 
         // A new family-local day: 00:00 local = 22:00 UTC.
         trAt('2026-10-08 22:00:00');
-        trStart($child)->assertOk();
+        $s = trStart($child)->assertOk()->json('session');
         // An expired session counts in full too (the dog spent the time).
-        expect(app(TrainingService::class)->usedSecondsOn($pet, '2026-10-09'))->toBe(50);
+        expect($service->usedSecondsOn($pet, '2026-10-09'))->toBe(trSeconds($s));
     });
 
     it('locks first (423 by priority), then the training rules', function () {
@@ -570,10 +604,10 @@ describe('scoring', function () {
         trAt('2026-10-08 08:00:00');
         $s = trStart($child)->assertOk()->json('session');
         expect($s['min_reaction_ms'])->toBe(150);
-        // Pin the stored schedule (a random one may have < 3 obeyed cues): 4 obeyed, 4 ignored.
+        // Pin the stored schedule (a random one may have < 3 obeyed cues): 3 obeyed, 3 ignored.
         $trials = [];
-        for ($i = 0; $i < 8; $i++) {
-            $cue = 2000 + 6000 * $i;
+        for ($i = 0; $i < 6; $i++) {
+            $cue = 2000 + 5000 * $i;
             $trials[] = ['index' => $i, 'cue_at_ms' => $cue, 'obeys' => $i % 2 === 0,
                 'obey_at_ms' => $i % 2 === 0 ? $cue + 1000 : null, 'window_end_ms' => $i % 2 === 0 ? $cue + 2500 : null];
         }
@@ -585,7 +619,7 @@ describe('scoring', function () {
             }
         }
         Log::spy();
-        trAt('2026-10-08 08:00:50');
+        Carbon::setTestNow(Carbon::parse($s['ends_at'])->utc());
         trFinish($child, $s['id'], $robot)->assertOk()->assertJsonPath('result.successes', count($robot));
 
         Log::shouldHaveReceived('warning')->with('TrainingService: suspicious training session (uniform praise latency)', ['pet_id' => $pet->id])->once();
@@ -616,11 +650,13 @@ describe('scoring', function () {
         // Perfect on all obeying cues but the first (too late there).
         $taps = trPerfectTaps($s);
         $taps[0] = $obeying[0]['window_end_ms'] + 1;
-        trAt('2026-10-08 08:00:50');
+        $finishedAt = Carbon::parse($s['ends_at'])->utc()->startOfSecond()->addSecond();
+        Carbon::setTestNow($finishedAt);
         $res = trFinish($child, $s['id'], $taps)->assertOk()->assertJsonPath('status', 'accepted');
 
         $successes = count($obeying) - 1;
-        $gain = $successes * 1.0 * 1.0 * $factor;   // progress per success × mutt multiplier × factor
+        // progress per success × mutt multiplier × factor × the pace factor 8 / 6 (2026-10-28: 6 cues earn what 8 did)
+        $gain = $successes * 1.0 * 1.0 * $factor * 8 / 6;
         $res->assertJsonPath('result.session_id', $s['id'])
             ->assertJsonPath('result.command', 'sit')
             ->assertJsonPath('result.successes', $successes)
@@ -632,7 +668,7 @@ describe('scoring', function () {
             ->assertJsonPath('state.training.session', null)
             ->assertJsonPath('state.training.commands.0.command', 'sit')
             ->assertJsonPath('state.training.commands.0.progress', Pet::displayValue($gain))
-            ->assertJsonPath('state.training.commands.0.last_practised_at', '2026-10-08T10:00:50+02:00');
+            ->assertJsonPath('state.training.commands.0.last_practised_at', $finishedAt->copy()->setTimezone('Europe/Ljubljana')->toIso8601String());
         expect(abs($res->json('result.progress_gain') - round($gain, 2)))->toBeLessThan(0.0001)
             ->and(trProgress($pet, TrainingCommand::Sit))->toEqualWithDelta($gain, 1e-9);
 
@@ -674,9 +710,10 @@ describe('scoring', function () {
             return $n;
         };
 
-        // 1,600 cues each: ≈ 50 % vs ≈ 90 % (at least one obeyed / one ignored per session).
-        expect($count(0.0))->toBeGreaterThan(700)->toBeLessThan(900)
-            ->and($count(100.0))->toBeGreaterThan(1300)->toBeLessThan(1500);
+        // 1,200 cues each: ≈ 50 % vs ≈ 90 % (at least one obeyed / one ignored per session —
+        // with 6 cues the »one ignored« guarantee pulls the trained dog to ≈ 81 %).
+        expect($count(0.0))->toBeGreaterThan(520)->toBeLessThan(680)
+            ->and($count(100.0))->toBeGreaterThan(900)->toBeLessThan(1060);
     });
 });
 
@@ -691,7 +728,7 @@ describe('learning speed', function () {
 
         $successes = $res->json('result.successes');
         expect((float) $collie->fresh()->training_learning_factor)->toBe(1.0)
-            ->and(trProgress($collie, TrainingCommand::Sit))->toEqualWithDelta($successes * 2.0, 1e-9);
+            ->and(trProgress($collie, TrainingCommand::Sit))->toEqualWithDelta($successes * 2.0 * 8 / 6, 1e-9);
     });
 
     it('draws the mixed breed\'s factor once in [0.8, 1.2], stable per pet and stored', function () {
@@ -726,7 +763,7 @@ describe('learning speed', function () {
         trParam(StageParamKey::TrainingMinutesPerDay, 1);
 
         $res = trSession($child, '2026-10-08 08:00:00');
-        expect(trProgress($pet, TrainingCommand::Sit))->toEqualWithDelta($res->json('result.successes') * 5.0, 1e-9);
+        expect(trProgress($pet, TrainingCommand::Sit))->toEqualWithDelta($res->json('result.successes') * 5.0 * 8 / 6, 1e-9);
         trAt('2026-10-08 09:00:00');
         trStart($child)->assertStatus(422)->assertJsonPath('reason', 'training_daily_budget_used');
     });
@@ -795,9 +832,10 @@ describe('training routine', function () {
             ->and($today[0]->dueAt->toDateTimeString())->toBe('2026-10-08 22:00:00');
 
         trSession($child, '2026-10-08 15:00:00');
+        $finishedAt = now()->utc()->startOfSecond()->toDateTimeString(); // the scheduled end
         $done = trRoutines($pet, '2026-10-08')[0];
         expect($done->status)->toBe(RoutineStatus::Done)->and($done->actorUserId)->toBe($child->id)
-            ->and($done->doneAt->toDateTimeString())->toBe('2026-10-08 15:00:50');
+            ->and($done->doneAt->toDateTimeString())->toBe($finishedAt);
 
         trAt('2026-10-09 23:00:00');
         expect(trRoutines($pet, '2026-10-09')[0]->status)->toBe(RoutineStatus::Missed);
@@ -971,7 +1009,7 @@ describe('payload', function () {
             ])
             ->assertJsonPath('training.today_done', false)
             ->assertJsonPath('training.session', null)
-            ->assertJsonPath('training.session_seconds', 50)
+            ->assertJsonPath('training.session_seconds', 58) // at most: 2 + 6 × (1.5 + 3 + 1.5 + 2.5 + 0.7) s
             ->assertJsonPath('training.daily_budget_seconds', 300)
             ->assertJsonPath('training.daily_budget_left_seconds', 300)
             ->assertJsonPath('training.can_start', true);

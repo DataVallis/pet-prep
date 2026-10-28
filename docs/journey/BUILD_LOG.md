@@ -9,6 +9,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-28 — Šola: kuža vstane, 6 ukazov, posnetki iz strežnika za 0 $ (strežnik)
+
+**Kaj:** strežnik iz vsakega shranjenega posnetka šole sam (ffmpeg, brez AI) naredi še tri: čakanje v zanki, držanje poze v zanki in »vstane« (posnetek izvajanja nazaj, do 2,5 s). Vaja ima zdaj 6 ukazov (~60 s): kuža uboga natanko, ko konča gib, po pohvali vstane in počaka na naslednji ukaz. Obstoječe videze strežnik napolni sam vsakih 10 minut.
+**Zakaj:** Davidov posnetek z iPhona (dobermanov mladiček, »Prostor«) je pokazal dvojne slike, skoke med pozami in zamrznjene slike. Izmerjeno: ~1–2,5 s in ~260–370 MB pomnilnika na posnetek, ~3,5–5 MB na ukaz na videz, 0 $.
+**Kako povedati:** 🧒 »Kuža se usede — in spet vstane, ko ga pohvališ.« · 👩 gladka šola brez dodatnih stroškov; ena vaja nauči toliko kot prej. · 🛠 »stand up« = `reverse` v ffmpeg, ne nov AI klic. *Na telefonu še ni preverjeno.*
+
+---
+
 ## 2026-10-27 — »Želje« v aplikaciji: otrok prosi, starš odloči
 
 **Kaj:** otrok v aplikaciji odpre »Želje« in pri stvareh za ljubljenčka (postelja, skledi, dve igrači, priboljški) tapne »Prosi starša« — brez ene same cene. Starš na nadzorni plošči vidi »Želje (N)«, pri vsaki prošnji izbere »Kupi« (cena iz trgovine) ali »Ne zdaj« (otrok vidi le »Mogoče kdaj drugič«), lahko kupi tudi presenečenje ali paket »Dobrodošlica«. Priboljšek ima svoj gumb na zaslonu ljubljenčka (največ dva na dan).

@@ -104,6 +104,11 @@ Route::post('webhooks/revenuecat', [RevenueCatWebhookController::class, 'handle'
 Route::get('media/{media}', [PetMediaController::class, 'show'])
     ->middleware(['signed:relative', 'throttle:media'])
     ->name('media.show');
+// School smooth playback (David 2026-10-28): ffmpeg-derived school clips (loops, release) of a phase slot.
+Route::get('media/{media}/derived/{key}', [PetMediaController::class, 'showDerived'])
+    ->where('key', '[a-z_]{1,64}')
+    ->middleware(['signed:relative', 'throttle:media'])
+    ->name('media.derived');
 // M5-R04 growth album: archived reference images of earlier life stages.
 Route::get('media/history/{history}', [PetMediaController::class, 'showHistory'])
     ->middleware(['signed:relative', 'throttle:media'])
