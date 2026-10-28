@@ -6,7 +6,7 @@
  *    sessions left today for THIS child (`my_seconds_left`, M5-R03b; a "deliš" hint when
  *    siblings share the time). "Začni vajo" follows the server's `can_start`; when it is off
  *    the reason is explained (a sibling is training, the daily budget is used …).
- * 2. The 50 s game: the cue ("Sedi!"), the dog's reaction from the server's schedule
+ * 2. The game (50 s; ~60 s with 6 cues since 2026-10-28): the cue ("Sedi!"), the dog's reaction from the server's schedule
  *    (free tier: an animated illustration + a line of text; premium: the pet's own
  *    idle / playing video — no new media), a big "Pohvali" button and an immediate,
  *    kind verdict per cue (bravo / prezgodaj / prepozno / počakal(a) si).
@@ -17,7 +17,7 @@
  */
 
 import { mediaModeOf } from '@/modules/display/display';
-import { useEffect, useMemo, useRef } from 'react';
+import { useCallback, useEffect, useMemo, useRef } from 'react';
 import { ActivityIndicator, Animated, Pressable, ScrollView, StyleSheet, View, type GestureResponderEvent } from 'react-native';
 import { Text } from '@/components/ui/Text';
 import { Check, GraduationCap, Heart, X } from 'lucide-react-native';
@@ -27,7 +27,16 @@ import PetMediaView from '@/components/PetMediaView';
 import { childPetKey } from '@/hooks/queries/useChildPet';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
 import { selectMediaSource } from '@/modules/petMedia/petMedia';
-import { phasePlayback, schoolMomentAt, usesPhaseClips } from '@/modules/petMedia/phasePlayer';
+import {
+  hasSmoothTimes,
+  phasePlayback,
+  schoolMomentAt,
+  schoolReleaseMs,
+  schoolSegmentAt,
+  schoolTimeline,
+  usesPhaseClips,
+} from '@/modules/petMedia/phasePlayer';
+import SchoolStage from '@/modules/training/SchoolStage';
 import { schoolClipsPending, schoolPreparingText } from '@/modules/preparation/preparation';
 import {
   feedbackAt,
@@ -267,11 +276,14 @@ export default function TrainingOverlay({ view, onClose, clock, testID = 'traini
   const queryClient = useQueryClient();
   const training = view.training;
   const ownSchedule = training.session?.mine === true ? training.session.schedule : null;
-  const game = useTrainingGame({ clockSkewMs: view.clockSkewMs, timezone: view.timezone, clock, resume: ownSchedule });
-  const { phase, elapsedMs } = game;
-  const busy = phase.kind === 'running' || phase.kind === 'finishing' || phase.kind === 'starting';
   // M5-T09: a pet with school phase clips plays the clip of each command phase (or its pose).
   const phaseClips = usesPhaseClips(view.pet.media, 'school');
+  // School smooth playback (2026-10-28): a smooth schedule shown as video waits for the stage's clips.
+  const videoStage = phaseClips && mediaModeOf(view) === 'video' && !schoolClipsPending(view.pet.preparation, phaseClips);
+  const stageGate = useCallback((session: TrainingSession) => videoStage && hasSmoothTimes(session), [videoStage]);
+  const game = useTrainingGame({ clockSkewMs: view.clockSkewMs, timezone: view.timezone, clock, resume: ownSchedule, stageGate });
+  const { phase, elapsedMs } = game;
+  const busy = phase.kind === 'running' || phase.kind === 'finishing' || phase.kind === 'starting' || phase.kind === 'preparing';
   const premiumVideo = useMemo(() => phaseClips || selectMediaSource(view.pet.media, 'idle').kind === 'video', [view.pet.media, phaseClips]);
   // M5-T06 (spec §13): school clips still on their way → the pose on the stage and »Šola se še
   // pripravlja«; the practice itself works as always (M5-T09: the phase poses, never a wrong clip).
@@ -333,13 +345,17 @@ export default function TrainingOverlay({ view, onClose, clock, testID = 'traini
         </View>
       )}
 
-      {(phase.kind === 'running' || phase.kind === 'finishing') && (
+      {/* `preparing` → `running` keeps the same RunningView (and stage): its players are never remounted. */}
+      {(phase.kind === 'preparing' || phase.kind === 'running' || phase.kind === 'finishing') && (
         <RunningView
           session={phase.session}
-          taps={phase.taps}
-          elapsedMs={elapsedMs}
+          taps={phase.kind === 'preparing' ? NO_TAPS : phase.taps}
+          elapsedMs={phase.kind === 'preparing' ? 0 : elapsedMs}
           finishing={phase.kind === 'finishing'}
-          resumedAtMs={phase.resumedAtMs}
+          preparing={phase.kind === 'preparing'}
+          stagePicture={game.stagePicture}
+          onStageReady={game.begin}
+          resumedAtMs={phase.kind === 'preparing' ? null : phase.resumedAtMs}
           premiumVideo={premiumVideo}
           phaseClips={phaseClips}
           posePending={schoolPreparing}
@@ -375,11 +391,16 @@ export default function TrainingOverlay({ view, onClose, clock, testID = 'traini
   );
 }
 
+const NO_TAPS: readonly number[] = [];
+
 function RunningView({
   session,
   taps,
   elapsedMs,
   finishing,
+  preparing,
+  stagePicture,
+  onStageReady,
   resumedAtMs,
   premiumVideo,
   phaseClips,
@@ -392,6 +413,11 @@ function RunningView({
   taps: readonly number[];
   elapsedMs: number;
   finishing: boolean;
+  /** School smooth playback: the stage loads its clips; the clock has not started. */
+  preparing: boolean;
+  /** The stage did not get ready in 12 s: this session in picture mode. */
+  stagePicture: boolean;
+  onStageReady: () => void;
   /** ms into the session when it was resumed after an app restart (null = played from the start). */
   resumedAtMs: number | null;
   premiumVideo: boolean;
@@ -407,11 +433,17 @@ function RunningView({
   const feedback = feedbackAt(session, taps, elapsedMs, resumedAtMs);
   const text = S.commands[session.command];
   const trialNo = frame.slot === null ? 0 : frame.slot + 1;
-  const praiseDisabled = finishing || frame.over;
+  const praiseDisabled = finishing || frame.over || preparing;
+  const mode = mediaModeOf(view);
+  // School smooth playback (2026-10-28): the server's times on the school stage (never PetMediaView).
+  const smooth = phaseClips && hasSmoothTimes(session);
+  const releaseMs = schoolReleaseMs(view.pet.media, session.command);
+  const timeline = useMemo(() => (smooth ? schoolTimeline(session, releaseMs) : null), [smooth, session, releaseMs]);
+  const segment = timeline === null || preparing ? null : schoolSegmentAt(timeline, elapsedMs);
+  const stageMode = posePending || stagePicture || mode === 'picture' ? 'picture' : 'video';
   // M5-T09: the phase of the trial (server schedule) → its clip once, else / in picture mode its pose.
   // David 2026-10-23: timed by the stored performing clip's own length (5 s new, 3 s older).
-  const moment = phaseClips ? schoolMomentAt(session, elapsedMs, view.pet.media) : null;
-  const mode = mediaModeOf(view);
+  const moment = phaseClips && !smooth ? schoolMomentAt(session, elapsedMs, view.pet.media) : null;
   // Re-derived per phase instance (the game re-renders every frame; the item stays the same).
   // startAtMs is fixed per instance (the trial's schedule), so the key need not carry it.
   const momentKey = moment === null ? null : `${moment.instance}|${moment.clip ?? ''}|${moment.pose ?? ''}`;
@@ -441,7 +473,17 @@ function RunningView({
       )}
 
       <View style={styles.stage}>
-        {premiumVideo || posePending ? (
+        {smooth ? (
+          <SchoolStage
+            media={view.pet.media}
+            command={session.command}
+            segment={segment}
+            mode={stageMode}
+            onReady={onStageReady}
+            onMediaExpired={onMediaExpired}
+            testID="training-dog-video"
+          />
+        ) : premiumVideo || posePending ? (
           <PetMediaView
             media={view.pet.media}
             petState={frame.dog === 'obeying' ? 'playing' : 'idle'}
@@ -467,7 +509,7 @@ function RunningView({
       </View>
 
       <Text style={styles.dogLine} testID="training-dog-text" accessibilityLiveRegion="polite">
-        {dogLine(session, frame.dog)}
+        {preparing ? S.starting : dogLine(session, frame.dog)}
       </Text>
       <View style={styles.feedbackSlot}>
         {feedback !== null && (

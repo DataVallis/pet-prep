@@ -15,6 +15,9 @@
  * - A pet without the group (older set, older server) → null: the caller keeps its
  *   earlier stage (state clips idle / playing).
  *
+ * School since 2026-10-28: a schedule with the server's `perform_at_ms` / `release_at_ms`
+ * plays on the school stage (`schoolTimeline` below, SCHOOL_SMOOTH_PLAYBACK.md); the rest of
+ * this paragraph is the earlier timing, kept for an older server / schedule.
  * School (per trial of the server schedule, `TrainingSession`):
  *   lead-in / cue → `attention` (waits for the command) → `performing` (3 s, timed so it ENDS
  *   in the held pose at `obey_at_ms`, QA M1) → `success` (holds the position through the
@@ -29,7 +32,9 @@
 
 import { mediaKey, type PetMediaInfo, type PhaseGroup } from '@/modules/petMedia/petMedia';
 import type { MediaMode, PlayItem } from '@/modules/petMedia/statePlayer';
-import type { TrainingCommand, TrainingSession } from '@/modules/training/training';
+import { hasSmoothTimes, type TrainingCommand, type TrainingSession } from '@/modules/training/training';
+
+export { hasSmoothTimes };
 
 /**
  * Default length of a school / game phase clip (server `media.state_media.clip_seconds`);
@@ -198,6 +203,116 @@ export function schoolMomentAt(
   }
   if (start === null && e >= trial.cue_at_ms) return { phase: null, clip: null, pose: null, instance: `${index}:ignores` };
   return { phase: 'attention', clip: clip('attention'), pose: null, instance: `${index}:attention` };
+}
+
+// ── School stage (smooth playback, 2026-10-28) ───────────────
+//
+// docs/engineering/SCHOOL_SMOOTH_PLAYBACK.md §C. A schedule whose obeying trials carry the
+// server's `perform_at_ms` / `release_at_ms` plays on the school STAGE player
+// (`modules/training/SchoolStage.tsx`): every clip of the command is mounted once when the
+// session opens and a phase change is an instant switch to an already-rendered player.
+// Per obeying trial: attention loop → `performing` once from frame 0 (perform_at → obey_at,
+// never seeked) → success loop (obey_at → release_at) → `release` once (stands up) → the
+// attention loop again. A cue the dog ignores keeps the attention loop running (it looks
+// around — never a frozen still). An older schedule keeps `schoolMomentAt` above.
+
+/** What the school stage shows: the clip ROLE (each role has its own persistent player). */
+export type SchoolRole = 'attention' | 'performing' | 'success' | 'release';
+
+export const SCHOOL_ROLES: readonly SchoolRole[] = ['attention', 'performing', 'success', 'release'];
+
+/** One stretch of the school timeline: `role` from `fromMs` until the next segment. */
+export interface SchoolSegment {
+  role: SchoolRole;
+  fromMs: number;
+  /** Changes for every new stretch, so the role's player restarts from frame 0. */
+  instance: string;
+}
+
+/** Server default for the release clip's length when the pet has none stored yet (TrainingService). */
+export const RELEASE_CLIP_MS = 2_500;
+
+/**
+ * The whole school timeline of a smooth schedule (server times, never re-timed by the app).
+ * `releaseMs` = the stored release clip's length, null = no release clip (hard cut back to
+ * the attention loop at `release_at_ms`, no crossfade).
+ */
+export function schoolTimeline(session: Pick<TrainingSession, 'trials'>, releaseMs: number | null): SchoolSegment[] {
+  const out: SchoolSegment[] = [{ role: 'attention', fromMs: 0, instance: 'attention:start' }];
+  const push = (segment: SchoolSegment) => {
+    // A later stretch cuts what would still run then (never out of order).
+    while (out.length > 1 && out[out.length - 1].fromMs >= segment.fromMs) out.pop();
+    out.push(segment);
+  };
+  session.trials.forEach((t, i) => {
+    if (!t.obeys || t.obey_at_ms === null || typeof t.perform_at_ms !== 'number' || typeof t.release_at_ms !== 'number') return;
+    push({ role: 'performing', fromMs: t.perform_at_ms, instance: `${i}:performing` });
+    push({ role: 'success', fromMs: t.obey_at_ms, instance: `${i}:success` });
+    if (releaseMs !== null && releaseMs > 0) push({ role: 'release', fromMs: t.release_at_ms, instance: `${i}:release` });
+    push({ role: 'attention', fromMs: t.release_at_ms + (releaseMs !== null && releaseMs > 0 ? releaseMs : 0), instance: `${i}:attention` });
+  });
+  return out;
+}
+
+/** The segment at `elapsedMs` (the last one that has begun). */
+export function schoolSegmentAt(timeline: readonly SchoolSegment[], elapsedMs: number): SchoolSegment {
+  let current = timeline[0];
+  for (const segment of timeline) {
+    if (segment.fromMs <= elapsedMs) current = segment;
+    else break;
+  }
+  return current;
+}
+
+/** A clip of the school stage: one persistent player per role. */
+export interface SchoolStageClip {
+  role: SchoolRole;
+  /** The phase key actually played (a derived clip, or its fallback). */
+  key: string;
+  url: string;
+  /** Loops (attention / success loop); false = plays once and holds its last frame. */
+  loop: boolean;
+}
+
+/**
+ * The clips the stage mounts for a command (max 4 players), with the contract's fallbacks for
+ * derived clips the server has not made yet: attention_loop → `attention` looping; success_loop
+ * → `success` once, holding its last frame (the pose); no release → no player (hard cut).
+ */
+export function schoolStageClips(media: Pick<PetMediaInfo, 'phases'>, command: TrainingCommand): SchoolStageClip[] {
+  const key = (suffix: string) => `school_${command}_${suffix}`;
+  const pick = (role: SchoolRole, options: ReadonlyArray<[string, boolean]>): SchoolStageClip[] => {
+    for (const [k, loop] of options) {
+      const url = media.phases[k];
+      if (present(url)) return [{ role, key: k, url, loop }];
+    }
+    return [];
+  };
+  return [
+    ...pick('attention', [[key('attention_loop'), true], [key('attention'), true]]),
+    ...pick('performing', [[key('performing'), false]]),
+    ...pick('success', [[key('success_loop'), true], [key('success'), false]]),
+    ...pick('release', [[key('release'), false]]),
+  ];
+}
+
+/** Length (ms) of the release clip the stage plays, or null when there is none. */
+export function schoolReleaseMs(media: Pick<PetMediaInfo, 'phases' | 'phaseMs'>, command: TrainingCommand): number | null {
+  const key = `school_${command}_release`;
+  if (!present(media.phases[key])) return null;
+  const ms = media.phaseMs[key];
+  return typeof ms === 'number' && ms > 0 ? ms : RELEASE_CLIP_MS;
+}
+
+/**
+ * The still of the stage for a role. Under a clip it is the clip's START frame (never its end
+ * pose: attention / performing start standing = the reference image, the success loop and the
+ * release start in the pose). Without a clip (picture mode, a missing / failed clip) it is the
+ * role's picture: standing for attention / release, the pose for performing / success.
+ */
+export function schoolStageStill(media: PetMediaInfo, command: TrainingCommand, role: SchoolRole, underClip: boolean): string | null {
+  const posed = underClip ? role === 'success' || role === 'release' : role === 'performing' || role === 'success';
+  return phasePoseUrl(media, posed ? COMMAND_POSE[command] : null);
 }
 
 // ── Ball (dog) ───────────────────────────────────────────────

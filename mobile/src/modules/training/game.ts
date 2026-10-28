@@ -1,7 +1,7 @@
 /**
  * The reward-timing mini-game (M5-R03) — pure logic, unit-tested with fake timers.
  *
- * The server owns the schedule (8 cues, the dog obeys on some of them after a short
+ * The server owns the schedule (6 cues since 2026-10-28, 8 before; the dog obeys on some of them after a short
  * random delay, a 1.5 s praise window) and the scoring. The app plays the schedule
  * against its own clock, started the moment the start response arrived, and sends the
  * child's "Pohvali" taps as whole ms since that local start. Because both the schedule
@@ -14,7 +14,7 @@
  * the server's result replaces it on finish.
  */
 
-import type { TrainingSession, TrainingTrial, TrialOutcome } from '@/modules/training/training';
+import { hasSmoothTimes, type TrainingSession, type TrainingTrial, type TrialOutcome } from '@/modules/training/training';
 
 /** Upper bound of taps per finish (backend `TrainingService::MAX_TAPS`). */
 export const MAX_TAPS = 64;
@@ -94,6 +94,9 @@ export const FEEDBACK_CARRY_MS = 1_500;
  * The verdict to show now: the current cue's once decided; otherwise, briefly, the
  * previous cue's (a "počakal(a) si" is only final when the next cue comes). After the
  * end: the last cue's.
+ * School smooth playback (2026-10-28, schedules with `perform_at_ms`): the previous cue's
+ * line clears at the next cue — only a »waited« (which can't be known before that cue) is
+ * still carried briefly.
  */
 export function feedbackAt(
   session: TrainingSession,
@@ -115,7 +118,7 @@ export function feedbackAt(
   if (own !== null) return { slot: i, outcome: own };
   if (i > 0 && elapsedMs - session.trials[i].cue_at_ms < FEEDBACK_CARRY_MS) {
     const previous = outcomeOf(i - 1);
-    if (previous !== null) return { slot: i - 1, outcome: previous };
+    if (previous !== null && (previous === 'waited' || !hasSmoothTimes(session))) return { slot: i - 1, outcome: previous };
   }
   return null;
 }
@@ -133,7 +136,10 @@ export const OBEY_HOLD_MS = 1_000;
 export interface GameFrame {
   /** Index into `trials` of the current slot (null during the lead-in / after the end). */
   slot: number | null;
-  /** Show the cue bubble ("Sedi!"). */
+  /**
+   * Show the cue bubble ("Sedi!"): `CUE_VISIBLE_MS` after the cue; with the smooth-playback
+   * schedule (2026-10-28) from the cue until the dog obeys (an ignored cue: `CUE_VISIBLE_MS`).
+   */
   cueVisible: boolean;
   dog: DogAction;
   /** The praise window is open now (for tests / a11y; never shown as a hint). */
@@ -167,7 +173,9 @@ export function frameAt(session: TrainingSession, elapsedMs: number): GameFrame 
   } else if (sinceCue >= IGNORE_AFTER_MS) {
     dog = 'ignoring';
   }
-  return { ...base, slot, cueVisible: sinceCue < CUE_VISIBLE_MS, dog, windowOpen };
+  const cueVisible =
+    hasSmoothTimes(session) && trial.obeys && trial.obey_at_ms !== null ? e < trial.obey_at_ms : sinceCue < CUE_VISIBLE_MS;
+  return { ...base, slot, cueVisible, dog, windowOpen };
 }
 
 // ── Clock ─────────────────────────────────────────────────────

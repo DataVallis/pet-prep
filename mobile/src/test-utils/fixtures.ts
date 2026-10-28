@@ -749,6 +749,29 @@ export function makeTrainingSessionPayload(overrides: Record<string, unknown> = 
   };
 }
 
+/**
+ * School smooth playback (2026-10-28): a 6-cue schedule with the server's `perform_at_ms` /
+ * `release_at_ms` (think 500 ms, performing 3 s, release 2.5 s, 700 ms calm; ignored cue 4.5 s).
+ * Obeys: true, false, true, true, false, true.
+ */
+export const SMOOTH_TRAINING_OBEYS = [true, false, true, true, false, true] as const;
+export function makeSmoothTrainingSessionPayload(overrides: Record<string, unknown> = {}) {
+  let cue = 2_000;
+  const trials = SMOOTH_TRAINING_OBEYS.map((obeys, index) => {
+    const at = cue;
+    if (!obeys) {
+      cue = at + 4_500;
+      return { index, cue_at_ms: at, obeys, obey_at_ms: null, window_end_ms: null, perform_at_ms: null, release_at_ms: null };
+    }
+    const perform = at + 500;
+    const obey = perform + 3_000;
+    const windowEnd = obey + 1_500;
+    cue = windowEnd + 2_500 + 700;
+    return { index, cue_at_ms: at, obeys, obey_at_ms: obey, window_end_ms: windowEnd, perform_at_ms: perform, release_at_ms: windowEnd };
+  });
+  return makeTrainingSessionPayload({ duration_ms: cue, trials, ...overrides });
+}
+
 /** `result` of a `training/finish` 200. */
 export function makeTrainingResult(overrides: Record<string, unknown> = {}) {
   return {

@@ -156,6 +156,8 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-10-28 (cloud, mobile) — school smooth playback app (`feat/school-smooth-app`, depends on the backend school PR)
+- Smooth schedules (`perform_at_ms` / `release_at_ms`) play on `modules/training/SchoolStage.tsx`: 4 persistent players mounted at session open, clock gated (`preparing`, 12 s → picture), instant switches; old schedules keep `schoolMomentAt` + `PetMediaView`. Debt: a resumed session (app restart) mounts the stage mid-session and its elapsed time comes from the server's `started_at` (up to 12 s readiness wait not included); the HUD's own state player stays mounted under the overlay (1 more player). Not on a phone yet.
 ### 2026-10-28 (cloud, backend) — school smooth playback server (`feat/school-smooth-backend`, app PR #430)
 - `SchoolClipDerivativeService` + `GenerateSchoolClipDerivative` + `media:school-derivatives` (every 10 min, ≤ 12 sources): ffmpeg loops / release in `pet_media_derivatives`, 0 $, payload `phases` / `phase_seconds`, `GET /api/media/{media}/derived/{key}`; `TrainingService` 6 cues with `perform_at_ms` / `release_at_ms`, pace × 8/6. Debt / waiting for David: a start reserves the pet's longest session (58–70 s) → ~4–6 sessions per 5 min (was 6), DECISIONS 2026-10-28.
 

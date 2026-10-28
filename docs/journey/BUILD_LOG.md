@@ -9,6 +9,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-28 — Šola brez »dvojnega« psa (aplikacija)
+
+**Kaj:** v »Šoli« aplikacija ob začetku vaje vnaprej naloži vse posnetke ukaza (največ 4) in jih med vajo menja v trenutku, brez prelivanja; kuža čaka v živi zanki, izvede ukaz, drži položaj in nato vstane, preden pride naslednji ukaz. Če posnetki v 12 s niso pripravljeni, ta vaja teče s slikami.
+**Zakaj:** Davidov posnetek z iPhona (dobermanov mladiček, »Prostor«) je pokazal dvojne slike, poskakovanje med pozami in zamrznjene slike.
+**Kako povedati:** 🧒 »Kuža se zdaj res usede in spet vstane.« · 👩 gladek prikaz, brez dodatnih stroškov (vzvratni posnetki nastanejo na strežniku, 0 $). *Na telefonu še ni preverjeno.*
+
+---
+
 ## 2026-10-28 — Šola: kuža vstane, 6 ukazov, posnetki iz strežnika za 0 $ (strežnik)
 
 **Kaj:** strežnik iz vsakega shranjenega posnetka šole sam (ffmpeg, brez AI) naredi še tri: čakanje v zanki, držanje poze v zanki in »vstane« (posnetek izvajanja nazaj, do 2,5 s). Vaja ima zdaj 6 ukazov (~60 s): kuža uboga natanko, ko konča gib, po pohvali vstane in počaka na naslednji ukaz. Obstoječe videze strežnik napolni sam vsakih 10 minut.
