@@ -76,6 +76,7 @@ return [
     'bullmastiff' => 'Bulmastif',
     'chinese_crested' => 'Kitajski goli pes',
     'nova_scotia_duck_tolling_retriever' => 'Novoškotski prinašalec',
+    'cairn_terrier' => 'Cairn terier',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

@@ -458,6 +458,7 @@ const SPECIES = [
       { id: 'bullmastiff', synonyms: { en: ['Bull Mastiff', "Gamekeeper's Night Dog"], sl: ['bulmastif', 'bul mastif'] } },
       { id: 'chinese_crested', synonyms: { en: ['Chinese Crested Dog', 'Crested', 'Hairless', 'Powder Puff'], sl: ['kitajski čopasti pes', 'kitajski copasti pes', 'kitajski goli pes'] } },
       { id: 'nova_scotia_duck_tolling_retriever', synonyms: { en: ['Toller', 'Nova Scotia Retriever', 'Duck Tolling Retriever', 'NSDTR'], sl: ['novoškotski prinašalec', 'novoskotski prinasalec', 'toller', 'novoškotski retriver'] } },
+      { id: 'cairn_terrier', synonyms: { en: ['Cairn', 'Cairnie'], sl: ['cairn terier', 'cairn', 'kern terier'] } },
     ],
   },
   {
@@ -2014,6 +2015,31 @@ const DOG_FACTS = {
       ['addisons_disease', 'health.addisons'],
     ],
   },
+  // M5-R10-75. Height + weight = Kennel Club standard (S584, reprinted by KUSA), lifespan = McMillan 2024 median 14.0 y via
+  // the Dogs Trust table (S123) + the PetMD span 13–15 y (S587), exercise = PDSA "Minimum exercise (per day): 1 hour"
+  // (S585; the RKC page could not be fetched). FCI origin Great Britain. Not exported: lifespan.pdsa (band, the median is
+  // better), lifespan.senior_from (derived), adult_weight.alternatives (PDSA / PetMD) / salt_category (our assignment),
+  // health.hormonal (PetMD background), the suitability care texts (no RKC key facts → no coat / grooming / shedding fact).
+  // New health key: glaucoma.
+  cairn_terrier: {
+    height: ['height.kc_standard'],
+    weight: [['adult_weight.kc_standard', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.petmd', 'span']],
+    exercise: [['@proposed_game_parameters.cairn_terrier.exercise_minutes_adult', 'at_least']],
+    coat: [],
+    grooming: [],
+    shedding: [],
+    food_motivation: null,
+    health: [
+      ['kneecap_luxation', 'health.patella'],
+      ['glaucoma', 'health.glaucoma'],
+      ['cataracts', 'health.eyes'],
+      ['itchy_skin_allergy', 'health.atopy'],
+      ['liver_shunt', 'health.liver_shunt'],
+      ['bleeding_disorder_vwd', 'health.von_willebrand'],
+      ['legg_perthes', 'health.legg_perthes'],
+    ],
+  },
 
 
 };
@@ -2621,6 +2647,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.nova_scotia_duck_tolling_retriever.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.nova_scotia_duck_tolling_retriever.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.nova_scotia_duck_tolling_retriever.exercise_minutes_senior',
+  },
+  cairn_terrier: {
+    adult_minutes: ['proposed_game_parameters.cairn_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.cairn_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.cairn_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.cairn_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.cairn_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.cairn_terrier.exercise_minutes_senior',
   },
 
 

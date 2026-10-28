@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "5d819110f3a206e916e7516da4e0c7619c883156a712c11f7989688b8a6f6041"
+      "sha256": "a79e1b80d1fe45c64c6edc6b06becabb411cb8be5e19404f14fff11c7896d95f"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "87830b6e984a2f6a6b76b2468fa0abdaebc77338f18b16ffe99a7d3074847a61"
+      "sha256": "4f49e5e9d2485a8ee9dc14b1cc418207c44d7868ced48ba20eefd17febde3174"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "9a6c24afe311d33dbba94e82be2237545417874d7aaf009b5e7e97660ca2fb6c"
+      "sha256": "511bd222ebc81718a7b96ddc0d584a98b7e64caa933581761ac5a9390d170b4a"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,20 +40,20 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "120fef9af56daed87ae8b83183879f6f6e3b89e02ecb1b27dced61071f76cf6a"
+      "sha256": "c74726722589f6acb7a087c49b2e9c776d79ea074a5d1fa112a30d672b16a16a"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "350661e663b18d742dfd53dca4585c890a5bffec4528fd2f7c2a96539b9844b3"
+      "sha256": "05a2fe57d9bff01643f829e2c1b61a893212ac9510a78a795ccd77279495a840"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "f8fbcb358b090f5a8bc22471ae5046f3225a69a831d4e6204c5ddde060af33ac"
+      "sha256": "be629753944314a162ec263747901bdf2e62d0f881a9f1b84cb4c06181770ce9"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "edac6879dea16007eff11b490b3b9ed4902371f9b2b5e507fc9d09f05cd1d231"
+      "sha256": "781cb8ec487286117a0ac7ee9b7d7c1926e5800cc073d9b491b36079f462641c"
     },
     "app_release": {
       "path": "docs/research/app-release.json",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "d5e9b0b88a2a00a415668b24d589c38a7f7c6ac922e395c3def96b879cf091eb"
+      "sha256": "800ac1f77e5bfa5d88eb34442008785d581f627f7691b4330d8903c2ed58fcc9"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -219,7 +219,7 @@
         }
       },
       "status": "available",
-      "breed_count": 68,
+      "breed_count": 69,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -41367,6 +41367,559 @@
       ]
     },
     {
+      "id": "cairn_terrier",
+      "species": "dog",
+      "order": 68,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Cairn Terrier",
+        "sl": "Cairn terier"
+      },
+      "slug": {
+        "en": "cairn-terrier",
+        "sl": "cairn-terier"
+      },
+      "synonyms": {
+        "en": [
+          "Cairn",
+          "Cairnie"
+        ],
+        "sl": [
+          "cairn terier",
+          "cairn",
+          "kern terier"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "h1_2"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S585"
+          ],
+          "ref": "cairn_terrier.size_class",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              28,
+              31
+            ],
+            "female": [
+              28,
+              31
+            ]
+          },
+          "source_ids": [
+            "S584"
+          ],
+          "ref": "cairn_terrier.height.kc_standard",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              6,
+              7.5
+            ],
+            "female": [
+              6,
+              7.5
+            ]
+          },
+          "source_ids": [
+            "S584"
+          ],
+          "ref": "cairn_terrier.adult_weight.kc_standard",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "cairn_terrier.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 14,
+          "source_ids": [
+            "S123"
+          ],
+          "ref": "cairn_terrier.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            13,
+            15
+          ],
+          "source_ids": [
+            "S587"
+          ],
+          "ref": "cairn_terrier.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "at_least",
+          "value": 60,
+          "source_ids": [
+            "S585"
+          ],
+          "ref": "proposed_game_parameters.cairn_terrier.exercise_minutes_adult",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 35,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "cairn_terrier.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 4,
+            "group": 3,
+            "section": 2,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S583"
+          ],
+          "ref": "cairn_terrier.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S585"
+          ],
+          "ref": "cairn_terrier.health.patella",
+          "confidence": "high"
+        },
+        {
+          "key": "glaucoma",
+          "source_ids": [
+            "S585"
+          ],
+          "ref": "cairn_terrier.health.glaucoma",
+          "confidence": "high"
+        },
+        {
+          "key": "cataracts",
+          "source_ids": [
+            "S585"
+          ],
+          "ref": "cairn_terrier.health.eyes",
+          "confidence": "high"
+        },
+        {
+          "key": "itchy_skin_allergy",
+          "source_ids": [
+            "S585"
+          ],
+          "ref": "cairn_terrier.health.atopy",
+          "confidence": "high"
+        },
+        {
+          "key": "liver_shunt",
+          "source_ids": [
+            "S585"
+          ],
+          "ref": "cairn_terrier.health.liver_shunt",
+          "confidence": "high"
+        },
+        {
+          "key": "bleeding_disorder_vwd",
+          "source_ids": [
+            "S585"
+          ],
+          "ref": "cairn_terrier.health.von_willebrand",
+          "confidence": "high"
+        },
+        {
+          "key": "legg_perthes",
+          "source_ids": [
+            "S585"
+          ],
+          "ref": "cairn_terrier.health.legg_perthes",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S585"
+            ],
+            "refs": [
+              "cairn_terrier.suitability.pdsa_family",
+              "cairn_terrier.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S585",
+              "S587"
+            ],
+            "refs": [
+              "cairn_terrier.behaviour.family",
+              "cairn_terrier.behaviour.children"
+            ]
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S586"
+            ],
+            "refs": [
+              "cairn_terrier.suitability.dogs_trust_shedding"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S587"
+            ],
+            "refs": [
+              "cairn_terrier.exercise.mental_stimulation"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 126
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.2
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 126
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 2
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.cairn_terrier.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S585"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S585 'Minimum exercise (per day) 1 hour'; RKC page not reachable)"
+          },
+          {
+            "ref": "proposed_game_parameters.cairn_terrier.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.cairn_terrier.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S123"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 126 (0.75 × 14.0 y, McMillan 2024 via S123)"
+          },
+          {
+            "ref": "proposed_game_parameters.cairn_terrier.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 35, Above average tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.cairn_terrier.grooming",
+            "basis_source_ids": [
+              "S585"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (PDSA »grooming 1-2 times per week« → zgornja meja); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S123",
+          "S585"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "patella_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K33"
+            ]
+          },
+          {
+            "key": "cardiac_exam",
+            "level": "other_scheme",
+            "source_ids": [
+              "K33"
+            ]
+          },
+          {
+            "key": "kidney_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K33"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K33"
+            ]
+          },
+          {
+            "key": "dna_gld",
+            "level": "other_scheme",
+            "source_ids": [
+              "K33"
+            ]
+          },
+          {
+            "key": "liver_shunt_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K33"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "K33"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S123",
+        "S583",
+        "S584",
+        "S585",
+        "S586",
+        "S587",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19",
+        "K33"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -46337,6 +46890,41 @@
       "url": "https://www.akc.org/expert-advice/dog-breeds/nova-scotia-duck-tolling-retriever-right-for-you/"
     },
     {
+      "id": "S583",
+      "tier": "A",
+      "publisher": "FCI (Fédération Cynologique Internationale)",
+      "title": "Breeds nomenclature — Cairn Terrier (4)",
+      "url": "https://fci.be/en/nomenclature/CAIRN-TERRIER-4.html"
+    },
+    {
+      "id": "S584",
+      "tier": "A",
+      "publisher": "The Kennel Club (UK) breed standard, reprinted by KUSA (01-2026)",
+      "title": "Cairn Terrier — Kennel Club breed standard (PDF)",
+      "url": "https://www.kusa.co.za/images/breed%20stds%20djaki/Cairn%20Terrier%20-%20KC%20[01-2026].pdf"
+    },
+    {
+      "id": "S585",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Cairn Terrier breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/cairn-terrier"
+    },
+    {
+      "id": "S586",
+      "tier": "B",
+      "publisher": "Dogs Trust (UK)",
+      "title": "Cairn Terrier — breed page",
+      "url": "https://www.dogstrust.org.uk/dog-advice/getting-dog/breeds/cairn-terrier"
+    },
+    {
+      "id": "S587",
+      "tier": "B",
+      "publisher": "PetMD — Erica Vasquez, reviewed by Barri J. Morrison, DVM (updated May 2, 2023)",
+      "title": "Cairn Terrier",
+      "url": "https://www.petmd.com/dog/breeds/cairn-terrier"
+    },
+    {
       "id": "C1",
       "tier": "A (via B summary)",
       "publisher": "AAHA / AAFP, *JFMS* / *JAAHA* 2021. Read through the AVMA JAVMA News summary of 2021-04-15.",
@@ -46741,6 +47329,13 @@
       "publisher": "American Kennel Club",
       "title": "Working Group Health Testing Requirements (breeder programs)",
       "url": "https://www.akc.org/breeder-programs/breed-health-testing-requirements/working-group-health-testing-requirements/"
+    },
+    {
+      "id": "K33",
+      "tier": "B",
+      "publisher": "American Kennel Club",
+      "title": "Terrier Group Health Testing Requirements (breeder programs)",
+      "url": "https://www.akc.org/breeder-programs/breed-health-testing-requirements/terrier-group-health-testing-requirements/"
     },
     {
       "id": "K34",
