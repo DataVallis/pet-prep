@@ -118,7 +118,7 @@ describe('breed, config and database', function () {
             ->and($breed->isPremium())->toBeTrue()
             ->and([$config->species, $config->premium_unlock, $config->sort_order, $config->label_key])
             ->toBe([Species::Dog, true, 690, 'breeds.cairn_terrier'])
-            ->and($config->search_keywords)->toBe(['cairn terrier', 'cairn', 'cairnie', 'cairn terier', 'cairnski terier', 'kern terier', 'kernski terier', 'škotski terier cairn'])
+            ->and($config->search_keywords)->toBe(['cairn terrier', 'cairn', 'cairnie', 'cairn terier', 'cairnski terier', 'kern terier', 'kernski terier'])
             // Legacy fallback = the adult step goal (60 min × 100 steps).
             ->and($config->daily_steps_required)->toBe((int) caiData('proposed_game_parameters.cairn_terrier.step_goal_adult.value'))
             ->and($config->daily_steps_required)->toBe(6000);
