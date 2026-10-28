@@ -2819,6 +2819,58 @@
         }
       ],
       "notes": "RKC breed page (dog-data S578, 2026-10-28; test names as returned — the tool would not copy the surrounding text): Good Practice (the 'at a minimum' list) — 'Prioritising genetic diversity' (not a test → not listed), DNA tests for DM and prcd-PRA; Best Practice — DNA tests for CEA/CH, DE and JADD, BVA/KC/ISDS eye, BVA/KC elbow and hip schemes. One of three fetches listed CEA/CH under Good Practice; two placed it under Best Practice (kept). New keys dna_de, dna_jadd."
+    },
+    "cairn_terrier": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K33",
+        "quote": "Patella Evaluation"
+      },
+      "tests": [
+        {
+          "key": "patella_scheme",
+          "level": "other_scheme",
+          "name": "Patellar luxation evaluation (US breed club: recommended)",
+          "source_id": "K33",
+          "quote": "Patella Evaluation"
+        },
+        {
+          "key": "cardiac_exam",
+          "level": "other_scheme",
+          "name": "Heart examination (US breed club: recommended)",
+          "source_id": "K33",
+          "quote": "Cardiac Exam"
+        },
+        {
+          "key": "kidney_scheme",
+          "level": "other_scheme",
+          "name": "Kidney ultrasound for a missing or malformed kidney (US breed club: recommended)",
+          "source_id": "K33",
+          "quote": "Kidney Ultrasound for Missing Kidney (aplasia) or Deformed Kidney (dysplasia)"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "other_scheme",
+          "name": "Eye examination for ocular melanosis (US breed club: recommended)",
+          "source_id": "K33",
+          "quote": "Ocular Melanosis (OM) Eye Exam"
+        },
+        {
+          "key": "dna_gld",
+          "level": "other_scheme",
+          "name": "DNA test for globoid cell leukodystrophy (US breed club: recommended)",
+          "source_id": "K33",
+          "quote": "Globoid Cell Leukodystrophy (Terrier) (GLD) - DNA Test"
+        },
+        {
+          "key": "liver_shunt_scheme",
+          "level": "other_scheme",
+          "name": "Liver screening for a portosystemic shunt / microvascular dysplasia (US breed club: recommended)",
+          "source_id": "K33",
+          "quote": "Liver Portosystemic Vascular Anomaly (PSVA) and Microvascular Dysplasia (MVD)"
+        }
+      ],
+      "notes": "RKC Breeds A–Z page (display.aspx?id=3065 → royalkennelclub.com …/terrier/cairn-terrier) could not be fetched on 2026-10-28 → no minimum / best_practice level. AKC Terrier Group health testing page (K33, re-read 2026-10-28): 'Recommended Health Tests from the National Breed Club' for the Cairn Terrier (parent club cairnterrier.org) — patella, cardiac, kidney ultrasound, ocular melanosis eye exam, GLD DNA test, liver PSVA / MVD. PDSA (dog-data S585): check the parents' and grandparents' medical history (paraphrase). New test keys kidney_scheme, dna_gld, liver_shunt_scheme."
     }
   }
 }

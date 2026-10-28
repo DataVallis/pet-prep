@@ -38236,6 +38236,553 @@
       }
     }
   },
+  "cairn_terrier": {
+    "_note": "Added 2026-10-28 (M5-R10-75, unattended run — appended after the Biewer Terrier (blocked): AKC 2024 No. 71 'Cairn Terrier', S174 full-list table fetched 2026-10-28 '71 | Cairn Terrier'). Quotes as returned by the web-fetch tool on 2026-10-28 (short quotes, 125-character limit; fragments marked as such); paraphrase only in notes. Sources S583–S588 (reused S8, S10, S11, S14, S24, S35, S45, S123, S174). No health percentages anywhere. The RKC Breeds A–Z page (display.aspx?id=3065 redirects to royalkennelclub.com …/terrier/cairn-terrier, refused by the fetch tool) could not be read → no RKC key facts and no Breed Watch category; exercise from PDSA (S585, runbook fallback RKC → PDSA). Identity from the FCI nomenclature (S583, No. 4); appearance, height and weight from the Kennel Club breed standard as reprinted by KUSA (S584, 01-2026). Lifespan: McMillan 2024 median 14.0 y via the Dogs Trust breed table (S123, row 'Cairn Terrier 14.0') — runbook first choice. Names: FCI / AKC / KC 'Cairn Terrier' (S583, S174, S584); Slovenian »cairn terier« (common usage; no KZS page read — open for David).",
+    "identity": {
+      "value": "FCI No. 4, Group 3 Section 2 (Small-sized Terriers), Great Britain",
+      "unit": "—",
+      "source_id": "S583",
+      "quote": "CAIRN TERRIER (4)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S583, as returned): 'CAIRN TERRIER (4)', group 'n°3 - Terriers', section 'Small sized Terriers' (section 2 of group 3), country of origin 'GREAT BRITAIN', definitive acceptance 4/6/1963, valid standard 9/8/2026; the same name in EN / FR / DE / ES. 'Great Britain' is already in FCI_ORIGINS (GB). AKC name: Cairn Terrier (S174)."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S585",
+      "quote": "Size: Small",
+      "confidence": "medium",
+      "notes": "PDSA key facts table (S585, value 'Small'; the page sits under 'small-dogs'). Dogs Trust (S586) 'Small' agrees. The RKC 'Size:' field (preferred) could not be fetched."
+    },
+    "height": {
+      "kc_standard": {
+        "value": {
+          "male": [
+            28,
+            31
+          ],
+          "female": [
+            28,
+            31
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S584",
+        "quote": "Height at withers: Approximately 28cm – 31cm (approx. 11” – 12”).",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard as reprinted by KUSA (S584, 01-2026), Size — one range for both sexes (stored per sex); 'Height in proportion to weight.' PDSA (S585) 'Average height 28-31 cm' agrees. PetMD (S587) 'stand about 10 inches tall' (US) — alternative."
+      }
+    },
+    "adult_weight": {
+      "kc_standard": {
+        "value": {
+          "male": [
+            6,
+            7.5
+          ],
+          "female": [
+            6,
+            7.5
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S584",
+        "quote": "Ideally 6kg – 7.5kg",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S584), Size — weight, one range for both sexes (stored per sex) — the game range. PDSA (S585) 'Average weight 6-8 kg'; PetMD (S587) 'weigh only 13–14 pounds' (5.9–6.4 kg, our conversion) — alternatives.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                6,
+                8
+              ],
+              "female": [
+                6,
+                8
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S585",
+            "quote": "Average weight: 6-8 kg",
+            "notes": "PDSA key facts table (S585, label and value as returned)."
+          },
+          {
+            "value": {
+              "male": [
+                5.9,
+                6.4
+              ],
+              "female": [
+                5.9,
+                6.4
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S587",
+            "quote": "these dogs weigh only 13–14 pounds and stand about 10 inches tall.",
+            "notes": "PetMD (S587, fragment); 13–14 lb = 5.9–6.4 kg (our conversion, rounded)."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "II (5–10 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 6–7.5 kg lies in the 5–10 kg band. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "9–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Small (12–24 pounds): 9–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. KC 6–7.5 kg (S584) = 13.2–16.5 lb → the 'Small (12–24 pounds)' class. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Cairn Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 14.0,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": "Cairn Terrier 14.0 13.8 - 14.3 2585 1139",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024 (Sci Rep) data as tabled by Dogs Trust (S123, as returned): median 14.0 y (95 % CI 13.8–14.3), 2,585 dogs, 1,139 deceased. Runbook first choice (McMillan 2024). Background for the senior boundary only — never shown as a statistic."
+      },
+      "pdsa": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S585",
+        "quote": "Average lifespan: Over 10 years",
+        "confidence": "medium",
+        "notes": "PDSA key facts table (S585, label and value as returned). Dogs Trust breed page (S586): 'typically 12+ years'; PetMD (S587): 'a long lifespan of 13–15 years'; VCA (S588): '12 - 14 years' — agree with the median."
+      },
+      "petmd": {
+        "value": "13–15",
+        "unit": "years",
+        "source_id": "S587",
+        "quote": "Cairn Terriers are a primarily healthy breed with a long lifespan of 13–15 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S587). Exported as the span next to the median."
+      },
+      "senior_from": {
+        "value": 10.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 14.0 y (McMillan 2024 via S123) → 0.75 × 14.0 = 10.5 y = 126 months. Not chosen: 90 (PDSA lower bound 10 y, S585); 108 (Dogs Trust breed page 12+ y, S586); 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S123"
+        ],
+        "months": 126,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≥ 60",
+        "unit": "minutes/day",
+        "source_id": "S585",
+        "quote": "Minimum exercise (per day): 1 hour",
+        "confidence": "high",
+        "notes": "PDSA key facts table (S585, label and value as returned). The RKC breed page (preferred) was not reachable → PDSA (runbook rule). PDSA: 'Cairn Terriers have boundless energy and enjoy walks and play.' VCA (S588): 'Its exercise needs can be met with a long walk or short run, along with a vigorous game.' PetMD (S587): 'a high-energy breed' — no minutes."
+      },
+      "energy": {
+        "value": "boundless energy; enjoy walks and play",
+        "unit": "—",
+        "source_id": "S585",
+        "quote": "Cairn Terriers have boundless energy and enjoy walks and play.",
+        "confidence": "high",
+        "notes": "PDSA (S585). PetMD (S587): 'Cairn Terriers are a high-energy breed that thrives on attention.'"
+      },
+      "mental_stimulation": {
+        "value": "need lots of exercise and mental stimulation; bored dogs can become barky and destructive",
+        "unit": "—",
+        "source_id": "S587",
+        "quote": "They also need lots of exercise and mental stimulation",
+        "confidence": "high",
+        "notes": "PetMD (S587, fragment); also 'Cairn Terriers can become barky and destructive if they are bored.' Basis of needs_mental_stimulation."
+      },
+      "off_lead": {
+        "value": "strong hunting instinct — caution off the lead",
+        "unit": "—",
+        "source_id": "S585",
+        "quote": "They have a strong hunting instinct and so caution should be taken when exercising off the lead",
+        "confidence": "high",
+        "notes": "PDSA (S585, fragment); PDSA (paraphrase): once on a scent they can be hard to call back. PetMD (S587, paraphrase): outdoors keep them in a fenced area or on a leash. Not an escape statement → no secure_fencing chip."
+      },
+      "digging": {
+        "value": "love to dig",
+        "unit": "—",
+        "source_id": "S587",
+        "quote": "These dogs also love to dig.",
+        "confidence": "medium",
+        "notes": "PetMD (S587); VCA (S588) 'Many like to dig.' The game has no digging mechanic and digging is not a care need."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "fearless and gay disposition; assertive, but not aggressive; active, game and hardy",
+        "unit": "—",
+        "source_id": "S584",
+        "quote": "Fearless and gay disposition; assertive, but not aggressive.",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S584), Temperament; Characteristics: 'Should impress as being active, game and hardy.' PDSA (S585): 'They are hardy, brave dogs bred to pursue the likes of foxes, badgers and rats (to name a few) above and below ground.'"
+      },
+      "family": {
+        "value": "once socialised, very good with children and excellent family pets",
+        "unit": "—",
+        "source_id": "S585",
+        "quote": "once socialised, they get on very well with children and make excellent family pets.",
+        "confidence": "high",
+        "notes": "PDSA (S585, fragment) — a condition (socialisation), an explicit statement about children. Basis of family_pet and children."
+      },
+      "children": {
+        "value": "good playmates for children; interactions should always be supervised",
+        "unit": "—",
+        "source_id": "S587",
+        "quote": "They make good playmates for children, though interactions between kids and dogs should always be supervised.",
+        "confidence": "high",
+        "notes": "PetMD (S587); supervision caveat kept here (no rating → never small_children). VCA (S588): 'Playful and good with children.'"
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement about time alone (PDSA, Dogs Trust, PetMD, VCA) → no needs_company / often_alone."
+      },
+      "other_pets": {
+        "value": "get on well with other dogs; strong hunting instincts — socialise early with cats and small pets; may chase smaller animals",
+        "unit": "—",
+        "source_id": "S585",
+        "quote": "Cairn Terriers get on well with other dogs, but due to their strong hunting instincts,",
+        "confidence": "medium",
+        "notes": "PDSA (S585, fragment); the sentence goes on that they need to be 'socialised at a young age with cats and other small household pets.' PetMD (S587): 'they might see other, smaller animals as something to chase.' (fragment). VCA (S588): 'May chase other household pets, but can learn to get along with cats.' No source uses the words 'prey drive' → no chases_small_pets chip (runbook rule: a verbatim prey-drive statement) — open for David.",
+        "alternatives": [
+          {
+            "value": "might see smaller animals as something to chase",
+            "source_id": "S587",
+            "quote": "they might see other, smaller animals as something to chase.",
+            "notes": "PetMD (S587, fragment)."
+          }
+        ]
+      },
+      "socialisation": {
+        "value": "socialise at a young age with cats and other small household pets; socialisation helps them fit into family life",
+        "unit": "—",
+        "source_id": "S585",
+        "quote": "socialised at a young age with cats and other small household pets.",
+        "confidence": "high",
+        "notes": "PDSA (S585, fragment): 'Socialisation also helps them to fit into family life'. → proposed_game_parameters.cairn_terrier.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "training": {
+        "value": "very independent, stubborn; patience and persistence; reward-based training",
+        "unit": "—",
+        "source_id": "S585",
+        "quote": "Cairns can be very independent, stubborn dogs, so patience and persistence will be required for training.",
+        "confidence": "high",
+        "notes": "PDSA (S585). VCA (S588): 'Does best with reward-based training involving food or games.' PetMD (S587): 'quick to learn' (fragment). No 'better for an experienced owner' statement → no independent_experienced_owner chip."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No chewing statement found; PetMD (S587) 'barky and destructive if they are bored' names no chewing → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No food-motivation statement found. PetMD (S587): they 'can quickly become overweight' (fragment, feeding portions) — not a food-motivation statement → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch category unknown (RKC page not reachable); no veterinary association named by the runbook (BVA, UK BWG, UFAW, RVC/VetCompass, RKC) was found naming the breed for conformation-related welfare problems → no welfare chip. Breeder checklist: AKC national breed club list (K33).",
+      "patella": {
+        "value": "luxating patellas — kneecaps slipping out of place",
+        "unit": "—",
+        "source_id": "S585",
+        "quote": "the kneecaps slipping temporarily out of place.",
+        "confidence": "high",
+        "notes": "PDSA (S585) health list, 'Luxating patellas' (fragment). PetMD (S587): patellar luxation. Breed club patella evaluation (K33). Register health key kneecap_luxation."
+      },
+      "glaucoma": {
+        "value": "glaucoma — increased pressure within the eye",
+        "unit": "—",
+        "source_id": "S585",
+        "quote": "increased pressure within the eye.",
+        "confidence": "high",
+        "notes": "PDSA (S585) health list, 'Glaucoma' (fragment). Register health key glaucoma."
+      },
+      "eyes": {
+        "value": "cataracts; progressive retinal atrophy",
+        "unit": "—",
+        "source_id": "S585",
+        "quote": "opacity of the lens of the eye",
+        "confidence": "high",
+        "notes": "PDSA (S585) health list, 'Cataracts' (fragment). PetMD (S587): cataracts and progressive retinal atrophy ('another eye condition that leads to complete blindness.', fragment). Breed club ocular melanosis eye exam (K33). Register health key cataracts."
+      },
+      "atopy": {
+        "value": "atopy — allergic itchy skin",
+        "unit": "—",
+        "source_id": "S585",
+        "quote": "hypersensitivity to certain allergens, causing itching and skin trauma.",
+        "confidence": "high",
+        "notes": "PDSA (S585) health list, 'Atopy' (fragment). Not a fetched Breed Watch point → no sensitive_skin chip. Register health key itchy_skin_allergy."
+      },
+      "liver_shunt": {
+        "value": "portosystemic (liver) shunt — blood bypassing the liver",
+        "unit": "—",
+        "source_id": "S585",
+        "quote": "abnormal blood circulation, with the blood effectively bypassing the liver",
+        "confidence": "high",
+        "notes": "PDSA (S585) health list, 'Portosystemic shunt' (fragment); PetMD (S587) 'Liver shunts'. Breed club PSVA / MVD screening (K33). Register health key liver_shunt."
+      },
+      "von_willebrand": {
+        "value": "von Willebrand's disease — a bleeding disorder",
+        "unit": "—",
+        "source_id": "S585",
+        "quote": "deficiency in blood platelet function resulting in excessive bleeding.",
+        "confidence": "high",
+        "notes": "PDSA (S585) health list, 'Von Willebrand's disease' (fragment). Register health key bleeding_disorder_vwd."
+      },
+      "legg_perthes": {
+        "value": "Legg-Perthes disease — the head of the thigh bone loses its blood supply",
+        "unit": "—",
+        "source_id": "S585",
+        "quote": "blood supply to the femoral head is depleted, causing destruction of the femoral head.",
+        "confidence": "high",
+        "notes": "PDSA (S585) health list, 'Legg-Perthes disease' (fragment). Register health key legg_perthes."
+      },
+      "hormonal": {
+        "value": "Cushing's disease; hypothyroidism",
+        "unit": "—",
+        "source_id": "S587",
+        "quote": "when a dog's adrenal glands secrete too much of the stress hormone cortisol.",
+        "confidence": "medium",
+        "notes": "PetMD (S587) health list, Cushing's disease (fragment); also hypothyroidism ('a disease that results in decreased production of thyroid hormone.'). Background only — no register key."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 35,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 35 | Cairn Terrier |",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-28): rank 35 'Cairn Terrier', tier 'Above Average Working Dogs' (ranks 27–39). Coren's own article (S34) lists only the top / bottom 10. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Above average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier 'Above Average Working Dogs' (ranks 27–39)."
+      },
+      "training_notes": {
+        "value": "independent and stubborn; patience, persistence and reward-based training",
+        "unit": "—",
+        "source_id": "S585",
+        "quote": "Cairns can be very independent, stubborn dogs, so patience and persistence will be required for training.",
+        "confidence": "high",
+        "notes": "PDSA (S585); VCA (S588) reward-based training with food or games. The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.cairn_terrier.learning_multiplier (1.2, runbook rule: Above average tier, rank 35).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "agile, alert, workmanlike, natural appearance; strong quarters, deep in rib, weather-resistant coat",
+        "unit": "—",
+        "source_id": "S584",
+        "quote": "Agile, alert, of workmanlike, natural appearance.",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S584), General Appearance; also 'Standing well forward on forepaws. Strong quarters.' and 'Deep in rib, very free in movement. Weather-resistant coat.'"
+      },
+      "colours": {
+        "value": [
+          "wheaten",
+          "red",
+          "cream",
+          "grey",
+          "brindle",
+          "nearly black"
+        ],
+        "unit": "list",
+        "source_id": "S584",
+        "quote": "Cream, wheaten, red, grey or nearly black.",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S584), Colour; 'Brindling in all these colours acceptable.'; 'Dark points, such as ears and muzzle, very typical.'; 'Any other colour or combination of colours, including solid black, white, or black and tan, unacceptable.' The picker lists brindle as one option (grey brindle, the usual shade)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Wheaten first with the highest weight (the most typical Cairn — the portrait default; Claude), then red, cream, grey, brindle, nearly black. Suggested 35 / 20 / 15 / 10 / 15 / 5."
+      },
+      "coat": {
+        "value": "weather-resistant double coat: profuse, harsh (not coarse) outer coat; short, soft, close undercoat; slight wave permissible",
+        "unit": "—",
+        "source_id": "S584",
+        "quote": "Very important. Weather-resistant. Must be double-coated, with profuse, harsh, but not coarse, outercoat;",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S584), Coat (fragment; continues 'undercoat short, soft and close. Open coats objectionable. Slight wave permissible.'). Natural, shaggy look — not a show trim."
+      },
+      "head": {
+        "value": "small head, broad skull with a definite stop; powerful muzzle, not long or heavy; black nose; head well-furnished",
+        "unit": "—",
+        "source_id": "S584",
+        "quote": "Muzzle powerful, jaw strong but not long or heavy. Nose black. Head well-furnished.",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S584), Head and Skull: 'Head small, but in proportion to body.'; 'Skull broad; a decided indentation between the eyes with a definite stop.'"
+      },
+      "ears": {
+        "value": "small, pointed, erect, not heavily coated",
+        "unit": "—",
+        "source_id": "S584",
+        "quote": "Small, pointed, well-carried and erect, not too closely set nor heavily coated.",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S584), Ears."
+      },
+      "eyes": {
+        "value": "wide apart, medium, dark hazel, slightly sunk, shaggy eyebrows",
+        "unit": "—",
+        "source_id": "S584",
+        "quote": "Wide apart, medium in size, dark hazel. Slightly sunk with shaggy eyebrows.",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S584), Eyes."
+      },
+      "tail": {
+        "value": "short, well-furnished with hair but not feathery, carried gaily",
+        "unit": "—",
+        "source_id": "S584",
+        "quote": "Short, balanced, well-furnished with hair, but not feathery.",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S584), Tail; 'Neither high nor low-set, carried gaily but not turned down towards back.'"
+      },
+      "nose": {
+        "value": "black",
+        "unit": "—",
+        "source_id": "S584",
+        "quote": "Muzzle powerful, jaw strong but not long or heavy. Nose black. Head well-furnished.",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S584), Head and Skull."
+      }
+    },
+    "suitability": {
+      "_note": "Source = PDSA (S585), Dogs Trust (S586), PetMD (S587), VCA (S588). The RKC breed page (the usual suitability source) was not reachable on 2026-10-28 → no rkc_* rows (no apartment / large_home chip).",
+      "pdsa_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S585",
+        "quote": "Size: Small",
+        "confidence": "medium",
+        "notes": "PDSA key facts table (S585, label and value as returned)."
+      },
+      "pdsa_exercise": {
+        "value": "1 hour a day minimum; boundless energy",
+        "unit": "—",
+        "source_id": "S585",
+        "quote": "Minimum exercise (per day): 1 hour",
+        "confidence": "high",
+        "notes": "PDSA (S585). One hour is not long daily exercise → no active_family / long_daily_exercise."
+      },
+      "pdsa_grooming": {
+        "value": "grooming 1–2 times a week; hand-stripping twice a year",
+        "unit": "—",
+        "source_id": "S585",
+        "quote": "Twice a year the coat should be hand-stripped to remove dead hair, otherwise grooming 1-2 times per week is needed.",
+        "confidence": "high",
+        "notes": "PDSA (S585) → brushing 2× a week (M5-R13 rule: range → upper bound). Hand-stripping twice a year is longer than every care period (German Wirehaired Pointer precedent) → no groomer reminder. 1–2× a week is not clearly more than once a week → no frequent_grooming."
+      },
+      "vca_grooming": {
+        "value": "combing once or twice weekly; plucking out dead hairs every six months",
+        "unit": "—",
+        "source_id": "S588",
+        "quote": "The coat needs combing once or twice weekly.",
+        "confidence": "high",
+        "notes": "VCA (S588); also dead hairs removed by 'plucking out dead hairs every six months' (fragment). Agrees with PDSA."
+      },
+      "petmd_grooming": {
+        "value": "weekly brushing with a pin brush; occasional hand-stripping appointments; not bathed frequently; ears kept clean",
+        "unit": "—",
+        "source_id": "S587",
+        "quote": "Otherwise, a weekly at-home grooming session with a pin brush will keep your pup's coat free of mats.",
+        "confidence": "high",
+        "notes": "PetMD (S587) — weekly (1) is an alternative to PDSA's 1–2. Also 'Though you don't need to schedule regular trips to the groomer, the CTCA recommends occasional hand-stripping appointments.', 'Cairn Terriers do not need to be bathed frequently due to their waterproof double coat.', 'Keeping your dog's ears clean is essential for preventing debris from accumulating.' — no frequency → no groomer / bath / ear task."
+      },
+      "dogs_trust_shedding": {
+        "value": "medium-length coat with low shedding; shed very little",
+        "unit": "—",
+        "source_id": "S586",
+        "quote": "Medium length with low shedding",
+        "confidence": "medium",
+        "notes": "Dogs Trust breed page (S586, fragment); the page adds that they 'shed very little'. No source says the breed sheds → low_shedding (never hypoallergenic)."
+      },
+      "pdsa_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S585",
+        "quote": "Average lifespan: Over 10 years",
+        "confidence": "medium",
+        "notes": "PDSA (S585). Not shorter_lifespan (that needs 'Under 10 years')."
+      },
+      "pdsa_family": {
+        "value": "excellent family pets once socialised",
+        "unit": "—",
+        "source_id": "S585",
+        "quote": "once socialised, they get on very well with children and make excellent family pets.",
+        "confidence": "high",
+        "notes": "PDSA (S585, fragment). Basis of family_pet and children."
+      },
+      "petmd_children": {
+        "value": "good playmates for children, supervised",
+        "unit": "—",
+        "source_id": "S587",
+        "quote": "They make good playmates for children, though interactions between kids and dogs should always be supervised.",
+        "confidence": "high",
+        "notes": "PetMD (S587); caveat kept here."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -57359,6 +57906,234 @@
         "confidence": "high",
         "notes": "FCI (S577) colours only; never black, grey, silver, merle or white on the body. Weights unsourced → verified false.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only, the most typical first (portrait default)"
+      }
+    },
+    "cairn_terrier": {
+      "_note": "Unattended run M5-R10-75 (2026-10-28): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. The RKC breed page was not reachable → exercise from PDSA (S585, 1 hour). Built: brushing 2× a week (PDSA S585 'grooming 1-2 times per week', M5-R13) and puppy socialisation (PDSA S585 quote, M5-R17). No meal gap (no source), no tooth / ear / nail / bath / groomer task (no frequency; hand-stripping twice a year is longer than every care period). In marketing (not a welfare breed). Never hypoallergenic. No new vocabulary key.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S585",
+        "quote": "Minimum exercise (per day): 1 hour",
+        "confidence": "high",
+        "notes": "PDSA key facts '1 hour' (S585) — the RKC page (preferred) was not reachable. Rule: one number N ('minimum N') → N = 60.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S585 'Minimum exercise (per day) 1 hour'; RKC page not reachable)"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S585",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 126
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 126 = round(0.75 × 14.0 y × 12) = 126 (S11 + McMillan 2024 median 14.0 y via the Dogs Trust table S123). Alternatives: 108 (Dogs Trust breed page 12+ y, S586), 90 (PDSA lower bound 10 y, S585), 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S123"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_breed_page_12_y": 108,
+          "senior_pdsa_lower_bound": 90,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 126 (0.75 × 14.0 y, McMillan 2024 via S123)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 126
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 126)"
+      },
+      "learning_multiplier": {
+        "value": 1.2,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 35 (S35), tier 'Above average' (27–39) → 1.2. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 35, Above average tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 2,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S585",
+        "quote": "Twice a year the coat should be hand-stripped to remove dead hair, otherwise grooming 1-2 times per week is needed.",
+        "confidence": "high",
+        "notes": "cairn_terrier.suitability.pdsa_grooming. PDSA 'grooming 1-2 times per week' → 2 (M5-R13 rule: range → upper bound); VCA (S588) 'once or twice weekly' agrees; PetMD (S587) 'a weekly at-home grooming session' (1) → alternative. Matted coat at ceil(2 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S587",
+            "quote": "Otherwise, a weekly at-home grooming session with a pin brush will keep your pup's coat free of mats.",
+            "notes": "PetMD (S587) — weekly."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (PDSA »grooming 1-2 times per week« → zgornja meja); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S585",
+        "quote": "socialised at a young age with cats and other small household pets.",
+        "confidence": "high",
+        "notes": "cairn_terrier.behaviour.socialisation (PDSA S585, fragment). Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, PDSA S585)"
+      },
+      "suitability_tags": {
+        "_note": "Tags for backend/config/breed_suitability.php (M5-R10-75); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S585"
+            ],
+            "refs": [
+              "cairn_terrier.suitability.pdsa_family",
+              "cairn_terrier.behaviour.family"
+            ],
+            "quote": "S585 'once socialised, they get on very well with children and make excellent family pets.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S585",
+              "S587"
+            ],
+            "refs": [
+              "cairn_terrier.behaviour.family",
+              "cairn_terrier.behaviour.children"
+            ],
+            "quote": "S585 'they get on very well with children'; S587 'They make good playmates for children, though interactions between kids and dogs should always be supervised.'"
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S586"
+            ],
+            "refs": [
+              "cairn_terrier.suitability.dogs_trust_shedding"
+            ],
+            "quote": "S586 'Medium length with low shedding'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S587"
+            ],
+            "refs": [
+              "cairn_terrier.exercise.mental_stimulation"
+            ],
+            "quote": "S587 'They also need lots of exercise and mental stimulation'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "No rating; PetMD (S587) says interactions should always be supervised.",
+          "other_pets": "PDSA: socialise early with cats and small pets because of strong hunting instincts (S585); PetMD: may chase smaller animals (S587) → no.",
+          "chases_small_pets": "No source uses the words 'prey drive' (PDSA 'strong hunting instincts', PetMD 'might see other, smaller animals as something to chase') → no chip by the rule; open for David.",
+          "active_family": "One hour a day (S585) is not long daily exercise.",
+          "long_daily_exercise": "One hour a day (S585).",
+          "apartment": "No RKC 'Flat/ Apartment' (RKC page not reachable).",
+          "large_home": "No RKC 'Large house' (RKC page not reachable).",
+          "first_time_owner": "No source.",
+          "independent_experienced_owner": "Independent / stubborn (S585) but no source says 'better for an experienced owner' → no chip.",
+          "needs_company": "No time-alone statement.",
+          "frequent_grooming": "1–2 times a week (S585) is not clearly more than once a week.",
+          "sheds": "Dogs Trust: low shedding (S586).",
+          "hypoallergenic": "Never a tag (runbook).",
+          "secure_fencing": "PetMD fenced-area / leash advice (S587, paraphrase) is not an escape statement → no.",
+          "chews_when_bored": "'barky and destructive if they are bored' (S587) names no chewing.",
+          "shorter_lifespan": "PDSA 'Over 10 years' (S585), median 14.0 y (S123).",
+          "welfare": "No veterinary association named by the runbook names the breed for conformation-related welfare problems; RKC Breed Watch category unknown (page not reachable) → no welfare chip."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children, low_shedding; consider needs_mental_stimulation"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S585",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92); RKC Breed Watch category unknown (page not reachable). Marketing never presents the Cairn Terrier as hypoallergenic, a dog for unsupervised play with small children or a dog to keep with small pets without socialisation (S585, S587).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Cairn Terrier, wheaten coat (default); small, agile, workmanlike terrier with a natural, shaggy look; profuse harsh weather-resistant double coat, not trimmed short; small head with a broad skull, definite stop and powerful muzzle, black nose, head well-furnished; dark hazel eyes, slightly sunk, with shaggy eyebrows; small, pointed, erect ears; darker ears and muzzle; short, well-furnished tail carried gaily; colours only cream, wheaten, red, grey, brindle or nearly black — never solid black, white or black and tan",
+        "unit": "—",
+        "source_id": "S584",
+        "quote": "Cream, wheaten, red, grey or nearly black.",
+        "confidence": "high",
+        "notes": "Colours of the Kennel Club standard (S584): cream, wheaten, red, grey or nearly black, brindling acceptable; 'Dark points, such as ears and muzzle, very typical.'; solid black, white, black and tan unacceptable. Weights unsourced in prompts. Wheaten as the portrait default: the most typical colour (Claude).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): wheaten is the portrait default; standard colours only (cream, wheaten, red, grey, brindle, nearly black), never solid black, white or black and tan"
       }
     }
   }
