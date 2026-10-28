@@ -921,7 +921,10 @@ describe('pet_media migration', function () {
         $migration = 'database/migrations/2026_10_07_120000_create_pet_media_table.php';
         // Quality check (2026-10-23): pet_media_quality_checks references pet_media — roll it back first.
         $quality = 'database/migrations/2027_01_20_120000_add_media_quality_check.php';
+        // School smooth playback (2026-10-28): pet_media_derivatives references pet_media too.
+        $derivatives = 'database/migrations/2027_02_07_120000_create_pet_media_derivatives_table.php';
 
+        $this->artisan('migrate:rollback', ['--path' => $derivatives])->assertSuccessful();
         $this->artisan('migrate:rollback', ['--path' => $quality])->assertSuccessful();
         $this->artisan('migrate:rollback', ['--path' => $migration])->assertSuccessful();
         expect(Schema::hasTable('pet_media'))->toBeFalse();
@@ -935,6 +938,7 @@ describe('pet_media migration', function () {
 
         expect(Schema::hasTable('pet_media_jobs'))->toBeFalse();
         $this->artisan('migrate', ['--path' => $quality])->assertSuccessful();
+        $this->artisan('migrate', ['--path' => $derivatives])->assertSuccessful();
         // Still waiting → running with the same request id (a late webhook matches);
         // completed but never downloaded → failed (media:backfill regenerates).
         expect(PetMedia::where('state', 'idle')->sole())->status->toBe('running')->request_id->toBe('old-pending')->source_generation->toBe(1)

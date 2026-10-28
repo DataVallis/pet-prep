@@ -95,6 +95,11 @@ function rgSeed(): array
     rgInsert('pet_media_quality_checks', [
         'pet_media_id' => $clipId, 'generation' => 1, 'trigger' => 'pipeline', 'status' => 'decided', 'ai_status' => 'passed', 'ai_cost_usd' => 0.01, 'verdict' => 'pass',
     ]);
+    // School smooth playback (2026-10-28): an ffmpeg-derived clip of a stored clip (→ pet_media).
+    rgInsert('pet_media_derivatives', [
+        'pet_media_id' => $clipId, 'key' => 'school_sit_attention_loop', 'status' => 'ready', 'source_path' => "{$pet->id}/video-idle-g1.mp4",
+        'storage_path' => "{$pet->id}/video-idle-g1-loop.mp4", 'bytes' => 10, 'duration_seconds' => 4.0,
+    ]);
     Storage::disk('pet_media')->put("{$pet->id}/history/reference-g0.jpg", "\xFF\xD8\xFF\xE0".str_repeat("\x00", 16));
     rgInsert('pet_media_history', [
         'pet_id' => $pet->id, 'kind' => 'image', 'generation' => 0, 'storage_path' => "{$pet->id}/history/reference-g0.jpg",

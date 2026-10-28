@@ -12,6 +12,7 @@ use App\Events\PetUpdated;
 use App\Jobs\CheckPetMediaQuality;
 use App\Jobs\GeneratePetKeyframe;
 use App\Jobs\GeneratePetReferenceImage;
+use App\Jobs\GenerateSchoolClipDerivative;
 use App\Jobs\RegeneratePetStageMedia;
 use App\Jobs\StorePetMedia;
 use App\Jobs\SubmitPetStateVideo;
@@ -1093,6 +1094,13 @@ class PetMediaService
         $path = (string) PetMedia::whereKey($slot->id)->value('storage_path');
         $image = $slot->isStill();
 
+        // School smooth playback (David 2026-10-28): a new / replaced school phase clip gets its
+        // ffmpeg-derived clip (loop / release) — 0 $, never through fal. Owners only (look row
+        // or a unique pet row); the job re-checks everything.
+        if ($slot->isPhase() && $slot->look_media_id === null && SchoolClipDerivativeService::keyFor($slot->phaseClip()) !== null) {
+            GenerateSchoolClipDerivative::dispatch((int) $slot->id);
+        }
+
         // M4-10: a look file is never replaced (pets of the look point at it);
         // the waiting pets get the new file.
         if ($slot->isLookMedia()) {
@@ -1596,6 +1604,7 @@ class PetMediaService
         $poses = [];
         $phases = [];
         $phaseSeconds = [];
+        $schoolSlots = new Collection;
         $species = $pet->speciesValue();
         foreach ($slots as $m) {
             if (! $m->isShown()) {
@@ -1609,7 +1618,17 @@ class PetMediaService
                 $phases[$m->state] = $this->signedUrl($m, $expires);
                 // David 2026-10-23: school performing clips are 5 s now, older stored ones 3 s.
                 $phaseSeconds[$m->state] = (float) ($m->stored_duration_seconds ?? $m->duration_seconds ?? 3);
+                if ($m->phaseClip()?->group() === PetPhaseClip::GROUP_SCHOOL) {
+                    $schoolSlots->push($m);
+                }
             }
+        }
+
+        // School smooth playback (David 2026-10-28): ffmpeg-derived clips (attention / success
+        // loops, release) next to their source, like any phase clip (URL + real length).
+        foreach (app(SchoolClipDerivativeService::class)->payloadFor($schoolSlots, $expires) as $key => $derived) {
+            $phases[$key] = $derived['url'];
+            $phaseSeconds[$key] = $derived['seconds'];
         }
 
         $currentState = $pet->pet_state instanceof PetStateEnum ? $pet->pet_state->value : (string) $pet->pet_state;

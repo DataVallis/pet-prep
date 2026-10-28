@@ -12,7 +12,7 @@ use Throwable;
  * Copies the pet media files from the local disk to the object disk (M4-05,
  * `media:move-to-object-storage`). Every file of the local `pet_media` disk is a
  * candidate — pet images / videos (`{pet_id}/…`), shared look files (`looks/{id}/…`),
- * the growth album (pet_media_history), clip candidates and quality contact sheets —
+ * the growth album (pet_media_history), clip candidates, quality contact sheets and derived school clips —
  * with the SAME relative path, so no DB row changes and switching PET_MEDIA_DISK
  * is the only step that moves serving.
  *
@@ -107,7 +107,7 @@ class ObjectStorageMover
     }
 
     /**
-     * Paths stored in the DB: pet / look media, clip candidates, growth album, contact sheets.
+     * Paths stored in the DB: pet / look media, clip candidates, growth album, contact sheets, derived school clips.
      *
      * @return list<string>
      */
@@ -117,6 +117,8 @@ class ObjectStorageMover
             ->merge(DB::table('pet_media')->whereNotNull('candidate_path')->pluck('candidate_path'))
             ->merge(DB::table('pet_media_history')->whereNotNull('storage_path')->pluck('storage_path'))
             ->merge(DB::table('pet_media_quality_checks')->whereNotNull('sheet_path')->pluck('sheet_path'))
+            // School smooth playback (2026-10-28): ffmpeg-derived school clips (loops, release).
+            ->merge(DB::table('pet_media_derivatives')->whereNotNull('storage_path')->pluck('storage_path'))
             ->filter(fn ($p): bool => is_string($p) && $p !== '')
             ->unique()->values()->all();
     }

@@ -1732,6 +1732,29 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/media/{media}/derived/{key}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * GET /api/media/{media}/derived/{key}?expires=…&v=…&signature=… (school smooth playback, David 2026-10-28)
+         * @description An ffmpeg-derived school clip (`school_<command>_attention_loop`, `…_success_loop`,
+         *     `…_release`) of the pet's school phase slot `{media}` — made once per source file
+         *     (a shared look's file serves every pet of the look). Same capability and authorization
+         *     rules as show(); 404 while it is missing or stale (the source file changed).
+         */
+        get: operations["media.derived"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/media/history/{history}": {
         parameters: {
             query?: never;
@@ -2515,7 +2538,11 @@ export interface components {
                  * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                  *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                  *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                 *     Always an object.
+                 *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                 *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                 *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                 *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                 *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                  */
                 phases: {
                     [key: string]: string;
@@ -2524,7 +2551,8 @@ export interface components {
                  * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                  *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                  *     made before) 3 s. The app times the school from it (the performing clip ends at
-                 *     the obey moment). Missing key (older server) = 3. Always an object.
+                 *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                 *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                  */
                 phase_seconds: {
                     [key: string]: number;
@@ -4319,7 +4347,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -4328,7 +4360,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -4594,11 +4627,16 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
-                                /** @description Length of one session in seconds. */
+                                /**
+                                 * @description At most this many seconds per session (the budget reserves it at the start; the started
+                                 *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                                 */
                                 session_seconds: number;
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
@@ -4687,8 +4725,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -4760,8 +4800,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -4794,8 +4836,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -5191,7 +5235,11 @@ export interface operations {
                                  * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                  *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                  *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                 *     Always an object.
+                                 *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                 *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                 *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                 *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                 *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                  */
                                 phases: {
                                     [key: string]: string;
@@ -5200,7 +5248,8 @@ export interface operations {
                                  * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                  *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                  *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                 *     the obey moment). Missing key (older server) = 3. Always an object.
+                                 *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                 *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                  */
                                 phase_seconds: {
                                     [key: string]: number;
@@ -5466,11 +5515,16 @@ export interface operations {
                                     index: number;
                                     cue_at_ms: number;
                                     obeys: boolean;
+                                    perform_at_ms?: number | null;
                                     obey_at_ms: number | null;
                                     window_end_ms: number | null;
+                                    release_at_ms?: number | null;
                                 }[] | null;
                             } | null;
-                            /** @description Length of one session in seconds. */
+                            /**
+                             * @description At most this many seconds per session (the budget reserves it at the start; the started
+                             *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                             */
                             session_seconds: number;
                             /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                             daily_budget_seconds: number;
@@ -5559,8 +5613,10 @@ export interface operations {
                                     index: number;
                                     cue_at_ms: number;
                                     obeys: boolean;
+                                    perform_at_ms?: number | null;
                                     obey_at_ms: number | null;
                                     window_end_ms: number | null;
+                                    release_at_ms?: number | null;
                                 }[] | null;
                             } | null;
                             session_running: boolean;
@@ -5632,8 +5688,10 @@ export interface operations {
                                     index: number;
                                     cue_at_ms: number;
                                     obeys: boolean;
+                                    perform_at_ms?: number | null;
                                     obey_at_ms: number | null;
                                     window_end_ms: number | null;
+                                    release_at_ms?: number | null;
                                 }[] | null;
                             } | null;
                             session_running: boolean;
@@ -5666,8 +5724,10 @@ export interface operations {
                                     index: number;
                                     cue_at_ms: number;
                                     obeys: boolean;
+                                    perform_at_ms?: number | null;
                                     obey_at_ms: number | null;
                                     window_end_ms: number | null;
+                                    release_at_ms?: number | null;
                                 }[] | null;
                             } | null;
                             session_running: boolean;
@@ -6083,7 +6143,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -6092,7 +6156,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -6358,11 +6423,16 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
-                                /** @description Length of one session in seconds. */
+                                /**
+                                 * @description At most this many seconds per session (the budget reserves it at the start; the started
+                                 *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                                 */
                                 session_seconds: number;
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
@@ -6451,8 +6521,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -6524,8 +6596,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -6558,8 +6632,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -6973,7 +7049,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -6982,7 +7062,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -7248,11 +7329,16 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
-                                /** @description Length of one session in seconds. */
+                                /**
+                                 * @description At most this many seconds per session (the budget reserves it at the start; the started
+                                 *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                                 */
                                 session_seconds: number;
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
@@ -7341,8 +7427,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -7414,8 +7502,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -7448,8 +7538,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -7863,7 +7955,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -7872,7 +7968,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -8138,11 +8235,16 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
-                                /** @description Length of one session in seconds. */
+                                /**
+                                 * @description At most this many seconds per session (the budget reserves it at the start; the started
+                                 *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                                 */
                                 session_seconds: number;
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
@@ -8231,8 +8333,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -8304,8 +8408,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -8338,8 +8444,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -8753,7 +8861,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -8762,7 +8874,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -9028,11 +9141,16 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
-                                /** @description Length of one session in seconds. */
+                                /**
+                                 * @description At most this many seconds per session (the budget reserves it at the start; the started
+                                 *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                                 */
                                 session_seconds: number;
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
@@ -9121,8 +9239,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -9194,8 +9314,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -9228,8 +9350,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -9643,7 +9767,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -9652,7 +9780,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -9918,11 +10047,16 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
-                                /** @description Length of one session in seconds. */
+                                /**
+                                 * @description At most this many seconds per session (the budget reserves it at the start; the started
+                                 *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                                 */
                                 session_seconds: number;
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
@@ -10011,8 +10145,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -10084,8 +10220,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -10118,8 +10256,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -10537,7 +10677,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -10546,7 +10690,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -10812,11 +10957,16 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
-                                /** @description Length of one session in seconds. */
+                                /**
+                                 * @description At most this many seconds per session (the budget reserves it at the start; the started
+                                 *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                                 */
                                 session_seconds: number;
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
@@ -10905,8 +11055,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -10978,8 +11130,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -11012,8 +11166,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -11431,7 +11587,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -11440,7 +11600,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -11706,11 +11867,16 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
-                                /** @description Length of one session in seconds. */
+                                /**
+                                 * @description At most this many seconds per session (the budget reserves it at the start; the started
+                                 *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                                 */
                                 session_seconds: number;
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
@@ -11799,8 +11965,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -11872,8 +12040,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -11906,8 +12076,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -12325,7 +12497,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -12334,7 +12510,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -12600,11 +12777,16 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
-                                /** @description Length of one session in seconds. */
+                                /**
+                                 * @description At most this many seconds per session (the budget reserves it at the start; the started
+                                 *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                                 */
                                 session_seconds: number;
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
@@ -12693,8 +12875,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -12766,8 +12950,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -12800,8 +12986,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -13215,7 +13403,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -13224,7 +13416,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -13490,11 +13683,16 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
-                                /** @description Length of one session in seconds. */
+                                /**
+                                 * @description At most this many seconds per session (the budget reserves it at the start; the started
+                                 *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                                 */
                                 session_seconds: number;
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
@@ -13583,8 +13781,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -13656,8 +13856,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -13690,8 +13892,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -14109,7 +14313,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -14118,7 +14326,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -14384,11 +14593,16 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
-                                /** @description Length of one session in seconds. */
+                                /**
+                                 * @description At most this many seconds per session (the budget reserves it at the start; the started
+                                 *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                                 */
                                 session_seconds: number;
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
@@ -14477,8 +14691,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -14550,8 +14766,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -14584,8 +14802,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -14999,7 +15219,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -15008,7 +15232,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -15274,11 +15499,16 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
-                                /** @description Length of one session in seconds. */
+                                /**
+                                 * @description At most this many seconds per session (the budget reserves it at the start; the started
+                                 *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                                 */
                                 session_seconds: number;
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
@@ -15367,8 +15597,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -15440,8 +15672,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -15474,8 +15708,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -15889,7 +16125,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -15898,7 +16138,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -16164,11 +16405,16 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
-                                /** @description Length of one session in seconds. */
+                                /**
+                                 * @description At most this many seconds per session (the budget reserves it at the start; the started
+                                 *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                                 */
                                 session_seconds: number;
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
@@ -16257,8 +16503,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -16330,8 +16578,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -16364,8 +16614,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -16783,7 +17035,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -16792,7 +17048,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -17058,11 +17315,16 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
-                                /** @description Length of one session in seconds. */
+                                /**
+                                 * @description At most this many seconds per session (the budget reserves it at the start; the started
+                                 *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                                 */
                                 session_seconds: number;
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
@@ -17151,8 +17413,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -17224,8 +17488,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -17258,8 +17524,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -17673,7 +17941,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -17682,7 +17954,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -17948,11 +18221,16 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
-                                /** @description Length of one session in seconds. */
+                                /**
+                                 * @description At most this many seconds per session (the budget reserves it at the start; the started
+                                 *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                                 */
                                 session_seconds: number;
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
@@ -18041,8 +18319,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -18114,8 +18394,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -18148,8 +18430,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -18567,7 +18851,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -18576,7 +18864,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -18842,11 +19131,16 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
-                                /** @description Length of one session in seconds. */
+                                /**
+                                 * @description At most this many seconds per session (the budget reserves it at the start; the started
+                                 *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                                 */
                                 session_seconds: number;
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
@@ -18935,8 +19229,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -19008,8 +19304,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -19042,8 +19340,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -19457,7 +19757,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -19466,7 +19770,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -19732,11 +20037,16 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
-                                /** @description Length of one session in seconds. */
+                                /**
+                                 * @description At most this many seconds per session (the budget reserves it at the start; the started
+                                 *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                                 */
                                 session_seconds: number;
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
@@ -19825,8 +20135,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -19898,8 +20210,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -19932,8 +20246,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -20351,7 +20667,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -20360,7 +20680,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -20626,11 +20947,16 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
-                                /** @description Length of one session in seconds. */
+                                /**
+                                 * @description At most this many seconds per session (the budget reserves it at the start; the started
+                                 *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                                 */
                                 session_seconds: number;
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
@@ -20719,8 +21045,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -20792,8 +21120,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -20826,8 +21156,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -21245,7 +21577,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -21254,7 +21590,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -21520,11 +21857,16 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
-                                /** @description Length of one session in seconds. */
+                                /**
+                                 * @description At most this many seconds per session (the budget reserves it at the start; the started
+                                 *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                                 */
                                 session_seconds: number;
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
@@ -21613,8 +21955,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -21686,8 +22030,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -21720,8 +22066,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -22139,7 +22487,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -22148,7 +22500,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -22414,11 +22767,16 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
-                                /** @description Length of one session in seconds. */
+                                /**
+                                 * @description At most this many seconds per session (the budget reserves it at the start; the started
+                                 *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                                 */
                                 session_seconds: number;
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
@@ -22507,8 +22865,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -22580,8 +22940,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -22614,8 +22976,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -23033,7 +23397,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -23042,7 +23410,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -23308,11 +23677,16 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
-                                /** @description Length of one session in seconds. */
+                                /**
+                                 * @description At most this many seconds per session (the budget reserves it at the start; the started
+                                 *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                                 */
                                 session_seconds: number;
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
@@ -23401,8 +23775,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -23474,8 +23850,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -23508,8 +23886,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -23927,7 +24307,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -23936,7 +24320,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -24202,11 +24587,16 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
-                                /** @description Length of one session in seconds. */
+                                /**
+                                 * @description At most this many seconds per session (the budget reserves it at the start; the started
+                                 *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                                 */
                                 session_seconds: number;
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
@@ -24295,8 +24685,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -24368,8 +24760,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -24402,8 +24796,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -25456,7 +25852,11 @@ export interface operations {
                                  * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                  *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                  *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                 *     Always an object.
+                                 *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                 *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                 *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                 *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                 *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                  */
                                 phases: {
                                     [key: string]: string;
@@ -25465,7 +25865,8 @@ export interface operations {
                                  * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                  *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                  *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                 *     the obey moment). Missing key (older server) = 3. Always an object.
+                                 *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                 *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                  */
                                 phase_seconds: {
                                     [key: string]: number;
@@ -25743,7 +26144,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -25752,7 +26157,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -26234,7 +26640,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -26243,7 +26653,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -26769,6 +27180,30 @@ export interface operations {
             path: {
                 /** @description The media ID */
                 media: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": Record<string, never>;
+                };
+            };
+            404: components["responses"]["ModelNotFoundException"];
+        };
+    };
+    "media.derived": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description The media ID */
+                media: number;
+                key: string;
             };
             cookie?: never;
         };
@@ -27444,7 +27879,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -27453,7 +27892,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -27719,11 +28159,16 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
-                                /** @description Length of one session in seconds. */
+                                /**
+                                 * @description At most this many seconds per session (the budget reserves it at the start; the started
+                                 *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                                 */
                                 session_seconds: number;
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
@@ -27812,8 +28257,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -27885,8 +28332,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -27919,8 +28368,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -28316,7 +28767,11 @@ export interface operations {
                                      * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-                                     *     Always an object.
+                                     *     School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+                                     *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+                                     *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+                                     *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -28325,7 +28780,8 @@ export interface operations {
                                      * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
-                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -28591,11 +29047,16 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
-                                /** @description Length of one session in seconds. */
+                                /**
+                                 * @description At most this many seconds per session (the budget reserves it at the start; the started
+                                 *     session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+                                 */
                                 session_seconds: number;
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
@@ -28684,8 +29145,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -28757,8 +29220,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;
@@ -28791,8 +29256,10 @@ export interface operations {
                                         index: number;
                                         cue_at_ms: number;
                                         obeys: boolean;
+                                        perform_at_ms?: number | null;
                                         obey_at_ms: number | null;
                                         window_end_ms: number | null;
+                                        release_at_ms?: number | null;
                                     }[] | null;
                                 } | null;
                                 session_running: boolean;

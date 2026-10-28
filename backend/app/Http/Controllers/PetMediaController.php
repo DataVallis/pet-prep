@@ -9,6 +9,7 @@ use App\Models\PetMediaQualityCheck;
 use App\Models\User;
 use App\Services\Media\MediaStorage;
 use App\Services\Media\PetMediaService;
+use App\Services\Media\SchoolClipDerivativeService;
 use Carbon\CarbonImmutable;
 use Dedoc\Scramble\Attributes\ExcludeRouteFromDocs;
 use Illuminate\Support\Facades\Auth;
@@ -49,7 +50,8 @@ class PetMediaController extends Controller
 {
     /**
      * `{pet_id}/{name}.{ext}` or, for a shared look of the free-pet pool (M4-10),
-     * `looks/{look_id}/{name}.{ext}` as PetMediaService writes it; `D`: `$` must
+     * `looks/{look_id}/{name}.{ext}` as PetMediaService writes it (derived school clips
+     * `…/{name}-loop.mp4` / `-release.mp4` too, SchoolClipDerivativeService::derivedPath); `D`: `$` must
      * not match before a trailing newline.
      */
     public const SAFE_RELATIVE_PATH = '#^(looks/)?[0-9]+/[A-Za-z0-9_-]+(\.[A-Za-z0-9]+)?$#D';
@@ -75,6 +77,21 @@ class PetMediaController extends Controller
     public function showHistory(PetMediaHistory $history, PetMediaService $service): Response
     {
         return $this->serve($history->pet, true, $history->storage_path, (string) $history->mime, $service);
+    }
+
+    /**
+     * GET /api/media/{media}/derived/{key}?expires=…&v=…&signature=… (school smooth playback, David 2026-10-28)
+     *
+     * An ffmpeg-derived school clip (`school_<command>_attention_loop`, `…_success_loop`,
+     * `…_release`) of the pet's school phase slot `{media}` — made once per source file
+     * (a shared look's file serves every pet of the look). Same capability and authorization
+     * rules as show(); 404 while it is missing or stale (the source file changed).
+     */
+    public function showDerived(PetMedia $media, string $key, PetMediaService $service, SchoolClipDerivativeService $derivatives): Response
+    {
+        $row = $derivatives->servable($media, $key);
+
+        return $this->serve($media->pet, $row !== null, (string) $row?->storage_path, 'video/mp4', $service);
     }
 
     /**

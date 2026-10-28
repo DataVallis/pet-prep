@@ -678,19 +678,19 @@ sequenceDiagram
   Note over T: only pets with training_enabled (profile + generate-pin AND pin-login features ["training"])<br/>legacy / older-app pets → 422 training_not_available · locks (423) are checked first
   C->>API: POST /api/child/pet/training/start {command: sit}
   API->>T: lock pet · decay missed days · expire stale sessions
-  T->>DB: one active session per pet? daily budget (5 min, 50 s per session) left?
+  T->>DB: one active session per pet? daily budget (5 min) left for the pet's LONGEST session (58–70 s, by its stored clip lengths)?
   alt running session / budget used
     API-->>C: 422 training_session_active (next = expires_at) / training_daily_budget_used (next = midnight)
   else ok
-    T->>DB: pet_training_sessions (active, schedule: 8 cues every 6 s, obeys? 50→90 % by progress, obey 0.8–2.5 s after cue)
-    API-->>C: 200 {session {id, trials[{cue_at_ms, obeys, obey_at_ms, window_end_ms}], praise_window_ms 1500, ends_at, expires_at}, state}
+    T->>DB: pet_training_sessions (active, schedule 2026-10-28: 6 cues, obeys? 50→90 % by progress,<br/>perform_at = cue + 0.3–1.5 s, obey_at = perform_at + stored performing length P,<br/>release_at = window end, next cue = release_at + release length R + 0.7 s; ignored cue 4.5 s)
+    API-->>C: 200 {session {id, trials[{cue_at_ms, obeys, perform_at_ms, obey_at_ms, window_end_ms, release_at_ms}], praise_window_ms 1500, duration_ms, ends_at, expires_at}, state}
     API-->>C: PetUpdated training_started (summary.session_active)
   end
-  Note over C: app plays the 50 s timeline: "Sedi!" at each cue,<br/>dog obeys (or not), child taps "Pohvali" → offsets in ms
+  Note over C: app plays the ~60 s timeline: "Sedi!" at each cue,<br/>dog obeys (or not), child taps "Pohvali" → offsets in ms
   C->>API: POST /api/child/pet/training/finish {session_id, taps[ms]}
   API->>T: same child? ends_at − 2 s ≤ now < expires_at? every tap ≤ duration?
   T->>T: score(): first tap per cue → in_time / too_early / too_late / no_praise · waited / praised_without_obeying
-  T->>DB: progress += in_time × per_success × breed multiplier (BC 2, mutt 1) × pet factor (mutt 0.8–1.2) · cap 100
+  T->>DB: progress += in_time × per_success × breed multiplier (BC 2, mutt 1) × pet factor (mutt 0.8–1.2) × 8 / trials (6 → 8/6) · cap 100
   T->>DB: activities_log trained_pet (actor child) = today's training routine
   API-->>C: 200 {result {trials[outcome], successes, progress_before, progress_after}, state} + PetUpdated trained_pet
 ```
@@ -1426,6 +1426,18 @@ flowchart LR
   F --> L["lost webhook / job / worker"] --> SW["hourly media:sweep:<br/>2 h → timed_out · re-queue download · reclaim after 10 min"]
   GF & TK & EF & DF & SW -.-> AD["media:backfill / Filament Generate missing / Regenerate"]
   UP["M5-T16 /admin → Upgrade to new media / media:backfill --state-media:<br/>preview (no spend, per look) → confirm (frozen set, recomputed) →<br/>UpgradePetsToStateMedia chunks → generateMissing(upgrade)"] -.-> RT
+```
+
+**School derived clips (school smooth playback, David 2026-10-28 — ffmpeg on our host, 0 $, never fal):**
+
+```mermaid
+flowchart LR
+  ST["school phase clip stored / replaced / approved<br/>(look row or unique pet row)"] --> J[GenerateSchoolClipDerivative<br/>queue default, unique per source]
+  BF["media:school-derivatives every 10 min<br/>≤ 12 due sources: missing / stale / &lt; 3 failures"] --> J
+  J --> CP[temp copy from pet_media / pet_media_s3] --> FF["ffmpeg: attention / success → ping-pong loop<br/>performing → reversed release ≤ 2.5 s<br/>H.264 CRF 23, ≤ 1280 px, faststart"]
+  FF --> W[write next to the source through the disk<br/>pet_media_derivatives row: source_path = source storage_path]
+  W --> P["payload media.phases + phase_seconds:<br/>school_cmd_attention_loop · _success_loop · _release<br/>GET /api/media/{slot}/derived/{key}"]
+  W --> TS["TrainingService schedule: P = performing length, R = release length"]
 ```
 
 ## 10b. App playback of pet media (M4-03 app side, 2026-10-05)
