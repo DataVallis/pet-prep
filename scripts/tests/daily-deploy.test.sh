@@ -8,6 +8,7 @@
 #   …/runs?…event=workflow_dispatch&status=success → $FIX/deployed.json (+ …/runs/<id>/jobs → $FIX/jobs-<id>.json)
 #   …/runs?…event=push&head_sha=<sha>…             → $FIX/push-<sha>.<k>.json (k = call number for that sha,
 #                                                     highest existing repeats; none → no runs)
+#   …/commits/<sha>                                → $FIX/commit-<sha>.json (none → an ordinary code commit)
 #   …/runs?event=workflow_dispatch&per_page=30     → $FIX/active.json (none → no runs)
 #   …/runs?event=workflow_dispatch&branch=main&…   → $FIX/dispatched.json (none → no runs)
 # GH_FAIL_MATCH (ERE over the path) makes matching calls fail. `sleep` is a recording shim.
@@ -50,6 +51,8 @@ case "$path" in
     sha="${path#*head_sha=}"; sha="${sha%%&*}"; k="$(count "push-$sha")"
     while [ "$k" -gt 0 ] && [ ! -f "$FIX/push-$sha.$k.json" ]; do k=$((k - 1)); done
     file="$FIX/push-$sha.$k.json"; [ -f "$file" ] || { echo "$empty" > "$file"; } ;;
+  */commits/*) sha="${path##*/}"; file="$FIX/commit-$sha.json"
+    [ -f "$file" ] || jq -n '{commit:{message:"feat: code"},parents:[{sha:"0"}],files:[{filename:"backend/x.php"}]}' > "$file" ;;
   */runs\?*per_page=30*) file="$FIX/active.json"; [ -f "$file" ] || echo "$empty" > "$file" ;;
   */runs\?*per_page=10*) file="$FIX/dispatched.json"; [ -f "$file" ] || echo "$empty" > "$file" ;;
   */actions/runs/*/jobs\?*) id="${path%/jobs*}"; id="${id##*/}"; file="$FIX/jobs-${id}.json"
@@ -91,6 +94,11 @@ push_run() { # push_run SHA K STATUS CONCLUSION [REPO]: the push CI as seen by t
     {id:50,event:"push",head_sha:$s,status:"completed",conclusion:"failure",created_at:"2026-10-14T10:00:00Z",html_url:"https://ci/50",head_repository:{full_name:$r}},
     {id:51,event:"push",head_sha:$s,status:$st,conclusion:(if $c == "null" then null else $c end),created_at:"2026-10-14T11:00:00Z",html_url:"https://ci/51",head_repository:{full_name:$r}}]}' \
     > "$FIX/push-$1.$2.json"
+}
+commit() { # commit SHA PARENT MESSAGE FILE...: the commit as the commits API returns it
+  local sha="$1" parent="$2" msg="$3"; shift 3
+  jq -n --arg p "$parent" --arg m "$msg" '{commit:{message:$m},parents:[{sha:$p}],files:[$ARGS.positional[] | {filename:.}]}' \
+    --args "$@" > "$FIX/commit-$sha.json"
 }
 # run EVENT [SCHEDULE] [NOW] [DRY_RUN]: runs the script, sets o_rc, o_out (stdout+stderr), o_dispatch.
 run() {
@@ -210,6 +218,25 @@ push_run "$NEW" 1 completed success; push_run "$NEWER" 1 completed success
 run workflow_dispatch
 check "main moved to a green head: dispatched" "0 $DISPATCH" "$o_rc $o_dispatch"
 contains "main moved: summary names the new head" "$FIX/summary" "main head \`${NEWER}\`"
+
+echo "== c2. [skip ci] docs commits from the OTA workflow (fix 2026-10-28) =="
+BOT="chore(release): record OTA 2222222 (ios,android) in app-release.json [skip ci]"
+# Production already runs the code; only the bot's docs commit is on top → nothing to do.
+new_case "$NEWER" "$NEW"; commit "$NEWER" "$NEW" "$BOT" docs/research/app-release.json docs/research/breed-registry.json
+run workflow_dispatch
+check "skip-ci docs head over production: exit 0, nothing dispatched" "0 " "$o_rc $o_dispatch"
+contains "skip-ci docs head: says why" "$FIX/out" "only [skip ci] docs commits"
+# New code + the bot commit on top → the code's push CI decides, main is deployed.
+new_case "$NEWER" "$OLD"; commit "$NEWER" "$NEW" "$BOT" docs/research/app-release.json; push_run "$NEW" 1 completed success
+run workflow_dispatch
+check "skip-ci head over new code: CI of the parent decides, dispatched" "0 $DISPATCH" "$o_rc $o_dispatch"
+new_case "$NEWER" "$OLD"; commit "$NEWER" "$NEW" "$BOT" docs/research/app-release.json; push_run "$NEW" 1 completed failure
+run workflow_dispatch
+check "skip-ci head over red code: refused" "1 " "$o_rc $o_dispatch"
+# A [skip ci] commit that touches code is not skipped — it needs its own CI.
+new_case "$NEWER" "$NEW"; commit "$NEWER" "$NEW" "fix: hotfix [skip ci]" backend/app/x.php docs/a.md
+run workflow_dispatch
+check "skip-ci commit with code: refused (no CI)" "1 " "$o_rc $o_dispatch"
 
 echo "== d. a Run workflow run is already queued / running =="
 new_case "$NEW"; push_run "$NEW" 1 completed success
