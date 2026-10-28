@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "e3ca0c88b417fd07fb9701125b280f6e32a798308c601783ef3993ed4e4b51ab"
+      "sha256": "f8e37f12852b45963124e0c90b0ce619621ffb912c777285b6cf8784b9c5e875"
     }
   },
   "suitability_vocabulary": {
@@ -41267,7 +41267,12 @@
           "S579"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "nova-scotia-duck-tolling-retriever.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
