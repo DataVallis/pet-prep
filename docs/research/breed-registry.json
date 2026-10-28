@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "af968833cdf7d09c566c4f3849f4fb4640fc4031bf5e84b6a3595a6e17036424"
+      "sha256": "5d819110f3a206e916e7516da4e0c7619c883156a712c11f7989688b8a6f6041"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "2fe60ff0af4ccfe9b10149cf72b66e7c81af8b737b30413d912aa3712480bd9e"
+      "sha256": "932a84668547f453e16a0d9d992a09047994667387b59436f4dececfe524c918"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "a0e7588e03f9fd86b9eb2bc94e567bd8b750725a021fc512928abad52e79de25"
+      "sha256": "9a6c24afe311d33dbba94e82be2237545417874d7aaf009b5e7e97660ca2fb6c"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "4c3f5d118bc90ca04fe1b711be777e73078b089a5d08a6a6cb0b1e740a481b33"
+      "sha256": "120fef9af56daed87ae8b83183879f6f6e3b89e02ecb1b27dced61071f76cf6a"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "6046f05861255c44804ea4e27557fa9e4c5b95c69c18022172f79f1316e2572a"
+      "sha256": "350661e663b18d742dfd53dca4585c890a5bffec4528fd2f7c2a96539b9844b3"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "e826de698b90caca394a4a693176d474d2e4e842c6490a08d91a8d10a2f72a16"
+      "sha256": "f8fbcb358b090f5a8bc22471ae5046f3225a69a831d4e6204c5ddde060af33ac"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "37e01f9cee967f8d9c4b5467dd7a3db0399aece4397dba73ed4cbe5c97d609e7"
+      "sha256": "d5e9b0b88a2a00a415668b24d589c38a7f7c6ac922e395c3def96b879cf091eb"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -219,7 +219,7 @@
         }
       },
       "status": "available",
-      "breed_count": 67,
+      "breed_count": 68,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -40761,6 +40761,607 @@
       ]
     },
     {
+      "id": "nova_scotia_duck_tolling_retriever",
+      "species": "dog",
+      "order": 67,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Nova Scotia Duck Tolling Retriever",
+        "sl": "Novoškotski prinašalec"
+      },
+      "slug": {
+        "en": "nova-scotia-duck-tolling-retriever",
+        "sl": "novoskotski-prinasalec"
+      },
+      "synonyms": {
+        "en": [
+          "Toller",
+          "Nova Scotia Retriever",
+          "Duck Tolling Retriever",
+          "NSDTR"
+        ],
+        "sl": [
+          "novoškotski prinašalec",
+          "novoskotski prinasalec",
+          "toller",
+          "novoškotski retriver"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "under_1h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S578"
+          ],
+          "ref": "nova_scotia_duck_tolling_retriever.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              48,
+              51
+            ],
+            "female": [
+              45,
+              48
+            ]
+          },
+          "source_ids": [
+            "S577"
+          ],
+          "ref": "nova_scotia_duck_tolling_retriever.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              20,
+              23
+            ],
+            "female": [
+              17,
+              20
+            ]
+          },
+          "source_ids": [
+            "S577"
+          ],
+          "ref": "nova_scotia_duck_tolling_retriever.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "nova_scotia_duck_tolling_retriever.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 13.2,
+          "source_ids": [
+            "S123"
+          ],
+          "ref": "nova_scotia_duck_tolling_retriever.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            12,
+            14
+          ],
+          "source_ids": [
+            "S579"
+          ],
+          "ref": "nova_scotia_duck_tolling_retriever.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S578"
+          ],
+          "ref": "nova_scotia_duck_tolling_retriever.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S578"
+          ],
+          "ref": "nova_scotia_duck_tolling_retriever.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S578"
+          ],
+          "ref": "nova_scotia_duck_tolling_retriever.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S578"
+          ],
+          "ref": "nova_scotia_duck_tolling_retriever.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 312,
+            "group": 8,
+            "section": 1,
+            "origin": "CA"
+          },
+          "source_ids": [
+            "S576"
+          ],
+          "ref": "nova_scotia_duck_tolling_retriever.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S579"
+          ],
+          "ref": "nova_scotia_duck_tolling_retriever.health.hip_elbow_dysplasia",
+          "confidence": "medium"
+        },
+        {
+          "key": "pra_inherited_blindness",
+          "source_ids": [
+            "S579"
+          ],
+          "ref": "nova_scotia_duck_tolling_retriever.health.pra",
+          "confidence": "high"
+        },
+        {
+          "key": "degenerative_myelopathy",
+          "source_ids": [
+            "S579"
+          ],
+          "ref": "nova_scotia_duck_tolling_retriever.health.degenerative_myelopathy",
+          "confidence": "high"
+        },
+        {
+          "key": "addisons_disease",
+          "source_ids": [
+            "S579"
+          ],
+          "ref": "nova_scotia_duck_tolling_retriever.health.addisons",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S579"
+            ],
+            "refs": [
+              "nova_scotia_duck_tolling_retriever.behaviour.family"
+            ]
+          },
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S578",
+              "S580"
+            ],
+            "refs": [
+              "nova_scotia_duck_tolling_retriever.exercise.energy",
+              "nova_scotia_duck_tolling_retriever.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S580"
+            ],
+            "refs": [
+              "nova_scotia_duck_tolling_retriever.behaviour.children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S580"
+            ],
+            "refs": [
+              "nova_scotia_duck_tolling_retriever.exercise.energy"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S578"
+            ],
+            "refs": [
+              "nova_scotia_duck_tolling_retriever.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S578",
+              "S579"
+            ],
+            "refs": [
+              "nova_scotia_duck_tolling_retriever.suitability.rkc_grooming",
+              "nova_scotia_duck_tolling_retriever.suitability.petmd_grooming"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S580"
+            ],
+            "refs": [
+              "nova_scotia_duck_tolling_retriever.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 119
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 119
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 2
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.nova_scotia_duck_tolling_retriever.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S578"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S578 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.nova_scotia_duck_tolling_retriever.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.nova_scotia_duck_tolling_retriever.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S123"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 119 (0.75 × 13.2 y, McMillan 2024 via S123)"
+          },
+          {
+            "ref": "proposed_game_parameters.nova_scotia_duck_tolling_retriever.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+          },
+          {
+            "ref": "proposed_game_parameters.nova_scotia_duck_tolling_retriever.grooming",
+            "basis_source_ids": [
+              "S579"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (RKC S578 »More than once a week« → PetMD S579 »once or twice a week«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S123",
+          "S578",
+          "S579"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_dm",
+            "level": "minimum",
+            "source_ids": [
+              "S578"
+            ]
+          },
+          {
+            "key": "dna_prcd_pra",
+            "level": "minimum",
+            "source_ids": [
+              "S578"
+            ]
+          },
+          {
+            "key": "dna_cea",
+            "level": "best_practice",
+            "source_ids": [
+              "S578"
+            ]
+          },
+          {
+            "key": "dna_de",
+            "level": "best_practice",
+            "source_ids": [
+              "S578"
+            ]
+          },
+          {
+            "key": "dna_jadd",
+            "level": "best_practice",
+            "source_ids": [
+              "S578"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S578"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S578"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S578"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S578"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S123",
+        "S576",
+        "S577",
+        "S578",
+        "S579",
+        "S580",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -45694,6 +46295,41 @@
       "publisher": "PetMD — Erica Vasquez, reviewed by Jennifer Coates, DVM (updated Jul. 20, 2023)",
       "title": "Chinese Crested",
       "url": "https://www.petmd.com/dog/breeds/chinese-crested"
+    },
+    {
+      "id": "S576",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — NOVA SCOTIA DUCK TOLLING RETRIEVER (312)",
+      "url": "https://www.fci.be/en/nomenclature/NOVA-SCOTIA-RETRIEVER-312.html"
+    },
+    {
+      "id": "S577",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 312 Nova Scotia Duck Tolling Retriever, English (PDF; date of publication of the official valid standard 24.06.1987)",
+      "url": "https://WWW.FCI.BE/Nomenclature/Standards/312g08-en.pdf"
+    },
+    {
+      "id": "S578",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A to Z — Retriever (Nova Scotia Duck Tolling)",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/retriever-nova-scotia-duck-tolling/"
+    },
+    {
+      "id": "S579",
+      "tier": "B",
+      "publisher": "PetMD — Teresa Kho-Pelfrey, DVM (published Jul. 10, 2023)",
+      "title": "Nova Scotia Duck Tolling Retriever",
+      "url": "https://www.petmd.com/dog/breeds/nova-scotia-duck-tolling-retriever"
+    },
+    {
+      "id": "S580",
+      "tier": "B",
+      "publisher": "American Kennel Club",
+      "title": "Is the Nova Scotia Duck Tolling Retriever the Right Breed for You?",
+      "url": "https://www.akc.org/expert-advice/dog-breeds/nova-scotia-duck-tolling-retriever-right-for-you/"
     },
     {
       "id": "C1",
