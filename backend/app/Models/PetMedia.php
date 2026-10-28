@@ -168,6 +168,9 @@ class PetMedia extends Model
         'stored_recipe',
         'attempts',
         'request_id',
+        // Fix 2026-10-28: fal queue status / result URLs of a queued key / pose image (media:sweep polls them).
+        'status_url',
+        'response_url',
         'source_url',
         'storage_path',
         'bytes',

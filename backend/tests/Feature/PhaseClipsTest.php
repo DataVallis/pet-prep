@@ -95,10 +95,17 @@ function phcFakeFal(): void
     fakeFalJwks();
     $n = 0;
     Http::fake([
+        // Life-stage growth edits (editReferenceImage) stay sync.
         'fal.run/fal-ai/nano-banana-pro/edit' => function () use (&$n) {
             $n++;
 
             return Http::response(['images' => [['url' => "https://v3.fal.media/files/pc/edit-{$n}.jpg"]]]);
+        },
+        // Fix 2026-10-28: key / pose images are queued (result via completeFalKeyImages()).
+        'queue.fal.run/fal-ai/nano-banana-pro/edit*' => function () use (&$n) {
+            $n++;
+
+            return Http::response(['request_id' => "pc-edit-{$n}", 'status_url' => "https://queue.fal.run/fal-ai/nano-banana-pro/requests/pc-edit-{$n}/status", 'response_url' => "https://queue.fal.run/fal-ai/nano-banana-pro/requests/pc-edit-{$n}"]);
         },
         'fal.run/fal-ai/nano-banana-pro' => function () use (&$n) {
             $n++;
@@ -127,10 +134,12 @@ function phcCompleteClips(): int
     $done = 0;
 
     for ($round = 0; $round < 10; $round++) {
+        // Fix 2026-10-28: queued key / pose images first (a stored one queues its clips).
+        $keys = completeFalKeyImages('https://v3.fal.media/files/pc/');
         $rows = PetMedia::query()->whereIn('kind', ['video', 'transition', 'phase'])
             ->where('status', 'running')->whereNotNull('request_id')->whereNull('source_url')->get();
 
-        if ($rows->isEmpty()) {
+        if ($rows->isEmpty() && $keys === 0) {
             break;
         }
 
@@ -306,7 +315,7 @@ describe('pipeline for a dog with its own media', function () {
         $pet = phcBirth(phcPet());
         phcCompleteClips();
 
-        $queue = phcCalls('https://queue.fal.run/')->values();
+        $queue = phcCalls('https://queue.fal.run/fal-ai/kling-video/')->values();
         $prompts = $queue->map(fn (Request $r) => (string) $r['prompt']);
         $kind = fn (string $p): string => match (true) {
             str_contains($p, 'No toys, no ball, no feather') => 'phase',
@@ -315,10 +324,13 @@ describe('pipeline for a dog with its own media', function () {
         };
         $kinds = $prompts->map($kind)->values()->all();
 
-        // Every loop and transition is queued before the first phase clip; the ball before the school.
+        // The first-minutes loops (idle, sleeping, hungry) and the transitions are queued before the
+        // first phase clip; the ball before the school. Since 2026-10-28 key images arrive on the fal
+        // webhook, so a later state's loop (its key image still at fal) may follow a phase clip.
         $firstPhase = array_search('phase', $kinds, true);
         expect($firstPhase)->not->toBeFalse()
-            ->and(array_slice($kinds, $firstPhase))->each->toBe('phase')
+            ->and(array_slice($kinds, 0, 3))->each->toBe('loop')
+            ->and(array_search('transition', $kinds, true))->toBeLessThan($firstPhase)
             ->and(array_count_values($kinds))->toBe(['loop' => 6, 'transition' => 2, 'phase' => 15]);
 
         $phaseRows = PetMedia::where('pet_id', $pet->id)->where('kind', 'phase')->orderBy('id')->get();
@@ -342,7 +354,7 @@ describe('pipeline for a dog with its own media', function () {
             ->and($sitDown['start_image_url'])->not->toBe($sitDown['end_image_url']);
 
         // Pose images: Nano Banana Pro Edit of the reference image, after the key images.
-        $edits = phcCalls('https://fal.run/fal-ai/nano-banana-pro/edit')->map(fn (Request $r) => (string) $r['prompt'])->values();
+        $edits = phcCalls('https://queue.fal.run/fal-ai/nano-banana-pro/edit')->map(fn (Request $r) => (string) $r['prompt'])->values();
         expect($edits)->toHaveCount(5 + 5)
             ->and($edits->slice(5)->values()[0])->toContain('WITHOUT the dog')
             ->and($edits->slice(5)->values()[1])->toContain('sitting upright')
@@ -452,7 +464,7 @@ describe('pipeline for a dog with its own media', function () {
         phcSwitch(true);
         expect($media->sweepStale()['reclaimed'])->toBe(2)
             ->and($media->generateKeyframe($pose->id))->toBeTrue()
-            ->and(phcCalls('https://fal.run/fal-ai/nano-banana-pro/edit')->filter(fn (Request $r) => str_contains((string) $r['prompt'], 'sitting upright'))->count())->toBe(1);
+            ->and(phcCalls('https://queue.fal.run/fal-ai/nano-banana-pro/edit')->filter(fn (Request $r) => str_contains((string) $r['prompt'], 'sitting upright'))->count())->toBe(1);
     });
 
     it('a pet from before M5-T08 gets no pose image or phase clip automatically; the admin upgrade plans them with their price', function () {

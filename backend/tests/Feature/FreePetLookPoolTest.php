@@ -78,10 +78,17 @@ function lpFakeFal(): void
     fakeFalJwks();
     $n = 0;
     Http::fake([
+        // Life-stage growth edits (editReferenceImage) stay sync.
         'fal.run/fal-ai/nano-banana-pro/edit' => function () use (&$n) {
             $n++;
 
             return Http::response(['images' => [['url' => "https://v3.fal.media/files/look/edit-{$n}.jpg"]]]);
+        },
+        // Fix 2026-10-28: key / pose images are queued (result via completeFalKeyImages()).
+        'queue.fal.run/fal-ai/nano-banana-pro/edit*' => function () use (&$n) {
+            $n++;
+
+            return Http::response(['request_id' => "look-edit-{$n}", 'status_url' => "https://queue.fal.run/fal-ai/nano-banana-pro/requests/look-edit-{$n}/status", 'response_url' => "https://queue.fal.run/fal-ai/nano-banana-pro/requests/look-edit-{$n}"]);
         },
         'fal.run/fal-ai/nano-banana-pro' => function () use (&$n) {
             $n++;

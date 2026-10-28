@@ -38,6 +38,9 @@ class FalGateway
     /** fal Platform API (account billing, M5-T15) — free reads only. */
     public const PLATFORM_BASE_URL = 'https://api.fal.ai';
 
+    /** poll(): result-read statuses that mean »try again later«, not »the request failed«. */
+    public const TRANSIENT_RESULT_STATUSES = [502, 503, 504];
+
     public const BALANCE_FLAG_KEY = 'ai:fal_balance_exhausted_at';
 
     private const BALANCE_LOG_KEY = 'ai:fal_balance_logged';
@@ -50,7 +53,10 @@ class FalGateway
     }
 
     /**
-     * Synchronous call (images): https://fal.run/{endpoint}. Returns the JSON body and latency.
+     * Synchronous call: https://fal.run/{endpoint}. Returns the JSON body and latency.
+     * Used for reference images, life-stage edits, breed portraits, the vision check and
+     * the AI Lab. State KEY images and POSE images go through submit() since 2026-10-28
+     * (Nano Banana Pro Edit took > 60 s and a timed-out call was billed but thrown away).
      *
      * @param  array<string, mixed>  $input
      * @return array{body: array<string, mixed>, latency_ms: int, cost_usd: float}
@@ -82,20 +88,25 @@ class FalGateway
     }
 
     /**
-     * Queue submission (videos): https://queue.fal.run/{endpoint}?fal_webhook=…
+     * Queue submission (videos; key / pose images since 2026-10-28):
+     * https://queue.fal.run/{endpoint}?fal_webhook=… — fal answers at once with a
+     * request id; the result arrives on the signed webhook (or poll()).
+     * `$timeoutSeconds` must stay below the calling job's timeout, so a slow answer
+     * ends as a caught timeout (cost kept, outcome unknown) and never as a killed worker.
      *
      * @param  array<string, mixed>  $input
      * @return array{request_id: string, status_url: string|null, response_url: string|null, cost_usd: float}
      *
      * @throws AiCallException
      */
-    public function submit(ModelProfile $profile, array $input, AiSpendPurpose $purpose, string $webhookUrl, ?int $petId = null, ?int $labResultId = null, ?int $petMediaId = null): array
+    public function submit(ModelProfile $profile, array $input, AiSpendPurpose $purpose, string $webhookUrl, ?int $petId = null, ?int $labResultId = null, ?int $petMediaId = null, int $timeoutSeconds = 120): array
     {
         $this->assertCallable($profile);
         $entry = $this->guard->reserve($profile, $purpose, $petId, $labResultId, $petMediaId);
 
         try {
             $response = $this->http()
+                ->timeout($timeoutSeconds)
                 ->withQueryParameters(['fal_webhook' => $webhookUrl])
                 ->post(self::QUEUE_BASE_URL.'/'.$profile->endpoint, $input);
         } catch (Throwable $e) {
@@ -125,7 +136,8 @@ class FalGateway
     }
 
     /**
-     * Poll a queued request (fallback when the webhook cannot reach us, e.g. local dev).
+     * Poll a queued request (fallback when the webhook cannot reach us, e.g. local dev;
+     * media:sweep for a queued key / pose image whose webhook got lost — 2026-10-28).
      * No spend: status reads are free.
      *
      * @return array{state: 'pending'|'completed'|'failed', body: array<string, mixed>, error: string|null}
@@ -152,6 +164,12 @@ class FalGateway
             return ['state' => 'pending', 'body' => [], 'error' => $e->getMessage()];
         }
 
+        // A transient gateway error on the result read is not a verdict on the request (fix 2026-10-28,
+        // QA #433: only 502 / 503 / 504 — any other 5xx is fal's answer and stays `failed`).
+        if (in_array($result->status(), self::TRANSIENT_RESULT_STATUSES, true)) {
+            return ['state' => 'pending', 'body' => [], 'error' => 'result HTTP '.$result->status()];
+        }
+
         if (! $result->successful()) {
             $detail = $result->json('detail');
 
@@ -161,6 +179,27 @@ class FalGateway
         $body = $result->json();
 
         return ['state' => 'completed', 'body' => is_array($body) ? $body : [], 'error' => null];
+    }
+
+    /**
+     * The queue status / result URLs of a request, rebuilt from the model endpoint and the
+     * request id — the shape fal returns on submit: only the app id (`owner/app`, without a
+     * subpath such as `/edit`) + `/requests/{id}` (+ `/status`). Used when a dead worker's
+     * accepted request is adopted from the ledger (fix 2026-10-28), so media:sweep can poll it.
+     *
+     * @return array{status_url: string|null, response_url: string|null}
+     */
+    public static function queueUrlsFor(string $endpoint, string $requestId): array
+    {
+        $parts = explode('/', trim($endpoint, '/'));
+
+        if (count($parts) < 2 || preg_match('/^[A-Za-z0-9._-]+$/', $requestId) !== 1) {
+            return ['status_url' => null, 'response_url' => null];
+        }
+
+        $base = self::QUEUE_BASE_URL.'/'.$parts[0].'/'.$parts[1].'/requests/'.$requestId;
+
+        return ['status_url' => $base.'/status', 'response_url' => $base];
     }
 
     /**

@@ -1611,19 +1611,50 @@ class FalAiService
     }
 
     /**
-     * M5-T08: a state's KEY IMAGE as an edit of the stage's reference image
-     * (profile media.state_media.keyframe_profile — Nano Banana Pro Edit, David
-     * 2026-10-21). Same budget / ledger as every image (purpose reference_image).
-     * Returns null when the profile is disabled or on a retryable failure.
+     * M5-T08: a state's KEY IMAGE (M5-T09 / T10: or a POSE image) as an edit of the
+     * stage's reference image (profile media.state_media.keyframe_profile — Nano Banana
+     * Pro Edit, David 2026-10-21). Same budget / ledger as every image (purpose
+     * reference_image).
      *
-     * @return array{url: string, profile: string}|null
+     * Fix 2026-10-28 (David): submitted to fal's QUEUE with the signed webhook, like the
+     * videos — the sync endpoint often took > 60 s, the job timed out and every paid try
+     * was thrown away. The result (`images[0].url`) arrives on the webhook (or media:sweep
+     * polls `status_url` / `response_url`). Call only from a queued job, never inside a
+     * transaction.
      *
-     * @throws AiCallException budget / balance / non-retryable failures
+     * @return array{request_id: string, status_url: string|null, response_url: string|null, profile: string}
+     *
+     * @throws AiCallException (Disabled when fal or the profile is off)
      */
-    public function editKeyframe(string $prompt, string $sourceImageUrl, int $seed, ?int $petId = null, ?int $petMediaId = null): ?array
+    public function submitKeyframe(string $prompt, string $sourceImageUrl, int $seed, ?int $petId = null, ?int $petMediaId = null): array
     {
-        return $this->editImageWith($this->profiles->keyframe(), $prompt, $sourceImageUrl, $seed, $petId, $petMediaId);
+        $profile = $this->profiles->keyframe();
+
+        if (! $this->isEnabled() || $profile === null) {
+            throw new AiCallException(AiCallFailure::Disabled);
+        }
+
+        $submitted = $this->gateway->submit(
+            $profile,
+            $profile->editInput($prompt, $sourceImageUrl, $seed),
+            AiSpendPurpose::ReferenceImage,
+            $this->webhookUrl(),
+            petId: $petId,
+            petMediaId: $petMediaId,
+            // Well below GeneratePetKeyframe::$timeout (75 s): fal's queue answers at once.
+            timeoutSeconds: self::KEYFRAME_SUBMIT_TIMEOUT_SECONDS,
+        );
+
+        return [
+            'request_id' => $submitted['request_id'],
+            'status_url' => $submitted['status_url'],
+            'response_url' => $submitted['response_url'],
+            'profile' => $profile->key,
+        ];
     }
+
+    /** The fal queue answers a submit within a second or two; a hung one is cut well before the job timeout. */
+    public const KEYFRAME_SUBMIT_TIMEOUT_SECONDS = 30;
 
     /**
      * @return array{url: string, profile: string}|null
@@ -1836,25 +1867,29 @@ class FalAiService
      *
      * Format: {request_id, gateway_request_id, status: "OK"|"ERROR", payload, error?}
      *
+     * `$image` (fix 2026-10-28): the request was a queued key / pose image — the result
+     * is `payload.images[0].url` instead of `payload.video.url`. `url` is the media URL
+     * either way; `video_url` mirrors it for videos (AI Lab).
+     *
      * @param  array<string, mixed>  $body
-     * @return array{ok: bool, video_url: string|null, error: string|null, reason: AiCallFailure|null}
+     * @return array{ok: bool, url: string|null, video_url: string|null, error: string|null, reason: AiCallFailure|null}
      */
-    public function parseWebhookResult(array $body): array
+    public function parseWebhookResult(array $body, bool $image = false): array
     {
         if (($body['status'] ?? null) !== 'OK') {
             $error = $body['error'] ?? 'fal.ai reported an error';
 
-            return ['ok' => false, 'video_url' => null, 'error' => is_string($error) ? $error : 'fal.ai reported an error', 'reason' => AiCallFailure::GenerationFailed];
+            return ['ok' => false, 'url' => null, 'video_url' => null, 'error' => is_string($error) ? $error : 'fal.ai reported an error', 'reason' => AiCallFailure::GenerationFailed];
         }
 
         $payload = is_array($body['payload'] ?? null) ? $body['payload'] : [];
-        $videoUrl = $payload['video']['url'] ?? null;
+        $url = $image ? ($payload['images'][0]['url'] ?? null) : ($payload['video']['url'] ?? null);
 
-        if (! is_string($videoUrl) || ! $this->isAllowedMediaUrl($videoUrl)) {
-            return ['ok' => false, 'video_url' => null, 'error' => 'Missing or untrusted video URL in payload', 'reason' => AiCallFailure::InvalidResponse];
+        if (! is_string($url) || ! $this->isAllowedMediaUrl($url)) {
+            return ['ok' => false, 'url' => null, 'video_url' => null, 'error' => 'Missing or untrusted '.($image ? 'image' : 'video').' URL in payload', 'reason' => AiCallFailure::InvalidResponse];
         }
 
-        return ['ok' => true, 'video_url' => $videoUrl, 'error' => null, 'reason' => null];
+        return ['ok' => true, 'url' => $url, 'video_url' => $image ? null : $url, 'error' => null, 'reason' => null];
     }
 
     /**

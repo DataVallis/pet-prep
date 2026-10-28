@@ -3,6 +3,7 @@
 namespace App\Services\Media;
 
 use App\Enums\AiCallFailure;
+use App\Enums\AiSpendPurpose;
 use App\Enums\LifeStage;
 use App\Enums\PetPhaseClip;
 use App\Enums\PetPose;
@@ -65,8 +66,11 @@ class PetMediaService
     /** A `running` slot without a fal answer for this long belongs to a dead worker. */
     public const STALE_CLAIM_MINUTES = 10;
 
-    /** A submitted video without a webhook for this long is given up (sweep). */
+    /** A submitted video (since 2026-10-28 also a queued key / pose image) without a webhook for this long is given up (sweep). */
     public const WEBHOOK_TIMEOUT_MINUTES = 120;
+
+    /** Fix 2026-10-28: a queued key / pose image without a webhook for this long is polled at fal (free) by media:sweep. */
+    public const IMAGE_POLL_AFTER_MINUTES = 10;
 
     public function __construct(
         private readonly MediaEntitlementService $entitlements,
@@ -77,6 +81,7 @@ class PetMediaService
         private readonly Mp4FastStart $fastStart,
         private readonly PetPreparationService $preparation,
         private readonly AppSettingsService $settings,
+        private readonly FalGateway $gateway,
     ) {}
 
     public function disk(): Filesystem
@@ -546,45 +551,81 @@ class PetMediaService
             return true;
         }
 
+        // A stale `running` claim = a worker died; its submit may already have been accepted
+        // (and paid) by fal before the request id reached the slot (adopted below, no 2nd submit).
+        $deadClaimSince = $slot->status === PetMedia::STATUS_RUNNING ? $slot->updated_at : null;
+
+        // A `running` slot WITH a request id is never claimed (claim()): fal is working on it and
+        // the webhook / media:sweep finishes it — a duplicate job never pays twice (fix 2026-10-28).
         if (! $this->claim($slot, [PetMedia::STATUS_PENDING, PetMedia::STATUS_FAILED], [
             'source_url' => null,
+            'request_id' => null,
+            'status_url' => null,
+            'response_url' => null,
             'source_generation' => $image->generation,
             'life_stage' => $image->life_stage,
         ])) {
             return true; // another worker has it
         }
 
+        if ($deadClaimSince !== null && $this->adoptAcceptedRequest($slot, $deadClaimSince)) {
+            return true;
+        }
+
         [$breedKey, $traits] = $this->prompts->subjectOf($pet);
         $dna = is_array($pet->pet_dna) ? $pet->pet_dna : [];
 
+        return $this->submitPoseStill($slot, fn () => $this->fal->submitKeyframe(
+            $pose !== null
+                ? $this->prompts->posePrompt($breedKey, $pose, $traits, $pet->life_stage)
+                : $this->prompts->keyframePrompt($breedKey, $state, $traits, $pet->life_stage),
+            $this->falFetchUrl($image),
+            (int) ($dna['seed'] ?? 0),
+            $pet->id,
+            $slot->id,
+        ), ['pet_id' => $pet->id]);
+    }
+
+    /**
+     * Fix 2026-10-28 (David): submit a CLAIMED key / pose image slot (pet slot or look row)
+     * to fal's queue — the result comes on the signed webhook (recordVideoResult →
+     * StorePetMedia → keyframe_ready → queueStateVideos, as before), a lost webhook is
+     * polled / timed out by media:sweep. Exactly one ledger entry per submission.
+     *
+     * A refusal that reached nothing (connect error, fal 4xx / 5xx → ledger void) puts the
+     * slot back to `pending` and returns false (the job retries — nothing was paid). A
+     * submit that was sent but whose answer was lost (cost kept) or a budget / balance /
+     * disabled refusal fails the slot — never resubmitted automatically (no double pay).
+     *
+     * @param  callable(): array{request_id: string, status_url: string|null, response_url: string|null, profile: string}  $submit
+     * @param  array<string, mixed>  $logContext
+     */
+    private function submitPoseStill(PetMedia $slot, callable $submit, array $logContext): bool
+    {
         try {
-            $result = $this->fal->editKeyframe(
-                $pose !== null
-                    ? $this->prompts->posePrompt($breedKey, $pose, $traits, $pet->life_stage)
-                    : $this->prompts->keyframePrompt($breedKey, $state, $traits, $pet->life_stage),
-                $this->falFetchUrl($image),
-                (int) ($dna['seed'] ?? 0),
-                $pet->id,
-                $slot->id,
-            );
+            $submitted = $submit();
         } catch (AiCallException $e) {
             $this->syncCost($slot);
-            $this->fail($slot, $e->reason, $e->getMessage());
-            Log::warning('PetMediaService: key / pose image not generated', ['pet_id' => $pet->id, 'state' => $slot->state, 'reason' => $e->reason->value]);
+
+            if ($e->retryable() && ! $e->outcomeUnknown) {
+                $slot->update(['status' => PetMedia::STATUS_PENDING]);
+
+                return false;
+            }
+
+            $this->fail($slot, $e->reason, $e->getMessage()); // a look row fails its waiting pets too
+            Log::warning('PetMediaService: key / pose image not submitted', $logContext + ['pet_media_id' => $slot->id, 'state' => $slot->state, 'reason' => $e->reason->value]);
 
             return true;
         }
 
+        $slot->update([
+            'request_id' => $submitted['request_id'],
+            'status_url' => $submitted['status_url'],
+            'response_url' => $submitted['response_url'],
+            'profile' => $submitted['profile'],
+        ]);
         $this->syncCost($slot);
-
-        if ($result === null) {
-            $slot->update(['status' => PetMedia::STATUS_PENDING]);
-
-            return false;
-        }
-
-        $slot->update(['source_url' => $result['url'], 'profile' => $result['profile']]);
-        StorePetMedia::dispatch($slot->id);
 
         return true;
     }
@@ -780,9 +821,10 @@ class PetMediaService
      */
     private function adoptAcceptedRequest(PetMedia $slot, \DateTimeInterface $claimedAt): bool
     {
+        // Fix 2026-10-28: queued key / pose images are adopted the same way (purpose reference_image).
         $ledger = AiSpendLedger::query()
             ->where('pet_media_id', $slot->id)
-            ->where('purpose', 'state_video')
+            ->where('purpose', $slot->isPoseStill() ? AiSpendPurpose::ReferenceImage->value : AiSpendPurpose::StateVideo->value)
             ->where('status', AiSpendLedger::STATUS_COMMITTED)
             ->whereNotNull('request_id')
             ->where('created_at', '>=', $claimedAt)
@@ -798,18 +840,43 @@ class PetMediaService
             $slot->pet !== null => $this->imageSlot($slot->pet),
             default => null,
         };
-        $slot->update([
-            'request_id' => $ledger->request_id,
-            'profile' => $ledger->profile,
-            'source_generation' => $image?->generation,
-            'duration_seconds' => (float) $ledger->units,
-            // M5-T08: the dead worker submitted the clip the same way this one would have.
-            'recipe' => $this->adoptedRecipe($slot),
-        ]);
+        $slot->update($slot->isPoseStill()
+            // A key / pose image: no clip fields. Its queue URLs died with the worker — rebuilt from
+            // the profile's endpoint so media:sweep can still poll it (QA #433).
+            ? ['request_id' => $ledger->request_id, 'profile' => $ledger->profile, 'source_generation' => $image?->generation]
+                + $this->adoptedQueueUrls((string) $ledger->profile, (string) $ledger->request_id)
+            : [
+                'request_id' => $ledger->request_id,
+                'profile' => $ledger->profile,
+                'source_generation' => $image?->generation,
+                'duration_seconds' => (float) $ledger->units,
+                // M5-T08: the dead worker submitted the clip the same way this one would have.
+                'recipe' => $this->adoptedRecipe($slot),
+            ]);
         $this->syncCost($slot);
         Log::warning('PetMediaService: adopted the request id of a dead worker', ['pet_media_id' => $slot->id, 'request_id' => $ledger->request_id]);
 
         return true;
+    }
+
+    /**
+     * Queue URLs of an adopted key / pose image request (see FalGateway::queueUrlsFor()).
+     *
+     * @return array{status_url: string|null, response_url: string|null}
+     */
+    private function adoptedQueueUrls(string $profileKey, string $requestId): array
+    {
+        $profile = $this->profiles->keyframe();
+
+        if ($profile === null || $profile->key !== $profileKey) {
+            try {
+                $profile = $this->profiles->image($profileKey);
+            } catch (\Throwable) {
+                return ['status_url' => null, 'response_url' => null];
+            }
+        }
+
+        return FalGateway::queueUrlsFor($profile->endpoint, $requestId);
     }
 
     /**
@@ -843,9 +910,11 @@ class PetMediaService
 
     /**
      * Signed fal webhook for a pet_media request (FalAiWebhookController, inside
-     * its transaction with the slot row locked). Idempotent.
+     * its transaction with the slot row locked). Idempotent. Clips and — since
+     * 2026-10-28 — queued key / pose images (`url` = the allowlisted fal media URL;
+     * media:sweep's poll of a lost image webhook lands here too).
      *
-     * @param  array{ok: bool, video_url: string|null, error: string|null, reason?: AiCallFailure}  $result
+     * @param  array{ok: bool, url?: string|null, video_url?: string|null, error: string|null, reason?: AiCallFailure|null}  $result
      * @return 'recorded'|'failed'|'already_processed'
      */
     public function recordVideoResult(PetMedia $slot, array $result): string
@@ -870,7 +939,7 @@ class PetMediaService
             return 'failed';
         }
 
-        $slot->update(['source_url' => $result['video_url']]);
+        $slot->update(['source_url' => $result['url'] ?? $result['video_url'] ?? null]);
         StorePetMedia::dispatch($slot->id)->afterCommit();
 
         return 'recorded';
@@ -1351,6 +1420,8 @@ class PetMediaService
                 'status' => PetMedia::STATUS_PENDING,
                 'generation' => DB::raw('generation + '.($bump ? 1 : 0)),
                 'request_id' => null,
+                'status_url' => null,
+                'response_url' => null,
                 'source_url' => null,
                 'error_reason' => null,
                 'error' => null,
@@ -1785,6 +1856,10 @@ class PetMediaService
      * Recover slots a lost job / webhook left behind:
      *  - submitted videos without a webhook after 2 h → failed `timed_out`
      *    (cost kept; media:backfill / Filament can regenerate);
+     *  - fix 2026-10-28: queued key / pose images without a webhook after 10 min are POLLED at
+     *    fal (free status read): a finished result is recorded like the webhook would
+     *    (→ StorePetMedia), a fal failure fails the slot, still running → waits; after 2 h
+     *    (or with nothing to poll) → failed `timed_out`. Never resubmitted here (no double pay);
      *  - a result URL whose download job got lost → StorePetMedia again (quality check: a
      *    downloaded candidate whose check job got lost → its check again, no new download);
      *  - a claim of a dead worker → its job again (which adopts an accepted request id);
@@ -1792,11 +1867,26 @@ class PetMediaService
      *
      *  - M5-T08b: state media slots left pending while the switch was off → the pet's pipeline again.
      *
-     * @return array{timed_out: int, downloads: int, reclaimed: int, resumed: int, temp_files: int}
+     * @return array{timed_out: int, polled: int, downloads: int, reclaimed: int, resumed: int, temp_files: int}
      */
     public function sweepStale(): array
     {
         $timedOut = 0;
+        $polled = 0;
+        PetMedia::query()->whereIn('kind', [PetMedia::KIND_KEYFRAME, PetMedia::KIND_POSE])
+            ->where('status', PetMedia::STATUS_RUNNING)
+            ->whereNotNull('request_id')
+            ->whereNull('source_url')
+            ->where('updated_at', '<', now()->subMinutes(self::IMAGE_POLL_AFTER_MINUTES))
+            ->orderBy('id')
+            ->each(function (PetMedia $slot) use (&$timedOut, &$polled): void {
+                match ($this->pollPoseStill($slot)) {
+                    'recorded', 'failed' => $polled++,
+                    'timed_out' => $timedOut++,
+                    default => null,
+                };
+            });
+
         PetMedia::query()->clips()
             ->where('status', PetMedia::STATUS_RUNNING)
             ->whereNotNull('request_id')
@@ -1848,7 +1938,53 @@ class PetMediaService
             ? $this->resumeStateMedia(staleOnly: true)
             : 0;
 
-        return ['timed_out' => $timedOut, 'downloads' => $downloads, 'reclaimed' => $reclaimed, 'resumed' => $resumed, 'temp_files' => $this->cleanupTempFiles()];
+        return ['timed_out' => $timedOut, 'polled' => $polled, 'downloads' => $downloads, 'reclaimed' => $reclaimed, 'resumed' => $resumed, 'temp_files' => $this->cleanupTempFiles()];
+    }
+
+    /**
+     * Fix 2026-10-28: media:sweep's fallback for a queued key / pose image whose webhook
+     * did not come — a FREE status read at fal (FalGateway::poll, outside any transaction),
+     * then the same recording as the webhook under the row lock (matched by request id, so a
+     * webhook that won the race or a regenerate in between is left alone). Never submits.
+     *
+     * @return 'recorded'|'failed'|'pending'|'timed_out'|'skipped'
+     */
+    private function pollPoseStill(PetMedia $slot): string
+    {
+        $requestId = (string) $slot->request_id;
+        $canPoll = $this->fal->isEnabled() && filled($slot->status_url) && filled($slot->response_url)
+            && str_contains((string) $slot->status_url, $requestId);
+
+        $poll = $canPoll ? $this->gateway->poll((string) $slot->status_url, (string) $slot->response_url) : null;
+
+        return DB::transaction(function () use ($slot, $requestId, $poll): string {
+            $locked = PetMedia::query()->whereKey($slot->id)->where('request_id', $requestId)->lockForUpdate()->first();
+
+            if ($locked === null || $locked->status !== PetMedia::STATUS_RUNNING || $locked->source_url !== null) {
+                return 'skipped'; // the webhook / a regenerate got there first
+            }
+
+            if ($poll !== null && $poll['state'] === 'completed') {
+                $result = $this->fal->parseWebhookResult(['status' => 'OK', 'payload' => $poll['body']], image: true);
+                Log::warning('PetMediaService: key / pose image recovered by polling (webhook lost)', ['pet_media_id' => $locked->id, 'ok' => $result['ok']]);
+
+                return $this->recordVideoResult($locked, $result) === 'recorded' ? 'recorded' : 'failed';
+            }
+
+            if ($poll !== null && $poll['state'] === 'failed') {
+                $this->fail($locked, AiCallFailure::GenerationFailed, 'fal.ai: '.($poll['error'] ?? 'request failed'));
+
+                return 'failed';
+            }
+
+            if ($locked->updated_at !== null && $locked->updated_at->gte(now()->subMinutes(self::WEBHOOK_TIMEOUT_MINUTES))) {
+                return 'pending'; // fal is still working on it (or the status read failed) — next sweep
+            }
+
+            $this->fail($locked, AiCallFailure::TimedOut, 'No fal webhook within '.self::WEBHOOK_TIMEOUT_MINUTES.' minutes.');
+
+            return 'timed_out';
+        });
     }
 
     /**
@@ -2546,40 +2682,32 @@ class PetMediaService
             return true;
         }
 
-        if (! $this->claim($row, [PetMedia::STATUS_PENDING, PetMedia::STATUS_FAILED], ['source_url' => null, 'source_generation' => $image->generation])) {
+        // Fix 2026-10-28: a running row WITH a request id (queued at fal) is never claimed again.
+        $deadClaimSince = $row->status === PetMedia::STATUS_RUNNING ? $row->updated_at : null;
+
+        if (! $this->claim($row, [PetMedia::STATUS_PENDING, PetMedia::STATUS_FAILED], [
+            'source_url' => null,
+            'request_id' => null,
+            'status_url' => null,
+            'response_url' => null,
+            'source_generation' => $image->generation,
+        ])) {
             return true; // another worker generates it; the fan-out links the waiting pets
         }
 
-        try {
-            $result = $this->fal->editKeyframe(
-                $pose !== null
-                    ? $this->prompts->posePrompt($look->breed_type->value, $pose, $look->traits(), LifeStage::from((string) $row->life_stage))
-                    : $this->prompts->keyframePrompt($look->breed_type->value, $state, $look->traits(), LifeStage::from((string) $row->life_stage)),
-                $this->falFetchUrl($image),
-                $look->seed(),
-                null,
-                $row->id,
-            );
-        } catch (AiCallException $e) {
-            $this->syncCost($row);
-            $this->fail($row, $e->reason, $e->getMessage()); // fails the waiting pets too
-            Log::warning('PetMediaService: look key / pose image not generated', ['pet_look_id' => $look->id, 'state' => $row->state, 'reason' => $e->reason->value]);
-
+        if ($deadClaimSince !== null && $this->adoptAcceptedRequest($row, $deadClaimSince)) {
             return true;
         }
 
-        $this->syncCost($row);
-
-        if ($result === null) {
-            $row->update(['status' => PetMedia::STATUS_PENDING]);
-
-            return false;
-        }
-
-        $row->update(['source_url' => $result['url'], 'profile' => $result['profile']]);
-        StorePetMedia::dispatch($row->id);
-
-        return true;
+        return $this->submitPoseStill($row, fn () => $this->fal->submitKeyframe(
+            $pose !== null
+                ? $this->prompts->posePrompt($look->breed_type->value, $pose, $look->traits(), LifeStage::from((string) $row->life_stage))
+                : $this->prompts->keyframePrompt($look->breed_type->value, $state, $look->traits(), LifeStage::from((string) $row->life_stage)),
+            $this->falFetchUrl($image),
+            $look->seed(),
+            null,
+            $row->id,
+        ), ['pet_look_id' => $look->id]);
     }
 
     /**
@@ -2637,6 +2765,8 @@ class PetMediaService
                 'status' => PetMedia::STATUS_RUNNING,
                 'look_media_id' => $row->id,
                 'request_id' => null,
+                'status_url' => null,
+                'response_url' => null,
                 'source_url' => null,
                 'error_reason' => null,
                 'error' => null,
@@ -2687,6 +2817,8 @@ class PetMediaService
                 'candidate_bytes' => null,
                 'candidate_mime' => null,
                 'request_id' => null,
+                'status_url' => null,
+                'response_url' => null,
                 'source_url' => null,
                 'error_reason' => null,
                 'error' => null,

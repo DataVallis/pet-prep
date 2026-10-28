@@ -1424,7 +1424,7 @@ flowchart LR
   F --> T["submit timed out after sending"] --> TK["failed http_error, cost kept"]
   F --> E["webhook ERROR / non-fal URL"] --> EF["failed generation_failed / invalid_response"]
   F --> D["download 4xx / too big / wrong type"] --> DF["failed invalid_response<br/>(image: fal URL forgotten)"]
-  F --> L["lost webhook / job / worker"] --> SW["hourly media:sweep:<br/>2 h → timed_out · re-queue download · reclaim after 10 min"]
+  F --> L["lost webhook / job / worker"] --> SW["hourly media:sweep:<br/>queued key / pose images: poll fal (free) ≥ 10 min after submit (2026-10-28)<br/>2 h → timed_out · re-queue download · reclaim after 10 min"]
   GF & TK & EF & DF & SW -.-> AD["media:backfill / Filament Generate missing / Regenerate"]
   GF & EF -.->|"school / game pose · phase clip or the reference image of a pet with phase clips"| AR["hourly media:retry-activity-clips (:17, David 2026-10-28):<br/>≥ 30 min after the failure, ≤ 2 auto retries per failure chain<br/>(look row counts for a shared look), within today's budget"]
   SW -.->|"timed_out: never resubmitted (may still finish at fal)"| AL
@@ -1612,8 +1612,8 @@ sequenceDiagram
   participant St as StorePetMedia
   S->>VJ: idle loop (reference image is its pose)
   S->>KJ: key images in preparation order (sleeping, hungry, playing, …)
-  KJ->>Fal: edit(reference image, pose prompt) — claim, ledger 0.15 $
-  Fal-->>KJ: image URL → St (key image stored) → queueStateVideos again
+  KJ->>Fal: queue submit edit(reference image, pose prompt) + webhook — claim, ledger 0.15 $ (2026-10-28: queue, not sync)
+  Fal-->>St: signed webhook images[0].url (lost → the first hourly media:sweep ≥ 10 min after submit polls it, timed_out after 2 h) → key image stored → queueStateVideos again
   S->>VJ: that state's loop (start = key image, no end frame — fix 2026-10-23)
   Note over S: transitions only after every first-minutes clip (idle, sleeping, hungry) is on its way
   S->>VJ: transition (start = pose A, end = pose B)
@@ -1677,9 +1677,9 @@ sequenceDiagram
   participant V as SubmitPetStateVideo
   participant App as phasePlayer.ts (app)
   Note over S: home first (David 2026-10-28): home key images → pose images right behind them → loops / transitions → games, then school — not part of the preparation (m6)
-  S->>K: missing poses of every clip, dispatched in the same call behind the home key images (claim, 0.15 $; switch read fresh before fal)
+  S->>K: missing poses of every clip, dispatched in the same call behind the home key images (claim, 0.15 $; switch read fresh before fal; fal queue submit + webhook since 2026-10-28)
   Note over S,V: phase clip only once no home key image is in flight (every home loop submitted)
-  K-->>S: stored → queueStateVideos again
+  K-->>S: webhook → stored → queueStateVideos again
   S->>V: phase clip (start / end = its poses, duration "3"; school performing "5")
   V-->>App: phases[clip] + phase_seconds[clip] in PetUpdated / child state (after the quality check, §10g)
   App->>App: schedule moment → clip once (new instance replays) · missing / picture → pose image

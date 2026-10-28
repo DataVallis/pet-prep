@@ -22,7 +22,8 @@ class FalAiWebhookController extends Controller
     ) {}
 
     /**
-     * Handle a fal.ai webhook (state video finished or failed).
+     * Handle a fal.ai webhook (state video / clip — or, since 2026-10-28, a queued
+     * key / pose image — finished or failed).
      *
      * 1. The ED25519 signature is verified in FalAiWebhookRequest::authorize() — fail closed.
      * 2. Match the request_id to a pet_media slot we submitted (M4-03); the pet
@@ -45,19 +46,24 @@ class FalAiWebhookController extends Controller
             return response()->json(['message' => 'Unauthorized'], 401);
         }
 
-        $result = $this->falAiService->parseWebhookResult($request->all());
+        $body = $request->all();
 
-        return DB::transaction(function () use ($requestId, $result) {
+        return DB::transaction(function () use ($requestId, $body) {
             /** @var PetMedia|null $slot */
             $slot = PetMedia::where('request_id', $requestId)->lockForUpdate()->first();
 
             if ($slot !== null) {
+                // Fix 2026-10-28: key / pose images are queued too — their result is `images[0].url`.
+                $result = $this->falAiService->parseWebhookResult($body, image: $slot->isStill());
+
                 return match ($this->media->recordVideoResult($slot, $result)) {
                     'already_processed' => response()->json(['message' => 'Already processed.'], 200),
                     'failed' => response()->json(['message' => 'Failure recorded.'], 200),
-                    default => response()->json(['message' => 'Video recorded; storing.', 'pet_id' => $slot->pet_id], 200),
+                    default => response()->json(['message' => ($slot->isStill() ? 'Image' : 'Video').' recorded; storing.', 'pet_id' => $slot->pet_id], 200),
                 };
             }
+
+            $result = $this->falAiService->parseWebhookResult($body);
 
             // AI Lab video (admin only, M4-02): same signed webhook, own table.
             $labResult = MediaLabResult::where('request_id', $requestId)->lockForUpdate()->first();

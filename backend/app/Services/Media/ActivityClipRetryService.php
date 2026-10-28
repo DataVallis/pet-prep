@@ -41,8 +41,9 @@ use Illuminate\Support\Facades\Log;
  * when the budget would be exceeded, nothing more is retried in this run (the rest waits).
  *
  * `timed_out` is NOT retried (QA #434 M3): the lost-webhook request may still finish at fal
- * (its status URLs are not stored for pet clips, so it cannot be polled) — a resubmit could
- * pay twice. It is reported instead, like `quality_failed` / `disabled`.
+ * (status URLs are not stored for pet clips; queued pose images — 2026-10-28 — are polled by
+ * media:sweep before they time out) — a resubmit could pay twice. It is reported instead, like
+ * `quality_failed` / `disabled`.
  *
  * Report = once per failure chain (`pet_media.auto_alerted_at`, conditional UPDATE — m3):
  * one Discord post per run with the count (no pet / family / child), `Log::warning` with the
@@ -267,7 +268,7 @@ class ActivityClipRetryService
             ? $this->media->resetForNewGeneration($slot, bump: $bump, autoRetryBelow: self::MAX_AUTO_RETRIES)
             // The pet row of a shared look: the look row carries the chain; keep the pet's own alert flag.
             : PetMedia::query()->whereKey($slot->id)->where('status', PetMedia::STATUS_FAILED)
-                ->update(['status' => PetMedia::STATUS_PENDING, 'request_id' => null, 'source_url' => null, 'error_reason' => null, 'error' => null, 'updated_at' => now()]) === 1;
+                ->update(['status' => PetMedia::STATUS_PENDING, 'request_id' => null, 'status_url' => null, 'response_url' => null, 'source_url' => null, 'error_reason' => null, 'error' => null, 'updated_at' => now()]) === 1;
 
         if ($reset) {
             $slot->isPose() ? GeneratePetKeyframe::dispatch($slot->id) : SubmitPetStateVideo::dispatch($slot->id);

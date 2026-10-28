@@ -17,11 +17,17 @@ use Throwable;
 
 /**
  * M5-T08 (APP_REFINEMENT_SPEC §7): generates one state KEY IMAGE (pet_media
- * kind keyframe) — a Nano Banana Pro Edit of the stage's reference image in
- * the state's pose. The slot claim makes duplicates harmless; budget / balance
- * refusals fail the slot without retry (daily media:retry). Once stored,
- * StorePetMedia → queueStateVideos() submits the state's loop (and the
- * transitions whose two poses are there).
+ * kind keyframe; M5-T09 / T10: or a POSE image) — a Nano Banana Pro Edit of the
+ * stage's reference image in the state's pose.
+ *
+ * Fix 2026-10-28 (David): the edit is SUBMITTED to fal's queue with the signed
+ * webhook (like SubmitPetStateVideo) — this job only submits (seconds), the
+ * image arrives on the webhook → StorePetMedia → queueStateVideos() submits the
+ * state's loop (and the transitions / phase clips whose poses are there). A lost
+ * webhook is polled / timed out by media:sweep. The slot claim makes duplicates
+ * harmless (a running slot with a request id is never submitted again); a retry
+ * happens only when fal never took the request (ledger void); budget / balance
+ * refusals and a sent-but-unanswered submit fail the slot without retry.
  */
 class GeneratePetKeyframe implements ShouldBeUnique, ShouldQueue
 {
@@ -47,7 +53,7 @@ class GeneratePetKeyframe implements ShouldBeUnique, ShouldQueue
     public function handle(PetMediaService $media): void
     {
         if (! $media->generateKeyframe($this->petMediaId)) {
-            throw new RuntimeException("fal.ai key image generation failed for pet_media {$this->petMediaId}");
+            throw new RuntimeException("fal.ai did not accept the key / pose image for pet_media {$this->petMediaId}");
         }
     }
 
@@ -55,7 +61,8 @@ class GeneratePetKeyframe implements ShouldBeUnique, ShouldQueue
     {
         $slot = PetMedia::find($this->petMediaId);
 
-        if ($slot !== null && $slot->status !== PetMedia::STATUS_READY && $slot->source_url === null) {
+        // A slot fal accepted (request id) waits for its webhook / the sweep — never failed here.
+        if ($slot !== null && $slot->request_id === null && $slot->isInFlight()) {
             app(PetMediaService::class)->fail($slot, AiCallFailure::HttpError, $exception?->getMessage());
         }
 
