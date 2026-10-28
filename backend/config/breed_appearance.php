@@ -628,6 +628,12 @@
 | chest and blaze — never black, grey, silver or white on the body. Red with white markings weighted highest (the
 | register portrait). RKC Breed Watch Category 1 (S578). Colour weights unsourced → `verified => false`.
 |
+| Cairn Terrier (M5-R10-75, docs/research/dog-data cairn_terrier.appearance):
+| "Agile, alert, of workmanlike, natural appearance." (Kennel Club standard as reprinted by KUSA, S584); colours
+| "Cream, wheaten, red, grey or nearly black.", brindling acceptable, dark points on ears and muzzle — never solid
+| black, white, or black and tan. Wheaten weighted highest (the register portrait). RKC Breed Watch category unknown
+| (page not reachable). Colour weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -3277,6 +3283,44 @@ return [
             'eye_color' => ['almond-shaped amber to brown eyes set well apart'],
             'tail' => ['broad, luxuriant and heavily feathered tail following the slope of the croup'],
             'muzzle' => ['clean, tapering muzzle with a strong lower jaw and a nose blending with the coat colour'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+
+    // M5-R10-75 (docs/research/dog-data/data.json cairn_terrier.appearance; runbook rules 2026-10-10: standard colours
+    // only — S584 cream, wheaten, red, grey or nearly black, brindling acceptable; never solid black, white, black and tan).
+    'cairn_terrier' => [
+        'display_name' => 'Cairn Terrier',
+        // Colour frequencies are in no source (cairn_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'The Kennel Club breed standard as reprinted by KUSA (S584, https://www.kusa.co.za/images/breed%20stds%20djaki/Cairn%20Terrier%20-%20KC%20[01-2026].pdf), PDSA (S585) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S585 "Size: Small"; S584 "Height at withers: Approximately 28cm – 31cm (approx. 11” – 12”)."',
+            'build' => 'S584 "Agile, alert, of workmanlike, natural appearance."',
+            'coat_length' => 'S584 "Very important. Weather-resistant. Must be double-coated, with profuse, harsh, but not coarse, outercoat;"',
+            'coat_color' => 'S584 "Cream, wheaten, red, grey or nearly black." (brindling acceptable; dark points on ears and muzzle; weights unsourced)',
+            'ear_carriage' => 'S584 "Small, pointed, well-carried and erect, not too closely set nor heavily coated."',
+            'eye_color' => 'S584 "Wide apart, medium in size, dark hazel. Slightly sunk with shaggy eyebrows."',
+            'tail' => 'S584 "Short, balanced, well-furnished with hair, but not feathery."',
+            'muzzle' => 'S584 "Muzzle powerful, jaw strong but not long or heavy. Nose black. Head well-furnished."',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'agile, workmanlike small terrier with strong quarters and a deep ribcage', 'weight' => 3], 'active, game and hardy little terrier, alert and fearless'],
+            'coat_length' => ['profuse, harsh, weather-resistant double coat with a natural, shaggy look and a short soft undercoat'],
+            // Standard colours only (S584, never solid black / white / black and tan); wheaten highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'wheaten with darker ears and muzzle', 'weight' => 35],
+                ['value' => 'red with darker ears and muzzle', 'weight' => 20],
+                ['value' => 'cream with darker ears and muzzle', 'weight' => 15],
+                ['value' => 'grey with darker ears and muzzle', 'weight' => 10],
+                ['value' => 'grey brindle with darker ears and muzzle', 'weight' => 15],
+                ['value' => 'nearly black (dark grey brindle)', 'weight' => 5],
+            ],
+            'ear_carriage' => ['small, pointed, erect ears, not heavily coated'],
+            'eye_color' => ['dark hazel eyes set wide apart, slightly sunk under shaggy eyebrows'],
+            'tail' => ['short, well-furnished tail carried gaily'],
+            'muzzle' => ['small head with a broad skull, a definite stop, a powerful muzzle that is not long, a black nose and a well-furnished face'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],

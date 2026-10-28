@@ -635,6 +635,13 @@ class FalAiService
                 .'a broad, luxuriant, heavily feathered tail, alert and agile expression, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-75: Kennel Club standard (S584) — wheaten as the anchor (the first colour of the game list); natural,
+            // shaggy weather-resistant double coat, darker ears and muzzle, small erect ears, short gaily carried tail.
+            BreedType::CairnTerrier => 'A small, agile, workmanlike Cairn Terrier with a profuse, harsh, weather-resistant wheaten double coat of natural, shaggy look, '
+                .'darker ears and muzzle, a small head with a broad skull and well-furnished face, shaggy eyebrows over dark hazel eyes, '
+                .'small pointed erect ears, a black nose, a short well-furnished tail carried gaily, alert and fearless expression, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1518,6 +1525,18 @@ class FalAiService
                 'eye_color' => 'amber to brown',
                 'fur_texture' => 'water-repellent double coat of medium length, soft with a dense undercoat, feathered tail',
                 'markings' => 'lighter feathering and underside of the tail, white only on the tail tip, feet, chest and blaze, never black, grey or silver',
+            ],
+            // M5-R10-75: cream, wheaten, red, grey or nearly black, brindling acceptable (KC standard S584); never solid black,
+            // white, or black and tan.
+            BreedType::CairnTerrier => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'wheaten with darker ears and muzzle',
+                    1 => 'red with darker ears and muzzle',
+                    2 => 'grey brindle with darker ears and muzzle',
+                },
+                'eye_color' => 'dark hazel',
+                'fur_texture' => 'profuse, harsh, weather-resistant double coat with a short soft undercoat, natural and shaggy',
+                'markings' => 'darker points on the ears and muzzle, shaggy eyebrows, never solid black, white, or black and tan',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

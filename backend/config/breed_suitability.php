@@ -1950,5 +1950,26 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S580'], 'refs' => ['nova_scotia_duck_tolling_retriever.behaviour.other_pets']],
             ],
         ],
+
+        // M5-R10-75: cairn_terrier.* (S583–S588), runbook rules (data.json proposed_game_parameters.cairn_terrier.suitability_tags).
+        // PDSA (S585) + Dogs Trust (S586) + PetMD (S587) + VCA (S588) — the RKC breed page was not reachable (no apartment /
+        // large_home). No welfare chip. 1 hour a day → no active_family / long_daily_exercise; grooming 1–2× a week → no
+        // frequent_grooming. No chases_small_pets: no source says "prey drive" (PDSA "strong hunting instincts", PetMD
+        // "something to chase") — open for David. Never hypoallergenic (low_shedding only).
+        'cairn_terrier' => [
+            'suits' => [
+                // S585 "once socialised, they get on very well with children and make excellent family pets."
+                ['tag' => 'family_pet', 'source_ids' => ['S585'], 'refs' => ['cairn_terrier.suitability.pdsa_family', 'cairn_terrier.behaviour.family']],
+                // S585 (same sentence); S587 "They make good playmates for children, though interactions between kids and dogs
+                // should always be supervised." — a statement with a caveat, never small_children.
+                ['tag' => 'children', 'source_ids' => ['S585', 'S587'], 'refs' => ['cairn_terrier.behaviour.family', 'cairn_terrier.behaviour.children']],
+                // S586 "Medium length with low shedding".
+                ['tag' => 'low_shedding', 'source_ids' => ['S586'], 'refs' => ['cairn_terrier.suitability.dogs_trust_shedding']],
+            ],
+            'consider' => [
+                // S587 "They also need lots of exercise and mental stimulation".
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S587'], 'refs' => ['cairn_terrier.exercise.mental_stimulation']],
+            ],
+        ],
     ],
 ];

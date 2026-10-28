@@ -463,6 +463,15 @@ return [
         ['key' => 'orange-white', 'value' => 'orange with a white blaze, white chest, white feet and a white tail tip', 'en' => 'Orange with white markings', 'sl' => 'Oranžen z belimi oznakami'],
         ['key' => 'red', 'value' => 'solid red with lighter feathering and no white', 'en' => 'Red', 'sl' => 'Rdeč'],
     ],
+    // M5-R10-75: KC standard S584 — cream, wheaten, red, grey or nearly black, brindling acceptable, dark ears and muzzle.
+    'cairn_terrier' => [
+        ['key' => 'wheaten', 'value' => 'wheaten with darker ears and muzzle', 'en' => 'Wheaten', 'sl' => 'Pšenično rumen'],
+        ['key' => 'red', 'value' => 'red with darker ears and muzzle', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'cream', 'value' => 'cream with darker ears and muzzle', 'en' => 'Cream', 'sl' => 'Kremast'],
+        ['key' => 'grey', 'value' => 'grey with darker ears and muzzle', 'en' => 'Grey', 'sl' => 'Siv'],
+        ['key' => 'brindle', 'value' => 'grey brindle with darker ears and muzzle', 'en' => 'Brindle', 'sl' => 'Tigrast'],
+        ['key' => 'nearly-black', 'value' => 'nearly black (dark grey brindle)', 'en' => 'Nearly black', 'sl' => 'Skoraj črn'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
