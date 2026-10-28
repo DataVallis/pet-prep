@@ -78,6 +78,12 @@ function lpFakeFal(): void
     fakeFalJwks();
     $n = 0;
     Http::fake([
+        // Life-stage growth edits (editReferenceImage) stay sync.
+        'fal.run/fal-ai/nano-banana-pro/edit' => function () use (&$n) {
+            $n++;
+
+            return Http::response(['images' => [['url' => "https://v3.fal.media/files/look/edit-{$n}.jpg"]]]);
+        },
         // Fix 2026-10-28: key / pose images are queued (result via completeFalKeyImages()).
         'queue.fal.run/fal-ai/nano-banana-pro/edit*' => function () use (&$n) {
             $n++;
@@ -387,7 +393,7 @@ describe('look media', function () {
         lpCompleteLookVideos();
 
         // 1 edit (from the puppy image) + idle + sleeping of the young stage.
-        Http::assertSent(fn (Request $r) => $r->url() === 'https://queue.fal.run/fal-ai/nano-banana-pro/edit'
+        Http::assertSent(fn (Request $r) => $r->url() === 'https://fal.run/fal-ai/nano-banana-pro/edit'
             && str_starts_with((string) ($r['image_urls'][0] ?? ''), 'https://api.petprep.si/api/media/'));
         expect(lpFalCalls())->toBe($calls + 3);
 

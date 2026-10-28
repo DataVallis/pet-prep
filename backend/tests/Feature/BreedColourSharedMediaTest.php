@@ -77,6 +77,12 @@ function bcFakeFal(): void
     fakeFalJwks();
     $n = 0;
     Http::fake([
+        // Life-stage growth edits (editReferenceImage) stay sync.
+        'fal.run/fal-ai/nano-banana-pro/edit' => function () use (&$n) {
+            $n++;
+
+            return Http::response(['images' => [['url' => "https://v3.fal.media/files/bc/edit-{$n}.jpg"]]]);
+        },
         // Fix 2026-10-28: key / pose images are queued (result via completeFalKeyImages()).
         'queue.fal.run/fal-ai/nano-banana-pro/edit*' => function () use (&$n) {
             $n++;
@@ -506,7 +512,7 @@ describe('admin', function () {
 
         // The new young image is an EDIT of the kept puppy image (same animal, older).
         $last = Http::recorded(fn (Request $r) => str_starts_with($r->url(), 'https://fal.run/'))->last()[0];
-        expect($last->url())->toBe('https://queue.fal.run/fal-ai/nano-banana-pro/edit');
+        expect($last->url())->toBe('https://fal.run/fal-ai/nano-banana-pro/edit');
     });
 
     it('tells "busy" from a stale row: running / submitted rows block, a pending row without a request or a dead claim does not', function () {

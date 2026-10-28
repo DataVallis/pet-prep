@@ -87,6 +87,12 @@ function smFakeFal(): void
     fakeFalJwks();
     $n = 0;
     Http::fake([
+        // Life-stage growth edits (editReferenceImage) stay sync.
+        'fal.run/fal-ai/nano-banana-pro/edit' => function () use (&$n) {
+            $n++;
+
+            return Http::response(['images' => [['url' => "https://v3.fal.media/files/sm/edit-{$n}.jpg"]]]);
+        },
         // Fix 2026-10-28: key / pose images are queued (result via completeFalKeyImages()).
         'queue.fal.run/fal-ai/nano-banana-pro/edit*' => function () use (&$n) {
             $n++;
@@ -275,7 +281,7 @@ describe('pipeline for a pet with its own media', function () {
         $calls = smCalls()->map(fn (Request $r) => [$r->url(), $r['prompt'] ?? null])->all();
         expect($calls[0][0])->toBe('https://fal.run/fal-ai/nano-banana-pro')                          // reference
             ->and($calls[1][0])->toStartWith('https://queue.fal.run/fal-ai/kling-video/v3/pro')        // idle loop
-            ->and($calls[2][0])->toBe('https://queue.fal.run/fal-ai/nano-banana-pro/edit')                    // sleeping key
+            ->and($calls[2][0])->toStartWith('https://queue.fal.run/fal-ai/nano-banana-pro/edit?')                  // sleeping key
             ->and($calls[2][1])->toContain('lying curled up asleep');
 
         // Key image edits in preparation order: sleeping, hungry, playing, then the rest.
