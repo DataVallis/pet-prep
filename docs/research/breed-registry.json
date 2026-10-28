@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "f8e37f12852b45963124e0c90b0ce619621ffb912c777285b6cf8784b9c5e875"
+      "sha256": "fe857bb83fe37c9957b83c462c78063c4141449424a2713dacf2689e61b75644"
     }
   },
   "suitability_vocabulary": {
@@ -41838,7 +41838,12 @@
           "S585"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "cairn-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
