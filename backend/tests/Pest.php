@@ -5,6 +5,7 @@ use App\Enums\Species;
 use App\Models\AppSetting;
 use App\Models\FamilyMember;
 use App\Models\Pet;
+use App\Models\PetMedia;
 use App\Models\QuietHours;
 use App\Models\User;
 use App\Services\AppSettingsService;
@@ -336,7 +337,7 @@ function completeFalKeyImages(string $urlPrefix = 'https://v3.fal.media/files/sm
     $done = 0;
 
     for ($round = 0; $round < 8; $round++) {
-        $rows = App\Models\PetMedia::query()->whereIn('kind', ['keyframe', 'pose'])
+        $rows = PetMedia::query()->whereIn('kind', ['keyframe', 'pose'])
             ->where('status', 'running')->whereNotNull('request_id')->whereNull('source_url')
             ->orderBy('updated_at')->orderBy('id')->get();
 

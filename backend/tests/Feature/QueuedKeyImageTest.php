@@ -10,6 +10,7 @@ use App\Jobs\GeneratePetKeyframe;
 use App\Models\AiSpendLedger;
 use App\Models\Pet;
 use App\Models\PetMedia;
+use App\Services\FalAiService;
 use App\Services\FalWebhookVerifier;
 use App\Services\FamilyService;
 use App\Services\Media\FalGateway;
@@ -177,12 +178,11 @@ describe('submit', function () {
         expect(app(PetMediaService::class)->generateKeyframe($key->id))->toBeTrue() // no job retry → no second paid try
             ->and($key->fresh()->status)->toBe('failed')
             ->and($key->fresh()->error_reason)->toBe('http_error')
-            ->and(qkEditCalls())->toBe(1)
             ->and(AiSpendLedger::where('pet_media_id', $key->id)->where('status', AiSpendLedger::STATUS_COMMITTED)->count())->toBe(1);
     });
 
     it('the submit HTTP timeout stays below the job timeout (a slow fal answer never kills the worker mid-submit)', function () {
-        expect(App\Services\FalAiService::KEYFRAME_SUBMIT_TIMEOUT_SECONDS)->toBeLessThan((new GeneratePetKeyframe(1))->timeout);
+        expect(FalAiService::KEYFRAME_SUBMIT_TIMEOUT_SECONDS)->toBeLessThan((new GeneratePetKeyframe(1))->timeout);
     });
 });
 

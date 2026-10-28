@@ -178,6 +178,8 @@ function smBirth(Pet $pet): Pet
     $pet->giveBirth(now());
     $pet->save();
     app(PetMediaService::class)->queueStateVideos($pet->fresh());
+    // 2026-10-28: key images are queued at fal — deliver their webhooks (the loops follow).
+    completeFalKeyImages();
 
     return $pet->fresh();
 }
@@ -296,7 +298,7 @@ describe('pipeline for a pet with its own media', function () {
 
         // Fix 2026-10-23: every loop starts on its key image WITHOUT an end frame (the same
         // image as end frame froze the clip on Kling) and asks for clearly visible motion.
-        $loopSubmits = smCalls('https://queue.fal.run/')->filter(fn (Request $r) => ! str_contains((string) $r['prompt'], 'start image'))->values();
+        $loopSubmits = smCalls('https://queue.fal.run/fal-ai/kling-video/')->filter(fn (Request $r) => ! str_contains((string) $r['prompt'], 'start image'))->values();
         expect($loopSubmits)->toHaveCount(6);
         foreach ($loopSubmits as $r) {
             expect($r->data())->not->toHaveKey('end_image_url')
@@ -307,10 +309,10 @@ describe('pipeline for a pet with its own media', function () {
         expect(PetMedia::where('pet_id', $pet->id)->where('kind', 'video')->whereNotNull('request_id')->pluck('recipe')->unique()->all())->toBe(['start_only']);
 
         // Transitions are submitted only after every first-minutes clip, from two different poses.
-        $transitions = smCalls('https://queue.fal.run/')->filter(fn (Request $r) => str_contains((string) $r['prompt'], 'start image'))->values();
+        $transitions = smCalls('https://queue.fal.run/fal-ai/kling-video/')->filter(fn (Request $r) => str_contains((string) $r['prompt'], 'start image'))->values();
         expect($transitions)->toHaveCount(2)
             ->and($transitions[0]['start_image_url'])->not->toBe($transitions[0]['end_image_url']);
-        $allQueue = smCalls('https://queue.fal.run/')->values();
+        $allQueue = smCalls('https://queue.fal.run/fal-ai/kling-video/')->values();
         $firstTransition = $allQueue->search(fn (Request $r) => str_contains((string) $r['prompt'], 'start image'));
         $essentialLoops = $allQueue->take($firstTransition)->filter(fn (Request $r) => ! str_contains((string) $r['prompt'], 'start image'))->count();
         expect($essentialLoops)->toBeGreaterThanOrEqual(3); // idle, sleeping, hungry before any transition
@@ -359,6 +361,7 @@ describe('pipeline for a pet with its own media', function () {
 
         config(['media.budget.daily_usd' => 100.0]);
         app(ReferenceImageRetryService::class)->retryDueWithVideos();
+        smCompleteClips(); // 2026-10-28: the key image comes on the fal webhook
         expect(smSlot($pet, 'keyframe', 'sleeping')->status)->toBe('ready');
     });
 
@@ -707,7 +710,7 @@ describe('M5-T08b old pets only', function () {
         smSlot($old, 'video', 'idle')->update(['status' => 'pending', 'request_id' => null]);
         $media->submitVideo(smSlot($old, 'video', 'idle')->id);
 
-        $submit = smCalls('https://queue.fal.run/')->last();
+        $submit = smCalls('https://queue.fal.run/fal-ai/kling-video/')->last();
         expect($idleRow->fresh()->recipe)->toBeNull()
             ->and($idleRow->fresh()->request_id)->not->toBeNull()
             ->and($submit['end_image_url'] ?? null)->toBeNull();
@@ -719,7 +722,7 @@ describe('M5-T08b old pets only', function () {
         $media->regenerateLook($look->fresh());
         smCompleteClips();
 
-        $transitionSubmits = smCalls('https://queue.fal.run/')->filter(fn (Request $r) => str_contains((string) $r['prompt'], 'start image'))->count();
+        $transitionSubmits = smCalls('https://queue.fal.run/fal-ai/kling-video/')->filter(fn (Request $r) => str_contains((string) $r['prompt'], 'start image'))->count();
         expect(smCalls('https://queue.fal.run/fal-ai/nano-banana-pro/edit')->count())->toBe($edits)
             ->and($transitionSubmits)->toBe(0)
             ->and(PetMedia::whereNotNull('pet_look_id')->where('kind', 'video')->whereNotNull('recipe')->count())->toBe(0)
@@ -766,7 +769,7 @@ describe('M5-T08b concurrent first buyers', function () {
 
         expect($reentered)->toBe(['edit' => true, 'queue' => true])
             ->and(smCalls('https://queue.fal.run/fal-ai/nano-banana-pro/edit')->count())->toBe(5)
-            ->and(smCalls('https://queue.fal.run/')->count())->toBe(13) // 5 queued key images (2026-10-28) + 8 clips
+            ->and(smCalls('https://queue.fal.run/fal-ai/kling-video/')->count())->toBe(8)
             ->and(round((float) AiSpendLedger::query()->counted()->sum('cost_usd'), 2))->toBe(5.38)
             ->and($media->payloadFor($a->fresh())['status'])->toBe('ready')
             ->and($media->payloadFor($b->fresh())['status'])->toBe('ready');
@@ -875,6 +878,7 @@ describe('M5-T08b QA — turning the switch back on resumes', function () {
         $this->travel(PetMediaService::STALE_CLAIM_MINUTES + 1)->minutes();
         expect(app(PetMediaService::class)->sweepStale()['resumed'])->toBe(1);
         smDrainJobs($ran);
+        completeFalKeyImages(); // 2026-10-28: key images come on the fal webhook
 
         $edits = smCalls('https://queue.fal.run/fal-ai/nano-banana-pro/edit')->map(fn (Request $r) => (string) $r['prompt']);
         expect($edits)->toHaveCount(5)

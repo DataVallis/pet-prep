@@ -305,7 +305,7 @@ describe('pipeline for a dog with its own media', function () {
         $pet = phcBirth(phcPet());
         phcCompleteClips();
 
-        $queue = phcCalls('https://queue.fal.run/')->values();
+        $queue = phcCalls('https://queue.fal.run/fal-ai/kling-video/')->values();
         $prompts = $queue->map(fn (Request $r) => (string) $r['prompt']);
         $kind = fn (string $p): string => match (true) {
             str_contains($p, 'No toys, no ball, no feather') => 'phase',
@@ -314,10 +314,13 @@ describe('pipeline for a dog with its own media', function () {
         };
         $kinds = $prompts->map($kind)->values()->all();
 
-        // Every loop and transition is queued before the first phase clip; the ball before the school.
+        // The first-minutes loops (idle, sleeping, hungry) and the transitions are queued before the
+        // first phase clip; the ball before the school. Since 2026-10-28 key images arrive on the fal
+        // webhook, so a later state's loop (its key image still at fal) may follow a phase clip.
         $firstPhase = array_search('phase', $kinds, true);
         expect($firstPhase)->not->toBeFalse()
-            ->and(array_slice($kinds, $firstPhase))->each->toBe('phase')
+            ->and(array_slice($kinds, 0, 3))->each->toBe('loop')
+            ->and(array_search('transition', $kinds, true))->toBeLessThan($firstPhase)
             ->and(array_count_values($kinds))->toBe(['loop' => 6, 'transition' => 2, 'phase' => 15]);
 
         $phaseRows = PetMedia::where('pet_id', $pet->id)->where('kind', 'phase')->orderBy('id')->get();
