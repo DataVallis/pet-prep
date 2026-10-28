@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `nova_scotia_duck_tolling_retriever` (viri S576–S580; ponovno S8, S10, S11, S14, S24, S35, S45, S92, S123, S174); seznam za vzreditelja: 2 testa »minimum« + 6 »best practice« (RKC S578) |
 | Izvor | FCI št. 312 »Nova Scotia Duck Tolling Retriever«, skupina 8, sekcija 1 (prinašalci), Kanada (S576) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 69. mesto »Nova Scotia Duck Tolling Retriever« (S174, prebrano 2026-10-28) |
-| PR-ji | pet-prep #424 (pasma) · portret: (sledi) · spletna stran: (sledi) |
+| PR-ji | pet-prep #424 (pasma, združen `8b9978a`) · portret: #425 (zagon 40613987336) · spletna stran: pet-prep-website `feat/register-nova-scotia-duck-tolling-retriever` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -40,7 +40,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 119. meseca; 4 → 3 → 2 obroka) | 🛠 | 💶 izziv | M5-R10-73 | 2026-10-28 |
 | Česanje 2× na teden (rutina »Počeši«), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-10-28 |
 | Barva (izbirnik: 3 standardne barve, privzeto rdeč z belimi oznakami) | 🛠 | 💶 izziv | M5-R21 | 2026-10-28 |
-| AI portret v registru | 🗓 po združitvi (runbook §8) | — | M5-R11-04 | — |
+| AI portret v registru (rdeč z belo liso, prsmi, tačkami in konico repa, sprejet v prvem poskusu, zagon 40613987336, PR #425) | ✅ | — | M5-R11-04 | 2026-10-28 |
 | Stran na petprep.si (`/animals/dogs/nova-scotia-duck-tolling-retriever`, `/sl/zivali/psi/novoskotski-prinasalec`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -56,4 +56,4 @@
 - **Ušesa po vodi:** PetMD svetuje čiščenje ušes po plavanju ali kopanju — pogojno, zato brez naloge.
 - **Besedila standarda RKC:** orodje je stran RKC vrnilo le kot ključna dejstva in imena testov (strani standarda na royalkennelclub.com ni odprlo); ključna dejstva so bila trikrat enaka. Pri enem od treh branj je bil test CEA/CH pod »minimum«, pri dveh pod »best practice« — uporabljeno »best practice«.
 - **Ime:** »Novoškotski prinašalec« ni preverjeno pri KZS.
-- **Barva portreta:** rdeč z belimi oznakami je predlog Claude (standard dovoli odtenke rdeče in oranžne).
+- **Barva portreta:** rdeč z belimi oznakami je predlog Claude (standard dovoli odtenke rdeče in oranžne). Portret: zagon 40613987336 (koda `8b9978a`, brez produkcijske namestitve), sprejet v prvem poskusu — realistična fotografija odraslega psa, rdeča dlaka z belo liso, prsmi, tačkami in konico repa, siva studijska podlaga; PR #425.
