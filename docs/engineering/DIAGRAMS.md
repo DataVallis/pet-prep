@@ -1660,8 +1660,8 @@ flowchart TD
   subgraph Ready [GameMediaReadiness v3]
     RP[play = ball phases + playing + idle]
     RW[wand = wand phases]
-    RF[a FAILED phase clip / pose → the M5-T04 list]
-    RS[school = informational → preparation.school_pending]
+    RF[a FAILED phase clip / pose → activity stays LOCKED<br/>2026-10-28: hourly retry ≤ 3 claims, then Discord + admin panel]
+    RS[school = all school phases — start condition<br/>422 media_not_ready, training.media_ready]
   end
 ```
 
@@ -1672,8 +1672,9 @@ sequenceDiagram
   participant K as GeneratePetKeyframe (key + pose images)
   participant V as SubmitPetStateVideo
   participant App as phasePlayer.ts (app)
-  Note over S: after loops + transitions (§13): games, then school (QA m1) — not part of the preparation (m6)
-  S->>K: missing poses of the next clip (claim, 0.15 $; switch read fresh before fal)
+  Note over S: home first (David 2026-10-28): home key images → pose images right behind them → loops / transitions → games, then school — not part of the preparation (m6)
+  S->>K: missing poses of every clip, dispatched in the same call behind the home key images (claim, 0.15 $; switch read fresh before fal)
+  Note over S,V: phase clip only once no home key image is in flight (every home loop submitted)
   K-->>S: stored → queueStateVideos again
   S->>V: phase clip (start / end = its poses, duration "3"; school performing "5")
   V-->>App: phases[clip] + phase_seconds[clip] in PetUpdated / child state (after the quality check, §10g)
