@@ -279,6 +279,7 @@
     "sleeping": "💤 Your pup is asleep",
     "sleepingUntil": "💤 Your pup is asleep until {{clock}}",
     "contract": "Sign the contract first",
-    "preparing": "The game is still getting ready"
+    "preparing": "The game is still getting ready",
+    "schoolPreparing": "School is still getting ready — this can take a few minutes"
   }
 }

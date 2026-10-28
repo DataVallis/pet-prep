@@ -18,8 +18,9 @@
  * | walk          | not locked                       | lock (steps count any time, also while the pet sleeps)           |
  * | play / cuddle | `play.can_play`                  | lock · SLEEPING (until wake, `play_pet_sleeping`) · mess ·       |
  * |               | + `play.media_ready`             | PREPARING (`media_not_ready`, »Igra se še pripravlja«) · other   |
- * | training      | `training.can_start`             | lock · SLEEPING (until wake) · session running · budget / share  |
- * |               | + `blocked_reason`               | used · day ending                                                |
+ * | training      | `training.can_start`             | lock · SLEEPING (until wake) · session running · PREPARING       |
+ * |               | + `blocked_reason`               | (`media_not_ready` / `media_ready` false, »Šola se še            |
+ * |               | + `media_ready`                  | pripravlja«, David 2026-10-28) · budget / share used · day ending|
  * | grooming      | `grooming.can_start`             | lock · SLEEPING (`grooming_quiet_hours`, until wake; dog + cat)  |
  * |               |                                  | · done today / week · another game                               |
  * | wand (cat)    | `wand.can_start`                 | lock · SLEEPING (`wand_quiet_hours`) · 2 h gap · another game    |
@@ -151,8 +152,11 @@ function sleeping(view: ChildPetView, until: string | null = view.sleep.until): 
 
 const server = (until: string | null = null): ActionRule => ({ enabled: false, reason: 'server', until });
 
-/** »Igra se še pripravlja« — no time: the server's PetUpdated turns the game on. */
-const preparing = (): ActionRule => ({ enabled: false, reason: 'preparing', until: null, text: RULE_STRINGS.preparing });
+/**
+ * »Igra se še pripravlja« (the school: »Šola se še pripravlja …«, David 2026-10-28) — no time:
+ * the server's PetUpdated turns it on.
+ */
+const preparing = (text: string = RULE_STRINGS.preparing): ActionRule => ({ enabled: false, reason: 'preparing', until: null, text });
 
 /** Server reasons that mean "the pet sleeps" (quiet hours) for the cat games and socialisation. */
 const SLEEP_REASONS: ReadonlySet<string> = new Set([
@@ -210,6 +214,10 @@ export function actionRule(view: ChildPetView, action: HudAction): ActionRule {
       if (tr.can_start) return ON;
       // An older server sends no `blocked_reason`: the pet's sleep explains it.
       if (tr.blocked_reason === null && tr.session === null && view.sleep.asleep) return sleeping(view);
+      // David 2026-10-28 (home first): the school stays locked until all its clips are there.
+      if (tr.blocked_reason === MEDIA_NOT_READY || (!tr.media_ready && tr.session === null && !SLEEP_REASONS.has(tr.blocked_reason ?? ''))) {
+        return preparing(RULE_STRINGS.schoolPreparing);
+      }
       return fromServer(view, tr.blocked_reason, tr.next_allowed_at);
     }
     case 'grooming': {

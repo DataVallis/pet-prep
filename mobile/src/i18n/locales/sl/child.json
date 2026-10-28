@@ -279,6 +279,7 @@
     "sleeping": "💤 Kuža spi",
     "sleepingUntil": "💤 Kuža spi do {{clock}}",
     "contract": "Najprej podpiši pogodbo",
-    "preparing": "Igra se še pripravlja"
+    "preparing": "Igra se še pripravlja",
+    "schoolPreparing": "Šola se še pripravlja — to lahko traja nekaj minut"
   }
 }
