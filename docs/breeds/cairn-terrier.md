@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `cairn_terrier` (viri S583–S588; ponovno S8, S10, S11, S14, S24, S35, S45, S92, S123, S174); seznam za vzreditelja: 6 testov ameriškega pasemskega kluba (AKC K33) |
 | Izvor | FCI št. 4 »Cairn Terrier«, skupina 3, sekcija 2 (mali terierji), Velika Britanija (S583) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 71. mesto »Cairn Terrier« (S174, prebrano 2026-10-28); 69. (boykin španjel) in 70. (biewer terier) sta blokirana |
-| PR-ji | pet-prep #427 (pasma) · portret: sledi · spletna stran: sledi |
+| PR-ji | pet-prep #427 (pasma, združen `53b897b`) · portret: #428 (zagon 40647367119) · spletna stran: pet-prep-website `feat/register-cairn-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -40,7 +40,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 126. meseca; 4 → 3 → 2 obroka) | 🛠 | 💶 izziv | M5-R10-75 | 2026-10-28 |
 | Česanje 2× na teden (rutina »Počeši«), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-10-28 |
 | Barva (izbirnik: 6 standardnih barv, privzeto pšenično rumen) | 🛠 | 💶 izziv | M5-R21 | 2026-10-28 |
-| AI portret v registru | 🗓 sledi takoj po združitvi | — | M5-R11-04 | — |
+| AI portret v registru (pšenično rumen s temnejšimi ušesi in gobcem, sprejet v prvem poskusu, zagon 40647367119, PR #428) | ✅ | — | M5-R11-04 | 2026-10-28 |
 | Stran na petprep.si (`/animals/dogs/cairn-terrier`, `/sl/zivali/psi/cairn-terier`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -55,4 +55,4 @@
 - **Ročno trimanje:** PDSA in VCA: dvakrat na leto (odstranjevanje odmrle dlake); PetMD: »occasional hand-stripping appointments«. Daljše od vseh obdobij opomnikov → brez opomnika za frizerja.
 - **Stran RKC:** ni bila dosegljiva (preusmeritev na royalkennelclub.com zavrnjena) — ni ključnih dejstev RKC (velikost doma, dlaka), ni kategorije Breed Watch in ni testov RKC; gibanje iz PDSA.
 - **Ime:** »Cairn terier« ni preverjeno pri KZS.
-- **Barva portreta:** pšenično rumen je predlog Claude (standard dovoli kremasto, pšenično, rdečo, sivo ali skoraj črno, tudi tigrasto).
+- **Barva portreta:** pšenično rumen je predlog Claude (standard dovoli kremasto, pšenično, rdečo, sivo ali skoraj črno, tudi tigrasto). Portret: zagon 40647367119 (koda `53b897b`, brez produkcijske namestitve, 0,15 $), sprejet v prvem poskusu — realistična fotografija odraslega psa, pšenično rumena kosmata dlaka s temnejšimi ušesi in gobcem, pokončna ušesa, svetlo siva studijska podlaga (rep zaradi kota ni viden); PR #428.
