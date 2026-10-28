@@ -2753,6 +2753,72 @@
         }
       ],
       "notes": "RKC breed page (dog-data S572, 2026-10-27): Good Practice (the 'at a minimum' list) names only 'Prioritising genetic diversity' (not a test → not listed); Best Practice — DNA tests for PLL and prcd-PRA. No new key."
+    },
+    "nova_scotia_duck_tolling_retriever": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S578",
+        "quote": "at a minimum, conduct these tests before breeding"
+      },
+      "tests": [
+        {
+          "key": "dna_dm",
+          "level": "minimum",
+          "name": "DNA test for Degenerative myelopathy (DM)",
+          "source_id": "S578",
+          "quote": "DNA test for Degenerative myelopathy (DM)"
+        },
+        {
+          "key": "dna_prcd_pra",
+          "level": "minimum",
+          "name": "DNA test for Progressive retinal atrophy (prcd-PRA)",
+          "source_id": "S578",
+          "quote": "DNA test for Progressive retinal atrophy (prcd-PRA)"
+        },
+        {
+          "key": "dna_cea",
+          "level": "best_practice",
+          "name": "DNA test for Collie eye anomaly/ choroidal hypoplasia (CEA/CH)",
+          "source_id": "S578",
+          "quote": "DNA test for Collie eye anomaly/ choroidal hypoplasia (CEA/CH)"
+        },
+        {
+          "key": "dna_de",
+          "level": "best_practice",
+          "name": "DNA test for Degenerative encephalopathy (DE)",
+          "source_id": "S578",
+          "quote": "DNA test for Degenerative encephalopathy (DE)"
+        },
+        {
+          "key": "dna_jadd",
+          "level": "best_practice",
+          "name": "DNA test for Juvenile Addison's disease (JADD)",
+          "source_id": "S578",
+          "quote": "DNA test for Juvenile Addison's disease (JADD)"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S578",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "best_practice",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S578",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S578",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S578, 2026-10-28; test names as returned — the tool would not copy the surrounding text): Good Practice (the 'at a minimum' list) — 'Prioritising genetic diversity' (not a test → not listed), DNA tests for DM and prcd-PRA; Best Practice — DNA tests for CEA/CH, DE and JADD, BVA/KC/ISDS eye, BVA/KC elbow and hip schemes. One of three fetches listed CEA/CH under Good Practice; two placed it under Best Practice (kept). New keys dna_de, dna_jadd."
     }
   }
 }
