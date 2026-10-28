@@ -19,6 +19,7 @@
     "start": "Start practice",
     "startA11y": "Start practice: {{name}}",
     "blocked": {
+      "preparing": "We're still setting up the school. This can take a few minutes.",
       "sibling_training": "Someone else is practising with your pup right now. Try again in a minute.",
       "own_session_closing": "Your last practice is still finishing. Try again in a minute.",
       "budget_used": "Your pup has practised enough for today. More tomorrow!",

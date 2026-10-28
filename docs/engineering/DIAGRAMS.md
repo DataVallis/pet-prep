@@ -679,8 +679,9 @@ sequenceDiagram
   C->>API: POST /api/child/pet/training/start {command: sit}
   API->>T: lock pet · decay missed days · expire stale sessions
   T->>DB: one active session per pet? daily budget (7 min, David 2026-10-28) left for the pet's LONGEST session (58–70 s, by its stored clip lengths)?
-  alt running session / budget used
-    API-->>C: 422 training_session_active (next = expires_at) / training_daily_budget_used (next = midnight)
+  T->>DB: every school phase clip of the pet shown? (GameMediaReadiness::SCHOOL — David 2026-10-28; pets without school clips: yes)
+  alt running session / clips not ready / budget used
+    API-->>C: 422 training_session_active (next = expires_at) / media_not_ready (school locked, no time) / training_daily_budget_used (next = midnight)
   else ok
     T->>DB: pet_training_sessions (active, schedule 2026-10-28: 6 cues, obeys? 50→90 % by progress,<br/>perform_at = cue + 0.3–1.5 s, obey_at = perform_at + stored performing length P,<br/>release_at = window end, next cue = release_at + release length R + 0.7 s; ignored cue 4.5 s)
     API-->>C: 200 {session {id, trials[{cue_at_ms, obeys, perform_at_ms, obey_at_ms, window_end_ms, release_at_ms}], praise_window_ms 1500, duration_ms, ends_at, expires_at}, state}
@@ -1425,6 +1426,9 @@ flowchart LR
   F --> D["download 4xx / too big / wrong type"] --> DF["failed invalid_response<br/>(image: fal URL forgotten)"]
   F --> L["lost webhook / job / worker"] --> SW["hourly media:sweep:<br/>2 h → timed_out · re-queue download · reclaim after 10 min"]
   GF & TK & EF & DF & SW -.-> AD["media:backfill / Filament Generate missing / Regenerate"]
+  GF & EF -.->|"school / game pose · phase clip or the reference image of a pet with phase clips"| AR["hourly media:retry-activity-clips (:17, David 2026-10-28):<br/>≥ 30 min after the failure, ≤ 2 auto retries per failure chain<br/>(look row counts for a shared look), within today's budget"]
+  SW -.->|"timed_out: never resubmitted (may still finish at fal)"| AL
+  AR -->|"out of retries · quality_failed · disabled · flagged"| AL["one report per chain:<br/>Discord activity_media_stuck (counts only) + AI media panel LOCKED"] -.-> AD
   UP["M5-T16 /admin → Upgrade to new media / media:backfill --state-media:<br/>preview (no spend, per look) → confirm (frozen set, recomputed) →<br/>UpgradePetsToStateMedia chunks → generateMissing(upgrade)"] -.-> RT
 ```
 
@@ -1660,8 +1664,8 @@ flowchart TD
   subgraph Ready [GameMediaReadiness v3]
     RP[play = ball phases + playing + idle]
     RW[wand = wand phases]
-    RF[a FAILED phase clip / pose → the M5-T04 list]
-    RS[school = informational → preparation.school_pending]
+    RF[a FAILED phase clip / pose → activity stays LOCKED<br/>2026-10-28: hourly retry ≤ 3 claims, then Discord + admin panel]
+    RS[school = all school phases — start condition<br/>422 media_not_ready, training.media_ready]
   end
 ```
 
@@ -1672,8 +1676,9 @@ sequenceDiagram
   participant K as GeneratePetKeyframe (key + pose images)
   participant V as SubmitPetStateVideo
   participant App as phasePlayer.ts (app)
-  Note over S: after loops + transitions (§13): games, then school (QA m1) — not part of the preparation (m6)
-  S->>K: missing poses of the next clip (claim, 0.15 $; switch read fresh before fal; fal queue submit + webhook since 2026-10-28)
+  Note over S: home first (David 2026-10-28): home key images → pose images right behind them → loops / transitions → games, then school — not part of the preparation (m6)
+  S->>K: missing poses of every clip, dispatched in the same call behind the home key images (claim, 0.15 $; switch read fresh before fal; fal queue submit + webhook since 2026-10-28)
+  Note over S,V: phase clip only once no home key image is in flight (every home loop submitted)
   K-->>S: webhook → stored → queueStateVideos again
   S->>V: phase clip (start / end = its poses, duration "3"; school performing "5")
   V-->>App: phases[clip] + phase_seconds[clip] in PetUpdated / child state (after the quality check, §10g)

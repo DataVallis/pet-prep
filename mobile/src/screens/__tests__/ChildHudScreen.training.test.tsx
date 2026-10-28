@@ -144,6 +144,28 @@ describe('ChildHudScreen — training (M5-R03)', () => {
     expect(screen.queryByTestId('training-overlay')).toBeNull();
   });
 
+  it('home first (David 2026-10-28): while the school clips are coming "Šola" is off with a calm note; a broadcast + refetch opens it', async () => {
+    const preparing = makeEnabledTraining({ can_start: false, blocked_reason: 'media_not_ready', next_allowed_at: null, media_ready: false });
+    await renderHud(withTraining(preparing));
+    expect(isDisabled('hud-training-open')).toBe(true);
+    expect(screen.getByTestId('hud-training-open').props.accessibilityHint).toBe('Šola se še pripravlja — to lahko traja nekaj minut');
+    expect(screen.getByTestId('hud-school-preparing').props.children).toBe('Šola se še pripravlja — to lahko traja nekaj minut');
+    expect(screen.queryByTestId('hud-training-badge')).toBeNull();
+    fireEvent.press(screen.getByTestId('hud-training-open'));
+    expect(screen.queryByTestId('training-overlay')).toBeNull();
+    expect(startTraining).not.toHaveBeenCalled();
+
+    // The last school clip is stored: PetUpdated (video_ready) → refetch → open.
+    getChildPet.mockResolvedValue(makeLiveChildState({ training: makeEnabledTraining(), server_time: '2026-10-04T12:01:00+02:00' }));
+    act(() => {
+      mockSocket.handler?.(makeBroadcast({ event_type: 'video_ready', emitted_at: '2026-10-04T10:00:30.000Z' }));
+    });
+    await flush();
+    await flush();
+    expect(isDisabled('hud-training-open')).toBe(false);
+    expect(screen.queryByTestId('hud-school-preparing')).toBeNull();
+  });
+
   it('opens the command list: progress, "naučeno", today, sessions left; closes', async () => {
     await renderHud(withTraining());
     fireEvent.press(screen.getByTestId('hud-training-open'));

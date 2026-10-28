@@ -285,8 +285,9 @@ export default function TrainingOverlay({ view, onClose, clock, testID = 'traini
   const { phase, elapsedMs } = game;
   const busy = phase.kind === 'running' || phase.kind === 'finishing' || phase.kind === 'starting' || phase.kind === 'preparing';
   const premiumVideo = useMemo(() => phaseClips || selectMediaSource(view.pet.media, 'idle').kind === 'video', [view.pet.media, phaseClips]);
-  // M5-T06 (spec §13): school clips still on their way → the pose on the stage and »Šola se še
-  // pripravlja«; the practice itself works as always (M5-T09: the phase poses, never a wrong clip).
+  // M5-T06 (spec §13): school clips still on their way → »Šola se še pripravlja«. Since David
+  // 2026-10-28 the school is locked until they are all there (`block === 'preparing'`, the
+  // server refuses the start) — the commands stay off, the block explains it once.
   const schoolPreparing = schoolClipsPending(view.pet.preparation, phaseClips) && view.pet.media.referenceImageUrl !== null;
   const serverNow = (clock?.wall() ?? Date.now()) + view.clockSkewMs;
   const dayEnding = isDayEnding(training, serverNow, familyCalendar(view.timezone, view.server_time).nextMidnight(serverNow));
@@ -326,7 +327,7 @@ export default function TrainingOverlay({ view, onClose, clock, testID = 'traini
               {S.blocked[block]}
             </Text>
           )}
-          {schoolPreparing && (
+          {schoolPreparing && block !== 'preparing' && (
             <Text style={styles.muted} testID="training-preparing">
               {schoolPreparingText()}
             </Text>

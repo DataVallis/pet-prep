@@ -21,6 +21,7 @@
     "start": "Začni vajo",
     "startA11y": "Začni vajo: {{name}}",
     "blocked": {
+      "preparing": "Šolo še nastavljamo. To lahko traja nekaj minut.",
       "sibling_training": "Nekdo drug zdaj vadi s kužkom. Poskusi čez minutko.",
       "own_session_closing": "Prejšnja vaja se še zaključuje. Poskusi čez minutko.",
       "budget_used": "Kuža je danes že dovolj vadil. Jutri spet!",

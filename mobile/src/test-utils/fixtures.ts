@@ -286,6 +286,8 @@ export function makeTrainingState(overrides: Partial<ChildPetState['training']> 
     // M5-T02 (additive): why a start is refused and until when.
     blocked_reason: null,
     next_allowed_at: null,
+    // David 2026-10-28 (additive): every school clip is there (school locked while false).
+    media_ready: true,
     ...overrides,
   };
 }

@@ -76,6 +76,12 @@ export interface ChildTraining {
   blocked_reason: string | null;
   /** M5-T02: when `blocked_reason` ends (wake time, session expiry, midnight); null without a time. */
   next_allowed_at: string | null;
+  /**
+   * David 2026-10-28 (home first, school locked): every school clip of the pet is there.
+   * False → the school stays locked with the calm »preparing« state (the server refuses the
+   * start with `media_not_ready`). An older server sends none → true (its old rules).
+   */
+  media_ready: boolean;
 }
 
 /** `training` of the parent dashboard / `pet.updated`. */
@@ -100,6 +106,7 @@ export const EMPTY_TRAINING: ChildTraining = {
   can_start: false,
   blocked_reason: null,
   next_allowed_at: null,
+  media_ready: true,
 };
 
 export const EMPTY_TRAINING_SUMMARY: PetTrainingSummary = {
@@ -286,6 +293,7 @@ export function readChildTraining(raw: unknown): ChildTraining {
     can_start: raw.can_start === true,
     blocked_reason: raw.can_start === true || typeof raw.blocked_reason !== 'string' ? null : raw.blocked_reason,
     next_allowed_at: raw.can_start === true ? null : iso(raw.next_allowed_at),
+    media_ready: raw.media_ready !== false,
   };
 }
 
@@ -501,11 +509,12 @@ export function isTimeShared(training: ChildTraining): boolean {
  * couldn't act on it). A sibling's running session doesn't hide it (that's only a minute).
  */
 export function showTrainingDot(training: ChildTraining): boolean {
-  return !training.today_done && sessionsLeftToday(training) > 0;
+  return training.media_ready && !training.today_done && sessionsLeftToday(training) > 0;
 }
 
 export type StartBlock =
   | 'sleeping'
+  | 'preparing'
   | 'sibling_training'
   | 'own_session_closing'
   | 'budget_used'
@@ -530,6 +539,8 @@ export function startBlock(training: ChildTraining, dayEnding = false): StartBlo
   // M5-T02: the server says the pet sleeps (no school until it wakes).
   if (training.blocked_reason === 'training_pet_sleeping') return 'sleeping';
   if (training.session !== null) return training.session.mine ? 'own_session_closing' : 'sibling_training';
+  // David 2026-10-28: the school's clips are not all there yet — locked, calm »preparing«.
+  if (training.blocked_reason === 'media_not_ready' || !training.media_ready) return 'preparing';
   // Same order as the server: the dog's whole budget first, then my share of it.
   if (training.enabled && petSessionsLeftToday(training) === 0) return 'budget_used';
   if (training.enabled && sessionsLeftToday(training) === 0) return 'share_used';
@@ -606,6 +617,8 @@ export function trainingRefusalMessage(reason: string | null, nextAllowedAt: str
     const clock = familyClock(nextAllowedAt, timezone);
     return clock ? TRAINING_STRINGS.errors.training_pet_sleeping_until(clock) : TRAINING_STRINGS.errors.training_pet_sleeping;
   }
+  // David 2026-10-28: the school's clips are not all there yet — the calm »preparing« text.
+  if (reason === 'media_not_ready') return TRAINING_STRINGS.blocked.preparing;
   return isTrainingRefusal(reason) ? TRAINING_STRINGS.errors[reason] : TRAINING_STRINGS.errors.badResponse;
 }
 

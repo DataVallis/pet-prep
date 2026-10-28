@@ -545,6 +545,13 @@ return [
         'history_empty' => 'Nadgradnja še ni bila zagnana.',
         'run' => ':pets ljubljenčkov, ocena $:cost',
     ],
+    // David 2026-10-28: school / game clips that failed for good (ActivityClipRetryService).
+    'activity_media' => [
+        'discord' => [
+            'title' => ':count posnetkov šole / igre potrebuje skrbnika',
+            'body' => 'Posnetek šole / igre (ali referenčna slika, ki jo potrebuje) ni uspel niti po samodejnih ponovitvah, je potekel ali čaka pregled. Ta dejavnost ostane za ljubljenčka zaklenjena, dokler ni narejen: Ljubljenčki → AI mediji → »Generate missing« (skupni videzi — privzeto — in lastni mediji), Regenerate (samo lastni mediji) ali »Approve anyway« (Needs review). Seznam: php artisan media:retry-activity-clips --dry-run',
+        ],
+    ],
     'app_errors' => [
         'heading' => 'Napake v aplikaciji',
         'description' => 'Sesutja in napake prikaza, ki jih pošlje mobilna aplikacija (M5-05). Združeno po napaki; ne hranimo uporabnika, družine ali ljubljenčka — samo vlogo (starš / otrok / odjavljen). Hranimo 30 dni.',

@@ -731,6 +731,10 @@ export default function ChildHudScreen() {
   // with one note »💤 Kuža spi do 7:00« (other blocks: the school overlay explains them).
   // M5-T02b (David 2026-10-21): the same for cuddling ("Crkljanje") and brushing ("Počeši").
   const trainingSleeps = hasTraining && rules.training.reason === 'sleeping';
+  // David 2026-10-28 (home first): the school stays locked until its clips are there — the chip
+  // is off with a calm »Šola se še pripravlja …« card (never a word about pictures or videos).
+  const trainingPreparing = hasTraining && rules.training.reason === 'preparing';
+  const schoolPreparingNote = trainingPreparing ? rules.training.text : undefined;
   const playSleeps = rules.play.reason === 'sleeping';
   const groomingSleeps = rules.grooming.reason === 'sleeping';
   const sleepNote = trainingSleeps
@@ -815,6 +819,9 @@ export default function ChildHudScreen() {
     ...(sleepNote !== undefined
       ? [{ key: 'sleep', priority: STACK_PRIORITY.hint, short: sleepNote, icon: Moon, node: <PlayBlockedNote text={sleepNote} testID="hud-sleep-note" /> }]
       : []),
+    ...(schoolPreparingNote !== undefined
+      ? [{ key: 'school-preparing', priority: STACK_PRIORITY.hint, short: schoolPreparingNote, icon: Hourglass, node: <PlayBlockedNote text={schoolPreparingNote} testID="hud-school-preparing" /> }]
+      : []),
     ...(playBlockedText !== null
       ? [{ key: 'play-blocked', priority: STACK_PRIORITY.hint, short: playBlockedText, icon: HandHeart, node: <PlayBlockedNote text={playBlockedText} /> }]
       : []),
@@ -842,9 +849,9 @@ export default function ChildHudScreen() {
         <TrainingChip
           compact={compact}
           todayDone={view.training.today_done}
-          pending={!trainingSleeps && showTrainingDot(view.training)}
-          disabled={trainingSleeps}
-          disabledReason={trainingSleeps ? rules.training.text : undefined}
+          pending={!trainingSleeps && !trainingPreparing && showTrainingDot(view.training)}
+          disabled={trainingSleeps || trainingPreparing}
+          disabledReason={trainingSleeps || trainingPreparing ? rules.training.text : undefined}
           onPress={() => setTrainingVisible(true)} />
       )}
       {chips.map((chip) => (
