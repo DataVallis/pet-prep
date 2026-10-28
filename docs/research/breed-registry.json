@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "ff76f0dfd16b64b8085f0b357c6fb6bb927191376b3aef96f7853e75d7e879a5"
+      "sha256": "17ac9116da2e17311737dfc540290149a0bcdf80765ecf9f88105b05a80e22a7"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -38978,7 +38978,7 @@
       "id": "russell_terrier",
       "species": "dog",
       "order": 64,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Jack Russell Terrier",
         "sl": "Jack Russell terier"
@@ -39582,7 +39582,7 @@
       "id": "bullmastiff",
       "species": "dog",
       "order": 65,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Bullmastiff",
         "sl": "Bulmastif"
@@ -40200,7 +40200,7 @@
       "id": "chinese_crested",
       "species": "dog",
       "order": 66,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Chinese Crested",
         "sl": "Kitajski goli pes"
@@ -40764,7 +40764,7 @@
       "id": "nova_scotia_duck_tolling_retriever",
       "species": "dog",
       "order": 67,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Nova Scotia Duck Tolling Retriever",
         "sl": "Novoškotski prinašalec"
@@ -41370,7 +41370,7 @@
       "id": "cairn_terrier",
       "species": "dog",
       "order": 68,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Cairn Terrier",
         "sl": "Cairn terier"
