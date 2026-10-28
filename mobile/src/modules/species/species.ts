@@ -89,6 +89,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   bullmastiff: 'dog',
   chinese_crested: 'dog',
   nova_scotia_duck_tolling_retriever: 'dog',
+  cairn_terrier: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -182,6 +183,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'bullmastiff',
   'chinese_crested',
   'nova_scotia_duck_tolling_retriever',
+  'cairn_terrier',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */
