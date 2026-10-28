@@ -85,10 +85,11 @@ function phcFakeFal(): void
     fakeFalJwks();
     $n = 0;
     Http::fake([
-        'fal.run/fal-ai/nano-banana-pro/edit' => function () use (&$n) {
+        // Fix 2026-10-28: key / pose images are queued (result via completeFalKeyImages()).
+        'queue.fal.run/fal-ai/nano-banana-pro/edit*' => function () use (&$n) {
             $n++;
 
-            return Http::response(['images' => [['url' => "https://v3.fal.media/files/pc/edit-{$n}.jpg"]]]);
+            return Http::response(['request_id' => "pc-edit-{$n}", 'status_url' => "https://queue.fal.run/fal-ai/nano-banana-pro/requests/pc-edit-{$n}/status", 'response_url' => "https://queue.fal.run/fal-ai/nano-banana-pro/requests/pc-edit-{$n}"]);
         },
         'fal.run/fal-ai/nano-banana-pro' => function () use (&$n) {
             $n++;
@@ -117,10 +118,12 @@ function phcCompleteClips(): int
     $done = 0;
 
     for ($round = 0; $round < 10; $round++) {
+        // Fix 2026-10-28: queued key / pose images first (a stored one queues its clips).
+        $keys = completeFalKeyImages('https://v3.fal.media/files/pc/');
         $rows = PetMedia::query()->whereIn('kind', ['video', 'transition', 'phase'])
             ->where('status', 'running')->whereNotNull('request_id')->whereNull('source_url')->get();
 
-        if ($rows->isEmpty()) {
+        if ($rows->isEmpty() && $keys === 0) {
             break;
         }
 
@@ -332,7 +335,7 @@ describe('pipeline for a dog with its own media', function () {
             ->and($sitDown['start_image_url'])->not->toBe($sitDown['end_image_url']);
 
         // Pose images: Nano Banana Pro Edit of the reference image, after the key images.
-        $edits = phcCalls('https://fal.run/fal-ai/nano-banana-pro/edit')->map(fn (Request $r) => (string) $r['prompt'])->values();
+        $edits = phcCalls('https://queue.fal.run/fal-ai/nano-banana-pro/edit')->map(fn (Request $r) => (string) $r['prompt'])->values();
         expect($edits)->toHaveCount(5 + 5)
             ->and($edits->slice(5)->values()[0])->toContain('WITHOUT the dog')
             ->and($edits->slice(5)->values()[1])->toContain('sitting upright')
@@ -442,7 +445,7 @@ describe('pipeline for a dog with its own media', function () {
         phcSwitch(true);
         expect($media->sweepStale()['reclaimed'])->toBe(2)
             ->and($media->generateKeyframe($pose->id))->toBeTrue()
-            ->and(phcCalls('https://fal.run/fal-ai/nano-banana-pro/edit')->filter(fn (Request $r) => str_contains((string) $r['prompt'], 'sitting upright'))->count())->toBe(1);
+            ->and(phcCalls('https://queue.fal.run/fal-ai/nano-banana-pro/edit')->filter(fn (Request $r) => str_contains((string) $r['prompt'], 'sitting upright'))->count())->toBe(1);
     });
 
     it('a pet from before M5-T08 gets no pose image or phase clip automatically; the admin upgrade plans them with their price', function () {

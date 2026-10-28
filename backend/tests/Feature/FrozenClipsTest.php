@@ -77,10 +77,11 @@ function fzFakeFal(): void
     fakeFalJwks();
     $n = 0;
     Http::fake([
-        'fal.run/fal-ai/nano-banana-pro/edit' => function () use (&$n) {
+        // Fix 2026-10-28: key / pose images are queued (result via completeFalKeyImages()).
+        'queue.fal.run/fal-ai/nano-banana-pro/edit*' => function () use (&$n) {
             $n++;
 
-            return Http::response(['images' => [['url' => "https://v3.fal.media/files/fz/edit-{$n}.jpg"]]]);
+            return Http::response(['request_id' => "fz-edit-{$n}", 'status_url' => "https://queue.fal.run/fal-ai/nano-banana-pro/requests/fz-edit-{$n}/status", 'response_url' => "https://queue.fal.run/fal-ai/nano-banana-pro/requests/fz-edit-{$n}"]);
         },
         'fal.run/fal-ai/nano-banana-pro' => function () use (&$n) {
             $n++;
@@ -107,10 +108,12 @@ function fzQueueCalls(): Collection
 function fzCompleteClips(): void
 {
     for ($round = 0; $round < 10; $round++) {
+        // Fix 2026-10-28: queued key / pose images first (a stored one queues its clips).
+        $keys = completeFalKeyImages('https://v3.fal.media/files/fz/');
         $rows = PetMedia::query()->whereIn('kind', ['video', 'transition', 'phase'])
             ->where('status', 'running')->whereNotNull('request_id')->whereNull('source_url')->get();
 
-        if ($rows->isEmpty()) {
+        if ($rows->isEmpty() && $keys === 0) {
             return;
         }
 

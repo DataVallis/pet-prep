@@ -325,6 +325,39 @@ function sendFalWebhook(array $body, array $headerOverrides = [], ?string $keyPa
 }
 
 /**
+ * Fix 2026-10-28: key / pose images are queued at fal — answer every submitted one
+ * (pet slots and look rows: running, request id, no result yet) with a successful
+ * signed webhook (`payload.images[0].url` = $urlPrefix.<request id>.jpg), in submit
+ * order. A stored image can queue more key / pose images, so this loops until none
+ * is waiting. Returns how many webhooks were sent.
+ */
+function completeFalKeyImages(string $urlPrefix = 'https://v3.fal.media/files/sm/'): int
+{
+    $done = 0;
+
+    for ($round = 0; $round < 8; $round++) {
+        $rows = App\Models\PetMedia::query()->whereIn('kind', ['keyframe', 'pose'])
+            ->where('status', 'running')->whereNotNull('request_id')->whereNull('source_url')
+            ->orderBy('updated_at')->orderBy('id')->get();
+
+        if ($rows->isEmpty()) {
+            break;
+        }
+
+        foreach ($rows as $row) {
+            sendFalWebhook([
+                'request_id' => $row->request_id,
+                'status' => 'OK',
+                'payload' => ['images' => [['url' => $urlPrefix.$row->request_id.'.jpg']], 'description' => ''],
+            ])->assertOk();
+            $done++;
+        }
+    }
+
+    return $done;
+}
+
+/**
  * A real PNG (GD) of $width × $height — fal image answers must decode (M5-R11 breed portraits).
  */
 function fakePngBytes(int $width = 1024, int $height = 1024): string

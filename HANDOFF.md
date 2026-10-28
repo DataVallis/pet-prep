@@ -156,6 +156,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-10-28 (cloud, backend) — key / pose images through the fal queue (`fix/fal-queue-key-images`)
+- Production: Nano Banana Pro Edit often > 60 s → sync `run()` timed out, cost kept, image thrown away, 3 paid tries per slot. Now `GeneratePetKeyframe` only submits to `queue.fal.run` (+ signed webhook, 30 s HTTP timeout); webhook `images[0].url` → `StorePetMedia` as before; `media:sweep` polls lost image webhooks after 10 min (free), `timed_out` after 2 h. New nullable `pet_media.status_url` / `response_url` (migration `2027_02_09`). Reference images, stage edits, portraits, vision check, AI Lab stay sync. Debt: a worker killed between fal accepting and the ledger commit (inside the 30 s submit) still leaves a `reserved` ledger row and a reclaim could resubmit (same as videos).
+
 ### 2026-10-28 (cloud, backend) — school budget 7 min (`feat/school-training-7-min`)
 - David: `training_minutes_per_day` 5 → 7 for every dog breed / stage (data migration `2027_02_08` lifts rows still at 5, audit actor `system: David decision 2026-10-28`; seeder + data.json give new breeds 7) — ~6 sessions a day again with ~60 s sessions.
 

@@ -1608,8 +1608,8 @@ sequenceDiagram
   participant St as StorePetMedia
   S->>VJ: idle loop (reference image is its pose)
   S->>KJ: key images in preparation order (sleeping, hungry, playing, …)
-  KJ->>Fal: edit(reference image, pose prompt) — claim, ledger 0.15 $
-  Fal-->>KJ: image URL → St (key image stored) → queueStateVideos again
+  KJ->>Fal: queue submit edit(reference image, pose prompt) + webhook — claim, ledger 0.15 $ (2026-10-28: queue, not sync)
+  Fal-->>St: signed webhook images[0].url (lost → media:sweep polls after 10 min, timed_out after 2 h) → key image stored → queueStateVideos again
   S->>VJ: that state's loop (start = key image, no end frame — fix 2026-10-23)
   Note over S: transitions only after every first-minutes clip (idle, sleeping, hungry) is on its way
   S->>VJ: transition (start = pose A, end = pose B)
@@ -1673,8 +1673,8 @@ sequenceDiagram
   participant V as SubmitPetStateVideo
   participant App as phasePlayer.ts (app)
   Note over S: after loops + transitions (§13): games, then school (QA m1) — not part of the preparation (m6)
-  S->>K: missing poses of the next clip (claim, 0.15 $; switch read fresh before fal)
-  K-->>S: stored → queueStateVideos again
+  S->>K: missing poses of the next clip (claim, 0.15 $; switch read fresh before fal; fal queue submit + webhook since 2026-10-28)
+  K-->>S: webhook → stored → queueStateVideos again
   S->>V: phase clip (start / end = its poses, duration "3"; school performing "5")
   V-->>App: phases[clip] + phase_seconds[clip] in PetUpdated / child state (after the quality check, §10g)
   App->>App: schedule moment → clip once (new instance replays) · missing / picture → pose image
