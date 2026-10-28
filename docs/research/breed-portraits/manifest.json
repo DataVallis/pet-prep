@@ -883,6 +883,19 @@
             "prompt_hash": "sha256:e35dd0d627d88a4dd31cab27916fdbfeeeff06ac97240b4e16954d362f38da85",
             "generated_at": "2026-10-27T07:11:14+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "nova_scotia_duck_tolling_retriever",
+            "species": "dog",
+            "colour": "red-white",
+            "file": "dog/nova-scotia-duck-tolling-retriever.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:99431b9feb39b240dcf03ec6477e09a9c3c9631ecf741e6ba6abe52527068b2a",
+            "generated_at": "2026-10-28T01:16:39+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
