@@ -6,6 +6,11 @@
 
 Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, zavetišča, veterinarji, šole) · 👩 starši / mame · 🧒 otroci · 🛠 tehnična publika (dev skupnost, LinkedIn)
 
+---
+
+## 2026-10-28 — Šola: 7 minut na dan
+
+**Kaj:** dnevni čas za šolo je zdaj 7 minut na psa (prej 5), za vse pasme. **Zakaj:** vaja ima zdaj 6 ukazov in traja približno minuto; s 5 minutami bi otrok naredil le 4–5 vaj, s 7 spet približno 6 (dva otroka po približno 3). **Kako povedati:** 👩 »Kuža lahko vadi do 7 minut na dan — po priporočilih (5–10 minut vaj, mladiček do 15 minut na dan).«
 
 ---
 

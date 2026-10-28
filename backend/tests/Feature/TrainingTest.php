@@ -314,7 +314,7 @@ describe('session', function () {
             ->assertJsonPath('state.training.session.mine', true)
             ->assertJsonPath('state.training.session.trials', $s['trials'])
             ->assertJsonPath('state.training.can_start', false)
-            ->assertJsonPath('state.training.daily_budget_left_seconds', 300 - trSeconds($s));
+            ->assertJsonPath('state.training.daily_budget_left_seconds', 420 - trSeconds($s));
         // No routine yet: only a completed session counts.
         expect(ActivityLog::where('pet_id', $pet->id)->count())->toBe(0);
         Event::assertDispatchedTimes(PetUpdated::class, 1);
@@ -429,7 +429,7 @@ describe('session', function () {
         trFinish($child, $s['id'], trPerfectTaps($s))->assertStatus(422)
             ->assertJsonPath('reason', 'training_session_interrupted')
             ->assertJsonPath('state.training.session', null)
-            ->assertJsonPath('state.training.daily_budget_left_seconds', 300)
+            ->assertJsonPath('state.training.daily_budget_left_seconds', 420)
             ->assertJsonPath('state.training.can_start', true);
         expect(PetTrainingSession::where('public_id', $s['id'])->value('status'))->toBe('interrupted')
             ->and(ActivityLog::where('pet_id', $pet->id)->where('activity_type', 'trained_pet')->count())->toBe(0)
@@ -481,25 +481,25 @@ describe('session', function () {
             ->and(collect($sql)->filter(fn ($q) => str_contains($q, 'sum(') || str_contains($q, 'breed_stage_params'))->all())->toBe([]);
     });
 
-    it('limits the dog to 5 minutes of mini-game per family-local day (a start reserves the longest session, each counts its real length)', function () {
+    it('limits the dog to 7 minutes of mini-game per family-local day (David 2026-10-28) (a start reserves the longest session, each counts its real length)', function () {
         [, $child, $pet] = trFamily();
         withoutQuietHours($pet); // M5-T02: about the clock / budget, not sleep (no school while the pet sleeps)
         $service = app(TrainingService::class);
         $reserve = trReserve($pet);
         $sessions = 0;
-        for ($i = 0; $i < 10 && $service->usedSecondsOn($pet, '2026-10-08') + $reserve <= 300; $i++) {
+        for ($i = 0; $i < 16 && $service->usedSecondsOn($pet, '2026-10-08') + $reserve <= 420; $i++) {
             trSession($child, sprintf('2026-10-08 08:%02d:00', $i * 2));
             $sessions++;
         }
         $used = $service->usedSecondsOn($pet, '2026-10-08');
-        // 6 cues of 33–58 s: at least 4 sessions fit, the last start left less than one reserve.
-        expect($sessions)->toBeGreaterThanOrEqual(4)->and($used + $reserve)->toBeGreaterThan(300)->and($used)->toBeLessThanOrEqual(300);
+        // 6 cues of 33–58 s: at least 6 sessions fit in 7 min, the last start left less than one reserve.
+        expect($sessions)->toBeGreaterThanOrEqual(6)->and($used + $reserve)->toBeGreaterThan(420)->and($used)->toBeLessThanOrEqual(420);
 
         trAt('2026-10-08 09:00:00');
         trStart($child)->assertStatus(422)
             ->assertJsonPath('reason', 'training_daily_budget_used')
             ->assertJsonPath('next_allowed_at', '2026-10-09T00:00:00+02:00')
-            ->assertJsonPath('state.training.daily_budget_left_seconds', 300 - $used)
+            ->assertJsonPath('state.training.daily_budget_left_seconds', 420 - $used)
             ->assertJsonPath('state.training.can_start', false);
 
         // A new family-local day: 00:00 local = 22:00 UTC.
@@ -973,7 +973,8 @@ describe('data', function () {
         foreach ([StageParamKey::TrainingMinutesPerDay, StageParamKey::TrainingProgressPerSuccess, StageParamKey::TrainingDecayPerMissedDay] as $key) {
             foreach (['mutt', 'border-collie'] as $breed) {
                 expect($row($breed, $key)->verified)->toBeTrue()
-                    ->and($row($breed, $key)->notes)->toStartWith('Decision: potrdil David 2026-10-06.');
+                    // The minutes: 7 since David 2026-10-28 (5 before).
+                    ->and($row($breed, $key)->notes)->toStartWith($key === StageParamKey::TrainingMinutesPerDay ? 'Decision: potrdil David 2026-10-28 (7 min' : 'Decision: potrdil David 2026-10-06.');
             }
         }
         foreach ([StageParamKey::PottyTrainingAccidentReduction, StageParamKey::PlaceTrainingChewingReduction] as $key) {
@@ -1010,8 +1011,8 @@ describe('payload', function () {
             ->assertJsonPath('training.today_done', false)
             ->assertJsonPath('training.session', null)
             ->assertJsonPath('training.session_seconds', 58) // at most: 2 + 6 × (1.5 + 3 + 1.5 + 2.5 + 0.7) s
-            ->assertJsonPath('training.daily_budget_seconds', 300)
-            ->assertJsonPath('training.daily_budget_left_seconds', 300)
+            ->assertJsonPath('training.daily_budget_seconds', 420)
+            ->assertJsonPath('training.daily_budget_left_seconds', 420)
             ->assertJsonPath('training.can_start', true);
 
         trSkill($pet, TrainingCommand::Come, 60.4);

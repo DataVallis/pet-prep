@@ -39174,17 +39174,17 @@
       ]
     },
     "training_minigame_minutes": {
-      "value": 5,
+      "value": 7,
       "unit": "minutes of mini-game per dog and family-local day (budget)",
       "source_id": null,
       "quote": null,
       "confidence": "low",
-      "notes": "UNSOURCED — proposal (Claude, M5-R03, waiting for David). S36/S37: 5–10 min sessions, ≤15 min/day for puppies. Used as the dog's daily training budget (one mini-game session ≈ 50 s, so ≤ 6 sessions a day); same for every stage (no source for adults).",
+      "notes": "UNSOURCED — proposal (Claude, M5-R03, waiting for David). S36/S37: 5–10 min sessions, ≤15 min/day for puppies. Used as the dog's daily training budget (since 2026-10-28 one mini-game session ≈ 60 s, so 7 min ≈ 6 sessions a day); same for every stage (no source for adults).",
       "derived_from": [
         "S36",
         "S37"
       ],
-      "decision": "potrdil David 2026-10-06: 5 minutes of mini-game per dog and day, shared equally by the children who care for the dog (M5-R03b)"
+      "decision": "potrdil David 2026-10-28: 7 minutes of mini-game per dog and day (school smooth playback: 6 cues, ~60 s per session → ~6 sessions); earlier potrdil David 2026-10-06: 5 minutes, shared equally by the children who care for the dog (M5-R03b)"
     },
     "feed_window_times": {
       "value": {

@@ -678,7 +678,7 @@ sequenceDiagram
   Note over T: only pets with training_enabled (profile + generate-pin AND pin-login features ["training"])<br/>legacy / older-app pets → 422 training_not_available · locks (423) are checked first
   C->>API: POST /api/child/pet/training/start {command: sit}
   API->>T: lock pet · decay missed days · expire stale sessions
-  T->>DB: one active session per pet? daily budget (5 min) left for the pet's LONGEST session (58–70 s, by its stored clip lengths)?
+  T->>DB: one active session per pet? daily budget (7 min, David 2026-10-28) left for the pet's LONGEST session (58–70 s, by its stored clip lengths)?
   alt running session / budget used
     API-->>C: 422 training_session_active (next = expires_at) / training_daily_budget_used (next = midnight)
   else ok

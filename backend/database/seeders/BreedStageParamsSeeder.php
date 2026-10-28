@@ -95,6 +95,15 @@ class BreedStageParamsSeeder extends Seeder
      */
     public const CONFIRMED_R03_EFFECTS = 'potrdil David 2026-10-07';
 
+    /**
+     * School smooth playback (David 2026-10-28): 7 minutes of mini-game per dog and day
+     * (was 5, potrdil David 2026-10-06) — a session is ~60 s now (6 cues) and a start
+     * reserves the pet's longest session, so 7 min give ~6 sessions again.
+     */
+    public const TRAINING_7_MIN_NOTES = 'Game value (no literature number): S36 / S37 say 5–10 min sessions and ≤ 15 min a day for puppies; 7 min = the dog\'s daily budget (≈ 6 sessions of ~60 s, 6 cues each — school smooth playback 2026-10-28), same for every stage, split equally between the children who care for the dog (M5-R03b).';
+
+    public const CONFIRMED_TRAINING_7_MIN = 'potrdil David 2026-10-28 (7 min; 5 min potrdil David 2026-10-06)';
+
     /** M5-R03b: starting progress of a puppy (also bought) — David 2026-10-06. */
     public const PUPPY_STARTING_PROGRESS = ['sit' => 0, 'come' => 0, 'place' => 0, 'potty' => 0];
 
@@ -1519,10 +1528,10 @@ class BreedStageParamsSeeder extends Seeder
             }
             // M5-R03b: David confirmed the three numbers on 2026-10-06 and the two
             // effects on 2026-10-07 (verified, decision in notes).
-            $add('all', 0, StageParamKey::TrainingMinutesPerDay, 5, [
+            $add('all', 0, StageParamKey::TrainingMinutesPerDay, 7, [
                 'unit' => 'minutes of mini-game per dog and family-local day', 'source_id' => 'S36,S37', 'confidence' => 'low', 'verified' => true,
-                'ref' => 'proposed_game_parameters.training_minigame_minutes', 'decision' => self::CONFIRMED_R03,
-                'notes' => 'Game value (no literature number): S36 / S37 say 5–10 min sessions and ≤ 15 min a day for puppies; 5 min = the dog\'s daily budget (≈ 6 sessions of 50 s), same for every stage, split equally between the children who care for the dog (M5-R03b).',
+                'ref' => 'proposed_game_parameters.training_minigame_minutes', 'decision' => self::CONFIRMED_TRAINING_7_MIN,
+                'notes' => self::TRAINING_7_MIN_NOTES,
             ]);
             $add('all', 0, StageParamKey::TrainingProgressPerSuccess, 1.0, [
                 'unit' => 'percentage points per correctly timed praise (baseline)', 'confidence' => 'low', 'verified' => true,
