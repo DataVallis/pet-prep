@@ -896,6 +896,19 @@
             "prompt_hash": "sha256:99431b9feb39b240dcf03ec6477e09a9c3c9631ecf741e6ba6abe52527068b2a",
             "generated_at": "2026-10-28T01:16:39+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "cairn_terrier",
+            "species": "dog",
+            "colour": "wheaten",
+            "file": "dog/cairn-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:2b995f145fea5577aabbb56cdaa28a3c711992a97bcde3a494f0c747d5ba0989",
+            "generated_at": "2026-10-28T07:01:38+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
