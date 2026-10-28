@@ -147,6 +147,9 @@ class GameMediaReadiness
     {
         $slots ??= $pet->relationLoaded('media') ? $pet->getRelation('media') : $pet->media()->get();
         $out = [];
+        // QA #434 M4a: without a stored reference image no pose / phase clip can be made.
+        $image = $slots->first(fn (PetMedia $m) => $m->isImage());
+        $imageFailed = $image !== null && $image->status === PetMedia::STATUS_FAILED && ! $image->isServable();
 
         foreach ([self::SCHOOL, self::PLAY, self::WAND] as $game) {
             $clips = $this->phaseClipsOf($pet, $game);
@@ -154,7 +157,8 @@ class GameMediaReadiness
                 continue;
             }
             $missing = $this->missing($pet, $game, $slots);
-            $out[$game] = ['ready' => $missing === [], 'missing' => $missing, 'failed' => $this->failedClips($pet, $clips, $slots)];
+            $failed = $this->failedClips($pet, $clips, $slots);
+            $out[$game] = ['ready' => $missing === [], 'missing' => $missing, 'failed' => $missing !== [] && $imageFailed ? ['reference', ...$failed] : $failed];
         }
 
         return $out;

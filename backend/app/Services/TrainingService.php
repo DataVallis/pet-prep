@@ -536,11 +536,12 @@ class TrainingService
      * - training_child_share_used — this child's fair share of the budget
      *   is used (M5-R03b); next_allowed = next local midnight.
      *
-     * With $child null (no viewing child) the per-child checks are skipped.
+     * With $child null (no viewing child) the per-child checks are skipped. `$mediaReady`:
+     * the caller's mediaReady() result when it already has it (child state — QA #434 m8).
      *
      * @return array{refusal: CareRefusal, next_allowed_at: CarbonInterface|null}|null
      */
-    public function startRefusal(Pet $pet, ?User $child, CarbonInterface $now, bool $logMissingData = false): ?array
+    public function startRefusal(Pet $pet, ?User $child, CarbonInterface $now, bool $logMissingData = false, ?bool $mediaReady = null): ?array
     {
         $now = CarbonImmutable::instance($now)->utc()->startOfSecond();
         $refuse = fn (CareRefusal $r, ?CarbonInterface $next = null): array => ['refusal' => $r, 'next_allowed_at' => $next];
@@ -557,7 +558,7 @@ class TrainingService
         }
         // David 2026-10-28: the school opens only once all its clips are shown (pets with
         // school phase clips; every other pet is ready) — never a school without animations.
-        if (! $this->mediaReady($pet)) {
+        if (! ($mediaReady ?? $this->mediaReady($pet))) {
             return $refuse(CareRefusal::MediaNotReady);
         }
         $sessionMs = $this->maxSessionMsFor($pet);

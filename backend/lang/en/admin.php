@@ -550,7 +550,7 @@ return [
     'activity_media' => [
         'discord' => [
             'title' => ':count school / game clip(s) need an admin',
-            'body' => 'A school or game clip failed after the automatic retries (or needs review). That activity stays locked for the pet until the clip is made: Pets → AI media (Regenerate / Approve anyway). List: php artisan media:retry-activity-clips --dry-run',
+            'body' => 'A school / game clip (or the reference image it needs) failed after the automatic retries, timed out, or needs review. That activity stays locked for the pet until it is made: Pets → AI media → »Generate missing« (shared looks — the default — and own media), Regenerate (own media only) or »Approve anyway« (Needs review). List: php artisan media:retry-activity-clips --dry-run',
         ],
     ],
     'app_errors' => [

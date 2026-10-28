@@ -150,8 +150,10 @@ class ChildPetStateResource extends JsonResource
         $hasOpenChewing = in_array('chewing', array_column($behaviour->activeEvents, 'kind'), true);
         $training = TrainingPayload::for($pet, $actor, $now);
         // M5-T02: the one start rule (sleep, running session, day ending, budget, share).
+        // David 2026-10-28: the school's clips (computed once per request — QA #434 m8).
+        $schoolMediaReady = ! $training->enabled || app(TrainingService::class)->mediaReady($pet);
         $trainingRefusal = $training->enabled && ! $pet->isUnborn()
-            ? app(TrainingService::class)->startRefusal($pet, $actor, $now)
+            ? app(TrainingService::class)->startRefusal($pet, $actor, $now, mediaReady: $schoolMediaReady)
             : null;
 
         return [
@@ -405,7 +407,7 @@ class ChildPetStateResource extends JsonResource
                  *
                  * @var bool
                  */
-                'media_ready' => ! $training->enabled || app(TrainingService::class)->mediaReady($pet),
+                'media_ready' => $schoolMediaReady,
             ]),
             // M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
             // the 30-minute happy scene. Null for a pet without play (free mutt, legacy, unpaid).

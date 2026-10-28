@@ -89,7 +89,7 @@ class MediaRelationManager extends RelationManager
         foreach (app(GameMediaReadiness::class)->activities($pet) as $game => $state) {
             $activities[] = $game.': '.match (true) {
                 $state['ready'] => 'open',
-                $state['failed'] !== [] => 'LOCKED — failed: '.implode(', ', $state['failed']).' (auto retry hourly, then Regenerate / Approve anyway)',
+                $state['failed'] !== [] => 'LOCKED — failed: '.implode(', ', $state['failed']).' (auto retry hourly; then »Generate missing« — or Regenerate for own media / Approve anyway for Needs review)',
                 default => 'preparing ('.count($state['missing']).' clip(s) to come)',
             };
         }

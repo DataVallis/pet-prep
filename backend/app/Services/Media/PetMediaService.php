@@ -1334,14 +1334,20 @@ class PetMediaService
      * conditional (`WHERE status NOT IN (pending, running)`), so a slot another
      * worker just claimed is never reset under it (PR #24 review m7).
      */
-    public function resetForNewGeneration(PetMedia $slot, bool $bump): bool
+    public function resetForNewGeneration(PetMedia $slot, bool $bump, ?int $autoRetryBelow = null): bool
     {
         $candidate = PetMedia::whereKey($slot->id)->value('candidate_path');
 
         $reset = PetMedia::query()
             ->whereKey($slot->id)
             ->whereNotIn('status', [PetMedia::STATUS_PENDING, PetMedia::STATUS_RUNNING])
+            // David 2026-10-28 (QA #434 M1 / m5): an automatic activity retry counts in the same
+            // conditional UPDATE (no race past the cap); every other reset starts a new chain.
+            ->when($autoRetryBelow !== null, fn ($q) => $q->where('auto_retries', '<', $autoRetryBelow))
             ->update([
+                ...($autoRetryBelow !== null
+                    ? ['auto_retries' => DB::raw('auto_retries + 1')]
+                    : ['auto_retries' => 0, 'auto_alerted_at' => null]),
                 'status' => PetMedia::STATUS_PENDING,
                 'generation' => DB::raw('generation + '.($bump ? 1 : 0)),
                 'request_id' => null,
@@ -1536,7 +1542,8 @@ class PetMediaService
             $slot = $this->imageSlot($pet);
 
             if ($slot->status === PetMedia::STATUS_FAILED) {
-                $slot->update(['status' => PetMedia::STATUS_PENDING, 'error_reason' => null, 'error' => null]);
+                // An admin »Generate missing« starts a new failure chain (QA #434 M1).
+                $slot->update(['status' => PetMedia::STATUS_PENDING, 'error_reason' => null, 'error' => null, 'auto_retries' => 0, 'auto_alerted_at' => null]);
             }
 
             $pet->updateQuietly(['media_status' => 'pending', 'media_error' => null]);
