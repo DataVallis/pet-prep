@@ -21,9 +21,11 @@ import {
   makePet,
   makeRunningSession,
   makeTrainingResult,
+  makeSmoothTrainingSessionPayload,
   makeTrainingSessionPayload,
   TRAINING_OBEYS,
 } from '@/test-utils/fixtures';
+import { mockVideoPlayers, resetMockVideoPlayers, sourceUri } from '@/test-utils/videoPlayers';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 import type { PetUpdatedBroadcast } from '@/types';
 
@@ -259,6 +261,67 @@ describe('ChildHudScreen — training (M5-R03)', () => {
     fireEvent.press(screen.getByTestId('training-start-sit'));
     await flush();
     expect(screen.getByTestId('training-dog-illustration')).toBeTruthy();
+  });
+
+  it('smooth schedule: »getting ready« until the stage has every clip, then switches without new players', async () => {
+    const clip = (k: string) => `https://api.petprep.si/api/media/${k}?v=${k}&expires=1&signature=s`;
+    const keys = ['attention_loop', 'performing', 'success_loop', 'release'].map((p) => `school_sit_${p}`);
+    const phased = makeLiveChildState({
+      training: makeEnabledTraining(),
+      pet: {
+        media: makeMedia({
+          status: 'ready',
+          reference_image_url: clip('ref'),
+          state_media: true,
+          poses: { sit: clip('pose-sit') },
+          phases: Object.fromEntries(keys.map((k) => [k, clip(k)])),
+          phase_seconds: { school_sit_performing: 3, school_sit_release: 2.5 },
+          phase_groups: ['school'],
+        }),
+      },
+    });
+    startTraining.mockResolvedValueOnce({ status: 'accepted', session: makeSmoothTrainingSessionPayload(), state: phased });
+    finishTraining.mockResolvedValueOnce({ status: 'accepted', result: makeTrainingResult(), state: phased });
+    await renderHud(phased);
+    resetMockVideoPlayers();
+    fireEvent.press(screen.getByTestId('hud-training-open'));
+    fireEvent.press(screen.getByTestId('training-start-sit'));
+    await flush();
+    await flush();
+    // Preparing: the stage mounts all four clips, the clock waits, no closing, praise off.
+    expect(screen.getByTestId('training-dog-text').props.children).toBe(S.starting);
+    expect(screen.queryByTestId('training-close')).toBeNull();
+    expect(isDisabled('training-praise')).toBe(true);
+    const stagePlayers = mockVideoPlayers.filter((p) => keys.map(clip).includes(sourceUri(p) ?? ''));
+    expect(stagePlayers).toHaveLength(4);
+    await flush(5_000);
+    expect(screen.queryByTestId('training-cue')).toBeNull();
+    act(() => {
+      for (const role of ['attention', 'performing', 'success', 'release']) fireEvent(screen.getByTestId(`training-dog-video-${role}`), 'firstFrameRender');
+    });
+    await flush();
+    const begunAt = Date.now();
+    expect(screen.getByTestId('training-dog-text').props.children).toBe(S.getReady);
+    const created = mockVideoPlayers.length;
+    // The cue bubble stays up until the dog obeys (2 000 → 5 500).
+    await flush(begunAt + 4_000 - Date.now());
+    expect(screen.getByTestId('training-cue')).toBeTruthy();
+    expect(screen.getByTestId('training-dog-video-performing-shown')).toBeTruthy();
+    await flush(begunAt + 5_800 - Date.now());
+    expect(screen.queryByTestId('training-cue')).toBeNull();
+    expect(screen.getByTestId('training-dog-video-success-shown')).toBeTruthy();
+    fireEvent(screen.getByTestId('training-praise'), 'pressIn');
+    expect(screen.getByTestId('training-feedback').props.children).toBe(S.feedback.in_time);
+    // Next cue (ignored, 10 200): the line is gone, the attention loop keeps running.
+    await flush(begunAt + 10_300 - Date.now());
+    expect(screen.queryByTestId('training-feedback')).toBeNull();
+    expect(screen.getByTestId('training-dog-video-attention-shown')).toBeTruthy();
+    await flush(begunAt + 43_900 - Date.now());
+    await flush();
+    expect(mockVideoPlayers.length).toBe(created);
+    expect(finishTraining).toHaveBeenCalledWith('7b0d7a8e-3c1f-4f7e-9d65-0a6a9c0b1e11', [5_800]);
+    // Result shown: the stage is gone, its players released.
+    expect(stagePlayers.every((p) => p.released)).toBe(true);
   });
 
   it('no progress: encouraging, never shaming; learned command celebrated', async () => {

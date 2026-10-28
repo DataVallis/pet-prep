@@ -9,6 +9,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-28 — Šola brez »dvojnega« psa (aplikacija)
+
+**Kaj:** v »Šoli« aplikacija ob začetku vaje vnaprej naloži vse posnetke ukaza (največ 4) in jih med vajo menja v trenutku, brez prelivanja; kuža čaka v živi zanki, izvede ukaz, drži položaj in nato vstane, preden pride naslednji ukaz. Če posnetki v 12 s niso pripravljeni, ta vaja teče s slikami.
+**Zakaj:** Davidov posnetek z iPhona (dobermanov mladiček, »Prostor«) je pokazal dvojne slike, poskakovanje med pozami in zamrznjene slike.
+**Kako povedati:** 🧒 »Kuža se zdaj res usede in spet vstane.« · 👩 gladek prikaz, brez dodatnih stroškov (vzvratni posnetki nastanejo na strežniku, 0 $). *Na telefonu še ni preverjeno.*
+
+---
+
 ## 2026-10-27 — »Želje« v aplikaciji: otrok prosi, starš odloči
 
 **Kaj:** otrok v aplikaciji odpre »Želje« in pri stvareh za ljubljenčka (postelja, skledi, dve igrači, priboljški) tapne »Prosi starša« — brez ene same cene. Starš na nadzorni plošči vidi »Želje (N)«, pri vsaki prošnji izbere »Kupi« (cena iz trgovine) ali »Ne zdaj« (otrok vidi le »Mogoče kdaj drugič«), lahko kupi tudi presenečenje ali paket »Dobrodošlica«. Priboljšek ima svoj gumb na zaslonu ljubljenčka (največ dva na dan).

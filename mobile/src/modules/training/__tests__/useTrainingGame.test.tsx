@@ -12,7 +12,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ApiError, api } from '@/api/client';
 import { childPetKey, writeChildState } from '@/hooks/queries/useChildPet';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
-import { GAME_TICK_MS, useTrainingGame } from '@/modules/training/useTrainingGame';
+import { GAME_TICK_MS, STAGE_READY_TIMEOUT_MS, useTrainingGame } from '@/modules/training/useTrainingGame';
 import { readTrainingSession, TRAINING_STRINGS, type TrainingSession } from '@/modules/training/training';
 import { useAppStore } from '@/store/appStore';
 import {
@@ -20,8 +20,10 @@ import {
   makeLiveChildState,
   makePet,
   makeTrainingResult,
+  makeSmoothTrainingSessionPayload,
   makeTrainingSessionPayload,
 } from '@/test-utils/fixtures';
+import { hasSmoothTimes } from '@/modules/training/training';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
@@ -80,6 +82,15 @@ function setup() {
   const wrapper = ({ children }: { children: ReactNode }) => <QueryClientProvider client={client}>{children}</QueryClientProvider>;
   const hook = renderHook(() => useTrainingGame({ clockSkewMs: 0, timezone: 'Europe/Ljubljana', clock }), { wrapper });
   return { client, ...hook, cached: () => client.getQueryData<ChildPetView>(childPetKey) };
+}
+
+function setupGated() {
+  const client = new QueryClient({
+    defaultOptions: { queries: { retry: false, gcTime: Infinity }, mutations: { retry: false, gcTime: Infinity } },
+  });
+  writeChildState(client, stateWith());
+  const wrapper = ({ children }: { children: ReactNode }) => <QueryClientProvider client={client}>{children}</QueryClientProvider>;
+  return renderHook(() => useTrainingGame({ clockSkewMs: 0, timezone: 'Europe/Ljubljana', clock, stageGate: hasSmoothTimes }), { wrapper });
 }
 
 async function advance(ms: number) {
@@ -484,5 +495,56 @@ describe('useTrainingGame', () => {
       expect(phase.kind === 'running' && phase.taps).toEqual([2_510, 9_010]);
     });
   });
-});
 
+  describe('school stage gate (smooth playback 2026-10-28)', () => {
+    const smoothBody = () => ({ status: 'accepted', session: makeSmoothTrainingSessionPayload(), state: stateWith(makeEnabledTraining({ can_start: false })) });
+
+    it('waits in preparing (no clock, praise ignored) until the stage is ready; the clock starts at begin', async () => {
+      startTraining.mockResolvedValueOnce(smoothBody());
+      const { result } = setupGated();
+      await act(async () => {
+        result.current.start('sit');
+        await jest.advanceTimersByTimeAsync(0);
+      });
+      expect(result.current.phase.kind).toBe('preparing');
+      await advance(3_000);
+      act(() => result.current.praise());
+      expect(result.current.phase.kind).toBe('preparing');
+      act(() => result.current.begin());
+      const begunAt = Date.now();
+      expect(result.current.phase).toMatchObject({ kind: 'running', taps: [], resumedAtMs: null });
+      expect(result.current.stagePicture).toBe(false);
+      await advanceTo(begunAt, 5_800);
+      act(() => result.current.praise());
+      const phase = result.current.phase;
+      // Relative to the begin, not to the start answer (3 s earlier).
+      expect(phase.kind === 'running' && phase.taps).toEqual([5_800]);
+    });
+
+    it('not ready in 12 s → this session runs in picture mode', async () => {
+      startTraining.mockResolvedValueOnce(smoothBody());
+      const { result } = setupGated();
+      await act(async () => {
+        result.current.start('sit');
+        await jest.advanceTimersByTimeAsync(0);
+      });
+      await advance(STAGE_READY_TIMEOUT_MS - 1);
+      expect(result.current.phase.kind).toBe('preparing');
+      await advance(1);
+      expect(result.current.phase.kind).toBe('running');
+      expect(result.current.stagePicture).toBe(true);
+      act(() => result.current.begin()); // a late ready changes nothing
+      expect(result.current.stagePicture).toBe(true);
+    });
+
+    it('an old-shape schedule is not gated (runs at once, as before)', async () => {
+      startTraining.mockResolvedValueOnce(startBody());
+      const { result } = setupGated();
+      await act(async () => {
+        result.current.start('sit');
+        await jest.advanceTimersByTimeAsync(0);
+      });
+      expect(result.current.phase.kind).toBe('running');
+    });
+  });
+});

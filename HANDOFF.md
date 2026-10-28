@@ -156,6 +156,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-10-28 (cloud, mobile) — school smooth playback app (`feat/school-smooth-app`, depends on the backend school PR)
+- Smooth schedules (`perform_at_ms` / `release_at_ms`) play on `modules/training/SchoolStage.tsx`: 4 persistent players mounted at session open, clock gated (`preparing`, 12 s → picture), instant switches; old schedules keep `schoolMomentAt` + `PetMediaView`. Debt: a resumed session (app restart) mounts the stage mid-session and its elapsed time comes from the server's `started_at` (up to 12 s readiness wait not included); the HUD's own state player stays mounted under the overlay (1 more player). Not on a phone yet.
+
 ### 2026-10-28 (cloud) — fix: daily deploy vs OTA `[skip ci]` commits (`fix/daily-deploy-skip-ci`)
 - Daily run #27 went red: main head was the OTA bot's `[skip ci]` docs commit (no push CI). `daily-deploy.sh` `ci_target()` skips such docs-only commits (DEPLOYMENT D25). Production already ran 7546269 (incl. the sit pose fix) — nothing was missing.
 

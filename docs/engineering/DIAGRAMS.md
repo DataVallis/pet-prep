@@ -1640,6 +1640,11 @@ flowchart TD
   PF --> SU[success: end pose held<br/>obey_at … window_end = praise counts]
   SU --> N[next trial's attention]
   T -->|dog ignores| ST[standing pose from the cue]
+  T2[Smooth schedule: trial has perform_at_ms / release_at_ms<br/>2026-10-28, SchoolStage.tsx — all clips mounted once, clock waits ≤ 12 s] --> AL[attention_loop, looping<br/>also through an ignored cue]
+  AL -->|perform_at| PF2[performing once, from frame 0]
+  PF2 -->|obey_at| SL[success_loop, looping]
+  SL -->|release_at| RL[release once: stands up<br/>missing → hard cut]
+  RL --> AL
   subgraph Ready [GameMediaReadiness v3]
     RP[play = ball phases + playing + idle]
     RW[wand = wand phases]

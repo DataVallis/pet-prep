@@ -19,7 +19,7 @@ import {
   trialOutcome,
 } from '@/modules/training/game';
 import { readTrainingSession, type TrainingSession, type TrialOutcome } from '@/modules/training/training';
-import { makeTrainingSessionPayload } from '@/test-utils/fixtures';
+import { makeSmoothTrainingSessionPayload, makeTrainingSessionPayload } from '@/test-utils/fixtures';
 
 const SESSION = readTrainingSession(makeTrainingSessionPayload()) as TrainingSession;
 
@@ -216,3 +216,27 @@ describe('missedWhileAway (resume)', () => {
   });
 });
 
+
+describe('school smooth playback schedule (2026-10-28)', () => {
+  const SMOOTH = readTrainingSession(makeSmoothTrainingSessionPayload()) as TrainingSession;
+
+  it('the command bubble shows from the cue until the dog obeys (ignored cue: the short bubble)', () => {
+    expect(frameAt(SMOOTH, 1_999).cueVisible).toBe(false);
+    expect(frameAt(SMOOTH, 2_000).cueVisible).toBe(true);
+    expect(frameAt(SMOOTH, 5_499).cueVisible).toBe(true); // 3.5 s after the cue, still waiting for the pose
+    expect(frameAt(SMOOTH, 5_500)).toMatchObject({ cueVisible: false, dog: 'obeying' });
+    expect(frameAt(SMOOTH, 10_200 + 1_499)).toMatchObject({ slot: 1, cueVisible: true });
+    expect(frameAt(SMOOTH, 10_200 + 1_500).cueVisible).toBe(false);
+    expect(frameAt(SMOOTH, 10_200 + 1_000).dog).toBe('ignoring');
+  });
+
+  it("the previous cue's feedback line clears at the next cue (only a »waited« is carried)", () => {
+    // Trial 0 praised in time; at the next cue (10 200) the line is gone.
+    expect(feedbackAt(SMOOTH, [5_800], 10_199)).toEqual({ slot: 0, outcome: 'in_time' });
+    expect(feedbackAt(SMOOTH, [5_800], 10_200)).toBeNull();
+    // Trial 1 ignored and waited: known only at the next cue (14 700) → shown briefly.
+    expect(feedbackAt(SMOOTH, [5_800], 14_700)).toEqual({ slot: 1, outcome: 'waited' });
+    // The old schedule keeps carrying every verdict.
+    expect(feedbackAt(SESSION, [3_200], 8_000)).toEqual({ slot: 0, outcome: 'in_time' });
+  });
+});

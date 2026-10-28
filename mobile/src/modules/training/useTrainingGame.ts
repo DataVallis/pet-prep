@@ -2,7 +2,13 @@
  * `useTrainingGame` — one training session from "Začni vajo" to the server's result
  * (M5-R03). Phases: pick → starting → running → finishing → result (or failed).
  *
- * - The local start is the moment the start response arrived; the game clock
+ * - School smooth playback (2026-10-28): when `stageGate(session)` says the session plays on
+ *   the school stage, the hook waits in `preparing` (»Your pup is getting ready …«) until the
+ *   stage reports every clip mounted and rendered (`begin()`); after `STAGE_READY_TIMEOUT_MS`
+ *   it begins by itself with `stagePicture` (this session in picture mode). The server
+ *   schedule is relative to the LOCAL start, so starting later shifts nothing (the finish TTL
+ *   is 60 s after the scheduled end).
+ * - The local start is the moment the start response arrived (or the stage got ready); the game clock
  *   (`SessionClock`) is monotonic and re-anchored to the wall clock when the app comes
  *   back from the background (the phone may have slept). Taps are whole ms on it.
  * - A 100 ms tick drives the screen; when the schedule is over the hook finishes by
@@ -45,6 +51,9 @@ import {
 /** Screen refresh while a session runs. */
 export const GAME_TICK_MS = 100;
 
+/** School stage: the longest wait for its clips before the session runs in picture mode. */
+export const STAGE_READY_TIMEOUT_MS = 12_000;
+
 /** Refusals after which the same session can't be finished any more. */
 const FINAL_FINISH_REFUSALS = new Set([
   'training_session_expired',
@@ -58,6 +67,8 @@ const FINAL_FINISH_REFUSALS = new Set([
 export type TrainingPhase =
   | { kind: 'pick' }
   | { kind: 'starting'; command: TrainingCommand }
+  /** School smooth playback: the schedule is here, the stage loads its clips (clock not started). */
+  | { kind: 'preparing'; session: TrainingSession }
   | {
       kind: 'running';
       session: TrainingSession;
@@ -83,6 +94,11 @@ export interface TrainingGameOptions {
   clock?: ClockSources;
   /** The child's own running session from the child state (with its schedule) — resumed once. */
   resume?: TrainingSession | null;
+  /**
+   * School smooth playback: true = this new session waits for the school stage (`begin`)
+   * before its clock starts. Not asked for a resumed session (its clock is the server's).
+   */
+  stageGate?: (session: TrainingSession) => boolean;
 }
 
 export interface TrainingGame {
@@ -90,6 +106,10 @@ export interface TrainingGame {
   /** ms since the local start (running / finishing), else 0. */
   elapsedMs: number;
   start: (command: TrainingCommand) => void;
+  /** The school stage is ready: start the clock of the `preparing` session (no-op otherwise). */
+  begin: () => void;
+  /** The stage did not get ready in time: this session runs in picture mode. */
+  stagePicture: boolean;
   /**
    * Record a "Pohvali" tap. `touchTimestamp` = the touch event's `nativeEvent.timestamp`
    * (mapped onto the game clock by `TouchTimeMapper`); without it, the handler time.
@@ -132,12 +152,16 @@ export function useTrainingGame({
   timezone,
   clock = DEFAULT_CLOCK_SOURCES,
   resume = null,
+  stageGate,
 }: TrainingGameOptions): TrainingGame {
   const queryClient = useQueryClient();
   const startMutation = useStartTraining();
   const finishMutation = useFinishTraining();
   const [phase, setPhaseState] = useState<TrainingPhase>({ kind: 'pick' });
   const [elapsedMs, setElapsedMs] = useState(0);
+  const [stagePicture, setStagePicture] = useState(false);
+  const stageGateRef = useRef(stageGate);
+  stageGateRef.current = stageGate;
 
   const phaseRef = useRef<TrainingPhase>(phase);
   const clockRef = useRef<SessionClock | null>(null);
@@ -235,12 +259,18 @@ export function useTrainingGame({
       const current = phaseRef.current;
       if (current.kind !== 'pick' && current.kind !== 'failed' && current.kind !== 'result') return;
       setPhase({ kind: 'starting', command });
+      if (mounted.current) setStagePicture(false);
       startMutate(command, {
         onSuccess: (response) => {
-          // The local clock starts now — the schedule is relative to this moment.
-          clockRef.current = new SessionClock(clockSourcesRef.current);
           playedRef.current.add(response.session.id);
           if (mounted.current) setElapsedMs(0);
+          if (stageGateRef.current?.(response.session) === true) {
+            // The stage mounts its clips first; the clock starts in `begin`.
+            setPhase({ kind: 'preparing', session: response.session });
+            return;
+          }
+          // The local clock starts now — the schedule is relative to this moment.
+          clockRef.current = new SessionClock(clockSourcesRef.current);
           setPhase({ kind: 'running', session: response.session, taps: [], resumedAtMs: null });
         },
         onError: (error) => {
@@ -250,6 +280,29 @@ export function useTrainingGame({
     },
     [setPhase, startMutate],
   );
+
+  const beginWith = useCallback(
+    (picture: boolean) => {
+      const current = phaseRef.current;
+      if (current.kind !== 'preparing') return;
+      clockRef.current = new SessionClock(clockSourcesRef.current);
+      if (mounted.current) {
+        setElapsedMs(0);
+        setStagePicture(picture);
+      }
+      setPhase({ kind: 'running', session: current.session, taps: [], resumedAtMs: null });
+    },
+    [setPhase],
+  );
+  const begin = useCallback(() => beginWith(false), [beginWith]);
+
+  // Bounded wait for the stage: then this session plays in picture mode.
+  const preparingId = phase.kind === 'preparing' ? phase.session.id : null;
+  useEffect(() => {
+    if (preparingId === null) return;
+    const timer = setTimeout(() => beginWith(true), STAGE_READY_TIMEOUT_MS);
+    return () => clearTimeout(timer);
+  }, [preparingId, beginWith]);
 
   // Resume the child's own session after an app restart (once per session id).
   const resumeRef = useRef(resume);
@@ -292,11 +345,11 @@ export function useTrainingGame({
 
   const reset = useCallback(() => {
     const current = phaseRef.current;
-    if (current.kind === 'running' || current.kind === 'finishing' || current.kind === 'starting') return;
+    if (current.kind === 'running' || current.kind === 'finishing' || current.kind === 'starting' || current.kind === 'preparing') return;
     clockRef.current = null;
     if (mounted.current) setElapsedMs(0);
     setPhase({ kind: 'pick' });
   }, [setPhase]);
 
-  return { phase, elapsedMs, start, praise, retryFinish, reset };
+  return { phase, elapsedMs, start, begin, stagePicture, praise, retryFinish, reset };
 }
