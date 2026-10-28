@@ -176,7 +176,8 @@ jobs:
       # ParallelTesting creates and migrates them; Storage::fake() disks are per process too).
       - name: Run Pest (parallel)
         working-directory: backend
-        run: php artisan test --parallel
+        run: |
+          php artisan test --parallel --log-junit junit.xml || { php -r '$x=simplexml_load_file("junit.xml"); foreach ($x->xpath("//testcase[failure or error]") as $t) { $f=(string)($t->failure ?: $t->error); echo "::error title=".str_replace(["\n",":",","],[" "," "," "],(string)$t["name"])."::".str_replace(["\r","\n"],["","%0A"],substr($f,0,1500))."\n"; }'; exit 1; }
 
       - name: Record green tree
         id: green
