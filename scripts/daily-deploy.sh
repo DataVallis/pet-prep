@@ -130,6 +130,28 @@ push_ci() {
           | "\(.id) \(.status) \(.conclusion // "none") \(.html_url)"' 2>/dev/null
 }
 
+# ci_target SHA: the commit whose push CI decides (fix 2026-10-28). The OTA workflow
+# (mobile-ota.yml) pushes "… [skip ci]" bot commits that only touch docs/ (app-release.json,
+# breed-registry.json) — they never get a push run. Walk back over such commits along the
+# first parent (at most 20) to the newest commit that has its own CI; any other commit stops
+# the walk. Returns 1 on API error.
+ci_target() {
+  local sha="$1" verdict
+  for _ in $(seq 1 20); do
+    verdict="$("$GH" api "repos/${REPO}/commits/${sha}" \
+          --jq 'if ((.commit.message | split("\n")[0] | test("\\[skip ci\\]"))
+                   and ((.files // []) | length > 0)
+                   and ((.parents // []) | length == 1)
+                   and all(.files[]; .filename | startswith("docs/")))
+                then "skip \(.parents[0].sha)" else "keep" end' 2>/dev/null)" || return 1
+    case "$verdict" in
+      "skip "*) sha="${verdict#skip }" ;;
+      *) break ;;
+    esac
+  done
+  echo "$sha"
+}
+
 # --- b + c: something new, and its push CI green --------------------------------------
 waited=0
 while :; do
@@ -138,16 +160,21 @@ while :; do
   if [ "$head" = "$deployed" ]; then
     done_ok "nothing new — production already runs the main head ${head:0:7}."
   fi
-  log "main head ${head:0:7}, production runs ${deployed:+${deployed:0:7}}${deployed:-unknown (no deploy among the last 50 Run workflow runs)}"
+  target="$(ci_target "$head")" || api_fail "the commit ${head:0:7}"
+  if [ "$target" = "$deployed" ]; then
+    done_ok "nothing new — after production ${deployed:0:7} main has only [skip ci] docs commits (head ${head:0:7})."
+  fi
+  log "main head ${head:0:7}, production runs ${deployed:-unknown (no deploy among the last 50 Run workflow runs)}"
+  [ "$target" = "$head" ] || log "main head ${head:0:7} is a [skip ci] docs commit — its CI is the one of ${target:0:7}"
 
-  ci="$(push_ci "$head")" || api_fail "the push CI runs of ${head:0:7}"
+  ci="$(push_ci "$target")" || api_fail "the push CI runs of ${target:0:7}"
   read -r _ ci_status ci_conclusion ci_url <<< "${ci:-}"
   if [ -z "$ci" ]; then
-    state="no push run of CI & Deploy for main head ${head:0:7}"
+    state="no push run of CI & Deploy for main head ${target:0:7}"
     [ "$waited" -lt "$MISSING_GRACE_SECONDS" ] || refuse "${state} (waited ${waited}s)."
   elif [ "$ci_status" = completed ]; then
     [ "$ci_conclusion" = success ] || \
-      refuse "push CI of main head ${head:0:7} concluded '${ci_conclusion}' — run ${ci_url}"
+      refuse "push CI of main head ${target:0:7} concluded '${ci_conclusion}' — run ${ci_url}"
     # Green. Re-read the head: a merge during the wait means a new head with its own CI.
     if ! now_head="$(main_head)" || [ -z "$now_head" ]; then api_fail "the head of main"; fi
     if [ "$now_head" = "$head" ]; then
@@ -156,7 +183,7 @@ while :; do
     log "main moved to ${now_head:0:7} — checking its CI"
     continue
   else
-    state="push CI of main head ${head:0:7} is ${ci_status} — run ${ci_url}"
+    state="push CI of main head ${target:0:7} is ${ci_status} — run ${ci_url}"
   fi
   if [ "$waited" -ge "$WAIT_SECONDS" ]; then
     refuse "${state}; gave up after ${waited}s."

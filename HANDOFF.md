@@ -156,6 +156,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-10-28 (cloud) — fix: daily deploy vs OTA `[skip ci]` commits (`fix/daily-deploy-skip-ci`)
+- Daily run #27 went red: main head was the OTA bot's `[skip ci]` docs commit (no push CI). `daily-deploy.sh` `ci_target()` skips such docs-only commits (DEPLOYMENT D25). Production already ran 7546269 (incl. the sit pose fix) — nothing was missing.
+
 ### 2026-10-27 (cloud) — fix: sit pose anatomy (`fix/sit-pose-anatomy`)
 - Sit pose images came back half standing / half sitting with six paws; `PetPose::Sit` prompt describes the full sit and pose prompts add `POSE_ANATOMY`. After deploy David regenerates the bad sit pose (Pet → AI media → pose `sit` → Regenerate); the school sit phase clips follow automatically.
 
