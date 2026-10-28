@@ -75,6 +75,7 @@ return [
     'russell_terrier' => 'Jack Russell Terrier',
     'bullmastiff' => 'Bullmastiff',
     'chinese_crested' => 'Chinese Crested',
+    'nova_scotia_duck_tolling_retriever' => 'Nova Scotia Duck Tolling Retriever',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

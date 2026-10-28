@@ -819,6 +819,16 @@ class PetFactory extends Factory
     }
 
     /**
+     * Indicate the pet is a Nova Scotia Duck Tolling Retriever (paid breed, M5-R10-73).
+     */
+    public function novaScotiaDuckTollingRetriever(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::NovaScotiaDuckTollingRetriever->value,
+        ]);
+    }
+
+    /**
      * Indicate the pet is a British Shorthair (paid cat breed, M5-R10-14; species follows the breed).
      */
     public function britishShorthair(): static

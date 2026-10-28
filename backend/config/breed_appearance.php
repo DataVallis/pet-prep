@@ -622,6 +622,12 @@
 | un-sunburnt bare skin (PetMD S574 sun / cold). RKC Breed Watch Category 2 (S572). Colour weights unsourced →
 | `verified => false`.
 |
+| Nova Scotia Duck Tolling Retriever (M5-R10-73, docs/research/dog-data nova_scotia_duck_tolling_retriever.appearance):
+| "The Toller is a medium-sized, powerful, compact, balanced, well-muscled dog;" (FCI 312, S577); colours "various
+| shades of red or orange with lighter featherings and underside of tail," usually with white on the tail tip, feet,
+| chest and blaze — never black, grey, silver or white on the body. Red with white markings weighted highest (the
+| register portrait). RKC Breed Watch Category 1 (S578). Colour weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -3236,6 +3242,41 @@ return [
             'eye_color' => ['very dark, almond-shaped eyes set wide apart'],
             'tail' => ['long, tapering, fairly straight tail set high, with a long flowing plume on its lower two-thirds'],
             'muzzle' => ['lean muzzle tapering slightly but never pointed, narrow nose, tight thin lips'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+
+    // M5-R10-73 (docs/research/dog-data/data.json nova_scotia_duck_tolling_retriever.appearance; runbook rules
+    // 2026-10-10: standard colours only — S577 red or orange shades, white only on tail tip, feet, chest and blaze).
+    'nova_scotia_duck_tolling_retriever' => [
+        'display_name' => 'Nova Scotia Duck Tolling Retriever',
+        // Colour frequencies are in no source (nova_scotia_duck_tolling_retriever.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 312 (S577, https://WWW.FCI.BE/Nomenclature/Standards/312g08-en.pdf), RKC breed page (S578) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S578 "Size: Medium"; S577 "Ideal height for males over 18 months is 19-20 ins. (48-51 cm);"',
+            'build' => 'S577 "The Toller is a medium-sized, powerful, compact, balanced, well-muscled dog;"',
+            'coat_length' => 'S577 "must have a water-repellent double coat of medium length and softness with a softer, dense undercoat."',
+            'coat_color' => 'S577 "Colour is various shades of red or orange with lighter featherings and underside of tail," (white markings: tip of tail, feet, chest and blaze; weights unsourced)',
+            'ear_carriage' => 'S577 "Triangular, of medium size, set high and well back on the skull, with the base held very slightly erect,"',
+            'eye_color' => 'S577 "Set well apart, almond-shaped, medium sized. Colour amber to brown."',
+            'tail' => 'S577 "Following the natural very slight slope of the croup, broad at the base, luxuriant and heavily feathered,"',
+            'muzzle' => 'S577 "Tapers from bridge to tip, with nostrils well open. Colour should blend with that of the coat or be black."',
+        ],
+        'traits' => [
+            'size' => ['medium-sized'],
+            'build' => [['value' => 'powerful, compact and balanced, well-muscled body with medium to heavy bone', 'weight' => 3], 'agile, athletic retriever build, alert and determined'],
+            'coat_length' => ['water-repellent double coat of medium length with a soft dense undercoat and lighter feathering'],
+            // Standard colours only (S577, never black / grey / silver / white on the body); red with white markings highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'red with a white blaze, white chest, white feet and a white tail tip', 'weight' => 50],
+                ['value' => 'orange with a white blaze, white chest, white feet and a white tail tip', 'weight' => 35],
+                ['value' => 'solid red with lighter feathering and no white', 'weight' => 15],
+            ],
+            'ear_carriage' => ['triangular, medium-sized ears set high and well back, the base held very slightly erect'],
+            'eye_color' => ['almond-shaped amber to brown eyes set well apart'],
+            'tail' => ['broad, luxuriant and heavily feathered tail following the slope of the croup'],
+            'muzzle' => ['clean, tapering muzzle with a strong lower jaw and a nose blending with the coat colour'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],

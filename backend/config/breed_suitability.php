@@ -1925,5 +1925,30 @@ return [
                 ['tag' => 'cold_sensitive', 'source_ids' => ['S574'], 'refs' => ['chinese_crested.suitability.petmd_skin']],
             ],
         ],
+
+        // M5-R10-73: nova_scotia_duck_tolling_retriever.* (S576–S580), runbook rules (data.json
+        // proposed_game_parameters.nova_scotia_duck_tolling_retriever.suitability_tags). RKC (S578) + PetMD (S579) + AKC
+        // (S580); no PDSA page. No shorter_lifespan: the RKC "Lifespan: Under 10 years" conflicts with McMillan 2024 (13.2 y,
+        // S123) and PetMD 12–14 y (open for David). Breed Watch Category 1 → no welfare chip.
+        'nova_scotia_duck_tolling_retriever' => [
+            'suits' => [
+                // S579 "Loyal and affectionate family dogs."
+                ['tag' => 'family_pet', 'source_ids' => ['S579'], 'refs' => ['nova_scotia_duck_tolling_retriever.behaviour.family']],
+                // S580 "Tollers require lots of physical exercise and mental stimulation."; S578 "Exercise: Up to 1 hour per day".
+                ['tag' => 'active_family', 'source_ids' => ['S580', 'S578'], 'refs' => ['nova_scotia_duck_tolling_retriever.exercise.energy', 'nova_scotia_duck_tolling_retriever.suitability.rkc_exercise']],
+                // S580 "Tollers are highly affectionate, and tend to be good with children."; caveat (PetMD S579): children who
+                // understand how to interact with dogs — never small_children.
+                ['tag' => 'children', 'source_ids' => ['S580'], 'refs' => ['nova_scotia_duck_tolling_retriever.behaviour.children']],
+            ],
+            'consider' => [
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S580'], 'refs' => ['nova_scotia_duck_tolling_retriever.exercise.energy']],
+                // S578 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S578'], 'refs' => ['nova_scotia_duck_tolling_retriever.suitability.rkc_shedding']],
+                // S578 "Grooming: More than once a week"; S579 "once or twice a week".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S578', 'S579'], 'refs' => ['nova_scotia_duck_tolling_retriever.suitability.rkc_grooming', 'nova_scotia_duck_tolling_retriever.suitability.petmd_grooming']],
+                // S580 "They may also have a high prey drive around smaller animals."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S580'], 'refs' => ['nova_scotia_duck_tolling_retriever.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];
