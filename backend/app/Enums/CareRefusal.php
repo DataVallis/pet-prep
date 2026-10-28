@@ -231,7 +231,9 @@ enum CareRefusal: string
      * shows is not stored for the pet yet (Media\GameMediaReadiness) — the
      * game does not start (»Igra se še pripravlja«), never half working.
      * No next_allowed_at (the app learns readiness from PetUpdated).
-     * Play endpoint (ball game, cuddles) and the cat's wand start.
+     * Play endpoint (ball game, cuddles), the cat's wand start and — since
+     * David 2026-10-28 (home first, school locked) — the training start
+     * (»Šolo še pripravljamo«). A failed clip keeps it locked until it is made.
      */
     case MediaNotReady = 'media_not_ready';
 

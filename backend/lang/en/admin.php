@@ -546,6 +546,13 @@ return [
         'history_empty' => 'No upgrade has been run yet.',
         'run' => ':pets pet(s), estimated $:cost',
     ],
+    // David 2026-10-28: school / game clips that failed for good (ActivityClipRetryService).
+    'activity_media' => [
+        'discord' => [
+            'title' => ':count school / game clip(s) need an admin',
+            'body' => 'A school or game clip failed after the automatic retries (or needs review). That activity stays locked for the pet until the clip is made: Pets → AI media (Regenerate / Approve anyway). List: php artisan media:retry-activity-clips --dry-run',
+        ],
+    ],
     'app_errors' => [
         'heading' => 'App errors',
         'description' => 'Crashes and render errors reported by the mobile app (M5-05). Grouped by error; no user, family or pet is stored — only the role (parent / child / signed out). Kept 30 days.',

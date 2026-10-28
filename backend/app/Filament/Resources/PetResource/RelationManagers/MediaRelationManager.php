@@ -8,6 +8,7 @@ use App\Models\PetMedia;
 use App\Models\User;
 use App\Services\AppSettingsService;
 use App\Services\Media\FrozenClipRegenerator;
+use App\Services\Media\GameMediaReadiness;
 use App\Services\Media\MediaProfiles;
 use App\Services\Media\MediaQualityService;
 use App\Services\Media\PetMediaService;
@@ -83,7 +84,18 @@ class MediaRelationManager extends RelationManager
             default => $fmt($timing['preparation_seconds']),
         };
 
-        return sprintf('Preparation (birth / purchase → everything stored): %s · Media pipeline (first slot → last file stored): %s', $preparation, $fmt($timing['pipeline_seconds']));
+        // David 2026-10-28: school / games stay locked until their own clips are shown.
+        $activities = [];
+        foreach (app(GameMediaReadiness::class)->activities($pet) as $game => $state) {
+            $activities[] = $game.': '.match (true) {
+                $state['ready'] => 'open',
+                $state['failed'] !== [] => 'LOCKED — failed: '.implode(', ', $state['failed']).' (auto retry hourly, then Regenerate / Approve anyway)',
+                default => 'preparing ('.count($state['missing']).' clip(s) to come)',
+            };
+        }
+
+        return sprintf('Preparation (birth / purchase → everything stored): %s · Media pipeline (first slot → last file stored): %s', $preparation, $fmt($timing['pipeline_seconds']))
+            .($activities === [] ? '' : ' · Activities: '.implode(' · ', $activities));
     }
 
     public function isReadOnly(): bool

@@ -133,9 +133,9 @@ class PetPreparationService
             // items of their own — a loop waits for its key image).
             ...array_map(fn (PetTransition $t) => $t->value, $this->entitlements->transitionsFor($pet)),
             // M5-T09 / T10 (QA m6): NOT the school / game phase clips — the preparation (and its
-            // »… je pripravljen« push within PUSH_MAX_HOURS) ends with the first-minutes set and
-            // the transitions as before; the games wait with `media_ready`, the school with
-            // `school_pending` ({@see schoolPending()}).
+            // »… je pripravljen« push within PUSH_MAX_HOURS) ends with the home set (David
+            // 2026-10-28: home first) and the transitions; the games wait locked with
+            // `media_ready`, the school locked with `training.media_ready` ({@see schoolPending()}).
         ];
     }
 
@@ -209,8 +209,10 @@ class PetPreparationService
 
     /**
      * M5-T09 (QA m6): a school phase clip of the pet — or a pose image it is made from — is
-     * still on its way (not stored, not failed). The app then shows the poses and »Šola se še
-     * pripravlja«; practice works as always. Not part of the preparation (no wait, no push).
+     * still on its way (not stored, not failed). The app then says »Šola se še pripravlja«;
+     * since David 2026-10-28 the school is locked until every clip is shown
+     * (GameMediaReadiness::SCHOOL — a failed clip keeps it locked too, ActivityClipRetryService
+     * retries it). Not part of the preparation (no wait, no push).
      *
      * @param  Collection<int, PetMedia>  $slots
      */
