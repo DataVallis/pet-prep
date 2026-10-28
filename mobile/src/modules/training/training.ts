@@ -118,6 +118,14 @@ export interface TrainingTrial {
   obey_at_ms: number | null;
   /** End of the praise window (null when it doesn't obey). */
   window_end_ms: number | null;
+  /**
+   * School smooth playback (2026-10-28): when the dog starts its performing clip (from frame 0;
+   * it reaches the pose exactly at `obey_at_ms`). Absent / null = an older server or schedule
+   * (the app keeps the earlier timing) or a cue the dog ignores.
+   */
+  perform_at_ms?: number | null;
+  /** When the dog stands up again (the release clip starts; = `window_end_ms`). Same rules as `perform_at_ms`. */
+  release_at_ms?: number | null;
 }
 
 /** `session` of a `training/start` 200: the schedule the app plays. */
@@ -132,6 +140,16 @@ export interface TrainingSession {
   /** Human reaction floor: a praise earlier than obey_at + this is too early (PR #53). */
   min_reaction_ms: number;
   trials: TrainingTrial[];
+}
+
+/**
+ * School smooth playback (2026-10-28): every obeying trial carries the server's `perform_at_ms`
+ * and `release_at_ms` (an old server / a schedule started before the update has none → the
+ * earlier timing and texts stay).
+ */
+export function hasSmoothTimes(session: Pick<TrainingSession, 'trials'>): boolean {
+  const obeying = session.trials.filter((t) => t.obeys && t.obey_at_ms !== null);
+  return obeying.length > 0 && obeying.every((t) => typeof t.perform_at_ms === 'number' && typeof t.release_at_ms === 'number');
 }
 
 /** Backend `TrainingService::MIN_REACTION_MS` — used when a payload doesn't carry it. */
@@ -291,7 +309,23 @@ function readTrial(value: unknown): TrainingTrial | null {
   const obeyAt = obeys ? int(value.obey_at_ms) : null;
   const windowEnd = obeys ? int(value.window_end_ms) : null;
   if (obeys && (obeyAt === null || windowEnd === null || obeyAt < cue || windowEnd < obeyAt)) return null;
-  return { index, cue_at_ms: cue, obeys, obey_at_ms: obeyAt, window_end_ms: windowEnd };
+  const trial: TrainingTrial = { index, cue_at_ms: cue, obeys, obey_at_ms: obeyAt, window_end_ms: windowEnd };
+  // School smooth playback: both server times or neither (an inconsistent pair is never guessed).
+  const performAt = obeys ? int(value.perform_at_ms) : null;
+  const releaseAt = obeys ? int(value.release_at_ms) : null;
+  if (
+    performAt !== null &&
+    releaseAt !== null &&
+    obeyAt !== null &&
+    windowEnd !== null &&
+    performAt >= cue &&
+    performAt <= obeyAt &&
+    releaseAt >= windowEnd
+  ) {
+    trial.perform_at_ms = performAt;
+    trial.release_at_ms = releaseAt;
+  }
+  return trial;
 }
 
 /** The schedule of a start response, or null when it is not a playable one. */

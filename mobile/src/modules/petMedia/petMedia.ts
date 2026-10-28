@@ -49,7 +49,11 @@ export interface PetMediaInfo {
   stateMedia: boolean;
   /** M5-T09 / T10: stored POSE images of the school / game phase clips (`sit`, `empty`, `crouch`, …). */
   poses: Record<string, string>;
-  /** M5-T09 / T10: stored PHASE clips (`school_sit_attention`, `ball_running`, `wand_pouncing`, …), played once (`phaseMs`). */
+  /**
+   * M5-T09 / T10: stored PHASE clips (`school_sit_attention`, `ball_running`, `wand_pouncing`, …), played once (`phaseMs`).
+   * School smooth playback (2026-10-28): plus the server-derived `school_<cmd>_attention_loop`,
+   * `school_<cmd>_success_loop` (ping-pong loops) and `school_<cmd>_release` (performing reversed).
+   */
   phases: Record<string, string>;
   /** M5-T09 / T10: phase clip groups of the pet's set (`school`, `ball`, `wand`) — then never a state clip there. */
   phaseGroups: PhaseGroup[];
@@ -62,7 +66,7 @@ export type PhaseGroup = 'school' | 'ball' | 'wand';
 
 const PHASE_GROUPS: readonly PhaseGroup[] = ['school', 'ball', 'wand'];
 const POSE_KEY = /^(sit|come|place|door|empty|crouch|catch)$/;
-const PHASE_KEY = /^(school_(sit|come|place|potty)_(attention|performing|success)|ball_(waiting|running|fetching)|wand_(stalking|pouncing|catching))$/;
+const PHASE_KEY = /^(school_(sit|come|place|potty)_(attention|performing|success|attention_loop|success_loop|release)|ball_(waiting|running|fetching)|wand_(stalking|pouncing|catching))$/;
 
 /** `phase_seconds` → ms per known phase key (1–15 s; anything else is dropped → the 3 s default). */
 function secondsMap(raw: unknown, key: RegExp): Record<string, number> {

@@ -6,12 +6,19 @@
 
 Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, zavetišča, veterinarji, šole) · 👩 starši / mame · 🧒 otroci · 🛠 tehnična publika (dev skupnost, LinkedIn)
 
-
 ---
 
 ## 2026-10-28 — Šola: 7 minut na dan
 
 **Kaj:** dnevni čas za šolo je zdaj 7 minut na psa (prej 5), za vse pasme. **Zakaj:** vaja ima zdaj 6 ukazov in traja približno minuto; s 5 minutami bi otrok naredil le 4–5 vaj, s 7 spet približno 6 (dva otroka po približno 3). **Kako povedati:** 👩 »Kuža lahko vadi do 7 minut na dan — po priporočilih (5–10 minut vaj, mladiček do 15 minut na dan).«
+
+---
+
+## 2026-10-28 — Šola brez »dvojnega« psa (aplikacija)
+
+**Kaj:** v »Šoli« aplikacija ob začetku vaje vnaprej naloži vse posnetke ukaza (največ 4) in jih med vajo menja v trenutku, brez prelivanja; kuža čaka v živi zanki, izvede ukaz, drži položaj in nato vstane, preden pride naslednji ukaz. Če posnetki v 12 s niso pripravljeni, ta vaja teče s slikami.
+**Zakaj:** Davidov posnetek z iPhona (dobermanov mladiček, »Prostor«) je pokazal dvojne slike, poskakovanje med pozami in zamrznjene slike.
+**Kako povedati:** 🧒 »Kuža se zdaj res usede in spet vstane.« · 👩 gladek prikaz, brez dodatnih stroškov (vzvratni posnetki nastanejo na strežniku, 0 $). *Na telefonu še ni preverjeno.*
 
 ---
 
