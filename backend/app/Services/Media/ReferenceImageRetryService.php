@@ -189,7 +189,7 @@ class ReferenceImageRetryService
                 break;
             }
 
-            $slot->update(['status' => PetMedia::STATUS_PENDING, 'request_id' => null, 'error_reason' => null, 'error' => null]);
+            $slot->update(['status' => PetMedia::STATUS_PENDING, 'request_id' => null, 'status_url' => null, 'response_url' => null, 'error_reason' => null, 'error' => null]);
             $keyframe ? GeneratePetKeyframe::dispatch($slot->id) : SubmitPetStateVideo::dispatch($slot->id);
             $planned += $cost;
             $videos++;

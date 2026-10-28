@@ -38,6 +38,9 @@ class FalGateway
     /** fal Platform API (account billing, M5-T15) — free reads only. */
     public const PLATFORM_BASE_URL = 'https://api.fal.ai';
 
+    /** poll(): result-read statuses that mean »try again later«, not »the request failed«. */
+    public const TRANSIENT_RESULT_STATUSES = [502, 503, 504];
+
     public const BALANCE_FLAG_KEY = 'ai:fal_balance_exhausted_at';
 
     private const BALANCE_LOG_KEY = 'ai:fal_balance_logged';
@@ -161,8 +164,9 @@ class FalGateway
             return ['state' => 'pending', 'body' => [], 'error' => $e->getMessage()];
         }
 
-        // A transient fal / network error on the result read is not a verdict on the request (fix 2026-10-28).
-        if ($result->serverError()) {
+        // A transient gateway error on the result read is not a verdict on the request (fix 2026-10-28,
+        // QA #433: only 502 / 503 / 504 — any other 5xx is fal's answer and stays `failed`).
+        if (in_array($result->status(), self::TRANSIENT_RESULT_STATUSES, true)) {
             return ['state' => 'pending', 'body' => [], 'error' => 'result HTTP '.$result->status()];
         }
 
@@ -175,6 +179,27 @@ class FalGateway
         $body = $result->json();
 
         return ['state' => 'completed', 'body' => is_array($body) ? $body : [], 'error' => null];
+    }
+
+    /**
+     * The queue status / result URLs of a request, rebuilt from the model endpoint and the
+     * request id — the shape fal returns on submit: only the app id (`owner/app`, without a
+     * subpath such as `/edit`) + `/requests/{id}` (+ `/status`). Used when a dead worker's
+     * accepted request is adopted from the ledger (fix 2026-10-28), so media:sweep can poll it.
+     *
+     * @return array{status_url: string|null, response_url: string|null}
+     */
+    public static function queueUrlsFor(string $endpoint, string $requestId): array
+    {
+        $parts = explode('/', trim($endpoint, '/'));
+
+        if (count($parts) < 2 || preg_match('/^[A-Za-z0-9._-]+$/', $requestId) !== 1) {
+            return ['status_url' => null, 'response_url' => null];
+        }
+
+        $base = self::QUEUE_BASE_URL.'/'.$parts[0].'/'.$parts[1].'/requests/'.$requestId;
+
+        return ['status_url' => $base.'/status', 'response_url' => $base];
     }
 
     /**

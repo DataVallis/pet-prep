@@ -8,8 +8,8 @@ use Illuminate\Console\Command;
 /**
  * Hourly (M4-03): recover pet media left behind by a lost job or webhook —
  * submitted videos without a webhook after 2 h fail as `timed_out`; queued key /
- * pose images without a webhook are polled at fal after 10 min (free; fix
- * 2026-10-28) and time out after 2 h; lost downloads and dead-worker claims are
+ * pose images without a webhook are polled at fal from the first sweep ≥ 10 min
+ * after the submit (free; fix 2026-10-28) and time out after 2 h; lost downloads and dead-worker claims are
  * queued again.
  */
 class SweepPetMediaCommand extends Command

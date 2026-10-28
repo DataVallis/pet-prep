@@ -841,9 +841,10 @@ class PetMediaService
             default => null,
         };
         $slot->update($slot->isPoseStill()
-            // A key / pose image: no clip fields. Its queue URLs died with the worker — media:sweep
-            // cannot poll it and times it out if the webhook never comes.
+            // A key / pose image: no clip fields. Its queue URLs died with the worker — rebuilt from
+            // the profile's endpoint so media:sweep can still poll it (QA #433).
             ? ['request_id' => $ledger->request_id, 'profile' => $ledger->profile, 'source_generation' => $image?->generation]
+                + $this->adoptedQueueUrls((string) $ledger->profile, (string) $ledger->request_id)
             : [
                 'request_id' => $ledger->request_id,
                 'profile' => $ledger->profile,
@@ -856,6 +857,26 @@ class PetMediaService
         Log::warning('PetMediaService: adopted the request id of a dead worker', ['pet_media_id' => $slot->id, 'request_id' => $ledger->request_id]);
 
         return true;
+    }
+
+    /**
+     * Queue URLs of an adopted key / pose image request (see FalGateway::queueUrlsFor()).
+     *
+     * @return array{status_url: string|null, response_url: string|null}
+     */
+    private function adoptedQueueUrls(string $profileKey, string $requestId): array
+    {
+        $profile = $this->profiles->keyframe();
+
+        if ($profile === null || $profile->key !== $profileKey) {
+            try {
+                $profile = $this->profiles->image($profileKey);
+            } catch (\Throwable) {
+                return ['status_url' => null, 'response_url' => null];
+            }
+        }
+
+        return FalGateway::queueUrlsFor($profile->endpoint, $requestId);
     }
 
     /**
@@ -1399,6 +1420,8 @@ class PetMediaService
                 'status' => PetMedia::STATUS_PENDING,
                 'generation' => DB::raw('generation + '.($bump ? 1 : 0)),
                 'request_id' => null,
+                'status_url' => null,
+                'response_url' => null,
                 'source_url' => null,
                 'error_reason' => null,
                 'error' => null,
@@ -2742,6 +2765,8 @@ class PetMediaService
                 'status' => PetMedia::STATUS_RUNNING,
                 'look_media_id' => $row->id,
                 'request_id' => null,
+                'status_url' => null,
+                'response_url' => null,
                 'source_url' => null,
                 'error_reason' => null,
                 'error' => null,
@@ -2792,6 +2817,8 @@ class PetMediaService
                 'candidate_bytes' => null,
                 'candidate_mime' => null,
                 'request_id' => null,
+                'status_url' => null,
+                'response_url' => null,
                 'source_url' => null,
                 'error_reason' => null,
                 'error' => null,

@@ -1424,7 +1424,7 @@ flowchart LR
   F --> T["submit timed out after sending"] --> TK["failed http_error, cost kept"]
   F --> E["webhook ERROR / non-fal URL"] --> EF["failed generation_failed / invalid_response"]
   F --> D["download 4xx / too big / wrong type"] --> DF["failed invalid_response<br/>(image: fal URL forgotten)"]
-  F --> L["lost webhook / job / worker"] --> SW["hourly media:sweep:<br/>2 h → timed_out · re-queue download · reclaim after 10 min"]
+  F --> L["lost webhook / job / worker"] --> SW["hourly media:sweep:<br/>queued key / pose images: poll fal (free) ≥ 10 min after submit (2026-10-28)<br/>2 h → timed_out · re-queue download · reclaim after 10 min"]
   GF & TK & EF & DF & SW -.-> AD["media:backfill / Filament Generate missing / Regenerate"]
   GF & EF -.->|"school / game pose · phase clip or the reference image of a pet with phase clips"| AR["hourly media:retry-activity-clips (:17, David 2026-10-28):<br/>≥ 30 min after the failure, ≤ 2 auto retries per failure chain<br/>(look row counts for a shared look), within today's budget"]
   SW -.->|"timed_out: never resubmitted (may still finish at fal)"| AL
@@ -1613,7 +1613,7 @@ sequenceDiagram
   S->>VJ: idle loop (reference image is its pose)
   S->>KJ: key images in preparation order (sleeping, hungry, playing, …)
   KJ->>Fal: queue submit edit(reference image, pose prompt) + webhook — claim, ledger 0.15 $ (2026-10-28: queue, not sync)
-  Fal-->>St: signed webhook images[0].url (lost → media:sweep polls after 10 min, timed_out after 2 h) → key image stored → queueStateVideos again
+  Fal-->>St: signed webhook images[0].url (lost → the first hourly media:sweep ≥ 10 min after submit polls it, timed_out after 2 h) → key image stored → queueStateVideos again
   S->>VJ: that state's loop (start = key image, no end frame — fix 2026-10-23)
   Note over S: transitions only after every first-minutes clip (idle, sleeping, hungry) is on its way
   S->>VJ: transition (start = pose A, end = pose B)

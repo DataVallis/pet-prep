@@ -268,7 +268,7 @@ class ActivityClipRetryService
             ? $this->media->resetForNewGeneration($slot, bump: $bump, autoRetryBelow: self::MAX_AUTO_RETRIES)
             // The pet row of a shared look: the look row carries the chain; keep the pet's own alert flag.
             : PetMedia::query()->whereKey($slot->id)->where('status', PetMedia::STATUS_FAILED)
-                ->update(['status' => PetMedia::STATUS_PENDING, 'request_id' => null, 'source_url' => null, 'error_reason' => null, 'error' => null, 'updated_at' => now()]) === 1;
+                ->update(['status' => PetMedia::STATUS_PENDING, 'request_id' => null, 'status_url' => null, 'response_url' => null, 'source_url' => null, 'error_reason' => null, 'error' => null, 'updated_at' => now()]) === 1;
 
         if ($reset) {
             $slot->isPose() ? GeneratePetKeyframe::dispatch($slot->id) : SubmitPetStateVideo::dispatch($slot->id);

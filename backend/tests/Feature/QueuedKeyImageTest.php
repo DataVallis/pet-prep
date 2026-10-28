@@ -265,10 +265,63 @@ describe('never paid twice', function () {
             ->and(qkEditCalls())->toBe($calls)
             ->and($key->fresh()->status)->toBe('running')
             ->and($key->fresh()->request_id)->toBe($requestId)
+            // QA #433: the queue URLs are rebuilt (app id without the /edit subpath), so the sweep can poll it.
+            ->and($key->fresh()->status_url)->toBe("https://queue.fal.run/fal-ai/nano-banana-pro/requests/{$requestId}/status")
+            ->and($key->fresh()->response_url)->toBe("https://queue.fal.run/fal-ai/nano-banana-pro/requests/{$requestId}")
             ->and(AiSpendLedger::where('pet_media_id', $key->id)->count())->toBe(1);
 
         qkWebhook($key->fresh());
         expect($key->fresh()->status)->toBe('ready');
+    });
+
+    it('a shared look row\'s accepted submit is adopted too (queue URLs rebuilt, no second submit)', function () {
+        useUniquePetMedia(false);
+        qkFakeFal();
+        $pet = qkBornPet();
+        $row = PetMedia::query()->where('pet_look_id', $pet->pet_look_id)->where('kind', 'keyframe')->where('state', 'sleeping')->firstOrFail();
+        $requestId = $row->request_id;
+        $calls = qkEditCalls();
+        expect($requestId)->not->toBeNull();
+
+        PetMedia::whereKey($row->id)->update(['request_id' => null, 'status_url' => null, 'response_url' => null, 'updated_at' => now()]);
+        $this->travel(11)->minutes();
+        app(PetMediaService::class)->sweepStale();
+
+        expect(qkEditCalls())->toBe($calls)
+            ->and($row->fresh()->request_id)->toBe($requestId)
+            ->and($row->fresh()->status_url)->toBe("https://queue.fal.run/fal-ai/nano-banana-pro/requests/{$requestId}/status")
+            ->and(AiSpendLedger::where('pet_media_id', $row->id)->count())->toBe(1);
+    });
+
+    it('GeneratePetKeyframe::failed() never fails a slot fal accepted; it fails a slot still waiting for a submit', function () {
+        qkFakeFal();
+        Queue::fake([GeneratePetKeyframe::class]);
+        $pet = qkBornPet();
+        $sleeping = qkKey($pet);
+        $hungry = qkKey($pet, 'hungry');
+
+        app(PetMediaService::class)->generateKeyframe($sleeping->id); // queued at fal (request id)
+        (new GeneratePetKeyframe($sleeping->id))->failed(new RuntimeException('late failure'));
+        (new GeneratePetKeyframe($hungry->id))->failed(new RuntimeException('retries used up')); // pending, never accepted
+
+        expect($sleeping->fresh()->status)->toBe('running')
+            ->and($sleeping->fresh()->request_id)->not->toBeNull()
+            ->and($hungry->fresh()->status)->toBe('failed')
+            ->and($hungry->fresh()->error_reason)->toBe('http_error');
+    });
+});
+
+describe('webhook — superseded', function () {
+    it('a result for an older request of a key image slot is acknowledged as superseded (200), nothing stored', function () {
+        qkFakeFal();
+        $key = qkKey(qkBornPet());
+        $old = $key->request_id;
+        PetMedia::whereKey($key->id)->update(['request_id' => 'qk-newer-request']); // e.g. regenerated meanwhile
+
+        sendFalWebhook(['request_id' => $old, 'status' => 'OK', 'payload' => ['images' => [['url' => 'https://v3.fal.media/files/qk/old.jpg']]]])
+            ->assertOk()->assertJson(['message' => 'Superseded.']);
+        expect($key->fresh()->source_url)->toBeNull()
+            ->and($key->fresh()->status)->toBe('running');
     });
 });
 
@@ -332,6 +385,32 @@ describe('media:sweep — lost webhook', function () {
 
         expect($key->fresh()->status)->toBe('failed')
             ->and($key->fresh()->error_reason)->toBe('generation_failed');
+    });
+});
+
+describe('FalGateway::poll() result read', function () {
+    it('502 / 503 / 504 → still pending; any other 5xx or 4xx → failed (also for the AI Lab poll)', function () {
+        config(['services.fal_ai.key' => 'test-key']);
+        $status = 'https://queue.fal.run/fal-ai/nano-banana-pro/requests/r1/status';
+        $result = 'https://queue.fal.run/fal-ai/nano-banana-pro/requests/r1';
+
+        $code = 0;
+        Http::fake([
+            $status => fn () => Http::response(['status' => 'COMPLETED']),
+            $result => function () use (&$code) {
+                return Http::response(['detail' => 'x'], $code);
+            },
+        ]);
+
+        foreach ([502 => 'pending', 503 => 'pending', 504 => 'pending', 500 => 'failed', 422 => 'failed'] as $code => $state) {
+            expect(app(FalGateway::class)->poll($status, $result)['state'])->toBe($state, "HTTP {$code}");
+        }
+    });
+
+    it('queue URLs are rebuilt from the app id (subpath dropped) and refuse odd request ids', function () {
+        expect(FalGateway::queueUrlsFor('fal-ai/nano-banana-pro/edit', 'abc-123'))
+            ->toBe(['status_url' => 'https://queue.fal.run/fal-ai/nano-banana-pro/requests/abc-123/status', 'response_url' => 'https://queue.fal.run/fal-ai/nano-banana-pro/requests/abc-123'])
+            ->and(FalGateway::queueUrlsFor('fal-ai/nano-banana-pro/edit', '../x'))->toBe(['status_url' => null, 'response_url' => null]);
     });
 });
 
