@@ -261,6 +261,12 @@ class PetMediaService
      * child sees in the first minutes first (idle, sleeping, hungry), then the
      * games (playing), then the rest (PetPreparationService::order). Only the
      * order changes: the same entitled states, the same claims.
+     *
+     * Home first (David 2026-10-28): 1. every home item (state key images + loops,
+     * then transitions) → 2. the pose images of the school / game clips (dispatched
+     * at once, behind the home key images) → 3. the game clips, then the school clips,
+     * submitted only once no home key image is on its way. The games and the school
+     * stay locked until their own clips are shown (GameMediaReadiness).
      */
     public function queueStateVideos(Pet $pet, bool $includeFailed = false): int
     {
@@ -276,6 +282,9 @@ class PetMediaService
         $loops = $this->entitlements->usesStateMedia($pet);
         $essentials = array_map('strval', (array) config('media.preparation_essentials', []));
         $essentialWaiting = false;
+        // Home first (David 2026-10-28): a key image of ANY home state still on its way means
+        // its loop is not submitted yet — no school / game clip is submitted before it.
+        $homeWaiting = false;
         $queued = 0;
 
         foreach (PetPreparationService::order($this->entitlements->videoStatesFor($pet)) as $state) {
@@ -287,6 +296,7 @@ class PetMediaService
                 [$key, $dispatched] = $this->queuePoseStill($pet, PetMedia::KIND_KEYFRAME, $state, $image, $includeFailed);
                 $queued += $dispatched ? 1 : 0;
                 $essentialWaiting = $essentialWaiting || (in_array($state->value, $essentials, true) && $key->isInFlight());
+                $homeWaiting = $homeWaiting || $key->isInFlight();
 
                 continue;
             }
@@ -312,10 +322,15 @@ class PetMediaService
             }
         }
 
-        // M5-T09 / T10 (§13 order): game, then school phase clips (QA m1) — after the first-minutes
-        // clips, like the transitions. Each clip's pose images first (in clip order), the
-        // clip once both of its frames are stored.
-        foreach ($essentialWaiting ? [] : $this->entitlements->phaseClipsFor($pet) as $clip) {
+        // M5-T09 / T10 (§13 order): game, then school phase clips (QA m1). Home first (David
+        // 2026-10-28): every home item above is dispatched before anything here. The POSE images
+        // only need the reference image, so they are dispatched at once (after the home key
+        // images — the queue keeps that order) instead of waiting for the first-minutes set;
+        // a phase CLIP is submitted only once no home key image is on its way any more (every
+        // home loop is submitted) and both of its frames are stored. Same items, same claims —
+        // only the order / overlap changes, never what a pet gets.
+        $clipsAllowed = ! $homeWaiting;
+        foreach ($this->entitlements->phaseClipsFor($pet) as $clip) {
             $framesReady = true;
 
             foreach ([$clip->startPose(), $clip->endPose()] as $pose) {
@@ -327,7 +342,7 @@ class PetMediaService
                 $queued += $dispatched ? 1 : 0;
             }
 
-            if ($framesReady && $this->queueClip($this->slot($pet, PetMedia::KIND_PHASE, $clip), $image, $includeFailed)) {
+            if ($clipsAllowed && $framesReady && $this->queueClip($this->slot($pet, PetMedia::KIND_PHASE, $clip), $image, $includeFailed)) {
                 $queued++;
             }
         }
@@ -1319,14 +1334,20 @@ class PetMediaService
      * conditional (`WHERE status NOT IN (pending, running)`), so a slot another
      * worker just claimed is never reset under it (PR #24 review m7).
      */
-    public function resetForNewGeneration(PetMedia $slot, bool $bump): bool
+    public function resetForNewGeneration(PetMedia $slot, bool $bump, ?int $autoRetryBelow = null): bool
     {
         $candidate = PetMedia::whereKey($slot->id)->value('candidate_path');
 
         $reset = PetMedia::query()
             ->whereKey($slot->id)
             ->whereNotIn('status', [PetMedia::STATUS_PENDING, PetMedia::STATUS_RUNNING])
+            // David 2026-10-28 (QA #434 M1 / m5): an automatic activity retry counts in the same
+            // conditional UPDATE (no race past the cap); every other reset starts a new chain.
+            ->when($autoRetryBelow !== null, fn ($q) => $q->where('auto_retries', '<', $autoRetryBelow))
             ->update([
+                ...($autoRetryBelow !== null
+                    ? ['auto_retries' => DB::raw('auto_retries + 1')]
+                    : ['auto_retries' => 0, 'auto_alerted_at' => null]),
                 'status' => PetMedia::STATUS_PENDING,
                 'generation' => DB::raw('generation + '.($bump ? 1 : 0)),
                 'request_id' => null,
@@ -1521,7 +1542,8 @@ class PetMediaService
             $slot = $this->imageSlot($pet);
 
             if ($slot->status === PetMedia::STATUS_FAILED) {
-                $slot->update(['status' => PetMedia::STATUS_PENDING, 'error_reason' => null, 'error' => null]);
+                // An admin »Generate missing« starts a new failure chain (QA #434 M1).
+                $slot->update(['status' => PetMedia::STATUS_PENDING, 'error_reason' => null, 'error' => null, 'auto_retries' => 0, 'auto_alerted_at' => null]);
             }
 
             $pet->updateQuietly(['media_status' => 'pending', 'media_error' => null]);

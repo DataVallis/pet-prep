@@ -248,6 +248,34 @@ describe('M5-T04 — a game waits for all its clips (David 2026-10-20, spec §10
   });
 });
 
+describe('home first — the school stays locked until its clips are there (David 2026-10-28)', () => {
+  const schoolSl = 'Šola se še pripravlja — to lahko traja nekaj minut';
+
+  it('blocked_reason media_not_ready → preparing with the school text (no time, no word about media)', async () => {
+    const v = view({ training: makeEnabledTraining({ can_start: false, blocked_reason: 'media_not_ready', next_allowed_at: null, media_ready: false }) });
+    expect(actionRule(v, 'training')).toEqual({ enabled: false, reason: 'preparing', until: null, text: schoolSl });
+    expect(startBlock(v.training)).toBe('preparing');
+    expect(trainingRefusalMessage('media_not_ready', null, null)).toBe('Šolo še nastavljamo. To lahko traja nekaj minut.');
+    await i18n.changeLanguage('en');
+    expect(actionRule(v, 'training').text).toBe('School is still getting ready — this can take a few minutes');
+    expect(actionRule(v, 'training').text).not.toMatch(/video|image|picture|clip|AI/i);
+    expect(trainingRefusalMessage('media_not_ready', null, null)).not.toMatch(/video|image|picture|clip|AI/i);
+  });
+
+  it('media_ready false keeps it locked behind another server reason; sleep still wins', () => {
+    const budget = view({ training: makeEnabledTraining({ can_start: false, blocked_reason: 'training_daily_budget_used', next_allowed_at: null, media_ready: false }) });
+    expect(actionRule(budget, 'training').reason).toBe('preparing');
+    const asleep = view({ sleep: ASLEEP, training: makeEnabledTraining({ can_start: false, blocked_reason: 'training_pet_sleeping', next_allowed_at: WAKE, media_ready: false }) });
+    expect(actionRule(asleep, 'training').reason).toBe('sleeping');
+  });
+
+  it('an older server without media_ready keeps the school as before; ready → on', () => {
+    const older = view({ training: makeEnabledTraining({ media_ready: undefined }) });
+    expect(older.training.media_ready).toBe(true);
+    expect(actionRule(older, 'training')).toEqual({ enabled: true });
+  });
+});
+
 describe('M5-R14 / R15 / R19 / R20 breed care tasks', () => {
   it('follows the server flag; sleeping names the wake time; a pet without the task is off', () => {
     const awake = view({ care_tasks: [makeCareTask()] });

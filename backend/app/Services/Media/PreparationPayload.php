@@ -67,7 +67,8 @@ final class PreparationPayload
             // once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
             'announce' => $this->announce,
             // M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
-            // failed) — the app shows the poses and »Šola se še pripravlja«; practice works.
+            // failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
+            // all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
             // Independent of `running`: the school clips come after the preparation ended.
             'school_pending' => $this->schoolPending,
         ];

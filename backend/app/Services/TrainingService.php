@@ -15,6 +15,7 @@ use App\Models\PetCaretaker;
 use App\Models\PetTrainingSession;
 use App\Models\PetTrainingSkill;
 use App\Models\User;
+use App\Services\Media\GameMediaReadiness;
 use App\Services\Media\SchoolClipDerivativeService;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
@@ -166,6 +167,7 @@ class TrainingService
 
     public function __construct(
         private readonly LifeStageService $lifeStages,
+        private readonly GameMediaReadiness $media,
         private readonly RoutineLedgerService $ledger,
         private readonly PetSleepService $sleep,
         private ?string $seedSalt = null,
@@ -526,17 +528,20 @@ class TrainingService
      * - training_pet_sleeping — the pet sleeps (PetSleepService: family
      *   quiet hours); next_allowed = when it wakes (M5-T02, David 2026-10-20);
      * - training_session_active — next_allowed = its expiry;
+     * - media_not_ready — the school's clips are not all shown yet (David
+     *   2026-10-28, GameMediaReadiness::SCHOOL; »Šolo še pripravljamo«);
      * - training_day_ending — the session + TTL would run past the
      *   family-local midnight; next_allowed = midnight (PR #53 m1);
      * - training_daily_budget_used — next_allowed = next local midnight;
      * - training_child_share_used — this child's fair share of the budget
      *   is used (M5-R03b); next_allowed = next local midnight.
      *
-     * With $child null (no viewing child) the per-child checks are skipped.
+     * With $child null (no viewing child) the per-child checks are skipped. `$mediaReady`:
+     * the caller's mediaReady() result when it already has it (child state — QA #434 m8).
      *
      * @return array{refusal: CareRefusal, next_allowed_at: CarbonInterface|null}|null
      */
-    public function startRefusal(Pet $pet, ?User $child, CarbonInterface $now, bool $logMissingData = false): ?array
+    public function startRefusal(Pet $pet, ?User $child, CarbonInterface $now, bool $logMissingData = false, ?bool $mediaReady = null): ?array
     {
         $now = CarbonImmutable::instance($now)->utc()->startOfSecond();
         $refuse = fn (CareRefusal $r, ?CarbonInterface $next = null): array => ['refusal' => $r, 'next_allowed_at' => $next];
@@ -550,6 +555,11 @@ class TrainingService
         $live = $this->liveSession($pet, $now);
         if ($live !== null) {
             return $refuse(CareRefusal::TrainingSessionActive, $live->expires_at);
+        }
+        // David 2026-10-28: the school opens only once all its clips are shown (pets with
+        // school phase clips; every other pet is ready) — never a school without animations.
+        if (! ($mediaReady ?? $this->mediaReady($pet))) {
+            return $refuse(CareRefusal::MediaNotReady);
         }
         $sessionMs = $this->maxSessionMsFor($pet);
         if ($this->dayEndingAt($pet, $now, $sessionMs)) {
@@ -585,6 +595,15 @@ class TrainingService
         }
 
         return null;
+    }
+
+    /**
+     * David 2026-10-28 (home first, school locked): every school phase clip of the pet is
+     * shown — or the pet gets none (free / older set / switch off: always ready).
+     */
+    public function mediaReady(Pet $pet): bool
+    {
+        return $this->media->ready($pet, GameMediaReadiness::SCHOOL);
     }
 
     /**

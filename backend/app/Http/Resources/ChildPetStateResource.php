@@ -150,8 +150,10 @@ class ChildPetStateResource extends JsonResource
         $hasOpenChewing = in_array('chewing', array_column($behaviour->activeEvents, 'kind'), true);
         $training = TrainingPayload::for($pet, $actor, $now);
         // M5-T02: the one start rule (sleep, running session, day ending, budget, share).
+        // David 2026-10-28: the school's clips (computed once per request — QA #434 m8).
+        $schoolMediaReady = ! $training->enabled || app(TrainingService::class)->mediaReady($pet);
         $trainingRefusal = $training->enabled && ! $pet->isUnborn()
-            ? app(TrainingService::class)->startRefusal($pet, $actor, $now)
+            ? app(TrainingService::class)->startRefusal($pet, $actor, $now, mediaReady: $schoolMediaReady)
             : null;
 
         return [
@@ -385,7 +387,10 @@ class ChildPetStateResource extends JsonResource
                  * is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                  * sleeps (next_allowed_at = when it wakes).
                  *
-                 * @var 'training_not_available'|'training_pet_sleeping'|'training_session_active'|'training_day_ending'|'training_daily_budget_used'|'training_child_share_used'|null
+                 * David 2026-10-28: `media_not_ready` while the school's clips are not all shown
+                 * (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                 *
+                 * @var 'training_not_available'|'training_pet_sleeping'|'training_session_active'|'media_not_ready'|'training_day_ending'|'training_daily_budget_used'|'training_child_share_used'|null
                  */
                 'blocked_reason' => $training->enabled ? $trainingRefusal['refusal']->value ?? null : null,
                 /**
@@ -395,6 +400,14 @@ class ChildPetStateResource extends JsonResource
                  * @var string|null
                  */
                 'next_allowed_at' => $training->enabled ? $iso($trainingRefusal['next_allowed_at'] ?? null) : null,
+                /**
+                 * David 2026-10-28 (home first, school locked): every school clip of the pet is
+                 * shown (always true for a pet without school clips). While false the school is
+                 * locked whatever else applies — the app shows the calm »preparing« state.
+                 *
+                 * @var bool
+                 */
+                'media_ready' => $schoolMediaReady,
             ]),
             // M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
             // the 30-minute happy scene. Null for a pet without play (free mutt, legacy, unpaid).

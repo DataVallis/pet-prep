@@ -58,6 +58,16 @@ Schedule::command('media:sweep')
     ->name('sweep-pet-media')
     ->description('Recover pet media slots stuck after a lost job or webhook');
 
+// Hourly (David 2026-10-28, home first — school and games locked until their clips are
+// ready): failed school / game clips (fal error, lost webhook, failed generation) are
+// re-queued — at most 3 claims per slot, 30 min after the failure — so an activity is never
+// locked forever; slots out of retries / needing review are posted to Discord once.
+Schedule::command('media:retry-activity-clips')
+    ->hourlyAt(17)
+    ->withoutOverlapping()
+    ->name('retry-activity-clips')
+    ->description('Re-queue failed school / game clips that keep an activity locked');
+
 // Every 10 min (school smooth playback, David 2026-10-28): ffmpeg-derived school clips
 // (attention / success loops, release = reversed performing — 0 $ AI cost) for stored
 // school phase clips that have none yet or whose source changed; small batches, so

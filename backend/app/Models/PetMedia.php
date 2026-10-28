@@ -187,6 +187,9 @@ class PetMedia extends Model
         'quality_reason',
         'quality_retry_generation',
         'stored_duration_seconds',
+        // David 2026-10-28 (QA #434 M1): automatic retries of the current failure chain + its one alert.
+        'auto_retries',
+        'auto_alerted_at',
     ];
 
     /**
@@ -205,6 +208,8 @@ class PetMedia extends Model
             'quality_retry_generation' => 'integer',
             'cost_usd' => 'float',
             'completed_at' => 'datetime',
+            'auto_retries' => 'integer',
+            'auto_alerted_at' => 'datetime',
         ];
     }
 

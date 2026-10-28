@@ -79,8 +79,9 @@ return [
     // them (MediaEntitlementService::phaseClipsFor — state media version 3, both
     // switches on); others keep the list above. `play` needs its list above too (the
     // cuddles share the stage and play the `playing` loop); `wand` only its phases.
-    // A failed phase clip / pose of the game → the list above again (GameMediaReadiness).
-    // `school` = the school's clips (not a start condition, §13).
+    // David 2026-10-28: a failed phase clip / pose keeps the game LOCKED (never playable without
+    // its clips; ActivityClipRetryService retries it). `school` = the school's clips — since
+    // 2026-10-28 a start condition of training too (422 `media_not_ready`).
     'game_phase_groups' => [
         'play' => ['ball'],
         'wand' => ['wand'],
@@ -130,8 +131,9 @@ return [
         | the school (per command: attention → performing → success) and the games (dog
         | ball: waiting → running → fetching; cat wand: stalking → pouncing → catching),
         | from / to POSE images (Nano Banana Pro Edit of the reference image). Order =
-        | queue order after the transitions: the games first (their readiness gates the
-        | game), then the school (never blocks practice) — QA m1. A group a pet cannot use
+        | queue order after every home item (David 2026-10-28: home first — pose images
+        | right behind the home key images, the clips once no home key image is on its way):
+        | the games first, then the school; both stay locked until their clips are shown. A group a pet cannot use
         | is skipped (school: training on; ball: dog; wand: cat) —
         | MediaEntitlementService::phaseClipsFor(). Remove a group here = it is not made.
         | On / off: the superadmin switch »School & game clips« (`app_settings.phase_clips`).

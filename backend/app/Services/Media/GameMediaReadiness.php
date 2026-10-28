@@ -36,14 +36,15 @@ use Illuminate\Support\Collection;
  *   no phase group, so it keeps the list above only. Every other pet (v1, v2,
  *   free set, a switch off) keeps the list above — a switch off never leaves a
  *   game disabled for clips that will not come.
- * - QA m1: a phase clip of the game — or a pose image it is made from — that
- *   FAILED (any reason) never blocks the game: the game falls back to the list
- *   above (the app shows the phase's pose image for the missing clip, §0 rule 1).
- *   Pending / running ones are waited for (they are queued before the school).
- * - M5-T09: `school` = every school phase clip of the pet (§3: school readiness
- *   = all its clips). Not a start condition — practice works without clips; the
- *   app shows the poses and »Šola se še pripravlja« while they are on their way
- *   (`preparation.school_pending`).
+ * - Home first, games and school locked (David 2026-10-28): the school (`school`
+ *   = every school phase clip, §3) is a START condition like the games — training
+ *   start refuses 422 `media_not_ready` until all its clips are shown. A phase clip
+ *   of the activity that FAILED (or a pose it is made from, or a flagged clip) keeps
+ *   the activity locked — it is never playable without its own animations (this
+ *   replaces the QA m1 fallback to the list above). No dead end: failed pose / phase
+ *   slots are retried automatically (ActivityClipRetryService, hourly, capped) and a
+ *   slot that runs out of retries is reported to the admin (Discord + AI media
+ *   panel, {@see failedClips()}); the admin's Regenerate / »Approve anyway« unlocks it.
  *
  * Pure read; no personal data.
  */
@@ -55,7 +56,7 @@ class GameMediaReadiness
     /** The cat's feather wand. */
     public const WAND = 'wand';
 
-    /** M5-T09: the school (informational — never blocks a session). */
+    /** M5-T09: the school (since 2026-10-28 a start condition of training, like the games). */
     public const SCHOOL = 'school';
 
     public function __construct(
@@ -117,21 +118,14 @@ class GameMediaReadiness
         $classic = array_values(array_unique(array_intersect(array_map('strval', (array) config("media.game_clips.{$game}", [])), $entitled)));
 
         // M5-T10: the game's phase clips for a pet that gets them (v3, both switches on).
-        $groups = array_map('strval', (array) config("media.game_phase_groups.{$game}", []));
-        $clips = array_values(array_filter(
-            $this->entitlements->phaseClipsFor($pet),
-            fn (PetPhaseClip $c) => in_array($c->group(), $groups, true),
-        ));
+        $clips = $this->phaseClipsOf($pet, $game);
 
         if ($clips === []) {
             return $game === self::SCHOOL ? [] : $classic;
         }
 
-        // QA m1: a failed phase clip / pose of the game → the older rules (never blocked forever).
-        if ($game !== self::SCHOOL && $this->phaseFailed($pet, $clips, $slots)) {
-            return $classic;
-        }
-
+        // David 2026-10-28: a failed phase clip / pose no longer falls back to the list above —
+        // the activity stays locked (missing() reports the clip) until it is made.
         $phases = array_map(fn (PetPhaseClip $c) => $c->value, $clips);
 
         return match ($game) {
@@ -142,12 +136,59 @@ class GameMediaReadiness
     }
 
     /**
-     * QA m1: has one of these phase clips — or a pose image one of them is made from — failed?
+     * The activities a pet with phase clips has (school / play / wand), each with what
+     * keeps it locked now — for the admin panel and the retry service. Empty for a pet
+     * without phase clips.
+     *
+     * @param  Collection<int, PetMedia>|null  $slots
+     * @return array<string, array{ready: bool, missing: list<string>, failed: list<string>}>
+     */
+    public function activities(Pet $pet, ?Collection $slots = null): array
+    {
+        $slots ??= $pet->relationLoaded('media') ? $pet->getRelation('media') : $pet->media()->get();
+        $out = [];
+        // QA #434 M4a: without a stored reference image no pose / phase clip can be made.
+        $image = $slots->first(fn (PetMedia $m) => $m->isImage());
+        $imageFailed = $image !== null && $image->status === PetMedia::STATUS_FAILED && ! $image->isServable();
+
+        foreach ([self::SCHOOL, self::PLAY, self::WAND] as $game) {
+            $clips = $this->phaseClipsOf($pet, $game);
+            if ($clips === []) {
+                continue;
+            }
+            $missing = $this->missing($pet, $game, $slots);
+            $failed = $this->failedClips($pet, $clips, $slots);
+            $out[$game] = ['ready' => $missing === [], 'missing' => $missing, 'failed' => $missing !== [] && $imageFailed ? ['reference', ...$failed] : $failed];
+        }
+
+        return $out;
+    }
+
+    /**
+     * The phase clips of $game the pet gets (empty without phase clips / for a group it
+     * cannot use).
+     *
+     * @return list<PetPhaseClip>
+     */
+    public function phaseClipsOf(Pet $pet, string $game): array
+    {
+        $groups = array_map('strval', (array) config("media.game_phase_groups.{$game}", []));
+
+        return array_values(array_filter(
+            $this->entitlements->phaseClipsFor($pet),
+            fn (PetPhaseClip $c) => in_array($c->group(), $groups, true),
+        ));
+    }
+
+    /**
+     * The phase clips / poses of these clips that FAILED without a shown older file, or
+     * are flagged by the quality check (values: phase clip / pose names).
      *
      * @param  list<PetPhaseClip>  $clips
      * @param  Collection<int, PetMedia>|null  $slots
+     * @return list<string>
      */
-    private function phaseFailed(Pet $pet, array $clips, ?Collection $slots): bool
+    public function failedClips(Pet $pet, array $clips, ?Collection $slots = null): array
     {
         $slots ??= $pet->relationLoaded('media') ? $pet->getRelation('media') : $pet->media()->get();
         $values = array_map(fn (PetPhaseClip $c) => $c->value, $clips);
@@ -160,9 +201,12 @@ class GameMediaReadiness
             }
         }
 
-        // Quality check (David 2026-10-23): a »Needs review« clip without an old file (failed,
-        // not servable) or a flagged one (not shown) counts as failed → the older rules.
-        return $slots->contains(fn (PetMedia $m) => (($m->status === PetMedia::STATUS_FAILED && ! $m->isServable()) || $m->quality === PetMedia::QUALITY_FLAGGED)
-            && (($m->isPhase() && in_array($m->state, $values, true)) || ($m->isPose() && in_array($m->state, $poses, true))));
+        return $slots
+            ->filter(fn (PetMedia $m) => (($m->status === PetMedia::STATUS_FAILED && ! $m->isServable()) || $m->quality === PetMedia::QUALITY_FLAGGED)
+                && (($m->isPhase() && in_array($m->state, $values, true)) || ($m->isPose() && in_array($m->state, $poses, true))))
+            ->map(fn (PetMedia $m) => (string) $m->state)
+            ->unique()
+            ->values()
+            ->all();
     }
 }

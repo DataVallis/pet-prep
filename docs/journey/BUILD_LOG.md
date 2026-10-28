@@ -8,6 +8,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-28 — Najprej domači zaslon, šola in igre počakajo na svoje posnetke
+
+**Kaj:** po ustvarjanju novega ljubljenčka strežnik najprej naredi vse, kar otrok vidi na glavnem zaslonu (stoji, spi, je, igra se …, prehod v spanje), slike poz za šolo in igre začne delati takoj za tem, posnetke iger in šole pa odda šele, ko je domači nabor oddan. Šola in igre so do takrat **zaklenjene** z mirnim »Šola se še pripravlja — to lahko traja nekaj minut«; strežnik začetka vaje ne dovoli niti starejši aplikaciji. Če posnetek ne uspe, dejavnost ostane zaklenjena, strežnik ga vsako uro sam ponovi (največ 3 poskusi) in nato obvesti skrbnika.
+**Zakaj:** David je v produkciji videl, da je priprava trajala 15+ minut in da je šola že delovala brez animacij (samo s pozami). Njegova odločitev: domači zaslon najprej, šola in igre nikoli brez svojih animacij. Vnaprejšnje generiranje vseh barv pasem zaenkrat ne. Isti nabor posnetkov, brez dodatnega stroška.
+**Kako povedati:** 🧒 »Ko je šola pripravljena, se gumb sam prižge.« · 👩 »Aplikacija najprej pripravi tvojega ljubljenčka, šola in igre se odklenejo, ko so nastavljene — nikoli napol.« · 🛠 vrstni red brez dodatnih klicev AI, strežnik je edini vir resnice (422 `media_not_ready`). *Na telefonu še ni preverjeno.*
+
+---
+
 ## 2026-10-28 — Šola: 7 minut na dan
 
 **Kaj:** dnevni čas za šolo je zdaj 7 minut na psa (prej 5), za vse pasme. **Zakaj:** vaja ima zdaj 6 ukazov in traja približno minuto; s 5 minutami bi otrok naredil le 4–5 vaj, s 7 spet približno 6 (dva otroka po približno 3). **Kako povedati:** 👩 »Kuža lahko vadi do 7 minut na dan — po priporočilih (5–10 minut vaj, mladiček do 15 minut na dan).«

@@ -115,7 +115,8 @@ class ChildPetController extends Controller
      * when the dog obeys, the praise window; offsets in ms since start).
      * 422 training_not_available | training_pet_sleeping (quiet hours, M5-T02;
      * next_allowed_at = when the pet wakes) | training_session_active (next_allowed_at
-     * = its expiry) | training_day_ending (session + TTL would cross the
+     * = its expiry) | media_not_ready (the school's clips are not all shown yet —
+     * David 2026-10-28, school locked) | training_day_ending (session + TTL would cross the
      * family-local midnight; next_allowed_at = midnight) |
      * training_daily_budget_used (next_allowed_at = local midnight) |
      * training_child_share_used (this child's fair share — budget / children
