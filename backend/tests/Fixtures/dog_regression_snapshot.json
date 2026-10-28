@@ -613,7 +613,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-19",
@@ -625,7 +627,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-20",
@@ -637,7 +641,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-21",
@@ -649,7 +655,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-22",
@@ -661,7 +669,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-23",
@@ -673,7 +683,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-24",
@@ -685,7 +697,9 @@
                             "pending": 2,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         }
                     ],
                     "progress": {
@@ -822,7 +836,21 @@
                             "payments_enforced": true,
                             "display_type": "free"
                         },
-                        "media_status": "disabled"
+                        "media_status": "disabled",
+                        "preparation": {
+                            "ready": true,
+                            "pending": [],
+                            "preparing": false,
+                            "running": false,
+                            "ready_at": null,
+                            "announce": false,
+                            "school_pending": false
+                        },
+                        "birthday": {
+                            "date": "2027-01-02",
+                            "is_today": false,
+                            "celebrated": false
+                        }
                     },
                     "lock": {
                         "is_locked": false,
@@ -874,13 +902,20 @@
                         "last_watered_at": null,
                         "can_water": false,
                         "next_allowed_at": null,
+                        "shown_at": null,
                         "refill_below": 60
                     },
                     "steps": {
                         "steps_today": 0,
                         "my_steps_today": 0,
+                        "my_device_steps_today": 0,
                         "goal": 2000,
-                        "energy_level": 100
+                        "energy_level": 100,
+                        "adapted_mode": false
+                    },
+                    "settings": {
+                        "media_display": "video",
+                        "easy_gestures": false
                     },
                     "contract": {
                         "signed": false,
@@ -934,12 +969,12 @@
                         ],
                         "today_done": true,
                         "session": null,
-                        "session_seconds": 50,
+                        "session_seconds": 58,
                         "daily_budget_seconds": 300,
-                        "daily_budget_left_seconds": 250,
+                        "daily_budget_left_seconds": 253,
                         "children_sharing": 1,
                         "my_share_seconds": 300,
-                        "my_seconds_left": 250,
+                        "my_seconds_left": 253,
                         "can_start": false,
                         "blocked_reason": "training_pet_sleeping",
                         "next_allowed_at": "2026-10-25T07:00:00+01:00"
@@ -950,7 +985,78 @@
                     "grooming": null,
                     "scratching": null,
                     "certificate": null,
-                    "socialisation": null
+                    "socialisation": null,
+                    "care_tasks": [],
+                    "walk_heat": null,
+                    "care_guide": {
+                        "species": "dog",
+                        "life_stage": "puppy",
+                        "meals": {
+                            "per_day": 4,
+                            "by_child": 3,
+                            "by_parent": 1,
+                            "windows": [
+                                {
+                                    "start": "07:00",
+                                    "end": "09:00",
+                                    "parent_covered": false
+                                },
+                                {
+                                    "start": "11:00",
+                                    "end": "13:00",
+                                    "parent_covered": true
+                                },
+                                {
+                                    "start": "15:00",
+                                    "end": "17:00",
+                                    "parent_covered": false
+                                },
+                                {
+                                    "start": "19:00",
+                                    "end": "21:00",
+                                    "parent_covered": false
+                                }
+                            ]
+                        },
+                        "steps": {
+                            "goal": 2000,
+                            "exercise_minutes": 20
+                        },
+                        "take_out": {
+                            "hold_hours": 2
+                        },
+                        "water": {
+                            "refill_below": 60,
+                            "min_gap_minutes": 180
+                        },
+                        "grooming": null,
+                        "sleep": {
+                            "night": {
+                                "start": "21:00",
+                                "end": "07:00"
+                            },
+                            "school": {
+                                "start": "08:00",
+                                "end": "13:00"
+                            }
+                        },
+                        "play": null,
+                        "litter": null,
+                        "scratching": false,
+                        "clean_within_hours": 2,
+                        "digestion_gap_minutes": null,
+                        "care_tasks": [],
+                        "walk_heat": null
+                    },
+                    "wishes": {
+                        "open_count": 0,
+                        "items": [],
+                        "treats": {
+                            "left": 0,
+                            "given_today": 0,
+                            "daily_limit": 2
+                        }
+                    }
                 }
             },
             "collie": {
@@ -1169,7 +1275,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-19",
@@ -1181,7 +1289,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-20",
@@ -1193,7 +1303,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-21",
@@ -1205,7 +1317,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-22",
@@ -1217,7 +1331,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-23",
@@ -1229,7 +1345,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-24",
@@ -1241,7 +1359,9 @@
                             "pending": 1,
                             "walk_steps": 4000,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         }
                     ],
                     "progress": {
@@ -1362,7 +1482,17 @@
                             "payments_enforced": true,
                             "display_type": "challenge"
                         },
-                        "media_status": "disabled"
+                        "media_status": "disabled",
+                        "preparation": {
+                            "ready": true,
+                            "pending": [],
+                            "preparing": false,
+                            "running": false,
+                            "ready_at": null,
+                            "announce": false,
+                            "school_pending": false
+                        },
+                        "birthday": null
                     },
                     "lock": {
                         "is_locked": false,
@@ -1406,13 +1536,20 @@
                         "last_watered_at": "2026-10-24T20:00:00+02:00",
                         "can_water": false,
                         "next_allowed_at": "2026-10-25T03:21:00+01:00",
+                        "shown_at": "2026-10-25T06:00:00+01:00",
                         "refill_below": 60
                     },
                     "steps": {
                         "steps_today": 4000,
                         "my_steps_today": 4000,
+                        "my_device_steps_today": 4000,
                         "goal": 10000,
-                        "energy_level": 100
+                        "energy_level": 100,
+                        "adapted_mode": false
+                    },
+                    "settings": {
+                        "media_display": "video",
+                        "easy_gestures": false
                     },
                     "contract": {
                         "signed": false,
@@ -1430,7 +1567,7 @@
                         "commands": [],
                         "today_done": false,
                         "session": null,
-                        "session_seconds": 50,
+                        "session_seconds": 58,
                         "daily_budget_seconds": 0,
                         "daily_budget_left_seconds": 0,
                         "children_sharing": 0,
@@ -1446,7 +1583,63 @@
                     "grooming": null,
                     "scratching": null,
                     "certificate": null,
-                    "socialisation": null
+                    "socialisation": null,
+                    "care_tasks": [],
+                    "walk_heat": null,
+                    "care_guide": {
+                        "species": "dog",
+                        "life_stage": null,
+                        "meals": {
+                            "per_day": 2,
+                            "by_child": 2,
+                            "by_parent": 0,
+                            "windows": [
+                                {
+                                    "start": "06:00",
+                                    "end": "10:00",
+                                    "parent_covered": false
+                                },
+                                {
+                                    "start": "17:00",
+                                    "end": "21:00",
+                                    "parent_covered": false
+                                }
+                            ]
+                        },
+                        "steps": {
+                            "goal": 10000,
+                            "exercise_minutes": null
+                        },
+                        "take_out": null,
+                        "water": {
+                            "refill_below": 60,
+                            "min_gap_minutes": 180
+                        },
+                        "grooming": null,
+                        "sleep": {
+                            "night": {
+                                "start": "22:00",
+                                "end": "06:00"
+                            },
+                            "school": null
+                        },
+                        "play": null,
+                        "litter": null,
+                        "scratching": false,
+                        "clean_within_hours": 2,
+                        "digestion_gap_minutes": null,
+                        "care_tasks": [],
+                        "walk_heat": null
+                    },
+                    "wishes": {
+                        "open_count": 0,
+                        "items": [],
+                        "treats": {
+                            "left": 0,
+                            "given_today": 0,
+                            "daily_limit": 2
+                        }
+                    }
                 }
             }
         },
@@ -2063,7 +2256,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-20",
@@ -2075,7 +2270,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-21",
@@ -2087,7 +2284,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-22",
@@ -2099,7 +2298,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-23",
@@ -2111,7 +2312,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-24",
@@ -2123,7 +2326,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-25",
@@ -2135,7 +2340,9 @@
                             "pending": 2,
                             "walk_steps": 9000,
                             "walk_goal": 2000,
-                            "walk_done": true
+                            "walk_done": true,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         }
                     ],
                     "progress": {
@@ -2317,7 +2524,21 @@
                             "payments_enforced": true,
                             "display_type": "free"
                         },
-                        "media_status": "disabled"
+                        "media_status": "disabled",
+                        "preparation": {
+                            "ready": true,
+                            "pending": [],
+                            "preparing": false,
+                            "running": false,
+                            "ready_at": null,
+                            "announce": false,
+                            "school_pending": false
+                        },
+                        "birthday": {
+                            "date": "2027-01-02",
+                            "is_today": false,
+                            "celebrated": false
+                        }
                     },
                     "lock": {
                         "is_locked": false,
@@ -2369,13 +2590,20 @@
                         "last_watered_at": "2026-10-25T12:05:00+01:00",
                         "can_water": false,
                         "next_allowed_at": null,
+                        "shown_at": null,
                         "refill_below": 60
                     },
                     "steps": {
                         "steps_today": 9000,
                         "my_steps_today": 9000,
+                        "my_device_steps_today": 9000,
                         "goal": 2000,
-                        "energy_level": 100
+                        "energy_level": 100,
+                        "adapted_mode": false
+                    },
+                    "settings": {
+                        "media_display": "video",
+                        "easy_gestures": false
                     },
                     "contract": {
                         "signed": false,
@@ -2429,12 +2657,12 @@
                         ],
                         "today_done": true,
                         "session": null,
-                        "session_seconds": 50,
+                        "session_seconds": 58,
                         "daily_budget_seconds": 300,
-                        "daily_budget_left_seconds": 250,
+                        "daily_budget_left_seconds": 254,
                         "children_sharing": 1,
                         "my_share_seconds": 300,
-                        "my_seconds_left": 250,
+                        "my_seconds_left": 254,
                         "can_start": false,
                         "blocked_reason": "training_pet_sleeping",
                         "next_allowed_at": "2026-10-26T07:00:00+01:00"
@@ -2445,7 +2673,78 @@
                     "grooming": null,
                     "scratching": null,
                     "certificate": null,
-                    "socialisation": null
+                    "socialisation": null,
+                    "care_tasks": [],
+                    "walk_heat": null,
+                    "care_guide": {
+                        "species": "dog",
+                        "life_stage": "puppy",
+                        "meals": {
+                            "per_day": 4,
+                            "by_child": 3,
+                            "by_parent": 1,
+                            "windows": [
+                                {
+                                    "start": "07:00",
+                                    "end": "09:00",
+                                    "parent_covered": false
+                                },
+                                {
+                                    "start": "11:00",
+                                    "end": "13:00",
+                                    "parent_covered": true
+                                },
+                                {
+                                    "start": "15:00",
+                                    "end": "17:00",
+                                    "parent_covered": false
+                                },
+                                {
+                                    "start": "19:00",
+                                    "end": "21:00",
+                                    "parent_covered": false
+                                }
+                            ]
+                        },
+                        "steps": {
+                            "goal": 2000,
+                            "exercise_minutes": 20
+                        },
+                        "take_out": {
+                            "hold_hours": 2
+                        },
+                        "water": {
+                            "refill_below": 60,
+                            "min_gap_minutes": 180
+                        },
+                        "grooming": null,
+                        "sleep": {
+                            "night": {
+                                "start": "21:00",
+                                "end": "07:00"
+                            },
+                            "school": {
+                                "start": "08:00",
+                                "end": "13:00"
+                            }
+                        },
+                        "play": null,
+                        "litter": null,
+                        "scratching": false,
+                        "clean_within_hours": 2,
+                        "digestion_gap_minutes": null,
+                        "care_tasks": [],
+                        "walk_heat": null
+                    },
+                    "wishes": {
+                        "open_count": 0,
+                        "items": [],
+                        "treats": {
+                            "left": 0,
+                            "given_today": 0,
+                            "daily_limit": 2
+                        }
+                    }
                 }
             },
             "collie": {
@@ -2885,7 +3184,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-20",
@@ -2897,7 +3198,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-21",
@@ -2909,7 +3212,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-22",
@@ -2921,7 +3226,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-23",
@@ -2933,7 +3240,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-24",
@@ -2945,7 +3254,9 @@
                             "pending": 0,
                             "walk_steps": 4000,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-25",
@@ -2957,7 +3268,9 @@
                             "pending": 1,
                             "walk_steps": 20000,
                             "walk_goal": 10000,
-                            "walk_done": true
+                            "walk_done": true,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         }
                     ],
                     "progress": {
@@ -3126,7 +3439,17 @@
                             "payments_enforced": true,
                             "display_type": "challenge"
                         },
-                        "media_status": "disabled"
+                        "media_status": "disabled",
+                        "preparation": {
+                            "ready": true,
+                            "pending": [],
+                            "preparing": false,
+                            "running": false,
+                            "ready_at": null,
+                            "announce": false,
+                            "school_pending": false
+                        },
+                        "birthday": null
                     },
                     "lock": {
                         "is_locked": true,
@@ -3170,13 +3493,20 @@
                         "last_watered_at": "2026-10-25T12:10:00+01:00",
                         "can_water": false,
                         "next_allowed_at": null,
+                        "shown_at": null,
                         "refill_below": 60
                     },
                     "steps": {
                         "steps_today": 20000,
                         "my_steps_today": 20000,
+                        "my_device_steps_today": 20000,
                         "goal": 10000,
-                        "energy_level": 100
+                        "energy_level": 100,
+                        "adapted_mode": false
+                    },
+                    "settings": {
+                        "media_display": "video",
+                        "easy_gestures": false
                     },
                     "contract": {
                         "signed": false,
@@ -3200,7 +3530,7 @@
                         "commands": [],
                         "today_done": false,
                         "session": null,
-                        "session_seconds": 50,
+                        "session_seconds": 58,
                         "daily_budget_seconds": 0,
                         "daily_budget_left_seconds": 0,
                         "children_sharing": 0,
@@ -3216,7 +3546,63 @@
                     "grooming": null,
                     "scratching": null,
                     "certificate": null,
-                    "socialisation": null
+                    "socialisation": null,
+                    "care_tasks": [],
+                    "walk_heat": null,
+                    "care_guide": {
+                        "species": "dog",
+                        "life_stage": null,
+                        "meals": {
+                            "per_day": 2,
+                            "by_child": 2,
+                            "by_parent": 0,
+                            "windows": [
+                                {
+                                    "start": "06:00",
+                                    "end": "10:00",
+                                    "parent_covered": false
+                                },
+                                {
+                                    "start": "17:00",
+                                    "end": "21:00",
+                                    "parent_covered": false
+                                }
+                            ]
+                        },
+                        "steps": {
+                            "goal": 10000,
+                            "exercise_minutes": null
+                        },
+                        "take_out": null,
+                        "water": {
+                            "refill_below": 60,
+                            "min_gap_minutes": 180
+                        },
+                        "grooming": null,
+                        "sleep": {
+                            "night": {
+                                "start": "22:00",
+                                "end": "06:00"
+                            },
+                            "school": null
+                        },
+                        "play": null,
+                        "litter": null,
+                        "scratching": false,
+                        "clean_within_hours": 2,
+                        "digestion_gap_minutes": null,
+                        "care_tasks": [],
+                        "walk_heat": null
+                    },
+                    "wishes": {
+                        "open_count": 0,
+                        "items": [],
+                        "treats": {
+                            "left": 0,
+                            "given_today": 0,
+                            "daily_limit": 2
+                        }
+                    }
                 }
             }
         },
@@ -3964,7 +4350,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-21",
@@ -3976,7 +4364,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-22",
@@ -3988,7 +4378,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-23",
@@ -4000,7 +4392,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-24",
@@ -4012,7 +4406,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-25",
@@ -4024,7 +4420,9 @@
                             "pending": 0,
                             "walk_steps": 9000,
                             "walk_goal": 2000,
-                            "walk_done": true
+                            "walk_done": true,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-26",
@@ -4036,7 +4434,9 @@
                             "pending": 6,
                             "walk_steps": 0,
                             "walk_goal": 2000,
-                            "walk_done": false
+                            "walk_done": false,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         }
                     ],
                     "progress": {
@@ -4226,7 +4626,21 @@
                             "payments_enforced": true,
                             "display_type": "free"
                         },
-                        "media_status": "disabled"
+                        "media_status": "disabled",
+                        "preparation": {
+                            "ready": true,
+                            "pending": [],
+                            "preparing": false,
+                            "running": false,
+                            "ready_at": null,
+                            "announce": false,
+                            "school_pending": false
+                        },
+                        "birthday": {
+                            "date": "2027-01-02",
+                            "is_today": false,
+                            "celebrated": false
+                        }
                     },
                     "lock": {
                         "is_locked": false,
@@ -4278,13 +4692,20 @@
                         "last_watered_at": "2026-10-25T12:05:00+01:00",
                         "can_water": false,
                         "next_allowed_at": null,
+                        "shown_at": null,
                         "refill_below": 60
                     },
                     "steps": {
                         "steps_today": 0,
                         "my_steps_today": 0,
+                        "my_device_steps_today": 0,
                         "goal": 2000,
-                        "energy_level": 0
+                        "energy_level": 0,
+                        "adapted_mode": false
+                    },
+                    "settings": {
+                        "media_display": "video",
+                        "easy_gestures": false
                     },
                     "contract": {
                         "signed": false,
@@ -4338,7 +4759,7 @@
                         ],
                         "today_done": false,
                         "session": null,
-                        "session_seconds": 50,
+                        "session_seconds": 58,
                         "daily_budget_seconds": 300,
                         "daily_budget_left_seconds": 300,
                         "children_sharing": 1,
@@ -4354,7 +4775,78 @@
                     "grooming": null,
                     "scratching": null,
                     "certificate": null,
-                    "socialisation": null
+                    "socialisation": null,
+                    "care_tasks": [],
+                    "walk_heat": null,
+                    "care_guide": {
+                        "species": "dog",
+                        "life_stage": "puppy",
+                        "meals": {
+                            "per_day": 4,
+                            "by_child": 3,
+                            "by_parent": 1,
+                            "windows": [
+                                {
+                                    "start": "07:00",
+                                    "end": "09:00",
+                                    "parent_covered": false
+                                },
+                                {
+                                    "start": "11:00",
+                                    "end": "13:00",
+                                    "parent_covered": true
+                                },
+                                {
+                                    "start": "15:00",
+                                    "end": "17:00",
+                                    "parent_covered": false
+                                },
+                                {
+                                    "start": "19:00",
+                                    "end": "21:00",
+                                    "parent_covered": false
+                                }
+                            ]
+                        },
+                        "steps": {
+                            "goal": 2000,
+                            "exercise_minutes": 20
+                        },
+                        "take_out": {
+                            "hold_hours": 2
+                        },
+                        "water": {
+                            "refill_below": 60,
+                            "min_gap_minutes": 180
+                        },
+                        "grooming": null,
+                        "sleep": {
+                            "night": {
+                                "start": "21:00",
+                                "end": "07:00"
+                            },
+                            "school": {
+                                "start": "08:00",
+                                "end": "13:00"
+                            }
+                        },
+                        "play": null,
+                        "litter": null,
+                        "scratching": false,
+                        "clean_within_hours": 2,
+                        "digestion_gap_minutes": null,
+                        "care_tasks": [],
+                        "walk_heat": null
+                    },
+                    "wishes": {
+                        "open_count": 0,
+                        "items": [],
+                        "treats": {
+                            "left": 0,
+                            "given_today": 0,
+                            "daily_limit": 2
+                        }
+                    }
                 }
             },
             "collie": {
@@ -4866,7 +5358,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-21",
@@ -4878,7 +5372,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-22",
@@ -4890,7 +5386,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-23",
@@ -4902,7 +5400,9 @@
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-24",
@@ -4914,7 +5414,9 @@
                             "pending": 0,
                             "walk_steps": 4000,
                             "walk_goal": null,
-                            "walk_done": null
+                            "walk_done": null,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-25",
@@ -4926,7 +5428,9 @@
                             "pending": 0,
                             "walk_steps": 20000,
                             "walk_goal": 10000,
-                            "walk_done": true
+                            "walk_done": true,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         },
                         {
                             "date": "2026-10-26",
@@ -4938,7 +5442,9 @@
                             "pending": 4,
                             "walk_steps": 0,
                             "walk_goal": 10000,
-                            "walk_done": false
+                            "walk_done": false,
+                            "walk_unit": "steps",
+                            "walk_logged_minutes": 0
                         }
                     ],
                     "progress": {
@@ -5123,7 +5629,17 @@
                             "payments_enforced": true,
                             "display_type": "challenge"
                         },
-                        "media_status": "disabled"
+                        "media_status": "disabled",
+                        "preparation": {
+                            "ready": true,
+                            "pending": [],
+                            "preparing": false,
+                            "running": false,
+                            "ready_at": null,
+                            "announce": false,
+                            "school_pending": false
+                        },
+                        "birthday": null
                     },
                     "lock": {
                         "is_locked": false,
@@ -5170,13 +5686,20 @@
                         "last_watered_at": "2026-10-25T12:10:00+01:00",
                         "can_water": true,
                         "next_allowed_at": null,
+                        "shown_at": null,
                         "refill_below": 60
                     },
                     "steps": {
                         "steps_today": 0,
                         "my_steps_today": 0,
+                        "my_device_steps_today": 0,
                         "goal": 10000,
-                        "energy_level": 0
+                        "energy_level": 0,
+                        "adapted_mode": false
+                    },
+                    "settings": {
+                        "media_display": "video",
+                        "easy_gestures": false
                     },
                     "contract": {
                         "signed": false,
@@ -5194,7 +5717,7 @@
                         "commands": [],
                         "today_done": false,
                         "session": null,
-                        "session_seconds": 50,
+                        "session_seconds": 58,
                         "daily_budget_seconds": 0,
                         "daily_budget_left_seconds": 0,
                         "children_sharing": 0,
@@ -5210,7 +5733,63 @@
                     "grooming": null,
                     "scratching": null,
                     "certificate": null,
-                    "socialisation": null
+                    "socialisation": null,
+                    "care_tasks": [],
+                    "walk_heat": null,
+                    "care_guide": {
+                        "species": "dog",
+                        "life_stage": null,
+                        "meals": {
+                            "per_day": 2,
+                            "by_child": 2,
+                            "by_parent": 0,
+                            "windows": [
+                                {
+                                    "start": "06:00",
+                                    "end": "10:00",
+                                    "parent_covered": false
+                                },
+                                {
+                                    "start": "17:00",
+                                    "end": "21:00",
+                                    "parent_covered": false
+                                }
+                            ]
+                        },
+                        "steps": {
+                            "goal": 10000,
+                            "exercise_minutes": null
+                        },
+                        "take_out": null,
+                        "water": {
+                            "refill_below": 60,
+                            "min_gap_minutes": 180
+                        },
+                        "grooming": null,
+                        "sleep": {
+                            "night": {
+                                "start": "22:00",
+                                "end": "06:00"
+                            },
+                            "school": null
+                        },
+                        "play": null,
+                        "litter": null,
+                        "scratching": false,
+                        "clean_within_hours": 2,
+                        "digestion_gap_minutes": null,
+                        "care_tasks": [],
+                        "walk_heat": null
+                    },
+                    "wishes": {
+                        "open_count": 0,
+                        "items": [],
+                        "treats": {
+                            "left": 0,
+                            "given_today": 0,
+                            "daily_limit": 2
+                        }
+                    }
                 }
             }
         }

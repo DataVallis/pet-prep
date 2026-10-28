@@ -11,6 +11,7 @@ use App\Models\PushNotification;
 use App\Models\User;
 use App\Services\CareScoreService;
 use App\Services\RoutineLedgerService;
+use App\Services\TrainingService;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Queue;
@@ -36,7 +37,8 @@ use Illuminate\Support\Facades\Queue;
 | Randomness is kept out: random poops / chewing are switched off (the
 | puppy's bladder clock is deterministic), the mutt challenge shows as free
 | and the collie is legacy (no play invitations), training finishes without
-| taps (no progress, the routine still counts).
+| taps (no progress, the routine still counts); the training schedule is drawn
+| from a fixed seed (`$scheduleSeed`, 2026-10-28 — session lengths vary).
 */
 
 const DRS_FIXTURE = __DIR__.'/../Fixtures/dog_regression_snapshot.json';
@@ -45,6 +47,9 @@ beforeEach(function () {
     seedLifeStageData();
     config(['push.enabled' => true]);
     Queue::fake();
+    // School smooth playback (2026-10-28): session lengths depend on the drawn schedule — pin it.
+    app()->when(TrainingService::class)->needs('$scheduleSeed')->give('drs-schedule');
+    app()->forgetInstance(TrainingService::class);
 });
 
 afterEach(function () {

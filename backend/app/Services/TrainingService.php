@@ -169,6 +169,9 @@ class TrainingService
         private readonly RoutineLedgerService $ledger,
         private readonly PetSleepService $sleep,
         private ?string $seedSalt = null,
+        // Tests only (DogRegressionSnapshotTest): a fixed seed makes the schedule reproducible
+        // (per start instant — pet ids differ between test runs). Null in production = the secure RNG.
+        private ?string $scheduleSeed = null,
     ) {
         $this->seedSalt ??= (string) config('app.key');
     }
@@ -606,7 +609,10 @@ class TrainingService
         $progress = $this->progressOf($pet, $command);
         // School smooth playback (2026-10-28): timed by the pet's stored clip lengths.
         $timing = $this->clipTimings($pet)[$command->value];
-        $schedule = $this->schedule($progress, new Randomizer, $timing['performing_ms'], $timing['release_ms']);
+        $rng = $this->scheduleSeed === null
+            ? new Randomizer
+            : new Randomizer(new Xoshiro256StarStar(hash('sha256', $this->scheduleSeed.'|schedule|'.$now->getTimestamp(), true)));
+        $schedule = $this->schedule($progress, $rng, $timing['performing_ms'], $timing['release_ms']);
         $durationMs = $schedule['duration_ms'];
         $endsAt = $now->addMilliseconds($durationMs);
 
