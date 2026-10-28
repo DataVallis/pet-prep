@@ -457,6 +457,7 @@ const SPECIES = [
       { id: 'russell_terrier', synonyms: { en: ['Russell Terrier', 'Jack Russell', 'JRT'], sl: ['jack russell', 'jack rasel terier', 'džek rasel'] } },
       { id: 'bullmastiff', synonyms: { en: ['Bull Mastiff', "Gamekeeper's Night Dog"], sl: ['bulmastif', 'bul mastif'] } },
       { id: 'chinese_crested', synonyms: { en: ['Chinese Crested Dog', 'Crested', 'Hairless', 'Powder Puff'], sl: ['kitajski čopasti pes', 'kitajski copasti pes', 'kitajski goli pes'] } },
+      { id: 'nova_scotia_duck_tolling_retriever', synonyms: { en: ['Toller', 'Nova Scotia Retriever', 'Duck Tolling Retriever', 'NSDTR'], sl: ['novoškotski prinašalec', 'novoskotski prinasalec', 'toller', 'novoškotski retriver'] } },
     ],
   },
   {
@@ -1989,6 +1990,30 @@ const DOG_FACTS = {
       ['pra_inherited_blindness', 'health.pra'],
     ],
   },
+  // M5-R10-73. Height + weight = FCI 312 by sex (S577), lifespan = McMillan 2024 median 13.2 y via the Dogs Trust table
+  // (S123) + the PetMD span 12–14 y (S579), exercise = RKC 'Up to 1 hour per day' (S578), coat / grooming / shedding = RKC
+  // key facts (S578). FCI origin Canada (CA). Not exported: lifespan.rkc ('Under 10 years' — conflicts with the McMillan
+  // median and PetMD, would mislead; open for David), lifespan.senior_from (derived), adult_weight.alternatives (PetMD) /
+  // salt_category (our assignment), health.breed_watch (Category 1, background), suitability.petmd_ears / akc_grooming
+  // (care text, research only).
+  nova_scotia_duck_tolling_retriever: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.petmd', 'span']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    // Not ranked by Coren (S35): no coren_rank fact.
+    coren_rank: false,
+    health: [
+      ['hip_elbow_dysplasia', 'health.hip_elbow_dysplasia'],
+      ['pra_inherited_blindness', 'health.pra'],
+      ['degenerative_myelopathy', 'health.degenerative_myelopathy'],
+      ['addisons_disease', 'health.addisons'],
+    ],
+  },
 
 
 };
@@ -2588,6 +2613,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.chinese_crested.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.chinese_crested.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.chinese_crested.exercise_minutes_senior',
+  },
+  nova_scotia_duck_tolling_retriever: {
+    adult_minutes: ['proposed_game_parameters.nova_scotia_duck_tolling_retriever.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.nova_scotia_duck_tolling_retriever.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.nova_scotia_duck_tolling_retriever.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.nova_scotia_duck_tolling_retriever.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.nova_scotia_duck_tolling_retriever.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.nova_scotia_duck_tolling_retriever.exercise_minutes_senior',
   },
 
 

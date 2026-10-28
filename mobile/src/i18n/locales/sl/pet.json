@@ -172,6 +172,7 @@
       "russell_terrier": "Del 12-tedenskega izziva · česanje 1× na teden",
       "bullmastiff": "Del 12-tedenskega izziva · česanje 1× na teden",
       "chinese_crested": "Del 12-tedenskega izziva · česanje 1× na teden",
+      "nova_scotia_duck_tolling_retriever": "Del 12-tedenskega izziva · česanje 2× na teden",
       "domestic_cat": "Kratka dlaka · brezplačna",
       "maine_coon": "Dolga dlaka · česanje 3× na teden",
       "british_shorthair": "Kratka, gosta dlaka · česanje 1× na teden",
@@ -473,6 +474,12 @@
         "young": "2 obroka na dan; sprehod 3.000 korakov na dan (kot odrasel pes).",
         "adult": "2 obroka na dan; sprehod 3.000 korakov na dan.",
         "senior": "2 obroka na dan; krajši sprehod — 2.300 korakov na dan."
+      },
+      "nova_scotia_duck_tolling_retriever": {
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 6.000 pri 6 mesecih.",
+        "young": "2 obroka na dan; sprehod 6.000 korakov na dan (kot odrasel pes).",
+        "adult": "2 obroka na dan; sprehod 6.000 korakov na dan.",
+        "senior": "2 obroka na dan; krajši sprehod — 4.500 korakov na dan."
       },
       "cardigan_welsh_corgi": {
         "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 6.000 pri 6 mesecih.",

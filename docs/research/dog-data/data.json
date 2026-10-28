@@ -37755,6 +37755,487 @@
       }
     }
   },
+  "nova_scotia_duck_tolling_retriever": {
+    "_note": "Added 2026-10-28 (M5-R10-73, unattended run — appended after the Chinese Crested: AKC 2024 No. 69 'Nova Scotia Duck Tolling Retriever', S174 full-list table fetched 2026-10-28). Quotes as returned by the web-fetch tool on 2026-10-28 (the RKC page was returned as key facts and test names only — the tool refused to copy longer RKC passages; those are paraphrased in notes and marked as such). Sources S576–S580 (reused S10, S11, S14, S24, S35, S45, S92, S123, S174). No health percentages anywhere. Identity from the FCI nomenclature (S576, No. 312, Canada); FCI-Standard N° 312 (S577) gives height and weight guidelines by sex. RKC Breeds A–Z page (S578): key facts, Breed Watch Category 1 and the health tests. No PDSA, Woodgreen or Dogs Trust breed page found. Lifespan: McMillan 2024 via the Dogs Trust breed table (S123, row 'Nova Scotia Duck Tolling Retriever 13.2') — runbook first choice; the RKC key fact 'Lifespan: Under 10 years' (S578) conflicts with it and with PetMD 12–14 y (S579) → research only, no shorter_lifespan chip (Akita precedent; open for David). Names: FCI / RKC / AKC 'Nova Scotia Duck Tolling Retriever' (RKC lists it as 'Retriever (Nova Scotia Duck Tolling)'), nickname 'Toller'; Slovenian »novoškotski prinašalec« — no KZS page read, open for David.",
+    "identity": {
+      "value": "FCI No. 312, Group 8 Section 1 (Retrievers), Canada",
+      "unit": "—",
+      "source_id": "S576",
+      "quote": "NOVA SCOTIA DUCK TOLLING RETRIEVER",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S576, as returned): name 'NOVA SCOTIA DUCK TOLLING RETRIEVER', number 312, group 'n°8 - Retrievers - Flushing Dogs - Water Dogs', section 'Retrievers' (section 1), country of origin 'CANADA', subject to a working trial, definitive acceptance 11/30/1981. FCI-Standard N° 312 (S577): 'ORIGIN: Canada.' Canada (CA) is already in FCI_ORIGINS (Newfoundland)."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S578",
+      "quote": "Size: Medium",
+      "confidence": "high",
+      "notes": "RKC breed page key fact (S578). FCI 17–23 kg (S577) = 37–51 lb → 'Medium (24–59 pounds)' of S10 for growth."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            48,
+            51
+          ],
+          "female": [
+            45,
+            48
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S577",
+        "quote": "Ideal height for males over 18 months is 19-20 ins. (48-51 cm);",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 312 (S577); 'females over 18 months 18-19 ins. (45-48 cm).' PetMD (S579) 'standing 18–20 inches tall'; AKC (S580) 'These retrievers stand between 18 and 19 inches tall.'"
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            20,
+            23
+          ],
+          "female": [
+            17,
+            20
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S577",
+        "quote": "Guidelines: 45-51 lbs. (20-23 kg) for adult males; bitches 37-43 lbs. (17-20 kg).",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 312 (S577), weight guidelines by sex → the game range (adult_weight_kg).",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                15.9,
+                22.7
+              ],
+              "female": [
+                15.9,
+                22.7
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S579",
+            "quote": "standing 18–20 inches tall and weighing 35–50 pounds.",
+            "confidence": "medium",
+            "notes": "PetMD (S579): 35–50 lb = 15.9–22.7 kg, both sexes."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "IV (15–<30 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): FCI 17–23 kg (both sexes) = band IV '15–<30'. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific: FCI 17–23 kg (≈ 37–51 lb) → Medium."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Nova Scotia Duck Tolling Retriever growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 13.2,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": "Nova Scotia Duck Tolling Retriever 13.2 12.2 - NA 286 47",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024 (Sci Rep) data as tabled by Dogs Trust (S123, as returned): median 13.2 y (95 % CI 12.2–NA), 286 dogs, 47 deceased. Runbook first choice (McMillan 2024). Small number of deaths — background for the senior boundary only, never shown as a statistic."
+      },
+      "rkc": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S578",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "medium",
+        "notes": "RKC breed page key fact (S578, returned three times on 2026-10-28). Conflicts with the McMillan 2024 median 13.2 y (S123) and PetMD 12–14 y (S579) → not exported and no shorter_lifespan chip (conflicting sources; Akita precedent) — open for David."
+      },
+      "petmd": {
+        "value": "12–14",
+        "unit": "years",
+        "source_id": "S579",
+        "quote": "live an average of 12–14 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S579, fragment as returned). Exported as the span next to the median."
+      },
+      "senior_from": {
+        "value": 9.9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 13.2 y (McMillan 2024 via S123) → 0.75 × 13.2 = 9.9 y = 118.8 → 119 months. Not chosen: 108 (PetMD lower bound 12 y, S579); 84 (Dogs Trust > 7 y, S14). The RKC 'Under 10 years' has no lower bound (and conflicts).",
+        "derived_from": [
+          "S11",
+          "S123"
+        ],
+        "months": 119,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S578",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S578), runbook first choice → 60 min. PetMD (S579): 'daily exercise is important to maintain their physical and mental health.' (no number); AKC (S580): 'Tollers require lots of physical exercise and mental stimulation.' (no number).",
+        "alternatives": []
+      },
+      "energy": {
+        "value": "needs lots of physical exercise and mental stimulation",
+        "unit": "—",
+        "source_id": "S580",
+        "quote": "Tollers require lots of physical exercise and mental stimulation.",
+        "confidence": "high",
+        "notes": "AKC (S580). Basis of needs_mental_stimulation; with the RKC 'family companion for the active household' (paraphrase, S578) basis of active_family."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "highly intelligent, easy to train, great endurance",
+        "unit": "—",
+        "source_id": "S577",
+        "quote": "The Toller is highly intelligent, easy to train and has great endurance.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 312 (S577), behaviour / temperament; 'A strong and able swimmer, he is a natural and tenacious retriever on land and from water' (as returned). AKC (S580): 'Tollers can be a more difficult breed to train.' and most respond to 'positive reinforcement-based training methods' (fragment)."
+      },
+      "family": {
+        "value": "loyal and affectionate family dogs",
+        "unit": "—",
+        "source_id": "S579",
+        "quote": "Loyal and affectionate family dogs.",
+        "confidence": "medium",
+        "notes": "PetMD (S579, fragment as returned). RKC (S578, paraphrase): an ideal and enthusiastic family companion for the active household. Basis of family_pet and active_family."
+      },
+      "children": {
+        "value": "tend to be good with children (who understand how to interact with dogs)",
+        "unit": "—",
+        "source_id": "S580",
+        "quote": "Tollers are highly affectionate, and tend to be good with children.",
+        "confidence": "high",
+        "notes": "AKC (S580). PetMD (S579): Tollers 'do well with children who understand how to interact with dogs' (fragment) — caveat kept with the children chip; never small_children."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific time-alone statement found → no needs_company / often_alone."
+      },
+      "other_pets": {
+        "value": "may have a high prey drive around smaller animals",
+        "unit": "—",
+        "source_id": "S580",
+        "quote": "They may also have a high prey drive around smaller animals.",
+        "confidence": "high",
+        "notes": "AKC (S580). PetMD (S579): 'smaller animals such as cats can sometimes trigger their prey drive' (fragment). Basis of chases_small_pets (a named high prey drive); no other_pets chip."
+      },
+      "socialisation": {
+        "value": "early socialisation and puppy training courses highly recommended",
+        "unit": "—",
+        "source_id": "S580",
+        "quote": "Like with any breed, early socialization and puppy training courses are highly recommended.",
+        "confidence": "high",
+        "notes": "AKC (S580). A need (runbook M5-R17) → proposed_game_parameters.nova_scotia_duck_tolling_retriever.socialisation (DOG_SOCIALISATION row, AKC quote)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No explicit chewing statement → no chews_when_bored."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "PetMD (S579) only 'tasty treat as a reward' in training (fragment) — no weight statement → no food_motivated_weight."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S578) → no welfare chip; not flat-faced → BVA marketing rule (S92) does not apply. Conditions from PetMD (S579) and the RKC health tests (S578).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1",
+        "unit": "—",
+        "source_id": "S578",
+        "quote": "Category 1",
+        "confidence": "high",
+        "notes": "RKC breed page (S578): Breed Watch Category 1 — no breed-specific points of concern (paraphrase). Background only."
+      },
+      "hip_elbow_dysplasia": {
+        "value": "hip and elbow dysplasia",
+        "unit": "—",
+        "source_id": "S579",
+        "quote": "bones of the hip or elbow joints do not align appropriately.",
+        "confidence": "medium",
+        "notes": "PetMD (S579, fragment as returned). RKC best-practice hip and elbow schemes (S578). Register health key hip_elbow_dysplasia."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy (inherited blindness)",
+        "unit": "—",
+        "source_id": "S579",
+        "quote": "Progressive retinal atrophy (PRA) is a group of degenerative diseases that affects the retina.",
+        "confidence": "high",
+        "notes": "PetMD (S579). RKC minimum DNA test prcd-PRA (S578). Register health key pra_inherited_blindness."
+      },
+      "degenerative_myelopathy": {
+        "value": "degenerative myelopathy (spinal cord)",
+        "unit": "—",
+        "source_id": "S579",
+        "quote": "Degenerative myelopathy (DM) is a progressive condition affecting the spinal cord in dogs.",
+        "confidence": "high",
+        "notes": "PetMD (S579). RKC minimum DNA test DM (S578). Register health key degenerative_myelopathy."
+      },
+      "addisons": {
+        "value": "Addison's disease (adrenal glands)",
+        "unit": "—",
+        "source_id": "S579",
+        "quote": "the body's immune system destroys the adrenal glands.",
+        "confidence": "medium",
+        "notes": "PetMD (S579, fragment as returned) on Addison's disease; RKC best-practice DNA test for juvenile Addison's disease (JADD, S578). Register health key addisons_disease."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not ranked: the Wikipedia table of Coren's ranking (S35, checked 2026-10-28) lists no 'Nova Scotia Duck Tolling Retriever' / 'Toller' (retrievers listed: Golden 4, Labrador 7, Flat-Coated 18, Chesapeake Bay 27, Curly-Coated 41). Runbook rule: unranked → 1.0."
+      },
+      "coren_tier": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Unranked (S35)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.nova_scotia_duck_tolling_retriever.learning_multiplier (1.0, runbook rule: unranked).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "medium-sized, powerful, compact, balanced, well-muscled; medium to heavy bone, agile and alert",
+        "unit": "—",
+        "source_id": "S577",
+        "quote": "The Toller is a medium-sized, powerful, compact, balanced, well-muscled dog;",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 312 (S577); 'medium to heavy in bone, with a high degree of agility, alertness and determination.'"
+      },
+      "colours": {
+        "value": [
+          "red",
+          "orange"
+        ],
+        "unit": "list",
+        "source_id": "S577",
+        "quote": "Colour is various shades of red or orange with lighter featherings and underside of tail,",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 312 (S577); 'and usually at least one of the following white markings : tip of tail, feet (not extending beyond the pasterns),' 'chest and blaze.' 'A dog of otherwise high quality is not to be penalized for lack of white.' Disqualifying: 'Silvery coat, grey in coat, black areas in coat.', 'Any colour other than red or orange shades.', 'White on shoulders, around ears, on back of neck, across back or flanks.' → red or orange, with or without white on the tail tip, feet, chest and blaze. Never black, grey, silver, merle or white patches on the body."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Red with white markings first with the highest weight (the portrait default), then orange with white markings, then red without white."
+      },
+      "coat": {
+        "value": "water-repellent double coat of medium length and softness, dense softer undercoat",
+        "unit": "—",
+        "source_id": "S577",
+        "quote": "must have a water-repellent double coat of medium length and softness with a softer, dense undercoat.",
+        "confidence": "high",
+        "notes": "FCI (S577); RKC key fact 'Coat length: Medium' (S578)."
+      },
+      "nose": {
+        "value": "tapering, nostrils well open; flesh-coloured blending with the coat, or black",
+        "unit": "—",
+        "source_id": "S577",
+        "quote": "Tapers from bridge to tip, with nostrils well open. Colour should blend with that of the coat or be black.",
+        "confidence": "high",
+        "notes": "FCI (S577); muzzle 'Tapers in a clean line from stop to nose, with the lower jaw strong but not prominent.'"
+      },
+      "eyes": {
+        "value": "almond-shaped, medium sized, set well apart; amber to brown",
+        "unit": "—",
+        "source_id": "S577",
+        "quote": "Set well apart, almond-shaped, medium sized. Colour amber to brown.",
+        "confidence": "high",
+        "notes": "FCI (S577)."
+      },
+      "ears": {
+        "value": "triangular, medium size, set high and well back, base very slightly erect",
+        "unit": "—",
+        "source_id": "S577",
+        "quote": "Triangular, of medium size, set high and well back on the skull, with the base held very slightly erect,",
+        "confidence": "high",
+        "notes": "FCI (S577)."
+      },
+      "tail": {
+        "value": "broad at the base, luxuriant and heavily feathered, following the slope of the croup",
+        "unit": "—",
+        "source_id": "S577",
+        "quote": "Following the natural very slight slope of the croup, broad at the base, luxuriant and heavily feathered,",
+        "confidence": "high",
+        "notes": "FCI (S577); natural tail."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S578, key facts as returned), PetMD (S579), AKC (S580). RKC key facts reached on 2026-10-28.",
+      "rkc_size": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S578",
+        "quote": "Size: Medium",
+        "confidence": "high",
+        "notes": "RKC key fact (S578)."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S578",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S578) → 60 min."
+      },
+      "rkc_size_of_home": {
+        "value": "Small house",
+        "unit": "—",
+        "source_id": "S578",
+        "quote": "Size of home: Small house",
+        "confidence": "high",
+        "notes": "RKC key fact (S578). Not 'Flat/ Apartment' → no apartment; not 'Large house' → no large_home."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S578",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S578)."
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S578",
+        "quote": "Grooming: More than once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S578): no number → the most specific A/B number, PetMD 'once or twice a week' (S579) → 2 (M5-R13 rule). Basis of frequent_grooming (with PetMD)."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S578",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": "RKC key fact (S578)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S578",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "RKC key fact (S578). AKC (S580): 'During shedding season, it's necessary to incorporate brushing sessions into the daily routine.' Basis of sheds."
+      },
+      "rkc_lifespan": {
+        "value": "Under 10 years",
+        "unit": "—",
+        "source_id": "S578",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "medium",
+        "notes": "RKC key fact (S578). Conflicts with McMillan 2024 13.2 y (S123) and PetMD 12–14 y (S579) → no shorter_lifespan chip, not exported (open for David)."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S578",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S578). Background only."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S578",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "RKC key fact (S578). Background only (no tag)."
+      },
+      "petmd_grooming": {
+        "value": "brushing once or twice a week",
+        "unit": "—",
+        "source_id": "S579",
+        "quote": "Brushing your Toller once or twice a week will prevent their silky coat from matting.",
+        "confidence": "high",
+        "notes": "PetMD (S579) → 2 per week (M5-R13 rule: a range → upper bound). Bathing, nails and teeth not addressed."
+      },
+      "petmd_ears": {
+        "value": "clean the ears after swimming or a bath",
+        "unit": "—",
+        "source_id": "S579",
+        "quote": "Every time your pup splashes around in water or takes a bath, be sure to clean their ears.",
+        "confidence": "high",
+        "notes": "PetMD (S579). Conditional (after water), no frequency → no ear-cleaning task (runbook §3 »Breed care tasks«); register text only."
+      },
+      "akc_grooming": {
+        "value": "weekly brushing; daily brushing in shedding season",
+        "unit": "—",
+        "source_id": "S580",
+        "quote": "Tollers require weekly brushing to keep them looking their best.",
+        "confidence": "high",
+        "notes": "AKC (S580); 'During shedding season, it's necessary to incorporate brushing sessions into the daily routine.' Alternative 1 per week (the PetMD upper bound 2 is chosen; the seasonal daily brushing is not modelled)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -56617,6 +57098,267 @@
         "confidence": "high",
         "notes": "FCI (S571), RKC standard (S573), AKC (S575). Weights unsourced. Healthy, un-sunburnt skin; natural (not shaved) Hairless.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only — any colour except merle; Hairless variety, pink skin with dark spots (default), solid dark slate, solid pink"
+      }
+    },
+    "nova_scotia_duck_tolling_retriever": {
+      "_note": "Unattended run M5-R10-73 (2026-10-28): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. No new vocabulary key. Built: brushing 2× a week (RKC S578 'More than once a week' → PetMD S579 'once or twice a week', M5-R13) and puppy socialisation (AKC S580 quote, M5-R17). No meal gap (no source), no tooth / ear / nail / bath / groomer task (no frequency; ear cleaning only after water). In marketing (not a welfare breed, Breed Watch Category 1).",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S578",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'Up to 1 hour per day' (S578). Rule: one number N ('up to N') → N = 60.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S578 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S578",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 119
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 119 = round(0.75 × 13.2 y × 12) = round(118.8) (S11 + McMillan 2024 median 13.2 y via the Dogs Trust table S123). Alternatives: 108 (PetMD lower bound 12 y, S579), 84 (Dogs Trust > 7 y, S14). The RKC 'Under 10 years' (S578) conflicts and has no lower bound.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S123"
+        ],
+        "alternatives": {
+          "senior_petmd_lower_bound": 108,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 119 (0.75 × 13.2 y, McMillan 2024 via S123)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 119
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 119)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not in Coren's ranking (S35) → unranked → 1.0. FCI 'highly intelligent, easy to train' (S577) vs AKC 'a more difficult breed to train' (S580) — no rule change. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 2,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S579",
+        "quote": "Brushing your Toller once or twice a week will prevent their silky coat from matting.",
+        "confidence": "high",
+        "notes": "RKC key fact (S578) 'More than once a week' has no number → the most specific A/B number in this breed's entries: PetMD (S579) 'once or twice a week' → 2 (M5-R13 rule: range → upper bound). AKC (S580) 'weekly brushing' (1) → alternative; daily brushing in the shedding season is not modelled. Matted coat at ceil(2 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S580",
+            "notes": "AKC 'Tollers require weekly brushing to keep them looking their best.' — lower single number (alternative)."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (RKC S578 »More than once a week« → PetMD S579 »once or twice a week«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S580",
+        "quote": "Like with any breed, early socialization and puppy training courses are highly recommended.",
+        "confidence": "high",
+        "notes": "AKC (S580); quote from nova_scotia_duck_tolling_retriever.behaviour.socialisation. Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, AKC S580)"
+      },
+      "ear_care": {
+        "value": "after swimming or a bath; no frequency",
+        "unit": "—",
+        "source_id": "S579",
+        "quote": "Every time your pup splashes around in water or takes a bath, be sure to clean their ears.",
+        "confidence": "high",
+        "notes": "PetMD (S579), nova_scotia_duck_tolling_retriever.suitability.petmd_ears. Conditional (after water) — no frequency → no ear-cleaning task (runbook §3 »Breed care tasks«: conditional → no task); register text only.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): brez frekvence (le po vodi) → brez naloge; dejstvo ostane v besedilu"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-73); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S579"
+            ],
+            "refs": [
+              "nova_scotia_duck_tolling_retriever.behaviour.family"
+            ],
+            "quote": "S579 'Loyal and affectionate family dogs.'"
+          },
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S580",
+              "S578"
+            ],
+            "refs": [
+              "nova_scotia_duck_tolling_retriever.exercise.energy",
+              "nova_scotia_duck_tolling_retriever.suitability.rkc_exercise"
+            ],
+            "quote": "S580 'Tollers require lots of physical exercise and mental stimulation.'; S578 'Exercise: Up to 1 hour per day' (RKC: a family companion for the active household, paraphrase)"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S580"
+            ],
+            "refs": [
+              "nova_scotia_duck_tolling_retriever.behaviour.children"
+            ],
+            "quote": "S580 'Tollers are highly affectionate, and tend to be good with children.' (caveat PetMD S579: children who understand how to interact with dogs)"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S580"
+            ],
+            "refs": [
+              "nova_scotia_duck_tolling_retriever.exercise.energy"
+            ],
+            "quote": "S580 'Tollers require lots of physical exercise and mental stimulation.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S578"
+            ],
+            "refs": [
+              "nova_scotia_duck_tolling_retriever.suitability.rkc_shedding"
+            ],
+            "quote": "S578 'Sheds: Yes'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S578",
+              "S579"
+            ],
+            "refs": [
+              "nova_scotia_duck_tolling_retriever.suitability.rkc_grooming",
+              "nova_scotia_duck_tolling_retriever.suitability.petmd_grooming"
+            ],
+            "quote": "S578 'Grooming: More than once a week'; S579 'once or twice a week'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S580"
+            ],
+            "refs": [
+              "nova_scotia_duck_tolling_retriever.behaviour.other_pets"
+            ],
+            "quote": "S580 'They may also have a high prey drive around smaller animals.'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "PetMD (S579): with children who understand how to interact with dogs → children only, never small_children.",
+          "first_time_owner": "No first-time-owner statement (AKC 'a more difficult breed to train').",
+          "often_alone": "No time-alone statement.",
+          "needs_company": "No company statement.",
+          "apartment": "RKC 'Small house' (S578), not 'Flat/ Apartment'.",
+          "large_home": "RKC 'Small house' (S578).",
+          "other_pets": "AKC high prey drive around smaller animals (S580) → chases_small_pets instead.",
+          "low_shedding": "RKC 'Sheds: Yes' (S578); never hypoallergenic.",
+          "long_daily_exercise": "RKC 'Up to 1 hour per day' (S578) — not more than 2 hours.",
+          "shorter_lifespan": "RKC 'Lifespan: Under 10 years' (S578) conflicts with McMillan 2024 13.2 y (S123) and PetMD 12–14 y (S579) → conflicting sources, no chip (Akita precedent; open for David).",
+          "hips_hind_legs": "Breed Watch Category 1 → no welfare chip.",
+          "chews_when_bored": "No chewing statement.",
+          "food_motivated_weight": "No breed-specific statement."
+        }
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a flat-faced breed)",
+        "unit": "—",
+        "source_id": "S578",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 1 (S578); not a flat-faced breed and no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92) → in marketing.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no veterinary advice against advertising the breed type)"
+      },
+      "ai_appearance": {
+        "value": "red with white markings (blaze, chest, feet, tail tip) as the portrait default; orange with white markings; red without white",
+        "unit": "—",
+        "source_id": "S577",
+        "quote": "Colour is various shades of red or orange with lighter featherings and underside of tail,",
+        "confidence": "high",
+        "notes": "FCI (S577) colours only; never black, grey, silver, merle or white on the body. Weights unsourced → verified false.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only, the most typical first (portrait default)"
       }
     }
   }

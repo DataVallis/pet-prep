@@ -627,6 +627,14 @@ class FalAiService
                 .'fine-boned elegant body, large erect ears with a light fringe, very dark almond-shaped eyes, lean slightly tapering muzzle, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-73: FCI 312 (S577) — red with the usual white markings as the anchor (the first colour of the game
+            // list); medium-length water-repellent double coat, feathered tail, amber eyes.
+            BreedType::NovaScotiaDuckTollingRetriever => 'A medium-sized, compact and well-muscled Nova Scotia Duck Tolling Retriever with a red double coat of medium length, '
+                .'lighter feathering, a white blaze, white chest, white feet and a white tail tip, '
+                .'triangular ears set high with a very slightly erect base, almond-shaped amber eyes, a nose blending with the coat, '
+                .'a broad, luxuriant, heavily feathered tail, alert and agile expression, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1498,6 +1506,18 @@ class FalAiService
                 'eye_color' => 'very dark, almost black',
                 'fur_texture' => 'hairless smooth skin with soft, silky long hair only on the head, feet and tail',
                 'markings' => 'bare body skin, long silky crest on the head, hairy socks, flowing tail plume, large erect ears, never merle',
+            ],
+            // M5-R10-73: various shades of red or orange (FCI S577), white markings only on the tail tip, feet, chest and
+            // blaze (never on the body), never black, grey or silver.
+            BreedType::NovaScotiaDuckTollingRetriever => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'red with a white blaze, chest, feet and tail tip',
+                    1 => 'orange with a white blaze, chest, feet and tail tip',
+                    2 => 'solid red with lighter feathering',
+                },
+                'eye_color' => 'amber to brown',
+                'fur_texture' => 'water-repellent double coat of medium length, soft with a dense undercoat, feathered tail',
+                'markings' => 'lighter feathering and underside of the tail, white only on the tail tip, feet, chest and blaze, never black, grey or silver',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

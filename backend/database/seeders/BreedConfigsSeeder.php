@@ -1502,6 +1502,27 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.chinese_crested',
                 'search_keywords' => ['chinese crested', 'chinese crested dog', 'crested', 'hairless dog', 'powder puff', 'powderpuff', 'kitajski goli pes', 'kitajski copasti pes', 'kitajski čopasti pes', 'goli pes'],
             ],
+            // M5-R10-73 Nova Scotia Duck Tolling Retriever (docs/research/dog-data/data.json
+            // nova_scotia_duck_tolling_retriever, sources S576–S580; runbook rules confirmed by David 2026-10-10: paid).
+            // daily_steps_required = the adult step goal (proposed_game_parameters.nova_scotia_duck_tolling_retriever
+            // .step_goal_adult: 60 min × 100 steps/min — RKC S578 "Exercise: Up to 1 hour per day") — only the
+            // legacy-profile fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::NovaScotiaDuckTollingRetriever->slug(),
+                'daily_steps_required' => 6000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 680,
+                'label_key' => 'breeds.nova_scotia_duck_tolling_retriever',
+                'search_keywords' => ['nova scotia duck tolling retriever', 'nova scotia retriever', 'duck tolling retriever', 'toller', 'tolling retriever', 'nsdtr', 'novoškotski prinašalec', 'novoskotski prinasalec', 'novoškotski retriver', 'prinašalec rac'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and

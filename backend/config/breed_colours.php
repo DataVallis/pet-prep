@@ -457,6 +457,12 @@ return [
         ['key' => 'slate', 'value' => 'solid dark slate-grey skin with white crest, socks and plume', 'en' => 'Dark slate', 'sl' => 'Temno skrilasto siv'],
         ['key' => 'pink', 'value' => 'solid pink skin with cream crest, socks and plume', 'en' => 'Pink', 'sl' => 'Rožnat'],
     ],
+    // M5-R10-73: FCI S577 — various shades of red or orange, white only on the tail tip, feet, chest and blaze.
+    'nova_scotia_duck_tolling_retriever' => [
+        ['key' => 'red-white', 'value' => 'red with a white blaze, white chest, white feet and a white tail tip', 'en' => 'Red with white markings', 'sl' => 'Rdeč z belimi oznakami'],
+        ['key' => 'orange-white', 'value' => 'orange with a white blaze, white chest, white feet and a white tail tip', 'en' => 'Orange with white markings', 'sl' => 'Oranžen z belimi oznakami'],
+        ['key' => 'red', 'value' => 'solid red with lighter feathering and no white', 'en' => 'Red', 'sl' => 'Rdeč'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
