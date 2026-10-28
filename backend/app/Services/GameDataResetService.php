@@ -124,6 +124,8 @@ class GameDataResetService
         'pet_media_history',
         // Clip quality check (2026-10-23): one row per checked clip generation (→ pet_media)
         'pet_media_quality_checks',
+        // School smooth playback (2026-10-28): ffmpeg-derived school clips (→ pet_media)
+        'pet_media_derivatives',
         'pet_media',
         'pet_play_events',
         'pet_status_periods',

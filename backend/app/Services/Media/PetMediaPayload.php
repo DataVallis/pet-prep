@@ -127,7 +127,11 @@ final class PetMediaPayload
              * M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
              * its last frame — school `school_<command>_<attention|performing|success>`, dog
              * ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
-             * Always an object.
+             * School smooth playback (David 2026-10-28): plus clips DERIVED on the server with ffmpeg
+             * (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
+             * (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
+             * pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
+             * SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
              *
              * @var array<string, string>
              */
@@ -136,7 +140,8 @@ final class PetMediaPayload
              * David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
              * PERFORMING clips are 5 s since then, every other phase clip (and performing clips
              * made before) 3 s. The app times the school from it (the performing clip ends at
-             * the obey moment). Missing key (older server) = 3. Always an object.
+             * the obey moment). Missing key (older server) = 3. Also the real length of every derived
+             * school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
              *
              * @var array<string, float>
              */

@@ -15,6 +15,7 @@ use App\Models\PetCaretaker;
 use App\Models\PetTrainingSession;
 use App\Models\PetTrainingSkill;
 use App\Models\User;
+use App\Services\Media\SchoolClipDerivativeService;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Builder;
@@ -30,11 +31,16 @@ use Random\Randomizer;
  * PRODUCT_SPEC §5 / §11).
  *
  * Mini-game = reward timing. The child picks a command (sit, come, place,
- * potty) and starts a session; the SERVER generates the schedule: after a
- * lead-in, TRIALS_PER_SESSION cues, one every TRIAL_SLOT_MS; at each cue the
- * app gives the command and the dog either obeys after a random delay
- * (OBEY_DELAY_*) or does not. The child must tap "Pohvali" inside
- * PRAISE_WINDOW_MS right after the dog obeys. At finish the app sends only
+ * potty) and starts a session; the SERVER generates the schedule (school smooth
+ * playback, David 2026-10-28, SCHOOL_SMOOTH_PLAYBACK.md §B): after a lead-in,
+ * TRIALS_PER_SESSION (6) cues; at each cue the app gives the command and the dog
+ * either obeys or not. An obeying dog »thinks« THINK_MIN–MAX_MS, then plays its
+ * performing clip from frame 0 (perform_at_ms) and reaches the pose exactly when
+ * the clip ends (obey_at_ms = perform_at + the pet's STORED performing length P);
+ * after the praise window it stands up again (release_at_ms, the release clip of
+ * length R) and stays calm CALM_MS before the next cue; an ignored cue takes
+ * IGNORE_SLOT_MS. The child must tap "Pohvali" inside PRAISE_WINDOW_MS right after
+ * the dog obeys. At finish the app sends only
  * its tap offsets (ms since the session start); the server scores them
  * against its own stored schedule — the first tap of a trial decides:
  * in_time (progress), too_early / too_late / no_praise (no progress), and
@@ -47,7 +53,10 @@ use Random\Randomizer;
  * Border Collie 2×, mixed breed 1×, David) × the pet's individual factor
  * (mixed breed: uniform ±training_individual_variation = ±20 %, David;
  * drawn once from an RNG seeded per pet and stored in
- * pets.training_learning_factor) per in_time trial. The dog obeys more
+ * pets.training_learning_factor) × the session pace factor
+ * PACE_REFERENCE_TRIALS / trials of the session (8 / 6 since 2026-10-28 — a full
+ * session moves a skill as much as an 8-cue session did; 1 for an old 8-cue
+ * schedule) per in_time trial. The dog obeys more
  * often the better it knows the command (OBEY_CHANCE_*); every session has
  * at least one cue the dog obeys and one it ignores.
  *
@@ -85,17 +94,44 @@ use Random\Randomizer;
  */
 class TrainingService
 {
-    public const TRIALS_PER_SESSION = 8;
+    /** David 2026-10-28: 6 commands per session (~60 s; was 8 × 6 s). */
+    public const TRIALS_PER_SESSION = 6;
+
+    /**
+     * Learning pace (orchestrator 2026-10-28, kept): progress per on-time praise ×
+     * PACE_REFERENCE_TRIALS / trials of the session, so a full 6-cue session moves a
+     * skill as much as the former 8-cue one (an old 8-cue schedule: × 1).
+     */
+    public const PACE_REFERENCE_TRIALS = 8;
 
     public const LEAD_IN_MS = 2000;
 
-    public const TRIAL_SLOT_MS = 6000;
+    /** The dog »thinks« this long after the cue before its performing clip starts (random, unpredictable). */
+    public const THINK_MIN_MS = 300;
 
-    public const OBEY_DELAY_MIN_MS = 800;
-
-    public const OBEY_DELAY_MAX_MS = 2500;
+    public const THINK_MAX_MS = 1500;
 
     public const PRAISE_WINDOW_MS = 1500;
+
+    /** A short calm moment standing after the release clip, before the next cue. */
+    public const CALM_MS = 700;
+
+    /** Slot of a cue the dog ignores (cue → next cue). */
+    public const IGNORE_SLOT_MS = 4500;
+
+    /** P / R without a stored clip (contract §B). */
+    public const DEFAULT_PERFORMING_MS = SchoolClipDerivativeService::DEFAULT_PERFORMING_MS;
+
+    public const DEFAULT_RELEASE_MS = SchoolClipDerivativeService::DEFAULT_RELEASE_MS;
+
+    /** Safety bounds on stored lengths (a broken duration never makes an endless or instant trial). */
+    public const MIN_PERFORMING_MS = 1000;
+
+    public const MAX_PERFORMING_MS = 6000;
+
+    public const MIN_RELEASE_MS = 500;
+
+    public const MAX_RELEASE_MS = 2500;
 
     /**
      * Human reaction floor (PR #53 M1): a praise less than this long after
@@ -137,9 +173,48 @@ class TrainingService
         $this->seedSalt ??= (string) config('app.key');
     }
 
-    public static function sessionDurationMs(): int
+    /**
+     * The longest session the given clip lengths can produce (every cue obeyed after the
+     * longest think) — what the budget and the midnight checks reserve before the schedule
+     * is drawn. The started session counts its real length (duration_ms).
+     */
+    public static function maxSessionMs(int $performingMs = self::DEFAULT_PERFORMING_MS, int $releaseMs = self::DEFAULT_RELEASE_MS): int
     {
-        return self::LEAD_IN_MS + self::TRIALS_PER_SESSION * self::TRIAL_SLOT_MS;
+        $obeySlot = self::THINK_MAX_MS + self::clampPerforming($performingMs) + self::PRAISE_WINDOW_MS + self::clampRelease($releaseMs) + self::CALM_MS;
+
+        return self::LEAD_IN_MS + self::TRIALS_PER_SESSION * max($obeySlot, self::IGNORE_SLOT_MS);
+    }
+
+    /** maxSessionMs() of this pet: its longest command (stored clip lengths). */
+    public function maxSessionMsFor(Pet $pet): int
+    {
+        $max = 0;
+        foreach ($this->clipTimings($pet) as $t) {
+            $max = max($max, self::maxSessionMs($t['performing_ms'], $t['release_ms']));
+        }
+
+        return $max > 0 ? $max : self::maxSessionMs();
+    }
+
+    /**
+     * P and R per command (SchoolClipDerivativeService::timingsFor — the stored performing
+     * clip and its release clip; defaults without them).
+     *
+     * @return array<string, array{performing_ms: int, release_ms: int}>
+     */
+    public function clipTimings(Pet $pet): array
+    {
+        return app(SchoolClipDerivativeService::class)->timingsFor($pet);
+    }
+
+    private static function clampPerforming(int $ms): int
+    {
+        return max(self::MIN_PERFORMING_MS, min(self::MAX_PERFORMING_MS, $ms));
+    }
+
+    private static function clampRelease(int $ms): int
+    {
+        return max(self::MIN_RELEASE_MS, min(self::MAX_RELEASE_MS, $ms));
     }
 
     // ──────────────────────────────────────────────────────────────
@@ -218,13 +293,16 @@ class TrainingService
             return 0;
         }
 
-        return max(intdiv($budget, count($trainerIds)), self::sessionSeconds());
+        return max(intdiv($budget, count($trainerIds)), $this->sessionSecondsFor($pet));
     }
 
-    /** Whole seconds one session takes from the budget. */
-    public static function sessionSeconds(): int
+    /**
+     * Whole seconds a session of this pet reserves from the budget before it starts (its
+     * longest possible length, maxSessionMsFor); the started session counts its real length.
+     */
+    public function sessionSecondsFor(Pet $pet): int
     {
-        return intdiv(self::sessionDurationMs() + 999, 1000);
+        return intdiv($this->maxSessionMsFor($pet) + 999, 1000);
     }
 
     /**
@@ -357,10 +435,10 @@ class TrainingService
     }
 
     /** A session started now would still run (TTL included) at the family-local midnight. */
-    public function dayEndingAt(Pet $pet, CarbonInterface $now): bool
+    public function dayEndingAt(Pet $pet, CarbonInterface $now, ?int $sessionMs = null): bool
     {
         $expires = CarbonImmutable::instance($now)->utc()->startOfSecond()
-            ->addMilliseconds(self::sessionDurationMs())->addSeconds(self::FINISH_GRACE_SECONDS);
+            ->addMilliseconds($sessionMs ?? $this->maxSessionMsFor($pet))->addSeconds(self::FINISH_GRACE_SECONDS);
 
         return $expires->greaterThan($this->dayEndsAt($pet, $now));
     }
@@ -470,7 +548,8 @@ class TrainingService
         if ($live !== null) {
             return $refuse(CareRefusal::TrainingSessionActive, $live->expires_at);
         }
-        if ($this->dayEndingAt($pet, $now)) {
+        $sessionMs = $this->maxSessionMsFor($pet);
+        if ($this->dayEndingAt($pet, $now, $sessionMs)) {
             return $refuse(CareRefusal::TrainingDayEnding, $this->dayEndsAt($pet, $now));
         }
 
@@ -483,7 +562,7 @@ class TrainingService
 
             return $refuse(CareRefusal::TrainingNotAvailable);
         }
-        $sessionSeconds = self::sessionSeconds();
+        $sessionSeconds = intdiv($sessionMs + 999, 1000);
         $midnight = Carbon::parse($today, $pet->familyTimezone())->addDay()->startOfDay()->utc();
         if ($this->usedSecondsOn($pet, $today) + $sessionSeconds > $budget) {
             return $refuse(CareRefusal::TrainingDailyBudgetUsed, $midnight);
@@ -523,10 +602,12 @@ class TrainingService
         }
 
         $today = $pet->localDate($now);
-        $durationMs = self::sessionDurationMs();
-
         $this->learningFactor($pet); // drawn and stored on the first session
         $progress = $this->progressOf($pet, $command);
+        // School smooth playback (2026-10-28): timed by the pet's stored clip lengths.
+        $timing = $this->clipTimings($pet)[$command->value];
+        $schedule = $this->schedule($progress, new Randomizer, $timing['performing_ms'], $timing['release_ms']);
+        $durationMs = $schedule['duration_ms'];
         $endsAt = $now->addMilliseconds($durationMs);
 
         $session = PetTrainingSession::create([
@@ -539,7 +620,7 @@ class TrainingService
             'ends_at' => $endsAt,
             'expires_at' => $endsAt->addSeconds(self::FINISH_GRACE_SECONDS),
             'duration_ms' => $durationMs,
-            'schedule' => $this->schedule($progress, new Randomizer),
+            'schedule' => $schedule,
             'status' => PetTrainingSession::STATUS_ACTIVE,
             'progress_before' => $progress,
         ]);
@@ -607,7 +688,8 @@ class TrainingService
         $today = $pet->localDate($now);
         $skill = PetTrainingSkill::firstOrNew(['pet_id' => $pet->id, 'command' => $session->command->value]);
         $before = (float) ($skill->progress ?? 0.0);
-        $gain = $score['successes'] * $this->gainPerSuccess($pet, $today);
+        // Learning pace kept (2026-10-28): × 8 / trials, so 6 cues earn what 8 did (old 8-cue schedule × 1).
+        $gain = $score['successes'] * $this->gainPerSuccess($pet, $today) * self::paceFactor($session->schedule);
         $after = min(100.0, $before + $gain);
 
         $skill->forceFill([
@@ -706,16 +788,34 @@ class TrainingService
             && max($latencies) - min($latencies) <= 2 * self::SUSPICIOUS_LATENCY_SPREAD_MS;
     }
 
+    /** Progress multiplier of a session: PACE_REFERENCE_TRIALS / its number of trials. */
+    public static function paceFactor(array $schedule): float
+    {
+        $trials = count($schedule['trials'] ?? []);
+
+        return $trials > 0 ? self::PACE_REFERENCE_TRIALS / $trials : 1.0;
+    }
+
     /**
-     * A new schedule: cue every TRIAL_SLOT_MS after the lead-in; the dog obeys
-     * with a chance that grows with progress, after a random delay. At least
-     * one cue is obeyed and at least one is not.
+     * A new schedule (school smooth playback, David 2026-10-28, SCHOOL_SMOOTH_PLAYBACK.md §B).
+     * The dog obeys a cue with a chance that grows with progress; at least one cue is obeyed
+     * and at least one is not. P = the pet's stored performing clip length, R = its release
+     * clip length (ms; clamped to MIN/MAX_*):
      *
-     * @return array{praise_window_ms: int, min_reaction_ms: int, trials: list<array{index: int, cue_at_ms: int, obeys: bool, obey_at_ms: int|null, window_end_ms: int|null}>}
+     *  - cue_at_ms = the previous trial's slot end (the first = LEAD_IN_MS);
+     *  - obeys: perform_at_ms = cue + think (THINK_MIN–MAX_MS), obey_at_ms = perform_at + P,
+     *    window_end_ms = obey_at + PRAISE_WINDOW_MS, release_at_ms = window_end;
+     *    slot end = release_at + R + CALM_MS;
+     *  - ignores: perform_at / obey_at / window_end / release_at null; slot end = cue + IGNORE_SLOT_MS;
+     *  - duration_ms = the last slot end.
+     *
+     * @return array{praise_window_ms: int, min_reaction_ms: int, duration_ms: int, trials: list<array{index: int, cue_at_ms: int, obeys: bool, perform_at_ms: int|null, obey_at_ms: int|null, window_end_ms: int|null, release_at_ms: int|null}>}
      */
-    public function schedule(float $progress, Randomizer $rng): array
+    public function schedule(float $progress, Randomizer $rng, int $performingMs = self::DEFAULT_PERFORMING_MS, int $releaseMs = self::DEFAULT_RELEASE_MS): array
     {
         $chance = self::OBEY_CHANCE_UNTRAINED + (self::OBEY_CHANCE_TRAINED - self::OBEY_CHANCE_UNTRAINED) * max(0.0, min(100.0, $progress)) / 100;
+        $performingMs = self::clampPerforming($performingMs);
+        $releaseMs = self::clampRelease($releaseMs);
 
         $obeys = [];
         for ($i = 0; $i < self::TRIALS_PER_SESSION; $i++) {
@@ -729,37 +829,65 @@ class TrainingService
         }
 
         $trials = [];
+        $cue = self::LEAD_IN_MS;
         for ($i = 0; $i < self::TRIALS_PER_SESSION; $i++) {
-            $cue = self::LEAD_IN_MS + $i * self::TRIAL_SLOT_MS;
-            $delay = $rng->getInt(self::OBEY_DELAY_MIN_MS, self::OBEY_DELAY_MAX_MS);
-            $trials[] = [
-                'index' => $i,
-                'cue_at_ms' => $cue,
-                'obeys' => $obeys[$i],
-                'obey_at_ms' => $obeys[$i] ? $cue + $delay : null,
-                'window_end_ms' => $obeys[$i] ? $cue + $delay + self::PRAISE_WINDOW_MS : null,
-            ];
+            if ($obeys[$i]) {
+                $performAt = $cue + $rng->getInt(self::THINK_MIN_MS, self::THINK_MAX_MS);
+                $obeyAt = $performAt + $performingMs;
+                $windowEnd = $obeyAt + self::PRAISE_WINDOW_MS;
+                $trials[] = [
+                    'index' => $i,
+                    'cue_at_ms' => $cue,
+                    'obeys' => true,
+                    'perform_at_ms' => $performAt,
+                    'obey_at_ms' => $obeyAt,
+                    'window_end_ms' => $windowEnd,
+                    'release_at_ms' => $windowEnd,
+                ];
+                $cue = $windowEnd + $releaseMs + self::CALM_MS;
+            } else {
+                $trials[] = [
+                    'index' => $i,
+                    'cue_at_ms' => $cue,
+                    'obeys' => false,
+                    'perform_at_ms' => null,
+                    'obey_at_ms' => null,
+                    'window_end_ms' => null,
+                    'release_at_ms' => null,
+                ];
+                $cue += self::IGNORE_SLOT_MS;
+            }
         }
 
-        return ['praise_window_ms' => self::PRAISE_WINDOW_MS, 'min_reaction_ms' => self::MIN_REACTION_MS, 'trials' => $trials];
+        return ['praise_window_ms' => self::PRAISE_WINDOW_MS, 'min_reaction_ms' => self::MIN_REACTION_MS, 'duration_ms' => $cue, 'trials' => $trials];
     }
 
     /**
      * The trials of a stored schedule with a stable key order (jsonb does not
-     * keep it): index, cue_at_ms, obeys, obey_at_ms, window_end_ms.
+     * keep it): index, cue_at_ms, obeys, [perform_at_ms], obey_at_ms, window_end_ms,
+     * [release_at_ms]. perform_at_ms / release_at_ms only for a schedule made since
+     * 2026-10-28 — an older running schedule is returned as stored (the app falls back).
      *
      * @param  array<string, mixed>  $schedule
-     * @return list<array{index: int, cue_at_ms: int, obeys: bool, obey_at_ms: int|null, window_end_ms: int|null}>
+     * @return list<array{index: int, cue_at_ms: int, obeys: bool, perform_at_ms?: int|null, obey_at_ms: int|null, window_end_ms: int|null, release_at_ms?: int|null}>
      */
     public static function trialsOf(array $schedule): array
     {
-        return array_map(fn (array $t): array => [
-            'index' => (int) $t['index'],
-            'cue_at_ms' => (int) $t['cue_at_ms'],
-            'obeys' => (bool) $t['obeys'],
-            'obey_at_ms' => $t['obey_at_ms'] === null ? null : (int) $t['obey_at_ms'],
-            'window_end_ms' => $t['window_end_ms'] === null ? null : (int) $t['window_end_ms'],
-        ], array_values($schedule['trials'] ?? []));
+        $int = fn (array $t, string $k): ?int => ($t[$k] ?? null) === null ? null : (int) $t[$k];
+
+        return array_map(function (array $t) use ($int): array {
+            $trial = ['index' => (int) $t['index'], 'cue_at_ms' => (int) $t['cue_at_ms'], 'obeys' => (bool) $t['obeys']];
+            if (array_key_exists('perform_at_ms', $t)) {
+                $trial['perform_at_ms'] = $int($t, 'perform_at_ms');
+            }
+            $trial['obey_at_ms'] = $int($t, 'obey_at_ms');
+            $trial['window_end_ms'] = $int($t, 'window_end_ms');
+            if (array_key_exists('release_at_ms', $t)) {
+                $trial['release_at_ms'] = $int($t, 'release_at_ms');
+            }
+
+            return $trial;
+        }, array_values($schedule['trials'] ?? []));
     }
 
     /**

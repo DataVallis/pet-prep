@@ -58,6 +58,16 @@ Schedule::command('media:sweep')
     ->name('sweep-pet-media')
     ->description('Recover pet media slots stuck after a lost job or webhook');
 
+// Every 10 min (school smooth playback, David 2026-10-28): ffmpeg-derived school clips
+// (attention / success loops, release = reversed performing — 0 $ AI cost) for stored
+// school phase clips that have none yet or whose source changed; small batches, so
+// production fills existing looks by itself after a deploy (idempotent, unique jobs).
+Schedule::command('media:school-derivatives')
+    ->cron('3-59/10 * * * *')
+    ->withoutOverlapping(10)
+    ->name('school-clip-derivatives')
+    ->description('Queue ffmpeg-derived school clips (loops, release) of stored school phase clips');
+
 // Hourly safety net (2026-10-20): stored videos with the MP4 index at the end are
 // rewritten moov-first (the app's player cannot open them otherwise). Reads only
 // box headers of files that are already fine. Also fixes files stored before the fix.

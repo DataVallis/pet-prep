@@ -1094,7 +1094,7 @@ class PetActivityService
     /**
      * The session as the app gets it on start (instants in the family tz).
      *
-     * @return array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, duration_ms: int, praise_window_ms: int, min_reaction_ms: int, trials: list<array{index: int, cue_at_ms: int, obeys: bool, obey_at_ms: int|null, window_end_ms: int|null}>}
+     * @return array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, duration_ms: int, praise_window_ms: int, min_reaction_ms: int, trials: list<array{index: int, cue_at_ms: int, obeys: bool, perform_at_ms?: int|null, obey_at_ms: int|null, window_end_ms: int|null, release_at_ms?: int|null}>}
      */
     public static function sessionPayload(PetTrainingSession $session, string $tz): array
     {

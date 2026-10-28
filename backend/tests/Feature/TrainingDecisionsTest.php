@@ -185,6 +185,28 @@ function tdSession(User $child, string $utc): TestResponse
     return tdFinish($child, $session['id'])->assertOk();
 }
 
+/** Whole seconds a started session counts (its real length). */
+function tdSeconds(array $session): int
+{
+    return intdiv((int) $session['duration_ms'] + 999, 1000);
+}
+
+/**
+ * Sessions (2 min apart from $fromUtc) while one more fits $limit seconds — the dog's
+ * (or, with $own, that child's) seconds used + the 58 s a start reserves. Returns the
+ * seconds used by the dog / $own.
+ */
+function tdTrainUntilFull(User $child, Pet $pet, string $fromUtc, int $limit, ?User $own = null): int
+{
+    $service = app(TrainingService::class);
+    $used = fn (): int => $service->usedSecondsOn($pet->fresh(), '2026-10-08', $own);
+    for ($i = 0; $i < 10 && $used() + 58 <= $limit; $i++) {
+        tdSession($child, Carbon::parse($fromUtc, 'UTC')->addMinutes(2 * $i)->toDateTimeString());
+    }
+
+    return $used();
+}
+
 function tdState(User $child): TestResponse
 {
     app('auth')->forgetGuards();
@@ -610,22 +632,22 @@ describe('starting progress', function () {
 // ──────────────────────────────────────────────────────────────
 
 describe('fair share of the daily budget', function () {
-    it('gives one child the whole 300 s (6 sessions)', function () {
-        [, $child] = tdFamily();
+    it('gives one child the whole 300 s (a start reserves the longest session, each counts its real length)', function () {
+        [, $child, $pet] = tdFamily();
         tdState($child)
             ->assertJsonPath('training.children_sharing', 1)
             ->assertJsonPath('training.my_share_seconds', 300)
-            ->assertJsonPath('training.my_seconds_left', 300);
+            ->assertJsonPath('training.my_seconds_left', 300)
+            ->assertJsonPath('training.session_seconds', 58);
 
-        for ($i = 0; $i < 6; $i++) {
-            tdSession($child, sprintf('2026-10-08 08:%02d:00', $i * 2));
-        }
+        $used = tdTrainUntilFull($child, $pet, '2026-10-08 08:00:00', 300);
         tdAt('2026-10-08 09:00:00');
         tdStart($child)->assertStatus(422)->assertJsonPath('reason', 'training_daily_budget_used')
-            ->assertJsonPath('state.training.my_seconds_left', 0);
+            ->assertJsonPath('state.training.my_seconds_left', 300 - $used);
+        expect(300 - $used)->toBeLessThan(58);
     });
 
-    it('splits 300 s between 2 children: 150 s = 3 sessions each, then training_child_share_used; the sibling keeps theirs', function () {
+    it('splits 300 s between 2 children: 150 s each, then training_child_share_used; the sibling keeps theirs', function () {
         [$parent, $child, $pet] = tdFamily();
         withoutQuietHours($pet); // M5-T02: about the clock / budget, not sleep (no school while the pet sleeps)
         $sibling = tdSibling($parent, $pet);
@@ -637,54 +659,55 @@ describe('fair share of the daily budget', function () {
             ->assertJsonPath('training.daily_budget_seconds', 300)
             ->assertJsonPath('training.can_start', true);
 
-        for ($i = 0; $i < 3; $i++) {
-            tdSession($child, sprintf('2026-10-08 08:%02d:00', $i * 2));
-        }
+        $mine = tdTrainUntilFull($child, $pet, '2026-10-08 08:00:00', 150, $child);
 
         tdAt('2026-10-08 09:00:00');
         tdStart($child)->assertStatus(422)
             ->assertJsonPath('reason', 'training_child_share_used')
             ->assertJsonPath('next_allowed_at', '2026-10-09T00:00:00+02:00')
             ->assertJsonPath('state.training.my_share_seconds', 150)
-            ->assertJsonPath('state.training.my_seconds_left', 0)
-            ->assertJsonPath('state.training.daily_budget_left_seconds', 150)
+            ->assertJsonPath('state.training.my_seconds_left', 150 - $mine)
+            ->assertJsonPath('state.training.daily_budget_left_seconds', 300 - $mine)
             ->assertJsonPath('state.training.can_start', false);
 
         // The sibling still has their 150 s.
         tdState($sibling)->assertJsonPath('training.my_seconds_left', 150)->assertJsonPath('training.can_start', true);
-        for ($i = 0; $i < 3; $i++) {
-            tdSession($sibling, sprintf('2026-10-08 10:%02d:00', $i * 2));
-        }
-        // Now the dog's whole budget is used: the pet-wide reason comes first.
+        $theirs = tdTrainUntilFull($sibling, $pet, '2026-10-08 10:00:00', 150, $sibling);
         tdAt('2026-10-08 11:00:00');
-        tdStart($sibling)->assertStatus(422)->assertJsonPath('reason', 'training_daily_budget_used');
+        $reason = tdStart($sibling)->assertStatus(422)->json('reason');
+        // Pet-wide first when the dog's whole budget cannot fit another session, else the own share.
+        $dog = app(TrainingService::class)->usedSecondsOn($pet->fresh(), '2026-10-08');
+        expect($reason)->toBe($dog + 58 > 300 ? 'training_daily_budget_used' : 'training_child_share_used')
+            ->and($theirs + 58)->toBeGreaterThan(150);
 
         // A new family-local day gives everyone their share again.
         tdAt('2026-10-08 22:00:00');
-        tdStart($child)->assertOk()->assertJsonPath('state.training.my_seconds_left', 100);
+        $s = tdStart($child)->assertOk()->json('session');
+        tdState($child)->assertJsonPath('training.my_seconds_left', 150 - tdSeconds($s));
     });
 
-    it('splits 300 s between 3 children (100 s = 2 sessions) and 4 children (75 s = 1 session)', function () {
+    it('splits 300 s between 3 children (100 s each) and 4 children (75 s each)', function () {
         [$parent, $child, $pet] = tdFamily();
         tdSibling($parent, $pet);
         tdSibling($parent, $pet);
 
         tdState($child)->assertJsonPath('training.children_sharing', 3)->assertJsonPath('training.my_share_seconds', 100);
-        tdSession($child, '2026-10-08 08:00:00');
-        tdSession($child, '2026-10-08 08:02:00');
+        $mine = tdTrainUntilFull($child, $pet, '2026-10-08 08:00:00', 100, $child);
         tdAt('2026-10-08 08:04:00');
         tdStart($child)->assertStatus(422)->assertJsonPath('reason', 'training_child_share_used');
 
-        // A fourth child signs: 75 s each — the first child is already over their new share.
+        // A fourth child signs: 75 s each — the first child may already be over their new share.
         $fourth = tdSibling($parent, $pet, '2026-10-08 08:05:00');
         tdState($fourth)->assertJsonPath('training.children_sharing', 4)
             ->assertJsonPath('training.my_share_seconds', 75)
             ->assertJsonPath('training.my_seconds_left', 75);
-        tdSession($fourth, '2026-10-08 08:06:00');
+        $s = tdSession($fourth, '2026-10-08 08:06:00')->json('result.session_id');
+        $theirs = app(TrainingService::class)->usedSecondsOn($pet->fresh(), '2026-10-08', $fourth);
+        expect($s)->not->toBeNull();
         tdAt('2026-10-08 08:08:00');
         tdStart($fourth)->assertStatus(422)->assertJsonPath('reason', 'training_child_share_used')
-            ->assertJsonPath('state.training.my_seconds_left', 25);
-        tdState($child)->assertJsonPath('training.my_seconds_left', 0);
+            ->assertJsonPath('state.training.my_seconds_left', 75 - $theirs);
+        tdState($child)->assertJsonPath('training.my_seconds_left', max(0, 75 - $mine));
     });
 
     it('does not count a child who has not signed their contract (they cannot train yet)', function () {
@@ -702,10 +725,14 @@ describe('fair share of the daily budget', function () {
         [$parent, $child, $pet] = tdFamily();
         tdSibling($parent, $pet);
         tdSession($child, '2026-10-08 08:00:00');
-        tdSession($child, '2026-10-08 08:02:00');
+        $first = app(TrainingService::class)->usedSecondsOn($pet->fresh(), '2026-10-08', $child);
 
         tdAt('2026-10-08 08:04:00');
-        $s = tdStart($child)->assertOk()->assertJsonPath('state.training.my_seconds_left', 0)->json('session');
+        $res = tdStart($child)->assertOk();
+        $s = $res->json('session');
+        // The running session counts too (seconds are summed in ms, then rounded up).
+        $res->assertJsonPath('state.training.my_seconds_left', max(0, 150 - app(TrainingService::class)->usedSecondsOn($pet->fresh(), '2026-10-08', $child)));
+        expect(tdSeconds($s))->toBeGreaterThan(0);
         tdAt('2026-10-08 08:04:20');
         Pet::find($pet->id)->update(['is_hard_stopped' => true]);
         tdAt('2026-10-08 08:05:00');
@@ -713,7 +740,7 @@ describe('fair share of the daily budget', function () {
 
         tdFinish($child, $s['id'])->assertStatus(422)
             ->assertJsonPath('reason', 'training_session_interrupted')
-            ->assertJsonPath('state.training.my_seconds_left', 50)
+            ->assertJsonPath('state.training.my_seconds_left', 150 - $first)
             ->assertJsonPath('state.training.can_start', true);
         tdStart($child)->assertOk();
     });
@@ -727,7 +754,8 @@ describe('fair share of the daily budget', function () {
 
         Carbon::setTestNow(Carbon::parse($s['ends_at'])->utc());
         tdFinish($child, $s['id'])->assertOk();
-        tdStart($sibling)->assertOk()->assertJsonPath('state.training.my_seconds_left', 100);
+        $theirs = tdStart($sibling)->assertOk()->json('session');
+        tdState($sibling)->assertJsonPath('training.my_seconds_left', 150 - tdSeconds($theirs));
     });
 });
 
@@ -781,34 +809,45 @@ describe('QA follow-ups', function () {
         $all = [$child, ...$siblings];
 
         tdState($child)->assertJsonPath('training.children_sharing', 7)
-            ->assertJsonPath('training.my_share_seconds', 50) // max(300 / 7 = 42, 50)
-            ->assertJsonPath('training.my_seconds_left', 50)
+            ->assertJsonPath('training.my_share_seconds', 58) // max(300 / 7 = 42, one session = 58)
+            ->assertJsonPath('training.my_seconds_left', 58)
             ->assertJsonPath('training.can_start', true);
 
-        // The first six children each train once (6 × 50 s = the dog's 300 s).
-        foreach (array_slice($all, 0, 6) as $i => $c) {
+        // The children train once each, in turn, while the dog's budget fits a session.
+        $service = app(TrainingService::class);
+        $trained = 0;
+        foreach ($all as $i => $c) {
+            if ($service->usedSecondsOn($pet->fresh(), '2026-10-08') + 58 > 300) {
+                break;
+            }
             tdSession($c, sprintf('2026-10-08 08:%02d:00', $i * 2));
+            $trained++;
         }
+        $used = $service->usedSecondsOn($pet->fresh(), '2026-10-08');
         tdAt('2026-10-08 09:00:00');
-        // A child who already trained: own share used (pet-wide is checked first and is used too).
-        tdStart($child)->assertStatus(422)->assertJsonPath('reason', 'training_daily_budget_used');
-        // The seventh child comes too late today: the dog's budget is used.
-        tdStart($all[6])->assertStatus(422)->assertJsonPath('reason', 'training_daily_budget_used')
-            ->assertJsonPath('state.training.my_share_seconds', 50)
-            ->assertJsonPath('state.training.my_seconds_left', 0)
-            ->assertJsonPath('state.training.can_start', false);
+        // A child who already trained: refused (own share or, first, the dog's budget).
+        expect(tdStart($child)->assertStatus(422)->json('reason'))->toBeIn(['training_daily_budget_used', 'training_child_share_used']);
+        if ($trained < 7) {
+            // A child who comes too late today: the dog's budget is used.
+            tdStart($all[$trained])->assertStatus(422)->assertJsonPath('reason', 'training_daily_budget_used')
+                ->assertJsonPath('state.training.my_share_seconds', 58)
+                ->assertJsonPath('state.training.my_seconds_left', 300 - $used)
+                ->assertJsonPath('state.training.can_start', false);
+        }
+        expect($trained)->toBeGreaterThanOrEqual(5);
     });
 
-    it('caps each of 7 children at one session (share 50 s), even with dog budget left (m3)', function () {
+    it('caps each of 7 children at one session (share 58 s), even with dog budget left (m3)', function () {
         [$parent, $child, $pet] = tdFamily();
         for ($i = 0; $i < 6; $i++) {
             tdSibling($parent, $pet);
         }
         tdSession($child, '2026-10-08 08:00:00');
+        $mine = app(TrainingService::class)->usedSecondsOn($pet->fresh(), '2026-10-08', $child);
         tdAt('2026-10-08 08:02:00');
         tdStart($child)->assertStatus(422)->assertJsonPath('reason', 'training_child_share_used')
-            ->assertJsonPath('state.training.my_seconds_left', 0)
-            ->assertJsonPath('state.training.daily_budget_left_seconds', 250);
+            ->assertJsonPath('state.training.my_seconds_left', 58 - $mine)
+            ->assertJsonPath('state.training.daily_budget_left_seconds', 300 - $mine);
     });
 
     it('uses one trainer rule for the server and the payload: a child who cannot train is refused (n1)', function () {

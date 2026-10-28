@@ -42,7 +42,7 @@ final class TrainingPayload
 {
     /**
      * @param  list<array{command: 'sit'|'come'|'place'|'potty', progress: int, learned: bool, last_practised_at: string|null}>  $commands
-     * @param  array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, mine: bool, duration_ms: int|null, praise_window_ms: int|null, min_reaction_ms: int|null, trials: list<array{index: int, cue_at_ms: int, obeys: bool, obey_at_ms: int|null, window_end_ms: int|null}>|null}|null  $session
+     * @param  array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, mine: bool, duration_ms: int|null, praise_window_ms: int|null, min_reaction_ms: int|null, trials: list<array{index: int, cue_at_ms: int, obeys: bool, perform_at_ms?: int|null, obey_at_ms: int|null, window_end_ms: int|null, release_at_ms?: int|null}>|null}|null  $session
      */
     public function __construct(
         public readonly bool $enabled,
@@ -54,6 +54,7 @@ final class TrainingPayload
         public readonly int $childrenSharing = 0,
         public readonly int $myShareSeconds = 0,
         public readonly int $mySecondsLeft = 0,
+        public readonly int $sessionSeconds = 0,
     ) {}
 
     public static function for(Pet $pet, ?User $viewer = null, ?CarbonInterface $now = null, bool $full = true): self
@@ -104,6 +105,7 @@ final class TrainingPayload
             count($trainers),
             $myShare,
             $myLeft,
+            $full ? $service->sessionSecondsFor($pet) : 0,
         );
     }
 
@@ -138,16 +140,16 @@ final class TrainingPayload
         return $out;
     }
 
-    /** Seconds of one session (the app can show "a session takes 50 s"). */
-    public static function sessionSeconds(): int
+    /** Seconds one session of this pet takes at most (2026-10-28: depends on its stored clip lengths). */
+    public function sessionSecondsOrDefault(): int
     {
-        return TrainingService::sessionSeconds();
+        return $this->sessionSeconds > 0 ? $this->sessionSeconds : intdiv(TrainingService::maxSessionMs() + 999, 1000);
     }
 
     /**
      * Full object for the child state.
      *
-     * @return array{enabled: bool, commands: list<array{command: 'sit'|'come'|'place'|'potty', progress: int, learned: bool, last_practised_at: string|null}>, today_done: bool, session: array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, mine: bool, duration_ms: int|null, praise_window_ms: int|null, min_reaction_ms: int|null, trials: list<array{index: int, cue_at_ms: int, obeys: bool, obey_at_ms: int|null, window_end_ms: int|null}>|null}|null, session_seconds: int, daily_budget_seconds: int, daily_budget_left_seconds: int, children_sharing: int, my_share_seconds: int, my_seconds_left: int}
+     * @return array{enabled: bool, commands: list<array{command: 'sit'|'come'|'place'|'potty', progress: int, learned: bool, last_practised_at: string|null}>, today_done: bool, session: array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, mine: bool, duration_ms: int|null, praise_window_ms: int|null, min_reaction_ms: int|null, trials: list<array{index: int, cue_at_ms: int, obeys: bool, perform_at_ms?: int|null, obey_at_ms: int|null, window_end_ms: int|null, release_at_ms?: int|null}>|null}|null, session_seconds: int, daily_budget_seconds: int, daily_budget_left_seconds: int, children_sharing: int, my_share_seconds: int, my_seconds_left: int}
      */
     public function toArray(): array
     {
@@ -166,11 +168,12 @@ final class TrainingPayload
              * The running session (any caretaker), `mine` = started by this child; else null.
              * For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
              *
-             * @var array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, mine: bool, duration_ms: int|null, praise_window_ms: int|null, min_reaction_ms: int|null, trials: list<array{index: int, cue_at_ms: int, obeys: bool, obey_at_ms: int|null, window_end_ms: int|null}>|null}|null
+             * @var array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, mine: bool, duration_ms: int|null, praise_window_ms: int|null, min_reaction_ms: int|null, trials: list<array{index: int, cue_at_ms: int, obeys: bool, perform_at_ms?: int|null, obey_at_ms: int|null, window_end_ms: int|null, release_at_ms?: int|null}>|null}|null
              */
             'session' => $this->session,
-            // Length of one session in seconds.
-            'session_seconds' => self::sessionSeconds(),
+            // At most this many seconds per session (the budget reserves it at the start; the started
+            // session counts its real `duration_ms`). Since 2026-10-28 it depends on the pet's stored clips.
+            'session_seconds' => $this->sessionSecondsOrDefault(),
             // The dog's mini-game seconds per family-local day, and what is left today.
             'daily_budget_seconds' => $this->dailyBudgetSeconds,
             'daily_budget_left_seconds' => $this->dailyBudgetLeftSeconds,
