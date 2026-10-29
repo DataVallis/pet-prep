@@ -2871,6 +2871,44 @@
         }
       ],
       "notes": "RKC Breeds A–Z page (display.aspx?id=3065 → royalkennelclub.com …/terrier/cairn-terrier) could not be fetched on 2026-10-28 → no minimum / best_practice level. AKC Terrier Group health testing page (K33, re-read 2026-10-28): 'Recommended Health Tests from the National Breed Club' for the Cairn Terrier (parent club cairnterrier.org) — patella, cardiac, kidney ultrasound, ocular melanosis eye exam, GLD DNA test, liver PSVA / MVD. PDSA (dog-data S585): check the parents' and grandparents' medical history (paraphrase). New test keys kidney_scheme, dna_gld, liver_shunt_scheme."
+    },
+    "bull_terrier": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K33",
+        "quote": "BAER Testing"
+      },
+      "tests": [
+        {
+          "key": "patella_scheme",
+          "level": "other_scheme",
+          "name": "Patellar luxation evaluation (US breed club: recommended)",
+          "source_id": "K33",
+          "quote": "Patella Evaluation"
+        },
+        {
+          "key": "cardiac_exam",
+          "level": "other_scheme",
+          "name": "Heart examination (US breed club: recommended)",
+          "source_id": "K33",
+          "quote": "Cardiac Exam"
+        },
+        {
+          "key": "hearing_baer",
+          "level": "other_scheme",
+          "name": "Hearing test for deafness — BAER (US breed club: recommended)",
+          "source_id": "K33",
+          "quote": "BAER Testing"
+        },
+        {
+          "key": "kidney_upc_scheme",
+          "level": "other_scheme",
+          "name": "Urine protein:creatinine ratio test for kidney disease (US breed club: recommended)",
+          "source_id": "K33",
+          "quote": "Kidney - Urine Protein:Creatinine Ratio"
+        }
+      ],
+      "notes": "RKC Breeds A–Z page (display.aspx?id=3063 → royalkennelclub.com …/terrier/bull-terrier) could not be fetched on 2026-10-29 → no minimum / best_practice level. AKC Terrier Group health testing page (K33, re-read 2026-10-29): 'Recommended Health Tests from the National Breed Club' for the Bull Terrier (parent club btca.com) — patella, cardiac exam, BAER, kidney urine protein:creatinine ratio. PDSA (dog-data S591): urine tests can screen parents for kidney problems; heart scans for heart valve problems. New test key kidney_upc_scheme."
     }
   }
 }
