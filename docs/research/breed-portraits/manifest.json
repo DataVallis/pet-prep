@@ -909,6 +909,19 @@
             "prompt_hash": "sha256:2b995f145fea5577aabbb56cdaa28a3c711992a97bcde3a494f0c747d5ba0989",
             "generated_at": "2026-10-28T07:01:38+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "bull_terrier",
+            "species": "dog",
+            "colour": "white",
+            "file": "dog/bull-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:e73e8bda81b6633ea1a99d7f100ef912ea532b5e796f3947a5b89861be4b34fc",
+            "generated_at": "2026-10-29T01:16:19+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
