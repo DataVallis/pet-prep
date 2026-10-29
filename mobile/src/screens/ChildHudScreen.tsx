@@ -1368,6 +1368,7 @@ export default function ChildHudScreen() {
           view.wishes !== null ? { label: t('wishes:child.entry'), hint: t('wishes:child.entryA11y'), onOpen: () => setWishesVisible(true) } : undefined
         }
         exit={{ label: childExit.shared ? PARENTAL_GATE_STRINGS.backToParent : HUD_STRINGS.logout, onPress: handleLogout }}
+        timeZone={view.timezone}
       />
       {view.wishes !== null && (
         <WishesSheet visible={isWishesVisible} onClose={() => setWishesVisible(false)} nowMs={() => Date.now() + view.clockSkewMs} />

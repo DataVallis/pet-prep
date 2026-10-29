@@ -33,5 +33,24 @@
     "a11y": "{{label}}, obvezno",
     "legend": "* obvezno polje",
     "legendA11y": "Polja z zvezdico so obvezna."
+  },
+  "appVersion": {
+    "update": "posodobitev {{id}}",
+    "updateUnknown": "posodobitev",
+    "embedded": "vgrajena različica",
+    "dateTime": "{{day}}. {{month}}. {{time}}",
+    "childA11y": "Različica aplikacije: {{line}}",
+    "details": {
+      "version": "Različica",
+      "build": "Gradnja",
+      "runtime": "Runtime",
+      "bundle": "Koda",
+      "bundleUpdate": "posodobitev (OTA)",
+      "bundleEmbedded": "vgrajena različica",
+      "updateId": "Posodobitev",
+      "createdAt": "Objavljena",
+      "commit": "Commit",
+      "channel": "Kanal"
+    }
   }
 }

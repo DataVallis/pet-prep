@@ -33,5 +33,24 @@
     "a11y": "{{label}}, required",
     "legend": "* required field",
     "legendA11y": "Fields marked with an asterisk are required."
+  },
+  "appVersion": {
+    "update": "update {{id}}",
+    "updateUnknown": "update",
+    "embedded": "built-in version",
+    "dateTime": "{{day}}/{{month}} {{time}}",
+    "childA11y": "App version: {{line}}",
+    "details": {
+      "version": "Version",
+      "build": "Build",
+      "runtime": "Runtime",
+      "bundle": "Code",
+      "bundleUpdate": "update (OTA)",
+      "bundleEmbedded": "built-in version",
+      "updateId": "Update",
+      "createdAt": "Published",
+      "commit": "Commit",
+      "channel": "Channel"
+    }
   }
 }

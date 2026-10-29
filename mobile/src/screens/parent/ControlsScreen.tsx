@@ -5,7 +5,7 @@
  * invite, and — while the family is empty — joining another family by code; push
  * "Obvestila" status (M3-02); last the "Račun" section (M2-08): data export and account
  * deletion. M5-F01: a "Purchases / challenge" row (while the family has a challenge dog)
- * opens the paywall.
+ * opens the paywall. Last, "O aplikaciji": `AppVersionCard` (version line + update check).
  */
 
 import { Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
@@ -25,7 +25,7 @@ import QuietHoursCard from '@/components/parent/QuietHoursCard';
 import PurchasesRow from '@/components/parent/PurchasesRow';
 import { showPurchasesRow } from '@/modules/plan/purchaseEntry';
 import { NoticeBanner, PARENT_COLORS as C } from '@/components/parent/ParentUi';
-import BuildLabel from '@/components/BuildLabel';
+import AppVersionCard from '@/components/parent/AppVersionCard';
 import type { FamilyChild, FamilyOverview } from '@/modules/family/family';
 import { strings } from '@/i18n/strings';
 
@@ -100,10 +100,10 @@ export default function ControlsScreen({
 
         <LanguageCard />
         <AccountCard family={family} />
-        {/* Build identity (which code David / testers run). */}
+        {/* Build + bundle identity and the update check (which code David / testers run, 2026-10-29). */}
         <View style={styles.about} testID="controls-about">
           <Text style={styles.group}>{CONTROLS_STRINGS.about}</Text>
-          <BuildLabel tone="light" style={styles.aboutLabel} />
+          <AppVersionCard timeZone={family?.timezone ?? null} />
         </View>
       </ScrollView>
     </View>
@@ -127,6 +127,5 @@ const styles = StyleSheet.create({
   title: { fontSize: 20, letterSpacing: tightTracking(20), fontFamily: fonts.display, color: C.text },
   content: { padding: 16, gap: 14, paddingBottom: 32 },
   group: { fontSize: 13, fontWeight: '700', color: C.muted, textTransform: 'uppercase', letterSpacing: 0.4, marginTop: 4 },
-  about: { gap: 6, alignItems: 'center', paddingTop: 8 },
-  aboutLabel: { textAlign: 'center' },
+  about: { gap: 6, paddingTop: 8 },
 });

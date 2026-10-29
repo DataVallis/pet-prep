@@ -139,6 +139,7 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 - **Production docs:** `docs/PRODUCTION_DEPLOYMENT.md`, `docs/PRODUCTION_ENV.md`; findings / store-release checklist: `docs/engineering/DEPLOYMENT.md`; scaling: `docs/engineering/SCALING.md`. Production Laravel logs live in the `app_storage` volume (`docker exec backend-app-1 tail storage/logs/laravel.log`), not `/opt/petprep/repo/backend/storage/logs`.
 - **Local (David's Mac):** Laravel Sail; `backend/.env`, `mobile/.env`, `mobile/credentials.json` local only (gitignored). Before every `eas build`: `cd mobile && yarn install`.
+- **Which code a phone runs:** parent Nadzor → »O aplikaciji« → »Različica aplikacije« (store version + build, OTA commit = `app-release.json` commit, publish time); »Preveri posodobitve« fetches a pending OTA and offers a restart (since 2026-10-29; `mobile-ota.sh` exports `EXPO_PUBLIC_GIT_COMMIT`).
 - **GitHub:** private repo on the free plan → no branch protection; the single gate is the `CI OK` check run (`gh api "repos/DataVallis/pet-prep/commits/<sha>/check-runs?per_page=100"`). Actions logs can't be downloaded through the cloud proxy — read check-run **annotations** (the `plan` job prints `::notice title=plan::`).
 
 **Cloud sessions (no Docker / Sail) — tips:**
@@ -162,6 +163,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 6. **M6-W »Želje«** — merged 2026-10-27: server W01 + W02 server part (#417), app W04 / W05 (#416), one QA round done (#417 / #416 fixes on the same PRs). Reaches users with the next daily deploy + OTA. **Next:** David creates the six store products (§1b.9); then M6-W03 item media (`media_ready` always false, treat `media` null until then); device check of the child catalogue, treat chip, parent list, push, redeem after reopening »Želje«.
 
 ## 6. Session log
+
+### 2026-10-29 (cloud, mobile) — app version line + »Preveri posodobitve« (`feat/app-version-row`)
+- Parent Nadzor → »O aplikaciji«: `AppVersionCard` (»3.1.9 (42) · posodobitev 6bf527d · 29. 10. 13:17« / »vgrajena različica«, tap copies details, check → fetch → »Znova zaženi zdaj«, never auto-reload); child: read-only line in `ChildSettingsSheet`; `mobile-ota.sh` exports `EXPO_PUBLIC_GIT_COMMIT` (harness `scripts/tests/mobile-ota.test.sh`). Not verified on a phone; reaches phones with the next production OTA (JS only, same runtime). Debt: build number on Android uses the deprecated `Constants.platform.android.versionCode` (no expo-application to keep the runtime).
 
 ### 2026-10-29 (cloud, backend) — recovery day after the vet (`fix/walk-recovery-day`)
 - David: Kuza was at the vet all day (walk illness), home at 19:00, no steps possible → ill again next morning. Now `DailyWalkService` never schedules a walk illness for a day an `illness` status period overlaps (`wasAtVetOn()`); the day is still recorded. 3 tests in `DailyWalkAndRecoveryTest`. Kuza's current illness was left as is (David).

@@ -8,6 +8,7 @@
  * - rows that used to be icons in the HUD top bar (David 2026-10-23, the bar truncated the
  *   name / stage / breed): **Album**, **Kako skrbim** (the M5-T05 care guide) and, last, the
  *   exit (**Odjava**, or »Nazaj k staršu« in a shared »Igraj kot« session).
+ * - at the very bottom a muted read-only app version line (`modules/appVersion`, David 2026-10-29).
  * - **Želje** (M6-W04): the wish catalogue (`WishesSheet`) — not a care action, so it lives
  *   here and not in the dock / top stack.
  * A row closes the sheet first. The album is an in-screen layer and opens at once; the care
@@ -18,7 +19,7 @@
  * `PetProfileSheet` (RN `Modal`: Android back button and an accessibility-modal container).
  */
 
-import { useCallback, useContext, useEffect, useRef, type ReactNode } from 'react';
+import { useCallback, useContext, useEffect, useMemo, useRef, type ReactNode } from 'react';
 import { Modal, Pressable, StyleSheet, View } from 'react-native';
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 import { ChevronRight, CircleQuestionMark, Gift, Images, LogOut, X } from 'lucide-react-native';
@@ -28,6 +29,8 @@ import MediaDisplaySwitch from '@/components/MediaDisplaySwitch';
 import { Text } from '@/components/ui/Text';
 import { useSetMediaDisplay } from '@/hooks/queries/useChildSettings';
 import type { MediaDisplay } from '@/modules/display/display';
+import { appVersionFrom, formatAppVersionLine } from '@/modules/appVersion/appVersion';
+import { readAppVersionSources } from '@/modules/appVersion/appVersionSource';
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
 import { MIN_TOUCH, alpha, dark, fonts, palette, radius, tightTracking } from '@/theme';
@@ -48,6 +51,8 @@ interface ChildSettingsSheetProps {
   wishes?: { label: string; hint: string; onOpen: () => void };
   /** The exit row at the bottom (»Odjava« / »Nazaj k staršu«). */
   exit?: { label: string; onPress: () => void };
+  /** The family's IANA zone (`view.timezone`) for the update time in the version line. */
+  timeZone?: string | null;
   testID?: string;
 }
 
@@ -62,11 +67,15 @@ export default function ChildSettingsSheet({
   careGuide,
   wishes,
   exit,
+  timeZone = null,
   testID = 'hud-settings-sheet',
 }: ChildSettingsSheetProps) {
   const S = CHILD_SETTINGS_STRINGS.settingsSheet;
   const bottomInset = useContext(SafeAreaInsetsContext)?.bottom ?? 0;
   const setDisplay = useSetMediaDisplay();
+  // Read only while the sheet is open (never at boot); same short line as the parent's Nadzor.
+  const versionInfo = useMemo(() => (visible ? appVersionFrom(readAppVersionSources()) : null), [visible]);
+  const versionLine = versionInfo ? formatAppVersionLine(versionInfo, timeZone) : null;
 
   // A row's action waits until this sheet is dismissed: iOS can't present a modal while another one closes.
   const pending = useRef<(() => void) | null>(null);
@@ -193,6 +202,17 @@ export default function ChildSettingsSheet({
               <Text style={styles.exitText}>{exit.label}</Text>
             </Pressable>
           )}
+
+          {/* Read-only app version (David 2026-10-29) — no copy, no update button: the child can't act on it. */}
+          {versionLine && (
+            <Text
+              style={styles.version}
+              accessibilityLabel={t('common:appVersion.childA11y', { line: versionLine })}
+              testID="child-app-version"
+            >
+              {versionLine}
+            </Text>
+          )}
         </View>
       </View>
     </Modal>
@@ -274,5 +294,6 @@ const styles = StyleSheet.create({
     borderColor: dark.glassBorder,
   },
   exitText: { color: palette.n400, fontSize: 15, fontWeight: '600' },
+  version: { color: alpha(palette.n400, 0.7), fontSize: 11, textAlign: 'center', fontVariant: ['tabular-nums'] },
   pressed: { opacity: 0.8 },
 });

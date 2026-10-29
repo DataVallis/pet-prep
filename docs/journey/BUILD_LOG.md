@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-29 — »Katero različico imam?« v nastavitvah
+
+**Kaj:** v starševskem »Nadzor → O aplikaciji« je vrstica **»Različica aplikacije«** (npr. »3.1.9 (42) · posodobitev 6bf527d · 29. 10. 13:17« ali »vgrajena različica«) in gumb **»Preveri posodobitve«**, ki novo posodobitev prenese in ponudi »Znova zaženi zdaj«. Otrok vidi isto vrstico sivo na dnu nastavitev. **Zakaj:** posodobitev brez trgovine (OTA) se prenese v ozadju in začne veljati šele ob naslednjem zagonu — David je preizkušal šolo na stari kodi telefona, medtem ko je strežnik že imel novo. Zdaj se na prvi pogled vidi, katera koda teče, in jo je mogoče takoj posodobiti. **Kako povedati:** 👩 »V nastavitvah vidite, katero različico imate, in jo z enim dotikom posodobite.« · 🛠 commit OTA je isti kot v `app-release.json` (`EXPO_PUBLIC_GIT_COMMIT`), preverjanje samo na gumb, nikoli ob zagonu.
+
+---
+
 ## 2026-10-29 — Dan okrevanja po veterinarju
 
 **Kaj:** dan, ko je kuža (vsaj del dneva) pri veterinarju, ne more več povzročiti nove bolezni zaradi sprehoda. **Zakaj:** David je na lastnem psu Kuzi videl zanko — cel dan pri veterinarju, doma ob 19:00, korakov ni bilo več mogoče narediti, naslednje jutro spet bolan. Otrok ni naredil nič narobe, igra pa ga je kaznovala. **Kako povedati:** starši — »aplikacija je poštena: po veterinarju pes počiva«; otroci — »ko se kuža vrne od veterinarja, si tisti dan odpočije«.

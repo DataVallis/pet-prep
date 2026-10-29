@@ -3,6 +3,10 @@
  * `fallbackToCacheTimeout: 0` the native launcher starts the cached bundle at once and
  * downloads a new update in the background (applied on the next launch); the JS never
  * awaits `checkForUpdateAsync` / `fetchUpdateAsync` / `reloadAsync` on the boot path.
+ *
+ * The one exception (David 2026-10-29): the parent's »Preveri posodobitve« button in Nadzor —
+ * `modules/appVersion/updateCheck.ts` is the only file allowed to name those calls, and only the
+ * parent `AppVersionCard` (rendered by `ControlsScreen`) may import it.
  */
 import fs from 'fs';
 import path from 'path';
@@ -25,10 +29,21 @@ describe('OTA updates never block startup', () => {
     expect(updates?.fallbackToCacheTimeout).toBe(0);
   });
 
-  it('no JS code awaits an update check / download / reload', () => {
-    const roots = [SRC, path.resolve(SRC, '../App.tsx'), path.resolve(SRC, '../index.ts')];
-    const files = roots.flatMap((root) => (fs.statSync(root).isDirectory() ? sourceFiles(root) : [root]));
-    const offenders = files.filter((file) => /checkForUpdateAsync|fetchUpdateAsync|reloadAsync|from 'expo-updates'/.test(fs.readFileSync(file, 'utf8')));
-    expect(offenders).toEqual([]);
+  const roots = [SRC, path.resolve(SRC, '../App.tsx'), path.resolve(SRC, '../index.ts')];
+  const files = roots.flatMap((root) => (fs.statSync(root).isDirectory() ? sourceFiles(root) : [root]));
+  const rel = (file: string) => path.relative(SRC, file);
+  const UPDATE_CHECK = 'modules/appVersion/updateCheck.ts';
+
+  it('no JS code awaits an update check / download / reload — except the parent update button module', () => {
+    const offenders = files
+      .filter((file) => /checkForUpdateAsync|fetchUpdateAsync|reloadAsync|from 'expo-updates'/.test(fs.readFileSync(file, 'utf8')))
+      .map(rel);
+    expect(offenders).toEqual([UPDATE_CHECK]);
+  });
+
+  it('the update button module is reachable only from the parent Nadzor card', () => {
+    const importers = (needle: RegExp) => files.filter((file) => needle.test(fs.readFileSync(file, 'utf8'))).map(rel);
+    expect(importers(/appVersion\/updateCheck'/)).toEqual(['components/parent/AppVersionCard.tsx']);
+    expect(importers(/parent\/AppVersionCard'/)).toEqual(['screens/parent/ControlsScreen.tsx']);
   });
 });
