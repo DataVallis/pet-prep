@@ -402,6 +402,48 @@ describe('Daily walk: day closed at the family-local midnight', function () {
         expect(PetDailyWalk::where('pet_id', $pet->id)->sole()->illness_due_at)->toBeNull();
     });
 
+    it('treats a day at the vet as a recovery day: back at 19:00 without a walk, no new illness next morning', function () {
+        // David 2026-10-29: ill (walk illness) 06:00–18:00 local on Mon 5 Oct,
+        // home at 18:00 local (16:00 UTC), no steps left to walk that evening.
+        Carbon::setTestNow('2026-10-05 04:00:00');
+        $pet = dwPet(pet: ['last_step_reset_at' => now()]);
+        $pet->update(['illness_until' => Carbon::parse('2026-10-05 16:00:00'), 'pet_state' => 'sick']);
+
+        $illnesses = dwLoop($pet, '2026-10-05 04:05:00', '2026-10-06 08:00:00', fn () => dwFeed($pet));
+
+        expect($illnesses)->toBe([]);
+        $fresh = $pet->fresh();
+        expect($fresh->isIll())->toBeFalse();
+        expect($fresh->walk_illness_due_at)->toBeNull();
+        $walk = PetDailyWalk::where('pet_id', $pet->id)->sole();
+        expect($walk->local_date->toDateString())->toBe('2026-10-05');
+        expect($walk->illness_due_at)->toBeNull();
+        expect($walk->achieved)->toBeFalse();
+    });
+
+    it('still makes the dog ill after a normal day with no walk that follows the recovery day', function () {
+        Carbon::setTestNow('2026-10-05 04:00:00');
+        $pet = dwPet(pet: ['last_step_reset_at' => now()]);
+        $pet->update(['illness_until' => Carbon::parse('2026-10-05 16:00:00'), 'pet_state' => 'sick']);
+
+        // Recovery day Mon, normal day Tue without a walk → ill Wed 06:00 local.
+        $illnesses = dwLoop($pet, '2026-10-05 04:05:00', '2026-10-07 05:00:00', fn () => dwFeed($pet));
+
+        expect($illnesses)->toBe(['2026-10-07 04:00']);
+    });
+
+    it('also counts an illness that starts late in the evening as a day at the vet', function () {
+        // Fell ill (e.g. an uncleaned mess) at 21:00 local — no time to walk after it.
+        Carbon::setTestNow('2026-10-05 19:00:00');
+        $pet = dwPet();
+        $pet->update(['illness_until' => Carbon::parse('2026-10-06 07:00:00'), 'pet_state' => 'sick']);
+
+        $illnesses = dwLoop($pet, '2026-10-05 19:05:00', '2026-10-06 08:00:00', fn () => dwFeed($pet));
+
+        expect($illnesses)->toBe([]);
+        expect(PetDailyWalk::where('pet_id', $pet->id)->where('local_date', '2026-10-05')->sole()->illness_due_at)->toBeNull();
+    });
+
     it('does not make the dog ill when more than one midnight passed (scheduler outage)', function () {
         $pet = dwPet();
         dwTick($pet, '2026-10-05 21:00:00');

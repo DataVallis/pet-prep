@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Enums\PetStatusPeriodKind;
 use App\Models\Pet;
 use App\Models\PetDailyWalk;
 use App\Models\QuietHours;
@@ -27,8 +28,13 @@ use Illuminate\Support\Facades\Log;
  *
  * Never causes illness for the pet's birth day, for a day closed while the
  * pet is frozen (hard stop / illness; the caller passes $allowIllness=false),
- * or when more than one midnight passed since the last close (the finished
- * day is not "yesterday", e.g. after a long scheduler outage).
+ * for a recovery day — a day on which the dog was at the vet at any time
+ * (an `illness` status period overlaps it, David 2026-10-29: back from the
+ * vet at 19:00, the goal can't be walked any more, so the dog must not fall
+ * ill again the next morning) — or when more than one midnight passed since
+ * the last close (the finished day is not "yesterday", e.g. after a long
+ * scheduler outage). A recovery day is still recorded (steps, goal,
+ * achieved) as usual, only without `illness_due_at`.
  *
  * Cats (M5-R06-04, CAT_SPEC Q1 / Q2): no steps, no walk row and never a walk
  * illness — the same midnight resets the play meter (energy) to 0 and
@@ -93,9 +99,10 @@ class DailyWalkService
         $birthDay = $closedDate === $pet->localDate($pet->born_at);
         $yesterday = Carbon::parse($today, $timezone)->subDay()->toDateString();
         $noWalk = $pet->displayMetric('energy_level') === 0;
+        $recoveryDay = $this->wasAtVetOn($pet, $closedDate, $timezone);
 
         $illnessAt = null;
-        if ($allowIllness && ! $birthDay && $closedDate === $yesterday && $noWalk) {
+        if ($allowIllness && ! $birthDay && ! $recoveryDay && $closedDate === $yesterday && $noWalk) {
             $midnight = Carbon::parse($today, $timezone)->startOfDay()->utc();
             $illnessAt = $this->endOfQuietStretch($pet->quietHours(), $midnight);
         }
@@ -124,6 +131,24 @@ class DailyWalkService
         }
 
         return true;
+    }
+
+    /**
+     * Recovery day (David 2026-10-29): the dog spent some of the family-local
+     * day `$localDate` at the vet — an illness status period overlaps it.
+     * The period row exists from the start of the illness, so this also holds
+     * when the recovery and the midnight close happen in the same tick.
+     */
+    public function wasAtVetOn(Pet $pet, string $localDate, string $timezone): bool
+    {
+        $dayStart = Carbon::parse($localDate, $timezone)->startOfDay()->utc();
+        $dayEnd = $dayStart->copy()->setTimezone($timezone)->addDay()->startOfDay()->utc();
+
+        return $pet->statusPeriods()
+            ->where('kind', PetStatusPeriodKind::Illness->value)
+            ->where('started_at', '<', $dayEnd)
+            ->where(fn ($q) => $q->whereNull('ended_at')->orWhere('ended_at', '>', $dayStart))
+            ->exists();
     }
 
     /**

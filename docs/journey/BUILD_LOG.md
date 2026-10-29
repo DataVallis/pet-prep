@@ -8,6 +8,10 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-29 — Dan okrevanja po veterinarju
+
+**Kaj:** dan, ko je kuža (vsaj del dneva) pri veterinarju, ne more več povzročiti nove bolezni zaradi sprehoda. **Zakaj:** David je na lastnem psu Kuzi videl zanko — cel dan pri veterinarju, doma ob 19:00, korakov ni bilo več mogoče narediti, naslednje jutro spet bolan. Otrok ni naredil nič narobe, igra pa ga je kaznovala. **Kako povedati:** starši — »aplikacija je poštena: po veterinarju pes počiva«; otroci — »ko se kuža vrne od veterinarja, si tisti dan odpočije«.
+
 ## 2026-10-28 — Najprej domači zaslon, šola in igre počakajo na svoje posnetke
 
 **Kaj:** po ustvarjanju novega ljubljenčka strežnik najprej naredi vse, kar otrok vidi na glavnem zaslonu (stoji, spi, je, igra se …, prehod v spanje), slike poz za šolo in igre začne delati takoj za tem, posnetke iger in šole pa odda šele, ko je domači nabor oddan. Šola in igre so do takrat **zaklenjene** z mirnim »Šola se še pripravlja — to lahko traja nekaj minut«; strežnik začetka vaje ne dovoli niti starejši aplikaciji. Če posnetek ne uspe, dejavnost ostane zaklenjena, strežnik ga vsako uro sam ponovi (največ 3 poskusi) in nato obvesti skrbnika.
