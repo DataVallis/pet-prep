@@ -15,6 +15,7 @@
 #
 # Usage: scripts/mobile-ota.sh <message> [--dry-run] [--channel production|preview]
 # Needs: EXPO_TOKEN (EAS robot token), `eas` on PATH, run from the repo root, mobile deps installed.
+# Exports EXPO_PUBLIC_GIT_COMMIT=<short HEAD> so the bundle knows its commit (app version line).
 # The EXPO_PUBLIC_* values of the channel's build profile (eas.json) are exported so the
 # OTA bundle talks to the same API / Reverb / RevenueCat as that build. `eas update
 # --environment <channel>` adds the EAS server variables of that environment on top
@@ -57,7 +58,15 @@ while IFS='=' read -r key value; do
   export "$key=$value"
 done <<< "$profile_env"
 
-echo "- 📡 channel **${CHANNEL}** (API \`${EXPO_PUBLIC_API_URL:-default}\`)" >>"$SUMMARY"
+# The commit of this bundle (David 2026-10-29): `EXPO_PUBLIC_*` is inlined into the JS at
+# export, so the parent's »Različica aplikacije« (mobile src/modules/appVersion) shows exactly
+# the commit docs/research/app-release.json records for this OTA. JS only — it is not part of
+# the native fingerprint (app.config.ts does not read it). Empty outside git → the app falls
+# back to extra.gitSha.
+EXPO_PUBLIC_GIT_COMMIT="$(git rev-parse --short=7 HEAD 2>/dev/null || true)"
+export EXPO_PUBLIC_GIT_COMMIT
+
+echo "- 📡 channel **${CHANNEL}** (API \`${EXPO_PUBLIC_API_URL:-default}\`, commit \`${EXPO_PUBLIC_GIT_COMMIT:-unknown}\`)" >>"$SUMMARY"
 needs_build=()
 published=()
 for platform in ios android; do

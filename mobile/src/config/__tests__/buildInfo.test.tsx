@@ -1,13 +1,14 @@
 /**
  * Build identity: app.config.ts resolves the git sha (EAS env → local git → "dev"),
  * the app reads it via expo-constants and shows "v{version} · {sha}" on the start
- * screen and in the parent's Nadzor.
+ * screen; the parent's Nadzor shows it inside the »Različica aplikacije« line (AppVersionCard).
  */
 import { render, screen } from '@testing-library/react-native';
 
 import { resolveGitSha } from '../../../app.config';
 import BuildLabel from '@/components/BuildLabel';
 import { buildInfoFrom, formatBuildLabel, getBuildInfo } from '@/config/buildInfo';
+import { setUpdatesIdentityForTests } from '@/modules/appVersion/appVersionSource';
 import StartScreen from '@/screens/StartScreen';
 import ControlsScreen from '@/screens/parent/ControlsScreen';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
@@ -59,8 +60,13 @@ describe('build info', () => {
     expect(screen.getByText('v1.10.2 · abc1234')).toBeTruthy();
   });
 
-  it('is shown in the parent Nadzor "O aplikaciji" section', () => {
-    renderWithQuery(<ControlsScreen onBack={jest.fn()} family={null} onAddChild={jest.fn()} onChildPin={jest.fn()} />);
-    expect(screen.getByTestId('controls-about')).toHaveTextContent(/O aplikaciji.*v1\.10\.2 · abc1234/);
+  it('is shown in the parent Nadzor "O aplikaciji" section (AppVersionCard, David 2026-10-29)', () => {
+    setUpdatesIdentityForTests({});
+    try {
+      renderWithQuery(<ControlsScreen onBack={jest.fn()} family={null} onAddChild={jest.fn()} onChildPin={jest.fn()} />);
+      expect(screen.getByTestId('controls-about')).toHaveTextContent(/O aplikaciji.*Različica aplikacije.*1\.10\.2 · vgrajena različica · abc1234/);
+    } finally {
+      setUpdatesIdentityForTests(null);
+    }
   });
 });

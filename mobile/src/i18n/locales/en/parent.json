@@ -284,5 +284,23 @@
       "offline": "No connection. Try again.",
       "server": "The name could not be saved. Try again later."
     }
+  },
+  "appVersion": {
+    "title": "App version",
+    "rowA11y": "App version: {{line}}",
+    "copyHint": "Tap to copy the details.",
+    "copyA11yHint": "Copies the version details to the clipboard.",
+    "copied": "Details copied.",
+    "copyFailed": "Copying didn't work.",
+    "check": "Check for updates",
+    "checking": "Checking …",
+    "unavailable": "Checking for updates works only in the published app.",
+    "upToDate": "You have the latest version.",
+    "ready": "An update is ready.",
+    "readyHint": "It applies the next time the app starts, or right now with the button below.",
+    "restart": "Restart now",
+    "restartFailed": "The restart didn't work. Close the app and open it again.",
+    "error": "Couldn't check for updates. Check your connection and try again.",
+    "timeout": "The check took too long. Please try again later."
   }
 }

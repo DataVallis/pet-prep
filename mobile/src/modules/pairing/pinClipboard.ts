@@ -102,6 +102,21 @@ export async function copyPinToClipboard(pin: string): Promise<CopyPinResult> {
   }
 }
 
+/**
+ * Any non-empty text on the clipboard (parent »Različica aplikacije« details, David 2026-10-29).
+ * Same lazy module as the PIN paths; never throws.
+ */
+export async function copyTextToClipboard(text: string): Promise<CopyPinResult> {
+  if (text.trim().length === 0) return 'failed';
+  const clipboard = loadClipboard();
+  if (!clipboard) return 'unavailable';
+  try {
+    return (await clipboard.setStringAsync(text)) === false ? 'failed' : 'copied';
+  } catch {
+    return 'failed';
+  }
+}
+
 /** Tests: replace the native-module probe (and forget the cached module). */
 export function setClipboardProbeForTests(next: NativeProbe | null): void {
   probe = next ?? defaultProbe;

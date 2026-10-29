@@ -288,5 +288,23 @@
       "offline": "Ni povezave. Poskusite znova.",
       "server": "Imena ni bilo mogoče shraniti. Poskusite pozneje."
     }
+  },
+  "appVersion": {
+    "title": "Različica aplikacije",
+    "rowA11y": "Različica aplikacije: {{line}}",
+    "copyHint": "Dotaknite se za kopiranje podrobnosti.",
+    "copyA11yHint": "Kopira podrobnosti različice v odložišče.",
+    "copied": "Podrobnosti so kopirane.",
+    "copyFailed": "Kopiranje ni uspelo.",
+    "check": "Preveri posodobitve",
+    "checking": "Preverjam …",
+    "unavailable": "Preverjanje posodobitev deluje samo v objavljeni aplikaciji.",
+    "upToDate": "Imate najnovejšo različico.",
+    "ready": "Posodobitev je pripravljena.",
+    "readyHint": "Uveljavi se ob naslednjem zagonu aplikacije ali takoj z gumbom spodaj.",
+    "restart": "Znova zaženi zdaj",
+    "restartFailed": "Ponovni zagon ni uspel. Zaprite aplikacijo in jo znova odprite.",
+    "error": "Posodobitev ni bilo mogoče preveriti. Preverite povezavo in poskusite znova.",
+    "timeout": "Preverjanje je trajalo predolgo. Poskusite znova pozneje."
   }
 }
