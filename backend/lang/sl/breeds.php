@@ -79,6 +79,7 @@ return [
     'cairn_terrier' => 'Cairn terier',
     'bull_terrier' => 'Bulterier',
     'miniature_pinscher' => 'Pritlikavi pinč',
+    'pyrenean_mountain_dog' => 'Pirenejski gorski pes',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

@@ -176,7 +176,7 @@ describe('data migration for the rows PR #37 seeded', function () {
             // the cat rows (M5-R06-03) are checked in CatLifeStageDataTest.
             ->and(BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false)
                 // M5-R10-12 / M5-R10-23 / M5-R10-32 / M5-R10-57: the Bernese (76), Cane Corso (84), Miniature American Shepherd (108) Samoyed (90), Scottish Terrier (90, M5-R10-58) Bloodhound (61, M5-R10-62) and Akita (89, M5-R10-63) senior boundaries are separate open proposals — LifeStageDataTest / their breed tests.
-                ->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'samoyed', 'scottish-terrier', 'bloodhound', 'akita', 'saint-bernard', 'bull-terrier', 'miniature-pinscher'])
+                ->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'samoyed', 'scottish-terrier', 'bloodhound', 'akita', 'saint-bernard', 'bull-terrier', 'miniature-pinscher', 'pyrenean-mountain-dog'])
                 // M5-R13: the five "more than once a week" brushing rows (2/week) are Claude's proposals — DogGroomingTest / LifeStageDataTest.
                 ->where('key', '!=', 'grooming_sessions_per_week')->pluck('key')->unique()->values()->all())->toEqualCanonicalizing([
                     'chewing_chance_per_day',

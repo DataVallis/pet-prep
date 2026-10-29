@@ -2017,5 +2017,31 @@ return [
                 ['tag' => 'cold_sensitive', 'source_ids' => ['S597'], 'refs' => ['miniature_pinscher.suitability.vca_cold']],
             ],
         ],
+
+        // M5-R10-78: pyrenean_mountain_dog.* (S599–S607), runbook rules (data.json proposed_game_parameters.pyrenean_mountain_dog.suitability_tags).
+        // RKC Breeds A–Z (S600) + PDSA (S603) + PetMD (S604) + VCA (S605). No welfare chip: the RKC breed page says Breed Watch
+        // Category 1 (S600), a separate Breed Watch page Category 2 with a hind-conformation point (S602) — conflicting, open for
+        // David. Up to 1 hour a day → no active_family / long_daily_exercise. No family_pet (no family-pet statement), no
+        // small_children (PetMD: best without smaller children), no chases_small_pets (no prey-drive statement). Never hypoallergenic.
+        'pyrenean_mountain_dog' => [
+            'suits' => [
+                // S605 "Although he is devoted to his family – especially to children –" — with the PetMD caveat (not_for_small_children).
+                ['tag' => 'children', 'source_ids' => ['S605'], 'refs' => ['pyrenean_mountain_dog.behaviour.family', 'pyrenean_mountain_dog.suitability.vca_children']],
+                // S600 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S600'], 'refs' => ['pyrenean_mountain_dog.suitability.rkc_size_of_home', 'pyrenean_mountain_dog.suitability.rkc_size_of_garden']],
+                // S604 "Great Pyrenees live well with other pets but value their alone time."
+                ['tag' => 'other_pets', 'source_ids' => ['S604'], 'refs' => ['pyrenean_mountain_dog.behaviour.other_pets', 'pyrenean_mountain_dog.suitability.petmd_other_pets']],
+            ],
+            'consider' => [
+                // S604 "Great Pyrenees may be best in homes without smaller children"
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S604'], 'refs' => ['pyrenean_mountain_dog.behaviour.children', 'pyrenean_mountain_dog.suitability.petmd_children']],
+                // S600 "Sheds: Yes"; S604 heavy shedders, weekly brushing helps "minimize shedding in the home".
+                ['tag' => 'sheds', 'source_ids' => ['S600', 'S604'], 'refs' => ['pyrenean_mountain_dog.suitability.rkc_shedding', 'pyrenean_mountain_dog.suitability.petmd_grooming']],
+                // S600 "Grooming: More than once a week"; S603 "a thorough groom on a regular basis".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S600', 'S603'], 'refs' => ['pyrenean_mountain_dog.suitability.rkc_grooming', 'pyrenean_mountain_dog.suitability.pdsa_grooming']],
+                // S600 "Lifespan: Under 10 years"; S603 "Average lifespan: Under 10 years".
+                ['tag' => 'shorter_lifespan', 'source_ids' => ['S600', 'S603'], 'refs' => ['pyrenean_mountain_dog.lifespan.rkc', 'pyrenean_mountain_dog.suitability.rkc_lifespan']],
+            ],
+        ],
     ],
 ];

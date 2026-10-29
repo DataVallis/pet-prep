@@ -52,9 +52,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest / WeimaranerBreedTest / ItalianGreyhoundBreedTest / GiantSchnauzerBreedTest / BloodhoundBreedTest / AkitaBreedTest / CardiganWelshCorgiBreedTest / GermanWirehairedPointerBreedTest / SaintBernardBreedTest / StaffordshireBullTerrierBreedTest / AiredaleTerrierBreedTest / RussellTerrierBreedTest / BullmastiffBreedTest / ChineseCrestedBreedTest / NovaScotiaDuckTollingRetrieverBreedTest / CairnTerrierBreedTest / BullTerrierBreedTest / MiniaturePinscherBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest / WeimaranerBreedTest / ItalianGreyhoundBreedTest / GiantSchnauzerBreedTest / BloodhoundBreedTest / AkitaBreedTest / CardiganWelshCorgiBreedTest / GermanWirehairedPointerBreedTest / SaintBernardBreedTest / StaffordshireBullTerrierBreedTest / AiredaleTerrierBreedTest / RussellTerrierBreedTest / BullmastiffBreedTest / ChineseCrestedBreedTest / NovaScotiaDuckTollingRetrieverBreedTest / CairnTerrierBreedTest / BullTerrierBreedTest / MiniaturePinscherBreedTest / PyreneanMountainDogBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever / Samoyed / Scottish Terrier / Weimaraner / Italian Greyhound / Giant Schnauzer / Bloodhound / Akita / Cardigan Welsh Corgi / German Wirehaired Pointer / Saint Bernard / Staffordshire Bull Terrier / Airedale Terrier / Russell Terrier / Bullmastiff / Chinese Crested / Nova Scotia Duck Tolling Retriever / Cairn Terrier / Bull Terrier / Miniature Pinscher rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever / Samoyed / Scottish Terrier / Weimaraner / Italian Greyhound / Giant Schnauzer / Bloodhound / Akita / Cardigan Welsh Corgi / German Wirehaired Pointer / Saint Bernard / Staffordshire Bull Terrier / Airedale Terrier / Russell Terrier / Bullmastiff / Chinese Crested / Nova Scotia Duck Tolling Retriever / Cairn Terrier / Bull Terrier / Miniature Pinscher / Pyrenean Mountain Dog rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -926,6 +926,24 @@ class BreedStageParamsSeeder extends Seeder
     public const PROPOSED_R10_MINIATURE_PINSCHER_SENIOR = 'predlog Claude 2026-10-29 (najbližja vrstica pravila runbooka, M5-R10-77) — čaka Davida';
 
     /**
+     * M5-R10-78 Pyrenean Mountain Dog (unattended run 2026-10-29, data.json proposed_game_parameters.pyrenean_mountain_dog.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 60 min (RKC S600 "Exercise: Up to 1 hour per day"), senior 45 min, puppy 10 min × age capped at 60, stages
+     * young 9 / adult 36, arrival 2 / 9 / 36, learning multiplier 0.7 (Coren rank 64, Fair); care rates the Border Collie's.
+     * The senior boundary uses the closest rule row (PetMD lower bound 10 y, S604 — the RKC / PDSA band "Under 10 years" has
+     * no lower bound) and is NOT covered by the confirmation: see PROPOSED_R10_PYRENEAN_MOUNTAIN_DOG_SENIOR.
+     */
+    public const CONFIRMED_R10_PYRENEAN_MOUNTAIN_DOG = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-78)';
+
+    /**
+     * M5-R10-78 Pyrenean Mountain Dog senior boundary / senior arrival (90 months): Claude's suggestion from the closest rule
+     * row (0.75 × PetMD lower bound 10 y, S604) — no runbook rule produced a value (RKC "Under 10 years" has no lower bound,
+     * the Dogs Trust McMillan 2024 table S123 was not reachable, no VetCompass median), so the rows are verified=false until
+     * David decides (data.json proposed_game_parameters.pyrenean_mountain_dog.senior_boundary_months).
+     */
+    public const PROPOSED_R10_PYRENEAN_MOUNTAIN_DOG_SENIOR = 'predlog Claude 2026-10-29 (najbližja vrstica pravila runbooka, M5-R10-78) — čaka Davida';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1026,6 +1044,13 @@ class BreedStageParamsSeeder extends Seeder
      * runbook §3 "Dog grooming").
      */
     public const PROPOSED_R13_BELGIAN_MALINOIS = 'predlog Claude 2026-10-14 (RKC »More than once a week« brez števila → 2, M5-R13, M5-R10-38) — čaka Davida';
+
+    /**
+     * M5-R10-78 Pyrenean Mountain Dog: RKC "More than once a week" (S600) without a number; VCA / PetMD "weekly" (S605 /
+     * S604) would give 1, which contradicts the RKC and the frequent_grooming chip → Claude's proposal 2 per week,
+     * verified=false (Belgian Malinois precedent, runbook §3 "Dog grooming").
+     */
+    public const PROPOSED_R13_PYRENEAN_MOUNTAIN_DOG = 'predlog Claude 2026-10-29 (RKC »More than once a week« brez števila → 2, M5-R13, M5-R10-78) — čaka Davida';
 
     /**
      * M5-R14 / R15 / R18 / R19 / R20 (David 2026-10-24): every breed care task row is
@@ -1155,6 +1180,10 @@ class BreedStageParamsSeeder extends Seeder
         'chinese_crested' => [
             'nail_trim' => [1, 'week', 'S574', "Check your dog's toenails once a week and trim them back when they start getting a little long.", 'proposed_game_parameters.chinese_crested.nail_trimming', '"check … once a week" → once a week (the trim itself is as needed — open for David; teeth "brush … at home", ears "clean" and sun protection have no number → no task)'],
         ],
+        'pyrenean_mountain_dog' => [
+            'nail_trim' => [1, 'week', 'S605', 'weekly pedicure and ear cleaning', 'proposed_game_parameters.pyrenean_mountain_dog.nail_trimming', '"weekly pedicure" → once a week'],
+            'ear_cleaning' => [1, 'week', 'S605', 'weekly pedicure and ear cleaning', 'proposed_game_parameters.pyrenean_mountain_dog.ear_care', '"weekly … ear cleaning" → once a week (teeth, bath and groomer have no number → no task)'],
+        ],
     ];
 
     /**
@@ -1249,6 +1278,7 @@ class BreedStageParamsSeeder extends Seeder
         'cairn_terrier' => [2, 'S585', 'Twice a year the coat should be hand-stripped to remove dead hair, otherwise grooming 1-2 times per week is needed.', 'high', false],
         'bull_terrier' => [1, 'S591', 'Giving them a brush once a week should be enough to keep their coat looking healthy and shiny.', 'high', false],
         'miniature_pinscher' => [1, 'S595', 'Grooming is fairly minimal, with a brush once a week usually enough to keep the coat in tip-top condition.', 'high', false],
+        'pyrenean_mountain_dog' => [2, 'S600', 'Grooming: More than once a week', 'low', true, self::PROPOSED_R13_PYRENEAN_MOUNTAIN_DOG],
     ];
 
     /**
@@ -1291,6 +1321,7 @@ class BreedStageParamsSeeder extends Seeder
         'airedale_terrier' => ['S549', 'Because Airedale Terriers are susceptible to bloat, always avoid exercise right before and after mealtimes'],
         'bullmastiff' => ['S569', 'Avoid exercise from one hour before to one hour after a meal.'],
         'bull_terrier' => ['S591', 'Remember to leave a gap after eating and before exercising.'],
+        'pyrenean_mountain_dog' => ['S604', 'Avoid vigorous exercise around mealtimes'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -1377,13 +1408,14 @@ class BreedStageParamsSeeder extends Seeder
         'cairn_terrier' => ['S585', 'socialised at a young age with cats and other small household pets.'],
         'bull_terrier' => ['S591', 'As long as your dog is socialised properly, they should get along really well with people of all ages.'],
         'miniature_pinscher' => ['S596', 'As outgoing, active, and intelligent animals, they can make excellent family pets with the right socialization and training.'],
+        'pyrenean_mountain_dog' => ['S605', 'Early socialization is very important'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2160,6 +2192,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-77 (docs/research/dog-data/data.json miniature_pinscher,
             // S594–S598; runbook rules in proposed_game_parameters.miniature_pinscher).
             BreedType::MiniaturePinscher => self::miniaturePinscherProfile(),
+            // M5-R10-78 (docs/research/dog-data/data.json pyrenean_mountain_dog,
+            // S599–S607; runbook rules in proposed_game_parameters.pyrenean_mountain_dog).
+            BreedType::PyreneanMountainDog => self::pyreneanMountainDogProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -7461,6 +7496,91 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'miniature_pinscher.lifespan.pdsa',
                 'quote' => 'Average lifespan: Over 12 years',
                 'notes' => 'PDSA band (S595); no McMillan 2024 / VetCompass median reachable. PetMD 12–16 y (S596). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Pyrenean Mountain Dog (M5-R10-78). Stage boundaries young / adult, arrival ages, exercise minutes and the learning
+     * multiplier follow the runbook's standing rules (CONFIRMED_R10_PYRENEAN_MOUNTAIN_DOG); weight, growth, Coren rank and
+     * lifespan are sourced. The senior boundary is Claude's suggestion (PROPOSED_R10_PYRENEAN_MOUNTAIN_DOG_SENIOR, verified=false).
+     *
+     * @return array<string, mixed>
+     */
+    private static function pyreneanMountainDogProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_PYRENEAN_MOUNTAIN_DOG;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S604', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.pyrenean_mountain_dog.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a giant dog reaches adult weight at 18–24 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, [
+                    'unit' => 'months', 'source_id' => 'S11,S604', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.pyrenean_mountain_dog.senior_boundary_months', 'decision' => self::PROPOSED_R10_PYRENEAN_MOUNTAIN_DOG_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × PetMD lower bound 10 y ("10–12 years", S604; VCA S605 agrees) = 7.5 y = 90 months. The RKC / PDSA band "Under 10 years" (S600, S603) has no lower bound; the Dogs Trust McMillan 2024 table (S123) could not be fetched; no VetCompass median. Alternatives: McMillan 2024 10.9 y via Wikipedia (tier C, S606) → 98; Dogs Trust > 7 y (S14) → 84.',
+                ]],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.pyrenean_mountain_dog.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.pyrenean_mountain_dog.senior_boundary_months', 'decision' => self::PROPOSED_R10_PYRENEAN_MOUNTAIN_DOG_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 90 months (0.75 × 10 y, S604).',
+                ],
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (18–24 months for a giant dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S600', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.pyrenean_mountain_dog.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 1 hour per day',
+                'notes' => 'RKC "Exercise: Up to 1 hour per day" (S600) → 60 min = 6,000 steps (runbook rule: "up to N" → N). PDSA "Minimum exercise (per day): 1 hour" (S603) agrees; VCA (S605) "Moderate - needs to walk or play every day".',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.pyrenean_mountain_dog.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[40.0, 50.0], [
+                'unit' => 'kg', 'source_id' => 'S603', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'pyrenean_mountain_dog.adult_weight.pdsa',
+                'quote' => 'Average weight: 40-50 kg',
+                'notes' => 'PDSA "Average weight" (S603), one range for both sexes — the FCI standard gives no weight (S599). RKC standard minimum dogs 50 kg / bitches 40 kg (S601); VCA 85–120 lb (S605).',
+            ]],
+            'growth_end' => [[18, 24], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'pyrenean_mountain_dog.growth.adult_weight_reached',
+                'quote' => 'Giant (over 100 pounds) | 18–24 months',
+                'notes' => 'Size-class value, not breed-specific (RKC minimum 50 kg for dogs, S601; PetMD over 100 lb for males, S604 → the Giant class of S10).',
+            ]],
+            'coren_rank' => [64, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'pyrenean_mountain_dog.trainability.coren_rank',
+                'quote' => '| 64 | Great Pyrenees |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35, re-read 2026-10-29): rank 64 "Great Pyrenees", tier "Fair Working/Obedience Intelligence" (55–69). Verify in The Intelligence of Dogs.',
+            ]],
+            'learning_multiplier' => [0.7, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.pyrenean_mountain_dog.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 64, tier Fair (55–69, S35) → 0.7. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10.0, [
+                'unit' => 'years', 'source_id' => 'S604', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'pyrenean_mountain_dog.lifespan.petmd',
+                'quote' => 'The typical Great Pyrenees lifespan is 10–12 years',
+                'notes' => 'PetMD band 10–12 y (S604; VCA S605 agrees); RKC / PDSA "Under 10 years" (S600, S603); no McMillan 2024 / VetCompass median reachable. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

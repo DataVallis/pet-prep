@@ -646,6 +646,13 @@
 | chocolate, blue, fawn, merle or white; natural ears and tail. Red weighted highest (the register portrait). RKC Breed
 | Watch category unknown (page not reachable). Colour weights unsourced → `verified => false`.
 |
+| Pyrenean Mountain Dog (M5-R10-78, docs/research/dog-data pyrenean_mountain_dog.appearance):
+| "Dog of great size, imposing and strongly built, but not without a certain elegance." (FCI-Standard N° 137, S599);
+| colours white, or white with badger, wolf-grey, pale yellow or orange patches on the head, ears and base of the tail —
+| never black, brindle or merle; double dewclaws on the hind legs. Pure white weighted highest (the register portrait).
+| RKC Breed Watch: Category 1 on the breed page (S600), Category 2 on the Breed Watch page (S602) — open for David.
+| Colour weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -3406,6 +3413,43 @@ return [
             'eye_color' => ['dark oval eyes with black close-fitting eyelids'],
             'tail' => ['natural undocked tail carried in a sabre or sickle curve'],
             'muzzle' => ['a well-developed black nose'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+
+    // M5-R10-78 (docs/research/dog-data/data.json pyrenean_mountain_dog.appearance; runbook rules 2026-10-10: standard
+    // colours only — S599 white, or white with badger / wolf-grey / pale yellow / orange patches; never black, brindle or merle).
+    'pyrenean_mountain_dog' => [
+        'display_name' => 'Pyrenean Mountain Dog',
+        // Colour frequencies are in no source (pyrenean_mountain_dog.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 137 Pyrenean Mountain Dog (S599, https://fci.be/Nomenclature/Standards/137g02-en.pdf), RKC breed standard (S601), RKC Breeds A–Z (S600) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S600 "Size: Large"; S599 males "from 70 cm to 80 cm.", females from 65 cm to 75 cm',
+            'build' => 'S599 "Dog of great size, imposing and strongly built, but not without a certain elegance."',
+            'coat_length' => 'S599 "Well-furnished, flat, quite long and supple, rather crisp on the shoulders and back"',
+            'coat_color' => 'S599 "White or white with patches appearing grey (badger or wolf) or pale yellow or orange (arrouye)" (weights unsourced)',
+            'ear_carriage' => 'S599 "Set on level with the eye, fairly small, triangular in shape and rounded at the tip."',
+            'eye_color' => 'S599 "Rather small, almond-shaped, set slightly obliquely," amber-brown',
+            'tail' => 'S599 "It reaches at least as far as the point of the hock." (well plumed, carried low — S607)',
+            'muzzle' => 'S599 nose "Totally black."; S601 "Black nose and eye rims."',
+        ],
+        'traits' => [
+            'size' => ['giant'],
+            'build' => [['value' => 'imposing, strongly built giant mountain dog with a certain elegance, not cumbersome', 'weight' => 3], 'powerful, well-balanced giant livestock guardian with a calm, contemplative expression'],
+            'coat_length' => ['thick, flat, fairly long weather-resistant outer coat over a dense woolly undercoat, with a ruff at the neck and feathering on the legs'],
+            // Standard colours only (S599, never black, brindle or merle); pure white highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'pure white', 'weight' => 50],
+                ['value' => 'white with badger (grey-brown) patches on the head and ears', 'weight' => 20],
+                ['value' => 'white with wolf-grey patches on the head and ears', 'weight' => 10],
+                ['value' => 'white with pale yellow patches on the head and ears', 'weight' => 10],
+                ['value' => 'white with orange patches on the head and ears', 'weight' => 10],
+            ],
+            'ear_carriage' => ['fairly small triangular ears with rounded tips, set at eye level and lying flat against the head'],
+            'eye_color' => ['rather small almond-shaped amber-brown eyes with black rims'],
+            'tail' => ['long, well-plumed tail reaching below the hock, carried low'],
+            'muzzle' => ['a totally black nose and black lips, a moderate muzzle'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
