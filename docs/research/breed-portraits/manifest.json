@@ -922,6 +922,19 @@
             "prompt_hash": "sha256:e73e8bda81b6633ea1a99d7f100ef912ea532b5e796f3947a5b89861be4b34fc",
             "generated_at": "2026-10-29T01:16:19+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "miniature_pinscher",
+            "species": "dog",
+            "colour": "red",
+            "file": "dog/miniature-pinscher.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:d82259a1a37a7e6bda9a0ce8dceeab0f0c8b10ea393625082d62a5103420a385",
+            "generated_at": "2026-10-29T03:07:05+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
