@@ -163,6 +163,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-10-29 (cloud, backend) — recovery day after the vet (`fix/walk-recovery-day`)
+- David: Kuza was at the vet all day (walk illness), home at 19:00, no steps possible → ill again next morning. Now `DailyWalkService` never schedules a walk illness for a day an `illness` status period overlaps (`wasAtVetOn()`); the day is still recorded. 3 tests in `DailyWalkAndRecoveryTest`. Kuza's current illness was left as is (David).
+
 ### 2026-10-28 (cloud, backend) — key / pose images through the fal queue (`fix/fal-queue-key-images`)
 - Production: Nano Banana Pro Edit often > 60 s → sync `run()` timed out, cost kept, image thrown away, 3 paid tries per slot. Now `GeneratePetKeyframe` only submits to `queue.fal.run` (+ signed webhook, 30 s HTTP timeout); webhook `images[0].url` → `StorePetMedia` as before; the first hourly `media:sweep` ≥ 10 min after the submit polls lost image webhooks (free), `timed_out` after 2 h. New nullable `pet_media.status_url` / `response_url` (migration `2027_02_09`). Reference images, stage edits, portraits, vision check, AI Lab stay sync. Debt: a worker killed between fal accepting and the ledger commit (inside the 30 s submit) still leaves a `reserved` ledger row and a reclaim could resubmit (same as videos).
 ### 2026-10-28 (cloud, backend + mobile) — home first, school / games locked until their clips (`feat/media-home-first-lock-games`)
