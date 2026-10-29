@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "f4bfbd8e912c9220da899e20ed2b597da84a1b93737d9ebdf00bb0209a92a71f"
+      "sha256": "edab686e6467cfef409de64ff42585219405b2fef66f0e087711287e7cf9b0b2"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "1720f550f1db7baddb1c3e18129a35de1d28dcbdf8a48364a8821857bb54fda5"
+      "sha256": "8984a1e9df2f9e3518504bfbdb32b3f172e72f25a7847ff1dbc06e5666454f52"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "dff62b6456420db007bdd78cf92a3706223d55038c8e7a8219be9d309cce38b9"
+      "sha256": "45efe3c642e1e79c057216c73a873afbfaaf8c8bf2026de3ef9b9bae1ed509dc"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,20 +40,20 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "40229691c0aa46b2e6869316e97a38506212d187241cd79aabac7f1e29c9d206"
+      "sha256": "d718d36be5703d2dc366d2fecfea372d68efd8bc4db8b0077488c3619ecdde58"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "b763a9a8256696851d75315762ab95aacb2d0bdbb9bb59749cfadf58d66118ca"
+      "sha256": "cc68f7d073ac56ffad5699c62c4a1fd2d0ffbfff07b2dd54785d0968416c8851"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "809b621a7ac70fc3180db05c1f851b80eb095c6421b09c8ae6a338e12a910473"
+      "sha256": "7d353faf637a494cbfcf6ff7369eed48d7303d0128268db189bd7f1041c42248"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "9432311c89b0b8d9678fdf26dc332290d130dd1442be2cc8a3fac0e60d53dbbe"
+      "sha256": "b85e50a23cef213d68a3258d28fef81c71da428bf24085b20d1995b6d2f062ff"
     },
     "app_release": {
       "path": "docs/research/app-release.json",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "8672138c553ef3b229c1786c3a82246ed8f30dbea043a0ecdab6163142b90478"
+      "sha256": "2be349a48d49186b3286e99e049fb11e932f1ee0e556ef37403b6e4fe3966ddb"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -222,7 +222,7 @@
         }
       },
       "status": "available",
-      "breed_count": 71,
+      "breed_count": 72,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -42980,6 +42980,643 @@
       ]
     },
     {
+      "id": "pyrenean_mountain_dog",
+      "species": "dog",
+      "order": 71,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Pyrenean Mountain Dog",
+        "sl": "Pirenejski gorski pes"
+      },
+      "slug": {
+        "en": "pyrenean-mountain-dog",
+        "sl": "pirenejski-gorski-pes"
+      },
+      "synonyms": {
+        "en": [
+          "Great Pyrenees",
+          "Pyrenees",
+          "Patou",
+          "Chien de Montagne des Pyrénées"
+        ],
+        "sl": [
+          "pirenejski gorski pes",
+          "pirenejski pes",
+          "pirenejec",
+          "great pyrenees"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "under_1h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S600"
+          ],
+          "ref": "pyrenean_mountain_dog.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              70,
+              80
+            ],
+            "female": [
+              65,
+              75
+            ]
+          },
+          "source_ids": [
+            "S599"
+          ],
+          "ref": "pyrenean_mountain_dog.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              40,
+              50
+            ],
+            "female": [
+              40,
+              50
+            ]
+          },
+          "source_ids": [
+            "S603"
+          ],
+          "ref": "pyrenean_mountain_dog.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            18,
+            24
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "pyrenean_mountain_dog.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "less_than",
+          "value": 10,
+          "source_ids": [
+            "S600"
+          ],
+          "ref": "pyrenean_mountain_dog.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S600"
+          ],
+          "ref": "pyrenean_mountain_dog.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S600"
+          ],
+          "ref": "pyrenean_mountain_dog.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S600"
+          ],
+          "ref": "pyrenean_mountain_dog.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S600"
+          ],
+          "ref": "pyrenean_mountain_dog.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 64,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "pyrenean_mountain_dog.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 137,
+            "group": 2,
+            "section": 2,
+            "origin": "FR"
+          },
+          "source_ids": [
+            "S599"
+          ],
+          "ref": "pyrenean_mountain_dog.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia_arthritis",
+          "source_ids": [
+            "S603"
+          ],
+          "ref": "pyrenean_mountain_dog.health.hip_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S604"
+          ],
+          "ref": "pyrenean_mountain_dog.health.bloat",
+          "confidence": "high"
+        },
+        {
+          "key": "deafness",
+          "source_ids": [
+            "S603"
+          ],
+          "ref": "pyrenean_mountain_dog.health.deafness",
+          "confidence": "high"
+        },
+        {
+          "key": "epilepsy",
+          "source_ids": [
+            "S603"
+          ],
+          "ref": "pyrenean_mountain_dog.health.epilepsy",
+          "confidence": "high"
+        },
+        {
+          "key": "panosteitis",
+          "source_ids": [
+            "S603"
+          ],
+          "ref": "pyrenean_mountain_dog.health.panosteitis",
+          "confidence": "high"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S603"
+          ],
+          "ref": "pyrenean_mountain_dog.health.patella",
+          "confidence": "high"
+        },
+        {
+          "key": "entropion",
+          "source_ids": [
+            "S603"
+          ],
+          "ref": "pyrenean_mountain_dog.health.entropion",
+          "confidence": "high"
+        },
+        {
+          "key": "certain_cancers",
+          "source_ids": [
+            "S603"
+          ],
+          "ref": "pyrenean_mountain_dog.health.bone_cancer",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "children",
+            "source_ids": [
+              "S605"
+            ],
+            "refs": [
+              "pyrenean_mountain_dog.behaviour.family",
+              "pyrenean_mountain_dog.suitability.vca_children"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S600"
+            ],
+            "refs": [
+              "pyrenean_mountain_dog.suitability.rkc_size_of_home",
+              "pyrenean_mountain_dog.suitability.rkc_size_of_garden"
+            ]
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S604"
+            ],
+            "refs": [
+              "pyrenean_mountain_dog.behaviour.other_pets",
+              "pyrenean_mountain_dog.suitability.petmd_other_pets"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S604"
+            ],
+            "refs": [
+              "pyrenean_mountain_dog.behaviour.children",
+              "pyrenean_mountain_dog.suitability.petmd_children"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S600",
+              "S604"
+            ],
+            "refs": [
+              "pyrenean_mountain_dog.suitability.rkc_shedding",
+              "pyrenean_mountain_dog.suitability.petmd_grooming"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S600",
+              "S603"
+            ],
+            "refs": [
+              "pyrenean_mountain_dog.suitability.rkc_grooming",
+              "pyrenean_mountain_dog.suitability.pdsa_grooming"
+            ]
+          },
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S600",
+              "S603"
+            ],
+            "refs": [
+              "pyrenean_mountain_dog.lifespan.rkc",
+              "pyrenean_mountain_dog.suitability.rkc_lifespan"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.7
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 2
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "nail_trim",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.pyrenean_mountain_dog.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S600"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S600 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.pyrenean_mountain_dog.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.pyrenean_mountain_dog.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S604"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 90 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+          },
+          {
+            "ref": "proposed_game_parameters.pyrenean_mountain_dog.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 64, Fair tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.pyrenean_mountain_dog.grooming",
+            "basis_source_ids": [
+              "S600"
+            ],
+            "decision": "predlog Claude 2026-10-29 (RKC »More than once a week« brez števila → 2, M5-R13, M5-R10-78) — čaka Davida"
+          },
+          {
+            "ref": "proposed_game_parameters.pyrenean_mountain_dog.nail_trimming",
+            "basis_source_ids": [
+              "S605"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »weekly« → 1× na teden"
+          },
+          {
+            "ref": "proposed_game_parameters.pyrenean_mountain_dog.ear_care",
+            "basis_source_ids": [
+              "S605"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »weekly« → 1× na teden"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S600",
+          "S604",
+          "S605"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S600"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S600"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S600"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S600"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S600"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S599",
+        "S600",
+        "S603",
+        "S604",
+        "S605",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -48032,6 +48669,41 @@
       "publisher": "VCA Animal Hospitals",
       "title": "Miniature Pinscher (Know your pet — dog breeds)",
       "url": "https://vcahospitals.com/know-your-pet/dog-breeds/miniature-pinscher"
+    },
+    {
+      "id": "S599",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 137 Pyrenean Mountain Dog (Chien de Montagne des Pyrénées), English (PDF; valid standard published 13.03.2001)",
+      "url": "https://fci.be/Nomenclature/Standards/137g02-en.pdf"
+    },
+    {
+      "id": "S600",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Pyrenean Mountain Dog (Breeds A to Z)",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/pyrenean-mountain-dog/"
+    },
+    {
+      "id": "S603",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Pyrenean Mountain Dog breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/pyrenean-mountain-dog"
+    },
+    {
+      "id": "S604",
+      "tier": "B",
+      "publisher": "PetMD — Teresa Kho-Pelfrey, DVM, reviewed by Barri J. Morrison, DVM (updated Sep. 18, 2024)",
+      "title": "Great Pyrenees",
+      "url": "https://petmd.com/dog/breeds/great-pyrenees"
+    },
+    {
+      "id": "S605",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals (LifeLearn, created May 29, 2014)",
+      "title": "Great Pyrenees (Know your pet)",
+      "url": "https://vcahospitals.com/know-your-pet/great-pyrenees"
     },
     {
       "id": "C1",
