@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "519661c63924ca6facd5d4b0375520ac9fc0d93339160682484dee78e915ec96"
+      "sha256": "29c58dbc8512b181dfdd66d612ea2ce6cfb8ba56b1842566fe63a37d407079e8"
     }
   },
   "suitability_vocabulary": {
@@ -43551,7 +43551,12 @@
           "S605"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "pyrenean-mountain-dog.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
