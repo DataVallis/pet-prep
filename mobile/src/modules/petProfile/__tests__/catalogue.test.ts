@@ -586,7 +586,8 @@ describe('breed search', () => {
     // M5-R10-61: … and the Giant Schnauzer (»veliki šnavcer«) shares the noun.
     expect(find('šnavcer')).toEqual(['miniature_schnauzer', 'giant_schnauzer']);
     expect(find('snavcer')).toEqual(['miniature_schnauzer', 'giant_schnauzer']);
-    expect(find('Pritlikavi')).toEqual(['miniature_schnauzer']);
+    // M5-R10-77: »pritlikavi pinč« (Miniature Pinscher) shares the word.
+    expect(find('Pritlikavi')).toEqual(['miniature_schnauzer', 'miniature_pinscher']);
     expect(find('zwergschnauzer')).toEqual(['miniature_schnauzer']);
   });
 
@@ -689,8 +690,9 @@ describe('breed search', () => {
     expect(find('nemški špic')).toEqual(['pomeranian']);
     expect(find('nemski spic')).toEqual(['pomeranian']);
     expect(find('German Toy Spitz')).toEqual(['pomeranian']);
-    // Never the Miniature Schnauzer (»pritlikavi šnavcer«) — no »pritlikavi« keyword.
-    expect(find('Pritlikavi')).toEqual(['miniature_schnauzer']);
+    // Never the Pomeranian (no »pritlikavi« keyword) — only the Miniature Schnauzer (»pritlikavi šnavcer«) and, since
+    // M5-R10-77, the Miniature Pinscher (»pritlikavi pinč«).
+    expect(find('Pritlikavi')).toEqual(['miniature_schnauzer', 'miniature_pinscher']);
   });
 
   it('M5-R10-29: finds the Great Dane by its EN / SL / German names (with and without š)', () => {
@@ -705,7 +707,8 @@ describe('breed search', () => {
     const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
     expect(find('doberman')).toEqual(['dobermann']);
     expect(find('dobermann')).toEqual(['dobermann']);
-    expect(find('pinscher')).toEqual(['dobermann']);
+    // M5-R10-77: the Miniature Pinscher matches »pinscher« too.
+    expect(find('pinscher')).toEqual(['dobermann', 'miniature_pinscher']);
   });
 
   it('M5-R10-24: finds the Pembroke Welsh Corgi by its SL / EN names and nicknames', () => {
