@@ -481,6 +481,11 @@ return [
         ['key' => 'fawn', 'value' => 'fawn, the colour predominating over any white markings', 'en' => 'Fawn', 'sl' => 'Plav'],
         ['key' => 'tricolour', 'value' => 'tricolour (black, tan and white), the colour predominating', 'en' => 'Tricolour', 'sl' => 'Tribarven'],
     ],
+    // M5-R10-77: FCI-Standard N° 185 (S594) — self-coloured red (deer red to dark red brown); black and tan.
+    'miniature_pinscher' => [
+        ['key' => 'red', 'value' => 'self-coloured deer red (red to reddish-brown)', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'black-tan', 'value' => 'lacquer black with red-brown markings (black and tan)', 'en' => 'Black and tan', 'sl' => 'Črn s porjavelimi oznakami'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
