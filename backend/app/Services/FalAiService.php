@@ -642,6 +642,13 @@ class FalAiService
                 .'small pointed erect ears, a black nose, a short well-furnished tail carried gaily, alert and fearless expression, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-76: FCI-Standard N° 11 (S590) — white as the anchor (the first colour of the game list); egg-shaped head,
+            // small erect ears, narrow triangular dark eyes, short flat glossy coat.
+            BreedType::BullTerrier => 'A strongly built, muscular, well balanced Bull Terrier with a short, flat, glossy pure white coat, '
+                .'a long, strong, egg-shaped head with no stop and a profile curving gently down to a black nose, '
+                .'small narrow triangular dark eyes, small thin ears held erect, a short low-set tail carried horizontally, keen and determined expression, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1537,6 +1544,18 @@ class FalAiService
                 'eye_color' => 'dark hazel',
                 'fur_texture' => 'profuse, harsh, weather-resistant double coat with a short soft undercoat, natural and shaggy',
                 'markings' => 'darker points on the ears and muzzle, shaggy eyebrows, never solid black, white, or black and tan',
+            ],
+            // M5-R10-76: white, or coloured — brindle (preferred), black brindle, red, fawn, tricolour (FCI S590); never blue,
+            // liver or merle.
+            BreedType::BullTerrier => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'pure white',
+                    1 => 'brindle with white markings',
+                    2 => 'red with white markings',
+                },
+                'eye_color' => 'dark, almost black',
+                'fur_texture' => 'short, flat, harsh coat with a fine gloss and tight skin',
+                'markings' => 'egg-shaped head, small narrow triangular eyes, never blue, liver or merle',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

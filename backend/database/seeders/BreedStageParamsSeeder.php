@@ -52,9 +52,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest / WeimaranerBreedTest / ItalianGreyhoundBreedTest / GiantSchnauzerBreedTest / BloodhoundBreedTest / AkitaBreedTest / CardiganWelshCorgiBreedTest / GermanWirehairedPointerBreedTest / SaintBernardBreedTest / StaffordshireBullTerrierBreedTest / AiredaleTerrierBreedTest / RussellTerrierBreedTest / BullmastiffBreedTest / ChineseCrestedBreedTest / NovaScotiaDuckTollingRetrieverBreedTest / CairnTerrierBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest / WeimaranerBreedTest / ItalianGreyhoundBreedTest / GiantSchnauzerBreedTest / BloodhoundBreedTest / AkitaBreedTest / CardiganWelshCorgiBreedTest / GermanWirehairedPointerBreedTest / SaintBernardBreedTest / StaffordshireBullTerrierBreedTest / AiredaleTerrierBreedTest / RussellTerrierBreedTest / BullmastiffBreedTest / ChineseCrestedBreedTest / NovaScotiaDuckTollingRetrieverBreedTest / CairnTerrierBreedTest / BullTerrierBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever / Samoyed / Scottish Terrier / Weimaraner / Italian Greyhound / Giant Schnauzer / Bloodhound / Akita / Cardigan Welsh Corgi / German Wirehaired Pointer / Saint Bernard / Staffordshire Bull Terrier / Airedale Terrier / Russell Terrier / Bullmastiff / Chinese Crested / Nova Scotia Duck Tolling Retriever / Cairn Terrier rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever / Samoyed / Scottish Terrier / Weimaraner / Italian Greyhound / Giant Schnauzer / Bloodhound / Akita / Cardigan Welsh Corgi / German Wirehaired Pointer / Saint Bernard / Staffordshire Bull Terrier / Airedale Terrier / Russell Terrier / Bullmastiff / Chinese Crested / Nova Scotia Duck Tolling Retriever / Cairn Terrier / Bull Terrier rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -890,6 +890,24 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_CAIRN_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-75)';
 
     /**
+     * M5-R10-76 Bull Terrier (unattended run 2026-10-29, data.json proposed_game_parameters.bull_terrier.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 60 min (PDSA S591 "Minimum exercise (per day): 1 hour"; RKC page not reachable), senior 45 min, puppy
+     * 10 min × age capped at 60, stages young 9 / adult 36, arrival 2 / 9 / 36, learning multiplier 0.7 (Coren rank 66,
+     * Fair); care rates the Border Collie's. The senior boundary uses the closest rule row (PDSA lower bound
+     * "Over 10 years", S591) and is NOT covered by the confirmation: see PROPOSED_R10_BULL_TERRIER_SENIOR.
+     */
+    public const CONFIRMED_R10_BULL_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-76)';
+
+    /**
+     * M5-R10-76 Bull Terrier senior boundary / senior arrival (90 months): Claude's suggestion from the closest rule row
+     * (0.75 × PDSA lower bound 10 y, S591) — no runbook rule produced a value (the Dogs Trust McMillan 2024 table S123 and
+     * the RKC page were not reachable, no VetCompass median), so the rows are verified=false until David decides (data.json
+     * proposed_game_parameters.bull_terrier.senior_boundary_months).
+     */
+    public const PROPOSED_R10_BULL_TERRIER_SENIOR = 'predlog Claude 2026-10-29 (najbližja vrstica pravila runbooka, M5-R10-76) — čaka Davida';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1211,6 +1229,7 @@ class BreedStageParamsSeeder extends Seeder
         'chinese_crested' => [1, 'S572', 'Grooming: Once a week', 'high', false],
         'nova_scotia_duck_tolling_retriever' => [2, 'S579', 'Brushing your Toller once or twice a week will prevent their silky coat from matting.', 'high', false],
         'cairn_terrier' => [2, 'S585', 'Twice a year the coat should be hand-stripped to remove dead hair, otherwise grooming 1-2 times per week is needed.', 'high', false],
+        'bull_terrier' => [1, 'S591', 'Giving them a brush once a week should be enough to keep their coat looking healthy and shiny.', 'high', false],
     ];
 
     /**
@@ -1252,6 +1271,7 @@ class BreedStageParamsSeeder extends Seeder
         'saint_bernard' => ['S532', 'Remember to leave a gap after eating and before exercising.'],
         'airedale_terrier' => ['S549', 'Because Airedale Terriers are susceptible to bloat, always avoid exercise right before and after mealtimes'],
         'bullmastiff' => ['S569', 'Avoid exercise from one hour before to one hour after a meal.'],
+        'bull_terrier' => ['S591', 'Remember to leave a gap after eating and before exercising.'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -1336,13 +1356,14 @@ class BreedStageParamsSeeder extends Seeder
         'chinese_crested' => ['S574', 'socializing your Chinese Crested puppy early and consistently is important for her to be comfortable in new situations.'],
         'nova_scotia_duck_tolling_retriever' => ['S580', 'Like with any breed, early socialization and puppy training courses are highly recommended.'],
         'cairn_terrier' => ['S585', 'socialised at a young age with cats and other small household pets.'],
+        'bull_terrier' => ['S591', 'As long as your dog is socialised properly, they should get along really well with people of all ages.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2113,6 +2134,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-75 (docs/research/dog-data/data.json cairn_terrier,
             // S583–S588; runbook rules in proposed_game_parameters.cairn_terrier).
             BreedType::CairnTerrier => self::cairnTerrierProfile(),
+            // M5-R10-76 (docs/research/dog-data/data.json bull_terrier,
+            // S589–S593; runbook rules in proposed_game_parameters.bull_terrier).
+            BreedType::BullTerrier => self::bullTerrierProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -7244,6 +7268,91 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'cairn_terrier.lifespan.median_uk',
                 'quote' => 'Cairn Terrier 14.0 13.8 - 14.3 2585 1139',
                 'notes' => 'McMillan et al. 2024 median via the Dogs Trust breed table (S123). PDSA "Over 10 years" (S585), PetMD 13–15 y (S587), VCA 12–14 y (S588). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Bull Terrier (M5-R10-76). Stage boundaries young / adult, arrival ages, exercise minutes and the learning
+     * multiplier follow the runbook's standing rules (CONFIRMED_R10_BULL_TERRIER); weight, growth, Coren rank and lifespan
+     * are sourced. The senior boundary is Claude's suggestion (PROPOSED_R10_BULL_TERRIER_SENIOR, verified=false).
+     *
+     * @return array<string, mixed>
+     */
+    private static function bullTerrierProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_BULL_TERRIER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S591', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.bull_terrier.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog reaches adult weight at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, [
+                    'unit' => 'months', 'source_id' => 'S11,S591', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.bull_terrier.senior_boundary_months', 'decision' => self::PROPOSED_R10_BULL_TERRIER_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × PDSA lower bound "Over 10 years" (S591) = 7.5 y = 90 months. The Dogs Trust McMillan 2024 table (S123) and the RKC breed page could not be fetched; no VetCompass median. Alternatives: McMillan 2024 12 y via Wikipedia (tier C, S593) or PetMD 12–13 y (S592) → 108; Dogs Trust > 7 y (S14) → 84.',
+                ]],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.bull_terrier.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.bull_terrier.senior_boundary_months', 'decision' => self::PROPOSED_R10_BULL_TERRIER_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 90 months (0.75 × 10 y, S591).',
+                ],
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S591', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.bull_terrier.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Minimum exercise (per day): 1 hour',
+                'notes' => 'PDSA "Minimum exercise (per day): 1 hour" (S591) → 60 min = 6,000 steps (runbook rule: "minimum N" → N; the RKC breed page was not reachable). PDSA "at least one hour of exercise a day"; PetMD (S592) "Regular exercise is a must" gives no number.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.bull_terrier.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[22.0, 31.0], [
+                'unit' => 'kg', 'source_id' => 'S591', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'bull_terrier.adult_weight.pdsa',
+                'quote' => 'Average weight: 22-31 kg',
+                'notes' => 'PDSA "Average weight" (S591), one range for both sexes — the FCI standard sets no weight or height limits (S590). PetMD 50–70 lb (S592) agrees.',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'bull_terrier.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (PDSA 22–31 kg, S591 = mostly the Medium class of S10; the heaviest dogs reach the Large class, 15–18 months).',
+            ]],
+            'coren_rank' => [66, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'bull_terrier.trainability.coren_rank',
+                'quote' => '| 66 | Bull Terrier |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35, re-read 2026-10-29): rank 66, tier "Fair Working/Obedience Intelligence" (55–69). Verify in The Intelligence of Dogs.',
+            ]],
+            'learning_multiplier' => [0.7, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.bull_terrier.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 66, tier Fair (55–69, S35) → 0.7. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10.0, [
+                'unit' => 'years', 'source_id' => 'S591', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'bull_terrier.lifespan.pdsa',
+                'quote' => 'Average lifespan: Over 10 years',
+                'notes' => 'PDSA band (S591); no McMillan 2024 / VetCompass median reachable. PetMD 12–13 y (S592). Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

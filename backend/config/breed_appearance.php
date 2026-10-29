@@ -634,6 +634,12 @@
 | black, white, or black and tan. Wheaten weighted highest (the register portrait). RKC Breed Watch category unknown
 | (page not reachable). Colour weights unsourced → `verified => false`.
 |
+| Bull Terrier (M5-R10-76, docs/research/dog-data bull_terrier.appearance):
+| "Strongly built, muscular, well balanced and active with a keen, determined and intelligent expression." (FCI-Standard
+| N° 11, S590); egg-shaped head; colours white, or coloured — brindle (preferred), black brindle, red, fawn, tricolour —
+| never blue, liver or merle. White weighted highest (the register portrait). RKC Breed Watch category unknown (page not
+| reachable). Colour weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -3321,6 +3327,44 @@ return [
             'eye_color' => ['dark hazel eyes set wide apart, slightly sunk under shaggy eyebrows'],
             'tail' => ['short, well-furnished tail carried gaily'],
             'muzzle' => ['small head with a broad skull, a definite stop, a powerful muzzle that is not long, a black nose and a well-furnished face'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+
+    // M5-R10-76 (docs/research/dog-data/data.json bull_terrier.appearance; runbook rules 2026-10-10: standard colours
+    // only — S590 white; coloured brindle, black brindle, red, fawn, tricolour; never blue, liver or merle).
+    'bull_terrier' => [
+        'display_name' => 'Bull Terrier',
+        // Colour frequencies are in no source (bull_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 11 Bull Terrier (S590, https://fci.be/nomenclature/standards/011g03-en.pdf), PDSA (S591) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S591 "Size: Medium"; S590 "There are neither weight nor height limits."',
+            'build' => 'S590 "Strongly built, muscular, well balanced and active with a keen, determined and intelligent expression."',
+            'coat_length' => 'S590 "Short, flat, even and harsh to touch with a fine gloss."',
+            'coat_color' => 'S590 white; coloured — brindle preferred, black brindle, red, fawn, tricolour; blue and liver highly undesirable (paraphrase; weights unsourced)',
+            'ear_carriage' => 'S590 small, thin, close together, held stiffly erect (paraphrase)',
+            'eye_color' => 'S590 narrow, triangular, obliquely placed, black or as dark brown as possible; "Blue or partly blue undesirable."',
+            'tail' => 'S590 short, set low, carried horizontally, thick at the root tapering to a fine point (paraphrase)',
+            'muzzle' => 'S590 long, strong, egg-shaped head with no hollows, profile curving gently down to a black nose bent down at the tip (paraphrase)',
+        ],
+        'traits' => [
+            'size' => ['medium'],
+            'build' => [['value' => 'strongly built, muscular, well balanced and active terrier', 'weight' => 3], 'muscular, powerful medium-sized terrier with a deep chest and a keen, determined expression'],
+            'coat_length' => ['short, flat, harsh coat with a fine gloss and tight-fitting skin'],
+            // Standard colours only (S590, never blue, liver or merle); white highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'pure white', 'weight' => 35],
+                ['value' => 'brindle, the colour predominating over any white markings', 'weight' => 20],
+                ['value' => 'black brindle, the colour predominating over any white markings', 'weight' => 10],
+                ['value' => 'red, the colour predominating over any white markings', 'weight' => 15],
+                ['value' => 'fawn, the colour predominating over any white markings', 'weight' => 10],
+                ['value' => 'tricolour (black, tan and white), the colour predominating', 'weight' => 10],
+            ],
+            'ear_carriage' => ['small, thin ears set close together and held stiffly erect'],
+            'eye_color' => ['small, narrow, triangular, obliquely set dark eyes'],
+            'tail' => ['short, low-set tail carried horizontally, tapering to a fine point'],
+            'muzzle' => ['long, strong, egg-shaped head with no stop, the profile curving gently down to a black nose'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],

@@ -472,6 +472,15 @@ return [
         ['key' => 'brindle', 'value' => 'grey brindle with darker ears and muzzle', 'en' => 'Brindle', 'sl' => 'Tigrast'],
         ['key' => 'nearly-black', 'value' => 'nearly black (dark grey brindle)', 'en' => 'Nearly black', 'sl' => 'Skoraj črn'],
     ],
+    // M5-R10-76: FCI-Standard N° 11 (S590) — white; coloured: brindle (preferred), black brindle, red, fawn, tricolour.
+    'bull_terrier' => [
+        ['key' => 'white', 'value' => 'pure white', 'en' => 'White', 'sl' => 'Bel'],
+        ['key' => 'brindle', 'value' => 'brindle, the colour predominating over any white markings', 'en' => 'Brindle', 'sl' => 'Tigrast'],
+        ['key' => 'black-brindle', 'value' => 'black brindle, the colour predominating over any white markings', 'en' => 'Black brindle', 'sl' => 'Črno tigrast'],
+        ['key' => 'red', 'value' => 'red, the colour predominating over any white markings', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'fawn', 'value' => 'fawn, the colour predominating over any white markings', 'en' => 'Fawn', 'sl' => 'Plav'],
+        ['key' => 'tricolour', 'value' => 'tricolour (black, tan and white), the colour predominating', 'en' => 'Tricolour', 'sl' => 'Tribarven'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
