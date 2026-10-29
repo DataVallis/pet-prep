@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "fe857bb83fe37c9957b83c462c78063c4141449424a2713dacf2689e61b75644"
+      "sha256": "d899e5f3473d203d39a4a4ac2af398bbd9be902995887a46f5ae85f1e8195de8"
     }
   },
   "suitability_vocabulary": {
@@ -42389,7 +42389,12 @@
           "S591"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "bull-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
