@@ -38783,6 +38783,489 @@
       }
     }
   },
+  "bull_terrier": {
+    "_note": "Added 2026-10-29 (M5-R10-76, unattended run — appended after the Cairn Terrier: AKC 2024 No. 72 'Bull Terrier', S174 full-list table fetched 2026-10-29 '72 | Bull Terrier'). Quotes as returned by the web-fetch tool on 2026-10-29 (short quotes, 125-character limit; the FCI standard PDF only as short quotes + paraphrase); paraphrase only in notes. Sources S589–S593 (reused S8, S10, S11, S14, S24, S35, S45, S174). No health percentages anywhere. The RKC Breeds A–Z page (display.aspx?id=3063 redirects to royalkennelclub.com …/terrier/bull-terrier, refused by the fetch tool, also with a trailing slash) could not be read → no RKC key facts and no Breed Watch category; exercise from PDSA (S591, runbook fallback RKC → PDSA). Identity from the FCI nomenclature (S589, No. 11); appearance and colours from FCI-Standard N° 11 (S590) — the standard sets no height or weight limits, so height and weight come from the PDSA key facts (S591). Lifespan: the Dogs Trust McMillan 2024 table (S123) was not in the fetch tool's provenance, the 'shortest and longest' PDF failed at its site and the Nature PDF (McMillan 2024) gives no Bull Terrier value in the text (Supplementary Table 3 not reachable); McMillan 2024 '12 years' only via Wikipedia (S593, tier C) → PDSA lower bound 'Over 10 years' (S591; Samoyed / Scottish Terrier precedent) — open for David. Names: FCI / AKC 'Bull Terrier' (S589, S174); Slovenian »bulterier« (common usage; no KZS page read — open for David). The Miniature Bull Terrier is a separate breed (not this entry).",
+    "identity": {
+      "value": "FCI No. 11, Group 3 Section 3 (Bull type Terriers), Great Britain",
+      "unit": "—",
+      "source_id": "S589",
+      "quote": "BULL TERRIER",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S589, as returned): 'BULL TERRIER', number 11, group 'n°3 - Terriers', section 'Bull type Terriers', country of origin 'GREAT BRITAIN', not subject to a working trial, definitive acceptance 6/26/1993, valid standard 9/8/2026. Great Britain is already in FCI_ORIGINS (GB). Wikipedia (S593, tier C) other names 'English Bull Terrier', 'Bully'. Not the Miniature Bull Terrier (a separate FCI breed)."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S591",
+      "quote": "Size: Medium",
+      "confidence": "medium",
+      "notes": "PDSA key facts table (S591, value 'Medium'; the page sits under 'medium-dogs'). The RKC 'Size:' field (preferred) could not be fetched."
+    },
+    "height": {
+      "pdsa": {
+        "value": {
+          "male": [
+            51,
+            61
+          ],
+          "female": [
+            51,
+            61
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S591",
+        "quote": "Average height: 51-61 cm",
+        "confidence": "medium",
+        "notes": "PDSA key facts table (S591, label and value as returned), one range for both sexes (stored per sex). FCI-Standard N° 11 (S590): 'There are neither weight nor height limits.' PetMD (S592): 'reaches a height of 21–22 inches' (53–56 cm, our conversion) — alternative."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            22,
+            31
+          ],
+          "female": [
+            22,
+            31
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S591",
+        "quote": "Average weight: 22-31 kg",
+        "confidence": "medium",
+        "notes": "PDSA key facts table (S591, label and value as returned), one range for both sexes (stored per sex) — the game range. The FCI standard sets no limit (S590 'There are neither weight nor height limits.'). PetMD (S592) 'they weigh in at around 50–70 pounds' (22.7–31.8 kg, our conversion) — alternative.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                22.7,
+                31.8
+              ],
+              "female": [
+                22.7,
+                31.8
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S592",
+            "quote": "The Bull Terrier’s athletic build generally reaches a height of 21–22 inches, and they weigh in at around 50–70 pounds.",
+            "notes": "PetMD (S592); 50–70 lb = 22.7–31.8 kg (our conversion, rounded)."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "IV (15–30 kg) / V (> 30 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 22–31 kg lies mostly in the 15–30 kg band. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 22–31 kg (S591) = 48–68 lb spans 'Medium' and 'Large (59–99 pounds): 15–18 months'; most of the range is Medium → 12–15 months. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Bull Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "pdsa": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S591",
+        "quote": "Average lifespan: Over 10 years",
+        "confidence": "medium",
+        "notes": "PDSA key facts table (S591, label and value as returned). Lower bound 10 y → the senior boundary (runbook: no McMillan 2024 / VetCompass median reachable, no RKC page; Samoyed / Scottish Terrier precedent)."
+      },
+      "petmd": {
+        "value": "12–13",
+        "unit": "years",
+        "source_id": "S592",
+        "quote": "Bull Terriers typically have a lifespan of 12–13 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S592, US). Exported as the span next to the PDSA band."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Dogs Trust table of McMillan et al. 2024 data (S123): not fetched this run (not in the fetch tool's provenance; the 'shortest and longest' PDF failed at its site; the Nature PDF names the breed only as a label in Fig. 5, Supplementary Table 3 not reachable). Wikipedia (S593, tier C): a 2024 UK study gave a life expectancy of 12 years for the breed (paraphrase) — not verified; 0.75 × 12 × 12 = 108 would be the senior month → open for David. UNSOURCED value."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × PDSA lower bound 10 y (S591) → 0.75 × 10 = 7.5 y = 90 months. Provisional until McMillan 2024 / the Dogs Trust breed table (S123) is checked (12 y via Wikipedia S593 would give 108). Not chosen: 108 (PetMD lower bound 12 y, S592); 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S591"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≥ 60",
+        "unit": "minutes/day",
+        "source_id": "S591",
+        "quote": "Minimum exercise (per day): 1 hour",
+        "confidence": "high",
+        "notes": "PDSA key facts table (S591, label and value as returned). The RKC breed page (preferred) was not reachable → PDSA (runbook rule). PDSA: 'Your Bull Terrier will need at least one hour of exercise a day.' PetMD (S592): 'Regular exercise is a must for Bull Terriers.' — no minutes."
+      },
+      "daily_text": {
+        "value": "at least one hour a day, split across the day",
+        "unit": "—",
+        "source_id": "S591",
+        "quote": "Your Bull Terrier will need at least one hour of exercise a day.",
+        "confidence": "high",
+        "notes": "PDSA (S591); 'It's usually best if you split your dog's exercise across the day rather than trying to do it all in one go.'"
+      },
+      "after_meals": {
+        "value": "leave a gap after eating and before exercising",
+        "unit": "—",
+        "source_id": "S591",
+        "quote": "Remember to leave a gap after eating and before exercising.",
+        "confidence": "high",
+        "notes": "PDSA (S591, feeding section). No number in the source → the game's 60-minute 'wait with the walk' warning (M5-R16, David 2026-10-12) — proposed_game_parameters.bull_terrier.meal_exercise_gap."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "courageous, spirited, fun-loving; even-tempered and amenable to discipline; can be obstinate, particularly good with people",
+        "unit": "—",
+        "source_id": "S590",
+        "quote": "Strongly built, muscular, well balanced and active with a keen, determined and intelligent expression.",
+        "confidence": "medium",
+        "notes": "FCI-Standard N° 11 (S590): general appearance quote; behaviour / temperament returned as paraphrase only (courageous, spirited, fun-loving, even-tempered, amenable to discipline, can be obstinate, particularly good with people). Disqualifying: aggressive or overly shy dogs (paraphrase)."
+      },
+      "family": {
+        "value": "affectionate with family, including children",
+        "unit": "—",
+        "source_id": "S592",
+        "quote": "Although they’re affectionate with family—including children—they are not always dog- or cat-friendly.",
+        "confidence": "high",
+        "notes": "PetMD (S592). Not a 'family pet' statement → no family_pet chip."
+      },
+      "children": {
+        "value": "affectionate with children; once socialised good with people of all ages, but a bit excitable — better with older children; always supervise",
+        "unit": "—",
+        "source_id": "S591",
+        "quote": "However, as they can be a bit excitable, they are better with older children.",
+        "confidence": "high",
+        "notes": "PDSA (S591); 'As long as your dog is socialised properly, they should get along really well with people of all ages.' and 'Always supervise your dog with children of any age and adults unfamiliar with your dog so playtime doesn't get rough.' PetMD (S592) 'affectionate with family—including children'. Basis of children (caveat kept) and the new consider chip lively_older_children; never small_children."
+      },
+      "time_alone": {
+        "value": "very lively, like company as much as possible; can become destructive if left home alone for long periods",
+        "unit": "—",
+        "source_id": "S591",
+        "quote": "They are very lively and like to have company as much as possible,",
+        "confidence": "high",
+        "notes": "PDSA (S591, fragment): '… so you'll need to make sure you're around for a good portion of the day.' PetMD (S592): 'They need a lot of human interaction and can become destructive if left home alone for long periods.' Basis of needs_company."
+      },
+      "other_pets": {
+        "value": "high prey drive — careful around cats and other small animals; never unattended together; not always dog- or cat-friendly",
+        "unit": "—",
+        "source_id": "S591",
+        "quote": "As they have a high prey drive, it's always best to be careful around cats and other small animals",
+        "confidence": "high",
+        "notes": "PDSA (S591, fragment); '… never leave them unattended together, even if your dog knows them well.' PetMD (S592): 'they are not always dog- or cat-friendly.' A verbatim high prey drive → chases_small_pets."
+      },
+      "socialisation": {
+        "value": "socialised properly, they get along with people of all ages; early and frequent socialisation and training",
+        "unit": "—",
+        "source_id": "S591",
+        "quote": "As long as your dog is socialised properly, they should get along really well with people of all ages.",
+        "confidence": "high",
+        "notes": "PDSA (S591) — a condition (runbook M5-R17). PDSA: 'A well-socialised Bull Terrier is likely to be more relaxed around other dogs.' PetMD (S592): 'Early and frequent socialization and training is key'. → proposed_game_parameters.bull_terrier.socialisation (DOG_SOCIALISATION row, PDSA quote)."
+      },
+      "training": {
+        "value": "early and frequent socialisation and training",
+        "unit": "—",
+        "source_id": "S592",
+        "quote": "Early and frequent socialization and training is key",
+        "confidence": "medium",
+        "notes": "PetMD (S592, fragment). No 'better for an experienced owner' statement → no experienced_owner chip."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "PetMD (S592) names chewing ('eat and chew on anything that's around', fragment as returned in a paraphrase answer — not confirmed verbatim) in the context of intestinal blockages; PDSA does not mention chewing → no chews_when_bored chip (open for David)."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No food-motivation statement found. PDSA (S591): split the daily allowance into two meals; treats no more than 10 % of calories (general advice)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch category unknown (RKC page not reachable); no veterinary association named by the runbook (BVA, UK BWG, UFAW, RVC/VetCompass, RKC) was found naming the breed for conformation-related welfare problems → no welfare chip. Skin allergies: PDSA only (not a fetched Breed Watch point) → no sensitive_skin chip (Staffordshire Bull Terrier precedent, open for David). Breeder checklist: AKC national breed club list (K33).",
+      "deafness": {
+        "value": "deafness — dogs born without hearing",
+        "unit": "—",
+        "source_id": "S591",
+        "quote": "Deafness – where dogs are born without hearing.",
+        "confidence": "high",
+        "notes": "PDSA (S591) health list. PetMD (S592): partial or total deafness. Breed club BAER testing (K33). Register health key deafness."
+      },
+      "lethal_acrodermatitis": {
+        "value": "lethal acrodermatitis — a genetic disease causing fatal skin and growth problems",
+        "unit": "—",
+        "source_id": "S591",
+        "quote": "Lethal acrodermatitis – a genetic disease that causes fatal skin and growth problems.",
+        "confidence": "high",
+        "notes": "PDSA (S591) health list. Register health key lethal_acrodermatitis (new)."
+      },
+      "kidney": {
+        "value": "kidney problems — urine tests can screen parents",
+        "unit": "—",
+        "source_id": "S591",
+        "quote": "Kidney problems – urine tests can screen parents for this.",
+        "confidence": "high",
+        "notes": "PDSA (S591) health list. PetMD (S592): hereditary nephritis. Breed club urine protein:creatinine ratio (K33). Register health key kidney_disease_urine_screening (new)."
+      },
+      "heart": {
+        "value": "heart problems — heart scans can screen parents for heart valve problems",
+        "unit": "—",
+        "source_id": "S591",
+        "quote": "Heart problems – heart scans can screen parents for heart valve problems.",
+        "confidence": "high",
+        "notes": "PDSA (S591) health list. PetMD (S592): mitral valve dysplasia. Breed club cardiac exam (K33). Register health key heart_valve_screening."
+      },
+      "patella": {
+        "value": "luxating patellas — kneecaps slipping temporarily out of place",
+        "unit": "—",
+        "source_id": "S591",
+        "quote": "Luxating patellas – where the kneecaps slip temporarily out of place.",
+        "confidence": "high",
+        "notes": "PDSA (S591) health list; PetMD (S592) patellar luxation. Breed club patella evaluation (K33). Register health key kneecap_luxation."
+      },
+      "atopy": {
+        "value": "skin allergies (atopy) — itchy skin and ear infections",
+        "unit": "—",
+        "source_id": "S591",
+        "quote": "Bull Terriers are more prone to developing skin allergies.",
+        "confidence": "high",
+        "notes": "PDSA (S591); atopy 'allergies causing itching skin and ear infections' (paraphrase of the returned text). PetMD (S592): atopic dermatitis. Not a fetched Breed Watch point → no sensitive_skin chip. Register health key itchy_skin_allergy."
+      },
+      "other": {
+        "value": "intestinal blockage; dry eye",
+        "unit": "—",
+        "source_id": "S592",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PetMD (S592) health list as returned (names only, no quote): intestinal blockage, dry eye. Background only — no register key."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 66,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 66 | Bull Terrier |",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-29): rank 66 'Bull Terrier', tier 'Fair Working/Obedience Intelligence' (ranks 55–69). Coren's own article (S34) lists only the top / bottom 10. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Fair",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier 'Fair Working/Obedience Intelligence' (ranks 55–69)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.bull_terrier.learning_multiplier (0.7, runbook rule: Fair tier, rank 66).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "strongly built, muscular, well balanced and active; keen, determined, intelligent expression; unique downfaced, egg-shaped head",
+        "unit": "—",
+        "source_id": "S590",
+        "quote": "Strongly built, muscular, well balanced and active with a keen, determined and intelligent expression.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 11 (S590), General appearance; the head is long, strong, egg-shaped from the front, completely filled, profile curving gently down from skull to nose (paraphrase)."
+      },
+      "colours": {
+        "value": [
+          "white",
+          "brindle",
+          "black brindle",
+          "red",
+          "fawn",
+          "tricolour"
+        ],
+        "unit": "list",
+        "source_id": "S590",
+        "quote": null,
+        "confidence": "high",
+        "notes": "FCI-Standard N° 11 (S590), Colour (paraphrase of the returned text): white — pure white coat, skin pigmentation and markings on the head not penalised; coloured — colour predominates, brindle preferred, black brindle, red, fawn and tricolour acceptable; tick markings in white undesirable; blue and liver highly undesirable; any other colour unacceptable. Wikipedia (S593) infobox also lists 'red smut' and 'black' — not used (not in the standard text returned)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). White first with the highest weight (the classic Bull Terrier, first in the standard — the portrait default; Claude), then brindle (preferred among the coloured), black brindle, red, fawn, tricolour. Suggested 35 / 20 / 10 / 15 / 10 / 10."
+      },
+      "coat": {
+        "value": "short, flat, even, harsh to the touch with a fine gloss; tight-fitting skin; a soft undercoat may appear in winter",
+        "unit": "—",
+        "source_id": "S590",
+        "quote": "Short, flat, even and harsh to touch with a fine gloss.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 11 (S590), Coat; skin fitting tightly; soft-textured undercoat may be present in winter (paraphrase)."
+      },
+      "head": {
+        "value": "long, strong, deep, egg-shaped head, no stop, profile curving gently down to the nose; black nose bent down at the tip",
+        "unit": "—",
+        "source_id": "S590",
+        "quote": null,
+        "confidence": "high",
+        "notes": "FCI-Standard N° 11 (S590), Head (paraphrase of the returned text)."
+      },
+      "ears": {
+        "value": "small, thin, close together, held stiffly erect",
+        "unit": "—",
+        "source_id": "S590",
+        "quote": null,
+        "confidence": "high",
+        "notes": "FCI-Standard N° 11 (S590), Ears (paraphrase)."
+      },
+      "eyes": {
+        "value": "narrow, triangular, obliquely placed, black or as dark brown as possible; blue undesirable",
+        "unit": "—",
+        "source_id": "S590",
+        "quote": "Blue or partly blue undesirable.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 11 (S590), Eyes; narrow, triangular, obliquely placed, black or as dark brown as possible so as to appear almost black, piercing glint (paraphrase)."
+      },
+      "tail": {
+        "value": "short, set low, carried horizontally, thick at the root tapering to a fine point",
+        "unit": "—",
+        "source_id": "S590",
+        "quote": null,
+        "confidence": "high",
+        "notes": "FCI-Standard N° 11 (S590), Tail (paraphrase)."
+      },
+      "nose": {
+        "value": "black, bent downwards at the tip, well-developed nostrils",
+        "unit": "—",
+        "source_id": "S590",
+        "quote": null,
+        "confidence": "high",
+        "notes": "FCI-Standard N° 11 (S590), Nose (paraphrase)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = PDSA (S591), PetMD (S592). The RKC breed page (the usual suitability source) was not reachable on 2026-10-29 → no rkc_* rows (no apartment / large_home / sheds chip).",
+      "pdsa_size": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S591",
+        "quote": "Size: Medium",
+        "confidence": "medium",
+        "notes": "PDSA key facts table (S591)."
+      },
+      "pdsa_exercise": {
+        "value": "1 hour a day minimum, split across the day",
+        "unit": "—",
+        "source_id": "S591",
+        "quote": "Minimum exercise (per day): 1 hour",
+        "confidence": "high",
+        "notes": "PDSA (S591). One hour is not long daily exercise → no active_family / long_daily_exercise."
+      },
+      "pdsa_grooming": {
+        "value": "brush once a week",
+        "unit": "—",
+        "source_id": "S591",
+        "quote": "Giving them a brush once a week should be enough to keep their coat looking healthy and shiny.",
+        "confidence": "high",
+        "notes": "PDSA (S591) → brushing 1× a week (M5-R13 'Once a week' → 1). PetMD (S592) 'a quick weekly once-over with a soft-bristled brush' agrees."
+      },
+      "petmd_grooming": {
+        "value": "a quick weekly brush; baths rarely needed; regular ear cleaning",
+        "unit": "—",
+        "source_id": "S592",
+        "quote": "they generally require little more than a quick weekly once-over with a soft-bristled brush",
+        "confidence": "high",
+        "notes": "PetMD (S592, fragment). Baths rarely needed; regular ear cleaning with a vet-approved cleaner (paraphrase) — no frequency → no bath / ear task."
+      },
+      "pdsa_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S591",
+        "quote": "Average lifespan: Over 10 years",
+        "confidence": "medium",
+        "notes": "PDSA (S591). Not shorter_lifespan (that needs 'Under 10 years')."
+      },
+      "pdsa_children": {
+        "value": "better with older children (a bit excitable); supervise with children of any age",
+        "unit": "—",
+        "source_id": "S591",
+        "quote": "However, as they can be a bit excitable, they are better with older children.",
+        "confidence": "high",
+        "notes": "PDSA (S591). Basis of lively_older_children."
+      },
+      "pdsa_company": {
+        "value": "like company as much as possible; someone around for a good portion of the day",
+        "unit": "—",
+        "source_id": "S591",
+        "quote": "so you'll need to make sure you're around for a good portion of the day.",
+        "confidence": "high",
+        "notes": "PDSA (S591, fragment). Basis of needs_company."
+      },
+      "petmd_children": {
+        "value": "affectionate with family, including children",
+        "unit": "—",
+        "source_id": "S592",
+        "quote": "Although they’re affectionate with family—including children—they are not always dog- or cat-friendly.",
+        "confidence": "high",
+        "notes": "PetMD (S592). Basis of children."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -58134,6 +58617,252 @@
         "confidence": "high",
         "notes": "Colours of the Kennel Club standard (S584): cream, wheaten, red, grey or nearly black, brindling acceptable; 'Dark points, such as ears and muzzle, very typical.'; solid black, white, black and tan unacceptable. Weights unsourced in prompts. Wheaten as the portrait default: the most typical colour (Claude).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): wheaten is the portrait default; standard colours only (cream, wheaten, red, grey, brindle, nearly black), never solid black, white or black and tan"
+      }
+    },
+    "bull_terrier": {
+      "_note": "Unattended run M5-R10-76 (2026-10-29): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. The RKC breed page was not reachable → exercise from PDSA (S591, 1 hour); senior boundary 90 from the PDSA lower bound is Claude's proposal (verified=false, open for David — no McMillan / VetCompass value reachable). Built: brushing 1× a week (PDSA S591, M5-R13), puppy socialisation (PDSA S591 quote, M5-R17) and the 60-minute meal / walk gap warning (PDSA S591 quote, M5-R16). No tooth / ear / nail / bath / groomer task (no frequency). In marketing (not a welfare breed). Never hypoallergenic. New vocabulary key lively_older_children.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S591",
+        "quote": "Minimum exercise (per day): 1 hour",
+        "confidence": "high",
+        "notes": "PDSA key facts '1 hour' (S591) — the RKC page (preferred) was not reachable. Rule: one number N ('minimum N') → N = 60.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S591 'Minimum exercise (per day) 1 hour'; RKC page not reachable)"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S591",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + PDSA lower bound 'Over 10 years', S591 — the McMillan 2024 table S123 was not reachable, no VetCompass median, the RKC page was not reachable). The senior value is Claude's suggestion — see senior_boundary_months.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S591"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia_12_y": 108,
+          "senior_petmd_12_y": 108,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 90 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+      },
+      "senior_boundary_months": {
+        "value": 90,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "round(0.75 × 10 y × 12) = 90 (AAHA last 25 % of lifespan S11 × PDSA lower bound 10 y, S591). The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value in this run: the Dogs Trust table S123 and the RKC page were refused by the fetch tool, the McMillan 2024 paper has the breed only in Supplementary Table 3 (not reached), no VetCompass paper. Closest rule row (Samoyed / Scottish Terrier precedent) = the PDSA band of the same form as the RKC band. Alternatives: McMillan 2024 12 y via Wikipedia (S593, tier C) → 108; PetMD lower bound 12 y (S592) → 108; Dogs Trust > 7 y (S14) = 84. Seeded with verified=false (also the senior arrival age); the seeder is insert-only, so a later change needs a Filament edit or a data migration.",
+        "derived_from": [
+          "S11",
+          "S591"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia_12_y": 108,
+          "senior_petmd_12_y": 108,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "predlog Claude 2026-10-29 (najbližja vrstica pravila runbooka, M5-R10-76) — čaka Davida; ni potrjeno"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36); senior 90 follows the unconfirmed senior boundary (senior_boundary_months)"
+      },
+      "learning_multiplier": {
+        "value": 0.7,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 66 (S35), tier 'Fair' (55–69) → 0.7. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 66, Fair tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S591",
+        "quote": "Giving them a brush once a week should be enough to keep their coat looking healthy and shiny.",
+        "confidence": "high",
+        "notes": "bull_terrier.suitability.pdsa_grooming. PDSA 'a brush once a week' → 1 (M5-R13 rule: once a week → 1); PetMD (S592) 'a quick weekly once-over' agrees. Matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (PDSA »a brush once a week«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S591",
+        "quote": "As long as your dog is socialised properly, they should get along really well with people of all ages.",
+        "confidence": "high",
+        "notes": "bull_terrier.behaviour.socialisation (PDSA S591). Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, PDSA S591)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S591",
+        "quote": "Remember to leave a gap after eating and before exercising.",
+        "confidence": "high",
+        "notes": "bull_terrier.exercise.after_meals (PDSA S591). Warning only; steps still count.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "suitability_tags": {
+        "_note": "Tags for backend/config/breed_suitability.php (M5-R10-76); refs = JSON paths in this file. New vocabulary key lively_older_children (runbook 'new tag' rule: PDSA 'a bit excitable … better with older children' — not small / fragile / sensitive / large, which the existing chips name). No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "children",
+            "source_ids": [
+              "S592"
+            ],
+            "refs": [
+              "bull_terrier.behaviour.family",
+              "bull_terrier.suitability.petmd_children"
+            ],
+            "quote": "S592 'Although they’re affectionate with family—including children—they are not always dog- or cat-friendly.'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "lively_older_children",
+            "source_ids": [
+              "S591"
+            ],
+            "refs": [
+              "bull_terrier.behaviour.children",
+              "bull_terrier.suitability.pdsa_children"
+            ],
+            "quote": "S591 'However, as they can be a bit excitable, they are better with older children.'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S591"
+            ],
+            "refs": [
+              "bull_terrier.behaviour.time_alone",
+              "bull_terrier.suitability.pdsa_company"
+            ],
+            "quote": "S591 'They are very lively and like to have company as much as possible,'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S591"
+            ],
+            "refs": [
+              "bull_terrier.behaviour.other_pets"
+            ],
+            "quote": "S591 'As they have a high prey drive, it's always best to be careful around cats and other small animals'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "No 'family pet' statement (PetMD 'affectionate with family' is about affection).",
+          "small_children": "PDSA: better with older children (S591).",
+          "other_pets": "High prey drive (S591); not always dog- or cat-friendly (S592).",
+          "active_family": "One hour a day (S591) is not long daily exercise.",
+          "long_daily_exercise": "One hour a day (S591).",
+          "apartment": "No RKC 'Flat/ Apartment' (RKC page not reachable).",
+          "large_home": "No RKC 'Large house' (RKC page not reachable).",
+          "sheds": "No shedding statement (RKC page not reachable).",
+          "low_shedding": "No shedding statement.",
+          "chews_when_bored": "PetMD chewing wording not confirmed verbatim; PDSA silent → no chip (open for David).",
+          "sensitive_skin": "PDSA skin allergies (S591) but no fetched Breed Watch point → no welfare chip (open for David).",
+          "experienced_owner": "No source.",
+          "shorter_lifespan": "PDSA 'Over 10 years' (S591).",
+          "hypoallergenic": "Never a tag (runbook).",
+          "welfare": "No veterinary association named by the runbook names the breed for conformation-related welfare problems; RKC Breed Watch category unknown (page not reachable) → no welfare chip."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits children; consider lively_older_children (new key), needs_company, chases_small_pets"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S591",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92); RKC Breed Watch category unknown (page not reachable). Marketing never presents the Bull Terrier as hypoallergenic, a dog for homes with small children or a dog to keep with small pets (S591).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Bull Terrier, pure white coat (default); strongly built, muscular, well balanced and active; long, strong, egg-shaped head with no stop and a profile curving gently down to a black nose; small, narrow, triangular, dark eyes set obliquely; small, thin ears held stiffly erect; short, flat, glossy coat with tight skin; short low-set tail carried horizontally; colours only white, brindle, black brindle, red, fawn or tricolour — never blue, liver or merle",
+        "unit": "—",
+        "source_id": "S590",
+        "quote": "Short, flat, even and harsh to touch with a fine gloss.",
+        "confidence": "high",
+        "notes": "Colours of FCI-Standard N° 11 (S590): white; coloured — brindle preferred, black brindle, red, fawn, tricolour; blue and liver highly undesirable. Weights unsourced in prompts. White as the portrait default: the classic colour, first in the standard (Claude).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): white is the portrait default; standard colours only (white, brindle, black brindle, red, fawn, tricolour), never blue, liver or merle"
       }
     }
   }

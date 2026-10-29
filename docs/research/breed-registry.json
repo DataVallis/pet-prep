@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "72b147ec0e45b3712aef7bc71cebf29f42dca7aa283330ff9486bcfae5418ded"
+      "sha256": "14776acbd2ac6bfe4fa4aaa7735dc71c3d023056a11a425e6e233dbfbe6fef41"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "4f49e5e9d2485a8ee9dc14b1cc418207c44d7868ced48ba20eefd17febde3174"
+      "sha256": "6fb2795959783f83fb897fa64692e31675d4677d820418405883086f8c22dbae"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,35 +25,35 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "511bd222ebc81718a7b96ddc0d584a98b7e64caa933581761ac5a9390d170b4a"
+      "sha256": "efa48d6410dba09d1a15a3d8f26383cf0d4753e16421e58b93c9cbbd49dc3eec"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
       "covers": "breedSuitability: suitsTitle, considerTitle and the label of every vocabulary tag",
-      "sha256": "10693a877cb55b42c65d0539ce24f0aa1851c56cef1968344241dd17384a5fbf"
+      "sha256": "53b177fa2df1300ddb372367ea5b4c59ea8d2d288a1604fd75ac41d11abde771"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
       "covers": "breedSuitability: suitsTitle, considerTitle and the label of every vocabulary tag",
-      "sha256": "b3938f8eb34684ad14236dd281783e438a05c821b0395621017c23c664ee90bf"
+      "sha256": "b3bb82f19019cee22b66768af98ad3ef32da42d12c97f81ddd68c72868ffd7a2"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "c74726722589f6acb7a087c49b2e9c776d79ea074a5d1fa112a30d672b16a16a"
+      "sha256": "dbe3b2f06d837a7ce7596159785904ee15f8f69b6a87962e892b6c98ff683236"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "05a2fe57d9bff01643f829e2c1b61a893212ac9510a78a795ccd77279495a840"
+      "sha256": "a80d487645ceb99e79cae1e92cf02b8757d0f21c7216c8bcb5bee47ee0052dd9"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "be629753944314a162ec263747901bdf2e62d0f881a9f1b84cb4c06181770ce9"
+      "sha256": "e404f20f61f9e2fac718fcfdada3172faf3fa9a3bc530cb1c6db910f31eeb27f"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "781cb8ec487286117a0ac7ee9b7d7c1926e5800cc073d9b491b36079f462641c"
+      "sha256": "5e0e01c48d95ada8043e9774be3314e87823873b8b099f0d1e80908c59fa8409"
     },
     "app_release": {
       "path": "docs/research/app-release.json",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "800ac1f77e5bfa5d88eb34442008785d581f627f7691b4330d8903c2ed58fcc9"
+      "sha256": "0309a7142c492f3ef44fa51bc79f68dbe362bd1fb5ee2d80d4cc6da48cb0697a"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -90,6 +90,7 @@
     "hips_hind_legs": "consider",
     "independent_experienced_owner": "consider",
     "large_home": "suits",
+    "lively_older_children": "consider",
     "long_daily_exercise": "consider",
     "low_shedding": "suits",
     "may_herd_children": "consider",
@@ -135,6 +136,7 @@
         "hips_hind_legs": "hips and hind legs — check joint health",
         "independent_experienced_owner": "independent and stubborn — best with an experienced owner",
         "large_home": "a large house and garden",
+        "lively_older_children": "lively dog — better with older children",
         "long_daily_exercise": "needs lots of exercise every day",
         "low_shedding": "homes that prefer less shedding",
         "may_herd_children": "may “herd” children at play",
@@ -180,6 +182,7 @@
         "hips_hind_legs": "kolki in zadnje noge — preverite zdravje sklepov",
         "independent_experienced_owner": "samostojen in trmast — najbolje z izkušenim lastnikom",
         "large_home": "veliko hišo z vrtom",
+        "lively_older_children": "živahen pes — bolje za starejše otroke",
         "long_daily_exercise": "vsak dan potrebuje veliko gibanja",
         "low_shedding": "dom, kjer želite manj dlak",
         "may_herd_children": "pri igri lahko »pase« otroke",
@@ -219,7 +222,7 @@
         }
       },
       "status": "available",
-      "breed_count": 69,
+      "breed_count": 70,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -41925,6 +41928,532 @@
       ]
     },
     {
+      "id": "bull_terrier",
+      "species": "dog",
+      "order": 69,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Bull Terrier",
+        "sl": "Bulterier"
+      },
+      "slug": {
+        "en": "bull-terrier",
+        "sl": "bulterier"
+      },
+      "synonyms": {
+        "en": [
+          "English Bull Terrier",
+          "Bully"
+        ],
+        "sl": [
+          "bulterier",
+          "bul terier"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "h1_2"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S591"
+          ],
+          "ref": "bull_terrier.size_class",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              51,
+              61
+            ],
+            "female": [
+              51,
+              61
+            ]
+          },
+          "source_ids": [
+            "S591"
+          ],
+          "ref": "bull_terrier.height.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              22,
+              31
+            ],
+            "female": [
+              22,
+              31
+            ]
+          },
+          "source_ids": [
+            "S591"
+          ],
+          "ref": "bull_terrier.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "bull_terrier.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S591"
+          ],
+          "ref": "bull_terrier.lifespan.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            12,
+            13
+          ],
+          "source_ids": [
+            "S592"
+          ],
+          "ref": "bull_terrier.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "at_least",
+          "value": 60,
+          "source_ids": [
+            "S591"
+          ],
+          "ref": "proposed_game_parameters.bull_terrier.exercise_minutes_adult",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 66,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "bull_terrier.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 11,
+            "group": 3,
+            "section": 3,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S589"
+          ],
+          "ref": "bull_terrier.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "deafness",
+          "source_ids": [
+            "S591"
+          ],
+          "ref": "bull_terrier.health.deafness",
+          "confidence": "high"
+        },
+        {
+          "key": "lethal_acrodermatitis",
+          "source_ids": [
+            "S591"
+          ],
+          "ref": "bull_terrier.health.lethal_acrodermatitis",
+          "confidence": "high"
+        },
+        {
+          "key": "kidney_disease_urine_screening",
+          "source_ids": [
+            "S591"
+          ],
+          "ref": "bull_terrier.health.kidney",
+          "confidence": "high"
+        },
+        {
+          "key": "heart_valve_screening",
+          "source_ids": [
+            "S591"
+          ],
+          "ref": "bull_terrier.health.heart",
+          "confidence": "high"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S591"
+          ],
+          "ref": "bull_terrier.health.patella",
+          "confidence": "high"
+        },
+        {
+          "key": "itchy_skin_allergy",
+          "source_ids": [
+            "S591"
+          ],
+          "ref": "bull_terrier.health.atopy",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "children",
+            "source_ids": [
+              "S592"
+            ],
+            "refs": [
+              "bull_terrier.behaviour.family",
+              "bull_terrier.suitability.petmd_children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "lively_older_children",
+            "source_ids": [
+              "S591"
+            ],
+            "refs": [
+              "bull_terrier.behaviour.children",
+              "bull_terrier.suitability.pdsa_children"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S591"
+            ],
+            "refs": [
+              "bull_terrier.behaviour.time_alone",
+              "bull_terrier.suitability.pdsa_company"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S591"
+            ],
+            "refs": [
+              "bull_terrier.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.7
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.bull_terrier.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S591"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S591 'Minimum exercise (per day) 1 hour'; RKC page not reachable)"
+          },
+          {
+            "ref": "proposed_game_parameters.bull_terrier.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.bull_terrier.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S591"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 90 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+          },
+          {
+            "ref": "proposed_game_parameters.bull_terrier.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 66, Fair tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.bull_terrier.grooming",
+            "basis_source_ids": [
+              "S591"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (PDSA »a brush once a week«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S591"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "patella_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K33"
+            ]
+          },
+          {
+            "key": "cardiac_exam",
+            "level": "other_scheme",
+            "source_ids": [
+              "K33"
+            ]
+          },
+          {
+            "key": "hearing_baer",
+            "level": "other_scheme",
+            "source_ids": [
+              "K33"
+            ]
+          },
+          {
+            "key": "kidney_upc_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K33"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "K33"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S589",
+        "S591",
+        "S592",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19",
+        "K33"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -46928,6 +47457,27 @@
       "publisher": "PetMD — Erica Vasquez, reviewed by Barri J. Morrison, DVM (updated May 2, 2023)",
       "title": "Cairn Terrier",
       "url": "https://www.petmd.com/dog/breeds/cairn-terrier"
+    },
+    {
+      "id": "S589",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — BULL TERRIER (11)",
+      "url": "https://fci.be/en/nomenclature/BULL-TERRIER-11.html"
+    },
+    {
+      "id": "S591",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "English Bull Terrier breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/english-bull-terrier"
+    },
+    {
+      "id": "S592",
+      "tier": "B",
+      "publisher": "PetMD — Kristen Seymour, reviewed by Barri J. Morrison, DVM (updated Jan. 9, 2023)",
+      "title": "Bull Terrier",
+      "url": "https://www.petmd.com/dog/breeds/bull-terrier"
     },
     {
       "id": "C1",

@@ -77,6 +77,7 @@ return [
     'chinese_crested' => 'Chinese Crested',
     'nova_scotia_duck_tolling_retriever' => 'Nova Scotia Duck Tolling Retriever',
     'cairn_terrier' => 'Cairn Terrier',
+    'bull_terrier' => 'Bull Terrier',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

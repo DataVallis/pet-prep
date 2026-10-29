@@ -176,6 +176,11 @@ return [
         // Not `sensitive_skin` (skin allergies / dermatitis, a Breed Watch welfare chip) and not `heat_sensitive` (a thick
         // coat in hot weather). A calm chip, never a number.
         'sun_protection' => 'consider',
+        // M5-R10-76 (runbook "new tag" rule, 2026-10-29): a lively, excitable dog that is better with older children (Bull
+        // Terrier: PDSA S591 "However, as they can be a bit excitable, they are better with older children."). Not
+        // `older_children` (a small dog), `fragile_older_children` (fragile bones), `sensitive_older_children` (a sensitive
+        // dog) or `not_for_small_children` (a large dog) — none of those reasons is sourced for this breed. A calm chip, never a number.
+        'lively_older_children' => 'consider',
     ],
 
     'breeds' => [
@@ -1969,6 +1974,26 @@ return [
             'consider' => [
                 // S587 "They also need lots of exercise and mental stimulation".
                 ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S587'], 'refs' => ['cairn_terrier.exercise.mental_stimulation']],
+            ],
+        ],
+
+        // M5-R10-76: bull_terrier.* (S589–S593), runbook rules (data.json proposed_game_parameters.bull_terrier.suitability_tags).
+        // PDSA (S591) + PetMD (S592) — the RKC breed page was not reachable (no apartment / large_home / sheds). No welfare
+        // chip (Breed Watch category unknown; skin allergies PDSA only → no sensitive_skin, open for David). 1 hour a day → no
+        // active_family / long_daily_exercise. No family_pet (no family-pet statement). Never hypoallergenic.
+        'bull_terrier' => [
+            'suits' => [
+                // S592 "Although they’re affectionate with family—including children—they are not always dog- or cat-friendly."
+                // — a statement with the PDSA caveat (better with older children), never small_children.
+                ['tag' => 'children', 'source_ids' => ['S592'], 'refs' => ['bull_terrier.behaviour.family', 'bull_terrier.suitability.petmd_children']],
+            ],
+            'consider' => [
+                // S591 "However, as they can be a bit excitable, they are better with older children."
+                ['tag' => 'lively_older_children', 'source_ids' => ['S591'], 'refs' => ['bull_terrier.behaviour.children', 'bull_terrier.suitability.pdsa_children']],
+                // S591 "They are very lively and like to have company as much as possible,"
+                ['tag' => 'needs_company', 'source_ids' => ['S591'], 'refs' => ['bull_terrier.behaviour.time_alone', 'bull_terrier.suitability.pdsa_company']],
+                // S591 "As they have a high prey drive, it's always best to be careful around cats and other small animals"
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S591'], 'refs' => ['bull_terrier.behaviour.other_pets']],
             ],
         ],
     ],

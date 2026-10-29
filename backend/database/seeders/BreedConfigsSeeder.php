@@ -1544,6 +1544,27 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.cairn_terrier',
                 'search_keywords' => ['cairn terrier', 'cairn', 'cairnie', 'cairn terier', 'cairnski terier', 'kern terier', 'kernski terier'],
             ],
+            // M5-R10-76 Bull Terrier (docs/research/dog-data/data.json bull_terrier, sources S589–S593;
+            // runbook rules confirmed by David 2026-10-10: paid). daily_steps_required = the adult step goal
+            // (proposed_game_parameters.bull_terrier.step_goal_adult: 60 min × 100 steps/min — PDSA S591
+            // "Minimum exercise (per day): 1 hour") — only the legacy-profile fallback. Hunger / thirst decay,
+            // poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::BullTerrier->slug(),
+                'daily_steps_required' => 6000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 700,
+                'label_key' => 'breeds.bull_terrier',
+                'search_keywords' => ['bull terrier', 'english bull terrier', 'bully', 'bulterier', 'bul terier'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and
