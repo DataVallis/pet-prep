@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "17ac9116da2e17311737dfc540290149a0bcdf80765ecf9f88105b05a80e22a7"
+      "sha256": "5cad43f80f33ec6174977eab37f21539f2d8e84b597fdbc449b7bc2cc0283fbe"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -41931,7 +41931,7 @@
       "id": "bull_terrier",
       "species": "dog",
       "order": 69,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Bull Terrier",
         "sl": "Bulterier"
@@ -42462,7 +42462,7 @@
       "id": "miniature_pinscher",
       "species": "dog",
       "order": 70,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Miniature Pinscher",
         "sl": "Pritlikavi pinč"
@@ -42983,7 +42983,7 @@
       "id": "pyrenean_mountain_dog",
       "species": "dog",
       "order": 71,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Pyrenean Mountain Dog",
         "sl": "Pirenejski gorski pes"
