@@ -935,6 +935,19 @@
             "prompt_hash": "sha256:d82259a1a37a7e6bda9a0ce8dceeab0f0c8b10ea393625082d62a5103420a385",
             "generated_at": "2026-10-29T03:07:05+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "pyrenean_mountain_dog",
+            "species": "dog",
+            "colour": "white",
+            "file": "dog/pyrenean-mountain-dog.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:1a46d128de1fa84e3fe67ef855d97aee9b3e270015262ac538c341449c08ea49",
+            "generated_at": "2026-10-29T07:09:28+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
