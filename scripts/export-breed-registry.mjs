@@ -459,6 +459,7 @@ const SPECIES = [
       { id: 'chinese_crested', synonyms: { en: ['Chinese Crested Dog', 'Crested', 'Hairless', 'Powder Puff'], sl: ['kitajski čopasti pes', 'kitajski copasti pes', 'kitajski goli pes'] } },
       { id: 'nova_scotia_duck_tolling_retriever', synonyms: { en: ['Toller', 'Nova Scotia Retriever', 'Duck Tolling Retriever', 'NSDTR'], sl: ['novoškotski prinašalec', 'novoskotski prinasalec', 'toller', 'novoškotski retriver'] } },
       { id: 'cairn_terrier', synonyms: { en: ['Cairn', 'Cairnie'], sl: ['cairn terier', 'cairn', 'kern terier'] } },
+      { id: 'bull_terrier', synonyms: { en: ['English Bull Terrier', 'Bully'], sl: ['bulterier', 'bul terier'] } },
     ],
   },
   {
@@ -2040,6 +2041,30 @@ const DOG_FACTS = {
       ['legg_perthes', 'health.legg_perthes'],
     ],
   },
+  // M5-R10-76. Height + weight = PDSA key facts (S591; the FCI standard S590 sets no height or weight limits), lifespan =
+  // the PDSA band "Over 10 years" (S591; the McMillan 2024 table S123 and the RKC page could not be fetched) + the PetMD
+  // span 12–13 y (S592), exercise = PDSA "Minimum exercise (per day): 1 hour" (S591). FCI origin Great Britain. Not
+  // exported: lifespan.mcmillan_2024 (unsourced, Wikipedia only) / senior_from (derived), adult_weight.alternatives
+  // (PetMD) / salt_category (our assignment), health.other (PetMD names only, no quote), the suitability care texts (no RKC
+  // key facts → no coat / grooming / shedding fact). New health keys: lethal_acrodermatitis, kidney_disease_urine_screening.
+  bull_terrier: {
+    height: ['height.pdsa'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.pdsa', 'more_than'], ['lifespan.petmd', 'span']],
+    exercise: [['@proposed_game_parameters.bull_terrier.exercise_minutes_adult', 'at_least']],
+    coat: [],
+    grooming: [],
+    shedding: [],
+    food_motivation: null,
+    health: [
+      ['deafness', 'health.deafness'],
+      ['lethal_acrodermatitis', 'health.lethal_acrodermatitis'],
+      ['kidney_disease_urine_screening', 'health.kidney'],
+      ['heart_valve_screening', 'health.heart'],
+      ['kneecap_luxation', 'health.patella'],
+      ['itchy_skin_allergy', 'health.atopy'],
+    ],
+  },
 
 
 };
@@ -2655,6 +2680,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.cairn_terrier.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.cairn_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.cairn_terrier.exercise_minutes_senior',
+  },
+  bull_terrier: {
+    adult_minutes: ['proposed_game_parameters.bull_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.bull_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.bull_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.bull_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.bull_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.bull_terrier.exercise_minutes_senior',
   },
 
 
