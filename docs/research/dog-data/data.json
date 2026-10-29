@@ -39761,6 +39761,620 @@
       }
     }
   },
+  "pyrenean_mountain_dog": {
+    "_note": "Added 2026-10-29 (M5-R10-78, unattended run — appended after the Miniature Pinscher: AKC 2024 No. 74 'Great Pyrenees', S174 full-list table fetched 2026-10-29 '74 | Great Pyrenees'). Quotes as returned by the web-fetch tool on 2026-10-29 (short quotes, 125-character limit); paraphrase only in notes. Sources S599–S607 (reused S8, S10, S11, S14, S24, S35, S45, S174). No health percentages anywhere. The RKC Breeds A–Z page was reachable with a trailing slash (S600: key facts, Breed Watch Category 1, health tests) and so was the RKC breed standard (S601); a separate RKC Breed Watch page (S602) is titled 'Category 2' with two points (too fat; hind conformation) — the two RKC pages disagree → no welfare chip, open for David. Identity, height and colours from FCI-Standard N° 137 (S599; the FCI standard gives no weight); weight from the PDSA key facts (S603, one range for both sexes; RKC standard minimum 50 / 40 kg as background). Lifespan: RKC and PDSA 'Under 10 years' (no lower bound); the Dogs Trust McMillan 2024 table (S123) was not in the fetch tool's provenance and the Nature PDF names the breed only as a Fig. 5 label; McMillan 2024 '10.9 years' only via Wikipedia (S606, tier C); no VetCompass / Kennel Club survey median reachable → senior boundary from the PetMD / VCA lower bound 10 y (Claude's proposal, verified=false, open for David). Names: FCI / RKC 'Pyrenean Mountain Dog', AKC 'Great Pyrenees' (S174, S607), French 'Chien de Montagne des Pyrénées', nickname 'Patou' (S606); Slovenian »pirenejski gorski pes« (literal FCI name; no KZS page read — open for David). Not the Pyrenean Mastiff or the Pyrenean Sheepdog (separate breeds).",
+    "identity": {
+      "value": "FCI No. 137, Group 2 Section 2.2 (Molossoid breeds, Mountain type), France",
+      "unit": "—",
+      "source_id": "S599",
+      "quote": "Section 2.2 Molossoids, mountain type.",
+      "confidence": "high",
+      "notes": "FCI-Standard N° 137 (S599, as returned): 'France.' (country of origin); 'Group 2. Pinscher and Schnauzer type dogs, Molossoids and mountain dogs and Swiss mountain dogs.'; 'Without working trial.'; date of publication of the valid standard '13.03.2001'. France is already in FCI_ORIGINS (FR). Wikipedia (S606, tier C) other names 'Chien de Montagne des Pyrénées; Great Pyrenees; Pyrenean Herding Dog', nickname 'Patou'."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S600",
+      "quote": "Size: Large",
+      "confidence": "high",
+      "notes": "RKC Breeds A–Z key facts (S600). PDSA key facts 'Large' (S603) agrees."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            70,
+            80
+          ],
+          "female": [
+            65,
+            75
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S599",
+        "quote": "from 70 cm to 80 cm.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 137 (S599): males 'from 70 cm to 80 cm.', females 'from 65 cm to 75 cm.'; 'A tolerance of + 2 cm is allowed for perfectly typed specimens.' RKC standard (S601) 'Minimum shoulder height: dogs: 70 cms (27½ ins); bitches: 65 cms (25½ ins).' agrees with the lower ends; AKC standard (S607) 27–32 in dogs, 25–29 in bitches. The PDSA key-facts height cell (S603) was returned as '65-70 kg' (unit typo on the page) — not used."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            40,
+            50
+          ],
+          "female": [
+            40,
+            50
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S603",
+        "quote": "Average weight: 40-50 kg",
+        "confidence": "medium",
+        "notes": "PDSA key facts table (S603, label and value as returned), one range for both sexes (stored per sex) — the game range (the FCI standard gives no weight, S599). Background: RKC standard minimum weights (rkc_minimum, S601); AKC standard 'A 27 inch dog weighs about 100 pounds and a 25 inch bitch weighs about 85 pounds.' (S607, ≈ 45 / 39 kg); PetMD (S604) '85 pounds for females and over 100 pounds for males'; VCA (S605) '85 to 120 pounds' (39–54 kg).",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                39,
+                54
+              ],
+              "female": [
+                39,
+                54
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S605",
+            "quote": "85 to 120 pounds",
+            "notes": "VCA Quick Facts 'Weight' (S605); 85–120 lb = 38.6–54.4 kg → 39–54 (our conversion, rounded)."
+          }
+        ]
+      },
+      "rkc_minimum": {
+        "value": {
+          "male": 50,
+          "female": 40
+        },
+        "unit": "kg (minimum)",
+        "source_id": "S601",
+        "quote": "dogs: 50 kgs (110 lbs); bitches: 40 kgs (88 lbs).",
+        "confidence": "high",
+        "notes": "RKC breed standard (S601), Size: minimum weight only (no upper limit) — background for the PDSA game range."
+      },
+      "salt_category": {
+        "value": "VI (>40 kg, no curve)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 40–50 kg = the band '>40 (no curve)'. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "18–24 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Giant (over 100 pounds) | 18–24 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 40–50 kg (S603) = 88–110 lb sits on the Large / Giant border; the RKC minimum for dogs is 50 kg (110 lb, S601) and PetMD gives 'over 100 pounds for males' (S604) → 'Giant', like the Saint Bernard, the Newfoundland and the Bernese Mountain Dog. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Pyrenean Mountain Dog growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S600",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key fact (S600). PDSA (S603) 'Average lifespan: Under 10 years' agrees. Basis of the consider tag shorter_lifespan (no number in the chip). No lower bound → not usable for the senior boundary."
+      },
+      "pdsa": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S603",
+        "quote": "Average lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "PDSA key facts (S603). Same band as the RKC."
+      },
+      "petmd": {
+        "value": "10–12",
+        "unit": "years",
+        "source_id": "S604",
+        "quote": "The typical Great Pyrenees lifespan is 10–12 years",
+        "confidence": "medium",
+        "notes": "PetMD (S604, US; the sentence continues 'which is a little longer than the average life expectancy for giant dogs.'). VCA (S605) Quick Facts 'Life' '10 to 12 years' agrees. Lower bound 10 y → the proposed senior boundary (Claude, open for David)."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Dogs Trust table of McMillan et al. 2024 data (S123): not reachable this run (not in the fetch tool's provenance); the Nature PDF (doi:10.1038/s41598-023-50458-w) names 'Great Pyrenees' only as a tip label of Fig. 5 (no value in the text); the Lewis 2018 Kennel Club survey (PMC) returned a captcha; O'Neill 2013 (S212) Table 1 does not list the breed. Wikipedia (S606, tier C): 'A 2024 UK study reported a median lifespan of 10.9 years for the breed, below the overall canine average of 12.5 years.' — not verified; round(0.75 × 10.9 × 12) = 98 would be the senior month → open for David. UNSOURCED value."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × the PetMD / VCA lower bound 10 y (S604, S605) → 0.75 × 10 = 7.5 y = 90 months. The RKC / PDSA band 'Under 10 years' (S600, S603) has no lower bound and no McMillan 2024 / VetCompass median was reachable → Claude's proposal, provisional until David decides (McMillan 2024 10.9 y via Wikipedia S606 would give 98). Not chosen: 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S604"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 8.175,
+          "months": 98,
+          "derived_from": [
+            "S11",
+            "S606"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S600",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key fact (S600, 'Up to 1 hour per day'). PDSA key facts 'Minimum exercise (per day): 1 hour' (S603) — the same number. VCA (S605) 'Moderate - needs to walk or play every day'; PetMD (S604) 'aren’t overly active'."
+      },
+      "daily_text": {
+        "value": "around an hour a day as adults; puppies must not be over-exercised",
+        "unit": "—",
+        "source_id": "S603",
+        "quote": "As adult dogs, Pyrenean Mountain Dogs need around an hour of exercise daily but shouldn't be over-exercised",
+        "confidence": "high",
+        "notes": "PDSA (S603, fragment; the sentence goes on about puppies' developing bones and joints). VCA (S605): 'Moderate - needs to walk or play every day'."
+      },
+      "after_meals": {
+        "value": "avoid vigorous exercise around mealtimes (bloat / GDV)",
+        "unit": "—",
+        "source_id": "S604",
+        "quote": "Avoid vigorous exercise around mealtimes",
+        "confidence": "high",
+        "notes": "PetMD (S604, bullet point under gastric dilatation-volvulus): also 'Feed your Great Pyrenees dog multiple small meals (two or three) throughout the day, instead of one large meal' and 'GDV can be a life-threatening condition.' No number in the source → the game's 60-minute 'wait with the walk' warning (M5-R16, David 2026-10-12) — proposed_game_parameters.pyrenean_mountain_dog.meal_exercise_gap."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "gentle, calm, confident; strength and agility allied to gentleness and attachment to those it protects; a natural guard dog",
+        "unit": "—",
+        "source_id": "S599",
+        "quote": "The resulting main qualities are strength and agility, allied to gentleness and attachment to those it is protecting.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 137 (S599). RKC standard (S601): 'Quietly confident. Nervousness and unprovoked aggression highly undesirable.'; 'A natural guard dog protecting shepherd and sheep.' AKC standard (S607): 'In nature, the Great Pyrenees is confident, gentle, and affectionate.' PDSA (S603): 'Pyrenean Mountain Dogs are gentle giants – calm, good-natured dogs that tend to get on well with everyone.'"
+      },
+      "family": {
+        "value": "devoted to the family, especially to children, but likes its own space",
+        "unit": "—",
+        "source_id": "S605",
+        "quote": "Although he is devoted to his family – especially to children –",
+        "confidence": "high",
+        "notes": "VCA (S605, opening clause of a longer sentence; the rest, paraphrased by the tool: the Pyr likes its own space and does not suit owners who want a constantly clingy dog). Not a 'family pet' statement → no family_pet chip."
+      },
+      "children": {
+        "value": "suitable with children who understand how to interact with dogs; may be best in homes without smaller children",
+        "unit": "—",
+        "source_id": "S604",
+        "quote": "Great Pyrenees may be best in homes without smaller children",
+        "confidence": "high",
+        "notes": "PetMD (S604); also 'Their gentle demeanor makes them suitable in families with children who understand how to interact with dogs' (fragment). VCA (S605) Quick Facts 'With Kids: Protective'. Basis of children (VCA statement, caveat kept) and not_for_small_children; never small_children."
+      },
+      "time_alone": {
+        "value": "fine alone as a trained adult; values its alone time",
+        "unit": "—",
+        "source_id": "S605",
+        "quote": "Fine as a trained adult",
+        "confidence": "medium",
+        "notes": "VCA Quick Facts 'Home Alone' (S605). PetMD (S604): 'Great Pyrenees live well with other pets but value their alone time.' Not a sourced 'can be left alone' rating → no often_alone chip."
+      },
+      "other_pets": {
+        "value": "lives well with other pets",
+        "unit": "—",
+        "source_id": "S604",
+        "quote": "Great Pyrenees live well with other pets but value their alone time.",
+        "confidence": "high",
+        "notes": "PetMD (S604). PDSA and VCA say nothing about other pets. No prey-drive statement → no chases_small_pets. Basis of other_pets."
+      },
+      "guarding": {
+        "value": "independent flock guardian; alert barker; protective of family",
+        "unit": "—",
+        "source_id": "S604",
+        "quote": "Great Pyrenees were originally bred to be independent flock guardians",
+        "confidence": "high",
+        "notes": "PetMD (S604, fragment); 'they are known to bark to alert their family' (fragment). VCA (S605): 'a willingness to protect all concerned'. RKC standard (S601): 'A natural guard dog protecting shepherd and sheep.' Background (register text); no chip (no 'experienced owner' statement)."
+      },
+      "socialisation": {
+        "value": "early socialisation of puppies to many people, places and animals",
+        "unit": "—",
+        "source_id": "S605",
+        "quote": "Early socialization is very important",
+        "confidence": "high",
+        "notes": "VCA Quick Facts 'Training' row (S605) — a need (runbook M5-R17). PetMD (S604): 'Early socialization of Great Pyrenees puppies to as many different people, places, and animals is also critical' (the tool returned only the first 45 characters verbatim). → proposed_game_parameters.pyrenean_mountain_dog.socialisation (DOG_SOCIALISATION row, VCA quote)."
+      },
+      "training": {
+        "value": "patient, reward-based training; can be strong-willed",
+        "unit": "—",
+        "source_id": "S603",
+        "quote": "Training will require patience, but can be achieved using reward-based techniques.",
+        "confidence": "high",
+        "notes": "PDSA (S603). PetMD (S604): 'They value their alone time, which can make them more strong-willed during training.' VCA (S605): kind, consistent, positive training (paraphrase)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No chewing statement found (PDSA, PetMD, VCA)."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No food-motivation statement found. PetMD (S604): two or three smaller meals a day (bloat advice)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breeds A–Z (S600): Breed Watch Category 1 ('Currently no points of concern specific to this breed have been identified'); a separate RKC Breed Watch page (S602) is titled 'Pyrenean Mountain Dog - Category 2' with 'Too fat' and 'Incorrect hind conformation and/or poor rear movement' — the two RKC pages disagree → no welfare chip (hips_hind_legs) in this run, open for David. Breeder checklist: RKC Good Practice (genetic diversity) and Best Practice elbow / eye / hip schemes (S600).",
+      "breed_watch": {
+        "value": "RKC Breed Watch: Category 1 on the breed page; Category 2 (too fat; hind conformation) on the Breed Watch page",
+        "unit": "—",
+        "source_id": "S602",
+        "quote": "Incorrect hind conformation and/or poor rear movement",
+        "confidence": "medium",
+        "notes": "RKC Breed Watch page 'Pyrenean Mountain Dog - Category 2' (S602): points 'Too fat' and the hind-conformation point above, no date. The RKC breed page (S600) says Category 1 with no points. Conflict → no chip; open for David (Rottweiler / Great Dane precedent would give hips_hind_legs)."
+      },
+      "hip_dysplasia": {
+        "value": "hip dysplasia — poor hip development leading to arthritis",
+        "unit": "—",
+        "source_id": "S603",
+        "quote": "Hip dysplasia – hip joint laxity as a result of poor development, which will eventually lead to arthritis.",
+        "confidence": "high",
+        "notes": "PDSA (S603) health list. PetMD (S604) and VCA (S605): elbow and hip dysplasia. RKC Best Practice hip scheme (S600). Register health key hip_dysplasia."
+      },
+      "deafness": {
+        "value": "deafness",
+        "unit": "—",
+        "source_id": "S603",
+        "quote": "Deafness",
+        "confidence": "high",
+        "notes": "PDSA (S603) health list (item as returned). Register health key deafness."
+      },
+      "epilepsy": {
+        "value": "epilepsy — seizures",
+        "unit": "—",
+        "source_id": "S603",
+        "quote": "Epilepsy – a brain disorder which can lead to seizures.",
+        "confidence": "high",
+        "notes": "PDSA (S603) health list. Register health key epilepsy."
+      },
+      "panosteitis": {
+        "value": "panosteitis — a painful, inflammatory bone disease of young dogs",
+        "unit": "—",
+        "source_id": "S603",
+        "quote": "Panosteitis – a painful, inflammatory bone disease.",
+        "confidence": "high",
+        "notes": "PDSA (S603) health list. Register health key panosteitis_bone_pain."
+      },
+      "patella": {
+        "value": "luxating patellas — kneecaps slipping out of place",
+        "unit": "—",
+        "source_id": "S603",
+        "quote": "Luxating patellas - the kneecaps slipping temporarily out of place.",
+        "confidence": "high",
+        "notes": "PDSA (S603) health list; PetMD (S604) and VCA (S605) patellar luxation. Register health key kneecap_luxation."
+      },
+      "bone_cancer": {
+        "value": "osteosarcoma — bone cancer",
+        "unit": "—",
+        "source_id": "S603",
+        "quote": "Osteosarcoma – malignant bone cancer.",
+        "confidence": "high",
+        "notes": "PDSA (S603) health list. Register health key bone_cancer."
+      },
+      "entropion": {
+        "value": "entropion — inward-turning eyelids",
+        "unit": "—",
+        "source_id": "S603",
+        "quote": "Entropion – inward turning eyelids.",
+        "confidence": "high",
+        "notes": "PDSA (S603) health list; PetMD (S604) entropion. Not a fetched Breed Watch point → no eyelid_problems chip. Register health key entropion_eyelids."
+      },
+      "bloat": {
+        "value": "bloat / gastric dilatation-volvulus (GDV) — a life-threatening twisting of the stomach",
+        "unit": "—",
+        "source_id": "S604",
+        "quote": "GDV can be a life-threatening condition.",
+        "confidence": "high",
+        "notes": "PetMD (S604) health section; advice: two or three smaller meals, avoid vigorous exercise around mealtimes → the meal / walk gap warning (M5-R16). Register health key bloat_gdv."
+      },
+      "other": {
+        "value": "chondrodysplasia, cataracts, canine multifocal retinopathy, neuronal degeneration, von Willebrand's disease, spinal problems",
+        "unit": "—",
+        "source_id": "S604",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PetMD (S604) and VCA (S605) health lists as returned (names only, no quote). Background only — no register key."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 64,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 64 | Great Pyrenees |",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-29): rank 64 'Great Pyrenees' (not shared), tier 'Fair Working/Obedience Intelligence' (ranks 55–69). Coren's own article (S34) lists only the top / bottom 10. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Fair",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier 'Fair Working/Obedience Intelligence' (ranks 55–69)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.pyrenean_mountain_dog.learning_multiplier (0.7, runbook rule: Fair tier, rank 64).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "dog of great size, imposing and strongly built, but not without a certain elegance",
+        "unit": "—",
+        "source_id": "S599",
+        "quote": "Dog of great size, imposing and strongly built, but not without a certain elegance.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 137 (S599), General appearance. RKC standard (S601): 'A powerful and imposing dog with a certain elegance. Great size, strongly built but not cumbersome.'"
+      },
+      "colours": {
+        "value": [
+          "white",
+          "white with badger patches",
+          "white with wolf-grey patches",
+          "white with pale yellow patches",
+          "white with orange patches"
+        ],
+        "unit": "list",
+        "source_id": "S599",
+        "quote": "White or white with patches appearing grey (badger or wolf) or pale yellow or orange (arrouye)",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 137 (S599), Colour: '… on the head, ears, base of the tail and sometimes on the body.'; disqualifying 'Any colour not specified in the standard.' RKC standard (S601): 'White with patches of badger, wolf-grey, paler shades of lemon, orange or tan.' 'Other colours undesirable.' AKC standard (S607): 'White or white with markings of gray, badger, reddish brown, or varying shades of tan.' Never black, merle or brindle."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Pure white first with the highest weight (the colour named first by every standard — the portrait default; Claude), then white with badger, wolf-grey, pale yellow or orange patches on the head and ears. Suggested 50 / 20 / 10 / 10 / 10."
+      },
+      "coat": {
+        "value": "well furnished, flat, quite long and supple; dense woolly undercoat; longer on the tail and forming a ruff",
+        "unit": "—",
+        "source_id": "S599",
+        "quote": "Well-furnished, flat, quite long and supple, rather crisp on the shoulders and back",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 137 (S599), Coat. RKC standard (S601): 'Profuse undercoat of very fine hairs; outer coat longer, coarser textured, thick.'"
+      },
+      "ears": {
+        "value": "set level with the eye, fairly small, triangular, rounded at the tip, lying flat",
+        "unit": "—",
+        "source_id": "S599",
+        "quote": "Set on level with the eye, fairly small, triangular in shape and rounded at the tip.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 137 (S599), Ears. RKC (S601) 'Fairly small, triangular, rounded tips.'"
+      },
+      "eyes": {
+        "value": "rather small, almond-shaped, slightly oblique, amber-brown",
+        "unit": "—",
+        "source_id": "S599",
+        "quote": "Rather small, almond-shaped, set slightly obliquely,",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 137 (S599), Eyes: '… of amber-brown colour.' RKC (S601): 'Almond-shaped, dark amber-brown.'; 'Intelligent and contemplative expression.'"
+      },
+      "tail": {
+        "value": "long, well plumed, reaching at least the hock, carried low at rest, may curl over the back ('making the wheel') when alert",
+        "unit": "—",
+        "source_id": "S599",
+        "quote": "It reaches at least as far as the point of the hock.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 137 (S599), Tail. AKC (S607): 'The tail is well plumed, carried low in repose and may be carried over the back, \"making the wheel,\" when aroused.' RKC (S601): 'Carried low in repose, with tip turned slightly to one side.'"
+      },
+      "nose": {
+        "value": "totally black; black eye rims and lips",
+        "unit": "—",
+        "source_id": "S599",
+        "quote": "Totally black.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 137 (S599), Nose. RKC (S601): 'Black nose and eye rims. Liver or pink pigmentation highly undesirable.'"
+      },
+      "dewclaws": {
+        "value": "double dewclaws on each hind leg — an identifying feature",
+        "unit": "—",
+        "source_id": "S601",
+        "quote": "Strongly made double dewclaws on each hindleg; lack of this identifying characteristic totally undesirable.",
+        "confidence": "high",
+        "notes": "RKC standard (S601), Hindquarters. FCI (S599): hind legs with 'double well-formed dewclaws'. AKC (S607): 'Double dewclaws are located on each rear leg.' Shown in the portrait prompt (natural feet)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC Breeds A–Z key facts (S600), PDSA (S603), PetMD (S604), VCA (S605).",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S600",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": "RKC key facts (S600)."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S600",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key facts (S600). One hour → no active_family / long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S600",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "RKC key facts (S600). Basis of large_home (with the garden row)."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S600",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "RKC key facts (S600)."
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S600",
+        "quote": "Grooming: More than once a week",
+        "confidence": "high",
+        "notes": "RKC key facts (S600), no number → M5-R13 rule: the most specific number of another A/B source (VCA S605 'brush weekly', PetMD S604 'weekly brushing') = 1, listed for David. Basis of frequent_grooming (with PDSA 'a thorough groom on a regular basis')."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S600",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": "RKC key facts (S600). PDSA 'Coat length: Medium' (S603)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S600",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "RKC key facts (S600). PetMD (S604) 'heavy shedders' agrees. Basis of sheds."
+      },
+      "rkc_lifespan": {
+        "value": "Under 10 years",
+        "unit": "—",
+        "source_id": "S600",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "RKC key facts (S600). Basis of shorter_lifespan."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S600",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "RKC key facts (S600)."
+      },
+      "pdsa_exercise": {
+        "value": "1 hour a day minimum",
+        "unit": "—",
+        "source_id": "S603",
+        "quote": "Minimum exercise (per day): 1 hour",
+        "confidence": "high",
+        "notes": "PDSA key facts (S603)."
+      },
+      "pdsa_grooming": {
+        "value": "a thorough groom on a regular basis (thick double coat)",
+        "unit": "—",
+        "source_id": "S603",
+        "quote": "Their thick double coat will need a thorough groom on a regular basis to keep it free from matts and in good condition.",
+        "confidence": "high",
+        "notes": "PDSA (S603) — no number."
+      },
+      "vca_grooming": {
+        "value": "brush weekly; weekly nail trim (pedicure) and ear cleaning",
+        "unit": "—",
+        "source_id": "S605",
+        "quote": "A weekly brushing – with a rake, comb or pin brush to remove any dead undercoat",
+        "confidence": "high",
+        "notes": "VCA (S605, fragment of the grooming sentence); Quick Facts 'Grooming: Easy to care for - brush weekly'; the same sentence lists a 'weekly pedicure and ear cleaning' (fragment) and occasional eyebrow trimming (paraphrase). → brushing 1× a week (M5-R13) and the nail and ear tasks 1× a week (M5-R19 / M5-R20)."
+      },
+      "vca_nails_ears": {
+        "value": "weekly pedicure and ear cleaning",
+        "unit": "—",
+        "source_id": "S605",
+        "quote": "weekly pedicure and ear cleaning",
+        "confidence": "high",
+        "notes": "VCA (S605, fragment of the grooming sentence, as returned verbatim). 'Weekly' → once a week for the nail trim and the ear cleaning (runbook »Breed care tasks«)."
+      },
+      "petmd_grooming": {
+        "value": "weekly brushing; heavy shedders; routine ear cleaning",
+        "unit": "—",
+        "source_id": "S604",
+        "quote": "However, weekly brushing helps maintain their soft undercoat and minimize shedding in the home.",
+        "confidence": "high",
+        "notes": "PetMD (S604). 'Great Pyrenees are heavy shedders, and more frequent grooming can help pet parents stay on top of the flying fur.' 'Routine ear cleaning with a veterinary-approved ear cleanser is important' (fragment, no frequency)."
+      },
+      "pdsa_lifespan": {
+        "value": "Under 10 years",
+        "unit": "—",
+        "source_id": "S603",
+        "quote": "Average lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "PDSA key facts (S603)."
+      },
+      "petmd_children": {
+        "value": "suitable with children who know how to interact with dogs; best without smaller children",
+        "unit": "—",
+        "source_id": "S604",
+        "quote": "Great Pyrenees may be best in homes without smaller children",
+        "confidence": "high",
+        "notes": "PetMD (S604). Basis of not_for_small_children."
+      },
+      "vca_children": {
+        "value": "devoted to his family, especially to children",
+        "unit": "—",
+        "source_id": "S605",
+        "quote": "Although he is devoted to his family – especially to children –",
+        "confidence": "high",
+        "notes": "VCA (S605, opening clause). Basis of children (with the PetMD caveat)."
+      },
+      "petmd_other_pets": {
+        "value": "lives well with other pets",
+        "unit": "—",
+        "source_id": "S604",
+        "quote": "Great Pyrenees live well with other pets but value their alone time.",
+        "confidence": "high",
+        "notes": "PetMD (S604). Basis of other_pets."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -59605,6 +60219,310 @@
         "confidence": "high",
         "notes": "Colours of FCI-Standard N° 185 (S594): self coloured deer red, reddish-brown to dark red brown; black and tan. Weights unsourced in prompts. Red as the portrait default: first in the standard (Claude). Natural ears and tail (the standard describes both natural).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): red is the portrait default; standard colours only (red, black and tan), natural ears and tail, never chocolate, blue, fawn, merle or white"
+      }
+    },
+    "pyrenean_mountain_dog": {
+      "_note": "Unattended run M5-R10-78 (2026-10-29): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise 60 min from the RKC page (S600 'Up to 1 hour per day'); senior boundary 90 from the PetMD / VCA lower bound 10 y is Claude's proposal (verified=false, open for David — RKC / PDSA 'Under 10 years' has no lower bound, no McMillan / VetCompass value reachable). Built: brushing 1× a week (RKC 'More than once a week' without a number → VCA / PetMD weekly, M5-R13 — listed for David), puppy socialisation (VCA S605 quote, M5-R17), the 60-minute meal / walk gap warning (PetMD S604 quote, M5-R16), the child's nail-trim and ear-cleaning mini-games once a week (VCA S605 'weekly pedicure and ear cleaning', M5-R19 / R20). No tooth / bath / groomer task (no frequency). In marketing (not a conformation welfare breed; Breed Watch pages disagree — open for David). Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S600",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key facts 'Up to 1 hour per day' (S600). Rule: one number N ('up to N') → N = 60. PDSA 'Minimum exercise (per day): 1 hour' (S603) agrees.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S600 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S600",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months. PDSA (S603): puppies 'shouldn't be over-exercised'.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + the PetMD / VCA lower bound 10 y, S604 / S605 — the RKC / PDSA band 'Under 10 years' has no lower bound, the McMillan 2024 table S123 was not reachable, no VetCompass median). The senior value is Claude's suggestion — see senior_boundary_months.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S604"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia_10_9_y": 98,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 90 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+      },
+      "senior_boundary_months": {
+        "value": 90,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "round(0.75 × 10 y × 12) = 90 (AAHA last 25 % of lifespan S11 × the PetMD lower bound 10 y, S604; VCA S605 '10 to 12 years' agrees). The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value: the RKC band 'Under 10 years' (S600) has no lower bound, the Dogs Trust table S123 was refused by the fetch tool, the McMillan 2024 paper names the breed only in Fig. 5, no VetCompass / Kennel Club survey median was reachable. Closest row (Bull Terrier / Miniature Pinscher precedent: the lower bound of a tier-B band). Alternatives: McMillan 2024 10.9 y via Wikipedia (S606, tier C) → 98; Dogs Trust > 7 y (S14) = 84. Seeded with verified=false (also the senior arrival age); the seeder is insert-only, so a later change needs a Filament edit or a data migration.",
+        "derived_from": [
+          "S11",
+          "S604"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia_10_9_y": 98,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "predlog Claude 2026-10-29 (najbližja vrstica pravila runbooka, M5-R10-78) — čaka Davida; ni potrjeno"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36); senior 90 follows the unconfirmed senior boundary (senior_boundary_months)"
+      },
+      "learning_multiplier": {
+        "value": 0.7,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 64 (S35), tier 'Fair' (55–69) → 0.7. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 64, Fair tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S605",
+        "quote": "A weekly brushing – with a rake, comb or pin brush to remove any dead undercoat",
+        "confidence": "medium",
+        "notes": "pyrenean_mountain_dog.suitability.vca_grooming. RKC 'Grooming: More than once a week' (S600) has no number → M5-R13 rule: the most specific number of another A/B source in data.json — VCA 'A weekly brushing' (S605; Quick Facts 'brush weekly') and PetMD 'weekly brushing' (S604) → 1. Listed for David: the RKC says more than once a week and PetMD adds that more frequent grooming helps with the heavy shedding (the Belgian Malinois proposal of 2 had no other number). Matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": null,
+            "source_id": "S600",
+            "quote": "Grooming: More than once a week",
+            "notes": "RKC key facts — no number (Belgian Malinois precedent without another number → 2)."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »More than once a week« brez števila → VCA / PetMD »weekly«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S605",
+        "quote": "Early socialization is very important",
+        "confidence": "high",
+        "notes": "pyrenean_mountain_dog.behaviour.socialisation (VCA S605). Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, VCA S605)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S604",
+        "quote": "Avoid vigorous exercise around mealtimes",
+        "confidence": "high",
+        "notes": "pyrenean_mountain_dog.exercise.after_meals (PetMD S604, GDV advice). Warning only; steps still count.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "nail_trimming": {
+        "value": "nails trimmed once a week",
+        "unit": "care routine (sourced need)",
+        "source_id": "S605",
+        "quote": "weekly pedicure and ear cleaning",
+        "confidence": "high",
+        "notes": "VCA (S605), pyrenean_mountain_dog.suitability.vca_nails_ears. Built: the child's nail-trim mini-game once every program week (BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R19). The double hind dewclaws (S601) are part of the feet.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »weekly« → 1× na teden"
+      },
+      "ear_care": {
+        "value": "ears cleaned once a week",
+        "unit": "care routine (sourced need)",
+        "source_id": "S605",
+        "quote": "weekly pedicure and ear cleaning",
+        "confidence": "high",
+        "notes": "VCA (S605), pyrenean_mountain_dog.suitability.vca_nails_ears. PetMD (S604) 'Routine ear cleaning … is important' (no number). Built: the child's ear-cleaning mini-game once every program week (BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R20).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »weekly« → 1× na teden"
+      },
+      "suitability_tags": {
+        "_note": "Tags for backend/config/breed_suitability.php (M5-R10-78); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "children",
+            "source_ids": [
+              "S605"
+            ],
+            "refs": [
+              "pyrenean_mountain_dog.behaviour.family",
+              "pyrenean_mountain_dog.suitability.vca_children"
+            ],
+            "quote": "S605 'Although he is devoted to his family – especially to children –'"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S600"
+            ],
+            "refs": [
+              "pyrenean_mountain_dog.suitability.rkc_size_of_home",
+              "pyrenean_mountain_dog.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S600 'Size of home: Large house' / 'Size of garden: Large garden'"
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S604"
+            ],
+            "refs": [
+              "pyrenean_mountain_dog.behaviour.other_pets",
+              "pyrenean_mountain_dog.suitability.petmd_other_pets"
+            ],
+            "quote": "S604 'Great Pyrenees live well with other pets but value their alone time.'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S604"
+            ],
+            "refs": [
+              "pyrenean_mountain_dog.behaviour.children",
+              "pyrenean_mountain_dog.suitability.petmd_children"
+            ],
+            "quote": "S604 'Great Pyrenees may be best in homes without smaller children'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S600",
+              "S604"
+            ],
+            "refs": [
+              "pyrenean_mountain_dog.suitability.rkc_shedding",
+              "pyrenean_mountain_dog.suitability.petmd_grooming"
+            ],
+            "quote": "S600 'Sheds: Yes'; S604 'However, weekly brushing helps maintain their soft undercoat and minimize shedding in the home.'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S600",
+              "S603"
+            ],
+            "refs": [
+              "pyrenean_mountain_dog.suitability.rkc_grooming",
+              "pyrenean_mountain_dog.suitability.pdsa_grooming"
+            ],
+            "quote": "S600 'Grooming: More than once a week'; S603 'Their thick double coat will need a thorough groom on a regular basis …'"
+          },
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S600",
+              "S603"
+            ],
+            "refs": [
+              "pyrenean_mountain_dog.lifespan.rkc",
+              "pyrenean_mountain_dog.suitability.rkc_lifespan"
+            ],
+            "quote": "S600 'Lifespan: Under 10 years'; S603 'Average lifespan: Under 10 years'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "No 'family pet' statement (VCA 'devoted to his family' is about devotion; PDSA 'get on well with everyone').",
+          "small_children": "PetMD: best in homes without smaller children (S604).",
+          "active_family": "Up to 1 hour a day (S600).",
+          "long_daily_exercise": "Up to 1 hour a day (S600).",
+          "apartment": "RKC 'Large house' (S600).",
+          "often_alone": "VCA 'Fine as a trained adult' (S605) is a quick-facts row, not a rating for long absences.",
+          "low_shedding": "RKC 'Sheds: Yes' (S600).",
+          "chases_small_pets": "No prey-drive statement; PetMD: lives well with other pets (S604).",
+          "hips_hind_legs": "RKC Breed Watch pages disagree (breed page Category 1 S600, Breed Watch page Category 2 hind conformation S602) → no welfare chip in this run (open for David).",
+          "eyelid_problems": "Entropion only in the PDSA health list (S603), not a fetched Breed Watch point.",
+          "experienced_owner": "No source ('independent flock guardians', 'strong-willed during training' are not an owner statement).",
+          "drools": "No drooling statement.",
+          "hypoallergenic": "Never a tag (runbook)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits children, large_home, other_pets; consider not_for_small_children, sheds, frequent_grooming, shorter_lifespan"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a flat-faced breed)",
+        "unit": "—",
+        "source_id": "S600",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92). RKC Breed Watch: Category 1 on the breed page (S600), Category 2 (too fat; hind conformation) on the Breed Watch page (S602) — open for David. Marketing never presents the Pyrenean Mountain Dog as hypoallergenic, a dog for homes with small children or a dog for a small flat (S600, S604).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no veterinary advice against advertising the breed type)"
+      },
+      "ai_appearance": {
+        "value": "adult Pyrenean Mountain Dog, pure white coat (default); dog of great size, imposing and strongly built but elegant; flat, quite long, supple outer coat with a dense undercoat and a ruff; fairly small triangular ears with rounded tips lying flat at eye level; rather small almond-shaped amber-brown eyes; totally black nose, lips and eye rims; long well-plumed tail carried low; double dewclaws on the hind legs; colours only white or white with badger, wolf-grey, pale yellow or orange patches on the head and ears — never black, brindle or merle",
+        "unit": "—",
+        "source_id": "S599",
+        "quote": "White or white with patches appearing grey (badger or wolf) or pale yellow or orange (arrouye)",
+        "confidence": "high",
+        "notes": "Colours of FCI-Standard N° 137 (S599) and the RKC standard (S601). Weights unsourced in prompts. Pure white as the portrait default: the colour every standard names first (Claude).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): pure white is the portrait default; standard colours only (white, or white with badger / wolf-grey / pale yellow / orange patches), never black, brindle or merle"
       }
     }
   }
