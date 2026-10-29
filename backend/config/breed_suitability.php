@@ -1996,5 +1996,26 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S591'], 'refs' => ['bull_terrier.behaviour.other_pets']],
             ],
         ],
+
+        // M5-R10-77: miniature_pinscher.* (S594–S598), runbook rules (data.json proposed_game_parameters.miniature_pinscher.suitability_tags).
+        // PDSA (S595) + PetMD (S596) + VCA (S597) — the RKC breed page was not reachable (no apartment / large_home / sheds). No
+        // welfare chip (Breed Watch category unknown). Half an hour a day → no active_family / long_daily_exercise. Not
+        // small_children (VCA: very young children may hurt it with rough play), other_pets / chases_small_pets (VCA "May not be
+        // good with small pets." — no high prey drive), needs_company (separation anxiety on Wikipedia only). Never hypoallergenic.
+        'miniature_pinscher' => [
+            'suits' => [
+                // S596 "As outgoing, active, and intelligent animals, they can make excellent family pets with the right socialization and training."
+                ['tag' => 'family_pet', 'source_ids' => ['S596'], 'refs' => ['miniature_pinscher.behaviour.family', 'miniature_pinscher.suitability.petmd_family']],
+                // S597 "Playful and very good with children, although very young or unruly children may hurt it with rough play."
+                // — a statement with its caveat (→ older_children), never small_children.
+                ['tag' => 'children', 'source_ids' => ['S597'], 'refs' => ['miniature_pinscher.behaviour.children', 'miniature_pinscher.suitability.vca_children']],
+            ],
+            'consider' => [
+                // S597 "… although very young or unruly children may hurt it with rough play." — a small dog (Pomeranian / Chihuahua precedent).
+                ['tag' => 'older_children', 'source_ids' => ['S597'], 'refs' => ['miniature_pinscher.behaviour.children', 'miniature_pinscher.suitability.vca_children']],
+                // S597 "Its thin coat and small size makes it vulnerable to chilling."
+                ['tag' => 'cold_sensitive', 'source_ids' => ['S597'], 'refs' => ['miniature_pinscher.suitability.vca_cold']],
+            ],
+        ],
     ],
 ];

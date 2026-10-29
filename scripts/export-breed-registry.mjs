@@ -460,6 +460,7 @@ const SPECIES = [
       { id: 'nova_scotia_duck_tolling_retriever', synonyms: { en: ['Toller', 'Nova Scotia Retriever', 'Duck Tolling Retriever', 'NSDTR'], sl: ['novoškotski prinašalec', 'novoskotski prinasalec', 'toller', 'novoškotski retriver'] } },
       { id: 'cairn_terrier', synonyms: { en: ['Cairn', 'Cairnie'], sl: ['cairn terier', 'cairn', 'kern terier'] } },
       { id: 'bull_terrier', synonyms: { en: ['English Bull Terrier', 'Bully'], sl: ['bulterier', 'bul terier'] } },
+      { id: 'miniature_pinscher', synonyms: { en: ['Min Pin', 'Zwergpinscher'], sl: ['pritlikavi pinč', 'pritlikavi pinc', 'pinč', 'mini pinč'] } },
     ],
   },
   {
@@ -2065,6 +2066,31 @@ const DOG_FACTS = {
       ['itchy_skin_allergy', 'health.atopy'],
     ],
   },
+  // M5-R10-77. Height + weight = FCI-Standard N° 185 (S594), lifespan = the PDSA band "Over 12 years" (S595; the McMillan
+  // 2024 table S123 and the RKC page could not be fetched) + the PetMD span 12–16 y (S596), exercise = PDSA "Minimum
+  // exercise (per day): 30 minutes" (S595). FCI origin Germany. Not exported: lifespan.mcmillan_2024 (unsourced, Wikipedia
+  // only) / senior_from (derived), adult_weight.alternatives (PDSA / VCA) / salt_category (our assignment), health.heart /
+  // hypoglycemia (no description / paraphrase only), the suitability care texts (no RKC key facts → no coat / grooming /
+  // shedding fact). No new health key.
+  miniature_pinscher: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.pdsa', 'more_than'], ['lifespan.petmd', 'span']],
+    exercise: [['@proposed_game_parameters.miniature_pinscher.exercise_minutes_adult', 'at_least']],
+    coat: [],
+    grooming: [],
+    shedding: [],
+    food_motivation: null,
+    health: [
+      ['kneecap_luxation', 'health.patella'],
+      ['legg_perthes', 'health.legg_perthes'],
+      ['pra_inherited_blindness', 'health.pra'],
+      ['cataracts', 'health.cataracts'],
+      ['bladder_stones', 'health.bladder_stones'],
+      ['epilepsy', 'health.epilepsy'],
+      ['weight_gain', 'health.obesity'],
+    ],
+  },
 
 
 };
@@ -2688,6 +2714,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.bull_terrier.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.bull_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.bull_terrier.exercise_minutes_senior',
+  },
+  miniature_pinscher: {
+    adult_minutes: ['proposed_game_parameters.miniature_pinscher.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.miniature_pinscher.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.miniature_pinscher.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.miniature_pinscher.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.miniature_pinscher.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.miniature_pinscher.exercise_minutes_senior',
   },
 
 

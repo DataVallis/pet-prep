@@ -1565,6 +1565,27 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.bull_terrier',
                 'search_keywords' => ['bull terrier', 'english bull terrier', 'bully', 'bulterier', 'bul terier'],
             ],
+            // M5-R10-77 Miniature Pinscher (docs/research/dog-data/data.json miniature_pinscher, sources S594–S598;
+            // runbook rules confirmed by David 2026-10-10: paid). daily_steps_required = the adult step goal
+            // (proposed_game_parameters.miniature_pinscher.step_goal_adult: 30 min × 100 steps/min — PDSA S595
+            // "Minimum exercise (per day): 30 minutes") — only the legacy-profile fallback. Hunger / thirst decay,
+            // poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::MiniaturePinscher->slug(),
+                'daily_steps_required' => 3000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 710,
+                'label_key' => 'breeds.miniature_pinscher',
+                'search_keywords' => ['miniature pinscher', 'min pin', 'minpin', 'zwergpinscher', 'pritlikavi pinč', 'pritlikavi pinc', 'pinč', 'pinc', 'mini pinč'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and

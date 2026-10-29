@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "14776acbd2ac6bfe4fa4aaa7735dc71c3d023056a11a425e6e233dbfbe6fef41"
+      "sha256": "f4bfbd8e912c9220da899e20ed2b597da84a1b93737d9ebdf00bb0209a92a71f"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "6fb2795959783f83fb897fa64692e31675d4677d820418405883086f8c22dbae"
+      "sha256": "1720f550f1db7baddb1c3e18129a35de1d28dcbdf8a48364a8821857bb54fda5"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "efa48d6410dba09d1a15a3d8f26383cf0d4753e16421e58b93c9cbbd49dc3eec"
+      "sha256": "dff62b6456420db007bdd78cf92a3706223d55038c8e7a8219be9d309cce38b9"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,20 +40,20 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "dbe3b2f06d837a7ce7596159785904ee15f8f69b6a87962e892b6c98ff683236"
+      "sha256": "40229691c0aa46b2e6869316e97a38506212d187241cd79aabac7f1e29c9d206"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "a80d487645ceb99e79cae1e92cf02b8757d0f21c7216c8bcb5bee47ee0052dd9"
+      "sha256": "b763a9a8256696851d75315762ab95aacb2d0bdbb9bb59749cfadf58d66118ca"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "e404f20f61f9e2fac718fcfdada3172faf3fa9a3bc530cb1c6db910f31eeb27f"
+      "sha256": "809b621a7ac70fc3180db05c1f851b80eb095c6421b09c8ae6a338e12a910473"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "5e0e01c48d95ada8043e9774be3314e87823873b8b099f0d1e80908c59fa8409"
+      "sha256": "9432311c89b0b8d9678fdf26dc332290d130dd1442be2cc8a3fac0e60d53dbbe"
     },
     "app_release": {
       "path": "docs/research/app-release.json",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "0309a7142c492f3ef44fa51bc79f68dbe362bd1fb5ee2d80d4cc6da48cb0697a"
+      "sha256": "8672138c553ef3b229c1786c3a82246ed8f30dbea043a0ecdab6163142b90478"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -222,7 +222,7 @@
         }
       },
       "status": "available",
-      "breed_count": 70,
+      "breed_count": 71,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -42459,6 +42459,522 @@
       ]
     },
     {
+      "id": "miniature_pinscher",
+      "species": "dog",
+      "order": 70,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Miniature Pinscher",
+        "sl": "Pritlikavi pinč"
+      },
+      "slug": {
+        "en": "miniature-pinscher",
+        "sl": "pritlikavi-pinc"
+      },
+      "synonyms": {
+        "en": [
+          "Min Pin",
+          "Zwergpinscher"
+        ],
+        "sl": [
+          "pritlikavi pinč",
+          "pritlikavi pinc",
+          "pinč",
+          "mini pinč"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S595"
+          ],
+          "ref": "miniature_pinscher.size_class",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              25,
+              30
+            ],
+            "female": [
+              25,
+              30
+            ]
+          },
+          "source_ids": [
+            "S594"
+          ],
+          "ref": "miniature_pinscher.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              4,
+              6
+            ],
+            "female": [
+              4,
+              6
+            ]
+          },
+          "source_ids": [
+            "S594"
+          ],
+          "ref": "miniature_pinscher.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            8,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "miniature_pinscher.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S595"
+          ],
+          "ref": "miniature_pinscher.lifespan.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            12,
+            16
+          ],
+          "source_ids": [
+            "S596"
+          ],
+          "ref": "miniature_pinscher.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "at_least",
+          "value": 30,
+          "source_ids": [
+            "S595"
+          ],
+          "ref": "proposed_game_parameters.miniature_pinscher.exercise_minutes_adult",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 37,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "miniature_pinscher.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 185,
+            "group": 2,
+            "section": 1,
+            "origin": "DE"
+          },
+          "source_ids": [
+            "S594"
+          ],
+          "ref": "miniature_pinscher.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S595"
+          ],
+          "ref": "miniature_pinscher.health.patella",
+          "confidence": "high"
+        },
+        {
+          "key": "legg_perthes",
+          "source_ids": [
+            "S595"
+          ],
+          "ref": "miniature_pinscher.health.legg_perthes",
+          "confidence": "high"
+        },
+        {
+          "key": "pra_inherited_blindness",
+          "source_ids": [
+            "S595"
+          ],
+          "ref": "miniature_pinscher.health.pra",
+          "confidence": "high"
+        },
+        {
+          "key": "cataracts",
+          "source_ids": [
+            "S595"
+          ],
+          "ref": "miniature_pinscher.health.cataracts",
+          "confidence": "high"
+        },
+        {
+          "key": "bladder_stones",
+          "source_ids": [
+            "S595"
+          ],
+          "ref": "miniature_pinscher.health.bladder_stones",
+          "confidence": "high"
+        },
+        {
+          "key": "epilepsy",
+          "source_ids": [
+            "S596"
+          ],
+          "ref": "miniature_pinscher.health.epilepsy",
+          "confidence": "medium"
+        },
+        {
+          "key": "weight_gain",
+          "source_ids": [
+            "S597"
+          ],
+          "ref": "miniature_pinscher.health.obesity",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S596"
+            ],
+            "refs": [
+              "miniature_pinscher.behaviour.family",
+              "miniature_pinscher.suitability.petmd_family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S597"
+            ],
+            "refs": [
+              "miniature_pinscher.behaviour.children",
+              "miniature_pinscher.suitability.vca_children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "older_children",
+            "source_ids": [
+              "S597"
+            ],
+            "refs": [
+              "miniature_pinscher.behaviour.children",
+              "miniature_pinscher.suitability.vca_children"
+            ]
+          },
+          {
+            "tag": "cold_sensitive",
+            "source_ids": [
+              "S597"
+            ],
+            "refs": [
+              "miniature_pinscher.suitability.vca_cold"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 3000,
+              "cap_month": 3
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 2300
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 3000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 30,
+              "steps": 3000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.2
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.miniature_pinscher.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S595"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min/day (PDSA S595 'Minimum exercise (per day) 30 minutes'; RKC page not reachable)"
+          },
+          {
+            "ref": "proposed_game_parameters.miniature_pinscher.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 23 min → 2,300 steps (75 % of 30, half up)"
+          },
+          {
+            "ref": "proposed_game_parameters.miniature_pinscher.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S595"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 108 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+          },
+          {
+            "ref": "proposed_game_parameters.miniature_pinscher.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 37, Above average tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.miniature_pinscher.grooming",
+            "basis_source_ids": [
+              "S595"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (PDSA »a brush once a week«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S595"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "patella_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K36"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "K36"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S594",
+        "S595",
+        "S596",
+        "S597",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19",
+        "K36"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -47485,6 +48001,34 @@
       "url": "https://www.petmd.com/dog/breeds/bull-terrier"
     },
     {
+      "id": "S594",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 185 Miniature Pinscher (Zwergpinscher), English (PDF)",
+      "url": "https://fci.be/Nomenclature/Standards/185g02-en.pdf"
+    },
+    {
+      "id": "S595",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Miniature Pinscher breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/miniature-pinscher"
+    },
+    {
+      "id": "S596",
+      "tier": "B",
+      "publisher": "PetMD — Elise Schmelzer, reviewed by Barri J. Morrison, DVM (updated Mar. 6, 2023)",
+      "title": "Miniature Pinscher",
+      "url": "https://petmd.com/dog/breeds/miniature-pinscher"
+    },
+    {
+      "id": "S597",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals",
+      "title": "Miniature Pinscher (Know your pet — dog breeds)",
+      "url": "https://vcahospitals.com/know-your-pet/dog-breeds/miniature-pinscher"
+    },
+    {
       "id": "C1",
       "tier": "A (via B summary)",
       "publisher": "AAHA / AAFP, *JFMS* / *JAAHA* 2021. Read through the AVMA JAVMA News summary of 2021-04-15.",
@@ -47903,6 +48447,13 @@
       "publisher": "Scottish Terrier Club of America (hosted by the American Kennel Club)",
       "title": "STCA CHIC Requirements 2026 (PDF)",
       "url": "https://www.akc.org/wp-content/uploads/2026/03/STCA-CHIC-Requirements-2026.pdf"
+    },
+    {
+      "id": "K36",
+      "tier": "B",
+      "publisher": "American Kennel Club",
+      "title": "Toy Group Health Testing Requirements (breeder programs)",
+      "url": "https://www.akc.org/breeder-programs/breed-health-testing-requirements/toy-group-health-testing-requirements/"
     }
   ]
 }

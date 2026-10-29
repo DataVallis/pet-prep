@@ -649,6 +649,12 @@ class FalAiService
                 .'small narrow triangular dark eyes, small thin ears held erect, a short low-set tail carried horizontally, keen and determined expression, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-77: FCI-Standard N° 185 (S594) — self-coloured deer red as the anchor (the first colour of the game list);
+            // a small, elegant reduced image of the German Pinscher, natural ears and tail.
+            BreedType::MiniaturePinscher => 'A small, elegant, square-built Miniature Pinscher with a short, dense, smooth, shiny self-coloured deer red coat, '
+                .'dark oval eyes with black eyelids, a black nose, natural uncropped ears, a natural undocked tail carried in a sabre curve, lively and self-assured expression, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1556,6 +1562,18 @@ class FalAiService
                 'eye_color' => 'dark, almost black',
                 'fur_texture' => 'short, flat, harsh coat with a fine gloss and tight skin',
                 'markings' => 'egg-shaped head, small narrow triangular eyes, never blue, liver or merle',
+            ],
+            // M5-R10-77: self-coloured red (deer red to dark red brown) or black and tan (FCI S594); never chocolate, blue,
+            // fawn, merle or white; natural ears and tail.
+            BreedType::MiniaturePinscher => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'self-coloured deer red',
+                    1 => 'lacquer black with red-brown markings (black and tan)',
+                    2 => 'dark red-brown',
+                },
+                'eye_color' => 'dark',
+                'fur_texture' => 'short, dense, smooth, close and shiny coat',
+                'markings' => 'natural uncropped ears and natural tail, never chocolate, blue, fawn, merle or white',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

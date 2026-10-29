@@ -78,6 +78,7 @@ return [
     'nova_scotia_duck_tolling_retriever' => 'Novoškotski prinašalec',
     'cairn_terrier' => 'Cairn terier',
     'bull_terrier' => 'Bulterier',
+    'miniature_pinscher' => 'Pritlikavi pinč',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

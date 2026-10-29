@@ -640,6 +640,12 @@
 | never blue, liver or merle. White weighted highest (the register portrait). RKC Breed Watch category unknown (page not
 | reachable). Colour weights unsourced → `verified => false`.
 |
+| Miniature Pinscher (M5-R10-77, docs/research/dog-data miniature_pinscher.appearance):
+| "The Miniature Pinscher is a reduced image of the German Pinscher without the draw-backs of a dwarfed appearance."
+| (FCI-Standard N° 185, S594); colours self-coloured deer red (reddish-brown to dark red brown) or black and tan — never
+| chocolate, blue, fawn, merle or white; natural ears and tail. Red weighted highest (the register portrait). RKC Breed
+| Watch category unknown (page not reachable). Colour weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -3365,6 +3371,41 @@ return [
             'eye_color' => ['small, narrow, triangular, obliquely set dark eyes'],
             'tail' => ['short, low-set tail carried horizontally, tapering to a fine point'],
             'muzzle' => ['long, strong, egg-shaped head with no stop, the profile curving gently down to a black nose'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+
+    // M5-R10-77 (docs/research/dog-data/data.json miniature_pinscher.appearance; runbook rules 2026-10-10: standard colours
+    // only — S594 self-coloured deer red to dark red brown, black and tan; never chocolate, blue, fawn, merle or white;
+    // natural ears and tail).
+    'miniature_pinscher' => [
+        'display_name' => 'Miniature Pinscher',
+        // Colour frequencies are in no source (miniature_pinscher.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 185 Miniature Pinscher (S594, https://fci.be/Nomenclature/Standards/185g02-en.pdf), PDSA (S595) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S595 "Size: Small"; S594 "Height at withers: Dogs and bitches: 25 to 30 cm."',
+            'build' => 'S594 "The Miniature Pinscher is a reduced image of the German Pinscher without the draw-backs of a dwarfed appearance."',
+            'coat_length' => 'S594 "Short and dense, smooth, close and shiny without bald patches."',
+            'coat_color' => 'S594 "Self coloured: Deer red, reddish-brown to dark red brown." / "Black and Tan: Lacquer black with red or brown markings." (weights unsourced)',
+            'ear_carriage' => 'S594 "Prick ears; drop ears, set high, V-shaped with the inner edges lying close to the cheeks" (natural, never cropped)',
+            'eye_color' => 'S594 "Dark, oval, with black pigmented close fitting eyelids."',
+            'tail' => 'S594 "Natural; a sabre or sickle carriage is sought after."',
+            'muzzle' => 'S594 "Noseleather well developed and black."',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'small, elegant, square-built smooth-coated pinscher, a reduced image of the German Pinscher without a dwarfed look', 'weight' => 3], 'compact, muscular, well-proportioned small pinscher with a proud, alert stance'],
+            'coat_length' => ['short, dense, smooth, close-lying shiny coat'],
+            // Standard colours only (S594, never chocolate, blue, fawn, merle or white); red highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'self-coloured deer red (red to reddish-brown)', 'weight' => 55],
+                ['value' => 'lacquer black with red-brown markings (black and tan)', 'weight' => 45],
+            ],
+            'ear_carriage' => ['natural uncropped ears, either erect or high-set V-shaped folded ears close to the cheeks'],
+            'eye_color' => ['dark oval eyes with black close-fitting eyelids'],
+            'tail' => ['natural undocked tail carried in a sabre or sickle curve'],
+            'muzzle' => ['a well-developed black nose'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
