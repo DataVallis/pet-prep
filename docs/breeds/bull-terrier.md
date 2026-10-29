@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `bull_terrier` (viri S589–S593; ponovno S8, S10, S11, S14, S24, S35, S45, S92, S174); seznam za vzreditelja: 4 testi ameriškega pasemskega kluba (AKC K33) |
 | Izvor | FCI št. 11 »Bull Terrier«, skupina 3, sekcija 3 (terierji bul tipa), Velika Britanija (S589); ni miniaturni bulterier (ločena pasma) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 72. mesto »Bull Terrier« (S174, prebrano 2026-10-29) |
-| PR-ji | pet-prep #435 (pasma) · portret: sledi · spletna stran: pet-prep-website `feat/register-bull-terrier` |
+| PR-ji | pet-prep #435 (pasma, združen `a046859`) · portret: #436 (zagon 40799331054) · spletna stran: pet-prep-website `feat/register-bull-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -42,7 +42,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 90. meseca — meja je predlog; 4 → 3 → 2 obroka) | 🛠 | 💶 izziv | M5-R10-76 | 2026-10-29 |
 | Česanje 1× na teden (rutina »Počeši«), »Nova izkušnja« za mladička, opozorilo »počakaj s sprehodom« po obroku | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R16 | 2026-10-29 |
 | Barva (izbirnik: 6 standardnih barv, privzeto bel) | 🛠 | 💶 izziv | M5-R21 | 2026-10-29 |
-| AI portret v registru | 🗓 sledi takoj po združitvi | — | M5-R11-04 | — |
+| AI portret v registru (bel, sprejet v prvem poskusu, zagon 40799331054, PR #436) | ✅ | — | M5-R11-04 | 2026-10-29 |
 | Stran na petprep.si (`/animals/dogs/bull-terrier`, `/sl/zivali/psi/bulterier`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -58,4 +58,4 @@
 - **Žvečenje:** PetMD omenja, da »jedo in žvečijo vse okoli sebe« (zapore črevesja), a citat ni potrjen dobesedno → brez čipa `chews_when_bored`.
 - **Stran RKC:** ni bila dosegljiva (preusmeritev na royalkennelclub.com zavrnjena) — ni ključnih dejstev RKC (velikost doma, dlaka, izguba dlake), ni kategorije Breed Watch in ni testov RKC; gibanje in teža iz PDSA.
 - **Ime:** »Bulterier« ni preverjeno pri KZS.
-- **Barva portreta:** bel je predlog Claude (standard dovoli belo ali barvno — tigrasto, črno tigrasto, rdečo, plavo, tribarvno).
+- **Barva portreta:** bel je predlog Claude (standard dovoli belo ali barvno — tigrasto, črno tigrasto, rdečo, plavo, tribarvno). Portret: zagon 40799331054 (koda `a046859`, brez produkcijske namestitve, 0,15 $), sprejet v prvem poskusu — realistična fotografija odraslega psa, čisto bela kratka dlaka, jajčasta glava, pokončna ušesa, črn nos, svetlo siva studijska podlaga; PR #436.
