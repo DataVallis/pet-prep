@@ -40051,7 +40051,7 @@
         "source_id": "S603",
         "quote": "Hip dysplasia – hip joint laxity as a result of poor development, which will eventually lead to arthritis.",
         "confidence": "high",
-        "notes": "PDSA (S603) health list. PetMD (S604) and VCA (S605): elbow and hip dysplasia. RKC Best Practice hip scheme (S600). Register health key hip_dysplasia."
+        "notes": "PDSA (S603) health list. PetMD (S604) and VCA (S605): elbow and hip dysplasia. RKC Best Practice hip scheme (S600). Register health key hip_dysplasia_arthritis."
       },
       "deafness": {
         "value": "deafness",
@@ -40075,7 +40075,7 @@
         "source_id": "S603",
         "quote": "Panosteitis – a painful, inflammatory bone disease.",
         "confidence": "high",
-        "notes": "PDSA (S603) health list. Register health key panosteitis_bone_pain."
+        "notes": "PDSA (S603) health list. Register health key panosteitis."
       },
       "patella": {
         "value": "luxating patellas — kneecaps slipping out of place",
@@ -40091,7 +40091,7 @@
         "source_id": "S603",
         "quote": "Osteosarcoma – malignant bone cancer.",
         "confidence": "high",
-        "notes": "PDSA (S603) health list. Register health key bone_cancer."
+        "notes": "PDSA (S603) health list. Register health key certain_cancers."
       },
       "entropion": {
         "value": "entropion — inward-turning eyelids",
@@ -40099,7 +40099,7 @@
         "source_id": "S603",
         "quote": "Entropion – inward turning eyelids.",
         "confidence": "high",
-        "notes": "PDSA (S603) health list; PetMD (S604) entropion. Not a fetched Breed Watch point → no eyelid_problems chip. Register health key entropion_eyelids."
+        "notes": "PDSA (S603) health list; PetMD (S604) entropion. Not a fetched Breed Watch point → no eyelid_problems chip. Register health key entropion."
       },
       "bloat": {
         "value": "bloat / gastric dilatation-volvulus (GDV) — a life-threatening twisting of the stomach",
@@ -40267,7 +40267,7 @@
         "source_id": "S600",
         "quote": "Grooming: More than once a week",
         "confidence": "high",
-        "notes": "RKC key facts (S600), no number → M5-R13 rule: the most specific number of another A/B source (VCA S605 'brush weekly', PetMD S604 'weekly brushing') = 1, listed for David. Basis of frequent_grooming (with PDSA 'a thorough groom on a regular basis')."
+        "notes": "RKC key facts (S600), no number → brushing 2× a week = Claude's proposal (verified=false, open for David; VCA S605 / PetMD S604 'weekly' would give 1, but contradict 'more than once a week'). Basis of frequent_grooming (with PDSA 'a thorough groom on a regular basis')."
       },
       "rkc_coat_length": {
         "value": "Medium",
@@ -40323,7 +40323,7 @@
         "source_id": "S605",
         "quote": "A weekly brushing – with a rake, comb or pin brush to remove any dead undercoat",
         "confidence": "high",
-        "notes": "VCA (S605, fragment of the grooming sentence); Quick Facts 'Grooming: Easy to care for - brush weekly'; the same sentence lists a 'weekly pedicure and ear cleaning' (fragment) and occasional eyebrow trimming (paraphrase). → brushing 1× a week (M5-R13) and the nail and ear tasks 1× a week (M5-R19 / M5-R20)."
+        "notes": "VCA (S605, fragment of the grooming sentence); Quick Facts 'Grooming: Easy to care for - brush weekly'; the same sentence lists a 'weekly pedicure and ear cleaning' (fragment) and occasional eyebrow trimming (paraphrase). → the alternative 1× a week for brushing (the game proposes 2, M5-R13) and the nail and ear tasks 1× a week (M5-R19 / M5-R20)."
       },
       "vca_nails_ears": {
         "value": "weekly pedicure and ear cleaning",
@@ -60222,7 +60222,7 @@
       }
     },
     "pyrenean_mountain_dog": {
-      "_note": "Unattended run M5-R10-78 (2026-10-29): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise 60 min from the RKC page (S600 'Up to 1 hour per day'); senior boundary 90 from the PetMD / VCA lower bound 10 y is Claude's proposal (verified=false, open for David — RKC / PDSA 'Under 10 years' has no lower bound, no McMillan / VetCompass value reachable). Built: brushing 1× a week (RKC 'More than once a week' without a number → VCA / PetMD weekly, M5-R13 — listed for David), puppy socialisation (VCA S605 quote, M5-R17), the 60-minute meal / walk gap warning (PetMD S604 quote, M5-R16), the child's nail-trim and ear-cleaning mini-games once a week (VCA S605 'weekly pedicure and ear cleaning', M5-R19 / R20). No tooth / bath / groomer task (no frequency). In marketing (not a conformation welfare breed; Breed Watch pages disagree — open for David). Never hypoallergenic.",
+      "_note": "Unattended run M5-R10-78 (2026-10-29): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise 60 min from the RKC page (S600 'Up to 1 hour per day'); senior boundary 90 from the PetMD / VCA lower bound 10 y is Claude's proposal (verified=false, open for David — RKC / PDSA 'Under 10 years' has no lower bound, no McMillan / VetCompass value reachable). Built: brushing 2× a week (RKC 'More than once a week' without a number → Claude's proposal 2, verified=false, open for David; VCA / PetMD 'weekly' would give 1 — M5-R13), puppy socialisation (VCA S605 quote, M5-R17), the 60-minute meal / walk gap warning (PetMD S604 quote, M5-R16), the child's nail-trim and ear-cleaning mini-games once a week (VCA S605 'weekly pedicure and ear cleaning', M5-R19 / R20). No tooth / bath / groomer task (no frequency). In marketing (not a conformation welfare breed; Breed Watch pages disagree — open for David). Never hypoallergenic.",
       "exercise_minutes_adult": {
         "value": 60,
         "unit": "minutes/day",
@@ -60351,21 +60351,21 @@
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
       },
       "grooming": {
-        "value": 1,
+        "value": 2,
         "unit": "brushing sessions per week (sourced need)",
-        "source_id": "S605",
-        "quote": "A weekly brushing – with a rake, comb or pin brush to remove any dead undercoat",
-        "confidence": "medium",
-        "notes": "pyrenean_mountain_dog.suitability.vca_grooming. RKC 'Grooming: More than once a week' (S600) has no number → M5-R13 rule: the most specific number of another A/B source in data.json — VCA 'A weekly brushing' (S605; Quick Facts 'brush weekly') and PetMD 'weekly brushing' (S604) → 1. Listed for David: the RKC says more than once a week and PetMD adds that more frequent grooming helps with the heavy shedding (the Belgian Malinois proposal of 2 had no other number). Matted coat at ceil(1 / 2) = 1 missed.",
+        "source_id": "S600",
+        "quote": "Grooming: More than once a week",
+        "confidence": "low",
+        "notes": "pyrenean_mountain_dog.suitability.rkc_grooming. RKC 'Grooming: More than once a week' (S600) has no number. The runbook rule (M5-R13: the most specific number of another A/B source) would give 1 from VCA 'A weekly brushing' (S605) / PetMD 'weekly brushing' (S604) — but 1 contradicts the RKC's 'more than once a week' and the frequent_grooming chip ('needs brushing several times a week'); PDSA (S603) 'a thorough groom on a regular basis' and PetMD 'more frequent grooming can help' (heavy shedder) point the same way. → Claude's proposal 2 per week (Belgian Malinois precedent, M5-R10-38), verified=false, open for David (alternative: 1, VCA / PetMD). Matted coat at ceil(2 / 2) = 1 missed.",
         "alternatives": [
           {
-            "value": null,
-            "source_id": "S600",
-            "quote": "Grooming: More than once a week",
-            "notes": "RKC key facts — no number (Belgian Malinois precedent without another number → 2)."
+            "value": 1,
+            "source_id": "S605",
+            "quote": "A weekly brushing – with a rake, comb or pin brush to remove any dead undercoat",
+            "notes": "VCA (S605); PetMD (S604) 'weekly brushing' — the runbook's literal reading."
           }
         ],
-        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »More than once a week« brez števila → VCA / PetMD »weekly«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+        "decision": "predlog Claude 2026-10-29 (RKC »More than once a week« brez števila → 2, M5-R13, M5-R10-78) — čaka Davida"
       },
       "socialisation": {
         "value": 1,
