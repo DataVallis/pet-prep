@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "d899e5f3473d203d39a4a4ac2af398bbd9be902995887a46f5ae85f1e8195de8"
+      "sha256": "519661c63924ca6facd5d4b0375520ac9fc0d93339160682484dee78e915ec96"
     }
   },
   "suitability_vocabulary": {
@@ -42930,7 +42930,12 @@
           "S595"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "miniature-pinscher.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
