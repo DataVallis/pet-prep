@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `pyrenean_mountain_dog` (viri S599–S607; ponovno S8, S10, S11, S14, S24, S35, S45, S92, S174); seznam za vzreditelja: stran RKC (S600) |
 | Izvor | FCI št. 137 »Pyrenean Mountain Dog« (Chien de Montagne des Pyrénées), skupina 2, sekcija 2.2 (molosi, gorski tip), Francija (S599); v ZDA (AKC) »Great Pyrenees« |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 74. mesto »Great Pyrenees« (S174, prebrano 2026-10-29) |
-| PR-ji | pet-prep #439 (pasma) · portret: sledi · spletna stran: sledi (le s portretom) |
+| PR-ji | pet-prep #439 (pasma, združen `5c20348`) · portret: #441 (zagon 40833543405) · spletna stran: pet-prep-website `feat/register-pyrenean-mountain-dog` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -42,7 +42,7 @@
 | Česanje 2× na teden (predlog), »Nova izkušnja« za mladička, opozorilo 60 min po obroku | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R16 | 2026-10-29 |
 | Mini igri striženje krempljev in čiščenje ušes (vsaka 1× na teden) | 🛠 | 💶 izziv | M5-R19 / M5-R20 | 2026-10-29 |
 | Barva (izbirnik: 5 standardnih barv, privzeto bel) | 🛠 | 💶 izziv | M5-R21 | 2026-10-29 |
-| AI portret v registru | 🗓 sledi (po združitvi PR #439) | — | M5-R11-04 | — |
+| AI portret v registru (bel, sprejet v prvem poskusu, zagon 40833543405, PR #441) | ✅ | — | M5-R11-04 | 2026-10-29 |
 | Stran na petprep.si (`/animals/dogs/pyrenean-mountain-dog`, `/sl/zivali/psi/pirenejski-gorski-pes`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -58,4 +58,4 @@
 - **Breed Watch:** stran pasme RKC (S600) pravi »Category 1«, stran Breed Watch (S602) »Category 2« z dvema točkama (preveč debel; nepravilna zadnja okončina / slabo gibanje zadaj). Pri rotvajlerju in nemški dogi je taka točka dala čip `hips_hind_legs`. Želite čip?
 - **Entropij (zavihane veke):** le na zdravstvenem seznamu PDSA, ne kot točka Breed Watch → brez čipa `eyelid_problems`.
 - **Ime:** »Pirenejski gorski pes« ni preverjeno pri KZS (»planšarski« je izraz za švicarske Sennenhunde, zato ni uporabljen).
-- **Portret:** sledi takoj po združitvi (bel, privzeta barva je predlog Claude).
+- **Barva portreta:** bel je predlog Claude (vsi standardi ga navajajo prvega). Portret: zagon 40833543405 (koda `5c20348`, brez produkcijske namestitve, 0,15 $), sprejet v prvem poskusu — realistična fotografija odraslega psa, čisto bela gosta dlaka z ovratnikom, črn nos, jantarno rjave oči, majhna ušesa ob glavi, dolg košat rep nizko, svetlo siva studijska podlaga. PR #441.
