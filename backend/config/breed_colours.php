@@ -486,6 +486,14 @@ return [
         ['key' => 'red', 'value' => 'self-coloured deer red (red to reddish-brown)', 'en' => 'Red', 'sl' => 'Rdeč'],
         ['key' => 'black-tan', 'value' => 'lacquer black with red-brown markings (black and tan)', 'en' => 'Black and tan', 'sl' => 'Črn s porjavelimi oznakami'],
     ],
+    // M5-R10-78: FCI-Standard N° 137 (S599) — white, or white with badger / wolf-grey / pale yellow / orange patches.
+    'pyrenean_mountain_dog' => [
+        ['key' => 'white', 'value' => 'pure white', 'en' => 'White', 'sl' => 'Bel'],
+        ['key' => 'white-badger', 'value' => 'white with badger (grey-brown) patches on the head and ears', 'en' => 'White with badger patches', 'sl' => 'Bel z jazbečastimi lisami'],
+        ['key' => 'white-grey', 'value' => 'white with wolf-grey patches on the head and ears', 'en' => 'White with grey patches', 'sl' => 'Bel s sivimi lisami'],
+        ['key' => 'white-yellow', 'value' => 'white with pale yellow patches on the head and ears', 'en' => 'White with pale yellow patches', 'sl' => 'Bel z bledo rumenimi lisami'],
+        ['key' => 'white-orange', 'value' => 'white with orange patches on the head and ears', 'en' => 'White with orange patches', 'sl' => 'Bel z oranžnimi lisami'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

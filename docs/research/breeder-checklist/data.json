@@ -2926,6 +2926,44 @@
         }
       ],
       "notes": "RKC Breeds A–Z page (thekennelclub.org.uk …/toy/miniature-pinscher → royalkennelclub.com) could not be fetched on 2026-10-29 → no minimum / best_practice level. AKC Toy Group health testing page (K36, 2026-10-29): 'Recommended Health Tests from the National Breed Club' for the Miniature Pinscher — patella evaluation only. PDSA (dog-data S595) names luxating patellas, Legg-Perthes, PRA and cataracts, but no screening scheme → no further test."
+    },
+    "pyrenean_mountain_dog": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S600",
+        "quote": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding"
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S600",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "best_practice",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S600",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S600",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S600",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "RKC Breeds A–Z page (dog-data S600, 2026-10-29, reachable with a trailing slash): Good Practice lists only 'Prioritising genetic diversity' (Dachshund precedent, key inbreeding_coi); Best Practice: the BVA/KC elbow and hip dysplasia schemes and the BVA/KC/ISDS eye scheme (test names as returned verbatim). PDSA (S603): hip dysplasia in the health list."
     }
   }
 }

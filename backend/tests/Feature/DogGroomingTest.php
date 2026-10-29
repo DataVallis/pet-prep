@@ -203,7 +203,7 @@ describe('values per breed (runbook grooming rule, data.json)', function () {
         ];
         $rows = collect(BreedStageParamsSeeder::rows())->where('key', StageParamKey::GroomingSessionsPerWeek->value);
         // Open proposals for David (runbook §3: "more than once a week" without any number in a new breed → 2, verified=false).
-        $proposals = ['belgian_malinois' => BreedStageParamsSeeder::PROPOSED_R13_BELGIAN_MALINOIS];
+        $proposals = ['belgian_malinois' => BreedStageParamsSeeder::PROPOSED_R13_BELGIAN_MALINOIS, 'pyrenean_mountain_dog' => BreedStageParamsSeeder::PROPOSED_R13_PYRENEAN_MOUNTAIN_DOG];
 
         expect($rows->pluck('value', 'breed_slug')->sortKeys()->all())
             ->toBe(collect($expected)->mapWithKeys(fn (int $n, string $breed) => [BreedType::from($breed)->slug() => $n])->sortKeys()->all());

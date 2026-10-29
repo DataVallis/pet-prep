@@ -64,3 +64,4 @@ that are new for this checklist get a K-id. Quotes in `data.json` are what the f
 - **Scottish Terrier parents' tests** (2026-10-23) — RKC Breeds A–Z page could not be fetched (redirect to royalkennelclub.com refused) → the breed club CHIC list (K34) and the AKC Terrier Group page (K33) used instead (other_scheme).
 - **Bull Terrier parents' tests** (2026-10-29) — RKC Breeds A–Z page could not be fetched (redirect to royalkennelclub.com refused) → the AKC Terrier Group page (K33) used instead (other_scheme).
 - **Miniature Pinscher parents' tests** (2026-10-29) — RKC Breeds A–Z page could not be fetched (redirect to royalkennelclub.com refused) → the AKC Toy Group page (K36) used instead (other_scheme).
+- **Pyrenean Mountain Dog parents' tests** (2026-10-29) — the RKC Breeds A–Z page (dog-data S600) was reachable with a trailing slash; Good Practice genetic diversity and Best Practice elbow / eye / hip schemes taken from it (no new K-source).

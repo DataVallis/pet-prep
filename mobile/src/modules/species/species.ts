@@ -92,6 +92,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   cairn_terrier: 'dog',
   bull_terrier: 'dog',
   miniature_pinscher: 'dog',
+  pyrenean_mountain_dog: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -188,6 +189,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'cairn_terrier',
   'bull_terrier',
   'miniature_pinscher',
+  'pyrenean_mountain_dog',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */

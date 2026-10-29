@@ -655,6 +655,13 @@ class FalAiService
                 .'dark oval eyes with black eyelids, a black nose, natural uncropped ears, a natural undocked tail carried in a sabre curve, lively and self-assured expression, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-78: FCI-Standard N° 137 (S599) — pure white as the anchor (the first colour of the game list); a giant,
+            // imposing yet elegant mountain dog, thick flat coat with a ruff, small triangular ears, double hind dewclaws.
+            BreedType::PyreneanMountainDog => 'An imposing, strongly built but elegant Pyrenean Mountain Dog with a thick, flat, fairly long pure white coat and a ruff at the neck, '
+                .'rather small almond-shaped amber-brown eyes with black rims, a totally black nose, fairly small triangular ears lying flat at eye level, '
+                .'a long well-plumed tail carried low, calm and contemplative expression, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1574,6 +1581,18 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'short, dense, smooth, close and shiny coat',
                 'markings' => 'natural uncropped ears and natural tail, never chocolate, blue, fawn, merle or white',
+            ],
+            // M5-R10-78: white, or white with badger / wolf-grey / pale yellow / orange patches on the head and ears (FCI S599);
+            // never black, brindle or merle.
+            BreedType::PyreneanMountainDog => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'pure white',
+                    1 => 'white with badger (grey-brown) patches on the head and ears',
+                    2 => 'white with pale yellow patches on the head and ears',
+                },
+                'eye_color' => 'amber-brown',
+                'fur_texture' => 'thick, flat, fairly long outer coat over a dense woolly undercoat, with a ruff at the neck',
+                'markings' => 'black nose and eye rims, double dewclaws on the hind legs, never black, brindle or merle',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

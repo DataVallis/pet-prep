@@ -461,6 +461,7 @@ const SPECIES = [
       { id: 'cairn_terrier', synonyms: { en: ['Cairn', 'Cairnie'], sl: ['cairn terier', 'cairn', 'kern terier'] } },
       { id: 'bull_terrier', synonyms: { en: ['English Bull Terrier', 'Bully'], sl: ['bulterier', 'bul terier'] } },
       { id: 'miniature_pinscher', synonyms: { en: ['Min Pin', 'Zwergpinscher'], sl: ['pritlikavi pinč', 'pritlikavi pinc', 'pinč', 'mini pinč'] } },
+      { id: 'pyrenean_mountain_dog', synonyms: { en: ['Great Pyrenees', 'Pyrenees', 'Patou', 'Chien de Montagne des Pyrénées'], sl: ['pirenejski gorski pes', 'pirenejski pes', 'pirenejec', 'great pyrenees'] } },
     ],
   },
   {
@@ -2091,6 +2092,32 @@ const DOG_FACTS = {
       ['weight_gain', 'health.obesity'],
     ],
   },
+  // M5-R10-78 (AKC Great Pyrenees = FCI / RKC Pyrenean Mountain Dog). Height = FCI-Standard N° 137 by sex (S599), weight =
+  // PDSA 40–50 kg (S603; the FCI standard gives no weight), lifespan = the RKC band 'Under 10 years' (S600; McMillan 2024 via
+  // Wikipedia is never exported), exercise = RKC 'Up to 1 hour per day' (S600), coat / grooming / shedding = RKC key facts
+  // (S600). FCI origin France (FR). Not exported: adult_weight.rkc_minimum / alternatives / salt_category, lifespan.pdsa /
+  // petmd / mcmillan_2024 / senior_from, health.breed_watch (the two RKC pages disagree — open for David), health.other
+  // (names only). No new health key.
+  pyrenean_mountain_dog: {
+    height: ['height.fci'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.rkc', 'less_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia_arthritis', 'health.hip_dysplasia'],
+      ['bloat_gdv', 'health.bloat'],
+      ['deafness', 'health.deafness'],
+      ['epilepsy', 'health.epilepsy'],
+      ['panosteitis', 'health.panosteitis'],
+      ['kneecap_luxation', 'health.patella'],
+      ['entropion', 'health.entropion'],
+      ['certain_cancers', 'health.bone_cancer'],
+    ],
+  },
 
 
 };
@@ -2135,6 +2162,7 @@ export const DOG_CARE_TASKS = {
   russell_terrier: [['tooth_brushing', 3, 7, 'proposed_game_parameters.russell_terrier.tooth_brushing']],
   bullmastiff: [['fold_cleaning', 7, 7, 'proposed_game_parameters.bullmastiff.face_fold_cleaning']],
   chinese_crested: [['nail_trim', 1, 7, 'proposed_game_parameters.chinese_crested.nail_trimming']],
+  pyrenean_mountain_dog: [['nail_trim', 1, 7, 'proposed_game_parameters.pyrenean_mountain_dog.nail_trimming'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.pyrenean_mountain_dog.ear_care']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -2722,6 +2750,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.miniature_pinscher.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.miniature_pinscher.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.miniature_pinscher.exercise_minutes_senior',
+  },
+  pyrenean_mountain_dog: {
+    adult_minutes: ['proposed_game_parameters.pyrenean_mountain_dog.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.pyrenean_mountain_dog.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.pyrenean_mountain_dog.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.pyrenean_mountain_dog.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.pyrenean_mountain_dog.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.pyrenean_mountain_dog.exercise_minutes_senior',
   },
 
 
