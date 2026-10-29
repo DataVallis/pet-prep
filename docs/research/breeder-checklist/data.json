@@ -2909,6 +2909,23 @@
         }
       ],
       "notes": "RKC Breeds A–Z page (display.aspx?id=3063 → royalkennelclub.com …/terrier/bull-terrier) could not be fetched on 2026-10-29 → no minimum / best_practice level. AKC Terrier Group health testing page (K33, re-read 2026-10-29): 'Recommended Health Tests from the National Breed Club' for the Bull Terrier (parent club btca.com) — patella, cardiac exam, BAER, kidney urine protein:creatinine ratio. PDSA (dog-data S591): urine tests can screen parents for kidney problems; heart scans for heart valve problems. New test key kidney_upc_scheme."
+    },
+    "miniature_pinscher": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K36",
+        "quote": "Patella Evaluation"
+      },
+      "tests": [
+        {
+          "key": "patella_scheme",
+          "level": "other_scheme",
+          "name": "Patellar luxation evaluation (US breed club: recommended)",
+          "source_id": "K36",
+          "quote": "Patella Evaluation"
+        }
+      ],
+      "notes": "RKC Breeds A–Z page (thekennelclub.org.uk …/toy/miniature-pinscher → royalkennelclub.com) could not be fetched on 2026-10-29 → no minimum / best_practice level. AKC Toy Group health testing page (K36, 2026-10-29): 'Recommended Health Tests from the National Breed Club' for the Miniature Pinscher — patella evaluation only. PDSA (dog-data S595) names luxating patellas, Legg-Perthes, PRA and cataracts, but no screening scheme → no further test."
     }
   }
 }
