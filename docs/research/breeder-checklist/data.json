@@ -2964,6 +2964,37 @@
         }
       ],
       "notes": "RKC Breeds A–Z page (dog-data S600, 2026-10-29, reachable with a trailing slash): Good Practice lists only 'Prioritising genetic diversity' (Dachshund precedent, key inbreeding_coi); Best Practice: the BVA/KC elbow and hip dysplasia schemes and the BVA/KC/ISDS eye scheme (test names as returned verbatim). PDSA (S603): hip dysplasia in the health list."
+    },
+    "soft_coated_wheaten_terrier": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S610",
+        "quote": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding"
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S610",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S610",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S610",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "RKC Breeds A–Z page (dog-data S610, 2026-10-30, reachable with a trailing slash): Good Practice lists only 'Prioritising genetic diversity' (Dachshund / Pyrenean precedent, key inbreeding_coi); Best Practice: the BVA/KC/ISDS eye scheme and the BVA/KC hip dysplasia scheme (test names as returned verbatim). The page also points to a breed club health scheme (wheaten.org.uk/health, not read) and says no breed-specific DNA package is offered. PDSA (S612): check that the parents were screened under the Canine Health Schemes."
     }
   }
 }

@@ -462,6 +462,7 @@ const SPECIES = [
       { id: 'bull_terrier', synonyms: { en: ['English Bull Terrier', 'Bully'], sl: ['bulterier', 'bul terier'] } },
       { id: 'miniature_pinscher', synonyms: { en: ['Min Pin', 'Zwergpinscher'], sl: ['pritlikavi pinč', 'pritlikavi pinc', 'pinč', 'mini pinč'] } },
       { id: 'pyrenean_mountain_dog', synonyms: { en: ['Great Pyrenees', 'Pyrenees', 'Patou', 'Chien de Montagne des Pyrénées'], sl: ['pirenejski gorski pes', 'pirenejski pes', 'pirenejec', 'great pyrenees'] } },
+      { id: 'soft_coated_wheaten_terrier', synonyms: { en: ['Wheaten Terrier', 'Wheaten', 'Irish Soft Coated Wheaten Terrier', 'SCWT'], sl: ['pšenični terier', 'irski pšenični terier', 'wheaten terier', 'irski mehkodlaki terier'] } },
     ],
   },
   {
@@ -486,7 +487,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', China: 'CN', Portugal: 'PT', Canada: 'CA', Croatia: 'HR', Australia: 'AU', Russia: 'RU' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', China: 'CN', Portugal: 'PT', Canada: 'CA', Croatia: 'HR', Australia: 'AU', Russia: 'RU', Ireland: 'IE' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -2118,6 +2119,29 @@ const DOG_FACTS = {
       ['certain_cancers', 'health.bone_cancer'],
     ],
   },
+  // M5-R10-79. Height + weight = PDSA key facts 46–49 cm / 16–20.5 kg for both sexes (S612; the FCI / RKC standards give only the
+  // dog's range, bitches "somewhat less"), lifespan = McMillan 2024 median 13.7 y via the Dogs Trust table (S123) + the PetMD span
+  // 12–14 y (S613), exercise = RKC 'Up to 1 hour per day' (S610), coat / grooming / shedding = RKC key facts (S610). FCI origin
+  // Ireland (IE, new). Not exported: height / adult_weight alternatives (dog-only standard ranges) and salt_category, lifespan.rkc
+  // (band — the median is better) / senior_from, health.breed_watch (Category 1), health.other (names only). New health key:
+  // protein_losing_disease.
+  soft_coated_wheaten_terrier: {
+    height: ['height.pdsa'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.petmd', 'span']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia', 'health.hip_dysplasia'],
+      ['pra_eye_disease', 'health.pra'],
+      ['protein_losing_disease', 'health.protein_losing'],
+      ['itchy_skin_allergy', 'health.atopy'],
+      ['addisons_disease', 'health.addisons'],
+    ],
+  },
 
 
 };
@@ -2163,6 +2187,7 @@ export const DOG_CARE_TASKS = {
   bullmastiff: [['fold_cleaning', 7, 7, 'proposed_game_parameters.bullmastiff.face_fold_cleaning']],
   chinese_crested: [['nail_trim', 1, 7, 'proposed_game_parameters.chinese_crested.nail_trimming']],
   pyrenean_mountain_dog: [['nail_trim', 1, 7, 'proposed_game_parameters.pyrenean_mountain_dog.nail_trimming'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.pyrenean_mountain_dog.ear_care']],
+  soft_coated_wheaten_terrier: [['ear_cleaning', 1, 7, 'proposed_game_parameters.soft_coated_wheaten_terrier.ear_care'], ['groomer_visit', 1, 28, 'proposed_game_parameters.soft_coated_wheaten_terrier.professional_grooming'], ['bath', 1, 28, 'proposed_game_parameters.soft_coated_wheaten_terrier.bathing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -2758,6 +2783,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.pyrenean_mountain_dog.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.pyrenean_mountain_dog.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.pyrenean_mountain_dog.exercise_minutes_senior',
+  },
+  soft_coated_wheaten_terrier: {
+    adult_minutes: ['proposed_game_parameters.soft_coated_wheaten_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.soft_coated_wheaten_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.soft_coated_wheaten_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.soft_coated_wheaten_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.soft_coated_wheaten_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.soft_coated_wheaten_terrier.exercise_minutes_senior',
   },
 
 

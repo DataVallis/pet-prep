@@ -40375,6 +40375,634 @@
       }
     }
   },
+  "soft_coated_wheaten_terrier": {
+    "_note": "Added 2026-10-30 (M5-R10-79, unattended run — appended after the Pyrenean Mountain Dog: AKC 2024 No. 75 'Soft Coated Wheaten Terrier', S174 full-list table fetched 2026-10-30 '75 | Soft Coated Wheaten Terrier'). Quotes as returned by the web-fetch tool on 2026-10-30 (short quotes, 125-character limit; fragments marked as such); paraphrase only in notes. Sources S608–S614 (reused S8, S10, S11, S14, S24, S35, S45, S123, S174). No health percentages anywhere. Identity from the FCI nomenclature (S608, No. 40, Ireland — FCI name 'Irish Soft Coated Wheaten Terrier'); appearance, colour and height from FCI-Standard N° 40 (S609) and the Royal Kennel Club breed standard (S611); game weight / height = the PDSA key facts (S612, one range for both sexes — the standards give only the dog's range, bitches 'somewhat less'). RKC Breeds A–Z page (S610) reached with the trailing slash: key facts, Breed Watch Category 1 and the health tests. PDSA (S612), PetMD (S613, Virginia LaMon, DVM, Dec. 4, 2023), VCA Animal Hospitals (S614). Lifespan: McMillan 2024 median 13.7 y via the Dogs Trust breed table (S123, row 'Soft Coated Wheaten Terrier 13.7') — runbook first choice. Names: RKC / AKC 'Soft Coated Wheaten Terrier' (S610, S174), FCI 'Irish Soft Coated Wheaten Terrier' (S608); Slovenian »irski mehkodlaki pšenični terier« (descriptive translation; no KZS page found — open for David).",
+    "identity": {
+      "value": "FCI No. 40, Group 3 Section 1 (Large and medium sized Terriers), Ireland",
+      "unit": "—",
+      "source_id": "S608",
+      "quote": "IRISH SOFT COATED WHEATEN TERRIER (40)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S608, as returned): 'IRISH SOFT COATED WHEATEN TERRIER (40)', group 'n°3 - Terriers', section 'Large and medium sized Terriers' (section 1 of group 3), country of origin 'IRELAND', definitive acceptance 2/26/1957, valid standard 1/27/2001; FR 'TERRIER IRLANDAIS A POIL DOUX', DE 'IRISCHER SOFT COATED WHEATEN TERRIER'. FCI-Standard N° 40 (S609): 'Ireland.', 'Group 3 Terriers.', 'Section 1 Large and medium sized Terriers.' 'Ireland' is new in FCI_ORIGINS (IE). AKC / RKC name: Soft Coated Wheaten Terrier (S174, S610)."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S610",
+      "quote": "Size: Medium",
+      "confidence": "high",
+      "notes": "RKC key fact (S610). PDSA (S612) 'Size: Medium' agrees (the page sits under 'medium-dogs')."
+    },
+    "height": {
+      "pdsa": {
+        "value": {
+          "male": [
+            46,
+            49
+          ],
+          "female": [
+            46,
+            49
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S612",
+        "quote": "Average height: 46-49 cm",
+        "confidence": "medium",
+        "notes": "PDSA key facts table (S612, label and value as returned) — one range for both sexes (stored per sex), the game / register range. RKC standard (S611): 'Height: dogs: approximately 46-49 cms (18-19½ ins) measured at the withers; bitches slightly less.'; FCI (S609): 'Dogs 18-19 inches (46-48 cm).', bitches 'somewhat less' (paraphrase); PetMD (S613) / VCA (S614) 17–19 in — alternatives.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                46,
+                49
+              ],
+              "female": null
+            },
+            "unit": "cm",
+            "source_id": "S611",
+            "quote": "Height: dogs: approximately 46-49 cms (18-19½ ins) measured at the withers; bitches slightly less.",
+            "notes": "RKC breed standard (S611) — dogs only; bitches slightly less (no number)."
+          },
+          {
+            "value": {
+              "male": [
+                46,
+                48
+              ],
+              "female": null
+            },
+            "unit": "cm",
+            "source_id": "S609",
+            "quote": "Dogs 18-19 inches (46-48 cm).",
+            "notes": "FCI-Standard N° 40 (S609) — dogs only; bitches somewhat less (paraphrase)."
+          }
+        ]
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            16,
+            20.5
+          ],
+          "female": [
+            16,
+            20.5
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S612",
+        "quote": "Average weight: 16-20.5 kg",
+        "confidence": "medium",
+        "notes": "PDSA key facts table (S612, label and value as returned) — one range for both sexes (stored per sex), the game range. It equals the RKC standard's dog range (S611); bitches are 'somewhat less' there and in the FCI standard (S609, dogs 18–20.5 kg). PetMD (S613) 30–40 lb (13.6–18.1 kg, our conversion) — alternative.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                16,
+                20.5
+              ],
+              "female": null
+            },
+            "unit": "kg",
+            "source_id": "S611",
+            "quote": "Weight: dogs approximately 16-20.5 kgs (35-45 lbs); bitches somewhat less.",
+            "notes": "RKC breed standard (S611) — dogs only."
+          },
+          {
+            "value": {
+              "male": [
+                18,
+                20.5
+              ],
+              "female": null
+            },
+            "unit": "kg",
+            "source_id": "S609",
+            "quote": "Dogs 40-45 lbs (18- 20, 5 kg).",
+            "notes": "FCI-Standard N° 40 (S609, as returned) — dogs only; bitches somewhat less."
+          },
+          {
+            "value": {
+              "male": [
+                13.6,
+                18.1
+              ],
+              "female": [
+                13.6,
+                18.1
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S613",
+            "quote": "Full-grown Soft Coated Wheaten Terriers stand 17–19 inches tall and weigh 30–40 pounds.",
+            "notes": "PetMD (S613, US); 30–40 lb = 13.6–18.1 kg (our conversion, rounded)."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "IV (15–<30 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 16–20.5 kg lies in the 15–<30 kg band. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 16–20.5 kg (S612) = 35–45 lb → the 'Medium (24–59 pounds)' class. The RKC standard (S611) adds that the adult coat colour and texture settle at about 18–24 months (paraphrase) — appearance only. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Soft Coated Wheaten Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 13.7,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": "Soft Coated Wheaten Terrier 13.7 13.2 - 14.4 620 173",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024 (Sci Rep) data as tabled by Dogs Trust (S123, as returned): median 13.7 y (95 % CI 13.2–14.4), 620 dogs, 173 deceased. Runbook first choice (McMillan 2024). Background for the senior boundary only — never shown as a statistic."
+      },
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S610",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "medium",
+        "notes": "RKC breed page key fact (S610). PDSA (S612) 'Average lifespan: Over 12 years' agrees."
+      },
+      "petmd": {
+        "value": "12–14",
+        "unit": "years",
+        "source_id": "S613",
+        "quote": "with a typical lifespan of 12–14 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S613, fragment). VCA (S614) 'Lifespan: 12-14 years' agrees. Exported as the span next to the median."
+      },
+      "senior_from": {
+        "value": 10.275,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 13.7 y (McMillan 2024 via S123) → 0.75 × 13.7 = 10.275 y = 123.3 → 123 months. Not chosen: 108 (RKC / PDSA lower bound 12 y, S610 / S612); 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S123"
+        ],
+        "months": 123,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S610",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S610, label and value as returned) — preferred source. PDSA (S612) 'Minimum exercise (per day): 1 hour' and 'Soft-Coated Wheaten Terriers need around an hour of exercise daily.' agree. PetMD (S613): 'Wheatens need daily walks, regular playtime, lots of attention, and daily grooming upkeep.' (no minutes)."
+      },
+      "off_lead": {
+        "value": "loves to run and hunt — let loose only in a safely enclosed area",
+        "unit": "—",
+        "source_id": "S614",
+        "quote": "Because it loves to run and hunt, it should only be let loose in a safely enclosed.",
+        "confidence": "medium",
+        "notes": "VCA (S614, as returned — the sentence is cut off by the tool after 'enclosed'). Not an escape statement → no secure_fencing chip."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "good tempered, spirited and game; full of confidence and humour; affectionate, intelligent companion",
+        "unit": "—",
+        "source_id": "S611",
+        "quote": "Good tempered, spirited and game. Full of confidence and humour; a delightful, affectionate, intelligent companion.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S611), Temperament. FCI (S609): 'Spirited and game. Good tempered.', 'Most affectionate and loyal to his owners.' PDSA (S612): 'They generally like to please their owners, but can occasionally be a little stubborn and headstrong.'"
+      },
+      "family": {
+        "value": "friendly, trustworthy, get on well with everyone, great family pets",
+        "unit": "—",
+        "source_id": "S612",
+        "quote": "They are friendly, trustworthy dogs that generally get on well with everyone and make great family pets",
+        "confidence": "high",
+        "notes": "PDSA (S612, fragment — the sentence continues with socialisation, cut off by the tool). Basis of family_pet."
+      },
+      "children": {
+        "value": "a good match for children thanks to a gentle, playful nature; interactions should be supervised",
+        "unit": "—",
+        "source_id": "S614",
+        "quote": "Its gentle and playful nature makes it a good match for children.",
+        "confidence": "high",
+        "notes": "VCA (S614) — an explicit statement; Quick Facts 'Good With Children: 5 of 5'. PetMD (S613): 'They are typically gentle with children, but all interactions between kids and any dog should be supervised.' — supervision caveat kept here (never small_children). Basis of children.",
+        "alternatives": [
+          {
+            "value": "typically gentle with children; supervise all interactions",
+            "source_id": "S613",
+            "quote": "They are typically gentle with children, but all interactions between kids and any dog should be supervised.",
+            "notes": "PetMD (S613)."
+          }
+        ]
+      },
+      "time_alone": {
+        "value": "bond quickly with people and dislike being left alone for long periods",
+        "unit": "—",
+        "source_id": "S613",
+        "quote": "Most Soft Coated Wheaten Terriers bond quickly with humans and dislike being left alone for long periods.",
+        "confidence": "high",
+        "notes": "PetMD (S613). → consider needs_company (Brittany precedent: 'don’t do well when left alone for long periods'); never often_alone."
+      },
+      "other_pets": {
+        "value": "usually good with other dogs and pets (VCA); may be tempted to chase smaller animals — early socialisation and introductions help (PetMD)",
+        "unit": "—",
+        "source_id": "S614",
+        "quote": "Usually good with other dogs and pets.",
+        "confidence": "medium",
+        "notes": "VCA (S614). PetMD (S613): 'may be tempted to chase smaller animals.' (fragment) — the sources disagree → neither other_pets nor chases_small_pets (no source uses the words 'prey drive').",
+        "alternatives": [
+          {
+            "value": "may be tempted to chase smaller animals",
+            "source_id": "S613",
+            "quote": "may be tempted to chase smaller animals.",
+            "notes": "PetMD (S613, fragment)."
+          }
+        ]
+      },
+      "socialisation": {
+        "value": "early socialisation and proper introductions help them live well with smaller pets",
+        "unit": "—",
+        "source_id": "S613",
+        "quote": "Early socialization and proper introductions can help a Wheaten Terrier live well with smaller pets.",
+        "confidence": "high",
+        "notes": "PetMD (S613). PDSA (S612): great family pets provided they are well socialised (paraphrase — the sentence is cut off). → proposed_game_parameters.soft_coated_wheaten_terrier.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "training": {
+        "value": "like to please, can be a little stubborn and headstrong; early obedience training",
+        "unit": "—",
+        "source_id": "S612",
+        "quote": "They generally like to please their owners, but can occasionally be a little stubborn and headstrong.",
+        "confidence": "high",
+        "notes": "PDSA (S612). PetMD (S613): 'Early obedience training is crucial to achieve a well-mannered Wheaten Terrier.' No 'better for an experienced owner' statement → no independent_experienced_owner chip."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No chewing statement found (PDSA, PetMD, VCA) → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No food-motivation statement found → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S610) — no conformation point of concern; no veterinary association named by the runbook names the breed for conformation-related welfare problems → no welfare chip. Breeder checklist: RKC Best Practice eye + hip schemes (S610).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1 — no points of concern",
+        "unit": "—",
+        "source_id": "S610",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC breed page (S610); '… other than those covered routinely by The Kennel Club's breed standard.' → no welfare chip, in marketing."
+      },
+      "hip_dysplasia": {
+        "value": "hip dysplasia — loose hip joints that can lead to arthritis",
+        "unit": "—",
+        "source_id": "S612",
+        "quote": "hip joint laxity as a result of poor development, which will eventually lead to arthritis.",
+        "confidence": "high",
+        "notes": "PDSA (S612) health list, 'Hip dysplasia' (fragment). RKC Best Practice: BVA/KC Hip Dysplasia Scheme (S610). Register health key hip_dysplasia."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy — gradual loss of sight",
+        "unit": "—",
+        "source_id": "S612",
+        "quote": "gradual deterioration of the retina of the eye. Symptoms can start with night blindness and progress to total blindness.",
+        "confidence": "high",
+        "notes": "PDSA (S612) health list, 'Progressive retinal atrophy' (fragment). RKC Best Practice: BVA/KC/ISDS Eye Scheme (S610). Register health key pra_eye_disease."
+      },
+      "protein_losing": {
+        "value": "protein-losing diseases of the kidneys or intestines (PLN / PLE)",
+        "unit": "—",
+        "source_id": "S612",
+        "quote": "loss of protein through the kidneys or intestines resulting in diarrhoea and weight loss.",
+        "confidence": "high",
+        "notes": "PDSA (S612) health list, 'Protein-losing diseases' (fragment). PetMD (S613) names protein-losing enteropathy (PLE), protein-losing nephropathy (PLN) and renal dysplasia. New register health key protein_losing_disease."
+      },
+      "atopy": {
+        "value": "atopy — allergic itchy skin",
+        "unit": "—",
+        "source_id": "S612",
+        "quote": "hypersensitivity to certain allergens, causing itching and skin trauma.",
+        "confidence": "high",
+        "notes": "PDSA (S612) health list, 'Atopy' (fragment). Not a Breed Watch point → no sensitive_skin chip. Register health key itchy_skin_allergy."
+      },
+      "addisons": {
+        "value": "Addison's disease — too little adrenal hormone",
+        "unit": "—",
+        "source_id": "S612",
+        "quote": "a condition caused by an abnormally low production of hormones, such as cortisol, by the adrenal glands.",
+        "confidence": "high",
+        "notes": "PDSA (S612) health list, 'Addison's disease' (fragment); PetMD (S613) also names it. Register health key addisons_disease."
+      },
+      "other": {
+        "value": "hypothyroidism; renal dysplasia",
+        "unit": "—",
+        "source_id": "S613",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S613) health list (paraphrase: hypothyroidism, renal dysplasia). Background only — no register key."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 40,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 40 | Soft-coated Wheaten Terrier |",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-30): rank 40 'Soft-coated Wheaten Terrier', tier 'Average Working/Obedience Intelligence' (ranks 40–54). Coren's own article (S34) lists only the top / bottom 10. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier 'Average Working/Obedience Intelligence' (ranks 40–54)."
+      },
+      "training_notes": {
+        "value": "like to please but can be stubborn; early obedience training",
+        "unit": "—",
+        "source_id": "S613",
+        "quote": "Early obedience training is crucial to achieve a well-mannered Wheaten Terrier.",
+        "confidence": "high",
+        "notes": "PetMD (S613); PDSA (S612) 'a little stubborn and headstrong'. The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.soft_coated_wheaten_terrier.learning_multiplier (1.0, runbook rule: Average tier, rank 40).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "medium-sized, compact, upstanding terrier with a soft, wheaten-coloured natural coat in loose curls or waves",
+        "unit": "—",
+        "source_id": "S611",
+        "quote": "Medium-sized, compact, upstanding terrier well covered with a soft, wheaten-coloured, natural coat",
+        "confidence": "high",
+        "notes": "RKC breed standard (S611), General Appearance (fragment; continues 'that falls in loose curls or waves.'). FCI (S609): 'A hardy, active, short coupled dog, well built, giving the idea of strength.'"
+      },
+      "colours": {
+        "value": [
+          "clear wheaten"
+        ],
+        "unit": "list",
+        "source_id": "S611",
+        "quote": "A good clear wheaten.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S611), Colour; the standard adds (paraphrase) any shade of ripening wheat, white and red equally undesirable, dark shading on the ears not unusual, puppies darker until 18–24 months; any other colour or combination unacceptable. FCI (S609): 'A good clear wheaten of shades from light wheaten to a golden reddish hue.' One standard colour → one colour option (wheaten)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). One colour (clear wheaten), weight 100 — the portrait default."
+      },
+      "coat": {
+        "value": "single, soft and silky coat, loosely waved or in large loose curls; not woolly or wiry; abundant on head and legs",
+        "unit": "—",
+        "source_id": "S611",
+        "quote": "Soft and silky.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S611), Coat (first sentence); the standard adds (paraphrase) neither woolly nor wiry, loosely waved or large light loose curls, abundant all over the body and especially on head and legs; over-trimming penalised. FCI (S609): 'A single coated dog. Texture soft and silky to feel and not harsh.' Natural look — no show trim."
+      },
+      "head": {
+        "value": "long head, coat falling over the eyes; strong square muzzle; large black nose",
+        "unit": "—",
+        "source_id": "S611",
+        "quote": "Nose black and large for size of dog.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S611), Head and Skull (paraphrase: flat, moderately long, well covered with hair falling forward over the eyes; strong, square muzzle). FCI (S609): 'In general, powerful without being coarse.'"
+      },
+      "nose": {
+        "value": "black, large",
+        "unit": "—",
+        "source_id": "S611",
+        "quote": "Nose black and large for size of dog.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S611); FCI (S609) 'Black and well developed.'"
+      },
+      "eyes": {
+        "value": "clear, bright dark hazel, medium size, black eye rims",
+        "unit": "—",
+        "source_id": "S611",
+        "quote": "Clear, bright dark hazel. Medium size set under strong brow. Eye rims black.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S611), Eyes."
+      },
+      "ears": {
+        "value": "small to medium, V-shaped, folded at the level of the skull, covered with coat",
+        "unit": "—",
+        "source_id": "S611",
+        "quote": "V-shaped and folded at level of skull.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S611), Ears (first sentence); FCI (S609): 'Small to medium, carried in front, level with skull.'"
+      },
+      "tail": {
+        "value": "set high, carried gaily but never over the back; natural (undocked) tail",
+        "unit": "—",
+        "source_id": "S609",
+        "quote": "Well set, not too thick. Carried gaily but never over the back.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 40 (S609), Tail. RKC (S611): 'Previously customarily docked.' — the game shows a natural, undocked tail."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S610), PDSA (S612), PetMD (S613) and VCA (S614). RKC key facts reached on 2026-10-30.",
+      "rkc_size": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S610",
+        "quote": "Size: Medium",
+        "confidence": "high",
+        "notes": "RKC key fact (S610)."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S610",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S610) → 60 min. Not active_family / long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Small house",
+        "unit": "—",
+        "source_id": "S610",
+        "quote": "Size of home: Small house",
+        "confidence": "high",
+        "notes": "RKC key fact (S610). Not 'Flat/ Apartment' → no apartment chip; not 'Large house' → no large_home."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S610",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S610)."
+      },
+      "rkc_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S610",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "RKC key fact (S610) → brushing 7× a week (M5-R13 rule 'Every day' → 7). PDSA (S612) 'Grooming is required daily to keep their coat in good condition, and trimming will also be required periodically.' agrees; PetMD (S613) 'This breed should ideally be brushed every day and no less than twice weekly.'; VCA (S614) 'The coat needs brushing or combing every other day.' — alternatives. Basis of frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S610",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": "RKC key fact (S610)."
+      },
+      "rkc_shedding": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S610",
+        "quote": "Sheds: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S610); VCA (S614) Quick Facts 'Shedding: 1 of 5' agrees. Basis of low_shedding (Airedale / Portuguese Water Dog precedent) — never 'hypoallergenic'."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S610",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S610). Not shorter_lifespan."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S610",
+        "quote": "Vulnerable native breed: Yes",
+        "confidence": "high",
+        "notes": "RKC key fact (S610). Background only."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S610",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "RKC key fact (S610)."
+      },
+      "pdsa_family": {
+        "value": "friendly, trustworthy, great family pets",
+        "unit": "—",
+        "source_id": "S612",
+        "quote": "They are friendly, trustworthy dogs that generally get on well with everyone and make great family pets",
+        "confidence": "high",
+        "notes": "PDSA (S612, fragment). Basis of family_pet."
+      },
+      "pdsa_grooming": {
+        "value": "grooming daily; trimming periodically",
+        "unit": "—",
+        "source_id": "S612",
+        "quote": "Grooming is required daily to keep their coat in good condition, and trimming will also be required periodically.",
+        "confidence": "high",
+        "notes": "PDSA (S612). 'Periodically' has no number — the groomer frequency comes from PetMD (S613)."
+      },
+      "vca_children": {
+        "value": "a good match for children",
+        "unit": "—",
+        "source_id": "S614",
+        "quote": "Its gentle and playful nature makes it a good match for children.",
+        "confidence": "high",
+        "notes": "VCA (S614). Basis of children (with behaviour.children)."
+      },
+      "vca_grooming": {
+        "value": "brushing or combing every other day; bathing and trimming every other month",
+        "unit": "—",
+        "source_id": "S614",
+        "quote": "Bathing and trimming every other month is needed to maintain the correct look.",
+        "confidence": "high",
+        "notes": "VCA (S614); also 'The coat needs brushing or combing every other day.' Every other month (8 program weeks) is an alternative to PetMD's 4–6 weeks (groomer) and monthly bath (S613)."
+      },
+      "petmd_grooming": {
+        "value": "brushed every day, no less than twice weekly; professional grooming every 4–6 weeks; bath about monthly",
+        "unit": "—",
+        "source_id": "S613",
+        "quote": "But whether the coat is kept long or short, this dog needs professional grooming every four to six weeks.",
+        "confidence": "high",
+        "notes": "PetMD (S613) → the parent's groomer reminder every 4 weeks (§3 »Breed care tasks«: 'every four to six weeks' → the lower bound). Also 'This breed should ideally be brushed every day and no less than twice weekly.' and 'The Soft Coated Wheaten Terrier should be bathed about monthly to remove dirt and debris.'"
+      },
+      "petmd_bath": {
+        "value": "bathed about monthly",
+        "unit": "—",
+        "source_id": "S613",
+        "quote": "The Soft Coated Wheaten Terrier should be bathed about monthly to remove dirt and debris.",
+        "confidence": "high",
+        "notes": "PetMD (S613) → the parent's bath reminder every 4 weeks ('about monthly'). VCA (S614) 'every other month' — alternative."
+      },
+      "petmd_ears": {
+        "value": "clean the ears every one or two weeks",
+        "unit": "—",
+        "source_id": "S613",
+        "quote": "However, cleaning your dog's ears every one or two weeks will help prevent ear infections.",
+        "confidence": "high",
+        "notes": "PetMD (S613) → ear cleaning once a week (M5-R20; a range → the lower bound, the more frequent end). Teeth and nails: no frequency in any source → no task."
+      },
+      "petmd_time_alone": {
+        "value": "dislike being left alone for long periods",
+        "unit": "—",
+        "source_id": "S613",
+        "quote": "Most Soft Coated Wheaten Terriers bond quickly with humans and dislike being left alone for long periods.",
+        "confidence": "high",
+        "notes": "PetMD (S613). Basis of needs_company."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -60523,6 +61151,270 @@
         "confidence": "high",
         "notes": "Colours of FCI-Standard N° 137 (S599) and the RKC standard (S601). Weights unsourced in prompts. Pure white as the portrait default: the colour every standard names first (Claude).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): pure white is the portrait default; standard colours only (white, or white with badger / wolf-grey / pale yellow / orange patches), never black, brindle or merle"
+      }
+    },
+    "soft_coated_wheaten_terrier": {
+      "_note": "Unattended run M5-R10-79 (2026-10-30): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. No open proposal. Built: brushing 7× a week (RKC S610 'Every day', M5-R13), puppy socialisation (PetMD S613 quote, M5-R17), ear cleaning once a week (PetMD S613 'every one or two weeks', M5-R20), the groomer reminder every 4 weeks (PetMD S613 'every four to six weeks', M5-R18) and the bath reminder every 4 weeks (PetMD S613 'about monthly', M5-R19). No meal gap (no source), no tooth / nail task (no frequency). In marketing (Breed Watch Category 1). Never hypoallergenic. No new vocabulary key.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S610",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact 'Up to 1 hour per day' (S610). Rule: one number N ('up to N') → N = 60. PDSA (S612) 'Minimum exercise (per day): 1 hour' agrees.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S610 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S610",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 123
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 123 = round(0.75 × 13.7 y × 12) = round(123.3) = 123 (S11 + McMillan 2024 median 13.7 y via the Dogs Trust table S123). Alternatives: 108 (RKC / PDSA lower bound 12 y, S610 / S612), 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S123"
+        ],
+        "alternatives": {
+          "senior_rkc_lower_bound": 108,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 123 (0.75 × 13.7 y, McMillan 2024 via S123)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 123
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 123)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 40 (S35), tier 'Average' (40–54) → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 40, Average tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S610",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "RKC key fact (S610) 'Every day' → 7 (M5-R13 rule). PDSA (S612) 'Grooming is required daily …' agrees; PetMD (S613) 'ideally … every day and no less than twice weekly' and VCA (S614) 'every other day' — alternatives. Matted coat at ceil(7 / 2) = 4 missed.",
+        "alternatives": [
+          {
+            "value": 4,
+            "source_id": "S614",
+            "quote": "The coat needs brushing or combing every other day.",
+            "notes": "VCA (S614) — every other day ≈ 3–4× a week."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 7× na teden (RKC S610 »Every day«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S613",
+        "quote": "Early socialization and proper introductions can help a Wheaten Terrier live well with smaller pets.",
+        "confidence": "high",
+        "notes": "soft_coated_wheaten_terrier.behaviour.socialisation (PetMD S613). Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, PetMD S613)"
+      },
+      "ear_care": {
+        "value": "ears cleaned every one or two weeks → once a week",
+        "unit": "care routine (sourced need)",
+        "source_id": "S613",
+        "quote": "However, cleaning your dog's ears every one or two weeks will help prevent ear infections.",
+        "confidence": "high",
+        "notes": "PetMD (S613), soft_coated_wheaten_terrier.suitability.petmd_ears. Built: the child's ear-cleaning mini-game once every program week (BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R20).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »every one or two weeks« → spodnja meja, 1× na teden"
+      },
+      "professional_grooming": {
+        "value": "professional grooming every four to six weeks",
+        "unit": "visits (sourced need)",
+        "source_id": "S613",
+        "quote": "But whether the coat is kept long or short, this dog needs professional grooming every four to six weeks.",
+        "confidence": "high",
+        "notes": "PetMD (S613), soft_coated_wheaten_terrier.suitability.petmd_grooming. VCA (S614) 'Bathing and trimming every other month' and PDSA (S612) 'trimming … periodically' — alternatives. Built: the parent's groomer reminder every 4 program weeks (BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R18; never scored).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): »every four to six weeks« → spodnja meja, 4 tedne"
+      },
+      "bathing": {
+        "value": "bathed about monthly",
+        "unit": "baths (sourced need)",
+        "source_id": "S613",
+        "quote": "The Soft Coated Wheaten Terrier should be bathed about monthly to remove dirt and debris.",
+        "confidence": "high",
+        "notes": "PetMD (S613), soft_coated_wheaten_terrier.suitability.petmd_bath. VCA (S614) 'every other month' — alternative. Built: the parent's bath reminder every 4 program weeks (BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R19; never scored).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »about monthly« → vsake 4 tedne"
+      },
+      "suitability_tags": {
+        "_note": "Tags for backend/config/breed_suitability.php (M5-R10-79); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S612"
+            ],
+            "refs": [
+              "soft_coated_wheaten_terrier.suitability.pdsa_family",
+              "soft_coated_wheaten_terrier.behaviour.family"
+            ],
+            "quote": "S612 'They are friendly, trustworthy dogs that generally get on well with everyone and make great family pets'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S614"
+            ],
+            "refs": [
+              "soft_coated_wheaten_terrier.behaviour.children",
+              "soft_coated_wheaten_terrier.suitability.vca_children"
+            ],
+            "quote": "S614 'Its gentle and playful nature makes it a good match for children.' (PetMD S613 supervision caveat kept in behaviour.children)"
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S610"
+            ],
+            "refs": [
+              "soft_coated_wheaten_terrier.suitability.rkc_shedding"
+            ],
+            "quote": "S610 'Sheds: No'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S610",
+              "S612"
+            ],
+            "refs": [
+              "soft_coated_wheaten_terrier.suitability.rkc_grooming",
+              "soft_coated_wheaten_terrier.suitability.pdsa_grooming"
+            ],
+            "quote": "S610 'Grooming: Every day'; S612 'Grooming is required daily …'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S613"
+            ],
+            "refs": [
+              "soft_coated_wheaten_terrier.behaviour.time_alone",
+              "soft_coated_wheaten_terrier.suitability.petmd_time_alone"
+            ],
+            "quote": "S613 '… dislike being left alone for long periods.'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "VCA rating 5 of 5 (S614), but PetMD asks to supervise all interactions (S613) → not without a caveat.",
+          "other_pets": "VCA 'Usually good with other dogs and pets.' (S614) vs PetMD 'may be tempted to chase smaller animals' (S613) → conflicting, neither.",
+          "chases_small_pets": "No source uses the words 'prey drive' → no chip by the rule.",
+          "apartment": "RKC 'Size of home: Small house' (S610), not 'Flat/ Apartment'.",
+          "large_home": "RKC 'Small house' (S610).",
+          "active_family": "Up to one hour a day (S610).",
+          "long_daily_exercise": "Up to one hour a day (S610).",
+          "first_time_owner": "No source.",
+          "independent_experienced_owner": "A little stubborn (S612) but no 'experienced owner' statement.",
+          "heat_sensitive": "Only a VCA rating 'Warm Weather: 1 of 5' (S614), no statement → no chip.",
+          "secure_fencing": "VCA 'let loose in a safely enclosed' area (S614) is not an escape statement.",
+          "sheds": "RKC 'Sheds: No' (S610).",
+          "hypoallergenic": "Never a tag (runbook).",
+          "shorter_lifespan": "RKC 'Over 12 years' (S610), median 13.7 y (S123).",
+          "welfare": "RKC Breed Watch Category 1 (S610); no veterinary association names the breed for conformation-related welfare problems → no welfare chip."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children, low_shedding; consider frequent_grooming, needs_company"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S610",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 1 (S610); not a flat-faced breed — no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). Marketing never presents the breed as hypoallergenic, never shows unsupervised play with small children (S613) and never promises health.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no veterinary advice against advertising the breed type)"
+      },
+      "ai_appearance": {
+        "value": "adult Soft Coated Wheaten Terrier, clear wheaten coat; medium-sized, compact, upstanding terrier; soft, silky single coat falling in loose waves, natural look (not show-trimmed); hair falling over the eyes; strong square muzzle, large black nose; dark hazel eyes with black rims; small V-shaped ears folded at skull level; natural tail carried gaily, never over the back; only wheaten — never white, red, black or black and tan",
+        "unit": "—",
+        "source_id": "S611",
+        "quote": "A good clear wheaten.",
+        "confidence": "high",
+        "notes": "Colour of the RKC standard (S611) and FCI (S609, 'shades from light wheaten to a golden reddish hue'); white and red coats undesirable, any other colour unacceptable. One colour → the portrait default.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): clear wheaten is the portrait default and the only colour; never white, red, black or black and tan"
       }
     }
   }

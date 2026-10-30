@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "edab686e6467cfef409de64ff42585219405b2fef66f0e087711287e7cf9b0b2"
+      "sha256": "a7cbb2298118ce6db27aea660fc7f9bd515b2f03938c45ce0dbfd189497f1058"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "8984a1e9df2f9e3518504bfbdb32b3f172e72f25a7847ff1dbc06e5666454f52"
+      "sha256": "d55c82c4e5b492ce1b9124acb8933398b5ecb4dd135293bc4a35ceddfa6472b8"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "45efe3c642e1e79c057216c73a873afbfaaf8c8bf2026de3ef9b9bae1ed509dc"
+      "sha256": "5310c89a0376bce6e9223fff69942c20d849734ad16a8d626ea03d026c4bfd79"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "d718d36be5703d2dc366d2fecfea372d68efd8bc4db8b0077488c3619ecdde58"
+      "sha256": "c18775a0c3254949bfd07a131bd5d54523aa931f748bc393e572afbe176116b8"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "cc68f7d073ac56ffad5699c62c4a1fd2d0ffbfff07b2dd54785d0968416c8851"
+      "sha256": "2c633bb3d068250a704274fdcde373d2b26ec7fceb1c7c7c3c827a954125280a"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "7d353faf637a494cbfcf6ff7369eed48d7303d0128268db189bd7f1041c42248"
+      "sha256": "83fc1c802e61cee104c0c2988d69eeb40902ea7d133c028f8376690e2ef57b2c"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "2be349a48d49186b3286e99e049fb11e932f1ee0e556ef37403b6e4fe3966ddb"
+      "sha256": "f425c6f7f3aa1ab24b17fcdf71e594d0060dec823ff0146abc37b95086ddad4c"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -222,7 +222,7 @@
         }
       },
       "status": "available",
-      "breed_count": 72,
+      "breed_count": 73,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -43622,6 +43622,622 @@
       ]
     },
     {
+      "id": "soft_coated_wheaten_terrier",
+      "species": "dog",
+      "order": 72,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Soft Coated Wheaten Terrier",
+        "sl": "Irski mehkodlaki pšenični terier"
+      },
+      "slug": {
+        "en": "soft-coated-wheaten-terrier",
+        "sl": "irski-mehkodlaki-psenicni-terier"
+      },
+      "synonyms": {
+        "en": [
+          "Wheaten Terrier",
+          "Wheaten",
+          "Irish Soft Coated Wheaten Terrier",
+          "SCWT"
+        ],
+        "sl": [
+          "pšenični terier",
+          "irski pšenični terier",
+          "wheaten terier",
+          "irski mehkodlaki terier"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "under_1h",
+        "grooming": "daily"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S610"
+          ],
+          "ref": "soft_coated_wheaten_terrier.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              46,
+              49
+            ],
+            "female": [
+              46,
+              49
+            ]
+          },
+          "source_ids": [
+            "S612"
+          ],
+          "ref": "soft_coated_wheaten_terrier.height.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              16,
+              20.5
+            ],
+            "female": [
+              16,
+              20.5
+            ]
+          },
+          "source_ids": [
+            "S612"
+          ],
+          "ref": "soft_coated_wheaten_terrier.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "soft_coated_wheaten_terrier.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 13.7,
+          "source_ids": [
+            "S123"
+          ],
+          "ref": "soft_coated_wheaten_terrier.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            12,
+            14
+          ],
+          "source_ids": [
+            "S613"
+          ],
+          "ref": "soft_coated_wheaten_terrier.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S610"
+          ],
+          "ref": "soft_coated_wheaten_terrier.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S610"
+          ],
+          "ref": "soft_coated_wheaten_terrier.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "every_day",
+          "source_ids": [
+            "S610"
+          ],
+          "ref": "soft_coated_wheaten_terrier.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "no",
+          "source_ids": [
+            "S610"
+          ],
+          "ref": "soft_coated_wheaten_terrier.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 40,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "soft_coated_wheaten_terrier.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 40,
+            "group": 3,
+            "section": 1,
+            "origin": "IE"
+          },
+          "source_ids": [
+            "S608"
+          ],
+          "ref": "soft_coated_wheaten_terrier.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S612"
+          ],
+          "ref": "soft_coated_wheaten_terrier.health.hip_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "pra_eye_disease",
+          "source_ids": [
+            "S612"
+          ],
+          "ref": "soft_coated_wheaten_terrier.health.pra",
+          "confidence": "high"
+        },
+        {
+          "key": "protein_losing_disease",
+          "source_ids": [
+            "S612"
+          ],
+          "ref": "soft_coated_wheaten_terrier.health.protein_losing",
+          "confidence": "high"
+        },
+        {
+          "key": "itchy_skin_allergy",
+          "source_ids": [
+            "S612"
+          ],
+          "ref": "soft_coated_wheaten_terrier.health.atopy",
+          "confidence": "high"
+        },
+        {
+          "key": "addisons_disease",
+          "source_ids": [
+            "S612"
+          ],
+          "ref": "soft_coated_wheaten_terrier.health.addisons",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S612"
+            ],
+            "refs": [
+              "soft_coated_wheaten_terrier.suitability.pdsa_family",
+              "soft_coated_wheaten_terrier.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S614"
+            ],
+            "refs": [
+              "soft_coated_wheaten_terrier.behaviour.children",
+              "soft_coated_wheaten_terrier.suitability.vca_children"
+            ]
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S610"
+            ],
+            "refs": [
+              "soft_coated_wheaten_terrier.suitability.rkc_shedding"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S610",
+              "S612"
+            ],
+            "refs": [
+              "soft_coated_wheaten_terrier.suitability.rkc_grooming",
+              "soft_coated_wheaten_terrier.suitability.pdsa_grooming"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S613"
+            ],
+            "refs": [
+              "soft_coated_wheaten_terrier.behaviour.time_alone",
+              "soft_coated_wheaten_terrier.suitability.petmd_time_alone"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 123
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 123
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "groomer_visit",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.soft_coated_wheaten_terrier.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S610"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S610 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.soft_coated_wheaten_terrier.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.soft_coated_wheaten_terrier.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S123"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 123 (0.75 × 13.7 y, McMillan 2024 via S123)"
+          },
+          {
+            "ref": "proposed_game_parameters.soft_coated_wheaten_terrier.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 40, Average tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.soft_coated_wheaten_terrier.grooming",
+            "basis_source_ids": [
+              "S610"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 7× na teden (RKC S610 »Every day«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.soft_coated_wheaten_terrier.ear_care",
+            "basis_source_ids": [
+              "S613"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »every one or two weeks« → spodnja meja, 1× na teden"
+          },
+          {
+            "ref": "proposed_game_parameters.soft_coated_wheaten_terrier.professional_grooming",
+            "basis_source_ids": [
+              "S613"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): »every four to six weeks« → spodnja meja, 4 tedne"
+          },
+          {
+            "ref": "proposed_game_parameters.soft_coated_wheaten_terrier.bathing",
+            "basis_source_ids": [
+              "S613"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »about monthly« → vsake 4 tedne"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S123",
+          "S610",
+          "S613"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S610"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S610"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S610"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S610"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S123",
+        "S608",
+        "S610",
+        "S612",
+        "S613",
+        "S614",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -48709,6 +49325,41 @@
       "publisher": "VCA Animal Hospitals (LifeLearn, created May 29, 2014)",
       "title": "Great Pyrenees (Know your pet)",
       "url": "https://vcahospitals.com/know-your-pet/great-pyrenees"
+    },
+    {
+      "id": "S608",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — Irish Soft Coated Wheaten Terrier (40)",
+      "url": "https://www.fci.be/en/nomenclature/SOFT-COATED-WHEATEN-TERRIER-40.html"
+    },
+    {
+      "id": "S610",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Soft Coated Wheaten Terrier (Breeds A to Z)",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/soft-coated-wheaten-terrier/"
+    },
+    {
+      "id": "S612",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Soft-Coated Wheaten Terrier breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/soft-coated-wheaten-terrier"
+    },
+    {
+      "id": "S613",
+      "tier": "B",
+      "publisher": "PetMD — Virginia LaMon, DVM (published Dec. 4, 2023)",
+      "title": "Soft Coated Wheaten Terrier",
+      "url": "https://www.petmd.com/dog/breeds/c_dg_soft_coated_wheaten_terrier"
+    },
+    {
+      "id": "S614",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals",
+      "title": "Soft Coated Wheaten Terrier (Know your pet — dog breeds)",
+      "url": "https://vcahospitals.com/avh/know-your-pet/dog-breeds/soft-coated-wheaten-terrier"
     },
     {
       "id": "C1",
