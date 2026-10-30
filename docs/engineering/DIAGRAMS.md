@@ -1034,6 +1034,7 @@ erDiagram
     boolean adapted_mode "M5-T12: child, parent switch (pushes instead of steps)"
     string media_display "M5-T11: child, video or picture"
     boolean easy_gestures "M5-T17: child, parent switch (hold instead of swipe)"
+    boolean game_feedback "Games phase 1: child, parent switch (game sounds + haptics, default true)"
   }
   PARENT_WALK_ENTRIES {
     bigint pet_id
@@ -1442,6 +1443,21 @@ flowchart LR
   FF --> W[write next to the source through the disk<br/>pet_media_derivatives row: source_path = source storage_path]
   W --> P["payload media.phases + phase_seconds:<br/>school_cmd_attention_loop · _success_loop · _release<br/>GET /api/media/{slot}/derived/{key}"]
   W --> TS["TrainingService schedule: P = performing length, R = release length"]
+```
+
+**Ball derivatives (GAMES_SPEC phase 1, David 2026-10-30 — same job / backfill / heavy lock, 0 $):**
+
+```mermaid
+flowchart LR
+  BS["ball_waiting / ball_running stored<br/>(look row or unique pet row)"] --> J2[GenerateSchoolClipDerivative<br/>or media:school-derivatives]
+  J2 --> WL["ball_waiting → ping-pong at FULL size, CRF 21<br/>= ball_waiting_loop (file)"]
+  J2 --> EX["ball_running → 64×64 grey frames (one ffmpeg call)<br/>exitSideFrom(): last frame = empty room,<br/>latest frame with the dog (middle → end) → centre x"]
+  EX --> ES{"x ≤ 0.38 left · x ≥ 0.62 right<br/>else / no dog / contrary move → center"}
+  ES --> MR["pet_media_derivatives row, no file:<br/>key ball_running_exit_side, exit_side"]
+  AD["AI media panel »Set ball exit« (superadmin)"] -->|"override (kept for this file) / measure again"| MR
+  WL --> PL["media.phases.ball_waiting_loop + phase_seconds"]
+  MR --> PM["media.phase_meta.ball_running.exit_side"]
+  PL & PM -.->|"missing = app fallback (loop ball_waiting, ball to the centre);<br/>GameMediaReadiness unchanged — never a lock"| APP[child app ball game]
 ```
 
 **Frugal clips (David 2026-10-30, switch `frugal_clips`, default off) — same derived-clip job, sources mapped, payload keys unchanged. The reversed `sleeping_to_idle` (B) was dropped the same day (David: »looks like rewinding a tape«) — it is made by fal again; legacy reversed slots are repaired by `media:frugal-unreverse`:**
