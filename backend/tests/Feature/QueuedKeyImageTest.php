@@ -258,7 +258,10 @@ describe('never paid twice', function () {
         $calls = qkEditCalls();
 
         // The worker died after fal accepted (ledger committed) but before the slot got the request id.
-        PetMedia::whereKey($key->id)->update(['request_id' => null, 'status_url' => null, 'response_url' => null, 'updated_at' => now()]);
+        // The dead claim happened before the accepted submit: anchor it to the ledger row's time (a later
+        // second would fail the adoption's `created_at >= claim` check — a timing race, not the rule).
+        PetMedia::whereKey($key->id)->update(['request_id' => null, 'status_url' => null, 'response_url' => null,
+            'updated_at' => AiSpendLedger::where('pet_media_id', $key->id)->value('created_at')]);
         $this->travel(11)->minutes();
 
         expect(app(PetMediaService::class)->sweepStale()['reclaimed'])->toBeGreaterThanOrEqual(1)
@@ -283,7 +286,10 @@ describe('never paid twice', function () {
         $calls = qkEditCalls();
         expect($requestId)->not->toBeNull();
 
-        PetMedia::whereKey($row->id)->update(['request_id' => null, 'status_url' => null, 'response_url' => null, 'updated_at' => now()]);
+        // The dead claim happened before the accepted submit: anchor it to the ledger row's time (a later
+        // second would fail the adoption's `created_at >= claim` check — a timing race, not the rule).
+        PetMedia::whereKey($row->id)->update(['request_id' => null, 'status_url' => null, 'response_url' => null,
+            'updated_at' => AiSpendLedger::where('pet_media_id', $row->id)->value('created_at')]);
         $this->travel(11)->minutes();
         app(PetMediaService::class)->sweepStale();
 
