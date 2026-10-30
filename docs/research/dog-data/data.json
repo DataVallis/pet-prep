@@ -41539,6 +41539,478 @@
       }
     }
   },
+  "american_staffordshire_terrier": {
+    "_note": "Added 2026-10-30 (M5-R10-81, unattended run — appended after the Irish Wolfhound: AKC 2024 No. 77 'American Staffordshire Terrier', S174 full-list table fetched 2026-10-30 '77 | American Staffordshire Terrier'). Quotes as returned by the web-fetch tool on 2026-10-30; paraphrase only in notes. Sources S625–S629 (reused S10, S11, S14, S24, S35, S45, S123, S174). No health percentages anywhere. Identity from the FCI nomenclature (S625, No. 286, United States of America); appearance, colour and height from FCI-Standard N° 286 (S626) and the AKC standard (S627) — neither gives a weight ('Height and weight should be in proportion.'). Not recognised by the Royal Kennel Club → no RKC Breeds A–Z page (no 'Exercise:' / 'Size:' / 'Lifespan:' key facts) and no PDSA / Woodgreen page; the game weight and the exercise minutes come from PetMD (S628, Georgina Ushi, DVM, Feb. 1, 2023; tier B) and VCA Animal Hospitals (S629). Lifespan: McMillan 2024 median 12.5 y via the Dogs Trust breed table (S123, row 'American Staffordshire Terrier 12.5') — runbook first choice. Names: FCI / AKC 'American Staffordshire Terrier' (S625, S627), nickname 'AmStaff' (S628); Slovenian »ameriški stafordširski terier« (spelled like the app's »stafordširski bulterier«; no KZS page found — open for David).",
+    "identity": {
+      "value": "FCI No. 286, Group 3 Section 3 (Bull type Terriers), United States of America",
+      "unit": "—",
+      "source_id": "S625",
+      "quote": "AMERICAN STAFFORDSHIRE TERRIER (286)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S625, as returned): No. 286, group 3 'Terriers', section 'Bull type Terriers', country of origin 'United States of America', definitive acceptance 6/10/1936, valid standard 9/3/1996; FR / DE / ES name identical. FCI-Standard N° 286 (S626): 'ORIGIN: U.S.A.', 'FCI-CLASSIFICATION: Group 3 Terriers.', 'Section 3 Bull type Terriers.' AKC name: American Staffordshire Terrier (S174, S627)."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S628",
+      "quote": "most AmStaffs (as they're often called) are around 40-60 pounds",
+      "confidence": "medium",
+      "notes": "No RKC / PDSA size key fact (breed not RKC-recognised). PetMD (S628): most AmStaffs are around 40–60 lb = the PetMD 'Medium (24–59 pounds)' size class (S10) — our class assignment; the full range 40–70 lb reaches into 'Large'."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            46,
+            48
+          ],
+          "female": [
+            43,
+            46
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S626",
+        "quote": "A height of about eighteen to nineteen inches (46 - 48 cm) at the shoulder for the male",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 286 (S626), Size: males 46–48 cm; 'seventeen to eighteen inches (43 - 46 cm) for the female to be considered preferable.' PetMD (S628) and VCA (S629) 17–19 in — alternatives."
+      }
+    },
+    "adult_weight": {
+      "petmd": {
+        "value": {
+          "male": [
+            18.1,
+            31.8
+          ],
+          "female": [
+            18.1,
+            31.8
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S628",
+        "quote": "typically stand between 17-19 inches tall and weigh between 40-70 pounds.",
+        "confidence": "medium",
+        "notes": "PetMD (S628, US) — one range for both sexes (stored per sex), the game / register range; 40–70 lb = 18.1–31.8 kg (our conversion, rounded). The FCI (S626) and AKC (S627) standards give no weight ('Height and weight should be in proportion.'); no RKC / PDSA page. VCA (S629) 'Weight: 40 to 70 pounds' agrees.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                18.1,
+                31.8
+              ],
+              "female": [
+                18.1,
+                31.8
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S629",
+            "quote": "Weight: 40 to 70 pounds",
+            "notes": "VCA Animal Hospitals (S629) Quick Facts — same range."
+          },
+          {
+            "value": {
+              "male": [
+                18.1,
+                27.2
+              ],
+              "female": [
+                18.1,
+                27.2
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S628",
+            "quote": "most AmStaffs (as they're often called) are around 40-60 pounds",
+            "notes": "PetMD (S628) — the usual range, 40–60 lb = 18.1–27.2 kg (our conversion)."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "IV (15–<30 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): the usual 18–27 kg lies in the 15–<30 kg band; the upper end (31.8 kg) reaches band V. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PetMD (S628): most AmStaffs weigh around 40–60 lb → the 'Medium (24–59 pounds)' class. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no American Staffordshire Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 12.5,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": "American Staffordshire Terrier 12.5 11.4 - 13.1 142 94",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024 (Sci Rep) data as tabled by Dogs Trust (S123, as returned): median 12.5 y (95 % CI 11.4–13.1), 142 dogs, 94 deceased. Runbook first choice (McMillan 2024). Background for the senior boundary only — never shown as a statistic."
+      },
+      "petmd": {
+        "value": "12–16",
+        "unit": "years",
+        "source_id": "S628",
+        "quote": "with a lifespan of roughly 12-16 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S628, fragment). VCA (S629) 'Lifespan: 12 to 16 years' agrees. Exported as the span next to the median."
+      },
+      "senior_from": {
+        "value": 9.375,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 12.5 y (McMillan 2024 via S123) → 0.75 × 12.5 = 9.375 y = 112.5 → 113 months (half up). Not chosen: 108 (PetMD / VCA lower bound 12 y, S628 / S629); 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S123"
+        ],
+        "months": 113,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≥ 60",
+        "unit": "minutes/day",
+        "source_id": "S628",
+        "quote": "Pet parents should aim for at least 60 minutes of exercise daily, which can be broken down into smaller sessions.",
+        "confidence": "high",
+        "notes": "PetMD (S628) — the only A/B source with a number (no RKC page, no PDSA / Woodgreen / Dogs Trust page for this breed). VCA (S629): 'American Staffordshire Terriers need daily exercise to stay physically and mentally balanced.' (no minutes)."
+      },
+      "after_meals": {
+        "value": "no exercise right after a meal (GDV / bloat)",
+        "unit": "—",
+        "source_id": "S628",
+        "quote": "always avoid exercise immediately after feeding",
+        "confidence": "high",
+        "notes": "PetMD (S628, fragment) in connection with gastric dilatation and volvulus (GDV). → proposed_game_parameters.american_staffordshire_terrier.meal_exercise_gap (M5-R16)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "keenly alive to his surroundings; courage is proverbial; strong-willed but eager to please",
+        "unit": "—",
+        "source_id": "S626",
+        "quote": "keenly alive to his surroundings.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 286 (S626, fragment); 'His courage is proverbial.' PetMD (S628): 'American Staffordshire Terriers can be strong-willed, but they are still eager to please.' The FCI disqualifies aggressive or overly shy dogs (paraphrase)."
+      },
+      "family": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No 'family pet' statement in an A/B source (PetMD S628 speaks about children only) → no family_pet chip."
+      },
+      "children": {
+        "value": "patient and loving with children; generally good with supervision",
+        "unit": "—",
+        "source_id": "S628",
+        "quote": "American Staffordshire Terriers are patient and loving with children",
+        "confidence": "high",
+        "notes": "PetMD (S628, fragment) — an explicit statement. VCA (S629): 'Generally good with supervision' — supervision caveat kept here (never small_children). Basis of children.",
+        "alternatives": [
+          {
+            "value": "generally good with supervision",
+            "source_id": "S629",
+            "quote": "Generally good with supervision",
+            "notes": "VCA (S629) Quick Facts / text."
+          }
+        ]
+      },
+      "time_alone": {
+        "value": "can be prone to anxiety, often leading to separation anxiety",
+        "unit": "—",
+        "source_id": "S628",
+        "quote": "AmStaffs can be prone to anxiety, and that can often lead to separation anxiety.",
+        "confidence": "high",
+        "notes": "PetMD (S628). VCA (S629): 'Time Alone: Moderate tolerance when exercised'. → consider needs_company (Staffordshire Bull Terrier precedent: separation anxiety when left alone); never often_alone."
+      },
+      "other_pets": {
+        "value": "a naturally strong prey drive — living with smaller dogs or cats can be more difficult; some may show reactivity toward other dogs",
+        "unit": "—",
+        "source_id": "S628",
+        "quote": "these dogs have a naturally strong prey drive, so living with smaller dogs or cats can be more difficult.",
+        "confidence": "high",
+        "notes": "PetMD (S628). Also PetMD 'With proper socialization, American Staffordshire Terriers can get along with other pets.' and VCA (S629) 'Some may show reactivity toward other dogs.' → chases_small_pets (a quote naming a high prey drive); no other_pets."
+      },
+      "socialisation": {
+        "value": "socialisation is important, especially for puppies",
+        "unit": "—",
+        "source_id": "S628",
+        "quote": "socialization is important—especially for American Staffordshire puppies.",
+        "confidence": "high",
+        "notes": "PetMD (S628, fragment). VCA (S629): 'They benefit from early socialization and consistent structure to support stable behavior.' → proposed_game_parameters.american_staffordshire_terrier.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "training": {
+        "value": "strong-willed but eager to please; consistent, positive training",
+        "unit": "—",
+        "source_id": "S628",
+        "quote": "American Staffordshire Terriers can be strong-willed, but they are still eager to please.",
+        "confidence": "high",
+        "notes": "PetMD (S628). VCA (S629): 'Consistent, positive training helps build reliable and stable behavior.' No 'experienced owner' statement in an A/B source → no independent_experienced_owner chip."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No chewing statement found (PetMD, VCA) → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No food-motivation statement found → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. Not RKC-recognised → no Breed Watch category; no veterinary association named by the runbook names the breed for conformation-related welfare problems → no welfare chip. Breeder checklist: no A/B health-testing list found (status not_found).",
+      "hip_dysplasia": {
+        "value": "hip and elbow dysplasia — orthopaedic problems later in life",
+        "unit": "—",
+        "source_id": "S628",
+        "quote": "can be prone to several orthopedic issues later in life.",
+        "confidence": "high",
+        "notes": "PetMD (S628, fragment) names hip dysplasia and elbow dysplasia; VCA (S629): 'American Staffordshire Terriers are prone to joint disease, particularly affecting the hips and knees,' and cruciate ligament disease. Register health key hip_dysplasia."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy (PRA) — gradual loss of sight",
+        "unit": "—",
+        "source_id": "S628",
+        "quote": null,
+        "confidence": "high",
+        "notes": "PetMD (S628, paraphrase) and VCA (S629) list progressive retinal atrophy; VCA also cataracts. Register health key pra_eye_disease."
+      },
+      "skin_allergy": {
+        "value": "food and skin allergies — itchy skin",
+        "unit": "—",
+        "source_id": "S629",
+        "quote": "Skin allergies are also common and may require long-term management.",
+        "confidence": "high",
+        "notes": "VCA (S629); PetMD (S628) names food and skin allergies; VCA atopic dermatitis. Not a Breed Watch point → no sensitive_skin chip. Register health key itchy_skin_allergy."
+      },
+      "other": {
+        "value": "hypothyroidism; cerebellar ataxia; cruciate ligament disease; mast cell tumours",
+        "unit": "—",
+        "source_id": "S628",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S628, paraphrase: hypothyroidism, cerebellar ataxia) and VCA (S629, paraphrase: cruciate ligament disease, mast cell tumor). Background only — no register key."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 34,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 34 | Field Spaniel | Newfoundland Australian Terrier American Staffordshire Terrier Gordon Setter Bearded Collie",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-30): rank 34 shared by Field Spaniel, Newfoundland, Australian Terrier, American Staffordshire Terrier, Gordon Setter, Bearded Collie; tier 'Above Average Working Dogs' (ranks 27–39). Coren's own article (S34) lists only the top / bottom 10. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Above average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier 'Above Average Working Dogs' (ranks 27–39)."
+      },
+      "training_notes": {
+        "value": "strong-willed but eager to please; consistent, positive training",
+        "unit": "—",
+        "source_id": "S629",
+        "quote": "Consistent, positive training helps build reliable and stable behavior.",
+        "confidence": "high",
+        "notes": "VCA (S629); PetMD (S628) 'strong-willed, but … eager to please'. The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.american_staffordshire_terrier.learning_multiplier (1.2, runbook rule: Above average tier, rank 34).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "stocky, muscular terrier giving the impression of great strength for its size; not long-legged or racy",
+        "unit": "—",
+        "source_id": "S626",
+        "quote": "The Staffordshire Terrier should give the impression of great strength for his size;",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 286 (S626), General appearance (fragment); 'He should be stocky, not long-legged or racy in outline.'"
+      },
+      "colours": {
+        "value": [
+          "brindle",
+          "blue",
+          "black"
+        ],
+        "unit": "list",
+        "source_id": "S626",
+        "quote": "Any colour, solid, particolour, or patched is permissible;",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 286 (S626), Colour; 'more than 80% white, black and tan, and liver not to be encouraged.' AKC (S627): 'Any color, solid, parti, or patched is permissible,' / 'all white, more than 80 per cent white, black and tan, and liver not to be encouraged.' The standard names no list → the game offers the solid colours PetMD (S628) names that the standard does not discourage: 'a wide range of colors including brindle, blue, brown, liver, black, and white.' (brown / liver and white left out). Never black and tan, liver, merle or mostly white."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Brindle first with the highest weight (the portrait default), then blue and black."
+      },
+      "coat": {
+        "value": "short, close, stiff to the touch, glossy",
+        "unit": "—",
+        "source_id": "S626",
+        "quote": "Short, close, stiff to the touch, glossy.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 286 (S626), Hair; AKC (S627) the same."
+      },
+      "head": {
+        "value": "medium length, deep through; medium-length muzzle rounded on the upper side; pronounced cheek muscles",
+        "unit": "—",
+        "source_id": "S626",
+        "quote": "Head: Medium length, deep through.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 286 (S626); 'Muzzle: Medium length, rounded on upper side to fall away abruptly below the eyes.' Not a flat-faced breed — the game shows a moderate muzzle."
+      },
+      "nose": {
+        "value": "black",
+        "unit": "—",
+        "source_id": "S626",
+        "quote": "Definitely black.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 286 (S626), Nose."
+      },
+      "eyes": {
+        "value": "dark, round, set low and far apart",
+        "unit": "—",
+        "source_id": "S626",
+        "quote": "Dark, round, low down in skull, set far apart.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 286 (S626), Eyes."
+      },
+      "ears": {
+        "value": "natural (uncropped) ears, set high, short, held rose or half prick",
+        "unit": "—",
+        "source_id": "S626",
+        "quote": "Uncropped ears should be short and held rose or half prick.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 286 (S626): 'Set high.'; AKC (S627): 'Cropped or uncropped, the latter preferred.' The game always shows natural, uncropped ears."
+      },
+      "tail": {
+        "value": "short in comparison to size, low set, tapering to a fine point; not curled or carried over the back; natural (not docked)",
+        "unit": "—",
+        "source_id": "S626",
+        "quote": "Short in comparison to size, low set, tapering to fine point; not curled or carried over back. Not docked.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 286 (S626), Tail; AKC (S627) the same."
+      }
+    },
+    "suitability": {
+      "_note": "No RKC Breeds A–Z page (breed not RKC-recognised) and no PDSA / Woodgreen page → no rkc_* / pdsa_* key facts. Source = PetMD (S628) and VCA (S629).",
+      "petmd_children": {
+        "value": "patient and loving with children",
+        "unit": "—",
+        "source_id": "S628",
+        "quote": "American Staffordshire Terriers are patient and loving with children",
+        "confidence": "high",
+        "notes": "PetMD (S628, fragment). Basis of children (with behaviour.children; VCA supervision caveat)."
+      },
+      "petmd_exercise": {
+        "value": "at least 60 minutes of exercise daily",
+        "unit": "—",
+        "source_id": "S628",
+        "quote": "Pet parents should aim for at least 60 minutes of exercise daily, which can be broken down into smaller sessions.",
+        "confidence": "high",
+        "notes": "PetMD (S628) → 60 min. Not active_family / long_daily_exercise."
+      },
+      "vca_grooming": {
+        "value": "weekly brushing",
+        "unit": "—",
+        "source_id": "S629",
+        "quote": "Weekly brushing helps remove loose hair and maintain coat health.",
+        "confidence": "high",
+        "notes": "VCA (S629) → brushing 1× a week (M5-R13 rule 'Once a week' → 1). PetMD (S628): 'pet parents should set aside time for brushing once every few weeks' — less often, alternative. Not frequent_grooming."
+      },
+      "petmd_grooming": {
+        "value": "brushing once every few weeks",
+        "unit": "—",
+        "source_id": "S628",
+        "quote": "pet parents should set aside time for brushing once every few weeks",
+        "confidence": "high",
+        "notes": "PetMD (S628, fragment) — alternative to VCA's weekly brushing (no number per week)."
+      },
+      "petmd_bath": {
+        "value": "bathing no more than every 4–6 weeks",
+        "unit": "—",
+        "source_id": "S628",
+        "quote": "Stick with bathing no more than every 4-6 weeks",
+        "confidence": "high",
+        "notes": "PetMD (S628, fragment) → the parent's bath reminder every 4 weeks (§3 »Breed care tasks«: '4–6 weeks' → the lower bound; the ear sentence 'during bath times (around every 4-6 weeks)' gives the same rhythm). VCA (S629) 'Bathing is needed as required based on activity level.' — alternative."
+      },
+      "petmd_ears": {
+        "value": "ear cleanings during bath times, around every 4–6 weeks",
+        "unit": "—",
+        "source_id": "S628",
+        "quote": "Ear cleanings can be done during bath times (around every 4-6 weeks)",
+        "confidence": "high",
+        "notes": "PetMD (S628, fragment) → ear cleaning every 4 weeks (M5-R20; '4-6 weeks' → the lower bound). VCA (S629) 'Routine nail trimming and ear cleaning should be maintained.' — no number. Teeth: no source; nails: no number → no task."
+      },
+      "petmd_shedding": {
+        "value": "not a big shedder",
+        "unit": "—",
+        "source_id": "S628",
+        "quote": "the AmStaff isn't a big shedder",
+        "confidence": "medium",
+        "notes": "PetMD (S628, fragment). Not an RKC 'Sheds: No' key fact and no second source → neither low_shedding nor sheds."
+      },
+      "petmd_time_alone": {
+        "value": "prone to anxiety, often separation anxiety",
+        "unit": "—",
+        "source_id": "S628",
+        "quote": "AmStaffs can be prone to anxiety, and that can often lead to separation anxiety.",
+        "confidence": "high",
+        "notes": "PetMD (S628). Basis of needs_company."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -62259,6 +62731,248 @@
         "confidence": "high",
         "notes": "Colours of the FCI (S616) and RKC (S618) standards. Weights unsourced in prompts. Grey as the portrait default — Claude's choice (the colour most associated with the breed; FCI lists it first, S616).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): grey is the portrait default; standard colours only (grey / brindle / wheaten / fawn / red / black / pure white)"
+      }
+    },
+    "american_staffordshire_terrier": {
+      "_note": "Unattended run M5-R10-81 (2026-10-30): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. No open proposal. Built: brushing 1× a week (VCA S629 'Weekly brushing', M5-R13), puppy socialisation (PetMD S628 quote, M5-R17), the 60-min meal gap (PetMD S628 GDV quote, M5-R16), ear cleaning every 4 weeks (PetMD S628 'around every 4-6 weeks', M5-R20) and the bath reminder every 4 weeks (PetMD S628 'no more than every 4-6 weeks', M5-R19). No groomer, tooth or nail task (no frequency). In marketing (no veterinary advice against advertising the breed type). Never hypoallergenic. No new vocabulary key.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S628",
+        "quote": "Pet parents should aim for at least 60 minutes of exercise daily, which can be broken down into smaller sessions.",
+        "confidence": "high",
+        "notes": "PetMD 'at least 60 minutes of exercise daily' (S628). Rule: one number N ('at least N') → N = 60. No RKC / PDSA value exists for this breed; VCA (S629) gives no minutes.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PetMD S628 'at least 60 minutes'; no RKC / PDSA page)"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S628",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 113
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 113 = round(0.75 × 12.5 y × 12) = round(112.5) = 113 (half up; S11 + McMillan 2024 median 12.5 y via the Dogs Trust table S123). Alternatives: 108 (PetMD / VCA lower bound 12 y, S628 / S629), 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S123"
+        ],
+        "alternatives": {
+          "senior_petmd_lower_bound": 108,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 113 (0.75 × 12.5 y, McMillan 2024 via S123)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 113
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 113)"
+      },
+      "learning_multiplier": {
+        "value": 1.2,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 34 (S35), tier 'Above average' (27–39) → 1.2. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 34, Above average tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S629",
+        "quote": "Weekly brushing helps remove loose hair and maintain coat health.",
+        "confidence": "high",
+        "notes": "VCA (S629) 'Weekly brushing' → 1 (M5-R13 rule 'Once a week' → 1). PetMD (S628) 'once every few weeks' — less often, alternative. Matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": null,
+            "source_id": "S628",
+            "quote": "pet parents should set aside time for brushing once every few weeks",
+            "notes": "PetMD (S628) — once every few weeks, no weekly number."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (VCA S629 »Weekly brushing«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S628",
+        "quote": "socialization is important—especially for American Staffordshire puppies.",
+        "confidence": "high",
+        "notes": "american_staffordshire_terrier.behaviour.socialisation (PetMD S628). Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, PetMD S628)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S628",
+        "quote": "always avoid exercise immediately after feeding",
+        "confidence": "high",
+        "notes": "PetMD (S628), american_staffordshire_terrier.exercise.after_meals; GDV named there. Built in M5-R16: 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "ear_care": {
+        "value": "ear cleanings around every 4–6 weeks → every 4 weeks",
+        "unit": "care routine (sourced need)",
+        "source_id": "S628",
+        "quote": "Ear cleanings can be done during bath times (around every 4-6 weeks)",
+        "confidence": "high",
+        "notes": "PetMD (S628), american_staffordshire_terrier.suitability.petmd_ears. Built: the child's ear-cleaning mini-game once every 4 program weeks (BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R20).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »around every 4-6 weeks« → spodnja meja, vsake 4 tedne"
+      },
+      "bathing": {
+        "value": "bathing no more than every 4–6 weeks → every 4 weeks",
+        "unit": "baths (sourced need)",
+        "source_id": "S628",
+        "quote": "Stick with bathing no more than every 4-6 weeks",
+        "confidence": "high",
+        "notes": "PetMD (S628), american_staffordshire_terrier.suitability.petmd_bath; the ear sentence gives the same rhythm ('during bath times (around every 4-6 weeks)'). VCA (S629) 'as required' — alternative. Built: the parent's bath reminder every 4 program weeks (BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R19; never scored).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »every 4-6 weeks« → spodnja meja, vsake 4 tedne"
+      },
+      "suitability_tags": {
+        "_note": "Tags for backend/config/breed_suitability.php (M5-R10-81); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "children",
+            "source_ids": [
+              "S628"
+            ],
+            "refs": [
+              "american_staffordshire_terrier.behaviour.children",
+              "american_staffordshire_terrier.suitability.petmd_children"
+            ],
+            "quote": "S628 'American Staffordshire Terriers are patient and loving with children' (VCA S629 'Generally good with supervision' kept in behaviour.children)"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S628"
+            ],
+            "refs": [
+              "american_staffordshire_terrier.behaviour.time_alone",
+              "american_staffordshire_terrier.suitability.petmd_time_alone"
+            ],
+            "quote": "S628 'AmStaffs can be prone to anxiety, and that can often lead to separation anxiety.'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S628"
+            ],
+            "refs": [
+              "american_staffordshire_terrier.behaviour.other_pets"
+            ],
+            "quote": "S628 '… these dogs have a naturally strong prey drive, so living with smaller dogs or cats can be more difficult.'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "No 'family pet' statement in an A/B source.",
+          "small_children": "VCA 'Generally good with supervision' (S629) → never without a caveat.",
+          "other_pets": "PetMD strong prey drive (S628), VCA reactivity toward other dogs (S629).",
+          "apartment": "No RKC 'Size of home' key fact (breed not RKC-recognised).",
+          "large_home": "No RKC key fact.",
+          "active_family": "At least one hour a day (S628).",
+          "long_daily_exercise": "At least one hour a day (S628).",
+          "frequent_grooming": "Weekly brushing (S629).",
+          "low_shedding": "Only PetMD 'isn't a big shedder' (S628) — no RKC 'Sheds: No' and no second source.",
+          "sheds": "PetMD 'isn't a big shedder' (S628).",
+          "independent_experienced_owner": "Strong-willed (S628) but no 'experienced owner' statement.",
+          "heat_sensitive": "No heat statement in PetMD / VCA.",
+          "secure_fencing": "No escape statement.",
+          "hypoallergenic": "Never a tag (runbook).",
+          "shorter_lifespan": "PetMD / VCA 12–16 y (S628 / S629), median 12.5 y (S123).",
+          "welfare": "Not RKC-recognised (no Breed Watch); no veterinary association names the breed for conformation-related welfare problems → no welfare chip."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits children; consider needs_company, chases_small_pets"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S626",
+        "quote": "Aggressive or overly shy dogs",
+        "confidence": "medium",
+        "notes": "Not a flat-faced breed — no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). FCI-Standard N° 286 (S626) lists aggressive or overly shy dogs as a disqualifying fault (fragment). Marketing never shows unsupervised play with small children (S629), never promises health. Some countries restrict 'bull type' dogs by law — not a veterinary-association advice, so not an exclusion under the runbook; listed as open for David in docs/breeds/american-staffordshire-terrier.md.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no veterinary advice against advertising the breed type)"
+      },
+      "ai_appearance": {
+        "value": "adult American Staffordshire Terrier, brindle short close glossy coat; stocky, muscular body giving the impression of great strength for its size, not long-legged; medium-length head, deep through, pronounced cheek muscles, medium-length muzzle; black nose; dark round eyes set low and far apart; natural uncropped ears, short, held rose or half prick; short low-set tapering natural tail, not docked; only brindle, blue or black — never black and tan, liver, merle or mostly white",
+        "unit": "—",
+        "source_id": "S626",
+        "quote": "Any colour, solid, particolour, or patched is permissible;",
+        "confidence": "high",
+        "notes": "Colours: the standard allows any colour (S626, S627) but does not encourage more than 80 % white, black and tan or liver; the game offers brindle, blue and black (PetMD S628 list). Natural ears and tail (AKC 'uncropped preferred', 'Not docked'). Moderate head (not a flat-faced breed).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): brindle is the portrait default; natural uncropped rose / half-prick ears and natural tail; only brindle, blue or black"
       }
     }
   }

@@ -3019,6 +3019,11 @@
         }
       ],
       "notes": "RKC Breeds A–Z page (dog-data S617, 2026-10-30, reachable with a trailing slash): Good Practice lists only 'Prioritising genetic diversity' (Soft Coated Wheaten Terrier precedent, key inbreeding_coi); Best Practice: the BVA/KC/ISDS eye scheme (test names as returned verbatim). PDSA (S619): annual heart screening of breeding dogs and liver-shunt testing (paraphrase only — no verbatim quote returned, so no other_scheme item; open for David)."
+    },
+    "american_staffordshire_terrier": {
+      "status": "not_found",
+      "tests": [],
+      "notes": "Not recognised by the Royal Kennel Club → no RKC Breeds A–Z health-testing section (the runbook's minimum / Best Practice source). PetMD (dog-data S628) and VCA (S629) name conditions (hip / elbow dysplasia, PRA, cerebellar ataxia) but no test list; the OFA CHIC 'browse by breed' page (https://ofa.org/chic-programs/browse-by-breed/, 2026-10-30) returned no breed rows. Show the general dog checklist only (M5-R10-81)."
     }
   }
 }
