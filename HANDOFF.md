@@ -152,6 +152,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-10-30 (cloud, docs) — games spec draft (`docs/games-spec`)
+- `docs/product/GAMES_SPEC.md`: redesign of school, ball, cuddle, cat wand and mess visuals as an interactive layer over the video (David's direction 30. 10.); 0 new AI clips by default, rule changes Š1–Š3 / C1 / P0–P2 and open questions V1–V12 wait for David. Nothing implemented. Next: David reviews; then phase 0 (wand scoring fix + text above the stage).
+
 ### 2026-10-30 (cloud, docs) — video compression switched on and verified (`docs/compression-verified`)
 - David: switch on; `media:compress --budget=0` compressed 95 / 95 files, 934.4 MB → 171.7 MB (−82 %), worst-frame SSIM 0.985, 0 rejected / failed; checked in the app — quality fine. Originals deleted by the next night run after the 180-min grace. FEATURES row → 📱. Next: `media:disk-report` the next day.
 
