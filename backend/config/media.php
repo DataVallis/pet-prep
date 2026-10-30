@@ -226,6 +226,12 @@ return [
     'compression' => [
         'crf' => (int) env('MEDIA_COMPRESS_CRF', 21),
         'preset' => env('MEDIA_COMPRESS_PRESET', 'slow'),
+        // New clips are compressed IN the pipeline before they are shown (David 2026-10-30):
+        // fast preset + short per-call timeouts (CompressPetMediaCandidate has 85 s). Measured
+        // 2026-10-30, 2 vCPU, synthetic 5 s 1076 × 1924 24 fps 23 Mbps: veryfast 4.1 s encode
+        // + 2.2 s SSIM, -94 %, SSIM 0.992 (slow 10.4 s, -93 %, 0.993).
+        'pipeline_preset' => env('MEDIA_COMPRESS_PIPELINE_PRESET', 'veryfast'),
+        'pipeline_process_timeout_seconds' => (int) env('MEDIA_COMPRESS_PIPELINE_PROCESS_TIMEOUT', 20),
         'min_saving_percent' => (float) env('MEDIA_COMPRESS_MIN_SAVING_PERCENT', 30),
         'min_ssim' => (float) env('MEDIA_COMPRESS_MIN_SSIM', 0.98),
         'min_frame_ssim' => (float) env('MEDIA_COMPRESS_MIN_FRAME_SSIM', 0.95),

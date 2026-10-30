@@ -1018,8 +1018,10 @@ class PetMediaService
 
         // Quality check (David 2026-10-23): a clip is a CANDIDATE until it passes the
         // technical + AI vision check (MediaQualityService); the servable file stays the old
-        // one until then. Switch off (/admin → Feature switches) = served at once, as before.
-        if ($slot->isClip() && $this->qualityCheckEnabled()) {
+        // one until then. Switch off (/admin → Feature switches) = served at once, as before —
+        // unless video compression is on (David 2026-10-30): then the clip is still staged so
+        // CheckPetMediaQuality → CompressPetMediaCandidate compresses it before it is shown.
+        if ($slot->isClip() && ($this->qualityCheckEnabled() || $this->settings->videoCompression(fresh: true))) {
             return $this->stageCandidate($slot, $sourceUrl, $path, $file['bytes'], $file['mime']);
         }
 
@@ -1097,7 +1099,7 @@ class PetMediaService
      *
      * @param  list<string>  $fromStatuses
      */
-    public function promoteCandidate(PetMedia $slot, string $candidatePath, string $quality, ?string $reason, array $fromStatuses = [PetMedia::STATUS_RUNNING]): bool
+    public function promoteCandidate(PetMedia $slot, string $candidatePath, ?string $quality, ?string $reason, array $fromStatuses = [PetMedia::STATUS_RUNNING]): bool
     {
         $previous = null;
         $promoted = DB::transaction(function () use ($slot, $candidatePath, $quality, $reason, $fromStatuses, &$previous): bool {

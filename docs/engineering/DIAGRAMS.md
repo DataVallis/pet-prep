@@ -1693,7 +1693,8 @@ Every new AI clip is a candidate until it passes; the old file stays visible mea
 flowchart TD
   W[fal webhook OK] --> D[StorePetMedia: download + faststart]
   D --> SW{mode »Quality check«}
-  SW -->|off| SV[stored at once — old behaviour]
+  SW -->|off, video_compression off| SV[stored at once — old behaviour]
+  SW -->|off, video_compression on| C
   SW -->|shadow default / enforce| C[candidate_path set<br/>slot running, old storage_path still served]
   C --> J[CheckPetMediaQuality]
   J --> CL{claim pet_media_quality_checks<br/>unique media + generation + trigger}
@@ -1707,14 +1708,16 @@ flowchart TD
   AI -->|rubric pass| P0[pass, quality passed]
   AI -->|rubric fail| F
   AI -->|error / bad JSON| P1
-  P0 & P1 & P2 --> PR[promoteCandidate: candidate → storage_path · one PetUpdated video_ready · look fan-out]
+  P0 & P1 & P2 --> RL{release: video_compression on?}
+  RL -->|no| PR[promoteCandidate: candidate → storage_path · one PetUpdated video_ready · look fan-out]
+  RL -->|yes| CP[CompressPetMediaCandidate → compressed key, or the original on reject / failure — §19] --> PR
   F{mode?}
-  F -->|shadow — default until calibrated| SH[promote anyway: quality shadow_failed = »would fail«<br/>shown · no regeneration · listed for calibration]
+  F -->|shadow — default until calibrated| SH[promote anyway: quality shadow_failed = »would fail«<br/>shown · no regeneration · listed for calibration] --> RL
   F -->|enforce| F2{generation == quality_retry_generation?}
   F2 -->|no — first fail| R[ONE auto regeneration: generation + 1, quality_retry_generation = it<br/>SubmitPetStateVideo → normal pipeline + budget guard]
   R --> W
   F2 -->|yes — the retry failed too| NR[»Needs review«: slot failed quality_failed, candidate kept<br/>payload / readiness / preparation = fallback · media:retry, Generate missing, backfill, bulk upgrade, regenerate-frozen skip it]
-  NR --> ADM[/admin Pet → AI media: »Open candidate« · »Open contact sheet« · »Approve anyway« (superadmin, audited) · »Regenerate« (new chain)<br/>count on dashboard + System health → filtered pet list/]
+  NR --> ADM[/admin Pet → AI media: »Open candidate« · »Open contact sheet« · »Approve anyway« (superadmin, audited; with video_compression on through CompressPetMediaCandidate) · »Regenerate« (new chain)<br/>count on dashboard + System health → filtered pet list/]
 ```
 
 ```mermaid
@@ -2225,4 +2228,33 @@ sequenceDiagram
     end
   end
   Note over S: 3 failures in a row = system fault → stop, nothing recorded · media:disk-report is read-only
+```
+
+New clips (David 2026-10-30, `feat/media-compress-on-store`) are compressed in the pipeline before they are shown:
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant SP as StorePetMedia
+  participant Q as CheckPetMediaQuality
+  participant C as CompressPetMediaCandidate
+  participant DB as pet_media
+  participant D as Media disk
+  SP->>D: download → candidate key (staged also with the check off while compression is on)
+  SP->>Q: dispatch
+  Q->>Q: verdict (or check off)
+  alt video_compression on and an MP4 not tried yet
+    Q->>C: dispatch (quality, reason)
+    C->>D: encode candidate (veryfast, CRF 21) → measure (saving, SSIM, frames)
+    alt accepted
+      C->>D: write candidate-c.mp4
+      C->>DB: row lock: candidate_path → new key, compression_* = compressed
+      C->>DB: promoteCandidate(new key) → ready, shown
+      C->>D: delete the original candidate (never shown)
+    else rejected / ffmpeg failed / job gave up
+      C->>DB: compression_status rejected / failed → promoteCandidate(original)
+    end
+  else switch off
+    Q->>DB: promoteCandidate(original) as before
+  end
 ```

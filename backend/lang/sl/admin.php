@@ -300,7 +300,7 @@ return [
         'app_error_reports' => 'Zbiraj poročila o napakah iz aplikacije',
         'saved_body_video_compression' => 'Stiskanje videov: :state',
         'video_compression_section' => 'Stiskanje videov (disk)',
-        'video_compression_description' => 'Vsak shranjen AI posnetek enkrat ponovno kodira v isti ločljivosti in hitrosti sličic (H.264, CRF 21), da zasede manj diska. Posnetek se zamenja le, če je vsaj 30 % manjši in je videti enako (SSIM ≥ 0,98, enaka dolžina in število sličic); sicer ostane izvirnik. Teče na strežniku v majhnih paketih vsako uro ponoči (22.00–6.00), tudi za nove posnetke. Najprej preverite `media:compress --sample=10`.',
+        'video_compression_description' => 'Vsak shranjen AI posnetek enkrat ponovno kodira v isti ločljivosti in hitrosti sličic (H.264, CRF 21), da zasede manj diska. Posnetek se zamenja le, če je vsaj 30 % manjši in je videti enako (SSIM ≥ 0,98, enaka dolžina in število sličic); sicer ostane izvirnik. Obstoječi posnetki: majhni paketi vsako uro ponoči (22.00–6.00); novi posnetki se stisnejo, preden se prvič pokažejo (nekaj sekund dlje). Najprej preverite `media:compress --sample=10`.',
         'video_compression' => 'Stiskaj shranjene videe',
     ],
 

@@ -6,6 +6,7 @@ use App\Enums\AiCallFailure;
 use App\Enums\PetPhaseClip;
 use App\Enums\Species;
 use App\Events\PetUpdated;
+use App\Jobs\CompressPetMediaCandidate;
 use App\Jobs\SubmitPetStateVideo;
 use App\Models\AppSettingChange;
 use App\Models\Pet;
@@ -30,8 +31,11 @@ use Throwable;
  *     3. AI vision check (MediaVisionCheck, production budget) — only when 2 passed;
  *        no budget / profile off / bad answer → the technical result decides and the file
  *        is `passed_technical` (»not AI-checked«);
- *     4. pass → promote (PetMediaService::promoteCandidate: the candidate becomes the
- *        servable file, one broadcast, look fan-out);
+ *     4. pass → release(): with `video_compression` on → CompressPetMediaCandidate
+ *        (compressed first, the original on reject / failure — ARCHITECTURE *New clips
+ *        compressed before they are shown*, DIAGRAMS §19), otherwise at once →
+ *        PetMediaService::promoteCandidate (the candidate becomes the servable file, one
+ *        broadcast, look fan-out);
  *        fail, first time in this generation chain → ONE automatic regeneration (a new
  *        generation = a new fal request through the normal pipeline + budget guard;
  *        `quality_retry_generation` marks it so it never retries again);
@@ -39,7 +43,9 @@ use Throwable;
  *        the app uses its fallback like for any failed slot), candidate kept for
  *        »Approve anyway« (approve()).
  *   Switch off (/admin → Feature switches »Quality check«) → the candidate is promoted
- *   unchecked at once (the old behaviour).
+ *   unchecked at once (the old behaviour) — but with `video_compression` on the clip is
+ *   still staged as a candidate (StorePetMedia) and goes through release() → compression.
+ *   »Approve anyway« also goes through CompressPetMediaCandidate while that switch is on.
  *
  * Stored clips: checkStored() (media:quality-check) runs the same checks on a READY
  * file; a failure sets `quality = flagged` (not shown — PetMedia::isShown) and
@@ -63,6 +69,7 @@ class MediaQualityService
         private readonly PetMediaService $media,
         private readonly MediaClipAnalyzer $analyzer,
         private readonly MediaVisionCheck $vision,
+        private readonly VideoCompressionService $compression,
     ) {}
 
     // ──────────────────────────────────────────────────────────────
@@ -72,7 +79,7 @@ class MediaQualityService
     /**
      * Check the slot's candidate and act on the verdict. Idempotent; returns the outcome.
      *
-     * @return 'promoted'|'retrying'|'needs_review'|'skipped'|'busy'
+     * @return 'promoted'|'compressing'|'retrying'|'needs_review'|'skipped'|'busy'
      */
     public function checkCandidate(int $slotId): string
     {
@@ -85,8 +92,8 @@ class MediaQualityService
         $candidate = (string) $slot->candidate_path;
 
         if (! $this->media->qualityCheckEnabled()) {
-            // Switched off meanwhile: the old behaviour — served unchecked.
-            return $this->media->promoteCandidate($slot, $candidate, null, null) ? 'promoted' : 'skipped';
+            // Switched off (or staged only for compression, David 2026-10-30): served unchecked.
+            return $this->release($slot, $candidate, null, null);
         }
 
         $check = $this->claim($slot, PetMediaQualityCheck::TRIGGER_PIPELINE);
@@ -103,7 +110,7 @@ class MediaQualityService
     }
 
     /**
-     * @return 'promoted'|'retrying'|'needs_review'|'skipped'
+     * @return 'promoted'|'compressing'|'retrying'|'needs_review'|'skipped'
      */
     private function apply(PetMedia $slot, PetMediaQualityCheck $check, string $candidate): string
     {
@@ -112,7 +119,7 @@ class MediaQualityService
         }
 
         if ($check->verdict === PetMediaQualityCheck::VERDICT_PASS) {
-            return $this->media->promoteCandidate($slot, $candidate, self::passQuality($check), $check->reason) ? 'promoted' : 'skipped';
+            return $this->release($slot, $candidate, self::passQuality($check), $check->reason);
         }
 
         // QA #363 M1: shadow mode (default until calibrated) — record the would-be verdict, always
@@ -120,7 +127,7 @@ class MediaQualityService
         if ($this->media->qualityCheckMode() === AppSettingsService::QUALITY_SHADOW) {
             Log::warning('MediaQualityService: clip would fail the quality check (shadow mode — served anyway)', ['pet_media_id' => $slot->id, 'reason' => $check->reason]);
 
-            return $this->media->promoteCandidate($slot, $candidate, PetMedia::QUALITY_SHADOW_FAILED, $check->reason) ? 'promoted' : 'skipped';
+            return $this->release($slot, $candidate, PetMedia::QUALITY_SHADOW_FAILED, $check->reason);
         }
 
         // One automatic regeneration per generation chain (never for the retry itself).
@@ -129,6 +136,24 @@ class MediaQualityService
         }
 
         return $this->autoRetry($slot, $candidate, (string) $check->reason) ? 'retrying' : 'skipped';
+    }
+
+    /**
+     * Show a candidate that may be shown: compressed first while the video compression switch
+     * is on (David 2026-10-30 — children never get the ~14 MB original; the job promotes the
+     * compressed key or, on reject / failure, the original), otherwise promoted at once.
+     *
+     * @return 'promoted'|'compressing'|'skipped'
+     */
+    private function release(PetMedia $slot, string $candidate, ?string $quality, ?string $reason): string
+    {
+        if ($this->compression->wantsCandidate($slot, $candidate)) {
+            CompressPetMediaCandidate::dispatch((int) $slot->id, $candidate, $quality, $reason);
+
+            return 'compressing';
+        }
+
+        return $this->media->promoteCandidate($slot, $candidate, $quality, $reason) ? 'promoted' : 'skipped';
     }
 
     /** The `quality` of a passed check. */
@@ -234,8 +259,17 @@ class MediaQualityService
         $before = null;
 
         if ($slot->needsReview()) {
-            $approved = $this->media->promoteCandidate($slot, (string) $slot->candidate_path, PetMedia::QUALITY_APPROVED,
-                "Approved by superadmin #{$actor->id}", [PetMedia::STATUS_FAILED]);
+            $candidate = (string) $slot->candidate_path;
+            $reason = "Approved by superadmin #{$actor->id}";
+            if ($this->compression->wantsCandidate($slot, $candidate)) {
+                // David 2026-10-30 (QA #452 m4): compressed before a family sees it, like every
+                // new clip — the job promotes the compressed key, or the original on reject /
+                // failure; the approval itself is decided (and audited) now.
+                CompressPetMediaCandidate::dispatch((int) $slot->id, $candidate, PetMedia::QUALITY_APPROVED, $reason, [PetMedia::STATUS_FAILED]);
+                $approved = true;
+            } else {
+                $approved = $this->media->promoteCandidate($slot, $candidate, PetMedia::QUALITY_APPROVED, $reason, [PetMedia::STATUS_FAILED]);
+            }
             $what = 'candidate';
         } elseif ($slot->isFlaggedQuality() && $slot->isServable()) {
             $before = $slot->quality;
