@@ -1,8 +1,8 @@
 # PetPrep — Igre, šola in čiščenje: interaktivni sloj (GAMES_SPEC)
 
-> **Status:** POTRJENO (David 30. 10. 2026, odgovori v §11) — smer, faze in odgovori V2, V5, V6, V10–V12. Spremembe pravil §10 (Š1–Š3, C1, P1, P2) potrdi David pred fazo 2 / 3 (V1). **Faza 1 v gradnji** — strežniški del zgrajen 30. 10. 2026 (`feat/games-phase1-backend`: stikalo `users.game_feedback`, izpeljanki `ball_waiting_loop` in `exit_side`); aplikacija (gameLayer, žoga v2, neredi) v gradnji.
+> **Status:** POTRJENO (David 30. 10. 2026, odgovori v §11) — smer, faze in odgovori V2, V5, V6, V10–V12. Spremembe pravil §10 Š1–Š3, C1, P1, P2 **potrjene** (David 30. 10. 2026, V1); v `PRODUCT_SPEC` / `CAT_SPEC` / `PLAY_CUDDLE_SPEC` se zapišejo v PR-ju faze, ki jih zgradi. **Faza 1 v gradnji** — strežniški del zgrajen 30. 10. 2026 (`feat/games-phase1-backend`: stikalo `users.game_feedback`, izpeljanki `ball_waiting_loop` in `exit_side`); aplikacija (gameLayer, žoga v2, neredi) v gradnji.
 > **Smer (David 30. 10. 2026):** »**Pes ostane video, igra postane interaktiven sloj.**« Realističen AI video ljubljenčka ostane (81 pasem × 333 barv, premium videz — brez 3D modela in brez risanega ljubljenčka); nad njim zgradimo nativni interaktivni sloj (60 fps, fizikalni predmeti, zvok, haptika).
-> **Oznake:** **SPREMEMBA PRAVILA — potrdi David** = obstoječe pravilo iz `PRODUCT_SPEC.md` / `CAT_SPEC.md` / `PLAY_CUDDLE_SPEC.md` se spremeni. **(D)** = Claudov predlog brez spremembe obstoječega pravila. Vse ostalo je opis stanja (s potjo do kode).
+> **Oznake:** **SPREMEMBA PRAVILA — potrdil David 30. 10.** = obstoječe pravilo iz `PRODUCT_SPEC.md` / `CAT_SPEC.md` / `PLAY_CUDDLE_SPEC.md` se spremeni. **(D)** = Claudov predlog brez spremembe obstoječega pravila. Vse ostalo je opis stanja (s potjo do kode).
 > **Povezano:** `PRODUCT_SPEC.md` §5, §11, §13 · `PLAY_CUDDLE_SPEC.md` · `CAT_SPEC.md` §5 · `APP_REFINEMENT_SPEC.md` §3, §6, §10–§12 · `docs/engineering/SCHOOL_SMOOTH_PLAYBACK.md` · `brand/README.md`.
 
 ---
@@ -136,7 +136,7 @@ Potrjeno v kodi:
 **Cilj in učna točka:** otrok vidi, da pes nauči ukaz, ko ga **pohvalimo takoj, ko uboga** — prezgodnja pohvala ne pomaga, prepozna je zamujena, ko ne uboga, počakamo. Ukaz psu »da« aplikacija; otrokova naloga je pravočasna nagrada.
 
 **Struktura vaje:** **2 kroga po 3 ukaze**, med njima premor 2,5 s. Ukazov ostane 6 (TRIALS_PER_SESSION).
-> **SPREMEMBA PRAVILA — potrdi David (Š1):** vaja dobi premor po 3. ukazu (`ROUND_BREAK_MS` 2500, del urnika strežnika). Število ukazov, okno pohvale, verjetnost ubogljivosti in napredek ostanejo.
+> **SPREMEMBA PRAVILA — potrdil David 30. 10. (Š1):** vaja dobi premor po 3. ukazu (`ROUND_BREAK_MS` 2500, del urnika strežnika). Število ukazov, okno pohvale, verjetnost ubogljivosti in napredek ostanejo.
 
 **Potek kroga (časi so urnik strežnika, aplikacija jih ne preračunava):**
 
@@ -157,7 +157,7 @@ Potrjeno v kodi:
 | premor po 3. ukazu (2,5 s) | `attention_loop` | kartica »1. krog ✓« + zvezdice kroga (npr. ★★☆), mint konfeti (brez pri »zmanjšaj gibanje«) | — |
 
 **Nadomestilo za »vstane«:**
-> **SPREMEMBA PRAVILA — potrdi David (Š2):** »vstane« (`school_<cmd>_release`, obrnjen `performing`, David 28. 10. 2026) se **ne predvaja več**; namesto njega trd rez `success_loop` → `attention_loop` pod masko odziva. V urniku `R` = `MASK_MS` 1200 (prej dolžina release ≤ 2500). Razlog: obrnjen posnetek pri pridi / prostor / lulat zunaj kaže psa, ki hodi vzvratno (previjanje traku). Izpeljani posnetki `release` ostanejo shranjeni (0 $), da je odločitev obrnljiva. Če maska ne zadošča, glej izbirni posnetek A (§8.3).
+> **SPREMEMBA PRAVILA — potrdil David 30. 10. (Š2):** »vstane« (`school_<cmd>_release`, obrnjen `performing`, David 28. 10. 2026) se **ne predvaja več**; namesto njega trd rez `success_loop` → `attention_loop` pod masko odziva. V urniku `R` = `MASK_MS` 1200 (prej dolžina release ≤ 2500). Razlog: obrnjen posnetek pri pridi / prostor / lulat zunaj kaže psa, ki hodi vzvratno (previjanje traku). Izpeljani posnetki `release` ostanejo shranjeni (0 $), da je odločitev obrnljiva. Če maska ne zadošča, glej izbirni posnetek A (§8.3).
 
 **Kretnja:** velik žeton **priboljška** (kost, 96 pt) spodaj na sredini; **tap** (čas = dotik stekla, kot danes `onPressIn`). Vlečenje priboljška do psa bi dodalo zamik in bi bilo za počasnejše prste krivično — zato je kretnja tap, animacija leta je odziv po tapu. Po tapu je žeton 600 ms siv (vizualno; točkuje se prvi tap, kot danes).
 
@@ -166,7 +166,7 @@ Potrjeno v kodi:
 **Zvezdice (D):** ena zvezdica na ukaz, ko je izid `in_time` ali `waited`. Samo prikaz — naslov rezultata ostane po pravilu M5-F04 (»Odlično! / Dobro! / Še malo vaje / Tokrat ni šlo«).
 
 **Predčasen konec:**
-> **SPREMEMBA PRAVILA — potrdi David (Š3):** otrok lahko po **1. krogu** konča (»Končaj«). Pravočasne pohvale 1. kroga štejejo v napredek (× 8/6 kot doslej); porabljen čas = dejanska dolžina; **rutina »Šolanje« šteje samo dokončana vaja (oba kroga)**. Danes se nedokončana vaja ne šteje nič (`training_session_not_over`).
+> **SPREMEMBA PRAVILA — potrdil David 30. 10. (Š3):** otrok lahko po **1. krogu** konča (»Končaj«). Pravočasne pohvale 1. kroga štejejo v napredek (× 8/6 kot doslej); porabljen čas = dejanska dolžina; **rutina »Šolanje« šteje samo dokončana vaja (oba kroga)**. Danes se nedokončana vaja ne šteje nič (`training_session_not_over`).
 
 **Dnevne omejitve in merilniki (nespremenjeni):** 7 min / pes / dan, pošten delež, ena vaja hkrati, rutina = ena dokončana vaja, −2 % za dan brez vaje, učinki potty / place. Trajanje vaje: ukaz, ki ga uboga, ≈ 0,3–1,5 + 5 + 1,5 + 1,2 + 0,7 = **8,7–9,9 s**, prezrt 4,5 s → krog **~14–30 s**, vaja **~35–64 s** (danes 33–70 s) → v 7 min še vedno ~6–8 vaj.
 
@@ -242,7 +242,7 @@ Pravila (verjetnost, napredek, učinki potty / place) se med ukazi ne razlikujej
 
 **Cilj in učna točka:** **pravilo 3 sekund** [G2] — boži nežno 3 s, nato se ustavi in poglej, ali žival želi še; počasni gibi, ne trepljanje. To je hkrati pravilo varnosti otrok s psi.
 
-> **SPREMEMBA PRAVILA — potrdi David (C1):** crkljanje ni več »5 potegov ≥ 60 pt« (`CUDDLE_STROKES`, PLAY_CUDDLE §4.3, predlog D), ampak **3 božanja po ~3 s s premorom** (~15–20 s). Strežnik in posledice (mood only) ostanejo.
+> **SPREMEMBA PRAVILA — potrdil David 30. 10. (C1):** crkljanje ni več »5 potegov ≥ 60 pt« (`CUDDLE_STROKES`, PLAY_CUDDLE §4.3, predlog D), ampak **3 božanja po ~3 s s premorom** (~15–20 s). Strežnik in posledice (mood only) ostanejo.
 
 **Potek:**
 | Korak | Ljubljenček | Sloj | Otrok |
@@ -266,7 +266,7 @@ Pravila (verjetnost, napredek, učinki potty / place) se med ukazi ne razlikujej
 ### 5.1 Palica s peresom — cilj
 Muca lovi plen, ki **beži stran** in se **ustavi, ko jo opazi** [C11]; lov se konča z **ulovom**, sicer je muca razočarana [G1]. Otrok se nauči tri stvari: pero premikaj stran od muce (ne pred nosom), **ko se pritaji, pero miruje**, **ko skoči, pero zbeži**, na koncu jo **pusti, da ujame**.
 
-> **SPREMEMBA PRAVILA — potrdi David (P1):** ena igra = **en lov ~25 s** (prej ~60 s, David 8. 10. 2026), ki se konča z ulovom. Cilj na dan (2 / mucek 3), razmik 2 h med uspešnima igrama, merilnik »Igra«, rutina »Igra«, opraskan kavč po zamujenem dnevu — **nespremenjeno**.
+> **SPREMEMBA PRAVILA — potrdil David 30. 10. (P1):** ena igra = **en lov ~25 s** (prej ~60 s, David 8. 10. 2026), ki se konča z ulovom. Cilj na dan (2 / mucek 3), razmik 2 h med uspešnima igrama, merilnik »Igra«, rutina »Igra«, opraskan kavč po zamujenem dnevu — **nespremenjeno**.
 
 ### 5.2 Potek lova (urnik strežnika)
 - `stalk`: 0–3,0 s · skoki `p1 ∈ [6,0; 7,5] s`, `p2 = p1 + [5,0; 6,5] s`, `p3 = p2 + [5,0; 6,5] s` · znak pritajitve `p − 900 ms` · ulov `c = p3 + 3,5 s` · konec `c + 3,5 s` → lov **~23–29 s**.
@@ -285,7 +285,7 @@ Muca lovi plen, ki **beži stran** in se **ustavi, ko jo opazi** [C11]; lov se k
 | konec | poza `catch` (ostane) | rezultat (§5.4) | — |
 
 ### 5.3 Točkovanje (strežnik, `WandPlayService::score` v2)
-> **SPREMEMBA PRAVILA — potrdi David (P2):** pragovi sodelovanja (8 premikov stran, vse četrtine, ≥ 50 % stran, odziv na **vsak** skok v 2 s, CAT_SPEC §5.2 / PRODUCT_SPEC §13) se zamenjajo z **zvezdicami**: 3 × izmik + 1 × ulov. **Igra šteje pri ≥ 2 zvezdicah.** Zvezdice se prikažejo takoj.
+> **SPREMEMBA PRAVILA — potrdil David 30. 10. (P2):** pragovi sodelovanja (8 premikov stran, vse četrtine, ≥ 50 % stran, odziv na **vsak** skok v 2 s, CAT_SPEC §5.2 / PRODUCT_SPEC §13) se zamenjajo z **zvezdicami**: 3 × izmik + 1 × ulov. **Igra šteje pri ≥ 2 zvezdicah.** Zvezdice se prikažejo takoj.
 
 Zvezdica za **izmik pri skoku `p`** (vse mora veljati):
 1. **mirovanje pred skokom:** v `[p − 800, p)` največ **1** štet premik (prej 300 ms pravilo štetja ostane) — viden znak 👀 je tam 900 ms;
@@ -458,7 +458,7 @@ Merilo za izbirne posnetke A–C: po fazi 3 David pogleda posnetke zaslona na en
 
 ---
 
-## 10. Seznam sprememb pravil (vse čakajo Davida)
+## 10. Seznam sprememb pravil (potrjene — David 30. 10. 2026)
 
 | # | Pravilo danes | Predlog |
 |---|---|---|
@@ -478,7 +478,7 @@ Nespremenjeno: okno pohvale, verjetnost ubogljivosti, napredek in upadanje šole
 
 | # | Vprašanje | Priporočilo | Odgovor |
 |---|---|---|---|
-| V1 | Potrdiš spremembe Š1–Š3, C1, P0–P2 (§10)? | da | **odprto** — potrdi pred fazo 2 (palica) / 3 (šola) |
+| V1 | Potrdiš spremembe Š1–Š3, C1, P0–P2 (§10)? | da | **da — Š1–Š3, C1, P1, P2 potrjene** (David 30. 10. 2026); P0 odpade s fazo 0 |
 | V2 | Faza 0 pred žogo (popravek palice, ker vpliva na Care Score)? | da | **ne** — faza 0 odpade, vse naenkrat pravilno (David 30. 10.) |
 | V3 | Maska namesto »vstane« (Š2) — ali raje takoj izbirni posnetek A (1,344 $ na videz × obdobje)? | najprej maska (0 $), A samo po testu | odprto |
 | V4 | Faza 1 zahteva nov EAS build v trgovinah (iOS + Android). Ga vežemo na naslednjo izdajo za Android? | da | odprto |
