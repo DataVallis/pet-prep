@@ -6,6 +6,7 @@ use App\Enums\AiCallFailure;
 use App\Enums\PetPhaseClip;
 use App\Enums\Species;
 use App\Events\PetUpdated;
+use App\Jobs\CompressPetMediaCandidate;
 use App\Jobs\SubmitPetStateVideo;
 use App\Models\AppSettingChange;
 use App\Models\Pet;
@@ -63,6 +64,7 @@ class MediaQualityService
         private readonly PetMediaService $media,
         private readonly MediaClipAnalyzer $analyzer,
         private readonly MediaVisionCheck $vision,
+        private readonly VideoCompressionService $compression,
     ) {}
 
     // ──────────────────────────────────────────────────────────────
@@ -72,7 +74,7 @@ class MediaQualityService
     /**
      * Check the slot's candidate and act on the verdict. Idempotent; returns the outcome.
      *
-     * @return 'promoted'|'retrying'|'needs_review'|'skipped'|'busy'
+     * @return 'promoted'|'compressing'|'retrying'|'needs_review'|'skipped'|'busy'
      */
     public function checkCandidate(int $slotId): string
     {
@@ -85,8 +87,8 @@ class MediaQualityService
         $candidate = (string) $slot->candidate_path;
 
         if (! $this->media->qualityCheckEnabled()) {
-            // Switched off meanwhile: the old behaviour — served unchecked.
-            return $this->media->promoteCandidate($slot, $candidate, null, null) ? 'promoted' : 'skipped';
+            // Switched off (or staged only for compression, David 2026-10-30): served unchecked.
+            return $this->release($slot, $candidate, null, null);
         }
 
         $check = $this->claim($slot, PetMediaQualityCheck::TRIGGER_PIPELINE);
@@ -103,7 +105,7 @@ class MediaQualityService
     }
 
     /**
-     * @return 'promoted'|'retrying'|'needs_review'|'skipped'
+     * @return 'promoted'|'compressing'|'retrying'|'needs_review'|'skipped'
      */
     private function apply(PetMedia $slot, PetMediaQualityCheck $check, string $candidate): string
     {
@@ -112,7 +114,7 @@ class MediaQualityService
         }
 
         if ($check->verdict === PetMediaQualityCheck::VERDICT_PASS) {
-            return $this->media->promoteCandidate($slot, $candidate, self::passQuality($check), $check->reason) ? 'promoted' : 'skipped';
+            return $this->release($slot, $candidate, self::passQuality($check), $check->reason);
         }
 
         // QA #363 M1: shadow mode (default until calibrated) — record the would-be verdict, always
@@ -120,7 +122,7 @@ class MediaQualityService
         if ($this->media->qualityCheckMode() === AppSettingsService::QUALITY_SHADOW) {
             Log::warning('MediaQualityService: clip would fail the quality check (shadow mode — served anyway)', ['pet_media_id' => $slot->id, 'reason' => $check->reason]);
 
-            return $this->media->promoteCandidate($slot, $candidate, PetMedia::QUALITY_SHADOW_FAILED, $check->reason) ? 'promoted' : 'skipped';
+            return $this->release($slot, $candidate, PetMedia::QUALITY_SHADOW_FAILED, $check->reason);
         }
 
         // One automatic regeneration per generation chain (never for the retry itself).
@@ -129,6 +131,24 @@ class MediaQualityService
         }
 
         return $this->autoRetry($slot, $candidate, (string) $check->reason) ? 'retrying' : 'skipped';
+    }
+
+    /**
+     * Show a candidate that may be shown: compressed first while the video compression switch
+     * is on (David 2026-10-30 — children never get the ~14 MB original; the job promotes the
+     * compressed key or, on reject / failure, the original), otherwise promoted at once.
+     *
+     * @return 'promoted'|'compressing'|'skipped'
+     */
+    private function release(PetMedia $slot, string $candidate, ?string $quality, ?string $reason): string
+    {
+        if ($this->compression->wantsCandidate($slot, $candidate)) {
+            CompressPetMediaCandidate::dispatch((int) $slot->id, $candidate, $quality, $reason);
+
+            return 'compressing';
+        }
+
+        return $this->media->promoteCandidate($slot, $candidate, $quality, $reason) ? 'promoted' : 'skipped';
     }
 
     /** The `quality` of a passed check. */

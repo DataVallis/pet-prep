@@ -8,6 +8,13 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-30 — Nova družina dobi stisnjene posnetke že od prvega dne
+
+**Kaj:** ko je stiskanje vklopljeno, strežnik vsak nov AI posnetek stisne, še preden ga družina prvič vidi — po preverjanju kakovosti in pred prikazom. Če stiskanje ne prinese dovolj ali bi se slika vidno spremenila, se pokaže izvirnik kot doslej. **Zakaj:** aplikacija prenese cele datoteke; nov ljubljenček ima ~20 posnetkov po ~14 MB, kar je za prvo izkušnjo (in mobilne podatke) preveč. Izmerili smo hitre nastavitve: `veryfast` stisne 5-s posnetek v ~4 s (namesto ~10 s) z enakim prihrankom (~94 % na gladkem testnem posnetku), zato je nov posnetek pripravljen le ~7 s pozneje.
+**Kako povedati:** 👩 »Prvi posnetki vašega kužka se naložijo hitreje in porabijo manj mobilnih podatkov.« · 🛠 »Stiskamo v cevovodu, med oceno kakovosti in prikazom — z merjenjem SSIM, sicer ostane izvirnik.«
+
+---
+
 ## 2026-10-30 — Videi ostanejo »premium«, disk pa se razbremeni
 
 **Kaj:** strežnik zna vsak shranjen AI posnetek enkrat ponovno stisniti (H.264, CRF 21) v **isti ločljivosti (1076 × 1924) in hitrosti (24 sličic/s)** — in ga zamenja samo, če je vsaj 30 % manjši **in** je po meritvi videti enako (SSIM ≥ 0,98, enaka dolžina in število sličic). Sicer ostane izvirnik. Teče ponoči, za stikalom v administraciji, ki je privzeto izklopljeno; David najprej izmeri 10 pravih posnetkov (`--sample=10`). Dodano še poročilo o porabi diska (samo branje, nič ne briše).

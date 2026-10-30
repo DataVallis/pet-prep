@@ -301,7 +301,7 @@ return [
         'app_error_reports' => 'Collect app error reports',
         'saved_body_video_compression' => 'Video compression: :state',
         'video_compression_section' => 'Video compression (disk)',
-        'video_compression_description' => 'Re-encodes every stored AI clip once at the same resolution and frame rate (H.264, CRF 21) to take less disk. A clip is replaced only when it gets at least 30 % smaller and looks the same (SSIM ≥ 0.98, same length and frames); otherwise the original stays. Runs on the server in small batches every hour at night (22:00–06:00 Ljubljana), also for new clips. Check `media:compress --sample=10` first.',
+        'video_compression_description' => 'Re-encodes every stored AI clip once at the same resolution and frame rate (H.264, CRF 21) to take less disk. A clip is replaced only when it gets at least 30 % smaller and looks the same (SSIM ≥ 0.98, same length and frames); otherwise the original stays. Existing clips: small batches every hour at night (22:00–06:00 Ljubljana); new clips are compressed before they are first shown (a few seconds longer). Check `media:compress --sample=10` first.',
         'video_compression' => 'Compress stored videos',
     ],
 

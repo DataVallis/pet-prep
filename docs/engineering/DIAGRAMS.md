@@ -2226,3 +2226,32 @@ sequenceDiagram
   end
   Note over S: 3 failures in a row = system fault → stop, nothing recorded · media:disk-report is read-only
 ```
+
+New clips (David 2026-10-30, `feat/media-compress-on-store`) are compressed in the pipeline before they are shown:
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant SP as StorePetMedia
+  participant Q as CheckPetMediaQuality
+  participant C as CompressPetMediaCandidate
+  participant DB as pet_media
+  participant D as Media disk
+  SP->>D: download → candidate key (staged also with the check off while compression is on)
+  SP->>Q: dispatch
+  Q->>Q: verdict (or check off)
+  alt video_compression on and an MP4 not tried yet
+    Q->>C: dispatch (quality, reason)
+    C->>D: encode candidate (veryfast, CRF 21) → measure (saving, SSIM, frames)
+    alt accepted
+      C->>D: write candidate-c.mp4
+      C->>DB: row lock: candidate_path → new key, compression_* = compressed
+      C->>DB: promoteCandidate(new key) → ready, shown
+      C->>D: delete the original candidate (never shown)
+    else rejected / ffmpeg failed / job gave up
+      C->>DB: compression_status rejected / failed → promoteCandidate(original)
+    end
+  else switch off
+    Q->>DB: promoteCandidate(original) as before
+  end
+```

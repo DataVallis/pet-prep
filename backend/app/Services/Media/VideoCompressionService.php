@@ -5,6 +5,7 @@ namespace App\Services\Media;
 use App\Models\PetMedia;
 use App\Models\PetMediaDerivative;
 use App\Models\PetMediaHistory;
+use App\Services\AppSettingsService;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\File;
 use Illuminate\Support\Collection;
@@ -74,6 +75,9 @@ class VideoCompressionService
     public const TEMP_MAX_AGE_MINUTES = 60;
 
     private ?bool $prlimit = null;
+
+    /** Pipeline run (compressCandidate): `preset` / `timeout` override the backfill config. */
+    private array $overrides = [];
 
     public function __construct(
         protected readonly PetMediaService $media,
@@ -201,55 +205,15 @@ class VideoCompressionService
                 return $this->failed($row, $record, 'source file missing on the media disk');
             }
 
-            $before = (int) filesize($in);
-            $source = $this->probe($in);
-            if ($source === null || $source['frames'] < 2) {
-                return $this->failed($row, $record, 'source not measurable (ffprobe)');
+            $m = $this->measure($in);
+            $out = $m['out'];
+            $stats = $m['stats'];
+            [$before, $after, $saving, $mean, $worst, $note] = [(int) $m['before'], (int) $m['after'], (float) $m['saving'], $m['mean'], $m['worst'], (string) $m['note']];
+            if ($m['verdict'] === 'fail') {
+                return $this->failed($row, $record, (string) $m['reason']);
             }
-
-            if ($source['audio']) {
-                // Our clips are made without audio; never drop a sound track silently.
-                return $this->rejected($row, $replace, $before, null, null, null, 'source has an audio stream');
-            }
-
-            $out = $in.'-out.mp4';
-            $encode = Process::timeout($this->timeout())->run($this->encodeArgs($in, $out, $source));
-            if (! $encode->successful() || ! is_file($out) || filesize($out) === 0) {
-                return $this->failed($row, $record, 'ffmpeg failed: '.mb_substr(trim($encode->errorOutput()), -300));
-            }
-
-            $after = (int) filesize($out);
-            $saving = $before > 0 ? round((1 - $after / $before) * 100, 1) : 0.0;
-            $made = $this->probe($out);
-            if ($made === null) {
-                return $this->failed($row, $record, 'result not measurable (ffprobe)');
-            }
-
-            $mismatch = self::mismatch($source, $made);
-            if ($mismatch !== null) {
-                return $this->rejected($row, $replace, $before, $after, null, null, $mismatch);
-            }
-
-            $stats = $in.'-ssim.log';
-            $ssim = $this->ssim($out, $in, $stats);
-            if ($ssim === null) {
-                return $this->failed($row, $record, 'SSIM not measurable');
-            }
-            [$mean, $worst] = $ssim;
-
-            $minSaving = (float) config('media.compression.min_saving_percent', 30);
-            $minSsim = (float) config('media.compression.min_ssim', 0.98);
-            $minFrame = (float) config('media.compression.min_frame_ssim', 0.95);
-            $note = sprintf('-%s %%, SSIM %.4f (min frame %.4f)', self::number($saving), $mean, $worst);
-
-            if ($saving < $minSaving) {
-                return $this->rejected($row, $replace, $before, $after, $mean, $worst, sprintf('saving %s %% < %s %% (SSIM %.4f)', self::number($saving), self::number($minSaving), $mean));
-            }
-            if ($mean < $minSsim) {
-                return $this->rejected($row, $replace, $before, $after, $mean, $worst, sprintf('SSIM %.4f < %.4f (saving %s %%)', $mean, $minSsim, self::number($saving)));
-            }
-            if ($worst < $minFrame) {
-                return $this->rejected($row, $replace, $before, $after, $mean, $worst, sprintf('frame SSIM %.4f < %.4f (saving %s %%)', $worst, $minFrame, self::number($saving)));
+            if ($m['verdict'] === 'reject') {
+                return $this->rejected($row, $replace, $before, $m['after'], $mean, $worst, (string) $m['reason']);
             }
 
             if (! $replace) {
@@ -296,6 +260,217 @@ class VideoCompressionService
                 }
             }
         }
+    }
+
+    /**
+     * Encode a local copy and apply the accept rules (shared by the backfill and the pipeline).
+     * The caller deletes `out` / `stats` (temp files next to `$in`).
+     *
+     * @return array{verdict: 'accept'|'reject'|'fail', reason: string|null, before: int, after: int|null, saving: float|null, mean: float|null, worst: float|null, note: string|null, out: string|null, stats: string|null}
+     */
+    private function measure(string $in): array
+    {
+        $before = (int) filesize($in);
+        $r = ['verdict' => 'fail', 'reason' => null, 'before' => $before, 'after' => null, 'saving' => null, 'mean' => null, 'worst' => null, 'note' => null, 'out' => null, 'stats' => null];
+
+        $source = $this->probe($in);
+        if ($source === null || $source['frames'] < 2) {
+            return [...$r, 'reason' => 'source not measurable (ffprobe)'];
+        }
+        if ($source['audio']) {
+            // Our clips are made without audio; never drop a sound track silently.
+            return [...$r, 'verdict' => 'reject', 'reason' => 'source has an audio stream'];
+        }
+
+        $r['out'] = $in.'-out.mp4';
+        $encode = Process::timeout($this->timeout())->run($this->encodeArgs($in, $r['out'], $source));
+        if (! $encode->successful() || ! is_file($r['out']) || filesize($r['out']) === 0) {
+            return [...$r, 'reason' => 'ffmpeg failed: '.mb_substr(trim($encode->errorOutput()), -300)];
+        }
+
+        $r['after'] = (int) filesize($r['out']);
+        $r['saving'] = $before > 0 ? round((1 - $r['after'] / $before) * 100, 1) : 0.0;
+        $made = $this->probe($r['out']);
+        if ($made === null) {
+            return [...$r, 'reason' => 'result not measurable (ffprobe)'];
+        }
+
+        $mismatch = self::mismatch($source, $made);
+        if ($mismatch !== null) {
+            return [...$r, 'verdict' => 'reject', 'reason' => $mismatch];
+        }
+
+        $r['stats'] = $in.'-ssim.log';
+        $ssim = $this->ssim($r['out'], $in, $r['stats']);
+        if ($ssim === null) {
+            return [...$r, 'reason' => 'SSIM not measurable'];
+        }
+        [$mean, $worst] = $ssim;
+        $saving = (float) $r['saving'];
+        $r = [...$r, 'mean' => $mean, 'worst' => $worst, 'note' => sprintf('-%s %%, SSIM %.4f (min frame %.4f)', self::number($saving), $mean, $worst)];
+
+        $minSaving = (float) config('media.compression.min_saving_percent', 30);
+        $minSsim = (float) config('media.compression.min_ssim', 0.98);
+        $minFrame = (float) config('media.compression.min_frame_ssim', 0.95);
+
+        $why = match (true) {
+            $saving < $minSaving => sprintf('saving %s %% < %s %% (SSIM %.4f)', self::number($saving), self::number($minSaving), $mean),
+            $mean < $minSsim => sprintf('SSIM %.4f < %.4f (saving %s %%)', $mean, $minSsim, self::number($saving)),
+            $worst < $minFrame => sprintf('frame SSIM %.4f < %.4f (saving %s %%)', $worst, $minFrame, self::number($saving)),
+            default => null,
+        };
+
+        return $why === null ? [...$r, 'verdict' => 'accept'] : [...$r, 'verdict' => 'reject', 'reason' => $why];
+    }
+
+    // ──────────────────────────────────────────────────────────────
+    //  In the generation pipeline (David 2026-10-30: new clips compressed before they are shown)
+    // ──────────────────────────────────────────────────────────────
+
+    /**
+     * Should this candidate be compressed before it is promoted? Switch on (fresh), a clip,
+     * an MP4 candidate not compressed / tried already (a re-dispatch after a failed or
+     * rejected try promotes directly — never a loop), ffmpeg there.
+     */
+    public function wantsCandidate(PetMedia $slot, string $candidate): bool
+    {
+        $lower = strtolower($candidate);
+
+        return $slot->isClip()
+            && str_ends_with($lower, '.mp4') && ! str_ends_with($lower, self::KEY_SUFFIX.'.mp4')
+            && $slot->compression_path !== $candidate
+            && app(AppSettingsService::class)->videoCompression(fresh: true)
+            && $this->available();
+    }
+
+    /**
+     * Compress a slot's CANDIDATE (the downloaded clip that passed its quality check / was
+     * stored with the check off) and promote it — the compressed key when it passes the
+     * accept rules, otherwise the original. Never leaves the slot stuck: every outcome
+     * except `busy` / `skipped` (decided elsewhere meanwhile) ends in a promotion.
+     * Fast preset `media.compression.pipeline_preset` and short process timeouts (the job
+     * has 85 s); the original candidate is deleted after the swap — it was never shown.
+     *
+     * @return 'compressed'|'rejected'|'failed'|'promoted'|'skipped'|'busy'
+     */
+    public function compressCandidate(int $id, string $candidate, ?string $quality, ?string $reason): string
+    {
+        $lock = Cache::lock('media-compress:'.$id, $this->lockSeconds());
+        if (! $lock->get()) {
+            return 'busy';
+        }
+
+        $this->overrides = [
+            'preset' => (string) config('media.compression.pipeline_preset', 'veryfast'),
+            'timeout' => max(5, (int) config('media.compression.pipeline_process_timeout_seconds', 20)),
+        ];
+        $in = null;
+        $m = null;
+        $target = null;
+
+        try {
+            $slot = PetMedia::find($id);
+            if ($slot === null || $slot->status !== PetMedia::STATUS_RUNNING || $slot->candidate_path !== $candidate) {
+                return 'skipped';
+            }
+            if (! $this->wantsCandidate($slot, $candidate)) {
+                return $this->promoteOriginal($id, $candidate, $quality, $reason) ? 'promoted' : 'skipped';
+            }
+
+            $in = $this->localCopy($candidate);
+            $m = $in === null
+                ? ['verdict' => 'fail', 'reason' => 'candidate file missing on the media disk', 'out' => null, 'stats' => null]
+                : $this->measure($in);
+
+            if ($m['verdict'] !== 'accept') {
+                $status = $m['verdict'] === 'reject' ? self::STATUS_REJECTED : self::STATUS_FAILED;
+                $this->recordOnCandidate($id, $candidate, $status, (string) $m['reason']);
+                Log::info('VideoCompressionService: new clip shown uncompressed', ['pet_media_id' => $id, 'status' => $status, 'reason' => $m['reason']]);
+
+                return $this->promoteOriginal($id, $candidate, $quality, $reason) ? $status : 'skipped';
+            }
+
+            $target = self::targetPath($candidate);
+            $this->media->disk()->putFileAs(dirname($target), new File((string) $m['out']), basename($target));
+
+            $swapped = DB::transaction(function () use ($id, $candidate, $target, $m): bool {
+                $locked = PetMedia::whereKey($id)->lockForUpdate()->first();
+                if ($locked === null || $locked->status !== PetMedia::STATUS_RUNNING || $locked->candidate_path !== $candidate) {
+                    return false;
+                }
+
+                $locked->forceFill([
+                    'candidate_path' => $target,
+                    'candidate_bytes' => (int) $m['after'],
+                    'compression_path' => $target,
+                    'compression_status' => self::STATUS_COMPRESSED,
+                    'compression_attempts' => 0,
+                    'compression_target_path' => null,
+                    'compression_target_bytes' => null,
+                    'compressed_at' => now(),
+                    'original_bytes' => (int) $m['before'],
+                    'compression_note' => $m['note'],
+                ])->saveQuietly();
+
+                return true;
+            });
+
+            if (! $swapped || ! $this->media->promoteCandidate(PetMedia::findOrFail($id), $target, $quality, $reason)) {
+                $this->deleteIfUnreferenced($target);
+
+                return 'skipped';
+            }
+
+            // The original was only ever a candidate (never served to the apps).
+            $this->deleteIfUnreferenced($candidate);
+            Log::info('VideoCompressionService: new clip compressed before it was shown', ['pet_media_id' => $id, 'before' => $m['before'], 'after' => $m['after'], 'note' => $m['note']]);
+
+            return self::STATUS_COMPRESSED;
+        } catch (Throwable $e) {
+            if ($target !== null) {
+                $this->deleteIfUnreferenced($target);
+            }
+            $this->recordOnCandidate($id, $candidate, self::STATUS_FAILED, $e->getMessage());
+
+            return $this->promoteOriginal($id, $candidate, $quality, $reason) ? self::STATUS_FAILED : 'skipped';
+        } finally {
+            $this->overrides = [];
+            foreach ([$in, $m['out'] ?? null, $m['stats'] ?? null] as $tmp) {
+                if ($tmp !== null && is_file($tmp)) {
+                    @unlink($tmp);
+                }
+            }
+            $lock->release();
+        }
+    }
+
+    /**
+     * Promote the original candidate (rejected / failed / switched off / the job gave up).
+     * Also marks a failure on the candidate so a re-dispatch promotes directly; the
+     * nightly backfill may try the stored file again later.
+     */
+    public function promoteOriginal(int $id, string $candidate, ?string $quality, ?string $reason, ?string $failure = null): bool
+    {
+        if ($failure !== null) {
+            $this->recordOnCandidate($id, $candidate, self::STATUS_FAILED, $failure);
+        }
+
+        $slot = PetMedia::find($id);
+
+        return $slot !== null && $slot->candidate_path === $candidate && $this->media->promoteCandidate($slot, $candidate, $quality, $reason);
+    }
+
+    /** Remember a pipeline decision on the candidate (it becomes the storage_path when promoted). */
+    private function recordOnCandidate(int $id, string $candidate, string $status, string $note): void
+    {
+        PetMedia::whereKey($id)->where('candidate_path', $candidate)->update([
+            'compression_path' => $candidate,
+            'compression_status' => $status,
+            'compression_attempts' => $status === self::STATUS_FAILED ? 1 : 0,
+            'compression_target_path' => null,
+            'compression_target_bytes' => null,
+            'compression_note' => mb_substr($note, 0, 500),
+        ]);
     }
 
     /** Test seam: runs right after the pre-swap marker, before the new key is written. */
@@ -608,7 +783,7 @@ class VideoCompressionService
             '-map', '0:v:0', '-an', '-sn', '-dn',
             '-c:v', 'libx264', '-profile:v', 'high', '-pix_fmt', 'yuv420p',
             '-crf', (string) (int) config('media.compression.crf', 21),
-            '-preset', (string) config('media.compression.preset', 'slow'),
+            '-preset', (string) ($this->overrides['preset'] ?? config('media.compression.preset', 'slow')),
             '-threads', (string) max(1, (int) config('media.compression.threads', 2)),
             '-fps_mode', 'cfr', '-r', $source['rate'],
             '-movflags', '+faststart',
@@ -747,6 +922,10 @@ class VideoCompressionService
 
     private function timeout(): int
     {
+        if (isset($this->overrides['timeout'])) {
+            return (int) $this->overrides['timeout'];
+        }
+
         return max(30, (int) config('media.compression.process_timeout_seconds', 300));
     }
 

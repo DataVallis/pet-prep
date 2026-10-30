@@ -105,7 +105,7 @@
        ```
        `--sample=10` za 10 posnetkov izpiše MB prej → potem, prihranek %, povprečni SSIM (≥ 0,98 = videti enako) in najslabšo sličico (≥ 0,95). Izpis pošlji Claudu ali preglej sam; če želiš, enega od posnetkov iz izpisa primerjaj na očeh.
        **Pozor:** izvirnik se po stiskanju izbriše po 3 urah — vrniti ga je mogoče samo iz off-site varnostne kopije (korak 7). Priporočilo: najprej uredi korak 7.
-    2. Če so številke v redu: `/admin` → *Feature switches* / *Funkcije* → **»Video compression (disk)« / »Stiskanje videov (disk)«** → ON → *Save*. Stiskanje teče ponoči (22.00–6.00, vsako uro do 10 min); naslednje jutro `media:disk-report` pokaže prihranek (stolpca *compressed* / *saved*).
+    2. Če so številke v redu: `/admin` → *Feature switches* / *Funkcije* → **»Video compression (disk)« / »Stiskanje videov (disk)«** → ON → *Save*. Od takrat se tudi **novi posnetki stisnejo, preden jih družina vidi** (vsak je pripravljen ~7 s pozneje). Stiskanje teče ponoči (22.00–6.00, vsako uro do 10 min); naslednje jutro `media:disk-report` pokaže prihranek (stolpca *compressed* / *saved*).
 
 ## 2. Decisions
 
@@ -174,6 +174,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 6. **M6-W »Želje«** — merged 2026-10-27: server W01 + W02 server part (#417), app W04 / W05 (#416), one QA round done (#417 / #416 fixes on the same PRs). Reaches users with the next daily deploy + OTA. **Next:** David creates the six store products (§1b.9); then M6-W03 item media (`media_ready` always false, treat `media` null until then); device check of the child catalogue, treat chip, parent list, push, redeem after reopening »Želje«.
 
 ## 6. Session log
+
+### 2026-10-30 (cloud, backend) — new clips compressed before they are shown (`feat/media-compress-on-store`)
+- David: a family buying a pet must never get the ~14 MB originals. While `video_compression` is on, `StorePetMedia` stages every clip as a candidate (also with the check off), `MediaQualityService::release()` → `CompressPetMediaCandidate` (default queue, 85 s) → `compressCandidate()` (preset `veryfast`, same accept rules) → promote the `-c.mp4` key; reject / ffmpeg failure / job give-up → the original is promoted (never stuck). Measured: veryfast 4.1 s vs slow 10.4 s for the same ~-94 % → a new 5 s clip is ready ~7 s later. `promoteCandidate()` now takes a nullable `quality` (the check-off path passed null). Tests `VideoCompressionPipelineTest` (8).
 
 ### 2026-10-30 (cloud, backend) — stored video compression (`feat/media-compress`)
 - `media:compress` (`Media\VideoCompressionService`): each stored clip file once into a NEW key `…-c.mp4` (QA #450 — rows + derived `source_path` switch in one transaction, original deleted after 180 min when unreferenced, pre-swap marker recovered by the next run), CRF 21 / slow / same 1076 × 1924 / 24 fps; kept only at ≥ 30 % saving + mean SSIM ≥ 0.98 + every frame ≥ 0.95 + same duration / frames; `nice` + `prlimit --as=2048 MB`; 3 failures in a row stop a run; `--dry-run`, `--sample=N`, `--retry-failed`; scheduled hourly :37 22:00–06:00 Ljubljana (timezone set before `between`) behind the superadmin switch `video_compression` (default off). `media:disk-report` read-only (one listing with sizes). Migration adds `pet_media.compression_*` / `compressed_at` / `original_bytes` / `original_path`. Tests `VideoCompressionTest` (22). David: §1b step 12. Debt: originals deleted after the grace period are restorable only from the off-site backup (§1b step 7).
