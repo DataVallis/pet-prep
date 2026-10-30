@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "74a5ae3958ee7e00883878de60f5c5b15bd8809a373f2d4e55bc2a77d83cc510"
+      "sha256": "9cae7c2b996aa2bbb2b92345493644c8983239edf368551746a6d38bc658aba7"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -43625,7 +43625,7 @@
       "id": "soft_coated_wheaten_terrier",
       "species": "dog",
       "order": 72,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Soft Coated Wheaten Terrier",
         "sl": "Irski mehkodlaki pšenični terier"
@@ -44246,7 +44246,7 @@
       "id": "irish_wolfhound",
       "species": "dog",
       "order": 73,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Irish Wolfhound",
         "sl": "Irski volčji hrt"
@@ -44846,7 +44846,7 @@
       "id": "american_staffordshire_terrier",
       "species": "dog",
       "order": 74,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "American Staffordshire Terrier",
         "sl": "Ameriški staffordshirski terier"
