@@ -32,7 +32,8 @@ use InvalidArgumentException;
  * Also: unique vs shared AI media (M5-R21), state media on / off (M5-T08b) and
  * school & game phase clips on / off (M5-T09 / T10 QA M2) and the automatic clip
  * quality check on / off (David 2026-10-23) and app error reports on / off (M5-05,
- * QA #375 B1 — default off until the privacy policy and store labels cover them).
+ * QA #375 B1 — default off until the privacy policy and store labels cover them) and
+ * stored video compression on / off (David 2026-10-30, `media:compress`, default off).
  *
  * @property Form $form
  */
@@ -83,6 +84,7 @@ class FeatureSwitches extends Page implements HasForms
             'phase_clips' => $settings->phaseClips(),
             'quality_check' => $settings->qualityCheckMode(),
             'app_error_reports' => $settings->appErrorReports(),
+            'video_compression' => $settings->videoCompression(fresh: true),
         ]);
     }
 
@@ -165,6 +167,14 @@ class FeatureSwitches extends Page implements HasForms
                             ->label(__('admin.features.app_error_reports'))
                             ->default(false),
                     ]),
+                // David 2026-10-30: re-encode stored AI videos once to save disk (media:compress), default off.
+                Section::make(__('admin.features.video_compression_section'))
+                    ->description(__('admin.features.video_compression_description'))
+                    ->schema([
+                        Toggle::make('video_compression')
+                            ->label(__('admin.features.video_compression'))
+                            ->default(false),
+                    ]),
             ]);
     }
 
@@ -185,6 +195,7 @@ class FeatureSwitches extends Page implements HasForms
         $phaseClips = (bool) ($data['phase_clips'] ?? AppSettingsService::phaseClipsDefault());
         $qualityCheck = (string) ($data['quality_check'] ?? AppSettingsService::qualityCheckDefault());
         $appErrors = (bool) ($data['app_error_reports'] ?? false);
+        $compression = (bool) ($data['video_compression'] ?? false);
 
         try {
             // Each switch is written only when its own fields changed, so saving
@@ -207,6 +218,9 @@ class FeatureSwitches extends Page implements HasForms
             if ($appErrors !== $settings->appErrorReports(fresh: true)) {
                 $settings->updateAppErrorReports($this->admin(), $appErrors);
             }
+            if ($compression !== $settings->videoCompression(fresh: true)) {
+                $settings->updateVideoCompression($this->admin(), $compression);
+            }
         } catch (InvalidArgumentException $e) {
             Notification::make()->title(__('admin.features.not_saved'))->body($e->getMessage())->danger()->send();
 
@@ -220,7 +234,8 @@ class FeatureSwitches extends Page implements HasForms
             .' · '.__('admin.features.saved_body_state_media', ['state' => $states])
             .' · '.__('admin.features.saved_body_phase_clips', ['state' => $phases])
             .' · '.__('admin.features.saved_body_quality_check', ['state' => __('admin.features.quality_check_'.$settings->qualityCheckMode())])
-            .' · '.__('admin.features.saved_body_app_error_reports', ['state' => $settings->appErrorReports(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')]))->success()->send();
+            .' · '.__('admin.features.saved_body_app_error_reports', ['state' => $settings->appErrorReports(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')])
+            .' · '.__('admin.features.saved_body_video_compression', ['state' => $settings->videoCompression(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')]))->success()->send();
     }
 
     /**
@@ -229,7 +244,7 @@ class FeatureSwitches extends Page implements HasForms
     public function getChanges(): Collection
     {
         return AppSettingChange::with('user:id,name,email')
-            ->whereIn('key', [AppSettingsService::CATS_KEY, AppSettingsService::UNIQUE_MEDIA_KEY, AppSettingsService::STATE_MEDIA_KEY, AppSettingsService::PHASE_CLIPS_KEY, AppSettingsService::QUALITY_CHECK_KEY, AppSettingsService::APP_ERROR_REPORTS_KEY])
+            ->whereIn('key', [AppSettingsService::CATS_KEY, AppSettingsService::UNIQUE_MEDIA_KEY, AppSettingsService::STATE_MEDIA_KEY, AppSettingsService::PHASE_CLIPS_KEY, AppSettingsService::QUALITY_CHECK_KEY, AppSettingsService::APP_ERROR_REPORTS_KEY, AppSettingsService::VIDEO_COMPRESSION_KEY])
             ->latest('id')->limit(20)->get();
     }
 

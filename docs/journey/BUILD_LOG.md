@@ -8,6 +8,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-30 — Videi ostanejo »premium«, disk pa se razbremeni
+
+**Kaj:** strežnik zna vsak shranjen AI posnetek enkrat ponovno stisniti (H.264, CRF 21) v **isti ločljivosti (1076 × 1924) in hitrosti (24 sličic/s)** — in ga zamenja samo, če je vsaj 30 % manjši **in** je po meritvi videti enako (SSIM ≥ 0,98, enaka dolžina in število sličic). Sicer ostane izvirnik. Teče ponoči, za stikalom v administraciji, ki je privzeto izklopljeno; David najprej izmeri 10 pravih posnetkov (`--sample=10`). Dodano še poročilo o porabi diska (samo branje, nič ne briše).
+**Zakaj:** posnetki iz Klinga pridejo z ~23 Mbps (5 s ≈ 14–15 MB); na produkciji je 30. 10. 2026 že ~1,56 GB posnetkov. Pri CRF 21 pričakujemo ~2–4 Mbps (okoli 85 % manj). Disk (38 GB, 28 % zaseden) še ni problem — zato pravila varujejo kakovost, ne hitrosti.
+**Kako povedati:** 🛠 »Vsak AI posnetek stisnemo samo enkrat in samo, če meritev SSIM potrdi, da je videti enako — sicer obdržimo izvirnik.« · 💼 »Strošek hrambe na ljubljenčka pade za velikostni razred, brez vpliva na izkušnjo otroka.« · 👩 staršem: nič se ne spremeni, posnetki ostanejo ostri.
+
+---
+
 ## 2026-10-29 — »Katero različico imam?« v nastavitvah
 
 **Kaj:** v starševskem »Nadzor → O aplikaciji« je vrstica **»Različica aplikacije«** (npr. »3.1.9 (42) · posodobitev 6bf527d · 29. 10. 13:17« ali »vgrajena različica«) in gumb **»Preveri posodobitve«**, ki novo posodobitev prenese in ponudi »Znova zaženi zdaj«. Otrok vidi isto vrstico sivo na dnu nastavitev. **Zakaj:** posodobitev brez trgovine (OTA) se prenese v ozadju in začne veljati šele ob naslednjem zagonu — David je preizkušal šolo na stari kodi telefona, medtem ko je strežnik že imel novo. Zdaj se na prvi pogled vidi, katera koda teče, in jo je mogoče takoj posodobiti. **Kako povedati:** 👩 »V nastavitvah vidite, katero različico imate, in jo z enim dotikom posodobite.« · 🛠 commit OTA je isti kot v `app-release.json` (`EXPO_PUBLIC_GIT_COMMIT`), preverjanje samo na gumb, nikoli ob zagonu.

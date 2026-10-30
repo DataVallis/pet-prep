@@ -96,6 +96,17 @@
    Tabela pokaže ljubljenčka, posnetek, razlog in dejanje (`retry` = ponovi v okviru današnjega AI proračuna, `report` = Discord + »LOCKED« v plošči AI medijev). Če je seznam dolg ali preveč stane, sporoči Claudu, preden mine naslednja polna ura. Po prvem urnem zagonu (:17) ponovi isti ukaz in preveri Discord (sporočilo »… school / game clip(s) need an admin«); odklepanje: */admin* → Pets → AI media → **»Generate missing«** (skupni videzi) ali »Approve anyway« (Needs review).
 11. **Ključne slike / poze po fal čakalni vrsti (PR #433, 28. 10. 2026) — po deployu:** sloti, ki jih je stari sinhroni klic pustil `failed` (npr. `pet_media` 190, poza »sit«), se sami ne popravijo vsi: `/admin` → *Pets* → ljubljenček → *AI media* → **»Generate missing«** (skupen videz — privzeto) ali **»Regenerate«** (lastni mediji). Poze in posnetke šole / iger lahko že prej ponovi urni `media:retry-activity-clips` (#434, ≤ 2 poskusa na verigo) — preveri v panelu, ali je slot že `running` / `ready`, preden klikneš. Ključne slike stanj (doma) pobere samo ročni korak.
 
+12. **Stiskanje shranjenih videov (David 30. 10. 2026, veja `feat/media-compress`) — stikalo je privzeto IZKLOPLJENO, nič se ne zgodi, dokler ga ne vklopiš.** Po deployu (najpozneje naslednji dnevni ob 03:17):
+    1. Na strežniku (`ssh -i ~/.ssh/petprep_deploy_key deploy@138.199.172.97`) izmeri na pravih posnetkih — ti ukazi ničesar ne spremenijo:
+       ```
+       docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app php artisan media:compress --dry-run
+       docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app php artisan media:compress --sample=10
+       docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app php artisan media:disk-report
+       ```
+       `--sample=10` za 10 posnetkov izpiše MB prej → potem, prihranek %, povprečni SSIM (≥ 0,98 = videti enako) in najslabšo sličico (≥ 0,95). Izpis pošlji Claudu ali preglej sam; če želiš, enega od posnetkov iz izpisa primerjaj na očeh.
+       **Pozor:** izvirnik se po stiskanju izbriše po 3 urah — vrniti ga je mogoče samo iz off-site varnostne kopije (korak 7). Priporočilo: najprej uredi korak 7.
+    2. Če so številke v redu: `/admin` → *Feature switches* / *Funkcije* → **»Video compression (disk)« / »Stiskanje videov (disk)«** → ON → *Save*. Stiskanje teče ponoči (22.00–6.00, vsako uro do 10 min); naslednje jutro `media:disk-report` pokaže prihranek (stolpca *compressed* / *saved*).
+
 ## 2. Decisions
 
 All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top; ~73 rows still marked »čaka Davida«). Standing rules worth knowing before any work:
@@ -163,6 +174,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 6. **M6-W »Želje«** — merged 2026-10-27: server W01 + W02 server part (#417), app W04 / W05 (#416), one QA round done (#417 / #416 fixes on the same PRs). Reaches users with the next daily deploy + OTA. **Next:** David creates the six store products (§1b.9); then M6-W03 item media (`media_ready` always false, treat `media` null until then); device check of the child catalogue, treat chip, parent list, push, redeem after reopening »Želje«.
 
 ## 6. Session log
+
+### 2026-10-30 (cloud, backend) — stored video compression (`feat/media-compress`)
+- `media:compress` (`Media\VideoCompressionService`): each stored clip file once into a NEW key `…-c.mp4` (QA #450 — rows + derived `source_path` switch in one transaction, original deleted after 180 min when unreferenced, pre-swap marker recovered by the next run), CRF 21 / slow / same 1076 × 1924 / 24 fps; kept only at ≥ 30 % saving + mean SSIM ≥ 0.98 + every frame ≥ 0.95 + same duration / frames; `nice` + `prlimit --as=2048 MB`; 3 failures in a row stop a run; `--dry-run`, `--sample=N`, `--retry-failed`; scheduled hourly :37 22:00–06:00 Ljubljana (timezone set before `between`) behind the superadmin switch `video_compression` (default off). `media:disk-report` read-only (one listing with sizes). Migration adds `pet_media.compression_*` / `compressed_at` / `original_bytes` / `original_path`. Tests `VideoCompressionTest` (22). David: §1b step 12. Debt: originals deleted after the grace period are restorable only from the off-site backup (§1b step 7).
 
 ### 2026-10-29 (cloud, mobile) — app version line + »Preveri posodobitve« (`feat/app-version-row`)
 - Parent Nadzor → »O aplikaciji«: `AppVersionCard` (»3.1.9 (42) · posodobitev 6bf527d · 29. 10. 13:17« / »vgrajena različica«, tap copies details, check → fetch → »Znova zaženi zdaj«, never auto-reload); child: read-only line in `ChildSettingsSheet`; `mobile-ota.sh` exports `EXPO_PUBLIC_GIT_COMMIT` (harness `scripts/tests/mobile-ota.test.sh`). Not verified on a phone; reaches phones with the next production OTA (JS only, same runtime). Debt: build number on Android uses the deprecated `Constants.platform.android.versionCode` (no expo-application to keep the runtime).
