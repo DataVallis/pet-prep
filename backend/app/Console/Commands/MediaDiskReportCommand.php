@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Models\PetMedia;
+use App\Services\Media\FrugalClipPreview;
 use App\Services\Media\MediaStorage;
 use App\Services\Media\ObjectStorageMover;
 use App\Services\Media\PetMediaService;
@@ -88,9 +89,18 @@ class MediaDiskReportCommand extends Command
         $orphans = [];
         $orphanBytes = 0;
         $awaitingBytes = 0;
+        $previews = 0;
+        $previewBytes = 0;
         foreach ($files as $path => $size) {
             $total += $size;
             if (isset($referenced[$path])) {
+                continue;
+            }
+            // Frugal clips (QA #451 m7): zero-cost previews — known, deleted after 24 h by media:frugal-preview --prune.
+            if (str_starts_with($path, FrugalClipPreview::PREFIX.'/')) {
+                $previews++;
+                $previewBytes += $size;
+
                 continue;
             }
             if (isset($awaiting[$path])) {
@@ -103,6 +113,7 @@ class MediaDiskReportCommand extends Command
         }
         $this->line(sprintf('Files on disk: %d, %s.', count($files), $mb($total)));
         $this->line(sprintf('Compressed-away originals awaiting deletion (grace period): %d, %s; interrupted swaps: %d.', count($awaiting), $mb($awaitingBytes), $replacing));
+        $this->line(sprintf('Frugal-clip previews (deleted after 24 h): %d, %s.', $previews, $mb($previewBytes)));
         $this->line(sprintf('Orphans (no pet_media / history / derivative / contact sheet row): %d, %s.', count($orphans), $mb($orphanBytes)));
         foreach (array_slice($orphans, 0, $listMax) as $path) {
             $this->line('  orphan '.$path);

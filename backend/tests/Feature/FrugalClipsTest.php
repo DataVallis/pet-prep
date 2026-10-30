@@ -29,6 +29,7 @@ use App\Services\Media\PetMediaService;
 use App\Services\Media\PetPreparationService;
 use App\Services\Media\ReferenceImageRetryService;
 use App\Services\Media\SchoolClipDerivativeService;
+use App\Services\Media\VideoCompressionService;
 use App\Services\PairingService;
 use App\Services\Results\PetProfileChoice;
 use App\Services\TrainingService;
@@ -790,4 +791,19 @@ describe('QA #451 majors / minors', function () {
             expect($prefix)->toContain('--as='.(2048 * 1024 * 1024));
         }
     });
+});
+
+it('major 2: derived clips and media:compress share one heavy ffmpeg lock', function () {
+    config(['media.derivatives.heavy_lock_wait_seconds' => 0, 'services.fal_ai.key' => null]);
+    useUniquePetMedia(true);
+    $pet = frgPet();
+    $loop = frgStored($pet, 'video', 'sleeping', FRG_MP4, 3, PetMedia::RECIPE_START_ONLY);
+    $held = Cache::lock(SchoolClipDerivativeService::HEAVY_LOCK, 60);
+    expect($held->get())->toBeTrue();
+
+    expect(app(SchoolClipDerivativeService::class)->make($loop->id))->toBe('busy')
+        ->and(app(VideoCompressionService::class)->compress($loop->id)['outcome'])->toBe('busy')
+        ->and(PetMediaDerivative::count())->toBe(0);
+
+    $held->release();
 });
