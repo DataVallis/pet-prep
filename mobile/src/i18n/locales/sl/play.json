@@ -16,6 +16,28 @@
     "fetching": "Kuža teče po žogo …",
     "done": "Hvala za igro! Kuža je ves vesel."
   },
+  "ball": {
+    "hint": "Povleci in spusti žogo!",
+    "holdHint": "Pridrži žogo in spusti!",
+    "preparing": "Kuža se pripravlja …",
+    "call": "Pokliči!",
+    "catch": "Ujemi!",
+    "again": "Še en krog",
+    "done": "Bravo! Kuža je ves vesel.",
+    "fb": {
+      "throw": "Lep met!",
+      "called": "Pridi!",
+      "caught": "Ujeta!"
+    },
+    "a11y": {
+      "throw": "Vrzi žogo",
+      "throwHint": "Pridrži za močnejši met, spusti za met.",
+      "call": "Pokliči kužka",
+      "catch": "Ujemi žogo",
+      "progress": "Met {{n}} od 3, ujete žoge: {{stars}}",
+      "stars": "Ujete žoge: {{stars}} od 3"
+    }
+  },
   "cuddle": {
     "invite": "Kuža se stisne k tebi. Ga pobožaš?",
     "start": "Pobožaj",

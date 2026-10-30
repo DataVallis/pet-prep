@@ -41,7 +41,8 @@
         "android.permission.health.READ_WHEELCHAIR_PUSHES"
       ],
       "blockedPermissions": [
-        "com.google.android.gms.permission.AD_ID"
+        "com.google.android.gms.permission.AD_ID",
+        "android.permission.RECORD_AUDIO"
       ],
       "usesCleartextTraffic": true,
       "package": "com.datavallis.petprep"
@@ -107,7 +108,16 @@
         }
       ],
       "expo-background-task",
-      "expo-apple-authentication"
+      "expo-apple-authentication",
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "PetPrep never uses the microphone. Its games only play short sounds.",
+          "recordAudioAndroid": false,
+          "enableBackgroundPlayback": false,
+          "enableBackgroundRecording": false
+        }
+      ]
     ],
     "extra": {
       "eas": {

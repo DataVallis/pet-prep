@@ -16,6 +16,28 @@
     "fetching": "Your pup runs after the ball …",
     "done": "Thanks for playing! Your pup is so happy."
   },
+  "ball": {
+    "hint": "Pull and let go of the ball!",
+    "holdHint": "Hold the ball, then let go!",
+    "preparing": "Getting your pup ready …",
+    "call": "Call!",
+    "catch": "Catch!",
+    "again": "One more round",
+    "done": "Great! Your pup is so happy.",
+    "fb": {
+      "throw": "Nice throw!",
+      "called": "Come!",
+      "caught": "Caught it!"
+    },
+    "a11y": {
+      "throw": "Throw the ball",
+      "throwHint": "Hold for a stronger throw, let go to throw.",
+      "call": "Call your pup",
+      "catch": "Catch the ball",
+      "progress": "Throw {{n}} of 3, balls caught: {{stars}}",
+      "stars": "Balls caught: {{stars}} of 3"
+    }
+  },
   "cuddle": {
     "invite": "Your pup snuggles up to you. Give them a cuddle?",
     "start": "Cuddle",

@@ -16,6 +16,7 @@ import { KeyRound, LogOut, Smartphone, Trash2, UserPlus, Users } from 'lucide-re
 import type { DeletionProof } from '@/api/client';
 import AdaptedModeRow from '@/components/parent/AdaptedModeRow';
 import EasyGesturesRow from '@/components/parent/EasyGesturesRow';
+import GameFeedbackRow from '@/components/parent/GameFeedbackRow';
 import MediaDisplayRow from '@/components/parent/MediaDisplayRow';
 import DeletionConfirmForm from '@/components/parent/DeletionConfirmForm';
 import { useDeleteChild, useRevokeChildDevices } from '@/hooks/queries/useFamilyMutations';
@@ -257,6 +258,8 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin, onL
             />
             {/* M5-T17: »Lažje kretnje« — hold / button instead of swipes in the child's games. */}
             <EasyGesturesRow childId={child.id} childName={child.name} enabled={child.easy_gestures} />
+            {/* GAMES_SPEC §7.6: »Zvoki in vibracija v igrah« — sounds + haptics in the child's games (default on). */}
+            <GameFeedbackRow childId={child.id} childName={child.name} enabled={child.game_feedback} />
             {/* M5-T11: »Prikaz: Video / Slika« of the child's app. */}
             <MediaDisplayRow childId={child.id} childName={child.name} value={child.media_display} />
 

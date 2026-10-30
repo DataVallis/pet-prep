@@ -320,8 +320,11 @@ export interface LiveStateOverrides {
   sleep?: unknown;
   /** M5-T05 `care_guide` (raw); omitted = null (older server, no »?« button). */
   care_guide?: unknown;
-  /** M5-T11 / M5-T17 child settings (merged into the default `video` / no easy gestures). */
-  settings?: Partial<RawState['settings']>;
+  /**
+   * M5-T11 / M5-T17 child settings (merged into the default `video` / no easy gestures);
+   * GAMES_SPEC §7.6 `game_feedback` typed here until the backend PR regenerates schema.ts.
+   */
+  settings?: Partial<RawState['settings']> & { game_feedback?: boolean };
   timezone?: string;
   server_time?: string;
 }
@@ -505,6 +508,7 @@ export function makeFamilyChild(overrides: Partial<FamilyChild> = {}): FamilyChi
     adapted_mode: false,
     media_display: 'video',
     easy_gestures: false,
+    game_feedback: true,
     pet_id: null,
     contract_signed: false,
     stats: {

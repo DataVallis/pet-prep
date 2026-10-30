@@ -93,6 +93,20 @@ export function useSetEasyGestures() {
   });
 }
 
+/**
+ * GAMES_SPEC §7.6 (David 2026-10-30): a parent switches »Zvoki in vibracija v igrah« (sounds and
+ * haptics in the child's games, default on). Only the boolean goes to the server; the family
+ * refreshes afterwards (also after a failure: the value may have been stored without an answer).
+ */
+export function useSetGameFeedback() {
+  const queryClient = useQueryClient();
+  return useMutation<UpdateChildSettingsResponse, unknown, { childId: number; gameFeedback: boolean }>({
+    mutationFn: ({ childId, gameFeedback }) => api.updateChildSettings(childId, { game_feedback: gameFeedback }),
+    retry: false,
+    onSettled: () => queryClient.invalidateQueries({ queryKey: parentDashboardKey }),
+  });
+}
+
 /** A new id for one walk entry (idempotency of retries — not a secret). */
 export function newWalkEntryId(now: number = Date.now(), random: () => number = Math.random): string {
   return `w${now.toString(36)}${Math.floor(random() * 36 ** 6).toString(36).padStart(6, '0')}`;

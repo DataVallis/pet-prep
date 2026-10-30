@@ -1716,6 +1716,46 @@ sequenceDiagram
   App->>App: schedule moment → clip once (new instance replays) · missing / picture → pose image
 ```
 
+### 10f-2. Native game layer + ball v2 (GAMES_SPEC phase 1 app side, 2026-10-30)
+
+```mermaid
+flowchart TD
+  O[PlayOverlay mode play] --> F{gameLayerAvailable?<br/>RNGH · Skia · Reanimated · Worklets · ExpoHaptics · ExpoAudio}
+  F -->|no: older binary / OTA JS| V1[v1 BallGame — PanResponder, never requires ballV2]
+  F -->|yes: new store build| L[lazy require ballV2/BallGameV2<br/>load error → v1]
+  L --> GS[GameScreen full screen]
+  GS --> CD[ClipDeck: one muted player per clip URL, frame 0, hidden<br/>ready = first frames · 12 s → Slika]
+  CD -->|onReady| CLK[GameClock = SessionClock starts · useClipQueue.start]
+  GS --> PF[PlayField: Skia ball from shared values, UI thread]
+  GS --> FB[FeedbackLayer ✓ ✗ ★ round · mask ≥ 85 % → ClipQueue.setMasked]
+  GS --> TB[GameTopBar: dots · ★ · GameLine ≤ 32 chars ≥ 2 s · ×]
+  GS --> FX[GameFx: own WAVs + positive haptics<br/>off when settings.game_feedback = false · silent mode respected]
+```
+
+```mermaid
+stateDiagram-v2
+  [*] --> aim: deck ready
+  aim --> flying: pull ≥ 30 pt & ≥ 250 pt/s / hold »Vrzi žogo« — ✓ Lep met! · whoosh · bounce · tap
+  flying --> call: ball_running ended (held on the empty room)
+  call --> returning: »Pokliči!« — ✓ Pridi! · whistle · tap
+  call --> returning: 2 s — the dog comes by itself (no cue)
+  returning --> rolling: ball_fetching ended — pop, ball rolls to the camera
+  rolling --> aim: tap the ball — ★ Ujeta! · chime · success (throws < 3)
+  rolling --> aim: 1.5 s / 2.5 s hold mode — nothing (no ✗)
+  rolling --> done: 3rd throw — roundDone → one POST /play {kind: play}
+  done --> aim: »Še en krog« (round + 1)
+  done --> [*]: »Končano«
+```
+
+```mermaid
+flowchart LR
+  W[waiting = ball_waiting_loop<br/>else ball_waiting looping<br/>stand → stand] -->|crossfade ≤ 200 ms| R[running<br/>stand → empty, once]
+  R -->|end: holds empty room| H((call))
+  H -->|instant, same frame| FE[fetching<br/>empty → stand, once]
+  FE -->|instant, same frame| W
+  X[ClipQueue rules: never cut a once clip mid-way · crossfade only from a loop into its pose · a pose change = cut only under the feedback mask · clock safety = length + 600 ms]
+```
+
 ### 10g. Clip quality check (David 2026-10-23)
 
 Every new AI clip is a candidate until it passes; the old file stays visible meanwhile. One automatic regeneration per generation chain; a second failure is »Needs review« (not shown, the app's fallback). See ARCHITECTURE *Clip quality check*.

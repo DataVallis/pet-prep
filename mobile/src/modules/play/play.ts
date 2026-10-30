@@ -364,6 +364,13 @@ export const PLAY_STRINGS = strings('play', 'play', {
   progress: (n: number) => t('play:play.progress', { n }),
   charging: (percent: number) => t('play:play.charging', { percent }),
 });
+/** Ball v2 on the game layer (GAMES_SPEC §4.3); every game line here is ≤ 32 characters (test). */
+export const BALL_V2_STRINGS = strings('play', 'ball', {
+  a11y: {
+    progress: (n: number, stars: number) => t('play:ball.a11y.progress', { n, stars }),
+    stars: (stars: number) => t('play:ball.a11y.stars', { stars }),
+  },
+});
 export const CUDDLE_STRINGS = strings('play', 'cuddle', {
   progress: (n: number) => t('play:cuddle.progress', { n }),
 });

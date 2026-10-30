@@ -61,6 +61,9 @@ Brez zastavice `features` iz aplikacije: igra nima posledic, zato stara različi
 - Gumb in vabilo se skrijeta med sprehodom, šolo in čiščenjem.
 
 ### 4.2 Igra z žogo (mini-igra, ~20 s)
+
+> **GAMES_SPEC faza 1 (30. 10. 2026):** na gradnji z nativnim igralnim slojem žogo nadomesti **žoga v2** (`GAMES_SPEC.md` §4.3: met → »Pokliči!« → ulov, 3 meti, »Še en krog«, en `POST /play {kind:"play"}` na krog). Spodnji opis velja za starejše gradnje (v1). Pravila (mood only, brez točk) so nespremenjena.
+
 - Celozaslonska plast v slogu »Šole« (temno steklo). Spodaj žoga; otrok jo **povleče s prstom navzgor in spusti** (»vrže«). Kuža steče po žogo in jo prinese nazaj (pes s polnim naborom: video `playing`; ostali: obstoječi video + animirana žoga).
 - **3 meti** = konec. Vsak met šteje, ne glede na moč ali smer — ni zgrešenega meta, ni točk.
 - **Dostopnost:** gumb **»Vrzi žogo«** namesto potega — od M5-T17 (David 23. 10. 2026) samo z »Lažjimi kretnjami« ali vklopljenim VoiceOver / TalkBack: pridrži žogo ali gumb, moč meta se polni 1,2 s, spust vrže (bralnik zaslona: dvojni dotik vrže takoj); brez tega samo poteg; pri vklopljenem »zmanjšaj gibanje« žoga ne leti po zaslonu, samo kratek prelivni prikaz. Ni časovne omejitve med meti.

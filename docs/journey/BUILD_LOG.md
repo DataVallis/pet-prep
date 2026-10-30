@@ -8,6 +8,15 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-30 — Žoga, ki ji kuža res sledi: nov igralni sloj
+
+**Kaj:** zgrajen je nativni igralni sloj aplikacije (GAMES_SPEC faza 1, del 1) in na njem nova igra z žogo. Kuža je čez cel zaslon; vsi posnetki žoge se naložijo ob odprtju igre in se menjajo samo na koncu posnetka ali ob enaki pozi (nič več »skakanja« med posnetki, ki ga je David videl na telefonu). Žoga je narisana v 2,5D (60 sličic na sekundo na UI niti): otrok jo povleče in spusti, žoga leti v loku, se odbije in odkotali **na stran, kamor steče kuža**; otrok kužka **pokliče** (»Pokliči!«) in na koncu **ujame** žogo, ki se prikotali nazaj (★). 3 meti na krog, »Še en krog«. Kratki zvoki (5 lastnih, sintetiziranih iz matematičnih formul, vsak < 30 kB) in vibracija samo ob uspehu; starš jih izklopi s stikalom »Zvoki in vibracija v igrah«. Stare gradnje aplikacije ostanejo pri stari žogi.
+**Zakaj je pomembno:** David je 30. 10. na telefonu videl majhno statično žogo, ki se ni ujemala z videom, in kužka, ki je skakal med posnetki. Zdaj je otrok aktiven ves met (vrže → pokliče → ujame), kar je bliže pravemu prinašanju (pes pride, ko ga pokličeš). Isti sloj bodo uporabljali čiščenje, palica s peresom in šola (naslednje faze).
+**Številke:** 4 nove nativne knjižnice (potrebna nova gradnja v trgovini) · 0 novih AI posnetkov · 5 zvokov, skupaj ~74 kB · krog ~25–30 s.
+**Kako povedati:** 📣 »Žoga zdaj leti tja, kamor teče kuža — in ko ga pokličeš, ti jo prinese.« · 👩 »Igra brez kazni: zgrešena žoga samo obstane. Zvoke in vibracijo lahko izklopite; telefonov tihi način je upoštevan, mikrofona aplikacija ne uporablja.« · 🧒 »Vrzi, pokliči, ujemi — za vsako ujeto žogo zvezdica!« · 🛠 »Video ostane AI, igra je nativni sloj: Skia + Reanimated worklets, expo-video predvajalniki, prednaloženi enkrat, čista logika verige posnetkov (nikoli rez sredi posnetka, preliv le iz zanke) s testi.« *(Še ni preverjeno na telefonu.)*
+
+---
+
 ## 2026-10-30 — Nova družina dobi stisnjene posnetke že od prvega dne
 
 **Kaj:** ko je stiskanje vklopljeno, strežnik vsak nov AI posnetek stisne, še preden ga družina prvič vidi — po preverjanju kakovosti in pred prikazom. Če stiskanje ne prinese dovolj ali bi se slika vidno spremenila, se pokaže izvirnik kot doslej. **Zakaj:** aplikacija prenese cele datoteke; nov ljubljenček ima ~20 posnetkov po ~14 MB, kar je za prvo izkušnjo (in mobilne podatke) preveč. Izmerili smo hitre nastavitve: `veryfast` stisne 5-s posnetek v ~4 s (namesto ~10 s) z enakim prihrankom (~94 % na gladkem testnem posnetku), zato je nov posnetek pripravljen le ~7 s pozneje.

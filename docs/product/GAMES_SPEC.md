@@ -1,6 +1,6 @@
 # PetPrep — Igre, šola in čiščenje: interaktivni sloj (GAMES_SPEC)
 
-> **Status:** POTRJENO (David 30. 10. 2026, odgovori v §11) — smer, faze in odgovori V2, V5, V6, V10–V12. Spremembe pravil §10 (Š1–Š3, C1, P1, P2) potrdi David pred fazo 2 / 3 (V1). **Faza 1 v gradnji.**
+> **Status:** POTRJENO (David 30. 10. 2026, odgovori v §11) — smer, faze in odgovori V2, V5, V6, V10–V12. Spremembe pravil §10 (Š1–Š3, C1, P1, P2) potrdi David pred fazo 2 / 3 (V1). **Faza 1 v gradnji** — 30. 10. 2026: aplikacija, 1. del zgrajen (igralni sloj `mobile/src/modules/gameLayer/`, žoga v2, stikalo staršev »Zvoki in vibracija v igrah«; PR `feat/games-phase1-app`, potrebuje novo gradnjo v trgovini); strežnik (`game_feedback`, `ball_waiting_loop`, `exit_side`) v ločenem PR; **neredi in čiščenje (§6) sledijo kot ločena naloga** na istem sloju.
 > **Smer (David 30. 10. 2026):** »**Pes ostane video, igra postane interaktiven sloj.**« Realističen AI video ljubljenčka ostane (81 pasem × 333 barv, premium videz — brez 3D modela in brez risanega ljubljenčka); nad njim zgradimo nativni interaktivni sloj (60 fps, fizikalni predmeti, zvok, haptika).
 > **Oznake:** **SPREMEMBA PRAVILA — potrdi David** = obstoječe pravilo iz `PRODUCT_SPEC.md` / `CAT_SPEC.md` / `PLAY_CUDDLE_SPEC.md` se spremeni. **(D)** = Claudov predlog brez spremembe obstoječega pravila. Vse ostalo je opis stanja (s potjo do kode).
 > **Povezano:** `PRODUCT_SPEC.md` §5, §11, §13 · `PLAY_CUDDLE_SPEC.md` · `CAT_SPEC.md` §5 · `APP_REFINEMENT_SPEC.md` §3, §6, §10–§12 · `docs/engineering/SCHOOL_SMOOTH_PLAYBACK.md` · `brand/README.md`.
@@ -449,7 +449,7 @@ Strežnik ob izpeljankah primerja zadnji okvir `ball_running` (prazna soba) s sr
 | Faza | Kaj | Zakaj ta vrstni red | Izdaja |
 |---|---|---|---|
 | ~~0 — hitri popravki~~ | odpade (David 30. 10.) — vsebina v fazah 2 in 3 | — | — |
-| **1 — sloj + žoga + neredi** | `gameLayer` (ClipDeck, ClipQueue, FeedbackLayer, PlayField, GameFx), žoga v2, `ball_waiting_loop`, `exit_side`, nove ilustracije nereda in čiščenje | žoga nima pravil na strežniku → najnižje tveganje za preizkus nativnega sloja na napravi; neredi so samo prikaz | **nov EAS build** (+ OTA JS za stare gradnje ostane v1) |
+| **1 — sloj + žoga + neredi** | `gameLayer` (ClipDeck, ClipQueue, FeedbackLayer, PlayField, GameFx), žoga v2, `ball_waiting_loop`, `exit_side`, nove ilustracije nereda in čiščenje — **stanje 30. 10. 2026:** sloj + žoga v2 + stikalo staršev zgrajeni v aplikaciji (čaka novo gradnjo v trgovini in strežniški PR); neredi / čiščenje še ne | žoga nima pravil na strežniku → najnižje tveganje za preizkus nativnega sloja na napravi; neredi so samo prikaz | **nov EAS build** (+ OTA JS za stare gradnje ostane v1) |
 | **2 — palica v2** | §5, `wand_crouch_loop`, rules v2 | največ pritožb testerjev; uporabi sloj iz faze 1 | JS + strežnik (sloj je že v gradnji) |
 | **3 — šola v2** | §4.1, krogi, maska namesto release, priboljšek | največ pravil in najpomembnejša učna vsebina → zadnja, ko je sloj preverjen; QA krog (napredek, rutina) | JS + strežnik |
 | **4 — crkljanje, praskanje, nega** | §4.4, §5.5, §7.7 | majhne, brez tveganja | JS |

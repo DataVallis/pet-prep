@@ -19,6 +19,12 @@
  * Gestures use RN `PanResponder` (no gesture-handler, no haptics: no new native module).
  * Closing (×) mid-game reports nothing and has no consequence. A finished game is reported
  * once (`onFinished`); the HUD sends it and shows the happy dog.
+ *
+ * GAMES_SPEC phase 1 (2026-10-30): on a binary with the native game layer
+ * (`gameLayerAvailable()`) the ball game is v2 (`ballV2/BallGameV2`, full screen, throw → call →
+ * catch, »Še en krog«; one `onFinished('play')` per round). It is loaded lazily
+ * (`loadBallGameV2`) — an older binary that got this JS by OTA never evaluates it and keeps the
+ * v1 ball game below. Cuddles stay v1 until phase 4.
  */
 
 import { mediaModeOf } from '@/modules/display/display';
@@ -66,6 +72,8 @@ import {
 } from '@/modules/play/play';
 import type { PlayOverlayMode } from '@/store/appStore';
 import { useGestureMode, type GestureMode } from '@/modules/gestures/easyGestures';
+import { gameLayerAvailable } from '@/modules/gameLayer/capability';
+import type BallGameV2Component from '@/modules/play/ballV2/BallGameV2';
 import { BALL_CHARGE_MS, ballFlightHeight, chargePower } from '@/modules/gestures/holdPlay';
 import { MIN_TOUCH, alpha, fonts, palette, radius, tightTracking } from '@/theme';
 
@@ -81,6 +89,32 @@ export interface PlayOverlayProps {
   /** Signed media URL expired → the HUD refetches the state (same as its own video). */
   onMediaExpired?: () => void;
   testID?: string;
+}
+
+type BallGameV2Type = typeof BallGameV2Component;
+let ballGameV2: BallGameV2Type | null | undefined;
+
+/**
+ * The v2 ball game, or null on a binary without the native game layer (GAMES_SPEC §7.4). The
+ * module is required only here, only behind the flag — never import it statically: it pulls in
+ * gesture-handler, skia, expo-audio and expo-haptics, which crash an older binary on import.
+ * A failed load (should not happen when the flag is true) also keeps v1.
+ */
+export function loadBallGameV2(): BallGameV2Type | null {
+  if (!gameLayerAvailable()) return null;
+  if (ballGameV2 === undefined) {
+    try {
+      ballGameV2 = (require('./ballV2/BallGameV2') as { default: BallGameV2Type }).default;
+    } catch {
+      ballGameV2 = null;
+    }
+  }
+  return ballGameV2;
+}
+
+/** Tests: forget the loaded v2 module (after toggling the capability flag). */
+export function resetBallGameV2ForTests(): void {
+  ballGameV2 = undefined;
 }
 
 /**
@@ -564,6 +598,9 @@ export default function PlayOverlay({
   }, []);
   const finishBall = useCallback(() => finish('play'), [finish]);
   const finishCuddle = useCallback(() => finish('cuddle'), [finish]);
+  // GAMES_SPEC phase 1: every finished v2 round is its own play (»Še en krog« = another one).
+  const finishBallRound = useCallback(() => finishedRef.current('play'), []);
+  const BallGameV2 = mode === 'play' ? loadBallGameV2() : null;
 
   // Android back closes the layer (like × — an unfinished game reports nothing).
   useEffect(() => {
@@ -585,6 +622,14 @@ export default function PlayOverlay({
     const timer = setTimeout(() => closeRef.current(), DONE_AUTO_CLOSE_MS);
     return () => clearTimeout(timer);
   }, [doneKind]);
+
+  if (BallGameV2 !== null) {
+    return (
+      <View style={styles.fullScreen} testID={testID}>
+        <BallGameV2 view={view} reduceMotion={reduceMotion} onRoundFinished={finishBallRound} onClose={onClose} onMediaExpired={onMediaExpired} />
+      </View>
+    );
+  }
 
   return (
     <View style={styles.overlay} testID={testID} accessibilityViewIsModal>
@@ -660,6 +705,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingBottom: 28,
   },
+  fullScreen: { ...StyleSheet.absoluteFill, zIndex: 50 },
   header: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 },
   titleRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   title: { color: palette.white, fontSize: 22, letterSpacing: tightTracking(22), fontFamily: fonts.display },
