@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `irish_wolfhound` (viri S615–S624; ponovno S8, S10, S11, S35, S45, S174); seznam za vzreditelja iz S617 |
 | Izvor | FCI št. 160 »Irish Wolfhound«, skupina 10 (hrti), sekcija 2 (hrti z ostro dlako), Irska (S615) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 76. mesto »Irish Wolfhound« (S174, prebrano 2026-10-30) |
-| PR-ji | pet-prep #446 (pasma) · portret: sledi · pet-prep-website: sledi |
+| PR-ji | pet-prep #446 (pasma, združen `db18583`) · portret: PR (ta, zagon breed-portraits.yml 40999990646) · pet-prep-website `feat/register-irish-wolfhound` (stran pasme) |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -43,8 +43,8 @@
 | Pravila po starosti (2.000 → 12.000 korakov pri 12 mesecih, odrasel 12.000, starejši 9.000 od 68. meseca — predlog; 4 → 3 → 2 obroka) | 🛠 | 💶 izziv | M5-R10-80 | 2026-10-30 |
 | Česanje 2× na teden, »Nova izkušnja« za mladička, opozorilo »počakaj s sprehodom« po obroku, čiščenje ušes na 2 tedna | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R16 / M5-R20 | 2026-10-30 |
 | Barva (izbirnik barve: siv, sivo tigrast, pšenično rumen, rumenorjav, rdeč, črn, čisto bel) | 🛠 | 💶 izziv | M5-R21 | 2026-10-30 |
-| AI portret v registru | 🗓 sledi takoj po združitvi | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/irish-wolfhound`, `/sl/zivali/psi/irski-volcji-hrt`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru (siv, realistična fotografija, sprejet v prvem poskusu, zagon 40999990646, ~0,15 $) | ✅ | — | M5-R11-04 | 2026-10-30 |
+| Stran na petprep.si (`/animals/dogs/irish-wolfhound`, `/sl/zivali/psi/irski-volcji-hrt`) | 🗓 PR pet-prep-website `feat/register-irish-wolfhound`; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
@@ -54,6 +54,7 @@
 
 ## Odprto za Davida
 
+- **Portret (2026-10-30):** `breed-portraits.yml` (zagon 40999990646, koda `db18583`, ~0,15 $) — realistična fotografija odraslega sivega irskega volčjega hrta, ostra žimasta dlaka z brado, majhna rožasta ušesa, dolg nizko nošen rep, siva studijska podlaga; sprejet v prvem poskusu.
 - **Meja starejšega psa (68 mesecev, `verified=false`):** predlog iz recenzirane mediane 7,5 leta (Orleifson 2017, švedska kohorta, S623). Če potrdite McMillan 2024 (9,9 leta, zdaj le prek Wikipedije), bi bil starejši od 89 mesecev (podatkovna migracija ali urejanje v Filamentu).
 - **Breed Watch kategorija 2:** točke niso bile vrnjene, zato brez oznake dobrobiti — preverite.
 - **Kopanje:** PetMD »na 1–3 mesece po potrebi«, PDSA »ni potrebno« → brez opomnika; če PetMD beremo kot pogostost, bi bil opomnik na 4 tedne.
