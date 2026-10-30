@@ -119,8 +119,7 @@ class ReferenceImageRetryService
             // Frugal clips (QA #451 m1): a dog's frugal target is left to its source while the switch is
             // on — filtered here, before the limit (the per-row check in the loop stays as the guard).
             ->when(app(MediaEntitlementService::class)->frugalClipsEnabled(fresh: true), fn (Builder $q) => $q->whereNot(fn (Builder $q) => $q
-                ->where(fn (Builder $q) => $q->where(fn (Builder $q) => $q->where('kind', PetMedia::KIND_PHASE)->whereIn('state', array_keys(MediaEntitlementService::FRUGAL_PHASE_SOURCES)))
-                    ->orWhere(fn (Builder $q) => $q->where('kind', PetMedia::KIND_TRANSITION)->whereIn('state', array_keys(MediaEntitlementService::FRUGAL_REVERSED_TRANSITIONS))))
+                ->where('kind', PetMedia::KIND_PHASE)->whereIn('state', array_keys(MediaEntitlementService::FRUGAL_PHASE_SOURCES))
                 ->whereHas('pet', fn (Builder $q) => $q->whereIn('breed_type', MediaEntitlementService::dogBreedValues()))))
             ->orderBy('id');
     }

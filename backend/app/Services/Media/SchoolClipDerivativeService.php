@@ -48,11 +48,14 @@ use Throwable;
  * GenerateSchoolClipDerivative job; `media:school-derivatives` (scheduled backfill, every
  * 10 min, small batches).
  *
- * Frugal clips (David 2026-10-30, switch `frugal_clips` — MediaEntitlementService) add two
+ * Frugal clips (David 2026-10-30, switch `frugal_clips` — MediaEntitlementService) add these
  * sources, same table / job / backfill / encoding:
- *  - B. transition `idle_to_sleeping` → `sleeping_to_idle`: REVERSED at its original length
- *    (no speed-up) — made only where the owner has no `sleeping_to_idle` of its own
- *    ({@see reversalWanted()}); the payload serves it under `transitions.sleeping_to_idle`.
+ *  - B (LEGACY — dropped 2026-10-30, David: »looks like rewinding a tape«): transition
+ *    `idle_to_sleeping` → `sleeping_to_idle` REVERSED at its original length — made only where
+ *    the owner's `sleeping_to_idle` is still MARKED `frugal_source` and has no clip of its own
+ *    ({@see reversalWanted()}; nothing new is marked any more); the payload serves it under
+ *    `transitions.sleeping_to_idle` until `media:frugal-unreverse` replaces it with a fal clip
+ *    and FrugalUnreverseService::release() deletes it.
  *  - C. a SHORT low-motion loop (`sleeping` / `low_energy` / `sick`, stored ≤
  *    `frugal.short_loop_max_seconds`) → `<state>_loop`: the same ping-pong as the school
  *    loops; the payload serves it under `videos.<state>` (older 5 s loops never qualify).
@@ -104,7 +107,6 @@ class SchoolClipDerivativeService
     public function __construct(
         private readonly PetMediaService $media,
         private readonly MediaClipAnalyzer $analyzer,
-        private readonly MediaEntitlementService $entitlements,
     ) {}
 
     // ──────────────────────────────────────────────────────────────
@@ -148,7 +150,7 @@ class SchoolClipDerivativeService
         }
 
         if ($slot->isTransition()) {
-            $target = array_search((string) $slot->state, MediaEntitlementService::FRUGAL_REVERSED_TRANSITIONS, true);
+            $target = array_search((string) $slot->state, MediaEntitlementService::LEGACY_REVERSED_TRANSITIONS, true);
 
             return is_string($target) ? $target : null;
         }
@@ -170,7 +172,7 @@ class SchoolClipDerivativeService
     {
         return match (true) {
             $slot->isPhase() => self::keyFor($slot->phaseClip()) !== null,
-            $slot->isTransition() => in_array((string) $slot->state, MediaEntitlementService::FRUGAL_REVERSED_TRANSITIONS, true),
+            $slot->isTransition() => in_array((string) $slot->state, MediaEntitlementService::LEGACY_REVERSED_TRANSITIONS, true),
             $slot->isVideo() => in_array((string) $slot->state, MediaEntitlementService::shortLoopStates(), true),
             default => false,
         };
@@ -193,14 +195,14 @@ class SchoolClipDerivativeService
     }
 
     /**
-     * Frugal clips B: the reversed transition is made only where the owner (the pet's unique
-     * rows, or the look's rows of the same stage) has no `sleeping_to_idle` of its own — and,
-     * when it has an unmade row, only while the switch is on or that row is marked
-     * `frugal_source` (the MediaEntitlementService rule).
+     * LEGACY frugal B: a reversed transition is (re)made only where the owner (the pet's unique
+     * rows, or the look's rows of the same stage) has a `sleeping_to_idle` row still MARKED
+     * `frugal_source` and no clip of its own (stored or in progress). Never because of the
+     * switch (David 2026-10-30: the reversal was dropped) — no new pet / look is reversed.
      */
     public function reversalWanted(PetMedia $source): bool
     {
-        $target = array_search((string) $source->state, MediaEntitlementService::FRUGAL_REVERSED_TRANSITIONS, true);
+        $target = array_search((string) $source->state, MediaEntitlementService::LEGACY_REVERSED_TRANSITIONS, true);
         if (! is_string($target)) {
             return false;
         }
@@ -221,8 +223,8 @@ class SchoolClipDerivativeService
         $own = $sibling !== null && ($sibling->status === PetMedia::STATUS_RUNNING
             || ($sibling->isServable() && ($sibling->pet_look_id !== null || (int) $sibling->source_generation >= (int) $source->source_generation)));
 
-        // QA #451 m4: without a marked sibling only while the switch is on (no wasted ffmpeg).
-        return ! $own && ($sibling?->frugal_source !== null || $this->entitlements->frugalClipsEnabled(fresh: true));
+        // Only an already marked sibling (legacy) — the switch never starts a reversal any more.
+        return ! $own && $sibling?->frugal_source !== null;
     }
 
     /** The row owning a slot's file (a pool pet's row → its look row). */
@@ -250,12 +252,11 @@ class SchoolClipDerivativeService
      */
     public function dueSources(?int $petId = null, ?int $lookId = null): Builder
     {
-        $frugal = $this->entitlements->frugalClipsEnabled(fresh: true);
         $dogs = MediaEntitlementService::dogBreedValues();
         // The owner's sleeping_to_idle row(s): the same pet, or the same look + stage.
         $sibling = fn ($q) => $q->selectRaw('1')->from('pet_media as t')
             ->where('t.kind', PetMedia::KIND_TRANSITION)
-            ->whereIn('t.state', array_keys(MediaEntitlementService::FRUGAL_REVERSED_TRANSITIONS))
+            ->whereIn('t.state', array_keys(MediaEntitlementService::LEGACY_REVERSED_TRANSITIONS))
             ->where(fn ($q) => $q->where(fn ($q) => $q->whereNotNull('pet_media.pet_look_id')
                 ->whereColumn('t.pet_look_id', 'pet_media.pet_look_id')->whereColumn('t.life_stage', 'pet_media.life_stage'))
                 ->orWhere(fn ($q) => $q->whereNull('pet_media.pet_look_id')->whereColumn('t.pet_id', 'pet_media.pet_id')));
@@ -263,9 +264,9 @@ class SchoolClipDerivativeService
         return PetMedia::query()
             ->where(fn (Builder $q) => $q
                 ->where(fn (Builder $q) => $q->where('kind', PetMedia::KIND_PHASE)->whereIn('state', self::sourceStates()))
-                // Frugal B: a dog's idle_to_sleeping whose owner has no own sleeping_to_idle (reversalWanted()).
+                // Legacy frugal B: a dog's idle_to_sleeping whose owner's sleeping_to_idle is still marked (reversalWanted()).
                 ->orWhere(fn (Builder $q) => $q->where('kind', PetMedia::KIND_TRANSITION)
-                    ->whereIn('state', array_values(MediaEntitlementService::FRUGAL_REVERSED_TRANSITIONS))
+                    ->whereIn('state', array_values(MediaEntitlementService::LEGACY_REVERSED_TRANSITIONS))
                     ->where(fn ($q) => $q->whereExists(fn ($q) => $q->selectRaw('1')->from('pets as op')
                         ->whereColumn('op.id', 'pet_media.pet_id')->whereIn('op.breed_type', $dogs))
                         ->orWhereExists(fn ($q) => $q->selectRaw('1')->from('pet_looks as ol')
@@ -274,8 +275,8 @@ class SchoolClipDerivativeService
                         ->where(fn ($q) => $q->where('t.status', PetMedia::STATUS_RUNNING)
                             ->orWhere(fn ($q) => $q->whereNotNull('t.storage_path')
                                 ->where(fn ($q) => $q->whereNotNull('t.pet_look_id')->orWhereColumn('t.source_generation', '>=', 'pet_media.source_generation')))))
-                    // QA #451 m4: switch off → only where a sibling is marked frugal_source.
-                    ->when(! $frugal, fn ($q) => $q->whereExists(fn ($q) => $sibling($q)->whereNotNull('t.frugal_source'))))
+                    // Only where a sibling is still marked frugal_source (legacy — never the switch).
+                    ->whereExists(fn ($q) => $sibling($q)->whereNotNull('t.frugal_source')))
                 // Frugal C: short low-motion state loops (isShortLoop()).
                 ->orWhere(fn (Builder $q) => $q->where('kind', PetMedia::KIND_VIDEO)
                     ->whereIn('state', MediaEntitlementService::shortLoopStates())

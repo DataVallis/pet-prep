@@ -134,7 +134,8 @@ class MediaRelationManager extends RelationManager
                 Tables\Columns\TextColumn::make('state')->placeholder('—'),
                 Tables\Columns\TextColumn::make('recipe')->label('Made as')
                     ->getStateUsing(fn (PetMedia $record): ?string => match (true) {
-                        // Frugal clips (QA #451 m6): a target served from its source.
+                        // Frugal clips (QA #451 m6): a target served from its source (a transition: the
+                        // legacy reversal, replaced by media:frugal-unreverse — David 2026-10-30).
                         $record->frugal_source !== null && $record->isPhase() => __('admin.features.frugal_made_as_phase'),
                         $record->frugal_source !== null && $record->isTransition() => __('admin.features.frugal_made_as_transition'),
                         $record->isVideo() && self::madeAs($record) === PetMedia::RECIPE_LOOP => 'loop (key image → key image, frozen — regenerate)',
