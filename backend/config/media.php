@@ -214,10 +214,12 @@ return [
     /*
     | Stored video compression (David 2026-10-30, `media:compress`,
     | Media\VideoCompressionService): every stored AI clip (state video, loop,
-    | transition, phase clip — the row owning the file) is re-encoded ONCE at the
-    | same path — H.264 High, yuv420p, CRF below, same resolution and fps — and
-    | kept only when it is `min_saving_percent` smaller AND looks the same
-    | (SSIM ≥ `min_ssim`, same duration / frame count). On / off is the superadmin
+    | transition, phase clip — the row owning the file) is re-encoded ONCE into a
+    | new key `<name>-c.mp4` — H.264 High, yuv420p, CRF below, same resolution and
+    | fps — and used only when it is `min_saving_percent` smaller AND looks the
+    | same (mean SSIM ≥ `min_ssim`, every frame ≥ `min_frame_ssim`, same duration /
+    | frame count). The original is deleted after `original_grace_minutes` (longer
+    | than a signed media URL lives, ≤ 90 min). On / off is the superadmin
     | switch /admin → Feature switches (`app_settings.video_compression`, default
     | OFF); the scheduled run works in batches within `time_budget_seconds`.
     */
@@ -226,13 +228,20 @@ return [
         'preset' => env('MEDIA_COMPRESS_PRESET', 'slow'),
         'min_saving_percent' => (float) env('MEDIA_COMPRESS_MIN_SAVING_PERCENT', 30),
         'min_ssim' => (float) env('MEDIA_COMPRESS_MIN_SSIM', 0.98),
+        'min_frame_ssim' => (float) env('MEDIA_COMPRESS_MIN_FRAME_SSIM', 0.95),
         // ffmpeg threads per encode and `nice` level — the CX23 has 2 vCPUs and also serves the API.
         'threads' => (int) env('MEDIA_COMPRESS_THREADS', 2),
         'nice' => (int) env('MEDIA_COMPRESS_NICE', 19),
+        // Address-space cap per ffmpeg call (`prlimit --as`; 0 = none). Measured 2026-10-30: a
+        // 1076 × 1924 encode at preset slow / 2 threads fails at 1024 MB, works at 1536 MB
+        // (peak RSS ~570 MB) — 2048 MB leaves headroom on the CX23 (4 GB, shared with the API).
+        'memory_limit_mb' => (int) env('MEDIA_COMPRESS_MEMORY_MB', 2048),
         // Per ffmpeg / ffprobe call (a 10 s 1080 × 1920 clip at `slow` stays well below).
         'process_timeout_seconds' => (int) env('MEDIA_COMPRESS_PROCESS_TIMEOUT', 300),
         // Scheduled run: stop starting new files after this many seconds.
         'time_budget_seconds' => (int) env('MEDIA_COMPRESS_TIME_BUDGET', 600),
+        // Originals replaced by a compressed key are deleted after this (≥ 2 h > signed URL life).
+        'original_grace_minutes' => (int) env('MEDIA_COMPRESS_ORIGINAL_GRACE_MINUTES', 180),
     ],
 
     /*

@@ -103,7 +103,8 @@
        docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app php artisan media:compress --sample=10
        docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app php artisan media:disk-report
        ```
-       `--sample=10` za 10 posnetkov izpiše MB prej → potem, prihranek % in SSIM (≥ 0,98 = videti enako). Izpis pošlji Claudu ali preglej sam; če želiš, enega od posnetkov iz izpisa primerjaj na očeh.
+       `--sample=10` za 10 posnetkov izpiše MB prej → potem, prihranek %, povprečni SSIM (≥ 0,98 = videti enako) in najslabšo sličico (≥ 0,95). Izpis pošlji Claudu ali preglej sam; če želiš, enega od posnetkov iz izpisa primerjaj na očeh.
+       **Pozor:** izvirnik se po stiskanju izbriše po 3 urah — vrniti ga je mogoče samo iz off-site varnostne kopije (korak 7). Priporočilo: najprej uredi korak 7.
     2. Če so številke v redu: `/admin` → *Feature switches* / *Funkcije* → **»Video compression (disk)« / »Stiskanje videov (disk)«** → ON → *Save*. Stiskanje teče ponoči (22.00–6.00, vsako uro do 10 min); naslednje jutro `media:disk-report` pokaže prihranek (stolpca *compressed* / *saved*).
 
 ## 2. Decisions
@@ -175,7 +176,7 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 ## 6. Session log
 
 ### 2026-10-30 (cloud, backend) — stored video compression (`feat/media-compress`)
-- `media:compress` (`Media\VideoCompressionService`): each stored clip file once, same path, CRF 21 / slow / same 1076 × 1924 / 24 fps; kept only at ≥ 30 % saving + SSIM ≥ 0.98 + same duration / frames; `--dry-run`, `--sample=N`; scheduled hourly :37 22:00–06:00 Ljubljana behind the superadmin switch `video_compression` (default off). `media:disk-report` read-only. Migration adds `pet_media.compression_*` / `compressed_at` / `original_bytes`. Tests `VideoCompressionTest` (14). David: §1b step 12. Debt: a Range request of a clip streamed exactly while it is swapped could mix old / new bytes once (mitigated by the night window; the app caches whole files).
+- `media:compress` (`Media\VideoCompressionService`): each stored clip file once into a NEW key `…-c.mp4` (QA #450 — rows + derived `source_path` switch in one transaction, original deleted after 180 min when unreferenced, pre-swap marker recovered by the next run), CRF 21 / slow / same 1076 × 1924 / 24 fps; kept only at ≥ 30 % saving + mean SSIM ≥ 0.98 + every frame ≥ 0.95 + same duration / frames; `nice` + `prlimit --as=2048 MB`; 3 failures in a row stop a run; `--dry-run`, `--sample=N`, `--retry-failed`; scheduled hourly :37 22:00–06:00 Ljubljana (timezone set before `between`) behind the superadmin switch `video_compression` (default off). `media:disk-report` read-only (one listing with sizes). Migration adds `pet_media.compression_*` / `compressed_at` / `original_bytes` / `original_path`. Tests `VideoCompressionTest` (22). David: §1b step 12. Debt: originals deleted after the grace period are restorable only from the off-site backup (§1b step 7).
 
 ### 2026-10-29 (cloud, mobile) — app version line + »Preveri posodobitve« (`feat/app-version-row`)
 - Parent Nadzor → »O aplikaciji«: `AppVersionCard` (»3.1.9 (42) · posodobitev 6bf527d · 29. 10. 13:17« / »vgrajena različica«, tap copies details, check → fetch → »Znova zaženi zdaj«, never auto-reload); child: read-only line in `ChildSettingsSheet`; `mobile-ota.sh` exports `EXPO_PUBLIC_GIT_COMMIT` (harness `scripts/tests/mobile-ota.test.sh`). Not verified on a phone; reaches phones with the next production OTA (JS only, same runtime). Debt: build number on Android uses the deprecated `Constants.platform.android.versionCode` (no expo-application to keep the runtime).

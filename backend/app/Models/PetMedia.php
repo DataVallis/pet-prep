@@ -79,6 +79,9 @@ use Illuminate\Support\Carbon;
  * @property int $compression_attempts
  * @property Carbon|null $compressed_at
  * @property int|null $original_bytes
+ * @property string|null $original_path
+ * @property string|null $compression_target_path
+ * @property int|null $compression_target_bytes
  * @property string|null $compression_note
  */
 class PetMedia extends Model
@@ -200,6 +203,16 @@ class PetMedia extends Model
         // David 2026-10-28 (QA #434 M1): automatic retries of the current failure chain + its one alert.
         'auto_retries',
         'auto_alerted_at',
+        // David 2026-10-30: stored video compression (written only by Media\VideoCompressionService).
+        'compression_path',
+        'compression_status',
+        'compression_attempts',
+        'compression_target_path',
+        'compression_target_bytes',
+        'compressed_at',
+        'original_bytes',
+        'original_path',
+        'compression_note',
     ];
 
     /**
@@ -224,6 +237,7 @@ class PetMedia extends Model
             'compression_attempts' => 'integer',
             'compressed_at' => 'datetime',
             'original_bytes' => 'integer',
+            'compression_target_bytes' => 'integer',
         ];
     }
 

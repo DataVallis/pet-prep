@@ -9,6 +9,7 @@ use App\Services\Media\PetMediaService;
 use App\Services\Media\VideoCompressionService;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
+use League\Flysystem\FileAttributes;
 use Throwable;
 
 /**
@@ -16,9 +17,9 @@ use Throwable;
  * kind from `pet_media.bytes` (owning rows — a shared look file counted once), derived
  * school clips, the growth album and clip candidates; what compression saved; the actual
  * files on the active media disk; files no DB row references (orphans — the same reference
- * list as `media:move-to-object-storage`); candidate files older than `--stale-hours`;
- * leftover compression temp files. **Never deletes anything** — deleting production data
- * needs David.
+ * list as `media:move-to-object-storage`); originals waiting for their deletion after
+ * compression; candidate files older than `--stale-hours`. **Never deletes anything** —
+ * deleting production data needs David.
  */
 class MediaDiskReportCommand extends Command
 {
@@ -65,8 +66,15 @@ class MediaDiskReportCommand extends Command
         $this->line('');
         $this->info('Active media disk: '.($storage->usesObjectStorage() ? 'object storage' : 'local'));
 
+        // One listing with sizes (QA #450 n3 — on object storage a size() per key would be
+        // one HEAD request per file).
         try {
-            $files = array_values(array_filter($disk->allFiles(), fn (string $p): bool => ! str_starts_with(basename($p), '.')));
+            $files = [];
+            foreach ($disk->getDriver()->listContents('', true) as $item) {
+                if ($item instanceof FileAttributes && ! str_starts_with(basename($item->path()), '.')) {
+                    $files[$item->path()] = (int) $item->fileSize();
+                }
+            }
         } catch (Throwable $e) {
             $this->error('Could not list the media disk: '.$e->getMessage());
 
@@ -74,28 +82,30 @@ class MediaDiskReportCommand extends Command
         }
 
         $referenced = array_flip($mover->referencedPaths());
+        $awaiting = array_flip(PetMedia::whereNotNull('original_path')->pluck('original_path')->all());
+        $replacing = PetMedia::where('compression_status', VideoCompressionService::STATUS_REPLACING)->count();
         $total = 0;
         $orphans = [];
         $orphanBytes = 0;
-        $temps = [];
-        foreach ($files as $path) {
-            $size = (int) $disk->size($path);
+        $awaitingBytes = 0;
+        foreach ($files as $path => $size) {
             $total += $size;
-            if (str_ends_with($path, VideoCompressionService::TEMP_SUFFIX)) {
-                $temps[] = $path;
+            if (isset($referenced[$path])) {
+                continue;
             }
-            if (! isset($referenced[$path])) {
-                $orphans[] = $path;
-                $orphanBytes += $size;
+            if (isset($awaiting[$path])) {
+                $awaitingBytes += $size;
+
+                continue;
             }
+            $orphans[] = $path;
+            $orphanBytes += $size;
         }
         $this->line(sprintf('Files on disk: %d, %s.', count($files), $mb($total)));
+        $this->line(sprintf('Compressed-away originals awaiting deletion (grace period): %d, %s; interrupted swaps: %d.', count($awaiting), $mb($awaitingBytes), $replacing));
         $this->line(sprintf('Orphans (no pet_media / history / derivative / contact sheet row): %d, %s.', count($orphans), $mb($orphanBytes)));
         foreach (array_slice($orphans, 0, $listMax) as $path) {
             $this->line('  orphan '.$path);
-        }
-        if (count($temps) > 0) {
-            $this->line(sprintf('Leftover compression temp files: %d.', count($temps)));
         }
 
         $staleHours = max(1, (int) $this->option('stale-hours'));

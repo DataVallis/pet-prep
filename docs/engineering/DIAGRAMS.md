@@ -2195,3 +2195,34 @@ sequenceDiagram
   end
   Note over DB: system-health:prune (03:29 UTC) deletes everything not seen for 30 days · /admin/system-health »App errors« (superadmin, 24 h / 7 d)
 ```
+
+## 19. Stored video compression: one file → new key → swap → original after the grace period (David 2026-10-30, QA #450)
+
+`media:compress` (hourly :37, 22:00–06:00 Ljubljana, only while `app_settings.video_compression` is on). ARCHITECTURE *Stored video compression*.
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant S as Scheduler (media:compress)
+  participant V as VideoCompressionService
+  participant DB as PostgreSQL (pet_media, pet_media_derivatives)
+  participant D as Media disk (local / pet_media_s3)
+  participant F as ffmpeg (nice, prlimit 2 GB)
+  S->>DB: switch video_compression (fresh) — off → stop
+  S->>V: cleanupTempFiles (older than 1 h) · recoverInterrupted · deleteCompressedOriginals
+  V->>DB: rows `replacing`: new key there with expected size → swap, else drop key + marker (never a failure)
+  V->>DB: originals past 180 min and unreferenced → delete file, original_path = null
+  loop candidates (chunkById, owner rows only, until limit / 600 s / 3 failures in a row)
+    V->>D: copy original → temp file
+    V->>F: ffprobe source (no audio) · encode CRF 21 slow, same size + fps · ffprobe result · ssim (stats per frame, 1 thread)
+    alt saving < 30 % or SSIM < 0.98 or a frame < 0.95 or size / frames / duration differ
+      V->>DB: compression_status = rejected (original stays, never tried again)
+    else accepted
+      V->>DB: marker: compression_status = replacing, target = name-c.mp4 + bytes (only if the row still holds the file)
+      V->>D: write name-c.mp4
+      V->>DB: ONE transaction, owner row locked: owner + pool rows storage_path / bytes → new key, derivatives source_path → new key, original_path = old
+      Note over DB,D: new path → new signed URL v → the app's mediaFileCache downloads the smaller copy once
+    end
+  end
+  Note over S: 3 failures in a row = system fault → stop, nothing recorded · media:disk-report is read-only
+```
