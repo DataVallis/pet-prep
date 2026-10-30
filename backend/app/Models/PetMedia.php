@@ -57,6 +57,7 @@ use Illuminate\Support\Carbon;
  * @property int|null $source_generation
  * @property string|null $recipe
  * @property string|null $stored_recipe
+ * @property string|null $frugal_source
  * @property int $attempts
  * @property string|null $request_id
  * @property string|null $source_url
@@ -213,6 +214,8 @@ class PetMedia extends Model
         'original_bytes',
         'original_path',
         'compression_note',
+        // Frugal clips (David 2026-10-30): the source this target slot is served from (MediaEntitlementService).
+        'frugal_source',
     ];
 
     /**

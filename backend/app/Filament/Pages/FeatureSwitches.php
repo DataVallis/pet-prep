@@ -33,7 +33,8 @@ use InvalidArgumentException;
  * school & game phase clips on / off (M5-T09 / T10 QA M2) and the automatic clip
  * quality check on / off (David 2026-10-23) and app error reports on / off (M5-05,
  * QA #375 B1 — default off until the privacy policy and store labels cover them) and
- * stored video compression on / off (David 2026-10-30, `media:compress`, default off).
+ * stored video compression on / off (David 2026-10-30, `media:compress`, default off) and
+ * frugal clips on / off (David 2026-10-30, AI cost — default off).
  *
  * @property Form $form
  */
@@ -82,6 +83,7 @@ class FeatureSwitches extends Page implements HasForms
             'unique_pet_media' => $settings->uniquePetMedia(),
             'state_media' => $settings->stateMedia(),
             'phase_clips' => $settings->phaseClips(),
+            'frugal_clips' => $settings->frugalClips(),
             'quality_check' => $settings->qualityCheckMode(),
             'app_error_reports' => $settings->appErrorReports(),
             'video_compression' => $settings->videoCompression(fresh: true),
@@ -144,6 +146,14 @@ class FeatureSwitches extends Page implements HasForms
                             ->label(__('admin.features.phase_clips'))
                             ->default(true),
                     ]),
+                // David 2026-10-30: three AI-cost savings for NEW dog media (default off).
+                Section::make(__('admin.features.frugal_clips_section'))
+                    ->description(__('admin.features.frugal_clips_description'))
+                    ->schema([
+                        Toggle::make('frugal_clips')
+                            ->label(__('admin.features.frugal_clips'))
+                            ->default(false),
+                    ]),
                 // David 2026-10-23: automatic technical + AI vision check of every new clip.
                 Section::make(__('admin.features.quality_check_section'))
                     ->description(__('admin.features.quality_check_description'))
@@ -193,6 +203,7 @@ class FeatureSwitches extends Page implements HasForms
         $unique = (bool) ($data['unique_pet_media'] ?? false);
         $stateMedia = (bool) ($data['state_media'] ?? AppSettingsService::stateMediaDefault());
         $phaseClips = (bool) ($data['phase_clips'] ?? AppSettingsService::phaseClipsDefault());
+        $frugalClips = (bool) ($data['frugal_clips'] ?? AppSettingsService::frugalClipsDefault());
         $qualityCheck = (string) ($data['quality_check'] ?? AppSettingsService::qualityCheckDefault());
         $appErrors = (bool) ($data['app_error_reports'] ?? false);
         $compression = (bool) ($data['video_compression'] ?? false);
@@ -211,6 +222,9 @@ class FeatureSwitches extends Page implements HasForms
             }
             if ($phaseClips !== $settings->phaseClips()) {
                 $settings->updatePhaseClips($this->admin(), $phaseClips);
+            }
+            if ($frugalClips !== $settings->frugalClips(fresh: true)) {
+                $settings->updateFrugalClips($this->admin(), $frugalClips);
             }
             if ($qualityCheck !== $settings->qualityCheckMode()) {
                 $settings->updateQualityCheck($this->admin(), $qualityCheck);
@@ -233,6 +247,7 @@ class FeatureSwitches extends Page implements HasForms
         Notification::make()->title(__('admin.features.saved'))->body(__('admin.features.saved_body_media', ['mode' => $mode->label(), 'media' => $media])
             .' · '.__('admin.features.saved_body_state_media', ['state' => $states])
             .' · '.__('admin.features.saved_body_phase_clips', ['state' => $phases])
+            .' · '.__('admin.features.saved_body_frugal_clips', ['state' => $settings->frugalClips(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')])
             .' · '.__('admin.features.saved_body_quality_check', ['state' => __('admin.features.quality_check_'.$settings->qualityCheckMode())])
             .' · '.__('admin.features.saved_body_app_error_reports', ['state' => $settings->appErrorReports(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')])
             .' · '.__('admin.features.saved_body_video_compression', ['state' => $settings->videoCompression(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')]))->success()->send();
@@ -244,7 +259,7 @@ class FeatureSwitches extends Page implements HasForms
     public function getChanges(): Collection
     {
         return AppSettingChange::with('user:id,name,email')
-            ->whereIn('key', [AppSettingsService::CATS_KEY, AppSettingsService::UNIQUE_MEDIA_KEY, AppSettingsService::STATE_MEDIA_KEY, AppSettingsService::PHASE_CLIPS_KEY, AppSettingsService::QUALITY_CHECK_KEY, AppSettingsService::APP_ERROR_REPORTS_KEY, AppSettingsService::VIDEO_COMPRESSION_KEY])
+            ->whereIn('key', [AppSettingsService::CATS_KEY, AppSettingsService::UNIQUE_MEDIA_KEY, AppSettingsService::STATE_MEDIA_KEY, AppSettingsService::PHASE_CLIPS_KEY, AppSettingsService::FRUGAL_CLIPS_KEY, AppSettingsService::QUALITY_CHECK_KEY, AppSettingsService::APP_ERROR_REPORTS_KEY, AppSettingsService::VIDEO_COMPRESSION_KEY])
             ->latest('id')->limit(20)->get();
     }
 

@@ -288,6 +288,13 @@ return [
         'phase_clips_description' => 'On (default, David 2026-10-21): pets on state media version 3 (purchased full set) also get a short clip per school command phase (3 s; »performing« 5 s since 2026-10-23) (attention → performing → success; potty = the dog goes to the door) and per game phase (dog ball: waiting → runs out of frame → brings it back; cat wand: crouch → pounce → catch), with their pose images (about $0.34 per 3 s clip, $0.56 per 5 s performing clip, $0.15 per pose image; shared looks make them once). Needs »State media on« too. Off: no pose images or phase clips are generated — also nothing already queued, retried or swept; the games and the school use the older clips and rules. Turning it on again resumes the waiting items at once.',
         'phase_clips' => 'School & game clips on',
         'saved_body_phase_clips' => 'School & game clips: :state',
+        'frugal_clips_section' => 'Frugal clips (AI cost)',
+        'frugal_clips_description' => 'Off (default). On (David 2026-10-30): NEW dog media are made more cheaply, about $2.24 less per look and life stage — A. one school »attention« clip (sit) serves come, place and potty too (same prompt and frames; −9 s ≈ $1.01); B. »sleeping → awake« is »awake → sleeping« played backwards on our server (ffmpeg, $0; −5 s ≈ $0.56); C. the sleeping, tired and sick loops are made 3 s instead of 5 s and played as a seamless forward-and-back loop (−6 s ≈ $0.67). Clips already stored (four attention clips, own transitions, 5 s loops) keep being shown as they are; the school stays locked until its clips are ready. Before switching on, run `media:frugal-preview --look=…` and look at the clips (0 $).',
+        'frugal_clips' => 'Frugal clips on',
+        'saved_body_frugal_clips' => 'Frugal clips: :state',
+        'frugal_made_as_phase' => 'served from sit attention (frugal clips)',
+        'frugal_made_as_transition' => 'reversed idle → sleeping on our server (frugal clips)',
+        'frugal_regenerate_refused' => 'Frugal clips are on: this clip is served from :source — regenerate that one instead.',
         'quality_check_section' => 'Clip quality check',
         'quality_check_description' => 'David 2026-10-23: every new AI clip is checked — a free technical check (ffmpeg: length, frozen picture, sudden jumps, motion bunched up at the end, last frame vs the end image) and an AI vision check of 6 frames (anatomy, same animal, the action really happens, glitches; production AI budget, estimated ≤ $0.01 per clip; without budget or with the vision model off only the technical check decides — »not AI-checked«). SHADOW (default until the thresholds are calibrated on real clips): verdicts and measurements are recorded and shown in Pet → AI media (»would fail«), every clip is still shown, nothing is regenerated. ENFORCE: until a new clip passes, the old one (if any) stays visible; a failed clip is regenerated automatically ONCE, a second failure is not shown (the app uses its fallback) and is listed as »Needs review«. OFF: no check (the old behaviour).',
         'quality_check_off' => 'Off — no check',
@@ -551,6 +558,12 @@ return [
         'run' => ':pets pet(s), estimated $:cost',
     ],
     // David 2026-10-28: school / game clips that failed for good (ActivityClipRetryService).
+    'frugal_clips' => [
+        'discord' => [
+            'title' => 'Frugal clips: :count server-made clip(s) failed — made by fal instead',
+            'body' => 'A reversed transition or a ping-pong loop could not be made with ffmpeg 3 times, so that clip is now generated the normal way (usual price). Check ffmpeg / memory on the server (System health).',
+        ],
+    ],
     'activity_media' => [
         'discord' => [
             'title' => ':count school / game clip(s) need an admin',

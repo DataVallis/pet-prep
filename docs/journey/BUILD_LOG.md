@@ -23,6 +23,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-30 — Varčni posnetki: ~2,24 $ manj na kužka, brez vidne razlike
+
+**Kaj:** David je odobril tri prihranke pri AI posnetkih kužkov, skrite za stikalom v administraciji (privzeto izklopljeno): en posnetek »pozornosti« v šoli namesto štirih enakih, prehod »spanje → budnost« kot obrnjen »budnost → spanje« (naš strežnik, 0 $) in mirne zanke (spanje, utrujenost, bolezen) dolge 3 s, predvajane naprej-nazaj brez šiva. Strošek celotnega nabora kužka na videz in obdobje pade z 12,07 $ na 9,83 $ (−19 %). Slike ostanejo 1K (2K zavrnjeno).
+**Zakaj je pomembno:** isti premium videz za manj denarja — vsak prihranek se da pred vklopom brezplačno preveriti na že narejenih posnetkih (`media:frugal-preview`); obstoječi kužki se ne spremenijo, aplikacije ni treba posodabljati.
+**Kako povedati:** 💼 »AI strošek na kužka −19 % brez izgube kakovosti — ponavljajoče se gibe ustvarimo enkrat in jih na strežniku obrnemo ali zrcalimo.« · 🛠 »Mapiranje virov medijev nad enotnim seznamom posnetkov: branje, pripravljenost in API ostanejo en vir resnice; ffmpeg reverse / ping-pong v polni ločljivosti.«
+
 ## 2026-10-29 — »Katero različico imam?« v nastavitvah
 
 **Kaj:** v starševskem »Nadzor → O aplikaciji« je vrstica **»Različica aplikacije«** (npr. »3.1.9 (42) · posodobitev 6bf527d · 29. 10. 13:17« ali »vgrajena različica«) in gumb **»Preveri posodobitve«**, ki novo posodobitev prenese in ponudi »Znova zaženi zdaj«. Otrok vidi isto vrstico sivo na dnu nastavitev. **Zakaj:** posodobitev brez trgovine (OTA) se prenese v ozadju in začne veljati šele ob naslednjem zagonu — David je preizkušal šolo na stari kodi telefona, medtem ko je strežnik že imel novo. Zdaj se na prvi pogled vidi, katera koda teče, in jo je mogoče takoj posodobiti. **Kako povedati:** 👩 »V nastavitvah vidite, katero različico imate, in jo z enim dotikom posodobite.« · 🛠 commit OTA je isti kot v `app-release.json` (`EXPO_PUBLIC_GIT_COMMIT`), preverjanje samo na gumb, nikoli ob zagonu.

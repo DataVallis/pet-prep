@@ -6,6 +6,7 @@ use App\Models\PetMedia;
 use App\Models\PetMediaDerivative;
 use App\Models\PetMediaHistory;
 use App\Services\AppSettingsService;
+use Illuminate\Contracts\Cache\LockTimeoutException;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\File;
 use Illuminate\Support\Collection;
@@ -173,9 +174,21 @@ class VideoCompressionService
             return self::result('busy', $id);
         }
 
+        // QA #451 major 2: one heavy ffmpeg job at a time on the host — shared with the derived
+        // clips and the frugal-clip previews (SchoolClipDerivativeService::HEAVY_LOCK).
+        $heavy = Cache::lock(SchoolClipDerivativeService::HEAVY_LOCK, $this->lockSeconds());
+        try {
+            $heavy->block((int) config('media.derivatives.heavy_lock_wait_seconds', 45));
+        } catch (LockTimeoutException) {
+            $lock->release();
+
+            return self::result('busy', $id);
+        }
+
         try {
             return $this->compressLocked($id, $replace, $recordFailures, $retryFailed);
         } finally {
+            $heavy->release();
             $lock->release();
         }
     }

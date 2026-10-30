@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Services\AppSettingsService;
 use App\Services\Media\FrozenClipRegenerator;
 use App\Services\Media\GameMediaReadiness;
+use App\Services\Media\MediaEntitlementService;
 use App\Services\Media\MediaProfiles;
 use App\Services\Media\MediaQualityService;
 use App\Services\Media\PetMediaService;
@@ -133,6 +134,9 @@ class MediaRelationManager extends RelationManager
                 Tables\Columns\TextColumn::make('state')->placeholder('—'),
                 Tables\Columns\TextColumn::make('recipe')->label('Made as')
                     ->getStateUsing(fn (PetMedia $record): ?string => match (true) {
+                        // Frugal clips (QA #451 m6): a target served from its source.
+                        $record->frugal_source !== null && $record->isPhase() => __('admin.features.frugal_made_as_phase'),
+                        $record->frugal_source !== null && $record->isTransition() => __('admin.features.frugal_made_as_transition'),
                         $record->isVideo() && self::madeAs($record) === PetMedia::RECIPE_LOOP => 'loop (key image → key image, frozen — regenerate)',
                         $record->isVideo() && self::madeAs($record) === PetMedia::RECIPE_START_ONLY => 'loop (from key image, start frame only)',
                         $record->isPhase() && self::madeAs($record) === PetMedia::RECIPE_START_ONLY => 'start frame only',
@@ -303,6 +307,16 @@ class MediaRelationManager extends RelationManager
                     ->visible(fn (PetMedia $record): bool => self::isSuperadmin() && ! $record->isInFlight()
                         && (! ($record->isPoseStill() || $record->isPoseClip()) || app(AppSettingsService::class)->stateMedia()))
                     ->action(function (PetMedia $record): void {
+                        // Frugal clips (QA #451 m6): a target left to its source is not made — say why.
+                        if (app(MediaEntitlementService::class)->slotLeftToSource($record, fresh: true)) {
+                            Notification::make()
+                                ->title(__('admin.features.frugal_regenerate_refused', ['source' => (string) MediaEntitlementService::frugalSourceOf((string) $record->kind, (string) $record->state)]))
+                                ->warning()
+                                ->send();
+
+                            return;
+                        }
+
                         $queued = app(PetMediaService::class)->regenerate($record);
 
                         Notification::make()

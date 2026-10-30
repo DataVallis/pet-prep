@@ -45,6 +45,9 @@ use Illuminate\Support\Collection;
  *   slots are retried automatically (ActivityClipRetryService, hourly, capped) and a
  *   slot that runs out of retries is reported to the admin (Discord + AI media
  *   panel, {@see failedClips()}); the admin's Regenerate / »Approve anyway« unlocks it.
+ * - Frugal clips (David 2026-10-30): a phase clip served from its source
+ *   (MediaEntitlementService::phaseSourceOf — come / place / potty attention from the sit
+ *   attention clip) counts when its SOURCE is shown; a failed source keeps it locked.
  *
  * Pure read; no personal data.
  */
@@ -101,6 +104,12 @@ class GameMediaReadiness
             ->filter(fn (PetMedia $m) => ($m->isVideo() || $m->isPhase()) && $m->isShown())
             ->map(fn (PetMedia $m) => (string) $m->state)
             ->all();
+
+        // Frugal clips: a phase clip shown from its source needs the source.
+        $required = array_values(array_unique(array_map(
+            fn (string $clip) => ($phase = PetPhaseClip::tryFrom($clip)) !== null ? $this->entitlements->phaseSourceOf($pet, $phase, $slots)->value : $clip,
+            $required,
+        )));
 
         return array_values(array_diff($required, $stored));
     }
@@ -191,7 +200,14 @@ class GameMediaReadiness
     public function failedClips(Pet $pet, array $clips, ?Collection $slots = null): array
     {
         $slots ??= $pet->relationLoaded('media') ? $pet->getRelation('media') : $pet->media()->get();
-        $values = array_map(fn (PetPhaseClip $c) => $c->value, $clips);
+        // Frugal clips: a clip shown from its source fails with the source (its own row is not used).
+        $sources = [];
+        foreach ($clips as $clip) {
+            $source = $this->entitlements->phaseSourceOf($pet, $clip, $slots);
+            $sources[$source->value] = $source;
+        }
+        $clips = array_values($sources);
+        $values = array_keys($sources);
         $poses = [];
         foreach ($clips as $clip) {
             foreach ([$clip->startPose(), $clip->endPose()] as $pose) {

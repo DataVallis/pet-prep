@@ -1871,14 +1871,18 @@ class FalAiService
      * a clearly-visible-motion prompt that ends close to the start pose instead
      * (recipe `start_only`; the seam is no longer pixel-identical).
      *
+     * Frugal clips C (David 2026-10-30): `$short` = a low-motion loop made with the
+     * `state_short` length (3 s, media.state_media.clip_seconds) — the server serves its
+     * ffmpeg ping-pong. The caller decides (MediaEntitlementService::shortLoop).
+     *
      * @param  array<string, string>  $traits
      * @return array{request_id: string, profile: string, duration_seconds: int, recipe: string|null}
      *
      * @throws AiCallException
      */
-    public function submitLoopVideoFor(string $breedKey, array $traits, ?LifeStage $stage, PetStateEnum $state, string $keyImageUrl, ?int $petId = null, ?int $petMediaId = null): array
+    public function submitLoopVideoFor(string $breedKey, array $traits, ?LifeStage $stage, PetStateEnum $state, string $keyImageUrl, ?int $petId = null, ?int $petMediaId = null, bool $short = false): array
     {
-        $profile = $this->profiles->stateVideo();
+        $profile = $short ? $this->profiles->clipVideo('state_short') : $this->profiles->stateVideo();
         $prompt = $this->prompts->loopVideoPrompt($breedKey, $state, $traits, $stage);
 
         return $this->submitClip($profile, $breedKey, $prompt, $keyImageUrl, $keyImageUrl, $petId, $petMediaId, sameFrame: true);

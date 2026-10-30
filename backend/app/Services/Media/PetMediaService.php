@@ -9,6 +9,7 @@ use App\Enums\PetPhaseClip;
 use App\Enums\PetPose;
 use App\Enums\PetStateEnum;
 use App\Enums\PetTransition;
+use App\Enums\Species;
 use App\Events\PetUpdated;
 use App\Jobs\CheckPetMediaQuality;
 use App\Jobs\GeneratePetKeyframe;
@@ -317,7 +318,10 @@ class PetMediaService
 
         // Transitions after the first-minutes clips (§13 order): queued once every
         // essential state video is on its way, and only from stored key images.
-        foreach ($essentialWaiting ? [] : $this->entitlements->transitionsFor($pet) as $transition) {
+        // Frugal clips (David 2026-10-30): a frugal target left to its source is not generated
+        // (sleeping_to_idle = idle_to_sleeping reversed; come / place / potty attention = sit's).
+        $this->markFrugalTargets($pet);
+        foreach ($essentialWaiting ? [] : $this->entitlements->transitionsToGenerateFor($pet, null, fresh: true) as $transition) {
             if ($this->poseImage($pet, $transition->fromState(), $image) === null || $this->poseImage($pet, $transition->toState(), $image) === null) {
                 continue; // its key images are queued above; the next call (key image stored) queues it
             }
@@ -335,7 +339,7 @@ class PetMediaService
         // home loop is submitted) and both of its frames are stored. Same items, same claims —
         // only the order / overlap changes, never what a pet gets.
         $clipsAllowed = ! $homeWaiting;
-        foreach ($this->entitlements->phaseClipsFor($pet) as $clip) {
+        foreach ($this->entitlements->phaseClipsToGenerateFor($pet, null, fresh: true) as $clip) {
             $framesReady = true;
 
             foreach ([$clip->startPose(), $clip->endPose()] as $pose) {
@@ -353,6 +357,90 @@ class PetMediaService
         }
 
         return $queued;
+    }
+
+    /**
+     * Frugal clips (David 2026-10-30): with the switch on, every frugal target of the pet's set
+     * without a clip of its own gets its slot marked `frugal_source` (= served from that source,
+     * also after the switch is turned off, until it has its own clip). Nothing else changes.
+     */
+    private function markFrugalTargets(Pet $pet): void
+    {
+        if (! $this->entitlements->frugalFor($pet->speciesValue(), fresh: true)) {
+            return;
+        }
+
+        $slots = $pet->media()->get();
+        $targets = [
+            ...array_map(fn (PetTransition $t) => [PetMedia::KIND_TRANSITION, $t], $this->entitlements->transitionsFor($pet)),
+            ...array_map(fn (PetPhaseClip $c) => [PetMedia::KIND_PHASE, $c], $this->entitlements->phaseClipsFor($pet)),
+        ];
+
+        foreach ($targets as [$kind, $target]) {
+            $source = MediaEntitlementService::frugalSourceOf($kind, $target->value);
+            if ($source === null || ! $this->entitlements->leftToSource($pet, $kind, $target->value, $slots, fresh: true)) {
+                continue;
+            }
+
+            // The pet's slot (also one with a previous stage's file — QA #451 B1): marked; a slot
+            // that waits for a look row which will not be made goes back to pending (no stuck
+            // `running`, the sweep never reclaims it).
+            $slot = $this->slot($pet, $kind, $target);
+            $this->markLeftToSource($slot, $source);
+
+            // QA #451 m3: the look row of the pet's stage carries the marker too, so a regenerated
+            // idle_to_sleeping of the look is reversed again after a switch-off.
+            if ($pet->usesLookPool() && $pet->look !== null && $pet->life_stage !== null) {
+                $row = $this->lookSlot($pet->look, $kind, $target, $pet->life_stage);
+                if (! $row->isServable() && $row->status !== PetMedia::STATUS_RUNNING) {
+                    PetMedia::query()->whereKey($row->id)->whereNull('frugal_source')->update(['frugal_source' => $source]);
+                }
+            }
+        }
+    }
+
+    /**
+     * Frugal clips (QA #451 m2): the reversal (B) or ping-pong (C) of `$source` failed for good —
+     * never a hard cut: B re-runs the pipeline of every pet that shows the source, which now
+     * generates sleeping_to_idle through fal (MediaEntitlementService::leftToSource is false
+     * after a failed reversal); C remakes the short loop the normal way (a 5 s loop —
+     * MediaEntitlementService::shortLoop is false for a file whose ping-pong failed).
+     */
+    public function fallBackFromDerivative(PetMedia $source): void
+    {
+        if ($source->isVideo()) {
+            if ($this->resetForNewGeneration($source, bump: true)) {
+                SubmitPetStateVideo::dispatch((int) $source->id);
+            }
+
+            return;
+        }
+
+        if (! $source->isTransition()) {
+            return;
+        }
+
+        $petIds = $source->pet_look_id !== null
+            ? PetMedia::query()->where('look_media_id', $source->id)->whereNotNull('pet_id')->distinct()->pluck('pet_id')->all()
+            : array_filter([$source->pet_id]);
+
+        foreach (Pet::query()->whereIn('id', $petIds)->where('is_active', true)->get() as $pet) {
+            $this->queueStateVideos($pet, includeFailed: true);
+        }
+    }
+
+    /**
+     * Frugal clips: mark one pet slot as served from `$source` (QA #451 B1: also when it shows a
+     * previous stage's file) and release it when it waits for a look row (`running` without a
+     * request) — it falls back to the source instead of staying stuck.
+     */
+    private function markLeftToSource(PetMedia $slot, string $source): void
+    {
+        PetMedia::query()->whereKey($slot->id)->whereNull('frugal_source')->update(['frugal_source' => $source]);
+        // Only a slot waiting for a look row (never a unique pet's live claim).
+        PetMedia::query()->whereKey($slot->id)->where('status', PetMedia::STATUS_RUNNING)->whereNull('request_id')
+            ->whereNotNull('look_media_id')
+            ->update(['status' => PetMedia::STATUS_PENDING, 'updated_at' => now()]);
     }
 
     /**
@@ -469,12 +557,19 @@ class PetMediaService
             && (int) $row->source_generation >= $image->generation ? $row : null;
     }
 
-    /** M5-T09 / T10: is a pose image / phase clip (or key image / transition) part of the pet's set now? */
+    /**
+     * M5-T09 / T10: is a pose image / phase clip (or key image / transition) part of the pet's set now?
+     * Frugal clips (David 2026-10-30): a frugal target left to its source is not (switch read fresh —
+     * this guards the fal submits).
+     */
     public function wantsPoseMedia(Pet $pet, PetMedia $slot): bool
     {
         return match ($slot->kind) {
             PetMedia::KIND_POSE => in_array($slot->pose(), $this->entitlements->posesFor($pet), true),
-            PetMedia::KIND_PHASE => in_array($slot->phaseClip(), $this->entitlements->phaseClipsFor($pet), true),
+            PetMedia::KIND_PHASE => in_array($slot->phaseClip(), $this->entitlements->phaseClipsFor($pet), true)
+                && ! $this->entitlements->slotLeftToSource($slot, fresh: true),
+            PetMedia::KIND_TRANSITION => $this->entitlements->usesStateMedia($pet)
+                && ! $this->entitlements->slotLeftToSource($slot, fresh: true),
             default => $this->entitlements->usesStateMedia($pet),
         };
     }
@@ -640,6 +735,14 @@ class PetMediaService
 
         // M5-T08b: state media switched off (or the pet does not use it) — a queued transition
         // (M5-T09 / T10: or phase clip) is not submitted (stays pending; look rows: submitLookVideo).
+        // Frugal clips (QA #451 B1): a target left to its source is marked and — if it waits for a
+        // look row — released (never stuck `running`, never reclaimed by the sweep).
+        if ($slot !== null && $slot->isPoseClip() && $slot->pet_id !== null && $this->entitlements->slotLeftToSource($slot, fresh: true)) {
+            $this->markLeftToSource($slot, (string) MediaEntitlementService::frugalSourceOf((string) $slot->kind, (string) $slot->state));
+
+            return true;
+        }
+
         if ($slot !== null && $slot->isPoseClip() && (! $this->entitlements->stateMediaEnabled(fresh: true)
             || ($slot->isPhase() && ! $this->entitlements->phaseClipsEnabled(fresh: true))
             || ($slot->pet !== null && ! $this->wantsPoseMedia($slot->pet, $slot)))) {
@@ -713,7 +816,9 @@ class PetMediaService
         try {
             if ($pose !== null) {
                 [$breedKey, $traits] = $this->prompts->subjectOf($pet);
-                $submitted = $this->fal->submitLoopVideoFor($breedKey, $traits, $pet->life_stage, $state, $this->falFetchUrl($pose), $pet->id, $slot->id);
+                // Frugal clips C (David 2026-10-30): low-motion loops 3 s (served as a ping-pong).
+                $submitted = $this->fal->submitLoopVideoFor($breedKey, $traits, $pet->life_stage, $state, $this->falFetchUrl($pose), $pet->id, $slot->id,
+                    short: $this->entitlements->shortLoop($pet->speciesValue(), $state, $slot, fresh: true));
             } else {
                 $submitted = $this->fal->submitStateVideo($pet, $state, $this->falFetchUrl($image), $slot->id) + ['recipe' => null];
             }
@@ -1137,6 +1242,8 @@ class PetMediaService
             'stored_recipe' => $locked->recipe,
             // Quality check / David 2026-10-23: the length of THIS file (5 s school performing vs older 3 s).
             'stored_duration_seconds' => $locked->duration_seconds,
+            // Frugal clips: a target that got its own clip is no longer served from its source.
+            'frugal_source' => null,
             'bytes' => $bytes,
             'mime' => $mime,
             'candidate_path' => null,
@@ -1183,8 +1290,20 @@ class PetMediaService
         // School smooth playback (David 2026-10-28): a new / replaced school phase clip gets its
         // ffmpeg-derived clip (loop / release) — 0 $, never through fal. Owners only (look row
         // or a unique pet row); the job re-checks everything.
-        if ($slot->isPhase() && $slot->look_media_id === null && SchoolClipDerivativeService::keyFor($slot->phaseClip()) !== null) {
-            GenerateSchoolClipDerivative::dispatch((int) $slot->id);
+        // Frugal clips (David 2026-10-30): also idle_to_sleeping (→ sleeping_to_idle reversed) and
+        // the low-motion loops (→ their ping-pong); the job decides whether one is due (make()).
+        // QA #451 m5: no no-op job — a transition only when its reversal is wanted, a video only
+        // when it is a short loop (the stored row decides).
+        if ($slot->look_media_id === null && SchoolClipDerivativeService::mayDerive($slot)) {
+            $stored = PetMedia::find($slot->id);
+            $due = $stored !== null && match (true) {
+                $stored->isPhase() => true,
+                $stored->isTransition() => app(SchoolClipDerivativeService::class)->reversalWanted($stored),
+                default => SchoolClipDerivativeService::isShortLoop($stored),
+            };
+            if ($due) {
+                GenerateSchoolClipDerivative::dispatch((int) $slot->id);
+            }
         }
 
         // M4-10: a look file is never replaced (pets of the look point at it);
@@ -1523,7 +1642,10 @@ class PetMediaService
             }
         }
 
-        foreach ($later ? [] : $this->entitlements->transitionsFor($planned) as $transition) {
+        // Frugal clips (David 2026-10-30): what the switch leaves to a source costs nothing.
+        // QA #451 m9 / B1: the switch read fresh like the submit; a stage remake makes every stored clip stale.
+        $remakeGeneration = $remake ? PHP_INT_MAX : null;
+        foreach ($later ? [] : $this->entitlements->transitionsToGenerateFor($planned, $slots, fresh: true, imageGeneration: $remakeGeneration) as $transition) {
             if ($missing($slots->first(fn (PetMedia $m) => $m->isTransition() && $m->state === $transition->value))) {
                 $transitions[] = $transition->value;
             }
@@ -1536,7 +1658,7 @@ class PetMediaService
                 $poses[] = $pose->value;
             }
         }
-        foreach ($later ? [] : $this->entitlements->phaseClipsFor($planned) as $clip) {
+        foreach ($later ? [] : $this->entitlements->phaseClipsToGenerateFor($planned, $slots, fresh: true, imageGeneration: $remakeGeneration) as $clip) {
             if ($missing($slots->first(fn (PetMedia $m) => $m->isPhase() && $m->state === $clip->value))) {
                 $phases[] = $clip->value;
             }
@@ -1550,7 +1672,7 @@ class PetMediaService
                 'generate' => $this->profiles->referenceImage()->estimatedCostUsd(),
                 'stage' => $this->stageImageCostUsd(),
                 default => 0.0,
-            } + count($videos) * $this->profiles->stateVideo()->estimatedCostUsd()
+            } + array_sum(array_map(fn (string $state) => $this->videoCostUsd(PetStateEnum::from($state), $loops, $pet->speciesValue()), $videos))
                 + count($transitions) * $this->profiles->clipVideo('transition')->estimatedCostUsd()
                 + (count($keyframes) + count($poses)) * $this->keyframeCostUsd()
                 + array_sum(array_map(fn (string $c) => $this->phaseClipCostUsd(PetPhaseClip::from($c)), $phases));
@@ -1569,6 +1691,31 @@ class PetMediaService
     public function phaseClipsEnabled(): bool
     {
         return $this->entitlements->phaseClipsEnabled();
+    }
+
+    /**
+     * Estimated cost of one state video: a frugal short loop (switch on, low-motion state, a
+     * loop — David 2026-10-30) is priced at its 3 s, every other video at the profile's 5 s.
+     */
+    public function videoCostUsd(PetStateEnum $state, bool $loop, Species $species = Species::Dog): float
+    {
+        return $loop && $this->entitlements->shortLoop($species, $state, fresh: true)
+            ? $this->profiles->clipVideo('state_short')->estimatedCostUsd()
+            : $this->profiles->stateVideo()->estimatedCostUsd();
+    }
+
+    /**
+     * The nightly retry's estimate for a failed video slot: a state loop of a pet with state
+     * media at its frugal length (videoCostUsd), anything else `$default` (the 5 s video).
+     */
+    public function retryVideoCostUsd(PetMedia $slot, float $default): float
+    {
+        $state = $slot->petState();
+        if (! $slot->isVideo() || $state === null || $slot->pet === null) {
+            return $default;
+        }
+
+        return $this->videoCostUsd($state, $this->entitlements->usesStateMedia($slot->pet), $slot->pet->speciesValue());
     }
 
     /** M5-T09 / T10: estimated cost of one phase clip (3 s school / game clip). */
@@ -1699,11 +1846,15 @@ class PetMediaService
         $poses = [];
         $phases = [];
         $phaseSeconds = [];
-        $schoolSlots = new Collection;
+        // School smooth playback + frugal clips: the shown rows clips are derived from.
+        $derivedSources = new Collection;
         $species = $pet->speciesValue();
         foreach ($slots as $m) {
             if (! $m->isShown()) {
                 continue;
+            }
+            if (($m->isTransition() || $m->isVideo()) && SchoolClipDerivativeService::derivedKeyOf($m) !== null) {
+                $derivedSources->push($m);
             }
             if ($m->isTransition() && $m->transition() !== null) {
                 $transitions[$m->state] = $this->signedUrl($m, $expires);
@@ -1714,17 +1865,22 @@ class PetMediaService
                 // David 2026-10-23: school performing clips are 5 s now, older stored ones 3 s.
                 $phaseSeconds[$m->state] = (float) ($m->stored_duration_seconds ?? $m->duration_seconds ?? 3);
                 if ($m->phaseClip()?->group() === PetPhaseClip::GROUP_SCHOOL) {
-                    $schoolSlots->push($m);
+                    $derivedSources->push($m);
                 }
             }
         }
 
         // School smooth playback (David 2026-10-28): ffmpeg-derived clips (attention / success
         // loops, release) next to their source, like any phase clip (URL + real length).
-        foreach (app(SchoolClipDerivativeService::class)->payloadFor($schoolSlots, $expires) as $key => $derived) {
-            $phases[$key] = $derived['url'];
-            $phaseSeconds[$key] = $derived['seconds'];
+        $derived = app(SchoolClipDerivativeService::class)->payloadFor($derivedSources, $expires);
+        foreach ($derived as $key => $clip) {
+            if (str_starts_with($key, PetPhaseClip::GROUP_SCHOOL.'_')) {
+                $phases[$key] = $clip['url'];
+                $phaseSeconds[$key] = $clip['seconds'];
+            }
         }
+
+        $this->applyFrugalSources($pet, $slots, $derived, $videos, $transitions, $phases, $phaseSeconds);
 
         $currentState = $pet->pet_state instanceof PetStateEnum ? $pet->pet_state->value : (string) $pet->pet_state;
 
@@ -1756,6 +1912,54 @@ class PetMediaService
             // M5-T08b (QA m3): the pet's set, not the switch — off never downgrades stored media.
             stateMedia: $this->entitlements->hasStateMediaSet($pet),
         );
+    }
+
+    /**
+     * Frugal clips (David 2026-10-30) in the payload — the keys the app already reads:
+     *  A. a come / place / potty attention clip served from the sit attention clip (+ its
+     *     ffmpeg attention loop) — MediaEntitlementService::phaseSourceOf();
+     *  B. `transitions.sleeping_to_idle` = idle_to_sleeping reversed (only once that derived
+     *     clip exists — missing = the app's usual fallback for a missing transition);
+     *  C. `videos.<state>` of a short low-motion loop = its ping-pong once made (the stored
+     *     3 s loop until then).
+     * A target with media of its own keeps them (existing pets / looks as before).
+     *
+     * @param  Collection<int, PetMedia>  $slots
+     * @param  array<string, array{url: string, seconds: float}>  $derived
+     * @param  array<string, string>  $videos
+     * @param  array<string, string>  $transitions
+     * @param  array<string, string>  $phases
+     * @param  array<string, float>  $phaseSeconds
+     */
+    private function applyFrugalSources(Pet $pet, Collection $slots, array $derived, array &$videos, array &$transitions, array &$phases, array &$phaseSeconds): void
+    {
+        foreach (MediaEntitlementService::FRUGAL_PHASE_SOURCES as $target => $source) {
+            $clip = PetPhaseClip::from($target);
+            if (! isset($phases[$source]) || $this->entitlements->phaseSourceOf($pet, $clip, $slots)->value !== $source) {
+                continue;
+            }
+            $phases[$target] = $phases[$source];
+            $phaseSeconds[$target] = $phaseSeconds[$source];
+            $targetLoop = SchoolClipDerivativeService::keyFor($clip);
+            $sourceLoop = SchoolClipDerivativeService::keyFor(PetPhaseClip::from($source));
+            if ($targetLoop !== null && $sourceLoop !== null && isset($phases[$sourceLoop])) {
+                $phases[$targetLoop] = $phases[$sourceLoop];
+                $phaseSeconds[$targetLoop] = $phaseSeconds[$sourceLoop];
+            }
+        }
+
+        foreach (MediaEntitlementService::FRUGAL_REVERSED_TRANSITIONS as $target => $source) {
+            // Derived clip first: a pet without one never reads the switch (no query — dashboard bound).
+            if (isset($derived[$target]) && $this->entitlements->transitionSourceOf($pet, PetTransition::from($target), $slots) !== null) {
+                $transitions[$target] = $derived[$target]['url'];
+            }
+        }
+
+        foreach (MediaEntitlementService::shortLoopStates() as $state) {
+            if (isset($videos[$state], $derived[$state.'_'.SchoolClipDerivativeService::SUFFIX_LOOP])) {
+                $videos[$state] = $derived[$state.'_'.SchoolClipDerivativeService::SUFFIX_LOOP]['url'];
+            }
+        }
     }
 
     /**
@@ -2019,6 +2223,8 @@ class PetMediaService
                 ->whereIn('s.kind', [PetMedia::KIND_KEYFRAME, PetMedia::KIND_TRANSITION, PetMedia::KIND_VIDEO, PetMedia::KIND_POSE, PetMedia::KIND_PHASE])
                 ->where('s.status', PetMedia::STATUS_PENDING)
                 ->whereNull('s.request_id')
+                // Frugal clips: a slot the switch left to its source waits on purpose (not stale).
+                ->whereNull('s.frugal_source')
                 ->where('s.updated_at', '<', now()->subMinutes(self::STALE_CLAIM_MINUTES))))
             ->orderBy('id')
             ->each(function (Pet $pet) use (&$resumed): void {
@@ -2475,6 +2681,18 @@ class PetMediaService
             return true;
         }
 
+        // Frugal clips (David 2026-10-30): a look's frugal target without media of its own is left
+        // to its source while the switch is on (no fal call; the pets show the source).
+        if ($row->isPoseClip() && $this->entitlements->slotLeftToSource($row, fresh: true)) {
+            // QA #451 B1: release the pet slots waiting for it — they show the source instead.
+            $source = MediaEntitlementService::frugalSourceOf((string) $row->kind, (string) $row->state);
+            PetMedia::query()->whereKey($row->id)->whereNull('frugal_source')->update(['frugal_source' => $source]);
+            PetMedia::query()->where('look_media_id', $row->id)->whereNotNull('pet_id')->orderBy('id')
+                ->each(fn (PetMedia $waiting) => $this->markLeftToSource($waiting, (string) $source));
+
+            return true;
+        }
+
         // M5-T08b (QA minor 6): a look clip marked as a loop that no pet can use as a loop any
         // more (switch off, or no active state-media pet of the look at this stage — e.g. the
         // only buyer left) goes back to the pre-M5-T08 clip, so pets from before M5-T08 waiting
@@ -2560,6 +2778,7 @@ class PetMediaService
                 ),
                 $pose !== null => $this->fal->submitLoopVideoFor(
                     $look->breed_type->value, $look->traits(), $stage, $state, $this->falFetchUrl($pose), null, $row->id,
+                    short: $this->entitlements->shortLoop($look->breed_type->species(), $state, $row, fresh: true),
                 ),
                 default => $this->fal->submitStateVideoFor(
                     $look->breed_type->value, $look->traits(), $stage, $state, $this->falFetchUrl($image), null, $row->id,
@@ -2812,6 +3031,8 @@ class PetMediaService
                 'recipe' => $row->recipe,
                 'stored_recipe' => $row->stored_recipe,
                 'stored_duration_seconds' => $row->stored_duration_seconds,
+                // Frugal clips: the look's own clip — not served from a source any more.
+                'frugal_source' => null,
                 // Quality check: the look row's verdict (checked once per look row).
                 'quality' => $row->quality,
                 'quality_reason' => $row->quality_reason,
@@ -2995,7 +3216,7 @@ class PetMediaService
         }
 
         foreach ($videos as $state) {
-            $add(PetMedia::KIND_VIDEO, $state, $this->profiles->stateVideo()->estimatedCostUsd());
+            $add(PetMedia::KIND_VIDEO, $state, $this->videoCostUsd(PetStateEnum::from($state), $loops, $pet->speciesValue()));
         }
 
         foreach ($keyframes as $state) {

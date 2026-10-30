@@ -123,6 +123,28 @@ return [
         // M5-T09 / T10 (QA M2): only the default while /admin → Feature switches has no
         // `phase_clips` row (AppSettingsService::phaseClips()) — switch it in the panel.
         'phase_clips_enabled' => filter_var(env('AI_PHASE_CLIPS_ENABLED', true), FILTER_VALIDATE_BOOL),
+        /*
+        | Frugal clips (David 2026-10-30, AI cost — default OFF): only the default while
+        | /admin → Feature switches has no `frugal_clips` row (AppSettingsService::frugalClips()).
+        | On, only NEW media are made more cheaply (MediaEntitlementService::frugalClipsEnabled):
+        |  A. one school attention clip — `school_sit_attention` serves come / place / potty
+        |     too (MediaEntitlementService::FRUGAL_PHASE_SOURCES; identical prompt + frames);
+        |  B. `sleeping_to_idle` = `idle_to_sleeping` reversed with ffmpeg (0 $,
+        |     SchoolClipDerivativeService);
+        |  C. the low-motion loops below are made `state_short` (3 s) and served as a seamless
+        |     ffmpeg ping-pong (forward + reversed, ~6 s) under their usual `videos` key.
+        | Stored media (4 attention clips, own sleeping_to_idle, 5 s loops) keep being served.
+        */
+        'frugal_clips_enabled' => filter_var(env('AI_FRUGAL_CLIPS_ENABLED', false), FILTER_VALIDATE_BOOL),
+        'frugal' => [
+            'short_loop_states' => ['sleeping', 'low_energy', 'sick'],
+            // A stored loop of one of those states at most this long is a frugal short loop
+            // (served as its ping-pong); every older 5 s loop is served as before.
+            'short_loop_max_seconds' => 3.5,
+        ],
+        // QA #451 m7: zero-cost previews (`media:frugal-preview`) are deleted after this many hours
+        // (scheduled `media:frugal-preview --prune`, daily).
+        'frugal_preview_keep_hours' => (int) env('AI_FRUGAL_PREVIEW_KEEP_HOURS', 24),
         'keyframe_profile' => env('AI_KEYFRAME_PROFILE', 'nano_banana_pro_edit'),
         // Order = queue order, after every first-minutes clip (preparation_essentials).
         'transitions' => ['idle_to_sleeping', 'sleeping_to_idle'],
@@ -155,6 +177,9 @@ return [
             // (`media.phase_seconds`).
             'school_performing' => 5,
             'game' => 3,
+            // Frugal clips C (David 2026-10-30, switch `frugal_clips`): the low-motion loops
+            // (`frugal.short_loop_states`) are generated 3 s and served as a ping-pong.
+            'state_short' => 3,
         ],
     ],
 
@@ -209,6 +234,21 @@ return [
     | apps show »Pripravljamo [ime] … to lahko traja nekaj minut«; after that
     | only the features still waiting say »… se še pripravlja«.
     */
+    /*
+    | ffmpeg-derived clips (school smooth playback 2026-10-28, frugal clips 2026-10-30 —
+    | SchoolClipDerivativeService, FrugalClipPreview): every ffmpeg call runs niced with an
+    | address-space cap (`prlimit --as`), and one heavy ffmpeg job runs at a time on the host
+    | (cache lock SchoolClipDerivativeService::HEAVY_LOCK). Measured 2026-10-30: a full-size
+    | (1076 × 1924, 24 fps) 5 s reverse fails at 1024 MB and works at 1536 MB (peak RSS ~645 MB).
+    */
+    'derivatives' => [
+        'nice' => (int) env('MEDIA_DERIVATIVE_NICE', 19),
+        'memory_limit_mb' => (int) env('MEDIA_DERIVATIVE_MEMORY_MB', 2048),
+        // How long a derived-clip job waits for the heavy lock before it leaves the work to the
+        // next 10-minute backfill (the job's own timeout is 85 s).
+        'heavy_lock_wait_seconds' => (int) env('MEDIA_DERIVATIVE_LOCK_WAIT', 45),
+    ],
+
     'preparation_essentials' => ['idle', 'sleeping', 'hungry'],
 
     /*

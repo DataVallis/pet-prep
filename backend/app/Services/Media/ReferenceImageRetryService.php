@@ -116,6 +116,12 @@ class ReferenceImageRetryService
                 ->whereColumn('img.pet_id', 'pet_media.pet_id')
                 ->where('img.kind', PetMedia::KIND_IMAGE)
                 ->whereNotNull('img.storage_path'))
+            // Frugal clips (QA #451 m1): a dog's frugal target is left to its source while the switch is
+            // on — filtered here, before the limit (the per-row check in the loop stays as the guard).
+            ->when(app(MediaEntitlementService::class)->frugalClipsEnabled(fresh: true), fn (Builder $q) => $q->whereNot(fn (Builder $q) => $q
+                ->where(fn (Builder $q) => $q->where(fn (Builder $q) => $q->where('kind', PetMedia::KIND_PHASE)->whereIn('state', array_keys(MediaEntitlementService::FRUGAL_PHASE_SOURCES)))
+                    ->orWhere(fn (Builder $q) => $q->where('kind', PetMedia::KIND_TRANSITION)->whereIn('state', array_keys(MediaEntitlementService::FRUGAL_REVERSED_TRANSITIONS))))
+                ->whereHas('pet', fn (Builder $q) => $q->whereIn('breed_type', MediaEntitlementService::dogBreedValues()))))
             ->orderBy('id');
     }
 
@@ -180,10 +186,14 @@ class ReferenceImageRetryService
         }
 
         foreach ($this->videoRetryCandidates()->limit(max(0, $limit - $images - $stages))->get() as $slot) {
+            // Frugal clips (David 2026-10-30): a target left to its source is not made — not retried.
+            if ($slot->isPoseClip() && app(MediaEntitlementService::class)->slotLeftToSource($slot, fresh: true)) {
+                continue;
+            }
             $keyframe = $slot->isPoseStill();
             $clip = $slot->phaseClip();
             $cost = $this->sharedLookCovered($slot->look_media_id, $seenLookRows) ? 0.0
-                : ($keyframe ? $this->media->keyframeCostUsd() : ($clip !== null ? $this->media->phaseClipCostUsd($clip) : $videoCost));
+                : ($keyframe ? $this->media->keyframeCostUsd() : ($clip !== null ? $this->media->phaseClipCostUsd($clip) : $this->media->retryVideoCostUsd($slot, $videoCost)));
 
             if ($cost > 0 && $this->guard->refusalFor($planned + $cost, $keyframe ? AiSpendPurpose::ReferenceImage : AiSpendPurpose::StateVideo) !== null) {
                 break;

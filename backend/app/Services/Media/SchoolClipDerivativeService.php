@@ -3,11 +3,15 @@
 namespace App\Services\Media;
 
 use App\Enums\PetPhaseClip;
+use App\Enums\Species;
 use App\Enums\TrainingCommand;
+use App\Events\PetUpdated;
+use App\Jobs\SendFrugalClipFallbackAlert;
 use App\Models\Pet;
 use App\Models\PetMedia;
 use App\Models\PetMediaDerivative;
 use Carbon\CarbonImmutable;
+use Illuminate\Contracts\Cache\LockTimeoutException;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\File;
 use Illuminate\Support\Collection;
@@ -31,7 +35,9 @@ use Throwable;
  *    so it lasts at most RELEASE_MAX_SECONDS (setpts).
  *
  * Encoding: H.264 High, yuv420p, CRF 23, the source's fps as constant frame rate, no audio,
- * `+faststart`; long side capped at MAX_LONG_SIDE (the `reverse` filter buffers every frame
+ * `+faststart`; school clips' long side capped at MAX_LONG_SIDE (frugal home-screen clips keep the
+ * source size at HOME_CRF — see below); every ffmpeg call niced + memory-capped ({@see limits()}),
+ * one heavy job at a time ({@see HEAVY_LOCK}) (the `reverse` filter buffers every frame
  * in memory — measured ~370 MB peak RSS for a 5 s 1080 × 1920 source, see ARCHITECTURE).
  *
  * One derived clip per FILE: made from the row that owns the source file (a shared-look row
@@ -41,6 +47,16 @@ use Throwable;
  * Triggers: PetMediaService::afterStored (new / replaced / approved source) → the queued
  * GenerateSchoolClipDerivative job; `media:school-derivatives` (scheduled backfill, every
  * 10 min, small batches).
+ *
+ * Frugal clips (David 2026-10-30, switch `frugal_clips` — MediaEntitlementService) add two
+ * sources, same table / job / backfill / encoding:
+ *  - B. transition `idle_to_sleeping` → `sleeping_to_idle`: REVERSED at its original length
+ *    (no speed-up) — made only where the owner has no `sleeping_to_idle` of its own
+ *    ({@see reversalWanted()}); the payload serves it under `transitions.sleeping_to_idle`.
+ *  - C. a SHORT low-motion loop (`sleeping` / `low_energy` / `sick`, stored ≤
+ *    `frugal.short_loop_max_seconds`) → `<state>_loop`: the same ping-pong as the school
+ *    loops; the payload serves it under `videos.<state>` (older 5 s loops never qualify).
+ * Once such a clip is made, the pets showing the source get one `video_ready` broadcast.
  */
 class SchoolClipDerivativeService
 {
@@ -50,8 +66,18 @@ class SchoolClipDerivativeService
 
     public const CRF = 23;
 
+    /**
+     * Frugal clips B / C (David 2026-10-30): the home-screen clips (state loops, the
+     * sleeping ↔ idle transition) are full-screen — their derived clips keep the SOURCE
+     * resolution (Kling 1076 × 1924) and fps, at CRF 21 (school clips: ≤ 1280, CRF 23).
+     */
+    public const HOME_CRF = 21;
+
     /** A source that failed this many times (same file) is left alone by the backfill. */
     public const MAX_ATTEMPTS = 3;
+
+    /** QA #451 major 2: one heavy ffmpeg job at a time (derived clips, previews, compression). */
+    public const HEAVY_LOCK = 'media-ffmpeg-heavy';
 
     /** Per ffmpeg / ffprobe call (3 calls stay below the job's 85 s timeout; measured ≤ 2.5 s for 5 s 1080p). */
     public const PROCESS_TIMEOUT_SECONDS = 25;
@@ -65,9 +91,20 @@ class SchoolClipDerivativeService
 
     public const SUFFIX_RELEASE = 'release';
 
+    /** Frugal clips B: a transition reversed at its own length. */
+    public const SUFFIX_REVERSE = 'reverse';
+
+    /** ffmpeg recipes. */
+    public const MODE_LOOP = 'loop';
+
+    public const MODE_RELEASE = 'release';
+
+    public const MODE_REVERSE = 'reverse';
+
     public function __construct(
         private readonly PetMediaService $media,
         private readonly MediaClipAnalyzer $analyzer,
+        private readonly MediaEntitlementService $entitlements,
     ) {}
 
     // ──────────────────────────────────────────────────────────────
@@ -99,6 +136,95 @@ class SchoolClipDerivativeService
         return array_values(array_map(fn (PetPhaseClip $c) => (string) self::keyFor($c), PetPhaseClip::ofGroup(PetPhaseClip::GROUP_SCHOOL)));
     }
 
+    /**
+     * The derived key of a stored clip ROW (null = nothing is derived from it): the school
+     * keys of {@see keyFor()}, frugal B `sleeping_to_idle` for an `idle_to_sleeping`
+     * transition, frugal C `<state>_loop` for a short low-motion state loop.
+     */
+    public static function derivedKeyOf(PetMedia $slot): ?string
+    {
+        if ($slot->isPhase()) {
+            return self::keyFor($slot->phaseClip());
+        }
+
+        if ($slot->isTransition()) {
+            $target = array_search((string) $slot->state, MediaEntitlementService::FRUGAL_REVERSED_TRANSITIONS, true);
+
+            return is_string($target) ? $target : null;
+        }
+
+        return self::isShortLoop($slot) ? $slot->state.'_'.self::SUFFIX_LOOP : null;
+    }
+
+    /** Frugal clips C: a stored low-motion state loop short enough to be served as its ping-pong. */
+    public static function isShortLoop(PetMedia $slot): bool
+    {
+        return $slot->isStateLoop()
+            && in_array((string) $slot->state, MediaEntitlementService::shortLoopStates(), true)
+            && $slot->stored_duration_seconds !== null
+            && (float) $slot->stored_duration_seconds <= (float) config('media.state_media.frugal.short_loop_max_seconds', 3.5);
+    }
+
+    /** Whether a stored clip of this kind / state may get a derived clip (cheap check; make() decides). */
+    public static function mayDerive(PetMedia $slot): bool
+    {
+        return match (true) {
+            $slot->isPhase() => self::keyFor($slot->phaseClip()) !== null,
+            $slot->isTransition() => in_array((string) $slot->state, MediaEntitlementService::FRUGAL_REVERSED_TRANSITIONS, true),
+            $slot->isVideo() => in_array((string) $slot->state, MediaEntitlementService::shortLoopStates(), true),
+            default => false,
+        };
+    }
+
+    /** Frugal B / C: a home-screen source (state loop / transition) — derived at full size. */
+    public static function isHomeScreen(PetMedia $slot): bool
+    {
+        return $slot->isVideo() || $slot->isTransition();
+    }
+
+    /** The ffmpeg recipe of a source row. */
+    public static function modeOf(PetMedia $slot): string
+    {
+        return match (true) {
+            $slot->isTransition() => self::MODE_REVERSE,
+            $slot->isPhase() && $slot->phaseClip()?->phase() === PetPhaseClip::PHASE_PERFORMING => self::MODE_RELEASE,
+            default => self::MODE_LOOP,
+        };
+    }
+
+    /**
+     * Frugal clips B: the reversed transition is made only where the owner (the pet's unique
+     * rows, or the look's rows of the same stage) has no `sleeping_to_idle` of its own — and,
+     * when it has an unmade row, only while the switch is on or that row is marked
+     * `frugal_source` (the MediaEntitlementService rule).
+     */
+    public function reversalWanted(PetMedia $source): bool
+    {
+        $target = array_search((string) $source->state, MediaEntitlementService::FRUGAL_REVERSED_TRANSITIONS, true);
+        if (! is_string($target)) {
+            return false;
+        }
+
+        // QA #451 major 1 (David: dogs only).
+        $species = $source->pet_look_id !== null ? $source->look?->breed_type->species() : $source->pet?->speciesValue();
+        if ($species !== Species::Dog) {
+            return false;
+        }
+
+        $sibling = PetMedia::query()->where('kind', PetMedia::KIND_TRANSITION)->where('state', $target)
+            ->when($source->pet_look_id !== null,
+                fn (Builder $q) => $q->where('pet_look_id', $source->pet_look_id)->where('life_stage', $source->life_stage),
+                fn (Builder $q) => $q->where('pet_id', $source->pet_id))
+            ->first();
+
+        // Its own clip of the source's generation (a look row is per stage) — no reversal needed.
+        $own = $sibling !== null && ($sibling->status === PetMedia::STATUS_RUNNING
+            || ($sibling->isServable() && ($sibling->pet_look_id !== null || (int) $sibling->source_generation >= (int) $source->source_generation)));
+
+        // QA #451 m4: without a marked sibling only while the switch is on (no wasted ffmpeg).
+        return ! $own && ($sibling?->frugal_source !== null || $this->entitlements->frugalClipsEnabled(fresh: true));
+    }
+
     /** The row owning a slot's file (a pool pet's row → its look row). */
     public static function ownerId(PetMedia $slot): int
     {
@@ -108,8 +234,9 @@ class SchoolClipDerivativeService
     /** A row derived clips are made from: a shown school phase clip that owns its file. */
     public function isSource(PetMedia $slot): bool
     {
-        return $slot->isPhase() && self::keyFor($slot->phaseClip()) !== null
-            && $slot->look_media_id === null && $slot->isShown();
+        return self::derivedKeyOf($slot) !== null
+            && $slot->look_media_id === null && $slot->isShown()
+            && (! $slot->isTransition() || $this->reversalWanted($slot));
     }
 
     // ──────────────────────────────────────────────────────────────
@@ -123,9 +250,38 @@ class SchoolClipDerivativeService
      */
     public function dueSources(?int $petId = null, ?int $lookId = null): Builder
     {
+        $frugal = $this->entitlements->frugalClipsEnabled(fresh: true);
+        $dogs = MediaEntitlementService::dogBreedValues();
+        // The owner's sleeping_to_idle row(s): the same pet, or the same look + stage.
+        $sibling = fn ($q) => $q->selectRaw('1')->from('pet_media as t')
+            ->where('t.kind', PetMedia::KIND_TRANSITION)
+            ->whereIn('t.state', array_keys(MediaEntitlementService::FRUGAL_REVERSED_TRANSITIONS))
+            ->where(fn ($q) => $q->where(fn ($q) => $q->whereNotNull('pet_media.pet_look_id')
+                ->whereColumn('t.pet_look_id', 'pet_media.pet_look_id')->whereColumn('t.life_stage', 'pet_media.life_stage'))
+                ->orWhere(fn ($q) => $q->whereNull('pet_media.pet_look_id')->whereColumn('t.pet_id', 'pet_media.pet_id')));
+
         return PetMedia::query()
-            ->where('kind', PetMedia::KIND_PHASE)
-            ->whereIn('state', self::sourceStates())
+            ->where(fn (Builder $q) => $q
+                ->where(fn (Builder $q) => $q->where('kind', PetMedia::KIND_PHASE)->whereIn('state', self::sourceStates()))
+                // Frugal B: a dog's idle_to_sleeping whose owner has no own sleeping_to_idle (reversalWanted()).
+                ->orWhere(fn (Builder $q) => $q->where('kind', PetMedia::KIND_TRANSITION)
+                    ->whereIn('state', array_values(MediaEntitlementService::FRUGAL_REVERSED_TRANSITIONS))
+                    ->where(fn ($q) => $q->whereExists(fn ($q) => $q->selectRaw('1')->from('pets as op')
+                        ->whereColumn('op.id', 'pet_media.pet_id')->whereIn('op.breed_type', $dogs))
+                        ->orWhereExists(fn ($q) => $q->selectRaw('1')->from('pet_looks as ol')
+                            ->whereColumn('ol.id', 'pet_media.pet_look_id')->whereIn('ol.breed_type', $dogs)))
+                    ->whereNotExists(fn ($q) => $sibling($q)
+                        ->where(fn ($q) => $q->where('t.status', PetMedia::STATUS_RUNNING)
+                            ->orWhere(fn ($q) => $q->whereNotNull('t.storage_path')
+                                ->where(fn ($q) => $q->whereNotNull('t.pet_look_id')->orWhereColumn('t.source_generation', '>=', 'pet_media.source_generation')))))
+                    // QA #451 m4: switch off → only where a sibling is marked frugal_source.
+                    ->when(! $frugal, fn ($q) => $q->whereExists(fn ($q) => $sibling($q)->whereNotNull('t.frugal_source'))))
+                // Frugal C: short low-motion state loops (isShortLoop()).
+                ->orWhere(fn (Builder $q) => $q->where('kind', PetMedia::KIND_VIDEO)
+                    ->whereIn('state', MediaEntitlementService::shortLoopStates())
+                    ->whereIn('stored_recipe', PetMedia::LOOP_RECIPES)
+                    ->whereNotNull('stored_duration_seconds')
+                    ->where('stored_duration_seconds', '<=', (float) config('media.state_media.frugal.short_loop_max_seconds', 3.5))))
             ->whereNull('look_media_id')
             ->whereNotNull('storage_path')
             ->where(fn (Builder $q) => $q->whereNull('quality')->orWhere('quality', '!=', PetMedia::QUALITY_FLAGGED))
@@ -156,11 +312,61 @@ class SchoolClipDerivativeService
             return 'busy';
         }
 
+        // QA #451 major 2: one heavy ffmpeg job at a time on the host (derived clips, previews and
+        // — once PR #450 is in — the stored-clip compression share HEAVY_LOCK).
+        $heavy = Cache::lock(self::HEAVY_LOCK, 300);
+
+        try {
+            $heavy->block((int) config('media.derivatives.heavy_lock_wait_seconds', 45));
+        } catch (LockTimeoutException) {
+            $lock->release();
+
+            return 'busy'; // the next backfill run (every 10 min) takes it
+        }
+
         try {
             return $this->makeLocked($sourceId);
         } finally {
+            $heavy->release();
             $lock->release();
         }
+    }
+
+    /**
+     * QA #451 major 2: `nice -n 19 prlimit --as=<bytes>` in front of every ffmpeg call here and in
+     * the preview (each when configured / available) — the CX23 (2 vCPU, 4 GB) also serves the API.
+     * Measured 2026-10-30: a full-size (1076 × 1924) 5 s reverse fails at 1024 MB address space and
+     * works at 1536 MB (peak RSS ~645 MB); default 2048 MB.
+     *
+     * @return list<string>
+     */
+    public static function limits(): array
+    {
+        $prefix = [];
+        $nice = (int) config('media.derivatives.nice', 19);
+        if ($nice > 0) {
+            $prefix = ['nice', '-n', (string) min(19, $nice)];
+        }
+
+        $mb = (int) config('media.derivatives.memory_limit_mb', 2048);
+        if ($mb > 0 && self::hasPrlimit()) {
+            $prefix = [...$prefix, 'prlimit', '--as='.($mb * 1024 * 1024)];
+        }
+
+        return $prefix;
+    }
+
+    private static function hasPrlimit(): bool
+    {
+        static $has = null;
+        if ($has === null) {
+            $has = Process::run(['prlimit', '--version'])->successful();
+            if (! $has) {
+                Log::warning('SchoolClipDerivativeService: prlimit not available — ffmpeg runs without a memory cap');
+            }
+        }
+
+        return $has;
     }
 
     private function makeLocked(int $sourceId): string
@@ -170,7 +376,8 @@ class SchoolClipDerivativeService
             return 'not_source';
         }
 
-        $key = (string) self::keyFor($source->phaseClip());
+        $key = (string) self::derivedKeyOf($source);
+        $mode = self::modeOf($source);
         $sourcePath = (string) $source->storage_path;
         $existing = PetMediaDerivative::where('pet_media_id', $source->id)->where('key', $key)->first();
         if ($existing?->isCurrentFor($sourcePath)) {
@@ -183,7 +390,6 @@ class SchoolClipDerivativeService
             return 'no_ffmpeg';
         }
 
-        $release = $source->phaseClip()?->phase() === PetPhaseClip::PHASE_PERFORMING;
         $in = null;
         $out = null;
 
@@ -199,16 +405,21 @@ class SchoolClipDerivativeService
             }
 
             $out = $in.'-derived.mp4';
-            $result = Process::timeout(self::PROCESS_TIMEOUT_SECONDS)->run(self::ffmpegArgs(
-                (string) config('media.quality_check.ffmpeg', 'ffmpeg'), $in, $out, $probe, $release,
-            ));
+            $result = Process::timeout(self::PROCESS_TIMEOUT_SECONDS)->run([...self::limits(), ...self::ffmpegArgs(
+                (string) config('media.quality_check.ffmpeg', 'ffmpeg'), $in, $out, $probe, $mode,
+                homeScreen: self::isHomeScreen($source),
+            )]);
             if (! $result->successful() || ! is_file($out) || filesize($out) === 0) {
                 return $this->recordFailure($source, $key, $existing, 'ffmpeg failed: '.mb_substr(trim($result->errorOutput()), -500));
             }
 
             $made = $this->probe($out);
             $bytes = (int) filesize($out);
-            $path = self::derivedPath($sourcePath, $release ? self::SUFFIX_RELEASE : self::SUFFIX_LOOP);
+            $path = self::derivedPath($sourcePath, match ($mode) {
+                self::MODE_RELEASE => self::SUFFIX_RELEASE,
+                self::MODE_REVERSE => self::SUFFIX_REVERSE,
+                default => self::SUFFIX_LOOP,
+            });
             $this->media->disk()->putFileAs(dirname($path), new File($out), basename($path));
 
             $previous = null;
@@ -247,6 +458,11 @@ class SchoolClipDerivativeService
                 'pet_media_id' => $source->id, 'key' => $key, 'bytes' => $bytes, 'seconds' => $made['duration'] ?? null,
             ]);
 
+            // Frugal B / C: the app shows these under keys it already reads — tell the pets once.
+            if (! $source->isPhase()) {
+                $this->notifyPets($source);
+            }
+
             return 'made';
         } catch (Throwable $e) {
             return $this->recordFailure($source, $key, $existing, $e->getMessage());
@@ -263,15 +479,25 @@ class SchoolClipDerivativeService
      * The ffmpeg command (pure — unit-tested). Long side ≤ MAX_LONG_SIDE (never upscaled),
      * constant frame rate = the source's, H.264 High yuv420p CRF 23, no audio, faststart.
      *
+     * `$mode`: MODE_LOOP (ping-pong), MODE_RELEASE (reversed, ≤ RELEASE_MAX_SECONDS),
+     * MODE_REVERSE (frugal B: reversed at the source's own length). A bool is the old
+     * signature (true = release). `$maxFrames` (loop only — the zero-cost preview): the
+     * ping-pong of the first N frames only. `$homeScreen` (frugal B / C): no downscale,
+     * CRF HOME_CRF — the full-screen home clip stays premium.
+     *
      * @param  array{frames: int, fps: float, duration: float, width: int, height: int}  $probe
      * @return list<string>
      */
-    public static function ffmpegArgs(string $ffmpeg, string $in, string $out, array $probe, bool $release): array
+    public static function ffmpegArgs(string $ffmpeg, string $in, string $out, array $probe, bool|string $mode, ?int $maxFrames = null, bool $homeScreen = false): array
     {
-        $scale = self::scaleFilter($probe['width'], $probe['height']);
+        $mode = is_bool($mode) ? ($mode ? self::MODE_RELEASE : self::MODE_LOOP) : $mode;
+        $scale = $homeScreen ? '' : self::scaleFilter($probe['width'], $probe['height']);
         $fps = $probe['fps'] > 0 ? $probe['fps'] : 24.0;
 
-        if ($release) {
+        if ($mode === self::MODE_REVERSE) {
+            // Frugal B: the same frames played backwards at the same length (no setpts).
+            $filter = ['-vf', $scale.'reverse'];
+        } elseif ($mode === self::MODE_RELEASE) {
             // Reversed (pose → standing). Sped up to ≤ RELEASE_MAX_SECONDS; two frames of
             // headroom because the CFR muxer may round up by a frame.
             $factor = $probe['duration'] > self::RELEASE_MAX_SECONDS
@@ -282,9 +508,15 @@ class SchoolClipDerivativeService
             // Ping-pong: frames 0 … N−1, then N−2 … 1 — no doubled turn frame, and the loop
             // restarts on frame 0 without a doubled seam frame.
             $n = $probe['frames'];
+            $head = '';
+            if ($maxFrames !== null && $maxFrames >= 3 && $maxFrames < $n) {
+                // Preview: the first $maxFrames frames only (what a 3 s clip would have been).
+                $n = $maxFrames;
+                $head = sprintf('trim=end_frame=%d,setpts=PTS-STARTPTS,', $n);
+            }
             $filter = ['-filter_complex', sprintf(
-                '[0:v]%ssplit[f][b];[b]reverse,trim=start_frame=1:end_frame=%d,setpts=PTS-STARTPTS[r];[f][r]concat=n=2:v=1:a=0[v]',
-                $scale, $n - 1,
+                '[0:v]%s%ssplit[f][b];[b]reverse,trim=start_frame=1:end_frame=%d,setpts=PTS-STARTPTS[r];[f][r]concat=n=2:v=1:a=0[v]',
+                $head, $scale, $n - 1,
             ), '-map', '[v]'];
         }
 
@@ -293,7 +525,7 @@ class SchoolClipDerivativeService
             ...$filter,
             '-r', self::fpsArg($fps),
             '-c:v', 'libx264', '-profile:v', 'high', '-pix_fmt', 'yuv420p',
-            '-crf', (string) self::CRF, '-preset', 'veryfast', '-threads', '2',
+            '-crf', (string) ($homeScreen ? self::HOME_CRF : self::CRF), '-preset', 'veryfast', '-threads', '2',
             '-movflags', '+faststart',
             $out,
         ];
@@ -388,11 +620,34 @@ class SchoolClipDerivativeService
 
         Log::warning('SchoolClipDerivativeService: derived clip not made', ['pet_media_id' => $source->id, 'key' => $key, 'attempts' => $attempts, 'error' => mb_substr($error, 0, 300)]);
 
+        // QA #451 m2: a frugal reversal / ping-pong that failed for good never leaves a hard cut —
+        // the clip is made the normal way (fal) and the admins are told (counts only).
+        if (! $source->isPhase() && $attempts >= self::MAX_ATTEMPTS) {
+            try {
+                $this->media->fallBackFromDerivative($source);
+            } catch (Throwable $e) {
+                report($e);
+            }
+            SendFrugalClipFallbackAlert::dispatch(1);
+        }
+
         return 'failed';
     }
 
+    /** One `video_ready` broadcast per pet that shows the source file (its own row or the look row). */
+    private function notifyPets(PetMedia $source): void
+    {
+        $petIds = $source->pet_look_id !== null
+            ? PetMedia::query()->where('look_media_id', $source->id)->whereNotNull('pet_id')->distinct()->pluck('pet_id')->all()
+            : array_filter([$source->pet_id]);
+
+        foreach (Pet::query()->whereIn('id', $petIds)->where('is_active', true)->get() as $pet) {
+            PetUpdated::afterCommit($pet, 'video_ready');
+        }
+    }
+
     /** A temp copy of a media-disk file (ffmpeg needs a local path; works for `pet_media_s3`). */
-    private function localCopy(string $path): ?string
+    public function localCopy(string $path): ?string
     {
         $disk = $this->media->disk();
         if ($path === '' || ! $disk->exists($path)) {
@@ -422,14 +677,15 @@ class SchoolClipDerivativeService
     // ──────────────────────────────────────────────────────────────
 
     /**
-     * Derived clips of a pet's SHOWN school phase slots: [key => [url, seconds]] (one query).
+     * Derived clips of a pet's SHOWN source slots: [key => [url, seconds]] (one query) —
+     * school phase slots and (frugal clips) `idle_to_sleeping` / short low-motion loops.
      *
-     * @param  Collection<int, PetMedia>  $slots  the pet's shown school phase slots
+     * @param  Collection<int, PetMedia>  $slots  the pet's shown source slots
      * @return array<string, array{url: string, seconds: float}>
      */
     public function payloadFor(Collection $slots, CarbonImmutable $expires): array
     {
-        $sources = $slots->filter(fn (PetMedia $m) => $m->isPhase() && self::keyFor($m->phaseClip()) !== null && $m->isShown());
+        $sources = $slots->filter(fn (PetMedia $m) => self::derivedKeyOf($m) !== null && $m->isShown());
         if ($sources->isEmpty()) {
             return [];
         }
@@ -442,7 +698,7 @@ class SchoolClipDerivativeService
 
         $out = [];
         foreach ($sources as $slot) {
-            $key = (string) self::keyFor($slot->phaseClip());
+            $key = (string) self::derivedKeyOf($slot);
             $row = ($rows->get(self::ownerId($slot)) ?? collect())->firstWhere('key', $key);
             if ($row instanceof PetMediaDerivative && $row->isCurrentFor($slot->storage_path)) {
                 $out[$key] = [
@@ -471,7 +727,7 @@ class SchoolClipDerivativeService
     /** The current derived row a slot may serve under $key (null = 404). */
     public function servable(PetMedia $slot, string $key): ?PetMediaDerivative
     {
-        if (! $slot->isShown() || self::keyFor($slot->phaseClip()) !== $key) {
+        if (! $slot->isShown() || self::derivedKeyOf($slot) !== $key) {
             return null;
         }
 
