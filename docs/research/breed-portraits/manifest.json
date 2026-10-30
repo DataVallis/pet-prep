@@ -974,6 +974,19 @@
             "prompt_hash": "sha256:cbc11ee6b22de875c61fae8865e7817b1f7eb1729c3e3dd2560351247f18ec4d",
             "generated_at": "2026-10-30T03:55:52+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "american_staffordshire_terrier",
+            "species": "dog",
+            "colour": "brindle",
+            "file": "dog/american-staffordshire-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:8e035363882b13e6aa92d6f255683dee6485861664a2045c8a66326752feea2d",
+            "generated_at": "2026-10-30T07:29:42+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [

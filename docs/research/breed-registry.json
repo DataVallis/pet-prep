@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "cca468ad31cb6a57a5cceb552073d6b4bccb0ee3f0fa62bb8135102cd86977ee"
+      "sha256": "eb6e89f8c57f932703cc3a402f717826a5c2225f7eedefa04da1d809fde261d4"
     }
   },
   "suitability_vocabulary": {
@@ -45305,7 +45305,12 @@
           "S629"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "american-staffordshire-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "not_found",
         "tests": [],
