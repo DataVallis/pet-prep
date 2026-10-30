@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `american_staffordshire_terrier` (viri S625–S629; ponovno S8, S10, S11, S14, S24, S35, S45, S123, S174); seznam za vzreditelja: ni najden (`not_found`) |
 | Izvor | FCI št. 286, skupina 3, sekcija 3 (terierji bulterierskega tipa), ZDA (S625, S626) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 77. mesto (S174, prebrano 2026-10-30) |
-| PR-ji | pet-prep #448 (pasma) · portret: sledi · spletna stran: sledi (le s portretom) |
+| PR-ji | pet-prep #448 (pasma, združen `58b151d`) · portret: #449 (zagon 41020352577) · spletna stran: pet-prep-website `feat/register-american-staffordshire-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -41,7 +41,7 @@
 | Česanje 1× na teden, »Nova izkušnja« za mladička, opozorilo po obroku | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R16 | 2026-10-30 |
 | Mini igra čiščenje ušes (vsake 4 tedne); opomnik staršem kopanje (vsake 4 tedne) | 🛠 | 💶 izziv | M5-R19 / M5-R20 | 2026-10-30 |
 | Barva (izbirnik: tigrasta, modra, črna) | 🛠 | 💶 izziv | M5-R21 | 2026-10-30 |
-| AI portret v registru | 🗓 sledi takoj po združitvi | — | M5-R11-04 | — |
+| AI portret v registru (tigrast, sprejet v prvem poskusu, zagon 41020352577, PR #449) | ✅ | — | M5-R11-04 | 2026-10-30 |
 | Stran na petprep.si (`/animals/dogs/american-staffordshire-terrier`, `/sl/zivali/psi/ameriski-staffordshirski-terier`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -58,3 +58,4 @@
 - **Kopanje:** PetMD (S628) pravi »no more than every 4-6 weeks« (največ), ušesa pa čistimo ob kopanju »around every 4-6 weeks« — uporabljen je ritem 4 tedne za oba. VCA (S629) »as required«. Če je opomnik za kopanje odveč, je to podatkovna migracija (sejalnik samo dodaja).
 - **Seznam za vzreditelja:** ni najden (RKC strani ni, OFA CHIC ni vrnil vrstic). Če poznate shemo (npr. NCL / cerebelarna ataksija — DNA test), dodamo z virom.
 - **Ugotovitev za skupne dokumente (ne urejam jih):** nič novega — država izvora ZDA (US) in zdravstveni ključi že obstajajo.
+- **Portret:** zagon 41020352577 (koda `58b151d`, brez produkcijske namestitve, 0,15 $), sprejet v prvem poskusu — realistična fotografija odraslega tigrastega psa, kratka svetleča dlaka, naravna (nekupirana) napol pokončna ušesa, naraven rep, črn nos, svetlo siva studijska podlaga. Noge so morda za odtenek daljše, kot jih opisuje standard (»not long-legged«) — če želite, ga ponovimo z `force`. PR #449.
