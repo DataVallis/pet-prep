@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Carbon;
 
 /**
  * One AI media slot of a pet (M4-03 / M4-05): the reference image
@@ -73,6 +74,12 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property string|null $quality_reason
  * @property int|null $quality_retry_generation
  * @property float|null $stored_duration_seconds
+ * @property string|null $compression_path
+ * @property string|null $compression_status
+ * @property int $compression_attempts
+ * @property Carbon|null $compressed_at
+ * @property int|null $original_bytes
+ * @property string|null $compression_note
  */
 class PetMedia extends Model
 {
@@ -213,6 +220,10 @@ class PetMedia extends Model
             'completed_at' => 'datetime',
             'auto_retries' => 'integer',
             'auto_alerted_at' => 'datetime',
+            // David 2026-10-30: stored video compression (Media\VideoCompressionService).
+            'compression_attempts' => 'integer',
+            'compressed_at' => 'datetime',
+            'original_bytes' => 'integer',
         ];
     }
 

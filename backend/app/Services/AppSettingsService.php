@@ -103,6 +103,12 @@ class AppSettingsService
 
     public const FAL_BALANCE_ALERT_KEY = 'fal_balance_alert';
 
+    /**
+     * David 2026-10-30: re-encode stored AI videos once to save disk (`media:compress`,
+     * Media\VideoCompressionService) — DEFAULT OFF; the scheduled run reads it fresh.
+     */
+    public const VIDEO_COMPRESSION_KEY = 'video_compression';
+
     /** M5-T15 default low-balance threshold (no row / empty), USD. */
     public const FAL_BALANCE_ALERT_DEFAULT_USD = 20.0;
 
@@ -397,6 +403,27 @@ class AppSettingsService
     public function updateAppErrorReports(User $actor, bool $enabled): void
     {
         $this->store($actor, self::APP_ERROR_REPORTS_KEY, ['enabled' => $enabled], ['enabled' => false]);
+    }
+
+    /**
+     * David 2026-10-30: stored video compression on / off. Default off (no row = off).
+     * `$fresh` reads the row itself (no cache) — the scheduled `media:compress` uses it.
+     */
+    public function videoCompression(bool $fresh = false): bool
+    {
+        /** @var array{enabled?: bool} $value */
+        $value = $fresh
+            ? (AppSetting::find(self::VIDEO_COMPRESSION_KEY)?->value ?? [])
+            : Cache::remember(self::cacheKey(self::VIDEO_COMPRESSION_KEY), self::CACHE_TTL_SECONDS,
+                fn (): array => AppSetting::find(self::VIDEO_COMPRESSION_KEY)?->value ?? []);
+
+        return (bool) ($value['enabled'] ?? false);
+    }
+
+    /** Save the video compression switch (superadmin), audit it and bust the cache. */
+    public function updateVideoCompression(User $actor, bool $enabled): void
+    {
+        $this->store($actor, self::VIDEO_COMPRESSION_KEY, ['enabled' => $enabled], ['enabled' => false]);
     }
 
     /**

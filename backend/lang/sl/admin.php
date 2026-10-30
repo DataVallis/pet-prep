@@ -298,6 +298,10 @@ return [
         'app_error_reports_section' => 'Poročila o napakah iz aplikacije',
         'app_error_reports_description' => 'Poročila o sesutjih in napakah prikaza iz mobilne aplikacije v »Zdravje sistema« (samo tehnični podatki, brez povezave z uporabnikom). Vklopite šele, ko politika zasebnosti na spletni strani in obrazca o zasebnosti v App Store / Google Play navajajo podatke o sesutjih. Izklopljeno: aplikacija ne pošlje ničesar, strežnik ne shrani ničesar.',
         'app_error_reports' => 'Zbiraj poročila o napakah iz aplikacije',
+        'saved_body_video_compression' => 'Stiskanje videov: :state',
+        'video_compression_section' => 'Stiskanje videov (disk)',
+        'video_compression_description' => 'Vsak shranjen AI posnetek enkrat ponovno kodira v isti ločljivosti in hitrosti sličic (H.264, CRF 21), da zasede manj diska. Posnetek se zamenja le, če je vsaj 30 % manjši in je videti enako (SSIM ≥ 0,98, enaka dolžina in število sličic); sicer ostane izvirnik. Teče na strežniku v majhnih paketih vsako uro ponoči (22.00–6.00), tudi za nove posnetke. Najprej preverite `media:compress --sample=10`.',
+        'video_compression' => 'Stiskaj shranjene videe',
     ],
 
     // M5-R21: skupni videzi (PetLookResource).

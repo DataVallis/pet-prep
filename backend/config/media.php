@@ -212,6 +212,30 @@ return [
     'preparation_essentials' => ['idle', 'sleeping', 'hungry'],
 
     /*
+    | Stored video compression (David 2026-10-30, `media:compress`,
+    | Media\VideoCompressionService): every stored AI clip (state video, loop,
+    | transition, phase clip — the row owning the file) is re-encoded ONCE at the
+    | same path — H.264 High, yuv420p, CRF below, same resolution and fps — and
+    | kept only when it is `min_saving_percent` smaller AND looks the same
+    | (SSIM ≥ `min_ssim`, same duration / frame count). On / off is the superadmin
+    | switch /admin → Feature switches (`app_settings.video_compression`, default
+    | OFF); the scheduled run works in batches within `time_budget_seconds`.
+    */
+    'compression' => [
+        'crf' => (int) env('MEDIA_COMPRESS_CRF', 21),
+        'preset' => env('MEDIA_COMPRESS_PRESET', 'slow'),
+        'min_saving_percent' => (float) env('MEDIA_COMPRESS_MIN_SAVING_PERCENT', 30),
+        'min_ssim' => (float) env('MEDIA_COMPRESS_MIN_SSIM', 0.98),
+        // ffmpeg threads per encode and `nice` level — the CX23 has 2 vCPUs and also serves the API.
+        'threads' => (int) env('MEDIA_COMPRESS_THREADS', 2),
+        'nice' => (int) env('MEDIA_COMPRESS_NICE', 19),
+        // Per ffmpeg / ffprobe call (a 10 s 1080 × 1920 clip at `slow` stays well below).
+        'process_timeout_seconds' => (int) env('MEDIA_COMPRESS_PROCESS_TIMEOUT', 300),
+        // Scheduled run: stop starting new files after this many seconds.
+        'time_budget_seconds' => (int) env('MEDIA_COMPRESS_TIME_BUDGET', 600),
+    ],
+
+    /*
     | Our copy of every generated file (M4-05). fal.media URLs are never given
     | to the apps: a queued job downloads the result to a private disk and the
     | apps get signed, expiring URLs to GET /api/media/{media}.

@@ -459,6 +459,16 @@ docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app 
 
 `--regenerate` prints the cost and refuses when it does not fit the budget (QA #363 m5). In shadow mode a real run marks failures »would fail« (still shown); in enforce mode it hides them. `--pet` of a pet on a shared look checks that look's rows once; `--look=<id>` a look; no option = every stored clip without a verdict (`--recheck` also the checked ones). »Approve anyway« (superadmin) in Pet → AI media shows a »Needs review« / flagged clip anyway.
 
+**Stored video compression (David 2026-10-30).** Kling clips are stored as delivered (1076 × 1924, 24 fps, ~23 Mbps — 5 s ≈ 14–15 MB). `media:compress` re-encodes each clip file once at the same path (H.264 CRF 21, same resolution and fps) and keeps it only when it is ≥ 30 % smaller with SSIM ≥ 0.98 and the same length / frames; otherwise the original stays. The scheduled run (hourly at :37, 22:00–06:00 Ljubljana, ≤ 10 min per run, niced, 2 ffmpeg threads, ~570 MB peak RAM per encode) does nothing until the superadmin switch **`/admin → Feature switches → »Video compression (disk)«`** is on (default off). Before switching on, measure on real clips (nothing is changed by these):
+
+```bash
+docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app php artisan media:compress --dry-run
+docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app php artisan media:compress --sample=10
+docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app php artisan media:disk-report
+```
+
+`--sample=N` prints size before → after, saving % and SSIM per file. A manual real run (switch on) can be limited with `--limit=`, `--pet=`, `--look=`, `--budget=<seconds>` (0 = no time limit). `media:disk-report` is read-only: usage by kind, what compression saved, files on disk, orphans (no DB row), old clip candidates and leftover `*.compress-tmp` files — it never deletes; deleting production media needs David.
+
 ---
 
 ## 9. DNS & Domain Configuration

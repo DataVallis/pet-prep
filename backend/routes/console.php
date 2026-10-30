@@ -87,6 +87,22 @@ Schedule::command('media:faststart')
     ->name('faststart-pet-media')
     ->description('Move the MP4 index to the front of stored pet videos');
 
+// Hourly at night (David 2026-10-30): re-encode stored AI videos once (same resolution /
+// fps, CRF 21) when it saves ≥ 30 % and SSIM ≥ 0.98 — only while the superadmin switch
+// /admin → Feature switches »Video compression« is on (read fresh; default off → no-op).
+// 22:00–06:00 Ljubljana: the server is idle and no child is likely to be streaming a clip
+// while it is swapped. Batches read with chunkById, stop after the time budget
+// (media.compression.time_budget_seconds); new clips are picked up the next night.
+Schedule::command('media:compress')
+    ->hourlyAt(37)
+    ->between('22:00', '06:00')
+    ->timezone('Europe/Ljubljana')
+    ->withoutOverlapping(60)
+    // Up to the time budget (10 min) — never hold up the every-minute events of the same tick.
+    ->runInBackground()
+    ->name('compress-pet-media')
+    ->description('Re-encode stored AI videos once when it saves disk and looks the same (switch-gated)');
+
 // Every 5 min (M5-R14 – R20 follow-up, David 2026-10-24): switch breed care tasks on
 // for existing dogs once their apps declare `care_tasks` (from the next family-local
 // midnight, never retroactively) and push the parent groomer / bath reminder when a
