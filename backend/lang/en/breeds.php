@@ -80,6 +80,7 @@ return [
     'bull_terrier' => 'Bull Terrier',
     'miniature_pinscher' => 'Miniature Pinscher',
     'pyrenean_mountain_dog' => 'Pyrenean Mountain Dog',
+    'soft_coated_wheaten_terrier' => 'Soft Coated Wheaten Terrier',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

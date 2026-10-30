@@ -2043,5 +2043,20 @@ return [
                 ['tag' => 'shorter_lifespan', 'source_ids' => ['S600', 'S603'], 'refs' => ['pyrenean_mountain_dog.lifespan.rkc', 'pyrenean_mountain_dog.suitability.rkc_lifespan']],
             ],
         ],
+        // M5-R10-79: soft_coated_wheaten_terrier.* (S608–S614), runbook rules (data.json proposed_game_parameters.soft_coated_wheaten_terrier.suitability_tags).
+        // children: VCA explicit statement (S614; PetMD S613 supervision caveat kept in behaviour.children — never small_children);
+        // low_shedding: RKC "Sheds: No" (S610, never hypoallergenic); needs_company: PetMD "dislike being left alone for long
+        // periods" (S613, Brittany precedent). Other pets: VCA vs PetMD conflict → neither other_pets nor chases_small_pets.
+        'soft_coated_wheaten_terrier' => [
+            'suits' => [
+                ['tag' => 'family_pet', 'source_ids' => ['S612'], 'refs' => ['soft_coated_wheaten_terrier.suitability.pdsa_family', 'soft_coated_wheaten_terrier.behaviour.family']],
+                ['tag' => 'children', 'source_ids' => ['S614'], 'refs' => ['soft_coated_wheaten_terrier.behaviour.children', 'soft_coated_wheaten_terrier.suitability.vca_children']],
+                ['tag' => 'low_shedding', 'source_ids' => ['S610'], 'refs' => ['soft_coated_wheaten_terrier.suitability.rkc_shedding']],
+            ],
+            'consider' => [
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S610', 'S612'], 'refs' => ['soft_coated_wheaten_terrier.suitability.rkc_grooming', 'soft_coated_wheaten_terrier.suitability.pdsa_grooming']],
+                ['tag' => 'needs_company', 'source_ids' => ['S613'], 'refs' => ['soft_coated_wheaten_terrier.behaviour.time_alone', 'soft_coated_wheaten_terrier.suitability.petmd_time_alone']],
+            ],
+        ],
     ],
 ];

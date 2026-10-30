@@ -653,6 +653,12 @@
 | RKC Breed Watch: Category 1 on the breed page (S600), Category 2 on the Breed Watch page (S602) — open for David.
 | Colour weights unsourced → `verified => false`.
 |
+| Soft Coated Wheaten Terrier (M5-R10-79, docs/research/dog-data soft_coated_wheaten_terrier.appearance):
+| "Medium-sized, compact, upstanding terrier well covered with a soft, wheaten-coloured, natural coat" (RKC standard,
+| S611); one standard colour — "A good clear wheaten." (S611; FCI S609 shades from light wheaten to a golden reddish hue)
+| — never white, red, black or black and tan; natural tail. RKC Breed Watch Category 1 (S610). One colour → weight 100,
+| the register portrait; still `verified => false` (no frequency source, same rule as every breed).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -3452,6 +3458,39 @@ return [
             'muzzle' => ['a totally black nose and black lips, a moderate muzzle'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+
+    // M5-R10-79 (docs/research/dog-data/data.json soft_coated_wheaten_terrier.appearance; runbook rules 2026-10-10: standard
+    // colour only — S611 "A good clear wheaten."; never white, red, black or black and tan).
+    'soft_coated_wheaten_terrier' => [
+        'display_name' => 'Soft Coated Wheaten Terrier',
+        // Colour frequencies are in no source (soft_coated_wheaten_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'RKC breed standard Soft Coated Wheaten Terrier (S611, https://www.royalkennelclub.com/breed-standards/terrier/soft-coated-wheaten-terrier/), FCI-Standard N° 40 (S609), RKC Breeds A–Z (S610) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S610 "Size: Medium"; S611 "Height: dogs: approximately 46-49 cms (18-19½ ins) measured at the withers; bitches slightly less."',
+            'build' => 'S611 "Medium-sized, compact, upstanding terrier well covered with a soft, wheaten-coloured, natural coat"',
+            'coat_length' => 'S611 "Soft and silky."; S609 "A single coated dog. Texture soft and silky to feel and not harsh."',
+            'coat_color' => 'S611 "A good clear wheaten." (weights unsourced)',
+            'head' => 'S611 "Nose black and large for size of dog." (hair falling forward over the eyes, strong square muzzle — paraphrase)',
+            'ear_carriage' => 'S611 "V-shaped and folded at level of skull."',
+            'eye_color' => 'S611 "Clear, bright dark hazel. Medium size set under strong brow. Eye rims black."',
+            'tail' => 'S609 "Well set, not too thick. Carried gaily but never over the back." (undocked)',
+        ],
+        'traits' => [
+            'size' => ['medium-sized, compact'],
+            'build' => [['value' => 'compact, upstanding, square-standing terrier, active, strong and well balanced, not exaggerated', 'weight' => 3], 'hardy, short-coupled, well built terrier giving the idea of strength'],
+            'coat_length' => ['soft, silky single coat falling in loose waves or large loose curls, abundant on the head and legs, natural and not show-trimmed'],
+            // One standard colour (S611) → the register portrait.
+            'coat_color' => [
+                ['value' => 'clear wheaten', 'weight' => 100],
+            ],
+            'head' => ['moderately long head with the coat falling forward over the eyes, a strong square muzzle and a large black nose'],
+            'ear_carriage' => ['small to medium V-shaped ears folded at the level of the skull, covered with coat'],
+            'eye_color' => ['clear, bright dark hazel eyes with black rims'],
+            'tail' => ['natural undocked tail set high and carried gaily, never over the back'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',

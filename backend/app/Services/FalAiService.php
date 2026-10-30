@@ -662,6 +662,13 @@ class FalAiService
                 .'a long well-plumed tail carried low, calm and contemplative expression, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-79: RKC standard (S611) / FCI-Standard N° 40 (S609) — a medium-sized, compact, upstanding terrier with a
+            // soft, silky, clear wheaten single coat in loose waves; natural tail.
+            BreedType::SoftCoatedWheatenTerrier => 'A medium-sized, compact, upstanding Soft Coated Wheaten Terrier with a soft, silky, clear wheaten single coat falling in loose waves, '
+                .'hair falling forward over the eyes, a strong square muzzle with a large black nose, clear dark hazel eyes with black rims, '
+                .'small V-shaped ears folded at skull level, a natural tail carried gaily but never over the back, happy and confident expression, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1593,6 +1600,18 @@ class FalAiService
                 'eye_color' => 'amber-brown',
                 'fur_texture' => 'thick, flat, fairly long outer coat over a dense woolly undercoat, with a ruff at the neck',
                 'markings' => 'black nose and eye rims, double dewclaws on the hind legs, never black, brindle or merle',
+            ],
+            // M5-R10-79: one standard colour, clear wheaten in shades from light wheaten to golden (S611 / S609); never white,
+            // red, black or black and tan.
+            BreedType::SoftCoatedWheatenTerrier => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'clear wheaten',
+                    1 => 'light clear wheaten',
+                    2 => 'golden clear wheaten',
+                },
+                'eye_color' => 'dark hazel',
+                'fur_texture' => 'soft, silky single coat falling in loose waves or large loose curls',
+                'markings' => 'black nose and eye rims, slightly darker ears allowed, natural undocked tail, never white, red, black or black and tan',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

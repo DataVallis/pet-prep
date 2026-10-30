@@ -494,6 +494,10 @@ return [
         ['key' => 'white-yellow', 'value' => 'white with pale yellow patches on the head and ears', 'en' => 'White with pale yellow patches', 'sl' => 'Bel z bledo rumenimi lisami'],
         ['key' => 'white-orange', 'value' => 'white with orange patches on the head and ears', 'en' => 'White with orange patches', 'sl' => 'Bel z oranžnimi lisami'],
     ],
+    // M5-R10-79: RKC standard S611 — one colour, "A good clear wheaten."
+    'soft_coated_wheaten_terrier' => [
+        ['key' => 'wheaten', 'value' => 'clear wheaten', 'en' => 'Wheaten', 'sl' => 'Pšenično rumen'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
