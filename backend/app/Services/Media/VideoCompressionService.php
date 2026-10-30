@@ -70,7 +70,9 @@ class VideoCompressionService
     public const KEY_SUFFIX = '-c';
 
     /** Local temp files of this service (swept after TEMP_MAX_AGE_MINUTES). */
-    public const TEMP_PREFIX = MediaDownloader::TEMP_PREFIX.'c-';
+    // Own prefix (not `petmedia-*`): PetMediaService::cleanupTempFiles() must never sweep a
+    // file an encode is still reading.
+    public const TEMP_PREFIX = 'petcompress-';
 
     public const TEMP_MAX_AGE_MINUTES = 60;
 
@@ -633,7 +635,8 @@ class VideoCompressionService
     public function cleanupTempFiles(int $olderThanMinutes = self::TEMP_MAX_AGE_MINUTES): int
     {
         $deleted = 0;
-        $cutoff = now()->subMinutes($olderThanMinutes)->getTimestamp();
+        // Real clock (file mtimes are real time, never a test's travelled clock).
+        $cutoff = time() - $olderThanMinutes * 60;
 
         foreach (glob(rtrim(sys_get_temp_dir(), '/').'/'.self::TEMP_PREFIX.'*') ?: [] as $file) {
             if (is_file($file) && (int) @filemtime($file) < $cutoff && @unlink($file)) {
