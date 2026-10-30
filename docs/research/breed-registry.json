@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "1cd14b5c97d6b65fa355246354148d0d9b06b404fb5704efcff2126fe4c6b0c1"
+      "sha256": "db374939df1b388d2c817a847599e3218c35ccce76e13f588336edd70bb54802"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "c194a8c5573a8ff8c2d1dd3081d179e03c9c4207ce58f54f7a8b8b40e6db700d"
+      "sha256": "68d82298b4158e9b33d668cce1800db9c7cde70d57ef876018735763864eed12"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "f24e6cb70dfe380cd7ce3c13f8ce69a704db1599fbeb3bc93298e9bc34d6fd3d"
+      "sha256": "5dde80150394b4dca8c833e7b3744210103ad536204b458c2b3d1cab17dcf846"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "7cf87e1796802b0f9a315835411146e11fd28677b28917a2f7b204ed4b34a5bd"
+      "sha256": "a5417c968cdee8cecca019d350cd5893131f4b39fa2c8ca826c9285999d80990"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "c50148919969e430095dd817acaa6600d51d26fe7f84ac8e277cbba80544f0eb"
+      "sha256": "276c1e2c3cf222cb13dd7e74219a49bac1feceef63373ccb2579caa2c458cbfe"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "5be50bbd60e4a7c5923759bc30a4aaa39e5552c2597b8f6798564d80981d74a0"
+      "sha256": "e21c3e8d311f7bc5c746e0fa74cf0dd69854ba3b17da7ebeb2607f6fcbf4dbb7"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "c630e1b4cb85108c2816696edea542d028793f3b625060392aa4b1c1b4c56d72"
+      "sha256": "abb61b0495b8ab86867c40f50efa47f5b1239e943a7f4e231fce70fecdaa3631"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -222,7 +222,7 @@
         }
       },
       "status": "available",
-      "breed_count": 74,
+      "breed_count": 75,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -44843,6 +44843,503 @@
       ]
     },
     {
+      "id": "american_staffordshire_terrier",
+      "species": "dog",
+      "order": 74,
+      "availability": "coming_soon",
+      "name": {
+        "en": "American Staffordshire Terrier",
+        "sl": "Ameriški staffordshirski terier"
+      },
+      "slug": {
+        "en": "american-staffordshire-terrier",
+        "sl": "ameriski-staffordshirski-terier"
+      },
+      "synonyms": {
+        "en": [
+          "AmStaff",
+          "Am Staff",
+          "Staffordshire Terrier"
+        ],
+        "sl": [
+          "amstaff",
+          "ameriški stafordširski terier"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "h1_2"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S628"
+          ],
+          "ref": "american_staffordshire_terrier.size_class",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              46,
+              48
+            ],
+            "female": [
+              43,
+              46
+            ]
+          },
+          "source_ids": [
+            "S626"
+          ],
+          "ref": "american_staffordshire_terrier.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              18.1,
+              31.8
+            ],
+            "female": [
+              18.1,
+              31.8
+            ]
+          },
+          "source_ids": [
+            "S628"
+          ],
+          "ref": "american_staffordshire_terrier.adult_weight.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "american_staffordshire_terrier.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 12.5,
+          "source_ids": [
+            "S123"
+          ],
+          "ref": "american_staffordshire_terrier.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            12,
+            16
+          ],
+          "source_ids": [
+            "S628"
+          ],
+          "ref": "american_staffordshire_terrier.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "at_least",
+          "value": 60,
+          "source_ids": [
+            "S628"
+          ],
+          "ref": "proposed_game_parameters.american_staffordshire_terrier.exercise_minutes_adult",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 34,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "american_staffordshire_terrier.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 286,
+            "group": 3,
+            "section": 3,
+            "origin": "US"
+          },
+          "source_ids": [
+            "S625"
+          ],
+          "ref": "american_staffordshire_terrier.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S628"
+          ],
+          "ref": "american_staffordshire_terrier.health.hip_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "pra_eye_disease",
+          "source_ids": [
+            "S628"
+          ],
+          "ref": "american_staffordshire_terrier.health.pra",
+          "confidence": "high"
+        },
+        {
+          "key": "itchy_skin_allergy",
+          "source_ids": [
+            "S629"
+          ],
+          "ref": "american_staffordshire_terrier.health.skin_allergy",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "children",
+            "source_ids": [
+              "S628"
+            ],
+            "refs": [
+              "american_staffordshire_terrier.behaviour.children",
+              "american_staffordshire_terrier.suitability.petmd_children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S628"
+            ],
+            "refs": [
+              "american_staffordshire_terrier.behaviour.time_alone",
+              "american_staffordshire_terrier.suitability.petmd_time_alone"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S628"
+            ],
+            "refs": [
+              "american_staffordshire_terrier.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 113
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.2
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 113
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 28
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.american_staffordshire_terrier.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S628"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PetMD S628 'at least 60 minutes'; no RKC / PDSA page)"
+          },
+          {
+            "ref": "proposed_game_parameters.american_staffordshire_terrier.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.american_staffordshire_terrier.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S123"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 113 (0.75 × 12.5 y, McMillan 2024 via S123)"
+          },
+          {
+            "ref": "proposed_game_parameters.american_staffordshire_terrier.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 34, Above average tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.american_staffordshire_terrier.grooming",
+            "basis_source_ids": [
+              "S629"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (VCA S629 »Weekly brushing«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.american_staffordshire_terrier.ear_care",
+            "basis_source_ids": [
+              "S628"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »around every 4-6 weeks« → spodnja meja, vsake 4 tedne"
+          },
+          {
+            "ref": "proposed_game_parameters.american_staffordshire_terrier.bathing",
+            "basis_source_ids": [
+              "S628"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »every 4-6 weeks« → spodnja meja, vsake 4 tedne"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S123",
+          "S628",
+          "S629"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "not_found",
+        "tests": [],
+        "basis_source_ids": []
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S123",
+        "S625",
+        "S626",
+        "S628",
+        "S629",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -50000,6 +50497,34 @@
       "publisher": "Acta Veterinaria Scandinavica 59:53 (2017)",
       "title": "Orleifson L., Ljungvall I., Höglund K., Häggström J. Occurrence of cardiorespiratory diseases and impact on lifespan in Swedish Irish Wolfhounds: a retrospective questionnaire-based study. doi:10.1186/s13028-017-0320-1",
       "url": "https://link.springer.com/doi/10.1186/s13028-017-0320-1"
+    },
+    {
+      "id": "S625",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "Nomenclature — American Staffordshire Terrier (286)",
+      "url": "https://www.fci.be/en/nomenclature/AMERICAN-STAFFORDSHIRE-TERRIER-286.html"
+    },
+    {
+      "id": "S626",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 286 — American Staffordshire Terrier (PDF, EN)",
+      "url": "https://www.fci.be/Nomenclature/Standards/286g03-en.pdf"
+    },
+    {
+      "id": "S628",
+      "tier": "B",
+      "publisher": "PetMD — Georgina Ushi, DVM (published Feb. 1, 2023)",
+      "title": "American Staffordshire Terrier — dog breed health and care",
+      "url": "https://www.petmd.com/dog/breeds/american-staffordshire-terrier"
+    },
+    {
+      "id": "S629",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals",
+      "title": "American Staffordshire Terrier (Know your pet)",
+      "url": "https://vcahospitals.com/know-your-pet/american-staffordshire-terrier"
     },
     {
       "id": "C1",
