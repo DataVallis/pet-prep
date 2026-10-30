@@ -8,6 +8,15 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-30 — Kakec z vrečko, luža s krpo: čiščenje postane igra
+
+**Kaj:** GAMES_SPEC faza 1, del 2. Neredi imajo nove, jasne risbe po CGP v2 (David je 30. 10. izbral skico A): kakec je mehak trinadstropni rjav zavoj brez obraza (1–3 kosi, za isti nered vedno enako), luža je plitva rumena luža z robom, odsevom in kapljico, pregrizen copat ima 3 kosmiče, mačje grudice so svetle in zaobljene. Risbe zamenjajo »krogce in tulce« povsod — na glavnem zaslonu, v stari igri tapkanja in pri mačjem pesku (pridejo z OTA). Na novi gradnji (isti igralni sloj kot nova žoga) je čiščenje prava igra: **vrečko** povlečeš čez kakec (stisne se vanjo, vrečka se zaveže in odleti v koš), **lužo** obrišeš s krpo kot strgalno srečko do ~90 % (skrči se in posuši), **copat** in kosmiče povlečeš v škatlo in kužku daš **igračo za grizenje**, pri muci **lopatko** povlečeš skozi pesek, grudice se primejo, stresi jih navzgor v vrečko in pesek se zgladi. Ob prvem čiščenju vrste se enkrat pokaže učni namig.
+**Zakaj je pomembno:** David je na telefonu videl nejasne ikone (»krogeci in tulci za iztrebke«). Zdaj otrok ne tapka abstraktnih pik, ampak naredi to, kar bo naredil s pravim psom: pobere z vrečko in mirno pobriše. Namig »Ne kregaj ga — pelji ga pogosteje ven.« ima vir (VCA Animal Hospitals: mladička ne kaznujemo, počistimo mirno in ga bolj pazimo).
+**Številke:** 4 vrste čiščenja (vrečka, krpa, škatla + igrača, lopatka) · 0 novih AI posnetkov · 0 sprememb na strežniku (en klic na koncu, kot doslej) · 2 učna namiga, vsak enkrat na telefon · 30 testov Jest za logiko in igre.
+**Kako povedati:** 📣 »Na sprehodu vedno pobereš z vrečko — v PetPrep tudi.« · 👩 »Čiščenje uči prave navade: vrečka za kakec, mirno brisanje luže, igrača namesto copata. Brez kazni, brez rdečih barv.« · 🧒 »Povleci vrečko čez kakec — hop v koš! Lužo obriši, da se posuši.« · 🛠 »Iste svg risbe v starih in novih gradnjah, igre za zastavico zmožnosti; luža je Skia plast z `clear` potezami (strgalna srečka), zadetki so worklet funkcije na UI niti.« *(Na telefonu še ni preverjeno — pride z novo gradnjo v trgovini.)*
+
+---
+
 ## 2026-10-30 — Žoga, ki ji kuža res sledi: nov igralni sloj
 
 **Kaj:** zgrajen je nativni igralni sloj aplikacije (GAMES_SPEC faza 1, del 1) in na njem nova igra z žogo. Kuža je čez cel zaslon; vsi posnetki žoge se naložijo ob odprtju igre in se menjajo samo na koncu posnetka ali ob enaki pozi (nič več »skakanja« med posnetki, ki ga je David videl na telefonu). Žoga je narisana v 2,5D (60 sličic na sekundo na UI niti): otrok jo povleče in spusti, žoga leti v loku, se odbije in odkotali **na stran, kamor steče kuža**; otrok kužka **pokliče** (»Pokliči!«) in na koncu **ujame** žogo, ki se prikotali nazaj (★). 3 meti na krog, »Še en krog«. Kratki zvoki (5 lastnih, sintetiziranih iz matematičnih formul, vsak < 30 kB) in vibracija samo ob uspehu; starš jih izklopi s stikalom »Zvoki in vibracija v igrah«. Stare gradnje aplikacije ostanejo pri stari žogi.

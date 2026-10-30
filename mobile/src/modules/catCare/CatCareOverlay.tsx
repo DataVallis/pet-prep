@@ -8,12 +8,13 @@
  * block, so its "Počeši" opens the same grooming game (with the dog's words).
  */
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import { useReduceMotion } from '@/hooks/useReduceMotion';
 import type { CatGameKind, ChildCatCare } from '@/modules/catCare/catCare';
 import ChoreOverlay from '@/modules/catCare/ChoreOverlay';
 import ScoopOverlay from '@/modules/catCare/ScoopOverlay';
+import { loadMessGames } from '@/modules/cleaning/loadMessGames';
 import ScratchingOverlay from '@/modules/catCare/ScratchingOverlay';
 import WandOverlay from '@/modules/catCare/WandOverlay';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
@@ -44,6 +45,17 @@ export interface CatCareOverlayProps {
   reduceMotion?: boolean;
 }
 
+/**
+ * GAMES_SPEC §6.2: the scoop game on the native layer when there is something to scoop; an older
+ * binary / a clean tray keeps the tap overlay (and its calm »nothing to scoop«). Decided ONCE per
+ * opening — the optimistic scoop empties `open_uses`, which must not swap the game for the overlay.
+ */
+function ScoopEntry({ view, onClose, reduceMotion }: { view: ChildPetView; onClose: () => void; reduceMotion: boolean }) {
+  const [games] = useState(() => ((view.cat.litter?.open_uses.length ?? 0) > 0 ? loadMessGames() : null));
+  if (games !== null) return <games.ScoopGame view={view} onClose={onClose} reduceMotion={reduceMotion} />;
+  return <ScoopOverlay view={view} onClose={onClose} />;
+}
+
 export default function CatCareOverlay({ view, clock, reduceMotion }: CatCareOverlayProps) {
   const kind = useAppStore((s) => s.catOverlay);
   const close = useAppStore((s) => s.closeCatGame);
@@ -59,7 +71,7 @@ export default function CatCareOverlay({ view, clock, reduceMotion }: CatCareOve
     case 'wand':
       return <WandOverlay view={view} onClose={close} reduceMotion={reduced} clock={clock} />;
     case 'scoop':
-      return <ScoopOverlay view={view} onClose={close} />;
+      return <ScoopEntry view={view} onClose={close} reduceMotion={reduced} />;
     case 'grooming':
     case 'litter_change':
       return <ChoreOverlay key={kind} kind={kind} view={view} onClose={close} reduceMotion={reduced} clock={clock} />;

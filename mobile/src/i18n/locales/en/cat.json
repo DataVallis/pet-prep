@@ -83,7 +83,14 @@
     "saving": "Saving …",
     "success": "Great job! The litter box is clean.",
     "unchanged": "The litter box was already clean.",
-    "done": "Done"
+    "done": "Done",
+    "game": {
+      "line": "Drag the scoop through the sand.",
+      "shakeLine": "Shake it up into the bag!",
+      "holdLine": "Tap a clump or the button.",
+      "button": "Scoop a clump",
+      "fb": "In the bag!"
+    }
   },
   "chore": {
     "grooming": {

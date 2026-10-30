@@ -85,7 +85,14 @@
     "saving": "Shranjujem …",
     "success": "Bravo! Pesek je čist.",
     "unchanged": "Pesek je bil že čist.",
-    "done": "Končano"
+    "done": "Končano",
+    "game": {
+      "line": "Povleci lopatko skozi pesek.",
+      "shakeLine": "Stresi navzgor v vrečko!",
+      "holdLine": "Tapni grudico ali gumb.",
+      "button": "Poberi grudico",
+      "fb": "V vrečki!"
+    }
   },
   "chore": {
     "grooming": {

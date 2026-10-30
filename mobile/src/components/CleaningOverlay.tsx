@@ -2,6 +2,7 @@ import { useContext, useEffect, useRef, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
+import { PeeGraphic, PoopGraphic } from '@/components/MessGraphics';
 import { alpha, fonts, palette, tightTracking } from '@/theme';
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
@@ -44,7 +45,9 @@ export interface CleaningOverlayProps {
 
 /**
  * Cleaning mini-game overlay: the child taps each dirt spot; when all are gone
- * `onCleaned` fires once.
+ * `onCleaned` fires once. Binaries WITHOUT the native game layer only (GAMES_SPEC §7.4) — with the
+ * layer the HUD opens `modules/cleaning/MessGame` (bag / cloth) instead. Since 2026-10-30 the spots
+ * are the shared mess drawings (`MessGraphics`: poop swirl / puddle), not plain circles.
  */
 export default function CleaningOverlay({ onCleaned, onClose, mess = 'poop' }: CleaningOverlayProps) {
   const puddle = mess === 'accident';
@@ -118,7 +121,14 @@ export default function CleaningOverlay({ onCleaned, onClose, mess = 'poop' }: C
               },
               pressed && styles.spotPressed,
             ]}
-          />
+          >
+            {/* GAMES_SPEC §6.2: the shared drawings instead of plain circles (every binary). */}
+            {puddle ? (
+              <PeeGraphic size={spot.size * 1.4} testID={`dirt-spot-${spot.id}-art`} />
+            ) : (
+              <PoopGraphic size={spot.size * 1.3} testID={`dirt-spot-${spot.id}-art`} />
+            )}
+          </Pressable>
         ),
       )}
 
@@ -197,18 +207,13 @@ const styles = StyleSheet.create({
   },
   spot: {
     position: 'absolute',
-    backgroundColor: 'rgba(180, 83, 9, 0.85)',
-    borderWidth: 1,
-    borderColor: 'rgba(217, 119, 6, 0.45)',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   backdropPuddle: {
     backgroundColor: alpha(palette.n850, 0.72),
   },
-  spotPuddle: {
-    backgroundColor: 'rgba(253, 230, 138, 0.8)',
-    borderColor: 'rgba(252, 211, 77, 0.9)',
-    borderWidth: 2,
-  },
+  spotPuddle: {},
   spotPressed: {
     transform: [{ scale: 0.75 }],
   },

@@ -139,6 +139,8 @@ import PetAlbum from '@/components/PetAlbum';
 import { ALBUM_STRINGS, hasAlbum } from '@/modules/petMedia/album';
 import { isMediaPending } from '@/modules/petMedia/petMedia';
 import CleaningOverlay from '@/components/CleaningOverlay';
+import { loadMessGames } from '@/modules/cleaning/loadMessGames';
+import { messStages } from '@/modules/cleaning/messPlan';
 import MetricBar from '@/components/MetricBar';
 import PetMediaView, { MediaPendingNotice, PET_MEDIA_STRINGS } from '@/components/PetMediaView';
 import WalkTrackerOverlay from '@/modules/walk/WalkTrackerOverlay';
@@ -496,6 +498,11 @@ export default function ChildHudScreen() {
   }, [giveTreat, queryClient, showToast]);
   // M2-01d: the finished challenge (certificate / "the parent will prepare it" / kind note).
   const [isCertificateVisible, setCertificateVisible] = useState(false);
+  // GAMES_SPEC §6.2: the slipper game (native layer only); a lock closes it.
+  const [slipperOpen, setSlipperOpen] = useState(false);
+  useEffect(() => {
+    if (lockedNow) setSlipperOpen(false);
+  }, [lockedNow]);
   // M5-R17: the puppy's weekly "Nova izkušnja" card (UI-only state, like the language sheet).
   const [isSocialisationVisible, setSocialisationVisible] = useState(false);
   // M5-T05: the care guide »Kako skrbim za …« — opens by itself once per pet on this device,
@@ -702,6 +709,10 @@ export default function ChildHudScreen() {
     !(isTrainingVisible && showTrainingEntry(view.training)) &&
     !catGameOpen &&
     (needsScrub || (isCleaningOverlayVisible && !chewingOnly && !nothingToScrub));
+  // GAMES_SPEC §6.2 / §7.4: on a binary with the native game layer the bag / cloth / box games
+  // replace the tap overlay and the instant »Pospravi in daj igračo« (lazy, null on older binaries).
+  const messGames = loadMessGames();
+  const messGameShown = showCleaning && messGames !== null;
   const takeOutClock = view.behaviour.take_out;
   const countdown = !locked && takeOutClock !== null ? takeOutCountdown(takeOutClock, serverNow, view.timezone) : null;
   const takeOutDisabled = !rules.take_out.enabled;
@@ -754,7 +765,9 @@ export default function ChildHudScreen() {
   const showCatGame = catOverlay !== null && catGameOpen && !showAlbum && !showTraining;
   // M5-R14 / R15 / R19 / R20: a breed care mini-game covers the HUD like a cat game.
   const showCareTask = careTaskOverlay !== null && catGameOpen && !showAlbum && !showTraining && !showCatGame;
-  const coveredByOverlay = isWalkModalVisible || showCleaning || showTraining || showAlbum || showPlay || showCatGame || showCareTask;
+  const showSlipper =
+    slipperOpen && messGames !== null && !locked && view.behaviour.can_resolve_chewing && !showCleaning && !catGameOpen && !showTraining && !showAlbum && playOverlay === null;
+  const coveredByOverlay = isWalkModalVisible || showCleaning || showTraining || showAlbum || showPlay || showCatGame || showCareTask || showSlipper;
   // M5-R09c: the »Moja pasma« layer covers the HUD like the album (video paused, hidden from TalkBack).
   const showGuide = facts.guideOpen && !locked;
   const factChip = facts.showChip && !coveredByOverlay && !locked;
@@ -899,7 +912,7 @@ export default function ChildHudScreen() {
     </>
   );
   // Android: TalkBack must not reach the HUD under the album / training game (iOS: accessibilityViewIsModal).
-  const hiddenUnderAlbum = showAlbum || showTraining || showPlay || showCatGame || showGuide || preparingNow
+  const hiddenUnderAlbum = showAlbum || showTraining || showPlay || showCatGame || showGuide || preparingNow || messGameShown || showSlipper
     ? ({ importantForAccessibility: 'no-hide-descendants', accessibilityElementsHidden: true } as const)
     : ({ importantForAccessibility: 'auto', accessibilityElementsHidden: false } as const);
 
@@ -918,7 +931,7 @@ export default function ChildHudScreen() {
           // Vet visit / hard stop: the sick / sleeping video keeps playing under the
           // translucent grey lock (PRODUCT_SPEC §7). Paused under the opaque game-over /
           // inactive screen, the walk tracker, the album (one player at a time) and in the background.
-          active={!opaqueLock && !isWalkModalVisible && !showAlbum && !showTraining && !showPlay && !showCatGame && !showGuide && !preparingNow}
+          active={!opaqueLock && !isWalkModalVisible && !showAlbum && !showTraining && !showPlay && !showCatGame && !showGuide && !preparingNow && !messGameShown && !showSlipper}
           onMediaExpired={onMediaExpired}
           // The vet veil darkens when a substitute (sleeping / idle) stands in for `sick`.
           onVideoStateChange={setHudVideoState}
@@ -1280,7 +1293,7 @@ export default function ChildHudScreen() {
               countdown={countdown}
               reduceMotion={reduceMotion}
               videoState={hudVideoState}
-              onResolveChewing={() => runAction('resolve_chewing')}
+              onResolveChewing={() => (messGames !== null ? setSlipperOpen(true) : runAction('resolve_chewing'))}
               resolveBusy={resolveChewing.isPending}
               notice={
                 mediaPending
@@ -1329,7 +1342,7 @@ export default function ChildHudScreen() {
             }}
           />
         )}
-        {showCleaning && (
+        {showCleaning && messGames === null && (
           <CleaningOverlay
             onCleaned={handleCleaned}
             onClose={needsScrub ? undefined : () => setCleaningOverlayVisible(false)}
@@ -1341,6 +1354,29 @@ export default function ChildHudScreen() {
       {preparingNow && <PetPreparationScreen name={pet.name} species={pet.species} reduceMotion={reduceMotion} />}
       {/* Outside hud-content, so hiding the HUD from TalkBack never hides the game. */}
       {showTraining && <TrainingOverlay view={view} onClose={closeTraining} />}
+      {/* GAMES_SPEC §6.2: the cleaning games of the native layer (bag / cloth; slipper → box + toy). */}
+      {messGameShown && messGames !== null && (
+        <messGames.MessGame
+          view={view}
+          stages={messStages(view.behaviour.active_events)}
+          reduceMotion={reduceMotion}
+          onCleaned={handleCleaned}
+          onClose={needsScrub ? undefined : () => setCleaningOverlayVisible(false)}
+          onMediaExpired={onMediaExpired}
+        />
+      )}
+      {showSlipper && messGames !== null && (
+        <messGames.SlipperGame
+          view={view}
+          reduceMotion={reduceMotion}
+          onResolved={() => {
+            setSlipperOpen(false);
+            runAction('resolve_chewing');
+          }}
+          onClose={() => setSlipperOpen(false)}
+          onMediaExpired={onMediaExpired}
+        />
+      )}
       {/* M5-R06-08b: the cat mini-games (wand, scoop, litter change, grooming, scratcher). */}
       {showCatGame && <CatCareOverlay view={view} />}
       {/* M5-R14 / R15 / R19 / R20: the breed care mini-games (teeth, folds, ears, nails). */}

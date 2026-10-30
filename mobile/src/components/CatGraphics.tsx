@@ -7,7 +7,7 @@
 
 import Svg, { Circle, Ellipse, G, Line, Path, Rect } from 'react-native-svg';
 
-import { palette } from '@/theme';
+import { mess, palette } from '@/theme';
 
 export type CatPose = 'sit' | 'crouch' | 'pounce' | 'happy';
 
@@ -89,7 +89,7 @@ export function FeatherGraphic({ size = 48, testID = 'cat-feather' }: { size?: n
 
 export interface TrayGraphicProps {
   size?: number;
-  /** Clumps still in the litter (scoop) — drawn as small darker lumps. */
+  /** Clumps still in the litter (scoop) — drawn as small light, rounded lumps. */
   clumps?: number;
   /** Litter change step: 1 full (old), 2 empty + bubbles (washing), 3 fresh litter. */
   step?: 1 | 2 | 3;
@@ -110,8 +110,9 @@ export function TrayGraphic({ size = 160, clumps = 0, step, testID = 'cat-tray' 
           <Circle cx={100} cy={58} r={7} fill={palette.white} fillOpacity={0.25} />
         </G>
       )}
+      {/* Light, rounded clumps (GAMES_SPEC §6.2 — never dark dots). */}
       {Array.from({ length: Math.max(0, Math.min(5, clumps)) }, (_, i) => (
-        <Ellipse key={i} cx={44 + i * 18} cy={48 + (i % 2) * 8} rx={7} ry={5} fill={palette.n500} />
+        <Ellipse key={i} cx={44 + i * 18} cy={48 + (i % 2) * 8} rx={7} ry={5} fill={mess.clumpLight} stroke={mess.clump} strokeWidth={1.5} />
       ))}
     </Svg>
   );

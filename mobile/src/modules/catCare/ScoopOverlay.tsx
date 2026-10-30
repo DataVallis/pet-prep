@@ -16,6 +16,8 @@ import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { Shovel } from 'lucide-react-native';
 
 import { TrayGraphic } from '@/components/CatGraphics';
+import { ClumpGraphic } from '@/components/MessGraphics';
+import { CLUMP_SPOTS, clumpCount } from '@/modules/cleaning/scoop';
 import { Text } from '@/components/ui/Text';
 import { useScoopLitter } from '@/hooks/queries/useCatCare';
 import { SCOOP_STRINGS, catWhen, onlyScratchingOpen } from '@/modules/catCare/catCare';
@@ -26,20 +28,9 @@ import { alpha, MIN_TOUCH, palette } from '@/theme';
 
 const S = SCOOP_STRINGS;
 
-/** Clumps to scoop for `uses` open litter uses (two each, 2–6). */
-export function clumpCount(uses: number): number {
-  return Math.max(2, Math.min(6, uses * 2));
-}
-
-/** Fixed, spread-out spots inside the tray (percent of the tray box) — no randomness, testable. */
-const SPOTS: readonly { x: number; y: number }[] = [
-  { x: 22, y: 38 },
-  { x: 48, y: 58 },
-  { x: 74, y: 40 },
-  { x: 34, y: 70 },
-  { x: 62, y: 74 },
-  { x: 84, y: 64 },
-];
+// Shared with the scoop game of the native layer (GAMES_SPEC §6.2).
+export { clumpCount };
+const SPOTS = CLUMP_SPOTS;
 
 export interface ScoopOverlayProps {
   view: ChildPetView;
@@ -108,7 +99,10 @@ export default function ScoopOverlay({ view, onClose, testID = 'cat-scoop' }: Sc
                       hitSlop={6}
                       onPress={() => setScooped((prev) => new Set(prev).add(i))}
                       style={({ pressed }) => [local.clump, { left: `${spot.x}%`, top: `${spot.y}%` }, pressed && local.clumpPressed]}
-                    />
+                    >
+                      {/* GAMES_SPEC §6.2: a light, rounded clump — never a dark dot. */}
+                      <ClumpGraphic size={CLUMP} testID={`${testID}-clump-${i}-art`} />
+                    </Pressable>
                   ),
                 )}
             </View>
@@ -149,10 +143,8 @@ const local = StyleSheet.create({
     height: CLUMP * 0.75,
     marginLeft: -CLUMP / 2,
     marginTop: (-CLUMP * 0.75) / 2,
-    borderRadius: CLUMP / 2,
-    backgroundColor: palette.n500,
-    borderWidth: 2,
-    borderColor: palette.n400,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   clumpPressed: { transform: [{ scale: 0.8 }], opacity: 0.7 },
 });

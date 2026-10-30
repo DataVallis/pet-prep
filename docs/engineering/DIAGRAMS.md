@@ -654,8 +654,8 @@ flowchart TD
   R -- no --> N([No chewing today])
   TE -- no --> N
   CH --> AP["At its time (not in a freeze / quiet hours):<br/>hygiene → 0 % · pet_chewed row"]
-  AP --> RC["POST /child/pet/resolve-chewing<br/>'Pospravi in daj igračo'"]
-  P["Poop · puppy accident"] --> CL["POST /child/pet/clean<br/>(cleaning game)"]
+  AP --> RC["POST /child/pet/resolve-chewing<br/>'Pospravi in daj igračo'<br/>(new build: box + chew toy game first)"]
+  P["Poop · puppy accident"] --> CL["POST /child/pet/clean<br/>(cleaning game — new build: bag / cloth)"]
   RC --> H{"Any other mess open?"}
   CL --> H
   H -- no --> OK["Hygiene 100 %"]
@@ -1770,6 +1770,26 @@ flowchart LR
   H -->|instant, same frame| FE[fetching<br/>empty → stand, once]
   FE -->|instant, same frame| W
   X[ClipQueue rules: never cut a once clip mid-way · crossfade only from a loop into its pose · a pose change = cut only under the feedback mask · clock safety = length + 600 ms]
+```
+
+
+### 10f-3. Cleaning games on the game layer (GAMES_SPEC §6.2, phase 1 app part 2, 2026-10-30)
+
+The drawings (react-native-svg, `MessGraphics`) are in every binary; the games only behind the capability flag. The server sees exactly what it saw before: one request at the end.
+
+```mermaid
+flowchart TD
+  H[HUD: mess to scrub / »Očisti« · »Pospravi in daj igračo« · cat »Pesek«] --> F{loadMessGames<br/>= gameLayerAvailable?}
+  F -->|no: older binary| OLD[CleaningOverlay taps · instant resolve · ScoopOverlay taps<br/>new svg drawings]
+  F -->|yes| K{which mess}
+  K -->|poop / cat litter_accident / accident| MG[MessGame: stages messStages<br/>poop 1–3 per event → bag · puddle → cloth]
+  K -->|chewing| SG[SlipperGame: slipper + 3 flakes → box · toy → dog]
+  K -->|cat litter, open uses| SC[ScoopGame: drag scoop → clumps stick → shake up → bag]
+  MG -->|bag over each swirl / tap · last → bag ties, flies to bin| MG2[cloth wipe ≥ 90 % wipe.ts · shrinks, dries]
+  MG2 --> C1["onCleaned → POST /child/pet/clean (once)"]
+  SG --> C2["onResolved → POST /child/pet/resolve-chewing (once)"]
+  SC --> C3["sand wave → POST /child/pet/litter/scoop (once) → result card"]
+  MG -. first clean of a kind, dog .-> TIP[tip under the top bar ≥ 2.5 s, once per phone<br/>SecureStore petprep.cleaning_tips_seen]
 ```
 
 ### 10g. Clip quality check (David 2026-10-23)

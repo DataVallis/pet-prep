@@ -281,5 +281,42 @@
     "contract": "Sign the contract first",
     "preparing": "The game is still getting ready",
     "schoolPreparing": "School is still getting ready — this can take a few minutes"
+  },
+  "messGame": {
+    "close": "Close",
+    "poop": {
+      "line": "Drag the bag over the poop.",
+      "holdLine": "Tap the poop or the button.",
+      "button": "Pick up with bag",
+      "a11y": "Pick up the poop with a bag"
+    },
+    "puddle": {
+      "line": "Wipe the puddle with the cloth.",
+      "holdLine": "Hold the button to wipe.",
+      "button": "Wipe",
+      "a11y": "Wipe the puddle with the cloth, hold to wipe"
+    },
+    "slipper": {
+      "line": "Put the bits in the box.",
+      "holdLine": "Tap a bit or the button.",
+      "toyLine": "Give the chew toy!",
+      "button": "Tidy a bit",
+      "toyButton": "Give the toy",
+      "a11y": "Put a slipper bit in the box",
+      "toyA11y": "Give the chew toy"
+    },
+    "fb": {
+      "bagged": "All tidy!",
+      "wiped": "Dry!",
+      "boxed": "In the box!",
+      "toy": "Well done!"
+    },
+    "tips": {
+      "poop": "On walks you always pick it up with a bag.",
+      "puddle": "Don't scold — take it out more often."
+    },
+    "a11y": {
+      "progress": "Cleaned {{done}} of {{total}}"
+    }
   }
 }

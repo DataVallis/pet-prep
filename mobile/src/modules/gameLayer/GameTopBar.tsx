@@ -20,7 +20,8 @@ export interface GameTopBarProps {
   closeLabel: string;
   /** Screen-reader summary of the dots / stars ("Met 2 od 3, 1 zvezdica"). */
   progressLabel: string;
-  onClose: () => void;
+  /** Omitted → no × (a mess that must be cleaned keeps its game, as the old overlay did). */
+  onClose?: () => void;
   testID?: string;
 }
 
@@ -39,16 +40,20 @@ export default function GameTopBar({ dots, stars, line, closeLabel, progressLabe
         )}
       </View>
       <GameLine text={line} testID={`${testID}-line`} />
-      <Pressable
-        accessibilityRole="button"
-        accessibilityLabel={closeLabel}
-        onPress={onClose}
-        hitSlop={10}
-        testID={`${testID}-close`}
-        style={({ pressed }) => [styles.close, pressed && styles.pressed]}
-      >
-        <X color={palette.n200} size={20} />
-      </Pressable>
+      {onClose !== undefined ? (
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel={closeLabel}
+          onPress={onClose}
+          hitSlop={10}
+          testID={`${testID}-close`}
+          style={({ pressed }) => [styles.close, pressed && styles.pressed]}
+        >
+          <X color={palette.n200} size={20} />
+        </Pressable>
+      ) : (
+        <View style={styles.closeSpacer} />
+      )}
     </View>
   );
 }
@@ -79,5 +84,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  closeSpacer: { width: 4 },
   pressed: { opacity: 0.75 },
 });
