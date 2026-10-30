@@ -466,9 +466,9 @@ class PetActivityService
      * shows a running session). Broadcast only, no activity row (would need a
      * new activity type + timeline label; the routine is the completed session).
      */
-    public function startTraining(Pet $pet, User $child, TrainingCommand $command): ActionResult
+    public function startTraining(Pet $pet, User $child, TrainingCommand $command, int $rules = TrainingService::RULES_V1): ActionResult
     {
-        return $this->withLockedPet($pet, 'training_started', function (Pet $locked) use ($child, $command): ActionResult {
+        return $this->withLockedPet($pet, 'training_started', function (Pet $locked) use ($child, $command, $rules): ActionResult {
             $now = now();
 
             if ($reason = $locked->actionLockReasonFor($child)) {
@@ -478,7 +478,7 @@ class PetActivityService
             // A missed day since the last tick decays progress first (same rule as the tick).
             $this->training->applyDecay($locked, $now);
 
-            $started = $this->training->start($locked, $child, $command, $now);
+            $started = $this->training->start($locked, $child, $command, $now, $rules);
             if ($started['refusal'] !== null) {
                 return $this->refused($locked, $started['refusal'], $started['next_allowed_at']);
             }
@@ -500,11 +500,15 @@ class PetActivityService
      * training_session_expired, training_session_not_over, training_invalid_taps,
      * training_session_interrupted (a lock began during the session — PR #53 m2).
      *
+     * Rules v2 early end (GAMES_SPEC §4.1 Š3, `$endedAfterRound` 1): progress is saved, but
+     * no `trained_pet` row is written — the day's routine counts only a full session; the
+     * broadcast is still `trained_pet` (progress changed).
+     *
      * @param  list<int>  $taps  ms since the session start
      */
-    public function finishTraining(Pet $pet, User $child, string $sessionId, array $taps): ActionResult
+    public function finishTraining(Pet $pet, User $child, string $sessionId, array $taps, ?int $endedAfterRound = null): ActionResult
     {
-        return $this->withLockedPet($pet, ActivityType::TrainedPet->value, function (Pet $locked) use ($child, $sessionId, $taps): ActionResult {
+        return $this->withLockedPet($pet, ActivityType::TrainedPet->value, function (Pet $locked) use ($child, $sessionId, $taps, $endedAfterRound): ActionResult {
             $now = now();
 
             if ($reason = $locked->actionLockReasonFor($child)) {
@@ -513,7 +517,7 @@ class PetActivityService
 
             $this->training->applyDecay($locked, $now);
 
-            $finished = $this->training->finish($locked, $child, $sessionId, $taps, $now);
+            $finished = $this->training->finish($locked, $child, $sessionId, $taps, $now, $endedAfterRound);
             if ($finished['refusal'] !== null) {
                 return $this->refused($locked, $finished['refusal']);
             }
@@ -526,7 +530,9 @@ class PetActivityService
             }
 
             $locked->saveQuietly();
-            $this->logActivity($locked, ActivityType::TrainedPet, (int) ($session->result['successes'] ?? 0), $child->id);
+            if ($finished['full']) {
+                $this->logActivity($locked, ActivityType::TrainedPet, (int) ($session->result['successes'] ?? 0), $child->id);
+            }
 
             return $this->result(ActionResult::ACCEPTED, $locked, extra: $extra);
         });
@@ -637,9 +643,9 @@ class PetActivityService
      * `PetUpdated('wand_started')`; no activity row (the routine is the
      * successful session).
      */
-    public function startWand(Pet $pet, User $child): ActionResult
+    public function startWand(Pet $pet, User $child, int $rules = WandPlayService::RULES_V1): ActionResult
     {
-        return $this->withLockedPet($pet, 'wand_started', function (Pet $locked) use ($child): ActionResult {
+        return $this->withLockedPet($pet, 'wand_started', function (Pet $locked) use ($child, $rules): ActionResult {
             $now = now();
 
             if ($reason = $locked->actionLockReasonFor($child)) {
@@ -649,7 +655,7 @@ class PetActivityService
             // Due messes / the midnight (meter → 0) happen first.
             $this->decay->catchUpLocked($locked);
 
-            $started = $this->wand->start($locked, $child, $now);
+            $started = $this->wand->start($locked, $child, $now, $rules);
             if ($started['refusal'] !== null) {
                 return $this->refused($locked, $started['refusal'], $started['next_allowed_at']);
             }
@@ -1044,7 +1050,7 @@ class PetActivityService
     /**
      * The wand session as the app gets it on start (instants in the family tz).
      *
-     * @return array{id: string, started_at: string, ends_at: string, expires_at: string, duration_ms: int, catch_at_ms: int, pounces_ms: list<int>, min_away_moves: int, segments: int, min_move_interval_ms: int, pounce_window_ms: int}
+     * @return array{id: string, started_at: string, ends_at: string, expires_at: string, duration_ms: int, catch_at_ms: int, pounces_ms: list<int>, min_away_moves: int, segments: int, min_move_interval_ms: int, pounce_window_ms: int, rules_version?: int, stalk_ms?: int, crouch_cues_ms?: list<int>, catch_window_ms?: int, calm_window_ms?: int, calm_max_moves?: int, dodge_window_ms?: list<int>, min_stars?: int, max_stars?: int, max_speed_pt_s?: int, min_dodge_pt?: int}
      */
     public static function wandSessionPayload(PetCareSession $session, string $tz): array
     {
@@ -1066,13 +1072,28 @@ class PetActivityService
             'min_move_interval_ms' => (int) ($schedule['min_move_interval_ms'] ?? 0),
             // An "away" move must follow each pounce within this window (QA M5-R06-04).
             'pounce_window_ms' => (int) ($schedule['pounce_window_ms'] ?? 0),
-        ];
+        ] + (WandPlayService::rulesOf($session) === WandPlayService::RULES_V2 ? [
+            // GAMES_SPEC §5.2 / §7.2: only for a session started with `rules: 2` (a v1 payload stays byte for byte).
+            'rules_version' => WandPlayService::RULES_V2,
+            'stalk_ms' => (int) ($schedule['stalk_ms'] ?? 0),
+            // The 👀 cue before each pounce (pounce − crouch_cue_ms): the feather must be still.
+            'crouch_cues_ms' => array_map('intval', array_values($schedule['crouch_cues_ms'] ?? [])),
+            'catch_window_ms' => (int) ($schedule['catch_window_ms'] ?? 0),
+            'calm_window_ms' => (int) ($schedule['calm_window_ms'] ?? 0),
+            'calm_max_moves' => (int) ($schedule['calm_max_moves'] ?? 0),
+            'dodge_window_ms' => array_map('intval', array_values($schedule['dodge_window_ms'] ?? [0, 0])),
+            'min_stars' => (int) ($schedule['min_stars'] ?? 0),
+            'max_stars' => (int) ($schedule['max_stars'] ?? 0),
+            // What the app checks for a move's `speed_ok`.
+            'max_speed_pt_s' => (int) ($schedule['max_speed_pt_s'] ?? 0),
+            'min_dodge_pt' => (int) ($schedule['min_dodge_pt'] ?? 0),
+        ] : []);
     }
 
     /**
      * The server's verdict on finish.
      *
-     * @return array{session_id: string, success: bool, reason: 'too_few_moves'|'not_spread'|'wrong_technique'|'missed_pounces'|'too_uniform'|null, away_moves: int, toward_moves: int, segments_hit: int, segments: int, pounces_hit: int, pounces: int}
+     * @return array{session_id: string, success: bool, reason: 'too_few_moves'|'not_spread'|'wrong_technique'|'missed_pounces'|'too_uniform'|'too_few_stars'|null, away_moves: int, toward_moves: int, segments_hit: int, segments: int, pounces_hit: int, pounces: int, rules_version?: int, stars?: int, min_stars?: int, max_stars?: int, dodges?: list<array{pounce_ms: int, star: bool, reason: 'moved_during_crouch'|'too_early'|'no_dodge'|'out_of_zone'|'bad_stroke'|null, move_ms: int|null}>, catch?: array{star: bool, reason: 'pulled_away'|'out_of_zone'|null}, hint?: 'calm'|'dodge'|'catch'|null}
      */
     public static function wandResultPayload(PetCareSession $session): array
     {
@@ -1088,13 +1109,28 @@ class PetActivityService
             'segments' => (int) ($r['segments'] ?? 0),
             'pounces_hit' => (int) ($r['pounces_hit'] ?? 0),
             'pounces' => (int) ($r['pounces'] ?? 0),
-        ];
+        ] + (WandPlayService::rulesOf($session) === WandPlayService::RULES_V2 ? [
+            // GAMES_SPEC §5.3 / §5.4: only for a rules-v2 session.
+            'rules_version' => WandPlayService::RULES_V2,
+            'stars' => (int) ($r['stars'] ?? 0),
+            'min_stars' => (int) ($r['min_stars'] ?? 0),
+            'max_stars' => (int) ($r['max_stars'] ?? 0),
+            'dodges' => array_values(array_map(fn (array $d): array => [
+                'pounce_ms' => (int) $d['pounce_ms'],
+                'star' => (bool) $d['star'],
+                'reason' => $d['reason'] ?? null,
+                'move_ms' => isset($d['move_ms']) ? (int) $d['move_ms'] : null,
+            ], (array) ($r['dodges'] ?? []))),
+            'catch' => ['star' => (bool) ($r['catch']['star'] ?? false), 'reason' => $r['catch']['reason'] ?? null],
+            // The one hint to show after a hunt with < min_stars (first failed event in time).
+            'hint' => $r['hint'] ?? null,
+        ] : []);
     }
 
     /**
      * The session as the app gets it on start (instants in the family tz).
      *
-     * @return array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, duration_ms: int, praise_window_ms: int, min_reaction_ms: int, trials: list<array{index: int, cue_at_ms: int, obeys: bool, perform_at_ms?: int|null, obey_at_ms: int|null, window_end_ms: int|null, release_at_ms?: int|null}>}
+     * @return array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, duration_ms: int, praise_window_ms: int, min_reaction_ms: int, trials: list<array{index: int, cue_at_ms: int, obeys: bool, perform_at_ms?: int|null, obey_at_ms: int|null, window_end_ms: int|null, release_at_ms?: int|null}>, rules_version?: int, mask_ms?: int, round_break_ms?: int, round_breaks_ms?: list<int>, rounds?: list<array{round: int, first_index: int, last_index: int, start_ms: int, end_ms: int}>}
      */
     public static function sessionPayload(PetTrainingSession $session, string $tz): array
     {
@@ -1111,13 +1147,15 @@ class PetActivityService
             // A praise earlier than obey_at + this counts as too early (human reaction floor).
             'min_reaction_ms' => (int) ($session->schedule['min_reaction_ms'] ?? TrainingService::MIN_REACTION_MS),
             'trials' => TrainingService::trialsOf($session->schedule),
+            // GAMES_SPEC §7.3: rules-v2 keys (none for a v1 session — byte for byte).
+            ...TrainingService::v2KeysOf((array) $session->schedule),
         ];
     }
 
     /**
      * The scored session on finish.
      *
-     * @return array{session_id: string, command: 'sit'|'come'|'place'|'potty', successes: int, obeyed: int, trials: list<array{index: int, obeys: bool, outcome: 'in_time'|'too_early'|'too_late'|'no_praise'|'waited'|'praised_without_obeying', tap_ms: int|null}>, progress_before: int, progress_after: int, progress_gain: float}
+     * @return array{session_id: string, command: 'sit'|'come'|'place'|'potty', successes: int, obeyed: int, trials: list<array{index: int, obeys: bool, outcome: 'in_time'|'too_early'|'too_late'|'no_praise'|'waited'|'praised_without_obeying', tap_ms: int|null}>, progress_before: int, progress_after: int, progress_gain: float, rules_version?: int, ended_after_round?: int|null, counts_for_routine?: bool}
      */
     public static function resultPayload(PetTrainingSession $session): array
     {
@@ -1134,6 +1172,13 @@ class PetActivityService
             'progress_after' => Pet::displayValue($before + $gain),
             // Precise gain in percentage points (rounded to 0.01 for display).
             'progress_gain' => round($gain, 2),
+            // GAMES_SPEC §4.1 Š3: rules-v2 only — 1 = stopped after round 1 (null = full), and
+            // whether it counts for the day's »Šolanje« routine (only a full session does).
+            ...(TrainingService::rulesOf((array) $session->schedule) === TrainingService::RULES_V2 ? [
+                'rules_version' => TrainingService::RULES_V2,
+                'ended_after_round' => isset($session->result['ended_after_round']) ? (int) $session->result['ended_after_round'] : null,
+                'counts_for_routine' => ($session->result['ended_after_round'] ?? null) === null,
+            ] : []),
         ];
     }
 

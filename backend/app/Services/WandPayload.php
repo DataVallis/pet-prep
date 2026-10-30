@@ -34,8 +34,8 @@ use Carbon\CarbonInterface;
  *   carries the change).
  * - `can_start`: POST /api/child/pet/wand/start would be accepted now (for
  *   the viewing child incl. their lock; pet level in the broadcast).
- * - `session`: the viewing child's running session (the start payload),
- *   else null; `session_running`: any child's game is running.
+ * - `session`: the viewing child's running session (the start payload — with the
+ *   rules-v2 keys for a session started with `rules: 2`, GAMES_SPEC §7.3), else null; `session_running`: any child's game is running.
  * - `missed_yesterday`: yesterday's play routine was missed (the fact
  *   M5-R06-05 needs for "scratched the sofa").
  *
@@ -44,7 +44,7 @@ use Carbon\CarbonInterface;
 final class WandPayload
 {
     /**
-     * @param  array{id: string, started_at: string, ends_at: string, expires_at: string, duration_ms: int, catch_at_ms: int, pounces_ms: list<int>, min_away_moves: int, segments: int, min_move_interval_ms: int, pounce_window_ms: int}|null  $session
+     * @param  array<string, mixed>|null  $session  PetActivityService::wandSessionPayload()
      */
     public function __construct(
         public readonly int $goal,
@@ -94,7 +94,7 @@ final class WandPayload
     }
 
     /**
-     * @return array{goal: int, sessions_today: int, my_sessions_today: int|null, min_gap_minutes: int, next_allowed_at: string|null, blocked_reason: 'wand_not_available'|'needs_cleaning'|'wand_quiet_hours'|'wand_too_soon'|'care_session_active'|'wand_session_active'|'wand_day_ending'|'media_not_ready'|null, can_start: bool, session: array{id: string, started_at: string, ends_at: string, expires_at: string, duration_ms: int, catch_at_ms: int, pounces_ms: list<int>, min_away_moves: int, segments: int, min_move_interval_ms: int, pounce_window_ms: int}|null, session_running: bool, missed_yesterday: bool}
+     * @return array{goal: int, sessions_today: int, my_sessions_today: int|null, min_gap_minutes: int, next_allowed_at: string|null, blocked_reason: 'wand_not_available'|'needs_cleaning'|'wand_quiet_hours'|'wand_too_soon'|'care_session_active'|'wand_session_active'|'wand_day_ending'|'media_not_ready'|null, can_start: bool, session: array{id: string, started_at: string, ends_at: string, expires_at: string, duration_ms: int, catch_at_ms: int, pounces_ms: list<int>, min_away_moves: int, segments: int, min_move_interval_ms: int, pounce_window_ms: int, rules_version?: int, stalk_ms?: int, crouch_cues_ms?: list<int>, catch_window_ms?: int, calm_window_ms?: int, calm_max_moves?: int, dodge_window_ms?: list<int>, min_stars?: int, max_stars?: int, max_speed_pt_s?: int, min_dodge_pt?: int}|null, session_running: bool, missed_yesterday: bool}
      */
     public function toArray(): array
     {

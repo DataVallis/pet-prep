@@ -54,12 +54,27 @@ use Random\Randomizer;
  * (`pets.play_missed_on`, closeDay()) for M5-R06-05's "scratched the sofa
  * the next day" (CAT_SPEC Q10).
  *
+ * Rules v2 (GAMES_SPEC §5, David 2026-10-30, P1 + P2): a start with `rules: 2`
+ * (new app) gets ONE ~25 s hunt (scheduleV2(): three pounces with a crouch cue,
+ * the catch at the end) judged in stars (scoreV2(): 3 dodges + the catch,
+ * counted at ≥ 2). The version lives in the session's schedule (`rules_version`,
+ * rulesOf()); a start without it keeps the v1 minute and score() byte for byte.
+ * Goal, 2 h gap, play meter, routine and the scratched sofa are the same for
+ * both. Start refusals (quiet hours, day ending) keep reserving the v1 minute
+ * for both versions — the payload's `can_start` and every start agree.
+ *
  * Only cats with a profile (life-stage data); every caller that writes
  * holds the pet's row lock (backend/CLAUDE.md); pet attributes are set on
  * $pet, the caller saves.
  */
 class WandPlayService
 {
+    /** GAMES_SPEC §7.2: the v1 minute (old apps, a start without `rules`). */
+    public const RULES_V1 = 1;
+
+    /** GAMES_SPEC §5 (David 2026-10-30, P1 + P2): one ~25 s hunt scored in stars. */
+    public const RULES_V2 = 2;
+
     public function __construct(
         private readonly LifeStageService $lifeStages,
         private readonly RoutineLedgerService $ledger,
@@ -325,7 +340,7 @@ class WandPlayService
      *
      * @return array{refusal: CareRefusal|null, next_allowed_at: CarbonInterface|null, session: PetCareSession|null}
      */
-    public function start(Pet $pet, User $child, CarbonInterface $now): array
+    public function start(Pet $pet, User $child, CarbonInterface $now, int $rules = self::RULES_V1): array
     {
         $now = CarbonImmutable::instance($now)->utc()->startOfSecond();
         $this->expireStale($pet, $now);
@@ -342,7 +357,15 @@ class WandPlayService
             ->update(['status' => CareSessionStatus::Aborted->value, 'updated_at' => $now]);
         CatChoreService::abortOwnOtherKinds($pet, CareSessionKind::WandPlay, $child, $now);
 
-        $durationMs = self::sessionDurationMs();
+        // GAMES_SPEC §7.2: a new app asks for rules v2 (one ~25 s hunt in stars); without it
+        // the v1 minute stays byte for byte. The session stores its version in the schedule.
+        if ($rules === self::RULES_V2) {
+            $schedule = self::scheduleV2(new Randomizer);
+            $durationMs = $schedule['duration_ms'];
+        } else {
+            $durationMs = self::sessionDurationMs();
+            $schedule = $this->schedule($durationMs, new Randomizer);
+        }
         $endsAt = $now->addMilliseconds($durationMs);
 
         $session = PetCareSession::create([
@@ -355,7 +378,7 @@ class WandPlayService
             'ends_at' => $endsAt,
             'expires_at' => $endsAt->addSeconds(self::graceSeconds()),
             'duration_ms' => $durationMs,
-            'schedule' => $this->schedule($durationMs, new Randomizer),
+            'schedule' => $schedule,
             'status' => CareSessionStatus::Active,
         ]);
 
@@ -411,12 +434,22 @@ class WandPlayService
         }
         foreach ($moves as $move) {
             if (! is_array($move) || ! is_int($move['t'] ?? null) || ! is_bool($move['away'] ?? null)
-                || $move['t'] < 0 || $move['t'] > $session->duration_ms) {
+                || $move['t'] < 0 || $move['t'] > $session->duration_ms
+                || (array_key_exists('in_zone', $move) && ! is_bool($move['in_zone']))
+                || (array_key_exists('speed_ok', $move) && ! is_bool($move['speed_ok']))) {
                 return $refuse(CareRefusal::WandInvalidMoves, $session);
             }
         }
 
-        $result = self::score($moves, $session->duration_ms, array_map('intval', array_values($session->schedule['pounces_ms'] ?? [])));
+        if (self::rulesOf($session) === self::RULES_V2) {
+            $result = self::scoreV2($moves, (array) $session->schedule);
+            if ($result['uniform']) {
+                // v2: logged only, never a refusal (GAMES_SPEC §5.3 — three target events are too few for statistics).
+                Log::warning('WandPlayService: wand session with machine-regular moves', ['pet_id' => $pet->id]);
+            }
+        } else {
+            $result = self::score($moves, $session->duration_ms, array_map('intval', array_values($session->schedule['pounces_ms'] ?? [])));
+        }
         if ($result['reason'] === 'too_uniform') {
             // Like training's scripted-latency log (pet id only, no child data).
             Log::warning('WandPlayService: wand session with machine-regular moves', ['pet_id' => $pet->id]);
@@ -448,7 +481,7 @@ class WandPlayService
     }
 
     /**
-     * Judge the reported feather moves (pure — no I/O). Moves closer than
+     * Rules v1 (old apps). Judge the reported feather moves (pure — no I/O). Moves closer than
      * `min_move_interval_ms` to the previous counted move count once. A
      * session counts when there are ≥ `min_away_moves` "away" moves, at
      * least one in each of `segments` equal parts of the game, "away" moves
@@ -556,6 +589,200 @@ class WandPlayService
             'segments' => max(1, (int) config('wand.segments', 4)),
             'min_move_interval_ms' => max(0, (int) config('wand.min_move_interval_ms', 300)),
             'pounce_window_ms' => max(0, (int) config('wand.pounce_window_ms', 2000)),
+        ];
+    }
+
+    /** The rules version a session was started with (stored in its schedule; none = v1). */
+    public static function rulesOf(PetCareSession $session): int
+    {
+        return (int) (((array) $session->schedule)['rules_version'] ?? self::RULES_V1) === self::RULES_V2 ? self::RULES_V2 : self::RULES_V1;
+    }
+
+    /**
+     * Rules v2 schedule (GAMES_SPEC §5.2, config `wand.v2`): stalk, three pounces with a
+     * crouch cue `crouch_cue_ms` before each, the catch `catch_after_last_ms` after the last
+     * pounce and the end `catch_clip_ms` after the catch (~23–29 s, ≤ `round_ms`). Carries
+     * every number the app needs to mirror the server's star rules. Pure apart from the RNG.
+     *
+     * @return array{rules_version: int, duration_ms: int, stalk_ms: int, pounces_ms: list<int>, crouch_cues_ms: list<int>, catch_at_ms: int, catch_window_ms: int, calm_window_ms: int, calm_max_moves: int, dodge_window_ms: array{0: int, 1: int}, min_move_interval_ms: int, min_stars: int, max_stars: int, max_speed_pt_s: int, min_dodge_pt: int}
+     */
+    public static function scheduleV2(Randomizer $rng): array
+    {
+        $c = (array) config('wand.v2', []);
+        $range = function (string $key, array $default) use ($c): array {
+            $v = array_values((array) ($c[$key] ?? $default));
+            $lo = max(0, (int) ($v[0] ?? $default[0]));
+
+            return [$lo, max($lo, (int) ($v[1] ?? $default[1]))];
+        };
+        $stalk = max(0, (int) ($c['stalk_ms'] ?? 3000));
+        $count = max(1, (int) ($c['pounces'] ?? 3));
+        $cue = max(0, (int) ($c['crouch_cue_ms'] ?? 900));
+        [$firstLo, $firstHi] = $range('first_pounce_ms', [6000, 7500]);
+        [$gapLo, $gapHi] = $range('pounce_gap_ms', [5000, 6500]);
+
+        $pounces = [];
+        $p = max($stalk + $cue, $rng->getInt($firstLo, $firstHi));
+        for ($i = 0; $i < $count; $i++) {
+            $pounces[] = $p;
+            $p += $rng->getInt($gapLo, $gapHi);
+        }
+        $catchAt = end($pounces) + max(0, (int) ($c['catch_after_last_ms'] ?? 3500));
+        $duration = min(max(1, (int) ($c['round_ms'] ?? 30000)), $catchAt + max(0, (int) ($c['catch_clip_ms'] ?? 3500)));
+        $catchAt = min($catchAt, $duration);
+
+        return [
+            'rules_version' => self::RULES_V2,
+            'duration_ms' => $duration,
+            'stalk_ms' => $stalk,
+            'pounces_ms' => $pounces,
+            'crouch_cues_ms' => array_map(fn (int $at): int => max(0, $at - $cue), $pounces),
+            'catch_at_ms' => $catchAt,
+            'catch_window_ms' => max(0, (int) ($c['catch_window_ms'] ?? 1500)),
+            'calm_window_ms' => max(0, (int) ($c['calm_window_ms'] ?? 800)),
+            'calm_max_moves' => max(0, (int) ($c['calm_max_moves'] ?? 1)),
+            'dodge_window_ms' => $range('dodge_window_ms', [150, 1500]),
+            'min_move_interval_ms' => max(0, (int) config('wand.min_move_interval_ms', 300)),
+            'min_stars' => max(1, (int) ($c['min_stars'] ?? 2)),
+            'max_stars' => $count + 1,
+            'max_speed_pt_s' => max(1, (int) ($c['max_speed_pt_s'] ?? 4000)),
+            'min_dodge_pt' => max(0, (int) ($c['min_dodge_pt'] ?? 40)),
+        ];
+    }
+
+    /**
+     * Rules v2 verdict (GAMES_SPEC §5.3, David 2026-10-30 P2) — pure, no I/O. Moves closer
+     * than `min_move_interval_ms` to the previous counted move count once (as v1). One star
+     * per pounce p when ALL hold:
+     *  1. calm: at most `calm_max_moves` counted moves (any direction) in [p − calm_window, p);
+     *  2. reaction: the FIRST counted away move at or after p lies in [p + dodge_window[0],
+     *     p + dodge_window[1]] (earlier = `too_early`, none in time = `no_dodge`);
+     *  3. that move ended inside the play zone (`in_zone: true`, reported by the app);
+     *  4. it was a clean stroke (`speed_ok: true`: ≤ max_speed_pt_s and ≥ min_dodge_pt).
+     * A move without `in_zone` / `speed_ok` fails 3 / 4 (fail closed — the v2 app sends both).
+     * One star for the catch c: no counted away move in [c, c + catch_window] and the feather
+     * is in the zone (the last counted move up to c + catch_window, if any, has `in_zone`).
+     * The hunt counts at ≥ `min_stars`. `hint` = the first failed event in time (calm | dodge
+     * | catch, GAMES_SPEC §5.4), null with every star. `uniform` = machine-regular gaps (the
+     * v1 `uniform_*` test) — logged only, never a refusal in v2.
+     *
+     * Why spam earns nothing: continuous rapid strokes put ≥ 2 counted moves into every calm
+     * window (rule 1) and an away move into the catch window — 0 stars.
+     *
+     * @param  list<array{t: int, away: bool, in_zone?: bool, speed_ok?: bool}>  $moves
+     * @param  array<string, mixed>  $schedule  a scheduleV2() schedule
+     * @return array{success: bool, reason: 'too_few_stars'|null, stars: int, min_stars: int, max_stars: int, dodges: list<array{pounce_ms: int, star: bool, reason: 'moved_during_crouch'|'too_early'|'no_dodge'|'out_of_zone'|'bad_stroke'|null, move_ms: int|null}>, catch: array{star: bool, reason: 'pulled_away'|'out_of_zone'|null}, hint: 'calm'|'dodge'|'catch'|null, uniform: bool, away_moves: int, toward_moves: int, segments_hit: int, segments: int, min_away_moves: int, pounces_hit: int, pounces: int}
+     */
+    public static function scoreV2(array $moves, array $schedule): array
+    {
+        $interval = max(0, (int) ($schedule['min_move_interval_ms'] ?? 300));
+        $calmWindow = max(0, (int) ($schedule['calm_window_ms'] ?? 800));
+        $calmMax = max(0, (int) ($schedule['calm_max_moves'] ?? 1));
+        $dodge = array_values((array) ($schedule['dodge_window_ms'] ?? [150, 1500]));
+        $dodgeFrom = (int) ($dodge[0] ?? 150);
+        $dodgeTo = (int) ($dodge[1] ?? 1500);
+        $catchAt = (int) ($schedule['catch_at_ms'] ?? 0);
+        $catchWindow = max(0, (int) ($schedule['catch_window_ms'] ?? 1500));
+        $pounces = array_map('intval', array_values((array) ($schedule['pounces_ms'] ?? [])));
+        $minStars = max(1, (int) ($schedule['min_stars'] ?? 2));
+        $uniformGaps = max(2, (int) config('wand.uniform_min_gaps', 6));
+        $uniformSpread = max(0, (int) config('wand.uniform_max_spread_ms', 60));
+
+        usort($moves, fn (array $a, array $b): int => $a['t'] <=> $b['t']);
+
+        /** @var list<array{t: int, away: bool, in_zone: bool, speed_ok: bool}> $counted */
+        $counted = [];
+        $gaps = [];
+        $last = null;
+        foreach ($moves as $move) {
+            if ($last !== null && $interval > $move['t'] - $last) {
+                continue;
+            }
+            if ($last !== null) {
+                $gaps[] = $move['t'] - $last;
+            }
+            $last = $move['t'];
+            $counted[] = [
+                't' => (int) $move['t'],
+                'away' => (bool) $move['away'],
+                'in_zone' => ($move['in_zone'] ?? false) === true,
+                'speed_ok' => ($move['speed_ok'] ?? false) === true,
+            ];
+        }
+
+        $failures = []; // [time, hint]
+        $dodges = [];
+        $stars = 0;
+        foreach ($pounces as $p) {
+            $calmMoves = count(array_filter($counted, fn (array $m): bool => $m['t'] >= $p - $calmWindow && $m['t'] < $p));
+            $first = null;
+            foreach ($counted as $m) {
+                if ($m['away'] && $m['t'] >= $p) {
+                    $first = $m;
+                    break;
+                }
+            }
+            $inTime = $first !== null && $first['t'] >= $p + $dodgeFrom && $first['t'] <= $p + $dodgeTo;
+            $reason = match (true) {
+                $calmMoves > $calmMax => 'moved_during_crouch',
+                $first !== null && $first['t'] < $p + $dodgeFrom => 'too_early',
+                ! $inTime => 'no_dodge',
+                ! $first['in_zone'] => 'out_of_zone',
+                ! $first['speed_ok'] => 'bad_stroke',
+                default => null,
+            };
+            if ($reason === null) {
+                $stars++;
+            } else {
+                $failures[] = [$p, $reason === 'moved_during_crouch' ? 'calm' : 'dodge'];
+            }
+            $dodges[] = ['pounce_ms' => $p, 'star' => $reason === null, 'reason' => $reason, 'move_ms' => $inTime ? $first['t'] : null];
+        }
+
+        $catchEnd = $catchAt + $catchWindow;
+        $pulled = false;
+        $lastBefore = null;
+        foreach ($counted as $m) {
+            if ($m['t'] > $catchEnd) {
+                break;
+            }
+            $lastBefore = $m;
+            if ($m['away'] && $m['t'] >= $catchAt) {
+                $pulled = true;
+            }
+        }
+        $catchReason = match (true) {
+            $pulled => 'pulled_away',
+            $lastBefore !== null && ! $lastBefore['in_zone'] => 'out_of_zone',
+            default => null,
+        };
+        if ($catchReason === null) {
+            $stars++;
+        } else {
+            $failures[] = [$catchAt, 'catch'];
+        }
+
+        usort($failures, fn (array $a, array $b): int => $a[0] <=> $b[0]);
+        $away = count(array_filter($counted, fn (array $m): bool => $m['away']));
+
+        return [
+            'success' => $stars >= $minStars,
+            'reason' => $stars >= $minStars ? null : 'too_few_stars',
+            'stars' => $stars,
+            'min_stars' => $minStars,
+            'max_stars' => count($pounces) + 1,
+            'dodges' => $dodges,
+            'catch' => ['star' => $catchReason === null, 'reason' => $catchReason],
+            'hint' => $failures[0][1] ?? null,
+            'uniform' => count($gaps) >= $uniformGaps && max($gaps) - min($gaps) <= $uniformSpread,
+            // v1 keys kept so the result shape stays one type (counts only in v2).
+            'away_moves' => $away,
+            'toward_moves' => count($counted) - $away,
+            'segments_hit' => 0,
+            'segments' => 0,
+            'min_away_moves' => 0,
+            'pounces_hit' => count(array_filter($dodges, fn (array $d): bool => $d['star'])),
+            'pounces' => count($pounces),
         ];
     }
 

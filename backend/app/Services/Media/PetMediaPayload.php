@@ -138,7 +138,9 @@ final class PetMediaPayload
              * pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
              * SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
              * `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-             * missing = loop `ball_waiting`). Always an object.
+             * missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+             * ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+             * missing = hold the `crouch` pose). Always an object.
              *
              * @var array<string, string>
              */
@@ -148,7 +150,7 @@ final class PetMediaPayload
              * PERFORMING clips are 5 s since then, every other phase clip (and performing clips
              * made before) 3 s. The app times the school from it (the performing clip ends at
              * the obey moment). Missing key (older server) = 3. Also the real length of every derived
-             * school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+             * school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
              * Always an object.
              *
              * @var array<string, float>

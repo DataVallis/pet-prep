@@ -453,6 +453,17 @@ class WishService
             ->orderBy('acquired_at')->get()->keyBy('item_key');
     }
 
+    /**
+     * David 2026-10-30 (GAMES_SPEC §4.1, V6): the family has bought treats for this pet — an
+     * unrevoked treats pack (`petprep_wish_treats_10`), used up or not. The school v2 shows a
+     * treat token instead of »Pohvali« then (TrainingPayload `treat_token`, display only —
+     * the school never consumes a treat). A refunded pack is revoked → false.
+     */
+    public function hasBoughtTreats(Pet $pet): bool
+    {
+        return PetItem::where('pet_id', $pet->id)->where('item_key', ShopItem::TREATS)->whereNull('revoked_at')->exists();
+    }
+
     public function treatsLeft(Pet $pet): int
     {
         return (int) PetItem::where('pet_id', $pet->id)->where('item_key', ShopItem::TREATS)->whereNull('revoked_at')->sum('quantity_left');

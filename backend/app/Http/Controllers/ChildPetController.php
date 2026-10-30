@@ -121,6 +121,9 @@ class ChildPetController extends Controller
      * training_daily_budget_used (next_allowed_at = local midnight) |
      * training_child_share_used (this child's fair share — budget / children
      * who can train — is used; next_allowed_at = local midnight); 423 while locked.
+     * Body `{command, rules?: 1|2}` (GAMES_SPEC §7.2): 2 = 2 rounds × 3 cues with a
+     * 2.5 s break, R = the 1.2 s mask — `session` then carries `rules_version: 2`,
+     * `mask_ms`, `round_break_ms`, `round_breaks_ms`, `rounds`; without it v1 is unchanged.
      *
      * POST /api/child/pet/training/start
      */
@@ -128,7 +131,7 @@ class ChildPetController extends Controller
     {
         $pet = $this->childPet($request);
 
-        return $this->actionResponse($this->activities->startTraining($pet, $request->user(), $request->command()), $pet, $request);
+        return $this->actionResponse($this->activities->startTraining($pet, $request->user(), $request->command(), $request->rulesVersion()), $pet, $request);
     }
 
     /**
@@ -138,7 +141,10 @@ class ChildPetController extends Controller
      * of a completed finish → `unchanged` with the same result.
      * 422 training_session_invalid | training_session_expired |
      * training_session_not_over | training_invalid_taps | training_session_interrupted |
-     * training_not_available.
+     * training_not_available. Rules v2: `ended_after_round: 1` ends after round 1
+     * (Š3) — round 1 is scored, progress counts, no `trained_pet` row (the routine
+     * counts only a full session); `result` then carries `rules_version`,
+     * `ended_after_round`, `counts_for_routine`.
      *
      * POST /api/child/pet/training/finish
      */
@@ -146,7 +152,7 @@ class ChildPetController extends Controller
     {
         $pet = $this->childPet($request);
 
-        return $this->actionResponse($this->activities->finishTraining($pet, $request->user(), $request->sessionId(), $request->taps()), $pet, $request);
+        return $this->actionResponse($this->activities->finishTraining($pet, $request->user(), $request->sessionId(), $request->taps(), $request->endedAfterRound()), $pet, $request);
     }
 
     /**
@@ -200,7 +206,10 @@ class ChildPetController extends Controller
      * needs_cleaning | wand_too_soon (next_allowed_at = end of the 2 h gap
      * after the last successful session) | wand_session_active (another
      * child's game; next_allowed_at = its expiry) | wand_day_ending
-     * (next_allowed_at = local midnight); 423 while locked.
+     * (next_allowed_at = local midnight); 423 while locked. Body `{rules?: 1|2}`
+     * (GAMES_SPEC §7.2): 2 = the ~25 s v2 hunt scored in stars — `session`
+     * then carries `rules_version: 2` and the v2 schedule keys; without it the
+     * v1 minute is unchanged.
      *
      * POST /api/child/pet/wand/start
      */
@@ -208,7 +217,7 @@ class ChildPetController extends Controller
     {
         $pet = $this->childPet($request);
 
-        return $this->actionResponse($this->activities->startWand($pet, $request->user()), $pet, $request);
+        return $this->actionResponse($this->activities->startWand($pet, $request->user(), $request->rulesVersion()), $pet, $request);
     }
 
     /**
@@ -221,6 +230,10 @@ class ChildPetController extends Controller
      * → `unchanged` with the same result. 422 wand_not_available |
      * wand_session_invalid | wand_session_expired | wand_session_not_over |
      * wand_invalid_moves | wand_session_interrupted; 423 while locked.
+     * A rules-v2 session (GAMES_SPEC §5.3) is judged in stars from the moves'
+     * extra `in_zone` / `speed_ok`; `result` then also carries `rules_version`,
+     * `stars`, `min_stars`, `max_stars`, `dodges`, `catch`, `hint`
+     * (reason `too_few_stars`).
      *
      * POST /api/child/pet/wand/finish
      */
