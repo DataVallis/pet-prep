@@ -141,12 +141,12 @@ function vcClipWithAudio(): string
  */
 function vcService(array $hooks = []): VideoCompressionService
 {
-    return new class($hooks, app(PetMediaService::class), app(MediaClipAnalyzer::class), app(MediaStorage::class)) extends VideoCompressionService
+    return new class($hooks, app(PetMediaService::class), app(MediaClipAnalyzer::class), app(MediaStorage::class), app(AppSettingsService::class)) extends VideoCompressionService
     {
         /** @param array<string, mixed> $hooks */
-        public function __construct(private array $hooks, PetMediaService $media, MediaClipAnalyzer $analyzer, MediaStorage $storage)
+        public function __construct(private array $hooks, PetMediaService $media, MediaClipAnalyzer $analyzer, MediaStorage $storage, AppSettingsService $settings)
         {
-            parent::__construct($media, $analyzer, $storage);
+            parent::__construct($media, $analyzer, $storage, $settings);
         }
 
         protected function beforeUpload(PetMedia $row): void

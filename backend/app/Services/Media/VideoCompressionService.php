@@ -85,6 +85,7 @@ class VideoCompressionService
         protected readonly PetMediaService $media,
         protected readonly MediaClipAnalyzer $analyzer,
         protected readonly MediaStorage $storage,
+        protected readonly AppSettingsService $settings,
     ) {}
 
     // ──────────────────────────────────────────────────────────────
@@ -341,42 +342,68 @@ class VideoCompressionService
         return $slot->isClip()
             && str_ends_with($lower, '.mp4') && ! str_ends_with($lower, self::KEY_SUFFIX.'.mp4')
             && $slot->compression_path !== $candidate
-            && app(AppSettingsService::class)->videoCompression(fresh: true)
+            && $this->settings->videoCompression(fresh: true)
             && $this->available();
+    }
+
+    /** Pipeline settings: fast preset, short per-call timeouts (the job has 85 s). */
+    private function pipelineOverrides(): array
+    {
+        return [
+            'preset' => (string) config('media.compression.pipeline_preset', 'veryfast'),
+            'timeout' => max(5, (int) config('media.compression.pipeline_process_timeout_seconds', 20)),
+        ];
     }
 
     /**
      * Compress a slot's CANDIDATE (the downloaded clip that passed its quality check / was
-     * stored with the check off) and promote it — the compressed key when it passes the
-     * accept rules, otherwise the original. Never leaves the slot stuck: every outcome
-     * except `busy` / `skipped` (decided elsewhere meanwhile) ends in a promotion.
-     * Fast preset `media.compression.pipeline_preset` and short process timeouts (the job
-     * has 85 s); the original candidate is deleted after the swap — it was never shown.
+     * staged with the check off / was approved by a superadmin) and promote it — the
+     * compressed key when it passes the accept rules, otherwise the original. Never leaves
+     * the slot stuck: every outcome except `busy` / `skipped` (decided elsewhere meanwhile)
+     * ends in a promotion; a swap that committed but whose promotion did not happen is
+     * finished by the next attempt / `failed()` (the slot's candidate is then the `-c` key).
+     * Fast preset `media.compression.pipeline_preset`, short process timeouts and a lock TTL
+     * from them (QA #452 m1); the original candidate is deleted once the swap committed — it
+     * was never shown.
      *
+     * @param  list<string>  $fromStatuses  running (pipeline) or failed (»Approve anyway«)
      * @return 'compressed'|'rejected'|'failed'|'promoted'|'skipped'|'busy'
      */
-    public function compressCandidate(int $id, string $candidate, ?string $quality, ?string $reason): string
+    public function compressCandidate(int $id, string $candidate, ?string $quality, ?string $reason, array $fromStatuses = [PetMedia::STATUS_RUNNING]): string
     {
+        $this->overrides = $this->pipelineOverrides();
         $lock = Cache::lock('media-compress:'.$id, $this->lockSeconds());
         if (! $lock->get()) {
+            $this->overrides = [];
+
             return 'busy';
         }
 
-        $this->overrides = [
-            'preset' => (string) config('media.compression.pipeline_preset', 'veryfast'),
-            'timeout' => max(5, (int) config('media.compression.pipeline_process_timeout_seconds', 20)),
-        ];
         $in = null;
         $m = null;
-        $target = null;
+        $target = self::targetPath($candidate);
+        $swapped = false;
 
         try {
             $slot = PetMedia::find($id);
-            if ($slot === null || $slot->status !== PetMedia::STATUS_RUNNING || $slot->candidate_path !== $candidate) {
+            if ($slot === null || ! in_array($slot->status, $fromStatuses, true)) {
                 return 'skipped';
             }
+            if ($slot->candidate_path === $target) {
+                // An earlier attempt swapped but did not promote (QA #452 m2b): finish it.
+                $swapped = true;
+
+                return $this->media->promoteCandidate($slot, $target, $quality, $reason, $fromStatuses) ? self::STATUS_COMPRESSED : 'skipped';
+            }
+            if ($slot->candidate_path !== $candidate) {
+                return 'skipped';
+            }
+
+            // A key left by a killed attempt (written, never swapped — QA #452 m2c).
+            $this->deleteIfUnreferenced($target);
+
             if (! $this->wantsCandidate($slot, $candidate)) {
-                return $this->promoteOriginal($id, $candidate, $quality, $reason) ? 'promoted' : 'skipped';
+                return $this->promoteOriginal($id, $candidate, $quality, $reason, null, $fromStatuses) ? 'promoted' : 'skipped';
             }
 
             $in = $this->localCopy($candidate);
@@ -389,15 +416,15 @@ class VideoCompressionService
                 $this->recordOnCandidate($id, $candidate, $status, (string) $m['reason']);
                 Log::info('VideoCompressionService: new clip shown uncompressed', ['pet_media_id' => $id, 'status' => $status, 'reason' => $m['reason']]);
 
-                return $this->promoteOriginal($id, $candidate, $quality, $reason) ? $status : 'skipped';
+                return $this->promoteOriginal($id, $candidate, $quality, $reason, null, $fromStatuses) ? $status : 'skipped';
             }
 
-            $target = self::targetPath($candidate);
             $this->media->disk()->putFileAs(dirname($target), new File((string) $m['out']), basename($target));
+            $this->afterUpload($slot);
 
-            $swapped = DB::transaction(function () use ($id, $candidate, $target, $m): bool {
+            $swapped = DB::transaction(function () use ($id, $candidate, $target, $m, $fromStatuses): bool {
                 $locked = PetMedia::whereKey($id)->lockForUpdate()->first();
-                if ($locked === null || $locked->status !== PetMedia::STATUS_RUNNING || $locked->candidate_path !== $candidate) {
+                if ($locked === null || ! in_array($locked->status, $fromStatuses, true) || $locked->candidate_path !== $candidate) {
                     return false;
                 }
 
@@ -417,24 +444,32 @@ class VideoCompressionService
                 return true;
             });
 
-            if (! $swapped || ! $this->media->promoteCandidate(PetMedia::findOrFail($id), $target, $quality, $reason)) {
+            if (! $swapped) {
                 $this->deleteIfUnreferenced($target);
 
                 return 'skipped';
             }
 
-            // The original was only ever a candidate (never served to the apps).
+            // The original was only ever a candidate (never served); after the swap no row needs it.
             $this->deleteIfUnreferenced($candidate);
+            $this->beforePromote($slot);
+
+            if (! $this->media->promoteCandidate(PetMedia::findOrFail($id), $target, $quality, $reason, $fromStatuses)) {
+                // Changed meanwhile (regenerated / decided): the target stays with whatever row holds it.
+                return 'skipped';
+            }
+
             Log::info('VideoCompressionService: new clip compressed before it was shown', ['pet_media_id' => $id, 'before' => $m['before'], 'after' => $m['after'], 'note' => $m['note']]);
 
             return self::STATUS_COMPRESSED;
         } catch (Throwable $e) {
-            if ($target !== null) {
-                $this->deleteIfUnreferenced($target);
+            Log::warning('VideoCompressionService: pipeline compression error', ['pet_media_id' => $id, 'swapped' => $swapped, 'error' => mb_substr($e->getMessage(), 0, 300)]);
+            if ($swapped) {
+                // The rows already point at the compressed key: never fall back to a deleted original.
+                return $this->promoteOriginal($id, $candidate, $quality, $reason, null, $fromStatuses) ? self::STATUS_COMPRESSED : 'skipped';
             }
-            $this->recordOnCandidate($id, $candidate, self::STATUS_FAILED, $e->getMessage());
 
-            return $this->promoteOriginal($id, $candidate, $quality, $reason) ? self::STATUS_FAILED : 'skipped';
+            return $this->promoteOriginal($id, $candidate, $quality, $reason, $e->getMessage(), $fromStatuses) ? self::STATUS_FAILED : 'skipped';
         } finally {
             $this->overrides = [];
             foreach ([$in, $m['out'] ?? null, $m['stats'] ?? null] as $tmp) {
@@ -447,19 +482,33 @@ class VideoCompressionService
     }
 
     /**
-     * Promote the original candidate (rejected / failed / switched off / the job gave up).
-     * Also marks a failure on the candidate so a re-dispatch promotes directly; the
-     * nightly backfill may try the stored file again later.
+     * Promote whatever the slot's candidate is now (rejected / failed / switched off / the job
+     * gave up): the compressed key when an earlier swap already committed (QA #452 m2b),
+     * otherwise the original. With `$failure` the try is recorded as failed (a re-dispatch
+     * then promotes directly; the nightly backfill may try the stored file again) and a key
+     * written by a killed attempt is dropped (QA #452 m2c).
+     *
+     * @param  list<string>  $fromStatuses
      */
-    public function promoteOriginal(int $id, string $candidate, ?string $quality, ?string $reason, ?string $failure = null): bool
+    public function promoteOriginal(int $id, string $candidate, ?string $quality, ?string $reason, ?string $failure = null, array $fromStatuses = [PetMedia::STATUS_RUNNING]): bool
     {
-        if ($failure !== null) {
-            $this->recordOnCandidate($id, $candidate, self::STATUS_FAILED, $failure);
+        $slot = PetMedia::find($id);
+        if ($slot === null) {
+            return false;
         }
 
-        $slot = PetMedia::find($id);
+        $target = self::targetPath($candidate);
+        if ($slot->candidate_path === $target) {
+            return $this->media->promoteCandidate($slot, $target, $quality, $reason, $fromStatuses);
+        }
 
-        return $slot !== null && $slot->candidate_path === $candidate && $this->media->promoteCandidate($slot, $candidate, $quality, $reason);
+        if ($failure !== null) {
+            $this->recordOnCandidate($id, $candidate, self::STATUS_FAILED, $failure);
+            $this->deleteIfUnreferenced($target);
+            $slot = $slot->fresh() ?? $slot;
+        }
+
+        return $slot->candidate_path === $candidate && $this->media->promoteCandidate($slot, $candidate, $quality, $reason, $fromStatuses);
     }
 
     /** Remember a pipeline decision on the candidate (it becomes the storage_path when promoted). */
@@ -474,6 +523,9 @@ class VideoCompressionService
             'compression_note' => mb_substr($note, 0, 500),
         ]);
     }
+
+    /** Test seam: runs after a pipeline swap committed, before the promotion. */
+    protected function beforePromote(PetMedia $row): void {}
 
     /** Test seam: runs right after the pre-swap marker, before the new key is written. */
     protected function beforeUpload(PetMedia $row): void {}

@@ -2,6 +2,7 @@
 
 namespace App\Jobs;
 
+use App\Models\PetMedia;
 use App\Services\Media\VideoCompressionService;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
@@ -14,7 +15,8 @@ use Throwable;
 
 /**
  * David 2026-10-30: a new clip is compressed BEFORE it is shown — between the quality-check
- * verdict (or the staging with the check off) and the promotion. Promotes the compressed key
+ * verdict (or the staging with the check off, or a superadmin's »Approve anyway«) and the
+ * promotion. Promotes the compressed key
  * or, when compression is rejected / fails, the original — a slot is never left waiting:
  * `failed()` (timeout, crash) promotes the original and marks the try as failed so a
  * re-dispatch (media:sweep → CheckPetMediaQuality) promotes directly; the nightly
@@ -43,6 +45,8 @@ class CompressPetMediaCandidate implements ShouldBeUnique, ShouldQueue
         public readonly string $candidatePath,
         public readonly ?string $quality,
         public readonly ?string $reason,
+        /** @var list<string> running (pipeline) or failed (»Approve anyway«) */
+        public readonly array $fromStatuses = [PetMedia::STATUS_RUNNING],
     ) {}
 
     public function uniqueId(): string
@@ -52,7 +56,7 @@ class CompressPetMediaCandidate implements ShouldBeUnique, ShouldQueue
 
     public function handle(VideoCompressionService $compression): void
     {
-        if ($compression->compressCandidate($this->petMediaId, $this->candidatePath, $this->quality, $this->reason) === 'busy') {
+        if ($compression->compressCandidate($this->petMediaId, $this->candidatePath, $this->quality, $this->reason, $this->fromStatuses) === 'busy') {
             $this->release(30);
         }
     }
@@ -60,7 +64,7 @@ class CompressPetMediaCandidate implements ShouldBeUnique, ShouldQueue
     public function failed(?Throwable $exception): void
     {
         $promoted = app(VideoCompressionService::class)->promoteOriginal($this->petMediaId, $this->candidatePath, $this->quality, $this->reason,
-            failure: 'pipeline compression gave up: '.mb_substr((string) $exception?->getMessage(), 0, 200));
+            failure: 'pipeline compression gave up: '.mb_substr((string) $exception?->getMessage(), 0, 200), fromStatuses: $this->fromStatuses);
         Log::warning('CompressPetMediaCandidate: gave up — original promoted', ['pet_media_id' => $this->petMediaId, 'promoted' => $promoted, 'error' => $exception?->getMessage()]);
     }
 }
