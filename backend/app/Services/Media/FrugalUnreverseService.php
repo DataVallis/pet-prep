@@ -3,6 +3,7 @@
 namespace App\Services\Media;
 
 use App\Enums\AiSpendPurpose;
+use App\Enums\Species;
 use App\Jobs\SubmitPetStateVideo;
 use App\Models\AppSettingChange;
 use App\Models\Pet;
@@ -33,11 +34,18 @@ use Throwable;
  *    in the preparation, nothing left `running`: a pet slot only waits for its look row the
  *    usual way). markStored / linkToLook clear the marker; `releaseFor()` (called by
  *    PetMediaService after a stored / linked sleeping_to_idle) and every run's `release()` then
- *    delete the reversed derivative row + its file once no active pet is served from it — the
- *    file only when no row references it (VideoCompressionService::isReferenced, the
- *    deleteIfUnreferenced pattern). No other media are touched.
+ *    delete the reversed derivative row + its file once NO pet (active or not — a reactivated
+ *    pet must not lose its clip) is still marked — the file only when no row references it
+ *    (VideoCompressionService::isReferenced, the deleteIfUnreferenced pattern). A look row's own
+ *    leftover marker is cleared with it, so SchoolClipDerivativeService::reversalWanted() agrees
+ *    and never re-makes it (no ffmpeg churn). No other media are touched.
  *
- * Manual only (`media:frugal-unreverse`) — never scheduled.
+ * Not the only path (QA #456 M1, decided: David wants the reversal gone): every normal
+ * generation path — queueStateVideos, Generate missing, a stage remake, ResumeStateMedia,
+ * media:retry — also replaces a legacy slot it meets, each clip guarded by AiSpendGuard. The
+ * command (never scheduled) is the bulk sweep for the rest; its total is an upper bound that can
+ * shrink between the dry run and the real run. Items a run dispatched within RECENT_MINUTES are
+ * planned as `wait` (QA #456 m1), so a re-run never queues them twice.
  */
 class FrugalUnreverseService
 {
@@ -56,6 +64,9 @@ class FrugalUnreverseService
     public const ACTION_LINK = 'link';
 
     public const ACTION_WAIT = 'wait';
+
+    /** A slot a run dispatched this recently (audit rows) is `wait`, not queued again. */
+    public const RECENT_MINUTES = 30;
 
     public function __construct(
         private readonly PetMediaService $media,
@@ -81,6 +92,7 @@ class FrugalUnreverseService
         $cost = $this->clipCostUsd();
         $items = [];
         $groups = [];
+        $recent = $this->recentlyDispatched();
 
         $marked = PetMedia::query()
             ->where('kind', PetMedia::KIND_TRANSITION)->where('state', self::TARGET)
@@ -103,8 +115,11 @@ class FrugalUnreverseService
                 if ($slot->status === PetMedia::STATUS_RUNNING) {
                     continue;
                 }
+                // Dispatched by a recent run and not failed yet: its job is still in the queue.
+                $wait = isset($recent[(int) $slot->id]) && $slot->status === PetMedia::STATUS_PENDING;
                 $items[] = ['owner' => "pet {$pet->id}", 'stage' => $pet->life_stage?->value, 'look_row' => null,
-                    'slots' => [(int) $slot->id], 'pets' => [(int) $pet->id], 'action' => self::ACTION_GENERATE, 'cost_usd' => $cost];
+                    'slots' => [(int) $slot->id], 'pets' => [(int) $pet->id],
+                    'action' => $wait ? self::ACTION_WAIT : self::ACTION_GENERATE, 'cost_usd' => $wait ? 0.0 : $cost];
 
                 continue;
             }
@@ -124,9 +139,12 @@ class FrugalUnreverseService
                 continue; // the look's new clip waits for an admin decision
             }
 
+            $dispatched = array_intersect_key($recent, array_flip($group['slots'])) !== [];
             $action = match (true) {
                 $row !== null && $row->isShown() && $row->status === PetMedia::STATUS_READY => self::ACTION_LINK,
                 $row !== null && $row->status === PetMedia::STATUS_RUNNING && $row->request_id !== null => self::ACTION_WAIT,
+                // A recent run queued this look's pets and the look row has not failed since.
+                $dispatched && $row?->status !== PetMedia::STATUS_FAILED => self::ACTION_WAIT,
                 default => self::ACTION_GENERATE,
             };
 
@@ -195,6 +213,10 @@ class FrugalUnreverseService
         $queuedSlots = [];
 
         foreach ($plan['items'] as $item) {
+            if ($item['action'] === self::ACTION_WAIT) {
+                continue; // already at fal or in the queue (a recent run / the pipeline)
+            }
+
             // A shared look's failed row starts a new chain once (its pets follow through the look).
             if ($item['action'] === self::ACTION_GENERATE && $item['look_row'] !== null) {
                 $row = PetMedia::find($item['look_row']);
@@ -266,12 +288,34 @@ class FrugalUnreverseService
         return true;
     }
 
+    /**
+     * Slot ids a run dispatched within RECENT_MINUTES (from the audit rows).
+     *
+     * @return array<int, true>
+     */
+    private function recentlyDispatched(): array
+    {
+        $ids = [];
+        AppSettingChange::query()->where('key', self::AUDIT_KEY)
+            ->where('created_at', '>=', now()->subMinutes(self::RECENT_MINUTES))
+            ->get(['new'])
+            ->each(function (AppSettingChange $change) use (&$ids) {
+                foreach ((array) ($change->new['pet_media_ids'] ?? []) as $id) {
+                    $ids[(int) $id] = true;
+                }
+            });
+
+        return $ids;
+    }
+
     /** The pet still uses this transition (state media, the full transition set). */
     private function stillServedReversed(PetMedia $slot): bool
     {
         $pet = $slot->pet;
 
-        return $pet instanceof Pet && $pet->is_active && $this->media->wantsPoseMedia($pet, $slot);
+        // Dogs only: frugal B never marked a cat (a stray marker on a cat is left alone).
+        return $pet instanceof Pet && $pet->is_active && $pet->speciesValue() === Species::Dog
+            && $this->media->wantsPoseMedia($pet, $slot);
     }
 
     // ──────────────────────────────────────────────────────────────
@@ -322,11 +366,14 @@ class FrugalUnreverseService
             }
 
             $path = $row->storage_path;
+            // Ordering: the marker check above, then the row, then the file — a crash in between
+            // leaves at worst an unreferenced file (disk-report orphan), never a row without a file.
             // The row first (one statement, no transaction needed), then the file if nothing points at it.
             if (PetMediaDerivative::whereKey($row->id)->where('key', self::TARGET)->delete() !== 1) {
                 continue;
             }
             $released++;
+            $this->clearLookMarker((int) $row->pet_media_id);
 
             if (filled($path)) {
                 try {
@@ -345,8 +392,27 @@ class FrugalUnreverseService
     }
 
     /**
-     * Is an active pet still shown the reversal of this idle_to_sleeping owner row? (Its
-     * sleeping_to_idle slot is still marked — markStored / linkToLook clear the marker.)
+     * A shared look's sleeping_to_idle row of the owner's stage that no pet is served from any
+     * more drops its leftover marker (it has no clip of its own), so reversalWanted() is false
+     * and media:school-derivatives never re-makes the reversal just released.
+     */
+    private function clearLookMarker(int $ownerId): void
+    {
+        $owner = PetMedia::find($ownerId);
+        if ($owner?->pet_look_id === null) {
+            return; // a unique pet's sibling is the pet's own (unmarked) slot
+        }
+
+        PetMedia::query()->where('pet_look_id', $owner->pet_look_id)->where('life_stage', $owner->life_stage)
+            ->where('kind', PetMedia::KIND_TRANSITION)->where('state', self::TARGET)
+            ->whereNotNull('frugal_source')->whereNull('storage_path')
+            ->update(['frugal_source' => null]);
+    }
+
+    /**
+     * Is any pet — active or not (QA #456 m2: a reactivated pet keeps its clip) — still shown
+     * the reversal of this idle_to_sleeping owner row? (Its sleeping_to_idle slot is still
+     * marked — markStored / linkToLook clear the marker.)
      */
     private function servedFrom(int $ownerId): bool
     {
@@ -363,7 +429,6 @@ class FrugalUnreverseService
             ->whereIn('pet_id', $petIds)
             ->where('kind', PetMedia::KIND_TRANSITION)->where('state', self::TARGET)
             ->whereNotNull('frugal_source')
-            ->whereHas('pet', fn ($q) => $q->where('is_active', true))
             ->exists();
     }
 }

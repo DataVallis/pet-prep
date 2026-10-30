@@ -23,6 +23,7 @@ use App\Services\FalWebhookVerifier;
 use App\Services\FamilyService;
 use App\Services\Media\FalGateway;
 use App\Services\Media\FrugalClipPreview;
+use App\Services\Media\FrugalUnreverseService;
 use App\Services\Media\GameMediaReadiness;
 use App\Services\Media\MediaEntitlementService;
 use App\Services\Media\PetMediaService;
@@ -951,5 +952,229 @@ describe('media:frugal-unreverse', function () {
 
     it('is never scheduled', function () {
         expect(collect(app(Schedule::class)->events())->contains(fn ($e) => str_contains((string) $e->command, 'frugal-unreverse')))->toBeFalse();
+    });
+});
+
+describe('media:frugal-unreverse — QA #456', function () {
+    it('M1: the normal pipeline replaces a legacy slot on its own (one submit); the command then has nothing to queue', function () {
+        useUniquePetMedia(true);
+        frgSwitch(true);
+        frgFakeFal();
+        $pet = frgBirth(frgPet());
+        frgCompleteClips();
+        $derivative = frgLegacyReversal($pet);
+        $submits = frgKlingSubmits()->count();
+
+        app(PetMediaService::class)->queueStateVideos($pet->fresh());
+        $new = frgKlingSubmits()->slice($submits)->values();
+        expect($new)->toHaveCount(1)->and(frgKind($new[0]))->toBe('transition')
+            ->and(frgTransitionUrl($pet))->toContain('/derived/sleeping_to_idle');
+
+        $plan = app(FrugalUnreverseService::class)->plan();
+        expect(collect($plan['items'])->where('action', 'generate'))->toHaveCount(0)
+            ->and($plan['cost_usd'])->toBe(0.0);
+        expect(Artisan::call('media:frugal-unreverse'))->toBe(0)
+            ->and(frgKlingSubmits()->count() - $submits)->toBe(1);
+
+        frgCompleteClips();
+        expect(frgSlot($pet, 'transition', 'sleeping_to_idle')->frugal_source)->toBeNull()
+            ->and(PetMediaDerivative::whereKey($derivative->id)->exists())->toBeFalse();
+    });
+
+    it('m1: a re-run while the jobs are still queued plans them as wait (0 $) and queues nothing again; after RECENT_MINUTES they are due again', function () {
+        useUniquePetMedia(true);
+        frgSwitch(true);
+        frgFakeFal();
+        $pet = frgBirth(frgPet());
+        frgCompleteClips();
+        frgLegacyReversal($pet);
+        Queue::fake([SubmitPetStateVideo::class]);
+
+        expect(Artisan::call('media:frugal-unreverse'))->toBe(0);
+        Queue::assertPushed(SubmitPetStateVideo::class, 1);
+
+        $plan = app(FrugalUnreverseService::class)->plan();
+        expect(array_column($plan['items'], 'action'))->toBe(['wait'])->and($plan['cost_usd'])->toBe(0.0)->and($plan['generate'])->toBe(0);
+        expect(Artisan::call('media:frugal-unreverse'))->toBe(0)
+            ->and(Artisan::output())->toContain('Nothing to queue');
+        Queue::assertPushed(SubmitPetStateVideo::class, 1);
+
+        $this->travel(FrugalUnreverseService::RECENT_MINUTES + 1)->minutes();
+        expect(array_column(app(FrugalUnreverseService::class)->plan()['items'], 'action'))->toBe(['generate']);
+    });
+
+    it('m2: an inactive marked pet keeps its reversal (no release, no ffmpeg re-make) and is not planned', function () {
+        useUniquePetMedia(true);
+        frgSwitch(true);
+        frgFakeFal();
+        $pet = frgBirth(frgPet());
+        frgCompleteClips();
+        $derivative = frgLegacyReversal($pet);
+        $pet->update(['is_active' => false]);
+        $derivatives = app(SchoolClipDerivativeService::class);
+
+        expect(app(FrugalUnreverseService::class)->release())->toBe(0)
+            ->and(app(FrugalUnreverseService::class)->releaseFor(frgSlot($pet, 'transition', 'sleeping_to_idle')))->toBe(0)
+            ->and(PetMediaDerivative::whereKey($derivative->id)->exists())->toBeTrue()
+            ->and(app(FrugalUnreverseService::class)->plan()['items'])->toBe([])
+            ->and(app(FrugalUnreverseService::class)->plan()['releasable'])->toBe(0)
+            // The derivative job agrees: wanted (kept) but not due (already made) — no churn.
+            ->and($derivatives->reversalWanted(frgSlot($pet, 'transition', 'idle_to_sleeping')))->toBeTrue()
+            ->and($derivatives->dueSources($pet->id)->where('kind', 'transition')->count())->toBe(0);
+        Storage::disk('pet_media')->assertExists($derivative->storage_path);
+
+        // Reactivated: still served reversed, then repaired the normal way.
+        $pet->update(['is_active' => true]);
+        expect(frgTransitionUrl($pet))->toContain('/derived/sleeping_to_idle')
+            ->and(array_column(app(FrugalUnreverseService::class)->plan()['items'], 'action'))->toBe(['generate']);
+    });
+
+    it('m2: a look row left marked with no marked pet is released once — its marker cleared, so the derivative job never re-makes it', function () {
+        frgSwitch(true);
+        frgFakeFal();
+        $pet = frgBirth(frgPet('beagle', 'tricolour'));
+        frgCompleteClips();
+        $derivative = frgLegacyReversal($pet);
+        $i2s = PetMedia::find(SchoolClipDerivativeService::ownerId(frgSlot($pet, 'transition', 'idle_to_sleeping')));
+        // The pet left the look (or lost its marker) — only the look row is still marked.
+        frgSlot($pet, 'transition', 'sleeping_to_idle')->update(['frugal_source' => null]);
+
+        expect(app(FrugalUnreverseService::class)->release())->toBe(1)
+            ->and(PetMediaDerivative::whereKey($derivative->id)->exists())->toBeFalse()
+            ->and(PetMedia::where('pet_look_id', $i2s->pet_look_id)->where('state', 'sleeping_to_idle')->whereNotNull('frugal_source')->count())->toBe(0)
+            ->and(app(SchoolClipDerivativeService::class)->reversalWanted($i2s->fresh()))->toBeFalse()
+            ->and(app(SchoolClipDerivativeService::class)->dueSources(lookId: $i2s->pet_look_id)->where('kind', 'transition')->count())->toBe(0);
+        Storage::disk('pet_media')->assertMissing($derivative->storage_path);
+    });
+
+    it('m4: refuses while another run holds the lock, and when fal is off — nothing queued', function () {
+        useUniquePetMedia(true);
+        frgSwitch(true);
+        frgFakeFal();
+        $pet = frgBirth(frgPet());
+        frgCompleteClips();
+        frgLegacyReversal($pet);
+        $submits = frgKlingSubmits()->count();
+
+        $lock = Cache::lock(FrugalUnreverseService::LOCK_KEY, 60);
+        expect($lock->get())->toBeTrue();
+        expect(Artisan::call('media:frugal-unreverse'))->toBe(1)
+            ->and(Artisan::output())->toContain('Another frugal-unreverse run is in progress');
+        $lock->release();
+
+        config(['services.fal_ai.key' => null]);
+        expect(Artisan::call('media:frugal-unreverse'))->toBe(1)
+            ->and(Artisan::output())->toContain('fal.ai is disabled')
+            ->and(frgKlingSubmits()->count())->toBe($submits)
+            ->and(frgSlot($pet, 'transition', 'sleeping_to_idle')->status)->toBe('pending')
+            ->and(AppSettingChange::where('key', FrugalUnreverseService::AUDIT_KEY)->count())->toBe(0);
+    });
+
+    it('m4: --limit takes the first items and says how many are left', function () {
+        useUniquePetMedia(true);
+        frgSwitch(true);
+        frgFakeFal();
+        $a = frgBirth(frgPet());
+        frgCompleteClips();
+        $b = frgBirth(frgPet());
+        frgCompleteClips();
+        frgLegacyReversal($a);
+        frgLegacyReversal($b);
+        $submits = frgKlingSubmits()->count();
+
+        expect(Artisan::call('media:frugal-unreverse', ['--dry-run' => true, '--limit' => 1]))->toBe(0);
+        expect(Artisan::output())->toContain("pet {$a->id}")->not->toContain("pet {$b->id}")
+            ->toContain('1 item(s), 1 pet slot(s), 1 new fal clip(s), estimated $0.56')
+            ->toContain('1 more item(s) beyond --limit.');
+
+        expect(Artisan::call('media:frugal-unreverse', ['--limit' => 1]))->toBe(0)
+            ->and(frgKlingSubmits()->count() - $submits)->toBe(1)
+            ->and(frgSlot($b, 'transition', 'sleeping_to_idle')->status)->toBe('pending');
+    });
+
+    it('m4: a look row that already has its clip is linked at 0 $ (no fal call)', function () {
+        frgSwitch(true);
+        frgFakeFal();
+        $pet = frgBirth(frgPet('beagle', 'tricolour'));
+        frgCompleteClips();
+        $row = PetMedia::where('pet_look_id', $pet->pet_look_id)->where('kind', 'transition')->where('state', 'sleeping_to_idle')->sole();
+        $kept = $row->only(['status', 'storage_path', 'request_id', 'bytes', 'stored_recipe', 'source_url', 'status_url', 'response_url']);
+        $derivative = frgLegacyReversal($pet);
+        PetMedia::whereKey($row->id)->update($kept + ['frugal_source' => null]); // only the pet is still marked
+        $submits = frgKlingSubmits()->count();
+        $spent = (float) AiSpendLedger::query()->counted()->sum('cost_usd');
+
+        $plan = app(FrugalUnreverseService::class)->plan();
+        expect(array_column($plan['items'], 'action'))->toBe(['link'])
+            ->and($plan['items'][0]['cost_usd'])->toBe(0.0)->and($plan['cost_usd'])->toBe(0.0);
+
+        expect(Artisan::call('media:frugal-unreverse'))->toBe(0)
+            ->and(frgKlingSubmits()->count())->toBe($submits)
+            ->and(frgSlot($pet, 'transition', 'sleeping_to_idle')->look_media_id)->toBe($row->id)
+            ->and(frgSlot($pet, 'transition', 'sleeping_to_idle')->frugal_source)->toBeNull()
+            ->and(frgTransitionUrl($pet))->not->toContain('/derived/')
+            ->and(PetMediaDerivative::whereKey($derivative->id)->exists())->toBeFalse()
+            ->and((float) AiSpendLedger::query()->counted()->sum('cost_usd'))->toBe($spent);
+    });
+
+    it('m4: a failed look row starts a new chain once and is generated', function () {
+        frgSwitch(true);
+        frgFakeFal();
+        $pet = frgBirth(frgPet('beagle', 'tricolour'));
+        frgCompleteClips();
+        frgLegacyReversal($pet);
+        $row = PetMedia::where('pet_look_id', $pet->pet_look_id)->where('kind', 'transition')->where('state', 'sleeping_to_idle')->sole();
+        $row->update(['status' => 'failed']);
+        $submits = frgKlingSubmits()->count();
+
+        expect(array_column(app(FrugalUnreverseService::class)->plan()['items'], 'action'))->toBe(['generate']);
+        expect(Artisan::call('media:frugal-unreverse'))->toBe(0)
+            ->and(frgKlingSubmits()->count() - $submits)->toBe(1);
+        frgCompleteClips();
+        expect($row->fresh()->status)->toBe('ready')
+            ->and(frgSlot($pet, 'transition', 'sleeping_to_idle')->look_media_id)->toBe($row->id);
+    });
+
+    it('m4: skips a slot in »Needs review«, a cat with a stray marker, and leaves attention markers alone', function () {
+        useUniquePetMedia(true);
+        frgSwitch(true);
+        frgFakeFal();
+        $dog = frgBirth(frgPet());
+        frgCompleteClips();
+        frgLegacyReversal($dog);
+        frgSlot($dog, 'transition', 'sleeping_to_idle')->update(['error_reason' => 'quality_failed']);
+
+        $cat = frgBirth(frgPet('maine_coon', 'brown'));
+        frgCompleteClips();
+        frgSlot($cat, 'transition', 'sleeping_to_idle')->update(['frugal_source' => 'idle_to_sleeping']);
+
+        frgSwitch(false);
+        $attention = PetMedia::where('pet_id', $dog->id)->whereNotNull('frugal_source')->where('kind', 'phase')->pluck('frugal_source', 'id')->all();
+        $submits = frgKlingSubmits()->count();
+
+        expect(app(FrugalUnreverseService::class)->plan()['items'])->toBe([]);
+        expect(Artisan::call('media:frugal-unreverse'))->toBe(0)
+            ->and(frgKlingSubmits()->count())->toBe($submits)
+            ->and(frgSlot($cat, 'transition', 'sleeping_to_idle')->frugal_source)->toBe('idle_to_sleeping')
+            ->and(PetMedia::where('pet_id', $dog->id)->whereNotNull('frugal_source')->where('kind', 'phase')->pluck('frugal_source', 'id')->all())->toBe($attention)
+            ->and($attention)->not->toBe([]);
+    });
+
+    it('m4: releaseFor deletes the reversal row but keeps a file another row still references', function () {
+        useUniquePetMedia(true);
+        frgSwitch(true);
+        frgFakeFal();
+        $pet = frgBirth(frgPet());
+        frgCompleteClips();
+        $derivative = frgLegacyReversal($pet);
+        PetMediaDerivative::create(['pet_media_id' => $derivative->pet_media_id, 'key' => 'sleeping_loop',
+            'status' => PetMediaDerivative::STATUS_READY, 'source_path' => $derivative->source_path,
+            'storage_path' => $derivative->storage_path, 'bytes' => 1, 'duration_seconds' => 5.0, 'attempts' => 0]);
+        $s2i = frgSlot($pet, 'transition', 'sleeping_to_idle');
+        $s2i->update(['frugal_source' => null]);
+
+        expect(app(FrugalUnreverseService::class)->releaseFor($s2i))->toBe(1)
+            ->and(PetMediaDerivative::whereKey($derivative->id)->exists())->toBeFalse();
+        Storage::disk('pet_media')->assertExists($derivative->storage_path);
     });
 });

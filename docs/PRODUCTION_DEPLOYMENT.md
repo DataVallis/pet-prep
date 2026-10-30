@@ -484,7 +484,7 @@ The command prints signed URLs per clip (`<state>_loop` = the first 3 s as a pin
 
 ### 8b. Replace the reversed `sleeping_to_idle` clips (David 2026-10-30)
 
-Pets / shared looks made while the reversal existed show the reversed clip until they get a real one. Manual only (never scheduled); the dry run is free:
+Pets / shared looks made while the reversal existed show the reversed clip until they get a real one. The normal pipeline already replaces such a slot whenever it runs for that pet (pet opened / media resumed, *Generate missing* / *Regenerate*, a new stage, the nightly `media:retry`) — each clip charged and guarded like any other, without a separate step. This command (never scheduled) is the bulk sweep for the rest; the dry run is free:
 
 ```bash
 cd /opt/petprep/repo/backend
@@ -492,7 +492,7 @@ docker compose -p backend -f compose.production.yaml exec app php artisan media:
 docker compose -p backend -f compose.production.yaml exec app php artisan media:frugal-unreverse            # optional --limit=<items>
 ```
 
-The table lists one row per item — `pet <id>` (own media) or `look <id>` (a shared look + stage, generated ONCE for all its pets) — with the stage, the look row, the pet slots, the pets, the action (`generate` = new fal clip, `link` / `wait` = the look already has one / one is being made, 0 $) and the estimated cost (5 s Kling ≈ 0.56 $ per `generate`), then a summary with today's / this month's budget left. The real run refuses (nothing queued) when the total does not fit the AI budget — use `--limit`. It queues the normal pipeline (fal → quality check → compress-on-store); the reversed clip stays visible until the new one is stored, then its derived file is deleted (only when nothing references it). Run it again later to see what is left (a failed / budget-refused clip is listed again).
+The table lists one row per item — `pet <id>` (own media) or `look <id>` (a shared look + stage, generated ONCE for all its pets) — with the stage, the look row, the pet slots, the pets, the action (`generate` = new fal clip, `link` / `wait` = the look already has one / one is being made, 0 $) and the estimated cost (5 s Kling ≈ 0.56 $ per `generate`; items a run queued in the last 30 min show as `wait`, 0 $), then a summary with today's / this month's budget left. The total is an **upper bound**: it can shrink before the real run (the pipeline may have replaced some meanwhile). The real run refuses (nothing queued) when the total does not fit the AI budget — use `--limit`; past that pre-check each clip is checked by the budget guard again at its submit, so a run can end up **partly queued** (the rest is listed again). It queues the normal pipeline (fal → quality check → compress-on-store); the reversed clip stays visible until the new one is stored, then its derived file is deleted (only when nothing references it). Run it again later to see what is left (a failed / budget-refused clip is listed again).
 
 ## 9. DNS & Domain Configuration
 
