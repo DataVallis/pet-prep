@@ -65,27 +65,7 @@
 4. **Po 3.2 + 3.3:** `/admin` → *Feature switches* → **»Poročila o napakah iz aplikacije«** → ON (store izdaja ni potrebna; koda pride z OTA). Preveri: napaka iz aplikacije se pokaže v `/admin/system-health` → »App errors« in v Discordu.
 5. **Test na napravi** — seznam v §5 točka 1 (vse M5-T funkcije; iOS prek OTA). Vsako potrjeno funkcijo sporoči Claudu → FEATURES 📱 z datumom in buildom.
 6. **Testni računi in admin geslo** — `/admin` → *Users* → izbriši `parent@test.com` in `child@test.com`; za `admin@petprep.io` nastavi močno geslo (upravitelj gesel).
-7. **Off-site varnostne kopije (D5) — enkratna nastavitev** (`docs/PRODUCTION_DEPLOYMENT.md` §6b):
-   1. Hetzner Console → naroči **Storage Box** (najmanjši; druga lokacija kot strežnik, npr. Helsinki) → vklopi **SSH support**, zapiši uporabnika (`u123456`).
-   2. Na strežniku kot `deploy`:
-      ```bash
-      mkdir -p /opt/petprep/backup-ssh && chmod 700 /opt/petprep/backup-ssh
-      ssh-keygen -t ed25519 -N '' -f /opt/petprep/backup-ssh/id_ed25519
-      ```
-      nato ustvari `/opt/petprep/backup-ssh/config` (blok `Host storagebox` s `HostName <u123456>.your-storagebox.de`, `User <u123456>`, `Port 23`, `IdentityFile /root/.ssh/id_ed25519`, `UserKnownHostsFile /root/.ssh/known_hosts`, `ServerAliveInterval 60`, `ServerAliveCountMax 5` — točno besedilo v §6b), potem
-      ```bash
-      ssh-keyscan -p 23 <u123456>.your-storagebox.de > /opt/petprep/backup-ssh/known_hosts
-      cat /opt/petprep/backup-ssh/id_ed25519.pub | ssh -p 23 <u123456>@<u123456>.your-storagebox.de install-ssh-key
-      ```
-   3. `/opt/petprep/backup.env` (`chmod 600`; `KEY=value`, brez narekovajev in komentarjev):
-      ```
-      RESTIC_REPOSITORY=sftp:storagebox:petprep
-      RESTIC_PASSWORD=<izhod: openssl rand -base64 48>
-      BACKUP_HEALTHCHECK_URL=https://hc-ping.com/<uuid>
-      ```
-      `RESTIC_PASSWORD` in celoten `/opt/petprep/.env` (APP_KEY!) shrani v upravitelj gesel — brez njiju kopije ni mogoče prebrati / obnoviti. Healthcheck (healthchecks.io, perioda 1 dan, grace 2 h) je neobvezen, a priporočen.
-   4. Prvi zagon + test obnove: `/opt/petprep/scripts/backup-offsite.sh && /opt/petprep/scripts/backup-offsite.sh verify`.
-   5. `crontab -e` (uporabnik `deploy`): `17 2 * * * /opt/petprep/scripts/backup-offsite.sh >> /opt/petprep/backups/offsite.log 2>&1`. Nato `verify` enkrat na mesec.
+7. ✅ **Off-site varnostne kopije (D5) — nastavljeno in preverjeno 30. 10. 2026** (David): Storage Box `u691604` (HEL1), `/opt/petprep/backup-ssh/*`, `/opt/petprep/backup.env` (`RESTIC_PASSWORD` + `/opt/petprep/.env` v Davidovem upravitelju gesel), prvi zagon + `verify` OK (DB snapshot popoln, media 158 / 158), cron `deploy` 02:17 (čas strežnika). Ostane: `backup-offsite.sh verify` enkrat na mesec; po želji `BACKUP_HEALTHCHECK_URL` (healthchecks.io). Postopek: `docs/PRODUCTION_DEPLOYMENT.md` §6b.
 8. **Pravni pregled pred javnim zagonom (M5-06)** — pogoji (petprep.si, 10. 10. + #97 24. 10.) in politika zasebnosti (21. 10. #85 / #86, 22. 10. #90, 24. 10. #98) da v pregled pravniku; nato App Store *Kids* / Google Play *Families* pregled. Pripombe pravnika → Claude popravi spletno stran.
 9. **Izdelki za »Želje« (M6-W02)** — strežnik in aplikacija sta združena 27. 10. 2026 (PR #417, #416), nakup pa deluje šele, ko izdelki obstajajo v trgovinah: (1) **App Store Connect** → aplikacija PetPrep → *Monetization → In-App Purchases* → **+** → tip **Consumable**, Product ID točno: `petprep_wish_bed` (5,99 €), `petprep_wish_bowls` (5,99 €), `petprep_wish_toy_1` (5,99 €), `petprep_wish_toy_2` (5,99 €), `petprep_wish_treats_10` (2,99 €), `petprep_wish_bundle_welcome` (15,99 €); vsakemu ime + opis (SL + EN) in posnetek zaslona za pregled. (2) **Google Play Console** → *Monetize → Products → In-app products* → **Create product** z enakimi ID-ji in cenami → *Activate*. (3) **RevenueCat** → *Products* → **+ New** za vsak ID v obeh trgovinah (brez entitlementa; po želji offering `wishes`). Webhook je isti kot za izziv — nič novega v `.env`; `REVENUECAT_WISH_PRODUCTS` nastaviš samo, če bi bili ID-ji drugačni (`product_id:ključ`, glej `docs/PRODUCTION_ENV.md`).
 10. **Šola / igre zaklenjene do svojih posnetkov — prvi zagon v produkciji (PR #434, David 28. 10. 2026)** — po deployu se ljubljenček z neuspelim posnetkom šole / igre **zaklene** (prej je igral s pozami). Preden ura (:17) prvič zažene samodejne ponovitve, poglej seznam (nič ne spremeni, nič ne plača):
@@ -104,7 +84,7 @@
        docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app php artisan media:disk-report
        ```
        `--sample=10` za 10 posnetkov izpiše MB prej → potem, prihranek %, povprečni SSIM (≥ 0,98 = videti enako) in najslabšo sličico (≥ 0,95). Izpis pošlji Claudu ali preglej sam; če želiš, enega od posnetkov iz izpisa primerjaj na očeh.
-       **Pozor:** izvirnik se po stiskanju izbriše po 3 urah — vrniti ga je mogoče samo iz off-site varnostne kopije (korak 7). Priporočilo: najprej uredi korak 7.
+       **Pozor:** izvirnik se po stiskanju izbriše po 3 urah — vrniti ga je mogoče samo iz off-site varnostne kopije (korak 7 — nastavljena 30. 10.) ali Hetznerjevega dnevnega backupa strežnika (7 dni).
     2. Če so številke v redu: `/admin` → *Feature switches* / *Funkcije* → **»Video compression (disk)« / »Stiskanje videov (disk)«** → ON → *Save*. Od takrat se tudi **novi posnetki stisnejo, preden jih družina vidi** (vsak je pripravljen ~7 s pozneje). Stiskanje teče ponoči (22.00–6.00, vsako uro do 10 min); naslednje jutro `media:disk-report` pokaže prihranek (stolpca *compressed* / *saved*).
 
 13. **Varčni posnetki (strošek AI, David 30. 10. 2026) — stikalo je privzeto IZKLOPLJENO** (PR »frugal clips«). Preden ga vklopiš, si brezplačno oglej, kako bi izgledala B in C (nič se ne plača, ni klica na fal):
@@ -134,7 +114,7 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 2. **Android gets no OTA** until a new Android production build exists (fingerprint changed by M5-T12; runs 39959822639 / 40023867950 / 40079359228). iOS OTA works. Store-release checklist in DEPLOYMENT.md: Play **Health apps declaration** with `READ_WHEELCHAIR_PUSHES`; App Store Connect Health text / App Privacy re-check. Google Play rejected 1.0 on 22. 10. (health data disclosure) → fixed on the website (#90), David re-submits.
 3. **AI daily cap 25 $** (David 22. 10.) — set in `/admin → AI budget`; *unverified* (database setting). With the env default 5 $ a new dog set (~12,07 $) completes over ~3 days.
 4. **Discord admin alerts (M5-T19) are live** — test message arrived (David 24. 10.). A failed Discord post is not retried (the bell keeps the alert).
-5. **Off-site backups (D5)** built (`scripts/backup-offsite.sh`); David's one-time setup (PRODUCTION_DEPLOYMENT §6b) and first restore test *unverified*. No deletion log (a restore brings back families deleted after the snapshot).
+5. **Off-site backups (D5)** live since 2026-10-30 (Storage Box HEL1, nightly cron, first `verify` passed). No deletion log (a restore brings back families deleted after the snapshot).
 6. **Adapted mode (M5-T12):** which Android apps write Health Connect `WheelchairPushes` is unknown; turning the mode on mid-day keeps the day's max; a yesterday parent entry never rewrites closed routine rows.
 7. **Quality check (M5-T18)** runs in **shadow** mode until David calibrates thresholds on real clips (`media:quality-check --dry-run`, `AI_QC_*`) and switches to enforce; AI vision part off until David verifies its price (`AI_QUALITY_VISION_ENABLED`). School performing clip 5 s with seek into the clip — verify the seek on a device.
 8. **Process:** orchestrator subagents often cannot spawn `qa-reviewer` → the orchestrator runs QA; let Claude merge only after the QA round (#317 / #323 / #329 were merged before their QA fixes).
@@ -174,12 +154,15 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 1. **Device test of all M5-T features** — on iOS now possible through OTA (David's iPhone; checklist from FEATURES rows M5-T01 … T19): take-out clock + message queue, sleep rules + »7:00«, care guide (child + parent), games wait for media, preparation screen, brush, birthday, adapted mode, state media loops + transitions, picture mode, school + ball / wand phase clips, easy gestures. On confirmation → FEATURES 📱 with date + build.
 2. **New Android production build** (EAS, `mobile/`) → Android gets OTA again; then Play re-submission (health declaration incl. `READ_WHEELCHAIR_PUSHES`, Data safety) and record the release (`scripts/record-app-release.mjs`).
 3. **First real purchase on production** (cap 25 $ set?): watch `/admin → AI budget` ledger, »AI media« preparation time and media quality; calibrate the quality check and switch it to enforce.
-4. **Before the beta:** M5-06 legal review + App Store Kids / Play Families check; M5-07 Play internal testing + 20–50 families (David adds testers); D5 off-site backup setup (David); M5-05 device check of the app error reports (built 24. 10.) + uptime check; delete the dev test accounts in `/admin → Users`. Open »čaka Davida«: M5-R12 fetch spec, M2-07 / M2-01 (D) rules for a new pet after game over.
+4. **Before the beta:** M5-06 legal review + App Store Kids / Play Families check; M5-07 Play internal testing + 20–50 families (David adds testers); M5-05 device check of the app error reports (built 24. 10.) + uptime check; delete the dev test accounts in `/admin → Users`. Open »čaka Davida«: M5-R12 fetch spec, M2-07 / M2-01 (D) rules for a new pet after game over.
 
 5. **David's answers 2026-10-26:** (a) colour-variant portraits for all other breeds (~215 images, ~33–40 $ AI Lab) — **»ne še«** (not now; Border Collie done and live); (b) + (c) **done** (DEPLOYMENT.md D24, PR `chore/daily-deploy-earlier-ffmpeg`): daily deploy cron moved to 03:17 Europe/Ljubljana (01:17 / 02:17 UTC, off the :00 rush; GitHub may still start it late — check the next runs), CI installs ffmpeg without apt (cached static build, retries, smoke test — `scripts/ci-install-ffmpeg.sh`); (d) **done** (PR `feat/adapted-mode-watch-hint`): »Kdo šteje potiske« box under the switch + parent-only »Danes še ni potiskov« hint after 12:00 with »Vpiši sprehod«; JS only (OTA), not on a device yet.
 6. **M6-W »Želje«** — merged 2026-10-27: server W01 + W02 server part (#417), app W04 / W05 (#416), one QA round done (#417 / #416 fixes on the same PRs). Reaches users with the next daily deploy + OTA. **Next:** David creates the six store products (§1b.9); then M6-W03 item media (`media_ready` always false, treat `media` null until then); device check of the child catalogue, treat chip, parent list, push, redeem after reopening »Želje«.
 
 ## 6. Session log
+
+### 2026-10-30 (cloud, docs) — off-site backups live (`docs/offsite-backup-verified`)
+- David set up D5 with Claude: Storage Box `u691604` (HEL1), ssh key + config in `/opt/petprep/backup-ssh`, `/opt/petprep/backup.env`, first `backup-offsite.sh` + `verify` passed (DB complete, media 158 / 158), `deploy` crontab 02:17. Also: Hetzner server backups run daily (7 kept). Docs: HANDOFF §1b 7 / §3 / §5, ROADMAP M5-04, FEATURES, DEPLOYMENT D5. Next: monthly `verify`; optional healthcheck URL.
 
 ### 2026-10-30 (cloud, backend) — new clips compressed before they are shown (`feat/media-compress-on-store`)
 - David: a family buying a pet must never get the ~14 MB originals. While `video_compression` is on, `StorePetMedia` stages every clip as a candidate (also with the check off), `MediaQualityService::release()` → `CompressPetMediaCandidate` (default queue, 85 s) → `compressCandidate()` (preset `veryfast`, same accept rules) → promote the `-c.mp4` key; reject / ffmpeg failure / job give-up → the original is promoted (never stuck). Measured: veryfast 4.1 s vs slow 10.4 s for the same ~-94 % → a new 5 s clip is ready ~7 s later. `promoteCandidate()` now takes a nullable `quality` (the check-off path passed null). Tests `VideoCompressionPipelineTest` (8).
