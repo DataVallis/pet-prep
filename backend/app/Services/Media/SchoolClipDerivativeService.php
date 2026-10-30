@@ -6,6 +6,7 @@ use App\Enums\PetPhaseClip;
 use App\Enums\Species;
 use App\Enums\TrainingCommand;
 use App\Events\PetUpdated;
+use App\Jobs\GenerateSchoolClipDerivative;
 use App\Jobs\SendFrugalClipFallbackAlert;
 use App\Models\Pet;
 use App\Models\PetMedia;
@@ -60,6 +61,16 @@ use Throwable;
  *    `frugal.short_loop_max_seconds`) → `<state>_loop`: the same ping-pong as the school
  *    loops; the payload serves it under `videos.<state>` (older 5 s loops never qualify).
  * Once such a clip is made, the pets showing the source get one `video_ready` broadcast.
+ *
+ * Games phase 1 (GAMES_SPEC §8.2 / §8.4, David 2026-10-30), same table / job / backfill / locks:
+ *  - `ball_waiting` → `ball_waiting_loop`: the same ping-pong at the source's FULL size
+ *    ({@see keepsSourceSize()}, CRF HOME_CRF — the game is full screen);
+ *  - `ball_running` → `ball_running_exit_side`: no file — the side the dog leaves the frame on
+ *    (`left` | `right` | `center`, {@see exitSideFrom()}), stored on the derivative row
+ *    (`exit_side`); a superadmin can override it ({@see setExitSide()}). Payload:
+ *    `media.phases.ball_waiting_loop` + `phase_seconds`, `media.phase_meta.ball_running.exit_side`.
+ *    A missing one never locks the ball game (GameMediaReadiness is unchanged; the app loops
+ *    `ball_waiting` / sends the ball to the centre).
  */
 class SchoolClipDerivativeService
 {
@@ -104,6 +115,39 @@ class SchoolClipDerivativeService
 
     public const MODE_REVERSE = 'reverse';
 
+    /** Games phase 1: measure the ball_running exit side (no file). */
+    public const MODE_EXIT_SIDE = 'exit_side';
+
+    public const KEY_BALL_WAITING_LOOP = 'ball_waiting_loop';
+
+    public const KEY_BALL_EXIT_SIDE = 'ball_running_exit_side';
+
+    public const EXIT_LEFT = 'left';
+
+    public const EXIT_RIGHT = 'right';
+
+    public const EXIT_CENTER = 'center';
+
+    /** @var list<string> */
+    public const EXIT_SIDES = [self::EXIT_LEFT, self::EXIT_RIGHT, self::EXIT_CENTER];
+
+    /** Exit side: frames are measured as EXIT_GRID × EXIT_GRID grey thumbnails. */
+    public const EXIT_GRID = 64;
+
+    /** A pixel is "dog" when it differs from the empty room by more than this (0–255). */
+    public const EXIT_PIXEL_DIFF = 32;
+
+    /** A frame shows the dog when 0.4 % … 60 % of its pixels differ (more = the whole scene changed). */
+    public const EXIT_MIN_MASS = 0.004;
+
+    public const EXIT_MAX_MASS = 0.6;
+
+    /** The dog's centre (0 = left edge, 1 = right edge) at or beyond this distance from the middle is "near an edge". */
+    public const EXIT_EDGE_OFFSET = 0.12;
+
+    /** A movement towards the OTHER side by more than this (middle frame → last visible frame) = ambiguous. */
+    public const EXIT_CONTRARY_MOVE = 0.1;
+
     public function __construct(
         private readonly PetMediaService $media,
         private readonly MediaClipAnalyzer $analyzer,
@@ -113,9 +157,18 @@ class SchoolClipDerivativeService
     //  Keys
     // ──────────────────────────────────────────────────────────────
 
-    /** The derived payload key of a school phase clip (null for every other clip). */
+    /**
+     * The derived payload key of a phase clip (null = nothing is derived from it): the school
+     * keys, `ball_waiting_loop` and the `ball_running_exit_side` metadata row (games phase 1).
+     */
     public static function keyFor(?PetPhaseClip $clip): ?string
     {
+        if ($clip === PetPhaseClip::BallWaiting) {
+            return self::KEY_BALL_WAITING_LOOP;
+        }
+        if ($clip === PetPhaseClip::BallRunning) {
+            return self::KEY_BALL_EXIT_SIDE;
+        }
         if ($clip === null || $clip->group() !== PetPhaseClip::GROUP_SCHOOL) {
             return null;
         }
@@ -132,10 +185,17 @@ class SchoolClipDerivativeService
         return array_values(array_map(fn (PetPhaseClip $c) => $c->value, PetPhaseClip::ofGroup(PetPhaseClip::GROUP_SCHOOL)));
     }
 
-    /** @return list<string> every derived key */
+    /** @return list<string> every derived key of a school phase clip */
     public static function keys(): array
     {
         return array_values(array_map(fn (PetPhaseClip $c) => (string) self::keyFor($c), PetPhaseClip::ofGroup(PetPhaseClip::GROUP_SCHOOL)));
+    }
+
+    /** @return list<string> every phase clip something is derived from (school + games phase 1) */
+    public static function phaseSourceStates(): array
+    {
+        return array_values(array_map(fn (PetPhaseClip $c) => $c->value,
+            array_filter(PetPhaseClip::cases(), fn (PetPhaseClip $c) => self::keyFor($c) !== null)));
     }
 
     /**
@@ -184,11 +244,21 @@ class SchoolClipDerivativeService
         return $slot->isVideo() || $slot->isTransition();
     }
 
+    /**
+     * Derived at the source's full size (no MAX_LONG_SIDE cap, CRF HOME_CRF): the home-screen
+     * clips and the full-screen ball game's waiting loop (games phase 1).
+     */
+    public static function keepsSourceSize(PetMedia $slot): bool
+    {
+        return self::isHomeScreen($slot) || ($slot->isPhase() && $slot->phaseClip() === PetPhaseClip::BallWaiting);
+    }
+
     /** The ffmpeg recipe of a source row. */
     public static function modeOf(PetMedia $slot): string
     {
         return match (true) {
             $slot->isTransition() => self::MODE_REVERSE,
+            $slot->isPhase() && $slot->phaseClip() === PetPhaseClip::BallRunning => self::MODE_EXIT_SIDE,
             $slot->isPhase() && $slot->phaseClip()?->phase() === PetPhaseClip::PHASE_PERFORMING => self::MODE_RELEASE,
             default => self::MODE_LOOP,
         };
@@ -263,7 +333,7 @@ class SchoolClipDerivativeService
 
         return PetMedia::query()
             ->where(fn (Builder $q) => $q
-                ->where(fn (Builder $q) => $q->where('kind', PetMedia::KIND_PHASE)->whereIn('state', self::sourceStates()))
+                ->where(fn (Builder $q) => $q->where('kind', PetMedia::KIND_PHASE)->whereIn('state', self::phaseSourceStates()))
                 // Legacy frugal B: a dog's idle_to_sleeping whose owner's sleeping_to_idle is still marked (reversalWanted()).
                 ->orWhere(fn (Builder $q) => $q->where('kind', PetMedia::KIND_TRANSITION)
                     ->whereIn('state', array_values(MediaEntitlementService::LEGACY_REVERSED_TRANSITIONS))
@@ -405,10 +475,14 @@ class SchoolClipDerivativeService
                 return $this->recordFailure($source, $key, $existing, 'source not measurable (ffprobe)');
             }
 
+            if ($mode === self::MODE_EXIT_SIDE) {
+                return $this->storeExitSide($source, $key, $sourcePath, $in, $existing);
+            }
+
             $out = $in.'-derived.mp4';
             $result = Process::timeout(self::PROCESS_TIMEOUT_SECONDS)->run([...self::limits(), ...self::ffmpegArgs(
                 (string) config('media.quality_check.ffmpeg', 'ffmpeg'), $in, $out, $probe, $mode,
-                homeScreen: self::isHomeScreen($source),
+                homeScreen: self::keepsSourceSize($source),
             )]);
             if (! $result->successful() || ! is_file($out) || filesize($out) === 0) {
                 return $this->recordFailure($source, $key, $existing, 'ffmpeg failed: '.mb_substr(trim($result->errorOutput()), -500));
@@ -596,6 +670,213 @@ class SchoolClipDerivativeService
         ];
     }
 
+    /**
+     * Games phase 1 §8.4: measure where the dog leaves the `ball_running` clip and store it on
+     * the derivative row (no file). Grey EXIT_GRID² thumbnails of every frame (one ffmpeg call,
+     * niced + memory-capped like the others) → {@see exitSideFrom()}.
+     */
+    private function storeExitSide(PetMedia $source, string $key, string $sourcePath, string $in, ?PetMediaDerivative $existing): string
+    {
+        $raw = $in.'-frames.gray';
+
+        try {
+            $grid = self::EXIT_GRID;
+            $result = Process::timeout(self::PROCESS_TIMEOUT_SECONDS)->run([...self::limits(),
+                (string) config('media.quality_check.ffmpeg', 'ffmpeg'), '-v', 'error', '-y', '-i', $in, '-an',
+                '-vf', "scale={$grid}:{$grid},format=gray", '-f', 'rawvideo', '-pix_fmt', 'gray', $raw,
+            ]);
+            $bytes = is_file($raw) ? (string) file_get_contents($raw) : '';
+            $size = $grid * $grid;
+            if (! $result->successful() || strlen($bytes) < 3 * $size) {
+                return $this->recordFailure($source, $key, $existing, 'exit side: ffmpeg frames failed: '.mb_substr(trim($result->errorOutput()), -500));
+            }
+
+            $side = self::exitSideFrom(str_split(substr($bytes, 0, intdiv(strlen($bytes), $size) * $size), $size), $grid, $grid);
+        } finally {
+            if (is_file($raw)) {
+                @unlink($raw);
+            }
+        }
+
+        $stored = DB::transaction(function () use ($source, $key, $sourcePath, $side): bool {
+            $locked = PetMedia::whereKey($source->id)->lockForUpdate()->first();
+            if ($locked === null || $locked->storage_path !== $sourcePath) {
+                return false;
+            }
+
+            $row = PetMediaDerivative::where('pet_media_id', $source->id)->where('key', $key)->lockForUpdate()->first();
+            // A superadmin's value for this very file wins (set while the job ran).
+            if ($row !== null && $row->exit_side_overridden && $row->isCurrentFor($sourcePath)) {
+                return true;
+            }
+
+            PetMediaDerivative::updateOrCreate(['pet_media_id' => $source->id, 'key' => $key], [
+                'status' => PetMediaDerivative::STATUS_READY,
+                'source_path' => $sourcePath,
+                'storage_path' => null,
+                'bytes' => null,
+                'duration_seconds' => null,
+                'attempts' => 0,
+                'error' => null,
+                'exit_side' => $side,
+                'exit_side_overridden' => false,
+            ]);
+
+            return true;
+        });
+
+        if (! $stored) {
+            return 'stale';
+        }
+
+        Log::info('SchoolClipDerivativeService: ball exit side stored', ['pet_media_id' => $source->id, 'exit_side' => $side]);
+
+        return 'made';
+    }
+
+    /**
+     * Games phase 1 §8.4 (pure — unit-tested): the side the dog leaves the `ball_running` clip on.
+     *
+     * The LAST frame is the empty room (the clip ends on the `empty` pose). Per frame, the
+     * pixels that differ from it by more than EXIT_PIXEL_DIFF are the dog. From the end back to
+     * the middle frame, the latest frame that still shows the dog (EXIT_MIN_MASS … EXIT_MAX_MASS
+     * of the pixels — normally inside the last quarter) gives the dog's horizontal centre `c`
+     * (0 = left edge, 1 = right edge): `c ≤ 0.5 − EXIT_EDGE_OFFSET` → left, `≥ 0.5 + offset` →
+     * right. Ambiguous → center: no frame shows the dog, the dog stays in the middle, or it
+     * moved from the middle frame towards the other side by more than EXIT_CONTRARY_MOVE.
+     *
+     * @param  list<string>  $frames  grey frames (one byte per pixel, row by row) in time order
+     * @return 'left'|'right'|'center'
+     */
+    public static function exitSideFrom(array $frames, int $width, int $height): string
+    {
+        $n = count($frames);
+        if ($n < 3 || $width < 1 || $height < 1) {
+            return self::EXIT_CENTER;
+        }
+
+        $empty = array_values(unpack('C*', $frames[$n - 1]) ?: []);
+        if (count($empty) !== $width * $height) {
+            return self::EXIT_CENTER;
+        }
+
+        $middleIndex = intdiv($n, 2);
+        $last = null;
+        for ($i = $n - 2; $i >= $middleIndex; $i--) {
+            $last = self::dogCentre($frames[$i], $empty, $width, $height);
+            if ($last !== null) {
+                break;
+            }
+        }
+        if ($last === null) {
+            return self::EXIT_CENTER;
+        }
+
+        $side = match (true) {
+            $last <= 0.5 - self::EXIT_EDGE_OFFSET => self::EXIT_LEFT,
+            $last >= 0.5 + self::EXIT_EDGE_OFFSET => self::EXIT_RIGHT,
+            default => self::EXIT_CENTER,
+        };
+
+        $middle = self::dogCentre($frames[$middleIndex], $empty, $width, $height);
+        if ($middle !== null && (($side === self::EXIT_LEFT && $last - $middle > self::EXIT_CONTRARY_MOVE)
+            || ($side === self::EXIT_RIGHT && $middle - $last > self::EXIT_CONTRARY_MOVE))) {
+            return self::EXIT_CENTER;
+        }
+
+        return $side;
+    }
+
+    /**
+     * The horizontal centre (0…1) of the pixels that differ from the empty room, null when the
+     * frame does not show the dog (too few or too many differing pixels).
+     *
+     * @param  list<int>  $empty
+     */
+    private static function dogCentre(string $frame, array $empty, int $width, int $height): ?float
+    {
+        $pixels = unpack('C*', $frame) ?: [];
+        $total = $width * $height;
+        if (count($pixels) !== $total) {
+            return null;
+        }
+
+        $mass = 0;
+        $sumX = 0.0;
+        $i = 0;
+        foreach ($pixels as $value) {
+            if (abs($value - $empty[$i]) > self::EXIT_PIXEL_DIFF) {
+                $mass++;
+                $sumX += ($i % $width) + 0.5;
+            }
+            $i++;
+        }
+
+        $share = $mass / $total;
+        if ($share < self::EXIT_MIN_MASS || $share > self::EXIT_MAX_MASS) {
+            return null;
+        }
+
+        return $sumX / $mass / $width;
+    }
+
+    /**
+     * Games phase 1 §8.4 (D): a superadmin sets the ball's exit side of the clip a pet slot shows
+     * (the row owning the file — a look row is shared by its pets), or `null` = measure it again
+     * (the row is dropped and the job re-queued). Kept until the source clip changes. Logged
+     * with the actor. False when the slot is not a shown `ball_running` clip.
+     */
+    public function setExitSide(PetMedia $slot, ?string $side, int $actorId): bool
+    {
+        if ($side !== null && ! in_array($side, self::EXIT_SIDES, true)) {
+            return false;
+        }
+
+        $owner = $slot->look_media_id !== null ? PetMedia::find($slot->look_media_id) : $slot;
+        if ($owner === null || ! $owner->isPhase() || $owner->phaseClip() !== PetPhaseClip::BallRunning || ! $owner->isShown()) {
+            return false;
+        }
+
+        DB::transaction(function () use ($owner, $side): void {
+            $locked = PetMedia::whereKey($owner->id)->lockForUpdate()->firstOrFail();
+            if ($side === null) {
+                PetMediaDerivative::where('pet_media_id', $locked->id)->where('key', self::KEY_BALL_EXIT_SIDE)->delete();
+
+                return;
+            }
+
+            PetMediaDerivative::updateOrCreate(['pet_media_id' => $locked->id, 'key' => self::KEY_BALL_EXIT_SIDE], [
+                'status' => PetMediaDerivative::STATUS_READY,
+                'source_path' => (string) $locked->storage_path,
+                'storage_path' => null,
+                'bytes' => null,
+                'duration_seconds' => null,
+                'attempts' => 0,
+                'error' => null,
+                'exit_side' => $side,
+                'exit_side_overridden' => true,
+            ]);
+        });
+
+        if ($side === null) {
+            GenerateSchoolClipDerivative::dispatch((int) $owner->id);
+        }
+
+        Log::info('SchoolClipDerivativeService: ball exit side set by an admin', [
+            'pet_media_id' => $owner->id, 'exit_side' => $side ?? 'auto', 'actor_user_id' => $actorId,
+        ]);
+
+        return true;
+    }
+
+    /** The exit side a pet slot's `ball_running` clip has now (current row only), null = none yet. */
+    public function exitSideOf(PetMedia $slot): ?PetMediaDerivative
+    {
+        $row = PetMediaDerivative::where('pet_media_id', self::ownerId($slot))->where('key', self::KEY_BALL_EXIT_SIDE)->first();
+
+        return $row?->isCurrentFor($slot->storage_path) ? $row : null;
+    }
+
     private function recordFailure(PetMedia $source, string $key, ?PetMediaDerivative $existing, string $error): string
     {
         $sourcePath = (string) $source->storage_path;
@@ -612,6 +893,8 @@ class SchoolClipDerivativeService
             'duration_seconds' => null,
             'attempts' => $attempts,
             'error' => mb_substr($error, 0, 1000),
+            'exit_side' => null,
+            'exit_side_overridden' => false,
         ]);
 
         // An old derived file of an earlier source is not served any more.
@@ -686,9 +969,22 @@ class SchoolClipDerivativeService
      */
     public function payloadFor(Collection $slots, CarbonImmutable $expires): array
     {
+        return $this->derivedFor($slots, $expires)['clips'];
+    }
+
+    /**
+     * Derived clips AND metadata of a pet's shown source slots (one query): `clips` as
+     * {@see payloadFor()}; `meta` = [phase clip => [field => value]] — games phase 1:
+     * `ball_running` => [`exit_side` => left|right|center].
+     *
+     * @param  Collection<int, PetMedia>  $slots
+     * @return array{clips: array<string, array{url: string, seconds: float}>, meta: array<string, array{exit_side: string}>}
+     */
+    public function derivedFor(Collection $slots, CarbonImmutable $expires): array
+    {
         $sources = $slots->filter(fn (PetMedia $m) => self::derivedKeyOf($m) !== null && $m->isShown());
         if ($sources->isEmpty()) {
-            return [];
+            return ['clips' => [], 'meta' => []];
         }
 
         $rows = PetMediaDerivative::query()
@@ -698,18 +994,25 @@ class SchoolClipDerivativeService
             ->groupBy('pet_media_id');
 
         $out = [];
+        $meta = [];
         foreach ($sources as $slot) {
             $key = (string) self::derivedKeyOf($slot);
             $row = ($rows->get(self::ownerId($slot)) ?? collect())->firstWhere('key', $key);
-            if ($row instanceof PetMediaDerivative && $row->isCurrentFor($slot->storage_path)) {
-                $out[$key] = [
-                    'url' => $this->signedUrl($slot, $key, (string) $row->storage_path, $expires),
-                    'seconds' => (float) ($row->duration_seconds ?? 0),
-                ];
+            if (! $row instanceof PetMediaDerivative || ! $row->isCurrentFor($slot->storage_path)) {
+                continue;
             }
+            if ($row->isMeta()) {
+                $meta[(string) $slot->state] = ['exit_side' => (string) $row->exit_side];
+
+                continue;
+            }
+            $out[$key] = [
+                'url' => $this->signedUrl($slot, $key, (string) $row->storage_path, $expires),
+                'seconds' => (float) ($row->duration_seconds ?? 0),
+            ];
         }
 
-        return $out;
+        return ['clips' => $out, 'meta' => $meta];
     }
 
     /** Signed URL to GET /api/media/{media}/derived/{key} (the pet's own slot: its authz). */
@@ -734,7 +1037,8 @@ class SchoolClipDerivativeService
 
         $row = PetMediaDerivative::where('pet_media_id', self::ownerId($slot))->where('key', $key)->first();
 
-        return $row?->isCurrentFor($slot->storage_path) ? $row : null;
+        // A metadata row (exit side) has no file to serve.
+        return $row?->isCurrentFor($slot->storage_path) && filled($row->storage_path) ? $row : null;
     }
 
     // ──────────────────────────────────────────────────────────────

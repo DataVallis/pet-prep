@@ -230,6 +230,34 @@ class ChildProfileService
     }
 
     /**
+     * GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (David 2026-10-30, V5 + V11): the
+     * child app plays game sounds and haptics (default on; they still respect the phone's
+     * silent mode). Parent only; a presentation preference — no game rule, score or server
+     * validation reads it. A change broadcasts one `PetUpdated` (`caretaker_settings_changed`)
+     * on the child's active pet after commit so a running child app refetches its state;
+     * the same value again changes nothing.
+     */
+    public function setGameFeedback(User $child, bool $on): User
+    {
+        $changed = DB::transaction(function () use ($child, $on): bool {
+            $locked = User::whereKey($child->id)->lockForUpdate()->firstOrFail();
+            if ((bool) $locked->game_feedback === $on) {
+                return false;
+            }
+            $locked->forceFill(['game_feedback' => $on])->save();
+
+            $pet = $this->families->activePetOf($locked);
+            if ($pet !== null) {
+                PetUpdated::afterCommit($pet, self::SETTINGS_EVENT);
+            }
+
+            return true;
+        });
+
+        return $changed ? $child->refresh() : $child;
+    }
+
+    /**
      * M5-T12 consent withdrawal: the child's push days become step days (caller holds
      * the child row lock). The pets of those rows (and the active pet) are locked first
      * in id order — step writers hold the pet lock.

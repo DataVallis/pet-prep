@@ -130,6 +130,8 @@ class AccountExportService
                 'media_display' => ($u->media_display ?? MediaDisplay::Video)->value,
                 // M5-T17: »Lažje kretnje« (hold instead of swipe; input preference).
                 'easy_gestures' => (bool) $u->easy_gestures,
+                // GAMES_SPEC phase 1: »Zvoki in vibracija v igrah« (presentation preference).
+                'game_feedback' => (bool) $u->game_feedback,
                 // PIN-only profile (M2-02) vs. a legacy child account with e-mail.
                 'login' => $u->password === null ? 'pin' : 'email',
                 'email' => $u->email,

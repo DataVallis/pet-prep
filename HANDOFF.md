@@ -159,6 +159,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-10-30 (cloud, backend) — games phase 1 backend (`feat/games-phase1-backend`)
+- `users.game_feedback` (default true, parent-only via `PATCH /api/parent/children/{child}/settings`, `ChildProfileService::setGameFeedback()`; `settings.game_feedback`, `family.children[].game_feedback`, export) — a setting only. Ball derivatives through `SchoolClipDerivativeService` (0 $): `ball_waiting_loop` (full-size ping-pong) and the `ball_running` exit side (metadata row `ball_running_exit_side`, columns `exit_side` / `exit_side_overridden`, superadmin »Set ball exit« in the AI media panel); payload `media.phases.ball_waiting_loop` + `phase_seconds`, `media.phase_meta.ball_running.exit_side` (`phase_meta` always an object). Readiness unchanged. Existing looks fill via the 10-min `media:school-derivatives` backfill (12 per run). `schema.ts` regenerated (Scramble export). Tests `GameFeedbackTest`, `BallClipDerivativesTest`, `Unit/BallExitSideTest`. Debt: the exit-side thresholds are tuned on synthetic clips — check real Kling `ball_running` clips (panel column »Ball exit«) once the app uses it. Next: mobile phase 1 (`feat/games-phase1-app`).
+
 ### 2026-10-30 (cloud, docs) — games spec draft (`docs/games-spec`)
 - `docs/product/GAMES_SPEC.md`: redesign of school, ball, cuddle, cat wand and mess visuals as an interactive layer over the video (David's direction 30. 10.); 0 new AI clips by default, rule changes Š1–Š3 / C1 / P0–P2 and open questions V1–V12 wait for David. Nothing implemented. Next: David reviews; then phase 0 (wand scoring fix + text above the stage).
 ### 2026-10-30 (cloud, backend) — frugal clips without the reversal (`fix/frugal-no-reverse`)

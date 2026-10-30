@@ -8,6 +8,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-30 — Žoga ve, kam je kuža stekel (in to brez novih AI posnetkov)
+
+**Kaj:** prvi strežniški del nove igre z žogo (GAMES_SPEC faza 1). Strežnik iz obstoječega posnetka »kuža čaka« brezplačno (ffmpeg na našem strežniku) naredi brezšivno zanko — kuža poskakuje na mestu brez skoka ob ponovitvi — in iz posnetka »kuža steče za žogo« izmeri, na katero stran kuža zbeži iz slike (levo, desno, nejasno = sredina), da bo žoga v igri odletela tja, kamor teče kuža. Če meritev ne ugane, jo superadmin z enim klikom popravi. Dodano je tudi stikalo staršev **»Zvoki in vibracija v igrah«** (privzeto vklopljeno, David 30. 10.) — zaenkrat samo na strežniku. **Nova igra v aplikaciji je še *načrt*** (gradi se vzporedno).
+**Zakaj je pomembno:** Davidov test je pokazal, da žoga leti »gor in nazaj«, kuža pa steče na stran — igra ni ustrezala videu. Popravek stane **0 $** na videz (brez novih generacij), skupni videz se izmeri enkrat za vse ljubljenčke, manjkajoča meritev igre nikoli ne zaklene.
+**Kako povedati:** 🛠 »Stran izhoda izmerimo iz razlike med zadnjo sličico (prazna soba) in sličicami, kjer je pes še viden — 64 × 64 sivih sličic, en klic ffmpeg.« · 💼 »Igre postajajo interaktivne brez dodatnih AI stroškov na družino.« · 👩 *načrt:* »V igrah bodo zvoki in vibracija — z enim stikalom jih lahko izklopite.«
+
+---
+
 ## 2026-10-30 — Nova družina dobi stisnjene posnetke že od prvega dne
 
 **Kaj:** ko je stiskanje vklopljeno, strežnik vsak nov AI posnetek stisne, še preden ga družina prvič vidi — po preverjanju kakovosti in pred prikazom. Če stiskanje ne prinese dovolj ali bi se slika vidno spremenila, se pokaže izvirnik kot doslej. **Zakaj:** aplikacija prenese cele datoteke; nov ljubljenček ima ~20 posnetkov po ~14 MB, kar je za prvo izkušnjo (in mobilne podatke) preveč. Izmerili smo hitre nastavitve: `veryfast` stisne 5-s posnetek v ~4 s (namesto ~10 s) z enakim prihrankom (~94 % na gladkem testnem posnetku), zato je nov posnetek pripravljen le ~7 s pozneje.

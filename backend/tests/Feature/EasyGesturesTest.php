@@ -61,7 +61,7 @@ it('lets a parent switch it on and off; state, dashboard and export follow; one 
 
     test()->patchJson("/api/parent/children/{$child->id}/settings", ['easy_gestures' => true])
         ->assertOk()
-        ->assertExactJson(['child_id' => $child->id, 'adapted_mode' => false, 'media_display' => 'video', 'easy_gestures' => true]);
+        ->assertExactJson(['child_id' => $child->id, 'adapted_mode' => false, 'media_display' => 'video', 'easy_gestures' => true, 'game_feedback' => true]);
     expect($child->refresh()->easy_gestures)->toBeTrue()
         ->and($child->adapted_mode)->toBeFalse();
     Event::assertDispatchedTimes(PetUpdated::class, 1);
@@ -96,7 +96,7 @@ it('is independent of adapted mode and the display', function () {
 
     test()->patchJson("/api/parent/children/{$child->id}/settings", ['easy_gestures' => true, 'media_display' => 'picture'])
         ->assertOk()
-        ->assertExactJson(['child_id' => $child->id, 'adapted_mode' => true, 'media_display' => 'picture', 'easy_gestures' => true]);
+        ->assertExactJson(['child_id' => $child->id, 'adapted_mode' => true, 'media_display' => 'picture', 'easy_gestures' => true, 'game_feedback' => true]);
 
     test()->patchJson("/api/parent/children/{$child->id}/settings", ['adapted_mode' => false])
         ->assertOk()->assertJsonPath('easy_gestures', true);

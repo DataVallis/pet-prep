@@ -14,6 +14,8 @@ use App\Services\Media\MediaProfiles;
 use App\Services\Media\MediaQualityService;
 use App\Services\Media\PetMediaService;
 use App\Services\Media\PetPreparationService;
+use App\Services\Media\SchoolClipDerivativeService;
+use Filament\Forms\Components\Select;
 use Filament\Notifications\Notification;
 use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables;
@@ -31,6 +33,8 @@ use Illuminate\Support\Number;
  * Quality check (David 2026-10-23): a »Quality« column per clip, a »Needs review« filter
  * and »Approve anyway« (superadmin, audited) for a clip that failed the check twice or
  * was flagged by media:quality-check; »Regenerate« starts a new chain (one auto retry).
+ * Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): the `ball_running` row shows the measured
+ * »Ball exit« side and »Set ball exit« (superadmin) overrides it (or measures it again).
  */
 class MediaRelationManager extends RelationManager
 {
@@ -185,6 +189,17 @@ class MediaRelationManager extends RelationManager
                         return $check !== null ? app(MediaQualityService::class)->sheetUrl($check) : null;
                     }, shouldOpenInNewTab: true)
                     ->placeholder('—'),
+                // Games phase 1 §8.4: where the dog leaves the ball_running clip (measured with ffmpeg, 0 $).
+                Tables\Columns\TextColumn::make('ball_exit')->label('Ball exit')
+                    ->getStateUsing(function (PetMedia $record): ?string {
+                        if (! $record->isPhase() || $record->phaseClip() !== PetPhaseClip::BallRunning) {
+                            return null;
+                        }
+                        $row = app(SchoolClipDerivativeService::class)->exitSideOf($record);
+
+                        return $row === null ? 'not measured' : $row->exit_side.($row->exit_side_overridden ? ' (admin)' : ' (auto)');
+                    })
+                    ->placeholder('—'),
                 Tables\Columns\TextColumn::make('profile')->placeholder('—'),
                 Tables\Columns\TextColumn::make('generation')->label('Gen.'),
                 Tables\Columns\TextColumn::make('cost_usd')
@@ -264,6 +279,29 @@ class MediaRelationManager extends RelationManager
                     }),
             ])
             ->actions([
+                // Games phase 1 §8.4 (D): correct the ball's exit side (shared look: for all its pets).
+                Tables\Actions\Action::make('ballExitSide')
+                    ->label('Set ball exit')
+                    ->icon('heroicon-o-arrows-right-left')
+                    ->form([
+                        Select::make('exit_side')
+                            ->label('The dog leaves the frame on the')
+                            ->options(['auto' => 'measure again (auto)', 'left' => 'left', 'right' => 'right', 'center' => 'center (unclear)'])
+                            ->default(fn (PetMedia $record): string => app(SchoolClipDerivativeService::class)->exitSideOf($record)?->exit_side ?? 'auto')
+                            ->required(),
+                    ])
+                    ->modalDescription('The ball rolls to this side in the game. A shared look changes for every pet of the look. Kept until the clip is regenerated.')
+                    ->visible(fn (PetMedia $record): bool => self::isSuperadmin() && $record->isPhase() && $record->phaseClip() === PetPhaseClip::BallRunning && $record->isShown())
+                    ->authorize(fn (): bool => self::isSuperadmin())
+                    ->action(function (PetMedia $record, array $data): void {
+                        $side = (string) ($data['exit_side'] ?? 'auto');
+                        $done = app(SchoolClipDerivativeService::class)->setExitSide($record, $side === 'auto' ? null : $side, (int) auth()->id());
+
+                        Notification::make()
+                            ->title($done ? ($side === 'auto' ? 'Exit side will be measured again' : "Ball exit set to {$side}") : 'Not a shown ball_running clip')
+                            ->status($done ? 'success' : 'warning')
+                            ->send();
+                    }),
                 // Quality check (David 2026-10-23): show a clip that failed the check twice /
                 // was flagged anyway. Superadmin only (also for a direct Livewire call), audited.
                 Tables\Actions\Action::make('approveQuality')

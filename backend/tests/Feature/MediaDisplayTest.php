@@ -88,7 +88,7 @@ it('lets a parent of the family set it for the child (alone or with adapted mode
 
     test()->patchJson("/api/parent/children/{$child->id}/settings", ['media_display' => 'picture'])
         ->assertOk()
-        ->assertExactJson(['child_id' => $child->id, 'adapted_mode' => false, 'media_display' => 'picture', 'easy_gestures' => false]);
+        ->assertExactJson(['child_id' => $child->id, 'adapted_mode' => false, 'media_display' => 'picture', 'easy_gestures' => false, 'game_feedback' => true]);
     expect($child->refresh()->media_display->value)->toBe('picture');
 
     // adapted mode alone leaves the display as it is
@@ -96,7 +96,7 @@ it('lets a parent of the family set it for the child (alone or with adapted mode
         ->assertOk()->assertJsonPath('media_display', 'picture')->assertJsonPath('adapted_mode', true);
 
     test()->patchJson("/api/parent/children/{$child->id}/settings", ['adapted_mode' => false, 'media_display' => 'video'])
-        ->assertOk()->assertExactJson(['child_id' => $child->id, 'adapted_mode' => false, 'media_display' => 'video', 'easy_gestures' => false]);
+        ->assertOk()->assertExactJson(['child_id' => $child->id, 'adapted_mode' => false, 'media_display' => 'video', 'easy_gestures' => false, 'game_feedback' => true]);
 
     $children = collect(test()->getJson('/api/parent/dashboard')->assertOk()->json('family.children'));
     expect($children->firstWhere('id', $child->id)['media_display'])->toBe('video');
