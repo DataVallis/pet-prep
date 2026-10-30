@@ -61,6 +61,8 @@ class ChildProfileController extends Controller
                 'media_display' => MediaDisplay::Video->value,
                 // M5-T17: a new profile swipes (no »Lažje kretnje«).
                 'easy_gestures' => false,
+                // GAMES_SPEC phase 1: game sounds and haptics are on by default (V5).
+                'game_feedback' => true,
             ],
         ], 201);
     }
@@ -75,8 +77,11 @@ class ChildProfileController extends Controller
      *   The child can change it too (`PATCH /api/child/settings`).
      * - `easy_gestures` (bool, M5-T17) — »Lažje kretnje«: the child app uses press-and-hold
      *   instead of swipe in every swipe game. Parent only; game rules and scores are the same.
+     * - `game_feedback` (bool, GAMES_SPEC phase 1, David 2026-10-30) — »Zvoki in vibracija v
+     *   igrah«: game sounds and haptics in the child app (default true). Parent only; a
+     *   setting only, no game rule reads it.
      * A change broadcasts `caretaker_settings_changed` on the child's active pet.
-     * 200 `{child_id, adapted_mode, media_display, easy_gestures}`; 404 `child_not_found` for a child outside
+     * 200 `{child_id, adapted_mode, media_display, easy_gestures, game_feedback}`; 404 `child_not_found` for a child outside
      * the family; child token → 403.
      *
      * PATCH /api/parent/children/{child}/settings
@@ -101,6 +106,9 @@ class ChildProfileController extends Controller
         if ($request->easyGestures() !== null) {
             $updated = $this->profiles->setEasyGestures($updated, $request->easyGestures());
         }
+        if ($request->gameFeedback() !== null) {
+            $updated = $this->profiles->setGameFeedback($updated, $request->gameFeedback());
+        }
         $updated->refresh();
 
         return response()->json([
@@ -123,6 +131,13 @@ class ChildProfileController extends Controller
              * @var bool
              */
             'easy_gestures' => (bool) $updated->easy_gestures,
+            /**
+             * GAMES_SPEC phase 1 »Zvoki in vibracija v igrah«: true (default) = game sounds
+             * and haptics on in the child app.
+             *
+             * @var bool
+             */
+            'game_feedback' => (bool) $updated->game_feedback,
         ], 200);
     }
 

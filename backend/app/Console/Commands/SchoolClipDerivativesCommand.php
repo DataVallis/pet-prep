@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Log;
  * School smooth playback (David 2026-10-28): queue the ffmpeg-derived school clips
  * (attention / success loops, release = reversed performing) of stored school phase
  * clips that have none yet or whose source file changed. Zero AI cost (no fal call).
+ * Games phase 1 (2026-10-30): also `ball_waiting` → `ball_waiting_loop` and `ball_running` →
+ * its exit side; frugal clips: the legacy reversal and the short-loop ping-pongs.
  * Scheduled every 10 minutes with a small batch (routes/console.php) so production fills
  * existing looks by itself after a deploy — idempotent (unique job per source row, an
  * up-to-date clip is skipped; a source that failed MAX_ATTEMPTS times is left alone).
@@ -26,7 +28,7 @@ class SchoolClipDerivativesCommand extends Command
         {--limit='.self::DEFAULT_LIMIT.' : At most this many source clips per run}
         {--dry-run : Only count / list what would be queued}';
 
-    protected $description = 'Queue the ffmpeg-derived school clips (loops, release) of stored school phase clips (0 $ AI cost)';
+    protected $description = 'Queue the ffmpeg-derived clips (school loops / release, ball waiting loop + exit side, frugal loops) of stored clips (0 $ AI cost)';
 
     public function handle(SchoolClipDerivativeService $derivatives): int
     {

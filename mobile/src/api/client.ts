@@ -206,11 +206,7 @@ export interface ChildActionResponse {
 
 /** `POST /api/child/pet/steps` body (M1-04 / M1-07). */
 export type SyncStepsRequest = components['schemas']['SyncStepsRequest'];
-/**
- * GAMES_SPEC phase 1 (2026-10-30): `game_feedback` is added here by hand until the backend PR
- * regenerates `schema.ts` (`npm run generate-api-types`); drop the intersection then.
- */
-export type UpdateChildSettingsRequest = components['schemas']['UpdateChildSettingsRequest'] & { game_feedback?: boolean };
+export type UpdateChildSettingsRequest = components['schemas']['UpdateChildSettingsRequest'];
 export type UpdateChildSettingsResponse = { child_id: number; adapted_mode: boolean; media_display: 'video' | 'picture'; easy_gestures?: boolean; game_feedback?: boolean };
 /** `PATCH /api/child/settings` body (M5-T11). */
 export type UpdateChildDisplayRequest = components['schemas']['UpdateChildDisplayRequest'];

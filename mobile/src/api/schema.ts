@@ -1252,8 +1252,11 @@ export interface paths {
          *       The child can change it too (`PATCH /api/child/settings`).
          *     - `easy_gestures` (bool, M5-T17) — »Lažje kretnje«: the child app uses press-and-hold
          *       instead of swipe in every swipe game. Parent only; game rules and scores are the same.
+         *     - `game_feedback` (bool, GAMES_SPEC phase 1, David 2026-10-30) — »Zvoki in vibracija v
+         *       igrah«: game sounds and haptics in the child app (default true). Parent only; a
+         *       setting only, no game rule reads it.
          *     A change broadcasts `caretaker_settings_changed` on the child's active pet.
-         *     200 `{child_id, adapted_mode, media_display, easy_gestures}`; 404 `child_not_found` for a child outside
+         *     200 `{child_id, adapted_mode, media_display, easy_gestures, game_feedback}`; 404 `child_not_found` for a child outside
          *     the family; child token → 403
          * @description PATCH /api/parent/children/{child}/settings
          */
@@ -2546,7 +2549,9 @@ export interface components {
                  *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                  *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                  *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                 *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                 *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                 *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                 *     missing = loop `ball_waiting`). Always an object.
                  */
                 phases: {
                     [key: string]: string;
@@ -2556,7 +2561,8 @@ export interface components {
                  *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                  *     made before) 3 s. The app times the school from it (the performing clip ends at
                  *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                 *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                 *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                 *     Always an object.
                  */
                 phase_seconds: {
                     [key: string]: number;
@@ -2567,6 +2573,19 @@ export interface components {
                  *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                  */
                 phase_groups: ("school" | "ball" | "wand")[];
+                /**
+                 * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                 *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                 *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                 *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                 *     `center`. Always an object.
+                 */
+                phase_meta: {
+                    ball_running?: {
+                        /** @enum {string} */
+                        exit_side: "left" | "right" | "center";
+                    };
+                };
             };
             /**
              * @description M5-R13: the weekly brushing routine can apply to this pet (every profiled
@@ -2986,7 +3005,9 @@ export interface components {
          *        pushes instead of steps;
          *      - `media_display` (`video` | `picture`) — »Prikaz: Video / Slika« in the child app;
          *      - `easy_gestures` (bool, M5-T17 2026-10-23) — »Lažje kretnje«: press-and-hold instead
-         *        of swipe in every swipe game of the child app.
+         *        of swipe in every swipe game of the child app;
+         *      - `game_feedback` (bool, GAMES_SPEC phase 1, David 2026-10-30) — »Zvoki in vibracija v
+         *        igrah«: game sounds and haptics in the child app (default on).
          *     Parents only (UserPolicy::manageFamily → 403 for a child; the route group also needs
          *     the `parent` token ability); whether the child belongs to the parent's family is
          *     checked in the controller (another family's child looks exactly like a missing one, 404).
@@ -2998,6 +3019,7 @@ export interface components {
             adapted_mode?: boolean;
             media_display?: components["schemas"]["MediaDisplay"];
             easy_gestures?: boolean;
+            game_feedback?: boolean;
         };
         /** UpdateParentSettingsRequest */
         UpdateParentSettingsRequest: {
@@ -4358,7 +4380,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -4368,7 +4392,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -4379,6 +4404,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -4569,6 +4607,12 @@ export interface operations {
                                  *     reader is on. Always false for a parent's view.
                                  */
                                 easy_gestures: boolean;
+                                /**
+                                 * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                                 *     (default) = game sounds and haptics on (the phone's silent mode still
+                                 *     applies); false = none. Always true for a parent's view.
+                                 */
+                                game_feedback: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -5257,7 +5301,9 @@ export interface operations {
                                  *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                  *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                  *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                 *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                 *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                 *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                 *     missing = loop `ball_waiting`). Always an object.
                                  */
                                 phases: {
                                     [key: string]: string;
@@ -5267,7 +5313,8 @@ export interface operations {
                                  *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                  *     made before) 3 s. The app times the school from it (the performing clip ends at
                                  *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                 *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                 *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                 *     Always an object.
                                  */
                                 phase_seconds: {
                                     [key: string]: number;
@@ -5278,6 +5325,19 @@ export interface operations {
                                  *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                  */
                                 phase_groups: ("school" | "ball" | "wand")[];
+                                /**
+                                 * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                 *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                 *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                 *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                 *     `center`. Always an object.
+                                 */
+                                phase_meta: {
+                                    ball_running?: {
+                                        /** @enum {string} */
+                                        exit_side: "left" | "right" | "center";
+                                    };
+                                };
                             };
                             /**
                              * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -5468,6 +5528,12 @@ export interface operations {
                              *     reader is on. Always false for a parent's view.
                              */
                             easy_gestures: boolean;
+                            /**
+                             * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                             *     (default) = game sounds and haptics on (the phone's silent mode still
+                             *     applies); false = none. Always true for a parent's view.
+                             */
+                            game_feedback: boolean;
                         };
                         contract: {
                             signed: boolean;
@@ -6176,7 +6242,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -6186,7 +6254,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -6197,6 +6266,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -6387,6 +6469,12 @@ export interface operations {
                                  *     reader is on. Always false for a parent's view.
                                  */
                                 easy_gestures: boolean;
+                                /**
+                                 * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                                 *     (default) = game sounds and haptics on (the phone's silent mode still
+                                 *     applies); false = none. Always true for a parent's view.
+                                 */
+                                game_feedback: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -7093,7 +7181,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -7103,7 +7193,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -7114,6 +7205,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -7304,6 +7408,12 @@ export interface operations {
                                  *     reader is on. Always false for a parent's view.
                                  */
                                 easy_gestures: boolean;
+                                /**
+                                 * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                                 *     (default) = game sounds and haptics on (the phone's silent mode still
+                                 *     applies); false = none. Always true for a parent's view.
+                                 */
+                                game_feedback: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -8010,7 +8120,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -8020,7 +8132,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -8031,6 +8144,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -8221,6 +8347,12 @@ export interface operations {
                                  *     reader is on. Always false for a parent's view.
                                  */
                                 easy_gestures: boolean;
+                                /**
+                                 * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                                 *     (default) = game sounds and haptics on (the phone's silent mode still
+                                 *     applies); false = none. Always true for a parent's view.
+                                 */
+                                game_feedback: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -8927,7 +9059,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -8937,7 +9071,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -8948,6 +9083,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -9138,6 +9286,12 @@ export interface operations {
                                  *     reader is on. Always false for a parent's view.
                                  */
                                 easy_gestures: boolean;
+                                /**
+                                 * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                                 *     (default) = game sounds and haptics on (the phone's silent mode still
+                                 *     applies); false = none. Always true for a parent's view.
+                                 */
+                                game_feedback: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -9844,7 +9998,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -9854,7 +10010,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -9865,6 +10022,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -10055,6 +10225,12 @@ export interface operations {
                                  *     reader is on. Always false for a parent's view.
                                  */
                                 easy_gestures: boolean;
+                                /**
+                                 * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                                 *     (default) = game sounds and haptics on (the phone's silent mode still
+                                 *     applies); false = none. Always true for a parent's view.
+                                 */
+                                game_feedback: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -10765,7 +10941,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -10775,7 +10953,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -10786,6 +10965,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -10976,6 +11168,12 @@ export interface operations {
                                  *     reader is on. Always false for a parent's view.
                                  */
                                 easy_gestures: boolean;
+                                /**
+                                 * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                                 *     (default) = game sounds and haptics on (the phone's silent mode still
+                                 *     applies); false = none. Always true for a parent's view.
+                                 */
+                                game_feedback: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -11686,7 +11884,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -11696,7 +11896,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -11707,6 +11908,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -11897,6 +12111,12 @@ export interface operations {
                                  *     reader is on. Always false for a parent's view.
                                  */
                                 easy_gestures: boolean;
+                                /**
+                                 * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                                 *     (default) = game sounds and haptics on (the phone's silent mode still
+                                 *     applies); false = none. Always true for a parent's view.
+                                 */
+                                game_feedback: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -12607,7 +12827,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -12617,7 +12839,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -12628,6 +12851,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -12818,6 +13054,12 @@ export interface operations {
                                  *     reader is on. Always false for a parent's view.
                                  */
                                 easy_gestures: boolean;
+                                /**
+                                 * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                                 *     (default) = game sounds and haptics on (the phone's silent mode still
+                                 *     applies); false = none. Always true for a parent's view.
+                                 */
+                                game_feedback: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -13524,7 +13766,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -13534,7 +13778,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -13545,6 +13790,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -13735,6 +13993,12 @@ export interface operations {
                                  *     reader is on. Always false for a parent's view.
                                  */
                                 easy_gestures: boolean;
+                                /**
+                                 * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                                 *     (default) = game sounds and haptics on (the phone's silent mode still
+                                 *     applies); false = none. Always true for a parent's view.
+                                 */
+                                game_feedback: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -14445,7 +14709,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -14455,7 +14721,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -14466,6 +14733,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -14656,6 +14936,12 @@ export interface operations {
                                  *     reader is on. Always false for a parent's view.
                                  */
                                 easy_gestures: boolean;
+                                /**
+                                 * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                                 *     (default) = game sounds and haptics on (the phone's silent mode still
+                                 *     applies); false = none. Always true for a parent's view.
+                                 */
+                                game_feedback: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -15362,7 +15648,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -15372,7 +15660,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -15383,6 +15672,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -15573,6 +15875,12 @@ export interface operations {
                                  *     reader is on. Always false for a parent's view.
                                  */
                                 easy_gestures: boolean;
+                                /**
+                                 * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                                 *     (default) = game sounds and haptics on (the phone's silent mode still
+                                 *     applies); false = none. Always true for a parent's view.
+                                 */
+                                game_feedback: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -16279,7 +16587,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -16289,7 +16599,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -16300,6 +16611,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -16490,6 +16814,12 @@ export interface operations {
                                  *     reader is on. Always false for a parent's view.
                                  */
                                 easy_gestures: boolean;
+                                /**
+                                 * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                                 *     (default) = game sounds and haptics on (the phone's silent mode still
+                                 *     applies); false = none. Always true for a parent's view.
+                                 */
+                                game_feedback: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -17200,7 +17530,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -17210,7 +17542,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -17221,6 +17554,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -17411,6 +17757,12 @@ export interface operations {
                                  *     reader is on. Always false for a parent's view.
                                  */
                                 easy_gestures: boolean;
+                                /**
+                                 * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                                 *     (default) = game sounds and haptics on (the phone's silent mode still
+                                 *     applies); false = none. Always true for a parent's view.
+                                 */
+                                game_feedback: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -18117,7 +18469,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -18127,7 +18481,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -18138,6 +18493,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -18328,6 +18696,12 @@ export interface operations {
                                  *     reader is on. Always false for a parent's view.
                                  */
                                 easy_gestures: boolean;
+                                /**
+                                 * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                                 *     (default) = game sounds and haptics on (the phone's silent mode still
+                                 *     applies); false = none. Always true for a parent's view.
+                                 */
+                                game_feedback: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -19038,7 +19412,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -19048,7 +19424,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -19059,6 +19436,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -19249,6 +19639,12 @@ export interface operations {
                                  *     reader is on. Always false for a parent's view.
                                  */
                                 easy_gestures: boolean;
+                                /**
+                                 * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                                 *     (default) = game sounds and haptics on (the phone's silent mode still
+                                 *     applies); false = none. Always true for a parent's view.
+                                 */
+                                game_feedback: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -19955,7 +20351,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -19965,7 +20363,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -19976,6 +20375,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -20166,6 +20578,12 @@ export interface operations {
                                  *     reader is on. Always false for a parent's view.
                                  */
                                 easy_gestures: boolean;
+                                /**
+                                 * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                                 *     (default) = game sounds and haptics on (the phone's silent mode still
+                                 *     applies); false = none. Always true for a parent's view.
+                                 */
+                                game_feedback: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -20876,7 +21294,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -20886,7 +21306,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -20897,6 +21318,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -21087,6 +21521,12 @@ export interface operations {
                                  *     reader is on. Always false for a parent's view.
                                  */
                                 easy_gestures: boolean;
+                                /**
+                                 * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                                 *     (default) = game sounds and haptics on (the phone's silent mode still
+                                 *     applies); false = none. Always true for a parent's view.
+                                 */
+                                game_feedback: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -21797,7 +22237,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -21807,7 +22249,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -21818,6 +22261,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -22008,6 +22464,12 @@ export interface operations {
                                  *     reader is on. Always false for a parent's view.
                                  */
                                 easy_gestures: boolean;
+                                /**
+                                 * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                                 *     (default) = game sounds and haptics on (the phone's silent mode still
+                                 *     applies); false = none. Always true for a parent's view.
+                                 */
+                                game_feedback: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -22718,7 +23180,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -22728,7 +23192,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -22739,6 +23204,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -22929,6 +23407,12 @@ export interface operations {
                                  *     reader is on. Always false for a parent's view.
                                  */
                                 easy_gestures: boolean;
+                                /**
+                                 * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                                 *     (default) = game sounds and haptics on (the phone's silent mode still
+                                 *     applies); false = none. Always true for a parent's view.
+                                 */
+                                game_feedback: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -23639,7 +24123,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -23649,7 +24135,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -23660,6 +24147,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -23850,6 +24350,12 @@ export interface operations {
                                  *     reader is on. Always false for a parent's view.
                                  */
                                 easy_gestures: boolean;
+                                /**
+                                 * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                                 *     (default) = game sounds and haptics on (the phone's silent mode still
+                                 *     applies); false = none. Always true for a parent's view.
+                                 */
+                                game_feedback: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -24560,7 +25066,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -24570,7 +25078,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -24581,6 +25090,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -24771,6 +25293,12 @@ export interface operations {
                                  *     reader is on. Always false for a parent's view.
                                  */
                                 easy_gestures: boolean;
+                                /**
+                                 * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                                 *     (default) = game sounds and haptics on (the phone's silent mode still
+                                 *     applies); false = none. Always true for a parent's view.
+                                 */
+                                game_feedback: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -25288,6 +25816,8 @@ export interface operations {
                             media_display: string;
                             /** @description M5-T17: a new profile swipes (no »Lažje kretnje«). */
                             easy_gestures: boolean;
+                            /** @description GAMES_SPEC phase 1: game sounds and haptics are on by default (V5). */
+                            game_feedback: boolean;
                         };
                     };
                 };
@@ -25381,6 +25911,11 @@ export interface operations {
                         media_display: "video" | "picture";
                         /** @description M5-T17 »Lažje kretnje«: true = hold instead of swipe in the child's swipe games. */
                         easy_gestures: boolean;
+                        /**
+                         * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah«: true (default) = game sounds
+                         *     and haptics on in the child app.
+                         */
+                        game_feedback: boolean;
                     };
                 };
             };
@@ -26116,7 +26651,9 @@ export interface operations {
                                  *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                  *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                  *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                 *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                 *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                 *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                 *     missing = loop `ball_waiting`). Always an object.
                                  */
                                 phases: {
                                     [key: string]: string;
@@ -26126,7 +26663,8 @@ export interface operations {
                                  *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                  *     made before) 3 s. The app times the school from it (the performing clip ends at
                                  *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                 *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                 *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                 *     Always an object.
                                  */
                                 phase_seconds: {
                                     [key: string]: number;
@@ -26137,6 +26675,19 @@ export interface operations {
                                  *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                  */
                                 phase_groups: ("school" | "ball" | "wand")[];
+                                /**
+                                 * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                 *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                 *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                 *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                 *     `center`. Always an object.
+                                 */
+                                phase_meta: {
+                                    ball_running?: {
+                                        /** @enum {string} */
+                                        exit_side: "left" | "right" | "center";
+                                    };
+                                };
                             };
                         };
                         child: {
@@ -26411,7 +26962,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -26421,7 +26974,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -26432,6 +26986,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T05b: the care guide »Kako skrbim za …« — the very block the child state
@@ -26911,7 +27478,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -26921,7 +27490,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -26932,6 +27502,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T05b: the care guide »Kako skrbim za …« — the very block the child state
@@ -28154,7 +28737,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -28164,7 +28749,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -28175,6 +28761,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -28365,6 +28964,12 @@ export interface operations {
                                  *     reader is on. Always false for a parent's view.
                                  */
                                 easy_gestures: boolean;
+                                /**
+                                 * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                                 *     (default) = game sounds and haptics on (the phone's silent mode still
+                                 *     applies); false = none. Always true for a parent's view.
+                                 */
+                                game_feedback: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -29053,7 +29658,9 @@ export interface operations {
                                      *     (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
                                      *     (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+                                     *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+                                     *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+                                     *     missing = loop `ball_waiting`). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -29063,7 +29670,8 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     Always an object.
                                      */
                                     phase_seconds: {
                                         [key: string]: number;
@@ -29074,6 +29682,19 @@ export interface operations {
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
+                                    /**
+                                     * @description Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+                                     *     from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+                                     *     frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+                                     *     a superadmin may have corrected it. Missing key = not measured yet → treat as
+                                     *     `center`. Always an object.
+                                     */
+                                    phase_meta: {
+                                        ball_running?: {
+                                            /** @enum {string} */
+                                            exit_side: "left" | "right" | "center";
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -29264,6 +29885,12 @@ export interface operations {
                                  *     reader is on. Always false for a parent's view.
                                  */
                                 easy_gestures: boolean;
+                                /**
+                                 * @description GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                                 *     (default) = game sounds and haptics on (the phone's silent mode still
+                                 *     applies); false = none. Always true for a parent's view.
+                                 */
+                                game_feedback: boolean;
                             };
                             contract: {
                                 signed: boolean;

@@ -12,7 +12,8 @@ use Illuminate\Queue\SerializesModels;
 
 /**
  * School smooth playback (David 2026-10-28): make the ffmpeg-derived clip (attention /
- * success ping-pong loop, reversed performing = release) of one stored school phase clip.
+ * success ping-pong loop, reversed performing = release) of one stored school phase clip —
+ * and (games phase 1, 2026-10-30) the `ball_waiting_loop` / the `ball_running` exit side.
  * Zero AI cost — no fal call, nothing in the AI budget / ledger
  * (SchoolClipDerivativeService::make). Unique per source row; idempotent. Dispatched by
  * PetMediaService::afterStored and the `media:school-derivatives` backfill (every 10 min),

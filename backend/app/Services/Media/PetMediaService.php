@@ -1887,7 +1887,8 @@ class PetMediaService
                 $phases[$m->state] = $this->signedUrl($m, $expires);
                 // David 2026-10-23: school performing clips are 5 s now, older stored ones 3 s.
                 $phaseSeconds[$m->state] = (float) ($m->stored_duration_seconds ?? $m->duration_seconds ?? 3);
-                if ($m->phaseClip()?->group() === PetPhaseClip::GROUP_SCHOOL) {
+                // School clips + games phase 1 (ball_waiting → loop, ball_running → exit side).
+                if (SchoolClipDerivativeService::keyFor($m->phaseClip()) !== null) {
                     $derivedSources->push($m);
                 }
             }
@@ -1895,9 +1896,12 @@ class PetMediaService
 
         // School smooth playback (David 2026-10-28): ffmpeg-derived clips (attention / success
         // loops, release) next to their source, like any phase clip (URL + real length).
-        $derived = app(SchoolClipDerivativeService::class)->payloadFor($derivedSources, $expires);
+        // Games phase 1 (GAMES_SPEC §8.2 / §8.4): `ball_waiting_loop` the same way, and the
+        // measured / admin-set `phase_meta.ball_running.exit_side`. Missing = the app's fallback
+        // (loop ball_waiting, ball to the centre) — never a lock.
+        ['clips' => $derived, 'meta' => $phaseMeta] = app(SchoolClipDerivativeService::class)->derivedFor($derivedSources, $expires);
         foreach ($derived as $key => $clip) {
-            if (str_starts_with($key, PetPhaseClip::GROUP_SCHOOL.'_')) {
+            if (str_starts_with($key, PetPhaseClip::GROUP_SCHOOL.'_') || $key === SchoolClipDerivativeService::KEY_BALL_WAITING_LOOP) {
                 $phases[$key] = $clip['url'];
                 $phaseSeconds[$key] = $clip['seconds'];
             }
@@ -1929,6 +1933,7 @@ class PetMediaService
             poses: $poses,
             phases: $phases,
             phaseSeconds: $phaseSeconds,
+            phaseMeta: $phaseMeta,
             // QA m2: the same switch-aware source as readiness / preparation (phaseClipsFor) —
             // a switch off → [] → the app shows the M5-T08 stage, the server checks the v2 rules.
             phaseGroups: array_values(array_unique(array_map(fn (PetPhaseClip $c) => $c->group(), $this->entitlements->phaseClipsFor($pet)))),

@@ -344,6 +344,14 @@ class ChildPetStateResource extends JsonResource
                  * @var bool
                  */
                 'easy_gestures' => (bool) ($actor?->easy_gestures ?? false),
+                /**
+                 * GAMES_SPEC phase 1 »Zvoki in vibracija v igrah« (set by a parent): true
+                 * (default) = game sounds and haptics on (the phone's silent mode still
+                 * applies); false = none. Always true for a parent's view.
+                 *
+                 * @var bool
+                 */
+                'game_feedback' => (bool) ($actor?->game_feedback ?? true),
             ],
             'contract' => [
                 'signed' => $contract !== null,
