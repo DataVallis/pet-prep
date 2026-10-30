@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `soft_coated_wheaten_terrier` (viri S608–S614; ponovno S8, S10, S11, S14, S24, S35, S45, S123, S174); seznam za vzreditelja: stran RKC (S610) |
 | Izvor | FCI št. 40 »Irish Soft Coated Wheaten Terrier«, skupina 3, sekcija 1 (veliki in srednji terierji), Irska (S608, S609) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 75. mesto (S174, prebrano 2026-10-30) |
-| PR-ji | pet-prep #443 (pasma) · portret: sledi · spletna stran: sledi |
+| PR-ji | pet-prep #443 (pasma, združen `3d92f0e`) · portret: #444 (zagon 40982180857) · spletna stran: pet-prep-website `feat/register-soft-coated-wheaten-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -41,7 +41,7 @@
 | Česanje vsak dan, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-10-30 |
 | Mini igra čiščenje ušes (1× na teden); opomnika staršem frizer in kopanje (vsake 4 tedne) | 🛠 | 💶 izziv | M5-R18 / M5-R19 / M5-R20 | 2026-10-30 |
 | Barva (izbirnik: 1 standardna barva, pšenično rumena) | 🛠 | 💶 izziv | M5-R21 | 2026-10-30 |
-| AI portret v registru | 🗓 sledi takoj po združitvi | — | M5-R11-04 | — |
+| AI portret v registru (pšenično rumen, sprejet v prvem poskusu, zagon 40982180857, PR #444) | ✅ | — | M5-R11-04 | 2026-10-30 |
 | Stran na petprep.si (`/animals/dogs/soft-coated-wheaten-terrier`, `/sl/zivali/psi/irski-mehkodlaki-psenicni-terier`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -56,3 +56,5 @@
 - **Frizer in kopanje:** PetMD (S613) daje 4–6 tednov oz. »about monthly« (→ 4 tedne, pravilo spodnje meje), VCA (S614) »every other month« (→ 8 tednov). Uporabljen je pogostejši vir (PetMD, veterinarka); če želite redkejši opomnik, je to podatkovna migracija (sejalnik samo dodaja).
 - **Vročina:** VCA ima le oceno »Warm Weather: 1 of 5« brez izjave — zato brez čipa `heat_sensitive`. Želite čip tudi na podlagi ocene?
 - **Ugotovitev za skupne dokumente (ne urejam jih):** nova država izvora **Irska (IE)** v `FCI_ORIGINS` in nov zdravstveni ključ registra `protein_losing_disease` (besedili EN / SL dodani na spletni strani).
+- **Portret:** zagon 40982180857 (koda `3d92f0e`, brez produkcijske namestitve, 0,15 $), sprejet v prvem poskusu — realistična fotografija odraslega psa, mehka valovita pšenično rumena dlaka, nekoliko temnejša ušesa (standard to dovoljuje), črn nos, temne oči pod šopi dlake, naraven rep pokonci, svetlo siva studijska podlaga. PR #444.
+- **Portret PR #444 ni združen (needs-david):** `CI OK` je dvakrat padel na testu, ki ni povezan s tem PR-jem (`QueuedKeyImageTest:290`, »never paid twice … shared look row« — 6 klicev fal namesto 5; prvič še `ChildPinLoginTest:477`). PR spreminja le sliko, manifest, register in dokumente (nobene PHP kode); lokalno oba testa uspeta. Ko je CI zelen, združite #444, nato odprite PR spletne strani iz veje `feat/register-soft-coated-wheaten-terrier` v pet-prep-website (besedila in fotografija so pripravljeni). Do takrat pasme na petprep.si ni.

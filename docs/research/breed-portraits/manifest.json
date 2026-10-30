@@ -948,6 +948,19 @@
             "prompt_hash": "sha256:1a46d128de1fa84e3fe67ef855d97aee9b3e270015262ac538c341449c08ea49",
             "generated_at": "2026-10-29T07:09:28+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "soft_coated_wheaten_terrier",
+            "species": "dog",
+            "colour": "wheaten",
+            "file": "dog/soft-coated-wheaten-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:5bb9479f2360898914f23a537d8dc94870a9b881708b523bde2b388871cda370",
+            "generated_at": "2026-10-30T00:51:11+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
