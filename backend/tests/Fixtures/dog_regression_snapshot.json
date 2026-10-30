@@ -915,7 +915,8 @@
                     },
                     "settings": {
                         "media_display": "video",
-                        "easy_gestures": false
+                        "easy_gestures": false,
+                        "game_feedback": true
                     },
                     "contract": {
                         "signed": false,
@@ -1549,7 +1550,8 @@
                     },
                     "settings": {
                         "media_display": "video",
-                        "easy_gestures": false
+                        "easy_gestures": false,
+                        "game_feedback": true
                     },
                     "contract": {
                         "signed": false,
@@ -2603,7 +2605,8 @@
                     },
                     "settings": {
                         "media_display": "video",
-                        "easy_gestures": false
+                        "easy_gestures": false,
+                        "game_feedback": true
                     },
                     "contract": {
                         "signed": false,
@@ -3506,7 +3509,8 @@
                     },
                     "settings": {
                         "media_display": "video",
-                        "easy_gestures": false
+                        "easy_gestures": false,
+                        "game_feedback": true
                     },
                     "contract": {
                         "signed": false,
@@ -4705,7 +4709,8 @@
                     },
                     "settings": {
                         "media_display": "video",
-                        "easy_gestures": false
+                        "easy_gestures": false,
+                        "game_feedback": true
                     },
                     "contract": {
                         "signed": false,
@@ -5699,7 +5704,8 @@
                     },
                     "settings": {
                         "media_display": "video",
-                        "easy_gestures": false
+                        "easy_gestures": false,
+                        "game_feedback": true
                     },
                     "contract": {
                         "signed": false,

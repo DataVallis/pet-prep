@@ -39,6 +39,8 @@ final class PetMediaPayload
         public readonly array $phaseGroups = [],
         /** @var array<string, float> David 2026-10-23: phase clip => length of its STORED file in seconds */
         public readonly array $phaseSeconds = [],
+        /** @var array<string, array{exit_side: string}> Games phase 1: phase clip => facts measured from it (ball_running => exit_side) */
+        public readonly array $phaseMeta = [],
     ) {}
 
     /**
@@ -52,7 +54,7 @@ final class PetMediaPayload
     }
 
     /**
-     * @return array{status: string, reference_image_url: string|null, videos: object, current_video_url: string|null, states: list<string>, expires_at: string|null, keyframes: object, transitions: object, loops: list<string>, state_media: bool, poses: object, phases: object, phase_seconds: object, phase_groups: list<string>}
+     * @return array{status: string, reference_image_url: string|null, videos: object, current_video_url: string|null, states: list<string>, expires_at: string|null, keyframes: object, transitions: object, loops: list<string>, state_media: bool, poses: object, phases: object, phase_seconds: object, phase_groups: list<string>, phase_meta: object}
      */
     public function toArray(): array
     {
@@ -134,7 +136,9 @@ final class PetMediaPayload
              * (0 $ AI cost) once made — `school_<command>_attention_loop` / `school_<command>_success_loop`
              * (ping-pong, seamless loop: play looped) and `school_<command>_release` (performing reversed,
              * pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
-             * SCHOOL_SMOOTH_PLAYBACK.md §C). Always an object.
+             * SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
+             * `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
+             * missing = loop `ball_waiting`). Always an object.
              *
              * @var array<string, string>
              */
@@ -144,7 +148,8 @@ final class PetMediaPayload
              * PERFORMING clips are 5 s since then, every other phase clip (and performing clips
              * made before) 3 s. The app times the school from it (the performing clip ends at
              * the obey moment). Missing key (older server) = 3. Also the real length of every derived
-             * school clip (`*_attention_loop`, `*_success_loop`, `*_release`). Always an object.
+             * school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+             * Always an object.
              *
              * @var array<string, float>
              */
@@ -157,6 +162,16 @@ final class PetMediaPayload
              * @var list<'school'|'ball'|'wand'>
              */
             'phase_groups' => $this->phaseGroups,
+            /**
+             * Games phase 1 (GAMES_SPEC §8.4, 2026-10-30): facts the server measured (ffmpeg, 0 $)
+             * from a stored phase clip. `ball_running.exit_side` = the side the dog leaves the
+             * frame on (`left` | `right`; `center` = unclear → the ball flies into the distance);
+             * a superadmin may have corrected it. Missing key = not measured yet → treat as
+             * `center`. Always an object.
+             *
+             * @var array{ball_running?: array{exit_side: 'left'|'right'|'center'}}
+             */
+            'phase_meta' => (object) $this->phaseMeta,
         ];
     }
 }

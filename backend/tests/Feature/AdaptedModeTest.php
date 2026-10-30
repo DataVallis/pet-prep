@@ -83,7 +83,7 @@ describe('PATCH /api/parent/children/{child}/settings', function () {
 
         test()->patchJson("/api/parent/children/{$child->id}/settings", ['adapted_mode' => true])
             ->assertOk()
-            ->assertExactJson(['child_id' => $child->id, 'adapted_mode' => true, 'media_display' => 'video', 'easy_gestures' => false]);
+            ->assertExactJson(['child_id' => $child->id, 'adapted_mode' => true, 'media_display' => 'video', 'easy_gestures' => false, 'game_feedback' => true]);
         expect($child->refresh()->adapted_mode)->toBeTrue();
         Event::assertDispatchedTimes(PetUpdated::class, 1);
         Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->petId === $pet->id && $e->eventType === 'caretaker_settings_changed');
@@ -106,7 +106,7 @@ describe('PATCH /api/parent/children/{child}/settings', function () {
             'adapted_mode' => true,
             'reason' => 'wheelchair user',
             'condition' => 'x',
-        ])->assertOk()->assertExactJson(['child_id' => $child->id, 'adapted_mode' => true, 'media_display' => 'video', 'easy_gestures' => false]);
+        ])->assertOk()->assertExactJson(['child_id' => $child->id, 'adapted_mode' => true, 'media_display' => 'video', 'easy_gestures' => false, 'game_feedback' => true]);
 
         $columns = Schema::getColumnListing('users');
         expect($columns)->toContain('adapted_mode')

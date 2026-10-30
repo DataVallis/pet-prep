@@ -14,7 +14,9 @@ use Illuminate\Validation\Rule;
  *    pushes instead of steps;
  *  - `media_display` (`video` | `picture`) — »Prikaz: Video / Slika« in the child app;
  *  - `easy_gestures` (bool, M5-T17 2026-10-23) — »Lažje kretnje«: press-and-hold instead
- *    of swipe in every swipe game of the child app.
+ *    of swipe in every swipe game of the child app;
+ *  - `game_feedback` (bool, GAMES_SPEC phase 1, David 2026-10-30) — »Zvoki in vibracija v
+ *    igrah«: game sounds and haptics in the child app (default on).
  * Parents only (UserPolicy::manageFamily → 403 for a child; the route group also needs
  * the `parent` token ability); whether the child belongs to the parent's family is
  * checked in the controller (another family's child looks exactly like a missing one, 404).
@@ -35,9 +37,10 @@ class UpdateChildSettingsRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'adapted_mode' => ['required_without_all:media_display,easy_gestures', 'boolean'],
-            'media_display' => ['required_without_all:adapted_mode,easy_gestures', 'string', Rule::enum(MediaDisplay::class)],
-            'easy_gestures' => ['required_without_all:adapted_mode,media_display', 'boolean'],
+            'adapted_mode' => ['required_without_all:media_display,easy_gestures,game_feedback', 'boolean'],
+            'media_display' => ['required_without_all:adapted_mode,easy_gestures,game_feedback', 'string', Rule::enum(MediaDisplay::class)],
+            'easy_gestures' => ['required_without_all:adapted_mode,media_display,game_feedback', 'boolean'],
+            'game_feedback' => ['required_without_all:adapted_mode,media_display,easy_gestures', 'boolean'],
         ];
     }
 
@@ -57,5 +60,11 @@ class UpdateChildSettingsRequest extends FormRequest
     public function easyGestures(): ?bool
     {
         return $this->has('easy_gestures') ? (bool) $this->validated('easy_gestures') : null;
+    }
+
+    /** null = not sent (leave unchanged). */
+    public function gameFeedback(): ?bool
+    {
+        return $this->has('game_feedback') ? (bool) $this->validated('game_feedback') : null;
     }
 }

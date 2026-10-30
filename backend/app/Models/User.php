@@ -122,6 +122,8 @@ class User extends Authenticatable implements FilamentUser
             'media_display' => MediaDisplay::class,
             // M5-T17: »Lažje kretnje« — parent-only switch on a child profile (hold instead of swipe).
             'easy_gestures' => 'boolean',
+            // GAMES_SPEC phase 1: »Zvoki in vibracija v igrah« — parent-only switch (default on).
+            'game_feedback' => 'boolean',
             // M5-R14 – R20 follow-up: ClientFeature values of the latest authenticated request.
             'client_features' => 'array',
             'client_features_at' => 'datetime',
