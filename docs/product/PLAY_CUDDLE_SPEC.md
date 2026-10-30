@@ -68,6 +68,7 @@ Brez zastavice `features` iz aplikacije: igra nima posledic, zato stara različi
 
 ### 4.3 Crkljanje (božanje, ~10 s)
 - Ista plast; otrok s prstom **gladi po kužku** (poteg čez osrednji del zaslona). Ob vsakem potegu se pojavi srček; po **5 potegih** (vsak vsaj ~60 pt, v katerokoli smer) je konec **(D)**.
+- **Sprememba C1 (GAMES_SPEC §4.4, potrdil David 30. 10. 2026):** crkljanje postane **3 božanja po ~3 s s premorom** (pravilo 3 sekund: boži 3 s, nato počakaj, ali žival želi še; ~15–20 s). **Samo v aplikaciji:** strežnik potegov nikoli ni preverjal — `POST /api/child/pet/play {kind: "cuddle"}` pošlje aplikacija ob koncu in posledice (30 min »vesel«, brez točk) ostanejo; strežnik in API se zato **ne spremenita** (preverjeno 30. 10. 2026: `PlayRequest` sprejme samo `kind`, `PlayService` ne pozna potegov). Gradi se v fazi 4 aplikacije; do takrat velja 5 potegov.
 - **Dostopnost:** gumb **»Drži in pobožaj«** — držanje 3 s nadomesti potege (bralnik zaslona: dejanje »Pobožaj«); »zmanjšaj gibanje« → srčki brez letenja.
 - Konec: »Kuža uživa. Hvala za crkljanje!«
 - Brez zvoka in brez haptike (`expo-haptics` ni v projektu — nov nativni modul bi zahteval nov build; lahko kasneje).

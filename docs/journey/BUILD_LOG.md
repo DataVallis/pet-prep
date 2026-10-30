@@ -8,6 +8,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-30 — Palica s peresom in šola: nova pravila na strežniku (spam ne prinese nič)
+
+**Kaj:** strežniški del faz 2–4 nove igre (GAMES_SPEC, pravila potrdil David 30. 10.). **Palica s peresom (muca):** namesto minute en **lov ~25 s** s tremi skoki in ulovom, točkovan v **zvezdicah** — izmik šteje samo, če otrok pero **umiri, ko se muca pritaji**, in ga **potegne stran 0,15–1,5 s po skoku**; ulov šteje, če muco pusti, da ujame. Igra šteje pri 2 od 4 zvezdic. **Šola (pes):** vaja = **2 kroga po 3 ukaze** s premorom, brez »previjanja nazaj« (rez skrije prekrivni odziv 1,2 s), otrok lahko **konča po prvem krogu** (napredek šteje, dnevna rutina samo cela vaja). Namesto »Pohvali« bo **priboljšek** — samo če ga je družina kupila v »Željah«, in šola ga ne porabi. Brezplačno (ffmpeg, 0 $) strežnik naredi še zanko pritajene muce. **Aplikacija za nova pravila je še *načrt*** — stare različice aplikacije ostanejo pri starih pravilih, nič se ne pokvari.
+**Zakaj je pomembno:** testerji so pri palici našli napako — **z metanjem peresa celo minuto si dobil boljši rezultat** kot z dobro igro. Novo pravilo nagrajuje odziv na viden znak (mačka se pritaji → miruj; skoči → umakni), ne števila potegov: test dokazuje, da neprekinjeno hitro metanje prinese **0 zvezdic**, pošten igralec pa vse 4. Igre so krajše (~25 s namesto 60 s; vaja šole ~35–64 s), en zgrešen skok ne podre več cele igre.
+**Kako povedati:** 🧒 *načrt:* »Ko se muca pritaji, pero miruje. Ko skoči — hitro stran! Na koncu jo pusti, da ujame.« · 👩 »Igra uči, kako se z mačko res igramo: plen beži stran, na koncu ga muca ujame — sicer je razočarana (Ontario SPCA).« · 🛠 »Pravila so različičena: aplikacija ob začetku pošlje `rules: 2`, strežnik shrani različico v sejo; stare gradnje dobijo v1 bajt za bajtom.« · 💼 »Popravek goljufanja in krajše igre brez enega dodatnega evra za AI.«
+
+---
+
 ## 2026-10-30 — Žoga ve, kam je kuža stekel (in to brez novih AI posnetkov)
 
 **Kaj:** prvi strežniški del nove igre z žogo (GAMES_SPEC faza 1). Strežnik iz obstoječega posnetka »kuža čaka« brezplačno (ffmpeg na našem strežniku) naredi brezšivno zanko — kuža poskakuje na mestu brez skoka ob ponovitvi — in iz posnetka »kuža steče za žogo« izmeri, na katero stran kuža zbeži iz slike (levo, desno, nejasno = sredina), da bo žoga v igri odletela tja, kamor teče kuža. Če meritev ne ugane, jo superadmin z enim klikom popravi. Dodano je tudi stikalo staršev **»Zvoki in vibracija v igrah«** (privzeto vklopljeno, David 30. 10.) — zaenkrat samo na strežniku. **Nova igra v aplikaciji je še *načrt*** (gradi se vzporedno).

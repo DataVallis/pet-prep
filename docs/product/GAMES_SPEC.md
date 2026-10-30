@@ -1,6 +1,6 @@
 # PetPrep — Igre, šola in čiščenje: interaktivni sloj (GAMES_SPEC)
 
-> **Status:** POTRJENO (David 30. 10. 2026, odgovori v §11) — smer, faze in odgovori V2, V5, V6, V10–V12. Spremembe pravil §10 Š1–Š3, C1, P1, P2 **potrjene** (David 30. 10. 2026, V1); v `PRODUCT_SPEC` / `CAT_SPEC` / `PLAY_CUDDLE_SPEC` se zapišejo v PR-ju faze, ki jih zgradi. **Faza 1 v gradnji** — strežniški del zgrajen 30. 10. 2026 (`feat/games-phase1-backend`: stikalo `users.game_feedback`, izpeljanki `ball_waiting_loop` in `exit_side`); aplikacija (gameLayer, žoga v2, neredi) v gradnji.
+> **Status:** POTRJENO (David 30. 10. 2026, odgovori v §11) — smer, faze in odgovori V2, V5, V6, V10–V12. Spremembe pravil §10 Š1–Š3, C1, P1, P2 **potrjene** (David 30. 10. 2026, V1); v `PRODUCT_SPEC` / `CAT_SPEC` / `PLAY_CUDDLE_SPEC` zapisane 30. 10. 2026 (PR strežnika faz 2–4). **Faza 1 v gradnji** — strežniški del zgrajen 30. 10. 2026 (`feat/games-phase1-backend`: stikalo `users.game_feedback`, izpeljanki `ball_waiting_loop` in `exit_side`); aplikacija (gameLayer, žoga v2, neredi) v gradnji. **Faze 2–4: strežniški del zgrajen 30. 10. 2026** (`feat/games-rules-v2-backend`: `rules: 2` za palico in šolo, zvezdice, krogi, maska, predčasen konec, `training.treat_token`, izpeljanka `wand_crouch_loop`; crkljanje C1 je samo v aplikaciji); aplikacija v2 še ni zgrajena. Pogodba za aplikacijo: `docs/engineering/ARCHITECTURE.md` → *Games rules v2 — contract for the app*.
 > **Smer (David 30. 10. 2026):** »**Pes ostane video, igra postane interaktiven sloj.**« Realističen AI video ljubljenčka ostane (81 pasem × 333 barv, premium videz — brez 3D modela in brez risanega ljubljenčka); nad njim zgradimo nativni interaktivni sloj (60 fps, fizikalni predmeti, zvok, haptika).
 > **Oznake:** **SPREMEMBA PRAVILA — potrdil David 30. 10.** = obstoječe pravilo iz `PRODUCT_SPEC.md` / `CAT_SPEC.md` / `PLAY_CUDDLE_SPEC.md` se spremeni. **(D)** = Claudov predlog brez spremembe obstoječega pravila. Vse ostalo je opis stanja (s potjo do kode).
 > **Povezano:** `PRODUCT_SPEC.md` §5, §11, §13 · `PLAY_CUDDLE_SPEC.md` · `CAT_SPEC.md` §5 · `APP_REFINEMENT_SPEC.md` §3, §6, §10–§12 · `docs/engineering/SCHOOL_SMOOTH_PLAYBACK.md` · `brand/README.md`.
@@ -384,6 +384,15 @@ Konfiguracija `config/wand.php` → `v2`: `round_ms`, `stalk_ms` 3000, `pounces`
 | `ChildProfileService` | **faza 1:** `users.game_feedback` (bool, privzeto `true`) — stikalo staršev »Zvoki in vibracija v igrah« prek `PATCH /api/parent/children/{child}/settings` (kot `easy_gestures`); v stanju otroka `settings.game_feedback`, v nadzorni plošči `family.children[].game_feedback`, v izvozu. Samo nastavitev, pravila ga ne berejo. |
 | Readiness | `GameMediaReadiness`: izpeljanka, ki je še ni, igre **ne** zaklene — aplikacija ima nadomestilo (zanka iz izvirnika) kot pri šoli. |
 | Dokumenti | PRODUCT_SPEC §5 / §13, CAT_SPEC §5.2, PLAY_CUDDLE §4, ARCHITECTURE §3 + DIAGRAMS, FEATURES, `schema.ts` — v PR-jih posameznih faz. |
+| Crkljanje (C1) | **Brez spremembe strežnika** (preverjeno 30. 10. 2026): `POST /play {kind: "cuddle"}` sprejme samo vrsto, potegov strežnik nikoli ni preverjal — pravilo 3 sekund je samo v aplikaciji. |
+
+**Zgrajeno 30. 10. 2026 (faze 2–4, strežnik):** vse zgornje vrstice za `TrainingService`, `WandPlayService`, `config/wand.php` (`v2`), izpeljanko `wand_crouch_loop` in `PetMediaPayload`; dodatno `training.treat_token` v stanju otroka (V6). Podrobnosti, ki jih spec ni določil, odločil Claude (čakajo Davida): (1) `treat_token` je `true` tudi, ko je paket priboljškov porabljen (»kupila« ≠ »ima še«; preklican paket = `false`); (2) zavrnitve začetka palice (tihe ure, polnoč) obe različici računata z 60 s v1 (stanje `can_start` se vedno ujema z začetkom); (3) prvi premik stran v `[p, p + 150)` je »prezgodaj« (izmik brez zvezdice); (4) premik brez `in_zone` / `speed_ok` v v2 ne prinese zvezdice; (5) predčasen konec še vedno pošlje `trained_pet` kot dogodek osvežitve (brez vrstice v dnevniku).
+
+#### Pogodba za aplikacijo (pravila v2)
+Celotna pogodba (vsa polja zahtev in odgovorov za šolo, palico, `treat_token`, `wand_crouch_loop`) je v `docs/engineering/ARCHITECTURE.md` → **»Games rules v2 — contract for the app«** (angleško, tehnični dokument). Na kratko:
+- **Šola:** `POST /training/start {command, rules: 2}` → `session` + `rules_version: 2`, `mask_ms` 1200, `round_break_ms` 2500, `round_breaks_ms[]`, `rounds[{round, first_index, last_index, start_ms, end_ms}]`; `POST /training/finish {session_id, taps, ended_after_round?: 1}` → `result` + `rules_version`, `ended_after_round`, `counts_for_routine`. Stanje: `training.treat_token`.
+- **Palica:** `POST /wand/start {rules: 2}` → `session` + `rules_version`, `stalk_ms`, `crouch_cues_ms[3]`, `catch_window_ms`, `calm_window_ms`, `calm_max_moves`, `dodge_window_ms`, `min_stars`, `max_stars`, `max_speed_pt_s`, `min_dodge_pt`; `POST /wand/finish {session_id, moves[{t, away, in_zone, speed_ok}]}` → `result` + `rules_version`, `stars`, `min_stars`, `max_stars`, `dodges[{pounce_ms, star, reason, move_ms}]`, `catch{star, reason}`, `hint`. Posnetek: `media.phases.wand_crouch_loop`.
+- **Brez `rules`:** v1 nespremenjen (stare gradnje).
 
 ### 7.4 Nativne odvisnosti in izdaja
 - Novi: `react-native-gesture-handler`, `@shopify/react-native-skia`, `expo-haptics`, `expo-audio` → **spremenjen prstni odtis → nov EAS build v trgovinah**; OTA na stare gradnje jih ne prinese.
@@ -450,9 +459,9 @@ Strežnik ob izpeljankah primerja zadnji okvir `ball_running` (prazna soba) s sr
 |---|---|---|---|
 | ~~0 — hitri popravki~~ | odpade (David 30. 10.) — vsebina v fazah 2 in 3 | — | — |
 | **1 — sloj + žoga + neredi** | `gameLayer` (ClipDeck, ClipQueue, FeedbackLayer, PlayField, GameFx), žoga v2, `ball_waiting_loop`, `exit_side`, nove ilustracije nereda in čiščenje | žoga nima pravil na strežniku → najnižje tveganje za preizkus nativnega sloja na napravi; neredi so samo prikaz | **nov EAS build** (+ OTA JS za stare gradnje ostane v1) |
-| **2 — palica v2** | §5, `wand_crouch_loop`, rules v2 | največ pritožb testerjev; uporabi sloj iz faze 1 | JS + strežnik (sloj je že v gradnji) |
-| **3 — šola v2** | §4.1, krogi, maska namesto release, priboljšek | največ pravil in najpomembnejša učna vsebina → zadnja, ko je sloj preverjen; QA krog (napredek, rutina) | JS + strežnik |
-| **4 — crkljanje, praskanje, nega** | §4.4, §5.5, §7.7 | majhne, brez tveganja | JS |
+| **2 — palica v2** | §5, `wand_crouch_loop`, rules v2 — **strežnik zgrajen 30. 10. 2026** | največ pritožb testerjev; uporabi sloj iz faze 1 | JS + strežnik (sloj je že v gradnji) |
+| **3 — šola v2** | §4.1, krogi, maska namesto release, priboljšek — **strežnik zgrajen 30. 10. 2026** | največ pravil in najpomembnejša učna vsebina → zadnja, ko je sloj preverjen; QA krog (napredek, rutina) | JS + strežnik |
+| **4 — crkljanje, praskanje, nega** | §4.4, §5.5, §7.7 — strežnik brez sprememb (C1 samo aplikacija) | majhne, brez tveganja | JS |
 
 Merilo za izbirne posnetke A–C: po fazi 3 David pogleda posnetke zaslona na enem psu in eni muci; samo ob »še skače« se naročijo.
 
