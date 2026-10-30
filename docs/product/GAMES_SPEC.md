@@ -1,6 +1,6 @@
 # PetPrep — Igre, šola in čiščenje: interaktivni sloj (GAMES_SPEC)
 
-> **Status:** OSNUTEK za Davidovo potrditev, 30. 10. 2026 (Claude). **Nič od tega še ni zgrajeno.**
+> **Status:** POTRJENO (David 30. 10. 2026, odgovori v §11) — smer, faze in odgovori V2, V5, V6, V10–V12. Spremembe pravil §10 (Š1–Š3, C1, P1, P2) potrdi David pred fazo 2 / 3 (V1). **Faza 1 v gradnji.**
 > **Smer (David 30. 10. 2026):** »**Pes ostane video, igra postane interaktiven sloj.**« Realističen AI video ljubljenčka ostane (81 pasem × 333 barv, premium videz — brez 3D modela in brez risanega ljubljenčka); nad njim zgradimo nativni interaktivni sloj (60 fps, fizikalni predmeti, zvok, haptika).
 > **Oznake:** **SPREMEMBA PRAVILA — potrdi David** = obstoječe pravilo iz `PRODUCT_SPEC.md` / `CAT_SPEC.md` / `PLAY_CUDDLE_SPEC.md` se spremeni. **(D)** = Claudov predlog brez spremembe obstoječega pravila. Vse ostalo je opis stanja (s potjo do kode).
 > **Povezano:** `PRODUCT_SPEC.md` §5, §11, §13 · `PLAY_CUDDLE_SPEC.md` · `CAT_SPEC.md` §5 · `APP_REFINEMENT_SPEC.md` §3, §6, §10–§12 · `docs/engineering/SCHOOL_SMOOTH_PLAYBACK.md` · `brand/README.md`.
@@ -15,7 +15,7 @@
 4. **Veriga posnetkov brez skokov:** vsak posnetek igre se začne in konča v isti »osrednji pozi« (hub), naslednji posnetek je že naložen v drugem predvajalniku, menjava ob prvem izrisanem okvirju, nikoli sredi posnetka; kratek preliv samo med enakima pozama.
 5. **Krogi 20–30 s** namesto 60 s; vsak posamezen uspeh je nagrajen takoj (zvezdica), nobene seje »vse ali nič«.
 6. **Palica s peresom (muca):** en lov ~25 s s tremi skoki in ulovom; **izmik šteje samo kot odziv na viden znak** (muca se pritaji → pero miruje, muca skoči → pero zbeži); spamanje ne prinese nič. Popravi dokazano napako v `WandPlayService::score`.
-7. **Šola:** vaja = 2 kroga po 3 ukaze; namesto gumba »Pohvali« velik priboljšek, ki odleti h kužku; »vstane« (obrnjen posnetek, videti kot previjanje traku) zamenja prekrivni odziv.
+7. **Šola:** vaja = 2 kroga po 3 ukaze; namesto gumba »Pohvali« velik priboljšek, ki odleti h kužku — **samo če je družina kupila priboljške (»Želje«), sicer ostane »Pohvali« z ♥** (David 30. 10.); »vstane« (obrnjen posnetek, videti kot previjanje traku) zamenja prekrivni odziv.
 8. **Žoga:** pravi met s fiziko, žoga odleti na stran, kamor kuža steče, kuža se vrne, otrok ga **pokliče** in **ujame žogo** — 3 meti ostanejo, a vsak ima tri dejanja.
 9. **Čiščenje:** jasne, različne ilustracije za kakec, lužo, copat, mačji pesek in praskanje; pobiranje z vrečko, brisanje s krpo, zajemanje z lopatko — z zadovoljivo animacijo.
 10. **Brez novih AI posnetkov** (0 $): vse deluje z obstoječimi posnetki + brezplačnimi izpeljankami ffmpeg; trije izbirni novi posnetki so našteti s ceno (§8.3). Novi sloj potrebuje **nove nativne knjižnice → nov EAS build** (ne pride z OTA).
@@ -381,6 +381,7 @@ Konfiguracija `config/wand.php` → `v2`: `round_ms`, `stalk_ms` 3000, `pounces`
 | `config/wand.php` | ključ `v2` (§5.3). `wand.session_seconds` ostane za v1. |
 | `SchoolClipDerivativeService` → `ClipDerivativeService` | še `ball_waiting_loop` (ping-pong `ball_waiting`), `wand_crouch_loop` (ping-pong zadnje sekunde `wand_stalking`), `ball_running` → `exit_side` (§8.4); isti posel, ista pravila (nice, prlimit, en težek ffmpeg naenkrat), 0 $. |
 | `PetMediaPayload` | novi ključi v `media.phases` / `phase_seconds`; `media.phase_meta.ball_running.exit_side`. Stare aplikacije neznane ključe ignorirajo. |
+| `ChildProfileService` | **faza 1:** `users.game_feedback` (bool, privzeto `true`) — stikalo staršev »Zvoki in vibracija v igrah« prek `PATCH /api/parent/children/{child}/settings` (kot `easy_gestures`); v stanju otroka `settings.game_feedback`, v nadzorni plošči `family.children[].game_feedback`, v izvozu. Samo nastavitev, pravila ga ne berejo. |
 | Readiness | `GameMediaReadiness`: izpeljanka, ki je še ni, igre **ne** zaklene — aplikacija ima nadomestilo (zanka iz izvirnika) kot pri šoli. |
 | Dokumenti | PRODUCT_SPEC §5 / §13, CAT_SPEC §5.2, PLAY_CUDDLE §4, ARCHITECTURE §3 + DIAGRAMS, FEATURES, `schema.ts` — v PR-jih posameznih faz. |
 
@@ -394,7 +395,7 @@ Konfiguracija `config/wand.php` → `v2`: `round_ms`, `stalk_ms` 3000, `pounces`
 Isti sloj; `ClipDeck` namesto posnetkov pokaže poze (začetna poza vloge), prekrivni odziv in fizika ostaneta. Nič se ne prenaša.
 
 ### 7.6 Zvok in otrok
-Brez glasbe, brez zvokov, ki strašijo; glas ukaza (šola) posnet v sl in en (8 kratkih datotek). Zvoki privzeto vklopljeni, upoštevajo tihi način telefona — glej odprto vprašanje V5.
+Brez glasbe, brez zvokov, ki strašijo; glas ukaza (šola) posnet v sl in en (8 kratkih datotek). Zvoki in haptika **privzeto vklopljeni**, upoštevajo tihi način telefona; **stikalo staršev** »Zvoki in vibracija v igrah« na otroka (kot »Lažje kretnje«, `users.game_feedback`, privzeto `true`) — David 30. 10. (V5, V11).
 
 ### 7.7 Česanje, menjava peska, nega pasme, praskanje
 Brez spremembe pravil; prestavitev na `GameScreen`: besedilo zgoraj, celozaslonska žival / predmet, haptika ob vsaki šteti potezi, ✓ ob koncu koraka (3 koraki = 3 pike).
@@ -443,11 +444,11 @@ Strežnik ob izpeljankah primerja zadnji okvir `ball_running` (prazna soba) s sr
 
 ## 9. Faze uvajanja
 
-**Predlog (Claude):** strinjam se z »najprej žoga + prekrivni sloj«, a s **fazo 0 pred tem** — napaka v palici danes vpliva na **rutino in Care Score** (spam šteje, pošten igralec ne), žoga pa nima točk.
+**Odločitev (David 30. 10. 2026):** brez hitrih vmesnih popravkov — »še nismo v produkciji, hočem učinkovito, da ne bomo spet popravljali«. **Faza 0 odpade**; njene vsebine (palica brez »vse ali nič«, besedilo nad odrom, šola brez »posluša« med izvajanjem) se naredijo enkrat, pravilno, v fazah 2 in 3. Vrstni red: 1 → 2 → 3 → 4.
 
 | Faza | Kaj | Zakaj ta vrstni red | Izdaja |
 |---|---|---|---|
-| **0 — hitri popravki** | palica v1.1 na strežniku: zvezdice brez »vse ali nič« za skoke (≥ 50 % skokov namesto vseh), premiki izven polja / prehitri ne štejejo (aplikacija pošlje `in_zone`); besedilo šole in palice **nad oder**, vrstice ≥ 2 s; šola: med izvajanjem brez »posluša« | popravi dokazano napako in dva najglasnejša očitka brez nativnih knjižnic | JS (OTA) + strežnik |
+| ~~0 — hitri popravki~~ | odpade (David 30. 10.) — vsebina v fazah 2 in 3 | — | — |
 | **1 — sloj + žoga + neredi** | `gameLayer` (ClipDeck, ClipQueue, FeedbackLayer, PlayField, GameFx), žoga v2, `ball_waiting_loop`, `exit_side`, nove ilustracije nereda in čiščenje | žoga nima pravil na strežniku → najnižje tveganje za preizkus nativnega sloja na napravi; neredi so samo prikaz | **nov EAS build** (+ OTA JS za stare gradnje ostane v1) |
 | **2 — palica v2** | §5, `wand_crouch_loop`, rules v2 | največ pritožb testerjev; uporabi sloj iz faze 1 | JS + strežnik (sloj je že v gradnji) |
 | **3 — šola v2** | §4.1, krogi, maska namesto release, priboljšek | največ pravil in najpomembnejša učna vsebina → zadnja, ko je sloj preverjen; QA krog (napredek, rutina) | JS + strežnik |
@@ -467,28 +468,28 @@ Merilo za izbirne posnetke A–C: po fazi 3 David pogleda posnetke zaslona na en
 | **C1** | crkljanje = 5 potegov ≥ 60 pt (D) | 3 božanja po ~3 s s premorom (pravilo 3 sekund) |
 | **P1** | igra s palico ~60 s (David 8. 10.) | en lov ~25 s z ulovom |
 | **P2** | šteje samo, če velja vse (8 stran, 4 četrtine, ≥ 50 % stran, vsak skok v 2 s, ne enakomerno) | zvezdice: 3 izmiki + ulov, šteje pri ≥ 2; izmik samo z mirovanjem pred skokom, v 150–1500 ms, v polju, pod hitrostno mejo |
-| **P0** (faza 0) | odziv na **vsak** skok | odziv na ≥ 50 % skokov; premiki izven polja ne štejejo |
+| ~~**P0**~~ | odpade s fazo 0 (David 30. 10.) | — |
 
 Nespremenjeno: okno pohvale, verjetnost ubogljivosti, napredek in upadanje šole, 7 min / dan in pošten delež, rutine, Care Score, cilj in razmik iger muce, merilnik »Igra«, opraskan kavč, žoga (3 meti, mood only), vsa pravila nereda.
 
 ---
 
-## 11. Odprta vprašanja za Davida
+## 11. Vprašanja za Davida in odgovori
 
-| # | Vprašanje | Priporočilo |
-|---|---|---|
-| V1 | Potrdiš spremembe Š1–Š3, C1, P0–P2 (§10)? | da |
-| V2 | Faza 0 pred žogo (popravek palice, ker vpliva na Care Score)? | da |
-| V3 | Maska namesto »vstane« (Š2) — ali raje takoj izbirni posnetek A (1,344 $ na videz × obdobje)? | najprej maska (0 $), A samo po testu |
-| V4 | Faza 1 zahteva nov EAS build v trgovinah (iOS + Android). Ga vežemo na naslednjo izdajo za Android? | da |
-| V5 | Zvoki v igrah: privzeto vklopljeni (upoštevajo tihi način) ali stikalo staršev »Zvoki v igrah«? Glas ukaza v šoli — posnamemo otroški / odrasli glas ali sintetiziran? | vklopljeni + stikalo staršev; posnet glas odrasle osebe sl / en |
-| V6 | Priboljšek namesto gumba »Pohvali« — v redu, da šola uči »priboljšek« (marker + hrana)? Ali »Pohvali« z ♥ ostane? | priboljšek (bliže resničnemu treningu z nagrado) |
-| V7 | Muca: ulov kot zvezdica (otrok mora pustiti) — ali naj ulov ostane samodejen? | zvezdica (uči »pusti, da ujame« [G1]) |
-| V8 | Prag igre s palico ≥ 2 od 4 zvezdic — prestrog / premil? | 2 |
-| V9 | Učna namiga ob čiščenju (»pobereš z vrečko«, »ne kregaj — pelji ga pogosteje ven«) — želiš jih? | da, z virom |
-| V10 | Krogi žoge: ostane 3 meti ali 4 (~35 s)? | 3 (+ »Še en krog«) |
-| V11 | Haptika za otroke — privzeto vklopljena? | da, samo pozitivna |
-| V12 | Neredi: kakec kot »sladoledni zavoj« (prepoznaven, ne gnusen) — v redu, ali raje bolj abstrakten kupček? | zavoj brez obraza |
+| # | Vprašanje | Priporočilo | Odgovor |
+|---|---|---|---|
+| V1 | Potrdiš spremembe Š1–Š3, C1, P0–P2 (§10)? | da | **odprto** — potrdi pred fazo 2 (palica) / 3 (šola) |
+| V2 | Faza 0 pred žogo (popravek palice, ker vpliva na Care Score)? | da | **ne** — faza 0 odpade, vse naenkrat pravilno (David 30. 10.) |
+| V3 | Maska namesto »vstane« (Š2) — ali raje takoj izbirni posnetek A (1,344 $ na videz × obdobje)? | najprej maska (0 $), A samo po testu | odprto |
+| V4 | Faza 1 zahteva nov EAS build v trgovinah (iOS + Android). Ga vežemo na naslednjo izdajo za Android? | da | odprto |
+| V5 | Zvoki v igrah: privzeto vklopljeni (upoštevajo tihi način) ali stikalo staršev »Zvoki v igrah«? Glas ukaza v šoli — posnamemo otroški / odrasli glas ali sintetiziran? | vklopljeni + stikalo staršev; posnet glas odrasle osebe sl / en | **vklopljeni + stikalo staršev** (David 30. 10.); glas ukaza: odprto (faza 3) |
+| V6 | Priboljšek namesto gumba »Pohvali« — v redu, da šola uči »priboljšek« (marker + hrana)? Ali »Pohvali« z ♥ ostane? | priboljšek (bliže resničnemu treningu z nagrado) | **priboljšek, če je družina kupila priboljške (»Želje«), sicer »Pohvali« z ♥** (David 30. 10.); samo videz, ne porabi priboljška (omejitev 2 / dan ostane za domači zaslon) |
+| V7 | Muca: ulov kot zvezdica (otrok mora pustiti) — ali naj ulov ostane samodejen? | zvezdica (uči »pusti, da ujame« [G1]) | odprto |
+| V8 | Prag igre s palico ≥ 2 od 4 zvezdic — prestrog / premil? | 2 | odprto |
+| V9 | Učna namiga ob čiščenju (»pobereš z vrečko«, »ne kregaj — pelji ga pogosteje ven«) — želiš jih? | da, z virom | odprto |
+| V10 | Krogi žoge: ostane 3 meti ali 4 (~35 s)? | 3 (+ »Še en krog«) | **3 meti** (David 30. 10.) |
+| V11 | Haptika za otroke — privzeto vklopljena? | da, samo pozitivna | **da**, s stikalom staršev skupaj z zvokom (David 30. 10.) |
+| V12 | Neredi: kakec kot »sladoledni zavoj« (prepoznaven, ne gnusen) — v redu, ali raje bolj abstrakten kupček? | zavoj brez obraza | **zavoj** (David 30. 10., skica A) |
 
 ---
 
