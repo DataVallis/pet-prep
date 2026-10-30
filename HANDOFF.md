@@ -76,16 +76,7 @@
    Tabela pokaže ljubljenčka, posnetek, razlog in dejanje (`retry` = ponovi v okviru današnjega AI proračuna, `report` = Discord + »LOCKED« v plošči AI medijev). Če je seznam dolg ali preveč stane, sporoči Claudu, preden mine naslednja polna ura. Po prvem urnem zagonu (:17) ponovi isti ukaz in preveri Discord (sporočilo »… school / game clip(s) need an admin«); odklepanje: */admin* → Pets → AI media → **»Generate missing«** (skupni videzi) ali »Approve anyway« (Needs review).
 11. **Ključne slike / poze po fal čakalni vrsti (PR #433, 28. 10. 2026) — po deployu:** sloti, ki jih je stari sinhroni klic pustil `failed` (npr. `pet_media` 190, poza »sit«), se sami ne popravijo vsi: `/admin` → *Pets* → ljubljenček → *AI media* → **»Generate missing«** (skupen videz — privzeto) ali **»Regenerate«** (lastni mediji). Poze in posnetke šole / iger lahko že prej ponovi urni `media:retry-activity-clips` (#434, ≤ 2 poskusa na verigo) — preveri v panelu, ali je slot že `running` / `ready`, preden klikneš. Ključne slike stanj (doma) pobere samo ročni korak.
 
-12. **Stiskanje shranjenih videov (David 30. 10. 2026, veja `feat/media-compress`) — stikalo je privzeto IZKLOPLJENO, nič se ne zgodi, dokler ga ne vklopiš.** Po deployu (najpozneje naslednji dnevni ob 03:17):
-    1. Na strežniku (`ssh -i ~/.ssh/petprep_deploy_key deploy@138.199.172.97`) izmeri na pravih posnetkih — ti ukazi ničesar ne spremenijo:
-       ```
-       docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app php artisan media:compress --dry-run
-       docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app php artisan media:compress --sample=10
-       docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app php artisan media:disk-report
-       ```
-       `--sample=10` za 10 posnetkov izpiše MB prej → potem, prihranek %, povprečni SSIM (≥ 0,98 = videti enako) in najslabšo sličico (≥ 0,95). Izpis pošlji Claudu ali preglej sam; če želiš, enega od posnetkov iz izpisa primerjaj na očeh.
-       **Pozor:** izvirnik se po stiskanju izbriše po 3 urah — vrniti ga je mogoče samo iz off-site varnostne kopije (korak 7 — nastavljena 30. 10.) ali Hetznerjevega dnevnega backupa strežnika (7 dni).
-    2. Če so številke v redu: `/admin` → *Feature switches* / *Funkcije* → **»Video compression (disk)« / »Stiskanje videov (disk)«** → ON → *Save*. Od takrat se tudi **novi posnetki stisnejo, preden jih družina vidi** (vsak je pripravljen ~7 s pozneje). Stiskanje teče ponoči (22.00–6.00, vsako uro do 10 min); naslednje jutro `media:disk-report` pokaže prihranek (stolpca *compressed* / *saved*).
+12. ✅ **Stiskanje shranjenih videov — vklopljeno in preverjeno 30. 10. 2026** (David): 95 / 95 posnetkov, 934 MB → 172 MB (−82 %), kakovost v aplikaciji v redu; novi posnetki se stisnejo pred prvim prikazom. Ostane: naslednji dan `media:disk-report` (originali se izbrišejo ob nočnem zagonu po 3 urah).
 
 13. **Varčni posnetki (strošek AI, David 30. 10. 2026) — stikalo je privzeto IZKLOPLJENO** (PR »frugal clips«). Preden ga vklopiš, si brezplačno oglej, kako bi izgledala B in C (nič se ne plača, ni klica na fal):
     1. Na strežniku (`ssh -i ~/.ssh/petprep_deploy_key deploy@138.199.172.97`): `docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec app php artisan media:frugal-preview --look=<id>` za 1–2 skupna videza psa (id: `/admin` → *Shared looks*; za enega kužka `--pet=<id>`; muc ne prikaže — varčni posnetki so samo za pse). Runbook: `docs/PRODUCTION_DEPLOYMENT.md` §8a.
@@ -160,6 +151,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 6. **M6-W »Želje«** — merged 2026-10-27: server W01 + W02 server part (#417), app W04 / W05 (#416), one QA round done (#417 / #416 fixes on the same PRs). Reaches users with the next daily deploy + OTA. **Next:** David creates the six store products (§1b.9); then M6-W03 item media (`media_ready` always false, treat `media` null until then); device check of the child catalogue, treat chip, parent list, push, redeem after reopening »Želje«.
 
 ## 6. Session log
+
+### 2026-10-30 (cloud, docs) — video compression switched on and verified (`docs/compression-verified`)
+- David: switch on; `media:compress --budget=0` compressed 95 / 95 files, 934.4 MB → 171.7 MB (−82 %), worst-frame SSIM 0.985, 0 rejected / failed; checked in the app — quality fine. Originals deleted by the next night run after the 180-min grace. FEATURES row → 📱. Next: `media:disk-report` the next day.
 
 ### 2026-10-30 (cloud, docs) — off-site backups live (`docs/offsite-backup-verified`)
 - David set up D5 with Claude: Storage Box `u691604` (HEL1), ssh key + config in `/opt/petprep/backup-ssh`, `/opt/petprep/backup.env`, first `backup-offsite.sh` + `verify` passed (DB complete, media 158 / 158), `deploy` crontab 02:17. Also: Hetzner server backups run daily (7 kept). Docs: HANDOFF §1b 7 / §3 / §5, ROADMAP M5-04, FEATURES, DEPLOYMENT D5. Next: monthly `verify`; optional healthcheck URL.
