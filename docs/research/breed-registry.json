@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "29c58dbc8512b181dfdd66d612ea2ce6cfb8ba56b1842566fe63a37d407079e8"
+      "sha256": "933cfd301f29010f841a6683ab13030b4109c0c6ca9eb0c88a3550466d79d982"
     }
   },
   "suitability_vocabulary": {
@@ -44178,7 +44178,12 @@
           "S613"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "soft-coated-wheaten-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
