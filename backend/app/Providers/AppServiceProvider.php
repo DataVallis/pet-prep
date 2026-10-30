@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Services\BreedCatalogService;
+use App\Services\Media\MediaEntitlementService;
 use App\Services\SystemHealth\ErrorRecorder;
 use App\Support\ClientIp;
 use Illuminate\Cache\RateLimiting\Limit;
@@ -56,6 +57,8 @@ class AppServiceProvider extends ServiceProvider
     {
         // M5-R06-01: one breed catalogue (memo) per request / queued job.
         $this->app->scoped(BreedCatalogService::class);
+        // Frugal clips (QA #451 m5): the fresh switch read is memoised per job / request.
+        $this->app->scoped(MediaEntitlementService::class);
 
         // System health (David 2026-10-19): one recorder per process (its
         // re-entry guard and failure pause must outlive a single job).

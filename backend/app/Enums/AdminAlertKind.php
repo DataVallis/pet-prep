@@ -23,6 +23,8 @@ enum AdminAlertKind: string
     case AppErrorSuppressed = 'app_error_suppressed';
     /** David 2026-10-28: a school / game clip failed for good — that activity stays locked until an admin acts. */
     case ActivityMediaStuck = 'activity_media_stuck';
+    /** David 2026-10-30 (QA #451 m2): a frugal reversal / ping-pong failed for good — made by fal instead. */
+    case FrugalClipFallback = 'frugal_clip_fallback';
     case Test = 'test';
 
     public const COLOUR_INFO = 0x3B82F6;
@@ -35,7 +37,7 @@ enum AdminAlertKind: string
     public function severity(): string
     {
         return match ($this) {
-            self::AiBudgetWarning, self::FalBalanceLow, self::AppErrorNew, self::AppErrorSuppressed, self::ActivityMediaStuck => 'warning',
+            self::AiBudgetWarning, self::FalBalanceLow, self::AppErrorNew, self::AppErrorSuppressed, self::ActivityMediaStuck, self::FrugalClipFallback => 'warning',
             self::AiBudgetBlocked, self::FalBalanceExhausted, self::AppErrorSpike => 'danger',
             self::Test => 'info',
         };
@@ -56,7 +58,7 @@ enum AdminAlertKind: string
     {
         return match ($this) {
             self::AiBudgetWarning, self::AiBudgetBlocked => '/admin/ai-budget',
-            self::ActivityMediaStuck => '/admin/pets',
+            self::ActivityMediaStuck, self::FrugalClipFallback => '/admin/pets',
             self::FalBalanceLow, self::FalBalanceExhausted, self::AppErrorNew, self::AppErrorSpike, self::AppErrorSuppressed, self::Test => '/admin/system-health',
         };
     }

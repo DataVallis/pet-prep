@@ -159,6 +159,23 @@ class PetPreparationService
         $inProgress = [];
         foreach ($this->expectedKeys($pet) as $key) {
             $transition = PetTransition::tryFrom($key);
+            // Frugal clips B (David 2026-10-30): sleeping_to_idle = idle_to_sleeping reversed (ffmpeg,
+            // seconds after it) — ready only once that reversal exists (QA #451 m9; one query, only
+            // for a pet served from the source).
+            $source = $transition !== null ? $this->entitlements->transitionSourceOf($pet, $transition, $slots) : null;
+            if ($source !== null) {
+                $from = $slots->first(fn (PetMedia $m) => $m->isTransition() && $m->state === $source->value);
+                $reversed = $from !== null && app(SchoolClipDerivativeService::class)->servable($from, $key) !== null;
+                if ($reversed) {
+                    continue;
+                }
+                $pending[] = $key;
+                if (! $nothingComing && ($from === null || $from->status !== PetMedia::STATUS_FAILED)) {
+                    $inProgress[] = $key;
+                }
+
+                continue;
+            }
             $slot = match (true) {
                 $key === self::IMAGE => $image,
                 $transition !== null => $slots->first(fn (PetMedia $m) => $m->isTransition() && $m->state === $key),
@@ -222,6 +239,8 @@ class PetPreparationService
             if ($clip->group() !== PetPhaseClip::GROUP_SCHOOL) {
                 continue;
             }
+            // Frugal clips A: a clip served from its source waits for the source.
+            $clip = $this->entitlements->phaseSourceOf($pet, $clip, $slots);
             $slot = $slots->first(fn (PetMedia $m) => $m->isPhase() && $m->state === $clip->value);
             if ($slot?->isShown()) {
                 continue;

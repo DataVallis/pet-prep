@@ -471,6 +471,17 @@ docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app 
 
 ---
 
+### 8a. Frugal clips — preview, then the switch (David 2026-10-30)
+
+The superadmin switch `/admin → Feature switches → »Frugal clips« / »Varčni posnetki«` is **off by default**; on, NEW dog media are made more cheaply (one school attention clip, `sleeping_to_idle` reversed with ffmpeg, 3 s low-motion loops served as a ping-pong — about 2.24 $ less per look and stage; cats never change). Before switching it on, look at the zero-cost preview made from clips that are already stored (no fal call, no AI budget):
+
+```bash
+cd /opt/petprep
+docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec app php artisan media:frugal-preview --look=<look id>   # or --pet=<pet id>; --minutes=120
+```
+
+The command prints signed URLs per clip (`sleeping_to_idle` = idle_to_sleeping reversed, `<state>_loop` = the first 3 s as a ping-pong). They are **capability URLs** — whoever has one can open that preview until it expires — so open them yourself and never post them anywhere shared. Previews live under `previews/frugal/` on the media disk and are deleted after 24 h (`AI_FRUGAL_PREVIEW_KEEP_HOURS`) by the scheduled `media:frugal-preview --prune` (daily 04:41). If the clips look right (no seam, jump or morphing), switch it on in the panel. Turning it off later changes only how NEW media are made; pets made while it was on keep the shared clip until their next generation (David 2026-10-30). ffmpeg here runs `nice -n 19` + `prlimit --as` (`MEDIA_DERIVATIVE_MEMORY_MB`, default 2048) and one heavy ffmpeg job at a time.
+
 ## 9. DNS & Domain Configuration
 
 When assigning a domain name (e.g. `api.petprep.io`):

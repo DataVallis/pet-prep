@@ -68,6 +68,12 @@ Schedule::command('media:retry-activity-clips')
     ->name('retry-activity-clips')
     ->description('Re-queue failed school / game clips that keep an activity locked');
 
+// Daily (frugal clips, QA #451 m7): delete zero-cost previews older than frugal_preview_keep_hours.
+Schedule::command('media:frugal-preview --prune')
+    ->dailyAt('04:41')
+    ->withoutOverlapping(30)
+    ->description('Delete old frugal-clip previews (media:frugal-preview)');
+
 // Every 10 min (school smooth playback, David 2026-10-28): ffmpeg-derived school clips
 // (attention / success loops, release = reversed performing — 0 $ AI cost) for stored
 // school phase clips that have none yet or whose source changed; small batches, so

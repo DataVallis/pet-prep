@@ -2484,6 +2484,8 @@ export interface components {
                 reference_image_url: string | null;
                 /**
                  * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                 *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                 *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                  *     Always a JSON object ({} when empty).
                  */
                 videos: {
@@ -2510,7 +2512,8 @@ export interface components {
                 /**
                  * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                  *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                 *     then the target state's loop. Always an object.
+                 *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                 *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                  */
                 transitions: {
                     [key: string]: string;
@@ -4293,6 +4296,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -4319,7 +4324,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -5189,6 +5195,8 @@ export interface operations {
                                 reference_image_url: string | null;
                                 /**
                                  * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                 *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                 *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                  *     Always a JSON object ({} when empty).
                                  */
                                 videos: {
@@ -5215,7 +5223,8 @@ export interface operations {
                                 /**
                                  * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                  *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                 *     then the target state's loop. Always an object.
+                                 *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                 *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                  */
                                 transitions: {
                                     [key: string]: string;
@@ -6105,6 +6114,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -6131,7 +6142,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -7019,6 +7031,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -7045,7 +7059,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -7933,6 +7948,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -7959,7 +7976,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -8847,6 +8865,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -8873,7 +8893,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -9761,6 +9782,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -9787,7 +9810,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -10679,6 +10703,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -10705,7 +10731,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -11597,6 +11624,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -11623,7 +11652,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -12515,6 +12545,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -12541,7 +12573,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -13429,6 +13462,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -13455,7 +13490,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -14347,6 +14383,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -14373,7 +14411,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -15261,6 +15300,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -15287,7 +15328,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -16175,6 +16217,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -16201,7 +16245,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -17093,6 +17138,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -17119,7 +17166,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -18007,6 +18055,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -18033,7 +18083,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -18925,6 +18976,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -18951,7 +19004,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -19839,6 +19893,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -19865,7 +19921,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -20757,6 +20814,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -20783,7 +20842,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -21675,6 +21735,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -21701,7 +21763,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -22593,6 +22656,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -22619,7 +22684,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -23511,6 +23577,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -23537,7 +23605,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -24429,6 +24498,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -24455,7 +24526,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -25982,6 +26054,8 @@ export interface operations {
                                 reference_image_url: string | null;
                                 /**
                                  * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                 *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                 *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                  *     Always a JSON object ({} when empty).
                                  */
                                 videos: {
@@ -26008,7 +26082,8 @@ export interface operations {
                                 /**
                                  * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                  *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                 *     then the target state's loop. Always an object.
+                                 *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                 *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                  */
                                 transitions: {
                                     [key: string]: string;
@@ -26274,6 +26349,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -26300,7 +26377,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -26771,6 +26849,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -26797,7 +26877,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -28011,6 +28092,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -28037,7 +28120,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;
@@ -28907,6 +28991,8 @@ export interface operations {
                                     reference_image_url: string | null;
                                     /**
                                      * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Frugal clips (2026-10-30): a 3 s sleeping / low_energy / sick loop is served as its
+                                     *     seamless server-made ping-pong (~6 s) once made — loop it as usual.
                                      *     Always a JSON object ({} when empty).
                                      */
                                     videos: {
@@ -28933,7 +29019,8 @@ export interface operations {
                                     /**
                                      * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
                                      *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
-                                     *     then the target state's loop. Always an object.
+                                     *     then the target state's loop. Frugal clips (2026-10-30): sleeping_to_idle may be
+                                     *     idle_to_sleeping reversed on the server (missing until made). Always an object.
                                      */
                                     transitions: {
                                         [key: string]: string;

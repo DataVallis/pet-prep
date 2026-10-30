@@ -107,6 +107,11 @@
        **Pozor:** izvirnik se po stiskanju izbriše po 3 urah — vrniti ga je mogoče samo iz off-site varnostne kopije (korak 7). Priporočilo: najprej uredi korak 7.
     2. Če so številke v redu: `/admin` → *Feature switches* / *Funkcije* → **»Video compression (disk)« / »Stiskanje videov (disk)«** → ON → *Save*. Od takrat se tudi **novi posnetki stisnejo, preden jih družina vidi** (vsak je pripravljen ~7 s pozneje). Stiskanje teče ponoči (22.00–6.00, vsako uro do 10 min); naslednje jutro `media:disk-report` pokaže prihranek (stolpca *compressed* / *saved*).
 
+13. **Varčni posnetki (strošek AI, David 30. 10. 2026) — stikalo je privzeto IZKLOPLJENO** (PR »frugal clips«). Preden ga vklopiš, si brezplačno oglej, kako bi izgledala B in C (nič se ne plača, ni klica na fal):
+    1. Na strežniku (`ssh -i ~/.ssh/petprep_deploy_key deploy@138.199.172.97`): `docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec app php artisan media:frugal-preview --look=<id>` za 1–2 skupna videza psa (id: `/admin` → *Shared looks*; za enega kužka `--pet=<id>`; muc ne prikaže — varčni posnetki so samo za pse). Runbook: `docs/PRODUCTION_DEPLOYMENT.md` §8a.
+    2. Odpri izpisane povezave (delujejo 120 min; kdor ima povezavo, jo lahko odpre — zato samo zate, ne deli jih; datoteke se izbrišejo po 24 h): `sleeping_to_idle` = »budnost → spanje« nazaj (B), `sleeping_loop` / `low_energy_loop` / `sick_loop` = prve 3 s zanke naprej-nazaj (C). Preveri: brez šiva, skoka ali »topljenja«.
+    3. Če je v redu: `/admin` → *Feature switches* → **»Frugal clips on« / »Varčni posnetki vklopljeni«** → Save. Velja za NOVE medije (nove videze in nova obdobja); obstoječi ostanejo. Za A (en posnetek pozornosti) predogled ni potreben — štirje posnetki imajo isti poziv in isto začetno sličico.
+
 ## 2. Decisions
 
 All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top; ~73 rows still marked »čaka Davida«). Standing rules worth knowing before any work:
@@ -145,6 +150,7 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 18. **Shared looks (M5-R21):** old look files stay after regenerate; regenerate does not fix earlier stages; `auto-` keys not migrated when a colour list is added later.
 19. **Media storage:** pet media on the server disk (`app_storage` volume); object storage built behind `PET_MEDIA_DISK=s3` (M4-05, 24. 10., off — David's runbook DEPLOYMENT D23), CDN still open (SCALING.md §1); no per-IP connection limit in Caddy (M4-05b).
 20. **Small code debt found in the audit:** `backend/.env.example` lacks `REVERB_*` (M0-06); `pestphp/*` still in `require` (M0-07); `expo-dev-client` missing (M3-01); no »24-h day« integration test (M1-10); 9 services still call `isParent()` / `isChild()` (M2-03).
+21. **Frugal clips (2026-10-30, switch off, dogs only):** a target slot marked `frugal_source` stays `pending` on purpose (the sweep's resume skips it); after a switch-off such a pet keeps the shared attention clip / reversed transition until its next generation makes its own (decided by David 2026-10-30 — he switches it on once and leaves it on). Quality check of B / C derived clips: none (made from an already checked source); a derivative that fails 3× falls back to fal + admin alert. Full-size ffmpeg peaks ~645 MB RSS (5 s reverse), capped by `prlimit --as` 2048 MB, one heavy ffmpeg job at a time (shared lock `media-ffmpeg-heavy` — wire PR #450's compression into it once both are on `main`).
 
 ## 4. Environment & configuration
 

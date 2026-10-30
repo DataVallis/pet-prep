@@ -287,6 +287,13 @@ return [
         'phase_clips_description' => 'Vklopljeno (privzeto, David 21. 10. 2026): ljubljenčki z mediji stanj različice 3 (kupljen polni nabor) dobijo še kratek posnetek za vsako fazo ukaza v šoli (3 s; »izvedba« 5 s od 23. 10. 2026) (pozornost → izvedba → uspeh; potrebica = kuža gre do vrat) in za vsako fazo igre (žoga: čaka → steče iz kadra → jo prinese nazaj; palica s peresom: preža → skok → ulov) ter njihove slike poz (okoli 0,34 $ na 3-sekundni posnetek, 0,56 $ na 5-sekundno izvedbo, 0,15 $ na sliko poze; skupni videzi jih naredijo enkrat). Potrebuje tudi »Mediji stanj vklopljeni«. Izklopljeno: slik poz in posnetkov faz se ne ustvarja — tudi tistih, ki že čakajo v vrsti, pri ponovnih poskusih ali čiščenju ne; igre in šola uporabljajo starejše posnetke in pravila. Ponoven vklop takoj nadaljuje čakajoče.',
         'phase_clips' => 'Posnetki šole in iger vklopljeni',
         'saved_body_phase_clips' => 'Posnetki šole in iger: :state',
+        'frugal_clips_section' => 'Varčni posnetki (strošek AI)',
+        'frugal_clips_description' => 'Izklopljeno (privzeto). Vklopljeno (David 30. 10. 2026): NOVI mediji kužkov se naredijo ceneje, okoli 2,24 $ manj na videz in življenjsko obdobje — A. en posnetek »pozornosti« v šoli (sedi) velja tudi za pridi, prostor in potrebico (isti poziv in sličici; −9 s ≈ 1,01 $); B. »spanje → budnost« je »budnost → spanje«, predvajan nazaj na našem strežniku (ffmpeg, 0 $; −5 s ≈ 0,56 $); C. zanke spanja, utrujenosti in bolezni se naredijo 3 s namesto 5 s in se predvajajo kot nevidna zanka naprej in nazaj (−6 s ≈ 0,67 $). Že shranjeni posnetki (štirje posnetki pozornosti, lastni prehodi, 5-sekundne zanke) se kažejo kot doslej; šola ostane zaklenjena, dokler njeni posnetki niso pripravljeni. Pred vklopom zaženi `media:frugal-preview --look=…` in si oglej posnetke (0 $).',
+        'frugal_clips' => 'Varčni posnetki vklopljeni',
+        'saved_body_frugal_clips' => 'Varčni posnetki: :state',
+        'frugal_made_as_phase' => 'iz posnetka pozornosti »sedi« (varčni posnetki)',
+        'frugal_made_as_transition' => 'obrnjen »budnost → spanje« na našem strežniku (varčni posnetki)',
+        'frugal_regenerate_refused' => 'Varčni posnetki so vklopljeni: ta posnetek se kaže iz :source — ponovno ustvari tistega.',
         'quality_check_section' => 'Preverjanje kakovosti posnetkov',
         'quality_check_description' => 'David 23. 10. 2026: vsak nov AI posnetek je preverjen — brezplačno tehnično (ffmpeg: dolžina, zamrznjena slika, nenadni skoki, gibanje zgoščeno na koncu, zadnja sličica proti končni sliki) in AI preverjanje 6 sličic (anatomija, ista žival, dejanje se res zgodi, napake; produkcijski AI proračun, ocena ≤ 0,01 $ na posnetek; brez proračuna ali z izklopljenim modelom odloča samo tehnično — »ni AI-preverjen«). SENCA (privzeto, dokler meje niso umerjene na pravih posnetkih): rezultati in meritve se zapišejo in vidijo v Ljubljenček → AI mediji (»bi padel«), vsak posnetek se še vedno prikaže, nič se ne ustvari znova. UVELJAVI: dokler nov posnetek ne prestane preverjanja, ostane viden stari; neuspešen se ENKRAT samodejno ustvari znova, drugi neuspeh se ne prikaže (aplikacija uporabi nadomestek) in je »Potrebuje pregled«. IZKLOP: brez preverjanja (staro delovanje).',
         'quality_check_off' => 'Izklop — brez preverjanja',
@@ -550,6 +557,12 @@ return [
         'run' => ':pets ljubljenčkov, ocena $:cost',
     ],
     // David 2026-10-28: school / game clips that failed for good (ActivityClipRetryService).
+    'frugal_clips' => [
+        'discord' => [
+            'title' => 'Varčni posnetki: :count posnetkov s strežnika ni uspelo — naredi jih fal',
+            'body' => 'Obrnjenega prehoda ali zanke naprej-nazaj ffmpeg 3-krat ni mogel narediti, zato se ta posnetek ustvari po običajni poti (običajna cena). Preveri ffmpeg / pomnilnik na strežniku (Zdravje sistema).',
+        ],
+    ],
     'activity_media' => [
         'discord' => [
             'title' => ':count posnetkov šole / igre potrebuje skrbnika',

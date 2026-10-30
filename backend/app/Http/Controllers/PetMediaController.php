@@ -7,6 +7,7 @@ use App\Models\PetMedia;
 use App\Models\PetMediaHistory;
 use App\Models\PetMediaQualityCheck;
 use App\Models\User;
+use App\Services\Media\FrugalClipPreview;
 use App\Services\Media\MediaStorage;
 use App\Services\Media\PetMediaService;
 use App\Services\Media\SchoolClipDerivativeService;
@@ -120,6 +121,24 @@ class PetMediaController extends Controller
     public function showCandidate(PetMedia $media, PetMediaService $service): Response
     {
         return $this->serve($media->pet, filled($media->candidate_path), (string) $media->candidate_path, (string) ($media->candidate_mime ?? 'video/mp4'), $service);
+    }
+
+    /**
+     * GET /api/media/{media}/frugal-preview/{key}?expires=…&signature=… (frugal clips, David 2026-10-30)
+     *
+     * A zero-cost preview made by `media:frugal-preview` from the stored clip `{media}` (the
+     * row owning the file): `sleeping_to_idle` (idle_to_sleeping reversed) or `<state>_loop`
+     * (ping-pong of the first 3 s). The signed URL is printed only to the superadmin running
+     * the command (like the quality-check candidate); never in an app payload. Same capability
+     * rules as show(); 404 when no preview exists. Internal (not in the API docs).
+     */
+    #[ExcludeRouteFromDocs]
+    public function showFrugalPreview(PetMedia $media, string $key, PetMediaService $service): Response
+    {
+        $path = FrugalClipPreview::pathFor((int) $media->id, $key);
+        $known = in_array($key, FrugalClipPreview::keys(), true);
+
+        return $this->serve($media->pet, $known, $known ? $path : '', 'video/mp4', $service);
     }
 
     private function serve(?Pet $pet, bool $servable, string $path, string $mime, PetMediaService $service): Response

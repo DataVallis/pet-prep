@@ -121,6 +121,11 @@ Route::get('media/quality-sheets/{check}', [PetMediaController::class, 'showQual
 Route::get('media/candidates/{media}', [PetMediaController::class, 'showCandidate'])
     ->middleware(['signed:relative', 'throttle:media'])
     ->name('media.candidate');
+// Frugal clips (David 2026-10-30): zero-cost previews from `media:frugal-preview` — URLs issued only to a superadmin.
+Route::get('media/{media}/frugal-preview/{key}', [PetMediaController::class, 'showFrugalPreview'])
+    ->where('key', '[a-z_]{1,64}')
+    ->middleware(['signed:relative', 'throttle:media'])
+    ->name('media.frugal-preview');
 // M2-01d: Responsibility Certificate PDF (parents of the family + the child of the row).
 Route::get('certificates/{certificate}/pdf', [CertificateController::class, 'pdf'])
     ->middleware(['signed:relative', 'throttle:media'])

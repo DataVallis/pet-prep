@@ -13,6 +13,7 @@ use App\Models\Family;
 use App\Models\FamilyMember;
 use App\Models\User;
 use App\Services\Media\AiBudgetMonitor;
+use App\Services\Media\MediaEntitlementService;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -48,6 +49,12 @@ use InvalidArgumentException;
  * phaseClipsFor). Needs state media on as well. No row → env AI_PHASE_CLIPS_ENABLED
  * (default true).
  *
+ * `frugal_clips` (David 2026-10-30: three AI-cost savings for dog media, default OFF) =
+ * {enabled: bool}: one shared school attention clip, sleeping_to_idle reversed from
+ * idle_to_sleeping (ffmpeg), 3 s low-motion loops served as a ping-pong
+ * (MediaEntitlementService::frugalClipsEnabled). Only changes how NEW media are made.
+ * No row → env AI_FRUGAL_CLIPS_ENABLED (default false).
+ *
  * `fal_balance_alert` (M5-T15, David 2026-10-22) = {min_usd: float|null}: warn the
  * superadmins when the fal.ai account balance is below it. No row → 20 $.
  *
@@ -81,6 +88,9 @@ class AppSettingsService
 
     /** M5-T09 / T10 (QA M2): `{enabled: bool}` — school & game phase clips on / off (no row → env default, on). */
     public const PHASE_CLIPS_KEY = 'phase_clips';
+
+    /** David 2026-10-30: `{enabled: bool}` — frugal clips on / off (no row → env default, OFF). */
+    public const FRUGAL_CLIPS_KEY = 'frugal_clips';
 
     /** David 2026-10-23 / QA #363 M1: `{mode: off|shadow|enforce}` — clip quality check (no row → env default, shadow). */
     public const QUALITY_CHECK_KEY = 'quality_check';
@@ -507,6 +517,40 @@ class AppSettingsService
     public static function phaseClipsDefault(): bool
     {
         return (bool) config('media.state_media.phase_clips_enabled', true);
+    }
+
+    /**
+     * Frugal clips (David 2026-10-30, default OFF): on = NEW dog media are made more cheaply —
+     * one school attention clip for every command, sleeping_to_idle reversed from
+     * idle_to_sleeping with ffmpeg, the low-motion loops 3 s + ping-pong. Stored media keep
+     * being served as they are. `$fresh` reads the row itself (the fal entry points). No row →
+     * env AI_FRUGAL_CLIPS_ENABLED (`media.state_media.frugal_clips_enabled`, default false).
+     */
+    public function frugalClips(bool $fresh = false): bool
+    {
+        /** @var array{enabled?: bool} $value */
+        $value = $fresh
+            ? (AppSetting::find(self::FRUGAL_CLIPS_KEY)?->value ?? [])
+            : Cache::remember(self::cacheKey(self::FRUGAL_CLIPS_KEY), self::CACHE_TTL_SECONDS,
+                fn (): array => AppSetting::find(self::FRUGAL_CLIPS_KEY)?->value ?? []);
+
+        return array_key_exists('enabled', $value)
+            ? (bool) $value['enabled']
+            : self::frugalClipsDefault();
+    }
+
+    /** Save the frugal clips switch (superadmin), audit it and bust the cache. */
+    public function updateFrugalClips(User $actor, bool $enabled): void
+    {
+        $this->store($actor, self::FRUGAL_CLIPS_KEY, ['enabled' => $enabled], ['enabled' => self::frugalClipsDefault()]);
+        // The memoised fresh read of this request (MediaEntitlementService is scoped).
+        app(MediaEntitlementService::class)->forgetFrugalSwitch();
+    }
+
+    /** The value "no row" stands for (env AI_FRUGAL_CLIPS_ENABLED, default off). */
+    public static function frugalClipsDefault(): bool
+    {
+        return (bool) config('media.state_media.frugal_clips_enabled', false);
     }
 
     /**

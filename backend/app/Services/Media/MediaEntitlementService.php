@@ -2,6 +2,7 @@
 
 namespace App\Services\Media;
 
+use App\Enums\BreedType;
 use App\Enums\ChallengePaidSource;
 use App\Enums\LifeStage;
 use App\Enums\PetPhaseClip;
@@ -9,8 +10,12 @@ use App\Enums\PetPlan;
 use App\Enums\PetPose;
 use App\Enums\PetStateEnum;
 use App\Enums\PetTransition;
+use App\Enums\Species;
 use App\Models\Pet;
+use App\Models\PetMedia;
+use App\Models\PetMediaDerivative;
 use App\Services\AppSettingsService;
+use Illuminate\Support\Collection;
 
 /**
  * Which AI state videos a pet gets at birth (M4-03).
@@ -72,6 +77,18 @@ use App\Services\AppSettingsService;
  * the state media switch on — plus their own superadmin switch »School & game
  * clips« ({@see phaseClipsEnabled()}, QA M2); existing pets get nothing automatically
  * (a v2 pet only on a purchase or the admin upgrade, David 2026-10-21).
+ *
+ * Frugal clips (David 2026-10-30, AI cost, superadmin switch `frugal_clips`, default OFF —
+ * {@see frugalClipsEnabled()}): the SETS above never change ({@see phaseClipsFor()} and
+ * {@see transitionsFor()} stay the one source of generation, readiness, preparation and the
+ * payload's `phase_groups`); what changes is where an item's MEDIA come from. A frugal
+ * TARGET (come / place / potty attention → {@see FRUGAL_PHASE_SOURCES}; sleeping_to_idle →
+ * {@see FRUGAL_REVERSED_TRANSITIONS}) without media of its own is served from its source
+ * ({@see phaseSourceOf()}, {@see transitionSourceOf()}) and is not generated
+ * ({@see phaseClipsToGenerateFor()}, {@see transitionsToGenerateFor()},
+ * {@see generatesFromSource()}). A target that has its own file (or is being made) always
+ * keeps it — existing pets / looks are served exactly as before. The low-motion loops
+ * ({@see shortLoop()}) are generated 3 s and served as their ffmpeg ping-pong.
  */
 class MediaEntitlementService
 {
@@ -94,6 +111,328 @@ class MediaEntitlementService
     public function phaseClipsEnabled(bool $fresh = false): bool
     {
         return $this->settings->phaseClips($fresh);
+    }
+
+    /** QA #451 m5: the fresh switch read, memoised for this scoped instance (one job / request). */
+    private ?bool $frugalFresh = null;
+
+    /**
+     * Frugal clips (David 2026-10-30): the superadmin switch (/admin → Feature switches,
+     * `app_settings.frugal_clips`, default OFF). On = NEW DOG media are made the frugal way
+     * (class doc); off = exactly the pre-2026-10-30 generation. Read it `fresh` at every fal
+     * entry point (like {@see stateMediaEnabled()}); the fresh read is memoised per job /
+     * request (this service is bound `scoped`), so a run reads the row once.
+     */
+    public function frugalClipsEnabled(bool $fresh = false): bool
+    {
+        if ($fresh) {
+            return $this->frugalFresh ??= $this->settings->frugalClips(fresh: true);
+        }
+
+        return $this->frugalFresh ?? $this->settings->frugalClips();
+    }
+
+    /** Forget the memoised fresh read (tests, the Feature switches save). */
+    public function forgetFrugalSwitch(): void
+    {
+        $this->frugalFresh = null;
+    }
+
+    /** QA #451 major 1 (David: dogs only): the switch applies to dogs, never to cats. */
+    public function frugalFor(Species $species, bool $fresh = false): bool
+    {
+        return $species === Species::Dog && $this->frugalClipsEnabled($fresh);
+    }
+
+    /**
+     * Frugal clips A: these school attention clips are served from the sit attention clip
+     * (PetPhaseClip::motion() gives all four the same prompt, the same start frame — the
+     * reference image — and no end frame).
+     *
+     * @var array<string, string> target phase clip => source phase clip
+     */
+    public const FRUGAL_PHASE_SOURCES = [
+        'school_come_attention' => 'school_sit_attention',
+        'school_place_attention' => 'school_sit_attention',
+        'school_potty_attention' => 'school_sit_attention',
+    ];
+
+    /**
+     * Frugal clips B: this transition is the source transition reversed with ffmpeg
+     * (SchoolClipDerivativeService, 0 $), served under the target's payload key.
+     *
+     * @var array<string, string> target transition => source transition
+     */
+    public const FRUGAL_REVERSED_TRANSITIONS = [
+        'sleeping_to_idle' => 'idle_to_sleeping',
+    ];
+
+    public static function isFrugalTarget(string $kind, string $state): bool
+    {
+        return match ($kind) {
+            PetMedia::KIND_PHASE => isset(self::FRUGAL_PHASE_SOURCES[$state]),
+            PetMedia::KIND_TRANSITION => isset(self::FRUGAL_REVERSED_TRANSITIONS[$state]),
+            default => false,
+        };
+    }
+
+    /** The source state of a frugal target (null for every other clip). */
+    public static function frugalSourceOf(string $kind, string $state): ?string
+    {
+        return match ($kind) {
+            PetMedia::KIND_PHASE => self::FRUGAL_PHASE_SOURCES[$state] ?? null,
+            PetMedia::KIND_TRANSITION => self::FRUGAL_REVERSED_TRANSITIONS[$state] ?? null,
+            default => null,
+        };
+    }
+
+    /**
+     * QA #451 B1: the generation of the pet's CURRENT reference image (null = none stored) — a
+     * clip counts as the pet's own only when it was made from it (a previous life stage's file
+     * is stale, exactly like poseImage() / frameImage()).
+     *
+     * @param  Collection<int, PetMedia>  $slots
+     */
+    public static function imageGeneration(Collection $slots): ?int
+    {
+        $image = $slots->first(fn (PetMedia $m) => $m->isImage());
+
+        return $image !== null && $image->isServable() ? (int) $image->generation : null;
+    }
+
+    /** A stored file made from the current reference image generation (`null` = no image known). */
+    public static function isCurrentClip(?PetMedia $own, ?int $imageGeneration): bool
+    {
+        return $own !== null && $own->isServable()
+            && ($imageGeneration === null || (int) $own->source_generation >= $imageGeneration);
+    }
+
+    /**
+     * SERVING side (payload, readiness, preparation): is a frugal target of this pet shown from
+     * its source? When it has no CURRENT clip of its own (QA #451 B1: a previous stage's file does
+     * not count) and either the switch is on (dogs) or the slot is marked `pet_media.frugal_source`
+     * — a pet made with the switch on keeps the source after a switch-off until its next
+     * generation (David 2026-10-30). A pet never touched by the switch is judged as before.
+     *
+     * @param  Collection<int, PetMedia>  $slots  the pet's media rows (with its image row)
+     */
+    public function servesFromSource(Pet $pet, ?PetMedia $own, Collection $slots): bool
+    {
+        if (self::isCurrentClip($own, self::imageGeneration($slots))) {
+            return false;
+        }
+
+        return $own?->frugal_source !== null || $this->frugalFor($pet->speciesValue());
+    }
+
+    /**
+     * The phase clip whose media show $clip for a pet with these slots: $clip itself, or (a
+     * frugal target served from its source) the sit attention clip.
+     *
+     * @param  Collection<int, PetMedia>  $slots  the pet's media rows (with its image row)
+     */
+    public function phaseSourceOf(Pet $pet, PetPhaseClip $clip, Collection $slots): PetPhaseClip
+    {
+        $source = self::FRUGAL_PHASE_SOURCES[$clip->value] ?? null;
+
+        if ($source === null) {
+            return $clip;
+        }
+
+        $own = $slots->first(fn (PetMedia $m) => $m->isPhase() && $m->state === $clip->value);
+
+        return $this->servesFromSource($pet, $own, $slots) ? PetPhaseClip::from($source) : $clip;
+    }
+
+    /**
+     * The transition $transition is DERIVED from (reversed) for a pet with these slots, or null
+     * when it is shown from its own clip.
+     *
+     * @param  Collection<int, PetMedia>  $slots
+     */
+    public function transitionSourceOf(Pet $pet, PetTransition $transition, Collection $slots): ?PetTransition
+    {
+        $source = self::FRUGAL_REVERSED_TRANSITIONS[$transition->value] ?? null;
+
+        if ($source === null) {
+            return null;
+        }
+
+        $own = $slots->first(fn (PetMedia $m) => $m->isTransition() && $m->state === $transition->value);
+
+        return $this->servesFromSource($pet, $own, $slots) ? PetTransition::from($source) : null;
+    }
+
+    /**
+     * {@see phaseClipsFor()} without the frugal targets left to their source — what is
+     * GENERATED (queueStateVideos, planMissing / costs, the submit guards).
+     * `$imageGeneration` overrides the current one (a planned stage remake: every stored clip
+     * becomes stale — QA #451 B1).
+     *
+     * @param  Collection<int, PetMedia>|null  $slots  the pet's media rows when already loaded
+     * @return list<PetPhaseClip>
+     */
+    public function phaseClipsToGenerateFor(Pet $pet, ?Collection $slots = null, bool $fresh = false, ?int $imageGeneration = null): array
+    {
+        $clips = $this->phaseClipsFor($pet);
+
+        if ($clips === [] || ! $this->frugalFor($pet->speciesValue(), $fresh)) {
+            return $clips;
+        }
+
+        $slots ??= $pet->media()->get();
+
+        return array_values(array_filter($clips, fn (PetPhaseClip $c) => ! $this->leftToSource($pet, PetMedia::KIND_PHASE, $c->value, $slots, $fresh, $imageGeneration)));
+    }
+
+    /**
+     * {@see transitionsFor()} without the frugal targets derived from their source.
+     *
+     * @param  Collection<int, PetMedia>|null  $slots
+     * @return list<PetTransition>
+     */
+    public function transitionsToGenerateFor(Pet $pet, ?Collection $slots = null, bool $fresh = false, ?int $imageGeneration = null): array
+    {
+        $transitions = $this->transitionsFor($pet);
+
+        if ($transitions === [] || ! $this->frugalFor($pet->speciesValue(), $fresh)) {
+            return $transitions;
+        }
+
+        $slots ??= $pet->media()->get();
+
+        return array_values(array_filter($transitions, fn (PetTransition $t) => ! $this->leftToSource($pet, PetMedia::KIND_TRANSITION, $t->value, $slots, $fresh, $imageGeneration)));
+    }
+
+    /**
+     * GENERATION side for one target of a pet: not generated now? The switch on (dogs), and:
+     *  - a shared-look pet (QA #451 B1): the look has no such clip at the pet's CURRENT stage
+     *    (a file or a request in progress — linking it costs 0 $); the pet's own (older) row
+     *    does not matter;
+     *  - a pet with its own media: no current clip and no paid request in progress;
+     *  - B: never while the reversal of the pet's idle_to_sleeping failed for good (QA #451 m2:
+     *    then sleeping_to_idle is generated the normal way).
+     *
+     * @param  Collection<int, PetMedia>  $slots  the pet's media rows (with its image row)
+     */
+    public function leftToSource(Pet $pet, string $kind, string $state, Collection $slots, bool $fresh = false, ?int $imageGeneration = null): bool
+    {
+        if (! self::isFrugalTarget($kind, $state) || ! $this->frugalFor($pet->speciesValue(), $fresh)) {
+            return false;
+        }
+
+        if ($kind === PetMedia::KIND_TRANSITION && $this->reversalFailedFor($slots->first(fn (PetMedia $m) => $m->isTransition() && $m->state === self::FRUGAL_REVERSED_TRANSITIONS[$state]))) {
+            return false;
+        }
+
+        if ($pet->usesLookPool()) {
+            return ! $this->lookHasIt($pet, $kind, $state);
+        }
+
+        $own = $slots->first(fn (PetMedia $m) => $m->kind === $kind && $m->state === $state);
+
+        return ! self::isCurrentClip($own, $imageGeneration ?? self::imageGeneration($slots))
+            && ! ($own?->status === PetMedia::STATUS_RUNNING && $own->request_id !== null);
+    }
+
+    /**
+     * Is this slot (a pet's or a look's phase clip / transition) a frugal target that is not
+     * generated now? The submit guards (PetMediaService::wantsPoseMedia / submitLookVideo), the
+     * retries and the admin panel.
+     */
+    public function slotLeftToSource(PetMedia $slot, bool $fresh = false): bool
+    {
+        if (! self::isFrugalTarget((string) $slot->kind, (string) $slot->state)) {
+            return false;
+        }
+
+        if ($slot->isLookMedia()) {
+            $look = $slot->look;
+            if ($look === null || ! $this->frugalFor($look->breed_type->species(), $fresh)) {
+                return false;
+            }
+            if ($slot->isTransition() && $this->reversalFailedFor(PetMedia::query()->where('pet_look_id', $look->id)
+                ->where('kind', PetMedia::KIND_TRANSITION)->where('state', self::FRUGAL_REVERSED_TRANSITIONS[$slot->state])
+                ->where('life_stage', $slot->life_stage)->first())) {
+                return false;
+            }
+
+            return ! $slot->isServable() && $slot->status !== PetMedia::STATUS_RUNNING;
+        }
+
+        $pet = $slot->pet;
+
+        return $pet !== null && $this->leftToSource($pet, (string) $slot->kind, (string) $slot->state, $pet->media()->get(), $fresh);
+    }
+
+    /**
+     * QA #451 m2: the reversal of this idle_to_sleeping row's CURRENT file failed for good (the
+     * owner row's derived `sleeping_to_idle`, MAX_ATTEMPTS) — sleeping_to_idle is then made by fal.
+     */
+    private function reversalFailedFor(?PetMedia $source): bool
+    {
+        if ($source === null || ! $source->isServable()) {
+            return false;
+        }
+
+        $target = array_search((string) $source->state, self::FRUGAL_REVERSED_TRANSITIONS, true);
+
+        return is_string($target) && self::derivativeFailedFor($source, $target);
+    }
+
+    /** The owner row's derived clip `$key` of the source's current file failed MAX_ATTEMPTS times. */
+    public static function derivativeFailedFor(PetMedia $source, string $key): bool
+    {
+        return PetMediaDerivative::query()
+            ->where('pet_media_id', (int) ($source->look_media_id ?? $source->id))
+            ->where('key', $key)
+            ->where('status', PetMediaDerivative::STATUS_FAILED)
+            ->where('source_path', (string) $source->storage_path)
+            ->where('attempts', '>=', SchoolClipDerivativeService::MAX_ATTEMPTS)
+            ->exists();
+    }
+
+    /**
+     * A shared look (pool / breed + colour) that has the target at the pet's stage (a file or a
+     * request in progress): linking it costs 0 $, so the pet keeps it like any look clip.
+     */
+    private function lookHasIt(Pet $pet, string $kind, string $state): bool
+    {
+        if ($pet->life_stage === null) {
+            return false;
+        }
+
+        return PetMedia::query()->where('pet_look_id', $pet->pet_look_id)->where('kind', $kind)->where('state', $state)
+            ->where('life_stage', $pet->life_stage->value)
+            ->where(fn ($q) => $q->whereNotNull('storage_path')->orWhere('status', PetMedia::STATUS_RUNNING))
+            ->exists();
+    }
+
+    /**
+     * Frugal clips C: is a NEW loop of this state generated short (`clip_seconds.state_short`,
+     * 3 s) and served as a ping-pong? The switch on, a dog, a low-motion state — and (QA #451 m2)
+     * not for a row whose current short loop's ping-pong failed for good (then a normal 5 s loop
+     * is made). `$row` = the row being submitted (a pet's own row or a look row).
+     */
+    public function shortLoop(Species $species, PetStateEnum $state, ?PetMedia $row = null, bool $fresh = false): bool
+    {
+        if (! in_array($state->value, self::shortLoopStates(), true) || ! $this->frugalFor($species, $fresh)) {
+            return false;
+        }
+
+        return $row === null || ! $row->isServable() || ! self::derivativeFailedFor($row, $state->value.'_'.SchoolClipDerivativeService::SUFFIX_LOOP);
+    }
+
+    /** @return list<string> the low-motion states whose frugal loops are 3 s + ping-pong */
+    public static function shortLoopStates(): array
+    {
+        return array_values(array_map('strval', (array) config('media.state_media.frugal.short_loop_states', [])));
+    }
+
+    /** @return list<string> the dog breed values (SQL filters of the frugal rules) */
+    public static function dogBreedValues(): array
+    {
+        return array_values(array_map(fn (BreedType $b) => $b->value, array_filter(BreedType::cases(), fn (BreedType $b) => $b->species() === Species::Dog)));
     }
 
     /**
