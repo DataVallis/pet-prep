@@ -961,6 +961,19 @@
             "prompt_hash": "sha256:5bb9479f2360898914f23a537d8dc94870a9b881708b523bde2b388871cda370",
             "generated_at": "2026-10-30T00:51:11+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "irish_wolfhound",
+            "species": "dog",
+            "colour": "grey",
+            "file": "dog/irish-wolfhound.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:cbc11ee6b22de875c61fae8865e7817b1f7eb1729c3e3dd2560351247f18ec4d",
+            "generated_at": "2026-10-30T03:55:52+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
