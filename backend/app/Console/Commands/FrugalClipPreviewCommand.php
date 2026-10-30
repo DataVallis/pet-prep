@@ -21,7 +21,7 @@ class FrugalClipPreviewCommand extends Command
         {--minutes=120 : How long the printed URLs work}
         {--prune : Only delete previews older than media.state_media.frugal_preview_keep_hours (scheduled daily)}';
 
-    protected $description = 'Preview the frugal clips (reversed idle_to_sleeping, 3 s ping-pong loops) from stored clips — 0 $, no fal call';
+    protected $description = 'Preview the frugal 3 s ping-pong loops from stored clips — 0 $, no fal call';
 
     public function handle(FrugalClipPreview $preview): int
     {

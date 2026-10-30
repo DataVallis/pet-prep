@@ -473,14 +473,26 @@ docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app 
 
 ### 8a. Frugal clips — preview, then the switch (David 2026-10-30)
 
-The superadmin switch `/admin → Feature switches → »Frugal clips« / »Varčni posnetki«` is **off by default**; on, NEW dog media are made more cheaply (one school attention clip, `sleeping_to_idle` reversed with ffmpeg, 3 s low-motion loops served as a ping-pong — about 2.24 $ less per look and stage; cats never change). Before switching it on, look at the zero-cost preview made from clips that are already stored (no fal call, no AI budget):
+The superadmin switch `/admin → Feature switches → »Frugal clips« / »Varčni posnetki«` is **off by default**; on, NEW dog media are made more cheaply (one school attention clip, 3 s low-motion loops served as a ping-pong — about 1.68 $ less per look and stage; cats never change). `sleeping_to_idle` is always made by fal: the reversed `idle_to_sleeping` was dropped on 2026-10-30 (David: »looks like rewinding a tape«) — repair the reversed ones already made with `media:frugal-unreverse` (§8b). Before switching it on, look at the zero-cost preview of the short loops made from clips that are already stored (no fal call, no AI budget):
 
 ```bash
 cd /opt/petprep
 docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec app php artisan media:frugal-preview --look=<look id>   # or --pet=<pet id>; --minutes=120
 ```
 
-The command prints signed URLs per clip (`sleeping_to_idle` = idle_to_sleeping reversed, `<state>_loop` = the first 3 s as a ping-pong). They are **capability URLs** — whoever has one can open that preview until it expires — so open them yourself and never post them anywhere shared. Previews live under `previews/frugal/` on the media disk and are deleted after 24 h (`AI_FRUGAL_PREVIEW_KEEP_HOURS`) by the scheduled `media:frugal-preview --prune` (daily 04:41). If the clips look right (no seam, jump or morphing), switch it on in the panel. Turning it off later changes only how NEW media are made; pets made while it was on keep the shared clip until their next generation (David 2026-10-30). ffmpeg here runs `nice -n 19` + `prlimit --as` (`MEDIA_DERIVATIVE_MEMORY_MB`, default 2048) and one heavy ffmpeg job at a time (shared with `media:compress`). `media:disk-report` lists the previews on their own line (not as orphans).
+The command prints signed URLs per clip (`<state>_loop` = the first 3 s as a ping-pong). They are **capability URLs** — whoever has one can open that preview until it expires — so open them yourself and never post them anywhere shared. Previews live under `previews/frugal/` on the media disk and are deleted after 24 h (`AI_FRUGAL_PREVIEW_KEEP_HOURS`) by the scheduled `media:frugal-preview --prune` (daily 04:41). If the clips look right (no seam, jump or morphing), switch it on in the panel. Turning it off later changes only how NEW media are made; pets made while it was on keep the shared clip until their next generation (David 2026-10-30). ffmpeg here runs `nice -n 19` + `prlimit --as` (`MEDIA_DERIVATIVE_MEMORY_MB`, default 2048) and one heavy ffmpeg job at a time (shared with `media:compress`). `media:disk-report` lists the previews on their own line (not as orphans).
+
+### 8b. Replace the reversed `sleeping_to_idle` clips (David 2026-10-30)
+
+Pets / shared looks made while the reversal existed show the reversed clip until they get a real one. Manual only (never scheduled); the dry run is free:
+
+```bash
+cd /opt/petprep/repo/backend
+docker compose -p backend -f compose.production.yaml exec app php artisan media:frugal-unreverse --dry-run
+docker compose -p backend -f compose.production.yaml exec app php artisan media:frugal-unreverse            # optional --limit=<items>
+```
+
+The table lists one row per item — `pet <id>` (own media) or `look <id>` (a shared look + stage, generated ONCE for all its pets) — with the stage, the look row, the pet slots, the pets, the action (`generate` = new fal clip, `link` / `wait` = the look already has one / one is being made, 0 $) and the estimated cost (5 s Kling ≈ 0.56 $ per `generate`), then a summary with today's / this month's budget left. The real run refuses (nothing queued) when the total does not fit the AI budget — use `--limit`. It queues the normal pipeline (fal → quality check → compress-on-store); the reversed clip stays visible until the new one is stored, then its derived file is deleted (only when nothing references it). Run it again later to see what is left (a failed / budget-refused clip is listed again).
 
 ## 9. DNS & Domain Configuration
 

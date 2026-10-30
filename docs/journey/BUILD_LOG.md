@@ -23,7 +23,18 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-30 — Varčni posnetki brez »previjanja nazaj«
+
+**Kaj:** David je na telefonu videl obrnjen prehod »spanje → budnost« (posnetek »budnost → spanje«, predvajan nazaj): ko kuža vstane, je »videti kot previjanje kasete nazaj«. Isti dan smo ga opustili — ta prehod spet naredi AI (fal). Varčna posnetka A (en posnetek pozornosti) in C (3-sekundne mirne zanke naprej-nazaj) ostaneta. Strošek celotnega nabora kužka na videz in obdobje: 12,07 $ → **10,39 $** (−14 %; z obratom je bilo 9,83 $). Kužki, ki so obrat že dobili, ga kažejo, dokler ročni ukaz `media:frugal-unreverse` (najprej brezplačen `--dry-run`) ne naredi pravega posnetka — skupen videz enkrat za vse kužke, ~0,56 $ na videz.
+**Zakaj je pomembno:** prihranek ni vreden nenaravnega giba — kakovost videza ima prednost pred 0,56 $ na videz. Odločitev je padla v nekaj urah po prvem ogledu na napravi, popravilo ne pusti »luknje« (do novega posnetka ostane stari).
+**Kako povedati:** 💼 »AI strošek na kužka še vedno −14 %; varčujemo samo tam, kjer razlike ni videti.« · 🛠 »Obrnjen video je pri gibih proti gravitaciji (vstajanje) takoj opazen; ping-pong mirnih zank pa ne.« · 👩 staršem: kuža pri vstajanju zdaj vstane naravno.
+
+---
+
 ## 2026-10-30 — Varčni posnetki: ~2,24 $ manj na kužka, brez vidne razlike
+
+> *Posodobitev istega dne:* prehod B (obrnjen »budnost → spanje«) je bil opuščen — glej vnos zgoraj; veljavni prihranek je ~1,68 $ (10,39 $).
+
 
 **Kaj:** David je odobril tri prihranke pri AI posnetkih kužkov, skrite za stikalom v administraciji (privzeto izklopljeno): en posnetek »pozornosti« v šoli namesto štirih enakih, prehod »spanje → budnost« kot obrnjen »budnost → spanje« (naš strežnik, 0 $) in mirne zanke (spanje, utrujenost, bolezen) dolge 3 s, predvajane naprej-nazaj brez šiva. Strošek celotnega nabora kužka na videz in obdobje pade z 12,07 $ na 9,83 $ (−19 %). Slike ostanejo 1K (2K zavrnjeno).
 **Zakaj je pomembno:** isti premium videz za manj denarja — vsak prihranek se da pred vklopom brezplačno preveriti na že narejenih posnetkih (`media:frugal-preview`); obstoječi kužki se ne spremenijo, aplikacije ni treba posodabljati.

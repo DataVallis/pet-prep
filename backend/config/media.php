@@ -129,8 +129,9 @@ return [
         | On, only NEW media are made more cheaply (MediaEntitlementService::frugalClipsEnabled):
         |  A. one school attention clip — `school_sit_attention` serves come / place / potty
         |     too (MediaEntitlementService::FRUGAL_PHASE_SOURCES; identical prompt + frames);
-        |  B. `sleeping_to_idle` = `idle_to_sleeping` reversed with ffmpeg (0 $,
-        |     SchoolClipDerivativeService);
+        |  (B. `sleeping_to_idle` reversed with ffmpeg was DROPPED on 2026-10-30 — David: »looks
+        |     like rewinding a tape«; it is made by fal again, `media:frugal-unreverse` replaces
+        |     the reversed ones already made);
         |  C. the low-motion loops below are made `state_short` (3 s) and served as a seamless
         |     ffmpeg ping-pong (forward + reversed, ~6 s) under their usual `videos` key.
         | Stored media (4 attention clips, own sleeping_to_idle, 5 s loops) keep being served.

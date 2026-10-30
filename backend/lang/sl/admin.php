@@ -288,11 +288,11 @@ return [
         'phase_clips' => 'Posnetki šole in iger vklopljeni',
         'saved_body_phase_clips' => 'Posnetki šole in iger: :state',
         'frugal_clips_section' => 'Varčni posnetki (strošek AI)',
-        'frugal_clips_description' => 'Izklopljeno (privzeto). Vklopljeno (David 30. 10. 2026): NOVI mediji kužkov se naredijo ceneje, okoli 2,24 $ manj na videz in življenjsko obdobje — A. en posnetek »pozornosti« v šoli (sedi) velja tudi za pridi, prostor in potrebico (isti poziv in sličici; −9 s ≈ 1,01 $); B. »spanje → budnost« je »budnost → spanje«, predvajan nazaj na našem strežniku (ffmpeg, 0 $; −5 s ≈ 0,56 $); C. zanke spanja, utrujenosti in bolezni se naredijo 3 s namesto 5 s in se predvajajo kot nevidna zanka naprej in nazaj (−6 s ≈ 0,67 $). Že shranjeni posnetki (štirje posnetki pozornosti, lastni prehodi, 5-sekundne zanke) se kažejo kot doslej; šola ostane zaklenjena, dokler njeni posnetki niso pripravljeni. Pred vklopom zaženi `media:frugal-preview --look=…` in si oglej posnetke (0 $).',
+        'frugal_clips_description' => 'Izklopljeno (privzeto). Vklopljeno (David 30. 10. 2026): NOVI mediji kužkov se naredijo ceneje, okoli 1,68 $ manj na videz in življenjsko obdobje — A. en posnetek »pozornosti« v šoli (sedi) velja tudi za pridi, prostor in potrebico (isti poziv in sličici; −9 s ≈ 1,01 $); C. zanke spanja, utrujenosti in bolezni se naredijo 3 s namesto 5 s in se predvajajo kot nevidna zanka naprej in nazaj (−6 s ≈ 0,67 $). »Spanje → budnost« vedno naredi AI (obrnjeni posnetek je bil 30. 10. 2026 opuščen — bil je videti kot previjanje kasete nazaj; `media:frugal-unreverse` zamenja že narejene). Že shranjeni posnetki (štirje posnetki pozornosti, lastni prehodi, 5-sekundne zanke) se kažejo kot doslej; šola ostane zaklenjena, dokler njeni posnetki niso pripravljeni. Kratke zanke si oglej z `media:frugal-preview --look=…` (0 $).',
         'frugal_clips' => 'Varčni posnetki vklopljeni',
         'saved_body_frugal_clips' => 'Varčni posnetki: :state',
         'frugal_made_as_phase' => 'iz posnetka pozornosti »sedi« (varčni posnetki)',
-        'frugal_made_as_transition' => 'obrnjen »budnost → spanje« na našem strežniku (varčni posnetki)',
+        'frugal_made_as_transition' => 'STAR obrnjen »budnost → spanje« (opuščeno 30. 10. 2026) — zaženi media:frugal-unreverse ali »Regenerate«',
         'frugal_regenerate_refused' => 'Varčni posnetki so vklopljeni: ta posnetek se kaže iz :source — ponovno ustvari tistega.',
         'quality_check_section' => 'Preverjanje kakovosti posnetkov',
         'quality_check_description' => 'David 23. 10. 2026: vsak nov AI posnetek je preverjen — brezplačno tehnično (ffmpeg: dolžina, zamrznjena slika, nenadni skoki, gibanje zgoščeno na koncu, zadnja sličica proti končni sliki) in AI preverjanje 6 sličic (anatomija, ista žival, dejanje se res zgodi, napake; produkcijski AI proračun, ocena ≤ 0,01 $ na posnetek; brez proračuna ali z izklopljenim modelom odloča samo tehnično — »ni AI-preverjen«). SENCA (privzeto, dokler meje niso umerjene na pravih posnetkih): rezultati in meritve se zapišejo in vidijo v Ljubljenček → AI mediji (»bi padel«), vsak posnetek se še vedno prikaže, nič se ne ustvari znova. UVELJAVI: dokler nov posnetek ne prestane preverjanja, ostane viden stari; neuspešen se ENKRAT samodejno ustvari znova, drugi neuspeh se ne prikaže (aplikacija uporabi nadomestek) in je »Potrebuje pregled«. IZKLOP: brez preverjanja (staro delovanje).',
@@ -560,7 +560,7 @@ return [
     'frugal_clips' => [
         'discord' => [
             'title' => 'Varčni posnetki: :count posnetkov s strežnika ni uspelo — naredi jih fal',
-            'body' => 'Obrnjenega prehoda ali zanke naprej-nazaj ffmpeg 3-krat ni mogel narediti, zato se ta posnetek ustvari po običajni poti (običajna cena). Preveri ffmpeg / pomnilnik na strežniku (Zdravje sistema).',
+            'body' => '(Starega) obrnjenega prehoda ali zanke naprej-nazaj ffmpeg 3-krat ni mogel narediti, zato se ta posnetek ustvari po običajni poti (običajna cena). Preveri ffmpeg / pomnilnik na strežniku (Zdravje sistema).',
         ],
     ],
     'activity_media' => [
