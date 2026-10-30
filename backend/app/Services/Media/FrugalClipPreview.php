@@ -15,11 +15,10 @@ use Illuminate\Support\Facades\URL;
 use Throwable;
 
 /**
- * Frugal clips — ZERO-COST preview (David 2026-10-30): before the superadmin switch
- * `frugal_clips` is turned on, David judges savings B and C on clips that are ALREADY
- * STORED: `idle_to_sleeping` reversed (what `sleeping_to_idle` would become) and the
- * ping-pong of the first 3 s of the `sleeping` / `low_energy` / `sick` loops (what a 3 s
- * loop would look like). Made with the same ffmpeg recipes as the real derived clips
+ * Frugal clips — ZERO-COST preview (David 2026-10-30): David judges saving C on clips that
+ * are ALREADY STORED: the ping-pong of the first 3 s of the `sleeping` / `low_energy` /
+ * `sick` loops (what a 3 s loop would look like). (Saving B — `idle_to_sleeping` reversed —
+ * was previewed here too until it was dropped on 2026-10-30.) Made with the same ffmpeg recipe as the real derived clips
  * (SchoolClipDerivativeService::ffmpegArgs, full size, CRF 21) — no fal call, nothing
  * through AiSpendGuard / ai_spend_ledger, no table row.
  *
@@ -53,13 +52,10 @@ class FrugalClipPreview
         return self::PREFIX.'/'.$mediaId.'-'.$key.'.mp4';
     }
 
-    /** @return list<string> preview keys: the reversed transition + one ping-pong per low-motion loop */
+    /** @return list<string> preview keys: one ping-pong per low-motion loop */
     public static function keys(): array
     {
-        return [
-            ...array_keys(MediaEntitlementService::FRUGAL_REVERSED_TRANSITIONS),
-            ...array_map(fn (string $s) => $s.'_'.SchoolClipDerivativeService::SUFFIX_LOOP, MediaEntitlementService::shortLoopStates()),
-        ];
+        return array_map(fn (string $s) => $s.'_'.SchoolClipDerivativeService::SUFFIX_LOOP, MediaEntitlementService::shortLoopStates());
     }
 
     /**
@@ -70,9 +66,7 @@ class FrugalClipPreview
      */
     public function sources(?int $lookId, ?int $petId): Collection
     {
-        $wanted = fn ($q) => $q->where(fn ($q) => $q
-            ->where(fn ($q) => $q->where('kind', PetMedia::KIND_TRANSITION)->whereIn('state', array_values(MediaEntitlementService::FRUGAL_REVERSED_TRANSITIONS)))
-            ->orWhere(fn ($q) => $q->where('kind', PetMedia::KIND_VIDEO)->whereIn('state', MediaEntitlementService::shortLoopStates())))
+        $wanted = fn ($q) => $q->where('kind', PetMedia::KIND_VIDEO)->whereIn('state', MediaEntitlementService::shortLoopStates())
             ->whereNotNull('storage_path');
 
         if ($lookId !== null) {
@@ -106,15 +100,12 @@ class FrugalClipPreview
         $out = [];
 
         foreach ($this->sources($lookId, $petId) as $source) {
-            $reverse = $source->isTransition();
-            $key = $reverse
-                ? (string) array_search((string) $source->state, MediaEntitlementService::FRUGAL_REVERSED_TRANSITIONS, true)
-                : $source->state.'_'.SchoolClipDerivativeService::SUFFIX_LOOP;
+            $key = $source->state.'_'.SchoolClipDerivativeService::SUFFIX_LOOP;
             $row = ['source_id' => (int) $source->id, 'state' => (string) $source->state, 'life_stage' => $source->life_stage, 'key' => $key,
                 'ok' => false, 'seconds' => null, 'url' => null, 'error' => null];
 
             try {
-                $seconds = $this->render($source, $key, $reverse);
+                $seconds = $this->render($source, $key);
                 $row = ['ok' => true, 'seconds' => $seconds, 'url' => $this->signedUrl((int) $source->id, $key, $expires)] + $row;
             } catch (Throwable $e) {
                 $row['error'] = mb_substr($e->getMessage(), 0, 300);
@@ -155,7 +146,7 @@ class FrugalClipPreview
     }
 
     /** @return float|null the preview's length in seconds */
-    private function render(PetMedia $source, string $key, bool $reverse): ?float
+    private function render(PetMedia $source, string $key): ?float
     {
         if (! $this->analyzer->available()) {
             throw new \RuntimeException('ffmpeg / ffprobe not available');
@@ -174,10 +165,10 @@ class FrugalClipPreview
             }
 
             // C: the first 3 s only — what a frugal short loop would have been.
-            $maxFrames = $reverse ? null : (int) round(self::SHORT_SECONDS * ($probe['fps'] > 0 ? $probe['fps'] : 24.0));
+            $maxFrames = (int) round(self::SHORT_SECONDS * ($probe['fps'] > 0 ? $probe['fps'] : 24.0));
             $args = [...SchoolClipDerivativeService::limits(), ...SchoolClipDerivativeService::ffmpegArgs(
                 (string) config('media.quality_check.ffmpeg', 'ffmpeg'), $in, $out, $probe,
-                $reverse ? SchoolClipDerivativeService::MODE_REVERSE : SchoolClipDerivativeService::MODE_LOOP,
+                SchoolClipDerivativeService::MODE_LOOP,
                 $maxFrames, homeScreen: true,
             )];
             // One heavy ffmpeg job at a time on the host (waits for a running derivative / compression).

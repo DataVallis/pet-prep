@@ -319,7 +319,8 @@ class PetMediaService
         // Transitions after the first-minutes clips (§13 order): queued once every
         // essential state video is on its way, and only from stored key images.
         // Frugal clips (David 2026-10-30): a frugal target left to its source is not generated
-        // (sleeping_to_idle = idle_to_sleeping reversed; come / place / potty attention = sit's).
+        // (come / place / potty attention = sit's). sleeping_to_idle is always generated (fal) —
+        // the reversal was dropped; a legacy marked slot shows the reversal until its clip is stored.
         $this->markFrugalTargets($pet);
         foreach ($essentialWaiting ? [] : $this->entitlements->transitionsToGenerateFor($pet, null, fresh: true) as $transition) {
             if ($this->poseImage($pet, $transition->fromState(), $image) === null || $this->poseImage($pet, $transition->toState(), $image) === null) {
@@ -371,10 +372,8 @@ class PetMediaService
         }
 
         $slots = $pet->media()->get();
-        $targets = [
-            ...array_map(fn (PetTransition $t) => [PetMedia::KIND_TRANSITION, $t], $this->entitlements->transitionsFor($pet)),
-            ...array_map(fn (PetPhaseClip $c) => [PetMedia::KIND_PHASE, $c], $this->entitlements->phaseClipsFor($pet)),
-        ];
+        // Only the attention phase clips (David 2026-10-30: the reversed sleeping_to_idle was dropped).
+        $targets = array_map(fn (PetPhaseClip $c) => [PetMedia::KIND_PHASE, $c], $this->entitlements->phaseClipsFor($pet));
 
         foreach ($targets as [$kind, $target]) {
             $source = MediaEntitlementService::frugalSourceOf($kind, $target->value);
@@ -388,8 +387,7 @@ class PetMediaService
             $slot = $this->slot($pet, $kind, $target);
             $this->markLeftToSource($slot, $source);
 
-            // QA #451 m3: the look row of the pet's stage carries the marker too, so a regenerated
-            // idle_to_sleeping of the look is reversed again after a switch-off.
+            // QA #451 m3: the look row of the pet's stage carries the marker too.
             if ($pet->usesLookPool() && $pet->look !== null && $pet->life_stage !== null) {
                 $row = $this->lookSlot($pet->look, $kind, $target, $pet->life_stage);
                 if (! $row->isServable() && $row->status !== PetMedia::STATUS_RUNNING) {
@@ -400,11 +398,11 @@ class PetMediaService
     }
 
     /**
-     * Frugal clips (QA #451 m2): the reversal (B) or ping-pong (C) of `$source` failed for good —
-     * never a hard cut: B re-runs the pipeline of every pet that shows the source, which now
-     * generates sleeping_to_idle through fal (MediaEntitlementService::leftToSource is false
-     * after a failed reversal); C remakes the short loop the normal way (a 5 s loop —
-     * MediaEntitlementService::shortLoop is false for a file whose ping-pong failed).
+     * Frugal clips (QA #451 m2): the ping-pong (C) or a LEGACY reversal (B) of `$source` failed
+     * for good — never a hard cut: C remakes the short loop the normal way (a 5 s loop —
+     * MediaEntitlementService::shortLoop is false for a file whose ping-pong failed); B re-runs
+     * the pipeline of every pet that shows the source, which generates sleeping_to_idle through
+     * fal (nothing is reversed since 2026-10-30).
      */
     public function fallBackFromDerivative(PetMedia $source): void
     {
@@ -1310,6 +1308,9 @@ class PetMediaService
         // the waiting pets get the new file.
         if ($slot->isLookMedia()) {
             $this->fanOutReady((int) $slot->id);
+            // Legacy reversal (David 2026-10-30): the look's own sleeping_to_idle replaced it —
+            // the reversed derivative is deleted once no pet shows it any more (0 $, no fal).
+            $this->releaseLegacyReversal($slot);
 
             return;
         }
@@ -1325,9 +1326,31 @@ class PetMediaService
             $this->queueStateVideos($pet);
         }
 
+        // Legacy reversal: the pet's own sleeping_to_idle replaced it (derivative deleted).
+        $this->releaseLegacyReversal($slot);
+
         // M5-T06: the last item of a running preparation → »… je pripravljen!« (once).
         if ($slot->pet_id !== null) {
             $this->preparation->settle((int) $slot->pet_id);
+        }
+    }
+
+    /**
+     * Legacy reversal (David 2026-10-30): a stored / linked `sleeping_to_idle` may leave the
+     * reversed derivative of its `idle_to_sleeping` unreferenced — FrugalUnreverseService
+     * deletes it once no active pet is still served from it. Cheap no-op for every other row.
+     * Never inside a transaction (the media disk may be S3).
+     */
+    private function releaseLegacyReversal(PetMedia $slot): void
+    {
+        if (! $slot->isTransition() || ! isset(MediaEntitlementService::LEGACY_REVERSED_TRANSITIONS[(string) $slot->state])) {
+            return;
+        }
+
+        try {
+            app(FrugalUnreverseService::class)->releaseFor($slot);
+        } catch (\Throwable $e) {
+            report($e); // a leftover derivative is only disk space — the next run cleans it
         }
     }
 
@@ -1948,8 +1971,8 @@ class PetMediaService
             }
         }
 
-        foreach (MediaEntitlementService::FRUGAL_REVERSED_TRANSITIONS as $target => $source) {
-            // Derived clip first: a pet without one never reads the switch (no query — dashboard bound).
+        foreach (MediaEntitlementService::LEGACY_REVERSED_TRANSITIONS as $target => $source) {
+            // Legacy reversal (marked slots only): derived clip first — no extra query without one.
             if (isset($derived[$target]) && $this->entitlements->transitionSourceOf($pet, PetTransition::from($target), $slots) !== null) {
                 $transitions[$target] = $derived[$target]['url'];
             }
@@ -3066,6 +3089,11 @@ class PetMediaService
         // M5-T08: a linked key image unlocks its loop / transitions too.
         if ($linkedPet !== null && $slot->isStill()) {
             $this->queueStateVideos($linkedPet->fresh());
+        }
+
+        // Legacy reversal: the pet now shows the look's own sleeping_to_idle.
+        if ($linkedPet !== null) {
+            $this->releaseLegacyReversal($slot);
         }
 
         // M5-T06: a shared look's file completed the pet's preparation → announce once.

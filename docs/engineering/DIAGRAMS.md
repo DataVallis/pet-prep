@@ -1444,22 +1444,35 @@ flowchart LR
   W --> TS["TrainingService schedule: P = performing length, R = release length"]
 ```
 
-**Frugal clips (David 2026-10-30, switch `frugal_clips`, default off) — same derived-clip job, sources mapped, payload keys unchanged:**
+**Frugal clips (David 2026-10-30, switch `frugal_clips`, default off) — same derived-clip job, sources mapped, payload keys unchanged. The reversed `sleeping_to_idle` (B) was dropped the same day (David: »looks like rewinding a tape«) — it is made by fal again; legacy reversed slots are repaired by `media:frugal-unreverse`:**
 
 ```mermaid
 flowchart LR
   SW{{"frugal_clips on?<br/>(fresh at every fal entry point)"}} -->|off| GEN["generate the full set as before<br/>(4 attention · both transitions · 5 s loops)"]
-  SW -->|on, dogs only| MARK["queueStateVideos: target without a CURRENT clip<br/>(shared look: no look row at the pet's stage) →<br/>pet slot + look row .frugal_source = source<br/>never submitted; a slot waiting for a look row → pending"]
+  SW -->|on, dogs only| MARK["queueStateVideos: attention target without a CURRENT clip<br/>(shared look: no look row at the pet's stage) →<br/>pet slot + look row .frugal_source = sit attention<br/>never submitted; a slot waiting for a look row → pending"]
   SW -->|on| SHORT["sleeping / low_energy / sick loops<br/>Kling duration 3 (state_short)"]
-  MARK --> MAP["MediaEntitlementService source mapping<br/>come / place / potty attention → sit attention<br/>sleeping_to_idle → idle_to_sleeping reversed"]
-  I2S["idle_to_sleeping stored"] --> J[GenerateSchoolClipDerivative]
-  SHORT --> J
-  J --> FF["nice + prlimit, one heavy job at a time<br/>ffmpeg, full size (1076 × 1924), CRF 21<br/>reverse (same length) · ping-pong (~5.9 s)"]
-  FF -->|fails 3× on the same file| FB["fallBackFromDerivative: made by fal the normal way<br/>(own sleeping_to_idle · 5 s loop) + admin alert"]
-  MAP --> P["payload, same keys:<br/>phases.school_cmd_attention(_loop) = sit's<br/>transitions.sleeping_to_idle = reversed<br/>videos.state = ping-pong"]
+  SW -->|on or off| BOTH["both transitions made by fal<br/>(sleeping_to_idle never reversed since 2026-10-30)"]
+  MARK --> MAP["MediaEntitlementService source mapping<br/>come / place / potty attention → sit attention"]
+  SHORT --> J[GenerateSchoolClipDerivative]
+  J --> FF["nice + prlimit, one heavy job at a time<br/>ffmpeg, full size (1076 × 1924), CRF 21<br/>ping-pong (~5.9 s)"]
+  FF -->|fails 3× on the same file| FB["fallBackFromDerivative: made by fal the normal way<br/>(5 s loop) + admin alert"]
+  MAP --> P["payload, same keys:<br/>phases.school_cmd_attention(_loop) = sit's<br/>videos.state = ping-pong"]
   FF --> P
   MAP --> R["readiness / preparation:<br/>a target counts when its SOURCE is shown"]
-  PV["media:frugal-preview --look / --pet<br/>stored dog clips only, 0 $"] --> SU["previews/frugal/… + signed superadmin capability URLs<br/>deleted after 24 h (--prune, daily)"]
+  PV["media:frugal-preview --look / --pet<br/>stored dog loops only, 0 $"] --> SU["previews/frugal/… + signed superadmin capability URLs<br/>deleted after 24 h (--prune, daily)"]
+```
+
+**Legacy reversal repair — the normal pipeline replaces a legacy slot whenever it runs for that pet (queueStateVideos, Generate missing, stage remake, ResumeStateMedia, media:retry); `media:frugal-unreverse` (never scheduled) sweeps the rest:**
+
+```mermaid
+flowchart TD
+  L["legacy slot: sleeping_to_idle.frugal_source = idle_to_sleeping<br/>no own clip → payload / preparation serve the reversed derivative"] --> DRY["--dry-run (0 $): one item per own-media pet<br/>+ one per shared look + stage (generated once)<br/>action generate / link / wait · est. 0,56 $ per new clip"]
+  DRY --> RUN["real run: lock · release leftovers · fal on? ·<br/>AiSpendGuard pre-check of the total (--limit; each submit guarded again → may end partly queued) · recent items = wait · audit media_frugal_unreverse"]
+  RUN --> Q["SubmitPetStateVideo per pet slot<br/>(failed / stale → resetForNewGeneration; pool pet → its look row, once)"]
+  Q --> PIPE["fal → candidate → quality check → compress-on-store"]
+  PIPE --> ST["markStored / linkToLook: own clip shown, marker cleared"]
+  Q -. "until then (also after a failed / refused submit)" .-> L
+  ST --> REL["releaseLegacyReversal → FrugalUnreverseService::releaseFor:<br/>no pet (active or not) still marked → delete derivative row,<br/>clear the look row's leftover marker,<br/>then its file if unreferenced (isReferenced)"]
 ```
 
 ## 10b. App playback of pet media (M4-03 app side, 2026-10-05)

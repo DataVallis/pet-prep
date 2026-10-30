@@ -127,8 +127,8 @@ class PetMediaController extends Controller
      * GET /api/media/{media}/frugal-preview/{key}?expires=…&signature=… (frugal clips, David 2026-10-30)
      *
      * A zero-cost preview made by `media:frugal-preview` from the stored clip `{media}` (the
-     * row owning the file): `sleeping_to_idle` (idle_to_sleeping reversed) or `<state>_loop`
-     * (ping-pong of the first 3 s). The signed URL is printed only to the superadmin running
+     * row owning the file): `<state>_loop` (ping-pong of the first 3 s; the reversed
+     * `sleeping_to_idle` preview was dropped with the reversal on 2026-10-30). The signed URL is printed only to the superadmin running
      * the command (like the quality-check candidate); never in an app payload. Same capability
      * rules as show(); 404 when no preview exists. Internal (not in the API docs).
      */

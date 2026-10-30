@@ -289,11 +289,11 @@ return [
         'phase_clips' => 'School & game clips on',
         'saved_body_phase_clips' => 'School & game clips: :state',
         'frugal_clips_section' => 'Frugal clips (AI cost)',
-        'frugal_clips_description' => 'Off (default). On (David 2026-10-30): NEW dog media are made more cheaply, about $2.24 less per look and life stage — A. one school »attention« clip (sit) serves come, place and potty too (same prompt and frames; −9 s ≈ $1.01); B. »sleeping → awake« is »awake → sleeping« played backwards on our server (ffmpeg, $0; −5 s ≈ $0.56); C. the sleeping, tired and sick loops are made 3 s instead of 5 s and played as a seamless forward-and-back loop (−6 s ≈ $0.67). Clips already stored (four attention clips, own transitions, 5 s loops) keep being shown as they are; the school stays locked until its clips are ready. Before switching on, run `media:frugal-preview --look=…` and look at the clips (0 $).',
+        'frugal_clips_description' => 'Off (default). On (David 2026-10-30): NEW dog media are made more cheaply, about $1.68 less per look and life stage — A. one school »attention« clip (sit) serves come, place and potty too (same prompt and frames; −9 s ≈ $1.01); C. the sleeping, tired and sick loops are made 3 s instead of 5 s and played as a seamless forward-and-back loop (−6 s ≈ $0.67). »Sleeping → awake« is always made by AI (the reversed clip was dropped on 2026-10-30 — it looked like a rewound tape; `media:frugal-unreverse` replaces the ones already made). Clips already stored (four attention clips, own transitions, 5 s loops) keep being shown as they are; the school stays locked until its clips are ready. Preview the short loops with `media:frugal-preview --look=…` (0 $).',
         'frugal_clips' => 'Frugal clips on',
         'saved_body_frugal_clips' => 'Frugal clips: :state',
         'frugal_made_as_phase' => 'served from sit attention (frugal clips)',
-        'frugal_made_as_transition' => 'reversed idle → sleeping on our server (frugal clips)',
+        'frugal_made_as_transition' => 'OLD reversed idle → sleeping (dropped 2026-10-30) — run media:frugal-unreverse or Regenerate',
         'frugal_regenerate_refused' => 'Frugal clips are on: this clip is served from :source — regenerate that one instead.',
         'quality_check_section' => 'Clip quality check',
         'quality_check_description' => 'David 2026-10-23: every new AI clip is checked — a free technical check (ffmpeg: length, frozen picture, sudden jumps, motion bunched up at the end, last frame vs the end image) and an AI vision check of 6 frames (anatomy, same animal, the action really happens, glitches; production AI budget, estimated ≤ $0.01 per clip; without budget or with the vision model off only the technical check decides — »not AI-checked«). SHADOW (default until the thresholds are calibrated on real clips): verdicts and measurements are recorded and shown in Pet → AI media (»would fail«), every clip is still shown, nothing is regenerated. ENFORCE: until a new clip passes, the old one (if any) stays visible; a failed clip is regenerated automatically ONCE, a second failure is not shown (the app uses its fallback) and is listed as »Needs review«. OFF: no check (the old behaviour).',
@@ -561,7 +561,7 @@ return [
     'frugal_clips' => [
         'discord' => [
             'title' => 'Frugal clips: :count server-made clip(s) failed — made by fal instead',
-            'body' => 'A reversed transition or a ping-pong loop could not be made with ffmpeg 3 times, so that clip is now generated the normal way (usual price). Check ffmpeg / memory on the server (System health).',
+            'body' => 'An (old) reversed transition or a ping-pong loop could not be made with ffmpeg 3 times, so that clip is now generated the normal way (usual price). Check ffmpeg / memory on the server (System health).',
         ],
     ],
     'activity_media' => [
