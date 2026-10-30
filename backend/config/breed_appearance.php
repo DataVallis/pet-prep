@@ -659,6 +659,13 @@
 | — never white, red, black or black and tan; natural tail. RKC Breed Watch Category 1 (S610). One colour → weight 100,
 | the register portrait; still `verified => false` (no frequency source, same rule as every breed).
 |
+| Irish Wolfhound (M5-R10-80, docs/research/dog-data irish_wolfhound.appearance):
+| "The largest and tallest of the sighthounds is a rough coated hound of great size and commanding appearance." (FCI-Standard
+| N° 160, S616); colours "Grey, Brindle, Red, Black, Pure White, Fawn, and Wheaten" (S616; RKC S618 adds steel grey) — never
+| merle, parti-colour or liver; rough, wiry coat with a beard; small rose ears; long tail carried low. RKC Breed Watch
+| Category 2 (S617, points not returned). Grey first with the highest weight (the portrait default, Claude's choice);
+| weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -3489,6 +3496,46 @@ return [
             'ear_carriage' => ['small to medium V-shaped ears folded at the level of the skull, covered with coat'],
             'eye_color' => ['clear, bright dark hazel eyes with black rims'],
             'tail' => ['natural undocked tail set high and carried gaily, never over the back'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+
+    // M5-R10-80 (docs/research/dog-data/data.json irish_wolfhound.appearance; runbook rules 2026-10-10: standard colours
+    // only — S616 "The only recognized colours are Grey, Brindle, Red, Black, Pure White, Fawn, and Wheaten."; never merle,
+    // parti-colour or liver).
+    'irish_wolfhound' => [
+        'display_name' => 'Irish Wolfhound',
+        // Colour frequencies are in no source (irish_wolfhound.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 160 Irish Wolfhound (S616, https://fci.be/Nomenclature/Standards/160g10-en.pdf), RKC breed standard Irish Wolfhound (S618), RKC Breeds A–Z (S617) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S617 "Size: Extra large"; S618 "Minimum height for dogs: 79 cms (31 ins), bitches: 71 cms (28 ins)."',
+            'build' => 'S616 "The largest and tallest of the sighthounds is a rough coated hound of great size and commanding appearance."; S618 "Of great size, strength, symmetry and commanding appearance, very muscular, yet gracefully built."',
+            'coat_length' => 'S616 "Rough and hard on body, legs and head, hair over eyes and beard especially wiry."',
+            'coat_color' => 'S616 "The only recognized colours are Grey, Brindle, Red, Black, Pure White, Fawn, and Wheaten." (weights unsourced)',
+            'head' => 'S616 "Long and level, proudly carried."',
+            'ear_carriage' => 'S616 "Small, rose ears set on high."',
+            'eye_color' => 'S616 "Dark and oval."',
+            'tail' => 'S616 "Long and slightly curved at extremity."',
+        ],
+        'traits' => [
+            'size' => ['giant, very tall'],
+            'build' => [['value' => 'the largest and tallest sighthound, of great size and commanding appearance, very muscular yet gracefully built, with a long neck, deep chest and tucked-up belly', 'weight' => 3], 'tall, powerful, rough-coated sighthound built for speed, with long strong legs'],
+            'coat_length' => ['rough, hard, wiry coat on the body, legs and head, with longer wiry hair over the eyes and a beard under the jaw, natural and untrimmed'],
+            // Standard colours (S616); grey first with the highest weight → the register portrait (Claude's choice).
+            'coat_color' => [
+                ['value' => 'grey', 'weight' => 40],
+                ['value' => 'grey brindle', 'weight' => 20],
+                ['value' => 'wheaten', 'weight' => 15],
+                ['value' => 'fawn', 'weight' => 10],
+                ['value' => 'red', 'weight' => 6],
+                ['value' => 'black', 'weight' => 5],
+                ['value' => 'pure white', 'weight' => 4],
+            ],
+            'head' => ['long, level head proudly carried, with a moderately pointed muzzle, a wiry beard and a black nose'],
+            'ear_carriage' => ['small rose ears set high and folded back against the head'],
+            'eye_color' => ['dark oval eyes'],
+            'tail' => ['long tail, slightly curved at the end and carried low, well covered with hair'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],

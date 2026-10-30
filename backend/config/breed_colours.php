@@ -498,6 +498,17 @@ return [
     'soft_coated_wheaten_terrier' => [
         ['key' => 'wheaten', 'value' => 'clear wheaten', 'en' => 'Wheaten', 'sl' => 'Pšenično rumen'],
     ],
+    // M5-R10-80: FCI-Standard N° 160 S616 — "Grey, Brindle, Red, Black, Pure White, Fawn, and Wheaten" (same order as the
+    // appearance block; grey first = the portrait default).
+    'irish_wolfhound' => [
+        ['key' => 'grey', 'value' => 'grey', 'en' => 'Grey', 'sl' => 'Siv'],
+        ['key' => 'grey-brindle', 'value' => 'grey brindle', 'en' => 'Grey brindle', 'sl' => 'Sivo tigrast'],
+        ['key' => 'wheaten', 'value' => 'wheaten', 'en' => 'Wheaten', 'sl' => 'Pšenično rumen'],
+        ['key' => 'fawn', 'value' => 'fawn', 'en' => 'Fawn', 'sl' => 'Rumenorjav'],
+        ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'white', 'value' => 'pure white', 'en' => 'Pure white', 'sl' => 'Čisto bel'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

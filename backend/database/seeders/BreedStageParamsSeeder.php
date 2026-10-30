@@ -52,7 +52,7 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest / WeimaranerBreedTest / ItalianGreyhoundBreedTest / GiantSchnauzerBreedTest / BloodhoundBreedTest / AkitaBreedTest / CardiganWelshCorgiBreedTest / GermanWirehairedPointerBreedTest / SaintBernardBreedTest / StaffordshireBullTerrierBreedTest / AiredaleTerrierBreedTest / RussellTerrierBreedTest / BullmastiffBreedTest / ChineseCrestedBreedTest / NovaScotiaDuckTollingRetrieverBreedTest / CairnTerrierBreedTest / BullTerrierBreedTest / MiniaturePinscherBreedTest / PyreneanMountainDogBreedTest / SoftCoatedWheatenTerrierBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest / WeimaranerBreedTest / ItalianGreyhoundBreedTest / GiantSchnauzerBreedTest / BloodhoundBreedTest / AkitaBreedTest / CardiganWelshCorgiBreedTest / GermanWirehairedPointerBreedTest / SaintBernardBreedTest / StaffordshireBullTerrierBreedTest / AiredaleTerrierBreedTest / RussellTerrierBreedTest / BullmastiffBreedTest / ChineseCrestedBreedTest / NovaScotiaDuckTollingRetrieverBreedTest / CairnTerrierBreedTest / BullTerrierBreedTest / MiniaturePinscherBreedTest / PyreneanMountainDogBreedTest / SoftCoatedWheatenTerrierBreedTest / IrishWolfhoundBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
  * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever / Samoyed / Scottish Terrier / Weimaraner / Italian Greyhound / Giant Schnauzer / Bloodhound / Akita / Cardigan Welsh Corgi / German Wirehaired Pointer / Saint Bernard / Staffordshire Bull Terrier / Airedale Terrier / Russell Terrier / Bullmastiff / Chinese Crested / Nova Scotia Duck Tolling Retriever / Cairn Terrier / Bull Terrier / Miniature Pinscher / Pyrenean Mountain Dog rows
  * against data.json).
@@ -954,6 +954,25 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_SOFT_COATED_WHEATEN_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-79)';
 
     /**
+     * M5-R10-80 Irish Wolfhound (unattended run 2026-10-30, data.json proposed_game_parameters.irish_wolfhound.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on
+     * 2026-10-10 — exercise 120 min (RKC S617 "Exercise: More than 2 hours per day"), senior 90 min, puppy 10 min × age
+     * capped at 120, stages young 9 / adult 36, arrival 2 / 9 / 36, learning multiplier 1.0 (Coren rank 41, Average); care
+     * rates the Border Collie's. The senior boundary uses the closest rule row (Orleifson et al. 2017 median 7.5 y, S623 —
+     * RKC "Under 10 years" has no lower bound) and is NOT covered by the confirmation: see PROPOSED_R10_IRISH_WOLFHOUND_SENIOR.
+     */
+    public const CONFIRMED_R10_IRISH_WOLFHOUND = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-80)';
+
+    /**
+     * M5-R10-80 Irish Wolfhound senior boundary / senior arrival (68 months): Claude's suggestion from the closest rule row
+     * (0.75 × Orleifson et al. 2017 Swedish Irish Wolfhound median 7.5 y, S623) — no runbook rule produced a value (the Dogs
+     * Trust McMillan 2024 table S123 could not be fetched, no VetCompass median, the RKC band "Under 10 years" has no lower
+     * bound), so the rows are verified=false until David decides (data.json
+     * proposed_game_parameters.irish_wolfhound.senior_boundary_months).
+     */
+    public const PROPOSED_R10_IRISH_WOLFHOUND_SENIOR = 'predlog Claude 2026-10-30 (najbližja vrstica pravila runbooka, M5-R10-80) — čaka Davida';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1199,6 +1218,9 @@ class BreedStageParamsSeeder extends Seeder
             'groomer_visit' => [1, 'month', 'S613', 'But whether the coat is kept long or short, this dog needs professional grooming every four to six weeks.', 'proposed_game_parameters.soft_coated_wheaten_terrier.professional_grooming', '"every four to six weeks" → the lower bound, 4 weeks (VCA S614 "every other month" — alternative)'],
             'bath' => [1, 'month', 'S613', 'The Soft Coated Wheaten Terrier should be bathed about monthly to remove dirt and debris.', 'proposed_game_parameters.soft_coated_wheaten_terrier.bathing', '"about monthly" → every 4 weeks (teeth and nails have no number → no task)'],
         ],
+        'irish_wolfhound' => [
+            'ear_cleaning' => [1, 'two_weeks', 'S620', "Cleaning your dog's ears every two to four weeks will help to prevent ear infections.", 'proposed_game_parameters.irish_wolfhound.ear_care', '"every two to four weeks" → the lower bound, every 2 weeks (bath "as needed" is conditional and PDSA says not needed; hand-stripping every six months is longer than every care period; nails / teeth have no number → no task)'],
+        ],
     ];
 
     /**
@@ -1295,6 +1317,7 @@ class BreedStageParamsSeeder extends Seeder
         'miniature_pinscher' => [1, 'S595', 'Grooming is fairly minimal, with a brush once a week usually enough to keep the coat in tip-top condition.', 'high', false],
         'pyrenean_mountain_dog' => [2, 'S600', 'Grooming: More than once a week', 'low', true, self::PROPOSED_R13_PYRENEAN_MOUNTAIN_DOG],
         'soft_coated_wheaten_terrier' => [7, 'S610', 'Grooming: Every day', 'high', false],
+        'irish_wolfhound' => [2, 'S619', 'Brushing them around twice a week should be more than enough to keep their coat in good condition.', 'high', false],
     ];
 
     /**
@@ -1338,6 +1361,7 @@ class BreedStageParamsSeeder extends Seeder
         'bullmastiff' => ['S569', 'Avoid exercise from one hour before to one hour after a meal.'],
         'bull_terrier' => ['S591', 'Remember to leave a gap after eating and before exercising.'],
         'pyrenean_mountain_dog' => ['S604', 'Avoid vigorous exercise around mealtimes'],
+        'irish_wolfhound' => ['S620', 'Do not let your Irish Wolfhound dog exercise right before or after eating.'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -1426,13 +1450,14 @@ class BreedStageParamsSeeder extends Seeder
         'miniature_pinscher' => ['S596', 'As outgoing, active, and intelligent animals, they can make excellent family pets with the right socialization and training.'],
         'pyrenean_mountain_dog' => ['S605', 'Early socialization is very important'],
         'soft_coated_wheaten_terrier' => ['S613', 'Early socialization and proper introductions can help a Wheaten Terrier live well with smaller pets.'],
+        'irish_wolfhound' => ['S620', 'Begin socializing your Irish Wolfhound puppy as soon as you bring them home.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2215,6 +2240,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-79 (docs/research/dog-data/data.json soft_coated_wheaten_terrier,
             // S608–S614; runbook rules in proposed_game_parameters.soft_coated_wheaten_terrier).
             BreedType::SoftCoatedWheatenTerrier => self::softCoatedWheatenTerrierProfile(),
+            // M5-R10-80 (docs/research/dog-data/data.json irish_wolfhound,
+            // S615–S624; runbook rules in proposed_game_parameters.irish_wolfhound).
+            BreedType::IrishWolfhound => self::irishWolfhoundProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -7675,6 +7703,91 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'soft_coated_wheaten_terrier.lifespan.median_uk',
                 'quote' => 'Soft Coated Wheaten Terrier 13.7 13.2 - 14.4 620 173',
                 'notes' => 'McMillan et al. 2024 median via the Dogs Trust breed table (S123). RKC / PDSA "Over 12 years" (S610 / S612), PetMD and VCA 12–14 y (S613 / S614). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Irish Wolfhound (M5-R10-80). Stage boundaries young / adult, arrival ages, exercise minutes and the learning
+     * multiplier follow the runbook's standing rules (CONFIRMED_R10_IRISH_WOLFHOUND); weight, growth, Coren rank and
+     * lifespan are sourced. The senior boundary is Claude's suggestion (PROPOSED_R10_IRISH_WOLFHOUND_SENIOR, verified=false).
+     *
+     * @return array<string, mixed>
+     */
+    private static function irishWolfhoundProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_IRISH_WOLFHOUND;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S623', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.irish_wolfhound.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a giant dog reaches adult weight at 18–24 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [68, [
+                    'unit' => 'months', 'source_id' => 'S11,S623', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.irish_wolfhound.senior_boundary_months', 'decision' => self::PROPOSED_R10_IRISH_WOLFHOUND_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × Orleifson et al. 2017 Swedish Irish Wolfhound median 7.5 y (S623) = 5.625 y = 67.5 → 68 months. The Dogs Trust McMillan 2024 table (S123) could not be fetched; no VetCompass median; the RKC band "Under 10 years" (S617) has no lower bound. Alternatives: McMillan 2024 9.9 y via Wikipedia (tier C, S624) → 89; PetMD / VCA lower bound 6 y (S620 / S621) → 54.',
+                ]],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 68],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.irish_wolfhound.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.irish_wolfhound.senior_boundary_months', 'decision' => self::PROPOSED_R10_IRISH_WOLFHOUND_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 68 months (0.75 × 7.5 y, S623).',
+                ],
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (18–24 months for a giant dog, S10); capped at the adult 120 minutes, which 10 × age would reach at 12 months (PDSA S619: take exercise easy while a puppy).',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S617', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.irish_wolfhound.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: More than 2 hours per day',
+                'notes' => 'RKC "Exercise: More than 2 hours per day" (S617) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PDSA "a minimum of two hours of exercise every day" (S619) agrees.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.irish_wolfhound.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[40, 55], [
+                'unit' => 'kg', 'source_id' => 'S619', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'irish_wolfhound.adult_weight.pdsa',
+                'quote' => 'Average weight: 40-55 kg',
+                'notes' => 'PDSA key facts (S619), one range for both sexes. The RKC standard (S618) and FCI (S616) give minimums only (dogs 54.5 kg, bitches 40.9 / 40.5 kg); VCA 105–120 lb (S621) — alternative.',
+            ]],
+            'growth_end' => [[18, 24], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'irish_wolfhound.growth.adult_weight_reached',
+                'quote' => 'Giant (over 100 pounds) | 18–24 months',
+                'notes' => 'Size-class value, not breed-specific (PetMD "at least 105 pounds", S620 — the Giant class of S10).',
+            ]],
+            'coren_rank' => [41, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'irish_wolfhound.trainability.coren_rank',
+                'quote' => 'Irish Wolfhound',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35, re-read 2026-10-30), rank 41 (shared with the Curly Coated Retriever), tier "Average Working/Obedience Intelligence" (ranks 40–54).',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.irish_wolfhound.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 41, tier Average (40–54, S35) → 1.0. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [7.5, [
+                'unit' => 'years', 'source_id' => 'S623', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'irish_wolfhound.lifespan.median_peer_reviewed',
+                'quote' => 'Median lifespan was 2720 days (7.5 years).',
+                'notes' => 'Orleifson et al. 2017 (S623), Swedish Irish Wolfhounds born 2006–2008, owner questionnaire. RKC / PDSA "Under 10 years" (S617, S619); PetMD / VCA 6–8 y (S620, S621); McMillan 2024 9.9 y only via Wikipedia (tier C). Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }
