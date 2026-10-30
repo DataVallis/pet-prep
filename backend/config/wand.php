@@ -85,7 +85,7 @@ return [
     | Only for a session started with `rules: 2` (a new app); without it the
     | keys above stay the v1 rules byte for byte. Schedule: stalk 0–stalk_ms,
     | pounce p1 ∈ first_pounce_ms, p(n+1) = p(n) + pounce_gap_ms, crouch cue
-    | p − crouch_cue_ms, catch c = p_last + catch_after_last_ms, end =
+    | p − crouch_cue_lead_ms, catch c = p_last + catch_after_last_ms, end =
     | c + catch_clip_ms (~23–29 s; never longer than round_ms).
     | Stars: one per pounce p when (1) at most calm_max_moves counted moves
     | in [p − calm_window_ms, p), (2) the FIRST away move after p lies in
@@ -94,7 +94,9 @@ return [
     | (`speed_ok`, app: ≤ max_speed_pt_s and ≥ min_dodge_pt); one for the
     | catch when no away move lies in [c, c + catch_window_ms] and the
     | feather is in the zone. The hunt counts at ≥ min_stars.
-    | `too_uniform` (v1 keys) is only logged in v2.
+    | `too_uniform` (v1 keys) is only logged in v2. A v2 finish is accepted
+| from catch + catch_window_ms at the earliest (no early-finish tolerance
+| inside the catch window — QA #461 m1).
     */
     'v2' => [
         // Upper bound of a v2 hunt (the drawn schedule is ~23–29 s).
@@ -103,8 +105,15 @@ return [
         'pounces' => 3,
         'first_pounce_ms' => [6000, 7500],
         'pounce_gap_ms' => [5000, 6500],
-        // The 👀 crouch cue shows this long before each pounce.
-        'crouch_cue_ms' => 900,
+        // The calm rule (QA #461 M3 — David decides; only these three numbers change):
+        // the 👀 crouch cue shows `crouch_cue_lead_ms` before each pounce (→ the
+        // schedule's `crouch_cues_ms`); at most `calm_max_moves` counted moves may lie in
+        // [p − calm_window_ms, p). Current (GAMES_SPEC §5.3): 900 / 800 / 1 — a steady slow
+        // mover (one stroke every ~0.8–1.2 s) still passes most hunts (known, open item).
+        // QA's recommendation: 1500 / 1000 / 0 — the slow mover fails, a fair child who
+        // stops ~0.3–0.45 s after the cue passes. Keep crouch_cue_lead_ms ≥ calm_window_ms
+        // + a reaction time, or a fair child cannot comply.
+        'crouch_cue_lead_ms' => 900,
         'calm_window_ms' => 800,
         'calm_max_moves' => 1,
         // The first away move after the pounce must lie in [p + 150, p + 1500].

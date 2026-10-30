@@ -429,7 +429,16 @@ class WandPlayService
             return $refuse(CareRefusal::WandSessionExpired, $session);
         }
         $tolerance = max(0, (int) config('wand.finish_early_tolerance_seconds', 5));
-        if ($exact->lessThan(CarbonImmutable::instance($session->ends_at)->utc()->subSeconds($tolerance))) {
+        $earliest = CarbonImmutable::instance($session->ends_at)->utc()->subSeconds($tolerance);
+        if (self::rulesOf($session) === self::RULES_V2) {
+            // QA #461 m1: no early-finish tolerance inside the catch window — a finish before
+            // catch + catch_window would get the catch star for free.
+            $schedule = (array) $session->schedule;
+            $catchEnd = CarbonImmutable::instance($session->started_at)->utc()
+                ->addMilliseconds((int) ($schedule['catch_at_ms'] ?? 0) + (int) ($schedule['catch_window_ms'] ?? 0));
+            $earliest = $earliest->max($catchEnd);
+        }
+        if ($exact->lessThan($earliest)) {
             return $refuse(CareRefusal::WandSessionNotOver, $session);
         }
         foreach ($moves as $move) {
@@ -600,7 +609,7 @@ class WandPlayService
 
     /**
      * Rules v2 schedule (GAMES_SPEC §5.2, config `wand.v2`): stalk, three pounces with a
-     * crouch cue `crouch_cue_ms` before each, the catch `catch_after_last_ms` after the last
+     * crouch cue `crouch_cue_lead_ms` before each (QA #461 M3: the calm rule is config only), the catch `catch_after_last_ms` after the last
      * pounce and the end `catch_clip_ms` after the catch (~23–29 s, ≤ `round_ms`). Carries
      * every number the app needs to mirror the server's star rules. Pure apart from the RNG.
      *
@@ -617,7 +626,7 @@ class WandPlayService
         };
         $stalk = max(0, (int) ($c['stalk_ms'] ?? 3000));
         $count = max(1, (int) ($c['pounces'] ?? 3));
-        $cue = max(0, (int) ($c['crouch_cue_ms'] ?? 900));
+        $cue = max(0, (int) ($c['crouch_cue_lead_ms'] ?? 900));
         [$firstLo, $firstHi] = $range('first_pounce_ms', [6000, 7500]);
         [$gapLo, $gapHi] = $range('pounce_gap_ms', [5000, 6500]);
 
@@ -651,10 +660,12 @@ class WandPlayService
     }
 
     /**
-     * Rules v2 verdict (GAMES_SPEC §5.3, David 2026-10-30 P2) — pure, no I/O. Moves closer
-     * than `min_move_interval_ms` to the previous counted move count once (as v1). One star
+     * Rules v2 verdict (GAMES_SPEC §5.3, David 2026-10-30 P2) — pure, no I/O. For the calm
+     * rule (and the totals) moves closer than `min_move_interval_ms` to the previous counted
+     * move count once (as v1); the dodge and the catch read every reported move. One star
      * per pounce p when ALL hold:
      *  1. calm: at most `calm_max_moves` counted moves (any direction) in [p − calm_window, p);
+     *     the 👀 cue is at p − `crouch_cue_lead_ms` (config `wand.v2`, stored per session);
      *  2. reaction: the FIRST counted away move at or after p lies in [p + dodge_window[0],
      *     p + dodge_window[1]] (earlier = `too_early`, none in time = `no_dodge`);
      *  3. that move ended inside the play zone (`in_zone: true`, reported by the app);
@@ -666,8 +677,10 @@ class WandPlayService
      * | catch, GAMES_SPEC §5.4), null with every star. `uniform` = machine-regular gaps (the
      * v1 `uniform_*` test) — logged only, never a refusal in v2.
      *
-     * Why spam earns nothing: continuous rapid strokes put ≥ 2 counted moves into every calm
-     * window (rule 1) and an away move into the catch window — 0 stars.
+     * Rapid spam earns nothing: continuous rapid strokes put ≥ 2 counted moves into every calm
+     * window (rule 1) and an away move into the catch window — 0 stars. A steady SLOW mover
+     * (one stroke every ~0.8–1.2 s) still passes most hunts with the default calm rule
+     * (900 / 800 / 1) — QA #461 M3, open for David; the stricter rule is config only.
      *
      * @param  list<array{t: int, away: bool, in_zone?: bool, speed_ok?: bool}>  $moves
      * @param  array<string, mixed>  $schedule  a scheduleV2() schedule
@@ -690,11 +703,22 @@ class WandPlayService
 
         usort($moves, fn (array $a, array $b): int => $a['t'] <=> $b['t']);
 
+        /** @var list<array{t: int, away: bool, in_zone: bool, speed_ok: bool}> $raw every reported move, sorted */
+        $raw = array_map(fn (array $move): array => [
+            't' => (int) $move['t'],
+            'away' => (bool) $move['away'],
+            'in_zone' => ($move['in_zone'] ?? false) === true,
+            'speed_ok' => ($move['speed_ok'] ?? false) === true,
+        ], $moves);
+
+        // The 300 ms merge applies to COUNTING moves (calm rule, totals, uniform log) only. The
+        // dodge and the catch read every reported move (QA #461 m2: a real dodge right after a
+        // calm move must not be merged away, and a pull-away at the catch must not hide either).
         /** @var list<array{t: int, away: bool, in_zone: bool, speed_ok: bool}> $counted */
         $counted = [];
         $gaps = [];
         $last = null;
-        foreach ($moves as $move) {
+        foreach ($raw as $move) {
             if ($last !== null && $interval > $move['t'] - $last) {
                 continue;
             }
@@ -702,12 +726,7 @@ class WandPlayService
                 $gaps[] = $move['t'] - $last;
             }
             $last = $move['t'];
-            $counted[] = [
-                't' => (int) $move['t'],
-                'away' => (bool) $move['away'],
-                'in_zone' => ($move['in_zone'] ?? false) === true,
-                'speed_ok' => ($move['speed_ok'] ?? false) === true,
-            ];
+            $counted[] = $move;
         }
 
         $failures = []; // [time, hint]
@@ -716,7 +735,7 @@ class WandPlayService
         foreach ($pounces as $p) {
             $calmMoves = count(array_filter($counted, fn (array $m): bool => $m['t'] >= $p - $calmWindow && $m['t'] < $p));
             $first = null;
-            foreach ($counted as $m) {
+            foreach ($raw as $m) {
                 if ($m['away'] && $m['t'] >= $p) {
                     $first = $m;
                     break;
@@ -742,7 +761,7 @@ class WandPlayService
         $catchEnd = $catchAt + $catchWindow;
         $pulled = false;
         $lastBefore = null;
-        foreach ($counted as $m) {
+        foreach ($raw as $m) {
             if ($m['t'] > $catchEnd) {
                 break;
             }

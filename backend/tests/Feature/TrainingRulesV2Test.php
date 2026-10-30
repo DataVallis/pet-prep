@@ -4,10 +4,12 @@ use App\Enums\ActivityType;
 use App\Enums\TrainingCommand;
 use App\Models\ActivityLog;
 use App\Models\Pet;
+use App\Models\PetContract;
 use App\Models\PetItem;
 use App\Models\PetTrainingSession;
 use App\Models\PetTrainingSkill;
 use App\Models\User;
+use App\Services\FamilyService;
 use App\Services\TrainingService;
 use Illuminate\Support\Carbon;
 use Illuminate\Testing\TestResponse;
@@ -235,6 +237,121 @@ describe('start / finish over HTTP', function () {
         $result = tv2Post($child, '/api/child/pet/training/finish', ['session_id' => $session['id'], 'taps' => tv2Taps($session['trials'])])
             ->assertOk()->json('result');
         expect(array_keys($result))->toBe(['session_id', 'command', 'successes', 'obeyed', 'trials', 'progress_before', 'progress_after', 'progress_gain']);
+    });
+});
+
+describe('early end accounting (QA #461 M1)', function () {
+    it('charges the real time used: clamp(elapsed, round 1 end, duration) — the budget counts it', function () {
+        [, $child, $pet] = tv2Family();
+        $session = tv2Post($child, '/api/child/pet/training/start', ['command' => 'sit', 'rules' => 2])->assertOk()->json('session');
+        $round1 = $session['rounds'][0]['end_ms'];
+        $start = Carbon::parse($session['started_at'])->utc();
+
+        // In the break, 1.5 s after round 1: the session used round 1 + 1.5 s.
+        Carbon::setTestNow($start->copy()->addMilliseconds($round1 + 1500));
+        tv2Post($child, '/api/child/pet/training/finish', ['session_id' => $session['id'], 'taps' => [], 'ended_after_round' => 1])->assertOk();
+        expect(PetTrainingSession::where('public_id', $session['id'])->sole()->duration_ms)->toBe($round1 + 1500)
+            ->and(app(TrainingService::class)->usedSecondsOn($pet->fresh(), '2026-10-07'))->toBe(intdiv($round1 + 1500 + 999, 1000));
+
+        // Within the tolerance BEFORE round 1's end: at least round 1 is charged.
+        PetTrainingSession::query()->update(['status' => PetTrainingSession::STATUS_EXPIRED]);
+        $next = tv2Post($child, '/api/child/pet/training/start', ['command' => 'sit', 'rules' => 2])->assertOk()->json('session');
+        Carbon::setTestNow(Carbon::parse($next['started_at'])->utc()->addMilliseconds($next['rounds'][0]['end_ms'] - 1000));
+        tv2Post($child, '/api/child/pet/training/finish', ['session_id' => $next['id'], 'taps' => [], 'ended_after_round' => 1])->assertOk();
+        expect(PetTrainingSession::where('public_id', $next['id'])->sole()->duration_ms)->toBe($next['rounds'][0]['end_ms']);
+    });
+
+    it('refuses an early end once round 2 has started (+ 2 s) and at the full end — finish in full instead', function () {
+        [, $child, $pet] = tv2Family();
+        $session = tv2Post($child, '/api/child/pet/training/start', ['command' => 'sit', 'rules' => 2])->assertOk()->json('session');
+        $start = Carbon::parse($session['started_at'])->utc();
+        $round2 = $session['rounds'][1]['start_ms'];
+
+        // Up to round 2's start + 2 s it is still accepted …
+        Carbon::setTestNow($start->copy()->addMilliseconds($round2 + 2001));
+        tv2Post($child, '/api/child/pet/training/finish', ['session_id' => $session['id'], 'taps' => [], 'ended_after_round' => 1])
+            ->assertUnprocessable()->assertJsonPath('reason', 'training_round_two_started');
+
+        // … at the full end too (documented: the app sends a normal finish then).
+        Carbon::setTestNow(Carbon::parse($session['ends_at'])->utc());
+        tv2Post($child, '/api/child/pet/training/finish', ['session_id' => $session['id'], 'taps' => [], 'ended_after_round' => 1])
+            ->assertUnprocessable()->assertJsonPath('reason', 'training_round_two_started');
+        tv2Post($child, '/api/child/pet/training/finish', ['session_id' => $session['id'], 'taps' => tv2Taps($session['trials'])])
+            ->assertOk()->assertJsonPath('result.counts_for_routine', true);
+        expect(ActivityLog::where('pet_id', $pet->id)->where('activity_type', ActivityType::TrainedPet->value)->count())->toBe(1);
+
+        // Exactly at round 2's start + 2 s: accepted (boundary).
+        PetTrainingSession::query()->update(['status' => PetTrainingSession::STATUS_EXPIRED]);
+        ActivityLog::query()->delete();
+        $s2 = tv2Post($child, '/api/child/pet/training/start', ['command' => 'come', 'rules' => 2])->assertOk()->json('session');
+        Carbon::setTestNow(Carbon::parse($s2['started_at'])->utc()->addMilliseconds($s2['rounds'][1]['start_ms'] + 2000));
+        tv2Post($child, '/api/child/pet/training/finish', ['session_id' => $s2['id'], 'taps' => [], 'ended_after_round' => 1])
+            ->assertOk()->assertJsonPath('result.ended_after_round', 1);
+        expect(PetTrainingSession::where('public_id', $s2['id'])->sole()->duration_ms)->toBe($s2['rounds'][1]['start_ms'] + 2000);
+    });
+
+    it('charges an early end to the child\'s fair share (2 children); the sibling\'s share is untouched', function () {
+        [$parent, $child, $pet] = tv2Family();
+        $sibling = User::factory()->child()->create(['parent_id' => $parent->id, 'name' => 'Luka']);
+        app(FamilyService::class)->addCaretaker($pet, $sibling, true);
+        PetContract::create(['pet_id' => $pet->id, 'user_id' => $sibling->id, 'signature_format' => 'svg_path', 'signature' => 'M1 1 L2 2', 'signed_at' => now()]);
+        $service = app(TrainingService::class);
+        $share = $service->childShareSeconds($pet->fresh(), '2026-10-07', $child);
+        expect($share)->toBe(max(210, $service->sessionSecondsFor($pet->fresh())));
+
+        $session = tv2Post($child, '/api/child/pet/training/start', ['command' => 'sit', 'rules' => 2])->assertOk()->json('session');
+        $elapsed = $session['rounds'][0]['end_ms'] + 2200;
+        Carbon::setTestNow(Carbon::parse($session['started_at'])->utc()->addMilliseconds($elapsed));
+        $finish = tv2Post($child, '/api/child/pet/training/finish', ['session_id' => $session['id'], 'taps' => [], 'ended_after_round' => 1])->assertOk();
+
+        $used = intdiv($elapsed + 999, 1000);
+        expect($service->usedSecondsOn($pet->fresh(), '2026-10-07', $child))->toBe($used)
+            ->and($service->usedSecondsOn($pet->fresh(), '2026-10-07', $sibling))->toBe(0)
+            ->and($finish->json('state.training.daily_budget_left_seconds'))->toBe(420 - $used)
+            ->and($finish->json('state.training.my_seconds_left'))->toBe(min(420 - $used, $share - $used));
+    });
+
+    it('refuses an early end of a session a lock began during (interrupted, time refunded)', function () {
+        [, $child, $pet] = tv2Family();
+        $session = tv2Post($child, '/api/child/pet/training/start', ['command' => 'sit', 'rules' => 2])->assertOk()->json('session');
+        $start = Carbon::parse($session['started_at'])->utc();
+
+        Carbon::setTestNow($start->copy()->addSeconds(5));
+        Pet::find($pet->id)->update(['is_hard_stopped' => true]);
+        Carbon::setTestNow($start->copy()->addMilliseconds($session['rounds'][0]['end_ms'] + 500));
+        Pet::find($pet->id)->update(['is_hard_stopped' => false]);
+
+        tv2Post($child, '/api/child/pet/training/finish', ['session_id' => $session['id'], 'taps' => tv2Taps($session['trials']), 'ended_after_round' => 1])
+            ->assertUnprocessable()->assertJsonPath('reason', 'training_session_interrupted');
+        expect(PetTrainingSession::where('public_id', $session['id'])->value('status'))->toBe('interrupted')
+            ->and(app(TrainingService::class)->usedSecondsOn($pet->fresh(), '2026-10-07'))->toBe(0)
+            ->and(PetTrainingSkill::where('pet_id', $pet->id)->where('command', 'sit')->value('progress'))->toBeNull();
+    });
+
+    it('reserves its own version before midnight: v2 (52 s) still starts where v1 (58 s) is refused; later v2 is refused too', function () {
+        [, $child, $pet] = tv2Family();
+        withoutQuietHours($pet); // about the clock, not sleep
+        $service = app(TrainingService::class);
+        // No stored clips: v1 = 2000 + 6 × 9200 = 57 200 ms, v2 = 2000 + 6 × 7900 + 2500 = 51 900 ms.
+        expect($service->sessionSecondsFor($pet->fresh(), 1))->toBe(58)
+            ->and($service->sessionSecondsFor($pet->fresh(), 2))->toBe(52)
+            ->and($service->sessionSecondsFor($pet->fresh()))->toBe(58);
+
+        // 23:58:03 local: v1 would end 00:00:01 (TTL 60 s) → refused; v2 ends 23:59:55 → accepted.
+        Carbon::setTestNow(Carbon::parse('2026-10-07 23:58:03', 'Europe/Ljubljana')->utc());
+        tv2Post($child, '/api/child/pet/training/start', ['command' => 'sit'])
+            ->assertUnprocessable()->assertJsonPath('reason', 'training_day_ending');
+        $ok = tv2Post($child, '/api/child/pet/training/start', ['command' => 'sit', 'rules' => 2])->assertOk();
+        // (The child state, not knowing the app's version, reserves the larger: 58 s.)
+        expect($ok->json('session.rules_version'))->toBe(2);
+        PetTrainingSession::query()->update(['status' => PetTrainingSession::STATUS_EXPIRED]);
+
+        // 23:58:09: v2 would end 00:00:01 → training_day_ending.
+        Carbon::setTestNow(Carbon::parse('2026-10-07 23:58:09', 'Europe/Ljubljana')->utc());
+        tv2Post($child, '/api/child/pet/training/start', ['command' => 'sit', 'rules' => 2])
+            ->assertUnprocessable()->assertJsonPath('reason', 'training_day_ending')
+            ->assertJsonPath('next_allowed_at', '2026-10-08T00:00:00+02:00')
+            ->assertJsonPath('state.training.can_start', false);
     });
 });
 

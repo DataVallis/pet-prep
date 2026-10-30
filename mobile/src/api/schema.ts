@@ -822,8 +822,9 @@ export interface paths {
          *     training_session_not_over | training_invalid_taps | training_session_interrupted |
          *     training_not_available. Rules v2: `ended_after_round: 1` ends after round 1
          *     (Š3) — round 1 is scored, progress counts, no `trained_pet` row (the routine
-         *     counts only a full session); `result` then carries `rules_version`,
-         *     `ended_after_round`, `counts_for_routine`
+         *     counts only a full session; the budget counts the real time used, at least round 1);
+         *     after round 2 started (+ 2 s) → 422 training_round_two_started. `result` then carries
+         *     `rules_version`, `ended_after_round`, `counts_for_routine`
          * @description POST /api/child/pet/training/finish
          */
         post: operations["childPet.finishTraining"];

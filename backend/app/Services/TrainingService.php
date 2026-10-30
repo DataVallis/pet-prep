@@ -703,9 +703,12 @@ class TrainingService
      *
      * Early end (GAMES_SPEC §4.1 Š3, David 2026-10-30, rules v2 only): `$endedAfterRound` 1 =
      * the child stopped after round 1. Accepted from round 1's end (minus
-     * FINISH_EARLY_TOLERANCE_MS); only round 1's cues are scored (taps before round 2's first
-     * cue), progress counts with the session's pace factor (× 8 / 6 as a full session),
-     * `duration_ms` becomes round 1's end (the budget counts that), and `full` = false — the
+     * FINISH_EARLY_TOLERANCE_MS) until round 2's start (plus the tolerance) — later →
+     * training_round_two_started (QA #461 M1: finish the session in full instead); only
+     * round 1's cues are scored (taps before round 2's first cue), progress counts with the
+     * session's pace factor (× 8 / 6 as a full session), `duration_ms` becomes the real time
+     * used = clamp(elapsed since the start, round 1's end, the scheduled duration) — the
+     * budget and the fair share count that — and `full` = false — the
      * caller writes no `trained_pet` row, so the »Šolanje« routine counts only a full session.
      * A v1 session refuses an early end (training_session_not_over).
      *
@@ -756,6 +759,15 @@ class TrainingService
         if ($exact->lessThan($endsAt->subMilliseconds(self::FINISH_EARLY_TOLERANCE_MS))) {
             return $refuse(CareRefusal::TrainingSessionNotOver, $session);
         }
+        $elapsedMs = (int) floor($session->started_at->diffInMilliseconds($exact, true));
+        if ($round !== null) {
+            // QA #461 M1: the early end is only for a child who stops in the break — once the
+            // next round has started (+ tolerance) the session is finished in full instead.
+            $nextStart = (int) ($schedule['rounds'][$endedAfterRound]['start_ms'] ?? PHP_INT_MAX);
+            if ($elapsedMs > $nextStart + self::FINISH_EARLY_TOLERANCE_MS) {
+                return $refuse(CareRefusal::TrainingRoundTwoStarted, $session);
+            }
+        }
         foreach ($taps as $tap) {
             if (! is_int($tap) || $tap < 0 || $tap > $session->duration_ms) {
                 return $refuse(CareRefusal::TrainingInvalidTaps, $session);
@@ -805,8 +817,9 @@ class TrainingService
             'result' => $score,
             'progress_before' => $before,
             'progress_gain' => $after - $before,
-            // Š3: an early end uses (and the budget counts) round 1 only.
-            ...($round === null ? [] : ['duration_ms' => (int) $round['end_ms']]),
+            // Š3 (QA #461 M1): an early end counts the real time used — elapsed since the start,
+            // at least round 1, at most the scheduled session.
+            ...($round === null ? [] : ['duration_ms' => max((int) $round['end_ms'], min($elapsedMs, (int) $session->duration_ms))]),
         ])->save();
 
         return ['refusal' => null, 'session' => $session, 'repeat' => false, 'full' => $round === null];

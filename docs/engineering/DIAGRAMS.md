@@ -690,13 +690,13 @@ sequenceDiagram
   end
   Note over C: app plays the ~60 s timeline: "Sedi!" at each cue,<br/>dog obeys (or not), child taps "Pohvali" → offsets in ms
   C->>API: POST /api/child/pet/training/finish {session_id, taps[ms], ended_after_round?: 1}
-  API->>T: same child? ends_at − 2 s ≤ now < expires_at? every tap ≤ duration?<br/>v2 early end: round 1 end − 2 s ≤ now (v1 → 422 training_session_not_over)
+  API->>T: same child? ends_at − 2 s ≤ now < expires_at? every tap ≤ duration?<br/>v2 early end: round 1 end − 2 s ≤ now ≤ round 2 start + 2 s (later → 422 training_round_two_started; v1 → 422 training_session_not_over)
   T->>T: score(): first tap per cue → in_time / too_early / too_late / no_praise · waited / praised_without_obeying
   T->>DB: progress += in_time × per_success × breed multiplier (BC 2, mutt 1) × pet factor (mutt 0.8–1.2) × 8 / trials (6 → 8/6) · cap 100
   alt full session
     T->>DB: activities_log trained_pet (actor child) = today's training routine
   else v2 early end after round 1 (Š3)
-    T->>DB: round 1 scored only · duration_ms = round 1 end (budget) · NO trained_pet row (no routine)
+    T->>DB: round 1 scored only · duration_ms = clamp(elapsed, round 1 end, duration) (budget + fair share) · NO trained_pet row (no routine)
   end
   API-->>C: 200 {result {trials[outcome], successes, progress_before, progress_after<br/>+ v2: rules_version, ended_after_round, counts_for_routine}, state} + PetUpdated trained_pet
 ```
@@ -782,7 +782,7 @@ sequenceDiagram
   C->>API: POST /api/child/pet/wand/finish {session_id, moves[{t, away, in_zone?, speed_ok?}]}
   API->>W: same child? ends_at − 5 s ≤ now < expires_at? lock began during the game? every t ≤ 60 000?
   W->>W: v1 score(): ≥ 8 away moves (< 300 ms apart count once) · one in each 15 s quarter · away ≥ 50 %<br/>· an away move ≤ 2 s after every pounce · gaps not machine-regular
-  W->>W: v2 scoreV2(): ★ per pounce = ≤ 1 move in [p − 0.8 s, p) · first away move in [p + 150, p + 1500 ms]<br/>· in_zone · speed_ok; ★ catch = no away move in [c, c + 1.5 s], feather in zone · counts at ≥ 2 of 4
+  W->>W: v2 scoreV2() (finish only from catch + 1.5 s): ★ per pounce = ≤ calm_max_moves counted moves in [p − calm_window, p)<br/>· first reported away move in [p + 150, p + 1500 ms] · in_zone · speed_ok; ★ catch = no away move in [c, c + 1.5 s], feather in zone · counts at ≥ 2 of 4
   alt took part
     W->>DB: session completed · pets.energy_level = sessions today / goal × 100 (never lowered)
     W->>DB: activities_log played_wand (actor child, value = n-th of the day) = the play routine

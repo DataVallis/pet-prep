@@ -4,6 +4,7 @@ use App\Enums\BreedType;
 use App\Models\ActivityLog;
 use App\Models\Pet;
 use App\Models\PetCareSession;
+use App\Models\QuietHours;
 use App\Models\User;
 use App\Services\WandPlayService;
 use Illuminate\Support\Carbon;
@@ -18,7 +19,8 @@ use Random\Randomizer;
 | P1: one ~25 s hunt ending with the catch. P2: scored in stars — 3 dodges +
 | the catch, counted at ≥ 2. A dodge counts only when the feather was still
 | during the crouch cue, the first pull-away comes 150–1500 ms after the
-| pounce, ends inside the zone and is a clean stroke. Spam earns nothing.
+| pounce, ends inside the zone and is a clean stroke. Rapid spam earns nothing;
+| a steady slow mover is the open calm-rule item (QA #461 M3, config only).
 | Versioned: only a start with `rules: 2`; without it v1 is byte for byte.
 | Goal, 2 h gap, meter, routine and the scratched sofa are unchanged.
 */
@@ -119,6 +121,56 @@ function wv2SpamMoves(int $durationMs): array
     for ($t = 200, $k = 0; $t <= $durationMs; $t += $gaps[$k++ % count($gaps)]) {
         $moves[] = wv2Move($t);
     }
+
+    return $moves;
+}
+
+/** Apply a calm rule (QA #461 M3: lead, window, max moves) to new v2 schedules. */
+function wv2CalmRule(array $rule): void
+{
+    config(['wand.v2.crouch_cue_lead_ms' => $rule[0], 'wand.v2.calm_window_ms' => $rule[1], 'wand.v2.calm_max_moves' => $rule[2]]);
+}
+
+function wv2Seeded(string $seed): Randomizer
+{
+    return new Randomizer(new Xoshiro256StarStar(hash('sha256', $seed, true)));
+}
+
+/** A steady slow mover: one away stroke every 0.8–1.2 s for the whole hunt (in the zone, clean). */
+function wv2SlowMover(array $s, Randomizer $rng): array
+{
+    $moves = [];
+    for ($t = $rng->getInt(0, 800); $t <= $s['duration_ms']; $t += $rng->getInt(800, 1200)) {
+        $moves[] = wv2Move($t);
+    }
+
+    return $moves;
+}
+
+/**
+ * A fair child who keeps the feather moving (a stroke every ~0.45–0.6 s, away and back),
+ * sees the 👀 cue and stops after a human reaction (the stroke in progress still ends
+ * 300–450 ms after the cue), pulls away 350–650 ms after the pounce, resumes 1.6 s after
+ * it, and at the catch cue lets the cat catch it (one last stroke TOWARD the cat).
+ */
+function wv2FairStopper(array $s, Randomizer $rng): array
+{
+    $moves = [];
+    $from = 500;
+    $stops = array_map(null, $s['crouch_cues_ms'], $s['pounces_ms']);
+    foreach ($stops as [$cue, $p]) {
+        $stopAt = $cue + $rng->getInt(300, 450);
+        for ($t = $from, $k = 0; $t < $cue; $t += $rng->getInt(450, 600), $k++) {
+            $moves[] = wv2Move($t, $k % 2 === 0);
+        }
+        $moves[] = wv2Move($stopAt, false);              // the stroke in progress ends
+        $moves[] = wv2Move($p + $rng->getInt(350, 650)); // the dodge
+        $from = $p + 1600;
+    }
+    for ($t = $from, $k = 0; $t < $s['catch_at_ms']; $t += $rng->getInt(450, 600), $k++) {
+        $moves[] = wv2Move($t, $k % 2 === 0);
+    }
+    $moves[] = wv2Move($s['catch_at_ms'] + $rng->getInt(300, 450), false); // toward the cat: allowed
 
     return $moves;
 }
@@ -250,6 +302,86 @@ describe('stars (GAMES_SPEC §5.3)', function () {
             ->and(WandPlayService::scoreV2([wv2Move(21000, away: false, inZone: false)], $s)['catch'])->toBe(['star' => false, 'reason' => 'out_of_zone'])
             // Drawing it toward the cat at the catch is fine.
             ->and(WandPlayService::scoreV2([wv2Move(22800, away: false)], $s)['catch']['star'])->toBeTrue();
+    });
+});
+
+describe('calm rule — configurable (QA #461 M3, pending David)', function () {
+    it('derives the crouch cues from the configured lead and stores the calm window in the session', function (array $rule) {
+        wv2CalmRule($rule);
+        $s = WandPlayService::scheduleV2(wv2Seeded('cue'));
+        expect($s['crouch_cues_ms'])->toBe(array_map(fn (int $p): int => $p - $rule[0], $s['pounces_ms']))
+            ->and([$s['calm_window_ms'], $s['calm_max_moves']])->toBe([$rule[1], $rule[2]]);
+    })->with([
+        'current 900 / 800 / 1' => [[900, 800, 1]],
+        'QA recommendation 1500 / 1000 / 0' => [[1500, 1000, 0]],
+    ]);
+
+    it('scores a steady slow mover (a stroke every 0.8–1.2 s) — known pass rate per rule', function (array $rule, float $min, float $max) {
+        wv2CalmRule($rule);
+        $passed = 0;
+        $n = 200;
+        for ($i = 0; $i < $n; $i++) {
+            $rng = wv2Seeded("slow-{$i}");
+            $s = WandPlayService::scheduleV2($rng);
+            $passed += WandPlayService::scoreV2(wv2SlowMover($s, $rng), $s)['success'] ? 1 : 0;
+        }
+        expect($passed / $n)->toBeGreaterThanOrEqual($min)->toBeLessThanOrEqual($max);
+    })->with([
+        // Known weakness of the approved spec numbers (QA #461 simulation: 70–95 %; here ~0.94).
+        'current 900 / 800 / 1 — slow mover mostly passes (open item for David)' => [[900, 800, 1], 0.8, 1.0],
+        'QA recommendation 1500 / 1000 / 0 — slow mover fails' => [[1500, 1000, 0], 0.0, 0.0],
+    ]);
+
+    it('passes a fair child who stops mid-stroke after the cue (reaction 0.3–0.45 s) with every star', function (array $rule) {
+        wv2CalmRule($rule);
+        for ($i = 0; $i < 100; $i++) {
+            $rng = wv2Seeded("fair-{$i}");
+            $s = WandPlayService::scheduleV2($rng);
+            $r = WandPlayService::scoreV2(wv2FairStopper($s, $rng), $s);
+            expect($r['stars'])->toBe(4, "seed {$i}: ".json_encode($r['dodges']));
+        }
+    })->with([
+        'current 900 / 800 / 1' => [[900, 800, 1]],
+        'QA recommendation 1500 / 1000 / 0' => [[1500, 1000, 0]],
+    ]);
+});
+
+describe('QA #461 minors', function () {
+    it('keeps a real dodge right after a calm move (the 300 ms merge never swallows it)', function () {
+        $s = ['pounces_ms' => [7000]] + wv2Schedule();
+        $r = WandPlayService::scoreV2([wv2Move(6900, away: false), wv2Move(7180)], $s);
+        expect($r['dodges'][0])->toBe(['pounce_ms' => 7000, 'star' => true, 'reason' => null, 'move_ms' => 7180])
+            // A pull-away at the catch right after another move is seen too.
+            ->and(WandPlayService::scoreV2([wv2Move(22400, away: false), wv2Move(22600)], $s)['catch']['reason'])->toBe('pulled_away');
+    });
+
+    it('accepts a v2 finish only once the catch window is over (no free catch star from the 5 s tolerance)', function () {
+        [, $child] = wv2Family();
+        $session = wv2Post($child, '/api/child/pet/wand/start', ['rules' => 2])->assertOk()->json('session');
+        $start = Carbon::parse($session['started_at'])->utc();
+        $catchEnd = $session['catch_at_ms'] + $session['catch_window_ms'];
+
+        Carbon::setTestNow($start->copy()->addMilliseconds($catchEnd - 1));
+        wv2Post($child, '/api/child/pet/wand/finish', ['session_id' => $session['id'], 'moves' => []])
+            ->assertUnprocessable()->assertJsonPath('reason', 'wand_session_not_over');
+        Carbon::setTestNow($start->copy()->addMilliseconds($catchEnd));
+        wv2Post($child, '/api/child/pet/wand/finish', ['session_id' => $session['id'], 'moves' => []])
+            ->assertOk()->assertJsonPath('result.catch.star', true);
+    });
+
+    it('refuses a v2 start in / right before quiet hours and before midnight (the v1 60 s + TTL is reserved)', function () {
+        [$parent, $child, $cat] = wv2Family();
+        // Bedtime 21:00: a 27 s hunt would fit at 20:58:30, but the v1 reservation (60 s + 60 s TTL) does not.
+        wv2At('2026-10-21 20:58:30');
+        wv2Post($child, '/api/child/pet/wand/start', ['rules' => 2])
+            ->assertUnprocessable()->assertJsonPath('reason', 'wand_quiet_hours')
+            ->assertJsonPath('next_allowed_at', '2026-10-22T07:00:00+02:00');
+
+        // Quiet hours from 01:00: at 23:58:30 the reservation crosses midnight.
+        QuietHours::where('family_id', $cat->family_id)->update(['bedtime_start' => '01:00', 'bedtime_end' => '07:00']);
+        wv2At('2026-10-21 23:58:30');
+        wv2Post($child, '/api/child/pet/wand/start', ['rules' => 2])
+            ->assertUnprocessable()->assertJsonPath('reason', 'wand_day_ending');
     });
 });
 
