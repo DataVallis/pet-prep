@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "933cfd301f29010f841a6683ab13030b4109c0c6ca9eb0c88a3550466d79d982"
+      "sha256": "cca468ad31cb6a57a5cceb552073d6b4bccb0ee3f0fa62bb8135102cd86977ee"
     }
   },
   "suitability_vocabulary": {
@@ -44786,7 +44786,12 @@
           "S623"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "irish-wolfhound.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
