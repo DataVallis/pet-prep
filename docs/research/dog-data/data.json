@@ -41003,6 +41003,542 @@
       }
     }
   },
+  "irish_wolfhound": {
+    "_note": "Added 2026-10-30 (M5-R10-80, unattended run — appended after the Soft Coated Wheaten Terrier: AKC 2024 No. 76 'Irish Wolfhound', S174 full-list table fetched 2026-10-30). Quotes as returned by the web-fetch tool on 2026-10-30 (PDSA and PetMD partly in short quotes, 125-character limit; fragments marked as such); paraphrase only in notes. Sources S615–S624 (reused S8, S10, S11, S35, S45, S174). No health percentages anywhere. Identity from the FCI nomenclature (S615, 'IRISH WOLFHOUND (160)', Group 10, Ireland); heights, weights, colours and appearance from FCI-Standard N° 160 (S616) and the Royal Kennel Club standard (S618). RKC Breeds A–Z page (S617) reached with the trailing slash: key facts, Breed Watch Category 2 (no point returned) and the health tests. PDSA (S619), PetMD (S620), VCA (S621). Weight / height for the game: PDSA ranges (S619); FCI / RKC give minimums only. Lifespan: RKC / PDSA 'Under 10 years' have no lower bound and the Dogs Trust McMillan 2024 table (S123) is not reachable (9.9 years only via Wikipedia, S624, tier C) → the closest peer-reviewed breed median: Orleifson et al. 2017 (S623, Swedish Irish Wolfhounds, median 7.5 years); the senior boundary is Claude's suggestion (verified=false, open for David). Names: RKC / AKC / FCI 'Irish Wolfhound'; Slovenian »irski volčji hrt« — no KZS page read, open for David.",
+    "identity": {
+      "value": "FCI No. 160, Group 10 Section 2 (Rough-haired Sighthounds), Ireland",
+      "unit": "—",
+      "source_id": "S615",
+      "quote": "IRISH WOLFHOUND (160)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S615, as returned): group 'n°10 - Sighthounds', section 'Rough-haired Sighthounds', country of origin 'IRELAND', definitive acceptance 4/26/1955, valid standard 4/10/2026, not subject to a working trial; FR 'LEVRIER IRLANDAIS', DE 'IRISCHER WOLFSHUND'. Ireland is already in FCI_ORIGINS (IE, Soft Coated Wheaten Terrier). Irish name 'Cú Faoil' (Wikipedia S624, tier C)."
+    },
+    "size_class": {
+      "value": "giant",
+      "unit": "—",
+      "source_id": "S617",
+      "quote": "Extra large",
+      "confidence": "high",
+      "notes": "RKC breed page key fact 'Size' (S617) 'Extra large' → giant (Saint Bernard precedent). PDSA (S619) 'Size: Large' (its page sits under 'large-dogs'); PetMD (S620) 'This giant dog weighs at least 105 pounds' (fragment) → the 'Giant' class of S10 for growth."
+    },
+    "height": {
+      "pdsa": {
+        "value": {
+          "male": [
+            71,
+            79
+          ],
+          "female": [
+            71,
+            79
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S619",
+        "quote": "Average height: 71-79 cm",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S619), one range for both sexes (stored per sex). FCI (S616) and RKC (S618) give minimums only (height.fci_minimum). VCA (S621) 'Height: 30 to 32 inches' — alternative."
+      },
+      "fci_minimum": {
+        "value": {
+          "male": 79,
+          "female": 71
+        },
+        "unit": "cm (minimum)",
+        "source_id": "S618",
+        "quote": "Minimum height for dogs: 79 cms (31 ins), bitches: 71 cms (28 ins).",
+        "confidence": "high",
+        "notes": "RKC standard (S618). FCI-Standard N° 160 (S616): males minimum desired height 79 cm, females 71 cm (paraphrase as returned); the FCI general appearance also names a desired average of 81–86 cm for males (paraphrase). A minimum, not a range — background for the PDSA range."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            40,
+            55
+          ],
+          "female": [
+            40,
+            55
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S619",
+        "quote": "Average weight: 40-55 kg",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average weight' (S619), one range for both sexes — the game range (adult_weight_kg). RKC standard (S618) and FCI (S616) give minimums only (adult_weight.rkc_minimum); VCA (S621) 'Weight: 105 to 120 pounds' (≈ 48–54 kg) — alternative."
+      },
+      "rkc_minimum": {
+        "value": {
+          "male": 54.5,
+          "female": 40.9
+        },
+        "unit": "kg (minimum)",
+        "source_id": "S618",
+        "quote": "Minimum weight: 54.5 kgs (120 lbs) for dogs, 40.9 kgs (90 lbs) for bitches.",
+        "confidence": "high",
+        "notes": "RKC standard (S618). FCI (S616): minimum expected weight 54.5 kg (males) / 40.5 kg (females) (paraphrase as returned). A minimum, not a range — background for the PDSA range."
+      },
+      "salt_category": {
+        "value": "VI (>40 kg, no curve)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 40–55 kg = the band '>40 (no curve)'. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "18–24 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Giant (over 100 pounds) | 18–24 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PetMD (S620) 'at least 105 pounds' → 'Giant'. Same 18–24 months as the Saint Bernard and the Mastiff. PDSA (S619): 'Because of their large size and quick growth, you'll need to take exercise easy while they are a puppy.' — the game's puppy walk cap (10 min × age in months) already keeps puppy walks short."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Irish Wolfhound growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S617",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S617). PDSA (S619) 'Average lifespan: under 10 years' agrees; PetMD (S620) 6–8 years; VCA (S621) 6 to 8 years. Basis of the consider tag shorter_lifespan (no number in the chip). No lower bound → not usable for the senior boundary."
+      },
+      "pdsa": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S619",
+        "quote": "under 10 years",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average lifespan' (S619). Same band as the RKC."
+      },
+      "petmd": {
+        "value": "6–8",
+        "unit": "years",
+        "source_id": "S620",
+        "quote": "Because they're so big, the average Irish Wolfhound lifespan is just 6–8 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S620, US). VCA (S621) Quick Facts 'Lifespan: 6 to 8 years' agrees. Alternative only (0.75 × 6 y lower bound = 54 months)."
+      },
+      "median_peer_reviewed": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": "S623",
+        "quote": "Median lifespan was 2720 days (7.5 years).",
+        "confidence": "medium",
+        "notes": "Orleifson L., Ljungvall I., Höglund K., Häggström J. (2017), Occurrence of cardiorespiratory diseases and impact on lifespan in Swedish Irish Wolfhounds: a retrospective questionnaire-based study, Acta Vet Scand 59:53 (S623): Swedish Irish Wolfhounds born 2006–2008, about 101 dogs in the survival analysis; males shorter than females (median 2523 vs 2836 days). Owner questionnaire, one birth cohort — the closest peer-reviewed breed median reachable in this run; never shown as a statistic in the app. Urfer et al. 2007 review (S622): 'Mean lifespan estimates in Irish Wolfhounds vary between 4.95 and 8.75 years.' (means, not medians)."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Dogs Trust table of McMillan et al. 2024 data (S123): not reachable this run (provenance refusal; the 'shortest and longest' PDF failed at its site; the Nature PDF names the breed only in Fig. 5, the breed values are in Supplementary Table 3). Wikipedia (S624, tier C) cites a 2024 UK study (McMillan et al.) with a life expectancy of 9.9 years for the breed (paraphrase) — not verified in the paper or the table → open for David (0.75 × 9.9 × 12 = 89.1 → senior 89 if confirmed). UNSOURCED value."
+      },
+      "senior_from": {
+        "value": 5.625,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × Orleifson 2017 median 7.5 y (S623) → 0.75 × 7.5 = 5.625 y = 67.5 → 68 months (half up). The runbook rule yields no value: McMillan 2024 not reachable (S123), no VetCompass breed median found, RKC 'Under 10 years' has no lower bound → closest row (Bernese Mountain Dog / Saint Bernard precedent): a peer-reviewed breed median, seeded verified=false (Claude's suggestion, open for David). Alternatives: McMillan 2024 9.9 y via Wikipedia (S624, tier C) → 89; PetMD / VCA lower bound 6 y (S620, S621) → 54.",
+        "derived_from": [
+          "S11",
+          "S623"
+        ],
+        "months": 68,
+        "alternative": {
+          "value_years": 9.9,
+          "months": 89,
+          "derived_from": [
+            "S624"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S617",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S617), runbook first choice → 120 min. PDSA (S619) 'Minimum exercise: 2 hours per day' and 'Your Irish Wolfhound will need a minimum of two hours of exercise every day to keep them fit and healthy.' agree; VCA (S621) 'Requires a moderate walk or short jog, or a run in an enclosed area, every day.' (no number)."
+      },
+      "daily_text": {
+        "value": "a minimum of two hours every day, spread across the day",
+        "unit": "—",
+        "source_id": "S619",
+        "quote": "Your Irish Wolfhound will need a minimum of two hours of exercise every day to keep them fit and healthy.",
+        "confidence": "high",
+        "notes": "PDSA (S619). 'It's better to spread this across the day rather than doing two hours in one go.' Puppies: 'Because of their large size and quick growth, you'll need to take exercise easy while they are a puppy.'"
+      },
+      "after_meals": {
+        "value": "no exercise right before or after eating (GDV / bloat)",
+        "unit": "—",
+        "source_id": "S620",
+        "quote": "Do not let your Irish Wolfhound dog exercise right before or after eating.",
+        "confidence": "high",
+        "notes": "PetMD (S620), feeding section; also 'Do not use a raised food bowl, as this may increase the risk of bloat.' PDSA (S619): 'Remember to leave at a gap after eating and before exercising as this can help reduce the chances of GDV (bloat).' (as returned). → proposed_game_parameters.irish_wolfhound.meal_exercise_gap (built, M5-R16)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "gentle, kind, loyal; friendly towards people and other dogs",
+        "unit": "—",
+        "source_id": "S616",
+        "quote": "A Gentle kind loyal hound with a friendly nature towards people and other dogs.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 160 (S616), behaviour / temperament. RKC standard (S618): 'Gentle, kind and friendly nature.' VCA (S621): 'Makes a loyal and gentle companion.'"
+      },
+      "family": {
+        "value": "generally patient with children — not recommended with smaller children (size and strength; may knock them over)",
+        "unit": "—",
+        "source_id": "S619",
+        "quote": "We wouldn't recommend having an Irish Wolfhound if you have smaller children",
+        "confidence": "high",
+        "notes": "PDSA (S619, fragment): because of their size and strength (paraphrase); 'they often don't know their own strength and could accidentally knock smaller children over.' (fragment); can be good with children if well socialised (paraphrase); always supervise. PetMD (S620): 'They are affectionate with most people and generally patient with children.' VCA (S621): 'Good with children, strangers, and other pets and dogs.' but 'Its laidback nature may make play frustrating for children.' Basis of not_for_small_children (Cane Corso precedent); no children / family_pet chip (the PDSA advice against smaller children wins)."
+      },
+      "time_alone": {
+        "value": "bonds strongly — may struggle or become destructive when left alone; never more than four hours",
+        "unit": "—",
+        "source_id": "S620",
+        "quote": "Some might develop separation anxiety when left alone, so they shouldn't spend hours apart from their family.",
+        "confidence": "high",
+        "notes": "PetMD (S620). PDSA (S619): 'this should never be for more than four hours.' (fragment). Basis of needs_company."
+      },
+      "other_pets": {
+        "value": "high prey drive — not recommended with smaller pets; friendly with other dogs when socialised",
+        "unit": "—",
+        "source_id": "S619",
+        "quote": "As Irish Wolfhounds do have a high prey drive, we wouldn't recommend keeping them with smaller pets.",
+        "confidence": "high",
+        "notes": "PDSA (S619); cats may be possible if introduced young, slowly and under supervision (paraphrase). PetMD (S620): 'they can have a powerful prey drive and may chase smaller animals, such as cats, or bolt to catch a squirrel while on a walk.' Basis of chases_small_pets (runbook: a high-prey-drive quote); no other_pets."
+      },
+      "socialisation": {
+        "value": "socialise the puppy from the day it comes home",
+        "unit": "—",
+        "source_id": "S620",
+        "quote": "Begin socializing your Irish Wolfhound puppy as soon as you bring them home.",
+        "confidence": "high",
+        "notes": "PetMD (S620). PDSA (S619): early socialisation is important (paraphrase). A need (runbook M5-R17) → proposed_game_parameters.irish_wolfhound.socialisation (DOG_SOCIALISATION row)."
+      },
+      "training": {
+        "value": "sensitive; positive, reward-based training from a young age",
+        "unit": "—",
+        "source_id": "S620",
+        "quote": "Irish Wolfhounds are sensitive and eager to please, so they can easily be trained by using positive reinforcement.",
+        "confidence": "high",
+        "notes": "PetMD (S620). VCA (S621): 'Obedience training is a must because of its size and strength.' and 'Does best with reward-based training involving food.' PDSA (S619): patient, consistent, reward-based training (paraphrase)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No chewing statement found → no chews_when_bored tag (PDSA: may become destructive when left alone — behaviour.time_alone)."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement on weight gain found → no food_motivated_weight tag. PDSA (S619): split the daily food into two meals; treats no more than 10 % of calories (general advice). PetMD (S620): fed about every 12 hours as an adult (paraphrase)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 2 (S617) — the points of concern were not returned → no welfare chip (Pomeranian / Staffordshire precedent, open for David). Breeder checklist: RKC Good Practice 'Prioritising genetic diversity', Best Practice BVA/KC/ISDS eye scheme (S617).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 2 — points of concern not returned",
+        "unit": "—",
+        "source_id": "S617",
+        "quote": "Category 2",
+        "confidence": "medium",
+        "notes": "RKC breed page (S617). The Breed Watch points were not fetched in this run → no welfare chip; open for David."
+      },
+      "gdv": {
+        "value": "gastric dilatation-volvulus (bloat) — an emergency",
+        "unit": "—",
+        "source_id": "S619",
+        "quote": "It is an emergency and requires urgent veterinary attention.",
+        "confidence": "high",
+        "notes": "PDSA (S619) health list (GDV, 'bloat': the stomach twists — paraphrase). PetMD (S620) and Urfer 2007 (S622) list GDV. Register health key bloat_gdv; basis of the meal / exercise gap."
+      },
+      "heart": {
+        "value": "dilated cardiomyopathy (heart muscle disease)",
+        "unit": "—",
+        "source_id": "S619",
+        "quote": "a type of heart disease which means their heart is bigger than it should be",
+        "confidence": "high",
+        "notes": "PDSA (S619, fragment); annual heart screening of breeding dogs (paraphrase). PetMD (S620) 'Dilated cardiomyopathy (DCM)'; Urfer 2007 (S622) and Orleifson 2017 (S623) name dilated cardiomyopathy among the most frequent diseases. Register health key heart_muscle_disease."
+      },
+      "cancer": {
+        "value": "certain cancers, including bone cancer (osteosarcoma)",
+        "unit": "—",
+        "source_id": "S620",
+        "quote": "Bone cancer (osteosarcoma)",
+        "confidence": "high",
+        "notes": "PetMD (S620) health list. PDSA (S619) 'certain cancers' (paraphrase); Urfer 2007 (S622) osteogenic sarcoma. Register health key certain_cancers."
+      },
+      "pra": {
+        "value": "generalised progressive retinal atrophy (gradual sight loss)",
+        "unit": "—",
+        "source_id": "S619",
+        "quote": "Generalised progressive retinal atrophy",
+        "confidence": "medium",
+        "notes": "PDSA (S619) health list (gradual sight loss over months or years — paraphrase). Urfer 2007 (S622) lists progressive retinal atrophy. Register health key pra_eye_disease."
+      },
+      "liver_shunt": {
+        "value": "portosystemic (liver) shunt — a birth defect; testing available",
+        "unit": "—",
+        "source_id": "S619",
+        "quote": "Portosystemic shunt",
+        "confidence": "medium",
+        "notes": "PDSA (S619) health list (blood bypasses the liver — paraphrase; testing is available). Urfer 2007 (S622): intrahepatic portosystemic shunt (paraphrase). Register health key liver_shunt."
+      },
+      "hip_elbow_dysplasia": {
+        "value": "hip and elbow dysplasia",
+        "unit": "—",
+        "source_id": "S620",
+        "quote": "Hip dysplasia",
+        "confidence": "medium",
+        "notes": "PetMD (S620) health list ('Hip dysplasia', 'Elbow dysplasia'). Research only (no register key — the RKC lists no hip / elbow scheme for the breed)."
+      },
+      "shorter_lifespan": {
+        "value": "shorter than average lifespan",
+        "unit": "—",
+        "source_id": "S617",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S617), PDSA (S619) 'under 10 years'. Basis of the consider tag shorter_lifespan (no number in the chip)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 41,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Irish Wolfhound",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-30): rank 41 shared by 'Curly Coated Retriever' and 'Irish Wolfhound' (as returned: '| 41 | Curly Coated Retriever |' then 'Irish Wolfhound'), tier 'Average Working/Obedience Intelligence' (ranks 40–54). Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier 'Average Working/Obedience Intelligence' (ranks 40–54)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.irish_wolfhound.learning_multiplier (1.0, runbook rule: Average tier, rank 41).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "the largest and tallest sighthound — a rough-coated hound of great size and commanding appearance, muscular yet gracefully built",
+        "unit": "—",
+        "source_id": "S616",
+        "quote": "The largest and tallest of the sighthounds is a rough coated hound of great size and commanding appearance.",
+        "confidence": "high",
+        "notes": "FCI (S616). RKC standard (S618): 'Of great size, strength, symmetry and commanding appearance, very muscular, yet gracefully built.'"
+      },
+      "colours": {
+        "value": [
+          "grey",
+          "brindle",
+          "red",
+          "black",
+          "pure_white",
+          "fawn",
+          "wheaten"
+        ],
+        "unit": "list",
+        "source_id": "S616",
+        "quote": "The only recognized colours are Grey, Brindle, Red, Black, Pure White, Fawn, and Wheaten.",
+        "confidence": "high",
+        "notes": "FCI (S616); white markings only on fore-chest, toes (not full foot) and tail tip (paraphrase); nose and lips black. RKC standard (S618): 'Recognised colours are grey, brindle, red, black, pure white, fawn, wheaten and steel grey.' Never merle, parti-colour or liver."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Grey first with the highest weight (the portrait default — Claude's choice: the colour most associated with the breed), then brindle, wheaten, fawn, red, black, pure white."
+      },
+      "coat": {
+        "value": "rough and hard on body, legs and head; wiry and long over the eyes and under the jaw (beard)",
+        "unit": "—",
+        "source_id": "S616",
+        "quote": "Rough and hard on body, legs and head, hair over eyes and beard especially wiry.",
+        "confidence": "high",
+        "notes": "FCI (S616). RKC standard (S618): 'Rough and harsh on body, legs and head; especially wiry and long over eyes and under jaw.' RKC key fact 'Coat length: Medium' (S617)."
+      },
+      "eyes": {
+        "value": "dark, oval",
+        "unit": "—",
+        "source_id": "S616",
+        "quote": "Dark and oval.",
+        "confidence": "high",
+        "notes": "FCI (S616). RKC standard (S618): 'Dark. Elliptical (regular oval) and full. Eyelids black.'"
+      },
+      "ears": {
+        "value": "small rose ears set high, folded back",
+        "unit": "—",
+        "source_id": "S616",
+        "quote": "Small, rose ears set on high.",
+        "confidence": "high",
+        "notes": "FCI (S616). RKC standard (S618): 'Small, rose shaped, of fine velvet texture. Preferably dark in colour, not hanging close to face.'"
+      },
+      "tail": {
+        "value": "long, slightly curved at the end, carried low",
+        "unit": "—",
+        "source_id": "S616",
+        "quote": "Long and slightly curved at extremity.",
+        "confidence": "high",
+        "notes": "FCI (S616); the tip carried lower than the back in movement (paraphrase). RKC standard (S618): 'carried low with an upward sweep towards the extremity.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S617), PDSA (S619), PetMD (S620) and VCA (S621). RKC key facts reached on 2026-10-30.",
+      "rkc_size": {
+        "value": "Extra large",
+        "unit": "—",
+        "source_id": "S617",
+        "quote": "Size: Extra large",
+        "confidence": "high",
+        "notes": "RKC key fact (S617) → giant."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S617",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S617) → 120 min. Basis of long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S617",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "RKC key fact (S617). Basis of large_home."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S617",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S617). Basis of large_home."
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S617",
+        "quote": "Grooming: More than once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S617) — no number → PDSA 'around twice a week' (suitability.pdsa_grooming) → 2 brushing sessions a week (M5-R13 rule). Basis of frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S617",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": "RKC key fact (S617)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S617",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "RKC key fact (S617). PDSA (S619): shedding fairly minimal compared with longer-haired breeds (paraphrase); VCA (S621) 'Shedding is below average.' — conflicting → neither sheds nor low_shedding (runbook)."
+      },
+      "rkc_lifespan": {
+        "value": "Under 10 years",
+        "unit": "—",
+        "source_id": "S617",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S617). Basis of shorter_lifespan."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S617",
+        "quote": "Vulnerable native breed: Yes",
+        "confidence": "high",
+        "notes": "RKC key fact (S617). Background only."
+      },
+      "rkc_town_or_country": {
+        "value": "Country",
+        "unit": "—",
+        "source_id": "S617",
+        "quote": "Town or country: Country",
+        "confidence": "high",
+        "notes": "RKC key fact (S617). No apartment chip."
+      },
+      "pdsa_grooming": {
+        "value": "brushing around twice a week",
+        "unit": "—",
+        "source_id": "S619",
+        "quote": "Brushing them around twice a week should be more than enough to keep their coat in good condition.",
+        "confidence": "high",
+        "notes": "PDSA (S619); more brushing in spring and autumn when shedding increases (paraphrase); 'Your dog shouldn't need bathing unless they roll in something smelly.' PetMD (S620) 'weekly brushing is recommended to remove loose hairs and reduce shedding.'; VCA (S621) 'The coat needs weekly brushing and occasional bathing.' — alternatives (1). Basis of the brushing goal 2× a week (M5-R13)."
+      },
+      "petmd_ears": {
+        "value": "ears cleaned every two to four weeks",
+        "unit": "—",
+        "source_id": "S620",
+        "quote": "Cleaning your dog's ears every two to four weeks will help to prevent ear infections.",
+        "confidence": "high",
+        "notes": "PetMD (S620). → ear-cleaning task every 2 weeks (range → the lower bound, M5-R20)."
+      },
+      "petmd_bathing": {
+        "value": "bath every one to three months as needed",
+        "unit": "—",
+        "source_id": "S620",
+        "quote": "They should be bathed with a dog-specific shampoo for wiry hair every one to three months as needed.",
+        "confidence": "medium",
+        "notes": "PetMD (S620) — 'as needed' (conditional); PDSA (S619) 'Your dog shouldn't need bathing unless they roll in something smelly.'; VCA (S621) 'occasional bathing' → conflicting / conditional → no bath reminder (runbook »Breed care tasks«: only conditional → no task); open for David."
+      },
+      "petmd_hand_stripping": {
+        "value": "hand-stripped every six months",
+        "unit": "—",
+        "source_id": "S620",
+        "quote": "Every six months, the Irish Wolfhound should be hand-stripped,",
+        "confidence": "medium",
+        "notes": "PetMD (S620, fragment; by hand-plucking or with a stripping rake — paraphrase). VCA (S621): 'Dead hairs should be stripped from the coat twice a year.' Every 6 months is longer than every care period of DOG_CARE_TASKS (longest 3 months) → no reminder (German Wirehaired Pointer precedent: hand-stripping 'twice a year' → no reminder); fact in the breed text."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -61415,6 +61951,314 @@
         "confidence": "high",
         "notes": "Colour of the RKC standard (S611) and FCI (S609, 'shades from light wheaten to a golden reddish hue'); white and red coats undesirable, any other colour unacceptable. One colour → the portrait default.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): clear wheaten is the portrait default and the only colour; never white, red, black or black and tan"
+      }
+    },
+    "irish_wolfhound": {
+      "_note": "Unattended run M5-R10-80 (2026-10-30): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry — except the senior boundary (Claude's suggestion, verified=false). No new vocabulary key, no new register health key. Sourced needs built from day one: brushing 2× a week (RKC 'More than once a week' → PDSA S619 'around twice a week', M5-R13); puppy socialisation (PetMD S620 quote, M5-R17); the 'wait with the walk' digestion warning (PetMD S620 quote, M5-R16); ear cleaning every 2 weeks (PetMD S620 'every two to four weeks', M5-R20). Bath 'every one to three months as needed' (PetMD) is conditional and contradicted by PDSA → no reminder; hand-stripping every six months is longer than every care period → no reminder; nails / teeth have no number → no task. Exercise from RKC (S617, more than 2 hours; PDSA agrees). Senior 68 from the Orleifson 2017 median 7.5 y (S623) — open for David.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S617",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'More than 2 hours per day' (S617). Rule: one number N ('more than N') → N = 120. PDSA (S619) 'a minimum of two hours' agrees.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S617 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S617",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months (a puppy walks at most 80 min at 8 months; the young dog 90–110 min at 9–11 months). PDSA (S619): take exercise easy while they are a puppy (large size, quick growth).",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 68
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 68 = round(0.75 × 7.5 y × 12) = round(67.5) = 68 (S11 + Orleifson et al. 2017 median 7.5 y, S623 — no McMillan 2024 value reachable, no VetCompass median, RKC 'Under 10 years' has no lower bound). The senior value is Claude's suggestion — see senior_boundary_months.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S623"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia_9_9_y": 89,
+          "senior_petmd_vca_lower_bound_6_y": 54
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 68 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+      },
+      "senior_boundary_months": {
+        "value": 68,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "round(0.75 × 7.5 y × 12) = 68 (AAHA last 25 % of lifespan S11 × Orleifson et al. 2017 Swedish Irish Wolfhound median 7.5 y, S623). The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value in this run: the Dogs Trust table S123 was refused by the fetch tool, no VetCompass Irish Wolfhound median, and the RKC band 'Under 10 years' has no lower bound. Closest row (Bernese Mountain Dog / Saint Bernard precedent) = a peer-reviewed breed median. Alternatives: McMillan 2024 9.9 y via Wikipedia (S624, tier C) → round(89.1) = 89; PetMD / VCA lower bound 6 y (S620, S621) → 54. Seeded with verified=false (also the senior arrival age); the seeder is insert-only, so a later change needs a Filament edit or a data migration.",
+        "derived_from": [
+          "S11",
+          "S623"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia_9_9_y": 89,
+          "senior_petmd_vca_lower_bound_6_y": 54
+        },
+        "decision": "predlog Claude 2026-10-30 (najbližja vrstica pravila runbooka, M5-R10-80) — čaka Davida; ni potrjeno"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 68
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36); senior 68 follows the unconfirmed senior boundary (senior_boundary_months)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 41 (S35), tier 'Average' (40–54) → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 41, Average tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources. PDSA (S619): split the daily food into two meals; PetMD (S620): fed about every 12 hours as an adult (general advice — the game keeps its meal windows).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 2,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S619",
+        "quote": "Brushing them around twice a week should be more than enough to keep their coat in good condition.",
+        "confidence": "high",
+        "notes": "irish_wolfhound.suitability.pdsa_grooming. RKC (S617) 'Grooming: More than once a week' has no number → the most specific number of another A/B source: PDSA 'around twice a week' → 2 (runbook »Dog grooming«). PetMD (S620) and VCA (S621) weekly — alternative. Built in M5-R13; matted coat at ceil(2 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S620",
+            "quote": "weekly brushing is recommended to remove loose hairs and reduce shedding."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): RKC »More than once a week« brez števila → PDSA »around twice a week« → 2; mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S620",
+        "quote": "Do not let your Irish Wolfhound dog exercise right before or after eating.",
+        "confidence": "high",
+        "notes": "PetMD (S620), irish_wolfhound.exercise.after_meals; GDV in the PDSA / PetMD health lists (health.gdv). PDSA (S619) 'leave a gap after eating and before exercising' agrees. Built in M5-R16: 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S620",
+        "quote": "Begin socializing your Irish Wolfhound puppy as soon as you bring them home.",
+        "confidence": "high",
+        "notes": "irish_wolfhound.behaviour.socialisation (PetMD S620, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S620)"
+      },
+      "ear_care": {
+        "value": "ears cleaned every two to four weeks → every 2 weeks",
+        "unit": "care routine (sourced need)",
+        "source_id": "S620",
+        "quote": "Cleaning your dog's ears every two to four weeks will help to prevent ear infections.",
+        "confidence": "high",
+        "notes": "PetMD (S620), irish_wolfhound.suitability.petmd_ears. Built: the child's ear-cleaning mini-game once every 2 program weeks (range → the lower bound; BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R20).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »every two to four weeks« → spodnja meja, 1× na 2 tedna"
+      },
+      "bathing": {
+        "value": "bath every one to three months as needed (PetMD) vs not needed unless dirty (PDSA)",
+        "unit": "care fact (conditional — no task)",
+        "source_id": "S620",
+        "quote": "They should be bathed with a dog-specific shampoo for wiry hair every one to three months as needed.",
+        "confidence": "medium",
+        "notes": "irish_wolfhound.suitability.petmd_bathing. 'as needed' is conditional and PDSA (S619) says a bath is not needed unless the dog rolls in something smelly → no bath reminder (runbook »Breed care tasks«: only conditional → no task). Open for David (a monthly reminder if he reads PetMD as a frequency).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18 / R20): pogojna pogostost (»as needed«), PDSA nasprotuje → brez naloge (dejstvo v besedilu pasme)"
+      },
+      "professional_grooming": {
+        "value": "hand-stripping every six months",
+        "unit": "care fact (period longer than every care task — no reminder)",
+        "source_id": "S620",
+        "quote": "Every six months, the Irish Wolfhound should be hand-stripped,",
+        "confidence": "medium",
+        "notes": "irish_wolfhound.suitability.petmd_hand_stripping; VCA (S621) 'twice a year'. Every 6 months is longer than every care period (longest 3 months) → no reminder (German Wirehaired Pointer precedent).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): na 6 mesecev je dlje od vseh obdobij nalog → brez opomnika (dejstvo v besedilu pasme)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-80); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S617"
+            ],
+            "refs": [
+              "irish_wolfhound.suitability.rkc_size_of_home",
+              "irish_wolfhound.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S617 'Size of home: Large house' / 'Size of garden: Large garden'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S617",
+              "S619"
+            ],
+            "refs": [
+              "irish_wolfhound.exercise.adult",
+              "irish_wolfhound.exercise.daily_text"
+            ],
+            "quote": "S617 'Exercise: More than 2 hours per day'; S619 'Your Irish Wolfhound will need a minimum of two hours of exercise every day to keep them fit and healthy.'"
+          },
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S617"
+            ],
+            "refs": [
+              "irish_wolfhound.health.shorter_lifespan",
+              "irish_wolfhound.lifespan.rkc"
+            ],
+            "quote": "S617 'Lifespan: Under 10 years'"
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S619"
+            ],
+            "refs": [
+              "irish_wolfhound.behaviour.family"
+            ],
+            "quote": "S619 'We wouldn't recommend having an Irish Wolfhound if you have smaller children'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S620"
+            ],
+            "refs": [
+              "irish_wolfhound.behaviour.time_alone"
+            ],
+            "quote": "S620 'Some might develop separation anxiety when left alone, so they shouldn't spend hours apart from their family.'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S617",
+              "S619"
+            ],
+            "refs": [
+              "irish_wolfhound.suitability.rkc_grooming",
+              "irish_wolfhound.suitability.pdsa_grooming"
+            ],
+            "quote": "S617 'Grooming: More than once a week'; S619 'Brushing them around twice a week should be more than enough to keep their coat in good condition.'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S619"
+            ],
+            "refs": [
+              "irish_wolfhound.behaviour.other_pets"
+            ],
+            "quote": "S619 'As Irish Wolfhounds do have a high prey drive, we wouldn't recommend keeping them with smaller pets.'",
+            "note": "High-prey-drive quote (runbook, David 2026-10-12) — appended at the end of the consider list."
+          }
+        ],
+        "not_proposed": {
+          "active_family": "No A/B 'active family' statement; the exercise need is covered by long_daily_exercise.",
+          "family_pet": "No PDSA-style family-pet statement on the pages read; PDSA advises against smaller children (S619).",
+          "children": "PetMD 'generally patient with children' (S620) and VCA 'Good with children' (S621) vs PDSA not recommended with smaller children (S619) — the caveat wins; not_for_small_children instead.",
+          "small_children": "PDSA advises against (S619).",
+          "first_time_owner": "No statement on the pages read.",
+          "experienced_owner": "No statement on the pages read.",
+          "apartment": "RKC 'Large house' (S617).",
+          "other_pets": "PDSA high prey drive (S619) → chases_small_pets; VCA 'Good with … other pets and dogs' (S621) conflicts.",
+          "often_alone": "PetMD separation anxiety (S620) → needs_company.",
+          "sheds": "RKC 'Sheds: Yes' (S617) vs PDSA fairly minimal (S619) / VCA below average (S621) — conflicting → neither sheds nor low_shedding.",
+          "heat_sensitive": "No A/B heat statement on the pages read (VCA 'Warm Weather' rating only).",
+          "welfare": "RKC Breed Watch Category 2 (S617) — the points of concern were not returned → no welfare chip (open for David)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits large_home; consider long_daily_exercise, shorter_lifespan, not_for_small_children, needs_company, frequent_grooming, chases_small_pets"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (no veterinary advice against advertising the breed type)",
+        "unit": "—",
+        "source_id": "S617",
+        "quote": "Category 2",
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 2 (S617, points not returned); not a flat-faced breed — the only veterinary advice against advertising a breed type is for flat-faced breeds (BVA S92). Marketing never promises health; never with small children (S619), never with small pets unsupervised (high prey drive, S619), never shown as a guard or hunting dog.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (not a flat-faced breed, no veterinary advice against advertising)"
+      },
+      "ai_appearance": {
+        "value": "adult Irish Wolfhound, grey (default); the largest and tallest sighthound — rough-coated, of great size and commanding appearance, muscular yet gracefully built; rough, hard, wiry coat with longer wiry hair over the eyes and a beard under the jaw; long level head; dark oval eyes; small rose ears set high and folded back; long tail slightly curved at the end, carried low; black nose; never merle, parti-colour or liver",
+        "unit": "—",
+        "source_id": "S616",
+        "quote": "The only recognized colours are Grey, Brindle, Red, Black, Pure White, Fawn, and Wheaten.",
+        "confidence": "high",
+        "notes": "Colours of the FCI (S616) and RKC (S618) standards. Weights unsourced in prompts. Grey as the portrait default — Claude's choice (the colour most associated with the breed; FCI lists it first, S616).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): grey is the portrait default; standard colours only (grey / brindle / wheaten / fawn / red / black / pure white)"
       }
     }
   }

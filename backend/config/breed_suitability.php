@@ -2058,5 +2058,30 @@ return [
                 ['tag' => 'needs_company', 'source_ids' => ['S613'], 'refs' => ['soft_coated_wheaten_terrier.behaviour.time_alone', 'soft_coated_wheaten_terrier.suitability.petmd_time_alone']],
             ],
         ],
+        // M5-R10-80: irish_wolfhound.* (S615–S624), runbook rules (data.json proposed_game_parameters.irish_wolfhound.suitability_tags).
+        // RKC "Large house" / "Large garden" → large_home; RKC "More than 2 hours per day" → long_daily_exercise; RKC "Under 10
+        // years" → shorter_lifespan; PDSA advises against smaller children (S619) → not_for_small_children, no children / family_pet
+        // chip; PDSA "high prey drive" → chases_small_pets at the end. Sheds: RKC "Yes" vs PDSA / VCA minimal → neither tag.
+        // RKC Breed Watch Category 2 with no point returned → no welfare chip (open for David).
+        'irish_wolfhound' => [
+            'suits' => [
+                // S617 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S617'], 'refs' => ['irish_wolfhound.suitability.rkc_size_of_home', 'irish_wolfhound.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S617 "Exercise: More than 2 hours per day"; S619 "… a minimum of two hours of exercise every day …".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S617', 'S619'], 'refs' => ['irish_wolfhound.exercise.adult', 'irish_wolfhound.exercise.daily_text']],
+                // S617 "Lifespan: Under 10 years".
+                ['tag' => 'shorter_lifespan', 'source_ids' => ['S617'], 'refs' => ['irish_wolfhound.health.shorter_lifespan', 'irish_wolfhound.lifespan.rkc']],
+                // S619 "We wouldn't recommend having an Irish Wolfhound if you have smaller children".
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S619'], 'refs' => ['irish_wolfhound.behaviour.family']],
+                // S620 "Some might develop separation anxiety when left alone, …".
+                ['tag' => 'needs_company', 'source_ids' => ['S620'], 'refs' => ['irish_wolfhound.behaviour.time_alone']],
+                // S617 "Grooming: More than once a week"; S619 "Brushing them around twice a week …".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S617', 'S619'], 'refs' => ['irish_wolfhound.suitability.rkc_grooming', 'irish_wolfhound.suitability.pdsa_grooming']],
+                // S619 "As Irish Wolfhounds do have a high prey drive, we wouldn't recommend keeping them with smaller pets."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S619'], 'refs' => ['irish_wolfhound.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];

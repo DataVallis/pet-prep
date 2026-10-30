@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "a7cbb2298118ce6db27aea660fc7f9bd515b2f03938c45ce0dbfd189497f1058"
+      "sha256": "1cd14b5c97d6b65fa355246354148d0d9b06b404fb5704efcff2126fe4c6b0c1"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "d55c82c4e5b492ce1b9124acb8933398b5ecb4dd135293bc4a35ceddfa6472b8"
+      "sha256": "c194a8c5573a8ff8c2d1dd3081d179e03c9c4207ce58f54f7a8b8b40e6db700d"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "5310c89a0376bce6e9223fff69942c20d849734ad16a8d626ea03d026c4bfd79"
+      "sha256": "f24e6cb70dfe380cd7ce3c13f8ce69a704db1599fbeb3bc93298e9bc34d6fd3d"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "c18775a0c3254949bfd07a131bd5d54523aa931f748bc393e572afbe176116b8"
+      "sha256": "7cf87e1796802b0f9a315835411146e11fd28677b28917a2f7b204ed4b34a5bd"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "2c633bb3d068250a704274fdcde373d2b26ec7fceb1c7c7c3c827a954125280a"
+      "sha256": "c50148919969e430095dd817acaa6600d51d26fe7f84ac8e277cbba80544f0eb"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "83fc1c802e61cee104c0c2988d69eeb40902ea7d133c028f8376690e2ef57b2c"
+      "sha256": "5be50bbd60e4a7c5923759bc30a4aaa39e5552c2597b8f6798564d80981d74a0"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "f425c6f7f3aa1ab24b17fcdf71e594d0060dec823ff0146abc37b95086ddad4c"
+      "sha256": "c630e1b4cb85108c2816696edea542d028793f3b625060392aa4b1c1b4c56d72"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -222,7 +222,7 @@
         }
       },
       "status": "available",
-      "breed_count": 73,
+      "breed_count": 74,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -44243,6 +44243,601 @@
       ]
     },
     {
+      "id": "irish_wolfhound",
+      "species": "dog",
+      "order": 73,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Irish Wolfhound",
+        "sl": "Irski volčji hrt"
+      },
+      "slug": {
+        "en": "irish-wolfhound",
+        "sl": "irski-volcji-hrt"
+      },
+      "synonyms": {
+        "en": [
+          "Wolfhound",
+          "Cú Faoil",
+          "Irish Wolf Hound"
+        ],
+        "sl": [
+          "volčji hrt",
+          "irski hrt",
+          "irski volcji hrt"
+        ]
+      },
+      "facets": {
+        "size": "giant",
+        "exercise": "over_2h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "giant",
+          "source_ids": [
+            "S617"
+          ],
+          "ref": "irish_wolfhound.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              71,
+              79
+            ],
+            "female": [
+              71,
+              79
+            ]
+          },
+          "source_ids": [
+            "S619"
+          ],
+          "ref": "irish_wolfhound.height.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              40,
+              55
+            ],
+            "female": [
+              40,
+              55
+            ]
+          },
+          "source_ids": [
+            "S619"
+          ],
+          "ref": "irish_wolfhound.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            18,
+            24
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "irish_wolfhound.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "less_than",
+          "value": 10,
+          "source_ids": [
+            "S617"
+          ],
+          "ref": "irish_wolfhound.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            6,
+            8
+          ],
+          "source_ids": [
+            "S620"
+          ],
+          "ref": "irish_wolfhound.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S617"
+          ],
+          "ref": "irish_wolfhound.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S617"
+          ],
+          "ref": "irish_wolfhound.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S617"
+          ],
+          "ref": "irish_wolfhound.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S617"
+          ],
+          "ref": "irish_wolfhound.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 41,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "irish_wolfhound.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 160,
+            "group": 10,
+            "section": 2,
+            "origin": "IE"
+          },
+          "source_ids": [
+            "S615"
+          ],
+          "ref": "irish_wolfhound.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S619"
+          ],
+          "ref": "irish_wolfhound.health.gdv",
+          "confidence": "high"
+        },
+        {
+          "key": "heart_muscle_disease",
+          "source_ids": [
+            "S619"
+          ],
+          "ref": "irish_wolfhound.health.heart",
+          "confidence": "high"
+        },
+        {
+          "key": "certain_cancers",
+          "source_ids": [
+            "S620"
+          ],
+          "ref": "irish_wolfhound.health.cancer",
+          "confidence": "high"
+        },
+        {
+          "key": "pra_eye_disease",
+          "source_ids": [
+            "S619"
+          ],
+          "ref": "irish_wolfhound.health.pra",
+          "confidence": "medium"
+        },
+        {
+          "key": "liver_shunt",
+          "source_ids": [
+            "S619"
+          ],
+          "ref": "irish_wolfhound.health.liver_shunt",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S617"
+            ],
+            "refs": [
+              "irish_wolfhound.suitability.rkc_size_of_home",
+              "irish_wolfhound.suitability.rkc_size_of_garden"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S617",
+              "S619"
+            ],
+            "refs": [
+              "irish_wolfhound.exercise.adult",
+              "irish_wolfhound.exercise.daily_text"
+            ]
+          },
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S617"
+            ],
+            "refs": [
+              "irish_wolfhound.health.shorter_lifespan",
+              "irish_wolfhound.lifespan.rkc"
+            ]
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S619"
+            ],
+            "refs": [
+              "irish_wolfhound.behaviour.family"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S620"
+            ],
+            "refs": [
+              "irish_wolfhound.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S617",
+              "S619"
+            ],
+            "refs": [
+              "irish_wolfhound.suitability.rkc_grooming",
+              "irish_wolfhound.suitability.pdsa_grooming"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S619"
+            ],
+            "refs": [
+              "irish_wolfhound.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 68
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 68
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 2
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 14
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.irish_wolfhound.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S617"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S617 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.irish_wolfhound.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.irish_wolfhound.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S623"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 68 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+          },
+          {
+            "ref": "proposed_game_parameters.irish_wolfhound.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 41, Average tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.irish_wolfhound.grooming",
+            "basis_source_ids": [
+              "S619"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): RKC »More than once a week« brez števila → PDSA »around twice a week« → 2; mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.irish_wolfhound.ear_care",
+            "basis_source_ids": [
+              "S620"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »every two to four weeks« → spodnja meja, 1× na 2 tedna"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S617",
+          "S619",
+          "S620",
+          "S623"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S617"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S617"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S617"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S615",
+        "S617",
+        "S619",
+        "S620",
+        "S623",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -49365,6 +49960,41 @@
       "publisher": "VCA Animal Hospitals",
       "title": "Soft Coated Wheaten Terrier (Know your pet — dog breeds)",
       "url": "https://vcahospitals.com/avh/know-your-pet/dog-breeds/soft-coated-wheaten-terrier"
+    },
+    {
+      "id": "S615",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — Irish Wolfhound (160)",
+      "url": "https://www.fci.be/en/nomenclature/IRISH-WOLFHOUND-160.html"
+    },
+    {
+      "id": "S617",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Irish Wolfhound (Breeds A to Z)",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/hound/irish-wolfhound/"
+    },
+    {
+      "id": "S619",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Irish Wolfhound breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/irish-wolfhound"
+    },
+    {
+      "id": "S620",
+      "tier": "B",
+      "publisher": "PetMD — Virginia LaMon, DVM; reviewed by Teresa Manucy, DVM (updated Sep. 17, 2024)",
+      "title": "Irish Wolfhound Dog Breed Health and Care",
+      "url": "https://www.petmd.com/dog/breeds/irish-wolfhound"
+    },
+    {
+      "id": "S623",
+      "tier": "A",
+      "publisher": "Acta Veterinaria Scandinavica 59:53 (2017)",
+      "title": "Orleifson L., Ljungvall I., Höglund K., Häggström J. Occurrence of cardiorespiratory diseases and impact on lifespan in Swedish Irish Wolfhounds: a retrospective questionnaire-based study. doi:10.1186/s13028-017-0320-1",
+      "url": "https://link.springer.com/doi/10.1186/s13028-017-0320-1"
     },
     {
       "id": "C1",

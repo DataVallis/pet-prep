@@ -463,6 +463,7 @@ const SPECIES = [
       { id: 'miniature_pinscher', synonyms: { en: ['Min Pin', 'Zwergpinscher'], sl: ['pritlikavi pinč', 'pritlikavi pinc', 'pinč', 'mini pinč'] } },
       { id: 'pyrenean_mountain_dog', synonyms: { en: ['Great Pyrenees', 'Pyrenees', 'Patou', 'Chien de Montagne des Pyrénées'], sl: ['pirenejski gorski pes', 'pirenejski pes', 'pirenejec', 'great pyrenees'] } },
       { id: 'soft_coated_wheaten_terrier', synonyms: { en: ['Wheaten Terrier', 'Wheaten', 'Irish Soft Coated Wheaten Terrier', 'SCWT'], sl: ['pšenični terier', 'irski pšenični terier', 'wheaten terier', 'irski mehkodlaki terier'] } },
+      { id: 'irish_wolfhound', synonyms: { en: ['Wolfhound', 'Cú Faoil', 'Irish Wolf Hound'], sl: ['volčji hrt', 'irski hrt', 'irski volcji hrt'] } },
     ],
   },
   {
@@ -2142,6 +2143,29 @@ const DOG_FACTS = {
       ['addisons_disease', 'health.addisons'],
     ],
   },
+  // M5-R10-80. Height + weight = PDSA key facts 71–79 cm / 40–55 kg for both sexes (S619; the FCI / RKC standards give minimums
+  // only), lifespan = the RKC band 'Under 10 years' (S617) + the PetMD span 6–8 y (S620; the Orleifson 2017 median and McMillan 2024
+  // via Wikipedia are never exported), exercise = RKC 'More than 2 hours per day' (S617), coat / grooming / shedding = RKC key facts
+  // (S617). FCI origin Ireland (IE). Not exported: height.fci_minimum / adult_weight.rkc_minimum / salt_category, lifespan.pdsa /
+  // median_peer_reviewed / mcmillan_2024 / senior_from, health.breed_watch (no point returned), health.hip_elbow_dysplasia /
+  // shorter_lifespan (research only / the chip). No new health key.
+  irish_wolfhound: {
+    height: ['height.pdsa'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.rkc', 'less_than'], ['lifespan.petmd', 'span']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['bloat_gdv', 'health.gdv'],
+      ['heart_muscle_disease', 'health.heart'],
+      ['certain_cancers', 'health.cancer'],
+      ['pra_eye_disease', 'health.pra'],
+      ['liver_shunt', 'health.liver_shunt'],
+    ],
+  },
 
 
 };
@@ -2188,6 +2212,7 @@ export const DOG_CARE_TASKS = {
   chinese_crested: [['nail_trim', 1, 7, 'proposed_game_parameters.chinese_crested.nail_trimming']],
   pyrenean_mountain_dog: [['nail_trim', 1, 7, 'proposed_game_parameters.pyrenean_mountain_dog.nail_trimming'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.pyrenean_mountain_dog.ear_care']],
   soft_coated_wheaten_terrier: [['ear_cleaning', 1, 7, 'proposed_game_parameters.soft_coated_wheaten_terrier.ear_care'], ['groomer_visit', 1, 28, 'proposed_game_parameters.soft_coated_wheaten_terrier.professional_grooming'], ['bath', 1, 28, 'proposed_game_parameters.soft_coated_wheaten_terrier.bathing']],
+  irish_wolfhound: [['ear_cleaning', 1, 14, 'proposed_game_parameters.irish_wolfhound.ear_care']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -2791,6 +2816,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.soft_coated_wheaten_terrier.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.soft_coated_wheaten_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.soft_coated_wheaten_terrier.exercise_minutes_senior',
+  },
+  irish_wolfhound: {
+    adult_minutes: ['proposed_game_parameters.irish_wolfhound.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.irish_wolfhound.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.irish_wolfhound.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.irish_wolfhound.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.irish_wolfhound.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.irish_wolfhound.exercise_minutes_senior',
   },
 
 

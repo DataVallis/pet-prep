@@ -669,6 +669,13 @@ class FalAiService
                 .'small V-shaped ears folded at skull level, a natural tail carried gaily but never over the back, happy and confident expression, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-80: FCI-Standard N° 160 (S616) / RKC standard (S618) — the largest and tallest sighthound, rough-coated, of great
+            // size and commanding appearance; small rose ears, long tail carried low.
+            BreedType::IrishWolfhound => 'A giant, very tall Irish Wolfhound, the largest sighthound, muscular yet gracefully built, with a rough, hard, wiry coat, '
+                .'longer wiry hair over the eyes and a beard under the jaw, a long level head with a black nose, dark oval eyes, '
+                .'small rose ears folded back, a long tail slightly curved at the end and carried low, gentle and calm expression, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1612,6 +1619,17 @@ class FalAiService
                 'eye_color' => 'dark hazel',
                 'fur_texture' => 'soft, silky single coat falling in loose waves or large loose curls',
                 'markings' => 'black nose and eye rims, slightly darker ears allowed, natural undocked tail, never white, red, black or black and tan',
+            ],
+            // M5-R10-80: standard colours grey, brindle, wheaten (S616 / S618); never merle, parti-colour or liver.
+            BreedType::IrishWolfhound => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'grey',
+                    1 => 'grey brindle',
+                    2 => 'wheaten',
+                },
+                'eye_color' => 'dark',
+                'fur_texture' => 'rough, hard, wiry coat with longer hair over the eyes and a beard',
+                'markings' => 'black nose, small rose ears, long natural tail carried low, white allowed only on the chest, toes and tail tip, never merle or parti-colour',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

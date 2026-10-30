@@ -2995,6 +2995,30 @@
         }
       ],
       "notes": "RKC Breeds A–Z page (dog-data S610, 2026-10-30, reachable with a trailing slash): Good Practice lists only 'Prioritising genetic diversity' (Dachshund / Pyrenean precedent, key inbreeding_coi); Best Practice: the BVA/KC/ISDS eye scheme and the BVA/KC hip dysplasia scheme (test names as returned verbatim). The page also points to a breed club health scheme (wheaten.org.uk/health, not read) and says no breed-specific DNA package is offered. PDSA (S612): check that the parents were screened under the Canine Health Schemes."
+    },
+    "irish_wolfhound": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S617",
+        "quote": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding"
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S617",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S617",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        }
+      ],
+      "notes": "RKC Breeds A–Z page (dog-data S617, 2026-10-30, reachable with a trailing slash): Good Practice lists only 'Prioritising genetic diversity' (Soft Coated Wheaten Terrier precedent, key inbreeding_coi); Best Practice: the BVA/KC/ISDS eye scheme (test names as returned verbatim). PDSA (S619): annual heart screening of breeding dogs and liver-shunt testing (paraphrase only — no verbatim quote returned, so no other_scheme item; open for David)."
     }
   }
 }

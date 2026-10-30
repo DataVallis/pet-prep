@@ -81,6 +81,7 @@ return [
     'miniature_pinscher' => 'Pritlikavi pinč',
     'pyrenean_mountain_dog' => 'Pirenejski gorski pes',
     'soft_coated_wheaten_terrier' => 'Irski mehkodlaki pšenični terier',
+    'irish_wolfhound' => 'Irski volčji hrt',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',
