@@ -2083,5 +2083,22 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S619'], 'refs' => ['irish_wolfhound.behaviour.other_pets']],
             ],
         ],
+        // M5-R10-81: american_staffordshire_terrier.* (S625–S629), runbook rules (data.json
+        // proposed_game_parameters.american_staffordshire_terrier.suitability_tags). No RKC / PDSA page (not RKC-recognised) →
+        // PetMD (S628) + VCA (S629) only. children: PetMD explicit statement (VCA "Generally good with supervision" kept in
+        // behaviour.children — never small_children); needs_company: PetMD separation anxiety (Staffordshire Bull Terrier
+        // precedent); chases_small_pets: PetMD "naturally strong prey drive", at the end of the consider list. No other_pets.
+        'american_staffordshire_terrier' => [
+            'suits' => [
+                // S628 "American Staffordshire Terriers are patient and loving with children"
+                ['tag' => 'children', 'source_ids' => ['S628'], 'refs' => ['american_staffordshire_terrier.behaviour.children', 'american_staffordshire_terrier.suitability.petmd_children']],
+            ],
+            'consider' => [
+                // S628 "AmStaffs can be prone to anxiety, and that can often lead to separation anxiety."
+                ['tag' => 'needs_company', 'source_ids' => ['S628'], 'refs' => ['american_staffordshire_terrier.behaviour.time_alone', 'american_staffordshire_terrier.suitability.petmd_time_alone']],
+                // S628 "these dogs have a naturally strong prey drive, so living with smaller dogs or cats can be more difficult."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S628'], 'refs' => ['american_staffordshire_terrier.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];

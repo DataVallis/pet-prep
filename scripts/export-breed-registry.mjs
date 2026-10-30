@@ -464,6 +464,7 @@ const SPECIES = [
       { id: 'pyrenean_mountain_dog', synonyms: { en: ['Great Pyrenees', 'Pyrenees', 'Patou', 'Chien de Montagne des Pyrénées'], sl: ['pirenejski gorski pes', 'pirenejski pes', 'pirenejec', 'great pyrenees'] } },
       { id: 'soft_coated_wheaten_terrier', synonyms: { en: ['Wheaten Terrier', 'Wheaten', 'Irish Soft Coated Wheaten Terrier', 'SCWT'], sl: ['pšenični terier', 'irski pšenični terier', 'wheaten terier', 'irski mehkodlaki terier'] } },
       { id: 'irish_wolfhound', synonyms: { en: ['Wolfhound', 'Cú Faoil', 'Irish Wolf Hound'], sl: ['volčji hrt', 'irski hrt', 'irski volcji hrt'] } },
+      { id: 'american_staffordshire_terrier', synonyms: { en: ['AmStaff', 'Am Staff', 'Staffordshire Terrier'], sl: ['amstaff', 'ameriški stafordširski terier'] } },
     ],
   },
   {
@@ -2166,6 +2167,26 @@ const DOG_FACTS = {
       ['liver_shunt', 'health.liver_shunt'],
     ],
   },
+  // M5-R10-81. Not RKC-recognised (no RKC / PDSA key facts) → coat / grooming / shedding not exported. Height = FCI-Standard
+  // N° 286 by sex (S626); weight = PetMD 40–70 lb = 18.1–31.8 kg for both sexes (S628; the standards give none); lifespan =
+  // McMillan 2024 median 12.5 y via the Dogs Trust table (S123) + the PetMD span 12–16 y (S628); exercise = PetMD 'at least 60
+  // minutes' (S628, read through the game value like the Miniature American Shepherd). FCI origin USA. Not exported:
+  // adult_weight alternatives and salt_category, senior_from, health.other (names only).
+  american_staffordshire_terrier: {
+    height: ['height.fci'],
+    weight: [['adult_weight.petmd', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.petmd', 'span']],
+    exercise: [['@proposed_game_parameters.american_staffordshire_terrier.exercise_minutes_adult', 'at_least']],
+    coat: [],
+    grooming: [],
+    shedding: [],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia', 'health.hip_dysplasia'],
+      ['pra_eye_disease', 'health.pra'],
+      ['itchy_skin_allergy', 'health.skin_allergy'],
+    ],
+  },
 
 
 };
@@ -2213,6 +2234,7 @@ export const DOG_CARE_TASKS = {
   pyrenean_mountain_dog: [['nail_trim', 1, 7, 'proposed_game_parameters.pyrenean_mountain_dog.nail_trimming'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.pyrenean_mountain_dog.ear_care']],
   soft_coated_wheaten_terrier: [['ear_cleaning', 1, 7, 'proposed_game_parameters.soft_coated_wheaten_terrier.ear_care'], ['groomer_visit', 1, 28, 'proposed_game_parameters.soft_coated_wheaten_terrier.professional_grooming'], ['bath', 1, 28, 'proposed_game_parameters.soft_coated_wheaten_terrier.bathing']],
   irish_wolfhound: [['ear_cleaning', 1, 14, 'proposed_game_parameters.irish_wolfhound.ear_care']],
+  american_staffordshire_terrier: [['ear_cleaning', 1, 28, 'proposed_game_parameters.american_staffordshire_terrier.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.american_staffordshire_terrier.bathing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -2824,6 +2846,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.irish_wolfhound.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.irish_wolfhound.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.irish_wolfhound.exercise_minutes_senior',
+  },
+  american_staffordshire_terrier: {
+    adult_minutes: ['proposed_game_parameters.american_staffordshire_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.american_staffordshire_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.american_staffordshire_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.american_staffordshire_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.american_staffordshire_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.american_staffordshire_terrier.exercise_minutes_senior',
   },
 
 

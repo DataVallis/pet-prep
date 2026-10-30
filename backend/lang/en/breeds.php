@@ -82,6 +82,7 @@ return [
     'pyrenean_mountain_dog' => 'Pyrenean Mountain Dog',
     'soft_coated_wheaten_terrier' => 'Soft Coated Wheaten Terrier',
     'irish_wolfhound' => 'Irish Wolfhound',
+    'american_staffordshire_terrier' => 'American Staffordshire Terrier',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

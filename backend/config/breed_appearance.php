@@ -666,6 +666,13 @@
 | Category 2 (S617, points not returned). Grey first with the highest weight (the portrait default, Claude's choice);
 | weights unsourced → `verified => false`.
 |
+| American Staffordshire Terrier (M5-R10-81, docs/research/dog-data american_staffordshire_terrier.appearance):
+| "The Staffordshire Terrier should give the impression of great strength for his size;" (FCI-Standard N° 286, S626); the
+| standard allows "Any colour, solid, particolour, or patched" (S626; AKC S627) but does not encourage more than 80 % white,
+| black and tan or liver → the game offers brindle, blue and black (PetMD S628 list); natural uncropped ears (AKC "the
+| latter preferred") and natural tail ("Not docked."). Not RKC-recognised (no Breed Watch). Brindle first with the highest
+| weight (the portrait default, Claude's choice); weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -3536,6 +3543,42 @@ return [
             'ear_carriage' => ['small rose ears set high and folded back against the head'],
             'eye_color' => ['dark oval eyes'],
             'tail' => ['long tail, slightly curved at the end and carried low, well covered with hair'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+
+    // M5-R10-81 (docs/research/dog-data/data.json american_staffordshire_terrier.appearance; runbook rules 2026-10-10: colours the
+    // standard permits — S626 "Any colour, solid, particolour, or patched is permissible;" — limited to brindle, blue and black
+    // (PetMD S628); never black and tan, liver, merle or mostly white).
+    'american_staffordshire_terrier' => [
+        'display_name' => 'American Staffordshire Terrier',
+        // Colour frequencies are in no source (american_staffordshire_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 286 American Staffordshire Terrier (S626, https://www.fci.be/Nomenclature/Standards/286g03-en.pdf), AKC standard (S627), PetMD (S628) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S626 "A height of about eighteen to nineteen inches (46 - 48 cm) at the shoulder for the male"; S628 "most AmStaffs (as they\'re often called) are around 40-60 pounds"',
+            'build' => 'S626 "The Staffordshire Terrier should give the impression of great strength for his size;"',
+            'coat_length' => 'S626 "Short, close, stiff to the touch, glossy."',
+            'coat_color' => 'S626 "Any colour, solid, particolour, or patched is permissible;"; S628 "a wide range of colors including brindle, blue, brown, liver, black, and white." (weights unsourced)',
+            'head' => 'S626 "Head: Medium length, deep through."',
+            'ear_carriage' => 'S626 "Uncropped ears should be short and held rose or half prick."',
+            'eye_color' => 'S626 "Dark, round, low down in skull, set far apart."',
+            'tail' => 'S626 "Short in comparison to size, low set, tapering to fine point; not curled or carried over back. Not docked."',
+        ],
+        'traits' => [
+            'size' => ['medium-sized, stocky'],
+            'build' => [['value' => 'stocky, muscular terrier giving the impression of great strength for its size, not long-legged or racy, with a broad deep chest', 'weight' => 3], 'compact, powerful, well-muscled terrier, agile and graceful'],
+            'coat_length' => ['short, close, stiff, glossy coat'],
+            // Standard-permitted colours (S626 / S628); brindle first with the highest weight → the register portrait (Claude's choice).
+            'coat_color' => [
+                ['value' => 'brindle', 'weight' => 40],
+                ['value' => 'blue', 'weight' => 35],
+                ['value' => 'black', 'weight' => 25],
+            ],
+            'head' => ['medium-length head, deep through, with a broad skull, pronounced cheek muscles, a medium-length muzzle and a black nose'],
+            'ear_carriage' => ['natural uncropped ears, short and held rose or half prick'],
+            'eye_color' => ['dark round eyes set low and far apart'],
+            'tail' => ['short, low-set natural tail tapering to a fine point, not curled'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],

@@ -509,6 +509,13 @@ return [
         ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
         ['key' => 'white', 'value' => 'pure white', 'en' => 'Pure white', 'sl' => 'Čisto bel'],
     ],
+    // M5-R10-81: FCI-Standard N° 286 S626 — "Any colour, solid, particolour, or patched is permissible;" → brindle, blue, black
+    // (PetMD S628; same order as the appearance block; brindle first = the portrait default).
+    'american_staffordshire_terrier' => [
+        ['key' => 'brindle', 'value' => 'brindle', 'en' => 'Brindle', 'sl' => 'Tigrast'],
+        ['key' => 'blue', 'value' => 'blue', 'en' => 'Blue', 'sl' => 'Moder'],
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
