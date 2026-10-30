@@ -676,6 +676,13 @@ class FalAiService
                 .'small rose ears folded back, a long tail slightly curved at the end and carried low, gentle and calm expression, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-81: FCI-Standard N° 286 (S626) / AKC standard (S627) — a stocky, muscular terrier of great strength for its size;
+            // short glossy coat; natural uncropped rose / half-prick ears; natural tail, not docked.
+            BreedType::AmericanStaffordshireTerrier => 'A medium-sized, stocky, muscular American Staffordshire Terrier giving the impression of great strength for its size, '
+                .'with a short, close, glossy coat, a medium-length head, deep through, with pronounced cheek muscles and a black nose, '
+                .'dark round eyes set far apart, natural uncropped ears held rose or half prick, a short low-set natural tail tapering to a point, '
+                .'friendly and alert expression, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1630,6 +1637,17 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'rough, hard, wiry coat with longer hair over the eyes and a beard',
                 'markings' => 'black nose, small rose ears, long natural tail carried low, white allowed only on the chest, toes and tail tip, never merle or parti-colour',
+            ],
+            // M5-R10-81: standard-permitted colours brindle, blue, black (S626 / S628); never black and tan, liver, merle or mostly white.
+            BreedType::AmericanStaffordshireTerrier => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'brindle',
+                    1 => 'blue',
+                    2 => 'black',
+                },
+                'eye_color' => 'dark',
+                'fur_texture' => 'short, close, stiff, glossy coat',
+                'markings' => 'black nose, natural uncropped rose or half-prick ears, natural undocked tail, never black and tan, liver, merle or mostly white',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

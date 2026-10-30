@@ -52,7 +52,7 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest / WeimaranerBreedTest / ItalianGreyhoundBreedTest / GiantSchnauzerBreedTest / BloodhoundBreedTest / AkitaBreedTest / CardiganWelshCorgiBreedTest / GermanWirehairedPointerBreedTest / SaintBernardBreedTest / StaffordshireBullTerrierBreedTest / AiredaleTerrierBreedTest / RussellTerrierBreedTest / BullmastiffBreedTest / ChineseCrestedBreedTest / NovaScotiaDuckTollingRetrieverBreedTest / CairnTerrierBreedTest / BullTerrierBreedTest / MiniaturePinscherBreedTest / PyreneanMountainDogBreedTest / SoftCoatedWheatenTerrierBreedTest / IrishWolfhoundBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest / WeimaranerBreedTest / ItalianGreyhoundBreedTest / GiantSchnauzerBreedTest / BloodhoundBreedTest / AkitaBreedTest / CardiganWelshCorgiBreedTest / GermanWirehairedPointerBreedTest / SaintBernardBreedTest / StaffordshireBullTerrierBreedTest / AiredaleTerrierBreedTest / RussellTerrierBreedTest / BullmastiffBreedTest / ChineseCrestedBreedTest / NovaScotiaDuckTollingRetrieverBreedTest / CairnTerrierBreedTest / BullTerrierBreedTest / MiniaturePinscherBreedTest / PyreneanMountainDogBreedTest / SoftCoatedWheatenTerrierBreedTest / IrishWolfhoundBreedTest / AmericanStaffordshireTerrierBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
  * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever / Samoyed / Scottish Terrier / Weimaraner / Italian Greyhound / Giant Schnauzer / Bloodhound / Akita / Cardigan Welsh Corgi / German Wirehaired Pointer / Saint Bernard / Staffordshire Bull Terrier / Airedale Terrier / Russell Terrier / Bullmastiff / Chinese Crested / Nova Scotia Duck Tolling Retriever / Cairn Terrier / Bull Terrier / Miniature Pinscher / Pyrenean Mountain Dog rows
  * against data.json).
@@ -973,6 +973,17 @@ class BreedStageParamsSeeder extends Seeder
     public const PROPOSED_R10_IRISH_WOLFHOUND_SENIOR = 'predlog Claude 2026-10-30 (najbližja vrstica pravila runbooka, M5-R10-80) — čaka Davida';
 
     /**
+     * M5-R10-81 American Staffordshire Terrier (unattended run 2026-10-30, data.json
+     * proposed_game_parameters.american_staffordshire_terrier.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 60 min (PetMD S628
+     * "at least 60 minutes of exercise daily"; no RKC / PDSA page), senior 45 min, puppy 10 min × age capped at 60,
+     * stages young 9 / adult 36 / senior 113 (0.75 × McMillan 2024 median 12.5 y via the Dogs Trust table S123),
+     * arrival 2 / 9 / 36 / 113, learning multiplier 1.2 (Coren rank 34, Above average); care rates the Border Collie's.
+     * No open proposal.
+     */
+    public const CONFIRMED_R10_AMERICAN_STAFFORDSHIRE_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-81)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1221,6 +1232,10 @@ class BreedStageParamsSeeder extends Seeder
         'irish_wolfhound' => [
             'ear_cleaning' => [1, 'two_weeks', 'S620', "Cleaning your dog's ears every two to four weeks will help to prevent ear infections.", 'proposed_game_parameters.irish_wolfhound.ear_care', '"every two to four weeks" → the lower bound, every 2 weeks (bath "as needed" is conditional and PDSA says not needed; hand-stripping every six months is longer than every care period; nails / teeth have no number → no task)'],
         ],
+        'american_staffordshire_terrier' => [
+            'ear_cleaning' => [1, 'month', 'S628', 'Ear cleanings can be done during bath times (around every 4-6 weeks)', 'proposed_game_parameters.american_staffordshire_terrier.ear_care', '"around every 4-6 weeks" → the lower bound, every 4 weeks'],
+            'bath' => [1, 'month', 'S628', 'Stick with bathing no more than every 4-6 weeks', 'proposed_game_parameters.american_staffordshire_terrier.bathing', '"every 4-6 weeks" → the lower bound, every 4 weeks (VCA S629 "as required" — alternative; teeth, nails and groomer have no number → no task)'],
+        ],
     ];
 
     /**
@@ -1318,6 +1333,7 @@ class BreedStageParamsSeeder extends Seeder
         'pyrenean_mountain_dog' => [2, 'S600', 'Grooming: More than once a week', 'low', true, self::PROPOSED_R13_PYRENEAN_MOUNTAIN_DOG],
         'soft_coated_wheaten_terrier' => [7, 'S610', 'Grooming: Every day', 'high', false],
         'irish_wolfhound' => [2, 'S619', 'Brushing them around twice a week should be more than enough to keep their coat in good condition.', 'high', false],
+        'american_staffordshire_terrier' => [1, 'S629', 'Weekly brushing helps remove loose hair and maintain coat health.', 'high', false],
     ];
 
     /**
@@ -1362,6 +1378,7 @@ class BreedStageParamsSeeder extends Seeder
         'bull_terrier' => ['S591', 'Remember to leave a gap after eating and before exercising.'],
         'pyrenean_mountain_dog' => ['S604', 'Avoid vigorous exercise around mealtimes'],
         'irish_wolfhound' => ['S620', 'Do not let your Irish Wolfhound dog exercise right before or after eating.'],
+        'american_staffordshire_terrier' => ['S628', 'always avoid exercise immediately after feeding'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -1451,13 +1468,14 @@ class BreedStageParamsSeeder extends Seeder
         'pyrenean_mountain_dog' => ['S605', 'Early socialization is very important'],
         'soft_coated_wheaten_terrier' => ['S613', 'Early socialization and proper introductions can help a Wheaten Terrier live well with smaller pets.'],
         'irish_wolfhound' => ['S620', 'Begin socializing your Irish Wolfhound puppy as soon as you bring them home.'],
+        'american_staffordshire_terrier' => ['S628', 'socialization is important—especially for American Staffordshire puppies.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2243,6 +2261,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-80 (docs/research/dog-data/data.json irish_wolfhound,
             // S615–S624; runbook rules in proposed_game_parameters.irish_wolfhound).
             BreedType::IrishWolfhound => self::irishWolfhoundProfile(),
+            // M5-R10-81 (docs/research/dog-data/data.json american_staffordshire_terrier,
+            // S625–S629; runbook rules in proposed_game_parameters.american_staffordshire_terrier).
+            BreedType::AmericanStaffordshireTerrier => self::americanStaffordshireTerrierProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -7788,6 +7809,80 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'irish_wolfhound.lifespan.median_peer_reviewed',
                 'quote' => 'Median lifespan was 2720 days (7.5 years).',
                 'notes' => 'Orleifson et al. 2017 (S623), Swedish Irish Wolfhounds born 2006–2008, owner questionnaire. RKC / PDSA "Under 10 years" (S617, S619); PetMD / VCA 6–8 y (S620, S621); McMillan 2024 9.9 y only via Wikipedia (tier C). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * American Staffordshire Terrier (M5-R10-81). Stage boundaries, arrival ages, exercise minutes and the learning multiplier
+     * follow the runbook's standing rules (CONFIRMED_R10_AMERICAN_STAFFORDSHIRE_TERRIER); weight, growth, Coren rank and
+     * lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function americanStaffordshireTerrierProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_AMERICAN_STAFFORDSHIRE_TERRIER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S123', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.american_staffordshire_terrier.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog reaches adult weight at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [113, $boundary('Derived game boundary: last 25 % of lifespan (S11) × McMillan 2024 median 12.5 y (Dogs Trust breed table, S123, row "American Staffordshire Terrier") = 9.375 y = 112.5 → 113 months (half up). Not chosen: 108 (PetMD / VCA lower bound 12 y, S628 / S629), 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 113],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.american_staffordshire_terrier.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S628', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.american_staffordshire_terrier.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Pet parents should aim for at least 60 minutes of exercise daily, which can be broken down into smaller sessions.',
+                'notes' => 'PetMD "at least 60 minutes of exercise daily" (S628) → 60 min = 6,000 steps (runbook rule: "at least N" → N). No RKC / PDSA page for this breed; VCA (S629) gives no minutes.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.american_staffordshire_terrier.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[18.1, 31.8], [
+                'unit' => 'kg', 'source_id' => 'S628', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'american_staffordshire_terrier.adult_weight.petmd',
+                'quote' => 'typically stand between 17-19 inches tall and weigh between 40-70 pounds.',
+                'notes' => 'PetMD (S628): 40–70 lb = 18.1–31.8 kg (our conversion), one range for both sexes; VCA (S629) the same. The FCI / AKC standards give no weight ("Height and weight should be in proportion.").',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'american_staffordshire_terrier.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (most AmStaffs 40–60 lb, S628 → Medium).',
+            ]],
+            'coren_rank' => [34, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'american_staffordshire_terrier.trainability.coren_rank',
+                'quote' => '| 34 | Field Spaniel | Newfoundland Australian Terrier American Staffordshire Terrier Gordon Setter Bearded Collie',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35, re-read 2026-10-30): rank 34, tier "Above Average Working Dogs" (27–39). Verify in The Intelligence of Dogs.',
+            ]],
+            'learning_multiplier' => [1.2, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.american_staffordshire_terrier.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 34, tier Above average (27–39, S35) → 1.2. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12.5, [
+                'unit' => 'years', 'source_id' => 'S123', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'american_staffordshire_terrier.lifespan.median_uk',
+                'quote' => 'American Staffordshire Terrier 12.5 11.4 - 13.1 142 94',
+                'notes' => 'McMillan et al. 2024 median via the Dogs Trust breed table (S123). PetMD and VCA 12–16 y (S628 / S629). Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }
