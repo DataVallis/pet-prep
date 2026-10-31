@@ -466,6 +466,7 @@ const SPECIES = [
       { id: 'irish_wolfhound', synonyms: { en: ['Wolfhound', 'Cú Faoil', 'Irish Wolf Hound'], sl: ['volčji hrt', 'irski hrt', 'irski volcji hrt'] } },
       { id: 'american_staffordshire_terrier', synonyms: { en: ['AmStaff', 'Am Staff', 'Staffordshire Terrier'], sl: ['amstaff', 'ameriški stafordširski terier'] } },
       { id: 'lagotto_romagnolo', synonyms: { en: ['Lagotto', 'Romagna Water Dog', 'Truffle dog'], sl: ['lagotto', 'romanjski vodni pes', 'pes za tartufe'] } },
+      { id: 'alaskan_malamute', synonyms: { en: ['Malamute', 'Mal'], sl: ['malamut', 'aljaski malamut', 'malamute'] } },
     ],
   },
   {
@@ -2208,6 +2209,28 @@ const DOG_FACTS = {
       ['hip_elbow_dysplasia', 'health.hip_elbow'],
     ],
   },
+  // M5-R10-83. RKC page not reachable → PDSA (S639): exercise 'a minimum of two hours' (at least), grooming 'daily brushing'
+  // (Every day), sheds; lifespan PDSA 'Over 10 years' + the PetMD span 10–14 y (S640). Height / weight = the PDSA ranges
+  // (S639; FCI-Standard N° 243 gives desirable freighting sizes only). Coren rank 50. FCI origin USA. Not exported:
+  // adult_weight alternatives and salt_category, senior_from, mcmillan_2024 (null), health.day_blindness (paraphrase only),
+  // suitability.vca_children (a rating, never a number in the register).
+  alaskan_malamute: {
+    height: ['height.pdsa'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.pdsa', 'more_than'], ['lifespan.petmd', 'span']],
+    exercise: [['@proposed_game_parameters.alaskan_malamute.exercise_minutes_adult', 'at_least']],
+    coat: [],
+    grooming: [['suitability.pdsa_grooming', 'grooming_frequency']],
+    shedding: ['suitability.pdsa_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia', 'health.hip_dysplasia'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+      ['cataracts', 'health.cataracts'],
+      ['chondrodysplasia', 'health.chondrodysplasia'],
+      ['polyneuropathy', 'health.polyneuropathy'],
+    ],
+  },
 
 
 };
@@ -2257,6 +2280,7 @@ export const DOG_CARE_TASKS = {
   irish_wolfhound: [['ear_cleaning', 1, 14, 'proposed_game_parameters.irish_wolfhound.ear_care']],
   american_staffordshire_terrier: [['ear_cleaning', 1, 28, 'proposed_game_parameters.american_staffordshire_terrier.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.american_staffordshire_terrier.bathing']],
   lagotto_romagnolo: [['groomer_visit', 1, 42, 'proposed_game_parameters.lagotto_romagnolo.professional_grooming'], ['bath', 1, 28, 'proposed_game_parameters.lagotto_romagnolo.bathing']],
+  alaskan_malamute: [['ear_cleaning', 1, 7, 'proposed_game_parameters.alaskan_malamute.ear_care'], ['bath', 1, 42, 'proposed_game_parameters.alaskan_malamute.bathing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -2884,6 +2908,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.lagotto_romagnolo.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.lagotto_romagnolo.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.lagotto_romagnolo.exercise_minutes_senior',
+  },
+  alaskan_malamute: {
+    adult_minutes: ['proposed_game_parameters.alaskan_malamute.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.alaskan_malamute.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.alaskan_malamute.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.alaskan_malamute.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.alaskan_malamute.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.alaskan_malamute.exercise_minutes_senior',
   },
 
 
