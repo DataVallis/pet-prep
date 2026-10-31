@@ -5,7 +5,8 @@ Order: home and holiday countries, the 13 language markets, then by pet owners a
 Status: `[ ]` todo · `[~]` partial (follow-up line below) · `[x]` done · `[!]` blocked (reason).
 
 ## Queue
-- [ ] SI Slovenia — Osrednjeslovenska, Gorenjska, Primorsko-notranjska, Obalno-kraška, Goriška
+- [~] SI Slovenia — Osrednjeslovenska, Gorenjska, Primorsko-notranjska, Obalno-kraška, Goriška — 56 entries, 10 × 24 h (incl. 1 duty rota), 2 duty rotas, no animal poison line exists, 2026-10-31 — left: ~18 smaller practices listed in `vets/SI.json` notes
+- [ ] SI Slovenia — west follow-up: remaining smaller practices from `vets/SI.json` notes (Animavet, Klinkon, Jata/Rex/NOE, Litija, Capriola, Medicus, Sežana, Cerkno, Pivka …)
 - [ ] SI Slovenia — Podravska, Pomurska, Koroška, Savinjska, Zasavska, Posavska, Jugovzhodna Slovenija
 - [ ] HR Croatia
 - [ ] IT Italy
