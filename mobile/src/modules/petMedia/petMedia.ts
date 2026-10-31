@@ -54,6 +54,7 @@ export interface PetMediaInfo {
    * School smooth playback (2026-10-28): plus the server-derived `school_<cmd>_attention_loop`,
    * `school_<cmd>_success_loop` (ping-pong loops) and `school_<cmd>_release` (performing reversed).
    * GAMES_SPEC phase 1 (2026-10-30): plus `ball_waiting_loop` (ping-pong of `ball_waiting`).
+   * GAMES_SPEC phase 2 (2026-10-31): plus `wand_crouch_loop` (ping-pong of the last ~1 s of `wand_stalking`).
    */
   phases: Record<string, string>;
   /** M5-T09 / T10: phase clip groups of the pet's set (`school`, `ball`, `wand`) — then never a state clip there. */
@@ -90,7 +91,7 @@ export type PhaseGroup = 'school' | 'ball' | 'wand';
 
 const PHASE_GROUPS: readonly PhaseGroup[] = ['school', 'ball', 'wand'];
 const POSE_KEY = /^(sit|come|place|door|empty|crouch|catch)$/;
-const PHASE_KEY = /^(school_(sit|come|place|potty)_(attention|performing|success|attention_loop|success_loop|release)|ball_(waiting|running|fetching|waiting_loop)|wand_(stalking|pouncing|catching))$/;
+const PHASE_KEY = /^(school_(sit|come|place|potty)_(attention|performing|success|attention_loop|success_loop|release)|ball_(waiting|running|fetching|waiting_loop)|wand_(stalking|pouncing|catching|crouch_loop))$/;
 
 /** `phase_seconds` → ms per known phase key (1–15 s; anything else is dropped → the 3 s default). */
 function secondsMap(raw: unknown, key: RegExp): Record<string, number> {

@@ -85,6 +85,16 @@ export function fireGameGesture(testID: string, kind: 'pan' | 'tap', event: Reco
   gesture.handlers.end?.(e);
 }
 
+/** Fire a recorded pan as a real drag: begin at the first sample, update through every one, end at the last. */
+export function fireGamePan(testID: string, samples: Record<string, number>[]): void {
+  const gesture = registry.get(testID)?.find((g) => g.kind === 'pan');
+  if (gesture === undefined) throw new Error(`no pan gesture on ${testID}`);
+  const events = samples.map((e) => ({ x: 0, y: 0, translationX: 0, translationY: 0, velocityX: 0, velocityY: 0, ...e }));
+  gesture.handlers.begin?.(events[0]);
+  for (const e of events.slice(1)) gesture.handlers.update?.(e);
+  gesture.handlers.end?.(events[events.length - 1]);
+}
+
 export function GestureHandlerRootView({ children, ...props }: ViewProps & { children?: ReactNode }) {
   return <View {...props}>{children}</View>;
 }
