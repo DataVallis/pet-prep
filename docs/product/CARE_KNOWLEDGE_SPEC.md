@@ -178,3 +178,21 @@ Sprejeto 31. 10. 2026: (1) **brez veterinarskega pregleda** — strani nosijo op
 - Zdravstvena (YMYL) vsebina in AI Overviews: https://searchenginejournal.com/how-to-create-health-ymyl-content-that-performs-in-ai-search/584431/
 
 Številke iz SEO/GEO člankov so tržne raziskave agencij — usmeritev, ne dejstvo za objavo.
+
+## 12. Jeziki — 13 naenkrat (David, 31. 10. 2026)
+
+Izbor (anketa, priporočena možnost »EU + svet«): **DE, FR, ES, IT, PT, NL, PL, CS, HR, SV, DA, FI, NB** (+ obstoječa EN, SL = 15). Velja za bazo znanja in za celo spletno stran.
+
+Postopek:
+1. **L1 — infrastruktura spletne strani:** seznam jezikov v `src/i18n/config.ts` brez trdno vpisanih `en | sl` (proxy, `llms` poti, OG poti, regex-i), slugi strani po jeziku, `hreflang` za vse; jezik je viden šele, ko so vsa njegova besedila (strani + register + skrb) prevedena — gradnja pade, če kaj manjka.
+2. **L2 — prevod strani in registra:** en agent na jezik prevede `src/content/<L>.ts`, `src/content/registry/<L>.ts`, `src/content/care/copy.ts` (+ `speciesWords`); drug agent (ne prevajalec) preveri pomen proti EN. Pravila tona iz `brand/README.md`; pravna besedila (pogoji, zasebnost) samo s pravnim pregledom ali z jasno oznako »prevod, velja EN«.
+3. **L3 — prevod baze znanja:** vsak jezik je nov ključ v vseh besedilnih slovarjih; prevede ga agent iz **EN in citatov**, preveri neodvisni preverjevalec in za ta jezik zapiše `verified_hash`. Nočna avtomatika: po en jezik × paket živil na zagon (ločeno od zagona za nova živila).
+4. **L4 — aplikacija:** ločen načrt (i18n aplikacije, trgovine).
+
+## 13. Merjenje (David, 31. 10. 2026)
+
+Samo Search Console: mesečno opravilo »PetPrep — mesečno SEO poročilo (skrb)« (1. v mesecu, 8:47) prek povezave Supermetrics (vir `GW`; David jo poveže enkrat). Brez samodejnega preverjanja citatov v ChatGPT / Perplexity.
+
+## 14. Vsebina zunaj strani — vrtiljaki (31. 10. 2026)
+
+`scripts/care-carousel.mjs <species> <locale> <outDir>` sestavi vrtiljak 1080×1350 (7 slik) **samo iz preverjenega izvoza** — besede so enake kot na petprep.si. Prva dva (pes, mačka, EN) so na Drive `CGP/slike/objave/2026-10-31_what-can-pets-eat/` (id `19S1MIEO9s2aiuPACDsiJZ6uQklV_VrOB`).
