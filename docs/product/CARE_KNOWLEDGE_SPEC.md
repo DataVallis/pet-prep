@@ -196,3 +196,5 @@ Samo Search Console: mesečno opravilo »PetPrep — mesečno SEO poročilo (skr
 ## 14. Vsebina zunaj strani — vrtiljaki (31. 10. 2026)
 
 `scripts/care-carousel.mjs <species> <locale> <outDir>` sestavi vrtiljak 1080×1350 (7 slik) **samo iz preverjenega izvoza** — besede so enake kot na petprep.si. Prva dva (pes, mačka, EN) so na Drive `CGP/slike/objave/2026-10-31_what-can-pets-eat/` (id `19S1MIEO9s2aiuPACDsiJZ6uQklV_VrOB`).
+
+Od 31. 10. 2026 opravilo vsake 3 dni pošlje v Postajo datiran brief objave (vrtiljak je ena od tem) — `docs/engineering/SOCIAL_BRIEF_RUNBOOK.md`.
