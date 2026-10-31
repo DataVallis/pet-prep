@@ -516,6 +516,17 @@ return [
         ['key' => 'blue', 'value' => 'blue', 'en' => 'Blue', 'sl' => 'Moder'],
         ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
     ],
+    // M5-R10-82: FCI-Standard N° 298 S631 / RKC S633 colour list (same order as the appearance block; brown roan first = the
+    // portrait default); never black.
+    'lagotto_romagnolo' => [
+        ['key' => 'brown-roan', 'value' => 'brown roan (white finely flecked with brown)', 'en' => 'Brown roan', 'sl' => 'Rjavi roan'],
+        ['key' => 'off-white', 'value' => 'solid off-white', 'en' => 'Off-white', 'sl' => 'Belkast'],
+        ['key' => 'white-brown', 'value' => 'white with brown patches', 'en' => 'White with brown patches', 'sl' => 'Bel z rjavimi lisami'],
+        ['key' => 'white-orange', 'value' => 'white with orange patches', 'en' => 'White with orange patches', 'sl' => 'Bel z oranžnimi lisami'],
+        ['key' => 'orange-roan', 'value' => 'orange roan (white finely flecked with orange)', 'en' => 'Orange roan', 'sl' => 'Oranžni roan'],
+        ['key' => 'brown', 'value' => 'solid brown', 'en' => 'Brown', 'sl' => 'Rjav'],
+        ['key' => 'orange', 'value' => 'solid orange', 'en' => 'Orange', 'sl' => 'Oranžen'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
