@@ -680,11 +680,18 @@ export const TRAINING_STRINGS = strings('training', 'child', {
   },
 });
 
-/** School v2 texts (`training:school`, GAMES_SPEC §4.1 »Besedila«) — every game line ≤ 32 characters (test). */
+/**
+ * School v2 texts (`training:school`, GAMES_SPEC §4.1 »Besedila«) — every GameLine / feedback label
+ * ≤ 32 characters (test); the rule strip (`rule` / `ruleTreat`) is its own component and may wrap
+ * to two lines (≤ 64 characters, test).
+ */
 export const SCHOOL_V2_STRINGS = strings('training', 'school', {
   round: (n: number) => t('training:school.round', { n }),
   progressA11y: (n: number, total: number, stars: number) => t('training:school.progressA11y', { n, total, stars }),
+  continueA11y: (round: number) => t('training:school.continueA11y', { round }),
+  roundIn: (round: number, n: number) => t('training:school.roundIn', { round, n }),
   result: {
+    tryAgainLeft: (count: number) => t('training:school.result.tryAgainLeft', { count }),
     stars: (stars: number, total: number) => t('training:school.result.stars', { stars, total }),
     trialA11y: (n: number, outcome: string) => t('training:school.result.trialA11y', { n, outcome }),
     roundTitle: (n: number) => t('training:school.result.roundTitle', { n }),
@@ -699,6 +706,13 @@ const _trainingTexts: {
   commands: Record<TrainingCommand, { name: string; cue: string; obeys: string; ignores: string; lower: string }>;
 } = TRAINING_STRINGS;
 void _trainingTexts;
+
+/** School v2: every command / outcome / mistake has its text (compile-time check). */
+const _schoolTexts: {
+  ignoring: Record<TrainingCommand, string>;
+  result: { outcome: Record<TrialOutcome, string>; tip: Record<'notObeyed' | 'early' | 'missed', string> };
+} = SCHOOL_V2_STRINGS;
+void _schoolTexts;
 
 /** Refusal reasons of the two training endpoints (backend `CareRefusal`). */
 export type TrainingRefusal = Exclude<keyof typeof TRAINING_STRINGS.errors, 'training_session_active_until' | 'training_pet_sleeping_until' | 'expiredWhileAway' | 'badResponse'>;

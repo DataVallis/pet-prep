@@ -8,6 +8,17 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-31 — Šola, ki jo otrok razume v prvem poskusu: pravilo ves čas na zaslonu in »Zdaj!« za začetnike
+
+**Kaj:** David je novo šolo preizkusil na telefonu (TestFlight, angleško, mladiček doberman, ukaz »Pridi«) in ni vedel, kaj mora delati: »ne vem kaj moram delat … naj navodila skos kaže … pes kr nekaj dela«. Posnetek zaslona je pokazal pet stvari: pravilo je bilo odrezano (»…«) in je takoj izginilo; ko je kuža prišel bližje, ga nič ni opozorilo, da je zdaj trenutek za ♥ (»Zamujeno«); majhne rumene ikone 👃 ni prebral; v premoru je tapnil najbolj opazen gumb »Končaj«, misleč, da nadaljuje; na koncu je pisalo »poskusi jutri« z eno zvezdico, čeprav je imel še 4 vaje. Isti dan popravljeno: pravilo je zdaj trak, ki ostane ves čas vaje (»Ko kuža uboga → pritisni ♥. Če ne uboga → počakaj.«); dokler kuža ukaza ne zna do polovice, gumb v pravem trenutku zasveti in pokaže »Zdaj!«; ko kuža ne uboga, piše »Ne uboga — ne pohvali, počakaj.« in kaj kuža počne, gumb pa potemni; v premoru je glavni gumb »Nadaljuj« z odštevanjem, »Končaj« je majhen; rezultat je prijazen (»Bravo!« / »Dober začetek!« / »Vaja dela mojstra«), pove, koliko vaj je danes še, pravilno čakanje pokaže kot zeleno kljukico in da en namig.
+**Zakaj je pomembno:** učna točka šole — *pohvali takoj, ko uboga, sicer počakaj* — mora biti jasna v prvem poskusu, sicer otrok odneha. Namig »Zdaj!« pomaga samo začetnikom (do 50 % napredka), da se veščina še vedno nauči. Pravila strežnika (časi, okno pohvale 1,5 s, točkovanje) so ostala enaka, sprememba gre na telefone brez nove gradnje (posodobitev OTA).
+**Številke:** 5 težav z enega testa → 5 popravkov v enem dnevu; namig do 50 % napredka ukaza; odštevanje ≤ 3 s, nikoli dlje od premora strežnika (2,5 s); 20 novih testov; 0 novih nativnih knjižnic.
+- 📣 »Prvi test na telefonu: ustanovitelj ni vedel, kaj narediti. Še isti dan: pravilo ves čas na zaslonu in »Zdaj!«, ko kuža uboga.« (zgodba o hitrem učenju iz testa)
+- 👩 Starši: otrok vedno vidi pravilo; začetniki dobijo namig, ki izgine, ko kuža ukaz napol zna; rezultat nikoli ne graja in pove, koliko vaj je še danes.
+- 🧒 »Ko kuža uboga, pritisni ♥. Če ne uboga, počakaj — tudi to je zvezdica!«
+- 💼 Hiter cikel test → popravek (isti dan, posodobitev brez trgovine) pri ključni učni zanki izdelka.
+- 🛠 Samo prikaz: čisti pomočniki (`praiseHintOn`, `tokenWaiting`, `breakCountdown`, `resultHeadline`) nad istim urnikom strežnika; `GameLine` se zdaj prelomi namesto »…« v vseh igrah.
+
 ## 2026-10-31 — »Kaj lahko jedo psi?« — baza znanja z viri za vsako živilo
 
 **Kaj:** David je na Instagramu videl priljubljeno objavo »These Foods Can Kill Your Dog« in rekel: to damo v PetPrep, v aplikacijo in na spletno stran, za vse živali. V enem dopoldnevu je nastala baza znanja: za psa 55 in za mačko 44 živil, vsako s stopnjo nevarnosti, razlogom, znaki, kaj storiti, razlago za otroke in viri (ASPCA, Merck Veterinary Manual, FDA, VCA, Cornell, Blue Cross, Cats Protection …) z dobesednimi citati; vsako je neodvisno preveril drugi AI agent. Na petprep.si dobi vsako živilo svojo stran (EN + SL), nočno opravilo pa vsak večer doda 10 novih, dokler seznam (~180 živil na vrsto) ni prazen.

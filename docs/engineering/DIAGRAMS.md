@@ -1809,16 +1809,16 @@ flowchart TD
   F -->|yes: new store build| S2["POST /training/start {command, rules: 2}"]
   S2 --> R{readTrainingSession → withRulesV2<br/>rounds + mask consistent?}
   R -->|no| V1
-  R -->|yes| P["preparing: ClipDeck mounts attention · performing · success<br/>(never release) — rule line already up"]
+  R -->|yes| P["preparing: ClipDeck mounts attention · performing · success<br/>(never release) — rule strip up (whole session)"]
   P -->|first frames / picture at once / 12 s → picture| RUN[running: SessionClock starts]
-  RUN --> TL["schoolFrameAt (server times only)<br/>lead → listening (chip + 👂) → performing (no text) →<br/>window (chip gone) → mask → calm · ignored: chip 1.5 s → 👃/🦋 + line"]
+  RUN --> TL["schoolFrameAt (server times only)<br/>lead → listening (chip + 👂) → performing (no text) →<br/>window (chip gone; progress < 50 % → glow + »Zdaj!«) → mask → calm<br/>ignored: chip 1.5 s → »Ne uboga — ne pohvali, počakaj.« + dimmed »Počakaj« token"]
   TL -->|role per step| Q["ClipQueue: attention ⇢ performing (crossfade, same pose)<br/>performing → success at its end (instant)<br/>success → attention = CUT only while masked"]
   TL -->|release_at| M["FeedbackLayer verdict + mask_ms 1200<br/>✓ Bravo! / ✗ Prezgodaj / ✗ Zamujeno"]
   M -->|onMaskChange| Q
   RUN --> TAP["token tap (bone if treat_token, else ♥)<br/>praise() → first tap of the cue → tapFeedback"]
-  TL -->|break after round 1| B["»1. krog ✓« + stars · token hidden<br/>»Končaj« while earlyEndOpen()"]
+  TL -->|break after round 1| B["»1. krog ✓« + stars · token hidden<br/>»Nadaljuj (3…1)« → round 2 at its start_ms<br/>small »Končaj« while earlyEndOpen()"]
   B -->|Končaj| E["POST /training/finish {taps, ended_after_round: 1}<br/>(clock keeps running)"]
-  E -->|200| RES[SchoolResultV2: per-cue outcomes, routine line]
+  E -->|200| RES["SchoolResultV2: Bravo! / Dober začetek! / Vaja dela mojstra<br/>per-cue outcomes (waited = green ✓), N practices left, one tip, routine line"]
   E -->|422 training_round_two_started / offline| RUN
   RUN -->|duration over| FULL["POST /training/finish {taps}"] --> RES
 ```

@@ -3,19 +3,23 @@
  *
  * The server's schedule (`rules: 2`) is played as it comes — the app never re-times it:
  *
- *   lead-in 0 … cue₀ (round 1 only)        → »Ko uboga — takoj priboljšek!« (≥ 2 s)
+ *   whole session                          → the rule strip »Ko kuža uboga → pritisni ♥ …« (SchoolRuleStrip, 2026-10-31)
+ *   lead-in 0 … cue₀ (round 1 only)        → attention loop, no cue yet
  *   per cue the dog obeys:
  *     cue … perform_at                     → `listening`: big command chip + 👂, attention loop
  *     perform_at … obey_at                 → `performing`: chip + 👂, the performing clip from frame 0, NO text
- *     obey_at … window_end                 → `window`: chip gone (= »now«), success loop, a11y »Kuža se usede.«
+ *     obey_at … window_end                 → `window`: chip gone (= »now«), success loop, a11y »Kuža se usede.«;
+ *                                            below 50 % progress the beginner hint (glow + »Zdaj!«)
  *     window_end (= release_at) … + mask   → `mask`: the verdict under the FeedbackLayer mask; the cut
  *                                            success loop → attention loop happens under it (Š2 — the
  *                                            reversed release clip is never played)
  *     … slot end                           → `calm` (700 ms standing)
  *   per cue the dog ignores (slot 4.5 s):
  *     cue … cue + 1.6 s                    → `ignoredCue`: chip for 1.5 s, attention loop
- *     cue + 1.6 s … slot end               → `ignoring`: 🦋 / 👃 + »Ne uboga — počakaj.« (≥ 2.9 s)
- *   after round 1                          → `break` (2.5 s): »1. krog ✓«, the round's stars, »Končaj«
+ *     cue + 1.6 s … slot end               → `ignoring`: chip »Ne uboga — ne pohvali, počakaj.« + what the dog
+ *                                            does, the token dimmed (»Počakaj«, still tappable) (≥ 2.9 s)
+ *   after round 1                          → `break` (2.5 s): »1. krog ✓«, the round's stars, »Nadaljuj (3)«
+ *                                            counting down to round 2's start, small »Končaj«
  *   duration                               → `over`
  *
  * Scoring stays the server's (`TrainingService::score`); the instant feedback mirrors it with
@@ -23,7 +27,15 @@
  */
 
 import { firstTapsBySlot, liveOutcome, missedWhileAway, slotEnd, trialOutcome } from '@/modules/training/game';
-import { isSchoolV2Session, type ChildTraining, type TrainingSession, type TrialOutcome } from '@/modules/training/training';
+import {
+  isSchoolV2Session,
+  trainingResultBucket,
+  type ChildTraining,
+  type TrainingResult,
+  type TrainingSession,
+  type TrialOutcome,
+  type TrialResult,
+} from '@/modules/training/training';
 
 /** Cues per round (server `TrainingService::TRIALS_PER_ROUND`). */
 export const SCHOOL_TRIALS_PER_ROUND = 3;
@@ -66,7 +78,7 @@ export interface SchoolFrame {
   chip: boolean;
   /** Status icon by the chip: 👂 listening, or the dog's distraction while it ignores. */
   icon: 'ear' | 'ignore' | null;
-  /** The one game line (GameLine): the rule before the first cue, or »Ne uboga — počakaj.« */
+  /** Which text step this is (the rule strip / the »don't praise, wait« chip read it via `kind`; kept for the timeline tests). */
   line: 'lead' | 'ignores' | null;
   /** When this step began / ends (ms). */
   fromMs: number;
@@ -315,7 +327,96 @@ export function praiseToken(training: Pick<ChildTraining, 'treat_token'>): Prais
   return training.treat_token ? 'treat' : 'heart';
 }
 
+// ── Clarity layer (David's device test 2026-10-31) ────────────
+
+/**
+ * Beginner hint (David 2026-10-31, D Claude): while a command's progress is below this, the token
+ * glows / pulses and »Zdaj!« shows the moment the praise window opens. From this progress on there
+ * is no hint, so the skill itself is still learned. Display only — nothing stored, no rule changed.
+ */
+export const PRAISE_HINT_BELOW_PROGRESS = 50;
+
+/** The hint is on for this session (decided once from the command's progress at the start). */
+export function praiseHintEnabled(progress: number): boolean {
+  return progress < PRAISE_HINT_BELOW_PROGRESS;
+}
+
+/** The hint shows now: enabled and the praise window is open (the server's obey_at … release_at). */
+export function praiseHintOn(frame: Pick<SchoolFrame, 'kind'>, enabled: boolean): boolean {
+  return enabled && frame.kind === 'window';
+}
+
+/**
+ * The dog visibly does not obey (the `ignoring` step, from cue + 1.6 s): the token is dimmed with a
+ * »wait« look and the »don't praise, wait« chip shows. Never earlier — during `ignoredCue` the dog
+ * may still be »thinking«, a dim token there would give the answer away. The token stays tappable
+ * (a tap still counts as `praised_without_obeying`, server rule).
+ */
+export function tokenWaiting(frame: Pick<SchoolFrame, 'kind'>): boolean {
+  return frame.kind === 'ignoring';
+}
+
+/** The break's auto-continue countdown (»Nadaljuj (3)«). */
+export const BREAK_COUNTDOWN_MS = 3_000;
+
+/**
+ * Whole seconds shown on »Nadaljuj« in a break (null outside one). Counted down to the NEXT round's
+ * start on the server's timeline — never beyond it: a break shorter than the countdown (the server's
+ * `round_break_ms` is 2.5 s) starts at the shorter value, and the game continues exactly at the round
+ * start. »Nadaljuj« cannot shorten the break (the schedule is the server's).
+ */
+export function breakCountdown(session: Pick<TrainingSession, 'rounds'>, frame: Pick<SchoolFrame, 'kind' | 'round' | 'toMs'>, elapsedMs: number): number | null {
+  if (frame.kind !== 'break') return null;
+  const next = session.rounds?.[frame.round + 1];
+  const start = next?.start_ms ?? frame.toMs;
+  const remaining = Math.min(BREAK_COUNTDOWN_MS, Math.max(0, start - elapsedMs));
+  return Math.max(1, Math.ceil(remaining / 1_000));
+}
+
 // ── Result ────────────────────────────────────────────────────
+
+/** Result headline (David 2026-10-31): success »Bravo!«, partial »Dober začetek!«, none »Vaja dela mojstra«. */
+export type SchoolResultHeadline = 'success' | 'partial' | 'none';
+
+/** By the M5-F04 bucket (never false praise): excellent / good → success, practice → partial, none → none. */
+export function resultHeadline(result: Pick<TrainingResult, 'trials'>): SchoolResultHeadline {
+  switch (trainingResultBucket(result)) {
+    case 'excellent':
+    case 'good':
+      return 'success';
+    case 'practice':
+      return 'partial';
+    case 'none':
+      return 'none';
+  }
+}
+
+/** The mistake a one-line tip points at. */
+export type SchoolMistake = 'notObeyed' | 'early' | 'missed';
+
+const MISTAKE_OF: Partial<Record<TrialOutcome, SchoolMistake>> = {
+  praised_without_obeying: 'notObeyed',
+  too_early: 'early',
+  too_late: 'missed',
+  no_praise: 'missed',
+};
+/** On a tie: praising a dog that didn't obey is the lesson that matters most, then too early. */
+const MISTAKE_ORDER: readonly SchoolMistake[] = ['notObeyed', 'early', 'missed'];
+
+/** The most common mistake of the session (null = none). */
+export function commonMistake(trials: readonly Pick<TrialResult, 'outcome'>[]): SchoolMistake | null {
+  const counts = new Map<SchoolMistake, number>();
+  for (const t of trials) {
+    const m = MISTAKE_OF[t.outcome];
+    if (m !== undefined) counts.set(m, (counts.get(m) ?? 0) + 1);
+  }
+  let best: SchoolMistake | null = null;
+  for (const m of MISTAKE_ORDER) {
+    const n = counts.get(m) ?? 0;
+    if (n > 0 && (best === null || n > (counts.get(best) ?? 0))) best = m;
+  }
+  return best;
+}
 
 /** The result's cues grouped by round (index 0–2 → round 1, 3–5 → round 2). */
 export function resultRounds<T extends { index: number }>(trials: readonly T[]): T[][] {

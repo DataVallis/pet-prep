@@ -130,9 +130,23 @@
     "knowsProgress": "{{name}} {{value}}%"
   },
   "school": {
-    "lead": "When it obeys — treat at once!",
-    "leadHeart": "When it obeys — praise at once!",
-    "ignores": "Not obeying — wait.",
+    "rule": "When your pup obeys → tap ♥. If not → wait.",
+    "ruleTreat": "When your pup obeys → tap the treat. If not → wait.",
+    "ruleA11y": "Rule: when your pup obeys, praise it. If it doesn’t obey, wait.",
+    "now": "Now!",
+    "hintA11y": "Your pup obeyed — praise now",
+    "ignores": "Not obeying — don’t praise, wait.",
+    "ignoring": {
+      "sit": "Your pup is sniffing",
+      "come": "Your pup stays put",
+      "place": "Your pup would rather play",
+      "potty": "Your pup watches a butterfly"
+    },
+    "wait": "Wait",
+    "waitA11yHint": "Your pup isn’t obeying — wait.",
+    "continue": "Continue",
+    "continueA11y": "Continue with round {{round}}",
+    "roundIn": "Round {{round}} in {{n}} s …",
     "keepGoing": "Round 2 — keep going!",
     "fb": {
       "inTime": "Great job!",
@@ -153,7 +167,27 @@
       "earlyEnd": "You stopped after round 1 — the progress counts. Do both rounds for today's practice.",
       "stars": "Stars: {{stars}} of {{total}}",
       "trialA11y": "Command {{n}}: {{outcome}}",
-      "roundTitle": "Round {{n}}"
+      "roundTitle": "Round {{n}}",
+      "titleSuccess": "Bravo!",
+      "titlePartial": "Good start!",
+      "titleNone": "Practice makes perfect",
+      "noGain": "No progress this time.",
+      "tryAgainLeft_one": "Try again — you have {{count}} more practice today.",
+      "tryAgainLeft_other": "Try again — you have {{count}} more practices today.",
+      "noneLeft": "Your next practice is waiting tomorrow.",
+      "outcome": {
+        "in_time": "on time",
+        "too_early": "too early",
+        "too_late": "too late",
+        "no_praise": "missed",
+        "waited": "Waited — correct",
+        "praised_without_obeying": "praised, didn’t obey"
+      },
+      "tip": {
+        "notObeyed": "Tip: when your pup doesn’t obey, don’t praise — just wait.",
+        "early": "Tip: wait until your pup obeys, then tap.",
+        "missed": "Tip: tap as soon as your pup obeys."
+      }
     },
     "round": "Round {{n}} ✓",
     "progressA11y": "Command {{n}} of {{total}}, stars: {{stars}}"
