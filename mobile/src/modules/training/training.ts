@@ -82,6 +82,12 @@ export interface ChildTraining {
    * start with `media_not_ready`). An older server sends none → true (its old rules).
    */
   media_ready: boolean;
+  /**
+   * GAMES_SPEC §4.1 / V6 (David 2026-10-30): the family bought treats for this pet (»Želje«) —
+   * school v2 shows a treat token instead of »Pohvali« ♥. Display only, never consumes a treat.
+   * An older server sends none → false (the heart).
+   */
+  treat_token: boolean;
 }
 
 /** `training` of the parent dashboard / `pet.updated`. */
@@ -107,6 +113,7 @@ export const EMPTY_TRAINING: ChildTraining = {
   blocked_reason: null,
   next_allowed_at: null,
   media_ready: true,
+  treat_token: false,
 };
 
 export const EMPTY_TRAINING_SUMMARY: PetTrainingSummary = {
@@ -135,6 +142,20 @@ export interface TrainingTrial {
   release_at_ms?: number | null;
 }
 
+/** GAMES_SPEC §4.1 Š1 (rules v2): one round of the schedule (server `rounds[]`). */
+export interface TrainingRound {
+  /** 1-based. */
+  round: number;
+  first_index: number;
+  last_index: number;
+  /** ms since the start; round 1 starts at 0 (the 2 s lead-in included). */
+  start_ms: number;
+  end_ms: number;
+}
+
+/** The school rules this app plays when the game layer runs (GAMES_SPEC §7.2). */
+export const SCHOOL_RULES_V2 = 2;
+
 /** `session` of a `training/start` 200: the schedule the app plays. */
 export interface TrainingSession {
   id: string;
@@ -147,6 +168,19 @@ export interface TrainingSession {
   /** Human reaction floor: a praise earlier than obey_at + this is too early (PR #53). */
   min_reaction_ms: number;
   trials: TrainingTrial[];
+  /**
+   * Rules v2 (GAMES_SPEC §4.1, ARCHITECTURE »Games rules v2 — contract for the app«): present only
+   * for a session started with `rules: 2` (and its resumed schedule). Absent = v1.
+   */
+  rules_version?: 2;
+  /** v2: the feedback mask after `release_at_ms` (Š2 — the release clip is never played). */
+  mask_ms?: number;
+  /** v2: the break after round 1 (Š1). */
+  round_break_ms?: number;
+  /** v2: start of each break. */
+  round_breaks_ms?: number[];
+  /** v2: the rounds (2 × 3 cues). */
+  rounds?: TrainingRound[];
 }
 
 /**
@@ -182,6 +216,12 @@ export interface TrainingResult {
   progress_after: number;
   /** Precise gain in percentage points. */
   progress_gain: number;
+  /** Rules v2 only (else absent). */
+  rules_version?: 2;
+  /** v2: 1 = the child stopped after round 1 (Š3); null = the whole session. */
+  ended_after_round: 1 | null;
+  /** False after an early end: progress counted, the »Šolanje« routine not. True for v1. */
+  counts_for_routine: boolean;
 }
 
 export type TrainingActionStatus = 'accepted' | 'unchanged';
@@ -294,6 +334,7 @@ export function readChildTraining(raw: unknown): ChildTraining {
     blocked_reason: raw.can_start === true || typeof raw.blocked_reason !== 'string' ? null : raw.blocked_reason,
     next_allowed_at: raw.can_start === true ? null : iso(raw.next_allowed_at),
     media_ready: raw.media_ready !== false,
+    treat_token: raw.treat_token === true,
   };
 }
 
@@ -358,7 +399,7 @@ export function readTrainingSession(raw: unknown): TrainingSession | null {
   }
   if (trials.length === 0) return null;
   trials.sort((a, b) => a.cue_at_ms - b.cue_at_ms);
-  return {
+  const session: TrainingSession = {
     id: raw.id,
     command: raw.command,
     started_at: started,
@@ -369,6 +410,65 @@ export function readTrainingSession(raw: unknown): TrainingSession | null {
     min_reaction_ms: minReaction !== null && minReaction >= 0 && minReaction < window ? minReaction : DEFAULT_MIN_REACTION_MS,
     trials,
   };
+  return withRulesV2(session, raw);
+}
+
+function readRound(value: unknown): TrainingRound | null {
+  if (!isObj(value)) return null;
+  const round = int(value.round);
+  const first = int(value.first_index);
+  const last = int(value.last_index);
+  const start = int(value.start_ms);
+  const end = int(value.end_ms);
+  if (round === null || first === null || last === null || start === null || end === null) return null;
+  if (round < 1 || first < 0 || last < first || start < 0 || end <= start) return null;
+  return { round, first_index: first, last_index: last, start_ms: start, end_ms: end };
+}
+
+/**
+ * The v2 keys of a schedule (GAMES_SPEC §4.1). Only a complete, consistent set makes the session
+ * v2 — rounds in order, covering every trial, inside the duration, each cue inside its round, the
+ * mask > 0. Anything else stays v1 (never a guessed v2 schedule: the app then plays it as v1).
+ */
+function withRulesV2(session: TrainingSession, raw: Obj): TrainingSession {
+  if (int(raw.rules_version) !== SCHOOL_RULES_V2 || !Array.isArray(raw.rounds)) return session;
+  const mask = int(raw.mask_ms);
+  const roundBreak = int(raw.round_break_ms);
+  if (mask === null || mask <= 0 || roundBreak === null || roundBreak < 0) return session;
+  const rounds: TrainingRound[] = [];
+  for (const item of raw.rounds) {
+    const round = readRound(item);
+    if (round === null) return session;
+    rounds.push(round);
+  }
+  if (rounds.length < 2) return session;
+  const trials = session.trials;
+  let nextIndex = 0;
+  let previousEnd = 0;
+  for (const round of rounds) {
+    if (round.first_index !== nextIndex || round.start_ms < previousEnd || round.end_ms > session.duration_ms) return session;
+    for (let i = round.first_index; i <= round.last_index; i += 1) {
+      const trial = trials[i];
+      if (trial === undefined || trial.cue_at_ms < round.start_ms || trial.cue_at_ms >= round.end_ms) return session;
+    }
+    nextIndex = round.last_index + 1;
+    previousEnd = round.end_ms;
+  }
+  if (nextIndex !== trials.length) return session;
+  const breaks = Array.isArray(raw.round_breaks_ms) ? raw.round_breaks_ms.map(int).filter((n): n is number => n !== null && n >= 0) : [];
+  return {
+    ...session,
+    rules_version: SCHOOL_RULES_V2,
+    mask_ms: mask,
+    round_break_ms: roundBreak,
+    round_breaks_ms: breaks.length > 0 ? breaks : rounds.slice(0, -1).map((r) => r.end_ms),
+    rounds,
+  };
+}
+
+/** The session plays the v2 school (rounds, mask, early end). */
+export function isSchoolV2Session(session: Pick<TrainingSession, 'rules_version' | 'rounds' | 'mask_ms'>): boolean {
+  return session.rules_version === SCHOOL_RULES_V2 && (session.rounds?.length ?? 0) >= 2 && (session.mask_ms ?? 0) > 0;
 }
 
 /** The server's scored result of a finish response, or null. */
@@ -391,6 +491,10 @@ export function readTrainingResult(raw: unknown): TrainingResult | null {
     progress_before: clampProgress(num(raw.progress_before)),
     progress_after: clampProgress(num(raw.progress_after)),
     progress_gain: Math.max(0, num(raw.progress_gain)),
+    ...(int(raw.rules_version) === SCHOOL_RULES_V2 ? { rules_version: SCHOOL_RULES_V2 } : {}),
+    ended_after_round: int(raw.ended_after_round) === 1 ? 1 : null,
+    // Only an explicit false (an early end) says the routine did not count; v1 always counts.
+    counts_for_routine: raw.counts_for_routine !== false,
   };
 }
 
@@ -576,6 +680,17 @@ export const TRAINING_STRINGS = strings('training', 'child', {
   },
 });
 
+/** School v2 texts (`training:school`, GAMES_SPEC §4.1 »Besedila«) — every game line ≤ 32 characters (test). */
+export const SCHOOL_V2_STRINGS = strings('training', 'school', {
+  round: (n: number) => t('training:school.round', { n }),
+  progressA11y: (n: number, total: number, stars: number) => t('training:school.progressA11y', { n, total, stars }),
+  result: {
+    stars: (stars: number, total: number) => t('training:school.result.stars', { stars, total }),
+    trialA11y: (n: number, outcome: string) => t('training:school.result.trialA11y', { n, outcome }),
+    roundTitle: (n: number) => t('training:school.result.roundTitle', { n }),
+  },
+});
+
 /** Every block, outcome and command has its texts (compile-time check). */
 const _trainingTexts: {
   blocked: Record<Exclude<StartBlock, null>, string>;
@@ -600,6 +715,8 @@ const REFUSALS: readonly TrainingRefusal[] = [
   'training_day_ending',
   'training_session_interrupted',
   'training_pet_sleeping',
+  // Rules v2 (GAMES_SPEC §4.1 Š3): »Končaj« came after round 2 had started (+ 2 s) — the app plays on.
+  'training_round_two_started',
 ];
 
 export function isTrainingRefusal(value: unknown): value is TrainingRefusal {

@@ -8,6 +8,16 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-31 — Šola, kot jo vidi otrok: kuža čez cel zaslon, en priboljšek, nobenega »previjanja traku«
+
+**Kaj:** šola za kužke je v aplikaciji prenovljena na novem igralnem sloju (GAMES_SPEC faza 3; potrebuje novo gradnjo v trgovini). David je 30. 10. na telefonu videl: majhno kartico s psom, en sam velik gumb »Pohvali«, besedilo, ki se je menjalo vsako sekundo, psa, ki je skakal med pozami, droben oblaček »Sedi!« in »vstajanje« iz obrnjenega posnetka, ki je bilo videti kot previjanje traku. Zdaj: kuža je čez cel zaslon (vsi trije posnetki ukaza naloženi vnaprej, nikoli rez sredi posnetka), ukaz je velik čip z zvokom, otrok ima en velik žeton — **priboljšek, če je družina kupila priboljške, sicer »Pohvali« ♥** —, zgoraj je največ ena kratka vrstica, ki ostane vsaj 2 sekundi, odziv je velik ✓ »Bravo!« ali mehak jantarni ✗, kuža pa se v stojo vrne pod tem odzivom (obrnjenega posnetka ni več). Vaja ima 2 kroga po 3 ukaze; po 1. krogu lahko otrok konča (napredek šteje, dnevna vaja samo cela). Na koncu vidi vseh 6 izidov po krogih z zvezdicami.
+**Zakaj je pomembno:** učna točka šole — *pohvali takoj, ko uboga* — se vidi samo, če otrok jasno vidi psa in trenutek, ko uboga. Rez pod odzivom stane 0 $ (brez novih AI posnetkov); stare gradnje aplikacije ostanejo pri stari šoli in se ne sesujejo.
+**Številke:** 2 × 3 ukaze, premor 2,5 s, odziv z zatemnitvijo 1,2 s, okno pohvale 1,5 s (nespremenjeno), vrstica ≥ 2 s in ≤ 32 znakov, 2 nova lastna zvoka (< 16 kB), 0 novih AI posnetkov; 38 novih testov.
+- 📣 »Kuža čez cel zaslon, ti mu daš priboljšek, ko res uboga — ne prej, ne pozneje.« (z novo različico aplikacije)
+- 👩 Starši: šola je krajša na krog (~20–30 s), po prvem krogu lahko otrok neha brez kazni; priboljšek je samo videz — šola ne porabi kupljenih priboljškov; zvoke in vibracijo izklopite pri otroku (»Zvoki in vibracija v igrah«).
+- 🧒 »Ko kuža sede, tapni kost! Če ne uboga, počakaj — tudi to je zvezdica.«
+- 🛠 Strežnik pošlje urnik (`rules: 2`), aplikacija ga predvaja na štirih predvajalnikih brez reza sredi posnetka; neizogiben rez se zgodi samo pod ≥ 85 % zatemnitvijo prekrivnega odziva.
+
 ## 2026-10-31 — Palica s peresom: ko se muca pritaji, pero res miruje (tudi počasno »mahanje« ne prinese nič)
 
 **Kaj:** David je odločil **strogo pravilo mirovanja** za novo igro s palico (v2): znak 👀 se pokaže **1,5 s** pred vsakim skokom muce, v **zadnji sekundi** pred skokom pa mora pero popolnoma mirovati. Prej je bil znak 0,9 s pred skokom in v zadnjih 0,8 s je bil dovoljen en premik. Samo nastavitev na strežniku (`config/wand.php`), brez nove kode.

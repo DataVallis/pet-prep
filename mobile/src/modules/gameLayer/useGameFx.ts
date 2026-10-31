@@ -23,6 +23,8 @@ const SOUND_FILES: Readonly<Record<GameSound, number>> = {
   whistle: require('../../../assets/sounds/whistle.wav') as number,
   chime: require('../../../assets/sounds/chime.wav') as number,
   pop: require('../../../assets/sounds/pop.wav') as number,
+  cue: require('../../../assets/sounds/cue.wav') as number,
+  crunch: require('../../../assets/sounds/crunch.wav') as number,
 };
 
 let audioModeSet = false;

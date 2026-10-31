@@ -1,7 +1,7 @@
 # Game sounds (GAMES_SPEC §7.1 GameFx, §7.6)
 
 PetPrep's own sound effects, synthesized from math expressions with ffmpeg `aevalsrc` by
-`mobile/scripts/generate-game-sounds.sh` (2026-10-30). No samples, no third-party audio, no
+`mobile/scripts/generate-game-sounds.sh` (2026-10-30; `cue` / `crunch` 2026-10-31). No samples, no third-party audio, no
 licence obligations. Re-run the script to regenerate them (the output is bit-exact).
 
 | File | Used for | Length |
@@ -11,6 +11,8 @@ licence obligations. Re-run the script to regenerate them (the output is bit-exa
 | `whistle.wav` | »Pokliči!« (calling the dog) | 0.46 s |
 | `chime.wav` | ball caught (★) | 0.60 s |
 | `pop.wav` | returned ball lands in front of the dog | 0.12 s |
+| `cue.wav` | school command cue (interim for the recorded voice, GAMES_SPEC V5) | 0.34 s |
+| `crunch.wav` | school treat given in time (»hrust«) | 0.24 s |
 
 Rules: short, soft, never scary; no sound for a miss. Mono 22.05 kHz 16-bit WAV, each < 30 kB.
 They play only when the parent switch »Zvoki in vibracija v igrah« is on (default) and follow the

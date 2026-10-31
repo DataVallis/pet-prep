@@ -23,6 +23,14 @@
  *   child's own running session. Still running → the game continues from the server's
  *   `started_at` (no taps recorded before the restart); its time is over but the TTL
  *   isn't → it is finished at once with no taps; past the TTL → the expiry message.
+ * - School v2 (GAMES_SPEC §4.1, rules v2): `schoolRules: 2` starts the session with `rules: 2`
+ *   (only a binary with the game layer asks for it). `endEarly()` = »Končaj« after round 1 (Š3):
+ *   offered only while `canEndEarly()` — the break after round 1, and only while the server will
+ *   still take it (its round 2 start + 2 s, judged with `serverAheadMs`, an upper bound of how
+ *   far the server's clock of this session runs ahead of ours). The early finish keeps the game
+ *   clock running; a refusal that isn't final (422 `training_round_two_started`, offline, …)
+ *   returns to `running` — round 2 plays on and the session is finished in full at its end
+ *   (`earlyEndDeclined` counts these, for the »keep going« line).
  */
 
 import { useCallback, useEffect, useRef, useState } from 'react';
@@ -40,7 +48,9 @@ import {
   TouchTimeMapper,
   type ClockSources,
 } from '@/modules/training/game';
+import { EARLY_END_RESUME_AHEAD_MS, earlyEndOpen } from '@/modules/training/schoolV2/schoolV2';
 import {
+  isSchoolV2Session,
   TRAINING_STRINGS,
   trainingRefusalMessage,
   type TrainingCommand,
@@ -76,7 +86,14 @@ export type TrainingPhase =
       /** ms into the session when it was resumed after an app restart; null = played from the start. */
       resumedAtMs: number | null;
     }
-  | { kind: 'finishing'; session: TrainingSession; taps: readonly number[]; resumedAtMs: number | null }
+  | {
+      kind: 'finishing';
+      session: TrainingSession;
+      taps: readonly number[];
+      resumedAtMs: number | null;
+      /** School v2: an early end after round 1 is being saved (the game clock keeps running). */
+      early?: true;
+    }
   | { kind: 'result'; result: TrainingResult; status: 'accepted' | 'unchanged' }
   | {
       kind: 'failed';
@@ -99,6 +116,8 @@ export interface TrainingGameOptions {
    * before its clock starts. Not asked for a resumed session (its clock is the server's).
    */
   stageGate?: (session: TrainingSession) => boolean;
+  /** GAMES_SPEC §7.2: 2 = start new sessions with `rules: 2` (school v2; game layer present). */
+  schoolRules?: 2;
 }
 
 export interface TrainingGame {
@@ -112,12 +131,21 @@ export interface TrainingGame {
   stagePicture: boolean;
   /**
    * Record a "Pohvali" tap. `touchTimestamp` = the touch event's `nativeEvent.timestamp`
-   * (mapped onto the game clock by `TouchTimeMapper`); without it, the handler time.
+   * (mapped onto the game clock by `TouchTimeMapper`); without it, the handler time. Returns the
+   * tap's ms when it was recorded (the FIRST tap of its cue — the one the server scores), else null.
    */
-  praise: (touchTimestamp?: number | null) => void;
+  praise: (touchTimestamp?: number | null) => number | null;
   retryFinish: () => void;
   /** Back to the command list (after a result / failure). */
   reset: () => void;
+  /** ms since the local start of the session clock (0 before it starts) — read at call time. */
+  now: () => number;
+  /** School v2: »Končaj« may be offered now (break after round 1, server still accepts it). */
+  canEndEarly: () => boolean;
+  /** School v2: end after round 1 (Š3). No-op when `canEndEarly()` is false. */
+  endEarly: () => void;
+  /** Times an early end was not accepted and round 2 played on (for the »keep going« line). */
+  earlyEndDeclined: number;
 }
 
 export function failureText(error: unknown, timezone: string | null): string {
@@ -153,6 +181,7 @@ export function useTrainingGame({
   clock = DEFAULT_CLOCK_SOURCES,
   resume = null,
   stageGate,
+  schoolRules,
 }: TrainingGameOptions): TrainingGame {
   const queryClient = useQueryClient();
   const startMutation = useStartTraining();
@@ -160,8 +189,19 @@ export function useTrainingGame({
   const [phase, setPhaseState] = useState<TrainingPhase>({ kind: 'pick' });
   const [elapsedMs, setElapsedMs] = useState(0);
   const [stagePicture, setStagePicture] = useState(false);
+  const [earlyEndDeclined, setEarlyEndDeclined] = useState(0);
   const stageGateRef = useRef(stageGate);
   stageGateRef.current = stageGate;
+  const rulesRef = useRef(schoolRules);
+  rulesRef.current = schoolRules;
+  /** Wall ms when the start request left / its answer arrived (for `serverAheadMs`). */
+  const startTimes = useRef<{ sent: number; answered: number } | null>(null);
+  /**
+   * Upper bound (ms) of how far the server's clock of the running session is ahead of ours, plus
+   * the travel time of a finish: the server started the session after our request left, and
+   * our clock started at `begin` (answer + stage) → (begin − sent) + one more round trip.
+   */
+  const serverAheadRef = useRef(EARLY_END_RESUME_AHEAD_MS);
 
   const phaseRef = useRef<TrainingPhase>(phase);
   const clockRef = useRef<SessionClock | null>(null);
@@ -194,7 +234,7 @@ export function useTrainingGame({
   const { mutate: finishMutate } = finishMutation;
 
   const sendFinish = useCallback(
-    (session: TrainingSession, taps: readonly number[], resumedAtMs: number | null = null) => {
+    (session: TrainingSession, taps: readonly number[], resumedAtMs: number | null = null, early = false) => {
       // A retry after a lost answer: the server may already have saved the first attempt.
       const isRetry = finishedRef.current.has(session.id);
       const serverNow = clockSourcesRef.current.wall() + skewRef.current;
@@ -206,9 +246,9 @@ export function useTrainingGame({
         return;
       }
       finishedRef.current.add(session.id);
-      setPhase({ kind: 'finishing', session, taps, resumedAtMs });
+      setPhase(early ? { kind: 'finishing', session, taps, resumedAtMs, early: true } : { kind: 'finishing', session, taps, resumedAtMs });
       finishMutate(
-        { sessionId: session.id, taps },
+        early ? { sessionId: session.id, taps, endedAfterRound: 1 } : { sessionId: session.id, taps },
         {
           onSuccess: (response) => {
             // `unchanged` after a retry = our own first attempt arrived; show it like a fresh result.
@@ -216,6 +256,14 @@ export function useTrainingGame({
             setPhase({ kind: 'result', result: response.result, status });
           },
           onError: (error) => {
+            const sessionClock = clockRef.current;
+            if (early && canRetryFinish(error) && sessionClock !== null && sessionClock.elapsed() < session.duration_ms) {
+              // Š3 graceful: round 2 has started (or the request failed) — play on, finish in full later.
+              finishedRef.current.delete(session.id);
+              if (mounted.current) setEarlyEndDeclined((n) => n + 1);
+              setPhase({ kind: 'running', session, taps, resumedAtMs });
+              return;
+            }
             const retry = canRetryFinish(error) && canStillFinish(session, clockSourcesRef.current.wall() + skewRef.current);
             setPhase({ kind: 'failed', message: failureText(error, tzRef.current), retry: retry ? { session, taps, resumedAtMs } : null });
           },
@@ -254,14 +302,26 @@ export function useTrainingGame({
     return () => sub.remove();
   }, [finishIfOver]);
 
+  /** The session clock started now: how far the server may be ahead of it (see `serverAheadRef`). */
+  const noteClockStart = useCallback(() => {
+    const times = startTimes.current;
+    const nowWall = clockSourcesRef.current.wall();
+    serverAheadRef.current =
+      times === null ? EARLY_END_RESUME_AHEAD_MS : Math.max(0, nowWall - times.sent) + Math.max(0, times.answered - times.sent);
+  }, []);
+
   const start = useCallback(
     (command: TrainingCommand) => {
       const current = phaseRef.current;
       if (current.kind !== 'pick' && current.kind !== 'failed' && current.kind !== 'result') return;
       setPhase({ kind: 'starting', command });
       if (mounted.current) setStagePicture(false);
-      startMutate(command, {
+      const rules = rulesRef.current;
+      const sent = clockSourcesRef.current.wall();
+      startTimes.current = { sent, answered: sent };
+      startMutate(rules === undefined ? { command } : { command, rules }, {
         onSuccess: (response) => {
+          startTimes.current = { sent, answered: clockSourcesRef.current.wall() };
           playedRef.current.add(response.session.id);
           if (mounted.current) setElapsedMs(0);
           if (stageGateRef.current?.(response.session) === true) {
@@ -271,6 +331,7 @@ export function useTrainingGame({
           }
           // The local clock starts now — the schedule is relative to this moment.
           clockRef.current = new SessionClock(clockSourcesRef.current);
+          noteClockStart();
           setPhase({ kind: 'running', session: response.session, taps: [], resumedAtMs: null });
         },
         onError: (error) => {
@@ -278,7 +339,7 @@ export function useTrainingGame({
         },
       });
     },
-    [setPhase, startMutate],
+    [setPhase, startMutate, noteClockStart],
   );
 
   const beginWith = useCallback(
@@ -286,13 +347,14 @@ export function useTrainingGame({
       const current = phaseRef.current;
       if (current.kind !== 'preparing') return;
       clockRef.current = new SessionClock(clockSourcesRef.current);
+      noteClockStart();
       if (mounted.current) {
         setElapsedMs(0);
         setStagePicture(picture);
       }
       setPhase({ kind: 'running', session: current.session, taps: [], resumedAtMs: null });
     },
-    [setPhase],
+    [setPhase, noteClockStart],
   );
   const begin = useCallback(() => beginWith(false), [beginWith]);
 
@@ -319,6 +381,8 @@ export function useTrainingGame({
     const elapsed = Number.isNaN(started) ? session.duration_ms : Math.max(0, serverNow - started);
     if (elapsed < session.duration_ms) {
       clockRef.current = new SessionClock(clockSourcesRef.current, elapsed);
+      // Our clock follows the server's `started_at` (whole seconds) and the skew estimate.
+      serverAheadRef.current = EARLY_END_RESUME_AHEAD_MS;
       if (mounted.current) setElapsedMs(elapsed);
       setPhase({ kind: 'running', session, taps: [], resumedAtMs: elapsed });
       return;
@@ -327,14 +391,16 @@ export function useTrainingGame({
     sendFinish(session, []);
   }, [resumeId, sendFinish, setPhase]);
 
-  const praise = useCallback((touchTimestamp?: number | null) => {
+  const praise = useCallback((touchTimestamp?: number | null): number | null => {
     const current = phaseRef.current;
     const sessionClock = clockRef.current;
-    if (current.kind !== 'running' || sessionClock === null) return;
+    if (current.kind !== 'running' || sessionClock === null) return null;
     const ms = sessionClock.elapsedAt(touchMapper.current.map(touchTimestamp, sessionClock.monoNow()));
     const taps = addTap(current.session, current.taps, ms);
     if (mounted.current) setElapsedMs(ms);
-    if (taps !== current.taps) setPhase({ ...current, taps });
+    if (taps === current.taps) return null;
+    setPhase({ ...current, taps });
+    return Math.round(ms);
   }, [setPhase]);
 
   const retryFinish = useCallback(() => {
@@ -351,5 +417,20 @@ export function useTrainingGame({
     setPhase({ kind: 'pick' });
   }, [setPhase]);
 
-  return { phase, elapsedMs, start, begin, stagePicture, praise, retryFinish, reset };
+  const now = useCallback(() => clockRef.current?.elapsed() ?? 0, []);
+
+  const canEndEarly = useCallback(() => {
+    const current = phaseRef.current;
+    const sessionClock = clockRef.current;
+    if (current.kind !== 'running' || sessionClock === null || !isSchoolV2Session(current.session)) return false;
+    return earlyEndOpen(current.session, sessionClock.elapsed(), serverAheadRef.current);
+  }, []);
+
+  const endEarly = useCallback(() => {
+    const current = phaseRef.current;
+    if (current.kind !== 'running' || finishedRef.current.has(current.session.id) || !canEndEarly()) return;
+    sendFinish(current.session, current.taps, current.resumedAtMs, true);
+  }, [canEndEarly, sendFinish]);
+
+  return { phase, elapsedMs, start, begin, stagePicture, praise, retryFinish, reset, now, canEndEarly, endEarly, earlyEndDeclined };
 }
