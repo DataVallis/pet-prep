@@ -7,7 +7,7 @@
  * the per-cue result, the parent's sound switch and picture mode.
  *
  * David's device test 2026-10-31 (clarity): the rule strip for the whole session (never cut), the
- * beginner hint below 50 % progress, the dimmed »wait« token while the dog ignores (still counts),
+ * praise hint »Zdaj!« in every session (any progress, David 31. 10.), the dimmed »wait« token while the dog ignores (still counts),
  * »Nadaljuj« + countdown in the break with »Končaj« as a small secondary, and the positive result.
  */
 import { act, fireEvent, render as rtlRender, screen } from '@testing-library/react-native';
@@ -22,7 +22,7 @@ import { normalizePetMedia } from '@/modules/petMedia/petMedia';
 import SchoolResultV2 from '@/modules/training/schoolV2/SchoolResultV2';
 import { ruleText } from '@/modules/training/schoolV2/SchoolRuleStrip';
 import TrainingOverlay, { resetSchoolGameV2ForTests } from '@/modules/training/TrainingOverlay';
-import { readTrainingResult, SCHOOL_V2_STRINGS, TRAINING_STRINGS, type TrainingResult } from '@/modules/training/training';
+import { readTrainingResult, SCHOOL_V2_STRINGS, type TrainingResult } from '@/modules/training/training';
 import {
   makeEnabledTraining,
   makeTrainingCommands,
@@ -260,7 +260,7 @@ describe('school v2 on the game layer', () => {
     }
   });
 
-  it('beginner hint: below 50 % the token glows + »Zdaj!« in the praise window only, and the screen reader hears it', async () => {
+  it('praise hint: the token glows + »Zdaj!« in the praise window only, and the screen reader hears it', async () => {
     setGameLayerAvailableForTests(true);
     startTraining.mockResolvedValueOnce(startBody(makeSchoolV2SessionPayload()));
     render(schoolView({ sitProgress: 49 }));
@@ -278,7 +278,7 @@ describe('school v2 on the game layer', () => {
     expect(screen.queryByTestId(`${ID}-hint`, { includeHiddenElements: true })).toBeNull();
   });
 
-  it('beginner hint with reduce motion: the static highlight, no pulse', async () => {
+  it('praise hint with reduce motion: the static highlight, no pulse', async () => {
     setGameLayerAvailableForTests(true);
     startTraining.mockResolvedValueOnce(startBody(makeSchoolV2SessionPayload()));
     renderWithQuery(<TrainingOverlay view={schoolView({ sitProgress: 0 })} onClose={jest.fn()} reduceMotion />);
@@ -289,16 +289,18 @@ describe('school v2 on the game layer', () => {
     expect(screen.queryByTestId(`${ID}-token-pulse`)).toBeNull();
   });
 
-  it('no hint at or above 50 % — the skill is still learned', async () => {
+  it('the hint shows at 80 % progress too (David 31. 10.: every session, any progress)', async () => {
     setGameLayerAvailableForTests(true);
     startTraining.mockResolvedValueOnce(startBody(makeSchoolV2SessionPayload()));
-    render(schoolView({ sitProgress: 50 }));
+    render(schoolView({ sitProgress: 80 }));
     await pressStart();
     await deckReady();
     await advanceTo(5_600);
+    expect(screen.getByTestId(`${ID}-hint`, { includeHiddenElements: true })).toBeTruthy();
+    expect(screen.getByTestId(`${ID}-token-glow`)).toBeTruthy();
+    expect(screen.getByTestId(`${ID}-announce`).props.children).toBe(SCHOOL_V2_STRINGS.hintA11y);
+    await advanceTo(7_100);
     expect(screen.queryByTestId(`${ID}-hint`, { includeHiddenElements: true })).toBeNull();
-    expect(screen.queryByTestId(`${ID}-token-glow`)).toBeNull();
-    expect(screen.getByTestId(`${ID}-announce`).props.children).toBe(TRAINING_STRINGS.commands.sit.obeys);
   });
 
   it('while the dog ignores: the token is dimmed with »Počakaj«, but a tap still counts (as praise without obeying)', async () => {
@@ -418,10 +420,10 @@ describe('school v2 on the game layer', () => {
     expect(finishTraining.mock.calls[0][1]).toEqual([5_900]);
   });
 
-  it('tap hint: the bobbing finger + »Tapni« before the first counted tap, gone after it (and stays gone)', async () => {
+  it('tap hint (David 31. 10.): the bobbing finger + »Tapni« always — also after the first counted tap and at 80 % — hidden only while »Počakaj«', async () => {
     setGameLayerAvailableForTests(true);
     startTraining.mockResolvedValueOnce(startBody(makeSchoolV2SessionPayload()));
-    render(schoolView({ sitProgress: 40 }));
+    render(schoolView({ sitProgress: 80 }));
     await pressStart();
     await deckReady();
     await advanceTo(1_000);
@@ -433,13 +435,17 @@ describe('school v2 on the game layer', () => {
     expect(screen.getByTestId(`${ID}-tap-hint`, { includeHiddenElements: true })).toBeTruthy();
     fireEvent(screen.getByTestId(`${ID}-token`), 'pressIn', { nativeEvent: {} });
     await advance(0);
+    // still there after the first counted tap
+    expect(screen.getByTestId(`${ID}-tap-hint`, { includeHiddenElements: true })).toBeTruthy();
+    await advanceTo(10_600); // the dog ignores: the token says »Počakaj« — no »Tapni« next to it
+    expect(screen.getByTestId(`${ID}-token-wait`)).toBeTruthy();
     expect(screen.queryByTestId(`${ID}-tap-hint`, { includeHiddenElements: true })).toBeNull();
     await advanceTo(23_000); // round 2
     expect(screen.getByTestId(`${ID}-token`)).toBeTruthy();
-    expect(screen.queryByTestId(`${ID}-tap-hint`, { includeHiddenElements: true })).toBeNull();
+    expect(screen.getByTestId(`${ID}-tap-hint`, { includeHiddenElements: true })).toBeTruthy();
   });
 
-  it('tap hint with reduce motion = a static label; none at ≥ 50 % progress', async () => {
+  it('tap hint with reduce motion = a static label; shown at 80 % progress too', async () => {
     setGameLayerAvailableForTests(true);
     startTraining.mockResolvedValueOnce(startBody(makeSchoolV2SessionPayload()));
     const first = renderWithQuery(<TrainingOverlay view={schoolView({ sitProgress: 0 })} onClose={jest.fn()} reduceMotion />);
@@ -452,12 +458,12 @@ describe('school v2 on the game layer', () => {
 
     resetSchoolGameV2ForTests();
     startTraining.mockResolvedValueOnce(startBody(makeSchoolV2SessionPayload()));
-    render(schoolView({ sitProgress: 50 }));
+    render(schoolView({ sitProgress: 80 }));
     await pressStart();
     await deckReady();
     await advanceTo(1_000);
     expect(screen.getByTestId(`${ID}-token`)).toBeTruthy();
-    expect(screen.queryByTestId(`${ID}-tap-hint`, { includeHiddenElements: true })).toBeNull();
+    expect(screen.getByTestId(`${ID}-tap-hint`, { includeHiddenElements: true })).toBeTruthy();
   });
 
   it('round break: »Nadaljuj« counts down to round 2 and continues exactly at its start; »Končaj« only while the server takes it', async () => {
