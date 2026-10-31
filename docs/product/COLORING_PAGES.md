@@ -26,7 +26,7 @@ Starši natisnejo pobarvanke, otroci jih pobarvajo ali prerišejo. Starši risbo
 - `/coloring-pages` · `/sl/pobarvanke`: mreža 12 pobarvank, knjižica PDF (A4 in US Letter), »Kako«, »Delite risbo«.
 - `/coloring-pages/<stran>` · `/sl/pobarvanke/<stran>`: velika slika, gumbi Natisni (natisne samo list), PDF A4, PDF US Letter, PNG; okvir »Ali veš?« z virom in povezavo; »Še več pobarvank«.
 - 12 strani: Curio pozdravlja; zlati prinašalec z žogo, na postelji; labradorec ob jezeru, mladiček s skledama; border collie s frizbijem, z igračo-uganko; speči mladiček mešanček; mešanček pije vodo; mucek s klopčičem; muca v škatli; Curio v parku.
-- Zemljevid strani, `llms.txt`, JSON-LD (ImageObject, ItemList, BreadcrumbList), slika za deljenje na stran. Noga: »Izdelek → Pobarvanke«.
+- Zemljevid strani, `llms.txt`, JSON-LD (ImageObject, ItemList, BreadcrumbList). Slika za deljenje (WhatsApp, Facebook …) pokaže samo pobarvanko na beli kartici na metini ploskvi (David 31. 10. 2026). Noga: »Izdelek → Pobarvanke«.
 
 ## 4. Kako dodati pobarvanko
 
