@@ -15,8 +15,8 @@
   },
   "level": "not_recommended",
   "answer": {
-    "en": "No, it is best not to. Butter is not poisonous, but it is very fatty, and fatty foods can upset a dog's stomach and may trigger pancreatitis, a painful inflammation. Food you share with your dog should be cooked without butter.",
-    "sl": "Ne, bolje ne. Maslo ni strupeno, je pa zelo mastno, mastna hrana pa lahko psu razdraži želodec in sproži vnetje trebušne slinavke, ki je boleče. Hrano, ki jo delite s psom, pripravite brez masla."
+    "en": "No, it is best not to. Butter is not poisonous, but it is very fatty, and fatty foods can upset a dog's stomach and may trigger pancreatitis, a painful inflammation. Food you share, such as eggs or mashed potato, is best prepared without butter.",
+    "sl": "Ne, bolje ne. Maslo ni strupeno, je pa zelo mastno, mastna hrana pa lahko psu razdraži želodec in sproži vnetje trebušne slinavke, ki je boleče. Hrano, ki jo delite s psom, na primer jajca ali pire, je najbolje pripraviti brez masla."
   },
   "why": {
     "en": "Fatty table foods are not a toxicity problem, but fatty foods such as butter, oils and meat drippings may cause pancreatitis. Some breeds, especially miniature Schnauzers, are more prone to it. Vets also suggest preparing food for dogs, such as eggs or mashed potato, without butter.",
@@ -37,8 +37,8 @@
     ]
   },
   "what_to_do": {
-    "en": "A lick of butter usually needs only watching. If your dog ate a lot of butter, or shows vomiting, belly pain, diarrhoea or low energy in the next few days, call your vet as soon as possible.",
-    "sl": "Pri lizljaju masla običajno zadošča opazovanje. Če je pes pojedel veliko masla ali v naslednjih dneh bruha, ga boli trebuh, ima drisko ali je utrujen, čim prej pokličite veterinarja."
+    "en": "If your dog ate a lot of butter, or shows vomiting, belly pain, diarrhoea or low energy in the next few days, call your vet as soon as possible.",
+    "sl": "Če je pes pojedel veliko masla ali v naslednjih dneh bruha, ga boli trebuh, ima drisko ali je utrujen, čim prej pokličite veterinarja."
   },
   "serving": null,
   "child": {
@@ -100,14 +100,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "65c9c5717985bbd312bea980e64e971b7474a0ff49d4ae4b0212841b50b5dad2"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bc426f6340d42346e61608f1fa16e49f0906c308d511a82e16d7208aa5b3f7c8"
     }
   }
 }

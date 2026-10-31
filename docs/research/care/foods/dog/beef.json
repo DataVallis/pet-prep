@@ -15,8 +15,8 @@
   },
   "level": "small_amounts",
   "answer": {
-    "en": "Yes, plain cooked beef with the fat trimmed is a good source of protein for most dogs. Leave out salt, spices and toppings such as onion and garlic, never give cooked bones, and avoid raw beef, which can carry bacteria.",
-    "sl": "Da, navadna kuhana govedina z odstranjeno maščobo je za večino psov dober vir beljakovin. Izpustite sol, začimbe in dodatke, kot sta čebula in česen, nikoli ne dajte kuhanih kosti in se izogibajte surovi govedini, ki lahko prenaša bakterije."
+    "en": "Yes, plain cooked beef with the fat trimmed can be a healthy source of protein. Leave out salt, spices and toppings such as onion and garlic, never give cooked bones, and avoid raw beef, which can carry bacteria.",
+    "sl": "Da, navadna kuhana govedina z odstranjeno maščobo je lahko zdrav vir beljakovin. Izpustite sol, začimbe in dodatke, kot sta čebula in česen, nikoli ne dajte kuhanih kosti in se izogibajte surovi govedini, ki lahko prenaša bakterije."
   },
   "why": {
     "en": "Unseasoned, cooked beef can be a healthy protein, cut into bite-sized pieces with the fat trimmed. Burgers and steaks often contain salt, spices and toppings that can be dangerous; onions and garlic are toxic to dogs. Raw steak or burger can carry Salmonella and E. coli, and cooked bones of any kind should never be given.",
@@ -81,8 +81,8 @@
       "quote": "High-fat foods can trigger vomiting and diarrhea, or even pancreatitis, a painful and serious condition."
     },
     {
-      "id": "KD48",
-      "quote": "Call your vet immediately."
+      "id": "KD34",
+      "quote": "If you do suspect your pet has swallowed something you should contact your vet for advice immediately."
     }
   ],
   "related": [
@@ -96,14 +96,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9d58379aef6486931eef9780e880be6da87f49904d02c029ff54fd19bd15d0c2"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1ad55f8ef755e81aac06e44ba144c0050bc06674ba215f57937c15ca8aeafd22"
     }
   }
 }

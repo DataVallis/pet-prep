@@ -15,8 +15,8 @@
   },
   "level": "not_recommended",
   "answer": {
-    "en": "Not recommended. The apricot plant is listed as toxic to dogs: its stems, leaves and seeds (the kernel inside the stone) contain cyanide, especially as they wilt. Never let your dog chew apricot stones, leaves or stems.",
-    "sl": "Ni priporočljivo. Marelica je navedena kot strupena za pse: njeni peclji, listi in semena (jedrca v koščici) vsebujejo cianid, zlasti ko venejo. Psu nikoli ne pustite žvečiti marelične koščice, listov ali pecljev."
+    "en": "Not recommended. The apricot plant is listed as toxic to dogs: its stems, leaves and seeds contain cyanide, especially as they wilt. Never let your dog chew apricot stones, leaves or stems.",
+    "sl": "Ni priporočljivo. Marelica je navedena kot strupena za pse: njeni peclji, listi in semena vsebujejo cianid, zlasti ko venejo. Psu nikoli ne pustite žvečiti marelične koščice, listov ali pecljev."
   },
   "why": {
     "en": "Apricot stems, leaves and seeds contain cyanogenic glycosides, which release cyanide. Cyanide reduces the body's ability to use oxygen. Because the plant is listed as toxic to dogs, we do not rate apricots as a safe treat.",
@@ -91,14 +91,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "59f92b6bce7b247738cda21d031edf1de2711c5d5f86052511ec4ad3ad347992"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bb7907a0c6efca2b31323c1785721857b96e341e9413ae693a92189982c3be80"
     }
   }
 }

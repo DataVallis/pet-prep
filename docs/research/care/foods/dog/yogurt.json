@@ -15,8 +15,8 @@
   },
   "level": "small_amounts",
   "answer": {
-    "en": "Yes, in small amounts, if it is plain and unsweetened and your dog tolerates dairy. Some dogs get tummy upset from lactose. Never give yogurt with xylitol or other sweeteners, cocoa or added sugar.",
-    "sl": "Da, v majhnih količinah, če je navaden, nesladkan in ga pes prenaša. Nekaterim psom laktoza razdraži prebavo. Nikoli ne dajte jogurta s ksilitolom ali drugimi sladili, kakavom ali dodanim sladkorjem."
+    "en": "Yes, in small amounts, if it is plain and unsweetened and your dog tolerates dairy. Some dogs get tummy upset from lactose. Never give yogurt with xylitol or other sweeteners, or with added sugar.",
+    "sl": "Da, v majhnih količinah, če je navaden, nesladkan in ga pes prenaša. Nekaterim psom laktoza razdraži prebavo. Nikoli ne dajte jogurta s ksilitolom ali drugimi sladili ali z dodanim sladkorjem."
   },
   "why": {
     "en": "Many dogs have trouble digesting lactose, which can cause gas, diarrhoea or vomiting. Greek-style yogurt has less lactose, so it is usually the better choice. Some sweeteners, especially xylitol, are toxic to dogs, and too much dairy fat can upset the stomach or cause pancreatitis.",
@@ -28,8 +28,8 @@
     "sl": "Začnite z majhno količino in opazujte, ali se pojavijo vetrovi, driska ali bruhanje; če se, prenehajte. Če je jogurt vseboval ksilitol, takoj pokličite veterinarja ali center za zastrupitve živali."
   },
   "serving": {
-    "en": "Plain yogurt with no added sweeteners, ideally Greek-style; check the label for sugar, cocoa and xylitol.",
-    "sl": "Navaden jogurt brez dodanih sladil, najbolje grški; na etiketi preverite sladkor, kakav in ksilitol."
+    "en": "Plain yogurt with no added sweeteners, ideally Greek-style; check the label for sugar and xylitol.",
+    "sl": "Navaden jogurt brez dodanih sladil, najbolje grški; na etiketi preverite sladkor in ksilitol."
   },
   "child": {
     "en": "A little plain yogurt can be a treat for some dogs. Sweet or flavoured yogurt is not for dogs.",
@@ -52,8 +52,8 @@
         "sl": "Zakaj preveriti etiketo?"
       },
       "a": {
-        "en": "Some yogurts contain sweeteners such as xylitol, which is toxic to dogs, or added sugar or cocoa.",
-        "sl": "Nekateri jogurti vsebujejo sladila, kot je ksilitol, ki je za pse strupen, ali dodan sladkor ali kakav."
+        "en": "Some yogurts contain sweeteners such as xylitol, which is toxic to dogs, or added sugar.",
+        "sl": "Nekateri jogurti vsebujejo sladila, kot je ksilitol, ki je za pse strupen, ali dodan sladkor."
       }
     }
   ],
@@ -120,14 +120,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9a8932e1cfa08478398498708582b5f12f581bbd782af657da68a63b6fae77bb"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4eab2c1ac90a3d7b89b3a0012a728c74d3118de58af778d4e5ee5e598c8ca0f1"
     }
   }
 }

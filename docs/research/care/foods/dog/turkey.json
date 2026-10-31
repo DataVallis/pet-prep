@@ -15,12 +15,12 @@
   },
   "level": "small_amounts",
   "answer": {
-    "en": "Yes, a little plain cooked turkey meat is safe for most dogs. Remove the skin, excess fat and all bones first. Turkey cooked with butter, seasoning, onion or garlic, and onion gravy or stuffing, are not for dogs.",
-    "sl": "Da, malo navadnega kuhanega puranovega mesa je za večino psov varno. Najprej odstranite kožo, odvečno maščobo in vse kosti. Puran, pripravljen z maslom, začimbami, čebulo ali česnom, ter omaka s čebulo ali nadev niso za pse."
+    "en": "Yes, a little plain cooked turkey meat is safe for most dogs. Remove the skin, excess fat and all bones first. Turkey cooked with seasoning, onion or garlic, and onion gravy or stuffing, are not for dogs.",
+    "sl": "Da, malo navadnega kuhanega puranovega mesa je za večino psov varno. Najprej odstranite kožo, odvečno maščobo in vse kosti. Puran, pripravljen z začimbami, čebulo ali česnom, ter omaka s čebulo ali nadev niso za pse."
   },
   "why": {
-    "en": "Turkey isn't toxic, but how it is cooked matters. Skin and fat are rich and can cause pancreatitis, while extra seasonings can irritate a dog's stomach. Onions are toxic to dogs, and garlic can be toxic in large amounts. Cooked poultry bones are brittle and can splinter. White meat is leaner than dark meat.",
-    "sl": "Puran ni strupen, pomembno pa je, kako je pripravljen. Koža in maščoba sta težki in lahko povzročita vnetje trebušne slinavke, začimbe pa lahko psu razdražijo želodec. Čebula je za pse strupena, česen pa v večjih količinah. Kuhane perutninske kosti so krhke in se lahko razcepijo. Belo meso je bolj pusto od temnega."
+    "en": "Turkey isn't toxic, but how it is cooked matters. Skin and fat are rich and can cause pancreatitis, while extra seasonings can irritate a dog's stomach. Onions and garlic can be toxic to dogs. Cooked poultry bones are brittle and can splinter. White meat is leaner than dark meat.",
+    "sl": "Puran ni strupen, pomembno pa je, kako je pripravljen. Koža in maščoba sta težki in lahko povzročita vnetje trebušne slinavke, začimbe pa lahko psu razdražijo želodec. Čebula in česen sta lahko za pse strupena. Kuhane perutninske kosti so krhke in se lahko razcepijo. Belo meso je bolj pusto od temnega."
   },
   "signs": null,
   "what_to_do": {
@@ -93,8 +93,8 @@
       "quote": "ensure that your dog is kept away from sage and onion stuffing, onion-based gravies or any other allium-based foods."
     },
     {
-      "id": "KD48",
-      "quote": "Call your vet immediately."
+      "id": "KD34",
+      "quote": "If you do suspect your pet has swallowed something you should contact your vet for advice immediately."
     },
     {
       "id": "KD55",
@@ -116,14 +116,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "94bf1ee5a5b2fcb0ac88c9f2d36732e8ad4178e13e1fdc25844a6b44fe7b7f78"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7f2c3525abc30da53576f00497f70b342b2027285af0e9163cc20789a6c1a4e8"
     }
   }
 }

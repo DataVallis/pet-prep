@@ -19,8 +19,8 @@
     "sl": "Ne v velikih količinah. Slana hrana v zmernih količinah naj ne bi povzročila zastrupitve s soljo, veliko soli, na primer iz domačega slanega testa, plastelina ali veliko morske vode, pa jo lahko. Znaki so bruhanje, huda žeja, tresenje in krči."
   },
   "why": {
-    "en": "Common causes of salt poisoning are homemade salt-dough ornaments and play dough, snow with salt de-icer, and drinking a lot of sea water. Salt poisoning is unlikely when a healthy dog has fresh water, but small dogs with health problems are at more risk. Salt must never be used to make a dog vomit.",
-    "sl": "Pogosti vzroki zastrupitve s soljo so domači okraski iz slanega testa in plastelin, sneg s soljo za posipanje ter pitje veliko morske vode. Pri zdravem psu s svežo vodo je zastrupitev s soljo malo verjetna, večje tveganje pa imajo majhni psi z zdravstvenimi težavami. Soli nikoli ne uporabljajte, da bi psa spravili k bruhanju."
+    "en": "Common causes of salt poisoning are homemade salt-dough ornaments and play dough, snow with salt de-icer, and drinking a lot of sea water. Salt poisoning is unlikely when a healthy dog has fresh water, but small dogs with health problems are at more risk if they have no fresh water. Salt must never be used to make a dog vomit.",
+    "sl": "Pogosti vzroki zastrupitve s soljo so domači okraski iz slanega testa in plastelin, sneg s soljo za posipanje ter pitje veliko morske vode. Pri zdravem psu s svežo vodo je zastrupitev s soljo malo verjetna, večje tveganje pa imajo majhni psi z zdravstvenimi težavami, če nimajo sveže vode. Soli nikoli ne uporabljajte, da bi psa spravili k bruhanju."
   },
   "signs": {
     "en": [
@@ -152,14 +152,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7197a2ca280717140c2f22dd7ab183fb52881725e7302294bff8117fe31623c0"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c2095079ca7bd2fff9a60be0c193a9665e1da2f87f2fdef12b46a8a8bf646690"
     }
   }
 }

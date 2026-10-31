@@ -73,8 +73,8 @@
       "quote": "ensure that your dog is kept away from sage and onion stuffing, onion-based gravies or any other allium-based foods."
     },
     {
-      "id": "KD48",
-      "quote": "Call your vet immediately."
+      "id": "KD34",
+      "quote": "If you do suspect your pet has swallowed something you should contact your vet for advice immediately."
     },
     {
       "id": "KD48",
@@ -99,14 +99,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ef7ea85d5726781bda81a69e28176cf61c5a891d6a9e6f86a42a0359a7a73a2a"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8de166a89517d85b3deea3567655390fa4e81e68db3330a726e2b89f1bc301c5"
     }
   }
 }

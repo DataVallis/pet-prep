@@ -72,8 +72,8 @@
         "sl": "Zakaj se znaki ne pokažejo takoj?"
       },
       "a": {
-        "en": "Symptoms can start within 24 hours but more often take a few days, because the red blood cells are damaged gradually.",
-        "sl": "Znaki se lahko pojavijo v 24 urah, pogosteje pa šele po nekaj dneh, ker se rdeče krvničke poškodujejo postopoma."
+        "en": "Symptoms can start within 24 hours but more often take a few days to appear; signs of anaemia typically develop several days after eating.",
+        "sl": "Znaki se lahko pojavijo v 24 urah, pogosteje pa šele po nekaj dneh; znaki slabokrvnosti se običajno razvijejo nekaj dni po zaužitju."
       }
     }
   ],
@@ -168,14 +168,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "16d6fa7389baad8a8a73b67738329b08c1bb42246e23a68a3cb3d821955ddd4b"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "154c1fc99baad3fac6cc38dcc697c9346db7197469926f40415a1d2da632a0ee"
     }
   }
 }

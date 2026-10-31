@@ -15,8 +15,8 @@
   },
   "level": "not_recommended",
   "answer": {
-    "en": "Not recommended. A few potato chips are unlikely to cause salt poisoning, but chips are salty and excessive salty food is not good for dogs, especially those with heart problems. Onion or garlic powder in some flavours is toxic to dogs.",
-    "sl": "Ni priporočljivo. Nekaj čipsa verjetno ne povzroči zastrupitve s soljo, a čips je slan, preveč slane hrane pa psom ne koristi, zlasti tistim s srčnimi težavami. Čebula ali česen v prahu v nekaterih okusih sta za pse strupena."
+    "en": "Not recommended. A few potato chips are unlikely to cause salt poisoning, but chips are salty and excessive salty food is not good for dogs, especially those with heart problems. Onion- or garlic-flavoured chips add a further risk, because onion and garlic are toxic to dogs.",
+    "sl": "Ni priporočljivo. Nekaj čipsa verjetno ne povzroči zastrupitve s soljo, a čips je slan, preveč slane hrane pa psom ne koristi, zlasti tistim s srčnimi težavami. Čips z okusom čebule ali česna je še bolj tvegan, ker sta čebula in česen za pse strupena."
   },
   "why": {
     "en": "AKC says a dog can have salty foods like potato chips in limited amounts, but excess salt is not good for dogs and can cause fluid retention. Large amounts of salt can lead to salt poisoning. Onion and garlic are toxic to dogs in every form, including powders.",
@@ -130,14 +130,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e1cf604d1847d50147d96c43d3e23f6b232425d102b278cc3118405131cf4591"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "133ebf5f13143c6519257c37a98aa39eda9dcfe8a0c6674b8e660975bc9dee5a"
     }
   }
 }

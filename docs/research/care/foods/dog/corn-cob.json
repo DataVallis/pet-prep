@@ -19,8 +19,8 @@
     "sl": "Ne. Psu nikoli ne dajajte koruze na storžu. Psi lahko pogoltnejo kose ali celo cel storž, kar lahko povzroči dušenje ali resno zaporo črevesja, ki lahko zahteva nujno zdravljenje. Navadna koruzna zrnca brez storža so nekaj drugega."
   },
   "why": {
-    "en": "A corn cob does not break down in the gut. Swallowed pieces can lodge in the intestines and block them, sometimes cutting off the blood supply, and surgery may be needed. Plain kernels in moderation are generally safe; the cob is the danger.",
-    "sl": "Koruzni storž se v prebavilih ne razgradi. Pogoltnjeni kosi se lahko zagozdijo v črevesju in ga zamašijo, včasih tudi prekinejo prekrvavitev, potrebna pa je lahko operacija. Navadna zrnca so v zmernih količinah na splošno varna; nevaren je storž."
+    "en": "Swallowed pieces can block the intestines; in one reported case the blockage restricted the blood supply, and emergency treatment may be needed. Plain kernels in moderation are generally safe; the cob is the danger.",
+    "sl": "Pogoltnjeni kosi lahko zamašijo črevesje; v enem opisanem primeru je zapora ovirala prekrvavitev, potrebno pa je lahko nujno zdravljenje. Navadna zrnca so v zmernih količinah na splošno varna; nevaren je storž."
   },
   "signs": {
     "en": [
@@ -139,14 +139,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f12917f3df23d7864bb69135c4b17ab493bd3f8272131348a65489a0f2de89ec"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cc6b19483cebb291767e00d5e33d0c0b66c65999430fd8c9ab7541f2366fd897"
     }
   }
 }

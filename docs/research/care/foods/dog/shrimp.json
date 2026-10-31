@@ -15,8 +15,8 @@
   },
   "level": "small_amounts",
   "answer": {
-    "en": "Yes, a few pieces of plain, fully cooked shrimp are fine for most dogs. Remove the shell, head, legs and tail first. Raw shrimp can carry harmful germs, and fried, breaded or seasoned shrimp are not suitable.",
-    "sl": "Da, nekaj koščkov navadnih, popolnoma kuhanih kozic je za večino psov v redu. Najprej odstranite oklep, glavo, nožice in rep. Surove kozice lahko prenašajo škodljive klice, ocvrte, panirane ali začinjene kozice pa niso primerne."
+    "en": "Yes, a few pieces of plain, fully cooked shrimp are fine for dogs. Remove the shell, head, legs and tail first. Raw shrimp can carry harmful germs, and fried, breaded or seasoned shrimp are not suitable.",
+    "sl": "Da, nekaj koščkov navadnih, popolnoma kuhanih kozic je za pse v redu. Najprej odstranite oklep, glavo, nožice in rep. Surove kozice lahko prenašajo škodljive klice, ocvrte, panirane ali začinjene kozice pa niso primerne."
   },
   "why": {
     "en": "Raw shellfish contain harmful pathogens that cooking avoids. Shrimp shells are a choking hazard and can cause blockages. Fried or breaded shrimp add unnecessary fats and oils. Shrimp are low in fat and calories but high in cholesterol, so moderation is key.",
@@ -100,14 +100,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6f2c48ac3722adbdd4868b6a6126daa7b5c7d216fff8985a9aa596e0370821cc"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c8a0d85b9ff43e70487a9300ba44cbda4406962954afbfccbea20b8c939aa267"
     }
   }
 }

@@ -27,14 +27,14 @@
       "Dilated pupils",
       "Brick-red gums",
       "Difficulty breathing, panting",
-      "Vomiting or upset stomach",
+      "Upset stomach or diarrhoea",
       "Shock"
     ],
     "sl": [
       "Razširjene zenice",
       "Opečnato rdeče dlesni",
       "Težko dihanje, sopihanje",
-      "Bruhanje ali prebavne težave",
+      "Prebavne težave ali driska",
       "Šok"
     ]
   },
@@ -132,14 +132,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "293bce15101ab70c23e840da9128c3e152718cbf82e37718a80bde1faa199741"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3d44b3f6d38a63bc35ec43043a569cc38e26479970deb465c487d200fc40257a"
     }
   }
 }

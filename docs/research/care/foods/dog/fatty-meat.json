@@ -139,14 +139,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "39ffa154bfb9e70c91afeb9c57af169782daa2a9a30a7d2af11be4ca17fffa1a"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0efc35bebde80921a5b83b72d86cb07e2e1ba9be4c133e47b1dd8632d29f45a9"
     }
   }
 }

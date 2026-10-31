@@ -15,12 +15,12 @@
   },
   "level": "toxic",
   "answer": {
-    "en": "No. Xylitol, a sugar-free sweetener, is toxic to dogs. Even small amounts can cause a dangerous drop in blood sugar, seizures and liver failure. It is found in sugar-free gum, mints, sweets, baked goods, toothpaste and supplements.",
-    "sl": "Ne. Ksilitol, sladilo brez sladkorja, je za pse strupen. Že majhne količine lahko povzročijo nevaren padec krvnega sladkorja, krče in odpoved jeter. Najdemo ga v žvečilnih gumijih brez sladkorja, mentolnih bonbonih, sladkarijah, pecivu, zobnih pastah in prehranskih dopolnilih."
+    "en": "No. Xylitol, a sugar-free sweetener, is toxic to dogs. Even small amounts can cause a dangerous drop in blood sugar, seizures and liver failure. It is found in sugar-free gum, sweets, baked goods, toothpaste and supplements.",
+    "sl": "Ne. Ksilitol, sladilo brez sladkorja, je za pse strupen. Že majhne količine lahko povzročijo nevaren padec krvnega sladkorja, krče in odpoved jeter. Najdemo ga v žvečilnih gumijih brez sladkorja, sladkarijah, pecivu, zobnih pastah in prehranskih dopolnilih."
   },
   "why": {
-    "en": "In dogs, xylitol triggers a rapid release of insulin, which makes blood sugar fall quickly. Some dogs also develop severe liver injury; how this happens is not yet known. Sugar-free gum is the most common source, and the amount of xylitol can differ even between flavours of one brand.",
-    "sl": "Pri psih ksilitol sproži hitro sproščanje inzulina, zaradi česar krvni sladkor hitro pade. Pri nekaterih psih pride tudi do hude okvare jeter; kako, še ni znano. Najpogostejši vir je žvečilni gumi brez sladkorja, količina ksilitola pa se lahko razlikuje celo med okusi iste znamke."
+    "en": "In dogs, xylitol can cause a rapid, dangerous drop in blood sugar. Some dogs also develop severe liver injury; how this happens is not yet known. Sugar-free gum is the most common source, and the amount of xylitol can differ even between flavours of one brand.",
+    "sl": "Pri psih ksilitol lahko povzroči hiter in nevaren padec krvnega sladkorja. Pri nekaterih psih pride tudi do hude okvare jeter; kako, še ni znano. Najpogostejši vir je žvečilni gumi brez sladkorja, količina ksilitola pa se lahko razlikuje celo med okusi iste znamke."
   },
   "signs": {
     "en": [
@@ -54,8 +54,8 @@
         "sl": "Kje najdemo ksilitol?"
       },
       "a": {
-        "en": "In sugar-free gum, mints, sweets, baked goods, toothpaste, vitamins and supplements, and even some nasal sprays. Sugar-free gum is the most common source of poisoning.",
-        "sl": "V žvečilnih gumijih brez sladkorja, mentolnih bonbonih, sladkarijah, pecivu, zobnih pastah, vitaminih in dopolnilih ter celo v nekaterih pršilih za nos. Najpogostejši vir zastrupitev je žvečilni gumi brez sladkorja."
+        "en": "In sugar-free gum, sweets, baked goods, toothpaste, vitamins and supplements. Sugar-free gum is the most common source of poisoning.",
+        "sl": "V žvečilnih gumijih brez sladkorja, sladkarijah, pecivu, zobnih pastah, vitaminih in prehranskih dopolnilih. Najpogostejši vir zastrupitev je žvečilni gumi brez sladkorja."
       }
     },
     {
@@ -133,6 +133,10 @@
     {
       "id": "KD1",
       "quote": "and contact your veterinarian or poison control at (888) 426-4435."
+    },
+    {
+      "id": "KD17",
+      "quote": "Clinical signs of hypoglycemia can develop within 30 minutes after ingesting xylitol."
     }
   ],
   "related": [
@@ -143,14 +147,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "37422d48a08e0d5ce8c61bc11c63a4f9d7c21b89ef23d5f848bc7598f8ac57dc"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b6fdce4b7e638e371cfaba4a2e8f5e9c5e618ccbe06cc117782825b95a604cd6"
     }
   }
 }

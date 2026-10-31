@@ -19,8 +19,8 @@
     "sl": "Da. Popolnoma kuhana jajca so za pse v zmernih količinah varna in hranljiva, če so navadna: brez olja, masla, soli in začimb. Primerna so trdo kuhana ali umešana jajca. Preveč jih lahko vodi do debelosti."
   },
   "why": {
-    "en": "Cooked eggs provide protein, vitamins and healthy fats, but they are not essential to a balanced diet. Cooking removes the risks of raw eggs. Raw egg shells have sharp edges that can hurt a dog's throat, and like any treat, eggs add calories.",
-    "sl": "Kuhana jajca dajejo beljakovine, vitamine in zdrave maščobe, vendar za uravnoteženo prehrano niso nujna. S kuhanjem odpravimo tveganja surovih jajc. Lupine imajo ostre robove, ki lahko poškodujejo psu grlo, jajca pa kot vsak priboljšek dodajo kalorije."
+    "en": "Cooked eggs provide protein, vitamins and healthy fats, but they are not essential to a balanced diet. Vets advise always cooking eggs before giving them to a dog. Egg shells have sharp edges that can hurt a dog's throat, and like any treat, eggs add calories.",
+    "sl": "Kuhana jajca dajejo beljakovine, vitamine in zdrave maščobe, vendar za uravnoteženo prehrano niso nujna. Jajca je treba pred hranjenjem psa vedno skuhati. Lupine imajo ostre robove, ki lahko poškodujejo psu grlo, jajca pa kot vsak priboljšek dodajo kalorije."
   },
   "signs": null,
   "what_to_do": {
@@ -111,14 +111,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e9973560f9c687e5bfba9ce630456328f37a61f0158cfc6d5cda8f71d8f5a0a0"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8dd4a5de0e0eedd62d7a9a866fabbb0aa801a823215195ac8c4580fd663194ef"
     }
   }
 }

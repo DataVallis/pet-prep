@@ -15,8 +15,8 @@
   },
   "level": "not_recommended",
   "answer": {
-    "en": "Only with care. Fresh peach flesh can be given in small cubes with the stem and pit removed, but the pit is a real danger: it can cause choking or a gut blockage and contains a form of cyanide. Ask your vet first.",
-    "sl": "Le previdno. Sveže meso breskve lahko psu date v majhnih kockah brez peclja in koščice, koščica pa je resna nevarnost: lahko povzroči zadušitev ali zaporo prebavil in vsebuje obliko cianida. Najprej vprašajte veterinarja."
+    "en": "Not recommended. Some vets allow fresh peach flesh in small cubes with the stem and pit removed, but the pit is a real danger: it can cause choking or a gut blockage and contains a form of cyanide.",
+    "sl": "Ni priporočljivo. Nekateri veterinarji dovolijo sveže meso breskve v majhnih kockah brez peclja in koščice, koščica pa je resna nevarnost: lahko povzroči zadušitev ali zaporo prebavil in vsebuje obliko cianida."
   },
   "why": {
     "en": "Peach stems, leaves and seeds contain cyanogenic glycosides. If a pit is thoroughly chewed, cyanide can be released, and a swallowed pit may block the gut, especially in small dogs. Canned or dried peaches often contain extra sugar. Because the plant is listed as toxic to dogs, we rate peaches as not recommended rather than a safe treat.",
@@ -39,8 +39,8 @@
     "sl": "Če je pes pogoltnil ali prežvečil koščico breskve, se takoj posvetujte z veterinarjem. Zapišite si, kdaj se je to zgodilo in koliko koščic je pojedel."
   },
   "serving": {
-    "en": "Fresh flesh only, in small cubes, with the stem and pit removed. Skip canned and dried peaches. Ask your vet first.",
-    "sl": "Samo sveže meso, v majhnih kockah, brez peclja in koščice. Breskev iz konzerve in posušenih ne dajajte. Najprej vprašajte veterinarja."
+    "en": "Fresh flesh only, in small cubes, with the stem and pit removed. Skip canned and dried peaches.",
+    "sl": "Samo sveže meso, v majhnih kockah, brez peclja in koščice. Breskev iz konzerve in posušenih ne dajajte."
   },
   "child": {
     "en": "Peach stones are dangerous for dogs. Never give your dog a peach stone, and ask a grown-up before sharing any peach.",
@@ -84,10 +84,6 @@
     {
       "id": "KD28",
       "quote": "Canned or dehydrated peaches often contain excess sugars and ingredients that are not recommended."
-    },
-    {
-      "id": "KD28",
-      "quote": "Consult a vet to determine which may be a good option for your dog and in what quantity,"
     },
     {
       "id": "KD29",
@@ -143,14 +139,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ce729b901b9837dee86570820e0a1ef52000d9c4b02f5a009b12cc5590acf025"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "978850b72b730f1309a8c84ad5489763e1583f589ac60312fbd06073fb6854d4"
     }
   }
 }

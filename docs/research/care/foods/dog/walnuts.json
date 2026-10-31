@@ -19,8 +19,8 @@
     "sl": "Ne, bolje ne. En ali dva oreha verjetno ne bosta škodovala, a orehi so mastni in pes se lahko z njimi zaduši. Plesnivi orehi, na primer stari, odpadli na vrtu, in črni orehi so precej bolj nevarni."
   },
   "why": {
-    "en": "Walnuts are high in fat, which can cause vomiting, diarrhoea and possibly pancreatitis. Mould can grow on the shell or kernel and produce toxins that can cause tremors, seizures and vomiting. Black walnuts contain juglone and are very toxic to dogs.",
-    "sl": "Orehi so zelo mastni, kar lahko povzroči bruhanje, drisko in morda vnetje trebušne slinavke. Na lupini ali jedrcu lahko raste plesen, ki tvori strupe in lahko povzroči tresenje, krče in bruhanje. Črni orehi vsebujejo juglon in so za pse zelo strupeni."
+    "en": "Walnuts are high in fat, which can cause vomiting, diarrhoea and possibly pancreatitis. Mould can grow on the shell or kernel and produce toxins that can cause tremors, seizures and vomiting. Black walnuts are very toxic to dogs and may contain juglone.",
+    "sl": "Orehi so zelo mastni, kar lahko povzroči bruhanje, drisko in morda vnetje trebušne slinavke. Na lupini ali jedrcu lahko raste plesen, ki tvori strupe in lahko povzroči tresenje, krče in bruhanje. Črni orehi so za pse zelo strupeni in lahko vsebujejo juglon."
   },
   "signs": {
     "en": [
@@ -126,14 +126,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7b035ab5faa57a26aebe34c43ce0b5b8746c0db5b4c0bb675aba4fcae560fb42"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7e370beacd04179ee3edc169c48ced95b4063595f3eb38d4b203d6e96c97d930"
     }
   }
 }

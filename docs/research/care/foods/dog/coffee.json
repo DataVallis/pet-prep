@@ -19,8 +19,8 @@
     "sl": "Ne. Kava vsebuje kofein, ki je za pse strupen; psi so nanj bolj občutljivi kot ljudje. En ali dva polizka verjetno ne povzročita zastrupitve, mleta kava in kavna zrna pa lahko povzročijo hudo zastrupitev. Zrna, oblita s čokolado, so dvojna nevarnost."
   },
   "why": {
-    "en": "Caffeine overstimulates the heart and nervous system. It is the same kind of substance that makes chocolate toxic. Unused coffee grounds and beans are far more concentrated than a drink, and chocolate-coated beans add the risk of chocolate too.",
-    "sl": "Kofein pretirano spodbuja srce in živčevje. Gre za isto vrsto snovi, zaradi katere je strupena čokolada. Neuporabljena mleta kava in zrna so veliko bolj koncentrirana kot pijača, zrna v čokoladi pa dodajo še tveganje čokolade."
+    "en": "Caffeine overstimulates the heart and nervous system. It is the same kind of substance that makes chocolate toxic. A lick or two of coffee is unlikely to poison, but unused coffee grounds and beans can cause serious toxicity, and chocolate-covered beans are a double threat.",
+    "sl": "Kofein pretirano spodbuja srce in živčevje. Gre za isto vrsto snovi, zaradi katere je strupena čokolada. Polizek ali dva kave verjetno ne zastrupita, neuporabljena mleta kava in zrna pa lahko povzročijo hudo zastrupitev; zrna v čokoladi so dvojna nevarnost."
   },
   "signs": {
     "en": [
@@ -154,14 +154,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a613bfe0217de3beeca88feec6ec85da4fd11461ed51b05747e6c8daf5a0a080"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c838689c4a0f7bc9c5c25ad314c2d0969aec2d9cd0618e9a0bd9183faddf1d6a"
     }
   }
 }

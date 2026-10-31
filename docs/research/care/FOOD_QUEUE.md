@@ -7,15 +7,65 @@ source covers it for that species (then the line gets `— no source <species> <
 Waves: **W1** (now, 4 agents) · **W2+** later batches / nightly runs, one batch per run, same runbook as
 breeds (write → independent verification → PR → merge on green CI).
 
-Status per line: `[ ]` todo · `[d]` dog done · `[c]` cat done · `[x]` both.
+Status per line: `[ ]` todo · `[d]` dog done · `[c]` cat done · `[x]` both · `[-]` skipped for every species; one item per line once processed. A "no source" note = skipped for that species (retry only with a new A/B source).
 
-## W1 — the classics (toxic / most searched)
-- [ ] chocolate · grapes · raisins · onion · garlic · leek · chives · xylitol · macadamia-nuts · alcohol
-- [ ] raw-yeast-dough · coffee · tea · energy-drinks · avocado · cherries · peaches · plums · apricots
-- [ ] cooked-bones · raw-bones · corn-cob · fatty-meat · bacon · ham · salt · salty-snacks · chips
-- [ ] milk · cheese · yogurt · ice-cream · butter · almonds · walnuts · peanuts · peanut-butter · cashews
-- [ ] pistachios · pecans · hazelnuts · raw-eggs · cooked-eggs · raw-meat · raw-fish · tuna · salmon · sardines
-- [ ] cooked-chicken · turkey · beef · pork · lamb · liver · shrimp · crab
+## W1 — the classics (toxic / most searched) — done 2026-10-31 (M6-K0)
+- [x] chocolate
+- [x] grapes
+- [x] raisins
+- [x] onion
+- [x] garlic
+- [x] leek
+- [x] chives
+- [d] xylitol — no source cat 2026-10-31
+- [x] macadamia-nuts
+- [x] alcohol
+- [x] raw-yeast-dough
+- [x] coffee
+- [x] tea
+- [x] energy-drinks
+- [x] avocado
+- [x] cherries
+- [x] peaches
+- [x] plums
+- [x] apricots
+- [x] cooked-bones
+- [x] raw-bones
+- [d] corn-cob — no source cat 2026-10-31
+- [x] fatty-meat
+- [d] bacon — no source cat 2026-10-31
+- [x] ham
+- [x] salt
+- [d] salty-snacks — no source cat 2026-10-31
+- [d] chips — no source cat 2026-10-31
+- [x] milk
+- [x] cheese
+- [x] yogurt
+- [x] ice-cream
+- [x] butter
+- [x] almonds
+- [x] walnuts
+- [d] peanuts — no source cat 2026-10-31
+- [x] peanut-butter
+- [d] cashews — no source cat 2026-10-31
+- [d] pistachios — no source cat 2026-10-31
+- [d] pecans — no source cat 2026-10-31
+- [d] hazelnuts — no source cat 2026-10-31
+- [x] raw-eggs
+- [x] cooked-eggs
+- [x] raw-meat
+- [x] raw-fish
+- [x] tuna
+- [x] salmon
+- [x] sardines
+- [x] cooked-chicken
+- [x] turkey
+- [x] beef
+- [x] pork
+- [x] lamb
+- [x] liver
+- [d] shrimp — no source cat 2026-10-31
+- [-] crab — no source dog 2026-10-31 — no source cat 2026-10-31
 
 ## W2 — fruit
 - [ ] apples · apple-seeds · bananas · blueberries · strawberries · raspberries · blackberries · cranberries

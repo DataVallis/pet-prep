@@ -15,8 +15,8 @@
   },
   "level": "small_amounts",
   "answer": {
-    "en": "Yes. Plain, unseasoned cooked chicken, taken off the bone, is a good treat for most dogs. Never give cooked chicken bones, which splinter easily, and skip seasoned, fatty or raw chicken.",
-    "sl": "Da. Navaden, nezačinjen kuhan piščanec brez kosti je za večino psov dober priboljšek. Nikoli ne dajte kuhanih piščančjih kosti, ki se zlahka razcepijo, in se izogibajte začinjenemu, mastnemu ali surovemu piščancu."
+    "en": "Yes. Plain, unseasoned cooked chicken, taken off the bone, can be served to a dog on its own. Never give cooked chicken bones, which splinter easily, and skip seasoned, fatty or raw chicken.",
+    "sl": "Da. Navaden, nezačinjen kuhan piščanec brez kosti lahko psu ponudite kar samega. Nikoli ne dajte kuhanih piščančjih kosti, ki se zlahka razcepijo, in se izogibajte začinjenemu, mastnemu ali surovemu piščancu."
   },
   "why": {
     "en": "Unseasoned roasted, poached, grilled or baked chicken is fine on its own. Cooked chicken bones splinter easily and can cause choking or puncture the gut. Raw chicken is not recommended because of Salmonella and other bacteria. Thigh meat has about twice the fat of breast, and fatty foods can upset the stomach.",
@@ -89,8 +89,8 @@
       "quote": "Never try to make your dog sick."
     },
     {
-      "id": "KD48",
-      "quote": "Call your vet immediately."
+      "id": "KD34",
+      "quote": "If you do suspect your pet has swallowed something you should contact your vet for advice immediately."
     },
     {
       "id": "KD48",
@@ -108,14 +108,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1ac228fe4882cdf2b9d0d21f2dd56626df54d561be3e4fec85f0363c70c66dea"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4fc5cd1e5c3a1df0901d44b5b5a27844c2490852fe103b35549c1382699526fc"
     }
   }
 }

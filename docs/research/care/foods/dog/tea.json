@@ -15,12 +15,12 @@
   },
   "level": "toxic",
   "answer": {
-    "en": "No, caffeinated tea is not for dogs. Tea contains caffeine, which is toxic to dogs. A small taste is unlikely to harm, but larger amounts can be dangerous, especially for small dogs, and chewed tea bags can cause serious poisoning.",
-    "sl": "Ne, čaj s kofeinom ni za pse. Čaj vsebuje kofein, ki je za pse strupen. Majhen požirek verjetno ne škodi, večje količine pa so lahko nevarne, zlasti za majhne pse, prežvečene čajne vrečke pa lahko povzročijo hudo zastrupitev."
+    "en": "No, caffeinated tea is not for dogs. Tea contains caffeine, which is toxic to dogs. A small taste is unlikely to harm, but larger amounts can be dangerous, especially for small dogs, and eaten tea bags can cause serious poisoning.",
+    "sl": "Ne, čaj s kofeinom ni za pse. Čaj vsebuje kofein, ki je za pse strupen. Majhen požirek verjetno ne škodi, večje količine pa so lahko nevarne, zlasti za majhne pse, pojedene čajne vrečke pa lahko povzročijo hudo zastrupitev."
   },
   "why": {
-    "en": "Many teas contain caffeine, which overstimulates a dog's heart and nervous system. Dogs are more sensitive to caffeine than people. Tea bags hold the dry leaves, so they are much more concentrated than a cup of tea.",
-    "sl": "Številni čaji vsebujejo kofein, ki pretirano spodbuja pasje srce in živčevje. Psi so na kofein bolj občutljivi kot ljudje. V čajnih vrečkah so suhi listi, zato so veliko bolj koncentrirane kot skodelica čaja."
+    "en": "Many teas contain caffeine, which overstimulates a dog's heart and nervous system. Dogs are more sensitive to caffeine than people. One or two licks of tea are unlikely to poison, but swallowed tea bags can cause serious toxicity.",
+    "sl": "Številni čaji vsebujejo kofein, ki pretirano spodbuja pasje srce in živčevje. Psi so na kofein bolj občutljivi kot ljudje. Polizek ali dva čaja verjetno ne zastrupita, pogoltnjene čajne vrečke pa lahko povzročijo hudo zastrupitev."
   },
   "signs": {
     "en": [
@@ -62,8 +62,8 @@
     },
     {
       "q": {
-        "en": "What if my dog chewed a tea bag?",
-        "sl": "Kaj, če je pes prežvečil čajno vrečko?"
+        "en": "What if my dog ate a tea bag?",
+        "sl": "Kaj, če je pes pojedel čajno vrečko?"
       },
       "a": {
         "en": "Tea bags can cause serious caffeine poisoning. Contact your vet or a pet poison helpline right away.",
@@ -146,14 +146,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "50a652204927510d32c999dfe231b692f2172a90213608786ff4cb2bc3dacfa2"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e367763b44853aaf465176565d27eca3eaf4b017b02d9545fd8aae8ba374fd6f"
     }
   }
 }

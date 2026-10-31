@@ -25,7 +25,7 @@
   "signs": null,
   "what_to_do": {
     "en": "Watch for vomiting, diarrhoea, swelling, itching or hives and call your vet if they appear. If your dog ate a large amount, salted nuts or a mix that may contain macadamia nuts, call your vet straight away.",
-    "sl": "Opazujte, ali se pojavijo bruhanje, driska, oteklina, srbenje ali koprivnica, in pokličite veterinarja, če se. Če je pes pojedel veliko oreščkov, soljene oreščke ali mešanico, ki lahko vsebuje makadamijo, takoj pokličite veterinarja."
+    "sl": "Opazujte, ali se pojavijo bruhanje, driska, oteklina, srbenje ali koprivnica, in če se, pokličite veterinarja. Če je pes pojedel veliko oreščkov, soljene oreščke ali mešanico, ki lahko vsebuje makadamijo, takoj pokličite veterinarja."
   },
   "serving": {
     "en": "Only a few plain cashews, shelled and unsalted, never from a mixed-nut bag.",
@@ -107,14 +107,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0c51f35b87d34821af39f2e671a9b09453132cd6876326fe36f413c3e51cfc1a"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fad5ab3ffc27f9e65ef8787a9001a1f603b22f15c4b8f4f6dae77d51d8a7c42f"
     }
   }
 }

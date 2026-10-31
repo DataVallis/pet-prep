@@ -36,7 +36,7 @@
   },
   "what_to_do": {
     "en": "A lick of plain vanilla ice cream usually only needs watching for tummy upset. If the ice cream contained chocolate or xylitol, contact your vet or a pet poison helpline right away, note what and how much was eaten, and don't wait for signs.",
-    "sl": "Pri lizljaju navadnega vanilijevega sladoleda običajno zadošča opazovanje prebave. Če je sladoled vseboval čokolado ali ksilitol, takoj pokličite veterinarja ali center za zastrupitve živali, zapišite, kaj in koliko je pes pojedel, in ne čakajte na znake."
+    "sl": "Pri polizku navadnega vanilijevega sladoleda običajno zadošča opazovanje prebave. Če je sladoled vseboval čokolado ali ksilitol, takoj pokličite veterinarja ali center za zastrupitve živali, zapišite, kaj in koliko je pes pojedel, in ne čakajte na znake."
   },
   "serving": {
     "en": "Instead of ice cream: a little frozen plain fat-free yogurt, if your dog tolerates it.",
@@ -114,14 +114,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "57aaed9dca0b9b2e4295642a0875c540010a844f3f05d01b1060f63c43bb6fc0"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4d060af88e7ad37aaa0c52c06bd3c72b51c48511904754259a117bbac88200da"
     }
   }
 }

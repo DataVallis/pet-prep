@@ -19,8 +19,8 @@
     "sl": "Ne. Energijske pijače pogosto vsebujejo veliko kofeina, ki je za pse strupen. Kofein pretirano spodbuja srce in živčevje, psi pa so nanj bolj občutljivi kot ljudje. Težava je lahko že polizana razlita energijska pijača."
   },
   "why": {
-    "en": "Energy and sports drinks often contain a lot of caffeine, and energy shots, pouches and tablets are even more concentrated. Caffeine stimulates the heart and nervous system, which can be dangerous for dogs.",
-    "sl": "Energijske in športne pijače pogosto vsebujejo veliko kofeina, energijski šoti, vrečke in tablete pa so še bolj koncentrirani. Kofein spodbuja srce in živčevje, kar je za pse lahko nevarno."
+    "en": "Energy and sports drinks often contain a lot of caffeine, and energy shots, pouches and tablets contain caffeine too. Caffeine stimulates the heart and nervous system, which can be dangerous for dogs.",
+    "sl": "Energijske in športne pijače pogosto vsebujejo veliko kofeina, kofein pa vsebujejo tudi energijski šoti, vrečke in tablete. Kofein spodbuja srce in živčevje, kar je za pse lahko nevarno."
   },
   "signs": {
     "en": [
@@ -41,8 +41,8 @@
     ]
   },
   "what_to_do": {
-    "en": "Contact your vet or a pet poison helpline as soon as you realise your dog has had caffeine. Note what it was (drink, grounds, beans, tea bags) and roughly how much. Don't wait for signs: early treatment matters.",
-    "sl": "Takoj ko opazite, da je pes zaužil kofein, pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj je bilo (pijača, mleta kava, zrna, čajne vrečke) in približno koliko. Ne čakajte na znake: zgodnje zdravljenje je pomembno."
+    "en": "Contact your vet or a pet poison helpline as soon as you realise your dog has had caffeine. Note what it was (drink, shot, pouch or tablet) and roughly how much. Don't wait for signs: early treatment matters.",
+    "sl": "Takoj ko opazite, da je pes zaužil kofein, pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj je bilo (pijača, šot, vrečka ali tableta) in približno koliko. Ne čakajte na znake: zgodnje zdravljenje je pomembno."
   },
   "serving": null,
   "child": {
@@ -56,8 +56,8 @@
         "sl": "Kaj pa energijski šoti in tablete s kofeinom?"
       },
       "a": {
-        "en": "They are concentrated sources of caffeine too. Keep them out of reach and call your vet straight away if your dog gets into them.",
-        "sl": "Tudi oni so koncentriran vir kofeina. Hranite jih izven dosega in takoj pokličite veterinarja, če jih pes doseže."
+        "en": "They contain caffeine too. Keep them out of reach and call your vet straight away if your dog gets into them.",
+        "sl": "Tudi ti vsebujejo kofein. Hranite jih izven dosega in takoj pokličite veterinarja, če jih pes doseže."
       }
     }
   ],
@@ -132,14 +132,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cf81df2e90a86b0ad3ae23c5be29b81373cd37e381566444ff9e58f7f19aadd9"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8e09d495c6c5bef4970fa5b3b24f1822dbae9ed7deb710a605b0984aefd2a95e"
     }
   }
 }

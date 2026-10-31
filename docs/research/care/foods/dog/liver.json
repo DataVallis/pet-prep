@@ -15,12 +15,12 @@
   },
   "level": "not_recommended",
   "answer": {
-    "en": "Not as a regular food, and not raw. Feeding raw liver is the most common cause of vitamin A poisoning in pets, and raw liver carries the germ risks of all raw meat. Ask your vet before adding liver to your dog's diet.",
-    "sl": "Ne kot redna hrana in ne surova. Hranjenje s surovimi jetri je najpogostejši vzrok zastrupitve z vitaminom A pri hišnih živalih, surova jetra pa nosijo tudi tveganje klic kot vse surovo meso. Preden psu dodate jetra v prehrano, vprašajte veterinarja."
+    "en": "Not as a regular food, and not raw. Vitamin A poisoning in pets most often happens when they are fed raw liver or vitamin A-rich supplements, and raw liver carries the germ risks of all raw meat. Ask your vet before adding liver to your dog's diet.",
+    "sl": "Ne kot redna hrana in ne surova. Zastrupitev z vitaminom A se pri hišnih živalih najpogosteje zgodi pri hranjenju s surovimi jetri ali dodatki, bogatimi z vitaminom A, surova jetra pa nosijo tudi tveganje klic kot vse surovo meso. Preden psu dodate jetra v prehrano, vprašajte veterinarja."
   },
   "why": {
     "en": "Vitamin A poisoning most often happens when pets are fed raw liver, cod liver oil or other vitamin A-rich supplements. Too much over weeks or months can lead to a poor coat and dry skin; a large amount at once can cause vomiting, drowsiness and irritability. Raw animal protein can also carry Salmonella and other bacteria.",
-    "sl": "Zastrupitev z vitaminom A se najpogosteje zgodi, ko živali hranimo s surovimi jetri, olje iz trskinih jeter ali drugimi dodatki, bogatimi z vitaminom A. Preveč tedne ali mesece lahko vodi do slabe dlake in suhe kože; velika količina naenkrat lahko povzroči bruhanje, zaspanost in razdražljivost. Surove živalske beljakovine lahko prenašajo tudi salmonelo in druge bakterije."
+    "sl": "Zastrupitev z vitaminom A se najpogosteje zgodi, ko živali hranimo s surovimi jetri, z oljem iz trskinih jeter ali drugimi dodatki, bogatimi z vitaminom A. Preveč tedne ali mesece lahko vodi do slabe dlake in suhe kože; velika količina naenkrat lahko povzroči bruhanje, zaspanost in razdražljivost. Surove živalske beljakovine lahko prenašajo tudi salmonelo in druge bakterije."
   },
   "signs": {
     "en": [
@@ -48,8 +48,8 @@
         "sl": "Zakaj je preveč jeter težava?"
       },
       "a": {
-        "en": "Feeding raw liver is the most common cause of vitamin A poisoning in pets, and too much vitamin A harms dogs.",
-        "sl": "Hranjenje s surovimi jetri je najpogostejši vzrok zastrupitve z vitaminom A pri živalih, preveč vitamina A pa psom škoduje."
+        "en": "Vitamin A poisoning in pets most often happens when they are fed raw liver, cod liver oil or other vitamin A-rich supplements.",
+        "sl": "Zastrupitev z vitaminom A se pri živalih najpogosteje zgodi, ko jih hranimo s surovimi jetri, z oljem iz trskinih jeter ali drugimi dodatki, bogatimi z vitaminom A."
       }
     }
   ],
@@ -95,14 +95,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "380607a3ecde1386d7a8485eeb8c798be8bbbe5bcc351201bfd23a614ff8a148"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "35b4b2ae4a00a876eda6367ad9f70c3eecfae38417a65ce3d5d0df2a3d24937c"
     }
   }
 }

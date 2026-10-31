@@ -19,8 +19,8 @@
     "sl": "Ne, avokado je bolje držati stran od psov. Nekateri veterinarji pravijo, da meso ni strupeno, lupina, koščica in listi pa vsebujejo persin, velika koščica pa lahko psa zaduši ali mu zamaši prebavila. Avokado je tudi zelo masten, kar lahko vodi v vnetje trebušne slinavke."
   },
   "why": {
-    "en": "Sources disagree, so we use the stricter level. The Merck Veterinary Manual says dogs seem fairly resistant to persin, which is most dangerous for birds and rabbits, and AKC says the flesh is not toxic. Blue Cross calls persin poisonous to dogs. All agree that the pit can choke a dog or cause a blockage and that the high fat can cause pancreatitis.",
-    "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. Veterinarski priročnik Merck pravi, da so psi na persin razmeroma odporni, najbolj nevaren pa je za ptice in kunce, AKC pa, da meso ni strupeno. Blue Cross persin označuje kot strupen za pse. Vsi se strinjajo, da lahko koščica psa zaduši ali povzroči zaporo in da lahko veliko maščobe povzroči vnetje trebušne slinavke."
+    "en": "Sources disagree, so we use the stricter level. The Merck Veterinary Manual says dogs seem relatively resistant compared with other species, the ASPCA names birds and rabbits as the biggest concern, and AKC says the flesh is not toxic. Blue Cross calls persin poisonous to dogs. All agree that the pit can choke a dog or cause a blockage and that the high fat can cause pancreatitis.",
+    "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. Veterinarski priročnik Merck pravi, da so psi v primerjavi z drugimi vrstami razmeroma odporni, ASPCA kot največjo skrb navaja ptice in kunce, AKC pa pravi, da meso ni strupeno. Blue Cross persin označuje kot strupen za pse. Vsi se strinjajo, da lahko koščica psa zaduši ali povzroči zaporo in da lahko veliko maščobe povzroči vnetje trebušne slinavke."
   },
   "signs": {
     "en": [
@@ -158,14 +158,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "57d143ae092a980e7a52ade0488c5194ae366891a50e312a316b63a5bea8cf0a"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dc858a3a4b59ad61654257132c4a10b7590ea188376e603901d45569c98b09c8"
     }
   }
 }

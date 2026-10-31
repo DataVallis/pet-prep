@@ -19,8 +19,8 @@
     "sl": "Ni priporočljivo. Surovo meso pogosto prenaša bakterije, kot so salmonela, listerija in E. coli, ki lahko psu škodijo in se prenesejo na ljudi v domu, tudi če je pes videti zdrav. Veterinarske organizacije, kot je AVMA, odsvetujejo hranjenje s surovim."
   },
   "why": {
-    "en": "Contamination of raw meat by bacteria is common. Dogs can carry these germs without signs and shed them in saliva and faeces, putting family members at risk, especially high-risk groups such as the young and the old. Raw pork can carry a parasite, raw bones can block the gut, and home-made raw diets are often unbalanced.",
-    "sl": "Surovo meso je pogosto okuženo z bakterijami. Psi lahko te klice nosijo brez znakov in jih izločajo s slino in iztrebki, kar ogroža družinske člane, posebej skupine z večjim tveganjem, kot so otroci in starejši. Surova svinjina lahko prenaša zajedavca, surove kosti lahko zamašijo črevesje, doma pripravljeni surovi obroki pa pogosto niso uravnoteženi."
+    "en": "Contamination of raw meat by bacteria is common. Dogs can carry these germs without signs and shed them in saliva and faeces, putting family members at risk, especially high-risk groups such as the young and the old. Raw pork can carry a parasite, raw bones can block the gut, and home-made raw diets are likely not balanced unless a nutritionist formulated the recipe.",
+    "sl": "Surovo meso je pogosto okuženo z bakterijami. Psi lahko te klice nosijo brez znakov in jih izločajo s slino in iztrebki, kar ogroža družinske člane, posebej skupine z večjim tveganjem, kot so otroci in starejši. Surova svinjina lahko prenaša zajedavca, surove kosti lahko zamašijo črevesje, doma pripravljeni surovi obroki pa verjetno niso uravnoteženi, če recepta ni sestavil strokovnjak za prehrano."
   },
   "signs": {
     "en": [
@@ -155,14 +155,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b62c8d04b8f16458fa81fda91b2f9c014d793ec57bf8d1ba27a6dec728c53bcc"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "253c4ae7ca3472c2a72bc05590e4a2ead24062541d69f7b77ce6907311ca86f5"
     }
   }
 }

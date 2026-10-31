@@ -118,14 +118,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2498a8965479cc31d376aab14839a21674e90624734762a80d566a35e7107044"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2073e6d1b06cf53ab644ad475c415e538683975cb5325fc6cdd4f85303e2a2fb"
     }
   }
 }

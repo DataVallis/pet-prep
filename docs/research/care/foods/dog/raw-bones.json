@@ -15,8 +15,8 @@
   },
   "level": "not_recommended",
   "answer": {
-    "en": "Only after talking to your vet. Raw bones do not splinter like cooked ones, but they can still break teeth, cause choking or block the gut, and raw meat on them may carry bacteria such as Salmonella. Some vets allow them under supervision; others advise against bones.",
-    "sl": "Le po posvetu z veterinarjem. Surove kosti se ne cepijo kot kuhane, a lahko vseeno zlomijo zob, povzročijo dušenje ali zamašijo prebavila, surovo meso na njih pa lahko prenaša bakterije, kot je salmonela. Nekateri veterinarji jih dovolijo pod nadzorom, drugi kosti odsvetujejo."
+    "en": "Only after talking to your vet. Cooked bones splinter, but raw bones carry risks too: they can break teeth, cause choking or block the gut, and raw meat on them may carry bacteria such as Salmonella. Some vets allow them under supervision; others advise against bones.",
+    "sl": "Le po posvetu z veterinarjem. Kuhane kosti se cepijo, a tudi surove kosti so tvegane: lahko zlomijo zob, povzročijo dušenje ali zamašijo prebavila, surovo meso na njih pa lahko prenaša bakterije, kot je salmonela. Nekateri veterinarji jih dovolijo pod nadzorom, drugi kosti odsvetujejo."
   },
   "why": {
     "en": "Sources differ, so we use the stricter level. The FDA lists blockages, choking and mouth injuries after bones and advises asking your vet about safer chews. AKC notes raw bones may carry Salmonella and very hard bones can damage teeth. Bones can injure or block the gut, and blockages are very serious.",
@@ -28,16 +28,14 @@
       "Cuts or bleeding in the mouth",
       "Vomiting",
       "Diarrhoea",
-      "Bleeding from the bottom",
-      "Not eating, tiredness (possible blockage)"
+      "Bleeding from the bottom"
     ],
     "sl": [
       "Dušenje ali siljenje na bruhanje",
       "Ureznine ali krvavitev v ustih",
       "Bruhanje",
       "Driska",
-      "Krvavitev iz zadnjika",
-      "Pes noče jesti, utrujenost (možna zapora)"
+      "Krvavitev iz zadnjika"
     ]
   },
   "what_to_do": {
@@ -169,14 +167,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9c1d8a0b11d51fb41197fb039d746672f4c1b334adc22d908d1109b254d16d8d"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a6882039bf569fd01f12de3aa72bc5d0959d0064b058177df42b5a612b20c9ae"
     }
   }
 }

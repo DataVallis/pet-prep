@@ -16,7 +16,7 @@
   "level": "not_recommended",
   "answer": {
     "en": "Not as a regular treat. Some vet sources allow small bits of plain, lower-fat cheese, but cheese is fatty, many dogs digest dairy poorly, and some cheeses contain onion, garlic or chives. Blue cheeses are a particular worry.",
-    "sl": "Ne kot redno priboljšek. Nekateri veterinarski viri dovolijo majhne koščke navadnega, manj mastnega sira, a sir je masten, mnogi psi mlečne izdelke slabo prebavljajo, nekateri siri pa vsebujejo čebulo, česen ali drobnjak. Posebej previdni bodite pri plesnivih modrih sirih."
+    "sl": "Ne kot reden priboljšek. Nekateri veterinarski viri dovolijo majhne koščke navadnega, manj mastnega sira, a sir je masten, mnogi psi mlečne izdelke slabo prebavljajo, nekateri siri pa vsebujejo čebulo, česen ali drobnjak. Posebej previdni bodite pri plesnivih modrih sirih."
   },
   "why": {
     "en": "Dogs have little lactase, the enzyme that digests milk sugar, so dairy can upset the stomach. Cheese is high in fat: too much leads to weight gain and can trigger pancreatitis. Flavoured cheeses may contain onion, garlic or chives, and blue cheeses such as Roquefort contain roquefortine C, to which dogs appear sensitive. Sources differ: the AKC and Dogs Trust allow small amounts, while Cornell lists cheese among fatty foods to avoid, so we use the stricter level.",
@@ -144,14 +144,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2659511ce6346d6cbb84d9fa916076b4def41c8e78d5b4da29fbf3ee282d8e1d"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dc8b57a657e43fce479da97d0eba3e6a3741214cfc663a4c602c277374c645da"
     }
   }
 }

@@ -15,12 +15,12 @@
   },
   "level": "not_recommended",
   "answer": {
-    "en": "Not as a regular treat. Some vet sources allow a little plain, fully cooked lean pork, but pork is fatty and hard for dogs to digest, and fatty foods can trigger pancreatitis. Raw pork, cooked bones, and ham, bacon or sausage are not suitable.",
-    "sl": "Ne kot redno priboljšek. Nekateri veterinarski viri dovolijo malo navadne, popolnoma kuhane puste svinjine, a svinjina je mastna in jo psi težko prebavijo, mastna hrana pa lahko sproži vnetje trebušne slinavke. Surova svinjina, kuhane kosti ter šunka, slanina ali klobase niso primerne."
+    "en": "Not as a regular treat. Some vet sources allow a little plain, fully cooked lean pork, but pork is fatty and hard for dogs to digest, and fatty foods can trigger pancreatitis. Raw pork, cooked bones, ham and bacon are not suitable.",
+    "sl": "Ne kot reden priboljšek. Nekateri veterinarski viri dovolijo malo navadne, popolnoma kuhane puste svinjine, a svinjina je mastna in jo psi težko prebavijo, mastna hrana pa lahko sproži vnetje trebušne slinavke. Surova svinjina, kuhane kosti, šunka in slanina niso primerne."
   },
   "why": {
-    "en": "Pork is rich in a type of fat that is difficult for dogs to digest. Raw or undercooked pork can carry the parasite Trichinella. Cooked bones become brittle, and seasonings can be dangerous. Ham is high in salt and fat. Sources differ: the AKC calls plain cooked lean pork safe in moderation, while PDSA advises avoiding high-fat treats like pork, so we use the stricter level.",
-    "sl": "Svinjina vsebuje vrsto maščobe, ki jo psi težko prebavijo. Surova ali premalo kuhana svinjina lahko prenaša zajedavca trihinelo. Kuhane kosti postanejo krhke, začimbe pa so lahko nevarne. Šunka vsebuje veliko soli in maščobe. Viri se razlikujejo: AKC navadno kuhano pusto svinjino v zmernih količinah označuje kot varno, PDSA pa svetuje, da se izogibamo mastnim priboljškom, kot je svinjina, zato smo izbrali strožjo stopnjo."
+    "en": "Pork is rich in a type of fat that is difficult for dogs to digest. Raw or undercooked pork can carry the parasite Trichinella. Cooked bones become brittle, and seasonings can be dangerous. Ham is high in salt and fat. Sources differ: the AKC calls plain cooked lean pork safe in moderation, while PDSA lists pork among high-fat foods that can lead to pancreatitis and advises dogs that have had it to avoid high-fat treats like pork, so we use the stricter level.",
+    "sl": "Svinjina vsebuje vrsto maščobe, ki jo psi težko prebavijo. Surova ali premalo kuhana svinjina lahko prenaša zajedavca trihinelo. Kuhane kosti postanejo krhke, začimbe pa so lahko nevarne. Šunka vsebuje veliko soli in maščobe. Viri se razlikujejo: AKC navadno kuhano pusto svinjino v zmernih količinah označuje kot varno, PDSA pa svinjino navaja med mastno hrano, ki lahko sproži vnetje trebušne slinavke, psom, ki so ga že imeli, pa svetuje, naj se izogibajo mastnim priboljškom, kot je svinjina, zato smo izbrali strožjo stopnjo."
   },
   "signs": {
     "en": [
@@ -55,8 +55,8 @@
         "sl": "Ali lahko psi jedo šunko ali slanino?"
       },
       "a": {
-        "en": "They aren't good choices: ham is high in fat and sodium, and eating a large amount of fatty pork products can cause pancreatitis.",
-        "sl": "Nista dobri izbiri: šunka vsebuje veliko maščobe in natrija, večja količina mastnih svinjskih izdelkov pa lahko povzroči vnetje trebušne slinavke."
+        "en": "They aren't good choices: ham is high in fat and sodium, and eating a lot of bacon can cause pancreatitis.",
+        "sl": "Nista dobri izbiri: šunka vsebuje veliko maščobe in natrija, veliko slanine pa lahko povzroči vnetje trebušne slinavke."
       }
     }
   ],
@@ -118,8 +118,12 @@
       "quote": "Onions and garlic are toxic to dogs."
     },
     {
-      "id": "KD48",
-      "quote": "Call your vet immediately."
+      "id": "KD34",
+      "quote": "If you do suspect your pet has swallowed something you should contact your vet for advice immediately."
+    },
+    {
+      "id": "KD39",
+      "quote": "They’ve recently eaten some high fat foods (e.g. pork, cheese, butter)."
     }
   ],
   "related": [
@@ -132,14 +136,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2a8980751307258633f275d96772a052465abd6480f952270fbc819f4f87f5bb"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "220cb297aece627e41278872fb57fac0bafb9c9059559f84a320baea98a2a886"
     }
   }
 }

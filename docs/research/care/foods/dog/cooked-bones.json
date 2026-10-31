@@ -28,16 +28,14 @@
       "Cuts or bleeding in the mouth",
       "Vomiting",
       "Diarrhoea",
-      "Bleeding from the bottom",
-      "Not eating, tiredness (possible blockage)"
+      "Bleeding from the bottom"
     ],
     "sl": [
       "Dušenje ali siljenje na bruhanje",
       "Ureznine ali krvavitev v ustih",
       "Bruhanje",
       "Driska",
-      "Krvavitev iz zadnjika",
-      "Pes noče jesti, utrujenost (možna zapora)"
+      "Krvavitev iz zadnjika"
     ]
   },
   "what_to_do": {
@@ -150,14 +148,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "40fd003d903a03653ce591004e434f176f916d2366ea9a2455d17f8c73f967e2"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bf61767248e67a95e7701b1575703f5a612c821152dec2689e7751deae67114a"
     }
   }
 }
