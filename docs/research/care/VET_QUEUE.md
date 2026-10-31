@@ -8,7 +8,8 @@ Status: `[ ]` todo · `[~]` partial (follow-up line below) · `[x]` done · `[!]
 - [~] SI Slovenia — Osrednjeslovenska, Gorenjska, Primorsko-notranjska, Obalno-kraška, Goriška — 56 entries, 10 × 24 h (incl. 1 duty rota), 2 duty rotas, no animal poison line exists, 2026-10-31 — left: ~18 smaller practices listed in `vets/SI.json` notes
 - [x] SI Slovenia — west follow-up: remaining smaller practices — 28 entries (3 not small-animal, unpublished), 1 × 24 h (A-vet Sežana), check: 16 checked, 2 sources fixed, 0 removed, 2026-10-31
 - [x] SI Slovenia — Podravska, Pomurska, Koroška, Savinjska, Zasavska, Posavska, Jugovzhodna Slovenija — 64 entries, 24 × 24 h (incl. 1 duty rota: Tačka small-animal duty line), no regional duty-rota page, no animal poison line, check: 32 checked, 2 fixed, 0 removed, 2026-10-31
-- [ ] HR Croatia
+- [~] HR Croatia — 54 entries, 16 × 24 h, no official duty rota found, no animal poison line (IMI Zagreb serves humans only), check: 24 checked, 0 fixed, 0 removed, 2026-10-31 — left: Makarska, Hvar, Korčula, Brač, Omiš, Kaštela, Vodice, Biograd, Pag, Crikvenica, private clinics in Zadar/Dubrovnik/Zagreb, smaller Slavonian towns (see `vets/HR.json` notes)
+- [ ] HR Croatia — follow-up: Dalmatian islands and coast towns, remaining Zagreb/Zadar/Dubrovnik clinics, Slavonia
 - [ ] IT Italy
 - [ ] AT Austria
 - [ ] GR Greece
