@@ -312,6 +312,14 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - [x] M6-W05 Aplikacija – starš: seznam »Želje (N)« na nadzorni plošči, Kupi / Ne zdaj, nakup brez prošnje (presenečenje) — *PR #416, 27. 10. 2026; nakup deluje, ko bodo izdelki v trgovinah (W02)*
 - [ ] M6-W06 Ovratnica (S7: pozneje — nov videz za vsa stanja)
 
+## M6-K — Baza znanja o skrbi (David, 31. 10. 2026; načrt `docs/product/CARE_KNOWLEDGE_SPEC.md`, čaka odločitve §10)
+
+- [ ] M6-K0 Viri `docs/research/care/sources.md`, shema + izvozna skripta `care-knowledge.json`, 30 živil × pes + muca (citat, neodvisno preverjanje), na spletu strani živil + »strupena hrana« + `/care/emergency`, llms + JSON-LD
+- [ ] M6-K1 Ostalih ~30 živil, nevarne rastline / zdravila / dom, sezonska vodnika »Novo leto in ognjemet« (do 1. 12.) in »Božič«
+- [ ] M6-K2 Vodniki skrbi po vrsti in obdobju + »Prvi teden« + vprašalnik »Je otrok pripravljen?«
+- [ ] M6-K3 Aplikacija: Vodnik za vrsto (tudi mešanček / domača muca), vrstne zanimivosti v »Ali si vedel?«, kviz
+- [ ] M6-K4 Dogodek »hrana na mizi« (ločen spec), nove vrste, nočna avtomatika (ena tema na zagon) + četrtletni pregled svežine
+
 ## Po MVP (backlog)
 
 - **Nadgradnja brezplačne živali v 12-tedenski izziv** (David 9. 10. 2026: *ne zdaj, kasneje*): danes izziv samo s plačljivo pasmo (M5-F03). Strežnik je pripravljen (M4-10): ob nakupu žival ohrani videz iz skupnega nabora, manjkajoči videi polnega nabora se shranijo na videz in so za naslednji nakup istega videza brezplačni (`FreePetLookPoolTest`). Manjka: pravilo izdelka (cena, program, certifikat za mešančka), API za nadgradnjo, aplikacija.
