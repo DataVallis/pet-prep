@@ -43,3 +43,6 @@
 | KD38 | B | PDSA | Pancreatitis in dogs | https://www.pdsa.org.uk/pet-help-and-advice/pet-health-hub/conditions/pancreatitis-in-dogs | High-fat foods (pork, cheese, butter) |
 | KD42 | B | American Kennel Club (Updated Jan 06, 2025) | Is Salt Bad for Dogs? | https://www.akc.org/expert-advice/health/is-salt-bad-for-dogs/ | Names potato chips; moderation |
 | KD39 | B | American Kennel Club (Updated May 27, 2025) | Can Dogs Eat Ham? | https://www.akc.org/expert-advice/nutrition/can-dogs-eat-ham/ | Sodium and fat |
+| KD40 | A | Merck Veterinary Manual | Salt Toxicosis in Animals | https://www.merckvetmanual.com/toxicology/salt-toxicosis/salt-toxicosis-in-animals | Professional edition; mentions emetics (not used in text) |
+| KD41 | B | Pet Poison Helpline | Salt Is Toxic To Pets | https://www.petpoisonhelpline.com/poison/salt/ | Salt dough, play dough, salt water |
+| KD43 | B | American Kennel Club (Published Aug 08, 2022) | Can Dogs Drink Milk? Is Milk Bad for Dogs? | https://www.akc.org/expert-advice/nutrition/can-dogs-drink-milk/ | Lactose intolerance; small quantities |

@@ -1,0 +1,115 @@
+{
+  "slug": "milk",
+  "species": "dog",
+  "name": {
+    "en": "Milk",
+    "sl": "Mleko"
+  },
+  "question": {
+    "en": "Can dogs drink milk?",
+    "sl": "Ali lahko psi pijejo mleko?"
+  },
+  "url_slug": {
+    "en": "milk",
+    "sl": "mleko"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, but only a little. Milk is a safe treat in small quantities, but many dogs are lactose intolerant and get diarrhoea, gas or vomiting from it. Milk is also high in fat and natural sugars.",
+    "sl": "Da, a le malo. Mleko je v majhnih količinah varen priboljšek, a veliko psov ne prenaša laktoze in po njem dobijo drisko, vetrove ali bruhajo. Mleko vsebuje tudi veliko maščob in naravnih sladkorjev."
+  },
+  "why": {
+    "en": "Dogs have little lactase, the enzyme that digests the sugar in milk, so milk and dairy often cause diarrhoea or other digestive upset. Individual dogs differ in how well they tolerate dairy.",
+    "sl": "Psi imajo malo laktaze, encima, ki prebavlja mlečni sladkor, zato mleko in mlečni izdelki pogosto povzročijo drisko ali druge prebavne težave. Psi se razlikujejo v tem, kako dobro prenašajo mlečne izdelke."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If your dog gets loose stools, gas, vomiting or tummy pain after milk, stop giving it. Contact your vet if you are worried.",
+    "sl": "Če ima pes po mleku mehko blato, vetrove, bruha ali ga boli trebuh, mu mleka ne dajajte več. Če vas skrbi, pokličite veterinarja."
+  },
+  "serving": {
+    "en": "Only a small amount of plain milk now and then, and none if your dog's tummy reacts.",
+    "sl": "Le občasno malo navadnega mleka, če pa se pasji trebuh odzove, nič."
+  },
+  "child": {
+    "en": "Some dogs get a tummy ache from milk, so only a little, and only if a grown-up says yes.",
+    "sl": "Nekatere pse po mleku boli trebušček, zato le malo in le, če odrasli dovoli."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Why do some dogs get diarrhoea from milk?",
+        "sl": "Zakaj nekateri psi po mleku dobijo drisko?"
+      },
+      "a": {
+        "en": "Many dogs are lactose intolerant: they don't have much lactase, the enzyme that digests milk sugar.",
+        "sl": "Veliko psov ne prenaša laktoze: nimajo dovolj laktaze, encima, ki prebavlja mlečni sladkor."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD44",
+      "quote": "Many canines are lactose intolerant, which means they have difficulty digesting milk."
+    },
+    {
+      "id": "KD44",
+      "quote": "Milk is a safe treat in small quantities."
+    },
+    {
+      "id": "KD44",
+      "quote": "The beverage is high in fat and natural sugars."
+    },
+    {
+      "id": "KD44",
+      "quote": "Loose stools"
+    },
+    {
+      "id": "KD44",
+      "quote": "Gas"
+    },
+    {
+      "id": "KD44",
+      "quote": "Vomiting"
+    },
+    {
+      "id": "KD44",
+      "quote": "Abdominal pain"
+    },
+    {
+      "id": "KD44",
+      "quote": "Diarrhea"
+    },
+    {
+      "id": "KD1",
+      "quote": "milk and other dairy-based products can cause diarrhea or other digestive upset."
+    },
+    {
+      "id": "KD1",
+      "quote": "Pets do not possess significant amounts of lactase."
+    },
+    {
+      "id": "KD5",
+      "quote": "Dogs can have milk, but individual dogs may not tolerate dairy products well."
+    }
+  ],
+  "related": [
+    "cheese",
+    "yogurt",
+    "ice-cream",
+    "butter"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}
