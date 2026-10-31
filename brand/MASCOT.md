@@ -7,6 +7,8 @@
 - **Curio is always the pet**: the practice pet that needs care. It is fed, walked, waits, gets bored, is happy when cared for.
 - Curio is **never the caretaker or a coach**. The child and parent stay off-screen (implied by on-screen text).
 - Reason: one role makes the account readable as a story series; the mixed role in early reels ("Feeding time", where Curio fed a bowl) confused viewers. Don't repost that reel.
+- **Curio is the brand mascot, not the pet in the app** (David, 2026-10-25): in videos Curio *plays* a pet, but the pet a family cares for in PetPrep is a lifelike AI simulation of a real breed. Ads and captions must never suggest you look after Curio in the app (website: petprep.si/meet-curio).
+- **Animated series** (David, 2026-10-31): silent family comedy with drawn human characters, Curio as the family pet — bible and pilot in `brand/mascot/SERIES.md`.
 
 ## Character DNA (prompt source of truth)
 - Body: soft rounded cube (corner radius ~30 % of width, height ≈ 1.1× width), matte graphite `#121614`, velvety soft-touch designer-vinyl texture.

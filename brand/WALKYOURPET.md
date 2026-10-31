@@ -20,6 +20,13 @@
 5. **Vizualno:** v naslovu in na končni kartici je fraza lahko v meti (`#7FE0B4` na grafitu); pisave in barve po `brand/README.md`.
 6. **Ne kot zahtevo ali pritisk na otroka** (ne »Walk your pet or else …«). Ton je povabilo in veselje, kot ga je izrekel otrok.
 
+## Spletna stran gibanja (David 30. 10. 2026)
+- **petprep.si/walkyourpet** in **/sl/walkyourpet** (slug se ne prevaja), povezava v nogi pod »Podjetje«. Repo `pet-prep-website`, PR #128 (+ #129 popravki slovenščine).
+- Vsebina: kako se je začelo (kartica #1 kot naslovna slika), kaj pomeni v aplikaciji (pasji sprehod = pravi koraki, brez GPS, HUD), »Pridružite se gibanju« (pojdi ven → fotografiraj trenutek brez obrazov in imen → objavi s #walkyourpet in označi @petprep.si; aplikacija ni potrebna), »Varno deljenje« (objavljajo starši, brez obrazov/imen otrok, ponovna objava samo z dovoljenjem, citati vedno resnični, brez pritiska), temno povabilo in pogosta vprašanja.
+- Odločitev: stran gre v živo že z eno zgodbo; nima praznega »zidu«. Nove resnične trenutke dodajamo sproti (samo s soglasjem staršev).
+- Aplikacije še ni v trgovinah, zato povabilo ni »prenesi in hodi«, ampak »pojdi ven s svojim ljubljenčkom zdaj« + zgodnji dostop.
+- Zagonska kampanja (teden 1): `brand/marketing/WALKYOURPET_LAUNCH.md`, grafike v `brand/marketing/walkyourpet-launch/`.
+
 ## Formati (zaloga idej)
 | # | Status | Format | Ideja |
 |---|---|---|---|
@@ -29,10 +36,11 @@
 | 4 | ideja | UGC / izziv | Starši pošljejo posnetek »gremo ven zaradi ljubljenčka«; deljenje pod `#walkyourpet` (pogoji in soglasja pred zagonom) |
 | 5 | ideja | Končna kartica | Vse PetPrep promo videe zaključi z »Walk your pet.« + @petprep.si + trgovini |
 | 6 | ideja | Aplikacija (*načrt*, ni zgrajeno) | Fraza v aplikaciji (npr. opomnik za sprehod pri psu) šele po Davidovi odločitvi in prevodih; do takrat je samo marketinška |
+| 7 | narejeno 2026-10-30 | Spletna stran + zagon | petprep.si/walkyourpet, carousel, story z nalepko Add Yours, končna kartica (`brand/marketing/walkyourpet-launch/`) |
 
 ## Pred večjo kampanjo
 - Preveri, kdo hashtag `#walkyourpet` že uporablja (Instagram, TikTok) in kakšna je vsebina pod njim.
-- Preveri razpoložljivost blagovne znamke / domene (npr. walkyourpet.com) in odloči, ali jo zaščitimo.
+- Domena: walkyourpet.com je zasedena (naprodaj), David je ne kupi (30. 10. 2026). Če bo kratek naslov potreben, je predlog `walkyour.pet` (ali `.app` / `.org`) kot preusmeritev na petprep.si/walkyourpet. Blagovno znamko »walk your pet« šele, ko je jasno, da se je fraza prijela.
 
 ## Dnevnik objav
 | Datum | Kanal | Format | Rezultat |
