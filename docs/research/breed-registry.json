@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "91c6fffce3a1470e335f5241d292905ddadc26269227e5e0089a3e1813b214f1"
+      "sha256": "c7a209164e4cc922fe63a2ed0093490f1568ab7d2959925e265cc3e125176eb9"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -45348,7 +45348,7 @@
       "id": "lagotto_romagnolo",
       "species": "dog",
       "order": 75,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Lagotto Romagnolo",
         "sl": "Lagotto romagnolo"
@@ -45949,7 +45949,7 @@
       "id": "alaskan_malamute",
       "species": "dog",
       "order": 76,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Alaskan Malamute",
         "sl": "Aljaški malamut"
@@ -46571,7 +46571,7 @@
       "id": "basenji",
       "species": "dog",
       "order": 77,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Basenji",
         "sl": "Basenji"
