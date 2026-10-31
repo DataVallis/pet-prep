@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `basenji` (viri S642–S646; ponovno S8, S10, S11, S14, S24, S35, S45, S54, S123, S174); seznam za vzreditelja: Basenji Club of America (K37) |
 | Izvor | FCI št. 43, skupina 5, sekcija 6 (primitivni tip), Srednja Afrika (pokroviteljstvo Velika Britanija; S642, S643) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 80. mesto (S174, prebrano 2026-10-31) |
-| PR-ji | pet-prep #468 (pasma) · portret: PR po združitvi · spletna stran: pet-prep-website `feat/register-basenji` |
+| PR-ji | pet-prep #468 (pasma, združen `5386c7c`) · portret: PR (ta, zagon 41179845335) · spletna stran: pet-prep-website `feat/register-basenji` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -43,7 +43,7 @@
 | Česanje 1× na teden, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-10-31 |
 | Mini igri zobje (2× na teden) in ušesa (1× na teden) | 🛠 | 💶 izziv | M5-R15 / M5-R20 | 2026-10-31 |
 | Barva (izbirnik: 4 standardne barve) | 🛠 | 💶 izziv | M5-R21 | 2026-10-31 |
-| AI portret v registru (rdeče-bel) | 🗓 po združitvi | — | M5-R11-04 | — |
+| AI portret v registru (rdeče-bel, sprejet v prvem poskusu, zagon 41179845335) | ✅ | — | M5-R11-04 | 2026-10-31 |
 | Stran na petprep.si (`/animals/dogs/basenji`, `/sl/zivali/psi/basenji`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -61,3 +61,4 @@
 - **Ime:** »Basenji« je ime tudi v slovenščini; strani KZS nisem preverjal. Potrdite ali popravite.
 - **Standard FCI:** stran FCI navaja nov uradni standard z dne 08/09/2026; prebran je angleški PDF iz leta 1999 (S643). Barve in velikosti se z AKC S645 ujemajo.
 - **Ugotovitev za skupne dokumente (ne urejam jih):** nova država izvora »Srednja Afrika« (`AF-C` v `FCI_ORIGINS`), nova zdravstvena ključa `fanconi_syndrome`, `pyruvate_kinase_deficiency` in novi testi `dna_fanconi`, `dna_pra_bj1`, `thyroid_scheme` (besedila na spletni strani dodana v PR spletne strani).
+- **Portret:** zagon 41179845335 (koda `5386c7c`, brez produkcijske namestitve, 0,15 $), sprejet v prvem poskusu — realistična fotografija odraslega psa, kostanjevo rdeč z belimi prsmi, tačkami in konico repa, gubice na čelu, pokončna ušesa, rep tesno zavit čez hrbet, svetlo siva studijska podlaga.
