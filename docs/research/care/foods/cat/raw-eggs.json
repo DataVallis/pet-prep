@@ -5,32 +5,37 @@
     "en": "Raw eggs",
     "sl": "Surova jajca",
     "de": "Rohe Eier",
-    "fr": "Œufs crus"
+    "fr": "Œufs crus",
+    "es": "Huevos crudos"
   },
   "question": {
     "en": "Can cats eat raw eggs?",
     "sl": "Ali lahko mačke jedo surova jajca?",
     "de": "Dürfen Katzen rohe Eier fressen?",
-    "fr": "Les chats peuvent-ils manger des œufs crus ?"
+    "fr": "Les chats peuvent-ils manger des œufs crus ?",
+    "es": "¿Pueden los gatos comer huevos crudos?"
   },
   "url_slug": {
     "en": "raw-eggs",
     "sl": "surova-jajca",
     "de": "rohe-eier",
-    "fr": "oeufs-crus"
+    "fr": "oeufs-crus",
+    "es": "huevos-crudos"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, don't give cats raw eggs. Raw eggs may carry harmful bacteria such as Salmonella, which can make both cats and people ill, and raw egg white contains a protein that can block a vitamin.",
     "sl": "Ne, mačkam ne dajajte surovih jajc. Surova jajca lahko vsebujejo škodljive bakterije, kot je salmonela, ki lahko povzročijo bolezen pri mačkah in ljudeh, surov beljak pa vsebuje beljakovino, ki lahko ovira vsrkavanje vitamina.",
     "de": "Nein, geben Sie Katzen keine rohen Eier. Rohe Eier können schädliche Bakterien wie Salmonellen enthalten, die Katzen und Menschen krank machen können, und rohes Eiweiß enthält ein Protein, das ein Vitamin blockieren kann.",
-    "fr": "Non, ne donnez pas d’œufs crus aux chats. Les œufs crus peuvent contenir des bactéries dangereuses comme les salmonelles, qui peuvent rendre malades les chats comme les humains, et le blanc d’œuf cru contient une protéine qui peut bloquer une vitamine."
+    "fr": "Non, ne donnez pas d’œufs crus aux chats. Les œufs crus peuvent contenir des bactéries dangereuses comme les salmonelles, qui peuvent rendre malades les chats comme les humains, et le blanc d’œuf cru contient une protéine qui peut bloquer une vitamine.",
+    "es": "No, no le des huevos crudos a tu gato. Los huevos crudos pueden contener bacterias dañinas como Salmonella, que pueden hacer enfermar tanto a los gatos como a las personas, y la clara cruda contiene una proteína que puede bloquear una vitamina."
   },
   "why": {
     "en": "Raw eggs may contain harmful bacteria and parasites and could mean food poisoning for cats and humans alike. Raw egg white also contains avidin, which binds the vitamin biotin and stops it being absorbed. Cooking food thoroughly protects pets from salmonella.",
     "sl": "Surova jajca lahko vsebujejo škodljive bakterije in zajedavce ter lahko povzročijo zastrupitev s hrano pri mačkah in ljudeh. Surov beljak vsebuje tudi avidin, ki veže vitamin biotin in prepreči njegovo vsrkavanje. Temeljito kuhanje hrane živali varuje pred salmonelo.",
     "de": "Rohe Eier können schädliche Bakterien und Parasiten enthalten und bei Katzen wie Menschen eine Lebensmittelvergiftung auslösen. Rohes Eiweiß enthält außerdem Avidin, das das Vitamin Biotin bindet und dessen Aufnahme verhindert. Gründliches Durchgaren schützt Haustiere vor Salmonellen.",
-    "fr": "Les œufs crus peuvent contenir des bactéries et des parasites dangereux et provoquer une intoxication alimentaire chez les chats comme chez les humains. Le blanc d’œuf cru contient aussi de l’avidine, qui fixe la biotine, une vitamine, et empêche son absorption. Bien cuire les aliments protège les animaux des salmonelles."
+    "fr": "Les œufs crus peuvent contenir des bactéries et des parasites dangereux et provoquer une intoxication alimentaire chez les chats comme chez les humains. Le blanc d’œuf cru contient aussi de l’avidine, qui fixe la biotine, une vitamine, et empêche son absorption. Bien cuire les aliments protège les animaux des salmonelles.",
+    "es": "Los huevos crudos pueden contener bacterias y parásitos dañinos y podrían causar una intoxicación alimentaria tanto a gatos como a personas. Además, la clara de huevo cruda contiene avidina, que se une a la vitamina biotina e impide que se absorba. Cocinar bien los alimentos protege a las mascotas de la salmonela."
   },
   "signs": {
     "en": [
@@ -60,20 +65,29 @@
       "Fièvre",
       "Refus de manger",
       "Abattement"
+    ],
+    "es": [
+      "Vómitos",
+      "Diarrea, a veces con sangre",
+      "Fiebre",
+      "No quiere comer",
+      "Apatía"
     ]
   },
   "what_to_do": {
     "en": "If your cat licked a little raw egg, watch for vomiting, diarrhoea, fever or not eating, and call your vet if any appear. Wash your hands and any surfaces the egg touched.",
     "sl": "Če je mačka polizala malo surovega jajca, bodite pozorni na bruhanje, drisko, vročino ali odklanjanje hrane in pokličite veterinarja, če se kaj od tega pojavi. Umijte si roke in površine, ki so prišle v stik z jajcem.",
     "de": "Hat Ihre Katze ein wenig rohes Ei aufgeleckt, achten Sie auf Erbrechen, Durchfall, Fieber oder Appetitlosigkeit, und rufen Sie Ihren Tierarzt an, wenn eines davon auftritt. Waschen Sie sich die Hände und reinigen Sie alle Flächen, die mit dem Ei in Berührung gekommen sind.",
-    "fr": "Si votre chat a léché un peu d’œuf cru, surveillez l’apparition de vomissements, de diarrhée, de fièvre ou d’un refus de manger, et appelez votre vétérinaire si l’un de ces signes apparaît. Lavez-vous les mains et nettoyez toutes les surfaces touchées par l’œuf."
+    "fr": "Si votre chat a léché un peu d’œuf cru, surveillez l’apparition de vomissements, de diarrhée, de fièvre ou d’un refus de manger, et appelez votre vétérinaire si l’un de ces signes apparaît. Lavez-vous les mains et nettoyez toutes les surfaces touchées par l’œuf.",
+    "es": "Si tu gato ha lamido un poco de huevo crudo, vigila si tiene vómitos, diarrea, fiebre o deja de comer, y llama a tu veterinario si aparece alguno de estos síntomas. Lávate las manos y limpia las superficies que haya tocado el huevo."
   },
   "serving": null,
   "child": {
     "en": "Raw eggs can carry germs. Only grown-ups should handle them, and cats shouldn't eat them.",
     "sl": "Na surovih jajcih so lahko klice. Z njimi naj ravnajo odrasli, mucke pa jih ne smejo jesti.",
     "de": "Rohe Eier können Keime enthalten. Nur Erwachsene sollten sie anfassen, und Katzen sollten sie nicht fressen.",
-    "fr": "Les œufs crus peuvent contenir des microbes. Seuls les adultes doivent les manipuler, et les chats ne doivent pas en manger."
+    "fr": "Les œufs crus peuvent contenir des microbes. Seuls les adultes doivent les manipuler, et les chats ne doivent pas en manger.",
+    "es": "Los huevos crudos pueden tener gérmenes. Solo los adultos deben manipularlos, y los gatos no deben comerlos."
   },
   "faq": [
     {
@@ -81,13 +95,15 @@
         "en": "Are cooked eggs OK instead?",
         "sl": "Ali so kuhana jajca v redu?",
         "de": "Sind gekochte Eier stattdessen in Ordnung?",
-        "fr": "Peut-on donner des œufs cuits à la place ?"
+        "fr": "Peut-on donner des œufs cuits à la place ?",
+        "es": "¿Y los huevos cocinados?"
       },
       "a": {
         "en": "Cooked egg is a different matter: PDSA says eggs can suit pets, but only in moderation. Cook it fully and serve it plain.",
         "sl": "Kuhano jajce je nekaj drugega: PDSA navaja, da so jajca lahko primerna za živali, a le zmerno. Jajce popolnoma skuhajte in ga ponudite brez dodatkov.",
         "de": "Gekochtes Ei ist etwas anderes: Laut PDSA können Eier für Haustiere geeignet sein, aber nur in Maßen. Garen Sie es vollständig durch und servieren Sie es ohne Zusätze.",
-        "fr": "L’œuf cuit, c’est autre chose : selon la PDSA, les œufs peuvent convenir aux animaux, mais seulement avec modération. Faites-le bien cuire et servez-le nature."
+        "fr": "L’œuf cuit, c’est autre chose : selon la PDSA, les œufs peuvent convenir aux animaux, mais seulement avec modération. Faites-le bien cuire et servez-le nature.",
+        "es": "El huevo cocinado es otra cosa: PDSA dice que los huevos pueden ser adecuados para las mascotas, pero solo con moderación. Cocínalo del todo y sírvelo sin nada añadido."
       }
     }
   ],
@@ -167,6 +183,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "23add8d5b533ba2261854ba0203adef5ce1bd7d0f72db3d2c73bbefc76b63a59"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a2d153bf858f63e67801b88b57921347c434d473fe3b61841e16fc1d6b94e0f5"
     }
   }
 }

@@ -5,32 +5,37 @@
     "en": "Almonds",
     "sl": "Mandlji",
     "de": "Mandeln",
-    "fr": "Amandes"
+    "fr": "Amandes",
+    "es": "Almendras"
   },
   "question": {
     "en": "Can cats eat almonds?",
     "sl": "Ali lahko mačke jedo mandlje?",
     "de": "Dürfen Katzen Mandeln fressen?",
-    "fr": "Les chats peuvent-ils manger des amandes ?"
+    "fr": "Les chats peuvent-ils manger des amandes ?",
+    "es": "¿Pueden los gatos comer almendras?"
   },
   "url_slug": {
     "en": "almonds",
     "sl": "mandlji",
     "de": "mandeln",
-    "fr": "amandes"
+    "fr": "amandes",
+    "es": "almendras"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, almonds are best kept away from cats. Sweet almonds aren't considered toxic, but they are high in oils and fats and can make a cat unwell, with stomach upset or vomiting.",
     "sl": "Ne, mandljev mački raje ne dajajte. Sladki mandlji ne veljajo za strupene, vendar imajo veliko olj in maščob in lahko mački povzročijo slabo počutje, razdražen želodec ali bruhanje.",
     "de": "Nein, Mandeln halten Sie besser von Katzen fern. Süße Mandeln gelten nicht als giftig, enthalten aber viel Öl und Fett und können einer Katze zusetzen – etwa mit Magenverstimmung oder Erbrechen.",
-    "fr": "Non, mieux vaut tenir les amandes loin des chats. Les amandes douces ne sont pas considérées comme toxiques, mais elles sont riches en huiles et en graisses et peuvent rendre un chat malade, avec des troubles digestifs ou des vomissements."
+    "fr": "Non, mieux vaut tenir les amandes loin des chats. Les amandes douces ne sont pas considérées comme toxiques, mais elles sont riches en huiles et en graisses et peuvent rendre un chat malade, avec des troubles digestifs ou des vomissements.",
+    "es": "No, es mejor mantener las almendras lejos de los gatos. Las almendras dulces no se consideran tóxicas, pero tienen mucho aceite y grasa y pueden sentarle mal a un gato, con malestar de estómago o vómitos."
   },
   "why": {
     "en": "Cats Protection lists almonds among nuts that contain high amounts of oils and fats which can make a cat unwell. The ASPCA says sweet almonds sold for eating are not toxic to pets, but because they are not a normal part of a pet's diet they can cause digestive issues. Bitter almonds contain a cyanide compound and are considered toxic.",
     "sl": "Cats Protection mandlje navaja med oreščki, ki vsebujejo veliko olj in maščob, zaradi katerih se mačka lahko slabo počuti. ASPCA navaja, da sladki mandlji, ki se prodajajo za uživanje, za hišne živali niso strupeni, a ker niso del njihove običajne prehrane, lahko povzročijo prebavne težave. Grenki mandlji vsebujejo cianidno spojino in veljajo za strupene.",
     "de": "Cats Protection zählt Mandeln zu den Nüssen, die viel Öl und Fett enthalten und einer Katze schaden können. Laut ASPCA sind süße Mandeln, wie sie zum Essen verkauft werden, für Haustiere nicht giftig; da sie aber nicht zur normalen Ernährung eines Tieres gehören, können sie Verdauungsprobleme verursachen. Bittermandeln enthalten eine Cyanidverbindung und gelten als giftig.",
-    "fr": "Cats Protection classe les amandes parmi les fruits à coque très riches en huiles et en graisses, qui peuvent rendre un chat malade. Selon l’ASPCA, les amandes douces vendues pour la consommation ne sont pas toxiques pour les animaux, mais comme elles ne font pas partie de leur alimentation habituelle, elles peuvent provoquer des troubles digestifs. Les amandes amères contiennent un composé cyanuré et sont considérées comme toxiques."
+    "fr": "Cats Protection classe les amandes parmi les fruits à coque très riches en huiles et en graisses, qui peuvent rendre un chat malade. Selon l’ASPCA, les amandes douces vendues pour la consommation ne sont pas toxiques pour les animaux, mais comme elles ne font pas partie de leur alimentation habituelle, elles peuvent provoquer des troubles digestifs. Les amandes amères contiennent un composé cyanuré et sont considérées comme toxiques.",
+    "es": "Cats Protection incluye las almendras entre los frutos secos que contienen grandes cantidades de aceites y grasas que pueden sentarle mal a un gato. La ASPCA indica que las almendras dulces que se venden para comer no son tóxicas para las mascotas, pero, como no forman parte de su dieta habitual, pueden causar problemas digestivos. Las almendras amargas contienen un compuesto de cianuro y se consideran tóxicas."
   },
   "signs": {
     "en": [
@@ -56,20 +61,28 @@
       "Diarrhée",
       "Maux de ventre",
       "Air malade"
+    ],
+    "es": [
+      "Vómitos",
+      "Diarrea",
+      "Malestar de estómago",
+      "Aspecto de estar enfermo"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate almonds, contact your vet for advice, especially if she ate a lot or seems unwell. Note what she ate, how much and when. If they were bitter almonds, contact your vet straight away.",
     "sl": "Če je muca pojedla mandlje, se za nasvet obrnite na veterinarja, zlasti če jih je pojedla veliko ali se ne počuti dobro. Zapišite, kaj je pojedla, koliko in kdaj. Če so bili to grenki mandlji, takoj pokličite veterinarja.",
     "de": "Wenn Ihre Katze Mandeln gefressen hat, fragen Sie Ihren Tierarzt um Rat, besonders wenn sie viele gefressen hat oder krank wirkt. Notieren Sie, was sie gefressen hat, wie viel und wann. Waren es Bittermandeln, wenden Sie sich sofort an Ihren Tierarzt.",
-    "fr": "Si votre chat a mangé des amandes, demandez conseil à votre vétérinaire, surtout s’il en a mangé beaucoup ou semble malade. Notez ce qu’il a mangé, en quelle quantité et à quelle heure. S’il s’agissait d’amandes amères, contactez votre vétérinaire immédiatement."
+    "fr": "Si votre chat a mangé des amandes, demandez conseil à votre vétérinaire, surtout s’il en a mangé beaucoup ou semble malade. Notez ce qu’il a mangé, en quelle quantité et à quelle heure. S’il s’agissait d’amandes amères, contactez votre vétérinaire immédiatement.",
+    "es": "Si tu gato ha comido almendras, consulta a tu veterinario, sobre todo si ha comido muchas o parece encontrarse mal. Apunta qué ha comido, cuánto y cuándo. Si eran almendras amargas, ponte en contacto con tu veterinario de inmediato."
   },
   "serving": null,
   "child": {
     "en": "Almonds are a snack for people. They are too oily for cats, so keep them in your lunchbox.",
     "sl": "Mandlji so prigrizek za ljudi. Za mucke so preveč mastni, zato naj ostanejo v tvoji malici.",
     "de": "Mandeln sind ein Snack für Menschen. Für Katzen sind sie zu ölig – lass sie lieber in deiner Brotdose.",
-    "fr": "Les amandes, c’est un en-cas pour les humains. Elles sont trop grasses pour les chats, alors garde-les dans ta boîte à goûter."
+    "fr": "Les amandes, c’est un en-cas pour les humains. Elles sont trop grasses pour les chats, alors garde-les dans ta boîte à goûter.",
+    "es": "Las almendras son un tentempié para personas. Tienen demasiado aceite para los gatos, así que guárdalas en tu fiambrera."
   },
   "faq": [
     {
@@ -77,13 +90,15 @@
         "en": "What about bitter almonds?",
         "sl": "Kaj pa grenki mandlji?",
         "de": "Was ist mit Bittermandeln?",
-        "fr": "Et les amandes amères ?"
+        "fr": "Et les amandes amères ?",
+        "es": "¿Y las almendras amargas?"
       },
       "a": {
         "en": "Bitter almonds contain a cyanide compound and are considered toxic. If your cat ate bitter almonds, contact your vet straight away.",
         "sl": "Grenki mandlji vsebujejo cianidno spojino in veljajo za strupene. Če je mačka pojedla grenke mandlje, takoj pokličite veterinarja.",
         "de": "Bittermandeln enthalten eine Cyanidverbindung und gelten als giftig. Wenn Ihre Katze Bittermandeln gefressen hat, wenden Sie sich sofort an Ihren Tierarzt.",
-        "fr": "Les amandes amères contiennent un composé cyanuré et sont considérées comme toxiques. Si votre chat a mangé des amandes amères, contactez votre vétérinaire immédiatement."
+        "fr": "Les amandes amères contiennent un composé cyanuré et sont considérées comme toxiques. Si votre chat a mangé des amandes amères, contactez votre vétérinaire immédiatement.",
+        "es": "Las almendras amargas contienen un compuesto de cianuro y se consideran tóxicas. Si tu gato ha comido almendras amargas, ponte en contacto con tu veterinario de inmediato."
       }
     },
     {
@@ -91,13 +106,15 @@
         "en": "Are some nuts worse than others?",
         "sl": "Ali so nekateri oreščki hujši od drugih?",
         "de": "Sind manche Nüsse schlimmer als andere?",
-        "fr": "Certains fruits à coque sont-ils plus dangereux que d’autres ?"
+        "fr": "Certains fruits à coque sont-ils plus dangereux que d’autres ?",
+        "es": "¿Hay frutos secos peores que otros?"
       },
       "a": {
         "en": "Yes. Macadamia nuts are fatty and also toxic to cats, so they are the ones to be most careful with.",
         "sl": "Da. Makadamije so mastne in za mačke tudi strupene, zato je pri njih potrebna največja previdnost.",
         "de": "Ja. Macadamianüsse sind fettreich und für Katzen außerdem giftig – bei ihnen ist daher die größte Vorsicht geboten.",
-        "fr": "Oui. Les noix de macadamia sont grasses et, en plus, toxiques pour les chats : ce sont celles dont il faut se méfier le plus."
+        "fr": "Oui. Les noix de macadamia sont grasses et, en plus, toxiques pour les chats : ce sont celles dont il faut se méfier le plus.",
+        "es": "Sí. Las nueces de macadamia son grasas y además tóxicas para los gatos, así que son las que exigen más cuidado."
       }
     }
   ],
@@ -156,6 +173,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2b2d1f52c2ceac7b9cebe895f3e6c7d6e0355b1238533c1db2bdec74acf846f6"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "facb640767ab4c7dfdf5d28e3cd55e10fe39d24d6ef724dab57e6952a39e5274"
     }
   }
 }

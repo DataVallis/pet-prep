@@ -5,32 +5,37 @@
     "en": "Cheese",
     "sl": "Sir",
     "de": "Käse",
-    "fr": "Fromage"
+    "fr": "Fromage",
+    "es": "Queso"
   },
   "question": {
     "en": "Can cats eat cheese?",
     "sl": "Ali lahko mačke jedo sir?",
     "de": "Dürfen Katzen Käse fressen?",
-    "fr": "Les chats peuvent-ils manger du fromage ?"
+    "fr": "Les chats peuvent-ils manger du fromage ?",
+    "es": "¿Pueden los gatos comer queso?"
   },
   "url_slug": {
     "en": "cheese",
     "sl": "sir",
     "de": "kaese",
-    "fr": "fromage"
+    "fr": "fromage",
+    "es": "queso"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, cheese is best avoided. It isn't toxic, but many cats are lactose intolerant, so it can upset their stomach. It is also high in fat and salt and doesn't give cats the nutrients they need.",
     "sl": "Ne, sira je bolje ne dajati. Ni strupen, vendar mnoge mačke ne prenašajo laktoze, zato jim lahko razdraži želodec. Ima tudi veliko maščob in soli ter mačkam ne da hranil, ki jih potrebujejo.",
     "de": "Nein, auf Käse verzichten Sie besser. Er ist nicht giftig, aber viele Katzen vertragen keine Laktose, deshalb kann er ihnen auf den Magen schlagen. Außerdem ist er sehr fett- und salzreich und liefert nicht die Nährstoffe, die Katzen brauchen.",
-    "fr": "Non, mieux vaut éviter le fromage. Il n’est pas toxique, mais beaucoup de chats sont intolérants au lactose, il peut donc leur déranger l’estomac. Il est aussi riche en graisses et en sel, et n’apporte pas aux chats les nutriments dont ils ont besoin."
+    "fr": "Non, mieux vaut éviter le fromage. Il n’est pas toxique, mais beaucoup de chats sont intolérants au lactose, il peut donc leur déranger l’estomac. Il est aussi riche en graisses et en sel, et n’apporte pas aux chats les nutriments dont ils ont besoin.",
+    "es": "No, es mejor evitar el queso. No es tóxico, pero muchos gatos son intolerantes a la lactosa, así que puede sentarles mal al estómago. Además tiene mucha grasa y sal y no aporta a los gatos los nutrientes que necesitan."
   },
   "why": {
     "en": "Most adult cats can't properly digest lactose, the sugar in milk and in dairy products such as cheese. This can cause vomiting or diarrhoea and make a cat sluggish. Cheese is also high in fat and salt, and eaten regularly it can lead to weight gain. Lactose-free and plant-based cheeses are not a safe swap, because some dairy alternatives contain ingredients that could be toxic to cats.",
     "sl": "Večina odraslih mačk ne zmore dobro prebaviti laktoze, sladkorja v mleku in mlečnih izdelkih, kot je sir. Posledica sta lahko bruhanje ali driska, mačka je lahko tudi utrujena. Sir ima veliko maščob in soli, in če ga mačka je redno, se lahko zredi. Sir brez laktoze ali rastlinski sir ni varna zamenjava, ker nekateri mlečni nadomestki vsebujejo sestavine, ki so lahko za mačke strupene.",
     "de": "Die meisten erwachsenen Katzen können Laktose, den Zucker in Milch und Milchprodukten wie Käse, nicht richtig verdauen. Das kann Erbrechen oder Durchfall auslösen und eine Katze träge machen. Käse ist zudem reich an Fett und Salz und kann bei regelmäßigem Fressen zu Übergewicht führen. Laktosefreier und pflanzlicher Käse ist kein sicherer Ersatz, denn manche Milchalternativen enthalten Zutaten, die für Katzen giftig sein könnten.",
-    "fr": "La plupart des chats adultes digèrent mal le lactose, le sucre du lait et des produits laitiers comme le fromage. Cela peut provoquer des vomissements ou de la diarrhée et rendre un chat apathique. Le fromage est aussi riche en graisses et en sel et, consommé régulièrement, il peut faire prendre du poids. Les fromages sans lactose ou végétaux ne sont pas une alternative sûre, car certains substituts de produits laitiers contiennent des ingrédients potentiellement toxiques pour les chats."
+    "fr": "La plupart des chats adultes digèrent mal le lactose, le sucre du lait et des produits laitiers comme le fromage. Cela peut provoquer des vomissements ou de la diarrhée et rendre un chat apathique. Le fromage est aussi riche en graisses et en sel et, consommé régulièrement, il peut faire prendre du poids. Les fromages sans lactose ou végétaux ne sont pas une alternative sûre, car certains substituts de produits laitiers contiennent des ingrédients potentiellement toxiques pour les chats.",
+    "es": "La mayoría de los gatos adultos no digieren bien la lactosa, el azúcar de la leche y de lácteos como el queso. Esto puede causar vómitos o diarrea y dejar al gato aletargado. El queso también tiene mucha grasa y sal, y si lo come a menudo puede engordar. Los quesos sin lactosa y los vegetales no son una alternativa segura, porque algunos sustitutos de los lácteos contienen ingredientes que podrían ser tóxicos para los gatos."
   },
   "signs": {
     "en": [
@@ -56,20 +61,28 @@
       "Diarrhée",
       "Apathie ou manque d’énergie",
       "Gaz ou ballonnements"
+    ],
+    "es": [
+      "Vómitos",
+      "Diarrea",
+      "Aletargamiento o falta de energía",
+      "Gases o hinchazón"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate a little cheese, there's no need to rush to the vet. Keep an eye on them. If they become unwell or act differently, call your vet and tell them how much cheese your cat ate.",
     "sl": "Če je mačka pojedla malo sira, ni treba hiteti k veterinarju. Opazujte jo. Če ji postane slabo ali se vede drugače, pokličite veterinarja in mu povejte, koliko sira je pojedla.",
     "de": "Wenn Ihre Katze ein wenig Käse gefressen hat, müssen Sie nicht sofort in die Tierarztpraxis. Behalten Sie sie im Auge. Wenn es ihr schlecht geht oder sie sich anders verhält, rufen Sie Ihren Tierarzt an und sagen Sie, wie viel Käse Ihre Katze gefressen hat.",
-    "fr": "Si votre chat a mangé un peu de fromage, inutile de vous précipiter chez le vétérinaire. Surveillez-le. S’il tombe malade ou se comporte différemment, appelez votre vétérinaire et indiquez-lui la quantité de fromage mangée."
+    "fr": "Si votre chat a mangé un peu de fromage, inutile de vous précipiter chez le vétérinaire. Surveillez-le. S’il tombe malade ou se comporte différemment, appelez votre vétérinaire et indiquez-lui la quantité de fromage mangée.",
+    "es": "Si tu gato ha comido un poco de queso, no hace falta salir corriendo al veterinario. Vigílalo. Si se encuentra mal o se comporta de forma distinta, llama a tu veterinario y dile cuánto queso ha comido."
   },
   "serving": null,
   "child": {
     "en": "Cheese can give cats a sore tummy. Give your cat a cat treat instead and keep the cheese for people.",
     "sl": "Sir lahko mucki povzroči bolan trebušček. Raje ji daj priboljšek za mačke, sir pa ostane za ljudi.",
     "de": "Käse kann Katzen Bauchweh machen. Gib deiner Katze lieber ein Katzenleckerli und lass den Käse für die Menschen.",
-    "fr": "Le fromage peut donner mal au ventre aux chats. Offre plutôt à ton chat une friandise faite pour lui et garde le fromage pour les humains."
+    "fr": "Le fromage peut donner mal au ventre aux chats. Offre plutôt à ton chat une friandise faite pour lui et garde le fromage pour les humains.",
+    "es": "El queso puede darles dolor de barriga a los gatos. Dale a tu gato un premio para gatos y deja el queso para las personas."
   },
   "faq": [
     {
@@ -77,13 +90,15 @@
         "en": "Are cheese-flavoured cat treats OK?",
         "sl": "Ali so priboljški za mačke z okusom sira v redu?",
         "de": "Sind Katzenleckerlis mit Käsegeschmack in Ordnung?",
-        "fr": "Peut-on donner des friandises pour chats au fromage ?"
+        "fr": "Peut-on donner des friandises pour chats au fromage ?",
+        "es": "¿Están bien los premios para gatos con sabor a queso?"
       },
       "a": {
         "en": "Treats made for cats with a little cheese are fine in small amounts now and then. If your cat gets an upset stomach, choose a different treat next time.",
         "sl": "Priboljški za mačke z malo sira so v majhnih količinah občasno v redu. Če ima mačka po njih težave z želodcem, naslednjič izberite drug priboljšek.",
         "de": "Leckerlis für Katzen mit etwas Käse sind in kleinen Mengen ab und zu in Ordnung. Bekommt Ihre Katze davon Magenprobleme, wählen Sie beim nächsten Mal ein anderes Leckerli.",
-        "fr": "Les friandises conçues pour les chats contenant un peu de fromage conviennent en petite quantité, de temps en temps. Si votre chat a l’estomac dérangé, choisissez une autre friandise la prochaine fois."
+        "fr": "Les friandises conçues pour les chats contenant un peu de fromage conviennent en petite quantité, de temps en temps. Si votre chat a l’estomac dérangé, choisissez une autre friandise la prochaine fois.",
+        "es": "Los premios hechos para gatos con un poco de queso están bien en pequeñas cantidades de vez en cuando. Si a tu gato le sientan mal al estómago, la próxima vez elige otro premio."
       }
     },
     {
@@ -91,13 +106,15 @@
         "en": "Is lactose-free or vegan cheese safer?",
         "sl": "Je sir brez laktoze ali veganski sir varnejši?",
         "de": "Ist laktosefreier oder veganer Käse sicherer?",
-        "fr": "Le fromage sans lactose ou végan est-il plus sûr ?"
+        "fr": "Le fromage sans lactose ou végan est-il plus sûr ?",
+        "es": "¿Es más seguro el queso sin lactosa o vegano?"
       },
       "a": {
         "en": "No. Avoid lactose-free and plant-based cheese too, because many dairy alternatives contain ingredients that could be toxic to cats.",
         "sl": "Ne. Izogibajte se tudi siru brez laktoze in rastlinskemu siru, ker veliko mlečnih nadomestkov vsebuje sestavine, ki so lahko za mačke strupene.",
         "de": "Nein. Meiden Sie auch laktosefreien und pflanzlichen Käse, denn viele Milchalternativen enthalten Zutaten, die für Katzen giftig sein könnten.",
-        "fr": "Non. Évitez aussi les fromages sans lactose et végétaux, car beaucoup de substituts de produits laitiers contiennent des ingrédients potentiellement toxiques pour les chats."
+        "fr": "Non. Évitez aussi les fromages sans lactose et végétaux, car beaucoup de substituts de produits laitiers contiennent des ingrédients potentiellement toxiques pour les chats.",
+        "es": "No. Evita también el queso sin lactosa y el vegetal, porque muchos sustitutos de los lácteos contienen ingredientes que podrían ser tóxicos para los gatos."
       }
     }
   ],
@@ -202,6 +219,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "06b3f3a6327a20098342752cc07df4613de3c190f7ddfd3703f2f9d0e909dc3d"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a5fee7dbca2868f166981684da84fc926347127ceb10ff2d8dcc682d3b087380"
     }
   }
 }

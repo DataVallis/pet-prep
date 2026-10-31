@@ -5,32 +5,37 @@
     "en": "Alcohol",
     "sl": "Alkohol",
     "de": "Alkohol",
-    "fr": "Alcool"
+    "fr": "Alcool",
+    "es": "Alcohol"
   },
   "question": {
     "en": "Can cats drink alcohol?",
     "sl": "Ali lahko mačke pijejo alkohol?",
     "de": "Dürfen Katzen Alkohol trinken?",
-    "fr": "Les chats peuvent-ils boire de l’alcool ?"
+    "fr": "Les chats peuvent-ils boire de l’alcool ?",
+    "es": "¿Pueden los gatos beber alcohol?"
   },
   "url_slug": {
     "en": "alcohol",
     "sl": "alkohol",
     "de": "alkohol",
-    "fr": "alcool"
+    "fr": "alcool",
+    "es": "alcohol"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Even a tiny amount of alcohol can be extremely toxic to cats, and cats are especially sensitive to it. Keep drinks, foods made with alcohol and products like hand sanitiser away from your cat, and call your vet if your cat swallows any.",
     "sl": "Ne. Že zelo majhna količina alkohola je lahko za mačke izjemno strupena, mačke pa so nanj še posebej občutljive. Pijače, hrano z alkoholom in izdelke, kot je razkužilo za roke, hranite stran od muce in pokličite veterinarja, če ga kaj zaužije.",
     "de": "Nein. Schon eine winzige Menge Alkohol kann für Katzen äußerst giftig sein, und Katzen reagieren besonders empfindlich darauf. Halten Sie Getränke, alkoholhaltige Speisen und Produkte wie Handdesinfektionsmittel von Ihrer Katze fern, und rufen Sie Ihren Tierarzt an, wenn Ihre Katze etwas davon verschluckt.",
-    "fr": "Non. Même une infime quantité d’alcool peut être extrêmement toxique pour un chat, et les chats y sont particulièrement sensibles. Tenez les boissons, les aliments contenant de l’alcool et les produits comme le gel hydroalcoolique hors de portée de votre chat, et appelez votre vétérinaire s’il en avale."
+    "fr": "Non. Même une infime quantité d’alcool peut être extrêmement toxique pour un chat, et les chats y sont particulièrement sensibles. Tenez les boissons, les aliments contenant de l’alcool et les produits comme le gel hydroalcoolique hors de portée de votre chat, et appelez votre vétérinaire s’il en avale.",
+    "es": "No. Incluso una cantidad mínima de alcohol puede ser extremadamente tóxica para los gatos, que son especialmente sensibles a él. Mantén las bebidas, los alimentos elaborados con alcohol y productos como el gel hidroalcohólico lejos de tu gato, y llama a tu veterinario si se traga algo."
   },
   "why": {
     "en": "All animals can get alcohol poisoning, but cats are especially sensitive. Alcohol is not only in drinks: it can also be in liqueur sweets, hand sanitiser, mouthwash and raw, rising bread dough. Signs usually appear quickly after a cat swallows it.",
     "sl": "Zastrupitev z alkoholom lahko doleti vse živali, mačke pa so še posebej občutljive. Alkohol ni le v pijačah: najdemo ga tudi v bonbonih z likerjem, razkužilu za roke, ustni vodici in surovem, vzhajajočem testu. Znaki se navadno pokažejo hitro po zaužitju.",
     "de": "Alle Tiere können eine Alkoholvergiftung bekommen, Katzen sind aber besonders empfindlich. Alkohol steckt nicht nur in Getränken, sondern auch in Likörpralinen, Handdesinfektionsmittel, Mundspülung und rohem, aufgehendem Brotteig. Die Anzeichen treten meist schnell auf, nachdem eine Katze ihn aufgenommen hat.",
-    "fr": "Tous les animaux peuvent être intoxiqués par l’alcool, mais les chats sont particulièrement sensibles. L’alcool ne se trouve pas que dans les boissons : il peut aussi être présent dans les bonbons à la liqueur, le gel hydroalcoolique, les bains de bouche et la pâte à pain crue en train de lever. Les signes apparaissent généralement vite après l’ingestion."
+    "fr": "Tous les animaux peuvent être intoxiqués par l’alcool, mais les chats sont particulièrement sensibles. L’alcool ne se trouve pas que dans les boissons : il peut aussi être présent dans les bonbons à la liqueur, le gel hydroalcoolique, les bains de bouche et la pâte à pain crue en train de lever. Les signes apparaissent généralement vite après l’ingestion.",
+    "es": "Todos los animales pueden sufrir una intoxicación por alcohol, pero los gatos son especialmente sensibles. El alcohol no está solo en las bebidas: también puede haberlo en los bombones de licor, el gel hidroalcohólico, el enjuague bucal y la masa de pan cruda en fermentación. Los signos suelen aparecer poco después de que el gato lo trague."
   },
   "signs": {
     "en": [
@@ -56,20 +61,28 @@
       "Difficultés à marcher, démarche chancelante",
       "Respiration lente",
       "Dans les cas graves : convulsions ou effondrement"
+    ],
+    "es": [
+      "Somnolencia o decaimiento inusuales",
+      "Dificultad para caminar, tambaleo",
+      "Respiración lenta",
+      "En casos graves: convulsiones o colapso"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away. Note what your cat swallowed, how much and when, and keep the bottle or packaging. Don't wait for signs to appear, and don't try to make your cat sick at home.",
     "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, kaj je muca zaužila, koliko in kdaj, ter shranite steklenico ali embalažo. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was Ihre Katze verschluckt hat, wie viel und wann, und bewahren Sie die Flasche oder Verpackung auf. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
-    "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce que votre chat a avalé, en quelle quantité et à quelle heure, et gardez la bouteille ou l’emballage. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même."
+    "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce que votre chat a avalé, en quelle quantité et à quelle heure, et gardez la bouteille ou l’emballage. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
+    "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué se ha tragado tu gato, cuánto y cuándo, y guarda la botella o el envase. No esperes a que aparezcan signos y no intentes provocarle el vómito en casa."
   },
   "serving": null,
   "child": {
     "en": "Grown-up drinks are never for cats. If kitty licks a glass or spilled drink, tell a grown-up right away.",
     "sl": "Pijače za odrasle niso nikoli za muce. Če muca poliže kozarec ali razlito pijačo, takoj povej odraslemu.",
     "de": "Getränke für Erwachsene sind nie etwas für Katzen. Wenn deine Katze an einem Glas oder an Verschüttetem leckt, sag sofort einem Erwachsenen Bescheid.",
-    "fr": "Les boissons des grands ne sont jamais pour les chats. Si ton chat lèche un verre ou une boisson renversée, préviens tout de suite un adulte."
+    "fr": "Les boissons des grands ne sont jamais pour les chats. Si ton chat lèche un verre ou une boisson renversée, préviens tout de suite un adulte.",
+    "es": "Las bebidas de los mayores nunca son para los gatos. Si tu gatito lame un vaso o una bebida derramada, avisa enseguida a un adulto."
   },
   "faq": [
     {
@@ -77,13 +90,15 @@
         "en": "Where else can alcohol hide?",
         "sl": "Kje vse se lahko skriva alkohol?",
         "de": "Wo kann sich Alkohol noch verstecken?",
-        "fr": "Où l’alcool peut-il encore se cacher ?"
+        "fr": "Où l’alcool peut-il encore se cacher ?",
+        "es": "¿Dónde más puede esconderse el alcohol?"
       },
       "a": {
         "en": "Besides drinks, alcohol can be found in liqueur sweets, hand sanitiser, mouthwash and raw, rising bread dough.",
         "sl": "Poleg pijač je alkohol lahko tudi v bonbonih z likerjem, razkužilu za roke, ustni vodici ter surovem, vzhajajočem testu.",
         "de": "Außer in Getränken kann Alkohol auch in Likörpralinen, Handdesinfektionsmittel, Mundspülung und rohem, aufgehendem Brotteig stecken.",
-        "fr": "En plus des boissons, on trouve de l’alcool dans les bonbons à la liqueur, le gel hydroalcoolique, les bains de bouche et la pâte à pain crue en train de lever."
+        "fr": "En plus des boissons, on trouve de l’alcool dans les bonbons à la liqueur, le gel hydroalcoolique, les bains de bouche et la pâte à pain crue en train de lever.",
+        "es": "Además de en las bebidas, puede haber alcohol en los bombones de licor, el gel hidroalcohólico, el enjuague bucal y la masa de pan cruda en fermentación."
       }
     }
   ],
@@ -176,6 +191,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5d98192359c9fa94b828b8ec0c36064cf0c6bfc8a724098e57f3363c2227b83b"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5175989614f12b3d1f4b18a479871d3281d1727b3ae82713e48fecd0ce0030a4"
     }
   }
 }

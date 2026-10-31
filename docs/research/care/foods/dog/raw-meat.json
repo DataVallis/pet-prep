@@ -5,32 +5,37 @@
     "en": "Raw meat",
     "sl": "Surovo meso",
     "de": "Rohes Fleisch",
-    "fr": "Viande crue"
+    "fr": "Viande crue",
+    "es": "Carne cruda"
   },
   "question": {
     "en": "Can dogs eat raw meat?",
     "sl": "Ali lahko psi jedo surovo meso?",
     "de": "Dürfen Hunde rohes Fleisch fressen?",
-    "fr": "Les chiens peuvent-ils manger de la viande crue ?"
+    "fr": "Les chiens peuvent-ils manger de la viande crue ?",
+    "es": "¿Pueden los perros comer carne cruda?"
   },
   "url_slug": {
     "en": "raw-meat",
     "sl": "surovo-meso",
     "de": "rohes-fleisch",
-    "fr": "viande-crue"
+    "fr": "viande-crue",
+    "es": "carne-cruda"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It is not recommended. Raw meat often carries bacteria such as Salmonella, Listeria and E. coli, which can make dogs ill and spread to people in the home, even when the dog looks healthy. Veterinary bodies such as the AVMA discourage raw feeding.",
     "sl": "Ni priporočljivo. Surovo meso pogosto prenaša bakterije, kot so salmonela, listerija in E. coli, ki lahko psu škodijo in se prenesejo na ljudi v domu, tudi če je pes videti zdrav. Veterinarske organizacije, kot je AVMA, odsvetujejo hranjenje s surovim.",
     "de": "Nicht empfohlen. Rohes Fleisch enthält oft Bakterien wie Salmonellen, Listerien und E. coli, die Hunde krank machen und sich auf Menschen im Haushalt übertragen können, selbst wenn der Hund gesund aussieht. Tierärztliche Fachverbände wie die AVMA raten von Rohfütterung ab.",
-    "fr": "C’est déconseillé. La viande crue contient souvent des bactéries comme les salmonelles, la listeria et E. coli, qui peuvent rendre les chiens malades et se transmettre aux personnes du foyer, même si le chien semble en bonne santé. Des organismes vétérinaires comme l’AVMA déconseillent l’alimentation crue."
+    "fr": "C’est déconseillé. La viande crue contient souvent des bactéries comme les salmonelles, la listeria et E. coli, qui peuvent rendre les chiens malades et se transmettre aux personnes du foyer, même si le chien semble en bonne santé. Des organismes vétérinaires comme l’AVMA déconseillent l’alimentation crue.",
+    "es": "No se recomienda. La carne cruda suele llevar bacterias como Salmonella, Listeria y E. coli, que pueden hacer enfermar a los perros y pasar a las personas de la casa, aunque el perro parezca sano. Organismos veterinarios como la AVMA desaconsejan la alimentación cruda."
   },
   "why": {
     "en": "Contamination of raw meat by bacteria is common. Dogs can carry these germs without signs and shed them in saliva and faeces, putting family members at risk, especially high-risk groups such as the young and the old. Raw pork can carry a parasite, raw bones can block the gut, and home-made raw diets are likely not balanced unless a nutritionist formulated the recipe.",
     "sl": "Surovo meso je pogosto okuženo z bakterijami. Psi lahko te klice nosijo brez znakov in jih izločajo s slino in iztrebki, kar ogroža družinske člane, posebej skupine z večjim tveganjem, kot so otroci in starejši. Surova svinjina lahko prenaša zajedavca, surove kosti lahko zamašijo črevesje, doma pripravljeni surovi obroki pa verjetno niso uravnoteženi, če recepta ni sestavil strokovnjak za prehrano.",
     "de": "Rohes Fleisch ist häufig mit Bakterien verunreinigt. Hunde können diese Keime ohne Anzeichen tragen und mit Speichel und Kot ausscheiden, was Familienmitglieder gefährdet, besonders Risikogruppen wie junge und alte Menschen. Rohes Schweinefleisch kann einen Parasiten übertragen, rohe Knochen können den Darm blockieren, und selbst zusammengestellte Rohfutterrationen sind wahrscheinlich nicht ausgewogen, sofern das Rezept nicht von einer Fachperson für Tierernährung erstellt wurde.",
-    "fr": "La contamination de la viande crue par des bactéries est fréquente. Les chiens peuvent porter ces germes sans aucun signe et les rejeter dans leur salive et leurs selles, ce qui met en danger les membres de la famille, en particulier les personnes à risque comme les jeunes enfants et les personnes âgées. Le porc cru peut transmettre un parasite, les os crus peuvent bloquer l’intestin, et les rations crues faites maison ne sont probablement pas équilibrées si la recette n’a pas été formulée par un nutritionniste."
+    "fr": "La contamination de la viande crue par des bactéries est fréquente. Les chiens peuvent porter ces germes sans aucun signe et les rejeter dans leur salive et leurs selles, ce qui met en danger les membres de la famille, en particulier les personnes à risque comme les jeunes enfants et les personnes âgées. Le porc cru peut transmettre un parasite, les os crus peuvent bloquer l’intestin, et les rations crues faites maison ne sont probablement pas équilibrées si la recette n’a pas été formulée par un nutritionniste.",
+    "es": "La contaminación de la carne cruda por bacterias es frecuente. Los perros pueden llevar estos gérmenes sin mostrar signos y eliminarlos con la saliva y las heces, lo que pone en riesgo a la familia, sobre todo a los grupos de riesgo como los niños pequeños y las personas mayores. El cerdo crudo puede llevar un parásito, los huesos crudos pueden obstruir el intestino y las dietas crudas caseras probablemente no estén equilibradas, salvo que la receta la haya formulado un nutricionista."
   },
   "signs": {
     "en": [
@@ -56,25 +61,34 @@
       "Diarrhée",
       "Manque d’énergie ou d’appétit",
       "Inconfort au ventre"
+    ],
+    "es": [
+      "Vómitos",
+      "Diarrea",
+      "Poca energía o poco apetito",
+      "Molestias en la barriga"
     ]
   },
   "what_to_do": {
     "en": "If your dog grabbed some raw meat, watch for vomiting, diarrhoea or low energy and call your vet if these are severe or don't stop. Wash your hands, bowls and surfaces thoroughly. Talk to your vet before changing your dog's diet.",
     "sl": "Če je pes zgrabil kos surovega mesa, opazujte, ali bruha, ima drisko ali je utrujen, in pokličite veterinarja, če so težave hude ali ne prenehajo. Temeljito umijte roke, sklede in površine. Pred spremembo prehrane se posvetujte z veterinarjem.",
     "de": "Wenn Ihr Hund rohes Fleisch stibitzt hat, achten Sie auf Erbrechen, Durchfall oder Mattigkeit und rufen Sie Ihren Tierarzt an, wenn diese stark ausgeprägt sind oder nicht aufhören. Waschen Sie Hände, Näpfe und Flächen gründlich. Sprechen Sie mit Ihrem Tierarzt, bevor Sie das Futter Ihres Hundes umstellen.",
-    "fr": "Si votre chien a chapardé de la viande crue, surveillez les vomissements, la diarrhée ou le manque d’énergie, et appelez votre vétérinaire s’ils sont importants ou ne s’arrêtent pas. Lavez soigneusement vos mains, les gamelles et les surfaces. Parlez-en à votre vétérinaire avant de changer l’alimentation de votre chien."
+    "fr": "Si votre chien a chapardé de la viande crue, surveillez les vomissements, la diarrhée ou le manque d’énergie, et appelez votre vétérinaire s’ils sont importants ou ne s’arrêtent pas. Lavez soigneusement vos mains, les gamelles et les surfaces. Parlez-en à votre vétérinaire avant de changer l’alimentation de votre chien.",
+    "es": "Si tu perro ha cogido carne cruda, vigila si tiene vómitos, diarrea o poca energía y llama a tu veterinario si son intensos o no se pasan. Lávate bien las manos y lava los cuencos y las superficies. Habla con tu veterinario antes de cambiar la dieta de tu perro."
   },
   "serving": {
     "en": "Share meat only fully cooked, plain and boneless.",
     "sl": "Meso delite samo popolnoma kuhano, navadno in brez kosti.",
     "de": "Fleisch nur vollständig durchgegart, ungewürzt und ohne Knochen teilen.",
-    "fr": "Ne partagez de la viande que bien cuite, nature et sans os."
+    "fr": "Ne partagez de la viande que bien cuite, nature et sans os.",
+    "es": "Comparte carne solo bien cocinada, sin nada y sin huesos."
   },
   "child": {
     "en": "Raw meat can have germs. Dogs should only get cooked meat from people food, and everyone washes hands after touching raw meat.",
     "sl": "Surovo meso ima lahko klice. Psi naj od človeške hrane dobijo samo kuhano meso, po dotiku surovega mesa pa si vsi umijemo roke.",
     "de": "Rohes Fleisch kann Keime haben. Hunde sollten vom Essen der Menschen nur gekochtes Fleisch bekommen, und alle waschen sich die Hände, wenn sie rohes Fleisch angefasst haben.",
-    "fr": "La viande crue peut avoir des microbes. Quand on partage, un chien n’a droit qu’à la viande cuite. Chacun se lave les mains après avoir touché de la viande crue."
+    "fr": "La viande crue peut avoir des microbes. Quand on partage, un chien n’a droit qu’à la viande cuite. Chacun se lave les mains après avoir touché de la viande crue.",
+    "es": "La carne cruda puede tener gérmenes. De la comida de las personas, los perros solo pueden comer carne cocinada, y todos se lavan las manos después de tocar carne cruda."
   },
   "faq": [
     {
@@ -82,13 +96,15 @@
         "en": "My dog seems fine on raw food. Is there still a risk?",
         "sl": "Pes se s surovo hrano zdi v redu. Ali tveganje še obstaja?",
         "de": "Meinem Hund scheint Rohfutter gut zu bekommen. Gibt es trotzdem ein Risiko?",
-        "fr": "Mon chien semble aller bien avec une alimentation crue. Y a-t-il quand même un risque ?"
+        "fr": "Mon chien semble aller bien avec une alimentation crue. Y a-t-il quand même un risque ?",
+        "es": "Mi perro parece estar bien con comida cruda. ¿Sigue habiendo riesgo?"
       },
       "a": {
         "en": "Yes. Apparently healthy dogs can carry these bacteria and shed them, which can harm people in the home.",
         "sl": "Da. Navidez zdravi psi lahko te bakterije nosijo in izločajo, kar lahko škodi ljudem v domu.",
         "de": "Ja. Auch scheinbar gesunde Hunde können diese Bakterien tragen und ausscheiden, was Menschen im Haushalt schaden kann.",
-        "fr": "Oui. Des chiens apparemment en bonne santé peuvent porter ces bactéries et les rejeter, ce qui peut nuire aux personnes du foyer."
+        "fr": "Oui. Des chiens apparemment en bonne santé peuvent porter ces bactéries et les rejeter, ce qui peut nuire aux personnes du foyer.",
+        "es": "Sí. Los perros aparentemente sanos pueden llevar estas bacterias y eliminarlas, lo que puede hacer daño a las personas de la casa."
       }
     },
     {
@@ -96,13 +112,15 @@
         "en": "Is freeze-dried raw food safer?",
         "sl": "Je zamrznjeno sušena surova hrana varnejša?",
         "de": "Ist gefriergetrocknetes Rohfutter sicherer?",
-        "fr": "L’alimentation crue lyophilisée est-elle plus sûre ?"
+        "fr": "L’alimentation crue lyophilisée est-elle plus sûre ?",
+        "es": "¿Es más segura la comida cruda liofilizada?"
       },
       "a": {
         "en": "Not for germs: freeze-drying is not equivalent to cooking when it comes to bacteria and parasites.",
         "sl": "Glede klic ne: zamrzovalno sušenje ni enakovredno kuhanju, kar zadeva bakterije in zajedavce.",
         "de": "Nicht, was Keime angeht: Gefriertrocknen ist bei Bakterien und Parasiten nicht gleichwertig mit Kochen.",
-        "fr": "Pas pour les germes : face aux bactéries et aux parasites, la lyophilisation n’équivaut pas à la cuisson."
+        "fr": "Pas pour les germes : face aux bactéries et aux parasites, la lyophilisation n’équivaut pas à la cuisson.",
+        "es": "No en cuanto a gérmenes: en lo que respecta a bacterias y parásitos, liofilizar no equivale a cocinar."
       }
     }
   ],
@@ -209,6 +227,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "366c44a359bd57eec604a303b75014c46aec52274fae7dfe09650ffa1e4e2a2d"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "504fbecd87d73543b3e8e746af0619d005ed2cf8d6e142b43d08fd6f6f1bf44a"
     }
   }
 }

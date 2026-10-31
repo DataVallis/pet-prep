@@ -5,32 +5,37 @@
     "en": "Raw yeast dough",
     "sl": "Surovo kvašeno testo",
     "de": "Roher Hefeteig",
-    "fr": "Pâte à pain crue"
+    "fr": "Pâte à pain crue",
+    "es": "Masa cruda con levadura"
   },
   "question": {
     "en": "Can cats eat raw yeast dough?",
     "sl": "Ali lahko mačke jedo surovo kvašeno testo?",
     "de": "Dürfen Katzen rohen Hefeteig fressen?",
-    "fr": "Les chats peuvent-ils manger de la pâte à pain crue ?"
+    "fr": "Les chats peuvent-ils manger de la pâte à pain crue ?",
+    "es": "¿Pueden los gatos comer masa cruda con levadura?"
   },
   "url_slug": {
     "en": "raw-yeast-dough",
     "sl": "surovo-kvaseno-testo",
     "de": "roher-hefeteig",
-    "fr": "pate-a-pain-crue"
+    "fr": "pate-a-pain-crue",
+    "es": "masa-cruda-con-levadura"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Raw yeast dough is dangerous for cats in two ways: it can keep expanding in the stomach and cause a blockage, and the yeast makes alcohol, which is toxic to cats. Keep rising dough out of reach and call your vet if your cat eats any.",
     "sl": "Ne. Surovo kvašeno testo je za mačke nevarno na dva načina: v želodcu lahko še naprej narašča in povzroči zaporo, kvas pa tvori alkohol, ki je za mačke strupen. Vzhajajoče testo postavite izven dosega in pokličite veterinarja, če ga muca poje.",
     "de": "Nein. Roher Hefeteig ist für Katzen auf zwei Arten gefährlich: Er kann im Magen weiter aufgehen und eine Blockade verursachen, und die Hefe bildet Alkohol, der für Katzen giftig ist. Stellen Sie aufgehenden Teig außer Reichweite und rufen Sie Ihren Tierarzt an, wenn Ihre Katze davon frisst.",
-    "fr": "Non. La pâte crue à la levure est doublement dangereuse pour les chats : elle peut continuer à gonfler dans l’estomac et provoquer une occlusion, et la levure produit de l’alcool, toxique pour les chats. Gardez la pâte qui lève hors de portée et appelez votre vétérinaire si votre chat en mange."
+    "fr": "Non. La pâte crue à la levure est doublement dangereuse pour les chats : elle peut continuer à gonfler dans l’estomac et provoquer une occlusion, et la levure produit de l’alcool, toxique pour les chats. Gardez la pâte qui lève hors de portée et appelez votre vétérinaire si votre chat en mange.",
+    "es": "No. La masa cruda con levadura es peligrosa para los gatos por dos motivos: puede seguir creciendo en el estómago y causar una obstrucción, y la levadura produce alcohol, que es tóxico para los gatos. Mantén la masa que está subiendo fuera de su alcance y llama a tu veterinario si tu gato se come un poco."
   },
   "why": {
     "en": "Raw dough contains some alcohol and produces carbon dioxide. Once swallowed, the yeast keeps working in the stomach: the dough expands and can cause an obstruction, while the alcohol it produces is absorbed into the blood. Cats are especially sensitive to alcohol.",
     "sl": "Surovo testo vsebuje nekaj alkohola in tvori ogljikov dioksid. Ko ga žival poje, kvas v želodcu deluje naprej: testo se širi in lahko povzroči zaporo, nastali alkohol pa se vsrka v kri. Mačke so na alkohol še posebej občutljive.",
     "de": "Roher Teig enthält etwas Alkohol und bildet Kohlendioxid. Nach dem Verschlucken arbeitet die Hefe im Magen weiter: Der Teig dehnt sich aus und kann einen Verschluss verursachen, während der entstehende Alkohol ins Blut aufgenommen wird. Katzen reagieren besonders empfindlich auf Alkohol.",
-    "fr": "La pâte crue contient un peu d’alcool et produit du dioxyde de carbone. Une fois avalée, la levure continue d’agir dans l’estomac : la pâte gonfle et peut provoquer une obstruction, tandis que l’alcool produit passe dans le sang. Les chats sont particulièrement sensibles à l’alcool."
+    "fr": "La pâte crue contient un peu d’alcool et produit du dioxyde de carbone. Une fois avalée, la levure continue d’agir dans l’estomac : la pâte gonfle et peut provoquer une obstruction, tandis que l’alcool produit passe dans le sang. Les chats sont particulièrement sensibles à l’alcool.",
+    "es": "La masa cruda contiene algo de alcohol y produce dióxido de carbono. Una vez tragada, la levadura sigue actuando en el estómago: la masa crece y puede causar una obstrucción, mientras que el alcohol que produce pasa a la sangre. Los gatos son especialmente sensibles al alcohol."
   },
   "signs": {
     "en": [
@@ -56,20 +61,28 @@
       "Efforts pour vomir sans rien rejeter",
       "Démarche chancelante ou air désorienté",
       "Faiblesse ou somnolence inhabituelles"
+    ],
+    "es": [
+      "Barriga hinchada y distendida",
+      "Intenta vomitar sin expulsar nada",
+      "Camina tambaleándose o parece desorientado",
+      "Debilidad o somnolencia fuera de lo normal"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away. Note how much dough your cat ate and when. Don't wait for signs to appear, and don't try to make your cat sick at home.",
     "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, koliko testa je muca pojedla in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, wie viel Teig Ihre Katze gefressen hat und wann. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
-    "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez la quantité de pâte mangée et l’heure. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même."
+    "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez la quantité de pâte mangée et l’heure. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
+    "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Anota cuánta masa ha comido tu gato y cuándo. No esperes a que aparezcan síntomas y no intentes hacer vomitar a tu gato en casa."
   },
   "serving": null,
   "child": {
     "en": "Bread dough needs to rise in a bowl, not in a tummy. Keep dough away from kitty and tell a grown-up if she eats some.",
     "sl": "Testo mora vzhajati v skledi, ne v trebuščku. Naj bo daleč od muce. Če ga poje, povej odraslemu.",
     "de": "Brotteig soll in einer Schüssel aufgehen, nicht im Bauch. Halte Teig von deiner Katze fern und sag einem Erwachsenen Bescheid, wenn sie davon frisst.",
-    "fr": "La pâte à pain doit lever dans un saladier, pas dans un ventre ! Garde la pâte loin de ton chat et préviens un adulte s’il en mange."
+    "fr": "La pâte à pain doit lever dans un saladier, pas dans un ventre ! Garde la pâte loin de ton chat et préviens un adulte s’il en mange.",
+    "es": "La masa de pan tiene que subir en un bol, no en una barriga. Mantenla lejos de tu gato y avisa a un adulto si se come un poco."
   },
   "faq": [
     {
@@ -77,13 +90,15 @@
         "en": "Why is raw dough dangerous if it's not a poison itself?",
         "sl": "Zakaj je surovo testo nevarno, če samo po sebi ni strup?",
         "de": "Warum ist roher Teig gefährlich, wenn er selbst kein Gift ist?",
-        "fr": "Pourquoi la pâte crue est-elle dangereuse si ce n’est pas un poison en soi ?"
+        "fr": "Pourquoi la pâte crue est-elle dangereuse si ce n’est pas un poison en soi ?",
+        "es": "¿Por qué es peligrosa la masa cruda si no es un veneno en sí misma?"
       },
       "a": {
         "en": "Raw dough contains live yeast. In the stomach it keeps rising and producing alcohol, so it can both cause a blockage and lead to alcohol poisoning.",
         "sl": "Surovo testo vsebuje živ kvas. V želodcu še naprej vzhaja in tvori alkohol, zato lahko povzroči zaporo in tudi zastrupitev z alkoholom.",
         "de": "Roher Teig enthält lebende Hefe. Im Magen geht er weiter auf und bildet Alkohol. So kann er sowohl eine Blockade als auch eine Alkoholvergiftung verursachen.",
-        "fr": "La pâte crue contient de la levure vivante. Dans l’estomac, elle continue de lever et de produire de l’alcool : elle peut donc à la fois provoquer une occlusion et entraîner une intoxication à l’alcool."
+        "fr": "La pâte crue contient de la levure vivante. Dans l’estomac, elle continue de lever et de produire de l’alcool : elle peut donc à la fois provoquer une occlusion et entraîner une intoxication à l’alcool.",
+        "es": "La masa cruda contiene levadura viva. En el estómago sigue subiendo y produciendo alcohol, así que puede causar una obstrucción y también una intoxicación por alcohol."
       }
     }
   ],
@@ -171,6 +186,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8382c1e51bebb7ca1ad968bf0fdec850a65143dd8fb139a3bc11c6837146edb4"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2d8f0bf4f239954850fe4aa817053c87f3d541ab070973230e7bf0c95818c871"
     }
   }
 }

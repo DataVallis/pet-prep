@@ -5,32 +5,37 @@
     "en": "Potato chips (crisps)",
     "sl": "Čips",
     "de": "Kartoffelchips",
-    "fr": "Chips"
+    "fr": "Chips",
+    "es": "Patatas fritas de bolsa"
   },
   "question": {
     "en": "Can dogs eat chips?",
     "sl": "Ali lahko psi jedo čips?",
     "de": "Dürfen Hunde Chips fressen?",
-    "fr": "Les chiens peuvent-ils manger des chips ?"
+    "fr": "Les chiens peuvent-ils manger des chips ?",
+    "es": "¿Pueden los perros comer patatas fritas?"
   },
   "url_slug": {
     "en": "chips",
     "sl": "cips",
     "de": "chips",
-    "fr": "chips"
+    "fr": "chips",
+    "es": "patatas-fritas"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Not recommended. A few potato chips are unlikely to cause salt poisoning, but chips are salty and excessive salty food is not good for dogs, especially those with heart problems. Onion- or garlic-flavoured chips add a further risk, because onion and garlic are toxic to dogs.",
     "sl": "Ni priporočljivo. Nekaj čipsa verjetno ne povzroči zastrupitve s soljo, a čips je slan, preveč slane hrane pa psom ne koristi, zlasti tistim s srčnimi težavami. Čips z okusom čebule ali česna je še bolj tvegan, ker sta čebula in česen za pse strupena.",
     "de": "Nicht empfohlen. Ein paar Kartoffelchips lösen wahrscheinlich keine Salzvergiftung aus, aber Chips sind salzig, und zu viel salziges Essen ist nicht gut für Hunde, besonders bei Herzproblemen. Chips mit Zwiebel- oder Knoblauchgeschmack bergen ein zusätzliches Risiko, denn Zwiebeln und Knoblauch sind für Hunde giftig.",
-    "fr": "Déconseillé. Quelques chips ont peu de chances de provoquer une intoxication au sel, mais elles sont salées, et manger trop d’aliments salés n’est pas bon pour les chiens, surtout ceux qui ont des problèmes cardiaques. Les chips à l’oignon ou à l’ail ajoutent un risque, car l’oignon et l’ail sont toxiques pour les chiens."
+    "fr": "Déconseillé. Quelques chips ont peu de chances de provoquer une intoxication au sel, mais elles sont salées, et manger trop d’aliments salés n’est pas bon pour les chiens, surtout ceux qui ont des problèmes cardiaques. Les chips à l’oignon ou à l’ail ajoutent un risque, car l’oignon et l’ail sont toxiques pour les chiens.",
+    "es": "No se recomiendan. Es poco probable que unas pocas patatas fritas causen una intoxicación por sal, pero son saladas, y el exceso de sal no es bueno para los perros, sobre todo si tienen problemas de corazón. Las de sabor a cebolla o ajo añaden otro riesgo: la cebolla y el ajo son tóxicos para los perros."
   },
   "why": {
     "en": "AKC says a dog can have salty foods like potato chips in limited amounts, but excess salt is not good for dogs and can cause fluid retention. Large amounts of salt can lead to salt poisoning. Onion and garlic are toxic to dogs in every form, including powders.",
     "sl": "AKC pravi, da lahko pes slano hrano, kot je čips, je v omejenih količinah, a presežek soli psom ne koristi in lahko povzroči zastajanje tekočine. Velike količine soli lahko vodijo v zastrupitev s soljo. Čebula in česen sta za pse strupena v vseh oblikah, tudi v prahu.",
     "de": "Laut AKC darf ein Hund salzige Lebensmittel wie Kartoffelchips in begrenzten Mengen bekommen, aber zu viel Salz ist nicht gut für Hunde und kann zu Wassereinlagerungen führen. Große Mengen Salz können eine Salzvergiftung verursachen. Zwiebeln und Knoblauch sind für Hunde in jeder Form giftig, auch als Pulver.",
-    "fr": "Selon l’AKC, un chien peut manger des aliments salés comme les chips en quantité limitée, mais l’excès de sel n’est pas bon pour lui et peut provoquer une rétention d’eau. De grandes quantités de sel peuvent entraîner une intoxication au sel. L’oignon et l’ail sont toxiques pour les chiens sous toutes leurs formes, y compris en poudre."
+    "fr": "Selon l’AKC, un chien peut manger des aliments salés comme les chips en quantité limitée, mais l’excès de sel n’est pas bon pour lui et peut provoquer une rétention d’eau. De grandes quantités de sel peuvent entraîner une intoxication au sel. L’oignon et l’ail sont toxiques pour les chiens sous toutes leurs formes, y compris en poudre.",
+    "es": "Según el AKC, un perro puede comer alimentos salados como las patatas fritas en cantidades limitadas, pero el exceso de sal no es bueno para los perros y puede hacer que retengan líquidos. Las cantidades grandes de sal pueden provocar una intoxicación por sal. La cebolla y el ajo son tóxicos para los perros en cualquier forma, también en polvo."
   },
   "signs": {
     "en": [
@@ -60,20 +65,29 @@
       "Diarrhée",
       "Démarche titubante, fatigue",
       "Tremblements ou convulsions"
+    ],
+    "es": [
+      "Mucha sed y orinar mucho",
+      "Vómitos, a menudo en pocas horas",
+      "Diarrea",
+      "Tambaleo, cansancio",
+      "Temblores o convulsiones"
     ]
   },
   "what_to_do": {
     "en": "If your dog ate a lot of chips, especially onion- or garlic-flavoured ones, contact your vet or a pet poison helpline. Note the flavour and roughly how much was eaten.",
     "sl": "Če je pes pojedel veliko čipsa, zlasti z okusom čebule ali česna, pokličite veterinarja ali center za zastrupitve živali. Zapišite si okus in približno koliko je pojedel.",
     "de": "Wenn Ihr Hund viele Chips gefressen hat, besonders solche mit Zwiebel- oder Knoblauchgeschmack, wenden Sie sich an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie die Geschmacksrichtung und ungefähr die Menge.",
-    "fr": "Si votre chien a mangé beaucoup de chips, surtout à l’oignon ou à l’ail, contactez votre vétérinaire ou un centre antipoison vétérinaire. Notez le parfum et la quantité approximative."
+    "fr": "Si votre chien a mangé beaucoup de chips, surtout à l’oignon ou à l’ail, contactez votre vétérinaire ou un centre antipoison vétérinaire. Notez le parfum et la quantité approximative.",
+    "es": "Si tu perro ha comido muchas patatas fritas, sobre todo con sabor a cebolla o a ajo, contacta con tu veterinario o con una línea de información toxicológica para animales. Apunta el sabor y más o menos cuántas ha comido."
   },
   "serving": null,
   "child": {
     "en": "Chips are a salty people snack. They are not good for dogs, so keep the bag closed and give your dog its own treat.",
     "sl": "Čips je slan prigrizek za ljudi. Psom ne koristi, zato vrečko zapri in psu daj njegov priboljšek.",
     "de": "Chips sind ein salziger Snack für Menschen. Sie sind nicht gut für Hunde. Lass die Tüte zu und gib deinem Hund sein eigenes Leckerli.",
-    "fr": "Les chips sont un en-cas salé pour les humains. Elles ne sont pas bonnes pour les chiens : ferme bien le paquet et donne à ton chien sa propre friandise."
+    "fr": "Les chips sont un en-cas salé pour les humains. Elles ne sont pas bonnes pour les chiens : ferme bien le paquet et donne à ton chien sa propre friandise.",
+    "es": "Las patatas fritas de bolsa son un tentempié salado para personas. No son buenas para los perros, así que cierra la bolsa y dale a tu perro su propio premio."
   },
   "faq": [
     {
@@ -81,13 +95,15 @@
         "en": "Are flavoured chips worse?",
         "sl": "Je čips z okusom slabši?",
         "de": "Sind Chips mit Geschmack schlimmer?",
-        "fr": "Les chips aromatisées sont-elles pires ?"
+        "fr": "Les chips aromatisées sont-elles pires ?",
+        "es": "¿Las patatas fritas con sabores son peores?"
       },
       "a": {
         "en": "They can be. Onion and garlic are toxic to dogs in every form, including powders, so check the flavour.",
         "sl": "Lahko je. Čebula in česen sta za pse strupena v vseh oblikah, tudi v prahu, zato preverite okus.",
         "de": "Das können sie sein. Zwiebeln und Knoblauch sind für Hunde in jeder Form giftig, auch als Pulver – prüfen Sie also die Geschmacksrichtung.",
-        "fr": "Elles peuvent l’être. L’oignon et l’ail sont toxiques pour les chiens sous toutes leurs formes, y compris en poudre : vérifiez le parfum."
+        "fr": "Elles peuvent l’être. L’oignon et l’ail sont toxiques pour les chiens sous toutes leurs formes, y compris en poudre : vérifiez le parfum.",
+        "es": "Pueden serlo. La cebolla y el ajo son tóxicos para los perros en cualquier forma, también en polvo, así que mira el sabor."
       }
     }
   ],
@@ -180,6 +196,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "92e79797307797f6363be23a6aefc400645d284a2a40d85ead3027ba08e25afa"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "80ba5c74e4f8565b4c9085446bc491dcd336fcf1cfdb891afd683a76183d77be"
     }
   }
 }

@@ -5,32 +5,37 @@
     "en": "Corn cob",
     "sl": "Koruzni storž",
     "de": "Maiskolben",
-    "fr": "Épi de maïs"
+    "fr": "Épi de maïs",
+    "es": "Mazorca de maíz"
   },
   "question": {
     "en": "Can dogs eat corn cobs?",
     "sl": "Ali lahko psi jedo koruzne storže?",
     "de": "Dürfen Hunde Maiskolben fressen?",
-    "fr": "Les chiens peuvent-ils manger des épis de maïs ?"
+    "fr": "Les chiens peuvent-ils manger des épis de maïs ?",
+    "es": "¿Pueden los perros comer mazorcas de maíz?"
   },
   "url_slug": {
     "en": "corn-cob",
     "sl": "koruzni-storz",
     "de": "maiskolben",
-    "fr": "epi-de-mais"
+    "fr": "epi-de-mais",
+    "es": "mazorca-de-maiz"
   },
   "level": "dangerous",
   "answer": {
     "en": "No. Never give a dog corn on the cob. Dogs may swallow pieces or even the whole cob, which can cause choking or a serious intestinal blockage that may need emergency treatment. Plain corn kernels off the cob are a different matter.",
     "sl": "Ne. Psu nikoli ne dajajte koruze na storžu. Psi lahko pogoltnejo kose ali celo cel storž, kar lahko povzroči dušenje ali resno zaporo črevesja, ki lahko zahteva nujno zdravljenje. Navadna koruzna zrnca brez storža so nekaj drugega.",
     "de": "Nein. Geben Sie einem Hund niemals Maiskolben. Hunde können Stücke oder sogar den ganzen Kolben verschlucken – das kann zum Ersticken oder zu einem gefährlichen Darmverschluss führen, der eine Notfallbehandlung erfordern kann. Vom Kolben gelöste Maiskörner ohne Zusätze sind etwas anderes.",
-    "fr": "Non. Ne donnez jamais d’épi de maïs à un chien. Les chiens peuvent en avaler des morceaux, voire l’épi entier, ce qui peut provoquer un étouffement ou une grave obstruction intestinale nécessitant parfois un traitement d’urgence. Les grains de maïs nature, détachés de l’épi, c’est une autre histoire."
+    "fr": "Non. Ne donnez jamais d’épi de maïs à un chien. Les chiens peuvent en avaler des morceaux, voire l’épi entier, ce qui peut provoquer un étouffement ou une grave obstruction intestinale nécessitant parfois un traitement d’urgence. Les grains de maïs nature, détachés de l’épi, c’est une autre histoire.",
+    "es": "No. Nunca le des a un perro maíz en mazorca. Los perros pueden tragarse trozos o incluso la mazorca entera, lo que puede provocar atragantamiento o una obstrucción intestinal grave que puede requerir tratamiento de urgencia. Los granos de maíz naturales, ya desgranados, son otra cosa."
   },
   "why": {
     "en": "Swallowed pieces can block the intestines; in one reported case the blockage restricted the blood supply, and emergency treatment may be needed. Plain kernels in moderation are generally safe; the cob is the danger.",
     "sl": "Pogoltnjeni kosi lahko zamašijo črevesje; v enem opisanem primeru je zapora ovirala prekrvavitev, potrebno pa je lahko nujno zdravljenje. Navadna zrnca so v zmernih količinah na splošno varna; nevaren je storž.",
     "de": "Verschluckte Stücke können den Darm blockieren; in einem dokumentierten Fall drosselte der Verschluss die Blutversorgung, und eine Notfallbehandlung kann nötig sein. Maiskörner ohne Zusätze sind in Maßen im Allgemeinen unbedenklich – gefährlich ist der Kolben.",
-    "fr": "Des morceaux avalés peuvent bloquer l’intestin ; dans un cas rapporté, l’obstruction a réduit l’irrigation sanguine, et un traitement d’urgence peut être nécessaire. Les grains nature, avec modération, sont généralement sans danger ; c’est l’épi qui est dangereux."
+    "fr": "Des morceaux avalés peuvent bloquer l’intestin ; dans un cas rapporté, l’obstruction a réduit l’irrigation sanguine, et un traitement d’urgence peut être nécessaire. Les grains nature, avec modération, sont généralement sans danger ; c’est l’épi qui est dangereux.",
+    "es": "Los trozos tragados pueden obstruir el intestino; en un caso descrito, la obstrucción reducía el riego sanguíneo, y puede hacer falta un tratamiento de urgencia. Los granos naturales con moderación suelen ser seguros; el peligro es la mazorca."
   },
   "signs": {
     "en": [
@@ -60,20 +65,29 @@
       "Fatigue et baisse d’activité",
       "Diarrhée",
       "Déshydratation"
+    ],
+    "es": [
+      "Vómitos repetidos",
+      "No quiere comer",
+      "Cansancio y menos actividad",
+      "Diarrea",
+      "Deshidratación"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet right away if your dog swallowed a corn cob or part of one, even if it seems fine. Note when it happened and roughly how much was eaten. Don't wait for signs of a blockage.",
     "sl": "Takoj pokličite veterinarja, če je pes pogoltnil koruzni storž ali njegov del, tudi če se zdi v redu. Zapišite si, kdaj se je to zgodilo in približno koliko je pojedel. Ne čakajte na znake zapore.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt, wenn Ihr Hund einen Maiskolben oder ein Stück davon verschluckt hat, auch wenn er unauffällig wirkt. Notieren Sie, wann es passiert ist und ungefähr wie viel gefressen wurde. Warten Sie nicht auf Anzeichen eines Darmverschlusses.",
-    "fr": "Contactez immédiatement votre vétérinaire si votre chien a avalé un épi de maïs ou un morceau d’épi, même s’il semble aller bien. Notez quand c’est arrivé et en quelle quantité approximative. N’attendez pas les signes d’une obstruction."
+    "fr": "Contactez immédiatement votre vétérinaire si votre chien a avalé un épi de maïs ou un morceau d’épi, même s’il semble aller bien. Notez quand c’est arrivé et en quelle quantité approximative. N’attendez pas les signes d’une obstruction.",
+    "es": "Contacta enseguida con tu veterinario si tu perro se ha tragado una mazorca de maíz o parte de ella, aunque parezca estar bien. Apunta cuándo ha pasado y más o menos cuánto ha comido. No esperes a que aparezcan signos de obstrucción."
   },
   "serving": null,
   "child": {
     "en": "Corn cobs can get stuck in a dog's tummy. Put cobs straight in a closed bin, and tell a grown-up if your dog eats one.",
     "sl": "Koruzni storži se lahko psu zataknejo v trebuščku. Storže takoj daj v zaprt koš in povej odraslemu, če ga pes poje.",
     "de": "Maiskolben können im Bauch eines Hundes stecken bleiben. Wirf Kolben gleich in einen geschlossenen Mülleimer und sag einem Erwachsenen Bescheid, wenn dein Hund einen frisst.",
-    "fr": "Les épis de maïs peuvent rester coincés dans le ventre d’un chien. Jette-les tout de suite dans une poubelle fermée et préviens un adulte si ton chien en mange un."
+    "fr": "Les épis de maïs peuvent rester coincés dans le ventre d’un chien. Jette-les tout de suite dans une poubelle fermée et préviens un adulte si ton chien en mange un.",
+    "es": "Las mazorcas se pueden quedar atascadas en la barriga de un perro. Tíralas enseguida a una basura con tapa y avisa a un adulto si tu perro se come una."
   },
   "faq": [
     {
@@ -81,13 +95,15 @@
         "en": "Can dogs eat corn kernels?",
         "sl": "Lahko psi jedo koruzna zrnca?",
         "de": "Dürfen Hunde Maiskörner fressen?",
-        "fr": "Les chiens peuvent-ils manger des grains de maïs ?"
+        "fr": "Les chiens peuvent-ils manger des grains de maïs ?",
+        "es": "¿Pueden los perros comer granos de maíz?"
       },
       "a": {
         "en": "Plain corn kernels are generally safe for dogs in moderation. It's the cob that is dangerous.",
         "sl": "Navadna koruzna zrnca so za pse v zmernih količinah na splošno varna. Nevaren je storž.",
         "de": "Maiskörner ohne Zusätze sind für Hunde in Maßen im Allgemeinen unbedenklich. Gefährlich ist der Kolben.",
-        "fr": "Les grains de maïs nature sont généralement sans danger pour les chiens avec modération. C’est l’épi qui est dangereux."
+        "fr": "Les grains de maïs nature sont généralement sans danger pour les chiens avec modération. C’est l’épi qui est dangereux.",
+        "es": "Los granos de maíz naturales suelen ser seguros para los perros con moderación. Lo peligroso es la mazorca."
       }
     },
     {
@@ -95,13 +111,15 @@
         "en": "Will a corn cob pass on its own?",
         "sl": "Bo storž prešel sam od sebe?",
         "de": "Geht ein Maiskolben von allein ab?",
-        "fr": "Un épi de maïs finira-t-il par passer tout seul ?"
+        "fr": "Un épi de maïs finira-t-il par passer tout seul ?",
+        "es": "¿Una mazorca de maíz saldrá sola?"
       },
       "a": {
         "en": "Don't wait to find out. A swallowed cob can cause a serious blockage, so contact your vet straight away.",
         "sl": "Ne čakajte, da bi to ugotovili. Pogoltnjen storž lahko povzroči resno zaporo, zato takoj pokličite veterinarja.",
         "de": "Warten Sie das nicht ab. Ein verschluckter Kolben kann einen gefährlichen Darmverschluss verursachen – wenden Sie sich sofort an Ihren Tierarzt.",
-        "fr": "N’attendez pas de le savoir. Un épi avalé peut provoquer une grave obstruction : contactez immédiatement votre vétérinaire."
+        "fr": "N’attendez pas de le savoir. Un épi avalé peut provoquer une grave obstruction : contactez immédiatement votre vétérinaire.",
+        "es": "No esperes para comprobarlo. Una mazorca tragada puede causar una obstrucción grave, así que contacta enseguida con tu veterinario."
       }
     }
   ],
@@ -193,6 +211,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "48b1e8b31786d0c5cb73be6a717b5ac3366970da511a64bfea6aa7f66b6d4f52"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "03e2f575fe19b30a58ad388db2f6c83facb2bca80ee8788bc830bd980fa1d5cd"
     }
   }
 }
