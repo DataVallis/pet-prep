@@ -1,0 +1,113 @@
+{
+  "slug": "turkey",
+  "species": "cat",
+  "name": {
+    "en": "Turkey",
+    "sl": "Puran"
+  },
+  "question": {
+    "en": "Can cats eat turkey?",
+    "sl": "Ali lahko mačke jedo puranje meso?"
+  },
+  "url_slug": {
+    "en": "turkey",
+    "sl": "puran"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a little plain cooked turkey is fine as an occasional treat. Remove bones and skin and skip seasoning, stuffing and gravy. Turkey on its own isn't a complete diet.",
+    "sl": "Da, malo navadnega kuhanega puranjega mesa je v redu kot občasen priboljšek. Odstranite kosti in kožo ter izpustite začimbe, nadev in omako. Puran sam po sebi ni popolna prehrana."
+  },
+  "why": {
+    "en": "Cats Protection says plain cooked turkey is fine as an occasional treat but shouldn't be given regularly, as turkey alone lacks nutrients cats need. Turkey skin is high in fat and can cause digestive upset or even pancreatitis, and roast skin may carry garlic or herbs. Turkey bones can splinter and cause choking or blockages.",
+    "sl": "Cats Protection navaja, da je navaden kuhan puran v redu kot občasen priboljšek, ne pa redno, ker puran sam ne vsebuje vseh hranil, ki jih mačke potrebujejo. Puranja koža ima veliko maščob in lahko povzroči prebavne težave ali celo pankreatitis, pečena koža pa ima lahko česen ali zelišča. Puranje kosti se lahko razcepijo in povzročijo dušenje ali zamašitev."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Offer a small piece first. If your cat gets vomiting or diarrhoea afterwards, stop and ask your vet. If your cat ate turkey bones, stuffing or gravy with onion or garlic, call your vet straight away.",
+    "sl": "Najprej ponudite majhen košček. Če ima mačka potem bruhanje ali drisko, prenehajte in se posvetujte z veterinarjem. Če je mačka pojedla puranje kosti, nadev ali omako s čebulo ali česnom, takoj pokličite veterinarja."
+  },
+  "serving": {
+    "en": "Plain cooked meat with no bones, skin or seasoning; a small amount, counted in the daily food.",
+    "sl": "Navadno kuhano meso brez kosti, kože in začimb; majhna količina, upoštevana v dnevnem obroku."
+  },
+  "child": {
+    "en": "A little plain turkey with no bones can be a cat treat. The skin and gravy stay on your plate.",
+    "sl": "Malo navadnega purana brez kosti je lahko priboljšek za mucke. Koža in omaka ostaneta na tvojem krožniku."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can cats have turkey skin?",
+        "sl": "Ali lahko mačke jedo puranjo kožo?"
+      },
+      "a": {
+        "en": "It's best not to. Turkey skin is high in fat and can cause digestive upset or even pancreatitis, and it may have touched seasoning or garlic.",
+        "sl": "Bolje ne. Puranja koža ima veliko maščob in lahko povzroči prebavne težave ali celo pankreatitis, lahko pa je prišla v stik z začimbami ali česnom."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC204",
+      "quote": "It's ok to feed your cat some plain, cooked turkey as an occasional treat."
+    },
+    {
+      "id": "KC204",
+      "quote": "But avoid giving turkey to your cat regularly."
+    },
+    {
+      "id": "KC204",
+      "quote": "A diet of turkey on its own will not contain all the nutrients your cat needs."
+    },
+    {
+      "id": "KC204",
+      "quote": "Turkey skin is high in fat and can cause digestive upset or even pancreatitis in sensitive cats."
+    },
+    {
+      "id": "KC204",
+      "quote": "If you have roasted your turkey, the skin may also have come into contact with seasonings, herbs or garlic."
+    },
+    {
+      "id": "KC204",
+      "quote": "Stuffing. This contains onion, garlic and herbs, which are all toxic to cats"
+    },
+    {
+      "id": "KC204",
+      "quote": "Gravy made for humans. This is usually salty and contains garlic and seasoning"
+    },
+    {
+      "id": "KC204",
+      "quote": "Cooked turkey or chicken with no bones, skin or seasoning"
+    },
+    {
+      "id": "KC218",
+      "quote": "Turkey bones can splinter and cause choking or blockages in your cat’s digestive system and should never be given to cats—raw or cooked."
+    },
+    {
+      "id": "KC224",
+      "quote": "Restrict any turkey you give your cat to a small amount of cooked boneless meat for his Christmas dinner"
+    }
+  ],
+  "related": [
+    "cooked-chicken",
+    "cooked-bones",
+    "onion",
+    "garlic",
+    "fatty-meat",
+    "ham"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

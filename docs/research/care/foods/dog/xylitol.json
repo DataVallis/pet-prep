@@ -1,0 +1,156 @@
+{
+  "slug": "xylitol",
+  "species": "dog",
+  "name": {
+    "en": "Xylitol",
+    "sl": "Ksilitol"
+  },
+  "question": {
+    "en": "Can dogs eat xylitol?",
+    "sl": "Ali lahko psi jedo ksilitol?"
+  },
+  "url_slug": {
+    "en": "xylitol",
+    "sl": "ksilitol"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Xylitol, a sugar-free sweetener, is toxic to dogs. Even small amounts can cause a dangerous drop in blood sugar, seizures and liver failure. It is found in sugar-free gum, mints, sweets, baked goods, toothpaste and supplements.",
+    "sl": "Ne. Ksilitol, sladilo brez sladkorja, je za pse strupen. Že majhne količine lahko povzročijo nevaren padec krvnega sladkorja, krče in odpoved jeter. Najdemo ga v žvečilnih gumijih brez sladkorja, mentolnih bonbonih, sladkarijah, pecivu, zobnih pastah in prehranskih dopolnilih."
+  },
+  "why": {
+    "en": "In dogs, xylitol triggers a rapid release of insulin, which makes blood sugar fall quickly. Some dogs also develop severe liver injury; how this happens is not yet known. Sugar-free gum is the most common source, and the amount of xylitol can differ even between flavours of one brand.",
+    "sl": "Pri psih ksilitol sproži hitro sproščanje inzulina, zaradi česar krvni sladkor hitro pade. Pri nekaterih psih pride tudi do hude okvare jeter; kako, še ni znano. Najpogostejši vir je žvečilni gumi brez sladkorja, količina ksilitola pa se lahko razlikuje celo med okusi iste znamke."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Weakness and tiredness",
+      "Wobbly walking, loss of coordination",
+      "Seizures",
+      "Signs of low blood sugar can start within 30 minutes"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Šibkost in utrujenost",
+      "Opotekanje, slaba koordinacija",
+      "Krči",
+      "Znaki nizkega krvnega sladkorja se lahko začnejo v 30 minutah"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline as soon as you realise your dog ate something with xylitol. Note the product and how much was eaten. Don't wait for signs, and don't give anything by mouth unless your vet tells you to.",
+    "sl": "Takoj ko opazite, da je pes pojedel nekaj s ksilitolom, pokličite veterinarja ali center za zastrupitve živali. Zapišite si izdelek in koliko ga je pojedel. Ne čakajte na znake in psu ne dajajte ničesar v usta, razen če tako naroči veterinar."
+  },
+  "serving": null,
+  "child": {
+    "en": "Sugar-free gum can contain xylitol, which is very bad for dogs. Keep gum and toothpaste away, and tell a grown-up if your dog eats some.",
+    "sl": "Žvečilni gumi brez sladkorja lahko vsebuje ksilitol, ki je za pse zelo slab. Gumi in zobno pasto pospravi ter povej odraslemu, če ju pes poje."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Where is xylitol found?",
+        "sl": "Kje najdemo ksilitol?"
+      },
+      "a": {
+        "en": "In sugar-free gum, mints, sweets, baked goods, toothpaste, vitamins and supplements, and even some nasal sprays. Sugar-free gum is the most common source of poisoning.",
+        "sl": "V žvečilnih gumijih brez sladkorja, mentolnih bonbonih, sladkarijah, pecivu, zobnih pastah, vitaminih in dopolnilih ter celo v nekaterih pršilih za nos. Najpogostejši vir zastrupitev je žvečilni gumi brez sladkorja."
+      }
+    },
+    {
+      "q": {
+        "en": "Can I use human toothpaste for my dog?",
+        "sl": "Lahko psu umivam zobe s človeško zobno pasto?"
+      },
+      "a": {
+        "en": "Some toothpastes contain xylitol, which is toxic to dogs, so human toothpaste is not a safe choice.",
+        "sl": "Nekatere zobne paste vsebujejo ksilitol, ki je za pse strupen, zato človeška zobna pasta ni varna izbira."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD9",
+      "quote": "Xylitol is a natural, sugar free sweetener."
+    },
+    {
+      "id": "KD9",
+      "quote": "Even one brand of gum, for example, may have different amounts of xylitol in each flavor."
+    },
+    {
+      "id": "KD9",
+      "quote": "If enough is ingested it can cause life threatening low blood sugar & liver failure."
+    },
+    {
+      "id": "KD10",
+      "quote": "Xylitol is also present in numerous vitamins and nutritional supplements."
+    },
+    {
+      "id": "KD10",
+      "quote": "Some dogs have developed severe liver injury after xylitol ingestion, the mechanism of which is unknown."
+    },
+    {
+      "id": "KD10",
+      "quote": "Clinical signs of hypoglycemia include vomiting, weakness, ataxia, lethargy, seizures, and coma."
+    },
+    {
+      "id": "KD11",
+      "quote": "Sugar-free gum is the most common source of xylitol poisoning reported to Pet Poison Helpline."
+    },
+    {
+      "id": "KD11",
+      "quote": "Even small amounts of xylitol can cause hypoglycemia (low blood sugar), seizures, liver failure, or even death."
+    },
+    {
+      "id": "KD11",
+      "quote": "Call your veterinarian or Pet Poison Helpline as soon as you realize your dog has consumed xylitol."
+    },
+    {
+      "id": "KD11",
+      "quote": "Do not induce vomiting or give anything orally to your dog unless your veterinarian directs you to do so."
+    },
+    {
+      "id": "KD44",
+      "quote": "Xylitol can cause a rapid and dangerous drop in a dog’s blood sugar."
+    },
+    {
+      "id": "KD1",
+      "quote": "Xylitol can cause low blood sugar (hypoglycemia) and potentially liver damage depending on the amount ingested."
+    },
+    {
+      "id": "KD1",
+      "quote": "Xylitol is used as a sweetener in many products, including gum, candy, baked goods and toothpaste."
+    },
+    {
+      "id": "KD1",
+      "quote": "Initial signs of toxicosis include vomiting, lethargy and loss of coordination, which can progress to seizures."
+    },
+    {
+      "id": "KD1",
+      "quote": "As always, if you suspect your pet has eaten any of the following foods, please note the amount ingested"
+    },
+    {
+      "id": "KD1",
+      "quote": "and contact your veterinarian or poison control at (888) 426-4435."
+    }
+  ],
+  "related": [
+    "chocolate",
+    "peanut-butter",
+    "macadamia-nuts"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

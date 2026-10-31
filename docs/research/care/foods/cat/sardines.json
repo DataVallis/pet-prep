@@ -1,0 +1,76 @@
+{
+  "slug": "sardines",
+  "species": "cat",
+  "name": {
+    "en": "Sardines",
+    "sl": "Sardine"
+  },
+  "question": {
+    "en": "Can cats eat sardines?",
+    "sl": "Ali lahko mačke jedo sardine?"
+  },
+  "url_slug": {
+    "en": "sardines",
+    "sl": "sardine"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, as an occasional treat. Tinned sardines in spring water can be offered now and then, watching out for bones. They shouldn't become the main part of a cat's diet.",
+    "sl": "Da, kot občasen priboljšek. Konzervirane sardine v izvirski vodi lahko ponudite občasno, pri čemer pazite na kosti. Ne smejo postati glavni del mačje prehrane."
+  },
+  "why": {
+    "en": "RSPCA Australia says fish such as tinned sardines in spring water can be offered as an occasional treat, taking care with bones, but are not suitable as the main part of the diet. Cats Protection advises fish be properly cooked, with bones removed, and given only a few pieces at a time.",
+    "sl": "RSPCA Avstralija navaja, da je ribo, kot so konzervirane sardine v izvirski vodi, mogoče ponuditi kot občasen priboljšek, pri čemer je treba paziti na kosti, ni pa primerna kot glavni del prehrane. Cats Protection svetuje, naj bo riba dobro kuhana, brez kosti in naj je mačka dobi le nekaj koščkov naenkrat."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Offer a small piece first. If your cat gets vomiting or diarrhoea afterwards, stop and ask your vet.",
+    "sl": "Najprej ponudite majhen košček. Če ima mačka potem bruhanje ali drisko, prenehajte in se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "Tinned in spring water (not oil, brine or sauce), with any large bones removed; a few pieces now and then.",
+    "sl": "Konzervirane v izvirski vodi (ne v olju, slanici ali omaki), z odstranjenimi večjimi kostmi; nekaj koščkov občasno."
+  },
+  "child": {
+    "en": "Sardines can be a little fishy treat for cats sometimes. A grown-up should check for bones.",
+    "sl": "Sardine so lahko včasih majhen ribji priboljšek za mucke. Odrasel naj preveri, da ni kosti."
+  },
+  "faq": [],
+  "sources": [
+    {
+      "id": "KC205",
+      "quote": "Fish, such as tinned sardines, tuna or salmon in spring water (take care with any fish bones) can be offered as a treat occasionally."
+    },
+    {
+      "id": "KC205",
+      "quote": "these foods are not suitable as the main part of the diet."
+    },
+    {
+      "id": "KC201",
+      "quote": "It should be properly cooked and bones removed before giving it to them, but also only give a few pieces at a time."
+    },
+    {
+      "id": "KC221",
+      "quote": "Although feeding your cat a little bit of well-cooked, plain chicken or fish is okay occasionally."
+    }
+  ],
+  "related": [
+    "tuna",
+    "salmon",
+    "raw-fish",
+    "salt"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

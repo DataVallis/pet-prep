@@ -1,0 +1,82 @@
+{
+  "slug": "peanuts",
+  "species": "cat",
+  "name": {
+    "en": "Peanuts",
+    "sl": "Arašidi"
+  },
+  "question": {
+    "en": "Can cats eat peanuts?",
+    "sl": "Ali lahko mačke jedo arašide?"
+  },
+  "url_slug": {
+    "en": "peanuts",
+    "sl": "arasidi"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, peanuts are best kept away from cats. Cat-care guides warn that nuts can cause problems for cats, and most nuts are very fatty and can cause vomiting and diarrhoea. Salted or flavoured peanuts are worse.",
+    "sl": "Ne, arašidov mački raje ne dajajte. Vodniki o negi mačk opozarjajo, da oreščki mačkam lahko povzročajo težave, večina oreščkov pa je zelo mastnih in lahko povzroči bruhanje in drisko. Soljeni ali začinjeni arašidi so še slabši."
+  },
+  "why": {
+    "en": "Our sources do not single out peanuts, but they warn about nuts in general: Cats Protection says nuts can cause problems for cats, and VCA says most nuts are very fatty and can cause vomiting and diarrhoea. Snack peanuts are often salted, and large amounts of salt are harmful to cats.",
+    "sl": "Naši viri arašidov ne omenjajo posebej, opozarjajo pa na oreščke na splošno: Cats Protection navaja, da oreščki mačkam lahko povzročajo težave, VCA pa, da je večina oreščkov zelo mastnih in lahko povzroči bruhanje in drisko. Arašidi za prigrizek so pogosto soljeni, velike količine soli pa mačkam škodijo."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Upset stomach"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Razdražen želodec"
+    ]
+  },
+  "what_to_do": {
+    "en": "A peanut or two is unlikely to be an emergency. Watch for vomiting, diarrhoea or a change in behaviour, and call your vet if your cat seems unwell or ate a lot, especially of salted or chocolate-coated peanuts.",
+    "sl": "En ali dva arašida najverjetneje ne pomenita nujnega primera. Bodite pozorni na bruhanje, drisko ali spremembo vedenja in pokličite veterinarja, če se mačka ne počuti dobro ali je pojedla veliko, posebno soljenih ali s čokolado oblitih arašidov."
+  },
+  "serving": null,
+  "child": {
+    "en": "Peanuts are a people snack. They can upset a cat's tummy, so keep them for yourself.",
+    "sl": "Arašidi so prigrizek za ljudi. Mucki lahko razdražijo trebušček, zato jih obdrži zase."
+  },
+  "faq": [],
+  "sources": [
+    {
+      "id": "KC223",
+      "quote": "Some foods that may seem harmless, such as grapes, nuts or avocado, can also cause problems for cats."
+    },
+    {
+      "id": "KC216",
+      "quote": "Most nuts are very fatty and can cause vomiting and diarrhea, but macadamia nuts specifically will lead to weakness, tremors and hyperthermia."
+    },
+    {
+      "id": "KC211",
+      "quote": "Large amounts of salt can produce excessive thirst and urination, or even sodium ion poisoning."
+    }
+  ],
+  "related": [
+    "peanut-butter",
+    "almonds",
+    "cashews",
+    "salty-snacks",
+    "salt",
+    "macadamia-nuts"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

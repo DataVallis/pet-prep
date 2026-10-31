@@ -1,0 +1,134 @@
+{
+  "slug": "raw-yeast-dough",
+  "species": "dog",
+  "name": {
+    "en": "Raw yeast dough",
+    "sl": "Surovo kvašeno testo"
+  },
+  "question": {
+    "en": "Can dogs eat raw yeast dough?",
+    "sl": "Ali lahko psi jedo surovo kvašeno testo?"
+  },
+  "url_slug": {
+    "en": "raw-yeast-dough",
+    "sl": "surovo-kvaseno-testo"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Raw, unbaked yeast dough is dangerous for dogs. It keeps rising in the warm stomach, causing painful bloating that can lead to a twisted stomach. The yeast also makes alcohol, which can cause alcohol poisoning. Baked bread is a different matter.",
+    "sl": "Ne. Surovo, nepečeno kvašeno testo je za pse nevarno. V toplem želodcu še naprej vzhaja in povzroči boleče napihnjenje, ki lahko vodi v zasuk želodca. Kvas tvori tudi alkohol, ki lahko povzroči zastrupitev z alkoholom. Pečen kruh je nekaj drugega."
+  },
+  "why": {
+    "en": "Yeast keeps working in the warm, moist stomach: the dough expands and gas builds up, which can block the gut or, less often, twist the stomach (bloat). At the same time the yeast produces alcohol, which is quickly absorbed into the blood. Dogs are affected most often because they eat whatever they find.",
+    "sl": "Kvas v toplem in vlažnem želodcu deluje naprej: testo se širi in nabirajo se plini, kar lahko zamaši prebavila ali, redkeje, zasuka želodec. Hkrati kvas tvori alkohol, ki se hitro vsrka v kri. Psi so najpogosteje prizadeti, ker pojedo, kar najdejo."
+  },
+  "signs": {
+    "en": [
+      "Swollen, tight tummy",
+      "Vomiting or retching without bringing anything up",
+      "Wobbliness and disorientation",
+      "Drowsiness or depression"
+    ],
+    "sl": [
+      "Napihnjen, trd trebuh",
+      "Bruhanje ali siljenje na bruhanje brez izbljuvka",
+      "Opotekanje in zmedenost",
+      "Zaspanost ali potrtost"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet right away. Note roughly how much dough was eaten and when. Don't wait for signs: a swelling stomach and alcohol poisoning both need prompt care.",
+    "sl": "Takoj pokličite veterinarja. Zapišite si, približno koliko testa je pes pojedel in kdaj. Ne čakajte na znake: napihnjen želodec in zastrupitev z alkoholom zahtevata hitro pomoč."
+  },
+  "serving": null,
+  "child": {
+    "en": "Bread dough that is still rising is not for dogs. It keeps growing in their tummy. Tell a grown-up if your dog eats some.",
+    "sl": "Testo, ki še vzhaja, ni za pse. V trebuščku še naprej raste. Povej odraslemu, če ga pes poje."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is baked bread dangerous too?",
+        "sl": "Je nevaren tudi pečen kruh?"
+      },
+      "a": {
+        "en": "The danger described here is raw, unbaked yeast dough, because the yeast is still alive and keeps working in the stomach.",
+        "sl": "Nevarnost, opisana tukaj, velja za surovo, nepečeno kvašeno testo, ker je kvas še živ in v želodcu deluje naprej."
+      }
+    },
+    {
+      "q": {
+        "en": "Why does dough cause alcohol poisoning?",
+        "sl": "Zakaj testo povzroči zastrupitev z alkoholom?"
+      },
+      "a": {
+        "en": "Fermenting yeast produces alcohol in the stomach, and it is rapidly absorbed into the bloodstream.",
+        "sl": "Kvas pri vrenju v želodcu tvori alkohol, ki se hitro vsrka v kri."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD15",
+      "quote": "Unbaked bread dough can be dangerous when ingested by dogs and cats."
+    },
+    {
+      "id": "KD15",
+      "quote": "expands in the warm, moist environment of the stomach"
+    },
+    {
+      "id": "KD15",
+      "quote": "Less commonly this can progress to twisting of the stomach also known as gastric-dilatation volvulus (GDV) or bloat."
+    },
+    {
+      "id": "KD15",
+      "quote": "Alcohol from the fermenting yeast is rapidly absorbed into the bloodstream and results in alcohol poisoning."
+    },
+    {
+      "id": "KD15",
+      "quote": "Signs of bloat or GDV include vomiting, non-productive retching, a distended stomach"
+    },
+    {
+      "id": "KD16",
+      "quote": "Ingestion of raw yeast-containing bread dough can result in GI tract obstruction and ethanol toxicosis."
+    },
+    {
+      "id": "KD16",
+      "quote": "Although any species is susceptible, dogs are most commonly affected because of their indiscriminate eating habits."
+    },
+    {
+      "id": "KD16",
+      "quote": "Clinical signs of ethanol intoxication (inebriation, CNS depression) and gastric distention can occur."
+    },
+    {
+      "id": "KD16",
+      "quote": "As ethanol intoxication develops, the patient becomes ataxic and disoriented."
+    },
+    {
+      "id": "KD1",
+      "quote": "Yeast dough can rise and cause gas to accumulate in your pet's digestive system."
+    },
+    {
+      "id": "KD44",
+      "quote": "On the other hand, if your dog eats raw, uncooked bread dough, contact your veterinarian."
+    }
+  ],
+  "related": [
+    "alcohol",
+    "raisins",
+    "chocolate"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

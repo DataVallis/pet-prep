@@ -1,0 +1,109 @@
+{
+  "slug": "beef",
+  "species": "dog",
+  "name": {
+    "en": "Beef",
+    "sl": "Govedina"
+  },
+  "question": {
+    "en": "Can dogs eat beef?",
+    "sl": "Ali lahko psi jedo govedino?"
+  },
+  "url_slug": {
+    "en": "beef",
+    "sl": "govedina"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, plain cooked beef with the fat trimmed is a good source of protein for most dogs. Leave out salt, spices and toppings such as onion and garlic, never give cooked bones, and avoid raw beef, which can carry bacteria.",
+    "sl": "Da, navadna kuhana govedina z odstranjeno maščobo je za večino psov dober vir beljakovin. Izpustite sol, začimbe in dodatke, kot sta čebula in česen, nikoli ne dajte kuhanih kosti in se izogibajte surovi govedini, ki lahko prenaša bakterije."
+  },
+  "why": {
+    "en": "Unseasoned, cooked beef can be a healthy protein, cut into bite-sized pieces with the fat trimmed. Burgers and steaks often contain salt, spices and toppings that can be dangerous; onions and garlic are toxic to dogs. Raw steak or burger can carry Salmonella and E. coli, and cooked bones of any kind should never be given.",
+    "sl": "Nezačinjena kuhana govedina je lahko zdrav vir beljakovin, narezana na grižljaje in brez maščobe. Burgerji in zrezki pogosto vsebujejo sol, začimbe in dodatke, ki so lahko nevarni; čebula in česen sta za pse strupena. Surov zrezek ali burger lahko prenaša salmonelo in E. coli, kuhanih kosti kakršne koli vrste pa psu nikoli ne dajte."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If your dog ate fatty or seasoned beef, watch for vomiting, diarrhoea or belly pain and call your vet if they appear. If it ate cooked bones or food with onion or garlic, call your vet straight away.",
+    "sl": "Če je pes pojedel mastno ali začinjeno govedino, opazujte, ali bruha, ima drisko ali ga boli trebuh, in pokličite veterinarja, če se to pojavi. Če je pojedel kuhane kosti ali hrano s čebulo ali česnom, takoj pokličite veterinarja."
+  },
+  "serving": {
+    "en": "Plain, unseasoned, fully cooked beef, fat trimmed, boneless, in bite-sized pieces.",
+    "sl": "Navadna, nezačinjena, popolnoma kuhana govedina, brez maščobe in kosti, narezana na grižljaje."
+  },
+  "child": {
+    "en": "A few bites of plain cooked beef can be a treat. Burgers with onions or sauce are only for people.",
+    "sl": "Nekaj grižljajev navadne kuhane govedine je lahko priboljšek. Burgerji s čebulo ali omako so samo za ljudi."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can my dog have a bite of my burger?",
+        "sl": "Ali lahko pes dobi grižljaj mojega burgerja?"
+      },
+      "a": {
+        "en": "Better not: burgers often contain salt, spices and toppings such as onion that can be dangerous. Plain cooked meat is the safer choice.",
+        "sl": "Bolje ne: burgerji pogosto vsebujejo sol, začimbe in dodatke, kot je čebula, ki so lahko nevarni. Navadno kuhano meso je varnejša izbira."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD222",
+      "quote": "unseasoned and cooked hamburger meat can be a healthy source of protein"
+    },
+    {
+      "id": "KD222",
+      "quote": "Just make sure it's cut into bite-sized pieces, and trim any fat before serving."
+    },
+    {
+      "id": "KD222",
+      "quote": "Chances are, your burger might have added salt, spices, and toppings that can be dangerous to dogs"
+    },
+    {
+      "id": "KD222",
+      "quote": "Onions and garlic are toxic to dogs."
+    },
+    {
+      "id": "KD222",
+      "quote": "Raw steak or hamburger patties can contain bacteria, such as salmonella and E. coli, that can be harmful to dogs and people."
+    },
+    {
+      "id": "KD222",
+      "quote": "Depending on the dog, grilled beef items, such as a bite of steak, can be offered."
+    },
+    {
+      "id": "KD242",
+      "quote": "Dr. Jerry Klein, AKC Chief Veterinarian, warns that you should never give your dog cooked bones of any kind."
+    },
+    {
+      "id": "KD235",
+      "quote": "High-fat foods can trigger vomiting and diarrhea, or even pancreatitis, a painful and serious condition."
+    },
+    {
+      "id": "KD234",
+      "quote": "Call your vet immediately."
+    }
+  ],
+  "related": [
+    "fatty-meat",
+    "raw-meat",
+    "cooked-bones",
+    "onion",
+    "garlic",
+    "salt"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

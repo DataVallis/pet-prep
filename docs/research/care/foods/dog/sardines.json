@@ -1,0 +1,111 @@
+{
+  "slug": "sardines",
+  "species": "dog",
+  "name": {
+    "en": "Sardines",
+    "sl": "Sardine"
+  },
+  "question": {
+    "en": "Can dogs eat sardines?",
+    "sl": "Ali lahko psi jedo sardine?"
+  },
+  "url_slug": {
+    "en": "sardines",
+    "sl": "sardine"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, in moderation. Canned sardines packed in water, unsalted and unseasoned, are a suitable fish treat, and their tiny bones are soft and edible after canning. Fresh sardines must be fully cooked. Avoid salty, seasoned or raw fish.",
+    "sl": "Da, zmerno. Sardine v konzervi, vložene v vodi, nesoljene in nezačinjene, so primeren ribji priboljšek, njihove drobne kosti pa so po konzerviranju mehke in užitne. Sveže sardine morajo biti popolnoma kuhane. Izogibajte se slanim, začinjenim ali surovim ribam."
+  },
+  "why": {
+    "en": "Plain, fully cooked fish provides protein and fatty acids. Cooking fully reduces the risk from parasites and bacteria. Canned sardines are the exception to the bones rule because their bones soften during canning; for other fish, bones must be removed. Canned fish should be unsalted and unseasoned.",
+    "sl": "Navadne, popolnoma kuhane ribe dajejo beljakovine in maščobne kisline. Popolno kuhanje zmanjša tveganje zaradi zajedavcev in bakterij. Sardine v konzervi so izjema pri pravilu o kosteh, ker se kosti med konzerviranjem zmehčajo; pri drugih ribah je treba kosti odstraniti. Ribe v konzervi naj bodo nesoljene in nezačinjene."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If your dog ate salty or seasoned sardines or raw fish, watch for vomiting, diarrhoea or low energy and call your vet if these are severe or don't stop.",
+    "sl": "Če je pes pojedel slane ali začinjene sardine ali surove ribe, opazujte, ali bruha, ima drisko ali je utrujen, in pokličite veterinarja, če so težave hude ali ne prenehajo."
+  },
+  "serving": {
+    "en": "Canned in water, unsalted and unseasoned; or fresh sardines fully cooked (steamed, baked or poached) and plain; in moderation.",
+    "sl": "V konzervi v vodi, nesoljene in nezačinjene; ali sveže, popolnoma kuhane (na pari, pečene ali poširane) in brez dodatkov; zmerno."
+  },
+  "child": {
+    "en": "Sardines in water can be a fishy treat for a dog, now and then. Salty fish is not for dogs.",
+    "sl": "Sardine v vodi so lahko za psa občasen ribji priboljšek. Slane ribe niso za pse."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Do I need to remove the bones from canned sardines?",
+        "sl": "Ali moram sardinam v konzervi odstraniti kosti?"
+      },
+      "a": {
+        "en": "No. The tiny bones are soft and fully edible after canning, so sardines canned in water can be fed without deboning.",
+        "sl": "Ne. Drobne kosti so po konzerviranju mehke in povsem užitne, zato lahko sardine v vodi daste brez odstranjevanja kosti."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD201",
+      "quote": "Plain, fully cooked fish can provide protein and fatty acids, and many dogs go crazy for the flavor and aroma of fish."
+    },
+    {
+      "id": "KD201",
+      "quote": "Cooking fish fully helps reduce the risk from parasites and harmful bacteria."
+    },
+    {
+      "id": "KD201",
+      "quote": "Steam, bake, or poach fresh fish, or if you choose canned fish, choose types that are unsalted, unseasoned, and packed only"
+    },
+    {
+      "id": "KD201",
+      "quote": "Canned sardines are the one exception to the bones rule: canned sardines packed in water can be fed to your dog without debon"
+    },
+    {
+      "id": "KD201",
+      "quote": "The tiny bones of these tiny fish are soft and fully edible after going through the canning process."
+    },
+    {
+      "id": "KD201",
+      "quote": "Remove the bones before serving, since fish bones can cause choking or injure the mouth or digestive tract."
+    },
+    {
+      "id": "KD237",
+      "quote": "Plain, cooked, steamed, or grilled fish is fine for dogs to eat in moderation."
+    },
+    {
+      "id": "KD237",
+      "quote": "Raw fish is at risk of carrying harmful bacteria like salmonella and listeria."
+    },
+    {
+      "id": "KD239",
+      "quote": "The earliest signs are often vomiting, diarrhea, lethargy, decreased appetite, and abdominal discomfort."
+    },
+    {
+      "id": "KD239",
+      "quote": "Contact your veterinarian if your dog has severe or persistent vomiting or diarrhea."
+    }
+  ],
+  "related": [
+    "salmon",
+    "tuna",
+    "raw-fish",
+    "salt"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "slug": "ham",
+  "species": "cat",
+  "name": {
+    "en": "Ham",
+    "sl": "Šunka"
+  },
+  "question": {
+    "en": "Can cats eat ham?",
+    "sl": "Ali lahko mačke jedo šunko?"
+  },
+  "url_slug": {
+    "en": "ham",
+    "sl": "sunka"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "It's best not to. Ham is fatty and high in salt, which can upset a cat's digestion and raise the risk of pancreatitis. Ham cooked with onion or garlic is toxic to cats. A University of Georgia vet recommends avoiding ham altogether.",
+    "sl": "Raje ne. Šunka je mastna in zelo slana, kar lahko muci povzroči prebavne težave in poveča tveganje za vnetje trebušne slinavke. Šunka, pripravljena s čebulo ali česnom, je za mačke strupena. Veterinarka z Univerze v Georgii svetuje, naj se šunki povsem izognemo."
+  },
+  "why": {
+    "en": "Ham is a fatty meat that is also high in sodium, and both can cause health problems. Too much fat affects the digestive tract, especially the pancreas. Seasonings such as onion or garlic make it toxic. Small amounts may not be extremely harmful, but it is not a good treat. Salty food can also leave cats more dehydrated, and cats with kidney, heart or urinary problems should especially avoid ham.",
+    "sl": "Šunka je mastno meso z veliko natrija, oboje pa lahko povzroči zdravstvene težave. Preveč maščobe obremeni prebavila, zlasti trebušno slinavko. Začimbe, kot sta čebula in česen, jo naredijo strupeno. Majhne količine morda niso zelo škodljive, a dober priboljšek ni. Slana hrana lahko mačke še bolj izsuši, mačke s težavami z ledvicami, srcem ali sečili pa naj se šunki še posebej izogibajo."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Tummy upset"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Prebavne težave"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat ate ham seasoned with onion or garlic, contact your vet right away. If she ate a lot of plain ham, or is vomiting or has diarrhoea, call your vet for advice.",
+    "sl": "Če je muca pojedla šunko, začinjeno s čebulo ali česnom, takoj pokličite veterinarja. Če je pojedla veliko navadne šunke ali bruha ali ima drisko, se za nasvet obrnite na veterinarja."
+  },
+  "serving": null,
+  "child": {
+    "en": "Ham is too salty and fatty for cats. Kitty's own cat treats are a better surprise.",
+    "sl": "Šunka je za muce preslana in premastna. Mucini mačji priboljški so boljše presenečenje."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is a tiny bite of ham dangerous?",
+        "sl": "Je majhen grižljaj šunke nevaren?"
+      },
+      "a": {
+        "en": "Small amounts may not be extremely harmful, but ham seasoned with onion or garlic is toxic to cats, and a University of Georgia vet still recommends avoiding ham altogether.",
+        "sl": "Majhne količine morda niso zelo škodljive, šunka, začinjena s čebulo ali česnom, pa je za mačke strupena, zato veterinarka z Univerze v Georgii vseeno svetuje, naj se ji povsem izognemo."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC28",
+      "quote": "Ham is a fattier meat that is also high in sodium, which can each cause their own set of health problems,"
+    },
+    {
+      "id": "KC28",
+      "quote": "Having too high fat content can affect cats' digestive tract, especially their pancreas"
+    },
+    {
+      "id": "KC28",
+      "quote": "Ham increases the risk of pancreatitis, diarrhea and vomiting."
+    },
+    {
+      "id": "KC28",
+      "quote": "Ham cooked in seasonings such as onion or garlic are toxic to cats and can cause various health issues."
+    },
+    {
+      "id": "KC28",
+      "quote": "While small amounts of ham may not be extremely harmful for cats"
+    },
+    {
+      "id": "KC3",
+      "quote": "All forms are poisonous to cats, including raw, cooked, dried, powdered, and liquid preparations."
+    },
+    {
+      "id": "KC5",
+      "quote": "If you notice or suspect your cat has eaten food that can be harmful to them, book an urgent appointment with your vet"
+    },
+    {
+      "id": "KC28",
+      "quote": "Though it can be useful, Vetter still recommends avoiding ham altogether when feeding cats."
+    },
+    {
+      "id": "KC28",
+      "quote": "Cats tend to under-consume water, and salt-rich foods can lead them to become more dehydrated."
+    },
+    {
+      "id": "KC28",
+      "quote": "Cats with health problems such as kidney, heart or urinary issues should especially avoid ham."
+    }
+  ],
+  "related": [
+    "fatty-meat",
+    "salt",
+    "onion",
+    "garlic",
+    "pork"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

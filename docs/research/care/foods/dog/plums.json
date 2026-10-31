@@ -1,0 +1,134 @@
+{
+  "slug": "plums",
+  "species": "dog",
+  "name": {
+    "en": "Plums",
+    "sl": "Slive"
+  },
+  "question": {
+    "en": "Can dogs eat plums?",
+    "sl": "Ali lahko psi jedo slive?"
+  },
+  "url_slug": {
+    "en": "plums",
+    "sl": "slive"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "Not recommended. A little plum flesh with the pit removed is not the main worry, but plum pits are toxic to dogs and can cause choking or an intestinal blockage. The stems, leaves and seeds of the plum plant contain cyanide.",
+    "sl": "Ni priporočljivo. Malo mesa slive brez koščice ni glavna skrb, koščice sliv pa so za pse strupene in lahko povzročijo zadušitev ali zaporo črevesja. Peclji, listi in semena slive vsebujejo cianid."
+  },
+  "why": {
+    "en": "The plum plant is listed as toxic to dogs because its stems, leaves and seeds contain cyanogenic glycosides. A pit can also be swallowed and get stuck. Some vets allow plum flesh as an occasional treat with the pit removed; because the plant itself is listed as toxic, we use the stricter rating. Prunes are even higher in sugar.",
+    "sl": "Sliva je navedena kot strupena za pse, ker njeni peclji, listi in semena vsebujejo cianogene glikozide. Pes lahko koščico tudi pogoltne in ta se zatakne. Nekateri veterinarji dovolijo meso slive kot občasen priboljšek brez koščice; ker je rastlina navedena kot strupena, uporabljamo strožjo oceno. Suhe slive imajo še več sladkorja."
+  },
+  "signs": {
+    "en": [
+      "Choking or gagging",
+      "Signs of a blockage: repeated vomiting, not eating, tiredness",
+      "Dilated pupils, brick-red gums, difficulty breathing (cyanide)"
+    ],
+    "sl": [
+      "Dušenje ali siljenje na bruhanje",
+      "Znaki zapore: ponavljajoče se bruhanje, pes noče jesti, utrujenost",
+      "Razširjene zenice, opečnato rdeče dlesni, težko dihanje (cianid)"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog ate a plum pit, contact your vet right away. Note when it happened and how many pits were eaten.",
+    "sl": "Če je pes pojedel koščico slive, takoj pokličite veterinarja. Zapišite si, kdaj se je to zgodilo in koliko koščic je pojedel."
+  },
+  "serving": {
+    "en": "If you share any, give only a little fresh flesh with the pit and stem removed. Skip prunes. Check with your vet first.",
+    "sl": "Če jo delite, dajte le malo svežega mesa brez koščice in peclja. Suhih sliv ne dajajte. Najprej se posvetujte z veterinarjem."
+  },
+  "child": {
+    "en": "Plum stones are bad for dogs. Never give your dog a plum stone, and ask a grown-up before sharing any plum.",
+    "sl": "Koščice sliv so za pse slabe. Psu nikoli ne daj koščice in vprašaj odraslega, preden deliš slivo."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are prunes okay for dogs?",
+        "sl": "So suhe slive za pse v redu?"
+      },
+      "a": {
+        "en": "Prunes are even higher in sugar than fresh plums, so they are not a great option for dogs.",
+        "sl": "Suhe slive imajo še več sladkorja kot sveže, zato za pse niso dobra izbira."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD29",
+      "quote": "Toxic to Dogs"
+    },
+    {
+      "id": "KD29",
+      "quote": "Cyanogenic glycosides found in some species"
+    },
+    {
+      "id": "KD29",
+      "quote": "Stems, leaves, seeds contain cyanide, particularly toxic in the process of wilting"
+    },
+    {
+      "id": "KD29",
+      "quote": "brick red mucous membranes, dilated pupils, difficulty breathing, panting, shock."
+    },
+    {
+      "id": "KD30",
+      "quote": "When fed in moderation as an occasional treat, it's OK to share plums with your dog—as long as the pits are removed."
+    },
+    {
+      "id": "KD30",
+      "quote": "Plum pits are toxic to dogs and can also cause your pooch to choke or create an intestinal blockage."
+    },
+    {
+      "id": "KD30",
+      "quote": "If your dog does ingest a plum pit by accident, contact your vet immediately."
+    },
+    {
+      "id": "KD30",
+      "quote": "But they are even higher in sugar than fresh plums, so they're not a great option for dogs."
+    },
+    {
+      "id": "KD30",
+      "quote": "Always check with your veterinarian first before giving your dog any new foods, especially 'people foods.'"
+    },
+    {
+      "id": "KD34",
+      "quote": "Repeated vomiting"
+    },
+    {
+      "id": "KD34",
+      "quote": "Loss of appetite"
+    },
+    {
+      "id": "KD34",
+      "quote": "Lethargy"
+    },
+    {
+      "id": "KD35",
+      "quote": "If you do suspect your pet has swallowed something you should contact your vet for advice immediately."
+    }
+  ],
+  "related": [
+    "peaches",
+    "apricots",
+    "cherries",
+    "grapes"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

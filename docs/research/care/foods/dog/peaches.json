@@ -1,0 +1,156 @@
+{
+  "slug": "peaches",
+  "species": "dog",
+  "name": {
+    "en": "Peaches",
+    "sl": "Breskve"
+  },
+  "question": {
+    "en": "Can dogs eat peaches?",
+    "sl": "Ali lahko psi jedo breskve?"
+  },
+  "url_slug": {
+    "en": "peaches",
+    "sl": "breskve"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "Only with care. Fresh peach flesh can be given in small cubes with the stem and pit removed, but the pit is a real danger: it can cause choking or a gut blockage and contains a form of cyanide. Ask your vet first.",
+    "sl": "Le previdno. Sveže meso breskve lahko psu date v majhnih kockah brez peclja in koščice, koščica pa je resna nevarnost: lahko povzroči zadušitev ali zaporo prebavil in vsebuje obliko cianida. Najprej vprašajte veterinarja."
+  },
+  "why": {
+    "en": "Peach stems, leaves and seeds contain cyanogenic glycosides. If a pit is thoroughly chewed, cyanide can be released, and a swallowed pit may block the gut, especially in small dogs. Canned or dried peaches often contain extra sugar. Because the plant is listed as toxic to dogs, we rate peaches as not recommended rather than a safe treat.",
+    "sl": "Peclji, listi in semena breskve vsebujejo cianogene glikozide. Če pes koščico temeljito prežveči, se lahko sprosti cianid, pogoltnjena koščica pa lahko zamaši prebavila, zlasti pri majhnih psih. Breskve iz konzerve ali posušene pogosto vsebujejo dodan sladkor. Ker je rastlina navedena kot strupena za pse, breskve uvrščamo med odsvetovane in ne med varne priboljške."
+  },
+  "signs": {
+    "en": [
+      "Choking or gagging",
+      "Signs of a blockage: repeated vomiting, not eating, tiredness",
+      "Dilated pupils, brick-red gums, difficulty breathing (cyanide)"
+    ],
+    "sl": [
+      "Dušenje ali siljenje na bruhanje",
+      "Znaki zapore: ponavljajoče se bruhanje, pes noče jesti, utrujenost",
+      "Razširjene zenice, opečnato rdeče dlesni, težko dihanje (cianid)"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog swallowed or chewed a peach pit, contact your vet for advice right away. Note when it happened and how many pits were eaten.",
+    "sl": "Če je pes pogoltnil ali prežvečil koščico breskve, se takoj posvetujte z veterinarjem. Zapišite si, kdaj se je to zgodilo in koliko koščic je pojedel."
+  },
+  "serving": {
+    "en": "Fresh flesh only, in small cubes, with the stem and pit removed. Skip canned and dried peaches. Ask your vet first.",
+    "sl": "Samo sveže meso, v majhnih kockah, brez peclja in koščice. Breskev iz konzerve in posušenih ne dajajte. Najprej vprašajte veterinarja."
+  },
+  "child": {
+    "en": "Peach stones are dangerous for dogs. Never give your dog a peach stone, and ask a grown-up before sharing any peach.",
+    "sl": "Koščice breskev so za pse nevarne. Psu nikoli ne daj koščice in vprašaj odraslega, preden deliš breskev."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are canned peaches okay?",
+        "sl": "So breskve iz konzerve v redu?"
+      },
+      "a": {
+        "en": "They are not recommended, because canned or dried peaches often contain extra sugar and other ingredients.",
+        "sl": "Niso priporočljive, ker breskve iz konzerve ali posušene pogosto vsebujejo dodan sladkor in druge sestavine."
+      }
+    },
+    {
+      "q": {
+        "en": "Why is the pit so risky?",
+        "sl": "Zakaj je koščica tako tvegana?"
+      },
+      "a": {
+        "en": "It is a choking hazard, can block the intestines, and its seed contains cyanide-releasing compounds.",
+        "sl": "Lahko povzroči zadušitev, zamaši črevesje, njeno seme pa vsebuje snovi, ki sproščajo cianid."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD28",
+      "quote": "Fresh peaches should be fed in small cubes with the stem and pit removed, as both can pose a threat to a dog's health."
+    },
+    {
+      "id": "KD28",
+      "quote": "The pit is a choking hazard and can even lead to an intestinal blockage if ingested."
+    },
+    {
+      "id": "KD28",
+      "quote": "Peach pits also contain a form of cyanide that can be toxic if ingested."
+    },
+    {
+      "id": "KD28",
+      "quote": "Canned or dehydrated peaches often contain excess sugars and ingredients that are not recommended."
+    },
+    {
+      "id": "KD28",
+      "quote": "Consult a vet to determine which may be a good option for your dog and in what quantity,"
+    },
+    {
+      "id": "KD27",
+      "quote": "Seeds within peach pits have small amounts of cyanide-containing compounds and enzymes."
+    },
+    {
+      "id": "KD27",
+      "quote": "If the peach pits are thoroughly chewed free cyanide can be released triggering cyanide poisoning."
+    },
+    {
+      "id": "KD27",
+      "quote": "Ingestion of a peach pit by a small breed dog or cat may result in a gastrointestinal obstruction."
+    },
+    {
+      "id": "KD26",
+      "quote": "Toxic to Dogs, Toxic to Cats, Toxic to Horses"
+    },
+    {
+      "id": "KD26",
+      "quote": "Cyanogenic glycosides found in some species"
+    },
+    {
+      "id": "KD26",
+      "quote": "Stems, leaves, seeds contain cyanide, particularly toxic in the process of wilting"
+    },
+    {
+      "id": "KD26",
+      "quote": "brick red mucous membranes, dilated pupils, difficulty breathing, panting, shock."
+    },
+    {
+      "id": "KD34",
+      "quote": "Repeated vomiting"
+    },
+    {
+      "id": "KD34",
+      "quote": "Loss of appetite"
+    },
+    {
+      "id": "KD34",
+      "quote": "Lethargy"
+    },
+    {
+      "id": "KD35",
+      "quote": "If you do suspect your pet has swallowed something you should contact your vet for advice immediately."
+    }
+  ],
+  "related": [
+    "plums",
+    "apricots",
+    "cherries",
+    "avocado"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

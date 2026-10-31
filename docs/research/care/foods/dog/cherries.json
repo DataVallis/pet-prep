@@ -1,0 +1,145 @@
+{
+  "slug": "cherries",
+  "species": "dog",
+  "name": {
+    "en": "Cherries",
+    "sl": "Češnje"
+  },
+  "question": {
+    "en": "Can dogs eat cherries?",
+    "sl": "Ali lahko psi jedo češnje?"
+  },
+  "url_slug": {
+    "en": "cherries",
+    "sl": "cesnje"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "No, cherries are best avoided. The ripe flesh is not the toxic part, but the pits, stems and leaves contain compounds that can release cyanide, and pits can block a dog's intestines. Pet Poison Helpline says the risk outweighs any benefit.",
+    "sl": "Ne, češnjam se je bolje izogniti. Zrelo meso ni strupeni del, koščice, peclji in listi pa vsebujejo snovi, iz katerih se lahko sprosti cianid, koščice pa lahko psu zamašijo črevesje. Pet Poison Helpline pravi, da tveganje presega koristi."
+  },
+  "why": {
+    "en": "Cherry pits, stems and leaves contain cyanogenic glycosides, which can turn into cyanide. Cyanide is released when a pit is chewed and broken; a pit swallowed whole is not expected to poison, but it can get stuck and cause a blockage. One cherry will not cause cyanide poisoning, yet the risk is not worth it.",
+    "sl": "Koščice, peclji in listi češenj vsebujejo cianogene glikozide, ki se lahko spremenijo v cianid. Cianid se sprosti, ko pes koščico prežveči in zdrobi; cela pogoltnjena koščica naj ne bi zastrupila, lahko pa se zatakne in povzroči zaporo. Ena češnja ne povzroči zastrupitve s cianidom, a tveganje se ne splača."
+  },
+  "signs": {
+    "en": [
+      "Dilated pupils",
+      "Brick-red gums",
+      "Difficulty breathing, panting",
+      "Vomiting or upset stomach",
+      "Shock"
+    ],
+    "sl": [
+      "Razširjene zenice",
+      "Opečnato rdeče dlesni",
+      "Težko dihanje, sopihanje",
+      "Bruhanje ali prebavne težave",
+      "Šok"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog ate cherry pits, stems or leaves, or a lot of cherries, contact your vet or a pet poison helpline right away. Note roughly how many were eaten and whether pits were chewed. Don't wait for signs.",
+    "sl": "Če je pes pojedel koščice, peclje ali liste češenj ali veliko češenj, takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite si, približno koliko jih je pojedel in ali je koščice prežvečil. Ne čakajte na znake."
+  },
+  "serving": null,
+  "child": {
+    "en": "Cherries have hard stones inside that are bad for dogs. Keep cherries for people and tell a grown-up if your dog eats some.",
+    "sl": "Češnje imajo v sebi trde koščice, ki so za pse slabe. Češnje so za ljudi; povej odraslemu, če jih pes poje."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is one cherry an emergency?",
+        "sl": "Je ena češnja nujen primer?"
+      },
+      "a": {
+        "en": "One cherry will not cause cyanide poisoning, and a healthy dog that eats one or two does not need panic. Still, pits can cause blockages, so ask your vet if you are unsure.",
+        "sl": "Ena češnja ne povzroči zastrupitve s cianidom in zdravemu psu, ki poje eno ali dve, ni treba paničariti. Koščice pa lahko povzročijo zaporo, zato se ob dvomu posvetujte z veterinarjem."
+      }
+    },
+    {
+      "q": {
+        "en": "Can I give pitted cherries?",
+        "sl": "Lahko dam izkoščičene češnje?"
+      },
+      "a": {
+        "en": "The ripe pulp is not the toxic part, but Pet Poison Helpline advises that the risk of feeding cherries outweighs the benefits.",
+        "sl": "Zrela sredica ni strupeni del, a Pet Poison Helpline svetuje, da tveganje hranjenja s češnjami presega koristi."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD22",
+      "quote": "The main concern are the pits (seeds)."
+    },
+    {
+      "id": "KD22",
+      "quote": "If the pit is chewed and crushed, cyanide may be released."
+    },
+    {
+      "id": "KD22",
+      "quote": "If a pet ingests the whole pit without chewing and breaking it open, poisoning is not expected."
+    },
+    {
+      "id": "KD22",
+      "quote": "All parts of these plants other than the ripe pulp around the seeds are considered toxic and contain cyanide."
+    },
+    {
+      "id": "KD23",
+      "quote": "However, the risk of feeding your dog cherries far outweighs the benefits."
+    },
+    {
+      "id": "KD23",
+      "quote": "The leaves, stem, and pits of the cherry plant all contain cyanogenic glycosides that can turn to cyanide."
+    },
+    {
+      "id": "KD24",
+      "quote": "The pits can even get lodged in the digestive tract and cause blockages in the intestines."
+    },
+    {
+      "id": "KD24",
+      "quote": "One cherry will not cause cyanide poisoning."
+    },
+    {
+      "id": "KD24",
+      "quote": "If your dog is healthy and eats one or two cherries, you do not need to panic."
+    },
+    {
+      "id": "KD24",
+      "quote": "Some symptoms include dilated pupils, inflamed gums, trouble breathing, upset stomach, diarrhea, and shock."
+    },
+    {
+      "id": "KD24",
+      "quote": "Call Pet Poison Helpline® and your veterinarian to help get the care your dog needs."
+    },
+    {
+      "id": "KD25",
+      "quote": "Stems, leaves, seeds contain cyanide, particularly toxic in the process of wilting"
+    },
+    {
+      "id": "KD25",
+      "quote": "brick red mucous membranes, dilated pupils, difficulty breathing, panting, shock."
+    }
+  ],
+  "related": [
+    "peaches",
+    "plums",
+    "apricots",
+    "grapes"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

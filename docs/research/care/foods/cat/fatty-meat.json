@@ -1,0 +1,107 @@
+{
+  "slug": "fatty-meat",
+  "species": "cat",
+  "name": {
+    "en": "Fatty meat",
+    "sl": "Mastno meso"
+  },
+  "question": {
+    "en": "Can cats eat fatty meat?",
+    "sl": "Ali lahko mačke jedo mastno meso?"
+  },
+  "url_slug": {
+    "en": "fatty-meat",
+    "sl": "mastno-meso"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "It's best not to. Fatty meat and poultry skin can upset a cat's digestion and, in sensitive cats, may even lead to pancreatitis. If you share meat, give a little plain, lean, cooked meat with no skin, bones or seasoning.",
+    "sl": "Raje ne. Mastno meso in perutninska koža lahko muci povzročijo prebavne težave, pri občutljivih mačkah pa celo vnetje trebušne slinavke. Če delite meso, ponudite malo navadnega, pustega, kuhanega mesa brez kože, kosti in začimb."
+  },
+  "why": {
+    "en": "Too much fat can affect a cat's digestive tract, especially the pancreas. Cats Protection warns that turkey skin is high in fat and can cause digestive upset or even pancreatitis in sensitive cats, and a University of Georgia vet advises avoiding the fattier pieces of meat altogether.",
+    "sl": "Preveč maščobe lahko obremeni mačja prebavila, zlasti trebušno slinavko. Cats Protection opozarja, da je puranja koža zelo mastna in lahko pri občutljivih mačkah povzroči prebavne težave ali celo vnetje trebušne slinavke, veterinarka z Univerze v Georgii pa svetuje, naj se bolj mastnim kosom mesa povsem izognemo."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Tummy upset"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Prebavne težave"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat ate a lot of fatty food, or is vomiting, has diarrhoea or seems in pain afterwards, contact your vet for advice.",
+    "sl": "Če je muca pojedla veliko mastne hrane ali po tem bruha, ima drisko ali se zdi, da jo boli, se za nasvet obrnite na veterinarja."
+  },
+  "serving": {
+    "en": "Only plain, cooked, lean meat as an occasional treat: no skin, fat, bones or seasoning.",
+    "sl": "Le navadno, kuhano, pusto meso kot občasen priboljšek: brez kože, maščobe, kosti in začimb."
+  },
+  "child": {
+    "en": "Fatty bits can give a cat a sore tummy. If a grown-up says yes, kitty can have a tiny bit of plain lean meat.",
+    "sl": "Mastni koščki lahko muco zboli trebušček. Če odrasli dovoli, lahko muca dobi košček navadnega pustega mesa."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is chicken or turkey skin OK?",
+        "sl": "Je piščančja ali puranja koža v redu?"
+      },
+      "a": {
+        "en": "No. Cats Protection says turkey skin is high in fat and can cause digestive upset or even pancreatitis in sensitive cats. Give skinless meat instead.",
+        "sl": "Ne. Cats Protection navaja, da je puranja koža zelo mastna in lahko pri občutljivih mačkah povzroči prebavne težave ali celo vnetje trebušne slinavke. Raje ponudite meso brez kože."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC27",
+      "quote": "Turkey skin is high in fat and can cause digestive upset or even pancreatitis in sensitive cats."
+    },
+    {
+      "id": "KC27",
+      "quote": "It's ok to feed your cat some plain, cooked turkey as an occasional treat. But avoid giving turkey to your cat regularly."
+    },
+    {
+      "id": "KC28",
+      "quote": "Having too high fat content can affect cats' digestive tract, especially their pancreas"
+    },
+    {
+      "id": "KC28",
+      "quote": "Try to avoid the fattier pieces altogether."
+    },
+    {
+      "id": "KC28",
+      "quote": "Ham increases the risk of pancreatitis, diarrhea and vomiting."
+    },
+    {
+      "id": "KC5",
+      "quote": "If you notice or suspect your cat has eaten food that can be harmful to them, book an urgent appointment with your vet"
+    }
+  ],
+  "related": [
+    "ham",
+    "cooked-bones",
+    "cooked-chicken",
+    "turkey",
+    "butter"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

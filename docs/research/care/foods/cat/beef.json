@@ -1,0 +1,97 @@
+{
+  "slug": "beef",
+  "species": "cat",
+  "name": {
+    "en": "Beef",
+    "sl": "Govedina"
+  },
+  "question": {
+    "en": "Can cats eat beef?",
+    "sl": "Ali lahko mačke jedo govedino?"
+  },
+  "url_slug": {
+    "en": "beef",
+    "sl": "govedina"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a little plain, well-cooked beef is fine as an occasional treat. Cut off the fat, remove all bones and add no seasoning. Raw beef is not recommended.",
+    "sl": "Da, malo navadnega, dobro kuhanega govejega mesa je v redu kot občasen priboljšek. Odrežite maščobo, odstranite vse kosti in ga ne začinite. Surovo meso ni priporočljivo."
+  },
+  "why": {
+    "en": "Beef is one of the most common proteins in cat food. As a home treat it must be properly cooked: International Cat Care warns that raw or undercooked meat such as beef, lamb and pork can carry Toxoplasma, and advises feeding only properly cooked food. Fatty trimmings are on RSPCA Australia's do-not-feed list, and cooked bones can splinter.",
+    "sl": "Govedina je ena najpogostejših beljakovin v hrani za mačke. Kot domači priboljšek mora biti dobro kuhana: International Cat Care opozarja, da surovo ali premalo kuhano meso, kot so govedina, jagnjetina in svinjina, lahko prenaša toksoplazmo, in svetuje le dobro kuhano hrano. Mastni ostanki so na seznamu RSPCA Avstralija živil, ki jih ne dajemo, kuhane kosti pa se lahko razcepijo."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Offer a small piece first. If your cat gets vomiting or diarrhoea afterwards, stop and ask your vet. If your cat swallowed a cooked bone, call your vet.",
+    "sl": "Najprej ponudite majhen košček. Če ima mačka potem bruhanje ali drisko, prenehajte in se posvetujte z veterinarjem. Če je mačka pogoltnila kuhano kost, pokličite veterinarja."
+  },
+  "serving": {
+    "en": "Well cooked, plain, lean, boneless and unseasoned; a few small pieces now and then.",
+    "sl": "Dobro kuhano, brez dodatkov, pusto, brez kosti in začimb; nekaj majhnih koščkov občasno."
+  },
+  "child": {
+    "en": "A tiny bit of plain cooked beef can be a treat. A grown-up should cook it and take out the bones.",
+    "sl": "Košček navadnega kuhanega mesa je lahko priboljšek. Odrasel naj ga skuha in odstrani kosti."
+  },
+  "faq": [],
+  "sources": [
+    {
+      "id": "KC228",
+      "quote": "The most commonly used protein sources in cat food include beef, pork, lamb, chicken, turkey, and eggs."
+    },
+    {
+      "id": "KC213",
+      "quote": "raw or inadequately cooked meat (eg, beef, lamb, pork)"
+    },
+    {
+      "id": "KC213",
+      "quote": "Feed only properly cooked food or commercial cooked cat food to your cat"
+    },
+    {
+      "id": "KC205",
+      "quote": "Cooked meat such as boiled or steamed chicken may also be offered occasionally,"
+    },
+    {
+      "id": "KC205",
+      "quote": "any other foods should only be fed occasionally as treats,"
+    },
+    {
+      "id": "KC205",
+      "quote": "fatty trimmings / fatty foods"
+    },
+    {
+      "id": "KC216",
+      "quote": "Added fat is not only unnecessary, but it also can lead to a painful condition called pancreatitis."
+    },
+    {
+      "id": "KC217",
+      "quote": "Cooked bones can splinter and puncture the esophagus, stomach or intestines, or become lodged,"
+    },
+    {
+      "id": "KC201",
+      "quote": "Food meant for people from supermarkets and butchers is supposed to be cooked."
+    }
+  ],
+  "related": [
+    "lamb",
+    "pork",
+    "raw-meat",
+    "fatty-meat",
+    "cooked-bones"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

@@ -15,8 +15,8 @@
   },
   "level": "toxic",
   "answer": {
-    "en": "No. Coffee contains caffeine, and cats are more sensitive to caffeine than people. Coffee grounds and beans are especially risky because they are concentrated. Keep coffee out of reach and call your vet if your cat eats or drinks any.",
-    "sl": "Ne. Kava vsebuje kofein, mačke pa so nanj bolj občutljive kot ljudje. Posebej tvegani sta mleta kava in kavna zrna, ker sta zelo koncentrirana. Kavo hranite izven dosega in pokličite veterinarja, če jo muca poje ali popije."
+    "en": "No. Coffee contains caffeine, and cats are more sensitive to caffeine than people. Unused coffee grounds and beans can cause serious poisoning. Keep coffee out of reach and call your vet if your cat eats or drinks any.",
+    "sl": "Ne. Kava vsebuje kofein, mačke pa so nanj bolj občutljive kot ljudje. Neuporabljena mleta kava in kavna zrna lahko povzročijo resno zastrupitev. Kavo hranite izven dosega in pokličite veterinarja, če jo muca poje ali popije."
   },
   "why": {
     "en": "Coffee is one of the main sources of caffeine at home. Cats are more sensitive to caffeine than people. Caffeine belongs to the methylxanthines, the same group of stimulants as the theobromine in chocolate, and it speeds up the heart, makes cats restless and upsets the stomach.",
@@ -54,16 +54,6 @@
       "a": {
         "en": "Yes, they can be. Pet Poison Helpline warns that unused coffee grounds or beans could cause serious toxicity in cats. Throw away used grounds and pods where your cat can't reach them.",
         "sl": "Lahko, da. Pet Poison Helpline opozarja, da lahko neuporabljena mleta kava ali zrna pri mačkah povzročijo resno zastrupitev. Uporabljeno kavo in kapsule zavrzite tja, kamor muca ne seže."
-      }
-    },
-    {
-      "q": {
-        "en": "Will my cat want a milky coffee?",
-        "sl": "Ali bo muco zamikala kava z mlekom?"
-      },
-      "a": {
-        "en": "Possibly. Pet Poison Helpline notes cats may be drawn to big coffee drinks with sweeteners and cream, so don't leave cups unattended.",
-        "sl": "Morda. Pet Poison Helpline navaja, da mačke lahko privabijo velike kavne pijače s sladili in smetano, zato skodelic ne puščajte brez nadzora."
       }
     }
   ],

@@ -1,0 +1,97 @@
+{
+  "slug": "cooked-eggs",
+  "species": "cat",
+  "name": {
+    "en": "Cooked eggs",
+    "sl": "Kuhana jajca"
+  },
+  "question": {
+    "en": "Can cats eat cooked eggs?",
+    "sl": "Ali lahko mačke jedo kuhana jajca?"
+  },
+  "url_slug": {
+    "en": "cooked-eggs",
+    "sl": "kuhana-jajca"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, in small amounts. A little fully cooked, plain egg is fine as an occasional treat. Eggs are a common protein in cat food, but they should only be given in moderation and never raw.",
+    "sl": "Da, v majhnih količinah. Malo popolnoma kuhanega jajca brez dodatkov je v redu kot občasen priboljšek. Jajca so pogosta beljakovina v hrani za mačke, vendar jih dajemo le zmerno in nikoli surovih."
+  },
+  "why": {
+    "en": "Cornell lists eggs among the protein sources most commonly used in cat food, and PDSA says eggs suit pets, but only in moderation. Cooking matters: raw eggs can carry Salmonella and raw egg white blocks the vitamin biotin. Treats should be a small part of a cat's diet.",
+    "sl": "Cornell jajca navaja med najpogostejšimi viri beljakovin v hrani za mačke, PDSA pa, da so jajca primerna za živali, a le zmerno. Pomembno je kuhanje: surova jajca lahko prenašajo salmonelo, surov beljak pa ovira vsrkavanje vitamina biotina. Priboljški naj bodo le majhen del mačje prehrane."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Offer a small piece first. If your cat gets vomiting or diarrhoea afterwards, stop and ask your vet before trying again.",
+    "sl": "Najprej ponudite majhen košček. Če ima mačka potem bruhanje ali drisko, prenehajte in se pred ponovnim poskusom posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "Fully cooked and plain, with nothing added; a small piece as an occasional treat.",
+    "sl": "Popolnoma kuhano in brez dodatkov; majhen košček kot občasen priboljšek."
+  },
+  "child": {
+    "en": "A tiny bit of plain cooked egg can be a treat for a cat. Ask a grown-up to cook it first.",
+    "sl": "Košček navadnega kuhanega jajca je lahko priboljšek za mucko. Prosi odraslega, da ga najprej skuha."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Why not raw?",
+        "sl": "Zakaj ne surovo?"
+      },
+      "a": {
+        "en": "Raw eggs can carry bacteria such as Salmonella, and raw egg white contains avidin, which stops the vitamin biotin being absorbed.",
+        "sl": "Surova jajca lahko prenašajo bakterije, kot je salmonela, surov beljak pa vsebuje avidin, ki prepreči vsrkavanje vitamina biotina."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC228",
+      "quote": "The most commonly used protein sources in cat food include beef, pork, lamb, chicken, turkey, and eggs."
+    },
+    {
+      "id": "KC227",
+      "quote": "with eggs being the most suitable for pets, but only when fed in moderation."
+    },
+    {
+      "id": "KC206",
+      "quote": "A good rule of thumb is not to let treats exceed 10 to 15 percent of a cat's daily caloric intake."
+    },
+    {
+      "id": "KC219",
+      "quote": "Do not give your pet raw eggs."
+    },
+    {
+      "id": "KC209",
+      "quote": "While egg yolks are a good source of biotin, raw egg whites contain a glycoprotein called avidin that binds biotin and prevents its absorption in the GI tract."
+    },
+    {
+      "id": "KC216",
+      "quote": "Follow proper food handling techniques and cook food thoroughly, keeping your pet safe from salmonella if they eat raw or undercooked meat or eggs."
+    }
+  ],
+  "related": [
+    "raw-eggs",
+    "cooked-chicken",
+    "milk",
+    "butter",
+    "onion",
+    "garlic"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

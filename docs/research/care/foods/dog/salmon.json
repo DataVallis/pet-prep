@@ -1,0 +1,133 @@
+{
+  "slug": "salmon",
+  "species": "dog",
+  "name": {
+    "en": "Salmon",
+    "sl": "Losos"
+  },
+  "question": {
+    "en": "Can dogs eat salmon?",
+    "sl": "Ali lahko psi jedo lososa?"
+  },
+  "url_slug": {
+    "en": "salmon",
+    "sl": "losos"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, if it is fully cooked, plain and boneless. Cooked salmon is a good source of protein and omega-3 fats. Raw or undercooked salmon is not safe, and smoked salmon is too salty, so keep those away from your dog.",
+    "sl": "Da, če je popolnoma kuhan, brez dodatkov in brez kosti. Kuhan losos je dober vir beljakovin in omega-3 maščob. Surov ali premalo kuhan losos ni varen, dimljen losos pa je preslan, zato ju psu ne dajajte."
+  },
+  "why": {
+    "en": "Raw salmon can carry parasites and bacteria; in the Pacific Northwest of the USA it can cause salmon poisoning disease, which is serious if untreated. Salmon has small, brittle bones that can cause choking. Smoked salmon and lox are high in salt. Seasonings, oils and sauces don't belong on a dog's portion.",
+    "sl": "Surov losos lahko prenaša zajedavce in bakterije; na pacifiškem severozahodu ZDA lahko povzroči bolezen »zastrupitev z lososom«, ki je brez zdravljenja resna. Losos ima drobne, krhke kosti, ki lahko povzročijo dušenje. Dimljen losos vsebuje veliko soli. Začimbe, olja in omake ne sodijo na pasji obrok."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If your dog ate raw salmon, especially from the Pacific Northwest of the USA, call your vet and mention it; watch for fever, weakness, loss of appetite, vomiting or diarrhoea. If your dog swallowed bones and is choking, call your vet straight away.",
+    "sl": "Če je pes pojedel surovega lososa, posebej s pacifiškega severozahoda ZDA, pokličite veterinarja in mu to povejte; opazujte, ali se pojavijo vročina, šibkost, izguba apetita, bruhanje ali driska. Če je pes pogoltnil kosti in se duši, takoj pokličite veterinarja."
+  },
+  "serving": {
+    "en": "Fully cooked (baked, steamed or grilled), plain, no seasoning, oils or sauces, boneless fillet; never raw or smoked.",
+    "sl": "Popolnoma kuhan (pečen, na pari ali na žaru), brez začimb, olj in omak, file brez kosti; nikoli surov ali dimljen."
+  },
+  "child": {
+    "en": "Cooked salmon without bones can be a healthy treat for a dog. Raw or smoked salmon is not for dogs.",
+    "sl": "Kuhan losos brez kosti je lahko za psa zdrav priboljšek. Surov ali dimljen losos ni za pse."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat smoked salmon?",
+        "sl": "Ali lahko psi jedo dimljen losos?"
+      },
+      "a": {
+        "en": "It isn't a good choice: smoked salmon and lox are high in salt.",
+        "sl": "Ni dobra izbira: dimljen losos in loks vsebujeta veliko soli."
+      }
+    },
+    {
+      "q": {
+        "en": "Is salmon in dog food safe?",
+        "sl": "Je losos v pasji hrani varen?"
+      },
+      "a": {
+        "en": "Salmon in commercial diets is typically safe because it is cooked.",
+        "sl": "Losos v komercialni pasji hrani je običajno varen, ker je kuhan."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD201",
+      "quote": "Fully cooked and deboned salmon is an excellent source of protein and healthy fat."
+    },
+    {
+      "id": "KD201",
+      "quote": "But, raw or undercooked salmon can carry parasites and bacteria that can make dogs extremely sick, causing vomiting, diarrhea"
+    },
+    {
+      "id": "KD201",
+      "quote": "Smoked salmon or lox aren’t good choices for sharing with dogs due to their high salt content and low-heat preparation method"
+    },
+    {
+      "id": "KD216",
+      "quote": "Raw salmon is not safe for dogs"
+    },
+    {
+      "id": "KD216",
+      "quote": "It's a great source of protein, omega-3 fatty acids, and essential nutrients that support skin, coat, and joint health."
+    },
+    {
+      "id": "KD216",
+      "quote": "Salmon poisoning disease is a serious matter, with 90% of untreated cases resulting in death."
+    },
+    {
+      "id": "KD216",
+      "quote": "Salmon (and other types of fish) harbor small, brittle bones that could pose a choking hazard to your dog."
+    },
+    {
+      "id": "KD216",
+      "quote": "Choose fresh, boneless filets to prevent any hazards."
+    },
+    {
+      "id": "KD216",
+      "quote": "Cook salmon plain (baked, steamed, or grilled) without seasoning, oils, or sauces."
+    },
+    {
+      "id": "KD216",
+      "quote": "Salmon-infused commercial diets are typically safe, as they're cooked and formulated to eliminate this risk."
+    },
+    {
+      "id": "KD229",
+      "quote": "Both diseases occur only in the Pacific Northwest of the United States, from northern California to Alaska"
+    },
+    {
+      "id": "KD229",
+      "quote": "Early signs include high fever followed by weakness and complete loss of appetite."
+    },
+    {
+      "id": "KD229",
+      "quote": "Prevention is based on avoiding feeding dogs raw or undercooked salmon, trout, or similar fish."
+    }
+  ],
+  "related": [
+    "raw-fish",
+    "tuna",
+    "sardines",
+    "salt"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

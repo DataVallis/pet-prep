@@ -1,0 +1,145 @@
+{
+  "slug": "pork",
+  "species": "dog",
+  "name": {
+    "en": "Pork",
+    "sl": "Svinjina"
+  },
+  "question": {
+    "en": "Can dogs eat pork?",
+    "sl": "Ali lahko psi jedo svinjino?"
+  },
+  "url_slug": {
+    "en": "pork",
+    "sl": "svinjina"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "Not as a regular treat. Some vet sources allow a little plain, fully cooked lean pork, but pork is fatty and hard for dogs to digest, and fatty foods can trigger pancreatitis. Raw pork, cooked bones, and ham, bacon or sausage are not suitable.",
+    "sl": "Ne kot redno priboljšek. Nekateri veterinarski viri dovolijo malo navadne, popolnoma kuhane puste svinjine, a svinjina je mastna in jo psi težko prebavijo, mastna hrana pa lahko sproži vnetje trebušne slinavke. Surova svinjina, kuhane kosti ter šunka, slanina ali klobase niso primerne."
+  },
+  "why": {
+    "en": "Pork is rich in a type of fat that is difficult for dogs to digest. Raw or undercooked pork can carry the parasite Trichinella. Cooked bones become brittle, and seasonings can be dangerous. Ham is high in salt and fat. Sources differ: the AKC calls plain cooked lean pork safe in moderation, while PDSA advises avoiding high-fat treats like pork, so we use the stricter level.",
+    "sl": "Svinjina vsebuje vrsto maščobe, ki jo psi težko prebavijo. Surova ali premalo kuhana svinjina lahko prenaša zajedavca trihinelo. Kuhane kosti postanejo krhke, začimbe pa so lahko nevarne. Šunka vsebuje veliko soli in maščobe. Viri se razlikujejo: AKC navadno kuhano pusto svinjino v zmernih količinah označuje kot varno, PDSA pa svetuje, da se izogibamo mastnim priboljškom, kot je svinjina, zato smo izbrali strožjo stopnjo."
+  },
+  "signs": {
+    "en": [
+      "Vomiting, sometimes starting 1–4 days after a fatty meal",
+      "Diarrhoea",
+      "Belly pain",
+      "Poor appetite and low energy"
+    ],
+    "sl": [
+      "Bruhanje, ki se lahko začne 1–4 dni po mastnem obroku",
+      "Driska",
+      "Boleč trebuh",
+      "Slab apetit in utrujenost"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog ate fatty or seasoned pork, watch for vomiting, diarrhoea or belly pain over the next few days and call your vet as soon as possible if they appear. If it ate raw pork, cooked bones or food with onion or garlic, call your vet straight away.",
+    "sl": "Če je pes pojedel mastno ali začinjeno svinjino, v naslednjih dneh opazujte, ali bruha, ima drisko ali ga boli trebuh, in čim prej pokličite veterinarja, če se to pojavi. Če je pojedel surovo svinjino, kuhane kosti ali hrano s čebulo ali česnom, takoj pokličite veterinarja."
+  },
+  "serving": {
+    "en": "If you share at all: a small piece of plain, fully cooked lean pork, fat trimmed, boneless, unseasoned.",
+    "sl": "Če jo sploh daste: majhen košček navadne, popolnoma kuhane puste svinjine, brez maščobe, kosti in začimb."
+  },
+  "child": {
+    "en": "Pork is very fatty for a dog's tummy. Only a grown-up should decide if a dog gets a tiny plain piece.",
+    "sl": "Svinjina je za pasji trebušček zelo mastna. Samo odrasel naj odloči, ali pes dobi droben navaden košček."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat ham or bacon?",
+        "sl": "Ali lahko psi jedo šunko ali slanino?"
+      },
+      "a": {
+        "en": "They aren't good choices: ham is high in fat and sodium, and eating a large amount of fatty pork products can cause pancreatitis.",
+        "sl": "Nista dobri izbiri: šunka vsebuje veliko maščobe in natrija, večja količina mastnih svinjskih izdelkov pa lahko povzroči vnetje trebušne slinavke."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD221",
+      "quote": "Eating raw or undercooked pork isn’t safe for dogs or humans due to the parasite trichinella spiralis larvae"
+    },
+    {
+      "id": "KD221",
+      "quote": "Plain, cooked pork is safe for dogs to eat, as long as you keep it simple"
+    },
+    {
+      "id": "KD221",
+      "quote": "Pork is also rich with a type of fat that is difficult for dogs to digest"
+    },
+    {
+      "id": "KD221",
+      "quote": "Once cooked, the bone dries out, causing it to become fragile and brittle."
+    },
+    {
+      "id": "KD221",
+      "quote": "Seasonings and spice rubs that contain the following ingredients are extremely dangerous"
+    },
+    {
+      "id": "KD221",
+      "quote": "Ham’s high salt content can cause dogs to become dehydrated and drink an excessive amount of water."
+    },
+    {
+      "id": "KD221",
+      "quote": "Eating a large amount can cause pancreatitis, which can be fatal."
+    },
+    {
+      "id": "KD201",
+      "quote": "As with other meats, serve fully cooked pork in moderation, choose lean cuts with any excess fat trimmed away, and remove all"
+    },
+    {
+      "id": "KD201",
+      "quote": "Never give cooked pork bones to dogs."
+    },
+    {
+      "id": "KD201",
+      "quote": "Ham isn’t toxic to dogs, but it’s high in fat and sodium."
+    },
+    {
+      "id": "KD231",
+      "quote": "Avoid high fat treats like cheese or pork."
+    },
+    {
+      "id": "KD231",
+      "quote": "Book an appointment with your vet ASAP if your dog has any of the symptoms above"
+    },
+    {
+      "id": "KD228",
+      "quote": "Delayed onset vomiting (1-4 days after fatty meal ingestion), abdominal pain, diarrhea (+/- blood), reduced appetite and leth"
+    },
+    {
+      "id": "KD222",
+      "quote": "Onions and garlic are toxic to dogs."
+    },
+    {
+      "id": "KD234",
+      "quote": "Call your vet immediately."
+    }
+  ],
+  "related": [
+    "ham",
+    "bacon",
+    "fatty-meat",
+    "raw-meat",
+    "cooked-bones"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

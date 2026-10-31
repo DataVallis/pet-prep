@@ -1,0 +1,124 @@
+{
+  "slug": "tuna",
+  "species": "cat",
+  "name": {
+    "en": "Tuna",
+    "sl": "Tuna"
+  },
+  "question": {
+    "en": "Can cats eat tuna?",
+    "sl": "Ali lahko mačke jedo tuno?"
+  },
+  "url_slug": {
+    "en": "tuna",
+    "sl": "tuna"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "Not regularly. A small amount of tuna may not cause harm, but tinned tuna for people lacks nutrients cats need, can be high in salt and mercury, and some vets advise against it even as a treat. It is never a complete diet.",
+    "sl": "Ne redno. Majhna količina tune morda ne škodi, vendar konzervirani tuni za ljudi manjkajo hranila, ki jih mačke potrebujejo, lahko ima veliko soli in živega srebra, nekateri veterinarji pa jo odsvetujejo celo kot priboljšek. Nikoli ni popolna prehrana."
+  },
+  "why": {
+    "en": "Sources disagree, so we use the stricter level. RSPCA Australia allows tinned tuna in spring water as an occasional treat. VCA says cats shouldn't eat tuna, not even as a treat, because it lacks essential nutrients and has too much unsaturated fat. Cats Protection warns it can be high in salt and mercury and cause weight gain. The Merck Veterinary Manual notes vitamin E deficiency in cats given large quantities of canned tuna.",
+    "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. RSPCA Avstralija dovoljuje konzervirano tuno v izvirski vodi kot občasen priboljšek. VCA navaja, da mačke tune ne bi smele jesti niti kot priboljšek, ker ji manjkajo nujna hranila in ima preveč nenasičenih maščob. Cats Protection opozarja, da ima lahko veliko soli in živega srebra ter mačko zredi. Merckov veterinarski priročnik omenja pomanjkanje vitamina E pri mačkah, ki so dobivale velike količine konzervirane tune."
+  },
+  "signs": {
+    "en": [
+      "Weight gain if fed often",
+      "Upset stomach"
+    ],
+    "sl": [
+      "Pridobivanje teže pri pogostem hranjenju",
+      "Razdražen želodec"
+    ]
+  },
+  "what_to_do": {
+    "en": "A bite of tuna is unlikely to be a problem. Don't make it a habit or a main meal. If your cat seems unwell after eating tuna, or eats a lot of it often, talk to your vet.",
+    "sl": "Grižljaj tune najverjetneje ne bo težava. Naj ne postane navada ali glavni obrok. Če se mačka po tuni ne počuti dobro ali je pogosto poje veliko, se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "If at all: tinned in spring water with no added salt, a little, rarely, and never instead of cat food.",
+    "sl": "Če sploh: konzervirana v izvirski vodi brez dodane soli, malo, redko in nikoli namesto mačje hrane."
+  },
+  "child": {
+    "en": "Cats love tuna, but too much isn't healthy. Their own cat food keeps them strong.",
+    "sl": "Mucke imajo rade tuno, a preveč je ni zdravo. Močne jih ohranja njihova mačja hrana."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can my cat live on tuna?",
+        "sl": "Ali lahko mačka živi samo od tune?"
+      },
+      "a": {
+        "en": "No. Tuna lacks essential nutrients cats need, and cats given large amounts of canned tuna have developed vitamin E deficiency.",
+        "sl": "Ne. Tuni manjkajo nujna hranila, ki jih mačke potrebujejo, pri mačkah, ki so dobivale velike količine konzervirane tune, pa se je razvilo pomanjkanje vitamina E."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC201",
+      "quote": "If your cat eats a small amount of tuna, it may not cause harm."
+    },
+    {
+      "id": "KC201",
+      "quote": "However, canned tuna made for humans should not be fed to cats regularly, due to the lack of essential nutrients that cats need for their optimal health."
+    },
+    {
+      "id": "KC201",
+      "quote": "It can also be high in salt and mercury, which can be harmful to your cat if eaten in large amounts."
+    },
+    {
+      "id": "KC201",
+      "quote": "Eating too much tuna could also cause your cat to gain weight quickly."
+    },
+    {
+      "id": "KC207",
+      "quote": "While cats may love tuna, they shouldn’t eat it—not even as a treat!"
+    },
+    {
+      "id": "KC207",
+      "quote": "Tuna lacks essential nutrients and has too much unsaturated fat."
+    },
+    {
+      "id": "KC205",
+      "quote": "Fish, such as tinned sardines, tuna or salmon in spring water (take care with any fish bones) can be offered as a treat occasionally."
+    },
+    {
+      "id": "KC205",
+      "quote": "these foods are not suitable as the main part of the diet."
+    },
+    {
+      "id": "KC209",
+      "quote": "Naturally occurring deficiencies of vitamin E have occurred in cats given large quantities of canned tuna, resulting in the development of pansteatitis (yellow fat disease)."
+    },
+    {
+      "id": "KC206",
+      "quote": "Some cats that have consumed canned fish products meant for humans have developed potentially serious neurological disorders."
+    },
+    {
+      "id": "KC227",
+      "quote": "30g of tinned tuna in water with no added salt"
+    }
+  ],
+  "related": [
+    "salmon",
+    "sardines",
+    "raw-fish",
+    "salt"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

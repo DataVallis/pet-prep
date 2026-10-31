@@ -1,0 +1,104 @@
+{
+  "slug": "apricots",
+  "species": "dog",
+  "name": {
+    "en": "Apricots",
+    "sl": "Marelice"
+  },
+  "question": {
+    "en": "Can dogs eat apricots?",
+    "sl": "Ali lahko psi jedo marelice?"
+  },
+  "url_slug": {
+    "en": "apricots",
+    "sl": "marelice"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "Not recommended. The apricot plant is listed as toxic to dogs: its stems, leaves and seeds (the kernel inside the stone) contain cyanide, especially as they wilt. Never let your dog chew apricot stones, leaves or stems.",
+    "sl": "Ni priporočljivo. Marelica je navedena kot strupena za pse: njeni peclji, listi in semena (jedrca v koščici) vsebujejo cianid, zlasti ko venejo. Psu nikoli ne pustite žvečiti marelične koščice, listov ali pecljev."
+  },
+  "why": {
+    "en": "Apricot stems, leaves and seeds contain cyanogenic glycosides, which release cyanide. Cyanide reduces the body's ability to use oxygen. Because the plant is listed as toxic to dogs, we do not rate apricots as a safe treat.",
+    "sl": "Peclji, listi in semena marelice vsebujejo cianogene glikozide, iz katerih se sprošča cianid. Cianid zmanjša sposobnost telesa, da porablja kisik. Ker je rastlina navedena kot strupena za pse, marelic ne ocenjujemo kot varen priboljšek."
+  },
+  "signs": {
+    "en": [
+      "Dilated pupils",
+      "Brick-red gums",
+      "Difficulty breathing, panting",
+      "Shock"
+    ],
+    "sl": [
+      "Razširjene zenice",
+      "Opečnato rdeče dlesni",
+      "Težko dihanje, sopihanje",
+      "Šok"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog chewed or swallowed apricot stones, leaves or stems, contact your vet for advice right away. Note what was eaten and roughly how much.",
+    "sl": "Če je pes žvečil ali pogoltnil marelične koščice, liste ali peclje, se takoj posvetujte z veterinarjem. Zapišite si, kaj in približno koliko je pojedel."
+  },
+  "serving": null,
+  "child": {
+    "en": "Apricot stones, leaves and stems are bad for dogs. Keep apricots for people, and tell a grown-up if your dog chews a stone.",
+    "sl": "Marelične koščice, listi in peclji so za pse slabi. Marelice so za ljudi; povej odraslemu, če pes žveči koščico."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Which parts of the apricot are toxic?",
+        "sl": "Kateri deli marelice so strupeni?"
+      },
+      "a": {
+        "en": "The stems, leaves and seeds contain cyanide, and they are particularly toxic as they wilt.",
+        "sl": "Peclji, listi in semena vsebujejo cianid in so posebej strupeni, ko venejo."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD31",
+      "quote": "Toxic to Dogs"
+    },
+    {
+      "id": "KD31",
+      "quote": "Cyanogenic glycosides found in some species"
+    },
+    {
+      "id": "KD31",
+      "quote": "Stems, leaves, seeds contain cyanide, particularly toxic in the process of wilting"
+    },
+    {
+      "id": "KD31",
+      "quote": "brick red mucous membranes, dilated pupils, difficulty breathing, panting, shock."
+    },
+    {
+      "id": "KD27",
+      "quote": "Cyanide reduces the body's ability to process oxygen at a cellular level resulting in clinical signs including vomiting"
+    },
+    {
+      "id": "KD35",
+      "quote": "If you do suspect your pet has swallowed something you should contact your vet for advice immediately."
+    }
+  ],
+  "related": [
+    "peaches",
+    "plums",
+    "cherries"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

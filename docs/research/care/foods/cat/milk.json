@@ -1,0 +1,151 @@
+{
+  "slug": "milk",
+  "species": "cat",
+  "name": {
+    "en": "Milk",
+    "sl": "Mleko"
+  },
+  "question": {
+    "en": "Can cats drink milk?",
+    "sl": "Ali lahko mačke pijejo mleko?"
+  },
+  "url_slug": {
+    "en": "milk",
+    "sl": "mleko"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "It's best not to. Most adult cats are lactose intolerant, so cow's milk can cause vomiting, diarrhoea and stomach pain. Cats get no benefit from milk; fresh water is all they need to drink.",
+    "sl": "Raje ne. Večina odraslih mačk ne prenaša laktoze, zato jim kravje mleko lahko povzroči bruhanje, drisko in bolečine v trebuhu. Mleko mačkam ne koristi; piti potrebujejo le svežo vodo."
+  },
+  "why": {
+    "en": "Milk contains lactose, a sugar that needs the enzyme lactase to be digested. Cats have very little lactase, so most are lactose intolerant and dairy often upsets their stomach. Kittens drink their mother's milk, but orphaned kittens need special kitten milk, not cow's milk.",
+    "sl": "Mleko vsebuje laktozo, sladkor, za katerega prebavo je potreben encim laktaza. Mačke imajo laktaze zelo malo, zato večina ne prenaša laktoze in mlečni izdelki jim pogosto povzročijo prebavne težave. Mladički pijejo mleko svoje mame, osirotelim mladičkom pa je treba dajati posebno mleko za mladiče, ne kravjega."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Stomach pain"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Bolečine v trebuhu"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat drank milk and has vomiting or diarrhoea that doesn't settle, or seems unwell, contact your vet for advice.",
+    "sl": "Če je muca popila mleko in ima bruhanje ali drisko, ki ne mineta, ali se ne počuti dobro, se za nasvet obrnite na veterinarja."
+  },
+  "serving": {
+    "en": "If you want to offer milk, choose a milk made for cats (usually low-lactose or lactose-free) and count its calories in your cat's daily food.",
+    "sl": "Če želite muci ponuditi mleko, izberite mleko za mačke (običajno z malo laktoze ali brez nje) in njegove kalorije upoštevajte pri dnevnem obroku."
+  },
+  "child": {
+    "en": "Cartoon cats love milk, but real cats get a sore tummy from it. Fresh water is kitty's best drink!",
+    "sl": "Risane muce obožujejo mleko, prave pa jih od njega boli trebušček. Sveža voda je za muco najboljša pijača!"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are adult cats lactose intolerant?",
+        "sl": "Ali odrasle mačke ne prenašajo laktoze?"
+      },
+      "a": {
+        "en": "Yes, most are. Cats lack significant amounts of lactase, the enzyme that breaks down lactose in milk, so milk can cause vomiting, diarrhoea and stomach pain.",
+        "sl": "Da, večina ne. Mačke nimajo dovolj laktaze, encima, ki razgradi laktozo v mleku, zato jim mleko lahko povzroči bruhanje, drisko in bolečine v trebuhu."
+      }
+    },
+    {
+      "q": {
+        "en": "What should kittens drink?",
+        "sl": "Kaj naj pijejo mladički?"
+      },
+      "a": {
+        "en": "Kittens need their mother's milk. If a kitten has to be bottle-fed, give only special kitten milk, because other milks don't have the right balance of nutrients.",
+        "sl": "Mladički potrebujejo materino mleko. Če mladička hranite po steklenički, mu dajte le posebno mleko za mladiče, ker druga mleka nimajo pravega razmerja hranil."
+      }
+    },
+    {
+      "q": {
+        "en": "Is cat milk from the shop OK?",
+        "sl": "Je mleko za mačke iz trgovine v redu?"
+      },
+      "a": {
+        "en": "Milk made for cats usually has much less lactose or none. It still has calories, so count it in your cat's daily food. Your cat only needs water to drink.",
+        "sl": "Mleko za mačke ima običajno veliko manj laktoze ali je sploh nima. Še vedno ima kalorije, zato ga upoštevajte pri dnevnem obroku. Muca za pitje potrebuje le vodo."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC15",
+      "quote": "There are actually no benefits to your cat having milk"
+    },
+    {
+      "id": "KC15",
+      "quote": "Most cats are actually ‘lactose intolerant’"
+    },
+    {
+      "id": "KC15",
+      "quote": "They can get vomiting, diarrhoea and stomach pain from drinking it"
+    },
+    {
+      "id": "KC15",
+      "quote": "Of course, kittens need to drink their mum’s milk"
+    },
+    {
+      "id": "KC15",
+      "quote": "you should only give them specific kitten milk, as other types of milk won’t have the right balance of nutrients"
+    },
+    {
+      "id": "KC15",
+      "quote": "Usually these have a lot less lactose in them or are lactose free."
+    },
+    {
+      "id": "KC15",
+      "quote": "Your cat only needs to drink water."
+    },
+    {
+      "id": "KC15",
+      "quote": "you need to keep in mind the extra calories when you give them their daily food allowance"
+    },
+    {
+      "id": "KC1",
+      "quote": "Because pets do not possess significant amounts of lactase (the enzyme that breaks down lactose in milk),"
+    },
+    {
+      "id": "KC5",
+      "quote": "Most cats are lactose intolerant"
+    },
+    {
+      "id": "KC5",
+      "quote": "and consuming dairy products such as cheese can upset their stomach."
+    },
+    {
+      "id": "KC5",
+      "quote": "If you notice or suspect your cat has eaten food that can be harmful to them, book an urgent appointment with your vet"
+    }
+  ],
+  "related": [
+    "cheese",
+    "yogurt",
+    "ice-cream",
+    "butter",
+    "coffee"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}
