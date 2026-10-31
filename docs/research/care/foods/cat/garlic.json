@@ -6,21 +6,24 @@
     "sl": "Česen",
     "de": "Knoblauch",
     "fr": "Ail",
-    "es": "Ajo"
+    "es": "Ajo",
+    "it": "Aglio"
   },
   "question": {
     "en": "Can cats eat garlic?",
     "sl": "Ali lahko mačke jedo česen?",
     "de": "Dürfen Katzen Knoblauch fressen?",
     "fr": "Les chats peuvent-ils manger de l’ail ?",
-    "es": "¿Pueden los gatos comer ajo?"
+    "es": "¿Pueden los gatos comer ajo?",
+    "it": "I gatti possono mangiare l’aglio?"
   },
   "url_slug": {
     "en": "garlic",
     "sl": "cesen",
     "de": "knoblauch",
     "fr": "ail",
-    "es": "ajo"
+    "es": "ajo",
+    "it": "aglio"
   },
   "level": "toxic",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne. Česen je za mačke strupen in je zanje najbolj strupen med lukovkami. V vseh oblikah – surov, kuhan, sušen ali v prahu – lahko poškoduje rdeče krvničke in povzroči slabokrvnost. Če ga muca poje, pokličite veterinarja.",
     "de": "Nein. Knoblauch ist für Katzen giftig – unter den Zwiebelgewächsen sogar am giftigsten. Roher, gekochter, getrockneter Knoblauch und Knoblauchpulver können die roten Blutkörperchen schädigen und eine Blutarmut (Anämie) verursachen. Rufen Sie Ihren Tierarzt an, wenn Ihre Katze davon frisst.",
     "fr": "Non. L’ail est toxique pour les chats ; c’est même, pour eux, le membre le plus toxique de la famille de l’oignon. Cru, cuit, séché ou en poudre, il peut endommager les globules rouges et provoquer une anémie. Appelez votre vétérinaire si votre chat en mange.",
-    "es": "No. El ajo es tóxico para los gatos y, para ellos, es el miembro más tóxico de la familia de la cebolla. El ajo crudo, cocinado, seco y en polvo puede dañar los glóbulos rojos y causar anemia. Llama a tu veterinario si tu gato come algo."
+    "es": "No. El ajo es tóxico para los gatos y, para ellos, es el miembro más tóxico de la familia de la cebolla. El ajo crudo, cocinado, seco y en polvo puede dañar los glóbulos rojos y causar anemia. Llama a tu veterinario si tu gato come algo.",
+    "it": "No. L’aglio è tossico per i gatti ed è, per loro, il membro più tossico della famiglia della cipolla. L’aglio, crudo, cotto, essiccato o in polvere, può danneggiare i globuli rossi e causare anemia. Chiama il veterinario se il tuo gatto ne mangia."
   },
   "why": {
     "en": "Garlic belongs to the allium family (the onion family). Alliums damage red blood cells and can lead to anaemia, and they also irritate the stomach and gut. Cats are the most sensitive species. All forms are poisonous to cats — raw, cooked, dried, powdered and liquid. Of the alliums, garlic is the most toxic for cats.",
     "sl": "Česen spada med lukovke (družina čebule). Lukovke poškodujejo rdeče krvničke in lahko povzročijo slabokrvnost, poleg tega dražijo želodec in črevesje. Mačke so med vsemi vrstami najbolj občutljive. Strupene so vse oblike – surove, kuhane, sušene, v prahu in tekoče. Med lukovkami je za mačke najbolj strupen česen.",
     "de": "Knoblauch gehört zur Gattung Allium (den Zwiebelgewächsen). Allium-Pflanzen schädigen die roten Blutkörperchen, können zu Blutarmut führen und reizen außerdem Magen und Darm. Katzen sind die empfindlichste Tierart. Alle Formen sind für Katzen giftig – roh, gekocht, getrocknet, als Pulver und flüssig. Unter den Allium-Pflanzen ist Knoblauch für Katzen am giftigsten.",
     "fr": "L’ail appartient à la famille des alliums (la famille de l’oignon). Les alliums endommagent les globules rouges et peuvent entraîner une anémie ; ils irritent aussi l’estomac et l’intestin. Le chat est l’espèce la plus sensible. L’ail est toxique pour les chats sous toutes ses formes – cru, cuit, séché, en poudre ou liquide. Parmi les alliums, l’ail est le plus toxique pour les chats.",
-    "es": "El ajo pertenece a la familia de las aliáceas (la familia de la cebolla). Las aliáceas dañan los glóbulos rojos y pueden provocar anemia, y además irritan el estómago y el intestino. Los gatos son la especie más sensible. Todas las formas son venenosas para los gatos: cruda, cocinada, seca, en polvo y líquida. De todas las aliáceas, el ajo es el más tóxico para los gatos."
+    "es": "El ajo pertenece a la familia de las aliáceas (la familia de la cebolla). Las aliáceas dañan los glóbulos rojos y pueden provocar anemia, y además irritan el estómago y el intestino. Los gatos son la especie más sensible. Todas las formas son venenosas para los gatos: cruda, cocinada, seca, en polvo y líquida. De todas las aliáceas, el ajo es el más tóxico para los gatos.",
+    "it": "L’aglio appartiene al genere Allium (la famiglia della cipolla). Le piante di questo genere danneggiano i globuli rossi, possono portare all’anemia e irritano anche stomaco e intestino. I gatti sono la specie più sensibile. Tutte le forme sono velenose per i gatti: crudo, cotto, essiccato, in polvere e liquido. Tra le piante di questo genere, l’aglio è la più tossica per i gatti."
   },
   "signs": {
     "en": [
@@ -82,6 +87,15 @@
       "Encías pálidas",
       "Orina de color rojizo",
       "Respiración más rápida o con más esfuerzo"
+    ],
+    "it": [
+      "Vomito",
+      "Diarrea",
+      "Calo dell’appetito",
+      "Debolezza",
+      "Gengive pallide",
+      "Urina rossastra",
+      "Respiro più rapido o affannoso"
     ]
   },
   "what_to_do": {
@@ -89,7 +103,8 @@
     "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če se muca zdi v redu, saj se znaki slabokrvnosti lahko pokažejo šele po nekaj dneh. Zapišite, kaj je pojedla (surovo, kuhano, v prahu ali jed, ki to vsebuje), koliko in kdaj. Muce doma ne poskušajte spraviti k bruhanju.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, auch wenn es Ihrer Katze gut zu gehen scheint – Anzeichen einer Blutarmut können erst nach mehreren Tagen sichtbar werden. Notieren Sie, was Ihre Katze gefressen hat (roh, gekocht, als Pulver oder in einem Gericht), wie viel und wann. Versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, même si votre chat semble aller bien – les signes d’anémie peuvent mettre plusieurs jours à apparaître. Notez ce qu’il a mangé (cru, cuit, en poudre ou dans un plat), en quelle quantité et à quelle heure. N’essayez pas de faire vomir votre chat vous-même.",
-    "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales, aunque tu gato parezca estar bien: los signos de anemia pueden tardar varios días en aparecer. Apunta qué ha comido tu gato (crudo, cocinado, en polvo o un plato que lo lleve), cuánto y cuándo. No intentes provocarle el vómito en casa."
+    "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales, aunque tu gato parezca estar bien: los signos de anemia pueden tardar varios días en aparecer. Apunta qué ha comido tu gato (crudo, cocinado, en polvo o un plato que lo lleve), cuánto y cuándo. No intentes provocarle el vómito en casa.",
+    "it": "Contatta subito il veterinario o un centro antiveleni veterinario, anche se il tuo gatto sembra stare bene: i sintomi dell’anemia possono impiegare diversi giorni a manifestarsi. Annota che cosa ha mangiato (crudo, cotto, in polvere o in un piatto che lo conteneva), quanto e quando. Non cercare di farlo vomitare a casa."
   },
   "serving": null,
   "child": {
@@ -97,7 +112,8 @@
     "sl": "Česen močno diši, za muce pa ni varen. Hrana s česnom naj bo daleč od muce. Če jo poje, povej odraslemu.",
     "de": "Knoblauch riecht für uns stark, und für Katzen ist er nicht sicher. Halte Essen mit Knoblauch von deiner Katze fern und sag einem Erwachsenen Bescheid, wenn sie davon frisst.",
     "fr": "Pour nous, l’ail sent très fort, et il est dangereux pour les chats. Garde les plats à l’ail loin de ton chat et préviens un adulte s’il en mange.",
-    "es": "El ajo huele fuerte y no es seguro para los gatos. Mantén la comida con ajo lejos de tu gatito y avisa a un adulto si come un poco."
+    "es": "El ajo huele fuerte y no es seguro para los gatos. Mantén la comida con ajo lejos de tu gatito y avisa a un adulto si come un poco.",
+    "it": "Per noi l’aglio ha un odore forte, e per i gatti non è sicuro. Tienilo lontano dal micio e avvisa un adulto se ne mangia."
   },
   "faq": [
     {
@@ -106,14 +122,16 @@
         "sl": "Je kuhan česen ali česen v prahu za mačke varen?",
         "de": "Ist gekochter Knoblauch oder Knoblauchpulver für Katzen unbedenklich?",
         "fr": "L’ail cuit ou en poudre est-il sans danger pour les chats ?",
-        "es": "¿El ajo cocinado o en polvo es seguro para los gatos?"
+        "es": "¿El ajo cocinado o en polvo es seguro para los gatos?",
+        "it": "L’aglio cotto o in polvere è sicuro per i gatti?"
       },
       "a": {
         "en": "No. All forms are poisonous to cats, including raw, cooked, dried, powdered and liquid garlic. Be careful with leftovers, sauces, soups and gravy that may contain it.",
         "sl": "Ne. Za mačke so strupene vse oblike, tudi surov, kuhan, sušen, v prahu in tekoč česen. Previdni bodite pri ostankih hrane, omakah, juhah in mesnih omakah, ki ga lahko vsebujejo.",
         "de": "Nein. Alle Formen sind für Katzen giftig, auch roher, gekochter und getrockneter Knoblauch, Pulver und flüssige Zubereitungen. Vorsicht bei Essensresten, Saucen, Suppen und Bratensoße, die ihn enthalten können.",
         "fr": "Non. L’ail est toxique pour les chats sous toutes ses formes, y compris cru, cuit, séché, en poudre et liquide. Faites attention aux restes, aux sauces, aux soupes et aux jus de viande qui peuvent en contenir.",
-        "es": "No. Todas las formas son venenosas para los gatos, también el ajo crudo, cocinado, seco, en polvo y líquido. Ten cuidado con las sobras, las salsas, las sopas y los jugos de asado que puedan llevarlo."
+        "es": "No. Todas las formas son venenosas para los gatos, también el ajo crudo, cocinado, seco, en polvo y líquido. Ten cuidado con las sobras, las salsas, las sopas y los jugos de asado que puedan llevarlo.",
+        "it": "No. Tutte le forme sono velenose per i gatti, compreso l’aglio crudo, cotto, essiccato, in polvere e liquido. Fai attenzione ad avanzi, salse, zuppe e sughi che potrebbero contenerlo."
       }
     },
     {
@@ -122,14 +140,16 @@
         "sl": "Ali česen pomaga proti bolham?",
         "de": "Hilft Knoblauch gegen Flöhe?",
         "fr": "L’ail est-il efficace contre les puces ?",
-        "es": "¿Sirve el ajo para ahuyentar las pulgas?"
+        "es": "¿Sirve el ajo para ahuyentar las pulgas?",
+        "it": "L’aglio serve a tenere lontane le pulci?"
       },
       "a": {
         "en": "Don't give garlic to your cat for any reason. All forms are poisonous to cats, and Blue Cross notes there is also concern that long-term use of garlic may cause problems. Ask your vet about safe flea treatment.",
         "sl": "Muci česna ne dajajte z nobenim namenom. Za mačke so strupene vse oblike, Blue Cross pa opozarja tudi na pomisleke, da lahko dolgotrajna uporaba česna povzroča težave. Za varno zaščito pred bolhami vprašajte veterinarja.",
         "de": "Geben Sie Ihrer Katze aus keinem Grund Knoblauch. Alle Formen sind für Katzen giftig, und laut Blue Cross gibt es zudem Bedenken, dass die längere Gabe von Knoblauch Probleme verursachen kann. Fragen Sie Ihren Tierarzt nach einer sicheren Flohbehandlung.",
         "fr": "Ne donnez de l’ail à votre chat sous aucun prétexte. Il est toxique pour les chats sous toutes ses formes, et Blue Cross souligne qu’on craint aussi que l’usage prolongé de l’ail pose problème. Demandez à votre vétérinaire un traitement antipuces sans danger.",
-        "es": "No le des ajo a tu gato por ningún motivo. Todas las formas son venenosas para los gatos, y Blue Cross señala que también preocupa que el uso prolongado del ajo pueda causar problemas. Pregunta a tu veterinario por un tratamiento antipulgas seguro."
+        "es": "No le des ajo a tu gato por ningún motivo. Todas las formas son venenosas para los gatos, y Blue Cross señala que también preocupa que el uso prolongado del ajo pueda causar problemas. Pregunta a tu veterinario por un tratamiento antipulgas seguro.",
+        "it": "Non dare aglio al tuo gatto per nessun motivo. Tutte le forme sono velenose per i gatti, e Blue Cross osserva che si teme anche che l’uso prolungato di aglio possa causare problemi. Chiedi al veterinario un trattamento antipulci sicuro."
       }
     }
   ],
@@ -250,6 +270,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6d67ecf8999df1bfdbdbe7b2764843fb3ca73ab1f32330f553a75ed591057c17"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bca90d9d60fffd15bf8cb9e90aca91f62dd5e1957e36cebee42558970517c938"
     }
   }
 }

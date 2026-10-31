@@ -6,21 +6,24 @@
     "sl": "Čebula",
     "de": "Zwiebeln",
     "fr": "Oignon",
-    "es": "Cebolla"
+    "es": "Cebolla",
+    "it": "Cipolla"
   },
   "question": {
     "en": "Can dogs eat onion?",
     "sl": "Ali lahko psi jedo čebulo?",
     "de": "Dürfen Hunde Zwiebeln fressen?",
     "fr": "Les chiens peuvent-ils manger de l’oignon ?",
-    "es": "¿Pueden los perros comer cebolla?"
+    "es": "¿Pueden los perros comer cebolla?",
+    "it": "I cani possono mangiare la cipolla?"
   },
   "url_slug": {
     "en": "onion",
     "sl": "cebula",
     "de": "zwiebeln",
     "fr": "oignon",
-    "es": "cebolla"
+    "es": "cebolla",
+    "it": "cipolla"
   },
   "level": "toxic",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne. Čebula je za pse strupena v vseh oblikah: surova, kuhana, posušena ali v prahu. Poškoduje rdeče krvničke in lahko povzroči slabokrvnost, znaki pa se pogosto pokažejo šele po nekaj dneh. Štejejo tudi praški in mešanice za juhe.",
     "de": "Nein. Zwiebeln sind für Hunde in jeder Form giftig: roh, gekocht, getrocknet oder als Pulver. Sie schädigen rote Blutkörperchen und können Blutarmut (Anämie) verursachen; Anzeichen zeigen sich oft erst Tage später. Auch Pulver und Tütensuppen zählen dazu.",
     "fr": "Non. L’oignon est toxique pour les chiens sous toutes ses formes : cru, cuit, séché ou en poudre. Il endommage les globules rouges et peut provoquer une anémie, dont les signes n’apparaissent souvent que quelques jours plus tard. Les poudres et les soupes instantanées comptent aussi.",
-    "es": "No. La cebolla es tóxica para los perros en cualquier forma: cruda, cocinada, seca o en polvo. Daña los glóbulos rojos y puede provocar anemia, y los síntomas a menudo aparecen solo días después. Los polvos y los sobres de sopa también cuentan."
+    "es": "No. La cebolla es tóxica para los perros en cualquier forma: cruda, cocinada, seca o en polvo. Daña los glóbulos rojos y puede provocar anemia, y los síntomas a menudo aparecen solo días después. Los polvos y los sobres de sopa también cuentan.",
+    "it": "No. La cipolla è tossica per i cani in ogni forma: cruda, cotta, secca o in polvere. Danneggia i globuli rossi e può causare anemia, con sintomi che spesso compaiono solo giorni dopo. Contano anche le polveri e i preparati per zuppe."
   },
   "why": {
     "en": "It belongs to the allium family (onion, garlic, leek, chives), which is toxic to dogs. These plants contain compounds that damage red blood cells and can lead to anaemia. All parts and all forms are harmful: raw, cooked, dried and powdered. Stomach upset can happen with any amount; larger amounts damage the blood.",
     "sl": "Spada v družino lukov (čebula, česen, por, drobnjak), ki je za pse strupena. Te rastline vsebujejo snovi, ki poškodujejo rdeče krvničke in lahko povzročijo slabokrvnost. Škodljivi so vsi deli in vse oblike: surove, kuhane, posušene in v prahu. Prebavne težave se lahko pojavijo pri vsaki količini, večje količine pa poškodujejo kri.",
     "de": "Zwiebeln gehören zur Familie der Lauchgewächse (Zwiebeln, Knoblauch, Lauch, Schnittlauch), die für Hunde giftig sind. Diese Pflanzen enthalten Stoffe, die rote Blutkörperchen schädigen und zu Blutarmut führen können. Alle Teile und alle Formen sind schädlich: roh, gekocht, getrocknet und als Pulver. Magen-Darm-Beschwerden können bei jeder Menge auftreten; größere Mengen schädigen das Blut.",
     "fr": "L’oignon appartient à la famille des alliums (oignon, ail, poireau, ciboulette), toxique pour les chiens. Ces plantes contiennent des composés qui endommagent les globules rouges et peuvent provoquer une anémie. Toutes les parties et toutes les formes sont nocives : cru, cuit, séché et en poudre. Des troubles digestifs peuvent survenir quelle que soit la quantité ; de plus grandes quantités endommagent le sang.",
-    "es": "Pertenece a la familia de las aliáceas (cebolla, ajo, puerro, cebollino), que es tóxica para los perros. Estas plantas contienen compuestos que dañan los glóbulos rojos y pueden provocar anemia. Todas las partes y todas las formas son perjudiciales: cruda, cocinada, seca y en polvo. Cualquier cantidad puede causar malestar de estómago; las cantidades mayores dañan la sangre."
+    "es": "Pertenece a la familia de las aliáceas (cebolla, ajo, puerro, cebollino), que es tóxica para los perros. Estas plantas contienen compuestos que dañan los glóbulos rojos y pueden provocar anemia. Todas las partes y todas las formas son perjudiciales: cruda, cocinada, seca y en polvo. Cualquier cantidad puede causar malestar de estómago; las cantidades mayores dañan la sangre.",
+    "it": "Appartiene alla famiglia degli allium (cipolla, aglio, porro, erba cipollina), tossica per i cani. Queste piante contengono sostanze che danneggiano i globuli rossi e possono portare all’anemia. Sono dannose tutte le parti, in qualsiasi forma: crude, cotte, secche o in polvere. Disturbi di stomaco possono comparire con qualsiasi quantità; quantità maggiori danneggiano il sangue."
   },
   "signs": {
     "en": [
@@ -67,6 +72,12 @@
       "Come menos de lo habitual",
       "Malestar de barriga, incluso con poca cantidad",
       "Signos de anemia (glóbulos rojos dañados), normalmente unos días después"
+    ],
+    "it": [
+      "Vomito e diarrea",
+      "Mangia meno del solito",
+      "Disturbi di pancia, anche dopo piccole quantità",
+      "Segni di anemia (globuli rossi danneggiati), di solito qualche giorno dopo"
     ]
   },
   "what_to_do": {
@@ -74,7 +85,8 @@
     "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj je pes pojedel (čebula) in približno koliko. Ne čakajte na znake: okvara krvi se običajno pokaže šele po nekaj dneh.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was gefressen wurde (Zwiebeln), und ungefähr wie viel. Warten Sie nicht auf Anzeichen: Schäden am Blut zeigen sich meist erst einige Tage später.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce qui a été mangé (oignon) et en quelle quantité approximative. N’attendez pas l’apparition des signes : les dommages au sang n’apparaissent généralement qu’après quelques jours.",
-    "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué ha comido (cebolla) y más o menos cuánto. No esperes a que aparezcan síntomas: el daño en la sangre suele notarse solo unos días después."
+    "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué ha comido (cebolla) y más o menos cuánto. No esperes a que aparezcan síntomas: el daño en la sangre suele notarse solo unos días después.",
+    "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha mangiato (cipolla) e più o meno quanto. Non aspettare che compaiano i sintomi: i danni al sangue di solito si vedono solo dopo qualche giorno."
   },
   "serving": null,
   "child": {
@@ -82,7 +94,8 @@
     "sl": "Čebula ni za pse, tudi kuhana v hrani ne. Psu lahko poškoduje kri. Povej odraslemu, če jo pes poje.",
     "de": "Zwiebeln sind nichts für Hunde, auch nicht gekocht im Essen. Sie können das Blut eines Hundes krank machen. Wenn dein Hund welche frisst, sag einem Erwachsenen Bescheid.",
     "fr": "L’oignon n’est pas pour les chiens, même cuit dans un plat. Il peut rendre leur sang malade. Préviens un adulte si ton chien en mange.",
-    "es": "La cebolla no es para perros, ni siquiera cocinada en la comida. Puede hacerles daño en la sangre. Avisa a un adulto si tu perro se come un poco."
+    "es": "La cebolla no es para perros, ni siquiera cocinada en la comida. Puede hacerles daño en la sangre. Avisa a un adulto si tu perro se come un poco.",
+    "it": "La cipolla non è per i cani, nemmeno cotta nel cibo. Può far ammalare il sangue del cane. Avvisa un adulto se il tuo cane ne mangia."
   },
   "faq": [
     {
@@ -91,14 +104,16 @@
         "sl": "Je varno, če je kuhano ali v prahu?",
         "de": "Sind Zwiebeln gekocht oder als Pulver unbedenklich?",
         "fr": "L’oignon cuit ou en poudre est-il sans danger ?",
-        "es": "¿Es segura cocinada o en polvo?"
+        "es": "¿Es segura cocinada o en polvo?",
+        "it": "È sicura cotta o in polvere?"
       },
       "a": {
         "en": "No. Raw, cooked, dried, powdered and liquid forms are all poisonous to dogs.",
         "sl": "Ne. Za pse so strupene surove, kuhane, posušene, praškaste in tekoče oblike.",
         "de": "Nein. Roh, gekocht, getrocknet, als Pulver und in flüssiger Form sind sie für Hunde giftig.",
         "fr": "Non. Cru, cuit, séché, en poudre ou sous forme liquide, il est toujours toxique pour les chiens.",
-        "es": "No. Cruda, cocinada, seca, en polvo o en forma líquida, siempre es tóxica para los perros."
+        "es": "No. Cruda, cocinada, seca, en polvo o en forma líquida, siempre es tóxica para los perros.",
+        "it": "No. Cruda, cotta, secca, in polvere o liquida: in tutte le forme è velenosa per i cani."
       }
     },
     {
@@ -107,14 +122,16 @@
         "sl": "Zakaj se znaki ne pokažejo takoj?",
         "de": "Warum zeigen sich die Anzeichen nicht sofort?",
         "fr": "Pourquoi les signes n’apparaissent-ils pas tout de suite ?",
-        "es": "¿Por qué los síntomas no aparecen enseguida?"
+        "es": "¿Por qué los síntomas no aparecen enseguida?",
+        "it": "Perché i sintomi non si vedono subito?"
       },
       "a": {
         "en": "Symptoms can start within 24 hours but more often take a few days to appear; signs of anaemia typically develop several days after eating.",
         "sl": "Znaki se lahko pojavijo v 24 urah, pogosteje pa šele po nekaj dneh; znaki slabokrvnosti se običajno razvijejo nekaj dni po zaužitju.",
         "de": "Beschwerden können innerhalb von 24 Stunden beginnen, zeigen sich aber häufiger erst nach einigen Tagen; Anzeichen einer Blutarmut entwickeln sich typischerweise mehrere Tage nach dem Fressen.",
         "fr": "Les symptômes peuvent commencer dans les 24 heures, mais mettent plus souvent quelques jours à apparaître ; les signes d’anémie se développent généralement plusieurs jours après l’ingestion.",
-        "es": "Los síntomas pueden empezar en las primeras 24 horas, pero lo más habitual es que tarden unos días; los signos de anemia suelen aparecer varios días después de comerla."
+        "es": "Los síntomas pueden empezar en las primeras 24 horas, pero lo más habitual es que tarden unos días; los signos de anemia suelen aparecer varios días después de comerla.",
+        "it": "I sintomi possono comparire entro 24 ore, ma più spesso servono alcuni giorni; i segni di anemia di solito si sviluppano diversi giorni dopo l’ingestione."
       }
     }
   ],
@@ -232,6 +249,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9849fafd084780ad6239facf167695e3e129bed1ccbec2e9f8fcf917af1a1129"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "043a7a03269b5f828aeb62f5e12758594dce603691c4d7ebeeae0fa5a65d37f5"
     }
   }
 }

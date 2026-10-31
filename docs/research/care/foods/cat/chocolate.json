@@ -6,21 +6,24 @@
     "sl": "Čokolada",
     "de": "Schokolade",
     "fr": "Chocolat",
-    "es": "Chocolate"
+    "es": "Chocolate",
+    "it": "Cioccolato"
   },
   "question": {
     "en": "Can cats eat chocolate?",
     "sl": "Ali lahko mačke jedo čokolado?",
     "de": "Dürfen Katzen Schokolade fressen?",
     "fr": "Les chats peuvent-ils manger du chocolat ?",
-    "es": "¿Pueden los gatos comer chocolate?"
+    "es": "¿Pueden los gatos comer chocolate?",
+    "it": "I gatti possono mangiare il cioccolato?"
   },
   "url_slug": {
     "en": "chocolate",
     "sl": "cokolada",
     "de": "schokolade",
     "fr": "chocolat",
-    "es": "chocolate"
+    "es": "chocolate",
+    "it": "cioccolato"
   },
   "level": "toxic",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne. Čokolada je za mačke strupena. Vsebuje teobromin in kofein, ki ju mačke slabo presnavljajo, in bolj ko je čokolada temna in grenka, bolj je nevarna. Če muca poje kaj čokolade, takoj pokličite veterinarja.",
     "de": "Nein. Schokolade ist für Katzen giftig. Sie enthält Theobromin und Koffein, die Katzen schlecht verarbeiten – und je dunkler und herber die Schokolade, desto gefährlicher ist sie. Wenn Ihre Katze davon frisst, rufen Sie sofort Ihren Tierarzt an.",
     "fr": "Non. Le chocolat est toxique pour les chats. Il contient de la théobromine et de la caféine, que les chats éliminent mal, et plus le chocolat est noir et amer, plus il est dangereux. Si votre chat en mange, appelez immédiatement votre vétérinaire.",
-    "es": "No. El chocolate es tóxico para los gatos. Contiene teobromina y cafeína, que los gatos toleran mal, y cuanto más negro y amargo es el chocolate, más peligroso resulta. Si tu gato come algo, llama a tu veterinario de inmediato."
+    "es": "No. El chocolate es tóxico para los gatos. Contiene teobromina y cafeína, que los gatos toleran mal, y cuanto más negro y amargo es el chocolate, más peligroso resulta. Si tu gato come algo, llama a tu veterinario de inmediato.",
+    "it": "No. Il cioccolato è tossico per i gatti. Contiene teobromina e caffeina, che i gatti tollerano male, e più il cioccolato è fondente e amaro, più è pericoloso. Se il tuo gatto ne mangia, chiama subito il veterinario."
   },
   "why": {
     "en": "Chocolate contains theobromine and caffeine. Cats process these substances differently from people, which makes them more sensitive to their effects. Because cats struggle to break down theobromine, it stays in the blood and can quickly build up to dangerous levels. Dark and bitter chocolate carries the most risk; white chocolate has the least theobromine.",
     "sl": "Čokolada vsebuje teobromin in kofein. Mačke te snovi presnavljajo drugače kot ljudje, zato so za njihove učinke bolj občutljive. Ker mačke teobromin težko razgradijo, ostane v krvi in lahko hitro doseže nevarno raven. Najbolj tvegana je temna in grenka čokolada, bela čokolada pa ima teobromina najmanj.",
     "de": "Schokolade enthält Theobromin und Koffein. Katzen verarbeiten diese Stoffe anders als Menschen und reagieren deshalb empfindlicher auf ihre Wirkung. Weil Katzen Theobromin nur schwer abbauen können, bleibt es im Blut und kann sich schnell bis zu gefährlichen Werten anreichern. Dunkle und herbe Schokolade ist am riskantesten; weiße Schokolade enthält am wenigsten Theobromin.",
     "fr": "Le chocolat contient de la théobromine et de la caféine. Les chats métabolisent ces substances différemment des humains, ce qui les rend plus sensibles à leurs effets. Comme les chats ont du mal à dégrader la théobromine, elle reste dans le sang et peut rapidement atteindre des taux dangereux. Le chocolat noir et amer est le plus risqué ; le chocolat blanc est celui qui contient le moins de théobromine.",
-    "es": "El chocolate contiene teobromina y cafeína. Los gatos procesan estas sustancias de forma distinta a las personas, lo que los hace más sensibles a sus efectos. Como a los gatos les cuesta descomponer la teobromina, esta se queda en la sangre y puede acumularse rápidamente hasta niveles peligrosos. El chocolate negro y amargo es el de mayor riesgo; el chocolate blanco es el que menos teobromina tiene."
+    "es": "El chocolate contiene teobromina y cafeína. Los gatos procesan estas sustancias de forma distinta a las personas, lo que los hace más sensibles a sus efectos. Como a los gatos les cuesta descomponer la teobromina, esta se queda en la sangre y puede acumularse rápidamente hasta niveles peligrosos. El chocolate negro y amargo es el de mayor riesgo; el chocolate blanco es el que menos teobromina tiene.",
+    "it": "Il cioccolato contiene teobromina e caffeina. I gatti metabolizzano queste sostanze in modo diverso dalle persone, e questo li rende più sensibili ai loro effetti. Poiché i gatti fanno fatica a smaltire la teobromina, questa resta nel sangue e può raggiungere rapidamente livelli pericolosi. Il cioccolato fondente e amaro è il più rischioso; quello bianco contiene meno teobromina."
   },
   "signs": {
     "en": [
@@ -82,6 +87,15 @@
       "Orinar más de lo normal",
       "Corazón acelerado",
       "En casos graves: temblores musculares o convulsiones"
+    ],
+    "it": [
+      "Vomito",
+      "Diarrea",
+      "Sete aumentata",
+      "Respiro affannoso o irrequietezza",
+      "Fa pipì più del solito",
+      "Battito cardiaco accelerato",
+      "Nei casi gravi: tremori muscolari o convulsioni"
     ]
   },
   "what_to_do": {
@@ -89,7 +103,8 @@
     "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če se muca zdi v redu. Zapišite, kakšno čokolado je pojedla, koliko in kdaj, ter shranite ovojnico. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, auch wenn Ihre Katze unauffällig wirkt. Notieren Sie, welche Schokolade Ihre Katze gefressen hat, wie viel und wann, und bewahren Sie die Verpackung auf. Warten Sie nicht auf Anzeichen und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, même si votre chat semble aller bien. Notez quel chocolat il a mangé, en quelle quantité et à quelle heure, et gardez l’emballage. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
-    "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales, aunque tu gato parezca estar bien. Apunta qué tipo de chocolate ha comido, cuánto y cuándo, y guarda el envoltorio. No esperes a que aparezcan signos y no intentes provocarle el vómito en casa."
+    "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales, aunque tu gato parezca estar bien. Apunta qué tipo de chocolate ha comido, cuánto y cuándo, y guarda el envoltorio. No esperes a que aparezcan signos y no intentes provocarle el vómito en casa.",
+    "it": "Contatta subito il veterinario o un centro antiveleni veterinario, anche se il tuo gatto sembra stare bene. Annota che tipo di cioccolato ha mangiato, quanto e quando, e conserva l’involucro. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa."
   },
   "serving": null,
   "child": {
@@ -97,7 +112,8 @@
     "sl": "Čokolada je posladek za ljudi, ne za muce. Pospravi jo in povej odraslemu, če jo muca najde.",
     "de": "Schokolade ist eine Nascherei für Menschen, nicht für Katzen. Räum sie weg und sag einem Erwachsenen Bescheid, wenn deine Katze welche findet.",
     "fr": "Le chocolat est une friandise pour les humains, pas pour les chats. Range-le bien et préviens un adulte si ton chat en trouve.",
-    "es": "El chocolate es un capricho para personas, no un premio para gatos. Guárdalo bien y avisa a un adulto si tu gatito encuentra un poco."
+    "es": "El chocolate es un capricho para personas, no un premio para gatos. Guárdalo bien y avisa a un adulto si tu gatito encuentra un poco.",
+    "it": "Il cioccolato è un dolce per le persone, non per i gatti. Tienilo ben riposto e dillo a un adulto se il micio ne trova un po’."
   },
   "faq": [
     {
@@ -106,14 +122,16 @@
         "sl": "Je bela čokolada za mačke varna?",
         "de": "Ist weiße Schokolade für Katzen unbedenklich?",
         "fr": "Le chocolat blanc est-il sans danger pour les chats ?",
-        "es": "¿El chocolate blanco es seguro para los gatos?"
+        "es": "¿El chocolate blanco es seguro para los gatos?",
+        "it": "Il cioccolato bianco è sicuro per i gatti?"
       },
       "a": {
         "en": "White chocolate has the least theobromine, while darker, more bitter chocolate is the most dangerous. Keep all chocolate out of your cat's reach and call your vet if your cat eats any.",
         "sl": "Bela čokolada ima najmanj teobromina, najnevarnejša pa je temnejša, bolj grenka čokolada. Vso čokolado hranite izven muckinega dosega in pokličite veterinarja, če jo muca poje.",
         "de": "Weiße Schokolade enthält am wenigsten Theobromin, dunklere, herbere Schokolade ist am gefährlichsten. Bewahren Sie jede Schokolade außer Reichweite Ihrer Katze auf und rufen Sie Ihren Tierarzt an, wenn sie davon frisst.",
         "fr": "Le chocolat blanc contient le moins de théobromine, tandis que le chocolat plus noir et plus amer est le plus dangereux. Gardez tout chocolat hors de portée de votre chat et appelez votre vétérinaire s’il en mange.",
-        "es": "El chocolate blanco es el que menos teobromina tiene, mientras que el chocolate más negro y amargo es el más peligroso. Mantén todo el chocolate fuera del alcance de tu gato y llama a tu veterinario si come algo."
+        "es": "El chocolate blanco es el que menos teobromina tiene, mientras que el chocolate más negro y amargo es el más peligroso. Mantén todo el chocolate fuera del alcance de tu gato y llama a tu veterinario si come algo.",
+        "it": "Il cioccolato bianco contiene meno teobromina, mentre quello più fondente e amaro è il più pericoloso. Tieni tutto il cioccolato fuori dalla portata del tuo gatto e chiama il veterinario se ne mangia."
       }
     },
     {
@@ -122,14 +140,16 @@
         "sl": "Zakaj so mačke bolj občutljive kot ljudje?",
         "de": "Warum sind Katzen empfindlicher als Menschen?",
         "fr": "Pourquoi les chats sont-ils plus sensibles que les humains ?",
-        "es": "¿Por qué los gatos son más sensibles que las personas?"
+        "es": "¿Por qué los gatos son más sensibles que las personas?",
+        "it": "Perché i gatti sono più sensibili delle persone?"
       },
       "a": {
         "en": "Cats process theobromine and caffeine differently from people. Theobromine stays in a cat's bloodstream and can quickly reach dangerous levels.",
         "sl": "Mačke teobromin in kofein presnavljajo drugače kot ljudje. Teobromin ostane v mačji krvi in lahko hitro doseže nevarno raven.",
         "de": "Katzen verarbeiten Theobromin und Koffein anders als Menschen. Theobromin bleibt im Blut einer Katze und kann schnell gefährliche Werte erreichen.",
         "fr": "Les chats métabolisent la théobromine et la caféine différemment des humains. La théobromine reste dans le sang du chat et peut rapidement atteindre des taux dangereux.",
-        "es": "Los gatos procesan la teobromina y la cafeína de forma distinta a las personas. La teobromina se queda en la sangre del gato y puede alcanzar rápidamente niveles peligrosos."
+        "es": "Los gatos procesan la teobromina y la cafeína de forma distinta a las personas. La teobromina se queda en la sangre del gato y puede alcanzar rápidamente niveles peligrosos.",
+        "it": "I gatti metabolizzano teobromina e caffeina in modo diverso dalle persone. La teobromina resta nel sangue del gatto e può raggiungere rapidamente livelli pericolosi."
       }
     }
   ],
@@ -243,6 +263,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f5335bf5cbfe7d6e8c3ffbf093c5e3d603bcfb14bb701f9040fd7c9c22e005e0"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cf7244f59a108c6b0066a4fd4cc5548cf878983ea53608d7672c6b7460ba056e"
     }
   }
 }

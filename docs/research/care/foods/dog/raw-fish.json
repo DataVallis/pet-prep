@@ -6,21 +6,24 @@
     "sl": "Surove ribe",
     "de": "Roher Fisch",
     "fr": "Poisson cru",
-    "es": "Pescado crudo"
+    "es": "Pescado crudo",
+    "it": "Pesce crudo"
   },
   "question": {
     "en": "Can dogs eat raw fish?",
     "sl": "Ali lahko psi jedo surove ribe?",
     "de": "Dürfen Hunde rohen Fisch fressen?",
     "fr": "Les chiens peuvent-ils manger du poisson cru ?",
-    "es": "¿Pueden los perros comer pescado crudo?"
+    "es": "¿Pueden los perros comer pescado crudo?",
+    "it": "I cani possono mangiare il pesce crudo?"
   },
   "url_slug": {
     "en": "raw-fish",
     "sl": "surove-ribe",
     "de": "roher-fisch",
     "fr": "poisson-cru",
-    "es": "pescado-crudo"
+    "es": "pescado-crudo",
+    "it": "pesce-crudo"
   },
   "level": "not_recommended",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ni priporočljivo. Surove ribe lahko prenašajo bakterije, kot sta salmonela in listerija, pa tudi zajedavce, njihove drobne kosti pa so nevarne. Na pacifiškem severozahodu ZDA lahko surov losos ali postrv povzroči bolezen »zastrupitev z lososom«. Ribe skuhajte brez dodatkov in odstranite kosti.",
     "de": "Das wird nicht empfohlen. Roher Fisch kann Bakterien wie Salmonellen und Listerien sowie Parasiten übertragen, und seine kleinen Gräten sind gefährlich. Im pazifischen Nordwesten der USA kann roher Lachs oder rohe Forelle die Lachsvergiftung (Salmon Poisoning Disease) auslösen. Garen Sie Fisch ungewürzt und entfernen Sie die Gräten.",
     "fr": "C’est déconseillé. Le poisson cru peut contenir des bactéries comme les salmonelles et la listeria, ainsi que des parasites, et ses petites arêtes sont dangereuses. Dans le Nord-Ouest Pacifique des États-Unis, le saumon ou la truite crus peuvent provoquer la maladie de l’empoisonnement au saumon. Faites cuire le poisson nature et retirez les arêtes.",
-    "es": "No se recomienda. El pescado crudo puede llevar bacterias como Salmonella y Listeria, además de parásitos, y sus espinas pequeñas son un peligro. En el noroeste del Pacífico de Estados Unidos, el salmón o la trucha crudos pueden causar la enfermedad por intoxicación del salmón. Cocina el pescado sin nada y quítale las espinas."
+    "es": "No se recomienda. El pescado crudo puede llevar bacterias como Salmonella y Listeria, además de parásitos, y sus espinas pequeñas son un peligro. En el noroeste del Pacífico de Estados Unidos, el salmón o la trucha crudos pueden causar la enfermedad por intoxicación del salmón. Cocina el pescado sin nada y quítale las espinas.",
+    "it": "È sconsigliato. Il pesce crudo può portare batteri come Salmonella e Listeria, oltre a parassiti, e le sue piccole lische sono un pericolo. Nel Pacifico nord-occidentale degli Stati Uniti, salmone o trota crudi possono causare la malattia da avvelenamento da salmone. Cuoci il pesce senza condimenti e togli le lische."
   },
   "why": {
     "en": "Raw fish is among the foods linked to food poisoning in dogs. Raw or undercooked salmon and trout from the Pacific Northwest can carry a parasite that causes salmon poisoning disease, which is serious if untreated. Fish bones are small and brittle and can cause choking or injure the mouth or gut. Raw and smoked fish are best avoided.",
     "sl": "Surove ribe sodijo med živila, povezana z zastrupitvijo s hrano pri psih. Surov ali premalo kuhan losos in postrv s pacifiškega severozahoda lahko prenašata zajedavca, ki povzroči bolezen »zastrupitev z lososom«, ki je brez zdravljenja resna. Ribje kosti so drobne in krhke ter lahko povzročijo dušenje ali poškodujejo usta ali prebavila. Surovim in dimljenim ribam se je bolje izogniti.",
     "de": "Roher Fisch gehört zu den Lebensmitteln, die mit Lebensmittelvergiftungen bei Hunden in Verbindung gebracht werden. Rohe oder nicht durchgegarte Lachse und Forellen aus dem pazifischen Nordwesten können einen Parasiten übertragen, der die Lachsvergiftung auslöst – unbehandelt eine ernste Erkrankung. Fischgräten sind klein und spröde und können zum Ersticken führen oder Maul und Darm verletzen. Rohen und geräucherten Fisch meiden Sie besser.",
     "fr": "Le poisson cru fait partie des aliments associés aux intoxications alimentaires chez le chien. Le saumon et la truite crus ou pas assez cuits du Nord-Ouest Pacifique peuvent porter un parasite responsable de la maladie de l’empoisonnement au saumon, grave sans traitement. Les arêtes sont petites et cassantes et peuvent provoquer un étouffement ou blesser la bouche ou l’intestin. Mieux vaut éviter le poisson cru et le poisson fumé.",
-    "es": "El pescado crudo es uno de los alimentos relacionados con intoxicaciones alimentarias en perros. El salmón y la trucha crudos o poco hechos del noroeste del Pacífico pueden llevar un parásito que causa la enfermedad por intoxicación del salmón, que es grave si no se trata. Las espinas de pescado son pequeñas y quebradizas y pueden provocar atragantamiento o herir la boca o el intestino. Es mejor evitar el pescado crudo y el ahumado."
+    "es": "El pescado crudo es uno de los alimentos relacionados con intoxicaciones alimentarias en perros. El salmón y la trucha crudos o poco hechos del noroeste del Pacífico pueden llevar un parásito que causa la enfermedad por intoxicación del salmón, que es grave si no se trata. Las espinas de pescado son pequeñas y quebradizas y pueden provocar atragantamiento o herir la boca o el intestino. Es mejor evitar el pescado crudo y el ahumado.",
+    "it": "Il pesce crudo è tra i cibi associati alle intossicazioni alimentari nei cani. Salmone e trota crudi o poco cotti del Pacifico nord-occidentale possono portare un parassita che causa la malattia da avvelenamento da salmone, grave se non curata. Le lische sono piccole e fragili e possono causare soffocamento o ferire la bocca o l’intestino. Meglio evitare il pesce crudo e affumicato."
   },
   "signs": {
     "en": [
@@ -72,6 +77,13 @@
       "Poca energía o poco apetito",
       "Fiebre alta, debilidad y pérdida total del apetito (intoxicación del salmón)",
       "Atragantamiento"
+    ],
+    "it": [
+      "Vomito",
+      "Diarrea",
+      "Poca energia o poco appetito",
+      "Febbre alta, debolezza e perdita totale dell’appetito (avvelenamento da salmone)",
+      "Soffocamento"
     ]
   },
   "what_to_do": {
@@ -79,21 +91,24 @@
     "sl": "Opazujte, ali pes bruha, ima drisko ali je utrujen, in pokličite veterinarja, če so težave hude ali ne prenehajo. Če je pes pojedel surovega lososa ali postrv s pacifiškega severozahoda ZDA, hitro pokličite veterinarja in mu to povejte — znaki se lahko pojavijo šele v tednu dni.",
     "de": "Achten Sie auf Erbrechen, Durchfall oder Mattigkeit und rufen Sie Ihren Tierarzt an, wenn die Beschwerden stark sind oder nicht aufhören. Hat Ihr Hund rohen Lachs oder rohe Forelle aus dem pazifischen Nordwesten gefressen, rufen Sie umgehend Ihren Tierarzt an und erwähnen Sie das – Anzeichen können bis zu einer Woche später auftreten.",
     "fr": "Surveillez les vomissements, la diarrhée ou le manque d’énergie, et appelez votre vétérinaire s’ils sont importants ou ne s’arrêtent pas. Si votre chien a mangé du saumon ou de la truite crus du Nord-Ouest Pacifique, appelez rapidement votre vétérinaire et signalez-le – les signes peuvent mettre jusqu’à une semaine à apparaître.",
-    "es": "Vigila si tiene vómitos, diarrea o poca energía y llama a tu veterinario si son intensos o no se pasan. Si tu perro ha comido salmón o trucha crudos del noroeste del Pacífico, llama pronto a tu veterinario y díselo: los signos pueden tardar hasta una semana en aparecer."
+    "es": "Vigila si tiene vómitos, diarrea o poca energía y llama a tu veterinario si son intensos o no se pasan. Si tu perro ha comido salmón o trucha crudos del noroeste del Pacífico, llama pronto a tu veterinario y díselo: los signos pueden tardar hasta una semana en aparecer.",
+    "it": "Controlla se compaiono vomito, diarrea o poca energia e chiama il veterinario se sono forti o non passano. Se il tuo cane ha mangiato salmone o trota crudi del Pacifico nord-occidentale, chiama presto il veterinario e diglielo – i sintomi possono comparire fino a una settimana dopo."
   },
   "serving": {
     "en": "Only fully cooked fish (baked, steamed or grilled), plain, with all bones removed.",
     "sl": "Samo popolnoma kuhane ribe (pečene, kuhane na pari ali na žaru), brez dodatkov in brez vseh kosti.",
     "de": "Nur vollständig gegarter Fisch (gebacken, gedämpft oder gegrillt), pur und ohne Gräten.",
     "fr": "Uniquement du poisson bien cuit (au four, à la vapeur ou grillé), nature, sans aucune arête.",
-    "es": "Solo pescado bien cocinado (al horno, al vapor o a la plancha), sin nada y sin ninguna espina."
+    "es": "Solo pescado bien cocinado (al horno, al vapor o a la plancha), sin nada y sin ninguna espina.",
+    "it": "Solo pesce ben cotto (al forno, al vapore o alla griglia), semplice e senza nessuna lisca."
   },
   "child": {
     "en": "Fish for dogs must be cooked and have no bones. Raw fish can have germs that upset a dog's tummy.",
     "sl": "Riba za psa mora biti kuhana in brez kosti. Surova riba ima lahko klice, ki psu razdražijo trebušček.",
     "de": "Fisch für Hunde muss gekocht sein und darf keine Gräten haben. Roher Fisch kann Keime enthalten, die einem Hund Bauchweh machen.",
     "fr": "Le poisson pour les chiens doit être cuit et sans arêtes. Le poisson cru peut avoir des microbes qui donnent mal au ventre aux chiens.",
-    "es": "El pescado para perros tiene que estar cocinado y sin espinas. El pescado crudo puede tener gérmenes que sientan mal a la barriguita de un perro."
+    "es": "El pescado para perros tiene que estar cocinado y sin espinas. El pescado crudo puede tener gérmenes que sientan mal a la barriguita de un perro.",
+    "it": "Il pesce per i cani deve essere cotto e senza lische. Il pesce crudo può avere germi che fanno venire il mal di pancia ai cani."
   },
   "faq": [
     {
@@ -102,14 +117,16 @@
         "sl": "Kaj je bolezen »zastrupitev z lososom«?",
         "de": "Was ist die Lachsvergiftung?",
         "fr": "Qu’est-ce que la maladie de l’empoisonnement au saumon ?",
-        "es": "¿Qué es la enfermedad por intoxicación del salmón?"
+        "es": "¿Qué es la enfermedad por intoxicación del salmón?",
+        "it": "Che cos’è la malattia da avvelenamento da salmone?"
       },
       "a": {
         "en": "An illness dogs get from eating raw or undercooked salmon, trout or similar fish from the Pacific Northwest of the USA; it is prevented by not feeding them raw.",
         "sl": "Bolezen, ki jo psi dobijo, če pojedo surovega ali premalo kuhanega lososa, postrv ali podobne ribe s pacifiškega severozahoda ZDA; preprečimo jo tako, da jih ne hranimo s surovimi.",
         "de": "Eine Krankheit, die Hunde bekommen, wenn sie rohen oder nicht durchgegarten Lachs, Forelle oder ähnlichen Fisch aus dem pazifischen Nordwesten der USA fressen. Man beugt ihr vor, indem man solchen Fisch nicht roh füttert.",
         "fr": "Une maladie que les chiens attrapent en mangeant du saumon, de la truite ou des poissons similaires crus ou pas assez cuits, venant du Nord-Ouest Pacifique des États-Unis ; on l’évite en ne leur donnant pas de poisson cru.",
-        "es": "Una enfermedad que contraen los perros al comer salmón, trucha o pescados parecidos crudos o poco hechos del noroeste del Pacífico de Estados Unidos; se previene no dándoselos crudos."
+        "es": "Una enfermedad que contraen los perros al comer salmón, trucha o pescados parecidos crudos o poco hechos del noroeste del Pacífico de Estados Unidos; se previene no dándoselos crudos.",
+        "it": "Una malattia che i cani prendono mangiando salmone, trota o pesci simili crudi o poco cotti del Pacifico nord-occidentale degli Stati Uniti; si previene non dandoglieli crudi."
       }
     }
   ],
@@ -216,6 +233,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "90d597e586548ae4b0e8cbb83990260788cd128e13e155a169b1a96d91b4eb9a"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c615ed082b35725c9e11fe2185c3b2eeb2e777360982b4fa18ae47ccd7ddfeb4"
     }
   }
 }

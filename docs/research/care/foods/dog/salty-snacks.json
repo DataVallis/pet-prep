@@ -6,21 +6,24 @@
     "sl": "Slani prigrizki",
     "de": "Salzige Snacks",
     "fr": "En-cas salés",
-    "es": "Aperitivos salados"
+    "es": "Aperitivos salados",
+    "it": "Snack salati"
   },
   "question": {
     "en": "Can dogs eat salty snacks?",
     "sl": "Ali lahko psi jedo slane prigrizke?",
     "de": "Dürfen Hunde salzige Snacks fressen?",
     "fr": "Les chiens peuvent-ils manger des en-cas salés ?",
-    "es": "¿Pueden los perros comer aperitivos salados?"
+    "es": "¿Pueden los perros comer aperitivos salados?",
+    "it": "I cani possono mangiare gli snack salati?"
   },
   "url_slug": {
     "en": "salty-snacks",
     "sl": "slani-prigrizki",
     "de": "salzige-snacks",
     "fr": "en-cas-sales",
-    "es": "aperitivos-salados"
+    "es": "aperitivos-salados",
+    "it": "snack-salati"
   },
   "level": "not_recommended",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ni priporočljivo. Nekaj slanih prigrizkov pri zdravem psu s svežo vodo verjetno ne povzroči zastrupitve s soljo, a slana hrana psom na splošno ne koristi, zlasti tistim z boleznijo srca. Večja količina lahko povzroči žejo, bruhanje in hujše težave.",
     "de": "Nicht empfohlen. Ein paar salzige Snacks lösen bei einem gesunden Hund mit frischem Wasser wahrscheinlich keine Salzvergiftung aus, aber salziges Essen ist grundsätzlich nicht gut für Hunde, besonders bei Herzerkrankungen. Große Mengen können Durst, Erbrechen und Schlimmeres verursachen.",
     "fr": "Déconseillé. Quelques en-cas salés ont peu de chances de provoquer une intoxication au sel chez un chien en bonne santé qui a de l’eau fraîche, mais les aliments salés ne sont généralement pas bons pour les chiens, surtout ceux qui ont une maladie cardiaque. En manger beaucoup peut provoquer soif, vomissements, voire pire.",
-    "es": "No se recomienda. Unos pocos aperitivos salados difícilmente causarán una intoxicación por sal a un perro sano con agua fresca, pero la comida salada en general no es buena para los perros, sobre todo para los que tienen enfermedades del corazón. Comer mucho puede causar sed, vómitos y cosas peores."
+    "es": "No se recomienda. Unos pocos aperitivos salados difícilmente causarán una intoxicación por sal a un perro sano con agua fresca, pero la comida salada en general no es buena para los perros, sobre todo para los que tienen enfermedades del corazón. Comer mucho puede causar sed, vómitos y cosas peores.",
+    "it": "Sconsigliati. Pochi snack salati difficilmente causano un avvelenamento da sale in un cane sano che ha acqua fresca, ma i cibi salati in generale non fanno bene ai cani, soprattutto a quelli con malattie cardiache. Mangiarne molti può causare sete, vomito e problemi peggiori."
   },
   "why": {
     "en": "Salty food in moderation should not cause salt toxicity, but too much salt can lead to fluid retention and, in large amounts, salt poisoning. Small dogs with health issues are more at risk when fresh water isn't available. Dog foods are best served without added salt or seasoning.",
     "sl": "Slana hrana v zmernih količinah naj ne bi povzročila zastrupitve s soljo, preveč soli pa lahko vodi v zastajanje tekočine in pri velikih količinah v zastrupitev. Majhni psi z zdravstvenimi težavami so bolj ogroženi, kadar nimajo sveže vode. Hrano za pse je najbolje ponuditi brez dodane soli in začimb.",
     "de": "Salziges Essen in Maßen sollte keine Salzvergiftung verursachen, aber zu viel Salz kann zu Wassereinlagerungen und in großen Mengen zu einer Salzvergiftung führen. Kleine Hunde mit gesundheitlichen Problemen sind stärker gefährdet, wenn kein frisches Wasser verfügbar ist. Essen für Hunde serviert man am besten ohne zugesetztes Salz und ohne Gewürze.",
     "fr": "Des aliments salés avec modération ne devraient pas provoquer d’intoxication au sel, mais trop de sel peut entraîner une rétention d’eau et, en grande quantité, une intoxication au sel. Les petits chiens ayant des problèmes de santé sont plus à risque lorsqu’ils n’ont pas d’eau fraîche. Les aliments destinés au chien sont à servir de préférence sans sel ajouté ni assaisonnement.",
-    "es": "La comida salada con moderación no debería causar una intoxicación por sal, pero demasiada sal puede provocar retención de líquidos y, en grandes cantidades, intoxicación por sal. Los perros pequeños con problemas de salud corren más riesgo cuando no tienen agua fresca a mano. Lo mejor es servir la comida de los perros sin sal añadida ni condimentos."
+    "es": "La comida salada con moderación no debería causar una intoxicación por sal, pero demasiada sal puede provocar retención de líquidos y, en grandes cantidades, intoxicación por sal. Los perros pequeños con problemas de salud corren más riesgo cuando no tienen agua fresca a mano. Lo mejor es servir la comida de los perros sin sal añadida ni condimentos.",
+    "it": "I cibi salati con moderazione non dovrebbero causare un avvelenamento da sale, ma troppo sale può portare a ritenzione di liquidi e, in grandi quantità, ad avvelenamento da sale. I cani piccoli con problemi di salute sono più a rischio quando non hanno acqua fresca. Il cibo per il cane va servito senza sale e senza condimenti aggiunti."
   },
   "signs": {
     "en": [
@@ -72,6 +77,13 @@
       "Diarrea",
       "Tambaleo, cansancio",
       "Temblores o convulsiones"
+    ],
+    "it": [
+      "Sete intensa e pipì frequente",
+      "Vomito, spesso entro poche ore",
+      "Diarrea",
+      "Andatura barcollante, stanchezza",
+      "Tremori o convulsioni"
     ]
   },
   "what_to_do": {
@@ -79,21 +91,24 @@
     "sl": "Če je pes pojedel veliko slanih prigrizkov, pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj in koliko je pojedel. Sveža voda naj bo vedno na voljo.",
     "de": "Wenn Ihr Hund eine große Menge salziger Snacks gefressen hat, wenden Sie sich an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was und wie viel gefressen wurde. Frisches Wasser sollte immer bereitstehen.",
     "fr": "Si votre chien a mangé une grande quantité d’en-cas salés, contactez votre vétérinaire ou un centre antipoison vétérinaire. Notez ce qu’il a mangé et en quelle quantité. De l’eau fraîche doit toujours être à sa disposition.",
-    "es": "Si tu perro se ha comido una gran cantidad de aperitivos salados, contacta con tu veterinario o con una línea de información toxicológica para animales. Apunta qué comió y cuánto. Siempre debe tener agua fresca a su alcance."
+    "es": "Si tu perro se ha comido una gran cantidad de aperitivos salados, contacta con tu veterinario o con una línea de información toxicológica para animales. Apunta qué comió y cuánto. Siempre debe tener agua fresca a su alcance.",
+    "it": "Se il tuo cane ha mangiato molti snack salati, contatta il veterinario o un centro antiveleni veterinario. Annota che cosa e quanto ha mangiato. Deve sempre avere a disposizione acqua fresca."
   },
   "serving": {
     "en": "Better not to share. If you give people food, serve it plain, without salt or seasoning.",
     "sl": "Raje jih ne delite. Če psu daste človeško hrano, naj bo navadna, brez soli in začimb.",
     "de": "Besser nicht teilen. Wenn Sie Ihrem Hund doch etwas von Ihrem Essen geben, dann pur, ohne Salz und Gewürze.",
     "fr": "Mieux vaut ne pas en partager. Si vous donnez des aliments pour humains, servez-les nature, sans sel ni assaisonnement.",
-    "es": "Mejor no compartirlos. Si le das comida de personas, sírvela sin nada, sin sal ni condimentos."
+    "es": "Mejor no compartirlos. Si le das comida de personas, sírvela sin nada, sin sal ni condimentos.",
+    "it": "Meglio non dargliene. Se gli dai cibo delle persone, servilo semplice, senza sale né condimenti."
   },
   "child": {
     "en": "Salty snacks are for people. Too much salt makes dogs thirsty and sick, so give your dog its own treats.",
     "sl": "Slani prigrizki so za ljudi. Preveč soli psa odžeja in mu škodi, zato mu daj njegove priboljške.",
     "de": "Salzige Snacks sind für Menschen. Zu viel Salz macht Hunde durstig und krank. Gib deinem Hund lieber seine eigenen Leckerlis.",
     "fr": "Les en-cas salés sont pour les humains. Trop de sel donne soif aux chiens et les rend malades, alors donne à ton chien ses propres friandises.",
-    "es": "Los aperitivos salados son para las personas. Demasiada sal da sed a los perros y los pone malitos, así que dale a tu perro sus propios premios."
+    "es": "Los aperitivos salados son para las personas. Demasiada sal da sed a los perros y los pone malitos, así que dale a tu perro sus propios premios.",
+    "it": "Gli snack salati sono per le persone. Troppo sale fa venire sete ai cani e li fa stare male, quindi dai al tuo cane i suoi premi."
   },
   "faq": [
     {
@@ -102,14 +117,16 @@
         "sl": "Potrebuje pes po slani hrani vodo?",
         "de": "Braucht mein Hund nach salzigem Essen Wasser?",
         "fr": "Mon chien a-t-il besoin d’eau après un aliment salé ?",
-        "es": "¿Mi perro necesita agua después de comer algo salado?"
+        "es": "¿Mi perro necesita agua después de comer algo salado?",
+        "it": "Il mio cane ha bisogno di acqua dopo un cibo salato?"
       },
       "a": {
         "en": "Yes. Fresh drinking water helps a dog flush out salt; salt poisoning is unlikely when fresh water is available.",
         "sl": "Da. Sveža pitna voda psu pomaga izplakniti sol; zastrupitev s soljo je malo verjetna, kadar ima pes svežo vodo.",
         "de": "Ja. Frisches Trinkwasser hilft einem Hund, das Salz auszuspülen; eine Salzvergiftung ist unwahrscheinlich, solange frisches Wasser verfügbar ist.",
         "fr": "Oui. L’eau fraîche aide le chien à éliminer le sel ; l’intoxication au sel est peu probable quand il a de l’eau fraîche.",
-        "es": "Sí. El agua fresca ayuda al perro a eliminar la sal; la intoxicación por sal es poco probable cuando tiene agua fresca a su alcance."
+        "es": "Sí. El agua fresca ayuda al perro a eliminar la sal; la intoxicación por sal es poco probable cuando tiene agua fresca a su alcance.",
+        "it": "Sì. L’acqua fresca aiuta il cane a eliminare il sale; l’avvelenamento da sale è improbabile quando ha acqua fresca a disposizione."
       }
     }
   ],
@@ -207,6 +224,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "bdcdde7d3a7fe8da1251f745948da89981a7dfde609266b4d17659acad3d0231"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "386c999e02b71c956c84a70cfe11f0c4e699e5f2944f38e8e985808ff629bdf1"
     }
   }
 }

@@ -6,21 +6,24 @@
     "sl": "Čaj",
     "de": "Tee",
     "fr": "Thé",
-    "es": "Té"
+    "es": "Té",
+    "it": "Tè"
   },
   "question": {
     "en": "Can dogs drink tea?",
     "sl": "Ali lahko psi pijejo čaj?",
     "de": "Dürfen Hunde Tee trinken?",
     "fr": "Les chiens peuvent-ils boire du thé ?",
-    "es": "¿Pueden los perros beber té?"
+    "es": "¿Pueden los perros beber té?",
+    "it": "I cani possono bere il tè?"
   },
   "url_slug": {
     "en": "tea",
     "sl": "caj",
     "de": "tee",
     "fr": "the",
-    "es": "te"
+    "es": "te",
+    "it": "te"
   },
   "level": "toxic",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne, čaj s kofeinom ni za pse. Čaj vsebuje kofein, ki je za pse strupen. Majhen požirek verjetno ne škodi, večje količine pa so lahko nevarne, zlasti za majhne pse, pojedene čajne vrečke pa lahko povzročijo hudo zastrupitev.",
     "de": "Nein, koffeinhaltiger Tee ist nichts für Hunde. Tee enthält Koffein, das für Hunde giftig ist. Ein kleiner Schluck schadet kaum, aber größere Mengen können gefährlich sein, besonders für kleine Hunde, und gefressene Teebeutel können eine schwere Vergiftung verursachen.",
     "fr": "Non, le thé contenant de la caféine n’est pas pour les chiens. Le thé contient de la caféine, toxique pour les chiens. Une petite gorgée a peu de chances de faire du mal, mais de plus grandes quantités peuvent être dangereuses, surtout pour les petits chiens, et des sachets de thé avalés peuvent provoquer une intoxication grave.",
-    "es": "No, el té con cafeína no es para perros. El té contiene cafeína, que es tóxica para los perros. Probar un poquito difícilmente le hará daño, pero cantidades mayores pueden ser peligrosas, sobre todo para los perros pequeños, y comerse bolsitas de té puede causar una intoxicación grave."
+    "es": "No, el té con cafeína no es para perros. El té contiene cafeína, que es tóxica para los perros. Probar un poquito difícilmente le hará daño, pero cantidades mayores pueden ser peligrosas, sobre todo para los perros pequeños, y comerse bolsitas de té puede causar una intoxicación grave.",
+    "it": "No, il tè con caffeina non è per i cani. Il tè contiene caffeina, che è tossica per i cani. Un piccolo assaggio difficilmente fa male, ma quantità maggiori possono essere pericolose, soprattutto per i cani piccoli, e le bustine di tè mangiate possono causare un avvelenamento grave."
   },
   "why": {
     "en": "Many teas contain caffeine, which overstimulates a dog's heart and nervous system. Dogs are more sensitive to caffeine than people. One or two licks of tea are unlikely to poison, but swallowed tea bags can cause serious toxicity.",
     "sl": "Številni čaji vsebujejo kofein, ki pretirano spodbuja pasje srce in živčevje. Psi so na kofein bolj občutljivi kot ljudje. Polizek ali dva čaja verjetno ne zastrupita, pogoltnjene čajne vrečke pa lahko povzročijo hudo zastrupitev.",
     "de": "Viele Teesorten enthalten Koffein, das Herz und Nervensystem eines Hundes überreizt. Hunde reagieren empfindlicher auf Koffein als Menschen. Ein- oder zweimal Lecken an Tee führt kaum zu einer Vergiftung, aber verschluckte Teebeutel können eine schwere Vergiftung verursachen.",
     "fr": "Beaucoup de thés contiennent de la caféine, qui surstimule le cœur et le système nerveux du chien. Les chiens sont plus sensibles à la caféine que nous. Un ou deux coups de langue de thé ont peu de chances d’intoxiquer, mais des sachets de thé avalés peuvent provoquer une intoxication grave.",
-    "es": "Muchos tés contienen cafeína, que sobreestimula el corazón y el sistema nervioso del perro. Los perros son más sensibles a la cafeína que las personas. Uno o dos lametones de té difícilmente intoxicarán a un perro, pero las bolsitas de té tragadas pueden causar una intoxicación grave."
+    "es": "Muchos tés contienen cafeína, que sobreestimula el corazón y el sistema nervioso del perro. Los perros son más sensibles a la cafeína que las personas. Uno o dos lametones de té difícilmente intoxicarán a un perro, pero las bolsitas de té tragadas pueden causar una intoxicación grave.",
+    "it": "Molti tè contengono caffeina, che stimola troppo il cuore e il sistema nervoso del cane. I cani sono più sensibili alla caffeina delle persone. Una o due leccate di tè difficilmente causano un avvelenamento, ma le bustine ingoiate possono causare una grave intossicazione."
   },
   "signs": {
     "en": [
@@ -77,6 +82,14 @@
       "Babeo",
       "Temblores",
       "Orinar más"
+    ],
+    "it": [
+      "Irrequietezza, iperattività, andirivieni continuo",
+      "Battito cardiaco accelerato",
+      "Vomito e diarrea",
+      "Salivazione eccessiva",
+      "Tremori",
+      "Più pipì"
     ]
   },
   "what_to_do": {
@@ -84,7 +97,8 @@
     "sl": "Takoj ko opazite, da je pes zaužil kofein, pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj je bilo (pijača, mleta kava, zrna, čajne vrečke) in približno koliko. Ne čakajte na znake: zgodnje zdravljenje je pomembno.",
     "de": "Wenden Sie sich an Ihren Tierarzt oder einen Giftnotruf für Tiere, sobald Sie merken, dass Ihr Hund Koffein aufgenommen hat. Notieren Sie, was es war (Getränk, Kaffeepulver, Bohnen, Teebeutel) und ungefähr wie viel. Warten Sie nicht auf Anzeichen: Eine frühe Behandlung ist wichtig.",
     "fr": "Contactez votre vétérinaire ou un centre antipoison vétérinaire dès que vous vous rendez compte que votre chien a consommé de la caféine. Notez ce que c’était (boisson, marc, grains, sachets de thé) et en quelle quantité approximative. N’attendez pas l’apparition des signes : un traitement précoce compte.",
-    "es": "Contacta con tu veterinario o con una línea de información toxicológica para animales en cuanto te des cuenta de que tu perro ha tomado cafeína. Apunta qué fue (bebida, posos, granos, bolsitas de té) y más o menos cuánto. No esperes a que aparezcan síntomas: el tratamiento temprano es importante."
+    "es": "Contacta con tu veterinario o con una línea de información toxicológica para animales en cuanto te des cuenta de que tu perro ha tomado cafeína. Apunta qué fue (bebida, posos, granos, bolsitas de té) y más o menos cuánto. No esperes a que aparezcan síntomas: el tratamiento temprano es importante.",
+    "it": "Contatta il veterinario o un centro antiveleni veterinario appena ti accorgi che il tuo cane ha assunto caffeina. Annota che cosa era (bevanda, fondi, chicchi, bustine di tè) e più o meno quanto. Non aspettare che compaiano i sintomi: un trattamento precoce è importante."
   },
   "serving": null,
   "child": {
@@ -92,7 +106,8 @@
     "sl": "Čaj s kofeinom je pijača za ljudi, ne za pse. Psu raje daj svežo vodo.",
     "de": "Tee mit Koffein ist ein Getränk für Menschen, nicht für Hunde. Gib deinem Hund lieber frisches Wasser.",
     "fr": "Le thé avec de la caféine est une boisson pour les humains, pas pour les chiens. Donne plutôt de l’eau fraîche à ton chien.",
-    "es": "El té con cafeína es una bebida para personas, no para perros. Dale a tu perro agua fresca."
+    "es": "El té con cafeína es una bebida para personas, no para perros. Dale a tu perro agua fresca.",
+    "it": "Il tè con la caffeina è una bevanda per le persone, non per i cani. Dai al tuo cane acqua fresca."
   },
   "faq": [
     {
@@ -101,14 +116,16 @@
         "sl": "Pes je polizal mojo skodelico. Je to nujno?",
         "de": "Mein Hund hat an meiner Tasse geleckt. Ist das ein Notfall?",
         "fr": "Mon chien a léché ma tasse. Est-ce une urgence ?",
-        "es": "Mi perro ha lamido mi taza. ¿Es una urgencia?"
+        "es": "Mi perro ha lamido mi taza. ¿Es una urgencia?",
+        "it": "Il mio cane ha leccato la mia tazza. È un’emergenza?"
       },
       "a": {
         "en": "One or two licks are unlikely to poison most dogs. If your dog drank more, or ate grounds, beans or tea bags, call your vet or a pet poison helpline.",
         "sl": "En ali dva polizka večine psov verjetno ne zastrupita. Če je pes popil več ali pojedel mleto kavo, zrna ali čajne vrečke, pokličite veterinarja ali center za zastrupitve živali.",
         "de": "Ein- oder zweimal Lecken führt bei den meisten Hunden kaum zu einer Vergiftung. Hat Ihr Hund mehr getrunken oder Kaffeepulver, Bohnen oder Teebeutel gefressen, rufen Sie Ihren Tierarzt oder einen Giftnotruf für Tiere an.",
         "fr": "Un ou deux coups de langue ont peu de chances d’intoxiquer la plupart des chiens. Si votre chien en a bu davantage, ou a mangé du marc, des grains ou des sachets de thé, appelez votre vétérinaire ou un centre antipoison vétérinaire.",
-        "es": "Es poco probable que uno o dos lametones intoxiquen a la mayoría de los perros. Si tu perro ha bebido más, o se ha comido posos, granos o bolsitas de té, llama a tu veterinario o a una línea de información toxicológica para animales."
+        "es": "Es poco probable que uno o dos lametones intoxiquen a la mayoría de los perros. Si tu perro ha bebido más, o se ha comido posos, granos o bolsitas de té, llama a tu veterinario o a una línea de información toxicológica para animales.",
+        "it": "È improbabile che una o due leccate avvelenino la maggior parte dei cani. Se il tuo cane ne ha bevuto di più, o ha mangiato fondi, chicchi o bustine di tè, chiama il veterinario o un centro antiveleni veterinario."
       }
     },
     {
@@ -117,14 +134,16 @@
         "sl": "Kaj, če je pes pojedel čajno vrečko?",
         "de": "Was, wenn mein Hund einen Teebeutel gefressen hat?",
         "fr": "Et si mon chien a mangé un sachet de thé ?",
-        "es": "¿Y si mi perro se ha comido una bolsita de té?"
+        "es": "¿Y si mi perro se ha comido una bolsita de té?",
+        "it": "E se il mio cane ha mangiato una bustina di tè?"
       },
       "a": {
         "en": "Tea bags can cause serious caffeine poisoning. Contact your vet or a pet poison helpline right away.",
         "sl": "Čajne vrečke lahko povzročijo hudo zastrupitev s kofeinom. Takoj pokličite veterinarja ali center za zastrupitve živali.",
         "de": "Teebeutel können eine schwere Koffeinvergiftung verursachen. Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere.",
         "fr": "Les sachets de thé peuvent provoquer une intoxication grave à la caféine. Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire.",
-        "es": "Las bolsitas de té pueden causar una intoxicación grave por cafeína. Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales."
+        "es": "Las bolsitas de té pueden causar una intoxicación grave por cafeína. Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales.",
+        "it": "Le bustine di tè possono causare un grave avvelenamento da caffeina. Contatta subito il veterinario o un centro antiveleni veterinario."
       }
     }
   ],
@@ -226,6 +245,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "75430cb6211f663bec94878af8d20e389ed88f32a150d0aa803f9bff8341c70a"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "829aaf66bccb4f00654b3e50e496030e9b051e3aaabb6a6465296ba43f29d071"
     }
   }
 }

@@ -6,21 +6,24 @@
     "sl": "Sladoled",
     "de": "Eis",
     "fr": "Glace",
-    "es": "Helado"
+    "es": "Helado",
+    "it": "Gelato"
   },
   "question": {
     "en": "Can cats eat ice cream?",
     "sl": "Ali lahko mačke jedo sladoled?",
     "de": "Dürfen Katzen Eis fressen?",
     "fr": "Les chats peuvent-ils manger de la glace ?",
-    "es": "¿Pueden los gatos comer helado?"
+    "es": "¿Pueden los gatos comer helado?",
+    "it": "I gatti possono mangiare il gelato?"
   },
   "url_slug": {
     "en": "ice-cream",
     "sl": "sladoled",
     "de": "eis",
     "fr": "glace",
-    "es": "helado"
+    "es": "helado",
+    "it": "gelato"
   },
   "level": "not_recommended",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne, sladoled ni dober priboljšek za mačke. Narejen je iz mleka in smetane, ki mački lahko razdražita želodec, poleg tega pa vsebuje maščobe in sladkor, ki jih mačke ne potrebujejo.",
     "de": "Nein, Eis ist kein gutes Leckerli für Katzen. Es wird aus Milch und Sahne hergestellt, die einer Katze auf den Magen schlagen können, und liefert Fett und Zucker, die Katzen nicht brauchen.",
     "fr": "Non, la glace n’est pas une bonne friandise pour les chats. Elle est faite avec du lait et de la crème, qui peuvent leur déranger l’estomac, et elle apporte des graisses et du sucre dont ils n’ont pas besoin.",
-    "es": "No, el helado no es un buen premio para los gatos. Se hace con leche y nata, que pueden sentarle mal al estómago de un gato, y aporta grasa y azúcar que los gatos no necesitan."
+    "es": "No, el helado no es un buen premio para los gatos. Se hace con leche y nata, que pueden sentarle mal al estómago de un gato, y aporta grasa y azúcar que los gatos no necesitan.",
+    "it": "No, il gelato non è un buon premio per i gatti. È fatto con latte e panna, che possono disturbare lo stomaco del gatto, e apporta grassi e zuccheri di cui i gatti non hanno bisogno."
   },
   "why": {
     "en": "Adult cats have little lactase, the enzyme that digests milk sugar, so milk and other dairy-based products can cause diarrhoea or other digestive upset. Cream and dairy products are high in fat and can lead to weight gain. Sugar isn't toxic to cats, but it is still unhealthy for them and adds calories they don't need.",
     "sl": "Odrasle mačke imajo malo laktaze, encima, ki prebavlja mlečni sladkor, zato lahko mleko in drugi mlečni izdelki povzročijo drisko ali druge prebavne težave. Smetana in mlečni izdelki imajo veliko maščob in lahko vodijo v debelost. Sladkor za mačke ni strupen, je pa nezdrav in jim prinaša nepotrebne kalorije.",
     "de": "Erwachsene Katzen haben wenig Laktase, das Enzym, das Milchzucker verdaut. Daher können Milch und andere Milchprodukte Durchfall oder andere Verdauungsbeschwerden verursachen. Sahne und Milchprodukte sind fettreich und können zu Gewichtszunahme führen. Zucker ist für Katzen nicht giftig, aber trotzdem ungesund und liefert Kalorien, die sie nicht brauchen.",
     "fr": "Les chats adultes ont peu de lactase, l’enzyme qui digère le sucre du lait ; le lait et les autres produits laitiers peuvent donc provoquer de la diarrhée ou d’autres troubles digestifs. La crème et les produits laitiers sont riches en graisses et peuvent faire prendre du poids. Le sucre n’est pas toxique pour les chats, mais il reste mauvais pour leur santé et apporte des calories dont ils n’ont pas besoin.",
-    "es": "Los gatos adultos tienen poca lactasa, la enzima que digiere el azúcar de la leche, así que la leche y otros productos lácteos pueden causar diarrea u otros trastornos digestivos. La nata y los lácteos tienen mucha grasa y pueden hacer que el gato engorde. El azúcar no es tóxico para los gatos, pero aun así no es sano para ellos y aporta calorías que no necesitan."
+    "es": "Los gatos adultos tienen poca lactasa, la enzima que digiere el azúcar de la leche, así que la leche y otros productos lácteos pueden causar diarrea u otros trastornos digestivos. La nata y los lácteos tienen mucha grasa y pueden hacer que el gato engorde. El azúcar no es tóxico para los gatos, pero aun así no es sano para ellos y aporta calorías que no necesitan.",
+    "it": "I gatti adulti hanno poca lattasi, l’enzima che digerisce lo zucchero del latte, quindi il latte e gli altri prodotti a base di latte possono causare diarrea o altri disturbi digestivi. La panna e i latticini sono ricchi di grassi e possono far ingrassare. Lo zucchero non è tossico per i gatti, ma è comunque poco salutare e aggiunge calorie di cui non hanno bisogno."
   },
   "signs": {
     "en": [
@@ -62,6 +67,11 @@
       "Diarrea",
       "Vómitos",
       "Malestar de estómago"
+    ],
+    "it": [
+      "Diarrea",
+      "Vomito",
+      "Mal di stomaco"
     ]
   },
   "what_to_do": {
@@ -69,7 +79,8 @@
     "sl": "Če je muca pojedla sladoled, bodite pozorni na drisko ali bruhanje in se za nasvet obrnite na veterinarja, če se ne počuti dobro. Če je bila v sladoledu čokolada, takoj pokličite veterinarja.",
     "de": "Wenn Ihre Katze Eis gefressen hat, achten Sie auf Durchfall oder Erbrechen und fragen Sie Ihren Tierarzt um Rat, wenn sie unwohl wirkt. Wenn das Eis Schokolade enthielt, wenden Sie sich sofort an Ihren Tierarzt.",
     "fr": "Si votre chat a mangé de la glace, surveillez l’apparition de diarrhée ou de vomissements et demandez conseil à votre vétérinaire s’il semble malade. Si la glace contenait du chocolat, contactez immédiatement votre vétérinaire.",
-    "es": "Si tu gato ha comido helado, vigila si tiene diarrea o vómitos y consulta a tu veterinario si parece encontrarse mal. Si el helado llevaba chocolate, ponte en contacto con tu veterinario de inmediato."
+    "es": "Si tu gato ha comido helado, vigila si tiene diarrea o vómitos y consulta a tu veterinario si parece encontrarse mal. Si el helado llevaba chocolate, ponte en contacto con tu veterinario de inmediato.",
+    "it": "Se il tuo gatto ha mangiato del gelato, controlla se compaiono diarrea o vomito e chiedi consiglio al veterinario se sembra stare male. Se il gelato conteneva cioccolato, contatta subito il veterinario."
   },
   "serving": null,
   "child": {
@@ -77,7 +88,8 @@
     "sl": "Sladoled je posladek za ljudi. Mucki lahko povzroči bolan trebušček, zato kornet obdrži zase.",
     "de": "Eis ist ein Leckerli für Menschen. Katzen kann es Bauchweh machen, also behalte deine Eiswaffel lieber für dich.",
     "fr": "La glace, c’est une friandise pour les humains. Elle peut donner mal au ventre aux chats, alors garde ton cornet pour toi.",
-    "es": "El helado es un capricho para personas. Puede darles dolor de barriga a los gatos, así que el cucurucho, para ti."
+    "es": "El helado es un capricho para personas. Puede darles dolor de barriga a los gatos, así que el cucurucho, para ti.",
+    "it": "Il gelato è un dolce per le persone. Può far venire il mal di pancia ai gatti, quindi il cono tienilo per te."
   },
   "faq": [
     {
@@ -86,14 +98,16 @@
         "sl": "Ali imajo mačke rade sladoled, ker je sladek?",
         "de": "Mögen Katzen Eis, weil es süß ist?",
         "fr": "Les chats aiment-ils la glace parce qu’elle est sucrée ?",
-        "es": "¿A los gatos les gusta el helado porque es dulce?"
+        "es": "¿A los gatos les gusta el helado porque es dulce?",
+        "it": "Ai gatti piace il gelato perché è dolce?"
       },
       "a": {
         "en": "No. Cats can't taste sweetness at all, so sugar gives them nothing but extra calories.",
         "sl": "Ne. Mačke sladkega okusa sploh ne zaznajo, zato jim sladkor prinese le dodatne kalorije.",
         "de": "Nein. Katzen können Süßes überhaupt nicht schmecken, also bringt ihnen Zucker nichts außer zusätzlichen Kalorien.",
         "fr": "Non. Les chats ne perçoivent pas du tout le goût sucré : le sucre ne leur apporte que des calories en trop.",
-        "es": "No. Los gatos no pueden notar el sabor dulce, así que el azúcar solo les aporta calorías de más."
+        "es": "No. Los gatos no pueden notar el sabor dulce, así que el azúcar solo les aporta calorías de más.",
+        "it": "No. I gatti non sentono affatto il sapore dolce, quindi lo zucchero dà loro solo calorie in più."
       }
     }
   ],
@@ -167,6 +181,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "67e32dcffe2795327ce4c37ff94d74100ff5e54c6c7d607ac950f947372748c5"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3ee79bd1ee8494e639d1ef358c18df79cbf7472e74ddb4b8fce70407c9608b53"
     }
   }
 }

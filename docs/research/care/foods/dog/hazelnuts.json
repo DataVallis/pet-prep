@@ -6,21 +6,24 @@
     "sl": "Lešniki",
     "de": "Haselnüsse",
     "fr": "Noisettes",
-    "es": "Avellanas"
+    "es": "Avellanas",
+    "it": "Nocciole"
   },
   "question": {
     "en": "Can dogs eat hazelnuts?",
     "sl": "Ali lahko psi jedo lešnike?",
     "de": "Dürfen Hunde Haselnüsse fressen?",
     "fr": "Les chiens peuvent-ils manger des noisettes ?",
-    "es": "¿Pueden los perros comer avellanas?"
+    "es": "¿Pueden los perros comer avellanas?",
+    "it": "I cani possono mangiare le nocciole?"
   },
   "url_slug": {
     "en": "hazelnuts",
     "sl": "lesniki",
     "de": "haselnuesse",
     "fr": "noisettes",
-    "es": "avellanas"
+    "es": "avellanas",
+    "it": "nocciole"
   },
   "level": "not_recommended",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne, bolje ne. Lešniki niso strupeni, a njihove zelo trde lupine lahko povzročijo dušenje in zamašitev, kot drugi oreščki pa so zelo mastni, kar lahko psu razdraži prebavo in morda vodi do vnetja trebušne slinavke.",
     "de": "Nein, besser nicht. Haselnüsse sind nicht giftig, aber ihre sehr harten Schalen können zum Ersticken und zu Blockaden führen, und wie andere Nüsse sind sie fettreich, was einem Hund auf den Magen schlagen und zu einer Bauchspeicheldrüsenentzündung (Pankreatitis) führen kann.",
     "fr": "Non, mieux vaut éviter. Les noisettes ne sont pas toxiques, mais leur coque très dure peut provoquer un étouffement et des obstructions et, comme les autres fruits à coque, elles sont riches en graisses, ce qui peut dérégler l’estomac d’un chien et parfois mener à une pancréatite.",
-    "es": "No, mejor que no. Las avellanas no son tóxicas, pero su cáscara, muy dura, puede provocar atragantamiento y obstrucciones y, como otros frutos secos, tienen mucha grasa, que puede sentarle mal al estómago de un perro y llegar a provocar una pancreatitis."
+    "es": "No, mejor que no. Las avellanas no son tóxicas, pero su cáscara, muy dura, puede provocar atragantamiento y obstrucciones y, como otros frutos secos, tienen mucha grasa, que puede sentarle mal al estómago de un perro y llegar a provocar una pancreatitis.",
+    "it": "Meglio di no. Le nocciole non sono tossiche, ma il loro guscio durissimo può causare soffocamento e ostruzioni e, come altra frutta a guscio, sono ricche di grassi, che possono disturbare lo stomaco del cane e portare alla pancreatite."
   },
   "why": {
     "en": "Hazelnut shells are extremely hard and can cause choking and gut blockages. Nuts in general are high in fat and calories: they can be too rich for a dog, cause pancreatitis and add to weight gain. Nuts left lying on the ground can also grow mould that can be toxic to dogs.",
     "sl": "Lupine lešnikov so izjemno trde in lahko povzročijo dušenje ter zamašitev črevesja. Oreščki so na splošno zelo mastni in kalorični: za psa so lahko pretežki, povzročijo vnetje trebušne slinavke in prispevajo k debelosti. Na oreščkih, ki ležijo na tleh, lahko zraste tudi plesen, ki je za pse lahko strupena.",
     "de": "Haselnussschalen sind extrem hart und können zum Ersticken und zu Darmverschlüssen führen. Nüsse sind allgemein reich an Fett und Kalorien: Sie können für einen Hund zu gehaltvoll sein, eine Pankreatitis auslösen und zu Gewichtszunahme beitragen. Auf dem Boden liegende Nüsse können außerdem Schimmel bilden, der für Hunde giftig sein kann.",
     "fr": "La coque des noisettes est extrêmement dure et peut provoquer un étouffement et des obstructions intestinales. Les fruits à coque en général sont riches en graisses et en calories : ils peuvent être trop riches pour un chien, provoquer une pancréatite et favoriser la prise de poids. Les fruits à coque restés par terre peuvent aussi développer des moisissures susceptibles d’être toxiques pour les chiens.",
-    "es": "La cáscara de las avellanas es durísima y puede provocar atragantamiento y obstrucciones intestinales. Los frutos secos en general tienen muchas grasas y calorías: pueden ser demasiado pesados para un perro, provocar pancreatitis y hacerle engordar. Además, los frutos secos que se quedan en el suelo pueden criar un moho que puede ser tóxico para los perros."
+    "es": "La cáscara de las avellanas es durísima y puede provocar atragantamiento y obstrucciones intestinales. Los frutos secos en general tienen muchas grasas y calorías: pueden ser demasiado pesados para un perro, provocar pancreatitis y hacerle engordar. Además, los frutos secos que se quedan en el suelo pueden criar un moho que puede ser tóxico para los perros.",
+    "it": "Il guscio delle nocciole è estremamente duro e può causare soffocamento e ostruzioni intestinali. La frutta a guscio in generale è ricca di grassi e calorie: può essere troppo pesante per un cane, causare pancreatite e contribuire all’aumento di peso. La frutta a guscio rimasta a terra può anche sviluppare una muffa che può essere tossica per i cani."
   },
   "signs": {
     "en": [
@@ -62,6 +67,11 @@
       "Atragantamiento o arcadas",
       "Vómitos o diarrea",
       "Malestar de barriga o signos de obstrucción"
+    ],
+    "it": [
+      "Soffocamento o conati",
+      "Vomito o diarrea",
+      "Disturbi di pancia o segni di un’ostruzione"
     ]
   },
   "what_to_do": {
@@ -69,7 +79,8 @@
     "sl": "Po enem ali dveh oreščkih opazujte, ali pes bruha, ima drisko ali ga boli trebuh. Pokličite veterinarja, če je pes pogoltnil lupine, pojedel veliko ali plesnivih oreščkov, se duši ali kaže katerega od teh znakov.",
     "de": "Achten Sie nach ein oder zwei Nüssen auf Erbrechen, Durchfall oder Bauchschmerzen. Rufen Sie Ihren Tierarzt an, wenn Ihr Hund Schalen verschluckt, viele Nüsse oder schimmelige Nüsse gefressen hat, zu ersticken droht oder eines dieser Anzeichen zeigt.",
     "fr": "Après une ou deux noisettes, surveillez les vomissements, la diarrhée ou les douleurs au ventre. Appelez votre vétérinaire si votre chien a avalé des coques, a mangé beaucoup de noisettes ou des noisettes moisies, semble s’étouffer ou présente l’un de ces signes.",
-    "es": "Si tu perro se ha comido una o dos avellanas, vigila si aparecen vómitos, diarrea o dolor de barriga. Llama a tu veterinario si se ha tragado cáscaras, ha comido muchos frutos secos o frutos secos con moho, parece que se atraganta o muestra alguno de estos signos."
+    "es": "Si tu perro se ha comido una o dos avellanas, vigila si aparecen vómitos, diarrea o dolor de barriga. Llama a tu veterinario si se ha tragado cáscaras, ha comido muchos frutos secos o frutos secos con moho, parece que se atraganta o muestra alguno de estos signos.",
+    "it": "Dopo una o due nocciole, controlla se compaiono vomito, diarrea o mal di pancia. Chiama il veterinario se il tuo cane ha ingoiato gusci, ha mangiato molta frutta a guscio o frutta a guscio ammuffita, se sembra soffocare o se mostra uno di questi sintomi."
   },
   "serving": null,
   "child": {
@@ -77,7 +88,8 @@
     "sl": "Lešniki so prigrizek za ljudi. Trde lupine se lahko psu zataknejo, zato jih drži stran od ljubljenčka.",
     "de": "Haselnüsse sind ein Snack für Menschen. Ihre harten Schalen können in einem Hund stecken bleiben, also halte sie von deinem Hund fern.",
     "fr": "Les noisettes, c’est un en-cas pour les humains. Leur coque dure peut rester coincée dans le ventre d’un chien, alors garde-les loin de ton animal.",
-    "es": "Las avellanas son un tentempié para personas. Su cáscara dura se le puede quedar atascada a un perro, así que mantenlas lejos de tu mascota."
+    "es": "Las avellanas son un tentempié para personas. Su cáscara dura se le puede quedar atascada a un perro, así que mantenlas lejos de tu mascota.",
+    "it": "Le nocciole sono uno snack per le persone. Il loro guscio duro può bloccarsi dentro il cane, quindi tienile lontane dal tuo animale."
   },
   "faq": [
     {
@@ -86,14 +98,16 @@
         "sl": "So lešniki za pse strupeni?",
         "de": "Sind Haselnüsse für Hunde giftig?",
         "fr": "Les noisettes sont-elles toxiques pour les chiens ?",
-        "es": "¿Las avellanas son tóxicas para los perros?"
+        "es": "¿Las avellanas son tóxicas para los perros?",
+        "it": "Le nocciole sono tossiche per i cani?"
       },
       "a": {
         "en": "No, they aren't toxic; the main risks are the hard shells and the high fat content.",
         "sl": "Ne, niso strupeni; glavni tveganji sta trde lupine in veliko maščobe.",
         "de": "Nein, sie sind nicht giftig; die Hauptrisiken sind die harten Schalen und der hohe Fettgehalt.",
         "fr": "Non, elles ne sont pas toxiques ; les principaux risques sont la coque dure et la forte teneur en graisses.",
-        "es": "No, no son tóxicas; los principales riesgos son la cáscara dura y la gran cantidad de grasa."
+        "es": "No, no son tóxicas; los principales riesgos son la cáscara dura y la gran cantidad de grasa.",
+        "it": "No, non sono tossiche; i rischi principali sono il guscio duro e l’alto contenuto di grassi."
       }
     }
   ],
@@ -163,6 +177,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "35d3d442f097afaa145a9b768ac19f878f85be1a10fec42658110ea7357a0cbc"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6c212705dbd3d7cc31500986fbdae29ba8c953e31dc3552049632e103405936e"
     }
   }
 }

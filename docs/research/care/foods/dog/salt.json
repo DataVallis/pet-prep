@@ -6,21 +6,24 @@
     "sl": "Sol",
     "de": "Salz",
     "fr": "Sel",
-    "es": "Sal"
+    "es": "Sal",
+    "it": "Sale"
   },
   "question": {
     "en": "Can dogs eat salt?",
     "sl": "Ali lahko psi jedo sol?",
     "de": "Dürfen Hunde Salz fressen?",
     "fr": "Les chiens peuvent-ils manger du sel ?",
-    "es": "¿Pueden los perros comer sal?"
+    "es": "¿Pueden los perros comer sal?",
+    "it": "I cani possono mangiare il sale?"
   },
   "url_slug": {
     "en": "salt",
     "sl": "sol",
     "de": "salz",
     "fr": "sel",
-    "es": "sal"
+    "es": "sal",
+    "it": "sale"
   },
   "level": "dangerous",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne v velikih količinah. Slana hrana v zmernih količinah naj ne bi povzročila zastrupitve s soljo, veliko soli, na primer iz domačega slanega testa, plastelina ali veliko morske vode, pa jo lahko. Znaki so bruhanje, huda žeja, tresenje in krči.",
     "de": "Nein, nicht in großen Mengen. Salziges Essen in Maßen sollte keine Salzvergiftung verursachen, viel Salz aber schon – zum Beispiel aus selbst gemachtem Salzteig, Knete oder viel Meerwasser. Zu den Anzeichen zählen Erbrechen, starker Durst, Zittern und Krampfanfälle.",
     "fr": "Non, pas en grande quantité. Des aliments salés avec modération ne devraient pas provoquer d’intoxication au sel, mais une grande quantité de sel – par exemple de la pâte à sel maison, de la pâte à modeler ou beaucoup d’eau de mer – peut en provoquer une. Les signes comprennent vomissements, soif intense, tremblements et convulsions.",
-    "es": "No, no en grandes cantidades. La comida salada con moderación no debería causar una intoxicación por sal, pero comer mucha sal sí puede, por ejemplo, con masa de sal casera, plastilina casera o mucha agua de mar. Los signos incluyen vómitos, mucha sed, temblores y convulsiones."
+    "es": "No, no en grandes cantidades. La comida salada con moderación no debería causar una intoxicación por sal, pero comer mucha sal sí puede, por ejemplo, con masa de sal casera, plastilina casera o mucha agua de mar. Los signos incluyen vómitos, mucha sed, temblores y convulsiones.",
+    "it": "No, non in grandi quantità. Cibi salati con moderazione non dovrebbero causare un avvelenamento da sale, ma ingerire molto sale può farlo, per esempio con la pasta di sale fatta in casa, la pasta da modellare o bevendo molta acqua di mare. I sintomi includono vomito, sete intensa, tremori e convulsioni."
   },
   "why": {
     "en": "Common causes of salt poisoning are homemade salt-dough ornaments and play dough, snow with salt de-icer, and drinking a lot of sea water. Salt poisoning is unlikely when a healthy dog has fresh water, but small dogs with health problems are at more risk if they have no fresh water. Salt must never be used to make a dog vomit.",
     "sl": "Pogosti vzroki zastrupitve s soljo so domači okraski iz slanega testa in plastelin, sneg s soljo za posipanje ter pitje veliko morske vode. Pri zdravem psu s svežo vodo je zastrupitev s soljo malo verjetna, večje tveganje pa imajo majhni psi z zdravstvenimi težavami, če nimajo sveže vode. Soli nikoli ne uporabljajte, da bi psa spravili k bruhanju.",
     "de": "Häufige Ursachen einer Salzvergiftung sind selbst gemachter Salzteig-Schmuck und selbst gemachte Knete, Schnee mit Streusalz und das Trinken von viel Meerwasser. Eine Salzvergiftung ist unwahrscheinlich, wenn ein gesunder Hund frisches Wasser hat; kleine Hunde mit gesundheitlichen Problemen sind ohne frisches Wasser aber stärker gefährdet. Salz darf niemals verwendet werden, um einen Hund zum Erbrechen zu bringen.",
     "fr": "Les causes fréquentes d’intoxication au sel sont les décorations en pâte à sel et la pâte à modeler maison, la neige mêlée de sel de déneigement et l’ingestion de beaucoup d’eau de mer. L’intoxication au sel est peu probable quand un chien en bonne santé a de l’eau fraîche, mais les petits chiens ayant des problèmes de santé sont plus à risque s’ils n’en ont pas. Il ne faut jamais utiliser de sel pour faire vomir un chien.",
-    "es": "Causas habituales de intoxicación por sal son los adornos caseros de masa de sal y la plastilina casera, la nieve con sal para deshielo y beber mucha agua de mar. La intoxicación por sal es poco probable cuando un perro sano tiene agua fresca, pero los perros pequeños con problemas de salud corren más riesgo si no tienen agua fresca. Nunca debe usarse sal para hacer vomitar a un perro."
+    "es": "Causas habituales de intoxicación por sal son los adornos caseros de masa de sal y la plastilina casera, la nieve con sal para deshielo y beber mucha agua de mar. La intoxicación por sal es poco probable cuando un perro sano tiene agua fresca, pero los perros pequeños con problemas de salud corren más riesgo si no tienen agua fresca. Nunca debe usarse sal para hacer vomitar a un perro.",
+    "it": "Cause frequenti di avvelenamento da sale sono le decorazioni in pasta di sale e la pasta da modellare fatte in casa, la neve con sale antighiaccio e bere molta acqua di mare. L’avvelenamento da sale è improbabile se un cane sano ha acqua fresca, ma i cani piccoli con problemi di salute sono più a rischio se non hanno acqua fresca. Il sale non va mai usato per far vomitare un cane."
   },
   "signs": {
     "en": [
@@ -72,6 +77,13 @@
       "Diarrea",
       "Tambaleo, cansancio",
       "Temblores o convulsiones"
+    ],
+    "it": [
+      "Sete intensa e pipì frequente",
+      "Vomito, spesso entro poche ore",
+      "Diarrea",
+      "Andatura barcollante, stanchezza",
+      "Tremori o convulsioni"
     ]
   },
   "what_to_do": {
@@ -79,7 +91,8 @@
     "sl": "Če je pes pojedel veliko soli, slanega testa ali plastelina ali popil veliko morske vode, takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj in koliko je pojedel. Ne čakajte na znake in psu nikoli ne dajajte soli, da bi bruhal.",
     "de": "Wenn Ihr Hund viel Salz, Salzteig oder Knete gefressen oder viel Meerwasser getrunken hat, wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was und wie viel gefressen wurde. Warten Sie nicht auf Anzeichen und geben Sie niemals Salz, um einen Hund zum Erbrechen zu bringen.",
     "fr": "Si votre chien a mangé beaucoup de sel, de la pâte à sel ou de la pâte à modeler, ou a bu beaucoup d’eau de mer, contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce qu’il a mangé et en quelle quantité. N’attendez pas l’apparition des signes, et ne donnez jamais de sel pour faire vomir un chien.",
-    "es": "Si tu perro ha comido mucha sal, masa de sal o plastilina casera, o ha bebido mucha agua de mar, contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué comió y cuánto. No esperes a que aparezcan síntomas y nunca le des sal para hacerle vomitar."
+    "es": "Si tu perro ha comido mucha sal, masa de sal o plastilina casera, o ha bebido mucha agua de mar, contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué comió y cuánto. No esperes a que aparezcan síntomas y nunca le des sal para hacerle vomitar.",
+    "it": "Se il tuo cane ha mangiato molto sale, pasta di sale o pasta da modellare, o ha bevuto molta acqua di mare, contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa e quanto ha mangiato. Non aspettare che compaiano i sintomi e non dargli mai sale per farlo vomitare."
   },
   "serving": null,
   "child": {
@@ -87,7 +100,8 @@
     "sl": "Preveč soli psa zelo odžeja in mu škodi. Sol in slani plastelin pospravi stran od psa.",
     "de": "Zu viel Salz macht Hunde sehr durstig und krank. Halte Salz und salzige Knete von deinem Hund fern.",
     "fr": "Trop de sel donne très soif aux chiens et les rend malades. Range le sel et la pâte à modeler salée loin de ton chien.",
-    "es": "Demasiada sal da mucha sed a los perros y los pone malitos. Mantén la sal y la plastilina salada lejos de tu perro."
+    "es": "Demasiada sal da mucha sed a los perros y los pone malitos. Mantén la sal y la plastilina salada lejos de tu perro.",
+    "it": "Troppo sale fa venire ai cani tanta sete e li fa stare male. Tieni il sale e la pasta da modellare salata lontani dal tuo cane."
   },
   "faq": [
     {
@@ -96,14 +110,16 @@
         "sl": "Je domači plastelin nevaren?",
         "de": "Ist selbst gemachte Knete gefährlich?",
         "fr": "La pâte à modeler maison est-elle dangereuse ?",
-        "es": "¿Es peligrosa la plastilina casera?"
+        "es": "¿Es peligrosa la plastilina casera?",
+        "it": "La pasta da modellare fatta in casa è pericolosa?"
       },
       "a": {
         "en": "Yes. Because of its high salt content, homemade play dough is highly toxic to dogs. Salt dough ornaments are a risk too.",
         "sl": "Da. Zaradi veliko soli je domači plastelin za pse zelo strupen. Tveganje so tudi okraski iz slanega testa.",
         "de": "Ja. Wegen ihres hohen Salzgehalts ist selbst gemachte Knete für Hunde hochgiftig. Auch Salzteig-Schmuck ist ein Risiko.",
         "fr": "Oui. À cause de sa forte teneur en sel, la pâte à modeler maison est très toxique pour les chiens. Les décorations en pâte à sel sont aussi un risque.",
-        "es": "Sí. Por su alto contenido en sal, la plastilina casera es muy tóxica para los perros. Los adornos de masa de sal también son un riesgo."
+        "es": "Sí. Por su alto contenido en sal, la plastilina casera es muy tóxica para los perros. Los adornos de masa de sal también son un riesgo.",
+        "it": "Sì. A causa del suo alto contenuto di sale, la pasta da modellare fatta in casa è molto tossica per i cani. Anche le decorazioni in pasta di sale sono un rischio."
       }
     },
     {
@@ -112,14 +128,16 @@
         "sl": "Lahko psu dam slano vodo, da bruha?",
         "de": "Darf ich meinem Hund Salzwasser geben, damit er erbricht?",
         "fr": "Puis-je donner de l’eau salée pour faire vomir mon chien ?",
-        "es": "¿Puedo darle agua con sal para que mi perro vomite?"
+        "es": "¿Puedo darle agua con sal para que mi perro vomite?",
+        "it": "Posso dare acqua salata al mio cane per farlo vomitare?"
       },
       "a": {
         "en": "No. Salt and salt water should never be used to make an animal vomit, because of the high risk of salt poisoning. Call your vet instead.",
         "sl": "Ne. Soli in slane vode nikoli ne uporabljajte, da bi žival bruhala, ker je tveganje zastrupitve s soljo veliko. Raje pokličite veterinarja.",
         "de": "Nein. Salz und Salzwasser dürfen wegen der hohen Gefahr einer Salzvergiftung niemals verwendet werden, um ein Tier zum Erbrechen zu bringen. Rufen Sie stattdessen Ihren Tierarzt an.",
         "fr": "Non. Il ne faut jamais utiliser de sel ni d’eau salée pour faire vomir un animal, en raison du risque élevé d’intoxication au sel. Appelez plutôt votre vétérinaire.",
-        "es": "No. La sal y el agua con sal nunca deben usarse para hacer vomitar a un animal, por el alto riesgo de intoxicación por sal. Llama a tu veterinario."
+        "es": "No. La sal y el agua con sal nunca deben usarse para hacer vomitar a un animal, por el alto riesgo de intoxicación por sal. Llama a tu veterinario.",
+        "it": "No. Sale e acqua salata non vanno mai usati per far vomitare un animale, perché il rischio di avvelenamento da sale è alto. Chiama invece il veterinario."
       }
     }
   ],
@@ -229,6 +247,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9f6b7a705ab419b794e417563751e0a2b1258d3de384d386aed569b87c675655"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6dd10791ebc042073f62070d8357977e271ddbbb2fb78890f32e1f9172d7dedc"
     }
   }
 }

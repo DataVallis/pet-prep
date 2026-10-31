@@ -6,21 +6,24 @@
     "sl": "Arašidi",
     "de": "Erdnüsse",
     "fr": "Cacahuètes",
-    "es": "Cacahuetes"
+    "es": "Cacahuetes",
+    "it": "Arachidi"
   },
   "question": {
     "en": "Can dogs eat peanuts?",
     "sl": "Ali lahko psi jedo arašide?",
     "de": "Dürfen Hunde Erdnüsse fressen?",
     "fr": "Les chiens peuvent-ils manger des cacahuètes ?",
-    "es": "¿Pueden los perros comer cacahuetes?"
+    "es": "¿Pueden los perros comer cacahuetes?",
+    "it": "I cani possono mangiare le arachidi?"
   },
   "url_slug": {
     "en": "peanuts",
     "sl": "arasidi",
     "de": "erdnuesse",
     "fr": "cacahuetes",
-    "es": "cacahuetes"
+    "es": "cacahuetes",
+    "it": "arachidi"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, občasno nekaj navadnih arašidov: nesoljenih, brez okusov, suho praženih ali surovih, brez lupin. Soljeni, medeni ali začinjeni arašidi niso primerni, arašidi pa so mastni, zato naj jih bo le nekaj.",
     "de": "Ja, ab und zu ein paar naturbelassene Erdnüsse: ungesalzen, ohne Aroma, trocken geröstet oder roh und ohne Schale. Gesalzene, honiggeröstete oder aromatisierte Erdnüsse sind nicht geeignet. Erdnüsse sind zudem fettreich – bleiben Sie also bei ein paar wenigen.",
     "fr": "Oui, quelques cacahuètes nature de temps en temps : non salées, non aromatisées, grillées à sec ou crues, sans leur coque. Les cacahuètes salées, au miel ou aromatisées ne conviennent pas, et les cacahuètes sont grasses : limitez-vous à quelques-unes.",
-    "es": "Sí, unos pocos cacahuetes naturales de vez en cuando: sin sal, sin sabores, tostados sin aceite o crudos, y sin cáscara. Los cacahuetes salados, garrapiñados con miel o con sabores no son adecuados, y los cacahuetes son grasos, así que limítate a unos pocos."
+    "es": "Sí, unos pocos cacahuetes naturales de vez en cuando: sin sal, sin sabores, tostados sin aceite o crudos, y sin cáscara. Los cacahuetes salados, garrapiñados con miel o con sabores no son adecuados, y los cacahuetes son grasos, así que limítate a unos pocos.",
+    "it": "Sì, qualche arachide semplice ogni tanto: senza sale, senza aromi, tostata a secco o cruda e sgusciata. Le arachidi salate, tostate al miele o aromatizzate non sono adatte, e le arachidi sono grasse: dagliene solo poche."
   },
   "why": {
     "en": "Peanuts are high in fat, which can cause digestive upset and even pancreatitis if a dog eats too much. Salted peanuts add sodium a dog doesn't need, flavoured ones add other risky ingredients, and the fibrous shell can be a choking hazard, especially for small breeds.",
     "sl": "Arašidi so zelo mastni, kar lahko pri preveliki količini povzroči prebavne težave in celo vnetje trebušne slinavke. Soljeni arašidi vsebujejo več natrija, kot ga pes potrebuje, začinjeni še druge tvegane sestavine, vlaknata lupina pa lahko povzroči dušenje, posebej pri majhnih pasmah.",
     "de": "Erdnüsse sind sehr fettreich, was Verdauungsbeschwerden und sogar eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen kann, wenn ein Hund zu viel davon frisst. Gesalzene Erdnüsse liefern Natrium, das ein Hund nicht braucht, aromatisierte bringen weitere riskante Zutaten mit, und die faserige Schale kann zur Erstickungsgefahr werden, besonders bei kleinen Rassen.",
     "fr": "Les cacahuètes sont riches en graisses, ce qui peut provoquer des troubles digestifs, voire une pancréatite si un chien en mange trop. Salées, elles apportent du sodium dont le chien n’a pas besoin ; aromatisées, d’autres ingrédients à risque ; et la coque fibreuse peut provoquer un étouffement, surtout chez les petites races.",
-    "es": "Los cacahuetes tienen mucha grasa, lo que puede provocar molestias digestivas e incluso pancreatitis si el perro come demasiados. Los salados aportan un sodio que el perro no necesita, los de sabores añaden otros ingredientes con riesgo, y la cáscara fibrosa puede provocar atragantamiento, sobre todo en razas pequeñas."
+    "es": "Los cacahuetes tienen mucha grasa, lo que puede provocar molestias digestivas e incluso pancreatitis si el perro come demasiados. Los salados aportan un sodio que el perro no necesita, los de sabores añaden otros ingredientes con riesgo, y la cáscara fibrosa puede provocar atragantamiento, sobre todo en razas pequeñas.",
+    "it": "Le arachidi sono ricche di grassi, che possono causare disturbi digestivi e perfino una pancreatite se il cane ne mangia troppe. Quelle salate aggiungono sodio di cui il cane non ha bisogno, quelle aromatizzate altri ingredienti rischiosi, e il guscio fibroso può causare soffocamento, soprattutto nelle razze piccole."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Če je pes pojedel veliko arašidov, soljene arašide ali lupine, opazujte, ali bruha, ima drisko ali ga boli trebuh, in pokličite veterinarja, če se to pojavi ali če se pes duši.",
     "de": "Wenn Ihr Hund viele Erdnüsse, gesalzene Erdnüsse oder Schalen gefressen hat, achten Sie auf Erbrechen, Durchfall oder Bauchschmerzen und rufen Sie Ihren Tierarzt an, wenn diese auftreten oder Ihr Hund zu ersticken scheint.",
     "fr": "Si votre chien a mangé beaucoup de cacahuètes, des cacahuètes salées ou des coques, surveillez les vomissements, la diarrhée ou les douleurs au ventre, et appelez votre vétérinaire s’ils apparaissent ou si votre chien semble s’étouffer.",
-    "es": "Si tu perro se ha comido muchos cacahuetes, cacahuetes salados o cáscaras, vigila si tiene vómitos, diarrea o dolor de barriga, y llama a tu veterinario si aparecen o si parece que se atraganta."
+    "es": "Si tu perro se ha comido muchos cacahuetes, cacahuetes salados o cáscaras, vigila si tiene vómitos, diarrea o dolor de barriga, y llama a tu veterinario si aparecen o si parece que se atraganta.",
+    "it": "Se il tuo cane ha mangiato molte arachidi, arachidi salate o gusci, controlla se compaiono vomito, diarrea o mal di pancia, e chiama il veterinario se compaiono o se sembra che stia soffocando."
   },
   "serving": {
     "en": "Only a few, plain: dry-roasted or raw, unsalted, unseasoned, uncoated, shells removed — not every day.",
     "sl": "Le nekaj, navadnih: suho praženih ali surovih, nesoljenih, nezačinjenih, brez obloge in brez lupin — ne vsak dan.",
     "de": "Nur ein paar, naturbelassen: trocken geröstet oder roh, ungesalzen, ungewürzt, ohne Überzug, ohne Schale – nicht jeden Tag.",
     "fr": "Seulement quelques-unes, nature : grillées à sec ou crues, non salées, sans assaisonnement ni enrobage, sans coque – pas tous les jours.",
-    "es": "Solo unos pocos, naturales: tostados sin aceite o crudos, sin sal, sin condimentos, sin recubrimiento y sin cáscara; no todos los días."
+    "es": "Solo unos pocos, naturales: tostados sin aceite o crudos, sin sal, sin condimentos, sin recubrimiento y sin cáscara; no todos los días.",
+    "it": "Solo poche e semplici: tostate a secco o crude, senza sale, senza condimenti, senza rivestimenti e sgusciate – non tutti i giorni."
   },
   "child": {
     "en": "A dog may have a few plain peanuts without shells. Salty or sweet peanuts are only for people.",
     "sl": "Pes lahko dobi nekaj navadnih arašidov brez lupin. Slani ali sladki arašidi so samo za ljudi.",
     "de": "Ein Hund darf ein paar Erdnüsse ohne Schale und ohne alles bekommen. Salzige oder süße Erdnüsse sind nur für Menschen.",
     "fr": "Un chien peut manger quelques cacahuètes nature, sans coque. Les cacahuètes salées ou sucrées, c’est seulement pour les humains.",
-    "es": "Un perro puede comer unos pocos cacahuetes naturales sin cáscara. Los cacahuetes salados o dulces son solo para las personas."
+    "es": "Un perro puede comer unos pocos cacahuetes naturales sin cáscara. Los cacahuetes salados o dulces son solo para las personas.",
+    "it": "Un cane può mangiare qualche arachide semplice senza guscio. Le arachidi salate o dolci sono solo per le persone."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "So medeni arašidi v redu?",
         "de": "Sind honiggeröstete Erdnüsse in Ordnung?",
         "fr": "Les cacahuètes grillées au miel, c’est permis ?",
-        "es": "¿Se pueden dar cacahuetes con miel?"
+        "es": "¿Se pueden dar cacahuetes con miel?",
+        "it": "Le arachidi tostate al miele vanno bene?"
       },
       "a": {
         "en": "No. Honey-roasted and other flavoured peanuts are unsafe for dogs; only plain, unsalted peanuts are suitable.",
         "sl": "Ne. Medeni in drugi začinjeni arašidi za pse niso varni; primerni so le navadni, nesoljeni arašidi.",
         "de": "Nein. Honiggeröstete und andere aromatisierte Erdnüsse sind für Hunde nicht sicher; geeignet sind nur naturbelassene, ungesalzene Erdnüsse.",
         "fr": "Non. Les cacahuètes grillées au miel et les autres cacahuètes aromatisées sont dangereuses pour les chiens ; seules les cacahuètes nature non salées conviennent.",
-        "es": "No. Los cacahuetes con miel y otros cacahuetes con sabores no son seguros para los perros; solo son adecuados los cacahuetes naturales sin sal."
+        "es": "No. Los cacahuetes con miel y otros cacahuetes con sabores no son seguros para los perros; solo son adecuados los cacahuetes naturales sin sal.",
+        "it": "No. Le arachidi tostate al miele e le altre arachidi aromatizzate non sono sicure per i cani; vanno bene solo arachidi semplici e senza sale."
       }
     }
   ],
@@ -152,6 +162,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1ff1819aa803a72c964b1f391638b71aa3ff7e716b5bb55dddd70345a0e277c0"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6404630a216bdf526f4d45527510789e2bf396fbb18b483162df872cc3e8d466"
     }
   }
 }

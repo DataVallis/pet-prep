@@ -6,21 +6,24 @@
     "sl": "Kava",
     "de": "Kaffee",
     "fr": "Café",
-    "es": "Café"
+    "es": "Café",
+    "it": "Caffè"
   },
   "question": {
     "en": "Can cats drink coffee?",
     "sl": "Ali lahko mačke pijejo kavo?",
     "de": "Dürfen Katzen Kaffee trinken?",
     "fr": "Les chats peuvent-ils boire du café ?",
-    "es": "¿Pueden los gatos beber café?"
+    "es": "¿Pueden los gatos beber café?",
+    "it": "I gatti possono bere il caffè?"
   },
   "url_slug": {
     "en": "coffee",
     "sl": "kava",
     "de": "kaffee",
     "fr": "cafe",
-    "es": "cafe"
+    "es": "cafe",
+    "it": "caffe"
   },
   "level": "toxic",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne. Kava vsebuje kofein, mačke pa so nanj bolj občutljive kot ljudje. Neuporabljena mleta kava in kavna zrna lahko povzročijo resno zastrupitev. Kavo hranite izven dosega in pokličite veterinarja, če jo muca poje ali popije.",
     "de": "Nein. Kaffee enthält Koffein, und Katzen reagieren empfindlicher auf Koffein als Menschen. Unbenutztes Kaffeepulver und Kaffeebohnen können eine schwere Vergiftung auslösen. Bewahren Sie Kaffee außer Reichweite auf und rufen Sie Ihren Tierarzt an, wenn Ihre Katze davon frisst oder trinkt.",
     "fr": "Non. Le café contient de la caféine, et les chats y sont plus sensibles que les humains. Le café moulu et les grains peuvent provoquer une intoxication grave. Gardez le café hors de portée et appelez votre vétérinaire si votre chat en mange ou en boit.",
-    "es": "No. El café contiene cafeína, y los gatos son más sensibles a la cafeína que las personas. El café molido sin usar y los granos de café pueden causar una intoxicación grave. Mantén el café fuera de su alcance y llama a tu veterinario si tu gato come o bebe algo."
+    "es": "No. El café contiene cafeína, y los gatos son más sensibles a la cafeína que las personas. El café molido sin usar y los granos de café pueden causar una intoxicación grave. Mantén el café fuera de su alcance y llama a tu veterinario si tu gato come o bebe algo.",
+    "it": "No. Il caffè contiene caffeina, e i gatti sono più sensibili alla caffeina rispetto alle persone. I fondi di caffè non usati e i chicchi possono causare un’intossicazione grave. Tieni il caffè fuori dalla portata del tuo gatto e chiama il veterinario se ne mangia o ne beve."
   },
   "why": {
     "en": "Coffee is one of the main sources of caffeine at home. Cats are more sensitive to caffeine than people. Like chocolate, coffee and other caffeine-containing foods have high levels of stimulants called methylxanthines; caffeine speeds up the heart, makes cats restless and upsets the stomach.",
     "sl": "Kava je eden glavnih virov kofeina doma. Mačke so na kofein bolj občutljive kot ljudje. Kava in druga živila s kofeinom imajo tako kot čokolada veliko poživil, imenovanih metilksantini; kofein pospeši srce, povzroči nemir in prebavne težave.",
     "de": "Kaffee ist eine der wichtigsten Koffeinquellen im Haushalt. Katzen reagieren empfindlicher auf Koffein als Menschen. Wie Schokolade enthalten Kaffee und andere koffeinhaltige Lebensmittel große Mengen anregender Stoffe, sogenannter Methylxanthine; Koffein beschleunigt den Herzschlag, macht Katzen unruhig und schlägt auf den Magen.",
     "fr": "Le café est l’une des principales sources de caféine à la maison. Les chats sont plus sensibles à la caféine que les humains. Comme le chocolat, le café et les autres aliments contenant de la caféine renferment beaucoup de stimulants appelés méthylxanthines ; la caféine accélère le cœur, rend les chats agités et dérange l’estomac.",
-    "es": "El café es una de las principales fuentes de cafeína en casa. Los gatos son más sensibles a la cafeína que las personas. Al igual que el chocolate, el café y otros alimentos con cafeína tienen niveles altos de unos estimulantes llamados metilxantinas; la cafeína acelera el corazón, pone inquietos a los gatos y les sienta mal al estómago."
+    "es": "El café es una de las principales fuentes de cafeína en casa. Los gatos son más sensibles a la cafeína que las personas. Al igual que el chocolate, el café y otros alimentos con cafeína tienen niveles altos de unos estimulantes llamados metilxantinas; la cafeína acelera el corazón, pone inquietos a los gatos y les sienta mal al estómago.",
+    "it": "Il caffè è una delle principali fonti di caffeina in casa. I gatti sono più sensibili alla caffeina rispetto alle persone. Come il cioccolato, anche il caffè e gli altri alimenti che contengono caffeina hanno alte concentrazioni di sostanze stimolanti chiamate metilxantine: la caffeina accelera il battito cardiaco, rende i gatti irrequieti e disturba lo stomaco."
   },
   "signs": {
     "en": [
@@ -67,6 +72,12 @@
       "Hiperactividad",
       "Malestar de estómago",
       "Latido rápido o cambios en el ritmo del corazón"
+    ],
+    "it": [
+      "Irrequietezza, nervosismo, non vuole stare fermo",
+      "Iperattività",
+      "Disturbi di stomaco",
+      "Battito cardiaco accelerato o alterazioni del ritmo cardiaco"
     ]
   },
   "what_to_do": {
@@ -74,7 +85,8 @@
     "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, kaj je muca zaužila (pijačo, mleto kavo, zrna, čajno vrečko ali tablete), koliko in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was Ihre Katze geschluckt hat (Getränk, Kaffeepulver, Bohnen, Teebeutel oder Tabletten), wie viel und wann. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce que votre chat a avalé (boisson, café moulu, grains, sachet de thé ou comprimés), en quelle quantité et à quelle heure. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
-    "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué se ha tragado tu gato (bebida, café molido, granos, bolsita de té o pastillas), cuánto y cuándo. No esperes a que aparezcan signos y no intentes provocarle el vómito en casa."
+    "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué se ha tragado tu gato (bebida, café molido, granos, bolsita de té o pastillas), cuánto y cuándo. No esperes a que aparezcan signos y no intentes provocarle el vómito en casa.",
+    "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha ingerito il tuo gatto (bevanda, fondi, chicchi, bustina di tè o compresse), quanto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa."
   },
   "serving": null,
   "child": {
@@ -82,7 +94,8 @@
     "sl": "Kava je pijača za odrasle. Muce naredi nemirne, zato je ne deli z njo. Če jo muca poliže, povej odraslemu.",
     "de": "Kaffee ist ein Getränk für Erwachsene. Er macht Katzen zappelig, also teile ihn nie. Wenn deine Katze davon schleckt, sag einem Erwachsenen Bescheid.",
     "fr": "Le café est une boisson de grands. Il rend les chats tout agités : ne le partage jamais, et préviens un adulte si ton chat en lape.",
-    "es": "El café es una bebida de mayores. Pone nerviosos a los gatos, así que nunca lo compartas y avisa a un adulto si tu gatito lame un poco."
+    "es": "El café es una bebida de mayores. Pone nerviosos a los gatos, así que nunca lo compartas y avisa a un adulto si tu gatito lame un poco.",
+    "it": "Il caffè è una bevanda per i grandi. Rende i gatti agitati, quindi non condividerlo mai, e dillo a un adulto se il micio ne lecca un po’."
   },
   "faq": [
     {
@@ -91,14 +104,16 @@
         "sl": "Sta mleta kava in kavna zrna nevarnejša od skodelice kave?",
         "de": "Sind Kaffeepulver und Bohnen schlimmer als eine Tasse Kaffee?",
         "fr": "Le café moulu et les grains de café sont-ils plus dangereux qu’une tasse de café ?",
-        "es": "¿El café molido y los granos son peores que una taza de café?"
+        "es": "¿El café molido y los granos son peores que una taza de café?",
+        "it": "I fondi e i chicchi di caffè sono peggio di una tazza di caffè?"
       },
       "a": {
         "en": "Yes, they can be. Pet Poison Helpline warns that unused coffee grounds or beans could cause serious toxicity in cats. Keep coffee grounds and beans where your cat can't reach them.",
         "sl": "Lahko, da. Pet Poison Helpline opozarja, da lahko neuporabljena mleta kava ali zrna pri mačkah povzročijo resno zastrupitev. Mleto kavo in zrna hranite tam, kamor muca ne seže.",
         "de": "Ja, das können sie sein. Die Pet Poison Helpline warnt, dass unbenutztes Kaffeepulver oder Kaffeebohnen bei Katzen eine schwere Vergiftung verursachen könnten. Bewahren Sie Kaffeepulver und Bohnen so auf, dass Ihre Katze nicht herankommt.",
         "fr": "Oui, c’est possible. Pet Poison Helpline avertit que le café moulu ou les grains peuvent provoquer une intoxication grave chez le chat. Rangez le café moulu et les grains là où votre chat ne peut pas les atteindre.",
-        "es": "Sí, pueden serlo. Pet Poison Helpline advierte de que el café molido sin usar o los granos de café podrían causar una intoxicación grave en los gatos. Guarda el café molido y los granos donde tu gato no pueda alcanzarlos."
+        "es": "Sí, pueden serlo. Pet Poison Helpline advierte de que el café molido sin usar o los granos de café podrían causar una intoxicación grave en los gatos. Guarda el café molido y los granos donde tu gato no pueda alcanzarlos.",
+        "it": "Sì, possono esserlo. Pet Poison Helpline avverte che i fondi di caffè non usati o i chicchi potrebbero causare un’intossicazione grave nei gatti. Tieni fondi e chicchi di caffè dove il tuo gatto non può arrivare."
       }
     }
   ],
@@ -192,6 +207,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2ade18175b8a0ca5fd63f8aef78065ac8837d3f6efd3aa96998dc81200897d14"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "15cf704a2b74e099bdf6261ff80087b82c9be2c737c4969da98f33d98fa9954d"
     }
   }
 }

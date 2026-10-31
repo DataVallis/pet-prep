@@ -6,21 +6,24 @@
     "sl": "Svinjina",
     "de": "Schweinefleisch",
     "fr": "Porc",
-    "es": "Cerdo"
+    "es": "Cerdo",
+    "it": "Carne di maiale"
   },
   "question": {
     "en": "Can dogs eat pork?",
     "sl": "Ali lahko psi jedo svinjino?",
     "de": "Dürfen Hunde Schweinefleisch fressen?",
     "fr": "Les chiens peuvent-ils manger du porc ?",
-    "es": "¿Pueden los perros comer cerdo?"
+    "es": "¿Pueden los perros comer cerdo?",
+    "it": "I cani possono mangiare la carne di maiale?"
   },
   "url_slug": {
     "en": "pork",
     "sl": "svinjina",
     "de": "schweinefleisch",
     "fr": "porc",
-    "es": "cerdo"
+    "es": "cerdo",
+    "it": "maiale"
   },
   "level": "not_recommended",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne kot reden priboljšek. Nekateri veterinarski viri dovolijo malo navadne, popolnoma kuhane puste svinjine, a svinjina je mastna in jo psi težko prebavijo, mastna hrana pa lahko sproži vnetje trebušne slinavke. Surova svinjina, kuhane kosti, šunka in slanina niso primerne.",
     "de": "Nicht als regelmäßiges Leckerli. Manche tierärztlichen Quellen erlauben ein wenig pures, mageres, vollständig gegartes Schweinefleisch, aber Schweinefleisch ist fettreich und für Hunde schwer verdaulich, und fettreiches Futter kann eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen. Rohes Schweinefleisch, gegarte Knochen, Schinken und Speck sind nicht geeignet.",
     "fr": "Pas comme friandise régulière. Certaines sources vétérinaires autorisent un peu de porc maigre nature et bien cuit, mais le porc est gras et difficile à digérer pour les chiens, et les aliments gras peuvent déclencher une pancréatite. Le porc cru, les os cuits, le jambon et le bacon ne conviennent pas.",
-    "es": "No como premio habitual. Algunas fuentes veterinarias permiten un poco de cerdo magro, natural y bien cocinado, pero el cerdo es graso y difícil de digerir para los perros, y los alimentos grasos pueden desencadenar una pancreatitis. El cerdo crudo, los huesos cocinados, el jamón y el beicon no son adecuados."
+    "es": "No como premio habitual. Algunas fuentes veterinarias permiten un poco de cerdo magro, natural y bien cocinado, pero el cerdo es graso y difícil de digerir para los perros, y los alimentos grasos pueden desencadenar una pancreatitis. El cerdo crudo, los huesos cocinados, el jamón y el beicon no son adecuados.",
+    "it": "Non come premio abituale. Alcune fonti veterinarie permettono un po’ di carne di maiale magra, semplice e ben cotta, ma il maiale è grasso e difficile da digerire per i cani, e i cibi grassi possono scatenare una pancreatite. Maiale crudo, ossa cotte, prosciutto e bacon non sono adatti."
   },
   "why": {
     "en": "Pork is rich in a type of fat that is difficult for dogs to digest. Raw or undercooked pork can carry the parasite Trichinella. Cooked bones become brittle, and seasonings can be dangerous. Ham is high in salt and fat. Sources differ: the AKC calls plain cooked lean pork safe in moderation, while PDSA lists pork among high-fat foods that can lead to pancreatitis and advises dogs that have had it to avoid high-fat treats like pork, so we use the stricter level.",
     "sl": "Svinjina vsebuje vrsto maščobe, ki jo psi težko prebavijo. Surova ali premalo kuhana svinjina lahko prenaša zajedavca trihinelo. Kuhane kosti postanejo krhke, začimbe pa so lahko nevarne. Šunka vsebuje veliko soli in maščobe. Viri se razlikujejo: AKC navadno kuhano pusto svinjino v zmernih količinah označuje kot varno, PDSA pa svinjino navaja med mastno hrano, ki lahko sproži vnetje trebušne slinavke, psom, ki so ga že imeli, pa svetuje, naj se izogibajo mastnim priboljškom, kot je svinjina, zato smo izbrali strožjo stopnjo.",
     "de": "Schweinefleisch enthält viel von einer Fettart, die Hunde schwer verdauen können. Rohes oder nicht durchgegartes Schweinefleisch kann den Parasiten Trichinella übertragen. Gegarte Knochen werden spröde, und Gewürze können gefährlich sein. Schinken ist sehr salz- und fettreich. Die Quellen sind sich nicht einig: Der AKC hält pures, mageres, gegartes Schweinefleisch in Maßen für unbedenklich, während PDSA Schweinefleisch zu den fettreichen Lebensmitteln zählt, die zu einer Pankreatitis führen können, und Hunden, die schon eine hatten, von fettreichen Leckerlis wie Schweinefleisch abrät. Deshalb wählen wir die strengere Einstufung.",
     "fr": "Le porc est riche en un type de graisse que les chiens digèrent difficilement. Le porc cru ou pas assez cuit peut transmettre un parasite, la trichine (Trichinella). Les os cuits deviennent cassants, et les assaisonnements peuvent être dangereux. Le jambon est riche en sel et en graisses. Les sources divergent : l’AKC juge le porc maigre cuit nature sans danger avec modération, tandis que la PDSA classe le porc parmi les aliments gras pouvant mener à une pancréatite et conseille aux chiens qui en ont déjà eu une d’éviter les friandises grasses comme le porc ; nous retenons donc le niveau le plus strict.",
-    "es": "El cerdo es rico en un tipo de grasa difícil de digerir para los perros. El cerdo crudo o poco hecho puede transmitir el parásito Trichinella. Los huesos cocinados se vuelven quebradizos, y los condimentos pueden ser peligrosos. El jamón tiene mucha sal y grasa. Las fuentes difieren: el AKC considera seguro con moderación el cerdo magro natural y cocinado, mientras que la PDSA incluye el cerdo entre los alimentos grasos que pueden provocar pancreatitis y aconseja que los perros que la han tenido eviten premios grasos como el cerdo, así que aplicamos el nivel más estricto."
+    "es": "El cerdo es rico en un tipo de grasa difícil de digerir para los perros. El cerdo crudo o poco hecho puede transmitir el parásito Trichinella. Los huesos cocinados se vuelven quebradizos, y los condimentos pueden ser peligrosos. El jamón tiene mucha sal y grasa. Las fuentes difieren: el AKC considera seguro con moderación el cerdo magro natural y cocinado, mientras que la PDSA incluye el cerdo entre los alimentos grasos que pueden provocar pancreatitis y aconseja que los perros que la han tenido eviten premios grasos como el cerdo, así que aplicamos el nivel más estricto.",
+    "it": "La carne di maiale è ricca di un tipo di grasso che i cani digeriscono con difficoltà. Il maiale crudo o poco cotto può trasmettere il parassita Trichinella. Le ossa cotte diventano fragili e i condimenti possono essere pericolosi. Il prosciutto è ricco di sale e di grassi. Le fonti non concordano: l’AKC considera sicura con moderazione la carne di maiale magra, semplice e cotta, mentre il PDSA inserisce il maiale tra i cibi grassi che possono portare alla pancreatite e consiglia ai cani che l’hanno già avuta di evitare premi grassi come il maiale; quindi adottiamo il livello più prudente."
   },
   "signs": {
     "en": [
@@ -67,6 +72,12 @@
       "Diarrea",
       "Dolor de barriga",
       "Poco apetito y poca energía"
+    ],
+    "it": [
+      "Vomito, a volte 1–4 giorni dopo un pasto grasso",
+      "Diarrea",
+      "Mal di pancia",
+      "Poco appetito e poca energia"
     ]
   },
   "what_to_do": {
@@ -74,21 +85,24 @@
     "sl": "Če je pes pojedel mastno ali začinjeno svinjino, v naslednjih dneh opazujte, ali bruha, ima drisko ali ga boli trebuh, in čim prej pokličite veterinarja, če se to pojavi. Če je pojedel surovo svinjino, kuhane kosti ali hrano s čebulo ali česnom, takoj pokličite veterinarja.",
     "de": "Wenn Ihr Hund fettes oder gewürztes Schweinefleisch gefressen hat, achten Sie in den nächsten Tagen auf Erbrechen, Durchfall oder Bauchschmerzen und rufen Sie so bald wie möglich Ihren Tierarzt an, wenn diese auftreten. Hat er rohes Schweinefleisch, gegarte Knochen oder Essen mit Zwiebeln oder Knoblauch gefressen, rufen Sie sofort Ihren Tierarzt an.",
     "fr": "Si votre chien a mangé du porc gras ou assaisonné, surveillez les vomissements, la diarrhée ou les douleurs au ventre pendant les jours qui suivent, et appelez votre vétérinaire dès que possible s’ils apparaissent. S’il a mangé du porc cru, des os cuits ou un plat contenant de l’oignon ou de l’ail, appelez immédiatement votre vétérinaire.",
-    "es": "Si tu perro se ha comido cerdo graso o condimentado, vigila si tiene vómitos, diarrea o dolor de barriga durante los días siguientes y, si aparecen, llama a tu veterinario lo antes posible. Si ha comido cerdo crudo, huesos cocinados o comida con cebolla o ajo, llama a tu veterinario de inmediato."
+    "es": "Si tu perro se ha comido cerdo graso o condimentado, vigila si tiene vómitos, diarrea o dolor de barriga durante los días siguientes y, si aparecen, llama a tu veterinario lo antes posible. Si ha comido cerdo crudo, huesos cocinados o comida con cebolla o ajo, llama a tu veterinario de inmediato.",
+    "it": "Se il tuo cane ha mangiato carne di maiale grassa o condita, nei giorni successivi controlla se compaiono vomito, diarrea o mal di pancia e, se compaiono, chiama il veterinario il prima possibile. Se ha mangiato maiale crudo, ossa cotte o cibo con cipolla o aglio, chiama subito il veterinario."
   },
   "serving": {
     "en": "If you share at all: a small piece of plain, fully cooked lean pork, fat trimmed, boneless, unseasoned.",
     "sl": "Če jo sploh daste: majhen košček navadne, popolnoma kuhane puste svinjine, brez maščobe, kosti in začimb.",
     "de": "Wenn überhaupt: ein kleines Stück pures, mageres, vollständig gegartes Schweinefleisch, Fett abgeschnitten, ohne Knochen, ungewürzt.",
     "fr": "Si vous en partagez : un petit morceau de porc maigre nature, bien cuit, dégraissé, sans os et sans assaisonnement.",
-    "es": "Si le das algo: un trocito de cerdo magro, natural y bien cocinado, sin grasa, sin huesos y sin condimentos."
+    "es": "Si le das algo: un trocito de cerdo magro, natural y bien cocinado, sin grasa, sin huesos y sin condimentos.",
+    "it": "Se proprio vuoi dargliene: un pezzetto di carne di maiale magra, semplice e ben cotta, senza grasso, senza ossa e senza condimenti."
   },
   "child": {
     "en": "Pork is very fatty for a dog's tummy. Only a grown-up should decide if a dog gets a tiny plain piece.",
     "sl": "Svinjina je za pasji trebušček zelo mastna. Samo odrasel naj odloči, ali pes dobi droben navaden košček.",
     "de": "Schweinefleisch ist für den Bauch eines Hundes sehr fett. Nur ein Erwachsener sollte entscheiden, ob ein Hund ein winziges Stück ohne alles bekommt.",
     "fr": "Le porc est très gras pour le ventre d’un chien. Seul un adulte peut décider si un chien a droit à un tout petit morceau nature.",
-    "es": "El cerdo es muy graso para la barriguita de un perro. Solo un adulto puede decidir si el perro come un trocito pequeño sin nada."
+    "es": "El cerdo es muy graso para la barriguita de un perro. Solo un adulto puede decidir si el perro come un trocito pequeño sin nada.",
+    "it": "La carne di maiale è molto grassa per la pancia di un cane. Solo un adulto può decidere se dargliene un pezzettino semplice."
   },
   "faq": [
     {
@@ -97,14 +111,16 @@
         "sl": "Ali lahko psi jedo šunko ali slanino?",
         "de": "Dürfen Hunde Schinken oder Speck fressen?",
         "fr": "Les chiens peuvent-ils manger du jambon ou du bacon ?",
-        "es": "¿Pueden los perros comer jamón o beicon?"
+        "es": "¿Pueden los perros comer jamón o beicon?",
+        "it": "I cani possono mangiare prosciutto o bacon?"
       },
       "a": {
         "en": "They aren't good choices: ham is high in fat and sodium, and eating a lot of bacon can cause pancreatitis.",
         "sl": "Nista dobri izbiri: šunka vsebuje veliko maščobe in natrija, veliko slanine pa lahko povzroči vnetje trebušne slinavke.",
         "de": "Beides ist keine gute Wahl: Schinken ist reich an Fett und Natrium, und viel Speck kann eine Pankreatitis auslösen.",
         "fr": "Ce n’est pas un bon choix : le jambon est riche en graisses et en sodium, et manger beaucoup de bacon peut provoquer une pancréatite.",
-        "es": "No son buenas opciones: el jamón tiene mucha grasa y sodio, y comer mucho beicon puede provocar pancreatitis."
+        "es": "No son buenas opciones: el jamón tiene mucha grasa y sodio, y comer mucho beicon puede provocar pancreatitis.",
+        "it": "Non sono buone scelte: il prosciutto è ricco di grassi e di sodio, e mangiare molto bacon può causare una pancreatite."
       }
     }
   ],
@@ -207,6 +223,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a21cb3570405566e5431dacfd244f4a471d6eebb388275b52084baa164ac43d3"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fde3dcf1a867ffecc4b0af040e9b939b13f523d2e7597eb8a2981e3c95913dbb"
     }
   }
 }
