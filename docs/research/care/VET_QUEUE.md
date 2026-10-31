@@ -1,0 +1,117 @@
+# Vet directory queue (M6-K1)
+
+David 2026-10-31: every country in the world, one line per hourly run (`docs/engineering/VET_DIRECTORY_RUNBOOK.md`).
+Order: home and holiday countries, the 13 language markets, then by pet owners and travel, then the rest.
+Status: `[ ]` todo · `[~]` partial (follow-up line below) · `[x]` done · `[!]` blocked (reason).
+
+## Manual run (31. 10. 2026) — data being checked, do not pick
+- [~] SI Slovenia — all regions (manual run 2026-10-31)
+- [~] HR Croatia (manual run 2026-10-31)
+- [~] IT Italy (manual run 2026-10-31)
+- [~] AT Austria (manual run 2026-10-31)
+- [~] GR Greece (manual run 2026-10-31)
+- [~] ES Spain (manual run 2026-10-31)
+- [~] DE Germany (manual run 2026-10-31)
+- [~] FR France (manual run 2026-10-31)
+
+## Queue
+- [ ] HU Hungary
+- [ ] CZ Czechia
+- [ ] SK Slovakia
+- [ ] PL Poland
+- [ ] NL Netherlands
+- [ ] BE Belgium
+- [ ] PT Portugal
+- [ ] DK Denmark
+- [ ] SE Sweden
+- [ ] NO Norway
+- [ ] FI Finland
+- [ ] GB United Kingdom — England
+- [ ] GB United Kingdom — Scotland
+- [ ] GB United Kingdom — Wales
+- [ ] GB United Kingdom — Northern Ireland
+- [ ] IE Ireland
+- [ ] CH Switzerland
+- [ ] LU Luxembourg
+- [ ] BA Bosnia and Herzegovina
+- [ ] RS Serbia
+- [ ] ME Montenegro
+- [ ] MK North Macedonia
+- [ ] AL Albania
+- [ ] BG Bulgaria
+- [ ] RO Romania
+- [ ] TR Türkiye — Istanbul
+- [ ] TR Türkiye — Antalya
+- [ ] TR Türkiye — other provinces
+- [ ] CY Cyprus
+- [ ] MT Malta
+- [ ] EE Estonia
+- [ ] LV Latvia
+- [ ] LT Lithuania
+- [ ] IS Iceland
+- [ ] US United States — California
+- [ ] US United States — Florida
+- [ ] US United States — New York
+- [ ] US United States — Texas
+- [ ] US United States — other states
+- [ ] CA Canada — Ontario
+- [ ] CA Canada — Quebec
+- [ ] CA Canada — British Columbia
+- [ ] CA Canada — other provinces
+- [ ] AU Australia — New South Wales
+- [ ] AU Australia — Victoria
+- [ ] AU Australia — Queensland
+- [ ] AU Australia — other states
+- [ ] NZ New Zealand
+- [ ] MX Mexico — Mexico City
+- [ ] MX Mexico — Quintana Roo
+- [ ] MX Mexico — other states
+- [ ] BR Brazil — São Paulo
+- [ ] BR Brazil — Rio de Janeiro
+- [ ] BR Brazil — other states
+- [ ] AR Argentina
+- [ ] CL Chile
+- [ ] CO Colombia
+- [ ] JP Japan — Tokyo
+- [ ] JP Japan — Osaka
+- [ ] JP Japan — other prefectures
+- [ ] KR South Korea
+- [ ] SG Singapore
+- [ ] TH Thailand
+- [ ] AE United Arab Emirates
+- [ ] IL Israel
+- [ ] ZA South Africa
+- [ ] EG Egypt
+- [ ] MA Morocco
+- [ ] TN Tunisia
+- [ ] IN India
+- [ ] ID Indonesia
+- [ ] MY Malaysia
+- [ ] PH Philippines
+- [ ] VN Vietnam
+- [ ] CN China
+- [ ] HK Hong Kong
+- [ ] TW Taiwan
+- [ ] PE Peru
+- [ ] UY Uruguay
+- [ ] CR Costa Rica
+- [ ] DO Dominican Republic
+- [ ] CU Cuba
+- [ ] JM Jamaica
+- [ ] UA Ukraine
+- [ ] MD Moldova
+- [ ] GE Georgia
+- [ ] AM Armenia
+- [ ] KZ Kazakhstan
+- [ ] SA Saudi Arabia
+- [ ] QA Qatar
+- [ ] OM Oman
+- [ ] JO Jordan
+- [ ] KE Kenya
+- [ ] TZ Tanzania
+- [ ] MU Mauritius
+- [ ] SC Seychelles
+- [ ] MV Maldives
+- [ ] LK Sri Lanka
+- [ ] NP Nepal
+- [ ] Rest of the world: append the next country by pet-owner population / tourism when the list above is done
