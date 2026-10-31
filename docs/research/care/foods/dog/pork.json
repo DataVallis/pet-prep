@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Pork",
-    "sl": "Svinjina"
+    "sl": "Svinjina",
+    "de": "Schweinefleisch"
   },
   "question": {
     "en": "Can dogs eat pork?",
-    "sl": "Ali lahko psi jedo svinjino?"
+    "sl": "Ali lahko psi jedo svinjino?",
+    "de": "Dürfen Hunde Schweinefleisch fressen?"
   },
   "url_slug": {
     "en": "pork",
-    "sl": "svinjina"
+    "sl": "svinjina",
+    "de": "schweinefleisch"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Not as a regular treat. Some vet sources allow a little plain, fully cooked lean pork, but pork is fatty and hard for dogs to digest, and fatty foods can trigger pancreatitis. Raw pork, cooked bones, ham and bacon are not suitable.",
-    "sl": "Ne kot reden priboljšek. Nekateri veterinarski viri dovolijo malo navadne, popolnoma kuhane puste svinjine, a svinjina je mastna in jo psi težko prebavijo, mastna hrana pa lahko sproži vnetje trebušne slinavke. Surova svinjina, kuhane kosti, šunka in slanina niso primerne."
+    "sl": "Ne kot reden priboljšek. Nekateri veterinarski viri dovolijo malo navadne, popolnoma kuhane puste svinjine, a svinjina je mastna in jo psi težko prebavijo, mastna hrana pa lahko sproži vnetje trebušne slinavke. Surova svinjina, kuhane kosti, šunka in slanina niso primerne.",
+    "de": "Nicht als regelmäßiges Leckerli. Manche tierärztlichen Quellen erlauben ein wenig pures, mageres, vollständig gegartes Schweinefleisch, aber Schweinefleisch ist fettreich und für Hunde schwer verdaulich, und fettreiches Futter kann eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen. Rohes Schweinefleisch, gegarte Knochen, Schinken und Speck sind nicht geeignet."
   },
   "why": {
     "en": "Pork is rich in a type of fat that is difficult for dogs to digest. Raw or undercooked pork can carry the parasite Trichinella. Cooked bones become brittle, and seasonings can be dangerous. Ham is high in salt and fat. Sources differ: the AKC calls plain cooked lean pork safe in moderation, while PDSA lists pork among high-fat foods that can lead to pancreatitis and advises dogs that have had it to avoid high-fat treats like pork, so we use the stricter level.",
-    "sl": "Svinjina vsebuje vrsto maščobe, ki jo psi težko prebavijo. Surova ali premalo kuhana svinjina lahko prenaša zajedavca trihinelo. Kuhane kosti postanejo krhke, začimbe pa so lahko nevarne. Šunka vsebuje veliko soli in maščobe. Viri se razlikujejo: AKC navadno kuhano pusto svinjino v zmernih količinah označuje kot varno, PDSA pa svinjino navaja med mastno hrano, ki lahko sproži vnetje trebušne slinavke, psom, ki so ga že imeli, pa svetuje, naj se izogibajo mastnim priboljškom, kot je svinjina, zato smo izbrali strožjo stopnjo."
+    "sl": "Svinjina vsebuje vrsto maščobe, ki jo psi težko prebavijo. Surova ali premalo kuhana svinjina lahko prenaša zajedavca trihinelo. Kuhane kosti postanejo krhke, začimbe pa so lahko nevarne. Šunka vsebuje veliko soli in maščobe. Viri se razlikujejo: AKC navadno kuhano pusto svinjino v zmernih količinah označuje kot varno, PDSA pa svinjino navaja med mastno hrano, ki lahko sproži vnetje trebušne slinavke, psom, ki so ga že imeli, pa svetuje, naj se izogibajo mastnim priboljškom, kot je svinjina, zato smo izbrali strožjo stopnjo.",
+    "de": "Schweinefleisch enthält viel von einer Fettart, die Hunde schwer verdauen können. Rohes oder nicht durchgegartes Schweinefleisch kann den Parasiten Trichinella übertragen. Gegarte Knochen werden spröde, und Gewürze können gefährlich sein. Schinken ist sehr salz- und fettreich. Die Quellen sind sich nicht einig: Der AKC hält pures, mageres, gegartes Schweinefleisch in Maßen für unbedenklich, während PDSA Schweinefleisch zu den fettreichen Lebensmitteln zählt, die zu einer Pankreatitis führen können, und Hunden, die schon eine hatten, von fettreichen Leckerlis wie Schweinefleisch abrät. Deshalb wählen wir die strengere Einstufung."
   },
   "signs": {
     "en": [
@@ -34,29 +39,40 @@
       "Driska",
       "Boleč trebuh",
       "Slab apetit in utrujenost"
+    ],
+    "de": [
+      "Erbrechen, manchmal erst 1–4 Tage nach einer fetten Mahlzeit",
+      "Durchfall",
+      "Bauchschmerzen",
+      "Wenig Appetit und Mattigkeit"
     ]
   },
   "what_to_do": {
     "en": "If your dog ate fatty or seasoned pork, watch for vomiting, diarrhoea or belly pain over the next few days and call your vet as soon as possible if they appear. If it ate raw pork, cooked bones or food with onion or garlic, call your vet straight away.",
-    "sl": "Če je pes pojedel mastno ali začinjeno svinjino, v naslednjih dneh opazujte, ali bruha, ima drisko ali ga boli trebuh, in čim prej pokličite veterinarja, če se to pojavi. Če je pojedel surovo svinjino, kuhane kosti ali hrano s čebulo ali česnom, takoj pokličite veterinarja."
+    "sl": "Če je pes pojedel mastno ali začinjeno svinjino, v naslednjih dneh opazujte, ali bruha, ima drisko ali ga boli trebuh, in čim prej pokličite veterinarja, če se to pojavi. Če je pojedel surovo svinjino, kuhane kosti ali hrano s čebulo ali česnom, takoj pokličite veterinarja.",
+    "de": "Wenn Ihr Hund fettes oder gewürztes Schweinefleisch gefressen hat, achten Sie in den nächsten Tagen auf Erbrechen, Durchfall oder Bauchschmerzen und rufen Sie so bald wie möglich Ihren Tierarzt an, wenn diese auftreten. Hat er rohes Schweinefleisch, gegarte Knochen oder Essen mit Zwiebeln oder Knoblauch gefressen, rufen Sie sofort Ihren Tierarzt an."
   },
   "serving": {
     "en": "If you share at all: a small piece of plain, fully cooked lean pork, fat trimmed, boneless, unseasoned.",
-    "sl": "Če jo sploh daste: majhen košček navadne, popolnoma kuhane puste svinjine, brez maščobe, kosti in začimb."
+    "sl": "Če jo sploh daste: majhen košček navadne, popolnoma kuhane puste svinjine, brez maščobe, kosti in začimb.",
+    "de": "Wenn überhaupt: ein kleines Stück pures, mageres, vollständig gegartes Schweinefleisch, Fett abgeschnitten, ohne Knochen, ungewürzt."
   },
   "child": {
     "en": "Pork is very fatty for a dog's tummy. Only a grown-up should decide if a dog gets a tiny plain piece.",
-    "sl": "Svinjina je za pasji trebušček zelo mastna. Samo odrasel naj odloči, ali pes dobi droben navaden košček."
+    "sl": "Svinjina je za pasji trebušček zelo mastna. Samo odrasel naj odloči, ali pes dobi droben navaden košček.",
+    "de": "Schweinefleisch ist für den Bauch eines Hundes sehr fett. Nur ein Erwachsener sollte entscheiden, ob ein Hund ein winziges Stück ohne alles bekommt."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat ham or bacon?",
-        "sl": "Ali lahko psi jedo šunko ali slanino?"
+        "sl": "Ali lahko psi jedo šunko ali slanino?",
+        "de": "Dürfen Hunde Schinken oder Speck fressen?"
       },
       "a": {
         "en": "They aren't good choices: ham is high in fat and sodium, and eating a lot of bacon can cause pancreatitis.",
-        "sl": "Nista dobri izbiri: šunka vsebuje veliko maščobe in natrija, veliko slanine pa lahko povzroči vnetje trebušne slinavke."
+        "sl": "Nista dobri izbiri: šunka vsebuje veliko maščobe in natrija, veliko slanine pa lahko povzroči vnetje trebušne slinavke.",
+        "de": "Beides ist keine gute Wahl: Schinken ist reich an Fett und Natrium, und viel Speck kann eine Pankreatitis auslösen."
       }
     }
   ],
@@ -144,6 +160,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "220cb297aece627e41278872fb57fac0bafb9c9059559f84a320baea98a2a886"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4019535cdf8a7cd71d3222ea160d2ca5bc7bb98b23c587dee566cf7e173d23f4"
     }
   }
 }

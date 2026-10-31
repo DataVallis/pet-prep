@@ -3,37 +3,45 @@
   "species": "cat",
   "name": {
     "en": "Pork",
-    "sl": "Svinjina"
+    "sl": "Svinjina",
+    "de": "Schweinefleisch"
   },
   "question": {
     "en": "Can cats eat pork?",
-    "sl": "Ali lahko mačke jedo svinjino?"
+    "sl": "Ali lahko mačke jedo svinjino?",
+    "de": "Dürfen Katzen Schweinefleisch fressen?"
   },
   "url_slug": {
     "en": "pork",
-    "sl": "svinjina"
+    "sl": "svinjina",
+    "de": "schweinefleisch"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a little plain, well-cooked pork is fine as an occasional treat. Cut off the fat, remove all bones and add no seasoning. Raw pork is not recommended.",
-    "sl": "Da, malo navadnega, dobro kuhanega svinjskega mesa je v redu kot občasen priboljšek. Odrežite maščobo, odstranite vse kosti in ga ne začinite. Surova svinjina ni priporočljiva."
+    "sl": "Da, malo navadnega, dobro kuhanega svinjskega mesa je v redu kot občasen priboljšek. Odrežite maščobo, odstranite vse kosti in ga ne začinite. Surova svinjina ni priporočljiva.",
+    "de": "Ja, ein wenig pures, gut durchgegartes Schweinefleisch ist als gelegentliches Leckerli in Ordnung. Schneiden Sie das Fett ab, entfernen Sie alle Knochen und würzen Sie nicht. Rohes Schweinefleisch wird nicht empfohlen."
   },
   "why": {
     "en": "Pork is one of the most common proteins in cat food. As a home treat it must be properly cooked: International Cat Care warns that raw or undercooked meat such as beef, lamb and pork can carry Toxoplasma, and advises feeding only properly cooked food. Fatty trimmings are on RSPCA Australia's do-not-feed list, and cooked bones can splinter. Ham is a different food and is covered separately.",
-    "sl": "Svinjina je ena najpogostejših beljakovin v hrani za mačke. Kot domači priboljšek mora biti dobro kuhana: International Cat Care opozarja, da surovo ali premalo kuhano meso, kot so govedina, jagnjetina in svinjina, lahko prenaša toksoplazmo, in svetuje le dobro kuhano hrano. Mastni ostanki so na seznamu RSPCA Avstralija živil, ki jih ne dajemo, kuhane kosti pa se lahko razcepijo. Šunka je drugo živilo in je opisana posebej."
+    "sl": "Svinjina je ena najpogostejših beljakovin v hrani za mačke. Kot domači priboljšek mora biti dobro kuhana: International Cat Care opozarja, da surovo ali premalo kuhano meso, kot so govedina, jagnjetina in svinjina, lahko prenaša toksoplazmo, in svetuje le dobro kuhano hrano. Mastni ostanki so na seznamu RSPCA Avstralija živil, ki jih ne dajemo, kuhane kosti pa se lahko razcepijo. Šunka je drugo živilo in je opisana posebej.",
+    "de": "Schweinefleisch ist eine der häufigsten Proteinquellen in Katzenfutter. Als Leckerli zu Hause muss es richtig durchgegart sein: International Cat Care warnt, dass rohes oder nicht ausreichend gegartes Fleisch wie Rind, Lamm und Schwein Toxoplasmen übertragen kann, und rät, nur richtig gegartes Futter zu geben. Fette Fleischreste stehen bei der RSPCA Australia auf der Liste der Dinge, die man nicht füttern sollte, und gegarte Knochen können splittern. Schinken ist ein anderes Lebensmittel und wird gesondert behandelt."
   },
   "signs": null,
   "what_to_do": {
     "en": "Offer a small piece first. If your cat gets vomiting or diarrhoea afterwards, stop and ask your vet. If your cat swallowed a cooked bone, call your vet.",
-    "sl": "Najprej ponudite majhen košček. Če ima mačka potem bruhanje ali drisko, prenehajte in se posvetujte z veterinarjem. Če je mačka pogoltnila kuhano kost, pokličite veterinarja."
+    "sl": "Najprej ponudite majhen košček. Če ima mačka potem bruhanje ali drisko, prenehajte in se posvetujte z veterinarjem. Če je mačka pogoltnila kuhano kost, pokličite veterinarja.",
+    "de": "Geben Sie zuerst ein kleines Stück. Bekommt Ihre Katze danach Erbrechen oder Durchfall, hören Sie auf und fragen Sie Ihren Tierarzt. Hat Ihre Katze einen gegarten Knochen verschluckt, rufen Sie Ihren Tierarzt an."
   },
   "serving": {
     "en": "Well cooked, plain, lean, boneless and unseasoned; a few small pieces now and then.",
-    "sl": "Dobro kuhano, brez dodatkov, pusto, brez kosti in začimb; nekaj majhnih koščkov občasno."
+    "sl": "Dobro kuhano, brez dodatkov, pusto, brez kosti in začimb; nekaj majhnih koščkov občasno.",
+    "de": "Gut durchgegart, pur, mager, ohne Knochen und ungewürzt; ab und zu ein paar kleine Stücke."
   },
   "child": {
     "en": "A tiny bit of plain cooked pork can be a treat. A grown-up should cook it and take out the bones.",
-    "sl": "Košček navadne kuhane svinjine je lahko priboljšek. Odrasli naj jo skuha in odstrani kosti."
+    "sl": "Košček navadne kuhane svinjine je lahko priboljšek. Odrasli naj jo skuha in odstrani kosti.",
+    "de": "Ein winziges Stück gekochtes Schweinefleisch ohne alles kann ein Leckerli sein. Ein Erwachsener sollte es kochen und die Knochen herausnehmen."
   },
   "faq": [],
   "sources": [
@@ -99,6 +107,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c3d7f12674f38ccaf6d58c58874e3f4ba8e96b6aca237f10dffeb4ad42e539f5"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "77742af4cd972f37143f075f82ea8503c66d98638fe64b4006c07f7fd79018be"
     }
   }
 }

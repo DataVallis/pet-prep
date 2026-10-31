@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Chocolate",
-    "sl": "Čokolada"
+    "sl": "Čokolada",
+    "de": "Schokolade"
   },
   "question": {
     "en": "Can dogs eat chocolate?",
-    "sl": "Ali lahko psi jedo čokolado?"
+    "sl": "Ali lahko psi jedo čokolado?",
+    "de": "Dürfen Hunde Schokolade fressen?"
   },
   "url_slug": {
     "en": "chocolate",
-    "sl": "cokolada"
+    "sl": "cokolada",
+    "de": "schokolade"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Chocolate is toxic to dogs, even in quite small amounts. It contains theobromine and caffeine, and the darker the chocolate, the greater the risk. Baking chocolate and cocoa powder are the most dangerous; white chocolate has the least of these substances.",
-    "sl": "Ne. Čokolada je za pse strupena, tudi v precej majhnih količinah. Vsebuje teobromin in kofein; temnejša kot je čokolada, večje je tveganje. Najnevarnejša sta čokolada za kuhanje in kakav v prahu, bela čokolada pa vsebuje najmanj teh snovi."
+    "sl": "Ne. Čokolada je za pse strupena, tudi v precej majhnih količinah. Vsebuje teobromin in kofein; temnejša kot je čokolada, večje je tveganje. Najnevarnejša sta čokolada za kuhanje in kakav v prahu, bela čokolada pa vsebuje najmanj teh snovi.",
+    "de": "Nein. Schokolade ist für Hunde giftig, schon in recht kleinen Mengen. Sie enthält Theobromin und Koffein, und je dunkler die Schokolade, desto größer das Risiko. Backschokolade und Kakaopulver sind am gefährlichsten; weiße Schokolade enthält am wenigsten von diesen Stoffen."
   },
   "why": {
     "en": "Chocolate contains methylxanthines, mainly theobromine and caffeine, which are toxic to dogs. Dark chocolate, cooking chocolate and cocoa powder contain more of them than milk chocolate. Dogs are affected most often because they eat whatever they find and can easily reach chocolate. Sweets and baked goods may also contain other harmful ingredients.",
-    "sl": "Čokolada vsebuje metilksantine, predvsem teobromin in kofein, ki so za pse strupeni. Temna čokolada, čokolada za kuhanje in kakav v prahu jih vsebujejo več kot mlečna čokolada. Psi so najpogosteje prizadeti, ker pojedo, kar najdejo, in čokolado zlahka dosežejo. Sladkarije in pecivo lahko vsebujejo še druge škodljive sestavine."
+    "sl": "Čokolada vsebuje metilksantine, predvsem teobromin in kofein, ki so za pse strupeni. Temna čokolada, čokolada za kuhanje in kakav v prahu jih vsebujejo več kot mlečna čokolada. Psi so najpogosteje prizadeti, ker pojedo, kar najdejo, in čokolado zlahka dosežejo. Sladkarije in pecivo lahko vsebujejo še druge škodljive sestavine.",
+    "de": "Schokolade enthält Methylxanthine, vor allem Theobromin und Koffein, die für Hunde giftig sind. Zartbitterschokolade, Kochschokolade und Kakaopulver enthalten mehr davon als Milchschokolade. Hunde sind am häufigsten betroffen, weil sie fressen, was sie finden, und leicht an Schokolade kommen. Süßigkeiten und Gebäck können außerdem weitere schädliche Zutaten enthalten."
   },
   "signs": {
     "en": [
@@ -38,46 +43,62 @@
       "Hiter ali nepravilen srčni utrip",
       "Tresenje ali krči",
       "Znaki se običajno pojavijo v 6–12 urah"
+    ],
+    "de": [
+      "Erbrechen und Durchfall",
+      "Hecheln, starker Durst und vermehrtes Urinieren",
+      "Unruhe und Überaktivität",
+      "Schneller oder unregelmäßiger Herzschlag",
+      "Zittern oder Krampfanfälle",
+      "Anzeichen treten meist innerhalb von 6–12 Stunden auf"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away, even if your dog ate only a little. Note what kind of chocolate it was and how much was eaten. Don't wait for signs, because they can take hours to appear.",
-    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če je pes pojedel le malo. Zapišite si, katero čokolado in koliko je pojedel. Ne čakajte na znake, saj se lahko pokažejo šele po nekaj urah."
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če je pes pojedel le malo. Zapišite si, katero čokolado in koliko je pojedel. Ne čakajte na znake, saj se lahko pokažejo šele po nekaj urah.",
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, auch wenn Ihr Hund nur wenig gefressen hat. Notieren Sie, welche Schokolade es war und wie viel gefressen wurde. Warten Sie nicht auf Anzeichen, denn es kann Stunden dauern, bis sie auftreten."
   },
   "serving": null,
   "child": {
     "en": "Chocolate is for people, not dogs. It can make dogs very ill. Keep it away and tell a grown-up if your dog eats some.",
-    "sl": "Čokolada je za ljudi, ne za pse. Psu lahko zelo škodi. Pospravi jo in povej odraslemu, če jo pes poje."
+    "sl": "Čokolada je za ljudi, ne za pse. Psu lahko zelo škodi. Pospravi jo in povej odraslemu, če jo pes poje.",
+    "de": "Schokolade ist für Menschen, nicht für Hunde. Sie kann Hunde sehr krank machen. Halte sie von deinem Hund fern und sag einem Erwachsenen Bescheid, wenn dein Hund welche frisst."
   },
   "faq": [
     {
       "q": {
         "en": "Is white chocolate safe for dogs?",
-        "sl": "Je bela čokolada za pse varna?"
+        "sl": "Je bela čokolada za pse varna?",
+        "de": "Ist weiße Schokolade für Hunde unbedenklich?"
       },
       "a": {
         "en": "It is not a safe treat. White chocolate has the lowest content of the harmful substances, but the risk still depends on the type and amount eaten, so call your vet if your dog ate some.",
-        "sl": "Ni varen priboljšek. Bela čokolada vsebuje najmanj škodljivih snovi, a tveganje je vseeno odvisno od vrste in količine, zato pokličite veterinarja, če jo je pes pojedel."
+        "sl": "Ni varen priboljšek. Bela čokolada vsebuje najmanj škodljivih snovi, a tveganje je vseeno odvisno od vrste in količine, zato pokličite veterinarja, če jo je pes pojedel.",
+        "de": "Sie ist kein sicheres Leckerli. Weiße Schokolade enthält am wenigsten von den schädlichen Stoffen, aber das Risiko hängt trotzdem von Sorte und Menge ab – rufen Sie Ihren Tierarzt an, wenn Ihr Hund welche gefressen hat."
       }
     },
     {
       "q": {
         "en": "Which chocolate is the most dangerous?",
-        "sl": "Katera čokolada je najnevarnejša?"
+        "sl": "Katera čokolada je najnevarnejša?",
+        "de": "Welche Schokolade ist am gefährlichsten?"
       },
       "a": {
         "en": "Baking chocolate and cocoa powder, followed by dark chocolate. The darker the chocolate, the greater the risk.",
-        "sl": "Čokolada za kuhanje in kakav v prahu, nato temna čokolada. Temnejša kot je čokolada, večje je tveganje."
+        "sl": "Čokolada za kuhanje in kakav v prahu, nato temna čokolada. Temnejša kot je čokolada, večje je tveganje.",
+        "de": "Backschokolade und Kakaopulver, danach Zartbitterschokolade. Je dunkler die Schokolade, desto größer das Risiko."
       }
     },
     {
       "q": {
         "en": "When do signs of chocolate poisoning appear?",
-        "sl": "Kdaj se pokažejo znaki zastrupitve s čokolado?"
+        "sl": "Kdaj se pokažejo znaki zastrupitve s čokolado?",
+        "de": "Wann treten Anzeichen einer Schokoladenvergiftung auf?"
       },
       "a": {
         "en": "Usually within 6–12 hours after eating it, which is why you should call the vet straight away instead of waiting.",
-        "sl": "Običajno v 6–12 urah po zaužitju, zato veterinarja pokličite takoj in ne čakajte."
+        "sl": "Običajno v 6–12 urah po zaužitju, zato veterinarja pokličite takoj in ne čakajte.",
+        "de": "Meist innerhalb von 6–12 Stunden nach dem Fressen. Deshalb sollten Sie sofort den Tierarzt anrufen, statt abzuwarten."
       }
     }
   ],
@@ -161,6 +182,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "aeb6fd9bbcdf80adf624971b91bb0e0b160aefec917b824f94a99f558e69df17"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "865390631a06642bc678f13fd81a31ae58bfb403a60d8c5147a09ae44afe15c7"
     }
   }
 }

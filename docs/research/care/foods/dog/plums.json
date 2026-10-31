@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Plums",
-    "sl": "Slive"
+    "sl": "Slive",
+    "de": "Pflaumen"
   },
   "question": {
     "en": "Can dogs eat plums?",
-    "sl": "Ali lahko psi jedo slive?"
+    "sl": "Ali lahko psi jedo slive?",
+    "de": "Dürfen Hunde Pflaumen fressen?"
   },
   "url_slug": {
     "en": "plums",
-    "sl": "slive"
+    "sl": "slive",
+    "de": "pflaumen"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Not recommended. A little plum flesh with the pit removed is not the main worry, but plum pits are toxic to dogs and can cause choking or an intestinal blockage. The stems, leaves and seeds of the plum plant contain cyanide.",
-    "sl": "Ni priporočljivo. Malo mesa slive brez koščice ni glavna skrb, koščice sliv pa so za pse strupene in lahko povzročijo zadušitev ali zaporo črevesja. Peclji, listi in semena slive vsebujejo cianid."
+    "sl": "Ni priporočljivo. Malo mesa slive brez koščice ni glavna skrb, koščice sliv pa so za pse strupene in lahko povzročijo zadušitev ali zaporo črevesja. Peclji, listi in semena slive vsebujejo cianid.",
+    "de": "Nicht empfohlen. Ein wenig Pflaumenfruchtfleisch ohne Kern ist nicht die Hauptsorge, aber Pflaumenkerne sind für Hunde giftig und können zum Ersticken oder zu einem Darmverschluss führen. Stiele, Blätter und Samen der Pflaumenpflanze enthalten Cyanid."
   },
   "why": {
     "en": "The plum plant is listed as toxic to dogs because its stems, leaves and seeds contain cyanogenic glycosides. A pit can also be swallowed and get stuck. Some vets allow plum flesh as an occasional treat with the pit removed; because the plant itself is listed as toxic, we use the stricter rating. Prunes are even higher in sugar.",
-    "sl": "Sliva je navedena kot strupena za pse, ker njeni peclji, listi in semena vsebujejo cianogene glikozide. Pes lahko koščico tudi pogoltne in ta se zatakne. Nekateri veterinarji dovolijo meso slive kot občasen priboljšek brez koščice; ker je rastlina navedena kot strupena, uporabljamo strožjo oceno. Suhe slive imajo še več sladkorja."
+    "sl": "Sliva je navedena kot strupena za pse, ker njeni peclji, listi in semena vsebujejo cianogene glikozide. Pes lahko koščico tudi pogoltne in ta se zatakne. Nekateri veterinarji dovolijo meso slive kot občasen priboljšek brez koščice; ker je rastlina navedena kot strupena, uporabljamo strožjo oceno. Suhe slive imajo še več sladkorja.",
+    "de": "Die Pflaume ist als für Hunde giftige Pflanze gelistet, weil ihre Stiele, Blätter und Samen cyanogene Glykoside enthalten. Ein Kern kann außerdem verschluckt werden und stecken bleiben. Manche Tierärzte erlauben Pflaumenfruchtfleisch ohne Kern als gelegentliches Leckerli; da die Pflanze selbst als giftig gelistet ist, wählen wir die strengere Einstufung. Trockenpflaumen enthalten noch mehr Zucker."
   },
   "signs": {
     "en": [
@@ -32,29 +37,39 @@
       "Dušenje ali siljenje na bruhanje",
       "Znaki zapore: ponavljajoče se bruhanje, pes noče jesti, utrujenost",
       "Razširjene zenice, opečnato rdeče dlesni, težko dihanje (cianid)"
+    ],
+    "de": [
+      "Erstickungsanzeichen oder Würgen",
+      "Anzeichen eines Darmverschlusses: wiederholtes Erbrechen, Appetitlosigkeit, Mattigkeit",
+      "Erweiterte Pupillen, ziegelrotes Zahnfleisch, Atembeschwerden (Cyanid)"
     ]
   },
   "what_to_do": {
     "en": "If your dog ate a plum pit, contact your vet right away. Note when it happened and how many pits were eaten.",
-    "sl": "Če je pes pojedel koščico slive, takoj pokličite veterinarja. Zapišite si, kdaj se je to zgodilo in koliko koščic je pojedel."
+    "sl": "Če je pes pojedel koščico slive, takoj pokličite veterinarja. Zapišite si, kdaj se je to zgodilo in koliko koščic je pojedel.",
+    "de": "Hat Ihr Hund einen Pflaumenkern gefressen, wenden Sie sich sofort an Ihren Tierarzt. Notieren Sie, wann es passiert ist und wie viele Kerne gefressen wurden."
   },
   "serving": {
     "en": "If you share any, give only a little fresh flesh with the pit and stem removed. Skip prunes. Check with your vet first.",
-    "sl": "Če jo delite, dajte le malo svežega mesa brez koščice in peclja. Suhih sliv ne dajajte. Najprej se posvetujte z veterinarjem."
+    "sl": "Če jo delite, dajte le malo svežega mesa brez koščice in peclja. Suhih sliv ne dajajte. Najprej se posvetujte z veterinarjem.",
+    "de": "Wenn überhaupt, geben Sie nur ein wenig frisches Fruchtfleisch ohne Kern und Stiel. Verzichten Sie auf Trockenpflaumen. Fragen Sie vorher Ihren Tierarzt."
   },
   "child": {
     "en": "Plum stones are bad for dogs. Never give your dog a plum stone, and ask a grown-up before sharing any plum.",
-    "sl": "Koščice sliv so za pse slabe. Psu nikoli ne daj koščice in vprašaj odraslega, preden deliš slivo."
+    "sl": "Koščice sliv so za pse slabe. Psu nikoli ne daj koščice in vprašaj odraslega, preden deliš slivo.",
+    "de": "Pflaumenkerne sind schlecht für Hunde. Gib deinem Hund nie einen Pflaumenkern und frag einen Erwachsenen, bevor du eine Pflaume mit ihm teilst."
   },
   "faq": [
     {
       "q": {
         "en": "Are prunes okay for dogs?",
-        "sl": "So suhe slive za pse v redu?"
+        "sl": "So suhe slive za pse v redu?",
+        "de": "Sind Trockenpflaumen für Hunde in Ordnung?"
       },
       "a": {
         "en": "Prunes are even higher in sugar than fresh plums, so they are not a great option for dogs.",
-        "sl": "Suhe slive imajo še več sladkorja kot sveže, zato za pse niso dobra izbira."
+        "sl": "Suhe slive imajo še več sladkorja kot sveže, zato za pse niso dobra izbira.",
+        "de": "Trockenpflaumen enthalten noch mehr Zucker als frische Pflaumen und sind deshalb keine gute Wahl für Hunde."
       }
     }
   ],
@@ -129,6 +144,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e9c8bb3910f38fe619c3c37c483aa0dc75371479fd7c80464a763f2f7d13e6a0"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2fd11de7d3aaffbd9d2d6237e04b9cfe06f61a6a9136e6831aa45911aa6e4d65"
     }
   }
 }

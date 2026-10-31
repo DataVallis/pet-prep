@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Grapes",
-    "sl": "Grozdje"
+    "sl": "Grozdje",
+    "de": "Weintrauben"
   },
   "question": {
     "en": "Can dogs eat grapes?",
-    "sl": "Ali lahko psi jedo grozdje?"
+    "sl": "Ali lahko psi jedo grozdje?",
+    "de": "Dürfen Hunde Weintrauben fressen?"
   },
   "url_slug": {
     "en": "grapes",
-    "sl": "grozdje"
+    "sl": "grozdje",
+    "de": "weintrauben"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Dogs should never eat grapes. Grapes can cause kidney failure in dogs, and even a small amount can make a dog seriously ill. There is no way to predict which dogs will be affected, so any grape is a reason to call the vet.",
-    "sl": "Ne. Psi ne smejo nikoli jesti grozdja. Grozdje lahko pri psih povzroči odpoved ledvic, že majhna količina pa lahko psu resno škodi. Ni mogoče napovedati, kateri psi bodo prizadeti, zato je vsaka pojedena jagoda razlog za klic veterinarju."
+    "sl": "Ne. Psi ne smejo nikoli jesti grozdja. Grozdje lahko pri psih povzroči odpoved ledvic, že majhna količina pa lahko psu resno škodi. Ni mogoče napovedati, kateri psi bodo prizadeti, zato je vsaka pojedena jagoda razlog za klic veterinarju.",
+    "de": "Nein. Hunde dürfen niemals Weintrauben fressen. Trauben können bei Hunden Nierenversagen verursachen, und schon eine kleine Menge kann einen Hund schwer krank machen. Es lässt sich nicht vorhersagen, welche Hunde betroffen sind – jede Traube ist daher ein Grund, den Tierarzt anzurufen."
   },
   "why": {
     "en": "Grapes, raisins and currants can damage a dog's kidneys. Tartaric acid is suspected to be the toxic part, and its amount varies between grapes, so the effect is unpredictable. Because the cause is still uncertain, vets treat any amount as a concern. Dogs that survive kidney injury may be left with long-term kidney disease.",
-    "sl": "Grozdje, rozine in korinte lahko poškodujejo pasje ledvice. Za strupeno sestavino velja vinska kislina, katere količina se med grozdji razlikuje, zato je učinek nepredvidljiv. Ker vzrok še ni povsem pojasnjen, veterinarji vsako količino jemljejo resno. Psi, ki preživijo poškodbo ledvic, imajo lahko trajno bolezen ledvic."
+    "sl": "Grozdje, rozine in korinte lahko poškodujejo pasje ledvice. Za strupeno sestavino velja vinska kislina, katere količina se med grozdji razlikuje, zato je učinek nepredvidljiv. Ker vzrok še ni povsem pojasnjen, veterinarji vsako količino jemljejo resno. Psi, ki preživijo poškodbo ledvic, imajo lahko trajno bolezen ledvic.",
+    "de": "Weintrauben, Rosinen und Korinthen können die Nieren eines Hundes schädigen. Als giftiger Bestandteil wird Weinsäure vermutet, deren Menge von Traube zu Traube schwankt – die Wirkung ist daher unberechenbar. Weil die Ursache noch nicht sicher geklärt ist, betrachten Tierärzte jede Menge als bedenklich. Hunde, die eine Nierenschädigung überleben, können eine dauerhafte Nierenerkrankung zurückbehalten."
   },
   "signs": {
     "en": [
@@ -38,36 +43,50 @@
       "Bolečine v trebuhu",
       "Izsušenost in veliko pitja",
       "Tresenje"
+    ],
+    "de": [
+      "Erbrechen oder Durchfall, oft innerhalb von 6–24 Stunden",
+      "Müdigkeit und Schwäche",
+      "Appetitlosigkeit",
+      "Bauchschmerzen",
+      "Austrocknung und viel Trinken",
+      "Zittern"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away, even if your dog ate only one or two grapes. Note how many were eaten and when. Don't wait for signs: the sooner a dog is treated, the better the outlook.",
-    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če je pes pojedel le eno ali dve jagodi. Zapišite si, koliko jih je pojedel in kdaj. Ne čakajte na znake: prej ko je pes zdravljen, boljši so obeti."
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če je pes pojedel le eno ali dve jagodi. Zapišite si, koliko jih je pojedel in kdaj. Ne čakajte na znake: prej ko je pes zdravljen, boljši so obeti.",
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, auch wenn Ihr Hund nur ein oder zwei Trauben gefressen hat. Notieren Sie, wie viele es waren und wann. Warten Sie nicht auf Anzeichen: Je früher ein Hund behandelt wird, desto besser sind die Aussichten."
   },
   "serving": null,
   "child": {
     "en": "Grapes are not for dogs, not even one. They can hurt a dog's kidneys. If your dog eats one, tell a grown-up right away.",
-    "sl": "Grozdje ni za pse, niti ena jagoda. Psu lahko škodi ledvicam. Če ga pes poje, takoj povej odraslemu."
+    "sl": "Grozdje ni za pse, niti ena jagoda. Psu lahko škodi ledvicam. Če ga pes poje, takoj povej odraslemu.",
+    "de": "Weintrauben sind nichts für Hunde, nicht mal eine einzige. Sie können den Nieren schaden. Wenn dein Hund eine frisst, sag sofort einem Erwachsenen Bescheid."
   },
   "faq": [
     {
       "q": {
         "en": "Is one grape dangerous for a dog?",
-        "sl": "Je ena jagoda grozdja za psa nevarna?"
+        "sl": "Je ena jagoda grozdja za psa nevarna?",
+        "de": "Ist eine einzige Traube für einen Hund gefährlich?"
       },
       "a": {
         "en": "It can be. Nobody can predict which dogs will react, so any grape eaten is a reason to contact your vet.",
-        "sl": "Lahko je. Nihče ne more napovedati, kateri psi se bodo odzvali, zato je vsaka pojedena jagoda razlog za klic veterinarju."
+        "sl": "Lahko je. Nihče ne more napovedati, kateri psi se bodo odzvali, zato je vsaka pojedena jagoda razlog za klic veterinarju.",
+        "de": "Ja, das kann sie. Niemand kann vorhersagen, welche Hunde reagieren – jede gefressene Traube ist daher ein Grund, sich an Ihren Tierarzt zu wenden."
       }
     },
     {
       "q": {
         "en": "Are green and red grapes equally risky?",
-        "sl": "Sta zeleno in rdeče grozdje enako tvegana?"
+        "sl": "Sta zeleno in rdeče grozdje enako tvegana?",
+        "de": "Sind grüne und rote Trauben gleich riskant?"
       },
       "a": {
         "en": "Sources warn against all grapes, raisins and currants. The amount of the suspected toxin varies between grapes, so no kind is considered safe.",
-        "sl": "Viri svarijo pred vsem grozdjem, rozinami in korintami. Količina domnevnega strupa se med grozdji razlikuje, zato nobena vrsta ne velja za varno."
+        "sl": "Viri svarijo pred vsem grozdjem, rozinami in korintami. Količina domnevnega strupa se med grozdji razlikuje, zato nobena vrsta ne velja za varno.",
+        "de": "Die Quellen warnen vor allen Weintrauben, Rosinen und Korinthen. Die Menge des vermuteten Giftstoffs schwankt von Traube zu Traube, deshalb gilt keine Sorte als sicher."
       }
     }
   ],
@@ -142,6 +161,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4d1b9fcfb6ac3dbe85ff085c76ff8a4996b6e6c36c211e0694f9c33e5935d152"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "47600d5de54c8f0bc82d205e6d16e27a67198ac3fee6f9733ed06a8f9e61932b"
     }
   }
 }

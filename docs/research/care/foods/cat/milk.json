@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Milk",
-    "sl": "Mleko"
+    "sl": "Mleko",
+    "de": "Milch"
   },
   "question": {
     "en": "Can cats drink milk?",
-    "sl": "Ali lahko mačke pijejo mleko?"
+    "sl": "Ali lahko mačke pijejo mleko?",
+    "de": "Dürfen Katzen Milch trinken?"
   },
   "url_slug": {
     "en": "milk",
-    "sl": "mleko"
+    "sl": "mleko",
+    "de": "milch"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to. Most adult cats are lactose intolerant, so cow's milk can cause vomiting, diarrhoea and stomach pain. Cats get no benefit from milk; fresh water is all they need to drink.",
-    "sl": "Raje ne. Večina odraslih mačk ne prenaša laktoze, zato jim kravje mleko lahko povzroči bruhanje, drisko in bolečine v trebuhu. Mleko mačkam ne koristi; piti potrebujejo le svežo vodo."
+    "sl": "Raje ne. Večina odraslih mačk ne prenaša laktoze, zato jim kravje mleko lahko povzroči bruhanje, drisko in bolečine v trebuhu. Mleko mačkam ne koristi; piti potrebujejo le svežo vodo.",
+    "de": "Besser nicht. Die meisten erwachsenen Katzen vertragen keine Laktose, daher kann Kuhmilch Erbrechen, Durchfall und Bauchschmerzen verursachen. Milch bringt Katzen keinen Nutzen; zum Trinken brauchen sie nur frisches Wasser."
   },
   "why": {
     "en": "Milk contains lactose, a sugar that needs the enzyme lactase to be digested. Cats have very little lactase, so most are lactose intolerant and dairy often upsets their stomach. Kittens drink their mother's milk, but orphaned kittens need special kitten milk, not cow's milk.",
-    "sl": "Mleko vsebuje laktozo, sladkor, za katerega prebavo je potreben encim laktaza. Mačke imajo laktaze zelo malo, zato večina ne prenaša laktoze in mlečni izdelki jim pogosto povzročijo prebavne težave. Mladički pijejo mleko svoje mame, osirotelim mladičkom pa je treba dajati posebno mleko za mladiče, ne kravjega."
+    "sl": "Mleko vsebuje laktozo, sladkor, za katerega prebavo je potreben encim laktaza. Mačke imajo laktaze zelo malo, zato večina ne prenaša laktoze in mlečni izdelki jim pogosto povzročijo prebavne težave. Mladički pijejo mleko svoje mame, osirotelim mladičkom pa je treba dajati posebno mleko za mladiče, ne kravjega.",
+    "de": "Milch enthält Laktose, einen Zucker, für dessen Verdauung das Enzym Laktase nötig ist. Katzen haben nur sehr wenig Laktase, daher sind die meisten laktoseintolerant, und Milchprodukte schlagen ihnen oft auf den Magen. Kätzchen trinken die Milch ihrer Mutter, verwaiste Kätzchen brauchen aber spezielle Kätzchenmilch, keine Kuhmilch."
   },
   "signs": {
     "en": [
@@ -32,49 +37,63 @@
       "Bruhanje",
       "Driska",
       "Bolečine v trebuhu"
+    ],
+    "de": [
+      "Erbrechen",
+      "Durchfall",
+      "Bauchschmerzen"
     ]
   },
   "what_to_do": {
     "en": "If your cat drank milk and has vomiting or diarrhoea that doesn't settle, or seems unwell, contact your vet for advice.",
-    "sl": "Če je muca popila mleko in ima bruhanje ali drisko, ki ne mineta, ali se ne počuti dobro, se za nasvet obrnite na veterinarja."
+    "sl": "Če je muca popila mleko in ima bruhanje ali drisko, ki ne mineta, ali se ne počuti dobro, se za nasvet obrnite na veterinarja.",
+    "de": "Hat Ihre Katze Milch getrunken und klingen Erbrechen oder Durchfall nicht ab oder wirkt sie krank, fragen Sie Ihren Tierarzt um Rat."
   },
   "serving": {
     "en": "If you want to offer milk, choose a milk made for cats (usually low-lactose or lactose-free) and count its calories in your cat's daily food.",
-    "sl": "Če želite muci ponuditi mleko, izberite mleko za mačke (običajno z malo laktoze ali brez nje) in njegove kalorije upoštevajte pri dnevnem obroku."
+    "sl": "Če želite muci ponuditi mleko, izberite mleko za mačke (običajno z malo laktoze ali brez nje) in njegove kalorije upoštevajte pri dnevnem obroku.",
+    "de": "Wenn Sie Milch anbieten möchten, wählen Sie eine Milch für Katzen (meist laktosearm oder laktosefrei) und rechnen Sie ihre Kalorien in die tägliche Futtermenge Ihrer Katze ein."
   },
   "child": {
     "en": "Cartoon cats love milk, but real cats get a sore tummy from it. Fresh water is kitty's best drink!",
-    "sl": "Risane muce obožujejo mleko, prave pa jih od njega boli trebušček. Sveža voda je za muco najboljša pijača!"
+    "sl": "Risane muce obožujejo mleko, prave pa jih od njega boli trebušček. Sveža voda je za muco najboljša pijača!",
+    "de": "Katzen im Zeichentrickfilm lieben Milch, aber echte Katzen bekommen davon Bauchweh. Frisches Wasser ist das beste Getränk für deine Katze!"
   },
   "faq": [
     {
       "q": {
         "en": "Are adult cats lactose intolerant?",
-        "sl": "Ali odrasle mačke ne prenašajo laktoze?"
+        "sl": "Ali odrasle mačke ne prenašajo laktoze?",
+        "de": "Sind erwachsene Katzen laktoseintolerant?"
       },
       "a": {
         "en": "Yes, most are. Cats lack significant amounts of lactase, the enzyme that breaks down lactose in milk, so milk can cause vomiting, diarrhoea and stomach pain.",
-        "sl": "Da, večina ne. Mačke nimajo dovolj laktaze, encima, ki razgradi laktozo v mleku, zato jim mleko lahko povzroči bruhanje, drisko in bolečine v trebuhu."
+        "sl": "Da, večina ne. Mačke nimajo dovolj laktaze, encima, ki razgradi laktozo v mleku, zato jim mleko lahko povzroči bruhanje, drisko in bolečine v trebuhu.",
+        "de": "Ja, die meisten. Katzen haben kaum Laktase, das Enzym, das die Laktose in der Milch spaltet. Deshalb kann Milch Erbrechen, Durchfall und Bauchschmerzen verursachen."
       }
     },
     {
       "q": {
         "en": "What should kittens drink?",
-        "sl": "Kaj naj pijejo mladički?"
+        "sl": "Kaj naj pijejo mladički?",
+        "de": "Was sollen Kätzchen trinken?"
       },
       "a": {
         "en": "Kittens need their mother's milk. If a kitten has to be bottle-fed, give only special kitten milk, because other milks don't have the right balance of nutrients.",
-        "sl": "Mladički potrebujejo materino mleko. Če mladička hranite po steklenički, mu dajte le posebno mleko za mladiče, ker druga mleka nimajo pravega razmerja hranil."
+        "sl": "Mladički potrebujejo materino mleko. Če mladička hranite po steklenički, mu dajte le posebno mleko za mladiče, ker druga mleka nimajo pravega razmerja hranil.",
+        "de": "Kätzchen brauchen die Milch ihrer Mutter. Muss ein Kätzchen mit der Flasche aufgezogen werden, geben Sie nur spezielle Kätzchenmilch, denn andere Milchsorten haben nicht die richtige Nährstoffzusammensetzung."
       }
     },
     {
       "q": {
         "en": "Is cat milk from the shop OK?",
-        "sl": "Je mleko za mačke iz trgovine v redu?"
+        "sl": "Je mleko za mačke iz trgovine v redu?",
+        "de": "Ist Katzenmilch aus dem Handel in Ordnung?"
       },
       "a": {
         "en": "Milk made for cats usually has much less lactose or none. It still has calories, so count it in your cat's daily food. Your cat only needs water to drink.",
-        "sl": "Mleko za mačke ima običajno veliko manj laktoze ali je sploh nima. Še vedno ima kalorije, zato ga upoštevajte pri dnevnem obroku. Muca za pitje potrebuje le vodo."
+        "sl": "Mleko za mačke ima običajno veliko manj laktoze ali je sploh nima. Še vedno ima kalorije, zato ga upoštevajte pri dnevnem obroku. Muca za pitje potrebuje le vodo.",
+        "de": "Milch für Katzen enthält meist deutlich weniger Laktose oder gar keine. Sie hat trotzdem Kalorien, also rechnen Sie sie in die tägliche Futtermenge Ihrer Katze ein. Zum Trinken braucht Ihre Katze nur Wasser."
       }
     }
   ],
@@ -146,6 +165,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7263462bc054bf9695e7d63d5506aeb0521a667eca583e98da0e8892cdffcd9f"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5a94b163b25341a89c6807da605deb5afdd6fc3a8473a0019a792456ef80665c"
     }
   }
 }

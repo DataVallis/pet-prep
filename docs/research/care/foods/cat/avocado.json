@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Avocado",
-    "sl": "Avokado"
+    "sl": "Avokado",
+    "de": "Avocado"
   },
   "question": {
     "en": "Can cats eat avocado?",
-    "sl": "Ali lahko mačke jedo avokado?"
+    "sl": "Ali lahko mačke jedo avokado?",
+    "de": "Dürfen Katzen Avocado fressen?"
   },
   "url_slug": {
     "en": "avocado",
-    "sl": "avokado"
+    "sl": "avokado",
+    "de": "avocado"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to. Avocado is high in fat and contains a toxin called persin, and Cats Protection says eating a lot of it can cause health problems in cats. Avocado is mainly dangerous to birds, horses and some other animals, but it's still not a good food for cats.",
-    "sl": "Raje ne. Avokado je zelo masten in vsebuje toksin persin, Cats Protection pa navaja, da lahko večja količina mačkam povzroči zdravstvene težave. Avokado je najbolj nevaren za ptice, konje in nekatere druge živali, za mačke pa vseeno ni primerna hrana."
+    "sl": "Raje ne. Avokado je zelo masten in vsebuje toksin persin, Cats Protection pa navaja, da lahko večja količina mačkam povzroči zdravstvene težave. Avokado je najbolj nevaren za ptice, konje in nekatere druge živali, za mačke pa vseeno ni primerna hrana.",
+    "de": "Besser nicht. Avocado ist fettreich und enthält einen Giftstoff namens Persin; laut Cats Protection kann eine größere Menge bei Katzen gesundheitliche Probleme verursachen. Gefährlich ist Avocado vor allem für Vögel, Pferde und einige andere Tiere, ein gutes Futter für Katzen ist sie aber trotzdem nicht."
   },
   "why": {
     "en": "Sources disagree. Cats Protection lists avocado among foods toxic to cats because of its high fat content and persin, with problems when large amounts are eaten. The ASPCA plant database lists avocado as toxic to horses only and says it is mainly a problem for birds, rabbits, horses and ruminants. We use the stricter view and do not recommend it.",
-    "sl": "Viri se razlikujejo. Cats Protection uvršča avokado med živila, strupena za mačke, zaradi visoke vsebnosti maščob in persina, težave pa omenja pri večjih količinah. ASPCA ga v bazi rastlin navaja kot strupenega le za konje in pravi, da je predvsem težava za ptice, kunce, konje in prežvekovalce. Izberemo strožje stališče in ga ne priporočamo."
+    "sl": "Viri se razlikujejo. Cats Protection uvršča avokado med živila, strupena za mačke, zaradi visoke vsebnosti maščob in persina, težave pa omenja pri večjih količinah. ASPCA ga v bazi rastlin navaja kot strupenega le za konje in pravi, da je predvsem težava za ptice, kunce, konje in prežvekovalce. Izberemo strožje stališče in ga ne priporočamo.",
+    "de": "Die Quellen sind sich nicht einig. Cats Protection zählt Avocado wegen des hohen Fettgehalts und des Persins zu den für Katzen giftigen Lebensmitteln, mit Problemen bei größeren Mengen. Die Pflanzendatenbank der ASPCA stuft Avocado nur für Pferde als giftig ein und bezeichnet sie vor allem als Problem für Vögel, Kaninchen, Pferde und Wiederkäuer. Wir folgen der strengeren Einschätzung und raten davon ab."
   },
   "signs": {
     "en": [
@@ -28,26 +33,33 @@
     ],
     "sl": [
       "Kakršen koli znak slabega počutja po večji količini (naši viri ne navajajo posebnih znakov pri mačkah)"
+    ],
+    "de": [
+      "Jedes Anzeichen von Unwohlsein, nachdem sie viel davon gefressen hat (unsere Quellen nennen keine bestimmten Anzeichen bei Katzen)"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate avocado, contact your vet for advice, especially if a lot was eaten or your cat seems unwell. Note how much your cat ate and when.",
-    "sl": "Če je muca pojedla avokado, se za nasvet obrnite na veterinarja, zlasti če ga je pojedla veliko ali se ne počuti dobro. Zapišite, koliko ga je pojedla in kdaj."
+    "sl": "Če je muca pojedla avokado, se za nasvet obrnite na veterinarja, zlasti če ga je pojedla veliko ali se ne počuti dobro. Zapišite, koliko ga je pojedla in kdaj.",
+    "de": "Wenn Ihre Katze Avocado gefressen hat, fragen Sie Ihren Tierarzt um Rat, besonders wenn sie viel davon gefressen hat oder unwohl wirkt. Notieren Sie, wie viel Ihre Katze gefressen hat und wann."
   },
   "serving": null,
   "child": {
     "en": "Avocado is a people food. It's too fatty for cats, so give kitty her own cat treats instead.",
-    "sl": "Avokado je hrana za ljudi. Za muco je premasten, zato ji raje daj njene mačje priboljške."
+    "sl": "Avokado je hrana za ljudi. Za muco je premasten, zato ji raje daj njene mačje priboljške.",
+    "de": "Avocado ist Essen für Menschen. Für Katzen ist sie zu fettig, also gib deiner Katze lieber ihre eigenen Katzenleckerlis."
   },
   "faq": [
     {
       "q": {
         "en": "Is avocado poisonous for cats like it is for birds?",
-        "sl": "Je avokado za mačke strupen kot za ptice?"
+        "sl": "Je avokado za mačke strupen kot za ptice?",
+        "de": "Ist Avocado für Katzen so giftig wie für Vögel?"
       },
       "a": {
         "en": "The ASPCA says avocado is primarily a problem for birds, rabbits, donkeys, horses and ruminants. Cats Protection still advises against it for cats because of its fat and persin.",
-        "sl": "ASPCA pravi, da je avokado predvsem težava za ptice, kunce, osle, konje in prežvekovalce. Cats Protection ga mačkam vseeno odsvetuje zaradi maščob in persina."
+        "sl": "ASPCA pravi, da je avokado predvsem težava za ptice, kunce, osle, konje in prežvekovalce. Cats Protection ga mačkam vseeno odsvetuje zaradi maščob in persina.",
+        "de": "Laut ASPCA ist Avocado vor allem ein Problem für Vögel, Kaninchen, Esel, Pferde und Wiederkäuer. Cats Protection rät bei Katzen wegen des Fetts und des Persins trotzdem davon ab."
       }
     }
   ],
@@ -93,6 +105,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "33fb500e1916e5b8812d67790bc0b5689fd1c008734022abc05be4dce6b447ab"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "efa0d032d09b3317d77415b0a7effdb29b06a26d9ea60d0d475e9699eb697b78"
     }
   }
 }

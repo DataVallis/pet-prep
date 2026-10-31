@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Raw fish",
-    "sl": "Surova riba"
+    "sl": "Surova riba",
+    "de": "Roher Fisch"
   },
   "question": {
     "en": "Can cats eat raw fish?",
-    "sl": "Ali lahko mačke jedo surovo ribo?"
+    "sl": "Ali lahko mačke jedo surovo ribo?",
+    "de": "Dürfen Katzen rohen Fisch fressen?"
   },
   "url_slug": {
     "en": "raw-fish",
-    "sl": "surova-riba"
+    "sl": "surova-riba",
+    "de": "roher-fisch"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, raw fish is not a good idea for cats. It may carry harmful bacteria and parasites, and some raw fish contains thiaminase, an enzyme that destroys vitamin B1. Fish for cats should be properly cooked, with bones removed.",
-    "sl": "Ne, surova riba za mačke ni dobra izbira. Lahko vsebuje škodljive bakterije in zajedavce, nekatere surove ribe pa vsebujejo tiaminazo, encim, ki uničuje vitamin B1. Ribo za mačke je treba dobro skuhati in odstraniti kosti."
+    "sl": "Ne, surova riba za mačke ni dobra izbira. Lahko vsebuje škodljive bakterije in zajedavce, nekatere surove ribe pa vsebujejo tiaminazo, encim, ki uničuje vitamin B1. Ribo za mačke je treba dobro skuhati in odstraniti kosti.",
+    "de": "Nein, roher Fisch ist für Katzen keine gute Idee. Er kann schädliche Bakterien und Parasiten enthalten, und manche rohen Fische enthalten Thiaminase, ein Enzym, das Vitamin B1 zerstört. Fisch für Katzen sollte richtig gegart und entgrätet sein."
   },
   "why": {
     "en": "Cats Protection says uncooked fish may contain harmful bacteria and parasites. The Merck Veterinary Manual notes that thiaminases are found in raw freshwater fish and are destroyed by cooking. Thiamine (vitamin B1) is an essential nutrient, so cooking fish removes this risk.",
-    "sl": "Cats Protection navaja, da surova riba lahko vsebuje škodljive bakterije in zajedavce. Merckov veterinarski priročnik navaja, da so tiaminaze prisotne v surovih sladkovodnih ribah in da jih kuhanje uniči. Tiamin (vitamin B1) je nujno hranilo, zato kuhanje ribe to tveganje odpravi."
+    "sl": "Cats Protection navaja, da surova riba lahko vsebuje škodljive bakterije in zajedavce. Merckov veterinarski priročnik navaja, da so tiaminaze prisotne v surovih sladkovodnih ribah in da jih kuhanje uniči. Tiamin (vitamin B1) je nujno hranilo, zato kuhanje ribe to tveganje odpravi.",
+    "de": "Laut Cats Protection kann ungegarter Fisch schädliche Bakterien und Parasiten enthalten. Das Merck Veterinary Manual weist darauf hin, dass Thiaminasen in rohem Süßwasserfisch vorkommen und durch Garen zerstört werden. Thiamin (Vitamin B1) ist ein lebenswichtiger Nährstoff – das Garen von Fisch beseitigt also dieses Risiko."
   },
   "signs": {
     "en": [
@@ -36,29 +41,41 @@
       "Vročina",
       "Mačka noče jesti",
       "Utrujenost"
+    ],
+    "de": [
+      "Erbrechen",
+      "Durchfall, manchmal blutig",
+      "Fieber",
+      "Appetitlosigkeit",
+      "Teilnahmslosigkeit"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate a little raw fish, watch for vomiting, diarrhoea, fever or not eating, and call your vet if any appear. Raw fish should not become a regular food.",
-    "sl": "Če je mačka pojedla malo surove ribe, bodite pozorni na bruhanje, drisko, vročino ali odklanjanje hrane in pokličite veterinarja, če se kaj od tega pojavi. Surova riba naj ne postane redna hrana."
+    "sl": "Če je mačka pojedla malo surove ribe, bodite pozorni na bruhanje, drisko, vročino ali odklanjanje hrane in pokličite veterinarja, če se kaj od tega pojavi. Surova riba naj ne postane redna hrana.",
+    "de": "Wenn Ihre Katze ein wenig rohen Fisch gefressen hat, achten Sie auf Erbrechen, Durchfall, Fieber oder Appetitlosigkeit und rufen Sie Ihren Tierarzt an, wenn eines davon auftritt. Roher Fisch sollte nicht zum regelmäßigen Futter werden."
   },
   "serving": {
     "en": "If you share fish: properly cooked, plain, with all bones removed, a few pieces at a time.",
-    "sl": "Če ribo delite: dobro kuhano, brez dodatkov, z odstranjenimi vsemi kostmi, po nekaj koščkov naenkrat."
+    "sl": "Če ribo delite: dobro kuhano, brez dodatkov, z odstranjenimi vsemi kostmi, po nekaj koščkov naenkrat.",
+    "de": "Wenn Sie Fisch teilen: richtig gegart, pur, ohne Gräten, jeweils nur ein paar Stücke."
   },
   "child": {
     "en": "Cats love fish, but it needs to be cooked by a grown-up first, with no bones.",
-    "sl": "Mucke imajo rade ribe, a jih mora odrasel najprej skuhati in odstraniti kosti."
+    "sl": "Mucke imajo rade ribe, a jih mora odrasel najprej skuhati in odstraniti kosti.",
+    "de": "Katzen lieben Fisch, aber ein Erwachsener muss ihn zuerst kochen und alle Gräten entfernen."
   },
   "faq": [
     {
       "q": {
         "en": "What is thiaminase?",
-        "sl": "Kaj je tiaminaza?"
+        "sl": "Kaj je tiaminaza?",
+        "de": "Was ist Thiaminase?"
       },
       "a": {
         "en": "It is an enzyme found in some raw fish that destroys thiamine (vitamin B1). Cooking destroys it.",
-        "sl": "To je encim v nekaterih surovih ribah, ki uničuje tiamin (vitamin B1). Kuhanje ga uniči."
+        "sl": "To je encim v nekaterih surovih ribah, ki uničuje tiamin (vitamin B1). Kuhanje ga uniči.",
+        "de": "Ein Enzym in manchen rohen Fischen, das Thiamin (Vitamin B1) zerstört. Durch Garen wird es selbst zerstört."
       }
     }
   ],
@@ -134,6 +151,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1a89f9c984821be5e9098778cca7f3db932331096f0381a857334a87b2177752"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "94be67232ef0ccb4ee0953613b3e98f0f8440545a11966a67ac31066e4f321e5"
     }
   }
 }

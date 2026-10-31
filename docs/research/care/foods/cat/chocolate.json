@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Chocolate",
-    "sl": "Čokolada"
+    "sl": "Čokolada",
+    "de": "Schokolade"
   },
   "question": {
     "en": "Can cats eat chocolate?",
-    "sl": "Ali lahko mačke jedo čokolado?"
+    "sl": "Ali lahko mačke jedo čokolado?",
+    "de": "Dürfen Katzen Schokolade fressen?"
   },
   "url_slug": {
     "en": "chocolate",
-    "sl": "cokolada"
+    "sl": "cokolada",
+    "de": "schokolade"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Chocolate is toxic to cats. It contains theobromine and caffeine, which cats handle poorly, and the darker and more bitter the chocolate, the more dangerous it is. If your cat eats any, call your vet straight away.",
-    "sl": "Ne. Čokolada je za mačke strupena. Vsebuje teobromin in kofein, ki ju mačke slabo presnavljajo, in bolj ko je čokolada temna in grenka, bolj je nevarna. Če muca poje kaj čokolade, takoj pokličite veterinarja."
+    "sl": "Ne. Čokolada je za mačke strupena. Vsebuje teobromin in kofein, ki ju mačke slabo presnavljajo, in bolj ko je čokolada temna in grenka, bolj je nevarna. Če muca poje kaj čokolade, takoj pokličite veterinarja.",
+    "de": "Nein. Schokolade ist für Katzen giftig. Sie enthält Theobromin und Koffein, die Katzen schlecht verarbeiten – und je dunkler und herber die Schokolade, desto gefährlicher ist sie. Wenn Ihre Katze davon frisst, rufen Sie sofort Ihren Tierarzt an."
   },
   "why": {
     "en": "Chocolate contains theobromine and caffeine. Cats process these substances differently from people, which makes them more sensitive to their effects. Because cats struggle to break down theobromine, it stays in the blood and can quickly build up to dangerous levels. Dark and bitter chocolate carries the most risk; white chocolate has the least theobromine.",
-    "sl": "Čokolada vsebuje teobromin in kofein. Mačke te snovi presnavljajo drugače kot ljudje, zato so za njihove učinke bolj občutljive. Ker mačke teobromin težko razgradijo, ostane v krvi in lahko hitro doseže nevarno raven. Najbolj tvegana je temna in grenka čokolada, bela čokolada pa ima teobromina najmanj."
+    "sl": "Čokolada vsebuje teobromin in kofein. Mačke te snovi presnavljajo drugače kot ljudje, zato so za njihove učinke bolj občutljive. Ker mačke teobromin težko razgradijo, ostane v krvi in lahko hitro doseže nevarno raven. Najbolj tvegana je temna in grenka čokolada, bela čokolada pa ima teobromina najmanj.",
+    "de": "Schokolade enthält Theobromin und Koffein. Katzen verarbeiten diese Stoffe anders als Menschen und reagieren deshalb empfindlicher auf ihre Wirkung. Weil Katzen Theobromin nur schwer abbauen können, bleibt es im Blut und kann sich schnell bis zu gefährlichen Werten anreichern. Dunkle und herbe Schokolade ist am riskantesten; weiße Schokolade enthält am wenigsten Theobromin."
   },
   "signs": {
     "en": [
@@ -40,36 +45,51 @@
       "Pogostejše uriniranje",
       "Zelo hiter srčni utrip",
       "V hudih primerih: tresenje mišic ali krči"
+    ],
+    "de": [
+      "Erbrechen",
+      "Durchfall",
+      "Vermehrter Durst",
+      "Hecheln oder Unruhe",
+      "Häufigeres Urinieren als sonst",
+      "Herzrasen",
+      "In schweren Fällen: Muskelzittern oder Krampfanfälle"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away, even if your cat seems fine. Note what kind of chocolate your cat ate, how much and when, and keep the wrapper. Don't wait for signs to appear, and don't try to make your cat sick at home.",
-    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če se muca zdi v redu. Zapišite, kakšno čokolado je pojedla, koliko in kdaj, ter shranite ovojnico. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju."
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če se muca zdi v redu. Zapišite, kakšno čokolado je pojedla, koliko in kdaj, ter shranite ovojnico. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju.",
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, auch wenn Ihre Katze unauffällig wirkt. Notieren Sie, welche Schokolade Ihre Katze gefressen hat, wie viel und wann, und bewahren Sie die Verpackung auf. Warten Sie nicht auf Anzeichen und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen."
   },
   "serving": null,
   "child": {
     "en": "Chocolate is a people treat, not a cat treat. Keep it put away, and tell a grown-up if kitty finds some.",
-    "sl": "Čokolada je posladek za ljudi, ne za muce. Pospravi jo in povej odraslemu, če jo muca najde."
+    "sl": "Čokolada je posladek za ljudi, ne za muce. Pospravi jo in povej odraslemu, če jo muca najde.",
+    "de": "Schokolade ist eine Nascherei für Menschen, nicht für Katzen. Räum sie weg und sag einem Erwachsenen Bescheid, wenn deine Katze welche findet."
   },
   "faq": [
     {
       "q": {
         "en": "Is white chocolate safe for cats?",
-        "sl": "Je bela čokolada za mačke varna?"
+        "sl": "Je bela čokolada za mačke varna?",
+        "de": "Ist weiße Schokolade für Katzen unbedenklich?"
       },
       "a": {
         "en": "White chocolate has the least theobromine, while darker, more bitter chocolate is the most dangerous. Keep all chocolate out of your cat's reach and call your vet if your cat eats any.",
-        "sl": "Bela čokolada ima najmanj teobromina, najnevarnejša pa je temnejša, bolj grenka čokolada. Vso čokolado hranite izven muckinega dosega in pokličite veterinarja, če jo muca poje."
+        "sl": "Bela čokolada ima najmanj teobromina, najnevarnejša pa je temnejša, bolj grenka čokolada. Vso čokolado hranite izven muckinega dosega in pokličite veterinarja, če jo muca poje.",
+        "de": "Weiße Schokolade enthält am wenigsten Theobromin, dunklere, herbere Schokolade ist am gefährlichsten. Bewahren Sie jede Schokolade außer Reichweite Ihrer Katze auf und rufen Sie Ihren Tierarzt an, wenn sie davon frisst."
       }
     },
     {
       "q": {
         "en": "Why are cats more sensitive than people?",
-        "sl": "Zakaj so mačke bolj občutljive kot ljudje?"
+        "sl": "Zakaj so mačke bolj občutljive kot ljudje?",
+        "de": "Warum sind Katzen empfindlicher als Menschen?"
       },
       "a": {
         "en": "Cats process theobromine and caffeine differently from people. Theobromine stays in a cat's bloodstream and can quickly reach dangerous levels.",
-        "sl": "Mačke teobromin in kofein presnavljajo drugače kot ljudje. Teobromin ostane v mačji krvi in lahko hitro doseže nevarno raven."
+        "sl": "Mačke teobromin in kofein presnavljajo drugače kot ljudje. Teobromin ostane v mačji krvi in lahko hitro doseže nevarno raven.",
+        "de": "Katzen verarbeiten Theobromin und Koffein anders als Menschen. Theobromin bleibt im Blut einer Katze und kann schnell gefährliche Werte erreichen."
       }
     }
   ],
@@ -168,6 +188,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7d840ca6a1c32be9931696ba60455130aa447c7425f698870acce7b90b1dc215"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "914fb69705975ccaef7765673c6555162d12e31f51bb8d79ecca1e0a7aae5da7"
     }
   }
 }

@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Energy drinks",
-    "sl": "Energijske pijače"
+    "sl": "Energijske pijače",
+    "de": "Energydrinks"
   },
   "question": {
     "en": "Can dogs drink energy drinks?",
-    "sl": "Ali lahko psi pijejo energijske pijače?"
+    "sl": "Ali lahko psi pijejo energijske pijače?",
+    "de": "Dürfen Hunde Energydrinks trinken?"
   },
   "url_slug": {
     "en": "energy-drinks",
-    "sl": "energijske-pijace"
+    "sl": "energijske-pijace",
+    "de": "energydrinks"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Energy drinks often contain a lot of caffeine, which is toxic to dogs. Caffeine overstimulates the heart and nervous system, and dogs are more sensitive to it than people. Even lapping up a spilled energy drink can be a problem.",
-    "sl": "Ne. Energijske pijače pogosto vsebujejo veliko kofeina, ki je za pse strupen. Kofein pretirano spodbuja srce in živčevje, psi pa so nanj bolj občutljivi kot ljudje. Težava je lahko že polizana razlita energijska pijača."
+    "sl": "Ne. Energijske pijače pogosto vsebujejo veliko kofeina, ki je za pse strupen. Kofein pretirano spodbuja srce in živčevje, psi pa so nanj bolj občutljivi kot ljudje. Težava je lahko že polizana razlita energijska pijača.",
+    "de": "Nein. Energydrinks enthalten oft viel Koffein, und Koffein ist für Hunde giftig. Es überreizt Herz und Nervensystem, und Hunde reagieren empfindlicher darauf als Menschen. Schon das Auflecken eines verschütteten Energydrinks kann ein Problem sein."
   },
   "why": {
     "en": "Energy and sports drinks often contain a lot of caffeine, and energy shots, pouches and tablets contain caffeine too. Caffeine stimulates the heart and nervous system, which can be dangerous for dogs.",
-    "sl": "Energijske in športne pijače pogosto vsebujejo veliko kofeina, kofein pa vsebujejo tudi energijski šoti, vrečke in tablete. Kofein spodbuja srce in živčevje, kar je za pse lahko nevarno."
+    "sl": "Energijske in športne pijače pogosto vsebujejo veliko kofeina, kofein pa vsebujejo tudi energijski šoti, vrečke in tablete. Kofein spodbuja srce in živčevje, kar je za pse lahko nevarno.",
+    "de": "Energy- und Sportgetränke enthalten oft viel Koffein, und auch Energy-Shots, Koffeinbeutel und Koffeintabletten enthalten Koffein. Koffein regt Herz und Nervensystem an, was für Hunde gefährlich sein kann."
   },
   "signs": {
     "en": [
@@ -38,26 +43,38 @@
       "Slinjenje",
       "Tresenje",
       "Pogostejše uriniranje"
+    ],
+    "de": [
+      "Unruhe, Überaktivität, ruheloses Hin- und Herlaufen",
+      "Schneller Herzschlag",
+      "Erbrechen und Durchfall",
+      "Sabbern",
+      "Zittern",
+      "Häufigeres Pinkeln"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline as soon as you realise your dog has had caffeine. Note what it was (drink, shot, pouch or tablet) and roughly how much. Don't wait for signs: early treatment matters.",
-    "sl": "Takoj ko opazite, da je pes zaužil kofein, pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj je bilo (pijača, šot, vrečka ali tableta) in približno koliko. Ne čakajte na znake: zgodnje zdravljenje je pomembno."
+    "sl": "Takoj ko opazite, da je pes zaužil kofein, pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj je bilo (pijača, šot, vrečka ali tableta) in približno koliko. Ne čakajte na znake: zgodnje zdravljenje je pomembno.",
+    "de": "Wenden Sie sich an Ihren Tierarzt oder einen Giftnotruf für Tiere, sobald Sie bemerken, dass Ihr Hund Koffein aufgenommen hat. Notieren Sie, was es war (Getränk, Shot, Beutel oder Tablette) und ungefähr wie viel. Warten Sie nicht auf Anzeichen: Eine frühe Behandlung ist wichtig."
   },
   "serving": null,
   "child": {
     "en": "Energy drinks are not for dogs at all. Wipe up spills fast and tell a grown-up if your dog drinks some.",
-    "sl": "Energijske pijače sploh niso za pse. Razlito hitro pobriši in povej odraslemu, če jo pes popije."
+    "sl": "Energijske pijače sploh niso za pse. Razlito hitro pobriši in povej odraslemu, če jo pes popije.",
+    "de": "Energydrinks sind überhaupt nichts für Hunde. Wisch Verschüttetes schnell auf und sag einem Erwachsenen Bescheid, wenn dein Hund davon trinkt."
   },
   "faq": [
     {
       "q": {
         "en": "What about energy shots and caffeine tablets?",
-        "sl": "Kaj pa energijski šoti in tablete s kofeinom?"
+        "sl": "Kaj pa energijski šoti in tablete s kofeinom?",
+        "de": "Was ist mit Energy-Shots und Koffeintabletten?"
       },
       "a": {
         "en": "They contain caffeine too. Keep them out of reach and call your vet straight away if your dog gets into them.",
-        "sl": "Tudi ti vsebujejo kofein. Hranite jih izven dosega in takoj pokličite veterinarja, če jih pes doseže."
+        "sl": "Tudi ti vsebujejo kofein. Hranite jih izven dosega in takoj pokličite veterinarja, če jih pes doseže.",
+        "de": "Auch sie enthalten Koffein. Bewahren Sie sie außer Reichweite auf und rufen Sie sofort Ihren Tierarzt an, wenn Ihr Hund daran gelangt."
       }
     }
   ],
@@ -140,6 +157,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8e09d495c6c5bef4970fa5b3b24f1822dbae9ed7deb710a605b0984aefd2a95e"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "abe8e24a6ebc763352852c5f1cee19f899d2bd59bb57916f44da7169cbfbdcb0"
     }
   }
 }

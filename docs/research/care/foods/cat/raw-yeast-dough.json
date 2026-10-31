@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Raw yeast dough",
-    "sl": "Surovo kvašeno testo"
+    "sl": "Surovo kvašeno testo",
+    "de": "Roher Hefeteig"
   },
   "question": {
     "en": "Can cats eat raw yeast dough?",
-    "sl": "Ali lahko mačke jedo surovo kvašeno testo?"
+    "sl": "Ali lahko mačke jedo surovo kvašeno testo?",
+    "de": "Dürfen Katzen rohen Hefeteig fressen?"
   },
   "url_slug": {
     "en": "raw-yeast-dough",
-    "sl": "surovo-kvaseno-testo"
+    "sl": "surovo-kvaseno-testo",
+    "de": "roher-hefeteig"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Raw yeast dough is dangerous for cats in two ways: it can keep expanding in the stomach and cause a blockage, and the yeast makes alcohol, which is toxic to cats. Keep rising dough out of reach and call your vet if your cat eats any.",
-    "sl": "Ne. Surovo kvašeno testo je za mačke nevarno na dva načina: v želodcu lahko še naprej narašča in povzroči zaporo, kvas pa tvori alkohol, ki je za mačke strupen. Vzhajajoče testo postavite izven dosega in pokličite veterinarja, če ga muca poje."
+    "sl": "Ne. Surovo kvašeno testo je za mačke nevarno na dva načina: v želodcu lahko še naprej narašča in povzroči zaporo, kvas pa tvori alkohol, ki je za mačke strupen. Vzhajajoče testo postavite izven dosega in pokličite veterinarja, če ga muca poje.",
+    "de": "Nein. Roher Hefeteig ist für Katzen auf zwei Arten gefährlich: Er kann im Magen weiter aufgehen und eine Blockade verursachen, und die Hefe bildet Alkohol, der für Katzen giftig ist. Stellen Sie aufgehenden Teig außer Reichweite und rufen Sie Ihren Tierarzt an, wenn Ihre Katze davon frisst."
   },
   "why": {
     "en": "Raw dough contains some alcohol and produces carbon dioxide. Once swallowed, the yeast keeps working in the stomach: the dough expands and can cause an obstruction, while the alcohol it produces is absorbed into the blood. Cats are especially sensitive to alcohol.",
-    "sl": "Surovo testo vsebuje nekaj alkohola in tvori ogljikov dioksid. Ko ga žival poje, kvas v želodcu deluje naprej: testo se širi in lahko povzroči zaporo, nastali alkohol pa se vsrka v kri. Mačke so na alkohol še posebej občutljive."
+    "sl": "Surovo testo vsebuje nekaj alkohola in tvori ogljikov dioksid. Ko ga žival poje, kvas v želodcu deluje naprej: testo se širi in lahko povzroči zaporo, nastali alkohol pa se vsrka v kri. Mačke so na alkohol še posebej občutljive.",
+    "de": "Roher Teig enthält etwas Alkohol und bildet Kohlendioxid. Nach dem Verschlucken arbeitet die Hefe im Magen weiter: Der Teig dehnt sich aus und kann einen Verschluss verursachen, während der entstehende Alkohol ins Blut aufgenommen wird. Katzen reagieren besonders empfindlich auf Alkohol."
   },
   "signs": {
     "en": [
@@ -34,26 +39,36 @@
       "Poskusi bruhanja brez izbruhane vsebine",
       "Opotekanje ali zmedenost",
       "Nenavadna šibkost ali zaspanost"
+    ],
+    "de": [
+      "Geschwollener, aufgeblähter Bauch",
+      "Versucht zu erbrechen, ohne dass etwas herauskommt",
+      "Wackeliger Gang oder wirkt verwirrt",
+      "Ungewöhnliche Schwäche oder Schläfrigkeit"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away. Note how much dough your cat ate and when. Don't wait for signs to appear, and don't try to make your cat sick at home.",
-    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, koliko testa je muca pojedla in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju."
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, koliko testa je muca pojedla in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju.",
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, wie viel Teig Ihre Katze gefressen hat und wann. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen."
   },
   "serving": null,
   "child": {
     "en": "Bread dough needs to rise in a bowl, not in a tummy. Keep dough away from kitty and tell a grown-up if she eats some.",
-    "sl": "Testo mora vzhajati v skledi, ne v trebuščku. Naj bo daleč od muce. Če ga poje, povej odraslemu."
+    "sl": "Testo mora vzhajati v skledi, ne v trebuščku. Naj bo daleč od muce. Če ga poje, povej odraslemu.",
+    "de": "Brotteig soll in einer Schüssel aufgehen, nicht im Bauch. Halte Teig von deiner Katze fern und sag einem Erwachsenen Bescheid, wenn sie davon frisst."
   },
   "faq": [
     {
       "q": {
         "en": "Why is raw dough dangerous if it's not a poison itself?",
-        "sl": "Zakaj je surovo testo nevarno, če samo po sebi ni strup?"
+        "sl": "Zakaj je surovo testo nevarno, če samo po sebi ni strup?",
+        "de": "Warum ist roher Teig gefährlich, wenn er selbst kein Gift ist?"
       },
       "a": {
         "en": "Raw dough contains live yeast. In the stomach it keeps rising and producing alcohol, so it can both cause a blockage and lead to alcohol poisoning.",
-        "sl": "Surovo testo vsebuje živ kvas. V želodcu še naprej vzhaja in tvori alkohol, zato lahko povzroči zaporo in tudi zastrupitev z alkoholom."
+        "sl": "Surovo testo vsebuje živ kvas. V želodcu še naprej vzhaja in tvori alkohol, zato lahko povzroči zaporo in tudi zastrupitev z alkoholom.",
+        "de": "Roher Teig enthält lebende Hefe. Im Magen geht er weiter auf und bildet Alkohol. So kann er sowohl eine Blockade als auch eine Alkoholvergiftung verursachen."
       }
     }
   ],
@@ -131,6 +146,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c02dac9f28dd5081831962b17e9cd1dbd409bc4ffc7a9d68e90151d6909b7ff1"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f5971776b228f539d68f7b0f4fef641333a715ad3ef15cf7a177d102ebce0da0"
     }
   }
 }

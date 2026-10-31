@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Tuna",
-    "sl": "Tuna"
+    "sl": "Tuna",
+    "de": "Thunfisch"
   },
   "question": {
     "en": "Can cats eat tuna?",
-    "sl": "Ali lahko mačke jedo tuno?"
+    "sl": "Ali lahko mačke jedo tuno?",
+    "de": "Dürfen Katzen Thunfisch fressen?"
   },
   "url_slug": {
     "en": "tuna",
-    "sl": "tuna"
+    "sl": "tuna",
+    "de": "thunfisch"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Not regularly. A small amount of tuna may not cause harm, but tinned tuna for people lacks nutrients cats need, can be high in salt and mercury, and some vets advise against it even as a treat. It is never a complete diet.",
-    "sl": "Ne redno. Majhna količina tune morda ne škodi, vendar konzervirani tuni za ljudi manjkajo hranila, ki jih mačke potrebujejo, lahko ima veliko soli in živega srebra, nekateri veterinarji pa jo odsvetujejo celo kot priboljšek. Nikoli ni popolna prehrana."
+    "sl": "Ne redno. Majhna količina tune morda ne škodi, vendar konzervirani tuni za ljudi manjkajo hranila, ki jih mačke potrebujejo, lahko ima veliko soli in živega srebra, nekateri veterinarji pa jo odsvetujejo celo kot priboljšek. Nikoli ni popolna prehrana.",
+    "de": "Nicht regelmäßig. Eine kleine Menge Thunfisch schadet vielleicht nicht, aber dem Dosenthunfisch für Menschen fehlen Nährstoffe, die Katzen brauchen, er kann viel Salz und Quecksilber enthalten, und manche Tierärzte raten sogar als Leckerli davon ab. Eine vollständige Ernährung ist er nie."
   },
   "why": {
     "en": "Sources disagree, so we use the stricter level. RSPCA Australia allows tinned tuna in spring water as an occasional treat. VCA says cats shouldn't eat tuna, not even as a treat, because it lacks essential nutrients and has too much unsaturated fat. Cats Protection warns it can be high in salt and mercury and cause weight gain. The Merck Veterinary Manual notes vitamin E deficiency in cats given large quantities of canned tuna.",
-    "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. RSPCA Avstralija dovoljuje konzervirano tuno v izvirski vodi kot občasen priboljšek. VCA navaja, da mačke tune ne bi smele jesti niti kot priboljšek, ker ji manjkajo nujna hranila in ima preveč nenasičenih maščob. Cats Protection opozarja, da ima lahko veliko soli in živega srebra ter mačko zredi. Merckov veterinarski priročnik omenja pomanjkanje vitamina E pri mačkah, ki so dobivale velike količine konzervirane tune."
+    "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. RSPCA Avstralija dovoljuje konzervirano tuno v izvirski vodi kot občasen priboljšek. VCA navaja, da mačke tune ne bi smele jesti niti kot priboljšek, ker ji manjkajo nujna hranila in ima preveč nenasičenih maščob. Cats Protection opozarja, da ima lahko veliko soli in živega srebra ter mačko zredi. Merckov veterinarski priročnik omenja pomanjkanje vitamina E pri mačkah, ki so dobivale velike količine konzervirane tune.",
+    "de": "Die Quellen sind sich nicht einig, daher wählen wir die strengere Einstufung. RSPCA Australia erlaubt Dosenthunfisch in Quellwasser als gelegentliches Leckerli. VCA sagt, Katzen sollten keinen Thunfisch fressen, nicht einmal als Leckerli, weil ihm wichtige Nährstoffe fehlen und er zu viel ungesättigtes Fett enthält. Cats Protection warnt, dass er viel Salz und Quecksilber enthalten und zu Gewichtszunahme führen kann. Das Merck Veterinary Manual beschreibt Vitamin-E-Mangel bei Katzen, die große Mengen Dosenthunfisch bekamen."
   },
   "signs": {
     "en": [
@@ -28,29 +33,37 @@
     ],
     "sl": [
       "Pridobivanje teže pri pogostem hranjenju"
+    ],
+    "de": [
+      "Gewichtszunahme bei häufiger Fütterung"
     ]
   },
   "what_to_do": {
     "en": "A bite of tuna is unlikely to be a problem. Don't make it a habit or a main meal. If your cat seems unwell after eating tuna, or eats a lot of it often, talk to your vet.",
-    "sl": "Grižljaj tune najverjetneje ne bo težava. Naj ne postane navada ali glavni obrok. Če se mačka po tuni ne počuti dobro ali je pogosto poje veliko, se posvetujte z veterinarjem."
+    "sl": "Grižljaj tune najverjetneje ne bo težava. Naj ne postane navada ali glavni obrok. Če se mačka po tuni ne počuti dobro ali je pogosto poje veliko, se posvetujte z veterinarjem.",
+    "de": "Ein Happen Thunfisch ist wahrscheinlich kein Problem. Machen Sie daraus aber keine Gewohnheit und keine Hauptmahlzeit. Wirkt Ihre Katze nach dem Thunfisch krank oder frisst sie oft viel davon, sprechen Sie mit Ihrem Tierarzt."
   },
   "serving": {
     "en": "If at all: tinned in spring water with no added salt, a little, rarely, and never instead of cat food.",
-    "sl": "Če sploh: konzervirana v izvirski vodi brez dodane soli, malo, redko in nikoli namesto mačje hrane."
+    "sl": "Če sploh: konzervirana v izvirski vodi brez dodane soli, malo, redko in nikoli namesto mačje hrane.",
+    "de": "Wenn überhaupt: aus der Dose in Quellwasser ohne Salzzusatz, wenig, selten und nie anstelle von Katzenfutter."
   },
   "child": {
     "en": "Cats love tuna, but too much isn't healthy. Their own cat food keeps them strong.",
-    "sl": "Mucke imajo rade tuno, a preveč tune ni zdravo. Močne jih ohranja njihova mačja hrana."
+    "sl": "Mucke imajo rade tuno, a preveč tune ni zdravo. Močne jih ohranja njihova mačja hrana.",
+    "de": "Katzen lieben Thunfisch, aber zu viel davon ist nicht gesund. Ihr eigenes Katzenfutter hält sie stark."
   },
   "faq": [
     {
       "q": {
         "en": "Can my cat live on tuna?",
-        "sl": "Ali lahko mačka živi samo od tune?"
+        "sl": "Ali lahko mačka živi samo od tune?",
+        "de": "Kann meine Katze von Thunfisch leben?"
       },
       "a": {
         "en": "No. Tuna lacks essential nutrients cats need, and cats given large amounts of canned tuna have developed vitamin E deficiency.",
-        "sl": "Ne. Tuni manjkajo nujna hranila, ki jih mačke potrebujejo, pri mačkah, ki so dobivale velike količine konzervirane tune, pa se je razvilo pomanjkanje vitamina E."
+        "sl": "Ne. Tuni manjkajo nujna hranila, ki jih mačke potrebujejo, pri mačkah, ki so dobivale velike količine konzervirane tune, pa se je razvilo pomanjkanje vitamina E.",
+        "de": "Nein. Thunfisch fehlen wichtige Nährstoffe, die Katzen brauchen, und Katzen, die große Mengen Dosenthunfisch bekamen, haben einen Vitamin-E-Mangel entwickelt."
       }
     }
   ],
@@ -117,6 +130,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c11ef83400afc798b5c749175bbbdee043eea72e769e4b02362b7bea0dbfceaf"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0484922d946fc3da7ff8a23839f63237dc0f3d9810221eab26ec61435d0c22db"
     }
   }
 }

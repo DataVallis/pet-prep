@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Apricots",
-    "sl": "Marelice"
+    "sl": "Marelice",
+    "de": "Aprikosen"
   },
   "question": {
     "en": "Can dogs eat apricots?",
-    "sl": "Ali lahko psi jedo marelice?"
+    "sl": "Ali lahko psi jedo marelice?",
+    "de": "Dürfen Hunde Aprikosen fressen?"
   },
   "url_slug": {
     "en": "apricots",
-    "sl": "marelice"
+    "sl": "marelice",
+    "de": "aprikosen"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Not recommended. The apricot plant is listed as toxic to dogs: its stems, leaves and seeds contain cyanide, especially as they wilt. Never let your dog chew apricot stones, leaves or stems.",
-    "sl": "Ni priporočljivo. Marelica je navedena kot strupena za pse: njeni peclji, listi in semena vsebujejo cianid, zlasti ko venejo. Psu nikoli ne pustite žvečiti marelične koščice, listov ali pecljev."
+    "sl": "Ni priporočljivo. Marelica je navedena kot strupena za pse: njeni peclji, listi in semena vsebujejo cianid, zlasti ko venejo. Psu nikoli ne pustite žvečiti marelične koščice, listov ali pecljev.",
+    "de": "Nicht empfohlen. Die Aprikosenpflanze gilt als giftig für Hunde: Stiele, Blätter und Samen enthalten Cyanid, besonders beim Welken. Lassen Sie Ihren Hund nie auf Aprikosenkernen, -blättern oder -stielen kauen."
   },
   "why": {
     "en": "Apricot stems, leaves and seeds contain cyanogenic glycosides, which release cyanide. Cyanide reduces the body's ability to use oxygen. Because the plant is listed as toxic to dogs, we do not rate apricots as a safe treat.",
-    "sl": "Peclji, listi in semena marelice vsebujejo cianogene glikozide, iz katerih se sprošča cianid. Cianid zmanjša sposobnost telesa, da porablja kisik. Ker je rastlina navedena kot strupena za pse, marelic ne ocenjujemo kot varen priboljšek."
+    "sl": "Peclji, listi in semena marelice vsebujejo cianogene glikozide, iz katerih se sprošča cianid. Cianid zmanjša sposobnost telesa, da porablja kisik. Ker je rastlina navedena kot strupena za pse, marelic ne ocenjujemo kot varen priboljšek.",
+    "de": "Stiele, Blätter und Samen der Aprikose enthalten cyanogene Glykoside, die Cyanid freisetzen. Cyanid verringert die Fähigkeit des Körpers, Sauerstoff zu verwerten. Weil die Pflanze als giftig für Hunde gilt, stufen wir Aprikosen nicht als sicheres Leckerli ein."
   },
   "signs": {
     "en": [
@@ -34,26 +39,36 @@
       "Opečnato rdeče dlesni",
       "Težko dihanje, sopihanje",
       "Šok"
+    ],
+    "de": [
+      "Erweiterte Pupillen",
+      "Ziegelrotes Zahnfleisch",
+      "Atembeschwerden, Hecheln",
+      "Schock"
     ]
   },
   "what_to_do": {
     "en": "If your dog chewed or swallowed apricot stones, leaves or stems, contact your vet for advice right away. Note what was eaten and roughly how much.",
-    "sl": "Če je pes žvečil ali pogoltnil marelične koščice, liste ali peclje, se takoj posvetujte z veterinarjem. Zapišite si, kaj in približno koliko je pojedel."
+    "sl": "Če je pes žvečil ali pogoltnil marelične koščice, liste ali peclje, se takoj posvetujte z veterinarjem. Zapišite si, kaj in približno koliko je pojedel.",
+    "de": "Wenn Ihr Hund Aprikosenkerne, -blätter oder -stiele zerkaut oder verschluckt hat, lassen Sie sich sofort von Ihrem Tierarzt beraten. Notieren Sie, was gefressen wurde und ungefähr wie viel."
   },
   "serving": null,
   "child": {
     "en": "Apricot stones, leaves and stems are bad for dogs. Keep apricots for people, and tell a grown-up if your dog chews a stone.",
-    "sl": "Marelične koščice, listi in peclji so za pse slabi. Marelice so za ljudi; povej odraslemu, če pes žveči koščico."
+    "sl": "Marelične koščice, listi in peclji so za pse slabi. Marelice so za ljudi; povej odraslemu, če pes žveči koščico.",
+    "de": "Aprikosenkerne, -blätter und -stiele sind schlecht für Hunde. Aprikosen sind für Menschen. Wenn dein Hund auf einem Kern kaut, sag einem Erwachsenen Bescheid."
   },
   "faq": [
     {
       "q": {
         "en": "Which parts of the apricot are toxic?",
-        "sl": "Kateri deli marelice so strupeni?"
+        "sl": "Kateri deli marelice so strupeni?",
+        "de": "Welche Teile der Aprikose sind giftig?"
       },
       "a": {
         "en": "The stems, leaves and seeds contain cyanide, and they are particularly toxic as they wilt.",
-        "sl": "Peclji, listi in semena vsebujejo cianid in so posebej strupeni, ko venejo."
+        "sl": "Peclji, listi in semena vsebujejo cianid in so posebej strupeni, ko venejo.",
+        "de": "Stiele, Blätter und Samen enthalten Cyanid und sind beim Welken besonders giftig."
       }
     }
   ],
@@ -99,6 +114,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "bb7907a0c6efca2b31323c1785721857b96e341e9413ae693a92189982c3be80"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "75151718ef246f2f63e8410c09b55cde139f9947ec2c31c996721d41931cce04"
     }
   }
 }

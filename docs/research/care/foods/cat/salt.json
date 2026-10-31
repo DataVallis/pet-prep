@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Salt",
-    "sl": "Sol"
+    "sl": "Sol",
+    "de": "Salz"
   },
   "question": {
     "en": "Can cats eat salt?",
-    "sl": "Ali lahko mačke jedo sol?"
+    "sl": "Ali lahko mačke jedo sol?",
+    "de": "Dürfen Katzen Salz fressen?"
   },
   "url_slug": {
     "en": "salt",
-    "sl": "sol"
+    "sl": "sol",
+    "de": "salz"
   },
   "level": "dangerous",
   "answer": {
     "en": "No, not as a food or treat. A cat's digestive system is not designed to handle large amounts of salt, and too much can cause salt poisoning. Keep table salt, rock salt and very salty foods away from your cat, and call your vet if she eats a lot.",
-    "sl": "Ne, ne kot hrana ali priboljšek. Mačja prebavila niso ustvarjena za večje količine soli, preveč soli pa lahko povzroči zastrupitev. Kuhinjsko sol, sol za posipanje in zelo slano hrano hranite stran od muce in pokličite veterinarja, če je poje veliko."
+    "sl": "Ne, ne kot hrana ali priboljšek. Mačja prebavila niso ustvarjena za večje količine soli, preveč soli pa lahko povzroči zastrupitev. Kuhinjsko sol, sol za posipanje in zelo slano hrano hranite stran od muce in pokličite veterinarja, če je poje veliko.",
+    "de": "Nein, nicht als Futter oder Leckerli. Das Verdauungssystem einer Katze ist nicht für große Mengen Salz ausgelegt, und zu viel davon kann eine Salzvergiftung verursachen. Halten Sie Speisesalz, Streusalz und sehr salzige Lebensmittel von Ihrer Katze fern und rufen Sie Ihren Tierarzt an, wenn sie viel davon frisst."
   },
   "why": {
     "en": "Too much salt causes thirst and frequent urination and, in serious cases, tremors and seizures. Salt sources at home include table salt used in cooking and rock salt used as a de-icer in winter.",
-    "sl": "Preveč soli povzroči žejo in pogosto uriniranje, v hujših primerih pa tresenje in krče. Viri soli v domu so kuhinjska sol in sol za posipanje cest in pločnikov pozimi."
+    "sl": "Preveč soli povzroči žejo in pogosto uriniranje, v hujših primerih pa tresenje in krče. Viri soli v domu so kuhinjska sol in sol za posipanje cest in pločnikov pozimi.",
+    "de": "Zu viel Salz verursacht Durst und häufiges Urinieren, in schweren Fällen auch Zittern und Krampfanfälle. Salzquellen im Haushalt sind etwa Speisesalz zum Kochen und Streusalz, das im Winter gegen Glätte eingesetzt wird."
   },
   "signs": {
     "en": [
@@ -40,26 +45,39 @@
       "Opotekanje",
       "Pretirana žeja ali uriniranje",
       "Tresenje ali krči"
+    ],
+    "de": [
+      "Erbrechen",
+      "Durchfall",
+      "Verminderter Appetit",
+      "Teilnahmslosigkeit",
+      "Wackeliger Gang",
+      "Übermäßiger Durst oder häufiges Urinieren",
+      "Zittern oder Krampfanfälle"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away if your cat ate salt or a very salty food or licked rock salt. Note what she ate, how much and when. Don't wait for signs to appear, and don't try to make your cat sick at home.",
-    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, če je muca pojedla sol ali zelo slano hrano oziroma lizala sol za posipanje. Zapišite, kaj je pojedla, koliko in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju."
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, če je muca pojedla sol ali zelo slano hrano oziroma lizala sol za posipanje. Zapišite, kaj je pojedla, koliko in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju.",
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, wenn Ihre Katze Salz oder ein sehr salziges Lebensmittel gefressen oder an Streusalz geleckt hat. Notieren Sie, was sie gefressen hat, wie viel und wann. Warten Sie nicht auf Anzeichen und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen."
   },
   "serving": null,
   "child": {
     "en": "Salt is not a cat treat. Keep the salt shaker and very salty food away from kitty.",
-    "sl": "Sol ni priboljšek za muce. Solnica in zelo slana hrana naj bosta daleč od muce."
+    "sl": "Sol ni priboljšek za muce. Solnica in zelo slana hrana naj bosta daleč od muce.",
+    "de": "Salz ist kein Leckerli für Katzen. Halte den Salzstreuer und sehr salziges Essen von deiner Katze fern."
   },
   "faq": [
     {
       "q": {
         "en": "Is winter road salt a danger for cats?",
-        "sl": "Je sol za posipanje pozimi nevarna za mačke?"
+        "sl": "Je sol za posipanje pozimi nevarna za mačke?",
+        "de": "Ist Streusalz im Winter gefährlich für Katzen?"
       },
       "a": {
         "en": "It can be. Pet Poison Helpline lists rock salt used as a de-icer in winter among the salt sources that can harm cats, so keep bags of it out of reach.",
-        "sl": "Lahko je. Pet Poison Helpline sol za posipanje pozimi navaja med viri soli, ki lahko škodijo mačkam, zato vreče s soljo hranite izven dosega."
+        "sl": "Lahko je. Pet Poison Helpline sol za posipanje pozimi navaja med viri soli, ki lahko škodijo mačkam, zato vreče s soljo hranite izven dosega.",
+        "de": "Ja, das kann es. Pet Poison Helpline zählt Streusalz, das im Winter gegen Glätte eingesetzt wird, zu den Salzquellen, die Katzen schaden können. Bewahren Sie Streusalzsäcke deshalb außer Reichweite auf."
       }
     }
   ],
@@ -149,6 +167,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6653748331e41ed1337f0d95b1c1bc819f77942fe6b9abc8576c96d7dcda5219"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "070e015f5addd3eaf6ab1d4540598370c48f15d7a2d6fa6a6a011da37b896233"
     }
   }
 }

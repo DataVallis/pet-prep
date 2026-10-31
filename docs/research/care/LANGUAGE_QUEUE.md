@@ -3,7 +3,7 @@
 David 2026-10-31: 13 languages, one per hourly run, grammatically perfect (`docs/engineering/LANGUAGE_RUNBOOK.md`).
 Status: `[ ]` todo · `[x]` live (address form, PRs, date) · `[!]` blocked (reason). After the last line the run does top-ups.
 
-- [ ] de German / Deutsch
+- [x] de German / Deutsch — address: Sie (adults), du (child texts); PRs #484, website #144, 2026-10-31. Glossary: Haustier, Tierarzt, Giftnotruf für Tiere, Mischling, Hauskatze, Rasse, Fellfarbe, Leckerli, Ratgeber (/de/ratgeber), Notfall, Eltern-Dashboard, KI-Assistent; food questions „Dürfen Hunde … fressen/trinken?“
 - [ ] fr French / Français
 - [ ] es Spanish / Español
 - [ ] it Italian / Italiano

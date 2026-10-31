@@ -3,37 +3,45 @@
   "species": "cat",
   "name": {
     "en": "Sardines",
-    "sl": "Sardine"
+    "sl": "Sardine",
+    "de": "Sardinen"
   },
   "question": {
     "en": "Can cats eat sardines?",
-    "sl": "Ali lahko mačke jedo sardine?"
+    "sl": "Ali lahko mačke jedo sardine?",
+    "de": "Dürfen Katzen Sardinen fressen?"
   },
   "url_slug": {
     "en": "sardines",
-    "sl": "sardine"
+    "sl": "sardine",
+    "de": "sardinen"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, as an occasional treat. Tinned sardines in spring water can be offered now and then, watching out for bones. They shouldn't become the main part of a cat's diet.",
-    "sl": "Da, kot občasen priboljšek. Konzervirane sardine v izvirski vodi lahko ponudite občasno, pri čemer pazite na kosti. Ne smejo postati glavni del mačje prehrane."
+    "sl": "Da, kot občasen priboljšek. Konzervirane sardine v izvirski vodi lahko ponudite občasno, pri čemer pazite na kosti. Ne smejo postati glavni del mačje prehrane.",
+    "de": "Ja, als gelegentliches Leckerli. Sardinen aus der Dose in Quellwasser können Sie ab und zu anbieten; achten Sie dabei auf Gräten. Sie sollten nicht zum Hauptbestandteil der Ernährung einer Katze werden."
   },
   "why": {
     "en": "RSPCA Australia says fish such as tinned sardines in spring water can be offered as an occasional treat, taking care with bones, but are not suitable as the main part of the diet. Cats Protection advises fish be properly cooked, with bones removed, and given only a few pieces at a time.",
-    "sl": "RSPCA Avstralija navaja, da je ribo, kot so konzervirane sardine v izvirski vodi, mogoče ponuditi kot občasen priboljšek, pri čemer je treba paziti na kosti, ni pa primerna kot glavni del prehrane. Cats Protection svetuje, naj bo riba dobro kuhana, brez kosti in naj je mačka dobi le nekaj koščkov naenkrat."
+    "sl": "RSPCA Avstralija navaja, da je ribo, kot so konzervirane sardine v izvirski vodi, mogoče ponuditi kot občasen priboljšek, pri čemer je treba paziti na kosti, ni pa primerna kot glavni del prehrane. Cats Protection svetuje, naj bo riba dobro kuhana, brez kosti in naj je mačka dobi le nekaj koščkov naenkrat.",
+    "de": "Laut RSPCA Australia kann Fisch wie Dosensardinen in Quellwasser gelegentlich als Leckerli angeboten werden, wobei auf Gräten zu achten ist; als Hauptbestandteil der Ernährung eignet er sich nicht. Cats Protection rät, Fisch richtig durchzugaren, die Gräten zu entfernen und nur wenige Stücke auf einmal zu geben."
   },
   "signs": null,
   "what_to_do": {
     "en": "Offer a small piece first. If your cat gets vomiting or diarrhoea afterwards, stop and ask your vet.",
-    "sl": "Najprej ponudite majhen košček. Če ima mačka potem bruhanje ali drisko, prenehajte in se posvetujte z veterinarjem."
+    "sl": "Najprej ponudite majhen košček. Če ima mačka potem bruhanje ali drisko, prenehajte in se posvetujte z veterinarjem.",
+    "de": "Bieten Sie zuerst ein kleines Stück an. Bekommt Ihre Katze danach Erbrechen oder Durchfall, hören Sie auf und fragen Sie Ihren Tierarzt."
   },
   "serving": {
     "en": "Tinned in spring water, with bones removed; a few pieces now and then.",
-    "sl": "Konzervirane v izvirski vodi, z odstranjenimi kostmi; nekaj koščkov občasno."
+    "sl": "Konzervirane v izvirski vodi, z odstranjenimi kostmi; nekaj koščkov občasno.",
+    "de": "Aus der Dose in Quellwasser, ohne Gräten; ab und zu ein paar Stücke."
   },
   "child": {
     "en": "Sardines can be a little fishy treat for cats sometimes. A grown-up should check for bones.",
-    "sl": "Sardine so lahko včasih majhen ribji priboljšek za mucke. Odrasel naj preveri, da ni kosti."
+    "sl": "Sardine so lahko včasih majhen ribji priboljšek za mucke. Odrasel naj preveri, da ni kosti.",
+    "de": "Sardinen können ab und zu ein kleines Fisch-Leckerli für Katzen sein. Ein Erwachsener sollte nach Gräten schauen."
   },
   "faq": [],
   "sources": [
@@ -71,6 +79,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4e54bc806e7d43a3f16e304672c567213ba4f4e1846d640c3f7d15860f031688"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "77fc57d9ff9923a42fb8122e6e67e2ece198789cd5a450b21e80940da9d2de3a"
     }
   }
 }
