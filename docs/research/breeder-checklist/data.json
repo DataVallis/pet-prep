@@ -3069,6 +3069,37 @@
         }
       ],
       "notes": "RKC Breeds A–Z page (dog-data S632, 2026-10-31, reachable with a trailing slash): Good Practice — DNA tests for juvenile epilepsy (JE) and lysosomal storage disease (LSD); Best Practice — the BVA/KC elbow and hip dysplasia schemes and the BVA/KC/ISDS eye scheme (test names as returned verbatim). New test keys dna_je, dna_lsd. Woodgreen (S636) also recommends health tests from breeders (paraphrase)."
+    },
+    "alaskan_malamute": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K32",
+        "quote": "Recommended Health Tests from the National Breed Club:"
+      },
+      "tests": [
+        {
+          "key": "hip_scheme",
+          "level": "other_scheme",
+          "name": "Hip X-ray screening of breeding dogs (US breed club: hip evaluation; PDSA: BVA/Kennel Club Hip Dysplasia Scheme)",
+          "source_id": "K32",
+          "quote": "Hip Evaluation"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "other_scheme",
+          "name": "Eye examination of breeding dogs (US breed club: ophthalmologist evaluation; PDSA: yearly BVA eye screening)",
+          "source_id": "K32",
+          "quote": "Ophthalmologist Evaluation"
+        },
+        {
+          "key": "dna_ampn",
+          "level": "other_scheme",
+          "name": "DNA test for Alaskan Malamute polyneuropathy (AMPN) (US breed club recommendation)",
+          "source_id": "K32",
+          "quote": "Alaskan Malamute Polyneuropathy (AMPN) - DNA Test"
+        }
+      ],
+      "notes": "RKC Breeds A–Z page (royalkennelclub.com …/working/alaskan-malamute; the thekennelclub.org.uk display.aspx?id=5105 address redirects there) could not be fetched on 2026-10-31 → no minimum / best_practice level. AKC Working Group health testing page (K32, re-read 2026-10-31): Alaskan Malamute — 'Hip Evaluation', 'Ophthalmologist Evaluation', 'Alaskan Malamute Polyneuropathy (AMPN) - DNA Test' → other_scheme (new key dna_ampn). PDSA (dog-data S639): breeding dogs X-rayed under the BVA/Kennel Club Hip Dysplasia Scheme, eye screening every year ('Breeding dogs should be screened every year'), blood tests for polyneuropathy and day-blindness carriers, puppies X-rayed for chondrodysplasia (paraphrase except the eye fragment) — merged into the rows above; day blindness not listed as a test (no verbatim test name)."
     }
   }
 }

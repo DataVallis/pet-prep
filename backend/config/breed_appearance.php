@@ -680,6 +680,12 @@
 | black; brown nose. Brown roan first with the highest weight (the portrait default, Claude's choice); weights unsourced →
 | `verified => false`.
 |
+| Alaskan Malamute (M5-R10-83, docs/research/dog-data alaskan_malamute.appearance):
+| "one of the oldest Arctic sledge dogs, is a powerful and substantially built dog" (FCI-Standard N° 243, S638); thick, coarse
+| guard coat, never long and soft; colours light grey through shadings to black, sable, sable to red, white underbody and
+| face markings (cap, bar / mask), or all white; brown almond eyes — blue eyes disqualify. Grey and white first with the
+| highest weight (the portrait default, Claude's choice); weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -3627,6 +3633,44 @@ return [
             'tail' => ['tapering tail carried scimitar-like, raised when alert'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'nose', 'eye_color', 'ear_carriage', 'tail'],
+    ],
+    // M5-R10-83 (docs/research/dog-data/data.json alaskan_malamute.appearance; runbook rules 2026-10-10: colours the
+    // standard lists — S638 light grey through shadings to black, sable, sable to red, always with white underbody and face
+    // markings, or all white; never blue eyes, never a long soft coat).
+    'alaskan_malamute' => [
+        'display_name' => 'Alaskan Malamute',
+        // Colour frequencies are in no source (alaskan_malamute.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 243 Alaskan Malamute (S638, https://WWW.FCI.BE/Nomenclature/Standards/243g05-en.pdf) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S638 "Males: 25 inches at the shoulders - 85 pounds (63,5 cm - 38 kg)."; S639 "Large"',
+            'build' => 'S638 "The Alaskan Malamute, one of the oldest Arctic sledge dogs, is a powerful and substantially built dog"',
+            'coat_length' => 'S638 "The Malamute has a thick, coarse guard coat, never long and soft."',
+            'coat_color' => 'S638 "The usual colours range from light grey through intermediate shadings to black, sable, and shading of sable to red." "The only solid colour allowable is all-white." (weights unsourced)',
+            'head' => 'S638 "The head is broad and deep, not coarse or clumsy, but in proportion to the size of the dog."',
+            'ear_carriage' => 'S638 "The ears are triangular in shape and slightly rounded at tips."',
+            'eye_color' => 'S638 "Eyes are brown, almond shaped and of medium size."',
+            'tail' => 'S638 "The Malamute tail is well furred and has the appearance of a waving plume."',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'powerful, substantially built Arctic sledge dog with a deep chest and a strong, well-muscled body', 'weight' => 3], 'sturdy, heavy-boned freighting build'],
+            'coat_length' => ['thick, coarse guard coat over a dense woolly undercoat, standing off the body, never long and soft'],
+            // Standard colours (S638), always with a white underbody, legs and face markings; grey and white first with the
+            // highest weight → the register portrait (Claude's choice).
+            'coat_color' => [
+                ['value' => 'grey and white with a grey cap and white face markings', 'weight' => 40],
+                ['value' => 'black and white with a dark cap and white face markings', 'weight' => 25],
+                ['value' => 'sable and white with white face markings', 'weight' => 15],
+                ['value' => 'red and white with white face markings and a brown nose', 'weight' => 10],
+                ['value' => 'all white', 'weight' => 10],
+            ],
+            'head' => ['broad, deep head in proportion to the body, bulky muzzle'],
+            'ear_carriage' => ['erect, triangular ears slightly rounded at the tips'],
+            'eye_color' => ['brown, almond-shaped eyes of medium size'],
+            'tail' => ['well-furred tail carried over the back like a waving plume'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',

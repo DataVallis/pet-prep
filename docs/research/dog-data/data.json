@@ -42617,6 +42617,562 @@
       }
     }
   },
+  "alaskan_malamute": {
+    "_note": "Added 2026-10-31 (M5-R10-83, unattended run — appended after the Lagotto Romagnolo: AKC 2024 No. 79 'Alaskan Malamute', S174 full-list table fetched 2026-10-31 '79 | Alaskan Malamute'). Quotes as returned by the web-fetch tool on 2026-10-31 (short quotes, 125-character limit; fragments marked as such); paraphrase only in notes. Sources S637–S641 (reused S10, S11, S14, S24, S35, S45, S54, S123, S174). No health percentages anywhere. Identity from the FCI nomenclature (S637, No. 243, USA); appearance, colours and the desirable freighting sizes from FCI-Standard N° 243 (S638, 09.03.2023). The RKC Breeds A–Z page (thekennelclub.org.uk display.aspx?id=5105 and …/working/alaskan-malamute redirect to royalkennelclub.com/search/breeds-a-to-z/breeds/working/alaskan-malamute, also tried with a trailing slash) was refused by the fetch tool as not in provenance → no RKC key facts, no Breed Watch category, no RKC health-testing list; exercise, weight / height range, lifespan band and suitability from PDSA (S639), PetMD (S640, Zack Newman, reviewed by Barri J. Morrison, DVM, updated Jan. 10, 2023) and VCA (S641). Lifespan: the Dogs Trust McMillan 2024 table (S123) was refused by the fetch tool; the McMillan 2024 paper (S54) names the Alaskan Malamute only as a tip label of Fig. 5 (no number); no VetCompass median found; RKC page not reachable → closest row: the PDSA band 'Over 10 years' (S639), seeded verified=false (Samoyed precedent, M5-R10-57). No Woodgreen page found. Never hypoallergenic (PDSA: not the best pets for people with fur allergies). Names: FCI / AKC / RKC 'Alaskan Malamute' (S637, S174); nickname 'Mal' / 'Malamute'; Slovenian »aljaški malamut« (common Slovenian name; no KZS page checked — open for David).",
+    "identity": {
+      "value": "FCI No. 243, Group 5 Section 1 (Nordic Sledge Dogs), USA",
+      "unit": "—",
+      "source_id": "S637",
+      "quote": "ALASKAN MALAMUTE (243)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S637, as returned): 'ALASKAN MALAMUTE (243)', group 'n°5 - Spitz and primitive types', section 'Nordic Sledge Dogs', country of origin 'UNITED STATES OF AMERICA', definitive acceptance 5/13/1963; FR 'MALAMUTE DE L'ALASKA', DE 'ALASKAN MALAMUTE', ES 'MALAMUTE DE ALASKA'. FCI-Standard N° 243 (S638): origin 'U.S.A.', 'Group 5 Spitz and primitive types.', 'Section 1 Nordic Sledge Dogs.', utilisation 'Sledge dog.' USA is already in FCI_ORIGINS (US)."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S639",
+      "quote": "Large",
+      "confidence": "high",
+      "notes": "PDSA table 'Size' (S639). FCI (S638): 'a powerful and substantially built dog with deep chest and strong, well-muscled body.' (fragment). The RKC page (the usual size source) was not reachable."
+    },
+    "height": {
+      "pdsa": {
+        "value": {
+          "male": [
+            58,
+            64
+          ],
+          "female": [
+            58,
+            64
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S639",
+        "quote": "58-64 cm",
+        "confidence": "medium",
+        "notes": "PDSA table 'Height' (S639, average, one range for both sexes; stored per sex) — the game / register range. FCI-Standard N° 243 (S638) gives desirable freighting sizes only — 'Males: 25 inches at the shoulders - 85 pounds (63,5 cm - 38 kg).', 'Females: 23 inches at the shoulders - 75 pounds (58,5 cm - 34 kg).' — and 'There is a natural range in size in the breed.' VCA (S641) '23 - 25 inches' (58–64 cm) agrees.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                63.5,
+                63.5
+              ],
+              "female": [
+                58.5,
+                58.5
+              ]
+            },
+            "unit": "cm",
+            "source_id": "S638",
+            "quote": "Males: 25 inches at the shoulders - 85 pounds (63,5 cm - 38 kg).",
+            "notes": "FCI desirable freighting sizes (one value per sex, not a range)."
+          }
+        ]
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            34,
+            39
+          ],
+          "female": [
+            34,
+            39
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S639",
+        "quote": "34-39 kg",
+        "confidence": "medium",
+        "notes": "PDSA table 'Weight' (S639, average, one range for both sexes; stored per sex) — the game / register range. FCI (S638) desirable freighting sizes: males 38 kg, females 34 kg ('Females: 23 inches at the shoulders - 75 pounds (58,5 cm - 34 kg).'). PetMD (S640) 'weigh 75-85 pounds' (34–39 kg, our conversion) and VCA (S641) '75 - 85 pounds' agree.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                38,
+                38
+              ],
+              "female": [
+                34,
+                34
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S638",
+            "quote": "Males: 25 inches at the shoulders - 85 pounds (63,5 cm - 38 kg).",
+            "notes": "FCI desirable freighting sizes (one value per sex)."
+          },
+          {
+            "value": {
+              "male": [
+                34,
+                38.6
+              ],
+              "female": [
+                34,
+                38.6
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S640",
+            "quote": "Alaskan Malamutes typically grow to stand between 23-25 inches tall and weigh 75-85 pounds.",
+            "notes": "PetMD (S640); 75–85 lb = 34.0–38.6 kg (our conversion)."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "V (25–40 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 34–39 kg is in the 25–40 kg band. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 34–39 kg (S639) = 75–86 lb → 'Large (59–99 pounds)'. The game is unaffected (the puppy cap of 120 min is reached at 12 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Alaskan Malamute growth curve found."
+      }
+    },
+    "lifespan": {
+      "pdsa": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S639",
+        "quote": "Over 10 years",
+        "confidence": "medium",
+        "notes": "PDSA table 'Lifespan' (S639). The RKC band (the runbook's third option) could not be read (page not reachable). PetMD (S640) 'a lifespan of 10-14 years' (fragment); VCA (S641) '10 - 12 years' — alternatives (no median)."
+      },
+      "petmd": {
+        "value": "10–14",
+        "unit": "years",
+        "source_id": "S640",
+        "quote": "a lifespan of 10-14 years",
+        "confidence": "medium",
+        "notes": "PetMD (S640, fragment). VCA (S641) '10 - 12 years'. Exported as the span next to the PDSA lower bound; not used for the senior boundary."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "McMillan et al. 2024 (S54): the Alaskan Malamute appears only as a tip label of the Fig. 5 phylogeny ('Samoyed Alaskan Malamute Siberian Husky'), without a number (re-checked 2026-10-31 in the Nature PDF); the breed estimates are in Supplementary Table 3 (not reached). The Dogs Trust table of the same data (S123) was refused by the fetch tool as not in provenance (2026-10-31). UNSOURCED value → open for David (check the S123 row)."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × PDSA lower bound 10 y (S639) → 0.75 × 10 = 7.5 y = 90 months. The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value in this run: S123 not reachable, no VetCompass median, RKC page not reachable → closest row (Samoyed precedent): the PDSA band of the same form as the RKC band, seeded verified=false (Claude's suggestion, open for David). PetMD / VCA lower bound 10 y (S640, S641) gives the same 90. Alternative: Dogs Trust > 7 y (S14) = 84.",
+        "derived_from": [
+          "S11",
+          "S639"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≥ 120",
+        "unit": "minutes/day",
+        "source_id": "S639",
+        "quote": "Malamutes need a minimum of two hours of heavy exercise every day.",
+        "confidence": "high",
+        "notes": "PDSA (S639) — the RKC page (preferred) was not reachable. PetMD (S640): 'They need lots of exercise to be happy.' (no minutes); VCA (S641): 'Requires a very long walk or jog, or a long run in an enclosed area, every day.' (no minutes)."
+      },
+      "daily_text": {
+        "value": "a very long walk or jog, or a long run in an enclosed area, every day",
+        "unit": "—",
+        "source_id": "S641",
+        "quote": "Requires a very long walk or jog, or a long run in an enclosed area, every day.",
+        "confidence": "high",
+        "notes": "VCA (S641)."
+      },
+      "heat": {
+        "value": "can have trouble in hot weather; more sensitive to overheating",
+        "unit": "—",
+        "source_id": "S640",
+        "quote": "Alaskan Malamutes can have trouble in hot weather because of their thick coat.",
+        "confidence": "high",
+        "notes": "PetMD (S640). PDSA (S639): in very hot weather they are more sensitive to overheating because of their thick coats (paraphrase). Basis of heat_sensitive. No heat task: no frequency in the source (the M5-R14 heat rule is for flat-faced breeds only)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "affectionate, friendly, not a one-man dog; playful, dignified after maturity",
+        "unit": "—",
+        "source_id": "S638",
+        "quote": "an affectionate, friendly dog, not a « one-man » dog",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 243 (S638, fragment); also 'playful in invitation, but generally impressive by his dignity after maturity.' (fragment). PDSA (S639): 'Although their personalities can be a huge draw for owners, they can be extremely challenging' (fragment)."
+      },
+      "family": {
+        "value": "suits active adults without children or families with older children or teenagers",
+        "unit": "—",
+        "source_id": "S639",
+        "quote": "Although Malamutes can be friendly dogs, they suit active adults without children or families with older children or teenagers the best.",
+        "confidence": "high",
+        "notes": "PDSA (S639). PetMD (S640): 'can be excellent companions for families' (fragment) with the caveat below. No family_pet / children chip (only older children)."
+      },
+      "small_children": {
+        "value": "may knock over or injure small children; might be too much for young children",
+        "unit": "—",
+        "source_id": "S639",
+        "quote": "This is because of their large size and strong-will they could knock over or injure small children accidentally.",
+        "confidence": "high",
+        "notes": "PDSA (S639); also 'Malamutes shouldn’t be left unsupervised with children, vulnerable or older people, especially as they’re so energetic.' PetMD (S640): 'Alaskan Malamutes might be too much for young children because of their large size and high energy.' VCA (S641) rates the breed 2 of 5 with children (paraphrase). Basis of not_for_small_children."
+      },
+      "experienced_owner": {
+        "value": "extremely challenging — probably not suited to first-time owners",
+        "unit": "—",
+        "source_id": "S639",
+        "quote": "they can be extremely challenging so probably aren't well suited to first time dog owners.",
+        "confidence": "high",
+        "notes": "PDSA (S639, fragment); large size and strong will (S639 small_children quote). Basis of experienced_owner (a large, strong-willed dog)."
+      },
+      "time_alone": {
+        "value": "never leave alone for more than four hours; some cannot manage that long; destructive when bored or lonely",
+        "unit": "—",
+        "source_id": "S639",
+        "quote": "You should never leave your dog on their own for more than four hours,",
+        "confidence": "high",
+        "notes": "PDSA (S639, fragment); some Malamutes cannot manage that long (paraphrase); 'A bored or lonely Malamute will wreak havoc on your house and garden.' Basis of needs_company."
+      },
+      "other_pets": {
+        "value": "very strong prey drive — careful around smaller animals; not left alone with smaller pets",
+        "unit": "—",
+        "source_id": "S639",
+        "quote": "Malamutes have a very strong prey drive so you need to be careful with them around smaller animals.",
+        "confidence": "high",
+        "notes": "PDSA (S639); 'we don't advise leaving them alone with smaller pets.' (fragment). PetMD (S640): '…as Malamutes can have a high prey drive.' (fragment). VCA (S641): 'can be aggressive toward strange dogs or animals.' (fragment). Basis of chases_small_pets."
+      },
+      "socialisation": {
+        "value": "socialise as a puppy with other dogs, people and experiences",
+        "unit": "—",
+        "source_id": "S639",
+        "quote": "Remember to socialise your Malamute as a puppy with lots of other dogs, different people and types of experiences.",
+        "confidence": "high",
+        "notes": "PDSA (S639). PetMD (S640): 'Pet parents need to socialize their Alaskan Malamute puppy early, so they get along with other pets...' (fragment). → proposed_game_parameters.alaskan_malamute.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "chewing": {
+        "value": "destructive, especially when left alone and bored",
+        "unit": "—",
+        "source_id": "S639",
+        "quote": "They can be destructive, especially if left alone because they can get bored easily.",
+        "confidence": "high",
+        "notes": "PDSA (S639) — tied to being left alone → covered by needs_company; no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific appetite statement found → no food_motivated_weight tag. PDSA (S639): 'You’ll need to feed them a complete, commercial dog food to keep them slim and healthy.'"
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch category unknown (RKC page not reachable); no veterinary association names the breed for conformation-related welfare problems → no welfare chip. Breeder checklist: AKC national breed club list (K32): hip evaluation, ophthalmologist evaluation, DNA test for Alaskan Malamute polyneuropathy (AMPN); PDSA (S639) adds the BVA/KC hip scheme, a yearly BVA eye screening and blood / DNA tests for polyneuropathy and day blindness (paraphrase).",
+      "hip_dysplasia": {
+        "value": "hip dysplasia — hip screening of breeding dogs",
+        "unit": "—",
+        "source_id": "S639",
+        "quote": null,
+        "confidence": "high",
+        "notes": "PDSA (S639): hip joints that do not fit together well, leading to arthritis; breeding dogs X-rayed under the BVA/Kennel Club Hip Dysplasia Scheme (paraphrase — not returned verbatim). PetMD (S640) lists hip and elbow dysplasia. AKC breed club (K32) 'Hip Evaluation'. Register health key hip_dysplasia."
+      },
+      "hypothyroidism": {
+        "value": "hypothyroidism — an underactive thyroid",
+        "unit": "—",
+        "source_id": "S640",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S640) and PDSA (S639) list hypothyroidism (paraphrase; affects weight, skin and energy). Register health key hypothyroidism."
+      },
+      "cataracts": {
+        "value": "cataracts — yearly eye screening of breeding dogs",
+        "unit": "—",
+        "source_id": "S639",
+        "quote": "Breeding dogs should be screened every year",
+        "confidence": "high",
+        "notes": "PDSA (S639, fragment — BVA Eye Scheme). PetMD (S640) lists cataracts. AKC breed club (K32) 'Ophthalmologist Evaluation'. Register health key cataracts."
+      },
+      "chondrodysplasia": {
+        "value": "chondrodysplasia — abnormal cartilage and bone growth",
+        "unit": "—",
+        "source_id": "S639",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S639): abnormal cartilage and bone development; puppies can be X-rayed between 5 and 12 weeks old (paraphrase). PetMD (S640) lists chondrodysplasia. New register health key chondrodysplasia (calm sentence, no numbers)."
+      },
+      "polyneuropathy": {
+        "value": "Alaskan Malamute polyneuropathy — an inherited nerve disease; DNA test of breeding dogs",
+        "unit": "—",
+        "source_id": "S639",
+        "quote": null,
+        "confidence": "high",
+        "notes": "PDSA (S639): a genetic nerve disorder; breeding dogs blood-tested for carrier status (paraphrase). PetMD (S640) lists polyneuropathy. AKC breed club (breeder-checklist K32): 'Alaskan Malamute Polyneuropathy (AMPN) - DNA Test'. New register health key polyneuropathy (calm sentence, no numbers)."
+      },
+      "day_blindness": {
+        "value": "day blindness — sensitivity to bright light",
+        "unit": "—",
+        "source_id": "S639",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S639): day blindness affects vision in bright light; breeding dogs blood-tested for carrier status through Kennel Club DNA screening (paraphrase). Not a register key (paraphrase only)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 50,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "50 | Alaskan Malamute",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-31): rank 50 'Alaskan Malamute' (table row '| 50 | Alaskan Malamute |'), tier 'Average Working/Obedience Intelligence' (ranks 40–54). Coren's own article (S34) not re-read. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 25 to 40 repetitions.; Obey first command: 50% of the time or better.;",
+        "confidence": "medium",
+        "notes": "Tier 'Average Working/Obedience Intelligence' = ranks 40–54 (S35, as returned for the Boston Terrier). Tier definitions from Wikipedia; verify in book."
+      },
+      "training_notes": {
+        "value": "large and strong-willed; challenging for first-time owners",
+        "unit": "—",
+        "source_id": "S639",
+        "quote": "This is because of their large size and strong-will they could knock over or injure small children accidentally.",
+        "confidence": "medium",
+        "notes": "PDSA (S639). The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.alaskan_malamute.learning_multiplier (1.0, runbook rule: Average tier, rank 50).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "one of the oldest Arctic sledge dogs; powerful, substantially built, deep chest, strong well-muscled body",
+        "unit": "—",
+        "source_id": "S638",
+        "quote": "The Alaskan Malamute, one of the oldest Arctic sledge dogs, is a powerful and substantially built dog",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 243 (S638, fragment); continues 'with deep chest and strong, well-muscled body.'"
+      },
+      "colours": {
+        "value": [
+          "grey and white",
+          "black and white",
+          "sable and white",
+          "red and white",
+          "all white"
+        ],
+        "unit": "list",
+        "source_id": "S638",
+        "quote": "The usual colours range from light grey through intermediate shadings to black, sable, and shading of sable to red.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 243 (S638, as returned); 'The only solid colour allowable is all-white.'; 'White is always the predominant colour on underbody, parts of legs, feet, and part of face markings.'; face markings 'a cap over the head, the face either all white or marked with a bar and/or a mask.' 'In all coat colours, except reds, the nose, lips, and eye rim pigmentation is black.' 'Blue eyes are a disqualifying fault.' Listed in game order (grey and white first = the portrait default, Claude's choice: the most typical shading)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Grey and white first with the highest weight (the portrait default), then black and white, sable and white, red and white, all white."
+      },
+      "coat": {
+        "value": "thick, coarse guard coat, never long and soft; dense, oily, woolly undercoat",
+        "unit": "—",
+        "source_id": "S638",
+        "quote": "The Malamute has a thick, coarse guard coat, never long and soft.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 243 (S638); 'The undercoat is dense, from one to two inches in depth, oily and woolly.'"
+      },
+      "head": {
+        "value": "broad and deep head, in proportion to the dog; cap and bar / mask face markings",
+        "unit": "—",
+        "source_id": "S638",
+        "quote": "The head is broad and deep, not coarse or clumsy, but in proportion to the size of the dog.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 243 (S638)."
+      },
+      "ears": {
+        "value": "triangular, slightly rounded at the tips",
+        "unit": "—",
+        "source_id": "S638",
+        "quote": "The ears are triangular in shape and slightly rounded at tips.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 243 (S638)."
+      },
+      "eyes": {
+        "value": "brown, almond-shaped, medium size; never blue",
+        "unit": "—",
+        "source_id": "S638",
+        "quote": "Eyes are brown, almond shaped and of medium size.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 243 (S638); 'Blue eyes are a disqualifying fault.'"
+      },
+      "tail": {
+        "value": "well furred, carried like a waving plume",
+        "unit": "—",
+        "source_id": "S638",
+        "quote": "The Malamute tail is well furred and has the appearance of a waving plume.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 243 (S638)."
+      },
+      "nose": {
+        "value": "black (brown in reds)",
+        "unit": "—",
+        "source_id": "S638",
+        "quote": "In all coat colours, except reds, the nose, lips, and eye rim pigmentation is black.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 243 (S638)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = PDSA (S639), PetMD (S640), VCA (S641). The RKC breed page (the usual suitability source) was not reachable on 2026-10-31 → no rkc_* rows.",
+      "pdsa_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S639",
+        "quote": "Large",
+        "confidence": "high",
+        "notes": "PDSA table 'Size' (S639)."
+      },
+      "pdsa_exercise": {
+        "value": "a minimum of two hours of heavy exercise every day",
+        "unit": "—",
+        "source_id": "S639",
+        "quote": "Malamutes need a minimum of two hours of heavy exercise every day.",
+        "confidence": "high",
+        "notes": "PDSA (S639). Basis of active_family and long_daily_exercise."
+      },
+      "pdsa_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S639",
+        "quote": "Because their coats are so thick they will need daily brushing",
+        "confidence": "high",
+        "notes": "PDSA (S639, fragment) — 'daily brushing' read as the category 'Every day' (our wording; quote verbatim); may need brushing twice a day in spring and autumn (seasonal, not modelled). PetMD (S640) 'These dogs have a thick double coat that needs daily brushing.' agrees; VCA (S641) 'The coat needs weekly brushing---more when shedding.' is an alternative. → brushing 7× a week (M5-R13 rule 'daily' → 7). Basis of frequent_grooming."
+      },
+      "pdsa_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S639",
+        "quote": "Malamutes shed a lot and aren't the best pets for house proud owners or people with fur allergies.",
+        "confidence": "high",
+        "notes": "Read as 'sheds: yes' (our wording; quote verbatim). PetMD (S640) shedding control by frequent brushing (fragment). Basis of sheds; never low_shedding, never hypoallergenic."
+      },
+      "pdsa_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S639",
+        "quote": "Over 10 years",
+        "confidence": "medium",
+        "notes": "PDSA table 'Lifespan' (S639). Not shorter_lifespan (that needs 'Under 10 years')."
+      },
+      "pdsa_space": {
+        "value": "the biggest of the sled dog breeds; needs lots of space",
+        "unit": "—",
+        "source_id": "S639",
+        "quote": "They are the biggest of the sled dog breeds and need lots of space.",
+        "confidence": "high",
+        "notes": "PDSA (S639). No large_home chip — only from the RKC 'Large house' key fact (not reachable)."
+      },
+      "pdsa_professional_grooming": {
+        "value": "professional grooming around once every six months",
+        "unit": "—",
+        "source_id": "S639",
+        "quote": "You might like to get your Malamute professionally groomed around once every six months",
+        "confidence": "high",
+        "notes": "PDSA (S639, fragment as returned). 'Every six months' is longer than every care period of DOG_CARE_TASKS (longest 12 weeks) → no groomer reminder (German Wirehaired Pointer precedent 'twice a year'); a fact in the register text."
+      },
+      "pdsa_meal_gap": {
+        "value": "leave a gap after eating and before exercising (GDV)",
+        "unit": "—",
+        "source_id": "S639",
+        "quote": "Remember to leave a gap after eating and before exercising, as this is thought to reduce the risks of GDV.",
+        "confidence": "high",
+        "notes": "PDSA (S639); no length of the gap given. → proposed_game_parameters.alaskan_malamute.meal_exercise_gap (M5-R16)."
+      },
+      "petmd_grooming": {
+        "value": "daily brushing of the thick double coat",
+        "unit": "—",
+        "source_id": "S640",
+        "quote": "These dogs have a thick double coat that needs daily brushing.",
+        "confidence": "high",
+        "notes": "PetMD (S640)."
+      },
+      "petmd_bath": {
+        "value": "a bath every 6–8 weeks",
+        "unit": "—",
+        "source_id": "S640",
+        "quote": "Along with daily maintenance with a slicker brush, Alaskan Malamutes need a bath every 6-8 weeks.",
+        "confidence": "high",
+        "notes": "PetMD (S640). → the parent's bath reminder every 6 weeks (M5-R19 rule '6–8 weeks' → 42 days)."
+      },
+      "petmd_ears": {
+        "value": "check the ears once a week",
+        "unit": "—",
+        "source_id": "S640",
+        "quote": "Pet parents should check their Alaskan Malamute’s ears once a week to make sure they’re free from infection.",
+        "confidence": "high",
+        "notes": "PetMD (S640); 'The AMCA recommends using disposable ear wipes to keep your pup’s ears clean.' → the child's ear-care mini-game once a week (M5-R20; 'checked weekly' precedent: American Cocker Spaniel, Giant Schnauzer). Teeth and nails: no source with a frequency → no task."
+      },
+      "vca_grooming": {
+        "value": "weekly brushing — more when shedding",
+        "unit": "—",
+        "source_id": "S641",
+        "quote": "The coat needs weekly brushing---more when shedding.",
+        "confidence": "high",
+        "notes": "VCA (S641) — alternative to the PDSA / PetMD daily brushing."
+      },
+      "vca_children": {
+        "value": "2 out of 5 with children",
+        "unit": "—",
+        "source_id": "S641",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "VCA (S641) rating (paraphrase) — background only, never a chip or a number in the app."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -63836,6 +64392,333 @@
         "confidence": "high",
         "notes": "Colours from FCI (S631) / RKC (S633); brown roan as the portrait default (Claude's choice, weights unsourced). Black coat, patches or pigmentation disqualify (S631, S634). Moderate, natural look (no show styling, S631).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): brown roan is the portrait default; natural, evenly clipped curly coat; brown nose; never black"
+      }
+    },
+    "alaskan_malamute": {
+      "_note": "Unattended run M5-R10-83 (2026-10-31): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry — except the senior boundary (closest row, Claude's suggestion, seeded verified=false). The RKC breed page was not reachable → exercise from PDSA (S639, a minimum of two hours). Built: daily brushing (PDSA S639 / PetMD S640 'daily brushing', M5-R13 → 7), puppy socialisation (PDSA S639 quote, M5-R17), the digestion warning (PDSA S639 gap after eating, GDV, M5-R16), the child's ear-care mini-game once a week (PetMD S640 'check … ears once a week', M5-R20) and the parent's bath reminder every 6 weeks (PetMD S640 'a bath every 6-8 weeks', M5-R19). No groomer reminder (PDSA 'around once every six months' is longer than every care period), no tooth / nail task (no A/B frequency), no heat task (no frequency; the heat rule is for flat-faced breeds). New register health keys chondrodysplasia, polyneuropathy; no new vocabulary key. In marketing (not a welfare breed). Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S639",
+        "quote": "Malamutes need a minimum of two hours of heavy exercise every day.",
+        "confidence": "high",
+        "notes": "PDSA 'a minimum of two hours' (S639) — the RKC page (preferred) was not reachable. Rule: one number N ('minimum N') → N = 120. PetMD (S640) / VCA (S641) give no minutes.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (PDSA S639 'a minimum of two hours of heavy exercise every day'; RKC page not reachable)"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S639",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + PDSA lower bound 'Over 10 years', S639 — the McMillan 2024 table S123 was not reachable, no VetCompass median, the RKC page was not reachable). The senior value is Claude's suggestion — see senior_boundary_months.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S639"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 90 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+      },
+      "senior_boundary_months": {
+        "value": 90,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "round(0.75 × 10 y × 12) = 90 (AAHA last 25 % of lifespan S11 × PDSA lower bound 10 y, S639; PetMD S640 '10-14 years' and VCA S641 '10 - 12 years' have the same lower bound). The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value in this run: the Dogs Trust table S123 and the RKC page were refused by the fetch tool, the McMillan 2024 paper (S54) has the breed only in Supplementary Table 3 (not reached), no VetCompass paper. Closest rule row (Samoyed precedent) = the PDSA band of the same form as the RKC band. Alternative: Dogs Trust > 7 y (S14) = 84. Seeded with verified=false (also the senior arrival age); the seeder is insert-only, so a later change needs a Filament edit or a data migration.",
+        "derived_from": [
+          "S11",
+          "S639"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "predlog Claude 2026-10-31 (najbližja vrstica pravila runbooka, M5-R10-83) — čaka Davida; ni potrjeno"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36); senior 90 follows the unconfirmed senior boundary (senior_boundary_months)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 50 (S35), tier 'Average' (40–54) → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 50, Average tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S639",
+        "quote": "Because their coats are so thick they will need daily brushing",
+        "confidence": "high",
+        "notes": "alaskan_malamute.suitability.pdsa_grooming. PDSA 'daily brushing' → 7 (runbook dog-grooming rule 'daily' → 7); PetMD (S640) 'needs daily brushing' agrees. VCA (S641) 'weekly brushing---more when shedding' → alternative. Built in M5-R13; matted coat at ceil(7 / 2) = 4 missed.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S641",
+            "quote": "The coat needs weekly brushing---more when shedding.",
+            "notes": "VCA (S641), alaskan_malamute.suitability.vca_grooming."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden) (PDSA »daily brushing«; PetMD »needs daily brushing«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S639",
+        "quote": "Remember to socialise your Malamute as a puppy with lots of other dogs, different people and types of experiences.",
+        "confidence": "high",
+        "notes": "alaskan_malamute.behaviour.socialisation (PDSA S639). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, PDSA S639)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S639",
+        "quote": "Remember to leave a gap after eating and before exercising, as this is thought to reduce the risks of GDV.",
+        "confidence": "high",
+        "notes": "PDSA (S639), alaskan_malamute.suitability.pdsa_meal_gap. The source gives no length of the gap. Built in M5-R16 (David 2026-10-12): for 60 minutes after a meal the child app shows a calm 'wait with the walk, the dog is digesting' warning; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "ear_care": {
+        "value": "ears checked once a week",
+        "unit": "care routine (sourced need)",
+        "source_id": "S640",
+        "quote": "Pet parents should check their Alaskan Malamute’s ears once a week to make sure they’re free from infection.",
+        "confidence": "high",
+        "notes": "PetMD (S640), alaskan_malamute.suitability.petmd_ears. Built: the child's ear-care mini-game once a program week (BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R20; 'checked weekly' precedent: American Cocker Spaniel, Giant Schnauzer).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »once a week« → 1× na teden"
+      },
+      "bathing": {
+        "value": "a bath every 6–8 weeks",
+        "unit": "baths (sourced need)",
+        "source_id": "S640",
+        "quote": "Along with daily maintenance with a slicker brush, Alaskan Malamutes need a bath every 6-8 weeks.",
+        "confidence": "high",
+        "notes": "PetMD (S640), alaskan_malamute.suitability.petmd_bath. Built: the parent's bath reminder every 6 program weeks (BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R19; never scored).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »every 6-8 weeks« → 6–8 tednov = 42 dni"
+      },
+      "professional_grooming": {
+        "value": "professional grooming around once every six months",
+        "unit": "groomer visit (sourced need)",
+        "source_id": "S639",
+        "quote": "You might like to get your Malamute professionally groomed around once every six months",
+        "confidence": "high",
+        "notes": "PDSA (S639), alaskan_malamute.suitability.pdsa_professional_grooming. 'Every six months' is longer than every care period (longest 12 program weeks) → no reminder in the 12-week challenge (German Wirehaired Pointer precedent 'twice a year'); a fact in the register text.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): pogostost daljša od 12-tedenskega izziva → brez opomnika"
+      },
+      "suitability_tags": {
+        "_note": "Tags for backend/config/breed_suitability.php (M5-R10-83); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic, never low_shedding.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S639"
+            ],
+            "refs": [
+              "alaskan_malamute.exercise.adult",
+              "alaskan_malamute.suitability.pdsa_exercise"
+            ],
+            "quote": "S639 'Malamutes need a minimum of two hours of heavy exercise every day.'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S639"
+            ],
+            "refs": [
+              "alaskan_malamute.exercise.adult",
+              "alaskan_malamute.suitability.pdsa_exercise"
+            ],
+            "quote": "S639 'Malamutes need a minimum of two hours of heavy exercise every day.'"
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S639"
+            ],
+            "refs": [
+              "alaskan_malamute.behaviour.experienced_owner"
+            ],
+            "quote": "S639 'they can be extremely challenging so probably aren't well suited to first time dog owners.'"
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S639"
+            ],
+            "refs": [
+              "alaskan_malamute.behaviour.small_children"
+            ],
+            "quote": "S639 'This is because of their large size and strong-will they could knock over or injure small children accidentally.'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S639"
+            ],
+            "refs": [
+              "alaskan_malamute.behaviour.time_alone"
+            ],
+            "quote": "S639 'You should never leave your dog on their own for more than four hours,'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S639"
+            ],
+            "refs": [
+              "alaskan_malamute.suitability.pdsa_shedding"
+            ],
+            "quote": "S639 'Malamutes shed a lot and aren't the best pets for house proud owners or people with fur allergies.'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S639",
+              "S640"
+            ],
+            "refs": [
+              "alaskan_malamute.suitability.pdsa_grooming",
+              "alaskan_malamute.suitability.petmd_grooming"
+            ],
+            "quote": "S639 'Because their coats are so thick they will need daily brushing'; S640 'These dogs have a thick double coat that needs daily brushing.'"
+          },
+          {
+            "tag": "heat_sensitive",
+            "source_ids": [
+              "S640"
+            ],
+            "refs": [
+              "alaskan_malamute.exercise.heat"
+            ],
+            "quote": "S640 'Alaskan Malamutes can have trouble in hot weather because of their thick coat.'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S639"
+            ],
+            "refs": [
+              "alaskan_malamute.behaviour.other_pets"
+            ],
+            "quote": "S639 'Malamutes have a very strong prey drive so you need to be careful with them around smaller animals.'",
+            "decision": "potrdil David 2026-10-12: nova oznaka »močan lovski nagon — lahko lovi manjše živali« — citat iz vnosa te pasme navaja zelo močan lovski nagon (na koncu seznama »Upoštevajte«)"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "PDSA: suits active adults without children or families with older children or teenagers (S639); PetMD 'can be excellent companions for families' only as a fragment with a young-children caveat (S640) → no suits chip (Akita precedent).",
+          "children": "Only older children / teenagers (S639); VCA 2 of 5 with children (S641) → not_for_small_children.",
+          "small_children": "PDSA: could knock over or injure small children (S639).",
+          "first_time_owner": "PDSA: probably not suited to first-time owners (S639).",
+          "apartment": "No RKC 'Flat/ Apartment' (RKC page not reachable); PDSA: needs lots of space (S639).",
+          "large_home": "Only from the RKC key fact 'Large house' (runbook) — not reachable; PDSA 'need lots of space' stays in the register text.",
+          "other_pets": "Very strong prey drive (S639) → chases_small_pets.",
+          "low_shedding": "PDSA 'Malamutes shed a lot' (S639).",
+          "hypoallergenic": "Never a tag (runbook); PDSA: not the best pets for people with fur allergies (S639).",
+          "chews_when_bored": "PDSA destructiveness is tied to being left alone (S639) → covered by needs_company.",
+          "food_motivated_weight": "No source.",
+          "shorter_lifespan": "PDSA 'Over 10 years' (S639) — criterion is 'Under 10 years'.",
+          "needs_mental_stimulation": "PDSA asks for playtime and training to keep the mind active (paraphrase only) → no chip.",
+          "welfare": "No veterinary association names the breed for conformation-related welfare problems; RKC Breed Watch category unknown (page not reachable) → no welfare chip."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family; consider long_daily_exercise, experienced_owner, not_for_small_children, needs_company, sheds, frequent_grooming, heat_sensitive, chases_small_pets"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S639",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92); RKC Breed Watch category unknown (page not reachable). Marketing never presents the Alaskan Malamute as hypoallergenic, low-shedding, a low-exercise dog, a dog for small children or first-time owners, a dog to leave alone for long or a dog for hot climates (S639, S640).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Alaskan Malamute, grey and white (default): light to mid grey shading on the back with white underbody, legs, feet and face markings (cap, bar / mask); powerful, substantially built Arctic sledge dog with a deep chest; thick, coarse guard coat over a dense woolly undercoat, never long and soft; broad, deep head; brown almond eyes of medium size, never blue; triangular erect ears slightly rounded at the tips; well-furred tail carried like a waving plume over the back; black nose (brown only in reds)",
+        "unit": "—",
+        "source_id": "S638",
+        "quote": "The usual colours range from light grey through intermediate shadings to black, sable, and shading of sable to red.",
+        "confidence": "high",
+        "notes": "Colours of the FCI standard (S638): grey, black, sable, red shadings with white underbody / markings, or all white; blue eyes disqualify. Weights unsourced in prompts. Grey and white as the portrait default: the most typical shading (Claude).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): grey and white is the portrait default; standard colours only, never blue eyes, never merle or a long soft coat"
       }
     }
   }

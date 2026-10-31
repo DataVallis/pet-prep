@@ -52,7 +52,7 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest / WeimaranerBreedTest / ItalianGreyhoundBreedTest / GiantSchnauzerBreedTest / BloodhoundBreedTest / AkitaBreedTest / CardiganWelshCorgiBreedTest / GermanWirehairedPointerBreedTest / SaintBernardBreedTest / StaffordshireBullTerrierBreedTest / AiredaleTerrierBreedTest / RussellTerrierBreedTest / BullmastiffBreedTest / ChineseCrestedBreedTest / NovaScotiaDuckTollingRetrieverBreedTest / CairnTerrierBreedTest / BullTerrierBreedTest / MiniaturePinscherBreedTest / PyreneanMountainDogBreedTest / SoftCoatedWheatenTerrierBreedTest / IrishWolfhoundBreedTest / AmericanStaffordshireTerrierBreedTest / LagottoRomagnoloBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest / WeimaranerBreedTest / ItalianGreyhoundBreedTest / GiantSchnauzerBreedTest / BloodhoundBreedTest / AkitaBreedTest / CardiganWelshCorgiBreedTest / GermanWirehairedPointerBreedTest / SaintBernardBreedTest / StaffordshireBullTerrierBreedTest / AiredaleTerrierBreedTest / RussellTerrierBreedTest / BullmastiffBreedTest / ChineseCrestedBreedTest / NovaScotiaDuckTollingRetrieverBreedTest / CairnTerrierBreedTest / BullTerrierBreedTest / MiniaturePinscherBreedTest / PyreneanMountainDogBreedTest / SoftCoatedWheatenTerrierBreedTest / IrishWolfhoundBreedTest / AmericanStaffordshireTerrierBreedTest / LagottoRomagnoloBreedTest / AlaskanMalamuteBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
  * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever / Samoyed / Scottish Terrier / Weimaraner / Italian Greyhound / Giant Schnauzer / Bloodhound / Akita / Cardigan Welsh Corgi / German Wirehaired Pointer / Saint Bernard / Staffordshire Bull Terrier / Airedale Terrier / Russell Terrier / Bullmastiff / Chinese Crested / Nova Scotia Duck Tolling Retriever / Cairn Terrier / Bull Terrier / Miniature Pinscher / Pyrenean Mountain Dog rows
  * against data.json).
@@ -995,6 +995,25 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_LAGOTTO_ROMAGNOLO = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-82)';
 
     /**
+     * M5-R10-83 Alaskan Malamute (unattended run 2026-10-31, data.json
+     * proposed_game_parameters.alaskan_malamute.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 120 min (PDSA S639 "a
+     * minimum of two hours of heavy exercise every day"; RKC page not reachable), senior 90 min, puppy 10 min × age capped
+     * at 120, stages young 9 / adult 36, arrival 2 / 9 / 36, learning multiplier 1.0 (Coren rank 50, Average); care rates
+     * the Border Collie's. The senior boundary uses the closest rule row (PDSA lower bound "Over 10 years", S639 — no
+     * McMillan 2024 / VetCompass median / RKC band reachable) and is NOT covered by the confirmation: see
+     * PROPOSED_R10_ALASKAN_MALAMUTE_SENIOR.
+     */
+    public const CONFIRMED_R10_ALASKAN_MALAMUTE = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-83)';
+
+    /**
+     * M5-R10-83 Alaskan Malamute senior boundary / senior arrival (90 months): Claude's suggestion from the closest rule row
+     * (0.75 × PDSA lower bound 10 y, S639 — Samoyed precedent), verified=false until David decides (data.json
+     * proposed_game_parameters.alaskan_malamute.senior_boundary_months).
+     */
+    public const PROPOSED_R10_ALASKAN_MALAMUTE_SENIOR = 'predlog Claude 2026-10-31 (najbližja vrstica pravila runbooka, M5-R10-83) — čaka Davida';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1257,6 +1276,10 @@ class BreedStageParamsSeeder extends Seeder
             'groomer_visit' => [1, 'six_weeks', 'S636', 'professional grooming every six to eight weeks is essential to keep the coat in good condition.', 'proposed_game_parameters.lagotto_romagnolo.professional_grooming', '"every six to eight weeks" → the lower bound, 6 weeks'],
             'bath' => [1, 'month', 'S635', 'Bathe them up to once a month', 'proposed_game_parameters.lagotto_romagnolo.bathing', '"up to once a month" → every 4 weeks (ears only "whenever they spend time in water" — conditional; teeth and nails have no A/B number → no task)'],
         ],
+        'alaskan_malamute' => [
+            'ear_cleaning' => [1, 'week', 'S640', 'Pet parents should check their Alaskan Malamute’s ears once a week to make sure they’re free from infection.', 'proposed_game_parameters.alaskan_malamute.ear_care', '"once a week" → once a week'],
+            'bath' => [1, 'six_weeks', 'S640', 'Along with daily maintenance with a slicker brush, Alaskan Malamutes need a bath every 6-8 weeks.', 'proposed_game_parameters.alaskan_malamute.bathing', '"every 6-8 weeks" → the lower bound, 6 weeks (groomer "around once every six months" is longer than every care period; teeth and nails have no A/B number → no task)'],
+        ],
     ];
 
     /**
@@ -1356,6 +1379,7 @@ class BreedStageParamsSeeder extends Seeder
         'irish_wolfhound' => [2, 'S619', 'Brushing them around twice a week should be more than enough to keep their coat in good condition.', 'high', false],
         'american_staffordshire_terrier' => [1, 'S629', 'Weekly brushing helps remove loose hair and maintain coat health.', 'high', false],
         'lagotto_romagnolo' => [2, 'S632', 'Grooming: More than once a week', 'low', true, self::PROPOSED_R13_LAGOTTO_ROMAGNOLO],
+        'alaskan_malamute' => [7, 'S639', 'Because their coats are so thick they will need daily brushing', 'high', false],
     ];
 
     /**
@@ -1401,6 +1425,7 @@ class BreedStageParamsSeeder extends Seeder
         'pyrenean_mountain_dog' => ['S604', 'Avoid vigorous exercise around mealtimes'],
         'irish_wolfhound' => ['S620', 'Do not let your Irish Wolfhound dog exercise right before or after eating.'],
         'american_staffordshire_terrier' => ['S628', 'always avoid exercise immediately after feeding'],
+        'alaskan_malamute' => ['S639', 'Remember to leave a gap after eating and before exercising, as this is thought to reduce the risks of GDV.'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -1492,13 +1517,14 @@ class BreedStageParamsSeeder extends Seeder
         'irish_wolfhound' => ['S620', 'Begin socializing your Irish Wolfhound puppy as soon as you bring them home.'],
         'american_staffordshire_terrier' => ['S628', 'socialization is important—especially for American Staffordshire puppies.'],
         'lagotto_romagnolo' => ['S635', 'A Lagotto can be remarkably shy and requires extensive socialization'],
+        'alaskan_malamute' => ['S639', 'Remember to socialise your Malamute as a puppy with lots of other dogs, different people and types of experiences.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2290,6 +2316,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-82 (docs/research/dog-data/data.json lagotto_romagnolo,
             // S630–S636; runbook rules in proposed_game_parameters.lagotto_romagnolo).
             BreedType::LagottoRomagnolo => self::lagottoRomagnoloProfile(),
+            // M5-R10-83 (docs/research/dog-data/data.json alaskan_malamute,
+            // S637–S641; runbook rules in proposed_game_parameters.alaskan_malamute).
+            BreedType::AlaskanMalamute => self::alaskanMalamuteProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -7982,6 +8011,91 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'lagotto_romagnolo.lifespan.rkc',
                 'quote' => 'Lifespan: Over 12 years',
                 'notes' => 'RKC breed page lower bound (S632). No McMillan 2024 row (Dogs Trust table S123) or VetCompass median; PetMD / Woodgreen 15–17 y (S635 / S636). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Alaskan Malamute (M5-R10-83). Stage boundaries young / adult, arrival ages, exercise minutes and the learning
+     * multiplier follow the runbook's standing rules (CONFIRMED_R10_ALASKAN_MALAMUTE); weight, growth, Coren rank and
+     * lifespan are sourced. The senior boundary is Claude's suggestion (PROPOSED_R10_ALASKAN_MALAMUTE_SENIOR, verified=false).
+     *
+     * @return array<string, mixed>
+     */
+    private static function alaskanMalamuteProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_ALASKAN_MALAMUTE;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S639', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.alaskan_malamute.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a large dog reaches adult weight at 15–18 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, [
+                    'unit' => 'months', 'source_id' => 'S11,S639', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.alaskan_malamute.senior_boundary_months', 'decision' => self::PROPOSED_R10_ALASKAN_MALAMUTE_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × PDSA lower bound "Over 10 years" (S639; PetMD S640 "10-14 years" and VCA S641 "10 - 12 years" have the same lower bound) = 7.5 y = 90 months. The Dogs Trust McMillan 2024 table (S123) and the RKC page could not be fetched; no VetCompass median. Alternative: Dogs Trust > 7 y (S14) → 84.',
+                ]],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.alaskan_malamute.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.alaskan_malamute.senior_boundary_months', 'decision' => self::PROPOSED_R10_ALASKAN_MALAMUTE_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 90 months (0.75 × 10 y, S639).',
+                ],
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (15–18 months for a large dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S639', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.alaskan_malamute.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Malamutes need a minimum of two hours of heavy exercise every day.',
+                'notes' => 'PDSA "a minimum of two hours of heavy exercise every day" (S639) → 120 min = 12,000 steps (runbook rule: "minimum N" → N; the RKC page was not reachable). VCA "a very long walk or jog, or a long run in an enclosed area, every day" (S641) agrees.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.alaskan_malamute.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[34.0, 39.0], [
+                'unit' => 'kg', 'source_id' => 'S639', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'alaskan_malamute.adult_weight.pdsa',
+                'quote' => '34-39 kg',
+                'notes' => 'PDSA average weight (S639), one range for both sexes. FCI-Standard N° 243 (S638) desirable freighting sizes: males 38 kg, females 34 kg; PetMD / VCA 75–85 lb (S640 / S641).',
+            ]],
+            'growth_end' => [[15, 18], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'alaskan_malamute.growth.adult_weight_reached',
+                'quote' => 'Large (59–99 pounds): 15–18 months',
+                'notes' => 'Size-class value, not breed-specific (34–39 kg = 75–86 lb, the Large class of S10; PDSA size "Large").',
+            ]],
+            'coren_rank' => [50, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'alaskan_malamute.trainability.coren_rank',
+                'quote' => '50 | Alaskan Malamute',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35, re-read 2026-10-31): rank 50 "Alaskan Malamute", tier "Average Working/Obedience Intelligence" (40–54). Verify in The Intelligence of Dogs.',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.alaskan_malamute.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 50, tier Average (40–54, S35) → 1.0. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10.0, [
+                'unit' => 'years', 'source_id' => 'S639', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'alaskan_malamute.lifespan.pdsa',
+                'quote' => 'Over 10 years',
+                'notes' => 'PDSA lower bound "Over 10 years" (S639); PetMD 10–14 y (S640), VCA 10–12 y (S641); no McMillan 2024 / VetCompass median reachable. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }
