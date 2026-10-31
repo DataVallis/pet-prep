@@ -44,3 +44,13 @@ synth pop 0.12 "0.5*sin(2*PI*(520*t-900*t*t))*exp(-30*t)"
 synth cue 0.34 "0.30*sin(2*PI*659.3*t)*exp(-7*t)*if(lt(t,0.15),1,0)+if(gte(t,0.13),0.34*sin(2*PI*880*(t-0.13))*exp(-7*(t-0.13))+0.06*sin(2*PI*1760*(t-0.13))*exp(-10*(t-0.13)),0)"
 # School treat (»hrust«): three tiny crunchy noise ticks under a decaying envelope.
 synth crunch 0.24 "0.42*(random(0)*2-1)*(exp(-60*t)+0.8*if(gte(t,0.07),exp(-60*(t-0.07)),0)+0.6*if(gte(t,0.14),exp(-60*(t-0.14)),0))"
+
+# GAMES_SPEC phase 2 / 4 (2026-10-31):
+# Wand 👀 cue: three soft rising "tip-tip-tip" notes (the cat crouches — hold still).
+synth crouch 0.62 "0.26*(if(lt(t,0.12),sin(2*PI*660*t)*sin(PI*t/0.12),0)+if(between(t,0.2,0.32),sin(2*PI*784*(t-0.2))*sin(PI*(t-0.2)/0.12),0)+if(between(t,0.4,0.6),sin(2*PI*988*(t-0.4))*sin(PI*(t-0.4)/0.2),0))"
+# Wand dodge ("švist"): a quick airy swish rising in brightness.
+synth swish 0.22 "0.24*(random(0)*2-1)*sin(PI*t/0.22)*(0.5+0.5*sin(2*PI*(9*t+30*t*t)))"
+# Cuddle purr: a very soft low rumble (25 Hz flutter on an 80 Hz tone).
+synth purr 0.5 "0.30*sin(2*PI*80*t)*(0.55+0.45*sin(2*PI*25*t))*sin(PI*t/0.5)"
+# A heart fills: a gentle two-tone "pling" (E6 → A6), short.
+synth heart 0.34 "0.28*sin(2*PI*1318.5*t)*exp(-10*t)+if(gte(t,0.07),0.24*sin(2*PI*1760*(t-0.07))*exp(-12*(t-0.07)),0)"

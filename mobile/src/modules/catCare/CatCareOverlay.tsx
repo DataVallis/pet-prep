@@ -17,6 +17,7 @@ import ScoopOverlay from '@/modules/catCare/ScoopOverlay';
 import { loadMessGames } from '@/modules/cleaning/loadMessGames';
 import ScratchingOverlay from '@/modules/catCare/ScratchingOverlay';
 import WandOverlay from '@/modules/catCare/WandOverlay';
+import { loadWandGameV2 } from '@/modules/catCare/wandV2/loadWandGameV2';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
 import type { ClockSources } from '@/modules/training/game';
 import { useAppStore } from '@/store/appStore';
@@ -56,6 +57,16 @@ function ScoopEntry({ view, onClose, reduceMotion }: { view: ChildPetView; onClo
   return <ScoopOverlay view={view} onClose={onClose} />;
 }
 
+/**
+ * GAMES_SPEC §5 (phase 2): the v2 hunt on the native layer; an older binary keeps the v1 minute.
+ * Decided once per opening (a binary can't gain the layer while running).
+ */
+function WandEntry({ view, onClose, reduceMotion, clock }: { view: ChildPetView; onClose: () => void; reduceMotion: boolean; clock?: ClockSources }) {
+  const [V2] = useState(() => loadWandGameV2());
+  if (V2 !== null) return <V2 view={view} onClose={onClose} reduceMotion={reduceMotion} clock={clock} />;
+  return <WandOverlay view={view} onClose={onClose} reduceMotion={reduceMotion} clock={clock} />;
+}
+
 export default function CatCareOverlay({ view, clock, reduceMotion }: CatCareOverlayProps) {
   const kind = useAppStore((s) => s.catOverlay);
   const close = useAppStore((s) => s.closeCatGame);
@@ -69,7 +80,7 @@ export default function CatCareOverlay({ view, clock, reduceMotion }: CatCareOve
   if (kind === null || !available) return null;
   switch (kind) {
     case 'wand':
-      return <WandOverlay view={view} onClose={close} reduceMotion={reduced} clock={clock} />;
+      return <WandEntry view={view} onClose={close} reduceMotion={reduced} clock={clock} />;
     case 'scoop':
       return <ScoopEntry view={view} onClose={close} reduceMotion={reduced} />;
     case 'grooming':

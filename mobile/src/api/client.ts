@@ -1196,6 +1196,30 @@ export const api = {
   startWand: () => apiRequest<unknown>('/api/child/pet/wand/start', { method: 'POST' }),
 
   /**
+   * POST /api/child/pet/wand/start {rules: 2} — the v2 hunt (GAMES_SPEC §5.2, ~25 s, stars): the
+   * session additionally carries `rules_version: 2`, `stalk_ms`, `crouch_cues_ms`, `calm_window_ms`,
+   * `calm_max_moves`, `dodge_window_ms`, `catch_window_ms`, `min_stars`, `max_stars`,
+   * `max_speed_pt_s`, `min_dodge_pt` (read with `wandV2/wandRules.ts#readWandV2Session`). Only the
+   * game-layer build sends it; an older build keeps `startWand()` (v1).
+   */
+  startWandV2: () =>
+    apiRequest<unknown>('/api/child/pet/wand/start', { method: 'POST', body: { rules: 2 } satisfies components['schemas']['StartWandRequest'] }),
+
+  /**
+   * POST /api/child/pet/wand/finish of a v2 hunt: every move also carries `in_zone` and `speed_ok`
+   * (a v2 move without them never earns a star). The v2 `result` has `stars`, `dodges[]`,
+   * `catch`, `hint` (read with `readWandV2Result`).
+   */
+  finishWandV2: (sessionId: string, moves: readonly { t: number; away: boolean; in_zone: boolean; speed_ok: boolean }[]) =>
+    apiRequest<unknown>('/api/child/pet/wand/finish', {
+      method: 'POST',
+      body: {
+        session_id: sessionId,
+        moves: moves.map((m) => ({ t: m.t, away: m.away, in_zone: m.in_zone, speed_ok: m.speed_ok })),
+      } satisfies components['schemas']['FinishWandRequest'],
+    }),
+
+  /**
    * POST /api/child/pet/wand/finish {session_id, moves[{t, away}]} — the feather moves the
    * app saw (ms since its local start). 200 `accepted` (counts) / `rejected` (didn't, no
    * penalty) / `unchanged` (repeat) with `result`. 422 `wand_session_*` / `wand_invalid_moves`.

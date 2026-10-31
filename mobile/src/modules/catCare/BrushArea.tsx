@@ -64,10 +64,12 @@ export interface BrushAreaProps {
   msAt: (touchTimestamp?: number | null) => number;
   /** Record a stroke (ms on the game clock) — the same input the server scores. */
   onStroke: (ms: number) => void;
+  /** GAMES_SPEC §7.7: on the game layer the hint line moves to the top bar (no text under the thumb). */
+  hideHint?: boolean;
   testID: string;
 }
 
-export function BrushArea({ rules, renderStage, texts, stageA11y, strokeLabel, strokeA11y, disabled, hideButton, reduceMotion, gestureMode, msAt, onStroke, testID }: BrushAreaProps) {
+export function BrushArea({ rules, renderStage, texts, stageA11y, strokeLabel, strokeA11y, disabled, hideButton, reduceMotion, gestureMode, msAt, onStroke, hideHint = false, testID }: BrushAreaProps) {
   const holdMode = gestureMode === 'hold';
   const holdModeRef = useRef(holdMode);
   holdModeRef.current = holdMode;
@@ -239,9 +241,11 @@ export function BrushArea({ rules, renderStage, texts, stageA11y, strokeLabel, s
       >
         <View style={[brushStyles.fill, { width: `${Math.round(progress.fraction * 100)}%` }]} testID={`${testID}-bar-fill`} />
       </View>
-      <Text style={[partStyles.muted, brushStyles.center, progress.allClean && partStyles.doneText]} testID={`${testID}-brush-hint`} accessibilityLiveRegion="polite">
-        {progress.allClean ? texts.clean : holdMode ? texts.holdHint : texts.swipeHint}
-      </Text>
+      {!hideHint && (
+        <Text style={[partStyles.muted, brushStyles.center, progress.allClean && partStyles.doneText]} testID={`${testID}-brush-hint`} accessibilityLiveRegion="polite">
+          {progress.allClean ? texts.clean : holdMode ? texts.holdHint : texts.swipeHint}
+        </Text>
+      )}
       {holdMode && !hideButton && (
         <Pressable
           accessibilityRole="button"

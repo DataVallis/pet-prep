@@ -24,7 +24,9 @@
  * (`gameLayerAvailable()`) the ball game is v2 (`ballV2/BallGameV2`, full screen, throw → call →
  * catch, »Še en krog«; one `onFinished('play')` per round). It is loaded lazily
  * (`loadBallGameV2`) — an older binary that got this JS by OTA never evaluates it and keeps the
- * v1 ball game below. Cuddles stay v1 until phase 4.
+ * v1 ball game below. GAMES_SPEC phase 4 (2026-10-31): cuddles likewise — `cuddleV2/CuddleGameV2`
+ * (3 hearts, the 3-second rule, C1; `loadCuddleGameV2`), one `onFinished('cuddle')` per finished
+ * cuddle; an older binary keeps the v1 five strokes below.
  */
 
 import { mediaModeOf } from '@/modules/display/display';
@@ -74,6 +76,7 @@ import type { PlayOverlayMode } from '@/store/appStore';
 import { useGestureMode, type GestureMode } from '@/modules/gestures/easyGestures';
 import { gameLayerAvailable } from '@/modules/gameLayer/capability';
 import type BallGameV2Component from '@/modules/play/ballV2/BallGameV2';
+import type CuddleGameV2Component from '@/modules/play/cuddleV2/CuddleGameV2';
 import { BALL_CHARGE_MS, ballFlightHeight, chargePower } from '@/modules/gestures/holdPlay';
 import { MIN_TOUCH, alpha, fonts, palette, radius, tightTracking } from '@/theme';
 
@@ -112,9 +115,29 @@ export function loadBallGameV2(): BallGameV2Type | null {
   return ballGameV2;
 }
 
-/** Tests: forget the loaded v2 module (after toggling the capability flag). */
+/** Tests: forget the loaded v2 modules (after toggling the capability flag). */
 export function resetBallGameV2ForTests(): void {
   ballGameV2 = undefined;
+  cuddleGameV2 = undefined;
+}
+
+type CuddleGameV2Type = typeof CuddleGameV2Component;
+let cuddleGameV2: CuddleGameV2Type | null | undefined;
+
+/**
+ * GAMES_SPEC §4.4 (C1, phase 4): the v2 cuddle (3 hearts, the 3-second rule), or null on a binary
+ * without the native game layer (it keeps the v1 five strokes). Same lazy rule as the ball.
+ */
+export function loadCuddleGameV2(): CuddleGameV2Type | null {
+  if (!gameLayerAvailable()) return null;
+  if (cuddleGameV2 === undefined) {
+    try {
+      cuddleGameV2 = (require('./cuddleV2/CuddleGameV2') as { default: CuddleGameV2Type }).default;
+    } catch {
+      cuddleGameV2 = null;
+    }
+  }
+  return cuddleGameV2;
 }
 
 /**
@@ -601,6 +624,9 @@ export default function PlayOverlay({
   // GAMES_SPEC phase 1: every finished v2 round is its own play (»Še en krog« = another one).
   const finishBallRound = useCallback(() => finishedRef.current('play'), []);
   const BallGameV2 = mode === 'play' ? loadBallGameV2() : null;
+  const CuddleGameV2 = mode === 'cuddle' ? loadCuddleGameV2() : null;
+  // C1: one report per finished v2 cuddle (the game calls it once; no auto-close card here).
+  const finishCuddleV2 = useCallback(() => finishedRef.current('cuddle'), []);
 
   // Android back closes the layer (like × — an unfinished game reports nothing).
   useEffect(() => {
@@ -627,6 +653,14 @@ export default function PlayOverlay({
     return (
       <View style={styles.fullScreen} testID={testID}>
         <BallGameV2 view={view} reduceMotion={reduceMotion} onRoundFinished={finishBallRound} onClose={onClose} onMediaExpired={onMediaExpired} />
+      </View>
+    );
+  }
+
+  if (CuddleGameV2 !== null) {
+    return (
+      <View style={styles.fullScreen} testID={testID}>
+        <CuddleGameV2 view={view} reduceMotion={reduceMotion} onDone={finishCuddleV2} onClose={onClose} onMediaExpired={onMediaExpired} />
       </View>
     );
   }

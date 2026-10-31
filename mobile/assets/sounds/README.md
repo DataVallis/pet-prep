@@ -13,6 +13,10 @@ licence obligations. Re-run the script to regenerate them (the output is bit-exa
 | `pop.wav` | returned ball lands in front of the dog | 0.12 s |
 | `cue.wav` | school command cue (interim for the recorded voice, GAMES_SPEC V5) | 0.34 s |
 | `crunch.wav` | school treat given in time (»hrust«) | 0.24 s |
+| `crouch.wav` | wand v2: the 👀 cue — the cat crouches, hold the feather still (2026-10-31) | 0.62 s |
+| `swish.wav` | wand v2: the feather escaped the pounce (★ »Ušlo!«) | 0.22 s |
+| `purr.wav` | cuddles v2: soft purr while a heart fills (every second of stroking) | 0.50 s |
+| `heart.wav` | cuddles v2: a heart is full | 0.34 s |
 
 Rules: short, soft, never scary; no sound for a miss. Mono 22.05 kHz 16-bit WAV, each < 30 kB.
 They play only when the parent switch »Zvoki in vibracija v igrah« is on (default) and follow the

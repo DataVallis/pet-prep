@@ -13,7 +13,7 @@
  * 3. The server's verdict.
  */
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Animated, Pressable, ScrollView, StyleSheet, View, type GestureResponderEvent } from 'react-native';
 import { Heart, Scissors } from 'lucide-react-native';
 import { useQueryClient } from '@tanstack/react-query';
@@ -32,7 +32,9 @@ import {
   type ScratchingResult,
   type ScratchingSession,
 } from '@/modules/catCare/catCare';
-import { scratchingFrameAt } from '@/modules/catCare/catGames';
+import { scoreScratching, scratchingFrameAt } from '@/modules/catCare/catGames';
+import { gameFeedbackOf } from '@/modules/gameLayer/gameFeedback';
+import { loadCareShell, type CareGameShellType } from '@/modules/gameLayer/loadCareShell';
 import { Busy, CatOverlayFrame, CatStage, FailedView, PrimaryButton, SecondaryButton, styles, useAnnounce } from '@/modules/catCare/CatGameParts';
 import { useScratchingGame, type PraiseInput } from '@/modules/catCare/useCatGames';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
@@ -60,6 +62,29 @@ export default function ScratchingOverlay({ view, onClose, reduceMotion, clock, 
   const onMediaExpired = () => void queryClient.invalidateQueries({ queryKey: childPetKey });
   const ctx = { nowIso: view.server_time, timezone: view.timezone, scratchingOnly: onlyScratchingOpen(view.cat) };
   const due = scratching?.active ? catWhen(scratching.active.due_at, ctx.nowIso, ctx.timezone) : null;
+  // GAMES_SPEC §5.5: on a game-layer binary the carry + praise is full screen (same rules).
+  const [Shell] = useState(() => loadCareShell());
+  const onPraise = (touchTimestamp: number | null) => {
+    const ms = game.msAt(touchTimestamp);
+    // The first praise decides.
+    game.setInput((current: PraiseInput) => (current === null ? ms : current));
+  };
+
+  if (Shell !== null && (phase.kind === 'running' || phase.kind === 'finishing')) {
+    return (
+      <ScratchingRunning
+        session={phase.session}
+        praise={phase.input}
+        elapsedMs={game.elapsedMs}
+        finishing={phase.kind === 'finishing'}
+        reduceMotion={reduceMotion}
+        onPraise={onPraise}
+        Shell={Shell}
+        gameFeedback={gameFeedbackOf(view)}
+        testID={testID}
+      />
+    );
+  }
 
   return (
     <CatOverlayFrame title={S.title} icon={<Scissors color={palette.mint} size={22} />} onClose={locked ? null : onClose} testID={testID}>
@@ -112,11 +137,7 @@ export default function ScratchingOverlay({ view, onClose, reduceMotion, clock, 
           elapsedMs={game.elapsedMs}
           finishing={phase.kind === 'finishing'}
           reduceMotion={reduceMotion}
-          onPraise={(touchTimestamp) => {
-            const ms = game.msAt(touchTimestamp);
-            // The first praise decides.
-            game.setInput((current: PraiseInput) => (current === null ? ms : current));
-          }}
+          onPraise={onPraise}
           testID={testID}
         />
       )}
@@ -183,6 +204,8 @@ function ScratchingRunning({
   finishing,
   reduceMotion,
   onPraise,
+  Shell = null,
+  gameFeedback = true,
   testID,
 }: {
   session: ScratchingSession;
@@ -191,6 +214,9 @@ function ScratchingRunning({
   finishing: boolean;
   reduceMotion: boolean;
   onPraise: (touchTimestamp: number | null) => void;
+  /** GAMES_SPEC §5.5: the game-layer shell (full screen), or null = the card screen. */
+  Shell?: CareGameShellType | null;
+  gameFeedback?: boolean;
   testID: string;
 }) {
   const frame = scratchingFrameAt(session, elapsedMs);
@@ -214,6 +240,60 @@ function ScratchingRunning({
     // Once per landing state, not per 100 ms tick: `elapsedMs` is read at that moment only.
   }, [landed, reduceMotion, travel]); // eslint-disable-line react-hooks/exhaustive-deps
   const translateX = travel.interpolate({ inputRange: [0, 1], outputRange: [-90, 70] });
+
+  const praiseButton = (
+    <Pressable
+      testID={`${testID}-praise`}
+      accessibilityRole="button"
+      accessibilityLabel={S.praiseA11y}
+      accessibilityState={{ disabled: praise !== null }}
+      disabled={praise !== null}
+      // The touch counts at once (timing game); a screen reader activates with onPress only.
+      onPressIn={(e: GestureResponderEvent) => {
+        touchActive.current = true;
+        onPraise(e?.nativeEvent?.timestamp ?? null);
+      }}
+      onPress={() => {
+        if (touchActive.current) {
+          touchActive.current = false;
+          return;
+        }
+        onPraise(null);
+      }}
+      style={({ pressed }) => [styles.bigButton, pressed && styles.bigButtonPressed, praise !== null && styles.disabled]}
+    >
+      <Heart color={palette.graphite} size={28} />
+      <Text style={styles.bigButtonText}>{S.praise}</Text>
+    </Pressable>
+  );
+
+  if (Shell !== null) {
+    // The mirror of the server's verdict, only for the instant ✓ / soft ✗ (the server decides).
+    const verdict = praise === null ? null : scoreScratching(praise, session);
+    return (
+      <Shell
+        testID={`${testID}-layer`}
+        stage={
+          <View style={local.sceneFull} testID={`${testID}-scene`}>
+            <ScratchedSofaGraphic size={170} />
+            <ScratchingPostGraphic size={200} />
+            <Animated.View style={[local.catFull, { transform: [{ translateX }] }]} testID={`${testID}-cat-${landed ? 'landed' : 'carrying'}`}>
+              <CatFigure size={150} pose={landed ? 'pounce' : 'sit'} />
+            </Animated.View>
+          </View>
+        }
+        line={finishing ? C.finishing : early ? S.layer.early : landed ? S.layer.landed : S.layer.carrying}
+        frame={{ strokes: 0, stepsDone: [verdict?.success === true] }}
+        okSignal={verdict?.success === true ? 1 : 0}
+        missSignal={verdict !== null && !verdict.success ? 1 : 0}
+        gameFeedback={gameFeedback}
+        reduceMotion={reduceMotion}
+        closeLabel={C.close}
+        progressLabel={status}
+        dock={finishing ? null : praiseButton}
+      />
+    );
+  }
 
   return (
     <View style={styles.running} testID={`${testID}-running`}>
@@ -240,29 +320,7 @@ function ScratchingRunning({
       {finishing ? (
         <Busy text={C.finishing} testID={`${testID}-finishing`} />
       ) : (
-        <Pressable
-          testID={`${testID}-praise`}
-          accessibilityRole="button"
-          accessibilityLabel={S.praiseA11y}
-          accessibilityState={{ disabled: praise !== null }}
-          disabled={praise !== null}
-          // The touch counts at once (timing game); a screen reader activates with onPress only.
-          onPressIn={(e: GestureResponderEvent) => {
-            touchActive.current = true;
-            onPraise(e?.nativeEvent?.timestamp ?? null);
-          }}
-          onPress={() => {
-            if (touchActive.current) {
-              touchActive.current = false;
-              return;
-            }
-            onPraise(null);
-          }}
-          style={({ pressed }) => [styles.bigButton, pressed && styles.bigButtonPressed, praise !== null && styles.disabled]}
-        >
-          <Heart color={palette.graphite} size={28} />
-          <Text style={styles.bigButtonText}>{S.praise}</Text>
-        </Pressable>
+        praiseButton
       )}
     </View>
   );
@@ -272,4 +330,6 @@ const local = StyleSheet.create({
   introStage: { height: 220 },
   scene: { flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between', padding: 16 },
   cat: { position: 'absolute', left: 0, right: 0, bottom: 10, alignItems: 'center' },
+  sceneFull: { ...StyleSheet.absoluteFill, flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between', paddingHorizontal: 20, paddingBottom: '38%' },
+  catFull: { position: 'absolute', left: 0, right: 0, bottom: '36%', alignItems: 'center' },
 });

@@ -27,7 +27,7 @@
  * still finishes at the session's end. In swipe mode the litter change keeps its plain stage.
  */
 
-import { useMemo, useRef } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { PanResponder, ScrollView, StyleSheet, View } from 'react-native';
 import { Brush, Sparkles } from 'lucide-react-native';
 import { useQueryClient } from '@tanstack/react-query';
@@ -54,6 +54,9 @@ import { useChoreGame } from '@/modules/catCare/useCatGames';
 import { useGestureMode, type GestureMode } from '@/modules/gestures/easyGestures';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
 import type { ClockSources } from '@/modules/training/game';
+import { careFrame } from '@/modules/gameLayer/careFrame';
+import { gameFeedbackOf } from '@/modules/gameLayer/gameFeedback';
+import { loadCareShell, type CareGameShellType } from '@/modules/gameLayer/loadCareShell';
 import { palette } from '@/theme';
 
 const S = CHORE_STRINGS;
@@ -129,6 +132,32 @@ export default function ChoreOverlay({ kind, view, onClose, reduceMotion, clock,
   const intro = introFor(kind, view);
   const onMediaExpired = () => void queryClient.invalidateQueries({ queryKey: childPetKey });
   const icon = kind === 'grooming' ? <Brush color={palette.mint} size={22} /> : <Sparkles color={palette.mint} size={22} />;
+  // GAMES_SPEC §7.7: on a game-layer binary the running game is full screen (same rules).
+  const [Shell] = useState(() => loadCareShell());
+
+  if (Shell !== null && (phase.kind === 'running' || phase.kind === 'finishing')) {
+    return (
+      <ChoreRunning
+        kind={kind}
+        texts={texts}
+        dog={dog}
+        view={view}
+        session={phase.session}
+        strokes={phase.input}
+        elapsedMs={game.elapsedMs}
+        finishing={phase.kind === 'finishing'}
+        resumed={phase.resumedAtMs !== null}
+        reduceMotion={reduceMotion}
+        gestureMode={gestureMode}
+        msAt={game.msAt}
+        onStroke={(ms) => game.setInput((strokes) => addStroke(strokes, ms, phase.session.duration_ms))}
+        onMediaExpired={onMediaExpired}
+        Shell={Shell}
+        onStop={game.stop}
+        testID={testID}
+      />
+    );
+  }
 
   return (
     <CatOverlayFrame
@@ -249,6 +278,8 @@ function ChoreRunning({
   msAt,
   onStroke,
   onMediaExpired,
+  Shell = null,
+  onStop,
   testID,
 }: {
   kind: ChoreKind;
@@ -265,6 +296,9 @@ function ChoreRunning({
   msAt: (touchTimestamp?: number | null) => number;
   onStroke: (ms: number) => void;
   onMediaExpired: () => void;
+  /** GAMES_SPEC §7.7: the game-layer shell (full screen), or null = the card screen. */
+  Shell?: CareGameShellType | null;
+  onStop?: () => void;
   testID: string;
 }) {
   const time = sessionTime(session.duration_ms, elapsedMs);
@@ -325,6 +359,47 @@ function ChoreRunning({
     ) : (
       <TrayGraphic size={200} step={step} />
     );
+
+  if (Shell !== null) {
+    // Full screen: the pet / the box edge to edge, the step on the top line, ✓ per step.
+    const full = (
+      <CatStage view={view} petState="idle" illustration={illustration} onMediaExpired={onMediaExpired} full testID={`${testID}-stage`} />
+    );
+    return (
+      <Shell
+        testID={`${testID}-layer`}
+        stage={full}
+        line={finishing ? C.finishing : stepText}
+        frame={careFrame(session, progress.strokes, progress.segmentsHit, elapsedMs)}
+        gameFeedback={gameFeedbackOf(view)}
+        reduceMotion={reduceMotion}
+        closeLabel={C.stopA11y}
+        progressLabel={S.stepA11y(step)}
+        onClose={finishing ? undefined : onStop}
+      >
+        {brushTexts !== null ? (
+          <BrushArea
+            rules={session}
+            texts={brushTexts}
+            stageA11y={texts.stageA11y}
+            strokeLabel={texts.stroke}
+            strokeA11y={texts.strokeA11y}
+            disabled={disabled}
+            hideButton={finishing}
+            hideHint
+            reduceMotion={reduceMotion}
+            gestureMode={gestureMode}
+            msAt={msAt}
+            onStroke={onStroke}
+            renderStage={(layers) => <View style={StyleSheet.absoluteFill}>{layers}</View>}
+            testID={testID}
+          />
+        ) : (
+          <View style={styles.running} {...responder.panHandlers} accessible accessibilityLabel={texts.stageA11y} testID={`${testID}-stage-touch`} />
+        )}
+      </Shell>
+    );
+  }
 
   return (
     <View style={styles.running} testID={`${testID}-running`}>

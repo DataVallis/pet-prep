@@ -7,7 +7,17 @@
 
 import { useCallback, useMemo } from 'react';
 
-import { useFinishChore, useFinishScratching, useFinishWand, useStartChore, useStartScratching, useStartWand } from '@/hooks/queries/useCatCare';
+import {
+  useFinishChore,
+  useFinishScratching,
+  useFinishWand,
+  useFinishWandV2,
+  useStartChore,
+  useStartScratching,
+  useStartWand,
+  useStartWandV2,
+} from '@/hooks/queries/useCatCare';
+import { canWandV2StillCount, wandV2FinishAt, type WandV2Move, type WandV2Result, type WandV2Session } from '@/modules/catCare/wandV2/wandRules';
 import {
   onlyScratchingOpen,
   ownSession,
@@ -66,6 +76,39 @@ export function useWandGame(view: ChildPetView, { clock }: CatGameHookOptions = 
     emptyInput: NO_MOVES,
     finishAtMs: (session) => session.duration_ms,
     canStillCount: canWandStillCount,
+    startMutate,
+    finishMutate,
+  });
+}
+
+const NO_V2_MOVES: readonly WandV2Move[] = [];
+
+export type WandGameV2 = CatSessionGame<WandV2Session, readonly WandV2Move[], WandV2Result>;
+
+/**
+ * GAMES_SPEC §5 — the v2 hunt (`rules: 2`), game-layer builds only (`WandGameV2`). Same session
+ * flow as v1; the finish is sent when the catch clip has played out (`wandV2FinishAt`). A running
+ * v2 hunt is never resumed after an app restart (the deck must be ready before the hunt clock
+ * starts — `canWandV2StillCount`); a new start replaces it on the server without penalty.
+ */
+export function useWandGameV2(view: ChildPetView, { clock }: CatGameHookOptions = {}): WandGameV2 {
+  const { mutate: startMutate } = useStartWandV2();
+  const { mutate: finish } = useFinishWandV2();
+  const finishMutate = useCallback(
+    (v: { session: WandV2Session; input: readonly WandV2Move[] }, callbacks: Parameters<typeof finish>[1]) =>
+      finish({ sessionId: v.session.id, moves: v.input }, callbacks),
+    [finish],
+  );
+  const refusal = useMemo(() => refusalContext(view), [view]);
+  return useCatSessionGame<WandV2Session, readonly WandV2Move[], WandV2Result>({
+    clockSkewMs: view.clockSkewMs,
+    refusal,
+    clock,
+    resume: null,
+    ...useAbandoned(),
+    emptyInput: NO_V2_MOVES,
+    finishAtMs: wandV2FinishAt,
+    canStillCount: canWandV2StillCount,
     startMutate,
     finishMutate,
   });

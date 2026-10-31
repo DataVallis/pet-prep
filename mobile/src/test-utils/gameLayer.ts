@@ -18,3 +18,8 @@ export function resetFakeAudioPlayers(): void {
 export function fireGameGesture(testID: string, kind: 'pan' | 'tap', event: Record<string, number>): void {
   jest.requireMock<typeof GestureMock>('react-native-gesture-handler').fireGameGesture(testID, kind, event);
 }
+
+/** Fire the recorded pan of `testID` as a drag through `samples` (begin → update each → end). */
+export function fireGamePan(testID: string, samples: Record<string, number>[]): void {
+  jest.requireMock<typeof GestureMock>('react-native-gesture-handler').fireGamePan(testID, samples);
+}

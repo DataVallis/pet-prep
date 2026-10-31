@@ -47,6 +47,20 @@
     "progress": "Poteg {{n}} od 5",
     "done": "Kuža uživa. Hvala za crkljanje!"
   },
+  "cuddleV2": {
+    "slow": "Boži počasi, 3 sekunde.",
+    "wait": "Počakaj …",
+    "more": "Še!",
+    "doneLine": "Uživa! ♥♥♥",
+    "done": "Uživa! Hvala za crkljanje.",
+    "button": "Pobožaj",
+    "buttonHint": "Drži, da božaš. Spusti za premor.",
+    "tooFastA11y": "Počasneje.",
+    "a11y": {
+      "progress": "Srca: {{n}} od 3",
+      "area": "Počasi boži s prstom."
+    }
+  },
   "mood": {
     "happy": "Kuža je vesel"
   },
