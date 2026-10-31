@@ -108,6 +108,46 @@ export function load() {
   return { species, sources, foods };
 }
 
+const VET_KINDS = ['clinic', 'duty_rota', 'poison_line'];
+const VET_KEYS = ['kind', 'name', 'city', 'region', 'address', 'phone', 'emergency_24h', 'duty', 'small_animals', 'url', 'source_url', 'checked', 'note', 'quote'];
+
+/** Vets / duty rotas / poison lines per country (M6-K1): docs/research/care/vets/<CC>.json. */
+export function loadVets() {
+  const dir = join(CARE, 'vets');
+  if (!existsSync(dir)) return [];
+  return readdirSync(dir).filter((n) => /^[A-Z]{2}\.json$/.test(n)).sort().map((n) => ({ file: join(dir, n), data: JSON.parse(readFileSync(join(dir, n), 'utf8')) }));
+}
+
+export function buildVets(files) {
+  const errors = [];
+  const out = [];
+  for (const { file, data } of files) {
+    const rel = file.slice(ROOT.length + 1);
+    const cc = basename(file, '.json');
+    if (data.country !== cc) errors.push(`${rel}: country must be ${cc}`);
+    if (!Array.isArray(data.entries)) { errors.push(`${rel}: entries must be a list`); continue; }
+    const seen = new Set();
+    for (const [i, e] of data.entries.entries()) {
+      const at = `${rel} entries[${i}]`;
+      const kind = e.kind ?? 'clinic';
+      if (!VET_KINDS.includes(kind)) errors.push(`${at}: bad kind`);
+      for (const k of Object.keys(e)) if (!VET_KEYS.includes(k)) errors.push(`${at}: unknown key "${k}"`);
+      if (!e.name) errors.push(`${at}: name required`);
+      if (!/^https?:\/\//.test(e.source_url ?? '')) errors.push(`${at}: source_url required`);
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(e.checked ?? '')) errors.push(`${at}: checked must be YYYY-MM-DD`);
+      if (kind === 'clinic' && !e.phone && !e.url) errors.push(`${at}: clinic needs a phone or a url`);
+      if (e.small_animals === false) continue; // farm-only practices are kept in research, not published
+      const key = `${e.name}|${e.city ?? ''}`.toLowerCase();
+      if (seen.has(key)) continue;
+      seen.add(key);
+      out.push({ country: cc, kind, name: e.name, city: e.city ?? null, region: e.region ?? null, address: e.address ?? null,
+        phone: e.phone ?? null, emergency_24h: e.emergency_24h === true, duty: e.duty ?? e.note ?? null, url: e.url ?? null,
+        source_url: e.source_url, checked: e.checked });
+    }
+  }
+  return { errors, vets: out };
+}
+
 export function build({ species, sources, foods }) {
   const errors = [];
   const out = [];
@@ -132,7 +172,9 @@ export function build({ species, sources, foods }) {
     });
   }
   const src = [...used].sort().map((k) => { const [sp, id] = k.split(':'); return { species: sp, ...sources[sp][id] }; });
-  return { errors, data: { schema_version: 1, generator: 'scripts/export-care-knowledge.mjs', levels: LEVELS, species, foods: out, sources: src } };
+  const v = buildVets(loadVets());
+  errors.push(...v.errors);
+  return { errors, data: { schema_version: 1, generator: 'scripts/export-care-knowledge.mjs', levels: LEVELS, species, foods: out, sources: src, vets: v.vets } };
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
@@ -149,5 +191,5 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const { errors, data } = build(load());
   if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
   if (args[0] !== '--check') writeFileSync(OUT, `${JSON.stringify(data, null, 2)}\n`);
-  console.log(`care-knowledge: ${data.foods.length} published food entries, ${data.sources.length} sources${args[0] === '--check' ? ' (check only)' : ''}`);
+  console.log(`care-knowledge: ${data.foods.length} published food entries, ${data.sources.length} sources, ${data.vets.length} vets${args[0] === '--check' ? ' (check only)' : ''}`);
 }
