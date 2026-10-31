@@ -180,6 +180,10 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-10-31 (cloud, docs) — Curio series + #walkyourpet launch docs (`docs/curio-series-walkyourpet`, no app change)
+- New `brand/mascot/SERIES.md` (silent animated series bible + pilot »Rock, Paper, Leash«), `brand/marketing/WALKYOURPET_LAUNCH.md` + graphics in `brand/marketing/walkyourpet-launch/`, Facebook profile/cover images; `brand/WALKYOURPET.md` synced (website page #128/#129, domain decision); `brand/MASCOT.md` role (mascot ≠ app pet, series link); DECISIONS 2026-10-30/31.
+- Next: David generates the character sheets (SERIES.md §5) → family test image → storyboard. Media go to Drive `CGP/videji/curio-serija/`.
+
 ### 2026-10-31 (cloud, mobile) — Dependabot alerts in `mobile/yarn.lock` (`chore/mobile-deps-security`, no app change)
 - `resolutions` in `mobile/package.json`: shell-quote 1.12.0 (#10 critical), source-map-js 1.2.2 (#9), node-forge 1.4.2 (#8 + the other node-forge ≤ 1.4.0 advisories). Deferred: zod #11 (fix only in zod 4, `@expo/cli` needs 3), uuid #7 (fix only in 11.x; `xcode` uses only `v4`), deepmerge #12 (no fix released). None of the six is in the app bundle (export source map checked) — all build / dev tooling. Fingerprints identical before / after (ios `e88751ce…`, android `33a42ded…`), production bundle hash identical → no store build, nothing to OTA. Table in DEPLOYMENT.md »Mobile dependency security«. **Next:** re-check the three deferred alerts at the next `expo` bump; David may dismiss #7 as »vulnerable code not used«.
 
