@@ -12,7 +12,7 @@ import { useEffect, useMemo, useRef } from 'react';
 import { createAudioPlayer, setAudioModeAsync, type AudioPlayer } from 'expo-audio';
 import * as Haptics from 'expo-haptics';
 
-import { createGameFx, GAME_SOUNDS, SILENT_GAME_FX, type GameFx, type GameSound, type HapticAdapter, type SoundAdapter } from '@/modules/gameLayer/gameFxCore';
+import { createGameFx, DEFAULT_GAME_SOUNDS, SILENT_GAME_FX, type GameFx, type GameSound, type HapticAdapter, type SoundAdapter } from '@/modules/gameLayer/gameFxCore';
 
 /** Effects play softly, under the dog. */
 export const GAME_SOUND_VOLUME = 0.7;
@@ -44,10 +44,10 @@ function ensureAudioMode(): void {
   });
 }
 
-function nativeSounds(): SoundAdapter {
+function nativeSounds(list: readonly GameSound[]): SoundAdapter {
   ensureAudioMode();
   const players: Partial<Record<GameSound, AudioPlayer>> = {};
-  for (const sound of GAME_SOUNDS) {
+  for (const sound of list) {
     try {
       const player = createAudioPlayer(SOUND_FILES[sound]);
       player.volume = GAME_SOUND_VOLUME;
@@ -67,7 +67,7 @@ function nativeSounds(): SoundAdapter {
         .catch(() => undefined);
     },
     release: () => {
-      for (const sound of GAME_SOUNDS) {
+      for (const sound of list) {
         try {
           players[sound]?.remove();
         } catch {
@@ -88,17 +88,20 @@ const NATIVE_HAPTICS: HapticAdapter = {
 /**
  * Sounds + haptics for one game screen: the players are created in an effect (preloaded on
  * mount, released on unmount / when the switch changes); the returned object is stable.
+ * `sounds` = the sounds this game plays (only those are preloaded; default the phase 1 set).
+ * A sound not in the list is silent.
  */
-export function useGameFx(enabled: boolean): GameFx {
+export function useGameFx(enabled: boolean, sounds: readonly GameSound[] = DEFAULT_GAME_SOUNDS): GameFx {
   const current = useRef<GameFx>(SILENT_GAME_FX);
+  const key = sounds.join(',');
   useEffect(() => {
-    const fx = createGameFx({ enabled, sounds: enabled ? nativeSounds() : null, haptics: enabled ? NATIVE_HAPTICS : null });
+    const fx = createGameFx({ enabled, sounds: enabled ? nativeSounds(key.split(',') as GameSound[]) : null, haptics: enabled ? NATIVE_HAPTICS : null });
     current.current = fx;
     return () => {
       current.current = SILENT_GAME_FX;
       fx.release();
     };
-  }, [enabled]);
+  }, [enabled, key]);
   return useMemo<GameFx>(
     () => ({
       sound: (sound, delayMs) => current.current.sound(sound, delayMs),

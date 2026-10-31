@@ -47,6 +47,20 @@
     "progress": "Stroke {{n}} of 5",
     "done": "Your pup loves it. Thanks for the cuddles!"
   },
+  "cuddleV2": {
+    "slow": "Stroke slowly, 3 seconds.",
+    "wait": "Wait …",
+    "more": "More!",
+    "doneLine": "It loves it! ♥♥♥",
+    "done": "It loves it! Thanks for the cuddles.",
+    "button": "Stroke",
+    "buttonHint": "Hold to stroke, let go for a pause.",
+    "tooFastA11y": "Slower, please.",
+    "a11y": {
+      "progress": "Hearts: {{n}} of 3",
+      "area": "Stroke slowly with your finger."
+    }
+  },
   "mood": {
     "happy": "Your pup is happy"
   },

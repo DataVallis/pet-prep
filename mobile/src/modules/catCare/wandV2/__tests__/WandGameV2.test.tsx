@@ -11,7 +11,7 @@ import { api, type ChildPetState } from '@/api/client';
 import { i18n } from '@/i18n';
 import CatCareOverlay from '@/modules/catCare/CatCareOverlay';
 import { loadWandGameV2, resetWandGameV2ForTests } from '@/modules/catCare/wandV2/loadWandGameV2';
-import { scoreWandV2, type WandV2Move } from '@/modules/catCare/wandV2/wandRules';
+import { readWandV2Session, scoreWandV2, type WandV2Move, type WandV2Session } from '@/modules/catCare/wandV2/wandRules';
 import { normalizeChildState, type ChildPetView } from '@/modules/childPet/childPetView';
 import { setGameLayerAvailableForTests } from '@/modules/gameLayer/capability';
 import { normalizePetMedia } from '@/modules/petMedia/petMedia';
@@ -66,6 +66,8 @@ const SESSION = {
   segments: 0,
   pounce_window_ms: 0,
 };
+
+const PARSED = readWandV2Session(SESSION) as WandV2Session;
 
 function catState(): ChildPetState {
   return makeLiveChildState({ pet: { breed_type: 'maine_coon', species: 'cat' } as Partial<ChildPetState['pet']>, wand: makeWandState() });
@@ -169,7 +171,7 @@ describe('the hunt', () => {
     let sent: WandV2Move[] = [];
     mocked.finishWandV2.mockImplementation(async (_id: string, moves: WandV2Move[]) => {
       sent = moves;
-      return { status: 'accepted', result: { session_id: SESSION.id, rules_version: 2, ...scoreWandV2(moves, { ...SESSION, dodge_window_ms: [150, 1500] }) }, state: catState() };
+      return { status: 'accepted', result: { session_id: SESSION.id, rules_version: 2, ...scoreWandV2(moves, PARSED) }, state: catState() };
     });
     await advance(26000 - 9500 + 200);
     expect(mocked.finishWandV2).toHaveBeenCalledTimes(1);
@@ -186,7 +188,7 @@ describe('the hunt', () => {
     mocked.startWandV2.mockResolvedValue({ status: 'accepted', session: SESSION, state: catState() });
     mocked.finishWandV2.mockImplementation(async (_id: string, moves: WandV2Move[]) => ({
       status: 'accepted',
-      result: { session_id: SESSION.id, rules_version: 2, ...scoreWandV2(moves, { ...SESSION, dodge_window_ms: [150, 1500] }) },
+      result: { session_id: SESSION.id, rules_version: 2, ...scoreWandV2(moves, PARSED) },
       state: catState(),
     }));
     open(catView(true));

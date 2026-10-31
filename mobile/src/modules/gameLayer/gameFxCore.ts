@@ -12,6 +12,8 @@
 
 export type GameSound = 'whoosh' | 'bounce' | 'whistle' | 'chime' | 'pop' | 'cue' | 'swish' | 'purr' | 'heart';
 export const GAME_SOUNDS: readonly GameSound[] = ['whoosh', 'bounce', 'whistle', 'chime', 'pop', 'cue', 'swish', 'purr', 'heart'];
+/** What `useGameFx` preloads when a game names nothing (the phase 1 set: ball, messes). */
+export const DEFAULT_GAME_SOUNDS: readonly GameSound[] = ['whoosh', 'bounce', 'whistle', 'chime', 'pop'];
 export type GameHaptic = 'tap' | 'success' | 'cue';
 
 export interface SoundAdapter {

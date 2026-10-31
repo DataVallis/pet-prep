@@ -77,6 +77,7 @@ import GameTopBar from '@/modules/gameLayer/GameTopBar';
 import PlayField, { useFieldSize, type FieldSizeValue } from '@/modules/gameLayer/PlayField';
 import { useClipQueue } from '@/modules/gameLayer/useClipQueue';
 import { useGameFx } from '@/modules/gameLayer/useGameFx';
+import type { GameSound } from '@/modules/gameLayer/gameFxCore';
 import { useGameGestures, type GameGestureHandlers } from '@/modules/gameLayer/useGameGestures';
 import type { MediaMode } from '@/modules/petMedia/statePlayer';
 import type { ClockSources } from '@/modules/training/game';
@@ -104,6 +105,7 @@ const TRAIL_SPRING = { damping: 18, stiffness: 70, mass: 0.8 };
 /** Three soft selection taps at the cue (GAMES_SPEC §5.2 »selection × 3«). */
 const CUE_HAPTIC_GAPS_MS = [0, 180, 360];
 const STAR_MS = 1_000;
+const WAND_SOUNDS: readonly GameSound[] = ['cue', 'swish', 'chime'];
 
 /** A feather: a leaf with a spine, tip up, centred on its quill (0, 0). */
 const FEATHER_PATH = 'M 0 0 C -16 -14 -18 -44 0 -70 C 18 -44 16 -14 0 0 Z';
@@ -208,7 +210,7 @@ export default function WandGameV2({ view, onClose, reduceMotion, clock, testID 
   const msAt = game.msAt;
   const now = useCallback(() => msAt(null), [msAt]);
   const queue = useClipQueue(now);
-  const fx = useGameFx(gameFeedbackOf(view));
+  const fx = useGameFx(gameFeedbackOf(view), WAND_SOUNDS);
   const line = useGameLine();
   const feedback = useRef<FeedbackHandle>(null);
   const onMediaExpired = useCallback(() => void queryClient.invalidateQueries({ queryKey: childPetKey }), [queryClient]);

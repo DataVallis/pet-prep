@@ -374,6 +374,10 @@ export const BALL_V2_STRINGS = strings('play', 'ball', {
 export const CUDDLE_STRINGS = strings('play', 'cuddle', {
   progress: (n: number) => t('play:cuddle.progress', { n }),
 });
+/** Cuddles v2 on the game layer (GAMES_SPEC §4.4, C1); species-neutral; game lines ≤ 32 characters (test). */
+export const CUDDLE_V2_STRINGS = strings('play', 'cuddleV2', {
+  a11y: { progress: (n: number) => t('play:cuddleV2.a11y.progress', { n }) },
+});
 export const MOOD_STRINGS = strings('play', 'mood');
 export const MOMENT_STRINGS = strings('play', 'moment');
 export const PLAY_BLOCK_STRINGS = strings('play', 'unavailable', {
