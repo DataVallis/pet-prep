@@ -2122,5 +2122,31 @@ return [
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S632', 'S636'], 'refs' => ['lagotto_romagnolo.suitability.rkc_grooming', 'lagotto_romagnolo.suitability.woodgreen_grooming']],
             ],
         ],
+        // M5-R10-83: alaskan_malamute.* (S637–S641), runbook rules (data.json
+        // proposed_game_parameters.alaskan_malamute.suitability_tags). RKC page not reachable → PDSA / PetMD statements; no
+        // family_pet / children chip (PDSA: older children / teenagers only), no large_home (needs the RKC key fact).
+        'alaskan_malamute' => [
+            'suits' => [
+                // S639 "Malamutes need a minimum of two hours of heavy exercise every day."
+                ['tag' => 'active_family', 'source_ids' => ['S639'], 'refs' => ['alaskan_malamute.exercise.adult', 'alaskan_malamute.suitability.pdsa_exercise']],
+            ],
+            'consider' => [
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S639'], 'refs' => ['alaskan_malamute.exercise.adult', 'alaskan_malamute.suitability.pdsa_exercise']],
+                // S639 "they can be extremely challenging so probably aren't well suited to first time dog owners."
+                ['tag' => 'experienced_owner', 'source_ids' => ['S639'], 'refs' => ['alaskan_malamute.behaviour.experienced_owner']],
+                // S639 "… large size and strong-will they could knock over or injure small children accidentally."
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S639'], 'refs' => ['alaskan_malamute.behaviour.small_children']],
+                // S639 "You should never leave your dog on their own for more than four hours,"
+                ['tag' => 'needs_company', 'source_ids' => ['S639'], 'refs' => ['alaskan_malamute.behaviour.time_alone']],
+                // S639 "Malamutes shed a lot …"
+                ['tag' => 'sheds', 'source_ids' => ['S639'], 'refs' => ['alaskan_malamute.suitability.pdsa_shedding']],
+                // S639 / S640 daily brushing.
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S639', 'S640'], 'refs' => ['alaskan_malamute.suitability.pdsa_grooming', 'alaskan_malamute.suitability.petmd_grooming']],
+                // S640 "Alaskan Malamutes can have trouble in hot weather because of their thick coat."
+                ['tag' => 'heat_sensitive', 'source_ids' => ['S640'], 'refs' => ['alaskan_malamute.exercise.heat']],
+                // S639 "Malamutes have a very strong prey drive …" (David 2026-10-12: at the end of the consider list).
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S639'], 'refs' => ['alaskan_malamute.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];

@@ -159,7 +159,7 @@ describe('import provenance', function () {
         // M5-R06-03: dog breeds only — the cat rowset is checked in its own describe below.
         // M5-R10-12 / M5-R10-23 / M5-R10-32: the Bernese Mountain Dog's (76), the Cane Corso's (84) and the
         // Miniature American Shepherd's (108) senior boundary / senior arrival age are Claude's suggestions
-        // (no runbook rule produced a value) — open for David; likewise the Samoyed's 90 (M5-R10-57), the Scottish Terrier's 90 (M5-R10-58), the Bloodhound's 61 (M5-R10-62), the Akita's 89 (M5-R10-63), the Saint Bernard's 63 (M5-R10-66) the Bull Terrier's 90 (M5-R10-76), the Miniature Pinscher's 108 (M5-R10-77), the Pyrenean Mountain Dog's 90 (M5-R10-78) and the Irish Wolfhound's 68 (M5-R10-80).
+        // (no runbook rule produced a value) — open for David; likewise the Samoyed's 90 (M5-R10-57), the Scottish Terrier's 90 (M5-R10-58), the Bloodhound's 61 (M5-R10-62), the Akita's 89 (M5-R10-63), the Saint Bernard's 63 (M5-R10-66) the Bull Terrier's 90 (M5-R10-76), the Miniature Pinscher's 108 (M5-R10-77), the Pyrenean Mountain Dog's 90 (M5-R10-78), the Irish Wolfhound's 68 (M5-R10-80) and the Alaskan Malamute's 90 (M5-R10-83).
         // M5-R13: the brushing routine of the five breeds whose sources say "more than once a
         // week" without a number — 2 per week, confirmed by David 2026-10-12 (no longer open).
         // M5-R10-38: the Belgian Malinois' brushing (RKC "More than once a week", AKC / PetMD
@@ -167,7 +167,7 @@ describe('import provenance', function () {
         // M5-R10-78: likewise the Pyrenean Mountain Dog's brushing (RKC "More than once a week"; VCA / PetMD
         // "weekly" would contradict it) — Claude's proposal 2 per week, open for David.
         $dogOpen = BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false);
-        expect((clone $dogOpen)->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'belgian-malinois', 'samoyed', 'scottish-terrier', 'bloodhound', 'akita', 'saint-bernard', 'bull-terrier', 'miniature-pinscher', 'pyrenean-mountain-dog', 'irish-wolfhound', 'lagotto-romagnolo'])->pluck('key')->unique()->values()->all())
+        expect((clone $dogOpen)->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'belgian-malinois', 'samoyed', 'scottish-terrier', 'bloodhound', 'akita', 'saint-bernard', 'bull-terrier', 'miniature-pinscher', 'pyrenean-mountain-dog', 'irish-wolfhound', 'lagotto-romagnolo', 'alaskan-malamute'])->pluck('key')->unique()->values()->all())
             ->toEqualCanonicalizing([
                 StageParamKey::ChewingChancePerDay->value,
             ]);
@@ -182,7 +182,7 @@ describe('import provenance', function () {
         // M5-R10-78: the Pyrenean Mountain Dog's senior boundary / arrival (90) and its brushing (2 per week) are open.
         expect((clone $dogOpen)->where('breed_slug', 'pyrenean-mountain-dog')->whereNotIn('key', [StageParamKey::ChewingChancePerDay->value])->get()->map(fn ($r) => "{$r->stage}.{$r->key}")->sort()->values()->all())
             ->toBe(['all.'.StageParamKey::GroomingSessionsPerWeek->value, 'senior.'.StageParamKey::ArrivalAgeMonths->value, 'senior.'.StageParamKey::StartsAtMonths->value]);
-        foreach (['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'bull-terrier', 'miniature-pinscher'] as $slug) {
+        foreach (['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'bull-terrier', 'miniature-pinscher', 'alaskan-malamute'] as $slug) {
             expect((clone $dogOpen)->where('breed_slug', $slug)->whereNotIn('key', [StageParamKey::ChewingChancePerDay->value])->get()->map(fn ($r) => "{$r->stage}.{$r->key}")->sort()->values()->all())
                 ->toBe(['senior.'.StageParamKey::ArrivalAgeMonths->value, 'senior.'.StageParamKey::StartsAtMonths->value], $slug);
         }

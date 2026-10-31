@@ -84,6 +84,7 @@ return [
     'irish_wolfhound' => 'Irish Wolfhound',
     'american_staffordshire_terrier' => 'American Staffordshire Terrier',
     'lagotto_romagnolo' => 'Lagotto Romagnolo',
+    'alaskan_malamute' => 'Alaskan Malamute',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',
