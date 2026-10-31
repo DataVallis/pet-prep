@@ -105,7 +105,7 @@ const TRAIL_SPRING = { damping: 18, stiffness: 70, mass: 0.8 };
 /** Three soft selection taps at the cue (GAMES_SPEC §5.2 »selection × 3«). */
 const CUE_HAPTIC_GAPS_MS = [0, 180, 360];
 const STAR_MS = 1_000;
-const WAND_SOUNDS: readonly GameSound[] = ['cue', 'swish', 'chime'];
+const WAND_SOUNDS: readonly GameSound[] = ['crouch', 'swish', 'chime'];
 
 /** A feather: a leaf with a spine, tip up, centred on its quill (0, 0). */
 const FEATHER_PATH = 'M 0 0 C -16 -14 -18 -44 0 -70 C 18 -44 16 -14 0 0 Z';
@@ -364,7 +364,7 @@ export default function WandGameV2({ view, onClose, reduceMotion, clock, testID 
     prevLive.current = live;
     for (const cue of cues) {
       if (cue.kind === 'crouch') {
-        fx.sound('cue');
+        fx.sound('crouch');
         for (const gap of CUE_HAPTIC_GAPS_MS) timers.current.push(setTimeout(() => fx.haptic('cue'), gap));
         say(S.freeze);
         announce(S.a11y.crouch);

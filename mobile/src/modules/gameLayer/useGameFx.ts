@@ -12,7 +12,7 @@ import { useEffect, useMemo, useRef } from 'react';
 import { createAudioPlayer, setAudioModeAsync, type AudioPlayer } from 'expo-audio';
 import * as Haptics from 'expo-haptics';
 
-import { createGameFx, DEFAULT_GAME_SOUNDS, SILENT_GAME_FX, type GameFx, type GameSound, type HapticAdapter, type SoundAdapter } from '@/modules/gameLayer/gameFxCore';
+import { createGameFx, GAME_SOUNDS, SILENT_GAME_FX, type GameFx, type GameSound, type HapticAdapter, type SoundAdapter } from '@/modules/gameLayer/gameFxCore';
 
 /** Effects play softly, under the dog. */
 export const GAME_SOUND_VOLUME = 0.7;
@@ -24,6 +24,8 @@ const SOUND_FILES: Readonly<Record<GameSound, number>> = {
   chime: require('../../../assets/sounds/chime.wav') as number,
   pop: require('../../../assets/sounds/pop.wav') as number,
   cue: require('../../../assets/sounds/cue.wav') as number,
+  crunch: require('../../../assets/sounds/crunch.wav') as number,
+  crouch: require('../../../assets/sounds/crouch.wav') as number,
   swish: require('../../../assets/sounds/swish.wav') as number,
   purr: require('../../../assets/sounds/purr.wav') as number,
   heart: require('../../../assets/sounds/heart.wav') as number,
@@ -88,10 +90,10 @@ const NATIVE_HAPTICS: HapticAdapter = {
 /**
  * Sounds + haptics for one game screen: the players are created in an effect (preloaded on
  * mount, released on unmount / when the switch changes); the returned object is stable.
- * `sounds` = the sounds this game plays (only those are preloaded; default the phase 1 set).
+ * `sounds` = the sounds this game plays (only those are preloaded; default every sound).
  * A sound not in the list is silent.
  */
-export function useGameFx(enabled: boolean, sounds: readonly GameSound[] = DEFAULT_GAME_SOUNDS): GameFx {
+export function useGameFx(enabled: boolean, sounds: readonly GameSound[] = GAME_SOUNDS): GameFx {
   const current = useRef<GameFx>(SILENT_GAME_FX);
   const key = sounds.join(',');
   useEffect(() => {

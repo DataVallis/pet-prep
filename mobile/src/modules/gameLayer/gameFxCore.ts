@@ -10,10 +10,8 @@
  * - Sounds follow the phone's silent mode (the adapter sets `playsInSilentMode: false`).
  */
 
-export type GameSound = 'whoosh' | 'bounce' | 'whistle' | 'chime' | 'pop' | 'cue' | 'swish' | 'purr' | 'heart';
-export const GAME_SOUNDS: readonly GameSound[] = ['whoosh', 'bounce', 'whistle', 'chime', 'pop', 'cue', 'swish', 'purr', 'heart'];
-/** What `useGameFx` preloads when a game names nothing (the phase 1 set: ball, messes). */
-export const DEFAULT_GAME_SOUNDS: readonly GameSound[] = ['whoosh', 'bounce', 'whistle', 'chime', 'pop'];
+export type GameSound = 'whoosh' | 'bounce' | 'whistle' | 'chime' | 'pop' | 'cue' | 'crunch' | 'crouch' | 'swish' | 'purr' | 'heart';
+export const GAME_SOUNDS: readonly GameSound[] = ['whoosh', 'bounce', 'whistle', 'chime', 'pop', 'cue', 'crunch', 'crouch', 'swish', 'purr', 'heart'];
 export type GameHaptic = 'tap' | 'success' | 'cue';
 
 export interface SoundAdapter {

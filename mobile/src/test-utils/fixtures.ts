@@ -783,6 +783,50 @@ export function makeSmoothTrainingSessionPayload(overrides: Record<string, unkno
   return makeTrainingSessionPayload({ duration_ms: cue, trials, ...overrides });
 }
 
+/**
+ * School rules v2 (GAMES_SPEC §4.1, server `rules: 2`): 2 rounds × 3 cues, think 500 ms, performing
+ * 3 s, praise window 1.5 s, mask 1.2 s (no release clip), 700 ms calm, ignored cue 4.5 s, a 2.5 s
+ * break after cue 3. Obeys: true, false, true | true, false, true.
+ * Times: cue 2000 · 8900 · 13400 | break 20300–22800 | 22800 · 29700 · 34200; duration 41100.
+ */
+export const SCHOOL_V2_OBEYS = [true, false, true, true, false, true] as const;
+export function makeSchoolV2SessionPayload(overrides: Record<string, unknown> = {}) {
+  let cue = 2_000;
+  const rounds: { round: number; first_index: number; last_index: number; start_ms: number; end_ms: number }[] = [];
+  let roundStart = 0;
+  const trials = SCHOOL_V2_OBEYS.map((obeys, index) => {
+    const at = cue;
+    let trial;
+    if (!obeys) {
+      cue = at + 4_500;
+      trial = { index, cue_at_ms: at, obeys, obey_at_ms: null, window_end_ms: null, perform_at_ms: null, release_at_ms: null };
+    } else {
+      const perform = at + 500;
+      const obey = perform + 3_000;
+      const windowEnd = obey + 1_500;
+      cue = windowEnd + 1_200 + 700;
+      trial = { index, cue_at_ms: at, obeys, obey_at_ms: obey, window_end_ms: windowEnd, perform_at_ms: perform, release_at_ms: windowEnd };
+    }
+    if (index % 3 === 2) {
+      rounds.push({ round: rounds.length + 1, first_index: index - 2, last_index: index, start_ms: roundStart, end_ms: cue });
+      if (index < SCHOOL_V2_OBEYS.length - 1) {
+        cue += 2_500;
+        roundStart = cue;
+      }
+    }
+    return trial;
+  });
+  return {
+    ...makeTrainingSessionPayload({ duration_ms: cue, trials }),
+    rules_version: 2,
+    mask_ms: 1_200,
+    round_break_ms: 2_500,
+    round_breaks_ms: [rounds[0].end_ms],
+    rounds,
+    ...overrides,
+  };
+}
+
 /** `result` of a `training/finish` 200. */
 export function makeTrainingResult(overrides: Record<string, unknown> = {}) {
   return {

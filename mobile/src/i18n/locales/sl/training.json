@@ -87,7 +87,8 @@
       "expiredWhileAway": "Vaja se je iztekla, ker je bila aplikacija zaprta. Napredek tokrat ni zapisan — začni novo vajo.",
       "badResponse": "Nekaj je šlo narobe. Poskusi znova.",
       "training_pet_sleeping": "Kuža spi. V šolo gresta, ko se zbudi.",
-      "training_pet_sleeping_until": "Kuža spi do {{clock}}. Takrat spet v šolo!"
+      "training_pet_sleeping_until": "Kuža spi do {{clock}}. Takrat spet v šolo!",
+      "training_round_two_started": "Drugi krog se je že začel — vadiva do konca!"
     },
     "retry": "Poskusi znova",
     "commands": {
@@ -129,5 +130,34 @@
     "knows": "Kuža zna: {{list}}",
     "knowsLearned": "{{name}} ✓",
     "knowsProgress": "{{name}} {{value}} %"
+  },
+  "school": {
+    "lead": "Ko uboga — takoj priboljšek!",
+    "leadHeart": "Ko uboga — takoj pohvali!",
+    "ignores": "Ne uboga — počakaj.",
+    "keepGoing": "Še 2. krog — kar naprej!",
+    "fb": {
+      "inTime": "Bravo!",
+      "early": "Prezgodaj",
+      "late": "Malo pozno",
+      "missed": "Zamujeno",
+      "waited": "Prav, da si počakal(a)!",
+      "notObeyed": "Ni ubogal — počakaj"
+    },
+    "finishEarly": "Končaj",
+    "finishEarlyA11y": "Končaj vajo po 1. krogu",
+    "treat": "Priboljšek",
+    "treatA11y": "Daj priboljšek",
+    "praise": "Pohvali",
+    "praiseA11y": "Pohvali kužka",
+    "listeningA11y": "Kuža posluša.",
+    "result": {
+      "earlyEnd": "Končal(a) si po 1. krogu — napredek šteje. Za današnjo vajo opravi oba kroga.",
+      "stars": "Zvezdice: {{stars}} od {{total}}",
+      "trialA11y": "{{n}}. ukaz: {{outcome}}",
+      "roundTitle": "{{n}}. krog"
+    },
+    "round": "{{n}}. krog ✓",
+    "progressA11y": "Ukaz {{n}} od {{total}}, zvezdice: {{stars}}"
   }
 }
