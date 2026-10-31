@@ -1000,6 +1000,19 @@
             "prompt_hash": "sha256:85607c90065455a72114a8eb4a3c11f084ffbaa4eb9f69dec57fc8d138ad5803",
             "generated_at": "2026-10-31T01:12:22+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "alaskan_malamute",
+            "species": "dog",
+            "colour": "grey-white",
+            "file": "dog/alaskan-malamute.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:2b999bfa5e9794dde539f73072eba5c9bb6849b3dcdafd2ebecd66760e48da5c",
+            "generated_at": "2026-10-31T03:34:20+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [

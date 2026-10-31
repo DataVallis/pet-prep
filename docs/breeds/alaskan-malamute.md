@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `alaskan_malamute` (viri S637–S641; ponovno S8, S10, S11, S14, S24, S35, S45, S54, S123, S174); seznam za vzreditelja: AKC Working Group (K32), PDSA (S639) |
 | Izvor | FCI št. 243, skupina 5, sekcija 1 (nordijski vlečni psi), ZDA (S637, S638) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 79. mesto (S174, prebrano 2026-10-31) |
-| PR-ji | pet-prep #464 (pasma) · portret: sledi · spletna stran: pet-prep-website `feat/register-alaskan-malamute` |
+| PR-ji | pet-prep #464 (pasma, združen `fbc4367`) · portret: PR (ta, zagon 41164901354) · spletna stran: pet-prep-website `feat/register-alaskan-malamute` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -42,7 +42,7 @@
 | Česanje vsak dan, opozorilo po obroku, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R16 / M5-R17 | 2026-10-31 |
 | Mini igra ušesa (1× na teden); opomnik staršem: kopanje (vsakih 6 tednov) | 🛠 | 💶 izziv | M5-R20 / M5-R19 | 2026-10-31 |
 | Barva (izbirnik: 5 standardnih barv) | 🛠 | 💶 izziv | M5-R21 | 2026-10-31 |
-| AI portret v registru | 🗓 sledi po združitvi | — | M5-R11-04 | — |
+| AI portret v registru (sivo-bel, sprejet v prvem poskusu, zagon 41164901354) | ✅ | — | M5-R11-04 | 2026-10-31 |
 | Stran na petprep.si (`/animals/dogs/alaskan-malamute`, `/sl/zivali/psi/aljaski-malamut`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -58,3 +58,4 @@
 - **Vročina:** PetMD / PDSA svarita pred vročino (čip `heat_sensitive`); pravilo »brez sprehoda v vročini« (M5-R14) je le za plosko-obrazne pasme — če ga želite tudi za malamuta, povejte.
 - **Ime:** »Aljaški malamut« je običajno slovensko ime; strani KZS nisem preverjal. Potrdite ali popravite.
 - **Ugotovitev za skupne dokumente (ne urejam jih):** nova zdravstvena ključa `chondrodysplasia`, `polyneuropathy` in nov test `dna_ampn` (besedila na spletni strani dodana v PR spletne strani).
+- **Portret:** zagon 41164901354 (koda `fbc4367`, brez produkcijske namestitve, 0,15 $), sprejet v prvem poskusu — realistična fotografija odraslega psa, sivo-bel z belo masko in trebuhom, rjave oči, pokončna ušesa, perjanica repa čez hrbet, svetlo siva studijska podlaga.
