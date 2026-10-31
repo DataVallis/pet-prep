@@ -3024,6 +3024,51 @@
       "status": "not_found",
       "tests": [],
       "notes": "Not recognised by the Royal Kennel Club → no RKC Breeds A–Z health-testing section (the runbook's minimum / Best Practice source). PetMD (dog-data S628) and VCA (S629) name conditions (hip / elbow dysplasia, PRA, cerebellar ataxia) but no test list; the OFA CHIC 'browse by breed' page (https://ofa.org/chic-programs/browse-by-breed/, 2026-10-30) returned no breed rows. Show the general dog checklist only (M5-R10-81)."
+    },
+    "lagotto_romagnolo": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S632",
+        "quote": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding"
+      },
+      "tests": [
+        {
+          "key": "dna_je",
+          "level": "minimum",
+          "name": "DNA test for Juvenile epilepsy (JE)",
+          "source_id": "S632",
+          "quote": "DNA test for Juvenile epilepsy (JE)"
+        },
+        {
+          "key": "dna_lsd",
+          "level": "minimum",
+          "name": "DNA test for Lysosomal storage disease (LSD)",
+          "source_id": "S632",
+          "quote": "DNA test for Lysosomal storage disease (LSD)"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "best_practice",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S632",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S632",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S632",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "RKC Breeds A–Z page (dog-data S632, 2026-10-31, reachable with a trailing slash): Good Practice — DNA tests for juvenile epilepsy (JE) and lysosomal storage disease (LSD); Best Practice — the BVA/KC elbow and hip dysplasia schemes and the BVA/KC/ISDS eye scheme (test names as returned verbatim). New test keys dna_je, dna_lsd. Woodgreen (S636) also recommends health tests from breeders (paraphrase)."
     }
   }
 }

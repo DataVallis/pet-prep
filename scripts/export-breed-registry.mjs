@@ -465,6 +465,7 @@ const SPECIES = [
       { id: 'soft_coated_wheaten_terrier', synonyms: { en: ['Wheaten Terrier', 'Wheaten', 'Irish Soft Coated Wheaten Terrier', 'SCWT'], sl: ['pšenični terier', 'irski pšenični terier', 'wheaten terier', 'irski mehkodlaki terier'] } },
       { id: 'irish_wolfhound', synonyms: { en: ['Wolfhound', 'Cú Faoil', 'Irish Wolf Hound'], sl: ['volčji hrt', 'irski hrt', 'irski volcji hrt'] } },
       { id: 'american_staffordshire_terrier', synonyms: { en: ['AmStaff', 'Am Staff', 'Staffordshire Terrier'], sl: ['amstaff', 'ameriški stafordširski terier'] } },
+      { id: 'lagotto_romagnolo', synonyms: { en: ['Lagotto', 'Romagna Water Dog', 'Truffle dog'], sl: ['lagotto', 'romanjski vodni pes', 'pes za tartufe'] } },
     ],
   },
   {
@@ -2187,6 +2188,26 @@ const DOG_FACTS = {
       ['itchy_skin_allergy', 'health.skin_allergy'],
     ],
   },
+  // M5-R10-82. RKC key facts (S632): exercise 'More than 2 hours per day', coat 'Medium', grooming 'More than once a week',
+  // sheds 'No', lifespan 'Over 12 years' (no McMillan 2024 row) + the PetMD span 15–17 y (S635). Height / weight = FCI-Standard
+  // N° 298 by sex (S631). Not ranked by Coren. FCI origin Italy. Not exported: adult_weight alternatives and salt_category,
+  // senior_from, health.eyes (no named condition), health.other (paraphrase only).
+  lagotto_romagnolo: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'more_than'], ['lifespan.petmd', 'span']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    coren_rank: false,
+    health: [
+      ['epilepsy', 'health.juvenile_epilepsy'],
+      ['storage_disease', 'health.storage_disease'],
+      ['hip_elbow_dysplasia', 'health.hip_elbow'],
+    ],
+  },
 
 
 };
@@ -2235,6 +2256,7 @@ export const DOG_CARE_TASKS = {
   soft_coated_wheaten_terrier: [['ear_cleaning', 1, 7, 'proposed_game_parameters.soft_coated_wheaten_terrier.ear_care'], ['groomer_visit', 1, 28, 'proposed_game_parameters.soft_coated_wheaten_terrier.professional_grooming'], ['bath', 1, 28, 'proposed_game_parameters.soft_coated_wheaten_terrier.bathing']],
   irish_wolfhound: [['ear_cleaning', 1, 14, 'proposed_game_parameters.irish_wolfhound.ear_care']],
   american_staffordshire_terrier: [['ear_cleaning', 1, 28, 'proposed_game_parameters.american_staffordshire_terrier.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.american_staffordshire_terrier.bathing']],
+  lagotto_romagnolo: [['groomer_visit', 1, 42, 'proposed_game_parameters.lagotto_romagnolo.professional_grooming'], ['bath', 1, 28, 'proposed_game_parameters.lagotto_romagnolo.bathing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -2854,6 +2876,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.american_staffordshire_terrier.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.american_staffordshire_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.american_staffordshire_terrier.exercise_minutes_senior',
+  },
+  lagotto_romagnolo: {
+    adult_minutes: ['proposed_game_parameters.lagotto_romagnolo.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.lagotto_romagnolo.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.lagotto_romagnolo.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.lagotto_romagnolo.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.lagotto_romagnolo.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.lagotto_romagnolo.exercise_minutes_senior',
   },
 
 

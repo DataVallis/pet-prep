@@ -673,6 +673,13 @@
 | latter preferred") and natural tail ("Not docked."). Not RKC-recognised (no Breed Watch). Brindle first with the highest
 | weight (the portrait default, Claude's choice); weights unsourced → `verified => false`.
 |
+| Lagotto Romagnolo (M5-R10-82, docs/research/dog-data lagotto_romagnolo.appearance):
+| "Small to medium-sized dog, well proportioned, powerfully built, of a rustic appearance" (FCI-Standard N° 298, S631);
+| woolly coat in tight ring-shaped curls, clipped evenly, never styled (S631); colours off-white, white with brown or orange
+| patches, orange roan, brown roan, brown, orange (S631 / RKC S633); black coat, patches or pigmentation disqualify → never
+| black; brown nose. Brown roan first with the highest weight (the portrait default, Claude's choice); weights unsourced →
+| `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -3581,6 +3588,45 @@ return [
             'tail' => ['short, low-set natural tail tapering to a fine point, not curled'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-82 (docs/research/dog-data/data.json lagotto_romagnolo.appearance; runbook rules 2026-10-10: colours the
+    // standard lists — S631 "Off-white solid colour, white with brown or orange patches, orange roan, brown roan," brown
+    // and orange with or without white; never black, grey or black pigment).
+    'lagotto_romagnolo' => [
+        'display_name' => 'Lagotto Romagnolo',
+        // Colour frequencies are in no source (lagotto_romagnolo.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 298 Lagotto Romagnolo (S631, https://fci.be/Nomenclature/Standards/298g08-en.pdf), RKC breed standard (S633) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S631 "Height at the withers: Males: 43– 48 cm"; "Weight: Males: 13 – 16 kg."',
+            'build' => 'S633 "Squarely built, small to medium sized dog of rustic appearance;"',
+            'coat_length' => 'S631 "Of woolly texture, semi- rough on the surface, with tight, ring shaped curls, with visible undercoat."',
+            'coat_color' => 'S631 "Off-white solid colour, white with brown or orange patches, orange roan, brown roan," (weights unsourced)',
+            'nose' => 'S631 "The colour ranges from light to dark brown, depending on the colour of the coat."',
+            'eye_color' => 'S631 "The colour of the iris ranges from ochre to hazel and dark brown depending on the colour of the coat."',
+            'ear_carriage' => 'S631 "Medium-sized in proportion to the head, triangular with rounded tips"',
+            'tail' => 'S631 "At rest carried scimitar like; when attentive decidedly raised."',
+        ],
+        'traits' => [
+            'size' => ['small to medium-sized'],
+            'build' => [['value' => 'squarely built, well proportioned and powerful, of a rustic appearance', 'weight' => 3], 'compact, sturdy, square-bodied water dog'],
+            'coat_length' => ['woolly coat of tight ring-shaped curls all over the body, evenly clipped to a natural rustic outline, never styled'],
+            // Standard colours (S631 / S633); brown roan first with the highest weight → the register portrait (Claude's choice).
+            'coat_color' => [
+                ['value' => 'brown roan (white finely flecked with brown)', 'weight' => 30],
+                ['value' => 'solid off-white', 'weight' => 15],
+                ['value' => 'white with brown patches', 'weight' => 15],
+                ['value' => 'white with orange patches', 'weight' => 10],
+                ['value' => 'orange roan (white finely flecked with orange)', 'weight' => 10],
+                ['value' => 'solid brown', 'weight' => 15],
+                ['value' => 'solid orange', 'weight' => 5],
+            ],
+            'nose' => ['brown nose, light to dark depending on the coat colour, never black'],
+            'eye_color' => ['round eyes from ochre to hazel or dark brown, matching the coat'],
+            'ear_carriage' => ['medium-sized triangular hanging ears with rounded tips, covered in curls'],
+            'tail' => ['tapering tail carried scimitar-like, raised when alert'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'nose', 'eye_color', 'ear_carriage', 'tail'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',
