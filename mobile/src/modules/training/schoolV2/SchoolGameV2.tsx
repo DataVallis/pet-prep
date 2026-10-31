@@ -26,6 +26,12 @@
  *   stays tappable (a tap still counts as praised-without-obeying — server rule);
  * - the break's primary button is »Nadaljuj (3)« counting down to round 2's start on the server's
  *   timeline (never longer than the break); »Končaj« is a small text button with the same gating.
+ * - tap OR drag (he tried to drag the treat to the dog): the praise counts at the press-in (first
+ *   tap per cue decides, unchanged); a drag that follows moves the token with the finger and the
+ *   treat flies to the dog from where it is let go (`TokenDrag`) — never a second tap, never a new
+ *   time. A tap's flight starts at the release. Same for »Pohvali« ♥. A small bobbing finger +
+ *   »Tapni« sits on the token while the beginner hint is on and nothing has counted yet
+ *   (`tapHintOn`; reduce motion = static label).
  *
  * Timing is the server's schedule only (`schoolV2.ts`); one timer per step boundary keeps every
  * switch on time. Sounds + haptics follow the parent's »Zvoki in vibracija v igrah«; reduce motion =
@@ -38,7 +44,7 @@ import { AccessibilityInfo, Platform, Pressable, StyleSheet, View, type GestureR
 import Animated, { Easing, cancelAnimation, useAnimatedStyle, useSharedValue, withRepeat, withSequence, withTiming } from 'react-native-reanimated';
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 import { ActivityIndicator } from 'react-native';
-import { Bone, Ear, Heart } from 'lucide-react-native';
+import { Bone, Ear, Heart, Pointer } from 'lucide-react-native';
 
 import { Text } from '@/components/ui/Text';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
@@ -55,6 +61,7 @@ import type { MediaMode } from '@/modules/petMedia/statePlayer';
 import { slotIndex } from '@/modules/training/game';
 import { schoolDeck } from '@/modules/training/schoolV2/schoolDeck';
 import SchoolRuleStrip from '@/modules/training/schoolV2/SchoolRuleStrip';
+import TokenDrag from '@/modules/training/schoolV2/TokenDrag';
 import {
   TOKEN_COOLDOWN_MS,
   breakCountdown,
@@ -68,6 +75,7 @@ import {
   schoolFrameAt,
   starCount,
   tapFeedback,
+  tapHintOn,
   tokenWaiting,
   type SchoolFeedback,
   type SchoolFrame,
@@ -104,12 +112,26 @@ function feedbackLabel(fb: SchoolFeedback): string {
   return S.fb[fb.label];
 }
 
-/** The treat (or heart) flying in an arc from the token to the dog; reduce motion = a short flash at the dog. */
-function TreatFlight({ shot, token, reduceMotion }: { shot: number; token: 'treat' | 'heart'; reduceMotion: boolean }) {
+/** One flight: `n` counts the shots, `dx` / `dy` = where a drag let go (0 / 0 for a tap). */
+interface FlightShot {
+  n: number;
+  dx: number;
+  dy: number;
+}
+
+/**
+ * The treat (or heart) flying in an arc from the token — or from where a drag let go — to the dog;
+ * reduce motion = a short flash at the dog.
+ */
+function TreatFlight({ shot, token, reduceMotion }: { shot: FlightShot; token: 'treat' | 'heart'; reduceMotion: boolean }) {
   const progress = useSharedValue(0);
   const opacity = useSharedValue(0);
+  const fromX = useSharedValue(0);
+  const fromY = useSharedValue(0);
   useEffect(() => {
-    if (shot === 0) return;
+    if (shot.n === 0) return;
+    fromX.value = shot.dx;
+    fromY.value = shot.dy;
     if (reduceMotion) {
       progress.value = 1;
       opacity.value = withSequence(withTiming(1, { duration: 120 }), withTiming(0, { duration: 380 }));
@@ -119,17 +141,22 @@ function TreatFlight({ shot, token, reduceMotion }: { shot: number; token: 'trea
     opacity.value = 1;
     progress.value = withTiming(1, { duration: TREAT_FLIGHT_MS, easing: Easing.out(Easing.quad) });
     opacity.value = withSequence(withTiming(1, { duration: TREAT_FLIGHT_MS - 120 }), withTiming(0, { duration: 160 }));
-  }, [shot, reduceMotion, progress, opacity]);
+  }, [shot, reduceMotion, progress, opacity, fromX, fromY]);
   const style = useAnimatedStyle(() => {
     const p = progress.value;
-    // From the dock (bottom) up to the dog (middle) in a soft arc to the side.
+    // From the dock (bottom) — or the drag's release point — up to the dog (middle) in a soft arc.
     return {
       opacity: opacity.value,
-      transform: [{ translateX: Math.sin(p * Math.PI) * 60 }, { translateY: -p * 320 }, { scale: 1 - p * 0.45 }],
+      transform: [
+        { translateX: fromX.value * (1 - p) + Math.sin(p * Math.PI) * 60 },
+        { translateY: fromY.value * (1 - p) - p * 320 },
+        { scale: 1 - p * 0.45 },
+      ],
     };
   });
   return (
-    <View pointerEvents="none" style={[StyleSheet.absoluteFill, reduceMotion ? styles.flashArea : styles.flightArea]}>
+    // The shot count is in the wrapper's testID so tests can tell how many flights started.
+    <View pointerEvents="none" style={[StyleSheet.absoluteFill, reduceMotion ? styles.flashArea : styles.flightArea]} testID={`school-v2-flights-${shot.n}`}>
       <Animated.View style={style} testID="school-v2-treat-flight">
         {token === 'treat' ? <Bone color={palette.warnDark} fill={palette.warnDark} size={44} /> : <Heart color={palette.raspberry} fill={palette.raspberry} size={44} />}
       </Animated.View>
@@ -182,6 +209,37 @@ function TokenPulse({ on, reduceMotion, children }: { on: boolean; reduceMotion:
   }, [on, reduceMotion, scale]);
   const style = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
   return <Animated.View style={style} testID={on && !reduceMotion ? 'school-v2-token-pulse' : undefined}>{children}</Animated.View>;
+}
+
+const TAP_BOB_MS = 520;
+
+/**
+ * The discreet tap hint on the token (David 2026-10-31: »mogoče bi lahko tak diskreten namig bil
+ * tap«): a small finger that bobs + »Tapni«; reduce motion = a static label. Hidden from the screen
+ * reader — the token's button label already says what to do.
+ */
+function TapHint({ reduceMotion, testID }: { reduceMotion: boolean; testID: string }) {
+  const bob = useSharedValue(0);
+  useEffect(() => {
+    if (reduceMotion) {
+      cancelAnimation(bob);
+      bob.value = 0;
+      return;
+    }
+    bob.value = withRepeat(withSequence(withTiming(-5, { duration: TAP_BOB_MS }), withTiming(0, { duration: TAP_BOB_MS })), -1, false);
+    return () => cancelAnimation(bob);
+  }, [reduceMotion, bob]);
+  const style = useAnimatedStyle(() => ({ transform: [{ translateY: bob.value }] }));
+  return (
+    <View pointerEvents="none" style={styles.tapHint} testID={testID} importantForAccessibility="no-hide-descendants" accessibilityElementsHidden>
+      <Animated.View style={style} testID={reduceMotion ? undefined : `${testID}-anim`}>
+        <Pointer color={palette.graphite} size={18} />
+      </Animated.View>
+      <Text style={styles.tapHintText} testID={`${testID}-text`}>
+        {S.tapHint}
+      </Text>
+    </View>
+  );
 }
 
 export default function SchoolGameV2({
@@ -288,7 +346,17 @@ export default function SchoolGameV2({
   }, [declined, say]);
 
   // ── The token: the FIRST tap of a cue decides (server rule); instant mirror feedback.
-  const [shot, setShot] = useState(0);
+  // Tap OR drag (David 2026-10-31): the praise counts at the press-in; the treat flies when the
+  // finger lets go — from the token (tap) or from where a drag ended. A drag never adds a tap.
+  const [shot, setShot] = useState<FlightShot>({ n: 0, dx: 0, dy: 0 });
+  const pendingFlight = useRef(false);
+  const dragActive = useRef(false);
+  const [counted, setCounted] = useState(false);
+  const launchFlight = useCallback((dx: number, dy: number) => {
+    if (!pendingFlight.current) return;
+    pendingFlight.current = false;
+    setShot((s) => ({ n: s.n + 1, dx, dy }));
+  }, []);
   const [coolUntil, setCoolUntil] = useState(0);
   useEffect(() => {
     if (coolUntil === 0) return;
@@ -301,17 +369,20 @@ export default function SchoolGameV2({
       setCoolUntil(Date.now());
       const ms = game.praise(touchTimestamp);
       if (ms === null) return;
+      setCounted(true);
       const i = slotIndex(session.trials, ms);
       if (i === null) return;
       const fb = tapFeedback(session, i, ms, schoolFrameAt(session, ms));
       void feedback.current?.show(fb.kind, { label: feedbackLabel(fb), mask: fb.mask, totalMs: fb.totalMs });
       if (fb.label === 'inTime') {
-        setShot((n) => n + 1);
+        // A screen-reader activation has no press-out / drag to wait for → fly at once.
+        pendingFlight.current = true;
+        if (!touchActive.current) launchFlight(0, 0);
         fx.sound(token === 'treat' ? 'crunch' : 'chime');
         fx.haptic('success');
       }
     },
-    [game, session, fx, token],
+    [game, session, fx, token, launchFlight],
   );
 
   const outcomes = clockRunning ? liveOutcomes(session, taps, e, resumedAtMs) : session.trials.map(() => null);
@@ -323,6 +394,7 @@ export default function SchoolGameV2({
   const cooling = coolUntil !== 0;
   const canEndEarly = !finishing && inBreak && game.canEndEarly();
   const hintOn = clockRunning && praiseHintOn(frame, hintEnabled);
+  const tapHint = clockRunning && tapHintOn(hintEnabled, counted, frame);
   const waiting = clockRunning && tokenWaiting(frame);
   const countdown = clockRunning ? breakCountdown(session, frame, e) : null;
   // »Nadaljuj« pressed in this break: only the countdown stays (it cannot shorten the server's break).
@@ -379,6 +451,19 @@ export default function SchoolGameV2({
           <Text style={styles.nowText}>{S.now}</Text>
         </View>
       )}
+      <TokenDrag
+        reduceMotion={reduceMotion}
+        testID={`${testID}-token-drag`}
+        onDragStart={() => {
+          // The drag took the touch over: no onPress follows, and the press-out is not a release.
+          dragActive.current = true;
+          touchActive.current = false;
+        }}
+        onDragEnd={(dx, dy) => {
+          dragActive.current = false;
+          launchFlight(dx, dy);
+        }}
+      >
       <TokenPulse on={hintOn} reduceMotion={reduceMotion}>
     <Pressable
       testID={`${testID}-token`}
@@ -389,6 +474,10 @@ export default function SchoolGameV2({
       onPressIn={(ev: GestureResponderEvent) => {
         touchActive.current = true;
         onTap(ev?.nativeEvent?.timestamp ?? null);
+      }}
+      // A tap's release flies the treat (a drag flies it from where it ends — TokenDrag).
+      onPressOut={() => {
+        if (!dragActive.current) launchFlight(0, 0);
       }}
       onPress={() => {
         if (touchActive.current) {
@@ -415,7 +504,9 @@ export default function SchoolGameV2({
         {waiting ? S.wait : tokenLabel}
       </Text>
     </Pressable>
+        {tapHint && <TapHint reduceMotion={reduceMotion} testID={`${testID}-tap-hint`} />}
       </TokenPulse>
+      </TokenDrag>
     </>
   );
 
@@ -543,6 +634,20 @@ const styles = StyleSheet.create({
   nowChip: { paddingHorizontal: 22, paddingVertical: 6, borderRadius: radius.button, backgroundColor: palette.white },
   nowText: { color: palette.graphite, fontSize: 22, letterSpacing: tightTracking(22), fontFamily: fonts.displayBold },
   tokenPressed: { transform: [{ scale: 0.95 }] },
+  /** The discreet tap hint: a small white pill on the token's lower edge. */
+  tapHint: {
+    position: 'absolute',
+    bottom: -10,
+    alignSelf: 'center',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    paddingHorizontal: 10,
+    paddingVertical: 3,
+    borderRadius: radius.button,
+    backgroundColor: alpha(palette.white, 0.92),
+  },
+  tapHintText: { color: palette.graphite, fontSize: 13, fontFamily: fonts.displayBold, letterSpacing: tightTracking(13) },
   tokenText: { color: palette.graphite, fontSize: 16, fontFamily: fonts.displayBold, letterSpacing: tightTracking(16) },
   breakDock: { alignItems: 'center', gap: 8 },
   continue: {

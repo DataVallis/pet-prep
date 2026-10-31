@@ -8,6 +8,16 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-31 — Priboljšek lahko otrok tapne ali povleče do psa (in dobi namig »Tapni«)
+
+**Kaj:** David je na telefonu preizkusil šolo: brisanje luže s krpo mu je bilo všeč (»wipe je top«), prav tako priboljšek, ki odleti do psa. Priboljšek pa je poskusil **povleči** do psa — ni vedel, da ga je treba tapniti: »nisem vedel da tapneš na njega, mogoče bi lahko tak diskreten namig bil tap«. Zdaj žeton sprejme oboje: šteje trenutek dotika (kot doslej), vlečenje pa priboljšek samo premakne s prstom in ob spustu odleti do psa. Začetniki (ukaz naučen manj kot 50 %) vidijo na žetonu majhen prst, ki poskakuje, in napis »Tapni«, dokler prvič ne tapnejo.
+**Zakaj je pomembno:** otrok naredi tisto, kar se mu zdi naravno — in igra mora to sprejeti, ne pa ga kaznovati z »Zamujeno«. Ker šteje dotik, vlečenje ne doda zamika: pravilo »pohvali takoj, ko uboga« ostane enako pošteno za počasnejše prste.
+**Številke:** 0 sprememb pravil strežnika in podatkov; vlečenje se začne po 8 točkah premika; en tap na ukaz; 9 novih testov; samo JS — gre z OTA na isto gradnjo.
+- 📣 »Ustanovitelj je priboljšek vlekel do psa namesto tapnil. Zdaj gre oboje — in začetnik dobi drobcen namig ›Tapni‹.«
+- 👩 Starši: otrok se ne more zmotiti s kretnjo — šteje, kdaj se dotakne priboljška, ne kako.
+- 🧒 »Ko kuža uboga, tapni priboljšek — ali ga povleci do kužka!«
+- 🛠 `TokenDrag` prevzame dotik šele po 8 pt (responder capture), `Pressable` je že štel `onPressIn`; vlečenje nikoli ne kliče `game.praise`.
+
 ## 2026-10-31 — Igra z žogo: video je prekril vse, zdaj ima vsaka igra vedno izhod
 
 **Kaj:** David je na iPhonu (nova gradnja v TestFlightu) odprl igro z žogo: kuža se je lepo predvajal čez cel zaslon, vse ostalo pa je izginilo — ni bilo žoge, gumba »Pokliči!«, zgornje vrstice ne × in iz igre ni bilo mogoče ven. Vzrok je bil v tem, kako nova arhitektura React Native razvrsti plasti: video je imel znotraj svoje plasti višjo »številko nadstropja« (`zIndex`) in jo je sistem primerjal z gumbi igre, zato je video pristal na vrhu. Enako bi se zgodilo v šoli, pri palici in pri crkljanju. Popravek: vsaka plast igre je zdaj svoje zaprto »nadstropje« (video vedno spodaj), vsaka igra ima vedno viden ×, Androidov »nazaj« jo zapre, če se igra v 15 s ne pripravi ali se zlomi, pa se pokaže »Igra se ne odziva.« z gumbom »Nazaj«. Pri neredu, ki ga je treba počistiti, izhod čiščenje nadaljuje na preprostem zaslonu (pravilo ostane, otrok ni ujet). Popravek pride na telefone s posodobitvijo (OTA), brez nove gradnje.

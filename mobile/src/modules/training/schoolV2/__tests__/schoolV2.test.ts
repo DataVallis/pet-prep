@@ -32,6 +32,10 @@ import {
   schoolFrameAt,
   starCount,
   tapFeedback,
+  tapHintOn,
+  isTokenDrag,
+  TOKEN_DRAG_START_PT,
+  PRAISE_HINT_BELOW_PROGRESS,
 } from '@/modules/training/schoolV2/schoolV2';
 import {
   isSchoolV2Session,
@@ -308,6 +312,35 @@ describe('clarity layer (David\'s device test 2026-10-31)', () => {
     expect(tokenWaiting(at(13_399))).toBe(true);
     expect(tokenWaiting(at(13_400))).toBe(false);
     expect(tokenWaiting(at(5_500))).toBe(false);
+  });
+
+  it('tap hint (David 2026-10-31): on while the beginner hint is enabled and nothing counted, off after the first counted tap', () => {
+    for (const ms of [0, 2_000, 2_600, 5_600, 8_900, 23_000]) expect(tapHintOn(true, false, at(ms))).toBe(true);
+    for (const ms of [0, 5_600, 23_000]) expect(tapHintOn(true, true, at(ms))).toBe(false);
+    // while the dog visibly ignores the token says »Počakaj« — no »Tapni« next to it
+    expect(tapHintOn(true, false, at(10_600))).toBe(false);
+  });
+
+  it('tap hint shares the »Zdaj!« gate: gone at ≥ 50 % progress', () => {
+    expect(PRAISE_HINT_BELOW_PROGRESS).toBe(50);
+    expect(tapHintOn(praiseHintEnabled(49), false, at(1_000))).toBe(true);
+    expect(tapHintOn(praiseHintEnabled(50), false, at(1_000))).toBe(false);
+    expect(tapHintOn(praiseHintEnabled(100), false, at(5_600))).toBe(false);
+  });
+
+  it('a drag starts only after the finger moved TOKEN_DRAG_START_PT', () => {
+    expect(TOKEN_DRAG_START_PT).toBe(8);
+    expect(isTokenDrag(0, 0)).toBe(false);
+    expect(isTokenDrag(5, 5)).toBe(false);
+    expect(isTokenDrag(0, -8)).toBe(true);
+    expect(isTokenDrag(-30, -120)).toBe(true);
+  });
+
+  it('the tap hint text fits a small pill (sl + en)', async () => {
+    expect(SCHOOL_V2_STRINGS.tapHint).toBe('Tapni');
+    await i18n.changeLanguage('en');
+    expect(SCHOOL_V2_STRINGS.tapHint).toBe('Tap');
+    await i18n.changeLanguage('sl');
   });
 
   it('break countdown: ≤ 3 s, counted to round 2\'s start, never past it (break 2.5 s → 3, 2, 1)', () => {
