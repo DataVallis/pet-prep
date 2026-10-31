@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "1ad1ce302ff984ec1b497f4caef7a8fb7b78a5d710febcb8e0daa545f0301c77"
+      "sha256": "39f866e4f4421056a696c820dafbe6f1d6889cfc4975485d5b003bd161d36042"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "fe9af72c2a9aefece283219e2a7ca46efcf96e9579b950342b55c810b79a0f4c"
+      "sha256": "81134025595cae83add1ad26ff863d817f06c49ec820ae55fd6c1e31d713355a"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "a1aafba379e29e16bc1e8fe764c9293653ce7be544f42763a3e220b967bdd057"
+      "sha256": "9d8a6e4e82d88b66685d051406abc4b77eb7587051e35313fa887c0ad71fbafd"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,20 +40,20 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "967d40477e4097838f285468a0919087df9681e4f8397e2f1fa4ffeed5c3be36"
+      "sha256": "9b5db593abf8515fd3d67c3bab73378cccf2ffd679f14c5d9155fadae8d8af7c"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "b1f15fdc8cf807c0fb3616ac7bab26c7b7d93e85d277bfdbbb61b4d0992df269"
+      "sha256": "8baa84087802abcb716e8ec71c62c5a578d85fdd07c0c171c6a5c6e7654eca82"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "7a9a39358d284107f9e9629b58a234c51ea63f540c35de9f60047c9a14246476"
+      "sha256": "3d32899ad42c4bcae51cd199f337b298d36ca7ab7c664160ceaa1d6f63a5b8d4"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "459297036379dc804c5ef02b36b36340ad6ec826a018107dc7002eeec6c4aacc"
+      "sha256": "5da2f50cee81ae5299825b6c6ad41185c64d6839f9f911da16456e98b897e406"
     },
     "app_release": {
       "path": "docs/research/app-release.json",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "4d09c8242f64aa6fe8045bcee612cee8e72aa7130a3975008196a4f0af5a7038"
+      "sha256": "ef2d38cf73f9231289cde2122acb6930c7723db489615dd83c1964124d96790d"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -222,7 +222,7 @@
         }
       },
       "status": "available",
-      "breed_count": 77,
+      "breed_count": 78,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -46568,6 +46568,577 @@
       ]
     },
     {
+      "id": "basenji",
+      "species": "dog",
+      "order": 77,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Basenji",
+        "sl": "Basenji"
+      },
+      "slug": {
+        "en": "basenji",
+        "sl": "basenji"
+      },
+      "synonyms": {
+        "en": [
+          "African Barkless Dog",
+          "Congo Dog",
+          "barkless dog"
+        ],
+        "sl": [
+          "basendži",
+          "basendzi",
+          "pes, ki ne laja"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "h1_2",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S644"
+          ],
+          "ref": "basenji.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              40,
+              43
+            ],
+            "female": [
+              40,
+              43
+            ]
+          },
+          "source_ids": [
+            "S644"
+          ],
+          "ref": "basenji.height.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              9,
+              11
+            ],
+            "female": [
+              9,
+              11
+            ]
+          },
+          "source_ids": [
+            "S644"
+          ],
+          "ref": "basenji.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "basenji.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S644"
+          ],
+          "ref": "basenji.lifespan.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            13,
+            14
+          ],
+          "source_ids": [
+            "S646"
+          ],
+          "ref": "basenji.lifespan.webmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "at_least",
+          "value": 60,
+          "source_ids": [
+            "S644"
+          ],
+          "ref": "proposed_game_parameters.basenji.exercise_minutes_adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S644"
+          ],
+          "ref": "basenji.suitability.pdsa_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S644"
+          ],
+          "ref": "basenji.suitability.pdsa_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 78,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "basenji.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 43,
+            "group": 5,
+            "section": 6,
+            "origin": "AF-C"
+          },
+          "source_ids": [
+            "S642"
+          ],
+          "ref": "basenji.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "fanconi_syndrome",
+          "source_ids": [
+            "S644"
+          ],
+          "ref": "basenji.health.fanconi_syndrome",
+          "confidence": "high"
+        },
+        {
+          "key": "pra_eye_disease",
+          "source_ids": [
+            "S644"
+          ],
+          "ref": "basenji.health.pra",
+          "confidence": "high"
+        },
+        {
+          "key": "pyruvate_kinase_deficiency",
+          "source_ids": [
+            "S644"
+          ],
+          "ref": "basenji.health.pyruvate_kinase_deficiency",
+          "confidence": "high"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S644"
+          ],
+          "ref": "basenji.health.luxating_patella",
+          "confidence": "high"
+        },
+        {
+          "key": "bladder_stones",
+          "source_ids": [
+            "S644"
+          ],
+          "ref": "basenji.health.urolithiasis",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [],
+        "consider": [
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S644"
+            ],
+            "refs": [
+              "basenji.behaviour.mental_stimulation"
+            ]
+          },
+          {
+            "tag": "secure_fencing",
+            "source_ids": [
+              "S646"
+            ],
+            "refs": [
+              "basenji.behaviour.escaping"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 2,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.basenji.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S644"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S644 'Minimum exercise (per day): 1 hour'; RKC page not reachable)"
+          },
+          {
+            "ref": "proposed_game_parameters.basenji.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.basenji.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S644"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 108 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+          },
+          {
+            "ref": "proposed_game_parameters.basenji.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.5 (Coren rank 78, Lowest tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.basenji.grooming",
+            "basis_source_ids": [
+              "S644"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (PDSA »brushing once a week«; WebMD »once a week«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.basenji.tooth_brushing",
+            "basis_source_ids": [
+              "S646"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »at least twice a week« → 2× na teden"
+          },
+          {
+            "ref": "proposed_game_parameters.basenji.ear_care",
+            "basis_source_ids": [
+              "S646"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »on a weekly basis« → 1× na teden"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S644",
+          "S646"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_fanconi",
+            "level": "other_scheme",
+            "source_ids": [
+              "K37"
+            ]
+          },
+          {
+            "key": "dna_pra_bj1",
+            "level": "other_scheme",
+            "source_ids": [
+              "K37"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K37"
+            ]
+          },
+          {
+            "key": "thyroid_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K37"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K37"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K37"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "K37"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S642",
+        "S644",
+        "S646",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19",
+        "K37"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -51818,6 +52389,27 @@
       "url": "https://petmd.com/dog/breeds/alaskan-malamute"
     },
     {
+      "id": "S642",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — Basenji (43)",
+      "url": "https://www.fci.be/EN/nomenclature/BASENJI-43.html"
+    },
+    {
+      "id": "S644",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Basenji breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/basenji"
+    },
+    {
+      "id": "S646",
+      "tier": "B",
+      "publisher": "WebMD Pets — Alyssa Anderson, medically reviewed by Shruthi N, MD (2026-04-23)",
+      "title": "What to Know About Basenjis",
+      "url": "https://webmd.com/pets/dogs/what-to-know-basenjis"
+    },
+    {
       "id": "C1",
       "tier": "A (via B summary)",
       "publisher": "AAHA / AAFP, *JFMS* / *JAAHA* 2021. Read through the AVMA JAVMA News summary of 2021-04-15.",
@@ -52243,6 +52835,13 @@
       "publisher": "American Kennel Club",
       "title": "Toy Group Health Testing Requirements (breeder programs)",
       "url": "https://www.akc.org/breeder-programs/breed-health-testing-requirements/toy-group-health-testing-requirements/"
+    },
+    {
+      "id": "K37",
+      "tier": "B",
+      "publisher": "Basenji Club of America",
+      "title": "Basenji Health",
+      "url": "https://basenji.org/basenji/health/"
     }
   ]
 }
