@@ -89,7 +89,7 @@ care/
   regions/<country>.json     # državna pravila in nujni kontakti
 ```
 
-Vsak zapis: `slug` (EN, stabilen), `species`, `level` (samo A/B), `answer_{en,sl}`, `why_*`, `signs_*`, `what_to_do_*`, `child_{en,sl}`, `sources: [{id, quote}]`, `game_rule_key?`, `status` draft | verified, `verified_hash`, `updated`, `related` (živila, pasme, vodniki). Izvozna skripta (kot `export-breed-registry.mjs`) zgradi `care-knowledge.json` → spletna stran ga sinhronizira kot register.
+Vsak zapis: `slug` (EN, stabilen), `species`, `level` (samo A/B), `answer`, `why`, `signs`, `what_to_do`, `child` — vsako kot slovar po jeziku (`{"en": …, "sl": …, …}`), ne kot stolpci `_en` / `_sl`, ker gre naenkrat 10–15 jezikov (David 31. 10.); vsak jezik ima svoj `status` in `verified_hash` (prevod se preveri proti EN besedilu in citatu), `sources: [{id, quote}]`, `game_rule_key?`, `status` draft | verified, `verified_hash`, `updated`, `related` (živila, pasme, vodniki). Izvozna skripta (kot `export-breed-registry.mjs`) zgradi `care-knowledge.json` → spletna stran ga sinhronizira kot register.
 
 Pravila vsebine (enaka kot register + strožja za zdravje):
 - vsako dejstvo z virom in dobesednim citatom (citat ostane v podatkih, na strani parafraza);
@@ -131,13 +131,13 @@ Kaj podatki raziskave kažejo (oktober 2026):
 - **Svežina**: večina zadetkov AI robotov gre na vsebino, mlajšo od enega leta; strani brez četrtletne posodobitve izgubljajo citate → v bazi imamo `updated` in četrtletni pregled (avtomatiziran, glej §9).
 - **Seznami »Top N«** so med najbolj citiranimi oblikami → strani »25 živil, strupenih za pse« generiramo iz baze.
 - Velik del AI citatov pride **izven lastne domene** (Reddit, YouTube, mediji) → vsaka tema dobi tudi vrtiljak / reel (kot ta objava, a natančen), Curio odgovarja.
-- **ChatGPT išče prek Bing indeksa**, Google AI Overviews prek Googla → zemljevid strani mora biti v obeh. Odločitev 11. 10. »brez Bing Webmaster Tools« je treba ponovno preveriti (§10); vsaj IndexNow ob vsaki objavi.
+- **ChatGPT išče prek Bing indeksa**, Google AI Overviews prek Googla → zemljevid strani mora biti v obeh. petprep.si je v Bing Webmaster Tools že uvožen iz Google Search Console (David 31. 10.); dodamo IndexNow ob vsaki objavi.
 
 Tehnično na petprep.si:
 - JSON-LD: `Article` (z `about` = vrsta / živilo, `citation` = viri, `dateModified` resničen), `FAQPage`, `BreadcrumbList`; povezave `sameAs` na Wikidata za živila in vrste;
 - `llms.txt` dobi razdelek »Care knowledge« + `/llms/care-<vrsta>.<jezik>.txt`;
 - notranje povezave: živilo ↔ vodnik ↔ pasma (npr. ploskonose pasme ↔ vročina) ↔ register; vsaka stran ≥ 3 povezave v isti steber;
-- hreflang EN ↔ SL za vsak par; struktura pripravljena na več jezikov;
+- hreflang za vse jezike strani (`x-default` = EN); slugi in URL-ji po jeziku, gradnja strani brez sprememb, ko dodamo jezik (cilj 10–15 jezikov naenkrat);
 - OG slike: generirana kartica (stopnja + živilo + vrsta) v CGP; nič fotografij tujih avtorjev.
 
 ## 8. Meritve
@@ -160,7 +160,7 @@ Vsaka faza = PR-ji z dokumentacijo; vsebina se objavi na spletu šele, ko je odo
 
 ## 10. Odločitve (David)
 
-Sprejeto 31. 10. 2026: (1) **brez veterinarskega pregleda** — strani nosijo opombo »ni veterinarsko preverjeno« (kot zanimivosti pasem), viri in neodvisno preverjanje ostanejo obvezni; (2) **Bing Webmaster Tools + IndexNow** za petprep.si (spremeni odločitev z 11. 10.); (3) **najprej splet K0–K1**, aplikacija (K3) sledi. Odprto: 4 in 5.
+Sprejeto 31. 10. 2026: (1) **brez veterinarskega pregleda** — strani nosijo opombo »ni veterinarsko preverjeno« (kot zanimivosti pasem), viri in neodvisno preverjanje ostanejo obvezni; (2) **Bing + IndexNow**: petprep.si je v Bing Webmaster Tools že uvožen (enkratno, nič več za narediti), dodamo IndexNow; (3) **najprej splet K0–K1**, aplikacija (K3) sledi. (4) **jeziki**: baza in spletna stran se zgradita za 10–15 jezikov naenkrat (kateri — še odprto). Odprto: izbor jezikov in 5.
 
 
 1. **Veterinarski pregled** vsebine o hrani in nujnih primerih (npr. pilotni veterinar iz 11. 10. kot recenzent z imenom na strani) — močno poveča zaupanje (E-E-A-T) pri zdravstveni vsebini; ali ostanemo pri »ni veterinarsko preverjeno«?
