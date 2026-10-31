@@ -42011,6 +42011,613 @@
       }
     }
   },
+  "lagotto_romagnolo": {
+    "_note": "Added 2026-10-31 (M5-R10-82, unattended run — appended after the American Staffordshire Terrier: AKC 2024 No. 78 'Lagotto Romagnolo', S174 full-list table fetched 2026-10-31 '78 | Lagotto Romagnolo'). Quotes as returned by the web-fetch tool on 2026-10-31 (short quotes, 125-character limit; fragments marked as such); paraphrase only in notes. Sources S630–S636 (reused S10, S11, S14, S24, S35, S45, S123, S174). No health percentages anywhere. Identity from the FCI nomenclature (S630, No. 298, Italy); appearance, colours, height and weight from FCI-Standard N° 298 (S631) and the Royal Kennel Club breed standard (S633, last updated 1 November 2025); AKC standard (S634) as alternative. RKC Breeds A–Z page (S632) reached with the trailing slash: key facts, Breed Watch Category 1 and the health tests. PetMD (S635, Zack Newman, reviewed by Barri J. Morrison, DVM, updated Jul. 24, 2023), Woodgreen Pet Explorer (S636). No PDSA or VCA breed page found. Lifespan: no McMillan 2024 row (Dogs Trust table S123 has no Lagotto, checked 2026-10-31 — rows under L: Leonberger, Labrador Retriever, Lowchen, Lhasa Apso, Large Munsterlander, Lakeland Terrier, Lancashire Heeler), no VetCompass median found → RKC lower bound 'Over 12 years' (runbook third choice, Havanese precedent). Names: FCI / RKC / AKC 'Lagotto Romagnolo' (S630, S632, S174), FCI English name 'Romagna Water Dog'; Slovenian »lagotto romagnolo« (the name is used unchanged; descriptive »romanjski vodni pes« after the FCI English name; no KZS page found — open for David).",
+    "identity": {
+      "value": "FCI No. 298, Group 8 Section 3 (Water Dogs), Italy",
+      "unit": "—",
+      "source_id": "S630",
+      "quote": "LAGOTTO ROMAGNOLO (298)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S630, as returned): 'LAGOTTO ROMAGNOLO (298)', group 8 'Retrievers - Flushing Dogs - Water Dogs', section 'Water Dogs', country of origin Italy, definitive acceptance 7 June 2005; EN 'ROMAGNA WATER DOG', FR 'CHIEN D'EAU ROMAGNOL', DE 'WASSERHUND DER ROMAGNA', ES 'PERRO DE AGUA DE ROMAGNA'. FCI-Standard N° 298 (S631): 'Italy.', 'Group 8 Retrievers – Flushing Dogs – Water Dogs.', 'Section 3 Water Dogs.', 'Working trial optional', utilisation 'Truffle dog.' Italy is already in FCI_ORIGINS (IT). AKC / RKC name: Lagotto Romagnolo (S174, S632)."
+    },
+    "size_class": {
+      "value": "small-medium",
+      "unit": "—",
+      "source_id": "S632",
+      "quote": "Size: Small-Medium",
+      "confidence": "high",
+      "notes": "RKC key fact (S632, label and value as returned). FCI (S631) 'Small to medium-sized dog'; RKC standard (S633) 'small to medium sized dog'; Woodgreen (S636) 'Medium'."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            43,
+            48
+          ],
+          "female": [
+            41,
+            46
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S631",
+        "quote": "Height at the withers: Males: 43– 48 cm",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 298 (S631, as returned): males 'Height at the withers: Males: 43– 48 cm', 'Females: 41– 46 cm', 'Tolerance of 1 cm over or under.' — the game / register range. RKC standard (S633) the same: 'Height: males 43-48 cms (17-19 ins), ideal height 46 cms (18 ins).', 'Females 41-46 cms (16-18 ins), ideal height 43 cms (17 ins).'",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                41.9,
+                49.5
+              ],
+              "female": [
+                39.4,
+                47
+              ]
+            },
+            "unit": "cm",
+            "source_id": "S634",
+            "quote": "Dogs 16½ to 19½ inches; Bitches 15½ to 18½ inches.",
+            "notes": "AKC standard (S634); our conversion, rounded."
+          },
+          {
+            "value": {
+              "male": [
+                40.6,
+                48.3
+              ],
+              "female": [
+                40.6,
+                48.3
+              ]
+            },
+            "unit": "cm",
+            "source_id": "S635",
+            "quote": "A full-grown Lagotto Romagnolo stands 16–19 inches tall and weighs 24–35 pounds",
+            "notes": "PetMD (S635, US); 16–19 in = 40.6–48.3 cm (our conversion)."
+          }
+        ]
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            13,
+            16
+          ],
+          "female": [
+            11,
+            14
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S631",
+        "quote": "Weight: Males: 13 – 16 kg.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 298 (S631, as returned): 'Weight: Males: 13 – 16 kg.', 'Females: 11 – 14 kg.' — the game / register range. RKC standard (S633) the same ('Weight: males 13-16 kgs (28½ - 35 lbs);', 'females 11-14 kgs (24-31 lbs).'); Woodgreen (S636) '11-16 kg'.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                12.7,
+                15.9
+              ],
+              "female": [
+                10.9,
+                14.1
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S634",
+            "quote": "Males 28 to 35 pounds. Females 24 to 31 pounds.",
+            "notes": "AKC standard (S634); our conversion, rounded."
+          },
+          {
+            "value": {
+              "male": [
+                10.9,
+                15.9
+              ],
+              "female": [
+                10.9,
+                15.9
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S635",
+            "quote": "A full-grown Lagotto Romagnolo stands 16–19 inches tall and weighs 24–35 pounds",
+            "notes": "PetMD (S635); 24–35 lb = 10.9–15.9 kg (our conversion)."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "III (9–<15 kg) / IV (15–<30 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 11–16 kg spans the 9–<15 kg and 15–<30 kg bands. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI 11–16 kg (S631) = 24–35 lb → the 'Medium (24–59 pounds)' class. The game is unaffected (the puppy cap of 120 min is reached at 12 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Lagotto Romagnolo growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S632",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "medium",
+        "notes": "RKC breed page key fact (S632). Runbook order: McMillan 2024 (no Lagotto row in the Dogs Trust table S123, checked 2026-10-31) → VetCompass median (none found) → RKC lower bound 12 y."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED value — the Dogs Trust table of the McMillan et al. 2024 data (S123) has no Lagotto Romagnolo row (rows under L as returned 2026-10-31: Leonberger, Labrador Retriever, Lowchen, Lhasa Apso, Large Munsterlander, Lakeland Terrier, Lancashire Heeler); the paper's Supplementary Table 3 was not reachable."
+      },
+      "petmd": {
+        "value": "15–17",
+        "unit": "years",
+        "source_id": "S635",
+        "quote": "it’s not abnormal for them to live to be 15–17 years old!",
+        "confidence": "low",
+        "notes": "PetMD (S635, fragment) — a hedged statement, not a typical span. Woodgreen (S636) 'Lifespan: 15-17 years' (label and value). Not used for the senior boundary (runbook order: RKC lower bound before secondary spans); exported as the span next to the RKC lower bound."
+      },
+      "senior_from": {
+        "value": 9.0,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × RKC lower bound 12 y (S632) → 0.75 × 12 = 9 y = 108 months (Havanese precedent). Not chosen: 84 (Dogs Trust > 7 y, S14); 135 (0.75 × 15 y, PetMD / Woodgreen lower bound — not a runbook source for the boundary).",
+        "derived_from": [
+          "S11",
+          "S632"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S632",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S632, label and value as returned) — preferred source. Woodgreen (S636) 'They need around two hours of exercise a day,' (fragment) agrees; its at-a-glance value '60-90 minutes' is an alternative. PetMD (S635): 'The breed requires constant mental and physical stimulation.' (no minutes).",
+        "alternatives": [
+          {
+            "value": "60–90",
+            "source_id": "S636",
+            "quote": "60-90 minutes",
+            "notes": "Woodgreen at-a-glance exercise value (S636); the same page's text says around two hours."
+          }
+        ]
+      },
+      "daily_text": {
+        "value": "around two hours of exercise a day",
+        "unit": "—",
+        "source_id": "S636",
+        "quote": "They need around two hours of exercise a day,",
+        "confidence": "high",
+        "notes": "Woodgreen (S636, fragment)."
+      },
+      "mental": {
+        "value": "needs constant mental and physical stimulation",
+        "unit": "—",
+        "source_id": "S635",
+        "quote": "The breed requires constant mental and physical stimulation.",
+        "confidence": "high",
+        "notes": "PetMD (S635). Basis of needs_mental_stimulation; Woodgreen (S636) adds a strong urge to use the nose — scent work, play or training (paraphrase)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "lively, intelligent, affectionate; an excellent and alert family companion",
+        "unit": "—",
+        "source_id": "S633",
+        "quote": "Lively, intelligent, affectionate.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S633), Temperament; it continues 'An excellent and alert family companion.' AKC standard (S634): 'tractable, adaptable, keen, affectionate, and extremely attached to its owner', 'should never be aggressive or overly shy'. FCI (S631): 'A natural gift for searching and its very good nose has made the breed very efficient in truffle searching.'"
+      },
+      "family": {
+        "value": "an excellent and alert family companion; does great in a family environment",
+        "unit": "—",
+        "source_id": "S633",
+        "quote": "An excellent and alert family companion.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S633). PetMD (S635): 'Lagotti Romagnoli do great in a family environment'. Basis of family_pet."
+      },
+      "children": {
+        "value": "supervise interactions with young children",
+        "unit": "—",
+        "source_id": "S636",
+        "quote": "As with any breed, interactions between dogs and young children should always be supervised.",
+        "confidence": "medium",
+        "notes": "Woodgreen (S636) — a general supervision advice (the page also calls the breed generally patient and gentle with children — paraphrase). No explicit A/B statement that the breed suits children → no children / small_children chip."
+      },
+      "time_alone": {
+        "value": "can be prone to separation-related issues if left alone too often",
+        "unit": "—",
+        "source_id": "S636",
+        "quote": "They can be prone to separation-related issues if left alone too often.",
+        "confidence": "high",
+        "notes": "Woodgreen (S636). PetMD (S635): 'This breed requires robust companionship, be it with a human or other dogs.' → consider needs_company (Boxer / Brittany precedent); never often_alone."
+      },
+      "other_pets": {
+        "value": "needs companionship of people or other dogs; gets along with other dogs when introduced properly",
+        "unit": "—",
+        "source_id": "S635",
+        "quote": "This breed requires robust companionship, be it with a human or other dogs.",
+        "confidence": "medium",
+        "notes": "PetMD (S635). Woodgreen (S636) 'Sociable with pets: Moderate' (label and value). No prey-drive statement → no chases_small_pets; no other_pets chip."
+      },
+      "socialisation": {
+        "value": "can be remarkably shy and needs extensive socialisation",
+        "unit": "—",
+        "source_id": "S635",
+        "quote": "A Lagotto can be remarkably shy and requires extensive socialization",
+        "confidence": "high",
+        "notes": "PetMD (S635, fragment). Woodgreen (S636): 'Training and socialisation should begin as early as possible'. Basis of the puppy's weekly new experience (M5-R17)."
+      },
+      "training": {
+        "value": "relishes training and is eager to please",
+        "unit": "—",
+        "source_id": "S635",
+        "quote": "Lagotto Romagnolo dogs relish an opportunity to train and are eager to please.",
+        "confidence": "high",
+        "notes": "PetMD (S635). Woodgreen (S636) 'Moderately easy' (label value)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no chewing statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no food-motivation statement found."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S632) — no conformation point of concern; no veterinary association named by the runbook names the breed for conformation-related welfare problems → no welfare chip. Breeder checklist: RKC Good Practice DNA tests JE + LSD, Best Practice elbow / eye / hip schemes (S632).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1 — no points of concern",
+        "unit": "—",
+        "source_id": "S632",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC breed page (S632); '… other than those covered routinely by The Kennel Club's breed standard.' → no welfare chip, in marketing."
+      },
+      "juvenile_epilepsy": {
+        "value": "juvenile epilepsy — seizures in young puppies",
+        "unit": "—",
+        "source_id": "S635",
+        "quote": "Seizures are usually observed in puppies as young as five weeks old",
+        "confidence": "high",
+        "notes": "PetMD (S635, fragment). RKC Good Practice: 'DNA test for Juvenile epilepsy (JE)' (S632). Register health key epilepsy."
+      },
+      "storage_disease": {
+        "value": "Lagotto storage disease — a neurological disease of young dogs",
+        "unit": "—",
+        "source_id": "S635",
+        "quote": "is a neurological ailment that can be seen in Lagotto Romagnolo puppies and dogs under 4 years old",
+        "confidence": "high",
+        "notes": "PetMD (S635, fragment). RKC Good Practice: 'DNA test for Lysosomal storage disease (LSD)' (S632). New register health key storage_disease."
+      },
+      "hip_elbow": {
+        "value": "hip and elbow dysplasia — parents screened under the BVA/KC schemes",
+        "unit": "—",
+        "source_id": "S632",
+        "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+        "confidence": "high",
+        "notes": "RKC Best Practice (S632); also 'Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme'. Woodgreen (S636) lists hip and elbow dysplasia (paraphrase). Register health key hip_elbow_dysplasia."
+      },
+      "eyes": {
+        "value": "eye changes such as cloudiness — see a vet; parents eye-tested",
+        "unit": "—",
+        "source_id": "S635",
+        "quote": "If you notice changes in your dog’s eyes, such as cloudiness, contact your vet.",
+        "confidence": "medium",
+        "notes": "PetMD (S635). RKC Best Practice 'Eye testing using the BVA/KC/ISDS Eye Scheme' (S632). Not exported as a health key (no named condition)."
+      },
+      "other": {
+        "value": "cerebellar abiotrophy; noise sensitivity",
+        "unit": "—",
+        "source_id": "S636",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Woodgreen (S636, paraphrase only — no verbatim quote returned); Wikipedia (C) names cerebellar abiotrophy and idiopathic epilepsy. Names only, not exported."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not ranked: Coren's 1994 ranking (S35) predates the breed's FCI definitive acceptance (7 June 2005, S630); the Wikipedia breed page (C) lists no Coren rank (checked 2026-10-31; S35 itself was not re-fetched this run). Runbook rule: unranked → 1.0."
+      },
+      "coren_tier": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not ranked (see coren_rank)."
+      },
+      "training_notes": {
+        "value": "relishes training, eager to please; training and socialisation from early on",
+        "unit": "—",
+        "source_id": "S635",
+        "quote": "Lagotto Romagnolo dogs relish an opportunity to train and are eager to please.",
+        "confidence": "high",
+        "notes": "PetMD (S635); Woodgreen (S636) 'Training and socialisation should begin as early as possible'. The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.lagotto_romagnolo.learning_multiplier (1.0, runbook rule: not ranked by Coren).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "squarely built, small to medium-sized, rustic-looking dog with a woolly, tightly curled coat",
+        "unit": "—",
+        "source_id": "S633",
+        "quote": "Squarely built, small to medium sized dog of rustic appearance;",
+        "confidence": "high",
+        "notes": "RKC breed standard (S633), General Appearance (fragment). FCI (S631): 'Small to medium-sized dog, well proportioned, powerfully built, of a rustic appearance'; AKC (S634) 'The Lagotto is a square dog.'"
+      },
+      "colours": {
+        "value": [
+          "brown roan",
+          "off-white",
+          "white with brown patches",
+          "white with orange patches",
+          "orange roan",
+          "brown",
+          "brown with white",
+          "orange"
+        ],
+        "unit": "list",
+        "source_id": "S631",
+        "quote": "Off-white solid colour, white with brown or orange patches, orange roan, brown roan,",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 298 (S631, as returned; continues 'brown (in different shades, sable included) with or without white, orange with or without white.' and 'Some dogs have a brown to dark brown mask. Tan markings (in different shades) allowed.'). RKC standard (S633): 'Solid off-white, white with brown or orange markings, orange roan, brown roan,' — 'Any other colour, including black in any form, or combination of colours unacceptable.' FCI disqualifying: 'Black coat colour, black patches or black pigmentation.' → never black, grey or black pigment. Listed in game order (brown roan first = the portrait default, Claude's choice)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Brown roan first with the highest weight (the portrait default)."
+      },
+      "coat": {
+        "value": "woolly, semi-rough on the surface, tight ring-shaped curls with visible undercoat; clipped no thicker than 2–3 cm, never styled",
+        "unit": "—",
+        "source_id": "S631",
+        "quote": "Of woolly texture, semi- rough on the surface, with tight, ring shaped curls, with visible undercoat.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 298 (S631, as returned); 'The clipped coat must not be thicker than two/three centimetres, and it should be uniform with the silhouette of the dog.'; 'Any excessive hair styling will exclude the dog from being qualified.' RKC (S633): 'Woolly and waterproof, rather rough on the surface'. Natural, evenly clipped look — no show styling."
+      },
+      "head": {
+        "value": "broad skull, moderately short muzzle, lavish facial furnishings (beard, eyebrows)",
+        "unit": "—",
+        "source_id": "S631",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "FCI (S631) / RKC (S633) head descriptions (paraphrase); AKC breed page intro: curly coat and lavish facial furnishings (paraphrase)."
+      },
+      "nose": {
+        "value": "light to dark brown, depending on the coat colour",
+        "unit": "—",
+        "source_id": "S631",
+        "quote": "The colour ranges from light to dark brown, depending on the colour of the coat.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 298 (S631). Never black (black pigmentation disqualifies, S631 / S634)."
+      },
+      "eyes": {
+        "value": "ochre to hazel and dark brown, depending on the coat colour",
+        "unit": "—",
+        "source_id": "S631",
+        "quote": "The colour of the iris ranges from ochre to hazel and dark brown depending on the colour of the coat.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 298 (S631)."
+      },
+      "ears": {
+        "value": "medium-sized, triangular with rounded tips, hanging",
+        "unit": "—",
+        "source_id": "S631",
+        "quote": "Medium-sized in proportion to the head, triangular with rounded tips",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 298 (S631); 'Hanging at rest or slightly raised when the dog is attentive.'"
+      },
+      "tail": {
+        "value": "tapering, carried scimitar-like at rest, raised when attentive",
+        "unit": "—",
+        "source_id": "S631",
+        "quote": "At rest carried scimitar like; when attentive decidedly raised.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 298 (S631); 'Set on neither too high nor too low tapering towards the end.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S632), RKC breed standard (S633), PetMD (S635) and Woodgreen (S636). RKC key facts reached on 2026-10-31.",
+      "rkc_size": {
+        "value": "Small-Medium",
+        "unit": "—",
+        "source_id": "S632",
+        "quote": "Size: Small-Medium",
+        "confidence": "high",
+        "notes": "RKC key fact (S632)."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S632",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S632) → 120 min. Basis of long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Small house",
+        "unit": "—",
+        "source_id": "S632",
+        "quote": "Size of home: Small house",
+        "confidence": "high",
+        "notes": "RKC key fact (S632). Not 'Flat/ Apartment' → no apartment chip; not 'Large house' → no large_home."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S632",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S632). Home is 'Small house' → no large_home (needs both)."
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S632",
+        "quote": "Grooming: More than once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S632) — no number. Woodgreen (S636) 'Regular brushing at home, a few times a week, helps to keep tangles under control,' (no number); PetMD (S635) 'regular brushing with a metal comb is a must.' (no number) → brushing 2× a week = Claude's proposal (M5-R13 rule, verified=false). Basis of frequent_grooming."
+      },
+      "woodgreen_grooming": {
+        "value": "brushing a few times a week; professional grooming every six to eight weeks",
+        "unit": "—",
+        "source_id": "S636",
+        "quote": "Regular brushing at home, a few times a week, helps to keep tangles under control,",
+        "confidence": "high",
+        "notes": "Woodgreen (S636, fragment); 'professional grooming every six to eight weeks is essential to keep the coat in good condition.' (fragment); grooming needs 'High' (label value)."
+      },
+      "woodgreen_groomer": {
+        "value": "professional grooming every six to eight weeks",
+        "unit": "—",
+        "source_id": "S636",
+        "quote": "professional grooming every six to eight weeks is essential to keep the coat in good condition.",
+        "confidence": "high",
+        "notes": "Woodgreen (S636, fragment). → the parent's groomer reminder every 6 weeks (M5-R18 rule '6–8 weeks' → 42 days)."
+      },
+      "petmd_grooming": {
+        "value": "regular brushing with a metal comb",
+        "unit": "—",
+        "source_id": "S635",
+        "quote": "regular brushing with a metal comb is a must.",
+        "confidence": "high",
+        "notes": "PetMD (S635, fragment) — no frequency."
+      },
+      "petmd_bath": {
+        "value": "bath up to once a month",
+        "unit": "—",
+        "source_id": "S635",
+        "quote": "Bathe them up to once a month",
+        "confidence": "high",
+        "notes": "PetMD (S635, fragment). → the parent's bath reminder every 4 weeks (M5-R19 rule 'month' → 28 days)."
+      },
+      "petmd_ears": {
+        "value": "clean the ears whenever the dog has been in water",
+        "unit": "—",
+        "source_id": "S635",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S635, paraphrase: owners should clean their dog's ears whenever they spend time in water) — conditional, no frequency → no ear-cleaning task (runbook: conditional → no task)."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S632",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": "RKC key fact (S632)."
+      },
+      "rkc_shedding": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S632",
+        "quote": "Sheds: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S632); PetMD (S635) 'Thanks to the Lagotto Romagnolo’s curly coat, these pups don’t shed much' and Woodgreen (S636) shedding 'Minimal' agree. Basis of low_shedding — never 'hypoallergenic'."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S632",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S632). Not shorter_lifespan."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S632",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S632). Background only."
+      },
+      "rkc_town_or_country": {
+        "value": "Country",
+        "unit": "—",
+        "source_id": "S632",
+        "quote": "Town or country: Country",
+        "confidence": "high",
+        "notes": "RKC key fact (S632). Background only (no chip)."
+      },
+      "woodgreen_time_alone": {
+        "value": "prone to separation-related issues if left alone too often",
+        "unit": "—",
+        "source_id": "S636",
+        "quote": "They can be prone to separation-related issues if left alone too often.",
+        "confidence": "high",
+        "notes": "Woodgreen (S636). Basis of needs_company."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -62973,6 +63580,263 @@
         "confidence": "high",
         "notes": "Colours: the standard allows any colour (S626, S627) but does not encourage more than 80 % white, black and tan or liver; the game offers brindle, blue and black (PetMD S628 list). Natural ears and tail (AKC 'uncropped preferred', 'Not docked'). Moderate head (not a flat-faced breed).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): brindle is the portrait default; natural uncropped rose / half-prick ears and natural tail; only brindle, blue or black"
+      }
+    },
+    "lagotto_romagnolo": {
+      "_note": "Unattended run M5-R10-82 (2026-10-31): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. One open proposal: brushing 2× a week (RKC 'More than once a week' without a number, no number in another A/B source → M5-R13 fallback 2, verified=false). Built: brushing 2× a week (proposal), puppy socialisation (PetMD S635 quote, M5-R17), the groomer reminder every 6 weeks (Woodgreen S636 'every six to eight weeks', M5-R18) and the bath reminder every 4 weeks (PetMD S635 'up to once a month', M5-R19). No meal gap (no source), no ear task (PetMD only 'whenever they spend time in water' — conditional), no tooth / nail task (no A/B frequency). In marketing (Breed Watch Category 1). Never hypoallergenic. No new vocabulary key.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S632",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC key fact 'More than 2 hours per day' (S632). Rule: one number N ('more than N') → N = 120. Woodgreen (S636) 'around two hours of exercise a day' agrees; its '60-90 minutes' at-a-glance value is an alternative.",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S636",
+            "quote": "60-90 minutes",
+            "notes": "Woodgreen at-a-glance value; range → lower bound 60."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S632 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S632",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) (S11 + RKC lower bound 'Over 12 years', S632). No McMillan 2024 row (Dogs Trust table S123) and no VetCompass median for the Lagotto. Alternative: 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S632"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S632)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 108)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not ranked by Coren (S35; the 1994 ranking predates the FCI acceptance of 2005, S630) → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 2,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S632",
+        "quote": "Grooming: More than once a week",
+        "confidence": "low",
+        "notes": "lagotto_romagnolo.suitability.rkc_grooming. RKC 'Grooming: More than once a week' (S632) has no number; Woodgreen (S636) 'a few times a week' and PetMD (S635) 'regular brushing' give none either → M5-R13 fallback 2 per week, verified=false, open for David (Pyrenean Mountain Dog precedent, M5-R10-78). Matted coat at ceil(2 / 2) = 1 missed.",
+        "alternatives": [],
+        "decision": "predlog Claude 2026-10-31 (RKC »More than once a week« brez števila, tudi Woodgreen / PetMD brez števila → 2, M5-R13, M5-R10-82) — čaka Davida"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S635",
+        "quote": "A Lagotto can be remarkably shy and requires extensive socialization",
+        "confidence": "high",
+        "notes": "lagotto_romagnolo.behaviour.socialisation (PetMD S635). Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, PetMD S635)"
+      },
+      "professional_grooming": {
+        "value": "professional grooming every six to eight weeks",
+        "unit": "visits (sourced need)",
+        "source_id": "S636",
+        "quote": "professional grooming every six to eight weeks is essential to keep the coat in good condition.",
+        "confidence": "high",
+        "notes": "Woodgreen (S636), lagotto_romagnolo.suitability.woodgreen_groomer. Built: the parent's groomer reminder every 6 program weeks (BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R18; never scored).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): »every six to eight weeks« → 6–8 tednov = 42 dni"
+      },
+      "bathing": {
+        "value": "bath up to once a month",
+        "unit": "baths (sourced need)",
+        "source_id": "S635",
+        "quote": "Bathe them up to once a month",
+        "confidence": "high",
+        "notes": "PetMD (S635), lagotto_romagnolo.suitability.petmd_bath. Built: the parent's bath reminder every 4 program weeks (BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R19; never scored).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »once a month« → mesec = 4 tedni"
+      },
+      "suitability_tags": {
+        "_note": "Tags for backend/config/breed_suitability.php (M5-R10-82); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S633",
+              "S635"
+            ],
+            "refs": [
+              "lagotto_romagnolo.behaviour.family"
+            ],
+            "quote": "S633 'An excellent and alert family companion.'; S635 'Lagotti Romagnoli do great in a family environment'"
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S632"
+            ],
+            "refs": [
+              "lagotto_romagnolo.suitability.rkc_shedding"
+            ],
+            "quote": "S632 'Sheds: No' (PetMD S635 'don’t shed much') — never hypoallergenic"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S632",
+              "S636"
+            ],
+            "refs": [
+              "lagotto_romagnolo.exercise.adult",
+              "lagotto_romagnolo.exercise.daily_text"
+            ],
+            "quote": "S632 'Exercise: More than 2 hours per day'; S636 'They need around two hours of exercise a day,'"
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S635"
+            ],
+            "refs": [
+              "lagotto_romagnolo.exercise.mental"
+            ],
+            "quote": "S635 'The breed requires constant mental and physical stimulation.'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S636"
+            ],
+            "refs": [
+              "lagotto_romagnolo.behaviour.time_alone",
+              "lagotto_romagnolo.suitability.woodgreen_time_alone"
+            ],
+            "quote": "S636 'They can be prone to separation-related issues if left alone too often.'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S632",
+              "S636"
+            ],
+            "refs": [
+              "lagotto_romagnolo.suitability.rkc_grooming",
+              "lagotto_romagnolo.suitability.woodgreen_grooming"
+            ],
+            "quote": "S632 'Grooming: More than once a week'; S636 'Regular brushing at home, a few times a week, …'"
+          }
+        ],
+        "not_proposed": {
+          "children": "Only a general supervision advice (Woodgreen S636) — no explicit A/B statement.",
+          "small_children": "No rating without a caveat.",
+          "other_pets": "Woodgreen 'Sociable with pets: Moderate' (S636) — not a positive statement.",
+          "apartment": "RKC 'Size of home: Small house' (S632).",
+          "large_home": "RKC home 'Small house' (S632) — needs both large house and garden.",
+          "chases_small_pets": "No prey-drive statement in this breed's entry.",
+          "shorter_lifespan": "RKC 'Over 12 years' (S632).",
+          "hypoallergenic": "Never (runbook)."
+        }
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S632",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 1 (S632). Not a flat-faced breed — no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). Marketing never promises health.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no veterinary advice against advertising the breed)"
+      },
+      "ai_appearance": {
+        "value": "adult Lagotto Romagnolo, brown roan woolly coat in tight ring-shaped curls, evenly clipped to a natural rustic outline (no styling); squarely built, small to medium-sized, powerful; broad head with curly facial furnishings, brown nose, ochre to hazel eyes; medium triangular hanging ears covered in curls; tapering scimitar tail; standard colours only — never black, grey or black pigment",
+        "unit": "—",
+        "source_id": "S631",
+        "quote": "Of woolly texture, semi- rough on the surface, with tight, ring shaped curls, with visible undercoat.",
+        "confidence": "high",
+        "notes": "Colours from FCI (S631) / RKC (S633); brown roan as the portrait default (Claude's choice, weights unsourced). Black coat, patches or pigmentation disqualify (S631, S634). Moderate, natural look (no show styling, S631).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): brown roan is the portrait default; natural, evenly clipped curly coat; brown nose; never black"
       }
     }
   }
