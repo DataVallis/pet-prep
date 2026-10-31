@@ -1,0 +1,140 @@
+{
+  "slug": "almonds",
+  "species": "dog",
+  "name": {
+    "en": "Almonds",
+    "sl": "Mandlji"
+  },
+  "question": {
+    "en": "Can dogs eat almonds?",
+    "sl": "Ali lahko psi jedo mandlje?"
+  },
+  "url_slug": {
+    "en": "almonds",
+    "sl": "mandlji"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, it is best not to. Almonds are not as dangerous as macadamia nuts, but they are fatty and can cause vomiting, diarrhoea and possibly pancreatitis. Whole almonds can also get stuck, especially in small dogs.",
+    "sl": "Ne, bolje ne. Mandlji niso tako nevarni kot makadamija, so pa mastni in lahko povzročijo bruhanje, drisko in morda vnetje trebušne slinavke. Celi mandlji se lahko tudi zataknejo, posebej pri majhnih psih."
+  },
+  "why": {
+    "en": "Almonds, like most nuts, are high in fat, which can upset the stomach and put a dog at risk of pancreatitis. Whole almonds can block the food pipe, intestines or windpipe, especially in small breeds. Salted and flavoured almonds bring extra risks from salt and seasonings.",
+    "sl": "Mandlji so kot večina oreščkov zelo mastni, kar lahko razdraži prebavo in psa izpostavi tveganju za vnetje trebušne slinavke. Celi mandlji lahko zamašijo požiralnik, črevesje ali sapnik, posebej pri majhnih pasmah. Soljeni in začinjeni mandlji prinašajo še dodatno tveganje zaradi soli in začimb."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Belly pain, nausea or low energy (possible pancreatitis)",
+      "Choking or signs of a blockage"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Boleč trebuh, slabost ali utrujenost (možno vnetje trebušne slinavke)",
+      "Dušenje ali znaki zamašitve"
+    ]
+  },
+  "what_to_do": {
+    "en": "One or two almonds are usually no cause for panic: watch your dog for vomiting, diarrhoea or belly pain. Call your vet if your dog ate a lot of almonds or flavoured almonds, seems to be choking, or shows any of these signs.",
+    "sl": "Eden ali dva mandlja običajno nista razlog za paniko: opazujte, ali pes bruha, ima drisko ali ga boli trebuh. Pokličite veterinarja, če je pes pojedel veliko ali začinjenih mandljev, se duši ali kaže katerega od teh znakov."
+  },
+  "serving": null,
+  "child": {
+    "en": "Almonds are a people snack. They are hard for dogs to digest and can upset their tummy. Give a dog treat instead!",
+    "sl": "Mandlji so prigrizek za ljudi. Pes jih težko prebavi in ga lahko boli trebušček. Raje mu daj pasji priboljšek!"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are almonds as dangerous as macadamia nuts?",
+        "sl": "So mandlji tako nevarni kot makadamija?"
+      },
+      "a": {
+        "en": "No. Macadamia nuts are toxic to dogs; almonds are a problem mainly because of their fat and the risk of blockage.",
+        "sl": "Ne. Makadamija je za pse strupena; pri mandljih sta glavni težavi maščoba in nevarnost zamašitve."
+      }
+    },
+    {
+      "q": {
+        "en": "My dog ate one almond. What now?",
+        "sl": "Pes je pojedel en mandelj. Kaj zdaj?"
+      },
+      "a": {
+        "en": "Don't panic. Watch for tummy upset and call your vet if signs appear.",
+        "sl": "Brez panike. Opazujte prebavo in pokličite veterinarja, če se pojavijo znaki."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD200",
+      "quote": "Nuts, including almonds, pecans and walnuts, contain high amounts of oils and fats."
+    },
+    {
+      "id": "KD200",
+      "quote": "These fats can cause vomiting and diarrhea, and potentially pancreatitis in some pets."
+    },
+    {
+      "id": "KD205",
+      "quote": "While some dogs might love the taste of almonds, consuming them can cause gastric intestinal distress."
+    },
+    {
+      "id": "KD205",
+      "quote": "Almonds, like most nuts, are high in fat and can put your dog at risk of developing pancreatitis."
+    },
+    {
+      "id": "KD205",
+      "quote": "Almonds can block your dog's esophagus, intestines, or windpipe, especially in small breeds."
+    },
+    {
+      "id": "KD205",
+      "quote": "Flavored almonds come with unique risks."
+    },
+    {
+      "id": "KD205",
+      "quote": "If your dog consumes one or two almonds, don't panic."
+    },
+    {
+      "id": "KD212",
+      "quote": "Many almonds are flavored with salt and other seasonings that are dangerous to dogs."
+    },
+    {
+      "id": "KD225",
+      "quote": "The most common clinical signs include nausea, vomiting, fever, lethargy, abdominal pain, diarrhea, and decreased appetite."
+    },
+    {
+      "id": "KD213",
+      "quote": "Call your vet if your dog eats a large container of nuts, as this could lead to pancreatic issues."
+    },
+    {
+      "id": "KD213",
+      "quote": "some nuts, like almonds, are potential choking hazards."
+    },
+    {
+      "id": "KD201",
+      "quote": "Macadamia nuts cause a syndrome called Macadamia nut toxicosis in dogs."
+    }
+  ],
+  "related": [
+    "macadamia-nuts",
+    "walnuts",
+    "cashews",
+    "pistachios",
+    "salty-snacks"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

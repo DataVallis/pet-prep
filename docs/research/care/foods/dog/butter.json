@@ -1,0 +1,113 @@
+{
+  "slug": "butter",
+  "species": "dog",
+  "name": {
+    "en": "Butter",
+    "sl": "Maslo"
+  },
+  "question": {
+    "en": "Can dogs eat butter?",
+    "sl": "Ali lahko psi jedo maslo?"
+  },
+  "url_slug": {
+    "en": "butter",
+    "sl": "maslo"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, it is best not to. Butter is not poisonous, but it is very fatty, and fatty foods can upset a dog's stomach and may trigger pancreatitis, a painful inflammation. Food you share with your dog should be cooked without butter.",
+    "sl": "Ne, bolje ne. Maslo ni strupeno, je pa zelo mastno, mastna hrana pa lahko psu razdraži želodec in sproži vnetje trebušne slinavke, ki je boleče. Hrano, ki jo delite s psom, pripravite brez masla."
+  },
+  "why": {
+    "en": "Fatty table foods are not a toxicity problem, but fatty foods such as butter, oils and meat drippings may cause pancreatitis. Some breeds, especially miniature Schnauzers, are more prone to it. Vets also suggest preparing food for dogs, such as eggs or mashed potato, without butter.",
+    "sl": "Mastna hrana z mize ni strupena, a mastna živila, kot so maslo, olja in mast od pečenke, lahko povzročijo vnetje trebušne slinavke. Nekatere pasme, predvsem mali šnavcerji, so zanj bolj dovzetne. Veterinarski viri tudi svetujejo, da hrano za pse, na primer jajca ali pire, pripravimo brez masla."
+  },
+  "signs": {
+    "en": [
+      "Vomiting, sometimes starting 1–4 days after a fatty meal",
+      "Belly pain",
+      "Diarrhoea",
+      "Poor appetite and low energy"
+    ],
+    "sl": [
+      "Bruhanje, ki se lahko začne 1–4 dni po mastnem obroku",
+      "Boleč trebuh",
+      "Driska",
+      "Slab apetit in utrujenost"
+    ]
+  },
+  "what_to_do": {
+    "en": "A lick of butter usually needs only watching. If your dog ate a lot of butter, or shows vomiting, belly pain, diarrhoea or low energy in the next few days, call your vet as soon as possible.",
+    "sl": "Pri lizljaju masla običajno zadošča opazovanje. Če je pes pojedel veliko masla ali v naslednjih dneh bruha, ga boli trebuh, ima drisko ali je utrujen, čim prej pokličite veterinarja."
+  },
+  "serving": null,
+  "child": {
+    "en": "Butter is too fatty for dogs and can give them a sore tummy. Keep the butter dish out of reach!",
+    "sl": "Maslo je za pse premastno in jih lahko boli trebušček. Maslo pospravi, da ga pes ne doseže!"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is butter toxic to dogs?",
+        "sl": "Je maslo za pse strupeno?"
+      },
+      "a": {
+        "en": "Not in the poisonous sense. The problem is the fat, which may cause stomach upset or pancreatitis.",
+        "sl": "Ne v smislu zastrupitve. Težava je maščoba, ki lahko povzroči prebavne težave ali vnetje trebušne slinavke."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD228",
+      "quote": "While there’s not a “toxicity” issue from fatty table foods (such as bacon, gravy, turkey skin, grizzle, etc.), it can result"
+    },
+    {
+      "id": "KD228",
+      "quote": "Fatty foods such as butter, oils, meat drippings/grease, chocolate and meat scraps may cause pancreatitis (inflammation of th"
+    },
+    {
+      "id": "KD228",
+      "quote": "Certain breeds, miniature Schnauzers in particular, are more likely to develop pancreatitis than other breeds."
+    },
+    {
+      "id": "KD228",
+      "quote": "Delayed onset vomiting (1-4 days after fatty meal ingestion), abdominal pain, diarrhea (+/- blood), reduced appetite and leth"
+    },
+    {
+      "id": "KD231",
+      "quote": "They’ve recently eaten some high fat foods (e.g. pork, cheese, butter)."
+    },
+    {
+      "id": "KD231",
+      "quote": "Book an appointment with your vet ASAP if your dog has any of the symptoms above"
+    },
+    {
+      "id": "KD236",
+      "quote": "mash potato (best without added butter)"
+    },
+    {
+      "id": "KD201",
+      "quote": "Eggs are safe for dogs as long as they are fully cooked and prepared without salt, butter, or seasonings."
+    }
+  ],
+  "related": [
+    "fatty-meat",
+    "cheese",
+    "milk",
+    "bacon"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "slug": "walnuts",
+  "species": "dog",
+  "name": {
+    "en": "Walnuts",
+    "sl": "Orehi"
+  },
+  "question": {
+    "en": "Can dogs eat walnuts?",
+    "sl": "Ali lahko psi jedo orehe?"
+  },
+  "url_slug": {
+    "en": "walnuts",
+    "sl": "orehi"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, it is best not to. A walnut or two is unlikely to cause harm, but walnuts are fatty and can be a choking hazard. Mouldy walnuts, such as old ones fallen in the garden, and black walnuts are much more dangerous.",
+    "sl": "Ne, bolje ne. En ali dva oreha verjetno ne bosta škodovala, a orehi so mastni in pes se lahko z njimi zaduši. Plesnivi orehi, na primer stari, odpadli na vrtu, in črni orehi so precej bolj nevarni."
+  },
+  "why": {
+    "en": "Walnuts are high in fat, which can cause vomiting, diarrhoea and possibly pancreatitis. Mould can grow on the shell or kernel and produce toxins that can cause tremors, seizures and vomiting. Black walnuts contain juglone and are very toxic to dogs.",
+    "sl": "Orehi so zelo mastni, kar lahko povzroči bruhanje, drisko in morda vnetje trebušne slinavke. Na lupini ali jedrcu lahko raste plesen, ki tvori strupe in lahko povzroči tresenje, krče in bruhanje. Črni orehi vsebujejo juglon in so za pse zelo strupeni."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Muscle tremors or seizures (mouldy nuts)",
+      "Choking"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Tresenje mišic ali krči (plesnivi orehi)",
+      "Dušenje"
+    ]
+  },
+  "what_to_do": {
+    "en": "After a walnut or two, watch for vomiting or diarrhoea. If your dog ate a black walnut or mouldy walnuts, contact your vet right away and don't wait for signs; also call if tremors, seizures or choking appear.",
+    "sl": "Po enem ali dveh orehih opazujte, ali pes bruha ali ima drisko. Če je pes pojedel črni oreh ali plesnive orehe, takoj pokličite veterinarja in ne čakajte na znake; pokličite tudi, če se pojavijo tresenje, krči ali dušenje."
+  },
+  "serving": null,
+  "child": {
+    "en": "Walnuts are not a dog snack. Old walnuts on the ground can make dogs sick, so tell a grown-up if your dog finds some.",
+    "sl": "Orehi niso pasji prigrizek. Stari orehi na tleh lahko psu škodijo, zato povej odraslemu, če jih pes najde."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Why are fallen walnuts in the garden a risk?",
+        "sl": "Zakaj so odpadli orehi na vrtu nevarni?"
+      },
+      "a": {
+        "en": "Nuts lying on the ground can get damp and grow mould, which can be toxic to dogs.",
+        "sl": "Oreščki, ki ležijo na tleh, se navlažijo in na njih zraste plesen, ki je lahko za pse strupena."
+      }
+    },
+    {
+      "q": {
+        "en": "What about black walnuts?",
+        "sl": "Kaj pa črni orehi?"
+      },
+      "a": {
+        "en": "Black walnuts are very toxic to dogs. Contact your vet immediately if your dog eats one.",
+        "sl": "Črni orehi so za pse zelo strupeni. Če ga pes poje, takoj pokličite veterinarja."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD200",
+      "quote": "Nuts, including almonds, pecans and walnuts, contain high amounts of oils and fats."
+    },
+    {
+      "id": "KD200",
+      "quote": "These fats can cause vomiting and diarrhea, and potentially pancreatitis in some pets."
+    },
+    {
+      "id": "KD210",
+      "quote": "walnuts are not the best choice for your dog."
+    },
+    {
+      "id": "KD210",
+      "quote": "The good news is that if your dog accidentally ingests a walnut or two, they’re unlikely to suffer ill effects."
+    },
+    {
+      "id": "KD210",
+      "quote": "Though people don’t commonly eat this type of walnut, black walnuts are still extremely toxic to dogs;"
+    },
+    {
+      "id": "KD210",
+      "quote": "Mold can grow on the shell or kernel."
+    },
+    {
+      "id": "KD210",
+      "quote": "which can lead to muscle tremors, seizures, and vomiting."
+    },
+    {
+      "id": "KD210",
+      "quote": "Be sure to contact your veterinarian immediately if your dog accidentally eats a black walnut or moldy walnut."
+    },
+    {
+      "id": "KD212",
+      "quote": "Walnuts aren't naturally toxic to dogs, but it's best to avoid feeding them to your pet altogether."
+    },
+    {
+      "id": "KD212",
+      "quote": "They present choking hazards and may grow dangerous mold."
+    },
+    {
+      "id": "KD212",
+      "quote": "Black walnuts may also contain juglone."
+    },
+    {
+      "id": "KD212",
+      "quote": "Once tree nuts fall to the ground, they may become moist and develop a type of mold that can be toxic to dogs, causing"
+    }
+  ],
+  "related": [
+    "pecans",
+    "almonds",
+    "hazelnuts",
+    "macadamia-nuts"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

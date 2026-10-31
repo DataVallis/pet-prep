@@ -1,0 +1,174 @@
+{
+  "slug": "leek",
+  "species": "cat",
+  "name": {
+    "en": "Leek",
+    "sl": "Por"
+  },
+  "question": {
+    "en": "Can cats eat leek?",
+    "sl": "Ali lahko mačke jedo por?"
+  },
+  "url_slug": {
+    "en": "leek",
+    "sl": "por"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Leek is in the same family as onion and garlic and is poisonous to cats, raw or cooked. It can damage red blood cells and cause anaemia. Call your vet if your cat eats any.",
+    "sl": "Ne. Por spada v isto družino kot čebula in česen ter je za mačke strupen, surov ali kuhan. Lahko poškoduje rdeče krvničke in povzroči slabokrvnost. Če ga muca poje, pokličite veterinarja."
+  },
+  "why": {
+    "en": "Leek belongs to the allium family (the onion family). Alliums damage red blood cells and can lead to anaemia, and they also irritate the stomach and gut. Cats are the most sensitive species. All forms are poisonous to cats — raw, cooked, dried, powdered and liquid.",
+    "sl": "Por spada med lukovke (družina čebule). Lukovke poškodujejo rdeče krvničke in lahko povzročijo slabokrvnost, poleg tega dražijo želodec in črevesje. Mačke so med vsemi vrstami najbolj občutljive. Strupene so vse oblike – surove, kuhane, sušene, v prahu in tekoče."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Reduced appetite",
+      "Weakness",
+      "Pale gums",
+      "Red-coloured urine",
+      "Faster or harder breathing"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Slabši apetit",
+      "Šibkost",
+      "Blede dlesni",
+      "Rdečkast urin",
+      "Hitrejše ali težje dihanje"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline right away, even if your cat seems well — signs of anaemia can take several days to show. Note what your cat ate (raw, cooked, powder or a dish containing it), how much and when. Don't try to make your cat sick at home.",
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če se muca zdi v redu, saj se znaki slabokrvnosti lahko pokažejo šele po nekaj dneh. Zapišite, kaj je pojedla (surovo, kuhano, v prahu ali jed, ki to vsebuje), koliko in kdaj. Muce doma ne poskušajte spraviti k bruhanju."
+  },
+  "serving": null,
+  "child": {
+    "en": "Leeks are a cousin of onions, so they're not safe for cats. Tell a grown-up if kitty nibbles some.",
+    "sl": "Por je sorodnik čebule, zato za muce ni varen. Če ga muca grizlja, povej odraslemu."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is cooked or powdered leek safe for cats?",
+        "sl": "Je kuhan por za mačke varen?"
+      },
+      "a": {
+        "en": "No. All forms are poisonous to cats, including raw, cooked and dried leek. Be careful with leftovers, sauces, soups and gravy that may contain it.",
+        "sl": "Ne. Za mačke so strupene vse oblike, tudi surov, kuhan in sušen por. Previdni bodite pri ostankih hrane, omakah, juhah in mesnih omakah, ki ga lahko vsebujejo."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC2",
+      "quote": "Cats are the most susceptible species, followed by dogs;"
+    },
+    {
+      "id": "KC2",
+      "quote": "Allium spp include garlic, onions, chives, and leeks, although garlic and onions are most commonly associated with toxicosis."
+    },
+    {
+      "id": "KC2",
+      "quote": "dogs and cats have been affected after ingesting raw, cooked, dehydrated, or granulated onions and garlic."
+    },
+    {
+      "id": "KC2",
+      "quote": "clinical signs of anemia may take as long as several days to appear."
+    },
+    {
+      "id": "KC3",
+      "quote": "Cats are extremely sensitive to poisoning."
+    },
+    {
+      "id": "KC3",
+      "quote": "Onions, garlic, chives, and leeks are common causes of poisoning in cats, with garlic being the most toxic."
+    },
+    {
+      "id": "KC3",
+      "quote": "All forms are poisonous to cats, including raw, cooked, dried, powdered, and liquid preparations."
+    },
+    {
+      "id": "KC3",
+      "quote": "Vomiting"
+    },
+    {
+      "id": "KC3",
+      "quote": "Weakness"
+    },
+    {
+      "id": "KC3",
+      "quote": "Pale gums"
+    },
+    {
+      "id": "KC3",
+      "quote": "Red-colored urine"
+    },
+    {
+      "id": "KC3",
+      "quote": "Increased respiratory rate and effort"
+    },
+    {
+      "id": "KC3",
+      "quote": "it is important to immediately call your veterinarian or Pet Poison Helpline."
+    },
+    {
+      "id": "KC4",
+      "quote": "Onions, shallots, leeks, garlic, and chives are part of group of plants called alliums which are toxic for cats and dogs."
+    },
+    {
+      "id": "KC4",
+      "quote": "Symptoms include vomiting, diarrhoea, a reduced appetite, and dehydration."
+    },
+    {
+      "id": "KC4",
+      "quote": "Symptoms of anaemia (low red blood cell count) often take a bit longer to appear, usually within one to five days."
+    },
+    {
+      "id": "KC4",
+      "quote": "contact your vet straight away if you see your cat eating onions, garlic or leeks or if you are concerned they are showing symptoms."
+    },
+    {
+      "id": "KC1",
+      "quote": "Allium species can cause gastrointestinal irritation and red blood cell damage"
+    },
+    {
+      "id": "KC5",
+      "quote": "if eaten by cats can be extremely toxic potentially leading to anaemia"
+    },
+    {
+      "id": "KC22",
+      "quote": "Don’t try to make your cat sick without asking the vet and never given them medicines designed for humans."
+    },
+    {
+      "id": "KC4",
+      "quote": "garlic, chives and leeks are also toxic, even when cooked or dried."
+    },
+    {
+      "id": "KC26",
+      "quote": "Stuffing and gravy often contain onion, leeks and garlic, which can be deadly to both cats and dogs."
+    }
+  ],
+  "related": [
+    "onion",
+    "garlic",
+    "chives"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

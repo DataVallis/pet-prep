@@ -1,0 +1,57 @@
+{
+  "slug": "raisins",
+  "species": "cat",
+  "name": {"en": "Raisins", "sl": "Rozine"},
+  "question": {"en": "Can cats eat raisins?", "sl": "Ali lahko mačke jedo rozine?"},
+  "url_slug": {"en": "raisins", "sl": "rozine"},
+  "level": "toxic",
+  "answer": {
+    "en": "No. Raisins, like grapes and currants, are on the list of foods toxic to cats and can cause kidney failure. Watch out for cakes, mince pies and other baked goods that contain them, and call your vet if your cat eats any.",
+    "sl": "Ne. Rozine so, tako kot grozdje in ribez, na seznamu živil, ki so za mačke strupena, in lahko povzročijo odpoved ledvic. Pazite na pecivo, kolače in drugo, kar jih vsebuje, ter pokličite veterinarja, če jih muca poje."
+  },
+  "why": {
+    "en": "Cat welfare charities warn that grapes, raisins and currants can cause kidney failure in cats, with cats that have chronic kidney disease possibly at greater risk. Cats rarely eat raisins on their own but may be tempted by foods that contain them. Cat cases are rare and not well understood, so we use the stricter level.",
+    "sl": "Organizacije za dobrobit mačk opozarjajo, da lahko grozdje, rozine in ribez pri mačkah povzročijo odpoved ledvic, mačke s kronično ledvično boleznijo pa so morda še bolj ogrožene. Mačke same redko jedo rozine, lahko pa jih zamika hrana, ki jih vsebuje. Primeri pri mačkah so redki in slabo raziskani, zato izberemo strožjo stopnjo."
+  },
+  "signs": {
+    "en": ["Vomiting, often within a day"],
+    "sl": ["Bruhanje, pogosto v enem dnevu"]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline right away. Note what your cat ate (raisins or a food containing them), how much and when, and keep the packaging. Don't wait for signs to appear, and don't try to make your cat sick at home.",
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, kaj je muca pojedla (rozine ali hrano z njimi), koliko in kdaj, ter shranite embalažo. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju."
+  },
+  "serving": null,
+  "child": {
+    "en": "Raisins are not a cat snack. Keep raisins and raisin cake away from kitty, and tell a grown-up if she eats some.",
+    "sl": "Rozine niso priboljšek za muce. Rozine in kolač z rozinami naj bodo daleč od muce. Če jih poje, povej odraslemu."
+  },
+  "faq": [
+    {
+      "q": {"en": "What about mince pies and Christmas cake?", "sl": "Kaj pa praznično pecivo z rozinami?"},
+      "a": {
+        "en": "PDSA warns that mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to pets. Keep them out of your cat's reach.",
+        "sl": "PDSA opozarja, da praznično pecivo, kot so pite s suhim sadjem in božični kolač, vsebuje rozine, sultanine in ribez, ki so za hišne ljubljenčke zelo strupeni. Hranite ga izven muckinega dosega."
+      }
+    }
+  ],
+  "sources": [
+    {"id": "KC5", "quote": "grapes, raisins and currants"},
+    {"id": "KC5", "quote": "Consuming this fruit can cause kidney failure in cats."},
+    {"id": "KC5", "quote": "Those with chronic kidney disease may be at greater risk."},
+    {"id": "KC14", "quote": "Onions and garlic can sometimes be poisonous, whether cooked or raw, as can raisins and grapes."},
+    {"id": "KC26", "quote": "Mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to pets."},
+    {"id": "KC25", "quote": "Cats are unlikely to eat grapes or raisins in significant amounts but may be tempted by products containing them."},
+    {"id": "KC25", "quote": "Grape and raisin poisoning in cats is not well understood and is very rare."},
+    {"id": "KC25", "quote": "Cats can develop intense vomiting within 24 hours of ingesting grapes or raisins"},
+    {"id": "KC8", "quote": "If possible, take the packaging, plant, or substance with you to the veterinary clinic"},
+    {"id": "KC8", "quote": "Contact your veterinary team for advice immediately; make sure you know when, where, and how the poisoning occurred."},
+    {"id": "KC22", "quote": "Don’t try to make your cat sick without asking the vet and never given them medicines designed for humans."}
+  ],
+  "related": ["grapes", "chocolate", "raw-yeast-dough"],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {"status": "draft", "verified_by": null, "verified_hash": null},
+    "sl": {"status": "draft", "verified_by": null, "verified_hash": null}
+  }
+}
