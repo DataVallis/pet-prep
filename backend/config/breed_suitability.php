@@ -2148,5 +2148,18 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S639'], 'refs' => ['alaskan_malamute.behaviour.other_pets']],
             ],
         ],
+        // M5-R10-84: basenji.* (S642–S646), runbook rules (data.json proposed_game_parameters.basenji.suitability_tags). RKC
+        // page not reachable → PDSA / WebMD statements; no suits chip (no family-pet or child statement; 60 min is below the
+        // active_family / long_daily_exercise threshold of 2 hours); no chases_small_pets (WebMD S646 describes the chase but
+        // names no high / strong prey drive — the rule needs a verbatim prey-drive statement).
+        'basenji' => [
+            'suits' => [],
+            'consider' => [
+                // S644 "require plenty of mental stimulation, and do well at canine sports"
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S644'], 'refs' => ['basenji.behaviour.mental_stimulation']],
+                // S646 "These dogs love the outdoors but need very high fences or constant supervision."
+                ['tag' => 'secure_fencing', 'source_ids' => ['S646'], 'refs' => ['basenji.behaviour.escaping']],
+            ],
+        ],
     ],
 ];

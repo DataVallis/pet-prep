@@ -697,6 +697,13 @@ class FalAiService
                 .'a broad deep head, brown almond-shaped eyes, erect triangular ears slightly rounded at the tips, a well-furred plume tail carried over the back, '
                 .'friendly and dignified expression, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-84: FCI-Standard N° 43 (S643) — a lightly built, finely boned primitive hunting dog, high on its legs;
+            // short, sleek coat; chestnut red and white; wrinkled forehead, pricked ears, tail curled tightly over the back.
+            BreedType::Basenji => 'A lightly built, finely boned, elegant Basenji standing high on its legs, '
+                .'a short, sleek, very fine coat in chestnut red and white with white feet, chest and tail tip, '
+                .'a flat, well-chiselled head with fine wrinkles on the forehead, dark almond-shaped eyes, small pointed erect ears, a tail curled tightly over the back, '
+                .'alert and poised expression, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1684,6 +1691,17 @@ class FalAiService
                 'eye_color' => 'brown',
                 'fur_texture' => 'thick, coarse guard coat over a dense woolly undercoat',
                 'markings' => 'white underbody, legs and face markings, black nose, plume tail over the back, never blue eyes',
+            ],
+            // M5-R10-84: standard colours (S643 / S645), white feet, chest and tail tip.
+            BreedType::Basenji => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'chestnut red and white with white feet, chest and tail tip',
+                    1 => 'black and white with white feet, chest and tail tip',
+                    2 => 'black, tan and white tricolour with tan markings on the muzzle and cheeks',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'short, sleek, close and very fine coat',
+                'markings' => 'white feet, chest and tail tip, fine forehead wrinkles, tail curled tightly over the back',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

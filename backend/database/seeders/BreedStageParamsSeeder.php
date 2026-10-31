@@ -52,7 +52,7 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest / WeimaranerBreedTest / ItalianGreyhoundBreedTest / GiantSchnauzerBreedTest / BloodhoundBreedTest / AkitaBreedTest / CardiganWelshCorgiBreedTest / GermanWirehairedPointerBreedTest / SaintBernardBreedTest / StaffordshireBullTerrierBreedTest / AiredaleTerrierBreedTest / RussellTerrierBreedTest / BullmastiffBreedTest / ChineseCrestedBreedTest / NovaScotiaDuckTollingRetrieverBreedTest / CairnTerrierBreedTest / BullTerrierBreedTest / MiniaturePinscherBreedTest / PyreneanMountainDogBreedTest / SoftCoatedWheatenTerrierBreedTest / IrishWolfhoundBreedTest / AmericanStaffordshireTerrierBreedTest / LagottoRomagnoloBreedTest / AlaskanMalamuteBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest / WeimaranerBreedTest / ItalianGreyhoundBreedTest / GiantSchnauzerBreedTest / BloodhoundBreedTest / AkitaBreedTest / CardiganWelshCorgiBreedTest / GermanWirehairedPointerBreedTest / SaintBernardBreedTest / StaffordshireBullTerrierBreedTest / AiredaleTerrierBreedTest / RussellTerrierBreedTest / BullmastiffBreedTest / ChineseCrestedBreedTest / NovaScotiaDuckTollingRetrieverBreedTest / CairnTerrierBreedTest / BullTerrierBreedTest / MiniaturePinscherBreedTest / PyreneanMountainDogBreedTest / SoftCoatedWheatenTerrierBreedTest / IrishWolfhoundBreedTest / AmericanStaffordshireTerrierBreedTest / LagottoRomagnoloBreedTest / AlaskanMalamuteBreedTest / BasenjiBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
  * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever / Samoyed / Scottish Terrier / Weimaraner / Italian Greyhound / Giant Schnauzer / Bloodhound / Akita / Cardigan Welsh Corgi / German Wirehaired Pointer / Saint Bernard / Staffordshire Bull Terrier / Airedale Terrier / Russell Terrier / Bullmastiff / Chinese Crested / Nova Scotia Duck Tolling Retriever / Cairn Terrier / Bull Terrier / Miniature Pinscher / Pyrenean Mountain Dog rows
  * against data.json).
@@ -1014,6 +1014,24 @@ class BreedStageParamsSeeder extends Seeder
     public const PROPOSED_R10_ALASKAN_MALAMUTE_SENIOR = 'predlog Claude 2026-10-31 (najbližja vrstica pravila runbooka, M5-R10-83) — čaka Davida';
 
     /**
+     * M5-R10-84 Basenji (unattended run 2026-10-31, data.json proposed_game_parameters.basenji.*.decision): every value
+     * follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise
+     * 60 min (PDSA S644 "Minimum exercise (per day): 1 hour"; RKC page not reachable), senior 45 min, puppy 10 min × age
+     * capped at 60, stages young 9 / adult 36, arrival 2 / 9 / 36, learning multiplier 0.5 (Coren rank 78, Lowest); care
+     * rates the Border Collie's. The senior boundary uses the closest rule row (PDSA lower bound "Over 12 years", S644 — no
+     * McMillan 2024 / VetCompass median / RKC band reachable) and is NOT covered by the confirmation: see
+     * PROPOSED_R10_BASENJI_SENIOR.
+     */
+    public const CONFIRMED_R10_BASENJI = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-84)';
+
+    /**
+     * M5-R10-84 Basenji senior boundary / senior arrival (108 months): Claude's suggestion from the closest rule row
+     * (0.75 × PDSA lower bound 12 y, S644 — Samoyed / Alaskan Malamute precedent), verified=false until David decides
+     * (data.json proposed_game_parameters.basenji.senior_boundary_months).
+     */
+    public const PROPOSED_R10_BASENJI_SENIOR = 'predlog Claude 2026-10-31 (najbližja vrstica pravila runbooka, M5-R10-84) — čaka Davida';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1280,6 +1298,10 @@ class BreedStageParamsSeeder extends Seeder
             'ear_cleaning' => [1, 'week', 'S640', 'Pet parents should check their Alaskan Malamute’s ears once a week to make sure they’re free from infection.', 'proposed_game_parameters.alaskan_malamute.ear_care', '"once a week" → once a week'],
             'bath' => [1, 'six_weeks', 'S640', 'Along with daily maintenance with a slicker brush, Alaskan Malamutes need a bath every 6-8 weeks.', 'proposed_game_parameters.alaskan_malamute.bathing', '"every 6-8 weeks" → the lower bound, 6 weeks (groomer "around once every six months" is longer than every care period; teeth and nails have no A/B number → no task)'],
         ],
+        'basenji' => [
+            'tooth_brushing' => [2, 'week', 'S646', 'Brush their teeth often — daily is best, but at least twice a week', 'proposed_game_parameters.basenji.tooth_brushing', '"at least twice a week" → 2× a week (the stated minimum; "daily is best" is the ideal)'],
+            'ear_cleaning' => [1, 'week', 'S646', 'Check their ears for debris and clean them on a weekly basis', 'proposed_game_parameters.basenji.ear_care', '"on a weekly basis" → once a week (nails "as needed", bath only when messy → no task)'],
+        ],
     ];
 
     /**
@@ -1380,6 +1402,7 @@ class BreedStageParamsSeeder extends Seeder
         'american_staffordshire_terrier' => [1, 'S629', 'Weekly brushing helps remove loose hair and maintain coat health.', 'high', false],
         'lagotto_romagnolo' => [2, 'S632', 'Grooming: More than once a week', 'low', true, self::PROPOSED_R13_LAGOTTO_ROMAGNOLO],
         'alaskan_malamute' => [7, 'S639', 'Because their coats are so thick they will need daily brushing', 'high', false],
+        'basenji' => [1, 'S644', 'brushing once a week is usually enough to remove any dead hair.', 'high', false],
     ];
 
     /**
@@ -1524,7 +1547,7 @@ class BreedStageParamsSeeder extends Seeder
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2319,6 +2342,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-83 (docs/research/dog-data/data.json alaskan_malamute,
             // S637–S641; runbook rules in proposed_game_parameters.alaskan_malamute).
             BreedType::AlaskanMalamute => self::alaskanMalamuteProfile(),
+            // M5-R10-84 (docs/research/dog-data/data.json basenji,
+            // S642–S646; runbook rules in proposed_game_parameters.basenji).
+            BreedType::Basenji => self::basenjiProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -8096,6 +8122,91 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'alaskan_malamute.lifespan.pdsa',
                 'quote' => 'Over 10 years',
                 'notes' => 'PDSA lower bound "Over 10 years" (S639); PetMD 10–14 y (S640), VCA 10–12 y (S641); no McMillan 2024 / VetCompass median reachable. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Basenji (M5-R10-84). Stage boundaries young / adult, arrival ages, exercise minutes and the learning multiplier follow
+     * the runbook's standing rules (CONFIRMED_R10_BASENJI); weight, growth, Coren rank and lifespan are sourced. The senior
+     * boundary is Claude's suggestion (PROPOSED_R10_BASENJI_SENIOR, verified=false).
+     *
+     * @return array<string, mixed>
+     */
+    private static function basenjiProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_BASENJI;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S644', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.basenji.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a small dog reaches adult weight at 9–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, [
+                    'unit' => 'months', 'source_id' => 'S11,S644', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.basenji.senior_boundary_months', 'decision' => self::PROPOSED_R10_BASENJI_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × PDSA lower bound "Over 12 years" (S644) = 9 y = 108 months. The Dogs Trust McMillan 2024 table (S123) and the RKC page could not be fetched; no VetCompass median; WebMD "between 13 and 14 years" (S646) is a span, not a median. Alternative: Dogs Trust > 7 y (S14) → 84.',
+                ]],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.basenji.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.basenji.senior_boundary_months', 'decision' => self::PROPOSED_R10_BASENJI_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 108 months (0.75 × 12 y, S644).',
+                ],
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (9–12 months for a small dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S644', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.basenji.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => '1 hour',
+                'notes' => 'PDSA key facts "Minimum exercise (per day): 1 hour" (S644) → 60 min = 6,000 steps (runbook rule: "minimum N" → N; the RKC page was not reachable). PDSA "around 60-90 minutes’ exercise per day" → lower bound 60 (same).',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.basenji.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[9.0, 11.0], [
+                'unit' => 'kg', 'source_id' => 'S644', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'basenji.adult_weight.pdsa',
+                'quote' => '9-11 kg',
+                'notes' => 'PDSA average weight (S644), one range for both sexes. FCI-Standard N° 43 (S643) ideal weights: dogs 11 kg, bitches 9.5 kg; AKC standard (S645) 24 / 22 lb.',
+            ]],
+            'growth_end' => [[9, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'basenji.growth.adult_weight_reached',
+                'quote' => 'Small (12–24 pounds): 9–12 months',
+                'notes' => 'Size-class value, not breed-specific (9–11 kg = 20–24 lb, the Small class of S10).',
+            ]],
+            'coren_rank' => [78, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'basenji.trainability.coren_rank',
+                'quote' => '| 78 | Basenji |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35, re-read 2026-10-31): rank 78 "Basenji", tier "Lowest Degree of Working/Obedience Intelligence" (70–79). Verify in The Intelligence of Dogs.',
+            ]],
+            'learning_multiplier' => [0.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.basenji.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 78, tier Lowest (70–79, S35) → 0.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12.0, [
+                'unit' => 'years', 'source_id' => 'S644', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'basenji.lifespan.pdsa',
+                'quote' => 'Over 12 years',
+                'notes' => 'PDSA lower bound "Over 12 years" (S644); WebMD 13–14 y (S646); no McMillan 2024 / VetCompass median reachable. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

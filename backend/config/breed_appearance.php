@@ -686,6 +686,13 @@
 | face markings (cap, bar / mask), or all white; brown almond eyes — blue eyes disqualify. Grey and white first with the
 | highest weight (the portrait default, Claude's choice); weights unsourced → `verified => false`.
 |
+| Basenji (M5-R10-84, docs/research/dog-data basenji.appearance):
+| "Lightly built, finely boned aristocratic looking animal, high on legs compared with its length" (FCI-Standard N° 43,
+| S643); wrinkled head, pricked ears, tail curled tightly over the spine; short, sleek, very fine coat; colours pure black
+| and white, red and white, black and tan (and white), brindle (red with black stripes) — white on the feet, chest and tail
+| tip (S643; AKC standard S645 the same). Red and white first with the highest weight (the portrait default, Claude's
+| choice); weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -3669,6 +3676,43 @@ return [
             'ear_carriage' => ['erect, triangular ears slightly rounded at the tips'],
             'eye_color' => ['brown, almond-shaped eyes of medium size'],
             'tail' => ['well-furred tail carried over the back like a waving plume'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-84 (docs/research/dog-data/data.json basenji.appearance; runbook rules 2026-10-10: colours the standard lists —
+    // S643 / S645 red and white, black and white, black-tan-white, brindle and white, always with white feet, chest and tail
+    // tip).
+    'basenji' => [
+        'display_name' => 'Basenji',
+        // Colour frequencies are in no source (basenji.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 43 Basenji (S643, https://dev.fci.be/Nomenclature/Standards/043g05-en.pdf) and the AKC standard (S645) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S643 "43 cm (17 ins) at withers"; S644 "Medium"',
+            'build' => 'S643 "Lightly built, finely boned aristocratic looking animal, high on legs compared with its length,"',
+            'coat_length' => 'S643 "Short, sleek and close, very fine."',
+            'coat_color' => 'S643 "Pure black and white; red and white; black and tan, and white with melon pips and tan markings on muzzle and cheeks;" S645 "all with white feet, chest and tail tip." (weights unsourced)',
+            'head' => 'S643 "Flat, well-chiselled and medium width, tapering towards the nose."',
+            'ear_carriage' => 'S643 "Small, pointed, erect and slightly hooded, of fine texture,"',
+            'eye_color' => 'S643 "Dark, almond-shaped; obliquely set, far-seeing and rather inscrutable in expression."',
+            'tail' => 'S643 "Curls tightly over spine and lies closely to thigh with a single or double curl."',
+        ],
+        'traits' => [
+            'size' => ['medium-sized'],
+            'build' => [['value' => 'lightly built, finely boned, elegant dog standing high on its legs with a deep chest and a definite waist', 'weight' => 3], 'graceful, gazelle-like build'],
+            'coat_length' => ['short, sleek, close and very fine coat'],
+            // Standard colours (S643 / S645), always with white feet, chest and tail tip; red and white first with the highest
+            // weight → the register portrait (Claude's choice).
+            'coat_color' => [
+                ['value' => 'chestnut red and white with white feet, chest and tail tip', 'weight' => 45],
+                ['value' => 'black and white with white feet, chest and tail tip', 'weight' => 25],
+                ['value' => 'black, tan and white tricolour with tan markings on the muzzle and cheeks', 'weight' => 20],
+                ['value' => 'brindle (black stripes on chestnut red) and white with white feet, chest and tail tip', 'weight' => 10],
+            ],
+            'head' => ['flat, well-chiselled head of medium width tapering towards the nose, with fine wrinkles on the forehead'],
+            'ear_carriage' => ['small, pointed, erect, slightly hooded ears'],
+            'eye_color' => ['dark, almond-shaped, obliquely set eyes'],
+            'tail' => ['high-set tail curled tightly over the spine'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],
