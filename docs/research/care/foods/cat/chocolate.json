@@ -1,0 +1,173 @@
+{
+  "slug": "chocolate",
+  "species": "cat",
+  "name": {
+    "en": "Chocolate",
+    "sl": "Čokolada"
+  },
+  "question": {
+    "en": "Can cats eat chocolate?",
+    "sl": "Ali lahko mačke jedo čokolado?"
+  },
+  "url_slug": {
+    "en": "chocolate",
+    "sl": "cokolada"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Chocolate is toxic to cats. It contains theobromine and caffeine, which cats handle poorly, and the darker and more bitter the chocolate, the more dangerous it is. If your cat eats any, call your vet straight away.",
+    "sl": "Ne. Čokolada je za mačke strupena. Vsebuje teobromin in kofein, ki ju mačke slabo presnavljajo, in bolj ko je čokolada temna in grenka, bolj je nevarna. Če muca poje kaj čokolade, takoj pokličite veterinarja."
+  },
+  "why": {
+    "en": "Chocolate contains theobromine and caffeine. Cats process these substances differently from people, which makes them more sensitive to their effects. Because cats struggle to break down theobromine, it stays in the blood and can quickly build up to dangerous levels. Dark and bitter chocolate carries the most risk; white chocolate has the least theobromine.",
+    "sl": "Čokolada vsebuje teobromin in kofein. Mačke te snovi presnavljajo drugače kot ljudje, zato so za njihove učinke bolj občutljive. Ker mačke teobromin težko razgradijo, ostane v krvi in lahko hitro doseže nevarno raven. Najbolj tvegana je temna in grenka čokolada, bela čokolada pa ima teobromina najmanj."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Increased thirst",
+      "Panting or restlessness",
+      "Peeing more than usual",
+      "Racing heart",
+      "In severe cases: muscle tremors or seizures"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Večja žeja",
+      "Sopihanje ali nemir",
+      "Pogostejše uriniranje",
+      "Zelo hiter srčni utrip",
+      "V hudih primerih: tresenje mišic ali krči"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline right away, even if your cat seems fine. Note what kind of chocolate your cat ate, how much and when, and keep the wrapper. Don't wait for signs to appear, and don't try to make your cat sick at home.",
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če se muca zdi v redu. Zapišite, kakšno čokolado je pojedla, koliko in kdaj, ter shranite ovojnico. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju."
+  },
+  "serving": null,
+  "child": {
+    "en": "Chocolate is a people treat, not a cat treat. Keep it put away, and tell a grown-up if kitty finds some.",
+    "sl": "Čokolada je posladek za ljudi, ne za muce. Pospravi jo in povej odraslemu, če jo muca najde."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is white chocolate safe for cats?",
+        "sl": "Je bela čokolada za mačke varna?"
+      },
+      "a": {
+        "en": "White chocolate has the least theobromine, while darker, more bitter chocolate is the most dangerous. Keep all chocolate out of your cat's reach and call your vet if your cat eats any.",
+        "sl": "Bela čokolada ima najmanj teobromina, najnevarnejša pa je temnejša, bolj grenka čokolada. Vso čokolado hranite izven muckinega dosega in pokličite veterinarja, če jo muca poje."
+      }
+    },
+    {
+      "q": {
+        "en": "Why are cats more sensitive than people?",
+        "sl": "Zakaj so mačke bolj občutljive kot ljudje?"
+      },
+      "a": {
+        "en": "Cats process theobromine and caffeine differently from people. Theobromine stays in a cat's bloodstream and can quickly reach dangerous levels.",
+        "sl": "Mačke teobromin in kofein presnavljajo drugače kot ljudje. Teobromin ostane v mačji krvi in lahko hitro doseže nevarno raven."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC7",
+      "quote": "Yes, chocolate is toxic to cats."
+    },
+    {
+      "id": "KC7",
+      "quote": "Chocolate contains theobromine and caffeine, which are similar compounds and cause similar clinical signs"
+    },
+    {
+      "id": "KC7",
+      "quote": "Cats metabolize theobromine and caffeine differently than people, making them more sensitive to the chemicals' effects."
+    },
+    {
+      "id": "KC7",
+      "quote": "The darker and more bitter the chocolate, the more dangerous it is to cats."
+    },
+    {
+      "id": "KC7",
+      "quote": "white chocolate with the least theobromine"
+    },
+    {
+      "id": "KC7",
+      "quote": "Vomiting"
+    },
+    {
+      "id": "KC7",
+      "quote": "Diarrhea"
+    },
+    {
+      "id": "KC7",
+      "quote": "Increased thirst"
+    },
+    {
+      "id": "KC7",
+      "quote": "Panting or restlessness"
+    },
+    {
+      "id": "KC7",
+      "quote": "Excessive urination"
+    },
+    {
+      "id": "KC7",
+      "quote": "Racing heart rate"
+    },
+    {
+      "id": "KC7",
+      "quote": "cardiac arrhythmias, muscle tremors, and seizures"
+    },
+    {
+      "id": "KC7",
+      "quote": "Contact your veterinarian or Pet Poison Helpline"
+    },
+    {
+      "id": "KC5",
+      "quote": "As cats struggle to metabolise theobromine, the chemical stays in the bloodstream and quickly reaches dangerous levels."
+    },
+    {
+      "id": "KC5",
+      "quote": "Keep chocolate out of reach of your cat, and if you suspect they have eaten any chocolate, call your vet straight away."
+    },
+    {
+      "id": "KC25",
+      "quote": "Chocolate is also poisonous for dogs and cats, and can even be fatal in some instances."
+    },
+    {
+      "id": "KC8",
+      "quote": "Contact your veterinary team for advice immediately; make sure you know when, where, and how the poisoning occurred."
+    },
+    {
+      "id": "KC8",
+      "quote": "If possible, take the packaging, plant, or substance with you to the veterinary clinic"
+    },
+    {
+      "id": "KC22",
+      "quote": "Don’t try to make your cat sick without asking the vet and never given them medicines designed for humans."
+    }
+  ],
+  "related": [
+    "coffee",
+    "tea",
+    "energy-drinks",
+    "grapes"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "77f7741767f80b3e9451df4914f0a886f4e4f361e084d362582548a4cda37261"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7d840ca6a1c32be9931696ba60455130aa447c7425f698870acce7b90b1dc215"
+    }
+  }
+}

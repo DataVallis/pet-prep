@@ -314,11 +314,11 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 
 ## M6-K — Baza znanja o skrbi (David, 31. 10. 2026; načrt `docs/product/CARE_KNOWLEDGE_SPEC.md`, čaka odločitve §10)
 
-- [ ] M6-K0 Viri `docs/research/care/sources.md`, shema + izvozna skripta `care-knowledge.json`, 30 živil × pes + muca (citat, neodvisno preverjanje), na spletu strani živil + »strupena hrana« + `/care/emergency`, llms + JSON-LD
+- [ ] M6-K0 *(31. 10. 2026, `feat/M6-K0-care-foods` + website `feat/M6-K0-care-pages`)* Viri `docs/research/care/sources-{dog,cat}.md`, shema + `scripts/export-care-knowledge.mjs` → `care-knowledge.json`, **prvi val 56 živil × pes + muca** (David: »vse, kar je možno najti«; izpuščena tista brez vira A/B), neodvisno preverjanje, na spletu `/care` · `/care/<vrsta>` · `/care/<vrsta>/<živilo>`, llms + JSON-LD, povezava s strani pasem, `care-sync.yml`, IndexNow; `/care/emergency` → K1
 - [ ] M6-K1 Ostalih ~30 živil, nevarne rastline / zdravila / dom, sezonska vodnika »Novo leto in ognjemet« (do 1. 12.) in »Božič«
 - [ ] M6-K2 Vodniki skrbi po vrsti in obdobju + »Prvi teden« + vprašalnik »Je otrok pripravljen?«
 - [ ] M6-K3 Aplikacija: Vodnik za vrsto (tudi mešanček / domača muca), vrstne zanimivosti v »Ali si vedel?«, kviz
-- [ ] M6-K4 Dogodek »hrana na mizi« (ločen spec), nove vrste, nočna avtomatika (ena tema na zagon) + četrtletni pregled svežine
+- [ ] M6-K4 Dogodek »hrana na mizi« (ločen spec), nove vrste, četrtletni pregled svežine; **nočna avtomatika za živila nastavljena 31. 10. 2026** (opravilo »PetPrep — hrana (22:37)«, 10 živil na noč, `docs/engineering/CARE_FOOD_RUNBOOK.md`, seznam `docs/research/care/FOOD_QUEUE.md`)
 
 ## Po MVP (backlog)
 

@@ -1,0 +1,166 @@
+{
+  "slug": "raw-meat",
+  "species": "cat",
+  "name": {
+    "en": "Raw meat",
+    "sl": "Surovo meso"
+  },
+  "question": {
+    "en": "Can cats eat raw meat?",
+    "sl": "Ali lahko mačke jedo surovo meso?"
+  },
+  "url_slug": {
+    "en": "raw-meat",
+    "sl": "surovo-meso"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, raw meat is not recommended for cats. Even though wild cats eat raw prey, raw meat can carry germs such as Salmonella, Listeria and E. coli, and parasites such as Toxoplasma, which can make cats and people ill.",
+    "sl": "Ne, surovo meso za mačke ni priporočljivo. Čeprav divje mačke jedo surov plen, lahko surovo meso prenaša klice, kot so salmonela, listerija in E. coli, ter zajedavce, kot je toksoplazma, ki lahko povzročijo bolezen pri mačkah in ljudeh."
+  },
+  "why": {
+    "en": "Cornell and the Merck Veterinary Manual both advise against raw meat for cats, as food or as a treat, because it can spread toxoplasmosis and other infections. Contamination of raw meat by bacteria is common, and some cats seem fine but shed the bacteria in their stool, which can spread to people and other pets. Supermarket meat for people is meant to be cooked.",
+    "sl": "Cornell in Merckov veterinarski priročnik odsvetujeta surovo meso za mačke, kot hrano ali priboljšek, ker lahko prenaša toksoplazmozo in druge okužbe. Surovo meso je pogosto okuženo z bakterijami, nekatere mačke pa so videti zdrave, a bakterije izločajo z iztrebki, s čimer se lahko okužijo ljudje in druge živali. Meso za ljudi iz trgovine je namenjeno kuhanju."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea, sometimes with blood",
+      "Fever",
+      "Not wanting to eat",
+      "Lethargy"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska, včasih s krvjo",
+      "Vročina",
+      "Mačka noče jesti",
+      "Utrujenost"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat ate a bit of raw meat, watch for vomiting, diarrhoea, fever, not eating or tiredness, and call your vet if any appear. Wash your hands and clean surfaces and bowls well.",
+    "sl": "Če je mačka pojedla malo surovega mesa, bodite pozorni na bruhanje, drisko, vročino, odklanjanje hrane ali utrujenost in pokličite veterinarja, če se kaj od tega pojavi. Dobro si umijte roke ter očistite površine in posodice."
+  },
+  "serving": null,
+  "child": {
+    "en": "Raw meat can carry germs. Cats should only get meat that a grown-up has cooked.",
+    "sl": "Na surovem mesu so lahko klice. Mucke naj dobijo le meso, ki ga je skuhal odrasel."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Cats eat raw prey in the wild, so why not?",
+        "sl": "Divje mačke jedo surov plen, zakaj torej ne?"
+      },
+      "a": {
+        "en": "Raw meat can carry bacteria and parasites that infect cats and their owners, and Cornell says raw diets have no clear health benefit for cats.",
+        "sl": "Surovo meso lahko prenaša bakterije in zajedavce, ki okužijo mačke in njihove lastnike, Cornell pa navaja, da surova prehrana mačkam ne prinaša jasne koristi za zdravje."
+      }
+    },
+    {
+      "q": {
+        "en": "Who is most at risk?",
+        "sl": "Kdo je najbolj ogrožen?"
+      },
+      "a": {
+        "en": "People at highest risk of serious illness are the very old, the very young and people with weak immune systems.",
+        "sl": "Najbolj ogroženi za resno bolezen so zelo stari ljudje, zelo majhni otroci in ljudje z oslabljenim imunskim sistemom."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC5",
+      "quote": "Cats are carnivores, which means they are meat eaters and in the wild will eat raw meat in the form of their prey."
+    },
+    {
+      "id": "KC33",
+      "quote": "Although raw meat is an excellent source of many nutrients, it is not recommended as a food or a treat for cats, because it is a potential vehicle for toxoplasmosis and other infectious diseases."
+    },
+    {
+      "id": "KC33",
+      "quote": "Given the fact that these diets may contain viable bacteria, viruses, and parasites that can infect cats and their owners"
+    },
+    {
+      "id": "KC33",
+      "quote": "and that they do not impart a clear health benefit to cats that eat them, we do not recommend feeding cats these diets."
+    },
+    {
+      "id": "KC37",
+      "quote": "Raw meat is not safe for cats and can pose health risks."
+    },
+    {
+      "id": "KC42",
+      "quote": "raw meat can be contaminated with disease-causing germs like Salmonella, Listeria or E. coli"
+    },
+    {
+      "id": "KC42",
+      "quote": "some will seem fine but shed the problematic bacteria in their stool"
+    },
+    {
+      "id": "KC42",
+      "quote": "This can spread infection to people and other pets in the household."
+    },
+    {
+      "id": "KC42",
+      "quote": "People with the highest risk of serious disease are the very old, very young and immunocompromised"
+    },
+    {
+      "id": "KC41",
+      "quote": "Contamination of raw meat by bacteria is common."
+    },
+    {
+      "id": "KC40",
+      "quote": "Most cats become infected by eating meat containing T. gondii cysts"
+    },
+    {
+      "id": "KC5",
+      "quote": "Food meant for people from supermarkets and butchers is supposed to be cooked."
+    },
+    {
+      "id": "KC41",
+      "quote": "In cats, the symptoms of salmonellosis may include:"
+    },
+    {
+      "id": "KC41",
+      "quote": "Vomiting"
+    },
+    {
+      "id": "KC41",
+      "quote": "Diarrhea (often bloody)"
+    },
+    {
+      "id": "KC41",
+      "quote": "Fever"
+    },
+    {
+      "id": "KC41",
+      "quote": "Inappetence"
+    },
+    {
+      "id": "KC41",
+      "quote": "Lethargy"
+    }
+  ],
+  "related": [
+    "raw-fish",
+    "raw-eggs",
+    "raw-bones",
+    "cooked-chicken",
+    "beef"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "74428e69bc83d6678e32bf11ad9df1c2a92b9fe2b83ca9f888b380a8e0b79575"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cf8073b3efccfba5da1de4ad2bc0ef39b40381c0eae9094762e47e5de64eba19"
+    }
+  }
+}

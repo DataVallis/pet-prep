@@ -1,0 +1,112 @@
+{
+  "slug": "peanuts",
+  "species": "dog",
+  "name": {
+    "en": "Peanuts",
+    "sl": "Arašidi"
+  },
+  "question": {
+    "en": "Can dogs eat peanuts?",
+    "sl": "Ali lahko psi jedo arašide?"
+  },
+  "url_slug": {
+    "en": "peanuts",
+    "sl": "arasidi"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a few plain peanuts now and then: unsalted, unflavoured, dry-roasted or raw, with the shells removed. Salted, honey-roasted or flavoured peanuts are not suitable, and peanuts are fatty, so keep it to a few.",
+    "sl": "Da, občasno nekaj navadnih arašidov: nesoljenih, brez okusov, suho praženih ali surovih, brez lupin. Soljeni, medeni ali začinjeni arašidi niso primerni, arašidi pa so mastni, zato naj jih bo le nekaj."
+  },
+  "why": {
+    "en": "Peanuts are high in fat, which can cause digestive upset and even pancreatitis if a dog eats too much. Salted peanuts add sodium a dog doesn't need, flavoured ones add other risky ingredients, and the fibrous shell can be a choking hazard, especially for small breeds.",
+    "sl": "Arašidi so zelo mastni, kar lahko pri preveliki količini povzroči prebavne težave in celo vnetje trebušne slinavke. Soljeni arašidi vsebujejo več natrija, kot ga pes potrebuje, začinjeni še druge tvegane sestavine, vlaknata lupina pa lahko povzroči dušenje, posebej pri majhnih pasmah."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If your dog ate a lot of peanuts, salted peanuts or shells, watch for vomiting, diarrhoea or belly pain, and call your vet if these appear or your dog seems to be choking.",
+    "sl": "Če je pes pojedel veliko arašidov, soljene arašide ali lupine, opazujte, ali bruha, ima drisko ali ga boli trebuh, in pokličite veterinarja, če se to pojavi ali če se pes duši."
+  },
+  "serving": {
+    "en": "Only a few, plain: dry-roasted or raw, unsalted, unseasoned, uncoated, shells removed — not every day.",
+    "sl": "Le nekaj, navadnih: suho praženih ali surovih, nesoljenih, nezačinjenih, brez obloge in brez lupin — ne vsak dan."
+  },
+  "child": {
+    "en": "A dog may have a few plain peanuts without shells. Salty or sweet peanuts are only for people.",
+    "sl": "Pes lahko dobi nekaj navadnih arašidov brez lupin. Slani ali sladki arašidi so samo za ljudi."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are honey-roasted peanuts OK?",
+        "sl": "So medeni arašidi v redu?"
+      },
+      "a": {
+        "en": "No. Honey-roasted and other flavoured peanuts are unsafe for dogs; only plain, unsalted peanuts are suitable.",
+        "sl": "Ne. Medeni in drugi začinjeni arašidi za pse niso varni; primerni so le navadni, nesoljeni arašidi."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD61",
+      "quote": "Dry-roasted (or raw), unsalted peanuts are the only peanuts safe for dogs to eat."
+    },
+    {
+      "id": "KD61",
+      "quote": "Salted peanuts contain more sodium than your dog needs"
+    },
+    {
+      "id": "KD61",
+      "quote": "Peanuts also contain high levels of fat."
+    },
+    {
+      "id": "KD61",
+      "quote": "This can cause digestive upset and even pancreatitis if your dog eats high-fat foods"
+    },
+    {
+      "id": "KD61",
+      "quote": "Honey-roasted peanuts and other flavored nuts are also unsafe for your dog,"
+    },
+    {
+      "id": "KD61",
+      "quote": "make sure you remove the peanut shell, as the fibrous material can pose a choking hazard, especially for small breeds."
+    },
+    {
+      "id": "KD61",
+      "quote": "Limit your dog’s intake to just a few peanuts, and do not feed them as a treat every day."
+    },
+    {
+      "id": "KD5",
+      "quote": "For peanuts, you can share dry-roasted, unsalted, unseasoned, uncoated peanuts with the shells removed in moderation with you"
+    },
+    {
+      "id": "KD51",
+      "quote": "Peanuts and peanut butter (xylitol & additive free)"
+    },
+    {
+      "id": "KD59",
+      "quote": "Call your vet if your dog eats a large container of nuts, as this could lead to pancreatic issues."
+    }
+  ],
+  "related": [
+    "peanut-butter",
+    "cashews",
+    "almonds",
+    "salty-snacks",
+    "salt"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "26caade9f26f1f2a5d0ad1f9a0d3a8f5d6f52bd83a1cb6991fe040bc09da108e"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "980390aaca656980381cfa88a907188dbb85d2567cc43fc826d9a7cc1ae55a4d"
+    }
+  }
+}

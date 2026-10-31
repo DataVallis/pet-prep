@@ -1,0 +1,181 @@
+{
+  "slug": "onion",
+  "species": "cat",
+  "name": {
+    "en": "Onion",
+    "sl": "Čebula"
+  },
+  "question": {
+    "en": "Can cats eat onion?",
+    "sl": "Ali lahko mačke jedo čebulo?"
+  },
+  "url_slug": {
+    "en": "onion",
+    "sl": "cebula"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Onion is toxic to cats in every form — raw, cooked, dried or powdered. It can damage red blood cells and cause anaemia, and cats are the most sensitive species. Call your vet if your cat eats any.",
+    "sl": "Ne. Čebula je za mačke strupena v vseh oblikah – surova, kuhana, sušena ali v prahu. Lahko poškoduje rdeče krvničke in povzroči slabokrvnost, mačke pa so najbolj občutljive. Če jo muca poje, pokličite veterinarja."
+  },
+  "why": {
+    "en": "Onion belongs to the allium family (the onion family). Alliums damage red blood cells and can lead to anaemia, and they also irritate the stomach and gut. Cats are the most sensitive species. All forms are poisonous to cats — raw, cooked, dried, powdered and liquid.",
+    "sl": "Čebula spada med lukovke (družina čebule). Lukovke poškodujejo rdeče krvničke in lahko povzročijo slabokrvnost, poleg tega dražijo želodec in črevesje. Mačke so med vsemi vrstami najbolj občutljive. Strupene so vse oblike – surove, kuhane, sušene, v prahu in tekoče."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Reduced appetite",
+      "Weakness",
+      "Pale gums",
+      "Red-coloured urine",
+      "Faster or harder breathing"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Slabši apetit",
+      "Šibkost",
+      "Blede dlesni",
+      "Rdečkast urin",
+      "Hitrejše ali težje dihanje"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline right away, even if your cat seems well — signs of anaemia can take several days to show. Note what your cat ate (raw, cooked, powder or a dish containing it), how much and when. Don't try to make your cat sick at home.",
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če se muca zdi v redu, saj se znaki slabokrvnosti lahko pokažejo šele po nekaj dneh. Zapišite, kaj je pojedla (surovo, kuhano, v prahu ali jed, ki to vsebuje), koliko in kdaj. Muce doma ne poskušajte spraviti k bruhanju."
+  },
+  "serving": null,
+  "child": {
+    "en": "Onions are not for cats, even cooked in food. If kitty eats some, tell a grown-up so they can call the vet.",
+    "sl": "Čebula ni za muce, tudi kuhana v hrani ne. Če jo muca poje, povej odraslemu, da pokliče veterinarja."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is cooked or powdered onion safe for cats?",
+        "sl": "Je kuhana čebula ali čebula v prahu za mačke varna?"
+      },
+      "a": {
+        "en": "No. All forms are poisonous to cats, including raw, cooked, dried, powdered and liquid onion. Be careful with leftovers, stuffing and gravy that may contain it.",
+        "sl": "Ne. Za mačke so strupene vse oblike, tudi surova, kuhana, sušena, tekoča čebula in čebula v prahu. Previdni bodite pri ostankih hrane, nadevih in mesnih omakah, ki jo lahko vsebujejo."
+      }
+    },
+    {
+      "q": {
+        "en": "Why do signs sometimes appear days later?",
+        "sl": "Zakaj se znaki včasih pokažejo šele čez nekaj dni?"
+      },
+      "a": {
+        "en": "Tummy upset often shows first, but signs of anaemia usually take longer and can appear within one to five days. That is why you should call your vet straight away rather than wait.",
+        "sl": "Najprej se pogosto pokažejo prebavne težave, znaki slabokrvnosti pa se navadno pojavijo kasneje, v enem do petih dneh. Zato veterinarja pokličite takoj in ne čakajte."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC2",
+      "quote": "Cats are the most susceptible species, followed by dogs;"
+    },
+    {
+      "id": "KC2",
+      "quote": "Allium spp include garlic, onions, chives, and leeks, although garlic and onions are most commonly associated with toxicosis."
+    },
+    {
+      "id": "KC2",
+      "quote": "dogs and cats have been affected after ingesting raw, cooked, dehydrated, or granulated onions and garlic."
+    },
+    {
+      "id": "KC2",
+      "quote": "clinical signs of anemia may take as long as several days to appear."
+    },
+    {
+      "id": "KC3",
+      "quote": "Cats are extremely sensitive to poisoning."
+    },
+    {
+      "id": "KC3",
+      "quote": "Onions, garlic, chives, and leeks are common causes of poisoning in cats, with garlic being the most toxic."
+    },
+    {
+      "id": "KC3",
+      "quote": "All forms are poisonous to cats, including raw, cooked, dried, powdered, and liquid preparations."
+    },
+    {
+      "id": "KC3",
+      "quote": "Vomiting"
+    },
+    {
+      "id": "KC3",
+      "quote": "Weakness"
+    },
+    {
+      "id": "KC3",
+      "quote": "Pale gums"
+    },
+    {
+      "id": "KC3",
+      "quote": "Red-colored urine"
+    },
+    {
+      "id": "KC3",
+      "quote": "Increased respiratory rate and effort"
+    },
+    {
+      "id": "KC3",
+      "quote": "it is important to immediately call your veterinarian or Pet Poison Helpline, a 24/7 animal poison center"
+    },
+    {
+      "id": "KC4",
+      "quote": "Onions, shallots, leeks, garlic, and chives are part of group of plants called alliums which are toxic for cats and dogs."
+    },
+    {
+      "id": "KC4",
+      "quote": "Symptoms include vomiting, diarrhoea, a reduced appetite, and dehydration."
+    },
+    {
+      "id": "KC4",
+      "quote": "Symptoms of anaemia (low red blood cell count) often take a bit longer to appear, usually within one to five days."
+    },
+    {
+      "id": "KC4",
+      "quote": "contact your vet straight away if you see your cat eating onions, garlic or leeks or if you are concerned they are showing symptoms."
+    },
+    {
+      "id": "KC1",
+      "quote": "Allium species can cause gastrointestinal irritation and red blood cell damage"
+    },
+    {
+      "id": "KC5",
+      "quote": "if eaten by cats can be extremely toxic potentially leading to anaemia"
+    },
+    {
+      "id": "KC22",
+      "quote": "Don’t try to make your cat sick without asking the vet and never given them medicines designed for humans."
+    },
+    {
+      "id": "KC25",
+      "quote": "Stuffing and gravy often contain onion, leeks and garlic, which can be deadly to both cats and dogs."
+    }
+  ],
+  "related": [
+    "garlic",
+    "leek",
+    "chives",
+    "ham"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b401793c5a4696c69b522a511c576811babc91b8eead836ac177d94e9a75af0a"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b38f8c5db7a7ee973e80612790ffa23b08f89805b03d9ab688d90095994e5c69"
+    }
+  }
+}

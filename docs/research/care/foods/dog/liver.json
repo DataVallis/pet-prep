@@ -1,0 +1,108 @@
+{
+  "slug": "liver",
+  "species": "dog",
+  "name": {
+    "en": "Liver",
+    "sl": "Jetra"
+  },
+  "question": {
+    "en": "Can dogs eat liver?",
+    "sl": "Ali lahko psi jedo jetra?"
+  },
+  "url_slug": {
+    "en": "liver",
+    "sl": "jetra"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "Not as a regular food, and not raw. Vitamin A poisoning in pets most often happens when they are fed raw liver or vitamin A-rich supplements, and raw liver carries the germ risks of all raw meat. Ask your vet before adding liver to your dog's diet.",
+    "sl": "Ne kot redna hrana in ne surova. Zastrupitev z vitaminom A se pri hišnih živalih najpogosteje zgodi pri hranjenju s surovimi jetri ali dodatki, bogatimi z vitaminom A, surova jetra pa nosijo tudi tveganje klic kot vse surovo meso. Preden psu dodate jetra v prehrano, vprašajte veterinarja."
+  },
+  "why": {
+    "en": "Vitamin A poisoning most often happens when pets are fed raw liver, cod liver oil or other vitamin A-rich supplements. Too much over weeks or months can lead to a poor coat and dry skin; a large amount at once can cause vomiting, drowsiness and irritability. Raw animal protein can also carry Salmonella and other bacteria.",
+    "sl": "Zastrupitev z vitaminom A se najpogosteje zgodi, ko živali hranimo s surovimi jetri, z oljem iz trskinih jeter ali drugimi dodatki, bogatimi z vitaminom A. Preveč tedne ali mesece lahko vodi do slabe dlake in suhe kože; velika količina naenkrat lahko povzroči bruhanje, zaspanost in razdražljivost. Surove živalske beljakovine lahko prenašajo tudi salmonelo in druge bakterije."
+  },
+  "signs": {
+    "en": [
+      "Vomiting, drowsiness or irritability after a large amount",
+      "Poor, dry coat or skin after weeks or months"
+    ],
+    "sl": [
+      "Bruhanje, zaspanost ali razdražljivost po veliki količini",
+      "Slaba, suha dlaka ali koža po tednih ali mesecih"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog ate a large amount of liver at once, or has been fed liver often and has a poor coat or dry skin, call your vet. A balanced commercial diet or a vet-formulated home diet avoids the problem.",
+    "sl": "Če je pes naenkrat pojedel veliko jeter ali jih je pogosto dobival in ima slabo dlako ali suho kožo, pokličite veterinarja. Uravnotežena komercialna hrana ali domača prehrana, ki jo sestavi veterinar, težavo prepreči."
+  },
+  "serving": null,
+  "child": {
+    "en": "Too much liver is not good for dogs. A grown-up and the vet decide if a dog gets liver.",
+    "sl": "Preveč jeter psom ne koristi. Odrasel in veterinar odločita, ali pes dobi jetra."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Why is too much liver a problem?",
+        "sl": "Zakaj je preveč jeter težava?"
+      },
+      "a": {
+        "en": "Vitamin A poisoning in pets most often happens when they are fed raw liver, cod liver oil or other vitamin A-rich supplements.",
+        "sl": "Zastrupitev z vitaminom A se pri živalih najpogosteje zgodi, ko jih hranimo s surovimi jetri, z oljem iz trskinih jeter ali drugimi dodatki, bogatimi z vitaminom A."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD85",
+      "quote": "Vitamin A poisoning most commonly occurs when pets are fed raw liver, cod liver oil, or other supplements rich in vitamin A o"
+    },
+    {
+      "id": "KD85",
+      "quote": "When dogs ingest large doses of vitamin A, they may quickly develop signs of vomiting, drowsiness, irritability, and peeling"
+    },
+    {
+      "id": "KD85",
+      "quote": "More commonly, over-supplementation of vitamin A for weeks to months eventually results in a poor hair coat, rough or dry ski"
+    },
+    {
+      "id": "KD85",
+      "quote": "Chronic over-supplementation is typically treated by reducing vitamin A intake, by stopping the feeding of raw liver, cod liv"
+    },
+    {
+      "id": "KD85",
+      "quote": "Feeding a commercially prepared, balanced diet or a balanced homemade diet formulated by a veterinary nutritionist is"
+    },
+    {
+      "id": "KD70",
+      "quote": "the AVMA discourages feeding any raw or undercooked animal-sourced proteins"
+    },
+    {
+      "id": "KD45",
+      "quote": "Raw meat and raw eggs can contain bacteria such as Salmonella and E. coli that can be harmful to pets and humans alike."
+    },
+    {
+      "id": "KD69",
+      "quote": "Always speak to your own vet before changing your pet’s diet as they can advise you on the best course of action."
+    }
+  ],
+  "related": [
+    "raw-meat",
+    "beef",
+    "cooked-chicken"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "380607a3ecde1386d7a8485eeb8c798be8bbbe5bcc351201bfd23a614ff8a148"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "35b4b2ae4a00a876eda6367ad9f70c3eecfae38417a65ce3d5d0df2a3d24937c"
+    }
+  }
+}

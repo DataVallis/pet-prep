@@ -298,6 +298,11 @@ jobs:
       - name: Breed registry export (node --test)
         run: node --test scripts/tests/export-breed-registry.test.mjs
 
+      # M6-K: care knowledge export for the website (food files valid, only verified locales
+      # published, committed docs/research/care-knowledge.json up to date).
+      - name: Care knowledge export (node --test)
+        run: node --test scripts/tests/export-care-knowledge.test.mjs
+
       # docs/breeds/README.md index current (one doc per breed, David 2026-10-15).
       - name: Breed docs index (node --test)
         run: node --test scripts/tests/breeds-index.test.mjs

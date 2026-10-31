@@ -1,0 +1,168 @@
+{
+  "slug": "raw-meat",
+  "species": "dog",
+  "name": {
+    "en": "Raw meat",
+    "sl": "Surovo meso"
+  },
+  "question": {
+    "en": "Can dogs eat raw meat?",
+    "sl": "Ali lahko psi jedo surovo meso?"
+  },
+  "url_slug": {
+    "en": "raw-meat",
+    "sl": "surovo-meso"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "It is not recommended. Raw meat often carries bacteria such as Salmonella, Listeria and E. coli, which can make dogs ill and spread to people in the home, even when the dog looks healthy. Veterinary bodies such as the AVMA discourage raw feeding.",
+    "sl": "Ni priporočljivo. Surovo meso pogosto prenaša bakterije, kot so salmonela, listerija in E. coli, ki lahko psu škodijo in se prenesejo na ljudi v domu, tudi če je pes videti zdrav. Veterinarske organizacije, kot je AVMA, odsvetujejo hranjenje s surovim."
+  },
+  "why": {
+    "en": "Contamination of raw meat by bacteria is common. Dogs can carry these germs without signs and shed them in saliva and faeces, putting family members at risk, especially high-risk groups such as the young and the old. Raw pork can carry a parasite, raw bones can block the gut, and home-made raw diets are likely not balanced unless a nutritionist formulated the recipe.",
+    "sl": "Surovo meso je pogosto okuženo z bakterijami. Psi lahko te klice nosijo brez znakov in jih izločajo s slino in iztrebki, kar ogroža družinske člane, posebej skupine z večjim tveganjem, kot so otroci in starejši. Surova svinjina lahko prenaša zajedavca, surove kosti lahko zamašijo črevesje, doma pripravljeni surovi obroki pa verjetno niso uravnoteženi, če recepta ni sestavil strokovnjak za prehrano."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Low energy or poor appetite",
+      "Belly discomfort"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Utrujenost ali slab apetit",
+      "Nelagodje v trebuhu"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog grabbed some raw meat, watch for vomiting, diarrhoea or low energy and call your vet if these are severe or don't stop. Wash your hands, bowls and surfaces thoroughly. Talk to your vet before changing your dog's diet.",
+    "sl": "Če je pes zgrabil kos surovega mesa, opazujte, ali bruha, ima drisko ali je utrujen, in pokličite veterinarja, če so težave hude ali ne prenehajo. Temeljito umijte roke, sklede in površine. Pred spremembo prehrane se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "Share meat only fully cooked, plain and boneless.",
+    "sl": "Meso delite samo popolnoma kuhano, navadno in brez kosti."
+  },
+  "child": {
+    "en": "Raw meat can have germs. Dogs should only get cooked meat from people food, and everyone washes hands after touching raw meat.",
+    "sl": "Surovo meso ima lahko klice. Psi naj od človeške hrane dobijo samo kuhano meso, po dotiku surovega mesa pa si vsi umijemo roke."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "My dog seems fine on raw food. Is there still a risk?",
+        "sl": "Pes se s surovo hrano zdi v redu. Ali tveganje še obstaja?"
+      },
+      "a": {
+        "en": "Yes. Apparently healthy dogs can carry these bacteria and shed them, which can harm people in the home.",
+        "sl": "Da. Navidez zdravi psi lahko te bakterije nosijo in izločajo, kar lahko škodi ljudem v domu."
+      }
+    },
+    {
+      "q": {
+        "en": "Is freeze-dried raw food safer?",
+        "sl": "Je zamrznjeno sušena surova hrana varnejša?"
+      },
+      "a": {
+        "en": "Not for germs: freeze-drying is not equivalent to cooking when it comes to bacteria and parasites.",
+        "sl": "Glede klic ne: zamrzovalno sušenje ni enakovredno kuhanju, kar zadeva bakterije in zajedavce."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD70",
+      "quote": "the AVMA discourages feeding any raw or undercooked animal-sourced proteins"
+    },
+    {
+      "id": "KD70",
+      "quote": "Apparently healthy dogs and cats can have subclinical infections with these organisms"
+    },
+    {
+      "id": "KD70",
+      "quote": "People handling contaminated raw pet foods are also at risk of becoming sick."
+    },
+    {
+      "id": "KD45",
+      "quote": "Raw meat and raw eggs can contain bacteria such as Salmonella and E. coli that can be harmful to pets and humans alike."
+    },
+    {
+      "id": "KD71",
+      "quote": "The risks of feeding raw food outweigh potential benefits."
+    },
+    {
+      "id": "KD71",
+      "quote": "Contamination of raw meat by bacteria is common."
+    },
+    {
+      "id": "KD71",
+      "quote": "Another concern with raw food diets is the risk of obstruction by a foreign body – like a piece of bone."
+    },
+    {
+      "id": "KD71",
+      "quote": "Homemade raw diets are likely not complete and balanced unless a recipe has been formulated by a nutritionist."
+    },
+    {
+      "id": "KD72",
+      "quote": "Owners who feed their pet a raw diet may have a higher risk of getting infected with Salmonella and Listeria monocytogenes."
+    },
+    {
+      "id": "KD73",
+      "quote": "Even if your dog doesn't look sick, they could be shedding organisms that would likely harm those family members."
+    },
+    {
+      "id": "KD73",
+      "quote": "If you choose to give your dog freeze-dried treats (or any other raw food), do not let anyone in high-risk groups (young, old"
+    },
+    {
+      "id": "KD73",
+      "quote": "When it comes to the risks from bacteria and parasites, freeze-drying is not equivalent to cooking."
+    },
+    {
+      "id": "KD69",
+      "quote": "Remember that your pet’s saliva and poop can contain lots more potentially dangerous bacteria if they are fed raw food."
+    },
+    {
+      "id": "KD69",
+      "quote": "Always speak to your own vet before changing your pet’s diet as they can advise you on the best course of action."
+    },
+    {
+      "id": "KD69",
+      "quote": "Always wash your hands before and after handling your pet’s food."
+    },
+    {
+      "id": "KD74",
+      "quote": "Eating raw or undercooked pork isn’t safe for dogs or humans due to the parasite trichinella spiralis larvae"
+    },
+    {
+      "id": "KD68",
+      "quote": "The earliest signs are often vomiting, diarrhea, lethargy, decreased appetite, and abdominal discomfort."
+    },
+    {
+      "id": "KD68",
+      "quote": "Contact your veterinarian if your dog has severe or persistent vomiting or diarrhea."
+    }
+  ],
+  "related": [
+    "raw-fish",
+    "raw-eggs",
+    "raw-bones",
+    "cooked-chicken",
+    "beef",
+    "pork"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b62c8d04b8f16458fa81fda91b2f9c014d793ec57bf8d1ba27a6dec728c53bcc"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "253c4ae7ca3472c2a72bc05590e4a2ead24062541d69f7b77ce6907311ca86f5"
+    }
+  }
+}

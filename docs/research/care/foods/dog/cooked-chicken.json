@@ -1,0 +1,121 @@
+{
+  "slug": "cooked-chicken",
+  "species": "dog",
+  "name": {
+    "en": "Cooked chicken",
+    "sl": "Kuhan piščanec"
+  },
+  "question": {
+    "en": "Can dogs eat cooked chicken?",
+    "sl": "Ali lahko psi jedo kuhanega piščanca?"
+  },
+  "url_slug": {
+    "en": "cooked-chicken",
+    "sl": "kuhan-piscanec"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes. Plain, unseasoned cooked chicken, taken off the bone, can be served to a dog on its own. Never give cooked chicken bones, which splinter easily, and skip seasoned, fatty or raw chicken.",
+    "sl": "Da. Navaden, nezačinjen kuhan piščanec brez kosti lahko psu ponudite kar samega. Nikoli ne dajte kuhanih piščančjih kosti, ki se zlahka razcepijo, in se izogibajte začinjenemu, mastnemu ali surovemu piščancu."
+  },
+  "why": {
+    "en": "Unseasoned roasted, poached, grilled or baked chicken is fine on its own. Cooked chicken bones splinter easily and can cause choking or puncture the gut. Raw chicken is not recommended because of Salmonella and other bacteria. Thigh meat has about twice the fat of breast, and fatty foods can upset the stomach.",
+    "sl": "Nezačinjen pečen, poširan, na žaru ali v pečici pripravljen piščanec je primeren sam po sebi. Kuhane piščančje kosti se zlahka razcepijo in lahko povzročijo dušenje ali predrtje prebavil. Surov piščanec ni priporočljiv zaradi salmonele in drugih bakterij. Bedra imajo približno dvakrat več maščobe kot prsi, mastna hrana pa lahko razdraži prebavo."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If your dog swallowed cooked chicken bones, call your vet for advice and don't try to make your dog sick. Call straight away if you see choking, vomiting or signs of tummy pain.",
+    "sl": "Če je pes pogoltnil kuhane piščančje kosti, pokličite veterinarja za nasvet in ne poskušajte izzvati bruhanja. Takoj pokličite, če opazite dušenje, bruhanje ali znake bolečine v trebuhu."
+  },
+  "serving": {
+    "en": "Plain cooked chicken (breast is leanest), no seasoning, fully cooked, taken off the bone, in small pieces.",
+    "sl": "Navaden kuhan piščanec (prsi so najbolj puste), brez začimb, popolnoma kuhan, brez kosti, v majhnih koščkih."
+  },
+  "child": {
+    "en": "Plain cooked chicken with no bones is a tasty dog treat. Chicken bones are never for dogs.",
+    "sl": "Navaden kuhan piščanec brez kosti je slasten pasji priboljšek. Piščančje kosti nikoli niso za pse."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Why are cooked chicken bones dangerous?",
+        "sl": "Zakaj so kuhane piščančje kosti nevarne?"
+      },
+      "a": {
+        "en": "Cooked chicken bones splinter easily and can cause choking or a puncture in the gut.",
+        "sl": "Kuhane piščančje kosti se zlahka razcepijo in lahko povzročijo dušenje ali predrtje prebavil."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD79",
+      "quote": "any unseasoned roasted, poached, grilled, or baked chicken can be served on its own"
+    },
+    {
+      "id": "KD79",
+      "quote": "Be sure to take cooked chicken off the bone."
+    },
+    {
+      "id": "KD79",
+      "quote": "Most sources recommend against raw chicken, due to the risk of salmonella or bacterial infections"
+    },
+    {
+      "id": "KD79",
+      "quote": "Cooked chicken bones splinter easily, which can cause choking or a gastrointestinal tract puncture"
+    },
+    {
+      "id": "KD51",
+      "quote": "Chicken"
+    },
+    {
+      "id": "KD81",
+      "quote": "The chicken must be cooked thoroughly and uneaten portions must be stored properly to avoid bacterial contamination."
+    },
+    {
+      "id": "KD81",
+      "quote": "(thigh meat has twice as much fat compared to breast)"
+    },
+    {
+      "id": "KD49",
+      "quote": "High-fat foods can trigger vomiting and diarrhea, or even pancreatitis, a painful and serious condition."
+    },
+    {
+      "id": "KD80",
+      "quote": "Dr. Jerry Klein, AKC Chief Veterinarian, warns that you should never give your dog cooked bones of any kind."
+    },
+    {
+      "id": "KD48",
+      "quote": "Never try to make your dog sick."
+    },
+    {
+      "id": "KD34",
+      "quote": "If you do suspect your pet has swallowed something you should contact your vet for advice immediately."
+    },
+    {
+      "id": "KD48",
+      "quote": "Eating chicken, turkey or goose carcasses may cause larger pieces of bone to cause an obstruction."
+    }
+  ],
+  "related": [
+    "turkey",
+    "cooked-bones",
+    "raw-meat",
+    "fatty-meat",
+    "garlic",
+    "onion"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1ac228fe4882cdf2b9d0d21f2dd56626df54d561be3e4fec85f0363c70c66dea"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4fc5cd1e5c3a1df0901d44b5b5a27844c2490852fe103b35549c1382699526fc"
+    }
+  }
+}

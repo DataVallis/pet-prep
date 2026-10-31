@@ -1,0 +1,163 @@
+{
+  "slug": "cheese",
+  "species": "cat",
+  "name": {
+    "en": "Cheese",
+    "sl": "Sir"
+  },
+  "question": {
+    "en": "Can cats eat cheese?",
+    "sl": "Ali lahko mačke jedo sir?"
+  },
+  "url_slug": {
+    "en": "cheese",
+    "sl": "sir"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, cheese is best avoided. It isn't toxic, but many cats are lactose intolerant, so it can upset their stomach. It is also high in fat and salt and doesn't give cats the nutrients they need.",
+    "sl": "Ne, sira je bolje ne dajati. Ni strupen, vendar mnoge mačke ne prenašajo laktoze, zato jim lahko razdraži želodec. Ima tudi veliko maščob in soli ter mačkam ne da hranil, ki jih potrebujejo."
+  },
+  "why": {
+    "en": "Most adult cats can't properly digest lactose, the sugar in milk and in dairy products such as cheese. This can cause vomiting or diarrhoea and make a cat sluggish. Cheese is also high in fat and salt, and eaten regularly it can lead to weight gain. Lactose-free and plant-based cheeses are not a safe swap, because some dairy alternatives contain ingredients that could be toxic to cats.",
+    "sl": "Večina odraslih mačk ne zmore dobro prebaviti laktoze, sladkorja v mleku in mlečnih izdelkih, kot je sir. Posledica sta lahko bruhanje ali driska, mačka je lahko tudi utrujena. Sir ima veliko maščob in soli, in če ga mačka je redno, se lahko zredi. Sir brez laktoze ali rastlinski sir ni varna zamenjava, ker nekateri mlečni nadomestki vsebujejo sestavine, ki so lahko za mačke strupene."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Sluggishness or low energy",
+      "Gas or bloating"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Utrujenost ali malo energije",
+      "Napihnjenost ali vetrovi"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat ate a little cheese, there's no need to rush to the vet. Keep an eye on them. If they become unwell or act differently, call your vet and tell them how much cheese your cat ate.",
+    "sl": "Če je mačka pojedla malo sira, ni treba hiteti k veterinarju. Opazujte jo. Če ji postane slabo ali se vede drugače, pokličite veterinarja in mu povejte, koliko sira je pojedla."
+  },
+  "serving": null,
+  "child": {
+    "en": "Cheese can give cats a sore tummy. Give your cat a cat treat instead and keep the cheese for people.",
+    "sl": "Sir lahko mucki povzroči bolan trebušček. Raje ji daj priboljšek za mačke, sir pa ostane za ljudi."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are cheese-flavoured cat treats OK?",
+        "sl": "Ali so priboljški za mačke z okusom sira v redu?"
+      },
+      "a": {
+        "en": "Treats made for cats with a little cheese are fine in small amounts now and then. If your cat gets an upset stomach, choose a different treat next time.",
+        "sl": "Priboljški za mačke z malo sira so v majhnih količinah občasno v redu. Če ima mačka po njih težave z želodcem, naslednjič izberite drug priboljšek."
+      }
+    },
+    {
+      "q": {
+        "en": "Is lactose-free or vegan cheese safer?",
+        "sl": "Je sir brez laktoze ali veganski sir varnejši?"
+      },
+      "a": {
+        "en": "No. Avoid lactose-free and plant-based cheese too, because many dairy alternatives contain ingredients that could be toxic to cats.",
+        "sl": "Ne. Izogibajte se tudi siru brez laktoze in rastlinskemu siru, ker veliko mlečnih nadomestkov vsebuje sestavine, ki so lahko za mačke strupene."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC30",
+      "quote": "Although cheese isn't toxic for cats, many cats are actually lactose intolerant."
+    },
+    {
+      "id": "KC30",
+      "quote": "Even if your cat is not allergic to dairy, cheese is very high in fat and salt."
+    },
+    {
+      "id": "KC30",
+      "quote": "It doesn't contain the important nutrients cats need to stay healthy."
+    },
+    {
+      "id": "KC30",
+      "quote": "As many cats are lactose intolerant, eating cheese can upset their stomach."
+    },
+    {
+      "id": "KC30",
+      "quote": "This can result in vomiting and/or diarrhoea."
+    },
+    {
+      "id": "KC30",
+      "quote": "It can also make them feel sluggish or lethargic."
+    },
+    {
+      "id": "KC30",
+      "quote": "If they eat cheese regularly, or it forms a big part of their diet, they are also likely to become overweight."
+    },
+    {
+      "id": "KC30",
+      "quote": "Also avoid giving your cat any lactose-free or plant-based cheese."
+    },
+    {
+      "id": "KC30",
+      "quote": "A lot of dairy alternatives contain ingredients that could be toxic for cats."
+    },
+    {
+      "id": "KC30",
+      "quote": "These are ok to give to your cat in small amounts as an occasional treat."
+    },
+    {
+      "id": "KC30",
+      "quote": "Keep an eye on your cat and if they become unwell, use a different type of cat treat in future."
+    },
+    {
+      "id": "KC30",
+      "quote": "If your cat has eaten some cheese, there's no need to rush them to the vet."
+    },
+    {
+      "id": "KC30",
+      "quote": "If they become unwell or you notice any change in their health or behaviour, give your vet a call."
+    },
+    {
+      "id": "KC30",
+      "quote": "Let them know what's wrong and how much cheese your cat has eaten."
+    },
+    {
+      "id": "KC31",
+      "quote": "Lactose is the sugar found in milk and other dairy products such as cheese."
+    },
+    {
+      "id": "KC31",
+      "quote": "But it does seem that most adult cats are lactose intolerant."
+    },
+    {
+      "id": "KC31",
+      "quote": "There is often a buildup of gas as the lactose ferments in the gut."
+    },
+    {
+      "id": "KC5",
+      "quote": "consuming dairy products such as cheese can upset their stomach."
+    }
+  ],
+  "related": [
+    "milk",
+    "yogurt",
+    "ice-cream",
+    "butter"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "95eec8e88beda3f1eb261dd7e5a972579deddfd0f02e0fe616b1ae5766afe2d6"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "69b7f2745b636ae65e9db5b14cad487da49a76b445522f489601d25a2e658b2f"
+    }
+  }
+}

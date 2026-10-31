@@ -1,0 +1,152 @@
+{
+  "slug": "corn-cob",
+  "species": "dog",
+  "name": {
+    "en": "Corn cob",
+    "sl": "Koruzni storž"
+  },
+  "question": {
+    "en": "Can dogs eat corn cobs?",
+    "sl": "Ali lahko psi jedo koruzne storže?"
+  },
+  "url_slug": {
+    "en": "corn-cob",
+    "sl": "koruzni-storz"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "No. Never give a dog corn on the cob. Dogs may swallow pieces or even the whole cob, which can cause choking or a serious intestinal blockage that may need emergency treatment. Plain corn kernels off the cob are a different matter.",
+    "sl": "Ne. Psu nikoli ne dajajte koruze na storžu. Psi lahko pogoltnejo kose ali celo cel storž, kar lahko povzroči dušenje ali resno zaporo črevesja, ki lahko zahteva nujno zdravljenje. Navadna koruzna zrnca brez storža so nekaj drugega."
+  },
+  "why": {
+    "en": "Swallowed pieces can block the intestines; in one reported case the blockage restricted the blood supply, and emergency treatment may be needed. Plain kernels in moderation are generally safe; the cob is the danger.",
+    "sl": "Pogoltnjeni kosi lahko zamašijo črevesje; v enem opisanem primeru je zapora ovirala prekrvavitev, potrebno pa je lahko nujno zdravljenje. Navadna zrnca so v zmernih količinah na splošno varna; nevaren je storž."
+  },
+  "signs": {
+    "en": [
+      "Repeated vomiting",
+      "Not wanting to eat",
+      "Tiredness and less activity",
+      "Diarrhoea",
+      "Dehydration"
+    ],
+    "sl": [
+      "Ponavljajoče se bruhanje",
+      "Pes noče jesti",
+      "Utrujenost in manj aktivnosti",
+      "Driska",
+      "Izsušenost"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet right away if your dog swallowed a corn cob or part of one, even if it seems fine. Note when it happened and roughly how much was eaten. Don't wait for signs of a blockage.",
+    "sl": "Takoj pokličite veterinarja, če je pes pogoltnil koruzni storž ali njegov del, tudi če se zdi v redu. Zapišite si, kdaj se je to zgodilo in približno koliko je pojedel. Ne čakajte na znake zapore."
+  },
+  "serving": null,
+  "child": {
+    "en": "Corn cobs can get stuck in a dog's tummy. Put cobs straight in a closed bin, and tell a grown-up if your dog eats one.",
+    "sl": "Koruzni storži se lahko psu zataknejo v trebuščku. Storže takoj daj v zaprt koš in povej odraslemu, če ga pes poje."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat corn kernels?",
+        "sl": "Lahko psi jedo koruzna zrnca?"
+      },
+      "a": {
+        "en": "Plain corn kernels are generally safe for dogs in moderation. It's the cob that is dangerous.",
+        "sl": "Navadna koruzna zrnca so za pse v zmernih količinah na splošno varna. Nevaren je storž."
+      }
+    },
+    {
+      "q": {
+        "en": "Will a corn cob pass on its own?",
+        "sl": "Bo storž prešel sam od sebe?"
+      },
+      "a": {
+        "en": "Don't wait to find out. A swallowed cob can cause a serious blockage, so contact your vet straight away.",
+        "sl": "Ne čakajte, da bi to ugotovili. Pogoltnjen storž lahko povzroči resno zaporo, zato takoj pokličite veterinarja."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD23",
+      "quote": "Plain corn kernels are generally safe for dogs when fed in moderation."
+    },
+    {
+      "id": "KD23",
+      "quote": "Corn cobs are a serious risk because dogs may swallow pieces or even the entire cob."
+    },
+    {
+      "id": "KD23",
+      "quote": "Corn on the cob should never be fed to dogs because it can cause choking or intestinal blockages."
+    },
+    {
+      "id": "KD23",
+      "quote": "If your dog consumes a corn cob, watch closely for signs of an intestinal blockage."
+    },
+    {
+      "id": "KD23",
+      "quote": "Dehydration"
+    },
+    {
+      "id": "KD23",
+      "quote": "Lethargy"
+    },
+    {
+      "id": "KD23",
+      "quote": "Reduced activity"
+    },
+    {
+      "id": "KD23",
+      "quote": "Repeated vomiting"
+    },
+    {
+      "id": "KD23",
+      "quote": "Loss of appetite"
+    },
+    {
+      "id": "KD23",
+      "quote": "Diarrhea"
+    },
+    {
+      "id": "KD5",
+      "quote": "A swallowed corn cob can cause a serious intestinal obstruction and may require emergency treatment."
+    },
+    {
+      "id": "KD34",
+      "quote": "We found that the corn-on-the-cob husk was causing a major blockage in Sam's small intestine, restricting the blood supply."
+    },
+    {
+      "id": "KD34",
+      "quote": "If you have pets at home, try to keep anything dangerous or easy to swallow out of paws' reach."
+    },
+    {
+      "id": "KD34",
+      "quote": "If you do suspect your pet has swallowed something you should contact your vet for advice immediately."
+    },
+    {
+      "id": "KD37",
+      "quote": "Other table food like corn-on-the-cob can result in a severe foreign body in your dog's intestines"
+    }
+  ],
+  "related": [
+    "cooked-bones",
+    "peaches",
+    "avocado"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f12917f3df23d7864bb69135c4b17ab493bd3f8272131348a65489a0f2de89ec"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cc6b19483cebb291767e00d5e33d0c0b66c65999430fd8c9ab7541f2366fd897"
+    }
+  }
+}

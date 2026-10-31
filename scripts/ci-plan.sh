@@ -150,6 +150,7 @@ classify() {
       docs/research/cat-data/*) need_backend=true need_scripts=true ;; # cat test fixtures + export input, nothing ships
       docs/research/breed-facts/*) need_backend=true ;; # canonical breed facts: BreedFactImportTest checks the shipped copy backend/database/data/breed-facts (M5-R09b)
       docs/research/breed-registry.json) need_backend=true need_scripts=true ;; # export output: its test + BreedPortraitTest (register breeds), nothing ships
+      docs/research/care/*|docs/research/care-knowledge.json|scripts/export-care-knowledge.mjs|scripts/tests/export-care-knowledge.test.mjs) need_scripts=true ;; # care knowledge for the website (M6-K), nothing ships
       docs/research/breeder-checklist/*) need_scripts=true ;; # breeder checklist (export input, M5-R11-06), nothing ships
       docs/research/breed-portraits/*) need_scripts=true ;; # AI breed portraits + manifest (export input, M5-R11-04), nothing ships
       deployment/*) need_backend=true need_deploy=true need_scripts=true ;;

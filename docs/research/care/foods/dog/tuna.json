@@ -1,0 +1,145 @@
+{
+  "slug": "tuna",
+  "species": "dog",
+  "name": {
+    "en": "Tuna",
+    "sl": "Tuna"
+  },
+  "question": {
+    "en": "Can dogs eat tuna?",
+    "sl": "Ali lahko psi jedo tuno?"
+  },
+  "url_slug": {
+    "en": "tuna",
+    "sl": "tuna"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, occasionally and in small amounts. Tuna isn't toxic to dogs, but it is high in mercury, so it shouldn't be a regular food. Choose cooked tuna or 'light' (skipjack) canned tuna packed only in water, without added salt or oil.",
+    "sl": "Da, občasno in v majhnih količinah. Tuna za pse ni strupena, vsebuje pa veliko živega srebra, zato ne sme biti redna hrana. Izberite kuhano tuno ali svetlo tuno (črtasti tun) v konzervi, vloženo samo v vodi, brez dodane soli ali olja."
+  },
+  "why": {
+    "en": "Tuna are large, long-lived fish, so their mercury levels are high, and dogs are more sensitive to mercury than people. Feeding tuna regularly can lead to mercury poisoning over time. Albacore, yellowfin and 'white' tuna carry more mercury than skipjack. Canned tuna often has added salt or oil, which isn't healthy for dogs.",
+    "sl": "Tune so velike, dolgo živeče ribe, zato vsebujejo veliko živega srebra, psi pa so nanj bolj občutljivi kot ljudje. Redno hranjenje s tuno lahko sčasoma povzroči zastrupitev z živim srebrom. Beli tun, rumenoplavuti tun in »bela« tuna imajo več živega srebra kot črtasti tun. Tuna v konzervi ima pogosto dodano sol ali olje, kar za pse ni zdravo."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "A stolen bite of tuna is nothing to panic about. If your dog has been eating tuna regularly and shows signs such as tremors, loss of coordination, vomiting blood or bloody diarrhoea, take them to the vet immediately.",
+    "sl": "Ukraden grižljaj tune ni razlog za paniko. Če pes redno je tuno in se pojavijo znaki, kot so tresenje, slaba koordinacija, bruhanje krvi ali krvava driska, ga takoj odpeljite k veterinarju."
+  },
+  "serving": {
+    "en": "Occasionally, a small amount of cooked tuna or 'light' (skipjack) canned tuna in water only, no salt or oil; avoid albacore, yellowfin and 'white' tuna.",
+    "sl": "Občasno malo kuhane tune ali svetle tune (črtasti tun) v konzervi samo v vodi, brez soli in olja; izogibajte se belemu in rumenoplavutemu tunu ter »beli« tuni."
+  },
+  "child": {
+    "en": "A little tuna is a rare treat for a dog, not everyday food. Ask a grown-up to pick tuna in water.",
+    "sl": "Malo tune je za psa redek priboljšek, ne vsakdanja hrana. Prosi odraslega, naj izbere tuno v vodi."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "My dog stole some tuna. Should I worry?",
+        "sl": "Pes je ukradel nekaj tune. Naj me skrbi?"
+      },
+      "a": {
+        "en": "Usually not: tuna isn't toxic, and the concern is regular feeding over time.",
+        "sl": "Običajno ne: tuna ni strupena, skrb vzbuja redno hranjenje skozi daljši čas."
+      }
+    },
+    {
+      "q": {
+        "en": "Which canned tuna is best?",
+        "sl": "Katera tuna v konzervi je najboljša?"
+      },
+      "a": {
+        "en": "'Light' or skipjack tuna packed only in water, given occasionally.",
+        "sl": "Svetla tuna oziroma črtasti tun, vložen samo v vodi, občasno."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD78",
+      "quote": "Because dogs are smaller and metabolize substances differently than humans, they’re more sensitive to mercury."
+    },
+    {
+      "id": "KD78",
+      "quote": "Because many species of tuna are large, long-living fish, their mercury levels are quite high."
+    },
+    {
+      "id": "KD78",
+      "quote": "Canned tuna often contains added salt or is packed in oil, neither of which are healthy for your dog to eat."
+    },
+    {
+      "id": "KD78",
+      "quote": "What’s actually unsafe is feeding your dog tuna regularly, which can lead to mercury poisoning over time."
+    },
+    {
+      "id": "KD78",
+      "quote": "Eating tuna is not categorically unsafe or toxic to dogs, so it isn't something to panic about if your dog steals half of you"
+    },
+    {
+      "id": "KD78",
+      "quote": "If you have been feeding your dog tuna regularly, especially tuna varieties like albacore or yellowfin, keep an eye out for p"
+    },
+    {
+      "id": "KD78",
+      "quote": "If they exhibit any of these symptoms, take them to the vet immediately:"
+    },
+    {
+      "id": "KD78",
+      "quote": "Loss of coordination"
+    },
+    {
+      "id": "KD78",
+      "quote": "Tremors"
+    },
+    {
+      "id": "KD78",
+      "quote": "Vomiting blood"
+    },
+    {
+      "id": "KD78",
+      "quote": "Watery diarrhea or blood in stool"
+    },
+    {
+      "id": "KD5",
+      "quote": "Dogs can eat cooked tuna, but the variety or species of tuna matters, whether it’s fresh-caught or canned."
+    },
+    {
+      "id": "KD5",
+      "quote": "Avoid feeding albacore, yellowfin, bluefin, bigeye, or “white” canned tuna varieties that are known to accumulate high leve"
+    },
+    {
+      "id": "KD5",
+      "quote": "If you’re going to occasionally feed small amounts of tuna, look for skipjack or “light” canned tuna, a smaller fish that accu"
+    },
+    {
+      "id": "KD51",
+      "quote": "Tuna"
+    },
+    {
+      "id": "KD78",
+      "quote": "look for “light,” or skipjack, tuna packed only in water"
+    }
+  ],
+  "related": [
+    "salmon",
+    "sardines",
+    "raw-fish",
+    "salt"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b00a320fcdb16a2ee73c907aa0f24a467e15a2154baaa42c6068a97979c1a0fa"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "993542b27d737d9ecefb8a672769d35d8a22ce1496f8c25d10762e544948f113"
+    }
+  }
+}

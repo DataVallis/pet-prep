@@ -1,0 +1,136 @@
+{
+  "slug": "raw-yeast-dough",
+  "species": "cat",
+  "name": {
+    "en": "Raw yeast dough",
+    "sl": "Surovo kvašeno testo"
+  },
+  "question": {
+    "en": "Can cats eat raw yeast dough?",
+    "sl": "Ali lahko mačke jedo surovo kvašeno testo?"
+  },
+  "url_slug": {
+    "en": "raw-yeast-dough",
+    "sl": "surovo-kvaseno-testo"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Raw yeast dough is dangerous for cats in two ways: it can keep expanding in the stomach and cause a blockage, and the yeast makes alcohol, which is toxic to cats. Keep rising dough out of reach and call your vet if your cat eats any.",
+    "sl": "Ne. Surovo kvašeno testo je za mačke nevarno na dva načina: v želodcu lahko še naprej narašča in povzroči zaporo, kvas pa tvori alkohol, ki je za mačke strupen. Vzhajajoče testo postavite izven dosega in pokličite veterinarja, če ga muca poje."
+  },
+  "why": {
+    "en": "Raw dough contains some alcohol and produces carbon dioxide. Once swallowed, the yeast keeps working in the stomach: the dough expands and can cause an obstruction, while the alcohol it produces is absorbed into the blood. Cats are especially sensitive to alcohol.",
+    "sl": "Surovo testo vsebuje nekaj alkohola in tvori ogljikov dioksid. Ko ga žival poje, kvas v želodcu deluje naprej: testo se širi in lahko povzroči zaporo, nastali alkohol pa se vsrka v kri. Mačke so na alkohol še posebej občutljive."
+  },
+  "signs": {
+    "en": [
+      "Swollen, bloated tummy",
+      "Trying to vomit without bringing anything up",
+      "Wobbly walking or seeming confused",
+      "Unusual weakness or sleepiness"
+    ],
+    "sl": [
+      "Napihnjen trebušček",
+      "Poskusi bruhanja brez izbruhane vsebine",
+      "Opotekanje ali zmedenost",
+      "Nenavadna šibkost ali zaspanost"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline right away. Note how much dough your cat ate and when. Don't wait for signs to appear, and don't try to make your cat sick at home.",
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, koliko testa je muca pojedla in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju."
+  },
+  "serving": null,
+  "child": {
+    "en": "Bread dough needs to rise in a bowl, not in a tummy. Keep dough away from kitty and tell a grown-up if she eats some.",
+    "sl": "Testo mora vzhajati v skledi, ne v trebuščku. Naj bo daleč od muce. Če ga poje, povej odraslemu."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Why is raw dough dangerous if it's not a poison itself?",
+        "sl": "Zakaj je surovo testo nevarno, če samo po sebi ni strup?"
+      },
+      "a": {
+        "en": "Raw dough contains live yeast. In the stomach it keeps rising and producing alcohol, so it can both cause a blockage and lead to alcohol poisoning.",
+        "sl": "Surovo testo vsebuje živ kvas. V želodcu še naprej vzhaja in tvori alkohol, zato lahko povzroči zaporo in tudi zastrupitev z alkoholom."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC5",
+      "quote": "A raw dough contains some amount of alcohol and produces carbon dioxide"
+    },
+    {
+      "id": "KC5",
+      "quote": "which if eaten can expand within a cat's stomach and cause obstruction"
+    },
+    {
+      "id": "KC5",
+      "quote": "yeast dough"
+    },
+    {
+      "id": "KC13",
+      "quote": "Yeast replication promotes dough expansion in the stomach and ethanol production by yeast."
+    },
+    {
+      "id": "KC13",
+      "quote": "Ethanol, produced from yeast fermentation, is absorbed into the bloodstream, resulting in inebriation and metabolic acidosis."
+    },
+    {
+      "id": "KC13",
+      "quote": "Although any species is susceptible, dogs are most commonly affected because of their indiscriminate eating habits."
+    },
+    {
+      "id": "KC13",
+      "quote": "Early clinical signs of bread dough toxicosis may include unproductive attempts at emesis, as well as abdominal distention"
+    },
+    {
+      "id": "KC13",
+      "quote": "As ethanol intoxication develops, the patient becomes ataxic and disoriented."
+    },
+    {
+      "id": "KC13",
+      "quote": "Eventually, profound CNS depression, weakness, recumbency, hypoglycemia, coma, hypothermia, or seizures may occur."
+    },
+    {
+      "id": "KC1",
+      "quote": "Yeast dough can rise and cause gas to accumulate in your pet’s digestive system."
+    },
+    {
+      "id": "KC11",
+      "quote": "raw or rising yeast-based bread dough"
+    },
+    {
+      "id": "KC11",
+      "quote": "All animals are at risk of alcohol poisoning, but cats are especially sensitive."
+    },
+    {
+      "id": "KC8",
+      "quote": "Contact your veterinary team for advice immediately; make sure you know when, where, and how the poisoning occurred."
+    },
+    {
+      "id": "KC22",
+      "quote": "Don’t try to make your cat sick without asking the vet and never given them medicines designed for humans."
+    }
+  ],
+  "related": [
+    "alcohol",
+    "raisins",
+    "chocolate"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3a3bd037816d42e7ea1a588647e7a1400c6c9bf2b5ebcd9a4c20e5dd23dab731"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c02dac9f28dd5081831962b17e9cd1dbd409bc4ffc7a9d68e90151d6909b7ff1"
+    }
+  }
+}

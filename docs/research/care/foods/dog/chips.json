@@ -1,0 +1,143 @@
+{
+  "slug": "chips",
+  "species": "dog",
+  "name": {
+    "en": "Potato chips (crisps)",
+    "sl": "Čips"
+  },
+  "question": {
+    "en": "Can dogs eat chips?",
+    "sl": "Ali lahko psi jedo čips?"
+  },
+  "url_slug": {
+    "en": "chips",
+    "sl": "cips"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "Not recommended. A few potato chips are unlikely to cause salt poisoning, but chips are salty and excessive salty food is not good for dogs, especially those with heart problems. Onion- or garlic-flavoured chips add a further risk, because onion and garlic are toxic to dogs.",
+    "sl": "Ni priporočljivo. Nekaj čipsa verjetno ne povzroči zastrupitve s soljo, a čips je slan, preveč slane hrane pa psom ne koristi, zlasti tistim s srčnimi težavami. Čips z okusom čebule ali česna je še bolj tvegan, ker sta čebula in česen za pse strupena."
+  },
+  "why": {
+    "en": "AKC says a dog can have salty foods like potato chips in limited amounts, but excess salt is not good for dogs and can cause fluid retention. Large amounts of salt can lead to salt poisoning. Onion and garlic are toxic to dogs in every form, including powders.",
+    "sl": "AKC pravi, da lahko pes slano hrano, kot je čips, je v omejenih količinah, a presežek soli psom ne koristi in lahko povzroči zastajanje tekočine. Velike količine soli lahko vodijo v zastrupitev s soljo. Čebula in česen sta za pse strupena v vseh oblikah, tudi v prahu."
+  },
+  "signs": {
+    "en": [
+      "Strong thirst and peeing a lot",
+      "Vomiting, often within a few hours",
+      "Diarrhoea",
+      "Wobbliness, tiredness",
+      "Tremors or seizures"
+    ],
+    "sl": [
+      "Huda žeja in pogosto uriniranje",
+      "Bruhanje, pogosto v nekaj urah",
+      "Driska",
+      "Opotekanje, utrujenost",
+      "Tresenje ali krči"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog ate a lot of chips, especially onion- or garlic-flavoured ones, contact your vet or a pet poison helpline. Note the flavour and roughly how much was eaten.",
+    "sl": "Če je pes pojedel veliko čipsa, zlasti z okusom čebule ali česna, pokličite veterinarja ali center za zastrupitve živali. Zapišite si okus in približno koliko je pojedel."
+  },
+  "serving": null,
+  "child": {
+    "en": "Chips are a salty people snack. They are not good for dogs, so keep the bag closed and give your dog its own treat.",
+    "sl": "Čips je slan prigrizek za ljudi. Psom ne koristi, zato vrečko zapri in psu daj njegov priboljšek."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are flavoured chips worse?",
+        "sl": "Je čips z okusom slabši?"
+      },
+      "a": {
+        "en": "They can be. Onion and garlic are toxic to dogs in every form, including powders, so check the flavour.",
+        "sl": "Lahko je. Čebula in česen sta za pse strupena v vseh oblikah, tudi v prahu, zato preverite okus."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD40",
+      "quote": "The feeding of salty foods in moderation should not cause salt toxicity."
+    },
+    {
+      "id": "KD40",
+      "quote": "But in small dogs with metabolic issues, it may cause more concern if there is no access to fresh water."
+    },
+    {
+      "id": "KD40",
+      "quote": "Generally, the feeding of excessive salty foods is not good for dogs,"
+    },
+    {
+      "id": "KD40",
+      "quote": "especially for those that have certain medical issues such as heart disease"
+    },
+    {
+      "id": "KD40",
+      "quote": "because it can cause fluid retention."
+    },
+    {
+      "id": "KD40",
+      "quote": "Lack of coordination or being wobbly on their feet"
+    },
+    {
+      "id": "KD40",
+      "quote": "Lethargy"
+    },
+    {
+      "id": "KD40",
+      "quote": "If you suspect your dog has consumed too much salt, contact a veterinarian or the Pet Poison Helpline immediately."
+    },
+    {
+      "id": "KD40",
+      "quote": "But what about salty foods like potato chips?"
+    },
+    {
+      "id": "KD40",
+      "quote": "Yes, in limited amounts."
+    },
+    {
+      "id": "KD1",
+      "quote": "Excessive salt intake can produce increased thirst and urination"
+    },
+    {
+      "id": "KD1",
+      "quote": "Signs of salt toxicity can include vomiting, diarrhea, depression, tremors, seizures and even death."
+    },
+    {
+      "id": "KD42",
+      "quote": "Excess salt intake in dogs results in vomiting within several hours after ingestion."
+    },
+    {
+      "id": "KD5",
+      "quote": "Raw, cooked, dehydrated, and concentrated forms (like powders or soup mixes) can all cause symptoms and illness."
+    },
+    {
+      "id": "KD10",
+      "quote": "All forms are poisonous to dogs, including raw, cooked, dried, powdered, and liquid preparations."
+    }
+  ],
+  "related": [
+    "salty-snacks",
+    "salt",
+    "onion",
+    "garlic"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e1cf604d1847d50147d96c43d3e23f6b232425d102b278cc3118405131cf4591"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "133ebf5f13143c6519257c37a98aa39eda9dcfe8a0c6674b8e660975bc9dee5a"
+    }
+  }
+}

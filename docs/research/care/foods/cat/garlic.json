@@ -1,0 +1,180 @@
+{
+  "slug": "garlic",
+  "species": "cat",
+  "name": {
+    "en": "Garlic",
+    "sl": "Česen"
+  },
+  "question": {
+    "en": "Can cats eat garlic?",
+    "sl": "Ali lahko mačke jedo česen?"
+  },
+  "url_slug": {
+    "en": "garlic",
+    "sl": "cesen"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Garlic is toxic to cats and is the most toxic member of the onion family for them. Raw, cooked, dried and powdered garlic can all damage red blood cells and cause anaemia. Call your vet if your cat eats any.",
+    "sl": "Ne. Česen je za mačke strupen in je zanje najbolj strupen med lukovkami. V vseh oblikah – surov, kuhan, sušen ali v prahu – lahko poškoduje rdeče krvničke in povzroči slabokrvnost. Če ga muca poje, pokličite veterinarja."
+  },
+  "why": {
+    "en": "Garlic belongs to the allium family (the onion family). Alliums damage red blood cells and can lead to anaemia, and they also irritate the stomach and gut. Cats are the most sensitive species. All forms are poisonous to cats — raw, cooked, dried, powdered and liquid. Of the alliums, garlic is the most toxic for cats.",
+    "sl": "Česen spada med lukovke (družina čebule). Lukovke poškodujejo rdeče krvničke in lahko povzročijo slabokrvnost, poleg tega dražijo želodec in črevesje. Mačke so med vsemi vrstami najbolj občutljive. Strupene so vse oblike – surove, kuhane, sušene, v prahu in tekoče. Med lukovkami je za mačke najbolj strupen česen."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Reduced appetite",
+      "Weakness",
+      "Pale gums",
+      "Red-coloured urine",
+      "Faster or harder breathing"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Slabši apetit",
+      "Šibkost",
+      "Blede dlesni",
+      "Rdečkast urin",
+      "Hitrejše ali težje dihanje"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline right away, even if your cat seems well — signs of anaemia can take several days to show. Note what your cat ate (raw, cooked, powder or a dish containing it), how much and when. Don't try to make your cat sick at home.",
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če se muca zdi v redu, saj se znaki slabokrvnosti lahko pokažejo šele po nekaj dneh. Zapišite, kaj je pojedla (surovo, kuhano, v prahu ali jed, ki to vsebuje), koliko in kdaj. Muce doma ne poskušajte spraviti k bruhanju."
+  },
+  "serving": null,
+  "child": {
+    "en": "Garlic smells strong to us, and it's not safe for cats. Keep garlicky food away from kitty and tell a grown-up if she eats some.",
+    "sl": "Česen močno diši, za muce pa ni varen. Hrana s česnom naj bo daleč od muce. Če jo poje, povej odraslemu."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is cooked or powdered garlic safe for cats?",
+        "sl": "Je kuhan česen ali česen v prahu za mačke varen?"
+      },
+      "a": {
+        "en": "No. All forms are poisonous to cats, including raw, cooked, dried, powdered and liquid garlic. Be careful with leftovers, sauces, soups and gravy that may contain it.",
+        "sl": "Ne. Za mačke so strupene vse oblike, tudi surov, kuhan, sušen, v prahu in tekoč česen. Previdni bodite pri ostankih hrane, omakah, juhah in mesnih omakah, ki ga lahko vsebujejo."
+      }
+    },
+    {
+      "q": {
+        "en": "Is garlic good for keeping fleas away?",
+        "sl": "Ali česen pomaga proti bolham?"
+      },
+      "a": {
+        "en": "Don't give garlic to your cat for any reason. All forms are poisonous to cats, and Blue Cross notes there is also concern that long-term use of garlic may cause problems. Ask your vet about safe flea treatment.",
+        "sl": "Muci česna ne dajajte z nobenim namenom. Za mačke so strupene vse oblike, Blue Cross pa opozarja tudi na pomisleke, da lahko dolgotrajna uporaba česna povzroča težave. Za varno zaščito pred bolhami vprašajte veterinarja."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC2",
+      "quote": "Cats are the most susceptible species, followed by dogs;"
+    },
+    {
+      "id": "KC2",
+      "quote": "Allium spp include garlic, onions, chives, and leeks, although garlic and onions are most commonly associated with toxicosis."
+    },
+    {
+      "id": "KC2",
+      "quote": "dogs and cats have been affected after ingesting raw, cooked, dehydrated, or granulated onions and garlic."
+    },
+    {
+      "id": "KC2",
+      "quote": "clinical signs of anemia may take as long as several days to appear."
+    },
+    {
+      "id": "KC3",
+      "quote": "Cats are extremely sensitive to poisoning."
+    },
+    {
+      "id": "KC3",
+      "quote": "Onions, garlic, chives, and leeks are common causes of poisoning in cats, with garlic being the most toxic."
+    },
+    {
+      "id": "KC3",
+      "quote": "All forms are poisonous to cats, including raw, cooked, dried, powdered, and liquid preparations."
+    },
+    {
+      "id": "KC3",
+      "quote": "Vomiting"
+    },
+    {
+      "id": "KC3",
+      "quote": "Weakness"
+    },
+    {
+      "id": "KC3",
+      "quote": "Pale gums"
+    },
+    {
+      "id": "KC3",
+      "quote": "Red-colored urine"
+    },
+    {
+      "id": "KC3",
+      "quote": "Increased respiratory rate and effort"
+    },
+    {
+      "id": "KC3",
+      "quote": "it is important to immediately call your veterinarian or Pet Poison Helpline, a 24/7 animal poison center"
+    },
+    {
+      "id": "KC4",
+      "quote": "Onions, shallots, leeks, garlic, and chives are part of group of plants called alliums which are toxic for cats and dogs."
+    },
+    {
+      "id": "KC4",
+      "quote": "Symptoms include vomiting, diarrhoea, a reduced appetite, and dehydration."
+    },
+    {
+      "id": "KC4",
+      "quote": "Symptoms of anaemia (low red blood cell count) often take a bit longer to appear, usually within one to five days."
+    },
+    {
+      "id": "KC4",
+      "quote": "contact your vet straight away if you see your cat eating onions, garlic or leeks or if you are concerned they are showing symptoms."
+    },
+    {
+      "id": "KC1",
+      "quote": "Allium species can cause gastrointestinal irritation and red blood cell damage"
+    },
+    {
+      "id": "KC5",
+      "quote": "if eaten by cats can be extremely toxic potentially leading to anaemia"
+    },
+    {
+      "id": "KC22",
+      "quote": "Don’t try to make your cat sick without asking the vet and never given them medicines designed for humans."
+    },
+    {
+      "id": "KC14",
+      "quote": "There is also concern that long-term use of garlic may cause problems."
+    }
+  ],
+  "related": [
+    "onion",
+    "leek",
+    "chives"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e2e3d85b5a8ff794f364a8826457f4056227f5de966327f428f077880f69ec68"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1461e3deebef6d191758d6f7d1647c540bdb2ebfbd527fb541fbf15feda234d1"
+    }
+  }
+}

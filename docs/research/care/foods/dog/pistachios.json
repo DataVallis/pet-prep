@@ -1,0 +1,126 @@
+{
+  "slug": "pistachios",
+  "species": "dog",
+  "name": {
+    "en": "Pistachios",
+    "sl": "Pistacije"
+  },
+  "question": {
+    "en": "Can dogs eat pistachios?",
+    "sl": "Ali lahko psi jedo pistacije?"
+  },
+  "url_slug": {
+    "en": "pistachios",
+    "sl": "pistacije"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, it is best to avoid them. Pistachios are not toxic in themselves, but they are fatty and usually salty, can upset the stomach or lead to pancreatitis, and nuts or shells can cause choking. They can also grow harmful mould.",
+    "sl": "Ne, bolje se jim je izogniti. Pistacije same po sebi niso strupene, so pa mastne in običajno slane, lahko razdražijo prebavo ali vodijo do vnetja trebušne slinavke, oreščki ali lupine pa lahko povzročijo dušenje. Na njih lahko zraste tudi škodljiva plesen."
+  },
+  "why": {
+    "en": "Pistachios are high in fat and salt, which can cause stomach problems, and fatty, salty snacks can lead to pancreatitis. Even shelled nuts can be a choking hazard. Mould on nut shells can produce aflatoxin, which can make dogs weak and lethargic, upset the stomach and even cause seizures.",
+    "sl": "Pistacije vsebujejo veliko maščobe in soli, kar lahko povzroči prebavne težave, mastni in slani prigrizki pa lahko vodijo do vnetja trebušne slinavke. Tudi oluščeni oreščki lahko povzročijo dušenje. Plesen na lupinah lahko tvori aflatoksin, ki psa lahko oslabi in utrudi, mu razdraži prebavo in celo povzroči krče."
+  },
+  "signs": {
+    "en": [
+      "Vomiting or diarrhoea",
+      "Belly pain, nausea or low energy (possible pancreatitis)",
+      "Weakness and tiredness",
+      "Choking"
+    ],
+    "sl": [
+      "Bruhanje ali driska",
+      "Boleč trebuh, slabost ali utrujenost (možno vnetje trebušne slinavke)",
+      "Šibkost in utrujenost",
+      "Dušenje"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog ate a few pistachios, watch for vomiting, diarrhoea or belly pain. Call your vet if your dog ate a lot of them or their shells, seems to be choking, or shows weakness, tiredness or any of these signs.",
+    "sl": "Če je pes pojedel nekaj pistacij, opazujte, ali bruha, ima drisko ali ga boli trebuh. Pokličite veterinarja, če jih je pojedel veliko ali z lupinami, se duši ali je šibek, utrujen ali kaže katerega od teh znakov."
+  },
+  "serving": null,
+  "child": {
+    "en": "Pistachios and their shells are not for dogs. They can upset a dog's tummy, so keep the bowl up high.",
+    "sl": "Pistacije in njihove lupine niso za pse. Psa lahko boli trebušček, zato skledico postavi visoko."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are pistachio shells dangerous?",
+        "sl": "So lupine pistacij nevarne?"
+      },
+      "a": {
+        "en": "Yes. Pistachios and their shells can get lodged in a dog's throat, and mould can grow on nut shells.",
+        "sl": "Da. Pistacije in njihove lupine se lahko zataknejo v grlu, na lupinah pa lahko raste plesen."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD65",
+      "quote": "Though pistachios are not in themselves toxic to dogs, there are concerns with dogs eating large amounts of pistachios,"
+    },
+    {
+      "id": "KD65",
+      "quote": "For your dog’s safety, it’s best to avoid feeding them pistachios."
+    },
+    {
+      "id": "KD65",
+      "quote": "If your dog tries to swallow pistachios or their shells, they could become choking hazards and get lodged in your pet’s throat."
+    },
+    {
+      "id": "KD65",
+      "quote": "The nut is high in fat, salt, and could cause gastrointestinal issues in some dogs,"
+    },
+    {
+      "id": "KD65",
+      "quote": "Consumption of fatty, salty snacks can lead to pancreatitis in dogs."
+    },
+    {
+      "id": "KD65",
+      "quote": "Aflatoxin is naturally produced from mold that grows on the shells of nuts."
+    },
+    {
+      "id": "KD65",
+      "quote": "Consuming aflatoxin can make dogs weak and lethargic, cause gastrointestinal upset, and even lead to seizures."
+    },
+    {
+      "id": "KD58",
+      "quote": "Pistachios may not be toxic, but even when shelled, they can be choking hazards."
+    },
+    {
+      "id": "KD58",
+      "quote": "Pistachios can also develop dangerous mold, and eating pistachios may even cause an allergy-like reaction in dogs."
+    },
+    {
+      "id": "KD50",
+      "quote": "The most common clinical signs include nausea, vomiting, fever, lethargy, abdominal pain, diarrhea, and decreased appetite."
+    },
+    {
+      "id": "KD59",
+      "quote": "Call your vet if your dog eats a large container of nuts, as this could lead to pancreatic issues."
+    }
+  ],
+  "related": [
+    "almonds",
+    "cashews",
+    "walnuts",
+    "salt",
+    "salty-snacks"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4600c4f92e60707dd67892064b2de32f6465584d6e369c2da4d484795b54e89b"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "80ed241ba2ba4b2206b98c53cf24e2b13ad0b98a624f6ac94f6bd94bdfdac637"
+    }
+  }
+}

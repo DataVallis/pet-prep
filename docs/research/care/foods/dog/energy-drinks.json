@@ -1,0 +1,145 @@
+{
+  "slug": "energy-drinks",
+  "species": "dog",
+  "name": {
+    "en": "Energy drinks",
+    "sl": "Energijske pijače"
+  },
+  "question": {
+    "en": "Can dogs drink energy drinks?",
+    "sl": "Ali lahko psi pijejo energijske pijače?"
+  },
+  "url_slug": {
+    "en": "energy-drinks",
+    "sl": "energijske-pijace"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Energy drinks often contain a lot of caffeine, which is toxic to dogs. Caffeine overstimulates the heart and nervous system, and dogs are more sensitive to it than people. Even lapping up a spilled energy drink can be a problem.",
+    "sl": "Ne. Energijske pijače pogosto vsebujejo veliko kofeina, ki je za pse strupen. Kofein pretirano spodbuja srce in živčevje, psi pa so nanj bolj občutljivi kot ljudje. Težava je lahko že polizana razlita energijska pijača."
+  },
+  "why": {
+    "en": "Energy and sports drinks often contain a lot of caffeine, and energy shots, pouches and tablets contain caffeine too. Caffeine stimulates the heart and nervous system, which can be dangerous for dogs.",
+    "sl": "Energijske in športne pijače pogosto vsebujejo veliko kofeina, kofein pa vsebujejo tudi energijski šoti, vrečke in tablete. Kofein spodbuja srce in živčevje, kar je za pse lahko nevarno."
+  },
+  "signs": {
+    "en": [
+      "Restlessness, hyperactivity, pacing",
+      "Fast heartbeat",
+      "Vomiting and diarrhoea",
+      "Drooling",
+      "Trembling",
+      "Peeing more"
+    ],
+    "sl": [
+      "Nemir, pretirana živahnost, hoja sem in tja",
+      "Hiter srčni utrip",
+      "Bruhanje in driska",
+      "Slinjenje",
+      "Tresenje",
+      "Pogostejše uriniranje"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline as soon as you realise your dog has had caffeine. Note what it was (drink, shot, pouch or tablet) and roughly how much. Don't wait for signs: early treatment matters.",
+    "sl": "Takoj ko opazite, da je pes zaužil kofein, pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj je bilo (pijača, šot, vrečka ali tableta) in približno koliko. Ne čakajte na znake: zgodnje zdravljenje je pomembno."
+  },
+  "serving": null,
+  "child": {
+    "en": "Energy drinks are not for dogs at all. Wipe up spills fast and tell a grown-up if your dog drinks some.",
+    "sl": "Energijske pijače sploh niso za pse. Razlito hitro pobriši in povej odraslemu, če jo pes popije."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "What about energy shots and caffeine tablets?",
+        "sl": "Kaj pa energijski šoti in tablete s kofeinom?"
+      },
+      "a": {
+        "en": "They contain caffeine too. Keep them out of reach and call your vet straight away if your dog gets into them.",
+        "sl": "Tudi ti vsebujejo kofein. Hranite jih izven dosega in takoj pokličite veterinarja, če jih pes doseže."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD19",
+      "quote": "Dogs and cats appear to be more sensitive to the effects of caffeine than people."
+    },
+    {
+      "id": "KD19",
+      "quote": "Clinical signs are agitation, aggression, vomiting, diarrhea, drooling, tremors, & respiratory or cardiovascular depression."
+    },
+    {
+      "id": "KD19",
+      "quote": "One or two licks of coffee, tea or soda is unlikely to cause poisoning in most pets."
+    },
+    {
+      "id": "KD20",
+      "quote": "Caffeine causes cardiac and central nervous system stimulation, which can be dangerous."
+    },
+    {
+      "id": "KD20",
+      "quote": "Pets that consume caffeine may have an increased heart rate and become hyperactive."
+    },
+    {
+      "id": "KD20",
+      "quote": "They may also pace or vocalize excessively."
+    },
+    {
+      "id": "KD20",
+      "quote": "Pets may also need to urinate more."
+    },
+    {
+      "id": "KD20",
+      "quote": "Call your veterinarian or Pet Poison Helpline, a 24/7 animal poison center, at 1-800-213-6680"
+    },
+    {
+      "id": "KD20",
+      "quote": "as soon as you realize your pet has consumed caffeine."
+    },
+    {
+      "id": "KD20",
+      "quote": "As with all poisoning cases, early intervention is key to successful treatment."
+    },
+    {
+      "id": "KD5",
+      "quote": "Coffee and tea contain caffeine, one of the compounds that make chocolate toxic for dogs."
+    },
+    {
+      "id": "KD19",
+      "quote": "Many common products contain caffeine including coffee, tea, soda, energy drinks, some supplements"
+    },
+    {
+      "id": "KD19",
+      "quote": "(e.g. pre-workout and weight-loss supplements), and energy pouches, \"shots\", tablets."
+    },
+    {
+      "id": "KD20",
+      "quote": "And, of course, energy or sports drinks in the fridge often contain a lot of caffeine."
+    },
+    {
+      "id": "KD20",
+      "quote": "after lapping up a spilled energy drink."
+    }
+  ],
+  "related": [
+    "coffee",
+    "tea",
+    "alcohol",
+    "chocolate"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cf81df2e90a86b0ad3ae23c5be29b81373cd37e381566444ff9e58f7f19aadd9"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8e09d495c6c5bef4970fa5b3b24f1822dbae9ed7deb710a605b0984aefd2a95e"
+    }
+  }
+}

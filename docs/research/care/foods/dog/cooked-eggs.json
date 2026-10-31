@@ -1,0 +1,124 @@
+{
+  "slug": "cooked-eggs",
+  "species": "dog",
+  "name": {
+    "en": "Cooked eggs",
+    "sl": "Kuhana jajca"
+  },
+  "question": {
+    "en": "Can dogs eat cooked eggs?",
+    "sl": "Ali lahko psi jedo kuhana jajca?"
+  },
+  "url_slug": {
+    "en": "cooked-eggs",
+    "sl": "kuhana-jajca"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes. Fully cooked eggs are safe and nutritious for dogs in moderation, as long as they are plain: no oil, butter, salt or seasonings. Hard-boiled or scrambled eggs work well. Too many can lead to weight gain.",
+    "sl": "Da. Popolnoma kuhana jajca so za pse v zmernih količinah varna in hranljiva, če so navadna: brez olja, masla, soli in začimb. Primerna so trdo kuhana ali umešana jajca. Preveč jih lahko vodi do debelosti."
+  },
+  "why": {
+    "en": "Cooked eggs provide protein, vitamins and healthy fats, but they are not essential to a balanced diet. Vets advise always cooking eggs before giving them to a dog. Egg shells have sharp edges that can hurt a dog's throat, and like any treat, eggs add calories.",
+    "sl": "Kuhana jajca dajejo beljakovine, vitamine in zdrave maščobe, vendar za uravnoteženo prehrano niso nujna. Jajca je treba pred hranjenjem psa vedno skuhati. Lupine imajo ostre robove, ki lahko poškodujejo psu grlo, jajca pa kot vsak priboljšek dodajo kalorije."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If your dog ate eggs cooked with butter, salt or seasonings, or a lot of eggs, watch for tummy upset and call your vet if vomiting or diarrhoea is severe or doesn't stop.",
+    "sl": "Če je pes pojedel jajca, pripravljena z maslom, soljo ali začimbami, ali veliko jajc, opazujte prebavo in pokličite veterinarja, če sta bruhanje ali driska huda ali ne prenehata."
+  },
+  "serving": {
+    "en": "Fully cooked (hard-boiled or scrambled), plain, without oil, butter, salt, seasonings or other additives; as an occasional treat.",
+    "sl": "Popolnoma kuhana (trdo kuhana ali umešana), navadna, brez olja, masla, soli, začimb in drugih dodatkov; kot občasen priboljšek."
+  },
+  "child": {
+    "en": "A plain cooked egg can be a yummy treat for a dog. No salt or butter, please!",
+    "sl": "Navadno kuhano jajce je lahko za psa slasten priboljšek. Brez soli in masla, prosim!"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat eggshells?",
+        "sl": "Ali lahko psi jedo jajčne lupine?"
+      },
+      "a": {
+        "en": "Sources differ: Dogs Trust lists cooked eggshells as usually fine, while the AKC warns that shells have sharp edges. Leaving them out is the safer choice.",
+        "sl": "Viri se razlikujejo: Dogs Trust kuhane lupine navaja kot običajno primerne, AKC pa opozarja, da imajo lupine ostre robove. Varneje je, da jih ne dajete."
+      }
+    },
+    {
+      "q": {
+        "en": "How should I cook eggs for my dog?",
+        "sl": "Kako naj psu pripravim jajca?"
+      },
+      "a": {
+        "en": "Hard-boiled or scrambled, fully cooked and plain, with no salt, butter or seasonings.",
+        "sl": "Trdo kuhana ali umešana, popolnoma kuhana in navadna, brez soli, masla in začimb."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD67",
+      "quote": "Eggs are safe and nutritious for dogs when cooked and fed in moderation"
+    },
+    {
+      "id": "KD67",
+      "quote": "They provide protein, vitamins, and healthy fats but are not essential to a balanced diet"
+    },
+    {
+      "id": "KD67",
+      "quote": "You should always cook eggs before giving them to a dog."
+    },
+    {
+      "id": "KD67",
+      "quote": "Prepare eggs plain, without oil, butter, salt, seasonings, spices, or other additives."
+    },
+    {
+      "id": "KD67",
+      "quote": "Plus, egg shells have sharp edges that can hurt your dog’s throat or internal organs."
+    },
+    {
+      "id": "KD67",
+      "quote": "Eating too many eggs can cause weight gain."
+    },
+    {
+      "id": "KD67",
+      "quote": "As with any treat, moderation is key."
+    },
+    {
+      "id": "KD5",
+      "quote": "Eggs are safe for dogs as long as they are fully cooked and prepared without salt, butter, or seasonings."
+    },
+    {
+      "id": "KD51",
+      "quote": "Eggs (and cooked eggshells)"
+    },
+    {
+      "id": "KD5",
+      "quote": "Eating raw egg whites on their own can contribute to biotin deficiency, so just hard-boil or scramble a whole egg to share wi"
+    },
+    {
+      "id": "KD68",
+      "quote": "Contact your veterinarian if your dog has severe or persistent vomiting or diarrhea."
+    }
+  ],
+  "related": [
+    "raw-eggs",
+    "butter",
+    "salt"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e9973560f9c687e5bfba9ce630456328f37a61f0158cfc6d5cda8f71d8f5a0a0"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8dd4a5de0e0eedd62d7a9a866fabbb0aa801a823215195ac8c4580fd663194ef"
+    }
+  }
+}

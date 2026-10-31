@@ -1,0 +1,95 @@
+{
+  "slug": "walnuts",
+  "species": "cat",
+  "name": {
+    "en": "Walnuts",
+    "sl": "Orehi"
+  },
+  "question": {
+    "en": "Can cats eat walnuts?",
+    "sl": "Ali lahko mačke jedo orehe?"
+  },
+  "url_slug": {
+    "en": "walnuts",
+    "sl": "orehi"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, walnuts are best kept away from cats. They contain a lot of oils and fats, which can make a cat unwell and may cause vomiting or diarrhoea.",
+    "sl": "Ne, orehov mački raje ne dajajte. Vsebujejo veliko olj in maščob, zaradi katerih se mačka lahko slabo počuti, lahko pa povzročijo tudi bruhanje ali drisko."
+  },
+  "why": {
+    "en": "Cats Protection names walnuts among nuts with high amounts of oils and fats that can make a cat unwell. VCA adds that most nuts are very fatty and can cause vomiting and diarrhoea.",
+    "sl": "Cats Protection orehe navaja med oreščki z veliko olj in maščob, zaradi katerih se mačka lahko slabo počuti. VCA dodaja, da je večina oreščkov zelo mastnih in lahko povzroči bruhanje in drisko."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Upset stomach",
+      "Seeming unwell"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Razdražen želodec",
+      "Mačka deluje bolna"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat ate walnuts, contact your vet for advice, especially if she ate a lot or seems unwell. Note what she ate, how much and when.",
+    "sl": "Če je muca pojedla orehe, se za nasvet obrnite na veterinarja, zlasti če jih je pojedla veliko ali se ne počuti dobro. Zapišite, kaj je pojedla, koliko in kdaj."
+  },
+  "serving": null,
+  "child": {
+    "en": "Walnuts are too oily for a cat's tummy. Keep them for people and give your cat its own treats.",
+    "sl": "Orehi so za mucin trebušček premastni. Naj ostanejo za ljudi, mucki pa daj njene priboljške."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are some nuts worse than others?",
+        "sl": "Ali so nekateri oreščki hujši od drugih?"
+      },
+      "a": {
+        "en": "Yes. Macadamia nuts are fatty and also toxic to cats, so they are the ones to be most careful with.",
+        "sl": "Da. Makadamije so mastne in za mačke tudi strupene, zato je pri njih potrebna največja previdnost."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC5",
+      "quote": "Nuts such as macadamia, almonds and walnuts contain high amounts of oils and fats which if eaten can make your cat unwell"
+    },
+    {
+      "id": "KC44",
+      "quote": "Not only are macadamia nuts very fatty, potentially causing pancreatitis, they're also toxic and can cause illness in cats."
+    },
+    {
+      "id": "KC5",
+      "quote": "If you notice or suspect your cat has eaten food that can be harmful to them, book an urgent appointment with your vet"
+    },
+    {
+      "id": "KC43",
+      "quote": "Most nuts are very fatty and can cause vomiting and diarrhea, but macadamia nuts specifically will lead to weakness, tremors and hyperthermia."
+    }
+  ],
+  "related": [
+    "almonds",
+    "macadamia-nuts"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f52250bc707ff2763004b67874603bbd650b9a0e1bfb936a619ccd165a85e702"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8c722348d76d050c29f6f9a44a255c11af04854c5cd9ab437f5607d9c92b0a2e"
+    }
+  }
+}

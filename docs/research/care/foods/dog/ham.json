@@ -1,0 +1,139 @@
+{
+  "slug": "ham",
+  "species": "dog",
+  "name": {
+    "en": "Ham",
+    "sl": "Šunka"
+  },
+  "question": {
+    "en": "Can dogs eat ham?",
+    "sl": "Ali lahko psi jedo šunko?"
+  },
+  "url_slug": {
+    "en": "ham",
+    "sl": "sunka"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "Not recommended. Ham isn't toxic to dogs, but it is high in fat and sodium. Store-bought ham contains a lot of salt, and too much fat can lead to pancreatitis and other digestive upsets. A healthier dog treat is the better choice.",
+    "sl": "Ni priporočljivo. Šunka za pse ni strupena, vsebuje pa veliko maščob in natrija. Kupljena šunka je zelo slana, preveč maščobe pa lahko vodi v vnetje trebušne slinavke in druge prebavne težave. Bolje je izbrati bolj zdrav pasji priboljšek."
+  },
+  "why": {
+    "en": "Ham has a higher fat content than many other meats, and fatty meals are a known trigger of pancreatitis. Most ham is also very salty, and excess salt can be harmful to dogs.",
+    "sl": "Šunka vsebuje več maščob kot številne druge vrste mesa, mastni obroki pa so znan sprožilec vnetja trebušne slinavke. Večina šunke je tudi zelo slana, presežek soli pa lahko psom škoduje."
+  },
+  "signs": {
+    "en": [
+      "Vomiting, sometimes starting 1–4 days after the fatty meal",
+      "Tummy pain (a dog may stretch into a 'prayer' position)",
+      "Diarrhoea",
+      "Not wanting to eat",
+      "Tiredness, fever"
+    ],
+    "sl": [
+      "Bruhanje, včasih šele 1–4 dni po mastnem obroku",
+      "Bolečine v trebuhu (pes se lahko raztegne v »molitveni« položaj)",
+      "Driska",
+      "Pes noče jesti",
+      "Utrujenost, vročina"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog ate a lot of fatty food, or shows vomiting, tummy pain or tiredness in the following days, contact your vet. Note what was eaten and roughly how much. Signs of pancreatitis can be delayed by a few days.",
+    "sl": "Če je pes pojedel veliko mastne hrane ali v naslednjih dneh bruha, ga boli trebuh ali je utrujen, pokličite veterinarja. Zapišite si, kaj in približno koliko je pojedel. Znaki vnetja trebušne slinavke se lahko pokažejo z nekajdnevno zamudo."
+  },
+  "serving": null,
+  "child": {
+    "en": "Ham is a people food that is too salty and fatty for dogs. Save it for your sandwich and give your dog a dog treat.",
+    "sl": "Šunka je hrana za ljudi in je za pse preslana in premastna. Prihrani jo za svoj sendvič, psu pa daj pasji priboljšek."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Why is ham worse than other meat?",
+        "sl": "Zakaj je šunka slabša od drugega mesa?"
+      },
+      "a": {
+        "en": "It has more fat than many meats and store-bought ham contains a great deal of sodium.",
+        "sl": "Vsebuje več maščob kot številne vrste mesa, kupljena šunka pa ima veliko natrija."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD41",
+      "quote": "Store-bought ham, which is what most people use, contains a great deal of sodium, which isn't good for people or dogs."
+    },
+    {
+      "id": "KD41",
+      "quote": "In fact, excess salt can be toxic to dogs."
+    },
+    {
+      "id": "KD41",
+      "quote": "Ham has a higher fat content than many other types of meat."
+    },
+    {
+      "id": "KD41",
+      "quote": "Too much fat can lead to pancreatitis and other digestive upsets."
+    },
+    {
+      "id": "KD41",
+      "quote": "as a general rule of thumb, you'd be better off saving it for your own sandwich and opting for a healthier dog treat."
+    },
+    {
+      "id": "KD5",
+      "quote": "Ham isn’t toxic to dogs, but it’s high in fat and sodium."
+    },
+    {
+      "id": "KD37",
+      "quote": "Delayed onset vomiting (1-4 days after fatty meal ingestion), abdominal pain, diarrhea (+/- blood),"
+    },
+    {
+      "id": "KD37",
+      "quote": "reduced appetite and lethargy."
+    },
+    {
+      "id": "KD38",
+      "quote": "it may be triggered in some cases by a fatty meal or corticosteroid administration."
+    },
+    {
+      "id": "KD38",
+      "quote": "The most common clinical signs include nausea, vomiting, fever, lethargy, abdominal pain, diarrhea, and decreased appetite."
+    },
+    {
+      "id": "KD39",
+      "quote": "They’ve recently eaten some high fat foods (e.g. pork, cheese, butter)."
+    },
+    {
+      "id": "KD39",
+      "quote": "Pancreatitis causes vomiting, nausea and pain."
+    },
+    {
+      "id": "KD5",
+      "quote": "Fatty foods in general aren’t a good choice for dogs with certain health conditions, including a history of pancreatitis."
+    },
+    {
+      "id": "KD39",
+      "quote": "Painful tummy - you may notice your dog stretching into a prayer position because their abdomen is painful (see picture)"
+    }
+  ],
+  "related": [
+    "bacon",
+    "fatty-meat",
+    "salt",
+    "pork"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5126a89475dcadce29082884ed4cfabb936d8a9bbc78b40cfec765d724027f3c"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "75098f029578364659579a45ba403f78cc28a56fd7451ca174f55ed319f87b37"
+    }
+  }
+}

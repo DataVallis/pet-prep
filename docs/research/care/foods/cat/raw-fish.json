@@ -1,0 +1,139 @@
+{
+  "slug": "raw-fish",
+  "species": "cat",
+  "name": {
+    "en": "Raw fish",
+    "sl": "Surova riba"
+  },
+  "question": {
+    "en": "Can cats eat raw fish?",
+    "sl": "Ali lahko mačke jedo surovo ribo?"
+  },
+  "url_slug": {
+    "en": "raw-fish",
+    "sl": "surova-riba"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, raw fish is not a good idea for cats. It may carry harmful bacteria and parasites, and some raw fish contains thiaminase, an enzyme that destroys vitamin B1. Fish for cats should be properly cooked, with bones removed.",
+    "sl": "Ne, surova riba za mačke ni dobra izbira. Lahko vsebuje škodljive bakterije in zajedavce, nekatere surove ribe pa vsebujejo tiaminazo, encim, ki uničuje vitamin B1. Ribo za mačke je treba dobro skuhati in odstraniti kosti."
+  },
+  "why": {
+    "en": "Cats Protection says uncooked fish may contain harmful bacteria and parasites. The Merck Veterinary Manual notes that thiaminases are found in raw freshwater fish and are destroyed by cooking. Thiamine (vitamin B1) is an essential nutrient, so cooking fish removes this risk.",
+    "sl": "Cats Protection navaja, da surova riba lahko vsebuje škodljive bakterije in zajedavce. Merckov veterinarski priročnik navaja, da so tiaminaze prisotne v surovih sladkovodnih ribah in da jih kuhanje uniči. Tiamin (vitamin B1) je nujno hranilo, zato kuhanje ribe to tveganje odpravi."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea, sometimes with blood",
+      "Fever",
+      "Not wanting to eat",
+      "Lethargy"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska, včasih s krvjo",
+      "Vročina",
+      "Mačka noče jesti",
+      "Utrujenost"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat ate a little raw fish, watch for vomiting, diarrhoea, fever or not eating, and call your vet if any appear. Raw fish should not become a regular food.",
+    "sl": "Če je mačka pojedla malo surove ribe, bodite pozorni na bruhanje, drisko, vročino ali odklanjanje hrane in pokličite veterinarja, če se kaj od tega pojavi. Surova riba naj ne postane redna hrana."
+  },
+  "serving": {
+    "en": "If you share fish: properly cooked, plain, with all bones removed, a few pieces at a time.",
+    "sl": "Če ribo delite: dobro kuhano, brez dodatkov, z odstranjenimi vsemi kostmi, po nekaj koščkov naenkrat."
+  },
+  "child": {
+    "en": "Cats love fish, but it needs to be cooked by a grown-up first, with no bones.",
+    "sl": "Mucke imajo rade ribe, a jih mora odrasel najprej skuhati in odstraniti kosti."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "What is thiaminase?",
+        "sl": "Kaj je tiaminaza?"
+      },
+      "a": {
+        "en": "It is an enzyme found in some raw fish that destroys thiamine (vitamin B1). Cooking destroys it.",
+        "sl": "To je encim v nekaterih surovih ribah, ki uničuje tiamin (vitamin B1). Kuhanje ga uniči."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC5",
+      "quote": "Uncooked meat and fish or raw eggs may contain harmful bacteria and parasites."
+    },
+    {
+      "id": "KC5",
+      "quote": "It should be properly cooked and bones removed before giving it to them, but also only give a few pieces at a time."
+    },
+    {
+      "id": "KC36",
+      "quote": "Thiaminases are found in raw freshwater fish and clams."
+    },
+    {
+      "id": "KC36",
+      "quote": "Thiaminases are destroyed by cooking fish; therefore, although canned commercial cat foods may contain fish, the heat associated with canning is sufficient to destroy thiaminase."
+    },
+    {
+      "id": "KC52",
+      "quote": "Raw carp and herring are particularly rich in an enzyme called thaiminase that destroys thiamine."
+    },
+    {
+      "id": "KC52",
+      "quote": "Thiamine or vitamin B1 is an essential nutrient for carbohydrate metabolism, especially in nerve tissue."
+    },
+    {
+      "id": "KC37",
+      "quote": "Raw meat is not safe for cats and can pose health risks."
+    },
+    {
+      "id": "KC41",
+      "quote": "In cats, the symptoms of salmonellosis may include:"
+    },
+    {
+      "id": "KC41",
+      "quote": "Vomiting"
+    },
+    {
+      "id": "KC41",
+      "quote": "Diarrhea (often bloody)"
+    },
+    {
+      "id": "KC41",
+      "quote": "Fever"
+    },
+    {
+      "id": "KC41",
+      "quote": "Inappetence"
+    },
+    {
+      "id": "KC41",
+      "quote": "Lethargy"
+    }
+  ],
+  "related": [
+    "tuna",
+    "salmon",
+    "sardines",
+    "raw-meat",
+    "raw-eggs"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9c441deb310bd762284c3dd301a40fe7edbb35fd61c1d809f36b297dba9a6989"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1a89f9c984821be5e9098778cca7f3db932331096f0381a857334a87b2177752"
+    }
+  }
+}

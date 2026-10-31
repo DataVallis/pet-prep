@@ -1,0 +1,166 @@
+{
+  "slug": "chocolate",
+  "species": "dog",
+  "name": {
+    "en": "Chocolate",
+    "sl": "Čokolada"
+  },
+  "question": {
+    "en": "Can dogs eat chocolate?",
+    "sl": "Ali lahko psi jedo čokolado?"
+  },
+  "url_slug": {
+    "en": "chocolate",
+    "sl": "cokolada"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Chocolate is toxic to dogs, even in quite small amounts. It contains theobromine and caffeine, and the darker the chocolate, the greater the risk. Baking chocolate and cocoa powder are the most dangerous; white chocolate has the least of these substances.",
+    "sl": "Ne. Čokolada je za pse strupena, tudi v precej majhnih količinah. Vsebuje teobromin in kofein; temnejša kot je čokolada, večje je tveganje. Najnevarnejša sta čokolada za kuhanje in kakav v prahu, bela čokolada pa vsebuje najmanj teh snovi."
+  },
+  "why": {
+    "en": "Chocolate contains methylxanthines, mainly theobromine and caffeine, which are toxic to dogs. Dark chocolate, cooking chocolate and cocoa powder contain more of them than milk chocolate. Dogs are affected most often because they eat whatever they find and can easily reach chocolate. Sweets and baked goods may also contain other harmful ingredients.",
+    "sl": "Čokolada vsebuje metilksantine, predvsem teobromin in kofein, ki so za pse strupeni. Temna čokolada, čokolada za kuhanje in kakav v prahu jih vsebujejo več kot mlečna čokolada. Psi so najpogosteje prizadeti, ker pojedo, kar najdejo, in čokolado zlahka dosežejo. Sladkarije in pecivo lahko vsebujejo še druge škodljive sestavine."
+  },
+  "signs": {
+    "en": [
+      "Vomiting and diarrhoea",
+      "Panting, strong thirst and peeing more",
+      "Restlessness and hyperactivity",
+      "Fast or irregular heartbeat",
+      "Trembling or seizures",
+      "Signs usually appear within 6–12 hours"
+    ],
+    "sl": [
+      "Bruhanje in driska",
+      "Sopihanje, huda žeja in pogostejše uriniranje",
+      "Nemir in pretirana živahnost",
+      "Hiter ali nepravilen srčni utrip",
+      "Tresenje ali krči",
+      "Znaki se običajno pojavijo v 6–12 urah"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline right away, even if your dog ate only a little. Note what kind of chocolate it was and how much was eaten. Don't wait for signs, because they can take hours to appear.",
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če je pes pojedel le malo. Zapišite si, katero čokolado in koliko je pojedel. Ne čakajte na znake, saj se lahko pokažejo šele po nekaj urah."
+  },
+  "serving": null,
+  "child": {
+    "en": "Chocolate is for people, not dogs. It can make dogs very ill. Keep it away and tell a grown-up if your dog eats some.",
+    "sl": "Čokolada je za ljudi, ne za pse. Psu lahko zelo škodi. Pospravi jo in povej odraslemu, če jo pes poje."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is white chocolate safe for dogs?",
+        "sl": "Je bela čokolada za pse varna?"
+      },
+      "a": {
+        "en": "It is not a safe treat. White chocolate has the lowest content of the harmful substances, but the risk still depends on the type and amount eaten, so call your vet if your dog ate some.",
+        "sl": "Ni varen priboljšek. Bela čokolada vsebuje najmanj škodljivih snovi, a tveganje je vseeno odvisno od vrste in količine, zato pokličite veterinarja, če jo je pes pojedel."
+      }
+    },
+    {
+      "q": {
+        "en": "Which chocolate is the most dangerous?",
+        "sl": "Katera čokolada je najnevarnejša?"
+      },
+      "a": {
+        "en": "Baking chocolate and cocoa powder, followed by dark chocolate. The darker the chocolate, the greater the risk.",
+        "sl": "Čokolada za kuhanje in kakav v prahu, nato temna čokolada. Temnejša kot je čokolada, večje je tveganje."
+      }
+    },
+    {
+      "q": {
+        "en": "When do signs of chocolate poisoning appear?",
+        "sl": "Kdaj se pokažejo znaki zastrupitve s čokolado?"
+      },
+      "a": {
+        "en": "Usually within 6–12 hours after eating it, which is why you should call the vet straight away instead of waiting.",
+        "sl": "Običajno v 6–12 urah po zaužitju, zato veterinarja pokličite takoj in ne čakajte."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD1",
+      "quote": "The darker (higher cacao percentage) the chocolate, or the higher the caffeine content, the greater the risk for toxicity."
+    },
+    {
+      "id": "KD1",
+      "quote": "White chocolate has the lowest methylxanthine content while baking chocolate and cocoa powder have the highest concentrations."
+    },
+    {
+      "id": "KD1",
+      "quote": "When ingested by pets, methylxanthines can cause vomiting and diarrhea, panting, excessive thirst and urination,"
+    },
+    {
+      "id": "KD1",
+      "quote": "hyperactivity, abnormal heart rhythm, tremors, seizures and even death."
+    },
+    {
+      "id": "KD1",
+      "quote": "As always, if you suspect your pet has eaten any of the following foods, please note the amount ingested"
+    },
+    {
+      "id": "KD1",
+      "quote": "and contact your veterinarian or poison control at (888) 426-4435."
+    },
+    {
+      "id": "KD2",
+      "quote": "Chocolate contains chemicals called methylxanthines, specifically theobromine and caffeine."
+    },
+    {
+      "id": "KD2",
+      "quote": "The severity of the poisoning depends upon the amount and type of chocolate ingested"
+    },
+    {
+      "id": "KD2",
+      "quote": "Be aware that chocolate candy and baked goods may also contain other poisonous foods"
+    },
+    {
+      "id": "KD3",
+      "quote": "Dogs are most often affected because of their indiscriminate eating habits and easy access to sources of chocolate."
+    },
+    {
+      "id": "KD3",
+      "quote": "Clinical effects include vomiting, restlessness, agitation, hyperthermia, tachycardia, and, in severe cases, seizures."
+    },
+    {
+      "id": "KD3",
+      "quote": "Clinical signs of chocolate toxicosis usually occur within 6–12 hours after ingestion."
+    },
+    {
+      "id": "KD4",
+      "quote": "Chocolate can be toxic for dogs, even in quite small amounts."
+    },
+    {
+      "id": "KD4",
+      "quote": "Dark chocolate, cooking chocolate and cocoa powder usually contains more theobromine"
+    },
+    {
+      "id": "KD4",
+      "quote": "If you suspect your dog has eaten a toxic food, even if it's only a small amount, contact your vet immediately."
+    }
+  ],
+  "related": [
+    "coffee",
+    "tea",
+    "xylitol",
+    "macadamia-nuts",
+    "raisins"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "490d54e1ee3624213e4183799eb43ec1e4d6d3b7b7fcde721fd2d5c413e8546f"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "aeb6fd9bbcdf80adf624971b91bb0e0b160aefec917b824f94a99f558e69df17"
+    }
+  }
+}

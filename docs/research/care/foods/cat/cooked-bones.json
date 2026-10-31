@@ -1,0 +1,127 @@
+{
+  "slug": "cooked-bones",
+  "species": "cat",
+  "name": {
+    "en": "Cooked bones",
+    "sl": "Kuhane kosti"
+  },
+  "question": {
+    "en": "Can cats eat cooked bones?",
+    "sl": "Ali lahko mačke jedo kuhane kosti?"
+  },
+  "url_slug": {
+    "en": "cooked-bones",
+    "sl": "kuhane-kosti"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "No. Cooked bones, such as chicken or turkey bones, can splinter and cause choking, internal injuries or blockages in cats. Always take meat off the bone before sharing, and get rid of carcasses where your cat can't reach them.",
+    "sl": "Ne. Kuhane kosti, na primer piščančje ali puranje, se lahko razcepijo in pri mačkah povzročijo dušenje, notranje poškodbe ali zaporo. Meso vedno odstranite s kosti, preden ga delite z muco, ostanke pa zavrzite tja, kamor ne seže."
+  },
+  "why": {
+    "en": "Cooked bones can splinter into sharp pieces. Swallowed bones can injure or block a cat's gut, which can be serious and may need surgery.",
+    "sl": "Kuhane kosti se lahko razcepijo na ostre koščke. Pogoltnjene kosti lahko poškodujejo ali zamašijo mačja prebavila, kar je lahko resno in lahko zahteva operacijo."
+  },
+  "signs": {
+    "en": [
+      "Choking",
+      "Vomiting",
+      "Tummy pain (hiding, growling, not wanting to be touched)"
+    ],
+    "sl": [
+      "Dušenje",
+      "Bruhanje",
+      "Bolečine v trebuhu (skrivanje, renčanje, muca se ne pusti dotikati)"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet right away if your cat swallowed a cooked bone, even if she seems fine. Note what kind of bone it was and when. Don't wait to see what happens, and don't try to make your cat sick at home.",
+    "sl": "Takoj pokličite veterinarja, če je muca pogoltnila kuhano kost, tudi če se zdi v redu. Zapišite, kakšna kost je bila in kdaj jo je pojedla. Ne čakajte, kaj se bo zgodilo, in muce doma ne poskušajte spraviti k bruhanju."
+  },
+  "serving": {
+    "en": "If you share plain cooked chicken or turkey, give only boneless meat.",
+    "sl": "Če muci ponudite navaden kuhan piščanec ali puran, naj bo meso brez kosti."
+  },
+  "child": {
+    "en": "Bones can hurt a cat's tummy. Give kitty only boneless meat, and tell a grown-up if she grabs a bone.",
+    "sl": "Kosti lahko poškodujejo mucin trebušček. Muci daj le meso brez kosti. Če zgrabi kost, povej odraslemu."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can I give my cat turkey from the roast?",
+        "sl": "Lahko muci dam nekaj puranjega mesa s praznične mize?"
+      },
+      "a": {
+        "en": "Cats Protection says plain, cooked turkey is fine as an occasional treat if it is boneless, unseasoned and skinless. Dispose of the carcass safely out of your cat's reach.",
+        "sl": "Cats Protection navaja, da je navaden kuhan puran lahko občasen priboljšek, če je brez kosti, nezačinjen in brez kože. Ostanke trupa varno zavrzite izven muckinega dosega."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC26",
+      "quote": "Bones can splinter and cause choking, internal injuries or blockages."
+    },
+    {
+      "id": "KC26",
+      "quote": "These can splinter and cause injury"
+    },
+    {
+      "id": "KC26",
+      "quote": "Cooked bones."
+    },
+    {
+      "id": "KC26",
+      "quote": "It's ok to feed your cat some plain, cooked turkey as an occasional treat. But avoid giving turkey to your cat regularly."
+    },
+    {
+      "id": "KC26",
+      "quote": "Make sure you dispose of the turkey carcass safely out of your cat's reach"
+    },
+    {
+      "id": "KC1",
+      "quote": "Dogs/cats might sustain injury or obstruction to the gastrointestinal tract when ingesting bones, which could be serious and require surgery."
+    },
+    {
+      "id": "KC5",
+      "quote": "For your pet cat, always ensure that any chicken you feed them is cooked, preferably boiled and does not contain any"
+    },
+    {
+      "id": "KC28",
+      "quote": "Vomiting and pain are often the first symptoms of a blockage."
+    },
+    {
+      "id": "KC28",
+      "quote": "Contact your vet immediately if you think your cat has eaten something silly - never wait to see what happens."
+    },
+    {
+      "id": "KC28",
+      "quote": "Never try to make your cat sick at home."
+    },
+    {
+      "id": "KC28",
+      "quote": "Pain (growling, hiding away or not wanting to be handled)."
+    }
+  ],
+  "related": [
+    "raw-bones",
+    "fatty-meat",
+    "ham",
+    "cooked-chicken",
+    "turkey"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "808c20fbbc1be20a552d1340587bd1488f94d506788416269adf510e536b2e7f"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fd0c23e97c6f852c9f8fa368e37a2602358f507a132bdaedc597a4094eaa486c"
+    }
+  }
+}

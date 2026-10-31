@@ -1,0 +1,112 @@
+{
+  "slug": "liver",
+  "species": "cat",
+  "name": {
+    "en": "Liver",
+    "sl": "Jetra"
+  },
+  "question": {
+    "en": "Can cats eat liver?",
+    "sl": "Ali lahko mačke jedo jetra?"
+  },
+  "url_slug": {
+    "en": "liver",
+    "sl": "jetra"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "Not as a home treat. Liver is very rich in vitamin A, and cats fed raw liver or a diet high in liver can develop vitamin A poisoning. Liver in a complete, balanced cat food is fine.",
+    "sl": "Ne kot domači priboljšek. Jetra so zelo bogata z vitaminom A, pri mačkah, ki dobivajo surova jetra ali prehrano z veliko jeter, pa se lahko razvije zastrupitev z vitaminom A. Jetra v popolni, uravnoteženi mačji hrani so v redu."
+  },
+  "why": {
+    "en": "VCA says vitamin A poisoning most commonly occurs when pets are fed raw liver or vitamin A-rich supplements over weeks to months. The Merck Veterinary Manual notes that in cats it can occur when growing kittens are fed a diet high in liver, and that feeding only liver can cause it. VCA recommends a commercially prepared, balanced diet instead.",
+    "sl": "VCA navaja, da se zastrupitev z vitaminom A najpogosteje pojavi, ko živali več tednov ali mesecev dobivajo surova jetra ali dodatke, bogate z vitaminom A. Merckov veterinarski priročnik navaja, da se pri mačkah lahko pojavi, ko mladiči dobivajo prehrano z veliko jeter, in da jo lahko povzroči hranjenje samo z jetri. VCA namesto tega priporoča komercialno pripravljeno, uravnoteženo prehrano."
+  },
+  "signs": {
+    "en": [
+      "Poor or rough coat",
+      "Dry skin",
+      "Weight loss",
+      "Weakness",
+      "Painful or limited movement",
+      "Vomiting or drowsiness after a very large amount"
+    ],
+    "sl": [
+      "Slaba ali groba dlaka",
+      "Suha koža",
+      "Hujšanje",
+      "Šibkost",
+      "Boleče ali omejeno gibanje",
+      "Bruhanje ali zaspanost po zelo veliki količini"
+    ]
+  },
+  "what_to_do": {
+    "en": "Vitamin A poisoning usually builds up over weeks to months, so don't feed liver regularly at home. If your cat has been eating a lot of liver and you notice a rough coat, weight loss, weakness or painful movement, talk to your vet.",
+    "sl": "Zastrupitev z vitaminom A se običajno razvija več tednov ali mesecev, zato doma jeter ne dajajte redno. Če je mačka jedla veliko jeter in opazite grobo dlako, hujšanje, šibkost ali boleče gibanje, se posvetujte z veterinarjem."
+  },
+  "serving": null,
+  "child": {
+    "en": "Liver has lots of one vitamin, and too much isn't good for cats. Their cat food already has the right amount.",
+    "sl": "Jetra imajo veliko enega vitamina, preveč pa za mucke ni dobro. Njihova mačja hrana ga že ima ravno prav."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "My cat food lists liver. Is that a problem?",
+        "sl": "Moja mačja hrana vsebuje jetra. Je to težava?"
+      },
+      "a": {
+        "en": "No. Liver is a common ingredient in canned cat foods, and a complete, balanced cat food is what vets recommend.",
+        "sl": "Ne. Jetra so pogosta sestavina v konzervirani mačji hrani, veterinarji pa priporočajo prav popolno, uravnoteženo mačjo hrano."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC35",
+      "quote": "Vitamin A poisoning most commonly occurs when pets are fed raw liver, cod liver oil, or other supplements rich in vitamin A over several weeks to months."
+    },
+    {
+      "id": "KC35",
+      "quote": "More commonly, over-supplementation of vitamin A for weeks to months eventually results in a poor hair coat, rough or dry skin, weakness, weight loss, constipation, excessive bone development, and painful or limited movement."
+    },
+    {
+      "id": "KC35",
+      "quote": "When cats ingest large doses of vitamin A, they may quickly develop signs of vomiting, drowsiness, irritability, and peeling skin."
+    },
+    {
+      "id": "KC35",
+      "quote": "Feeding a commercially prepared, balanced diet or a balanced homemade diet formulated by a veterinary nutritionist is recommended."
+    },
+    {
+      "id": "KC36",
+      "quote": "In cats, vitamin A toxicity is more commonly seen and can occur when growing kittens are fed a diet high in liver."
+    },
+    {
+      "id": "KC36",
+      "quote": "Feeding only liver can induce vitamin A toxicity in both dogs and cats."
+    },
+    {
+      "id": "KC33",
+      "quote": "Gourmet canned cat foods generally feature meats, such as kidney or liver, and whole meat byproducts as primary ingredients."
+    }
+  ],
+  "related": [
+    "raw-meat",
+    "beef",
+    "cooked-chicken"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2800922d402f7dcbb7af2c7f741ad99da9bd0a4b03495e4db01f0f028ece80df"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dd5a809c624d1b656df3edf146d3c56af4f5077e3805dc2f81ee500de4d88564"
+    }
+  }
+}

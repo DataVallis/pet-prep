@@ -1,0 +1,161 @@
+{
+  "slug": "cooked-bones",
+  "species": "dog",
+  "name": {
+    "en": "Cooked bones",
+    "sl": "Kuhane kosti"
+  },
+  "question": {
+    "en": "Can dogs eat cooked bones?",
+    "sl": "Ali lahko psi jedo kuhane kosti?"
+  },
+  "url_slug": {
+    "en": "cooked-bones",
+    "sl": "kuhane-kosti"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "No. Never give a dog cooked bones. Cooked bones splinter into sharp shards that can cut the mouth, cause choking or block the gut. Cooked poultry bones are especially brittle and can turn into a veterinary emergency.",
+    "sl": "Ne. Psu nikoli ne dajajte kuhanih kosti. Kuhane kosti se razcepijo v ostre drobce, ki lahko porežejo usta, povzročijo dušenje ali zamašijo prebavila. Kuhane kosti perutnine so posebej krhke in lahko povzročijo nujno stanje pri veterinarju."
+  },
+  "why": {
+    "en": "Cooking makes bones brittle, so they break into sharp splinters. Chicken and turkey bones are the classic example, but any bones from the kitchen table can injure a dog. The FDA has received reports of choking, mouth wounds, vomiting, diarrhoea, rectal bleeding and gut blockages in dogs that ate bones or bone treats.",
+    "sl": "Kuhanje naredi kosti krhke, zato se razlomijo v ostre drobce. Najbolj znane so piščančje in puranje kosti, poškodujejo pa lahko vse kosti z mize. FDA je prejela poročila o dušenju, ranah v ustih, bruhanju, driski, krvavitvah iz zadnjika in zaporah prebavil pri psih, ki so pojedli kosti ali kostne priboljške."
+  },
+  "signs": {
+    "en": [
+      "Choking or gagging",
+      "Cuts or bleeding in the mouth",
+      "Vomiting",
+      "Diarrhoea",
+      "Bleeding from the bottom"
+    ],
+    "sl": [
+      "Dušenje ali siljenje na bruhanje",
+      "Ureznine ali krvavitev v ustih",
+      "Bruhanje",
+      "Driska",
+      "Krvavitev iz zadnjika"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet right away if your dog has eaten cooked bones, even if it seems fine. Note what kind of bone it was and roughly how much was eaten. Don't wait for signs of a blockage.",
+    "sl": "Takoj pokličite veterinarja, če je pes pojedel kuhane kosti, tudi če se zdi v redu. Zapišite si, kakšna kost je bila in približno koliko je pojedel. Ne čakajte na znake zapore."
+  },
+  "serving": null,
+  "child": {
+    "en": "Bones from our plates are not for dogs. They break into sharp bits. Tell a grown-up if your dog finds one.",
+    "sl": "Kosti z naših krožnikov niso za pse. Zlomijo se v ostre koščke. Povej odraslemu, če pes najde kost."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are chicken bones the worst?",
+        "sl": "So piščančje kosti najhujše?"
+      },
+      "a": {
+        "en": "Cooked poultry bones are especially brittle and splinter easily, but any cooked bone from the table can cause injury.",
+        "sl": "Kuhane kosti perutnine so posebej krhke in se zlahka razcepijo, poškodbo pa lahko povzroči vsaka kuhana kost z mize."
+      }
+    },
+    {
+      "q": {
+        "en": "How do I stop my dog getting bones?",
+        "sl": "Kako preprečim, da pes pride do kosti?"
+      },
+      "a": {
+        "en": "Keep platters out of reach while cooking and eating, and be careful what goes in the bin: dogs often raid the trash for carcasses and steak bones.",
+        "sl": "Med kuhanjem in jedjo imejte krožnike izven dosega in pazite, kaj vržete v koš: psi pogosto stikajo po smeteh za ostanki perutnine in kostmi zrezkov."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD35",
+      "quote": "Many dog owners know not to toss a turkey or chicken bone to their dog; those bones are just too brittle."
+    },
+    {
+      "id": "KD35",
+      "quote": "Chicken bones and other bones from the kitchen table can cause injury when chewed by pets, too."
+    },
+    {
+      "id": "KD35",
+      "quote": "Gastrointestinal obstruction (blockage in the digestive tract)"
+    },
+    {
+      "id": "KD35",
+      "quote": "Choking"
+    },
+    {
+      "id": "KD35",
+      "quote": "Cuts and wounds in the mouth or on the tonsils"
+    },
+    {
+      "id": "KD35",
+      "quote": "Vomiting"
+    },
+    {
+      "id": "KD35",
+      "quote": "Diarrhea"
+    },
+    {
+      "id": "KD35",
+      "quote": "Bleeding from the rectum, and/or"
+    },
+    {
+      "id": "KD35",
+      "quote": "Be careful what you put in the trash can."
+    },
+    {
+      "id": "KD35",
+      "quote": "Dogs are notorious for helping themselves to the turkey carcass or steak bones disposed of there."
+    },
+    {
+      "id": "KD35",
+      "quote": "Talk with your veterinarian about other toys or treats that are most appropriate for your dog."
+    },
+    {
+      "id": "KD35",
+      "quote": "So be careful to keep platters out of reach when you're cooking or the family is eating."
+    },
+    {
+      "id": "KD36",
+      "quote": "Cooked bones splinter into shards."
+    },
+    {
+      "id": "KD36",
+      "quote": "Obstructions are very serious and can quickly lead to severe illness and death."
+    },
+    {
+      "id": "KD5",
+      "quote": "Never give your dog cooked poultry bones; they can splinter and create a veterinary emergency."
+    },
+    {
+      "id": "KD1",
+      "quote": "Dogs/cats might sustain injury or obstruction to the gastrointestinal tract when ingesting bones,"
+    },
+    {
+      "id": "KD34",
+      "quote": "If you do suspect your pet has swallowed something you should contact your vet for advice immediately."
+    }
+  ],
+  "related": [
+    "raw-bones",
+    "cooked-chicken",
+    "turkey",
+    "corn-cob"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "40fd003d903a03653ce591004e434f176f916d2366ea9a2455d17f8c73f967e2"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bf61767248e67a95e7701b1575703f5a612c821152dec2689e7751deae67114a"
+    }
+  }
+}

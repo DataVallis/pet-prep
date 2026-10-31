@@ -1,0 +1,127 @@
+{
+  "slug": "ice-cream",
+  "species": "dog",
+  "name": {
+    "en": "Ice cream",
+    "sl": "Sladoled"
+  },
+  "question": {
+    "en": "Can dogs eat ice cream?",
+    "sl": "Ali lahko psi jedo sladoled?"
+  },
+  "url_slug": {
+    "en": "ice-cream",
+    "sl": "sladoled"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, it is best not to. Ice cream is full of lactose, fat and sugar, which can upset a dog's tummy, and some flavours contain chocolate or the sweetener xylitol, which are toxic to dogs.",
+    "sl": "Ne, bolje ne. Sladoled je poln laktoze, maščobe in sladkorja, ki lahko psu razdražijo prebavo, nekateri okusi pa vsebujejo čokolado ali sladilo ksilitol, ki sta za pse strupena."
+  },
+  "why": {
+    "en": "Many adult dogs are lactose intolerant to some degree and cannot digest milk products properly. High-fat dairy can cause pancreatitis, and the sugar adds to weight gain. Even 'sugar-free' ice cream may contain xylitol, and chocolate flavours are toxic.",
+    "sl": "Mnogi odrasli psi do neke mere ne prenašajo laktoze in mlečnih izdelkov ne prebavijo dobro. Zelo mastni mlečni izdelki lahko povzročijo vnetje trebušne slinavke, sladkor pa prispeva k debelosti. Tudi sladoled »brez sladkorja« lahko vsebuje ksilitol, čokoladni okusi pa so strupeni."
+  },
+  "signs": {
+    "en": [
+      "Diarrhoea or other tummy upset",
+      "Vomiting",
+      "Belly pain, nausea or low energy (possible pancreatitis)"
+    ],
+    "sl": [
+      "Driska ali druge prebavne težave",
+      "Bruhanje",
+      "Boleč trebuh, slabost ali utrujenost (možno vnetje trebušne slinavke)"
+    ]
+  },
+  "what_to_do": {
+    "en": "A lick of plain vanilla ice cream usually only needs watching for tummy upset. If the ice cream contained chocolate or xylitol, contact your vet or a pet poison helpline right away, note what and how much was eaten, and don't wait for signs.",
+    "sl": "Pri polizku navadnega vanilijevega sladoleda običajno zadošča opazovanje prebave. Če je sladoled vseboval čokolado ali ksilitol, takoj pokličite veterinarja ali center za zastrupitve živali, zapišite, kaj in koliko je pes pojedel, in ne čakajte na znake."
+  },
+  "serving": {
+    "en": "Instead of ice cream: a little frozen plain fat-free yogurt, if your dog tolerates it.",
+    "sl": "Namesto sladoleda: malo zamrznjenega navadnega posnetega jogurta, če ga pes prenaša."
+  },
+  "child": {
+    "en": "Ice cream is a people treat. It can give dogs a sore tummy, so keep your cone to yourself.",
+    "sl": "Sladoled je posladek za ljudi. Psa lahko boli trebušček, zato kornet obdrži zase."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is sugar-free ice cream safer?",
+        "sl": "Je sladoled brez sladkorja varnejši?"
+      },
+      "a": {
+        "en": "No. Sugar-free products may contain xylitol, which is toxic to dogs, so always read the label.",
+        "sl": "Ne. Izdelki brez sladkorja lahko vsebujejo ksilitol, ki je za pse strupen, zato vedno preberite etiketo."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD54",
+      "quote": "While you may want to share a cone with your pet, it’s best to avoid giving ice cream to dogs."
+    },
+    {
+      "id": "KD54",
+      "quote": "Many adult dogs are lactose intolerant to varying degrees, which prevents them from properly digesting milk products,"
+    },
+    {
+      "id": "KD54",
+      "quote": "Dairy products with high fat content can also cause pancreatitis in dogs."
+    },
+    {
+      "id": "KD54",
+      "quote": "Even if the ice cream container says it’s sugar-free, you need to be careful to read the label to make sure that it contains"
+    },
+    {
+      "id": "KD54",
+      "quote": "Chocolate, for example, is toxic for dogs."
+    },
+    {
+      "id": "KD54",
+      "quote": "Another problem with ice cream is that it’s loaded with sugar, and feeding your dog sugary foods can lead to weight gain and obesity"
+    },
+    {
+      "id": "KD54",
+      "quote": "If you want to give your dog a cold treat, freezing some fat-free plain yogurt might be a better choice."
+    },
+    {
+      "id": "KD54",
+      "quote": "While some dogs can tolerate a small amount of plain vanilla ice cream as a treat, there are other options you can give them"
+    },
+    {
+      "id": "KD45",
+      "quote": "milk and other dairy-based products can cause diarrhea or other digestive upset."
+    },
+    {
+      "id": "KD53",
+      "quote": "Check the label for xylitol in the ingredients of products, especially ones that advertise as sugar-free or low sugar."
+    },
+    {
+      "id": "KD50",
+      "quote": "The most common clinical signs include nausea, vomiting, fever, lethargy, abdominal pain, diarrhea, and decreased appetite."
+    }
+  ],
+  "related": [
+    "milk",
+    "yogurt",
+    "cheese",
+    "chocolate",
+    "xylitol"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "57aaed9dca0b9b2e4295642a0875c540010a844f3f05d01b1060f63c43bb6fc0"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4d060af88e7ad37aaa0c52c06bd3c72b51c48511904754259a117bbac88200da"
+    }
+  }
+}

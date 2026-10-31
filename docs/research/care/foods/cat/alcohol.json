@@ -1,0 +1,141 @@
+{
+  "slug": "alcohol",
+  "species": "cat",
+  "name": {
+    "en": "Alcohol",
+    "sl": "Alkohol"
+  },
+  "question": {
+    "en": "Can cats drink alcohol?",
+    "sl": "Ali lahko mačke pijejo alkohol?"
+  },
+  "url_slug": {
+    "en": "alcohol",
+    "sl": "alkohol"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Even a tiny amount of alcohol can be extremely toxic to cats, and cats are especially sensitive to it. Keep drinks, foods made with alcohol and products like hand sanitiser away from your cat, and call your vet if your cat swallows any.",
+    "sl": "Ne. Že zelo majhna količina alkohola je lahko za mačke izjemno strupena, mačke pa so nanj še posebej občutljive. Pijače, hrano z alkoholom in izdelke, kot je razkužilo za roke, hranite stran od muce in pokličite veterinarja, če ga kaj zaužije."
+  },
+  "why": {
+    "en": "All animals can get alcohol poisoning, but cats are especially sensitive. Alcohol is not only in drinks: it can also be in liqueur sweets, hand sanitiser, mouthwash and raw, rising bread dough. Signs usually appear quickly after a cat swallows it.",
+    "sl": "Zastrupitev z alkoholom lahko doleti vse živali, mačke pa so še posebej občutljive. Alkohol ni le v pijačah: najdemo ga tudi v bonbonih z likerjem, razkužilu za roke, ustni vodici in surovem, vzhajajočem testu. Znaki se navadno pokažejo hitro po zaužitju."
+  },
+  "signs": {
+    "en": [
+      "Unusual drowsiness or dullness",
+      "Difficulty walking, wobbliness",
+      "Slow breathing",
+      "In severe cases: seizures or collapse"
+    ],
+    "sl": [
+      "Nenavadna zaspanost ali otopelost",
+      "Težave pri hoji, opotekanje",
+      "Počasno dihanje",
+      "V hudih primerih: krči ali kolaps"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline right away. Note what your cat swallowed, how much and when, and keep the bottle or packaging. Don't wait for signs to appear, and don't try to make your cat sick at home.",
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, kaj je muca zaužila, koliko in kdaj, ter shranite steklenico ali embalažo. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju."
+  },
+  "serving": null,
+  "child": {
+    "en": "Grown-up drinks are never for cats. If kitty licks a glass or spilled drink, tell a grown-up right away.",
+    "sl": "Pijače za odrasle niso nikoli za muce. Če muca poliže kozarec ali razlito pijačo, takoj povej odraslemu."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Where else can alcohol hide?",
+        "sl": "Kje vse se lahko skriva alkohol?"
+      },
+      "a": {
+        "en": "Besides drinks, alcohol can be found in liqueur sweets, hand sanitiser, mouthwash and raw, rising bread dough.",
+        "sl": "Poleg pijač je alkohol lahko tudi v bonbonih z likerjem, razkužilu za roke, ustni vodici ter surovem, vzhajajočem testu."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC11",
+      "quote": "All animals are at risk of alcohol poisoning, but cats are especially sensitive."
+    },
+    {
+      "id": "KC11",
+      "quote": "alcoholic beverages, liquor-containing candies, hand sanitizer, mouth wash"
+    },
+    {
+      "id": "KC11",
+      "quote": "raw or rising yeast-based bread dough"
+    },
+    {
+      "id": "KC11",
+      "quote": "Clinical signs usually occur quickly after exposure to a toxic dose of alcohol; likely within 15 to 90 minutes."
+    },
+    {
+      "id": "KC11",
+      "quote": "Neurologic depression"
+    },
+    {
+      "id": "KC11",
+      "quote": "Difficulty walking"
+    },
+    {
+      "id": "KC11",
+      "quote": "Slow respiratory rate"
+    },
+    {
+      "id": "KC11",
+      "quote": "Seizures"
+    },
+    {
+      "id": "KC11",
+      "quote": "immediately call your veterinarian or Pet Poison Helpline, a 24/7 animal poison control center, at 1-800-213-6680."
+    },
+    {
+      "id": "KC5",
+      "quote": "Just a tiny bit of alcohol can be extremely toxic to your cat"
+    },
+    {
+      "id": "KC12",
+      "quote": "Anything containing ethanol is extremely toxic to dogs and cats, so keep them safely away."
+    },
+    {
+      "id": "KC22",
+      "quote": "Collapsing"
+    },
+    {
+      "id": "KC8",
+      "quote": "If possible, take the packaging, plant, or substance with you to the veterinary clinic"
+    },
+    {
+      "id": "KC8",
+      "quote": "Contact your veterinary team for advice immediately; make sure you know when, where, and how the poisoning occurred."
+    },
+    {
+      "id": "KC22",
+      "quote": "Don’t try to make your cat sick without asking the vet and never given them medicines designed for humans."
+    }
+  ],
+  "related": [
+    "raw-yeast-dough",
+    "coffee",
+    "energy-drinks",
+    "chocolate"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "68b367af0316ce8b1beede13bdb1b2af5e72b5708dfd627b879743f7001beed3"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dc63aec896576778e242e671c8ff86ad8b197a8d3c0420502e52c6434bec83ca"
+    }
+  }
+}

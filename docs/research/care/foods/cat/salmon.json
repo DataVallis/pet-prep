@@ -1,0 +1,95 @@
+{
+  "slug": "salmon",
+  "species": "cat",
+  "name": {
+    "en": "Salmon",
+    "sl": "Losos"
+  },
+  "question": {
+    "en": "Can cats eat salmon?",
+    "sl": "Ali lahko mačke jedo lososa?"
+  },
+  "url_slug": {
+    "en": "salmon",
+    "sl": "losos"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a little cooked salmon is fine as an occasional treat. Serve it plain, with no bones or seasoning, and keep it small. Fish shouldn't replace a cat's complete food.",
+    "sl": "Da, malo kuhanega lososa je v redu kot občasen priboljšek. Ponudite ga brez dodatkov, brez kosti in začimb ter v majhni količini. Riba naj ne nadomesti popolne mačje hrane."
+  },
+  "why": {
+    "en": "Cats Protection lists cooked salmon with no bones or seasoning among safe festive foods and says small amounts of cooked fish such as salmon are suitable. RSPCA Australia says tinned salmon in spring water can be an occasional treat. Raw fish is different: it may carry bacteria and parasites.",
+    "sl": "Cats Protection kuhanega lososa brez kosti in začimb navaja med varno praznično hrano in pravi, da so majhne količine kuhane ribe, kot je losos, primerne. RSPCA Avstralija navaja, da je konzerviran losos v izvirski vodi lahko občasen priboljšek. Surova riba je nekaj drugega: lahko prenaša bakterije in zajedavce."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Offer a small piece first. If your cat gets vomiting or diarrhoea afterwards, stop and ask your vet. Remove any bones you find.",
+    "sl": "Najprej ponudite majhen košček. Če ima mačka potem bruhanje ali drisko, prenehajte in se posvetujte z veterinarjem. Odstranite vse kosti, ki jih najdete."
+  },
+  "serving": {
+    "en": "Cooked, plain, boneless and unseasoned, or tinned in spring water; a few small pieces now and then.",
+    "sl": "Kuhan, brez dodatkov, kosti in začimb, ali konzerviran v izvirski vodi; nekaj majhnih koščkov občasno."
+  },
+  "child": {
+    "en": "A tiny bit of cooked salmon with no bones can be a special treat. Ask a grown-up first.",
+    "sl": "Košček kuhanega lososa brez kosti je lahko poseben priboljšek. Najprej vprašaj odraslega."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can cats eat raw salmon or sushi?",
+        "sl": "Ali lahko mačke jedo surovega lososa ali suši?"
+      },
+      "a": {
+        "en": "It's best not to. Uncooked fish may contain harmful bacteria and parasites, so fish for cats should be properly cooked.",
+        "sl": "Bolje ne. Surova riba lahko vsebuje škodljive bakterije in zajedavce, zato mora biti riba za mačke dobro kuhana."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC26",
+      "quote": "Cooked salmon with no bones or seasoning"
+    },
+    {
+      "id": "KC50",
+      "quote": "Small amounts of cooked meat or fish, such as chicken, turkey or salmon, are suitable."
+    },
+    {
+      "id": "KC32",
+      "quote": "Fish, such as tinned sardines, tuna or salmon in spring water (take care with any fish bones) can be offered as a treat occasionally."
+    },
+    {
+      "id": "KC5",
+      "quote": "It should be properly cooked and bones removed before giving it to them, but also only give a few pieces at a time."
+    },
+    {
+      "id": "KC5",
+      "quote": "Uncooked meat and fish or raw eggs may contain harmful bacteria and parasites."
+    },
+    {
+      "id": "KC32",
+      "quote": "these foods are not suitable as the main part of the diet."
+    }
+  ],
+  "related": [
+    "sardines",
+    "tuna",
+    "raw-fish",
+    "cooked-chicken"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "59e4044e857bdd98e2ee9b8b15c523dfd91e2af1025c919247e19cd1a9e189a0"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ba9cc5269d84714e72e2850ab6dcfc8eb57886e3809fb90e2b5be930c615c8be"
+    }
+  }
+}

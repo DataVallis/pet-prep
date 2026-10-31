@@ -1,0 +1,159 @@
+{
+  "slug": "tea",
+  "species": "dog",
+  "name": {
+    "en": "Tea",
+    "sl": "Čaj"
+  },
+  "question": {
+    "en": "Can dogs drink tea?",
+    "sl": "Ali lahko psi pijejo čaj?"
+  },
+  "url_slug": {
+    "en": "tea",
+    "sl": "caj"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No, caffeinated tea is not for dogs. Tea contains caffeine, which is toxic to dogs. A small taste is unlikely to harm, but larger amounts can be dangerous, especially for small dogs, and eaten tea bags can cause serious poisoning.",
+    "sl": "Ne, čaj s kofeinom ni za pse. Čaj vsebuje kofein, ki je za pse strupen. Majhen požirek verjetno ne škodi, večje količine pa so lahko nevarne, zlasti za majhne pse, pojedene čajne vrečke pa lahko povzročijo hudo zastrupitev."
+  },
+  "why": {
+    "en": "Many teas contain caffeine, which overstimulates a dog's heart and nervous system. Dogs are more sensitive to caffeine than people. One or two licks of tea are unlikely to poison, but swallowed tea bags can cause serious toxicity.",
+    "sl": "Številni čaji vsebujejo kofein, ki pretirano spodbuja pasje srce in živčevje. Psi so na kofein bolj občutljivi kot ljudje. Polizek ali dva čaja verjetno ne zastrupita, pogoltnjene čajne vrečke pa lahko povzročijo hudo zastrupitev."
+  },
+  "signs": {
+    "en": [
+      "Restlessness, hyperactivity, pacing",
+      "Fast heartbeat",
+      "Vomiting and diarrhoea",
+      "Drooling",
+      "Trembling",
+      "Peeing more"
+    ],
+    "sl": [
+      "Nemir, pretirana živahnost, hoja sem in tja",
+      "Hiter srčni utrip",
+      "Bruhanje in driska",
+      "Slinjenje",
+      "Tresenje",
+      "Pogostejše uriniranje"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline as soon as you realise your dog has had caffeine. Note what it was (drink, grounds, beans, tea bags) and roughly how much. Don't wait for signs: early treatment matters.",
+    "sl": "Takoj ko opazite, da je pes zaužil kofein, pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj je bilo (pijača, mleta kava, zrna, čajne vrečke) in približno koliko. Ne čakajte na znake: zgodnje zdravljenje je pomembno."
+  },
+  "serving": null,
+  "child": {
+    "en": "Tea with caffeine is a people drink, not a dog drink. Give your dog fresh water instead.",
+    "sl": "Čaj s kofeinom je pijača za ljudi, ne za pse. Psu raje daj svežo vodo."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "My dog licked my cup. Is that an emergency?",
+        "sl": "Pes je polizal mojo skodelico. Je to nujno?"
+      },
+      "a": {
+        "en": "One or two licks are unlikely to poison most dogs. If your dog drank more, or ate grounds, beans or tea bags, call your vet or a pet poison helpline.",
+        "sl": "En ali dva polizka večine psov verjetno ne zastrupita. Če je pes popil več ali pojedel mleto kavo, zrna ali čajne vrečke, pokličite veterinarja ali center za zastrupitve živali."
+      }
+    },
+    {
+      "q": {
+        "en": "What if my dog ate a tea bag?",
+        "sl": "Kaj, če je pes pojedel čajno vrečko?"
+      },
+      "a": {
+        "en": "Tea bags can cause serious caffeine poisoning. Contact your vet or a pet poison helpline right away.",
+        "sl": "Čajne vrečke lahko povzročijo hudo zastrupitev s kofeinom. Takoj pokličite veterinarja ali center za zastrupitve živali."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD19",
+      "quote": "Dogs and cats appear to be more sensitive to the effects of caffeine than people."
+    },
+    {
+      "id": "KD19",
+      "quote": "Clinical signs are agitation, aggression, vomiting, diarrhea, drooling, tremors, & respiratory or cardiovascular depression."
+    },
+    {
+      "id": "KD19",
+      "quote": "One or two licks of coffee, tea or soda is unlikely to cause poisoning in most pets."
+    },
+    {
+      "id": "KD20",
+      "quote": "Caffeine causes cardiac and central nervous system stimulation, which can be dangerous."
+    },
+    {
+      "id": "KD20",
+      "quote": "Pets that consume caffeine may have an increased heart rate and become hyperactive."
+    },
+    {
+      "id": "KD20",
+      "quote": "They may also pace or vocalize excessively."
+    },
+    {
+      "id": "KD20",
+      "quote": "Pets may also need to urinate more."
+    },
+    {
+      "id": "KD20",
+      "quote": "Call your veterinarian or Pet Poison Helpline, a 24/7 animal poison center, at 1-800-213-6680"
+    },
+    {
+      "id": "KD20",
+      "quote": "as soon as you realize your pet has consumed caffeine."
+    },
+    {
+      "id": "KD20",
+      "quote": "As with all poisoning cases, early intervention is key to successful treatment."
+    },
+    {
+      "id": "KD5",
+      "quote": "Coffee and tea contain caffeine, one of the compounds that make chocolate toxic for dogs."
+    },
+    {
+      "id": "KD19",
+      "quote": "However, ingestion of unused coffee grounds or beans, tea bags, or supplements could cause serious toxicity in dogs or cats."
+    },
+    {
+      "id": "KD20",
+      "quote": "Most households have coffee in the pantry, which is a key source of caffeine, but many teas and sodas contain caffeine too."
+    },
+    {
+      "id": "KD4",
+      "quote": "While a small taste of tea or coffee will not affect your dog,"
+    },
+    {
+      "id": "KD4",
+      "quote": "a larger amount of caffeine can be dangerous, especially for smaller dogs."
+    },
+    {
+      "id": "KD4",
+      "quote": "and can cause, vomiting, diarrhoea, a high blood pressure and tremors."
+    }
+  ],
+  "related": [
+    "coffee",
+    "energy-drinks",
+    "chocolate",
+    "milk"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "50a652204927510d32c999dfe231b692f2172a90213608786ff4cb2bc3dacfa2"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e367763b44853aaf465176565d27eca3eaf4b017b02d9545fd8aae8ba374fd6f"
+    }
+  }
+}

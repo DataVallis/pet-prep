@@ -1,0 +1,167 @@
+{
+  "slug": "coffee",
+  "species": "dog",
+  "name": {
+    "en": "Coffee",
+    "sl": "Kava"
+  },
+  "question": {
+    "en": "Can dogs drink coffee?",
+    "sl": "Ali lahko psi pijejo kavo?"
+  },
+  "url_slug": {
+    "en": "coffee",
+    "sl": "kava"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Coffee contains caffeine, which is toxic to dogs; dogs are more sensitive to it than people. A lick or two is unlikely to cause poisoning, but coffee grounds and beans can cause serious toxicity. Chocolate-covered coffee beans are a double threat.",
+    "sl": "Ne. Kava vsebuje kofein, ki je za pse strupen; psi so nanj bolj občutljivi kot ljudje. En ali dva polizka verjetno ne povzročita zastrupitve, mleta kava in kavna zrna pa lahko povzročijo hudo zastrupitev. Zrna, oblita s čokolado, so dvojna nevarnost."
+  },
+  "why": {
+    "en": "Caffeine overstimulates the heart and nervous system. It is the same kind of substance that makes chocolate toxic. A lick or two of coffee is unlikely to poison, but unused coffee grounds and beans can cause serious toxicity, and chocolate-covered beans are a double threat.",
+    "sl": "Kofein pretirano spodbuja srce in živčevje. Gre za isto vrsto snovi, zaradi katere je strupena čokolada. Polizek ali dva kave verjetno ne zastrupita, neuporabljena mleta kava in zrna pa lahko povzročijo hudo zastrupitev; zrna v čokoladi so dvojna nevarnost."
+  },
+  "signs": {
+    "en": [
+      "Restlessness, hyperactivity, pacing",
+      "Fast heartbeat",
+      "Vomiting and diarrhoea",
+      "Drooling",
+      "Trembling",
+      "Peeing more"
+    ],
+    "sl": [
+      "Nemir, pretirana živahnost, hoja sem in tja",
+      "Hiter srčni utrip",
+      "Bruhanje in driska",
+      "Slinjenje",
+      "Tresenje",
+      "Pogostejše uriniranje"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline as soon as you realise your dog has had caffeine. Note what it was (drink, grounds, beans, tea bags) and roughly how much. Don't wait for signs: early treatment matters.",
+    "sl": "Takoj ko opazite, da je pes zaužil kofein, pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj je bilo (pijača, mleta kava, zrna, čajne vrečke) in približno koliko. Ne čakajte na znake: zgodnje zdravljenje je pomembno."
+  },
+  "serving": null,
+  "child": {
+    "en": "Coffee is a grown-up drink and is not for dogs. Keep cups and coffee beans out of reach.",
+    "sl": "Kava je pijača za odrasle in ni za pse. Skodelice in kavna zrna pospravi izven dosega."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "My dog licked my cup. Is that an emergency?",
+        "sl": "Pes je polizal mojo skodelico. Je to nujno?"
+      },
+      "a": {
+        "en": "One or two licks are unlikely to poison most dogs. If your dog drank more, or ate grounds, beans or tea bags, call your vet or a pet poison helpline.",
+        "sl": "En ali dva polizka večine psov verjetno ne zastrupita. Če je pes popil več ali pojedel mleto kavo, zrna ali čajne vrečke, pokličite veterinarja ali center za zastrupitve živali."
+      }
+    },
+    {
+      "q": {
+        "en": "Are coffee grounds dangerous?",
+        "sl": "Je nevarna tudi mleta kava?"
+      },
+      "a": {
+        "en": "Coffee grounds are a known source of caffeine for pets. Keep grounds and beans away from your dog and call your vet if it eats some.",
+        "sl": "Mleta kava je znan vir kofeina za živali. Mleto kavo in zrna hranite stran od psa in pokličite veterinarja, če jih poje."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD19",
+      "quote": "Dogs and cats appear to be more sensitive to the effects of caffeine than people."
+    },
+    {
+      "id": "KD19",
+      "quote": "Clinical signs are agitation, aggression, vomiting, diarrhea, drooling, tremors, & respiratory or cardiovascular depression."
+    },
+    {
+      "id": "KD19",
+      "quote": "One or two licks of coffee, tea or soda is unlikely to cause poisoning in most pets."
+    },
+    {
+      "id": "KD20",
+      "quote": "Caffeine causes cardiac and central nervous system stimulation, which can be dangerous."
+    },
+    {
+      "id": "KD20",
+      "quote": "Pets that consume caffeine may have an increased heart rate and become hyperactive."
+    },
+    {
+      "id": "KD20",
+      "quote": "They may also pace or vocalize excessively."
+    },
+    {
+      "id": "KD20",
+      "quote": "Pets may also need to urinate more."
+    },
+    {
+      "id": "KD20",
+      "quote": "Call your veterinarian or Pet Poison Helpline, a 24/7 animal poison center, at 1-800-213-6680"
+    },
+    {
+      "id": "KD20",
+      "quote": "as soon as you realize your pet has consumed caffeine."
+    },
+    {
+      "id": "KD20",
+      "quote": "As with all poisoning cases, early intervention is key to successful treatment."
+    },
+    {
+      "id": "KD5",
+      "quote": "Coffee and tea contain caffeine, one of the compounds that make chocolate toxic for dogs."
+    },
+    {
+      "id": "KD19",
+      "quote": "However, ingestion of unused coffee grounds or beans, tea bags, or supplements could cause serious toxicity in dogs or cats."
+    },
+    {
+      "id": "KD19",
+      "quote": "Both caffeine and theobromine, a chemical related to caffeine, are also found in chocolate."
+    },
+    {
+      "id": "KD20",
+      "quote": "Chocolate-covered coffee beans or large amounts of chocolate pack a double threat for pets."
+    },
+    {
+      "id": "KD20",
+      "quote": "Other common sources of caffeine include diet pills, gum, coffee grounds, over-the-counter pain medication combinations,"
+    },
+    {
+      "id": "KD4",
+      "quote": "While a small taste of tea or coffee will not affect your dog,"
+    },
+    {
+      "id": "KD4",
+      "quote": "a larger amount of caffeine can be dangerous, especially for smaller dogs."
+    },
+    {
+      "id": "KD4",
+      "quote": "and can cause, vomiting, diarrhoea, a high blood pressure and tremors."
+    }
+  ],
+  "related": [
+    "tea",
+    "energy-drinks",
+    "chocolate",
+    "alcohol"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a613bfe0217de3beeca88feec6ec85da4fd11461ed51b05747e6c8daf5a0a080"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c838689c4a0f7bc9c5c25ad314c2d0969aec2d9cd0618e9a0bd9183faddf1d6a"
+    }
+  }
+}

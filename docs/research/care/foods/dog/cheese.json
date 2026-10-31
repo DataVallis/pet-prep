@@ -1,0 +1,157 @@
+{
+  "slug": "cheese",
+  "species": "dog",
+  "name": {
+    "en": "Cheese",
+    "sl": "Sir"
+  },
+  "question": {
+    "en": "Can dogs eat cheese?",
+    "sl": "Ali lahko psi jedo sir?"
+  },
+  "url_slug": {
+    "en": "cheese",
+    "sl": "sir"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "Not as a regular treat. Some vet sources allow small bits of plain, lower-fat cheese, but cheese is fatty, many dogs digest dairy poorly, and some cheeses contain onion, garlic or chives. Blue cheeses are a particular worry.",
+    "sl": "Ne kot reden priboljšek. Nekateri veterinarski viri dovolijo majhne koščke navadnega, manj mastnega sira, a sir je masten, mnogi psi mlečne izdelke slabo prebavljajo, nekateri siri pa vsebujejo čebulo, česen ali drobnjak. Posebej previdni bodite pri plesnivih modrih sirih."
+  },
+  "why": {
+    "en": "Dogs have little lactase, the enzyme that digests milk sugar, so dairy can upset the stomach. Cheese is high in fat: too much leads to weight gain and can trigger pancreatitis. Flavoured cheeses may contain onion, garlic or chives, and blue cheeses such as Roquefort contain roquefortine C, to which dogs appear sensitive. Sources differ: the AKC and Dogs Trust allow small amounts, while Cornell lists cheese among fatty foods to avoid, so we use the stricter level.",
+    "sl": "Psi imajo malo laktaze, encima, ki razgradi mlečni sladkor, zato jim mlečni izdelki lahko razdražijo prebavo. Sir je zelo masten: preveč ga povzroči debelost in lahko sproži vnetje trebušne slinavke. Aromatizirani siri lahko vsebujejo čebulo, česen ali drobnjak, modri siri, kot je rokfor, pa roquefortin C, za katerega so psi očitno občutljivi. Viri se razlikujejo: AKC in Dogs Trust dovolita majhne količine, Cornell pa sir uvršča med mastno hrano, ki se ji je treba izogniti, zato smo izbrali strožjo stopnjo."
+  },
+  "signs": {
+    "en": [
+      "Diarrhoea or other tummy upset",
+      "Vomiting",
+      "Belly pain, nausea, low energy or poor appetite (possible pancreatitis)",
+      "Muscle tremors after blue cheese"
+    ],
+    "sl": [
+      "Driska ali druge prebavne težave",
+      "Bruhanje",
+      "Boleč trebuh, slabost, utrujenost ali slab apetit (možno vnetje trebušne slinavke)",
+      "Tresenje mišic po modrem siru"
+    ]
+  },
+  "what_to_do": {
+    "en": "A small plain piece usually needs nothing more than watching for tummy upset. Call your vet if your dog ate a lot of cheese, ate blue cheese or cheese with onion, garlic or chives, or shows vomiting, belly pain or tremors.",
+    "sl": "Pri majhnem koščku navadnega sira običajno zadošča, da opazujete prebavo. Pokličite veterinarja, če je pes pojedel veliko sira, modri sir ali sir s čebulo, česnom ali drobnjakom ali če bruha, ga boli trebuh ali se trese."
+  },
+  "serving": {
+    "en": "If you share at all: a tiny piece of plain, lower-fat cheese such as mozzarella or cottage cheese, never flavoured or blue cheese.",
+    "sl": "Če ga sploh daste: droben košček navadnega, manj mastnega sira, na primer mocarele ali skute, nikoli aromatiziranega ali modrega sira."
+  },
+  "child": {
+    "en": "Cheese is very fatty for a dog's tummy. A tiny plain piece now and then is plenty — ask a grown-up first.",
+    "sl": "Sir je za pasji trebušček zelo masten. Droben navaden košček občasno je dovolj — najprej vprašaj odraslega."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is blue cheese worse than other cheese for dogs?",
+        "sl": "Je modri sir za pse slabši od drugih sirov?"
+      },
+      "a": {
+        "en": "Yes. Roquefort and other blue cheeses contain roquefortine C, and dogs appear sensitive to it; severe cases can bring muscle tremors.",
+        "sl": "Da. Rokfor in drugi modri siri vsebujejo roquefortin C, za katerega so psi očitno občutljivi; v hujših primerih se pojavi tresenje mišic."
+      }
+    },
+    {
+      "q": {
+        "en": "Which cheese is the least risky?",
+        "sl": "Kateri sir je najmanj tvegan?"
+      },
+      "a": {
+        "en": "Lower-fat plain cheeses such as mozzarella, cottage cheese or soft goat cheese, in a small amount.",
+        "sl": "Manj mastni navadni siri, kot so mocarela, skuta ali mehki kozji sir, v majhni količini."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD45",
+      "quote": "Because pets do not possess significant amounts of lactase (the enzyme that breaks down lactose in milk),"
+    },
+    {
+      "id": "KD45",
+      "quote": "milk and other dairy-based products can cause diarrhea or other digestive upset."
+    },
+    {
+      "id": "KD5",
+      "quote": "Some dogs can have trouble digesting dairy products, so offer cheese based on your individual dog’s tolerance."
+    },
+    {
+      "id": "KD46",
+      "quote": "Yes, dogs can eat cheese."
+    },
+    {
+      "id": "KD46",
+      "quote": "Cheese is high in fat, and feeding too much to your dog regularly can cause weight gain and lead to obesity."
+    },
+    {
+      "id": "KD46",
+      "quote": "Even more problematic, it could lead to pancreatitis, a serious and potentially fatal illness in dogs."
+    },
+    {
+      "id": "KD46",
+      "quote": "some cheeses contain herbs or other products that are toxic to dogs, such as garlic, onions, and chives."
+    },
+    {
+      "id": "KD46",
+      "quote": "It's best to feed your dog low fat cheeses, like mozzarella, cottage cheese, or soft goat cheese."
+    },
+    {
+      "id": "KD47",
+      "quote": "Roquefort and other blue cheeses contain a substance called roquefortine C"
+    },
+    {
+      "id": "KD48",
+      "quote": "Dogs appear sensitive to this substance and more extreme cases can cause dogs to quickly develop muscle tremors"
+    },
+    {
+      "id": "KD49",
+      "quote": "Fatty foods (e.g., meat trimmings, gravy, cheese)"
+    },
+    {
+      "id": "KD49",
+      "quote": "High-fat foods can trigger vomiting and diarrhea, or even pancreatitis, a painful and serious condition."
+    },
+    {
+      "id": "KD39",
+      "quote": "Avoid high fat treats like cheese or pork."
+    },
+    {
+      "id": "KD50",
+      "quote": "The most common clinical signs include nausea, vomiting, fever, lethargy, abdominal pain, diarrhea, and decreased appetite."
+    },
+    {
+      "id": "KD51",
+      "quote": "Cheese"
+    }
+  ],
+  "related": [
+    "milk",
+    "yogurt",
+    "butter",
+    "ice-cream",
+    "garlic",
+    "onion",
+    "chives"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2659511ce6346d6cbb84d9fa916076b4def41c8e78d5b4da29fbf3ee282d8e1d"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dc8b57a657e43fce479da97d0eba3e6a3741214cfc663a4c602c277374c645da"
+    }
+  }
+}

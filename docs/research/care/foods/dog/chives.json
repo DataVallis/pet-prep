@@ -1,0 +1,166 @@
+{
+  "slug": "chives",
+  "species": "dog",
+  "name": {
+    "en": "Chives",
+    "sl": "Drobnjak"
+  },
+  "question": {
+    "en": "Can dogs eat chives?",
+    "sl": "Ali lahko psi jedo drobnjak?"
+  },
+  "url_slug": {
+    "en": "chives",
+    "sl": "drobnjak"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Chives belong to the allium family, like onion and garlic, and are toxic to dogs. Raw, cooked and dried chives can all damage red blood cells, and signs often take a few days to appear.",
+    "sl": "Ne. Drobnjak spada v družino lukov, tako kot čebula in česen, in je za pse strupen. Surov, kuhan in posušen drobnjak lahko poškodujejo rdeče krvničke, znaki pa se pogosto pokažejo šele po nekaj dneh."
+  },
+  "why": {
+    "en": "It belongs to the allium family (onion, garlic, leek, chives), which is toxic to dogs. These plants contain compounds that damage red blood cells and can lead to anaemia. All parts and all forms are harmful: raw, cooked, dried and powdered. Stomach upset can happen with any amount; larger amounts damage the blood.",
+    "sl": "Spada v družino lukov (čebula, česen, por, drobnjak), ki je za pse strupena. Te rastline vsebujejo snovi, ki poškodujejo rdeče krvničke in lahko povzročijo slabokrvnost. Škodljivi so vsi deli in vse oblike: surove, kuhane, posušene in v prahu. Prebavne težave se lahko pojavijo pri vsaki količini, večje količine pa poškodujejo kri."
+  },
+  "signs": {
+    "en": [
+      "Vomiting and diarrhoea",
+      "Eating less than usual",
+      "Tummy upset, even after small amounts",
+      "Signs of anaemia (damaged red blood cells), usually a few days later"
+    ],
+    "sl": [
+      "Bruhanje in driska",
+      "Slabši apetit",
+      "Prebavne težave, tudi po majhnih količinah",
+      "Znaki slabokrvnosti (poškodovane rdeče krvničke), običajno po nekaj dneh"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline right away. Note what was eaten (chives) and roughly how much. Don't wait for signs: damage to the blood usually shows only a few days later.",
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj je pes pojedel (drobnjak) in približno koliko. Ne čakajte na znake: okvara krvi se običajno pokaže šele po nekaj dneh."
+  },
+  "serving": null,
+  "child": {
+    "en": "Chives look like little green grass, but they are in the onion family and not for dogs. Tell a grown-up if your dog eats some.",
+    "sl": "Drobnjak je videti kot zelena travica, a spada med čebule in ni za pse. Povej odraslemu, če ga pes poje."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is it safe when cooked or as powder?",
+        "sl": "Je varno, če je kuhano ali v prahu?"
+      },
+      "a": {
+        "en": "No. Raw, cooked, dried, powdered and liquid forms are all poisonous to dogs.",
+        "sl": "Ne. Za pse so strupene surove, kuhane, posušene, praškaste in tekoče oblike."
+      }
+    },
+    {
+      "q": {
+        "en": "Why don't signs show straight away?",
+        "sl": "Zakaj se znaki ne pokažejo takoj?"
+      },
+      "a": {
+        "en": "Symptoms can start within 24 hours but more often take a few days to appear; signs of anaemia typically develop several days after eating.",
+        "sl": "Znaki se lahko pojavijo v 24 urah, pogosteje pa šele po nekaj dneh; znaki slabokrvnosti se običajno razvijejo nekaj dni po zaužitju."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD8",
+      "quote": "Allium spp include garlic, onions, chives, and leeks, although garlic and onions are most commonly associated with toxicosis"
+    },
+    {
+      "id": "KD8",
+      "quote": "Absorption of these oxidant compounds results in oxidative damage to RBCs"
+    },
+    {
+      "id": "KD8",
+      "quote": "Several days after ingestion, clinical signs of acute hemolytic anemia develop"
+    },
+    {
+      "id": "KD9",
+      "quote": "Onions, garlic, and leeks are from a group of plants called alliums, which are all toxic to dogs."
+    },
+    {
+      "id": "KD9",
+      "quote": "Garlic, chives and leeks are all also alliums."
+    },
+    {
+      "id": "KD9",
+      "quote": "All parts of these plants are toxic to dogs, even when cooked or dried."
+    },
+    {
+      "id": "KD9",
+      "quote": "Symptoms can start within 24 hours after eating onion, garlic or leeks but more commonly take a few days to appear."
+    },
+    {
+      "id": "KD9",
+      "quote": "Symptoms of onion and garlic poisoning include vomiting, diarrhoea and a reduced appetite."
+    },
+    {
+      "id": "KD9",
+      "quote": "If your dog has eaten onions, garlic or leeks, you should contact your vet as soon as possible."
+    },
+    {
+      "id": "KD10",
+      "quote": "Onions, garlic, chives, and leeks belong to the Allium genus."
+    },
+    {
+      "id": "KD10",
+      "quote": "All forms are poisonous to dogs, including raw, cooked, dried, powdered, and liquid preparations."
+    },
+    {
+      "id": "KD10",
+      "quote": "Gastrointestinal upset (gastroenteritis) commonly occurs with potentially any amount ingested."
+    },
+    {
+      "id": "KD10",
+      "quote": "If you suspect a poisoning, immediate action is recommended."
+    },
+    {
+      "id": "KD10",
+      "quote": "Eating larger amounts may cause red blood cell damage."
+    },
+    {
+      "id": "KD4",
+      "quote": "Onions, garlic, chives and leek contain a toxin (organosulphoxides) that is very dangerous for dogs."
+    },
+    {
+      "id": "KD1",
+      "quote": "Although cats are more susceptible, dogs are also at risk depending on the amount ingested."
+    },
+    {
+      "id": "KD1",
+      "quote": "As always, if you suspect your pet has eaten any of the following foods, please note the amount ingested"
+    },
+    {
+      "id": "KD1",
+      "quote": "and contact your veterinarian or poison control at (888) 426-4435."
+    },
+    {
+      "id": "KD1",
+      "quote": "Onion, garlic and chives are members of the Allium species of vegetables."
+    }
+  ],
+  "related": [
+    "onion",
+    "garlic",
+    "leek"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f631c876c05e7d1070fbbe89444a9292f3345ad26b48e7fd703824545789cf9e"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c0a19248bdb55378e63672e0c0c4862f5544e347f4863affef12272b0cabd7dc"
+    }
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "slug": "salt",
+  "species": "dog",
+  "name": {
+    "en": "Salt",
+    "sl": "Sol"
+  },
+  "question": {
+    "en": "Can dogs eat salt?",
+    "sl": "Ali lahko psi jedo sol?"
+  },
+  "url_slug": {
+    "en": "salt",
+    "sl": "sol"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "No, not in large amounts. Salty food in moderation should not cause salt poisoning, but eating a lot of salt, for example from homemade salt dough, play dough or lots of sea water, can. Signs include vomiting, strong thirst, tremors and seizures.",
+    "sl": "Ne v velikih količinah. Slana hrana v zmernih količinah naj ne bi povzročila zastrupitve s soljo, veliko soli, na primer iz domačega slanega testa, plastelina ali veliko morske vode, pa jo lahko. Znaki so bruhanje, huda žeja, tresenje in krči."
+  },
+  "why": {
+    "en": "Common causes of salt poisoning are homemade salt-dough ornaments and play dough, snow with salt de-icer, and drinking a lot of sea water. Salt poisoning is unlikely when a healthy dog has fresh water, but small dogs with health problems are at more risk if they have no fresh water. Salt must never be used to make a dog vomit.",
+    "sl": "Pogosti vzroki zastrupitve s soljo so domači okraski iz slanega testa in plastelin, sneg s soljo za posipanje ter pitje veliko morske vode. Pri zdravem psu s svežo vodo je zastrupitev s soljo malo verjetna, večje tveganje pa imajo majhni psi z zdravstvenimi težavami, če nimajo sveže vode. Soli nikoli ne uporabljajte, da bi psa spravili k bruhanju."
+  },
+  "signs": {
+    "en": [
+      "Strong thirst and peeing a lot",
+      "Vomiting, often within a few hours",
+      "Diarrhoea",
+      "Wobbliness, tiredness",
+      "Tremors or seizures"
+    ],
+    "sl": [
+      "Huda žeja in pogosto uriniranje",
+      "Bruhanje, pogosto v nekaj urah",
+      "Driska",
+      "Opotekanje, utrujenost",
+      "Tresenje ali krči"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog ate a lot of salt, salt dough or play dough, or drank a lot of sea water, contact your vet or a pet poison helpline right away. Note what and how much was eaten. Don't wait for signs, and never give salt to make a dog vomit.",
+    "sl": "Če je pes pojedel veliko soli, slanega testa ali plastelina ali popil veliko morske vode, takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj in koliko je pojedel. Ne čakajte na znake in psu nikoli ne dajajte soli, da bi bruhal."
+  },
+  "serving": null,
+  "child": {
+    "en": "Too much salt makes dogs very thirsty and ill. Keep salt and salty play dough away from your dog.",
+    "sl": "Preveč soli psa zelo odžeja in mu škodi. Sol in slani plastelin pospravi stran od psa."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is homemade play dough dangerous?",
+        "sl": "Je domači plastelin nevaren?"
+      },
+      "a": {
+        "en": "Yes. Because of its high salt content, homemade play dough is highly toxic to dogs. Salt dough ornaments are a risk too.",
+        "sl": "Da. Zaradi veliko soli je domači plastelin za pse zelo strupen. Tveganje so tudi okraski iz slanega testa."
+      }
+    },
+    {
+      "q": {
+        "en": "Can I give salt water to make my dog vomit?",
+        "sl": "Lahko psu dam slano vodo, da bruha?"
+      },
+      "a": {
+        "en": "No. Salt and salt water should never be used to make an animal vomit, because of the high risk of salt poisoning. Call your vet instead.",
+        "sl": "Ne. Soli in slane vode nikoli ne uporabljajte, da bi žival bruhala, ker je tveganje zastrupitve s soljo veliko. Raje pokličite veterinarja."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD1",
+      "quote": "Excessive salt intake can produce increased thirst and urination"
+    },
+    {
+      "id": "KD1",
+      "quote": "Signs of salt toxicity can include vomiting, diarrhea, depression, tremors, seizures and even death."
+    },
+    {
+      "id": "KD42",
+      "quote": "Excess salt intake in dogs results in vomiting within several hours after ingestion."
+    },
+    {
+      "id": "KD42",
+      "quote": "Clinical signs can progress to weakness, diarrhea, muscle tremors, and seizures."
+    },
+    {
+      "id": "KD42",
+      "quote": "Salt toxicosis is unlikely to occur as long as sodium-regulating mechanisms are intact and fresh drinking water is available."
+    },
+    {
+      "id": "KD40",
+      "quote": "The feeding of salty foods in moderation should not cause salt toxicity."
+    },
+    {
+      "id": "KD40",
+      "quote": "But in small dogs with metabolic issues, it may cause more concern if there is no access to fresh water."
+    },
+    {
+      "id": "KD40",
+      "quote": "Generally, the feeding of excessive salty foods is not good for dogs,"
+    },
+    {
+      "id": "KD40",
+      "quote": "especially for those that have certain medical issues such as heart disease"
+    },
+    {
+      "id": "KD40",
+      "quote": "because it can cause fluid retention."
+    },
+    {
+      "id": "KD40",
+      "quote": "Lack of coordination or being wobbly on their feet"
+    },
+    {
+      "id": "KD40",
+      "quote": "Lethargy"
+    },
+    {
+      "id": "KD40",
+      "quote": "If you suspect your dog has consumed too much salt, contact a veterinarian or the Pet Poison Helpline immediately."
+    },
+    {
+      "id": "KD43",
+      "quote": "Salt and salt-water should never be used to induce vomiting in an animal due to the high risk for creating salt poisoning."
+    },
+    {
+      "id": "KD43",
+      "quote": "Kosher Salt, Rock Salt, Sea Salt, Table Salt"
+    },
+    {
+      "id": "KD4",
+      "quote": "Because of its high salt content, homemade playdough is highly toxic to dogs."
+    },
+    {
+      "id": "KD43",
+      "quote": "Common ways that pets become overdosed with salt include consuming handmade salt-dough ornaments or homemade salt-play dough"
+    },
+    {
+      "id": "KD43",
+      "quote": ", eating snow with salt de-icer, drinking excessive ocean water or salt water."
+    }
+  ],
+  "related": [
+    "salty-snacks",
+    "chips",
+    "ham",
+    "bacon"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7197a2ca280717140c2f22dd7ab183fb52881725e7302294bff8117fe31623c0"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c2095079ca7bd2fff9a60be0c193a9665e1da2f87f2fdef12b46a8a8bf646690"
+    }
+  }
+}

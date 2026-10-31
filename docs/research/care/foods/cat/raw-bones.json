@@ -1,0 +1,100 @@
+{
+  "slug": "raw-bones",
+  "species": "cat",
+  "name": {
+    "en": "Raw bones",
+    "sl": "Surove kosti"
+  },
+  "question": {
+    "en": "Can cats eat raw bones?",
+    "sl": "Ali lahko mačke jedo surove kosti?"
+  },
+  "url_slug": {
+    "en": "raw-bones",
+    "sl": "surove-kosti"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "It's best not to. Cats Protection advises avoiding raw bones because they increase the risk of choking or a blockage in the stomach. Bones can also injure a cat's gut, and raw meat may carry harmful bacteria and parasites.",
+    "sl": "Raje ne. Cats Protection svetuje, naj se surovim kostem izogibamo, ker povečajo tveganje za dušenje ali zaporo v želodcu. Kosti lahko poškodujejo tudi mačja prebavila, surovo meso pa lahko vsebuje škodljive bakterije in zajedavce."
+  },
+  "why": {
+    "en": "Swallowed bones can injure or block the gut, which can be serious and may need surgery. Raw meat attached to bones may also contain harmful bacteria and parasites.",
+    "sl": "Pogoltnjene kosti lahko poškodujejo ali zamašijo prebavila, kar je lahko resno in lahko zahteva operacijo. Surovo meso na kosteh lahko vsebuje tudi škodljive bakterije in zajedavce."
+  },
+  "signs": {
+    "en": [
+      "Choking",
+      "Vomiting",
+      "Tummy pain (hiding, growling, not wanting to be touched)"
+    ],
+    "sl": [
+      "Dušenje",
+      "Bruhanje",
+      "Bolečine v trebuhu (skrivanje, renčanje, muca se ne pusti dotikati)"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet right away if your cat swallowed a bone or is choking or vomiting. Note what kind of bone it was and when. Don't wait to see what happens, and don't try to make your cat sick at home.",
+    "sl": "Takoj pokličite veterinarja, če je muca pogoltnila kost ali se duši ali bruha. Zapišite, kakšna kost je bila in kdaj. Ne čakajte, kaj se bo zgodilo, in muce doma ne poskušajte spraviti k bruhanju."
+  },
+  "serving": null,
+  "child": {
+    "en": "Bones can get stuck in a cat's throat or tummy. Leave bones out of kitty's bowl and tell a grown-up if she finds one.",
+    "sl": "Kosti se lahko muci zataknejo v grlu ali trebuščku. V mucini skledi naj ne bo kosti. Če jo najde, povej odraslemu."
+  },
+  "faq": [],
+  "sources": [
+    {
+      "id": "KC5",
+      "quote": "Feeding raw bones should also be avoided as it increases the risk of choking or a blockage in their stomach."
+    },
+    {
+      "id": "KC5",
+      "quote": "Uncooked meat and fish or raw eggs may contain harmful bacteria and parasites."
+    },
+    {
+      "id": "KC1",
+      "quote": "Dogs/cats might sustain injury or obstruction to the gastrointestinal tract when ingesting bones, which could be serious and require surgery."
+    },
+    {
+      "id": "KC26",
+      "quote": "Bones can splinter and cause choking, internal injuries or blockages."
+    },
+    {
+      "id": "KC28",
+      "quote": "Vomiting and pain are often the first symptoms of a blockage."
+    },
+    {
+      "id": "KC28",
+      "quote": "Contact your vet immediately if you think your cat has eaten something silly - never wait to see what happens."
+    },
+    {
+      "id": "KC28",
+      "quote": "Never try to make your cat sick at home."
+    },
+    {
+      "id": "KC28",
+      "quote": "Pain (growling, hiding away or not wanting to be handled)."
+    }
+  ],
+  "related": [
+    "cooked-bones",
+    "raw-meat",
+    "raw-fish",
+    "fatty-meat"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5c4d4678e30f35db2eaa4c6dd5c8e2acb8d6e35fb25d7b9163ff30cac9ccd08e"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d039646992f82234e9a5972ad5e560369a5284a133497a111b093151bbf0a042"
+    }
+  }
+}

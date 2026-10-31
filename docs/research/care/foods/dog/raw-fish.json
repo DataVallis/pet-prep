@@ -1,0 +1,155 @@
+{
+  "slug": "raw-fish",
+  "species": "dog",
+  "name": {
+    "en": "Raw fish",
+    "sl": "Surove ribe"
+  },
+  "question": {
+    "en": "Can dogs eat raw fish?",
+    "sl": "Ali lahko psi jedo surove ribe?"
+  },
+  "url_slug": {
+    "en": "raw-fish",
+    "sl": "surove-ribe"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "It is not recommended. Raw fish can carry bacteria such as Salmonella and Listeria, as well as parasites, and its small bones are a hazard. In the Pacific Northwest of the USA, raw salmon or trout can cause salmon poisoning disease. Cook fish plain and remove the bones.",
+    "sl": "Ni priporočljivo. Surove ribe lahko prenašajo bakterije, kot sta salmonela in listerija, pa tudi zajedavce, njihove drobne kosti pa so nevarne. Na pacifiškem severozahodu ZDA lahko surov losos ali postrv povzroči bolezen »zastrupitev z lososom«. Ribe skuhajte brez dodatkov in odstranite kosti."
+  },
+  "why": {
+    "en": "Raw fish is among the foods linked to food poisoning in dogs. Raw or undercooked salmon and trout from the Pacific Northwest can carry a parasite that causes salmon poisoning disease, which is serious if untreated. Fish bones are small and brittle and can cause choking or injure the mouth or gut. Raw and smoked fish are best avoided.",
+    "sl": "Surove ribe sodijo med živila, povezana z zastrupitvijo s hrano pri psih. Surov ali premalo kuhan losos in postrv s pacifiškega severozahoda lahko prenašata zajedavca, ki povzroči bolezen »zastrupitev z lososom«, ki je brez zdravljenja resna. Ribje kosti so drobne in krhke ter lahko povzročijo dušenje ali poškodujejo usta ali prebavila. Surovim in dimljenim ribam se je bolje izogniti."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Low energy or poor appetite",
+      "High fever, weakness and complete loss of appetite (salmon poisoning)",
+      "Choking"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Utrujenost ali slab apetit",
+      "Visoka vročina, šibkost in popolna izguba apetita (zastrupitev z lososom)",
+      "Dušenje"
+    ]
+  },
+  "what_to_do": {
+    "en": "Watch for vomiting, diarrhoea or low energy and call your vet if they are severe or don't stop. If your dog ate raw salmon or trout from the Pacific Northwest, call your vet promptly and mention it — signs can take up to a week to appear.",
+    "sl": "Opazujte, ali pes bruha, ima drisko ali je utrujen, in pokličite veterinarja, če so težave hude ali ne prenehajo. Če je pes pojedel surovega lososa ali postrv s pacifiškega severozahoda ZDA, hitro pokličite veterinarja in mu to povejte — znaki se lahko pojavijo šele v tednu dni."
+  },
+  "serving": {
+    "en": "Only fully cooked fish (baked, steamed or grilled), plain, with all bones removed.",
+    "sl": "Samo popolnoma kuhane ribe (pečene, kuhane na pari ali na žaru), brez dodatkov in brez vseh kosti."
+  },
+  "child": {
+    "en": "Fish for dogs must be cooked and have no bones. Raw fish can have germs that upset a dog's tummy.",
+    "sl": "Riba za psa mora biti kuhana in brez kosti. Surova riba ima lahko klice, ki psu razdražijo trebušček."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "What is salmon poisoning disease?",
+        "sl": "Kaj je bolezen »zastrupitev z lososom«?"
+      },
+      "a": {
+        "en": "An illness dogs get from eating raw or undercooked salmon, trout or similar fish from the Pacific Northwest of the USA; it is prevented by not feeding them raw.",
+        "sl": "Bolezen, ki jo psi dobijo, če pojedo surovega ali premalo kuhanega lososa, postrv ali podobne ribe s pacifiškega severozahoda ZDA; preprečimo jo tako, da jih ne hranimo s surovimi."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD75",
+      "quote": "Raw fish is at risk of carrying harmful bacteria like salmonella and listeria."
+    },
+    {
+      "id": "KD75",
+      "quote": "Fish bones are small, brittle, and dangerous."
+    },
+    {
+      "id": "KD75",
+      "quote": "Plain, cooked, steamed, or grilled fish is fine for dogs to eat in moderation."
+    },
+    {
+      "id": "KD68",
+      "quote": "Other foods linked to food poisoning in dogs include raw fish, undercooked meat, and eggs."
+    },
+    {
+      "id": "KD68",
+      "quote": "The earliest signs are often vomiting, diarrhea, lethargy, decreased appetite, and abdominal discomfort."
+    },
+    {
+      "id": "KD68",
+      "quote": "Contact your veterinarian if your dog has severe or persistent vomiting or diarrhea."
+    },
+    {
+      "id": "KD76",
+      "quote": "Dogs become infected by eating raw or undercooked trout, salmon, or Pacific giant salamanders"
+    },
+    {
+      "id": "KD76",
+      "quote": "Both diseases occur only in the Pacific Northwest of the United States, from northern California to Alaska"
+    },
+    {
+      "id": "KD76",
+      "quote": "Early signs include high fever followed by weakness and complete loss of appetite."
+    },
+    {
+      "id": "KD76",
+      "quote": "Prevention is based on avoiding feeding dogs raw or undercooked salmon, trout, or similar fish."
+    },
+    {
+      "id": "KD77",
+      "quote": "Raw salmon is not safe for dogs"
+    },
+    {
+      "id": "KD77",
+      "quote": "The disease can manifest within seven days of eating infected fish"
+    },
+    {
+      "id": "KD77",
+      "quote": "Avoid fish high in mercury (like tuna, swordfish, or king mackerel) and any raw or smoked fish products,"
+    },
+    {
+      "id": "KD77",
+      "quote": "Cook salmon plain (baked, steamed, or grilled) without seasoning, oils, or sauces."
+    },
+    {
+      "id": "KD5",
+      "quote": "Remove the bones before serving, since fish bones can cause choking or injure the mouth or digestive tract."
+    },
+    {
+      "id": "KD5",
+      "quote": "But, raw or undercooked salmon can carry parasites and bacteria that can make dogs extremely sick, causing vomiting, diarrhea"
+    },
+    {
+      "id": "KD70",
+      "quote": "the AVMA discourages feeding any raw or undercooked animal-sourced proteins"
+    }
+  ],
+  "related": [
+    "salmon",
+    "tuna",
+    "sardines",
+    "raw-meat",
+    "shrimp"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f9708955b6a570a4e68848e50f03ee72f5cd6eff843e44c5b3710f6a5b067504"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2012d06a9008bd817bbb3efd9dae1bcddfb9f280a8369a4c59c6af7f17160404"
+    }
+  }
+}

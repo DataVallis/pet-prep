@@ -1,0 +1,113 @@
+{
+  "slug": "shrimp",
+  "species": "dog",
+  "name": {
+    "en": "Shrimp",
+    "sl": "Kozice"
+  },
+  "question": {
+    "en": "Can dogs eat shrimp?",
+    "sl": "Ali lahko psi jedo kozice?"
+  },
+  "url_slug": {
+    "en": "shrimp",
+    "sl": "kozice"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a few pieces of plain, fully cooked shrimp are fine for dogs. Remove the shell, head, legs and tail first. Raw shrimp can carry harmful germs, and fried, breaded or seasoned shrimp are not suitable.",
+    "sl": "Da, nekaj koščkov navadnih, popolnoma kuhanih kozic je za pse v redu. Najprej odstranite oklep, glavo, nožice in rep. Surove kozice lahko prenašajo škodljive klice, ocvrte, panirane ali začinjene kozice pa niso primerne."
+  },
+  "why": {
+    "en": "Raw shellfish contain harmful pathogens that cooking avoids. Shrimp shells are a choking hazard and can cause blockages. Fried or breaded shrimp add unnecessary fats and oils. Shrimp are low in fat and calories but high in cholesterol, so moderation is key.",
+    "sl": "Surovi raki in školjke vsebujejo škodljive klice, ki jih s kuhanjem odpravimo. Oklepi kozic lahko povzročijo dušenje in zamašitev. Ocvrte ali panirane kozice dodajo nepotrebne maščobe in olja. Kozice imajo malo maščob in kalorij, a veliko holesterola, zato je ključna zmernost."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Stop giving shrimp if your dog shows tummy discomfort or seems unwell, and call your vet if signs get worse. Also call your vet if your dog swallowed shells and seems to be choking.",
+    "sl": "Prenehajte dajati kozice, če ima pes težave s trebuhom ali se ne počuti dobro, in pokličite veterinarja, če se znaki poslabšajo. Pokličite ga tudi, če je pes pogoltnil oklepe in se zdi, da se duši."
+  },
+  "serving": {
+    "en": "A few pieces, fully cooked (steamed is best), plain, with shell, head, legs and tail removed; not fried, breaded or seasoned.",
+    "sl": "Nekaj koščkov, popolnoma kuhanih (najboljše na pari), brez dodatkov, brez oklepa, glave, nožic in repa; ne ocvrtih, paniranih ali začinjenih."
+  },
+  "child": {
+    "en": "A dog may have a couple of cooked, peeled shrimp. The shells and tails are not for dogs.",
+    "sl": "Pes lahko dobi nekaj kuhanih, olupljenih kozic. Oklepi in repki niso za pse."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat shrimp tails?",
+        "sl": "Ali lahko psi jedo repke kozic?"
+      },
+      "a": {
+        "en": "No. Remove the shell, head, legs and tail, as shells are a choking hazard and can cause blockages.",
+        "sl": "Ne. Odstranite oklep, glavo, nožice in rep, ker oklepi lahko povzročijo dušenje in zamašitev."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD5",
+      "quote": "Dogs can eat a few pieces of plain, fully cooked shrimp."
+    },
+    {
+      "id": "KD5",
+      "quote": "Remove the shell, head, legs, and tail before serving."
+    },
+    {
+      "id": "KD84",
+      "quote": "Raw, uncooked shellfish contain harmful pathogens; you can easily avoid these by cooking shrimp before feeding them to your d"
+    },
+    {
+      "id": "KD84",
+      "quote": "It is also a good idea to completely remove the shell, as shrimp shells are a choking hazard and can cause obstructions, espe"
+    },
+    {
+      "id": "KD84",
+      "quote": "Steamed shrimp is best for dogs, as fried and/or breaded shrimp contain unnecessary fats and oils that can be harmful."
+    },
+    {
+      "id": "KD84",
+      "quote": "Shrimp are also low in fat, calories, and carbohydrates, which makes them a good choice for dogs on a diet."
+    },
+    {
+      "id": "KD84",
+      "quote": "However, shrimp are high in cholesterol."
+    },
+    {
+      "id": "KD84",
+      "quote": "Moderation is the key to adding any new food item or treat to a dog’s diet."
+    },
+    {
+      "id": "KD84",
+      "quote": "Stop feeding shrimp if your dog shows symptoms of intestinal discomfort or illness, and call your vet if symptoms worsen."
+    },
+    {
+      "id": "KD51",
+      "quote": "Prawns"
+    },
+    {
+      "id": "KD5",
+      "quote": "Skip deep-fried shrimp or shrimp cooked with butter, oil, garlic, salt, sauces, or seasoning."
+    }
+  ],
+  "related": [
+    "raw-fish",
+    "salmon"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6f2c48ac3722adbdd4868b6a6126daa7b5c7d216fff8985a9aa596e0370821cc"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c8a0d85b9ff43e70487a9300ba44cbda4406962954afbfccbea20b8c939aa267"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "slug": "plums",
+  "species": "cat",
+  "name": {
+    "en": "Plums",
+    "sl": "Slive"
+  },
+  "question": {
+    "en": "Can cats eat plums?",
+    "sl": "Ali lahko mačke jedo slive?"
+  },
+  "url_slug": {
+    "en": "plums",
+    "sl": "slive"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "No, it's best not to. The ASPCA lists the plum plant as toxic to cats: its stems, leaves and seeds (the stone) contain cyanide. Don't offer plums to your cat, keep stones and plant parts out of reach, and call your vet if your cat chews any.",
+    "sl": "Ne, raje ne. ASPCA rastlino slive navaja kot strupeno za mačke: njeni peclji, listi in semena (koščice) vsebujejo cianid. Muci ne ponujajte sliv, koščice in dele rastline hranite izven dosega ter pokličite veterinarja, če jih muca grizlja."
+  },
+  "why": {
+    "en": "The stems, leaves and seeds contain cyanide (as cyanogenic glycosides) and are particularly toxic while wilting. The sources we found describe the risk from these plant parts and do not say the fruit flesh is safe for cats, so we do not recommend sharing it.",
+    "sl": "Peclji, listi in semena vsebujejo cianid (v obliki cianogenih glikozidov) in so posebej strupeni, ko venejo. Viri, ki smo jih našli, opisujejo nevarnost teh delov rastline in ne navajajo, da je sadni del za mačke varen, zato ga ne priporočamo."
+  },
+  "signs": {
+    "en": [
+      "Brick-red gums",
+      "Dilated pupils",
+      "Difficulty breathing",
+      "Panting",
+      "Shock"
+    ],
+    "sl": [
+      "Opečnato rdeče dlesni",
+      "Razširjene zenice",
+      "Težave z dihanjem",
+      "Sopihanje",
+      "Šok"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline right away if your cat chewed a stone, stem or leaves. Note what was eaten, how much and when. Don't wait for signs to appear, and don't try to make your cat sick at home.",
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, če je muca grizljala koščico, peclje ali liste. Zapišite, kaj je pojedla, koliko in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju."
+  },
+  "serving": null,
+  "child": {
+    "en": "Plums are a people snack. Their stones and leaves are not safe for cats, so tell a grown-up if kitty chews one.",
+    "sl": "Slive so priboljšek za ljudi. Koščice in listi niso varni za muce. Če jih muca grizlja, povej odraslemu."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Which part is the problem?",
+        "sl": "Kateri del je nevaren?"
+      },
+      "a": {
+        "en": "The ASPCA says the stems, leaves and seeds contain cyanide, and that they are particularly toxic while wilting.",
+        "sl": "ASPCA navaja, da cianid vsebujejo peclji, listi in semena ter da so posebej strupeni, ko venejo."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC18",
+      "quote": "Toxic to Dogs, Toxic to Cats, Toxic to Horses"
+    },
+    {
+      "id": "KC18",
+      "quote": "Cyanogenic glycosides found in some species"
+    },
+    {
+      "id": "KC18",
+      "quote": "Stems, leaves, seeds contain cyanide, particularly toxic in the process of wilting:"
+    },
+    {
+      "id": "KC18",
+      "quote": "brick red mucous membranes, dilated pupils, difficulty breathing, panting, shock."
+    },
+    {
+      "id": "KC18",
+      "quote": "call the ASPCA Poison Control at (888) 426-4435 or contact your local veterinarian as soon as possible."
+    },
+    {
+      "id": "KC8",
+      "quote": "Contact your veterinary team for advice immediately; make sure you know when, where, and how the poisoning occurred."
+    },
+    {
+      "id": "KC22",
+      "quote": "Don’t try to make your cat sick without asking the vet and never given them medicines designed for humans."
+    }
+  ],
+  "related": [
+    "cherries",
+    "peaches",
+    "apricots",
+    "avocado"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b86f7a1d83da46b227a44c17725a3234be57db4f6b049b8ed25b1fc7f71f0b51"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d60b50e3461aaaa6a9dc37f2cdbcce8581b7fa3dffe39f2e15c5a41f75bd67e9"
+    }
+  }
+}

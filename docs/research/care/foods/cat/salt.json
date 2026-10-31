@@ -1,0 +1,154 @@
+{
+  "slug": "salt",
+  "species": "cat",
+  "name": {
+    "en": "Salt",
+    "sl": "Sol"
+  },
+  "question": {
+    "en": "Can cats eat salt?",
+    "sl": "Ali lahko mačke jedo sol?"
+  },
+  "url_slug": {
+    "en": "salt",
+    "sl": "sol"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "No, not as a food or treat. A cat's digestive system is not designed to handle large amounts of salt, and too much can cause salt poisoning. Keep table salt, rock salt and very salty foods away from your cat, and call your vet if she eats a lot.",
+    "sl": "Ne, ne kot hrana ali priboljšek. Mačja prebavila niso ustvarjena za večje količine soli, preveč soli pa lahko povzroči zastrupitev. Kuhinjsko sol, sol za posipanje in zelo slano hrano hranite stran od muce in pokličite veterinarja, če je poje veliko."
+  },
+  "why": {
+    "en": "Too much salt causes thirst and frequent urination and, in serious cases, tremors and seizures. Salt sources at home include table salt used in cooking and rock salt used as a de-icer in winter.",
+    "sl": "Preveč soli povzroči žejo in pogosto uriniranje, v hujših primerih pa tresenje in krče. Viri soli v domu so kuhinjska sol in sol za posipanje cest in pločnikov pozimi."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Reduced appetite",
+      "Lethargy",
+      "Wobbly walking",
+      "Excessive thirst or urination",
+      "Tremors or seizures"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Slabši apetit",
+      "Utrujenost, brezvoljnost",
+      "Opotekanje",
+      "Pretirana žeja ali uriniranje",
+      "Tresenje ali krči"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline right away if your cat ate salt or a very salty food or licked rock salt. Note what she ate, how much and when. Don't wait for signs to appear, and don't try to make your cat sick at home.",
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, če je muca pojedla sol ali zelo slano hrano oziroma lizala sol za posipanje. Zapišite, kaj je pojedla, koliko in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju."
+  },
+  "serving": null,
+  "child": {
+    "en": "Salt is not a cat treat. Keep the salt shaker and very salty food away from kitty.",
+    "sl": "Sol ni priboljšek za muce. Solnica in zelo slana hrana naj bosta daleč od muce."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is winter road salt a danger for cats?",
+        "sl": "Je sol za posipanje pozimi nevarna za mačke?"
+      },
+      "a": {
+        "en": "It can be. Pet Poison Helpline lists rock salt used as a de-icer in winter among the salt sources that can harm cats, so keep bags of it out of reach.",
+        "sl": "Lahko je. Pet Poison Helpline sol za posipanje pozimi navaja med viri soli, ki lahko škodijo mačkam, zato vreče s soljo hranite izven dosega."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC20",
+      "quote": "Excessive salt should not be in a cat's diet because it can cause a wide range of symptoms."
+    },
+    {
+      "id": "KC20",
+      "quote": "Their digestive system is not designed to handle large amounts of salt."
+    },
+    {
+      "id": "KC20",
+      "quote": "There is table salt to flavor food"
+    },
+    {
+      "id": "KC20",
+      "quote": "rock salt as a deicer in winter"
+    },
+    {
+      "id": "KC20",
+      "quote": "If you suspect that your cat may be experiencing salt poisoning, you must act immediately."
+    },
+    {
+      "id": "KC21",
+      "quote": "products which include various forms of salt are toxic to dogs and cats as well."
+    },
+    {
+      "id": "KC21",
+      "quote": "Vomiting"
+    },
+    {
+      "id": "KC21",
+      "quote": "Diarrhea"
+    },
+    {
+      "id": "KC21",
+      "quote": "Decreased appetite"
+    },
+    {
+      "id": "KC21",
+      "quote": "Lethargy"
+    },
+    {
+      "id": "KC21",
+      "quote": "Incoordination"
+    },
+    {
+      "id": "KC21",
+      "quote": "Excessive thirst or urination"
+    },
+    {
+      "id": "KC21",
+      "quote": "Tremors"
+    },
+    {
+      "id": "KC21",
+      "quote": "Seizures"
+    },
+    {
+      "id": "KC1",
+      "quote": "Excessive salt intake can produce increased thirst and urination, and sometimes abnormal electrolytes in the blood depending on the amount ingested."
+    },
+    {
+      "id": "KC27",
+      "quote": "Cats tend to under-consume water, and salt-rich foods can lead them to become more dehydrated."
+    },
+    {
+      "id": "KC22",
+      "quote": "Don’t try to make your cat sick without asking the vet and never given them medicines designed for humans."
+    }
+  ],
+  "related": [
+    "ham",
+    "fatty-meat",
+    "tuna"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7d2e084dbb6edc478d72eafd7171084d9aad0d12256e4a0636417c70834b277b"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6653748331e41ed1337f0d95b1c1bc819f77942fe6b9abc8576c96d7dcda5219"
+    }
+  }
+}

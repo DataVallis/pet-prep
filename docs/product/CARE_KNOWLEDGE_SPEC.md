@@ -33,7 +33,7 @@ Vsak steber ima **vrsto (species) kot obvezno polje** — nova vrsta (zajec, mor
 Ena vrstica = **živilo × vrsta**. Polja: stopnja, kratek odgovor (≤ 50 besed), zakaj (snov / mehanizem), znaki, kaj storiti, količina / oblika (npr. »jabolko brez pešk«), viri s citati, otroška razlaga.
 
 Stopnje (zaprt seznam, ista beseda povsod):
-1. **Strupeno — takoj k veterinarju** (čokolada, grozdje/rozine, ksilitol, čebula/česen, makadamija, alkohol, surovo kvašeno testo; pri muci tudi lilije*)
+1. **Strupeno — takoj k veterinarju** (čokolada, grozdje/rozine, čebula/česen, alkohol, surovo kvašeno testo; pri psu tudi ksilitol in makadamija; pri muci tudi lilije*). Stopnja velja **za vsako vrsto posebej po virih** — npr. makadamija in ksilitol nista opisana kot strupena za mačke (Merck: mačke niso ogrožene zaradi ksilitola), zato ju pri muci ne uvrstimo med strupena.
 2. **Nevarno** (kuhane kosti, koruzni storži, koščice, zelo mastna hrana, sol v velikih količinah, kofein)
 3. **Ni priporočljivo** (mleko pri odraslih mačkah, mandlji in drugi oreščki, pekoče, surova jajca)
 4. **Varno v majhnih količinah** (jabolko brez pešk, korenje, stročji fižol, kumara, kuhan pust piščanec …)

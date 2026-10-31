@@ -8,6 +8,17 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-31 — »Kaj lahko jedo psi?« — baza znanja z viri za vsako živilo
+
+**Kaj:** David je na Instagramu videl priljubljeno objavo »These Foods Can Kill Your Dog« in rekel: to damo v PetPrep, v aplikacijo in na spletno stran, za vse živali. V enem dopoldnevu je nastala baza znanja: za psa 55 in za mačko 44 živil, vsako s stopnjo nevarnosti, razlogom, znaki, kaj storiti, razlago za otroke in viri (ASPCA, Merck Veterinary Manual, FDA, VCA, Cornell, Blue Cross, Cats Protection …) z dobesednimi citati; vsako je neodvisno preveril drugi AI agent. Na petprep.si dobi vsako živilo svojo stran (EN + SL), nočno opravilo pa vsak večer doda 10 novih, dokler seznam (~180 živil na vrsto) ni prazen.
+**Zakaj je pomembno:** objava, ki je navdihnila idejo, ima napake (mandlji, mleko in čili pod »lahko ubije psa«). PetPrep vsako živilo razvrsti po dejanski nevarnosti z virom — natančnost je naša razlika in hkrati to, kar iskalniki in AI asistenti (ChatGPT, Google AI Overviews) radi citirajo. Za mačke smo našli, da ksilitol in makadamija nista opisana kot strupena (Merck) — stopnje so vedno po vrsti.
+**Številke:** 99 strani živil × 2 jezika v prvem valu, 139 virov, 4 pisci + 2 neodvisna preverjevalca, 10 živil na noč naprej.
+- 📣 »Mandlji psa ne ubijejo, grozdje pa lahko. Na petprep.si za vsako živilo: kako nevarno je, zakaj in kaj storiti — z viri.«
+- 👩 Starši: ena stran za vsako »Ali lahko pes je …?«, z znaki in jasnim »pokličite veterinarja«; razlaga za otroke na vsaki strani.
+- 🧒 »Grozdje je za ljudi, ne za kužke. Raje mu daj pasji priboljšek!«
+- 💼 Vsebinski motor za SEO/GEO, ki raste sam (nočna avtomatika), s preverjanjem kakovosti, kot ga imajo zanimivosti pasem.
+- 🛠 Vsebina v gitu (`docs/research/care/`), izvoz `care-knowledge.json`, spletna stran jo vsako uro prevzame (`care-sync.yml`); objavi se samo jezik, katerega `verified_hash` ustreza besedilu.
+
 ## 2026-10-31 — Palica s peresom kot pravi lov, crkljanje po pravilu 3 sekund, nega čez cel zaslon
 
 **Kaj:** v aplikaciji so zgrajene še zadnje tri igre novega igralnega sloja (GAMES_SPEC fazi 2 in 4; potrebujejo novo gradnjo v trgovini). **Palica s peresom (muca):** testerji so se pritoževali, da igra ni zabavna, da traja minuto, da je besedilo pod palcem, da pravila niso jasna in da hitro metanje peresa iz zaslona zmaga. Zdaj je en lov ~25 s: muca čez cel zaslon (zalezovanje → pritajena zanka → skok → ulov, vsi posnetki naloženi pred začetkom), pero sledi prstu malo nad njim (palec ga ne prekrije) in svetlo igralno polje; pred skokom nad muco utripajo očke 👀 z obročem odštevanja, ki se obarva jantarno, če se pero v zadnji sekundi premakne; ★ za vsak izmik in ★, ko otrok muco pusti ujeti pero; besedilo samo zgoraj, vsaj 2 s; na koncu zvezdice strežnika in en namig. Poteg iz zaslona je en premik izven polja (prej se je dolg poteg razdelil in prvi kos je štel). **Crkljanje (pes in muca):** tri srca po ~3 s počasnega božanja, vmes premor, ko ljubljenček »prosi za več« (💗 »Še!«); prehitro božanje → 🐢. **Česanje, menjava peska, nega pasme in praskalnik** tečejo čez cel zaslon z istimi pravili.

@@ -1,0 +1,147 @@
+{
+  "slug": "alcohol",
+  "species": "dog",
+  "name": {
+    "en": "Alcohol",
+    "sl": "Alkohol"
+  },
+  "question": {
+    "en": "Can dogs drink alcohol?",
+    "sl": "Ali lahko psi pijejo alkohol?"
+  },
+  "url_slug": {
+    "en": "alcohol",
+    "sl": "alkohol"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Alcohol is toxic to dogs. Drinks and foods containing alcohol can cause vomiting, wobbliness, breathing problems and tremors. Alcohol is absorbed quickly, and signs usually begin within 15–90 minutes, so act fast.",
+    "sl": "Ne. Alkohol je za pse strupen. Pijače in hrana z alkoholom lahko povzročijo bruhanje, opotekanje, težave z dihanjem in tresenje. Alkohol se hitro vsrka, znaki pa se običajno začnejo v 15–90 minutah, zato ukrepajte hitro."
+  },
+  "why": {
+    "en": "Alcohol (ethanol) is rapidly absorbed into the blood and depresses the nervous system. It is not only in drinks: it is also in liquor-filled sweets, raw rising bread dough, hand sanitiser and mouthwash. All animals are at risk.",
+    "sl": "Alkohol (etanol) se hitro vsrka v kri in zavira živčevje. Ni le v pijačah: najdemo ga tudi v bonbonih z alkoholnim polnilom, surovem vzhajanem testu, razkužilu za roke in ustni vodi. Ogrožene so vse živali."
+  },
+  "signs": {
+    "en": [
+      "Vomiting and diarrhoea",
+      "Wobbliness and loss of coordination",
+      "Drowsiness, depression",
+      "Difficulty breathing",
+      "Tremors",
+      "Signs usually start within 15–90 minutes"
+    ],
+    "sl": [
+      "Bruhanje in driska",
+      "Opotekanje in slaba koordinacija",
+      "Zaspanost, potrtost",
+      "Težko dihanje",
+      "Tresenje",
+      "Znaki se običajno začnejo v 15–90 minutah"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline immediately. Note what your dog drank or ate and roughly how much. Don't wait for signs: alcohol acts fast, and early treatment is key.",
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj je pes popil ali pojedel in približno koliko. Ne čakajte na znake: alkohol deluje hitro, zgodnje zdravljenje pa je ključno."
+  },
+  "serving": null,
+  "child": {
+    "en": "Grown-up drinks are never for dogs. If a dog drinks some, it can get very ill fast, so tell a grown-up right away.",
+    "sl": "Pijače za odrasle niso nikoli za pse. Če jih pes popije, lahko hitro zelo zboli, zato takoj povej odraslemu."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is a lick of beer okay?",
+        "sl": "Je en polizek piva v redu?"
+      },
+      "a": {
+        "en": "No. Drinks and foods containing alcohol are toxic to dogs. Never offer alcohol, and call your vet if your dog drinks some.",
+        "sl": "Ne. Pijače in hrana z alkoholom so za pse strupene. Psu alkohola nikoli ne ponudite in pokličite veterinarja, če ga popije."
+      }
+    },
+    {
+      "q": {
+        "en": "Where else can a dog find alcohol at home?",
+        "sl": "Kje drugje doma lahko pes najde alkohol?"
+      },
+      "a": {
+        "en": "In liquor-filled sweets, raw rising bread dough, hand sanitiser and mouthwash.",
+        "sl": "V bonbonih z alkoholnim polnilom, surovem vzhajanem testu, razkužilu za roke in ustni vodi."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD1",
+      "quote": "Alcoholic beverages and food products containing alcohol can cause vomiting, diarrhea, incoordination, depression,"
+    },
+    {
+      "id": "KD1",
+      "quote": "difficulty breathing, tremors, changes in blood pH, coma and even death."
+    },
+    {
+      "id": "KD1",
+      "quote": "Alcohol is rapidly absorbed after ingestion, so it's important to take prompt action."
+    },
+    {
+      "id": "KD11",
+      "quote": "Common sources of ethanol include alcoholic beverages, liquor-containing candies, hand sanitizer, mouth wash"
+    },
+    {
+      "id": "KD11",
+      "quote": "raw or rising yeast-based bread dough"
+    },
+    {
+      "id": "KD11",
+      "quote": "All animals are at risk of alcohol poisoning, but cats are especially sensitive."
+    },
+    {
+      "id": "KD11",
+      "quote": "Clinical signs usually occur quickly after exposure to a toxic dose of alcohol; likely within 15 to 90 minutes."
+    },
+    {
+      "id": "KD11",
+      "quote": "If your pet has been exposed to any form of alcohol, immediately call your veterinarian or Pet Poison Helpline"
+    },
+    {
+      "id": "KD11",
+      "quote": "Early intervention is key to successful treatment of alcohol poisoning."
+    },
+    {
+      "id": "KD12",
+      "quote": "Clinical signs of ethanol intoxication (inebriation, CNS depression) and gastric distention can occur."
+    },
+    {
+      "id": "KD4",
+      "quote": "If you suspect your dog has ingested alcohol, contact your vet immediately."
+    },
+    {
+      "id": "KD1",
+      "quote": "As always, if you suspect your pet has eaten any of the following foods, please note the amount ingested"
+    },
+    {
+      "id": "KD1",
+      "quote": "and contact your veterinarian or poison control at (888) 426-4435."
+    }
+  ],
+  "related": [
+    "raw-yeast-dough",
+    "coffee",
+    "energy-drinks",
+    "chocolate"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9e8afefed02accb15e5a2864583f4702485f08d71294b2aedd4c3937c4589e7c"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c80eb32e15147506374ce06b6cdebc638b89fab1bbfaba0009c09a7435789e59"
+    }
+  }
+}

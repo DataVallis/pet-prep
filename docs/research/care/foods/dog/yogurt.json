@@ -1,0 +1,133 @@
+{
+  "slug": "yogurt",
+  "species": "dog",
+  "name": {
+    "en": "Yogurt",
+    "sl": "Jogurt"
+  },
+  "question": {
+    "en": "Can dogs eat yogurt?",
+    "sl": "Ali lahko psi jedo jogurt?"
+  },
+  "url_slug": {
+    "en": "yogurt",
+    "sl": "jogurt"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, in small amounts, if it is plain and unsweetened and your dog tolerates dairy. Some dogs get tummy upset from lactose. Never give yogurt with xylitol or other sweeteners, or with added sugar.",
+    "sl": "Da, v majhnih količinah, če je navaden, nesladkan in ga pes prenaša. Nekaterim psom laktoza razdraži prebavo. Nikoli ne dajte jogurta s ksilitolom ali drugimi sladili ali z dodanim sladkorjem."
+  },
+  "why": {
+    "en": "Many dogs have trouble digesting lactose, which can cause gas, diarrhoea or vomiting. Greek-style yogurt has less lactose, so it is usually the better choice. Some sweeteners, especially xylitol, are toxic to dogs, and too much dairy fat can upset the stomach or cause pancreatitis.",
+    "sl": "Mnogi psi težko prebavljajo laktozo, kar lahko povzroči vetrove, drisko ali bruhanje. Grški jogurt ima manj laktoze, zato je običajno boljša izbira. Nekatera sladila, predvsem ksilitol, so za pse strupena, preveč mlečne maščobe pa lahko razdraži želodec ali povzroči vnetje trebušne slinavke."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Start with a small amount and watch for gas, diarrhoea or vomiting; stop if they appear. If the yogurt contained xylitol, contact your vet or a pet poison helpline right away.",
+    "sl": "Začnite z majhno količino in opazujte, ali se pojavijo vetrovi, driska ali bruhanje; če se, prenehajte. Če je jogurt vseboval ksilitol, takoj pokličite veterinarja ali center za zastrupitve živali."
+  },
+  "serving": {
+    "en": "Plain yogurt with no added sweeteners, ideally Greek-style; check the label for sugar and xylitol.",
+    "sl": "Navaden jogurt brez dodanih sladil, najbolje grški; na etiketi preverite sladkor in ksilitol."
+  },
+  "child": {
+    "en": "A little plain yogurt can be a treat for some dogs. Sweet or flavoured yogurt is not for dogs.",
+    "sl": "Malo navadnega jogurta je za nekatere pse lahko priboljšek. Sladek ali aromatiziran jogurt ni za pse."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is Greek yogurt better for dogs?",
+        "sl": "Je grški jogurt boljši za pse?"
+      },
+      "a": {
+        "en": "Usually yes: plain Greek-style yogurt has lower levels of lactose than regular yogurt.",
+        "sl": "Običajno da: navaden grški jogurt ima manj laktoze kot običajni jogurt."
+      }
+    },
+    {
+      "q": {
+        "en": "Why check the label?",
+        "sl": "Zakaj preveriti etiketo?"
+      },
+      "a": {
+        "en": "Some yogurts contain sweeteners such as xylitol, which is toxic to dogs, or added sugar.",
+        "sl": "Nekateri jogurti vsebujejo sladila, kot je ksilitol, ki je za pse strupen, ali dodan sladkor."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD52",
+      "quote": "Can most dogs eat yogurt? Yes, but it’s not always a good idea."
+    },
+    {
+      "id": "KD52",
+      "quote": "many dogs have trouble digesting foods that contain lactose."
+    },
+    {
+      "id": "KD52",
+      "quote": "some artificial sweeteners, such as xylitol, are toxic to dogs."
+    },
+    {
+      "id": "KD52",
+      "quote": "This yogurt is typically better for dogs because it has lower levels of lactose."
+    },
+    {
+      "id": "KD52",
+      "quote": "If you feed your dog yogurt, it should be plain and free of any added sweeteners."
+    },
+    {
+      "id": "KD52",
+      "quote": "feed your dog a small amount at first and see how they react."
+    },
+    {
+      "id": "KD52",
+      "quote": "Dogs’ bodies aren’t designed to digest lactose after puppyhood, and, therefore, a food high in lactose can cause gas,"
+    },
+    {
+      "id": "KD52",
+      "quote": "Any time you give a dog too much fat in their diet, they can suffer from stomach upset, or even pancreatitis,"
+    },
+    {
+      "id": "KD52",
+      "quote": "Added sugars aren’t healthy for and some artificial sweeteners, such as xylitol, are toxic to dogs."
+    },
+    {
+      "id": "KD5",
+      "quote": "Plain yogurt is a good snack for dogs who can tolerate dairy products."
+    },
+    {
+      "id": "KD45",
+      "quote": "milk and other dairy-based products can cause diarrhea or other digestive upset."
+    },
+    {
+      "id": "KD51",
+      "quote": "Greek yoghurt"
+    },
+    {
+      "id": "KD53",
+      "quote": "Check the label for xylitol in the ingredients of products, especially ones that advertise as sugar-free or low sugar."
+    }
+  ],
+  "related": [
+    "milk",
+    "cheese",
+    "ice-cream",
+    "xylitol"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9a8932e1cfa08478398498708582b5f12f581bbd782af657da68a63b6fae77bb"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4eab2c1ac90a3d7b89b3a0012a728c74d3118de58af778d4e5ee5e598c8ca0f1"
+    }
+  }
+}

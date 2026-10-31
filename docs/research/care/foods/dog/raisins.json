@@ -1,0 +1,143 @@
+{
+  "slug": "raisins",
+  "species": "dog",
+  "name": {
+    "en": "Raisins",
+    "sl": "Rozine"
+  },
+  "question": {
+    "en": "Can dogs eat raisins?",
+    "sl": "Ali lahko psi jedo rozine?"
+  },
+  "url_slug": {
+    "en": "raisins",
+    "sl": "rozine"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Raisins are dried grapes, and dogs should never eat them. They can cause kidney failure, and even a small amount can make a dog seriously ill. There is no way to predict which dogs will be affected.",
+    "sl": "Ne. Rozine so posušeno grozdje in psi jih ne smejo nikoli jesti. Lahko povzročijo odpoved ledvic, že majhna količina pa lahko psu resno škodi. Ni mogoče napovedati, kateri psi bodo prizadeti."
+  },
+  "why": {
+    "en": "Raisins, grapes and currants can damage a dog's kidneys. Tartaric acid is suspected to be the toxic part; its amount varies, so effects are unpredictable, and there is no way to tell which dogs are more sensitive. Because the cause is uncertain, any amount is treated as a concern.",
+    "sl": "Rozine, grozdje in korinte lahko poškodujejo pasje ledvice. Za strupeno sestavino velja vinska kislina; njena količina se razlikuje, zato so učinki nepredvidljivi, in ni mogoče vedeti, kateri psi so bolj občutljivi. Ker vzrok ni pojasnjen, se vsaka količina jemlje resno."
+  },
+  "signs": {
+    "en": [
+      "Vomiting or diarrhoea, often within 6–24 hours",
+      "Tiredness and weakness",
+      "Not wanting to eat",
+      "Tummy pain",
+      "Dehydration and drinking a lot",
+      "Trembling"
+    ],
+    "sl": [
+      "Bruhanje ali driska, pogosto v 6–24 urah",
+      "Utrujenost in šibkost",
+      "Pes noče jesti",
+      "Bolečine v trebuhu",
+      "Izsušenost in veliko pitja",
+      "Tresenje"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline right away, even if only a few raisins were eaten. Note roughly how many were eaten. Don't wait for signs: the sooner treatment starts, the better.",
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če je pes pojedel le nekaj rozin. Zapišite si, približno koliko jih je pojedel. Ne čakajte na znake: prej ko se zdravljenje začne, bolje je."
+  },
+  "serving": null,
+  "child": {
+    "en": "Raisins are tiny dried grapes, and they are not for dogs. If your dog eats some, tell a grown-up right away.",
+    "sl": "Rozine so majhno posušeno grozdje in niso za pse. Če jih pes poje, takoj povej odraslemu."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are raisins worse than grapes?",
+        "sl": "So rozine slabše od grozdja?"
+      },
+      "a": {
+        "en": "Both are dangerous. Sources treat grapes, raisins and currants as the same risk and advise calling the vet after any amount.",
+        "sl": "Oboje je nevarno. Viri grozdje, rozine in korinte obravnavajo kot enako tveganje in svetujejo klic veterinarju po kateri koli količini."
+      }
+    },
+    {
+      "q": {
+        "en": "What about currants?",
+        "sl": "Kaj pa korinte?"
+      },
+      "a": {
+        "en": "Currants are named in the same warnings as grapes and raisins, so they are not safe for dogs either.",
+        "sl": "Korinte so navedene v istih opozorilih kot grozdje in rozine, zato tudi one za pse niso varne."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD5",
+      "quote": "Dogs should never eat grapes or raisins (aka dried grapes)."
+    },
+    {
+      "id": "KD6",
+      "quote": "While a favorite healthy snack for people, grapes, raisins, and Zante currants can cause kidney failure in dogs."
+    },
+    {
+      "id": "KD6",
+      "quote": "There is currently no way to predict which dogs may be more susceptible to poisoning."
+    },
+    {
+      "id": "KD6",
+      "quote": "Because the cause remains uncertain, any exposure to grapes, raisins, or currants is a cause for concern."
+    },
+    {
+      "id": "KD6",
+      "quote": "The most common early symptom of grape or raisin poisoning is vomiting or diarrhea within 12 to 24 hours of ingestion."
+    },
+    {
+      "id": "KD6",
+      "quote": "As with any toxin, the sooner the poisoning is diagnosed and treated, the better the prognosis."
+    },
+    {
+      "id": "KD7",
+      "quote": "The tartaric acid content of grapes, raisins, and tamarinds varies, resulting in variable effects following ingestion."
+    },
+    {
+      "id": "KD7",
+      "quote": "Most dogs with grape, raisin, or tamarind toxicosis develop vomiting or diarrhea within 6–12 hours after ingestion."
+    },
+    {
+      "id": "KD7",
+      "quote": "Other clinical signs include lethargy, anorexia, abdominal pain, weakness, dehydration, polydipsia, and tremors (shivering)."
+    },
+    {
+      "id": "KD4",
+      "quote": "Grapes and raisins can put dogs at risk of kidney failure – even a small amount can make your dog seriously ill."
+    },
+    {
+      "id": "KD1",
+      "quote": "As always, if you suspect your pet has eaten any of the following foods, please note the amount ingested"
+    },
+    {
+      "id": "KD1",
+      "quote": "and contact your veterinarian or poison control at (888) 426-4435."
+    }
+  ],
+  "related": [
+    "grapes",
+    "chocolate",
+    "macadamia-nuts",
+    "raw-yeast-dough"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "df994dfa2fadbc67284791dd47aaffd09c3b8ff5bafdb4f2f475fe4a11c7cabd"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c21f3739809b972942c2dada1540ac5c16b2245034a73724a16bf17cd28fc01a"
+    }
+  }
+}

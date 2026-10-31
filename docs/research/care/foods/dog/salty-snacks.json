@@ -1,0 +1,146 @@
+{
+  "slug": "salty-snacks",
+  "species": "dog",
+  "name": {
+    "en": "Salty snacks",
+    "sl": "Slani prigrizki"
+  },
+  "question": {
+    "en": "Can dogs eat salty snacks?",
+    "sl": "Ali lahko psi jedo slane prigrizke?"
+  },
+  "url_slug": {
+    "en": "salty-snacks",
+    "sl": "slani-prigrizki"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "Not recommended. A few salty snacks are unlikely to cause salt poisoning in a healthy dog with fresh water, but salty foods are generally not good for dogs, especially those with heart disease. Eating a lot can cause thirst, vomiting and worse.",
+    "sl": "Ni priporočljivo. Nekaj slanih prigrizkov pri zdravem psu s svežo vodo verjetno ne povzroči zastrupitve s soljo, a slana hrana psom na splošno ne koristi, zlasti tistim z boleznijo srca. Večja količina lahko povzroči žejo, bruhanje in hujše težave."
+  },
+  "why": {
+    "en": "Salty food in moderation should not cause salt toxicity, but too much salt can lead to fluid retention and, in large amounts, salt poisoning. Small dogs with health issues are more at risk when fresh water isn't available. Dog foods are best served without added salt or seasoning.",
+    "sl": "Slana hrana v zmernih količinah naj ne bi povzročila zastrupitve s soljo, preveč soli pa lahko vodi v zastajanje tekočine in pri velikih količinah v zastrupitev. Majhni psi z zdravstvenimi težavami so bolj ogroženi, kadar nimajo sveže vode. Hrano za pse je najbolje ponuditi brez dodane soli in začimb."
+  },
+  "signs": {
+    "en": [
+      "Strong thirst and peeing a lot",
+      "Vomiting, often within a few hours",
+      "Diarrhoea",
+      "Wobbliness, tiredness",
+      "Tremors or seizures"
+    ],
+    "sl": [
+      "Huda žeja in pogosto uriniranje",
+      "Bruhanje, pogosto v nekaj urah",
+      "Driska",
+      "Opotekanje, utrujenost",
+      "Tresenje ali krči"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog ate a large amount of salty snacks, contact your vet or a pet poison helpline. Note what and how much was eaten. Fresh water should always be available.",
+    "sl": "Če je pes pojedel veliko slanih prigrizkov, pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj in koliko je pojedel. Sveža voda naj bo vedno na voljo."
+  },
+  "serving": {
+    "en": "Better not to share. If you give people food, serve it plain, without salt or seasoning.",
+    "sl": "Raje jih ne delite. Če psu daste človeško hrano, naj bo navadna, brez soli in začimb."
+  },
+  "child": {
+    "en": "Salty snacks are for people. Too much salt makes dogs thirsty and sick, so give your dog its own treats.",
+    "sl": "Slani prigrizki so za ljudi. Preveč soli psa odžeja in mu škodi, zato mu daj njegove priboljške."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Does my dog need water after salty food?",
+        "sl": "Potrebuje pes po slani hrani vodo?"
+      },
+      "a": {
+        "en": "Yes. Fresh drinking water helps a dog flush out salt; salt poisoning is unlikely when fresh water is available.",
+        "sl": "Da. Sveža pitna voda psu pomaga izplakniti sol; zastrupitev s soljo je malo verjetna, kadar ima pes svežo vodo."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD1",
+      "quote": "Excessive salt intake can produce increased thirst and urination"
+    },
+    {
+      "id": "KD1",
+      "quote": "Signs of salt toxicity can include vomiting, diarrhea, depression, tremors, seizures and even death."
+    },
+    {
+      "id": "KD42",
+      "quote": "Excess salt intake in dogs results in vomiting within several hours after ingestion."
+    },
+    {
+      "id": "KD42",
+      "quote": "Clinical signs can progress to weakness, diarrhea, muscle tremors, and seizures."
+    },
+    {
+      "id": "KD42",
+      "quote": "Salt toxicosis is unlikely to occur as long as sodium-regulating mechanisms are intact and fresh drinking water is available."
+    },
+    {
+      "id": "KD40",
+      "quote": "The feeding of salty foods in moderation should not cause salt toxicity."
+    },
+    {
+      "id": "KD40",
+      "quote": "But in small dogs with metabolic issues, it may cause more concern if there is no access to fresh water."
+    },
+    {
+      "id": "KD40",
+      "quote": "Generally, the feeding of excessive salty foods is not good for dogs,"
+    },
+    {
+      "id": "KD40",
+      "quote": "especially for those that have certain medical issues such as heart disease"
+    },
+    {
+      "id": "KD40",
+      "quote": "because it can cause fluid retention."
+    },
+    {
+      "id": "KD40",
+      "quote": "Lack of coordination or being wobbly on their feet"
+    },
+    {
+      "id": "KD40",
+      "quote": "Lethargy"
+    },
+    {
+      "id": "KD40",
+      "quote": "If you suspect your dog has consumed too much salt, contact a veterinarian or the Pet Poison Helpline immediately."
+    },
+    {
+      "id": "KD40",
+      "quote": "Dogs can tolerate fairly high salt levels if they're able to drink a lot and therefore flush the salt from their system."
+    },
+    {
+      "id": "KD5",
+      "quote": "Serve foods plain, fully cooked when required, and without salt, sugar, added fats, or seasonings."
+    }
+  ],
+  "related": [
+    "salt",
+    "chips",
+    "ham",
+    "bacon"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fa76d81055ba8f47905dd36ff5a8ddfb4e1b7714b764ddfd7cefa17bd834408c"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "34eee76d3dd53546c154e2f7d44a41e864494fb5d5b3c3b4ec80d4bff2aa6b1f"
+    }
+  }
+}

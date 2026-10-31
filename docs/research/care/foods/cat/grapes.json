@@ -1,0 +1,115 @@
+{
+  "slug": "grapes",
+  "species": "cat",
+  "name": {
+    "en": "Grapes",
+    "sl": "Grozdje"
+  },
+  "question": {
+    "en": "Can cats eat grapes?",
+    "sl": "Ali lahko mačke jedo grozdje?"
+  },
+  "url_slug": {
+    "en": "grapes",
+    "sl": "grozdje"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Grapes are on the list of foods toxic to cats, and eating them can cause kidney failure. Avoid them completely, even small amounts, and call your vet if your cat eats any.",
+    "sl": "Ne. Grozdje je na seznamu živil, ki so za mačke strupena, in lahko povzroči odpoved ledvic. Popolnoma se mu izogibajte, tudi majhnim količinam, in pokličite veterinarja, če ga muca poje."
+  },
+  "why": {
+    "en": "Cat welfare charities warn that grapes can cause kidney failure in cats, and that cats with chronic kidney disease may be at greater risk. Grape poisoning in cats is rare and not well understood, and some sources only describe it in dogs, so we use the stricter level: treat any amount as an emergency.",
+    "sl": "Organizacije za dobrobit mačk opozarjajo, da lahko grozdje pri mačkah povzroči odpoved ledvic in da so mačke s kronično ledvično boleznijo morda še bolj ogrožene. Zastrupitev z grozdjem je pri mačkah redka in slabo raziskana, nekateri viri jo opisujejo le pri psih, zato izberemo strožjo stopnjo: vsako količino obravnavajte kot nujen primer."
+  },
+  "signs": {
+    "en": [
+      "Vomiting, often within a day"
+    ],
+    "sl": [
+      "Bruhanje, pogosto v enem dnevu"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline right away. Note how many grapes your cat ate and when. Don't wait for signs to appear, and don't try to make your cat sick at home.",
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, koliko grozdja je muca pojedla in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju."
+  },
+  "serving": null,
+  "child": {
+    "en": "Grapes are yummy for us but not safe for cats. Keep them on your plate and tell a grown-up if kitty eats one.",
+    "sl": "Nam je grozdje okusno, za muce pa ni varno. Naj ostane na tvojem krožniku. Če ga muca poje, povej odraslemu."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are cats with kidney disease at more risk?",
+        "sl": "So mačke z ledvično boleznijo bolj ogrožene?"
+      },
+      "a": {
+        "en": "Cats Protection says cats with chronic kidney disease may be at greater risk from grapes.",
+        "sl": "Cats Protection navaja, da so mačke s kronično ledvično boleznijo zaradi grozdja morda bolj ogrožene."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC5",
+      "quote": "grapes, raisins and currants"
+    },
+    {
+      "id": "KC5",
+      "quote": "Consuming this fruit can cause kidney failure in cats."
+    },
+    {
+      "id": "KC5",
+      "quote": "Those with chronic kidney disease may be at greater risk."
+    },
+    {
+      "id": "KC14",
+      "quote": "Onions and garlic can sometimes be poisonous, whether cooked or raw, as can raisins and grapes."
+    },
+    {
+      "id": "KC14",
+      "quote": "It’s best to avoid feeding these at all, even in small quantities."
+    },
+    {
+      "id": "KC29",
+      "quote": "Grape and raisin poisoning in cats is not well understood and is very rare."
+    },
+    {
+      "id": "KC29",
+      "quote": "Cats can develop intense vomiting within 24 hours of ingesting grapes or raisins"
+    },
+    {
+      "id": "KC1",
+      "quote": "Since dogs are not able to process tartaric acid, exposure to grapes/raisins can lead to kidney damage."
+    },
+    {
+      "id": "KC8",
+      "quote": "Contact your veterinary team for advice immediately; make sure you know when, where, and how the poisoning occurred."
+    },
+    {
+      "id": "KC22",
+      "quote": "Don’t try to make your cat sick without asking the vet and never given them medicines designed for humans."
+    }
+  ],
+  "related": [
+    "raisins",
+    "chocolate",
+    "onion",
+    "cherries"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8dd272b0b6b77ca808ed0d07da222810387000597a4db1a3b96089ce3f76e509"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "53a58b9e3abea1f3c90b89b53619b3dfb098572c6fd4e40415b545ce49138ac1"
+    }
+  }
+}

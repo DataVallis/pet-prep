@@ -1,0 +1,129 @@
+{
+  "slug": "turkey",
+  "species": "dog",
+  "name": {
+    "en": "Turkey",
+    "sl": "Puran"
+  },
+  "question": {
+    "en": "Can dogs eat turkey?",
+    "sl": "Ali lahko psi jedo puranovo meso?"
+  },
+  "url_slug": {
+    "en": "turkey",
+    "sl": "puran"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a little plain cooked turkey meat is safe for most dogs. Remove the skin, excess fat and all bones first. Turkey cooked with seasoning, onion or garlic, and onion gravy or stuffing, are not for dogs.",
+    "sl": "Da, malo navadnega kuhanega puranovega mesa je za večino psov varno. Najprej odstranite kožo, odvečno maščobo in vse kosti. Puran, pripravljen z začimbami, čebulo ali česnom, ter omaka s čebulo ali nadev niso za pse."
+  },
+  "why": {
+    "en": "Turkey isn't toxic, but how it is cooked matters. Skin and fat are rich and can cause pancreatitis, while extra seasonings can irritate a dog's stomach. Onions and garlic can be toxic to dogs. Cooked poultry bones are brittle and can splinter. White meat is leaner than dark meat.",
+    "sl": "Puran ni strupen, pomembno pa je, kako je pripravljen. Koža in maščoba sta težki in lahko povzročita vnetje trebušne slinavke, začimbe pa lahko psu razdražijo želodec. Čebula in česen sta lahko za pse strupena. Kuhane perutninske kosti so krhke in se lahko razcepijo. Belo meso je bolj pusto od temnega."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If your dog ate turkey skin, fatty scraps or seasoned meat, watch for vomiting, diarrhoea or belly pain over the next few days and call your vet if they appear. If it ate bones or food with onion or garlic, call your vet straight away.",
+    "sl": "Če je pes pojedel puranovo kožo, mastne ostanke ali začinjeno meso, v naslednjih dneh opazujte, ali bruha, ima drisko ali ga boli trebuh, in pokličite veterinarja, če se to pojavi. Če je pojedel kosti ali hrano s čebulo ali česnom, takoj pokličite veterinarja."
+  },
+  "serving": {
+    "en": "Plain cooked turkey meat, ideally white meat, with no skin, excess fat or bones, no seasoning; a small amount.",
+    "sl": "Navadno kuhano puranovo meso, najbolje belo, brez kože, odvečne maščobe in kosti, brez začimb; v majhni količini."
+  },
+  "child": {
+    "en": "A little plain turkey with no skin or bones is a nice dog treat. Turkey bones are never for dogs.",
+    "sl": "Malo navadnega purana brez kože in kosti je lep pasji priboljšek. Puranove kosti nikoli niso za pse."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can I give my dog leftovers from a holiday turkey?",
+        "sl": "Ali lahko psu dam ostanke prazničnega purana?"
+      },
+      "a": {
+        "en": "Only plain meat without skin or bones. Keep stuffing and onion-based gravy away from your dog.",
+        "sl": "Le navadno meso brez kože in kosti. Nadev in omako s čebulo držite stran od psa."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD82",
+      "quote": "Turkey isn’t inherently toxic to dogs."
+    },
+    {
+      "id": "KD82",
+      "quote": "Whether or not dogs can eat turkey depends on how the turkey is cooked."
+    },
+    {
+      "id": "KD82",
+      "quote": "Remove turkey skin."
+    },
+    {
+      "id": "KD82",
+      "quote": "High fat content can cause pancreatitis, while all the extra spices and seasonings can irritate your dog’s stomach."
+    },
+    {
+      "id": "KD82",
+      "quote": "Onions are toxic to dogs, and garlic can be toxic in large quantities."
+    },
+    {
+      "id": "KD82",
+      "quote": "Cooked poultry bones are brittle."
+    },
+    {
+      "id": "KD5",
+      "quote": "Cooked turkey meat is safe for dogs, but remove excess fat, skin, and all bones from the meat before sharing in moderation."
+    },
+    {
+      "id": "KD5",
+      "quote": "White meat turkey is leaner than dark meat turkey, so if your dog is susceptible to pancreatitis, ask your vet what’s best fo"
+    },
+    {
+      "id": "KD5",
+      "quote": "Never give your dog cooked poultry bones; they can splinter and create a veterinary emergency."
+    },
+    {
+      "id": "KD56",
+      "quote": "turkey meat (no skin or bones)"
+    },
+    {
+      "id": "KD48",
+      "quote": "ensure that your dog is kept away from sage and onion stuffing, onion-based gravies or any other allium-based foods."
+    },
+    {
+      "id": "KD34",
+      "quote": "If you do suspect your pet has swallowed something you should contact your vet for advice immediately."
+    },
+    {
+      "id": "KD55",
+      "quote": "While there’s not a “toxicity” issue from fatty table foods (such as bacon, gravy, turkey skin, grizzle, etc.), it can result"
+    },
+    {
+      "id": "KD55",
+      "quote": "Delayed onset vomiting (1-4 days after fatty meal ingestion), abdominal pain, diarrhea (+/- blood), reduced appetite and leth"
+    }
+  ],
+  "related": [
+    "cooked-chicken",
+    "cooked-bones",
+    "fatty-meat",
+    "onion",
+    "garlic",
+    "butter"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "94bf1ee5a5b2fcb0ac88c9f2d36732e8ad4178e13e1fdc25844a6b44fe7b7f78"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7f2c3525abc30da53576f00497f70b342b2027285af0e9163cc20789a6c1a4e8"
+    }
+  }
+}

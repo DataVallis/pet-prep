@@ -1,0 +1,137 @@
+{
+  "slug": "tea",
+  "species": "cat",
+  "name": {
+    "en": "Tea",
+    "sl": "Čaj"
+  },
+  "question": {
+    "en": "Can cats drink tea?",
+    "sl": "Ali lahko mačke pijejo čaj?"
+  },
+  "url_slug": {
+    "en": "tea",
+    "sl": "caj"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Many teas contain caffeine, and cats are more sensitive to caffeine than people. Tea bags are especially risky. Don't share your tea, and call your vet if your cat chews a tea bag or drinks caffeinated tea.",
+    "sl": "Ne. Veliko čajev vsebuje kofein, mačke pa so nanj bolj občutljive kot ljudje. Posebej tvegane so čajne vrečke. Čaja ne delite z muco in pokličite veterinarja, če prežveči čajno vrečko ali popije čaj s kofeinom."
+  },
+  "why": {
+    "en": "Many teas contain caffeine. Cats are more sensitive to caffeine than people. Like chocolate, coffee and other caffeine-containing foods have high levels of stimulants called methylxanthines; caffeine speeds up the heart, makes cats restless and upsets the stomach.",
+    "sl": "Veliko čajev vsebuje kofein. Mačke so na kofein bolj občutljive kot ljudje. Kava in druga živila s kofeinom imajo tako kot čokolada veliko poživil, imenovanih metilksantini; kofein pospeši srce, povzroči nemir in prebavne težave."
+  },
+  "signs": {
+    "en": [
+      "Restlessness, jitteriness, not wanting to lie still",
+      "Hyperactivity",
+      "Upset stomach",
+      "Fast heartbeat or heart rhythm changes"
+    ],
+    "sl": [
+      "Nemir, živčnost, muca ne more mirovati",
+      "Pretirana živahnost",
+      "Prebavne težave",
+      "Hiter srčni utrip ali spremembe srčnega ritma"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline right away. Note what your cat swallowed (drink, grounds, beans, tea bag or tablets), how much and when. Don't wait for signs to appear, and don't try to make your cat sick at home.",
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, kaj je muca zaužila (pijačo, mleto kavo, zrna, čajno vrečko ali tablete), koliko in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju."
+  },
+  "serving": null,
+  "child": {
+    "en": "Tea is for people. Keep cups and used tea bags away from kitty, and tell a grown-up if she gets into them.",
+    "sl": "Čaj je za ljudi. Skodelice in uporabljene čajne vrečke naj bodo daleč od muce. Če jih najde, povej odraslemu."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are tea bags dangerous?",
+        "sl": "So čajne vrečke nevarne?"
+      },
+      "a": {
+        "en": "Yes. Pet Poison Helpline warns that eating tea bags could cause serious toxicity in cats. Throw used tea bags away where your cat can't reach them.",
+        "sl": "Da. Pet Poison Helpline opozarja, da lahko zaužite čajne vrečke pri mačkah povzročijo resno zastrupitev. Uporabljene vrečke zavrzite tja, kamor muca ne seže."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC9",
+      "quote": "but many teas and sodas contain caffeine too."
+    },
+    {
+      "id": "KC10",
+      "quote": "Many common products contain caffeine including coffee, tea, soda, energy drinks,"
+    },
+    {
+      "id": "KC10",
+      "quote": "However, ingestion of unused coffee grounds or beans, tea bags, or supplements could cause serious toxicity in dogs or cats."
+    },
+    {
+      "id": "KC9",
+      "quote": "Dogs and cats are more sensitive to caffeine than humans are."
+    },
+    {
+      "id": "KC10",
+      "quote": "Dogs and cats appear to be more sensitive to the effects of caffeine than people."
+    },
+    {
+      "id": "KC5",
+      "quote": "chocolate, coffee and foods containing caffeine"
+    },
+    {
+      "id": "KC5",
+      "quote": "All of these products have high concentrations of substances called methylxanthines"
+    },
+    {
+      "id": "KC9",
+      "quote": "Pets that consume caffeine may have an increased heart rate and become hyperactive."
+    },
+    {
+      "id": "KC9",
+      "quote": "They can get jittery and restless and do not want to lie still."
+    },
+    {
+      "id": "KC9",
+      "quote": "Caffeine also affects the gastrointestinal tract and can cause stomach upset."
+    },
+    {
+      "id": "KC10",
+      "quote": "signs of hyperactivity, gastrointestinal upset, changes in heart rate, rhythm and blood pressure"
+    },
+    {
+      "id": "KC9",
+      "quote": "Call your veterinarian or Pet Poison Helpline, a 24/7 animal poison center,"
+    },
+    {
+      "id": "KC9",
+      "quote": "As with all poisoning cases, early intervention is key to successful treatment."
+    },
+    {
+      "id": "KC22",
+      "quote": "Don’t try to make your cat sick without asking the vet and never given them medicines designed for humans."
+    }
+  ],
+  "related": [
+    "coffee",
+    "energy-drinks",
+    "chocolate",
+    "milk"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "410fb4a5c206be4d67a0eada43206fb12855c88a930a37e99089991771763ee0"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2e2e25d0094b7b251a80aa3b59a00c62f3c68f1e548584f669a7d124bdb6860f"
+    }
+  }
+}
