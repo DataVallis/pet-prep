@@ -9,7 +9,7 @@
  *     cue … perform_at                     → `listening`: big command chip + 👂, attention loop
  *     perform_at … obey_at                 → `performing`: chip + 👂, the performing clip from frame 0, NO text
  *     obey_at … window_end                 → `window`: chip gone (= »now«), success loop, a11y »Kuža se usede.«;
- *                                            below 50 % progress the beginner hint (glow + »Zdaj!«)
+ *                                            the praise hint (glow + »Zdaj!«) in every session
  *     window_end (= release_at) … + mask   → `mask`: the verdict under the FeedbackLayer mask; the cut
  *                                            success loop → attention loop happens under it (Š2 — the
  *                                            reversed release clip is never played)
@@ -330,20 +330,13 @@ export function praiseToken(training: Pick<ChildTraining, 'treat_token'>): Prais
 // ── Clarity layer (David's device test 2026-10-31) ────────────
 
 /**
- * Beginner hint (David 2026-10-31, D Claude): while a command's progress is below this, the token
- * glows / pulses and »Zdaj!« shows the moment the praise window opens. From this progress on there
- * is no hint, so the skill itself is still learned. Display only — nothing stored, no rule changed.
+ * Praise hint (David 2026-10-31): the token glows / pulses and »Zdaj!« / "Now!" shows the moment
+ * the praise window opens — in EVERY session, at any progress (David 31. 10.: he loved it in an
+ * English session and missed it in a later Slovenian one, because the earlier < 50 % progress gate
+ * had switched it off). Display only — nothing stored, no rule changed.
  */
-export const PRAISE_HINT_BELOW_PROGRESS = 50;
-
-/** The hint is on for this session (decided once from the command's progress at the start). */
-export function praiseHintEnabled(progress: number): boolean {
-  return progress < PRAISE_HINT_BELOW_PROGRESS;
-}
-
-/** The hint shows now: enabled and the praise window is open (the server's obey_at … release_at). */
-export function praiseHintOn(frame: Pick<SchoolFrame, 'kind'>, enabled: boolean): boolean {
-  return enabled && frame.kind === 'window';
+export function praiseHintOn(frame: Pick<SchoolFrame, 'kind'>): boolean {
+  return frame.kind === 'window';
 }
 
 /**
@@ -358,13 +351,13 @@ export function tokenWaiting(frame: Pick<SchoolFrame, 'kind'>): boolean {
 
 /**
  * Tap hint (David's device test 2026-10-31: he tried to DRAG the treat to the dog — »mogoče bi
- * lahko tak diskreten namig bil tap«): a small animated finger + »Tapni« on the token while the
- * beginner hint is enabled for this session (same < 50 % gate as »Zdaj!») and no tap has counted
- * yet. Gone after the first counted tap; hidden while the dog ignores (the token says »Počakaj«
- * then). Display only.
+ * lahko tak diskreten namig bil tap«): a small animated finger + »Tapni« on the token in every
+ * session (any progress — the old < 50 % gate is gone, David 31. 10.) until a tap has counted.
+ * Gone after the first counted tap; hidden while the dog ignores (the token says »Počakaj« then).
+ * Display only.
  */
-export function tapHintOn(enabled: boolean, counted: boolean, frame: Pick<SchoolFrame, 'kind'>): boolean {
-  return enabled && !counted && frame.kind !== 'ignoring';
+export function tapHintOn(counted: boolean, frame: Pick<SchoolFrame, 'kind'>): boolean {
+  return !counted && frame.kind !== 'ignoring';
 }
 
 /**

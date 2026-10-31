@@ -18,7 +18,6 @@ import {
   commonMistake,
   earlyEndOpen,
   liveOutcomes,
-  praiseHintEnabled,
   praiseHintOn,
   resultHeadline,
   tokenWaiting,
@@ -35,7 +34,6 @@ import {
   tapHintOn,
   isTokenDrag,
   TOKEN_DRAG_START_PT,
-  PRAISE_HINT_BELOW_PROGRESS,
 } from '@/modules/training/schoolV2/schoolV2';
 import {
   isSchoolV2Session,
@@ -289,20 +287,12 @@ describe('stage plan', () => {
 describe('clarity layer (David\'s device test 2026-10-31)', () => {
   const at = (ms: number) => schoolFrameAt(V2, ms);
 
-  it('beginner hint: on below 50 % progress, off at and above 50 %', () => {
-    expect(praiseHintEnabled(0)).toBe(true);
-    expect(praiseHintEnabled(49)).toBe(true);
-    expect(praiseHintEnabled(50)).toBe(false);
-    expect(praiseHintEnabled(100)).toBe(false);
-  });
-
   it('the hint shows only in the praise window (obey_at … release_at), never while performing or ignoring', () => {
-    expect(praiseHintOn(at(5_499), true)).toBe(false);
-    expect(praiseHintOn(at(5_500), true)).toBe(true);
-    expect(praiseHintOn(at(6_999), true)).toBe(true);
-    expect(praiseHintOn(at(7_000), true)).toBe(false);
-    expect(praiseHintOn(at(5_500), false)).toBe(false);
-    for (let ms = 0; ms < V2.duration_ms; ms += 50) if (praiseHintOn(at(ms), true)) expect(at(ms).kind).toBe('window');
+    expect(praiseHintOn(at(5_499))).toBe(false);
+    expect(praiseHintOn(at(5_500))).toBe(true);
+    expect(praiseHintOn(at(6_999))).toBe(true);
+    expect(praiseHintOn(at(7_000))).toBe(false);
+    for (let ms = 0; ms < V2.duration_ms; ms += 50) if (praiseHintOn(at(ms))) expect(at(ms).kind).toBe('window');
   });
 
   it('the token waits (dimmed) only while the dog visibly ignores — never during the »think« time', () => {
@@ -314,18 +304,11 @@ describe('clarity layer (David\'s device test 2026-10-31)', () => {
     expect(tokenWaiting(at(5_500))).toBe(false);
   });
 
-  it('tap hint (David 2026-10-31): on while the beginner hint is enabled and nothing counted, off after the first counted tap', () => {
-    for (const ms of [0, 2_000, 2_600, 5_600, 8_900, 23_000]) expect(tapHintOn(true, false, at(ms))).toBe(true);
-    for (const ms of [0, 5_600, 23_000]) expect(tapHintOn(true, true, at(ms))).toBe(false);
+  it('tap hint (David 2026-10-31): on while nothing counted, off after the first counted tap', () => {
+    for (const ms of [0, 2_000, 2_600, 5_600, 8_900, 23_000]) expect(tapHintOn(false, at(ms))).toBe(true);
+    for (const ms of [0, 5_600, 23_000]) expect(tapHintOn(true, at(ms))).toBe(false);
     // while the dog visibly ignores the token says »Počakaj« — no »Tapni« next to it
-    expect(tapHintOn(true, false, at(10_600))).toBe(false);
-  });
-
-  it('tap hint shares the »Zdaj!« gate: gone at ≥ 50 % progress', () => {
-    expect(PRAISE_HINT_BELOW_PROGRESS).toBe(50);
-    expect(tapHintOn(praiseHintEnabled(49), false, at(1_000))).toBe(true);
-    expect(tapHintOn(praiseHintEnabled(50), false, at(1_000))).toBe(false);
-    expect(tapHintOn(praiseHintEnabled(100), false, at(5_600))).toBe(false);
+    expect(tapHintOn(false, at(10_600))).toBe(false);
   });
 
   it('a drag starts only after the finger moved TOKEN_DRAG_START_PT', () => {

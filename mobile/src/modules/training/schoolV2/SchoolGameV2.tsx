@@ -18,7 +18,7 @@
  *
  * And what David's device test on 2026-10-31 showed (TestFlight, »Pridi«):
  * - the rule is a STRIP under the top bar for the whole session (`SchoolRuleStrip`, wraps, no ellipsis);
- * - beginner hint: while the command's progress is < 50 % the token glows / pulses and »Zdaj!«
+ * - praise hint, every session at any progress (David 31. 10.): the token glows / pulses and »Zdaj!«
  *   shows for the praise window (`praiseHintOn`; reduce motion = static highlight; a screen reader
  *   hears »Kuža je ubogal — pohvali zdaj«); nothing stored;
  * - a cue the dog ignores: a readable text chip »Ne uboga — ne pohvali, počakaj.« + what the dog
@@ -30,7 +30,7 @@
  *   tap per cue decides, unchanged); a drag that follows moves the token with the finger and the
  *   treat flies to the dog from where it is let go (`TokenDrag`) — never a second tap, never a new
  *   time. A tap's flight starts at the release. Same for »Pohvali« ♥. A small bobbing finger +
- *   »Tapni« sits on the token while the beginner hint is on and nothing has counted yet
+ *   »Tapni« sits on the token until something has counted
  *   (`tapHintOn`; reduce motion = static label).
  *
  * Timing is the server's schedule only (`schoolV2.ts`); one timer per step boundary keeps every
@@ -67,7 +67,6 @@ import {
   breakCountdown,
   liveOutcomes,
   nextBoundaryAfter,
-  praiseHintEnabled,
   praiseHintOn,
   praiseToken,
   schoolBoundaries,
@@ -193,7 +192,7 @@ function ConfettiPiece({ fall, x, delay, size, mint }: { fall: { value: number }
 const PULSE_MS = 420;
 
 /**
- * The beginner hint's glow around the token: a soft pulse while `on`; reduce motion = the static
+ * The praise hint's glow around the token: a soft pulse while `on`; reduce motion = the static
  * highlight only (the ring style is applied by the caller either way).
  */
 function TokenPulse({ on, reduceMotion, children }: { on: boolean; reduceMotion: boolean; children: ReactNode }) {
@@ -259,8 +258,6 @@ export default function SchoolGameV2({
   const media = view.pet.media;
   const command = session.command;
   const token = praiseToken(view.training);
-  // Beginner hint (David 2026-10-31): decided once per session from the command's progress at the start.
-  const [hintEnabled] = useState(() => praiseHintEnabled(view.training.commands.find((c) => c.command === command)?.progress ?? 0));
   // Decided once per session: the clips never change under a running game.
   const [plan] = useState(() => schoolDeck(media, command, posePending || mediaModeOf(view) === 'picture' ? 'picture' : 'video', session));
   const queue = useClipQueue(game.now);
@@ -320,9 +317,9 @@ export default function SchoolGameV2({
         setAnnounce(cueText);
         if (Platform.OS === 'ios') AccessibilityInfo.announceForAccessibility(cueText);
       } else if (cue.kind === 'announce') {
-        const obeys = hintEnabled ? S.hintA11y : T.commands[command].obeys;
-        setAnnounce(obeys);
-        if (Platform.OS === 'ios') AccessibilityInfo.announceForAccessibility(obeys);
+        // The praise hint is on in every session (David 31. 10.), so the window always says »praise now«.
+        setAnnounce(S.hintA11y);
+        if (Platform.OS === 'ios') AccessibilityInfo.announceForAccessibility(S.hintA11y);
       } else if (cue.kind === 'feedback') {
         void feedback.current?.show(cue.feedback.kind, { label: feedbackLabel(cue.feedback), mask: cue.feedback.mask, totalMs: cue.feedback.totalMs });
       } else {
@@ -393,8 +390,8 @@ export default function SchoolGameV2({
   const tokenHidden = preparing || finishing || inBreak || frame.kind === 'over';
   const cooling = coolUntil !== 0;
   const canEndEarly = !finishing && inBreak && game.canEndEarly();
-  const hintOn = clockRunning && praiseHintOn(frame, hintEnabled);
-  const tapHint = clockRunning && tapHintOn(hintEnabled, counted, frame);
+  const hintOn = clockRunning && praiseHintOn(frame);
+  const tapHint = clockRunning && tapHintOn(counted, frame);
   const waiting = clockRunning && tokenWaiting(frame);
   const countdown = clockRunning ? breakCountdown(session, frame, e) : null;
   // »Nadaljuj« pressed in this break: only the countdown stays (it cannot shorten the server's break).
