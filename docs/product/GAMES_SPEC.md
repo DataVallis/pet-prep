@@ -269,13 +269,13 @@ Muca lovi plen, ki **beži stran** in se **ustavi, ko jo opazi** [C11]; lov se k
 > **SPREMEMBA PRAVILA — potrdil David 30. 10. (P1):** ena igra = **en lov ~25 s** (prej ~60 s, David 8. 10. 2026), ki se konča z ulovom. Cilj na dan (2 / mucek 3), razmik 2 h med uspešnima igrama, merilnik »Igra«, rutina »Igra«, opraskan kavč po zamujenem dnevu — **nespremenjeno**.
 
 ### 5.2 Potek lova (urnik strežnika)
-- `stalk`: 0–3,0 s · skoki `p1 ∈ [6,0; 7,5] s`, `p2 = p1 + [5,0; 6,5] s`, `p3 = p2 + [5,0; 6,5] s` · znak pritajitve `p − 900 ms` · ulov `c = p3 + 3,5 s` · konec `c + 3,5 s` → lov **~23–29 s**.
+- `stalk`: 0–3,0 s · skoki `p1 ∈ [6,0; 7,5] s`, `p2 = p1 + [5,0; 6,5] s`, `p3 = p2 + [5,0; 6,5] s` · znak pritajitve `p − 1500 ms` (pravilo mirovanja, David 31. 10. 2026) · ulov `c = p3 + 3,5 s` · konec `c + 3,5 s` → lov **~23–29 s**.
 
 | Čas | Muca (posnetek) | Sloj | Otrok |
 |---|---|---|---|
 | 0–3 s | `wand_stalking` (stoji → pritajena) | pero v **igralnem polju** (zgornja polovica, kamor muca gleda — svetel obroč); vrstica »Pritaji se: miruj. Skoči: umakni!« (3 s); zvezdice ☆☆☆☆ | premika pero |
 | med skoki | `wand_crouch_loop` (izpeljana zanka, rep trza) | iskrice, ko se pero premika v kratkih skokih znotraj polja | premika pero počasi |
-| `p − 900` … `p` | zanka | **ikona 👀 nad muco pulzira** + naraščajoč zvok + rahla haptika (*selection* × 3) | **pero miruje** |
+| `p − 1500` … `p` | zanka | **ikona 👀 nad muco pulzira** + naraščajoč zvok + rahla haptika (*selection* × 3) | **pero obmiruje** (najpozneje v `p − 1000` popolnoma mirno) |
 | `p` | `wand_pouncing` (enkrat; zanka se preklopi ob koncu svojega okvira ≤ 200 ms) | ⚡ šapa zamahne čez pero (skia lok, sinhronizirano s `p + 600`) | **potegne pero stran** |
 | izmik v oknu | — | ★ + »Ušlo!« (1,0 s), zvok »švist«, haptika *success* | — |
 | brez izmika do `p + 1500` | — | pero se zatrese v šapi (»ulovila«), brez ✗, brez besedila — 0,8 s, nato se izvije | — |
@@ -288,7 +288,7 @@ Muca lovi plen, ki **beži stran** in se **ustavi, ko jo opazi** [C11]; lov se k
 > **SPREMEMBA PRAVILA — potrdil David 30. 10. (P2):** pragovi sodelovanja (8 premikov stran, vse četrtine, ≥ 50 % stran, odziv na **vsak** skok v 2 s, CAT_SPEC §5.2 / PRODUCT_SPEC §13) se zamenjajo z **zvezdicami**: 3 × izmik + 1 × ulov. **Igra šteje pri ≥ 2 zvezdicah.** Zvezdice se prikažejo takoj.
 
 Zvezdica za **izmik pri skoku `p`** (vse mora veljati):
-1. **mirovanje pred skokom:** v `[p − 800, p)` največ **1** štet premik (prej 300 ms pravilo štetja ostane) — viden znak 👀 je tam 900 ms;
+1. **mirovanje pred skokom (strogo pravilo — odločil David 31. 10. 2026):** v `[p − 1000, p)` **noben** štet premik (`calm_max_moves` 0; 300-ms pravilo štetja ostane) — viden znak 👀 je tam **1500 ms** pred skokom, torej ima otrok ~0,5 s, da ustavi potezo, ki jo je začel; prej (30. 10.) 0,9 s / 0,8 s / največ 1 premik — tako je enakomerno počasno premikanje dobilo zvezdice v ~90 % lovov;
 2. **odziv:** prvi premik stran v `[p + 150, p + 1500]` (150 ms = človeški prag, kot pri šoli);
 3. **v polju:** premik se konča znotraj igralnega polja (`in_zone: true`, poroča aplikacija) — poteg iz zaslona ne šteje;
 4. **hitrostna meja:** največja hitrost poteze ≤ 4000 pt/s in dolžina ≥ 40 pt (`speed_ok`, poroča aplikacija);
@@ -296,10 +296,10 @@ Zvezdica za **izmik pri skoku `p`** (vse mora veljati):
 
 Zvezdica za **ulov `c`:** v `[c, c + 1500]` ni premika stran in pero je v polju.
 
-Zakaj je to odporno proti hitremu spamu: hitro neprekinjeno metanje peresa krši pravilo 1 pri vsakem skoku (pred skokom so vedno premiki), poteg iz zaslona krši pravilo 3, ulov pa zahteva **mirovanje**. Nagrajen je **odziv na viden znak**, ne število premikov. `too_uniform` ostane kot zapis v dnevnik (ne zavrača več — pri treh tarčnih dogodkih je statistika premajhna).
+Zakaj je to odporno proti spamu: hitro neprekinjeno metanje peresa **in tudi počasno neprekinjeno premikanje** (poteza vsakih 0,8–1,2 s) kršita pravilo 1 pri vsakem skoku (v zadnji sekundi pred skokom je vedno premik — simulacija QA: počasni ≈ 0 % lovov, pošten otrok, ki se ustavi do ~0,45 s po znaku, ~98–100 %), poteg iz zaslona krši pravilo 3, ulov pa zahteva **mirovanje**. Nagrajen je **odziv na viden znak**, ne število premikov. `too_uniform` ostane kot zapis v dnevnik (ne zavrača več — pri treh tarčnih dogodkih je statistika premajhna).
 Zaupanje: `in_zone` / `speed_ok` poroča aplikacija — enak sprejet model kot pri šoli (spremenjena aplikacija lahko ponaredi, David 6. 10. 2026); popravek naslavlja **običajno otroško strategijo**, ne goljufije.
 
-Konfiguracija `config/wand.php` → `v2`: `round_ms`, `stalk_ms` 3000, `pounces` 3, `first_pounce_ms` [6000, 7500], `pounce_gap_ms` [5000, 6500], `crouch_cue_lead_ms` 900, `calm_window_ms` 800, `calm_max_moves` 1, `dodge_window_ms` [150, 1500], `catch_after_last_ms` 3500, `catch_window_ms` 1500, `catch_clip_ms` 3500, `min_stars` 2, `max_speed_pt_s` 4000, `min_dodge_pt` 40.
+Konfiguracija `config/wand.php` → `v2`: `round_ms`, `stalk_ms` 3000, `pounces` 3, `first_pounce_ms` [6000, 7500], `pounce_gap_ms` [5000, 6500], `crouch_cue_lead_ms` 1500, `calm_window_ms` 1000, `calm_max_moves` 0 (David 31. 10. 2026), `dodge_window_ms` [150, 1500], `catch_after_last_ms` 3500, `catch_window_ms` 1500, `catch_clip_ms` 3500, `min_stars` 2, `max_speed_pt_s` 4000, `min_dodge_pt` 40.
 
 ### 5.4 Rezultat
 - ≥ 2 zvezdici: »Kakšen lov! ★★★☆« — igra šteje (merilnik, rutina kot doslej).
@@ -386,12 +386,12 @@ Konfiguracija `config/wand.php` → `v2`: `round_ms`, `stalk_ms` 3000, `pounces`
 | Dokumenti | PRODUCT_SPEC §5 / §13, CAT_SPEC §5.2, PLAY_CUDDLE §4, ARCHITECTURE §3 + DIAGRAMS, FEATURES, `schema.ts` — v PR-jih posameznih faz. |
 | Crkljanje (C1) | **Brez spremembe strežnika** (preverjeno 30. 10. 2026): `POST /play {kind: "cuddle"}` sprejme samo vrsto, potegov strežnik nikoli ni preverjal — pravilo 3 sekund je samo v aplikaciji. |
 
-**Zgrajeno 30. 10. 2026 (faze 2–4, strežnik):** vse zgornje vrstice za `TrainingService`, `WandPlayService`, `config/wand.php` (`v2`), izpeljanko `wand_crouch_loop` in `PetMediaPayload`; dodatno `training.treat_token` v stanju otroka (V6). Podrobnosti, ki jih spec ni določil, odločil Claude (čakajo Davida): (1) `treat_token` je `true` tudi, ko je paket priboljškov porabljen (»kupila« ≠ »ima še«; preklican paket = `false`); (2) zavrnitve začetka palice (tihe ure, polnoč) obe različici računata z 60 s v1 (stanje `can_start` se vedno ujema z začetkom); (3) prvi premik stran v `[p, p + 150)` je »prezgodaj« (izmik brez zvezdice); (4) premik brez `in_zone` / `speed_ok` v v2 ne prinese zvezdice; (5) predčasen konec še vedno pošlje `trained_pet` kot dogodek osvežitve (brez vrstice v dnevniku). Po QA #461: predčasen konec porabi **dejanski čas** (čas do »Končaj«, najmanj 1. krog) in je mogoč samo do začetka 2. kroga + 2 s (pozneje 422 `training_round_two_started`); konec palice v2 je mogoč šele po oknu ulova (brez 5-s tolerance); izmik in ulov štejeta vsak prijavljen premik (300-ms združevanje velja samo za pravilo mirovanja). **Odprto (čaka Davida):** počasno neprekinjeno premikanje pri sedanjem pravilu mirovanja (0,9 s / 0,8 s / 1 premik) večinoma še šteje; QA predlaga 1,5 s / 1 s / 0 — samo sprememba `config/wand.php`.
+**Zgrajeno 30. 10. 2026 (faze 2–4, strežnik):** vse zgornje vrstice za `TrainingService`, `WandPlayService`, `config/wand.php` (`v2`), izpeljanko `wand_crouch_loop` in `PetMediaPayload`; dodatno `training.treat_token` v stanju otroka (V6). Podrobnosti, ki jih spec ni določil, odločil Claude (čakajo Davida): (1) `treat_token` je `true` tudi, ko je paket priboljškov porabljen (»kupila« ≠ »ima še«; preklican paket = `false`); (2) zavrnitve začetka palice (tihe ure, polnoč) obe različici računata z 60 s v1 (stanje `can_start` se vedno ujema z začetkom); (3) prvi premik stran v `[p, p + 150)` je »prezgodaj« (izmik brez zvezdice); (4) premik brez `in_zone` / `speed_ok` v v2 ne prinese zvezdice; (5) predčasen konec še vedno pošlje `trained_pet` kot dogodek osvežitve (brez vrstice v dnevniku). Po QA #461: predčasen konec porabi **dejanski čas** (čas do »Končaj«, najmanj 1. krog) in je mogoč samo do začetka 2. kroga + 2 s (pozneje 422 `training_round_two_started`); konec palice v2 je mogoč šele po oknu ulova (brez 5-s tolerance); izmik in ulov štejeta vsak prijavljen premik (300-ms združevanje velja samo za pravilo mirovanja). **Pravilo mirovanja odločeno (David 31. 10. 2026, strogo):** znak 👀 1500 ms pred skokom, v zadnjih 1000 ms 0 premikov (`crouch_cues_ms` = p − 1500, `calm_window_ms` 1000, `calm_max_moves` 0) — samo `config/wand.php`; vsaka seja si pravilo shrani v urnik (lov, ki že teče, ostane pri svojem). Prej (0,9 s / 0,8 s / 1 premik) je enakomerno počasno premikanje dobilo zvezdice v ~90 % lovov.
 
 #### Pogodba za aplikacijo (pravila v2)
 Celotna pogodba (vsa polja zahtev in odgovorov za šolo, palico, `treat_token`, `wand_crouch_loop`) je v `docs/engineering/ARCHITECTURE.md` → **»Games rules v2 — contract for the app«** (angleško, tehnični dokument). Na kratko:
 - **Šola:** `POST /training/start {command, rules: 2}` → `session` + `rules_version: 2`, `mask_ms` 1200, `round_break_ms` 2500, `round_breaks_ms[]`, `rounds[{round, first_index, last_index, start_ms, end_ms}]`; `POST /training/finish {session_id, taps, ended_after_round?: 1}` (samo do začetka 2. kroga + 2 s, sicer 422 `training_round_two_started`) → `result` + `rules_version`, `ended_after_round`, `counts_for_routine`. Stanje: `training.treat_token`.
-- **Palica:** `POST /wand/start {rules: 2}` → `session` + `rules_version`, `stalk_ms`, `crouch_cues_ms[3]`, `catch_window_ms`, `calm_window_ms`, `calm_max_moves`, `dodge_window_ms`, `min_stars`, `max_stars`, `max_speed_pt_s`, `min_dodge_pt`; `POST /wand/finish {session_id, moves[{t, away, in_zone, speed_ok}]}` → `result` + `rules_version`, `stars`, `min_stars`, `max_stars`, `dodges[{pounce_ms, star, reason, move_ms}]`, `catch{star, reason}`, `hint`. Posnetek: `media.phases.wand_crouch_loop`.
+- **Palica:** `POST /wand/start {rules: 2}` → `session` + `rules_version`, `stalk_ms`, `crouch_cues_ms[3]` (= p − 1500), `catch_window_ms`, `calm_window_ms` (1000), `calm_max_moves` (0), `dodge_window_ms`, `min_stars`, `max_stars`, `max_speed_pt_s`, `min_dodge_pt`; `POST /wand/finish {session_id, moves[{t, away, in_zone, speed_ok}]}` → `result` + `rules_version`, `stars`, `min_stars`, `max_stars`, `dodges[{pounce_ms, star, reason, move_ms}]`, `catch{star, reason}`, `hint`. Posnetek: `media.phases.wand_crouch_loop`.
 - **Brez `rules`:** v1 nespremenjen (stare gradnje). Sejo v2, ki jo nadaljuje stara gradnja, strežnik oceni po v2 — brez `in_zone` / `speed_ok` palica ne dobi zvezdic (odpove zaprto), šola nima predčasnega konca.
 
 ### 7.4 Nativne odvisnosti in izdaja
@@ -476,7 +476,7 @@ Merilo za izbirne posnetke A–C: po fazi 3 David pogleda posnetke zaslona na en
 | **Š3** | nedokončana vaja se ne šteje | po 1. krogu lahko konča: napredek šteje, rutina samo cela vaja |
 | **C1** | crkljanje = 5 potegov ≥ 60 pt (D) | 3 božanja po ~3 s s premorom (pravilo 3 sekund) |
 | **P1** | igra s palico ~60 s (David 8. 10.) | en lov ~25 s z ulovom |
-| **P2** | šteje samo, če velja vse (8 stran, 4 četrtine, ≥ 50 % stran, vsak skok v 2 s, ne enakomerno) | zvezdice: 3 izmiki + ulov, šteje pri ≥ 2; izmik samo z mirovanjem pred skokom, v 150–1500 ms, v polju, pod hitrostno mejo |
+| **P2** | šteje samo, če velja vse (8 stran, 4 četrtine, ≥ 50 % stran, vsak skok v 2 s, ne enakomerno) | zvezdice: 3 izmiki + ulov, šteje pri ≥ 2; izmik samo z mirovanjem pred skokom (👀 1,5 s prej, zadnjo 1 s brez premika — David 31. 10.), v 150–1500 ms, v polju, pod hitrostno mejo |
 | ~~**P0**~~ | odpade s fazo 0 (David 30. 10.) | — |
 
 Nespremenjeno: okno pohvale, verjetnost ubogljivosti, napredek in upadanje šole, 7 min / dan in pošten delež, rutine, Care Score, cilj in razmik iger muce, merilnik »Igra«, opraskan kavč, žoga (3 meti, mood only), vsa pravila nereda.
@@ -499,6 +499,7 @@ Nespremenjeno: okno pohvale, verjetnost ubogljivosti, napredek in upadanje šole
 | V10 | Krogi žoge: ostane 3 meti ali 4 (~35 s)? | 3 (+ »Še en krog«) | **3 meti** (David 30. 10.) |
 | V11 | Haptika za otroke — privzeto vklopljena? | da, samo pozitivna | **da**, s stikalom staršev skupaj z zvokom (David 30. 10.) |
 | V12 | Neredi: kakec kot »sladoledni zavoj« (prepoznaven, ne gnusen) — v redu, ali raje bolj abstrakten kupček? | zavoj brez obraza | **zavoj** (David 30. 10., skica A) |
+| V13 | Pravilo mirovanja pri palici (QA #461 M3): pri 0,9 s / 0,8 s / 1 premik počasno neprekinjeno premikanje dobi zvezdice v ~90 % lovov. Strožje? | 1,5 s / 1 s / 0 | **strogo: 👀 1500 ms pred skokom, zadnjih 1000 ms 0 premikov** (David 31. 10. 2026) |
 
 ---
 

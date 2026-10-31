@@ -105,17 +105,18 @@ return [
         'pounces' => 3,
         'first_pounce_ms' => [6000, 7500],
         'pounce_gap_ms' => [5000, 6500],
-        // The calm rule (QA #461 M3 — David decides; only these three numbers change):
-        // the 👀 crouch cue shows `crouch_cue_lead_ms` before each pounce (→ the
-        // schedule's `crouch_cues_ms`); at most `calm_max_moves` counted moves may lie in
-        // [p − calm_window_ms, p). Current (GAMES_SPEC §5.3): 900 / 800 / 1 — a steady slow
-        // mover (one stroke every ~0.8–1.2 s) still passes most hunts (known, open item).
-        // QA's recommendation: 1500 / 1000 / 0 — the slow mover fails, a fair child who
-        // stops ~0.3–0.45 s after the cue passes. Keep crouch_cue_lead_ms ≥ calm_window_ms
-        // + a reaction time, or a fair child cannot comply.
-        'crouch_cue_lead_ms' => 900,
-        'calm_window_ms' => 800,
-        'calm_max_moves' => 1,
+        // The calm rule — decided by David 2026-10-31 (strict rule, GAMES_SPEC §5.3, QA #461 M3):
+        // the 👀 crouch cue shows `crouch_cue_lead_ms` before each pounce (→ the schedule's
+        // `crouch_cues_ms` = p − 1500) and the feather must be completely still in the last
+        // `calm_window_ms` before the pounce (`calm_max_moves` counted moves in [p − 1000, p)).
+        // Why: with the old 900 / 800 / 1 a steady slow mover (one stroke every ~0.8–1.2 s) got
+        // the stars in ~90 % of hunts; now ≈ 0 %, while a fair child who stops mid-stroke up to
+        // ~0.45 s after the cue still gets every star. Keep crouch_cue_lead_ms ≥ calm_window_ms
+        // + a reaction time, or a fair child cannot comply. Values are copied into each
+        // session's schedule (a running hunt keeps the rule it started with).
+        'crouch_cue_lead_ms' => 1500,
+        'calm_window_ms' => 1000,
+        'calm_max_moves' => 0,
         // The first away move after the pounce must lie in [p + 150, p + 1500].
         'dodge_window_ms' => [150, 1500],
         'catch_after_last_ms' => 3500,

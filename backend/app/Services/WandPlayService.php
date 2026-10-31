@@ -609,7 +609,7 @@ class WandPlayService
 
     /**
      * Rules v2 schedule (GAMES_SPEC §5.2, config `wand.v2`): stalk, three pounces with a
-     * crouch cue `crouch_cue_lead_ms` before each (QA #461 M3: the calm rule is config only), the catch `catch_after_last_ms` after the last
+     * crouch cue `crouch_cue_lead_ms` (1500) before each (calm rule decided by David 2026-10-31; config only), the catch `catch_after_last_ms` after the last
      * pounce and the end `catch_clip_ms` after the catch (~23–29 s, ≤ `round_ms`). Carries
      * every number the app needs to mirror the server's star rules. Pure apart from the RNG.
      *
@@ -626,7 +626,7 @@ class WandPlayService
         };
         $stalk = max(0, (int) ($c['stalk_ms'] ?? 3000));
         $count = max(1, (int) ($c['pounces'] ?? 3));
-        $cue = max(0, (int) ($c['crouch_cue_lead_ms'] ?? 900));
+        $cue = max(0, (int) ($c['crouch_cue_lead_ms'] ?? 1500));
         [$firstLo, $firstHi] = $range('first_pounce_ms', [6000, 7500]);
         [$gapLo, $gapHi] = $range('pounce_gap_ms', [5000, 6500]);
 
@@ -648,8 +648,8 @@ class WandPlayService
             'crouch_cues_ms' => array_map(fn (int $at): int => max(0, $at - $cue), $pounces),
             'catch_at_ms' => $catchAt,
             'catch_window_ms' => max(0, (int) ($c['catch_window_ms'] ?? 1500)),
-            'calm_window_ms' => max(0, (int) ($c['calm_window_ms'] ?? 800)),
-            'calm_max_moves' => max(0, (int) ($c['calm_max_moves'] ?? 1)),
+            'calm_window_ms' => max(0, (int) ($c['calm_window_ms'] ?? 1000)),
+            'calm_max_moves' => max(0, (int) ($c['calm_max_moves'] ?? 0)),
             'dodge_window_ms' => $range('dodge_window_ms', [150, 1500]),
             'min_move_interval_ms' => max(0, (int) config('wand.min_move_interval_ms', 300)),
             'min_stars' => max(1, (int) ($c['min_stars'] ?? 2)),
@@ -678,9 +678,9 @@ class WandPlayService
      * v1 `uniform_*` test) — logged only, never a refusal in v2.
      *
      * Rapid spam earns nothing: continuous rapid strokes put ≥ 2 counted moves into every calm
-     * window (rule 1) and an away move into the catch window — 0 stars. A steady SLOW mover
-     * (one stroke every ~0.8–1.2 s) still passes most hunts with the default calm rule
-     * (900 / 800 / 1) — QA #461 M3, open for David; the stricter rule is config only.
+     * window (rule 1) and an away move into the catch window — 0 stars. The strict calm rule
+     * (David 2026-10-31: cue 1500 ms before, still for the last 1000 ms, 0 moves) also fails a
+     * steady SLOW mover (one stroke every ~0.8–1.2 s), who passed ~90 % of hunts with 900 / 800 / 1.
      *
      * @param  list<array{t: int, away: bool, in_zone?: bool, speed_ok?: bool}>  $moves
      * @param  array<string, mixed>  $schedule  a scheduleV2() schedule
@@ -689,8 +689,8 @@ class WandPlayService
     public static function scoreV2(array $moves, array $schedule): array
     {
         $interval = max(0, (int) ($schedule['min_move_interval_ms'] ?? 300));
-        $calmWindow = max(0, (int) ($schedule['calm_window_ms'] ?? 800));
-        $calmMax = max(0, (int) ($schedule['calm_max_moves'] ?? 1));
+        $calmWindow = max(0, (int) ($schedule['calm_window_ms'] ?? 1000));
+        $calmMax = max(0, (int) ($schedule['calm_max_moves'] ?? 0));
         $dodge = array_values((array) ($schedule['dodge_window_ms'] ?? [150, 1500]));
         $dodgeFrom = (int) ($dodge[0] ?? 150);
         $dodgeTo = (int) ($dodge[1] ?? 1500);

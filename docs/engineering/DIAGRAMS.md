@@ -782,7 +782,7 @@ sequenceDiagram
   C->>API: POST /api/child/pet/wand/finish {session_id, moves[{t, away, in_zone?, speed_ok?}]}
   API->>W: same child? ends_at − 5 s ≤ now < expires_at? lock began during the game? every t ≤ 60 000?
   W->>W: v1 score(): ≥ 8 away moves (< 300 ms apart count once) · one in each 15 s quarter · away ≥ 50 %<br/>· an away move ≤ 2 s after every pounce · gaps not machine-regular
-  W->>W: v2 scoreV2() (finish only from catch + 1.5 s): ★ per pounce = ≤ calm_max_moves counted moves in [p − calm_window, p)<br/>· first reported away move in [p + 150, p + 1500 ms] · in_zone · speed_ok; ★ catch = no away move in [c, c + 1.5 s], feather in zone · counts at ≥ 2 of 4
+  W->>W: v2 scoreV2() (finish only from catch + 1.5 s): ★ per pounce = ≤ calm_max_moves (0) counted moves in [p − calm_window (1000 ms), p), 👀 cue at p − 1500 ms<br/>· first reported away move in [p + 150, p + 1500 ms] · in_zone · speed_ok; ★ catch = no away move in [c, c + 1.5 s], feather in zone · counts at ≥ 2 of 4
   alt took part
     W->>DB: session completed · pets.energy_level = sessions today / goal × 100 (never lowered)
     W->>DB: activities_log played_wand (actor child, value = n-th of the day) = the play routine
