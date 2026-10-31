@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `lagotto_romagnolo` (viri S630–S636; ponovno S8, S10, S11, S14, S24, S35, S45, S123, S174); seznam za vzreditelja: RKC (S632) |
 | Izvor | FCI št. 298, skupina 8, sekcija 3 (vodni psi), Italija (S630, S631) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 78. mesto (S174, prebrano 2026-10-31) |
-| PR-ji | pet-prep #462 (pasma) · portret: sledi · spletna stran: sledi |
+| PR-ji | pet-prep #462 (pasma, združen `fa49562`) · portret: PR (ta, zagon 41154129241) · spletna stran: pet-prep-website `feat/register-lagotto-romagnolo` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -41,7 +41,7 @@
 | Česanje 2× na teden (predlog), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-10-31 |
 | Opomnika staršem: frizer (vsakih 6 tednov), kopanje (vsake 4 tedne) | 🛠 | 💶 izziv | M5-R18 / M5-R19 | 2026-10-31 |
 | Barva (izbirnik: 7 standardnih barv) | 🛠 | 💶 izziv | M5-R21 | 2026-10-31 |
-| AI portret v registru | 🗓 sledi takoj po združitvi | — | M5-R11-04 | — |
+| AI portret v registru (rjavi roan, sprejet v prvem poskusu, zagon 41154129241) | ✅ | — | M5-R11-04 | 2026-10-31 |
 | Stran na petprep.si (`/animals/dogs/lagotto-romagnolo`, `/sl/zivali/psi/lagotto-romagnolo`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -57,4 +57,4 @@
 - **Ušesa, zobje, kremplji:** stran veterinarske ambulante (vsebina Genesis4Pets, tier C) navaja čiščenje ušes vsak teden, zobe vsaj 2× na teden in striženje 3–4× na leto — runbook vira C ne uporabi samostojno, zato teh nalog ni. PetMD za ušesa pravi le »ko je bil v vodi«. Če želite nalogo za ušesa, povejte.
 - **Ime:** »Lagotto romagnolo« se v slovenščini uporablja nespremenjeno; strani KZS ni bilo mogoče najti. Potrdite ali popravite.
 - **Ugotovitev za skupne dokumente (ne urejam jih):** nov zdravstveni ključ `storage_disease` in nova testa `dna_je` / `dna_lsd` (besedila na spletni strani dodana v PR spletne strani).
-- **Portret:** sledi takoj po združitvi (§8).
+- **Portret:** zagon 41154129241 (koda `fa49562`, brez produkcijske namestitve, 0,15 $), sprejet v prvem poskusu — realistična fotografija odraslega psa v rjavem roanu, gosti volnati kodri, enakomerno postrižen, rjav nos, oker oči, viseča ušesa, svetlo siva studijska podlaga.
