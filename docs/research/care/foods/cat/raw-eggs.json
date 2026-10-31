@@ -16,11 +16,11 @@
   "level": "not_recommended",
   "answer": {
     "en": "No, don't give cats raw eggs. Raw eggs may carry harmful bacteria such as Salmonella, which can make both cats and people ill, and raw egg white contains a protein that can block a vitamin.",
-    "sl": "Ne, mačkam ne dajajte surovih jajc. Surova jajca lahko vsebujejo škodljive bakterije, kot je salmonela, ki lahko zbolijo mačke in ljudi, surov beljak pa vsebuje beljakovino, ki lahko ovira vsrkavanje vitamina."
+    "sl": "Ne, mačkam ne dajajte surovih jajc. Surova jajca lahko vsebujejo škodljive bakterije, kot je salmonela, ki lahko povzročijo bolezen pri mačkah in ljudeh, surov beljak pa vsebuje beljakovino, ki lahko ovira vsrkavanje vitamina."
   },
   "why": {
-    "en": "Raw eggs may contain harmful bacteria and parasites and could mean food poisoning for cats and humans alike. Raw egg white also contains avidin, which binds the vitamin biotin and stops it being absorbed; the ASPCA notes this can lead to skin and coat problems. Cooking food thoroughly protects pets from salmonella.",
-    "sl": "Surova jajca lahko vsebujejo škodljive bakterije in zajedavce ter lahko povzročijo zastrupitev s hrano pri mačkah in ljudeh. Surov beljak vsebuje tudi avidin, ki veže vitamin biotin in prepreči njegovo vsrkavanje; ASPCA navaja, da to lahko vodi v težave s kožo in dlako. Temeljito kuhanje hrane živali varuje pred salmonelo."
+    "en": "Raw eggs may contain harmful bacteria and parasites and could mean food poisoning for cats and humans alike. Raw egg white also contains avidin, which binds the vitamin biotin and stops it being absorbed. Cooking food thoroughly protects pets from salmonella.",
+    "sl": "Surova jajca lahko vsebujejo škodljive bakterije in zajedavce ter lahko povzročijo zastrupitev s hrano pri mačkah in ljudeh. Surov beljak vsebuje tudi avidin, ki veže vitamin biotin in prepreči njegovo vsrkavanje. Temeljito kuhanje hrane živali varuje pred salmonelo."
   },
   "signs": {
     "en": [
@@ -73,10 +73,6 @@
       "quote": "Raw eggs could mean food poisoning for cats and humans alike."
     },
     {
-      "id": "KC1",
-      "quote": "Raw eggs contain an enzyme that can interfere with absorption of certain vitamins, leading to skin/coat problems."
-    },
-    {
       "id": "KC36",
       "quote": "While egg yolks are a good source of biotin, raw egg whites contain a glycoprotein called avidin that binds biotin and prevents its absorption in the GI tract."
     },
@@ -99,6 +95,18 @@
     {
       "id": "KC54",
       "quote": "with eggs being the most suitable for pets, but only when fed in moderation."
+    },
+    {
+      "id": "KC41",
+      "quote": "Vomiting"
+    },
+    {
+      "id": "KC41",
+      "quote": "Fever"
+    },
+    {
+      "id": "KC41",
+      "quote": "Lethargy"
     }
   ],
   "related": [
@@ -109,14 +117,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "95cbb445abc17aea4c5658280625806c88f8fe899c984abbdb236fcbdd5e65c4"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c358034df872cd69a433bec54df6b9a42c3b66d7e41818b4691177a994947dac"
     }
   }
 }

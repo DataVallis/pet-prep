@@ -124,7 +124,7 @@
     },
     {
       "id": "KC3",
-      "quote": "it is important to immediately call your veterinarian or Pet Poison Helpline."
+      "quote": "it is important to immediately call your veterinarian or Pet Poison Helpline, a 24/7 animal poison center"
     },
     {
       "id": "KC4",
@@ -168,14 +168,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b401793c5a4696c69b522a511c576811babc91b8eead836ac177d94e9a75af0a"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b38f8c5db7a7ee973e80612790ffa23b08f89805b03d9ab688d90095994e5c69"
     }
   }
 }

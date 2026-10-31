@@ -19,8 +19,8 @@
     "sl": "Ne. Energijske pijače pogosto vsebujejo veliko kofeina, mačke pa so nanj bolj občutljive kot ljudje. Muci nikoli ne dovolite piti iz pločevinke ali kozarca in pokličite veterinarja, če kaj zaužije."
   },
   "why": {
-    "en": "Energy and sports drinks often contain a lot of caffeine. Cats are more sensitive to caffeine than people. Caffeine belongs to the methylxanthines, the same group of stimulants as the theobromine in chocolate, and it speeds up the heart, makes cats restless and upsets the stomach.",
-    "sl": "Energijske in športne pijače pogosto vsebujejo veliko kofeina. Mačke so na kofein bolj občutljive kot ljudje. Kofein spada med metilksantine, isto skupino poživil kot teobromin v čokoladi, ter pospeši srce, povzroči nemir in prebavne težave."
+    "en": "Energy and sports drinks often contain a lot of caffeine. Cats are more sensitive to caffeine than people. Like chocolate, coffee and other caffeine-containing foods have high levels of stimulants called methylxanthines; caffeine speeds up the heart, makes cats restless and upsets the stomach.",
+    "sl": "Energijske in športne pijače pogosto vsebujejo veliko kofeina. Mačke so na kofein bolj občutljive kot ljudje. Kava in druga živila s kofeinom imajo tako kot čokolada veliko poživil, imenovanih metilksantini; kofein pospeši srce, povzroči nemir in prebavne težave."
   },
   "signs": {
     "en": [
@@ -37,13 +37,13 @@
     ]
   },
   "what_to_do": {
-    "en": "Contact your vet or a pet poison helpline right away. Note what your cat swallowed (drink, grounds, beans, tea bag or tablets), how much and when. Don't wait for signs to appear, and don't try to make your cat sick at home.",
-    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, kaj je muca zaužila (pijačo, mleto kavo, zrna, čajno vrečko ali tablete), koliko in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju."
+    "en": "Contact your vet or a pet poison helpline right away. Note what your cat drank, how much and when. Don't wait for signs to appear, and don't try to make your cat sick at home.",
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, kaj je muca popila, koliko in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju."
   },
   "serving": null,
   "child": {
-    "en": "Energy drinks are not for kids or cats. Kitty only needs fresh water. Tell a grown-up if she drinks some.",
-    "sl": "Energijske pijače niso za otroke ne za muce. Muca potrebuje le svežo vodo. Če jo popije, povej odraslemu."
+    "en": "Energy drinks are for grown-ups, not cats. Kitty only needs fresh water. Tell a grown-up if she drinks some.",
+    "sl": "Energijske pijače so za odrasle, ne za muce. Muca potrebuje le svežo vodo. Če jo popije, povej odraslemu."
   },
   "faq": [],
   "sources": [
@@ -113,14 +113,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4cebb16ae0adce09ce4bf9d179d9a6b904de520d8112740144b5bc8c75aed38c"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c75ae6693aaf4bbe5dfe0f9742b546d7b729c33c4d21fecaa005d494bc5db6ef"
     }
   }
 }

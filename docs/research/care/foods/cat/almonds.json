@@ -20,25 +20,25 @@
   },
   "why": {
     "en": "Cats Protection lists almonds among nuts that contain high amounts of oils and fats which can make a cat unwell. The ASPCA says sweet almonds sold for eating are not toxic to pets, but because they are not a normal part of a pet's diet they can cause digestive issues. Bitter almonds contain a cyanide compound and are considered toxic.",
-    "sl": "Cats Protection mandlje navaja med oreščki, ki vsebujejo veliko olj in maščob, zaradi katerih se mački lahko slabo počuti. ASPCA navaja, da sladki mandlji, ki se prodajajo za uživanje, za hišne živali niso strupeni, a ker niso del njihove običajne prehrane, lahko povzročijo prebavne težave. Grenki mandlji vsebujejo cianidno spojino in veljajo za strupene."
+    "sl": "Cats Protection mandlje navaja med oreščki, ki vsebujejo veliko olj in maščob, zaradi katerih se mačka lahko slabo počuti. ASPCA navaja, da sladki mandlji, ki se prodajajo za uživanje, za hišne živali niso strupeni, a ker niso del njihove običajne prehrane, lahko povzročijo prebavne težave. Grenki mandlji vsebujejo cianidno spojino in veljajo za strupene."
   },
   "signs": {
     "en": [
       "Vomiting",
       "Diarrhoea",
       "Upset stomach",
-      "Seeming unwell or low on energy"
+      "Seeming unwell"
     ],
     "sl": [
       "Bruhanje",
       "Driska",
       "Razdražen želodec",
-      "Mačka deluje bolna ali brez energije"
+      "Mačka deluje bolna"
     ]
   },
   "what_to_do": {
-    "en": "A nut or two is unlikely to be an emergency. Watch for vomiting, diarrhoea or a change in behaviour, and call your vet if your cat seems unwell or ate a lot. If the nuts were salted, flavoured or coated in chocolate, call your vet straight away.",
-    "sl": "En ali dva oreščka najverjetneje ne pomenita nujnega primera. Bodite pozorni na bruhanje, drisko ali spremembo vedenja in pokličite veterinarja, če se mačka ne počuti dobro ali je pojedla veliko. Če so bili oreščki soljeni, začinjeni ali obliti s čokolado, takoj pokličite veterinarja."
+    "en": "If your cat ate almonds, contact your vet for advice, especially if she ate a lot or seems unwell. Note what she ate, how much and when. If they were bitter almonds, contact your vet straight away.",
+    "sl": "Če je muca pojedla mandlje, se za nasvet obrnite na veterinarja, zlasti če jih je pojedla veliko ali se ne počuti dobro. Zapišite, kaj je pojedla, koliko in kdaj. Če so bili to grenki mandlji, takoj pokličite veterinarja."
   },
   "serving": null,
   "child": {
@@ -52,8 +52,8 @@
         "sl": "Kaj pa grenki mandlji?"
       },
       "a": {
-        "en": "Bitter almonds contain a cyanide compound and are considered toxic. If your cat ate bitter almonds, contact your vet or a pet poison helpline right away.",
-        "sl": "Grenki mandlji vsebujejo cianidno spojino in veljajo za strupene. Če je mačka pojedla grenke mandlje, takoj pokličite veterinarja ali center za zastrupitve živali."
+        "en": "Bitter almonds contain a cyanide compound and are considered toxic. If your cat ate bitter almonds, contact your vet straight away.",
+        "sl": "Grenki mandlji vsebujejo cianidno spojino in veljajo za strupene. Če je mačka pojedla grenke mandlje, takoj pokličite veterinarja."
       }
     },
     {
@@ -85,37 +85,33 @@
       "quote": "Bitter almonds, on the other hand, contain a cyanide compound and are considered toxic."
     },
     {
-      "id": "KC1",
-      "quote": "Nuts, including almonds, pecans and walnuts, contain high amounts of oils and fats."
-    },
-    {
-      "id": "KC1",
-      "quote": "These fats can cause vomiting and diarrhea, and potentially pancreatitis in some pets."
-    },
-    {
       "id": "KC44",
       "quote": "Not only are macadamia nuts very fatty, potentially causing pancreatitis, they're also toxic and can cause illness in cats."
+    },
+    {
+      "id": "KC5",
+      "quote": "If you notice or suspect your cat has eaten food that can be harmful to them, book an urgent appointment with your vet"
+    },
+    {
+      "id": "KC43",
+      "quote": "Most nuts are very fatty and can cause vomiting and diarrhea, but macadamia nuts specifically will lead to weakness, tremors and hyperthermia."
     }
   ],
   "related": [
     "walnuts",
-    "pecans",
-    "pistachios",
-    "cashews",
-    "hazelnuts",
     "macadamia-nuts"
   ],
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4b29ae6b369530133d4abba3422218f05ef97288c17bd5485b6109fe016d9391"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5eec7080ec087e983d0bdecfa86b08f1bde42662d094c52da69a72aa18eb29b3"
     }
   }
 }

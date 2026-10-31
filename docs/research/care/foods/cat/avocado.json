@@ -37,7 +37,7 @@
   "serving": null,
   "child": {
     "en": "Avocado is a people food. It's too fatty for cats, so give kitty her own cat treats instead.",
-    "sl": "Avokado je hrana za ljudi. Za muce je premasten, zato ji raje daj njene mačje priboljške."
+    "sl": "Avokado je hrana za ljudi. Za muco je premasten, zato ji raje daj njene mačje priboljške."
   },
   "faq": [
     {
@@ -85,14 +85,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c1e369f39d9ed57fa9bcef5f868f403c0593d79a41b5c77c515e35ba0e462178"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "33fb500e1916e5b8812d67790bc0b5689fd1c008734022abc05be4dce6b447ab"
     }
   }
 }

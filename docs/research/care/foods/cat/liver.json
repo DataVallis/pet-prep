@@ -15,12 +15,12 @@
   },
   "level": "not_recommended",
   "answer": {
-    "en": "Not as a home treat. Liver is very rich in vitamin A, and cats fed raw liver or a diet high in liver can develop vitamin A poisoning. Liver already in complete cat food is balanced and fine.",
-    "sl": "Ne kot domači priboljšek. Jetra so zelo bogata z vitaminom A, pri mačkah, ki dobivajo surova jetra ali prehrano z veliko jeter, pa se lahko razvije zastrupitev z vitaminom A. Jetra v popolni mačji hrani so uravnotežena in v redu."
+    "en": "Not as a home treat. Liver is very rich in vitamin A, and cats fed raw liver or a diet high in liver can develop vitamin A poisoning. Liver in a complete, balanced cat food is fine.",
+    "sl": "Ne kot domači priboljšek. Jetra so zelo bogata z vitaminom A, pri mačkah, ki dobivajo surova jetra ali prehrano z veliko jeter, pa se lahko razvije zastrupitev z vitaminom A. Jetra v popolni, uravnoteženi mačji hrani so v redu."
   },
   "why": {
-    "en": "VCA says vitamin A poisoning most commonly occurs when pets are fed raw liver or vitamin A-rich supplements over weeks to months. The Merck Veterinary Manual notes that in cats it can occur when growing kittens are fed a diet high in liver, and that feeding only liver can cause it. Commercial cat foods that contain liver are formulated to be balanced.",
-    "sl": "VCA navaja, da se zastrupitev z vitaminom A najpogosteje pojavi, ko živali več tednov ali mesecev dobivajo surova jetra ali dodatke, bogate z vitaminom A. Merckov veterinarski priročnik navaja, da se pri mačkah lahko pojavi, ko mladiči dobivajo prehrano z veliko jeter, in da jo lahko povzroči hranjenje samo z jetri. Komercialna mačja hrana z jetri je sestavljena uravnoteženo."
+    "en": "VCA says vitamin A poisoning most commonly occurs when pets are fed raw liver or vitamin A-rich supplements over weeks to months. The Merck Veterinary Manual notes that in cats it can occur when growing kittens are fed a diet high in liver, and that feeding only liver can cause it. VCA recommends a commercially prepared, balanced diet instead.",
+    "sl": "VCA navaja, da se zastrupitev z vitaminom A najpogosteje pojavi, ko živali več tednov ali mesecev dobivajo surova jetra ali dodatke, bogate z vitaminom A. Merckov veterinarski priročnik navaja, da se pri mačkah lahko pojavi, ko mladiči dobivajo prehrano z veliko jeter, in da jo lahko povzroči hranjenje samo z jetri. VCA namesto tega priporoča komercialno pripravljeno, uravnoteženo prehrano."
   },
   "signs": {
     "en": [
@@ -99,14 +99,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2800922d402f7dcbb7af2c7f741ad99da9bd0a4b03495e4db01f0f028ece80df"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dd5a809c624d1b656df3edf146d3c56af4f5077e3805dc2f81ee500de4d88564"
     }
   }
 }

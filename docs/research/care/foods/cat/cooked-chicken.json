@@ -15,8 +15,8 @@
   },
   "level": "small_amounts",
   "answer": {
-    "en": "Yes, plain cooked chicken is a good occasional treat for cats. Boil it, remove all bones and skin, and add no seasoning. Count it as part of your cat's daily food, not a replacement for it.",
-    "sl": "Da, navaden kuhan piščanec je dober občasen priboljšek za mačke. Skuhajte ga, odstranite vse kosti in kožo ter ga ne začinite. Upoštevajte ga kot del dnevnega obroka, ne kot nadomestek zanj."
+    "en": "Yes, plain cooked chicken is fine as an occasional treat for cats. Boil it, remove all bones and skin, and add no seasoning. Count it as part of your cat's daily food, not a replacement for it.",
+    "sl": "Da, navaden kuhan piščanec je v redu kot občasen priboljšek za mačke. Skuhajte ga, odstranite vse kosti in kožo ter ga ne začinite. Upoštevajte ga kot del dnevnega obroka, ne kot nadomestek zanj."
   },
   "why": {
     "en": "Cats Protection and RSPCA Australia both say boiled or steamed chicken can be offered occasionally. It must be cooked and boneless, because cooked bones can splinter. Feeding only cooked chicken long-term can lead to nutritional deficiencies, so it stays a treat.",
@@ -94,14 +94,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d2f7a7202e943a845482bb8dabe1248d26043a8843016f04f9acc73c1875e864"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "18e0c7cab25903eb49d960383d1666d990d749bef1de7e66891d4fc1403a780c"
     }
   }
 }

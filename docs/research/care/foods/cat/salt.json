@@ -19,8 +19,8 @@
     "sl": "Ne, ne kot hrana ali priboljšek. Mačja prebavila niso ustvarjena za večje količine soli, preveč soli pa lahko povzroči zastrupitev. Kuhinjsko sol, sol za posipanje in zelo slano hrano hranite stran od muce in pokličite veterinarja, če je poje veliko."
   },
   "why": {
-    "en": "Excess salt upsets the balance of salt and water in the body. It causes thirst and frequent urination and, in serious cases, tremors and seizures. Salt sources at home include table salt used in cooking and rock salt used as a de-icer in winter.",
-    "sl": "Preveč soli poruši ravnovesje soli in vode v telesu. Povzroči žejo in pogosto uriniranje, v hujših primerih pa tresenje in krče. Viri soli v domu so kuhinjska sol in sol za posipanje cest in pločnikov pozimi."
+    "en": "Too much salt causes thirst and frequent urination and, in serious cases, tremors and seizures. Salt sources at home include table salt used in cooking and rock salt used as a de-icer in winter.",
+    "sl": "Preveč soli povzroči žejo in pogosto uriniranje, v hujših primerih pa tresenje in krče. Viri soli v domu so kuhinjska sol in sol za posipanje cest in pločnikov pozimi."
   },
   "signs": {
     "en": [
@@ -141,14 +141,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7d2e084dbb6edc478d72eafd7171084d9aad0d12256e4a0636417c70834b277b"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6653748331e41ed1337f0d95b1c1bc819f77942fe6b9abc8576c96d7dcda5219"
     }
   }
 }

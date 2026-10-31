@@ -16,7 +16,7 @@
   "level": "toxic",
   "answer": {
     "en": "No. Chocolate is toxic to cats. It contains theobromine and caffeine, which cats handle poorly, and the darker and more bitter the chocolate, the more dangerous it is. If your cat eats any, call your vet straight away.",
-    "sl": "Ne. Čokolada je za mačke strupena. Vsebuje teobromin in kofein, ki ju mačke slabo presnavljajo, in temnejša ter bolj grenka kot je čokolada, nevarnejša je. Če muca poje kaj čokolade, takoj pokličite veterinarja."
+    "sl": "Ne. Čokolada je za mačke strupena. Vsebuje teobromin in kofein, ki ju mačke slabo presnavljajo, in bolj ko je čokolada temna in grenka, bolj je nevarna. Če muca poje kaj čokolade, takoj pokličite veterinarja."
   },
   "why": {
     "en": "Chocolate contains theobromine and caffeine. Cats process these substances differently from people, which makes them more sensitive to their effects. Because cats struggle to break down theobromine, it stays in the blood and can quickly build up to dangerous levels. Dark and bitter chocolate carries the most risk; white chocolate has the least theobromine.",
@@ -160,14 +160,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "77f7741767f80b3e9451df4914f0a886f4e4f361e084d362582548a4cda37261"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7d840ca6a1c32be9931696ba60455130aa447c7425f698870acce7b90b1dc215"
     }
   }
 }

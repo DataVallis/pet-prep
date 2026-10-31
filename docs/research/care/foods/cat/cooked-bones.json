@@ -24,16 +24,14 @@
   },
   "signs": {
     "en": [
-      "Choking or gagging",
+      "Choking",
       "Vomiting",
-      "Tummy pain (hiding, growling, not wanting to be touched)",
-      "Eating less or not at all"
+      "Tummy pain (hiding, growling, not wanting to be touched)"
     ],
     "sl": [
-      "Dušenje ali davljenje",
+      "Dušenje",
       "Bruhanje",
-      "Bolečine v trebuhu (skrivanje, renčanje, muca se ne pusti dotikati)",
-      "Manj ali nič apetita"
+      "Bolečine v trebuhu (skrivanje, renčanje, muca se ne pusti dotikati)"
     ]
   },
   "what_to_do": {
@@ -116,14 +114,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "808c20fbbc1be20a552d1340587bd1488f94d506788416269adf510e536b2e7f"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fd0c23e97c6f852c9f8fa368e37a2602358f507a132bdaedc597a4094eaa486c"
     }
   }
 }

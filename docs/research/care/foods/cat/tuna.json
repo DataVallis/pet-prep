@@ -24,12 +24,10 @@
   },
   "signs": {
     "en": [
-      "Weight gain if fed often",
-      "Upset stomach"
+      "Weight gain if fed often"
     ],
     "sl": [
-      "Pridobivanje teže pri pogostem hranjenju",
-      "Razdražen želodec"
+      "Pridobivanje teže pri pogostem hranjenju"
     ]
   },
   "what_to_do": {
@@ -42,7 +40,7 @@
   },
   "child": {
     "en": "Cats love tuna, but too much isn't healthy. Their own cat food keeps them strong.",
-    "sl": "Mucke imajo rade tuno, a preveč je ni zdravo. Močne jih ohranja njihova mačja hrana."
+    "sl": "Mucke imajo rade tuno, a preveč tune ni zdravo. Močne jih ohranja njihova mačja hrana."
   },
   "faq": [
     {
@@ -111,14 +109,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1350115e35ecfcc6ce2f61b5200565a5f7d1d135631717c551979a0018747887"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c11ef83400afc798b5c749175bbbdee043eea72e769e4b02362b7bea0dbfceaf"
     }
   }
 }

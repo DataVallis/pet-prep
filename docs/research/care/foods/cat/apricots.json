@@ -16,11 +16,11 @@
   "level": "dangerous",
   "answer": {
     "en": "No, it's best not to. The ASPCA lists the apricot plant as toxic to cats: its stems, leaves and seeds (the stone) contain cyanide. Don't offer apricots to your cat, keep stones and plant parts out of reach, and call your vet if your cat chews any.",
-    "sl": "Ne, raje ne. ASPCA navaja, da je rastlina za mačke strupena: njena stebla, listi in semena (koščice) vsebujejo cianid. Muci ne ponujajte marelic, koščice in dele rastline hranite izven dosega ter pokličite veterinarja, če jih muca grizlja."
+    "sl": "Ne, raje ne. ASPCA rastlino marelice navaja kot strupeno za mačke: njeni peclji, listi in semena (koščice) vsebujejo cianid. Muci ne ponujajte marelic, koščice in dele rastline hranite izven dosega ter pokličite veterinarja, če jih muca grizlja."
   },
   "why": {
-    "en": "The stems, leaves and seeds contain cyanogenic glycosides, which release cyanide; wilting leaves are particularly toxic. The sources we found describe the risk from these plant parts and do not say the fruit flesh is safe for cats, so we do not recommend sharing it.",
-    "sl": "Stebla, listi in semena vsebujejo cianogene glikozide, iz katerih se sprošča cianid; posebej strupeni so venoči listi. Viri, ki smo jih našli, opisujejo nevarnost teh delov rastline in ne navajajo, da je sadni del za mačke varen, zato ga ne priporočamo."
+    "en": "The stems, leaves and seeds contain cyanide (as cyanogenic glycosides) and are particularly toxic while wilting. The sources we found describe the risk from these plant parts and do not say the fruit flesh is safe for cats, so we do not recommend sharing it.",
+    "sl": "Peclji, listi in semena vsebujejo cianid (v obliki cianogenih glikozidov) in so posebej strupeni, ko venejo. Viri, ki smo jih našli, opisujejo nevarnost teh delov rastline in ne navajajo, da je sadni del za mačke varen, zato ga ne priporočamo."
   },
   "signs": {
     "en": [
@@ -54,8 +54,8 @@
         "sl": "Kateri del je nevaren?"
       },
       "a": {
-        "en": "The ASPCA says the stems, leaves and seeds contain cyanide, and that wilting leaves are particularly toxic.",
-        "sl": "ASPCA navaja, da cianid vsebujejo stebla, listi in semena ter da so posebej strupeni venoči listi."
+        "en": "The ASPCA says the stems, leaves and seeds contain cyanide, and that they are particularly toxic while wilting.",
+        "sl": "ASPCA navaja, da cianid vsebujejo peclji, listi in semena ter da so posebej strupeni, ko venejo."
       }
     }
   ],
@@ -102,14 +102,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "168b40d771f814729804a948bb528be531e95e77dd3aa87f26c6122cef5db3ce"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7434881d6d089ebbe04c35050989020152b0e370caddfde926a94af3018abb3b"
     }
   }
 }

@@ -16,7 +16,7 @@
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a little plain, well-cooked beef is fine as an occasional treat. Cut off the fat, remove all bones and add no seasoning. Raw beef is not recommended.",
-    "sl": "Da, malo navadnega, dobro kuhanega govejega mesa je v redu kot občasen priboljšek. Odrežite maščobo, odstranite vse kosti in ga ne začinite. Surovo meso ni priporočljivo."
+    "sl": "Da, malo navadnega, dobro kuhanega govejega mesa je v redu kot občasen priboljšek. Odrežite maščobo, odstranite vse kosti in ga ne začinite. Surova govedina ni priporočljiva."
   },
   "why": {
     "en": "Beef is one of the most common proteins in cat food. As a home treat it must be properly cooked: International Cat Care warns that raw or undercooked meat such as beef, lamb and pork can carry Toxoplasma, and advises feeding only properly cooked food. Fatty trimmings are on RSPCA Australia's do-not-feed list, and cooked bones can splinter.",
@@ -33,7 +33,7 @@
   },
   "child": {
     "en": "A tiny bit of plain cooked beef can be a treat. A grown-up should cook it and take out the bones.",
-    "sl": "Košček navadnega kuhanega mesa je lahko priboljšek. Odrasel naj ga skuha in odstrani kosti."
+    "sl": "Košček navadne kuhane govedine je lahko priboljšek. Odrasli naj jo skuha in odstrani kosti."
   },
   "faq": [],
   "sources": [
@@ -72,6 +72,14 @@
     {
       "id": "KC5",
       "quote": "Food meant for people from supermarkets and butchers is supposed to be cooked."
+    },
+    {
+      "id": "KC50",
+      "quote": "Small amounts of cooked meat or fish, such as chicken, turkey or salmon, are suitable."
+    },
+    {
+      "id": "KC28",
+      "quote": "Contact your vet immediately if you think your cat has eaten something silly - never wait to see what happens."
     }
   ],
   "related": [
@@ -84,14 +92,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8c596780b0baf44d44e8597e82a1366f626beb2166936040d98efb03cec8caaf"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fe3d290f5b13567548b818f71c5104f6224dec0428230917a0d6beab4210c91e"
     }
   }
 }

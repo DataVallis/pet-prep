@@ -19,8 +19,8 @@
     "sl": "Raje ne. Mastno meso in perutninska koža lahko muci povzročijo prebavne težave, pri občutljivih mačkah pa celo vnetje trebušne slinavke. Če delite meso, ponudite malo navadnega, pustega, kuhanega mesa brez kože, kosti in začimb."
   },
   "why": {
-    "en": "Too much fat can affect a cat's digestive tract, especially the pancreas. Cats Protection warns that turkey skin is high in fat and can cause digestive upset or even pancreatitis in sensitive cats, and a University of Georgia vet advises avoiding the fattier pieces of meat altogether.",
-    "sl": "Preveč maščobe lahko obremeni mačja prebavila, zlasti trebušno slinavko. Cats Protection opozarja, da je puranja koža zelo mastna in lahko pri občutljivih mačkah povzroči prebavne težave ali celo vnetje trebušne slinavke, veterinarka z Univerze v Georgii pa svetuje, naj se bolj mastnim kosom mesa povsem izognemo."
+    "en": "Too much fat can affect a cat's digestive tract, especially the pancreas. Cats Protection warns that turkey skin is high in fat and can cause digestive upset or even pancreatitis in sensitive cats, and a University of Georgia vet advises avoiding the fattier pieces of ham altogether.",
+    "sl": "Preveč maščobe lahko obremeni mačja prebavila, zlasti trebušno slinavko. Cats Protection opozarja, da je puranja koža zelo mastna in lahko pri občutljivih mačkah povzroči prebavne težave ali celo vnetje trebušne slinavke, veterinarka z Univerze v Georgii pa svetuje, naj se bolj mastnim kosom šunke povsem izognemo."
   },
   "signs": {
     "en": [
@@ -44,7 +44,7 @@
   },
   "child": {
     "en": "Fatty bits can give a cat a sore tummy. If a grown-up says yes, kitty can have a tiny bit of plain lean meat.",
-    "sl": "Mastni koščki lahko muco zboli trebušček. Če odrasli dovoli, lahko muca dobi košček navadnega pustega mesa."
+    "sl": "Zaradi mastnih koščkov lahko muco boli trebušček. Če odrasli dovoli, lahko muca dobi košček navadnega pustega mesa."
   },
   "faq": [
     {
@@ -94,14 +94,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "94af5efb6b59d07c76e9b43da7292e007051671abbf737fa930b7591db98f23a"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "11f0e6ddd91530e32e30fb55f576d98b3d75602bb2ea5a12a6b5455516320c80"
     }
   }
 }

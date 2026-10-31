@@ -19,8 +19,8 @@
     "sl": "Ne. Veliko čajev vsebuje kofein, mačke pa so nanj bolj občutljive kot ljudje. Posebej tvegane so čajne vrečke. Čaja ne delite z muco in pokličite veterinarja, če prežveči čajno vrečko ali popije čaj s kofeinom."
   },
   "why": {
-    "en": "Many teas contain caffeine. Cats are more sensitive to caffeine than people. Caffeine belongs to the methylxanthines, the same group of stimulants as the theobromine in chocolate, and it speeds up the heart, makes cats restless and upsets the stomach.",
-    "sl": "Veliko čajev vsebuje kofein. Mačke so na kofein bolj občutljive kot ljudje. Kofein spada med metilksantine, isto skupino poživil kot teobromin v čokoladi, ter pospeši srce, povzroči nemir in prebavne težave."
+    "en": "Many teas contain caffeine. Cats are more sensitive to caffeine than people. Like chocolate, coffee and other caffeine-containing foods have high levels of stimulants called methylxanthines; caffeine speeds up the heart, makes cats restless and upsets the stomach.",
+    "sl": "Veliko čajev vsebuje kofein. Mačke so na kofein bolj občutljive kot ljudje. Kava in druga živila s kofeinom imajo tako kot čokolada veliko poživil, imenovanih metilksantini; kofein pospeši srce, povzroči nemir in prebavne težave."
   },
   "signs": {
     "en": [
@@ -124,14 +124,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "410fb4a5c206be4d67a0eada43206fb12855c88a930a37e99089991771763ee0"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2e2e25d0094b7b251a80aa3b59a00c62f3c68f1e548584f669a7d124bdb6860f"
     }
   }
 }

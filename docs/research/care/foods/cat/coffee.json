@@ -19,8 +19,8 @@
     "sl": "Ne. Kava vsebuje kofein, mačke pa so nanj bolj občutljive kot ljudje. Neuporabljena mleta kava in kavna zrna lahko povzročijo resno zastrupitev. Kavo hranite izven dosega in pokličite veterinarja, če jo muca poje ali popije."
   },
   "why": {
-    "en": "Coffee is one of the main sources of caffeine at home. Cats are more sensitive to caffeine than people. Caffeine belongs to the methylxanthines, the same group of stimulants as the theobromine in chocolate, and it speeds up the heart, makes cats restless and upsets the stomach.",
-    "sl": "Kava je eden glavnih virov kofeina v domu. Mačke so na kofein bolj občutljive kot ljudje. Kofein spada med metilksantine, isto skupino poživil kot teobromin v čokoladi, ter pospeši srce, povzroči nemir in prebavne težave."
+    "en": "Coffee is one of the main sources of caffeine at home. Cats are more sensitive to caffeine than people. Like chocolate, coffee and other caffeine-containing foods have high levels of stimulants called methylxanthines; caffeine speeds up the heart, makes cats restless and upsets the stomach.",
+    "sl": "Kava je eden glavnih virov kofeina doma. Mačke so na kofein bolj občutljive kot ljudje. Kava in druga živila s kofeinom imajo tako kot čokolada veliko poživil, imenovanih metilksantini; kofein pospeši srce, povzroči nemir in prebavne težave."
   },
   "signs": {
     "en": [
@@ -52,8 +52,8 @@
         "sl": "Sta mleta kava in kavna zrna nevarnejša od skodelice kave?"
       },
       "a": {
-        "en": "Yes, they can be. Pet Poison Helpline warns that unused coffee grounds or beans could cause serious toxicity in cats. Throw away used grounds and pods where your cat can't reach them.",
-        "sl": "Lahko, da. Pet Poison Helpline opozarja, da lahko neuporabljena mleta kava ali zrna pri mačkah povzročijo resno zastrupitev. Uporabljeno kavo in kapsule zavrzite tja, kamor muca ne seže."
+        "en": "Yes, they can be. Pet Poison Helpline warns that unused coffee grounds or beans could cause serious toxicity in cats. Keep coffee grounds and beans where your cat can't reach them.",
+        "sl": "Lahko, da. Pet Poison Helpline opozarja, da lahko neuporabljena mleta kava ali zrna pri mačkah povzročijo resno zastrupitev. Mleto kavo in zrna hranite tam, kamor muca ne seže."
       }
     }
   ],
@@ -124,14 +124,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f5931588b6d7635b04fb124cc15e7e1180a7907c85efdb379a7e418c0271b3de"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d4364f632e7f041455c739f2c1ba057f41802bd258b413d8bf420414d840936e"
     }
   }
 }

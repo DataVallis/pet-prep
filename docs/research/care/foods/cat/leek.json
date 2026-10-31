@@ -54,8 +54,8 @@
   "faq": [
     {
       "q": {
-        "en": "Is cooked or powdered leek safe for cats?",
-        "sl": "Je kuhan por za mačke varen?"
+        "en": "Is cooked or dried leek safe for cats?",
+        "sl": "Je kuhan ali sušen por za mačke varen?"
       },
       "a": {
         "en": "No. All forms are poisonous to cats, including raw, cooked and dried leek. Be careful with leftovers, sauces, soups and gravy that may contain it.",
@@ -114,7 +114,7 @@
     },
     {
       "id": "KC3",
-      "quote": "it is important to immediately call your veterinarian or Pet Poison Helpline."
+      "quote": "it is important to immediately call your veterinarian or Pet Poison Helpline, a 24/7 animal poison center"
     },
     {
       "id": "KC4",
@@ -161,14 +161,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "95110e329985eb4fc4295f293bd5428a2b808da174587c9af1b2d3e566c7d8a7"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5cad41dc02ebf22655ba7c430737422400d7b34bbad47efe23c0fa098c81528f"
     }
   }
 }

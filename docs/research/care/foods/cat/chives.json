@@ -54,11 +54,11 @@
   "faq": [
     {
       "q": {
-        "en": "Is cooked or powdered chives safe for cats?",
+        "en": "Are cooked or dried chives safe for cats?",
         "sl": "Je kuhan ali sušen drobnjak za mačke varen?"
       },
       "a": {
-        "en": "No. All forms are poisonous to cats, including raw, cooked and dried chives. Be careful with leftovers, sauces, soups and gravy that may contain it.",
+        "en": "No. All forms are poisonous to cats, including raw, cooked and dried chives. Be careful with leftovers, sauces, soups and gravy that may contain them.",
         "sl": "Ne. Za mačke so strupene vse oblike, tudi surov, kuhan in sušen drobnjak. Previdni bodite pri ostankih hrane, omakah, juhah in mesnih omakah, ki ga lahko vsebujejo."
       }
     }
@@ -114,7 +114,7 @@
     },
     {
       "id": "KC3",
-      "quote": "it is important to immediately call your veterinarian or Pet Poison Helpline."
+      "quote": "it is important to immediately call your veterinarian or Pet Poison Helpline, a 24/7 animal poison center"
     },
     {
       "id": "KC4",
@@ -157,14 +157,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "02bf616abac3e939c7dc25e526b74d135ca57c8919f6d290f06bd868f3219de6"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "03b6af6c445adabc1ec7cc7f684ea952a2b0b59fb05e0420456aa62f8b2fbb61"
     }
   }
 }

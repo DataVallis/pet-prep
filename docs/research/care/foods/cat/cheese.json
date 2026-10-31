@@ -20,7 +20,7 @@
   },
   "why": {
     "en": "Most adult cats can't properly digest lactose, the sugar in milk and in dairy products such as cheese. This can cause vomiting or diarrhoea and make a cat sluggish. Cheese is also high in fat and salt, and eaten regularly it can lead to weight gain. Lactose-free and plant-based cheeses are not a safe swap, because some dairy alternatives contain ingredients that could be toxic to cats.",
-    "sl": "Večina odraslih mačk ne zmore dobro prebaviti laktoze, sladkorja v mleku in mlečnih izdelkih, kot je sir. Posledica sta lahko bruhanje ali driska, mačka je lahko tudi utrujena. Sir ima veliko maščob in soli, in če ga mačka je redno, se lahko zredi. Sir brez laktoze ali rastlinski sir ni varna zamenjava, ker nekatere mlečne nadomestke vsebujejo sestavine, ki so lahko za mačke strupene."
+    "sl": "Večina odraslih mačk ne zmore dobro prebaviti laktoze, sladkorja v mleku in mlečnih izdelkih, kot je sir. Posledica sta lahko bruhanje ali driska, mačka je lahko tudi utrujena. Sir ima veliko maščob in soli, in če ga mačka je redno, se lahko zredi. Sir brez laktoze ali rastlinski sir ni varna zamenjava, ker nekateri mlečni nadomestki vsebujejo sestavine, ki so lahko za mačke strupene."
   },
   "signs": {
     "en": [
@@ -37,8 +37,8 @@
     ]
   },
   "what_to_do": {
-    "en": "If your cat ate a little cheese, there's no need to rush to the vet. Keep an eye on them. If they become unwell or act differently, call your vet, tell them how much cheese your cat ate, and they will say whether a visit is needed.",
-    "sl": "Če je mačka pojedla malo sira, ni treba hiteti k veterinarju. Opazujte jo. Če ji postane slabo ali se vede drugače, pokličite veterinarja, povejte mu, koliko sira je pojedla, in svetoval vam bo, ali je pregled potreben."
+    "en": "If your cat ate a little cheese, there's no need to rush to the vet. Keep an eye on them. If they become unwell or act differently, call your vet and tell them how much cheese your cat ate.",
+    "sl": "Če je mačka pojedla malo sira, ni treba hiteti k veterinarju. Opazujte jo. Če ji postane slabo ali se vede drugače, pokličite veterinarja in mu povejte, koliko sira je pojedla."
   },
   "serving": null,
   "child": {
@@ -150,14 +150,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "95eec8e88beda3f1eb261dd7e5a972579deddfd0f02e0fe616b1ae5766afe2d6"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "69b7f2745b636ae65e9db5b14cad487da49a76b445522f489601d25a2e658b2f"
     }
   }
 }

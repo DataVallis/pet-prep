@@ -16,7 +16,7 @@
   "level": "not_recommended",
   "answer": {
     "en": "No, raw meat is not recommended for cats. Even though wild cats eat raw prey, raw meat can carry germs such as Salmonella, Listeria and E. coli, and parasites such as Toxoplasma, which can make cats and people ill.",
-    "sl": "Ne, surovo meso za mačke ni priporočljivo. Čeprav divje mačke jedo surov plen, lahko surovo meso prenaša klice, kot so salmonela, listerija in E. coli, ter zajedavce, kot je toksoplazma, ki lahko zbolijo mačke in ljudi."
+    "sl": "Ne, surovo meso za mačke ni priporočljivo. Čeprav divje mačke jedo surov plen, lahko surovo meso prenaša klice, kot so salmonela, listerija in E. coli, ter zajedavce, kot je toksoplazma, ki lahko povzročijo bolezen pri mačkah in ljudeh."
   },
   "why": {
     "en": "Cornell and the Merck Veterinary Manual both advise against raw meat for cats, as food or as a treat, because it can spread toxoplasmosis and other infections. Contamination of raw meat by bacteria is common, and some cats seem fine but shed the bacteria in their stool, which can spread to people and other pets. Supermarket meat for people is meant to be cooked.",
@@ -153,14 +153,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "74428e69bc83d6678e32bf11ad9df1c2a92b9fe2b83ca9f888b380a8e0b79575"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cf8073b3efccfba5da1de4ad2bc0ef39b40381c0eae9094762e47e5de64eba19"
     }
   }
 }

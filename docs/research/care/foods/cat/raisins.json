@@ -19,8 +19,8 @@
     "sl": "Ne. Rozine so, tako kot grozdje in ribez, na seznamu živil, ki so za mačke strupena, in lahko povzročijo odpoved ledvic. Pazite na pecivo, kolače in drugo, kar jih vsebuje, ter pokličite veterinarja, če jih muca poje."
   },
   "why": {
-    "en": "Cat welfare charities warn that grapes, raisins and currants can cause kidney failure in cats, with cats that have chronic kidney disease possibly at greater risk. Cats rarely eat raisins on their own but may be tempted by foods that contain them. Cat cases are rare and not well understood, so we use the stricter level.",
-    "sl": "Organizacije za dobrobit mačk opozarjajo, da lahko grozdje, rozine in ribez pri mačkah povzročijo odpoved ledvic, mačke s kronično ledvično boleznijo pa so morda še bolj ogrožene. Mačke same redko jedo rozine, lahko pa jih zamika hrana, ki jih vsebuje. Primeri pri mačkah so redki in slabo raziskani, zato izberemo strožjo stopnjo."
+    "en": "Cat welfare charities warn that grapes, raisins and currants can cause kidney failure in cats, with cats that have chronic kidney disease possibly at greater risk. Cats are unlikely to eat many raisins on their own but may be tempted by foods that contain them. Cat cases are rare and not well understood, so we use the stricter level.",
+    "sl": "Organizacije za dobrobit mačk opozarjajo, da lahko grozdje, rozine in ribez pri mačkah povzročijo odpoved ledvic, mačke s kronično ledvično boleznijo pa so morda še bolj ogrožene. Mačke same verjetno ne pojedo veliko rozin, lahko pa jih zamika hrana, ki jih vsebuje. Primeri pri mačkah so redki in slabo raziskani, zato izberemo strožjo stopnjo."
   },
   "signs": {
     "en": [
@@ -105,14 +105,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "237d16ae30b9a7c26adc31e80cf9d7a40a81b5f30c807b9e61aed2d249d1e780"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2fa9a4372fa611d3914ff43ed3966c18d88fb7bbe7c85135abddb3cefbb34de2"
     }
   }
 }

@@ -37,8 +37,8 @@
     ]
   },
   "what_to_do": {
-    "en": "A lick of plain yogurt is unlikely to be serious. Watch for diarrhoea, vomiting or a change in behaviour, and call your vet if your cat seems unwell.",
-    "sl": "Malo navadnega jogurta najverjetneje ne bo resna težava. Bodite pozorni na drisko, bruhanje ali spremembo vedenja in pokličite veterinarja, če se mačka ne počuti dobro."
+    "en": "If your cat ate yogurt, watch for diarrhoea, vomiting or a change in behaviour, and contact your vet for advice if she seems unwell.",
+    "sl": "Če je muca pojedla jogurt, bodite pozorni na drisko, bruhanje ali spremembo vedenja in se za nasvet obrnite na veterinarja, če se ne počuti dobro."
   },
   "serving": null,
   "child": {
@@ -93,6 +93,10 @@
     {
       "id": "KC46",
       "quote": "Feeding milk and milk-based products to cats can actually cause them to vomit or have diarrhea."
+    },
+    {
+      "id": "KC5",
+      "quote": "If you notice or suspect your cat has eaten food that can be harmful to them, book an urgent appointment with your vet"
     }
   ],
   "related": [
@@ -104,14 +108,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3bdd88478ec38afa76727af5da322426381e66b0138de13c8d2b8b4ca1836aee"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bdad775c7a11f40d2c9b6d3c32209a9238c217def78dc8ceb39102dcc2db1c76"
     }
   }
 }

@@ -52,8 +52,8 @@
         "sl": "Kje vse se lahko skriva alkohol?"
       },
       "a": {
-        "en": "Besides drinks, alcohol can be found in liqueur sweets, hand sanitiser, mouthwash, some liquid medicines and raw, rising bread dough.",
-        "sl": "Poleg pijač je alkohol lahko tudi v bonbonih z likerjem, razkužilu za roke, ustni vodici, nekaterih tekočih zdravilih ter surovem, vzhajajočem testu."
+        "en": "Besides drinks, alcohol can be found in liqueur sweets, hand sanitiser, mouthwash and raw, rising bread dough.",
+        "sl": "Poleg pijač je alkohol lahko tudi v bonbonih z likerjem, razkužilu za roke, ustni vodici ter surovem, vzhajajočem testu."
       }
     }
   ],
@@ -128,14 +128,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "68b367af0316ce8b1beede13bdb1b2af5e72b5708dfd627b879743f7001beed3"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dc63aec896576778e242e671c8ff86ad8b197a8d3c0420502e52c6434bec83ca"
     }
   }
 }

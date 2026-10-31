@@ -28,8 +28,8 @@
     "sl": "Najprej ponudite majhen košček. Če ima mačka potem bruhanje ali drisko, prenehajte in se posvetujte z veterinarjem."
   },
   "serving": {
-    "en": "Tinned in spring water (not oil, brine or sauce), with any large bones removed; a few pieces now and then.",
-    "sl": "Konzervirane v izvirski vodi (ne v olju, slanici ali omaki), z odstranjenimi večjimi kostmi; nekaj koščkov občasno."
+    "en": "Tinned in spring water, with bones removed; a few pieces now and then.",
+    "sl": "Konzervirane v izvirski vodi, z odstranjenimi kostmi; nekaj koščkov občasno."
   },
   "child": {
     "en": "Sardines can be a little fishy treat for cats sometimes. A grown-up should check for bones.",
@@ -63,14 +63,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "877dac33abe984adf6b979e6fc3e7e91b5bdd0d6cca473080fbcb5f1119f4126"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4e54bc806e7d43a3f16e304672c567213ba4f4e1846d640c3f7d15860f031688"
     }
   }
 }

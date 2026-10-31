@@ -19,8 +19,8 @@
     "sl": "Ne, surova riba za mačke ni dobra izbira. Lahko vsebuje škodljive bakterije in zajedavce, nekatere surove ribe pa vsebujejo tiaminazo, encim, ki uničuje vitamin B1. Ribo za mačke je treba dobro skuhati in odstraniti kosti."
   },
   "why": {
-    "en": "Cats Protection says uncooked fish may contain harmful bacteria and parasites. The Merck Veterinary Manual notes that thiaminases are found in raw freshwater fish and are destroyed by cooking. Thiamine (vitamin B1) is an essential nutrient for cats, so cooking fish removes this risk.",
-    "sl": "Cats Protection navaja, da surova riba lahko vsebuje škodljive bakterije in zajedavce. Merckov veterinarski priročnik navaja, da so tiaminaze prisotne v surovih sladkovodnih ribah in da jih kuhanje uniči. Tiamin (vitamin B1) je za mačke nujno hranilo, zato kuhanje ribe to tveganje odpravi."
+    "en": "Cats Protection says uncooked fish may contain harmful bacteria and parasites. The Merck Veterinary Manual notes that thiaminases are found in raw freshwater fish and are destroyed by cooking. Thiamine (vitamin B1) is an essential nutrient, so cooking fish removes this risk.",
+    "sl": "Cats Protection navaja, da surova riba lahko vsebuje škodljive bakterije in zajedavce. Merckov veterinarski priročnik navaja, da so tiaminaze prisotne v surovih sladkovodnih ribah in da jih kuhanje uniči. Tiamin (vitamin B1) je nujno hranilo, zato kuhanje ribe to tveganje odpravi."
   },
   "signs": {
     "en": [
@@ -126,14 +126,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9c441deb310bd762284c3dd301a40fe7edbb35fd61c1d809f36b297dba9a6989"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1a89f9c984821be5e9098778cca7f3db932331096f0381a857334a87b2177752"
     }
   }
 }

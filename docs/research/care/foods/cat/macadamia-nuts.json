@@ -13,49 +13,49 @@
     "en": "macadamia-nuts",
     "sl": "makadamija-orescki"
   },
-  "level": "not_recommended",
+  "level": "toxic",
   "answer": {
-    "en": "No, they are not a cat food. Cats Protection lists nuts, including macadamia, among foods to keep away from cats because their high oil and fat content can make cats unwell. Macadamia poisoning is described in dogs; if your cat eats some, ask your vet for advice.",
-    "sl": "Ne, niso hrana za mačke. Cats Protection makadamijo in druge oreščke uvršča med živila, ki naj bodo stran od mačk, ker jih zaradi veliko olj in maščob lahko razbolijo. Zastrupitev z makadamijo je opisana pri psih; če jih muca poje, se posvetujte z veterinarjem."
+    "en": "No. Macadamia nuts are very fatty, and VCA says they are also toxic and can cause illness in cats. Keep them out of your cat's reach and contact your vet if your cat eats any.",
+    "sl": "Ne. Makadamija oreščki so zelo mastni, VCA pa navaja, da so tudi strupeni in lahko mačkam povzročijo bolezen. Hranite jih izven mucinega dosega in pokličite veterinarja, če jih muca poje."
   },
   "why": {
-    "en": "Macadamia nuts are high in oils and fats, which can make cats unwell. The ASPCA and the Merck Veterinary Manual describe macadamia poisoning in dogs, and we found no A/B source describing the same poisoning in cats. We therefore list macadamia as not recommended, not as toxic, and will update this if cat evidence appears.",
-    "sl": "Makadamija oreščki vsebujejo veliko olj in maščob, ki lahko mačko razbolijo. ASPCA in Merckov veterinarski priročnik opisujeta zastrupitev z makadamijo pri psih, vira A/B, ki bi enako zastrupitev opisal pri mačkah, pa nismo našli. Zato makadamijo uvrščamo med odsvetovana, ne strupena živila, in podatek posodobimo, če se pojavijo dokazi pri mačkah."
+    "en": "Cats Protection lists macadamia among nuts whose high oil and fat content can make cats unwell. VCA says macadamia nuts are very fatty, potentially causing pancreatitis, and also toxic, causing illness in cats. Detailed descriptions of macadamia poisoning mostly come from dogs, but we use the stricter level for cats.",
+    "sl": "Cats Protection makadamijo navaja med oreščki, ki zaradi veliko olj in maščob mački lahko škodijo. VCA navaja, da so makadamija oreščki zelo mastni in lahko povzročijo pankreatitis, poleg tega pa so strupeni in mačkam povzročajo bolezen. Podrobni opisi zastrupitve z makadamijo večinoma izhajajo iz psov, za mačke pa uporabljamo strožjo stopnjo."
   },
   "signs": {
     "en": [
-      "Signs of an upset stomach or feeling unwell (our sources do not list specific signs in cats)"
+      "Weakness",
+      "Tremors",
+      "Overheating (high body temperature)"
     ],
     "sl": [
-      "Znaki prebavnih težav ali slabega počutja (naši viri ne navajajo posebnih znakov pri mačkah)"
+      "Šibkost",
+      "Tresenje",
+      "Pregrevanje (zvišana telesna temperatura)"
     ]
   },
   "what_to_do": {
-    "en": "If your cat ate macadamia nuts, contact your vet for advice. Note how many she ate and when, and keep the packaging.",
-    "sl": "Če je muca pojedla makadamija oreščke, se za nasvet obrnite na veterinarja. Zapišite, koliko jih je pojedla in kdaj, ter shranite embalažo."
+    "en": "Contact your vet straight away if your cat ate macadamia nuts. Note how many she ate and when, and keep the packaging. Don't try to make your cat sick at home.",
+    "sl": "Če je muca pojedla makadamija oreščke, takoj pokličite veterinarja. Zapišite, koliko jih je pojedla in kdaj, ter shranite embalažo. Muce doma ne poskušajte spraviti k bruhanju."
   },
   "serving": null,
   "child": {
-    "en": "Nuts are a people snack. They are too oily for cats, so keep the bowl out of kitty's reach.",
-    "sl": "Oreščki so priboljšek za ljudi. Za muce so premastni, zato skledo postavi izven mucinega dosega."
+    "en": "Macadamia nuts are not for cats. Keep the nut bowl out of kitty's reach and tell a grown-up if she eats some.",
+    "sl": "Makadamija oreščki niso za muce. Skledo z oreščki postavi izven mucinega dosega. Če jih muca poje, povej odraslemu."
   },
   "faq": [
     {
       "q": {
-        "en": "Why do some lists call macadamia nuts toxic?",
-        "sl": "Zakaj jih nekateri seznami označujejo kot strupene?"
+        "en": "Are macadamia nuts worse than other nuts?",
+        "sl": "Ali so makadamija oreščki hujši od drugih oreščkov?"
       },
       "a": {
-        "en": "Macadamia nuts can cause weakness, tremors and other signs in dogs. Cats Protection advises keeping all nuts, including macadamia, away from cats because their fat can make cats unwell.",
-        "sl": "Makadamija oreščki lahko pri psih povzročijo šibkost, tresenje in druge znake. Cats Protection svetuje, naj bodo vsi oreščki, tudi makadamija, stran od mačk, ker jih maščobe lahko razbolijo."
+        "en": "Yes. Most nuts are very fatty, but VCA says macadamia nuts are also toxic and can cause illness in cats, such as weakness, tremors and overheating.",
+        "sl": "Da. Večina oreščkov je zelo mastnih, VCA pa navaja, da so makadamija oreščki tudi strupeni in mačkam lahko povzročijo bolezen, na primer šibkost, tresenje in pregrevanje."
       }
     }
   ],
   "sources": [
-    {
-      "id": "KC5",
-      "quote": "nuts"
-    },
     {
       "id": "KC5",
       "quote": "Nuts such as macadamia, almonds and walnuts contain high amounts of oils and fats which if eaten can make your cat unwell"
@@ -71,26 +71,41 @@
     {
       "id": "KC8",
       "quote": "If possible, take the packaging, plant, or substance with you to the veterinary clinic"
+    },
+    {
+      "id": "KC44",
+      "quote": "Not only are macadamia nuts very fatty, potentially causing pancreatitis, they're also toxic and can cause illness in cats."
+    },
+    {
+      "id": "KC43",
+      "quote": "Most nuts are very fatty and can cause vomiting and diarrhea, but macadamia nuts specifically will lead to weakness, tremors and hyperthermia."
+    },
+    {
+      "id": "KC8",
+      "quote": "Contact your veterinary team for advice immediately; make sure you know when, where, and how the poisoning occurred."
+    },
+    {
+      "id": "KC22",
+      "quote": "Don’t try to make your cat sick without asking the vet and never given them medicines designed for humans."
     }
   ],
   "related": [
     "almonds",
     "walnuts",
-    "peanuts",
     "chocolate",
     "avocado"
   ],
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cff91da0526af5cf39a2f6299bdbf5dc3813cf35f160afa24d089fbcbee5392e"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c0bb62eba23b1b72c23f1a34bc01c7bb3bcd066113b69adce71949982b55d681"
     }
   }
 }

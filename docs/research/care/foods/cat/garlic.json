@@ -16,7 +16,7 @@
   "level": "toxic",
   "answer": {
     "en": "No. Garlic is toxic to cats and is the most toxic member of the onion family for them. Raw, cooked, dried and powdered garlic can all damage red blood cells and cause anaemia. Call your vet if your cat eats any.",
-    "sl": "Ne. Česen je za mačke strupen in je zanje najbolj strupen med lukovkami. Surov, kuhan, sušen in česen v prahu lahko poškodujejo rdeče krvničke in povzročijo slabokrvnost. Če ga muca poje, pokličite veterinarja."
+    "sl": "Ne. Česen je za mačke strupen in je zanje najbolj strupen med lukovkami. V vseh oblikah – surov, kuhan, sušen ali v prahu – lahko poškoduje rdeče krvničke in povzroči slabokrvnost. Če ga muca poje, pokličite veterinarja."
   },
   "why": {
     "en": "Garlic belongs to the allium family (the onion family). Alliums damage red blood cells and can lead to anaemia, and they also irritate the stomach and gut. Cats are the most sensitive species. All forms are poisonous to cats — raw, cooked, dried, powdered and liquid. Of the alliums, garlic is the most toxic for cats.",
@@ -124,7 +124,7 @@
     },
     {
       "id": "KC3",
-      "quote": "it is important to immediately call your veterinarian or Pet Poison Helpline."
+      "quote": "it is important to immediately call your veterinarian or Pet Poison Helpline, a 24/7 animal poison center"
     },
     {
       "id": "KC4",
@@ -167,14 +167,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e2e3d85b5a8ff794f364a8826457f4056227f5de966327f428f077880f69ec68"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1461e3deebef6d191758d6f7d1647c540bdb2ebfbd527fb541fbf15feda234d1"
     }
   }
 }

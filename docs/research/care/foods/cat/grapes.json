@@ -37,7 +37,7 @@
   "serving": null,
   "child": {
     "en": "Grapes are yummy for us but not safe for cats. Keep them on your plate and tell a grown-up if kitty eats one.",
-    "sl": "Grozdje je nam okusno, za muce pa ni varno. Naj ostane na tvojem krožniku. Če ga muca poje, povej odraslemu."
+    "sl": "Nam je grozdje okusno, za muce pa ni varno. Naj ostane na tvojem krožniku. Če ga muca poje, povej odraslemu."
   },
   "faq": [
     {
@@ -102,14 +102,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8dd272b0b6b77ca808ed0d07da222810387000597a4db1a3b96089ce3f76e509"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "53a58b9e3abea1f3c90b89b53619b3dfb098572c6fd4e40415b545ce49138ac1"
     }
   }
 }

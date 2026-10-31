@@ -15,8 +15,8 @@
   },
   "level": "not_recommended",
   "answer": {
-    "en": "It's best not to make it a habit. Some vets say natural peanut butter can be an occasional treat, but it must never contain xylitol, and cat-care charities advise sticking to cat treats instead of human foods.",
-    "sl": "Bolje je, da to ne postane navada. Nekateri veterinarji pravijo, da je naravno arašidovo maslo lahko občasen priboljšek, vendar nikoli ne sme vsebovati ksilitola, dobrodelne organizacije za mačke pa svetujejo priboljške za mačke namesto človeške hrane."
+    "en": "It's best not to make it a habit. Some vets say natural peanut butter can be an occasional treat, but it must never contain xylitol, and Cats Protection advises sticking to cat treats instead of human foods.",
+    "sl": "Bolje je, da to ne postane navada. Nekateri veterinarji pravijo, da je naravno arašidovo maslo lahko občasen priboljšek, vendar nikoli ne sme vsebovati ksilitola, Cats Protection pa svetuje priboljške za mačke namesto človeške hrane."
   },
   "why": {
     "en": "Sources disagree. VCA describes natural peanut butter as a treat cats love, as long as it is free of preservatives and life-threatening additives such as xylitol. Cats Protection advises sticking to cat treats rather than human foods and warns that nuts can cause problems for cats. We use the stricter level.",
@@ -81,21 +81,20 @@
     }
   ],
   "related": [
-    "peanuts",
     "butter",
     "salt"
   ],
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "61846e4285c7fe73a93f9d98d6d3c21afbef75a87cddbc55131d61196037678e"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ad9ca3159de285016eae171712cae102f8c54b2b9bb793459c251b78f2848094"
     }
   }
 }

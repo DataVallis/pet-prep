@@ -35,8 +35,8 @@
     ]
   },
   "what_to_do": {
-    "en": "A lick of plain ice cream is unlikely to be serious. Watch for diarrhoea or vomiting and call your vet if your cat seems unwell. If the ice cream contained chocolate, contact your vet straight away.",
-    "sl": "Malo navadnega sladoleda najverjetneje ne bo resna težava. Bodite pozorni na drisko ali bruhanje in pokličite veterinarja, če se mačka ne počuti dobro. Če je bil v sladoledu čokolada, takoj pokličite veterinarja."
+    "en": "If your cat ate ice cream, watch for diarrhoea or vomiting and contact your vet for advice if she seems unwell. If the ice cream contained chocolate, contact your vet straight away.",
+    "sl": "Če je muca pojedla sladoled, bodite pozorni na drisko ali bruhanje in se za nasvet obrnite na veterinarja, če se ne počuti dobro. Če je bila v sladoledu čokolada, takoj pokličite veterinarja."
   },
   "serving": null,
   "child": {
@@ -87,6 +87,10 @@
     {
       "id": "KC53",
       "quote": "Chocolate contains a chemical compound called theobromine which is toxic to cats."
+    },
+    {
+      "id": "KC5",
+      "quote": "If you notice or suspect your cat has eaten food that can be harmful to them, book an urgent appointment with your vet"
     }
   ],
   "related": [
@@ -98,14 +102,14 @@
   "updated": "2026-10-31",
   "verification": {
     "en": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4a51dd907cf237a48b971c140114d0d5df343a550a6fe766318d8ad3f40c6e64"
     },
     "sl": {
-      "status": "draft",
-      "verified_by": null,
-      "verified_hash": null
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8780c646033375248e5ec5fcc0cd3fbebc60abf806c633700a36a98165347730"
     }
   }
 }
