@@ -16,6 +16,28 @@
     "fetching": "Kuža teče po žogo …",
     "done": "Hvala za igro! Kuža je ves vesel."
   },
+  "ball": {
+    "hint": "Povleci in spusti žogo!",
+    "holdHint": "Pridrži žogo in spusti!",
+    "preparing": "Kuža se pripravlja …",
+    "call": "Pokliči!",
+    "catch": "Ujemi!",
+    "again": "Še en krog",
+    "done": "Bravo! Kuža je ves vesel.",
+    "fb": {
+      "throw": "Lep met!",
+      "called": "Pridi!",
+      "caught": "Ujeta!"
+    },
+    "a11y": {
+      "throw": "Vrzi žogo",
+      "throwHint": "Pridrži za močnejši met, spusti za met.",
+      "call": "Pokliči kužka",
+      "catch": "Ujemi žogo",
+      "progress": "Met {{n}} od 3, ujete žoge: {{stars}}",
+      "stars": "Ujete žoge: {{stars}} od 3"
+    }
+  },
   "cuddle": {
     "invite": "Kuža se stisne k tebi. Ga pobožaš?",
     "start": "Pobožaj",
@@ -24,6 +46,20 @@
     "areaA11y": "Tvoj kuža. Pobožaj ga s prstom ali uporabi gumb spodaj.",
     "progress": "Poteg {{n}} od 5",
     "done": "Kuža uživa. Hvala za crkljanje!"
+  },
+  "cuddleV2": {
+    "slow": "Boži počasi, 3 sekunde.",
+    "wait": "Počakaj …",
+    "more": "Še!",
+    "doneLine": "Uživa! ♥♥♥",
+    "done": "Uživa! Hvala za crkljanje.",
+    "button": "Pobožaj",
+    "buttonHint": "Drži, da božaš. Spusti za premor.",
+    "tooFastA11y": "Počasneje.",
+    "a11y": {
+      "progress": "Srca: {{n}} od 3",
+      "area": "Počasi boži s prstom."
+    }
   },
   "mood": {
     "happy": "Kuža je vesel"

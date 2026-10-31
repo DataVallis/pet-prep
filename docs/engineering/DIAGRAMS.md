@@ -654,8 +654,8 @@ flowchart TD
   R -- no --> N([No chewing today])
   TE -- no --> N
   CH --> AP["At its time (not in a freeze / quiet hours):<br/>hygiene → 0 % · pet_chewed row"]
-  AP --> RC["POST /child/pet/resolve-chewing<br/>'Pospravi in daj igračo'"]
-  P["Poop · puppy accident"] --> CL["POST /child/pet/clean<br/>(cleaning game)"]
+  AP --> RC["POST /child/pet/resolve-chewing<br/>'Pospravi in daj igračo'<br/>(new build: box + chew toy game first)"]
+  P["Poop · puppy accident"] --> CL["POST /child/pet/clean<br/>(cleaning game — new build: bag / cloth)"]
   RC --> H{"Any other mess open?"}
   CL --> H
   H -- no --> OK["Hygiene 100 %"]
@@ -1738,6 +1738,121 @@ sequenceDiagram
   S->>V: phase clip (start / end = its poses, duration "3"; school performing "5")
   V-->>App: phases[clip] + phase_seconds[clip] in PetUpdated / child state (after the quality check, §10g)
   App->>App: schedule moment → clip once (new instance replays) · missing / picture → pose image
+```
+
+### 10f-2. Native game layer + ball v2 (GAMES_SPEC phase 1 app side, 2026-10-30)
+
+```mermaid
+flowchart TD
+  O[PlayOverlay mode play] --> F{gameLayerAvailable?<br/>RNGH · Skia · Reanimated · Worklets · ExpoHaptics · ExpoAudio}
+  F -->|no: older binary / OTA JS| V1[v1 BallGame — PanResponder, never requires ballV2]
+  F -->|yes: new store build| L[lazy require ballV2/BallGameV2<br/>load error → v1]
+  L --> GS[GameScreen full screen]
+  GS --> CD[ClipDeck: one muted player per clip URL, frame 0, hidden<br/>ready = first frames · 12 s → Slika]
+  CD -->|onReady| CLK[GameClock = SessionClock starts · useClipQueue.start]
+  GS --> PF[PlayField: Skia ball from shared values, UI thread]
+  GS --> FB[FeedbackLayer ✓ ✗ ★ round · mask ≥ 85 % → ClipQueue.setMasked]
+  GS --> TB[GameTopBar: dots · ★ · GameLine ≤ 32 chars ≥ 2 s · ×]
+  GS --> FX[GameFx: own WAVs + positive haptics<br/>off when settings.game_feedback = false · silent mode respected]
+```
+
+```mermaid
+stateDiagram-v2
+  [*] --> aim: deck ready
+  aim --> flying: pull ≥ 30 pt & ≥ 250 pt/s / hold »Vrzi žogo« — ✓ Lep met! · whoosh · bounce · tap
+  flying --> call: ball_running ended (held on the empty room)
+  call --> returning: »Pokliči!« — ✓ Pridi! · whistle · tap
+  call --> returning: 2 s — the dog comes by itself (no cue)
+  returning --> rolling: ball_fetching ended — pop, ball rolls to the camera
+  rolling --> aim: tap the ball — ★ Ujeta! · chime · success (throws < 3)
+  rolling --> aim: 1.5 s / 2.5 s hold mode — nothing (no ✗)
+  rolling --> done: 3rd throw — roundDone → one POST /play {kind: play}
+  done --> aim: »Še en krog« (round + 1)
+  done --> [*]: »Končano«
+```
+
+```mermaid
+flowchart LR
+  W[waiting = ball_waiting_loop<br/>else ball_waiting looping<br/>stand → stand] -->|crossfade ≤ 200 ms| R[running<br/>stand → empty, once]
+  R -->|end: holds empty room| H((call))
+  H -->|instant, same frame| FE[fetching<br/>empty → stand, once]
+  FE -->|instant, same frame| W
+  X[ClipQueue rules: never cut a once clip mid-way · crossfade only from a loop into its pose · a pose change = cut only under the feedback mask · clock safety = length + 600 ms]
+```
+
+
+### 10f-3. Cleaning games on the game layer (GAMES_SPEC §6.2, phase 1 app part 2, 2026-10-30)
+
+The drawings (react-native-svg, `MessGraphics`) are in every binary; the games only behind the capability flag. The server sees exactly what it saw before: one request at the end.
+
+```mermaid
+flowchart TD
+  H[HUD: mess to scrub / »Očisti« · »Pospravi in daj igračo« · cat »Pesek«] --> F{loadMessGames<br/>= gameLayerAvailable?}
+  F -->|no: older binary| OLD[CleaningOverlay taps · instant resolve · ScoopOverlay taps<br/>new svg drawings]
+  F -->|yes| K{which mess}
+  K -->|poop / cat litter_accident / accident| MG[MessGame: stages messStages<br/>poop 1–3 per event → bag · puddle → cloth]
+  K -->|chewing| SG[SlipperGame: slipper + 3 flakes → box · toy → dog]
+  K -->|cat litter, open uses| SC[ScoopGame: drag scoop → clumps stick → shake up → bag]
+  MG -->|bag over each swirl / tap · last → bag ties, flies to bin| MG2[cloth wipe ≥ 90 % wipe.ts · shrinks, dries]
+  MG2 --> C1["onCleaned → POST /child/pet/clean (once)"]
+  SG --> C2["onResolved → POST /child/pet/resolve-chewing (once)"]
+  SC --> C3["sand wave → POST /child/pet/litter/scoop (once) → result card"]
+  MG -. first clean of a kind, dog .-> TIP[tip under the top bar ≥ 2.5 s, once per phone<br/>SecureStore petprep.cleaning_tips_seen]
+```
+
+### 10f-4. School v2 on the game layer (GAMES_SPEC §4.1, phase 3 app side, 2026-10-31)
+
+```mermaid
+flowchart TD
+  O[TrainingOverlay: »Začni vajo«] --> F{loadSchoolGameV2<br/>= gameLayerAvailable?}
+  F -->|no: older binary| V1["POST /training/start {command}<br/>v1 RunningView (SchoolStage / PetMediaView)"]
+  F -->|yes: new store build| S2["POST /training/start {command, rules: 2}"]
+  S2 --> R{readTrainingSession → withRulesV2<br/>rounds + mask consistent?}
+  R -->|no| V1
+  R -->|yes| P["preparing: ClipDeck mounts attention · performing · success<br/>(never release) — rule line already up"]
+  P -->|first frames / picture at once / 12 s → picture| RUN[running: SessionClock starts]
+  RUN --> TL["schoolFrameAt (server times only)<br/>lead → listening (chip + 👂) → performing (no text) →<br/>window (chip gone) → mask → calm · ignored: chip 1.5 s → 👃/🦋 + line"]
+  TL -->|role per step| Q["ClipQueue: attention ⇢ performing (crossfade, same pose)<br/>performing → success at its end (instant)<br/>success → attention = CUT only while masked"]
+  TL -->|release_at| M["FeedbackLayer verdict + mask_ms 1200<br/>✓ Bravo! / ✗ Prezgodaj / ✗ Zamujeno"]
+  M -->|onMaskChange| Q
+  RUN --> TAP["token tap (bone if treat_token, else ♥)<br/>praise() → first tap of the cue → tapFeedback"]
+  TL -->|break after round 1| B["»1. krog ✓« + stars · token hidden<br/>»Končaj« while earlyEndOpen()"]
+  B -->|Končaj| E["POST /training/finish {taps, ended_after_round: 1}<br/>(clock keeps running)"]
+  E -->|200| RES[SchoolResultV2: per-cue outcomes, routine line]
+  E -->|422 training_round_two_started / offline| RUN
+  RUN -->|duration over| FULL["POST /training/finish {taps}"] --> RES
+```
+
+### 10f-5. Wand v2, cuddles v2 and the care games on the game layer (GAMES_SPEC §5, §4.4 C1, §5.5 / §7.7 — phases 2 + 4 app side, 2026-10-31)
+
+```mermaid
+flowchart TD
+  C[CatCareOverlay: »Palica s peresom«] --> F{loadWandGameV2<br/>= gameLayerAvailable?}
+  F -->|no: older binary| V1["WandOverlay v1<br/>POST /wand/start (no rules) · ~60 s"]
+  F -->|yes| D["WandGameV2: ClipDeck mounts stalking · crouch_loop · pouncing · catching<br/>»Začni lov« disabled until ready (12 s → picture)"]
+  D -->|Začni lov| S["POST /wand/start {rules: 2}"]
+  S --> R{readWandV2Session:<br/>every timing present?}
+  R -->|no| BAD[»bad response« — never a guessed rule]
+  R -->|yes| RUN["running: SessionClock = hunt clock<br/>wandStageAt → ClipQueue (stalk → crouch loop ⇄ pounce → catch)"]
+  RUN --> G["Pan (UI thread) → feather spring + samples → wandStroke<br/>one move per stroke {t, away, in_zone, speed_ok}<br/>(zone + session max_speed_pt_s / min_dodge_pt)"]
+  G --> L["wandLive (mirror of scoreV2) → wandCues"]
+  RUN --> L
+  L -->|crouch_cues_ms| CUE["👀 badge + countdown ring · crouch sound · 3 × cue haptic · »Miruj!«<br/>ring amber if a move lands in the calm window"]
+  L -->|dodge in window| STAR["★ + swish + success · »Ušlo!«"]
+  L -->|miss| GRAB[feather shakes in the paw — no ✗, no text]
+  L -->|catch_at_ms| CC[»Pusti jo, da ujame!« → ★ »Ujela ga je!«]
+  RUN -->|"max(duration, catch + window)"| FIN["POST /wand/finish {moves[t, away, in_zone, speed_ok]}"]
+  FIN --> RES["result: SERVER stars + hint (calm / dodge / catch)<br/>»Še en lov« (not counted) / »Končano«"]
+
+  P[PlayOverlay mode cuddle] --> F2{loadCuddleGameV2?}
+  F2 -->|no| CV1[v1: 5 strokes]
+  F2 -->|yes| CM["cuddleMachine: slow stroke ≤ 900 pt/s fills a heart 3 s<br/>(too fast → 🐢) → ✋ wait → lift 1 s → 💗 »Še!« → … 3 hearts"]
+  CM -->|done once| PLAY["POST /play {kind: cuddle} (unchanged)"]
+
+  O["ChoreOverlay / CareTaskOverlay / ScratchingOverlay"] --> F3{loadCareShell?}
+  F3 -->|no| CARD[card screens, unchanged]
+  F3 -->|yes| SH["CareGameShell: CatStage full + the SAME input<br/>(BrushArea · scrub · ClawsStage · »Pohvali«)<br/>step on the top line · tap haptic per counted stroke · ✓ per step"]
+  SH --> SAME[same finish request and server verdict]
 ```
 
 ### 10g. Clip quality check (David 2026-10-23)

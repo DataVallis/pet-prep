@@ -45,6 +45,7 @@ import {
 import type { ChildPetView } from '@/modules/childPet/childPetView';
 
 import type { WandMove } from '@/modules/catCare/catGames';
+import { readWandV2Result, readWandV2Session, type WandV2Move, type WandV2Result, type WandV2Session } from '@/modules/catCare/wandV2/wandRules';
 import { classifyActionError } from '@/modules/childPet/actionMessages';
 
 /** A 200 whose body isn't what the contract promises (never guess a schedule / verdict). */
@@ -100,6 +101,25 @@ export const useFinishWand = () =>
     ['wand', 'finish'],
     ({ sessionId, moves }) => api.finishWand(sessionId, moves),
     (raw) => readCatFinishResponse(raw, readWandResult),
+  );
+
+// ── Wand play v2 (GAMES_SPEC §5, game-layer builds only) ─────────
+
+export const useStartWandV2 = () =>
+  useSessionMutation<void, CatStartResponse<WandV2Session>>(['wand', 'start', 'v2'], () => api.startWandV2(), (raw) =>
+    readCatStartResponse(raw, readWandV2Session),
+  );
+
+export interface FinishWandV2Variables {
+  sessionId: string;
+  moves: readonly WandV2Move[];
+}
+
+export const useFinishWandV2 = () =>
+  useSessionMutation<FinishWandV2Variables, CatFinishResponse<WandV2Result>>(
+    ['wand', 'finish', 'v2'],
+    ({ sessionId, moves }) => api.finishWandV2(sessionId, moves),
+    (raw) => readCatFinishResponse(raw, readWandV2Result),
   );
 
 // ── Grooming / weekly litter change ───────────────────────────

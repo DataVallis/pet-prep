@@ -113,6 +113,24 @@ export const google = {
   red: '#EA4335',
 } as const;
 
+/**
+ * Mess illustrations (GAMES_SPEC §6.1, David 2026-10-30): flat, rounded, no faces, never red or
+ * raspberry (a mess isn't dangerous); mint stays the colour of "clean" (sparkles, ✓). Used by
+ * `components/MessGraphics.tsx` and the cleaning games (`modules/cleaning/`).
+ */
+export const mess = {
+  brown: '#8B5E3C',
+  brownDeep: '#5E3B22',
+  /** Drawn at 70 % opacity on the floor. */
+  puddle: '#FFD15C',
+  puddleEdge: '#E0B53C',
+  litter: '#D9CBB0',
+  clump: '#A89478',
+  /** Lighter top of a clump (light, rounded — never a dark dot). */
+  clumpLight: '#C9B89A',
+  fluff: palette.n200,
+} as const;
+
 /** `rgba()` from a `#RRGGBB` token — for glass and scrims. */
 export function alpha(hex: string, opacity: number): string {
   const r = parseInt(hex.slice(1, 3), 16);

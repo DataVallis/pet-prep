@@ -8,6 +8,9 @@
 
 import Svg, { Circle, Ellipse, G, Path } from 'react-native-svg';
 
+import { PeeGraphic } from '@/components/MessGraphics';
+import { FLAKE_PATH } from '@/modules/cleaning/messArt';
+
 import type { BehaviourScene } from '@/modules/behaviour/behaviour';
 import { palette } from '@/theme';
 
@@ -16,24 +19,20 @@ export interface SceneGraphicProps {
   testID?: string;
 }
 
-/** A shallow pale-yellow puddle with a light shine and two drops. viewBox 120 × 80. */
+/**
+ * The puppy's puddle (GAMES_SPEC §6.2, 2026-10-30): the shared `PeeGraphic` — a shallow puddle
+ * with a rim and a reflection plus a drop (`MessGraphics.tsx`).
+ */
 export function PuddleGraphic({ size = 88, testID = 'scene-graphic-accident' }: SceneGraphicProps) {
-  return (
-    <Svg width={size} height={(size * 80) / 120} viewBox="0 0 120 80" testID={testID}>
-      <Path
-        d="M14 46 C6 34 22 22 38 26 C46 14 70 12 80 24 C96 18 114 30 106 44 C116 56 98 70 80 64 C68 74 44 74 36 64 C18 70 4 58 14 46 Z"
-        fill={palette.warnDark}
-        fillOpacity={0.78}
-        stroke={palette.warnDark}
-        strokeWidth={2}
-      />
-      <Ellipse cx={46} cy={38} rx={14} ry={5} fill={palette.white} fillOpacity={0.55} />
-      <Ellipse cx={74} cy={52} rx={7} ry={2.5} fill={palette.white} fillOpacity={0.4} />
-      <Circle cx={104} cy={18} r={4} fill={palette.warnDark} fillOpacity={0.8} />
-      <Circle cx={112} cy={28} r={2.5} fill={palette.warnDark} fillOpacity={0.7} />
-    </Svg>
-  );
+  return <PeeGraphic size={size} testID={testID} />;
 }
+
+/** Where the three flakes lie around the slipper (viewBox 120 × 80; a flake is 40 × 30 at scale 1). */
+const SLIPPER_FLAKES: readonly { x: number; y: number; scale: number }[] = [
+  { x: 100, y: 2, scale: 0.42 },
+  { x: 98, y: 62, scale: 0.38 },
+  { x: 4, y: 64, scale: 0.34 },
+];
 
 /** A soft fog-grey slipper (mint strap) seen from above with a bitten, zig-zag toe and fluff bits. viewBox 120 × 80. */
 export function ChewedSlipperGraphic({ size = 88, testID = 'scene-graphic-chewing' }: SceneGraphicProps) {
@@ -53,10 +52,12 @@ export function ChewedSlipperGraphic({ size = 88, testID = 'scene-graphic-chewin
         {/* Heel cushion. */}
         <Ellipse cx={34} cy={40} rx={10} ry={12} fill={palette.n300} />
       </G>
-      {/* Fluff bits torn off the toe. */}
-      <Circle cx={112} cy={14} r={3} fill={palette.n200} />
-      <Circle cx={104} cy={70} r={2.5} fill={palette.n200} />
-      <Circle cx={114} cy={58} r={2} fill={palette.n200} />
+      {/* Three flakes torn off the toe (GAMES_SPEC §6.2) — the same shape the slipper game drags. */}
+      {SLIPPER_FLAKES.map((f, i) => (
+        <G key={i} transform={`translate(${f.x} ${f.y}) scale(${f.scale})`}>
+          <Path d={FLAKE_PATH} fill={palette.n200} stroke={palette.n400} strokeWidth={2.4} strokeLinejoin="round" />
+        </G>
+      ))}
     </Svg>
   );
 }

@@ -1,5 +1,7 @@
 /**
  * Training mutations (M5-R03): `useStartTraining` and `useFinishTraining`.
+ * GAMES_SPEC §7.2: `rules: 2` (school v2) on start and `endedAfterRound: 1` (Š3) on finish are
+ * sent only when set — a v1 call is byte for byte the old one.
  *
  * Not optimistic — the server generates the schedule and scores the taps. Every answer
  * with a `state` (200, 422 refusal, 423 lock) replaces the child state in the cache, like
@@ -38,15 +40,21 @@ function stateOfBody(raw: unknown): ChildPetState | null {
   return typeof state === 'object' && state !== null && 'pet' in state ? (state as ChildPetState) : null;
 }
 
+export interface StartTrainingVariables {
+  command: TrainingCommand;
+  /** GAMES_SPEC §7.2: 2 = school v2 (only with the game layer); omitted = v1. */
+  rules?: 2;
+}
+
 export function useStartTraining() {
   const client = useQueryClient();
-  return useMutation<StartTrainingResponse, unknown, TrainingCommand, SessionContext>({
+  return useMutation<StartTrainingResponse, unknown, StartTrainingVariables, SessionContext>({
     mutationKey: ['child', 'pet', 'training', 'start'],
     // A start that fires later (after reconnecting) would begin a game nobody watches.
     networkMode: 'always',
     onMutate: () => ({ userId: currentUserId() }),
-    mutationFn: async (command) => {
-      const raw = await api.startTraining(command);
+    mutationFn: async ({ command, rules }) => {
+      const raw = rules === undefined ? await api.startTraining(command) : await api.startTraining(command, rules);
       const parsed = readStartResponse(raw);
       if (parsed === null) throw new TrainingResponseError(stateOfBody(raw));
       return parsed;
@@ -69,6 +77,8 @@ export function useStartTraining() {
 export interface FinishTrainingVariables {
   sessionId: string;
   taps: readonly number[];
+  /** Š3 (rules v2): the child pressed »Končaj« after round 1. */
+  endedAfterRound?: 1;
 }
 
 export function useFinishTraining() {
@@ -77,8 +87,8 @@ export function useFinishTraining() {
     mutationKey: ['child', 'pet', 'training', 'finish'],
     networkMode: 'always',
     onMutate: () => ({ userId: currentUserId() }),
-    mutationFn: async ({ sessionId, taps }) => {
-      const raw = await api.finishTraining(sessionId, taps);
+    mutationFn: async ({ sessionId, taps, endedAfterRound }) => {
+      const raw = endedAfterRound === undefined ? await api.finishTraining(sessionId, taps) : await api.finishTraining(sessionId, taps, endedAfterRound);
       const parsed = readFinishResponse(raw);
       if (parsed === null) throw new TrainingResponseError(stateOfBody(raw));
       return parsed;

@@ -61,6 +61,9 @@ Brez zastavice `features` iz aplikacije: igra nima posledic, zato stara različi
 - Gumb in vabilo se skrijeta med sprehodom, šolo in čiščenjem.
 
 ### 4.2 Igra z žogo (mini-igra, ~20 s)
+
+> **GAMES_SPEC faza 1 (30. 10. 2026):** na gradnji z nativnim igralnim slojem žogo nadomesti **žoga v2** (`GAMES_SPEC.md` §4.3: met → »Pokliči!« → ulov, 3 meti, »Še en krog«, en `POST /play {kind:"play"}` na krog). Spodnji opis velja za starejše gradnje (v1). Pravila (mood only, brez točk) so nespremenjena.
+
 - Celozaslonska plast v slogu »Šole« (temno steklo). Spodaj žoga; otrok jo **povleče s prstom navzgor in spusti** (»vrže«). Kuža steče po žogo in jo prinese nazaj (pes s polnim naborom: video `playing`; ostali: obstoječi video + animirana žoga).
 - **3 meti** = konec. Vsak met šteje, ne glede na moč ali smer — ni zgrešenega meta, ni točk.
 - **Dostopnost:** gumb **»Vrzi žogo«** namesto potega — od M5-T17 (David 23. 10. 2026) samo z »Lažjimi kretnjami« ali vklopljenim VoiceOver / TalkBack: pridrži žogo ali gumb, moč meta se polni 1,2 s, spust vrže (bralnik zaslona: dvojni dotik vrže takoj); brez tega samo poteg; pri vklopljenem »zmanjšaj gibanje« žoga ne leti po zaslonu, samo kratek prelivni prikaz. Ni časovne omejitve med meti.
@@ -68,7 +71,7 @@ Brez zastavice `features` iz aplikacije: igra nima posledic, zato stara različi
 
 ### 4.3 Crkljanje (božanje, ~10 s)
 - Ista plast; otrok s prstom **gladi po kužku** (poteg čez osrednji del zaslona). Ob vsakem potegu se pojavi srček; po **5 potegih** (vsak vsaj ~60 pt, v katerokoli smer) je konec **(D)**.
-- **Sprememba C1 (GAMES_SPEC §4.4, potrdil David 30. 10. 2026):** crkljanje postane **3 božanja po ~3 s s premorom** (pravilo 3 sekund: boži 3 s, nato počakaj, ali žival želi še; ~15–20 s). **Samo v aplikaciji:** strežnik potegov nikoli ni preverjal — `POST /api/child/pet/play {kind: "cuddle"}` pošlje aplikacija ob koncu in posledice (30 min »vesel«, brez točk) ostanejo; strežnik in API se zato **ne spremenita** (preverjeno 30. 10. 2026: `PlayRequest` sprejme samo `kind`, `PlayService` ne pozna potegov). Gradi se v fazi 4 aplikacije; do takrat velja 5 potegov.
+- **Sprememba C1 (GAMES_SPEC §4.4, potrdil David 30. 10. 2026):** crkljanje postane **3 božanja po ~3 s s premorom** (pravilo 3 sekund: boži 3 s, nato počakaj, ali žival želi še; ~15–20 s). **Samo v aplikaciji:** strežnik potegov nikoli ni preverjal — `POST /api/child/pet/play {kind: "cuddle"}` pošlje aplikacija ob koncu in posledice (30 min »vesel«, brez točk) ostanejo; strežnik in API se zato **ne spremenita** (preverjeno 30. 10. 2026: `PlayRequest` sprejme samo `kind`, `PlayService` ne pozna potegov). Zgrajeno v aplikaciji 31. 10. 2026 (faza 4, `mobile/src/modules/play/cuddleV2/`, za `gameLayerAvailable()`): 3 srca po 3 s počasnega božanja (≤ 900 pt/s), premor 1 s, nato »Še!«; čaka novo gradnjo v trgovini — stara gradnja ostane pri 5 potegih.
 - **Dostopnost:** gumb **»Drži in pobožaj«** — držanje 3 s nadomesti potege (bralnik zaslona: dejanje »Pobožaj«); »zmanjšaj gibanje« → srčki brez letenja.
 - Konec: »Kuža uživa. Hvala za crkljanje!«
 - Brez zvoka in brez haptike (`expo-haptics` ni v projektu — nov nativni modul bi zahteval nov build; lahko kasneje).

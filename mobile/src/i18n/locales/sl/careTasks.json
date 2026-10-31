@@ -32,7 +32,9 @@
       "nextA11yHint": "Pristriže naslednji kremplj. Drži za nadaljevanje.",
       "allDone": "Vsi kremplji so pristriženi! Še trenutek …",
       "leftPaw": "Leva sprednja tačka",
-      "rightPaw": "Desna sprednja tačka"
+      "rightPaw": "Desna sprednja tačka",
+      "layerHint": "Tapni vsak kremplj enkrat.",
+      "layerDone": "Vsi kremplji so pristriženi!"
     }
   },
   "tasks": {

@@ -21,8 +21,10 @@ import {
   makePet,
   makeTrainingResult,
   makeSmoothTrainingSessionPayload,
+  makeSchoolV2SessionPayload,
   makeTrainingSessionPayload,
 } from '@/test-utils/fixtures';
+import { isSchoolV2Session } from '@/modules/training/training';
 import { hasSmoothTimes } from '@/modules/training/training';
 
 jest.mock('@/api/client', () => {
@@ -545,6 +547,123 @@ describe('useTrainingGame', () => {
         await jest.advanceTimersByTimeAsync(0);
       });
       expect(result.current.phase.kind).toBe('running');
+    });
+  });
+
+  // GAMES_SPEC phase 3 — school v2 (rules 2): start with `rules: 2`, »Končaj« after round 1 (Š3).
+  describe('school v2', () => {
+    const V2 = makeSchoolV2SessionPayload();
+    const v2Body = () => ({ status: 'accepted', session: V2, state: stateWith(makeEnabledTraining({ can_start: false })) });
+    const earlyResult = () => ({
+      status: 'accepted',
+      result: makeTrainingResult({ trials: makeTrainingResult().trials.slice(0, 3), rules_version: 2, ended_after_round: 1, counts_for_routine: false }),
+      state: stateWith(),
+    });
+
+    function setupV2() {
+      const client = new QueryClient({
+        defaultOptions: { queries: { retry: false, gcTime: Infinity }, mutations: { retry: false, gcTime: Infinity } },
+      });
+      writeChildState(client, stateWith());
+      const wrapper = ({ children }: { children: ReactNode }) => <QueryClientProvider client={client}>{children}</QueryClientProvider>;
+      return renderHook(
+        () => useTrainingGame({ clockSkewMs: 0, timezone: 'Europe/Ljubljana', clock, stageGate: isSchoolV2Session, schoolRules: 2 }),
+        { wrapper },
+      );
+    }
+
+    async function startAndBegin(result: { current: ReturnType<typeof useTrainingGame> }) {
+      await act(async () => {
+        result.current.start('sit');
+        await jest.advanceTimersByTimeAsync(0);
+      });
+      expect(result.current.phase.kind).toBe('preparing');
+      act(() => result.current.begin());
+      expect(result.current.phase.kind).toBe('running');
+      return Date.now();
+    }
+
+    it('starts with rules 2 (a v1 hook never sends it)', async () => {
+      startTraining.mockResolvedValueOnce(v2Body());
+      const { result } = setupV2();
+      await startAndBegin(result);
+      expect(startTraining).toHaveBeenCalledWith('sit', 2);
+    });
+
+    it('»Končaj« only in the break; sends ended_after_round 1 → the early result', async () => {
+      startTraining.mockResolvedValueOnce(v2Body());
+      finishTraining.mockResolvedValueOnce(earlyResult());
+      const { result } = setupV2();
+      const t0 = await startAndBegin(result);
+      await advanceTo(t0, 5_900);
+      act(() => {
+        result.current.praise();
+      });
+      await advanceTo(t0, 20_000);
+      expect(result.current.canEndEarly()).toBe(false);
+      act(() => result.current.endEarly());
+      expect(finishTraining).not.toHaveBeenCalled();
+      await advanceTo(t0, 20_400);
+      expect(result.current.canEndEarly()).toBe(true);
+      await act(async () => {
+        result.current.endEarly();
+        await jest.advanceTimersByTimeAsync(0);
+      });
+      expect(finishTraining).toHaveBeenCalledWith(V2.id, [5_900], 1);
+      const phase = result.current.phase;
+      expect(phase.kind).toBe('result');
+      expect(phase.kind === 'result' && phase.result.counts_for_routine).toBe(false);
+      expect(phase.kind === 'result' && phase.result.ended_after_round).toBe(1);
+    });
+
+    it('422 training_round_two_started → round 2 plays on, then ONE full finish at the end', async () => {
+      startTraining.mockResolvedValueOnce(v2Body());
+      finishTraining
+        .mockRejectedValueOnce(new ApiError('x', 422, { reason: 'training_round_two_started', state: stateWith() }))
+        .mockResolvedValueOnce({ status: 'accepted', result: makeTrainingResult({ rules_version: 2, counts_for_routine: true }), state: stateWith() });
+      const { result } = setupV2();
+      const t0 = await startAndBegin(result);
+      await advanceTo(t0, 21_000);
+      await act(async () => {
+        result.current.endEarly();
+        await jest.advanceTimersByTimeAsync(0);
+      });
+      expect(finishTraining).toHaveBeenNthCalledWith(1, V2.id, [], 1);
+      expect(result.current.phase.kind).toBe('running');
+      expect(result.current.earlyEndDeclined).toBe(1);
+      await advanceTo(t0, V2.duration_ms + GAME_TICK_MS);
+      expect(finishTraining).toHaveBeenCalledTimes(2);
+      expect(finishTraining).toHaveBeenNthCalledWith(2, V2.id, []);
+      expect(result.current.phase.kind).toBe('result');
+    });
+
+    it('an early end refused for good (expired) → the calm failure, no second finish', async () => {
+      startTraining.mockResolvedValueOnce(v2Body());
+      finishTraining.mockRejectedValueOnce(new ApiError('x', 422, { reason: 'training_session_expired', state: stateWith() }));
+      const { result } = setupV2();
+      const t0 = await startAndBegin(result);
+      await advanceTo(t0, 21_000);
+      await act(async () => {
+        result.current.endEarly();
+        await jest.advanceTimersByTimeAsync(0);
+      });
+      expect(result.current.phase.kind).toBe('failed');
+      await advanceTo(t0, V2.duration_ms + GAME_TICK_MS);
+      expect(finishTraining).toHaveBeenCalledTimes(1);
+    });
+
+    it('a slow stage (server far ahead) never offers »Končaj«', async () => {
+      startTraining.mockResolvedValueOnce(v2Body());
+      const { result } = setupV2();
+      await act(async () => {
+        result.current.start('sit');
+        await jest.advanceTimersByTimeAsync(0);
+      });
+      await advance(5_000); // the deck took 5 s to render its first frames
+      act(() => result.current.begin());
+      const t0 = Date.now();
+      await advanceTo(t0, 20_400);
+      expect(result.current.canEndEarly()).toBe(false);
     });
   });
 });

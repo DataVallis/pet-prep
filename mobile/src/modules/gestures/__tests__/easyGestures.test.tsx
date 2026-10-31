@@ -33,7 +33,7 @@ describe('readers', () => {
     const raw = makeLiveChildState();
     expect(normalizeChildState(raw).settings.easy_gestures).toBe(false);
     const on = normalizeChildState({ ...raw, settings: { media_display: 'video', easy_gestures: true } } as never);
-    expect(on.settings).toEqual({ media_display: 'video', easy_gestures: true });
+    expect(on.settings).toEqual({ media_display: 'video', easy_gestures: true, game_feedback: true });
     expect(easyGesturesOf(on)).toBe(true);
     expect(easyGesturesOf(null)).toBe(false);
   });

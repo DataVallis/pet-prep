@@ -50,6 +50,7 @@ const DOG_ONLY: Readonly<Record<string, string>> = {
   'behaviour:child.scene.chewing': 'chewed slipper — dogs only',
   'behaviour:parent.takeOut': 'potty training (take out) — dogs only',
   'play:play': 'ball play — dogs only (no ball for a cat, David 2026-10-08)',
+  'play:ball': 'ball game v2 (GAMES_SPEC §4.3) — dogs only, like `play:play` (no ball for a cat)',
   training: 'dog school — a cat gets `training_not_available` (M5-R06-04)',
   'careGuide:dog': 'care guide (M5-T05) — split by species inside the namespace: a cat reads `careGuide:cat.*`',
   'careGuide:parent.dog': "the parent's care guide (M5-T05b) — split by species: a cat reads `careGuide:parent.cat.*`",

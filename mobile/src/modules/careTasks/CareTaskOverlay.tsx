@@ -48,6 +48,9 @@ import type { ChildPetView } from '@/modules/childPet/childPetView';
 import { useGestureMode, type GestureMode } from '@/modules/gestures/easyGestures';
 import type { ClockSources } from '@/modules/training/game';
 import { useAppStore } from '@/store/appStore';
+import { careFrame } from '@/modules/gameLayer/careFrame';
+import { gameFeedbackOf } from '@/modules/gameLayer/gameFeedback';
+import { loadCareShell, type CareGameShellType } from '@/modules/gameLayer/loadCareShell';
 import { MIN_TOUCH, alpha, palette, radius } from '@/theme';
 
 const C = CARE_TASK_STRINGS;
@@ -125,6 +128,30 @@ export default function CareTaskOverlay({ task, view, onClose, reduceMotion = fa
   const onMediaExpired = () => void queryClient.invalidateQueries({ queryKey: childPetKey });
   const blocked = entry !== null && !entry.can_start ? entry.blocked_reason : null;
   const ctx: RefusalContext = { nowIso: view.server_time, timezone: view.timezone, scratchingOnly: onlyScratchingOpen(view.cat), dog: true };
+  // GAMES_SPEC §7.7: on a game-layer binary the running game is full screen (same rules).
+  const [Shell] = useState(() => loadCareShell());
+
+  if (Shell !== null && (phase.kind === 'running' || phase.kind === 'finishing')) {
+    return (
+      <CareTaskRunning
+        task={task}
+        view={view}
+        session={phase.session}
+        strokes={phase.input}
+        elapsedMs={game.elapsedMs}
+        finishing={phase.kind === 'finishing'}
+        resumed={phase.resumedAtMs !== null}
+        reduceMotion={reduceMotion}
+        gestureMode={gestureMode}
+        msAt={game.msAt}
+        onStroke={(ms) => game.setInput((strokes) => addStroke(strokes, ms, phase.session.duration_ms))}
+        onMediaExpired={onMediaExpired}
+        Shell={Shell}
+        onStop={game.stop}
+        testID={testID}
+      />
+    );
+  }
 
   return (
     <CatOverlayFrame
@@ -244,6 +271,8 @@ function CareTaskRunning({
   msAt,
   onStroke,
   onMediaExpired,
+  Shell = null,
+  onStop,
   testID,
 }: {
   task: CareTaskKey;
@@ -258,6 +287,9 @@ function CareTaskRunning({
   msAt: (touchTimestamp?: number | null) => number;
   onStroke: (ms: number) => void;
   onMediaExpired: () => void;
+  /** GAMES_SPEC §7.7: the game-layer shell (full screen), or null = the card screen. */
+  Shell?: CareGameShellType | null;
+  onStop?: () => void;
   testID: string;
 }) {
   const time = sessionTime(session.duration_ms, elapsedMs);
@@ -273,6 +305,47 @@ function CareTaskRunning({
       {done ? FIGURE[task].done : FIGURE[task].start}
     </Text>
   );
+
+  if (Shell !== null) {
+    // Full screen: the dog edge to edge, the step on the top line, ✓ per step (nails: one step).
+    const line = finishing ? t('cat:common.finishing') : brush ? stepText : done ? C.nails.layerDone : C.nails.layerHint;
+    return (
+      <Shell
+        testID={`${testID}-layer`}
+        stage={<CatStage view={view} petState="idle" illustration={illustration} onMediaExpired={onMediaExpired} full testID={`${testID}-stage`} />}
+        line={line}
+        frame={careFrame(session, progress.strokes, progress.segmentsHit, elapsedMs)}
+        gameFeedback={gameFeedbackOf(view)}
+        reduceMotion={reduceMotion}
+        closeLabel={t('cat:common.stopA11y')}
+        progressLabel={C.stepA11y(step)}
+        onClose={finishing ? undefined : onStop}
+      >
+        {brush ? (
+          <BrushArea
+            rules={session}
+            texts={brushTexts()}
+            stageA11y={careTaskText(task, 'stageA11y')}
+            strokeLabel={careTaskText(task, 'stroke')}
+            strokeA11y={careTaskText(task, 'strokeA11y')}
+            disabled={disabled}
+            hideButton={finishing}
+            hideHint
+            reduceMotion={reduceMotion}
+            gestureMode={gestureMode}
+            msAt={msAt}
+            onStroke={onStroke}
+            renderStage={(layers) => <View style={StyleSheet.absoluteFill}>{layers}</View>}
+            testID={testID}
+          />
+        ) : (
+          <View style={local.layerClaws}>
+            <ClawsStage session={session} disabled={disabled} gestureMode={gestureMode} msAt={msAt} onStroke={onStroke} testID={testID} />
+          </View>
+        )}
+      </Shell>
+    );
+  }
 
   return (
     <View style={styles.running} testID={`${testID}-running`}>
@@ -434,6 +507,7 @@ export function ClawsStage({
 }
 
 const local = StyleSheet.create({
+  layerClaws: { flex: 1, justifyContent: 'flex-end' },
   figure: { fontSize: 96, textAlign: 'center' },
   stage: { gap: 16, paddingVertical: 12, alignItems: 'center' },
   paws: { flexDirection: 'row', gap: 16, justifyContent: 'center', flexWrap: 'wrap' },

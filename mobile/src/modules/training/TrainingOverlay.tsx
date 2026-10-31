@@ -14,6 +14,13 @@
  *    title follows the outcome (`trainingResultBucket`: Odlično / Dobro / Še malo vaje /
  *    Tokrat ni šlo) — never false praise; a repeated finish keeps the neutral "already saved".
  * The overlay can't be closed while a session runs or is being saved.
+ *
+ * GAMES_SPEC phase 3 (school v2, 2026-10-31): on a binary with the native game layer
+ * (`gameLayerAvailable()`) new sessions start with `rules: 2` and play full screen on
+ * `schoolV2/SchoolGameV2` (2 rounds × 3 cues, treat token / »Pohvali« ♥, the cut under the
+ * feedback mask, »Končaj« after round 1); their result is `schoolV2/SchoolResultV2`. The v2 game is
+ * loaded lazily (`loadSchoolGameV2`) — an older binary that got this JS by OTA never evaluates it,
+ * starts without `rules` and keeps the v1 game below.
  */
 
 import { mediaModeOf } from '@/modules/display/display';
@@ -63,6 +70,11 @@ import {
   type TrialOutcome,
 } from '@/modules/training/training';
 import { useTrainingGame } from '@/modules/training/useTrainingGame';
+import { gameLayerAvailable } from '@/modules/gameLayer/capability';
+import type SchoolGameV2Component from '@/modules/training/schoolV2/SchoolGameV2';
+import SchoolResultV2 from '@/modules/training/schoolV2/SchoolResultV2';
+import { isSchoolV2Session, SCHOOL_RULES_V2 } from '@/modules/training/training';
+import { useReduceMotion } from '@/hooks/useReduceMotion';
 import { alpha, fonts, palette, radius, tightTracking } from '@/theme';
 
 const S = TRAINING_STRINGS;
@@ -70,9 +82,36 @@ const S = TRAINING_STRINGS;
 /** Good verdicts are mint / green; the others a calm yellow — never the danger colour. */
 const GOOD: ReadonlySet<TrialOutcome> = new Set(['in_time', 'waited']);
 
+type SchoolGameV2Type = typeof SchoolGameV2Component;
+let schoolGameV2: SchoolGameV2Type | null | undefined;
+
+/**
+ * The v2 school game, or null on a binary without the native game layer (GAMES_SPEC §7.4). Required
+ * only here, only behind the flag — never import it statically (it pulls in reanimated, expo-audio
+ * and expo-haptics, which crash an older binary on import). A failed load also keeps v1.
+ */
+export function loadSchoolGameV2(): SchoolGameV2Type | null {
+  if (!gameLayerAvailable()) return null;
+  if (schoolGameV2 === undefined) {
+    try {
+      schoolGameV2 = (require('./schoolV2/SchoolGameV2') as { default: SchoolGameV2Type }).default;
+    } catch {
+      schoolGameV2 = null;
+    }
+  }
+  return schoolGameV2;
+}
+
+/** Tests: forget the loaded v2 module (after toggling the capability flag). */
+export function resetSchoolGameV2ForTests(): void {
+  schoolGameV2 = undefined;
+}
+
 export interface TrainingOverlayProps {
   view: ChildPetView;
   onClose: () => void;
+  /** Default: the system setting (`useReduceMotion`). */
+  reduceMotion?: boolean;
   /** Injected in tests (game clock). */
   clock?: ClockSources;
   testID?: string;
@@ -272,16 +311,32 @@ function ResultView({
   );
 }
 
-export default function TrainingOverlay({ view, onClose, clock, testID = 'training-overlay' }: TrainingOverlayProps) {
+export default function TrainingOverlay({ view, onClose, clock, reduceMotion: reduceMotionProp, testID = 'training-overlay' }: TrainingOverlayProps) {
   const queryClient = useQueryClient();
+  const systemReduceMotion = useReduceMotion();
+  const reduceMotion = reduceMotionProp ?? systemReduceMotion;
+  // GAMES_SPEC phase 3: the v2 school only where the native game layer is in the binary.
+  const SchoolGameV2 = loadSchoolGameV2();
+  const v2Capable = SchoolGameV2 !== null;
   const training = view.training;
   const ownSchedule = training.session?.mine === true ? training.session.schedule : null;
   // M5-T09: a pet with school phase clips plays the clip of each command phase (or its pose).
   const phaseClips = usesPhaseClips(view.pet.media, 'school');
   // School smooth playback (2026-10-28): a smooth schedule shown as video waits for the stage's clips.
   const videoStage = phaseClips && mediaModeOf(view) === 'video' && !schoolClipsPending(view.pet.preparation, phaseClips);
-  const stageGate = useCallback((session: TrainingSession) => videoStage && hasSmoothTimes(session), [videoStage]);
-  const game = useTrainingGame({ clockSkewMs: view.clockSkewMs, timezone: view.timezone, clock, resume: ownSchedule, stageGate });
+  const stageGate = useCallback(
+    // A v2 session always waits for its ClipDeck (in picture mode it reports ready at once).
+    (session: TrainingSession) => (v2Capable && isSchoolV2Session(session)) || (videoStage && hasSmoothTimes(session)),
+    [videoStage, v2Capable],
+  );
+  const game = useTrainingGame({
+    clockSkewMs: view.clockSkewMs,
+    timezone: view.timezone,
+    clock,
+    resume: ownSchedule,
+    stageGate,
+    schoolRules: v2Capable ? SCHOOL_RULES_V2 : undefined,
+  });
   const { phase, elapsedMs } = game;
   const busy = phase.kind === 'running' || phase.kind === 'finishing' || phase.kind === 'starting' || phase.kind === 'preparing';
   const premiumVideo = useMemo(() => phaseClips || selectMediaSource(view.pet.media, 'idle').kind === 'video', [view.pet.media, phaseClips]);
@@ -293,6 +348,34 @@ export default function TrainingOverlay({ view, onClose, clock, testID = 'traini
   const dayEnding = isDayEnding(training, serverNow, familyCalendar(view.timezone, view.server_time).nextMidnight(serverNow));
   const block = startBlock(training, dayEnding);
   const left = sessionsLeftToday(training);
+
+  if (SchoolGameV2 !== null && (phase.kind === 'preparing' || phase.kind === 'running' || phase.kind === 'finishing') && isSchoolV2Session(phase.session)) {
+    // `preparing` → `running` → `finishing` keep the same game (its deck is never remounted).
+    return (
+      <View style={styles.fullScreen} testID={testID}>
+        <SchoolGameV2
+          view={view}
+          game={game}
+          session={phase.session}
+          taps={phase.kind === 'preparing' ? NO_TAPS : phase.taps}
+          resumedAtMs={phase.kind === 'preparing' ? null : phase.resumedAtMs}
+          preparing={phase.kind === 'preparing'}
+          finishing={phase.kind === 'finishing'}
+          reduceMotion={reduceMotion}
+          posePending={schoolPreparing}
+          onMediaExpired={() => void queryClient.invalidateQueries({ queryKey: childPetKey })}
+        />
+      </View>
+    );
+  }
+
+  if (phase.kind === 'result' && phase.result.rules_version === SCHOOL_RULES_V2) {
+    return (
+      <View style={styles.fullScreen} testID={testID} accessibilityViewIsModal>
+        <SchoolResultV2 result={phase.result} status={phase.status} canStartAgain={left > 0} onAgain={game.reset} onDone={onClose} />
+      </View>
+    );
+  }
 
   return (
     <View style={styles.overlay} testID={testID} accessibilityViewIsModal>
@@ -557,6 +640,7 @@ function RunningView({
 }
 
 const styles = StyleSheet.create({
+  fullScreen: { ...StyleSheet.absoluteFill, zIndex: 50 },
   overlay: {
     ...StyleSheet.absoluteFill,
     zIndex: 50,

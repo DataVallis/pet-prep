@@ -12,6 +12,8 @@ import ChildHudScreen, { HUD_STRINGS } from '@/screens/ChildHudScreen';
 import { CLEANING_STRINGS } from '@/components/CleaningOverlay';
 import { BEHAVIOUR_STRINGS } from '@/modules/behaviour/behaviour';
 import { useAppStore } from '@/store/appStore';
+import { setGameLayerAvailableForTests } from '@/modules/gameLayer/capability';
+import { resetMessGamesForTests } from '@/modules/cleaning/loadMessGames';
 import {
   makeBehaviourEvent,
   makeBroadcast,
@@ -245,6 +247,47 @@ describe('ChildHudScreen — behaviour events (M5-R02)', () => {
     expect(await screen.findByText(BEHAVIOUR_STRINGS.success.resolve_chewing)).toBeTruthy();
     await waitFor(() => expect(screen.queryByTestId('hud-scene-chewing')).toBeNull());
     expect(resolveChewing).toHaveBeenCalledTimes(1);
+  });
+
+  // GAMES_SPEC §6.2: a binary with the native game layer gets the cleaning games instead.
+  it('game layer: an accident opens the cloth game (no tap overlay); a dry puddle sends ONE clean', async () => {
+    setGameLayerAvailableForTests(true);
+    resetMessGamesForTests();
+    const accident = makeLiveChildState({
+      pet: { hygiene_level: 0, needs_cleaning: true, pet_state: 'sick' },
+      settings: { easy_gestures: true },
+      behaviour: { take_out: makeTakeOut(), can_take_out: true, active_events: [makeBehaviourEvent('accident')], scene: 'accident' },
+    });
+    await renderHud(accident);
+    expect(screen.getByTestId('mess-game')).toBeTruthy();
+    expect(screen.queryByTestId('cleaning-overlay')).toBeNull();
+    fireEvent(screen.getByTestId('mess-game-layout', { includeHiddenElements: true }), 'layout', { nativeEvent: { layout: { x: 0, y: 0, width: 400, height: 800 } } });
+    cleanPet.mockResolvedValueOnce({ status: 'accepted', state: puppy() });
+    for (let i = 0; i < 3; i++) fireEvent.press(screen.getByTestId('mess-game-wipe-button'));
+    await waitFor(() => expect(cleanPet).toHaveBeenCalledTimes(1), { timeout: 4_000 });
+    await waitFor(() => expect(screen.queryByTestId('mess-game')).toBeNull());
+    expect(cleanPet).toHaveBeenCalledTimes(1);
+  });
+
+  it('game layer: »Pospravi in daj igračo« opens the slipper game; box + toy resolves once', async () => {
+    setGameLayerAvailableForTests(true);
+    resetMessGamesForTests();
+    await renderHud(
+      makeLiveChildState({
+        pet: { hygiene_level: 0, needs_cleaning: true, pet_state: 'sick' },
+        settings: { easy_gestures: true },
+        behaviour: { active_events: [makeBehaviourEvent('chewing')], scene: 'chewing', can_resolve_chewing: true },
+      }),
+    );
+    fireEvent.press(screen.getByTestId('action-resolve-chewing'));
+    expect(screen.getByTestId('slipper-game')).toBeTruthy();
+    expect(resolveChewing).not.toHaveBeenCalled();
+    resolveChewing.mockResolvedValueOnce({ status: 'accepted', state: makeLiveChildState({ pet: { hygiene_level: 100 } }) });
+    for (let i = 0; i < 4; i++) fireEvent.press(screen.getByTestId('slipper-game-box-button'));
+    await waitFor(() => expect(screen.getByTestId('slipper-game-toy-button')).toBeTruthy(), { timeout: 3_000 });
+    fireEvent.press(screen.getByTestId('slipper-game-toy-button'));
+    await waitFor(() => expect(resolveChewing).toHaveBeenCalledTimes(1), { timeout: 3_000 });
+    await waitFor(() => expect(screen.queryByTestId('slipper-game')).toBeNull());
   });
 
   it('accident + chewing open: scrub the puddle, the slipper button is there all along', async () => {

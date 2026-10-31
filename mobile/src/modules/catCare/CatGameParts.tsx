@@ -101,15 +101,17 @@ export interface CatStageProps {
   accessibilityLabel?: string;
   /** M5-T10: the wand game's phase item (its clip once, else its pose) for a cat with wand phase clips. */
   phase?: PhasePlayback | null;
+  /** GAMES_SPEC §7.7: edge to edge (the game-layer care screens), not a card. */
+  full?: boolean;
   testID?: string;
 }
 
 /** The stage: the cat's own video (premium) or the illustration, with game layers on top. */
-export function CatStage({ view, petState, scene = null, illustration, onMediaExpired, children, accessibilityLabel, phase = null, testID = 'cat-stage' }: CatStageProps) {
+export function CatStage({ view, petState, scene = null, illustration, onMediaExpired, children, accessibilityLabel, phase = null, full = false, testID = 'cat-stage' }: CatStageProps) {
   const ownVideo = useHasVideo(view, scene ?? petState, scene !== null);
   const hasVideo = phase !== null || ownVideo;
   return (
-    <View style={styles.stage} testID={testID} accessible={accessibilityLabel !== undefined} accessibilityLabel={accessibilityLabel}>
+    <View style={full ? styles.stageFull : styles.stage} testID={testID} accessible={accessibilityLabel !== undefined} accessibilityLabel={accessibilityLabel}>
       {hasVideo ? (
         <PetMediaView
           media={view.pet.media}
@@ -126,7 +128,7 @@ export function CatStage({ view, petState, scene = null, illustration, onMediaEx
           testID={`${testID}-video`}
         />
       ) : (
-        <View style={styles.illustration} pointerEvents="none">
+        <View style={full ? styles.illustrationFull : styles.illustration} pointerEvents="none">
           {illustration}
         </View>
       )}
@@ -344,6 +346,8 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: alpha(palette.white, 0.12),
   },
+  stageFull: { ...StyleSheet.absoluteFill, backgroundColor: palette.graphite },
+  illustrationFull: { ...StyleSheet.absoluteFill, alignItems: 'center', justifyContent: 'center', transform: [{ scale: 1.8 }] },
   video: { ...StyleSheet.absoluteFill },
   pounceCue: { ...StyleSheet.absoluteFill, borderRadius: 24, borderWidth: 4, borderColor: palette.mint },
   illustration: { ...StyleSheet.absoluteFill, alignItems: 'center', justifyContent: 'flex-end', paddingBottom: 12 },

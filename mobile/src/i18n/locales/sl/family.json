@@ -256,6 +256,11 @@
       "screenReader": "Ko je na otrokovem telefonu vklopljen VoiceOver ali TalkBack, so lažje kretnje vedno vklopljene.",
       "error": "Nastavitev ni shranjena. Poskusite znova."
     },
+    "gameFeedback": {
+      "label": "Zvoki in vibracija v igrah",
+      "hint": "Kratki zvoki in rahla vibracija ob uspehu v igrah (nikoli ob napaki). Zvoki upoštevajo tihi način telefona.",
+      "error": "Nastavitev ni shranjena. Poskusite znova."
+    },
     "display": {
       "label": "Prikaz",
       "video": "Video",

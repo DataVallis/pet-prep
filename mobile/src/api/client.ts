@@ -207,7 +207,7 @@ export interface ChildActionResponse {
 /** `POST /api/child/pet/steps` body (M1-04 / M1-07). */
 export type SyncStepsRequest = components['schemas']['SyncStepsRequest'];
 export type UpdateChildSettingsRequest = components['schemas']['UpdateChildSettingsRequest'];
-export type UpdateChildSettingsResponse = { child_id: number; adapted_mode: boolean; media_display: 'video' | 'picture'; easy_gestures?: boolean };
+export type UpdateChildSettingsResponse = { child_id: number; adapted_mode: boolean; media_display: 'video' | 'picture'; easy_gestures?: boolean; game_feedback?: boolean };
 /** `PATCH /api/child/settings` body (M5-T11). */
 export type UpdateChildDisplayRequest = components['schemas']['UpdateChildDisplayRequest'];
 export type UpdateChildDisplayResponse = { media_display: 'video' | 'picture' };
@@ -1025,7 +1025,8 @@ export const api = {
   /**
    * PATCH /api/parent/children/{child}/settings (M5-T12) — »Prilagojen način«: the child's walk
    * counts wheelchair pushes instead of steps. Only the boolean is sent — never a reason.
-   * Also `media_display` (M5-T11) and `easy_gestures` (M5-T17 »Lažje kretnje«).
+   * Also `media_display` (M5-T11), `easy_gestures` (M5-T17 »Lažje kretnje«) and `game_feedback`
+   * (GAMES_SPEC §7.6 »Zvoki in vibracija v igrah«).
    */
   updateChildSettings: (childId: number, body: UpdateChildSettingsRequest) =>
     apiRequest<UpdateChildSettingsResponse>(`/api/parent/children/${childId}/settings`, { method: 'PATCH', body }),
@@ -1147,22 +1148,26 @@ export const api = {
    * `training_not_available` / `training_session_active` / `training_daily_budget_used` / `training_day_ending` (the session + TTL would cross the family midnight)
    * (+ `next_allowed_at`), 423 locked; refusals carry `state`.
    */
-  startTraining: (command: components['schemas']['StartTrainingRequest']['command']) =>
+  startTraining: (command: components['schemas']['StartTrainingRequest']['command'], rules?: 2) =>
     apiRequest<unknown>('/api/child/pet/training/start', {
       method: 'POST',
-      body: { command } satisfies components['schemas']['StartTrainingRequest'],
+      // GAMES_SPEC §7.2: `rules: 2` only from a binary with the game layer (school v2); without it v1.
+      body: (rules === undefined ? { command } : { command, rules }) satisfies components['schemas']['StartTrainingRequest'],
     }),
 
   /**
    * POST /api/child/pet/training/finish {session_id, taps} (M5-R03) — the "Pohvali" taps as
    * whole ms since the app's local start (≤ 64, ≤ duration); the server scores them. A
    * repeat answers `unchanged` with the stored result. 200 untyped → `readFinishResponse`.
-   * 422 `training_session_invalid|not_over|expired|invalid_taps|not_available|interrupted`, 423 locked.
+   * 422 `training_session_invalid|not_over|expired|invalid_taps|not_available|interrupted|round_two_started`, 423 locked.
    */
-  finishTraining: (sessionId: string, taps: readonly number[]) =>
+  finishTraining: (sessionId: string, taps: readonly number[], endedAfterRound?: 1) =>
     apiRequest<unknown>('/api/child/pet/training/finish', {
       method: 'POST',
-      body: { session_id: sessionId, taps: [...taps] } satisfies components['schemas']['FinishTrainingRequest'],
+      // Š3 (rules v2): `ended_after_round: 1` = »Končaj« after round 1 (422 training_round_two_started later).
+      body: (endedAfterRound === undefined
+        ? { session_id: sessionId, taps: [...taps] }
+        : { session_id: sessionId, taps: [...taps], ended_after_round: endedAfterRound }) satisfies components['schemas']['FinishTrainingRequest'],
     }),
 
   /**
@@ -1189,6 +1194,30 @@ export const api = {
    * `wand_day_ending`, 423 locked.
    */
   startWand: () => apiRequest<unknown>('/api/child/pet/wand/start', { method: 'POST' }),
+
+  /**
+   * POST /api/child/pet/wand/start {rules: 2} — the v2 hunt (GAMES_SPEC §5.2, ~25 s, stars): the
+   * session additionally carries `rules_version: 2`, `stalk_ms`, `crouch_cues_ms`, `calm_window_ms`,
+   * `calm_max_moves`, `dodge_window_ms`, `catch_window_ms`, `min_stars`, `max_stars`,
+   * `max_speed_pt_s`, `min_dodge_pt` (read with `wandV2/wandRules.ts#readWandV2Session`). Only the
+   * game-layer build sends it; an older build keeps `startWand()` (v1).
+   */
+  startWandV2: () =>
+    apiRequest<unknown>('/api/child/pet/wand/start', { method: 'POST', body: { rules: 2 } satisfies components['schemas']['StartWandRequest'] }),
+
+  /**
+   * POST /api/child/pet/wand/finish of a v2 hunt: every move also carries `in_zone` and `speed_ok`
+   * (a v2 move without them never earns a star). The v2 `result` has `stars`, `dodges[]`,
+   * `catch`, `hint` (read with `readWandV2Result`).
+   */
+  finishWandV2: (sessionId: string, moves: readonly { t: number; away: boolean; in_zone: boolean; speed_ok: boolean }[]) =>
+    apiRequest<unknown>('/api/child/pet/wand/finish', {
+      method: 'POST',
+      body: {
+        session_id: sessionId,
+        moves: moves.map((m) => ({ t: m.t, away: m.away, in_zone: m.in_zone, speed_ok: m.speed_ok })),
+      } satisfies components['schemas']['FinishWandRequest'],
+    }),
 
   /**
    * POST /api/child/pet/wand/finish {session_id, moves[{t, away}]} — the feather moves the

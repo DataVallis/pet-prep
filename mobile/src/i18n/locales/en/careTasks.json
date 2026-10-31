@@ -32,7 +32,9 @@
       "nextA11yHint": "Trims the next claw. Hold to keep going.",
       "allDone": "All claws trimmed! Just a moment …",
       "leftPaw": "Left front paw",
-      "rightPaw": "Right front paw"
+      "rightPaw": "Right front paw",
+      "layerHint": "Tap each claw once.",
+      "layerDone": "All claws trimmed!"
     }
   },
   "tasks": {

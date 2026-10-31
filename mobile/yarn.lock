@@ -669,6 +669,13 @@
   resolved "https://registry.npmjs.org/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@egjs/hammerjs@^2.0.17":
+  version "2.0.17"
+  resolved "https://registry.npmjs.org/@egjs/hammerjs/-/hammerjs-2.0.17.tgz"
+  integrity sha512-XQsZgjm2EcVUiZQf11UBJQfmZeEmOW8DpI1gsFeln6w0ae0ii4dMQEQ0kjl6DspdWX1aGY1/loyXnP0JS06e/A==
+  dependencies:
+    "@types/hammerjs" "^2.0.36"
+
 "@expo-google-fonts/bricolage-grotesque@^0.4.1":
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/bricolage-grotesque/-/bricolage-grotesque-0.4.1.tgz#6fcdf1211601034dda9656ad090e52fd15f517d0"
@@ -1502,6 +1509,18 @@
   resolved "https://registry.yarnpkg.com/@revenuecat/purchases-typescript-internal/-/purchases-typescript-internal-19.5.0.tgz#bbfbbe86568e34a7f52e863b8b0ad4a4b071a213"
   integrity sha512-I8yKtK9jYBwhtwBrxRm9TdZiH4TnjLDnq77TSV8ZfSqm6R8ND7wP5A+rFWNumMSlrvn7cKyPRvOXbSSs76MTRg==
 
+"@shopify/react-native-skia@2.6.2":
+  version "2.6.2"
+  resolved "https://registry.npmjs.org/@shopify/react-native-skia/-/react-native-skia-2.6.2.tgz"
+  integrity sha512-NzZ3+MRedZAUhguWw9DTCpWFd09Bq+tdGWhimGfJLGckuyoWGyimTiNTmaO2DeeivHTnGdv+eXbw7j/AV3LkRQ==
+  dependencies:
+    canvaskit-wasm "0.41.0"
+    react-native-skia-android "147.1.0"
+    react-native-skia-apple-ios "147.1.0"
+    react-native-skia-apple-macos "147.1.0"
+    react-native-skia-apple-tvos "147.1.0"
+    react-reconciler "0.31.0"
+
 "@sinclair/typebox@^0.27.8":
   version "0.27.12"
   resolved "https://registry.npmjs.org/@sinclair/typebox/-/typebox-0.27.12.tgz"
@@ -1593,6 +1612,11 @@
   dependencies:
     "@types/node" "*"
 
+"@types/hammerjs@^2.0.36":
+  version "2.0.46"
+  resolved "https://registry.npmjs.org/@types/hammerjs/-/hammerjs-2.0.46.tgz"
+  integrity sha512-ynRvcq6wvqexJ9brDMS4BnBLzmr0e14d6ZJTEShTBWKymQiHwlAyGu0ZPEFI2Fh1U53F7tN9ufClWM5KvqkKOw==
+
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0", "@types/istanbul-lib-coverage@^2.0.1":
   version "2.0.6"
   resolved "https://registry.npmjs.org/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.6.tgz"
@@ -1636,7 +1660,14 @@
   dependencies:
     undici-types "~6.21.0"
 
-"@types/react@~19.2.2":
+"@types/react-test-renderer@^19.1.0":
+  version "19.3.0"
+  resolved "https://registry.npmjs.org/@types/react-test-renderer/-/react-test-renderer-19.3.0.tgz"
+  integrity sha512-TX4p2D4Z2oigM3SXU7+QyLSUnSR0vR1S1Pfxm/qFL9nHQ3jclgi6ioGoWQmlIr1DeKRVmPJrmNlhgM0JlWlLUg==
+  dependencies:
+    "@types/react" "*"
+
+"@types/react@*", "@types/react@~19.2.2":
   version "19.2.18"
   resolved "https://registry.npmjs.org/@types/react/-/react-19.2.18.tgz"
   integrity sha512-AnzbBERsrLKtk2XSfTbYRLjQPdy116Sty4q+T+Bp3IC4l6jNBvreVPAHmpq9qhXQM7CXZPjLVmGMw9sy+hxQ3w==
@@ -1669,6 +1700,11 @@
   version "1.4.0"
   resolved "https://registry.npmjs.org/@ungap/structured-clone/-/structured-clone-1.4.0.tgz"
   integrity sha512-1mEZtMKPM09vDmQt5y7YvmN2+DFTP7Tg0EWXdic8/C6VRnpb33e4ghisCIE3WZjsE2N8mf+QV1Zqh7ZFYLWInQ==
+
+"@webgpu/types@0.1.21":
+  version "0.1.21"
+  resolved "https://registry.npmjs.org/@webgpu/types/-/types-0.1.21.tgz"
+  integrity sha512-pUrWq3V5PiSGFLeLxoGqReTZmiiXwY3jRkIG5sLLKjyqNxrwm/04b4nw7LSmGWJcKk59XOM/YRTUwOzo4MMlow==
 
 "@xmldom/xmldom@^0.8.8":
   version "0.8.15"
@@ -2123,6 +2159,13 @@ caniuse-lite@^1.0.30001810:
   version "1.0.30001810"
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001810.tgz"
   integrity sha512-TITQPUkaz+aVk5GL6NhOdwk1aEaNTSDPsGFWrTuhKGtjTF70jL/Oht2W4c6rXUe5fu7Ie19VIahAXHIIiWWNeg==
+
+canvaskit-wasm@0.41.0:
+  version "0.41.0"
+  resolved "https://registry.npmjs.org/canvaskit-wasm/-/canvaskit-wasm-0.41.0.tgz"
+  integrity sha512-cnbL02NFB3yOYMF/MtxViZHgD1vh55Pvy+zR8q4JuFvyCPejZP3eClkt2GuZ0S7jOmGMCJXaHBasbMChbR9JZg==
+  dependencies:
+    "@webgpu/types" "0.1.21"
 
 chalk@^2.0.1, chalk@^2.4.2:
   version "2.4.2"
@@ -2722,6 +2765,11 @@ expo-asset@~57.0.17:
     "@expo/image-utils" "^0.11.5"
     expo-constants "~57.0.18"
 
+expo-audio@~57.0.5:
+  version "57.0.5"
+  resolved "https://registry.npmjs.org/expo-audio/-/expo-audio-57.0.5.tgz"
+  integrity sha512-39fX5JC5zDvELB4/eDJPj2XAYRN0W9+K2DfDWm5N3aC5WZ7HRrhupWtT6hbH09NlfYpsRSqYOwEZnocFM42ynQ==
+
 expo-background-task@~57.0.18:
   version "57.0.21"
   resolved "https://registry.yarnpkg.com/expo-background-task/-/expo-background-task-57.0.21.tgz#229d07e90ef6fab4c29fd966be2d5c16c7ea716e"
@@ -2778,6 +2826,11 @@ expo-font@~57.0.4:
   integrity sha512-7WOMC2oA6xCfOm8bbofqWn2bIqyWFm7YLEnpc/gA1MJH0Ll0TfT/3+CqRkoW2eNRWMS8sxrz5WukUmSvmNquHA==
   dependencies:
     fontfaceobserver "^2.1.0"
+
+expo-haptics@~57.0.3:
+  version "57.0.3"
+  resolved "https://registry.npmjs.org/expo-haptics/-/expo-haptics-57.0.3.tgz"
+  integrity sha512-qucUXtwtJdtECKSQK5D6TQBc/0SxKj7s5wQ4mrfSxhZsHrS9a4rcxINl/gbruMaY9spTXStco32ST4pV0vXmxw==
 
 expo-json-utils@~57.0.2:
   version "57.0.2"
@@ -3191,6 +3244,13 @@ hermes-parser@^0.36.0:
   integrity sha512-GApNk4zLHi2UWoWZZkx7LNCOSzLSc5lB55pZ/PhK7ycFeg7u5LcF88p/WbpIi1XUDtE0MpHE3uRR3u3KB7TjSQ==
   dependencies:
     hermes-estree "0.36.1"
+
+hoist-non-react-statics@^3.3.0:
+  version "3.3.2"
+  resolved "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz"
+  integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
+  dependencies:
+    react-is "^16.7.0"
 
 hosted-git-info@^7.0.0:
   version "7.0.2"
@@ -4790,6 +4850,11 @@ react-i18next@^17.0.16:
     html-parse-stringify "^4.0.1"
     use-sync-external-store "^1.6.0"
 
+react-is@^16.7.0:
+  version "16.13.1"
+  resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
+  integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
 react-is@^18.0.0:
   version "18.3.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-18.3.1.tgz"
@@ -4799,6 +4864,16 @@ react-is@^19.2.3:
   version "19.3.0"
   resolved "https://registry.npmjs.org/react-is/-/react-is-19.3.0.tgz"
   integrity sha512-UpMYezM4v5/18F28aC66AEsjXIgE02kyEMH6yLdgLXu/UTfa1Ntwck/nNLrbqJsEXW7gPb0coNO9FQse9WTovA==
+
+react-native-gesture-handler@~2.32.0:
+  version "2.32.0"
+  resolved "https://registry.npmjs.org/react-native-gesture-handler/-/react-native-gesture-handler-2.32.0.tgz"
+  integrity sha512-uYIMOKlKENORq2SABE+jIjbPU+h5I/sQKcq2v16zRq848nwEp1fWRVwML4QWqijc8UcXJC25o54S8GQd4Mf2OA==
+  dependencies:
+    "@egjs/hammerjs" "^2.0.17"
+    "@types/react-test-renderer" "^19.1.0"
+    hoist-non-react-statics "^3.3.0"
+    invariant "^2.2.4"
 
 react-native-health-connect@4.1.3:
   version "4.1.3"
@@ -4835,6 +4910,26 @@ react-native-safe-area-context@^5.9.1:
   version "5.9.1"
   resolved "https://registry.npmjs.org/react-native-safe-area-context/-/react-native-safe-area-context-5.9.1.tgz"
   integrity sha512-Zpx9Iwg6VhgNarWFpcIM61xK2lUbSfSXemQUmcvOVRpux49lJsUompY1S3E5jKUJbLq233qEpj28DgmXVsgZMQ==
+
+react-native-skia-android@147.1.0:
+  version "147.1.0"
+  resolved "https://registry.npmjs.org/react-native-skia-android/-/react-native-skia-android-147.1.0.tgz"
+  integrity sha512-pWA0M0G74AhjEop0HLCkjWJMup2HJxOmuUjfPt6kSDhYeWKVx8AEzWh0Fh19ah78zE/s4hD0Of0Tyem5shhiTg==
+
+react-native-skia-apple-ios@147.1.0:
+  version "147.1.0"
+  resolved "https://registry.npmjs.org/react-native-skia-apple-ios/-/react-native-skia-apple-ios-147.1.0.tgz"
+  integrity sha512-cr4rWe4Bf0H0TTutUp5cgHt5/Felttl1bh4BAAAsgAeL2F10FAK9urX8spjUshzMwjqXD7rNOWuFzU6ZcNlGKw==
+
+react-native-skia-apple-macos@147.1.0:
+  version "147.1.0"
+  resolved "https://registry.npmjs.org/react-native-skia-apple-macos/-/react-native-skia-apple-macos-147.1.0.tgz"
+  integrity sha512-Qbv0Y7LgawtRKuGk8gnGeh8nDWwNiu03LcX0mVaQzBBbxFDYvqejanA+AkO3p8gsQb+fsXRc9DAk+U8cBnzZvA==
+
+react-native-skia-apple-tvos@147.1.0:
+  version "147.1.0"
+  resolved "https://registry.npmjs.org/react-native-skia-apple-tvos/-/react-native-skia-apple-tvos-147.1.0.tgz"
+  integrity sha512-b+4vILXHPu++t8H41PHLBVsTab2LPqwXNdzgdScyl4+Cu8Ta34aUQW3T469cB0ogAMPdu//KV00w4YVpDZoRUQ==
 
 react-native-svg@^15.15.4:
   version "15.15.4"
@@ -4902,6 +4997,13 @@ react-native@0.86.3:
     whatwg-fetch "^3.0.0"
     ws "^7.5.10"
     yargs "^17.6.2"
+
+react-reconciler@0.31.0:
+  version "0.31.0"
+  resolved "https://registry.npmjs.org/react-reconciler/-/react-reconciler-0.31.0.tgz"
+  integrity sha512-7Ob7Z+URmesIsIVRjnLoDGwBEG/tVitidU0nMsqX/eeJaLY89RISO/10ERe0MqmzuKUUB1rmY+h1itMbUHg9BQ==
+  dependencies:
+    scheduler "^0.25.0"
 
 react-refresh@^0.14.0, react-refresh@^0.14.2:
   version "0.14.2"
@@ -5056,6 +5158,11 @@ scheduler@0.27.0, scheduler@^0.27.0:
   version "0.27.0"
   resolved "https://registry.npmjs.org/scheduler/-/scheduler-0.27.0.tgz"
   integrity sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==
+
+scheduler@^0.25.0:
+  version "0.25.0"
+  resolved "https://registry.npmjs.org/scheduler/-/scheduler-0.25.0.tgz"
+  integrity sha512-xFVuu11jh+xcO7JOAGJNOXld8/TcEHK/4CituBUeUb5hqxJLj9YuemAEuvm9gQ/+pgXYfbQuqAkiYu+u7YEsNA==
 
 semver@^6.3.0, semver@^6.3.1:
   version "6.3.1"

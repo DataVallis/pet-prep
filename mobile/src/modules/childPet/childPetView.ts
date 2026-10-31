@@ -14,6 +14,7 @@
 
 import { readMediaDisplay, type MediaDisplay } from '@/modules/display/display';
 import { readEasyGestures } from '@/modules/gestures/easyGestures';
+import { readGameFeedback } from '@/modules/gameLayer/gameFeedback';
 import { readCareGuide, type CareGuide } from '@/modules/careGuide/careGuide';
 import { isPaymentRequired, readPetPlan, type PetPlan } from '@/modules/plan/plan';
 import type { ChildPetState } from '@/api/client';
@@ -190,7 +191,7 @@ export interface ChildPetView {
    * M5-T11 settings of this child: `media_display` »Prikaz: Video / Slika« (`readMediaDisplay`;
    * an older server sends nothing → `video`).
    */
-  settings: { media_display: MediaDisplay; easy_gestures: boolean };
+  settings: { media_display: MediaDisplay; easy_gestures: boolean; game_feedback: boolean };
   /**
    * M5-R02 behaviour events: puppy bladder clock, open messes, behaviour scene and what
    * the child may do. `EMPTY_BEHAVIOUR` for a legacy pet / an older server.
@@ -427,6 +428,8 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
     settings: {
       media_display: readMediaDisplay((raw as { settings?: { media_display?: unknown } }).settings?.media_display),
       easy_gestures: readEasyGestures((raw as { settings?: { easy_gestures?: unknown } }).settings?.easy_gestures),
+      // GAMES_SPEC §7.6: »Zvoki in vibracija v igrah« (parent switch per child); older servers → on.
+      game_feedback: readGameFeedback((raw as { settings?: { game_feedback?: unknown } }).settings?.game_feedback),
     },
     // Older servers send no `behaviour` (typed as required by the current schema).
     behaviour: readChildBehaviour((raw as { behaviour?: unknown }).behaviour),
