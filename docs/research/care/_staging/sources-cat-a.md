@@ -1,0 +1,29 @@
+# Cat care sources — staging A (KC1–KC199), W1 toxic/classic foods, researched 2026-10-31
+
+| ID | Tier | Publisher | Title | URL | Notes |
+|---|---|---|---|---|---|
+| KC1 | B | ASPCA Animal Poison Control Center | People Foods to Avoid Feeding Your Pets | https://www.aspca.org/pet-care/animal-poison-control/people-foods-avoid-feeding-your-pets | Mentions cats explicitly in the Allium and bones sections; other sections say "pets" or "dogs" — cited for cats only where the sentence includes cats, plus the general "what to do" line |
+| KC2 | A | Merck Veterinary Manual (C. Hayes, ASPCA APCC; full review Sept 2024) | Garlic and Onion (Allium spp) Toxicosis in Animals | https://www.merckvetmanual.com/toxicology/food-hazards/garlic-and-onion-allium-spp-toxicosis-in-animals | Cats named the most susceptible species; also contains dose figures — never copied into text |
+| KC3 | B | VCA Animal Hospitals (R. Schmid, DVM, DABT, for Pet Poison Helpline) | Onion, Garlic, Chive, and Leek Poisoning in Cats | https://vcahospitals.com/know-your-pet/onion-garlic-chive-and-leek-poisoning-in-cats | Cat-specific |
+| KC4 | B | PDSA (May 2023) | Onion and Garlic Poisoning in Cats | https://pdsa.org.uk/pet-help-and-advice/pet-health-hub/other-veterinary-advice/onion-and-garlic-poisoning-in-cats | Cat-specific; symptom timing |
+| KC5 | B | Cats Protection | Cats and human foods | https://www.cats.org.uk/help-and-advice/diet/cats-and-human-foods | Cat-specific; its list "Human foods that are toxic to cats" also includes dairy, nuts and raw meat, so the heading is not used as a severity level. Some quotes are verbatim leading parts of longer sentences (fetch tool limit) |
+| KC6 | A | Frontiers in Veterinary Science (Cortinovis & Caloni, 2016) | Household Food Items Toxic to Dogs and Cats | https://www.frontiersin.org/journals/veterinary-science/articles/10.3389/fvets.2016.00026/full | Peer-reviewed review |
+| KC7 | B | VCA Animal Hospitals (R. Schmid, DVM, DABT, for Pet Poison Helpline) | Chocolate Poisoning in Cats | https://vcahospitals.com/know-your-pet/chocolate-poisoning-in-cats | Cat-specific |
+| KC8 | B | International Cat Care | Cats and poisons | https://icatcare.org/articles/cats-and-poisons | Cat-specific general poisoning advice (what to do) |
+| KC9 | B | VCA Animal Hospitals (R. Schmid, A. Brutlag, L. Buzhardt) | Caffeine Toxicity in Pets | https://vcahospitals.com/know-your-pet/caffeine-toxicity | Names cats explicitly |
+| KC10 | B | Pet Poison Helpline | Caffeine | https://petpoisonhelpline.com/poison/caffeine/ | Names cats explicitly; signs quote is from the page's meta description |
+| KC11 | B | VCA Animal Hospitals (R. Schmid, A. Brutlag; updated May 2026) | Alcohol Poisoning | https://vcahospitals.com/know-your-pet/alcohol-poisoning | "cats are especially sensitive" |
+| KC12 | B | PDSA | PDSA Hidden Hazards guide (PDF) | https://www.pdsa.org.uk/media/2583/pdsa-hidden-hazards-guide.pdf | Ethanol sentence names cats; undated |
+| KC13 | A | Merck Veterinary Manual (C. Hayes; updated Aug 2025) | Bread Dough Toxicosis in Animals | https://www.merckvetmanual.com/toxicology/food-hazards/bread-dough-toxicosis-in-animals | Does not name cats; "any species is susceptible" — used only beside KC5/KC11 |
+| KC14 | B | Blue Cross | Hidden dangers to cats | https://www.bluecross.org.uk/node/4588 | Cat-specific; onions, garlic, grapes, raisins |
+| KC15 | B | PDSA Vets (17 Nov 2020) | Vet Q&A: Can cats drink milk? | https://www.pdsa.org.uk/what-we-do/blog/vet-qa-can-cats-drink-milk | Cat-specific |
+| KC16 | B | ASPCA | Cherry (Toxic and Non-Toxic Plants) | https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/cherry | "Toxic to Cats"; stems, leaves, seeds |
+| KC17 | B | ASPCA | Peach (Toxic and Non-Toxic Plants) | https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/peach | "Toxic to Cats" |
+| KC18 | B | ASPCA | Plum (Toxic and Non-Toxic Plants) | https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/plum | "Toxic to Cats" |
+| KC19 | B | ASPCA | Apricot (Toxic and Non-Toxic Plants) | https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/apricot | "Toxic to Cats" |
+| KC20 | B | Pet Poison Helpline (A. Benzow, May 2023) | Can Cats Eat Salt? | https://www.petpoisonhelpline.com/pet-tips/can-cats-eat-salt/ | Cat-specific; does not mention snacks or chips |
+| KC21 | B | Pet Poison Helpline | Sodium Poisoning Symptoms in Dogs and Cats | https://www.petpoisonhelpline.com/pet-tips/sodium-poisoning-symptoms-in-dogs-and-cats/ | Names cats |
+| KC22 | B | Blue Cross | Common cat poisons and toxins | https://www.bluecross.org.uk/catpoison | Cat-specific what-to-do; "don't make your cat sick without asking the vet" |
+| KC23 | B | ASPCA | Avocado (Toxic and Non-Toxic Plants) | https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/avocado | Lists "Toxic to Horses" only — evidence of disagreement for cats |
+| KC24 | A | Merck Veterinary Manual (full review Sept 2024; updated Jun 2025) | Xylitol Toxicosis in Dogs | https://www.merckvetmanual.com/toxicology/food-hazards/xylitol-toxicosis-in-dogs | States cats are not at risk for hypoglycemia or liver injury — reason xylitol (cat) was not written |
+| KC25 | C | Joii Pet Care (reviewed by Dr D. Brown, MRCVS) | Grape and raisin poisoning in cats | https://www.joiipetcare.com/health-conditions/cat/grape-and-raisin-poisoning/ | Tier C, only beside KC5/KC14; says cat cases are rare and not well understood |

@@ -1,0 +1,55 @@
+{
+  "slug": "yogurt",
+  "species": "cat",
+  "name": {"en": "Yogurt", "sl": "Jogurt"},
+  "question": {"en": "Can cats eat yogurt?", "sl": "Ali lahko mačke jedo jogurt?"},
+  "url_slug": {"en": "yogurt", "sl": "jogurt"},
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, yogurt is best avoided. It is a dairy product, and adult cats have little of the enzyme that digests milk sugar, so dairy can cause diarrhoea or an upset stomach. Veterinary guides advise against feeding cats dairy products.",
+    "sl": "Ne, jogurta je bolje ne dajati. Je mlečni izdelek, odrasle mačke pa imajo malo encima, ki prebavlja mlečni sladkor, zato jim mlečni izdelki lahko povzročijo drisko ali razdražen želodec. Veterinarski viri odsvetujejo mlečne izdelke za mačke."
+  },
+  "why": {
+    "en": "Adult cats have little lactase, the enzyme that breaks down lactose, so milk and other dairy-based products can cause diarrhoea or other digestive upset. Many cats are lactose intolerant. Dairy products are also high in fat and can add to weight gain. Plant-based alternatives are not automatically safe, as some contain ingredients that could be toxic to cats.",
+    "sl": "Odrasle mačke imajo malo laktaze, encima, ki razgradi laktozo, zato lahko mleko in drugi mlečni izdelki povzročijo drisko ali druge prebavne težave. Mnoge mačke ne prenašajo laktoze. Mlečni izdelki imajo tudi veliko maščob in lahko prispevajo k debelosti. Rastlinski nadomestki niso samodejno varni, saj nekateri vsebujejo sestavine, ki so lahko za mačke strupene."
+  },
+  "signs": {
+    "en": ["Diarrhoea", "Vomiting", "Upset stomach", "Gas or bloating"],
+    "sl": ["Driska", "Bruhanje", "Razdražen želodec", "Napihnjenost ali vetrovi"]
+  },
+  "what_to_do": {
+    "en": "A lick of plain yogurt is unlikely to be serious. Watch for diarrhoea, vomiting or a change in behaviour, and call your vet if your cat seems unwell.",
+    "sl": "Malo navadnega jogurta najverjetneje ne bo resna težava. Bodite pozorni na drisko, bruhanje ali spremembo vedenja in pokličite veterinarja, če se mačka ne počuti dobro."
+  },
+  "serving": null,
+  "child": {
+    "en": "Yogurt is a people food. It can upset a cat's tummy, so keep it in your bowl, not your cat's.",
+    "sl": "Jogurt je hrana za ljudi. Mucki lahko razdraži trebušček, zato naj ostane v tvoji skodelici, ne v njeni."
+  },
+  "faq": [
+    {
+      "q": {"en": "Is dairy-free yogurt better for cats?", "sl": "Je jogurt brez mleka boljši za mačke?"},
+      "a": {
+        "en": "Not necessarily. Many dairy alternatives contain ingredients that could be toxic to cats, so they are best avoided too.",
+        "sl": "Ne nujno. Veliko mlečnih nadomestkov vsebuje sestavine, ki so lahko za mačke strupene, zato se jim je bolje izogniti."
+      }
+    }
+  ],
+  "sources": [
+    {"id": "KC211", "quote": "Adult cats do not possess significant amounts of lactase (the enzyme that breaks down lactose in milk), so milk and other dairy based products can cause diarrhoea or other digestive upset."},
+    {"id": "KC200", "quote": "Because pets do not possess significant amounts of lactase (the enzyme that breaks down lactose in milk), milk and other dairy-based products can cause diarrhea or other digestive upset."},
+    {"id": "KC206", "quote": "as many cats are lactose-intolerant and can develop gastrointestinal problems if fed dairy products."},
+    {"id": "KC210", "quote": "Raw meat and dairy products of any kind, including raw milk, should not be fed to cats."},
+    {"id": "KC222", "quote": "Cream and dairy products are also high in fat so will contribute to your cat piling on the pounds."},
+    {"id": "KC203", "quote": "Instead, you should avoid feeding your cat dairy products such as milk and cheese."},
+    {"id": "KC203", "quote": "There is often a buildup of gas as the lactose ferments in the gut."},
+    {"id": "KC202", "quote": "A lot of dairy alternatives contain ingredients that could be toxic for cats."},
+    {"id": "KC219", "quote": "Feeding milk and milk-based products to cats can actually cause them to vomit or have diarrhea."}
+  ],
+  "related": ["milk", "cheese", "ice-cream", "butter"],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {"status": "draft", "verified_by": null, "verified_hash": null},
+    "sl": {"status": "draft", "verified_by": null, "verified_hash": null}
+  }
+}
