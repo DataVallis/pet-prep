@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "cf4b3c9a1907f52a8b39b6024f1dc75a9535ab217ae7b58de2e264005325f937"
+      "sha256": "5215043c28f67559147f2d4eff8fb0d4cfa182da3ad23c398b98d94d7192fd8b"
     }
   },
   "suitability_vocabulary": {
@@ -46505,7 +46505,12 @@
           "S640"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "alaskan-malamute.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
