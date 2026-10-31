@@ -34,7 +34,7 @@ Website repo (`DataVallis/pet-prep-website`, branch `feat/L-<code>`):
    intl, country = home country ISO-2 for the vet directory), and every slug map (`pageSlugs`, `compareSlug`, …):
    ASCII slugs in the language, never reused across pages.
 2. `src/content/<code>.ts` from `en.ts` (every page, FAQ, legal pages **marked** with the note "Translation —
-   the English version is binding" unless David says otherwise), add it to `src/content/index.ts`.
+   the English version is binding" — David confirmed 2026-10-31), add it to `src/content/index.ts`.
 3. `src/content/registry/<code>.ts` (register words) and `src/content/registry/locales/<code>.json`
    (species names + slugs, every breed name + slug, synonyms, coat colour labels, suitability labels) — breed names
    as the kennel clubs of that country write them (FCI / national club), sourced where unusual.
