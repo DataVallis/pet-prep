@@ -105,6 +105,7 @@ trait HandlesChildPet
             CareRefusal::TrainingChildShareUsed => 'You have used your share of today\'s training time.',
             CareRefusal::TrainingSessionInvalid => 'Unknown training session.',
             CareRefusal::TrainingSessionNotOver => 'The training session is not over yet.',
+            CareRefusal::TrainingRoundTwoStarted => 'Round 2 has already started — finish the whole session.',
             CareRefusal::TrainingSessionExpired => 'The training session has expired.',
             CareRefusal::TrainingInvalidTaps => 'A tap lies outside the training session.',
             CareRefusal::TrainingDayEnding => 'The day is ending — train again after midnight.',

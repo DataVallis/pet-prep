@@ -1,5 +1,7 @@
 # School smooth playback — contract (orchestrator, 2026-10-28)
 
+> **Rules v2 (GAMES_SPEC §4.1 Š1–Š2, David 2026-10-30):** a session started with `rules: 2` no longer plays the `release` clip — R = `MASK_MS` 1200 (the cut `success_loop` → `attention_loop` hides under the feedback mask) and a 2.5 s break follows cue 3. The release derivatives stay stored (0 $, the decision is reversible) and v1 sessions (old builds) keep everything below. Contract: ARCHITECTURE *Games rules v2 — contract for the app*.
+
 David 2026-10-28 (screen recording of a Dobermann puppy's »Place« session on iPhone): school is glitchy — ghost double images, poses jumping back and forth, the dog snapping from lying to standing, frozen stills. Must be smooth.
 
 ## Diagnosis (from the recording, 10 fps frame analysis + code)

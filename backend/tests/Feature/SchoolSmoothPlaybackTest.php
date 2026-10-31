@@ -495,9 +495,10 @@ describe('payload and backfill', function () {
         $look = sspLook();
         $rows = collect(['school_sit_attention', 'school_sit_performing', 'school_sit_success', 'school_come_attention'])
             ->map(fn (string $state) => sspLookClip($look, $state));
-        // A wand clip and a pet row pointing at a look are never sources (ball clips are since
-        // games phase 1 — BallClipDerivativesTest).
-        sspLookClip($look, 'wand_stalking');
+        // A non-source game clip and a pet row pointing at a look are never sources (ball clips
+        // are since games phase 1, wand_stalking since phase 2 — BallClipDerivativesTest /
+        // WandCrouchLoopTest).
+        sspLookClip($look, 'wand_pouncing');
         sspLink(sspPet(), $rows[0]);
 
         Artisan::call('media:school-derivatives', ['--limit' => 3, '--dry-run' => true]);

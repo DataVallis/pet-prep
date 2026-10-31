@@ -291,6 +291,8 @@ export function makeTrainingState(overrides: Partial<ChildPetState['training']> 
     next_allowed_at: null,
     // David 2026-10-28 (additive): every school clip is there (school locked while false).
     media_ready: true,
+    // GAMES_SPEC phase 3 (additive, David 2026-10-30): the family bought treats — school v2 shows a treat token (display only).
+    treat_token: false,
     ...overrides,
   };
 }

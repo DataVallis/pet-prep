@@ -676,7 +676,7 @@ sequenceDiagram
   participant T as TrainingService
   participant DB as PostgreSQL
   Note over T: only pets with training_enabled (profile + generate-pin AND pin-login features ["training"])<br/>legacy / older-app pets → 422 training_not_available · locks (423) are checked first
-  C->>API: POST /api/child/pet/training/start {command: sit}
+  C->>API: POST /api/child/pet/training/start {command: sit, rules?: 2}
   API->>T: lock pet · decay missed days · expire stale sessions
   T->>DB: one active session per pet? daily budget (7 min, David 2026-10-28) left for the pet's LONGEST session (58–70 s, by its stored clip lengths)?
   T->>DB: every school phase clip of the pet shown? (GameMediaReadiness::SCHOOL — David 2026-10-28; pets without school clips: yes)
@@ -684,16 +684,21 @@ sequenceDiagram
     API-->>C: 422 training_session_active (next = expires_at) / media_not_ready (school locked, no time) / training_daily_budget_used (next = midnight)
   else ok
     T->>DB: pet_training_sessions (active, schedule 2026-10-28: 6 cues, obeys? 50→90 % by progress,<br/>perform_at = cue + 0.3–1.5 s, obey_at = perform_at + stored performing length P,<br/>release_at = window end, next cue = release_at + release length R + 0.7 s; ignored cue 4.5 s)
-    API-->>C: 200 {session {id, trials[{cue_at_ms, obeys, perform_at_ms, obey_at_ms, window_end_ms, release_at_ms}], praise_window_ms 1500, duration_ms, ends_at, expires_at}, state}
+    Note over T: rules 2 (GAMES_SPEC §4.1, David 2026-10-30): 2 rounds × 3 cues, +2.5 s break after cue 3,<br/>R = mask 1.2 s (no release clip) · schedule.rules_version 2 + rounds[] / round_breaks_ms
+    API-->>C: 200 {session {id, trials[{cue_at_ms, obeys, perform_at_ms, obey_at_ms, window_end_ms, release_at_ms}], praise_window_ms 1500, duration_ms, ends_at, expires_at<br/>+ v2: rules_version, mask_ms, round_break_ms, round_breaks_ms, rounds}, state (training.treat_token)}
     API-->>C: PetUpdated training_started (summary.session_active)
   end
   Note over C: app plays the ~60 s timeline: "Sedi!" at each cue,<br/>dog obeys (or not), child taps "Pohvali" → offsets in ms
-  C->>API: POST /api/child/pet/training/finish {session_id, taps[ms]}
-  API->>T: same child? ends_at − 2 s ≤ now < expires_at? every tap ≤ duration?
+  C->>API: POST /api/child/pet/training/finish {session_id, taps[ms], ended_after_round?: 1}
+  API->>T: same child? ends_at − 2 s ≤ now < expires_at? every tap ≤ duration?<br/>v2 early end: round 1 end − 2 s ≤ now ≤ round 2 start + 2 s (later → 422 training_round_two_started; v1 → 422 training_session_not_over)
   T->>T: score(): first tap per cue → in_time / too_early / too_late / no_praise · waited / praised_without_obeying
   T->>DB: progress += in_time × per_success × breed multiplier (BC 2, mutt 1) × pet factor (mutt 0.8–1.2) × 8 / trials (6 → 8/6) · cap 100
-  T->>DB: activities_log trained_pet (actor child) = today's training routine
-  API-->>C: 200 {result {trials[outcome], successes, progress_before, progress_after}, state} + PetUpdated trained_pet
+  alt full session
+    T->>DB: activities_log trained_pet (actor child) = today's training routine
+  else v2 early end after round 1 (Š3)
+    T->>DB: round 1 scored only · duration_ms = clamp(elapsed, round 1 end, duration) (budget + fair share) · NO trained_pet row (no routine)
+  end
+  API-->>C: 200 {result {trials[outcome], successes, progress_before, progress_after<br/>+ v2: rules_version, ended_after_round, counts_for_routine}, state} + PetUpdated trained_pet
 ```
 
 Routine, decay and effects:
@@ -750,7 +755,7 @@ sequenceDiagram
 
 ### 5g. Cat wand play instead of the walk (M5-R06-04, David 2026-10-08)
 
-Cats only (hidden behind `PETPREP_CATS_ENABLED`). The server starts the ~60 s game and judges the finish; only a **successful** session counts (meter, routine, 2 h gap). Numbers: goal and gap from `breed_stage_params` (`play_sessions_per_day` kitten 3 / cat 2, `play_min_gap_minutes` 120 — David), game mechanics in `config/wand.php`.
+Cats only (hidden behind `PETPREP_CATS_ENABLED`). The server starts the ~60 s game (v2, `rules: 2`: one ~25 s hunt in stars — GAMES_SPEC §5) and judges the finish; only a **successful** session counts (meter, routine, 2 h gap). Numbers: goal and gap from `breed_stage_params` (`play_sessions_per_day` kitten 3 / cat 2, `play_min_gap_minutes` 120 — David), game mechanics in `config/wand.php`.
 
 ```mermaid
 sequenceDiagram
@@ -761,7 +766,7 @@ sequenceDiagram
   participant DB as PostgreSQL
   participant R as Reverb (private-pet.{id})
   Note over W: cat with a profile only (a dog → 422 wand_not_available) · locks (423) first
-  C->>API: POST /api/child/pet/wand/start
+  C->>API: POST /api/child/pet/wand/start {rules?: 2}
   API->>W: lock pet · decay catch-up (midnight → meter 0) · expire / interrupt stale sessions
   W->>DB: goal today > 0? mess open? quiet hours now or before the game + TTL ends (cat sleeps)?<br/>last SUCCESSFUL finish + 120 min > now?<br/>another child's game running? game + TTL past local midnight?
   alt refused
@@ -769,13 +774,15 @@ sequenceDiagram
   else ok
     W->>DB: same child's active game → aborted (no penalty)
     W->>DB: pet_care_sessions (wand_play, active, 60 s, schedule: pounces, catch_at_ms)
-    API-->>C: 200 {session {id, ends_at, expires_at, catch_at_ms, pounces_ms, min_away_moves, segments}, state.wand}
+    Note over W: rules 2 (GAMES_SPEC §5.2, David 2026-10-30): one ~25 s hunt — 3 pounces (p1 6–7.5 s, +5–6.5 s),<br/>crouch cue p − 0.9 s, catch p3 + 3.5 s, end catch + 3.5 s · schedule.rules_version 2
+    API-->>C: 200 {session {id, ends_at, expires_at, catch_at_ms, pounces_ms, min_away_moves, segments<br/>+ v2: rules_version, crouch_cues_ms, dodge_window_ms, calm_*, catch_window_ms, min/max_stars, max_speed_pt_s, min_dodge_pt}, state.wand}
     API-->>R: PetUpdated wand_started
   end
   Note over C: child drags the feather ~60 s; the cat pounces and catches it at the end;<br/>app records each move {t ms, away: moved away from the cat?}
-  C->>API: POST /api/child/pet/wand/finish {session_id, moves[]}
+  C->>API: POST /api/child/pet/wand/finish {session_id, moves[{t, away, in_zone?, speed_ok?}]}
   API->>W: same child? ends_at − 5 s ≤ now < expires_at? lock began during the game? every t ≤ 60 000?
-  W->>W: score(): ≥ 8 away moves (< 300 ms apart count once) · one in each 15 s quarter · away ≥ 50 %<br/>· an away move ≤ 2 s after every pounce · gaps not machine-regular
+  W->>W: v1 score(): ≥ 8 away moves (< 300 ms apart count once) · one in each 15 s quarter · away ≥ 50 %<br/>· an away move ≤ 2 s after every pounce · gaps not machine-regular
+  W->>W: v2 scoreV2() (finish only from catch + 1.5 s): ★ per pounce = ≤ calm_max_moves (0) counted moves in [p − calm_window (1000 ms), p), 👀 cue at p − 1500 ms<br/>· first reported away move in [p + 150, p + 1500 ms] · in_zone · speed_ok; ★ catch = no away move in [c, c + 1.5 s], feather in zone · counts at ≥ 2 of 4
   alt took part
     W->>DB: session completed · pets.energy_level = sessions today / goal × 100 (never lowered)
     W->>DB: activities_log played_wand (actor child, value = n-th of the day) = the play routine
@@ -783,7 +790,7 @@ sequenceDiagram
     API-->>R: PetUpdated played_wand
   else not enough
     W->>DB: session failed (no meter, no gap, no penalty)
-    API-->>C: 200 rejected {result {success: false, reason: too_few_moves | not_spread | wrong_technique | missed_pounces | too_uniform}} — start again at once
+    API-->>C: 200 rejected {result {success: false, reason: too_few_moves | not_spread | wrong_technique | missed_pounces | too_uniform | too_few_stars (v2: + stars, dodges, catch, hint)}} — start again at once
     API-->>R: PetUpdated wand_finished (the game ended)
   end
 ```
@@ -1442,15 +1449,16 @@ flowchart LR
   J --> CP[temp copy from pet_media / pet_media_s3] --> FF["ffmpeg: attention / success → ping-pong loop<br/>performing → reversed release ≤ 2.5 s<br/>H.264 CRF 23, ≤ 1280 px, faststart"]
   FF --> W[write next to the source through the disk<br/>pet_media_derivatives row: source_path = source storage_path]
   W --> P["payload media.phases + phase_seconds:<br/>school_cmd_attention_loop · _success_loop · _release<br/>GET /api/media/{slot}/derived/{key}"]
-  W --> TS["TrainingService schedule: P = performing length, R = release length"]
+  W --> TS["TrainingService schedule: P = performing length, R = release length<br/>(rules v2, GAMES_SPEC Š2: R = mask 1.2 s — the release clip is kept but not played)"]
 ```
 
-**Ball derivatives (GAMES_SPEC phase 1, David 2026-10-30 — same job / backfill / heavy lock, 0 $):**
+**Ball derivatives (GAMES_SPEC phase 1) and the wand crouch loop (phase 2), David 2026-10-30 — same job / backfill / heavy lock, 0 $:**
 
 ```mermaid
 flowchart LR
-  BS["ball_waiting / ball_running stored<br/>(look row or unique pet row)"] --> J2[GenerateSchoolClipDerivative<br/>or media:school-derivatives]
+  BS["ball_waiting / ball_running / wand_stalking stored<br/>(look row or unique pet row)"] --> J2[GenerateSchoolClipDerivative<br/>or media:school-derivatives]
   J2 --> WL["ball_waiting → ping-pong at FULL size, CRF 21<br/>= ball_waiting_loop (file)"]
+  J2 --> CL["wand_stalking → last 1 s only (trim) → ping-pong at FULL size, CRF 21<br/>= wand_crouch_loop (file, games phase 2) → media.phases.wand_crouch_loop"]
   J2 --> EX["ball_running → 64×64 grey frames (one ffmpeg call)<br/>exitSideFrom(): last frame = empty room,<br/>latest frame with the dog (middle → end) → centre x"]
   EX --> ES{"x ≤ 0.38 left · x ≥ 0.62 right<br/>else / no dog / contrary move → center"}
   ES --> MR["pet_media_derivatives row, no file:<br/>key ball_running_exit_side, exit_side"]

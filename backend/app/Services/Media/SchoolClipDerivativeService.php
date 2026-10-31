@@ -71,6 +71,11 @@ use Throwable;
  *    `media.phases.ball_waiting_loop` + `phase_seconds`, `media.phase_meta.ball_running.exit_side`.
  *    A missing one never locks the ball game (GameMediaReadiness is unchanged; the app loops
  *    `ball_waiting` / sends the ball to the centre).
+ *
+ * Games phase 2 (GAMES_SPEC §5.4 / §8.2, 2026-10-30): `wand_stalking` → `wand_crouch_loop`, the
+ * ping-pong of its LAST WAND_CROUCH_TAIL_SECONDS (the clip ends crouched) at full size — same
+ * table / job / backfill / locks, 0 $. Payload `media.phases.wand_crouch_loop` + `phase_seconds`.
+ * A missing one never locks the wand game (the app holds the `crouch` pose / loops the tail).
  */
 class SchoolClipDerivativeService
 {
@@ -120,6 +125,12 @@ class SchoolClipDerivativeService
 
     public const KEY_BALL_WAITING_LOOP = 'ball_waiting_loop';
 
+    /** Games phase 2 (GAMES_SPEC §8.2): ping-pong of the last WAND_CROUCH_TAIL_SECONDS of `wand_stalking`. */
+    public const KEY_WAND_CROUCH_LOOP = 'wand_crouch_loop';
+
+    /** How much of the END of `wand_stalking` (the crouched pose) the crouch loop ping-pongs. */
+    public const WAND_CROUCH_TAIL_SECONDS = 1.0;
+
     public const KEY_BALL_EXIT_SIDE = 'ball_running_exit_side';
 
     public const EXIT_LEFT = 'left';
@@ -168,6 +179,9 @@ class SchoolClipDerivativeService
         }
         if ($clip === PetPhaseClip::BallRunning) {
             return self::KEY_BALL_EXIT_SIDE;
+        }
+        if ($clip === PetPhaseClip::WandStalking) {
+            return self::KEY_WAND_CROUCH_LOOP;
         }
         if ($clip === null || $clip->group() !== PetPhaseClip::GROUP_SCHOOL) {
             return null;
@@ -250,7 +264,25 @@ class SchoolClipDerivativeService
      */
     public static function keepsSourceSize(PetMedia $slot): bool
     {
-        return self::isHomeScreen($slot) || ($slot->isPhase() && $slot->phaseClip() === PetPhaseClip::BallWaiting);
+        return self::isHomeScreen($slot)
+            || ($slot->isPhase() && in_array($slot->phaseClip(), [PetPhaseClip::BallWaiting, PetPhaseClip::WandStalking], true));
+    }
+
+    /**
+     * Games phase 2: frames at the END of the source the loop is made from (null = the whole
+     * clip). `wand_stalking` ends crouched (its end frame is the `crouch` pose) — its last
+     * WAND_CROUCH_TAIL_SECONDS ping-pong into `wand_crouch_loop`.
+     *
+     * @param  array{frames: int, fps: float}  $probe
+     */
+    public static function tailFramesOf(PetMedia $slot, array $probe): ?int
+    {
+        if (! $slot->isPhase() || $slot->phaseClip() !== PetPhaseClip::WandStalking) {
+            return null;
+        }
+        $fps = $probe['fps'] > 0 ? $probe['fps'] : 24.0;
+
+        return max(3, min($probe['frames'], (int) round($fps * self::WAND_CROUCH_TAIL_SECONDS)));
     }
 
     /** The ffmpeg recipe of a source row. */
@@ -483,6 +515,7 @@ class SchoolClipDerivativeService
             $result = Process::timeout(self::PROCESS_TIMEOUT_SECONDS)->run([...self::limits(), ...self::ffmpegArgs(
                 (string) config('media.quality_check.ffmpeg', 'ffmpeg'), $in, $out, $probe, $mode,
                 homeScreen: self::keepsSourceSize($source),
+                tailFrames: self::tailFramesOf($source, $probe),
             )]);
             if (! $result->successful() || ! is_file($out) || filesize($out) === 0) {
                 return $this->recordFailure($source, $key, $existing, 'ffmpeg failed: '.mb_substr(trim($result->errorOutput()), -500));
@@ -557,13 +590,14 @@ class SchoolClipDerivativeService
      * `$mode`: MODE_LOOP (ping-pong), MODE_RELEASE (reversed, ≤ RELEASE_MAX_SECONDS),
      * MODE_REVERSE (frugal B: reversed at the source's own length). A bool is the old
      * signature (true = release). `$maxFrames` (loop only — the zero-cost preview): the
-     * ping-pong of the first N frames only. `$homeScreen` (frugal B / C): no downscale,
-     * CRF HOME_CRF — the full-screen home clip stays premium.
+     * ping-pong of the first N frames only. `$tailFrames` (loop only — games phase 2
+     * `wand_crouch_loop`): the ping-pong of the LAST N frames only. `$homeScreen` (frugal B / C,
+     * full-screen game loops): no downscale, CRF HOME_CRF — the full-screen clip stays premium.
      *
      * @param  array{frames: int, fps: float, duration: float, width: int, height: int}  $probe
      * @return list<string>
      */
-    public static function ffmpegArgs(string $ffmpeg, string $in, string $out, array $probe, bool|string $mode, ?int $maxFrames = null, bool $homeScreen = false): array
+    public static function ffmpegArgs(string $ffmpeg, string $in, string $out, array $probe, bool|string $mode, ?int $maxFrames = null, bool $homeScreen = false, ?int $tailFrames = null): array
     {
         $mode = is_bool($mode) ? ($mode ? self::MODE_RELEASE : self::MODE_LOOP) : $mode;
         $scale = $homeScreen ? '' : self::scaleFilter($probe['width'], $probe['height']);
@@ -588,6 +622,10 @@ class SchoolClipDerivativeService
                 // Preview: the first $maxFrames frames only (what a 3 s clip would have been).
                 $n = $maxFrames;
                 $head = sprintf('trim=end_frame=%d,setpts=PTS-STARTPTS,', $n);
+            } elseif ($tailFrames !== null && $tailFrames >= 3 && $tailFrames < $n) {
+                // Games phase 2: the last $tailFrames frames only (wand_stalking's crouched end).
+                $head = sprintf('trim=start_frame=%d,setpts=PTS-STARTPTS,', $n - $tailFrames);
+                $n = $tailFrames;
             }
             $filter = ['-filter_complex', sprintf(
                 '[0:v]%s%ssplit[f][b];[b]reverse,trim=start_frame=1:end_frame=%d,setpts=PTS-STARTPTS[r];[f][r]concat=n=2:v=1:a=0[v]',
