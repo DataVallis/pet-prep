@@ -11,9 +11,9 @@
  *   cleaned with the existing cleaning game, so it has no button here.
  * Nothing renders for a legacy pet / older server (no clock, no events) unless `cards` or
  * `chips` (M5-R03 "Šola" …) are passed.
- * M5-R04: `meals` ("Obroki danes") is the least urgent card, and only while no scene card is open.
- * M5-F06: `notice` ("Your pup is getting ready…" while the AI media is pending) is a card above
- * the meals row.
+ * M5-R04 "Obroki danes" is NOT part of this stack since David 2026-10-31 — the HUD renders it
+ * directly above the action dock (`hud-meals-slot`), always visible, also while the stack is collapsed.
+ * M5-F06: `notice` ("Your pup is getting ready…" while the AI media is pending) is a stack card.
  * David 2026-10-26: the whole stack collapses (round "×" in line with the first card, or a swipe
  * up) into one slim row — a pill with the most urgent card's icon + short text, "+N" and ▾, then
  * the chips as icon-only buttons; the pill (or a swipe down) expands it. Remembered per device
@@ -67,9 +67,7 @@ export interface BehaviourPanelProps {
    * `compact` = the collapsed stack's icon-only round buttons (same actions, full a11y labels).
    */
   renderChips?: ((compact: boolean) => ReactNode) | null;
-  /** M5-R04 "Obroki danes" (least urgent card); hidden while a scene card is open. */
-  meals?: StackCardBody | null;
-  /** M5-F06: the media "getting ready" notice (a card above the meals row). */
+  /** M5-F06: the media "getting ready" notice (a stack card). */
   notice?: StackCardBody | null;
   /**
    * M5-R06-08b: "Na praskalnik" on the scratched-sofa card (a cat with an open scratching);
@@ -162,7 +160,6 @@ export default function BehaviourPanel({
   resolveBusy,
   cards = [],
   renderChips = null,
-  meals = null,
   notice = null,
   scratcher = null,
   reduceMotion = false,
@@ -175,7 +172,6 @@ export default function BehaviourPanel({
   const chewing = hasOpenChewing(behaviour) || behaviour.can_resolve_chewing;
   // A slipper can be tidied up whatever scene is shown (e.g. a newer accident on top).
   const cardScene = scene ?? (chewing ? 'chewing' : scratcher !== null ? 'scratching' : null);
-  const shownMeals = cardScene === null ? meals : null;
   const resolveDisabled = !behaviour.can_resolve_chewing || resolveBusy;
 
   const entries: StackCard[] = [];
@@ -257,7 +253,6 @@ export default function BehaviourPanel({
   }
   if (notice !== null) entries.push({ key: 'notice', priority: STACK_PRIORITY.notice, ...notice });
   entries.push(...cards);
-  if (shownMeals !== null) entries.push({ key: 'meals', priority: STACK_PRIORITY.meals, ...shownMeals });
 
   const stack = arrangeTopStack(entries, showAll);
   // Nothing more to expand → the next overflow starts collapsed again.

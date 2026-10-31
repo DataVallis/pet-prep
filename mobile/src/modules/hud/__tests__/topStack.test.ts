@@ -21,17 +21,17 @@ import {
 const card = (key: string, priority: number) => ({ key, priority });
 
 describe('arrangeTopStack', () => {
-  it('sorts by urgency: a red take-out clock comes before the mess card, the meals row last', () => {
+  it('sorts by urgency: a red take-out clock comes before the mess card, the breed fact last', () => {
     const arranged = arrangeTopStack(
       [
-        card('meals', STACK_PRIORITY.meals),
+        card('fact', STACK_PRIORITY.fact),
         card('scene', STACK_PRIORITY.scene),
         card('hint', STACK_PRIORITY.hint),
         card('take-out', takeOutPriority('urgent')),
       ],
       true,
     );
-    expect(arranged.visible.map((c) => c.key)).toEqual(['take-out', 'scene', 'hint', 'meals']);
+    expect(arranged.visible.map((c) => c.key)).toEqual(['take-out', 'scene', 'hint', 'fact']);
   });
 
   it('a calm clock yields to the mess card', () => {
@@ -68,11 +68,11 @@ describe('arrangeTopStack', () => {
 
 describe('collapsed stack (David 2026-10-26)', () => {
   it('the pill shows the most urgent card, "+N" for the others, red only for urgent cards', () => {
-    const summary = collapsedSummary([card('meals', STACK_PRIORITY.meals), card('take-out', takeOutPriority('soon')), card('hint', STACK_PRIORITY.hint)]);
+    const summary = collapsedSummary([card('fact', STACK_PRIORITY.fact), card('take-out', takeOutPriority('soon')), card('hint', STACK_PRIORITY.hint)]);
     expect(summary.top?.key).toBe('take-out');
     expect(summary).toMatchObject({ others: 2, urgent: true });
 
-    expect(collapsedSummary([card('take-out', takeOutPriority('calm')), card('meals', STACK_PRIORITY.meals)])).toMatchObject({
+    expect(collapsedSummary([card('take-out', takeOutPriority('calm')), card('fact', STACK_PRIORITY.fact)])).toMatchObject({
       others: 1,
       urgent: false,
     });
@@ -84,7 +84,7 @@ describe('collapsed stack (David 2026-10-26)', () => {
     expect(isUrgentPriority(takeOutPriority('soon'))).toBe(true);
     expect(isUrgentPriority(STACK_PRIORITY.scene)).toBe(true);
     expect(isUrgentPriority(STACK_PRIORITY.firstAid)).toBe(true);
-    for (const calm of [takeOutPriority('calm'), STACK_PRIORITY.invitation, STACK_PRIORITY.notice, STACK_PRIORITY.hint, STACK_PRIORITY.meals]) {
+    for (const calm of [takeOutPriority('calm'), STACK_PRIORITY.invitation, STACK_PRIORITY.notice, STACK_PRIORITY.hint, STACK_PRIORITY.fact]) {
       expect(isUrgentPriority(calm)).toBe(false);
     }
   });
@@ -94,7 +94,7 @@ describe('collapsed stack (David 2026-10-26)', () => {
       alertTokens([
         { key: 'scene', priority: STACK_PRIORITY.scene, alertId: 'scene-accident-7' },
         card('take-out', takeOutPriority('soon')),
-        card('meals', STACK_PRIORITY.meals),
+        card('fact', STACK_PRIORITY.fact),
       ]),
     ).toEqual([`scene-accident-7:${STACK_PRIORITY.scene}`, `take-out:${takeOutPriority('soon')}`]);
   });

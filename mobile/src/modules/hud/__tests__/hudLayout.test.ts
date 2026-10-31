@@ -4,6 +4,8 @@
  */
 
 import {
+  ABOVE_DOCK_HEIGHT_ESTIMATE,
+  ABOVE_DOCK_STACK_GAP,
   computeHudLayout,
   DOCK_HEIGHT_ESTIMATE,
   fitMetrics,
@@ -14,6 +16,7 @@ import {
   metricsColumnHeight,
   PERCENT_LINE,
   SPACING,
+  stackMaxHeightAbove,
   type HudLayout,
 } from '@/modules/hud/hudLayout';
 
@@ -149,5 +152,28 @@ describe('fitMetrics', () => {
     expect(fitMetrics(233)).toMatchObject({ variant: 'micro', showLabel: false, showPercent: false });
     expect(fitMetrics(108)).toMatchObject({ variant: 'micro', trackHeight: 4 });
     expect(fitMetrics(107)).toMatchObject({ variant: 'hidden', trackHeight: 0 });
+  });
+});
+
+describe('stackMaxHeightAbove (David 2026-10-31: »Obroki danes« above the dock)', () => {
+  it('no card → the stack keeps its full height', () => {
+    const l = computeHudLayout({ screenHeight: 852, insets: { top: 59, bottom: 34 } });
+    expect(stackMaxHeightAbove(l, 0)).toBe(l.stackMaxHeight);
+  });
+
+  it.each(DEVICES)('on $name the stack ends above the card (estimate and a compact card)', ({ height, top, bottom }) => {
+    const l = computeHudLayout({ screenHeight: height, insets: { top, bottom } });
+    for (const card of [ABOVE_DOCK_HEIGHT_ESTIMATE, 30]) {
+      const max = stackMaxHeightAbove(l, card);
+      const cardTop = height - l.aboveDock - card;
+      expect(l.bannerTop + max).toBeLessThanOrEqual(cardTop - ABOVE_DOCK_STACK_GAP);
+      // The stack keeps room for its cards even on an iPhone SE.
+      expect(max).toBeGreaterThan(200);
+    }
+  });
+
+  it('never negative', () => {
+    const l = computeHudLayout({ screenHeight: 150, insets: { top: 0, bottom: 0 } });
+    expect(stackMaxHeightAbove(l, ABOVE_DOCK_HEIGHT_ESTIMATE)).toBe(0);
   });
 });

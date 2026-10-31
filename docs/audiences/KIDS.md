@@ -31,7 +31,7 @@ Ko naslednjič odpreš aplikacijo, te kuža že čaka — ni se ti treba znova p
 
 **Ime tvojega kužka** 🏷 Skupaj s starši lahko kužku izbereta ime — vpišejo ga starši. Potem ga vidiš zgoraj na zaslonu, npr. »Luna · Border collie«, in na vrhu albuma. Če si premislita, ga starši lahko spremenijo. *(v naslednji različici aplikacije)*
 
-**Obroki danes** 🍽 Na vrhu zaslona vidiš, kdaj je danes čas za hrano. Kljukica ✓ pomeni, da je kuža že jedel. Kjer piše »nahrani starš«, si v šoli in kužka nahrani mami ali ati.
+**Obroki danes** 🍽 Tik nad gumbi spodaj vidiš, kdaj je danes čas za hrano. Kljukica ✓ pomeni, da je kuža že jedel. Kjer piše »nahrani starš«, si v šoli in kužka nahrani mami ali ati.
 
 ## Tvoj kuža raste 🐕 *(kmalu v aplikaciji)*
 Starši izberejo, ali je tvoj kuža **mladiček**, **mlad pes**, **odrasel** ali **starejši** — in ali so ga **posvojili** iz zavetišča ali **kupili**. Vsak teden igre je tvoj kuža **en mesec starejši**. Mladiček je lačen večkrat na dan (najprej 4-krat, potem 3-krat, nato 2-krat) in sprva hodi manj — vsak teden malo več. Ko zraste v mladega psa, dobi **novo sliko** — to je še vedno tvoj kuža, le večji!

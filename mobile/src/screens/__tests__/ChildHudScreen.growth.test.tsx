@@ -133,11 +133,11 @@ describe('ChildHudScreen — "Obroki danes"', () => {
     expect(screen.queryByTestId('hud-meals')).toBeNull();
   });
 
-  it('hidden while a behaviour scene card is open (small screens would crowd the dog)', async () => {
+  it('David 2026-10-31: stays visible above the dock while a behaviour scene card is open in the top stack', async () => {
     await renderHud(withAlbum({ behaviour: { active_events: [makeBehaviourEvent('accident')], scene: 'accident' } }));
-    expect(screen.getByTestId('hud-scene-accident')).toBeTruthy();
-    expect(screen.queryByTestId('hud-meals')).toBeNull();
-    expect(screen.queryByTestId('hud-meals-compact')).toBeNull();
+    expect(within(screen.getByTestId('hud-top-stack')).getByTestId('hud-scene-accident')).toBeTruthy();
+    expect(within(screen.getByTestId('hud-meals-slot')).getByTestId('hud-meals')).toBeTruthy();
+    expect(within(screen.getByTestId('hud-top-stack')).queryByTestId('hud-meals')).toBeNull();
   });
 
   it('regular phone: full card with the title; small phone (SE): one line without the title', async () => {

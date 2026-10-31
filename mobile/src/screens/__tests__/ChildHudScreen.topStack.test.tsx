@@ -1,14 +1,15 @@
 /**
  * David 2026-10-25 »pes mora biti viden«: the HUD's message cards sit in one compact stack under
  * the header (left of the metric column), most urgent first, at most two cards — the rest behind
- * "+N". Only the action dock stays at the bottom.
+ * "+N". Only the action dock stays at the bottom — and, directly above it, »Obroki danes«
+ * (David 2026-10-31: not a stack card, visible also while the stack is collapsed).
  */
 import { configure, fireEvent, screen, within } from '@testing-library/react-native';
 import { StyleSheet, type ViewStyle } from 'react-native';
 
 import { api } from '@/api/client';
 import ChildHudScreen from '@/screens/ChildHudScreen';
-import { METRICS_RESERVED_RIGHT } from '@/modules/hud/hudLayout';
+import { ABOVE_DOCK_HEIGHT_ESTIMATE, computeHudLayout, METRICS_RESERVED_RIGHT, stackMaxHeightAbove } from '@/modules/hud/hudLayout';
 import { useAppStore } from '@/store/appStore';
 import { makeBehaviourEvent, makeLiveChildState, makeMedia, makePet, makePetProfile, makePlayState, makeTakeOut } from '@/test-utils/fixtures';
 import { resetTopStackPrefsForTests, setTopStackPrefsStoreForTests, useTopStackPrefs } from '@/modules/hud/topStackPrefs';
@@ -202,5 +203,56 @@ describe('ChildHudScreen collapsible top stack (David 2026-10-26)', () => {
     expect(within(screen.getByTestId('hud-top-stack-collapsed')).getByTestId('hud-play-open')).toBeTruthy();
     fireEvent.press(expand);
     expect(within(screen.getByTestId('hud-chip-row')).getByText('Igra')).toBeTruthy();
+  });
+});
+
+describe('»Obroki danes« above the dock (David 2026-10-31)', () => {
+  /** No safe-area provider in Jest → zero insets; header / dock not measured → estimates. */
+  const se = () => computeHudLayout({ screenHeight: 667, insets: { top: 0, bottom: 0 } });
+
+  it('sits directly above the dock, left of the metric column — not in the top stack, also next to a mess card', async () => {
+    await renderHud(busyPuppy());
+    const slot = screen.getByTestId('hud-meals-slot');
+    // iPhone SE → the one-line card; same content and a11y sentence.
+    const card = within(slot).getByTestId('hud-meals-compact');
+    expect(card.props.accessibilityLabel).toMatch(/^Obroki danes: /);
+    expect(within(screen.getByTestId('hud-top-stack')).queryByTestId('hud-meals-compact')).toBeNull();
+    expect(within(screen.getByTestId('hud-top-stack')).queryByTestId('hud-meals')).toBeNull();
+    // The mess card stays in the stack; the meals card is not hidden by it any more.
+    expect(within(screen.getByTestId('hud-top-stack')).getByTestId('hud-scene-chewing')).toBeTruthy();
+
+    const style = StyleSheet.flatten(slot.props.style) as ViewStyle;
+    expect(style).toMatchObject({ position: 'absolute', left: 20, right: METRICS_RESERVED_RIGHT, bottom: se().aboveDock });
+    expect(style.top).toBeUndefined();
+    // Above the dock (dock top + spacing), never over it.
+    const dock = StyleSheet.flatten(screen.getByTestId('hud-dock').props.style) as ViewStyle;
+    expect(style.bottom).toBeGreaterThan(Number(dock.bottom) + 134);
+  });
+
+  it('the top stack ends above the card (estimate first, then the measured height)', async () => {
+    await renderHud(busyPuppy());
+    const stackStyle = () => StyleSheet.flatten(screen.getByTestId('hud-top-stack').props.style) as ViewStyle;
+    expect(stackStyle().maxHeight).toBe(stackMaxHeightAbove(se(), ABOVE_DOCK_HEIGHT_ESTIMATE));
+    fireEvent(screen.getByTestId('hud-meals-slot'), 'layout', { nativeEvent: { layout: { x: 0, y: 0, width: 200, height: 32 } } });
+    expect(stackStyle().maxHeight).toBe(stackMaxHeightAbove(se(), 32));
+    const stackBottom = Number(stackStyle().top) + Number(stackStyle().maxHeight);
+    expect(stackBottom).toBeLessThan(667 - se().aboveDock - 32);
+  });
+
+  it('stays visible while the stack is collapsed and is never counted in the pill', async () => {
+    await renderHud(makeLiveChildState({ pet: { profile: makePetProfile() }, behaviour: { take_out: makeTakeOut(), can_take_out: true } }));
+    fireEvent.press(screen.getByTestId('hud-top-stack-collapse'));
+    const collapsed = screen.getByTestId('hud-top-stack-collapsed');
+    const pill = within(collapsed).getByTestId('hud-top-stack-pill');
+    // Only the take-out clock is a stack card → no "+N".
+    expect(within(pill).queryByText(/^\+\d/)).toBeNull();
+    expect(pill.props.accessibilityLabel).toMatch(/\(1\)$/);
+    expect(within(collapsed).queryByTestId('hud-meals-compact')).toBeNull();
+    expect(within(screen.getByTestId('hud-meals-slot')).getByTestId('hud-meals-compact')).toBeTruthy();
+  });
+
+  it('no slot without meal windows (legacy pet)', async () => {
+    await renderHud(makeLiveChildState({ pet: { profile: makePetProfile({ legacy: true }) } }));
+    expect(screen.queryByTestId('hud-meals-slot')).toBeNull();
   });
 });

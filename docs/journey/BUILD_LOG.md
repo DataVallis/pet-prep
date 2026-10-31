@@ -8,6 +8,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-31 — »Obroki danes« spet tik nad gumbi
+
+**Kaj:** David je želel vrstico z današnjimi obroki (»7–9 ✓ · 13–15 ✓ · 19–21«) nazaj tam, kjer je bila: »vse kar narediš je samo da Meals today prestaviš dol. to je to«. Zdaj je spet tik nad gumbi Hrani / Voda / Pelji ven / Sprehod / Očisti, ne več med sporočili na vrhu.
+**Zakaj je pomembno:** otrok vidi, kdaj je čas za hrano, prav ob gumbu »Hrani« — in vrstica ostane vidna tudi, ko sporočila na vrhu skrije.
+**Številke:** ista kartica in vsebina; 0 sprememb strežnika; samo JS — gre z OTA na isto gradnjo.
+- 🧒 »Kdaj je kuža lačen? Poglej tik nad gumbom Hrani.«
+- 🛠 Kartica ni več del zgornjega stolpca; stolpec se konča nad njo (izmerjena višina).
+
 ## 2026-10-31 — Priboljšek lahko otrok tapne ali povleče do psa (in dobi namig »Tapni«)
 
 **Kaj:** David je na telefonu preizkusil šolo: brisanje luže s krpo mu je bilo všeč (»wipe je top«), prav tako priboljšek, ki odleti do psa. Priboljšek pa je poskusil **povleči** do psa — ni vedel, da ga je treba tapniti: »nisem vedel da tapneš na njega, mogoče bi lahko tak diskreten namig bil tap«. Zdaj žeton sprejme oboje: šteje trenutek dotika (kot doslej), vlečenje pa priboljšek samo premakne s prstom in ob spustu odleti do psa. Začetniki (ukaz naučen manj kot 50 %) vidijo na žetonu majhen prst, ki poskakuje, in napis »Tapni«, dokler prvič ne tapnejo.

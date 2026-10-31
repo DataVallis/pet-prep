@@ -10,7 +10,9 @@
  * The message cards (take-out clock, mess card, notes, chips) are not between header and dock
  * any more: since David 2026-10-25 they form the top stack under the header (`bannerTop`,
  * `stackMaxHeight`), left of the metric column (`METRICS_RESERVED_RIGHT`), so the dog's centre
- * and lower half stay free (order / "+N" in `topStack.ts`).
+ * and lower half stay free (order / "+N" in `topStack.ts`). The one exception (David 2026-10-31):
+ * »Obroki danes« sits directly above the dock (`aboveDock`), and the stack ends above it
+ * ({@link stackMaxHeightAbove}).
  *
  * Inputs are the window height, the safe-area insets and (once measured via onLayout)
  * the real header / dock heights; the estimates below are used for the first frame.
@@ -179,4 +181,20 @@ export function computeHudLayout({
     stackMaxHeight: Math.max(0, metricsBottom - bannerTop),
     metric,
   };
+}
+
+/** First-frame height of the »Obroki danes« card above the dock, before onLayout measures it. */
+export const ABOVE_DOCK_HEIGHT_ESTIMATE = 60;
+/** Gap between the bottom of the top stack and the card above the dock. */
+export const ABOVE_DOCK_STACK_GAP = 6;
+
+/**
+ * David 2026-10-31: the »Obroki danes« card sits directly above the dock (`aboveDock`, left of
+ * the metric column). The top stack then ends above that card: its max height shrinks by the
+ * card's height + {@link ABOVE_DOCK_STACK_GAP}. `aboveDockHeight` 0 = no card → unchanged.
+ * Invariant (tested): `bannerTop + result <= screenHeight - aboveDock - aboveDockHeight - gap`.
+ */
+export function stackMaxHeightAbove(layout: Pick<HudLayout, 'stackMaxHeight'>, aboveDockHeight: number): number {
+  if (aboveDockHeight <= 0) return layout.stackMaxHeight;
+  return Math.max(0, layout.stackMaxHeight - aboveDockHeight - ABOVE_DOCK_STACK_GAP);
 }

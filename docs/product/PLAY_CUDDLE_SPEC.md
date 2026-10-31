@@ -56,7 +56,7 @@ Brez zastavice `features` iz aplikacije: igra nima posledic, zato stara različi
 
 ## 4. Kaj vidi in naredi otrok
 ### 4.1 Gumb »Igra« in vabilo
-- Na vrhu zaslona (v istem stolpcu kot »Šola« in »Obroki danes«) je gumb **»Igra«**, ki odpre izbiro **»Žoga«** / **»Crkljanje«**. Gumb je **vedno viden**; ko prosta igra ni mogoča (§3.1), je **siv z razlago** (npr. »Kuža spi. Igrata se, ko se zbudi.«) — David 8. 10. 2026 13:47.
+- Na vrhu zaslona (v istem stolpcu kot »Šola«; »Obroki danes« so od 31. 10. 2026 tik nad gumbi spodaj) je gumb **»Igra«**, ki odpre izbiro **»Žoga«** / **»Crkljanje«**. Gumb je **vedno viden**; ko prosta igra ni mogoča (§3.1), je **siv z razlago** (npr. »Kuža spi. Igrata se, ko se zbudi.«) — David 8. 10. 2026 13:47.
 - **Vabilo:** ko je odprto, se gumb »Igra« spremeni v prijazno kartico: igra — »Kuža ti prinaša žogo. Se igrava?« z gumbom **»Igraj se«**; crkljanje — »Kuža se stisne k tebi. Ga pobožaš?« z gumbom **»Pobožaj«**. Brez odštevanja (ni pritiska). »Mogoče kasneje« vabilo skrije do konca.
 - Gumb in vabilo se skrijeta med sprehodom, šolo in čiščenjem.
 

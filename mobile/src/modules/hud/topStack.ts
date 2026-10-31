@@ -3,9 +3,10 @@
  * `__tests__/topStack.test.ts`.
  *
  * Every message card of the HUD (the puppy's take-out deadline, the open-mess card with its
- * button, the "getting ready" notice, play invitation, hints / notes, "Obroki danes") sits in
- * one compact column directly under the header, left of the metric column — the centre and the
- * lower half of the screen stay free for the dog; only the action dock is at the bottom.
+ * button, the "getting ready" notice, play invitation, hints / notes) sits in one compact column
+ * directly under the header, left of the metric column — the centre and the lower half of the
+ * screen stay free for the dog. Only the action dock and, directly above it, the »Obroki danes«
+ * card (David 2026-10-31 — not a stack card, never collapsed) are at the bottom.
  *
  * The column is bounded: the most urgent cards come first and at most
  * {@link TOP_STACK_MAX_VISIBLE} are shown; the rest collapse into a "+N" pill that expands them
@@ -54,8 +55,6 @@ export const STACK_PRIORITY = {
   happy: 9,
   /** »Nekaj novega o tvoji pasmi«. */
   fact: 10,
-  /** "Obroki danes" — informative, least urgent. */
-  meals: 11,
 } as const;
 
 export interface StackEntry {

@@ -4,7 +4,7 @@
  * puddles, chewed slipper → its own button (never the scrub overlay), free-tier graphic
  * vs premium scene video, realtime behaviour from PetUpdated.
  */
-import { act, fireEvent, screen, waitFor } from '@testing-library/react-native';
+import { act, fireEvent, screen, waitFor, within } from '@testing-library/react-native';
 import { Animated, StyleSheet, type ViewStyle } from 'react-native';
 
 import { ApiError, api } from '@/api/client';
@@ -385,8 +385,8 @@ describe('ChildHudScreen — behaviour events (M5-R02)', () => {
       }),
     );
     expect(screen.queryByTestId('action-take-out')).toBeNull();
-    // The panel slot only holds the M5-R04 "Obroki danes" row — no scene, no countdown.
-    expect(screen.getByTestId('hud-meals')).toBeTruthy();
+    // Only the M5-R04 "Obroki danes" row above the dock — no scene, no countdown.
+    expect(within(screen.getByTestId('hud-meals-slot')).getByTestId('hud-meals')).toBeTruthy();
     expect(screen.queryByTestId('action-resolve-chewing')).toBeNull();
     expect(screen.queryByTestId('hud-take-out-countdown')).toBeNull();
   });
