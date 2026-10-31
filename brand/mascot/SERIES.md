@@ -20,7 +20,7 @@ Ena hiša, ena družina, en ljubljenček. Isti slog kot Curio: **stiliziran 3D, 
 |---|---|---|---|
 | **Curio** | družinski ljubljenček | večen optimist; vsak dan znova verjame obljubi; čustva samo z očmi in telesom; nikoli ne obupa, samo malo »potone« | `brand/MASCOT.md` (grafitna kocka, beli očesi, malinast nos, brez ust, metina ovratnica) |
 | **Mia** | starejša sestra | šefica z načrtom za vse — razen za sprehod; vzvišen nasmešek, iznajdljiva pri izgovorih | ogromen visok čop z metino elastiko (odskakuje), odločne obrvi, pegice, metin pulover brez vzorca, grafitne pajkice, bele superge, beležka z neskončnim seznamom |
-| **Leo** | mlajši brat | žlehtnoba: velike obljube, takojšen beg; mojster »spim« in »sem bolan« | razmršeni temni lasje, žlehten nasmešek, grafitna jopica s kapuco (roke v žepu), bež trenirka z obližem na kolenu, prevelike metine superge; **brez nahrbtnika** |
+| **Leo** | mlajši brat | žlehtnoba: velike obljube, takojšen beg; mojster »spim« in »sem bolan« | razmršeni temni lasje, žlehten nasmešek, grafitna jopica s kapuco (roke v žepu), bež trenirka z obližem na kolenu, prevelike metine superge; **brez nahrbtnika, brez škrbine** (preizkušeno 31. 10.: model škrbine ne zna ponoviti enako) |
 | **Mama** | | mirna, z enim pogledom (dvignjena obrv) pove vse; vedno zmaga (z nasmehom) | visoka in vitka, temno rjavi lasje v figi s svinčnikom, okrogla tanka očala, bež jopica, sivi kavbojke, metina skodelica vedno v roki |
 | **Oči** | | sanja, da se bo izognil delu, a vedno konča z mokrim povodcem v roki | okrogel, hruškasta postava, kratke nožice, en štrleč čop na plešasti glavi, rjava brada, zaspane oči, prevelik grafitni pulover, bež kratke pižamaste hlače, ogromni puhasti metini copati, časopis pod roko |
 
