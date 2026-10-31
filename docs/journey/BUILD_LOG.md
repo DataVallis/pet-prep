@@ -8,6 +8,16 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-31 — Igra z žogo: video je prekril vse, zdaj ima vsaka igra vedno izhod
+
+**Kaj:** David je na iPhonu (nova gradnja v TestFlightu) odprl igro z žogo: kuža se je lepo predvajal čez cel zaslon, vse ostalo pa je izginilo — ni bilo žoge, gumba »Pokliči!«, zgornje vrstice ne × in iz igre ni bilo mogoče ven. Vzrok je bil v tem, kako nova arhitektura React Native razvrsti plasti: video je imel znotraj svoje plasti višjo »številko nadstropja« (`zIndex`) in jo je sistem primerjal z gumbi igre, zato je video pristal na vrhu. Enako bi se zgodilo v šoli, pri palici in pri crkljanju. Popravek: vsaka plast igre je zdaj svoje zaprto »nadstropje« (video vedno spodaj), vsaka igra ima vedno viden ×, Androidov »nazaj« jo zapre, če se igra v 15 s ne pripravi ali se zlomi, pa se pokaže »Igra se ne odziva.« z gumbom »Nazaj«. Pri neredu, ki ga je treba počistiti, izhod čiščenje nadaljuje na preprostem zaslonu (pravilo ostane, otrok ni ujet). Popravek pride na telefone s posodobitvijo (OTA), brez nove gradnje.
+**Zakaj je pomembno:** otrok nikoli ne sme ostati ujet v zaslonu brez izhoda — to je osnovno pravilo prijazne aplikacije za otroke. Napako je ujel prvi test na pravem telefonu, zato zdaj test v Jestu posnema pravila risanja na telefonu in bi to napako ujel že pred gradnjo.
+**Številke:** 6 vrst iger z istim izhodom (žoga, šola, palica, crkljanje, čiščenje, nega); izhod v sili po 15 s, skrit × se vrne najpozneje po 20 s; 0 sprememb nativne kode (prstni odtis gradnje enak).
+- 📣 »Prvi test na pravem telefonu je našel napako, ki je noben test na računalniku ni videl. Popravljeno isti dan — brez nove različice v trgovini.«
+- 👩 Starši: v vsaki igri je × vedno viden; če se igra zatakne, otrok dobi gumb »Nazaj«.
+- 🧒 »Če igra ne dela, pritisni ×.«
+- 🛠 Fabric dvigne otroke pogleda brez lastnega konteksta nalaganja v najbližji kontekst in jih razvrsti po `zIndex` — `zIndex: 2` globoko v video odru je premagal celoten HUD. Jest zdaj posnema ta pravila (`fabricPaintOrder`).
+
 ## 2026-10-31 — »Kaj lahko jedo psi?« — baza znanja z viri za vsako živilo
 
 **Kaj:** David je na Instagramu videl priljubljeno objavo »These Foods Can Kill Your Dog« in rekel: to damo v PetPrep, v aplikacijo in na spletno stran, za vse živali. V enem dopoldnevu je nastala baza znanja: za psa 55 in za mačko 44 živil, vsako s stopnjo nevarnosti, razlogom, znaki, kaj storiti, razlago za otroke in viri (ASPCA, Merck Veterinary Manual, FDA, VCA, Cornell, Blue Cross, Cats Protection …) z dobesednimi citati; vsako je neodvisno preveril drugi AI agent. Na petprep.si dobi vsako živilo svojo stran (EN + SL), nočno opravilo pa vsak večer doda 10 novih, dokler seznam (~180 živil na vrsto) ni prazen.

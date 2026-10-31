@@ -13,7 +13,7 @@ import { CLEANING_STRINGS } from '@/components/CleaningOverlay';
 import { BEHAVIOUR_STRINGS } from '@/modules/behaviour/behaviour';
 import { useAppStore } from '@/store/appStore';
 import { setGameLayerAvailableForTests } from '@/modules/gameLayer/capability';
-import { resetMessGamesForTests } from '@/modules/cleaning/loadMessGames';
+import { loadMessGames, resetMessGamesForTests } from '@/modules/cleaning/loadMessGames';
 import {
   makeBehaviourEvent,
   makeBroadcast,
@@ -267,6 +267,31 @@ describe('ChildHudScreen — behaviour events (M5-R02)', () => {
     await waitFor(() => expect(cleanPet).toHaveBeenCalledTimes(1), { timeout: 4_000 });
     await waitFor(() => expect(screen.queryByTestId('mess-game')).toBeNull());
     expect(cleanPet).toHaveBeenCalledTimes(1);
+  });
+
+  // David 2026-10-31: a forced mess keeps its × locked, but its escape (× after GAME_ESCAPE_MS,
+  // Android back, the watchdog) never leaves the child stuck in a broken game: the same mess
+  // continues on the plain tap cleaning, which still has to be finished.
+  it('game layer: the escape from a forced mess game continues on the tap overlay', async () => {
+    setGameLayerAvailableForTests(true);
+    resetMessGamesForTests();
+    await renderHud(
+      makeLiveChildState({
+        pet: { hygiene_level: 0, needs_cleaning: true, pet_state: 'sick' },
+        behaviour: { take_out: makeTakeOut(), can_take_out: true, active_events: [makeBehaviourEvent('accident')], scene: 'accident' },
+      }),
+    );
+    expect(screen.getByTestId('mess-game')).toBeTruthy();
+    expect(screen.queryByTestId('mess-game-top-close')).toBeNull();
+    const MessGame = loadMessGames()?.MessGame;
+    if (MessGame === undefined) throw new Error('mess games not loaded');
+    const game = screen.UNSAFE_getByType(MessGame);
+    expect(game.props.onClose).toBeUndefined();
+    act(() => (game.props.onEscape as () => void)());
+    expect(screen.queryByTestId('mess-game')).toBeNull();
+    expect(screen.getByTestId('cleaning-overlay')).toBeTruthy();
+    // Still a forced clean: the tap overlay has no »Zapri« either.
+    expect(screen.queryByTestId('cleaning-close')).toBeNull();
   });
 
   it('game layer: »Pospravi in daj igračo« opens the slipper game; box + toy resolves once', async () => {

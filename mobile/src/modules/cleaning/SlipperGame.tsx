@@ -265,6 +265,7 @@ export default function SlipperGame({ view, reduceMotion, onResolved, onClose, o
   return (
     <GameScreen
       testID={testID}
+      onExit={onClose}
       stage={<MessStage view={view} onMediaExpired={onMediaExpired} />}
       field={
         <MessField gesture={gestures.gesture} onLayout={setLayout} testID={`${testID}-field`}>

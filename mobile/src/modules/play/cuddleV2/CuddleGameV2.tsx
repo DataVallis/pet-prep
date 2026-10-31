@@ -312,6 +312,7 @@ export default function CuddleGameV2({ view, reduceMotion, onDone, onClose, onMe
   return (
     <GameScreen
       testID={testID}
+      onExit={onClose}
       stage={
         hasPicture ? (
           <ClipDeck clips={plan.clips} current={deckCurrent} mode={plan.mode} onReady={onDeckReady} onEnded={queue.ended} onMediaExpired={onMediaExpired} testID={`${testID}-deck`} />

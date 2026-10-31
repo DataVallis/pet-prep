@@ -17,7 +17,7 @@ import { setGameLayerAvailableForTests } from '@/modules/gameLayer/capability';
 import { normalizePetMedia } from '@/modules/petMedia/petMedia';
 import { useAppStore } from '@/store/appStore';
 import { makeLiveChildState, makeMedia, makeWandState, withEasyGestures } from '@/test-utils/fixtures';
-import { fireGamePan } from '@/test-utils/gameLayer';
+import { captureAndroidBack, expectHudAboveStage, fireGamePan } from '@/test-utils/gameLayer';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 
 jest.mock('@/api/client', () => {
@@ -201,5 +201,41 @@ describe('the hunt', () => {
     await advance(19000);
     const [, moves] = mocked.finishWandV2.mock.calls[0] as [string, WandV2Move[]];
     expect(moves).toEqual([{ t: expect.any(Number), away: true, in_zone: true, speed_ok: true }]);
+  });
+});
+
+// Ball v2 device bug (David 2026-10-31): the HUD must sit above the cat video, with a way out.
+describe('z-order and exit', () => {
+  it('paints the top bar, ×, field, cue and »Začni lov« above the video; × and Android back close', async () => {
+    const back = captureAndroidBack();
+    useAppStore.getState().openCatGame('wand');
+    renderWithQuery(<CatCareOverlay view={catView()} reduceMotion={false} clock={clock} />);
+    deckReady();
+    layoutField();
+    await advance(0);
+    expectHudAboveStage(ID, [`${ID}-top-close`, `${ID}-field-layer`, `${ID}-cue`, `${ID}-start`]);
+    expect(back.pressBack()).toBe(true);
+    expect(useAppStore.getState().catOverlay).toBeNull();
+    jest.restoreAllMocks();
+  });
+
+  it('while running the × and Android back stop the hunt (no dead end)', async () => {
+    const back = captureAndroidBack();
+    mocked.startWandV2.mockResolvedValue({ status: 'accepted', session: SESSION, state: catState() });
+    open(catView());
+    deckReady();
+    layoutField();
+    await advance(0);
+    fireEvent.press(screen.getByTestId(`${ID}-start`));
+    await advance(1_000);
+    expect(screen.getByTestId(`${ID}-top-close`)).toBeTruthy();
+    expectHudAboveStage(ID, [`${ID}-top-close`, `${ID}-field-layer`]);
+    expect(screen.queryByTestId(`${ID}-start`)).toBeNull();
+    // Back = the × while running = »stop«: the hunt goes back to its intro (nothing reported).
+    expect(back.pressBack()).toBe(true);
+    await advance(0);
+    expect(screen.getByTestId(`${ID}-start`)).toBeTruthy();
+    expect(mocked.finishWandV2).not.toHaveBeenCalled();
+    jest.restoreAllMocks();
   });
 });

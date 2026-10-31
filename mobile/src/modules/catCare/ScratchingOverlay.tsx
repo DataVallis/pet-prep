@@ -34,6 +34,7 @@ import {
 } from '@/modules/catCare/catCare';
 import { scoreScratching, scratchingFrameAt } from '@/modules/catCare/catGames';
 import { gameFeedbackOf } from '@/modules/gameLayer/gameFeedback';
+import { GameExitProvider } from '@/modules/gameLayer/gameExit';
 import { loadCareShell, type CareGameShellType } from '@/modules/gameLayer/loadCareShell';
 import { Busy, CatOverlayFrame, CatStage, FailedView, PrimaryButton, SecondaryButton, styles, useAnnounce } from '@/modules/catCare/CatGameParts';
 import { useScratchingGame, type PraiseInput } from '@/modules/catCare/useCatGames';
@@ -72,17 +73,19 @@ export default function ScratchingOverlay({ view, onClose, reduceMotion, clock, 
 
   if (Shell !== null && (phase.kind === 'running' || phase.kind === 'finishing')) {
     return (
-      <ScratchingRunning
-        session={phase.session}
-        praise={phase.input}
-        elapsedMs={game.elapsedMs}
-        finishing={phase.kind === 'finishing'}
-        reduceMotion={reduceMotion}
-        onPraise={onPraise}
-        Shell={Shell}
-        gameFeedback={gameFeedbackOf(view)}
-        testID={testID}
-      />
+      <GameExitProvider value={onClose}>
+        <ScratchingRunning
+          session={phase.session}
+          praise={phase.input}
+          elapsedMs={game.elapsedMs}
+          finishing={phase.kind === 'finishing'}
+          reduceMotion={reduceMotion}
+          onPraise={onPraise}
+          Shell={Shell}
+          gameFeedback={gameFeedbackOf(view)}
+          testID={testID}
+        />
+      </GameExitProvider>
     );
   }
 

@@ -49,8 +49,14 @@ export interface MessGameProps {
   reduceMotion: boolean;
   /** Every stage is clean (called once) → the HUD sends `POST /clean`. */
   onCleaned: () => void;
-  /** Omitted while the mess must be cleaned (hygiene 0 %, PRODUCT_SPEC §8) — no ×. */
+  /** Omitted while the mess must be cleaned (hygiene 0 %, PRODUCT_SPEC §8) — the × is locked. */
   onClose?: () => void;
+  /**
+   * The escape from a forced mess (no `onClose`): the locked × after `GAME_ESCAPE_MS`, Android back
+   * after that, the watchdog card. The HUD switches to the plain tap cleaning — the mess still
+   * has to be cleaned, but never inside a game that may be broken.
+   */
+  onEscape?: () => void;
   onMediaExpired?: () => void;
   testID?: string;
 }
@@ -517,7 +523,7 @@ function usePuddleStage(stage: MessStage, ctx: StageCtx): StageUi {
 
 const FEEDBACK_MS = 1_000;
 
-export default function MessGame({ view, stages, reduceMotion, onCleaned, onClose, onMediaExpired, testID = 'mess-game' }: MessGameProps) {
+export default function MessGame({ view, stages, reduceMotion, onCleaned, onClose, onEscape, onMediaExpired, testID = 'mess-game' }: MessGameProps) {
   const S = MESS_GAME_STRINGS;
   // Fixed when the game opens: a mess that appears meanwhile waits for the next cleaning.
   const [safeStages] = useState<readonly MessStage[]>(() => (stages.length > 0 ? stages : [{ kind: 'poop', pieces: 1, seed: 0 }]));
@@ -580,6 +586,7 @@ export default function MessGame({ view, stages, reduceMotion, onCleaned, onClos
   return (
     <GameScreen
       testID={testID}
+      onExit={onClose ?? onEscape}
       stage={<MessStageVideo view={view} onMediaExpired={onMediaExpired} />}
       field={
         <LayoutProbe onLayout={setLayout} testID={`${testID}-layout`}>
@@ -597,7 +604,8 @@ export default function MessGame({ view, stages, reduceMotion, onCleaned, onClos
               line={line.text}
               closeLabel={S.close}
               progressLabel={S.a11y.progress(done, total)}
-              onClose={onClose}
+              onClose={onClose ?? onEscape}
+              closeLocked={onClose === undefined}
               testID={`${testID}-top`}
             />
           }

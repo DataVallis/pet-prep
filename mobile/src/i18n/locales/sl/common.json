@@ -52,5 +52,10 @@
       "commit": "Commit",
       "channel": "Kanal"
     }
+  },
+  "game": {
+    "close": "Zapri igro",
+    "stuck": "Igra se ne odziva.",
+    "back": "Nazaj"
   }
 }

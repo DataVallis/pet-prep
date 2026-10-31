@@ -56,6 +56,7 @@ import type { ChildPetView } from '@/modules/childPet/childPetView';
 import type { ClockSources } from '@/modules/training/game';
 import { careFrame } from '@/modules/gameLayer/careFrame';
 import { gameFeedbackOf } from '@/modules/gameLayer/gameFeedback';
+import { GameExitProvider } from '@/modules/gameLayer/gameExit';
 import { loadCareShell, type CareGameShellType } from '@/modules/gameLayer/loadCareShell';
 import { palette } from '@/theme';
 
@@ -137,25 +138,27 @@ export default function ChoreOverlay({ kind, view, onClose, reduceMotion, clock,
 
   if (Shell !== null && (phase.kind === 'running' || phase.kind === 'finishing')) {
     return (
-      <ChoreRunning
-        kind={kind}
-        texts={texts}
-        dog={dog}
-        view={view}
-        session={phase.session}
-        strokes={phase.input}
-        elapsedMs={game.elapsedMs}
-        finishing={phase.kind === 'finishing'}
-        resumed={phase.resumedAtMs !== null}
-        reduceMotion={reduceMotion}
-        gestureMode={gestureMode}
-        msAt={game.msAt}
-        onStroke={(ms) => game.setInput((strokes) => addStroke(strokes, ms, phase.session.duration_ms))}
-        onMediaExpired={onMediaExpired}
-        Shell={Shell}
-        onStop={game.stop}
-        testID={testID}
-      />
+      <GameExitProvider value={onClose}>
+        <ChoreRunning
+          kind={kind}
+          texts={texts}
+          dog={dog}
+          view={view}
+          session={phase.session}
+          strokes={phase.input}
+          elapsedMs={game.elapsedMs}
+          finishing={phase.kind === 'finishing'}
+          resumed={phase.resumedAtMs !== null}
+          reduceMotion={reduceMotion}
+          gestureMode={gestureMode}
+          msAt={game.msAt}
+          onStroke={(ms) => game.setInput((strokes) => addStroke(strokes, ms, phase.session.duration_ms))}
+          onMediaExpired={onMediaExpired}
+          Shell={Shell}
+          onStop={game.stop}
+          testID={testID}
+        />
+      </GameExitProvider>
     );
   }
 

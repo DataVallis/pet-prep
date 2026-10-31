@@ -45,7 +45,7 @@ export interface CareGameShellProps {
   reduceMotion: boolean;
   closeLabel: string;
   progressLabel: string;
-  /** Omitted → no × (e.g. the short scratching carry). */
+  /** The ×'s action (stop); omitted → the × is locked (e.g. the short scratching carry, finishing) and comes back after GAME_ESCAPE_MS with the host's exit (`GameExitContext`). */
   onClose?: () => void;
   testID: string;
 }
@@ -120,7 +120,7 @@ export default function CareGameShell({
       }
       feedback={<FeedbackLayer ref={feedback} reduceMotion={reduceMotion} testID={`${testID}-feedback`} />}
       topBar={
-        <GameTopBar dots={frame.stepsDone} stars={0} line={gameLine.text} closeLabel={closeLabel} progressLabel={progressLabel} onClose={onClose} testID={`${testID}-top`} />
+        <GameTopBar dots={frame.stepsDone} stars={0} line={gameLine.text} closeLabel={closeLabel} progressLabel={progressLabel} onClose={onClose} closeLocked={onClose === undefined} testID={`${testID}-top`} />
       }
       dock={dock}
     />

@@ -500,6 +500,9 @@ export default function ChildHudScreen() {
   const [isCertificateVisible, setCertificateVisible] = useState(false);
   // GAMES_SPEC §6.2: the slipper game (native layer only); a lock closes it.
   const [slipperOpen, setSlipperOpen] = useState(false);
+  // David 2026-10-31: the escape from a forced mess game (its × after GAME_ESCAPE_MS, Android
+  // back, the watchdog) → this cleaning continues on the plain tap overlay (still must be cleaned).
+  const [messEscaped, setMessEscaped] = useState(false);
   useEffect(() => {
     if (lockedNow) setSlipperOpen(false);
   }, [lockedNow]);
@@ -712,7 +715,9 @@ export default function ChildHudScreen() {
   // GAMES_SPEC §6.2 / §7.4: on a binary with the native game layer the bag / cloth / box games
   // replace the tap overlay and the instant »Pospravi in daj igračo« (lazy, null on older binaries).
   const messGames = loadMessGames();
-  const messGameShown = showCleaning && messGames !== null;
+  // A finished / closed cleaning forgets the escape: the next mess opens its game again.
+  if (!showCleaning && messEscaped) setMessEscaped(false);
+  const messGameShown = showCleaning && messGames !== null && !messEscaped;
   const takeOutClock = view.behaviour.take_out;
   const countdown = !locked && takeOutClock !== null ? takeOutCountdown(takeOutClock, serverNow, view.timezone) : null;
   const takeOutDisabled = !rules.take_out.enabled;
@@ -1342,7 +1347,7 @@ export default function ChildHudScreen() {
             }}
           />
         )}
-        {showCleaning && messGames === null && (
+        {showCleaning && (messGames === null || messEscaped) && (
           <CleaningOverlay
             onCleaned={handleCleaned}
             onClose={needsScrub ? undefined : () => setCleaningOverlayVisible(false)}
@@ -1362,6 +1367,7 @@ export default function ChildHudScreen() {
           reduceMotion={reduceMotion}
           onCleaned={handleCleaned}
           onClose={needsScrub ? undefined : () => setCleaningOverlayVisible(false)}
+          onEscape={() => setMessEscaped(true)}
           onMediaExpired={onMediaExpired}
         />
       )}
