@@ -18,6 +18,7 @@ Starši natisnejo pobarvanke, otroci jih pobarvajo ali prerišejo. Starši risbo
 | C6 | **Curio ni skrbnik** (`brand/MASCOT.md`): na pobarvanki psa ne vodi na povodcu, ga ne hrani. Na strani »Curio v parku« psa samo gleda izza drevesa. |
 | C7 | **Vsaka stran ima eno zanimivost z virom** in povezavo: živilo iz baze znanja (`care-knowledge.json`, preverjen jezik) ali točka »napake lastnikov« pasme (register). Nikoli novih trditev. |
 | C8 | **Licenca:** brezplačno za osebno, družinsko in šolsko uporabo; prosimo, ne prodajajte in ne objavljajte drugje. |
+| C10 | **Logotip na vsaki pobarvanki (David 31. 10. 2026):** spodaj desno je logotip PetPrep (znak + napis) kot obris, da ga otrok pobarva. Stran je zato 1792 × 2620 (spodnji pas 220 px). |
 | C9 | **Ideja za trgovino (David 31. 10. 2026):** poleg mercha in Curio plišaste igrače tudi **PetPrep puzzle**; plačljive pobarvanke in darila za otroke. Vse *načrt*, v `ROADMAP.md` (backlog). |
 
 ## 3. Kaj je na spletu
@@ -30,6 +31,6 @@ Starši natisnejo pobarvanke, otroci jih pobarvajo ali prerišejo. Starši risbo
 ## 4. Kako dodati pobarvanko
 
 1. Higgsfield: referenčna slika pasme s petprep.si (`/animals/dogs/<pasma>.webp`) ali Curio (`/curio/curio-waving.webp`) → poziv v slogu obstoječih (»Children's colouring book page … bold, smooth, closed black outlines … no shading, no grey, no text, no frame«). Generiranje samo z Davidovo potrditvijo.
-2. Pretvori v 1-bitni PNG (`convert … -threshold 60% -type bilevel`), shrani v `pet-prep-website/public/coloring/<id>.png`.
+2. Pretvori v 1-bitni PNG (`convert … -threshold 60% -type bilevel`), dodaj spodnji beli pas 220 px z obrisom logotipa spodaj desno (širina 760 px, 100 px od roba; obris iz `brand/logo/petprep-logo-horizontal.svg`) in shrani v `pet-prep-website/public/coloring/<id>.png`.
 3. Dodaj stran v `src/content/coloring/coloring.ts` (naslov, slug, alt v vseh jezikih, zanimivost) in id v vrstni red v `scripts/coloring-pdf.mjs`; zaženi `node scripts/coloring-pdf.mjs`.
 4. Novi jeziki: `coloringCopy` in besedila strani so `Record<Locale, …>`, zato jih jezikovno opravilo prevede (tsc jih zahteva).
