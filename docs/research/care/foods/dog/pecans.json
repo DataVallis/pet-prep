@@ -1,0 +1,121 @@
+{
+  "slug": "pecans",
+  "species": "dog",
+  "name": {
+    "en": "Pecans",
+    "sl": "Pekan orehi"
+  },
+  "question": {
+    "en": "Can dogs eat pecans?",
+    "sl": "Ali lahko psi jedo pekan orehe?"
+  },
+  "url_slug": {
+    "en": "pecans",
+    "sl": "pekan-orehi"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "No. Pecans aren't good for dogs: even a small number can make a dog very sick. They contain juglone, can carry toxic mould, are fatty, and their hard shells can cause choking or blockages. Call your vet if your dog eats any.",
+    "sl": "Ne. Pekan orehi za pse niso dobri: že majhno število lahko psu zelo škodi. Vsebujejo juglon, na njih je lahko strupena plesen, so mastni, njihove trde lupine pa lahko povzročijo dušenje ali zamašitev. Če jih pes poje, pokličite veterinarja."
+  },
+  "why": {
+    "en": "Pecans contain juglone, which can cause digestive problems, and they are very prone to moulds that produce mycotoxins such as aflatoxin, which can cause serious illness, including neurological problems. Their fat raises the risk of pancreatitis, and the hard shells can block the gut. Sources range from 'not good' to 'can make very sick'; we use the stricter level.",
+    "sl": "Pekan orehi vsebujejo juglon, ki lahko povzroči prebavne težave, in so zelo dovzetni za plesni, ki tvorijo mikotoksine, kot je aflatoksin, ta pa lahko povzroči resno bolezen, tudi živčne težave. Maščoba povečuje tveganje za vnetje trebušne slinavke, trde lupine pa lahko zamašijo črevesje. Viri segajo od »niso dobri« do »lahko zelo škodijo«; izbrali smo strožjo stopnjo."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Loss of appetite and tiredness",
+      "Signs of nervous-system problems"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Izguba apetita in utrujenost",
+      "Znaki težav z živčevjem"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet right away, even if your dog ate only a few pecans. Note how many were eaten and whether they were old or mouldy, and don't wait for signs.",
+    "sl": "Takoj pokličite veterinarja, tudi če je pes pojedel le nekaj pekan orehov. Zapišite, koliko jih je pojedel in ali so bili stari ali plesnivi, ter ne čakajte na znake."
+  },
+  "serving": null,
+  "child": {
+    "en": "Pecans are not for dogs. If a dog eats some, tell a grown-up straight away so they can call the vet.",
+    "sl": "Pekan orehi niso za pse. Če jih pes poje, takoj povej odraslemu, da pokliče veterinarja."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Why are pecans riskier than some other nuts?",
+        "sl": "Zakaj so pekan orehi bolj tvegani od nekaterih drugih oreščkov?"
+      },
+      "a": {
+        "en": "Every part of the pecan contains juglone, and pecans easily grow mould that produces mycotoxins.",
+        "sl": "Vsi deli pekan oreha vsebujejo juglon, na pekan orehih pa zlahka zraste plesen, ki tvori mikotoksine."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD211",
+      "quote": "Unfortunately, pecans aren’t good for dogs."
+    },
+    {
+      "id": "KD211",
+      "quote": "Even a small number of these nuts can make your dog very sick, possibly causing neurological issues."
+    },
+    {
+      "id": "KD211",
+      "quote": "Juglone is naturally found in every part of pecans and can cause a variety of digestive issues if ingested."
+    },
+    {
+      "id": "KD211",
+      "quote": "Pecans (and walnuts) are very susceptible to growing a particularly dangerous mold that contains mycotoxins."
+    },
+    {
+      "id": "KD211",
+      "quote": "Symptoms of pancreatitis for dogs include vomiting, diarrhea, loss of appetite, and lethargy."
+    },
+    {
+      "id": "KD211",
+      "quote": "To be safe, if your dog eats pecans, even a small amount, Dr. Klein recommends contacting a veterinarian right away."
+    },
+    {
+      "id": "KD212",
+      "quote": "First, they have extremely hard shells, which can lead to choking and blockages."
+    },
+    {
+      "id": "KD212",
+      "quote": "Aflatoxin or other toxins produced by particular types of mold can also grow on these nuts."
+    },
+    {
+      "id": "KD200",
+      "quote": "Nuts, including almonds, pecans and walnuts, contain high amounts of oils and fats."
+    },
+    {
+      "id": "KD200",
+      "quote": "These fats can cause vomiting and diarrhea, and potentially pancreatitis in some pets."
+    }
+  ],
+  "related": [
+    "walnuts",
+    "macadamia-nuts",
+    "almonds",
+    "hazelnuts"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

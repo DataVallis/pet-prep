@@ -1,0 +1,126 @@
+{
+  "slug": "energy-drinks",
+  "species": "cat",
+  "name": {
+    "en": "Energy drinks",
+    "sl": "Energijske pijače"
+  },
+  "question": {
+    "en": "Can cats drink energy drinks?",
+    "sl": "Ali lahko mačke pijejo energijske pijače?"
+  },
+  "url_slug": {
+    "en": "energy-drinks",
+    "sl": "energijske-pijace"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Energy drinks often contain a lot of caffeine, and cats are more sensitive to caffeine than people. Never let your cat drink from a can or glass, and call your vet if your cat swallows any.",
+    "sl": "Ne. Energijske pijače pogosto vsebujejo veliko kofeina, mačke pa so nanj bolj občutljive kot ljudje. Muci nikoli ne dovolite piti iz pločevinke ali kozarca in pokličite veterinarja, če kaj zaužije."
+  },
+  "why": {
+    "en": "Energy and sports drinks often contain a lot of caffeine. Cats are more sensitive to caffeine than people. Caffeine belongs to the methylxanthines, the same group of stimulants as the theobromine in chocolate, and it speeds up the heart, makes cats restless and upsets the stomach.",
+    "sl": "Energijske in športne pijače pogosto vsebujejo veliko kofeina. Mačke so na kofein bolj občutljive kot ljudje. Kofein spada med metilksantine, isto skupino poživil kot teobromin v čokoladi, ter pospeši srce, povzroči nemir in prebavne težave."
+  },
+  "signs": {
+    "en": [
+      "Restlessness, jitteriness, not wanting to lie still",
+      "Hyperactivity",
+      "Upset stomach",
+      "Fast heartbeat or heart rhythm changes"
+    ],
+    "sl": [
+      "Nemir, živčnost, muca ne more mirovati",
+      "Pretirana živahnost",
+      "Prebavne težave",
+      "Hiter srčni utrip ali spremembe srčnega ritma"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline right away. Note what your cat swallowed (drink, grounds, beans, tea bag or tablets), how much and when. Don't wait for signs to appear, and don't try to make your cat sick at home.",
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, kaj je muca zaužila (pijačo, mleto kavo, zrna, čajno vrečko ali tablete), koliko in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju."
+  },
+  "serving": null,
+  "child": {
+    "en": "Energy drinks are not for kids or cats. Kitty only needs fresh water. Tell a grown-up if she drinks some.",
+    "sl": "Energijske pijače niso za otroke ne za muce. Muca potrebuje le svežo vodo. Če jo popije, povej odraslemu."
+  },
+  "faq": [],
+  "sources": [
+    {
+      "id": "KC9",
+      "quote": "energy or sports drinks in the fridge often contain a lot of caffeine."
+    },
+    {
+      "id": "KC10",
+      "quote": "Many common products contain caffeine including coffee, tea, soda, energy drinks,"
+    },
+    {
+      "id": "KC15",
+      "quote": "Your cat only needs to drink water."
+    },
+    {
+      "id": "KC9",
+      "quote": "Dogs and cats are more sensitive to caffeine than humans are."
+    },
+    {
+      "id": "KC10",
+      "quote": "Dogs and cats appear to be more sensitive to the effects of caffeine than people."
+    },
+    {
+      "id": "KC5",
+      "quote": "chocolate, coffee and foods containing caffeine"
+    },
+    {
+      "id": "KC5",
+      "quote": "All of these products have high concentrations of substances called methylxanthines"
+    },
+    {
+      "id": "KC9",
+      "quote": "Pets that consume caffeine may have an increased heart rate and become hyperactive."
+    },
+    {
+      "id": "KC9",
+      "quote": "They can get jittery and restless and do not want to lie still."
+    },
+    {
+      "id": "KC9",
+      "quote": "Caffeine also affects the gastrointestinal tract and can cause stomach upset."
+    },
+    {
+      "id": "KC10",
+      "quote": "signs of hyperactivity, gastrointestinal upset, changes in heart rate, rhythm and blood pressure"
+    },
+    {
+      "id": "KC9",
+      "quote": "Call your veterinarian or Pet Poison Helpline, a 24/7 animal poison center,"
+    },
+    {
+      "id": "KC9",
+      "quote": "As with all poisoning cases, early intervention is key to successful treatment."
+    },
+    {
+      "id": "KC22",
+      "quote": "Don’t try to make your cat sick without asking the vet and never given them medicines designed for humans."
+    }
+  ],
+  "related": [
+    "coffee",
+    "tea",
+    "alcohol",
+    "chocolate"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

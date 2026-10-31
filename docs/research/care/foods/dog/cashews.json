@@ -1,0 +1,120 @@
+{
+  "slug": "cashews",
+  "species": "dog",
+  "name": {
+    "en": "Cashews",
+    "sl": "Indijski oreščki"
+  },
+  "question": {
+    "en": "Can dogs eat cashews?",
+    "sl": "Ali lahko psi jedo indijske oreščke?"
+  },
+  "url_slug": {
+    "en": "cashews",
+    "sl": "indijski-orescki"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a few plain cashews as an occasional treat are generally safe: shelled, unsalted and unseasoned. They are high in fat, so too many can cause tummy upset or pancreatitis. Avoid mixed nuts, which may contain toxic macadamia nuts.",
+    "sl": "Da, nekaj navadnih indijskih oreščkov kot občasen priboljšek je na splošno varnih: oluščenih, nesoljenih in nezačinjenih. So zelo mastni, zato jih preveč lahko razdraži prebavo ali povzroči vnetje trebušne slinavke. Izogibajte se mešanicam oreščkov, ki lahko vsebujejo strupeno makadamijo."
+  },
+  "why": {
+    "en": "Cashews aren't toxic, but they are a high-fat snack: eating too many can lead to tummy upset, pancreatitis and weight gain. Salted cashews add salt, which in excess is harmful. The biggest risk comes from other nuts in a mix, such as macadamias. Some dogs may react with swelling, itching or hives.",
+    "sl": "Indijski oreščki niso strupeni, so pa zelo mastni: preveč jih lahko povzroči prebavne težave, vnetje trebušne slinavke in debelost. Soljeni dodajo sol, ki v prevelikih količinah škoduje. Največje tveganje so drugi oreščki v mešanici, na primer makadamija. Nekateri psi se lahko odzovejo z oteklino, srbenjem ali koprivnico."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Watch for vomiting, diarrhoea, swelling, itching or hives and call your vet if they appear. If your dog ate a large amount, salted nuts or a mix that may contain macadamia nuts, call your vet straight away.",
+    "sl": "Opazujte, ali se pojavijo bruhanje, driska, oteklina, srbenje ali koprivnica, in pokličite veterinarja, če se. Če je pes pojedel veliko oreščkov, soljene oreščke ali mešanico, ki lahko vsebuje makadamijo, takoj pokličite veterinarja."
+  },
+  "serving": {
+    "en": "Only a few plain cashews, shelled and unsalted, never from a mixed-nut bag.",
+    "sl": "Le nekaj navadnih indijskih oreščkov, oluščenih in nesoljenih, nikoli iz mešanice oreščkov."
+  },
+  "child": {
+    "en": "A dog may have one or two plain cashews sometimes. Salty nut mixes are not for dogs.",
+    "sl": "Pes lahko včasih dobi enega ali dva navadna indijska oreščka. Slane mešanice oreščkov niso za pse."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Why not mixed nuts?",
+        "sl": "Zakaj ne mešanica oreščkov?"
+      },
+      "a": {
+        "en": "Mixes may contain macadamia nuts, which are very toxic to dogs, and are often salted.",
+        "sl": "Mešanice lahko vsebujejo makadamijo, ki je za pse zelo strupena, in so pogosto soljene."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD207",
+      "quote": "Yes, cashews are generally safe for dogs to eat."
+    },
+    {
+      "id": "KD207",
+      "quote": "Cashews are a high-fat, high-protein snack."
+    },
+    {
+      "id": "KD207",
+      "quote": "High-fat diets can lead to pancreatitis"
+    },
+    {
+      "id": "KD207",
+      "quote": "Excess salt can lead to salt toxicity, which causes vomiting, weakness, diarrhea, muscle tremors, and seizures."
+    },
+    {
+      "id": "KD207",
+      "quote": "The largest risk, however, comes from other nuts."
+    },
+    {
+      "id": "KD207",
+      "quote": "some nuts, like macadamia nuts, are very toxic."
+    },
+    {
+      "id": "KD207",
+      "quote": "These symptoms include swelling, itching, and hives."
+    },
+    {
+      "id": "KD201",
+      "quote": "Cashews are OK for dogs, but just as an occasional treat."
+    },
+    {
+      "id": "KD212",
+      "quote": "Cashews aren't toxic to dogs, but they're high in fat."
+    },
+    {
+      "id": "KD212",
+      "quote": "Eating too many can lead to GI upset, pancreatitis, and obesity."
+    },
+    {
+      "id": "KD212",
+      "quote": "If you give your dog a cashew, make sure the nuts are shelled and unsalted."
+    },
+    {
+      "id": "KD213",
+      "quote": "Call your vet if your dog eats a large container of nuts, as this could lead to pancreatic issues."
+    }
+  ],
+  "related": [
+    "macadamia-nuts",
+    "peanuts",
+    "almonds",
+    "salt",
+    "salty-snacks"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

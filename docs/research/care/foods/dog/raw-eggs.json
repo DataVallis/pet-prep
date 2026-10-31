@@ -1,0 +1,127 @@
+{
+  "slug": "raw-eggs",
+  "species": "dog",
+  "name": {
+    "en": "Raw eggs",
+    "sl": "Surova jajca"
+  },
+  "question": {
+    "en": "Can dogs eat raw eggs?",
+    "sl": "Ali lahko psi jedo surova jajca?"
+  },
+  "url_slug": {
+    "en": "raw-eggs",
+    "sl": "surova-jajca"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, it is best not to. Raw eggs can carry bacteria such as Salmonella, which can harm dogs and the people around them, and raw egg white can interfere with a vitamin. Cook eggs fully before sharing them.",
+    "sl": "Ne, bolje ne. Surova jajca lahko prenašajo bakterije, kot je salmonela, ki lahko škodijo psu in ljudem okoli njega, surovi beljak pa lahko ovira vsrkavanje enega od vitaminov. Jajca pred deljenjem s psom popolnoma skuhajte."
+  },
+  "why": {
+    "en": "Raw eggs can contain Salmonella and E. coli, harmful to pets and people alike. Raw egg white contains avidin, which blocks the vitamin biotin; deficiency is rare, but it can affect skin and coat. Most vets recommend cooking eggs fully before giving them to a dog.",
+    "sl": "Surova jajca lahko vsebujejo salmonelo in E. coli, ki škodita tako živalim kot ljudem. Surovi beljak vsebuje avidin, ki ovira vitamin biotin; pomanjkanje je redko, lahko pa vpliva na kožo in dlako. Večina veterinarjev svetuje, da jajca pred hranjenjem psa popolnoma skuhamo."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Low energy or poor appetite",
+      "Belly discomfort"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Utrujenost ali slab apetit",
+      "Nelagodje v trebuhu"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog licked up a raw egg, watch for vomiting, diarrhoea or low energy over the next days and call your vet if vomiting or diarrhoea is severe or doesn't stop. Wash your hands and clean up well.",
+    "sl": "Če je pes polizal surovo jajce, v naslednjih dneh opazujte, ali bruha, ima drisko ali je utrujen, in pokličite veterinarja, če sta bruhanje ali driska huda ali ne prenehata. Umijte si roke in dobro počistite."
+  },
+  "serving": {
+    "en": "Cook the egg fully (hard-boiled or scrambled), plain, without oil, butter, salt or seasonings.",
+    "sl": "Jajce popolnoma skuhajte (trdo kuhano ali umešano), navadno, brez olja, masla, soli in začimb."
+  },
+  "child": {
+    "en": "Dogs should only have eggs that are cooked. Raw eggs can carry germs that make dogs and people poorly.",
+    "sl": "Psi naj jedo samo kuhana jajca. Surova jajca lahko prenašajo klice, ki škodijo psom in ljudem."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Isn't raw egg good for a shiny coat?",
+        "sl": "Ali surovo jajce ni dobro za sijočo dlako?"
+      },
+      "a": {
+        "en": "Not reliably: raw egg white can block biotin absorption, which can lead to skin and coat problems.",
+        "sl": "Ne nujno: surovi beljak lahko ovira vsrkavanje biotina, kar lahko vodi do težav s kožo in dlako."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD200",
+      "quote": "Raw meat and raw eggs can contain bacteria such as Salmonella and E. coli that can be harmful to pets and humans alike."
+    },
+    {
+      "id": "KD200",
+      "quote": "Raw eggs contain an enzyme that can interfere with absorption of certain vitamins, leading to skin/coat problems."
+    },
+    {
+      "id": "KD214",
+      "quote": "Salmonella: Dogs may be at risk of coming into contact with salmonella bacteria when eating raw eggs or other raw foods."
+    },
+    {
+      "id": "KD214",
+      "quote": "Biotin deficiency: Feeding raw eggs can lead to biotin deficiency, as egg whites contain avidin, an enzyme that prevents t"
+    },
+    {
+      "id": "KD214",
+      "quote": "Biotin deficiencies are rare in dogs, but they can happen."
+    },
+    {
+      "id": "KD214",
+      "quote": "Most veterinarians recommend cooking eggs fully before feeding them to your dog."
+    },
+    {
+      "id": "KD214",
+      "quote": "Prepare eggs plain, without oil, butter, salt, seasonings, spices, or other additives."
+    },
+    {
+      "id": "KD201",
+      "quote": "Eggs are safe for dogs as long as they are fully cooked and prepared without salt, butter, or seasonings."
+    },
+    {
+      "id": "KD239",
+      "quote": "The earliest signs are often vomiting, diarrhea, lethargy, decreased appetite, and abdominal discomfort."
+    },
+    {
+      "id": "KD239",
+      "quote": "Contact your veterinarian if your dog has severe or persistent vomiting or diarrhea."
+    },
+    {
+      "id": "KD233",
+      "quote": "Always wash your hands before and after handling your pet’s food."
+    }
+  ],
+  "related": [
+    "cooked-eggs",
+    "raw-meat",
+    "raw-fish"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

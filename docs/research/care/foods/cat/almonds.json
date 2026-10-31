@@ -1,0 +1,121 @@
+{
+  "slug": "almonds",
+  "species": "cat",
+  "name": {
+    "en": "Almonds",
+    "sl": "Mandlji"
+  },
+  "question": {
+    "en": "Can cats eat almonds?",
+    "sl": "Ali lahko mačke jedo mandlje?"
+  },
+  "url_slug": {
+    "en": "almonds",
+    "sl": "mandlji"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, almonds are best kept away from cats. Sweet almonds aren't considered toxic, but they are high in oils and fats and can make a cat unwell, with stomach upset or vomiting.",
+    "sl": "Ne, mandljev mački raje ne dajajte. Sladki mandlji ne veljajo za strupene, vendar imajo veliko olj in maščob in lahko mački povzročijo slabo počutje, razdražen želodec ali bruhanje."
+  },
+  "why": {
+    "en": "Cats Protection lists almonds among nuts that contain high amounts of oils and fats which can make a cat unwell. The ASPCA says sweet almonds sold for eating are not toxic to pets, but because they are not a normal part of a pet's diet they can cause digestive issues. Bitter almonds contain a cyanide compound and are considered toxic.",
+    "sl": "Cats Protection mandlje navaja med oreščki, ki vsebujejo veliko olj in maščob, zaradi katerih se mački lahko slabo počuti. ASPCA navaja, da sladki mandlji, ki se prodajajo za uživanje, za hišne živali niso strupeni, a ker niso del njihove običajne prehrane, lahko povzročijo prebavne težave. Grenki mandlji vsebujejo cianidno spojino in veljajo za strupene."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Upset stomach",
+      "Seeming unwell or low on energy"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Razdražen želodec",
+      "Mačka deluje bolna ali brez energije"
+    ]
+  },
+  "what_to_do": {
+    "en": "A nut or two is unlikely to be an emergency. Watch for vomiting, diarrhoea or a change in behaviour, and call your vet if your cat seems unwell or ate a lot. If the nuts were salted, flavoured or coated in chocolate, call your vet straight away.",
+    "sl": "En ali dva oreščka najverjetneje ne pomenita nujnega primera. Bodite pozorni na bruhanje, drisko ali spremembo vedenja in pokličite veterinarja, če se mačka ne počuti dobro ali je pojedla veliko. Če so bili oreščki soljeni, začinjeni ali obliti s čokolado, takoj pokličite veterinarja."
+  },
+  "serving": null,
+  "child": {
+    "en": "Almonds are a snack for people. They are too oily for cats, so keep them in your lunchbox.",
+    "sl": "Mandlji so prigrizek za ljudi. Za mucke so preveč mastni, zato naj ostanejo v tvoji malici."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "What about bitter almonds?",
+        "sl": "Kaj pa grenki mandlji?"
+      },
+      "a": {
+        "en": "Bitter almonds contain a cyanide compound and are considered toxic. If your cat ate bitter almonds, contact your vet or a pet poison helpline right away.",
+        "sl": "Grenki mandlji vsebujejo cianidno spojino in veljajo za strupene. Če je mačka pojedla grenke mandlje, takoj pokličite veterinarja ali center za zastrupitve živali."
+      }
+    },
+    {
+      "q": {
+        "en": "Are some nuts worse than others?",
+        "sl": "Ali so nekateri oreščki hujši od drugih?"
+      },
+      "a": {
+        "en": "Yes. Macadamia nuts are fatty and also toxic to cats, so they are the ones to be most careful with.",
+        "sl": "Da. Makadamije so mastne in za mačke tudi strupene, zato je pri njih potrebna največja previdnost."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC201",
+      "quote": "Nuts such as macadamia, almonds and walnuts contain high amounts of oils and fats which if eaten can make your cat unwell"
+    },
+    {
+      "id": "KC229",
+      "quote": "Sweet almonds—the kind sold for consumption in the United States—are not toxic to pets."
+    },
+    {
+      "id": "KC229",
+      "quote": "However, since they’re not a typical part of a pet’s diet, they can cause digestive issues like stomach upset"
+    },
+    {
+      "id": "KC229",
+      "quote": "Bitter almonds, on the other hand, contain a cyanide compound and are considered toxic."
+    },
+    {
+      "id": "KC200",
+      "quote": "Nuts, including almonds, pecans and walnuts, contain high amounts of oils and fats."
+    },
+    {
+      "id": "KC200",
+      "quote": "These fats can cause vomiting and diarrhea, and potentially pancreatitis in some pets."
+    },
+    {
+      "id": "KC217",
+      "quote": "Not only are macadamia nuts very fatty, potentially causing pancreatitis, they're also toxic and can cause illness in cats."
+    }
+  ],
+  "related": [
+    "walnuts",
+    "pecans",
+    "pistachios",
+    "cashews",
+    "hazelnuts",
+    "macadamia-nuts"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

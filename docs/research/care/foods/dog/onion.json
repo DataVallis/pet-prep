@@ -1,0 +1,171 @@
+{
+  "slug": "onion",
+  "species": "dog",
+  "name": {
+    "en": "Onion",
+    "sl": "Čebula"
+  },
+  "question": {
+    "en": "Can dogs eat onion?",
+    "sl": "Ali lahko psi jedo čebulo?"
+  },
+  "url_slug": {
+    "en": "onion",
+    "sl": "cebula"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Onion is toxic to dogs in every form: raw, cooked, dried or powdered. It damages red blood cells and can cause anaemia, with signs often appearing only days later. Powders and soup mixes count too.",
+    "sl": "Ne. Čebula je za pse strupena v vseh oblikah: surova, kuhana, posušena ali v prahu. Poškoduje rdeče krvničke in lahko povzroči slabokrvnost, znaki pa se pogosto pokažejo šele po nekaj dneh. Štejejo tudi praški in mešanice za juhe."
+  },
+  "why": {
+    "en": "It belongs to the allium family (onion, garlic, leek, chives), which is toxic to dogs. These plants contain compounds that damage red blood cells and can lead to anaemia. All parts and all forms are harmful: raw, cooked, dried and powdered. Stomach upset can happen with any amount; larger amounts damage the blood.",
+    "sl": "Spada v družino lukov (čebula, česen, por, drobnjak), ki je za pse strupena. Te rastline vsebujejo snovi, ki poškodujejo rdeče krvničke in lahko povzročijo slabokrvnost. Škodljivi so vsi deli in vse oblike: surove, kuhane, posušene in v prahu. Prebavne težave se lahko pojavijo pri vsaki količini, večje količine pa poškodujejo kri."
+  },
+  "signs": {
+    "en": [
+      "Vomiting and diarrhoea",
+      "Eating less than usual",
+      "Tummy upset, even after small amounts",
+      "Signs of anaemia (damaged red blood cells), usually a few days later"
+    ],
+    "sl": [
+      "Bruhanje in driska",
+      "Slabši apetit",
+      "Prebavne težave, tudi po majhnih količinah",
+      "Znaki slabokrvnosti (poškodovane rdeče krvničke), običajno po nekaj dneh"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline right away. Note what was eaten (onion) and roughly how much. Don't wait for signs: damage to the blood usually shows only a few days later.",
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj je pes pojedel (čebula) in približno koliko. Ne čakajte na znake: okvara krvi se običajno pokaže šele po nekaj dneh."
+  },
+  "serving": null,
+  "child": {
+    "en": "Onions are not for dogs, even cooked ones in food. They can make a dog's blood sick. Tell a grown-up if your dog eats some.",
+    "sl": "Čebula ni za pse, tudi kuhana v hrani ne. Psu lahko poškoduje kri. Povej odraslemu, če jo pes poje."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is it safe when cooked or as powder?",
+        "sl": "Je varno, če je kuhano ali v prahu?"
+      },
+      "a": {
+        "en": "No. Raw, cooked, dried, powdered and liquid forms are all poisonous to dogs.",
+        "sl": "Ne. Za pse so strupene surove, kuhane, posušene, praškaste in tekoče oblike."
+      }
+    },
+    {
+      "q": {
+        "en": "Why don't signs show straight away?",
+        "sl": "Zakaj se znaki ne pokažejo takoj?"
+      },
+      "a": {
+        "en": "Symptoms can start within 24 hours but more often take a few days, because the red blood cells are damaged gradually.",
+        "sl": "Znaki se lahko pojavijo v 24 urah, pogosteje pa šele po nekaj dneh, ker se rdeče krvničke poškodujejo postopoma."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD6",
+      "quote": "Allium spp include garlic, onions, chives, and leeks, although garlic and onions are most commonly associated with toxicosis"
+    },
+    {
+      "id": "KD6",
+      "quote": "Absorption of these oxidant compounds results in oxidative damage to RBCs"
+    },
+    {
+      "id": "KD6",
+      "quote": "Several days after ingestion, clinical signs of acute hemolytic anemia develop"
+    },
+    {
+      "id": "KD7",
+      "quote": "Onions, garlic, and leeks are from a group of plants called alliums, which are all toxic to dogs."
+    },
+    {
+      "id": "KD7",
+      "quote": "Garlic, chives and leeks are all also alliums."
+    },
+    {
+      "id": "KD7",
+      "quote": "All parts of these plants are toxic to dogs, even when cooked or dried."
+    },
+    {
+      "id": "KD7",
+      "quote": "Symptoms can start within 24 hours after eating onion, garlic or leeks but more commonly take a few days to appear."
+    },
+    {
+      "id": "KD7",
+      "quote": "Symptoms of onion and garlic poisoning include vomiting, diarrhoea and a reduced appetite."
+    },
+    {
+      "id": "KD7",
+      "quote": "If your dog has eaten onions, garlic or leeks, you should contact your vet as soon as possible."
+    },
+    {
+      "id": "KD8",
+      "quote": "Onions, garlic, chives, and leeks belong to the Allium genus."
+    },
+    {
+      "id": "KD8",
+      "quote": "All forms are poisonous to dogs, including raw, cooked, dried, powdered, and liquid preparations."
+    },
+    {
+      "id": "KD8",
+      "quote": "Gastrointestinal upset (gastroenteritis) commonly occurs with potentially any amount ingested."
+    },
+    {
+      "id": "KD8",
+      "quote": "If you suspect a poisoning, immediate action is recommended."
+    },
+    {
+      "id": "KD8",
+      "quote": "Eating larger amounts may cause red blood cell damage."
+    },
+    {
+      "id": "KD19",
+      "quote": "Onions, garlic, chives and leek contain a toxin (organosulphoxides) that is very dangerous for dogs."
+    },
+    {
+      "id": "KD1",
+      "quote": "Although cats are more susceptible, dogs are also at risk depending on the amount ingested."
+    },
+    {
+      "id": "KD1",
+      "quote": "As always, if you suspect your pet has eaten any of the following foods, please note the amount ingested"
+    },
+    {
+      "id": "KD1",
+      "quote": "and contact your veterinarian or poison control at (888) 426-4435."
+    },
+    {
+      "id": "KD44",
+      "quote": "Garlic and onions are most commonly eaten by dogs, with garlic being 3-5 times more toxic to dogs than onions."
+    },
+    {
+      "id": "KD44",
+      "quote": "Raw, cooked, dehydrated, and concentrated forms (like powders or soup mixes) can all cause symptoms and illness."
+    }
+  ],
+  "related": [
+    "garlic",
+    "leek",
+    "chives",
+    "salty-snacks"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "slug": "coffee",
+  "species": "cat",
+  "name": {
+    "en": "Coffee",
+    "sl": "Kava"
+  },
+  "question": {
+    "en": "Can cats drink coffee?",
+    "sl": "Ali lahko mačke pijejo kavo?"
+  },
+  "url_slug": {
+    "en": "coffee",
+    "sl": "kava"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Coffee contains caffeine, and cats are more sensitive to caffeine than people. Coffee grounds and beans are especially risky because they are concentrated. Keep coffee out of reach and call your vet if your cat eats or drinks any.",
+    "sl": "Ne. Kava vsebuje kofein, mačke pa so nanj bolj občutljive kot ljudje. Posebej tvegani sta mleta kava in kavna zrna, ker sta zelo koncentrirana. Kavo hranite izven dosega in pokličite veterinarja, če jo muca poje ali popije."
+  },
+  "why": {
+    "en": "Coffee is one of the main sources of caffeine at home. Cats are more sensitive to caffeine than people. Caffeine belongs to the methylxanthines, the same group of stimulants as the theobromine in chocolate, and it speeds up the heart, makes cats restless and upsets the stomach.",
+    "sl": "Kava je eden glavnih virov kofeina v domu. Mačke so na kofein bolj občutljive kot ljudje. Kofein spada med metilksantine, isto skupino poživil kot teobromin v čokoladi, ter pospeši srce, povzroči nemir in prebavne težave."
+  },
+  "signs": {
+    "en": [
+      "Restlessness, jitteriness, not wanting to lie still",
+      "Hyperactivity",
+      "Upset stomach",
+      "Fast heartbeat or heart rhythm changes"
+    ],
+    "sl": [
+      "Nemir, živčnost, muca ne more mirovati",
+      "Pretirana živahnost",
+      "Prebavne težave",
+      "Hiter srčni utrip ali spremembe srčnega ritma"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline right away. Note what your cat swallowed (drink, grounds, beans, tea bag or tablets), how much and when. Don't wait for signs to appear, and don't try to make your cat sick at home.",
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, kaj je muca zaužila (pijačo, mleto kavo, zrna, čajno vrečko ali tablete), koliko in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju."
+  },
+  "serving": null,
+  "child": {
+    "en": "Coffee is a grown-up drink. It makes cats jittery, so never share it, and tell a grown-up if kitty laps some up.",
+    "sl": "Kava je pijača za odrasle. Muce naredi nemirne, zato je ne deli z njo. Če jo muca poliže, povej odraslemu."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are coffee grounds and beans worse than a cup of coffee?",
+        "sl": "Sta mleta kava in kavna zrna nevarnejša od skodelice kave?"
+      },
+      "a": {
+        "en": "Yes, they can be. Pet Poison Helpline warns that unused coffee grounds or beans could cause serious toxicity in cats. Throw away used grounds and pods where your cat can't reach them.",
+        "sl": "Lahko, da. Pet Poison Helpline opozarja, da lahko neuporabljena mleta kava ali zrna pri mačkah povzročijo resno zastrupitev. Uporabljeno kavo in kapsule zavrzite tja, kamor muca ne seže."
+      }
+    },
+    {
+      "q": {
+        "en": "Will my cat want a milky coffee?",
+        "sl": "Ali bo muco zamikala kava z mlekom?"
+      },
+      "a": {
+        "en": "Possibly. Pet Poison Helpline notes cats may be drawn to big coffee drinks with sweeteners and cream, so don't leave cups unattended.",
+        "sl": "Morda. Pet Poison Helpline navaja, da mačke lahko privabijo velike kavne pijače s sladili in smetano, zato skodelic ne puščajte brez nadzora."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC9",
+      "quote": "Most households have coffee in the pantry, which is a key source of caffeine"
+    },
+    {
+      "id": "KC9",
+      "quote": "Other common sources of caffeine include diet pills, gum, coffee grounds"
+    },
+    {
+      "id": "KC10",
+      "quote": "However, ingestion of unused coffee grounds or beans, tea bags, or supplements could cause serious toxicity in dogs or cats."
+    },
+    {
+      "id": "KC9",
+      "quote": "Dogs and cats are more sensitive to caffeine than humans are."
+    },
+    {
+      "id": "KC10",
+      "quote": "Dogs and cats appear to be more sensitive to the effects of caffeine than people."
+    },
+    {
+      "id": "KC5",
+      "quote": "chocolate, coffee and foods containing caffeine"
+    },
+    {
+      "id": "KC5",
+      "quote": "All of these products have high concentrations of substances called methylxanthines"
+    },
+    {
+      "id": "KC9",
+      "quote": "Pets that consume caffeine may have an increased heart rate and become hyperactive."
+    },
+    {
+      "id": "KC9",
+      "quote": "They can get jittery and restless and do not want to lie still."
+    },
+    {
+      "id": "KC9",
+      "quote": "Caffeine also affects the gastrointestinal tract and can cause stomach upset."
+    },
+    {
+      "id": "KC10",
+      "quote": "signs of hyperactivity, gastrointestinal upset, changes in heart rate, rhythm and blood pressure"
+    },
+    {
+      "id": "KC9",
+      "quote": "Call your veterinarian or Pet Poison Helpline, a 24/7 animal poison center,"
+    },
+    {
+      "id": "KC9",
+      "quote": "As with all poisoning cases, early intervention is key to successful treatment."
+    },
+    {
+      "id": "KC22",
+      "quote": "Don’t try to make your cat sick without asking the vet and never given them medicines designed for humans."
+    }
+  ],
+  "related": [
+    "tea",
+    "energy-drinks",
+    "chocolate",
+    "milk"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

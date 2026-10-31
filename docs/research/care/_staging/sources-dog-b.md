@@ -23,3 +23,9 @@
 | KD208 | B | American Kennel Club, Anna Burke (updated 2026-03-02) | Can Dogs Eat Peanuts? | https://www.akc.org/expert-advice/nutrition/can-dogs-eat-peanuts/ | unsalted, shelled, few |
 | KD209 | B | American Kennel Club, Anna Burke (updated 2026-03-25) | Can Dogs Eat Peanut Butter? | https://www.akc.org/expert-advice/nutrition/can-dogs-eat-peanut-butter/ | xylitol label check |
 | KD241 | B | Blue Cross (updated 2023-05-22) | Can dogs eat peanut butter? | https://www.bluecross.org.uk/advice/dog/food-and-weight/can-dogs-eat-peanut-butter | xylitol brands; moderation |
+| KD207 | B | American Kennel Club, Anna Burke (updated 2025-02-18) | Can Dogs Eat Cashews? | https://www.akc.org/expert-advice/nutrition/can-dogs-eat-cashews/ | generally safe; fat, salt, mixed nuts |
+| KD206 | B | American Kennel Club, Sassafras Patterdale (updated 2025-08-12) | Can Dogs Eat Pistachios? | https://www.akc.org/expert-advice/nutrition/can-dogs-eat-pistachios/ | avoid; fat, salt, aflatoxin, shells |
+| KD211 | B | American Kennel Club, Sassafras Patterdale (updated 2025-07-31) | Can Dogs Eat Pecans? | https://www.akc.org/expert-advice/nutrition/can-dogs-eat-pecans/ | juglone, mould; call vet even for small amount |
+| KD214 | B | American Kennel Club, Kaitlyn Arford (updated 2026-07-22) | Can Dogs Eat Eggs? Benefits, Risks, and Safety Tips | https://www.akc.org/expert-advice/nutrition/can-dogs-eat-eggs/ | cook eggs; raw: salmonella, biotin |
+| KD239 | B | American Kennel Club, AKC Staff (updated 2026-07-27) | Food Poisoning in Dogs: What to Know | https://www.akc.org/expert-advice/health/can-dogs-get-food-poisoning/ | raw fish, undercooked meat; signs |
+| KD233 | B | PDSA (no date) | Feeding your pet a raw diet | https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/all-pets/raw-diets | raw risks to household |
