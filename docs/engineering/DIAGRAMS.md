@@ -1800,6 +1800,29 @@ flowchart TD
   MG -. first clean of a kind, dog .-> TIP[tip under the top bar ≥ 2.5 s, once per phone<br/>SecureStore petprep.cleaning_tips_seen]
 ```
 
+### 10f-4. School v2 on the game layer (GAMES_SPEC §4.1, phase 3 app side, 2026-10-31)
+
+```mermaid
+flowchart TD
+  O[TrainingOverlay: »Začni vajo«] --> F{loadSchoolGameV2<br/>= gameLayerAvailable?}
+  F -->|no: older binary| V1["POST /training/start {command}<br/>v1 RunningView (SchoolStage / PetMediaView)"]
+  F -->|yes: new store build| S2["POST /training/start {command, rules: 2}"]
+  S2 --> R{readTrainingSession → withRulesV2<br/>rounds + mask consistent?}
+  R -->|no| V1
+  R -->|yes| P["preparing: ClipDeck mounts attention · performing · success<br/>(never release) — rule line already up"]
+  P -->|first frames / picture at once / 12 s → picture| RUN[running: SessionClock starts]
+  RUN --> TL["schoolFrameAt (server times only)<br/>lead → listening (chip + 👂) → performing (no text) →<br/>window (chip gone) → mask → calm · ignored: chip 1.5 s → 👃/🦋 + line"]
+  TL -->|role per step| Q["ClipQueue: attention ⇢ performing (crossfade, same pose)<br/>performing → success at its end (instant)<br/>success → attention = CUT only while masked"]
+  TL -->|release_at| M["FeedbackLayer verdict + mask_ms 1200<br/>✓ Bravo! / ✗ Prezgodaj / ✗ Zamujeno"]
+  M -->|onMaskChange| Q
+  RUN --> TAP["token tap (bone if treat_token, else ♥)<br/>praise() → first tap of the cue → tapFeedback"]
+  TL -->|break after round 1| B["»1. krog ✓« + stars · token hidden<br/>»Končaj« while earlyEndOpen()"]
+  B -->|Končaj| E["POST /training/finish {taps, ended_after_round: 1}<br/>(clock keeps running)"]
+  E -->|200| RES[SchoolResultV2: per-cue outcomes, routine line]
+  E -->|422 training_round_two_started / offline| RUN
+  RUN -->|duration over| FULL["POST /training/finish {taps}"] --> RES
+```
+
 ### 10g. Clip quality check (David 2026-10-23)
 
 Every new AI clip is a candidate until it passes; the old file stays visible meanwhile. One automatic regeneration per generation chain; a second failure is »Needs review« (not shown, the app's fallback). See ARCHITECTURE *Clip quality check*.

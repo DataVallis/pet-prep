@@ -11,6 +11,7 @@ import * as Haptics from 'expo-haptics';
 import { normalizeChildState, type ChildPetView } from '@/modules/childPet/childPetView';
 import { setGameLayerAvailableForTests } from '@/modules/gameLayer/capability';
 import { DECK_READY_TIMEOUT_MS } from '@/modules/gameLayer/deck';
+import { GAME_SOUNDS } from '@/modules/gameLayer/gameFxCore';
 import { GAME_LINE_MAX_CHARS } from '@/modules/gameLayer/gameLine';
 import { i18n } from '@/i18n';
 import { normalizePetMedia } from '@/modules/petMedia/petMedia';
@@ -203,7 +204,8 @@ describe('BallGameV2 (GAMES_SPEC §4.3)', () => {
     renderGame(ballView());
     deckReady();
     layoutField();
-    expect(fakeAudioPlayers()).toHaveLength(5);
+    // One preloaded player per game sound (school cue / crunch added 2026-10-31).
+    expect(fakeAudioPlayers()).toHaveLength(GAME_SOUNDS.length);
     swipeThrow();
     expect(Haptics.impactAsync).toHaveBeenCalledTimes(1);
     end(URLS.running);

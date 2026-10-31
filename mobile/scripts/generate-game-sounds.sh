@@ -39,3 +39,8 @@ synth whistle 0.46 "0.32*(if(lt(t,0.16),sin(2*PI*(1300*t+1562*t*t))*sin(PI*t/0.1
 synth chime 0.6 "0.34*sin(2*PI*1046.5*t)*exp(-6*t)+0.10*sin(2*PI*2093*t)*exp(-9*t)+if(gte(t,0.12),0.34*sin(2*PI*1568*(t-0.12))*exp(-6*(t-0.12))+0.08*sin(2*PI*3136*(t-0.12))*exp(-9*(t-0.12)),0)"
 # The returned ball lands in front of the dog: a tiny soft pop.
 synth pop 0.12 "0.5*sin(2*PI*(520*t-900*t*t))*exp(-30*t)"
+# School command cue (GAMES_SPEC §4.1, V5 interim — no recorded voice yet): a clear, friendly
+# two-note »hey!« (E5 then A5, soft attack) — the big command chip carries the word.
+synth cue 0.34 "0.30*sin(2*PI*659.3*t)*exp(-7*t)*if(lt(t,0.15),1,0)+if(gte(t,0.13),0.34*sin(2*PI*880*(t-0.13))*exp(-7*(t-0.13))+0.06*sin(2*PI*1760*(t-0.13))*exp(-10*(t-0.13)),0)"
+# School treat (»hrust«): three tiny crunchy noise ticks under a decaying envelope.
+synth crunch 0.24 "0.42*(random(0)*2-1)*(exp(-60*t)+0.8*if(gte(t,0.07),exp(-60*(t-0.07)),0)+0.6*if(gte(t,0.14),exp(-60*(t-0.14)),0))"

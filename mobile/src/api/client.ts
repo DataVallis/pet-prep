@@ -1148,22 +1148,26 @@ export const api = {
    * `training_not_available` / `training_session_active` / `training_daily_budget_used` / `training_day_ending` (the session + TTL would cross the family midnight)
    * (+ `next_allowed_at`), 423 locked; refusals carry `state`.
    */
-  startTraining: (command: components['schemas']['StartTrainingRequest']['command']) =>
+  startTraining: (command: components['schemas']['StartTrainingRequest']['command'], rules?: 2) =>
     apiRequest<unknown>('/api/child/pet/training/start', {
       method: 'POST',
-      body: { command } satisfies components['schemas']['StartTrainingRequest'],
+      // GAMES_SPEC §7.2: `rules: 2` only from a binary with the game layer (school v2); without it v1.
+      body: (rules === undefined ? { command } : { command, rules }) satisfies components['schemas']['StartTrainingRequest'],
     }),
 
   /**
    * POST /api/child/pet/training/finish {session_id, taps} (M5-R03) — the "Pohvali" taps as
    * whole ms since the app's local start (≤ 64, ≤ duration); the server scores them. A
    * repeat answers `unchanged` with the stored result. 200 untyped → `readFinishResponse`.
-   * 422 `training_session_invalid|not_over|expired|invalid_taps|not_available|interrupted`, 423 locked.
+   * 422 `training_session_invalid|not_over|expired|invalid_taps|not_available|interrupted|round_two_started`, 423 locked.
    */
-  finishTraining: (sessionId: string, taps: readonly number[]) =>
+  finishTraining: (sessionId: string, taps: readonly number[], endedAfterRound?: 1) =>
     apiRequest<unknown>('/api/child/pet/training/finish', {
       method: 'POST',
-      body: { session_id: sessionId, taps: [...taps] } satisfies components['schemas']['FinishTrainingRequest'],
+      // Š3 (rules v2): `ended_after_round: 1` = »Končaj« after round 1 (422 training_round_two_started later).
+      body: (endedAfterRound === undefined
+        ? { session_id: sessionId, taps: [...taps] }
+        : { session_id: sessionId, taps: [...taps], ended_after_round: endedAfterRound }) satisfies components['schemas']['FinishTrainingRequest'],
     }),
 
   /**

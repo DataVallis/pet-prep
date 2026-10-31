@@ -9,6 +9,8 @@
  *   the start of the exit: the only moment ClipQueue may cut (§3.2 rule 6).
  * - ✗ is amber (`warnDark`) and soft — never red / raspberry, never a shaming text.
  * - Reduce motion: no pop-in scale, only the fade.
+ * - A `show` of the SAME kind while one is still up continues it (no second pop-in): the school's
+ *   ✓ at the tap and the same ✓ under the mask after the praise window read as one verdict.
  * The label is announced for screen readers.
  */
 
@@ -56,6 +58,8 @@ function Glyph({ kind, size }: { kind: FeedbackKind; size: number }) {
 
 export default function FeedbackLayer({ ref, reduceMotion, onMaskChange, testID = 'game-feedback' }: FeedbackLayerProps) {
   const [shown, setShown] = useState<Shown | null>(null);
+  const shownRef = useRef<Shown | null>(null);
+  shownRef.current = shown;
   const opacity = useSharedValue(0);
   const scale = useSharedValue(1);
   const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
@@ -89,17 +93,21 @@ export default function FeedbackLayer({ ref, reduceMotion, onMaskChange, testID 
 
   const show = useCallback(
     (kind: FeedbackKind, options: FeedbackOptions = {}) => {
+      const continuing = shownRef.current?.kind === kind;
       clear();
       const t = feedbackTimeline(kind, options);
       const id = nextId.current++;
       const label = options.label ?? null;
-      setShown({ id, kind, label, mask: options.mask === true });
+      const next = { id, kind, label, mask: options.mask === true };
+      shownRef.current = next;
+      setShown(next);
       opacity.value = withSequence(
         withTiming(1, { duration: t.enterMs, easing: Easing.out(Easing.quad) }),
         withDelay(t.holdMs, withTiming(0, { duration: t.exitMs, easing: Easing.in(Easing.quad) })),
       );
-      scale.value = feedbackStartScale(kind, reduceMotion);
-      if (!reduceMotion) scale.value = withTiming(1, { duration: t.enterMs + 80, easing: Easing.out(Easing.back(2)) });
+      if (continuing) scale.value = 1;
+      else scale.value = feedbackStartScale(kind, reduceMotion);
+      if (!reduceMotion && !continuing) scale.value = withTiming(1, { duration: t.enterMs + 80, easing: Easing.out(Easing.back(2)) });
       if (label !== null && Platform.OS === 'ios') AccessibilityInfo.announceForAccessibility(label);
       if (t.maskFrom !== null && t.maskUntil !== null) {
         timers.current.push(setTimeout(() => setMask(true), t.maskFrom));
@@ -112,6 +120,7 @@ export default function FeedbackLayer({ ref, reduceMotion, onMaskChange, testID 
         timers.current.push(
           setTimeout(() => {
             setMask(false);
+            if (shownRef.current?.id === id) shownRef.current = null;
             setShown((s) => (s?.id === id ? null : s));
             resolveRef.current = null;
             resolve();
