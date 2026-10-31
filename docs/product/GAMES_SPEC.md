@@ -142,19 +142,20 @@ Potrjeno v kodi:
 
 | Čas | Ljubljenček (posnetek) | Prekrivni sloj / zgoraj | Otrok |
 |---|---|---|---|
-| uvod 0–2 s (samo 1. krog) | `attention_loop` (zanka) | vrstica »Ko uboga — takoj priboljšek!« (2 s); pike ○○○ ○○○ | gleda |
+| ves čas vaje (od nalaganja do shranjevanja) | — | **trak s pravilom** pod zgornjo vrstico: »Ko kuža uboga → pritisni ♥ / priboljšek. Če ne uboga → počakaj.« (do 2 vrstici, nikoli odrezan — David 31. 10.) | bere |
+| uvod 0–2 s (samo 1. krog) | `attention_loop` (zanka) | pike ○○○ ○○○ | gleda |
 | ukaz `cue` | `attention_loop` | **velik čip ukaza** zgoraj (»Sedi!«, Bricolage 800, 34 pt) + glas ukaza (posnet zvok, sl / en); čip ostane do `obey_at` | — |
 | `cue` … `perform_at` (0,3–1,5 s) | `attention_loop` | ikona 👂 (posluša) ob čipu | čaka |
 | `perform_at` … `obey_at` (= dolžina `performing`, 5 s) | `performing` od okvira 0, enkrat | ikona 👂 ostane; **brez besedila** | čaka, opazuje |
-| `obey_at` … `window_end` (1,5 s) | `success_loop` | čip ukaza izgine (to je viden znak »zdaj«); bralnik zaslona: »Kuža sedi.« | **tapne priboljšek** |
+| `obey_at` … `window_end` (1,5 s) | `success_loop` | čip ukaza izgine (to je viden znak »zdaj«); bralnik zaslona: »Kuža sedi.«; **začetniški namig** (napredek ukaza < 50 %): žeton sveti / utripa + čip »Zdaj!«, bralnik »Kuža je ubogal — pohvali zdaj« | **tapne priboljšek** |
 | ob tapu | — | ✓ »Bravo!« (mint, 1,0 s), priboljšek odleti v loku do psa, zvok »hrust«, haptika *success*; pika → ✓ | — |
 | tap prezgodaj (pred `obey_at + 150`) | (teče naprej) | ✗ »Prezgodaj« (jantarno, 0,9 s), ikona ⏳ | — |
 | tap prepozno / brez tapa | — | ob `window_end`: ✗ »Zamujeno« (0,9 s) ali ob tapu ✗ »Malo pozno« | — |
 | `release_at` (= `window_end`) … +1,2 s | **rez** `success_loop` → `attention_loop` **pod masko** | maska: zadnji odziv (✓ / ✗) ostane gor, ozadje zatemnjeno ≥ 85 %, nato izgine v 250 ms | — |
 | +0,7 s mirno | `attention_loop` | — | — |
-| **prezrt ukaz** `cue` … `cue + 4,5 s` | `attention_loop` (kuža se ozira) | čip ukaza 1,5 s; od `cue + 1,6 s` (po najdaljšem premisleku) ikona 🦋 / 👃 in vrstica »Ne uboga — počakaj.« (≥ 2,9 s) | počaka |
+| **prezrt ukaz** `cue` … `cue + 4,5 s` | `attention_loop` (kuža se ozira) | čip ukaza 1,5 s; od `cue + 1,6 s` (po najdaljšem premisleku) besedilni čip »Ne uboga — ne pohvali, počakaj.« + kaj kuža počne (»Kuža voha« …), žeton zatemnjen »Počakaj« (še vedno tapljiv; tap šteje kot »ni ubogal«) (≥ 2,9 s) — prej ikona 🦋 / 👃, odstranjena 31. 10. | počaka |
 | konec prezrtega ukaza | `attention_loop` | ✓ majhen »Prav, da si počakal(a)!« (1,0 s) ali ✗ »Ni ubogal — počakaj« (če je tapnil) | — |
-| premor po 3. ukazu (2,5 s) | `attention_loop` | kartica »1. krog ✓« + zvezdice kroga (npr. ★★☆), mint konfeti (brez pri »zmanjšaj gibanje«) | — |
+| premor po 3. ukazu (2,5 s) | `attention_loop` | kartica »1. krog ✓« + zvezdice kroga (npr. ★★☆), mint konfeti (brez pri »zmanjšaj gibanje«); spodaj glavni gumb **»Nadaljuj (3)«** z odštevanjem do začetka 2. kroga (nikoli dlje od premora strežnika — pri 2,5 s 3 → 2 → 1, 2. krog se začne točno ob svojem času), pod njim majhen besedilni »Končaj« | lahko »Končaj« |
 
 **Nadomestilo za »vstane«:**
 > **SPREMEMBA PRAVILA — potrdil David 30. 10. (Š2):** »vstane« (`school_<cmd>_release`, obrnjen `performing`, David 28. 10. 2026) se **ne predvaja več**; namesto njega trd rez `success_loop` → `attention_loop` pod masko odziva. V urniku `R` = `MASK_MS` 1200 (prej dolžina release ≤ 2500). Razlog: obrnjen posnetek pri pridi / prostor / lulat zunaj kaže psa, ki hodi vzvratno (previjanje traku). Izpeljani posnetki `release` ostanejo shranjeni (0 $), da je odločitev obrnljiva. Če maska ne zadošča, glej izbirni posnetek A (§8.3).
@@ -163,7 +164,7 @@ Potrjeno v kodi:
 
 **Točkovanje (nespremenjeno):** prvi tap v rezini ukaza odloči (`TrainingService::score`); spam (tapkanje ves čas) da `too_early` → brez napredka — pravilo je že odporno proti spamu. Odziv v aplikaciji je zrcalo (`game.ts#liveOutcome`), končni rezultat da strežnik.
 
-**Zvezdice (D):** ena zvezdica na ukaz, ko je izid `in_time` ali `waited`. Samo prikaz — naslov rezultata ostane po pravilu M5-F04 (»Odlično! / Dobro! / Še malo vaje / Tokrat ni šlo«).
+**Zvezdice (D):** ena zvezdica na ukaz, ko je izid `in_time` ali `waited`. Samo prikaz — naslov rezultata šole v2 sledi skupinam M5-F04, a s pozitivnim besedilom (David 31. 10.): odlično / dobro → »Bravo!«, še malo vaje → »Dober začetek!«, nič → »Vaja dela mojstra«.
 
 **Predčasen konec:**
 > **SPREMEMBA PRAVILA — potrdil David 30. 10. (Š3):** otrok lahko po **1. krogu** konča (»Končaj«). Pravočasne pohvale 1. kroga štejejo v napredek (× 8/6 kot doslej); porabljen čas = dejanska dolžina; **rutina »Šolanje« šteje samo dokončana vaja (oba kroga)**. Danes se nedokončana vaja ne šteje nič (`training_session_not_over`).
@@ -174,8 +175,11 @@ Potrjeno v kodi:
 
 | Ključ | SL | EN |
 |---|---|---|
-| `school.lead` | Ko uboga — takoj priboljšek! | When it obeys — treat right away! |
-| `school.ignores` | Ne uboga — počakaj. | Not obeying — wait. |
+| `school.rule` / `school.ruleTreat` (trak, do 2 vrstici) | Ko kuža uboga → pritisni ♥ / priboljšek. Če ne uboga → počakaj. | When your pup obeys → tap ♥ / the treat. If not → wait. |
+| `school.ignores` (čip) | Ne uboga — ne pohvali, počakaj. | Not obeying — don't praise, wait. |
+| `school.ignoring.*` | Kuža voha · Kuža ostane na mestu · Kuža se raje igra · Kuža gleda metuljčka | Your pup is sniffing · stays put · would rather play · watches a butterfly |
+| `school.now` | Zdaj! | Now! |
+| `school.continue` | Nadaljuj | Continue |
 | `school.fb.inTime` | Bravo! | Great job! |
 | `school.fb.early` | Prezgodaj | Too early |
 | `school.fb.late` | Malo pozno | A bit late |
@@ -183,7 +187,7 @@ Potrjeno v kodi:
 | `school.fb.waited` | Prav, da si počakal(a)! | Good waiting! |
 | `school.fb.notObeyed` | Ni ubogal — počakaj | It didn't obey — wait |
 | `school.round` | {{n}}. krog ✓ | Round {{n}} ✓ |
-| `school.finishEarly` | Končaj | Finish |
+| `school.finishEarly` (majhen, sekundaren) | Končaj | Finish |
 | `school.treatA11y` | Daj priboljšek | Give a treat |
 
 Obstoječi ključi `commands.*.cue` ostanejo (čip); `listening`, `obeys`, `ignores` (proza) se v igri ne uporabljajo več (ostanejo za bralnik zaslona).
@@ -202,7 +206,9 @@ Obstoječi ključi `commands.*.cue` ostanejo (čip); `listening`, `obeys`, `igno
 
 Pravila (verjetnost, napredek, učinki potty / place) se med ukazi ne razlikujejo — nespremenjeno.
 
-**Aplikacija (faza 3, zgrajeno 31. 10. 2026, `mobile/src/modules/training/schoolV2/`).** Podrobnosti, ki jih spec ni določil, odločil Claude (čakajo Davida): (1) pravilo »Ko uboga — takoj priboljšek!« je zgoraj že med nalaganjem posnetkov, da se njegovi 2 s ne prekrivajo s prvim ukazom; (2) v premoru po 1. krogu žetona ni (tap v premoru bi pri prezrtem 3. ukazu štel kot »ni ubogal«), namesto njega gumb »Končaj«, ki je viden samo, dokler ga strežnik še sprejme (ocena: čas od zahteve za začetek do začetka ure + en povratni čas); če ga strežnik zavrne (`training_round_two_started`) ali ni povezave, 2. krog teče naprej in vaja se na koncu shrani cela (»Še 2. krog — kar naprej!«); (3) v načinu »Slika« med `performing` ostane stoječa slika (poza šele ob `obey_at`, sicer bi bila namig za prezgodnjo pohvalo); (4) zvok ukaza je lasten `cue.wav` (dva tona), »hrust« je `crunch.wav` (samo pri priboljšku; pri ♥ zvonček); (5) ikona prezrtega ukaza: sedi / pridi 👃, prostor 🎾, lulat zunaj 🦋 (kot besedila `commands.*.ignores`); (6) haptika samo ob uspehu in ob ukazu (*selection*) — ob zgrešenem nič.
+**Aplikacija (faza 3, zgrajeno 31. 10. 2026, `mobile/src/modules/training/schoolV2/`).** Podrobnosti, ki jih spec ni določil, odločil Claude (čakajo Davida; **(1) in (5) je 31. 10. zamenjal popravek spodaj**): (1) pravilo »Ko uboga — takoj priboljšek!« je zgoraj že med nalaganjem posnetkov, da se njegovi 2 s ne prekrivajo s prvim ukazom; (2) v premoru po 1. krogu žetona ni (tap v premoru bi pri prezrtem 3. ukazu štel kot »ni ubogal«), namesto njega gumb »Končaj«, ki je viden samo, dokler ga strežnik še sprejme (ocena: čas od zahteve za začetek do začetka ure + en povratni čas); če ga strežnik zavrne (`training_round_two_started`) ali ni povezave, 2. krog teče naprej in vaja se na koncu shrani cela (»Še 2. krog — kar naprej!«); (3) v načinu »Slika« med `performing` ostane stoječa slika (poza šele ob `obey_at`, sicer bi bila namig za prezgodnjo pohvalo); (4) zvok ukaza je lasten `cue.wav` (dva tona), »hrust« je `crunch.wav` (samo pri priboljšku; pri ♥ zvonček); (5) ikona prezrtega ukaza: sedi / pridi 👃, prostor 🎾, lulat zunaj 🦋 (kot besedila `commands.*.ignores`); (6) haptika samo ob uspehu in ob ukazu (*selection*) — ob zgrešenem nič.
+
+**Popravek po Davidovem testu na telefonu 31. 10. 2026 (TestFlight, angleško, mladiček doberman, »Pridi«; samo JS — gre z OTA na isto gradnjo, pravila strežnika nespremenjena).** David ni vedel, kaj mora delati: vrstica s pravilom je bila odrezana (…) in je izginila, ob »Pridi!« ga nič ni opozorilo, da je zdaj trenutek za ♥ (»Zamujeno«), majhnega 👃 ni prebral, v premoru je kot »naprej« tapnil najbolj opazni »Končaj« (vaja se je končala po 1. krogu), na koncu pa je pisalo »poskusi jutri« z 1 zvezdico, čeprav je imel še 4 vaje, in pravilno počakan ukaz je bil videti kot napaka. Popravki: (1) **trak s pravilom** (`SchoolRuleStrip`) ves čas vaje, do dve vrstici, nikoli odrezan; `GameLine` (v vseh igrah) se zdaj prelomi namesto »…« in nosi samo trenutne odzive; (2) **začetniški namig** — dokler je napredek ukaza < 50 % (`PRAISE_HINT_BELOW_PROGRESS`, odločeno enkrat ob začetku vaje), v oknu pohvale žeton sveti in utripa (»zmanjšaj gibanje«: samo statičen poudarek) in nad njim je čip »Zdaj!«; od 50 % naprej ni namiga; nič se ne shrani; (3) **kuža ne uboga** — besedilni čip »Ne uboga — ne pohvali, počakaj.« + kaj kuža počne, ves korak `ignoring` (≥ 2,9 s), žeton zatemnjen z napisom »Počakaj«, a tapljiv (tap šteje kot »ni ubogal«, pravilo strežnika); zatemnitev šele od `cue + 1,6 s`, nikoli med »premislekom«, da ne izda odgovora; (4) **premor** — glavni gumb »Nadaljuj« z odštevanjem do začetka 2. kroga po urniku strežnika (≤ 3 s; premor 2,5 s → 3, 2, 1); »Nadaljuj« premora ne skrajša (urnik je strežnikov), samo potrdi izbiro in skrije »Končaj«; »Končaj« je majhen besedilni gumb z istim pogojem kot prej (`canEndEarly()`); (5) **rezultat** — naslov »Bravo!« / »Dober začetek!« / »Vaja dela mojstra«, nikoli »jutri«, dokler ima otrok danes še vaje (»Poskusi še enkrat — danes imaš še 4 vaje.«, iz `sessionsLeftToday`; brez vaj »Naslednja vaja te čaka jutri.«), pravilno počakan ukaz = zelen ✓ »Pravilno počakal(a)«, pohvala, ko ni ubogal, mehak jantarni ✗ »pohvala, ko ni ubogal«, in en namig k najpogostejši napaki (pri izenačenju: pohvala, ko ni ubogal › prezgodaj › zamujeno).
 
 ### 4.3 Žoga
 

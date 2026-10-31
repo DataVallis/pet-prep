@@ -1,0 +1,192 @@
+{
+  "_meta": {
+    "status": "draft",
+    "researched": "2026-10-31",
+    "method": "Every quote below comes from a page fetched with WebFetch on 2026-10-31. Quotes are the exact sentences the fetch returned; re-check them on the live page before publishing. No doses anywhere.",
+    "fetch_failures": "These pages could not be fetched (client_error): vcahospitals.com poisoning page, Merck Veterinary Manual owner edition, Blue Cross UK dog poisoning page, PDSA dog poisoning condition page, ASPCA general poison prevention tips, petpoisonhelpline.com/contact-us, animalpoisonline.co.uk/contact-us. Nothing from these pages is used."
+  },
+  "advice": [
+    {
+      "id": "stay_calm",
+      "en": "Stay calm and act straight away. Panicking or guessing costs time.",
+      "sl": "Ostanite mirni in ukrepajte takoj. Panika in ugibanje vam vzameta čas.",
+      "sources": [
+        {"url": "https://rspca.org.uk/adviceandwelfare/pets/dogs/health/poisoning", "quote": "Stay calm and move your dog away from the source of poison."},
+        {"url": "https://www.aspca.org/node/61910", "quote": "it is important to try your hardest to remain calm."}
+      ]
+    },
+    {
+      "id": "remove_access",
+      "en": "Move your pet away from the substance and take away anything that is left, but only if you can do this safely.",
+      "sl": "Žival odmaknite od snovi in odstranite, kar je od nje ostalo, a le, če to lahko storite varno.",
+      "sources": [
+        {"url": "https://rspca.org.uk/adviceandwelfare/pets/dogs/health/poisoning", "quote": "Stay calm and move your dog away from the source of poison."},
+        {"url": "https://www.petpoisonhelpline.com/", "quote": "Remove your pet from the area."},
+        {"url": "https://www.pdsa.org.uk/pet-help-and-advice/pet-health-hub/other-veterinary-advice/first-aid-for-poisons-and-toxins", "quote": "(paraphrased by the fetch, not verbatim) take the substance away from your pet; if they still have some in their mouth, a treat or toy may get them to drop it; wipe off any residue on their fur."}
+      ]
+    },
+    {
+      "id": "check_breathing",
+      "en": "Check that your pet is breathing and acting normally. If your pet collapses, has a seizure or struggles to breathe, contact a vet immediately.",
+      "sl": "Preverite, ali žival diha in se vede običajno. Če se zgrudi, ima krče ali težko diha, takoj pokličite veterinarja.",
+      "sources": [
+        {"url": "https://www.petpoisonhelpline.com/", "quote": "Check to make sure your pet is safe: breathing and acting normally"},
+        {"url": "https://www.animalpoisonline.co.uk/", "quote": "(paraphrased by the fetch) if your pet shows signs such as collapse, coma, convulsions, or breathing difficulties, \"please contact your vet immediately.\""}
+      ]
+    },
+    {
+      "id": "call_now",
+      "en": "Call your vet or an animal poison line right away. Tell them what happened, when and where.",
+      "sl": "Takoj pokličite veterinarja ali linijo za zastrupitve živali. Povejte, kaj se je zgodilo, kdaj in kje.",
+      "sources": [
+        {"url": "https://rspca.org.uk/adviceandwelfare/pets/dogs/health/poisoning", "quote": "Contact your vet immediately – inform them when, where and how the poisoning happened."},
+        {"url": "https://www.pdsa.org.uk/pet-help-and-advice/pet-health-hub/other-veterinary-advice/first-aid-for-poisons-and-toxins", "quote": "Phone your vet straight away"},
+        {"url": "https://icatcare.org/articles/cats-and-poisons", "quote": "Contact your veterinary team for advice immediately"}
+      ]
+    },
+    {
+      "id": "dont_wait",
+      "en": "Do not wait for signs of illness. Your pet may seem fine at first; signs can appear hours or even days later.",
+      "sl": "Ne čakajte na znake bolezni. Žival je lahko sprva videti povsem v redu, znaki pa se lahko pokažejo šele čez nekaj ur ali celo dni.",
+      "sources": [
+        {"url": "https://www.pdsa.org.uk/pet-help-and-advice/pet-health-hub/other-veterinary-advice/first-aid-for-poisons-and-toxins", "quote": "Never wait to see if your pet develops symptoms."},
+        {"url": "https://www.aspca.org/node/61910", "quote": "Even if your pet is acting normal, don't wait to contact APCC."}
+      ]
+    },
+    {
+      "id": "no_vomiting",
+      "en": "Do not make your pet vomit unless a vet tells you to. It can do more harm than good.",
+      "sl": "Živali ne silite k bruhanju, razen če vam tako naroči veterinar. Lahko naredite več škode kot koristi.",
+      "sources": [
+        {"url": "https://www.petpoisonhelpline.com/", "quote": "Do NOT induce vomiting without consulting a vet or Pet Poison Helpline®."},
+        {"url": "https://rspca.org.uk/adviceandwelfare/pets/dogs/health/poisoning", "quote": "Never attempt to make dogs vomit."},
+        {"url": "https://www.petpoisonhelpline.com/pet-tips/my-cat-ate-something-toxic-what-should-i-do", "quote": "you should never attempt to induce vomiting in your cat."},
+        {"url": "https://www.pdsa.org.uk/pet-help-and-advice/pet-health-hub/other-veterinary-advice/first-aid-for-poisons-and-toxins", "quote": "sometimes it can cause more damage than good."}
+      ]
+    },
+    {
+      "id": "no_home_remedies",
+      "en": "Do not give home remedies (for example salt water, milk or oil) and do not follow random tips from the internet. Ask a vet first.",
+      "sl": "Ne dajajte domačih pripravkov (na primer slane vode, mleka ali olja) in ne sledite naključnim nasvetom s spleta. Najprej vprašajte veterinarja.",
+      "sources": [
+        {"url": "https://www.petpoisonhelpline.com/", "quote": "Do NOT give any home antidotes."},
+        {"url": "https://rspca.org.uk/adviceandwelfare/pets/dogs/health/poisoning", "quote": "Don't use salt water as it's extremely dangerous."},
+        {"url": "https://www.aspca.org/node/61910", "quote": "making rash decisions, particularly ones based on information from the Internet, can sometimes cause more problems."}
+      ],
+      "review_note": "Sources name salt water and 'home antidotes' generally; milk and oil are our examples, not quoted. Drop them if a vet reviewer prefers."
+    },
+    {
+      "id": "note_details",
+      "en": "Note what your pet ate, roughly how much and when. Have your pet's breed, age and weight ready for the call.",
+      "sl": "Zapišite si, kaj je žival pojedla, približno koliko in kdaj. Za klic imejte pri roki pasmo, starost in težo živali.",
+      "sources": [
+        {"url": "https://rspca.org.uk/adviceandwelfare/pets/dogs/health/poisoning", "quote": "Contact your vet immediately – inform them when, where and how the poisoning happened."},
+        {"url": "https://www.aspca.org/node/61910", "quote": "Gather any leftover packaging or pills to help identify what and how much your pet may have ingested."},
+        {"url": "https://www.petpoisonhelpline.com/uncategorized/top-ten-things-to-remember-when-your-pet-is-poisoned/", "quote": "the specific AI, percentage and volume ingested are imperative"}
+      ],
+      "review_note": "The breed/age/weight list is paraphrased from aspca.org/node/61910 (fetch said the page lists breed, age, weight and health); no verbatim sentence captured."
+    },
+    {
+      "id": "keep_packaging",
+      "en": "Keep the packaging, label, plant or leftovers, and take them (or a photo) with you to the vet, if you can do so safely.",
+      "sl": "Shranite embalažo, etiketo, rastlino ali ostanke in jih (ali njihovo fotografijo) odnesite k veterinarju, če lahko to storite varno.",
+      "sources": [
+        {"url": "https://rspca.org.uk/adviceandwelfare/pets/dogs/health/poisoning", "quote": "If possible, take the packaging, plant or substance to the vet, but only if you can do this safely."},
+        {"url": "https://icatcare.org/articles/cats-and-poisons", "quote": "If possible, take the packaging, plant, or substance with you to the veterinary clinic."},
+        {"url": "https://www.petpoisonhelpline.com/uncategorized/top-ten-things-to-remember-when-your-pet-is-poisoned/", "quote": "make sure you have all product packaging information for the poison in front of you"}
+      ]
+    },
+    {
+      "id": "slovenia_bait",
+      "en": "In Slovenia: if you find suspicious poisoned bait, photograph it and report it to the police or the Administration for Food Safety, Veterinary Sector and Plant Protection (UVHVVR).",
+      "sl": "V Sloveniji: če najdete sumljivo zastrupljeno vabo, jo fotografirajte in prijavite policiji ali Upravi za varno hrano, veterinarstvo in varstvo rastlin (UVHVVR).",
+      "sources": [
+        {"url": "https://www.24ur.com/novice/slovenija/je-namernih-zastrupitev-psov-pri-nas-res-vse-vec.html", "quote": "Lastnike psov pozivamo, da v primeru suma zastrupitve psa ali druge živali takoj poiščejo veterinarsko pomoč"},
+        {"url": "https://www.24ur.com/novice/slovenija/je-namernih-zastrupitev-psov-pri-nas-res-vse-vec.html", "quote": "o zadevi obvesti pristojne službe (policijo ali Upravo za varno hrano, veterinarstvo in varstvo rastlin)."}
+      ],
+      "review_note": "Source tier C (news site quoting an official appeal). Confirm on a gov.si / UVHVVR page before publishing, or drop."
+    }
+  ],
+  "contacts": [
+    {
+      "country": "US",
+      "org": "ASPCA Animal Poison Control Center (APCC)",
+      "kind": "poison_line",
+      "phone": "(888) 426-4435",
+      "fee": "A consultation fee may apply.",
+      "hours": "24 hours a day, 365 days a year",
+      "url": "https://www.aspca.org/pet-care/animal-poison-control",
+      "quote": "Call Now: (888) 426-4435"
+    },
+    {
+      "country": "US",
+      "org": "Pet Poison Helpline",
+      "kind": "poison_line",
+      "phone": "(855) 764-7661",
+      "fee": "$99 USD per incident",
+      "hours": "24/7",
+      "url": "https://www.petpoisonhelpline.com/",
+      "quote": "Pet Poison Helpline is available 24/7: (855) 764-7661.",
+      "fee_quote": "When you call or chat with one of our staff experts, a $99 USD per incident fee applies.",
+      "extra": "Contact page (https://petpoisonhelpline.com/contact/) also lists 877-416-7319 for the Caribbean and US Virgin Islands and (011)-1-952-853-1716 for other Caribbean islands. Neither page names Canada."
+    },
+    {
+      "country": "GB",
+      "org": "Animal PoisonLine (run by the Veterinary Poisons Information Service, VPIS)",
+      "kind": "poison_line",
+      "phone": "01202 509 000",
+      "fee": "£35 – £45 per phone call (£35 8am–8pm Mon–Fri; £45 at all other times incl. bank holidays)",
+      "hours": "24 hours a day",
+      "url": "https://www.animalpoisonline.co.uk/",
+      "quote": "01202 509 000",
+      "hours_quote": "We are open 24 hours a day!",
+      "extra": "VPIS itself (https://www.vpisglobal.com/) is membership-only for vets and points owners to Animal PoisonLine 01202 509 000."
+    },
+    {
+      "country": "SI",
+      "org": "Univerza v Ljubljani, Veterinarska fakulteta – Klinika za male živali (dežurna služba)",
+      "kind": "emergency_vet",
+      "phone": "+386 (0)30 716 190",
+      "fee": null,
+      "fee_note": "Page says the call is free ('Telefonska številka je brezplačna ...'); treatment costs are not stated.",
+      "hours": "Emergency number reachable 24 h. On-site duty service: Mon–Fri 19.30–8.00 (plus urgent-only intake 14.00–15.00 and afternoon duty 15.00–19.30), Saturday 14.00–24.00, Sunday and holidays 00.00–24.00. Daytime weekday intake through the clinic's regular triage (from 8.00).",
+      "url": "https://www.vf.uni-lj.si/klinike/klinika-za-male-zivali",
+      "quote": "Za nujne primere smo 24 ur na dan dosegljivi na telefonski številki: +386 (0)30 716 190.",
+      "address": "Cesta v Mestni log 47 (contact address) / 51 (location), 1000 Ljubljana – the page gives both; confirm before publishing.",
+      "extra": "Dogs and cats only. Duty-vet page https://www.vf.uni-lj.si/dezurni-veterinar confirms the same mobile number ('Mobilna številka za nujne primere' +386 (0)30 716 190, 'Telefonska številka je brezplačna in dosegljiva iz vseh mobilnih omrežij.'). Reception for non-urgent booking: 01 4779 277, info@kmz.si. The same page lists 040 452 972 for wild birds, small mammals and reptiles (limited hours) — not for dogs/cats."
+    },
+    {
+      "country": "AU",
+      "org": "Animal Poisons Helpline",
+      "kind": "poison_line",
+      "phone": "1300 869 738",
+      "fee": "Consultations with a Poisons Information Consultant available from $79 AUD",
+      "hours": "24/7",
+      "url": "https://www.animalpoisons.com.au/",
+      "quote": "1300 869 738",
+      "hours_quote": "24/7 Helpline For Australian Pet Owners",
+      "extra": "Private service (ABN 89 634 636 418; page metadata credits 'Animal Poisons Centre'); not a government body. Same page lists New Zealand: 0800 869 738."
+    },
+    {
+      "country": "HR",
+      "org": "Sveučilište u Zagrebu, Veterinarski fakultet – Sveučilišna veterinarska bolnica",
+      "kind": "emergency_vet",
+      "phone": null,
+      "fee": null,
+      "hours": "0-24 emergency intake, walk-in without phoning ahead",
+      "url": "https://www.vef.unizg.hr/usluge/sveucilisna-veterinarska-bolnica/",
+      "quote": "PRIJEM HITNIH PACIJENATA 0-24",
+      "extra": "No emergency phone: 'Djelatnici hitnog prijema nisu u mogućnosti odgovarati na telefonske pozive.' Urgent patients use the south entrance from Charlesa Darwina street. General faculty line +385 (0)1 2390 111 is not an emergency line."
+    }
+  ],
+  "not_confirmed": [
+    {"country": "SI", "what": "National animal poison information line", "tried": "Searched vf.uni-lj.si, UKC Ljubljana / Center za klinično toksikologijo, gov.si-related searches and Slovenian news. No animal poison line found. The 24ur.com article on dog poisonings tells owners to seek a vet and report bait to police/UVHVVR and names no poison line. A European survey (research-portal.uu.nl, 'Poison information centres are under pressure because of animal-related poison enquiries') says veterinary poison centres are uncommon in Europe but does not name Slovenia. Conclusion: no national line found; absence not stated by an official source."},
+    {"country": "SI", "what": "Human poison centre (UKC Ljubljana) taking animal calls", "tried": "Search did not surface an official UKC page with a number or any statement on animal enquiries. Not included."},
+    {"country": "CA", "what": "Animal poison line for Canada", "tried": "Pet Poison Helpline home and contact pages fetched: neither names Canada. animalpoisons.com.au says it serves Canada but is an Australian private service. ASPCA page not checked for Canada coverage. Not included."},
+    {"country": "IE", "what": "Animal poison line for Ireland", "tried": "Animal PoisonLine contact page failed to load; home page does not mention Ireland. VPIS lists several international numbers but does not say which country each serves and is vets-only. Not included."},
+    {"country": "DE", "what": "Animal poison line", "tried": "gesundheit.gv.at lists German Giftinformationszentren (e.g. Berlin +49 (0) 30 19240, München +49 (0) 89 19 240) but these are human poison centres and the page does not say whether they handle animals. Not included."},
+    {"country": "AT", "what": "Animal poison line", "tried": "Vergiftungsinformationszentrale (VIZ) +43 1 406 43 43, 24-Stunden-Notruf, on gesundheit.gv.at — page does not say it handles animals. Not included."},
+    {"country": "HR", "what": "Emergency phone number", "tried": "Zagreb university hospital page states 0-24 walk-in intake but explicitly no phone for emergency staff. No animal poison line found."}
+  ],
+  "notes": "Strongest sources: RSPCA, PDSA, Pet Poison Helpline, ASPCA, International Cat Care — all agree on: act immediately, don't wait for signs, don't induce vomiting unless a vet says so, bring packaging. VCA, Merck, Blue Cross, Dogs Trust, Cats Protection and FDA pages were not fetched or failed; consider adding them later. Slovenia: no animal poison line exists to our knowledge — the page should tell Slovenian users to call their own vet or the 24 h emergency number of the UL Veterinary Faculty Small Animal Clinic (+386 30 716 190, dogs and cats, Ljubljana). Consider also telling users that private veterinary clinics in Slovenia often run their own on-call service (not researched/sourced here). ASPCA and Pet Poison Helpline are US-oriented paid services; mark fees clearly. Two PDSA and Animal PoisonLine items are fetch paraphrases, not verbatim — flagged inline. Re-verify every number on the live page before publishing; numbers change."
+}

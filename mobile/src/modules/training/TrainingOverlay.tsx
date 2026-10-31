@@ -377,7 +377,7 @@ export default function TrainingOverlay({ view, onClose, clock, reduceMotion: re
   if (phase.kind === 'result' && phase.result.rules_version === SCHOOL_RULES_V2) {
     return (
       <View style={styles.fullScreen} testID={testID} accessibilityViewIsModal>
-        <SchoolResultV2 result={phase.result} status={phase.status} canStartAgain={left > 0} onAgain={game.reset} onDone={onClose} />
+        <SchoolResultV2 result={phase.result} status={phase.status} canStartAgain={left > 0} practicesLeft={left} onAgain={game.reset} onDone={onClose} />
       </View>
     );
   }
