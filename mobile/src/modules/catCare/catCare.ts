@@ -262,6 +262,11 @@ function readBase(raw: Obj, durationMs: number | null): CatSessionBase | null {
   return { id, started_at: started, ends_at: ends, expires_at: expires, duration_ms: durationMs };
 }
 
+/** id + instants + `duration_ms` of any session body, or null (GAMES_SPEC wand v2 reader). */
+export function readCatSessionBase(raw: unknown): CatSessionBase | null {
+  return isObj(raw) ? readBase(raw, int(raw.duration_ms)) : null;
+}
+
 /** A playable wand schedule, or null (never guessed). */
 export function readWandSession(raw: unknown): WandSession | null {
   if (!isObj(raw)) return null;

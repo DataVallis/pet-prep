@@ -247,6 +247,11 @@
       "screenReader": "When VoiceOver or TalkBack is on on your child's phone, easier gestures are always on.",
       "error": "The setting wasn't saved. Please try again."
     },
+    "gameFeedback": {
+      "label": "Game sounds and vibration",
+      "hint": "Short sounds and a gentle vibration for successes in games (never for a miss). Sounds follow the phone's silent mode.",
+      "error": "The setting wasn't saved. Please try again."
+    },
     "display": {
       "label": "Display",
       "video": "Video",

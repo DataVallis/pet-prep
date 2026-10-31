@@ -83,6 +83,8 @@ describe('normalizePetMedia', () => {
       phaseGroups: [],
       // David 2026-10-23: no phase_seconds → every phase clip is 3 s.
       phaseMs: {},
+      // GAMES_SPEC §8.4: no phase_meta → the exit side is unknown.
+      phaseMeta: { ballExitSide: null },
     });
   });
 

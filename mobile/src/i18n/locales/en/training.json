@@ -85,7 +85,8 @@
       "expiredWhileAway": "The practice ran out because the app was closed, so it didn't count this time. Start a new practice.",
       "badResponse": "Something went wrong. Try again.",
       "training_pet_sleeping": "Your pup is asleep. School when it wakes up.",
-      "training_pet_sleeping_until": "Your pup is asleep until {{clock}}. School then!"
+      "training_pet_sleeping_until": "Your pup is asleep until {{clock}}. School then!",
+      "training_round_two_started": "Round 2 has already started — let's finish it!"
     },
     "retry": "Try again",
     "commands": {
@@ -127,5 +128,34 @@
     "knows": "The dog knows: {{list}}",
     "knowsLearned": "{{name}} ✓",
     "knowsProgress": "{{name}} {{value}}%"
+  },
+  "school": {
+    "lead": "When it obeys — treat at once!",
+    "leadHeart": "When it obeys — praise at once!",
+    "ignores": "Not obeying — wait.",
+    "keepGoing": "Round 2 — keep going!",
+    "fb": {
+      "inTime": "Great job!",
+      "early": "Too early",
+      "late": "A bit late",
+      "missed": "Missed it",
+      "waited": "Good waiting!",
+      "notObeyed": "It didn't obey — wait"
+    },
+    "finishEarly": "Finish",
+    "finishEarlyA11y": "Finish the practice after round 1",
+    "treat": "Treat",
+    "treatA11y": "Give a treat",
+    "praise": "Praise",
+    "praiseA11y": "Praise your pup",
+    "listeningA11y": "Your pup is listening.",
+    "result": {
+      "earlyEnd": "You stopped after round 1 — the progress counts. Do both rounds for today's practice.",
+      "stars": "Stars: {{stars}} of {{total}}",
+      "trialA11y": "Command {{n}}: {{outcome}}",
+      "roundTitle": "Round {{n}}"
+    },
+    "round": "Round {{n}} ✓",
+    "progressA11y": "Command {{n}} of {{total}}, stars: {{stars}}"
   }
 }

@@ -281,5 +281,42 @@
     "contract": "Najprej podpiši pogodbo",
     "preparing": "Igra se še pripravlja",
     "schoolPreparing": "Šola se še pripravlja — to lahko traja nekaj minut"
+  },
+  "messGame": {
+    "close": "Zapri",
+    "poop": {
+      "line": "Povleci vrečko čez kakec.",
+      "holdLine": "Tapni kakec ali gumb.",
+      "button": "Poberi z vrečko",
+      "a11y": "Poberi kakec z vrečko"
+    },
+    "puddle": {
+      "line": "Briši lužo s krpo.",
+      "holdLine": "Drži gumb in briši.",
+      "button": "Briši",
+      "a11y": "Pobriši lužo s krpo, drži za brisanje"
+    },
+    "slipper": {
+      "line": "Pospravi kose v škatlo.",
+      "holdLine": "Tapni kos ali gumb.",
+      "toyLine": "Daj mu igračo!",
+      "button": "Pospravi kos",
+      "toyButton": "Daj igračo",
+      "a11y": "Pospravi kos copata v škatlo",
+      "toyA11y": "Daj igračo za grizenje"
+    },
+    "fb": {
+      "bagged": "Pospravljeno!",
+      "wiped": "Suho!",
+      "boxed": "V škatli!",
+      "toy": "Bravo!"
+    },
+    "tips": {
+      "poop": "Na sprehodu vedno pobereš z vrečko.",
+      "puddle": "Ne kregaj ga — pelji ga pogosteje ven."
+    },
+    "a11y": {
+      "progress": "Počiščeno {{done}} od {{total}}"
+    }
   }
 }

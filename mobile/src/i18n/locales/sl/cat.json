@@ -74,6 +74,48 @@
       "done": "Končano"
     }
   },
+  "wandV2": {
+    "title": "Palica s peresom",
+    "preparing": "Muca se pripravlja …",
+    "ruleLine": "Pritaji se? Miruj. Skok? Umakni!",
+    "intro": "Pero premikaj po svetlem polju.",
+    "rules": {
+      "crouch": "Pritaji se: pero miruje.",
+      "pounce": "Skoči: pero hitro umakni!",
+      "catch": "Na koncu jo pusti, da ujame."
+    },
+    "easyIntro": "Pero plava samo. Ko muca skoči, tapni »Umakni!«.",
+    "start": "Začni lov",
+    "freeze": "Miruj!",
+    "fb": {
+      "dodge": "Ušlo!",
+      "caught": "Ujela ga je!"
+    },
+    "catchCue": "Pusti jo, da ujame!",
+    "saving": "Shranjujem lov …",
+    "dodgeButton": "Umakni!",
+    "result": {
+      "success": "Kakšen lov!",
+      "again": "Še en lov?",
+      "counts": "Igra šteje za danes.",
+      "stored": "Ta lov je že shranjen.",
+      "againButton": "Še en lov",
+      "done": "Končano"
+    },
+    "hint": {
+      "calm": "Ko se pritaji, pero miruje.",
+      "dodge": "Ko skoči, pero hitro stran.",
+      "catch": "Na koncu jo pusti, da ujame."
+    },
+    "a11y": {
+      "crouch": "Pritaja se. Miruj.",
+      "pounce": "Skok!",
+      "field": "Igralno polje s peresom",
+      "dodgeHint": "Tapni, ko muca skoči.",
+      "progress": "Lov: {{done}} od {{total}}, zvezdice: {{stars}}",
+      "stars": "Zvezdice: {{stars}} od {{max}}"
+    }
+  },
   "scoop": {
     "title": "Počisti pesek",
     "intro": "Muca je uporabila pesek. Z lopatko poberi vse grudice, da ostane čist zanjo.",
@@ -85,7 +127,14 @@
     "saving": "Shranjujem …",
     "success": "Bravo! Pesek je čist.",
     "unchanged": "Pesek je bil že čist.",
-    "done": "Končano"
+    "done": "Končano",
+    "game": {
+      "line": "Povleci lopatko skozi pesek.",
+      "shakeLine": "Stresi navzgor v vrečko!",
+      "holdLine": "Tapni grudico ali gumb.",
+      "button": "Poberi grudico",
+      "fb": "V vrečki!"
+    }
   },
   "chore": {
     "grooming": {
@@ -183,6 +232,11 @@
       },
       "again": "Poskusi znova",
       "done": "Končano"
+    },
+    "layer": {
+      "carrying": "Neseš jo na praskalnik …",
+      "landed": "Zdaj jo pohvali!",
+      "early": "Malo prezgodaj."
     }
   },
   "errors": {

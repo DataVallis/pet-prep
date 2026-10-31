@@ -8,6 +8,7 @@ import { useServerStatusStore } from '@/store/serverStatusStore';
 import { setMediaFileStoreForTests } from '@/modules/petMedia/mediaFileCache';
 import { resetTopStackPrefsForTests, setTopStackPrefsStoreForTests } from '@/modules/hud/topStackPrefs';
 import { memoryPendingStore, setPendingPurchaseStoreForTests } from '@/modules/wishes/pendingPurchases';
+import { setGameLayerAvailableForTests } from '@/modules/gameLayer/capability';
 
 beforeEach(() => {
   childPetFetchGate.reset();
@@ -21,4 +22,6 @@ beforeEach(() => {
   resetTopStackPrefsForTests();
   // QA #416 M2: pending wish purchases live in a device store — a fresh, empty one per test.
   setPendingPurchaseStoreForTests(memoryPendingStore());
+  // GAMES_SPEC §7.4: the native game layer is off (like an older binary) unless a test opts in.
+  setGameLayerAvailableForTests(false);
 });

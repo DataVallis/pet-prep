@@ -80,3 +80,14 @@ globalThis.fetch = ((input: unknown) =>
   Promise.reject(
     new TypeError(`Network request failed (no fetch in tests): ${typeof input === 'string' ? input : String((input as { url?: unknown })?.url ?? input)}`),
   )) as typeof fetch;
+
+// GAMES_SPEC phase 1 game layer (2026-10-30): manual mocks in __mocks__/ for the native
+// libraries — reanimated's own mock needs native worklets under jest-expo; the gesture-handler
+// mock records worklet callbacks (`fireGameGesture`). The layer itself is off in Jest unless a
+// test calls `setGameLayerAvailableForTests(true)` (jest.afterEnv.ts).
+jest.mock('react-native-reanimated');
+jest.mock('react-native-worklets');
+jest.mock('react-native-gesture-handler');
+jest.mock('@shopify/react-native-skia');
+jest.mock('expo-audio');
+jest.mock('expo-haptics');

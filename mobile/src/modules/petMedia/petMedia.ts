@@ -53,12 +53,37 @@ export interface PetMediaInfo {
    * M5-T09 / T10: stored PHASE clips (`school_sit_attention`, `ball_running`, `wand_pouncing`, …), played once (`phaseMs`).
    * School smooth playback (2026-10-28): plus the server-derived `school_<cmd>_attention_loop`,
    * `school_<cmd>_success_loop` (ping-pong loops) and `school_<cmd>_release` (performing reversed).
+   * GAMES_SPEC phase 1 (2026-10-30): plus `ball_waiting_loop` (ping-pong of `ball_waiting`).
+   * GAMES_SPEC phase 2 (2026-10-31): plus `wand_crouch_loop` (ping-pong of the last ~1 s of `wand_stalking`).
    */
   phases: Record<string, string>;
   /** M5-T09 / T10: phase clip groups of the pet's set (`school`, `ball`, `wand`) — then never a state clip there. */
   phaseGroups: PhaseGroup[];
   /** David 2026-10-23: length (ms) of each stored phase clip — school performing 5 s, others 3 s; missing = 3 s. */
   phaseMs: Record<string, number>;
+  /**
+   * GAMES_SPEC §8.4 (phase 1): facts the server measured on the stored clips —
+   * `ballExitSide` = where the dog leaves the frame in `ball_running` (`phase_meta.ball_running.exit_side`);
+   * null = unknown (older server / not measured yet) → the ball flies straight into the distance.
+   */
+  phaseMeta: PhaseMeta;
+}
+
+/** Where the dog leaves the frame in `ball_running` (GAMES_SPEC §8.4). */
+export type ExitSide = 'left' | 'right' | 'center';
+
+export interface PhaseMeta {
+  ballExitSide: ExitSide | null;
+}
+
+export const EMPTY_PHASE_META: PhaseMeta = { ballExitSide: null };
+
+/** `media.phase_meta` → typed facts (anything unknown → null). */
+export function readPhaseMeta(raw: unknown): PhaseMeta {
+  if (typeof raw !== 'object' || raw === null || Array.isArray(raw)) return EMPTY_PHASE_META;
+  const running = (raw as Record<string, unknown>).ball_running;
+  const side = typeof running === 'object' && running !== null ? (running as Record<string, unknown>).exit_side : undefined;
+  return { ballExitSide: side === 'left' || side === 'right' || side === 'center' ? side : null };
 }
 
 /** M5-T09 / T10 phase clip groups. */
@@ -66,7 +91,7 @@ export type PhaseGroup = 'school' | 'ball' | 'wand';
 
 const PHASE_GROUPS: readonly PhaseGroup[] = ['school', 'ball', 'wand'];
 const POSE_KEY = /^(sit|come|place|door|empty|crouch|catch)$/;
-const PHASE_KEY = /^(school_(sit|come|place|potty)_(attention|performing|success|attention_loop|success_loop|release)|ball_(waiting|running|fetching)|wand_(stalking|pouncing|catching))$/;
+const PHASE_KEY = /^(school_(sit|come|place|potty)_(attention|performing|success|attention_loop|success_loop|release)|ball_(waiting|running|fetching|waiting_loop)|wand_(stalking|pouncing|catching|crouch_loop))$/;
 
 /** `phase_seconds` → ms per known phase key (1–15 s; anything else is dropped → the 3 s default). */
 function secondsMap(raw: unknown, key: RegExp): Record<string, number> {
@@ -106,6 +131,7 @@ export const EMPTY_PET_MEDIA: PetMediaInfo = {
   phases: {},
   phaseGroups: [],
   phaseMs: {},
+  phaseMeta: EMPTY_PHASE_META,
 };
 
 function isPetState(value: unknown): value is PetState {
@@ -189,6 +215,8 @@ export function normalizePetMedia(raw: PetMedia | null | undefined | unknown, le
     phaseGroups: Array.isArray(m.phase_groups) ? PHASE_GROUPS.filter((g) => (m.phase_groups as unknown[]).includes(g)) : [],
     // David 2026-10-23: older servers send none → every phase clip is 3 s.
     phaseMs: secondsMap(m.phase_seconds, PHASE_KEY),
+    // GAMES_SPEC §8.4: older servers send no `phase_meta` → unknown exit side.
+    phaseMeta: readPhaseMeta(m.phase_meta),
   };
 }
 
