@@ -232,6 +232,11 @@
       },
       "again": "Poskusi znova",
       "done": "Končano"
+    },
+    "layer": {
+      "carrying": "Neseš jo na praskalnik …",
+      "landed": "Zdaj jo pohvali!",
+      "early": "Malo prezgodaj."
     }
   },
   "errors": {

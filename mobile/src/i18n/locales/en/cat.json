@@ -230,6 +230,11 @@
       },
       "again": "Try again",
       "done": "Done"
+    },
+    "layer": {
+      "carrying": "Carrying kitty to the post …",
+      "landed": "Praise kitty now!",
+      "early": "A little early."
     }
   },
   "errors": {
