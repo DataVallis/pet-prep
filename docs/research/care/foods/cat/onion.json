@@ -4,28 +4,33 @@
   "name": {
     "en": "Onion",
     "sl": "Čebula",
-    "de": "Zwiebel"
+    "de": "Zwiebel",
+    "fr": "Oignon"
   },
   "question": {
     "en": "Can cats eat onion?",
     "sl": "Ali lahko mačke jedo čebulo?",
-    "de": "Dürfen Katzen Zwiebeln fressen?"
+    "de": "Dürfen Katzen Zwiebeln fressen?",
+    "fr": "Les chats peuvent-ils manger de l’oignon ?"
   },
   "url_slug": {
     "en": "onion",
     "sl": "cebula",
-    "de": "zwiebel"
+    "de": "zwiebel",
+    "fr": "oignon"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Onion is toxic to cats in every form — raw, cooked, dried or powdered. It can damage red blood cells and cause anaemia, and cats are the most sensitive species. Call your vet if your cat eats any.",
     "sl": "Ne. Čebula je za mačke strupena v vseh oblikah – surova, kuhana, sušena ali v prahu. Lahko poškoduje rdeče krvničke in povzroči slabokrvnost, mačke pa so najbolj občutljive. Če jo muca poje, pokličite veterinarja.",
-    "de": "Nein. Zwiebeln sind für Katzen in jeder Form giftig – roh, gekocht, getrocknet oder als Pulver. Sie können rote Blutkörperchen schädigen und eine Blutarmut (Anämie) verursachen, und Katzen sind die empfindlichste Tierart. Rufen Sie Ihren Tierarzt an, wenn Ihre Katze davon frisst."
+    "de": "Nein. Zwiebeln sind für Katzen in jeder Form giftig – roh, gekocht, getrocknet oder als Pulver. Sie können rote Blutkörperchen schädigen und eine Blutarmut (Anämie) verursachen, und Katzen sind die empfindlichste Tierart. Rufen Sie Ihren Tierarzt an, wenn Ihre Katze davon frisst.",
+    "fr": "Non. L’oignon est toxique pour les chats sous toutes ses formes – cru, cuit, séché ou en poudre. Il peut endommager les globules rouges et provoquer une anémie, et le chat est l’espèce la plus sensible. Appelez votre vétérinaire si votre chat en mange."
   },
   "why": {
     "en": "Onion belongs to the allium family (the onion family). Alliums damage red blood cells and can lead to anaemia, and they also irritate the stomach and gut. Cats are the most sensitive species. All forms are poisonous to cats — raw, cooked, dried, powdered and liquid.",
     "sl": "Čebula spada med lukovke (družina čebule). Lukovke poškodujejo rdeče krvničke in lahko povzročijo slabokrvnost, poleg tega dražijo želodec in črevesje. Mačke so med vsemi vrstami najbolj občutljive. Strupene so vse oblike – surove, kuhane, sušene, v prahu in tekoče.",
-    "de": "Die Zwiebel gehört zur Gattung Allium (den Zwiebelgewächsen). Allium-Pflanzen schädigen die roten Blutkörperchen, können zu Blutarmut (Anämie) führen und reizen außerdem Magen und Darm. Katzen sind die empfindlichste Tierart. Alle Formen sind für Katzen giftig – roh, gekocht, getrocknet, als Pulver und flüssig."
+    "de": "Die Zwiebel gehört zur Gattung Allium (den Zwiebelgewächsen). Allium-Pflanzen schädigen die roten Blutkörperchen, können zu Blutarmut (Anämie) führen und reizen außerdem Magen und Darm. Katzen sind die empfindlichste Tierart. Alle Formen sind für Katzen giftig – roh, gekocht, getrocknet, als Pulver und flüssig.",
+    "fr": "L’oignon appartient à la famille des alliums (la famille de l’oignon). Les alliums endommagent les globules rouges et peuvent entraîner une anémie ; ils irritent aussi l’estomac et l’intestin. Le chat est l’espèce la plus sensible. L’oignon est toxique pour les chats sous toutes ses formes – cru, cuit, séché, en poudre ou liquide."
   },
   "signs": {
     "en": [
@@ -54,42 +59,57 @@
       "Blasses Zahnfleisch",
       "Rot gefärbter Urin",
       "Schnellere oder angestrengte Atmung"
+    ],
+    "fr": [
+      "Vomissements",
+      "Diarrhée",
+      "Baisse d’appétit",
+      "Faiblesse",
+      "Gencives pâles",
+      "Urine rougeâtre",
+      "Respiration plus rapide ou plus difficile"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away, even if your cat seems well — signs of anaemia can take several days to show. Note what your cat ate (raw, cooked, powder or a dish containing it), how much and when. Don't try to make your cat sick at home.",
     "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če se muca zdi v redu, saj se znaki slabokrvnosti lahko pokažejo šele po nekaj dneh. Zapišite, kaj je pojedla (surovo, kuhano, v prahu ali jed, ki to vsebuje), koliko in kdaj. Muce doma ne poskušajte spraviti k bruhanju.",
-    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, auch wenn Ihre Katze gesund wirkt – Anzeichen einer Blutarmut können erst nach mehreren Tagen auftreten. Notieren Sie, was Ihre Katze gefressen hat (roh, gekocht, als Pulver oder in einem Gericht), wie viel und wann. Versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen."
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, auch wenn Ihre Katze gesund wirkt – Anzeichen einer Blutarmut können erst nach mehreren Tagen auftreten. Notieren Sie, was Ihre Katze gefressen hat (roh, gekocht, als Pulver oder in einem Gericht), wie viel und wann. Versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
+    "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, même si votre chat semble aller bien – les signes d’anémie peuvent mettre plusieurs jours à apparaître. Notez ce qu’il a mangé (cru, cuit, en poudre ou dans un plat), en quelle quantité et à quelle heure. N’essayez pas de faire vomir votre chat vous-même."
   },
   "serving": null,
   "child": {
     "en": "Onions are not for cats, even cooked in food. If kitty eats some, tell a grown-up so they can call the vet.",
     "sl": "Čebula ni za muce, tudi kuhana v hrani ne. Če jo muca poje, povej odraslemu, da pokliče veterinarja.",
-    "de": "Zwiebeln sind nichts für Katzen, auch nicht gekocht im Essen. Wenn deine Katze welche frisst, sag es einem Erwachsenen, damit er den Tierarzt anrufen kann."
+    "de": "Zwiebeln sind nichts für Katzen, auch nicht gekocht im Essen. Wenn deine Katze welche frisst, sag es einem Erwachsenen, damit er den Tierarzt anrufen kann.",
+    "fr": "L’oignon n’est pas pour les chats, même cuit dans un plat. Si ton chat en mange, préviens un adulte pour qu’il appelle le vétérinaire."
   },
   "faq": [
     {
       "q": {
         "en": "Is cooked or powdered onion safe for cats?",
         "sl": "Je kuhana čebula ali čebula v prahu za mačke varna?",
-        "de": "Sind gekochte Zwiebeln oder Zwiebelpulver für Katzen unbedenklich?"
+        "de": "Sind gekochte Zwiebeln oder Zwiebelpulver für Katzen unbedenklich?",
+        "fr": "L’oignon cuit ou en poudre est-il sans danger pour les chats ?"
       },
       "a": {
         "en": "No. All forms are poisonous to cats, including raw, cooked, dried, powdered and liquid onion. Be careful with leftovers, stuffing and gravy that may contain it.",
         "sl": "Ne. Za mačke so strupene vse oblike, tudi surova, kuhana, sušena, tekoča čebula in čebula v prahu. Previdni bodite pri ostankih hrane, nadevih in mesnih omakah, ki jo lahko vsebujejo.",
-        "de": "Nein. Alle Formen sind für Katzen giftig, auch rohe, gekochte, getrocknete, pulverisierte und flüssige Zwiebel. Vorsicht bei Essensresten, Füllungen und Bratensoße, die Zwiebeln enthalten können."
+        "de": "Nein. Alle Formen sind für Katzen giftig, auch rohe, gekochte, getrocknete, pulverisierte und flüssige Zwiebel. Vorsicht bei Essensresten, Füllungen und Bratensoße, die Zwiebeln enthalten können.",
+        "fr": "Non. L’oignon est toxique pour les chats sous toutes ses formes, y compris cru, cuit, séché, en poudre et liquide. Faites attention aux restes, aux farces et aux jus de viande qui peuvent en contenir."
       }
     },
     {
       "q": {
         "en": "Why do signs sometimes appear days later?",
         "sl": "Zakaj se znaki včasih pokažejo šele čez nekaj dni?",
-        "de": "Warum treten Anzeichen manchmal erst Tage später auf?"
+        "de": "Warum treten Anzeichen manchmal erst Tage später auf?",
+        "fr": "Pourquoi les signes apparaissent-ils parfois plusieurs jours après ?"
       },
       "a": {
         "en": "Tummy upset often shows first, but signs of anaemia usually take longer and can appear within one to five days. That is why you should call your vet straight away rather than wait.",
         "sl": "Najprej se pogosto pokažejo prebavne težave, znaki slabokrvnosti pa se navadno pojavijo kasneje, v enem do petih dneh. Zato veterinarja pokličite takoj in ne čakajte.",
-        "de": "Magen-Darm-Beschwerden zeigen sich oft zuerst, Anzeichen einer Blutarmut brauchen aber meist länger und können innerhalb von ein bis fünf Tagen auftreten. Rufen Sie deshalb sofort Ihren Tierarzt an, statt abzuwarten."
+        "de": "Magen-Darm-Beschwerden zeigen sich oft zuerst, Anzeichen einer Blutarmut brauchen aber meist länger und können innerhalb von ein bis fünf Tagen auftreten. Rufen Sie deshalb sofort Ihren Tierarzt an, statt abzuwarten.",
+        "fr": "Les troubles digestifs apparaissent souvent en premier, mais les signes d’anémie mettent généralement plus de temps et peuvent apparaître dans un délai d’un à cinq jours. C’est pourquoi vous devez appeler votre vétérinaire immédiatement, sans attendre."
       }
     }
   ],
@@ -201,6 +221,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4fbb9e87fd20f7da18a854b1b6dbc486ee3c971c6265cf9670b855f4d24a1c40"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b4e93b252c9fad62e2aa218a95a742f57a32f8f48ebdc6d412180c42716b12d3"
     }
   }
 }

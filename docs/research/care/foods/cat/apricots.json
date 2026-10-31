@@ -4,28 +4,33 @@
   "name": {
     "en": "Apricots",
     "sl": "Marelice",
-    "de": "Aprikosen"
+    "de": "Aprikosen",
+    "fr": "Abricots"
   },
   "question": {
     "en": "Can cats eat apricots?",
     "sl": "Ali lahko mačke jedo marelice?",
-    "de": "Dürfen Katzen Aprikosen fressen?"
+    "de": "Dürfen Katzen Aprikosen fressen?",
+    "fr": "Les chats peuvent-ils manger des abricots ?"
   },
   "url_slug": {
     "en": "apricots",
     "sl": "marelice",
-    "de": "aprikosen"
+    "de": "aprikosen",
+    "fr": "abricots"
   },
   "level": "dangerous",
   "answer": {
     "en": "No, it's best not to. The ASPCA lists the apricot plant as toxic to cats: its stems, leaves and seeds (the stone) contain cyanide. Don't offer apricots to your cat, keep stones and plant parts out of reach, and call your vet if your cat chews any.",
     "sl": "Ne, raje ne. ASPCA rastlino marelice navaja kot strupeno za mačke: njeni peclji, listi in semena (koščice) vsebujejo cianid. Muci ne ponujajte marelic, koščice in dele rastline hranite izven dosega ter pokličite veterinarja, če jih muca grizlja.",
-    "de": "Nein, besser nicht. Die ASPCA stuft die Aprikosenpflanze als giftig für Katzen ein: Stiele, Blätter und Samen (der Kern) enthalten Cyanid. Bieten Sie Ihrer Katze keine Aprikosen an, bewahren Sie Kerne und Pflanzenteile außer Reichweite auf und rufen Sie Ihren Tierarzt an, wenn Ihre Katze darauf kaut."
+    "de": "Nein, besser nicht. Die ASPCA stuft die Aprikosenpflanze als giftig für Katzen ein: Stiele, Blätter und Samen (der Kern) enthalten Cyanid. Bieten Sie Ihrer Katze keine Aprikosen an, bewahren Sie Kerne und Pflanzenteile außer Reichweite auf und rufen Sie Ihren Tierarzt an, wenn Ihre Katze darauf kaut.",
+    "fr": "Non, mieux vaut s’en abstenir. L’ASPCA classe l’abricotier parmi les plantes toxiques pour les chats : ses tiges, ses feuilles et ses graines (le noyau) contiennent du cyanure. Ne donnez pas d’abricots à votre chat, rangez noyaux et parties de la plante hors de sa portée, et appelez votre vétérinaire s’il en mâchouille."
   },
   "why": {
     "en": "The stems, leaves and seeds contain cyanide (as cyanogenic glycosides) and are particularly toxic while wilting. The sources we found describe the risk from these plant parts and do not say the fruit flesh is safe for cats, so we do not recommend sharing it.",
     "sl": "Peclji, listi in semena vsebujejo cianid (v obliki cianogenih glikozidov) in so posebej strupeni, ko venejo. Viri, ki smo jih našli, opisujejo nevarnost teh delov rastline in ne navajajo, da je sadni del za mačke varen, zato ga ne priporočamo.",
-    "de": "Stiele, Blätter und Samen enthalten Cyanid (in Form cyanogener Glykoside) und sind beim Welken besonders giftig. Die von uns gefundenen Quellen beschreiben das Risiko dieser Pflanzenteile und sagen nicht, dass das Fruchtfleisch für Katzen unbedenklich ist. Deshalb empfehlen wir nicht, es mit Ihrer Katze zu teilen."
+    "de": "Stiele, Blätter und Samen enthalten Cyanid (in Form cyanogener Glykoside) und sind beim Welken besonders giftig. Die von uns gefundenen Quellen beschreiben das Risiko dieser Pflanzenteile und sagen nicht, dass das Fruchtfleisch für Katzen unbedenklich ist. Deshalb empfehlen wir nicht, es mit Ihrer Katze zu teilen.",
+    "fr": "Les tiges, les feuilles et les graines contiennent du cyanure (sous forme de glycosides cyanogènes) et sont particulièrement toxiques lorsqu’elles se flétrissent. Les sources que nous avons trouvées décrivent le risque lié à ces parties de la plante et n’indiquent pas que la chair du fruit est sans danger pour les chats ; nous déconseillons donc de la partager."
   },
   "signs": {
     "en": [
@@ -48,30 +53,41 @@
       "Atembeschwerden",
       "Hecheln",
       "Schock"
+    ],
+    "fr": [
+      "Gencives rouge brique",
+      "Pupilles dilatées",
+      "Difficultés à respirer",
+      "Halètement",
+      "État de choc"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away if your cat chewed a stone, stem or leaves. Note what was eaten, how much and when. Don't wait for signs to appear, and don't try to make your cat sick at home.",
     "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, če je muca grizljala koščico, peclje ali liste. Zapišite, kaj je pojedla, koliko in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju.",
-    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, wenn Ihre Katze auf einem Kern, Stielen oder Blättern gekaut hat. Notieren Sie, was gefressen wurde, wie viel und wann. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen."
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, wenn Ihre Katze auf einem Kern, Stielen oder Blättern gekaut hat. Notieren Sie, was gefressen wurde, wie viel und wann. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
+    "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire si votre chat a mâchouillé un noyau, une tige ou des feuilles. Notez ce qu’il a mangé, en quelle quantité et à quelle heure. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même."
   },
   "serving": null,
   "child": {
     "en": "Apricots are a people snack. Their stones and leaves are not safe for cats, so tell a grown-up if kitty chews one.",
     "sl": "Marelice so priboljšek za ljudi. Koščice in listi niso varni za muce. Če jih muca grizlja, povej odraslemu.",
-    "de": "Aprikosen sind ein Snack für Menschen. Kerne und Blätter sind für Katzen nicht sicher. Wenn deine Katze an einem Kern kaut, sag einem Erwachsenen Bescheid."
+    "de": "Aprikosen sind ein Snack für Menschen. Kerne und Blätter sind für Katzen nicht sicher. Wenn deine Katze an einem Kern kaut, sag einem Erwachsenen Bescheid.",
+    "fr": "Les abricots, c’est un en-cas pour les humains. Leurs noyaux et leurs feuilles sont dangereux pour les chats : préviens un adulte si ton chat en mâchouille un."
   },
   "faq": [
     {
       "q": {
         "en": "Which part is the problem?",
         "sl": "Kateri del je nevaren?",
-        "de": "Welcher Teil ist das Problem?"
+        "de": "Welcher Teil ist das Problem?",
+        "fr": "Quelle partie pose problème ?"
       },
       "a": {
         "en": "The ASPCA says the stems, leaves and seeds contain cyanide, and that they are particularly toxic while wilting.",
         "sl": "ASPCA navaja, da cianid vsebujejo peclji, listi in semena ter da so posebej strupeni, ko venejo.",
-        "de": "Laut ASPCA enthalten Stiele, Blätter und Samen Cyanid und sind beim Welken besonders giftig."
+        "de": "Laut ASPCA enthalten Stiele, Blätter und Samen Cyanid und sind beim Welken besonders giftig.",
+        "fr": "Selon l’ASPCA, les tiges, les feuilles et les graines contiennent du cyanure, et elles sont particulièrement toxiques lorsqu’elles se flétrissent."
       }
     }
   ],
@@ -131,6 +147,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6488e5e05051b5c512e0a7ea14ec41316363bc4a805577e649d216ed94ca52fe"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "eabb2b39db7950b36d9f817b9467a62e9653e50f0e96f4c6a60cd805548215c3"
     }
   }
 }

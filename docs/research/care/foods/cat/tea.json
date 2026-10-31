@@ -4,28 +4,33 @@
   "name": {
     "en": "Tea",
     "sl": "Čaj",
-    "de": "Tee"
+    "de": "Tee",
+    "fr": "Thé"
   },
   "question": {
     "en": "Can cats drink tea?",
     "sl": "Ali lahko mačke pijejo čaj?",
-    "de": "Dürfen Katzen Tee trinken?"
+    "de": "Dürfen Katzen Tee trinken?",
+    "fr": "Les chats peuvent-ils boire du thé ?"
   },
   "url_slug": {
     "en": "tea",
     "sl": "caj",
-    "de": "tee"
+    "de": "tee",
+    "fr": "the"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Many teas contain caffeine, and cats are more sensitive to caffeine than people. Tea bags are especially risky. Don't share your tea, and call your vet if your cat chews a tea bag or drinks caffeinated tea.",
     "sl": "Ne. Veliko čajev vsebuje kofein, mačke pa so nanj bolj občutljive kot ljudje. Posebej tvegane so čajne vrečke. Čaja ne delite z muco in pokličite veterinarja, če prežveči čajno vrečko ali popije čaj s kofeinom.",
-    "de": "Nein. Viele Teesorten enthalten Koffein, und Katzen reagieren empfindlicher auf Koffein als Menschen. Teebeutel sind besonders riskant. Teilen Sie Ihren Tee nicht und rufen Sie Ihren Tierarzt an, wenn Ihre Katze auf einem Teebeutel kaut oder koffeinhaltigen Tee trinkt."
+    "de": "Nein. Viele Teesorten enthalten Koffein, und Katzen reagieren empfindlicher auf Koffein als Menschen. Teebeutel sind besonders riskant. Teilen Sie Ihren Tee nicht und rufen Sie Ihren Tierarzt an, wenn Ihre Katze auf einem Teebeutel kaut oder koffeinhaltigen Tee trinkt.",
+    "fr": "Non. Beaucoup de thés contiennent de la caféine, et les chats y sont plus sensibles que les humains. Les sachets de thé sont particulièrement risqués. Ne partagez pas votre thé, et appelez votre vétérinaire si votre chat mâchouille un sachet ou boit du thé contenant de la caféine."
   },
   "why": {
     "en": "Many teas contain caffeine. Cats are more sensitive to caffeine than people. Like chocolate, coffee and other caffeine-containing foods have high levels of stimulants called methylxanthines; caffeine speeds up the heart, makes cats restless and upsets the stomach.",
     "sl": "Veliko čajev vsebuje kofein. Mačke so na kofein bolj občutljive kot ljudje. Kava in druga živila s kofeinom imajo tako kot čokolada veliko poživil, imenovanih metilksantini; kofein pospeši srce, povzroči nemir in prebavne težave.",
-    "de": "Viele Teesorten enthalten Koffein. Katzen reagieren empfindlicher auf Koffein als Menschen. Wie Schokolade enthalten auch Kaffee und andere koffeinhaltige Lebensmittel große Mengen anregender Stoffe, sogenannter Methylxanthine; Koffein beschleunigt den Herzschlag, macht Katzen unruhig und schlägt auf den Magen."
+    "de": "Viele Teesorten enthalten Koffein. Katzen reagieren empfindlicher auf Koffein als Menschen. Wie Schokolade enthalten auch Kaffee und andere koffeinhaltige Lebensmittel große Mengen anregender Stoffe, sogenannter Methylxanthine; Koffein beschleunigt den Herzschlag, macht Katzen unruhig und schlägt auf den Magen.",
+    "fr": "Beaucoup de thés contiennent de la caféine. Les chats sont plus sensibles à la caféine que les humains. Comme le chocolat, le café et les autres aliments contenant de la caféine renferment beaucoup de stimulants appelés méthylxanthines ; la caféine accélère le cœur, rend les chats agités et dérange l’estomac."
   },
   "signs": {
     "en": [
@@ -45,30 +50,40 @@
       "Überaktivität",
       "Magenverstimmung",
       "Schneller Herzschlag oder Veränderungen des Herzrhythmus"
+    ],
+    "fr": [
+      "Agitation, nervosité, refus de rester couché",
+      "Hyperactivité",
+      "Maux de ventre",
+      "Cœur rapide ou troubles du rythme cardiaque"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away. Note what your cat swallowed (drink, grounds, beans, tea bag or tablets), how much and when. Don't wait for signs to appear, and don't try to make your cat sick at home.",
     "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, kaj je muca zaužila (pijačo, mleto kavo, zrna, čajno vrečko ali tablete), koliko in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju.",
-    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was Ihre Katze geschluckt hat (Getränk, Kaffeepulver, Bohnen, Teebeutel oder Tabletten), wie viel und wann. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen."
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was Ihre Katze geschluckt hat (Getränk, Kaffeepulver, Bohnen, Teebeutel oder Tabletten), wie viel und wann. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
+    "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce que votre chat a avalé (boisson, café moulu, grains, sachet de thé ou comprimés), en quelle quantité et à quelle heure. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même."
   },
   "serving": null,
   "child": {
     "en": "Tea is for people. Keep cups and used tea bags away from kitty, and tell a grown-up if she gets into them.",
     "sl": "Čaj je za ljudi. Skodelice in uporabljene čajne vrečke naj bodo daleč od muce. Če jih najde, povej odraslemu.",
-    "de": "Tee ist für Menschen. Halte Tassen und benutzte Teebeutel von deiner Katze fern und sag einem Erwachsenen Bescheid, wenn sie trotzdem drankommt."
+    "de": "Tee ist für Menschen. Halte Tassen und benutzte Teebeutel von deiner Katze fern und sag einem Erwachsenen Bescheid, wenn sie trotzdem drankommt.",
+    "fr": "Le thé, c’est pour les humains. Garde les tasses et les sachets usagés loin de ton chat, et préviens un adulte s’il y touche."
   },
   "faq": [
     {
       "q": {
         "en": "Are tea bags dangerous?",
         "sl": "So čajne vrečke nevarne?",
-        "de": "Sind Teebeutel gefährlich?"
+        "de": "Sind Teebeutel gefährlich?",
+        "fr": "Les sachets de thé sont-ils dangereux ?"
       },
       "a": {
         "en": "Yes. Pet Poison Helpline warns that eating tea bags could cause serious toxicity in cats. Throw used tea bags away where your cat can't reach them.",
         "sl": "Da. Pet Poison Helpline opozarja, da lahko zaužite čajne vrečke pri mačkah povzročijo resno zastrupitev. Uporabljene vrečke zavrzite tja, kamor muca ne seže.",
-        "de": "Ja. Die Pet Poison Helpline warnt, dass das Fressen von Teebeuteln bei Katzen zu einer schweren Vergiftung führen könnte. Werfen Sie benutzte Teebeutel so weg, dass Ihre Katze nicht herankommt."
+        "de": "Ja. Die Pet Poison Helpline warnt, dass das Fressen von Teebeuteln bei Katzen zu einer schweren Vergiftung führen könnte. Werfen Sie benutzte Teebeutel so weg, dass Ihre Katze nicht herankommt.",
+        "fr": "Oui. Pet Poison Helpline avertit que manger des sachets de thé peut provoquer une intoxication grave chez le chat. Jetez les sachets usagés là où votre chat ne peut pas les atteindre."
       }
     }
   ],
@@ -152,6 +167,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "de08a7d350367aee24c2fc2968c2f9b8e15a499ba8ac4f17bd8d6d86406e45a6"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cc11fae411cae67aeccc2e4d081fa0edd6de8e1e745cd66acc8a895733f6daf5"
     }
   }
 }

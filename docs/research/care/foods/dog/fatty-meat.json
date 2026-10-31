@@ -4,28 +4,33 @@
   "name": {
     "en": "Fatty meat",
     "sl": "Mastno meso",
-    "de": "Fettes Fleisch"
+    "de": "Fettes Fleisch",
+    "fr": "Viande grasse"
   },
   "question": {
     "en": "Can dogs eat fatty meat?",
     "sl": "Ali lahko psi jedo mastno meso?",
-    "de": "Dürfen Hunde fettes Fleisch fressen?"
+    "de": "Dürfen Hunde fettes Fleisch fressen?",
+    "fr": "Les chiens peuvent-ils manger de la viande grasse ?"
   },
   "url_slug": {
     "en": "fatty-meat",
     "sl": "mastno-meso",
-    "de": "fettes-fleisch"
+    "de": "fettes-fleisch",
+    "fr": "viande-grasse"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Not recommended. Fatty meat, poultry skin and gristle are not toxic, but they can cause vomiting and diarrhoea or trigger pancreatitis, a painful and sometimes severe inflammation. Some breeds, such as Miniature Schnauzers, are more prone to it.",
     "sl": "Ni priporočljivo. Mastno meso, kožica perutnine in hrustanec niso strupeni, lahko pa povzročijo bruhanje in drisko ali sprožijo vnetje trebušne slinavke, ki je boleče in včasih hudo. Nekatere pasme, na primer pritlikavi šnavcerji, so zanj bolj dovzetne.",
-    "de": "Nicht empfohlen. Fettes Fleisch, Geflügelhaut und Knorpel sind nicht giftig, können aber Erbrechen und Durchfall verursachen oder eine schmerzhafte, manchmal schwere Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen. Manche Rassen, etwa Zwergschnauzer, sind dafür anfälliger."
+    "de": "Nicht empfohlen. Fettes Fleisch, Geflügelhaut und Knorpel sind nicht giftig, können aber Erbrechen und Durchfall verursachen oder eine schmerzhafte, manchmal schwere Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen. Manche Rassen, etwa Zwergschnauzer, sind dafür anfälliger.",
+    "fr": "Déconseillé. La viande grasse, la peau de volaille et les nerfs ne sont pas toxiques, mais ils peuvent provoquer vomissements et diarrhée, ou déclencher une pancréatite, une inflammation douloureuse et parfois grave. Certaines races, comme le schnauzer nain, y sont plus sujettes."
   },
   "why": {
     "en": "A fatty meal is a known trigger of pancreatitis in dogs. Effects range from a mild upset stomach to a severe, even life-threatening pancreatitis. Dogs that have had pancreatitis before should avoid fatty foods.",
     "sl": "Mastni obrok je znan sprožilec vnetja trebušne slinavke pri psih. Posledice segajo od blagih prebavnih težav do hudega, celo življenjsko nevarnega vnetja. Psi, ki so vnetje trebušne slinavke že preboleli, naj se mastni hrani izogibajo.",
-    "de": "Eine fettreiche Mahlzeit ist ein bekannter Auslöser einer Pankreatitis bei Hunden. Die Folgen reichen von einer leichten Magenverstimmung bis zu einer schweren, sogar lebensbedrohlichen Pankreatitis. Hunde, die schon einmal eine Pankreatitis hatten, sollten fettreiches Futter meiden."
+    "de": "Eine fettreiche Mahlzeit ist ein bekannter Auslöser einer Pankreatitis bei Hunden. Die Folgen reichen von einer leichten Magenverstimmung bis zu einer schweren, sogar lebensbedrohlichen Pankreatitis. Hunde, die schon einmal eine Pankreatitis hatten, sollten fettreiches Futter meiden.",
+    "fr": "Un repas gras est un déclencheur connu de la pancréatite chez le chien. Les effets vont de légers troubles digestifs à une pancréatite grave, voire mortelle. Les chiens qui ont déjà eu une pancréatite doivent éviter les aliments gras."
   },
   "signs": {
     "en": [
@@ -48,46 +53,60 @@
       "Durchfall",
       "Will nicht fressen",
       "Müdigkeit, Fieber"
+    ],
+    "fr": [
+      "Vomissements, parfois 1 à 4 jours après le repas gras",
+      "Douleurs au ventre (le chien peut s’étirer en « position de prière »)",
+      "Diarrhée",
+      "Refus de manger",
+      "Fatigue, fièvre"
     ]
   },
   "what_to_do": {
     "en": "If your dog ate a lot of fatty food, or shows vomiting, tummy pain or tiredness in the following days, contact your vet. Note what was eaten and roughly how much. Signs of pancreatitis can be delayed by a few days.",
     "sl": "Če je pes pojedel veliko mastne hrane ali v naslednjih dneh bruha, ga boli trebuh ali je utrujen, pokličite veterinarja. Zapišite si, kaj in približno koliko je pojedel. Znaki vnetja trebušne slinavke se lahko pokažejo z nekajdnevno zamudo.",
-    "de": "Wenn Ihr Hund viel Fettes gefressen hat oder in den folgenden Tagen erbricht, Bauchschmerzen hat oder müde wirkt, wenden Sie sich an Ihren Tierarzt. Notieren Sie, was gefressen wurde und ungefähr wie viel. Anzeichen einer Pankreatitis können einige Tage verzögert auftreten."
+    "de": "Wenn Ihr Hund viel Fettes gefressen hat oder in den folgenden Tagen erbricht, Bauchschmerzen hat oder müde wirkt, wenden Sie sich an Ihren Tierarzt. Notieren Sie, was gefressen wurde und ungefähr wie viel. Anzeichen einer Pankreatitis können einige Tage verzögert auftreten.",
+    "fr": "Si votre chien a mangé beaucoup d’aliments gras, ou s’il vomit, a mal au ventre ou semble fatigué dans les jours qui suivent, contactez votre vétérinaire. Notez ce qu’il a mangé et en quelle quantité approximative. Les signes de pancréatite peuvent n’apparaître qu’après quelques jours."
   },
   "serving": {
     "en": "If you share meat, choose plain, lean, cooked meat without skin, fat or seasoning, and no bones.",
     "sl": "Če delite meso, izberite navadno, pusto, kuhano meso brez kože, maščobe in začimb ter brez kosti.",
-    "de": "Wenn Sie Fleisch teilen, wählen Sie pures, mageres, gegartes Fleisch ohne Haut, Fett oder Gewürze und ohne Knochen."
+    "de": "Wenn Sie Fleisch teilen, wählen Sie pures, mageres, gegartes Fleisch ohne Haut, Fett oder Gewürze und ohne Knochen.",
+    "fr": "Si vous partagez de la viande, choisissez une viande maigre, nature et cuite, sans peau, sans gras, sans assaisonnement et sans os."
   },
   "child": {
     "en": "Fatty bits of meat can give dogs a sore tummy. Leave the fat on your plate and give your dog its own food.",
     "sl": "Mastni koščki mesa lahko psu povzročijo boleč trebušček. Maščobo pusti na krožniku, psu pa daj njegovo hrano.",
-    "de": "Fettige Fleischstückchen können Hunden Bauchweh machen. Lass das Fett auf deinem Teller und gib deinem Hund sein eigenes Futter."
+    "de": "Fettige Fleischstückchen können Hunden Bauchweh machen. Lass das Fett auf deinem Teller und gib deinem Hund sein eigenes Futter.",
+    "fr": "Les morceaux de viande grasse peuvent donner mal au ventre aux chiens. Laisse le gras dans ton assiette et donne à ton chien sa propre nourriture."
   },
   "faq": [
     {
       "q": {
         "en": "What is pancreatitis?",
         "sl": "Kaj je vnetje trebušne slinavke?",
-        "de": "Was ist eine Pankreatitis?"
+        "de": "Was ist eine Pankreatitis?",
+        "fr": "Qu’est-ce que la pancréatite ?"
       },
       "a": {
         "en": "An inflammation of the pancreas that causes vomiting, nausea and pain. In dogs it can be triggered by a fatty meal.",
         "sl": "Vnetje trebušne slinavke povzroča bruhanje, slabost in bolečine. Pri psih ga lahko sproži mastni obrok.",
-        "de": "Eine Entzündung der Bauchspeicheldrüse, die Erbrechen, Übelkeit und Schmerzen verursacht. Bei Hunden kann sie durch eine fettreiche Mahlzeit ausgelöst werden."
+        "de": "Eine Entzündung der Bauchspeicheldrüse, die Erbrechen, Übelkeit und Schmerzen verursacht. Bei Hunden kann sie durch eine fettreiche Mahlzeit ausgelöst werden.",
+        "fr": "Une inflammation du pancréas qui provoque vomissements, nausées et douleurs. Chez le chien, elle peut être déclenchée par un repas gras."
       }
     },
     {
       "q": {
         "en": "Is turkey skin okay at Christmas?",
         "sl": "Je puranja kožica za praznike v redu?",
-        "de": "Ist Putenhaut an Weihnachten in Ordnung?"
+        "de": "Ist Putenhaut an Weihnachten in Ordnung?",
+        "fr": "La peau de dinde à Noël, c’est permis ?"
       },
       "a": {
         "en": "No. Turkey skin and other fatty table foods can cause anything from stomach upset to severe pancreatitis.",
         "sl": "Ne. Puranja kožica in druga mastna hrana z mize lahko povzroči vse od prebavnih težav do hudega vnetja trebušne slinavke.",
-        "de": "Nein. Putenhaut und andere fettige Essensreste vom Tisch können alles von einer Magenverstimmung bis zu einer schweren Pankreatitis verursachen."
+        "de": "Nein. Putenhaut und andere fettige Essensreste vom Tisch können alles von einer Magenverstimmung bis zu einer schweren Pankreatitis verursachen.",
+        "fr": "Non. La peau de dinde et les autres aliments de table gras peuvent provoquer aussi bien des troubles digestifs qu’une pancréatite grave."
       }
     }
   ],
@@ -171,6 +190,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6e0825ae37cf137af9645cd8674f87cdb0461bf21f59f6014b47e3935f471e15"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6a5b968a384ba156b14cdcdc9f28ac0525887d4c9e83c56274e5f6b5ae49696c"
     }
   }
 }

@@ -4,28 +4,33 @@
   "name": {
     "en": "Xylitol",
     "sl": "Ksilitol",
-    "de": "Xylit"
+    "de": "Xylit",
+    "fr": "Xylitol"
   },
   "question": {
     "en": "Can dogs eat xylitol?",
     "sl": "Ali lahko psi jedo ksilitol?",
-    "de": "Dürfen Hunde Xylit fressen?"
+    "de": "Dürfen Hunde Xylit fressen?",
+    "fr": "Les chiens peuvent-ils manger du xylitol ?"
   },
   "url_slug": {
     "en": "xylitol",
     "sl": "ksilitol",
-    "de": "xylit"
+    "de": "xylit",
+    "fr": "xylitol"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Xylitol, a sugar-free sweetener, is toxic to dogs. Even small amounts can cause a dangerous drop in blood sugar, seizures and liver failure. It is found in sugar-free gum, sweets, baked goods, toothpaste and supplements.",
     "sl": "Ne. Ksilitol, sladilo brez sladkorja, je za pse strupen. Že majhne količine lahko povzročijo nevaren padec krvnega sladkorja, krče in odpoved jeter. Najdemo ga v žvečilnih gumijih brez sladkorja, sladkarijah, pecivu, zobnih pastah in prehranskih dopolnilih.",
-    "de": "Nein. Xylit (Birkenzucker), ein zuckerfreier Süßstoff, ist für Hunde giftig. Schon kleine Mengen können einen gefährlichen Abfall des Blutzuckers, Krampfanfälle und Leberversagen verursachen. Xylit steckt in zuckerfreiem Kaugummi, Süßigkeiten, Backwaren, Zahnpasta und Nahrungsergänzungsmitteln."
+    "de": "Nein. Xylit (Birkenzucker), ein zuckerfreier Süßstoff, ist für Hunde giftig. Schon kleine Mengen können einen gefährlichen Abfall des Blutzuckers, Krampfanfälle und Leberversagen verursachen. Xylit steckt in zuckerfreiem Kaugummi, Süßigkeiten, Backwaren, Zahnpasta und Nahrungsergänzungsmitteln.",
+    "fr": "Non. Le xylitol, un édulcorant « sans sucre », est toxique pour les chiens. Même en petite quantité, il peut provoquer une chute dangereuse du taux de sucre dans le sang, des convulsions et une insuffisance hépatique. On le trouve dans les chewing-gums sans sucre, les bonbons, les pâtisseries, le dentifrice et les compléments alimentaires."
   },
   "why": {
     "en": "In dogs, xylitol can cause a rapid, dangerous drop in blood sugar. Some dogs also develop severe liver injury; how this happens is not yet known. Sugar-free gum is the most common source, and the amount of xylitol can differ even between flavours of one brand.",
     "sl": "Pri psih ksilitol lahko povzroči hiter in nevaren padec krvnega sladkorja. Pri nekaterih psih pride tudi do hude okvare jeter; kako, še ni znano. Najpogostejši vir je žvečilni gumi brez sladkorja, količina ksilitola pa se lahko razlikuje celo med okusi iste znamke.",
-    "de": "Xylit kann bei Hunden einen schnellen, gefährlichen Abfall des Blutzuckers verursachen. Manche Hunde entwickeln außerdem eine schwere Leberschädigung; wie es dazu kommt, ist noch nicht bekannt. Zuckerfreier Kaugummi ist die häufigste Quelle, und die Xylitmenge kann sogar zwischen den Geschmacksrichtungen einer einzigen Marke schwanken."
+    "de": "Xylit kann bei Hunden einen schnellen, gefährlichen Abfall des Blutzuckers verursachen. Manche Hunde entwickeln außerdem eine schwere Leberschädigung; wie es dazu kommt, ist noch nicht bekannt. Zuckerfreier Kaugummi ist die häufigste Quelle, und die Xylitmenge kann sogar zwischen den Geschmacksrichtungen einer einzigen Marke schwanken.",
+    "fr": "Chez le chien, le xylitol peut provoquer une chute rapide et dangereuse du taux de sucre dans le sang. Certains chiens développent aussi une grave atteinte du foie, dont le mécanisme n’est pas encore connu. Le chewing-gum sans sucre en est la source la plus fréquente, et la quantité de xylitol peut varier même entre les parfums d’une même marque."
   },
   "signs": {
     "en": [
@@ -48,42 +53,55 @@
       "Wackeliger Gang, Koordinationsverlust",
       "Krampfanfälle",
       "Anzeichen von Unterzuckerung können innerhalb von 30 Minuten einsetzen"
+    ],
+    "fr": [
+      "Vomissements",
+      "Faiblesse et fatigue",
+      "Démarche titubante, perte de coordination",
+      "Convulsions",
+      "Les signes d’hypoglycémie peuvent apparaître en 30 minutes"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline as soon as you realise your dog ate something with xylitol. Note the product and how much was eaten. Don't wait for signs, and don't give anything by mouth unless your vet tells you to.",
     "sl": "Takoj ko opazite, da je pes pojedel nekaj s ksilitolom, pokličite veterinarja ali center za zastrupitve živali. Zapišite si izdelek in koliko ga je pojedel. Ne čakajte na znake in psu ne dajajte ničesar v usta, razen če tako naroči veterinar.",
-    "de": "Wenden Sie sich an Ihren Tierarzt oder einen Giftnotruf für Tiere, sobald Sie merken, dass Ihr Hund etwas mit Xylit gefressen hat. Notieren Sie das Produkt und wie viel gefressen wurde. Warten Sie nicht auf Anzeichen und geben Sie Ihrem Hund nichts ein, es sei denn, Ihr Tierarzt weist Sie dazu an."
+    "de": "Wenden Sie sich an Ihren Tierarzt oder einen Giftnotruf für Tiere, sobald Sie merken, dass Ihr Hund etwas mit Xylit gefressen hat. Notieren Sie das Produkt und wie viel gefressen wurde. Warten Sie nicht auf Anzeichen und geben Sie Ihrem Hund nichts ein, es sei denn, Ihr Tierarzt weist Sie dazu an.",
+    "fr": "Contactez votre vétérinaire ou un centre antipoison vétérinaire dès que vous vous rendez compte que votre chien a mangé un produit contenant du xylitol. Notez le produit et la quantité mangée. N’attendez pas l’apparition des signes et ne lui donnez rien par la bouche, sauf si votre vétérinaire vous le demande."
   },
   "serving": null,
   "child": {
     "en": "Sugar-free gum can contain xylitol, which is very bad for dogs. Keep gum and toothpaste away, and tell a grown-up if your dog eats some.",
     "sl": "Žvečilni gumi brez sladkorja lahko vsebuje ksilitol, ki je za pse zelo slab. Gumi in zobno pasto pospravi ter povej odraslemu, če ju pes poje.",
-    "de": "Zuckerfreier Kaugummi kann Xylit enthalten, und das ist für Hunde sehr schlecht. Räum Kaugummi und Zahnpasta weg und sag einem Erwachsenen Bescheid, wenn dein Hund davon frisst."
+    "de": "Zuckerfreier Kaugummi kann Xylit enthalten, und das ist für Hunde sehr schlecht. Räum Kaugummi und Zahnpasta weg und sag einem Erwachsenen Bescheid, wenn dein Hund davon frisst.",
+    "fr": "Le chewing-gum sans sucre peut contenir du xylitol, très mauvais pour les chiens. Range le chewing-gum et le dentifrice, et préviens un adulte si ton chien en mange."
   },
   "faq": [
     {
       "q": {
         "en": "Where is xylitol found?",
         "sl": "Kje najdemo ksilitol?",
-        "de": "Wo steckt Xylit drin?"
+        "de": "Wo steckt Xylit drin?",
+        "fr": "Où trouve-t-on du xylitol ?"
       },
       "a": {
         "en": "In sugar-free gum, sweets, baked goods, toothpaste, vitamins and supplements. Sugar-free gum is the most common source of poisoning.",
         "sl": "V žvečilnih gumijih brez sladkorja, sladkarijah, pecivu, zobnih pastah, vitaminih in prehranskih dopolnilih. Najpogostejši vir zastrupitev je žvečilni gumi brez sladkorja.",
-        "de": "In zuckerfreiem Kaugummi, Süßigkeiten, Backwaren, Zahnpasta, Vitaminpräparaten und Nahrungsergänzungsmitteln. Zuckerfreier Kaugummi ist die häufigste Quelle von Vergiftungen."
+        "de": "In zuckerfreiem Kaugummi, Süßigkeiten, Backwaren, Zahnpasta, Vitaminpräparaten und Nahrungsergänzungsmitteln. Zuckerfreier Kaugummi ist die häufigste Quelle von Vergiftungen.",
+        "fr": "Dans les chewing-gums sans sucre, les bonbons, les pâtisseries, le dentifrice, les vitamines et les compléments alimentaires. Le chewing-gum sans sucre est la source d’intoxication la plus fréquente."
       }
     },
     {
       "q": {
         "en": "Can I use human toothpaste for my dog?",
         "sl": "Lahko psu umivam zobe s človeško zobno pasto?",
-        "de": "Darf ich für meinen Hund Zahnpasta für Menschen verwenden?"
+        "de": "Darf ich für meinen Hund Zahnpasta für Menschen verwenden?",
+        "fr": "Puis-je utiliser du dentifrice pour humains pour mon chien ?"
       },
       "a": {
         "en": "Some toothpastes contain xylitol, which is toxic to dogs, so human toothpaste is not a safe choice.",
         "sl": "Nekatere zobne paste vsebujejo ksilitol, ki je za pse strupen, zato človeška zobna pasta ni varna izbira.",
-        "de": "Manche Zahnpasten enthalten Xylit, das für Hunde giftig ist – Zahnpasta für Menschen ist daher keine sichere Wahl."
+        "de": "Manche Zahnpasten enthalten Xylit, das für Hunde giftig ist – Zahnpasta für Menschen ist daher keine sichere Wahl.",
+        "fr": "Certains dentifrices contiennent du xylitol, toxique pour les chiens : le dentifrice pour humains n’est donc pas un choix sûr."
       }
     }
   ],
@@ -178,6 +196,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e4a6a0192142b80689ddcb1a724643fe55d2006b899a83f929e59d3074ad89b6"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3448a1e2ccb388ed461d3a289fe654ddfe6848043bdd79ce7a54b1d08927c2d0"
     }
   }
 }

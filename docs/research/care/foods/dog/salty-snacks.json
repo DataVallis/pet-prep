@@ -4,28 +4,33 @@
   "name": {
     "en": "Salty snacks",
     "sl": "Slani prigrizki",
-    "de": "Salzige Snacks"
+    "de": "Salzige Snacks",
+    "fr": "En-cas salés"
   },
   "question": {
     "en": "Can dogs eat salty snacks?",
     "sl": "Ali lahko psi jedo slane prigrizke?",
-    "de": "Dürfen Hunde salzige Snacks fressen?"
+    "de": "Dürfen Hunde salzige Snacks fressen?",
+    "fr": "Les chiens peuvent-ils manger des en-cas salés ?"
   },
   "url_slug": {
     "en": "salty-snacks",
     "sl": "slani-prigrizki",
-    "de": "salzige-snacks"
+    "de": "salzige-snacks",
+    "fr": "en-cas-sales"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Not recommended. A few salty snacks are unlikely to cause salt poisoning in a healthy dog with fresh water, but salty foods are generally not good for dogs, especially those with heart disease. Eating a lot can cause thirst, vomiting and worse.",
     "sl": "Ni priporočljivo. Nekaj slanih prigrizkov pri zdravem psu s svežo vodo verjetno ne povzroči zastrupitve s soljo, a slana hrana psom na splošno ne koristi, zlasti tistim z boleznijo srca. Večja količina lahko povzroči žejo, bruhanje in hujše težave.",
-    "de": "Nicht empfohlen. Ein paar salzige Snacks lösen bei einem gesunden Hund mit frischem Wasser wahrscheinlich keine Salzvergiftung aus, aber salziges Essen ist grundsätzlich nicht gut für Hunde, besonders bei Herzerkrankungen. Große Mengen können Durst, Erbrechen und Schlimmeres verursachen."
+    "de": "Nicht empfohlen. Ein paar salzige Snacks lösen bei einem gesunden Hund mit frischem Wasser wahrscheinlich keine Salzvergiftung aus, aber salziges Essen ist grundsätzlich nicht gut für Hunde, besonders bei Herzerkrankungen. Große Mengen können Durst, Erbrechen und Schlimmeres verursachen.",
+    "fr": "Déconseillé. Quelques en-cas salés ont peu de chances de provoquer une intoxication au sel chez un chien en bonne santé qui a de l’eau fraîche, mais les aliments salés ne sont généralement pas bons pour les chiens, surtout ceux qui ont une maladie cardiaque. En manger beaucoup peut provoquer soif, vomissements, voire pire."
   },
   "why": {
     "en": "Salty food in moderation should not cause salt toxicity, but too much salt can lead to fluid retention and, in large amounts, salt poisoning. Small dogs with health issues are more at risk when fresh water isn't available. Dog foods are best served without added salt or seasoning.",
     "sl": "Slana hrana v zmernih količinah naj ne bi povzročila zastrupitve s soljo, preveč soli pa lahko vodi v zastajanje tekočine in pri velikih količinah v zastrupitev. Majhni psi z zdravstvenimi težavami so bolj ogroženi, kadar nimajo sveže vode. Hrano za pse je najbolje ponuditi brez dodane soli in začimb.",
-    "de": "Salziges Essen in Maßen sollte keine Salzvergiftung verursachen, aber zu viel Salz kann zu Wassereinlagerungen und in großen Mengen zu einer Salzvergiftung führen. Kleine Hunde mit gesundheitlichen Problemen sind stärker gefährdet, wenn kein frisches Wasser verfügbar ist. Essen für Hunde serviert man am besten ohne zugesetztes Salz und ohne Gewürze."
+    "de": "Salziges Essen in Maßen sollte keine Salzvergiftung verursachen, aber zu viel Salz kann zu Wassereinlagerungen und in großen Mengen zu einer Salzvergiftung führen. Kleine Hunde mit gesundheitlichen Problemen sind stärker gefährdet, wenn kein frisches Wasser verfügbar ist. Essen für Hunde serviert man am besten ohne zugesetztes Salz und ohne Gewürze.",
+    "fr": "Des aliments salés avec modération ne devraient pas provoquer d’intoxication au sel, mais trop de sel peut entraîner une rétention d’eau et, en grande quantité, une intoxication au sel. Les petits chiens ayant des problèmes de santé sont plus à risque lorsqu’ils n’ont pas d’eau fraîche. Les aliments destinés au chien sont à servir de préférence sans sel ajouté ni assaisonnement."
   },
   "signs": {
     "en": [
@@ -48,34 +53,46 @@
       "Durchfall",
       "Wackeliger Gang, Müdigkeit",
       "Zittern oder Krampfanfälle"
+    ],
+    "fr": [
+      "Soif intense et urines abondantes",
+      "Vomissements, souvent en quelques heures",
+      "Diarrhée",
+      "Démarche titubante, fatigue",
+      "Tremblements ou convulsions"
     ]
   },
   "what_to_do": {
     "en": "If your dog ate a large amount of salty snacks, contact your vet or a pet poison helpline. Note what and how much was eaten. Fresh water should always be available.",
     "sl": "Če je pes pojedel veliko slanih prigrizkov, pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj in koliko je pojedel. Sveža voda naj bo vedno na voljo.",
-    "de": "Wenn Ihr Hund eine große Menge salziger Snacks gefressen hat, wenden Sie sich an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was und wie viel gefressen wurde. Frisches Wasser sollte immer bereitstehen."
+    "de": "Wenn Ihr Hund eine große Menge salziger Snacks gefressen hat, wenden Sie sich an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was und wie viel gefressen wurde. Frisches Wasser sollte immer bereitstehen.",
+    "fr": "Si votre chien a mangé une grande quantité d’en-cas salés, contactez votre vétérinaire ou un centre antipoison vétérinaire. Notez ce qu’il a mangé et en quelle quantité. De l’eau fraîche doit toujours être à sa disposition."
   },
   "serving": {
     "en": "Better not to share. If you give people food, serve it plain, without salt or seasoning.",
     "sl": "Raje jih ne delite. Če psu daste človeško hrano, naj bo navadna, brez soli in začimb.",
-    "de": "Besser nicht teilen. Wenn Sie Ihrem Hund doch etwas von Ihrem Essen geben, dann pur, ohne Salz und Gewürze."
+    "de": "Besser nicht teilen. Wenn Sie Ihrem Hund doch etwas von Ihrem Essen geben, dann pur, ohne Salz und Gewürze.",
+    "fr": "Mieux vaut ne pas en partager. Si vous donnez des aliments pour humains, servez-les nature, sans sel ni assaisonnement."
   },
   "child": {
     "en": "Salty snacks are for people. Too much salt makes dogs thirsty and sick, so give your dog its own treats.",
     "sl": "Slani prigrizki so za ljudi. Preveč soli psa odžeja in mu škodi, zato mu daj njegove priboljške.",
-    "de": "Salzige Snacks sind für Menschen. Zu viel Salz macht Hunde durstig und krank. Gib deinem Hund lieber seine eigenen Leckerlis."
+    "de": "Salzige Snacks sind für Menschen. Zu viel Salz macht Hunde durstig und krank. Gib deinem Hund lieber seine eigenen Leckerlis.",
+    "fr": "Les en-cas salés sont pour les humains. Trop de sel donne soif aux chiens et les rend malades, alors donne à ton chien ses propres friandises."
   },
   "faq": [
     {
       "q": {
         "en": "Does my dog need water after salty food?",
         "sl": "Potrebuje pes po slani hrani vodo?",
-        "de": "Braucht mein Hund nach salzigem Essen Wasser?"
+        "de": "Braucht mein Hund nach salzigem Essen Wasser?",
+        "fr": "Mon chien a-t-il besoin d’eau après un aliment salé ?"
       },
       "a": {
         "en": "Yes. Fresh drinking water helps a dog flush out salt; salt poisoning is unlikely when fresh water is available.",
         "sl": "Da. Sveža pitna voda psu pomaga izplakniti sol; zastrupitev s soljo je malo verjetna, kadar ima pes svežo vodo.",
-        "de": "Ja. Frisches Trinkwasser hilft einem Hund, das Salz auszuspülen; eine Salzvergiftung ist unwahrscheinlich, solange frisches Wasser verfügbar ist."
+        "de": "Ja. Frisches Trinkwasser hilft einem Hund, das Salz auszuspülen; eine Salzvergiftung ist unwahrscheinlich, solange frisches Wasser verfügbar ist.",
+        "fr": "Oui. L’eau fraîche aide le chien à éliminer le sel ; l’intoxication au sel est peu probable quand il a de l’eau fraîche."
       }
     }
   ],
@@ -163,6 +180,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ca2e04731a2d03c524e5c08c341d58fafaec1523437f9e7d33e1b854a1b767d4"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f9fd1ad2113116099ad4c92f73ed5a1b0237b767fd5464d869dadf92c0d6f2c9"
     }
   }
 }

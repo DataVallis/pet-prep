@@ -4,28 +4,33 @@
   "name": {
     "en": "Garlic",
     "sl": "Česen",
-    "de": "Knoblauch"
+    "de": "Knoblauch",
+    "fr": "Ail"
   },
   "question": {
     "en": "Can dogs eat garlic?",
     "sl": "Ali lahko psi jedo česen?",
-    "de": "Dürfen Hunde Knoblauch fressen?"
+    "de": "Dürfen Hunde Knoblauch fressen?",
+    "fr": "Les chiens peuvent-ils manger de l’ail ?"
   },
   "url_slug": {
     "en": "garlic",
     "sl": "cesen",
-    "de": "knoblauch"
+    "de": "knoblauch",
+    "fr": "ail"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Garlic is toxic to dogs and is about 3 to 5 times more toxic than onion. Raw, cooked, dried and powdered garlic can all damage red blood cells and cause anaemia. Signs often appear only a few days after eating it.",
     "sl": "Ne. Česen je za pse strupen, in sicer približno 3- do 5-krat bolj kot čebula. Surov, kuhan, posušen in česen v prahu lahko poškodujejo rdeče krvničke in povzročijo slabokrvnost. Znaki se pogosto pokažejo šele nekaj dni po zaužitju.",
-    "de": "Nein. Knoblauch ist für Hunde giftig und etwa 3- bis 5-mal giftiger als Zwiebeln. Roher, gekochter, getrockneter Knoblauch und Knoblauchpulver können die roten Blutkörperchen schädigen und eine Blutarmut (Anämie) verursachen. Anzeichen treten oft erst einige Tage nach dem Fressen auf."
+    "de": "Nein. Knoblauch ist für Hunde giftig und etwa 3- bis 5-mal giftiger als Zwiebeln. Roher, gekochter, getrockneter Knoblauch und Knoblauchpulver können die roten Blutkörperchen schädigen und eine Blutarmut (Anämie) verursachen. Anzeichen treten oft erst einige Tage nach dem Fressen auf.",
+    "fr": "Non. L’ail est toxique pour les chiens, environ 3 à 5 fois plus que l’oignon. Cru, cuit, séché ou en poudre, il peut endommager les globules rouges et provoquer une anémie. Les signes n’apparaissent souvent que quelques jours après l’ingestion."
   },
   "why": {
     "en": "It belongs to the allium family (onion, garlic, leek, chives), which is toxic to dogs. These plants contain compounds that damage red blood cells and can lead to anaemia. All parts and all forms are harmful: raw, cooked, dried and powdered. Stomach upset can happen with any amount; larger amounts damage the blood.",
     "sl": "Spada v družino lukov (čebula, česen, por, drobnjak), ki je za pse strupena. Te rastline vsebujejo snovi, ki poškodujejo rdeče krvničke in lahko povzročijo slabokrvnost. Škodljivi so vsi deli in vse oblike: surove, kuhane, posušene in v prahu. Prebavne težave se lahko pojavijo pri vsaki količini, večje količine pa poškodujejo kri.",
-    "de": "Knoblauch gehört zur Gattung Allium (Zwiebel, Knoblauch, Lauch, Schnittlauch), die für Hunde giftig ist. Diese Pflanzen enthalten Stoffe, die die roten Blutkörperchen schädigen und zu Blutarmut führen können. Alle Pflanzenteile und alle Formen sind schädlich: roh, gekocht, getrocknet und als Pulver. Magen-Darm-Beschwerden können bei jeder Menge auftreten; größere Mengen schädigen das Blut."
+    "de": "Knoblauch gehört zur Gattung Allium (Zwiebel, Knoblauch, Lauch, Schnittlauch), die für Hunde giftig ist. Diese Pflanzen enthalten Stoffe, die die roten Blutkörperchen schädigen und zu Blutarmut führen können. Alle Pflanzenteile und alle Formen sind schädlich: roh, gekocht, getrocknet und als Pulver. Magen-Darm-Beschwerden können bei jeder Menge auftreten; größere Mengen schädigen das Blut.",
+    "fr": "L’ail appartient à la famille des alliums (oignon, ail, poireau, ciboulette), toxique pour les chiens. Ces plantes contiennent des composés qui endommagent les globules rouges et peuvent provoquer une anémie. Toutes les parties et toutes les formes sont nocives : cru, cuit, séché et en poudre. Des troubles digestifs peuvent survenir quelle que soit la quantité ; de plus grandes quantités endommagent le sang."
   },
   "signs": {
     "en": [
@@ -45,54 +50,68 @@
       "Weniger Appetit als sonst",
       "Magen-Darm-Beschwerden, auch nach kleinen Mengen",
       "Anzeichen einer Blutarmut (geschädigte rote Blutkörperchen), meist einige Tage später"
+    ],
+    "fr": [
+      "Vomissements et diarrhée",
+      "Baisse d’appétit",
+      "Troubles digestifs, même après de petites quantités",
+      "Signes d’anémie (globules rouges endommagés), généralement quelques jours plus tard"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away. Note what was eaten (garlic) and roughly how much. Don't wait for signs: damage to the blood usually shows only a few days later.",
     "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj je pes pojedel (česen) in približno koliko. Ne čakajte na znake: okvara krvi se običajno pokaže šele po nekaj dneh.",
-    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was gefressen wurde (Knoblauch) und ungefähr wie viel. Warten Sie nicht auf Anzeichen: Schäden am Blut zeigen sich meist erst einige Tage später."
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was gefressen wurde (Knoblauch) und ungefähr wie viel. Warten Sie nicht auf Anzeichen: Schäden am Blut zeigen sich meist erst einige Tage später.",
+    "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce qui a été mangé (ail) et en quelle quantité approximative. N’attendez pas l’apparition des signes : les dommages au sang n’apparaissent généralement qu’après quelques jours."
   },
   "serving": null,
   "child": {
     "en": "Garlic smells strong and tastes good to people, but it is not for dogs. Tell a grown-up if your dog eats some.",
     "sl": "Česen ljudem diši in tekne, a ni za pse. Povej odraslemu, če ga pes poje.",
-    "de": "Knoblauch riecht stark und schmeckt Menschen gut, aber er ist nichts für Hunde. Sag einem Erwachsenen Bescheid, wenn dein Hund welchen frisst."
+    "de": "Knoblauch riecht stark und schmeckt Menschen gut, aber er ist nichts für Hunde. Sag einem Erwachsenen Bescheid, wenn dein Hund welchen frisst.",
+    "fr": "L’ail sent fort et plaît aux humains, mais il n’est pas pour les chiens. Préviens un adulte si ton chien en mange."
   },
   "faq": [
     {
       "q": {
         "en": "Is garlic worse than onion?",
         "sl": "Je česen hujši od čebule?",
-        "de": "Ist Knoblauch schlimmer als Zwiebeln?"
+        "de": "Ist Knoblauch schlimmer als Zwiebeln?",
+        "fr": "L’ail est-il pire que l’oignon ?"
       },
       "a": {
         "en": "Yes. Garlic is described as about 3 to 5 times more toxic to dogs than onion.",
         "sl": "Da. Česen je za pse opisan kot približno 3- do 5-krat bolj strupen od čebule.",
-        "de": "Ja. Knoblauch gilt für Hunde als etwa 3- bis 5-mal giftiger als Zwiebeln."
+        "de": "Ja. Knoblauch gilt für Hunde als etwa 3- bis 5-mal giftiger als Zwiebeln.",
+        "fr": "Oui. L’ail est décrit comme environ 3 à 5 fois plus toxique que l’oignon pour les chiens."
       }
     },
     {
       "q": {
         "en": "Is it safe when cooked or as powder?",
         "sl": "Je varno, če je kuhano ali v prahu?",
-        "de": "Ist er gekocht oder als Pulver unbedenklich?"
+        "de": "Ist er gekocht oder als Pulver unbedenklich?",
+        "fr": "L’ail cuit ou en poudre est-il sans danger ?"
       },
       "a": {
         "en": "No. Raw, cooked, dried, powdered and liquid forms are all poisonous to dogs.",
         "sl": "Ne. Za pse so strupene surove, kuhane, posušene, praškaste in tekoče oblike.",
-        "de": "Nein. Roh, gekocht, getrocknet, als Pulver und in flüssiger Form – alle sind für Hunde giftig."
+        "de": "Nein. Roh, gekocht, getrocknet, als Pulver und in flüssiger Form – alle sind für Hunde giftig.",
+        "fr": "Non. Cru, cuit, séché, en poudre ou sous forme liquide, il est toujours toxique pour les chiens."
       }
     },
     {
       "q": {
         "en": "Why don't signs show straight away?",
         "sl": "Zakaj se znaki ne pokažejo takoj?",
-        "de": "Warum zeigen sich die Anzeichen nicht sofort?"
+        "de": "Warum zeigen sich die Anzeichen nicht sofort?",
+        "fr": "Pourquoi les signes n’apparaissent-ils pas tout de suite ?"
       },
       "a": {
         "en": "Symptoms can start within 24 hours but more often take a few days to appear; signs of anaemia typically develop several days after eating.",
         "sl": "Znaki se lahko pojavijo v 24 urah, pogosteje pa šele po nekaj dneh; znaki slabokrvnosti se običajno razvijejo nekaj dni po zaužitju.",
-        "de": "Beschwerden können innerhalb von 24 Stunden beginnen, treten aber häufiger erst nach einigen Tagen auf; Anzeichen einer Blutarmut entwickeln sich typischerweise mehrere Tage nach dem Fressen."
+        "de": "Beschwerden können innerhalb von 24 Stunden beginnen, treten aber häufiger erst nach einigen Tagen auf; Anzeichen einer Blutarmut entwickeln sich typischerweise mehrere Tage nach dem Fressen.",
+        "fr": "Les symptômes peuvent commencer dans les 24 heures, mais mettent plus souvent quelques jours à apparaître ; les signes d’anémie se développent généralement plusieurs jours après l’ingestion."
       }
     }
   ],
@@ -200,6 +219,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6a39a6be2a6fc8bf458fe4a00699282c121d5150e0aeee2e365a73410393ff2c"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3f01162bacbcee5c60d069615e3b617ad1a03f980c92380a20a93d803e6fa55a"
     }
   }
 }

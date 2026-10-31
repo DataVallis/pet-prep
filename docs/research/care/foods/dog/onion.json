@@ -4,28 +4,33 @@
   "name": {
     "en": "Onion",
     "sl": "Čebula",
-    "de": "Zwiebeln"
+    "de": "Zwiebeln",
+    "fr": "Oignon"
   },
   "question": {
     "en": "Can dogs eat onion?",
     "sl": "Ali lahko psi jedo čebulo?",
-    "de": "Dürfen Hunde Zwiebeln fressen?"
+    "de": "Dürfen Hunde Zwiebeln fressen?",
+    "fr": "Les chiens peuvent-ils manger de l’oignon ?"
   },
   "url_slug": {
     "en": "onion",
     "sl": "cebula",
-    "de": "zwiebeln"
+    "de": "zwiebeln",
+    "fr": "oignon"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Onion is toxic to dogs in every form: raw, cooked, dried or powdered. It damages red blood cells and can cause anaemia, with signs often appearing only days later. Powders and soup mixes count too.",
     "sl": "Ne. Čebula je za pse strupena v vseh oblikah: surova, kuhana, posušena ali v prahu. Poškoduje rdeče krvničke in lahko povzroči slabokrvnost, znaki pa se pogosto pokažejo šele po nekaj dneh. Štejejo tudi praški in mešanice za juhe.",
-    "de": "Nein. Zwiebeln sind für Hunde in jeder Form giftig: roh, gekocht, getrocknet oder als Pulver. Sie schädigen rote Blutkörperchen und können Blutarmut (Anämie) verursachen; Anzeichen zeigen sich oft erst Tage später. Auch Pulver und Tütensuppen zählen dazu."
+    "de": "Nein. Zwiebeln sind für Hunde in jeder Form giftig: roh, gekocht, getrocknet oder als Pulver. Sie schädigen rote Blutkörperchen und können Blutarmut (Anämie) verursachen; Anzeichen zeigen sich oft erst Tage später. Auch Pulver und Tütensuppen zählen dazu.",
+    "fr": "Non. L’oignon est toxique pour les chiens sous toutes ses formes : cru, cuit, séché ou en poudre. Il endommage les globules rouges et peut provoquer une anémie, dont les signes n’apparaissent souvent que quelques jours plus tard. Les poudres et les soupes instantanées comptent aussi."
   },
   "why": {
     "en": "It belongs to the allium family (onion, garlic, leek, chives), which is toxic to dogs. These plants contain compounds that damage red blood cells and can lead to anaemia. All parts and all forms are harmful: raw, cooked, dried and powdered. Stomach upset can happen with any amount; larger amounts damage the blood.",
     "sl": "Spada v družino lukov (čebula, česen, por, drobnjak), ki je za pse strupena. Te rastline vsebujejo snovi, ki poškodujejo rdeče krvničke in lahko povzročijo slabokrvnost. Škodljivi so vsi deli in vse oblike: surove, kuhane, posušene in v prahu. Prebavne težave se lahko pojavijo pri vsaki količini, večje količine pa poškodujejo kri.",
-    "de": "Zwiebeln gehören zur Familie der Lauchgewächse (Zwiebeln, Knoblauch, Lauch, Schnittlauch), die für Hunde giftig sind. Diese Pflanzen enthalten Stoffe, die rote Blutkörperchen schädigen und zu Blutarmut führen können. Alle Teile und alle Formen sind schädlich: roh, gekocht, getrocknet und als Pulver. Magen-Darm-Beschwerden können bei jeder Menge auftreten; größere Mengen schädigen das Blut."
+    "de": "Zwiebeln gehören zur Familie der Lauchgewächse (Zwiebeln, Knoblauch, Lauch, Schnittlauch), die für Hunde giftig sind. Diese Pflanzen enthalten Stoffe, die rote Blutkörperchen schädigen und zu Blutarmut führen können. Alle Teile und alle Formen sind schädlich: roh, gekocht, getrocknet und als Pulver. Magen-Darm-Beschwerden können bei jeder Menge auftreten; größere Mengen schädigen das Blut.",
+    "fr": "L’oignon appartient à la famille des alliums (oignon, ail, poireau, ciboulette), toxique pour les chiens. Ces plantes contiennent des composés qui endommagent les globules rouges et peuvent provoquer une anémie. Toutes les parties et toutes les formes sont nocives : cru, cuit, séché et en poudre. Des troubles digestifs peuvent survenir quelle que soit la quantité ; de plus grandes quantités endommagent le sang."
   },
   "signs": {
     "en": [
@@ -45,42 +50,54 @@
       "Frisst weniger als sonst",
       "Magenverstimmung, schon nach kleinen Mengen",
       "Anzeichen einer Blutarmut (geschädigte rote Blutkörperchen), meist einige Tage später"
+    ],
+    "fr": [
+      "Vomissements et diarrhée",
+      "Baisse d’appétit",
+      "Troubles digestifs, même après de petites quantités",
+      "Signes d’anémie (globules rouges endommagés), généralement quelques jours plus tard"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away. Note what was eaten (onion) and roughly how much. Don't wait for signs: damage to the blood usually shows only a few days later.",
     "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj je pes pojedel (čebula) in približno koliko. Ne čakajte na znake: okvara krvi se običajno pokaže šele po nekaj dneh.",
-    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was gefressen wurde (Zwiebeln), und ungefähr wie viel. Warten Sie nicht auf Anzeichen: Schäden am Blut zeigen sich meist erst einige Tage später."
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was gefressen wurde (Zwiebeln), und ungefähr wie viel. Warten Sie nicht auf Anzeichen: Schäden am Blut zeigen sich meist erst einige Tage später.",
+    "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce qui a été mangé (oignon) et en quelle quantité approximative. N’attendez pas l’apparition des signes : les dommages au sang n’apparaissent généralement qu’après quelques jours."
   },
   "serving": null,
   "child": {
     "en": "Onions are not for dogs, even cooked ones in food. They can make a dog's blood sick. Tell a grown-up if your dog eats some.",
     "sl": "Čebula ni za pse, tudi kuhana v hrani ne. Psu lahko poškoduje kri. Povej odraslemu, če jo pes poje.",
-    "de": "Zwiebeln sind nichts für Hunde, auch nicht gekocht im Essen. Sie können das Blut eines Hundes krank machen. Wenn dein Hund welche frisst, sag einem Erwachsenen Bescheid."
+    "de": "Zwiebeln sind nichts für Hunde, auch nicht gekocht im Essen. Sie können das Blut eines Hundes krank machen. Wenn dein Hund welche frisst, sag einem Erwachsenen Bescheid.",
+    "fr": "L’oignon n’est pas pour les chiens, même cuit dans un plat. Il peut rendre leur sang malade. Préviens un adulte si ton chien en mange."
   },
   "faq": [
     {
       "q": {
         "en": "Is it safe when cooked or as powder?",
         "sl": "Je varno, če je kuhano ali v prahu?",
-        "de": "Sind Zwiebeln gekocht oder als Pulver unbedenklich?"
+        "de": "Sind Zwiebeln gekocht oder als Pulver unbedenklich?",
+        "fr": "L’oignon cuit ou en poudre est-il sans danger ?"
       },
       "a": {
         "en": "No. Raw, cooked, dried, powdered and liquid forms are all poisonous to dogs.",
         "sl": "Ne. Za pse so strupene surove, kuhane, posušene, praškaste in tekoče oblike.",
-        "de": "Nein. Roh, gekocht, getrocknet, als Pulver und in flüssiger Form sind sie für Hunde giftig."
+        "de": "Nein. Roh, gekocht, getrocknet, als Pulver und in flüssiger Form sind sie für Hunde giftig.",
+        "fr": "Non. Cru, cuit, séché, en poudre ou sous forme liquide, il est toujours toxique pour les chiens."
       }
     },
     {
       "q": {
         "en": "Why don't signs show straight away?",
         "sl": "Zakaj se znaki ne pokažejo takoj?",
-        "de": "Warum zeigen sich die Anzeichen nicht sofort?"
+        "de": "Warum zeigen sich die Anzeichen nicht sofort?",
+        "fr": "Pourquoi les signes n’apparaissent-ils pas tout de suite ?"
       },
       "a": {
         "en": "Symptoms can start within 24 hours but more often take a few days to appear; signs of anaemia typically develop several days after eating.",
         "sl": "Znaki se lahko pojavijo v 24 urah, pogosteje pa šele po nekaj dneh; znaki slabokrvnosti se običajno razvijejo nekaj dni po zaužitju.",
-        "de": "Beschwerden können innerhalb von 24 Stunden beginnen, zeigen sich aber häufiger erst nach einigen Tagen; Anzeichen einer Blutarmut entwickeln sich typischerweise mehrere Tage nach dem Fressen."
+        "de": "Beschwerden können innerhalb von 24 Stunden beginnen, zeigen sich aber häufiger erst nach einigen Tagen; Anzeichen einer Blutarmut entwickeln sich typischerweise mehrere Tage nach dem Fressen.",
+        "fr": "Les symptômes peuvent commencer dans les 24 heures, mais mettent plus souvent quelques jours à apparaître ; les signes d’anémie se développent généralement plusieurs jours après l’ingestion."
       }
     }
   ],
@@ -188,6 +205,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d69031b3c5bd13843dbab6625dd36e0b12178a6cdc256f7de084cf1638640162"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "98f3291dd2e6b8927d08a4dbcc778e0bbab7564d518263bcd684eae7c121ef7d"
     }
   }
 }

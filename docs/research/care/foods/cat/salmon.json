@@ -4,56 +4,66 @@
   "name": {
     "en": "Salmon",
     "sl": "Losos",
-    "de": "Lachs"
+    "de": "Lachs",
+    "fr": "Saumon"
   },
   "question": {
     "en": "Can cats eat salmon?",
     "sl": "Ali lahko mačke jedo lososa?",
-    "de": "Dürfen Katzen Lachs fressen?"
+    "de": "Dürfen Katzen Lachs fressen?",
+    "fr": "Les chats peuvent-ils manger du saumon ?"
   },
   "url_slug": {
     "en": "salmon",
     "sl": "losos",
-    "de": "lachs"
+    "de": "lachs",
+    "fr": "saumon"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a little cooked salmon is fine as an occasional treat. Serve it plain, with no bones or seasoning, and keep it small. Fish shouldn't replace a cat's complete food.",
     "sl": "Da, malo kuhanega lososa je v redu kot občasen priboljšek. Ponudite ga brez dodatkov, brez kosti in začimb ter v majhni količini. Riba naj ne nadomesti popolne mačje hrane.",
-    "de": "Ja, ein wenig gegarter Lachs ist als gelegentliches Leckerli in Ordnung. Servieren Sie ihn pur, ohne Gräten und Gewürze und nur in kleinen Mengen. Fisch sollte das Alleinfutter einer Katze nicht ersetzen."
+    "de": "Ja, ein wenig gegarter Lachs ist als gelegentliches Leckerli in Ordnung. Servieren Sie ihn pur, ohne Gräten und Gewürze und nur in kleinen Mengen. Fisch sollte das Alleinfutter einer Katze nicht ersetzen.",
+    "fr": "Oui, un peu de saumon cuit convient comme friandise occasionnelle. Servez-le nature, sans arêtes ni assaisonnement, en petite quantité. Le poisson ne doit pas remplacer l’aliment complet du chat."
   },
   "why": {
     "en": "Cats Protection lists cooked salmon with no bones or seasoning among safe festive foods and says small amounts of cooked fish such as salmon are suitable. RSPCA Australia says tinned salmon in spring water can be an occasional treat. Raw fish is different: it may carry bacteria and parasites.",
     "sl": "Cats Protection kuhanega lososa brez kosti in začimb navaja med varno praznično hrano in pravi, da so majhne količine kuhane ribe, kot je losos, primerne. RSPCA Avstralija navaja, da je konzerviran losos v izvirski vodi lahko občasen priboljšek. Surova riba je nekaj drugega: lahko prenaša bakterije in zajedavce.",
-    "de": "Cats Protection zählt gegarten Lachs ohne Gräten und Gewürze zu den unbedenklichen Festtagsspeisen und sagt, dass kleine Mengen gegarter Fisch wie Lachs geeignet sind. Laut RSPCA Australia kann Lachs aus der Dose in Quellwasser ein gelegentliches Leckerli sein. Roher Fisch ist etwas anderes: Er kann Bakterien und Parasiten enthalten."
+    "de": "Cats Protection zählt gegarten Lachs ohne Gräten und Gewürze zu den unbedenklichen Festtagsspeisen und sagt, dass kleine Mengen gegarter Fisch wie Lachs geeignet sind. Laut RSPCA Australia kann Lachs aus der Dose in Quellwasser ein gelegentliches Leckerli sein. Roher Fisch ist etwas anderes: Er kann Bakterien und Parasiten enthalten.",
+    "fr": "Cats Protection cite le saumon cuit sans arêtes ni assaisonnement parmi les aliments de fête sans danger et indique que de petites quantités de poisson cuit, comme le saumon, conviennent. Selon la RSPCA Australia, le saumon en conserve au naturel (à l’eau) peut être une friandise occasionnelle. Le poisson cru, c’est autre chose : il peut contenir des bactéries et des parasites."
   },
   "signs": null,
   "what_to_do": {
     "en": "Offer a small piece first. If your cat gets vomiting or diarrhoea afterwards, stop and ask your vet. Remove any bones you find.",
     "sl": "Najprej ponudite majhen košček. Če ima mačka potem bruhanje ali drisko, prenehajte in se posvetujte z veterinarjem. Odstranite vse kosti, ki jih najdete.",
-    "de": "Bieten Sie zuerst ein kleines Stück an. Bekommt Ihre Katze danach Erbrechen oder Durchfall, hören Sie auf und fragen Sie Ihren Tierarzt. Entfernen Sie alle Gräten, die Sie finden."
+    "de": "Bieten Sie zuerst ein kleines Stück an. Bekommt Ihre Katze danach Erbrechen oder Durchfall, hören Sie auf und fragen Sie Ihren Tierarzt. Entfernen Sie alle Gräten, die Sie finden.",
+    "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou a la diarrhée ensuite, arrêtez et demandez conseil à votre vétérinaire. Retirez toutes les arêtes que vous trouvez."
   },
   "serving": {
     "en": "Cooked, plain, boneless and unseasoned, or tinned in spring water; a few small pieces now and then.",
     "sl": "Kuhan, brez dodatkov, kosti in začimb, ali konzerviran v izvirski vodi; nekaj majhnih koščkov občasno.",
-    "de": "Gegart, pur, ohne Gräten und ungewürzt – oder aus der Dose in Quellwasser; ab und zu ein paar kleine Stücke."
+    "de": "Gegart, pur, ohne Gräten und ungewürzt – oder aus der Dose in Quellwasser; ab und zu ein paar kleine Stücke.",
+    "fr": "Cuit, nature, sans arêtes et sans assaisonnement, ou en conserve au naturel (à l’eau) ; quelques petits morceaux de temps en temps."
   },
   "child": {
     "en": "A tiny bit of cooked salmon with no bones can be a special treat. Ask a grown-up first.",
     "sl": "Košček kuhanega lososa brez kosti je lahko poseben priboljšek. Najprej vprašaj odraslega.",
-    "de": "Ein kleines bisschen gegarter Lachs ohne Gräten kann ein besonderes Leckerli sein. Frag zuerst einen Erwachsenen."
+    "de": "Ein kleines bisschen gegarter Lachs ohne Gräten kann ein besonderes Leckerli sein. Frag zuerst einen Erwachsenen.",
+    "fr": "Un tout petit peu de saumon cuit sans arêtes peut être une friandise spéciale. Demande d’abord à un adulte."
   },
   "faq": [
     {
       "q": {
         "en": "Can cats eat raw salmon or sushi?",
         "sl": "Ali lahko mačke jedo surovega lososa ali suši?",
-        "de": "Dürfen Katzen rohen Lachs oder Sushi fressen?"
+        "de": "Dürfen Katzen rohen Lachs oder Sushi fressen?",
+        "fr": "Les chats peuvent-ils manger du saumon cru ou des sushis ?"
       },
       "a": {
         "en": "It's best not to. Uncooked fish may contain harmful bacteria and parasites, so fish for cats should be properly cooked.",
         "sl": "Bolje ne. Surova riba lahko vsebuje škodljive bakterije in zajedavce, zato mora biti riba za mačke dobro kuhana.",
-        "de": "Besser nicht. Roher Fisch kann schädliche Bakterien und Parasiten enthalten, deshalb sollte Fisch für Katzen richtig gegart sein."
+        "de": "Besser nicht. Roher Fisch kann schädliche Bakterien und Parasiten enthalten, deshalb sollte Fisch für Katzen richtig gegart sein.",
+        "fr": "Mieux vaut s’en abstenir. Le poisson cru peut contenir des bactéries et des parasites dangereux : le poisson destiné aux chats doit donc être bien cuit."
       }
     }
   ],
@@ -105,6 +115,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a93e0da16d6066e3eabae0357603280c3780f2f1edd197283aaa7aa83f08c95d"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "32ad9c53bd540a8a1fe1b94a23c05a81a74ae9553ce377498933f649e8401220"
     }
   }
 }

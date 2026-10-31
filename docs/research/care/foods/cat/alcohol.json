@@ -4,28 +4,33 @@
   "name": {
     "en": "Alcohol",
     "sl": "Alkohol",
-    "de": "Alkohol"
+    "de": "Alkohol",
+    "fr": "Alcool"
   },
   "question": {
     "en": "Can cats drink alcohol?",
     "sl": "Ali lahko mačke pijejo alkohol?",
-    "de": "Dürfen Katzen Alkohol trinken?"
+    "de": "Dürfen Katzen Alkohol trinken?",
+    "fr": "Les chats peuvent-ils boire de l’alcool ?"
   },
   "url_slug": {
     "en": "alcohol",
     "sl": "alkohol",
-    "de": "alkohol"
+    "de": "alkohol",
+    "fr": "alcool"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Even a tiny amount of alcohol can be extremely toxic to cats, and cats are especially sensitive to it. Keep drinks, foods made with alcohol and products like hand sanitiser away from your cat, and call your vet if your cat swallows any.",
     "sl": "Ne. Že zelo majhna količina alkohola je lahko za mačke izjemno strupena, mačke pa so nanj še posebej občutljive. Pijače, hrano z alkoholom in izdelke, kot je razkužilo za roke, hranite stran od muce in pokličite veterinarja, če ga kaj zaužije.",
-    "de": "Nein. Schon eine winzige Menge Alkohol kann für Katzen äußerst giftig sein, und Katzen reagieren besonders empfindlich darauf. Halten Sie Getränke, alkoholhaltige Speisen und Produkte wie Handdesinfektionsmittel von Ihrer Katze fern, und rufen Sie Ihren Tierarzt an, wenn Ihre Katze etwas davon verschluckt."
+    "de": "Nein. Schon eine winzige Menge Alkohol kann für Katzen äußerst giftig sein, und Katzen reagieren besonders empfindlich darauf. Halten Sie Getränke, alkoholhaltige Speisen und Produkte wie Handdesinfektionsmittel von Ihrer Katze fern, und rufen Sie Ihren Tierarzt an, wenn Ihre Katze etwas davon verschluckt.",
+    "fr": "Non. Même une infime quantité d’alcool peut être extrêmement toxique pour un chat, et les chats y sont particulièrement sensibles. Tenez les boissons, les aliments contenant de l’alcool et les produits comme le gel hydroalcoolique hors de portée de votre chat, et appelez votre vétérinaire s’il en avale."
   },
   "why": {
     "en": "All animals can get alcohol poisoning, but cats are especially sensitive. Alcohol is not only in drinks: it can also be in liqueur sweets, hand sanitiser, mouthwash and raw, rising bread dough. Signs usually appear quickly after a cat swallows it.",
     "sl": "Zastrupitev z alkoholom lahko doleti vse živali, mačke pa so še posebej občutljive. Alkohol ni le v pijačah: najdemo ga tudi v bonbonih z likerjem, razkužilu za roke, ustni vodici in surovem, vzhajajočem testu. Znaki se navadno pokažejo hitro po zaužitju.",
-    "de": "Alle Tiere können eine Alkoholvergiftung bekommen, Katzen sind aber besonders empfindlich. Alkohol steckt nicht nur in Getränken, sondern auch in Likörpralinen, Handdesinfektionsmittel, Mundspülung und rohem, aufgehendem Brotteig. Die Anzeichen treten meist schnell auf, nachdem eine Katze ihn aufgenommen hat."
+    "de": "Alle Tiere können eine Alkoholvergiftung bekommen, Katzen sind aber besonders empfindlich. Alkohol steckt nicht nur in Getränken, sondern auch in Likörpralinen, Handdesinfektionsmittel, Mundspülung und rohem, aufgehendem Brotteig. Die Anzeichen treten meist schnell auf, nachdem eine Katze ihn aufgenommen hat.",
+    "fr": "Tous les animaux peuvent être intoxiqués par l’alcool, mais les chats sont particulièrement sensibles. L’alcool ne se trouve pas que dans les boissons : il peut aussi être présent dans les bonbons à la liqueur, le gel hydroalcoolique, les bains de bouche et la pâte à pain crue en train de lever. Les signes apparaissent généralement vite après l’ingestion."
   },
   "signs": {
     "en": [
@@ -45,30 +50,40 @@
       "Schwierigkeiten beim Laufen, Taumeln",
       "Langsame Atmung",
       "In schweren Fällen: Krampfanfälle oder Zusammenbruch"
+    ],
+    "fr": [
+      "Somnolence ou abattement inhabituels",
+      "Difficultés à marcher, démarche chancelante",
+      "Respiration lente",
+      "Dans les cas graves : convulsions ou effondrement"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away. Note what your cat swallowed, how much and when, and keep the bottle or packaging. Don't wait for signs to appear, and don't try to make your cat sick at home.",
     "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, kaj je muca zaužila, koliko in kdaj, ter shranite steklenico ali embalažo. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju.",
-    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was Ihre Katze verschluckt hat, wie viel und wann, und bewahren Sie die Flasche oder Verpackung auf. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen."
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was Ihre Katze verschluckt hat, wie viel und wann, und bewahren Sie die Flasche oder Verpackung auf. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
+    "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce que votre chat a avalé, en quelle quantité et à quelle heure, et gardez la bouteille ou l’emballage. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même."
   },
   "serving": null,
   "child": {
     "en": "Grown-up drinks are never for cats. If kitty licks a glass or spilled drink, tell a grown-up right away.",
     "sl": "Pijače za odrasle niso nikoli za muce. Če muca poliže kozarec ali razlito pijačo, takoj povej odraslemu.",
-    "de": "Getränke für Erwachsene sind nie etwas für Katzen. Wenn deine Katze an einem Glas oder an Verschüttetem leckt, sag sofort einem Erwachsenen Bescheid."
+    "de": "Getränke für Erwachsene sind nie etwas für Katzen. Wenn deine Katze an einem Glas oder an Verschüttetem leckt, sag sofort einem Erwachsenen Bescheid.",
+    "fr": "Les boissons des grands ne sont jamais pour les chats. Si ton chat lèche un verre ou une boisson renversée, préviens tout de suite un adulte."
   },
   "faq": [
     {
       "q": {
         "en": "Where else can alcohol hide?",
         "sl": "Kje vse se lahko skriva alkohol?",
-        "de": "Wo kann sich Alkohol noch verstecken?"
+        "de": "Wo kann sich Alkohol noch verstecken?",
+        "fr": "Où l’alcool peut-il encore se cacher ?"
       },
       "a": {
         "en": "Besides drinks, alcohol can be found in liqueur sweets, hand sanitiser, mouthwash and raw, rising bread dough.",
         "sl": "Poleg pijač je alkohol lahko tudi v bonbonih z likerjem, razkužilu za roke, ustni vodici ter surovem, vzhajajočem testu.",
-        "de": "Außer in Getränken kann Alkohol auch in Likörpralinen, Handdesinfektionsmittel, Mundspülung und rohem, aufgehendem Brotteig stecken."
+        "de": "Außer in Getränken kann Alkohol auch in Likörpralinen, Handdesinfektionsmittel, Mundspülung und rohem, aufgehendem Brotteig stecken.",
+        "fr": "En plus des boissons, on trouve de l’alcool dans les bonbons à la liqueur, le gel hydroalcoolique, les bains de bouche et la pâte à pain crue en train de lever."
       }
     }
   ],
@@ -156,6 +171,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "57e5b47ba04fc6868340dd928de0868c0249aeb10fff8e1e1645d40cb450ed8b"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5d98192359c9fa94b828b8ec0c36064cf0c6bfc8a724098e57f3363c2227b83b"
     }
   }
 }

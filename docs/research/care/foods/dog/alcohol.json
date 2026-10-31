@@ -4,28 +4,33 @@
   "name": {
     "en": "Alcohol",
     "sl": "Alkohol",
-    "de": "Alkohol"
+    "de": "Alkohol",
+    "fr": "Alcool"
   },
   "question": {
     "en": "Can dogs drink alcohol?",
     "sl": "Ali lahko psi pijejo alkohol?",
-    "de": "Dürfen Hunde Alkohol trinken?"
+    "de": "Dürfen Hunde Alkohol trinken?",
+    "fr": "Les chiens peuvent-ils boire de l’alcool ?"
   },
   "url_slug": {
     "en": "alcohol",
     "sl": "alkohol",
-    "de": "alkohol"
+    "de": "alkohol",
+    "fr": "alcool"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Alcohol is toxic to dogs. Drinks and foods containing alcohol can cause vomiting, wobbliness, breathing problems and tremors. Alcohol is absorbed quickly, and signs usually begin within 15–90 minutes, so act fast.",
     "sl": "Ne. Alkohol je za pse strupen. Pijače in hrana z alkoholom lahko povzročijo bruhanje, opotekanje, težave z dihanjem in tresenje. Alkohol se hitro vsrka, znaki pa se običajno začnejo v 15–90 minutah, zato ukrepajte hitro.",
-    "de": "Nein. Alkohol ist für Hunde giftig. Alkoholhaltige Getränke und Speisen können Erbrechen, Taumeln, Atemprobleme und Zittern verursachen. Alkohol wird schnell aufgenommen, und die Anzeichen beginnen meist innerhalb von 15–90 Minuten – handeln Sie also schnell."
+    "de": "Nein. Alkohol ist für Hunde giftig. Alkoholhaltige Getränke und Speisen können Erbrechen, Taumeln, Atemprobleme und Zittern verursachen. Alkohol wird schnell aufgenommen, und die Anzeichen beginnen meist innerhalb von 15–90 Minuten – handeln Sie also schnell.",
+    "fr": "Non. L’alcool est toxique pour les chiens. Les boissons et les aliments qui en contiennent peuvent provoquer des vomissements, une démarche titubante, des difficultés respiratoires et des tremblements. L’alcool est absorbé rapidement et les signes apparaissent généralement en 15 à 90 minutes : agissez vite."
   },
   "why": {
     "en": "Alcohol (ethanol) is rapidly absorbed into the blood and depresses the nervous system. It is not only in drinks: it is also in liquor-filled sweets, raw rising bread dough, hand sanitiser and mouthwash. All animals are at risk.",
     "sl": "Alkohol (etanol) se hitro vsrka v kri in zavira živčevje. Ni le v pijačah: najdemo ga tudi v bonbonih z alkoholnim polnilom, surovem vzhajanem testu, razkužilu za roke in ustni vodi. Ogrožene so vse živali.",
-    "de": "Alkohol (Ethanol) gelangt rasch ins Blut und dämpft das Nervensystem. Er steckt nicht nur in Getränken, sondern auch in Likörpralinen, rohem, aufgehendem Brotteig, Handdesinfektionsmittel und Mundspülung. Alle Tiere sind gefährdet."
+    "de": "Alkohol (Ethanol) gelangt rasch ins Blut und dämpft das Nervensystem. Er steckt nicht nur in Getränken, sondern auch in Likörpralinen, rohem, aufgehendem Brotteig, Handdesinfektionsmittel und Mundspülung. Alle Tiere sind gefährdet.",
+    "fr": "L’alcool (éthanol) passe rapidement dans le sang et déprime le système nerveux. On ne le trouve pas seulement dans les boissons : il y en a aussi dans les bonbons à la liqueur, la pâte à pain crue en train de lever, le gel hydroalcoolique et le bain de bouche. Tous les animaux sont concernés."
   },
   "signs": {
     "en": [
@@ -51,42 +56,56 @@
       "Atembeschwerden",
       "Zittern",
       "Anzeichen beginnen meist innerhalb von 15–90 Minuten"
+    ],
+    "fr": [
+      "Vomissements et diarrhée",
+      "Démarche titubante et perte de coordination",
+      "Somnolence, abattement",
+      "Difficultés respiratoires",
+      "Tremblements",
+      "Les signes apparaissent généralement en 15 à 90 minutes"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline immediately. Note what your dog drank or ate and roughly how much. Don't wait for signs: alcohol acts fast, and early treatment is key.",
     "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj je pes popil ali pojedel in približno koliko. Ne čakajte na znake: alkohol deluje hitro, zgodnje zdravljenje pa je ključno.",
-    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was Ihr Hund getrunken oder gefressen hat und ungefähr wie viel. Warten Sie nicht auf Anzeichen: Alkohol wirkt schnell, und eine frühe Behandlung ist entscheidend."
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was Ihr Hund getrunken oder gefressen hat und ungefähr wie viel. Warten Sie nicht auf Anzeichen: Alkohol wirkt schnell, und eine frühe Behandlung ist entscheidend.",
+    "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce que votre chien a bu ou mangé, et en quelle quantité approximative. N’attendez pas l’apparition des signes : l’alcool agit vite et un traitement précoce est essentiel."
   },
   "serving": null,
   "child": {
     "en": "Grown-up drinks are never for dogs. If a dog drinks some, it can get very ill fast, so tell a grown-up right away.",
     "sl": "Pijače za odrasle niso nikoli za pse. Če jih pes popije, lahko hitro zelo zboli, zato takoj povej odraslemu.",
-    "de": "Getränke für Erwachsene sind nie etwas für Hunde. Trinkt ein Hund davon, kann er schnell sehr krank werden – sag sofort einem Erwachsenen Bescheid."
+    "de": "Getränke für Erwachsene sind nie etwas für Hunde. Trinkt ein Hund davon, kann er schnell sehr krank werden – sag sofort einem Erwachsenen Bescheid.",
+    "fr": "Les boissons des grands ne sont jamais pour les chiens. Si un chien en boit, il peut vite tomber très malade, alors préviens tout de suite un adulte."
   },
   "faq": [
     {
       "q": {
         "en": "Is a lick of beer okay?",
         "sl": "Je en polizek piva v redu?",
-        "de": "Darf mein Hund ein bisschen Bier ablecken?"
+        "de": "Darf mein Hund ein bisschen Bier ablecken?",
+        "fr": "Un petit coup de langue dans une bière, c’est permis ?"
       },
       "a": {
         "en": "No. Drinks and foods containing alcohol are toxic to dogs. Never offer alcohol, and call your vet if your dog drinks some.",
         "sl": "Ne. Pijače in hrana z alkoholom so za pse strupene. Psu alkohola nikoli ne ponudite in pokličite veterinarja, če ga popije.",
-        "de": "Nein. Alkoholhaltige Getränke und Speisen sind für Hunde giftig. Bieten Sie nie Alkohol an, und rufen Sie Ihren Tierarzt an, wenn Ihr Hund davon getrunken hat."
+        "de": "Nein. Alkoholhaltige Getränke und Speisen sind für Hunde giftig. Bieten Sie nie Alkohol an, und rufen Sie Ihren Tierarzt an, wenn Ihr Hund davon getrunken hat.",
+        "fr": "Non. Les boissons et les aliments contenant de l’alcool sont toxiques pour les chiens. Ne proposez jamais d’alcool à votre chien et appelez votre vétérinaire s’il en a bu."
       }
     },
     {
       "q": {
         "en": "Where else can a dog find alcohol at home?",
         "sl": "Kje drugje doma lahko pes najde alkohol?",
-        "de": "Wo kann ein Hund zu Hause noch Alkohol finden?"
+        "de": "Wo kann ein Hund zu Hause noch Alkohol finden?",
+        "fr": "Où un chien peut-il encore trouver de l’alcool à la maison ?"
       },
       "a": {
         "en": "In liquor-filled sweets, raw rising bread dough, hand sanitiser and mouthwash.",
         "sl": "V bonbonih z alkoholnim polnilom, surovem vzhajanem testu, razkužilu za roke in ustni vodi.",
-        "de": "In Likörpralinen, rohem, aufgehendem Brotteig, Handdesinfektionsmittel und Mundspülung."
+        "de": "In Likörpralinen, rohem, aufgehendem Brotteig, Handdesinfektionsmittel und Mundspülung.",
+        "fr": "Dans les bonbons à la liqueur, la pâte à pain crue en train de lever, le gel hydroalcoolique et le bain de bouche."
       }
     }
   ],
@@ -166,6 +185,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "68aeb9e8d84fe312934b261fdf7a862a0d070683792a575087b77faaa9aab35b"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "144fc23b0737e4368e2f486c5a9579b76fc11931724568078ad9df77c9d8c9e8"
     }
   }
 }

@@ -4,56 +4,66 @@
   "name": {
     "en": "Cooked chicken",
     "sl": "Kuhan piščanec",
-    "de": "Gegartes Hähnchen"
+    "de": "Gegartes Hähnchen",
+    "fr": "Poulet cuit"
   },
   "question": {
     "en": "Can dogs eat cooked chicken?",
     "sl": "Ali lahko psi jedo kuhanega piščanca?",
-    "de": "Dürfen Hunde gegartes Hähnchen fressen?"
+    "de": "Dürfen Hunde gegartes Hähnchen fressen?",
+    "fr": "Les chiens peuvent-ils manger du poulet cuit ?"
   },
   "url_slug": {
     "en": "cooked-chicken",
     "sl": "kuhan-piscanec",
-    "de": "gegartes-haehnchen"
+    "de": "gegartes-haehnchen",
+    "fr": "poulet-cuit"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes. Plain, unseasoned cooked chicken, taken off the bone, can be served to a dog on its own. Never give cooked chicken bones, which splinter easily, and skip seasoned, fatty or raw chicken.",
     "sl": "Da. Navaden, nezačinjen kuhan piščanec brez kosti lahko psu ponudite kar samega. Nikoli ne dajte kuhanih piščančjih kosti, ki se zlahka razcepijo, in se izogibajte začinjenemu, mastnemu ali surovemu piščancu.",
-    "de": "Ja. Pures, ungewürztes, gegartes Hähnchenfleisch ohne Knochen kann einem Hund für sich allein gegeben werden. Geben Sie niemals gekochte Hähnchenknochen, die leicht splittern, und verzichten Sie auf gewürztes, fettes oder rohes Hähnchen."
+    "de": "Ja. Pures, ungewürztes, gegartes Hähnchenfleisch ohne Knochen kann einem Hund für sich allein gegeben werden. Geben Sie niemals gekochte Hähnchenknochen, die leicht splittern, und verzichten Sie auf gewürztes, fettes oder rohes Hähnchen.",
+    "fr": "Oui. Du poulet cuit nature, sans assaisonnement et désossé, peut être donné tel quel à un chien. Ne donnez jamais d’os de poulet cuits, qui éclatent facilement, et évitez le poulet assaisonné, gras ou cru."
   },
   "why": {
     "en": "Unseasoned roasted, poached, grilled or baked chicken is fine on its own. Cooked chicken bones splinter easily and can cause choking or puncture the gut. Raw chicken is not recommended because of Salmonella and other bacteria. Thigh meat has about twice the fat of breast, and fatty foods can upset the stomach.",
     "sl": "Nezačinjen pečen, poširan, na žaru ali v pečici pripravljen piščanec je primeren sam po sebi. Kuhane piščančje kosti se zlahka razcepijo in lahko povzročijo dušenje ali predrtje prebavil. Surov piščanec ni priporočljiv zaradi salmonele in drugih bakterij. Bedra imajo približno dvakrat več maščobe kot prsi, mastna hrana pa lahko razdraži prebavo.",
-    "de": "Ungewürztes gebratenes, pochiertes, gegrilltes oder im Ofen gegartes Hähnchen ist für sich allein in Ordnung. Gekochte Hähnchenknochen splittern leicht und können zum Ersticken führen oder den Magen-Darm-Trakt durchbohren. Von rohem Hähnchen wird wegen Salmonellen und anderer Bakterien abgeraten. Schenkelfleisch hat etwa doppelt so viel Fett wie Brust, und fettreiches Futter kann auf den Magen schlagen."
+    "de": "Ungewürztes gebratenes, pochiertes, gegrilltes oder im Ofen gegartes Hähnchen ist für sich allein in Ordnung. Gekochte Hähnchenknochen splittern leicht und können zum Ersticken führen oder den Magen-Darm-Trakt durchbohren. Von rohem Hähnchen wird wegen Salmonellen und anderer Bakterien abgeraten. Schenkelfleisch hat etwa doppelt so viel Fett wie Brust, und fettreiches Futter kann auf den Magen schlagen.",
+    "fr": "Le poulet rôti, poché, grillé ou cuit au four sans assaisonnement convient tel quel. Les os de poulet cuits éclatent facilement et peuvent provoquer un étouffement ou perforer l’intestin. Le poulet cru est déconseillé à cause des salmonelles et d’autres bactéries. La cuisse contient environ deux fois plus de graisses que le blanc, et les aliments gras peuvent dérégler l’estomac."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog swallowed cooked chicken bones, call your vet for advice and don't try to make your dog sick. Call straight away if you see choking, vomiting or signs of tummy pain.",
     "sl": "Če je pes pogoltnil kuhane piščančje kosti, pokličite veterinarja za nasvet in ne poskušajte izzvati bruhanja. Takoj pokličite, če opazite dušenje, bruhanje ali znake bolečine v trebuhu.",
-    "de": "Wenn Ihr Hund gekochte Hähnchenknochen verschluckt hat, fragen Sie Ihren Tierarzt um Rat und versuchen Sie nicht, Ihren Hund zum Erbrechen zu bringen. Rufen Sie sofort an, wenn Ihr Hund zu ersticken droht, erbricht oder Anzeichen von Bauchschmerzen zeigt."
+    "de": "Wenn Ihr Hund gekochte Hähnchenknochen verschluckt hat, fragen Sie Ihren Tierarzt um Rat und versuchen Sie nicht, Ihren Hund zum Erbrechen zu bringen. Rufen Sie sofort an, wenn Ihr Hund zu ersticken droht, erbricht oder Anzeichen von Bauchschmerzen zeigt.",
+    "fr": "Si votre chien a avalé des os de poulet cuits, appelez votre vétérinaire pour obtenir des conseils et n’essayez pas de le faire vomir. Appelez immédiatement si vous remarquez un étouffement, des vomissements ou des signes de douleur au ventre."
   },
   "serving": {
     "en": "Plain cooked chicken (breast is leanest), no seasoning, fully cooked, taken off the bone, in small pieces.",
     "sl": "Navaden kuhan piščanec (prsi so najbolj puste), brez začimb, popolnoma kuhan, brez kosti, v majhnih koščkih.",
-    "de": "Pures gegartes Hähnchen (Brust ist am magersten), ungewürzt, vollständig durchgegart, ohne Knochen, in kleinen Stücken."
+    "de": "Pures gegartes Hähnchen (Brust ist am magersten), ungewürzt, vollständig durchgegart, ohne Knochen, in kleinen Stücken.",
+    "fr": "Poulet cuit nature (le blanc est le plus maigre), sans assaisonnement, bien cuit, désossé, en petits morceaux."
   },
   "child": {
     "en": "Plain cooked chicken with no bones is a tasty dog treat. Chicken bones are never for dogs.",
     "sl": "Navaden kuhan piščanec brez kosti je slasten pasji priboljšek. Piščančje kosti nikoli niso za pse.",
-    "de": "Pures gegartes Hähnchen ohne Knochen ist ein leckeres Hundeleckerli. Hähnchenknochen sind nie etwas für Hunde."
+    "de": "Pures gegartes Hähnchen ohne Knochen ist ein leckeres Hundeleckerli. Hähnchenknochen sind nie etwas für Hunde.",
+    "fr": "Du poulet cuit nature et sans os est une friandise délicieuse pour un chien. Les os de poulet ne sont jamais pour les chiens."
   },
   "faq": [
     {
       "q": {
         "en": "Why are cooked chicken bones dangerous?",
         "sl": "Zakaj so kuhane piščančje kosti nevarne?",
-        "de": "Warum sind gekochte Hähnchenknochen gefährlich?"
+        "de": "Warum sind gekochte Hähnchenknochen gefährlich?",
+        "fr": "Pourquoi les os de poulet cuits sont-ils dangereux ?"
       },
       "a": {
         "en": "Cooked chicken bones splinter easily and can cause choking or a puncture in the gut.",
         "sl": "Kuhane piščančje kosti se zlahka razcepijo in lahko povzročijo dušenje ali predrtje prebavil.",
-        "de": "Gekochte Hähnchenknochen splittern leicht und können zum Ersticken führen oder den Magen-Darm-Trakt durchbohren."
+        "de": "Gekochte Hähnchenknochen splittern leicht und können zum Ersticken führen oder den Magen-Darm-Trakt durchbohren.",
+        "fr": "Les os de poulet cuits éclatent facilement et peuvent provoquer un étouffement ou une perforation de l’intestin."
       }
     }
   ],
@@ -131,6 +141,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "44d7930f7424859c5503fc1e95a76da80f25d3c6a2d861bca812529de4b5bce2"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d0804881da768a320cf0cf3ae3d42197a08aeebba3ed03b4d7a834b4ef3a0b54"
     }
   }
 }

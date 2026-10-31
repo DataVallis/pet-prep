@@ -4,28 +4,33 @@
   "name": {
     "en": "Cooked bones",
     "sl": "Kuhane kosti",
-    "de": "Gekochte Knochen"
+    "de": "Gekochte Knochen",
+    "fr": "Os cuits"
   },
   "question": {
     "en": "Can dogs eat cooked bones?",
     "sl": "Ali lahko psi jedo kuhane kosti?",
-    "de": "Dürfen Hunde gekochte Knochen fressen?"
+    "de": "Dürfen Hunde gekochte Knochen fressen?",
+    "fr": "Les chiens peuvent-ils manger des os cuits ?"
   },
   "url_slug": {
     "en": "cooked-bones",
     "sl": "kuhane-kosti",
-    "de": "gekochte-knochen"
+    "de": "gekochte-knochen",
+    "fr": "os-cuits"
   },
   "level": "dangerous",
   "answer": {
     "en": "No. Never give a dog cooked bones. Cooked bones splinter into sharp shards that can cut the mouth, cause choking or block the gut. Cooked poultry bones are especially brittle and can turn into a veterinary emergency.",
     "sl": "Ne. Psu nikoli ne dajajte kuhanih kosti. Kuhane kosti se razcepijo v ostre drobce, ki lahko porežejo usta, povzročijo dušenje ali zamašijo prebavila. Kuhane kosti perutnine so posebej krhke in lahko povzročijo nujno stanje pri veterinarju.",
-    "de": "Nein. Geben Sie einem Hund niemals gekochte Knochen. Gekochte Knochen splittern in scharfe Stücke, die das Maul verletzen, zum Ersticken führen oder den Darm blockieren können. Gekochte Geflügelknochen sind besonders brüchig und können zum tierärztlichen Notfall werden."
+    "de": "Nein. Geben Sie einem Hund niemals gekochte Knochen. Gekochte Knochen splittern in scharfe Stücke, die das Maul verletzen, zum Ersticken führen oder den Darm blockieren können. Gekochte Geflügelknochen sind besonders brüchig und können zum tierärztlichen Notfall werden.",
+    "fr": "Non. Ne donnez jamais d’os cuits à un chien. Les os cuits se brisent en éclats tranchants qui peuvent blesser la bouche, provoquer un étouffement ou bloquer l’intestin. Les os de volaille cuits sont particulièrement cassants et peuvent mener à une urgence vétérinaire."
   },
   "why": {
     "en": "Cooking makes bones brittle, so they break into sharp splinters. Chicken and turkey bones are the classic example, but any bones from the kitchen table can injure a dog. The FDA has received reports of choking, mouth wounds, vomiting, diarrhoea, rectal bleeding and gut blockages in dogs that ate bones or bone treats.",
     "sl": "Kuhanje naredi kosti krhke, zato se razlomijo v ostre drobce. Najbolj znane so piščančje in puranje kosti, poškodujejo pa lahko vse kosti z mize. FDA je prejela poročila o dušenju, ranah v ustih, bruhanju, driski, krvavitvah iz zadnjika in zaporah prebavil pri psih, ki so pojedli kosti ali kostne priboljške.",
-    "de": "Durch das Kochen werden Knochen brüchig und zerbrechen in scharfe Splitter. Hühner- und Putenknochen sind das klassische Beispiel, aber jeder Knochen vom Esstisch kann einen Hund verletzen. Die FDA hat Meldungen über Ersticken, Wunden im Maul, Erbrechen, Durchfall, Blutungen aus dem After und Darmverschlüsse bei Hunden erhalten, die Knochen oder Knochen-Leckerlis gefressen hatten."
+    "de": "Durch das Kochen werden Knochen brüchig und zerbrechen in scharfe Splitter. Hühner- und Putenknochen sind das klassische Beispiel, aber jeder Knochen vom Esstisch kann einen Hund verletzen. Die FDA hat Meldungen über Ersticken, Wunden im Maul, Erbrechen, Durchfall, Blutungen aus dem After und Darmverschlüsse bei Hunden erhalten, die Knochen oder Knochen-Leckerlis gefressen hatten.",
+    "fr": "La cuisson rend les os cassants : ils se brisent en éclats pointus. Les os de poulet et de dinde en sont l’exemple classique, mais tous les os venant de la table peuvent blesser un chien. La FDA a reçu des signalements d’étouffements, de plaies dans la bouche, de vomissements, de diarrhées, de saignements rectaux et d’obstructions intestinales chez des chiens ayant mangé des os ou des friandises à base d’os."
   },
   "signs": {
     "en": [
@@ -48,42 +53,55 @@
       "Erbrechen",
       "Durchfall",
       "Blutungen aus dem After"
+    ],
+    "fr": [
+      "Étouffement ou haut-le-cœur",
+      "Coupures ou saignements dans la bouche",
+      "Vomissements",
+      "Diarrhée",
+      "Saignement au niveau de l’anus"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet right away if your dog has eaten cooked bones, even if it seems fine. Note what kind of bone it was and roughly how much was eaten. Don't wait for signs of a blockage.",
     "sl": "Takoj pokličite veterinarja, če je pes pojedel kuhane kosti, tudi če se zdi v redu. Zapišite si, kakšna kost je bila in približno koliko je pojedel. Ne čakajte na znake zapore.",
-    "de": "Wenden Sie sich sofort an Ihren Tierarzt, wenn Ihr Hund gekochte Knochen gefressen hat, auch wenn er gesund wirkt. Notieren Sie, was für ein Knochen es war und ungefähr wie viel gefressen wurde. Warten Sie nicht auf Anzeichen eines Darmverschlusses."
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt, wenn Ihr Hund gekochte Knochen gefressen hat, auch wenn er gesund wirkt. Notieren Sie, was für ein Knochen es war und ungefähr wie viel gefressen wurde. Warten Sie nicht auf Anzeichen eines Darmverschlusses.",
+    "fr": "Contactez immédiatement votre vétérinaire si votre chien a mangé des os cuits, même s’il semble aller bien. Notez de quel type d’os il s’agissait et en quelle quantité approximative. N’attendez pas les signes d’une obstruction."
   },
   "serving": null,
   "child": {
     "en": "Bones from our plates are not for dogs. They break into sharp bits. Tell a grown-up if your dog finds one.",
     "sl": "Kosti z naših krožnikov niso za pse. Zlomijo se v ostre koščke. Povej odraslemu, če pes najde kost.",
-    "de": "Knochen von unseren Tellern sind nichts für Hunde. Sie brechen in scharfe Stücke. Wenn dein Hund einen findet, sag einem Erwachsenen Bescheid."
+    "de": "Knochen von unseren Tellern sind nichts für Hunde. Sie brechen in scharfe Stücke. Wenn dein Hund einen findet, sag einem Erwachsenen Bescheid.",
+    "fr": "Les os de nos assiettes ne sont pas pour les chiens. Ils se cassent en morceaux pointus. Préviens un adulte si ton chien en trouve un."
   },
   "faq": [
     {
       "q": {
         "en": "Are chicken bones the worst?",
         "sl": "So piščančje kosti najhujše?",
-        "de": "Sind Hühnerknochen am schlimmsten?"
+        "de": "Sind Hühnerknochen am schlimmsten?",
+        "fr": "Les os de poulet sont-ils les pires ?"
       },
       "a": {
         "en": "Cooked poultry bones are especially brittle and splinter easily, but any cooked bone from the table can cause injury.",
         "sl": "Kuhane kosti perutnine so posebej krhke in se zlahka razcepijo, poškodbo pa lahko povzroči vsaka kuhana kost z mize.",
-        "de": "Gekochte Geflügelknochen sind besonders brüchig und splittern leicht, aber jeder gekochte Knochen vom Tisch kann Verletzungen verursachen."
+        "de": "Gekochte Geflügelknochen sind besonders brüchig und splittern leicht, aber jeder gekochte Knochen vom Tisch kann Verletzungen verursachen.",
+        "fr": "Les os de volaille cuits sont particulièrement cassants et éclatent facilement, mais tout os cuit venant de la table peut blesser un chien."
       }
     },
     {
       "q": {
         "en": "How do I stop my dog getting bones?",
         "sl": "Kako preprečim, da pes pride do kosti?",
-        "de": "Wie verhindere ich, dass mein Hund an Knochen kommt?"
+        "de": "Wie verhindere ich, dass mein Hund an Knochen kommt?",
+        "fr": "Comment empêcher mon chien d’attraper des os ?"
       },
       "a": {
         "en": "Keep platters out of reach while cooking and eating, and be careful what goes in the bin: dogs often raid the trash for carcasses and steak bones.",
         "sl": "Med kuhanjem in jedjo imejte krožnike izven dosega in pazite, kaj vržete v koš: psi pogosto stikajo po smeteh za ostanki perutnine in kostmi zrezkov.",
-        "de": "Stellen Sie Platten beim Kochen und Essen außer Reichweite und achten Sie darauf, was in den Müll kommt: Hunde plündern oft den Mülleimer nach Karkassen und Steakknochen."
+        "de": "Stellen Sie Platten beim Kochen und Essen außer Reichweite und achten Sie darauf, was in den Müll kommt: Hunde plündern oft den Mülleimer nach Karkassen und Steakknochen.",
+        "fr": "Gardez les plats hors de portée pendant la cuisine et les repas, et faites attention à ce que vous jetez : les chiens fouillent souvent la poubelle à la recherche de carcasses et d’os de steak."
       }
     }
   ],
@@ -179,6 +197,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f24f8924929bf979650cc461c1c668d2e1853d834711975c16a39c7fe34c14d1"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "68820f99b47d647ead52908f122dbdd7e750fffca91979aae939a9dcb8568293"
     }
   }
 }

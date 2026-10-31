@@ -4,28 +4,33 @@
   "name": {
     "en": "Hazelnuts",
     "sl": "Lešniki",
-    "de": "Haselnüsse"
+    "de": "Haselnüsse",
+    "fr": "Noisettes"
   },
   "question": {
     "en": "Can dogs eat hazelnuts?",
     "sl": "Ali lahko psi jedo lešnike?",
-    "de": "Dürfen Hunde Haselnüsse fressen?"
+    "de": "Dürfen Hunde Haselnüsse fressen?",
+    "fr": "Les chiens peuvent-ils manger des noisettes ?"
   },
   "url_slug": {
     "en": "hazelnuts",
     "sl": "lesniki",
-    "de": "haselnuesse"
+    "de": "haselnuesse",
+    "fr": "noisettes"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, it is best not to. Hazelnuts aren't toxic, but their very hard shells can cause choking and blockages, and like other nuts they are high in fat, which can upset a dog's stomach and may lead to pancreatitis.",
     "sl": "Ne, bolje ne. Lešniki niso strupeni, a njihove zelo trde lupine lahko povzročijo dušenje in zamašitev, kot drugi oreščki pa so zelo mastni, kar lahko psu razdraži prebavo in morda vodi do vnetja trebušne slinavke.",
-    "de": "Nein, besser nicht. Haselnüsse sind nicht giftig, aber ihre sehr harten Schalen können zum Ersticken und zu Blockaden führen, und wie andere Nüsse sind sie fettreich, was einem Hund auf den Magen schlagen und zu einer Bauchspeicheldrüsenentzündung (Pankreatitis) führen kann."
+    "de": "Nein, besser nicht. Haselnüsse sind nicht giftig, aber ihre sehr harten Schalen können zum Ersticken und zu Blockaden führen, und wie andere Nüsse sind sie fettreich, was einem Hund auf den Magen schlagen und zu einer Bauchspeicheldrüsenentzündung (Pankreatitis) führen kann.",
+    "fr": "Non, mieux vaut éviter. Les noisettes ne sont pas toxiques, mais leur coque très dure peut provoquer un étouffement et des obstructions et, comme les autres fruits à coque, elles sont riches en graisses, ce qui peut dérégler l’estomac d’un chien et parfois mener à une pancréatite."
   },
   "why": {
     "en": "Hazelnut shells are extremely hard and can cause choking and gut blockages. Nuts in general are high in fat and calories: they can be too rich for a dog, cause pancreatitis and add to weight gain. Nuts left lying on the ground can also grow mould that can be toxic to dogs.",
     "sl": "Lupine lešnikov so izjemno trde in lahko povzročijo dušenje ter zamašitev črevesja. Oreščki so na splošno zelo mastni in kalorični: za psa so lahko pretežki, povzročijo vnetje trebušne slinavke in prispevajo k debelosti. Na oreščkih, ki ležijo na tleh, lahko zraste tudi plesen, ki je za pse lahko strupena.",
-    "de": "Haselnussschalen sind extrem hart und können zum Ersticken und zu Darmverschlüssen führen. Nüsse sind allgemein reich an Fett und Kalorien: Sie können für einen Hund zu gehaltvoll sein, eine Pankreatitis auslösen und zu Gewichtszunahme beitragen. Auf dem Boden liegende Nüsse können außerdem Schimmel bilden, der für Hunde giftig sein kann."
+    "de": "Haselnussschalen sind extrem hart und können zum Ersticken und zu Darmverschlüssen führen. Nüsse sind allgemein reich an Fett und Kalorien: Sie können für einen Hund zu gehaltvoll sein, eine Pankreatitis auslösen und zu Gewichtszunahme beitragen. Auf dem Boden liegende Nüsse können außerdem Schimmel bilden, der für Hunde giftig sein kann.",
+    "fr": "La coque des noisettes est extrêmement dure et peut provoquer un étouffement et des obstructions intestinales. Les fruits à coque en général sont riches en graisses et en calories : ils peuvent être trop riches pour un chien, provoquer une pancréatite et favoriser la prise de poids. Les fruits à coque restés par terre peuvent aussi développer des moisissures susceptibles d’être toxiques pour les chiens."
   },
   "signs": {
     "en": [
@@ -42,30 +47,39 @@
       "Ersticken oder Würgen",
       "Erbrechen oder Durchfall",
       "Magen-Darm-Beschwerden oder Anzeichen einer Blockade"
+    ],
+    "fr": [
+      "Étouffement ou haut-le-cœur",
+      "Vomissements ou diarrhée",
+      "Troubles digestifs ou signes d’obstruction"
     ]
   },
   "what_to_do": {
     "en": "After a nut or two, watch for vomiting, diarrhoea or belly pain. Call your vet if your dog swallowed shells, ate a lot of nuts or nuts that were mouldy, seems to be choking, or shows any of these signs.",
     "sl": "Po enem ali dveh oreščkih opazujte, ali pes bruha, ima drisko ali ga boli trebuh. Pokličite veterinarja, če je pes pogoltnil lupine, pojedel veliko ali plesnivih oreščkov, se duši ali kaže katerega od teh znakov.",
-    "de": "Achten Sie nach ein oder zwei Nüssen auf Erbrechen, Durchfall oder Bauchschmerzen. Rufen Sie Ihren Tierarzt an, wenn Ihr Hund Schalen verschluckt, viele Nüsse oder schimmelige Nüsse gefressen hat, zu ersticken droht oder eines dieser Anzeichen zeigt."
+    "de": "Achten Sie nach ein oder zwei Nüssen auf Erbrechen, Durchfall oder Bauchschmerzen. Rufen Sie Ihren Tierarzt an, wenn Ihr Hund Schalen verschluckt, viele Nüsse oder schimmelige Nüsse gefressen hat, zu ersticken droht oder eines dieser Anzeichen zeigt.",
+    "fr": "Après une ou deux noisettes, surveillez les vomissements, la diarrhée ou les douleurs au ventre. Appelez votre vétérinaire si votre chien a avalé des coques, a mangé beaucoup de noisettes ou des noisettes moisies, semble s’étouffer ou présente l’un de ces signes."
   },
   "serving": null,
   "child": {
     "en": "Hazelnuts are a people snack. Their hard shells can get stuck in a dog, so keep them away from your pet.",
     "sl": "Lešniki so prigrizek za ljudi. Trde lupine se lahko psu zataknejo, zato jih drži stran od ljubljenčka.",
-    "de": "Haselnüsse sind ein Snack für Menschen. Ihre harten Schalen können in einem Hund stecken bleiben, also halte sie von deinem Hund fern."
+    "de": "Haselnüsse sind ein Snack für Menschen. Ihre harten Schalen können in einem Hund stecken bleiben, also halte sie von deinem Hund fern.",
+    "fr": "Les noisettes, c’est un en-cas pour les humains. Leur coque dure peut rester coincée dans le ventre d’un chien, alors garde-les loin de ton animal."
   },
   "faq": [
     {
       "q": {
         "en": "Are hazelnuts toxic to dogs?",
         "sl": "So lešniki za pse strupeni?",
-        "de": "Sind Haselnüsse für Hunde giftig?"
+        "de": "Sind Haselnüsse für Hunde giftig?",
+        "fr": "Les noisettes sont-elles toxiques pour les chiens ?"
       },
       "a": {
         "en": "No, they aren't toxic; the main risks are the hard shells and the high fat content.",
         "sl": "Ne, niso strupeni; glavni tveganji sta trde lupine in veliko maščobe.",
-        "de": "Nein, sie sind nicht giftig; die Hauptrisiken sind die harten Schalen und der hohe Fettgehalt."
+        "de": "Nein, sie sind nicht giftig; die Hauptrisiken sind die harten Schalen und der hohe Fettgehalt.",
+        "fr": "Non, elles ne sont pas toxiques ; les principaux risques sont la coque dure et la forte teneur en graisses."
       }
     }
   ],
@@ -125,6 +139,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "96002cba5fa3ffe5d916b3b8a5fb177e625c2e3ee926e9326099d9bdcaffec0f"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a40a692928134ff8c1ade22ad5a334160167b80877124d7c55ab079f6460061d"
     }
   }
 }

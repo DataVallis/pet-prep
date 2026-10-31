@@ -4,28 +4,33 @@
   "name": {
     "en": "Walnuts",
     "sl": "Orehi",
-    "de": "Walnüsse"
+    "de": "Walnüsse",
+    "fr": "Noix"
   },
   "question": {
     "en": "Can cats eat walnuts?",
     "sl": "Ali lahko mačke jedo orehe?",
-    "de": "Dürfen Katzen Walnüsse fressen?"
+    "de": "Dürfen Katzen Walnüsse fressen?",
+    "fr": "Les chats peuvent-ils manger des noix ?"
   },
   "url_slug": {
     "en": "walnuts",
     "sl": "orehi",
-    "de": "walnuesse"
+    "de": "walnuesse",
+    "fr": "noix"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, walnuts are best kept away from cats. They contain a lot of oils and fats, which can make a cat unwell and may cause vomiting or diarrhoea.",
     "sl": "Ne, orehov mački raje ne dajajte. Vsebujejo veliko olj in maščob, zaradi katerih se mačka lahko slabo počuti, lahko pa povzročijo tudi bruhanje ali drisko.",
-    "de": "Nein, Walnüsse halten Sie besser von Katzen fern. Sie enthalten viel Öl und Fett, was einer Katze nicht gut bekommen und Erbrechen oder Durchfall verursachen kann."
+    "de": "Nein, Walnüsse halten Sie besser von Katzen fern. Sie enthalten viel Öl und Fett, was einer Katze nicht gut bekommen und Erbrechen oder Durchfall verursachen kann.",
+    "fr": "Non, mieux vaut tenir les noix loin des chats. Elles contiennent beaucoup d’huiles et de graisses, qui peuvent rendre un chat malade et provoquer des vomissements ou de la diarrhée."
   },
   "why": {
     "en": "Cats Protection names walnuts among nuts with high amounts of oils and fats that can make a cat unwell. VCA adds that most nuts are very fatty and can cause vomiting and diarrhoea.",
     "sl": "Cats Protection orehe navaja med oreščki z veliko olj in maščob, zaradi katerih se mačka lahko slabo počuti. VCA dodaja, da je večina oreščkov zelo mastnih in lahko povzroči bruhanje in drisko.",
-    "de": "Cats Protection nennt Walnüsse unter den Nüssen mit viel Öl und Fett, die einer Katze nicht gut bekommen können. VCA ergänzt, dass die meisten Nüsse sehr fettreich sind und Erbrechen und Durchfall auslösen können."
+    "de": "Cats Protection nennt Walnüsse unter den Nüssen mit viel Öl und Fett, die einer Katze nicht gut bekommen können. VCA ergänzt, dass die meisten Nüsse sehr fettreich sind und Erbrechen und Durchfall auslösen können.",
+    "fr": "Cats Protection cite les noix parmi les fruits à coque très riches en huiles et en graisses, qui peuvent rendre un chat malade. VCA ajoute que la plupart des fruits à coque sont très gras et peuvent provoquer des vomissements et de la diarrhée."
   },
   "signs": {
     "en": [
@@ -45,30 +50,40 @@
       "Durchfall",
       "Magenverstimmung",
       "Wirkt krank"
+    ],
+    "fr": [
+      "Vomissements",
+      "Diarrhée",
+      "Maux de ventre",
+      "Air malade"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate walnuts, contact your vet for advice, especially if she ate a lot or seems unwell. Note what she ate, how much and when.",
     "sl": "Če je muca pojedla orehe, se za nasvet obrnite na veterinarja, zlasti če jih je pojedla veliko ali se ne počuti dobro. Zapišite, kaj je pojedla, koliko in kdaj.",
-    "de": "Wenn Ihre Katze Walnüsse gefressen hat, lassen Sie sich von Ihrem Tierarzt beraten, besonders wenn sie viele gefressen hat oder krank wirkt. Notieren Sie, was sie gefressen hat, wie viel und wann."
+    "de": "Wenn Ihre Katze Walnüsse gefressen hat, lassen Sie sich von Ihrem Tierarzt beraten, besonders wenn sie viele gefressen hat oder krank wirkt. Notieren Sie, was sie gefressen hat, wie viel und wann.",
+    "fr": "Si votre chat a mangé des noix, demandez conseil à votre vétérinaire, surtout s’il en a mangé beaucoup ou semble malade. Notez ce qu’il a mangé, en quelle quantité et à quelle heure."
   },
   "serving": null,
   "child": {
     "en": "Walnuts are too oily for a cat's tummy. Keep them for people and give your cat its own treats.",
     "sl": "Orehi so za mucin trebušček premastni. Naj ostanejo za ljudi, mucki pa daj njene priboljške.",
-    "de": "Walnüsse sind zu ölig für den Bauch einer Katze. Lass sie für die Menschen und gib deiner Katze ihre eigenen Leckerlis."
+    "de": "Walnüsse sind zu ölig für den Bauch einer Katze. Lass sie für die Menschen und gib deiner Katze ihre eigenen Leckerlis.",
+    "fr": "Les noix sont trop grasses pour le ventre d’un chat. Garde-les pour les humains et donne à ton chat ses propres friandises."
   },
   "faq": [
     {
       "q": {
         "en": "Are some nuts worse than others?",
         "sl": "Ali so nekateri oreščki hujši od drugih?",
-        "de": "Sind manche Nüsse schlimmer als andere?"
+        "de": "Sind manche Nüsse schlimmer als andere?",
+        "fr": "Certains fruits à coque sont-ils plus dangereux que d’autres ?"
       },
       "a": {
         "en": "Yes. Macadamia nuts are fatty and also toxic to cats, so they are the ones to be most careful with.",
         "sl": "Da. Makadamije so mastne in za mačke tudi strupene, zato je pri njih potrebna največja previdnost.",
-        "de": "Ja. Macadamianüsse sind fettreich und zudem giftig für Katzen; bei ihnen ist also besondere Vorsicht geboten."
+        "de": "Ja. Macadamianüsse sind fettreich und zudem giftig für Katzen; bei ihnen ist also besondere Vorsicht geboten.",
+        "fr": "Oui. Les noix de macadamia sont grasses et, en plus, toxiques pour les chats : ce sont celles dont il faut se méfier le plus."
       }
     }
   ],
@@ -110,6 +125,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5b440306cf2958ca60879ece626acea1f05a2ed82f2c4f04bea27e12a19e7aa3"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0ce38b04d9edfae5129b8edc2662f9f0bd8fcfe26f197f83c7bf7d5910e358dc"
     }
   }
 }

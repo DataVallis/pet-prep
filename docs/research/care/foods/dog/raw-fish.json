@@ -4,28 +4,33 @@
   "name": {
     "en": "Raw fish",
     "sl": "Surove ribe",
-    "de": "Roher Fisch"
+    "de": "Roher Fisch",
+    "fr": "Poisson cru"
   },
   "question": {
     "en": "Can dogs eat raw fish?",
     "sl": "Ali lahko psi jedo surove ribe?",
-    "de": "Dürfen Hunde rohen Fisch fressen?"
+    "de": "Dürfen Hunde rohen Fisch fressen?",
+    "fr": "Les chiens peuvent-ils manger du poisson cru ?"
   },
   "url_slug": {
     "en": "raw-fish",
     "sl": "surove-ribe",
-    "de": "roher-fisch"
+    "de": "roher-fisch",
+    "fr": "poisson-cru"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It is not recommended. Raw fish can carry bacteria such as Salmonella and Listeria, as well as parasites, and its small bones are a hazard. In the Pacific Northwest of the USA, raw salmon or trout can cause salmon poisoning disease. Cook fish plain and remove the bones.",
     "sl": "Ni priporočljivo. Surove ribe lahko prenašajo bakterije, kot sta salmonela in listerija, pa tudi zajedavce, njihove drobne kosti pa so nevarne. Na pacifiškem severozahodu ZDA lahko surov losos ali postrv povzroči bolezen »zastrupitev z lososom«. Ribe skuhajte brez dodatkov in odstranite kosti.",
-    "de": "Das wird nicht empfohlen. Roher Fisch kann Bakterien wie Salmonellen und Listerien sowie Parasiten übertragen, und seine kleinen Gräten sind gefährlich. Im pazifischen Nordwesten der USA kann roher Lachs oder rohe Forelle die Lachsvergiftung (Salmon Poisoning Disease) auslösen. Garen Sie Fisch ungewürzt und entfernen Sie die Gräten."
+    "de": "Das wird nicht empfohlen. Roher Fisch kann Bakterien wie Salmonellen und Listerien sowie Parasiten übertragen, und seine kleinen Gräten sind gefährlich. Im pazifischen Nordwesten der USA kann roher Lachs oder rohe Forelle die Lachsvergiftung (Salmon Poisoning Disease) auslösen. Garen Sie Fisch ungewürzt und entfernen Sie die Gräten.",
+    "fr": "C’est déconseillé. Le poisson cru peut contenir des bactéries comme les salmonelles et la listeria, ainsi que des parasites, et ses petites arêtes sont dangereuses. Dans le Nord-Ouest Pacifique des États-Unis, le saumon ou la truite crus peuvent provoquer la maladie de l’empoisonnement au saumon. Faites cuire le poisson nature et retirez les arêtes."
   },
   "why": {
     "en": "Raw fish is among the foods linked to food poisoning in dogs. Raw or undercooked salmon and trout from the Pacific Northwest can carry a parasite that causes salmon poisoning disease, which is serious if untreated. Fish bones are small and brittle and can cause choking or injure the mouth or gut. Raw and smoked fish are best avoided.",
     "sl": "Surove ribe sodijo med živila, povezana z zastrupitvijo s hrano pri psih. Surov ali premalo kuhan losos in postrv s pacifiškega severozahoda lahko prenašata zajedavca, ki povzroči bolezen »zastrupitev z lososom«, ki je brez zdravljenja resna. Ribje kosti so drobne in krhke ter lahko povzročijo dušenje ali poškodujejo usta ali prebavila. Surovim in dimljenim ribam se je bolje izogniti.",
-    "de": "Roher Fisch gehört zu den Lebensmitteln, die mit Lebensmittelvergiftungen bei Hunden in Verbindung gebracht werden. Rohe oder nicht durchgegarte Lachse und Forellen aus dem pazifischen Nordwesten können einen Parasiten übertragen, der die Lachsvergiftung auslöst – unbehandelt eine ernste Erkrankung. Fischgräten sind klein und spröde und können zum Ersticken führen oder Maul und Darm verletzen. Rohen und geräucherten Fisch meiden Sie besser."
+    "de": "Roher Fisch gehört zu den Lebensmitteln, die mit Lebensmittelvergiftungen bei Hunden in Verbindung gebracht werden. Rohe oder nicht durchgegarte Lachse und Forellen aus dem pazifischen Nordwesten können einen Parasiten übertragen, der die Lachsvergiftung auslöst – unbehandelt eine ernste Erkrankung. Fischgräten sind klein und spröde und können zum Ersticken führen oder Maul und Darm verletzen. Rohen und geräucherten Fisch meiden Sie besser.",
+    "fr": "Le poisson cru fait partie des aliments associés aux intoxications alimentaires chez le chien. Le saumon et la truite crus ou pas assez cuits du Nord-Ouest Pacifique peuvent porter un parasite responsable de la maladie de l’empoisonnement au saumon, grave sans traitement. Les arêtes sont petites et cassantes et peuvent provoquer un étouffement ou blesser la bouche ou l’intestin. Mieux vaut éviter le poisson cru et le poisson fumé."
   },
   "signs": {
     "en": [
@@ -48,34 +53,46 @@
       "Mattigkeit oder wenig Appetit",
       "Hohes Fieber, Schwäche und völlige Appetitlosigkeit (Lachsvergiftung)",
       "Erstickungsanzeichen"
+    ],
+    "fr": [
+      "Vomissements",
+      "Diarrhée",
+      "Manque d’énergie ou d’appétit",
+      "Forte fièvre, faiblesse et perte totale d’appétit (empoisonnement au saumon)",
+      "Étouffement"
     ]
   },
   "what_to_do": {
     "en": "Watch for vomiting, diarrhoea or low energy and call your vet if they are severe or don't stop. If your dog ate raw salmon or trout from the Pacific Northwest, call your vet promptly and mention it — signs can take up to a week to appear.",
     "sl": "Opazujte, ali pes bruha, ima drisko ali je utrujen, in pokličite veterinarja, če so težave hude ali ne prenehajo. Če je pes pojedel surovega lososa ali postrv s pacifiškega severozahoda ZDA, hitro pokličite veterinarja in mu to povejte — znaki se lahko pojavijo šele v tednu dni.",
-    "de": "Achten Sie auf Erbrechen, Durchfall oder Mattigkeit und rufen Sie Ihren Tierarzt an, wenn die Beschwerden stark sind oder nicht aufhören. Hat Ihr Hund rohen Lachs oder rohe Forelle aus dem pazifischen Nordwesten gefressen, rufen Sie umgehend Ihren Tierarzt an und erwähnen Sie das – Anzeichen können bis zu einer Woche später auftreten."
+    "de": "Achten Sie auf Erbrechen, Durchfall oder Mattigkeit und rufen Sie Ihren Tierarzt an, wenn die Beschwerden stark sind oder nicht aufhören. Hat Ihr Hund rohen Lachs oder rohe Forelle aus dem pazifischen Nordwesten gefressen, rufen Sie umgehend Ihren Tierarzt an und erwähnen Sie das – Anzeichen können bis zu einer Woche später auftreten.",
+    "fr": "Surveillez les vomissements, la diarrhée ou le manque d’énergie, et appelez votre vétérinaire s’ils sont importants ou ne s’arrêtent pas. Si votre chien a mangé du saumon ou de la truite crus du Nord-Ouest Pacifique, appelez rapidement votre vétérinaire et signalez-le – les signes peuvent mettre jusqu’à une semaine à apparaître."
   },
   "serving": {
     "en": "Only fully cooked fish (baked, steamed or grilled), plain, with all bones removed.",
     "sl": "Samo popolnoma kuhane ribe (pečene, kuhane na pari ali na žaru), brez dodatkov in brez vseh kosti.",
-    "de": "Nur vollständig gegarter Fisch (gebacken, gedämpft oder gegrillt), pur und ohne Gräten."
+    "de": "Nur vollständig gegarter Fisch (gebacken, gedämpft oder gegrillt), pur und ohne Gräten.",
+    "fr": "Uniquement du poisson bien cuit (au four, à la vapeur ou grillé), nature, sans aucune arête."
   },
   "child": {
     "en": "Fish for dogs must be cooked and have no bones. Raw fish can have germs that upset a dog's tummy.",
     "sl": "Riba za psa mora biti kuhana in brez kosti. Surova riba ima lahko klice, ki psu razdražijo trebušček.",
-    "de": "Fisch für Hunde muss gekocht sein und darf keine Gräten haben. Roher Fisch kann Keime enthalten, die einem Hund Bauchweh machen."
+    "de": "Fisch für Hunde muss gekocht sein und darf keine Gräten haben. Roher Fisch kann Keime enthalten, die einem Hund Bauchweh machen.",
+    "fr": "Le poisson pour les chiens doit être cuit et sans arêtes. Le poisson cru peut avoir des microbes qui donnent mal au ventre aux chiens."
   },
   "faq": [
     {
       "q": {
         "en": "What is salmon poisoning disease?",
         "sl": "Kaj je bolezen »zastrupitev z lososom«?",
-        "de": "Was ist die Lachsvergiftung?"
+        "de": "Was ist die Lachsvergiftung?",
+        "fr": "Qu’est-ce que la maladie de l’empoisonnement au saumon ?"
       },
       "a": {
         "en": "An illness dogs get from eating raw or undercooked salmon, trout or similar fish from the Pacific Northwest of the USA; it is prevented by not feeding them raw.",
         "sl": "Bolezen, ki jo psi dobijo, če pojedo surovega ali premalo kuhanega lososa, postrv ali podobne ribe s pacifiškega severozahoda ZDA; preprečimo jo tako, da jih ne hranimo s surovimi.",
-        "de": "Eine Krankheit, die Hunde bekommen, wenn sie rohen oder nicht durchgegarten Lachs, Forelle oder ähnlichen Fisch aus dem pazifischen Nordwesten der USA fressen. Man beugt ihr vor, indem man solchen Fisch nicht roh füttert."
+        "de": "Eine Krankheit, die Hunde bekommen, wenn sie rohen oder nicht durchgegarten Lachs, Forelle oder ähnlichen Fisch aus dem pazifischen Nordwesten der USA fressen. Man beugt ihr vor, indem man solchen Fisch nicht roh füttert.",
+        "fr": "Une maladie que les chiens attrapent en mangeant du saumon, de la truite ou des poissons similaires crus ou pas assez cuits, venant du Nord-Ouest Pacifique des États-Unis ; on l’évite en ne leur donnant pas de poisson cru."
       }
     }
   ],
@@ -172,6 +189,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "989caf707eb1fa15dd0eac54db63275a30931e8e15befccce5c9de0ea1ebca3d"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7f3e79df956b7f95ce043867856e109a3cedc5ecef282f218f0782fc86691a95"
     }
   }
 }
