@@ -174,6 +174,7 @@
       "american_staffordshire_terrier": "Part of the 12-week challenge · brushing 1× a week",
       "lagotto_romagnolo": "Part of the 12-week challenge · brushing 2× a week",
       "alaskan_malamute": "Part of the 12-week challenge · brushing every day",
+      "basenji": "Part of the 12-week challenge · brushing 1× a week",
       "domestic_cat": "Short coat · free",
       "maine_coon": "Long coat · brushing 3× a week",
       "british_shorthair": "Short, dense coat · brushing 1× a week",
@@ -505,6 +506,12 @@
         "young": "2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.",
         "adult": "2 meals a day; walks of 12,000 steps a day.",
         "senior": "2 meals a day; shorter walks — 9,000 steps a day."
+      },
+      "basenji": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 6,000 at 6 months.",
+        "young": "2 meals a day; walks of 6,000 steps a day (like an adult dog).",
+        "adult": "2 meals a day; walks of 6,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 4,500 steps a day."
       },
       "alaskan_malamute": {
         "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months.",
