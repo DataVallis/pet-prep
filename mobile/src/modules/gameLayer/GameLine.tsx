@@ -1,7 +1,8 @@
 /**
  * GameLine — the one line of game text at the top (GAMES_SPEC §3.1, §7.1). Rules in
  * `gameLine.ts` (≤ 32 chars, ≥ 2 s, newest waiting line wins); this file runs its timer,
- * renders it and announces it (Android live region, iOS `announceForAccessibility`).
+ * renders it and announces it (Android live region, iOS `announceForAccessibility`). A line never
+ * ends in an ellipsis: on a narrow bar it wraps (no `numberOfLines`, since 2026-10-31).
  */
 
 import { useCallback, useEffect, useRef, useState } from 'react';
@@ -50,7 +51,8 @@ export default function GameLine({ text, testID = 'game-line' }: { text: string 
     if (text !== null && Platform.OS === 'ios') AccessibilityInfo.announceForAccessibility(text);
   }, [text]);
   return (
-    <Text style={styles.line} numberOfLines={1} accessibilityLiveRegion="polite" testID={testID}>
+    // Wraps instead of an ellipsis (David's device test 2026-10-31: a cut line is unreadable).
+    <Text style={styles.line} accessibilityLiveRegion="polite" testID={testID}>
       {text ?? ''}
     </Text>
   );

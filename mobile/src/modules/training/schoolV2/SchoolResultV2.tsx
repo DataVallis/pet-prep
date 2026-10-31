@@ -1,9 +1,15 @@
 /**
  * School v2 result (GAMES_SPEC §4.1 »Zvezdice«, »Predčasen konec«): the server's scored result as a
- * full-screen dark glass card — title by M5-F04 (`trainingResultBucket`, never false praise), the
- * stars (display only: in time or rightly waited), every cue's outcome per round (✓ mint / ✗ amber —
- * never red), the progress line and the routine line (an early end after round 1 counts for the
- * progress, not for today's »Šolanje« routine — `counts_for_routine`).
+ * full-screen dark glass card — the stars (display only: in time or rightly waited), every cue's
+ * outcome per round (✓ mint / ✗ soft amber — never red), the progress line and the routine line (an
+ * early end after round 1 counts for the progress, not for today's »Šolanje« routine —
+ * `counts_for_routine`).
+ *
+ * David's device test 2026-10-31: a positive tone. Headline by outcome (`resultHeadline`, still the
+ * M5-F04 bucket — never false praise): »Bravo!« / »Dober začetek!« / »Vaja dela mojstra«; a cue the
+ * dog ignored and the child rightly waited for is a green ✓ »Pravilno počakal(a)«; never »tomorrow«
+ * while practices remain today (»Poskusi še enkrat — danes imaš še 4 vaje.« from the training state's
+ * `sessionsLeftToday`); one tip at the most common mistake (`commonMistake`).
  *
  * Plain React Native (no game-layer import) — TrainingOverlay renders it for a v2 result.
  */
@@ -12,30 +18,21 @@ import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { Check, Star, X } from 'lucide-react-native';
 
 import { Text } from '@/components/ui/Text';
-import { isStarOutcome, resultRounds } from '@/modules/training/schoolV2/schoolV2';
-import {
-  SCHOOL_V2_STRINGS,
-  TRAINING_STRINGS,
-  trainingResultBucket,
-  trainingResultCounts,
-  type TrainingResult,
-  type TrainingResultBucket,
-} from '@/modules/training/training';
+import { commonMistake, isStarOutcome, resultHeadline, resultRounds, type SchoolResultHeadline } from '@/modules/training/schoolV2/schoolV2';
+import { SCHOOL_V2_STRINGS, TRAINING_STRINGS, trainingResultCounts, type TrainingResult } from '@/modules/training/training';
 import { alpha, fonts, palette, radius, tightTracking } from '@/theme';
 
 const S = SCHOOL_V2_STRINGS;
 const T = TRAINING_STRINGS;
 
-function titleOf(bucket: TrainingResultBucket): string {
-  switch (bucket) {
-    case 'excellent':
-      return T.result.titleExcellent;
-    case 'good':
-      return T.result.titleGood;
-    case 'practice':
-      return T.result.titlePractice;
+function titleOf(headline: SchoolResultHeadline): string {
+  switch (headline) {
+    case 'success':
+      return S.result.titleSuccess;
+    case 'partial':
+      return S.result.titlePartial;
     case 'none':
-      return T.result.titleNone;
+      return S.result.titleNone;
   }
 }
 
@@ -43,12 +40,14 @@ export interface SchoolResultV2Props {
   result: TrainingResult;
   status: 'accepted' | 'unchanged';
   canStartAgain: boolean;
+  /** Whole practices this child may still do today (`sessionsLeftToday` of the fresh training state). */
+  practicesLeft: number;
   onAgain: () => void;
   onDone: () => void;
   testID?: string;
 }
 
-export default function SchoolResultV2({ result, status, canStartAgain, onAgain, onDone, testID = 'training-result' }: SchoolResultV2Props) {
+export default function SchoolResultV2({ result, status, canStartAgain, practicesLeft, onAgain, onDone, testID = 'training-result' }: SchoolResultV2Props) {
   const name = T.commands[result.command].name;
   const stored = status === 'unchanged';
   const counts = trainingResultCounts(result);
@@ -57,14 +56,18 @@ export default function SchoolResultV2({ result, status, canStartAgain, onAgain,
   let gainLine: string;
   if (result.progress_after > result.progress_before) gainLine = T.result.gain(name, result.progress_before, result.progress_after);
   else if (result.progress_gain > 0) gainLine = T.result.gainSmall(name, result.progress_after);
-  else gainLine = T.result.noGain;
+  else gainLine = S.result.noGain;
   const routineLine = !result.counts_for_routine ? S.result.earlyEnd : stored ? null : T.result.routineDone;
+  const headline = resultHeadline(result);
+  // Never »tomorrow« while practices remain today.
+  const nextLine = headline === 'success' || stored ? null : practicesLeft > 0 ? S.result.tryAgainLeft(practicesLeft) : S.result.noneLeft;
+  const mistake = stored ? null : commonMistake(result.trials);
 
   return (
     <View style={styles.backdrop} testID={testID}>
       <ScrollView contentContainerStyle={styles.content}>
         <Text style={styles.title} testID="training-result-title" accessibilityRole="header">
-          {stored ? T.result.titleStored : titleOf(trainingResultBucket(result))}
+          {stored ? T.result.titleStored : titleOf(headline)}
         </Text>
         {stored && <Text style={styles.muted}>{T.result.stored}</Text>}
         <View style={styles.stars} accessible accessibilityLabel={S.result.stars(stars, result.trials.length)} testID="training-result-stars">
@@ -83,11 +86,17 @@ export default function SchoolResultV2({ result, status, canStartAgain, onAgain,
                     key={t.index}
                     style={[styles.cue, good ? styles.cueGood : styles.cueTry]}
                     accessible
-                    accessibilityLabel={S.result.trialA11y(t.index + 1, T.outcomeShort[t.outcome])}
+                    accessibilityLabel={S.result.trialA11y(t.index + 1, S.result.outcome[t.outcome])}
                     testID={`training-result-trial-${t.index}`}
                   >
-                    {good ? <Check color={palette.mint} size={22} strokeWidth={3} /> : <X color={palette.warnDark} size={22} strokeWidth={3} />}
-                    <Text style={styles.cueText}>{T.outcomeShort[t.outcome]}</Text>
+                    {good ? (
+                      <Check color={palette.mint} size={22} strokeWidth={3} testID={`training-result-trial-${t.index}-ok`} />
+                    ) : (
+                      <X color={palette.warnDark} size={22} strokeWidth={3} testID={`training-result-trial-${t.index}-try`} />
+                    )}
+                    <Text style={styles.cueText} testID={`training-result-trial-${t.index}-label`}>
+                      {S.result.outcome[t.outcome]}
+                    </Text>
                   </View>
                 );
               })}
@@ -100,6 +109,16 @@ export default function SchoolResultV2({ result, status, canStartAgain, onAgain,
         <Text style={styles.bodyStrong} testID="training-result-gain">
           {gainLine}
         </Text>
+        {nextLine !== null && (
+          <Text style={styles.body} testID="training-result-next">
+            {nextLine}
+          </Text>
+        )}
+        {mistake !== null && (
+          <Text style={styles.tip} testID="training-result-tip">
+            {S.result.tip[mistake]}
+          </Text>
+        )}
         {learned && (
           <Text style={styles.learned} testID="training-result-learned">
             {T.result.learned(name)}
@@ -147,6 +166,7 @@ const styles = StyleSheet.create({
   body: { color: palette.n200, fontSize: 15, textAlign: 'center' },
   bodyStrong: { color: palette.white, fontSize: 16, fontWeight: '700', textAlign: 'center' },
   learned: { color: palette.mint, fontSize: 18, letterSpacing: tightTracking(18), fontFamily: fonts.displayBold, textAlign: 'center' },
+  tip: { color: palette.mint, fontSize: 15, fontWeight: '600', textAlign: 'center' },
   muted: { color: palette.n400, fontSize: 13, textAlign: 'center' },
   row: { flexDirection: 'row', gap: 10, marginTop: 8 },
   primary: { flex: 1, minHeight: 52, borderRadius: radius.button, backgroundColor: palette.mint, alignItems: 'center', justifyContent: 'center' },

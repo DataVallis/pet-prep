@@ -8,12 +8,20 @@ import { GAME_LINE_MAX_CHARS } from '@/modules/gameLayer/gameLine';
 import { i18n } from '@/i18n';
 import { normalizePetMedia } from '@/modules/petMedia/petMedia';
 import { schoolDeck, performingMs } from '@/modules/training/schoolV2/schoolDeck';
+import { ruleText } from '@/modules/training/schoolV2/SchoolRuleStrip';
 import {
+  BREAK_COUNTDOWN_MS,
   EARLY_END_RESUME_AHEAD_MS,
   EARLY_END_SAFETY_MS,
   EARLY_END_TOLERANCE_MS,
+  breakCountdown,
+  commonMistake,
   earlyEndOpen,
   liveOutcomes,
+  praiseHintEnabled,
+  praiseHintOn,
+  resultHeadline,
+  tokenWaiting,
   maskFeedback,
   nextBoundaryAfter,
   praiseToken,
@@ -274,10 +282,89 @@ describe('stage plan', () => {
   });
 });
 
+describe('clarity layer (David\'s device test 2026-10-31)', () => {
+  const at = (ms: number) => schoolFrameAt(V2, ms);
+
+  it('beginner hint: on below 50 % progress, off at and above 50 %', () => {
+    expect(praiseHintEnabled(0)).toBe(true);
+    expect(praiseHintEnabled(49)).toBe(true);
+    expect(praiseHintEnabled(50)).toBe(false);
+    expect(praiseHintEnabled(100)).toBe(false);
+  });
+
+  it('the hint shows only in the praise window (obey_at … release_at), never while performing or ignoring', () => {
+    expect(praiseHintOn(at(5_499), true)).toBe(false);
+    expect(praiseHintOn(at(5_500), true)).toBe(true);
+    expect(praiseHintOn(at(6_999), true)).toBe(true);
+    expect(praiseHintOn(at(7_000), true)).toBe(false);
+    expect(praiseHintOn(at(5_500), false)).toBe(false);
+    for (let ms = 0; ms < V2.duration_ms; ms += 50) if (praiseHintOn(at(ms), true)) expect(at(ms).kind).toBe('window');
+  });
+
+  it('the token waits (dimmed) only while the dog visibly ignores — never during the »think« time', () => {
+    expect(tokenWaiting(at(8_900))).toBe(false); // ignoredCue: the dog might still obey
+    expect(tokenWaiting(at(10_499))).toBe(false);
+    expect(tokenWaiting(at(10_500))).toBe(true);
+    expect(tokenWaiting(at(13_399))).toBe(true);
+    expect(tokenWaiting(at(13_400))).toBe(false);
+    expect(tokenWaiting(at(5_500))).toBe(false);
+  });
+
+  it('break countdown: ≤ 3 s, counted to round 2\'s start, never past it (break 2.5 s → 3, 2, 1)', () => {
+    expect(BREAK_COUNTDOWN_MS).toBe(3_000);
+    expect(breakCountdown(V2, at(20_299), 20_299)).toBeNull();
+    expect(breakCountdown(V2, at(20_300), 20_300)).toBe(3); // 2.5 s left
+    expect(breakCountdown(V2, at(20_800), 20_800)).toBe(2);
+    expect(breakCountdown(V2, at(21_800), 21_800)).toBe(1);
+    expect(breakCountdown(V2, at(22_799), 22_799)).toBe(1);
+    expect(breakCountdown(V2, at(22_800), 22_800)).toBeNull(); // round 2 runs: auto-continued exactly at its start
+    // A longer break is capped at 3 s.
+    const long = readTrainingSession(makeSchoolV2SessionPayload()) as TrainingSession;
+    const rounds = [long.rounds![0], { ...long.rounds![1], start_ms: 30_000 }];
+    expect(breakCountdown({ rounds }, { kind: 'break', round: 0, toMs: 30_000 }, 20_300)).toBe(3);
+  });
+
+  it('result headline by outcome (never false praise — the M5-F04 bucket)', () => {
+    const r = (outcomes: string[]) => ({ trials: outcomes.map((outcome, index) => ({ index, obeys: outcome !== 'waited', outcome, tap_ms: null })) }) as never;
+    expect(resultHeadline(r(['in_time', 'in_time', 'waited']))).toBe('success');
+    expect(resultHeadline(r(['in_time', 'in_time', 'too_late']))).toBe('success');
+    expect(resultHeadline(r(['in_time', 'too_late', 'no_praise', 'too_early']))).toBe('partial');
+    expect(resultHeadline(r(['no_praise', 'too_early', 'waited']))).toBe('none');
+  });
+
+  it('the tip points at the most common mistake (tie: praise without obeying › too early › missed)', () => {
+    const t = (outcomes: string[]) => outcomes.map((outcome) => ({ outcome })) as never;
+    expect(commonMistake(t(['in_time', 'waited']))).toBeNull();
+    expect(commonMistake(t(['too_early', 'too_early', 'no_praise']))).toBe('early');
+    expect(commonMistake(t(['too_late', 'no_praise', 'too_early']))).toBe('missed');
+    expect(commonMistake(t(['praised_without_obeying', 'too_early']))).toBe('notObeyed');
+    expect(commonMistake(t(['too_early', 'too_late']))).toBe('early');
+  });
+});
+
 describe('texts', () => {
+  it.each(['sl', 'en'])('the rule strip says ♥ / treat and fits two short lines (%s)', async (lang) => {
+    await i18n.changeLanguage(lang);
+    expect(ruleText('heart')).toContain('♥');
+    expect(ruleText('treat')).not.toContain('♥');
+    for (const rule of [ruleText('heart'), ruleText('treat')]) expect(Array.from(rule).length).toBeLessThanOrEqual(2 * GAME_LINE_MAX_CHARS);
+    await i18n.changeLanguage('sl');
+  });
+
+  it('sl wording as David asked', async () => {
+    await i18n.changeLanguage('sl');
+    expect(ruleText('heart')).toBe('Ko kuža uboga → pritisni ♥. Če ne uboga → počakaj.');
+    expect(SCHOOL_V2_STRINGS.ignores).toBe('Ne uboga — ne pohvali, počakaj.');
+    expect(SCHOOL_V2_STRINGS.result.tryAgainLeft(4)).toBe('Poskusi še enkrat — danes imaš še 4 vaje.');
+    expect(SCHOOL_V2_STRINGS.result.tryAgainLeft(1)).toBe('Poskusi še enkrat — danes imaš še 1 vajo.');
+    expect(SCHOOL_V2_STRINGS.result.tryAgainLeft(2)).toBe('Poskusi še enkrat — danes imaš še 2 vaji.');
+    expect(SCHOOL_V2_STRINGS.result.tryAgainLeft(5)).toBe('Poskusi še enkrat — danes imaš še 5 vaj.');
+    expect(SCHOOL_V2_STRINGS.result.outcome.waited).toBe('Pravilno počakal(a)');
+  });
+
   it.each(['sl', 'en'])('every school v2 game line fits one line (%s)', async (lang) => {
     await i18n.changeLanguage(lang);
-    const lines = [SCHOOL_V2_STRINGS.lead, SCHOOL_V2_STRINGS.leadHeart, SCHOOL_V2_STRINGS.ignores, SCHOOL_V2_STRINGS.keepGoing, TRAINING_STRINGS.starting];
+    const lines = [SCHOOL_V2_STRINGS.keepGoing, SCHOOL_V2_STRINGS.now, TRAINING_STRINGS.starting];
     for (const line of lines) expect(Array.from(line).length).toBeLessThanOrEqual(GAME_LINE_MAX_CHARS);
     for (const label of Object.values(SCHOOL_V2_STRINGS.fb)) expect(Array.from(label).length).toBeLessThanOrEqual(GAME_LINE_MAX_CHARS);
     expect(SCHOOL_V2_STRINGS.round(1)).toContain('1');

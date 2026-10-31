@@ -132,9 +132,23 @@
     "knowsProgress": "{{name}} {{value}} %"
   },
   "school": {
-    "lead": "Ko uboga — takoj priboljšek!",
-    "leadHeart": "Ko uboga — takoj pohvali!",
-    "ignores": "Ne uboga — počakaj.",
+    "rule": "Ko kuža uboga → pritisni ♥. Če ne uboga → počakaj.",
+    "ruleTreat": "Ko kuža uboga → pritisni priboljšek. Če ne uboga → počakaj.",
+    "ruleA11y": "Pravilo: ko kuža uboga, ga pohvali. Če ne uboga, počakaj.",
+    "now": "Zdaj!",
+    "hintA11y": "Kuža je ubogal — pohvali zdaj",
+    "ignores": "Ne uboga — ne pohvali, počakaj.",
+    "ignoring": {
+      "sit": "Kuža voha",
+      "come": "Kuža ostane na mestu",
+      "place": "Kuža se raje igra",
+      "potty": "Kuža gleda metuljčka"
+    },
+    "wait": "Počakaj",
+    "waitA11yHint": "Kuža ne uboga — počakaj.",
+    "continue": "Nadaljuj",
+    "continueA11y": "Nadaljuj z {{round}}. krogom",
+    "roundIn": "{{round}}. krog čez {{n}} s …",
     "keepGoing": "Še 2. krog — kar naprej!",
     "fb": {
       "inTime": "Bravo!",
@@ -155,7 +169,29 @@
       "earlyEnd": "Končal(a) si po 1. krogu — napredek šteje. Za današnjo vajo opravi oba kroga.",
       "stars": "Zvezdice: {{stars}} od {{total}}",
       "trialA11y": "{{n}}. ukaz: {{outcome}}",
-      "roundTitle": "{{n}}. krog"
+      "roundTitle": "{{n}}. krog",
+      "titleSuccess": "Bravo!",
+      "titlePartial": "Dober začetek!",
+      "titleNone": "Vaja dela mojstra",
+      "noGain": "Napredka tokrat ni bilo.",
+      "tryAgainLeft_one": "Poskusi še enkrat — danes imaš še {{count}} vajo.",
+      "tryAgainLeft_two": "Poskusi še enkrat — danes imaš še {{count}} vaji.",
+      "tryAgainLeft_few": "Poskusi še enkrat — danes imaš še {{count}} vaje.",
+      "tryAgainLeft_other": "Poskusi še enkrat — danes imaš še {{count}} vaj.",
+      "noneLeft": "Naslednja vaja te čaka jutri.",
+      "outcome": {
+        "in_time": "pravočasno",
+        "too_early": "prezgodaj",
+        "too_late": "prepozno",
+        "no_praise": "zamujeno",
+        "waited": "Pravilno počakal(a)",
+        "praised_without_obeying": "pohvala, ko ni ubogal"
+      },
+      "tip": {
+        "notObeyed": "Namig: ko kuža ne uboga, ga ne pohvali — samo počakaj.",
+        "early": "Namig: počakaj, da kuža uboga, šele nato pritisni.",
+        "missed": "Namig: pritisni takoj, ko kuža uboga."
+      }
     },
     "round": "{{n}}. krog ✓",
     "progressA11y": "Ukaz {{n}} od {{total}}, zvezdice: {{stars}}"

@@ -9,12 +9,23 @@
  * - the dog fills the screen (`GameScreen` + `ClipDeck`: attention loop, performing, success loop —
  *   all preloaded once, the clock starts when they are ready, 12 s → »Slika«; never cut mid-clip);
  * - one big treat token (only with `training.treat_token`, else »Pohvali« ♥ — V6, display only);
- * - at most ONE line at the top, held ≥ 2 s (`GameLine`) — the rule before the first cue and
- *   »Ne uboga — počakaj.«; no »posluša« text while the dog performs (👂 by the chip instead);
+ * - at most ONE line at the top, held ≥ 2 s (`GameLine`, momentary feedback only); no »posluša«
+ *   text while the dog performs (👂 by the chip instead);
  * - the verdict is a big ✓ »Bravo!« / soft amber ✗ in the middle (`FeedbackLayer`), and the cut
  *   back to standing happens UNDER its mask (1200 ms) — the reversed »stand up« clip is never played;
  * - the command is a big chip (34 pt) with a cue sound (V5 interim — no recorded voice yet);
  * - 2 rounds × 3 cues; in the break »1. krog ✓« + stars and »Končaj« (Š3, while the server takes it).
+ *
+ * And what David's device test on 2026-10-31 showed (TestFlight, »Pridi«):
+ * - the rule is a STRIP under the top bar for the whole session (`SchoolRuleStrip`, wraps, no ellipsis);
+ * - beginner hint: while the command's progress is < 50 % the token glows / pulses and »Zdaj!«
+ *   shows for the praise window (`praiseHintOn`; reduce motion = static highlight; a screen reader
+ *   hears »Kuža je ubogal — pohvali zdaj«); nothing stored;
+ * - a cue the dog ignores: a readable text chip »Ne uboga — ne pohvali, počakaj.« + what the dog
+ *   does (»Kuža voha«) for the whole `ignoring` step (≥ 2.9 s) and a dimmed »Počakaj« token that
+ *   stays tappable (a tap still counts as praised-without-obeying — server rule);
+ * - the break's primary button is »Nadaljuj (3)« counting down to round 2's start on the server's
+ *   timeline (never longer than the break); »Končaj« is a small text button with the same gating.
  *
  * Timing is the server's schedule only (`schoolV2.ts`); one timer per step boundary keeps every
  * switch on time. Sounds + haptics follow the parent's »Zvoki in vibracija v igrah«; reduce motion =
@@ -22,9 +33,9 @@
  * and »Kuža se usede.« (announcement + live region).
  */
 
-import { useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { AccessibilityInfo, Platform, Pressable, StyleSheet, View, type GestureResponderEvent } from 'react-native';
-import Animated, { Easing, useAnimatedStyle, useSharedValue, withSequence, withTiming } from 'react-native-reanimated';
+import Animated, { Easing, cancelAnimation, useAnimatedStyle, useSharedValue, withRepeat, withSequence, withTiming } from 'react-native-reanimated';
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 import { ActivityIndicator } from 'react-native';
 import { Bone, Ear, Heart } from 'lucide-react-native';
@@ -43,20 +54,25 @@ import { useGameFx } from '@/modules/gameLayer/useGameFx';
 import type { MediaMode } from '@/modules/petMedia/statePlayer';
 import { slotIndex } from '@/modules/training/game';
 import { schoolDeck } from '@/modules/training/schoolV2/schoolDeck';
+import SchoolRuleStrip from '@/modules/training/schoolV2/SchoolRuleStrip';
 import {
   TOKEN_COOLDOWN_MS,
+  breakCountdown,
   liveOutcomes,
   nextBoundaryAfter,
+  praiseHintEnabled,
+  praiseHintOn,
   praiseToken,
   schoolBoundaries,
   schoolCues,
   schoolFrameAt,
   starCount,
   tapFeedback,
+  tokenWaiting,
   type SchoolFeedback,
   type SchoolFrame,
 } from '@/modules/training/schoolV2/schoolV2';
-import { SCHOOL_V2_STRINGS, TRAINING_STRINGS, type TrainingCommand, type TrainingSession } from '@/modules/training/training';
+import { SCHOOL_V2_STRINGS, TRAINING_STRINGS, type TrainingSession } from '@/modules/training/training';
 import type { TrainingGame } from '@/modules/training/useTrainingGame';
 import { alpha, fonts, palette, radius, tightTracking } from '@/theme';
 
@@ -79,9 +95,6 @@ export interface SchoolGameV2Props {
 
 const S = SCHOOL_V2_STRINGS;
 const T = TRAINING_STRINGS;
-
-/** What the dog does instead of obeying (§4.1 »ikona 🦋 / 👃«, matches `commands.*.ignores`). */
-const IGNORE_ICON: Readonly<Record<TrainingCommand, string>> = { sit: '👃', come: '👃', place: '🎾', potty: '🦋' };
 
 const TREAT_FLIGHT_MS = 520;
 const CONFETTI_MS = 1_600;
@@ -150,6 +163,27 @@ function ConfettiPiece({ fall, x, delay, size, mint }: { fall: { value: number }
   return <Animated.View style={[styles.piece, { left: `${x}%`, width: size, height: size, backgroundColor: mint ? palette.mint : palette.white }, style]} />;
 }
 
+const PULSE_MS = 420;
+
+/**
+ * The beginner hint's glow around the token: a soft pulse while `on`; reduce motion = the static
+ * highlight only (the ring style is applied by the caller either way).
+ */
+function TokenPulse({ on, reduceMotion, children }: { on: boolean; reduceMotion: boolean; children: ReactNode }) {
+  const scale = useSharedValue(1);
+  useEffect(() => {
+    if (!on || reduceMotion) {
+      cancelAnimation(scale);
+      scale.value = 1;
+      return;
+    }
+    scale.value = withRepeat(withSequence(withTiming(1.1, { duration: PULSE_MS }), withTiming(1, { duration: PULSE_MS })), -1, false);
+    return () => cancelAnimation(scale);
+  }, [on, reduceMotion, scale]);
+  const style = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
+  return <Animated.View style={style} testID={on && !reduceMotion ? 'school-v2-token-pulse' : undefined}>{children}</Animated.View>;
+}
+
 export default function SchoolGameV2({
   view,
   game,
@@ -167,6 +201,8 @@ export default function SchoolGameV2({
   const media = view.pet.media;
   const command = session.command;
   const token = praiseToken(view.training);
+  // Beginner hint (David 2026-10-31): decided once per session from the command's progress at the start.
+  const [hintEnabled] = useState(() => praiseHintEnabled(view.training.commands.find((c) => c.command === command)?.progress ?? 0));
   // Decided once per session: the clips never change under a running game.
   const [plan] = useState(() => schoolDeck(media, command, posePending || mediaModeOf(view) === 'picture' ? 'picture' : 'video', session));
   const queue = useClipQueue(game.now);
@@ -226,7 +262,7 @@ export default function SchoolGameV2({
         setAnnounce(cueText);
         if (Platform.OS === 'ios') AccessibilityInfo.announceForAccessibility(cueText);
       } else if (cue.kind === 'announce') {
-        const obeys = T.commands[command].obeys;
+        const obeys = hintEnabled ? S.hintA11y : T.commands[command].obeys;
         setAnnounce(obeys);
         if (Platform.OS === 'ios') AccessibilityInfo.announceForAccessibility(obeys);
       } else if (cue.kind === 'feedback') {
@@ -240,23 +276,15 @@ export default function SchoolGameV2({
     }
   }, [stepKey, clockRunning]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // ── The one line at the top (≥ 2 s each).
-  // The rule is read while the deck loads and through the lead-in (§3.1: the rule before the start) —
-  // so its 2 s never run into the first cue.
-  const leadLine = token === 'treat' ? S.lead : S.leadHeart;
-  const desiredLine = preparing || frame.line === 'lead' ? leadLine : frame.line === 'ignores' ? S.ignores : null;
-  const desiredRef = useRef(desiredLine);
-  desiredRef.current = desiredLine;
+  // ── The one line at the top (≥ 2 s each) — momentary feedback only. The rule itself is the
+  // strip under the top bar (whole session); »don't praise, wait« is the chip by the dog.
   const say = line.say;
-  useEffect(() => {
-    say(desiredLine);
-  }, [desiredLine, say]);
   // Š3 graceful: »Končaj« came too late — round 2 plays on.
   const declined = game.earlyEndDeclined;
   useEffect(() => {
     if (declined === 0) return;
     say(S.keepGoing);
-    say(desiredRef.current);
+    say(null);
   }, [declined, say]);
 
   // ── The token: the FIRST tap of a cue decides (server rule); instant mirror feedback.
@@ -294,6 +322,12 @@ export default function SchoolGameV2({
   const tokenHidden = preparing || finishing || inBreak || frame.kind === 'over';
   const cooling = coolUntil !== 0;
   const canEndEarly = !finishing && inBreak && game.canEndEarly();
+  const hintOn = clockRunning && praiseHintOn(frame, hintEnabled);
+  const waiting = clockRunning && tokenWaiting(frame);
+  const countdown = clockRunning ? breakCountdown(session, frame, e) : null;
+  // »Nadaljuj« pressed in this break: only the countdown stays (it cannot shorten the server's break).
+  const [continuedBreak, setContinuedBreak] = useState<number | null>(null);
+  const continued = inBreak && continuedBreak === frame.round;
   const deckCurrent = useMemo(() => (queue.state === null ? null : { role: queue.state.current, instance: queue.state.instance, lastSwitch: queue.state.lastSwitch }), [queue.state]);
   const noPicture = plan.clips.every((c) => c.url === null && c.picture === null);
 
@@ -303,21 +337,54 @@ export default function SchoolGameV2({
       <ActivityIndicator color={palette.mint} />
       <Text style={styles.savingText}>{T.finishing}</Text>
     </View>
-  ) : canEndEarly ? (
-    <Pressable
-      testID={`${testID}-finish-early`}
-      accessibilityRole="button"
-      accessibilityLabel={S.finishEarlyA11y}
-      onPress={game.endEarly}
-      style={({ pressed }) => [styles.finishEarly, pressed && styles.pressed]}
-    >
-      <Text style={styles.finishEarlyText}>{S.finishEarly}</Text>
-    </Pressable>
+  ) : inBreak && countdown !== null ? (
+    <View style={styles.breakDock} testID={`${testID}-break`}>
+      {continued ? (
+        <Text style={styles.roundIn} testID={`${testID}-round-in`} accessibilityLiveRegion="polite">
+          {S.roundIn(frame.round + 2, countdown)}
+        </Text>
+      ) : (
+        <Pressable
+          testID={`${testID}-continue`}
+          accessibilityRole="button"
+          accessibilityLabel={S.continueA11y(frame.round + 2)}
+          onPress={() => setContinuedBreak(frame.round)}
+          style={({ pressed }) => [styles.continue, pressed && styles.pressed]}
+        >
+          <Text style={styles.continueText}>{S.continue}</Text>
+          <View style={styles.countdown}>
+            <Text style={styles.countdownText} testID={`${testID}-countdown`}>
+              {countdown}
+            </Text>
+          </View>
+        </Pressable>
+      )}
+      {canEndEarly && !continued && (
+        <Pressable
+          testID={`${testID}-finish-early`}
+          accessibilityRole="button"
+          accessibilityLabel={S.finishEarlyA11y}
+          onPress={game.endEarly}
+          hitSlop={8}
+          style={({ pressed }) => [styles.finishEarly, pressed && styles.pressed]}
+        >
+          <Text style={styles.finishEarlyText}>{S.finishEarly}</Text>
+        </Pressable>
+      )}
+    </View>
   ) : tokenHidden ? null : (
+    <>
+      {hintOn && (
+        <View style={styles.nowChip} testID={`${testID}-hint`} importantForAccessibility="no-hide-descendants" accessibilityElementsHidden>
+          <Text style={styles.nowText}>{S.now}</Text>
+        </View>
+      )}
+      <TokenPulse on={hintOn} reduceMotion={reduceMotion}>
     <Pressable
       testID={`${testID}-token`}
       accessibilityRole="button"
       accessibilityLabel={token === 'treat' ? S.treatA11y : S.praiseA11y}
+      accessibilityHint={waiting ? S.waitA11yHint : undefined}
       // The touch counts at once (timing game); a screen reader activates with onPress only.
       onPressIn={(ev: GestureResponderEvent) => {
         touchActive.current = true;
@@ -330,15 +397,26 @@ export default function SchoolGameV2({
         }
         onTap(null);
       }}
-      style={({ pressed }) => [styles.token, token === 'treat' ? styles.tokenTreat : styles.tokenHeart, cooling && styles.tokenCooling, pressed && !reduceMotion && styles.tokenPressed]}
+      style={({ pressed }) => [
+        styles.token,
+        token === 'treat' ? styles.tokenTreat : styles.tokenHeart,
+        hintOn && styles.tokenGlow,
+        waiting && styles.tokenWaiting,
+        cooling && styles.tokenCooling,
+        pressed && !reduceMotion && styles.tokenPressed,
+      ]}
     >
       {token === 'treat' ? (
         <Bone color={palette.graphite} fill={palette.warnDark} size={48} testID={`${testID}-token-treat`} />
       ) : (
         <Heart color={palette.graphite} fill={palette.raspberry} size={44} testID={`${testID}-token-heart`} />
       )}
-      <Text style={styles.tokenText}>{tokenLabel}</Text>
+      <Text style={styles.tokenText} testID={waiting ? `${testID}-token-wait` : hintOn ? `${testID}-token-glow` : undefined}>
+        {waiting ? S.wait : tokenLabel}
+      </Text>
     </Pressable>
+      </TokenPulse>
+    </>
   );
 
   const field = (
@@ -348,7 +426,7 @@ export default function SchoolGameV2({
           <Text style={styles.fallbackEmoji}>🐕</Text>
         </View>
       )}
-      <View style={[styles.chipRow, { top: insets.top + 76 }]}>
+      <View style={[styles.chipRow, { top: insets.top + CHIP_TOP }]}>
         {frame.chip && clockRunning && (
           <View style={styles.chip} testID={`${testID}-cue`} accessibilityLiveRegion="polite">
             <Text style={styles.chipText}>{T.commands[command].cue}</Text>
@@ -356,8 +434,13 @@ export default function SchoolGameV2({
           </View>
         )}
         {frame.icon === 'ignore' && clockRunning && (
-          <View style={styles.ignoreBubble} testID={`${testID}-ignoring`}>
-            <Text style={styles.ignoreIcon}>{IGNORE_ICON[command]}</Text>
+          <View style={styles.ignoreChip} testID={`${testID}-ignoring`} accessibilityLiveRegion="polite">
+            <Text style={styles.ignoreText} testID={`${testID}-ignoring-text`}>
+              {S.ignores}
+            </Text>
+            <Text style={styles.ignoreCaption} testID={`${testID}-ignoring-caption`}>
+              {S.ignoring[command]}
+            </Text>
           </View>
         )}
       </View>
@@ -379,21 +462,29 @@ export default function SchoolGameV2({
       field={field}
       feedback={<FeedbackLayer ref={feedback} reduceMotion={reduceMotion} onMaskChange={queue.masked} testID={`${testID}-feedback`} />}
       topBar={
-        <GameTopBar
-          dots={decided}
-          stars={stars}
-          line={line.text}
-          closeLabel={T.close}
-          progressLabel={S.progressA11y(Math.min(session.trials.length, doneCount + (frame.trial !== null && !decided[frame.trial] ? 1 : 0)), session.trials.length, stars)}
-          testID={`${testID}-top`}
-        />
+        <View style={styles.topStack}>
+          <GameTopBar
+            dots={decided}
+            stars={stars}
+            line={line.text}
+            closeLabel={T.close}
+            progressLabel={S.progressA11y(Math.min(session.trials.length, doneCount + (frame.trial !== null && !decided[frame.trial] ? 1 : 0)), session.trials.length, stars)}
+            testID={`${testID}-top`}
+          />
+          {/* The rule, the whole session (David 2026-10-31) — never replaced by the line above. */}
+          <SchoolRuleStrip token={token} testID={`${testID}-rule`} />
+        </View>
       }
       dock={dock}
     />
   );
 }
 
+/** The command chip sits under the top bar + the (up to two-line) rule strip. */
+const CHIP_TOP = 136;
+
 const styles = StyleSheet.create({
+  topStack: { gap: 8 },
   chipRow: { position: 'absolute', left: 16, right: 16, alignItems: 'center', gap: 10 },
   chip: {
     flexDirection: 'row',
@@ -409,17 +500,19 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 4 },
   },
   chipText: { color: palette.graphite, fontSize: 34, letterSpacing: tightTracking(34), fontFamily: fonts.display },
-  ignoreBubble: {
-    width: 64,
-    height: 64,
-    borderRadius: 32,
-    backgroundColor: alpha(palette.graphite, 0.6),
-    borderWidth: 1,
-    borderColor: alpha(palette.white, 0.2),
+  ignoreChip: {
+    maxWidth: 340,
     alignItems: 'center',
-    justifyContent: 'center',
+    gap: 4,
+    paddingHorizontal: 20,
+    paddingVertical: 12,
+    borderRadius: radius.button,
+    backgroundColor: alpha(palette.graphite, 0.85),
+    borderWidth: 2,
+    borderColor: palette.warnDark,
   },
-  ignoreIcon: { fontSize: 32 },
+  ignoreText: { color: palette.white, fontSize: 20, lineHeight: 25, fontFamily: fonts.displayBold, letterSpacing: tightTracking(20), textAlign: 'center' },
+  ignoreCaption: { color: palette.n200, fontSize: 15, fontWeight: '600', textAlign: 'center' },
   flightArea: { alignItems: 'center', justifyContent: 'flex-end', paddingBottom: 150 },
   flashArea: { alignItems: 'center', justifyContent: 'center' },
   piece: { position: 'absolute', top: -20, borderRadius: 3 },
@@ -443,20 +536,33 @@ const styles = StyleSheet.create({
   tokenTreat: { backgroundColor: palette.mint },
   tokenHeart: { backgroundColor: palette.mint },
   tokenCooling: { opacity: 0.5 },
+  /** Beginner hint: a bright ring + glow (the static highlight under reduce motion). */
+  tokenGlow: { borderWidth: 6, borderColor: palette.white, shadowColor: palette.white, shadowOpacity: 0.9, shadowRadius: 24 },
+  /** The dog is not obeying: dimmed, neutral »wait« look — still tappable (a tap still counts). */
+  tokenWaiting: { opacity: 0.4, backgroundColor: palette.n300, borderColor: alpha(palette.white, 0.35), shadowOpacity: 0 },
+  nowChip: { paddingHorizontal: 22, paddingVertical: 6, borderRadius: radius.button, backgroundColor: palette.white },
+  nowText: { color: palette.graphite, fontSize: 22, letterSpacing: tightTracking(22), fontFamily: fonts.displayBold },
   tokenPressed: { transform: [{ scale: 0.95 }] },
   tokenText: { color: palette.graphite, fontSize: 16, fontFamily: fonts.displayBold, letterSpacing: tightTracking(16) },
-  finishEarly: {
+  breakDock: { alignItems: 'center', gap: 8 },
+  continue: {
+    flexDirection: 'row',
+    gap: 12,
     minHeight: 64,
-    minWidth: 200,
+    minWidth: 220,
     paddingHorizontal: 28,
     borderRadius: radius.button,
-    backgroundColor: alpha(palette.graphite, 0.8),
-    borderWidth: 2,
-    borderColor: palette.mint,
+    backgroundColor: palette.mint,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  finishEarlyText: { color: palette.white, fontSize: 22, letterSpacing: tightTracking(22), fontFamily: fonts.displayBold },
+  continueText: { color: palette.graphite, fontSize: 22, letterSpacing: tightTracking(22), fontFamily: fonts.displayBold },
+  countdown: { minWidth: 34, height: 34, borderRadius: 17, backgroundColor: alpha(palette.graphite, 0.15), alignItems: 'center', justifyContent: 'center' },
+  countdownText: { color: palette.graphite, fontSize: 18, fontFamily: fonts.displayBold },
+  roundIn: { color: palette.white, fontSize: 18, fontWeight: '700', textAlign: 'center', minHeight: 64, textAlignVertical: 'center' },
+  /** Secondary: a small text button (David 2026-10-31 — it was mistaken for »continue«). */
+  finishEarly: { minHeight: 44, paddingHorizontal: 16, alignItems: 'center', justifyContent: 'center' },
+  finishEarlyText: { color: palette.n200, fontSize: 15, fontWeight: '600', textDecorationLine: 'underline' },
   saving: { flexDirection: 'row', alignItems: 'center', gap: 10, minHeight: 64 },
   savingText: { color: palette.white, fontSize: 17, fontWeight: '700' },
   pressed: { opacity: 0.8 },

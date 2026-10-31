@@ -5,8 +5,13 @@
  * (only with `treat_token`, else »Pohvali« ♥), the instant ✓, the cut back to standing only under
  * the mask (the release clip is never mounted), »Končaj« in the break → `ended_after_round: 1` and
  * the per-cue result, the parent's sound switch and picture mode.
+ *
+ * David's device test 2026-10-31 (clarity): the rule strip for the whole session (never cut), the
+ * beginner hint below 50 % progress, the dimmed »wait« token while the dog ignores (still counts),
+ * »Nadaljuj« + countdown in the break with »Končaj« as a small secondary, and the positive result.
  */
-import { act, fireEvent, screen } from '@testing-library/react-native';
+import { act, fireEvent, render as rtlRender, screen } from '@testing-library/react-native';
+import { StyleSheet } from 'react-native';
 import * as Haptics from 'expo-haptics';
 
 import { api } from '@/api/client';
@@ -14,10 +19,13 @@ import { normalizeChildState, type ChildPetView } from '@/modules/childPet/child
 import { setGameLayerAvailableForTests } from '@/modules/gameLayer/capability';
 import { GAME_SOUNDS } from '@/modules/gameLayer/gameFxCore';
 import { normalizePetMedia } from '@/modules/petMedia/petMedia';
+import SchoolResultV2 from '@/modules/training/schoolV2/SchoolResultV2';
+import { ruleText } from '@/modules/training/schoolV2/SchoolRuleStrip';
 import TrainingOverlay, { resetSchoolGameV2ForTests } from '@/modules/training/TrainingOverlay';
-import { SCHOOL_V2_STRINGS, TRAINING_STRINGS } from '@/modules/training/training';
+import { readTrainingResult, SCHOOL_V2_STRINGS, TRAINING_STRINGS, type TrainingResult } from '@/modules/training/training';
 import {
   makeEnabledTraining,
+  makeTrainingCommands,
   makeLiveChildState,
   makeMedia,
   makeSchoolV2SessionPayload,
@@ -41,8 +49,11 @@ const ID = 'school-v2';
 const URL = (k: string) => `https://api.petprep.si/m/${k}.mp4?v=1`;
 const CLIPS = { att: URL('school_sit_attention_loop'), perf: URL('school_sit_performing'), succ: URL('school_sit_success_loop'), release: URL('school_sit_release') };
 
-function schoolView(opts: { treat?: boolean; settings?: { media_display?: 'video' | 'picture'; game_feedback?: boolean } } = {}): ChildPetView {
-  const raw = makeLiveChildState({ training: makeEnabledTraining({ treat_token: opts.treat === true }), settings: opts.settings ?? {} });
+function schoolView(
+  opts: { treat?: boolean; sitProgress?: number; settings?: { media_display?: 'video' | 'picture'; game_feedback?: boolean } } = {},
+): ChildPetView {
+  const training = makeEnabledTraining({ treat_token: opts.treat === true, commands: makeTrainingCommands({ sit: opts.sitProgress ?? 40, come: 100 }) });
+  const raw = makeLiveChildState({ training, settings: opts.settings ?? {} });
   const base = normalizeChildState(raw, 0, Date.parse('2026-10-04T12:00:00+02:00'));
   const media = normalizePetMedia(
     makeMedia({
@@ -159,14 +170,15 @@ describe('school v2 on the game layer', () => {
     expect(screen.getByTestId(ID)).toBeTruthy();
     // Preparing: three players (never the release clip), nothing plays, »getting ready«.
     expect(mockVideoPlayers.map(sourceUri).sort()).toEqual([CLIPS.att, CLIPS.perf, CLIPS.succ].sort());
-    // The rule line is read while the deck loads (it never runs into the first cue).
-    expect(screen.getByTestId(`${ID}-top-line`).props.children).toBe(SCHOOL_V2_STRINGS.lead);
+    // The rule strip is up while the deck loads (treat wording); the game line stays free.
+    expect(screen.getByTestId(`${ID}-rule-text`).props.children).toBe(ruleText('treat'));
+    expect(screen.getByTestId(`${ID}-top-line`).props.children).toBe('');
     expect(screen.queryByTestId(`${ID}-token`)).toBeNull();
     await deckReady();
     expect(frontUrl()).toBe(CLIPS.att);
     expect(screen.getByTestId(`${ID}-token-treat`)).toBeTruthy();
     await advance(1_000);
-    expect(screen.getByTestId(`${ID}-top-line`).props.children).toBe(SCHOOL_V2_STRINGS.lead);
+    expect(screen.getByTestId(`${ID}-rule-text`).props.children).toBe(ruleText('treat'));
 
     // Cue at 2 s: the big chip with 👂, the cue sound (and its haptic).
     await advanceTo(2_000);
@@ -203,21 +215,149 @@ describe('school v2 on the game layer', () => {
     expect(frontUrl()).toBe(CLIPS.att);
     expect(mockVideoPlayers.some((p) => sourceUri(p) === CLIPS.release)).toBe(false);
 
-    // Ignored cue 2: »Ne uboga — počakaj.« with the distraction icon.
+    // Ignored cue 2: the readable »don't praise, wait« chip with what the dog does (no emoji).
     await advanceTo(10_600);
-    expect(screen.getByTestId(`${ID}-ignoring`)).toBeTruthy();
+    expect(screen.getByTestId(`${ID}-ignoring-text`).props.children).toBe(SCHOOL_V2_STRINGS.ignores);
+    expect(screen.getByTestId(`${ID}-ignoring-caption`).props.children).toBe(SCHOOL_V2_STRINGS.ignoring.sit);
     await advance(2_000);
-    expect(screen.getByTestId(`${ID}-top-line`).props.children).toBe(SCHOOL_V2_STRINGS.ignores);
+    expect(screen.getByTestId(`${ID}-ignoring`)).toBeTruthy();
 
-    // Break after round 1: the token goes away, »Končaj« appears.
+    // Break after round 1: the token goes away, »Nadaljuj« is primary, »Končaj« a small secondary.
     await advanceTo(20_400);
     expect(screen.queryByTestId(`${ID}-token`)).toBeNull();
+    expect(screen.getByTestId(`${ID}-continue`)).toBeTruthy();
     fireEvent.press(screen.getByTestId(`${ID}-finish-early`));
     await advance(0);
     expect(finishTraining).toHaveBeenCalledWith(session.id, [5_900], 1);
     expect(screen.getByTestId('training-result-round-1')).toBeTruthy();
     expect(screen.queryByTestId('training-result-round-2')).toBeNull();
     expect(screen.getByTestId('training-result-routine').props.children).toBe(SCHOOL_V2_STRINGS.result.earlyEnd);
+    // in_time + no_praise → »Dober začetek!«, 6 practices left (300 s / 50 s) → never »tomorrow«.
+    expect(screen.getByTestId('training-result-title').props.children).toBe(SCHOOL_V2_STRINGS.result.titlePartial);
+    expect(screen.getByTestId('training-result-next').props.children).toBe(SCHOOL_V2_STRINGS.result.tryAgainLeft(6));
+    // The ignored cue the child waited for is a green ✓ »Pravilno počakal(a)«.
+    expect(screen.getByTestId('training-result-trial-1-ok')).toBeTruthy();
+    expect(screen.getByTestId('training-result-trial-1-label').props.children).toBe(SCHOOL_V2_STRINGS.result.outcome.waited);
+  });
+
+  it('the rule strip stays the whole session and is never truncated (no numberOfLines anywhere at the top)', async () => {
+    setGameLayerAvailableForTests(true);
+    startTraining.mockResolvedValueOnce(startBody(makeSchoolV2SessionPayload()));
+    render(schoolView());
+    await pressStart();
+    const check = () => {
+      const strip = screen.getByTestId(`${ID}-rule-text`);
+      expect(strip.props.children).toBe(ruleText('heart'));
+      expect(strip.props.numberOfLines).toBeUndefined();
+      expect(screen.getByTestId(`${ID}-top-line`).props.numberOfLines).toBeUndefined();
+    };
+    check(); // preparing (deck loading)
+    await deckReady();
+    // lead-in, listening, performing, window, mask, calm, ignored cue, ignoring, break, round 2, the end
+    for (const ms of [500, 2_000, 2_600, 5_600, 7_100, 8_300, 9_000, 10_600, 20_400, 23_000, 41_000]) {
+      await advanceTo(ms);
+      check();
+    }
+  });
+
+  it('beginner hint: below 50 % the token glows + »Zdaj!« in the praise window only, and the screen reader hears it', async () => {
+    setGameLayerAvailableForTests(true);
+    startTraining.mockResolvedValueOnce(startBody(makeSchoolV2SessionPayload()));
+    render(schoolView({ sitProgress: 49 }));
+    await pressStart();
+    await deckReady();
+    await advanceTo(3_000);
+    expect(screen.queryByTestId(`${ID}-hint`, { includeHiddenElements: true })).toBeNull();
+    expect(screen.queryByTestId(`${ID}-token-glow`)).toBeNull();
+    await advanceTo(5_600);
+    expect(screen.getByTestId(`${ID}-hint`, { includeHiddenElements: true })).toBeTruthy();
+    expect(screen.getByTestId(`${ID}-token-glow`)).toBeTruthy();
+    expect(screen.getByTestId(`${ID}-token-pulse`)).toBeTruthy();
+    expect(screen.getByTestId(`${ID}-announce`).props.children).toBe(SCHOOL_V2_STRINGS.hintA11y);
+    await advanceTo(7_100);
+    expect(screen.queryByTestId(`${ID}-hint`, { includeHiddenElements: true })).toBeNull();
+  });
+
+  it('beginner hint with reduce motion: the static highlight, no pulse', async () => {
+    setGameLayerAvailableForTests(true);
+    startTraining.mockResolvedValueOnce(startBody(makeSchoolV2SessionPayload()));
+    renderWithQuery(<TrainingOverlay view={schoolView({ sitProgress: 0 })} onClose={jest.fn()} reduceMotion />);
+    await pressStart();
+    await deckReady();
+    await advanceTo(5_600);
+    expect(screen.getByTestId(`${ID}-token-glow`)).toBeTruthy();
+    expect(screen.queryByTestId(`${ID}-token-pulse`)).toBeNull();
+  });
+
+  it('no hint at or above 50 % — the skill is still learned', async () => {
+    setGameLayerAvailableForTests(true);
+    startTraining.mockResolvedValueOnce(startBody(makeSchoolV2SessionPayload()));
+    render(schoolView({ sitProgress: 50 }));
+    await pressStart();
+    await deckReady();
+    await advanceTo(5_600);
+    expect(screen.queryByTestId(`${ID}-hint`, { includeHiddenElements: true })).toBeNull();
+    expect(screen.queryByTestId(`${ID}-token-glow`)).toBeNull();
+    expect(screen.getByTestId(`${ID}-announce`).props.children).toBe(TRAINING_STRINGS.commands.sit.obeys);
+  });
+
+  it('while the dog ignores: the token is dimmed with »Počakaj«, but a tap still counts (as praise without obeying)', async () => {
+    setGameLayerAvailableForTests(true);
+    const session = makeSchoolV2SessionPayload();
+    startTraining.mockResolvedValueOnce(startBody(session));
+    finishTraining.mockResolvedValueOnce({ status: 'accepted', result: makeTrainingResult({ rules_version: 2 }), state: makeLiveChildState({ training: makeEnabledTraining() }) });
+    render(schoolView());
+    await pressStart();
+    await deckReady();
+    await advanceTo(9_200); // ignoredCue: the dog may still be thinking → not dimmed yet
+    expect(screen.queryByTestId(`${ID}-token-wait`)).toBeNull();
+    await advanceTo(10_600);
+    expect(screen.getByTestId(`${ID}-token-wait`).props.children).toBe(SCHOOL_V2_STRINGS.wait);
+    const style = StyleSheet.flatten(screen.getByTestId(`${ID}-token`).props.style);
+    expect(style.opacity).toBeLessThan(0.5);
+    fireEvent(screen.getByTestId(`${ID}-token`), 'pressIn', { nativeEvent: {} });
+    await advance(0);
+    expect(screen.getByTestId(`${ID}-feedback-miss`)).toBeTruthy();
+    await advanceTo(13_500);
+    expect(screen.queryByTestId(`${ID}-token-wait`)).toBeNull();
+    await advanceTo(41_200);
+    await advance(0);
+    expect(finishTraining.mock.calls[0][1]).toEqual([10_600]);
+  });
+
+  it('round break: »Nadaljuj« counts down to round 2 and continues exactly at its start; »Končaj« only while the server takes it', async () => {
+    setGameLayerAvailableForTests(true);
+    startTraining.mockResolvedValueOnce(startBody(makeSchoolV2SessionPayload()));
+    render(schoolView());
+    await pressStart();
+    await deckReady();
+    await advanceTo(20_350);
+    expect(screen.getByTestId(`${ID}-countdown`).props.children).toBe(3);
+    expect(screen.getByTestId(`${ID}-finish-early`)).toBeTruthy();
+    await advanceTo(20_900);
+    expect(screen.getByTestId(`${ID}-countdown`).props.children).toBe(2);
+    // »Nadaljuj« = the child's choice: only the countdown stays, »Končaj« goes.
+    fireEvent.press(screen.getByTestId(`${ID}-continue`));
+    await advance(0);
+    expect(screen.queryByTestId(`${ID}-finish-early`)).toBeNull();
+    expect(screen.getByTestId(`${ID}-round-in`).props.children).toBe(SCHOOL_V2_STRINGS.roundIn(2, 2));
+    await advanceTo(22_799);
+    expect(screen.queryByTestId(`${ID}-token`)).toBeNull();
+    await advanceTo(22_800);
+    await advance(0);
+    expect(screen.queryByTestId(`${ID}-break`)).toBeNull();
+    expect(screen.getByTestId(`${ID}-token`)).toBeTruthy();
+  });
+
+  it('untouched, the break auto-continues: from the round 2 start no »Nadaljuj« / »Končaj« (the server gate itself: earlyEndOpen tests)', async () => {
+    setGameLayerAvailableForTests(true);
+    startTraining.mockResolvedValueOnce(startBody(makeSchoolV2SessionPayload()));
+    render(schoolView());
+    await pressStart();
+    await deckReady();
+    await advanceTo(22_900);
+    expect(screen.queryByTestId(`${ID}-finish-early`)).toBeNull();
+    expect(screen.queryByTestId(`${ID}-continue`)).toBeNull();
   });
 
   it('»Pohvali« ♥ without bought treats; no sound / haptic when the parent switched them off', async () => {
@@ -245,5 +385,66 @@ describe('school v2 on the game layer', () => {
     await advance(0);
     expect(mockVideoPlayers).toHaveLength(0);
     expect(screen.getByTestId(`${ID}-token`)).toBeTruthy();
+  });
+});
+
+describe('school v2 result wording', () => {
+  const result = (outcomes: [string, boolean][]): TrainingResult =>
+    readTrainingResult(
+      makeTrainingResult({
+        trials: outcomes.map(([outcome, obeys], index) => ({ index, obeys, outcome, tap_ms: outcome === 'no_praise' || outcome === 'waited' ? null : 6_000 })),
+        progress_before: 40,
+        progress_after: 40,
+        progress_gain: 0,
+        rules_version: 2,
+      }),
+    ) as TrainingResult;
+  const NONE: [string, boolean][] = [
+    ['no_praise', true],
+    ['waited', false],
+    ['too_early', true],
+    ['too_early', true],
+    ['praised_without_obeying', false],
+    ['no_praise', true],
+  ];
+  const renderResult = (r: TrainingResult, practicesLeft: number) =>
+    rtlRender(<SchoolResultV2 result={r} status="accepted" canStartAgain={practicesLeft > 0} practicesLeft={practicesLeft} onAgain={jest.fn()} onDone={jest.fn()} />);
+  const allText = () => screen.root.findAll((n) => typeof n.props.children === 'string').map((n) => n.props.children as string).join(' ');
+
+  it('practices remain today → »Vaja dela mojstra« + »Poskusi še enkrat — danes imaš še 4 vaje.«, never »tomorrow«', () => {
+    renderResult(result(NONE), 4);
+    expect(screen.getByTestId('training-result-title').props.children).toBe(SCHOOL_V2_STRINGS.result.titleNone);
+    expect(screen.getByTestId('training-result-next').props.children).toBe(SCHOOL_V2_STRINGS.result.tryAgainLeft(4));
+    expect(allText()).not.toMatch(/jutri|tomorrow/i);
+    // The tip points at the most common mistake (too early ×2).
+    expect(screen.getByTestId('training-result-tip').props.children).toBe(SCHOOL_V2_STRINGS.result.tip.early);
+  });
+
+  it('no practice left today → the calm »tomorrow« line', () => {
+    renderResult(result(NONE), 0);
+    expect(screen.getByTestId('training-result-next').props.children).toBe(SCHOOL_V2_STRINGS.result.noneLeft);
+    expect(screen.queryByTestId('training-again')).toBeNull();
+  });
+
+  it('ignored + waited = green ✓ »Pravilno počakal(a)«; praise without obeying stays a soft amber ✗', () => {
+    renderResult(result(NONE), 4);
+    expect(screen.getByTestId('training-result-trial-1-ok')).toBeTruthy();
+    expect(screen.getByTestId('training-result-trial-1-label').props.children).toBe(SCHOOL_V2_STRINGS.result.outcome.waited);
+    expect(screen.getByTestId('training-result-trial-4-try')).toBeTruthy();
+    expect(screen.getByTestId('training-result-trial-4-label').props.children).toBe(SCHOOL_V2_STRINGS.result.outcome.praised_without_obeying);
+  });
+
+  it('success → »Bravo!« with no try-again line and no tip', () => {
+    renderResult(
+      result([
+        ['in_time', true],
+        ['waited', false],
+        ['in_time', true],
+      ]),
+      4,
+    );
+    expect(screen.getByTestId('training-result-title').props.children).toBe(SCHOOL_V2_STRINGS.result.titleSuccess);
+    expect(screen.queryByTestId('training-result-next')).toBeNull();
+    expect(screen.queryByTestId('training-result-tip')).toBeNull();
   });
 });
