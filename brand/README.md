@@ -43,7 +43,7 @@ set `android.adaptiveIcon.backgroundColor` to `#7FE0B4` and the notification `co
 
 ## Animals in visuals
 - Animals are PetPrep's photorealistic AI animals (labelled AI-generated), never illustrations instead of photos.
-- **Exception (David 2026-10-31): colouring pages** are black line art made from our own breed portraits and Curio (`docs/product/COLORING_PAGES.md`). Curio is never the caretaker there either (`MASCOT.md`).
+- **Exception (David 2026-10-31): colouring pages** are black line art made from our own breed portraits and Curio (`docs/product/COLORING_PAGES.md`), with the logo as a transparent outline to colour: `logo/petprep-logo-outline.svg`. Curio is never the caretaker there either (`MASCOT.md`).
 
 ## Colour tokens
 | Token | Light | Dark | Role |
