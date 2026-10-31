@@ -27,7 +27,7 @@ Each writer agent gets the batch slugs, the README schema and these rules (same 
   highest existing `KD…` / `KC…`;
 - `level` stricter when sources disagree, explained in `why`; no doses, no "induce vomiting", no
   frightening child text; every statement backed by a quote;
-- locales: every locale already used in that species' files (today `en`, `sl`);
+- locales: write `en` and `sl` only — the hourly language run (LANGUAGE_RUNBOOK.md, top-up) translates new foods into the other live languages;
 - write one food at a time; no A/B source → no file, and the queue line gets
   `— no source <species> <date>`.
 
