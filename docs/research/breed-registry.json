@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "eb6e89f8c57f932703cc3a402f717826a5c2225f7eedefa04da1d809fde261d4"
+      "sha256": "cf4b3c9a1907f52a8b39b6024f1dc75a9535ab217ae7b58de2e264005325f937"
     }
   },
   "suitability_vocabulary": {
@@ -45867,7 +45867,12 @@
           "S636"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "lagotto-romagnolo.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
