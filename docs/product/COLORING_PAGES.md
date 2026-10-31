@@ -1,6 +1,6 @@
 # Pobarvanke za otroke (»Colouring pages«)
 
-> Status: **brezplačne pobarvanke na spletu od 31. 10. 2026** (pet-prep-website PR #141). Prodaja (plačljiva knjižica, merch, Curio plišasta igrača, PetPrep puzzle, darila) je *načrt*. Ideja in odločitve: David, 31. 10. 2026.
+> Status: **brezplačne pobarvanke na spletu od 31. 10. 2026** (pet-prep-website PR #141), v sekciji »Za otroke« (PR #146). Prodaja (plačljiva knjižica, merch, Curio plišasta igrača, PetPrep puzzle, darila) je *načrt* in se na strani ne kaže, dokler izdelek ni naprodaj. Ideja in odločitve: David, 31. 10. 2026.
 
 ## 1. Ideja
 
@@ -11,7 +11,7 @@ Starši natisnejo pobarvanke, otroci jih pobarvajo ali prerišejo. Starši risbo
 | # | Odločitev |
 |---|---|
 | C1 | **Najprej samo brezplačne** pobarvanke na spletu (anketa). Plačljiva knjižica pride kasneje, skupaj z merchem. |
-| C2 | **Prodaja digitalnih izdelkov prek Lemon Squeezy** (David že ima račun). Lemon Squeezy je trgovec (merchant of record) in sam obračuna DDV. Še ni zgrajeno. |
+| C2 | **Ponudnik plačil še ni izbran** (David 31. 10. 2026): fizični izdelki verjetno Stripe; ali bomo prodajali digitalne izdelke (in prek koga), odločimo kasneje. Na strani plačil ne omenjamo. |
 | C3 | **Izjema v CGP:** pobarvanke so črtne risbe (sicer so živali na vizualih fotorealistične). Risbe nastanejo iz PetPrepovih AI portretov pasem in iz Curia (Higgsfield, Nano Banana 2.1, 2k, pokončno 3:4, ~2 kredita na stran). Ilustracije ostanejo izjema samo za pobarvanke. |
 | C4 | **Deljenje:** risbo delijo **starši**, samo risbo — brez obraza in imena otroka (otroci pod 13 let na Instagramu nimajo računa; zasebnost otrok). Poziv: »tag @petprep.si with #walkyourpet«. |
 | C5 | **Pasme v pobarvankah:** samo tiste, ki jih smemo kazati v marketingu (border collie, labradorec, zlati prinašalec, mešanček) + mačke (splošni mucek, brez pasme) + Curio. |

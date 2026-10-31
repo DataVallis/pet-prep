@@ -331,7 +331,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - Second Chance reset (19,99 € consumable)
 - IAP ekonomija: veterinar (S2: ne v »Željah«); priboljški in igrače → **M6-W**
 - B2B affiliate (Mr. Pet) — QR kuponi
-- **Trgovina na petprep.si** (David 31. 10. 2026; *načrt*, `docs/product/COLORING_PAGES.md` §2): plačljiva knjižica pobarvank, merch, **Curio plišasta igrača**, **PetPrep puzzle**, darila za otroke. Digitalni izdelki prek **Lemon Squeezy** (David ima račun; trgovec obračuna DDV). Brezplačne pobarvanke so na spletu od 31. 10. 2026.
+- **Trgovina na petprep.si** (David 31. 10. 2026; *načrt*, `docs/product/COLORING_PAGES.md` §2): plačljiva knjižica pobarvank, merch, **Curio plišasta igrača**, **PetPrep puzzle**, darila za otroke. Ponudnik plačil še ni izbran (fizično verjetno Stripe; digitalno odločimo kasneje). Na strani se trgovina pokaže v sekciji »Za otroke« šele, ko je prvi izdelek naprodaj. Brezplačne pobarvanke so na spletu od 31. 10. 2026.
 - ~~M5 Realistična simulacija~~ → premaknjeno v **M5-R** zgoraj (2026-10-05)
 - Skaliranje in nove države: glej `docs/engineering/SCALING.md` (sprožilci + ukrepi)
 - Faza 2 — **genetika** (David 11. 10. 2026; spec `docs/product/PHASE2_SPEC.md` §Genetika): nakup genskega testa v starševskem delu (najprej affiliate + prek veterinarjev), nalaganje izida in AI izpis z viri (pasme v %, značilnosti, nagnjenosti; neposredne genske najdbe ločeno; brez obljub o alergijah), kartica za veterinarja (PDF / QR) — psi in mačke; dolgoročno **lasten PetPrep test** s partnerskim laboratorijem (samo načrt). Pilot z veterinarjem (priporočilna koda, pregled vsebin).
