@@ -1,7 +1,7 @@
 # Runbook — post brief to Postaja every 3 days (M6-K, social)
 
 David 2026-10-31: "a schedule that sends me into Postaja, dated, e.g. every 3 days post this, plus prompts for the
-images — not every day, so the posts don't repeat". A scheduled task runs **every 3 days** and adds **one dated
+images — not every day, so the posts don't repeat". A scheduled task runs **every Monday and Thursday at 18:41 Ljubljana (every 3–4 days)** and adds **one dated
 post brief** as a text material to the Postaja brand `petprep-si`. Postaja writes and schedules the posts from the
 materials; David picks the brief in Postaja, creates the post and publishes it. The task never posts anything.
 
