@@ -3100,6 +3100,58 @@
         }
       ],
       "notes": "RKC Breeds A–Z page (royalkennelclub.com …/working/alaskan-malamute; the thekennelclub.org.uk display.aspx?id=5105 address redirects there) could not be fetched on 2026-10-31 → no minimum / best_practice level. AKC Working Group health testing page (K32, re-read 2026-10-31): Alaskan Malamute — 'Hip Evaluation', 'Ophthalmologist Evaluation', 'Alaskan Malamute Polyneuropathy (AMPN) - DNA Test' → other_scheme (new key dna_ampn). PDSA (dog-data S639): breeding dogs X-rayed under the BVA/Kennel Club Hip Dysplasia Scheme, eye screening every year ('Breeding dogs should be screened every year'), blood tests for polyneuropathy and day-blindness carriers, puppies X-rayed for chondrodysplasia (paraphrase except the eye fragment) — merged into the rows above; day blindness not listed as a test (no verbatim test name)."
+    },
+    "basenji": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K37",
+        "quote": "If you are considering a basenji puppy, ask the breeder for these test results."
+      },
+      "tests": [
+        {
+          "key": "dna_fanconi",
+          "level": "other_scheme",
+          "name": "DNA test for Fanconi syndrome (US breed club recommendation)",
+          "source_id": "K37",
+          "quote": "Fanconi Syndrome"
+        },
+        {
+          "key": "dna_pra_bj1",
+          "level": "other_scheme",
+          "name": "DNA test for progressive retinal atrophy (PRA-BJ1) (US breed club recommendation)",
+          "source_id": "K37",
+          "quote": "PRA-BJ1"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "other_scheme",
+          "name": "Eye examination of breeding dogs (US breed club: Eyes / CAER)",
+          "source_id": "K37",
+          "quote": "Eyes / CAER"
+        },
+        {
+          "key": "thyroid_scheme",
+          "level": "other_scheme",
+          "name": "Thyroid testing of breeding dogs (US breed club recommendation)",
+          "source_id": "K37",
+          "quote": "Thyroid"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "other_scheme",
+          "name": "Hip evaluation of breeding dogs (US breed club: hips and elbows)",
+          "source_id": "K37",
+          "quote": "Hips and elbows"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "other_scheme",
+          "name": "Elbow evaluation of breeding dogs (US breed club: hips and elbows)",
+          "source_id": "K37",
+          "quote": "Hips and elbows"
+        }
+      ],
+      "notes": "RKC Breeds A–Z page (royalkennelclub.com …/hound/basenji; the thekennelclub.org.uk display.aspx?id=1002 address redirects there) could not be fetched on 2026-10-31 → no minimum / best_practice level. Basenji Club of America health page (K37, 2026-10-31): 'If you are considering a basenji puppy, ask the breeder for these test results.' — 'Fanconi Syndrome', 'PRA-BJ1', 'Eyes / CAER', 'Thyroid', 'Hips and elbows' → other_scheme (new keys dna_fanconi, dna_pra_bj1, thyroid_scheme). The page says the Fanconi and PRA-BJ1 tests and the OFA eye exam are part of the CHIC list (paraphrase). PDSA (dog-data S644): check that the parents were screened (paraphrase)."
     }
   }
 }

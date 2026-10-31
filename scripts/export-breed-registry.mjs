@@ -467,6 +467,7 @@ const SPECIES = [
       { id: 'american_staffordshire_terrier', synonyms: { en: ['AmStaff', 'Am Staff', 'Staffordshire Terrier'], sl: ['amstaff', 'ameriški stafordširski terier'] } },
       { id: 'lagotto_romagnolo', synonyms: { en: ['Lagotto', 'Romagna Water Dog', 'Truffle dog'], sl: ['lagotto', 'romanjski vodni pes', 'pes za tartufe'] } },
       { id: 'alaskan_malamute', synonyms: { en: ['Malamute', 'Mal'], sl: ['malamut', 'aljaski malamut', 'malamute'] } },
+      { id: 'basenji', synonyms: { en: ['African Barkless Dog', 'Congo Dog', 'barkless dog'], sl: ['basendži', 'basendzi', 'pes, ki ne laja'] } },
     ],
   },
   {
@@ -491,7 +492,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', China: 'CN', Portugal: 'PT', Canada: 'CA', Croatia: 'HR', Australia: 'AU', Russia: 'RU', Ireland: 'IE' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', China: 'CN', Portugal: 'PT', Canada: 'CA', Croatia: 'HR', Australia: 'AU', Russia: 'RU', Ireland: 'IE', 'Central Africa': 'AF-C' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -2231,6 +2232,28 @@ const DOG_FACTS = {
       ['polyneuropathy', 'health.polyneuropathy'],
     ],
   },
+  // M5-R10-84. RKC page not reachable → PDSA (S644): exercise 'Minimum exercise (per day): 1 hour' (at least), grooming
+  // 'brushing once a week' (Once a week); lifespan PDSA 'Over 12 years' + the WebMD span 13–14 y (S646). Height / weight =
+  // the PDSA ranges (S644; FCI-Standard N° 43 / AKC give one ideal per sex). Coren rank 78. FCI origin Central Africa (new).
+  // Not exported: adult_weight / height alternatives and salt_category, senior_from, mcmillan_2024 (null), no shedding
+  // statement read.
+  basenji: {
+    height: ['height.pdsa'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.pdsa', 'more_than'], ['lifespan.webmd', 'span']],
+    exercise: [['@proposed_game_parameters.basenji.exercise_minutes_adult', 'at_least']],
+    coat: ['suitability.pdsa_coat_length'],
+    grooming: [['suitability.pdsa_grooming', 'grooming_frequency']],
+    shedding: [],
+    food_motivation: null,
+    health: [
+      ['fanconi_syndrome', 'health.fanconi_syndrome'],
+      ['pra_eye_disease', 'health.pra'],
+      ['pyruvate_kinase_deficiency', 'health.pyruvate_kinase_deficiency'],
+      ['kneecap_luxation', 'health.luxating_patella'],
+      ['bladder_stones', 'health.urolithiasis'],
+    ],
+  },
 
 
 };
@@ -2281,6 +2304,7 @@ export const DOG_CARE_TASKS = {
   american_staffordshire_terrier: [['ear_cleaning', 1, 28, 'proposed_game_parameters.american_staffordshire_terrier.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.american_staffordshire_terrier.bathing']],
   lagotto_romagnolo: [['groomer_visit', 1, 42, 'proposed_game_parameters.lagotto_romagnolo.professional_grooming'], ['bath', 1, 28, 'proposed_game_parameters.lagotto_romagnolo.bathing']],
   alaskan_malamute: [['ear_cleaning', 1, 7, 'proposed_game_parameters.alaskan_malamute.ear_care'], ['bath', 1, 42, 'proposed_game_parameters.alaskan_malamute.bathing']],
+  basenji: [['tooth_brushing', 2, 7, 'proposed_game_parameters.basenji.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.basenji.ear_care']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -2916,6 +2940,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.alaskan_malamute.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.alaskan_malamute.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.alaskan_malamute.exercise_minutes_senior',
+  },
+  basenji: {
+    adult_minutes: ['proposed_game_parameters.basenji.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.basenji.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.basenji.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.basenji.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.basenji.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.basenji.exercise_minutes_senior',
   },
 
 

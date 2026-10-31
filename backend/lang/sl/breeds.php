@@ -85,6 +85,7 @@ return [
     'american_staffordshire_terrier' => 'Ameriški staffordshirski terier',
     'lagotto_romagnolo' => 'Lagotto romagnolo',
     'alaskan_malamute' => 'Aljaški malamut',
+    'basenji' => 'Basenji',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

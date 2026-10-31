@@ -536,6 +536,14 @@ return [
         ['key' => 'red-white', 'value' => 'red and white with white face markings and a brown nose', 'en' => 'Red and white', 'sl' => 'Rdeče-bel'],
         ['key' => 'white', 'value' => 'all white', 'en' => 'White', 'sl' => 'Bel'],
     ],
+    // M5-R10-84: FCI-Standard N° 43 S643 / AKC standard S645 colour list (same order as the appearance block; red and white
+    // first = the portrait default).
+    'basenji' => [
+        ['key' => 'red-white', 'value' => 'chestnut red and white with white feet, chest and tail tip', 'en' => 'Red and white', 'sl' => 'Rdeče-bel'],
+        ['key' => 'black-white', 'value' => 'black and white with white feet, chest and tail tip', 'en' => 'Black and white', 'sl' => 'Črno-bel'],
+        ['key' => 'tricolour', 'value' => 'black, tan and white tricolour with tan markings on the muzzle and cheeks', 'en' => 'Tricolour (black, tan, white)', 'sl' => 'Trobarven (črn, rjavkast, bel)'],
+        ['key' => 'brindle-white', 'value' => 'brindle (black stripes on chestnut red) and white with white feet, chest and tail tip', 'en' => 'Brindle and white', 'sl' => 'Tigrast z belo'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

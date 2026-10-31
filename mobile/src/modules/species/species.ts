@@ -98,6 +98,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   american_staffordshire_terrier: 'dog',
   lagotto_romagnolo: 'dog',
   alaskan_malamute: 'dog',
+  basenji: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -200,6 +201,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'american_staffordshire_terrier',
   'lagotto_romagnolo',
   'alaskan_malamute',
+  'basenji',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */
