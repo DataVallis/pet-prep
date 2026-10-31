@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "5215043c28f67559147f2d4eff8fb0d4cfa182da3ad23c398b98d94d7192fd8b"
+      "sha256": "a23442a19dc922fc5e2d7576fe273d0c62067b3fa2a22643e087fdedd8c18964"
     }
   },
   "suitability_vocabulary": {
@@ -47060,7 +47060,12 @@
           "S646"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "basenji.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
