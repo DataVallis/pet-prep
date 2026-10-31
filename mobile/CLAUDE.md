@@ -10,6 +10,7 @@ Expo APIs change between SDKs — check https://docs.expo.dev/versions/v57.0.0/ 
 
 ## Commands
 `yarn install` · `npx expo start` · `yarn test` · `npx tsc --noEmit` · `eas build --profile development|preview|production` (`eas.json`).
+`package.json` `resolutions` pin patched transitive build-tool packages for Dependabot alerts (node-forge, shell-quote, source-map-js — 2026-10-31); when bumping `expo`, check whether they can be dropped and re-check both native fingerprints (`npx expo-updates fingerprint:generate --platform ios|android`) — see DEPLOYMENT.md »Mobile dependency security«.
 The app now defaults to the **production** API (`https://api.petprep.si`, wss :443) — set `EXPO_PUBLIC_API_URL` etc. in `mobile/.env` for local work. `credentials.json` (signing) is local-only and gitignored.
 Env: `EXPO_PUBLIC_API_URL`, `EXPO_PUBLIC_REVERB_APP_KEY|HOST|PORT|SCHEME`, `EXPO_PUBLIC_REVENUECAT_IOS_KEY|ANDROID_KEY`, `EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID|IOS_CLIENT_ID|IOS_URL_SCHEME` (public; in eas.json + `.env.example` — copy them into `mobile/.env` or the Google button stays hidden in a dev-client session) (see `src/config/env.ts`, names in `.env.example`). Physical device → use the Mac's LAN IP, Android emulator → `10.0.2.2`.
 
