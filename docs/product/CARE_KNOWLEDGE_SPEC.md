@@ -3,7 +3,7 @@
 > David, 31. 10. 2026: »Te poučne stvari damo v PetPrep. App in spletno stran. Na spletno stran mora iti čim več vsebine za GEO in SEO … tudi za mačke in ostale vrste, ko jih bomo dodajali. Moramo res dobro bazo vsega zgradit.«
 > Povod: objava @golden_retriever_express (21. 10. 2026, ~1.600 všečkov, ~1.900 deljenj) »These Foods Can Kill Your Dog« — strupena / varna hrana in nasveti za nego.
 >
-> Status: **načrt, čaka Davidove odločitve (§10)**. Nič od tega še ni v aplikaciji ali na spletu.
+> Status: **načrt; odločitve 1–3 sprejete 31. 10. 2026 (§10)**. Nič od tega še ni v aplikaciji ali na spletu.
 
 ## 1. Cilj
 
@@ -158,7 +158,10 @@ Tehnično na petprep.si:
 
 Vsaka faza = PR-ji z dokumentacijo; vsebina se objavi na spletu šele, ko je odobrena.
 
-## 10. Odprte odločitve (David)
+## 10. Odločitve (David)
+
+Sprejeto 31. 10. 2026: (1) **brez veterinarskega pregleda** — strani nosijo opombo »ni veterinarsko preverjeno« (kot zanimivosti pasem), viri in neodvisno preverjanje ostanejo obvezni; (2) **Bing Webmaster Tools + IndexNow** za petprep.si (spremeni odločitev z 11. 10.); (3) **najprej splet K0–K1**, aplikacija (K3) sledi. Odprto: 4 in 5.
+
 
 1. **Veterinarski pregled** vsebine o hrani in nujnih primerih (npr. pilotni veterinar iz 11. 10. kot recenzent z imenom na strani) — močno poveča zaupanje (E-E-A-T) pri zdravstveni vsebini; ali ostanemo pri »ni veterinarsko preverjeno«?
 2. **Bing**: ponovno odpreti Bing Webmaster Tools / IndexNow zaradi ChatGPT?
