@@ -96,6 +96,8 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   soft_coated_wheaten_terrier: 'dog',
   irish_wolfhound: 'dog',
   american_staffordshire_terrier: 'dog',
+  lagotto_romagnolo: 'dog',
+  alaskan_malamute: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -196,6 +198,8 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'soft_coated_wheaten_terrier',
   'irish_wolfhound',
   'american_staffordshire_terrier',
+  'lagotto_romagnolo',
+  'alaskan_malamute',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */

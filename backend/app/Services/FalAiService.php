@@ -683,6 +683,20 @@ class FalAiService
                 .'dark round eyes set far apart, natural uncropped ears held rose or half prick, a short low-set natural tail tapering to a point, '
                 .'friendly and alert expression, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-82: FCI-Standard N° 298 (S631) / RKC standard (S633) — a squarely built, small to medium-sized, rustic water dog;
+            // woolly coat of tight ring-shaped curls, evenly clipped, never styled; brown nose; never black.
+            BreedType::LagottoRomagnolo => 'A small to medium-sized, squarely built, powerful Lagotto Romagnolo of rustic appearance, '
+                .'with a dense woolly coat of tight ring-shaped curls all over the body, evenly clipped to a natural outline, curly facial furnishings, '
+                .'a brown nose, round ochre to hazel eyes, medium triangular hanging ears covered in curls, a tapering tail carried scimitar-like, '
+                .'lively and affectionate expression, photorealistic, studio quality, natural lighting',
+
+            // M5-R10-83: FCI-Standard N° 243 (S638) — a powerful, substantially built Arctic sledge dog; thick coarse guard coat;
+            // grey and white with a cap and face markings; brown almond eyes, never blue; plume tail over the back.
+            BreedType::AlaskanMalamute => 'A large, powerful and substantially built Alaskan Malamute with a deep chest, '
+                .'a thick coarse double coat in grey and white with a grey cap and white face markings and a white underbody, '
+                .'a broad deep head, brown almond-shaped eyes, erect triangular ears slightly rounded at the tips, a well-furred plume tail carried over the back, '
+                .'friendly and dignified expression, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1648,6 +1662,28 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'short, close, stiff, glossy coat',
                 'markings' => 'black nose, natural uncropped rose or half-prick ears, natural undocked tail, never black and tan, liver, merle or mostly white',
+            ],
+            // M5-R10-82: standard colours (S631 / S633); never black, grey or black pigment.
+            BreedType::LagottoRomagnolo => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'brown roan (white finely flecked with brown)',
+                    1 => 'solid off-white',
+                    2 => 'white with brown patches',
+                },
+                'eye_color' => 'ochre to hazel',
+                'fur_texture' => 'dense woolly coat of tight ring-shaped curls, evenly clipped',
+                'markings' => 'brown nose, curly facial furnishings, never black coat, black patches or black pigment',
+            ],
+            // M5-R10-83: standard colours (S638), white underbody and face markings; never blue eyes.
+            BreedType::AlaskanMalamute => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'grey and white with a grey cap and white face markings',
+                    1 => 'black and white with a dark cap and white face markings',
+                    2 => 'sable and white with white face markings',
+                },
+                'eye_color' => 'brown',
+                'fur_texture' => 'thick, coarse guard coat over a dense woolly undercoat',
+                'markings' => 'white underbody, legs and face markings, black nose, plume tail over the back, never blue eyes',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

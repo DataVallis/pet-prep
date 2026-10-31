@@ -673,6 +673,19 @@
 | latter preferred") and natural tail ("Not docked."). Not RKC-recognised (no Breed Watch). Brindle first with the highest
 | weight (the portrait default, Claude's choice); weights unsourced → `verified => false`.
 |
+| Lagotto Romagnolo (M5-R10-82, docs/research/dog-data lagotto_romagnolo.appearance):
+| "Small to medium-sized dog, well proportioned, powerfully built, of a rustic appearance" (FCI-Standard N° 298, S631);
+| woolly coat in tight ring-shaped curls, clipped evenly, never styled (S631); colours off-white, white with brown or orange
+| patches, orange roan, brown roan, brown, orange (S631 / RKC S633); black coat, patches or pigmentation disqualify → never
+| black; brown nose. Brown roan first with the highest weight (the portrait default, Claude's choice); weights unsourced →
+| `verified => false`.
+|
+| Alaskan Malamute (M5-R10-83, docs/research/dog-data alaskan_malamute.appearance):
+| "one of the oldest Arctic sledge dogs, is a powerful and substantially built dog" (FCI-Standard N° 243, S638); thick, coarse
+| guard coat, never long and soft; colours light grey through shadings to black, sable, sable to red, white underbody and
+| face markings (cap, bar / mask), or all white; brown almond eyes — blue eyes disqualify. Grey and white first with the
+| highest weight (the portrait default, Claude's choice); weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -3579,6 +3592,83 @@ return [
             'ear_carriage' => ['natural uncropped ears, short and held rose or half prick'],
             'eye_color' => ['dark round eyes set low and far apart'],
             'tail' => ['short, low-set natural tail tapering to a fine point, not curled'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-82 (docs/research/dog-data/data.json lagotto_romagnolo.appearance; runbook rules 2026-10-10: colours the
+    // standard lists — S631 "Off-white solid colour, white with brown or orange patches, orange roan, brown roan," brown
+    // and orange with or without white; never black, grey or black pigment).
+    'lagotto_romagnolo' => [
+        'display_name' => 'Lagotto Romagnolo',
+        // Colour frequencies are in no source (lagotto_romagnolo.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 298 Lagotto Romagnolo (S631, https://fci.be/Nomenclature/Standards/298g08-en.pdf), RKC breed standard (S633) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S631 "Height at the withers: Males: 43– 48 cm"; "Weight: Males: 13 – 16 kg."',
+            'build' => 'S633 "Squarely built, small to medium sized dog of rustic appearance;"',
+            'coat_length' => 'S631 "Of woolly texture, semi- rough on the surface, with tight, ring shaped curls, with visible undercoat."',
+            'coat_color' => 'S631 "Off-white solid colour, white with brown or orange patches, orange roan, brown roan," (weights unsourced)',
+            'nose' => 'S631 "The colour ranges from light to dark brown, depending on the colour of the coat."',
+            'eye_color' => 'S631 "The colour of the iris ranges from ochre to hazel and dark brown depending on the colour of the coat."',
+            'ear_carriage' => 'S631 "Medium-sized in proportion to the head, triangular with rounded tips"',
+            'tail' => 'S631 "At rest carried scimitar like; when attentive decidedly raised."',
+        ],
+        'traits' => [
+            'size' => ['small to medium-sized'],
+            'build' => [['value' => 'squarely built, well proportioned and powerful, of a rustic appearance', 'weight' => 3], 'compact, sturdy, square-bodied water dog'],
+            'coat_length' => ['woolly coat of tight ring-shaped curls all over the body, evenly clipped to a natural rustic outline, never styled'],
+            // Standard colours (S631 / S633); brown roan first with the highest weight → the register portrait (Claude's choice).
+            'coat_color' => [
+                ['value' => 'brown roan (white finely flecked with brown)', 'weight' => 30],
+                ['value' => 'solid off-white', 'weight' => 15],
+                ['value' => 'white with brown patches', 'weight' => 15],
+                ['value' => 'white with orange patches', 'weight' => 10],
+                ['value' => 'orange roan (white finely flecked with orange)', 'weight' => 10],
+                ['value' => 'solid brown', 'weight' => 15],
+                ['value' => 'solid orange', 'weight' => 5],
+            ],
+            'nose' => ['brown nose, light to dark depending on the coat colour, never black'],
+            'eye_color' => ['round eyes from ochre to hazel or dark brown, matching the coat'],
+            'ear_carriage' => ['medium-sized triangular hanging ears with rounded tips, covered in curls'],
+            'tail' => ['tapering tail carried scimitar-like, raised when alert'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'nose', 'eye_color', 'ear_carriage', 'tail'],
+    ],
+    // M5-R10-83 (docs/research/dog-data/data.json alaskan_malamute.appearance; runbook rules 2026-10-10: colours the
+    // standard lists — S638 light grey through shadings to black, sable, sable to red, always with white underbody and face
+    // markings, or all white; never blue eyes, never a long soft coat).
+    'alaskan_malamute' => [
+        'display_name' => 'Alaskan Malamute',
+        // Colour frequencies are in no source (alaskan_malamute.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 243 Alaskan Malamute (S638, https://WWW.FCI.BE/Nomenclature/Standards/243g05-en.pdf) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S638 "Males: 25 inches at the shoulders - 85 pounds (63,5 cm - 38 kg)."; S639 "Large"',
+            'build' => 'S638 "The Alaskan Malamute, one of the oldest Arctic sledge dogs, is a powerful and substantially built dog"',
+            'coat_length' => 'S638 "The Malamute has a thick, coarse guard coat, never long and soft."',
+            'coat_color' => 'S638 "The usual colours range from light grey through intermediate shadings to black, sable, and shading of sable to red." "The only solid colour allowable is all-white." (weights unsourced)',
+            'head' => 'S638 "The head is broad and deep, not coarse or clumsy, but in proportion to the size of the dog."',
+            'ear_carriage' => 'S638 "The ears are triangular in shape and slightly rounded at tips."',
+            'eye_color' => 'S638 "Eyes are brown, almond shaped and of medium size."',
+            'tail' => 'S638 "The Malamute tail is well furred and has the appearance of a waving plume."',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'powerful, substantially built Arctic sledge dog with a deep chest and a strong, well-muscled body', 'weight' => 3], 'sturdy, heavy-boned freighting build'],
+            'coat_length' => ['thick, coarse guard coat over a dense woolly undercoat, standing off the body, never long and soft'],
+            // Standard colours (S638), always with a white underbody, legs and face markings; grey and white first with the
+            // highest weight → the register portrait (Claude's choice).
+            'coat_color' => [
+                ['value' => 'grey and white with a grey cap and white face markings', 'weight' => 40],
+                ['value' => 'black and white with a dark cap and white face markings', 'weight' => 25],
+                ['value' => 'sable and white with white face markings', 'weight' => 15],
+                ['value' => 'red and white with white face markings and a brown nose', 'weight' => 10],
+                ['value' => 'all white', 'weight' => 10],
+            ],
+            'head' => ['broad, deep head in proportion to the body, bulky muzzle'],
+            'ear_carriage' => ['erect, triangular ears slightly rounded at the tips'],
+            'eye_color' => ['brown, almond-shaped eyes of medium size'],
+            'tail' => ['well-furred tail carried over the back like a waving plume'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],
