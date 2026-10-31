@@ -6,21 +6,24 @@
     "sl": "Sol",
     "de": "Salz",
     "fr": "Sel",
-    "es": "Sal"
+    "es": "Sal",
+    "it": "Sale"
   },
   "question": {
     "en": "Can cats eat salt?",
     "sl": "Ali lahko mačke jedo sol?",
     "de": "Dürfen Katzen Salz fressen?",
     "fr": "Les chats peuvent-ils manger du sel ?",
-    "es": "¿Pueden los gatos comer sal?"
+    "es": "¿Pueden los gatos comer sal?",
+    "it": "I gatti possono mangiare il sale?"
   },
   "url_slug": {
     "en": "salt",
     "sl": "sol",
     "de": "salz",
     "fr": "sel",
-    "es": "sal"
+    "es": "sal",
+    "it": "sale"
   },
   "level": "dangerous",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne, ne kot hrana ali priboljšek. Mačja prebavila niso ustvarjena za večje količine soli, preveč soli pa lahko povzroči zastrupitev. Kuhinjsko sol, sol za posipanje in zelo slano hrano hranite stran od muce in pokličite veterinarja, če je poje veliko.",
     "de": "Nein, nicht als Futter oder Leckerli. Das Verdauungssystem einer Katze ist nicht für große Mengen Salz ausgelegt, und zu viel davon kann eine Salzvergiftung verursachen. Halten Sie Speisesalz, Streusalz und sehr salzige Lebensmittel von Ihrer Katze fern und rufen Sie Ihren Tierarzt an, wenn sie viel davon frisst.",
     "fr": "Non, ni comme aliment ni comme friandise. Le système digestif du chat n’est pas fait pour de grandes quantités de sel, et trop de sel peut provoquer une intoxication au sel. Tenez le sel de table, le sel de déneigement et les aliments très salés loin de votre chat, et appelez votre vétérinaire s’il en mange beaucoup.",
-    "es": "No, ni como comida ni como premio. El aparato digestivo del gato no está preparado para grandes cantidades de sal, y el exceso puede causar una intoxicación por sal. Mantén la sal de mesa, la sal gorda para el hielo y los alimentos muy salados lejos de tu gato, y llama a tu veterinario si come mucha."
+    "es": "No, ni como comida ni como premio. El aparato digestivo del gato no está preparado para grandes cantidades de sal, y el exceso puede causar una intoxicación por sal. Mantén la sal de mesa, la sal gorda para el hielo y los alimentos muy salados lejos de tu gato, y llama a tu veterinario si come mucha.",
+    "it": "No, né come alimento né come premio. L’apparato digerente del gatto non è fatto per gestire grandi quantità di sale, e troppo sale può causare un’intossicazione. Tieni sale da cucina, sale antighiaccio e cibi molto salati lontani dal tuo gatto, e chiama il veterinario se ne mangia molto."
   },
   "why": {
     "en": "Too much salt causes thirst and frequent urination and, in serious cases, tremors and seizures. Salt sources at home include table salt used in cooking and rock salt used as a de-icer in winter.",
     "sl": "Preveč soli povzroči žejo in pogosto uriniranje, v hujših primerih pa tresenje in krče. Viri soli v domu so kuhinjska sol in sol za posipanje cest in pločnikov pozimi.",
     "de": "Zu viel Salz verursacht Durst und häufiges Urinieren, in schweren Fällen auch Zittern und Krampfanfälle. Salzquellen im Haushalt sind etwa Speisesalz zum Kochen und Streusalz, das im Winter gegen Glätte eingesetzt wird.",
     "fr": "Trop de sel donne soif et fait uriner souvent et, dans les cas graves, provoque des tremblements et des convulsions. À la maison, les sources de sel sont notamment le sel de table utilisé en cuisine et le sel de déneigement utilisé l’hiver.",
-    "es": "El exceso de sal provoca sed y ganas frecuentes de orinar y, en los casos graves, temblores y convulsiones. En casa, la sal puede venir de la sal de mesa que se usa para cocinar y de la sal gorda que se echa en invierno para deshacer el hielo."
+    "es": "El exceso de sal provoca sed y ganas frecuentes de orinar y, en los casos graves, temblores y convulsiones. En casa, la sal puede venir de la sal de mesa que se usa para cocinar y de la sal gorda que se echa en invierno para deshacer el hielo.",
+    "it": "Troppo sale provoca sete e minzione frequente e, nei casi gravi, tremori e convulsioni. In casa il sale si trova come sale da cucina, usato per cucinare, e come sale grosso antighiaccio, usato d’inverno."
   },
   "signs": {
     "en": [
@@ -82,6 +87,15 @@
       "Camina tambaleándose",
       "Sed excesiva u orina mucho",
       "Temblores o convulsiones"
+    ],
+    "it": [
+      "Vomito",
+      "Diarrea",
+      "Calo dell’appetito",
+      "Letargia",
+      "Andatura barcollante",
+      "Sete o minzione eccessive",
+      "Tremori o convulsioni"
     ]
   },
   "what_to_do": {
@@ -89,7 +103,8 @@
     "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, če je muca pojedla sol ali zelo slano hrano oziroma lizala sol za posipanje. Zapišite, kaj je pojedla, koliko in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, wenn Ihre Katze Salz oder ein sehr salziges Lebensmittel gefressen oder an Streusalz geleckt hat. Notieren Sie, was sie gefressen hat, wie viel und wann. Warten Sie nicht auf Anzeichen und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire si votre chat a mangé du sel ou un aliment très salé, ou s’il a léché du sel de déneigement. Notez ce qu’il a mangé, en quelle quantité et à quelle heure. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
-    "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales si tu gato ha comido sal o un alimento muy salado, o ha lamido sal gorda para el hielo. Anota qué ha comido, cuánto y cuándo. No esperes a que aparezcan síntomas y no intentes hacer vomitar a tu gato en casa."
+    "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales si tu gato ha comido sal o un alimento muy salado, o ha lamido sal gorda para el hielo. Anota qué ha comido, cuánto y cuándo. No esperes a que aparezcan síntomas y no intentes hacer vomitar a tu gato en casa.",
+    "it": "Contatta subito il veterinario o un centro antiveleni veterinario se il tuo gatto ha mangiato sale o un cibo molto salato o ha leccato del sale antighiaccio. Annota che cosa ha mangiato, quanto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa."
   },
   "serving": null,
   "child": {
@@ -97,7 +112,8 @@
     "sl": "Sol ni priboljšek za muce. Solnica in zelo slana hrana naj bosta daleč od muce.",
     "de": "Salz ist kein Leckerli für Katzen. Halte den Salzstreuer und sehr salziges Essen von deiner Katze fern.",
     "fr": "Le sel n’est pas une friandise pour chat. Garde la salière et les aliments très salés loin de ton chat.",
-    "es": "La sal no es un premio para gatos. Mantén el salero y la comida muy salada lejos de tu gato."
+    "es": "La sal no es un premio para gatos. Mantén el salero y la comida muy salada lejos de tu gato.",
+    "it": "Il sale non è un premio per gatti. Tieni la saliera e i cibi molto salati lontani dal micio."
   },
   "faq": [
     {
@@ -106,14 +122,16 @@
         "sl": "Je sol za posipanje pozimi nevarna za mačke?",
         "de": "Ist Streusalz im Winter gefährlich für Katzen?",
         "fr": "Le sel de déneigement est-il dangereux pour les chats ?",
-        "es": "¿La sal de las carreteras en invierno es un peligro para los gatos?"
+        "es": "¿La sal de las carreteras en invierno es un peligro para los gatos?",
+        "it": "Il sale antighiaccio delle strade è un pericolo per i gatti?"
       },
       "a": {
         "en": "It can be. Pet Poison Helpline lists rock salt used as a de-icer in winter among the salt sources that can harm cats, so keep bags of it out of reach.",
         "sl": "Lahko je. Pet Poison Helpline sol za posipanje pozimi navaja med viri soli, ki lahko škodijo mačkam, zato vreče s soljo hranite izven dosega.",
         "de": "Ja, das kann es. Pet Poison Helpline zählt Streusalz, das im Winter gegen Glätte eingesetzt wird, zu den Salzquellen, die Katzen schaden können. Bewahren Sie Streusalzsäcke deshalb außer Reichweite auf.",
         "fr": "C’est possible. Pet Poison Helpline cite le sel de déneigement utilisé l’hiver parmi les sources de sel qui peuvent nuire aux chats : rangez les sacs hors de portée.",
-        "es": "Puede serlo. Pet Poison Helpline incluye la sal gorda que se usa en invierno para deshacer el hielo entre las fuentes de sal que pueden hacer daño a los gatos, así que guarda los sacos fuera de su alcance."
+        "es": "Puede serlo. Pet Poison Helpline incluye la sal gorda que se usa en invierno para deshacer el hielo entre las fuentes de sal que pueden hacer daño a los gatos, así que guarda los sacos fuera de su alcance.",
+        "it": "Può esserlo. Pet Poison Helpline elenca il sale grosso usato d’inverno come antighiaccio tra le fonti di sale che possono nuocere ai gatti, quindi tieni i sacchi fuori dalla loro portata."
       }
     }
   ],
@@ -218,6 +236,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e5d071bd029c6b98481ac3e799e78add0765fa11d80434b326de6d1c4d7fd9e1"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "301075972d9ccc11c4c0411490310787af964ba5c66232455fa7745bffd8ac00"
     }
   }
 }

@@ -6,21 +6,24 @@
     "sl": "Maslo",
     "de": "Butter",
     "fr": "Beurre",
-    "es": "Mantequilla"
+    "es": "Mantequilla",
+    "it": "Burro"
   },
   "question": {
     "en": "Can dogs eat butter?",
     "sl": "Ali lahko psi jedo maslo?",
     "de": "Dürfen Hunde Butter fressen?",
     "fr": "Les chiens peuvent-ils manger du beurre ?",
-    "es": "¿Pueden los perros comer mantequilla?"
+    "es": "¿Pueden los perros comer mantequilla?",
+    "it": "I cani possono mangiare il burro?"
   },
   "url_slug": {
     "en": "butter",
     "sl": "maslo",
     "de": "butter",
     "fr": "beurre",
-    "es": "mantequilla"
+    "es": "mantequilla",
+    "it": "burro"
   },
   "level": "not_recommended",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne, bolje ne. Maslo ni strupeno, je pa zelo mastno, mastna hrana pa lahko psu razdraži želodec in sproži vnetje trebušne slinavke, ki je boleče. Hrano, ki jo delite s psom, na primer jajca ali pire, je najbolje pripraviti brez masla.",
     "de": "Nein, besser nicht. Butter ist nicht giftig, aber sehr fettreich, und fettreiches Essen kann einem Hund auf den Magen schlagen und eine schmerzhafte Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen. Essen, das Sie mit ihm teilen, etwa Eier oder Kartoffelbrei, bereiten Sie am besten ohne Butter zu.",
     "fr": "Non, mieux vaut éviter. Le beurre n’est pas toxique, mais il est très gras, et les aliments gras peuvent dérégler l’estomac d’un chien et parfois déclencher une pancréatite, une inflammation douloureuse. Les aliments que vous partagez, comme les œufs ou la purée, sont à préparer de préférence sans beurre.",
-    "es": "No, mejor que no. La mantequilla no es tóxica, pero es muy grasa, y los alimentos grasos pueden sentarle mal al estómago de un perro y llegar a desencadenar una pancreatitis, una inflamación dolorosa. La comida que compartas con él, como los huevos o el puré de patatas, es mejor prepararla sin mantequilla."
+    "es": "No, mejor que no. La mantequilla no es tóxica, pero es muy grasa, y los alimentos grasos pueden sentarle mal al estómago de un perro y llegar a desencadenar una pancreatitis, una inflamación dolorosa. La comida que compartas con él, como los huevos o el puré de patatas, es mejor prepararla sin mantequilla.",
+    "it": "Meglio di no. Il burro non è velenoso, ma è molto grasso, e i cibi grassi possono disturbare lo stomaco del cane e scatenare una pancreatite, un’infiammazione dolorosa. Il cibo che condividi, come uova o purè di patate, è meglio prepararlo senza burro."
   },
   "why": {
     "en": "Fatty table foods are not a toxicity problem, but fatty foods such as butter, oils and meat drippings may cause pancreatitis. Some breeds, especially miniature Schnauzers, are more prone to it. Vets also suggest preparing food for dogs, such as eggs or mashed potato, without butter.",
     "sl": "Mastna hrana z mize ni strupena, a mastna živila, kot so maslo, olja in mast od pečenke, lahko povzročijo vnetje trebušne slinavke. Nekatere pasme, predvsem mali šnavcerji, so zanj bolj dovzetne. Veterinarski viri tudi svetujejo, da hrano za pse, na primer jajca ali pire, pripravimo brez masla.",
     "de": "Fettes Essen vom Tisch ist kein Vergiftungsproblem, aber fette Lebensmittel wie Butter, Öle und Bratenfett können eine Pankreatitis auslösen. Manche Rassen, vor allem Zwergschnauzer, sind dafür anfälliger. Tierärzte raten außerdem, Essen für Hunde, etwa Eier oder Kartoffelbrei, ohne Butter zuzubereiten.",
     "fr": "Les aliments de table gras ne posent pas de problème de toxicité, mais les aliments gras comme le beurre, les huiles et les jus de cuisson de viande peuvent provoquer une pancréatite. Certaines races, en particulier le schnauzer nain, y sont plus sujettes. Les vétérinaires conseillent aussi de préparer sans beurre les aliments destinés aux chiens, comme les œufs ou la purée.",
-    "es": "La comida grasa de la mesa no es un problema de toxicidad, pero los alimentos grasos como la mantequilla, los aceites y la grasa que suelta la carne al cocinarse pueden provocar pancreatitis. Algunas razas, sobre todo el schnauzer miniatura, son más propensas a sufrirla. Los veterinarios también aconsejan preparar sin mantequilla la comida para perros, como los huevos o el puré de patatas."
+    "es": "La comida grasa de la mesa no es un problema de toxicidad, pero los alimentos grasos como la mantequilla, los aceites y la grasa que suelta la carne al cocinarse pueden provocar pancreatitis. Algunas razas, sobre todo el schnauzer miniatura, son más propensas a sufrirla. Los veterinarios también aconsejan preparar sin mantequilla la comida para perros, como los huevos o el puré de patatas.",
+    "it": "I cibi grassi della tavola non sono un problema di tossicità, ma cibi grassi come burro, oli e sughi di cottura della carne possono causare pancreatite. Alcune razze, soprattutto lo schnauzer nano, sono più predisposte. I veterinari consigliano anche di preparare il cibo per i cani, come uova o purè di patate, senza burro."
   },
   "signs": {
     "en": [
@@ -67,6 +72,12 @@
       "Dolor de barriga",
       "Diarrea",
       "Poco apetito y poca energía"
+    ],
+    "it": [
+      "Vomito, a volte 1–4 giorni dopo un pasto grasso",
+      "Mal di pancia",
+      "Diarrea",
+      "Poco appetito e poca energia"
     ]
   },
   "what_to_do": {
@@ -74,7 +85,8 @@
     "sl": "Če je pes pojedel veliko masla ali v naslednjih dneh bruha, ga boli trebuh, ima drisko ali je utrujen, čim prej pokličite veterinarja.",
     "de": "Wenn Ihr Hund viel Butter gefressen hat oder in den nächsten Tagen Erbrechen, Bauchschmerzen, Durchfall oder Mattigkeit zeigt, rufen Sie so bald wie möglich Ihren Tierarzt an.",
     "fr": "Si votre chien a mangé beaucoup de beurre, ou s’il vomit, a mal au ventre, a la diarrhée ou manque d’énergie dans les jours qui suivent, appelez votre vétérinaire dès que possible.",
-    "es": "Si tu perro ha comido mucha mantequilla, o en los días siguientes vomita, le duele la barriga, tiene diarrea o está sin energía, llama a tu veterinario lo antes posible."
+    "es": "Si tu perro ha comido mucha mantequilla, o en los días siguientes vomita, le duele la barriga, tiene diarrea o está sin energía, llama a tu veterinario lo antes posible.",
+    "it": "Se il tuo cane ha mangiato molto burro o nei giorni successivi mostra vomito, mal di pancia, diarrea o poca energia, chiama il veterinario il prima possibile."
   },
   "serving": null,
   "child": {
@@ -82,7 +94,8 @@
     "sl": "Maslo je za pse premastno in jih lahko boli trebušček. Maslo pospravi, da ga pes ne doseže!",
     "de": "Butter ist zu fett für Hunde und kann ihnen Bauchweh machen. Stell die Butterdose außer Reichweite!",
     "fr": "Le beurre est trop gras pour les chiens et peut leur donner mal au ventre. Range le beurrier hors de portée !",
-    "es": "La mantequilla es demasiado grasa para los perros y les puede doler la barriga. ¡Guarda la mantequilla donde el perro no llegue!"
+    "es": "La mantequilla es demasiado grasa para los perros y les puede doler la barriga. ¡Guarda la mantequilla donde el perro no llegue!",
+    "it": "Il burro è troppo grasso per i cani e può fargli venire mal di pancia. Tieni il burro fuori dalla loro portata!"
   },
   "faq": [
     {
@@ -91,14 +104,16 @@
         "sl": "Je maslo za pse strupeno?",
         "de": "Ist Butter für Hunde giftig?",
         "fr": "Le beurre est-il toxique pour les chiens ?",
-        "es": "¿La mantequilla es tóxica para los perros?"
+        "es": "¿La mantequilla es tóxica para los perros?",
+        "it": "Il burro è tossico per i cani?"
       },
       "a": {
         "en": "Not in the poisonous sense. The problem is the fat, which may cause stomach upset or pancreatitis.",
         "sl": "Ne v smislu zastrupitve. Težava je maščoba, ki lahko povzroči prebavne težave ali vnetje trebušne slinavke.",
         "de": "Nicht im Sinne einer Vergiftung. Das Problem ist das Fett, das zu Magenverstimmung oder einer Pankreatitis führen kann.",
         "fr": "Pas au sens d’un poison. Le problème, ce sont les graisses, qui peuvent provoquer des troubles digestifs ou une pancréatite.",
-        "es": "No en el sentido de un veneno. El problema es la grasa, que puede causar problemas de estómago o pancreatitis."
+        "es": "No en el sentido de un veneno. El problema es la grasa, que puede causar problemas de estómago o pancreatitis.",
+        "it": "Non nel senso di velenoso. Il problema sono i grassi, che possono causare disturbi di stomaco o pancreatite."
       }
     }
   ],
@@ -168,6 +183,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2a5c5e02c1f8c6d71032ae93929766839b857b13c2452fe1885e402bd0db8945"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b400144487e8fd5efc1abb6fd47305f020f832f11b06f7ca3a8962e2cac5cb94"
     }
   }
 }

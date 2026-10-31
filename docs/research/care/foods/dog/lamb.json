@@ -6,21 +6,24 @@
     "sl": "Jagnjetina",
     "de": "Lammfleisch",
     "fr": "Agneau",
-    "es": "Cordero"
+    "es": "Cordero",
+    "it": "Agnello"
   },
   "question": {
     "en": "Can dogs eat lamb?",
     "sl": "Ali lahko psi jedo jagnjetino?",
     "de": "Dürfen Hunde Lammfleisch fressen?",
     "fr": "Les chiens peuvent-ils manger de l’agneau ?",
-    "es": "¿Pueden los perros comer cordero?"
+    "es": "¿Pueden los perros comer cordero?",
+    "it": "I cani possono mangiare l’agnello?"
   },
   "url_slug": {
     "en": "lamb",
     "sl": "jagnjetina",
     "de": "lammfleisch",
     "fr": "agneau",
-    "es": "cordero"
+    "es": "cordero",
+    "it": "agnello"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, malo navadnega kuhanega jagnječjega mesa brez kosti je za zdravega psa brez alergije na hrano v redu. Nikoli ne dajte kuhanih jagnječjih kosti, ki postanejo krhke in se razcepijo, ter se izogibajte mastnim ali slanim koščkom in omaki s čebulo.",
     "de": "Ja, ein wenig pures, gegartes Lammfleisch ohne Knochen ist für einen gesunden Hund ohne Futterallergie in Ordnung. Geben Sie niemals gegarte Lammknochen – sie werden spröde und splittern – und meiden Sie fette oder salzige Stücke sowie Zwiebelsoße.",
     "fr": "Oui, un peu de viande d’agneau cuite nature et sans os convient à un chien en bonne santé sans allergie alimentaire. Ne donnez jamais d’os d’agneau cuits, qui deviennent cassants et éclatent, et évitez les morceaux gras ou salés et la sauce à l’oignon.",
-    "es": "Sí, un poco de carne de cordero cocinada, natural y sin huesos está bien para un perro sano sin alergia alimentaria. Nunca le des huesos de cordero cocinados, que se vuelven frágiles y se astillan, y evita los trozos grasos o salados y las salsas con cebolla."
+    "es": "Sí, un poco de carne de cordero cocinada, natural y sin huesos está bien para un perro sano sin alergia alimentaria. Nunca le des huesos de cordero cocinados, que se vuelven frágiles y se astillan, y evita los trozos grasos o salados y las salsas con cebolla.",
+    "it": "Sì, un po’ di carne d’agnello cotta al naturale e senza ossa va bene per un cane sano senza allergie alimentari. Non dare mai ossa d’agnello cotte, che diventano fragili e si scheggiano, ed evita i pezzi grassi o salati e i sughi a base di cipolla."
   },
   "why": {
     "en": "Lamb meat itself is listed as safe for dogs in small amounts. All bones become brittle when cooked and can splinter. High-fat foods can trigger vomiting, diarrhoea or even pancreatitis, and foods high in fat or salt are best avoided. Onion-based gravies are not safe for dogs.",
     "sl": "Samo jagnječje meso je navedeno kot varno za pse v majhnih količinah. Vse kosti s kuhanjem postanejo krhke in se lahko razcepijo. Mastna hrana lahko sproži bruhanje, drisko ali celo vnetje trebušne slinavke, hrani z veliko maščobe ali soli pa se je bolje izogniti. Omake s čebulo za pse niso varne.",
     "de": "Lammfleisch selbst gilt in kleinen Mengen als unbedenklich für Hunde. Alle Knochen werden beim Garen spröde und können splittern. Fettreiche Lebensmittel können Erbrechen, Durchfall oder sogar eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen, und sehr fett- oder salzreiche Lebensmittel sollten besser gemieden werden. Soßen auf Zwiebelbasis sind für Hunde nicht sicher.",
     "fr": "La viande d’agneau elle-même est indiquée comme sans danger pour les chiens en petite quantité. Tous les os deviennent cassants à la cuisson et peuvent éclater. Les aliments gras peuvent provoquer vomissements, diarrhée, voire une pancréatite, et mieux vaut éviter les aliments riches en graisses ou en sel. Les sauces à base d’oignon ne sont pas sans danger pour les chiens.",
-    "es": "La carne de cordero en sí figura como segura para los perros en pequeñas cantidades. Todos los huesos se vuelven frágiles al cocinarlos y pueden astillarse. Los alimentos con mucha grasa pueden desencadenar vómitos, diarrea o incluso una pancreatitis, y es mejor evitar los alimentos con mucha grasa o sal. Las salsas a base de cebolla no son seguras para los perros."
+    "es": "La carne de cordero en sí figura como segura para los perros en pequeñas cantidades. Todos los huesos se vuelven frágiles al cocinarlos y pueden astillarse. Los alimentos con mucha grasa pueden desencadenar vómitos, diarrea o incluso una pancreatitis, y es mejor evitar los alimentos con mucha grasa o sal. Las salsas a base de cebolla no son seguras para los perros.",
+    "it": "La carne d’agnello in sé è indicata come sicura per i cani in piccole quantità. Con la cottura tutte le ossa diventano fragili e possono scheggiarsi. I cibi grassi possono scatenare vomito, diarrea o persino una pancreatite, ed è meglio evitare i cibi ricchi di grassi o di sale. I sughi a base di cipolla non sono sicuri per i cani."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Če je pes pojedel mastne ostanke jagnjetine, opazujte, ali bruha, ima drisko ali ga boli trebuh, in pokličite veterinarja, če se to pojavi. Če je pojedel kuhane kosti ali jagnjetino z omako s čebulo, takoj pokličite veterinarja in ne poskušajte izzvati bruhanja.",
     "de": "Wenn Ihr Hund fette Lammreste gefressen hat, achten Sie auf Erbrechen, Durchfall oder Bauchschmerzen und rufen Sie Ihren Tierarzt an, wenn diese auftreten. Hat er gegarte Knochen oder Lamm mit Zwiebelsoße gefressen, rufen Sie sofort Ihren Tierarzt an und versuchen Sie nicht, Ihren Hund zum Erbrechen zu bringen.",
     "fr": "Si votre chien a mangé des restes d’agneau gras, surveillez les vomissements, la diarrhée ou les douleurs au ventre, et appelez votre vétérinaire s’ils apparaissent. S’il a mangé des os cuits ou de l’agneau avec une sauce à l’oignon, appelez immédiatement votre vétérinaire et n’essayez pas de le faire vomir.",
-    "es": "Si tu perro ha comido restos grasos de cordero, vigila si aparecen vómitos, diarrea o dolor de barriga y llama a tu veterinario si aparecen. Si ha comido huesos cocinados o cordero con salsa de cebolla, llama enseguida a tu veterinario y no intentes hacerle vomitar."
+    "es": "Si tu perro ha comido restos grasos de cordero, vigila si aparecen vómitos, diarrea o dolor de barriga y llama a tu veterinario si aparecen. Si ha comido huesos cocinados o cordero con salsa de cebolla, llama enseguida a tu veterinario y no intentes hacerle vomitar.",
+    "it": "Se il tuo cane ha mangiato avanzi grassi di agnello, controlla se compaiono vomito, diarrea o mal di pancia e, in quel caso, chiama il veterinario. Se ha mangiato ossa cotte o agnello con un sugo a base di cipolla, chiama subito il veterinario e non cercare di farlo vomitare."
   },
   "serving": {
     "en": "A little plain cooked lamb meat, no bones, no fatty or salty bits, no gravy.",
     "sl": "Malo navadnega kuhanega jagnječjega mesa, brez kosti, brez mastnih ali slanih koščkov, brez omake.",
     "de": "Ein wenig gegartes Lammfleisch pur, ohne Knochen, ohne fette oder salzige Stücke, ohne Soße.",
     "fr": "Un peu de viande d’agneau cuite nature, sans os, sans morceaux gras ou salés, sans sauce.",
-    "es": "Un poco de carne de cordero cocinada y natural, sin huesos, sin trozos grasos ni salados y sin salsa."
+    "es": "Un poco de carne de cordero cocinada y natural, sin huesos, sin trozos grasos ni salados y sin salsa.",
+    "it": "Un po’ di carne d’agnello cotta al naturale, senza ossa, senza pezzi grassi o salati, senza sugo."
   },
   "child": {
     "en": "A small bit of plain lamb with no bones can be a treat. Lamb bones are never for dogs.",
     "sl": "Majhen košček navadne jagnjetine brez kosti je lahko priboljšek. Jagnječje kosti nikoli niso za pse.",
     "de": "Ein kleines Stück Lammfleisch ohne alles und ohne Knochen kann ein Leckerli sein. Lammknochen sind nie etwas für Hunde.",
     "fr": "Un petit morceau d’agneau nature et sans os peut être une friandise. Les os d’agneau ne sont jamais pour les chiens.",
-    "es": "Un trocito de cordero natural y sin huesos puede ser un premio. Los huesos de cordero nunca son para perros."
+    "es": "Un trocito de cordero natural y sin huesos puede ser un premio. Los huesos de cordero nunca son para perros.",
+    "it": "Un pezzetto di agnello semplice e senza ossa può essere un premio. Le ossa d’agnello non sono mai per i cani."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali lahko pes gloda jagnječjo kost?",
         "de": "Darf ein Hund einen Lammknochen zum Kauen bekommen?",
         "fr": "Un chien peut-il ronger un os d’agneau ?",
-        "es": "¿Puede un perro mordisquear un hueso de cordero?"
+        "es": "¿Puede un perro mordisquear un hueso de cordero?",
+        "it": "Posso dare al cane un osso d’agnello da rosicchiare?"
       },
       "a": {
         "en": "Not a cooked one: cooked bones become brittle and can splinter. Never give cooked bones of any kind.",
         "sl": "Kuhane ne: kuhane kosti postanejo krhke in se lahko razcepijo. Nikoli ne dajte kuhanih kosti kakršne koli vrste.",
         "de": "Keinen gegarten: Gegarte Knochen werden spröde und können splittern. Geben Sie niemals gegarte Knochen, egal welcher Art.",
         "fr": "Pas un os cuit : les os cuits deviennent cassants et peuvent éclater. Ne donnez jamais d’os cuits, quels qu’ils soient.",
-        "es": "Cocinado no: los huesos cocinados se vuelven frágiles y pueden astillarse. Nunca le des huesos cocinados de ningún tipo."
+        "es": "Cocinado no: los huesos cocinados se vuelven frágiles y pueden astillarse. Nunca le des huesos cocinados de ningún tipo.",
+        "it": "Non se è cotto: le ossa cotte diventano fragili e possono scheggiarsi. Non dare mai ossa cotte di nessun tipo."
       }
     }
   ],
@@ -152,6 +162,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c0ec9fb29df690f559ac7447fdd9b221fa5042155489680a65ec67f86affda2b"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5f055a1a7d7f0b3a3c24841c395952ad4ed8ab24b9ade0003333cb2ef761ae35"
     }
   }
 }

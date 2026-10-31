@@ -6,21 +6,24 @@
     "sl": "Surova jajca",
     "de": "Rohe Eier",
     "fr": "Œufs crus",
-    "es": "Huevos crudos"
+    "es": "Huevos crudos",
+    "it": "Uova crude"
   },
   "question": {
     "en": "Can dogs eat raw eggs?",
     "sl": "Ali lahko psi jedo surova jajca?",
     "de": "Dürfen Hunde rohe Eier fressen?",
     "fr": "Les chiens peuvent-ils manger des œufs crus ?",
-    "es": "¿Pueden los perros comer huevos crudos?"
+    "es": "¿Pueden los perros comer huevos crudos?",
+    "it": "I cani possono mangiare le uova crude?"
   },
   "url_slug": {
     "en": "raw-eggs",
     "sl": "surova-jajca",
     "de": "rohe-eier",
     "fr": "oeufs-crus",
-    "es": "huevos-crudos"
+    "es": "huevos-crudos",
+    "it": "uova-crude"
   },
   "level": "not_recommended",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne, bolje ne. Surova jajca lahko prenašajo bakterije, kot je salmonela, ki lahko škodijo psu in ljudem okoli njega, surovi beljak pa lahko ovira vsrkavanje enega od vitaminov. Jajca pred deljenjem s psom popolnoma skuhajte.",
     "de": "Nein, besser nicht. Rohe Eier können Bakterien wie Salmonellen enthalten, die Hunden und den Menschen in ihrer Umgebung schaden können, und rohes Eiweiß kann die Aufnahme eines Vitamins stören. Garen Sie Eier vollständig durch, bevor Sie sie teilen.",
     "fr": "Non, mieux vaut éviter. Les œufs crus peuvent contenir des bactéries comme les salmonelles, nocives pour les chiens et pour les personnes qui les entourent, et le blanc d’œuf cru peut gêner l’absorption d’une vitamine. Faites bien cuire les œufs avant de les partager.",
-    "es": "No, es mejor no dárselos. Los huevos crudos pueden llevar bacterias como Salmonella, que pueden hacer daño a los perros y a las personas que los rodean, y la clara cruda puede interferir con una vitamina. Cocina bien los huevos antes de compartirlos."
+    "es": "No, es mejor no dárselos. Los huevos crudos pueden llevar bacterias como Salmonella, que pueden hacer daño a los perros y a las personas que los rodean, y la clara cruda puede interferir con una vitamina. Cocina bien los huevos antes de compartirlos.",
+    "it": "No, è meglio di no. Le uova crude possono contenere batteri come la Salmonella, dannosi per i cani e per le persone che vivono con loro, e l’albume crudo può interferire con una vitamina. Cuoci bene le uova prima di dargliele."
   },
   "why": {
     "en": "Raw eggs can contain Salmonella and E. coli, harmful to pets and people alike. Raw egg white contains avidin, which blocks the vitamin biotin; deficiency is rare, but it can affect skin and coat. Most vets recommend cooking eggs fully before giving them to a dog.",
     "sl": "Surova jajca lahko vsebujejo salmonelo in E. coli, ki škodita tako živalim kot ljudem. Surovi beljak vsebuje avidin, ki ovira vitamin biotin; pomanjkanje je redko, lahko pa vpliva na kožo in dlako. Večina veterinarjev svetuje, da jajca pred hranjenjem psa popolnoma skuhamo.",
     "de": "Rohe Eier können Salmonellen und E. coli enthalten, die Haustieren wie Menschen schaden. Rohes Eiweiß enthält Avidin, das das Vitamin Biotin blockiert; ein Mangel ist selten, kann aber Haut und Fell beeinträchtigen. Die meisten Tierärzte empfehlen, Eier vollständig zu garen, bevor man sie einem Hund gibt.",
     "fr": "Les œufs crus peuvent contenir des salmonelles et des E. coli, nocives pour les animaux comme pour les humains. Le blanc d’œuf cru contient de l’avidine, qui bloque une vitamine, la biotine ; les carences sont rares, mais elles peuvent toucher la peau et le pelage. La plupart des vétérinaires recommandent de bien cuire les œufs avant de les donner à un chien.",
-    "es": "Los huevos crudos pueden contener Salmonella y E. coli, dañinas tanto para las mascotas como para las personas. La clara cruda contiene avidina, que bloquea la vitamina biotina; la carencia es rara, pero puede afectar a la piel y al pelaje. La mayoría de los veterinarios recomiendan cocinar bien los huevos antes de dárselos a un perro."
+    "es": "Los huevos crudos pueden contener Salmonella y E. coli, dañinas tanto para las mascotas como para las personas. La clara cruda contiene avidina, que bloquea la vitamina biotina; la carencia es rara, pero puede afectar a la piel y al pelaje. La mayoría de los veterinarios recomiendan cocinar bien los huevos antes de dárselos a un perro.",
+    "it": "Le uova crude possono contenere Salmonella ed E. coli, dannosi sia per gli animali sia per le persone. L’albume crudo contiene avidina, che blocca la vitamina biotina; la carenza è rara, ma può colpire pelle e pelo. La maggior parte dei veterinari consiglia di cuocere bene le uova prima di darle a un cane."
   },
   "signs": {
     "en": [
@@ -67,6 +72,12 @@
       "Diarrea",
       "Poca energía o poco apetito",
       "Molestias en la barriga"
+    ],
+    "it": [
+      "Vomito",
+      "Diarrea",
+      "Poca energia o poco appetito",
+      "Fastidio alla pancia"
     ]
   },
   "what_to_do": {
@@ -74,21 +85,24 @@
     "sl": "Če je pes polizal surovo jajce, v naslednjih dneh opazujte, ali bruha, ima drisko ali je utrujen, in pokličite veterinarja, če sta bruhanje ali driska huda ali ne prenehata. Umijte si roke in dobro počistite.",
     "de": "Hat Ihr Hund ein rohes Ei aufgeleckt, achten Sie in den nächsten Tagen auf Erbrechen, Durchfall oder Mattigkeit, und rufen Sie Ihren Tierarzt an, wenn Erbrechen oder Durchfall stark sind oder nicht aufhören. Waschen Sie sich die Hände und machen Sie gründlich sauber.",
     "fr": "Si votre chien a léché un œuf cru, surveillez les vomissements, la diarrhée ou le manque d’énergie dans les jours qui suivent, et appelez votre vétérinaire si les vomissements ou la diarrhée sont importants ou ne s’arrêtent pas. Lavez-vous les mains et nettoyez bien.",
-    "es": "Si tu perro ha lamido un huevo crudo, vigila si tiene vómitos, diarrea o poca energía en los días siguientes y llama a tu veterinario si los vómitos o la diarrea son intensos o no se pasan. Lávate las manos y limpia bien."
+    "es": "Si tu perro ha lamido un huevo crudo, vigila si tiene vómitos, diarrea o poca energía en los días siguientes y llama a tu veterinario si los vómitos o la diarrea son intensos o no se pasan. Lávate las manos y limpia bien.",
+    "it": "Se il tuo cane ha leccato un uovo crudo, nei giorni successivi controlla se compaiono vomito, diarrea o poca energia e chiama il veterinario se vomito o diarrea sono forti o non passano. Lavati le mani e pulisci bene."
   },
   "serving": {
     "en": "Cook the egg fully (hard-boiled or scrambled), plain, without oil, butter, salt or seasonings.",
     "sl": "Jajce popolnoma skuhajte (trdo kuhano ali umešano), navadno, brez olja, masla, soli in začimb.",
     "de": "Das Ei vollständig garen (hart gekocht oder als Rührei), ohne Zusätze, ohne Öl, Butter, Salz oder Gewürze.",
     "fr": "Faites bien cuire l’œuf (dur ou brouillé), nature, sans huile, beurre, sel ni assaisonnement.",
-    "es": "Cocina bien el huevo (duro o revuelto), sin nada: sin aceite, mantequilla, sal ni condimentos."
+    "es": "Cocina bien el huevo (duro o revuelto), sin nada: sin aceite, mantequilla, sal ni condimentos.",
+    "it": "Cuoci bene l’uovo (sodo o strapazzato), semplice, senza olio, burro, sale o condimenti."
   },
   "child": {
     "en": "Dogs should only have eggs that are cooked. Raw eggs can carry germs that make dogs and people poorly.",
     "sl": "Psi naj jedo samo kuhana jajca. Surova jajca lahko prenašajo klice, ki škodijo psom in ljudem.",
     "de": "Hunde sollten nur gekochte Eier bekommen. Rohe Eier können Keime enthalten, die Hunde und Menschen krank machen.",
     "fr": "Les chiens ne doivent manger que des œufs cuits. Les œufs crus peuvent porter des microbes qui rendent malades les chiens et les humains.",
-    "es": "Los perros solo pueden comer huevos cocinados. Los huevos crudos pueden tener gérmenes que hacen enfermar a perros y personas."
+    "es": "Los perros solo pueden comer huevos cocinados. Los huevos crudos pueden tener gérmenes que hacen enfermar a perros y personas.",
+    "it": "I cani possono mangiare solo uova cotte. Le uova crude possono avere germi che fanno stare male cani e persone."
   },
   "faq": [
     {
@@ -97,14 +111,16 @@
         "sl": "Ali surovo jajce ni dobro za sijočo dlako?",
         "de": "Ist rohes Ei nicht gut für ein glänzendes Fell?",
         "fr": "L’œuf cru n’est-il pas bon pour un pelage brillant ?",
-        "es": "¿El huevo crudo no es bueno para que el pelo brille?"
+        "es": "¿El huevo crudo no es bueno para que el pelo brille?",
+        "it": "L’uovo crudo non fa bene al pelo lucido?"
       },
       "a": {
         "en": "Not reliably: raw egg white can block biotin absorption, which can lead to skin and coat problems.",
         "sl": "Ne nujno: surovi beljak lahko ovira vsrkavanje biotina, kar lahko vodi do težav s kožo in dlako.",
         "de": "Nicht zuverlässig: Rohes Eiweiß kann die Aufnahme von Biotin blockieren, was zu Haut- und Fellproblemen führen kann.",
         "fr": "Pas de façon fiable : le blanc d’œuf cru peut bloquer l’absorption de la biotine, ce qui peut entraîner des problèmes de peau et de pelage.",
-        "es": "No es fiable: la clara cruda puede bloquear la absorción de biotina, lo que puede causar problemas de piel y pelaje."
+        "es": "No es fiable: la clara cruda puede bloquear la absorción de biotina, lo que puede causar problemas de piel y pelaje.",
+        "it": "Non in modo affidabile: l’albume crudo può bloccare l’assorbimento della biotina, e questo può causare problemi di pelle e pelo."
       }
     }
   ],
@@ -189,6 +205,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b41522f5ed698a740549a42026acb1f676d5c68bbe74a44f69485fc80f926cfa"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6b53f4400d2185602b9269294c33e4069240091a143be3502708cf633aa63127"
     }
   }
 }
