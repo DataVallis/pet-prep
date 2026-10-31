@@ -1,0 +1,131 @@
+{
+  "slug": "bacon",
+  "species": "dog",
+  "name": {
+    "en": "Bacon",
+    "sl": "Slanina"
+  },
+  "question": {
+    "en": "Can dogs eat bacon?",
+    "sl": "Ali lahko psi jedo slanino?"
+  },
+  "url_slug": {
+    "en": "bacon",
+    "sl": "slanina"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "Not recommended. Bacon is not toxic, but it is a fatty table food that can cause vomiting and diarrhoea or trigger pancreatitis, which can be severe. When in doubt, don't share table food with your dog.",
+    "sl": "Ni priporočljivo. Slanina ni strupena, je pa mastna hrana z mize, ki lahko povzroči bruhanje in drisko ali sproži vnetje trebušne slinavke, ki je lahko hudo. Ob dvomu hrane z mize s psom ne delite."
+  },
+  "why": {
+    "en": "Pet Poison Helpline names bacon among fatty table foods that cause problems ranging from mild stomach upset to severe pancreatitis. A fatty meal is a known pancreatitis trigger, and some breeds, such as Miniature Schnauzers, are more prone to it.",
+    "sl": "Pet Poison Helpline slanino navaja med mastno hrano z mize, ki povzroča težave od blagih prebavnih motenj do hudega vnetja trebušne slinavke. Mastni obrok je znan sprožilec tega vnetja, nekatere pasme, na primer pritlikavi šnavcerji, pa so zanj bolj dovzetne."
+  },
+  "signs": {
+    "en": [
+      "Vomiting, sometimes starting 1–4 days after the fatty meal",
+      "Tummy pain (a dog may stretch into a 'prayer' position)",
+      "Diarrhoea",
+      "Not wanting to eat",
+      "Tiredness, fever"
+    ],
+    "sl": [
+      "Bruhanje, včasih šele 1–4 dni po mastnem obroku",
+      "Bolečine v trebuhu (pes se lahko raztegne v »molitveni« položaj)",
+      "Driska",
+      "Pes noče jesti",
+      "Utrujenost, vročina"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog ate a lot of fatty food, or shows vomiting, tummy pain or tiredness in the following days, contact your vet. Note what was eaten and roughly how much. Signs of pancreatitis can be delayed by a few days.",
+    "sl": "Če je pes pojedel veliko mastne hrane ali v naslednjih dneh bruha, ga boli trebuh ali je utrujen, pokličite veterinarja. Zapišite si, kaj in približno koliko je pojedel. Znaki vnetja trebušne slinavke se lahko pokažejo z nekajdnevno zamudo."
+  },
+  "serving": null,
+  "child": {
+    "en": "Bacon smells yummy, but it is too fatty for dogs and can hurt their tummy. Choose a dog treat instead.",
+    "sl": "Slanina lepo diši, a je za pse premastna in jim lahko škodi trebuščku. Raje izberi pasji priboljšek."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is a tiny piece of bacon dangerous?",
+        "sl": "Je majhen košček slanine nevaren?"
+      },
+      "a": {
+        "en": "Bacon is not toxic, but fatty table food can upset a dog's stomach or trigger pancreatitis, so it's best not to share it.",
+        "sl": "Slanina ni strupena, a mastna hrana z mize lahko psu povzroči prebavne težave ali vnetje trebušne slinavke, zato je raje ne delite."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD36",
+      "quote": "While there’s not a “toxicity” issue from fatty table foods (such as bacon, gravy, turkey skin, grizzle, etc.),"
+    },
+    {
+      "id": "KD36",
+      "quote": "it can result in a gastroenteritis (such as a mild vomiting or diarrhea) to a severe, fatal pancreatitis."
+    },
+    {
+      "id": "KD36",
+      "quote": "Certain breeds, miniature Schnauzers in particular, are more likely to develop pancreatitis than other breeds."
+    },
+    {
+      "id": "KD36",
+      "quote": "Delayed onset vomiting (1-4 days after fatty meal ingestion), abdominal pain, diarrhea (+/- blood),"
+    },
+    {
+      "id": "KD36",
+      "quote": "reduced appetite and lethargy."
+    },
+    {
+      "id": "KD36",
+      "quote": "When in doubt, don't let your pet get any table food!"
+    },
+    {
+      "id": "KD37",
+      "quote": "it may be triggered in some cases by a fatty meal or corticosteroid administration."
+    },
+    {
+      "id": "KD37",
+      "quote": "The most common clinical signs include nausea, vomiting, fever, lethargy, abdominal pain, diarrhea, and decreased appetite."
+    },
+    {
+      "id": "KD38",
+      "quote": "They’ve recently eaten some high fat foods (e.g. pork, cheese, butter)."
+    },
+    {
+      "id": "KD38",
+      "quote": "Pancreatitis causes vomiting, nausea and pain."
+    },
+    {
+      "id": "KD44",
+      "quote": "Fatty foods in general aren’t a good choice for dogs with certain health conditions, including a history of pancreatitis."
+    },
+    {
+      "id": "KD38",
+      "quote": "Painful tummy - you may notice your dog stretching into a prayer position because their abdomen is painful (see picture)"
+    }
+  ],
+  "related": [
+    "ham",
+    "fatty-meat",
+    "salt",
+    "pork"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

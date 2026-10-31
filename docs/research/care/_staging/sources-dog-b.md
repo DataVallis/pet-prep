@@ -44,3 +44,4 @@
 | KD220 | B | American Kennel Club, Anna Burke (updated 2025-11-10) | Can Dogs Eat Turkey? | https://www.akc.org/expert-advice/nutrition/can-dogs-eat-turkey/ | skin, seasoning, bones |
 | KD222 | B | American Kennel Club, AKC Staff (updated 2025-06-20) | Can Dogs Eat Hamburgers? | https://www.akc.org/expert-advice/nutrition/can-dogs-eat-hamburger/ | beef: unseasoned cooked, trim fat |
 | KD218 | B | American Kennel Club, Anna Burke (updated 2025-02-27) | Can Dogs Eat Shrimp? | https://www.akc.org/expert-advice/nutrition/can-dogs-eat-shrimp/ | cooked, peeled |
+| KD227 | B | VCA Animal Hospitals / Pet Poison Helpline authors (updated 2026-09-11) | Vitamin A Poisoning in Dogs | https://vcahospitals.com/know-your-pet/vitamin-a-toxicosis-in-dogs | raw liver most common cause |

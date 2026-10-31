@@ -1,0 +1,112 @@
+{
+  "slug": "lamb",
+  "species": "dog",
+  "name": {
+    "en": "Lamb",
+    "sl": "Jagnjetina"
+  },
+  "question": {
+    "en": "Can dogs eat lamb?",
+    "sl": "Ali lahko psi jedo jagnjetino?"
+  },
+  "url_slug": {
+    "en": "lamb",
+    "sl": "jagnjetina"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a little plain cooked lamb meat with no bones is fine for a healthy dog without a food allergy. Never give cooked lamb bones, which become brittle and splinter, and avoid fatty or salty pieces and onion gravy.",
+    "sl": "Da, malo navadnega kuhanega jagnječjega mesa brez kosti je za zdravega psa brez alergije na hrano v redu. Nikoli ne dajte kuhanih jagnječjih kosti, ki postanejo krhke in se razcepijo, ter se izogibajte mastnim ali slanim koščkom in omaki s čebulo."
+  },
+  "why": {
+    "en": "Lamb meat itself is listed as safe for dogs in small amounts. All bones become brittle when cooked and can splinter. High-fat foods can trigger vomiting, diarrhoea or even pancreatitis, and foods high in fat or salt are best avoided. Onion-based gravies are not safe for dogs.",
+    "sl": "Samo jagnječje meso je navedeno kot varno za pse v majhnih količinah. Vse kosti s kuhanjem postanejo krhke in se lahko razcepijo. Mastna hrana lahko sproži bruhanje, drisko ali celo vnetje trebušne slinavke, hrani z veliko maščobe ali soli pa se je bolje izogniti. Omake s čebulo za pse niso varne."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If your dog ate fatty lamb scraps, watch for vomiting, diarrhoea or belly pain and call your vet if they appear. If it ate cooked bones or lamb with onion gravy, call your vet straight away and don't try to make your dog sick.",
+    "sl": "Če je pes pojedel mastne ostanke jagnjetine, opazujte, ali bruha, ima drisko ali ga boli trebuh, in pokličite veterinarja, če se to pojavi. Če je pojedel kuhane kosti ali jagnjetino z omako s čebulo, takoj pokličite veterinarja in ne poskušajte izzvati bruhanja."
+  },
+  "serving": {
+    "en": "A little plain cooked lamb meat, no bones, no fatty or salty bits, no gravy.",
+    "sl": "Malo navadnega kuhanega jagnječjega mesa, brez kosti, brez mastnih ali slanih koščkov, brez omake."
+  },
+  "child": {
+    "en": "A small bit of plain lamb with no bones can be a treat. Lamb bones are never for dogs.",
+    "sl": "Majhen košček navadne jagnjetine brez kosti je lahko priboljšek. Jagnječje kosti nikoli niso za pse."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs have a lamb bone to chew?",
+        "sl": "Ali lahko pes gloda jagnječjo kost?"
+      },
+      "a": {
+        "en": "Not a cooked one: cooked bones become brittle and can splinter. Never give cooked bones of any kind.",
+        "sl": "Kuhane ne: kuhane kosti postanejo krhke in se lahko razcepijo. Nikoli ne dajte kuhanih kosti kakršne koli vrste."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD236",
+      "quote": "Providing your dog is healthy and is not allergic to the following foods, it’s safe to feed your dog"
+    },
+    {
+      "id": "KD236",
+      "quote": "a little bit of these foods at Christmas:"
+    },
+    {
+      "id": "KD236",
+      "quote": "lamb meat (no bones)"
+    },
+    {
+      "id": "KD236",
+      "quote": "Foods high in fat or salt should also be avoided."
+    },
+    {
+      "id": "KD234",
+      "quote": "When cooked, all bones become brittle and can easily splinter."
+    },
+    {
+      "id": "KD234",
+      "quote": "ensure that your dog is kept away from sage and onion stuffing, onion-based gravies or any other allium-based foods."
+    },
+    {
+      "id": "KD234",
+      "quote": "Call your vet immediately."
+    },
+    {
+      "id": "KD234",
+      "quote": "Never try to make your dog sick."
+    },
+    {
+      "id": "KD242",
+      "quote": "Dr. Jerry Klein, AKC Chief Veterinarian, warns that you should never give your dog cooked bones of any kind."
+    },
+    {
+      "id": "KD235",
+      "quote": "High-fat foods can trigger vomiting and diarrhea, or even pancreatitis, a painful and serious condition."
+    }
+  ],
+  "related": [
+    "cooked-bones",
+    "fatty-meat",
+    "onion",
+    "beef",
+    "salt"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}
