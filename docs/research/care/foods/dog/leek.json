@@ -6,21 +6,24 @@
     "sl": "Por",
     "de": "Lauch",
     "fr": "Poireau",
-    "es": "Puerro"
+    "es": "Puerro",
+    "it": "Porro"
   },
   "question": {
     "en": "Can dogs eat leek?",
     "sl": "Ali lahko psi jedo por?",
     "de": "Dürfen Hunde Lauch fressen?",
     "fr": "Les chiens peuvent-ils manger du poireau ?",
-    "es": "¿Pueden los perros comer puerro?"
+    "es": "¿Pueden los perros comer puerro?",
+    "it": "I cani possono mangiare il porro?"
   },
   "url_slug": {
     "en": "leek",
     "sl": "por",
     "de": "lauch",
     "fr": "poireau",
-    "es": "puerro"
+    "es": "puerro",
+    "it": "porro"
   },
   "level": "toxic",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne. Por je luk, tako kot čebula in česen, in je za pse strupen. Škodljivi so vsi deli rastline, tudi kuhani ali posušeni. Lahko poškoduje rdeče krvničke, znaki pa se pogosto pokažejo šele po nekaj dneh.",
     "de": "Nein. Lauch gehört wie Zwiebeln und Knoblauch zu den Lauchgewächsen (Allium) und ist für Hunde giftig. Alle Teile der Pflanze sind schädlich, auch gekocht oder getrocknet. Lauch kann rote Blutkörperchen schädigen, und Anzeichen zeigen sich oft erst nach einigen Tagen.",
     "fr": "Non. Le poireau est un allium, comme l’oignon et l’ail, et il est toxique pour les chiens. Toutes les parties de la plante sont nocives, même cuites ou séchées. Il peut endommager les globules rouges, et les signes mettent souvent quelques jours à apparaître.",
-    "es": "No. El puerro es una aliácea, como la cebolla y el ajo, y es tóxico para los perros. Todas las partes de la planta son perjudiciales, incluso cocinadas o secas. Puede dañar los glóbulos rojos, y los síntomas suelen tardar unos días en aparecer."
+    "es": "No. El puerro es una aliácea, como la cebolla y el ajo, y es tóxico para los perros. Todas las partes de la planta son perjudiciales, incluso cocinadas o secas. Puede dañar los glóbulos rojos, y los síntomas suelen tardar unos días en aparecer.",
+    "it": "No. Il porro appartiene alla famiglia degli allium, come cipolla e aglio, ed è tossico per i cani. Tutte le parti della pianta sono dannose, anche cotte o secche. Può danneggiare i globuli rossi, e spesso i sintomi compaiono solo dopo qualche giorno."
   },
   "why": {
     "en": "It belongs to the allium family (onion, garlic, leek, chives), which is toxic to dogs. These plants contain compounds that damage red blood cells and can lead to anaemia. All parts and all forms are harmful: raw, cooked, dried and powdered. Stomach upset can happen with any amount; larger amounts damage the blood.",
     "sl": "Spada v družino lukov (čebula, česen, por, drobnjak), ki je za pse strupena. Te rastline vsebujejo snovi, ki poškodujejo rdeče krvničke in lahko povzročijo slabokrvnost. Škodljivi so vsi deli in vse oblike: surove, kuhane, posušene in v prahu. Prebavne težave se lahko pojavijo pri vsaki količini, večje količine pa poškodujejo kri.",
     "de": "Lauch gehört zur Familie der Lauchgewächse (Zwiebeln, Knoblauch, Lauch, Schnittlauch), die für Hunde giftig sind. Diese Pflanzen enthalten Stoffe, die rote Blutkörperchen schädigen und zu Blutarmut (Anämie) führen können. Alle Teile und alle Formen sind schädlich: roh, gekocht, getrocknet und als Pulver. Magen-Darm-Beschwerden können bei jeder Menge auftreten; größere Mengen schädigen das Blut.",
     "fr": "Le poireau appartient à la famille des alliums (oignon, ail, poireau, ciboulette), toxique pour les chiens. Ces plantes contiennent des composés qui endommagent les globules rouges et peuvent provoquer une anémie. Toutes les parties et toutes les formes sont nocives : cru, cuit, séché et en poudre. Des troubles digestifs peuvent survenir quelle que soit la quantité ; de plus grandes quantités endommagent le sang.",
-    "es": "Pertenece a la familia de las aliáceas (cebolla, ajo, puerro, cebollino), que es tóxica para los perros. Estas plantas contienen compuestos que dañan los glóbulos rojos y pueden provocar anemia. Todas las partes y todas las formas son perjudiciales: crudo, cocinado, seco y en polvo. Cualquier cantidad puede causar malestar de estómago; las cantidades mayores dañan la sangre."
+    "es": "Pertenece a la familia de las aliáceas (cebolla, ajo, puerro, cebollino), que es tóxica para los perros. Estas plantas contienen compuestos que dañan los glóbulos rojos y pueden provocar anemia. Todas las partes y todas las formas son perjudiciales: crudo, cocinado, seco y en polvo. Cualquier cantidad puede causar malestar de estómago; las cantidades mayores dañan la sangre.",
+    "it": "Appartiene alla famiglia degli allium (cipolla, aglio, porro, erba cipollina), tossica per i cani. Queste piante contengono sostanze che danneggiano i globuli rossi e possono portare all’anemia. Sono dannose tutte le parti, in qualsiasi forma: crude, cotte, secche o in polvere. Disturbi di stomaco possono comparire con qualsiasi quantità; quantità maggiori danneggiano il sangue."
   },
   "signs": {
     "en": [
@@ -67,6 +72,12 @@
       "Come menos de lo habitual",
       "Malestar de barriga, incluso con poca cantidad",
       "Signos de anemia (glóbulos rojos dañados), normalmente unos días después"
+    ],
+    "it": [
+      "Vomito e diarrea",
+      "Mangia meno del solito",
+      "Disturbi di pancia, anche dopo piccole quantità",
+      "Segni di anemia (globuli rossi danneggiati), di solito qualche giorno dopo"
     ]
   },
   "what_to_do": {
@@ -74,7 +85,8 @@
     "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj je pes pojedel (por) in približno koliko. Ne čakajte na znake: okvara krvi se običajno pokaže šele po nekaj dneh.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was gefressen wurde (Lauch), und ungefähr wie viel. Warten Sie nicht auf Anzeichen: Schäden am Blut zeigen sich meist erst einige Tage später.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce qui a été mangé (poireau) et en quelle quantité approximative. N’attendez pas l’apparition des signes : les dommages au sang n’apparaissent généralement qu’après quelques jours.",
-    "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué ha comido (puerro) y más o menos cuánto. No esperes a que aparezcan síntomas: el daño en la sangre suele notarse solo unos días después."
+    "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué ha comido (puerro) y más o menos cuánto. No esperes a que aparezcan síntomas: el daño en la sangre suele notarse solo unos días después.",
+    "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha mangiato (porro) e più o meno quanto. Non aspettare che compaiano i sintomi: i danni al sangue di solito si vedono solo dopo qualche giorno."
   },
   "serving": null,
   "child": {
@@ -82,7 +94,8 @@
     "sl": "Por spada v družino čebule, zato ni za pse. Povej odraslemu, če ga pes poje.",
     "de": "Lauch gehört zur Zwiebelfamilie und ist deshalb nichts für Hunde. Wenn dein Hund etwas davon frisst, sag einem Erwachsenen Bescheid.",
     "fr": "Le poireau est de la famille de l’oignon, alors il n’est pas pour les chiens. Préviens un adulte si ton chien en mange.",
-    "es": "Los puerros son de la familia de la cebolla, así que no son para perros. Avisa a un adulto si tu perro se come un poco."
+    "es": "Los puerros son de la familia de la cebolla, así que no son para perros. Avisa a un adulto si tu perro se come un poco.",
+    "it": "I porri fanno parte della famiglia della cipolla, quindi non sono per i cani. Dillo a un adulto se il tuo cane ne mangia un po’."
   },
   "faq": [
     {
@@ -91,14 +104,16 @@
         "sl": "Je por tako nevaren kot čebula?",
         "de": "Ist Lauch so gefährlich wie Zwiebeln?",
         "fr": "Le poireau est-il aussi dangereux que l’oignon ?",
-        "es": "¿El puerro es tan peligroso como la cebolla?"
+        "es": "¿El puerro es tan peligroso como la cebolla?",
+        "it": "Il porro è pericoloso quanto la cipolla?"
       },
       "a": {
         "en": "Garlic and onion are the most common causes of poisoning, but leek belongs to the same toxic plant family and should be treated the same way.",
         "sl": "Česen in čebula najpogosteje povzročita zastrupitev, a por spada v isto strupeno družino rastlin, zato z njim ravnajte enako.",
         "de": "Knoblauch und Zwiebeln sind die häufigsten Ursachen von Vergiftungen, aber Lauch gehört zur selben giftigen Pflanzenfamilie und sollte genauso behandelt werden.",
         "fr": "L’ail et l’oignon sont les causes d’intoxication les plus fréquentes, mais le poireau appartient à la même famille de plantes toxiques et doit être traité de la même façon.",
-        "es": "El ajo y la cebolla son las causas más frecuentes de intoxicación, pero el puerro pertenece a la misma familia de plantas tóxicas y hay que tratarlo igual."
+        "es": "El ajo y la cebolla son las causas más frecuentes de intoxicación, pero el puerro pertenece a la misma familia de plantas tóxicas y hay que tratarlo igual.",
+        "it": "Aglio e cipolla sono le cause più comuni di avvelenamento, ma il porro appartiene alla stessa famiglia di piante tossiche e va considerato allo stesso modo."
       }
     },
     {
@@ -107,14 +122,16 @@
         "sl": "Je varno, če je kuhano ali v prahu?",
         "de": "Ist er gekocht oder als Pulver unbedenklich?",
         "fr": "Le poireau cuit ou en poudre est-il sans danger ?",
-        "es": "¿Es seguro cocinado o en polvo?"
+        "es": "¿Es seguro cocinado o en polvo?",
+        "it": "È sicuro cotto o in polvere?"
       },
       "a": {
         "en": "No. Raw, cooked, dried, powdered and liquid forms are all poisonous to dogs.",
         "sl": "Ne. Za pse so strupene surove, kuhane, posušene, praškaste in tekoče oblike.",
         "de": "Nein. Roh, gekocht, getrocknet, als Pulver und in flüssiger Form ist er für Hunde giftig.",
         "fr": "Non. Cru, cuit, séché, en poudre ou sous forme liquide, il est toujours toxique pour les chiens.",
-        "es": "No. Crudo, cocinado, seco, en polvo o en forma líquida, siempre es tóxico para los perros."
+        "es": "No. Crudo, cocinado, seco, en polvo o en forma líquida, siempre es tóxico para los perros.",
+        "it": "No. Crudo, cotto, secco, in polvere o liquido: in tutte le forme è velenoso per i cani."
       }
     }
   ],
@@ -223,6 +240,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "02dafabe754044b3d5789a59187885be75034ef4a8192840bd24478519f4c3cd"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c934eb18cf074f839745f2cc9892c6058924a702b97b4da12ccd71e2fbbe2475"
     }
   }
 }

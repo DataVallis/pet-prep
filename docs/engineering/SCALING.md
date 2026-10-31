@@ -27,6 +27,19 @@
 | > 3.000 hkratnih družin | Ločiti vloge: 2+ aplikacijska strežnika za Hetzner Load Balancerjem; seje/tokeni so že brezstanjski (Sanctum), cache/queue v Redis. |
 | Reverb > ~2.000 hkratnih povezav | Reverb na svoj strežnik, horizontalno skaliranje prek Redis pub/sub (`REVERB_SCALING_ENABLED`). |
 | Vrsta (queue) zamuja > 1 min | Več workerjev; ločeni workerji za `broadcasts`, `default`, AI medije; Laravel Horizon za nadzor. |
+| p95 API > 300 ms tudi po večjem strežniku | **Laravel Octane** (FrankenPHP ali Swoole): aplikacija ostane v pomnilniku, več zahtev na strežnik; najprej preveriti, da koda ne hrani stanja med zahtevami (singletoni, statične spremenljivke). |
+
+## 2b. Tehnološki sklad — odločitev (David + Claude, 31. 10. 2026)
+**Ostanemo na PHP / Laravel.** David je vprašal, ali bi bil za milijone uporabnikov boljši Node.js. Odgovor: jezik strežnika pri PetPrep ni ozko grlo — večino časa zahteve čakajo na bazo, shrambo in zunanje storitve (fal, RevenueCat), kar Node ne pospeši. Ozka grla pri rasti so:
+- **baza** (minutni tick, dnevnik dogodkov) → §3, §4 (indeksi, read replice, particioniranje, shard-i ticka);
+- **mediji** (največji promet) → §1 (objektna shramba + CDN, neodvisno od jezika);
+- **vrste in AI** (fal, ffmpeg, stiskanje) → §2 (več workerjev, ločene vrste, Horizon);
+- **websocketi** → §2 (Reverb prek Redis pub/sub).
+Laravel ima za to vse: brezstanjske API strežnike za load balancerjem, Octane, Horizon, Redis. Prepis v drug jezik bi pomenil mesece brez novih funkcij (> 5.000 testov, game loop, plačila, AI pipeline, admin) — smiselno le ob konkretnem problemu, ki ga Laravel ne zmore; takega ni.
+
+**Pogoj:** ogrodje mora biti na podprti verziji z varnostnimi popravki. Laravel 11 jih ne dobiva več (Dependabot 31. 10. 2026: popravki samo za 12.68+ / 13.29+) → **nadgradnja na Laravel 12 (M0-07) pred javnim zagonom**, nato vsako leto ob novi glavni verziji. Enako za Expo SDK v aplikaciji.
+
+**Odprto (Claude pripravi, ko David reče):** konkreten načrt »od 1 strežnika do 1 milijona uporabnikov« po korakih s stroški (strežniki, baza, CDN, Reverb, vrste) — dopolni §1–§4 in §7.
 
 ## 3. Igralna zanka (minutni tick)
 | Sprožilec | Ukrep |
@@ -87,3 +100,4 @@ Danes: 6 števk (1.000.000 kod), enkratna, velja 15 min, unikatna med odprtimi P
 | 2026-10-30 | Stiskanje shranjenih AI videov (David, za stikalom, privzeto izklopljeno; QA #450): vsak posnetek enkrat H.264 CRF 21 v **nov ključ** `…-c.mp4`, samo pri ≥ 30 % prihranka, SSIM ≥ 0,98 (vsaka sličica ≥ 0,95); izvirnik se izbriše po 3 h, ko ga nič ne uporablja. Produkcija 30. 10.: ~1,56 GB posnetkov (Kling ~23 Mbps), pričakovano ~85 % manj. **Viri:** ponoči 22.00–6.00, ≤ 10 min na uro, `nice 19`, 2 niti, vsak ffmpeg omejen na 2 GB naslovnega prostora (`prlimit --as`; izmerjeno: 1 GB premalo, 1,5 GB dovolj, vrh RSS ~570 MB) — brez `mem_limit` na vsebniku scheduler. `media:disk-report` (samo poročilo, en seznam z velikostmi tudi na S3). | `feat/media-compress` |
 | 2026-10-30 | **Novi posnetki stisnjeni, preden se pokažejo** (David): pri vklopljenem stikalu vsak nov posnetek med preverjanjem kakovosti in prikazom (`CompressPetMediaCandidate`, privzeta vrsta, 1 delavec). Izmerjeno (2 vCPU, sintetični 5 s 1076 × 1924 24 fps 23 Mbps, CRF 21): slow 10,4 s / -93,4 %, medium 7,3 s / -93,5 %, fast 6,6 s / -93,0 %, **veryfast 4,1 s / -94,0 % (SSIM 0,992)** + SSIM 2,2 s → izbran `veryfast` za cevovod (nočni ostane `slow`). Nov 5-s posnetek čaka ~7 s dlje, 3-s ~4 s; poln komplet ~20 posnetkov ~2–3 min dlje skupaj, domači (idle, spanje, lačen) ~20 s. Zrnat posnetek: vsi preseti zavrnjeni (prikaže se izvirnik). | `feat/media-compress-on-store` |
 | 2026-10-30 | Varčni posnetki (ffmpeg, 0 $): obrat / zanka doma v polni ločljivosti, ~645 MB RSS na obrat 5 s, `nice` + `prlimit --as` 2048 MB, eno težko ffmpeg delo naenkrat; §1. **Isti dan obrat opuščen** (David): novih obratov ni več — ostane samo zanka naprej-nazaj (~494 MB RSS na 3 s); obstoječe obrate zamenja `media:frugal-unreverse` (fal, ~0,56 $ na videz / ljubljenčka) in jih nato izbriše. | `feat/frugal-clips`, `fix/frugal-no-reverse` |
+| 2026-10-31 | **Tehnološki sklad ostane PHP / Laravel** (David vprašal za Node.js; ozka grla so baza, mediji, vrste — ne jezik); pogoj podprta verzija ogrodja → Laravel 12 (M0-07) pred zagonom; Octane v §2; odprto: načrt do 1 milijona uporabnikov s stroški; §2b. | — |

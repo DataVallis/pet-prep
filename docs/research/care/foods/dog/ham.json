@@ -6,21 +6,24 @@
     "sl": "Šunka",
     "de": "Schinken",
     "fr": "Jambon",
-    "es": "Jamón"
+    "es": "Jamón",
+    "it": "Prosciutto"
   },
   "question": {
     "en": "Can dogs eat ham?",
     "sl": "Ali lahko psi jedo šunko?",
     "de": "Dürfen Hunde Schinken fressen?",
     "fr": "Les chiens peuvent-ils manger du jambon ?",
-    "es": "¿Pueden los perros comer jamón?"
+    "es": "¿Pueden los perros comer jamón?",
+    "it": "I cani possono mangiare il prosciutto?"
   },
   "url_slug": {
     "en": "ham",
     "sl": "sunka",
     "de": "schinken",
     "fr": "jambon",
-    "es": "jamon"
+    "es": "jamon",
+    "it": "prosciutto"
   },
   "level": "not_recommended",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ni priporočljivo. Šunka za pse ni strupena, vsebuje pa veliko maščob in natrija. Kupljena šunka je zelo slana, preveč maščobe pa lahko vodi v vnetje trebušne slinavke in druge prebavne težave. Bolje je izbrati bolj zdrav pasji priboljšek.",
     "de": "Nicht empfohlen. Schinken ist für Hunde nicht giftig, aber reich an Fett und Natrium. Gekaufter Schinken enthält viel Salz, und zu viel Fett kann zu einer Bauchspeicheldrüsenentzündung (Pankreatitis) und anderen Verdauungsproblemen führen. Ein gesünderes Hundeleckerli ist die bessere Wahl.",
     "fr": "Déconseillé. Le jambon n’est pas toxique pour les chiens, mais il est riche en graisses et en sodium. Le jambon du commerce contient beaucoup de sel, et trop de graisses peuvent entraîner une pancréatite et d’autres troubles digestifs. Une friandise pour chien plus saine est un meilleur choix.",
-    "es": "No se recomienda. El jamón no es tóxico para los perros, pero tiene mucha grasa y mucho sodio. El jamón comprado en la tienda lleva mucha sal, y el exceso de grasa puede provocar pancreatitis y otros problemas digestivos. Es mejor elegir un premio más saludable para perros."
+    "es": "No se recomienda. El jamón no es tóxico para los perros, pero tiene mucha grasa y mucho sodio. El jamón comprado en la tienda lleva mucha sal, y el exceso de grasa puede provocar pancreatitis y otros problemas digestivos. Es mejor elegir un premio más saludable para perros.",
+    "it": "Sconsigliato. Il prosciutto non è tossico per i cani, ma è ricco di grassi e di sodio. Il prosciutto del supermercato contiene molto sale, e troppi grassi possono portare a pancreatite e altri disturbi digestivi. Un premio per cani più sano è la scelta migliore."
   },
   "why": {
     "en": "Ham has a higher fat content than many other meats, and fatty meals are a known trigger of pancreatitis. Most ham is also very salty, and excess salt can be harmful to dogs.",
     "sl": "Šunka vsebuje več maščob kot številne druge vrste mesa, mastni obroki pa so znan sprožilec vnetja trebušne slinavke. Večina šunke je tudi zelo slana, presežek soli pa lahko psom škoduje.",
     "de": "Schinken hat einen höheren Fettgehalt als viele andere Fleischsorten, und fette Mahlzeiten sind ein bekannter Auslöser einer Pankreatitis. Die meisten Schinkensorten sind zudem sehr salzig, und zu viel Salz kann Hunden schaden.",
     "fr": "Le jambon est plus gras que beaucoup d’autres viandes, et les repas gras sont un déclencheur connu de la pancréatite. La plupart des jambons sont aussi très salés, et l’excès de sel peut être nocif pour les chiens.",
-    "es": "El jamón tiene más grasa que muchas otras carnes, y las comidas grasas son un desencadenante conocido de la pancreatitis. Además, la mayoría del jamón es muy salado, y el exceso de sal puede ser perjudicial para los perros."
+    "es": "El jamón tiene más grasa que muchas otras carnes, y las comidas grasas son un desencadenante conocido de la pancreatitis. Además, la mayoría del jamón es muy salado, y el exceso de sal puede ser perjudicial para los perros.",
+    "it": "Il prosciutto ha un contenuto di grassi più alto di molte altre carni, e i pasti grassi sono un noto fattore scatenante della pancreatite. Inoltre la maggior parte del prosciutto è molto salata, e il sale in eccesso può fare male ai cani."
   },
   "signs": {
     "en": [
@@ -72,6 +77,13 @@
       "Diarrea",
       "No quiere comer",
       "Cansancio, fiebre"
+    ],
+    "it": [
+      "Vomito, a volte 1–4 giorni dopo il pasto grasso",
+      "Mal di pancia (il cane può allungarsi nella posizione «della preghiera»)",
+      "Diarrea",
+      "Rifiuto del cibo",
+      "Stanchezza, febbre"
     ]
   },
   "what_to_do": {
@@ -79,7 +91,8 @@
     "sl": "Če je pes pojedel veliko mastne hrane ali v naslednjih dneh bruha, ga boli trebuh ali je utrujen, pokličite veterinarja. Zapišite si, kaj in približno koliko je pojedel. Znaki vnetja trebušne slinavke se lahko pokažejo z nekajdnevno zamudo.",
     "de": "Wenn Ihr Hund viel fettes Essen gefressen hat oder in den folgenden Tagen Erbrechen, Bauchschmerzen oder Müdigkeit zeigt, wenden Sie sich an Ihren Tierarzt. Notieren Sie, was gefressen wurde und ungefähr wie viel. Anzeichen einer Pankreatitis können erst einige Tage später auftreten.",
     "fr": "Si votre chien a mangé beaucoup d’aliments gras, ou s’il vomit, a mal au ventre ou semble fatigué dans les jours qui suivent, contactez votre vétérinaire. Notez ce qu’il a mangé et en quelle quantité approximative. Les signes de pancréatite peuvent n’apparaître qu’après quelques jours.",
-    "es": "Si tu perro ha comido mucha comida grasa, o en los días siguientes vomita, le duele la barriga o está cansado, contacta con tu veterinario. Apunta qué ha comido y más o menos cuánto. Los signos de pancreatitis pueden tardar unos días en aparecer."
+    "es": "Si tu perro ha comido mucha comida grasa, o en los días siguientes vomita, le duele la barriga o está cansado, contacta con tu veterinario. Apunta qué ha comido y más o menos cuánto. Los signos de pancreatitis pueden tardar unos días en aparecer.",
+    "it": "Se il tuo cane ha mangiato molto cibo grasso o nei giorni successivi mostra vomito, mal di pancia o stanchezza, contatta il veterinario. Annota che cosa ha mangiato e più o meno quanto. I sintomi della pancreatite possono comparire con qualche giorno di ritardo."
   },
   "serving": null,
   "child": {
@@ -87,7 +100,8 @@
     "sl": "Šunka je hrana za ljudi in je za pse preslana in premastna. Prihrani jo za svoj sendvič, psu pa daj pasji priboljšek.",
     "de": "Schinken ist Essen für Menschen und zu salzig und fett für Hunde. Heb ihn für dein Brot auf und gib deinem Hund ein Hundeleckerli.",
     "fr": "Le jambon est un aliment pour les humains, trop salé et trop gras pour les chiens. Garde-le pour ton sandwich et donne à ton chien une friandise pour chien.",
-    "es": "El jamón es comida de personas y es demasiado salado y graso para los perros. Guárdalo para tu bocadillo y dale a tu perro un premio para perros."
+    "es": "El jamón es comida de personas y es demasiado salado y graso para los perros. Guárdalo para tu bocadillo y dale a tu perro un premio para perros.",
+    "it": "Il prosciutto è un cibo per le persone, troppo salato e grasso per i cani. Tienilo per il tuo panino e dai al tuo cane un premio per cani."
   },
   "faq": [
     {
@@ -96,14 +110,16 @@
         "sl": "Zakaj je šunka slabša od drugega mesa?",
         "de": "Warum ist Schinken schlechter als anderes Fleisch?",
         "fr": "Pourquoi le jambon est-il pire que les autres viandes ?",
-        "es": "¿Por qué el jamón es peor que otras carnes?"
+        "es": "¿Por qué el jamón es peor que otras carnes?",
+        "it": "Perché il prosciutto è peggio di altre carni?"
       },
       "a": {
         "en": "It has more fat than many meats and store-bought ham contains a great deal of sodium.",
         "sl": "Vsebuje več maščob kot številne vrste mesa, kupljena šunka pa ima veliko natrija.",
         "de": "Er hat mehr Fett als viele andere Fleischsorten, und gekaufter Schinken enthält sehr viel Natrium.",
         "fr": "Il est plus gras que beaucoup de viandes, et le jambon du commerce contient énormément de sodium.",
-        "es": "Tiene más grasa que muchas carnes, y el jamón comprado en la tienda lleva muchísimo sodio."
+        "es": "Tiene más grasa que muchas carnes, y el jamón comprado en la tienda lleva muchísimo sodio.",
+        "it": "Ha più grassi di molte carni e il prosciutto del supermercato contiene moltissimo sodio."
       }
     }
   ],
@@ -197,6 +213,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "10dd440f57ba6560225ecdee7152b64bb747b84309b86be5b4a6ad5842126c87"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "64944bc5c46e10fa4eda10290deb4d1cdb1de0e3f46c64e4b4903d1cd4f349a2"
     }
   }
 }

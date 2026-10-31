@@ -6,21 +6,24 @@
     "sl": "Sardine",
     "de": "Sardinen",
     "fr": "Sardines",
-    "es": "Sardinas"
+    "es": "Sardinas",
+    "it": "Sardine"
   },
   "question": {
     "en": "Can dogs eat sardines?",
     "sl": "Ali lahko psi jedo sardine?",
     "de": "Dürfen Hunde Sardinen fressen?",
     "fr": "Les chiens peuvent-ils manger des sardines ?",
-    "es": "¿Pueden los perros comer sardinas?"
+    "es": "¿Pueden los perros comer sardinas?",
+    "it": "I cani possono mangiare le sardine?"
   },
   "url_slug": {
     "en": "sardines",
     "sl": "sardine",
     "de": "sardinen",
     "fr": "sardines",
-    "es": "sardinas"
+    "es": "sardinas",
+    "it": "sardine"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, zmerno. Sardine v konzervi, vložene v vodi, nesoljene in nezačinjene, so primeren ribji priboljšek, njihove drobne kosti pa so po konzerviranju mehke in užitne. Sveže sardine morajo biti popolnoma kuhane. Izogibajte se slanim, začinjenim ali surovim ribam.",
     "de": "Ja, in Maßen. Sardinen aus der Dose in Wasser, ungesalzen und ungewürzt, sind ein geeignetes Fischleckerli, und ihre winzigen Gräten sind nach dem Konservieren weich und essbar. Frische Sardinen müssen vollständig durchgegart sein. Meiden Sie salzigen, gewürzten oder rohen Fisch.",
     "fr": "Oui, avec modération. Les sardines en conserve au naturel (dans l’eau), sans sel ni assaisonnement, sont une friandise à base de poisson qui convient, et leurs minuscules arêtes deviennent molles et comestibles avec la mise en conserve. Les sardines fraîches doivent être bien cuites. Évitez le poisson salé, assaisonné ou cru.",
-    "es": "Sí, con moderación. Las sardinas en lata al natural (en agua), sin sal y sin condimentos, son un premio de pescado adecuado, y sus diminutas espinas quedan blandas y comestibles tras el enlatado. Las sardinas frescas deben estar bien cocinadas. Evita el pescado salado, condimentado o crudo."
+    "es": "Sí, con moderación. Las sardinas en lata al natural (en agua), sin sal y sin condimentos, son un premio de pescado adecuado, y sus diminutas espinas quedan blandas y comestibles tras el enlatado. Las sardinas frescas deben estar bien cocinadas. Evita el pescado salado, condimentado o crudo.",
+    "it": "Sì, con moderazione. Le sardine in scatola al naturale, in acqua, senza sale e senza condimenti, sono un premio di pesce adatto, e le loro minuscole lische diventano morbide e commestibili con l’inscatolamento. Le sardine fresche vanno cotte bene. Evita il pesce salato, condito o crudo."
   },
   "why": {
     "en": "Plain, fully cooked fish provides protein and fatty acids. Cooking fully reduces the risk from parasites and bacteria. Canned sardines are the exception to the bones rule because their bones soften during canning; for other fish, bones must be removed. Canned fish should be unsalted and unseasoned.",
     "sl": "Navadne, popolnoma kuhane ribe dajejo beljakovine in maščobne kisline. Popolno kuhanje zmanjša tveganje zaradi zajedavcev in bakterij. Sardine v konzervi so izjema pri pravilu o kosteh, ker se kosti med konzerviranjem zmehčajo; pri drugih ribah je treba kosti odstraniti. Ribe v konzervi naj bodo nesoljene in nezačinjene.",
     "de": "Purer, vollständig durchgegarter Fisch liefert Eiweiß und Fettsäuren. Vollständiges Garen verringert das Risiko durch Parasiten und Bakterien. Sardinen aus der Dose sind die Ausnahme von der Grätenregel, weil ihre Gräten beim Konservieren weich werden; bei anderem Fisch müssen die Gräten entfernt werden. Fisch aus der Dose sollte ungesalzen und ungewürzt sein.",
     "fr": "Le poisson nature et bien cuit apporte des protéines et des acides gras. Une cuisson complète réduit le risque lié aux parasites et aux bactéries. Les sardines en conserve sont l’exception à la règle des arêtes, car celles-ci ramollissent pendant la mise en conserve ; pour les autres poissons, il faut retirer les arêtes. Le poisson en conserve doit être sans sel ni assaisonnement.",
-    "es": "El pescado natural y bien cocinado aporta proteínas y ácidos grasos. Cocinarlo bien reduce el riesgo de parásitos y bacterias. Las sardinas en lata son la excepción a la regla de las espinas, porque sus espinas se ablandan durante el enlatado; en otros pescados hay que quitarlas. El pescado en lata debe ir sin sal y sin condimentos."
+    "es": "El pescado natural y bien cocinado aporta proteínas y ácidos grasos. Cocinarlo bien reduce el riesgo de parásitos y bacterias. Las sardinas en lata son la excepción a la regla de las espinas, porque sus espinas se ablandan durante el enlatado; en otros pescados hay que quitarlas. El pescado en lata debe ir sin sal y sin condimentos.",
+    "it": "Il pesce semplice e ben cotto fornisce proteine e acidi grassi. Una cottura completa riduce il rischio di parassiti e batteri. Le sardine in scatola sono l’eccezione alla regola delle lische, perché le lische si ammorbidiscono durante l’inscatolamento; negli altri pesci le lische vanno tolte. Il pesce in scatola deve essere senza sale e senza condimenti."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Če je pes pojedel slane ali začinjene sardine ali surove ribe, opazujte, ali bruha, ima drisko ali je utrujen, in pokličite veterinarja, če so težave hude ali ne prenehajo.",
     "de": "Wenn Ihr Hund salzige oder gewürzte Sardinen oder rohen Fisch gefressen hat, achten Sie auf Erbrechen, Durchfall oder Mattigkeit und rufen Sie Ihren Tierarzt an, wenn diese stark ausgeprägt sind oder nicht aufhören.",
     "fr": "Si votre chien a mangé des sardines salées ou assaisonnées, ou du poisson cru, surveillez les vomissements, la diarrhée ou le manque d’énergie, et appelez votre vétérinaire s’ils sont importants ou ne s’arrêtent pas.",
-    "es": "Si tu perro ha comido sardinas saladas o condimentadas o pescado crudo, vigila si tiene vómitos, diarrea o poca energía y llama a tu veterinario si son intensos o no se pasan."
+    "es": "Si tu perro ha comido sardinas saladas o condimentadas o pescado crudo, vigila si tiene vómitos, diarrea o poca energía y llama a tu veterinario si son intensos o no se pasan.",
+    "it": "Se il tuo cane ha mangiato sardine salate o condite o pesce crudo, controlla se compaiono vomito, diarrea o poca energia e chiama il veterinario se sono forti o non passano."
   },
   "serving": {
     "en": "Canned in water, unsalted and unseasoned; or fresh sardines fully cooked (steamed, baked or poached) and plain; in moderation.",
     "sl": "V konzervi v vodi, nesoljene in nezačinjene; ali sveže, popolnoma kuhane (na pari, pečene ali poširane) in brez dodatkov; zmerno.",
     "de": "Aus der Dose in Wasser, ungesalzen und ungewürzt; oder frische Sardinen, vollständig durchgegart (gedämpft, im Ofen gegart oder pochiert) und pur; in Maßen.",
     "fr": "En conserve au naturel (dans l’eau), sans sel ni assaisonnement ; ou des sardines fraîches bien cuites (à la vapeur, au four ou pochées) et nature ; avec modération.",
-    "es": "En lata al natural (en agua), sin sal y sin condimentos; o sardinas frescas bien cocinadas (al vapor, al horno o escalfadas) y sin nada; con moderación."
+    "es": "En lata al natural (en agua), sin sal y sin condimentos; o sardinas frescas bien cocinadas (al vapor, al horno o escalfadas) y sin nada; con moderación.",
+    "it": "In scatola, in acqua, senza sale e senza condimenti; oppure sardine fresche ben cotte (al vapore, al forno o lessate) e semplici; con moderazione."
   },
   "child": {
     "en": "Sardines in water can be a fishy treat for a dog, now and then. Salty fish is not for dogs.",
     "sl": "Sardine v vodi so lahko za psa občasen ribji priboljšek. Slane ribe niso za pse.",
     "de": "Sardinen in Wasser können ab und zu ein fischiges Leckerli für einen Hund sein. Salziger Fisch ist nichts für Hunde.",
     "fr": "Les sardines au naturel peuvent être une friandise au bon goût de poisson pour un chien, de temps en temps. Le poisson salé n’est pas pour les chiens.",
-    "es": "Las sardinas en agua pueden ser un premio de pescado para un perro, de vez en cuando. El pescado salado no es para perros."
+    "es": "Las sardinas en agua pueden ser un premio de pescado para un perro, de vez en cuando. El pescado salado no es para perros.",
+    "it": "Le sardine in acqua possono essere un premio al gusto di pesce per un cane, ogni tanto. Il pesce salato non è per i cani."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali moram sardinam v konzervi odstraniti kosti?",
         "de": "Muss ich die Gräten aus Dosensardinen entfernen?",
         "fr": "Faut-il retirer les arêtes des sardines en conserve ?",
-        "es": "¿Hay que quitar las espinas a las sardinas en lata?"
+        "es": "¿Hay que quitar las espinas a las sardinas en lata?",
+        "it": "Devo togliere le lische dalle sardine in scatola?"
       },
       "a": {
         "en": "No. The tiny bones are soft and fully edible after canning, so sardines canned in water can be fed without deboning.",
         "sl": "Ne. Drobne kosti so po konzerviranju mehke in povsem užitne, zato lahko sardine v vodi daste brez odstranjevanja kosti.",
         "de": "Nein. Die winzigen Gräten sind nach dem Konservieren weich und vollständig essbar, deshalb können Sardinen in Wasser aus der Dose ohne Entgräten gefüttert werden.",
         "fr": "Non. Les minuscules arêtes deviennent molles et entièrement comestibles avec la mise en conserve : les sardines au naturel peuvent être données sans retirer les arêtes.",
-        "es": "No. Las diminutas espinas quedan blandas y totalmente comestibles tras el enlatado, así que las sardinas en lata al natural pueden darse sin quitarles las espinas."
+        "es": "No. Las diminutas espinas quedan blandas y totalmente comestibles tras el enlatado, así que las sardinas en lata al natural pueden darse sin quitarles las espinas.",
+        "it": "No. Le minuscole lische diventano morbide e del tutto commestibili con l’inscatolamento, quindi le sardine in scatola in acqua si possono dare senza spinarle."
       }
     }
   ],
@@ -151,6 +161,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8c5aea189f45432835a89aeeb938f0ff2577ec6501c2af86ff1a46ff9843b579"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "480cfcdf20f22d24498f8968af5c99943615e1fa0e3a6484e36e758a955bcf05"
     }
   }
 }

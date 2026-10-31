@@ -6,21 +6,24 @@
     "sl": "Rozine",
     "de": "Rosinen",
     "fr": "Raisins secs",
-    "es": "Pasas"
+    "es": "Pasas",
+    "it": "Uvetta"
   },
   "question": {
     "en": "Can dogs eat raisins?",
     "sl": "Ali lahko psi jedo rozine?",
     "de": "Dürfen Hunde Rosinen fressen?",
     "fr": "Les chiens peuvent-ils manger des raisins secs ?",
-    "es": "¿Pueden los perros comer pasas?"
+    "es": "¿Pueden los perros comer pasas?",
+    "it": "I cani possono mangiare l’uvetta?"
   },
   "url_slug": {
     "en": "raisins",
     "sl": "rozine",
     "de": "rosinen",
     "fr": "raisins-secs",
-    "es": "pasas"
+    "es": "pasas",
+    "it": "uvetta"
   },
   "level": "toxic",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne. Rozine so posušeno grozdje in psi jih ne smejo nikoli jesti. Lahko povzročijo odpoved ledvic, že majhna količina pa lahko psu resno škodi. Ni mogoče napovedati, kateri psi bodo prizadeti.",
     "de": "Nein. Rosinen sind getrocknete Weintrauben, und Hunde sollten sie niemals fressen. Sie können Nierenversagen verursachen, und schon eine kleine Menge kann einen Hund schwer krank machen. Es lässt sich nicht vorhersagen, welche Hunde betroffen sein werden.",
     "fr": "Non. Les raisins secs sont du raisin séché, et les chiens ne doivent jamais en manger. Ils peuvent provoquer une insuffisance rénale, et même une petite quantité peut rendre un chien gravement malade. Impossible de prévoir quels chiens seront touchés.",
-    "es": "No. Las pasas son uvas secas, y los perros no deben comerlas nunca. Pueden provocar insuficiencia renal, e incluso una pequeña cantidad puede hacer que un perro enferme gravemente. No hay forma de predecir a qué perros les afectará."
+    "es": "No. Las pasas son uvas secas, y los perros no deben comerlas nunca. Pueden provocar insuficiencia renal, e incluso una pequeña cantidad puede hacer que un perro enferme gravemente. No hay forma de predecir a qué perros les afectará.",
+    "it": "No. L’uvetta è uva secca, e i cani non devono mai mangiarla. Può causare insufficienza renale, e anche una piccola quantità può far stare molto male un cane. Non c’è modo di prevedere quali cani ne saranno colpiti."
   },
   "why": {
     "en": "Raisins, grapes and currants can damage a dog's kidneys. Tartaric acid is suspected to be the toxic part; its amount varies, so effects are unpredictable, and there is no way to tell which dogs are more sensitive. Because the cause is uncertain, any amount is treated as a concern.",
     "sl": "Rozine, grozdje in korinte lahko poškodujejo pasje ledvice. Za strupeno sestavino velja vinska kislina; njena količina se razlikuje, zato so učinki nepredvidljivi, in ni mogoče vedeti, kateri psi so bolj občutljivi. Ker vzrok ni pojasnjen, se vsaka količina jemlje resno.",
     "de": "Rosinen, Weintrauben und Korinthen können die Nieren eines Hundes schädigen. Als giftiger Bestandteil wird Weinsäure vermutet; ihr Gehalt schwankt, deshalb sind die Folgen unberechenbar, und es lässt sich nicht erkennen, welche Hunde empfindlicher sind. Weil die Ursache unklar ist, gilt jede Menge als bedenklich.",
     "fr": "Les raisins secs, le raisin et les raisins de Corinthe peuvent endommager les reins d’un chien. L’acide tartrique est soupçonné d’être la substance toxique ; sa teneur varie, les effets sont donc imprévisibles, et on ne peut pas savoir quels chiens sont plus sensibles. Comme la cause est incertaine, toute quantité est considérée comme préoccupante.",
-    "es": "Las pasas, las uvas y las pasas de Corinto pueden dañar los riñones del perro. Se sospecha que la parte tóxica es el ácido tartárico; su cantidad varía, así que los efectos son impredecibles, y no hay forma de saber qué perros son más sensibles. Como la causa no es segura, cualquier cantidad se considera preocupante."
+    "es": "Las pasas, las uvas y las pasas de Corinto pueden dañar los riñones del perro. Se sospecha que la parte tóxica es el ácido tartárico; su cantidad varía, así que los efectos son impredecibles, y no hay forma de saber qué perros son más sensibles. Como la causa no es segura, cualquier cantidad se considera preocupante.",
+    "it": "Uvetta, uva e uva passa di Corinto possono danneggiare i reni del cane. Si sospetta che la parte tossica sia l’acido tartarico; la sua quantità varia, quindi gli effetti sono imprevedibili, e non c’è modo di sapere quali cani siano più sensibili. Poiché la causa non è certa, qualsiasi quantità va considerata preoccupante."
   },
   "signs": {
     "en": [
@@ -77,6 +82,14 @@
       "Dolor de barriga",
       "Deshidratación y beber mucho",
       "Temblores"
+    ],
+    "it": [
+      "Vomito o diarrea, spesso entro 6–24 ore",
+      "Stanchezza e debolezza",
+      "Rifiuto del cibo",
+      "Mal di pancia",
+      "Disidratazione e sete eccessiva",
+      "Tremori"
     ]
   },
   "what_to_do": {
@@ -84,7 +97,8 @@
     "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če je pes pojedel le nekaj rozin. Zapišite si, približno koliko jih je pojedel. Ne čakajte na znake: prej ko se zdravljenje začne, bolje je.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, auch wenn nur wenige Rosinen gefressen wurden. Notieren Sie ungefähr, wie viele es waren. Warten Sie nicht auf Anzeichen: Je früher die Behandlung beginnt, desto besser.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, même si votre chien n’a mangé que quelques raisins secs. Notez combien il en a mangé environ. N’attendez pas l’apparition des signes : plus le traitement commence tôt, mieux c’est.",
-    "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales, aunque tu perro solo se haya comido unas pocas pasas. Apunta más o menos cuántas se ha comido. No esperes a que aparezcan síntomas: cuanto antes empiece el tratamiento, mejor."
+    "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales, aunque tu perro solo se haya comido unas pocas pasas. Apunta más o menos cuántas se ha comido. No esperes a que aparezcan síntomas: cuanto antes empiece el tratamiento, mejor.",
+    "it": "Contatta subito il veterinario o un centro antiveleni veterinario, anche se il tuo cane ha mangiato solo pochi chicchi di uvetta. Annota più o meno quanti ne ha mangiati. Non aspettare che compaiano i sintomi: prima inizia il trattamento, meglio è."
   },
   "serving": null,
   "child": {
@@ -92,7 +106,8 @@
     "sl": "Rozine so majhno posušeno grozdje in niso za pse. Če jih pes poje, takoj povej odraslemu.",
     "de": "Rosinen sind kleine getrocknete Weintrauben und nichts für Hunde. Wenn dein Hund welche frisst, sag sofort einem Erwachsenen Bescheid.",
     "fr": "Les raisins secs sont de tout petits grains de raisin séchés, et ils ne sont pas pour les chiens. Si ton chien en mange, préviens tout de suite un adulte.",
-    "es": "Las pasas son uvas secas muy pequeñas, y no son para perros. Si tu perro se come alguna, díselo enseguida a un adulto."
+    "es": "Las pasas son uvas secas muy pequeñas, y no son para perros. Si tu perro se come alguna, díselo enseguida a un adulto.",
+    "it": "L’uvetta è uva piccola e secca, e non è per i cani. Se il tuo cane ne mangia un po’, avvisa subito un adulto."
   },
   "faq": [
     {
@@ -101,14 +116,16 @@
         "sl": "So rozine slabše od grozdja?",
         "de": "Sind Rosinen schlimmer als Weintrauben?",
         "fr": "Les raisins secs sont-ils pires que le raisin frais ?",
-        "es": "¿Son peores las pasas que las uvas?"
+        "es": "¿Son peores las pasas que las uvas?",
+        "it": "L’uvetta è peggio dell’uva?"
       },
       "a": {
         "en": "Both are dangerous. Sources treat grapes, raisins and currants as the same risk and advise calling the vet after any amount.",
         "sl": "Oboje je nevarno. Viri grozdje, rozine in korinte obravnavajo kot enako tveganje in svetujejo klic veterinarju po kateri koli količini.",
         "de": "Beide sind gefährlich. Die Quellen behandeln Weintrauben, Rosinen und Korinthen als gleiches Risiko und raten, nach jeder Menge den Tierarzt anzurufen.",
         "fr": "Les deux sont dangereux. Les sources considèrent que le raisin, les raisins secs et les raisins de Corinthe présentent le même risque et conseillent d’appeler le vétérinaire quelle que soit la quantité.",
-        "es": "Las dos son peligrosas. Las fuentes consideran que las uvas, las pasas y las pasas de Corinto tienen el mismo riesgo y aconsejan llamar al veterinario sea cual sea la cantidad."
+        "es": "Las dos son peligrosas. Las fuentes consideran que las uvas, las pasas y las pasas de Corinto tienen el mismo riesgo y aconsejan llamar al veterinario sea cual sea la cantidad.",
+        "it": "Sono pericolose entrambe. Le fonti considerano uva, uvetta e uva passa di Corinto lo stesso rischio e consigliano di chiamare il veterinario qualunque sia la quantità."
       }
     },
     {
@@ -117,14 +134,16 @@
         "sl": "Kaj pa korinte?",
         "de": "Und Korinthen?",
         "fr": "Et les raisins de Corinthe ?",
-        "es": "¿Y las pasas de Corinto?"
+        "es": "¿Y las pasas de Corinto?",
+        "it": "E l’uva passa di Corinto?"
       },
       "a": {
         "en": "Currants are named in the same warnings as grapes and raisins, so they are not safe for dogs either.",
         "sl": "Korinte so navedene v istih opozorilih kot grozdje in rozine, zato tudi one za pse niso varne.",
         "de": "Korinthen werden in denselben Warnungen genannt wie Weintrauben und Rosinen, sie sind also ebenfalls nicht sicher für Hunde.",
         "fr": "Les raisins de Corinthe figurent dans les mêmes mises en garde que le raisin et les raisins secs : ils ne sont pas sans danger pour les chiens non plus.",
-        "es": "Las pasas de Corinto aparecen en las mismas advertencias que las uvas y las pasas, así que tampoco son seguras para los perros."
+        "es": "Las pasas de Corinto aparecen en las mismas advertencias que las uvas y las pasas, así que tampoco son seguras para los perros.",
+        "it": "L’uva passa di Corinto compare negli stessi avvertimenti di uva e uvetta, quindi nemmeno lei è sicura per i cani."
       }
     }
   ],
@@ -210,6 +229,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4a7de02fac105371aea1ba729beefc9b7b5a671e9e904a1356c5576f3b1073c2"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7093cc3c266c23315b6c3c1178fe605c6cfeb83ef238a5b061f55dee39ed4432"
     }
   }
 }

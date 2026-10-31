@@ -6,21 +6,24 @@
     "sl": "Surova riba",
     "de": "Roher Fisch",
     "fr": "Poisson cru",
-    "es": "Pescado crudo"
+    "es": "Pescado crudo",
+    "it": "Pesce crudo"
   },
   "question": {
     "en": "Can cats eat raw fish?",
     "sl": "Ali lahko mačke jedo surovo ribo?",
     "de": "Dürfen Katzen rohen Fisch fressen?",
     "fr": "Les chats peuvent-ils manger du poisson cru ?",
-    "es": "¿Pueden los gatos comer pescado crudo?"
+    "es": "¿Pueden los gatos comer pescado crudo?",
+    "it": "I gatti possono mangiare il pesce crudo?"
   },
   "url_slug": {
     "en": "raw-fish",
     "sl": "surova-riba",
     "de": "roher-fisch",
     "fr": "poisson-cru",
-    "es": "pescado-crudo"
+    "es": "pescado-crudo",
+    "it": "pesce-crudo"
   },
   "level": "not_recommended",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne, surova riba za mačke ni dobra izbira. Lahko vsebuje škodljive bakterije in zajedavce, nekatere surove ribe pa vsebujejo tiaminazo, encim, ki uničuje vitamin B1. Ribo za mačke je treba dobro skuhati in odstraniti kosti.",
     "de": "Nein, roher Fisch ist für Katzen keine gute Idee. Er kann schädliche Bakterien und Parasiten enthalten, und manche rohen Fische enthalten Thiaminase, ein Enzym, das Vitamin B1 zerstört. Fisch für Katzen sollte richtig gegart und entgrätet sein.",
     "fr": "Non, le poisson cru n’est pas une bonne idée pour les chats. Il peut contenir des bactéries et des parasites dangereux, et certains poissons crus contiennent de la thiaminase, une enzyme qui détruit la vitamine B1. Le poisson destiné aux chats doit être bien cuit et sans arêtes.",
-    "es": "No, el pescado crudo no es buena idea para los gatos. Puede contener bacterias y parásitos dañinos, y algunos pescados crudos contienen tiaminasa, una enzima que destruye la vitamina B1. El pescado para gatos debe estar bien cocinado y sin espinas."
+    "es": "No, el pescado crudo no es buena idea para los gatos. Puede contener bacterias y parásitos dañinos, y algunos pescados crudos contienen tiaminasa, una enzima que destruye la vitamina B1. El pescado para gatos debe estar bien cocinado y sin espinas.",
+    "it": "No, il pesce crudo non è una buona idea per i gatti. Può contenere batteri e parassiti nocivi, e alcuni pesci crudi contengono tiaminasi, un enzima che distrugge la vitamina B1. Il pesce per i gatti deve essere ben cotto e senza lische."
   },
   "why": {
     "en": "Cats Protection says uncooked fish may contain harmful bacteria and parasites. The Merck Veterinary Manual notes that thiaminases are found in raw freshwater fish and are destroyed by cooking. Thiamine (vitamin B1) is an essential nutrient, so cooking fish removes this risk.",
     "sl": "Cats Protection navaja, da surova riba lahko vsebuje škodljive bakterije in zajedavce. Merckov veterinarski priročnik navaja, da so tiaminaze prisotne v surovih sladkovodnih ribah in da jih kuhanje uniči. Tiamin (vitamin B1) je nujno hranilo, zato kuhanje ribe to tveganje odpravi.",
     "de": "Laut Cats Protection kann ungegarter Fisch schädliche Bakterien und Parasiten enthalten. Das Merck Veterinary Manual weist darauf hin, dass Thiaminasen in rohem Süßwasserfisch vorkommen und durch Garen zerstört werden. Thiamin (Vitamin B1) ist ein lebenswichtiger Nährstoff – das Garen von Fisch beseitigt also dieses Risiko.",
     "fr": "Selon Cats Protection, le poisson cru peut contenir des bactéries et des parasites dangereux. Le Merck Veterinary Manual indique que les thiaminases se trouvent dans le poisson d’eau douce cru et sont détruites par la cuisson. La thiamine (vitamine B1) est un nutriment essentiel : cuire le poisson écarte donc ce risque.",
-    "es": "Cats Protection dice que el pescado sin cocinar puede contener bacterias y parásitos dañinos. El Manual Merck de Veterinaria señala que las tiaminasas se encuentran en el pescado crudo de agua dulce y que la cocción las destruye. La tiamina (vitamina B1) es un nutriente esencial, así que cocinar el pescado elimina este riesgo."
+    "es": "Cats Protection dice que el pescado sin cocinar puede contener bacterias y parásitos dañinos. El Manual Merck de Veterinaria señala que las tiaminasas se encuentran en el pescado crudo de agua dulce y que la cocción las destruye. La tiamina (vitamina B1) es un nutriente esencial, así que cocinar el pescado elimina este riesgo.",
+    "it": "Cats Protection afferma che il pesce crudo può contenere batteri e parassiti nocivi. Il Manuale Veterinario Merck osserva che le tiaminasi si trovano nel pesce crudo d’acqua dolce e vengono distrutte dalla cottura. La tiamina (vitamina B1) è un nutriente essenziale, quindi cuocere il pesce elimina questo rischio."
   },
   "signs": {
     "en": [
@@ -72,6 +77,13 @@
       "Fiebre",
       "No quiere comer",
       "Apatía"
+    ],
+    "it": [
+      "Vomito",
+      "Diarrea, a volte con sangue",
+      "Febbre",
+      "Non vuole mangiare",
+      "Letargia"
     ]
   },
   "what_to_do": {
@@ -79,21 +91,24 @@
     "sl": "Če je mačka pojedla malo surove ribe, bodite pozorni na bruhanje, drisko, vročino ali odklanjanje hrane in pokličite veterinarja, če se kaj od tega pojavi. Surova riba naj ne postane redna hrana.",
     "de": "Wenn Ihre Katze ein wenig rohen Fisch gefressen hat, achten Sie auf Erbrechen, Durchfall, Fieber oder Appetitlosigkeit und rufen Sie Ihren Tierarzt an, wenn eines davon auftritt. Roher Fisch sollte nicht zum regelmäßigen Futter werden.",
     "fr": "Si votre chat a mangé un peu de poisson cru, surveillez l’apparition de vomissements, de diarrhée, de fièvre ou d’un refus de manger, et appelez votre vétérinaire si l’un de ces signes apparaît. Le poisson cru ne doit pas devenir un aliment habituel.",
-    "es": "Si tu gato ha comido un poco de pescado crudo, vigila si tiene vómitos, diarrea, fiebre o deja de comer, y llama a tu veterinario si aparece alguno de estos síntomas. El pescado crudo no debe convertirse en un alimento habitual."
+    "es": "Si tu gato ha comido un poco de pescado crudo, vigila si tiene vómitos, diarrea, fiebre o deja de comer, y llama a tu veterinario si aparece alguno de estos síntomas. El pescado crudo no debe convertirse en un alimento habitual.",
+    "it": "Se il tuo gatto ha mangiato un po’ di pesce crudo, controlla se compaiono vomito, diarrea, febbre o rifiuto del cibo, e in tal caso chiama il veterinario. Il pesce crudo non deve diventare un alimento abituale."
   },
   "serving": {
     "en": "If you share fish: properly cooked, plain, with all bones removed, a few pieces at a time.",
     "sl": "Če ribo delite: dobro kuhano, brez dodatkov, z odstranjenimi vsemi kostmi, po nekaj koščkov naenkrat.",
     "de": "Wenn Sie Fisch teilen: richtig gegart, pur, ohne Gräten, jeweils nur ein paar Stücke.",
     "fr": "Si vous partagez du poisson : bien cuit, nature, sans aucune arête, quelques morceaux à la fois.",
-    "es": "Si compartes pescado: bien cocinado, sin nada añadido, sin ninguna espina y unos pocos trozos cada vez."
+    "es": "Si compartes pescado: bien cocinado, sin nada añadido, sin ninguna espina y unos pocos trozos cada vez.",
+    "it": "Se condividi del pesce: ben cotto, semplice, senza nessuna lisca, pochi pezzi alla volta."
   },
   "child": {
     "en": "Cats love fish, but it needs to be cooked by a grown-up first, with no bones.",
     "sl": "Mucke imajo rade ribe, a jih mora odrasel najprej skuhati in odstraniti kosti.",
     "de": "Katzen lieben Fisch, aber ein Erwachsener muss ihn zuerst kochen und alle Gräten entfernen.",
     "fr": "Les chats adorent le poisson, mais un adulte doit d’abord le cuire et enlever les arêtes.",
-    "es": "A los gatos les encanta el pescado, pero antes un adulto tiene que cocinarlo y quitarle las espinas."
+    "es": "A los gatos les encanta el pescado, pero antes un adulto tiene que cocinarlo y quitarle las espinas.",
+    "it": "I gatti adorano il pesce, ma prima deve cuocerlo un adulto, togliendo tutte le lische."
   },
   "faq": [
     {
@@ -102,14 +117,16 @@
         "sl": "Kaj je tiaminaza?",
         "de": "Was ist Thiaminase?",
         "fr": "Qu’est-ce que la thiaminase ?",
-        "es": "¿Qué es la tiaminasa?"
+        "es": "¿Qué es la tiaminasa?",
+        "it": "Che cos’è la tiaminasi?"
       },
       "a": {
         "en": "It is an enzyme found in some raw fish that destroys thiamine (vitamin B1). Cooking destroys it.",
         "sl": "To je encim v nekaterih surovih ribah, ki uničuje tiamin (vitamin B1). Kuhanje ga uniči.",
         "de": "Ein Enzym in manchen rohen Fischen, das Thiamin (Vitamin B1) zerstört. Durch Garen wird es selbst zerstört.",
         "fr": "C’est une enzyme présente dans certains poissons crus, qui détruit la thiamine (vitamine B1). La cuisson la détruit.",
-        "es": "Es una enzima presente en algunos pescados crudos que destruye la tiamina (vitamina B1). La cocción la destruye."
+        "es": "Es una enzima presente en algunos pescados crudos que destruye la tiamina (vitamina B1). La cocción la destruye.",
+        "it": "È un enzima presente in alcuni pesci crudi che distrugge la tiamina (vitamina B1). La cottura, invece, distrugge l’enzima."
       }
     }
   ],
@@ -200,6 +217,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7e414b3e80b51a8ba5eb105d8df240d72f60c2de3e29f40efb89a99204d1467a"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "486f3341c3f6846d97473089a3d30ac55919f62f5344960048e0e6a192ae816e"
     }
   }
 }

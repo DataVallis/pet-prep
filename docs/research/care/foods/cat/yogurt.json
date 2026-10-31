@@ -6,21 +6,24 @@
     "sl": "Jogurt",
     "de": "Joghurt",
     "fr": "Yaourt",
-    "es": "Yogur"
+    "es": "Yogur",
+    "it": "Yogurt"
   },
   "question": {
     "en": "Can cats eat yogurt?",
     "sl": "Ali lahko mačke jedo jogurt?",
     "de": "Dürfen Katzen Joghurt fressen?",
     "fr": "Les chats peuvent-ils manger du yaourt ?",
-    "es": "¿Pueden los gatos comer yogur?"
+    "es": "¿Pueden los gatos comer yogur?",
+    "it": "I gatti possono mangiare lo yogurt?"
   },
   "url_slug": {
     "en": "yogurt",
     "sl": "jogurt",
     "de": "joghurt",
     "fr": "yaourt",
-    "es": "yogur"
+    "es": "yogur",
+    "it": "yogurt"
   },
   "level": "not_recommended",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne, jogurta je bolje ne dajati. Je mlečni izdelek, odrasle mačke pa imajo malo encima, ki prebavlja mlečni sladkor, zato jim mlečni izdelki lahko povzročijo drisko ali razdražen želodec. Veterinarski viri odsvetujejo mlečne izdelke za mačke.",
     "de": "Nein, Joghurt meiden Sie besser. Er ist ein Milchprodukt, und erwachsene Katzen haben wenig von dem Enzym, das Milchzucker verdaut. Milchprodukte können daher Durchfall oder Magenverstimmungen verursachen. Tiermedizinische Ratgeber raten davon ab, Katzen Milchprodukte zu füttern.",
     "fr": "Non, mieux vaut éviter le yaourt. C’est un produit laitier, et les chats adultes ont peu de l’enzyme qui digère le sucre du lait : les produits laitiers peuvent donc provoquer de la diarrhée ou des maux de ventre. Les guides vétérinaires déconseillent de donner des produits laitiers aux chats.",
-    "es": "No, es mejor evitar el yogur. Es un lácteo, y los gatos adultos tienen poca cantidad de la enzima que digiere el azúcar de la leche, así que los lácteos pueden causar diarrea o malestar de estómago. Las guías veterinarias desaconsejan dar lácteos a los gatos."
+    "es": "No, es mejor evitar el yogur. Es un lácteo, y los gatos adultos tienen poca cantidad de la enzima que digiere el azúcar de la leche, así que los lácteos pueden causar diarrea o malestar de estómago. Las guías veterinarias desaconsejan dar lácteos a los gatos.",
+    "it": "No, è meglio evitare lo yogurt. È un latticino, e i gatti adulti hanno poco enzima per digerire lo zucchero del latte, quindi i latticini possono causare diarrea o mal di stomaco. Le guide veterinarie sconsigliano di dare latticini ai gatti."
   },
   "why": {
     "en": "Adult cats have little lactase, the enzyme that breaks down lactose, so milk and other dairy-based products can cause diarrhoea or other digestive upset. Many cats are lactose intolerant. Dairy products are also high in fat and can add to weight gain. Plant-based alternatives are not automatically safe, as some contain ingredients that could be toxic to cats.",
     "sl": "Odrasle mačke imajo malo laktaze, encima, ki razgradi laktozo, zato lahko mleko in drugi mlečni izdelki povzročijo drisko ali druge prebavne težave. Mnoge mačke ne prenašajo laktoze. Mlečni izdelki imajo tudi veliko maščob in lahko prispevajo k debelosti. Rastlinski nadomestki niso samodejno varni, saj nekateri vsebujejo sestavine, ki so lahko za mačke strupene.",
     "de": "Erwachsene Katzen haben wenig Laktase, das Enzym, das Laktose abbaut. Daher können Milch und andere Milchprodukte Durchfall oder andere Verdauungsbeschwerden verursachen. Viele Katzen sind laktoseintolerant. Milchprodukte sind außerdem fettreich und können zu Gewichtszunahme beitragen. Pflanzliche Alternativen sind nicht automatisch sicher, denn manche enthalten Zutaten, die für Katzen giftig sein könnten.",
     "fr": "Les chats adultes ont peu de lactase, l’enzyme qui dégrade le lactose ; le lait et les autres produits laitiers peuvent donc provoquer de la diarrhée ou d’autres troubles digestifs. Beaucoup de chats sont intolérants au lactose. Les produits laitiers sont aussi riches en graisses et peuvent contribuer à la prise de poids. Les alternatives végétales ne sont pas forcément sans danger, car certaines contiennent des ingrédients potentiellement toxiques pour les chats.",
-    "es": "Los gatos adultos tienen poca lactasa, la enzima que descompone la lactosa, así que la leche y otros productos lácteos pueden causar diarrea u otras molestias digestivas. Muchos gatos son intolerantes a la lactosa. Los lácteos también tienen mucha grasa y pueden contribuir a que el gato engorde. Las alternativas vegetales no son seguras por definición, ya que algunas contienen ingredientes que podrían ser tóxicos para los gatos."
+    "es": "Los gatos adultos tienen poca lactasa, la enzima que descompone la lactosa, así que la leche y otros productos lácteos pueden causar diarrea u otras molestias digestivas. Muchos gatos son intolerantes a la lactosa. Los lácteos también tienen mucha grasa y pueden contribuir a que el gato engorde. Las alternativas vegetales no son seguras por definición, ya que algunas contienen ingredientes que podrían ser tóxicos para los gatos.",
+    "it": "I gatti adulti hanno poca lattasi, l’enzima che scompone il lattosio, quindi il latte e gli altri prodotti a base di latte possono causare diarrea o altri disturbi digestivi. Molti gatti sono intolleranti al lattosio. I latticini sono anche ricchi di grassi e possono contribuire all’aumento di peso. Le alternative vegetali non sono automaticamente sicure, perché alcune contengono ingredienti che potrebbero essere tossici per i gatti."
   },
   "signs": {
     "en": [
@@ -67,6 +72,12 @@
       "Vómitos",
       "Malestar de estómago",
       "Gases o hinchazón"
+    ],
+    "it": [
+      "Diarrea",
+      "Vomito",
+      "Mal di stomaco",
+      "Gas o gonfiore addominale"
     ]
   },
   "what_to_do": {
@@ -74,7 +85,8 @@
     "sl": "Če je muca pojedla jogurt, bodite pozorni na drisko, bruhanje ali spremembo vedenja in se za nasvet obrnite na veterinarja, če se ne počuti dobro.",
     "de": "Wenn Ihre Katze Joghurt gefressen hat, achten Sie auf Durchfall, Erbrechen oder eine Verhaltensänderung und fragen Sie Ihren Tierarzt um Rat, wenn sie unwohl wirkt.",
     "fr": "Si votre chat a mangé du yaourt, surveillez l’apparition de diarrhée, de vomissements ou d’un changement de comportement, et demandez conseil à votre vétérinaire s’il semble malade.",
-    "es": "Si tu gato ha comido yogur, vigila si tiene diarrea, vómitos o un cambio de comportamiento, y pide consejo a tu veterinario si parece encontrarse mal."
+    "es": "Si tu gato ha comido yogur, vigila si tiene diarrea, vómitos o un cambio de comportamiento, y pide consejo a tu veterinario si parece encontrarse mal.",
+    "it": "Se il tuo gatto ha mangiato dello yogurt, controlla se compaiono diarrea, vomito o cambiamenti nel comportamento, e chiedi consiglio al veterinario se sembra stare male."
   },
   "serving": null,
   "child": {
@@ -82,7 +94,8 @@
     "sl": "Jogurt je hrana za ljudi. Mucki lahko razdraži trebušček, zato naj ostane v tvoji skodelici, ne v njeni.",
     "de": "Joghurt ist Essen für Menschen. Er kann einer Katze Bauchweh machen, also bleibt er in deiner Schüssel und nicht im Napf deiner Katze.",
     "fr": "Le yaourt, c’est pour les humains. Il peut donner mal au ventre à un chat, alors garde-le dans ton bol, pas dans sa gamelle.",
-    "es": "El yogur es comida para personas. Le puede sentar mal a la barriga de un gato, así que déjalo en tu bol, no en el de tu gato."
+    "es": "El yogur es comida para personas. Le puede sentar mal a la barriga de un gato, así que déjalo en tu bol, no en el de tu gato.",
+    "it": "Lo yogurt è un cibo per le persone. Può far venire il mal di pancia a un gatto, quindi tienilo nella tua ciotola, non nella sua."
   },
   "faq": [
     {
@@ -91,14 +104,16 @@
         "sl": "Je jogurt brez mleka boljši za mačke?",
         "de": "Ist milchfreier Joghurt besser für Katzen?",
         "fr": "Le yaourt végétal est-il meilleur pour les chats ?",
-        "es": "¿Es mejor para los gatos un yogur vegetal (sin lácteos)?"
+        "es": "¿Es mejor para los gatos un yogur vegetal (sin lácteos)?",
+        "it": "Lo yogurt senza latte è meglio per i gatti?"
       },
       "a": {
         "en": "Not necessarily. Many dairy alternatives contain ingredients that could be toxic to cats, so they are best avoided too.",
         "sl": "Ne nujno. Veliko mlečnih nadomestkov vsebuje sestavine, ki so lahko za mačke strupene, zato se jim je bolje izogniti.",
         "de": "Nicht unbedingt. Viele Milchalternativen enthalten Zutaten, die für Katzen giftig sein könnten, deshalb meiden Sie diese besser ebenfalls.",
         "fr": "Pas forcément. Beaucoup de substituts de produits laitiers contiennent des ingrédients potentiellement toxiques pour les chats : mieux vaut les éviter aussi.",
-        "es": "No necesariamente. Muchas alternativas a los lácteos contienen ingredientes que podrían ser tóxicos para los gatos, así que también es mejor evitarlas."
+        "es": "No necesariamente. Muchas alternativas a los lácteos contienen ingredientes que podrían ser tóxicos para los gatos, así que también es mejor evitarlas.",
+        "it": "Non necessariamente. Molte alternative ai latticini contengono ingredienti che potrebbero essere tossici per i gatti, quindi è meglio evitare anche quelle."
       }
     }
   ],
@@ -176,6 +191,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "915b29e5442d447ac7e57254ce5e7b758b74380cecfe9f19ab28c368c5e83fbb"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cb9fa96fe792ce4be24f31b8013223b283060a91fc1a3b65eca34912258eab2e"
     }
   }
 }

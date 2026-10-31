@@ -6,21 +6,24 @@
     "sl": "Kuhana jajca",
     "de": "Gekochte Eier",
     "fr": "Œufs cuits",
-    "es": "Huevos cocinados"
+    "es": "Huevos cocinados",
+    "it": "Uova cotte"
   },
   "question": {
     "en": "Can dogs eat cooked eggs?",
     "sl": "Ali lahko psi jedo kuhana jajca?",
     "de": "Dürfen Hunde gekochte Eier fressen?",
     "fr": "Les chiens peuvent-ils manger des œufs cuits ?",
-    "es": "¿Pueden los perros comer huevos cocinados?"
+    "es": "¿Pueden los perros comer huevos cocinados?",
+    "it": "I cani possono mangiare le uova cotte?"
   },
   "url_slug": {
     "en": "cooked-eggs",
     "sl": "kuhana-jajca",
     "de": "gekochte-eier",
     "fr": "oeufs-cuits",
-    "es": "huevos-cocinados"
+    "es": "huevos-cocinados",
+    "it": "uova-cotte"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da. Popolnoma kuhana jajca so za pse v zmernih količinah varna in hranljiva, če so navadna: brez olja, masla, soli in začimb. Primerna so trdo kuhana ali umešana jajca. Preveč jih lahko vodi do debelosti.",
     "de": "Ja. Vollständig gegarte Eier sind für Hunde in Maßen unbedenklich und nahrhaft, solange sie ohne Zusätze zubereitet sind: kein Öl, keine Butter, kein Salz, keine Gewürze. Hart gekochte Eier oder Rührei eignen sich gut. Zu viele können zu Gewichtszunahme führen.",
     "fr": "Oui. Les œufs bien cuits sont sans danger et nourrissants pour les chiens avec modération, à condition d’être nature : sans huile, beurre, sel ni assaisonnement. Les œufs durs ou brouillés conviennent bien. En trop grande quantité, ils peuvent faire grossir.",
-    "es": "Sí. Los huevos bien cocinados son seguros y nutritivos para los perros con moderación, siempre que sean naturales: sin aceite, mantequilla, sal ni condimentos. Los huevos duros o revueltos van bien. Demasiados pueden hacer engordar."
+    "es": "Sí. Los huevos bien cocinados son seguros y nutritivos para los perros con moderación, siempre que sean naturales: sin aceite, mantequilla, sal ni condimentos. Los huevos duros o revueltos van bien. Demasiados pueden hacer engordar.",
+    "it": "Sì. Le uova ben cotte sono sicure e nutrienti per i cani, con moderazione, purché siano al naturale: niente olio, burro, sale o condimenti. Vanno bene sode o strapazzate. Troppe uova possono far aumentare di peso."
   },
   "why": {
     "en": "Cooked eggs provide protein, vitamins and healthy fats, but they are not essential to a balanced diet. Vets advise always cooking eggs before giving them to a dog. Egg shells have sharp edges that can hurt a dog's throat, and like any treat, eggs add calories.",
     "sl": "Kuhana jajca dajejo beljakovine, vitamine in zdrave maščobe, vendar za uravnoteženo prehrano niso nujna. Jajca je treba pred hranjenjem psa vedno skuhati. Lupine imajo ostre robove, ki lahko poškodujejo psu grlo, jajca pa kot vsak priboljšek dodajo kalorije.",
     "de": "Gekochte Eier liefern Eiweiß, Vitamine und gesunde Fette, sind für eine ausgewogene Ernährung aber nicht notwendig. Tierärzte raten, Eier immer zu garen, bevor man sie einem Hund gibt. Eierschalen haben scharfe Kanten, die den Hals eines Hundes verletzen können, und wie jedes Leckerli liefern Eier zusätzliche Kalorien.",
     "fr": "Les œufs cuits apportent des protéines, des vitamines et de bonnes graisses, mais ils ne sont pas indispensables à une alimentation équilibrée. Les vétérinaires conseillent de toujours cuire les œufs avant de les donner à un chien. Les coquilles ont des bords tranchants qui peuvent blesser la gorge d’un chien et, comme toute friandise, les œufs apportent des calories.",
-    "es": "Los huevos cocinados aportan proteínas, vitaminas y grasas saludables, pero no son imprescindibles en una dieta equilibrada. Los veterinarios aconsejan cocinar siempre los huevos antes de dárselos a un perro. Las cáscaras tienen bordes afilados que pueden hacer daño en la garganta del perro y, como cualquier premio, los huevos suman calorías."
+    "es": "Los huevos cocinados aportan proteínas, vitaminas y grasas saludables, pero no son imprescindibles en una dieta equilibrada. Los veterinarios aconsejan cocinar siempre los huevos antes de dárselos a un perro. Las cáscaras tienen bordes afilados que pueden hacer daño en la garganta del perro y, como cualquier premio, los huevos suman calorías.",
+    "it": "Le uova cotte forniscono proteine, vitamine e grassi sani, ma non sono indispensabili per una dieta equilibrata. I veterinari consigliano di cuocere sempre le uova prima di darle a un cane. Il guscio ha bordi taglienti che possono ferire la gola del cane e, come ogni premio, le uova aggiungono calorie."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Če je pes pojedel jajca, pripravljena z maslom, soljo ali začimbami, ali veliko jajc, opazujte prebavo in pokličite veterinarja, če sta bruhanje ali driska huda ali ne prenehata.",
     "de": "Hat Ihr Hund Eier gefressen, die mit Butter, Salz oder Gewürzen zubereitet waren, oder sehr viele Eier, achten Sie auf Magen-Darm-Beschwerden und rufen Sie Ihren Tierarzt an, wenn Erbrechen oder Durchfall stark sind oder nicht aufhören.",
     "fr": "Si votre chien a mangé des œufs cuisinés avec du beurre, du sel ou des assaisonnements, ou beaucoup d’œufs, surveillez les troubles digestifs et appelez votre vétérinaire si les vomissements ou la diarrhée sont importants ou ne s’arrêtent pas.",
-    "es": "Si tu perro ha comido huevos cocinados con mantequilla, sal o condimentos, o muchos huevos, vigila si tiene molestias de barriga y llama a tu veterinario si los vómitos o la diarrea son fuertes o no se pasan."
+    "es": "Si tu perro ha comido huevos cocinados con mantequilla, sal o condimentos, o muchos huevos, vigila si tiene molestias de barriga y llama a tu veterinario si los vómitos o la diarrea son fuertes o no se pasan.",
+    "it": "Se il tuo cane ha mangiato uova cotte con burro, sale o condimenti, o molte uova, controlla se ha disturbi di pancia e chiama il veterinario se vomito o diarrea sono forti o non passano."
   },
   "serving": {
     "en": "Fully cooked (hard-boiled or scrambled), plain, without oil, butter, salt, seasonings or other additives; as an occasional treat.",
     "sl": "Popolnoma kuhana (trdo kuhana ali umešana), navadna, brez olja, masla, soli, začimb in drugih dodatkov; kot občasen priboljšek.",
     "de": "Vollständig gegart (hart gekocht oder als Rührei), ohne Öl, Butter, Salz, Gewürze oder andere Zusätze; als gelegentliches Leckerli.",
     "fr": "Bien cuits (durs ou brouillés), nature, sans huile, beurre, sel, assaisonnement ni autre additif ; en friandise occasionnelle.",
-    "es": "Bien cocinados (duros o revueltos), naturales, sin aceite, mantequilla, sal, condimentos ni otros añadidos; como premio ocasional."
+    "es": "Bien cocinados (duros o revueltos), naturales, sin aceite, mantequilla, sal, condimentos ni otros añadidos; como premio ocasional.",
+    "it": "Ben cotte (sode o strapazzate), al naturale, senza olio, burro, sale, condimenti o altri additivi; come premio occasionale."
   },
   "child": {
     "en": "A plain cooked egg can be a yummy treat for a dog. No salt or butter, please!",
     "sl": "Navadno kuhano jajce je lahko za psa slasten priboljšek. Brez soli in masla, prosim!",
     "de": "Ein gekochtes Ei ohne alles kann ein leckerer Happen für deinen Hund sein. Aber bitte ohne Salz und Butter!",
     "fr": "Un œuf cuit nature peut être une friandise délicieuse pour un chien. Sans sel ni beurre, s’il te plaît !",
-    "es": "Un huevo cocinado natural puede ser un premio muy rico para un perro. ¡Sin sal ni mantequilla, por favor!"
+    "es": "Un huevo cocinado natural puede ser un premio muy rico para un perro. ¡Sin sal ni mantequilla, por favor!",
+    "it": "Un uovo cotto al naturale può essere un premio buonissimo per un cane. Niente sale né burro, per favore!"
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali lahko psi jedo jajčne lupine?",
         "de": "Dürfen Hunde Eierschalen fressen?",
         "fr": "Les chiens peuvent-ils manger les coquilles d’œuf ?",
-        "es": "¿Pueden los perros comer cáscaras de huevo?"
+        "es": "¿Pueden los perros comer cáscaras de huevo?",
+        "it": "I cani possono mangiare il guscio d’uovo?"
       },
       "a": {
         "en": "Sources differ: Dogs Trust lists cooked eggshells as usually fine, while the AKC warns that shells have sharp edges. Leaving them out is the safer choice.",
         "sl": "Viri se razlikujejo: Dogs Trust kuhane lupine navaja kot običajno primerne, AKC pa opozarja, da imajo lupine ostre robove. Varneje je, da jih ne dajete.",
         "de": "Die Quellen sind sich nicht einig: Dogs Trust führt gekochte Eierschalen als meist unproblematisch, der AKC warnt dagegen vor ihren scharfen Kanten. Sie wegzulassen ist die sicherere Wahl.",
         "fr": "Les sources divergent : Dogs Trust indique que les coquilles cuites ne posent généralement pas de problème, tandis que l’AKC prévient qu’elles ont des bords tranchants. Les retirer est le choix le plus sûr.",
-        "es": "Las fuentes no coinciden: Dogs Trust indica que las cáscaras cocinadas suelen estar bien, mientras que el AKC advierte de que tienen bordes afilados. Lo más seguro es no dárselas."
+        "es": "Las fuentes no coinciden: Dogs Trust indica que las cáscaras cocinadas suelen estar bien, mientras que el AKC advierte de que tienen bordes afilados. Lo más seguro es no dárselas.",
+        "it": "Le fonti non concordano: secondo Dogs Trust i gusci d’uovo cotti di solito vanno bene, mentre l’AKC avverte che hanno bordi taglienti. Toglierli è la scelta più sicura."
       }
     },
     {
@@ -82,14 +92,16 @@
         "sl": "Kako naj psu pripravim jajca?",
         "de": "Wie sollte ich Eier für meinen Hund zubereiten?",
         "fr": "Comment cuire les œufs pour mon chien ?",
-        "es": "¿Cómo debo cocinar los huevos para mi perro?"
+        "es": "¿Cómo debo cocinar los huevos para mi perro?",
+        "it": "Come devo cuocere le uova per il mio cane?"
       },
       "a": {
         "en": "Hard-boiled or scrambled, fully cooked and plain, with no salt, butter or seasonings.",
         "sl": "Trdo kuhana ali umešana, popolnoma kuhana in navadna, brez soli, masla in začimb.",
         "de": "Hart gekocht oder als Rührei, vollständig gegart und ohne Zusätze – ohne Salz, Butter oder Gewürze.",
         "fr": "Durs ou brouillés, bien cuits et nature, sans sel, beurre ni assaisonnement.",
-        "es": "Duros o revueltos, bien hechos y naturales, sin sal, mantequilla ni condimentos."
+        "es": "Duros o revueltos, bien hechos y naturales, sin sal, mantequilla ni condimentos.",
+        "it": "Sode o strapazzate, ben cotte e al naturale, senza sale, burro né condimenti."
       }
     }
   ],
@@ -170,6 +182,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "261ea0143fdeef733149c890b4789c3d16f88c3b5dbd80d2970f805677b50134"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f50e2e5fb7aa31906dd4aa121c8f7166fe99ed8b3d6bc4cd0fa03b9fa979640a"
     }
   }
 }

@@ -6,21 +6,24 @@
     "sl": "Jogurt",
     "de": "Joghurt",
     "fr": "Yaourt",
-    "es": "Yogur"
+    "es": "Yogur",
+    "it": "Yogurt"
   },
   "question": {
     "en": "Can dogs eat yogurt?",
     "sl": "Ali lahko psi jedo jogurt?",
     "de": "Dürfen Hunde Joghurt fressen?",
     "fr": "Les chiens peuvent-ils manger du yaourt ?",
-    "es": "¿Pueden los perros comer yogur?"
+    "es": "¿Pueden los perros comer yogur?",
+    "it": "I cani possono mangiare lo yogurt?"
   },
   "url_slug": {
     "en": "yogurt",
     "sl": "jogurt",
     "de": "joghurt",
     "fr": "yaourt",
-    "es": "yogur"
+    "es": "yogur",
+    "it": "yogurt"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, v majhnih količinah, če je navaden, nesladkan in ga pes prenaša. Nekaterim psom laktoza razdraži prebavo. Nikoli ne dajte jogurta s ksilitolom ali drugimi sladili ali z dodanim sladkorjem.",
     "de": "Ja, in kleinen Mengen, wenn es ungesüßter Naturjoghurt ist und Ihr Hund Milchprodukte verträgt. Manche Hunde bekommen von Laktose Bauchbeschwerden. Geben Sie niemals Joghurt mit Xylit (Birkenzucker) oder anderen Süßungsmitteln oder mit zugesetztem Zucker.",
     "fr": "Oui, en petite quantité, s’il est nature et non sucré et si votre chien tolère les produits laitiers. Certains chiens ont des troubles digestifs à cause du lactose. Ne donnez jamais de yaourt contenant du xylitol ou d’autres édulcorants, ni de yaourt sucré.",
-    "es": "Sí, en pequeñas cantidades, si es natural y sin azúcar, y si tu perro tolera los lácteos. A algunos perros la lactosa les sienta mal a la barriga. Nunca le des yogur con xilitol u otros edulcorantes, ni con azúcar añadido."
+    "es": "Sí, en pequeñas cantidades, si es natural y sin azúcar, y si tu perro tolera los lácteos. A algunos perros la lactosa les sienta mal a la barriga. Nunca le des yogur con xilitol u otros edulcorantes, ni con azúcar añadido.",
+    "it": "Sì, in piccole quantità, se è bianco, non zuccherato e il tuo cane tollera i latticini. Ad alcuni cani il lattosio dà disturbi di pancia. Non dargli mai yogurt con xilitolo o altri dolcificanti, o con zucchero aggiunto."
   },
   "why": {
     "en": "Many dogs have trouble digesting lactose, which can cause gas, diarrhoea or vomiting. Greek-style yogurt has less lactose, so it is usually the better choice. Some sweeteners, especially xylitol, are toxic to dogs, and too much dairy fat can upset the stomach or cause pancreatitis.",
     "sl": "Mnogi psi težko prebavljajo laktozo, kar lahko povzroči vetrove, drisko ali bruhanje. Grški jogurt ima manj laktoze, zato je običajno boljša izbira. Nekatera sladila, predvsem ksilitol, so za pse strupena, preveč mlečne maščobe pa lahko razdraži želodec ali povzroči vnetje trebušne slinavke.",
     "de": "Viele Hunde können Laktose schlecht verdauen, was Blähungen, Durchfall oder Erbrechen verursachen kann. Joghurt nach griechischer Art enthält weniger Laktose und ist daher meist die bessere Wahl. Manche Süßungsmittel, vor allem Xylit, sind für Hunde giftig, und zu viel Milchfett kann auf den Magen schlagen oder eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen.",
     "fr": "Beaucoup de chiens digèrent mal le lactose, ce qui peut provoquer gaz, diarrhée ou vomissements. Le yaourt à la grecque contient moins de lactose : c’est donc généralement le meilleur choix. Certains édulcorants, en particulier le xylitol, sont toxiques pour les chiens, et trop de matières grasses laitières peuvent dérégler l’estomac ou provoquer une pancréatite.",
-    "es": "A muchos perros les cuesta digerir la lactosa, lo que puede causar gases, diarrea o vómitos. El yogur de tipo griego tiene menos lactosa, así que suele ser la mejor opción. Algunos edulcorantes, sobre todo el xilitol, son tóxicos para los perros, y demasiada grasa láctea puede sentar mal al estómago o provocar pancreatitis."
+    "es": "A muchos perros les cuesta digerir la lactosa, lo que puede causar gases, diarrea o vómitos. El yogur de tipo griego tiene menos lactosa, así que suele ser la mejor opción. Algunos edulcorantes, sobre todo el xilitol, son tóxicos para los perros, y demasiada grasa láctea puede sentar mal al estómago o provocar pancreatitis.",
+    "it": "Molti cani digeriscono con difficoltà il lattosio, che può causare gas intestinali, diarrea o vomito. Lo yogurt greco contiene meno lattosio, quindi di solito è la scelta migliore. Alcuni dolcificanti, soprattutto lo xilitolo, sono tossici per i cani, e troppi grassi del latte possono disturbare lo stomaco o causare una pancreatite."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Začnite z majhno količino in opazujte, ali se pojavijo vetrovi, driska ali bruhanje; če se, prenehajte. Če je jogurt vseboval ksilitol, takoj pokličite veterinarja ali center za zastrupitve živali.",
     "de": "Beginnen Sie mit einer kleinen Menge und achten Sie auf Blähungen, Durchfall oder Erbrechen; hören Sie auf, wenn diese auftreten. Enthielt der Joghurt Xylit, wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere.",
     "fr": "Commencez par une petite quantité et surveillez les gaz, la diarrhée ou les vomissements ; arrêtez s’ils apparaissent. Si le yaourt contenait du xylitol, contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire.",
-    "es": "Empieza con una cantidad pequeña y vigila si tiene gases, diarrea o vómitos; si aparecen, deja de dárselo. Si el yogur contenía xilitol, contacta enseguida con tu veterinario o con una línea de información toxicológica para animales."
+    "es": "Empieza con una cantidad pequeña y vigila si tiene gases, diarrea o vómitos; si aparecen, deja de dárselo. Si el yogur contenía xilitol, contacta enseguida con tu veterinario o con una línea de información toxicológica para animales.",
+    "it": "Inizia con una piccola quantità e controlla se compaiono gas intestinali, diarrea o vomito; se compaiono, smetti. Se lo yogurt conteneva xilitolo, contatta subito il veterinario o un centro antiveleni veterinario."
   },
   "serving": {
     "en": "Plain yogurt with no added sweeteners, ideally Greek-style; check the label for sugar and xylitol.",
     "sl": "Navaden jogurt brez dodanih sladil, najbolje grški; na etiketi preverite sladkor in ksilitol.",
     "de": "Naturjoghurt ohne zugesetzte Süßungsmittel, am besten nach griechischer Art; prüfen Sie das Etikett auf Zucker und Xylit.",
     "fr": "Yaourt nature sans édulcorant ajouté, de préférence à la grecque ; vérifiez sur l’étiquette l’absence de sucre et de xylitol.",
-    "es": "Yogur natural sin edulcorantes añadidos, mejor de tipo griego; revisa en la etiqueta el azúcar y el xilitol."
+    "es": "Yogur natural sin edulcorantes añadidos, mejor de tipo griego; revisa en la etiqueta el azúcar y el xilitol.",
+    "it": "Yogurt bianco senza dolcificanti aggiunti, meglio se greco; controlla in etichetta zucchero e xilitolo."
   },
   "child": {
     "en": "A little plain yogurt can be a treat for some dogs. Sweet or flavoured yogurt is not for dogs.",
     "sl": "Malo navadnega jogurta je za nekatere pse lahko priboljšek. Sladek ali aromatiziran jogurt ni za pse.",
     "de": "Ein bisschen Naturjoghurt kann für manche Hunde ein Leckerli sein. Süßer Joghurt oder Joghurt mit Geschmack ist nichts für Hunde.",
     "fr": "Un peu de yaourt nature peut être une friandise pour certains chiens. Le yaourt sucré ou aromatisé n’est pas pour les chiens.",
-    "es": "Un poco de yogur natural puede ser un premio para algunos perros. El yogur dulce o de sabores no es para perros."
+    "es": "Un poco de yogur natural puede ser un premio para algunos perros. El yogur dulce o de sabores no es para perros.",
+    "it": "Un po’ di yogurt bianco può essere un premio per alcuni cani. Lo yogurt dolce o aromatizzato non è per i cani."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Je grški jogurt boljši za pse?",
         "de": "Ist griechischer Joghurt besser für Hunde?",
         "fr": "Le yaourt à la grecque est-il meilleur pour les chiens ?",
-        "es": "¿Es mejor el yogur griego para los perros?"
+        "es": "¿Es mejor el yogur griego para los perros?",
+        "it": "Lo yogurt greco è migliore per i cani?"
       },
       "a": {
         "en": "Usually yes: plain Greek-style yogurt has lower levels of lactose than regular yogurt.",
         "sl": "Običajno da: navaden grški jogurt ima manj laktoze kot običajni jogurt.",
         "de": "Meist ja: Naturjoghurt nach griechischer Art enthält weniger Laktose als normaler Joghurt.",
         "fr": "Généralement oui : le yaourt nature à la grecque contient moins de lactose qu’un yaourt classique.",
-        "es": "Normalmente sí: el yogur natural de tipo griego tiene menos lactosa que el yogur normal."
+        "es": "Normalmente sí: el yogur natural de tipo griego tiene menos lactosa que el yogur normal.",
+        "it": "Di solito sì: lo yogurt greco bianco contiene meno lattosio dello yogurt normale."
       }
     },
     {
@@ -82,14 +92,16 @@
         "sl": "Zakaj preveriti etiketo?",
         "de": "Warum sollte ich das Etikett prüfen?",
         "fr": "Pourquoi vérifier l’étiquette ?",
-        "es": "¿Por qué hay que revisar la etiqueta?"
+        "es": "¿Por qué hay que revisar la etiqueta?",
+        "it": "Perché controllare l’etichetta?"
       },
       "a": {
         "en": "Some yogurts contain sweeteners such as xylitol, which is toxic to dogs, or added sugar.",
         "sl": "Nekateri jogurti vsebujejo sladila, kot je ksilitol, ki je za pse strupen, ali dodan sladkor.",
         "de": "Manche Joghurts enthalten Süßungsmittel wie Xylit, das für Hunde giftig ist, oder zugesetzten Zucker.",
         "fr": "Certains yaourts contiennent des édulcorants comme le xylitol, toxique pour les chiens, ou du sucre ajouté.",
-        "es": "Algunos yogures contienen edulcorantes como el xilitol, que es tóxico para los perros, o azúcar añadido."
+        "es": "Algunos yogures contienen edulcorantes como el xilitol, que es tóxico para los perros, o azúcar añadido.",
+        "it": "Alcuni yogurt contengono dolcificanti come lo xilitolo, tossico per i cani, o zucchero aggiunto."
       }
     }
   ],
@@ -179,6 +191,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "18e8bde85f8fe6ca6d66d6f1feaa577f2ae613192fc37159fe35f6d445981aa4"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2a71b261528a09230cc9931f87c105517d1e04b6d5014fd3c347ec21a7cefdbf"
     }
   }
 }

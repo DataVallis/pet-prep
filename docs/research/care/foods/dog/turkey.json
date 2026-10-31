@@ -6,21 +6,24 @@
     "sl": "Puran",
     "de": "Putenfleisch",
     "fr": "Dinde",
-    "es": "Pavo"
+    "es": "Pavo",
+    "it": "Tacchino"
   },
   "question": {
     "en": "Can dogs eat turkey?",
     "sl": "Ali lahko psi jedo puranovo meso?",
     "de": "Dürfen Hunde Putenfleisch fressen?",
     "fr": "Les chiens peuvent-ils manger de la dinde ?",
-    "es": "¿Pueden los perros comer pavo?"
+    "es": "¿Pueden los perros comer pavo?",
+    "it": "I cani possono mangiare il tacchino?"
   },
   "url_slug": {
     "en": "turkey",
     "sl": "puran",
     "de": "putenfleisch",
     "fr": "dinde",
-    "es": "pavo"
+    "es": "pavo",
+    "it": "tacchino"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, malo navadnega kuhanega puranovega mesa je za večino psov varno. Najprej odstranite kožo, odvečno maščobo in vse kosti. Puran, pripravljen z začimbami, čebulo ali česnom, ter omaka s čebulo ali nadev niso za pse.",
     "de": "Ja, ein wenig pures, gegartes Putenfleisch ist für die meisten Hunde unbedenklich. Entfernen Sie vorher Haut, überschüssiges Fett und alle Knochen. Mit Gewürzen, Zwiebeln oder Knoblauch zubereitetes Putenfleisch sowie Zwiebelsoße oder Füllung sind nichts für Hunde.",
     "fr": "Oui, un peu de viande de dinde cuite nature est sans danger pour la plupart des chiens. Retirez d’abord la peau, l’excès de gras et tous les os. La dinde cuisinée avec des assaisonnements, de l’oignon ou de l’ail, ainsi que la sauce à l’oignon ou la farce, ne sont pas pour les chiens.",
-    "es": "Sí, un poco de carne de pavo cocinada y sin nada es segura para la mayoría de los perros. Quítale antes la piel, el exceso de grasa y todos los huesos. El pavo cocinado con condimentos, cebolla o ajo, la salsa con cebolla y el relleno no son para perros."
+    "es": "Sí, un poco de carne de pavo cocinada y sin nada es segura para la mayoría de los perros. Quítale antes la piel, el exceso de grasa y todos los huesos. El pavo cocinado con condimentos, cebolla o ajo, la salsa con cebolla y el relleno no son para perros.",
+    "it": "Sì, un po’ di carne di tacchino cotta e semplice è sicura per la maggior parte dei cani. Prima togli la pelle, il grasso in eccesso e tutte le ossa. Il tacchino cucinato con condimenti, cipolla o aglio, il sugo a base di cipolla e il ripieno non sono per i cani."
   },
   "why": {
     "en": "Turkey isn't toxic, but how it is cooked matters. Skin and fat are rich and can cause pancreatitis, while extra seasonings can irritate a dog's stomach. Onions and garlic can be toxic to dogs. Cooked poultry bones are brittle and can splinter. White meat is leaner than dark meat.",
     "sl": "Puran ni strupen, pomembno pa je, kako je pripravljen. Koža in maščoba sta težki in lahko povzročita vnetje trebušne slinavke, začimbe pa lahko psu razdražijo želodec. Čebula in česen sta lahko za pse strupena. Kuhane perutninske kosti so krhke in se lahko razcepijo. Belo meso je bolj pusto od temnega.",
     "de": "Putenfleisch ist nicht giftig, aber es kommt darauf an, wie es zubereitet wird. Haut und Fett sind gehaltvoll und können eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen, während zusätzliche Gewürze den Magen eines Hundes reizen können. Zwiebeln und Knoblauch können für Hunde giftig sein. Gekochte Geflügelknochen sind spröde und können splittern. Helles Fleisch ist magerer als dunkles.",
     "fr": "La dinde n’est pas toxique, mais sa préparation compte. La peau et le gras sont riches et peuvent provoquer une pancréatite, tandis que les assaisonnements peuvent irriter l’estomac d’un chien. L’oignon et l’ail peuvent être toxiques pour les chiens. Les os de volaille cuits sont cassants et peuvent éclater. Le blanc est plus maigre que la viande brune de la cuisse.",
-    "es": "El pavo no es tóxico, pero importa cómo se cocina. La piel y la grasa son muy pesadas y pueden provocar pancreatitis, y los condimentos de más pueden irritar el estómago del perro. La cebolla y el ajo pueden ser tóxicos para los perros. Los huesos de ave cocinados son quebradizos y pueden astillarse. La carne blanca es más magra que la oscura."
+    "es": "El pavo no es tóxico, pero importa cómo se cocina. La piel y la grasa son muy pesadas y pueden provocar pancreatitis, y los condimentos de más pueden irritar el estómago del perro. La cebolla y el ajo pueden ser tóxicos para los perros. Los huesos de ave cocinados son quebradizos y pueden astillarse. La carne blanca es más magra que la oscura.",
+    "it": "Il tacchino non è tossico, ma conta come viene cucinato. Pelle e grasso sono pesanti e possono causare una pancreatite, mentre i condimenti in più possono irritare lo stomaco del cane. Cipolla e aglio possono essere tossici per i cani. Le ossa cotte del pollame sono fragili e possono scheggiarsi. La carne bianca è più magra di quella scura."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Če je pes pojedel puranovo kožo, mastne ostanke ali začinjeno meso, v naslednjih dneh opazujte, ali bruha, ima drisko ali ga boli trebuh, in pokličite veterinarja, če se to pojavi. Če je pojedel kosti ali hrano s čebulo ali česnom, takoj pokličite veterinarja.",
     "de": "Wenn Ihr Hund Putenhaut, fettige Reste oder gewürztes Fleisch gefressen hat, achten Sie in den nächsten Tagen auf Erbrechen, Durchfall oder Bauchschmerzen und rufen Sie Ihren Tierarzt an, wenn diese auftreten. Hat er Knochen oder Essen mit Zwiebeln oder Knoblauch gefressen, rufen Sie sofort Ihren Tierarzt an.",
     "fr": "Si votre chien a mangé de la peau de dinde, des restes gras ou de la viande assaisonnée, surveillez les vomissements, la diarrhée ou les douleurs au ventre dans les jours qui suivent, et appelez votre vétérinaire s’ils apparaissent. S’il a mangé des os ou un plat contenant de l’oignon ou de l’ail, appelez immédiatement votre vétérinaire.",
-    "es": "Si tu perro se ha comido piel de pavo, restos grasos o carne condimentada, vigila si tiene vómitos, diarrea o dolor de barriga durante los días siguientes y llama a tu veterinario si aparecen. Si ha comido huesos o comida con cebolla o ajo, llama a tu veterinario de inmediato."
+    "es": "Si tu perro se ha comido piel de pavo, restos grasos o carne condimentada, vigila si tiene vómitos, diarrea o dolor de barriga durante los días siguientes y llama a tu veterinario si aparecen. Si ha comido huesos o comida con cebolla o ajo, llama a tu veterinario de inmediato.",
+    "it": "Se il tuo cane ha mangiato pelle di tacchino, avanzi grassi o carne condita, nei giorni successivi controlla se compaiono vomito, diarrea o mal di pancia e chiama il veterinario se compaiono. Se ha mangiato ossa o cibo con cipolla o aglio, chiama subito il veterinario."
   },
   "serving": {
     "en": "Plain cooked turkey meat, ideally white meat, with no skin, excess fat or bones, no seasoning; a small amount.",
     "sl": "Navadno kuhano puranovo meso, najbolje belo, brez kože, odvečne maščobe in kosti, brez začimb; v majhni količini.",
     "de": "Pures gegartes Putenfleisch, am besten helles Fleisch, ohne Haut, überschüssiges Fett oder Knochen, ungewürzt; eine kleine Menge.",
     "fr": "Viande de dinde cuite nature, de préférence du blanc, sans peau, excès de gras ni os, sans assaisonnement ; en petite quantité.",
-    "es": "Carne de pavo cocinada y sin nada, mejor la blanca, sin piel, sin exceso de grasa, sin huesos y sin condimentos; en pequeña cantidad."
+    "es": "Carne de pavo cocinada y sin nada, mejor la blanca, sin piel, sin exceso de grasa, sin huesos y sin condimentos; en pequeña cantidad.",
+    "it": "Carne di tacchino cotta e semplice, meglio se bianca, senza pelle, grasso in eccesso né ossa, senza condimenti; in piccola quantità."
   },
   "child": {
     "en": "A little plain turkey with no skin or bones is a nice dog treat. Turkey bones are never for dogs.",
     "sl": "Malo navadnega purana brez kože in kosti je lep pasji priboljšek. Puranove kosti nikoli niso za pse.",
     "de": "Ein bisschen pures Putenfleisch ohne Haut und Knochen ist ein schönes Hundeleckerli. Putenknochen sind nie etwas für Hunde.",
     "fr": "Un peu de dinde nature, sans peau ni os, est une bonne friandise pour un chien. Les os de dinde ne sont jamais pour les chiens.",
-    "es": "Un poco de pavo sin nada, sin piel y sin huesos es un buen premio para un perro. Los huesos de pavo nunca son para perros."
+    "es": "Un poco de pavo sin nada, sin piel y sin huesos es un buen premio para un perro. Los huesos de pavo nunca son para perros.",
+    "it": "Un po’ di tacchino semplice, senza pelle né ossa, è un bel premio per un cane. Le ossa di tacchino non sono mai per i cani."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali lahko psu dam ostanke prazničnega purana?",
         "de": "Darf ich meinem Hund Reste der Festtagspute geben?",
         "fr": "Puis-je donner à mon chien les restes de la dinde des fêtes ?",
-        "es": "¿Puedo darle a mi perro las sobras del pavo de una fiesta?"
+        "es": "¿Puedo darle a mi perro las sobras del pavo de una fiesta?",
+        "it": "Posso dare al mio cane gli avanzi del tacchino delle feste?"
       },
       "a": {
         "en": "Only plain meat without skin or bones. Keep stuffing and onion-based gravy away from your dog.",
         "sl": "Le navadno meso brez kože in kosti. Nadev in omako s čebulo držite stran od psa.",
         "de": "Nur pures Fleisch ohne Haut und Knochen. Halten Sie Füllung und Soße auf Zwiebelbasis von Ihrem Hund fern.",
         "fr": "Seulement de la viande nature, sans peau ni os. Tenez la farce et la sauce à l’oignon hors de portée de votre chien.",
-        "es": "Solo carne sin nada, sin piel y sin huesos. Mantén el relleno y la salsa con cebolla lejos de tu perro."
+        "es": "Solo carne sin nada, sin piel y sin huesos. Mantén el relleno y la salsa con cebolla lejos de tu perro.",
+        "it": "Solo carne semplice, senza pelle né ossa. Tieni il ripieno e il sugo a base di cipolla lontani dal tuo cane."
       }
     }
   ],
@@ -169,6 +179,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "beaf95f17ab3781006d3d4ec24b9304df8479681466071834a03c8cad5b0277b"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "25e3c89859f6acebf69cc41169da8bf2f57d3f479044ecb9b5c881701a7722f6"
     }
   }
 }

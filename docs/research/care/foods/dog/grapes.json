@@ -6,21 +6,24 @@
     "sl": "Grozdje",
     "de": "Weintrauben",
     "fr": "Raisins",
-    "es": "Uvas"
+    "es": "Uvas",
+    "it": "Uva"
   },
   "question": {
     "en": "Can dogs eat grapes?",
     "sl": "Ali lahko psi jedo grozdje?",
     "de": "Dürfen Hunde Weintrauben fressen?",
     "fr": "Les chiens peuvent-ils manger du raisin ?",
-    "es": "¿Pueden los perros comer uvas?"
+    "es": "¿Pueden los perros comer uvas?",
+    "it": "I cani possono mangiare l’uva?"
   },
   "url_slug": {
     "en": "grapes",
     "sl": "grozdje",
     "de": "weintrauben",
     "fr": "raisins",
-    "es": "uvas"
+    "es": "uvas",
+    "it": "uva"
   },
   "level": "toxic",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne. Psi ne smejo nikoli jesti grozdja. Grozdje lahko pri psih povzroči odpoved ledvic, že majhna količina pa lahko psu resno škodi. Ni mogoče napovedati, kateri psi bodo prizadeti, zato je vsaka pojedena jagoda razlog za klic veterinarju.",
     "de": "Nein. Hunde dürfen niemals Weintrauben fressen. Trauben können bei Hunden Nierenversagen verursachen, und schon eine kleine Menge kann einen Hund schwer krank machen. Es lässt sich nicht vorhersagen, welche Hunde betroffen sind – jede Traube ist daher ein Grund, den Tierarzt anzurufen.",
     "fr": "Non. Les chiens ne doivent jamais manger de raisin. Le raisin peut provoquer une insuffisance rénale chez le chien, et même une petite quantité peut le rendre gravement malade. Impossible de prévoir quels chiens seront touchés : tout grain de raisin avalé justifie d’appeler le vétérinaire.",
-    "es": "No. Los perros nunca deben comer uvas. Las uvas pueden causar insuficiencia renal en los perros, e incluso una pequeña cantidad puede hacer que un perro enferme gravemente. No hay forma de prever a qué perros les afectará, así que cualquier uva es motivo para llamar al veterinario."
+    "es": "No. Los perros nunca deben comer uvas. Las uvas pueden causar insuficiencia renal en los perros, e incluso una pequeña cantidad puede hacer que un perro enferme gravemente. No hay forma de prever a qué perros les afectará, así que cualquier uva es motivo para llamar al veterinario.",
+    "it": "No. I cani non devono mai mangiare uva. L’uva può causare insufficienza renale nei cani e anche una piccola quantità può farli stare molto male. Non c’è modo di prevedere quali cani ne saranno colpiti, quindi qualsiasi acino è un motivo per chiamare il veterinario."
   },
   "why": {
     "en": "Grapes, raisins and currants can damage a dog's kidneys. Tartaric acid is suspected to be the toxic part, and its amount varies between grapes, so the effect is unpredictable. Because the cause is still uncertain, vets treat any amount as a concern. Dogs that survive kidney injury may be left with long-term kidney disease.",
     "sl": "Grozdje, rozine in korinte lahko poškodujejo pasje ledvice. Za strupeno sestavino velja vinska kislina, katere količina se med grozdji razlikuje, zato je učinek nepredvidljiv. Ker vzrok še ni povsem pojasnjen, veterinarji vsako količino jemljejo resno. Psi, ki preživijo poškodbo ledvic, imajo lahko trajno bolezen ledvic.",
     "de": "Weintrauben, Rosinen und Korinthen können die Nieren eines Hundes schädigen. Als giftiger Bestandteil wird Weinsäure vermutet, deren Menge von Traube zu Traube schwankt – die Wirkung ist daher unberechenbar. Weil die Ursache noch nicht sicher geklärt ist, betrachten Tierärzte jede Menge als bedenklich. Hunde, die eine Nierenschädigung überleben, können eine dauerhafte Nierenerkrankung zurückbehalten.",
     "fr": "Le raisin, les raisins secs et les raisins de Corinthe peuvent endommager les reins d’un chien. L’acide tartrique est soupçonné d’être la substance toxique, et sa teneur varie d’un raisin à l’autre : l’effet est donc imprévisible. Comme la cause reste incertaine, les vétérinaires considèrent toute quantité comme préoccupante. Les chiens qui survivent à une atteinte rénale peuvent garder une maladie rénale chronique.",
-    "es": "Las uvas, las pasas y las pasas de Corinto pueden dañar los riñones de un perro. Se sospecha que la parte tóxica es el ácido tartárico, y su cantidad varía de una uva a otra, por lo que el efecto es imprevisible. Como la causa aún no está clara, los veterinarios consideran preocupante cualquier cantidad. Los perros que sobreviven a una lesión renal pueden quedarse con una enfermedad renal crónica."
+    "es": "Las uvas, las pasas y las pasas de Corinto pueden dañar los riñones de un perro. Se sospecha que la parte tóxica es el ácido tartárico, y su cantidad varía de una uva a otra, por lo que el efecto es imprevisible. Como la causa aún no está clara, los veterinarios consideran preocupante cualquier cantidad. Los perros que sobreviven a una lesión renal pueden quedarse con una enfermedad renal crónica.",
+    "it": "Uva, uvetta e uva passa di Corinto possono danneggiare i reni del cane. Si sospetta che la parte tossica sia l’acido tartarico, la cui quantità varia da un acino all’altro, quindi l’effetto è imprevedibile. Poiché la causa è ancora incerta, i veterinari considerano preoccupante qualsiasi quantità. I cani che sopravvivono a un danno renale possono restare con una malattia renale cronica."
   },
   "signs": {
     "en": [
@@ -77,6 +82,14 @@
       "Dolor de barriga",
       "Deshidratación y beber mucho",
       "Temblores"
+    ],
+    "it": [
+      "Vomito o diarrea, spesso entro 6–24 ore",
+      "Stanchezza e debolezza",
+      "Rifiuto del cibo",
+      "Mal di pancia",
+      "Disidratazione e sete eccessiva",
+      "Tremori"
     ]
   },
   "what_to_do": {
@@ -84,7 +97,8 @@
     "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če je pes pojedel le eno ali dve jagodi. Zapišite si, koliko jih je pojedel in kdaj. Ne čakajte na znake: prej ko je pes zdravljen, boljši so obeti.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, auch wenn Ihr Hund nur ein oder zwei Trauben gefressen hat. Notieren Sie, wie viele es waren und wann. Warten Sie nicht auf Anzeichen: Je früher ein Hund behandelt wird, desto besser sind die Aussichten.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, même si votre chien n’a mangé qu’un ou deux grains. Notez combien il en a mangé et à quelle heure. N’attendez pas l’apparition des signes : plus un chien est traité tôt, meilleur est le pronostic.",
-    "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales, aunque tu perro haya comido solo una o dos uvas. Apunta cuántas ha comido y cuándo. No esperes a que aparezcan síntomas: cuanto antes se trate al perro, mejor es el pronóstico."
+    "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales, aunque tu perro haya comido solo una o dos uvas. Apunta cuántas ha comido y cuándo. No esperes a que aparezcan síntomas: cuanto antes se trate al perro, mejor es el pronóstico.",
+    "it": "Contatta subito il veterinario o un centro antiveleni veterinario, anche se il tuo cane ha mangiato solo uno o due acini. Annota quanti ne ha mangiati e quando. Non aspettare che compaiano i sintomi: prima il cane viene curato, migliore è la prognosi."
   },
   "serving": null,
   "child": {
@@ -92,7 +106,8 @@
     "sl": "Grozdje ni za pse, niti ena jagoda. Psu lahko škodi ledvicam. Če ga pes poje, takoj povej odraslemu.",
     "de": "Weintrauben sind nichts für Hunde, nicht mal eine einzige. Sie können den Nieren schaden. Wenn dein Hund eine frisst, sag sofort einem Erwachsenen Bescheid.",
     "fr": "Le raisin n’est pas pour les chiens, pas même un seul grain. Il peut abîmer leurs reins. Si ton chien en mange un, préviens tout de suite un adulte.",
-    "es": "Las uvas no son para perros, ni siquiera una. Pueden hacer daño a los riñones del perro. Si tu perro se come una, avisa enseguida a un adulto."
+    "es": "Las uvas no son para perros, ni siquiera una. Pueden hacer daño a los riñones del perro. Si tu perro se come una, avisa enseguida a un adulto.",
+    "it": "L’uva non è per i cani, nemmeno un acino. Può fare male ai reni del cane. Se il tuo cane ne mangia un acino, dillo subito a un adulto."
   },
   "faq": [
     {
@@ -101,14 +116,16 @@
         "sl": "Je ena jagoda grozdja za psa nevarna?",
         "de": "Ist eine einzige Traube für einen Hund gefährlich?",
         "fr": "Un seul grain de raisin est-il dangereux pour un chien ?",
-        "es": "¿Una sola uva es peligrosa para un perro?"
+        "es": "¿Una sola uva es peligrosa para un perro?",
+        "it": "Un solo acino d’uva è pericoloso per un cane?"
       },
       "a": {
         "en": "It can be. Nobody can predict which dogs will react, so any grape eaten is a reason to contact your vet.",
         "sl": "Lahko je. Nihče ne more napovedati, kateri psi se bodo odzvali, zato je vsaka pojedena jagoda razlog za klic veterinarju.",
         "de": "Ja, das kann sie. Niemand kann vorhersagen, welche Hunde reagieren – jede gefressene Traube ist daher ein Grund, sich an Ihren Tierarzt zu wenden.",
         "fr": "Il peut l’être. Personne ne peut prévoir quels chiens réagiront : tout grain avalé justifie de contacter votre vétérinaire.",
-        "es": "Puede serlo. Nadie puede prever qué perros reaccionarán, así que cualquier uva que se coma es motivo para contactar con tu veterinario."
+        "es": "Puede serlo. Nadie puede prever qué perros reaccionarán, así que cualquier uva que se coma es motivo para contactar con tu veterinario.",
+        "it": "Può esserlo. Nessuno può prevedere quali cani reagiranno, quindi qualsiasi acino mangiato è un motivo per contattare il veterinario."
       }
     },
     {
@@ -117,14 +134,16 @@
         "sl": "Sta zeleno in rdeče grozdje enako tvegana?",
         "de": "Sind grüne und rote Trauben gleich riskant?",
         "fr": "Le raisin blanc et le raisin noir sont-ils aussi risqués ?",
-        "es": "¿Las uvas verdes y las rojas tienen el mismo riesgo?"
+        "es": "¿Las uvas verdes y las rojas tienen el mismo riesgo?",
+        "it": "L’uva bianca e quella nera sono rischiose allo stesso modo?"
       },
       "a": {
         "en": "Sources warn against all grapes, raisins and currants. The amount of the suspected toxin varies between grapes, so no kind is considered safe.",
         "sl": "Viri svarijo pred vsem grozdjem, rozinami in korintami. Količina domnevnega strupa se med grozdji razlikuje, zato nobena vrsta ne velja za varno.",
         "de": "Die Quellen warnen vor allen Weintrauben, Rosinen und Korinthen. Die Menge des vermuteten Giftstoffs schwankt von Traube zu Traube, deshalb gilt keine Sorte als sicher.",
         "fr": "Les sources mettent en garde contre tous les raisins, raisins secs et raisins de Corinthe. La teneur en substance suspectée varie d’un raisin à l’autre : aucune variété n’est considérée comme sûre.",
-        "es": "Las fuentes advierten contra todas las uvas, las pasas y las pasas de Corinto. La cantidad de la toxina sospechosa varía de una uva a otra, así que ningún tipo se considera seguro."
+        "es": "Las fuentes advierten contra todas las uvas, las pasas y las pasas de Corinto. La cantidad de la toxina sospechosa varía de una uva a otra, así que ningún tipo se considera seguro.",
+        "it": "Le fonti mettono in guardia contro ogni tipo di uva, uvetta e uva passa di Corinto. La quantità della sostanza tossica sospetta varia da un acino all’altro, quindi nessun tipo è considerato sicuro."
       }
     }
   ],
@@ -214,6 +233,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0fe575915586ed5f3c88bda80bb02fcc4594ad35e05c77508861f6b20a555070"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f764a31455c8323c4ec1d296df62a5363d670d9332298fe1675a8b2fe97589a2"
     }
   }
 }

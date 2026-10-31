@@ -6,21 +6,24 @@
     "sl": "Drobnjak",
     "de": "Schnittlauch",
     "fr": "Ciboulette",
-    "es": "Cebollino"
+    "es": "Cebollino",
+    "it": "Erba cipollina"
   },
   "question": {
     "en": "Can dogs eat chives?",
     "sl": "Ali lahko psi jedo drobnjak?",
     "de": "Dürfen Hunde Schnittlauch fressen?",
     "fr": "Les chiens peuvent-ils manger de la ciboulette ?",
-    "es": "¿Pueden los perros comer cebollino?"
+    "es": "¿Pueden los perros comer cebollino?",
+    "it": "I cani possono mangiare l’erba cipollina?"
   },
   "url_slug": {
     "en": "chives",
     "sl": "drobnjak",
     "de": "schnittlauch",
     "fr": "ciboulette",
-    "es": "cebollino"
+    "es": "cebollino",
+    "it": "erba-cipollina"
   },
   "level": "toxic",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne. Drobnjak spada v družino lukov, tako kot čebula in česen, in je za pse strupen. Surov, kuhan in posušen drobnjak lahko poškodujejo rdeče krvničke, znaki pa se pogosto pokažejo šele po nekaj dneh.",
     "de": "Nein. Schnittlauch gehört wie Zwiebeln und Knoblauch zur Familie der Lauchgewächse (Allium) und ist für Hunde giftig. Roher, gekochter und getrockneter Schnittlauch kann die roten Blutkörperchen schädigen, und Anzeichen zeigen sich oft erst nach einigen Tagen.",
     "fr": "Non. La ciboulette fait partie de la famille des alliums, comme l’oignon et l’ail, et elle est toxique pour les chiens. Crue, cuite ou séchée, elle peut endommager les globules rouges, et les signes mettent souvent quelques jours à apparaître.",
-    "es": "No. El cebollino pertenece a la familia de las aliáceas, como la cebolla y el ajo, y es tóxico para los perros. Crudo, cocinado o seco, puede dañar los glóbulos rojos, y los síntomas suelen tardar unos días en aparecer."
+    "es": "No. El cebollino pertenece a la familia de las aliáceas, como la cebolla y el ajo, y es tóxico para los perros. Crudo, cocinado o seco, puede dañar los glóbulos rojos, y los síntomas suelen tardar unos días en aparecer.",
+    "it": "No. L’erba cipollina appartiene alla famiglia degli allium, come cipolla e aglio, ed è tossica per i cani. Cruda, cotta o secca, può danneggiare i globuli rossi, e spesso i sintomi compaiono solo dopo qualche giorno."
   },
   "why": {
     "en": "It belongs to the allium family (onion, garlic, leek, chives), which is toxic to dogs. These plants contain compounds that damage red blood cells and can lead to anaemia. All parts and all forms are harmful: raw, cooked, dried and powdered. Stomach upset can happen with any amount; larger amounts damage the blood.",
     "sl": "Spada v družino lukov (čebula, česen, por, drobnjak), ki je za pse strupena. Te rastline vsebujejo snovi, ki poškodujejo rdeče krvničke in lahko povzročijo slabokrvnost. Škodljivi so vsi deli in vse oblike: surove, kuhane, posušene in v prahu. Prebavne težave se lahko pojavijo pri vsaki količini, večje količine pa poškodujejo kri.",
     "de": "Schnittlauch gehört zur Familie der Lauchgewächse (Zwiebeln, Knoblauch, Lauch, Schnittlauch), die für Hunde giftig sind. Diese Pflanzen enthalten Verbindungen, die rote Blutkörperchen schädigen und zu einer Blutarmut (Anämie) führen können. Alle Teile und alle Formen sind schädlich: roh, gekocht, getrocknet und als Pulver. Magen-Darm-Beschwerden können bei jeder Menge auftreten; größere Mengen schädigen das Blut.",
     "fr": "La ciboulette appartient à la famille des alliums (oignon, ail, poireau, ciboulette), toxique pour les chiens. Ces plantes contiennent des composés qui endommagent les globules rouges et peuvent provoquer une anémie. Toutes les parties et toutes les formes sont nocives : crue, cuite, séchée et en poudre. Des troubles digestifs peuvent survenir quelle que soit la quantité ; de plus grandes quantités endommagent le sang.",
-    "es": "Pertenece a la familia de las aliáceas (cebolla, ajo, puerro, cebollino), que es tóxica para los perros. Estas plantas contienen compuestos que dañan los glóbulos rojos y pueden provocar anemia. Todas las partes y todas las formas son perjudiciales: crudo, cocinado, seco y en polvo. Cualquier cantidad puede causar malestar de estómago; las cantidades mayores dañan la sangre."
+    "es": "Pertenece a la familia de las aliáceas (cebolla, ajo, puerro, cebollino), que es tóxica para los perros. Estas plantas contienen compuestos que dañan los glóbulos rojos y pueden provocar anemia. Todas las partes y todas las formas son perjudiciales: crudo, cocinado, seco y en polvo. Cualquier cantidad puede causar malestar de estómago; las cantidades mayores dañan la sangre.",
+    "it": "Appartiene alla famiglia degli allium (cipolla, aglio, porro, erba cipollina), tossica per i cani. Queste piante contengono sostanze che danneggiano i globuli rossi e possono portare all’anemia. Sono dannose tutte le parti, in qualsiasi forma: crude, cotte, secche o in polvere. Disturbi di stomaco possono comparire con qualsiasi quantità; quantità maggiori danneggiano il sangue."
   },
   "signs": {
     "en": [
@@ -67,6 +72,12 @@
       "Come menos de lo habitual",
       "Malestar de barriga, incluso con poca cantidad",
       "Signos de anemia (glóbulos rojos dañados), normalmente unos días después"
+    ],
+    "it": [
+      "Vomito e diarrea",
+      "Mangia meno del solito",
+      "Disturbi di pancia, anche dopo piccole quantità",
+      "Segni di anemia (globuli rossi danneggiati), di solito qualche giorno dopo"
     ]
   },
   "what_to_do": {
@@ -74,7 +85,8 @@
     "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj je pes pojedel (drobnjak) in približno koliko. Ne čakajte na znake: okvara krvi se običajno pokaže šele po nekaj dneh.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was gefressen wurde (Schnittlauch) und ungefähr wie viel. Warten Sie nicht auf Anzeichen: Schäden am Blut zeigen sich meist erst nach einigen Tagen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce qui a été mangé (ciboulette) et en quelle quantité approximative. N’attendez pas l’apparition des signes : les dommages au sang n’apparaissent généralement qu’après quelques jours.",
-    "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué ha comido (cebollino) y más o menos cuánto. No esperes a que aparezcan síntomas: el daño en la sangre suele notarse solo unos días después."
+    "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué ha comido (cebollino) y más o menos cuánto. No esperes a que aparezcan síntomas: el daño en la sangre suele notarse solo unos días después.",
+    "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha mangiato (erba cipollina) e più o meno quanto. Non aspettare che compaiano i sintomi: i danni al sangue di solito si vedono solo dopo qualche giorno."
   },
   "serving": null,
   "child": {
@@ -82,7 +94,8 @@
     "sl": "Drobnjak je videti kot zelena travica, a spada med čebule in ni za pse. Povej odraslemu, če ga pes poje.",
     "de": "Schnittlauch sieht aus wie kleines grünes Gras, gehört aber zur Zwiebelfamilie und ist nichts für Hunde. Sag einem Erwachsenen Bescheid, wenn dein Hund davon frisst.",
     "fr": "La ciboulette ressemble à de la petite herbe verte, mais c’est une cousine de l’oignon : pas pour les chiens ! Préviens un adulte si ton chien en mange.",
-    "es": "El cebollino parece hierbita verde, pero es de la familia de la cebolla y no es para perros. Avisa a un adulto si tu perro se come un poco."
+    "es": "El cebollino parece hierbita verde, pero es de la familia de la cebolla y no es para perros. Avisa a un adulto si tu perro se come un poco.",
+    "it": "L’erba cipollina sembra erbetta verde, ma fa parte della famiglia della cipolla e non è per i cani. Dillo a un adulto se il tuo cane ne mangia un po’."
   },
   "faq": [
     {
@@ -91,14 +104,16 @@
         "sl": "Je varno, če je kuhano ali v prahu?",
         "de": "Ist er gekocht oder als Pulver unbedenklich?",
         "fr": "La ciboulette cuite ou en poudre est-elle sans danger ?",
-        "es": "¿Es seguro cocinado o en polvo?"
+        "es": "¿Es seguro cocinado o en polvo?",
+        "it": "È sicura cotta o in polvere?"
       },
       "a": {
         "en": "No. Raw, cooked, dried, powdered and liquid forms are all poisonous to dogs.",
         "sl": "Ne. Za pse so strupene surove, kuhane, posušene, praškaste in tekoče oblike.",
         "de": "Nein. Roh, gekocht, getrocknet, als Pulver und in flüssiger Form ist er für Hunde giftig.",
         "fr": "Non. Crue, cuite, séchée, en poudre ou sous forme liquide, elle est toujours toxique pour les chiens.",
-        "es": "No. Crudo, cocinado, seco, en polvo o en forma líquida, siempre es tóxico para los perros."
+        "es": "No. Crudo, cocinado, seco, en polvo o en forma líquida, siempre es tóxico para los perros.",
+        "it": "No. Cruda, cotta, secca, in polvere o liquida: in tutte le forme è velenosa per i cani."
       }
     },
     {
@@ -107,14 +122,16 @@
         "sl": "Zakaj se znaki ne pokažejo takoj?",
         "de": "Warum zeigen sich die Anzeichen nicht sofort?",
         "fr": "Pourquoi les signes n’apparaissent-ils pas tout de suite ?",
-        "es": "¿Por qué los síntomas no aparecen enseguida?"
+        "es": "¿Por qué los síntomas no aparecen enseguida?",
+        "it": "Perché i sintomi non si vedono subito?"
       },
       "a": {
         "en": "Symptoms can start within 24 hours but more often take a few days to appear; signs of anaemia typically develop several days after eating.",
         "sl": "Znaki se lahko pojavijo v 24 urah, pogosteje pa šele po nekaj dneh; znaki slabokrvnosti se običajno razvijejo nekaj dni po zaužitju.",
         "de": "Beschwerden können innerhalb von 24 Stunden beginnen, zeigen sich aber häufiger erst nach einigen Tagen; Anzeichen einer Blutarmut entwickeln sich typischerweise mehrere Tage nach dem Fressen.",
         "fr": "Les symptômes peuvent commencer dans les 24 heures, mais mettent plus souvent quelques jours à apparaître ; les signes d’anémie se développent généralement plusieurs jours après l’ingestion.",
-        "es": "Los síntomas pueden empezar en las primeras 24 horas, pero lo más habitual es que tarden unos días; los signos de anemia suelen aparecer varios días después de comerlo."
+        "es": "Los síntomas pueden empezar en las primeras 24 horas, pero lo más habitual es que tarden unos días; los signos de anemia suelen aparecer varios días después de comerlo.",
+        "it": "I sintomi possono comparire entro 24 ore, ma più spesso servono alcuni giorni; i segni di anemia di solito si sviluppano diversi giorni dopo l’ingestione."
       }
     }
   ],
@@ -227,6 +244,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3aa1206dd30da7043fb1cee2bbf6cced705f9c46ed14025508caced2b449d25a"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "30d78ce69668dbc207dc87cf9fe18d40e17b0fb4460455c58167071732a07dc2"
     }
   }
 }

@@ -6,21 +6,24 @@
     "sl": "Surovo kvašeno testo",
     "de": "Roher Hefeteig",
     "fr": "Pâte levée crue",
-    "es": "Masa cruda con levadura"
+    "es": "Masa cruda con levadura",
+    "it": "Impasto lievitato crudo"
   },
   "question": {
     "en": "Can dogs eat raw yeast dough?",
     "sl": "Ali lahko psi jedo surovo kvašeno testo?",
     "de": "Dürfen Hunde rohen Hefeteig fressen?",
     "fr": "Les chiens peuvent-ils manger de la pâte levée crue ?",
-    "es": "¿Pueden los perros comer masa cruda con levadura?"
+    "es": "¿Pueden los perros comer masa cruda con levadura?",
+    "it": "I cani possono mangiare l’impasto lievitato crudo?"
   },
   "url_slug": {
     "en": "raw-yeast-dough",
     "sl": "surovo-kvaseno-testo",
     "de": "roher-hefeteig",
     "fr": "pate-levee-crue",
-    "es": "masa-cruda-con-levadura"
+    "es": "masa-cruda-con-levadura",
+    "it": "impasto-lievitato-crudo"
   },
   "level": "toxic",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne. Surovo, nepečeno kvašeno testo je za pse nevarno. V toplem želodcu še naprej vzhaja in povzroči napihnjenje, ki lahko vodi v zasuk želodca. Kvas tvori tudi alkohol, ki lahko povzroči zastrupitev z alkoholom. Nevarno je nepečeno testo.",
     "de": "Nein. Roher, ungebackener Hefeteig ist für Hunde gefährlich. Er geht im warmen Magen weiter auf und bläht ihn auf, was zu einer Magendrehung führen kann. Die Hefe bildet außerdem Alkohol, der eine Alkoholvergiftung verursachen kann. Gefährlich ist der ungebackene Teig.",
     "fr": "Non. La pâte crue à la levure, non cuite, est dangereuse pour les chiens. Elle continue de lever dans la chaleur de l’estomac et provoque un gonflement qui peut mener à une torsion de l’estomac. La levure produit aussi de l’alcool, qui peut causer une intoxication à l’alcool. Le danger, c’est la pâte non cuite.",
-    "es": "No. La masa cruda con levadura, sin hornear, es peligrosa para los perros. Sigue subiendo en el estómago caliente y provoca una hinchazón que puede acabar en una torsión de estómago (dilatación-torsión gástrica). Además, la levadura produce alcohol, que puede causar una intoxicación etílica. El peligro está en la masa sin hornear."
+    "es": "No. La masa cruda con levadura, sin hornear, es peligrosa para los perros. Sigue subiendo en el estómago caliente y provoca una hinchazón que puede acabar en una torsión de estómago (dilatación-torsión gástrica). Además, la levadura produce alcohol, que puede causar una intoxicación etílica. El peligro está en la masa sin hornear.",
+    "it": "No. L’impasto crudo con lievito, non ancora cotto, è pericoloso per i cani. Continua a lievitare nello stomaco caldo e lo gonfia, e questo può portare a una torsione dello stomaco. Il lievito produce anche alcol, che può causare un’intossicazione da alcol. Il pericolo è l’impasto non cotto."
   },
   "why": {
     "en": "Yeast keeps working in the warm, moist stomach: the dough expands and gas builds up, which can block the gut or, less often, twist the stomach (bloat). At the same time the yeast produces alcohol, which is quickly absorbed into the blood. Dogs are affected most often because they eat whatever they find.",
     "sl": "Kvas v toplem in vlažnem želodcu deluje naprej: testo se širi in nabirajo se plini, kar lahko zamaši prebavila ali, redkeje, zasuka želodec. Hkrati kvas tvori alkohol, ki se hitro vsrka v kri. Psi so najpogosteje prizadeti, ker pojedo, kar najdejo.",
     "de": "Die Hefe arbeitet im warmen, feuchten Magen weiter: Der Teig dehnt sich aus und Gas sammelt sich an, was den Magen-Darm-Trakt blockieren oder, seltener, zu einer Magendrehung führen kann. Gleichzeitig bildet die Hefe Alkohol, der rasch ins Blut aufgenommen wird. Hunde sind am häufigsten betroffen, weil sie fressen, was sie finden.",
     "fr": "La levure continue d’agir dans l’estomac chaud et humide : la pâte gonfle et des gaz s’accumulent, ce qui peut bloquer l’intestin ou, plus rarement, provoquer une torsion de l’estomac (dilatation-torsion). En même temps, la levure produit de l’alcool, qui passe rapidement dans le sang. Les chiens sont les plus souvent touchés parce qu’ils mangent tout ce qu’ils trouvent.",
-    "es": "La levadura sigue actuando en el estómago, que es cálido y húmedo: la masa se expande y se acumulan gases, lo que puede obstruir el intestino o, con menos frecuencia, provocar una torsión de estómago (dilatación-torsión gástrica). Al mismo tiempo, la levadura produce alcohol, que pasa rápidamente a la sangre. Los perros son los más afectados porque se comen lo que encuentran."
+    "es": "La levadura sigue actuando en el estómago, que es cálido y húmedo: la masa se expande y se acumulan gases, lo que puede obstruir el intestino o, con menos frecuencia, provocar una torsión de estómago (dilatación-torsión gástrica). Al mismo tiempo, la levadura produce alcohol, que pasa rápidamente a la sangre. Los perros son los más afectados porque se comen lo que encuentran.",
+    "it": "Il lievito continua a lavorare nello stomaco caldo e umido: l’impasto si espande e si accumula gas, che può ostruire l’intestino o, più raramente, far torcere lo stomaco (dilatazione-torsione gastrica). Allo stesso tempo il lievito produce alcol, che passa rapidamente nel sangue. I cani sono i più colpiti perché mangiano tutto quello che trovano."
   },
   "signs": {
     "en": [
@@ -67,6 +72,12 @@
       "Vómitos o arcadas sin llegar a expulsar nada",
       "Tambaleo y desorientación",
       "Somnolencia o apatía"
+    ],
+    "it": [
+      "Pancia gonfia e tesa",
+      "Vomito o conati senza tirare fuori niente",
+      "Andatura traballante e disorientamento",
+      "Sonnolenza o abbattimento"
     ]
   },
   "what_to_do": {
@@ -74,7 +85,8 @@
     "sl": "Takoj pokličite veterinarja. Zapišite si, približno koliko testa je pes pojedel in kdaj. Ne čakajte na znake: napihnjen želodec in zastrupitev z alkoholom zahtevata hitro pomoč.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt. Notieren Sie ungefähr, wie viel Teig gefressen wurde und wann. Warten Sie nicht auf Anzeichen: Ein anschwellender Magen und eine Alkoholvergiftung müssen beide schnell behandelt werden.",
     "fr": "Contactez immédiatement votre vétérinaire. Notez la quantité approximative de pâte mangée et à quelle heure. N’attendez pas l’apparition des signes : un estomac qui gonfle et une intoxication à l’alcool nécessitent tous deux des soins rapides.",
-    "es": "Contacta enseguida con tu veterinario. Apunta más o menos cuánta masa se comió y cuándo. No esperes a que aparezcan síntomas: tanto un estómago que se hincha como una intoxicación etílica necesitan atención rápida."
+    "es": "Contacta enseguida con tu veterinario. Apunta más o menos cuánta masa se comió y cuándo. No esperes a que aparezcan síntomas: tanto un estómago que se hincha como una intoxicación etílica necesitan atención rápida.",
+    "it": "Contatta subito il veterinario. Annota più o meno quanto impasto ha mangiato il tuo cane e quando. Non aspettare che compaiano i sintomi: uno stomaco che si gonfia e l’intossicazione da alcol richiedono entrambi cure rapide."
   },
   "serving": null,
   "child": {
@@ -82,7 +94,8 @@
     "sl": "Testo, ki še vzhaja, ni za pse. V trebuščku še naprej raste. Povej odraslemu, če ga pes poje.",
     "de": "Brotteig, der noch aufgeht, ist nichts für Hunde. Er wächst in ihrem Bauch weiter. Sag einem Erwachsenen Bescheid, wenn dein Hund davon frisst.",
     "fr": "La pâte à pain qui lève encore n’est pas pour les chiens. Elle continue de grossir dans leur ventre. Préviens un adulte si ton chien en mange.",
-    "es": "La masa de pan que todavía está subiendo no es para perros. Sigue creciendo dentro de su barriguita. Si tu perro se come un poco, díselo a un adulto."
+    "es": "La masa de pan que todavía está subiendo no es para perros. Sigue creciendo dentro de su barriguita. Si tu perro se come un poco, díselo a un adulto.",
+    "it": "L’impasto del pane che sta ancora lievitando non è per i cani: continua a crescere nella loro pancia. Avvisa un adulto se il tuo cane ne mangia."
   },
   "faq": [
     {
@@ -91,14 +104,16 @@
         "sl": "Je nevaren tudi pečen kruh?",
         "de": "Ist gebackenes Brot auch gefährlich?",
         "fr": "Le pain cuit est-il dangereux aussi ?",
-        "es": "¿El pan ya horneado también es peligroso?"
+        "es": "¿El pan ya horneado también es peligroso?",
+        "it": "Anche il pane cotto è pericoloso?"
       },
       "a": {
         "en": "The danger described here is raw, unbaked yeast dough, because the yeast is still alive and keeps working in the stomach.",
         "sl": "Nevarnost, opisana tukaj, velja za surovo, nepečeno kvašeno testo, ker je kvas še živ in v želodcu deluje naprej.",
         "de": "Die hier beschriebene Gefahr betrifft rohen, ungebackenen Hefeteig, weil die Hefe darin noch lebt und im Magen weiterarbeitet.",
         "fr": "Le danger décrit ici concerne la pâte crue à la levure, non cuite, car la levure est encore vivante et continue d’agir dans l’estomac.",
-        "es": "El peligro que se describe aquí es el de la masa cruda con levadura, sin hornear, porque la levadura sigue viva y continúa actuando en el estómago."
+        "es": "El peligro que se describe aquí es el de la masa cruda con levadura, sin hornear, porque la levadura sigue viva y continúa actuando en el estómago.",
+        "it": "Il pericolo descritto qui riguarda l’impasto crudo con lievito, non cotto, perché il lievito è ancora vivo e continua a lavorare nello stomaco."
       }
     },
     {
@@ -107,14 +122,16 @@
         "sl": "Zakaj testo povzroči zastrupitev z alkoholom?",
         "de": "Warum verursacht Teig eine Alkoholvergiftung?",
         "fr": "Pourquoi la pâte provoque-t-elle une intoxication à l’alcool ?",
-        "es": "¿Por qué la masa provoca una intoxicación etílica?"
+        "es": "¿Por qué la masa provoca una intoxicación etílica?",
+        "it": "Perché l’impasto causa un’intossicazione da alcol?"
       },
       "a": {
         "en": "Fermenting yeast produces alcohol in the stomach, and it is rapidly absorbed into the bloodstream.",
         "sl": "Kvas pri vrenju v želodcu tvori alkohol, ki se hitro vsrka v kri.",
         "de": "Gärende Hefe bildet im Magen Alkohol, der rasch ins Blut aufgenommen wird.",
         "fr": "En fermentant, la levure produit de l’alcool dans l’estomac, qui passe rapidement dans le sang.",
-        "es": "La levadura, al fermentar, produce alcohol en el estómago, y este pasa rápidamente a la sangre."
+        "es": "La levadura, al fermentar, produce alcohol en el estómago, y este pasa rápidamente a la sangre.",
+        "it": "Il lievito che fermenta produce alcol nello stomaco, e l’alcol passa rapidamente nel sangue."
       }
     }
   ],
@@ -195,6 +212,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "19428606e3352ab10a88e41baf889e9fc1794f3b83916e3235bf6daac81bbb8e"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f7ba5eca0ef2ddfa00c22c3344ae1015fc93d7a53af1edd15600c3fc92541599"
     }
   }
 }

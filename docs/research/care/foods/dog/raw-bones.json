@@ -6,21 +6,24 @@
     "sl": "Surove kosti",
     "de": "Rohe Knochen",
     "fr": "Os crus",
-    "es": "Huesos crudos"
+    "es": "Huesos crudos",
+    "it": "Ossa crude"
   },
   "question": {
     "en": "Can dogs eat raw bones?",
     "sl": "Ali lahko psi jedo surove kosti?",
     "de": "Dürfen Hunde rohe Knochen fressen?",
     "fr": "Les chiens peuvent-ils manger des os crus ?",
-    "es": "¿Pueden los perros comer huesos crudos?"
+    "es": "¿Pueden los perros comer huesos crudos?",
+    "it": "I cani possono mangiare le ossa crude?"
   },
   "url_slug": {
     "en": "raw-bones",
     "sl": "surove-kosti",
     "de": "rohe-knochen",
     "fr": "os-crus",
-    "es": "huesos-crudos"
+    "es": "huesos-crudos",
+    "it": "ossa-crude"
   },
   "level": "not_recommended",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Le po posvetu z veterinarjem. Kuhane kosti se cepijo, a tudi surove kosti so tvegane: lahko zlomijo zob, povzročijo dušenje ali zamašijo prebavila, surovo meso na njih pa lahko prenaša bakterije, kot je salmonela. Nekateri veterinarji jih dovolijo pod nadzorom, drugi kosti odsvetujejo.",
     "de": "Nur nach Rücksprache mit Ihrem Tierarzt. Gekochte Knochen splittern, aber auch rohe Knochen bergen Risiken: Zähne können daran abbrechen, Knochen können zum Ersticken führen oder den Darm blockieren, und rohes Fleisch daran kann Bakterien wie Salmonellen enthalten. Manche Tierärzte erlauben sie unter Aufsicht, andere raten von Knochen ab.",
     "fr": "Seulement après en avoir parlé à votre vétérinaire. Les os cuits éclatent, mais les os crus présentent aussi des risques : ils peuvent casser des dents, provoquer un étouffement ou bloquer l’intestin, et la viande crue qui y reste peut contenir des bactéries comme les salmonelles. Certains vétérinaires les autorisent sous surveillance ; d’autres déconseillent les os.",
-    "es": "Solo después de hablarlo con tu veterinario. Los huesos cocinados se astillan, pero los crudos también tienen riesgos: pueden romper dientes, provocar atragantamiento u obstruir el intestino, y la carne cruda que llevan puede tener bacterias como Salmonella. Algunos veterinarios los permiten bajo vigilancia; otros desaconsejan los huesos."
+    "es": "Solo después de hablarlo con tu veterinario. Los huesos cocinados se astillan, pero los crudos también tienen riesgos: pueden romper dientes, provocar atragantamiento u obstruir el intestino, y la carne cruda que llevan puede tener bacterias como Salmonella. Algunos veterinarios los permiten bajo vigilancia; otros desaconsejan los huesos.",
+    "it": "Solo dopo averne parlato con il veterinario. Le ossa cotte si scheggiano, ma anche quelle crude comportano rischi: possono rompere i denti, causare soffocamento o ostruire l’intestino, e la carne cruda attaccata può portare batteri come la Salmonella. Alcuni veterinari le permettono sotto sorveglianza; altri sconsigliano le ossa."
   },
   "why": {
     "en": "Sources differ, so we use the stricter level. The FDA lists blockages, choking and mouth injuries after bones and advises asking your vet about safer chews. AKC notes raw bones may carry Salmonella and very hard bones can damage teeth. Bones can injure or block the gut, and blockages are very serious.",
     "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. FDA navaja zapore, dušenje in poškodbe ust po kosteh ter svetuje posvet z veterinarjem o varnejših grizalih. AKC opozarja, da surove kosti lahko prenašajo salmonelo in da pretrde kosti lahko poškodujejo zobe. Kosti lahko poškodujejo ali zamašijo prebavila, zapore pa so zelo resne.",
     "de": "Die Quellen unterscheiden sich, deshalb verwenden wir die strengere Stufe. Die FDA nennt Blockaden, Ersticken und Verletzungen im Maul durch Knochen und rät, den Tierarzt nach sichereren Kauartikeln zu fragen. Laut AKC können rohe Knochen Salmonellen enthalten, und sehr harte Knochen können die Zähne beschädigen. Knochen können den Magen-Darm-Trakt verletzen oder blockieren, und Blockaden sind sehr ernst.",
     "fr": "Les sources divergent, nous retenons donc le niveau le plus strict. La FDA signale des obstructions, des étouffements et des blessures dans la bouche après des os et conseille de demander à votre vétérinaire des objets à mâcher plus sûrs. L’AKC indique que les os crus peuvent contenir des salmonelles et que les os très durs peuvent abîmer les dents. Les os peuvent blesser ou bloquer l’intestin, et les obstructions sont très graves.",
-    "es": "Las fuentes difieren, así que aplicamos el nivel más estricto. La FDA enumera obstrucciones, atragantamientos y heridas en la boca tras comer huesos y aconseja preguntar al veterinario por mordedores más seguros. El AKC señala que los huesos crudos pueden llevar Salmonella y que los huesos muy duros pueden dañar los dientes. Los huesos pueden herir u obstruir el intestino, y las obstrucciones son muy graves."
+    "es": "Las fuentes difieren, así que aplicamos el nivel más estricto. La FDA enumera obstrucciones, atragantamientos y heridas en la boca tras comer huesos y aconseja preguntar al veterinario por mordedores más seguros. El AKC señala que los huesos crudos pueden llevar Salmonella y que los huesos muy duros pueden dañar los dientes. Los huesos pueden herir u obstruir el intestino, y las obstrucciones son muy graves.",
+    "it": "Le fonti non concordano, quindi adottiamo il livello più prudente. La FDA segnala ostruzioni, soffocamento e lesioni alla bocca dopo l’ingestione di ossa e consiglia di chiedere al veterinario alternative da masticare più sicure. L’AKC osserva che le ossa crude possono portare Salmonella e che quelle molto dure possono danneggiare i denti. Le ossa possono ferire od ostruire l’intestino, e le ostruzioni sono molto gravi."
   },
   "signs": {
     "en": [
@@ -72,6 +77,13 @@
       "Vómitos",
       "Diarrea",
       "Sangrado por el ano"
+    ],
+    "it": [
+      "Soffocamento o conati",
+      "Tagli o sanguinamento in bocca",
+      "Vomito",
+      "Diarrea",
+      "Sanguinamento dall’ano"
     ]
   },
   "what_to_do": {
@@ -79,21 +91,24 @@
     "sl": "Če je pes pogoltnil velik kos kosti ali kaže katerega od teh znakov, takoj pokličite veterinarja. Zapišite si, kakšna in kako velika je bila kost.",
     "de": "Wenn Ihr Hund ein großes Stück Knochen verschluckt hat oder eines dieser Anzeichen zeigt, wenden Sie sich sofort an Ihren Tierarzt. Notieren Sie Art und Größe des Knochens.",
     "fr": "Si votre chien a avalé un gros morceau d’os, ou s’il présente l’un de ces signes, contactez immédiatement votre vétérinaire. Notez le type et la taille de l’os.",
-    "es": "Si tu perro se ha tragado un trozo grande de hueso o muestra cualquiera de estos signos, contacta enseguida con tu veterinario. Apunta el tipo y el tamaño del hueso."
+    "es": "Si tu perro se ha tragado un trozo grande de hueso o muestra cualquiera de estos signos, contacta enseguida con tu veterinario. Apunta el tipo y el tamaño del hueso.",
+    "it": "Se il tuo cane ha ingoiato un grosso pezzo d’osso o mostra uno di questi sintomi, contatta subito il veterinario. Annota il tipo e la dimensione dell’osso."
   },
   "serving": {
     "en": "Ask your vet first. If they agree, choose a bone larger than your dog's muzzle so it can't be swallowed whole, avoid very hard bones, and always supervise chewing.",
     "sl": "Najprej vprašajte veterinarja. Če se strinja, izberite kost, večjo od dolžine pasjega gobca, da je ne more pogoltniti cele, izogibajte se pretrdim kostem in grizenje vedno nadzorujte.",
     "de": "Fragen Sie zuerst Ihren Tierarzt. Ist er einverstanden, wählen Sie einen Knochen, der größer ist als die Schnauze Ihres Hundes, damit er nicht im Ganzen verschluckt werden kann, meiden Sie sehr harte Knochen und beaufsichtigen Sie das Kauen immer.",
     "fr": "Demandez d’abord l’avis de votre vétérinaire. S’il est d’accord, choisissez un os plus grand que le museau de votre chien pour qu’il ne puisse pas l’avaler entier, évitez les os très durs et surveillez toujours pendant qu’il mâche.",
-    "es": "Pregunta antes a tu veterinario. Si está de acuerdo, elige un hueso más grande que el hocico de tu perro para que no pueda tragárselo entero, evita los huesos muy duros y vigílalo siempre mientras lo roe."
+    "es": "Pregunta antes a tu veterinario. Si está de acuerdo, elige un hueso más grande que el hocico de tu perro para que no pueda tragárselo entero, evita los huesos muy duros y vigílalo siempre mientras lo roe.",
+    "it": "Chiedi prima al veterinario. Se è d’accordo, scegli un osso più grande del muso del tuo cane, così non può ingoiarlo intero, evita le ossa molto dure e sorveglialo sempre mentre mastica."
   },
   "child": {
     "en": "Bones can hurt a dog's teeth and tummy. Only grown-ups and the vet decide if a dog gets a bone, and someone always watches.",
     "sl": "Kosti lahko poškodujejo pasje zobe in trebušček. O kosti odločajo le odrasli in veterinar, med grizenjem pa vedno nekdo pazi.",
     "de": "Knochen können einem Hund an den Zähnen und im Bauch wehtun. Ob ein Hund einen Knochen bekommt, entscheiden nur Erwachsene und der Tierarzt, und jemand passt immer auf.",
     "fr": "Les os peuvent abîmer les dents et le ventre d’un chien. Seuls les adultes et le vétérinaire décident si un chien reçoit un os, et quelqu’un le surveille toujours.",
-    "es": "Los huesos pueden dañar los dientes y la barriguita de un perro. Solo los adultos y el veterinario deciden si puede tener uno, y siempre alguien vigila."
+    "es": "Los huesos pueden dañar los dientes y la barriguita de un perro. Solo los adultos y el veterinario deciden si puede tener uno, y siempre alguien vigila.",
+    "it": "Le ossa possono fare male ai denti e alla pancia di un cane. Solo gli adulti e il veterinario decidono se dargli un osso, e qualcuno controlla sempre."
   },
   "faq": [
     {
@@ -102,14 +117,16 @@
         "sl": "So surove kosti varnejše od kuhanih?",
         "de": "Sind rohe Knochen sicherer als gekochte?",
         "fr": "Les os crus sont-ils plus sûrs que les os cuits ?",
-        "es": "¿Son más seguros los huesos crudos que los cocinados?"
+        "es": "¿Son más seguros los huesos crudos que los cocinados?",
+        "it": "Le ossa crude sono più sicure di quelle cotte?"
       },
       "a": {
         "en": "Cooked bones splinter, which is why they should never be given. Raw bones still carry risks of broken teeth, blockages and bacteria, so ask your vet first.",
         "sl": "Kuhane kosti se cepijo, zato jih nikoli ne dajajte. Tudi surove kosti nosijo tveganje zlomljenih zob, zapor in bakterij, zato najprej vprašajte veterinarja.",
         "de": "Gekochte Knochen splittern, deshalb sollten sie nie gegeben werden. Auch rohe Knochen bergen das Risiko von abgebrochenen Zähnen, Blockaden und Bakterien, also fragen Sie zuerst Ihren Tierarzt.",
         "fr": "Les os cuits éclatent : c’est pourquoi il ne faut jamais en donner. Les os crus présentent quand même des risques de dents cassées, d’obstructions et de bactéries : demandez d’abord l’avis de votre vétérinaire.",
-        "es": "Los huesos cocinados se astillan, por eso nunca deben darse. Los crudos siguen teniendo riesgo de dientes rotos, obstrucciones y bacterias, así que pregunta antes a tu veterinario."
+        "es": "Los huesos cocinados se astillan, por eso nunca deben darse. Los crudos siguen teniendo riesgo de dientes rotos, obstrucciones y bacterias, así que pregunta antes a tu veterinario.",
+        "it": "Le ossa cotte si scheggiano, ed è per questo che non vanno mai date. Le ossa crude comportano comunque rischi di denti rotti, ostruzioni e batteri, quindi chiedi prima al veterinario."
       }
     },
     {
@@ -118,14 +135,16 @@
         "sl": "Kako velika kost je varnejša?",
         "de": "Welche Knochengröße ist sicherer?",
         "fr": "Quelle taille d’os est plus sûre ?",
-        "es": "¿Qué tamaño de hueso es más seguro?"
+        "es": "¿Qué tamaño de hueso es más seguro?",
+        "it": "Quale dimensione dell’osso è più sicura?"
       },
       "a": {
         "en": "A bone should be larger than the length of the dog's muzzle so it can't be swallowed whole, and you should check on your dog while it chews.",
         "sl": "Kost naj bo večja od dolžine pasjega gobca, da je pes ne more pogoltniti cele, med grizenjem pa psa preverjajte.",
         "de": "Ein Knochen sollte größer sein als die Länge der Schnauze des Hundes, damit er nicht im Ganzen verschluckt werden kann, und Sie sollten immer wieder nach Ihrem Hund sehen, während er kaut.",
         "fr": "Un os doit être plus grand que la longueur du museau du chien pour qu’il ne puisse pas l’avaler entier ; surveillez votre chien pendant qu’il le mâche.",
-        "es": "El hueso debe ser más grande que la longitud del hocico del perro para que no pueda tragárselo entero, y conviene echarle un ojo a tu perro mientras lo roe."
+        "es": "El hueso debe ser más grande que la longitud del hocico del perro para que no pueda tragárselo entero, y conviene echarle un ojo a tu perro mientras lo roe.",
+        "it": "L’osso deve essere più grande della lunghezza del muso del cane, così non può ingoiarlo intero, e devi controllare il cane mentre mastica."
       }
     }
   ],
@@ -247,6 +266,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f1c13e1e8252c83429292888ccb99ba5a02c9b0e1b661904e180a4c19c04adb1"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "36fbff8ed1809461564580f7defbb12388d08ca93718581635a1f74834152f5c"
     }
   }
 }
