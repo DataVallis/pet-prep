@@ -590,6 +590,7 @@ export default function WandGameV2({ view, onClose, reduceMotion, clock, testID 
   return (
     <GameScreen
       testID={testID}
+      onExit={close ?? onClose}
       stage={
         <ClipDeck
           key={hunt}
@@ -625,7 +626,8 @@ export default function WandGameV2({ view, onClose, reduceMotion, clock, testID 
           line={line.text}
           closeLabel={phase.kind === 'running' ? C.stopA11y : C.close}
           progressLabel={S.a11y.progress(dots.filter(Boolean).length, dots.length, stars)}
-          onClose={close}
+          onClose={close ?? onClose}
+          closeLocked={close === undefined}
           testID={`${testID}-top`}
         />
       }

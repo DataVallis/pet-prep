@@ -50,6 +50,7 @@ import type { ClockSources } from '@/modules/training/game';
 import { useAppStore } from '@/store/appStore';
 import { careFrame } from '@/modules/gameLayer/careFrame';
 import { gameFeedbackOf } from '@/modules/gameLayer/gameFeedback';
+import { GameExitProvider } from '@/modules/gameLayer/gameExit';
 import { loadCareShell, type CareGameShellType } from '@/modules/gameLayer/loadCareShell';
 import { MIN_TOUCH, alpha, palette, radius } from '@/theme';
 
@@ -133,23 +134,25 @@ export default function CareTaskOverlay({ task, view, onClose, reduceMotion = fa
 
   if (Shell !== null && (phase.kind === 'running' || phase.kind === 'finishing')) {
     return (
-      <CareTaskRunning
-        task={task}
-        view={view}
-        session={phase.session}
-        strokes={phase.input}
-        elapsedMs={game.elapsedMs}
-        finishing={phase.kind === 'finishing'}
-        resumed={phase.resumedAtMs !== null}
-        reduceMotion={reduceMotion}
-        gestureMode={gestureMode}
-        msAt={game.msAt}
-        onStroke={(ms) => game.setInput((strokes) => addStroke(strokes, ms, phase.session.duration_ms))}
-        onMediaExpired={onMediaExpired}
-        Shell={Shell}
-        onStop={game.stop}
-        testID={testID}
-      />
+      <GameExitProvider value={onClose}>
+        <CareTaskRunning
+          task={task}
+          view={view}
+          session={phase.session}
+          strokes={phase.input}
+          elapsedMs={game.elapsedMs}
+          finishing={phase.kind === 'finishing'}
+          resumed={phase.resumedAtMs !== null}
+          reduceMotion={reduceMotion}
+          gestureMode={gestureMode}
+          msAt={game.msAt}
+          onStroke={(ms) => game.setInput((strokes) => addStroke(strokes, ms, phase.session.duration_ms))}
+          onMediaExpired={onMediaExpired}
+          Shell={Shell}
+          onStop={game.stop}
+          testID={testID}
+        />
+      </GameExitProvider>
     );
   }
 

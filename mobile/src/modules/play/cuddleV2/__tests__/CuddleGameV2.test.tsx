@@ -12,7 +12,7 @@ import { GAME_LINE_MAX_CHARS } from '@/modules/gameLayer/gameLine';
 import PlayOverlay, { loadCuddleGameV2, resetBallGameV2ForTests } from '@/modules/play/PlayOverlay';
 import { CUDDLE_V2_STRINGS } from '@/modules/play/play';
 import { makeLiveChildState, makePlayState, withEasyGestures } from '@/test-utils/fixtures';
-import { fireGamePan } from '@/test-utils/gameLayer';
+import { captureAndroidBack, expectHudAboveStage, fireGamePan } from '@/test-utils/gameLayer';
 
 const ID = 'play-cuddle-v2';
 const T0 = Date.parse('2026-10-31T12:00:00+01:00');
@@ -24,8 +24,9 @@ function view(o: { cat?: boolean; easy?: boolean } = {}): ChildPetView {
 
 function renderCuddle(v: ChildPetView) {
   const onFinished = jest.fn();
-  render(<PlayOverlay view={v} mode="cuddle" reduceMotion={false} onPick={jest.fn()} onFinished={onFinished} onClose={jest.fn()} />);
-  return { onFinished };
+  const onClose = jest.fn();
+  render(<PlayOverlay view={v} mode="cuddle" reduceMotion={false} onPick={jest.fn()} onFinished={onFinished} onClose={onClose} />);
+  return { onFinished, onClose };
 }
 
 async function advance(ms: number) {
@@ -105,5 +106,17 @@ describe('cuddles v2', () => {
     for (const text of [CUDDLE_V2_STRINGS.slow, CUDDLE_V2_STRINGS.wait, CUDDLE_V2_STRINGS.more, CUDDLE_V2_STRINGS.doneLine]) {
       expect(Array.from(text).length).toBeLessThanOrEqual(GAME_LINE_MAX_CHARS);
     }
+  });
+
+  // Ball v2 device bug (David 2026-10-31): the HUD must sit above the video, with a way out.
+  it('the top bar, ×, field and dock are painted above the video; × and Android back close', () => {
+    const back = captureAndroidBack();
+    const { onClose } = renderCuddle(view({ easy: true }));
+    expectHudAboveStage(ID, [`${ID}-top-close`, `${ID}-field-layer`, `${ID}-feedback-layer`]);
+    fireEvent.press(screen.getByTestId(`${ID}-top-close`));
+    expect(onClose).toHaveBeenCalledTimes(1);
+    expect(back.pressBack()).toBe(true);
+    expect(onClose).toHaveBeenCalledTimes(2);
+    jest.restoreAllMocks();
   });
 });

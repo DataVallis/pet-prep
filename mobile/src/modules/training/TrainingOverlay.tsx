@@ -71,6 +71,7 @@ import {
 } from '@/modules/training/training';
 import { useTrainingGame } from '@/modules/training/useTrainingGame';
 import { gameLayerAvailable } from '@/modules/gameLayer/capability';
+import { GameExitProvider } from '@/modules/gameLayer/gameExit';
 import type SchoolGameV2Component from '@/modules/training/schoolV2/SchoolGameV2';
 import SchoolResultV2 from '@/modules/training/schoolV2/SchoolResultV2';
 import { isSchoolV2Session, SCHOOL_RULES_V2 } from '@/modules/training/training';
@@ -351,21 +352,25 @@ export default function TrainingOverlay({ view, onClose, clock, reduceMotion: re
 
   if (SchoolGameV2 !== null && (phase.kind === 'preparing' || phase.kind === 'running' || phase.kind === 'finishing') && isSchoolV2Session(phase.session)) {
     // `preparing` → `running` → `finishing` keep the same game (its deck is never remounted).
+    // The game layer's × / Android back / watchdog close the overlay (David 2026-10-31: never
+    // without a way out); a running session is resumed from the child state when reopened.
     return (
-      <View style={styles.fullScreen} testID={testID}>
-        <SchoolGameV2
-          view={view}
-          game={game}
-          session={phase.session}
-          taps={phase.kind === 'preparing' ? NO_TAPS : phase.taps}
-          resumedAtMs={phase.kind === 'preparing' ? null : phase.resumedAtMs}
-          preparing={phase.kind === 'preparing'}
-          finishing={phase.kind === 'finishing'}
-          reduceMotion={reduceMotion}
-          posePending={schoolPreparing}
-          onMediaExpired={() => void queryClient.invalidateQueries({ queryKey: childPetKey })}
-        />
-      </View>
+      <GameExitProvider value={onClose}>
+        <View style={styles.fullScreen} testID={testID}>
+          <SchoolGameV2
+            view={view}
+            game={game}
+            session={phase.session}
+            taps={phase.kind === 'preparing' ? NO_TAPS : phase.taps}
+            resumedAtMs={phase.kind === 'preparing' ? null : phase.resumedAtMs}
+            preparing={phase.kind === 'preparing'}
+            finishing={phase.kind === 'finishing'}
+            reduceMotion={reduceMotion}
+            posePending={schoolPreparing}
+            onMediaExpired={() => void queryClient.invalidateQueries({ queryKey: childPetKey })}
+          />
+        </View>
+      </GameExitProvider>
     );
   }
 

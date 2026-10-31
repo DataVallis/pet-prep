@@ -20,7 +20,8 @@ import { DOG_ZONE, SLIPPER_ITEMS, SLIPPER_TOY } from '@/modules/cleaning/Slipper
 import { setGameLayerAvailableForTests } from '@/modules/gameLayer/capability';
 import { useAppStore } from '@/store/appStore';
 import { makeGroomingState, makeLitterState, makeLiveChildState, makePet, makeScratchingState, makeWandState, withEasyGestures } from '@/test-utils/fixtures';
-import { fireGameGesture } from '@/test-utils/gameLayer';
+import { GAME_ESCAPE_MS } from '@/modules/gameLayer/gameExit';
+import { captureAndroidBack, expectHudAboveStage, fireGameGesture } from '@/test-utils/gameLayer';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 
 jest.mock('@/api/client', () => {
@@ -277,5 +278,65 @@ describe('ScoopGame — stick, shake, bag', () => {
     });
     expect(screen.getByTestId('scoop-game-result').props.children).toBe('Bravo! Pesek je čist.');
     expect(mocked.scoopLitter).toHaveBeenCalledTimes(1);
+  });
+});
+
+// Ball v2 device bug (David 2026-10-31): the HUD sits above the stage and there is always a way
+// out. GAMES_SPEC §6 / PRODUCT_SPEC §8: a mess that must be cleaned keeps its × locked — but after
+// GAME_ESCAPE_MS the × (and Android back) open the escape (the HUD continues on the tap overlay).
+describe('z-order and exit', () => {
+  afterEach(() => jest.restoreAllMocks());
+
+  it('a forced mess: × locked, back does nothing; after GAME_ESCAPE_MS both lead to the escape', async () => {
+    const back = captureAndroidBack();
+    const onEscape = jest.fn();
+    const { MessGame } = games();
+    renderWithQuery(<MessGame view={dogView({ easy: true })} stages={[{ kind: 'poop', pieces: 1, seed: 3 }]} reduceMotion onCleaned={jest.fn()} onEscape={onEscape} />);
+    layout('mess-game-layout');
+    await advance(0);
+    expectHudAboveStage('mess-game', ['mess-game-field-layer', 'mess-game-dock-layer']);
+    expect(screen.queryByTestId('mess-game-top-close')).toBeNull();
+    expect(back.pressBack()).toBe(true);
+    expect(onEscape).not.toHaveBeenCalled();
+    await advance(GAME_ESCAPE_MS);
+    fireEvent.press(screen.getByTestId('mess-game-top-close'));
+    expect(onEscape).toHaveBeenCalledTimes(1);
+    expect(back.pressBack()).toBe(true);
+    expect(onEscape).toHaveBeenCalledTimes(2);
+  });
+
+  it('a mess the child opened: × and Android back close it at once', async () => {
+    const back = captureAndroidBack();
+    const onClose = jest.fn();
+    const { MessGame } = games();
+    renderWithQuery(<MessGame view={dogView()} stages={[{ kind: 'poop', pieces: 1, seed: 3 }]} reduceMotion onCleaned={jest.fn()} onClose={onClose} />);
+    expectHudAboveStage('mess-game', ['mess-game-top-close']);
+    expect(back.pressBack()).toBe(true);
+    expect(onClose).toHaveBeenCalledTimes(1);
+  });
+
+  it('the slipper: × and Android back close', async () => {
+    const back = captureAndroidBack();
+    const onClose = jest.fn();
+    const { SlipperGame } = games();
+    renderWithQuery(<SlipperGame view={dogView({ easy: true })} reduceMotion onResolved={jest.fn()} onClose={onClose} />);
+    layout('slipper-game-field');
+    await advance(0);
+    expectHudAboveStage('slipper-game', ['slipper-game-top-close', 'slipper-game-field-layer', 'slipper-game-dock-layer']);
+    fireEvent.press(screen.getByTestId('slipper-game-top-close'));
+    expect(back.pressBack()).toBe(true);
+    expect(onClose).toHaveBeenCalledTimes(2);
+  });
+
+  it('the scoop: × and Android back close', async () => {
+    const back = captureAndroidBack();
+    const onClose = jest.fn();
+    const { ScoopGame } = games();
+    renderWithQuery(<ScoopGame view={normalizeChildState(catState(), 0, T0)} reduceMotion={false} onClose={onClose} />);
+    layout('scoop-game-field');
+    await advance(0);
+    expectHudAboveStage('scoop-game', ['scoop-game-top-close', 'scoop-game-field-layer']);
+    expect(back.pressBack()).toBe(true);
+    expect(onClose).toHaveBeenCalledTimes(1);
   });
 });

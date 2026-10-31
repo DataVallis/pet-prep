@@ -14,6 +14,7 @@ import ScratchingOverlay from '@/modules/catCare/ScratchingOverlay';
 import { normalizeChildState, type ChildPetView } from '@/modules/childPet/childPetView';
 import { careCues, careFrame } from '@/modules/gameLayer/careFrame';
 import { setGameLayerAvailableForTests } from '@/modules/gameLayer/capability';
+import { GAME_ESCAPE_MS } from '@/modules/gameLayer/gameExit';
 import { GAME_LINE_MAX_CHARS } from '@/modules/gameLayer/gameLine';
 import { resetCareShellForTests } from '@/modules/gameLayer/loadCareShell';
 import { useAppStore } from '@/store/appStore';
@@ -30,6 +31,7 @@ import {
   makeWandState,
   withEasyGestures,
 } from '@/test-utils/fixtures';
+import { captureAndroidBack, expectHudAboveStage } from '@/test-utils/gameLayer';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 
 jest.mock('@/api/client', () => {
@@ -187,5 +189,35 @@ describe('care games on the game layer', () => {
     for (const key of ['cat:scratching.layer.carrying', 'cat:scratching.layer.landed', 'cat:scratching.layer.early', 'careTasks:common.nails.layerHint', 'careTasks:common.nails.layerDone', 'cat:common.finishing'] as const) {
       expect(Array.from(i18n.t(key)).length).toBeLessThanOrEqual(GAME_LINE_MAX_CHARS);
     }
+  });
+
+  // Ball v2 device bug (David 2026-10-31): the HUD above the stage and always a way out.
+  it('grooming: the × and Android back stop the running chore; the HUD is above the stage', async () => {
+    const back = captureAndroidBack();
+    mocked.startCareChore.mockResolvedValue({ status: 'accepted', session: makeChoreSession('grooming'), state: catState() });
+    renderWithQuery(<ChoreOverlay kind="grooming" view={viewOf(catState())} onClose={jest.fn()} reduceMotion clock={clock} />);
+    fireEvent.press(screen.getByTestId('cat-grooming-start'));
+    await advance(0);
+    expectHudAboveStage('cat-grooming-layer', ['cat-grooming-layer-top-close', 'cat-grooming-layer-area']);
+    expect(back.pressBack()).toBe(true);
+    await advance(0);
+    expect(screen.queryByTestId('cat-grooming-layer')).toBeNull();
+    expect(screen.getByTestId('cat-grooming-start')).toBeTruthy();
+    jest.restoreAllMocks();
+  });
+
+  it('scratching: no × during the short carry; a finish that hangs gets the × back after GAME_ESCAPE_MS', async () => {
+    mocked.startScratching.mockResolvedValue({ status: 'accepted', session: makeScratchingSession(), state: catState() });
+    mocked.finishScratching.mockReturnValue(new Promise(() => undefined));
+    const onClose = jest.fn();
+    renderWithQuery(<ScratchingOverlay view={viewOf(catState())} onClose={onClose} reduceMotion clock={clock} />);
+    fireEvent.press(screen.getByTestId('cat-scratching-start'));
+    await advance(0);
+    expect(screen.queryByTestId('cat-scratching-layer-top-close')).toBeNull();
+    fireEvent.press(screen.getByLabelText('Pohvali muco'));
+    await advance(GAME_ESCAPE_MS);
+    expect(screen.getByTestId('cat-scratching-layer')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('cat-scratching-layer-top-close'));
+    expect(onClose).toHaveBeenCalledTimes(1);
   });
 });

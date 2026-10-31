@@ -20,7 +20,7 @@ import { ballAtRest } from '@/modules/play/ballV2/ballFlight';
 import { CALL_WAIT_MS, CATCH_WINDOW_MS } from '@/modules/play/ballV2/ballMachine';
 import { BALL_V2_STRINGS } from '@/modules/play/play';
 import { makeLiveChildState, makeMedia, makePlayState, withEasyGestures } from '@/test-utils/fixtures';
-import { fakeAudioPlayers, fireGameGesture, resetFakeAudioPlayers } from '@/test-utils/gameLayer';
+import { captureAndroidBack, expectHudAboveStage, fakeAudioPlayers, fireGameGesture, resetFakeAudioPlayers } from '@/test-utils/gameLayer';
 import { mockVideoPlayers, resetMockVideoPlayers, sourceUri, type MockVideoPlayer } from '@/test-utils/videoPlayers';
 
 const URLS = {
@@ -278,6 +278,34 @@ describe('BallGameV2 (GAMES_SPEC §4.3)', () => {
     expect(mockVideoPlayers.filter((p) => !p.released)).toHaveLength(0);
     await advance(2_000);
     expect(screen.getByTestId(`${ID}-top-line`).props.children).toBe('Povleci in spusti žogo!');
+  });
+
+  // David's TestFlight build 2026-10-31: only the dog video was visible — no top bar, ball,
+  // »Pokliči!«, feedback or ×. Fabric hoisted the deck's front player (zIndex 2) over them.
+  it('paints the top bar, ×, ball field, feedback, »Pokliči!« and the result above the playing video', async () => {
+    renderGame(ballView());
+    deckReady();
+    layoutField();
+    expectHudAboveStage(ID, [`${ID}-top-close`, `${ID}-field`, `${ID}-feedback-layer`]);
+    swipeThrow();
+    end(URLS.running);
+    expectHudAboveStage(ID, [`${ID}-call`, `${ID}-feedback`]);
+    fireEvent.press(screen.getByTestId(`${ID}-call`));
+    end(URLS.fetching);
+    tapBall();
+    await oneThrow();
+    await oneThrow();
+    expectHudAboveStage(ID, [`${ID}-done`, `${ID}-again`, `${ID}-finish`]);
+  });
+
+  it('the × is there before the deck is ready, and Android back closes the game', () => {
+    const back = captureAndroidBack();
+    const { onClose } = renderGame(ballView());
+    expect(screen.getByTestId(`${ID}-top-close`)).toBeTruthy();
+    expectHudAboveStage(ID, [`${ID}-top-close`]);
+    expect(back.pressBack()).toBe(true);
+    expect(onClose).toHaveBeenCalled();
+    jest.restoreAllMocks();
   });
 
   it('closing mid-round reports nothing', () => {

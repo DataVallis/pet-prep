@@ -1752,7 +1752,9 @@ flowchart TD
   CD -->|onReady| CLK[GameClock = SessionClock starts · useClipQueue.start]
   GS --> PF[PlayField: Skia ball from shared values, UI thread]
   GS --> FB[FeedbackLayer ✓ ✗ ★ round · mask ≥ 85 % → ClipQueue.setMasked]
-  GS --> TB[GameTopBar: dots · ★ · GameLine ≤ 32 chars ≥ 2 s · ×]
+  GS --> TB[GameTopBar: dots · ★ · GameLine ≤ 32 chars ≥ 2 s · × always - own onClose else the screen exit]
+  GS --> Z[Layers = own stacking contexts, GAME_Z: stage 0 · field 2 · feedback 3 · top / dock 10 · overlay 20 · escape 100]
+  GS --> EX[Exit: × · Android back · watchdog card × + Nazaj - stage not ready 15 s or a layer crashed · locked × back after 20 s]
   GS --> FX[GameFx: own WAVs + positive haptics<br/>off when settings.game_feedback = false · silent mode respected]
 ```
 

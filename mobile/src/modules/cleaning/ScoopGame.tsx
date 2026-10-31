@@ -377,6 +377,7 @@ export default function ScoopGame({ view, reduceMotion, onClose, onMediaExpired,
   return (
     <GameScreen
       testID={testID}
+      onExit={onClose}
       stage={<MessStage view={view} onMediaExpired={onMediaExpired} />}
       field={
         <MessField gesture={gestures.gesture} onLayout={setLayout} testID={`${testID}-field`}>
@@ -394,7 +395,8 @@ export default function ScoopGame({ view, reduceMotion, onClose, onMediaExpired,
               line={line.text}
               closeLabel={MESS_GAME_STRINGS.close}
               progressLabel={MESS_GAME_STRINGS.a11y.progress(countBits(bagged), total)}
-              onClose={phase.kind === 'saving' ? undefined : onClose}
+              onClose={onClose}
+              closeLocked={phase.kind === 'saving'}
               testID={`${testID}-top`}
             />
           }

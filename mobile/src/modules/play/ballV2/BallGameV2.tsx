@@ -430,6 +430,7 @@ export default function BallGameV2({ view, reduceMotion, onRoundFinished, onClos
   return (
     <GameScreen
       testID={testID}
+      onExit={onClose}
       stage={
         <ClipDeck
           clips={plan.clips}

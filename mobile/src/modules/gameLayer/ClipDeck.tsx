@@ -17,14 +17,19 @@
  * - Under the player: the role's START frame (`startStill`, §3.2 rule 7); without a clip /
  *   with a failed one: the role's `picture` — never another role's clip.
  * - Players pause in the background and are released on unmount.
+ * - The root is its own stacking context (`collapsable={false}`): the players' zIndex (front 2 /
+ *   back 1 / hidden 0) must never be hoisted next to the game's top bar / field / dock (Fabric
+ *   sorts hoisted children by zIndex — the ball v2 device bug of 2026-10-31). It also tells
+ *   `GameScreen` when it mounted / became ready (the screen's watchdog).
  */
 
-import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { memo, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { Animated, Image, Platform, StyleSheet, View } from 'react-native';
 import { useVideoPlayer, VideoView, type StatusChangeEventPayload, type VideoPlayer, type VideoPlayerStatus } from 'expo-video';
 
 import { DECK_READY_FALLBACK_MS, DECK_READY_TIMEOUT_MS, MAX_DECK_PLAYERS, deckPlayerUrls, type DeckClip } from '@/modules/gameLayer/deck';
 import type { ClipSwitch } from '@/modules/gameLayer/clipQueue';
+import { GameScreenContext } from '@/modules/gameLayer/gameExit';
 import { useAppActive, useLocalMediaUri } from '@/modules/petMedia/hooks';
 import { forgetLocalMedia, isLocalMediaUri, localMediaUri } from '@/modules/petMedia/mediaFileCache';
 import type { MediaMode } from '@/modules/petMedia/statePlayer';
@@ -133,6 +138,10 @@ const DeckPlayer = memo(function DeckPlayer({ url, loop, layer, fadeInMs, onPlay
 
 export default function ClipDeck({ clips, current, mode, onReady, onEnded, onMediaExpired, testID = 'clip-deck' }: ClipDeckProps) {
   const appActive = useAppActive();
+  const { stageLoading, stageReady } = useContext(GameScreenContext);
+  useEffect(() => {
+    stageLoading();
+  }, [stageLoading]);
   // Decided once per deck (game): the players never change under a running game.
   const [urls] = useState(() => (mode === 'video' ? deckPlayerUrls(clips).slice(0, MAX_DECK_PLAYERS) : []));
   const [timedOut, setTimedOut] = useState(false);
@@ -158,7 +167,8 @@ export default function ClipDeck({ clips, current, mode, onReady, onEnded, onMed
     if (reported.current) return;
     reported.current = true;
     readyRef.current(m);
-  }, []);
+    stageReady();
+  }, [stageReady]);
   const allSettled = urls.every((u) => settled[u] !== undefined);
   useEffect(() => {
     if (!video) report('picture');
@@ -252,7 +262,7 @@ export default function ClipDeck({ clips, current, mode, onReady, onEnded, onMed
   }, [clips]);
 
   return (
-    <View style={StyleSheet.absoluteFill} testID={testID} accessibilityRole="image">
+    <View style={StyleSheet.absoluteFill} testID={testID} accessibilityRole="image" collapsable={false}>
       {still.uri !== null && (
         <Image source={{ uri: still.uri }} resizeMode="cover" onError={onImageError} style={StyleSheet.absoluteFill} testID={`${testID}-still`} />
       )}

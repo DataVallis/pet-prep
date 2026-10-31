@@ -52,5 +52,10 @@
       "commit": "Commit",
       "channel": "Channel"
     }
+  },
+  "game": {
+    "close": "Close the game",
+    "stuck": "The game isn't responding.",
+    "back": "Back"
   }
 }
