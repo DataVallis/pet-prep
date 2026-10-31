@@ -5,32 +5,37 @@
     "en": "Liver",
     "sl": "Jetra",
     "de": "Leber",
-    "fr": "Foie"
+    "fr": "Foie",
+    "es": "Hígado"
   },
   "question": {
     "en": "Can cats eat liver?",
     "sl": "Ali lahko mačke jedo jetra?",
     "de": "Dürfen Katzen Leber fressen?",
-    "fr": "Les chats peuvent-ils manger du foie ?"
+    "fr": "Les chats peuvent-ils manger du foie ?",
+    "es": "¿Pueden los gatos comer hígado?"
   },
   "url_slug": {
     "en": "liver",
     "sl": "jetra",
     "de": "leber",
-    "fr": "foie"
+    "fr": "foie",
+    "es": "higado"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Not as a home treat. Liver is very rich in vitamin A, and cats fed raw liver or a diet high in liver can develop vitamin A poisoning. Liver in a complete, balanced cat food is fine.",
     "sl": "Ne kot domači priboljšek. Jetra so zelo bogata z vitaminom A, pri mačkah, ki dobivajo surova jetra ali prehrano z veliko jeter, pa se lahko razvije zastrupitev z vitaminom A. Jetra v popolni, uravnoteženi mačji hrani so v redu.",
     "de": "Nicht als Leckerli aus der eigenen Küche. Leber ist sehr reich an Vitamin A, und Katzen, die rohe Leber oder leberreiches Futter bekommen, können eine Vitamin-A-Vergiftung entwickeln. Leber in einem vollständigen, ausgewogenen Katzenfutter ist in Ordnung.",
-    "fr": "Pas en friandise maison. Le foie est très riche en vitamine A, et les chats nourris de foie cru ou d’une alimentation riche en foie peuvent développer une intoxication à la vitamine A. Le foie contenu dans un aliment complet et équilibré pour chats ne pose pas de problème."
+    "fr": "Pas en friandise maison. Le foie est très riche en vitamine A, et les chats nourris de foie cru ou d’une alimentation riche en foie peuvent développer une intoxication à la vitamine A. Le foie contenu dans un aliment complet et équilibré pour chats ne pose pas de problème.",
+    "es": "No como premio casero. El hígado es muy rico en vitamina A, y los gatos que comen hígado crudo o una dieta con mucho hígado pueden sufrir una intoxicación por vitamina A. El hígado que forma parte de una comida para gatos completa y equilibrada no es un problema."
   },
   "why": {
     "en": "VCA says vitamin A poisoning most commonly occurs when pets are fed raw liver or vitamin A-rich supplements over weeks to months. The Merck Veterinary Manual notes that in cats it can occur when growing kittens are fed a diet high in liver, and that feeding only liver can cause it. VCA recommends a commercially prepared, balanced diet instead.",
     "sl": "VCA navaja, da se zastrupitev z vitaminom A najpogosteje pojavi, ko živali več tednov ali mesecev dobivajo surova jetra ali dodatke, bogate z vitaminom A. Merckov veterinarski priročnik navaja, da se pri mačkah lahko pojavi, ko mladiči dobivajo prehrano z veliko jeter, in da jo lahko povzroči hranjenje samo z jetri. VCA namesto tega priporoča komercialno pripravljeno, uravnoteženo prehrano.",
     "de": "Laut VCA tritt eine Vitamin-A-Vergiftung am häufigsten auf, wenn Tiere über Wochen bis Monate rohe Leber oder Vitamin-A-reiche Ergänzungsmittel bekommen. Laut dem Merck Veterinary Manual kann sie bei Katzen auftreten, wenn wachsende Kätzchen leberreich gefüttert werden, und reine Leberfütterung kann sie auslösen. VCA empfiehlt stattdessen ein ausgewogenes Fertigfutter.",
-    "fr": "Selon VCA, l’intoxication à la vitamine A survient le plus souvent lorsque les animaux reçoivent du foie cru ou des compléments riches en vitamine A pendant des semaines, voire des mois. Le Merck Veterinary Manual indique que chez le chat, elle peut survenir quand des chatons en croissance reçoivent une alimentation riche en foie, et qu’une alimentation composée uniquement de foie peut la provoquer. VCA recommande plutôt un aliment industriel équilibré."
+    "fr": "Selon VCA, l’intoxication à la vitamine A survient le plus souvent lorsque les animaux reçoivent du foie cru ou des compléments riches en vitamine A pendant des semaines, voire des mois. Le Merck Veterinary Manual indique que chez le chat, elle peut survenir quand des chatons en croissance reçoivent une alimentation riche en foie, et qu’une alimentation composée uniquement de foie peut la provoquer. VCA recommande plutôt un aliment industriel équilibré.",
+    "es": "VCA indica que la intoxicación por vitamina A se produce sobre todo cuando a las mascotas se les da hígado crudo o suplementos ricos en vitamina A durante semanas o meses. El Manual Merck de Veterinaria señala que en los gatos puede aparecer cuando a gatitos en crecimiento se les da una dieta con mucho hígado, y que dar solo hígado puede provocarla. En su lugar, VCA recomienda una dieta comercial equilibrada."
   },
   "signs": {
     "en": [
@@ -64,20 +69,30 @@
       "Faiblesse",
       "Mouvements douloureux ou limités",
       "Vomissements ou somnolence après une très grande quantité"
+    ],
+    "es": [
+      "Pelaje en mal estado o áspero",
+      "Piel seca",
+      "Pérdida de peso",
+      "Debilidad",
+      "Movimientos dolorosos o limitados",
+      "Vómitos o somnolencia tras una cantidad muy grande"
     ]
   },
   "what_to_do": {
     "en": "Vitamin A poisoning usually builds up over weeks to months, so don't feed liver regularly at home. If your cat has been eating a lot of liver and you notice a rough coat, weight loss, weakness or painful movement, talk to your vet.",
     "sl": "Zastrupitev z vitaminom A se običajno razvija več tednov ali mesecev, zato doma jeter ne dajajte redno. Če je mačka jedla veliko jeter in opazite grobo dlako, hujšanje, šibkost ali boleče gibanje, se posvetujte z veterinarjem.",
     "de": "Eine Vitamin-A-Vergiftung entwickelt sich meist über Wochen bis Monate. Füttern Sie Leber deshalb nicht regelmäßig selbst zu. Wenn Ihre Katze viel Leber gefressen hat und Ihnen struppiges Fell, Gewichtsverlust, Schwäche oder schmerzhafte Bewegungen auffallen, sprechen Sie mit Ihrem Tierarzt.",
-    "fr": "L’intoxication à la vitamine A s’installe généralement sur des semaines, voire des mois : ne donnez donc pas régulièrement de foie à la maison. Si votre chat a mangé beaucoup de foie et que vous remarquez un pelage rêche, une perte de poids, de la faiblesse ou des mouvements douloureux, parlez-en à votre vétérinaire."
+    "fr": "L’intoxication à la vitamine A s’installe généralement sur des semaines, voire des mois : ne donnez donc pas régulièrement de foie à la maison. Si votre chat a mangé beaucoup de foie et que vous remarquez un pelage rêche, une perte de poids, de la faiblesse ou des mouvements douloureux, parlez-en à votre vétérinaire.",
+    "es": "La intoxicación por vitamina A suele desarrollarse a lo largo de semanas o meses, así que no le des hígado en casa de forma habitual. Si tu gato ha estado comiendo mucho hígado y notas el pelaje áspero, pérdida de peso, debilidad o que se mueve con dolor, habla con tu veterinario."
   },
   "serving": null,
   "child": {
     "en": "Liver has lots of one vitamin, and too much isn't good for cats. Their cat food already has the right amount.",
     "sl": "Jetra imajo veliko enega vitamina, preveč pa za mucke ni dobro. Njihova mačja hrana ga že ima ravno prav.",
     "de": "Leber hat sehr viel von einem Vitamin, und zu viel davon ist nicht gut für Katzen. Im Katzenfutter ist schon die richtige Menge drin.",
-    "fr": "Le foie est plein d’une certaine vitamine, et trop, ce n’est pas bon pour les chats. Leur nourriture en contient déjà juste ce qu’il faut."
+    "fr": "Le foie est plein d’une certaine vitamine, et trop, ce n’est pas bon pour les chats. Leur nourriture en contient déjà juste ce qu’il faut.",
+    "es": "El hígado tiene muchísimo de una vitamina, y demasiada no es buena para los gatos. Su comida para gatos ya lleva la cantidad justa."
   },
   "faq": [
     {
@@ -85,13 +100,15 @@
         "en": "My cat food lists liver. Is that a problem?",
         "sl": "Moja mačja hrana vsebuje jetra. Je to težava?",
         "de": "In meinem Katzenfutter steht Leber. Ist das ein Problem?",
-        "fr": "La composition de l’aliment de mon chat mentionne du foie. Est-ce un problème ?"
+        "fr": "La composition de l’aliment de mon chat mentionne du foie. Est-ce un problème ?",
+        "es": "La comida de mi gato lleva hígado. ¿Es un problema?"
       },
       "a": {
         "en": "No. Liver is a common ingredient in canned cat foods, and a complete, balanced cat food is what vets recommend.",
         "sl": "Ne. Jetra so pogosta sestavina v konzervirani mačji hrani, veterinarji pa priporočajo prav popolno, uravnoteženo mačjo hrano.",
         "de": "Nein. Leber ist eine häufige Zutat in Katzenfutter aus der Dose, und Tierärzte empfehlen ein vollständiges, ausgewogenes Katzenfutter.",
-        "fr": "Non. Le foie est un ingrédient courant des pâtées pour chats, et les vétérinaires recommandent un aliment complet et équilibré pour chats."
+        "fr": "Non. Le foie est un ingrédient courant des pâtées pour chats, et les vétérinaires recommandent un aliment complet et équilibré pour chats.",
+        "es": "No. El hígado es un ingrediente habitual en la comida húmeda para gatos, y una comida para gatos completa y equilibrada es lo que recomiendan los veterinarios."
       }
     }
   ],
@@ -151,6 +168,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "09622840087446e54655fab9f261637b699d8530f6b26d7478ef4e0575123830"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8ed646897c47ccf6f17d30b84845dd348e2e77863f425fee1d427d578841f965"
     }
   }
 }

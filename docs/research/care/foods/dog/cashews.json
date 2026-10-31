@@ -5,51 +5,59 @@
     "en": "Cashews",
     "sl": "Indijski oreščki",
     "de": "Cashewnüsse",
-    "fr": "Noix de cajou"
+    "fr": "Noix de cajou",
+    "es": "Anacardos"
   },
   "question": {
     "en": "Can dogs eat cashews?",
     "sl": "Ali lahko psi jedo indijske oreščke?",
     "de": "Dürfen Hunde Cashewnüsse fressen?",
-    "fr": "Les chiens peuvent-ils manger des noix de cajou ?"
+    "fr": "Les chiens peuvent-ils manger des noix de cajou ?",
+    "es": "¿Pueden los perros comer anacardos?"
   },
   "url_slug": {
     "en": "cashews",
     "sl": "indijski-orescki",
     "de": "cashewnuesse",
-    "fr": "noix-de-cajou"
+    "fr": "noix-de-cajou",
+    "es": "anacardos"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a few plain cashews as an occasional treat are generally safe: shelled, unsalted and unseasoned. They are high in fat, so too many can cause tummy upset or pancreatitis. Avoid mixed nuts, which may contain toxic macadamia nuts.",
     "sl": "Da, nekaj navadnih indijskih oreščkov kot občasen priboljšek je na splošno varnih: oluščenih, nesoljenih in nezačinjenih. So zelo mastni, zato jih preveč lahko razdraži prebavo ali povzroči vnetje trebušne slinavke. Izogibajte se mešanicam oreščkov, ki lahko vsebujejo strupeno makadamijo.",
     "de": "Ja, ein paar naturbelassene Cashewnüsse als gelegentliches Leckerli sind im Allgemeinen unbedenklich: geschält, ungesalzen und ungewürzt. Sie sind fettreich, daher können zu viele zu Magen-Darm-Beschwerden oder einer Bauchspeicheldrüsenentzündung (Pankreatitis) führen. Meiden Sie Nussmischungen, die giftige Macadamianüsse enthalten können.",
-    "fr": "Oui, quelques noix de cajou nature, en friandise occasionnelle, sont généralement sans danger : décortiquées, non salées et sans assaisonnement. Elles sont riches en graisses ; en trop grande quantité, elles peuvent causer des troubles digestifs ou une pancréatite. Évitez les mélanges de fruits à coque, qui peuvent contenir des noix de macadamia toxiques."
+    "fr": "Oui, quelques noix de cajou nature, en friandise occasionnelle, sont généralement sans danger : décortiquées, non salées et sans assaisonnement. Elles sont riches en graisses ; en trop grande quantité, elles peuvent causer des troubles digestifs ou une pancréatite. Évitez les mélanges de fruits à coque, qui peuvent contenir des noix de macadamia toxiques.",
+    "es": "Sí, unos pocos anacardos naturales como premio ocasional suelen ser seguros: pelados, sin sal y sin condimentos. Tienen mucha grasa, así que demasiados pueden causar malestar de barriga o pancreatitis. Evita las mezclas de frutos secos, que pueden llevar nueces de macadamia, que son tóxicas."
   },
   "why": {
     "en": "Cashews aren't toxic, but they are a high-fat snack: eating too many can lead to tummy upset, pancreatitis and weight gain. Salted cashews add salt, which in excess is harmful. The biggest risk comes from other nuts in a mix, such as macadamias. Some dogs may react with swelling, itching or hives.",
     "sl": "Indijski oreščki niso strupeni, so pa zelo mastni: preveč jih lahko povzroči prebavne težave, vnetje trebušne slinavke in debelost. Soljeni dodajo sol, ki v prevelikih količinah škoduje. Največje tveganje so drugi oreščki v mešanici, na primer makadamija. Nekateri psi se lahko odzovejo z oteklino, srbenjem ali koprivnico.",
     "de": "Cashewnüsse sind nicht giftig, aber ein fettreicher Snack: Zu viele können zu Magen-Darm-Beschwerden, einer Pankreatitis und Gewichtszunahme führen. Gesalzene Cashewnüsse liefern zusätzlich Salz, das in zu großen Mengen schädlich ist. Das größte Risiko geht von anderen Nüssen in einer Mischung aus, etwa Macadamianüssen. Manche Hunde reagieren mit Schwellungen, Juckreiz oder Nesselausschlag.",
-    "fr": "Les noix de cajou ne sont pas toxiques, mais c’est un en-cas riche en graisses : en manger trop peut entraîner des troubles digestifs, une pancréatite et une prise de poids. Salées, elles apportent du sel, nocif en excès. Le plus grand risque vient des autres fruits à coque d’un mélange, comme les noix de macadamia. Certains chiens peuvent réagir par un gonflement, des démangeaisons ou de l’urticaire."
+    "fr": "Les noix de cajou ne sont pas toxiques, mais c’est un en-cas riche en graisses : en manger trop peut entraîner des troubles digestifs, une pancréatite et une prise de poids. Salées, elles apportent du sel, nocif en excès. Le plus grand risque vient des autres fruits à coque d’un mélange, comme les noix de macadamia. Certains chiens peuvent réagir par un gonflement, des démangeaisons ou de l’urticaire.",
+    "es": "Los anacardos no son tóxicos, pero son un tentempié con mucha grasa: comer demasiados puede provocar malestar de barriga, pancreatitis y aumento de peso. Los anacardos salados añaden sal, que en exceso es perjudicial. El mayor riesgo viene de otros frutos secos de la mezcla, como las nueces de macadamia. Algunos perros pueden reaccionar con hinchazón, picor o ronchas."
   },
   "signs": null,
   "what_to_do": {
     "en": "Watch for vomiting, diarrhoea, swelling, itching or hives and call your vet if they appear. If your dog ate a large amount, salted nuts or a mix that may contain macadamia nuts, call your vet straight away.",
     "sl": "Opazujte, ali se pojavijo bruhanje, driska, oteklina, srbenje ali koprivnica, in če se, pokličite veterinarja. Če je pes pojedel veliko oreščkov, soljene oreščke ali mešanico, ki lahko vsebuje makadamijo, takoj pokličite veterinarja.",
     "de": "Achten Sie auf Erbrechen, Durchfall, Schwellungen, Juckreiz oder Nesselausschlag und rufen Sie Ihren Tierarzt an, wenn diese auftreten. Hat Ihr Hund eine große Menge, gesalzene Nüsse oder eine Mischung gefressen, die Macadamianüsse enthalten könnte, rufen Sie sofort Ihren Tierarzt an.",
-    "fr": "Surveillez les vomissements, la diarrhée, un gonflement, des démangeaisons ou de l’urticaire, et appelez votre vétérinaire s’ils apparaissent. Si votre chien en a mangé une grande quantité, des fruits à coque salés ou un mélange pouvant contenir des noix de macadamia, appelez immédiatement votre vétérinaire."
+    "fr": "Surveillez les vomissements, la diarrhée, un gonflement, des démangeaisons ou de l’urticaire, et appelez votre vétérinaire s’ils apparaissent. Si votre chien en a mangé une grande quantité, des fruits à coque salés ou un mélange pouvant contenir des noix de macadamia, appelez immédiatement votre vétérinaire.",
+    "es": "Vigila si aparecen vómitos, diarrea, hinchazón, picor o ronchas y, si aparecen, llama a tu veterinario. Si tu perro ha comido una gran cantidad, frutos secos salados o una mezcla que pueda llevar nueces de macadamia, llama a tu veterinario enseguida."
   },
   "serving": {
     "en": "Only a few plain cashews, shelled and unsalted, never from a mixed-nut bag.",
     "sl": "Le nekaj navadnih indijskih oreščkov, oluščenih in nesoljenih, nikoli iz mešanice oreščkov.",
     "de": "Nur ein paar naturbelassene Cashewnüsse, geschält und ungesalzen, niemals aus einer Tüte Nussmischung.",
-    "fr": "Seulement quelques noix de cajou nature, décortiquées et non salées, jamais prises dans un sachet de fruits à coque mélangés."
+    "fr": "Seulement quelques noix de cajou nature, décortiquées et non salées, jamais prises dans un sachet de fruits à coque mélangés.",
+    "es": "Solo unos pocos anacardos naturales, pelados y sin sal, nunca de una bolsa de frutos secos variados."
   },
   "child": {
     "en": "A dog may have one or two plain cashews sometimes. Salty nut mixes are not for dogs.",
     "sl": "Pes lahko včasih dobi enega ali dva navadna indijska oreščka. Slane mešanice oreščkov niso za pse.",
     "de": "Ein Hund darf ab und zu ein oder zwei naturbelassene Cashewnüsse haben. Salzige Nussmischungen sind nichts für Hunde.",
-    "fr": "Un chien peut manger une ou deux noix de cajou nature de temps en temps. Les mélanges de fruits à coque salés ne sont pas pour les chiens."
+    "fr": "Un chien peut manger une ou deux noix de cajou nature de temps en temps. Les mélanges de fruits à coque salés ne sont pas pour les chiens.",
+    "es": "Un perro puede comer uno o dos anacardos naturales de vez en cuando. Las mezclas de frutos secos saladas no son para perros."
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "Why not mixed nuts?",
         "sl": "Zakaj ne mešanica oreščkov?",
         "de": "Warum keine Nussmischungen?",
-        "fr": "Pourquoi éviter les mélanges de fruits à coque ?"
+        "fr": "Pourquoi éviter les mélanges de fruits à coque ?",
+        "es": "¿Por qué no los frutos secos variados?"
       },
       "a": {
         "en": "Mixes may contain macadamia nuts, which are very toxic to dogs, and are often salted.",
         "sl": "Mešanice lahko vsebujejo makadamijo, ki je za pse zelo strupena, in so pogosto soljene.",
         "de": "Mischungen können Macadamianüsse enthalten, die für Hunde sehr giftig sind, und sind oft gesalzen.",
-        "fr": "Les mélanges peuvent contenir des noix de macadamia, très toxiques pour les chiens, et sont souvent salés."
+        "fr": "Les mélanges peuvent contenir des noix de macadamia, très toxiques pour les chiens, et sont souvent salés.",
+        "es": "Las mezclas pueden llevar nueces de macadamia, que son muy tóxicas para los perros, y a menudo están saladas."
       }
     }
   ],
@@ -145,6 +155,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f723f399679e3476ec6eb692101cc7c345d745406024ac2fdeb0ea257caca3bc"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "788adf678d6b0ee41c57dfcdcc77e5dee684383e9921e78d23e564aea8431d7e"
     }
   }
 }

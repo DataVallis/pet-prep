@@ -5,32 +5,37 @@
     "en": "Raw bones",
     "sl": "Surove kosti",
     "de": "Rohe Knochen",
-    "fr": "Os crus"
+    "fr": "Os crus",
+    "es": "Huesos crudos"
   },
   "question": {
     "en": "Can cats eat raw bones?",
     "sl": "Ali lahko mačke jedo surove kosti?",
     "de": "Dürfen Katzen rohe Knochen fressen?",
-    "fr": "Les chats peuvent-ils manger des os crus ?"
+    "fr": "Les chats peuvent-ils manger des os crus ?",
+    "es": "¿Pueden los gatos comer huesos crudos?"
   },
   "url_slug": {
     "en": "raw-bones",
     "sl": "surove-kosti",
     "de": "rohe-knochen",
-    "fr": "os-crus"
+    "fr": "os-crus",
+    "es": "huesos-crudos"
   },
   "level": "dangerous",
   "answer": {
     "en": "It's best not to. Cats Protection advises avoiding raw bones because they increase the risk of choking or a blockage in the stomach. Bones can also injure a cat's gut, and raw meat may carry harmful bacteria and parasites.",
     "sl": "Raje ne. Cats Protection svetuje, naj se surovim kostem izogibamo, ker povečajo tveganje za dušenje ali zaporo v želodcu. Kosti lahko poškodujejo tudi mačja prebavila, surovo meso pa lahko vsebuje škodljive bakterije in zajedavce.",
     "de": "Besser nicht. Cats Protection rät von rohen Knochen ab, weil sie das Risiko von Ersticken oder einer Blockade im Magen erhöhen. Knochen können außerdem den Magen-Darm-Trakt einer Katze verletzen, und rohes Fleisch kann schädliche Bakterien und Parasiten enthalten.",
-    "fr": "Mieux vaut s’en abstenir. Cats Protection conseille d’éviter les os crus, car ils augmentent le risque d’étouffement ou d’occlusion de l’estomac. Les os peuvent aussi blesser l’intestin du chat, et la viande crue peut contenir des bactéries et des parasites dangereux."
+    "fr": "Mieux vaut s’en abstenir. Cats Protection conseille d’éviter les os crus, car ils augmentent le risque d’étouffement ou d’occlusion de l’estomac. Les os peuvent aussi blesser l’intestin du chat, et la viande crue peut contenir des bactéries et des parasites dangereux.",
+    "es": "Mejor que no. Cats Protection aconseja evitar los huesos crudos porque aumentan el riesgo de atragantamiento o de obstrucción en el estómago. Los huesos también pueden lesionar el aparato digestivo del gato, y la carne cruda puede contener bacterias y parásitos dañinos."
   },
   "why": {
     "en": "Swallowed bones can injure or block the gut, which can be serious and may need surgery. Raw meat attached to bones may also contain harmful bacteria and parasites.",
     "sl": "Pogoltnjene kosti lahko poškodujejo ali zamašijo prebavila, kar je lahko resno in lahko zahteva operacijo. Surovo meso na kosteh lahko vsebuje tudi škodljive bakterije in zajedavce.",
     "de": "Verschluckte Knochen können den Magen-Darm-Trakt verletzen oder blockieren. Das kann ernst sein und eine Operation erforderlich machen. Rohes Fleisch an den Knochen kann außerdem schädliche Bakterien und Parasiten enthalten.",
-    "fr": "Avalés, les os peuvent blesser ou boucher l’intestin, ce qui peut être grave et nécessiter une opération. La viande crue restée sur les os peut aussi contenir des bactéries et des parasites dangereux."
+    "fr": "Avalés, les os peuvent blesser ou boucher l’intestin, ce qui peut être grave et nécessiter une opération. La viande crue restée sur les os peut aussi contenir des bactéries et des parasites dangereux.",
+    "es": "Los huesos tragados pueden lesionar u obstruir el aparato digestivo, lo que puede ser grave y requerir cirugía. La carne cruda que queda pegada a los huesos también puede contener bacterias y parásitos dañinos."
   },
   "signs": {
     "en": [
@@ -52,20 +57,27 @@
       "Étouffement",
       "Vomissements",
       "Douleurs au ventre (il se cache, grogne, ne veut pas être touché)"
+    ],
+    "es": [
+      "Atragantamiento",
+      "Vómitos",
+      "Dolor de barriga (se esconde, gruñe, no quiere que lo toquen)"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet right away if your cat swallowed a bone or is choking or vomiting. Note what kind of bone it was and when. Don't wait to see what happens, and don't try to make your cat sick at home.",
     "sl": "Takoj pokličite veterinarja, če je muca pogoltnila kost ali se duši ali bruha. Zapišite, kakšna kost je bila in kdaj. Ne čakajte, kaj se bo zgodilo, in muce doma ne poskušajte spraviti k bruhanju.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt, wenn Ihre Katze einen Knochen verschluckt hat, zu ersticken droht oder erbricht. Notieren Sie, was für ein Knochen es war und wann es passiert ist. Warten Sie nicht ab, was passiert, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
-    "fr": "Contactez immédiatement votre vétérinaire si votre chat a avalé un os, s’étouffe ou vomit. Notez de quel os il s’agissait et à quelle heure. N’attendez pas de voir ce qui se passe et n’essayez pas de faire vomir votre chat vous-même."
+    "fr": "Contactez immédiatement votre vétérinaire si votre chat a avalé un os, s’étouffe ou vomit. Notez de quel os il s’agissait et à quelle heure. N’attendez pas de voir ce qui se passe et n’essayez pas de faire vomir votre chat vous-même.",
+    "es": "Contacta enseguida con tu veterinario si tu gato se ha tragado un hueso, se está atragantando o vomita. Anota qué tipo de hueso era y cuándo ocurrió. No esperes a ver qué pasa y no intentes hacer vomitar a tu gato en casa."
   },
   "serving": null,
   "child": {
     "en": "Bones can get stuck in a cat's throat or tummy. Leave bones out of kitty's bowl and tell a grown-up if she finds one.",
     "sl": "Kosti se lahko muci zataknejo v grlu ali trebuščku. V mucini skledi naj ne bo kosti. Če jo najde, povej odraslemu.",
     "de": "Knochen können einer Katze im Hals oder im Bauch stecken bleiben. Lass Knochen aus dem Napf deiner Katze und sag einem Erwachsenen Bescheid, wenn sie einen findet.",
-    "fr": "Les os peuvent rester coincés dans la gorge ou le ventre de ton chat. Ne mets pas d’os dans sa gamelle et préviens un adulte s’il en trouve un."
+    "fr": "Les os peuvent rester coincés dans la gorge ou le ventre de ton chat. Ne mets pas d’os dans sa gamelle et préviens un adulte s’il en trouve un.",
+    "es": "Los huesos pueden quedarse atascados en la garganta o la barriga de un gato. No pongas huesos en su cuenco y avisa a un adulto si encuentra uno."
   },
   "faq": [],
   "sources": [
@@ -129,6 +141,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "052e02d3648966df2b280cd152e52d19e5fd17d22f8e1e509c27474e215b317d"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "efedf04be4c815a615807655929d4881cb69b8560bedf32dacb632fda69aee30"
     }
   }
 }

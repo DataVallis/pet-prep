@@ -5,51 +5,59 @@
     "en": "Sardines",
     "sl": "Sardine",
     "de": "Sardinen",
-    "fr": "Sardines"
+    "fr": "Sardines",
+    "es": "Sardinas"
   },
   "question": {
     "en": "Can cats eat sardines?",
     "sl": "Ali lahko mačke jedo sardine?",
     "de": "Dürfen Katzen Sardinen fressen?",
-    "fr": "Les chats peuvent-ils manger des sardines ?"
+    "fr": "Les chats peuvent-ils manger des sardines ?",
+    "es": "¿Pueden los gatos comer sardinas?"
   },
   "url_slug": {
     "en": "sardines",
     "sl": "sardine",
     "de": "sardinen",
-    "fr": "sardines"
+    "fr": "sardines",
+    "es": "sardinas"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, as an occasional treat. Tinned sardines in spring water can be offered now and then, watching out for bones. They shouldn't become the main part of a cat's diet.",
     "sl": "Da, kot občasen priboljšek. Konzervirane sardine v izvirski vodi lahko ponudite občasno, pri čemer pazite na kosti. Ne smejo postati glavni del mačje prehrane.",
     "de": "Ja, als gelegentliches Leckerli. Sardinen aus der Dose in Quellwasser können Sie ab und zu anbieten; achten Sie dabei auf Gräten. Sie sollten nicht zum Hauptbestandteil der Ernährung einer Katze werden.",
-    "fr": "Oui, comme friandise occasionnelle. Les sardines en conserve au naturel (à l’eau) peuvent être proposées de temps en temps, en faisant attention aux arêtes. Elles ne doivent pas devenir l’essentiel de l’alimentation du chat."
+    "fr": "Oui, comme friandise occasionnelle. Les sardines en conserve au naturel (à l’eau) peuvent être proposées de temps en temps, en faisant attention aux arêtes. Elles ne doivent pas devenir l’essentiel de l’alimentation du chat.",
+    "es": "Sí, como premio ocasional. Las sardinas en lata al natural (en agua) se pueden ofrecer de vez en cuando, con cuidado con las espinas. No deben convertirse en la base de la alimentación del gato."
   },
   "why": {
     "en": "RSPCA Australia says fish such as tinned sardines in spring water can be offered as an occasional treat, taking care with bones, but are not suitable as the main part of the diet. Cats Protection advises fish be properly cooked, with bones removed, and given only a few pieces at a time.",
     "sl": "RSPCA Avstralija navaja, da je ribo, kot so konzervirane sardine v izvirski vodi, mogoče ponuditi kot občasen priboljšek, pri čemer je treba paziti na kosti, ni pa primerna kot glavni del prehrane. Cats Protection svetuje, naj bo riba dobro kuhana, brez kosti in naj je mačka dobi le nekaj koščkov naenkrat.",
     "de": "Laut RSPCA Australia kann Fisch wie Dosensardinen in Quellwasser gelegentlich als Leckerli angeboten werden, wobei auf Gräten zu achten ist; als Hauptbestandteil der Ernährung eignet er sich nicht. Cats Protection rät, Fisch richtig durchzugaren, die Gräten zu entfernen und nur wenige Stücke auf einmal zu geben.",
-    "fr": "Selon la RSPCA Australia, le poisson, comme les sardines en conserve au naturel (à l’eau), peut être proposé comme friandise occasionnelle, en faisant attention aux arêtes, mais ne convient pas comme base de l’alimentation. Cats Protection conseille de bien cuire le poisson, de retirer les arêtes et de n’en donner que quelques morceaux à la fois."
+    "fr": "Selon la RSPCA Australia, le poisson, comme les sardines en conserve au naturel (à l’eau), peut être proposé comme friandise occasionnelle, en faisant attention aux arêtes, mais ne convient pas comme base de l’alimentation. Cats Protection conseille de bien cuire le poisson, de retirer les arêtes et de n’en donner que quelques morceaux à la fois.",
+    "es": "RSPCA Australia dice que el pescado, como las sardinas en lata al natural (en agua), se puede ofrecer como premio ocasional, con cuidado con las espinas, pero no es adecuado como base de la alimentación. Cats Protection aconseja que el pescado esté bien cocinado y sin espinas, y que se den solo unos pocos trozos cada vez."
   },
   "signs": null,
   "what_to_do": {
     "en": "Offer a small piece first. If your cat gets vomiting or diarrhoea afterwards, stop and ask your vet.",
     "sl": "Najprej ponudite majhen košček. Če ima mačka potem bruhanje ali drisko, prenehajte in se posvetujte z veterinarjem.",
     "de": "Bieten Sie zuerst ein kleines Stück an. Bekommt Ihre Katze danach Erbrechen oder Durchfall, hören Sie auf und fragen Sie Ihren Tierarzt.",
-    "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou a la diarrhée ensuite, arrêtez et demandez conseil à votre vétérinaire."
+    "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou a la diarrhée ensuite, arrêtez et demandez conseil à votre vétérinaire.",
+    "es": "Ofrécele primero un trocito. Si después tu gato tiene vómitos o diarrea, deja de dárselo y consulta a tu veterinario."
   },
   "serving": {
     "en": "Tinned in spring water, with bones removed; a few pieces now and then.",
     "sl": "Konzervirane v izvirski vodi, z odstranjenimi kostmi; nekaj koščkov občasno.",
     "de": "Aus der Dose in Quellwasser, ohne Gräten; ab und zu ein paar Stücke.",
-    "fr": "En conserve au naturel (à l’eau), sans arêtes ; quelques morceaux de temps en temps."
+    "fr": "En conserve au naturel (à l’eau), sans arêtes ; quelques morceaux de temps en temps.",
+    "es": "En lata al natural (en agua) y sin espinas; unos trocitos de vez en cuando."
   },
   "child": {
     "en": "Sardines can be a little fishy treat for cats sometimes. A grown-up should check for bones.",
     "sl": "Sardine so lahko včasih majhen ribji priboljšek za mucke. Odrasel naj preveri, da ni kosti.",
     "de": "Sardinen können ab und zu ein kleines Fisch-Leckerli für Katzen sein. Ein Erwachsener sollte nach Gräten schauen.",
-    "fr": "Les sardines peuvent parfois être une petite friandise au goût de poisson pour les chats. Un adulte doit vérifier qu’il n’y a pas d’arêtes."
+    "fr": "Les sardines peuvent parfois être une petite friandise au goût de poisson pour les chats. Un adulte doit vérifier qu’il n’y a pas d’arêtes.",
+    "es": "Las sardinas pueden ser, alguna vez, un pequeño premio con sabor a pescado para los gatos. Un adulto debe revisar que no tengan espinas."
   },
   "faq": [],
   "sources": [
@@ -97,6 +105,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6a71305bda879732957840d1dfd05677f7dea1a7628efb86b0aa33405f3a0084"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "72298013e7838957811b7c3b803ac5ada690a6628daa6725daa868f5c69f5d70"
     }
   }
 }

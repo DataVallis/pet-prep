@@ -5,32 +5,37 @@
     "en": "Coffee",
     "sl": "Kava",
     "de": "Kaffee",
-    "fr": "Café"
+    "fr": "Café",
+    "es": "Café"
   },
   "question": {
     "en": "Can dogs drink coffee?",
     "sl": "Ali lahko psi pijejo kavo?",
     "de": "Dürfen Hunde Kaffee trinken?",
-    "fr": "Les chiens peuvent-ils boire du café ?"
+    "fr": "Les chiens peuvent-ils boire du café ?",
+    "es": "¿Pueden los perros beber café?"
   },
   "url_slug": {
     "en": "coffee",
     "sl": "kava",
     "de": "kaffee",
-    "fr": "cafe"
+    "fr": "cafe",
+    "es": "cafe"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Coffee contains caffeine, which is toxic to dogs; dogs are more sensitive to it than people. A lick or two is unlikely to cause poisoning, but coffee grounds and beans can cause serious toxicity. Chocolate-covered coffee beans are a double threat.",
     "sl": "Ne. Kava vsebuje kofein, ki je za pse strupen; psi so nanj bolj občutljivi kot ljudje. En ali dva polizka verjetno ne povzročita zastrupitve, mleta kava in kavna zrna pa lahko povzročijo hudo zastrupitev. Zrna, oblita s čokolado, so dvojna nevarnost.",
     "de": "Nein. Kaffee enthält Koffein, das für Hunde giftig ist; Hunde reagieren empfindlicher darauf als Menschen. Ein- oder zweimal Lecken führt kaum zu einer Vergiftung, aber Kaffeepulver und Kaffeebohnen können eine schwere Vergiftung verursachen. Schokolierte Kaffeebohnen sind eine doppelte Gefahr.",
-    "fr": "Non. Le café contient de la caféine, toxique pour les chiens, qui y sont plus sensibles que nous. Un ou deux coups de langue ont peu de chances de provoquer une intoxication, mais le marc et les grains de café peuvent causer une intoxication grave. Les grains de café enrobés de chocolat représentent une double menace."
+    "fr": "Non. Le café contient de la caféine, toxique pour les chiens, qui y sont plus sensibles que nous. Un ou deux coups de langue ont peu de chances de provoquer une intoxication, mais le marc et les grains de café peuvent causer une intoxication grave. Les grains de café enrobés de chocolat représentent une double menace.",
+    "es": "No. El café contiene cafeína, que es tóxica para los perros; los perros son más sensibles a ella que las personas. Es poco probable que un par de lametones causen una intoxicación, pero los posos y los granos de café pueden causar una intoxicación grave. Los granos de café cubiertos de chocolate son una doble amenaza."
   },
   "why": {
     "en": "Caffeine overstimulates the heart and nervous system. It is the same kind of substance that makes chocolate toxic. A lick or two of coffee is unlikely to poison, but unused coffee grounds and beans can cause serious toxicity, and chocolate-covered beans are a double threat.",
     "sl": "Kofein pretirano spodbuja srce in živčevje. Gre za isto vrsto snovi, zaradi katere je strupena čokolada. Polizek ali dva kave verjetno ne zastrupita, neuporabljena mleta kava in zrna pa lahko povzročijo hudo zastrupitev; zrna v čokoladi so dvojna nevarnost.",
     "de": "Koffein überreizt Herz und Nervensystem. Es ist die gleiche Art von Stoff, die Schokolade giftig macht. Ein- oder zweimal Lecken an Kaffee führt kaum zu einer Vergiftung, aber unbenutztes Kaffeepulver und Kaffeebohnen können eine schwere Vergiftung verursachen, und schokolierte Bohnen sind eine doppelte Gefahr.",
-    "fr": "La caféine surstimule le cœur et le système nerveux. C’est le même type de substance qui rend le chocolat toxique. Un ou deux coups de langue de café ont peu de chances d’intoxiquer, mais le marc non utilisé et les grains peuvent causer une intoxication grave, et les grains enrobés de chocolat représentent une double menace."
+    "fr": "La caféine surstimule le cœur et le système nerveux. C’est le même type de substance qui rend le chocolat toxique. Un ou deux coups de langue de café ont peu de chances d’intoxiquer, mais le marc non utilisé et les grains peuvent causer une intoxication grave, et les grains enrobés de chocolat représentent une double menace.",
+    "es": "La cafeína sobreestimula el corazón y el sistema nervioso. Es el mismo tipo de sustancia que hace que el chocolate sea tóxico. Es poco probable que uno o dos lametones de café intoxiquen, pero el café molido sin usar y los granos pueden causar una intoxicación grave, y los granos cubiertos de chocolate son una doble amenaza."
   },
   "signs": {
     "en": [
@@ -64,20 +69,30 @@
       "Bave",
       "Tremblements",
       "Urines plus fréquentes"
+    ],
+    "es": [
+      "Inquietud, hiperactividad, ir de un lado a otro sin parar",
+      "Latido rápido",
+      "Vómitos y diarrea",
+      "Babeo",
+      "Temblores",
+      "Orinar más"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline as soon as you realise your dog has had caffeine. Note what it was (drink, grounds, beans, tea bags) and roughly how much. Don't wait for signs: early treatment matters.",
     "sl": "Takoj ko opazite, da je pes zaužil kofein, pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj je bilo (pijača, mleta kava, zrna, čajne vrečke) in približno koliko. Ne čakajte na znake: zgodnje zdravljenje je pomembno.",
     "de": "Wenden Sie sich an Ihren Tierarzt oder einen Giftnotruf für Tiere, sobald Sie merken, dass Ihr Hund Koffein aufgenommen hat. Notieren Sie, was es war (Getränk, Kaffeepulver, Bohnen, Teebeutel) und ungefähr wie viel. Warten Sie nicht auf Anzeichen: Eine frühe Behandlung ist wichtig.",
-    "fr": "Contactez votre vétérinaire ou un centre antipoison vétérinaire dès que vous vous rendez compte que votre chien a consommé de la caféine. Notez ce que c’était (boisson, marc, grains, sachets de thé) et en quelle quantité approximative. N’attendez pas l’apparition des signes : un traitement précoce compte."
+    "fr": "Contactez votre vétérinaire ou un centre antipoison vétérinaire dès que vous vous rendez compte que votre chien a consommé de la caféine. Notez ce que c’était (boisson, marc, grains, sachets de thé) et en quelle quantité approximative. N’attendez pas l’apparition des signes : un traitement précoce compte.",
+    "es": "Contacta con tu veterinario o con una línea de información toxicológica para animales en cuanto te des cuenta de que tu perro ha tomado cafeína. Apunta qué era (bebida, posos, granos, bolsitas de té) y más o menos cuánto. No esperes a que aparezcan síntomas: tratarlo pronto es importante."
   },
   "serving": null,
   "child": {
     "en": "Coffee is a grown-up drink and is not for dogs. Keep cups and coffee beans out of reach.",
     "sl": "Kava je pijača za odrasle in ni za pse. Skodelice in kavna zrna pospravi izven dosega.",
     "de": "Kaffee ist ein Getränk für Erwachsene, nicht für Hunde. Stell Tassen und Kaffeebohnen außer Reichweite.",
-    "fr": "Le café est une boisson de grands et n’est pas pour les chiens. Range les tasses et les grains de café hors de portée."
+    "fr": "Le café est une boisson de grands et n’est pas pour les chiens. Range les tasses et les grains de café hors de portée.",
+    "es": "El café es una bebida de adultos y no es para perros. Guarda las tazas y los granos de café donde el perro no llegue."
   },
   "faq": [
     {
@@ -85,13 +100,15 @@
         "en": "My dog licked my cup. Is that an emergency?",
         "sl": "Pes je polizal mojo skodelico. Je to nujno?",
         "de": "Mein Hund hat an meiner Tasse geleckt. Ist das ein Notfall?",
-        "fr": "Mon chien a léché ma tasse. Est-ce une urgence ?"
+        "fr": "Mon chien a léché ma tasse. Est-ce une urgence ?",
+        "es": "Mi perro ha lamido mi taza. ¿Es una urgencia?"
       },
       "a": {
         "en": "One or two licks are unlikely to poison most dogs. If your dog drank more, or ate grounds, beans or tea bags, call your vet or a pet poison helpline.",
         "sl": "En ali dva polizka večine psov verjetno ne zastrupita. Če je pes popil več ali pojedel mleto kavo, zrna ali čajne vrečke, pokličite veterinarja ali center za zastrupitve živali.",
         "de": "Ein- oder zweimal Lecken führt bei den meisten Hunden kaum zu einer Vergiftung. Hat Ihr Hund mehr getrunken oder Kaffeepulver, Bohnen oder Teebeutel gefressen, rufen Sie Ihren Tierarzt oder einen Giftnotruf für Tiere an.",
-        "fr": "Un ou deux coups de langue ont peu de chances d’intoxiquer la plupart des chiens. Si votre chien en a bu davantage, ou a mangé du marc, des grains ou des sachets de thé, appelez votre vétérinaire ou un centre antipoison vétérinaire."
+        "fr": "Un ou deux coups de langue ont peu de chances d’intoxiquer la plupart des chiens. Si votre chien en a bu davantage, ou a mangé du marc, des grains ou des sachets de thé, appelez votre vétérinaire ou un centre antipoison vétérinaire.",
+        "es": "Es poco probable que uno o dos lametones intoxiquen a la mayoría de los perros. Si ha bebido más, o se ha comido posos, granos o bolsitas de té, llama a tu veterinario o a una línea de información toxicológica para animales."
       }
     },
     {
@@ -99,13 +116,15 @@
         "en": "Are coffee grounds dangerous?",
         "sl": "Je nevarna tudi mleta kava?",
         "de": "Ist Kaffeepulver gefährlich?",
-        "fr": "Le marc de café est-il dangereux ?"
+        "fr": "Le marc de café est-il dangereux ?",
+        "es": "¿Los posos de café son peligrosos?"
       },
       "a": {
         "en": "Coffee grounds are a known source of caffeine for pets. Keep grounds and beans away from your dog and call your vet if it eats some.",
         "sl": "Mleta kava je znan vir kofeina za živali. Mleto kavo in zrna hranite stran od psa in pokličite veterinarja, če jih poje.",
         "de": "Kaffeepulver ist eine bekannte Koffeinquelle für Haustiere. Halten Sie Kaffeepulver und Bohnen von Ihrem Hund fern und rufen Sie Ihren Tierarzt an, wenn er davon frisst.",
-        "fr": "Le marc de café est une source connue de caféine pour les animaux. Tenez le marc et les grains hors de portée de votre chien et appelez votre vétérinaire s’il en mange."
+        "fr": "Le marc de café est une source connue de caféine pour les animaux. Tenez le marc et les grains hors de portée de votre chien et appelez votre vétérinaire s’il en mange.",
+        "es": "Los posos de café son una fuente conocida de cafeína para las mascotas. Mantén los posos y los granos lejos de tu perro y llama a tu veterinario si se come algunos."
       }
     }
   ],
@@ -210,6 +229,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "18d604d0fdb97cdb9d1a784bd2ee6d35c31e66e38cb5330b7c8ec10000b4bab5"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "806cb1689214c931dfbcc1efbfc5ac67d31f23de63c53f81c98e466b3eff70ee"
     }
   }
 }

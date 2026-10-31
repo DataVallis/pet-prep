@@ -5,32 +5,37 @@
     "en": "Ice cream",
     "sl": "Sladoled",
     "de": "Eis",
-    "fr": "Glace"
+    "fr": "Glace",
+    "es": "Helado"
   },
   "question": {
     "en": "Can dogs eat ice cream?",
     "sl": "Ali lahko psi jedo sladoled?",
     "de": "Dürfen Hunde Eis fressen?",
-    "fr": "Les chiens peuvent-ils manger de la glace ?"
+    "fr": "Les chiens peuvent-ils manger de la glace ?",
+    "es": "¿Pueden los perros comer helado?"
   },
   "url_slug": {
     "en": "ice-cream",
     "sl": "sladoled",
     "de": "eis",
-    "fr": "glace"
+    "fr": "glace",
+    "es": "helado"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, it is best not to. Ice cream is full of lactose, fat and sugar, which can upset a dog's tummy, and some flavours contain chocolate or the sweetener xylitol, which are toxic to dogs.",
     "sl": "Ne, bolje ne. Sladoled je poln laktoze, maščobe in sladkorja, ki lahko psu razdražijo prebavo, nekateri okusi pa vsebujejo čokolado ali sladilo ksilitol, ki sta za pse strupena.",
     "de": "Nein, besser nicht. Eis steckt voller Laktose, Fett und Zucker, die einem Hund auf den Magen schlagen können, und manche Sorten enthalten Schokolade oder den Süßstoff Xylit, die für Hunde giftig sind.",
-    "fr": "Non, mieux vaut éviter. La glace est pleine de lactose, de graisses et de sucre, qui peuvent dérégler l’estomac d’un chien, et certains parfums contiennent du chocolat ou un édulcorant, le xylitol, toxiques pour les chiens."
+    "fr": "Non, mieux vaut éviter. La glace est pleine de lactose, de graisses et de sucre, qui peuvent dérégler l’estomac d’un chien, et certains parfums contiennent du chocolat ou un édulcorant, le xylitol, toxiques pour les chiens.",
+    "es": "No, mejor que no. El helado está lleno de lactosa, grasa y azúcar, que pueden sentarle mal a la barriga de un perro, y algunos sabores llevan chocolate o el edulcorante xilitol, que son tóxicos para los perros."
   },
   "why": {
     "en": "Many adult dogs are lactose intolerant to some degree and cannot digest milk products properly. High-fat dairy can cause pancreatitis, and the sugar adds to weight gain. Even 'sugar-free' ice cream may contain xylitol, and chocolate flavours are toxic.",
     "sl": "Mnogi odrasli psi do neke mere ne prenašajo laktoze in mlečnih izdelkov ne prebavijo dobro. Zelo mastni mlečni izdelki lahko povzročijo vnetje trebušne slinavke, sladkor pa prispeva k debelosti. Tudi sladoled »brez sladkorja« lahko vsebuje ksilitol, čokoladni okusi pa so strupeni.",
     "de": "Viele erwachsene Hunde sind mehr oder weniger laktoseintolerant und können Milchprodukte nicht richtig verdauen. Fettreiche Milchprodukte können eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen, und der Zucker trägt zur Gewichtszunahme bei. Selbst „zuckerfreies“ Eis kann Xylit enthalten, und Schokoladensorten sind giftig.",
-    "fr": "Beaucoup de chiens adultes sont plus ou moins intolérants au lactose et ne digèrent pas bien les produits laitiers. Les produits laitiers riches en graisses peuvent provoquer une pancréatite, et le sucre favorise la prise de poids. Même une glace « sans sucre » peut contenir du xylitol, et les parfums au chocolat sont toxiques."
+    "fr": "Beaucoup de chiens adultes sont plus ou moins intolérants au lactose et ne digèrent pas bien les produits laitiers. Les produits laitiers riches en graisses peuvent provoquer une pancréatite, et le sucre favorise la prise de poids. Même une glace « sans sucre » peut contenir du xylitol, et les parfums au chocolat sont toxiques.",
+    "es": "Muchos perros adultos tienen cierto grado de intolerancia a la lactosa y no digieren bien los productos lácteos. Los lácteos con mucha grasa pueden provocar pancreatitis, y el azúcar hace engordar. Incluso el helado «sin azúcar» puede llevar xilitol, y los sabores de chocolate son tóxicos."
   },
   "signs": {
     "en": [
@@ -52,25 +57,33 @@
       "Diarrhée ou autres troubles digestifs",
       "Vomissements",
       "Douleurs au ventre, nausées ou manque d’énergie (pancréatite possible)"
+    ],
+    "es": [
+      "Diarrea u otras molestias de barriga",
+      "Vómitos",
+      "Dolor de barriga, náuseas o poca energía (posible pancreatitis)"
     ]
   },
   "what_to_do": {
     "en": "A lick of plain vanilla ice cream usually only needs watching for tummy upset. If the ice cream contained chocolate or xylitol, contact your vet or a pet poison helpline right away, note what and how much was eaten, and don't wait for signs.",
     "sl": "Pri polizku navadnega vanilijevega sladoleda običajno zadošča opazovanje prebave. Če je sladoled vseboval čokolado ali ksilitol, takoj pokličite veterinarja ali center za zastrupitve živali, zapišite, kaj in koliko je pes pojedel, in ne čakajte na znake.",
     "de": "Hat Ihr Hund nur kurz an einfachem Vanilleeis geschleckt, genügt es meist, auf Magen-Darm-Beschwerden zu achten. Enthielt das Eis Schokolade oder Xylit, wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, notieren Sie, was und wie viel gefressen wurde, und warten Sie nicht auf Anzeichen.",
-    "fr": "Après un coup de langue sur une glace à la vanille nature, il suffit généralement de surveiller les troubles digestifs. Si la glace contenait du chocolat ou du xylitol, contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, notez ce qu’il a mangé et en quelle quantité, et n’attendez pas l’apparition des signes."
+    "fr": "Après un coup de langue sur une glace à la vanille nature, il suffit généralement de surveiller les troubles digestifs. Si la glace contenait du chocolat ou du xylitol, contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, notez ce qu’il a mangé et en quelle quantité, et n’attendez pas l’apparition des signes.",
+    "es": "Un lametón de helado de vainilla natural normalmente solo requiere vigilar si aparecen molestias de barriga. Si el helado llevaba chocolate o xilitol, contacta enseguida con tu veterinario o con una línea de información toxicológica para animales, apunta qué ha comido y cuánto, y no esperes a que aparezcan síntomas."
   },
   "serving": {
     "en": "Instead of ice cream: a little frozen plain fat-free yogurt, if your dog tolerates it.",
     "sl": "Namesto sladoleda: malo zamrznjenega navadnega posnetega jogurta, če ga pes prenaša.",
     "de": "Statt Eis: ein wenig gefrorener fettfreier Naturjoghurt, wenn Ihr Hund ihn verträgt.",
-    "fr": "À la place de la glace : un peu de yaourt nature 0 % congelé, si votre chien le tolère."
+    "fr": "À la place de la glace : un peu de yaourt nature 0 % congelé, si votre chien le tolère.",
+    "es": "En lugar de helado: un poco de yogur natural desnatado congelado, si tu perro lo tolera."
   },
   "child": {
     "en": "Ice cream is a people treat. It can give dogs a sore tummy, so keep your cone to yourself.",
     "sl": "Sladoled je posladek za ljudi. Psa lahko boli trebušček, zato kornet obdrži zase.",
     "de": "Eis ist ein Leckerli für Menschen. Es kann Hunden Bauchweh machen, also behalte deine Eiswaffel für dich.",
-    "fr": "La glace est une gourmandise pour les humains. Elle peut donner mal au ventre aux chiens, alors garde ton cornet pour toi."
+    "fr": "La glace est une gourmandise pour les humains. Elle peut donner mal au ventre aux chiens, alors garde ton cornet pour toi.",
+    "es": "El helado es un capricho para personas. A los perros les puede doler la barriga, así que el cucurucho es solo para ti."
   },
   "faq": [
     {
@@ -78,13 +91,15 @@
         "en": "Is sugar-free ice cream safer?",
         "sl": "Je sladoled brez sladkorja varnejši?",
         "de": "Ist zuckerfreies Eis sicherer?",
-        "fr": "Une glace sans sucre est-elle plus sûre ?"
+        "fr": "Une glace sans sucre est-elle plus sûre ?",
+        "es": "¿El helado sin azúcar es más seguro?"
       },
       "a": {
         "en": "No. Sugar-free products may contain xylitol, which is toxic to dogs, so always read the label.",
         "sl": "Ne. Izdelki brez sladkorja lahko vsebujejo ksilitol, ki je za pse strupen, zato vedno preberite etiketo.",
         "de": "Nein. Zuckerfreie Produkte können Xylit enthalten, das für Hunde giftig ist – lesen Sie also immer das Etikett.",
-        "fr": "Non. Les produits sans sucre peuvent contenir du xylitol, toxique pour les chiens : lisez toujours l’étiquette."
+        "fr": "Non. Les produits sans sucre peuvent contenir du xylitol, toxique pour les chiens : lisez toujours l’étiquette.",
+        "es": "No. Los productos sin azúcar pueden llevar xilitol, que es tóxico para los perros, así que lee siempre la etiqueta."
       }
     }
   ],
@@ -162,6 +177,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "39a8be60eb72ab8a3ba9a248031f9a9fef492d89c67581f093f94f78576a7ec7"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "321b1550e04976f76068dcfb2192d1e0125057cdb2ce8866c2a3d05bf0136ef2"
     }
   }
 }

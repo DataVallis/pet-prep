@@ -5,32 +5,37 @@
     "en": "Avocado",
     "sl": "Avokado",
     "de": "Avocado",
-    "fr": "Avocat"
+    "fr": "Avocat",
+    "es": "Aguacate"
   },
   "question": {
     "en": "Can cats eat avocado?",
     "sl": "Ali lahko mačke jedo avokado?",
     "de": "Dürfen Katzen Avocado fressen?",
-    "fr": "Les chats peuvent-ils manger de l’avocat ?"
+    "fr": "Les chats peuvent-ils manger de l’avocat ?",
+    "es": "¿Pueden los gatos comer aguacate?"
   },
   "url_slug": {
     "en": "avocado",
     "sl": "avokado",
     "de": "avocado",
-    "fr": "avocat"
+    "fr": "avocat",
+    "es": "aguacate"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to. Avocado is high in fat and contains a toxin called persin, and Cats Protection says eating a lot of it can cause health problems in cats. Avocado is mainly dangerous to birds, horses and some other animals, but it's still not a good food for cats.",
     "sl": "Raje ne. Avokado je zelo masten in vsebuje toksin persin, Cats Protection pa navaja, da lahko večja količina mačkam povzroči zdravstvene težave. Avokado je najbolj nevaren za ptice, konje in nekatere druge živali, za mačke pa vseeno ni primerna hrana.",
     "de": "Besser nicht. Avocado ist fettreich und enthält einen Giftstoff namens Persin; laut Cats Protection kann eine größere Menge bei Katzen gesundheitliche Probleme verursachen. Gefährlich ist Avocado vor allem für Vögel, Pferde und einige andere Tiere, ein gutes Futter für Katzen ist sie aber trotzdem nicht.",
-    "fr": "Mieux vaut s’en abstenir. L’avocat est très gras et contient une toxine appelée persine ; selon Cats Protection, en manger beaucoup peut causer des problèmes de santé chez le chat. L’avocat est surtout dangereux pour les oiseaux, les chevaux et certains autres animaux, mais ce n’est pas pour autant un bon aliment pour les chats."
+    "fr": "Mieux vaut s’en abstenir. L’avocat est très gras et contient une toxine appelée persine ; selon Cats Protection, en manger beaucoup peut causer des problèmes de santé chez le chat. L’avocat est surtout dangereux pour les oiseaux, les chevaux et certains autres animaux, mais ce n’est pas pour autant un bon aliment pour les chats.",
+    "es": "Es mejor no dárselo. El aguacate tiene mucha grasa y contiene una toxina llamada persina, y Cats Protection indica que comer mucho puede causar problemas de salud a los gatos. El aguacate es peligroso sobre todo para las aves, los caballos y algunos otros animales, pero aun así no es un buen alimento para los gatos."
   },
   "why": {
     "en": "Sources disagree. Cats Protection lists avocado among foods toxic to cats because of its high fat content and persin, with problems when large amounts are eaten. The ASPCA plant database lists avocado as toxic to horses only and says it is mainly a problem for birds, rabbits, horses and ruminants. We use the stricter view and do not recommend it.",
     "sl": "Viri se razlikujejo. Cats Protection uvršča avokado med živila, strupena za mačke, zaradi visoke vsebnosti maščob in persina, težave pa omenja pri večjih količinah. ASPCA ga v bazi rastlin navaja kot strupenega le za konje in pravi, da je predvsem težava za ptice, kunce, konje in prežvekovalce. Izberemo strožje stališče in ga ne priporočamo.",
     "de": "Die Quellen sind sich nicht einig. Cats Protection zählt Avocado wegen des hohen Fettgehalts und des Persins zu den für Katzen giftigen Lebensmitteln, mit Problemen bei größeren Mengen. Die Pflanzendatenbank der ASPCA stuft Avocado nur für Pferde als giftig ein und bezeichnet sie vor allem als Problem für Vögel, Kaninchen, Pferde und Wiederkäuer. Wir folgen der strengeren Einschätzung und raten davon ab.",
-    "fr": "Les sources ne sont pas d’accord. Cats Protection classe l’avocat parmi les aliments toxiques pour les chats, en raison de sa teneur élevée en graisses et de la persine, avec des problèmes en cas de grandes quantités. La base de données des plantes de l’ASPCA ne le classe comme toxique que pour les chevaux et indique qu’il pose surtout problème aux oiseaux, aux lapins, aux chevaux et aux ruminants. Nous retenons l’avis le plus prudent et le déconseillons."
+    "fr": "Les sources ne sont pas d’accord. Cats Protection classe l’avocat parmi les aliments toxiques pour les chats, en raison de sa teneur élevée en graisses et de la persine, avec des problèmes en cas de grandes quantités. La base de données des plantes de l’ASPCA ne le classe comme toxique que pour les chevaux et indique qu’il pose surtout problème aux oiseaux, aux lapins, aux chevaux et aux ruminants. Nous retenons l’avis le plus prudent et le déconseillons.",
+    "es": "Las fuentes no coinciden. Cats Protection incluye el aguacate entre los alimentos tóxicos para los gatos por su alto contenido en grasa y por la persina, con problemas cuando se come en grandes cantidades. La base de datos de plantas de la ASPCA clasifica el aguacate como tóxico solo para los caballos y dice que es un problema sobre todo para las aves, los conejos, los caballos y los rumiantes. Seguimos el criterio más estricto y no lo recomendamos."
   },
   "signs": {
     "en": [
@@ -44,20 +49,25 @@
     ],
     "fr": [
       "Tout signe de malaise après en avoir mangé beaucoup (nos sources ne citent pas de signes précis chez le chat)"
+    ],
+    "es": [
+      "Cualquier signo de malestar después de comer mucho (nuestras fuentes no indican signos concretos en los gatos)"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate avocado, contact your vet for advice, especially if a lot was eaten or your cat seems unwell. Note how much your cat ate and when.",
     "sl": "Če je muca pojedla avokado, se za nasvet obrnite na veterinarja, zlasti če ga je pojedla veliko ali se ne počuti dobro. Zapišite, koliko ga je pojedla in kdaj.",
     "de": "Wenn Ihre Katze Avocado gefressen hat, fragen Sie Ihren Tierarzt um Rat, besonders wenn sie viel davon gefressen hat oder unwohl wirkt. Notieren Sie, wie viel Ihre Katze gefressen hat und wann.",
-    "fr": "Si votre chat a mangé de l’avocat, demandez conseil à votre vétérinaire, surtout s’il en a mangé beaucoup ou semble malade. Notez la quantité mangée et l’heure."
+    "fr": "Si votre chat a mangé de l’avocat, demandez conseil à votre vétérinaire, surtout s’il en a mangé beaucoup ou semble malade. Notez la quantité mangée et l’heure.",
+    "es": "Si tu gato ha comido aguacate, consulta a tu veterinario, sobre todo si ha comido mucho o parece encontrarse mal. Apunta cuánto ha comido y cuándo."
   },
   "serving": null,
   "child": {
     "en": "Avocado is a people food. It's too fatty for cats, so give kitty her own cat treats instead.",
     "sl": "Avokado je hrana za ljudi. Za muco je premasten, zato ji raje daj njene mačje priboljške.",
     "de": "Avocado ist Essen für Menschen. Für Katzen ist sie zu fettig, also gib deiner Katze lieber ihre eigenen Katzenleckerlis.",
-    "fr": "L’avocat, c’est pour les humains. Il est trop gras pour les chats : donne plutôt à ton chat ses friandises à lui."
+    "fr": "L’avocat, c’est pour les humains. Il est trop gras pour les chats : donne plutôt à ton chat ses friandises à lui.",
+    "es": "El aguacate es comida para personas. Tiene demasiada grasa para los gatos, así que dale a tu gatito sus propios premios para gatos."
   },
   "faq": [
     {
@@ -65,13 +75,15 @@
         "en": "Is avocado poisonous for cats like it is for birds?",
         "sl": "Je avokado za mačke strupen kot za ptice?",
         "de": "Ist Avocado für Katzen so giftig wie für Vögel?",
-        "fr": "L’avocat est-il toxique pour les chats, comme pour les oiseaux ?"
+        "fr": "L’avocat est-il toxique pour les chats, comme pour les oiseaux ?",
+        "es": "¿El aguacate es venenoso para los gatos como lo es para las aves?"
       },
       "a": {
         "en": "The ASPCA says avocado is primarily a problem for birds, rabbits, donkeys, horses and ruminants. Cats Protection still advises against it for cats because of its fat and persin.",
         "sl": "ASPCA pravi, da je avokado predvsem težava za ptice, kunce, osle, konje in prežvekovalce. Cats Protection ga mačkam vseeno odsvetuje zaradi maščob in persina.",
         "de": "Laut ASPCA ist Avocado vor allem ein Problem für Vögel, Kaninchen, Esel, Pferde und Wiederkäuer. Cats Protection rät bei Katzen wegen des Fetts und des Persins trotzdem davon ab.",
-        "fr": "Selon l’ASPCA, l’avocat pose surtout problème aux oiseaux, aux lapins, aux ânes, aux chevaux et aux ruminants. Cats Protection le déconseille tout de même aux chats à cause de ses graisses et de la persine."
+        "fr": "Selon l’ASPCA, l’avocat pose surtout problème aux oiseaux, aux lapins, aux ânes, aux chevaux et aux ruminants. Cats Protection le déconseille tout de même aux chats à cause de ses graisses et de la persine.",
+        "es": "La ASPCA indica que el aguacate es un problema sobre todo para las aves, los conejos, los burros, los caballos y los rumiantes. Aun así, Cats Protection desaconseja dárselo a los gatos por su grasa y la persina."
       }
     }
   ],
@@ -127,6 +139,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ad022864ccdfc13d14da42ee80bc27f8154190087a965a0e5307024210a3fb74"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0e45dad600ee28e2b332288f66b09407fca99cd8a8f4cce0902f8dc9ec245adc"
     }
   }
 }

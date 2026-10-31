@@ -5,32 +5,37 @@
     "en": "Apricots",
     "sl": "Marelice",
     "de": "Aprikosen",
-    "fr": "Abricots"
+    "fr": "Abricots",
+    "es": "Albaricoques"
   },
   "question": {
     "en": "Can dogs eat apricots?",
     "sl": "Ali lahko psi jedo marelice?",
     "de": "Dürfen Hunde Aprikosen fressen?",
-    "fr": "Les chiens peuvent-ils manger des abricots ?"
+    "fr": "Les chiens peuvent-ils manger des abricots ?",
+    "es": "¿Pueden los perros comer albaricoques?"
   },
   "url_slug": {
     "en": "apricots",
     "sl": "marelice",
     "de": "aprikosen",
-    "fr": "abricots"
+    "fr": "abricots",
+    "es": "albaricoques"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Not recommended. The apricot plant is listed as toxic to dogs: its stems, leaves and seeds contain cyanide, especially as they wilt. Never let your dog chew apricot stones, leaves or stems.",
     "sl": "Ni priporočljivo. Marelica je navedena kot strupena za pse: njeni peclji, listi in semena vsebujejo cianid, zlasti ko venejo. Psu nikoli ne pustite žvečiti marelične koščice, listov ali pecljev.",
     "de": "Nicht empfohlen. Die Aprikosenpflanze gilt als giftig für Hunde: Stiele, Blätter und Samen enthalten Cyanid, besonders beim Welken. Lassen Sie Ihren Hund nie auf Aprikosenkernen, -blättern oder -stielen kauen.",
-    "fr": "Déconseillé. L’abricotier est répertorié comme toxique pour les chiens : ses tiges, ses feuilles et ses graines contiennent du cyanure, surtout lorsqu’elles se flétrissent. Ne laissez jamais votre chien mâchouiller des noyaux, des feuilles ou des tiges d’abricot."
+    "fr": "Déconseillé. L’abricotier est répertorié comme toxique pour les chiens : ses tiges, ses feuilles et ses graines contiennent du cyanure, surtout lorsqu’elles se flétrissent. Ne laissez jamais votre chien mâchouiller des noyaux, des feuilles ou des tiges d’abricot.",
+    "es": "No se recomienda. La planta del albaricoquero figura como tóxica para los perros: sus tallos, hojas y semillas contienen cianuro, sobre todo cuando se marchitan. No dejes nunca que tu perro mordisquee huesos, hojas o tallos de albaricoque."
   },
   "why": {
     "en": "Apricot stems, leaves and seeds contain cyanogenic glycosides, which release cyanide. Cyanide reduces the body's ability to use oxygen. Because the plant is listed as toxic to dogs, we do not rate apricots as a safe treat.",
     "sl": "Peclji, listi in semena marelice vsebujejo cianogene glikozide, iz katerih se sprošča cianid. Cianid zmanjša sposobnost telesa, da porablja kisik. Ker je rastlina navedena kot strupena za pse, marelic ne ocenjujemo kot varen priboljšek.",
     "de": "Stiele, Blätter und Samen der Aprikose enthalten cyanogene Glykoside, die Cyanid freisetzen. Cyanid verringert die Fähigkeit des Körpers, Sauerstoff zu verwerten. Weil die Pflanze als giftig für Hunde gilt, stufen wir Aprikosen nicht als sicheres Leckerli ein.",
-    "fr": "Les tiges, les feuilles et les graines de l’abricotier contiennent des glycosides cyanogènes, qui libèrent du cyanure. Le cyanure réduit la capacité de l’organisme à utiliser l’oxygène. Comme la plante est répertoriée comme toxique pour les chiens, nous ne considérons pas l’abricot comme une friandise sûre."
+    "fr": "Les tiges, les feuilles et les graines de l’abricotier contiennent des glycosides cyanogènes, qui libèrent du cyanure. Le cyanure réduit la capacité de l’organisme à utiliser l’oxygène. Comme la plante est répertoriée comme toxique pour les chiens, nous ne considérons pas l’abricot comme une friandise sûre.",
+    "es": "Los tallos, las hojas y las semillas del albaricoque contienen glucósidos cianogénicos, que liberan cianuro. El cianuro reduce la capacidad del organismo para usar el oxígeno. Como la planta figura como tóxica para los perros, no consideramos los albaricoques un premio seguro."
   },
   "signs": {
     "en": [
@@ -56,20 +61,28 @@
       "Gencives rouge brique",
       "Difficultés respiratoires, halètement",
       "État de choc"
+    ],
+    "es": [
+      "Pupilas dilatadas",
+      "Encías de color rojo ladrillo",
+      "Dificultad para respirar, jadeo",
+      "Shock"
     ]
   },
   "what_to_do": {
     "en": "If your dog chewed or swallowed apricot stones, leaves or stems, contact your vet for advice right away. Note what was eaten and roughly how much.",
     "sl": "Če je pes žvečil ali pogoltnil marelične koščice, liste ali peclje, se takoj posvetujte z veterinarjem. Zapišite si, kaj in približno koliko je pojedel.",
     "de": "Wenn Ihr Hund Aprikosenkerne, -blätter oder -stiele zerkaut oder verschluckt hat, lassen Sie sich sofort von Ihrem Tierarzt beraten. Notieren Sie, was gefressen wurde und ungefähr wie viel.",
-    "fr": "Si votre chien a mâchouillé ou avalé des noyaux, des feuilles ou des tiges d’abricot, demandez immédiatement conseil à votre vétérinaire. Notez ce qu’il a mangé et en quelle quantité approximative."
+    "fr": "Si votre chien a mâchouillé ou avalé des noyaux, des feuilles ou des tiges d’abricot, demandez immédiatement conseil à votre vétérinaire. Notez ce qu’il a mangé et en quelle quantité approximative.",
+    "es": "Si tu perro ha mordisqueado o se ha tragado huesos, hojas o tallos de albaricoque, pide consejo a tu veterinario enseguida. Anota qué ha comido y, más o menos, cuánto."
   },
   "serving": null,
   "child": {
     "en": "Apricot stones, leaves and stems are bad for dogs. Keep apricots for people, and tell a grown-up if your dog chews a stone.",
     "sl": "Marelične koščice, listi in peclji so za pse slabi. Marelice so za ljudi; povej odraslemu, če pes žveči koščico.",
     "de": "Aprikosenkerne, -blätter und -stiele sind schlecht für Hunde. Aprikosen sind für Menschen. Wenn dein Hund auf einem Kern kaut, sag einem Erwachsenen Bescheid.",
-    "fr": "Les noyaux, les feuilles et les tiges d’abricot sont mauvais pour les chiens. Garde les abricots pour les humains et préviens un adulte si ton chien mâchouille un noyau."
+    "fr": "Les noyaux, les feuilles et les tiges d’abricot sont mauvais pour les chiens. Garde les abricots pour les humains et préviens un adulte si ton chien mâchouille un noyau.",
+    "es": "Los huesos, hojas y tallos del albaricoque son malos para los perros. Deja los albaricoques para las personas y avisa a un adulto si tu perro mordisquea un hueso."
   },
   "faq": [
     {
@@ -77,13 +90,15 @@
         "en": "Which parts of the apricot are toxic?",
         "sl": "Kateri deli marelice so strupeni?",
         "de": "Welche Teile der Aprikose sind giftig?",
-        "fr": "Quelles parties de l’abricot sont toxiques ?"
+        "fr": "Quelles parties de l’abricot sont toxiques ?",
+        "es": "¿Qué partes del albaricoque son tóxicas?"
       },
       "a": {
         "en": "The stems, leaves and seeds contain cyanide, and they are particularly toxic as they wilt.",
         "sl": "Peclji, listi in semena vsebujejo cianid in so posebej strupeni, ko venejo.",
         "de": "Stiele, Blätter und Samen enthalten Cyanid und sind beim Welken besonders giftig.",
-        "fr": "Les tiges, les feuilles et les graines contiennent du cyanure, et elles sont particulièrement toxiques lorsqu’elles se flétrissent."
+        "fr": "Les tiges, les feuilles et les graines contiennent du cyanure, et elles sont particulièrement toxiques lorsqu’elles se flétrissent.",
+        "es": "Los tallos, las hojas y las semillas contienen cianuro, y son especialmente tóxicos cuando se marchitan."
       }
     }
   ],
@@ -139,6 +154,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "250bf601161e824f9d5f0670b3c8659fd3ea23c66c0db4765f0249672c82a86f"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f83991148722337d5a1275e86158065e036775212bb31fa3d460c414dfb74be5"
     }
   }
 }

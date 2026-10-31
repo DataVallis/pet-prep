@@ -5,32 +5,37 @@
     "en": "Grapes",
     "sl": "Grozdje",
     "de": "Weintrauben",
-    "fr": "Raisin"
+    "fr": "Raisin",
+    "es": "Uvas"
   },
   "question": {
     "en": "Can cats eat grapes?",
     "sl": "Ali lahko mačke jedo grozdje?",
     "de": "Dürfen Katzen Weintrauben fressen?",
-    "fr": "Les chats peuvent-ils manger du raisin ?"
+    "fr": "Les chats peuvent-ils manger du raisin ?",
+    "es": "¿Pueden los gatos comer uvas?"
   },
   "url_slug": {
     "en": "grapes",
     "sl": "grozdje",
     "de": "weintrauben",
-    "fr": "raisin"
+    "fr": "raisin",
+    "es": "uvas"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Grapes are on the list of foods toxic to cats, and eating them can cause kidney failure. Avoid them completely, even small amounts, and call your vet if your cat eats any.",
     "sl": "Ne. Grozdje je na seznamu živil, ki so za mačke strupena, in lahko povzroči odpoved ledvic. Popolnoma se mu izogibajte, tudi majhnim količinam, in pokličite veterinarja, če ga muca poje.",
     "de": "Nein. Weintrauben stehen auf der Liste der für Katzen giftigen Lebensmittel und können Nierenversagen verursachen. Meiden Sie sie vollständig, auch in kleinen Mengen, und rufen Sie Ihren Tierarzt an, wenn Ihre Katze welche frisst.",
-    "fr": "Non. Le raisin figure sur la liste des aliments toxiques pour les chats, et en manger peut provoquer une insuffisance rénale. Évitez-le complètement, même en petite quantité, et appelez votre vétérinaire si votre chat en mange."
+    "fr": "Non. Le raisin figure sur la liste des aliments toxiques pour les chats, et en manger peut provoquer une insuffisance rénale. Évitez-le complètement, même en petite quantité, et appelez votre vétérinaire si votre chat en mange.",
+    "es": "No. Las uvas están en la lista de alimentos tóxicos para los gatos, y comerlas puede provocar insuficiencia renal. Evítalas por completo, incluso en pequeñas cantidades, y llama a tu veterinario si tu gato come alguna."
   },
   "why": {
     "en": "Cat welfare charities warn that grapes can cause kidney failure in cats, and that cats with chronic kidney disease may be at greater risk. Grape poisoning in cats is rare and not well understood, and some sources only describe it in dogs, so we use the stricter level: treat any amount as an emergency.",
     "sl": "Organizacije za dobrobit mačk opozarjajo, da lahko grozdje pri mačkah povzroči odpoved ledvic in da so mačke s kronično ledvično boleznijo morda še bolj ogrožene. Zastrupitev z grozdjem je pri mačkah redka in slabo raziskana, nekateri viri jo opisujejo le pri psih, zato izberemo strožjo stopnjo: vsako količino obravnavajte kot nujen primer.",
     "de": "Tierschutzorganisationen für Katzen warnen, dass Weintrauben bei Katzen Nierenversagen verursachen können und dass Katzen mit chronischer Nierenerkrankung möglicherweise stärker gefährdet sind. Traubenvergiftungen bei Katzen sind selten und kaum erforscht, und manche Quellen beschreiben sie nur bei Hunden. Deshalb wählen wir die strengere Einstufung: Behandeln Sie jede Menge als Notfall.",
-    "fr": "Les associations de protection des chats avertissent que le raisin peut provoquer une insuffisance rénale chez le chat, et que les chats atteints d’une maladie rénale chronique pourraient être plus à risque. L’intoxication au raisin est rare chez le chat et mal comprise, et certaines sources ne la décrivent que chez le chien ; nous retenons donc le niveau le plus prudent : considérez toute quantité comme une urgence."
+    "fr": "Les associations de protection des chats avertissent que le raisin peut provoquer une insuffisance rénale chez le chat, et que les chats atteints d’une maladie rénale chronique pourraient être plus à risque. L’intoxication au raisin est rare chez le chat et mal comprise, et certaines sources ne la décrivent que chez le chien ; nous retenons donc le niveau le plus prudent : considérez toute quantité comme une urgence.",
+    "es": "Las organizaciones de bienestar felino advierten de que las uvas pueden provocar insuficiencia renal en los gatos, y de que los gatos con enfermedad renal crónica pueden correr más riesgo. La intoxicación por uvas en los gatos es rara y no se conoce bien, y algunas fuentes solo la describen en perros, así que aplicamos el nivel más estricto: cualquier cantidad debe tratarse como una urgencia."
   },
   "signs": {
     "en": [
@@ -44,20 +49,25 @@
     ],
     "fr": [
       "Vomissements, souvent en moins d’une journée"
+    ],
+    "es": [
+      "Vómitos, a menudo en menos de un día"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away. Note how many grapes your cat ate and when. Don't wait for signs to appear, and don't try to make your cat sick at home.",
     "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, koliko grozdja je muca pojedla in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, wie viele Trauben Ihre Katze gefressen hat und wann. Warten Sie nicht auf Anzeichen und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
-    "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez combien de grains votre chat a mangés et à quelle heure. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même."
+    "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez combien de grains votre chat a mangés et à quelle heure. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
+    "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta cuántas uvas ha comido tu gato y cuándo. No esperes a que aparezcan signos y no intentes provocarle el vómito en casa."
   },
   "serving": null,
   "child": {
     "en": "Grapes are yummy for us but not safe for cats. Keep them on your plate and tell a grown-up if kitty eats one.",
     "sl": "Nam je grozdje okusno, za muce pa ni varno. Naj ostane na tvojem krožniku. Če ga muca poje, povej odraslemu.",
     "de": "Weintrauben schmecken uns lecker, sind für Katzen aber nicht sicher. Lass sie auf deinem Teller und sag einem Erwachsenen Bescheid, wenn deine Katze eine frisst.",
-    "fr": "Le raisin, c’est bon pour nous mais dangereux pour les chats. Garde-le dans ton assiette et préviens un adulte si ton chat en mange un grain."
+    "fr": "Le raisin, c’est bon pour nous mais dangereux pour les chats. Garde-le dans ton assiette et préviens un adulte si ton chat en mange un grain.",
+    "es": "Las uvas están ricas para nosotros, pero no son seguras para los gatos. Déjalas en tu plato y avisa a un adulto si tu gatito se come una."
   },
   "faq": [
     {
@@ -65,13 +75,15 @@
         "en": "Are cats with kidney disease at more risk?",
         "sl": "So mačke z ledvično boleznijo bolj ogrožene?",
         "de": "Sind Katzen mit Nierenerkrankung stärker gefährdet?",
-        "fr": "Les chats atteints d’une maladie rénale sont-ils plus à risque ?"
+        "fr": "Les chats atteints d’une maladie rénale sont-ils plus à risque ?",
+        "es": "¿Corren más riesgo los gatos con enfermedad renal?"
       },
       "a": {
         "en": "Cats Protection says cats with chronic kidney disease may be at greater risk from grapes.",
         "sl": "Cats Protection navaja, da so mačke s kronično ledvično boleznijo zaradi grozdja morda bolj ogrožene.",
         "de": "Laut Cats Protection können Katzen mit chronischer Nierenerkrankung durch Weintrauben stärker gefährdet sein.",
-        "fr": "Selon Cats Protection, les chats atteints d’une maladie rénale chronique pourraient être plus à risque face au raisin."
+        "fr": "Selon Cats Protection, les chats atteints d’une maladie rénale chronique pourraient être plus à risque face au raisin.",
+        "es": "Cats Protection indica que los gatos con enfermedad renal crónica pueden correr más riesgo con las uvas."
       }
     }
   ],
@@ -144,6 +156,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5fb87017400695aed100f5809d846914b65597f65121f7e79a99c08b02e6f96e"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4ca54fea6f0b3b4153aed83f73eeca482729beb8547ee5bfc5ac0b5f777b8cef"
     }
   }
 }

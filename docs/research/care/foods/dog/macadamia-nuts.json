@@ -5,32 +5,37 @@
     "en": "Macadamia nuts",
     "sl": "Makadamijini oreščki",
     "de": "Macadamianüsse",
-    "fr": "Noix de macadamia"
+    "fr": "Noix de macadamia",
+    "es": "Nueces de macadamia"
   },
   "question": {
     "en": "Can dogs eat macadamia nuts?",
     "sl": "Ali lahko psi jedo makadamijine oreščke?",
     "de": "Dürfen Hunde Macadamianüsse fressen?",
-    "fr": "Les chiens peuvent-ils manger des noix de macadamia ?"
+    "fr": "Les chiens peuvent-ils manger des noix de macadamia ?",
+    "es": "¿Pueden los perros comer nueces de macadamia?"
   },
   "url_slug": {
     "en": "macadamia-nuts",
     "sl": "makadamijini-orescki",
     "de": "macadamianuesse",
-    "fr": "noix-de-macadamia"
+    "fr": "noix-de-macadamia",
+    "es": "nueces-de-macadamia"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Macadamia nuts are toxic to dogs, and dogs are the only species known to get ill from them. Even a small amount can cause weakness, vomiting, trembling and a high temperature. Their high fat content can also trigger pancreatitis.",
     "sl": "Ne. Makadamijini oreščki so za pse strupeni; psi so edina znana vrsta, ki po njih zboli. Že majhna količina lahko povzroči šibkost, bruhanje, tresenje in povišano telesno temperaturo. Zaradi veliko maščob lahko sprožijo tudi vnetje trebušne slinavke.",
     "de": "Nein. Macadamianüsse sind für Hunde giftig, und Hunde sind die einzige Tierart, von der bekannt ist, dass sie davon krank wird. Schon eine kleine Menge kann Schwäche, Erbrechen, Zittern und erhöhte Körpertemperatur verursachen. Ihr hoher Fettgehalt kann außerdem eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen.",
-    "fr": "Non. Les noix de macadamia sont toxiques pour les chiens, la seule espèce connue pour en tomber malade. Même une petite quantité peut provoquer faiblesse, vomissements, tremblements et une température corporelle élevée. Leur forte teneur en graisses peut aussi déclencher une pancréatite."
+    "fr": "Non. Les noix de macadamia sont toxiques pour les chiens, la seule espèce connue pour en tomber malade. Même une petite quantité peut provoquer faiblesse, vomissements, tremblements et une température corporelle élevée. Leur forte teneur en graisses peut aussi déclencher une pancréatite.",
+    "es": "No. Las nueces de macadamia son tóxicas para los perros, y los perros son la única especie de la que se sabe que enferma con ellas. Incluso una pequeña cantidad puede causar debilidad, vómitos, temblores y una temperatura corporal alta. Su gran cantidad de grasa también puede desencadenar una pancreatitis."
   },
   "why": {
     "en": "How macadamia nuts poison dogs is unknown, but they affect nerve and muscle function. Because they are very oily, some dogs also develop pancreatitis. Signs generally settle within 12–48 hours, but a vet should always be contacted.",
     "sl": "Kako makadamijini oreščki zastrupijo psa, ni znano, vplivajo pa na delovanje živcev in mišic. Ker so zelo mastni, pri nekaterih psih povzročijo tudi vnetje trebušne slinavke. Znaki običajno izzvenijo v 12–48 urah, a veterinarja je treba vedno poklicati.",
     "de": "Wie Macadamianüsse Hunde vergiften, ist nicht bekannt, sie beeinträchtigen aber die Nerven- und Muskelfunktion. Weil sie sehr ölhaltig sind, entwickeln manche Hunde außerdem eine Pankreatitis. Die Anzeichen klingen meist innerhalb von 12–48 Stunden ab, ein Tierarzt sollte aber immer verständigt werden.",
-    "fr": "On ne sait pas comment les noix de macadamia intoxiquent les chiens, mais elles perturbent le fonctionnement des nerfs et des muscles. Comme elles sont très grasses, certains chiens développent aussi une pancréatite. Les signes disparaissent généralement en 12 à 48 heures, mais il faut toujours contacter un vétérinaire."
+    "fr": "On ne sait pas comment les noix de macadamia intoxiquent les chiens, mais elles perturbent le fonctionnement des nerfs et des muscles. Comme elles sont très grasses, certains chiens développent aussi une pancréatite. Les signes disparaissent généralement en 12 à 48 heures, mais il faut toujours contacter un vétérinaire.",
+    "es": "No se sabe cómo intoxican las nueces de macadamia a los perros, pero afectan al funcionamiento de los nervios y los músculos. Como son muy oleosas, algunos perros también desarrollan pancreatitis. Los síntomas suelen desaparecer en un plazo de 12 a 48 horas, pero siempre hay que contactar con un veterinario."
   },
   "signs": {
     "en": [
@@ -64,20 +69,30 @@
       "Tremblements",
       "Température corporelle élevée",
       "Démarche titubante"
+    ],
+    "es": [
+      "Debilidad muscular",
+      "Poca energía, apatía",
+      "Vómitos",
+      "Temblores",
+      "Temperatura corporal alta",
+      "Andar tambaleándose"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away. Note how many nuts were eaten, and whether they were coated in chocolate or mixed with other foods. Don't wait for signs.",
     "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite si, koliko oreščkov je pes pojedel in ali so bili obliti s čokolado ali pomešani z drugo hrano. Ne čakajte na znake.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, wie viele Nüsse gefressen wurden und ob sie mit Schokolade überzogen oder mit anderen Lebensmitteln vermischt waren. Warten Sie nicht auf Anzeichen.",
-    "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez combien de noix de macadamia ont été mangées et si elles étaient enrobées de chocolat ou mélangées à d’autres aliments. N’attendez pas l’apparition des signes."
+    "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez combien de noix de macadamia ont été mangées et si elles étaient enrobées de chocolat ou mélangées à d’autres aliments. N’attendez pas l’apparition des signes.",
+    "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta cuántas nueces ha comido y si estaban recubiertas de chocolate o mezcladas con otros alimentos. No esperes a que aparezcan síntomas."
   },
   "serving": null,
   "child": {
     "en": "Macadamia nuts are round nuts that can make dogs weak and wobbly. Keep them away and tell a grown-up if your dog eats some.",
     "sl": "Makadamijini oreščki so okrogli oreščki, po katerih je pes lahko šibek in se opoteka. Pospravi jih in povej odraslemu, če jih pes poje.",
     "de": "Macadamianüsse sind runde Nüsse, die Hunde schwach und wackelig machen können. Halte sie von deinem Hund fern und sag einem Erwachsenen Bescheid, wenn dein Hund welche frisst.",
-    "fr": "Les noix de macadamia sont toutes rondes et peuvent rendre les chiens faibles et chancelants. Range-les et préviens un adulte si ton chien en mange."
+    "fr": "Les noix de macadamia sont toutes rondes et peuvent rendre les chiens faibles et chancelants. Range-les et préviens un adulte si ton chien en mange.",
+    "es": "Las macadamias son frutos secos redondos que pueden dejar a los perros débiles y tambaleantes. Guárdalas lejos y avisa a un adulto si tu perro se come alguna."
   },
   "faq": [
     {
@@ -85,13 +100,15 @@
         "en": "Are other nuts toxic too?",
         "sl": "So strupeni tudi drugi oreščki?",
         "de": "Sind andere Nüsse auch giftig?",
-        "fr": "Les autres fruits à coque sont-ils toxiques aussi ?"
+        "fr": "Les autres fruits à coque sont-ils toxiques aussi ?",
+        "es": "¿Otros frutos secos también son tóxicos?"
       },
       "a": {
         "en": "Macadamias are the toxic ones. Other nuts such as almonds, pecans and walnuts are very fatty and can cause vomiting, diarrhoea and possibly pancreatitis, so they are not a good treat either.",
         "sl": "Strupeni so makadamijini. Drugi oreščki, kot so mandlji, pekan in orehi, so zelo mastni in lahko povzročijo bruhanje, drisko in morda vnetje trebušne slinavke, zato tudi niso dober priboljšek.",
         "de": "Giftig sind die Macadamianüsse. Andere Nüsse wie Mandeln, Pekannüsse und Walnüsse sind sehr fettreich und können Erbrechen, Durchfall und möglicherweise eine Pankreatitis verursachen – ein gutes Leckerli sind sie also auch nicht.",
-        "fr": "Ce sont les noix de macadamia qui sont toxiques. Les autres fruits à coque comme les amandes, les noix de pécan et les noix sont très gras et peuvent provoquer vomissements, diarrhée et parfois une pancréatite : ce ne sont pas non plus de bonnes friandises."
+        "fr": "Ce sont les noix de macadamia qui sont toxiques. Les autres fruits à coque comme les amandes, les noix de pécan et les noix sont très gras et peuvent provoquer vomissements, diarrhée et parfois une pancréatite : ce ne sont pas non plus de bonnes friandises.",
+        "es": "Las tóxicas son las nueces de macadamia. Otros frutos secos, como las almendras, las pacanas y las nueces, son muy grasos y pueden causar vómitos, diarrea y posiblemente pancreatitis, así que tampoco son un buen premio."
       }
     },
     {
@@ -99,13 +116,15 @@
         "en": "How long do signs last?",
         "sl": "Kako dolgo trajajo znaki?",
         "de": "Wie lange halten die Anzeichen an?",
-        "fr": "Combien de temps durent les signes ?"
+        "fr": "Combien de temps durent les signes ?",
+        "es": "¿Cuánto duran los síntomas?"
       },
       "a": {
         "en": "Signs generally resolve within 12–48 hours, but your vet should still be told straight away.",
         "sl": "Znaki običajno izzvenijo v 12–48 urah, a veterinarja vseeno obvestite takoj.",
         "de": "Die Anzeichen klingen meist innerhalb von 12–48 Stunden ab, trotzdem sollten Sie Ihren Tierarzt sofort informieren.",
-        "fr": "Les signes disparaissent généralement en 12 à 48 heures, mais prévenez quand même immédiatement votre vétérinaire."
+        "fr": "Les signes disparaissent généralement en 12 à 48 heures, mais prévenez quand même immédiatement votre vétérinaire.",
+        "es": "Los síntomas suelen desaparecer en un plazo de 12 a 48 horas, pero aun así hay que avisar enseguida a tu veterinario."
       }
     }
   ],
@@ -190,6 +209,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "71b4ec79222caa34c6963232e3c8f73c5ad8fe92526e37bbe07bb8aa7d0678ae"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bd565a02cdbdf5949586dd69f09485f38cab813bbe42ef2a61ee19420b64d348"
     }
   }
 }
