@@ -10,7 +10,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ## 2026-10-31 — »Zdaj!« v vsaki vaji šole
 
-**Kaj:** David je v angleški vaji videl namig »Now!« ob trenutku, ko kuža uboga, in mu je bil všeč; v poznejši slovenski vaji »Zdaj!« ni bilo in je tapnil prezgodaj. Mislil je, da gre za jezik, a vzrok je bil napredek: namig je bil le za začetnike (pod 50 % napredka ukaza), »Sedi« pa je vmes to mejo presegel. Na Davidovo željo se »Zdaj!« zdaj pokaže v vsaki vaji, pri vsakem napredku; prav tako namig »Tapni« do prvega tapa. Test zdaj preveri, da ima vsak jezik (tudi prihodnji) te napise.
+**Kaj:** David je v angleški vaji videl namig »Now!« ob trenutku, ko kuža uboga, in mu je bil všeč; v poznejši slovenski vaji »Zdaj!« ni bilo in je tapnil prezgodaj. Mislil je, da gre za jezik, a vzrok je bil napredek: namig je bil le za začetnike (pod 50 % napredka ukaza), »Sedi« pa je vmes to mejo presegel. Na Davidovo željo se »Zdaj!« zdaj pokaže v vsaki vaji, pri vsakem napredku; prav tako je namig »Tapni« ves čas na žetonu (tudi po tapu; skrit le, ko piše »Počakaj«). Test zdaj preveri, da ima vsak jezik (tudi prihodnji) te napise.
 **Zakaj je pomembno:** otrok vedno ve, kdaj je pravi trenutek za pohvalo — tudi ko ukaz že dobro zna. Pravila točkovanja ostanejo enaka; gre na telefone brez nove gradnje (OTA).
 - 👩 Starši: namig »Zdaj!« je vedno tam, v vseh jezikih aplikacije.
 - 🛠 Iz telefonskega testa do popravka isti dan: vzrok ni bil prevod, temveč meja napredka — odstranjena, z avtomatskim preverjanjem vseh jezikov.

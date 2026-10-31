@@ -304,11 +304,11 @@ describe('clarity layer (David\'s device test 2026-10-31)', () => {
     expect(tokenWaiting(at(5_500))).toBe(false);
   });
 
-  it('tap hint (David 2026-10-31): on while nothing counted, off after the first counted tap', () => {
-    for (const ms of [0, 2_000, 2_600, 5_600, 8_900, 23_000]) expect(tapHintOn(false, at(ms))).toBe(true);
-    for (const ms of [0, 5_600, 23_000]) expect(tapHintOn(true, at(ms))).toBe(false);
+  it('tap hint (David 31. 10.): always on — before and after a tap — except while the token says »Počakaj«', () => {
+    for (const ms of [0, 2_000, 2_600, 5_600, 7_100, 8_900, 23_000]) expect(tapHintOn(at(ms))).toBe(true);
     // while the dog visibly ignores the token says »Počakaj« — no »Tapni« next to it
-    expect(tapHintOn(false, at(10_600))).toBe(false);
+    expect(tapHintOn(at(10_600))).toBe(false);
+    for (let ms = 0; ms < V2.duration_ms; ms += 50) if (!tapHintOn(at(ms))) expect(at(ms).kind).toBe('ignoring');
   });
 
   it('a drag starts only after the finger moved TOKEN_DRAG_START_PT', () => {

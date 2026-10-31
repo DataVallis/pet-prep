@@ -351,13 +351,13 @@ export function tokenWaiting(frame: Pick<SchoolFrame, 'kind'>): boolean {
 
 /**
  * Tap hint (David's device test 2026-10-31: he tried to DRAG the treat to the dog — »mogoče bi
- * lahko tak diskreten namig bil tap«): a small animated finger + »Tapni« on the token in every
- * session (any progress — the old < 50 % gate is gone, David 31. 10.) until a tap has counted.
- * Gone after the first counted tap; hidden while the dog ignores (the token says »Počakaj« then).
- * Display only.
+ * lahko tak diskreten namig bil tap«): a small animated finger + »Tapni« on the token ALWAYS —
+ * every session, any progress, also after the first counted tap (David 31. 10.; the earlier
+ * »until the first counted tap« rule and the < 50 % gate are gone). Hidden only while the dog
+ * ignores, because the token says »Počakaj« then and the two would contradict. Display only.
  */
-export function tapHintOn(counted: boolean, frame: Pick<SchoolFrame, 'kind'>): boolean {
-  return !counted && frame.kind !== 'ignoring';
+export function tapHintOn(frame: Pick<SchoolFrame, 'kind'>): boolean {
+  return frame.kind !== 'ignoring';
 }
 
 /**

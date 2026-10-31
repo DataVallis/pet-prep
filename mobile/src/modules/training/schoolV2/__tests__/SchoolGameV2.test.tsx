@@ -420,10 +420,10 @@ describe('school v2 on the game layer', () => {
     expect(finishTraining.mock.calls[0][1]).toEqual([5_900]);
   });
 
-  it('tap hint: the bobbing finger + »Tapni« before the first counted tap, gone after it (and stays gone)', async () => {
+  it('tap hint (David 31. 10.): the bobbing finger + »Tapni« always — also after the first counted tap and at 80 % — hidden only while »Počakaj«', async () => {
     setGameLayerAvailableForTests(true);
     startTraining.mockResolvedValueOnce(startBody(makeSchoolV2SessionPayload()));
-    render(schoolView({ sitProgress: 40 }));
+    render(schoolView({ sitProgress: 80 }));
     await pressStart();
     await deckReady();
     await advanceTo(1_000);
@@ -435,10 +435,14 @@ describe('school v2 on the game layer', () => {
     expect(screen.getByTestId(`${ID}-tap-hint`, { includeHiddenElements: true })).toBeTruthy();
     fireEvent(screen.getByTestId(`${ID}-token`), 'pressIn', { nativeEvent: {} });
     await advance(0);
+    // still there after the first counted tap
+    expect(screen.getByTestId(`${ID}-tap-hint`, { includeHiddenElements: true })).toBeTruthy();
+    await advanceTo(10_600); // the dog ignores: the token says »Počakaj« — no »Tapni« next to it
+    expect(screen.getByTestId(`${ID}-token-wait`)).toBeTruthy();
     expect(screen.queryByTestId(`${ID}-tap-hint`, { includeHiddenElements: true })).toBeNull();
     await advanceTo(23_000); // round 2
     expect(screen.getByTestId(`${ID}-token`)).toBeTruthy();
-    expect(screen.queryByTestId(`${ID}-tap-hint`, { includeHiddenElements: true })).toBeNull();
+    expect(screen.getByTestId(`${ID}-tap-hint`, { includeHiddenElements: true })).toBeTruthy();
   });
 
   it('tap hint with reduce motion = a static label; shown at 80 % progress too', async () => {

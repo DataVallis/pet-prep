@@ -1817,7 +1817,7 @@ flowchart TD
   TL -->|role per step| Q["ClipQueue: attention ⇢ performing (crossfade, same pose)<br/>performing → success at its end (instant)<br/>success → attention = CUT only while masked"]
   TL -->|release_at| M["FeedbackLayer verdict + mask_ms 1200<br/>✓ Bravo! / ✗ Prezgodaj / ✗ Zamujeno"]
   M -->|onMaskChange| Q
-  RUN --> TAP["token press-in (bone if treat_token, else ♥)<br/>praise() → first tap of the cue → tapFeedback<br/>drag ≥ 8 pt (TokenDrag): token follows the finger, never a 2nd tap<br/>release → flight to the dog · »Tapni« hint until the first counted tap (every session)"]
+  RUN --> TAP["token press-in (bone if treat_token, else ♥)<br/>praise() → first tap of the cue → tapFeedback<br/>drag ≥ 8 pt (TokenDrag): token follows the finger, never a 2nd tap<br/>release → flight to the dog · »Tapni« hint always, except while »Počakaj«"]
   TL -->|break after round 1| B["»1. krog ✓« + stars · token hidden<br/>»Nadaljuj (3…1)« → round 2 at its start_ms<br/>small »Končaj« while earlyEndOpen()"]
   B -->|Končaj| E["POST /training/finish {taps, ended_after_round: 1}<br/>(clock keeps running)"]
   E -->|200| RES["SchoolResultV2: Bravo! / Dober začetek! / Vaja dela mojstra<br/>per-cue outcomes (waited = green ✓), N practices left, one tip, routine line"]

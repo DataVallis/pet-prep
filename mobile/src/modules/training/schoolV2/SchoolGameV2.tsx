@@ -30,7 +30,7 @@
  *   tap per cue decides, unchanged); a drag that follows moves the token with the finger and the
  *   treat flies to the dog from where it is let go (`TokenDrag`) — never a second tap, never a new
  *   time. A tap's flight starts at the release. Same for »Pohvali« ♥. A small bobbing finger +
- *   »Tapni« sits on the token until something has counted
+ *   »Tapni« sits on the token in every session, also after a tap, hidden only while it says »Počakaj«
  *   (`tapHintOn`; reduce motion = static label).
  *
  * Timing is the server's schedule only (`schoolV2.ts`); one timer per step boundary keeps every
@@ -348,7 +348,6 @@ export default function SchoolGameV2({
   const [shot, setShot] = useState<FlightShot>({ n: 0, dx: 0, dy: 0 });
   const pendingFlight = useRef(false);
   const dragActive = useRef(false);
-  const [counted, setCounted] = useState(false);
   const launchFlight = useCallback((dx: number, dy: number) => {
     if (!pendingFlight.current) return;
     pendingFlight.current = false;
@@ -366,7 +365,6 @@ export default function SchoolGameV2({
       setCoolUntil(Date.now());
       const ms = game.praise(touchTimestamp);
       if (ms === null) return;
-      setCounted(true);
       const i = slotIndex(session.trials, ms);
       if (i === null) return;
       const fb = tapFeedback(session, i, ms, schoolFrameAt(session, ms));
@@ -391,7 +389,7 @@ export default function SchoolGameV2({
   const cooling = coolUntil !== 0;
   const canEndEarly = !finishing && inBreak && game.canEndEarly();
   const hintOn = clockRunning && praiseHintOn(frame);
-  const tapHint = clockRunning && tapHintOn(counted, frame);
+  const tapHint = clockRunning && tapHintOn(frame);
   const waiting = clockRunning && tokenWaiting(frame);
   const countdown = clockRunning ? breakCountdown(session, frame, e) : null;
   // »Nadaljuj« pressed in this break: only the countdown stays (it cannot shorten the server's break).
