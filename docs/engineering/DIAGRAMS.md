@@ -1823,6 +1823,38 @@ flowchart TD
   RUN -->|duration over| FULL["POST /training/finish {taps}"] --> RES
 ```
 
+### 10f-5. Wand v2, cuddles v2 and the care games on the game layer (GAMES_SPEC §5, §4.4 C1, §5.5 / §7.7 — phases 2 + 4 app side, 2026-10-31)
+
+```mermaid
+flowchart TD
+  C[CatCareOverlay: »Palica s peresom«] --> F{loadWandGameV2<br/>= gameLayerAvailable?}
+  F -->|no: older binary| V1["WandOverlay v1<br/>POST /wand/start (no rules) · ~60 s"]
+  F -->|yes| D["WandGameV2: ClipDeck mounts stalking · crouch_loop · pouncing · catching<br/>»Začni lov« disabled until ready (12 s → picture)"]
+  D -->|Začni lov| S["POST /wand/start {rules: 2}"]
+  S --> R{readWandV2Session:<br/>every timing present?}
+  R -->|no| BAD[»bad response« — never a guessed rule]
+  R -->|yes| RUN["running: SessionClock = hunt clock<br/>wandStageAt → ClipQueue (stalk → crouch loop ⇄ pounce → catch)"]
+  RUN --> G["Pan (UI thread) → feather spring + samples → wandStroke<br/>one move per stroke {t, away, in_zone, speed_ok}<br/>(zone + session max_speed_pt_s / min_dodge_pt)"]
+  G --> L["wandLive (mirror of scoreV2) → wandCues"]
+  RUN --> L
+  L -->|crouch_cues_ms| CUE["👀 badge + countdown ring · crouch sound · 3 × cue haptic · »Miruj!«<br/>ring amber if a move lands in the calm window"]
+  L -->|dodge in window| STAR["★ + swish + success · »Ušlo!«"]
+  L -->|miss| GRAB[feather shakes in the paw — no ✗, no text]
+  L -->|catch_at_ms| CC[»Pusti jo, da ujame!« → ★ »Ujela ga je!«]
+  RUN -->|"max(duration, catch + window)"| FIN["POST /wand/finish {moves[t, away, in_zone, speed_ok]}"]
+  FIN --> RES["result: SERVER stars + hint (calm / dodge / catch)<br/>»Še en lov« (not counted) / »Končano«"]
+
+  P[PlayOverlay mode cuddle] --> F2{loadCuddleGameV2?}
+  F2 -->|no| CV1[v1: 5 strokes]
+  F2 -->|yes| CM["cuddleMachine: slow stroke ≤ 900 pt/s fills a heart 3 s<br/>(too fast → 🐢) → ✋ wait → lift 1 s → 💗 »Še!« → … 3 hearts"]
+  CM -->|done once| PLAY["POST /play {kind: cuddle} (unchanged)"]
+
+  O["ChoreOverlay / CareTaskOverlay / ScratchingOverlay"] --> F3{loadCareShell?}
+  F3 -->|no| CARD[card screens, unchanged]
+  F3 -->|yes| SH["CareGameShell: CatStage full + the SAME input<br/>(BrushArea · scrub · ClawsStage · »Pohvali«)<br/>step on the top line · tap haptic per counted stroke · ✓ per step"]
+  SH --> SAME[same finish request and server verdict]
+```
+
 ### 10g. Clip quality check (David 2026-10-23)
 
 Every new AI clip is a candidate until it passes; the old file stays visible meanwhile. One automatic regeneration per generation chain; a second failure is »Needs review« (not shown, the app's fallback). See ARCHITECTURE *Clip quality check*.
