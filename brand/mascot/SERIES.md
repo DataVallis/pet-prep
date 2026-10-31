@@ -19,12 +19,13 @@ Ena hiša, ena družina, en ljubljenček. Isti slog kot Curio: **stiliziran 3D, 
 | Lik | Kdo | Značaj (kaj ga dela smešnega) | Videz (izhodišče za list lika) |
 |---|---|---|---|
 | **Curio** | družinski ljubljenček | večen optimist; vsak dan znova verjame obljubi; čustva samo z očmi in telesom; nikoli ne obupa, samo malo »potone« | `brand/MASCOT.md` (grafitna kocka, beli očesi, malinast nos, brez ust, metina ovratnica) |
-| **Mia** | starejša sestra | organizatorka z načrtom za vse — razen za sprehod; iznajdljiva pri izgovorih | rjavi čop, metin pulover, velike oči, zaobljen nos |
-| **Leo** | mlajši brat | velike obljube, takojšen beg; mojster »spim« in »sem bolan« | razmršeni temni lasje, preveliki čevlji, grafitna jopica s kapuco |
-| **Mama** | | mirna, z enim pogledom pove vse; vedno zmaga (z nasmehom) | kratki kodrasti lasje, očala, mehka jopica |
-| **Oči** | | sanja, da se bo izognil delu, a vedno konča z mokrim povodcem v roki | brada, prevelik pulover, copati |
+| **Mia** | starejša sestra | šefica z načrtom za vse — razen za sprehod; vzvišen nasmešek, iznajdljiva pri izgovorih | ogromen visok čop z metino elastiko (odskakuje), odločne obrvi, pegice, metin pulover brez vzorca, grafitne pajkice, bele superge, beležka z neskončnim seznamom |
+| **Leo** | mlajši brat | žlehtnoba: velike obljube, takojšen beg; mojster »spim« in »sem bolan« | razmršeni temni lasje, žlehten nasmešek, grafitna jopica s kapuco (roke v žepu), bež trenirka z obližem na kolenu, prevelike metine superge; **brez nahrbtnika** |
+| **Mama** | | mirna, z enim pogledom (dvignjena obrv) pove vse; vedno zmaga (z nasmehom) | visoka in vitka, temno rjavi lasje v figi s svinčnikom, okrogla tanka očala, bež jopica, sivi kavbojke, metina skodelica vedno v roki |
+| **Oči** | | sanja, da se bo izognil delu, a vedno konča z mokrim povodcem v roki | okrogel, hruškasta postava, kratke nožice, en štrleč čop na plešasti glavi, rjava brada, zaspane oči, prevelik grafitni pulover, bež kratke pižamaste hlače, ogromni puhasti metini copati, časopis pod roko |
 
-Imena Mia in Leo sta ista kot v igrani seriji »12 Weeks« — en svet družine PetPrep (David lahko spremeni).
+Imena Mia in Leo sta ista kot v igrani seriji »12 Weeks« — en svet družine PetPrep.
+- **Listi likov potrjeni (David, 31. 10. 2026):** `brand/mascot/series/characters/` (`mama-sheet.png`, `oci-sheet.png`, `mia-sheet.png`, `leo-sheet.png`; predogledi 768×1376 — izvirniki v polni ločljivosti so v Davidovem Higgsfieldu / Drive `curio-serija/liki/`). V vsakem posnetku priloži list lika kot referenco. Pravilo: vsak lik je prepoznaven že po obrisu.
 - **Glasovi:** samo mrmranje brez besed (»mm-hmm«, »uh-oh«, smeh, vzdih). Odrasli: kratek pihalni »wah-wah« zvok namesto govora. Otroci: posneti nemi zvoki (hihitanje, »nooo«, stok).
 - **Curio zvoki:** mehki »boop« koraki, kratki veseli piski oči, vzdih ob tonjenju. Brez lajanja (ni pes).
 
@@ -82,12 +83,12 @@ Imena Mia in Leo sta ista kot v igrani seriji »12 Weeks« — en svet družine 
 ## 5. Listi likov — prompti (generira David, Nano Banana Pro)
 Skupni blok (prilepi na začetek vsakega):
 ```
-Original character design for a premium animated family comedy. Stylized 3D, soft matte designer-vinyl toy look, rounded simple shapes, slightly oversized head, big expressive eyes, small nose, soft diffused studio light, clean fog-grey background (#F3F5F2). Palette: graphite, warm neutrals, mint accents. Character turnaround sheet: front view, side view, back view, plus a row of six facial expressions (happy, sneaky, sleepy, surprised, sad, laughing). Same character in every view, full body, no text, no letters, no logos.
+Original character design for a premium animated family comedy. Stylized 3D, soft matte designer-vinyl toy look, rounded simple shapes, slightly oversized head, big expressive eyes, small nose, soft diffused studio light, clean fog-grey background (#F3F5F2). Palette: graphite, warm neutrals, mint accents. Character turnaround sheet: front view, side view, back view, plus a row of six facial expressions (happy, sneaky, sleepy, surprised, sad, laughing). Same character in every view, full body, no text, no letters, no logos. Exaggerated, instantly readable silhouette — this character must look different from the rest of the family by shape alone.
 ```
-- **Mia:** `An older sister, cheerful planner type: brown ponytail, mint knitted sweater, graphite leggings, white sneakers, freckles.`
-- **Leo:** `A younger brother, energetic and mischievous: messy dark hair, oversized graphite hoodie, sneakers one size too big, a small plaster on one knee.`
-- **Mama:** `A calm, warm mother: short curly hair, round glasses, soft oatmeal cardigan, mint mug in hand.`
-- **Oči:** `A relaxed, dreamy father: short beard, oversized fog-grey sweater, slippers, newspaper under one arm.`
+- **Mia:** `An older sister, bossy little planner: very high bouncy ponytail with a mint scrunchie, determined eyebrows, confident smug smile, plain mint sweater (no pattern), graphite leggings, white sneakers, freckles, holding a notebook with a very long checklist.`
+- **Leo:** `A younger brother, energetic and mischievous: messy dark hair, oversized graphite hoodie, sneakers one size too big, a small plaster on one knee.` (končna verzija brez nahrbtnika)
+- **Mama:** `A young mother in her thirties, tall and slim with a long neck: dark brown hair in a messy high bun with a pencil stuck through it, round thin glasses, calm knowing half-smile, one eyebrow slightly raised, mint mug always in hand, soft oatmeal cardigan, dark jeans.`
+- **Oči:** `A round, pear-shaped father with short stubby legs and a soft belly: one tuft of hair sticking straight up, short brown beard, sleepy heavy-lidded eyes, oversized graphite knitted sweater with sleeves covering half his hands, short pyjama shorts clearly visible under the sweater, bare shins, huge fluffy mint slippers, a newspaper always under one arm.`
 - **Curio:** obstoječi referenci `brand/mascot/curio-reference-portrait.jpg` + `curio-reference-sheet.jpg` (ne generiramo na novo).
 - **Pravilo za Curia v skupnih prizorih:** vedno priloži njegove reference; v promptu »completely smooth blank face below the nose« (brez ust).
 - Po odobritvi listov likov: **skupna slika družine** (vsi štirje + Curio v dnevni sobi) kot preizkus, ali se slogi ujemajo — šele potem storyboard.
@@ -98,6 +99,6 @@ Original character design for a premium animated family comedy. Stylized 3D, sof
 - Komentarji »next episode?« / »which one are you, Mia or Leo?« = znak, da imamo serijo.
 
 ## 7. Odprta vprašanja za Davida
-- Imena likov (Mia, Leo — iz »12 Weeks«) in videz potrdi ob listih likov.
+- ~~Imena in videz likov~~ — potrjeno 31. 10. 2026.
 - Seedance ali Kling za animacijo (odloči ob prvem testnem posnetku).
 - Glasba: licenčna knjižnica ali izvirna (za sponzorje je izvirna boljša).
