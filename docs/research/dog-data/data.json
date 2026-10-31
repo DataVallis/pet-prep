@@ -43173,6 +43173,546 @@
       }
     }
   },
+  "basenji": {
+    "_note": "Added 2026-10-31 (M5-R10-84, unattended run — appended after the Alaskan Malamute: AKC 2024 No. 80 'Basenji', S174 full-list table fetched 2026-10-31 '80 | Basenji'). Quotes as returned by the web-fetch tool on 2026-10-31 (short quotes, 125-character limit; fragments marked as such); paraphrase only in notes. Sources S642–S646 (reused S8, S10, S11, S14, S24, S35, S45, S54, S123, S174). No health percentages anywhere. Identity from the FCI nomenclature (S642, No. 43, Central Africa, patronage Great Britain); appearance, colours and ideal sizes from FCI-Standard N° 43 (S643, the English PDF dated 25.11.1999 — the nomenclature page names a newer official standard of 08/09/2026, not read); AKC standard via the Basenji Club of America (S645). The RKC Breeds A–Z page (thekennelclub.org.uk display.aspx?id=1002 and …/hound/basenji, also with a trailing slash) redirects to royalkennelclub.com, which the fetch tool refused as not in provenance → no RKC key facts, no Breed Watch category, no RKC health-testing list; size, exercise, weight / height range, lifespan band and suitability from PDSA (S644) and WebMD Pets (S646 — written by Alyssa Anderson, medically reviewed by Shruthi N, MD, 2026-04-23; a physician, not a vet — tier B like S31, flagged for David). Lifespan: the Dogs Trust McMillan 2024 table (S123) not fetched (not in the fetch tool's provenance, as on earlier runs); no VetCompass median found; RKC page not reachable → closest row: the PDSA band 'Over 12 years' (S644), seeded verified=false (Samoyed / Alaskan Malamute precedent). No Woodgreen, PetMD or VCA page found. Never hypoallergenic. Names: FCI / AKC / RKC 'Basenji' (S642, S174); nicknames 'African barkless dog', 'Congo dog'; Slovenian »basenji« (the same name is used in Slovenian; no KZS page checked — open for David).",
+    "identity": {
+      "value": "FCI No. 43, Group 5 Section 6 (Primitive type), Central Africa",
+      "unit": "—",
+      "source_id": "S642",
+      "quote": "BASENJI (FCI No. 43)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S642, as returned): 'BASENJI (FCI No. 43)', group No. 5 (spitz and primitive types), section 'Type primitif', country of origin 'Central Africa', country of patronage Great Britain, definitive acceptance 26/03/1964; FR / DE / ES 'BASENJI'. FCI-Standard N° 43 (S643): 'Central Africa.', 'Group 5 Spitz and primitive types.', 'Section 6 Primitive type.', utilisation 'Hunting dog, companion.' Central Africa is new in FCI_ORIGINS (export) and on the website (origins)."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S644",
+      "quote": "Medium",
+      "confidence": "high",
+      "notes": "PDSA key facts 'Size' (S644). FCI (S643): 'Lightly built, finely boned aristocratic looking animal, high on legs compared with its length,' (fragment). The RKC page (the usual size source) was not reachable."
+    },
+    "height": {
+      "pdsa": {
+        "value": {
+          "male": [
+            40,
+            43
+          ],
+          "female": [
+            40,
+            43
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S644",
+        "quote": "40-43 cm",
+        "confidence": "medium",
+        "notes": "PDSA key facts 'Average height' (S644, one range for both sexes; stored per sex) — the game / register range. FCI-Standard N° 43 (S643) ideal heights: dogs '43 cm (17 ins) at withers', bitches '40 cm (16 ins) at withers.'; AKC standard (S645) 'Ideal height for dogs is 17 inches and bitches 16 inches.'",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                43,
+                43
+              ],
+              "female": [
+                40,
+                40
+              ]
+            },
+            "unit": "cm",
+            "source_id": "S643",
+            "quote": "43 cm (17 ins) at withers",
+            "notes": "FCI ideal heights (one value per sex, not a range); bitches '40 cm (16 ins) at withers.'"
+          },
+          {
+            "value": {
+              "male": [
+                43.2,
+                43.2
+              ],
+              "female": [
+                40.6,
+                40.6
+              ]
+            },
+            "unit": "cm",
+            "source_id": "S645",
+            "quote": "Ideal height for dogs is 17 inches and bitches 16 inches.",
+            "notes": "AKC standard (S645); 17 / 16 in = 43.2 / 40.6 cm (our conversion)."
+          }
+        ]
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            9,
+            11
+          ],
+          "female": [
+            9,
+            11
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S644",
+        "quote": "9-11 kg",
+        "confidence": "medium",
+        "notes": "PDSA key facts 'Average weight' (S644, one range for both sexes; stored per sex) — the game / register range. FCI (S643) ideal weights: dogs '11 kg (24 lbs)', bitches '9 1/2 kg (21 lbs).'; AKC standard (S645) 'Approximate weight for dogs, 24 pounds and bitches, 22 pounds.'; WebMD (S646) 24 / 22 lb.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                11,
+                11
+              ],
+              "female": [
+                9.5,
+                9.5
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S643",
+            "quote": "11 kg (24 lbs)",
+            "notes": "FCI ideal weights (one value per sex); bitches '9 1/2 kg (21 lbs).'"
+          },
+          {
+            "value": {
+              "male": [
+                10.9,
+                10.9
+              ],
+              "female": [
+                10,
+                10
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S645",
+            "quote": "Approximate weight for dogs, 24 pounds and bitches, 22 pounds.",
+            "notes": "AKC standard (S645); 24 / 22 lb = 10.9 / 10.0 kg (our conversion)."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "II (6.5–9 kg) / III (9–15 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 9–11 kg lies at the II / III boundary, mostly in the 9–15 kg band. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "9–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Small (12–24 pounds): 9–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 9–11 kg (S644) = 20–24 lb → 'Small (12–24 pounds)'; the AKC dog's 24 lb sits on the Small / Medium boundary (Medium 12–15 months). The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Basenji growth curve found."
+      }
+    },
+    "lifespan": {
+      "pdsa": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S644",
+        "quote": "Over 12 years",
+        "confidence": "medium",
+        "notes": "PDSA key facts 'Average lifespan' (S644). The RKC band (the runbook's third option) could not be read (page not reachable). WebMD (S646) 'The average basenji will live between 13 and 14 years.' — alternative (no median)."
+      },
+      "webmd": {
+        "value": "13–14",
+        "unit": "years",
+        "source_id": "S646",
+        "quote": "The average basenji will live between 13 and 14 years.",
+        "confidence": "medium",
+        "notes": "WebMD Pets (S646). Exported as the span next to the PDSA lower bound; not used for the senior boundary (no median, not a breed study)."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "McMillan et al. 2024 (S54): the breed estimates are in Supplementary Table 3 (not reached); the Dogs Trust table of the same data (S123) was not fetched (not in the fetch tool's provenance, 2026-10-31). UNSOURCED value → open for David (check the S123 row)."
+      },
+      "senior_from": {
+        "value": 9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × PDSA lower bound 12 y (S644) → 0.75 × 12 = 9 y = 108 months. The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value in this run: S123 not reachable, no VetCompass median, RKC page not reachable → closest row (Samoyed / Alaskan Malamute precedent): the PDSA band of the same form as the RKC band, seeded verified=false (Claude's suggestion, open for David). Alternative: Dogs Trust > 7 y (S14) = 84.",
+        "derived_from": [
+          "S11",
+          "S644"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≥ 60",
+        "unit": "minutes/day",
+        "source_id": "S644",
+        "quote": "1 hour",
+        "confidence": "high",
+        "notes": "PDSA key facts 'Minimum exercise (per day)': '1 hour' (S644) — the RKC page (preferred) was not reachable. PDSA text: 'Basenjis have high energy levels and need around 60-90 minutes’ exercise per day.' (range → lower bound 60, the same number). WebMD (S646): basenjis 'need a lot of exercise every single day' (fragment, no minutes).",
+        "alternatives": [
+          {
+            "value": "60–90",
+            "unit": "minutes/day",
+            "source_id": "S644",
+            "quote": "Basenjis have high energy levels and need around 60-90 minutes’ exercise per day.",
+            "notes": "PDSA text (S644); runbook range rule → 60."
+          }
+        ]
+      },
+      "road_sense": {
+        "value": "very poor road sense — take care near traffic",
+        "unit": "—",
+        "source_id": "S644",
+        "quote": "They have very poor road sense however and so care should be taken when exercising near traffic.",
+        "confidence": "high",
+        "notes": "PDSA (S644). A fact in the register text; no chip."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "intelligent, independent, affectionate and alert; aloof with strangers; barkless but not mute (yodels)",
+        "unit": "—",
+        "source_id": "S643",
+        "quote": "An intelligent, independent, but affectionate and alert breed.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 43 (S643); also 'Can be aloof with strangers.', 'Barkless but not mute, its own special noise a mixture of a chortle and a yodel.', 'Remarkable for its cleanliness in every way.' AKC standard (S645) the same temperament sentence. PDSA (S644): 'considered to be aloof but trustworthy dogs' (fragment), 'very inquisitive, confident dogs and become very attached to their family' (fragment)."
+      },
+      "family": {
+        "value": "very attached to their family; only moderately good with young children, other dogs and strangers",
+        "unit": "—",
+        "source_id": "S646",
+        "quote": "They’re only moderately good with young children, other dogs, and strangers.",
+        "confidence": "medium",
+        "notes": "WebMD (S646). PDSA (S644): 'very inquisitive, confident dogs and become very attached to their family' (fragment). No family_pet / children chip: no explicit family-pet or child statement."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found on how long a Basenji can be left alone (PDSA and WebMD do not say). WebMD (S646): 'Otherwise, these dogs become bored and temperamental.' (exercise context). No needs_company chip."
+      },
+      "other_pets": {
+        "value": "chases anything that looks or acts like prey (a cat may be a target); chases at once when off-leash",
+        "unit": "—",
+        "source_id": "S646",
+        "quote": "They’ll chase anything that looks or acts like prey.",
+        "confidence": "high",
+        "notes": "WebMD (S646); a cat named as a possible target (paraphrase); 'If your basenji is left to roam or taken off-leash, they’re bound to begin chasing something almost immediately.' FCI (S643) utilisation 'Hunting dog, companion.' No chases_small_pets chip: the quote describes the chase but names no high / strong prey drive (runbook rule, David 2026-10-12); the fact stays in the register text."
+      },
+      "escaping": {
+        "value": "needs very high fences or constant supervision; climbs and jumps, can escape many enclosures",
+        "unit": "—",
+        "source_id": "S646",
+        "quote": "These dogs love the outdoors but need very high fences or constant supervision.",
+        "confidence": "high",
+        "notes": "WebMD (S646); 'They can climb competently and have an incredible vertical jump.'; the jump 'lets them escape from many modern enclosures' (fragment). Basis of secure_fencing (Siberian Husky / Samoyed precedent)."
+      },
+      "mental_stimulation": {
+        "value": "needs plenty of mental stimulation; does well at canine sports",
+        "unit": "—",
+        "source_id": "S644",
+        "quote": "require plenty of mental stimulation, and do well at canine sports",
+        "confidence": "high",
+        "notes": "PDSA (S644, fragment). WebMD (S646): 'They become bored quickly, so brief, positive bursts of encouragement are the best way to train them.' Basis of needs_mental_stimulation."
+      },
+      "socialisation": {
+        "value": "early training keeps them sociable and obedient",
+        "unit": "—",
+        "source_id": "S646",
+        "quote": "Early training is necessary to keep them sociable and obedient.",
+        "confidence": "medium",
+        "notes": "WebMD (S646). About training, not a socialisation advice ('socialise the puppy …') → no breed DOG_SOCIALISATION entry; the breed keeps David's general puppy row (M5-R17)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on chewing found → no chews_when_bored chip."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific appetite statement found → no food_motivated_weight chip. WebMD (S646): 'The amount that you feed your dog will depend on their size and age.'"
+      },
+      "cleanliness": {
+        "value": "cat-like, keeps itself clean",
+        "unit": "—",
+        "source_id": "S644",
+        "quote": "often described as being very cat-like in their behaviour",
+        "confidence": "high",
+        "notes": "PDSA (S644, fragment); FCI (S643) 'Remarkable for its cleanliness in every way.'"
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch category unknown (RKC page not reachable); no veterinary association names the breed for conformation-related welfare problems → no welfare chip. Breeder checklist: Basenji Club of America (K37): Fanconi syndrome, PRA-BJ1, eyes / CAER, thyroid, hips and elbows; PDSA (S644) asks to check that the parents were screened (paraphrase).",
+      "fanconi_syndrome": {
+        "value": "Fanconi syndrome — an inherited kidney disease; DNA test of breeding dogs",
+        "unit": "—",
+        "source_id": "S644",
+        "quote": "Fanconi syndrome - a type of kidney disease which leads to glucose in the urine.",
+        "confidence": "high",
+        "notes": "PDSA (S644). Basenji Club of America (breeder-checklist K37) 'Fanconi Syndrome' test. New register health key fanconi_syndrome (calm sentence, no numbers)."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy — gradual loss of sight; DNA test of breeding dogs",
+        "unit": "—",
+        "source_id": "S644",
+        "quote": "Progressive retinal atrophy – gradual deterioration of the retina of the eye.",
+        "confidence": "high",
+        "notes": "PDSA (S644). Basenji Club of America (K37) 'PRA-BJ1'. Register health key pra_eye_disease."
+      },
+      "pyruvate_kinase_deficiency": {
+        "value": "pyruvate kinase deficiency — a red blood cell enzyme defect causing anaemia",
+        "unit": "—",
+        "source_id": "S644",
+        "quote": "Pyruvate kinase deficiency – deficiency of a specific red blood cell enzyme, leading to haemolytic anaemia.",
+        "confidence": "high",
+        "notes": "PDSA (S644). New register health key pyruvate_kinase_deficiency (calm sentence, no numbers)."
+      },
+      "luxating_patella": {
+        "value": "luxating patellas — kneecaps slipping out of place",
+        "unit": "—",
+        "source_id": "S644",
+        "quote": "Luxating patellas – the kneecaps slipping temporarily out of place.",
+        "confidence": "high",
+        "notes": "PDSA (S644). Register health key kneecap_luxation."
+      },
+      "urolithiasis": {
+        "value": "urolithiasis — stones in the urine",
+        "unit": "—",
+        "source_id": "S644",
+        "quote": "Urolithiasis – stone formation in urine.",
+        "confidence": "high",
+        "notes": "PDSA (S644). Register health key bladder_stones."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 78,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 78 | Basenji |",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-31): rank 78 'Basenji', tier 'Lowest Degree of Working/Obedience Intelligence' (ranks 70–79). Coren's own article (S34) not reachable this run (not in the fetch tool's provenance). Coren ranks obedience to commands — an independent sighthound-like hunter ranks low; not a measure of 'cleverness'. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Lowest",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 80 to 100 repetitions or more.;",
+        "confidence": "medium",
+        "notes": "S35 tier 'Lowest Degree of Working/Obedience Intelligence' (ranks 70–79): 'Obey first command: 25% of the time or worse.;'. Tier definitions from Wikipedia; verify in book."
+      },
+      "training_notes": {
+        "value": "strong-willed — training can be a challenge; short positive sessions",
+        "unit": "—",
+        "source_id": "S644",
+        "quote": "they can also be quite strong-willed, which sometimes makes training a challenge.",
+        "confidence": "medium",
+        "notes": "PDSA (S644, fragment); WebMD (S646) brief, positive bursts of encouragement (paraphrase). The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.basenji.learning_multiplier (0.5, runbook rule: Lowest tier, rank 78).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "lightly built, finely boned, high on legs; wrinkled head, pricked ears, well arched neck, tightly curled tail; gazelle-like grace",
+        "unit": "—",
+        "source_id": "S643",
+        "quote": "Lightly built, finely boned aristocratic looking animal, high on legs compared with its length,",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 43 (S643, fragment); also 'Wrinkled head, with pricked ears, proudly carried on a well arched neck.', 'tail tightly curled presenting a picture of a well balanced dog of gazelle-like grace.'"
+      },
+      "colours": {
+        "value": [
+          "red and white",
+          "black and white",
+          "black, tan and white (tricolour)",
+          "brindle and white"
+        ],
+        "unit": "list",
+        "source_id": "S643",
+        "quote": "Pure black and white; red and white; black and tan, and white with melon pips and tan markings on muzzle and cheeks;",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 43 (S643, as returned); continues 'black; tan and white; brindle : red background with black stripes, the more clearly defined the stripes the better.' and 'The white should be on the feet, chest and tail tip. White legs, blaze and white collar optional.' AKC standard (S645): 'Color—Chestnut red; pure black; tricolor (pure black and chestnut red); or brindle' '(black stripes on a background of chestnut red)' 'all with white feet, chest and tail tip.' Listed in game order (red and white first = the portrait default, Claude's choice: chestnut red is the first colour of the AKC list)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Red and white first with the highest weight (the portrait default), then black and white, tricolour, brindle and white."
+      },
+      "coat": {
+        "value": "short, sleek and close, very fine",
+        "unit": "—",
+        "source_id": "S643",
+        "quote": "Short, sleek and close, very fine.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 43 (S643). AKC (S645): 'Coat short and fine. Skin very pliant.'"
+      },
+      "head": {
+        "value": "flat, well-chiselled, medium width, tapering towards the nose; fine wrinkles on the forehead",
+        "unit": "—",
+        "source_id": "S643",
+        "quote": "Flat, well-chiselled and medium width, tapering towards the nose.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 43 (S643); 'Wrinkled head' (general appearance)."
+      },
+      "ears": {
+        "value": "small, pointed, erect, slightly hooded",
+        "unit": "—",
+        "source_id": "S643",
+        "quote": "Small, pointed, erect and slightly hooded, of fine texture,",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 43 (S643, fragment)."
+      },
+      "eyes": {
+        "value": "dark, almond-shaped, obliquely set",
+        "unit": "—",
+        "source_id": "S643",
+        "quote": "Dark, almond-shaped; obliquely set, far-seeing and rather inscrutable in expression.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 43 (S643)."
+      },
+      "tail": {
+        "value": "high set, curls tightly over the spine, single or double curl",
+        "unit": "—",
+        "source_id": "S643",
+        "quote": "Curls tightly over spine and lies closely to thigh with a single or double curl.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 43 (S643)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = PDSA (S644), WebMD (S646). The RKC breed page (the usual suitability source) was not reachable on 2026-10-31 → no rkc_* rows.",
+      "pdsa_size": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S644",
+        "quote": "Medium",
+        "confidence": "high",
+        "notes": "PDSA key facts 'Size' (S644)."
+      },
+      "pdsa_exercise": {
+        "value": "1 hour minimum per day; around 60–90 minutes",
+        "unit": "—",
+        "source_id": "S644",
+        "quote": "Basenjis have high energy levels and need around 60-90 minutes’ exercise per day.",
+        "confidence": "high",
+        "notes": "PDSA (S644). Not long_daily_exercise / active_family (those need 2 hours or more)."
+      },
+      "pdsa_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S644",
+        "quote": "brushing once a week is usually enough to remove any dead hair.",
+        "confidence": "high",
+        "notes": "PDSA (S644, fragment) — read as the category 'Once a week' (our wording; quote verbatim). WebMD (S646) 'a quick rub with a grooming glove or brush once a week is all that you need to keep their coats looking their best.' agrees. → brushing 1× a week (M5-R13 rule 'once a week' → 1)."
+      },
+      "pdsa_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S644",
+        "quote": "Short",
+        "confidence": "high",
+        "notes": "PDSA key facts 'Coat length' (S644)."
+      },
+      "pdsa_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S644",
+        "quote": "Over 12 years",
+        "confidence": "medium",
+        "notes": "PDSA key facts 'Average lifespan' (S644). Not shorter_lifespan (that needs 'Under 10 years')."
+      },
+      "webmd_grooming": {
+        "value": "brush or grooming glove once a week",
+        "unit": "—",
+        "source_id": "S646",
+        "quote": "a quick rub with a grooming glove or brush once a week is all that you need to keep their coats looking their best.",
+        "confidence": "high",
+        "notes": "WebMD (S646)."
+      },
+      "webmd_ears": {
+        "value": "check and clean the ears weekly",
+        "unit": "—",
+        "source_id": "S646",
+        "quote": "Check their ears for debris and clean them on a weekly basis",
+        "confidence": "medium",
+        "notes": "WebMD (S646). → the child's ear-care mini-game once a week (M5-R20)."
+      },
+      "webmd_teeth": {
+        "value": "brush the teeth daily, at least twice a week",
+        "unit": "—",
+        "source_id": "S646",
+        "quote": "Brush their teeth often — daily is best, but at least twice a week",
+        "confidence": "medium",
+        "notes": "WebMD (S646). → the child's tooth-brushing mini-game twice a week (M5-R15; 'at least twice a week' = the stated minimum, Russell Terrier precedent 'at least three times a week' → 3)."
+      },
+      "webmd_nails": {
+        "value": "trim nails as needed",
+        "unit": "—",
+        "source_id": "S646",
+        "quote": "Trim their nails as needed.",
+        "confidence": "medium",
+        "notes": "WebMD (S646). No frequency → no nail task."
+      },
+      "webmd_bath": {
+        "value": "bath only when very messy",
+        "unit": "—",
+        "source_id": "S646",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "WebMD (S646): a bath only when the dog gets 'into something that’s exceptionally messy' (fragment). No frequency → no bath reminder."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -64719,6 +65259,233 @@
         "confidence": "high",
         "notes": "Colours of the FCI standard (S638): grey, black, sable, red shadings with white underbody / markings, or all white; blue eyes disqualify. Weights unsourced in prompts. Grey and white as the portrait default: the most typical shading (Claude).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): grey and white is the portrait default; standard colours only, never blue eyes, never merle or a long soft coat"
+      }
+    },
+    "basenji": {
+      "_note": "Unattended run M5-R10-84 (2026-10-31): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry — except the senior boundary (closest row, Claude's suggestion, seeded verified=false). The RKC breed page was not reachable → exercise from PDSA (S644, '1 hour' minimum). Built: weekly brushing (PDSA S644 / WebMD S646 'once a week', M5-R13 → 1), the child's ear-care mini-game once a week (WebMD S646 'on a weekly basis', M5-R20) and tooth-brushing twice a week (WebMD S646 'at least twice a week', M5-R15). Puppy socialisation = David's general row (the only quote is about early training). No meal gap (no source), no nail / bath / groomer task (no frequency), no heat task. New register health keys fanconi_syndrome, pyruvate_kinase_deficiency; no new vocabulary key; no chases_small_pets chip (WebMD describes the chase, names no prey drive). In marketing (not a welfare breed). Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S644",
+        "quote": "1 hour",
+        "confidence": "high",
+        "notes": "PDSA key facts 'Minimum exercise (per day): 1 hour' (S644) — the RKC page (preferred) was not reachable. Rule: 'minimum N' → N = 60. PDSA text 'around 60-90 minutes’ exercise per day' → range rule lower bound 60 (same). WebMD (S646) gives no minutes.",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S644",
+            "quote": "Basenjis have high energy levels and need around 60-90 minutes’ exercise per day.",
+            "notes": "Range 60–90 → lower bound 60."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S644 'Minimum exercise (per day): 1 hour'; RKC page not reachable)"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S644",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) (S11 + PDSA lower bound 'Over 12 years', S644 — the McMillan 2024 table S123 was not reachable, no VetCompass median, the RKC page was not reachable). The senior value is Claude's suggestion — see senior_boundary_months.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S644"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 108 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+      },
+      "senior_boundary_months": {
+        "value": 108,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "round(0.75 × 12 y × 12) = 108 (AAHA last 25 % of lifespan S11 × PDSA lower bound 12 y, S644; WebMD S646 '13 and 14 years' is a span, not a median). The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value in this run: the Dogs Trust table S123 and the RKC page were refused by the fetch tool, the McMillan 2024 paper (S54) has the breed estimates only in Supplementary Table 3 (not reached), no VetCompass paper. Closest rule row (Samoyed / Alaskan Malamute precedent) = the PDSA band of the same form as the RKC band. Alternative: Dogs Trust > 7 y (S14) = 84. Seeded with verified=false (also the senior arrival age); the seeder is insert-only, so a later change needs a Filament edit or a data migration.",
+        "derived_from": [
+          "S11",
+          "S644"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "predlog Claude 2026-10-31 (najbližja vrstica pravila runbooka, M5-R10-84) — čaka Davida; ni potrjeno"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36); senior 108 follows the unconfirmed senior boundary (senior_boundary_months)"
+      },
+      "learning_multiplier": {
+        "value": 0.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 78 (S35), tier 'Lowest' (70–79) → 0.5. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.5 (Coren rank 78, Lowest tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S644",
+        "quote": "brushing once a week is usually enough to remove any dead hair.",
+        "confidence": "high",
+        "notes": "basenji.suitability.pdsa_grooming. PDSA 'brushing once a week' → 1 (runbook dog-grooming rule 'Once a week' → 1); WebMD (S646) 'once a week' agrees. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (PDSA »brushing once a week«; WebMD »once a week«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "ear_care": {
+        "value": "ears checked and cleaned once a week",
+        "unit": "care routine (sourced need)",
+        "source_id": "S646",
+        "quote": "Check their ears for debris and clean them on a weekly basis",
+        "confidence": "medium",
+        "notes": "WebMD (S646), basenji.suitability.webmd_ears. Built: the child's ear-care mini-game once a program week (BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R20).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »on a weekly basis« → 1× na teden"
+      },
+      "tooth_brushing": {
+        "value": "teeth brushed at least twice a week",
+        "unit": "care routine (sourced need)",
+        "source_id": "S646",
+        "quote": "Brush their teeth often — daily is best, but at least twice a week",
+        "confidence": "medium",
+        "notes": "WebMD (S646), basenji.suitability.webmd_teeth. Built: the child's tooth-brushing mini-game twice a program week (DOG_CARE_TASKS, M5-R15). The stated minimum 'at least twice a week' → 2 (Russell Terrier precedent 'at least three times a week' → 3); 'daily is best' is the ideal, not the minimum.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »at least twice a week« → 2× na teden"
+      },
+      "suitability_tags": {
+        "_note": "Tags for backend/config/breed_suitability.php (M5-R10-84); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [],
+        "consider": [
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S644"
+            ],
+            "refs": [
+              "basenji.behaviour.mental_stimulation"
+            ],
+            "quote": "S644 'require plenty of mental stimulation, and do well at canine sports'"
+          },
+          {
+            "tag": "secure_fencing",
+            "source_ids": [
+              "S646"
+            ],
+            "refs": [
+              "basenji.behaviour.escaping"
+            ],
+            "quote": "S646 'These dogs love the outdoors but need very high fences or constant supervision.'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "PDSA: very attached to their family (fragment, S644) — not a family-pet statement; WebMD: only moderately good with young children (S646) → no suits chip.",
+          "children": "WebMD: only moderately good with young children (S646) → no chip either way.",
+          "small_children": "No explicit rating (S646 'only moderately good').",
+          "active_family": "60 minutes a day (S644) — the chip is for 2 hours or more.",
+          "long_daily_exercise": "60–90 minutes (S644) — the chip is for 2 hours or more.",
+          "apartment": "No RKC 'Flat/ Apartment' (RKC page not reachable).",
+          "large_home": "Only from the RKC key fact 'Large house' (runbook) — not reachable.",
+          "other_pets": "Chases anything that looks like prey (S646) → no other_pets chip.",
+          "low_shedding": "No shedding statement in the sources read.",
+          "hypoallergenic": "Never a tag (runbook).",
+          "needs_company": "No time-alone statement (S644 / S646).",
+          "independent_experienced_owner": "PDSA 'strong-willed, which sometimes makes training a challenge' (S644) names no owner type → no chip.",
+          "chews_when_bored": "No source.",
+          "food_motivated_weight": "No source.",
+          "shorter_lifespan": "PDSA 'Over 12 years' (S644) — criterion is 'Under 10 years'.",
+          "welfare": "No veterinary association names the breed for conformation-related welfare problems; RKC Breed Watch category unknown (page not reachable) → no welfare chip.",
+          "chases_small_pets": "WebMD 'They’ll chase anything that looks or acts like prey.' (S646) describes the chase but does not name a high / strong prey drive — the runbook rule (David 2026-10-12, BreedSuitabilityTest) needs a verbatim prey-drive statement → no chip; the fact stays in the register text. No PDSA prey-drive sentence found."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): consider needs_mental_stimulation, secure_fencing (no suits chip)"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S644",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92); RKC Breed Watch category unknown (page not reachable). Marketing never presents the Basenji as hypoallergenic, a dog for small children, a dog for small pets or a dog to let off the lead near traffic (S644, S646).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Basenji, red and white (default): chestnut red with white feet, chest and tail tip; lightly built, finely boned, high on legs; short, sleek, very fine coat; flat, well-chiselled head with fine forehead wrinkles; small pointed erect ears; dark almond-shaped eyes; tail curled tightly over the spine",
+        "unit": "—",
+        "source_id": "S643",
+        "quote": "Pure black and white; red and white; black and tan, and white with melon pips and tan markings on muzzle and cheeks;",
+        "confidence": "high",
+        "notes": "Colours of the FCI standard (S643) / AKC standard (S645): red and white, black and white, black-tan-white, brindle and white — white on feet, chest and tail tip. Weights unsourced in prompts. Red and white as the portrait default (Claude: the first colour of the AKC list).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): red and white is the portrait default; standard colours only"
       }
     }
   }
