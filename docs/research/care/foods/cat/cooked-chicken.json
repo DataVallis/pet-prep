@@ -4,56 +4,66 @@
   "name": {
     "en": "Cooked chicken",
     "sl": "Kuhan piščanec",
-    "de": "Gegartes Hähnchen"
+    "de": "Gegartes Hähnchen",
+    "fr": "Poulet cuit"
   },
   "question": {
     "en": "Can cats eat cooked chicken?",
     "sl": "Ali lahko mačke jedo kuhanega piščanca?",
-    "de": "Dürfen Katzen gegartes Hähnchen fressen?"
+    "de": "Dürfen Katzen gegartes Hähnchen fressen?",
+    "fr": "Les chats peuvent-ils manger du poulet cuit ?"
   },
   "url_slug": {
     "en": "cooked-chicken",
     "sl": "kuhan-piscanec",
-    "de": "gegartes-haehnchen"
+    "de": "gegartes-haehnchen",
+    "fr": "poulet-cuit"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, plain cooked chicken is fine as an occasional treat for cats. Boil it, remove all bones and skin, and add no seasoning. Count it as part of your cat's daily food, not a replacement for it.",
     "sl": "Da, navaden kuhan piščanec je v redu kot občasen priboljšek za mačke. Skuhajte ga, odstranite vse kosti in kožo ter ga ne začinite. Upoštevajte ga kot del dnevnega obroka, ne kot nadomestek zanj.",
-    "de": "Ja, gegartes Hähnchen pur ist als gelegentliches Leckerli für Katzen in Ordnung. Kochen Sie es, entfernen Sie alle Knochen und die Haut und würzen Sie nicht. Rechnen Sie es in die tägliche Futtermenge Ihrer Katze ein – es ersetzt das Futter nicht."
+    "de": "Ja, gegartes Hähnchen pur ist als gelegentliches Leckerli für Katzen in Ordnung. Kochen Sie es, entfernen Sie alle Knochen und die Haut und würzen Sie nicht. Rechnen Sie es in die tägliche Futtermenge Ihrer Katze ein – es ersetzt das Futter nicht.",
+    "fr": "Oui, du poulet cuit nature convient comme friandise occasionnelle pour les chats. Faites-le bouillir, retirez tous les os et la peau, et n’ajoutez aucun assaisonnement. Comptez-le dans la ration quotidienne de votre chat, sans qu’il la remplace."
   },
   "why": {
     "en": "Cats Protection and RSPCA Australia both say boiled or steamed chicken can be offered occasionally. It must be cooked and boneless, because cooked bones can splinter. Feeding only cooked chicken long-term can lead to nutritional deficiencies, so it stays a treat.",
     "sl": "Cats Protection in RSPCA Avstralija navajata, da je kuhanega ali na pari pripravljenega piščanca mogoče ponuditi občasno. Mora biti kuhan in brez kosti, ker se kuhane kosti lahko razcepijo. Dolgotrajno hranjenje samo s kuhanim piščancem lahko vodi v pomanjkanje hranil, zato naj ostane priboljšek.",
-    "de": "Cats Protection und RSPCA Australia sagen beide, dass gekochtes oder gedämpftes Hähnchen gelegentlich angeboten werden kann. Es muss gegart und ohne Knochen sein, denn gekochte Knochen können splittern. Wer auf Dauer nur gegartes Hähnchen füttert, riskiert Nährstoffmängel – deshalb bleibt es ein Leckerli."
+    "de": "Cats Protection und RSPCA Australia sagen beide, dass gekochtes oder gedämpftes Hähnchen gelegentlich angeboten werden kann. Es muss gegart und ohne Knochen sein, denn gekochte Knochen können splittern. Wer auf Dauer nur gegartes Hähnchen füttert, riskiert Nährstoffmängel – deshalb bleibt es ein Leckerli.",
+    "fr": "Cats Protection et la RSPCA Australia indiquent toutes deux que l’on peut proposer de temps en temps du poulet bouilli ou cuit à la vapeur. Il doit être cuit et sans os, car les os cuits peuvent se briser en éclats. Nourrir un chat uniquement de poulet cuit sur le long terme peut entraîner des carences ; il doit donc rester une friandise."
   },
   "signs": null,
   "what_to_do": {
     "en": "Offer a small piece first. If your cat gets vomiting or diarrhoea afterwards, stop and ask your vet. If your cat swallowed a cooked chicken bone, call your vet.",
     "sl": "Najprej ponudite majhen košček. Če ima mačka potem bruhanje ali drisko, prenehajte in se posvetujte z veterinarjem. Če je mačka pogoltnila kuhano piščančjo kost, pokličite veterinarja.",
-    "de": "Bieten Sie zuerst ein kleines Stück an. Bekommt Ihre Katze danach Erbrechen oder Durchfall, hören Sie auf und fragen Sie Ihren Tierarzt. Hat Ihre Katze einen gekochten Hähnchenknochen verschluckt, rufen Sie Ihren Tierarzt an."
+    "de": "Bieten Sie zuerst ein kleines Stück an. Bekommt Ihre Katze danach Erbrechen oder Durchfall, hören Sie auf und fragen Sie Ihren Tierarzt. Hat Ihre Katze einen gekochten Hähnchenknochen verschluckt, rufen Sie Ihren Tierarzt an.",
+    "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou a la diarrhée ensuite, arrêtez et demandez conseil à votre vétérinaire. S’il a avalé un os de poulet cuit, appelez votre vétérinaire."
   },
   "serving": {
     "en": "Boiled or steamed, plain, with no bones, skin or seasoning; small pieces within the daily food allowance.",
     "sl": "Kuhan ali na pari, brez dodatkov, kosti, kože in začimb; majhni koščki v okviru dnevnega obroka.",
-    "de": "Gekocht oder gedämpft, pur, ohne Knochen, Haut und Gewürze; kleine Stücke im Rahmen der täglichen Futtermenge."
+    "de": "Gekocht oder gedämpft, pur, ohne Knochen, Haut und Gewürze; kleine Stücke im Rahmen der täglichen Futtermenge.",
+    "fr": "Bouilli ou cuit à la vapeur, nature, sans os, sans peau ni assaisonnement ; de petits morceaux, compris dans la ration quotidienne."
   },
   "child": {
     "en": "Plain cooked chicken with no bones is a yummy cat treat. Ask a grown-up to get it ready.",
     "sl": "Navaden kuhan piščanec brez kosti je slasten priboljšek za mucke. Prosi odraslega, da ga pripravi.",
-    "de": "Gegartes Hähnchen ohne Knochen und ohne Gewürze ist ein leckeres Katzenleckerli. Bitte einen Erwachsenen, es vorzubereiten."
+    "de": "Gegartes Hähnchen ohne Knochen und ohne Gewürze ist ein leckeres Katzenleckerli. Bitte einen Erwachsenen, es vorzubereiten.",
+    "fr": "Le poulet cuit nature sans os est une friandise délicieuse pour un chat. Demande à un adulte de le préparer."
   },
   "faq": [
     {
       "q": {
         "en": "Can my cat eat only chicken?",
         "sl": "Ali lahko mačka je samo piščanca?",
-        "de": "Darf meine Katze nur Hähnchen fressen?"
+        "de": "Darf meine Katze nur Hähnchen fressen?",
+        "fr": "Mon chat peut-il manger uniquement du poulet ?"
       },
       "a": {
         "en": "No. Feeding only cooked chicken long-term can lead to nutritional deficiencies. Keep it as an extra.",
         "sl": "Ne. Dolgotrajno hranjenje samo s kuhanim piščancem lahko vodi v pomanjkanje hranil. Naj ostane dodatek.",
-        "de": "Nein. Wer auf Dauer nur gegartes Hähnchen füttert, riskiert Nährstoffmängel. Geben Sie es nur als Extra."
+        "de": "Nein. Wer auf Dauer nur gegartes Hähnchen füttert, riskiert Nährstoffmängel. Geben Sie es nur als Extra.",
+        "fr": "Non. Nourrir un chat uniquement de poulet cuit sur le long terme peut entraîner des carences. Il doit rester un petit extra."
       }
     }
   ],
@@ -117,6 +127,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6f0a33069da6761bf5348592f904d6c5479f4ffd64f176c0f49f5eae7ec7a519"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c154ceb9a56c924388e6140a2595937b9e5a43616ae9b9fd09982fc0f79cd0a4"
     }
   }
 }

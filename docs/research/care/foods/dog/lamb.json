@@ -4,56 +4,66 @@
   "name": {
     "en": "Lamb",
     "sl": "Jagnjetina",
-    "de": "Lammfleisch"
+    "de": "Lammfleisch",
+    "fr": "Agneau"
   },
   "question": {
     "en": "Can dogs eat lamb?",
     "sl": "Ali lahko psi jedo jagnjetino?",
-    "de": "Dürfen Hunde Lammfleisch fressen?"
+    "de": "Dürfen Hunde Lammfleisch fressen?",
+    "fr": "Les chiens peuvent-ils manger de l’agneau ?"
   },
   "url_slug": {
     "en": "lamb",
     "sl": "jagnjetina",
-    "de": "lammfleisch"
+    "de": "lammfleisch",
+    "fr": "agneau"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a little plain cooked lamb meat with no bones is fine for a healthy dog without a food allergy. Never give cooked lamb bones, which become brittle and splinter, and avoid fatty or salty pieces and onion gravy.",
     "sl": "Da, malo navadnega kuhanega jagnječjega mesa brez kosti je za zdravega psa brez alergije na hrano v redu. Nikoli ne dajte kuhanih jagnječjih kosti, ki postanejo krhke in se razcepijo, ter se izogibajte mastnim ali slanim koščkom in omaki s čebulo.",
-    "de": "Ja, ein wenig pures, gegartes Lammfleisch ohne Knochen ist für einen gesunden Hund ohne Futterallergie in Ordnung. Geben Sie niemals gegarte Lammknochen – sie werden spröde und splittern – und meiden Sie fette oder salzige Stücke sowie Zwiebelsoße."
+    "de": "Ja, ein wenig pures, gegartes Lammfleisch ohne Knochen ist für einen gesunden Hund ohne Futterallergie in Ordnung. Geben Sie niemals gegarte Lammknochen – sie werden spröde und splittern – und meiden Sie fette oder salzige Stücke sowie Zwiebelsoße.",
+    "fr": "Oui, un peu de viande d’agneau cuite nature et sans os convient à un chien en bonne santé sans allergie alimentaire. Ne donnez jamais d’os d’agneau cuits, qui deviennent cassants et éclatent, et évitez les morceaux gras ou salés et la sauce à l’oignon."
   },
   "why": {
     "en": "Lamb meat itself is listed as safe for dogs in small amounts. All bones become brittle when cooked and can splinter. High-fat foods can trigger vomiting, diarrhoea or even pancreatitis, and foods high in fat or salt are best avoided. Onion-based gravies are not safe for dogs.",
     "sl": "Samo jagnječje meso je navedeno kot varno za pse v majhnih količinah. Vse kosti s kuhanjem postanejo krhke in se lahko razcepijo. Mastna hrana lahko sproži bruhanje, drisko ali celo vnetje trebušne slinavke, hrani z veliko maščobe ali soli pa se je bolje izogniti. Omake s čebulo za pse niso varne.",
-    "de": "Lammfleisch selbst gilt in kleinen Mengen als unbedenklich für Hunde. Alle Knochen werden beim Garen spröde und können splittern. Fettreiche Lebensmittel können Erbrechen, Durchfall oder sogar eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen, und sehr fett- oder salzreiche Lebensmittel sollten besser gemieden werden. Soßen auf Zwiebelbasis sind für Hunde nicht sicher."
+    "de": "Lammfleisch selbst gilt in kleinen Mengen als unbedenklich für Hunde. Alle Knochen werden beim Garen spröde und können splittern. Fettreiche Lebensmittel können Erbrechen, Durchfall oder sogar eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen, und sehr fett- oder salzreiche Lebensmittel sollten besser gemieden werden. Soßen auf Zwiebelbasis sind für Hunde nicht sicher.",
+    "fr": "La viande d’agneau elle-même est indiquée comme sans danger pour les chiens en petite quantité. Tous les os deviennent cassants à la cuisson et peuvent éclater. Les aliments gras peuvent provoquer vomissements, diarrhée, voire une pancréatite, et mieux vaut éviter les aliments riches en graisses ou en sel. Les sauces à base d’oignon ne sont pas sans danger pour les chiens."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog ate fatty lamb scraps, watch for vomiting, diarrhoea or belly pain and call your vet if they appear. If it ate cooked bones or lamb with onion gravy, call your vet straight away and don't try to make your dog sick.",
     "sl": "Če je pes pojedel mastne ostanke jagnjetine, opazujte, ali bruha, ima drisko ali ga boli trebuh, in pokličite veterinarja, če se to pojavi. Če je pojedel kuhane kosti ali jagnjetino z omako s čebulo, takoj pokličite veterinarja in ne poskušajte izzvati bruhanja.",
-    "de": "Wenn Ihr Hund fette Lammreste gefressen hat, achten Sie auf Erbrechen, Durchfall oder Bauchschmerzen und rufen Sie Ihren Tierarzt an, wenn diese auftreten. Hat er gegarte Knochen oder Lamm mit Zwiebelsoße gefressen, rufen Sie sofort Ihren Tierarzt an und versuchen Sie nicht, Ihren Hund zum Erbrechen zu bringen."
+    "de": "Wenn Ihr Hund fette Lammreste gefressen hat, achten Sie auf Erbrechen, Durchfall oder Bauchschmerzen und rufen Sie Ihren Tierarzt an, wenn diese auftreten. Hat er gegarte Knochen oder Lamm mit Zwiebelsoße gefressen, rufen Sie sofort Ihren Tierarzt an und versuchen Sie nicht, Ihren Hund zum Erbrechen zu bringen.",
+    "fr": "Si votre chien a mangé des restes d’agneau gras, surveillez les vomissements, la diarrhée ou les douleurs au ventre, et appelez votre vétérinaire s’ils apparaissent. S’il a mangé des os cuits ou de l’agneau avec une sauce à l’oignon, appelez immédiatement votre vétérinaire et n’essayez pas de le faire vomir."
   },
   "serving": {
     "en": "A little plain cooked lamb meat, no bones, no fatty or salty bits, no gravy.",
     "sl": "Malo navadnega kuhanega jagnječjega mesa, brez kosti, brez mastnih ali slanih koščkov, brez omake.",
-    "de": "Ein wenig gegartes Lammfleisch pur, ohne Knochen, ohne fette oder salzige Stücke, ohne Soße."
+    "de": "Ein wenig gegartes Lammfleisch pur, ohne Knochen, ohne fette oder salzige Stücke, ohne Soße.",
+    "fr": "Un peu de viande d’agneau cuite nature, sans os, sans morceaux gras ou salés, sans sauce."
   },
   "child": {
     "en": "A small bit of plain lamb with no bones can be a treat. Lamb bones are never for dogs.",
     "sl": "Majhen košček navadne jagnjetine brez kosti je lahko priboljšek. Jagnječje kosti nikoli niso za pse.",
-    "de": "Ein kleines Stück Lammfleisch ohne alles und ohne Knochen kann ein Leckerli sein. Lammknochen sind nie etwas für Hunde."
+    "de": "Ein kleines Stück Lammfleisch ohne alles und ohne Knochen kann ein Leckerli sein. Lammknochen sind nie etwas für Hunde.",
+    "fr": "Un petit morceau d’agneau nature et sans os peut être une friandise. Les os d’agneau ne sont jamais pour les chiens."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs have a lamb bone to chew?",
         "sl": "Ali lahko pes gloda jagnječjo kost?",
-        "de": "Darf ein Hund einen Lammknochen zum Kauen bekommen?"
+        "de": "Darf ein Hund einen Lammknochen zum Kauen bekommen?",
+        "fr": "Un chien peut-il ronger un os d’agneau ?"
       },
       "a": {
         "en": "Not a cooked one: cooked bones become brittle and can splinter. Never give cooked bones of any kind.",
         "sl": "Kuhane ne: kuhane kosti postanejo krhke in se lahko razcepijo. Nikoli ne dajte kuhanih kosti kakršne koli vrste.",
-        "de": "Keinen gegarten: Gegarte Knochen werden spröde und können splittern. Geben Sie niemals gegarte Knochen, egal welcher Art."
+        "de": "Keinen gegarten: Gegarte Knochen werden spröde und können splittern. Geben Sie niemals gegarte Knochen, egal welcher Art.",
+        "fr": "Pas un os cuit : les os cuits deviennent cassants et peuvent éclater. Ne donnez jamais d’os cuits, quels qu’ils soient."
       }
     }
   ],
@@ -122,6 +132,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "db11e8c9037fffbff50b977aa2195048492372f3764ce30c5deeda7c08d0385a"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1f653ef3b5b62c809941cb92e7b254f1b53f759fd37c4846c8900722a72b0c77"
     }
   }
 }

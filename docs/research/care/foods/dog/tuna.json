@@ -4,68 +4,80 @@
   "name": {
     "en": "Tuna",
     "sl": "Tuna",
-    "de": "Thunfisch"
+    "de": "Thunfisch",
+    "fr": "Thon"
   },
   "question": {
     "en": "Can dogs eat tuna?",
     "sl": "Ali lahko psi jedo tuno?",
-    "de": "Dürfen Hunde Thunfisch fressen?"
+    "de": "Dürfen Hunde Thunfisch fressen?",
+    "fr": "Les chiens peuvent-ils manger du thon ?"
   },
   "url_slug": {
     "en": "tuna",
     "sl": "tuna",
-    "de": "thunfisch"
+    "de": "thunfisch",
+    "fr": "thon"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, occasionally and in small amounts. Tuna isn't toxic to dogs, but it is high in mercury, so it shouldn't be a regular food. Choose cooked tuna or 'light' (skipjack) canned tuna packed only in water, without added salt or oil.",
     "sl": "Da, občasno in v majhnih količinah. Tuna za pse ni strupena, vsebuje pa veliko živega srebra, zato ne sme biti redna hrana. Izberite kuhano tuno ali svetlo tuno (črtasti tun) v konzervi, vloženo samo v vodi, brez dodane soli ali olja.",
-    "de": "Ja, gelegentlich und in kleinen Mengen. Thunfisch ist für Hunde nicht giftig, enthält aber viel Quecksilber und sollte daher nicht regelmäßig gefüttert werden. Wählen Sie gegarten Thunfisch oder Dosenthunfisch vom Skipjack (Echter Bonito; in den USA als „light“ verkauft), nur in Wasser, ohne zugesetztes Salz oder Öl."
+    "de": "Ja, gelegentlich und in kleinen Mengen. Thunfisch ist für Hunde nicht giftig, enthält aber viel Quecksilber und sollte daher nicht regelmäßig gefüttert werden. Wählen Sie gegarten Thunfisch oder Dosenthunfisch vom Skipjack (Echter Bonito; in den USA als „light“ verkauft), nur in Wasser, ohne zugesetztes Salz oder Öl.",
+    "fr": "Oui, de temps en temps et en petite quantité. Le thon n’est pas toxique pour les chiens, mais il est riche en mercure : il ne doit donc pas être un aliment régulier. Choisissez du thon cuit ou du thon « light » (listao) en conserve, uniquement au naturel (dans l’eau), sans sel ni huile ajoutés."
   },
   "why": {
     "en": "Tuna are large, long-lived fish, so their mercury levels are high, and dogs are more sensitive to mercury than people. Feeding tuna regularly can lead to mercury poisoning over time. Albacore, yellowfin and 'white' tuna carry more mercury than skipjack. Canned tuna often has added salt or oil, which isn't healthy for dogs.",
     "sl": "Tune so velike, dolgo živeče ribe, zato vsebujejo veliko živega srebra, psi pa so nanj bolj občutljivi kot ljudje. Redno hranjenje s tuno lahko sčasoma povzroči zastrupitev z živim srebrom. Beli tun, rumenoplavuti tun in »bela« tuna imajo več živega srebra kot črtasti tun. Tuna v konzervi ima pogosto dodano sol ali olje, kar za pse ni zdravo.",
-    "de": "Thunfische sind große, langlebige Fische, daher ist ihr Quecksilbergehalt hoch, und Hunde reagieren empfindlicher auf Quecksilber als Menschen. Regelmäßig gefütterter Thunfisch kann mit der Zeit zu einer Quecksilbervergiftung führen. Albacore (Weißer Thun), Gelbflossenthun und in den USA als „white“ verkaufter Thunfisch enthalten mehr Quecksilber als Skipjack. Dosenthunfisch enthält oft zugesetztes Salz oder Öl, was für Hunde nicht gesund ist."
+    "de": "Thunfische sind große, langlebige Fische, daher ist ihr Quecksilbergehalt hoch, und Hunde reagieren empfindlicher auf Quecksilber als Menschen. Regelmäßig gefütterter Thunfisch kann mit der Zeit zu einer Quecksilbervergiftung führen. Albacore (Weißer Thun), Gelbflossenthun und in den USA als „white“ verkaufter Thunfisch enthalten mehr Quecksilber als Skipjack. Dosenthunfisch enthält oft zugesetztes Salz oder Öl, was für Hunde nicht gesund ist.",
+    "fr": "Les thons sont de grands poissons qui vivent longtemps : leur taux de mercure est donc élevé, et les chiens sont plus sensibles au mercure que nous. Donner du thon régulièrement peut entraîner, avec le temps, une intoxication au mercure. Le thon germon, le thon albacore et le thon « blanc » contiennent plus de mercure que le listao. Le thon en conserve contient souvent du sel ou de l’huile ajoutés, ce qui n’est pas sain pour les chiens."
   },
   "signs": null,
   "what_to_do": {
     "en": "A stolen bite of tuna is nothing to panic about. If your dog has been eating tuna regularly and shows signs such as tremors, loss of coordination, vomiting blood or bloody diarrhoea, take them to the vet immediately.",
     "sl": "Ukraden grižljaj tune ni razlog za paniko. Če pes redno je tuno in se pojavijo znaki, kot so tresenje, slaba koordinacija, bruhanje krvi ali krvava driska, ga takoj odpeljite k veterinarju.",
-    "de": "Ein stibitzter Bissen Thunfisch ist kein Grund zur Panik. Wenn Ihr Hund regelmäßig Thunfisch gefressen hat und Anzeichen wie Zittern, Koordinationsverlust, Bluterbrechen oder blutigen Durchfall zeigt, bringen Sie ihn sofort zum Tierarzt."
+    "de": "Ein stibitzter Bissen Thunfisch ist kein Grund zur Panik. Wenn Ihr Hund regelmäßig Thunfisch gefressen hat und Anzeichen wie Zittern, Koordinationsverlust, Bluterbrechen oder blutigen Durchfall zeigt, bringen Sie ihn sofort zum Tierarzt.",
+    "fr": "Une bouchée de thon chapardée n’est pas une raison de paniquer. Si votre chien mange du thon régulièrement et présente des signes comme des tremblements, une perte de coordination, des vomissements de sang ou une diarrhée sanglante, emmenez-le immédiatement chez le vétérinaire."
   },
   "serving": {
     "en": "Occasionally, a small amount of cooked tuna or 'light' (skipjack) canned tuna in water only, no salt or oil; avoid albacore, yellowfin and 'white' tuna.",
     "sl": "Občasno malo kuhane tune ali svetle tune (črtasti tun) v konzervi samo v vodi, brez soli in olja; izogibajte se belemu in rumenoplavutemu tunu ter »beli« tuni.",
-    "de": "Gelegentlich eine kleine Menge gegarter Thunfisch oder Skipjack aus der Dose (US-Etikett „light“), nur in Wasser, ohne Salz oder Öl; Albacore, Gelbflossenthun und „white“-Thunfisch (US-Etikett) meiden."
+    "de": "Gelegentlich eine kleine Menge gegarter Thunfisch oder Skipjack aus der Dose (US-Etikett „light“), nur in Wasser, ohne Salz oder Öl; Albacore, Gelbflossenthun und „white“-Thunfisch (US-Etikett) meiden.",
+    "fr": "De temps en temps, un peu de thon cuit ou de thon « light » (listao) en conserve, uniquement au naturel, sans sel ni huile ; évitez le thon germon, l’albacore et le thon « blanc »."
   },
   "child": {
     "en": "A little tuna is a rare treat for a dog, not everyday food. Ask a grown-up to pick tuna in water.",
     "sl": "Malo tune je za psa redek priboljšek, ne vsakdanja hrana. Prosi odraslega, naj izbere tuno v vodi.",
-    "de": "Ein bisschen Thunfisch ist ein seltenes Leckerli für einen Hund, kein Futter für jeden Tag. Bitte einen Erwachsenen, Thunfisch in Wasser auszusuchen."
+    "de": "Ein bisschen Thunfisch ist ein seltenes Leckerli für einen Hund, kein Futter für jeden Tag. Bitte einen Erwachsenen, Thunfisch in Wasser auszusuchen.",
+    "fr": "Un peu de thon, c’est une friandise rare pour un chien, pas un repas de tous les jours. Demande à un adulte de choisir du thon au naturel."
   },
   "faq": [
     {
       "q": {
         "en": "My dog stole some tuna. Should I worry?",
         "sl": "Pes je ukradel nekaj tune. Naj me skrbi?",
-        "de": "Mein Hund hat Thunfisch stibitzt. Muss ich mir Sorgen machen?"
+        "de": "Mein Hund hat Thunfisch stibitzt. Muss ich mir Sorgen machen?",
+        "fr": "Mon chien a chapardé du thon. Dois-je m’inquiéter ?"
       },
       "a": {
         "en": "Usually not: tuna isn't toxic, and the concern is regular feeding over time.",
         "sl": "Običajno ne: tuna ni strupena, skrb vzbuja redno hranjenje skozi daljši čas.",
-        "de": "Meist nicht: Thunfisch ist nicht giftig, bedenklich ist die regelmäßige Fütterung über längere Zeit."
+        "de": "Meist nicht: Thunfisch ist nicht giftig, bedenklich ist die regelmäßige Fütterung über längere Zeit.",
+        "fr": "Généralement pas : le thon n’est pas toxique, le problème vient d’une consommation régulière dans le temps."
       }
     },
     {
       "q": {
         "en": "Which canned tuna is best?",
         "sl": "Katera tuna v konzervi je najboljša?",
-        "de": "Welcher Dosenthunfisch ist am besten?"
+        "de": "Welcher Dosenthunfisch ist am besten?",
+        "fr": "Quel thon en conserve est le meilleur ?"
       },
       "a": {
         "en": "'Light' or skipjack tuna packed only in water, given occasionally.",
         "sl": "Svetla tuna oziroma črtasti tun, vložen samo v vodi, občasno.",
-        "de": "Skipjack-Thunfisch (US-Etikett „light“), nur in Wasser, gelegentlich gegeben."
+        "de": "Skipjack-Thunfisch (US-Etikett „light“), nur in Wasser, gelegentlich gegeben.",
+        "fr": "Le thon « light » ou listao, uniquement au naturel, donné de temps en temps."
       }
     }
   ],
@@ -157,6 +169,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a2740e95b82b8ba933541d12d9c6015f54001f5d56e56a9043a730195925f186"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fc6094782b1005411b43f9097bf64bffe02ec7ad931390ada278f3d6e46688fd"
     }
   }
 }

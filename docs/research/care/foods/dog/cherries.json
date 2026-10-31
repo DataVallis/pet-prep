@@ -4,28 +4,33 @@
   "name": {
     "en": "Cherries",
     "sl": "Češnje",
-    "de": "Kirschen"
+    "de": "Kirschen",
+    "fr": "Cerises"
   },
   "question": {
     "en": "Can dogs eat cherries?",
     "sl": "Ali lahko psi jedo češnje?",
-    "de": "Dürfen Hunde Kirschen fressen?"
+    "de": "Dürfen Hunde Kirschen fressen?",
+    "fr": "Les chiens peuvent-ils manger des cerises ?"
   },
   "url_slug": {
     "en": "cherries",
     "sl": "cesnje",
-    "de": "kirschen"
+    "de": "kirschen",
+    "fr": "cerises"
   },
   "level": "dangerous",
   "answer": {
     "en": "No, cherries are best avoided. The ripe flesh is not the toxic part, but the pits, stems and leaves contain compounds that can release cyanide, and pits can block a dog's intestines. Pet Poison Helpline says the risk outweighs any benefit.",
     "sl": "Ne, češnjam se je bolje izogniti. Zrelo meso ni strupeni del, koščice, peclji in listi pa vsebujejo snovi, iz katerih se lahko sprosti cianid, koščice pa lahko psu zamašijo črevesje. Pet Poison Helpline pravi, da tveganje presega koristi.",
-    "de": "Nein, Kirschen meiden Sie besser. Das reife Fruchtfleisch ist nicht der giftige Teil, aber Kerne, Stiele und Blätter enthalten Stoffe, die Cyanid freisetzen können, und Kerne können den Darm eines Hundes blockieren. Laut Pet Poison Helpline überwiegt das Risiko jeden Nutzen."
+    "de": "Nein, Kirschen meiden Sie besser. Das reife Fruchtfleisch ist nicht der giftige Teil, aber Kerne, Stiele und Blätter enthalten Stoffe, die Cyanid freisetzen können, und Kerne können den Darm eines Hundes blockieren. Laut Pet Poison Helpline überwiegt das Risiko jeden Nutzen.",
+    "fr": "Non, mieux vaut éviter les cerises. La chair mûre n’est pas la partie toxique, mais les noyaux, les queues et les feuilles contiennent des composés qui peuvent libérer du cyanure, et les noyaux peuvent bloquer l’intestin d’un chien. Selon le Pet Poison Helpline, le risque l’emporte sur tout bénéfice."
   },
   "why": {
     "en": "Cherry pits, stems and leaves contain cyanogenic glycosides, which can turn into cyanide. Cyanide is released when a pit is chewed and broken; a pit swallowed whole is not expected to poison, but it can get stuck and cause a blockage. One cherry will not cause cyanide poisoning, yet the risk is not worth it.",
     "sl": "Koščice, peclji in listi češenj vsebujejo cianogene glikozide, ki se lahko spremenijo v cianid. Cianid se sprosti, ko pes koščico prežveči in zdrobi; cela pogoltnjena koščica naj ne bi zastrupila, lahko pa se zatakne in povzroči zaporo. Ena češnja ne povzroči zastrupitve s cianidom, a tveganje se ne splača.",
-    "de": "Kirschkerne, Stiele und Blätter enthalten cyanogene Glykoside, die sich in Cyanid umwandeln können. Cyanid wird freigesetzt, wenn ein Kern zerkaut und zerbrochen wird; ein ganz verschluckter Kern führt voraussichtlich nicht zu einer Vergiftung, kann aber stecken bleiben und eine Blockade verursachen. Eine einzelne Kirsche verursacht keine Cyanidvergiftung – das Risiko lohnt sich trotzdem nicht."
+    "de": "Kirschkerne, Stiele und Blätter enthalten cyanogene Glykoside, die sich in Cyanid umwandeln können. Cyanid wird freigesetzt, wenn ein Kern zerkaut und zerbrochen wird; ein ganz verschluckter Kern führt voraussichtlich nicht zu einer Vergiftung, kann aber stecken bleiben und eine Blockade verursachen. Eine einzelne Kirsche verursacht keine Cyanidvergiftung – das Risiko lohnt sich trotzdem nicht.",
+    "fr": "Les noyaux, les queues et les feuilles de cerise contiennent des glycosides cyanogènes, qui peuvent se transformer en cyanure. Le cyanure est libéré lorsqu’un noyau est mâché et cassé ; un noyau avalé entier ne devrait pas provoquer d’intoxication, mais il peut rester coincé et causer une obstruction. Une seule cerise ne provoquera pas d’intoxication au cyanure, mais le risque n’en vaut pas la peine."
   },
   "signs": {
     "en": [
@@ -48,42 +53,55 @@
       "Atemnot, Hecheln",
       "Magenverstimmung oder Durchfall",
       "Schock"
+    ],
+    "fr": [
+      "Pupilles dilatées",
+      "Gencives rouge brique",
+      "Difficultés respiratoires, halètement",
+      "Troubles digestifs ou diarrhée",
+      "État de choc"
     ]
   },
   "what_to_do": {
     "en": "If your dog ate cherry pits, stems or leaves, or a lot of cherries, contact your vet or a pet poison helpline right away. Note roughly how many were eaten and whether pits were chewed. Don't wait for signs.",
     "sl": "Če je pes pojedel koščice, peclje ali liste češenj ali veliko češenj, takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite si, približno koliko jih je pojedel in ali je koščice prežvečil. Ne čakajte na znake.",
-    "de": "Wenn Ihr Hund Kirschkerne, Stiele oder Blätter oder viele Kirschen gefressen hat, wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie ungefähr, wie viele es waren und ob Kerne zerkaut wurden. Warten Sie nicht auf Anzeichen."
+    "de": "Wenn Ihr Hund Kirschkerne, Stiele oder Blätter oder viele Kirschen gefressen hat, wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie ungefähr, wie viele es waren und ob Kerne zerkaut wurden. Warten Sie nicht auf Anzeichen.",
+    "fr": "Si votre chien a mangé des noyaux, des queues ou des feuilles de cerise, ou beaucoup de cerises, contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez combien il en a mangé environ et si les noyaux ont été mâchés. N’attendez pas l’apparition des signes."
   },
   "serving": null,
   "child": {
     "en": "Cherries have hard stones inside that are bad for dogs. Keep cherries for people and tell a grown-up if your dog eats some.",
     "sl": "Češnje imajo v sebi trde koščice, ki so za pse slabe. Češnje so za ljudi; povej odraslemu, če jih pes poje.",
-    "de": "In Kirschen stecken harte Kerne, die für Hunde schlecht sind. Kirschen sind für Menschen – sag einem Erwachsenen Bescheid, wenn dein Hund welche frisst."
+    "de": "In Kirschen stecken harte Kerne, die für Hunde schlecht sind. Kirschen sind für Menschen – sag einem Erwachsenen Bescheid, wenn dein Hund welche frisst.",
+    "fr": "Les cerises ont des noyaux durs qui sont mauvais pour les chiens. Garde les cerises pour les humains et préviens un adulte si ton chien en mange."
   },
   "faq": [
     {
       "q": {
         "en": "Is one cherry an emergency?",
         "sl": "Je ena češnja nujen primer?",
-        "de": "Ist eine einzelne Kirsche ein Notfall?"
+        "de": "Ist eine einzelne Kirsche ein Notfall?",
+        "fr": "Une seule cerise, est-ce une urgence ?"
       },
       "a": {
         "en": "One cherry will not cause cyanide poisoning, and a healthy dog that eats one or two does not need panic. Still, pits can cause blockages, so ask your vet if you are unsure.",
         "sl": "Ena češnja ne povzroči zastrupitve s cianidom in zdravemu psu, ki poje eno ali dve, ni treba paničariti. Koščice pa lahko povzročijo zaporo, zato se ob dvomu posvetujte z veterinarjem.",
-        "de": "Eine Kirsche verursacht keine Cyanidvergiftung, und wenn ein gesunder Hund ein oder zwei frisst, ist keine Panik nötig. Kerne können aber Blockaden verursachen – fragen Sie im Zweifel Ihren Tierarzt."
+        "de": "Eine Kirsche verursacht keine Cyanidvergiftung, und wenn ein gesunder Hund ein oder zwei frisst, ist keine Panik nötig. Kerne können aber Blockaden verursachen – fragen Sie im Zweifel Ihren Tierarzt.",
+        "fr": "Une seule cerise ne provoquera pas d’intoxication au cyanure, et si un chien en bonne santé en mange une ou deux, inutile de paniquer. Les noyaux peuvent toutefois causer une obstruction : en cas de doute, demandez conseil à votre vétérinaire."
       }
     },
     {
       "q": {
         "en": "Can I give pitted cherries?",
         "sl": "Lahko dam izkoščičene češnje?",
-        "de": "Darf ich entsteinte Kirschen geben?"
+        "de": "Darf ich entsteinte Kirschen geben?",
+        "fr": "Puis-je donner des cerises dénoyautées ?"
       },
       "a": {
         "en": "The ripe pulp is not the toxic part, but Pet Poison Helpline advises that the risk of feeding cherries outweighs the benefits.",
         "sl": "Zrela sredica ni strupeni del, a Pet Poison Helpline svetuje, da tveganje hranjenja s češnjami presega koristi.",
-        "de": "Das reife Fruchtfleisch ist nicht der giftige Teil, aber laut Pet Poison Helpline überwiegt beim Füttern von Kirschen das Risiko den Nutzen."
+        "de": "Das reife Fruchtfleisch ist nicht der giftige Teil, aber laut Pet Poison Helpline überwiegt beim Füttern von Kirschen das Risiko den Nutzen.",
+        "fr": "La pulpe mûre n’est pas la partie toxique, mais selon le Pet Poison Helpline, le risque de donner des cerises à un chien l’emporte sur les bénéfices."
       }
     }
   ],
@@ -163,6 +181,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "827d8d144226c4519f55a279aff9758b010da969d0ae67f1ef9a9c7fa8b9fc49"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c5835470d483d97322a30cc28e67b59241e2ce8b3eb1358ec80f390dbfbf6d83"
     }
   }
 }

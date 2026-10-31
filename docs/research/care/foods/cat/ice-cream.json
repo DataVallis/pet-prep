@@ -4,28 +4,33 @@
   "name": {
     "en": "Ice cream",
     "sl": "Sladoled",
-    "de": "Eis"
+    "de": "Eis",
+    "fr": "Glace"
   },
   "question": {
     "en": "Can cats eat ice cream?",
     "sl": "Ali lahko mačke jedo sladoled?",
-    "de": "Dürfen Katzen Eis fressen?"
+    "de": "Dürfen Katzen Eis fressen?",
+    "fr": "Les chats peuvent-ils manger de la glace ?"
   },
   "url_slug": {
     "en": "ice-cream",
     "sl": "sladoled",
-    "de": "eis"
+    "de": "eis",
+    "fr": "glace"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, ice cream is not a good treat for cats. It is made with milk and cream, which can upset a cat's stomach, and it adds fat and sugar that cats don't need.",
     "sl": "Ne, sladoled ni dober priboljšek za mačke. Narejen je iz mleka in smetane, ki mački lahko razdražita želodec, poleg tega pa vsebuje maščobe in sladkor, ki jih mačke ne potrebujejo.",
-    "de": "Nein, Eis ist kein gutes Leckerli für Katzen. Es wird aus Milch und Sahne hergestellt, die einer Katze auf den Magen schlagen können, und liefert Fett und Zucker, die Katzen nicht brauchen."
+    "de": "Nein, Eis ist kein gutes Leckerli für Katzen. Es wird aus Milch und Sahne hergestellt, die einer Katze auf den Magen schlagen können, und liefert Fett und Zucker, die Katzen nicht brauchen.",
+    "fr": "Non, la glace n’est pas une bonne friandise pour les chats. Elle est faite avec du lait et de la crème, qui peuvent leur déranger l’estomac, et elle apporte des graisses et du sucre dont ils n’ont pas besoin."
   },
   "why": {
     "en": "Adult cats have little lactase, the enzyme that digests milk sugar, so milk and other dairy-based products can cause diarrhoea or other digestive upset. Cream and dairy products are high in fat and can lead to weight gain. Sugar isn't toxic to cats, but it is still unhealthy for them and adds calories they don't need.",
     "sl": "Odrasle mačke imajo malo laktaze, encima, ki prebavlja mlečni sladkor, zato lahko mleko in drugi mlečni izdelki povzročijo drisko ali druge prebavne težave. Smetana in mlečni izdelki imajo veliko maščob in lahko vodijo v debelost. Sladkor za mačke ni strupen, je pa nezdrav in jim prinaša nepotrebne kalorije.",
-    "de": "Erwachsene Katzen haben wenig Laktase, das Enzym, das Milchzucker verdaut. Daher können Milch und andere Milchprodukte Durchfall oder andere Verdauungsbeschwerden verursachen. Sahne und Milchprodukte sind fettreich und können zu Gewichtszunahme führen. Zucker ist für Katzen nicht giftig, aber trotzdem ungesund und liefert Kalorien, die sie nicht brauchen."
+    "de": "Erwachsene Katzen haben wenig Laktase, das Enzym, das Milchzucker verdaut. Daher können Milch und andere Milchprodukte Durchfall oder andere Verdauungsbeschwerden verursachen. Sahne und Milchprodukte sind fettreich und können zu Gewichtszunahme führen. Zucker ist für Katzen nicht giftig, aber trotzdem ungesund und liefert Kalorien, die sie nicht brauchen.",
+    "fr": "Les chats adultes ont peu de lactase, l’enzyme qui digère le sucre du lait ; le lait et les autres produits laitiers peuvent donc provoquer de la diarrhée ou d’autres troubles digestifs. La crème et les produits laitiers sont riches en graisses et peuvent faire prendre du poids. Le sucre n’est pas toxique pour les chats, mais il reste mauvais pour leur santé et apporte des calories dont ils n’ont pas besoin."
   },
   "signs": {
     "en": [
@@ -42,30 +47,39 @@
       "Durchfall",
       "Erbrechen",
       "Magenverstimmung"
+    ],
+    "fr": [
+      "Diarrhée",
+      "Vomissements",
+      "Maux de ventre"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate ice cream, watch for diarrhoea or vomiting and contact your vet for advice if she seems unwell. If the ice cream contained chocolate, contact your vet straight away.",
     "sl": "Če je muca pojedla sladoled, bodite pozorni na drisko ali bruhanje in se za nasvet obrnite na veterinarja, če se ne počuti dobro. Če je bila v sladoledu čokolada, takoj pokličite veterinarja.",
-    "de": "Wenn Ihre Katze Eis gefressen hat, achten Sie auf Durchfall oder Erbrechen und fragen Sie Ihren Tierarzt um Rat, wenn sie unwohl wirkt. Wenn das Eis Schokolade enthielt, wenden Sie sich sofort an Ihren Tierarzt."
+    "de": "Wenn Ihre Katze Eis gefressen hat, achten Sie auf Durchfall oder Erbrechen und fragen Sie Ihren Tierarzt um Rat, wenn sie unwohl wirkt. Wenn das Eis Schokolade enthielt, wenden Sie sich sofort an Ihren Tierarzt.",
+    "fr": "Si votre chat a mangé de la glace, surveillez l’apparition de diarrhée ou de vomissements et demandez conseil à votre vétérinaire s’il semble malade. Si la glace contenait du chocolat, contactez immédiatement votre vétérinaire."
   },
   "serving": null,
   "child": {
     "en": "Ice cream is a treat for people. It can give cats a sore tummy, so keep your cone to yourself.",
     "sl": "Sladoled je posladek za ljudi. Mucki lahko povzroči bolan trebušček, zato kornet obdrži zase.",
-    "de": "Eis ist ein Leckerli für Menschen. Katzen kann es Bauchweh machen, also behalte deine Eiswaffel lieber für dich."
+    "de": "Eis ist ein Leckerli für Menschen. Katzen kann es Bauchweh machen, also behalte deine Eiswaffel lieber für dich.",
+    "fr": "La glace, c’est une friandise pour les humains. Elle peut donner mal au ventre aux chats, alors garde ton cornet pour toi."
   },
   "faq": [
     {
       "q": {
         "en": "Do cats like ice cream because it is sweet?",
         "sl": "Ali imajo mačke rade sladoled, ker je sladek?",
-        "de": "Mögen Katzen Eis, weil es süß ist?"
+        "de": "Mögen Katzen Eis, weil es süß ist?",
+        "fr": "Les chats aiment-ils la glace parce qu’elle est sucrée ?"
       },
       "a": {
         "en": "No. Cats can't taste sweetness at all, so sugar gives them nothing but extra calories.",
         "sl": "Ne. Mačke sladkega okusa sploh ne zaznajo, zato jim sladkor prinese le dodatne kalorije.",
-        "de": "Nein. Katzen können Süßes überhaupt nicht schmecken, also bringt ihnen Zucker nichts außer zusätzlichen Kalorien."
+        "de": "Nein. Katzen können Süßes überhaupt nicht schmecken, also bringt ihnen Zucker nichts außer zusätzlichen Kalorien.",
+        "fr": "Non. Les chats ne perçoivent pas du tout le goût sucré : le sucre ne leur apporte que des calories en trop."
       }
     }
   ],
@@ -129,6 +143,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "fa4b1461e3eb64a8b70a39b05e81d75b9c62e751296843d2a745f9a3a8ff4d52"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "173cbefbdbde692b3f7a289a26ecd8f3d92ac26e455e41bcd09299ad91363bc1"
     }
   }
 }

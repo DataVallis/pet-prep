@@ -4,28 +4,33 @@
   "name": {
     "en": "Raw bones",
     "sl": "Surove kosti",
-    "de": "Rohe Knochen"
+    "de": "Rohe Knochen",
+    "fr": "Os crus"
   },
   "question": {
     "en": "Can dogs eat raw bones?",
     "sl": "Ali lahko psi jedo surove kosti?",
-    "de": "Dürfen Hunde rohe Knochen fressen?"
+    "de": "Dürfen Hunde rohe Knochen fressen?",
+    "fr": "Les chiens peuvent-ils manger des os crus ?"
   },
   "url_slug": {
     "en": "raw-bones",
     "sl": "surove-kosti",
-    "de": "rohe-knochen"
+    "de": "rohe-knochen",
+    "fr": "os-crus"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Only after talking to your vet. Cooked bones splinter, but raw bones carry risks too: they can break teeth, cause choking or block the gut, and raw meat on them may carry bacteria such as Salmonella. Some vets allow them under supervision; others advise against bones.",
     "sl": "Le po posvetu z veterinarjem. Kuhane kosti se cepijo, a tudi surove kosti so tvegane: lahko zlomijo zob, povzročijo dušenje ali zamašijo prebavila, surovo meso na njih pa lahko prenaša bakterije, kot je salmonela. Nekateri veterinarji jih dovolijo pod nadzorom, drugi kosti odsvetujejo.",
-    "de": "Nur nach Rücksprache mit Ihrem Tierarzt. Gekochte Knochen splittern, aber auch rohe Knochen bergen Risiken: Zähne können daran abbrechen, Knochen können zum Ersticken führen oder den Darm blockieren, und rohes Fleisch daran kann Bakterien wie Salmonellen enthalten. Manche Tierärzte erlauben sie unter Aufsicht, andere raten von Knochen ab."
+    "de": "Nur nach Rücksprache mit Ihrem Tierarzt. Gekochte Knochen splittern, aber auch rohe Knochen bergen Risiken: Zähne können daran abbrechen, Knochen können zum Ersticken führen oder den Darm blockieren, und rohes Fleisch daran kann Bakterien wie Salmonellen enthalten. Manche Tierärzte erlauben sie unter Aufsicht, andere raten von Knochen ab.",
+    "fr": "Seulement après en avoir parlé à votre vétérinaire. Les os cuits éclatent, mais les os crus présentent aussi des risques : ils peuvent casser des dents, provoquer un étouffement ou bloquer l’intestin, et la viande crue qui y reste peut contenir des bactéries comme les salmonelles. Certains vétérinaires les autorisent sous surveillance ; d’autres déconseillent les os."
   },
   "why": {
     "en": "Sources differ, so we use the stricter level. The FDA lists blockages, choking and mouth injuries after bones and advises asking your vet about safer chews. AKC notes raw bones may carry Salmonella and very hard bones can damage teeth. Bones can injure or block the gut, and blockages are very serious.",
     "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. FDA navaja zapore, dušenje in poškodbe ust po kosteh ter svetuje posvet z veterinarjem o varnejših grizalih. AKC opozarja, da surove kosti lahko prenašajo salmonelo in da pretrde kosti lahko poškodujejo zobe. Kosti lahko poškodujejo ali zamašijo prebavila, zapore pa so zelo resne.",
-    "de": "Die Quellen unterscheiden sich, deshalb verwenden wir die strengere Stufe. Die FDA nennt Blockaden, Ersticken und Verletzungen im Maul durch Knochen und rät, den Tierarzt nach sichereren Kauartikeln zu fragen. Laut AKC können rohe Knochen Salmonellen enthalten, und sehr harte Knochen können die Zähne beschädigen. Knochen können den Magen-Darm-Trakt verletzen oder blockieren, und Blockaden sind sehr ernst."
+    "de": "Die Quellen unterscheiden sich, deshalb verwenden wir die strengere Stufe. Die FDA nennt Blockaden, Ersticken und Verletzungen im Maul durch Knochen und rät, den Tierarzt nach sichereren Kauartikeln zu fragen. Laut AKC können rohe Knochen Salmonellen enthalten, und sehr harte Knochen können die Zähne beschädigen. Knochen können den Magen-Darm-Trakt verletzen oder blockieren, und Blockaden sind sehr ernst.",
+    "fr": "Les sources divergent, nous retenons donc le niveau le plus strict. La FDA signale des obstructions, des étouffements et des blessures dans la bouche après des os et conseille de demander à votre vétérinaire des objets à mâcher plus sûrs. L’AKC indique que les os crus peuvent contenir des salmonelles et que les os très durs peuvent abîmer les dents. Les os peuvent blesser ou bloquer l’intestin, et les obstructions sont très graves."
   },
   "signs": {
     "en": [
@@ -48,46 +53,60 @@
       "Erbrechen",
       "Durchfall",
       "Blutungen aus dem After"
+    ],
+    "fr": [
+      "Étouffement ou haut-le-cœur",
+      "Coupures ou saignements dans la bouche",
+      "Vomissements",
+      "Diarrhée",
+      "Saignement au niveau de l’anus"
     ]
   },
   "what_to_do": {
     "en": "If your dog swallowed a large piece of bone, or shows any of these signs, contact your vet right away. Note the kind and size of the bone.",
     "sl": "Če je pes pogoltnil velik kos kosti ali kaže katerega od teh znakov, takoj pokličite veterinarja. Zapišite si, kakšna in kako velika je bila kost.",
-    "de": "Wenn Ihr Hund ein großes Stück Knochen verschluckt hat oder eines dieser Anzeichen zeigt, wenden Sie sich sofort an Ihren Tierarzt. Notieren Sie Art und Größe des Knochens."
+    "de": "Wenn Ihr Hund ein großes Stück Knochen verschluckt hat oder eines dieser Anzeichen zeigt, wenden Sie sich sofort an Ihren Tierarzt. Notieren Sie Art und Größe des Knochens.",
+    "fr": "Si votre chien a avalé un gros morceau d’os, ou s’il présente l’un de ces signes, contactez immédiatement votre vétérinaire. Notez le type et la taille de l’os."
   },
   "serving": {
     "en": "Ask your vet first. If they agree, choose a bone larger than your dog's muzzle so it can't be swallowed whole, avoid very hard bones, and always supervise chewing.",
     "sl": "Najprej vprašajte veterinarja. Če se strinja, izberite kost, večjo od dolžine pasjega gobca, da je ne more pogoltniti cele, izogibajte se pretrdim kostem in grizenje vedno nadzorujte.",
-    "de": "Fragen Sie zuerst Ihren Tierarzt. Ist er einverstanden, wählen Sie einen Knochen, der größer ist als die Schnauze Ihres Hundes, damit er nicht im Ganzen verschluckt werden kann, meiden Sie sehr harte Knochen und beaufsichtigen Sie das Kauen immer."
+    "de": "Fragen Sie zuerst Ihren Tierarzt. Ist er einverstanden, wählen Sie einen Knochen, der größer ist als die Schnauze Ihres Hundes, damit er nicht im Ganzen verschluckt werden kann, meiden Sie sehr harte Knochen und beaufsichtigen Sie das Kauen immer.",
+    "fr": "Demandez d’abord l’avis de votre vétérinaire. S’il est d’accord, choisissez un os plus grand que le museau de votre chien pour qu’il ne puisse pas l’avaler entier, évitez les os très durs et surveillez toujours pendant qu’il mâche."
   },
   "child": {
     "en": "Bones can hurt a dog's teeth and tummy. Only grown-ups and the vet decide if a dog gets a bone, and someone always watches.",
     "sl": "Kosti lahko poškodujejo pasje zobe in trebušček. O kosti odločajo le odrasli in veterinar, med grizenjem pa vedno nekdo pazi.",
-    "de": "Knochen können einem Hund an den Zähnen und im Bauch wehtun. Ob ein Hund einen Knochen bekommt, entscheiden nur Erwachsene und der Tierarzt, und jemand passt immer auf."
+    "de": "Knochen können einem Hund an den Zähnen und im Bauch wehtun. Ob ein Hund einen Knochen bekommt, entscheiden nur Erwachsene und der Tierarzt, und jemand passt immer auf.",
+    "fr": "Les os peuvent abîmer les dents et le ventre d’un chien. Seuls les adultes et le vétérinaire décident si un chien reçoit un os, et quelqu’un le surveille toujours."
   },
   "faq": [
     {
       "q": {
         "en": "Are raw bones safer than cooked ones?",
         "sl": "So surove kosti varnejše od kuhanih?",
-        "de": "Sind rohe Knochen sicherer als gekochte?"
+        "de": "Sind rohe Knochen sicherer als gekochte?",
+        "fr": "Les os crus sont-ils plus sûrs que les os cuits ?"
       },
       "a": {
         "en": "Cooked bones splinter, which is why they should never be given. Raw bones still carry risks of broken teeth, blockages and bacteria, so ask your vet first.",
         "sl": "Kuhane kosti se cepijo, zato jih nikoli ne dajajte. Tudi surove kosti nosijo tveganje zlomljenih zob, zapor in bakterij, zato najprej vprašajte veterinarja.",
-        "de": "Gekochte Knochen splittern, deshalb sollten sie nie gegeben werden. Auch rohe Knochen bergen das Risiko von abgebrochenen Zähnen, Blockaden und Bakterien, also fragen Sie zuerst Ihren Tierarzt."
+        "de": "Gekochte Knochen splittern, deshalb sollten sie nie gegeben werden. Auch rohe Knochen bergen das Risiko von abgebrochenen Zähnen, Blockaden und Bakterien, also fragen Sie zuerst Ihren Tierarzt.",
+        "fr": "Les os cuits éclatent : c’est pourquoi il ne faut jamais en donner. Les os crus présentent quand même des risques de dents cassées, d’obstructions et de bactéries : demandez d’abord l’avis de votre vétérinaire."
       }
     },
     {
       "q": {
         "en": "What size bone is safer?",
         "sl": "Kako velika kost je varnejša?",
-        "de": "Welche Knochengröße ist sicherer?"
+        "de": "Welche Knochengröße ist sicherer?",
+        "fr": "Quelle taille d’os est plus sûre ?"
       },
       "a": {
         "en": "A bone should be larger than the length of the dog's muzzle so it can't be swallowed whole, and you should check on your dog while it chews.",
         "sl": "Kost naj bo večja od dolžine pasjega gobca, da je pes ne more pogoltniti cele, med grizenjem pa psa preverjajte.",
-        "de": "Ein Knochen sollte größer sein als die Länge der Schnauze des Hundes, damit er nicht im Ganzen verschluckt werden kann, und Sie sollten immer wieder nach Ihrem Hund sehen, während er kaut."
+        "de": "Ein Knochen sollte größer sein als die Länge der Schnauze des Hundes, damit er nicht im Ganzen verschluckt werden kann, und Sie sollten immer wieder nach Ihrem Hund sehen, während er kaut.",
+        "fr": "Un os doit être plus grand que la longueur du museau du chien pour qu’il ne puisse pas l’avaler entier ; surveillez votre chien pendant qu’il le mâche."
       }
     }
   ],
@@ -199,6 +218,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e7838d76f414ee164daa7de313d31d07c3cd5cf14ab32287558d329fa24fe4f2"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "281714397bda694ba0e880de4e90a5c7948760c57d8733290994e8b2dbd7bf43"
     }
   }
 }

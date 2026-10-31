@@ -4,56 +4,66 @@
   "name": {
     "en": "Beef",
     "sl": "Govedina",
-    "de": "Rindfleisch"
+    "de": "Rindfleisch",
+    "fr": "Bœuf"
   },
   "question": {
     "en": "Can dogs eat beef?",
     "sl": "Ali lahko psi jedo govedino?",
-    "de": "Dürfen Hunde Rindfleisch fressen?"
+    "de": "Dürfen Hunde Rindfleisch fressen?",
+    "fr": "Les chiens peuvent-ils manger du bœuf ?"
   },
   "url_slug": {
     "en": "beef",
     "sl": "govedina",
-    "de": "rindfleisch"
+    "de": "rindfleisch",
+    "fr": "boeuf"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, plain cooked beef with the fat trimmed can be a healthy source of protein. Leave out salt, spices and toppings such as onion and garlic, never give cooked bones, and avoid raw beef, which can carry bacteria.",
     "sl": "Da, navadna kuhana govedina z odstranjeno maščobo je lahko zdrav vir beljakovin. Izpustite sol, začimbe in dodatke, kot sta čebula in česen, nikoli ne dajte kuhanih kosti in se izogibajte surovi govedini, ki lahko prenaša bakterije.",
-    "de": "Ja, pures, gegartes Rindfleisch ohne Fettrand kann eine gesunde Proteinquelle sein. Verzichten Sie auf Salz, Gewürze und Beläge wie Zwiebeln und Knoblauch, geben Sie niemals gegarte Knochen und meiden Sie rohes Rindfleisch, das Bakterien übertragen kann."
+    "de": "Ja, pures, gegartes Rindfleisch ohne Fettrand kann eine gesunde Proteinquelle sein. Verzichten Sie auf Salz, Gewürze und Beläge wie Zwiebeln und Knoblauch, geben Sie niemals gegarte Knochen und meiden Sie rohes Rindfleisch, das Bakterien übertragen kann.",
+    "fr": "Oui, du bœuf cuit nature, dégraissé, peut être une bonne source de protéines. Évitez le sel, les épices et les garnitures comme l’oignon et l’ail, ne donnez jamais d’os cuits et évitez le bœuf cru, qui peut contenir des bactéries."
   },
   "why": {
     "en": "Unseasoned, cooked beef can be a healthy protein, cut into bite-sized pieces with the fat trimmed. Burgers and steaks often contain salt, spices and toppings that can be dangerous; onions and garlic are toxic to dogs. Raw steak or burger can carry Salmonella and E. coli, and cooked bones of any kind should never be given.",
     "sl": "Nezačinjena kuhana govedina je lahko zdrav vir beljakovin, narezana na grižljaje in brez maščobe. Burgerji in zrezki pogosto vsebujejo sol, začimbe in dodatke, ki so lahko nevarni; čebula in česen sta za pse strupena. Surov zrezek ali burger lahko prenaša salmonelo in E. coli, kuhanih kosti kakršne koli vrste pa psu nikoli ne dajte.",
-    "de": "Ungewürztes, gegartes Rindfleisch kann eine gesunde Proteinquelle sein – in mundgerechte Stücke geschnitten und mit abgeschnittenem Fett. Burger und Steaks enthalten oft Salz, Gewürze und Beläge, die gefährlich sein können; Zwiebeln und Knoblauch sind für Hunde giftig. Rohes Steak oder rohe Burger-Patties können Salmonellen und E. coli übertragen, und gegarte Knochen jeder Art sollten niemals gegeben werden."
+    "de": "Ungewürztes, gegartes Rindfleisch kann eine gesunde Proteinquelle sein – in mundgerechte Stücke geschnitten und mit abgeschnittenem Fett. Burger und Steaks enthalten oft Salz, Gewürze und Beläge, die gefährlich sein können; Zwiebeln und Knoblauch sind für Hunde giftig. Rohes Steak oder rohe Burger-Patties können Salmonellen und E. coli übertragen, und gegarte Knochen jeder Art sollten niemals gegeben werden.",
+    "fr": "Cuit et sans assaisonnement, le bœuf peut être une protéine saine, coupé en petits morceaux et dégraissé. Les burgers et les steaks contiennent souvent du sel, des épices et des garnitures qui peuvent être dangereux ; l’oignon et l’ail sont toxiques pour les chiens. Le steak ou le burger cru peut contenir des salmonelles et des E. coli, et il ne faut jamais donner d’os cuits, quels qu’ils soient."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog ate fatty or seasoned beef, watch for vomiting, diarrhoea or belly pain and call your vet if they appear. If it ate cooked bones or food with onion or garlic, call your vet straight away.",
     "sl": "Če je pes pojedel mastno ali začinjeno govedino, opazujte, ali bruha, ima drisko ali ga boli trebuh, in pokličite veterinarja, če se to pojavi. Če je pojedel kuhane kosti ali hrano s čebulo ali česnom, takoj pokličite veterinarja.",
-    "de": "Wenn Ihr Hund fettes oder gewürztes Rindfleisch gefressen hat, achten Sie auf Erbrechen, Durchfall oder Bauchschmerzen und rufen Sie Ihren Tierarzt an, wenn diese auftreten. Hat er gegarte Knochen oder Essen mit Zwiebeln oder Knoblauch gefressen, rufen Sie sofort Ihren Tierarzt an."
+    "de": "Wenn Ihr Hund fettes oder gewürztes Rindfleisch gefressen hat, achten Sie auf Erbrechen, Durchfall oder Bauchschmerzen und rufen Sie Ihren Tierarzt an, wenn diese auftreten. Hat er gegarte Knochen oder Essen mit Zwiebeln oder Knoblauch gefressen, rufen Sie sofort Ihren Tierarzt an.",
+    "fr": "Si votre chien a mangé du bœuf gras ou assaisonné, surveillez les vomissements, la diarrhée ou les douleurs au ventre, et appelez votre vétérinaire s’ils apparaissent. S’il a mangé des os cuits ou un plat contenant de l’oignon ou de l’ail, appelez immédiatement votre vétérinaire."
   },
   "serving": {
     "en": "Plain, unseasoned, fully cooked beef, fat trimmed, boneless, in bite-sized pieces.",
     "sl": "Navadna, nezačinjena, popolnoma kuhana govedina, brez maščobe in kosti, narezana na grižljaje.",
-    "de": "Pur, ungewürzt, vollständig gegart, Fett abgeschnitten, ohne Knochen, in mundgerechten Stücken."
+    "de": "Pur, ungewürzt, vollständig gegart, Fett abgeschnitten, ohne Knochen, in mundgerechten Stücken.",
+    "fr": "Bœuf nature, sans assaisonnement, bien cuit, dégraissé, sans os, coupé en petits morceaux."
   },
   "child": {
     "en": "A few bites of plain cooked beef can be a treat. Burgers with onions or sauce are only for people.",
     "sl": "Nekaj grižljajev navadne kuhane govedine je lahko priboljšek. Burgerji s čebulo ali omako so samo za ljudi.",
-    "de": "Ein paar Bissen gekochtes Rindfleisch ohne alles können ein Leckerli sein. Burger mit Zwiebeln oder Soße sind nur für Menschen."
+    "de": "Ein paar Bissen gekochtes Rindfleisch ohne alles können ein Leckerli sein. Burger mit Zwiebeln oder Soße sind nur für Menschen.",
+    "fr": "Quelques bouchées de bœuf cuit nature peuvent être une friandise. Les burgers avec de l’oignon ou de la sauce, c’est seulement pour les humains."
   },
   "faq": [
     {
       "q": {
         "en": "Can my dog have a bite of my burger?",
         "sl": "Ali lahko pes dobi grižljaj mojega burgerja?",
-        "de": "Darf mein Hund von meinem Burger abbeißen?"
+        "de": "Darf mein Hund von meinem Burger abbeißen?",
+        "fr": "Mon chien peut-il avoir une bouchée de mon burger ?"
       },
       "a": {
         "en": "Better not: burgers often contain salt, spices and toppings such as onion that can be dangerous. Plain cooked meat is the safer choice.",
         "sl": "Bolje ne: burgerji pogosto vsebujejo sol, začimbe in dodatke, kot je čebula, ki so lahko nevarni. Navadno kuhano meso je varnejša izbira.",
-        "de": "Besser nicht: Burger enthalten oft Salz, Gewürze und Beläge wie Zwiebeln, die gefährlich sein können. Pures, gegartes Fleisch ist die sicherere Wahl."
+        "de": "Besser nicht: Burger enthalten oft Salz, Gewürze und Beläge wie Zwiebeln, die gefährlich sein können. Pures, gegartes Fleisch ist die sicherere Wahl.",
+        "fr": "Mieux vaut éviter : les burgers contiennent souvent du sel, des épices et des garnitures comme l’oignon qui peuvent être dangereux. La viande cuite nature est le choix le plus sûr."
       }
     }
   ],
@@ -119,6 +129,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "448645650b4ab235f80dcebf59ffb203ec1d9cf084a3ec8384ac8c25a55383e7"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "eaab22257f3bb0e5c6c4a74aca5acccd7b3077d596eabf8fc3a0fa3f1118c82a"
     }
   }
 }

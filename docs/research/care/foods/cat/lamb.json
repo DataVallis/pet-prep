@@ -4,44 +4,52 @@
   "name": {
     "en": "Lamb",
     "sl": "Jagnjetina",
-    "de": "Lammfleisch"
+    "de": "Lammfleisch",
+    "fr": "Agneau"
   },
   "question": {
     "en": "Can cats eat lamb?",
     "sl": "Ali lahko mačke jedo jagnjetino?",
-    "de": "Dürfen Katzen Lammfleisch fressen?"
+    "de": "Dürfen Katzen Lammfleisch fressen?",
+    "fr": "Les chats peuvent-ils manger de l’agneau ?"
   },
   "url_slug": {
     "en": "lamb",
     "sl": "jagnjetina",
-    "de": "lammfleisch"
+    "de": "lammfleisch",
+    "fr": "agneau"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a little plain, well-cooked lamb is fine as an occasional treat. Cut off the fat, remove all bones and add no seasoning. Raw lamb is not recommended.",
     "sl": "Da, malo navadnega, dobro kuhanega jagnječjega mesa je v redu kot občasen priboljšek. Odrežite maščobo, odstranite vse kosti in ga ne začinite. Surova jagnjetina ni priporočljiva.",
-    "de": "Ja, ein wenig pures, gut durchgegartes Lammfleisch ist als gelegentliches Leckerli in Ordnung. Schneiden Sie das Fett ab, entfernen Sie alle Knochen und würzen Sie nicht. Rohes Lammfleisch wird nicht empfohlen."
+    "de": "Ja, ein wenig pures, gut durchgegartes Lammfleisch ist als gelegentliches Leckerli in Ordnung. Schneiden Sie das Fett ab, entfernen Sie alle Knochen und würzen Sie nicht. Rohes Lammfleisch wird nicht empfohlen.",
+    "fr": "Oui, un peu d’agneau nature et bien cuit convient comme friandise occasionnelle. Retirez le gras, enlevez tous les os et n’ajoutez aucun assaisonnement. L’agneau cru est déconseillé."
   },
   "why": {
     "en": "Lamb is one of the most common proteins in cat food. As a home treat it must be properly cooked: International Cat Care warns that raw or undercooked meat such as beef, lamb and pork can carry Toxoplasma, and advises feeding only properly cooked food. Fatty trimmings are on RSPCA Australia's do-not-feed list, and cooked bones can splinter.",
     "sl": "Jagnjetina je ena najpogostejših beljakovin v hrani za mačke. Kot domači priboljšek mora biti dobro kuhana: International Cat Care opozarja, da surovo ali premalo kuhano meso, kot so govedina, jagnjetina in svinjina, lahko prenaša toksoplazmo, in svetuje le dobro kuhano hrano. Mastni ostanki so na seznamu RSPCA Avstralija živil, ki jih ne dajemo, kuhane kosti pa se lahko razcepijo.",
-    "de": "Lammfleisch gehört zu den häufigsten Eiweißquellen in Katzenfutter. Als Leckerli aus der eigenen Küche muss es richtig durchgegart sein: International Cat Care warnt, dass rohes oder nicht ausreichend gegartes Fleisch wie Rind, Lamm und Schwein Toxoplasmen übertragen kann, und rät, nur richtig gegartes Futter zu geben. Fette Fleischabschnitte stehen bei der RSPCA Australia auf der Liste der Dinge, die man nicht füttern sollte, und gekochte Knochen können splittern."
+    "de": "Lammfleisch gehört zu den häufigsten Eiweißquellen in Katzenfutter. Als Leckerli aus der eigenen Küche muss es richtig durchgegart sein: International Cat Care warnt, dass rohes oder nicht ausreichend gegartes Fleisch wie Rind, Lamm und Schwein Toxoplasmen übertragen kann, und rät, nur richtig gegartes Futter zu geben. Fette Fleischabschnitte stehen bei der RSPCA Australia auf der Liste der Dinge, die man nicht füttern sollte, und gekochte Knochen können splittern.",
+    "fr": "L’agneau est l’une des protéines les plus courantes dans les aliments pour chats. En friandise maison, il doit être bien cuit : International Cat Care avertit que la viande crue ou insuffisamment cuite, comme le bœuf, l’agneau ou le porc, peut transmettre la toxoplasmose, et recommande de ne donner que des aliments bien cuits. Les chutes de gras figurent sur la liste des aliments à ne pas donner de la RSPCA Australia, et les os cuits peuvent se briser en éclats."
   },
   "signs": null,
   "what_to_do": {
     "en": "Offer a small piece first. If your cat gets vomiting or diarrhoea afterwards, stop and ask your vet. If your cat swallowed a cooked bone, call your vet.",
     "sl": "Najprej ponudite majhen košček. Če ima mačka potem bruhanje ali drisko, prenehajte in se posvetujte z veterinarjem. Če je mačka pogoltnila kuhano kost, pokličite veterinarja.",
-    "de": "Bieten Sie zuerst ein kleines Stück an. Bekommt Ihre Katze danach Erbrechen oder Durchfall, hören Sie auf und fragen Sie Ihren Tierarzt. Hat Ihre Katze einen gekochten Knochen verschluckt, rufen Sie Ihren Tierarzt an."
+    "de": "Bieten Sie zuerst ein kleines Stück an. Bekommt Ihre Katze danach Erbrechen oder Durchfall, hören Sie auf und fragen Sie Ihren Tierarzt. Hat Ihre Katze einen gekochten Knochen verschluckt, rufen Sie Ihren Tierarzt an.",
+    "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou a la diarrhée ensuite, arrêtez et demandez conseil à votre vétérinaire. S’il a avalé un os cuit, appelez votre vétérinaire."
   },
   "serving": {
     "en": "Well cooked, plain, lean, boneless and unseasoned; a few small pieces now and then.",
     "sl": "Dobro kuhano, brez dodatkov, pusto, brez kosti in začimb; nekaj majhnih koščkov občasno.",
-    "de": "Gut durchgegart, pur, mager, ohne Knochen und ungewürzt; ab und zu ein paar kleine Stücke."
+    "de": "Gut durchgegart, pur, mager, ohne Knochen und ungewürzt; ab und zu ein paar kleine Stücke.",
+    "fr": "Bien cuit, nature, maigre, sans os et sans assaisonnement ; quelques petits morceaux de temps en temps."
   },
   "child": {
     "en": "A tiny bit of plain cooked lamb can be a treat. A grown-up should cook it and take out the bones.",
     "sl": "Košček navadne kuhane jagnjetine je lahko priboljšek. Odrasli naj jo skuha in odstrani kosti.",
-    "de": "Ein kleines bisschen gekochtes Lammfleisch ohne Gewürze kann ein Leckerli sein. Ein Erwachsener sollte es kochen und die Knochen herausnehmen."
+    "de": "Ein kleines bisschen gekochtes Lammfleisch ohne Gewürze kann ein Leckerli sein. Ein Erwachsener sollte es kochen und die Knochen herausnehmen.",
+    "fr": "Un tout petit peu d’agneau cuit nature peut être une friandise. C’est un adulte qui doit le cuire et enlever les os."
   },
   "faq": [],
   "sources": [
@@ -113,6 +121,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "65b5b1d364c85072200e6906925d01d54fd1cbe76aba492808a2eefabfb56617"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2c5ccb91bd0b679c38cc6d3a97bffa38de7581b3ac46fc9a4019186fe1448c13"
     }
   }
 }

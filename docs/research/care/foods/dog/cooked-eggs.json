@@ -4,68 +4,80 @@
   "name": {
     "en": "Cooked eggs",
     "sl": "Kuhana jajca",
-    "de": "Gekochte Eier"
+    "de": "Gekochte Eier",
+    "fr": "Œufs cuits"
   },
   "question": {
     "en": "Can dogs eat cooked eggs?",
     "sl": "Ali lahko psi jedo kuhana jajca?",
-    "de": "Dürfen Hunde gekochte Eier fressen?"
+    "de": "Dürfen Hunde gekochte Eier fressen?",
+    "fr": "Les chiens peuvent-ils manger des œufs cuits ?"
   },
   "url_slug": {
     "en": "cooked-eggs",
     "sl": "kuhana-jajca",
-    "de": "gekochte-eier"
+    "de": "gekochte-eier",
+    "fr": "oeufs-cuits"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes. Fully cooked eggs are safe and nutritious for dogs in moderation, as long as they are plain: no oil, butter, salt or seasonings. Hard-boiled or scrambled eggs work well. Too many can lead to weight gain.",
     "sl": "Da. Popolnoma kuhana jajca so za pse v zmernih količinah varna in hranljiva, če so navadna: brez olja, masla, soli in začimb. Primerna so trdo kuhana ali umešana jajca. Preveč jih lahko vodi do debelosti.",
-    "de": "Ja. Vollständig gegarte Eier sind für Hunde in Maßen unbedenklich und nahrhaft, solange sie ohne Zusätze zubereitet sind: kein Öl, keine Butter, kein Salz, keine Gewürze. Hart gekochte Eier oder Rührei eignen sich gut. Zu viele können zu Gewichtszunahme führen."
+    "de": "Ja. Vollständig gegarte Eier sind für Hunde in Maßen unbedenklich und nahrhaft, solange sie ohne Zusätze zubereitet sind: kein Öl, keine Butter, kein Salz, keine Gewürze. Hart gekochte Eier oder Rührei eignen sich gut. Zu viele können zu Gewichtszunahme führen.",
+    "fr": "Oui. Les œufs bien cuits sont sans danger et nourrissants pour les chiens avec modération, à condition d’être nature : sans huile, beurre, sel ni assaisonnement. Les œufs durs ou brouillés conviennent bien. En trop grande quantité, ils peuvent faire grossir."
   },
   "why": {
     "en": "Cooked eggs provide protein, vitamins and healthy fats, but they are not essential to a balanced diet. Vets advise always cooking eggs before giving them to a dog. Egg shells have sharp edges that can hurt a dog's throat, and like any treat, eggs add calories.",
     "sl": "Kuhana jajca dajejo beljakovine, vitamine in zdrave maščobe, vendar za uravnoteženo prehrano niso nujna. Jajca je treba pred hranjenjem psa vedno skuhati. Lupine imajo ostre robove, ki lahko poškodujejo psu grlo, jajca pa kot vsak priboljšek dodajo kalorije.",
-    "de": "Gekochte Eier liefern Eiweiß, Vitamine und gesunde Fette, sind für eine ausgewogene Ernährung aber nicht notwendig. Tierärzte raten, Eier immer zu garen, bevor man sie einem Hund gibt. Eierschalen haben scharfe Kanten, die den Hals eines Hundes verletzen können, und wie jedes Leckerli liefern Eier zusätzliche Kalorien."
+    "de": "Gekochte Eier liefern Eiweiß, Vitamine und gesunde Fette, sind für eine ausgewogene Ernährung aber nicht notwendig. Tierärzte raten, Eier immer zu garen, bevor man sie einem Hund gibt. Eierschalen haben scharfe Kanten, die den Hals eines Hundes verletzen können, und wie jedes Leckerli liefern Eier zusätzliche Kalorien.",
+    "fr": "Les œufs cuits apportent des protéines, des vitamines et de bonnes graisses, mais ils ne sont pas indispensables à une alimentation équilibrée. Les vétérinaires conseillent de toujours cuire les œufs avant de les donner à un chien. Les coquilles ont des bords tranchants qui peuvent blesser la gorge d’un chien et, comme toute friandise, les œufs apportent des calories."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog ate eggs cooked with butter, salt or seasonings, or a lot of eggs, watch for tummy upset and call your vet if vomiting or diarrhoea is severe or doesn't stop.",
     "sl": "Če je pes pojedel jajca, pripravljena z maslom, soljo ali začimbami, ali veliko jajc, opazujte prebavo in pokličite veterinarja, če sta bruhanje ali driska huda ali ne prenehata.",
-    "de": "Hat Ihr Hund Eier gefressen, die mit Butter, Salz oder Gewürzen zubereitet waren, oder sehr viele Eier, achten Sie auf Magen-Darm-Beschwerden und rufen Sie Ihren Tierarzt an, wenn Erbrechen oder Durchfall stark sind oder nicht aufhören."
+    "de": "Hat Ihr Hund Eier gefressen, die mit Butter, Salz oder Gewürzen zubereitet waren, oder sehr viele Eier, achten Sie auf Magen-Darm-Beschwerden und rufen Sie Ihren Tierarzt an, wenn Erbrechen oder Durchfall stark sind oder nicht aufhören.",
+    "fr": "Si votre chien a mangé des œufs cuisinés avec du beurre, du sel ou des assaisonnements, ou beaucoup d’œufs, surveillez les troubles digestifs et appelez votre vétérinaire si les vomissements ou la diarrhée sont importants ou ne s’arrêtent pas."
   },
   "serving": {
     "en": "Fully cooked (hard-boiled or scrambled), plain, without oil, butter, salt, seasonings or other additives; as an occasional treat.",
     "sl": "Popolnoma kuhana (trdo kuhana ali umešana), navadna, brez olja, masla, soli, začimb in drugih dodatkov; kot občasen priboljšek.",
-    "de": "Vollständig gegart (hart gekocht oder als Rührei), ohne Öl, Butter, Salz, Gewürze oder andere Zusätze; als gelegentliches Leckerli."
+    "de": "Vollständig gegart (hart gekocht oder als Rührei), ohne Öl, Butter, Salz, Gewürze oder andere Zusätze; als gelegentliches Leckerli.",
+    "fr": "Bien cuits (durs ou brouillés), nature, sans huile, beurre, sel, assaisonnement ni autre additif ; en friandise occasionnelle."
   },
   "child": {
     "en": "A plain cooked egg can be a yummy treat for a dog. No salt or butter, please!",
     "sl": "Navadno kuhano jajce je lahko za psa slasten priboljšek. Brez soli in masla, prosim!",
-    "de": "Ein gekochtes Ei ohne alles kann ein leckerer Happen für deinen Hund sein. Aber bitte ohne Salz und Butter!"
+    "de": "Ein gekochtes Ei ohne alles kann ein leckerer Happen für deinen Hund sein. Aber bitte ohne Salz und Butter!",
+    "fr": "Un œuf cuit nature peut être une friandise délicieuse pour un chien. Sans sel ni beurre, s’il te plaît !"
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat eggshells?",
         "sl": "Ali lahko psi jedo jajčne lupine?",
-        "de": "Dürfen Hunde Eierschalen fressen?"
+        "de": "Dürfen Hunde Eierschalen fressen?",
+        "fr": "Les chiens peuvent-ils manger les coquilles d’œuf ?"
       },
       "a": {
         "en": "Sources differ: Dogs Trust lists cooked eggshells as usually fine, while the AKC warns that shells have sharp edges. Leaving them out is the safer choice.",
         "sl": "Viri se razlikujejo: Dogs Trust kuhane lupine navaja kot običajno primerne, AKC pa opozarja, da imajo lupine ostre robove. Varneje je, da jih ne dajete.",
-        "de": "Die Quellen sind sich nicht einig: Dogs Trust führt gekochte Eierschalen als meist unproblematisch, der AKC warnt dagegen vor ihren scharfen Kanten. Sie wegzulassen ist die sicherere Wahl."
+        "de": "Die Quellen sind sich nicht einig: Dogs Trust führt gekochte Eierschalen als meist unproblematisch, der AKC warnt dagegen vor ihren scharfen Kanten. Sie wegzulassen ist die sicherere Wahl.",
+        "fr": "Les sources divergent : Dogs Trust indique que les coquilles cuites ne posent généralement pas de problème, tandis que l’AKC prévient qu’elles ont des bords tranchants. Les retirer est le choix le plus sûr."
       }
     },
     {
       "q": {
         "en": "How should I cook eggs for my dog?",
         "sl": "Kako naj psu pripravim jajca?",
-        "de": "Wie sollte ich Eier für meinen Hund zubereiten?"
+        "de": "Wie sollte ich Eier für meinen Hund zubereiten?",
+        "fr": "Comment cuire les œufs pour mon chien ?"
       },
       "a": {
         "en": "Hard-boiled or scrambled, fully cooked and plain, with no salt, butter or seasonings.",
         "sl": "Trdo kuhana ali umešana, popolnoma kuhana in navadna, brez soli, masla in začimb.",
-        "de": "Hart gekocht oder als Rührei, vollständig gegart und ohne Zusätze – ohne Salz, Butter oder Gewürze."
+        "de": "Hart gekocht oder als Rührei, vollständig gegart und ohne Zusätze – ohne Salz, Butter oder Gewürze.",
+        "fr": "Durs ou brouillés, bien cuits et nature, sans sel, beurre ni assaisonnement."
       }
     }
   ],
@@ -136,6 +148,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4645227d20ae110ade098cf07c4675ddc0f9c2a9c7aa8e67631d2c7601b941c1"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e06c46e61d51c347789bac536a2c1de444fc55ee660e87b645ff92cea938907a"
     }
   }
 }

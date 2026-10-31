@@ -4,56 +4,66 @@
   "name": {
     "en": "Milk",
     "sl": "Mleko",
-    "de": "Milch"
+    "de": "Milch",
+    "fr": "Lait"
   },
   "question": {
     "en": "Can dogs drink milk?",
     "sl": "Ali lahko psi pijejo mleko?",
-    "de": "Dürfen Hunde Milch trinken?"
+    "de": "Dürfen Hunde Milch trinken?",
+    "fr": "Les chiens peuvent-ils boire du lait ?"
   },
   "url_slug": {
     "en": "milk",
     "sl": "mleko",
-    "de": "milch"
+    "de": "milch",
+    "fr": "lait"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, but only a little. Milk is a safe treat in small quantities, but many dogs are lactose intolerant and get diarrhoea, gas or vomiting from it. Milk is also high in fat and natural sugars.",
     "sl": "Da, a le malo. Mleko je v majhnih količinah varen priboljšek, a veliko psov ne prenaša laktoze in po njem dobijo drisko, vetrove ali bruhajo. Mleko vsebuje tudi veliko maščob in naravnih sladkorjev.",
-    "de": "Ja, aber nur ein wenig. In kleinen Mengen ist Milch ein unbedenkliches Leckerli, aber viele Hunde vertragen keine Laktose und bekommen davon Durchfall, Blähungen oder Erbrechen. Milch ist außerdem reich an Fett und natürlichem Zucker."
+    "de": "Ja, aber nur ein wenig. In kleinen Mengen ist Milch ein unbedenkliches Leckerli, aber viele Hunde vertragen keine Laktose und bekommen davon Durchfall, Blähungen oder Erbrechen. Milch ist außerdem reich an Fett und natürlichem Zucker.",
+    "fr": "Oui, mais seulement un peu. En petite quantité, le lait est une friandise sans danger, mais beaucoup de chiens sont intolérants au lactose et ont alors de la diarrhée, des gaz ou des vomissements. Le lait est aussi riche en graisses et en sucres naturels."
   },
   "why": {
     "en": "Dogs have little lactase, the enzyme that digests the sugar in milk, so milk and dairy often cause diarrhoea or other digestive upset. Individual dogs differ in how well they tolerate dairy.",
     "sl": "Psi imajo malo laktaze, encima, ki prebavlja mlečni sladkor, zato mleko in mlečni izdelki pogosto povzročijo drisko ali druge prebavne težave. Psi se razlikujejo v tem, kako dobro prenašajo mlečne izdelke.",
-    "de": "Hunde haben wenig Laktase, das Enzym, das den Zucker in der Milch verdaut. Deshalb lösen Milch und Milchprodukte oft Durchfall oder andere Verdauungsbeschwerden aus. Wie gut Milchprodukte vertragen werden, ist von Hund zu Hund verschieden."
+    "de": "Hunde haben wenig Laktase, das Enzym, das den Zucker in der Milch verdaut. Deshalb lösen Milch und Milchprodukte oft Durchfall oder andere Verdauungsbeschwerden aus. Wie gut Milchprodukte vertragen werden, ist von Hund zu Hund verschieden.",
+    "fr": "Les chiens ont peu de lactase, l’enzyme qui digère le sucre du lait : le lait et les produits laitiers provoquent donc souvent de la diarrhée ou d’autres troubles digestifs. Chaque chien tolère plus ou moins bien les produits laitiers."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog gets loose stools, gas, vomiting or tummy pain after milk, stop giving it. Contact your vet if you are worried.",
     "sl": "Če ima pes po mleku mehko blato, vetrove, bruha ali ga boli trebuh, mu mleka ne dajajte več. Če vas skrbi, pokličite veterinarja.",
-    "de": "Bekommt Ihr Hund nach Milch weichen Kot, Blähungen, Erbrechen oder Bauchschmerzen, geben Sie ihm keine mehr. Wenden Sie sich an Ihren Tierarzt, wenn Sie sich Sorgen machen."
+    "de": "Bekommt Ihr Hund nach Milch weichen Kot, Blähungen, Erbrechen oder Bauchschmerzen, geben Sie ihm keine mehr. Wenden Sie sich an Ihren Tierarzt, wenn Sie sich Sorgen machen.",
+    "fr": "Si votre chien a les selles molles, des gaz, des vomissements ou mal au ventre après avoir bu du lait, arrêtez de lui en donner. Contactez votre vétérinaire en cas d’inquiétude."
   },
   "serving": {
     "en": "Only a small amount of plain milk now and then, and none if your dog's tummy reacts.",
     "sl": "Le občasno malo navadnega mleka, če pa se pasji trebuh odzove, nič.",
-    "de": "Nur ab und zu eine kleine Menge Milch ohne Zusätze – und gar keine, wenn der Bauch Ihres Hundes darauf reagiert."
+    "de": "Nur ab und zu eine kleine Menge Milch ohne Zusätze – und gar keine, wenn der Bauch Ihres Hundes darauf reagiert.",
+    "fr": "Seulement un peu de lait nature de temps en temps, et pas du tout si le ventre de votre chien réagit."
   },
   "child": {
     "en": "Some dogs get a tummy ache from milk, so only a little, and only if a grown-up says yes.",
     "sl": "Nekatere pse po mleku boli trebušček, zato le malo in le, če odrasli dovoli.",
-    "de": "Manche Hunde bekommen von Milch Bauchweh. Also nur ein bisschen und nur, wenn ein Erwachsener Ja sagt."
+    "de": "Manche Hunde bekommen von Milch Bauchweh. Also nur ein bisschen und nur, wenn ein Erwachsener Ja sagt.",
+    "fr": "Certains chiens ont mal au ventre avec le lait : alors juste un peu, et seulement si un adulte est d’accord."
   },
   "faq": [
     {
       "q": {
         "en": "Why do some dogs get diarrhoea from milk?",
         "sl": "Zakaj nekateri psi po mleku dobijo drisko?",
-        "de": "Warum bekommen manche Hunde von Milch Durchfall?"
+        "de": "Warum bekommen manche Hunde von Milch Durchfall?",
+        "fr": "Pourquoi certains chiens ont-ils la diarrhée avec le lait ?"
       },
       "a": {
         "en": "Many dogs are lactose intolerant: they don't have much lactase, the enzyme that digests milk sugar.",
         "sl": "Veliko psov ne prenaša laktoze: nimajo dovolj laktaze, encima, ki prebavlja mlečni sladkor.",
-        "de": "Viele Hunde vertragen keine Laktose: Sie haben nur wenig Laktase, das Enzym, das Milchzucker verdaut."
+        "de": "Viele Hunde vertragen keine Laktose: Sie haben nur wenig Laktase, das Enzym, das Milchzucker verdaut.",
+        "fr": "Beaucoup de chiens sont intolérants au lactose : ils ont peu de lactase, l’enzyme qui digère le sucre du lait."
       }
     }
   ],
@@ -125,6 +135,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6332a5983fdb74733255282356a4efe11014bdca33509b99216d773abd509514"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "98dfd5ecf7882debc42e7bbb6e55949bf3341fbae80012b1c4371600af4846c8"
     }
   }
 }

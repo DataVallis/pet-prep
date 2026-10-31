@@ -4,28 +4,33 @@
   "name": {
     "en": "Chives",
     "sl": "Drobnjak",
-    "de": "Schnittlauch"
+    "de": "Schnittlauch",
+    "fr": "Ciboulette"
   },
   "question": {
     "en": "Can cats eat chives?",
     "sl": "Ali lahko mačke jedo drobnjak?",
-    "de": "Dürfen Katzen Schnittlauch fressen?"
+    "de": "Dürfen Katzen Schnittlauch fressen?",
+    "fr": "Les chats peuvent-ils manger de la ciboulette ?"
   },
   "url_slug": {
     "en": "chives",
     "sl": "drobnjak",
-    "de": "schnittlauch"
+    "de": "schnittlauch",
+    "fr": "ciboulette"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Chives belong to the onion family and are poisonous to cats, fresh, cooked or dried. They can damage red blood cells and cause anaemia. Call your vet if your cat eats any, and keep potted chives out of reach.",
     "sl": "Ne. Drobnjak spada med lukovke in je za mačke strupen, svež, kuhan ali sušen. Lahko poškoduje rdeče krvničke in povzroči slabokrvnost. Če ga muca poje, pokličite veterinarja, lonček z drobnjakom pa postavite izven njenega dosega.",
-    "de": "Nein. Schnittlauch gehört zur Familie der Zwiebelgewächse und ist für Katzen giftig – frisch, gekocht oder getrocknet. Er kann die roten Blutkörperchen schädigen und eine Blutarmut (Anämie) verursachen. Rufen Sie Ihren Tierarzt an, wenn Ihre Katze davon frisst, und stellen Sie Schnittlauch im Topf außer Reichweite."
+    "de": "Nein. Schnittlauch gehört zur Familie der Zwiebelgewächse und ist für Katzen giftig – frisch, gekocht oder getrocknet. Er kann die roten Blutkörperchen schädigen und eine Blutarmut (Anämie) verursachen. Rufen Sie Ihren Tierarzt an, wenn Ihre Katze davon frisst, und stellen Sie Schnittlauch im Topf außer Reichweite.",
+    "fr": "Non. La ciboulette fait partie de la famille de l’oignon et est toxique pour les chats, fraîche, cuite ou séchée. Elle peut endommager les globules rouges et provoquer une anémie. Appelez votre vétérinaire si votre chat en mange, et placez les pots de ciboulette hors de sa portée."
   },
   "why": {
     "en": "Chives belong to the allium family (the onion family). Alliums damage red blood cells and can lead to anaemia, and they also irritate the stomach and gut. Cats are the most sensitive species. All forms are poisonous to cats — raw, cooked, dried, powdered and liquid.",
     "sl": "Drobnjak spada med lukovke (družina čebule). Lukovke poškodujejo rdeče krvničke in lahko povzročijo slabokrvnost, poleg tega dražijo želodec in črevesje. Mačke so med vsemi vrstami najbolj občutljive. Strupene so vse oblike – surove, kuhane, sušene, v prahu in tekoče.",
-    "de": "Schnittlauch gehört zur Gattung Allium (den Zwiebelgewächsen). Allium-Pflanzen schädigen die roten Blutkörperchen, können zu Blutarmut führen und reizen außerdem Magen und Darm. Katzen sind die empfindlichste Tierart. Alle Formen sind für Katzen giftig – roh, gekocht, getrocknet, als Pulver und flüssig."
+    "de": "Schnittlauch gehört zur Gattung Allium (den Zwiebelgewächsen). Allium-Pflanzen schädigen die roten Blutkörperchen, können zu Blutarmut führen und reizen außerdem Magen und Darm. Katzen sind die empfindlichste Tierart. Alle Formen sind für Katzen giftig – roh, gekocht, getrocknet, als Pulver und flüssig.",
+    "fr": "La ciboulette appartient à la famille des alliums (la famille de l’oignon). Les alliums endommagent les globules rouges et peuvent entraîner une anémie ; ils irritent aussi l’estomac et l’intestin. Le chat est l’espèce la plus sensible. La ciboulette est toxique pour les chats sous toutes ses formes – crue, cuite, séchée, en poudre ou liquide."
   },
   "signs": {
     "en": [
@@ -54,30 +59,43 @@
       "Blasses Zahnfleisch",
       "Rot gefärbter Urin",
       "Schnellere oder angestrengte Atmung"
+    ],
+    "fr": [
+      "Vomissements",
+      "Diarrhée",
+      "Baisse d’appétit",
+      "Faiblesse",
+      "Gencives pâles",
+      "Urine rougeâtre",
+      "Respiration plus rapide ou plus difficile"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away, even if your cat seems well — signs of anaemia can take several days to show. Note what your cat ate (raw, cooked, powder or a dish containing it), how much and when. Don't try to make your cat sick at home.",
     "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če se muca zdi v redu, saj se znaki slabokrvnosti lahko pokažejo šele po nekaj dneh. Zapišite, kaj je pojedla (surovo, kuhano, v prahu ali jed, ki to vsebuje), koliko in kdaj. Muce doma ne poskušajte spraviti k bruhanju.",
-    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, auch wenn es Ihrer Katze gut zu gehen scheint – Anzeichen einer Blutarmut können erst nach mehreren Tagen sichtbar werden. Notieren Sie, was Ihre Katze gefressen hat (roh, gekocht, als Pulver oder in einem Gericht), wie viel und wann. Versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen."
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, auch wenn es Ihrer Katze gut zu gehen scheint – Anzeichen einer Blutarmut können erst nach mehreren Tagen sichtbar werden. Notieren Sie, was Ihre Katze gefressen hat (roh, gekocht, als Pulver oder in einem Gericht), wie viel und wann. Versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
+    "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, même si votre chat semble aller bien – les signes d’anémie peuvent mettre plusieurs jours à apparaître. Notez ce qu’il a mangé (crue, cuite, en poudre ou dans un plat), en quelle quantité et à quelle heure. N’essayez pas de faire vomir votre chat vous-même."
   },
   "serving": null,
   "child": {
     "en": "Chives look like grass, but they're not cat grass! Keep them away from kitty and tell a grown-up if she chews some.",
     "sl": "Drobnjak je videti kot trava, a ni mačja trava! Naj bo daleč od muce. Če ga grizlja, povej odraslemu.",
-    "de": "Schnittlauch sieht aus wie Gras, ist aber kein Katzengras! Halte ihn von deiner Katze fern und sag einem Erwachsenen Bescheid, wenn sie daran kaut."
+    "de": "Schnittlauch sieht aus wie Gras, ist aber kein Katzengras! Halte ihn von deiner Katze fern und sag einem Erwachsenen Bescheid, wenn sie daran kaut.",
+    "fr": "La ciboulette ressemble à de l’herbe, mais ce n’est pas de l’herbe pour chat ! Garde-la loin de ton chat et préviens un adulte s’il en mâchouille."
   },
   "faq": [
     {
       "q": {
         "en": "Are cooked or dried chives safe for cats?",
         "sl": "Je kuhan ali sušen drobnjak za mačke varen?",
-        "de": "Ist gekochter oder getrockneter Schnittlauch für Katzen unbedenklich?"
+        "de": "Ist gekochter oder getrockneter Schnittlauch für Katzen unbedenklich?",
+        "fr": "La ciboulette cuite ou séchée est-elle sans danger pour les chats ?"
       },
       "a": {
         "en": "No. All forms are poisonous to cats, including raw, cooked and dried chives. Be careful with leftovers, sauces, soups and gravy that may contain them.",
         "sl": "Ne. Za mačke so strupene vse oblike, tudi surov, kuhan in sušen drobnjak. Previdni bodite pri ostankih hrane, omakah, juhah in mesnih omakah, ki ga lahko vsebujejo.",
-        "de": "Nein. Alle Formen sind für Katzen giftig, auch roher, gekochter und getrockneter Schnittlauch. Vorsicht bei Essensresten, Saucen, Suppen und Bratensoße, die ihn enthalten können."
+        "de": "Nein. Alle Formen sind für Katzen giftig, auch roher, gekochter und getrockneter Schnittlauch. Vorsicht bei Essensresten, Saucen, Suppen und Bratensoße, die ihn enthalten können.",
+        "fr": "Non. La ciboulette est toxique pour les chats sous toutes ses formes, y compris crue, cuite et séchée. Faites attention aux restes, aux sauces, aux soupes et aux jus de viande qui peuvent en contenir."
       }
     }
   ],
@@ -188,6 +206,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "03dbd0e82910d620bff8a2cde1697ae376abaa0704392c65222adfccd25a1b96"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5e986a998a775c6849959cb4af97c1d5f600f4690ed52b4b16875d611af20a15"
     }
   }
 }

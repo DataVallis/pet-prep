@@ -4,28 +4,33 @@
   "name": {
     "en": "Fatty meat",
     "sl": "Mastno meso",
-    "de": "Fettes Fleisch"
+    "de": "Fettes Fleisch",
+    "fr": "Viande grasse"
   },
   "question": {
     "en": "Can cats eat fatty meat?",
     "sl": "Ali lahko mačke jedo mastno meso?",
-    "de": "Dürfen Katzen fettes Fleisch fressen?"
+    "de": "Dürfen Katzen fettes Fleisch fressen?",
+    "fr": "Les chats peuvent-ils manger de la viande grasse ?"
   },
   "url_slug": {
     "en": "fatty-meat",
     "sl": "mastno-meso",
-    "de": "fettes-fleisch"
+    "de": "fettes-fleisch",
+    "fr": "viande-grasse"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to. Fatty meat and poultry skin can upset a cat's digestion and, in sensitive cats, may even lead to pancreatitis. If you share meat, give a little plain, lean, cooked meat with no skin, bones or seasoning.",
     "sl": "Raje ne. Mastno meso in perutninska koža lahko muci povzročijo prebavne težave, pri občutljivih mačkah pa celo vnetje trebušne slinavke. Če delite meso, ponudite malo navadnega, pustega, kuhanega mesa brez kože, kosti in začimb.",
-    "de": "Besser nicht. Fettes Fleisch und Geflügelhaut können die Verdauung einer Katze durcheinanderbringen und bei empfindlichen Katzen sogar zu einer Bauchspeicheldrüsenentzündung (Pankreatitis) führen. Wenn Sie Fleisch teilen, geben Sie ein wenig pures, mageres, gegartes Fleisch ohne Haut, Knochen oder Gewürze."
+    "de": "Besser nicht. Fettes Fleisch und Geflügelhaut können die Verdauung einer Katze durcheinanderbringen und bei empfindlichen Katzen sogar zu einer Bauchspeicheldrüsenentzündung (Pankreatitis) führen. Wenn Sie Fleisch teilen, geben Sie ein wenig pures, mageres, gegartes Fleisch ohne Haut, Knochen oder Gewürze.",
+    "fr": "Mieux vaut s’en abstenir. La viande grasse et la peau de volaille peuvent perturber la digestion du chat et, chez les chats sensibles, même entraîner une pancréatite. Si vous partagez de la viande, donnez un peu de viande maigre cuite nature, sans peau, sans os ni assaisonnement."
   },
   "why": {
     "en": "Too much fat can affect a cat's digestive tract, especially the pancreas. Cats Protection warns that turkey skin is high in fat and can cause digestive upset or even pancreatitis in sensitive cats, and a University of Georgia vet advises avoiding the fattier pieces of ham altogether.",
     "sl": "Preveč maščobe lahko obremeni mačja prebavila, zlasti trebušno slinavko. Cats Protection opozarja, da je puranja koža zelo mastna in lahko pri občutljivih mačkah povzroči prebavne težave ali celo vnetje trebušne slinavke, veterinarka z Univerze v Georgii pa svetuje, naj se bolj mastnim kosom šunke povsem izognemo.",
-    "de": "Zu viel Fett kann den Verdauungstrakt einer Katze belasten, vor allem die Bauchspeicheldrüse. Cats Protection warnt, dass Putenhaut fettreich ist und bei empfindlichen Katzen Verdauungsbeschwerden oder sogar eine Pankreatitis auslösen kann, und ein Tierarzt der University of Georgia rät, die fetteren Stücke Schinken ganz zu meiden."
+    "de": "Zu viel Fett kann den Verdauungstrakt einer Katze belasten, vor allem die Bauchspeicheldrüse. Cats Protection warnt, dass Putenhaut fettreich ist und bei empfindlichen Katzen Verdauungsbeschwerden oder sogar eine Pankreatitis auslösen kann, und ein Tierarzt der University of Georgia rät, die fetteren Stücke Schinken ganz zu meiden.",
+    "fr": "Trop de graisse peut affecter l’appareil digestif du chat, en particulier le pancréas. Cats Protection avertit que la peau de dinde est très grasse et peut provoquer des troubles digestifs, voire une pancréatite chez les chats sensibles, et un vétérinaire de l’université de Géorgie conseille d’éviter complètement les morceaux de jambon les plus gras."
   },
   "signs": {
     "en": [
@@ -42,34 +47,44 @@
       "Erbrechen",
       "Durchfall",
       "Magenverstimmung"
+    ],
+    "fr": [
+      "Vomissements",
+      "Diarrhée",
+      "Ventre dérangé"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate a lot of fatty food, or is vomiting, has diarrhoea or seems in pain afterwards, contact your vet for advice.",
     "sl": "Če je muca pojedla veliko mastne hrane ali po tem bruha, ima drisko ali se zdi, da jo boli, se za nasvet obrnite na veterinarja.",
-    "de": "Wenn Ihre Katze viel Fettes gefressen hat oder danach erbricht, Durchfall hat oder Schmerzen zu haben scheint, fragen Sie Ihren Tierarzt um Rat."
+    "de": "Wenn Ihre Katze viel Fettes gefressen hat oder danach erbricht, Durchfall hat oder Schmerzen zu haben scheint, fragen Sie Ihren Tierarzt um Rat.",
+    "fr": "Si votre chat a mangé beaucoup d’aliments gras, ou s’il vomit, a la diarrhée ou semble souffrir ensuite, demandez conseil à votre vétérinaire."
   },
   "serving": {
     "en": "Only plain, cooked, lean meat as an occasional treat: no skin, fat, bones or seasoning.",
     "sl": "Le navadno, kuhano, pusto meso kot občasen priboljšek: brez kože, maščobe, kosti in začimb.",
-    "de": "Nur pures, gegartes, mageres Fleisch als gelegentliches Leckerli: ohne Haut, Fett, Knochen oder Gewürze."
+    "de": "Nur pures, gegartes, mageres Fleisch als gelegentliches Leckerli: ohne Haut, Fett, Knochen oder Gewürze.",
+    "fr": "Uniquement de la viande maigre cuite nature, comme friandise occasionnelle : sans peau, sans gras, sans os ni assaisonnement."
   },
   "child": {
     "en": "Fatty bits can give a cat a sore tummy. If a grown-up says yes, kitty can have a tiny bit of plain lean meat.",
     "sl": "Zaradi mastnih koščkov lahko muco boli trebušček. Če odrasli dovoli, lahko muca dobi košček navadnega pustega mesa.",
-    "de": "Fettige Stückchen können einer Katze Bauchweh machen. Wenn ein Erwachsener Ja sagt, darf deine Katze ein winziges Stück pures, mageres Fleisch haben."
+    "de": "Fettige Stückchen können einer Katze Bauchweh machen. Wenn ein Erwachsener Ja sagt, darf deine Katze ein winziges Stück pures, mageres Fleisch haben.",
+    "fr": "Les morceaux gras peuvent donner mal au ventre à un chat. Si un adulte est d’accord, ton chat peut avoir un tout petit peu de viande maigre nature."
   },
   "faq": [
     {
       "q": {
         "en": "Is chicken or turkey skin OK?",
         "sl": "Je piščančja ali puranja koža v redu?",
-        "de": "Ist Hähnchen- oder Putenhaut in Ordnung?"
+        "de": "Ist Hähnchen- oder Putenhaut in Ordnung?",
+        "fr": "Peut-on donner de la peau de poulet ou de dinde ?"
       },
       "a": {
         "en": "No. Cats Protection says turkey skin is high in fat and can cause digestive upset or even pancreatitis in sensitive cats. Give skinless meat instead.",
         "sl": "Ne. Cats Protection navaja, da je puranja koža zelo mastna in lahko pri občutljivih mačkah povzroči prebavne težave ali celo vnetje trebušne slinavke. Raje ponudite meso brez kože.",
-        "de": "Nein. Laut Cats Protection ist Putenhaut fettreich und kann bei empfindlichen Katzen Verdauungsbeschwerden oder sogar eine Pankreatitis auslösen. Geben Sie stattdessen Fleisch ohne Haut."
+        "de": "Nein. Laut Cats Protection ist Putenhaut fettreich und kann bei empfindlichen Katzen Verdauungsbeschwerden oder sogar eine Pankreatitis auslösen. Geben Sie stattdessen Fleisch ohne Haut.",
+        "fr": "Non. Selon Cats Protection, la peau de dinde est très grasse et peut provoquer des troubles digestifs, voire une pancréatite chez les chats sensibles. Donnez plutôt de la viande sans peau."
       }
     }
   ],
@@ -122,6 +137,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a959dadb386a6afd6b793f6fcb58fb734aec5bd015c4972e43b878dfff527842"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f35e677d6ef519c422d4359b5e8577422f27ecd69841e86591e1b2e94299cf39"
     }
   }
 }

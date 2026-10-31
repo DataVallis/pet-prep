@@ -4,56 +4,66 @@
   "name": {
     "en": "Turkey",
     "sl": "Puran",
-    "de": "Putenfleisch"
+    "de": "Putenfleisch",
+    "fr": "Dinde"
   },
   "question": {
     "en": "Can cats eat turkey?",
     "sl": "Ali lahko mačke jedo puranje meso?",
-    "de": "Dürfen Katzen Putenfleisch fressen?"
+    "de": "Dürfen Katzen Putenfleisch fressen?",
+    "fr": "Les chats peuvent-ils manger de la dinde ?"
   },
   "url_slug": {
     "en": "turkey",
     "sl": "puran",
-    "de": "putenfleisch"
+    "de": "putenfleisch",
+    "fr": "dinde"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a little plain cooked turkey is fine as an occasional treat. Remove bones and skin and skip seasoning, stuffing and gravy. Turkey on its own isn't a complete diet.",
     "sl": "Da, malo navadnega kuhanega puranjega mesa je v redu kot občasen priboljšek. Odstranite kosti in kožo ter izpustite začimbe, nadev in omako. Puran sam po sebi ni popolna prehrana.",
-    "de": "Ja, ein wenig pures, gegartes Putenfleisch ist als gelegentliches Leckerli in Ordnung. Entfernen Sie Knochen und Haut und verzichten Sie auf Gewürze, Füllung und Bratensoße. Putenfleisch allein ist keine vollwertige Ernährung."
+    "de": "Ja, ein wenig pures, gegartes Putenfleisch ist als gelegentliches Leckerli in Ordnung. Entfernen Sie Knochen und Haut und verzichten Sie auf Gewürze, Füllung und Bratensoße. Putenfleisch allein ist keine vollwertige Ernährung.",
+    "fr": "Oui, un peu de dinde cuite nature convient comme friandise occasionnelle. Retirez les os et la peau, et évitez assaisonnement, farce et jus de cuisson. La dinde seule n’est pas une alimentation complète."
   },
   "why": {
     "en": "Cats Protection says plain cooked turkey is fine as an occasional treat but shouldn't be given regularly, as turkey alone lacks nutrients cats need. Turkey skin is high in fat and can cause digestive upset or even pancreatitis, and roast skin may carry garlic or herbs. Turkey bones can splinter and cause choking or blockages.",
     "sl": "Cats Protection navaja, da je navaden kuhan puran v redu kot občasen priboljšek, ne pa redno, ker puran sam ne vsebuje vseh hranil, ki jih mačke potrebujejo. Puranja koža ima veliko maščob in lahko povzroči prebavne težave ali celo pankreatitis, pečena koža pa ima lahko česen ali zelišča. Puranje kosti se lahko razcepijo in povzročijo dušenje ali zamašitev.",
-    "de": "Laut Cats Protection ist pures, gegartes Putenfleisch als gelegentliches Leckerli in Ordnung, sollte aber nicht regelmäßig gegeben werden, da Pute allein nicht alle Nährstoffe enthält, die Katzen brauchen. Putenhaut ist sehr fettreich und kann Verdauungsbeschwerden oder sogar eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen, und die Haut eines Bratens kann Knoblauch oder Kräuter abbekommen haben. Putenknochen können splittern und zum Ersticken oder zu Blockaden im Verdauungstrakt führen."
+    "de": "Laut Cats Protection ist pures, gegartes Putenfleisch als gelegentliches Leckerli in Ordnung, sollte aber nicht regelmäßig gegeben werden, da Pute allein nicht alle Nährstoffe enthält, die Katzen brauchen. Putenhaut ist sehr fettreich und kann Verdauungsbeschwerden oder sogar eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen, und die Haut eines Bratens kann Knoblauch oder Kräuter abbekommen haben. Putenknochen können splittern und zum Ersticken oder zu Blockaden im Verdauungstrakt führen.",
+    "fr": "Selon Cats Protection, un peu de dinde cuite nature convient comme friandise occasionnelle, mais ne doit pas être donnée régulièrement, car la dinde seule n’apporte pas tous les nutriments dont les chats ont besoin. La peau de dinde est très grasse et peut provoquer des troubles digestifs, voire une pancréatite, et la peau d’une dinde rôtie peut avoir été en contact avec de l’ail ou des herbes. Les os de dinde peuvent se briser en éclats et provoquer un étouffement ou une occlusion."
   },
   "signs": null,
   "what_to_do": {
     "en": "Offer a small piece first. If your cat gets vomiting or diarrhoea afterwards, stop and ask your vet. If your cat ate turkey bones, stuffing or gravy with onion or garlic, call your vet straight away.",
     "sl": "Najprej ponudite majhen košček. Če ima mačka potem bruhanje ali drisko, prenehajte in se posvetujte z veterinarjem. Če je mačka pojedla puranje kosti, nadev ali omako s čebulo ali česnom, takoj pokličite veterinarja.",
-    "de": "Geben Sie zuerst ein kleines Stück. Bekommt Ihre Katze danach Erbrechen oder Durchfall, hören Sie auf und fragen Sie Ihren Tierarzt. Hat Ihre Katze Putenknochen, Füllung oder Bratensoße mit Zwiebeln oder Knoblauch gefressen, rufen Sie sofort Ihren Tierarzt an."
+    "de": "Geben Sie zuerst ein kleines Stück. Bekommt Ihre Katze danach Erbrechen oder Durchfall, hören Sie auf und fragen Sie Ihren Tierarzt. Hat Ihre Katze Putenknochen, Füllung oder Bratensoße mit Zwiebeln oder Knoblauch gefressen, rufen Sie sofort Ihren Tierarzt an.",
+    "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou a la diarrhée ensuite, arrêtez et demandez conseil à votre vétérinaire. S’il a mangé des os de dinde, de la farce ou un jus de cuisson contenant de l’oignon ou de l’ail, appelez immédiatement votre vétérinaire."
   },
   "serving": {
     "en": "Plain cooked meat with no bones, skin or seasoning; a small amount, counted in the daily food.",
     "sl": "Navadno kuhano meso brez kosti, kože in začimb; majhna količina, upoštevana v dnevnem obroku.",
-    "de": "Gegartes Fleisch pur, ohne Knochen, Haut und Gewürze; eine kleine Menge, die zur täglichen Futtermenge zählt."
+    "de": "Gegartes Fleisch pur, ohne Knochen, Haut und Gewürze; eine kleine Menge, die zur täglichen Futtermenge zählt.",
+    "fr": "Viande cuite nature, sans os, sans peau ni assaisonnement ; une petite quantité, comptée dans la ration quotidienne."
   },
   "child": {
     "en": "A little plain turkey with no bones can be a cat treat. The skin and gravy stay on your plate.",
     "sl": "Malo navadnega purana brez kosti je lahko priboljšek za mucke. Koža in omaka ostaneta na tvojem krožniku.",
-    "de": "Ein bisschen Putenfleisch ohne alles und ohne Knochen kann ein Leckerli für Katzen sein. Die Haut und die Soße bleiben auf deinem Teller."
+    "de": "Ein bisschen Putenfleisch ohne alles und ohne Knochen kann ein Leckerli für Katzen sein. Die Haut und die Soße bleiben auf deinem Teller.",
+    "fr": "Un peu de dinde nature sans os peut être une friandise pour chat. La peau et la sauce restent dans ton assiette."
   },
   "faq": [
     {
       "q": {
         "en": "Can cats have turkey skin?",
         "sl": "Ali lahko mačke jedo puranjo kožo?",
-        "de": "Dürfen Katzen Putenhaut fressen?"
+        "de": "Dürfen Katzen Putenhaut fressen?",
+        "fr": "Les chats peuvent-ils manger de la peau de dinde ?"
       },
       "a": {
         "en": "It's best not to. Turkey skin is high in fat and can cause digestive upset or even pancreatitis, and it may have touched seasoning or garlic.",
         "sl": "Bolje ne. Puranja koža ima veliko maščob in lahko povzroči prebavne težave ali celo pankreatitis, lahko pa je prišla v stik z začimbami ali česnom.",
-        "de": "Besser nicht. Putenhaut ist sehr fettreich und kann Verdauungsbeschwerden oder sogar eine Pankreatitis auslösen, und sie kann mit Gewürzen oder Knoblauch in Berührung gekommen sein."
+        "de": "Besser nicht. Putenhaut ist sehr fettreich und kann Verdauungsbeschwerden oder sogar eine Pankreatitis auslösen, und sie kann mit Gewürzen oder Knoblauch in Berührung gekommen sein.",
+        "fr": "Mieux vaut s’en abstenir. La peau de dinde est très grasse et peut provoquer des troubles digestifs, voire une pancréatite, et elle a pu être en contact avec un assaisonnement ou de l’ail."
       }
     }
   ],
@@ -123,6 +133,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "720c829ce225c0ba1d2f7e720cd7f3ef4b608cd1eb8a213fe12cdeab91961149"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e8cc1d3ee17ed6890d2002c88af637d40b1488570354b920f30ee8e0c99181e2"
     }
   }
 }

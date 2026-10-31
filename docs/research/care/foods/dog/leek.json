@@ -4,28 +4,33 @@
   "name": {
     "en": "Leek",
     "sl": "Por",
-    "de": "Lauch"
+    "de": "Lauch",
+    "fr": "Poireau"
   },
   "question": {
     "en": "Can dogs eat leek?",
     "sl": "Ali lahko psi jedo por?",
-    "de": "Dürfen Hunde Lauch fressen?"
+    "de": "Dürfen Hunde Lauch fressen?",
+    "fr": "Les chiens peuvent-ils manger du poireau ?"
   },
   "url_slug": {
     "en": "leek",
     "sl": "por",
-    "de": "lauch"
+    "de": "lauch",
+    "fr": "poireau"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Leek is an allium, like onion and garlic, and it is toxic to dogs. All parts of the plant are harmful, even when cooked or dried. It can damage red blood cells, and signs often take a few days to appear.",
     "sl": "Ne. Por je luk, tako kot čebula in česen, in je za pse strupen. Škodljivi so vsi deli rastline, tudi kuhani ali posušeni. Lahko poškoduje rdeče krvničke, znaki pa se pogosto pokažejo šele po nekaj dneh.",
-    "de": "Nein. Lauch gehört wie Zwiebeln und Knoblauch zu den Lauchgewächsen (Allium) und ist für Hunde giftig. Alle Teile der Pflanze sind schädlich, auch gekocht oder getrocknet. Lauch kann rote Blutkörperchen schädigen, und Anzeichen zeigen sich oft erst nach einigen Tagen."
+    "de": "Nein. Lauch gehört wie Zwiebeln und Knoblauch zu den Lauchgewächsen (Allium) und ist für Hunde giftig. Alle Teile der Pflanze sind schädlich, auch gekocht oder getrocknet. Lauch kann rote Blutkörperchen schädigen, und Anzeichen zeigen sich oft erst nach einigen Tagen.",
+    "fr": "Non. Le poireau est un allium, comme l’oignon et l’ail, et il est toxique pour les chiens. Toutes les parties de la plante sont nocives, même cuites ou séchées. Il peut endommager les globules rouges, et les signes mettent souvent quelques jours à apparaître."
   },
   "why": {
     "en": "It belongs to the allium family (onion, garlic, leek, chives), which is toxic to dogs. These plants contain compounds that damage red blood cells and can lead to anaemia. All parts and all forms are harmful: raw, cooked, dried and powdered. Stomach upset can happen with any amount; larger amounts damage the blood.",
     "sl": "Spada v družino lukov (čebula, česen, por, drobnjak), ki je za pse strupena. Te rastline vsebujejo snovi, ki poškodujejo rdeče krvničke in lahko povzročijo slabokrvnost. Škodljivi so vsi deli in vse oblike: surove, kuhane, posušene in v prahu. Prebavne težave se lahko pojavijo pri vsaki količini, večje količine pa poškodujejo kri.",
-    "de": "Lauch gehört zur Familie der Lauchgewächse (Zwiebeln, Knoblauch, Lauch, Schnittlauch), die für Hunde giftig sind. Diese Pflanzen enthalten Stoffe, die rote Blutkörperchen schädigen und zu Blutarmut (Anämie) führen können. Alle Teile und alle Formen sind schädlich: roh, gekocht, getrocknet und als Pulver. Magen-Darm-Beschwerden können bei jeder Menge auftreten; größere Mengen schädigen das Blut."
+    "de": "Lauch gehört zur Familie der Lauchgewächse (Zwiebeln, Knoblauch, Lauch, Schnittlauch), die für Hunde giftig sind. Diese Pflanzen enthalten Stoffe, die rote Blutkörperchen schädigen und zu Blutarmut (Anämie) führen können. Alle Teile und alle Formen sind schädlich: roh, gekocht, getrocknet und als Pulver. Magen-Darm-Beschwerden können bei jeder Menge auftreten; größere Mengen schädigen das Blut.",
+    "fr": "Le poireau appartient à la famille des alliums (oignon, ail, poireau, ciboulette), toxique pour les chiens. Ces plantes contiennent des composés qui endommagent les globules rouges et peuvent provoquer une anémie. Toutes les parties et toutes les formes sont nocives : cru, cuit, séché et en poudre. Des troubles digestifs peuvent survenir quelle que soit la quantité ; de plus grandes quantités endommagent le sang."
   },
   "signs": {
     "en": [
@@ -45,42 +50,54 @@
       "Frisst weniger als sonst",
       "Magenverstimmung, schon nach kleinen Mengen",
       "Anzeichen einer Blutarmut (geschädigte rote Blutkörperchen), meist einige Tage später"
+    ],
+    "fr": [
+      "Vomissements et diarrhée",
+      "Baisse d’appétit",
+      "Troubles digestifs, même après de petites quantités",
+      "Signes d’anémie (globules rouges endommagés), généralement quelques jours plus tard"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away. Note what was eaten (leek) and roughly how much. Don't wait for signs: damage to the blood usually shows only a few days later.",
     "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj je pes pojedel (por) in približno koliko. Ne čakajte na znake: okvara krvi se običajno pokaže šele po nekaj dneh.",
-    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was gefressen wurde (Lauch), und ungefähr wie viel. Warten Sie nicht auf Anzeichen: Schäden am Blut zeigen sich meist erst einige Tage später."
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was gefressen wurde (Lauch), und ungefähr wie viel. Warten Sie nicht auf Anzeichen: Schäden am Blut zeigen sich meist erst einige Tage später.",
+    "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce qui a été mangé (poireau) et en quelle quantité approximative. N’attendez pas l’apparition des signes : les dommages au sang n’apparaissent généralement qu’après quelques jours."
   },
   "serving": null,
   "child": {
     "en": "Leeks belong to the onion family, so they are not for dogs. Tell a grown-up if your dog eats some.",
     "sl": "Por spada v družino čebule, zato ni za pse. Povej odraslemu, če ga pes poje.",
-    "de": "Lauch gehört zur Zwiebelfamilie und ist deshalb nichts für Hunde. Wenn dein Hund etwas davon frisst, sag einem Erwachsenen Bescheid."
+    "de": "Lauch gehört zur Zwiebelfamilie und ist deshalb nichts für Hunde. Wenn dein Hund etwas davon frisst, sag einem Erwachsenen Bescheid.",
+    "fr": "Le poireau est de la famille de l’oignon, alors il n’est pas pour les chiens. Préviens un adulte si ton chien en mange."
   },
   "faq": [
     {
       "q": {
         "en": "Is leek as dangerous as onion?",
         "sl": "Je por tako nevaren kot čebula?",
-        "de": "Ist Lauch so gefährlich wie Zwiebeln?"
+        "de": "Ist Lauch so gefährlich wie Zwiebeln?",
+        "fr": "Le poireau est-il aussi dangereux que l’oignon ?"
       },
       "a": {
         "en": "Garlic and onion are the most common causes of poisoning, but leek belongs to the same toxic plant family and should be treated the same way.",
         "sl": "Česen in čebula najpogosteje povzročita zastrupitev, a por spada v isto strupeno družino rastlin, zato z njim ravnajte enako.",
-        "de": "Knoblauch und Zwiebeln sind die häufigsten Ursachen von Vergiftungen, aber Lauch gehört zur selben giftigen Pflanzenfamilie und sollte genauso behandelt werden."
+        "de": "Knoblauch und Zwiebeln sind die häufigsten Ursachen von Vergiftungen, aber Lauch gehört zur selben giftigen Pflanzenfamilie und sollte genauso behandelt werden.",
+        "fr": "L’ail et l’oignon sont les causes d’intoxication les plus fréquentes, mais le poireau appartient à la même famille de plantes toxiques et doit être traité de la même façon."
       }
     },
     {
       "q": {
         "en": "Is it safe when cooked or as powder?",
         "sl": "Je varno, če je kuhano ali v prahu?",
-        "de": "Ist er gekocht oder als Pulver unbedenklich?"
+        "de": "Ist er gekocht oder als Pulver unbedenklich?",
+        "fr": "Le poireau cuit ou en poudre est-il sans danger ?"
       },
       "a": {
         "en": "No. Raw, cooked, dried, powdered and liquid forms are all poisonous to dogs.",
         "sl": "Ne. Za pse so strupene surove, kuhane, posušene, praškaste in tekoče oblike.",
-        "de": "Nein. Roh, gekocht, getrocknet, als Pulver und in flüssiger Form ist er für Hunde giftig."
+        "de": "Nein. Roh, gekocht, getrocknet, als Pulver und in flüssiger Form ist er für Hunde giftig.",
+        "fr": "Non. Cru, cuit, séché, en poudre ou sous forme liquide, il est toujours toxique pour les chiens."
       }
     }
   ],
@@ -179,6 +196,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "05864ffa5f686c1f241eb78684405485aec9d3cdc0396e79501e4661c59e127c"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f51979b340c56809644b23fa78e634f0fa8daa2637c4d4cd3529da566559e916"
     }
   }
 }

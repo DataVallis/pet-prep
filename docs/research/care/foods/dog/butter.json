@@ -4,28 +4,33 @@
   "name": {
     "en": "Butter",
     "sl": "Maslo",
-    "de": "Butter"
+    "de": "Butter",
+    "fr": "Beurre"
   },
   "question": {
     "en": "Can dogs eat butter?",
     "sl": "Ali lahko psi jedo maslo?",
-    "de": "Dürfen Hunde Butter fressen?"
+    "de": "Dürfen Hunde Butter fressen?",
+    "fr": "Les chiens peuvent-ils manger du beurre ?"
   },
   "url_slug": {
     "en": "butter",
     "sl": "maslo",
-    "de": "butter"
+    "de": "butter",
+    "fr": "beurre"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, it is best not to. Butter is not poisonous, but it is very fatty, and fatty foods can upset a dog's stomach and may trigger pancreatitis, a painful inflammation. Food you share, such as eggs or mashed potato, is best prepared without butter.",
     "sl": "Ne, bolje ne. Maslo ni strupeno, je pa zelo mastno, mastna hrana pa lahko psu razdraži želodec in sproži vnetje trebušne slinavke, ki je boleče. Hrano, ki jo delite s psom, na primer jajca ali pire, je najbolje pripraviti brez masla.",
-    "de": "Nein, besser nicht. Butter ist nicht giftig, aber sehr fettreich, und fettreiches Essen kann einem Hund auf den Magen schlagen und eine schmerzhafte Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen. Essen, das Sie mit ihm teilen, etwa Eier oder Kartoffelbrei, bereiten Sie am besten ohne Butter zu."
+    "de": "Nein, besser nicht. Butter ist nicht giftig, aber sehr fettreich, und fettreiches Essen kann einem Hund auf den Magen schlagen und eine schmerzhafte Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen. Essen, das Sie mit ihm teilen, etwa Eier oder Kartoffelbrei, bereiten Sie am besten ohne Butter zu.",
+    "fr": "Non, mieux vaut éviter. Le beurre n’est pas toxique, mais il est très gras, et les aliments gras peuvent dérégler l’estomac d’un chien et parfois déclencher une pancréatite, une inflammation douloureuse. Les aliments que vous partagez, comme les œufs ou la purée, sont à préparer de préférence sans beurre."
   },
   "why": {
     "en": "Fatty table foods are not a toxicity problem, but fatty foods such as butter, oils and meat drippings may cause pancreatitis. Some breeds, especially miniature Schnauzers, are more prone to it. Vets also suggest preparing food for dogs, such as eggs or mashed potato, without butter.",
     "sl": "Mastna hrana z mize ni strupena, a mastna živila, kot so maslo, olja in mast od pečenke, lahko povzročijo vnetje trebušne slinavke. Nekatere pasme, predvsem mali šnavcerji, so zanj bolj dovzetne. Veterinarski viri tudi svetujejo, da hrano za pse, na primer jajca ali pire, pripravimo brez masla.",
-    "de": "Fettes Essen vom Tisch ist kein Vergiftungsproblem, aber fette Lebensmittel wie Butter, Öle und Bratenfett können eine Pankreatitis auslösen. Manche Rassen, vor allem Zwergschnauzer, sind dafür anfälliger. Tierärzte raten außerdem, Essen für Hunde, etwa Eier oder Kartoffelbrei, ohne Butter zuzubereiten."
+    "de": "Fettes Essen vom Tisch ist kein Vergiftungsproblem, aber fette Lebensmittel wie Butter, Öle und Bratenfett können eine Pankreatitis auslösen. Manche Rassen, vor allem Zwergschnauzer, sind dafür anfälliger. Tierärzte raten außerdem, Essen für Hunde, etwa Eier oder Kartoffelbrei, ohne Butter zuzubereiten.",
+    "fr": "Les aliments de table gras ne posent pas de problème de toxicité, mais les aliments gras comme le beurre, les huiles et les jus de cuisson de viande peuvent provoquer une pancréatite. Certaines races, en particulier le schnauzer nain, y sont plus sujettes. Les vétérinaires conseillent aussi de préparer sans beurre les aliments destinés aux chiens, comme les œufs ou la purée."
   },
   "signs": {
     "en": [
@@ -45,30 +50,40 @@
       "Bauchschmerzen",
       "Durchfall",
       "Wenig Appetit und wenig Energie"
+    ],
+    "fr": [
+      "Vomissements, parfois 1 à 4 jours après un repas gras",
+      "Douleurs au ventre",
+      "Diarrhée",
+      "Manque d’appétit et d’énergie"
     ]
   },
   "what_to_do": {
     "en": "If your dog ate a lot of butter, or shows vomiting, belly pain, diarrhoea or low energy in the next few days, call your vet as soon as possible.",
     "sl": "Če je pes pojedel veliko masla ali v naslednjih dneh bruha, ga boli trebuh, ima drisko ali je utrujen, čim prej pokličite veterinarja.",
-    "de": "Wenn Ihr Hund viel Butter gefressen hat oder in den nächsten Tagen Erbrechen, Bauchschmerzen, Durchfall oder Mattigkeit zeigt, rufen Sie so bald wie möglich Ihren Tierarzt an."
+    "de": "Wenn Ihr Hund viel Butter gefressen hat oder in den nächsten Tagen Erbrechen, Bauchschmerzen, Durchfall oder Mattigkeit zeigt, rufen Sie so bald wie möglich Ihren Tierarzt an.",
+    "fr": "Si votre chien a mangé beaucoup de beurre, ou s’il vomit, a mal au ventre, a la diarrhée ou manque d’énergie dans les jours qui suivent, appelez votre vétérinaire dès que possible."
   },
   "serving": null,
   "child": {
     "en": "Butter is too fatty for dogs and can give them a sore tummy. Keep the butter dish out of reach!",
     "sl": "Maslo je za pse premastno in jih lahko boli trebušček. Maslo pospravi, da ga pes ne doseže!",
-    "de": "Butter ist zu fett für Hunde und kann ihnen Bauchweh machen. Stell die Butterdose außer Reichweite!"
+    "de": "Butter ist zu fett für Hunde und kann ihnen Bauchweh machen. Stell die Butterdose außer Reichweite!",
+    "fr": "Le beurre est trop gras pour les chiens et peut leur donner mal au ventre. Range le beurrier hors de portée !"
   },
   "faq": [
     {
       "q": {
         "en": "Is butter toxic to dogs?",
         "sl": "Je maslo za pse strupeno?",
-        "de": "Ist Butter für Hunde giftig?"
+        "de": "Ist Butter für Hunde giftig?",
+        "fr": "Le beurre est-il toxique pour les chiens ?"
       },
       "a": {
         "en": "Not in the poisonous sense. The problem is the fat, which may cause stomach upset or pancreatitis.",
         "sl": "Ne v smislu zastrupitve. Težava je maščoba, ki lahko povzroči prebavne težave ali vnetje trebušne slinavke.",
-        "de": "Nicht im Sinne einer Vergiftung. Das Problem ist das Fett, das zu Magenverstimmung oder einer Pankreatitis führen kann."
+        "de": "Nicht im Sinne einer Vergiftung. Das Problem ist das Fett, das zu Magenverstimmung oder einer Pankreatitis führen kann.",
+        "fr": "Pas au sens d’un poison. Le problème, ce sont les graisses, qui peuvent provoquer des troubles digestifs ou une pancréatite."
       }
     }
   ],
@@ -128,6 +143,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6e58ae4c12046c5325596dad45063bcdce25f157906d200bd430221865e5a5c2"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8925dc61968a3b7fe266a93ac140fe2cf766e7e184fb4e4dc2a4634adb5fc4dd"
     }
   }
 }

@@ -4,68 +4,80 @@
   "name": {
     "en": "Salmon",
     "sl": "Losos",
-    "de": "Lachs"
+    "de": "Lachs",
+    "fr": "Saumon"
   },
   "question": {
     "en": "Can dogs eat salmon?",
     "sl": "Ali lahko psi jedo lososa?",
-    "de": "Dürfen Hunde Lachs fressen?"
+    "de": "Dürfen Hunde Lachs fressen?",
+    "fr": "Les chiens peuvent-ils manger du saumon ?"
   },
   "url_slug": {
     "en": "salmon",
     "sl": "losos",
-    "de": "lachs"
+    "de": "lachs",
+    "fr": "saumon"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, if it is fully cooked, plain and boneless. Cooked salmon is a good source of protein and omega-3 fats. Raw or undercooked salmon is not safe, and smoked salmon is too salty, so keep those away from your dog.",
     "sl": "Da, če je popolnoma kuhan, brez dodatkov in brez kosti. Kuhan losos je dober vir beljakovin in omega-3 maščob. Surov ali premalo kuhan losos ni varen, dimljen losos pa je preslan, zato ju psu ne dajajte.",
-    "de": "Ja, wenn er vollständig gegart, ungewürzt und grätenfrei ist. Gegarter Lachs ist eine gute Quelle für Eiweiß und Omega-3-Fette. Roher oder nicht ausreichend gegarter Lachs ist nicht sicher, und Räucherlachs ist zu salzig – halten Sie beides von Ihrem Hund fern."
+    "de": "Ja, wenn er vollständig gegart, ungewürzt und grätenfrei ist. Gegarter Lachs ist eine gute Quelle für Eiweiß und Omega-3-Fette. Roher oder nicht ausreichend gegarter Lachs ist nicht sicher, und Räucherlachs ist zu salzig – halten Sie beides von Ihrem Hund fern.",
+    "fr": "Oui, s’il est bien cuit, nature et sans arêtes. Le saumon cuit est une bonne source de protéines et d’oméga-3. Le saumon cru ou pas assez cuit n’est pas sans danger, et le saumon fumé est trop salé : tenez-les hors de portée de votre chien."
   },
   "why": {
     "en": "Raw salmon can carry parasites and bacteria; in the Pacific Northwest of the USA it can cause salmon poisoning disease, which is serious if untreated. Salmon has small, brittle bones that can cause choking. Smoked salmon and lox are high in salt. Seasonings, oils and sauces don't belong on a dog's portion.",
     "sl": "Surov losos lahko prenaša zajedavce in bakterije; na pacifiškem severozahodu ZDA lahko povzroči bolezen »zastrupitev z lososom«, ki je brez zdravljenja resna. Losos ima drobne, krhke kosti, ki lahko povzročijo dušenje. Dimljen losos vsebuje veliko soli. Začimbe, olja in omake ne sodijo na pasji obrok.",
-    "de": "Roher Lachs kann Parasiten und Bakterien übertragen; im pazifischen Nordwesten der USA kann er die Lachsvergiftung (Salmon Poisoning Disease) auslösen, die unbehandelt schwer verläuft. Lachs hat kleine, brüchige Gräten, an denen ein Hund ersticken kann. Räucherlachs und Lox sind sehr salzig. Gewürze, Öle und Saucen gehören nicht auf die Portion eines Hundes."
+    "de": "Roher Lachs kann Parasiten und Bakterien übertragen; im pazifischen Nordwesten der USA kann er die Lachsvergiftung (Salmon Poisoning Disease) auslösen, die unbehandelt schwer verläuft. Lachs hat kleine, brüchige Gräten, an denen ein Hund ersticken kann. Räucherlachs und Lox sind sehr salzig. Gewürze, Öle und Saucen gehören nicht auf die Portion eines Hundes.",
+    "fr": "Le saumon cru peut porter des parasites et des bactéries ; dans le Nord-Ouest Pacifique des États-Unis, il peut provoquer la maladie de l’empoisonnement au saumon, grave sans traitement. Le saumon a de petites arêtes cassantes qui peuvent provoquer un étouffement. Le saumon fumé et le lox sont très salés. Les assaisonnements, les huiles et les sauces n’ont pas leur place dans la portion d’un chien."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog ate raw salmon, especially from the Pacific Northwest of the USA, call your vet and mention it; watch for fever, weakness, loss of appetite, vomiting or diarrhoea. If your dog swallowed bones and is choking, call your vet straight away.",
     "sl": "Če je pes pojedel surovega lososa, posebej s pacifiškega severozahoda ZDA, pokličite veterinarja in mu to povejte; opazujte, ali se pojavijo vročina, šibkost, izguba apetita, bruhanje ali driska. Če je pes pogoltnil kosti in se duši, takoj pokličite veterinarja.",
-    "de": "Hat Ihr Hund rohen Lachs gefressen, besonders aus dem pazifischen Nordwesten der USA, rufen Sie Ihren Tierarzt an und erwähnen Sie das; achten Sie auf Fieber, Schwäche, Appetitlosigkeit, Erbrechen oder Durchfall. Hat Ihr Hund Gräten verschluckt und droht zu ersticken, rufen Sie sofort Ihren Tierarzt an."
+    "de": "Hat Ihr Hund rohen Lachs gefressen, besonders aus dem pazifischen Nordwesten der USA, rufen Sie Ihren Tierarzt an und erwähnen Sie das; achten Sie auf Fieber, Schwäche, Appetitlosigkeit, Erbrechen oder Durchfall. Hat Ihr Hund Gräten verschluckt und droht zu ersticken, rufen Sie sofort Ihren Tierarzt an.",
+    "fr": "Si votre chien a mangé du saumon cru, surtout venant du Nord-Ouest Pacifique des États-Unis, appelez votre vétérinaire et signalez-le ; surveillez fièvre, faiblesse, perte d’appétit, vomissements ou diarrhée. Si votre chien a avalé des arêtes et s’étouffe, appelez immédiatement votre vétérinaire."
   },
   "serving": {
     "en": "Fully cooked (baked, steamed or grilled), plain, no seasoning, oils or sauces, boneless fillet; never raw or smoked.",
     "sl": "Popolnoma kuhan (pečen, na pari ali na žaru), brez začimb, olj in omak, file brez kosti; nikoli surov ali dimljen.",
-    "de": "Vollständig gegart (gebacken, gedämpft oder gegrillt), pur, ohne Gewürze, Öle oder Saucen, als grätenfreies Filet; nie roh oder geräuchert."
+    "de": "Vollständig gegart (gebacken, gedämpft oder gegrillt), pur, ohne Gewürze, Öle oder Saucen, als grätenfreies Filet; nie roh oder geräuchert.",
+    "fr": "Bien cuit (au four, à la vapeur ou grillé), nature, sans assaisonnement, huile ni sauce, en filet sans arêtes ; jamais cru ni fumé."
   },
   "child": {
     "en": "Cooked salmon without bones can be a healthy treat for a dog. Raw or smoked salmon is not for dogs.",
     "sl": "Kuhan losos brez kosti je lahko za psa zdrav priboljšek. Surov ali dimljen losos ni za pse.",
-    "de": "Gegarter Lachs ohne Gräten kann ein gesundes Leckerli für einen Hund sein. Roher oder geräucherter Lachs ist nichts für Hunde."
+    "de": "Gegarter Lachs ohne Gräten kann ein gesundes Leckerli für einen Hund sein. Roher oder geräucherter Lachs ist nichts für Hunde.",
+    "fr": "Le saumon cuit et sans arêtes peut être une friandise saine pour un chien. Le saumon cru ou fumé n’est pas pour les chiens."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat smoked salmon?",
         "sl": "Ali lahko psi jedo dimljen losos?",
-        "de": "Dürfen Hunde Räucherlachs fressen?"
+        "de": "Dürfen Hunde Räucherlachs fressen?",
+        "fr": "Les chiens peuvent-ils manger du saumon fumé ?"
       },
       "a": {
         "en": "It isn't a good choice: smoked salmon and lox are high in salt.",
         "sl": "Ni dobra izbira: dimljen losos in loks vsebujeta veliko soli.",
-        "de": "Er ist keine gute Wahl: Räucherlachs und Lox sind sehr salzig."
+        "de": "Er ist keine gute Wahl: Räucherlachs und Lox sind sehr salzig.",
+        "fr": "Ce n’est pas un bon choix : le saumon fumé et le lox sont très salés."
       }
     },
     {
       "q": {
         "en": "Is salmon in dog food safe?",
         "sl": "Je losos v pasji hrani varen?",
-        "de": "Ist Lachs im Hundefutter unbedenklich?"
+        "de": "Ist Lachs im Hundefutter unbedenklich?",
+        "fr": "Le saumon dans les aliments pour chiens est-il sans danger ?"
       },
       "a": {
         "en": "Salmon in commercial diets is typically safe because it is cooked.",
         "sl": "Losos v komercialni pasji hrani je običajno varen, ker je kuhan.",
-        "de": "Lachs in handelsüblichem Hundefutter ist in der Regel unbedenklich, weil er gegart ist."
+        "de": "Lachs in handelsüblichem Hundefutter ist in der Regel unbedenklich, weil er gegart ist.",
+        "fr": "Le saumon des aliments industriels est généralement sans danger, car il est cuit."
       }
     }
   ],
@@ -145,6 +157,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2312ec711fc36d8ba271eea6c83aaa4f445d8e0c589253586315e6b215d29ccb"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9d172cc43c05789b0255f119e90dd1ff565df3cef86d151c074c6befa7a0eac2"
     }
   }
 }

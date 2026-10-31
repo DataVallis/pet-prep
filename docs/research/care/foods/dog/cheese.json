@@ -4,28 +4,33 @@
   "name": {
     "en": "Cheese",
     "sl": "Sir",
-    "de": "Käse"
+    "de": "Käse",
+    "fr": "Fromage"
   },
   "question": {
     "en": "Can dogs eat cheese?",
     "sl": "Ali lahko psi jedo sir?",
-    "de": "Dürfen Hunde Käse fressen?"
+    "de": "Dürfen Hunde Käse fressen?",
+    "fr": "Les chiens peuvent-ils manger du fromage ?"
   },
   "url_slug": {
     "en": "cheese",
     "sl": "sir",
-    "de": "kaese"
+    "de": "kaese",
+    "fr": "fromage"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Not as a regular treat. Some vet sources allow small bits of plain, lower-fat cheese, but cheese is fatty, many dogs digest dairy poorly, and some cheeses contain onion, garlic or chives. Blue cheeses are a particular worry.",
     "sl": "Ne kot reden priboljšek. Nekateri veterinarski viri dovolijo majhne koščke navadnega, manj mastnega sira, a sir je masten, mnogi psi mlečne izdelke slabo prebavljajo, nekateri siri pa vsebujejo čebulo, česen ali drobnjak. Posebej previdni bodite pri plesnivih modrih sirih.",
-    "de": "Nicht als regelmäßiges Leckerli. Manche tierärztlichen Quellen erlauben kleine Stückchen fettärmeren Käses ohne Zusätze, aber Käse ist fett, viele Hunde vertragen Milchprodukte schlecht, und manche Käsesorten enthalten Zwiebel, Knoblauch oder Schnittlauch. Blauschimmelkäse ist besonders bedenklich."
+    "de": "Nicht als regelmäßiges Leckerli. Manche tierärztlichen Quellen erlauben kleine Stückchen fettärmeren Käses ohne Zusätze, aber Käse ist fett, viele Hunde vertragen Milchprodukte schlecht, und manche Käsesorten enthalten Zwiebel, Knoblauch oder Schnittlauch. Blauschimmelkäse ist besonders bedenklich.",
+    "fr": "Pas comme friandise régulière. Certaines sources vétérinaires autorisent de petits morceaux de fromage nature et moins gras, mais le fromage est gras, beaucoup de chiens digèrent mal les produits laitiers et certains fromages contiennent de l’oignon, de l’ail ou de la ciboulette. Les fromages à pâte persillée sont particulièrement préoccupants."
   },
   "why": {
     "en": "Dogs have little lactase, the enzyme that digests milk sugar, so dairy can upset the stomach. Cheese is high in fat: too much leads to weight gain and can trigger pancreatitis. Flavoured cheeses may contain onion, garlic or chives, and blue cheeses such as Roquefort contain roquefortine C, to which dogs appear sensitive. Sources differ: the AKC and Dogs Trust allow small amounts, while Cornell lists cheese among fatty foods to avoid, so we use the stricter level.",
     "sl": "Psi imajo malo laktaze, encima, ki razgradi mlečni sladkor, zato jim mlečni izdelki lahko razdražijo prebavo. Sir je zelo masten: preveč ga povzroči debelost in lahko sproži vnetje trebušne slinavke. Aromatizirani siri lahko vsebujejo čebulo, česen ali drobnjak, modri siri, kot je rokfor, pa roquefortin C, za katerega so psi očitno občutljivi. Viri se razlikujejo: AKC in Dogs Trust dovolita majhne količine, Cornell pa sir uvršča med mastno hrano, ki se ji je treba izogniti, zato smo izbrali strožjo stopnjo.",
-    "de": "Hunde haben wenig Laktase, das Enzym, das Milchzucker verdaut, deshalb können Milchprodukte auf den Magen schlagen. Käse ist sehr fettreich: Zu viel führt zu Gewichtszunahme und kann eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen. Käse mit Geschmackszusätzen kann Zwiebel, Knoblauch oder Schnittlauch enthalten, und Blauschimmelkäse wie Roquefort enthält Roquefortin C, auf das Hunde offenbar empfindlich reagieren. Die Quellen sind sich nicht einig: Der AKC und Dogs Trust erlauben kleine Mengen, Cornell zählt Käse zu den fetten Lebensmitteln, die man meiden sollte – daher wählen wir die strengere Einstufung."
+    "de": "Hunde haben wenig Laktase, das Enzym, das Milchzucker verdaut, deshalb können Milchprodukte auf den Magen schlagen. Käse ist sehr fettreich: Zu viel führt zu Gewichtszunahme und kann eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen. Käse mit Geschmackszusätzen kann Zwiebel, Knoblauch oder Schnittlauch enthalten, und Blauschimmelkäse wie Roquefort enthält Roquefortin C, auf das Hunde offenbar empfindlich reagieren. Die Quellen sind sich nicht einig: Der AKC und Dogs Trust erlauben kleine Mengen, Cornell zählt Käse zu den fetten Lebensmitteln, die man meiden sollte – daher wählen wir die strengere Einstufung.",
+    "fr": "Les chiens ont peu de lactase, l’enzyme qui digère le sucre du lait : les produits laitiers peuvent donc dérégler l’estomac. Le fromage est riche en graisses : en excès, il fait grossir et peut déclencher une pancréatite. Les fromages aromatisés peuvent contenir de l’oignon, de l’ail ou de la ciboulette, et les fromages à pâte persillée comme le roquefort contiennent de la roquefortine C, à laquelle les chiens semblent sensibles. Les sources divergent : l’AKC et Dogs Trust autorisent de petites quantités, tandis que Cornell classe le fromage parmi les aliments gras à éviter ; nous retenons donc le niveau le plus strict."
   },
   "signs": {
     "en": [
@@ -45,46 +50,59 @@
       "Erbrechen",
       "Bauchschmerzen, Übelkeit, Mattigkeit oder wenig Appetit (mögliche Pankreatitis)",
       "Muskelzittern nach Blauschimmelkäse"
+    ],
+    "fr": [
+      "Diarrhée ou autres troubles digestifs",
+      "Vomissements",
+      "Douleurs au ventre, nausées, manque d’énergie ou d’appétit (pancréatite possible)",
+      "Tremblements musculaires après un fromage à pâte persillée"
     ]
   },
   "what_to_do": {
     "en": "A small plain piece usually needs nothing more than watching for tummy upset. Call your vet if your dog ate a lot of cheese, ate blue cheese or cheese with onion, garlic or chives, or shows vomiting, belly pain or tremors.",
     "sl": "Pri majhnem koščku navadnega sira običajno zadošča, da opazujete prebavo. Pokličite veterinarja, če je pes pojedel veliko sira, modri sir ali sir s čebulo, česnom ali drobnjakom ali če bruha, ga boli trebuh ali se trese.",
-    "de": "Nach einem kleinen Stück Käse ohne Zusätze genügt es meist, auf Magen-Darm-Beschwerden zu achten. Rufen Sie Ihren Tierarzt an, wenn Ihr Hund viel Käse, Blauschimmelkäse oder Käse mit Zwiebel, Knoblauch oder Schnittlauch gefressen hat oder Erbrechen, Bauchschmerzen oder Zittern zeigt."
+    "de": "Nach einem kleinen Stück Käse ohne Zusätze genügt es meist, auf Magen-Darm-Beschwerden zu achten. Rufen Sie Ihren Tierarzt an, wenn Ihr Hund viel Käse, Blauschimmelkäse oder Käse mit Zwiebel, Knoblauch oder Schnittlauch gefressen hat oder Erbrechen, Bauchschmerzen oder Zittern zeigt.",
+    "fr": "Après un petit morceau nature, il suffit généralement de surveiller les troubles digestifs. Appelez votre vétérinaire si votre chien a mangé beaucoup de fromage, du fromage à pâte persillée ou un fromage à l’oignon, à l’ail ou à la ciboulette, ou s’il vomit, a mal au ventre ou tremble."
   },
   "serving": {
     "en": "If you share at all: a tiny piece of plain, lower-fat cheese such as mozzarella or cottage cheese, never flavoured or blue cheese.",
     "sl": "Če ga sploh daste: droben košček navadnega, manj mastnega sira, na primer mocarele ali skute, nikoli aromatiziranega ali modrega sira.",
-    "de": "Wenn überhaupt: ein winziges Stück fettärmerer Käse ohne Zusätze, z. B. Mozzarella oder Hüttenkäse, nie Käse mit Geschmackszusätzen oder Blauschimmelkäse."
+    "de": "Wenn überhaupt: ein winziges Stück fettärmerer Käse ohne Zusätze, z. B. Mozzarella oder Hüttenkäse, nie Käse mit Geschmackszusätzen oder Blauschimmelkäse.",
+    "fr": "Si vous en partagez : un tout petit morceau de fromage nature et moins gras, comme la mozzarella ou le cottage cheese, jamais de fromage aromatisé ou à pâte persillée."
   },
   "child": {
     "en": "Cheese is very fatty for a dog's tummy. A tiny plain piece now and then is plenty — ask a grown-up first.",
     "sl": "Sir je za pasji trebušček zelo masten. Droben navaden košček občasno je dovolj — najprej vprašaj odraslega.",
-    "de": "Käse ist sehr fett für den Bauch eines Hundes. Ein winziges Stück ohne Gewürze ab und zu reicht völlig – frag zuerst einen Erwachsenen."
+    "de": "Käse ist sehr fett für den Bauch eines Hundes. Ein winziges Stück ohne Gewürze ab und zu reicht völlig – frag zuerst einen Erwachsenen.",
+    "fr": "Le fromage est très gras pour le ventre d’un chien. Un tout petit morceau nature de temps en temps, c’est bien assez – demande d’abord à un adulte."
   },
   "faq": [
     {
       "q": {
         "en": "Is blue cheese worse than other cheese for dogs?",
         "sl": "Je modri sir za pse slabši od drugih sirov?",
-        "de": "Ist Blauschimmelkäse für Hunde schlimmer als anderer Käse?"
+        "de": "Ist Blauschimmelkäse für Hunde schlimmer als anderer Käse?",
+        "fr": "Le fromage à pâte persillée est-il pire que les autres pour les chiens ?"
       },
       "a": {
         "en": "Yes. Roquefort and other blue cheeses contain roquefortine C, and dogs appear sensitive to it; severe cases can bring muscle tremors.",
         "sl": "Da. Rokfor in drugi modri siri vsebujejo roquefortin C, za katerega so psi očitno občutljivi; v hujših primerih se pojavi tresenje mišic.",
-        "de": "Ja. Roquefort und andere Blauschimmelkäse enthalten Roquefortin C, und Hunde reagieren offenbar empfindlich darauf; in schweren Fällen kann es zu Muskelzittern kommen."
+        "de": "Ja. Roquefort und andere Blauschimmelkäse enthalten Roquefortin C, und Hunde reagieren offenbar empfindlich darauf; in schweren Fällen kann es zu Muskelzittern kommen.",
+        "fr": "Oui. Le roquefort et les autres fromages à pâte persillée contiennent de la roquefortine C, à laquelle les chiens semblent sensibles ; dans les cas graves, elle peut provoquer des tremblements musculaires."
       }
     },
     {
       "q": {
         "en": "Which cheese is the least risky?",
         "sl": "Kateri sir je najmanj tvegan?",
-        "de": "Welcher Käse ist am wenigsten riskant?"
+        "de": "Welcher Käse ist am wenigsten riskant?",
+        "fr": "Quel fromage est le moins risqué ?"
       },
       "a": {
         "en": "Lower-fat plain cheeses such as mozzarella, cottage cheese or soft goat cheese, in a small amount.",
         "sl": "Manj mastni navadni siri, kot so mocarela, skuta ali mehki kozji sir, v majhni količini.",
-        "de": "Fettärmere Käsesorten ohne Zusätze wie Mozzarella, Hüttenkäse oder weicher Ziegenkäse, in kleiner Menge."
+        "de": "Fettärmere Käsesorten ohne Zusätze wie Mozzarella, Hüttenkäse oder weicher Ziegenkäse, in kleiner Menge.",
+        "fr": "Les fromages nature moins gras comme la mozzarella, le cottage cheese ou le fromage de chèvre frais, en petite quantité."
       }
     }
   ],
@@ -175,6 +193,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2882413270768eba55dae4a31adfcce6df488d2d66f1a6754c9229e3720fd63b"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fa8047f8b08c17ea2bbe6a68e7a7bf85a934ad0ef0b5f217f95ef6488987dc77"
     }
   }
 }

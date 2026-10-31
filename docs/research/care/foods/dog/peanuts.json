@@ -4,56 +4,66 @@
   "name": {
     "en": "Peanuts",
     "sl": "Arašidi",
-    "de": "Erdnüsse"
+    "de": "Erdnüsse",
+    "fr": "Cacahuètes"
   },
   "question": {
     "en": "Can dogs eat peanuts?",
     "sl": "Ali lahko psi jedo arašide?",
-    "de": "Dürfen Hunde Erdnüsse fressen?"
+    "de": "Dürfen Hunde Erdnüsse fressen?",
+    "fr": "Les chiens peuvent-ils manger des cacahuètes ?"
   },
   "url_slug": {
     "en": "peanuts",
     "sl": "arasidi",
-    "de": "erdnuesse"
+    "de": "erdnuesse",
+    "fr": "cacahuetes"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a few plain peanuts now and then: unsalted, unflavoured, dry-roasted or raw, with the shells removed. Salted, honey-roasted or flavoured peanuts are not suitable, and peanuts are fatty, so keep it to a few.",
     "sl": "Da, občasno nekaj navadnih arašidov: nesoljenih, brez okusov, suho praženih ali surovih, brez lupin. Soljeni, medeni ali začinjeni arašidi niso primerni, arašidi pa so mastni, zato naj jih bo le nekaj.",
-    "de": "Ja, ab und zu ein paar naturbelassene Erdnüsse: ungesalzen, ohne Aroma, trocken geröstet oder roh und ohne Schale. Gesalzene, honiggeröstete oder aromatisierte Erdnüsse sind nicht geeignet. Erdnüsse sind zudem fettreich – bleiben Sie also bei ein paar wenigen."
+    "de": "Ja, ab und zu ein paar naturbelassene Erdnüsse: ungesalzen, ohne Aroma, trocken geröstet oder roh und ohne Schale. Gesalzene, honiggeröstete oder aromatisierte Erdnüsse sind nicht geeignet. Erdnüsse sind zudem fettreich – bleiben Sie also bei ein paar wenigen.",
+    "fr": "Oui, quelques cacahuètes nature de temps en temps : non salées, non aromatisées, grillées à sec ou crues, sans leur coque. Les cacahuètes salées, au miel ou aromatisées ne conviennent pas, et les cacahuètes sont grasses : limitez-vous à quelques-unes."
   },
   "why": {
     "en": "Peanuts are high in fat, which can cause digestive upset and even pancreatitis if a dog eats too much. Salted peanuts add sodium a dog doesn't need, flavoured ones add other risky ingredients, and the fibrous shell can be a choking hazard, especially for small breeds.",
     "sl": "Arašidi so zelo mastni, kar lahko pri preveliki količini povzroči prebavne težave in celo vnetje trebušne slinavke. Soljeni arašidi vsebujejo več natrija, kot ga pes potrebuje, začinjeni še druge tvegane sestavine, vlaknata lupina pa lahko povzroči dušenje, posebej pri majhnih pasmah.",
-    "de": "Erdnüsse sind sehr fettreich, was Verdauungsbeschwerden und sogar eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen kann, wenn ein Hund zu viel davon frisst. Gesalzene Erdnüsse liefern Natrium, das ein Hund nicht braucht, aromatisierte bringen weitere riskante Zutaten mit, und die faserige Schale kann zur Erstickungsgefahr werden, besonders bei kleinen Rassen."
+    "de": "Erdnüsse sind sehr fettreich, was Verdauungsbeschwerden und sogar eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen kann, wenn ein Hund zu viel davon frisst. Gesalzene Erdnüsse liefern Natrium, das ein Hund nicht braucht, aromatisierte bringen weitere riskante Zutaten mit, und die faserige Schale kann zur Erstickungsgefahr werden, besonders bei kleinen Rassen.",
+    "fr": "Les cacahuètes sont riches en graisses, ce qui peut provoquer des troubles digestifs, voire une pancréatite si un chien en mange trop. Salées, elles apportent du sodium dont le chien n’a pas besoin ; aromatisées, d’autres ingrédients à risque ; et la coque fibreuse peut provoquer un étouffement, surtout chez les petites races."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog ate a lot of peanuts, salted peanuts or shells, watch for vomiting, diarrhoea or belly pain, and call your vet if these appear or your dog seems to be choking.",
     "sl": "Če je pes pojedel veliko arašidov, soljene arašide ali lupine, opazujte, ali bruha, ima drisko ali ga boli trebuh, in pokličite veterinarja, če se to pojavi ali če se pes duši.",
-    "de": "Wenn Ihr Hund viele Erdnüsse, gesalzene Erdnüsse oder Schalen gefressen hat, achten Sie auf Erbrechen, Durchfall oder Bauchschmerzen und rufen Sie Ihren Tierarzt an, wenn diese auftreten oder Ihr Hund zu ersticken scheint."
+    "de": "Wenn Ihr Hund viele Erdnüsse, gesalzene Erdnüsse oder Schalen gefressen hat, achten Sie auf Erbrechen, Durchfall oder Bauchschmerzen und rufen Sie Ihren Tierarzt an, wenn diese auftreten oder Ihr Hund zu ersticken scheint.",
+    "fr": "Si votre chien a mangé beaucoup de cacahuètes, des cacahuètes salées ou des coques, surveillez les vomissements, la diarrhée ou les douleurs au ventre, et appelez votre vétérinaire s’ils apparaissent ou si votre chien semble s’étouffer."
   },
   "serving": {
     "en": "Only a few, plain: dry-roasted or raw, unsalted, unseasoned, uncoated, shells removed — not every day.",
     "sl": "Le nekaj, navadnih: suho praženih ali surovih, nesoljenih, nezačinjenih, brez obloge in brez lupin — ne vsak dan.",
-    "de": "Nur ein paar, naturbelassen: trocken geröstet oder roh, ungesalzen, ungewürzt, ohne Überzug, ohne Schale – nicht jeden Tag."
+    "de": "Nur ein paar, naturbelassen: trocken geröstet oder roh, ungesalzen, ungewürzt, ohne Überzug, ohne Schale – nicht jeden Tag.",
+    "fr": "Seulement quelques-unes, nature : grillées à sec ou crues, non salées, sans assaisonnement ni enrobage, sans coque – pas tous les jours."
   },
   "child": {
     "en": "A dog may have a few plain peanuts without shells. Salty or sweet peanuts are only for people.",
     "sl": "Pes lahko dobi nekaj navadnih arašidov brez lupin. Slani ali sladki arašidi so samo za ljudi.",
-    "de": "Ein Hund darf ein paar Erdnüsse ohne Schale und ohne alles bekommen. Salzige oder süße Erdnüsse sind nur für Menschen."
+    "de": "Ein Hund darf ein paar Erdnüsse ohne Schale und ohne alles bekommen. Salzige oder süße Erdnüsse sind nur für Menschen.",
+    "fr": "Un chien peut manger quelques cacahuètes nature, sans coque. Les cacahuètes salées ou sucrées, c’est seulement pour les humains."
   },
   "faq": [
     {
       "q": {
         "en": "Are honey-roasted peanuts OK?",
         "sl": "So medeni arašidi v redu?",
-        "de": "Sind honiggeröstete Erdnüsse in Ordnung?"
+        "de": "Sind honiggeröstete Erdnüsse in Ordnung?",
+        "fr": "Les cacahuètes grillées au miel, c’est permis ?"
       },
       "a": {
         "en": "No. Honey-roasted and other flavoured peanuts are unsafe for dogs; only plain, unsalted peanuts are suitable.",
         "sl": "Ne. Medeni in drugi začinjeni arašidi za pse niso varni; primerni so le navadni, nesoljeni arašidi.",
-        "de": "Nein. Honiggeröstete und andere aromatisierte Erdnüsse sind für Hunde nicht sicher; geeignet sind nur naturbelassene, ungesalzene Erdnüsse."
+        "de": "Nein. Honiggeröstete und andere aromatisierte Erdnüsse sind für Hunde nicht sicher; geeignet sind nur naturbelassene, ungesalzene Erdnüsse.",
+        "fr": "Non. Les cacahuètes grillées au miel et les autres cacahuètes aromatisées sont dangereuses pour les chiens ; seules les cacahuètes nature non salées conviennent."
       }
     }
   ],
@@ -122,6 +132,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0b03b8e5765edabc017699058e328116c0765a02adcd06b5b6190054135fdc91"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9963011485f192f04327bba84fb9373b9c5dcc3282f137abe731617d98186ba1"
     }
   }
 }

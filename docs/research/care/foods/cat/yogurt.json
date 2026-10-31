@@ -4,28 +4,33 @@
   "name": {
     "en": "Yogurt",
     "sl": "Jogurt",
-    "de": "Joghurt"
+    "de": "Joghurt",
+    "fr": "Yaourt"
   },
   "question": {
     "en": "Can cats eat yogurt?",
     "sl": "Ali lahko mačke jedo jogurt?",
-    "de": "Dürfen Katzen Joghurt fressen?"
+    "de": "Dürfen Katzen Joghurt fressen?",
+    "fr": "Les chats peuvent-ils manger du yaourt ?"
   },
   "url_slug": {
     "en": "yogurt",
     "sl": "jogurt",
-    "de": "joghurt"
+    "de": "joghurt",
+    "fr": "yaourt"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, yogurt is best avoided. It is a dairy product, and adult cats have little of the enzyme that digests milk sugar, so dairy can cause diarrhoea or an upset stomach. Veterinary guides advise against feeding cats dairy products.",
     "sl": "Ne, jogurta je bolje ne dajati. Je mlečni izdelek, odrasle mačke pa imajo malo encima, ki prebavlja mlečni sladkor, zato jim mlečni izdelki lahko povzročijo drisko ali razdražen želodec. Veterinarski viri odsvetujejo mlečne izdelke za mačke.",
-    "de": "Nein, Joghurt meiden Sie besser. Er ist ein Milchprodukt, und erwachsene Katzen haben wenig von dem Enzym, das Milchzucker verdaut. Milchprodukte können daher Durchfall oder Magenverstimmungen verursachen. Tiermedizinische Ratgeber raten davon ab, Katzen Milchprodukte zu füttern."
+    "de": "Nein, Joghurt meiden Sie besser. Er ist ein Milchprodukt, und erwachsene Katzen haben wenig von dem Enzym, das Milchzucker verdaut. Milchprodukte können daher Durchfall oder Magenverstimmungen verursachen. Tiermedizinische Ratgeber raten davon ab, Katzen Milchprodukte zu füttern.",
+    "fr": "Non, mieux vaut éviter le yaourt. C’est un produit laitier, et les chats adultes ont peu de l’enzyme qui digère le sucre du lait : les produits laitiers peuvent donc provoquer de la diarrhée ou des maux de ventre. Les guides vétérinaires déconseillent de donner des produits laitiers aux chats."
   },
   "why": {
     "en": "Adult cats have little lactase, the enzyme that breaks down lactose, so milk and other dairy-based products can cause diarrhoea or other digestive upset. Many cats are lactose intolerant. Dairy products are also high in fat and can add to weight gain. Plant-based alternatives are not automatically safe, as some contain ingredients that could be toxic to cats.",
     "sl": "Odrasle mačke imajo malo laktaze, encima, ki razgradi laktozo, zato lahko mleko in drugi mlečni izdelki povzročijo drisko ali druge prebavne težave. Mnoge mačke ne prenašajo laktoze. Mlečni izdelki imajo tudi veliko maščob in lahko prispevajo k debelosti. Rastlinski nadomestki niso samodejno varni, saj nekateri vsebujejo sestavine, ki so lahko za mačke strupene.",
-    "de": "Erwachsene Katzen haben wenig Laktase, das Enzym, das Laktose abbaut. Daher können Milch und andere Milchprodukte Durchfall oder andere Verdauungsbeschwerden verursachen. Viele Katzen sind laktoseintolerant. Milchprodukte sind außerdem fettreich und können zu Gewichtszunahme beitragen. Pflanzliche Alternativen sind nicht automatisch sicher, denn manche enthalten Zutaten, die für Katzen giftig sein könnten."
+    "de": "Erwachsene Katzen haben wenig Laktase, das Enzym, das Laktose abbaut. Daher können Milch und andere Milchprodukte Durchfall oder andere Verdauungsbeschwerden verursachen. Viele Katzen sind laktoseintolerant. Milchprodukte sind außerdem fettreich und können zu Gewichtszunahme beitragen. Pflanzliche Alternativen sind nicht automatisch sicher, denn manche enthalten Zutaten, die für Katzen giftig sein könnten.",
+    "fr": "Les chats adultes ont peu de lactase, l’enzyme qui dégrade le lactose ; le lait et les autres produits laitiers peuvent donc provoquer de la diarrhée ou d’autres troubles digestifs. Beaucoup de chats sont intolérants au lactose. Les produits laitiers sont aussi riches en graisses et peuvent contribuer à la prise de poids. Les alternatives végétales ne sont pas forcément sans danger, car certaines contiennent des ingrédients potentiellement toxiques pour les chats."
   },
   "signs": {
     "en": [
@@ -45,30 +50,40 @@
       "Erbrechen",
       "Magenverstimmung",
       "Blähungen oder aufgeblähter Bauch"
+    ],
+    "fr": [
+      "Diarrhée",
+      "Vomissements",
+      "Maux de ventre",
+      "Gaz ou ballonnements"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate yogurt, watch for diarrhoea, vomiting or a change in behaviour, and contact your vet for advice if she seems unwell.",
     "sl": "Če je muca pojedla jogurt, bodite pozorni na drisko, bruhanje ali spremembo vedenja in se za nasvet obrnite na veterinarja, če se ne počuti dobro.",
-    "de": "Wenn Ihre Katze Joghurt gefressen hat, achten Sie auf Durchfall, Erbrechen oder eine Verhaltensänderung und fragen Sie Ihren Tierarzt um Rat, wenn sie unwohl wirkt."
+    "de": "Wenn Ihre Katze Joghurt gefressen hat, achten Sie auf Durchfall, Erbrechen oder eine Verhaltensänderung und fragen Sie Ihren Tierarzt um Rat, wenn sie unwohl wirkt.",
+    "fr": "Si votre chat a mangé du yaourt, surveillez l’apparition de diarrhée, de vomissements ou d’un changement de comportement, et demandez conseil à votre vétérinaire s’il semble malade."
   },
   "serving": null,
   "child": {
     "en": "Yogurt is a people food. It can upset a cat's tummy, so keep it in your bowl, not your cat's.",
     "sl": "Jogurt je hrana za ljudi. Mucki lahko razdraži trebušček, zato naj ostane v tvoji skodelici, ne v njeni.",
-    "de": "Joghurt ist Essen für Menschen. Er kann einer Katze Bauchweh machen, also bleibt er in deiner Schüssel und nicht im Napf deiner Katze."
+    "de": "Joghurt ist Essen für Menschen. Er kann einer Katze Bauchweh machen, also bleibt er in deiner Schüssel und nicht im Napf deiner Katze.",
+    "fr": "Le yaourt, c’est pour les humains. Il peut donner mal au ventre à un chat, alors garde-le dans ton bol, pas dans sa gamelle."
   },
   "faq": [
     {
       "q": {
         "en": "Is dairy-free yogurt better for cats?",
         "sl": "Je jogurt brez mleka boljši za mačke?",
-        "de": "Ist milchfreier Joghurt besser für Katzen?"
+        "de": "Ist milchfreier Joghurt besser für Katzen?",
+        "fr": "Le yaourt végétal est-il meilleur pour les chats ?"
       },
       "a": {
         "en": "Not necessarily. Many dairy alternatives contain ingredients that could be toxic to cats, so they are best avoided too.",
         "sl": "Ne nujno. Veliko mlečnih nadomestkov vsebuje sestavine, ki so lahko za mačke strupene, zato se jim je bolje izogniti.",
-        "de": "Nicht unbedingt. Viele Milchalternativen enthalten Zutaten, die für Katzen giftig sein könnten, deshalb meiden Sie diese besser ebenfalls."
+        "de": "Nicht unbedingt. Viele Milchalternativen enthalten Zutaten, die für Katzen giftig sein könnten, deshalb meiden Sie diese besser ebenfalls.",
+        "fr": "Pas forcément. Beaucoup de substituts de produits laitiers contiennent des ingrédients potentiellement toxiques pour les chats : mieux vaut les éviter aussi."
       }
     }
   ],
@@ -136,6 +151,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f79272faa221fcde47a3fa00fde88a0585d15ba308b7a05cb3e560786774c89a"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "608e05ee028e57cc6cdf6aabcdda8b716bee80d8d7dfd48509d78996406f388c"
     }
   }
 }

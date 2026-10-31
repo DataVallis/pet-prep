@@ -4,28 +4,33 @@
   "name": {
     "en": "Bacon",
     "sl": "Slanina",
-    "de": "Speck"
+    "de": "Speck",
+    "fr": "Bacon"
   },
   "question": {
     "en": "Can dogs eat bacon?",
     "sl": "Ali lahko psi jedo slanino?",
-    "de": "Dürfen Hunde Speck fressen?"
+    "de": "Dürfen Hunde Speck fressen?",
+    "fr": "Les chiens peuvent-ils manger du bacon ?"
   },
   "url_slug": {
     "en": "bacon",
     "sl": "slanina",
-    "de": "speck"
+    "de": "speck",
+    "fr": "bacon"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Not recommended. Bacon is not toxic, but it is a fatty table food that can cause vomiting and diarrhoea or trigger pancreatitis, which can be severe. When in doubt, don't share table food with your dog.",
     "sl": "Ni priporočljivo. Slanina ni strupena, je pa mastna hrana z mize, ki lahko povzroči bruhanje in drisko ali sproži vnetje trebušne slinavke, ki je lahko hudo. Ob dvomu hrane z mize s psom ne delite.",
-    "de": "Nicht empfohlen. Speck ist nicht giftig, aber als fettes Essen vom Tisch kann er Erbrechen und Durchfall verursachen oder eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen, die schwer verlaufen kann. Teilen Sie im Zweifel kein Essen vom Tisch mit Ihrem Hund."
+    "de": "Nicht empfohlen. Speck ist nicht giftig, aber als fettes Essen vom Tisch kann er Erbrechen und Durchfall verursachen oder eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen, die schwer verlaufen kann. Teilen Sie im Zweifel kein Essen vom Tisch mit Ihrem Hund.",
+    "fr": "Déconseillé. Le bacon n’est pas toxique, mais c’est un aliment de table gras qui peut provoquer vomissements et diarrhée, ou déclencher une pancréatite, parfois grave. Dans le doute, ne partagez pas les restes de table avec votre chien."
   },
   "why": {
     "en": "Pet Poison Helpline names bacon among fatty table foods that cause problems ranging from mild stomach upset to severe pancreatitis. A fatty meal is a known pancreatitis trigger, and some breeds, such as Miniature Schnauzers, are more prone to it.",
     "sl": "Pet Poison Helpline slanino navaja med mastno hrano z mize, ki povzroča težave od blagih prebavnih motenj do hudega vnetja trebušne slinavke. Mastni obrok je znan sprožilec tega vnetja, nekatere pasme, na primer pritlikavi šnavcerji, pa so zanj bolj dovzetne.",
-    "de": "Pet Poison Helpline zählt Speck zu den fetten Tischresten, die Probleme von leichter Magenverstimmung bis zu schwerer Pankreatitis verursachen. Eine fette Mahlzeit ist ein bekannter Auslöser für Pankreatitis, und manche Rassen wie der Zwergschnauzer sind dafür anfälliger."
+    "de": "Pet Poison Helpline zählt Speck zu den fetten Tischresten, die Probleme von leichter Magenverstimmung bis zu schwerer Pankreatitis verursachen. Eine fette Mahlzeit ist ein bekannter Auslöser für Pankreatitis, und manche Rassen wie der Zwergschnauzer sind dafür anfälliger.",
+    "fr": "Le Pet Poison Helpline cite le bacon parmi les aliments de table gras qui causent des problèmes allant de légers troubles digestifs à une pancréatite grave. Un repas gras est un déclencheur connu de la pancréatite, et certaines races, comme le schnauzer nain, y sont plus sujettes."
   },
   "signs": {
     "en": [
@@ -48,30 +53,41 @@
       "Durchfall",
       "Appetitlosigkeit",
       "Mattigkeit, Fieber"
+    ],
+    "fr": [
+      "Vomissements, parfois 1 à 4 jours après le repas gras",
+      "Douleurs au ventre (le chien peut s’étirer en « position de prière »)",
+      "Diarrhée",
+      "Refus de manger",
+      "Fatigue, fièvre"
     ]
   },
   "what_to_do": {
     "en": "If your dog ate a lot of fatty food, or shows vomiting, tummy pain or tiredness in the following days, contact your vet. Note what was eaten and roughly how much. Signs of pancreatitis can be delayed by a few days.",
     "sl": "Če je pes pojedel veliko mastne hrane ali v naslednjih dneh bruha, ga boli trebuh ali je utrujen, pokličite veterinarja. Zapišite si, kaj in približno koliko je pojedel. Znaki vnetja trebušne slinavke se lahko pokažejo z nekajdnevno zamudo.",
-    "de": "Hat Ihr Hund viel fettes Essen gefressen oder zeigt er in den folgenden Tagen Erbrechen, Bauchschmerzen oder Müdigkeit, wenden Sie sich an Ihren Tierarzt. Notieren Sie, was gefressen wurde und ungefähr wie viel. Anzeichen einer Pankreatitis können erst einige Tage später auftreten."
+    "de": "Hat Ihr Hund viel fettes Essen gefressen oder zeigt er in den folgenden Tagen Erbrechen, Bauchschmerzen oder Müdigkeit, wenden Sie sich an Ihren Tierarzt. Notieren Sie, was gefressen wurde und ungefähr wie viel. Anzeichen einer Pankreatitis können erst einige Tage später auftreten.",
+    "fr": "Si votre chien a mangé beaucoup d’aliments gras, ou s’il vomit, a mal au ventre ou semble fatigué dans les jours qui suivent, contactez votre vétérinaire. Notez ce qu’il a mangé et en quelle quantité approximative. Les signes de pancréatite peuvent n’apparaître qu’après quelques jours."
   },
   "serving": null,
   "child": {
     "en": "Bacon smells yummy, but it is too fatty for dogs and can hurt their tummy. Choose a dog treat instead.",
     "sl": "Slanina lepo diši, a je za pse premastna in jim lahko škodi trebuščku. Raje izberi pasji priboljšek.",
-    "de": "Speck riecht lecker, ist aber zu fett für Hunde und kann ihnen Bauchweh machen. Nimm lieber ein Hundeleckerli."
+    "de": "Speck riecht lecker, ist aber zu fett für Hunde und kann ihnen Bauchweh machen. Nimm lieber ein Hundeleckerli.",
+    "fr": "Le bacon sent bon, mais il est trop gras pour les chiens et peut leur faire mal au ventre. Choisis plutôt une friandise pour chien."
   },
   "faq": [
     {
       "q": {
         "en": "Is a tiny piece of bacon dangerous?",
         "sl": "Je majhen košček slanine nevaren?",
-        "de": "Ist ein winziges Stück Speck gefährlich?"
+        "de": "Ist ein winziges Stück Speck gefährlich?",
+        "fr": "Un tout petit morceau de bacon est-il dangereux ?"
       },
       "a": {
         "en": "Bacon is not toxic, but fatty table food can upset a dog's stomach or trigger pancreatitis, so it's best not to share it.",
         "sl": "Slanina ni strupena, a mastna hrana z mize lahko psu povzroči prebavne težave ali vnetje trebušne slinavke, zato je raje ne delite.",
-        "de": "Speck ist nicht giftig, aber fettes Essen vom Tisch kann einem Hund auf den Magen schlagen oder eine Pankreatitis auslösen – teilen Sie es deshalb besser nicht."
+        "de": "Speck ist nicht giftig, aber fettes Essen vom Tisch kann einem Hund auf den Magen schlagen oder eine Pankreatitis auslösen – teilen Sie es deshalb besser nicht.",
+        "fr": "Le bacon n’est pas toxique, mais les aliments de table gras peuvent dérégler l’estomac d’un chien ou déclencher une pancréatite : mieux vaut ne pas en partager."
       }
     }
   ],
@@ -147,6 +163,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "99bed4f5440c83622feb9f9c5960cf96cbbf18a8504eda44d3e6b88b6a187db6"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "64f396057616549cb594e07596429817aefa96d25b0afc836f3269e6b5d86784"
     }
   }
 }
