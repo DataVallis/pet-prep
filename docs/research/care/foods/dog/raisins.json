@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Raisins",
-    "sl": "Rozine"
+    "sl": "Rozine",
+    "de": "Rosinen"
   },
   "question": {
     "en": "Can dogs eat raisins?",
-    "sl": "Ali lahko psi jedo rozine?"
+    "sl": "Ali lahko psi jedo rozine?",
+    "de": "Dürfen Hunde Rosinen fressen?"
   },
   "url_slug": {
     "en": "raisins",
-    "sl": "rozine"
+    "sl": "rozine",
+    "de": "rosinen"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Raisins are dried grapes, and dogs should never eat them. They can cause kidney failure, and even a small amount can make a dog seriously ill. There is no way to predict which dogs will be affected.",
-    "sl": "Ne. Rozine so posušeno grozdje in psi jih ne smejo nikoli jesti. Lahko povzročijo odpoved ledvic, že majhna količina pa lahko psu resno škodi. Ni mogoče napovedati, kateri psi bodo prizadeti."
+    "sl": "Ne. Rozine so posušeno grozdje in psi jih ne smejo nikoli jesti. Lahko povzročijo odpoved ledvic, že majhna količina pa lahko psu resno škodi. Ni mogoče napovedati, kateri psi bodo prizadeti.",
+    "de": "Nein. Rosinen sind getrocknete Weintrauben, und Hunde sollten sie niemals fressen. Sie können Nierenversagen verursachen, und schon eine kleine Menge kann einen Hund schwer krank machen. Es lässt sich nicht vorhersagen, welche Hunde betroffen sein werden."
   },
   "why": {
     "en": "Raisins, grapes and currants can damage a dog's kidneys. Tartaric acid is suspected to be the toxic part; its amount varies, so effects are unpredictable, and there is no way to tell which dogs are more sensitive. Because the cause is uncertain, any amount is treated as a concern.",
-    "sl": "Rozine, grozdje in korinte lahko poškodujejo pasje ledvice. Za strupeno sestavino velja vinska kislina; njena količina se razlikuje, zato so učinki nepredvidljivi, in ni mogoče vedeti, kateri psi so bolj občutljivi. Ker vzrok ni pojasnjen, se vsaka količina jemlje resno."
+    "sl": "Rozine, grozdje in korinte lahko poškodujejo pasje ledvice. Za strupeno sestavino velja vinska kislina; njena količina se razlikuje, zato so učinki nepredvidljivi, in ni mogoče vedeti, kateri psi so bolj občutljivi. Ker vzrok ni pojasnjen, se vsaka količina jemlje resno.",
+    "de": "Rosinen, Weintrauben und Korinthen können die Nieren eines Hundes schädigen. Als giftiger Bestandteil wird Weinsäure vermutet; ihr Gehalt schwankt, deshalb sind die Folgen unberechenbar, und es lässt sich nicht erkennen, welche Hunde empfindlicher sind. Weil die Ursache unklar ist, gilt jede Menge als bedenklich."
   },
   "signs": {
     "en": [
@@ -38,36 +43,50 @@
       "Bolečine v trebuhu",
       "Izsušenost in veliko pitja",
       "Tresenje"
+    ],
+    "de": [
+      "Erbrechen oder Durchfall, oft innerhalb von 6–24 Stunden",
+      "Müdigkeit und Schwäche",
+      "Will nicht fressen",
+      "Bauchschmerzen",
+      "Austrocknung und viel Trinken",
+      "Zittern"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away, even if only a few raisins were eaten. Note roughly how many were eaten. Don't wait for signs: the sooner treatment starts, the better.",
-    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če je pes pojedel le nekaj rozin. Zapišite si, približno koliko jih je pojedel. Ne čakajte na znake: prej ko se zdravljenje začne, bolje je."
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če je pes pojedel le nekaj rozin. Zapišite si, približno koliko jih je pojedel. Ne čakajte na znake: prej ko se zdravljenje začne, bolje je.",
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, auch wenn nur wenige Rosinen gefressen wurden. Notieren Sie ungefähr, wie viele es waren. Warten Sie nicht auf Anzeichen: Je früher die Behandlung beginnt, desto besser."
   },
   "serving": null,
   "child": {
     "en": "Raisins are tiny dried grapes, and they are not for dogs. If your dog eats some, tell a grown-up right away.",
-    "sl": "Rozine so majhno posušeno grozdje in niso za pse. Če jih pes poje, takoj povej odraslemu."
+    "sl": "Rozine so majhno posušeno grozdje in niso za pse. Če jih pes poje, takoj povej odraslemu.",
+    "de": "Rosinen sind kleine getrocknete Weintrauben und nichts für Hunde. Wenn dein Hund welche frisst, sag sofort einem Erwachsenen Bescheid."
   },
   "faq": [
     {
       "q": {
         "en": "Are raisins worse than grapes?",
-        "sl": "So rozine slabše od grozdja?"
+        "sl": "So rozine slabše od grozdja?",
+        "de": "Sind Rosinen schlimmer als Weintrauben?"
       },
       "a": {
         "en": "Both are dangerous. Sources treat grapes, raisins and currants as the same risk and advise calling the vet after any amount.",
-        "sl": "Oboje je nevarno. Viri grozdje, rozine in korinte obravnavajo kot enako tveganje in svetujejo klic veterinarju po kateri koli količini."
+        "sl": "Oboje je nevarno. Viri grozdje, rozine in korinte obravnavajo kot enako tveganje in svetujejo klic veterinarju po kateri koli količini.",
+        "de": "Beide sind gefährlich. Die Quellen behandeln Weintrauben, Rosinen und Korinthen als gleiches Risiko und raten, nach jeder Menge den Tierarzt anzurufen."
       }
     },
     {
       "q": {
         "en": "What about currants?",
-        "sl": "Kaj pa korinte?"
+        "sl": "Kaj pa korinte?",
+        "de": "Und Korinthen?"
       },
       "a": {
         "en": "Currants are named in the same warnings as grapes and raisins, so they are not safe for dogs either.",
-        "sl": "Korinte so navedene v istih opozorilih kot grozdje in rozine, zato tudi one za pse niso varne."
+        "sl": "Korinte so navedene v istih opozorilih kot grozdje in rozine, zato tudi one za pse niso varne.",
+        "de": "Korinthen werden in denselben Warnungen genannt wie Weintrauben und Rosinen, sie sind also ebenfalls nicht sicher für Hunde."
       }
     }
   ],
@@ -138,6 +157,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c21f3739809b972942c2dada1540ac5c16b2245034a73724a16bf17cd28fc01a"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b9173ea5000216c49147093a2a2c10bc0c4bfd86bae4d8e635bbaca2f36e42f0"
     }
   }
 }

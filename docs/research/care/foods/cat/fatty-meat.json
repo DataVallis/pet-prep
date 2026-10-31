@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Fatty meat",
-    "sl": "Mastno meso"
+    "sl": "Mastno meso",
+    "de": "Fettes Fleisch"
   },
   "question": {
     "en": "Can cats eat fatty meat?",
-    "sl": "Ali lahko mačke jedo mastno meso?"
+    "sl": "Ali lahko mačke jedo mastno meso?",
+    "de": "Dürfen Katzen fettes Fleisch fressen?"
   },
   "url_slug": {
     "en": "fatty-meat",
-    "sl": "mastno-meso"
+    "sl": "mastno-meso",
+    "de": "fettes-fleisch"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to. Fatty meat and poultry skin can upset a cat's digestion and, in sensitive cats, may even lead to pancreatitis. If you share meat, give a little plain, lean, cooked meat with no skin, bones or seasoning.",
-    "sl": "Raje ne. Mastno meso in perutninska koža lahko muci povzročijo prebavne težave, pri občutljivih mačkah pa celo vnetje trebušne slinavke. Če delite meso, ponudite malo navadnega, pustega, kuhanega mesa brez kože, kosti in začimb."
+    "sl": "Raje ne. Mastno meso in perutninska koža lahko muci povzročijo prebavne težave, pri občutljivih mačkah pa celo vnetje trebušne slinavke. Če delite meso, ponudite malo navadnega, pustega, kuhanega mesa brez kože, kosti in začimb.",
+    "de": "Besser nicht. Fettes Fleisch und Geflügelhaut können die Verdauung einer Katze durcheinanderbringen und bei empfindlichen Katzen sogar zu einer Bauchspeicheldrüsenentzündung (Pankreatitis) führen. Wenn Sie Fleisch teilen, geben Sie ein wenig pures, mageres, gegartes Fleisch ohne Haut, Knochen oder Gewürze."
   },
   "why": {
     "en": "Too much fat can affect a cat's digestive tract, especially the pancreas. Cats Protection warns that turkey skin is high in fat and can cause digestive upset or even pancreatitis in sensitive cats, and a University of Georgia vet advises avoiding the fattier pieces of ham altogether.",
-    "sl": "Preveč maščobe lahko obremeni mačja prebavila, zlasti trebušno slinavko. Cats Protection opozarja, da je puranja koža zelo mastna in lahko pri občutljivih mačkah povzroči prebavne težave ali celo vnetje trebušne slinavke, veterinarka z Univerze v Georgii pa svetuje, naj se bolj mastnim kosom šunke povsem izognemo."
+    "sl": "Preveč maščobe lahko obremeni mačja prebavila, zlasti trebušno slinavko. Cats Protection opozarja, da je puranja koža zelo mastna in lahko pri občutljivih mačkah povzroči prebavne težave ali celo vnetje trebušne slinavke, veterinarka z Univerze v Georgii pa svetuje, naj se bolj mastnim kosom šunke povsem izognemo.",
+    "de": "Zu viel Fett kann den Verdauungstrakt einer Katze belasten, vor allem die Bauchspeicheldrüse. Cats Protection warnt, dass Putenhaut fettreich ist und bei empfindlichen Katzen Verdauungsbeschwerden oder sogar eine Pankreatitis auslösen kann, und ein Tierarzt der University of Georgia rät, die fetteren Stücke Schinken ganz zu meiden."
   },
   "signs": {
     "en": [
@@ -32,29 +37,39 @@
       "Bruhanje",
       "Driska",
       "Prebavne težave"
+    ],
+    "de": [
+      "Erbrechen",
+      "Durchfall",
+      "Magenverstimmung"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate a lot of fatty food, or is vomiting, has diarrhoea or seems in pain afterwards, contact your vet for advice.",
-    "sl": "Če je muca pojedla veliko mastne hrane ali po tem bruha, ima drisko ali se zdi, da jo boli, se za nasvet obrnite na veterinarja."
+    "sl": "Če je muca pojedla veliko mastne hrane ali po tem bruha, ima drisko ali se zdi, da jo boli, se za nasvet obrnite na veterinarja.",
+    "de": "Wenn Ihre Katze viel Fettes gefressen hat oder danach erbricht, Durchfall hat oder Schmerzen zu haben scheint, fragen Sie Ihren Tierarzt um Rat."
   },
   "serving": {
     "en": "Only plain, cooked, lean meat as an occasional treat: no skin, fat, bones or seasoning.",
-    "sl": "Le navadno, kuhano, pusto meso kot občasen priboljšek: brez kože, maščobe, kosti in začimb."
+    "sl": "Le navadno, kuhano, pusto meso kot občasen priboljšek: brez kože, maščobe, kosti in začimb.",
+    "de": "Nur pures, gegartes, mageres Fleisch als gelegentliches Leckerli: ohne Haut, Fett, Knochen oder Gewürze."
   },
   "child": {
     "en": "Fatty bits can give a cat a sore tummy. If a grown-up says yes, kitty can have a tiny bit of plain lean meat.",
-    "sl": "Zaradi mastnih koščkov lahko muco boli trebušček. Če odrasli dovoli, lahko muca dobi košček navadnega pustega mesa."
+    "sl": "Zaradi mastnih koščkov lahko muco boli trebušček. Če odrasli dovoli, lahko muca dobi košček navadnega pustega mesa.",
+    "de": "Fettige Stückchen können einer Katze Bauchweh machen. Wenn ein Erwachsener Ja sagt, darf deine Katze ein winziges Stück pures, mageres Fleisch haben."
   },
   "faq": [
     {
       "q": {
         "en": "Is chicken or turkey skin OK?",
-        "sl": "Je piščančja ali puranja koža v redu?"
+        "sl": "Je piščančja ali puranja koža v redu?",
+        "de": "Ist Hähnchen- oder Putenhaut in Ordnung?"
       },
       "a": {
         "en": "No. Cats Protection says turkey skin is high in fat and can cause digestive upset or even pancreatitis in sensitive cats. Give skinless meat instead.",
-        "sl": "Ne. Cats Protection navaja, da je puranja koža zelo mastna in lahko pri občutljivih mačkah povzroči prebavne težave ali celo vnetje trebušne slinavke. Raje ponudite meso brez kože."
+        "sl": "Ne. Cats Protection navaja, da je puranja koža zelo mastna in lahko pri občutljivih mačkah povzroči prebavne težave ali celo vnetje trebušne slinavke. Raje ponudite meso brez kože.",
+        "de": "Nein. Laut Cats Protection ist Putenhaut fettreich und kann bei empfindlichen Katzen Verdauungsbeschwerden oder sogar eine Pankreatitis auslösen. Geben Sie stattdessen Fleisch ohne Haut."
       }
     }
   ],
@@ -102,6 +117,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "11f0e6ddd91530e32e30fb55f576d98b3d75602bb2ea5a12a6b5455516320c80"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a959dadb386a6afd6b793f6fcb58fb734aec5bd015c4972e43b878dfff527842"
     }
   }
 }

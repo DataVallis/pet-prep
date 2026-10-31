@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Ham",
-    "sl": "Šunka"
+    "sl": "Šunka",
+    "de": "Schinken"
   },
   "question": {
     "en": "Can cats eat ham?",
-    "sl": "Ali lahko mačke jedo šunko?"
+    "sl": "Ali lahko mačke jedo šunko?",
+    "de": "Dürfen Katzen Schinken fressen?"
   },
   "url_slug": {
     "en": "ham",
-    "sl": "sunka"
+    "sl": "sunka",
+    "de": "schinken"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to. Ham is fatty and high in salt, which can upset a cat's digestion and raise the risk of pancreatitis. Ham cooked with onion or garlic is toxic to cats. A University of Georgia vet recommends avoiding ham altogether.",
-    "sl": "Raje ne. Šunka je mastna in zelo slana, kar lahko muci povzroči prebavne težave in poveča tveganje za vnetje trebušne slinavke. Šunka, pripravljena s čebulo ali česnom, je za mačke strupena. Veterinarka z Univerze v Georgii svetuje, naj se šunki povsem izognemo."
+    "sl": "Raje ne. Šunka je mastna in zelo slana, kar lahko muci povzroči prebavne težave in poveča tveganje za vnetje trebušne slinavke. Šunka, pripravljena s čebulo ali česnom, je za mačke strupena. Veterinarka z Univerze v Georgii svetuje, naj se šunki povsem izognemo.",
+    "de": "Besser nicht. Schinken ist fett und salzreich, was die Verdauung einer Katze stören und das Risiko einer Bauchspeicheldrüsenentzündung (Pankreatitis) erhöhen kann. Mit Zwiebeln oder Knoblauch zubereiteter Schinken ist für Katzen giftig. Ein Tierarzt der University of Georgia empfiehlt, ganz auf Schinken zu verzichten."
   },
   "why": {
     "en": "Ham is a fatty meat that is also high in sodium, and both can cause health problems. Too much fat affects the digestive tract, especially the pancreas. Seasonings such as onion or garlic make it toxic. Small amounts may not be extremely harmful, but it is not a good treat. Salty food can also leave cats more dehydrated, and cats with kidney, heart or urinary problems should especially avoid ham.",
-    "sl": "Šunka je mastno meso z veliko natrija, oboje pa lahko povzroči zdravstvene težave. Preveč maščobe obremeni prebavila, zlasti trebušno slinavko. Začimbe, kot sta čebula in česen, jo naredijo strupeno. Majhne količine morda niso zelo škodljive, a dober priboljšek ni. Slana hrana lahko mačke še bolj izsuši, mačke s težavami z ledvicami, srcem ali sečili pa naj se šunki še posebej izogibajo."
+    "sl": "Šunka je mastno meso z veliko natrija, oboje pa lahko povzroči zdravstvene težave. Preveč maščobe obremeni prebavila, zlasti trebušno slinavko. Začimbe, kot sta čebula in česen, jo naredijo strupeno. Majhne količine morda niso zelo škodljive, a dober priboljšek ni. Slana hrana lahko mačke še bolj izsuši, mačke s težavami z ledvicami, srcem ali sečili pa naj se šunki še posebej izogibajo.",
+    "de": "Schinken ist ein fettes Fleisch und zugleich reich an Natrium; beides kann gesundheitliche Probleme verursachen. Zu viel Fett belastet den Verdauungstrakt, besonders die Bauchspeicheldrüse. Gewürze wie Zwiebeln oder Knoblauch machen ihn giftig. Kleine Mengen sind vielleicht nicht extrem schädlich, ein gutes Leckerli ist Schinken aber nicht. Salziges Futter kann Katzen außerdem stärker austrocknen, und Katzen mit Nieren-, Herz- oder Harnwegsproblemen sollten Schinken besonders meiden."
   },
   "signs": {
     "en": [
@@ -32,26 +37,35 @@
       "Bruhanje",
       "Driska",
       "Prebavne težave"
+    ],
+    "de": [
+      "Erbrechen",
+      "Durchfall",
+      "Bauchbeschwerden"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate ham seasoned with onion or garlic, contact your vet right away. If she ate a lot of plain ham, or is vomiting or has diarrhoea, call your vet for advice.",
-    "sl": "Če je muca pojedla šunko, začinjeno s čebulo ali česnom, takoj pokličite veterinarja. Če je pojedla veliko navadne šunke ali bruha ali ima drisko, se za nasvet obrnite na veterinarja."
+    "sl": "Če je muca pojedla šunko, začinjeno s čebulo ali česnom, takoj pokličite veterinarja. Če je pojedla veliko navadne šunke ali bruha ali ima drisko, se za nasvet obrnite na veterinarja.",
+    "de": "Wenn Ihre Katze mit Zwiebeln oder Knoblauch gewürzten Schinken gefressen hat, wenden Sie sich sofort an Ihren Tierarzt. Hat sie viel ungewürzten Schinken gefressen, erbricht sie oder hat sie Durchfall, rufen Sie Ihren Tierarzt an und lassen Sie sich beraten."
   },
   "serving": null,
   "child": {
     "en": "Ham is too salty and fatty for cats. Kitty's own cat treats are a better surprise.",
-    "sl": "Šunka je za muce preslana in premastna. Mucini mačji priboljški so boljše presenečenje."
+    "sl": "Šunka je za muce preslana in premastna. Mucini mačji priboljški so boljše presenečenje.",
+    "de": "Schinken ist zu salzig und zu fett für Katzen. Katzenleckerlis sind für deine Katze eine bessere Überraschung."
   },
   "faq": [
     {
       "q": {
         "en": "Is a tiny bite of ham dangerous?",
-        "sl": "Je majhen grižljaj šunke nevaren?"
+        "sl": "Je majhen grižljaj šunke nevaren?",
+        "de": "Ist ein winziger Bissen Schinken gefährlich?"
       },
       "a": {
         "en": "Small amounts may not be extremely harmful, but ham seasoned with onion or garlic is toxic to cats, and a University of Georgia vet still recommends avoiding ham altogether.",
-        "sl": "Majhne količine morda niso zelo škodljive, šunka, začinjena s čebulo ali česnom, pa je za mačke strupena, zato veterinarka z Univerze v Georgii vseeno svetuje, naj se ji povsem izognemo."
+        "sl": "Majhne količine morda niso zelo škodljive, šunka, začinjena s čebulo ali česnom, pa je za mačke strupena, zato veterinarka z Univerze v Georgii vseeno svetuje, naj se ji povsem izognemo.",
+        "de": "Kleine Mengen sind vielleicht nicht extrem schädlich, aber mit Zwiebeln oder Knoblauch gewürzter Schinken ist für Katzen giftig, und ein Tierarzt der University of Georgia empfiehlt trotzdem, ganz auf Schinken zu verzichten."
       }
     }
   ],
@@ -115,6 +129,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "65e9c71e11f03dd8e68674f8fb134a2c951817f085485ff83e12bc3799f4d4a3"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2f3fd027586ca636b0b71e50e988c1578c925ff8663eb4842000afa05226390c"
     }
   }
 }

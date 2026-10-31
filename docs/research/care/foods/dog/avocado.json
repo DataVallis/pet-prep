@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Avocado",
-    "sl": "Avokado"
+    "sl": "Avokado",
+    "de": "Avocado"
   },
   "question": {
     "en": "Can dogs eat avocado?",
-    "sl": "Ali lahko psi jedo avokado?"
+    "sl": "Ali lahko psi jedo avokado?",
+    "de": "Dürfen Hunde Avocado fressen?"
   },
   "url_slug": {
     "en": "avocado",
-    "sl": "avokado"
+    "sl": "avokado",
+    "de": "avocado"
   },
   "level": "dangerous",
   "answer": {
     "en": "No, it's safer to keep avocado away from dogs. Some vets say the flesh is not toxic, but the skin, pit and leaves contain persin, and the large pit can choke a dog or block its gut. Avocado is also very fatty, which can lead to pancreatitis.",
-    "sl": "Ne, avokado je bolje držati stran od psov. Nekateri veterinarji pravijo, da meso ni strupeno, lupina, koščica in listi pa vsebujejo persin, velika koščica pa lahko psa zaduši ali mu zamaši prebavila. Avokado je tudi zelo masten, kar lahko vodi v vnetje trebušne slinavke."
+    "sl": "Ne, avokado je bolje držati stran od psov. Nekateri veterinarji pravijo, da meso ni strupeno, lupina, koščica in listi pa vsebujejo persin, velika koščica pa lahko psa zaduši ali mu zamaši prebavila. Avokado je tudi zelo masten, kar lahko vodi v vnetje trebušne slinavke.",
+    "de": "Nein, sicherer ist es, Avocado von Hunden fernzuhalten. Laut manchen Tierärzten ist das Fruchtfleisch nicht giftig, doch Schale, Kern und Blätter enthalten Persin, und der große Kern kann zum Ersticken führen oder den Darm blockieren. Avocado ist außerdem sehr fettreich, was zu einer Bauchspeicheldrüsenentzündung (Pankreatitis) führen kann."
   },
   "why": {
     "en": "Sources disagree, so we use the stricter level. The Merck Veterinary Manual says dogs seem relatively resistant compared with other species, the ASPCA names birds and rabbits as the biggest concern, and AKC says the flesh is not toxic. Blue Cross calls persin poisonous to dogs. All agree that the pit can choke a dog or cause a blockage and that the high fat can cause pancreatitis.",
-    "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. Veterinarski priročnik Merck pravi, da so psi v primerjavi z drugimi vrstami razmeroma odporni, ASPCA kot največjo skrb navaja ptice in kunce, AKC pa pravi, da meso ni strupeno. Blue Cross persin označuje kot strupen za pse. Vsi se strinjajo, da lahko koščica psa zaduši ali povzroči zaporo in da lahko veliko maščobe povzroči vnetje trebušne slinavke."
+    "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. Veterinarski priročnik Merck pravi, da so psi v primerjavi z drugimi vrstami razmeroma odporni, ASPCA kot največjo skrb navaja ptice in kunce, AKC pa pravi, da meso ni strupeno. Blue Cross persin označuje kot strupen za pse. Vsi se strinjajo, da lahko koščica psa zaduši ali povzroči zaporo in da lahko veliko maščobe povzroči vnetje trebušne slinavke.",
+    "de": "Die Quellen sind sich nicht einig, deshalb verwenden wir die strengere Stufe. Laut Merck Veterinary Manual scheinen Hunde im Vergleich zu anderen Arten relativ widerstandsfähig zu sein, die ASPCA sieht bei Vögeln und Kaninchen die größte Gefahr, und laut AKC ist das Fruchtfleisch nicht giftig. Blue Cross bezeichnet Persin als giftig für Hunde. Alle sind sich einig, dass der Kern zum Ersticken oder zu einer Blockade führen und der hohe Fettgehalt eine Pankreatitis auslösen kann."
   },
   "signs": {
     "en": [
@@ -32,46 +37,59 @@
       "Dušenje s koščico",
       "Znaki zapore po zaužitju koščice: ponavljajoče se bruhanje, pes noče jesti, utrujenost",
       "Slabo počutje zaradi veliko maščobe, ki lahko vodi v vnetje trebušne slinavke"
+    ],
+    "de": [
+      "Ersticken am Kern",
+      "Anzeichen einer Blockade nach dem Verschlucken des Kerns: wiederholtes Erbrechen, Appetitlosigkeit, Müdigkeit",
+      "Unwohlsein durch den hohen Fettgehalt, der zu einer Pankreatitis führen kann"
     ]
   },
   "what_to_do": {
     "en": "If your dog chewed or swallowed an avocado pit, contact your vet right away and don't wait for signs. If it ate guacamole, call your vet or a pet poison helpline too, because guacamole usually contains onion and garlic. Note what and how much was eaten.",
-    "sl": "Če je pes žvečil ali pogoltnil koščico avokada, takoj pokličite veterinarja in ne čakajte na znake. Če je pojedel guacamole, prav tako pokličite veterinarja ali center za zastrupitve živali, saj guacamole običajno vsebuje čebulo in česen. Zapišite si, kaj in koliko je pojedel."
+    "sl": "Če je pes žvečil ali pogoltnil koščico avokada, takoj pokličite veterinarja in ne čakajte na znake. Če je pojedel guacamole, prav tako pokličite veterinarja ali center za zastrupitve živali, saj guacamole običajno vsebuje čebulo in česen. Zapišite si, kaj in koliko je pojedel.",
+    "de": "Wenn Ihr Hund einen Avocadokern angekaut oder verschluckt hat, wenden Sie sich sofort an Ihren Tierarzt und warten Sie nicht auf Anzeichen. Hat er Guacamole gefressen, rufen Sie ebenfalls Ihren Tierarzt oder einen Giftnotruf für Tiere an, denn Guacamole enthält meist Zwiebeln und Knoblauch. Notieren Sie, was und wie viel gefressen wurde."
   },
   "serving": null,
   "child": {
     "en": "Avocado is not a good dog snack. The big stone inside can get stuck in a dog's tummy, so keep avocados away.",
-    "sl": "Avokado ni dober pasji prigrizek. Velika koščica se lahko psu zatakne v trebuščku, zato avokado pospravi."
+    "sl": "Avokado ni dober pasji prigrizek. Velika koščica se lahko psu zatakne v trebuščku, zato avokado pospravi.",
+    "de": "Avocado ist kein guter Hundesnack. Der große Kern kann im Bauch eines Hundes stecken bleiben, also halte Avocados von deinem Hund fern."
   },
   "faq": [
     {
       "q": {
         "en": "Is guacamole safe for dogs?",
-        "sl": "Je guacamole za pse varen?"
+        "sl": "Je guacamole za pse varen?",
+        "de": "Ist Guacamole für Hunde sicher?"
       },
       "a": {
         "en": "No. Guacamole usually contains onion and garlic, which are toxic to dogs.",
-        "sl": "Ne. Guacamole običajno vsebuje čebulo in česen, ki sta za pse strupena."
+        "sl": "Ne. Guacamole običajno vsebuje čebulo in česen, ki sta za pse strupena.",
+        "de": "Nein. Guacamole enthält meist Zwiebeln und Knoblauch, die für Hunde giftig sind."
       }
     },
     {
       "q": {
         "en": "What if my dog swallowed the pit?",
-        "sl": "Kaj, če je pes pogoltnil koščico?"
+        "sl": "Kaj, če je pes pogoltnil koščico?",
+        "de": "Was, wenn mein Hund den Kern verschluckt hat?"
       },
       "a": {
         "en": "Contact your vet right away. The pit can cause a blockage in the gut.",
-        "sl": "Takoj pokličite veterinarja. Koščica lahko povzroči zaporo v prebavilih."
+        "sl": "Takoj pokličite veterinarja. Koščica lahko povzroči zaporo v prebavilih.",
+        "de": "Wenden Sie sich sofort an Ihren Tierarzt. Der Kern kann den Darm blockieren."
       }
     },
     {
       "q": {
         "en": "Is avocado flesh poisonous to dogs?",
-        "sl": "Je meso avokada za pse strupeno?"
+        "sl": "Je meso avokada za pse strupeno?",
+        "de": "Ist das Fruchtfleisch der Avocado für Hunde giftig?"
       },
       "a": {
         "en": "Sources disagree: some say the flesh is not toxic, others call avocado poisonous to dogs. Because it is also very fatty and the pit is a hazard, we advise keeping it away.",
-        "sl": "Viri se razlikujejo: nekateri pravijo, da meso ni strupeno, drugi avokado označujejo kot strupen za pse. Ker je tudi zelo masten in je koščica nevarna, svetujemo, da ga psu ne dajete."
+        "sl": "Viri se razlikujejo: nekateri pravijo, da meso ni strupeno, drugi avokado označujejo kot strupen za pse. Ker je tudi zelo masten in je koščica nevarna, svetujemo, da ga psu ne dajete.",
+        "de": "Die Quellen sind sich nicht einig: Manche sagen, das Fruchtfleisch sei nicht giftig, andere bezeichnen Avocado als giftig für Hunde. Weil sie außerdem sehr fettreich ist und der Kern eine Gefahr darstellt, raten wir, sie von Hunden fernzuhalten."
       }
     }
   ],
@@ -166,6 +184,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "dc858a3a4b59ad61654257132c4a10b7590ea188376e603901d45569c98b09c8"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2ec0912119bf6ad6683e41f83e989527c3f9fe362bf9a6068b8f77aa213a4bd2"
     }
   }
 }

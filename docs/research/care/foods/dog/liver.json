@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Liver",
-    "sl": "Jetra"
+    "sl": "Jetra",
+    "de": "Leber"
   },
   "question": {
     "en": "Can dogs eat liver?",
-    "sl": "Ali lahko psi jedo jetra?"
+    "sl": "Ali lahko psi jedo jetra?",
+    "de": "Dürfen Hunde Leber fressen?"
   },
   "url_slug": {
     "en": "liver",
-    "sl": "jetra"
+    "sl": "jetra",
+    "de": "leber"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Not as a regular food, and not raw. Vitamin A poisoning in pets most often happens when they are fed raw liver or vitamin A-rich supplements, and raw liver carries the germ risks of all raw meat. Ask your vet before adding liver to your dog's diet.",
-    "sl": "Ne kot redna hrana in ne surova. Zastrupitev z vitaminom A se pri hišnih živalih najpogosteje zgodi pri hranjenju s surovimi jetri ali dodatki, bogatimi z vitaminom A, surova jetra pa nosijo tudi tveganje klic kot vse surovo meso. Preden psu dodate jetra v prehrano, vprašajte veterinarja."
+    "sl": "Ne kot redna hrana in ne surova. Zastrupitev z vitaminom A se pri hišnih živalih najpogosteje zgodi pri hranjenju s surovimi jetri ali dodatki, bogatimi z vitaminom A, surova jetra pa nosijo tudi tveganje klic kot vse surovo meso. Preden psu dodate jetra v prehrano, vprašajte veterinarja.",
+    "de": "Nicht als regelmäßiges Futter und nicht roh. Eine Vitamin-A-Vergiftung entsteht bei Haustieren am häufigsten, wenn sie rohe Leber oder Vitamin-A-reiche Nahrungsergänzungsmittel bekommen, und rohe Leber birgt die gleichen Keimrisiken wie jedes rohe Fleisch. Fragen Sie Ihren Tierarzt, bevor Sie Leber in den Speiseplan Ihres Hundes aufnehmen."
   },
   "why": {
     "en": "Vitamin A poisoning most often happens when pets are fed raw liver, cod liver oil or other vitamin A-rich supplements. Too much over weeks or months can lead to a poor coat and dry skin; a large amount at once can cause vomiting, drowsiness and irritability. Raw animal protein can also carry Salmonella and other bacteria.",
-    "sl": "Zastrupitev z vitaminom A se najpogosteje zgodi, ko živali hranimo s surovimi jetri, z oljem iz trskinih jeter ali drugimi dodatki, bogatimi z vitaminom A. Preveč tedne ali mesece lahko vodi do slabe dlake in suhe kože; velika količina naenkrat lahko povzroči bruhanje, zaspanost in razdražljivost. Surove živalske beljakovine lahko prenašajo tudi salmonelo in druge bakterije."
+    "sl": "Zastrupitev z vitaminom A se najpogosteje zgodi, ko živali hranimo s surovimi jetri, z oljem iz trskinih jeter ali drugimi dodatki, bogatimi z vitaminom A. Preveč tedne ali mesece lahko vodi do slabe dlake in suhe kože; velika količina naenkrat lahko povzroči bruhanje, zaspanost in razdražljivost. Surove živalske beljakovine lahko prenašajo tudi salmonelo in druge bakterije.",
+    "de": "Eine Vitamin-A-Vergiftung entsteht am häufigsten, wenn Haustiere rohe Leber, Lebertran oder andere Vitamin-A-reiche Nahrungsergänzungsmittel bekommen. Zu viel über Wochen oder Monate kann zu stumpfem Fell und trockener Haut führen; eine große Menge auf einmal kann Erbrechen, Schläfrigkeit und Reizbarkeit verursachen. Rohes tierisches Eiweiß kann außerdem Salmonellen und andere Bakterien enthalten."
   },
   "signs": {
     "en": [
@@ -30,26 +35,34 @@
     "sl": [
       "Bruhanje, zaspanost ali razdražljivost po veliki količini",
       "Slaba, suha dlaka ali koža po tednih ali mesecih"
+    ],
+    "de": [
+      "Erbrechen, Schläfrigkeit oder Reizbarkeit nach einer großen Menge",
+      "Stumpfes, trockenes Fell oder trockene Haut nach Wochen oder Monaten"
     ]
   },
   "what_to_do": {
     "en": "If your dog ate a large amount of liver at once, or has been fed liver often and has a poor coat or dry skin, call your vet. A balanced commercial diet or a vet-formulated home diet avoids the problem.",
-    "sl": "Če je pes naenkrat pojedel veliko jeter ali jih je pogosto dobival in ima slabo dlako ali suho kožo, pokličite veterinarja. Uravnotežena komercialna hrana ali domača prehrana, ki jo sestavi veterinar, težavo prepreči."
+    "sl": "Če je pes naenkrat pojedel veliko jeter ali jih je pogosto dobival in ima slabo dlako ali suho kožo, pokličite veterinarja. Uravnotežena komercialna hrana ali domača prehrana, ki jo sestavi veterinar, težavo prepreči.",
+    "de": "Wenn Ihr Hund auf einmal viel Leber gefressen hat oder oft Leber bekommt und stumpfes Fell oder trockene Haut hat, rufen Sie Ihren Tierarzt an. Ein ausgewogenes Fertigfutter oder eine tierärztlich zusammengestellte, selbst zubereitete Ration vermeidet das Problem."
   },
   "serving": null,
   "child": {
     "en": "Too much liver is not good for dogs. A grown-up and the vet decide if a dog gets liver.",
-    "sl": "Preveč jeter psom ne koristi. Odrasel in veterinar odločita, ali pes dobi jetra."
+    "sl": "Preveč jeter psom ne koristi. Odrasel in veterinar odločita, ali pes dobi jetra.",
+    "de": "Zu viel Leber ist nicht gut für Hunde. Ob ein Hund Leber bekommt, entscheiden ein Erwachsener und der Tierarzt."
   },
   "faq": [
     {
       "q": {
         "en": "Why is too much liver a problem?",
-        "sl": "Zakaj je preveč jeter težava?"
+        "sl": "Zakaj je preveč jeter težava?",
+        "de": "Warum ist zu viel Leber ein Problem?"
       },
       "a": {
         "en": "Vitamin A poisoning in pets most often happens when they are fed raw liver, cod liver oil or other vitamin A-rich supplements.",
-        "sl": "Zastrupitev z vitaminom A se pri živalih najpogosteje zgodi, ko jih hranimo s surovimi jetri, z oljem iz trskinih jeter ali drugimi dodatki, bogatimi z vitaminom A."
+        "sl": "Zastrupitev z vitaminom A se pri živalih najpogosteje zgodi, ko jih hranimo s surovimi jetri, z oljem iz trskinih jeter ali drugimi dodatki, bogatimi z vitaminom A.",
+        "de": "Eine Vitamin-A-Vergiftung entsteht bei Haustieren am häufigsten, wenn sie rohe Leber, Lebertran oder andere Vitamin-A-reiche Nahrungsergänzungsmittel bekommen."
       }
     }
   ],
@@ -103,6 +116,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "35b4b2ae4a00a876eda6367ad9f70c3eecfae38417a65ce3d5d0df2a3d24937c"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5a9743aabc3c0bc0b4130c6e5daa61910e286e458c4938ab11dcfdf0d897a323"
     }
   }
 }

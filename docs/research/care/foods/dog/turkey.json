@@ -3,47 +3,57 @@
   "species": "dog",
   "name": {
     "en": "Turkey",
-    "sl": "Puran"
+    "sl": "Puran",
+    "de": "Putenfleisch"
   },
   "question": {
     "en": "Can dogs eat turkey?",
-    "sl": "Ali lahko psi jedo puranovo meso?"
+    "sl": "Ali lahko psi jedo puranovo meso?",
+    "de": "Dürfen Hunde Putenfleisch fressen?"
   },
   "url_slug": {
     "en": "turkey",
-    "sl": "puran"
+    "sl": "puran",
+    "de": "putenfleisch"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a little plain cooked turkey meat is safe for most dogs. Remove the skin, excess fat and all bones first. Turkey cooked with seasoning, onion or garlic, and onion gravy or stuffing, are not for dogs.",
-    "sl": "Da, malo navadnega kuhanega puranovega mesa je za večino psov varno. Najprej odstranite kožo, odvečno maščobo in vse kosti. Puran, pripravljen z začimbami, čebulo ali česnom, ter omaka s čebulo ali nadev niso za pse."
+    "sl": "Da, malo navadnega kuhanega puranovega mesa je za večino psov varno. Najprej odstranite kožo, odvečno maščobo in vse kosti. Puran, pripravljen z začimbami, čebulo ali česnom, ter omaka s čebulo ali nadev niso za pse.",
+    "de": "Ja, ein wenig pures, gegartes Putenfleisch ist für die meisten Hunde unbedenklich. Entfernen Sie vorher Haut, überschüssiges Fett und alle Knochen. Mit Gewürzen, Zwiebeln oder Knoblauch zubereitetes Putenfleisch sowie Zwiebelsoße oder Füllung sind nichts für Hunde."
   },
   "why": {
     "en": "Turkey isn't toxic, but how it is cooked matters. Skin and fat are rich and can cause pancreatitis, while extra seasonings can irritate a dog's stomach. Onions and garlic can be toxic to dogs. Cooked poultry bones are brittle and can splinter. White meat is leaner than dark meat.",
-    "sl": "Puran ni strupen, pomembno pa je, kako je pripravljen. Koža in maščoba sta težki in lahko povzročita vnetje trebušne slinavke, začimbe pa lahko psu razdražijo želodec. Čebula in česen sta lahko za pse strupena. Kuhane perutninske kosti so krhke in se lahko razcepijo. Belo meso je bolj pusto od temnega."
+    "sl": "Puran ni strupen, pomembno pa je, kako je pripravljen. Koža in maščoba sta težki in lahko povzročita vnetje trebušne slinavke, začimbe pa lahko psu razdražijo želodec. Čebula in česen sta lahko za pse strupena. Kuhane perutninske kosti so krhke in se lahko razcepijo. Belo meso je bolj pusto od temnega.",
+    "de": "Putenfleisch ist nicht giftig, aber es kommt darauf an, wie es zubereitet wird. Haut und Fett sind gehaltvoll und können eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen, während zusätzliche Gewürze den Magen eines Hundes reizen können. Zwiebeln und Knoblauch können für Hunde giftig sein. Gekochte Geflügelknochen sind spröde und können splittern. Helles Fleisch ist magerer als dunkles."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog ate turkey skin, fatty scraps or seasoned meat, watch for vomiting, diarrhoea or belly pain over the next few days and call your vet if they appear. If it ate bones or food with onion or garlic, call your vet straight away.",
-    "sl": "Če je pes pojedel puranovo kožo, mastne ostanke ali začinjeno meso, v naslednjih dneh opazujte, ali bruha, ima drisko ali ga boli trebuh, in pokličite veterinarja, če se to pojavi. Če je pojedel kosti ali hrano s čebulo ali česnom, takoj pokličite veterinarja."
+    "sl": "Če je pes pojedel puranovo kožo, mastne ostanke ali začinjeno meso, v naslednjih dneh opazujte, ali bruha, ima drisko ali ga boli trebuh, in pokličite veterinarja, če se to pojavi. Če je pojedel kosti ali hrano s čebulo ali česnom, takoj pokličite veterinarja.",
+    "de": "Wenn Ihr Hund Putenhaut, fettige Reste oder gewürztes Fleisch gefressen hat, achten Sie in den nächsten Tagen auf Erbrechen, Durchfall oder Bauchschmerzen und rufen Sie Ihren Tierarzt an, wenn diese auftreten. Hat er Knochen oder Essen mit Zwiebeln oder Knoblauch gefressen, rufen Sie sofort Ihren Tierarzt an."
   },
   "serving": {
     "en": "Plain cooked turkey meat, ideally white meat, with no skin, excess fat or bones, no seasoning; a small amount.",
-    "sl": "Navadno kuhano puranovo meso, najbolje belo, brez kože, odvečne maščobe in kosti, brez začimb; v majhni količini."
+    "sl": "Navadno kuhano puranovo meso, najbolje belo, brez kože, odvečne maščobe in kosti, brez začimb; v majhni količini.",
+    "de": "Pures gegartes Putenfleisch, am besten helles Fleisch, ohne Haut, überschüssiges Fett oder Knochen, ungewürzt; eine kleine Menge."
   },
   "child": {
     "en": "A little plain turkey with no skin or bones is a nice dog treat. Turkey bones are never for dogs.",
-    "sl": "Malo navadnega purana brez kože in kosti je lep pasji priboljšek. Puranove kosti nikoli niso za pse."
+    "sl": "Malo navadnega purana brez kože in kosti je lep pasji priboljšek. Puranove kosti nikoli niso za pse.",
+    "de": "Ein bisschen pures Putenfleisch ohne Haut und Knochen ist ein schönes Hundeleckerli. Putenknochen sind nie etwas für Hunde."
   },
   "faq": [
     {
       "q": {
         "en": "Can I give my dog leftovers from a holiday turkey?",
-        "sl": "Ali lahko psu dam ostanke prazničnega purana?"
+        "sl": "Ali lahko psu dam ostanke prazničnega purana?",
+        "de": "Darf ich meinem Hund Reste der Festtagspute geben?"
       },
       "a": {
         "en": "Only plain meat without skin or bones. Keep stuffing and onion-based gravy away from your dog.",
-        "sl": "Le navadno meso brez kože in kosti. Nadev in omako s čebulo držite stran od psa."
+        "sl": "Le navadno meso brez kože in kosti. Nadev in omako s čebulo držite stran od psa.",
+        "de": "Nur pures Fleisch ohne Haut und Knochen. Halten Sie Füllung und Soße auf Zwiebelbasis von Ihrem Hund fern."
       }
     }
   ],
@@ -124,6 +134,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7f2c3525abc30da53576f00497f70b342b2027285af0e9163cc20789a6c1a4e8"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6b643fb0e6bd2d43233d1bfd0a1b20411b989577f97378705ea714d2a319e862"
     }
   }
 }

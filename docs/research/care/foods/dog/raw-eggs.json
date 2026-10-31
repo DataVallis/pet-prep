@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Raw eggs",
-    "sl": "Surova jajca"
+    "sl": "Surova jajca",
+    "de": "Rohe Eier"
   },
   "question": {
     "en": "Can dogs eat raw eggs?",
-    "sl": "Ali lahko psi jedo surova jajca?"
+    "sl": "Ali lahko psi jedo surova jajca?",
+    "de": "Dürfen Hunde rohe Eier fressen?"
   },
   "url_slug": {
     "en": "raw-eggs",
-    "sl": "surova-jajca"
+    "sl": "surova-jajca",
+    "de": "rohe-eier"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, it is best not to. Raw eggs can carry bacteria such as Salmonella, which can harm dogs and the people around them, and raw egg white can interfere with a vitamin. Cook eggs fully before sharing them.",
-    "sl": "Ne, bolje ne. Surova jajca lahko prenašajo bakterije, kot je salmonela, ki lahko škodijo psu in ljudem okoli njega, surovi beljak pa lahko ovira vsrkavanje enega od vitaminov. Jajca pred deljenjem s psom popolnoma skuhajte."
+    "sl": "Ne, bolje ne. Surova jajca lahko prenašajo bakterije, kot je salmonela, ki lahko škodijo psu in ljudem okoli njega, surovi beljak pa lahko ovira vsrkavanje enega od vitaminov. Jajca pred deljenjem s psom popolnoma skuhajte.",
+    "de": "Nein, besser nicht. Rohe Eier können Bakterien wie Salmonellen enthalten, die Hunden und den Menschen in ihrer Umgebung schaden können, und rohes Eiweiß kann die Aufnahme eines Vitamins stören. Garen Sie Eier vollständig durch, bevor Sie sie teilen."
   },
   "why": {
     "en": "Raw eggs can contain Salmonella and E. coli, harmful to pets and people alike. Raw egg white contains avidin, which blocks the vitamin biotin; deficiency is rare, but it can affect skin and coat. Most vets recommend cooking eggs fully before giving them to a dog.",
-    "sl": "Surova jajca lahko vsebujejo salmonelo in E. coli, ki škodita tako živalim kot ljudem. Surovi beljak vsebuje avidin, ki ovira vitamin biotin; pomanjkanje je redko, lahko pa vpliva na kožo in dlako. Večina veterinarjev svetuje, da jajca pred hranjenjem psa popolnoma skuhamo."
+    "sl": "Surova jajca lahko vsebujejo salmonelo in E. coli, ki škodita tako živalim kot ljudem. Surovi beljak vsebuje avidin, ki ovira vitamin biotin; pomanjkanje je redko, lahko pa vpliva na kožo in dlako. Večina veterinarjev svetuje, da jajca pred hranjenjem psa popolnoma skuhamo.",
+    "de": "Rohe Eier können Salmonellen und E. coli enthalten, die Haustieren wie Menschen schaden. Rohes Eiweiß enthält Avidin, das das Vitamin Biotin blockiert; ein Mangel ist selten, kann aber Haut und Fell beeinträchtigen. Die meisten Tierärzte empfehlen, Eier vollständig zu garen, bevor man sie einem Hund gibt."
   },
   "signs": {
     "en": [
@@ -34,29 +39,40 @@
       "Driska",
       "Utrujenost ali slab apetit",
       "Nelagodje v trebuhu"
+    ],
+    "de": [
+      "Erbrechen",
+      "Durchfall",
+      "Mattigkeit oder wenig Appetit",
+      "Bauchbeschwerden"
     ]
   },
   "what_to_do": {
     "en": "If your dog licked up a raw egg, watch for vomiting, diarrhoea or low energy over the next days and call your vet if vomiting or diarrhoea is severe or doesn't stop. Wash your hands and clean up well.",
-    "sl": "Če je pes polizal surovo jajce, v naslednjih dneh opazujte, ali bruha, ima drisko ali je utrujen, in pokličite veterinarja, če sta bruhanje ali driska huda ali ne prenehata. Umijte si roke in dobro počistite."
+    "sl": "Če je pes polizal surovo jajce, v naslednjih dneh opazujte, ali bruha, ima drisko ali je utrujen, in pokličite veterinarja, če sta bruhanje ali driska huda ali ne prenehata. Umijte si roke in dobro počistite.",
+    "de": "Hat Ihr Hund ein rohes Ei aufgeleckt, achten Sie in den nächsten Tagen auf Erbrechen, Durchfall oder Mattigkeit, und rufen Sie Ihren Tierarzt an, wenn Erbrechen oder Durchfall stark sind oder nicht aufhören. Waschen Sie sich die Hände und machen Sie gründlich sauber."
   },
   "serving": {
     "en": "Cook the egg fully (hard-boiled or scrambled), plain, without oil, butter, salt or seasonings.",
-    "sl": "Jajce popolnoma skuhajte (trdo kuhano ali umešano), navadno, brez olja, masla, soli in začimb."
+    "sl": "Jajce popolnoma skuhajte (trdo kuhano ali umešano), navadno, brez olja, masla, soli in začimb.",
+    "de": "Das Ei vollständig garen (hart gekocht oder als Rührei), ohne Zusätze, ohne Öl, Butter, Salz oder Gewürze."
   },
   "child": {
     "en": "Dogs should only have eggs that are cooked. Raw eggs can carry germs that make dogs and people poorly.",
-    "sl": "Psi naj jedo samo kuhana jajca. Surova jajca lahko prenašajo klice, ki škodijo psom in ljudem."
+    "sl": "Psi naj jedo samo kuhana jajca. Surova jajca lahko prenašajo klice, ki škodijo psom in ljudem.",
+    "de": "Hunde sollten nur gekochte Eier bekommen. Rohe Eier können Keime enthalten, die Hunde und Menschen krank machen."
   },
   "faq": [
     {
       "q": {
         "en": "Isn't raw egg good for a shiny coat?",
-        "sl": "Ali surovo jajce ni dobro za sijočo dlako?"
+        "sl": "Ali surovo jajce ni dobro za sijočo dlako?",
+        "de": "Ist rohes Ei nicht gut für ein glänzendes Fell?"
       },
       "a": {
         "en": "Not reliably: raw egg white can block biotin absorption, which can lead to skin and coat problems.",
-        "sl": "Ne nujno: surovi beljak lahko ovira vsrkavanje biotina, kar lahko vodi do težav s kožo in dlako."
+        "sl": "Ne nujno: surovi beljak lahko ovira vsrkavanje biotina, kar lahko vodi do težav s kožo in dlako.",
+        "de": "Nicht zuverlässig: Rohes Eiweiß kann die Aufnahme von Biotin blockieren, was zu Haut- und Fellproblemen führen kann."
       }
     }
   ],
@@ -126,6 +142,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2073e6d1b06cf53ab644ad475c415e538683975cb5325fc6cdd4f85303e2a2fb"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6370648202e8417659beab31cbc651473ea24ffb9a77ac4835209b953430e9e9"
     }
   }
 }

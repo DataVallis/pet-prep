@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Raw meat",
-    "sl": "Surovo meso"
+    "sl": "Surovo meso",
+    "de": "Rohes Fleisch"
   },
   "question": {
     "en": "Can cats eat raw meat?",
-    "sl": "Ali lahko mačke jedo surovo meso?"
+    "sl": "Ali lahko mačke jedo surovo meso?",
+    "de": "Dürfen Katzen rohes Fleisch fressen?"
   },
   "url_slug": {
     "en": "raw-meat",
-    "sl": "surovo-meso"
+    "sl": "surovo-meso",
+    "de": "rohes-fleisch"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, raw meat is not recommended for cats. Even though wild cats eat raw prey, raw meat can carry germs such as Salmonella, Listeria and E. coli, and parasites such as Toxoplasma, which can make cats and people ill.",
-    "sl": "Ne, surovo meso za mačke ni priporočljivo. Čeprav divje mačke jedo surov plen, lahko surovo meso prenaša klice, kot so salmonela, listerija in E. coli, ter zajedavce, kot je toksoplazma, ki lahko povzročijo bolezen pri mačkah in ljudeh."
+    "sl": "Ne, surovo meso za mačke ni priporočljivo. Čeprav divje mačke jedo surov plen, lahko surovo meso prenaša klice, kot so salmonela, listerija in E. coli, ter zajedavce, kot je toksoplazma, ki lahko povzročijo bolezen pri mačkah in ljudeh.",
+    "de": "Nein, rohes Fleisch wird für Katzen nicht empfohlen. Auch wenn wilde Katzen rohe Beute fressen, kann rohes Fleisch Keime wie Salmonellen, Listerien und E. coli sowie Parasiten wie Toxoplasmen übertragen, die Katzen und Menschen krank machen können."
   },
   "why": {
     "en": "Cornell and the Merck Veterinary Manual both advise against raw meat for cats, as food or as a treat, because it can spread toxoplasmosis and other infections. Contamination of raw meat by bacteria is common, and some cats seem fine but shed the bacteria in their stool, which can spread to people and other pets. Supermarket meat for people is meant to be cooked.",
-    "sl": "Cornell in Merckov veterinarski priročnik odsvetujeta surovo meso za mačke, kot hrano ali priboljšek, ker lahko prenaša toksoplazmozo in druge okužbe. Surovo meso je pogosto okuženo z bakterijami, nekatere mačke pa so videti zdrave, a bakterije izločajo z iztrebki, s čimer se lahko okužijo ljudje in druge živali. Meso za ljudi iz trgovine je namenjeno kuhanju."
+    "sl": "Cornell in Merckov veterinarski priročnik odsvetujeta surovo meso za mačke, kot hrano ali priboljšek, ker lahko prenaša toksoplazmozo in druge okužbe. Surovo meso je pogosto okuženo z bakterijami, nekatere mačke pa so videti zdrave, a bakterije izločajo z iztrebki, s čimer se lahko okužijo ljudje in druge živali. Meso za ljudi iz trgovine je namenjeno kuhanju.",
+    "de": "Cornell und das Merck Veterinary Manual raten beide von rohem Fleisch für Katzen ab, sowohl als Futter als auch als Leckerli, weil es Toxoplasmose und andere Infektionen übertragen kann. Rohes Fleisch ist häufig mit Bakterien verunreinigt, und manche Katzen wirken gesund, scheiden die Bakterien aber mit dem Kot aus; so können diese auf Menschen und andere Haustiere übergehen. Supermarktfleisch für Menschen ist zum Garen bestimmt."
   },
   "signs": {
     "en": [
@@ -36,36 +41,49 @@
       "Vročina",
       "Mačka noče jesti",
       "Utrujenost"
+    ],
+    "de": [
+      "Erbrechen",
+      "Durchfall, manchmal blutig",
+      "Fieber",
+      "Will nicht fressen",
+      "Teilnahmslosigkeit"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate a bit of raw meat, watch for vomiting, diarrhoea, fever, not eating or tiredness, and call your vet if any appear. Wash your hands and clean surfaces and bowls well.",
-    "sl": "Če je mačka pojedla malo surovega mesa, bodite pozorni na bruhanje, drisko, vročino, odklanjanje hrane ali utrujenost in pokličite veterinarja, če se kaj od tega pojavi. Dobro si umijte roke ter očistite površine in posodice."
+    "sl": "Če je mačka pojedla malo surovega mesa, bodite pozorni na bruhanje, drisko, vročino, odklanjanje hrane ali utrujenost in pokličite veterinarja, če se kaj od tega pojavi. Dobro si umijte roke ter očistite površine in posodice.",
+    "de": "Wenn Ihre Katze etwas rohes Fleisch gefressen hat, achten Sie auf Erbrechen, Durchfall, Fieber, Appetitlosigkeit oder Müdigkeit und rufen Sie Ihren Tierarzt an, wenn eines davon auftritt. Waschen Sie sich die Hände und reinigen Sie Flächen und Näpfe gründlich."
   },
   "serving": null,
   "child": {
     "en": "Raw meat can carry germs. Cats should only get meat that a grown-up has cooked.",
-    "sl": "Na surovem mesu so lahko klice. Mucke naj dobijo le meso, ki ga je skuhal odrasel."
+    "sl": "Na surovem mesu so lahko klice. Mucke naj dobijo le meso, ki ga je skuhal odrasel.",
+    "de": "Rohes Fleisch kann Keime haben. Katzen sollten nur Fleisch bekommen, das ein Erwachsener gekocht hat."
   },
   "faq": [
     {
       "q": {
         "en": "Cats eat raw prey in the wild, so why not?",
-        "sl": "Divje mačke jedo surov plen, zakaj torej ne?"
+        "sl": "Divje mačke jedo surov plen, zakaj torej ne?",
+        "de": "Katzen fressen in freier Natur rohe Beute – warum also nicht?"
       },
       "a": {
         "en": "Raw meat can carry bacteria and parasites that infect cats and their owners, and Cornell says raw diets have no clear health benefit for cats.",
-        "sl": "Surovo meso lahko prenaša bakterije in zajedavce, ki okužijo mačke in njihove lastnike, Cornell pa navaja, da surova prehrana mačkam ne prinaša jasne koristi za zdravje."
+        "sl": "Surovo meso lahko prenaša bakterije in zajedavce, ki okužijo mačke in njihove lastnike, Cornell pa navaja, da surova prehrana mačkam ne prinaša jasne koristi za zdravje.",
+        "de": "Rohes Fleisch kann Bakterien und Parasiten enthalten, die Katzen und ihre Halter anstecken, und laut Cornell bringt Rohfütterung Katzen keinen klaren gesundheitlichen Nutzen."
       }
     },
     {
       "q": {
         "en": "Who is most at risk?",
-        "sl": "Kdo je najbolj ogrožen?"
+        "sl": "Kdo je najbolj ogrožen?",
+        "de": "Wer ist am stärksten gefährdet?"
       },
       "a": {
         "en": "People at highest risk of serious illness are the very old, the very young and people with weak immune systems.",
-        "sl": "Najbolj ogroženi za resno bolezen so zelo stari ljudje, zelo majhni otroci in ljudje z oslabljenim imunskim sistemom."
+        "sl": "Najbolj ogroženi za resno bolezen so zelo stari ljudje, zelo majhni otroci in ljudje z oslabljenim imunskim sistemom.",
+        "de": "Am höchsten ist das Risiko einer schweren Erkrankung bei sehr alten und sehr jungen Menschen sowie bei Menschen mit geschwächtem Immunsystem."
       }
     }
   ],
@@ -161,6 +179,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "cf8073b3efccfba5da1de4ad2bc0ef39b40381c0eae9094762e47e5de64eba19"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a4626977642691597b657ec6ba884b2cd75464363629617ad33bc882cd1a5980"
     }
   }
 }

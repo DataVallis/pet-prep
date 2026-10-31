@@ -3,47 +3,57 @@
   "species": "dog",
   "name": {
     "en": "Sardines",
-    "sl": "Sardine"
+    "sl": "Sardine",
+    "de": "Sardinen"
   },
   "question": {
     "en": "Can dogs eat sardines?",
-    "sl": "Ali lahko psi jedo sardine?"
+    "sl": "Ali lahko psi jedo sardine?",
+    "de": "Dürfen Hunde Sardinen fressen?"
   },
   "url_slug": {
     "en": "sardines",
-    "sl": "sardine"
+    "sl": "sardine",
+    "de": "sardinen"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in moderation. Canned sardines packed in water, unsalted and unseasoned, are a suitable fish treat, and their tiny bones are soft and edible after canning. Fresh sardines must be fully cooked. Avoid salty, seasoned or raw fish.",
-    "sl": "Da, zmerno. Sardine v konzervi, vložene v vodi, nesoljene in nezačinjene, so primeren ribji priboljšek, njihove drobne kosti pa so po konzerviranju mehke in užitne. Sveže sardine morajo biti popolnoma kuhane. Izogibajte se slanim, začinjenim ali surovim ribam."
+    "sl": "Da, zmerno. Sardine v konzervi, vložene v vodi, nesoljene in nezačinjene, so primeren ribji priboljšek, njihove drobne kosti pa so po konzerviranju mehke in užitne. Sveže sardine morajo biti popolnoma kuhane. Izogibajte se slanim, začinjenim ali surovim ribam.",
+    "de": "Ja, in Maßen. Sardinen aus der Dose in Wasser, ungesalzen und ungewürzt, sind ein geeignetes Fischleckerli, und ihre winzigen Gräten sind nach dem Konservieren weich und essbar. Frische Sardinen müssen vollständig durchgegart sein. Meiden Sie salzigen, gewürzten oder rohen Fisch."
   },
   "why": {
     "en": "Plain, fully cooked fish provides protein and fatty acids. Cooking fully reduces the risk from parasites and bacteria. Canned sardines are the exception to the bones rule because their bones soften during canning; for other fish, bones must be removed. Canned fish should be unsalted and unseasoned.",
-    "sl": "Navadne, popolnoma kuhane ribe dajejo beljakovine in maščobne kisline. Popolno kuhanje zmanjša tveganje zaradi zajedavcev in bakterij. Sardine v konzervi so izjema pri pravilu o kosteh, ker se kosti med konzerviranjem zmehčajo; pri drugih ribah je treba kosti odstraniti. Ribe v konzervi naj bodo nesoljene in nezačinjene."
+    "sl": "Navadne, popolnoma kuhane ribe dajejo beljakovine in maščobne kisline. Popolno kuhanje zmanjša tveganje zaradi zajedavcev in bakterij. Sardine v konzervi so izjema pri pravilu o kosteh, ker se kosti med konzerviranjem zmehčajo; pri drugih ribah je treba kosti odstraniti. Ribe v konzervi naj bodo nesoljene in nezačinjene.",
+    "de": "Purer, vollständig durchgegarter Fisch liefert Eiweiß und Fettsäuren. Vollständiges Garen verringert das Risiko durch Parasiten und Bakterien. Sardinen aus der Dose sind die Ausnahme von der Grätenregel, weil ihre Gräten beim Konservieren weich werden; bei anderem Fisch müssen die Gräten entfernt werden. Fisch aus der Dose sollte ungesalzen und ungewürzt sein."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog ate salty or seasoned sardines or raw fish, watch for vomiting, diarrhoea or low energy and call your vet if these are severe or don't stop.",
-    "sl": "Če je pes pojedel slane ali začinjene sardine ali surove ribe, opazujte, ali bruha, ima drisko ali je utrujen, in pokličite veterinarja, če so težave hude ali ne prenehajo."
+    "sl": "Če je pes pojedel slane ali začinjene sardine ali surove ribe, opazujte, ali bruha, ima drisko ali je utrujen, in pokličite veterinarja, če so težave hude ali ne prenehajo.",
+    "de": "Wenn Ihr Hund salzige oder gewürzte Sardinen oder rohen Fisch gefressen hat, achten Sie auf Erbrechen, Durchfall oder Mattigkeit und rufen Sie Ihren Tierarzt an, wenn diese stark ausgeprägt sind oder nicht aufhören."
   },
   "serving": {
     "en": "Canned in water, unsalted and unseasoned; or fresh sardines fully cooked (steamed, baked or poached) and plain; in moderation.",
-    "sl": "V konzervi v vodi, nesoljene in nezačinjene; ali sveže, popolnoma kuhane (na pari, pečene ali poširane) in brez dodatkov; zmerno."
+    "sl": "V konzervi v vodi, nesoljene in nezačinjene; ali sveže, popolnoma kuhane (na pari, pečene ali poširane) in brez dodatkov; zmerno.",
+    "de": "Aus der Dose in Wasser, ungesalzen und ungewürzt; oder frische Sardinen, vollständig durchgegart (gedämpft, im Ofen gegart oder pochiert) und pur; in Maßen."
   },
   "child": {
     "en": "Sardines in water can be a fishy treat for a dog, now and then. Salty fish is not for dogs.",
-    "sl": "Sardine v vodi so lahko za psa občasen ribji priboljšek. Slane ribe niso za pse."
+    "sl": "Sardine v vodi so lahko za psa občasen ribji priboljšek. Slane ribe niso za pse.",
+    "de": "Sardinen in Wasser können ab und zu ein fischiges Leckerli für einen Hund sein. Salziger Fisch ist nichts für Hunde."
   },
   "faq": [
     {
       "q": {
         "en": "Do I need to remove the bones from canned sardines?",
-        "sl": "Ali moram sardinam v konzervi odstraniti kosti?"
+        "sl": "Ali moram sardinam v konzervi odstraniti kosti?",
+        "de": "Muss ich die Gräten aus Dosensardinen entfernen?"
       },
       "a": {
         "en": "No. The tiny bones are soft and fully edible after canning, so sardines canned in water can be fed without deboning.",
-        "sl": "Ne. Drobne kosti so po konzerviranju mehke in povsem užitne, zato lahko sardine v vodi daste brez odstranjevanja kosti."
+        "sl": "Ne. Drobne kosti so po konzerviranju mehke in povsem užitne, zato lahko sardine v vodi daste brez odstranjevanja kosti.",
+        "de": "Nein. Die winzigen Gräten sind nach dem Konservieren weich und vollständig essbar, deshalb können Sardinen in Wasser aus der Dose ohne Entgräten gefüttert werden."
       }
     }
   ],
@@ -106,6 +116,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9456ef505dfb35b2bdd8f62b7d1dc953a5ca5ff6b09aeebb6860e3d6325e9610"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1d137b85b1788825a44ebff0855c169194a3b56092005a4592831343cff219d6"
     }
   }
 }

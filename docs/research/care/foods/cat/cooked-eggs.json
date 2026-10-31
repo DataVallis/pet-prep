@@ -3,47 +3,57 @@
   "species": "cat",
   "name": {
     "en": "Cooked eggs",
-    "sl": "Kuhana jajca"
+    "sl": "Kuhana jajca",
+    "de": "Gekochte Eier"
   },
   "question": {
     "en": "Can cats eat cooked eggs?",
-    "sl": "Ali lahko mačke jedo kuhana jajca?"
+    "sl": "Ali lahko mačke jedo kuhana jajca?",
+    "de": "Dürfen Katzen gekochte Eier fressen?"
   },
   "url_slug": {
     "en": "cooked-eggs",
-    "sl": "kuhana-jajca"
+    "sl": "kuhana-jajca",
+    "de": "gekochte-eier"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in small amounts. A little fully cooked, plain egg is fine as an occasional treat. Eggs are a common protein in cat food, but they should only be given in moderation and never raw.",
-    "sl": "Da, v majhnih količinah. Malo popolnoma kuhanega jajca brez dodatkov je v redu kot občasen priboljšek. Jajca so pogosta beljakovina v hrani za mačke, vendar jih dajemo le zmerno in nikoli surovih."
+    "sl": "Da, v majhnih količinah. Malo popolnoma kuhanega jajca brez dodatkov je v redu kot občasen priboljšek. Jajca so pogosta beljakovina v hrani za mačke, vendar jih dajemo le zmerno in nikoli surovih.",
+    "de": "Ja, in kleinen Mengen. Ein wenig vollständig gegartes Ei ohne Zusätze ist als gelegentliches Leckerli in Ordnung. Eier sind eine häufige Proteinquelle in Katzenfutter, sollten aber nur in Maßen gegeben werden – und niemals roh."
   },
   "why": {
     "en": "Cornell lists eggs among the protein sources most commonly used in cat food, and PDSA says eggs suit pets, but only in moderation. Cooking matters: raw eggs can carry Salmonella and raw egg white blocks the vitamin biotin. Treats should be a small part of a cat's diet.",
-    "sl": "Cornell jajca navaja med najpogostejšimi viri beljakovin v hrani za mačke, PDSA pa, da so jajca primerna za živali, a le zmerno. Pomembno je kuhanje: surova jajca lahko prenašajo salmonelo, surov beljak pa ovira vsrkavanje vitamina biotina. Priboljški naj bodo le majhen del mačje prehrane."
+    "sl": "Cornell jajca navaja med najpogostejšimi viri beljakovin v hrani za mačke, PDSA pa, da so jajca primerna za živali, a le zmerno. Pomembno je kuhanje: surova jajca lahko prenašajo salmonelo, surov beljak pa ovira vsrkavanje vitamina biotina. Priboljški naj bodo le majhen del mačje prehrane.",
+    "de": "Cornell zählt Eier zu den am häufigsten verwendeten Proteinquellen in Katzenfutter, und laut PDSA eignen sich Eier für Haustiere, aber nur in Maßen. Das Garen ist wichtig: Rohe Eier können Salmonellen übertragen, und rohes Eiweiß blockiert das Vitamin Biotin. Leckerlis sollten nur einen kleinen Teil der Ernährung einer Katze ausmachen."
   },
   "signs": null,
   "what_to_do": {
     "en": "Offer a small piece first. If your cat gets vomiting or diarrhoea afterwards, stop and ask your vet before trying again.",
-    "sl": "Najprej ponudite majhen košček. Če ima mačka potem bruhanje ali drisko, prenehajte in se pred ponovnim poskusom posvetujte z veterinarjem."
+    "sl": "Najprej ponudite majhen košček. Če ima mačka potem bruhanje ali drisko, prenehajte in se pred ponovnim poskusom posvetujte z veterinarjem.",
+    "de": "Geben Sie zuerst ein kleines Stück. Bekommt Ihre Katze danach Erbrechen oder Durchfall, hören Sie auf und fragen Sie Ihren Tierarzt, bevor Sie es erneut versuchen."
   },
   "serving": {
     "en": "Fully cooked and plain, with nothing added; a small piece as an occasional treat.",
-    "sl": "Popolnoma kuhano in brez dodatkov; majhen košček kot občasen priboljšek."
+    "sl": "Popolnoma kuhano in brez dodatkov; majhen košček kot občasen priboljšek.",
+    "de": "Vollständig gegart und pur, ohne jegliche Zusätze; ein kleines Stück als gelegentliches Leckerli."
   },
   "child": {
     "en": "A tiny bit of plain cooked egg can be a treat for a cat. Ask a grown-up to cook it first.",
-    "sl": "Košček navadnega kuhanega jajca je lahko priboljšek za mucko. Prosi odraslega, da ga najprej skuha."
+    "sl": "Košček navadnega kuhanega jajca je lahko priboljšek za mucko. Prosi odraslega, da ga najprej skuha.",
+    "de": "Ein winziges Stück gekochtes Ei ohne alles kann ein Leckerli für eine Katze sein. Bitte einen Erwachsenen, es vorher zu kochen."
   },
   "faq": [
     {
       "q": {
         "en": "Why not raw?",
-        "sl": "Zakaj ne surovo?"
+        "sl": "Zakaj ne surovo?",
+        "de": "Warum nicht roh?"
       },
       "a": {
         "en": "Raw eggs can carry bacteria such as Salmonella, and raw egg white contains avidin, which stops the vitamin biotin being absorbed.",
-        "sl": "Surova jajca lahko prenašajo bakterije, kot je salmonela, surov beljak pa vsebuje avidin, ki prepreči vsrkavanje vitamina biotina."
+        "sl": "Surova jajca lahko prenašajo bakterije, kot je salmonela, surov beljak pa vsebuje avidin, ki prepreči vsrkavanje vitamina biotina.",
+        "de": "Rohe Eier können Bakterien wie Salmonellen übertragen, und rohes Eiweiß enthält Avidin, das verhindert, dass das Vitamin Biotin aufgenommen wird."
       }
     }
   ],
@@ -92,6 +102,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f1537d062cb74e0b785bec4750d4efec45dc644e168463f140efb042171d74e4"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5b7f579f120e109fccad4c75d49c1b1f631b61f630fdf4087a4b737d045a933d"
     }
   }
 }

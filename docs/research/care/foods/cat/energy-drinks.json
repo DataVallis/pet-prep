@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Energy drinks",
-    "sl": "Energijske pijače"
+    "sl": "Energijske pijače",
+    "de": "Energydrinks"
   },
   "question": {
     "en": "Can cats drink energy drinks?",
-    "sl": "Ali lahko mačke pijejo energijske pijače?"
+    "sl": "Ali lahko mačke pijejo energijske pijače?",
+    "de": "Dürfen Katzen Energydrinks trinken?"
   },
   "url_slug": {
     "en": "energy-drinks",
-    "sl": "energijske-pijace"
+    "sl": "energijske-pijace",
+    "de": "energydrinks"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Energy drinks often contain a lot of caffeine, and cats are more sensitive to caffeine than people. Never let your cat drink from a can or glass, and call your vet if your cat swallows any.",
-    "sl": "Ne. Energijske pijače pogosto vsebujejo veliko kofeina, mačke pa so nanj bolj občutljive kot ljudje. Muci nikoli ne dovolite piti iz pločevinke ali kozarca in pokličite veterinarja, če kaj zaužije."
+    "sl": "Ne. Energijske pijače pogosto vsebujejo veliko kofeina, mačke pa so nanj bolj občutljive kot ljudje. Muci nikoli ne dovolite piti iz pločevinke ali kozarca in pokličite veterinarja, če kaj zaužije.",
+    "de": "Nein. Energydrinks enthalten oft viel Koffein, und Katzen reagieren empfindlicher auf Koffein als Menschen. Lassen Sie Ihre Katze nie aus einer Dose oder einem Glas trinken und rufen Sie Ihren Tierarzt an, wenn sie etwas davon geschluckt hat."
   },
   "why": {
     "en": "Energy and sports drinks often contain a lot of caffeine. Cats are more sensitive to caffeine than people. Like chocolate, coffee and other caffeine-containing foods have high levels of stimulants called methylxanthines; caffeine speeds up the heart, makes cats restless and upsets the stomach.",
-    "sl": "Energijske in športne pijače pogosto vsebujejo veliko kofeina. Mačke so na kofein bolj občutljive kot ljudje. Kava in druga živila s kofeinom imajo tako kot čokolada veliko poživil, imenovanih metilksantini; kofein pospeši srce, povzroči nemir in prebavne težave."
+    "sl": "Energijske in športne pijače pogosto vsebujejo veliko kofeina. Mačke so na kofein bolj občutljive kot ljudje. Kava in druga živila s kofeinom imajo tako kot čokolada veliko poživil, imenovanih metilksantini; kofein pospeši srce, povzroči nemir in prebavne težave.",
+    "de": "Energy- und Sportgetränke enthalten oft viel Koffein. Katzen reagieren empfindlicher auf Koffein als Menschen. Wie Schokolade enthalten Kaffee und andere koffeinhaltige Lebensmittel große Mengen anregender Stoffe, sogenannter Methylxanthine; Koffein beschleunigt den Herzschlag, macht Katzen unruhig und schlägt auf den Magen."
   },
   "signs": {
     "en": [
@@ -34,16 +39,24 @@
       "Pretirana živahnost",
       "Prebavne težave",
       "Hiter srčni utrip ali spremembe srčnega ritma"
+    ],
+    "de": [
+      "Unruhe, Zittrigkeit, will nicht still liegen",
+      "Überaktivität",
+      "Magenverstimmung",
+      "Schneller Herzschlag oder Veränderungen des Herzrhythmus"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away. Note what your cat drank, how much and when. Don't wait for signs to appear, and don't try to make your cat sick at home.",
-    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, kaj je muca popila, koliko in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju."
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, kaj je muca popila, koliko in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju.",
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was Ihre Katze getrunken hat, wie viel und wann. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen."
   },
   "serving": null,
   "child": {
     "en": "Energy drinks are for grown-ups, not cats. Kitty only needs fresh water. Tell a grown-up if she drinks some.",
-    "sl": "Energijske pijače so za odrasle, ne za muce. Muca potrebuje le svežo vodo. Če jo popije, povej odraslemu."
+    "sl": "Energijske pijače so za odrasle, ne za muce. Muca potrebuje le svežo vodo. Če jo popije, povej odraslemu.",
+    "de": "Energydrinks sind für Erwachsene, nicht für Katzen. Deine Katze braucht nur frisches Wasser. Wenn sie etwas davon trinkt, sag einem Erwachsenen Bescheid."
   },
   "faq": [],
   "sources": [
@@ -121,6 +134,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c75ae6693aaf4bbe5dfe0f9742b546d7b729c33c4d21fecaa005d494bc5db6ef"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "65d24de543da9e2d872b2215b43ea42725bfbac4a99f4e9cf0124943ddd05442"
     }
   }
 }

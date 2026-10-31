@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Chives",
-    "sl": "Drobnjak"
+    "sl": "Drobnjak",
+    "de": "Schnittlauch"
   },
   "question": {
     "en": "Can cats eat chives?",
-    "sl": "Ali lahko mačke jedo drobnjak?"
+    "sl": "Ali lahko mačke jedo drobnjak?",
+    "de": "Dürfen Katzen Schnittlauch fressen?"
   },
   "url_slug": {
     "en": "chives",
-    "sl": "drobnjak"
+    "sl": "drobnjak",
+    "de": "schnittlauch"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Chives belong to the onion family and are poisonous to cats, fresh, cooked or dried. They can damage red blood cells and cause anaemia. Call your vet if your cat eats any, and keep potted chives out of reach.",
-    "sl": "Ne. Drobnjak spada med lukovke in je za mačke strupen, svež, kuhan ali sušen. Lahko poškoduje rdeče krvničke in povzroči slabokrvnost. Če ga muca poje, pokličite veterinarja, lonček z drobnjakom pa postavite izven njenega dosega."
+    "sl": "Ne. Drobnjak spada med lukovke in je za mačke strupen, svež, kuhan ali sušen. Lahko poškoduje rdeče krvničke in povzroči slabokrvnost. Če ga muca poje, pokličite veterinarja, lonček z drobnjakom pa postavite izven njenega dosega.",
+    "de": "Nein. Schnittlauch gehört zur Familie der Zwiebelgewächse und ist für Katzen giftig – frisch, gekocht oder getrocknet. Er kann die roten Blutkörperchen schädigen und eine Blutarmut (Anämie) verursachen. Rufen Sie Ihren Tierarzt an, wenn Ihre Katze davon frisst, und stellen Sie Schnittlauch im Topf außer Reichweite."
   },
   "why": {
     "en": "Chives belong to the allium family (the onion family). Alliums damage red blood cells and can lead to anaemia, and they also irritate the stomach and gut. Cats are the most sensitive species. All forms are poisonous to cats — raw, cooked, dried, powdered and liquid.",
-    "sl": "Drobnjak spada med lukovke (družina čebule). Lukovke poškodujejo rdeče krvničke in lahko povzročijo slabokrvnost, poleg tega dražijo želodec in črevesje. Mačke so med vsemi vrstami najbolj občutljive. Strupene so vse oblike – surove, kuhane, sušene, v prahu in tekoče."
+    "sl": "Drobnjak spada med lukovke (družina čebule). Lukovke poškodujejo rdeče krvničke in lahko povzročijo slabokrvnost, poleg tega dražijo želodec in črevesje. Mačke so med vsemi vrstami najbolj občutljive. Strupene so vse oblike – surove, kuhane, sušene, v prahu in tekoče.",
+    "de": "Schnittlauch gehört zur Gattung Allium (den Zwiebelgewächsen). Allium-Pflanzen schädigen die roten Blutkörperchen, können zu Blutarmut führen und reizen außerdem Magen und Darm. Katzen sind die empfindlichste Tierart. Alle Formen sind für Katzen giftig – roh, gekocht, getrocknet, als Pulver und flüssig."
   },
   "signs": {
     "en": [
@@ -40,26 +45,39 @@
       "Blede dlesni",
       "Rdečkast urin",
       "Hitrejše ali težje dihanje"
+    ],
+    "de": [
+      "Erbrechen",
+      "Durchfall",
+      "Verminderter Appetit",
+      "Schwäche",
+      "Blasses Zahnfleisch",
+      "Rot gefärbter Urin",
+      "Schnellere oder angestrengte Atmung"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away, even if your cat seems well — signs of anaemia can take several days to show. Note what your cat ate (raw, cooked, powder or a dish containing it), how much and when. Don't try to make your cat sick at home.",
-    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če se muca zdi v redu, saj se znaki slabokrvnosti lahko pokažejo šele po nekaj dneh. Zapišite, kaj je pojedla (surovo, kuhano, v prahu ali jed, ki to vsebuje), koliko in kdaj. Muce doma ne poskušajte spraviti k bruhanju."
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če se muca zdi v redu, saj se znaki slabokrvnosti lahko pokažejo šele po nekaj dneh. Zapišite, kaj je pojedla (surovo, kuhano, v prahu ali jed, ki to vsebuje), koliko in kdaj. Muce doma ne poskušajte spraviti k bruhanju.",
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, auch wenn es Ihrer Katze gut zu gehen scheint – Anzeichen einer Blutarmut können erst nach mehreren Tagen sichtbar werden. Notieren Sie, was Ihre Katze gefressen hat (roh, gekocht, als Pulver oder in einem Gericht), wie viel und wann. Versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen."
   },
   "serving": null,
   "child": {
     "en": "Chives look like grass, but they're not cat grass! Keep them away from kitty and tell a grown-up if she chews some.",
-    "sl": "Drobnjak je videti kot trava, a ni mačja trava! Naj bo daleč od muce. Če ga grizlja, povej odraslemu."
+    "sl": "Drobnjak je videti kot trava, a ni mačja trava! Naj bo daleč od muce. Če ga grizlja, povej odraslemu.",
+    "de": "Schnittlauch sieht aus wie Gras, ist aber kein Katzengras! Halte ihn von deiner Katze fern und sag einem Erwachsenen Bescheid, wenn sie daran kaut."
   },
   "faq": [
     {
       "q": {
         "en": "Are cooked or dried chives safe for cats?",
-        "sl": "Je kuhan ali sušen drobnjak za mačke varen?"
+        "sl": "Je kuhan ali sušen drobnjak za mačke varen?",
+        "de": "Ist gekochter oder getrockneter Schnittlauch für Katzen unbedenklich?"
       },
       "a": {
         "en": "No. All forms are poisonous to cats, including raw, cooked and dried chives. Be careful with leftovers, sauces, soups and gravy that may contain them.",
-        "sl": "Ne. Za mačke so strupene vse oblike, tudi surov, kuhan in sušen drobnjak. Previdni bodite pri ostankih hrane, omakah, juhah in mesnih omakah, ki ga lahko vsebujejo."
+        "sl": "Ne. Za mačke so strupene vse oblike, tudi surov, kuhan in sušen drobnjak. Previdni bodite pri ostankih hrane, omakah, juhah in mesnih omakah, ki ga lahko vsebujejo.",
+        "de": "Nein. Alle Formen sind für Katzen giftig, auch roher, gekochter und getrockneter Schnittlauch. Vorsicht bei Essensresten, Saucen, Suppen und Bratensoße, die ihn enthalten können."
       }
     }
   ],
@@ -165,6 +183,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "03b6af6c445adabc1ec7cc7f684ea952a2b0b59fb05e0420456aa62f8b2fbb61"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "03dbd0e82910d620bff8a2cde1697ae376abaa0704392c65222adfccd25a1b96"
     }
   }
 }

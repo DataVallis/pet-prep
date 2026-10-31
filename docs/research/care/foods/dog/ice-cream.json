@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Ice cream",
-    "sl": "Sladoled"
+    "sl": "Sladoled",
+    "de": "Eis"
   },
   "question": {
     "en": "Can dogs eat ice cream?",
-    "sl": "Ali lahko psi jedo sladoled?"
+    "sl": "Ali lahko psi jedo sladoled?",
+    "de": "Dürfen Hunde Eis fressen?"
   },
   "url_slug": {
     "en": "ice-cream",
-    "sl": "sladoled"
+    "sl": "sladoled",
+    "de": "eis"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, it is best not to. Ice cream is full of lactose, fat and sugar, which can upset a dog's tummy, and some flavours contain chocolate or the sweetener xylitol, which are toxic to dogs.",
-    "sl": "Ne, bolje ne. Sladoled je poln laktoze, maščobe in sladkorja, ki lahko psu razdražijo prebavo, nekateri okusi pa vsebujejo čokolado ali sladilo ksilitol, ki sta za pse strupena."
+    "sl": "Ne, bolje ne. Sladoled je poln laktoze, maščobe in sladkorja, ki lahko psu razdražijo prebavo, nekateri okusi pa vsebujejo čokolado ali sladilo ksilitol, ki sta za pse strupena.",
+    "de": "Nein, besser nicht. Eis steckt voller Laktose, Fett und Zucker, die einem Hund auf den Magen schlagen können, und manche Sorten enthalten Schokolade oder den Süßstoff Xylit, die für Hunde giftig sind."
   },
   "why": {
     "en": "Many adult dogs are lactose intolerant to some degree and cannot digest milk products properly. High-fat dairy can cause pancreatitis, and the sugar adds to weight gain. Even 'sugar-free' ice cream may contain xylitol, and chocolate flavours are toxic.",
-    "sl": "Mnogi odrasli psi do neke mere ne prenašajo laktoze in mlečnih izdelkov ne prebavijo dobro. Zelo mastni mlečni izdelki lahko povzročijo vnetje trebušne slinavke, sladkor pa prispeva k debelosti. Tudi sladoled »brez sladkorja« lahko vsebuje ksilitol, čokoladni okusi pa so strupeni."
+    "sl": "Mnogi odrasli psi do neke mere ne prenašajo laktoze in mlečnih izdelkov ne prebavijo dobro. Zelo mastni mlečni izdelki lahko povzročijo vnetje trebušne slinavke, sladkor pa prispeva k debelosti. Tudi sladoled »brez sladkorja« lahko vsebuje ksilitol, čokoladni okusi pa so strupeni.",
+    "de": "Viele erwachsene Hunde sind mehr oder weniger laktoseintolerant und können Milchprodukte nicht richtig verdauen. Fettreiche Milchprodukte können eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen, und der Zucker trägt zur Gewichtszunahme bei. Selbst „zuckerfreies“ Eis kann Xylit enthalten, und Schokoladensorten sind giftig."
   },
   "signs": {
     "en": [
@@ -32,29 +37,39 @@
       "Driska ali druge prebavne težave",
       "Bruhanje",
       "Boleč trebuh, slabost ali utrujenost (možno vnetje trebušne slinavke)"
+    ],
+    "de": [
+      "Durchfall oder andere Magen-Darm-Beschwerden",
+      "Erbrechen",
+      "Bauchschmerzen, Übelkeit oder Mattigkeit (mögliche Pankreatitis)"
     ]
   },
   "what_to_do": {
     "en": "A lick of plain vanilla ice cream usually only needs watching for tummy upset. If the ice cream contained chocolate or xylitol, contact your vet or a pet poison helpline right away, note what and how much was eaten, and don't wait for signs.",
-    "sl": "Pri polizku navadnega vanilijevega sladoleda običajno zadošča opazovanje prebave. Če je sladoled vseboval čokolado ali ksilitol, takoj pokličite veterinarja ali center za zastrupitve živali, zapišite, kaj in koliko je pes pojedel, in ne čakajte na znake."
+    "sl": "Pri polizku navadnega vanilijevega sladoleda običajno zadošča opazovanje prebave. Če je sladoled vseboval čokolado ali ksilitol, takoj pokličite veterinarja ali center za zastrupitve živali, zapišite, kaj in koliko je pes pojedel, in ne čakajte na znake.",
+    "de": "Hat Ihr Hund nur kurz an einfachem Vanilleeis geschleckt, genügt es meist, auf Magen-Darm-Beschwerden zu achten. Enthielt das Eis Schokolade oder Xylit, wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, notieren Sie, was und wie viel gefressen wurde, und warten Sie nicht auf Anzeichen."
   },
   "serving": {
     "en": "Instead of ice cream: a little frozen plain fat-free yogurt, if your dog tolerates it.",
-    "sl": "Namesto sladoleda: malo zamrznjenega navadnega posnetega jogurta, če ga pes prenaša."
+    "sl": "Namesto sladoleda: malo zamrznjenega navadnega posnetega jogurta, če ga pes prenaša.",
+    "de": "Statt Eis: ein wenig gefrorener fettfreier Naturjoghurt, wenn Ihr Hund ihn verträgt."
   },
   "child": {
     "en": "Ice cream is a people treat. It can give dogs a sore tummy, so keep your cone to yourself.",
-    "sl": "Sladoled je posladek za ljudi. Psa lahko boli trebušček, zato kornet obdrži zase."
+    "sl": "Sladoled je posladek za ljudi. Psa lahko boli trebušček, zato kornet obdrži zase.",
+    "de": "Eis ist ein Leckerli für Menschen. Es kann Hunden Bauchweh machen, also behalte deine Eiswaffel für dich."
   },
   "faq": [
     {
       "q": {
         "en": "Is sugar-free ice cream safer?",
-        "sl": "Je sladoled brez sladkorja varnejši?"
+        "sl": "Je sladoled brez sladkorja varnejši?",
+        "de": "Ist zuckerfreies Eis sicherer?"
       },
       "a": {
         "en": "No. Sugar-free products may contain xylitol, which is toxic to dogs, so always read the label.",
-        "sl": "Ne. Izdelki brez sladkorja lahko vsebujejo ksilitol, ki je za pse strupen, zato vedno preberite etiketo."
+        "sl": "Ne. Izdelki brez sladkorja lahko vsebujejo ksilitol, ki je za pse strupen, zato vedno preberite etiketo.",
+        "de": "Nein. Zuckerfreie Produkte können Xylit enthalten, das für Hunde giftig ist – lesen Sie also immer das Etikett."
       }
     }
   ],
@@ -122,6 +137,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4d060af88e7ad37aaa0c52c06bd3c72b51c48511904754259a117bbac88200da"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0423d472f70fa5e6cb5cb79b9a57cbe03ffe1d9b4b0c4ba1522ced916b3664e9"
     }
   }
 }

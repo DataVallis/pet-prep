@@ -3,37 +3,45 @@
   "species": "cat",
   "name": {
     "en": "Beef",
-    "sl": "Govedina"
+    "sl": "Govedina",
+    "de": "Rindfleisch"
   },
   "question": {
     "en": "Can cats eat beef?",
-    "sl": "Ali lahko mačke jedo govedino?"
+    "sl": "Ali lahko mačke jedo govedino?",
+    "de": "Dürfen Katzen Rindfleisch fressen?"
   },
   "url_slug": {
     "en": "beef",
-    "sl": "govedina"
+    "sl": "govedina",
+    "de": "rindfleisch"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a little plain, well-cooked beef is fine as an occasional treat. Cut off the fat, remove all bones and add no seasoning. Raw beef is not recommended.",
-    "sl": "Da, malo navadnega, dobro kuhanega govejega mesa je v redu kot občasen priboljšek. Odrežite maščobo, odstranite vse kosti in ga ne začinite. Surova govedina ni priporočljiva."
+    "sl": "Da, malo navadnega, dobro kuhanega govejega mesa je v redu kot občasen priboljšek. Odrežite maščobo, odstranite vse kosti in ga ne začinite. Surova govedina ni priporočljiva.",
+    "de": "Ja, ein wenig pures, gut durchgegartes Rindfleisch ist als gelegentliches Leckerli in Ordnung. Schneiden Sie das Fett ab, entfernen Sie alle Knochen und würzen Sie nicht. Rohes Rindfleisch wird nicht empfohlen."
   },
   "why": {
     "en": "Beef is one of the most common proteins in cat food. As a home treat it must be properly cooked: International Cat Care warns that raw or undercooked meat such as beef, lamb and pork can carry Toxoplasma, and advises feeding only properly cooked food. Fatty trimmings are on RSPCA Australia's do-not-feed list, and cooked bones can splinter.",
-    "sl": "Govedina je ena najpogostejših beljakovin v hrani za mačke. Kot domači priboljšek mora biti dobro kuhana: International Cat Care opozarja, da surovo ali premalo kuhano meso, kot so govedina, jagnjetina in svinjina, lahko prenaša toksoplazmo, in svetuje le dobro kuhano hrano. Mastni ostanki so na seznamu RSPCA Avstralija živil, ki jih ne dajemo, kuhane kosti pa se lahko razcepijo."
+    "sl": "Govedina je ena najpogostejših beljakovin v hrani za mačke. Kot domači priboljšek mora biti dobro kuhana: International Cat Care opozarja, da surovo ali premalo kuhano meso, kot so govedina, jagnjetina in svinjina, lahko prenaša toksoplazmo, in svetuje le dobro kuhano hrano. Mastni ostanki so na seznamu RSPCA Avstralija živil, ki jih ne dajemo, kuhane kosti pa se lahko razcepijo.",
+    "de": "Rindfleisch gehört zu den häufigsten Eiweißquellen in Katzenfutter. Als Leckerli aus der eigenen Küche muss es richtig durchgegart sein: International Cat Care warnt, dass rohes oder nicht ausreichend gegartes Fleisch wie Rind, Lamm und Schwein Toxoplasmen übertragen kann, und rät, nur richtig gegartes Futter zu geben. Fette Fleischabschnitte stehen bei der RSPCA Australia auf der Liste der Dinge, die man nicht füttern sollte, und gekochte Knochen können splittern."
   },
   "signs": null,
   "what_to_do": {
     "en": "Offer a small piece first. If your cat gets vomiting or diarrhoea afterwards, stop and ask your vet. If your cat swallowed a cooked bone, call your vet.",
-    "sl": "Najprej ponudite majhen košček. Če ima mačka potem bruhanje ali drisko, prenehajte in se posvetujte z veterinarjem. Če je mačka pogoltnila kuhano kost, pokličite veterinarja."
+    "sl": "Najprej ponudite majhen košček. Če ima mačka potem bruhanje ali drisko, prenehajte in se posvetujte z veterinarjem. Če je mačka pogoltnila kuhano kost, pokličite veterinarja.",
+    "de": "Bieten Sie zuerst ein kleines Stück an. Bekommt Ihre Katze danach Erbrechen oder Durchfall, hören Sie auf und fragen Sie Ihren Tierarzt. Hat Ihre Katze einen gekochten Knochen verschluckt, rufen Sie Ihren Tierarzt an."
   },
   "serving": {
     "en": "Well cooked, plain, lean, boneless and unseasoned; a few small pieces now and then.",
-    "sl": "Dobro kuhano, brez dodatkov, pusto, brez kosti in začimb; nekaj majhnih koščkov občasno."
+    "sl": "Dobro kuhano, brez dodatkov, pusto, brez kosti in začimb; nekaj majhnih koščkov občasno.",
+    "de": "Gut durchgegart, pur, mager, ohne Knochen und ungewürzt; ab und zu ein paar kleine Stücke."
   },
   "child": {
     "en": "A tiny bit of plain cooked beef can be a treat. A grown-up should cook it and take out the bones.",
-    "sl": "Košček navadne kuhane govedine je lahko priboljšek. Odrasli naj jo skuha in odstrani kosti."
+    "sl": "Košček navadne kuhane govedine je lahko priboljšek. Odrasli naj jo skuha in odstrani kosti.",
+    "de": "Ein kleines bisschen gekochtes Rindfleisch ohne Gewürze kann ein Leckerli sein. Ein Erwachsener sollte es kochen und die Knochen herausnehmen."
   },
   "faq": [],
   "sources": [
@@ -100,6 +108,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "fe3d290f5b13567548b818f71c5104f6224dec0428230917a0d6beab4210c91e"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8dab1d57a65168c427b066f91cc5db903fa96ae8ef7e564ba2f3a4d85249323d"
     }
   }
 }

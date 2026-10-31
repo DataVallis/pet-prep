@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Coffee",
-    "sl": "Kava"
+    "sl": "Kava",
+    "de": "Kaffee"
   },
   "question": {
     "en": "Can cats drink coffee?",
-    "sl": "Ali lahko mačke pijejo kavo?"
+    "sl": "Ali lahko mačke pijejo kavo?",
+    "de": "Dürfen Katzen Kaffee trinken?"
   },
   "url_slug": {
     "en": "coffee",
-    "sl": "kava"
+    "sl": "kava",
+    "de": "kaffee"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Coffee contains caffeine, and cats are more sensitive to caffeine than people. Unused coffee grounds and beans can cause serious poisoning. Keep coffee out of reach and call your vet if your cat eats or drinks any.",
-    "sl": "Ne. Kava vsebuje kofein, mačke pa so nanj bolj občutljive kot ljudje. Neuporabljena mleta kava in kavna zrna lahko povzročijo resno zastrupitev. Kavo hranite izven dosega in pokličite veterinarja, če jo muca poje ali popije."
+    "sl": "Ne. Kava vsebuje kofein, mačke pa so nanj bolj občutljive kot ljudje. Neuporabljena mleta kava in kavna zrna lahko povzročijo resno zastrupitev. Kavo hranite izven dosega in pokličite veterinarja, če jo muca poje ali popije.",
+    "de": "Nein. Kaffee enthält Koffein, und Katzen reagieren empfindlicher auf Koffein als Menschen. Unbenutztes Kaffeepulver und Kaffeebohnen können eine schwere Vergiftung auslösen. Bewahren Sie Kaffee außer Reichweite auf und rufen Sie Ihren Tierarzt an, wenn Ihre Katze davon frisst oder trinkt."
   },
   "why": {
     "en": "Coffee is one of the main sources of caffeine at home. Cats are more sensitive to caffeine than people. Like chocolate, coffee and other caffeine-containing foods have high levels of stimulants called methylxanthines; caffeine speeds up the heart, makes cats restless and upsets the stomach.",
-    "sl": "Kava je eden glavnih virov kofeina doma. Mačke so na kofein bolj občutljive kot ljudje. Kava in druga živila s kofeinom imajo tako kot čokolada veliko poživil, imenovanih metilksantini; kofein pospeši srce, povzroči nemir in prebavne težave."
+    "sl": "Kava je eden glavnih virov kofeina doma. Mačke so na kofein bolj občutljive kot ljudje. Kava in druga živila s kofeinom imajo tako kot čokolada veliko poživil, imenovanih metilksantini; kofein pospeši srce, povzroči nemir in prebavne težave.",
+    "de": "Kaffee ist eine der wichtigsten Koffeinquellen im Haushalt. Katzen reagieren empfindlicher auf Koffein als Menschen. Wie Schokolade enthalten Kaffee und andere koffeinhaltige Lebensmittel große Mengen anregender Stoffe, sogenannter Methylxanthine; Koffein beschleunigt den Herzschlag, macht Katzen unruhig und schlägt auf den Magen."
   },
   "signs": {
     "en": [
@@ -34,26 +39,36 @@
       "Pretirana živahnost",
       "Prebavne težave",
       "Hiter srčni utrip ali spremembe srčnega ritma"
+    ],
+    "de": [
+      "Unruhe, Zittrigkeit, will nicht still liegen",
+      "Überaktivität",
+      "Magenverstimmung",
+      "Schneller Herzschlag oder Veränderungen des Herzrhythmus"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away. Note what your cat swallowed (drink, grounds, beans, tea bag or tablets), how much and when. Don't wait for signs to appear, and don't try to make your cat sick at home.",
-    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, kaj je muca zaužila (pijačo, mleto kavo, zrna, čajno vrečko ali tablete), koliko in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju."
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, kaj je muca zaužila (pijačo, mleto kavo, zrna, čajno vrečko ali tablete), koliko in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju.",
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was Ihre Katze geschluckt hat (Getränk, Kaffeepulver, Bohnen, Teebeutel oder Tabletten), wie viel und wann. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen."
   },
   "serving": null,
   "child": {
     "en": "Coffee is a grown-up drink. It makes cats jittery, so never share it, and tell a grown-up if kitty laps some up.",
-    "sl": "Kava je pijača za odrasle. Muce naredi nemirne, zato je ne deli z njo. Če jo muca poliže, povej odraslemu."
+    "sl": "Kava je pijača za odrasle. Muce naredi nemirne, zato je ne deli z njo. Če jo muca poliže, povej odraslemu.",
+    "de": "Kaffee ist ein Getränk für Erwachsene. Er macht Katzen zappelig, also teile ihn nie. Wenn deine Katze davon schleckt, sag einem Erwachsenen Bescheid."
   },
   "faq": [
     {
       "q": {
         "en": "Are coffee grounds and beans worse than a cup of coffee?",
-        "sl": "Sta mleta kava in kavna zrna nevarnejša od skodelice kave?"
+        "sl": "Sta mleta kava in kavna zrna nevarnejša od skodelice kave?",
+        "de": "Sind Kaffeepulver und Bohnen schlimmer als eine Tasse Kaffee?"
       },
       "a": {
         "en": "Yes, they can be. Pet Poison Helpline warns that unused coffee grounds or beans could cause serious toxicity in cats. Keep coffee grounds and beans where your cat can't reach them.",
-        "sl": "Lahko, da. Pet Poison Helpline opozarja, da lahko neuporabljena mleta kava ali zrna pri mačkah povzročijo resno zastrupitev. Mleto kavo in zrna hranite tam, kamor muca ne seže."
+        "sl": "Lahko, da. Pet Poison Helpline opozarja, da lahko neuporabljena mleta kava ali zrna pri mačkah povzročijo resno zastrupitev. Mleto kavo in zrna hranite tam, kamor muca ne seže.",
+        "de": "Ja, das können sie sein. Die Pet Poison Helpline warnt, dass unbenutztes Kaffeepulver oder Kaffeebohnen bei Katzen eine schwere Vergiftung verursachen könnten. Bewahren Sie Kaffeepulver und Bohnen so auf, dass Ihre Katze nicht herankommt."
       }
     }
   ],
@@ -132,6 +147,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d4364f632e7f041455c739f2c1ba057f41802bd258b413d8bf420414d840936e"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9f6a9b0501946bc68716827ac11b6c2b14814e0ca9457bc56f70aa13e75865d7"
     }
   }
 }

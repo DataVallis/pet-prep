@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Grapes",
-    "sl": "Grozdje"
+    "sl": "Grozdje",
+    "de": "Weintrauben"
   },
   "question": {
     "en": "Can cats eat grapes?",
-    "sl": "Ali lahko mačke jedo grozdje?"
+    "sl": "Ali lahko mačke jedo grozdje?",
+    "de": "Dürfen Katzen Weintrauben fressen?"
   },
   "url_slug": {
     "en": "grapes",
-    "sl": "grozdje"
+    "sl": "grozdje",
+    "de": "weintrauben"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Grapes are on the list of foods toxic to cats, and eating them can cause kidney failure. Avoid them completely, even small amounts, and call your vet if your cat eats any.",
-    "sl": "Ne. Grozdje je na seznamu živil, ki so za mačke strupena, in lahko povzroči odpoved ledvic. Popolnoma se mu izogibajte, tudi majhnim količinam, in pokličite veterinarja, če ga muca poje."
+    "sl": "Ne. Grozdje je na seznamu živil, ki so za mačke strupena, in lahko povzroči odpoved ledvic. Popolnoma se mu izogibajte, tudi majhnim količinam, in pokličite veterinarja, če ga muca poje.",
+    "de": "Nein. Weintrauben stehen auf der Liste der für Katzen giftigen Lebensmittel und können Nierenversagen verursachen. Meiden Sie sie vollständig, auch in kleinen Mengen, und rufen Sie Ihren Tierarzt an, wenn Ihre Katze welche frisst."
   },
   "why": {
     "en": "Cat welfare charities warn that grapes can cause kidney failure in cats, and that cats with chronic kidney disease may be at greater risk. Grape poisoning in cats is rare and not well understood, and some sources only describe it in dogs, so we use the stricter level: treat any amount as an emergency.",
-    "sl": "Organizacije za dobrobit mačk opozarjajo, da lahko grozdje pri mačkah povzroči odpoved ledvic in da so mačke s kronično ledvično boleznijo morda še bolj ogrožene. Zastrupitev z grozdjem je pri mačkah redka in slabo raziskana, nekateri viri jo opisujejo le pri psih, zato izberemo strožjo stopnjo: vsako količino obravnavajte kot nujen primer."
+    "sl": "Organizacije za dobrobit mačk opozarjajo, da lahko grozdje pri mačkah povzroči odpoved ledvic in da so mačke s kronično ledvično boleznijo morda še bolj ogrožene. Zastrupitev z grozdjem je pri mačkah redka in slabo raziskana, nekateri viri jo opisujejo le pri psih, zato izberemo strožjo stopnjo: vsako količino obravnavajte kot nujen primer.",
+    "de": "Tierschutzorganisationen für Katzen warnen, dass Weintrauben bei Katzen Nierenversagen verursachen können und dass Katzen mit chronischer Nierenerkrankung möglicherweise stärker gefährdet sind. Traubenvergiftungen bei Katzen sind selten und kaum erforscht, und manche Quellen beschreiben sie nur bei Hunden. Deshalb wählen wir die strengere Einstufung: Behandeln Sie jede Menge als Notfall."
   },
   "signs": {
     "en": [
@@ -28,26 +33,33 @@
     ],
     "sl": [
       "Bruhanje, pogosto v enem dnevu"
+    ],
+    "de": [
+      "Erbrechen, oft innerhalb eines Tages"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away. Note how many grapes your cat ate and when. Don't wait for signs to appear, and don't try to make your cat sick at home.",
-    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, koliko grozdja je muca pojedla in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju."
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, koliko grozdja je muca pojedla in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju.",
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, wie viele Trauben Ihre Katze gefressen hat und wann. Warten Sie nicht auf Anzeichen und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen."
   },
   "serving": null,
   "child": {
     "en": "Grapes are yummy for us but not safe for cats. Keep them on your plate and tell a grown-up if kitty eats one.",
-    "sl": "Nam je grozdje okusno, za muce pa ni varno. Naj ostane na tvojem krožniku. Če ga muca poje, povej odraslemu."
+    "sl": "Nam je grozdje okusno, za muce pa ni varno. Naj ostane na tvojem krožniku. Če ga muca poje, povej odraslemu.",
+    "de": "Weintrauben schmecken uns lecker, sind für Katzen aber nicht sicher. Lass sie auf deinem Teller und sag einem Erwachsenen Bescheid, wenn deine Katze eine frisst."
   },
   "faq": [
     {
       "q": {
         "en": "Are cats with kidney disease at more risk?",
-        "sl": "So mačke z ledvično boleznijo bolj ogrožene?"
+        "sl": "So mačke z ledvično boleznijo bolj ogrožene?",
+        "de": "Sind Katzen mit Nierenerkrankung stärker gefährdet?"
       },
       "a": {
         "en": "Cats Protection says cats with chronic kidney disease may be at greater risk from grapes.",
-        "sl": "Cats Protection navaja, da so mačke s kronično ledvično boleznijo zaradi grozdja morda bolj ogrožene."
+        "sl": "Cats Protection navaja, da so mačke s kronično ledvično boleznijo zaradi grozdja morda bolj ogrožene.",
+        "de": "Laut Cats Protection können Katzen mit chronischer Nierenerkrankung durch Weintrauben stärker gefährdet sein."
       }
     }
   ],
@@ -110,6 +122,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "53a58b9e3abea1f3c90b89b53619b3dfb098572c6fd4e40415b545ce49138ac1"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d0e54eaba91021575c30951db20f27948df18c28dfb821db67d970b05bc152b8"
     }
   }
 }

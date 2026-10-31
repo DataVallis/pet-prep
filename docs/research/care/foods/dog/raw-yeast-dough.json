@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Raw yeast dough",
-    "sl": "Surovo kvašeno testo"
+    "sl": "Surovo kvašeno testo",
+    "de": "Roher Hefeteig"
   },
   "question": {
     "en": "Can dogs eat raw yeast dough?",
-    "sl": "Ali lahko psi jedo surovo kvašeno testo?"
+    "sl": "Ali lahko psi jedo surovo kvašeno testo?",
+    "de": "Dürfen Hunde rohen Hefeteig fressen?"
   },
   "url_slug": {
     "en": "raw-yeast-dough",
-    "sl": "surovo-kvaseno-testo"
+    "sl": "surovo-kvaseno-testo",
+    "de": "roher-hefeteig"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Raw, unbaked yeast dough is dangerous for dogs. It keeps rising in the warm stomach, causing bloating that can lead to a twisted stomach. The yeast also makes alcohol, which can cause alcohol poisoning. The danger is the unbaked dough.",
-    "sl": "Ne. Surovo, nepečeno kvašeno testo je za pse nevarno. V toplem želodcu še naprej vzhaja in povzroči napihnjenje, ki lahko vodi v zasuk želodca. Kvas tvori tudi alkohol, ki lahko povzroči zastrupitev z alkoholom. Nevarno je nepečeno testo."
+    "sl": "Ne. Surovo, nepečeno kvašeno testo je za pse nevarno. V toplem želodcu še naprej vzhaja in povzroči napihnjenje, ki lahko vodi v zasuk želodca. Kvas tvori tudi alkohol, ki lahko povzroči zastrupitev z alkoholom. Nevarno je nepečeno testo.",
+    "de": "Nein. Roher, ungebackener Hefeteig ist für Hunde gefährlich. Er geht im warmen Magen weiter auf und bläht ihn auf, was zu einer Magendrehung führen kann. Die Hefe bildet außerdem Alkohol, der eine Alkoholvergiftung verursachen kann. Gefährlich ist der ungebackene Teig."
   },
   "why": {
     "en": "Yeast keeps working in the warm, moist stomach: the dough expands and gas builds up, which can block the gut or, less often, twist the stomach (bloat). At the same time the yeast produces alcohol, which is quickly absorbed into the blood. Dogs are affected most often because they eat whatever they find.",
-    "sl": "Kvas v toplem in vlažnem želodcu deluje naprej: testo se širi in nabirajo se plini, kar lahko zamaši prebavila ali, redkeje, zasuka želodec. Hkrati kvas tvori alkohol, ki se hitro vsrka v kri. Psi so najpogosteje prizadeti, ker pojedo, kar najdejo."
+    "sl": "Kvas v toplem in vlažnem želodcu deluje naprej: testo se širi in nabirajo se plini, kar lahko zamaši prebavila ali, redkeje, zasuka želodec. Hkrati kvas tvori alkohol, ki se hitro vsrka v kri. Psi so najpogosteje prizadeti, ker pojedo, kar najdejo.",
+    "de": "Die Hefe arbeitet im warmen, feuchten Magen weiter: Der Teig dehnt sich aus und Gas sammelt sich an, was den Magen-Darm-Trakt blockieren oder, seltener, zu einer Magendrehung führen kann. Gleichzeitig bildet die Hefe Alkohol, der rasch ins Blut aufgenommen wird. Hunde sind am häufigsten betroffen, weil sie fressen, was sie finden."
   },
   "signs": {
     "en": [
@@ -34,36 +39,48 @@
       "Bruhanje ali siljenje na bruhanje brez izbljuvka",
       "Opotekanje in zmedenost",
       "Zaspanost ali potrtost"
+    ],
+    "de": [
+      "Geschwollener, gespannter Bauch",
+      "Erbrechen oder Würgen, ohne dass etwas herauskommt",
+      "Wackeliger Gang und Orientierungslosigkeit",
+      "Schläfrigkeit oder Teilnahmslosigkeit"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet right away. Note roughly how much dough was eaten and when. Don't wait for signs: a swelling stomach and alcohol poisoning both need prompt care.",
-    "sl": "Takoj pokličite veterinarja. Zapišite si, približno koliko testa je pes pojedel in kdaj. Ne čakajte na znake: napihnjen želodec in zastrupitev z alkoholom zahtevata hitro pomoč."
+    "sl": "Takoj pokličite veterinarja. Zapišite si, približno koliko testa je pes pojedel in kdaj. Ne čakajte na znake: napihnjen želodec in zastrupitev z alkoholom zahtevata hitro pomoč.",
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt. Notieren Sie ungefähr, wie viel Teig gefressen wurde und wann. Warten Sie nicht auf Anzeichen: Ein anschwellender Magen und eine Alkoholvergiftung müssen beide schnell behandelt werden."
   },
   "serving": null,
   "child": {
     "en": "Bread dough that is still rising is not for dogs. It keeps growing in their tummy. Tell a grown-up if your dog eats some.",
-    "sl": "Testo, ki še vzhaja, ni za pse. V trebuščku še naprej raste. Povej odraslemu, če ga pes poje."
+    "sl": "Testo, ki še vzhaja, ni za pse. V trebuščku še naprej raste. Povej odraslemu, če ga pes poje.",
+    "de": "Brotteig, der noch aufgeht, ist nichts für Hunde. Er wächst in ihrem Bauch weiter. Sag einem Erwachsenen Bescheid, wenn dein Hund davon frisst."
   },
   "faq": [
     {
       "q": {
         "en": "Is baked bread dangerous too?",
-        "sl": "Je nevaren tudi pečen kruh?"
+        "sl": "Je nevaren tudi pečen kruh?",
+        "de": "Ist gebackenes Brot auch gefährlich?"
       },
       "a": {
         "en": "The danger described here is raw, unbaked yeast dough, because the yeast is still alive and keeps working in the stomach.",
-        "sl": "Nevarnost, opisana tukaj, velja za surovo, nepečeno kvašeno testo, ker je kvas še živ in v želodcu deluje naprej."
+        "sl": "Nevarnost, opisana tukaj, velja za surovo, nepečeno kvašeno testo, ker je kvas še živ in v želodcu deluje naprej.",
+        "de": "Die hier beschriebene Gefahr betrifft rohen, ungebackenen Hefeteig, weil die Hefe darin noch lebt und im Magen weiterarbeitet."
       }
     },
     {
       "q": {
         "en": "Why does dough cause alcohol poisoning?",
-        "sl": "Zakaj testo povzroči zastrupitev z alkoholom?"
+        "sl": "Zakaj testo povzroči zastrupitev z alkoholom?",
+        "de": "Warum verursacht Teig eine Alkoholvergiftung?"
       },
       "a": {
         "en": "Fermenting yeast produces alcohol in the stomach, and it is rapidly absorbed into the bloodstream.",
-        "sl": "Kvas pri vrenju v želodcu tvori alkohol, ki se hitro vsrka v kri."
+        "sl": "Kvas pri vrenju v želodcu tvori alkohol, ki se hitro vsrka v kri.",
+        "de": "Gärende Hefe bildet im Magen Alkohol, der rasch ins Blut aufgenommen wird."
       }
     }
   ],
@@ -129,6 +146,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9e4dde557b2b573216975e50291634eeb6b695aae1bd0791b141fcefd2ac50df"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f13ad60508317b88cc9b884c80ffcbcd80e53a600940e94fd1aafae3498741fe"
     }
   }
 }

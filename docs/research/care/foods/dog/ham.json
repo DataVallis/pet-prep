@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Ham",
-    "sl": "Šunka"
+    "sl": "Šunka",
+    "de": "Schinken"
   },
   "question": {
     "en": "Can dogs eat ham?",
-    "sl": "Ali lahko psi jedo šunko?"
+    "sl": "Ali lahko psi jedo šunko?",
+    "de": "Dürfen Hunde Schinken fressen?"
   },
   "url_slug": {
     "en": "ham",
-    "sl": "sunka"
+    "sl": "sunka",
+    "de": "schinken"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Not recommended. Ham isn't toxic to dogs, but it is high in fat and sodium. Store-bought ham contains a lot of salt, and too much fat can lead to pancreatitis and other digestive upsets. A healthier dog treat is the better choice.",
-    "sl": "Ni priporočljivo. Šunka za pse ni strupena, vsebuje pa veliko maščob in natrija. Kupljena šunka je zelo slana, preveč maščobe pa lahko vodi v vnetje trebušne slinavke in druge prebavne težave. Bolje je izbrati bolj zdrav pasji priboljšek."
+    "sl": "Ni priporočljivo. Šunka za pse ni strupena, vsebuje pa veliko maščob in natrija. Kupljena šunka je zelo slana, preveč maščobe pa lahko vodi v vnetje trebušne slinavke in druge prebavne težave. Bolje je izbrati bolj zdrav pasji priboljšek.",
+    "de": "Nicht empfohlen. Schinken ist für Hunde nicht giftig, aber reich an Fett und Natrium. Gekaufter Schinken enthält viel Salz, und zu viel Fett kann zu einer Bauchspeicheldrüsenentzündung (Pankreatitis) und anderen Verdauungsproblemen führen. Ein gesünderes Hundeleckerli ist die bessere Wahl."
   },
   "why": {
     "en": "Ham has a higher fat content than many other meats, and fatty meals are a known trigger of pancreatitis. Most ham is also very salty, and excess salt can be harmful to dogs.",
-    "sl": "Šunka vsebuje več maščob kot številne druge vrste mesa, mastni obroki pa so znan sprožilec vnetja trebušne slinavke. Večina šunke je tudi zelo slana, presežek soli pa lahko psom škoduje."
+    "sl": "Šunka vsebuje več maščob kot številne druge vrste mesa, mastni obroki pa so znan sprožilec vnetja trebušne slinavke. Večina šunke je tudi zelo slana, presežek soli pa lahko psom škoduje.",
+    "de": "Schinken hat einen höheren Fettgehalt als viele andere Fleischsorten, und fette Mahlzeiten sind ein bekannter Auslöser einer Pankreatitis. Die meisten Schinkensorten sind zudem sehr salzig, und zu viel Salz kann Hunden schaden."
   },
   "signs": {
     "en": [
@@ -36,26 +41,37 @@
       "Driska",
       "Pes noče jesti",
       "Utrujenost, vročina"
+    ],
+    "de": [
+      "Erbrechen, manchmal erst 1–4 Tage nach der fetten Mahlzeit",
+      "Bauchschmerzen (ein Hund streckt sich dann manchmal in eine „Gebetshaltung“)",
+      "Durchfall",
+      "Will nicht fressen",
+      "Müdigkeit, Fieber"
     ]
   },
   "what_to_do": {
     "en": "If your dog ate a lot of fatty food, or shows vomiting, tummy pain or tiredness in the following days, contact your vet. Note what was eaten and roughly how much. Signs of pancreatitis can be delayed by a few days.",
-    "sl": "Če je pes pojedel veliko mastne hrane ali v naslednjih dneh bruha, ga boli trebuh ali je utrujen, pokličite veterinarja. Zapišite si, kaj in približno koliko je pojedel. Znaki vnetja trebušne slinavke se lahko pokažejo z nekajdnevno zamudo."
+    "sl": "Če je pes pojedel veliko mastne hrane ali v naslednjih dneh bruha, ga boli trebuh ali je utrujen, pokličite veterinarja. Zapišite si, kaj in približno koliko je pojedel. Znaki vnetja trebušne slinavke se lahko pokažejo z nekajdnevno zamudo.",
+    "de": "Wenn Ihr Hund viel fettes Essen gefressen hat oder in den folgenden Tagen Erbrechen, Bauchschmerzen oder Müdigkeit zeigt, wenden Sie sich an Ihren Tierarzt. Notieren Sie, was gefressen wurde und ungefähr wie viel. Anzeichen einer Pankreatitis können erst einige Tage später auftreten."
   },
   "serving": null,
   "child": {
     "en": "Ham is a people food that is too salty and fatty for dogs. Save it for your sandwich and give your dog a dog treat.",
-    "sl": "Šunka je hrana za ljudi in je za pse preslana in premastna. Prihrani jo za svoj sendvič, psu pa daj pasji priboljšek."
+    "sl": "Šunka je hrana za ljudi in je za pse preslana in premastna. Prihrani jo za svoj sendvič, psu pa daj pasji priboljšek.",
+    "de": "Schinken ist Essen für Menschen und zu salzig und fett für Hunde. Heb ihn für dein Brot auf und gib deinem Hund ein Hundeleckerli."
   },
   "faq": [
     {
       "q": {
         "en": "Why is ham worse than other meat?",
-        "sl": "Zakaj je šunka slabša od drugega mesa?"
+        "sl": "Zakaj je šunka slabša od drugega mesa?",
+        "de": "Warum ist Schinken schlechter als anderes Fleisch?"
       },
       "a": {
         "en": "It has more fat than many meats and store-bought ham contains a great deal of sodium.",
-        "sl": "Vsebuje več maščob kot številne vrste mesa, kupljena šunka pa ima veliko natrija."
+        "sl": "Vsebuje več maščob kot številne vrste mesa, kupljena šunka pa ima veliko natrija.",
+        "de": "Er hat mehr Fett als viele andere Fleischsorten, und gekaufter Schinken enthält sehr viel Natrium."
       }
     }
   ],
@@ -134,6 +150,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "75098f029578364659579a45ba403f78cc28a56fd7451ca174f55ed319f87b37"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "67e9327b9dba6dcb07ba1ad513ba484cbf5090813e4625f76d6e176d3ef8512c"
     }
   }
 }

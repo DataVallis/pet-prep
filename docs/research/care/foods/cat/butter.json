@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Butter",
-    "sl": "Maslo"
+    "sl": "Maslo",
+    "de": "Butter"
   },
   "question": {
     "en": "Can cats eat butter?",
-    "sl": "Ali lahko mačke jedo maslo?"
+    "sl": "Ali lahko mačke jedo maslo?",
+    "de": "Dürfen Katzen Butter fressen?"
   },
   "url_slug": {
     "en": "butter",
-    "sl": "maslo"
+    "sl": "maslo",
+    "de": "butter"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, butter is best avoided. It is a fatty dairy food: cat-care guides list fatty foods among things never to feed cats, dairy products can upset a cat's stomach, and their fat adds weight.",
-    "sl": "Ne, maslu se je bolje izogniti. Je masten mlečni izdelek: viri o negi mačk mastno hrano navajajo med živili, ki jih mačkam nikoli ne dajemo, mlečni izdelki mački lahko razdražijo želodec, njihova maščoba pa jo zredi."
+    "sl": "Ne, maslu se je bolje izogniti. Je masten mlečni izdelek: viri o negi mačk mastno hrano navajajo med živili, ki jih mačkam nikoli ne dajemo, mlečni izdelki mački lahko razdražijo želodec, njihova maščoba pa jo zredi.",
+    "de": "Nein, auf Butter verzichten Sie besser. Sie ist ein fettes Milchprodukt: Ratgeber zur Katzenhaltung zählen fettreiche Lebensmittel zu den Dingen, die Katzen nie bekommen sollten, Milchprodukte können den Magen einer Katze verstimmen, und ihr Fett treibt das Gewicht nach oben."
   },
   "why": {
     "en": "RSPCA Australia lists fatty trimmings and fatty foods among things never to feed cats, and added fat can lead to a painful condition called pancreatitis. Butter is also a dairy product: many cats are lactose intolerant, milk-based products can cause vomiting or diarrhoea, and dairy products are high in fat and contribute to weight gain.",
-    "sl": "RSPCA Avstralija mastne ostanke in mastno hrano navaja med stvarmi, ki jih mačkam nikoli ne dajemo, dodana maščoba pa lahko povzroči boleče stanje, imenovano pankreatitis. Maslo je tudi mlečni izdelek: mnoge mačke ne prenašajo laktoze, izdelki iz mleka lahko povzročijo bruhanje ali drisko, mlečni izdelki pa imajo veliko maščob in prispevajo k debelosti."
+    "sl": "RSPCA Avstralija mastne ostanke in mastno hrano navaja med stvarmi, ki jih mačkam nikoli ne dajemo, dodana maščoba pa lahko povzroči boleče stanje, imenovano pankreatitis. Maslo je tudi mlečni izdelek: mnoge mačke ne prenašajo laktoze, izdelki iz mleka lahko povzročijo bruhanje ali drisko, mlečni izdelki pa imajo veliko maščob in prispevajo k debelosti.",
+    "de": "RSPCA Australia zählt fette Fleischreste und fettreiche Lebensmittel zu den Dingen, die Katzen nie bekommen sollten, und zusätzliches Fett kann zu einer schmerzhaften Erkrankung führen, der Bauchspeicheldrüsenentzündung (Pankreatitis). Butter ist außerdem ein Milchprodukt: Viele Katzen vertragen keine Laktose, Produkte auf Milchbasis können Erbrechen oder Durchfall auslösen, und Milchprodukte sind fettreich und tragen zur Gewichtszunahme bei."
   },
   "signs": {
     "en": [
@@ -32,16 +37,23 @@
       "Bruhanje",
       "Driska",
       "Razdražen želodec"
+    ],
+    "de": [
+      "Erbrechen",
+      "Durchfall",
+      "Magenverstimmung"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate butter, watch for vomiting or diarrhoea and contact your vet for advice if she seems unwell or ate a lot.",
-    "sl": "Če je muca pojedla maslo, bodite pozorni na bruhanje ali drisko in se za nasvet obrnite na veterinarja, če se ne počuti dobro ali ga je pojedla veliko."
+    "sl": "Če je muca pojedla maslo, bodite pozorni na bruhanje ali drisko in se za nasvet obrnite na veterinarja, če se ne počuti dobro ali ga je pojedla veliko.",
+    "de": "Wenn Ihre Katze Butter gefressen hat, achten Sie auf Erbrechen oder Durchfall und fragen Sie Ihren Tierarzt um Rat, wenn sie krank wirkt oder viel gefressen hat."
   },
   "serving": null,
   "child": {
     "en": "Butter is too fatty for cats. Keep it on your toast and give your cat its own food.",
-    "sl": "Maslo je za mucke premastno. Naj ostane na tvojem kruhu, mucki pa daj njeno hrano."
+    "sl": "Maslo je za mucke premastno. Naj ostane na tvojem kruhu, mucki pa daj njeno hrano.",
+    "de": "Butter ist für Katzen zu fettig. Lass sie auf deinem Brot und gib deiner Katze ihr eigenes Futter."
   },
   "faq": [],
   "sources": [
@@ -94,6 +106,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "fadeaa53ba95fce07544e579701f37d4b9ac7e5ef309e759ef4706faaf8958e5"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f8b5ebbf0468494615d2e2ddfa6f546ccd659a94a52398a262e066a642556f88"
     }
   }
 }

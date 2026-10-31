@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Raisins",
-    "sl": "Rozine"
+    "sl": "Rozine",
+    "de": "Rosinen"
   },
   "question": {
     "en": "Can cats eat raisins?",
-    "sl": "Ali lahko mačke jedo rozine?"
+    "sl": "Ali lahko mačke jedo rozine?",
+    "de": "Dürfen Katzen Rosinen fressen?"
   },
   "url_slug": {
     "en": "raisins",
-    "sl": "rozine"
+    "sl": "rozine",
+    "de": "rosinen"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Raisins, like grapes and currants, are on the list of foods toxic to cats and can cause kidney failure. Watch out for cakes, mince pies and other baked goods that contain them, and call your vet if your cat eats any.",
-    "sl": "Ne. Rozine so, tako kot grozdje in ribez, na seznamu živil, ki so za mačke strupena, in lahko povzročijo odpoved ledvic. Pazite na pecivo, kolače in drugo, kar jih vsebuje, ter pokličite veterinarja, če jih muca poje."
+    "sl": "Ne. Rozine so, tako kot grozdje in ribez, na seznamu živil, ki so za mačke strupena, in lahko povzročijo odpoved ledvic. Pazite na pecivo, kolače in drugo, kar jih vsebuje, ter pokličite veterinarja, če jih muca poje.",
+    "de": "Nein. Rosinen stehen wie Weintrauben und Korinthen auf der Liste der für Katzen giftigen Lebensmittel und können Nierenversagen verursachen. Vorsicht bei Kuchen, englischen Mince Pies und anderem Gebäck mit Rosinen. Rufen Sie Ihren Tierarzt an, wenn Ihre Katze davon frisst."
   },
   "why": {
     "en": "Cat welfare charities warn that grapes, raisins and currants can cause kidney failure in cats, with cats that have chronic kidney disease possibly at greater risk. Cats are unlikely to eat many raisins on their own but may be tempted by foods that contain them. Cat cases are rare and not well understood, so we use the stricter level.",
-    "sl": "Organizacije za dobrobit mačk opozarjajo, da lahko grozdje, rozine in ribez pri mačkah povzročijo odpoved ledvic, mačke s kronično ledvično boleznijo pa so morda še bolj ogrožene. Mačke same verjetno ne pojedo veliko rozin, lahko pa jih zamika hrana, ki jih vsebuje. Primeri pri mačkah so redki in slabo raziskani, zato izberemo strožjo stopnjo."
+    "sl": "Organizacije za dobrobit mačk opozarjajo, da lahko grozdje, rozine in ribez pri mačkah povzročijo odpoved ledvic, mačke s kronično ledvično boleznijo pa so morda še bolj ogrožene. Mačke same verjetno ne pojedo veliko rozin, lahko pa jih zamika hrana, ki jih vsebuje. Primeri pri mačkah so redki in slabo raziskani, zato izberemo strožjo stopnjo.",
+    "de": "Katzenschutzorganisationen warnen, dass Weintrauben, Rosinen und Korinthen bei Katzen Nierenversagen verursachen können; Katzen mit chronischer Nierenerkrankung sind möglicherweise stärker gefährdet. Von sich aus fressen Katzen kaum viele Rosinen, von Lebensmitteln mit Rosinen können sie sich aber verlocken lassen. Fälle bei Katzen sind selten und wenig erforscht, deshalb wählen wir die strengere Einstufung."
   },
   "signs": {
     "en": [
@@ -28,26 +33,33 @@
     ],
     "sl": [
       "Bruhanje, pogosto v enem dnevu"
+    ],
+    "de": [
+      "Erbrechen, oft innerhalb eines Tages"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away. Note what your cat ate (raisins or a food containing them), how much and when, and keep the packaging. Don't wait for signs to appear, and don't try to make your cat sick at home.",
-    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, kaj je muca pojedla (rozine ali hrano z njimi), koliko in kdaj, ter shranite embalažo. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju."
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, kaj je muca pojedla (rozine ali hrano z njimi), koliko in kdaj, ter shranite embalažo. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju.",
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was Ihre Katze gefressen hat (Rosinen oder ein Lebensmittel mit Rosinen), wie viel und wann, und heben Sie die Verpackung auf. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen."
   },
   "serving": null,
   "child": {
     "en": "Raisins are not a cat snack. Keep raisins and raisin cake away from kitty, and tell a grown-up if she eats some.",
-    "sl": "Rozine niso priboljšek za muce. Rozine in kolač z rozinami naj bodo daleč od muce. Če jih poje, povej odraslemu."
+    "sl": "Rozine niso priboljšek za muce. Rozine in kolač z rozinami naj bodo daleč od muce. Če jih poje, povej odraslemu.",
+    "de": "Rosinen sind kein Katzensnack. Halte Rosinen und Rosinenkuchen von deiner Katze fern. Wenn sie welche frisst, sag einem Erwachsenen Bescheid."
   },
   "faq": [
     {
       "q": {
         "en": "What about mince pies and Christmas cake?",
-        "sl": "Kaj pa praznično pecivo z rozinami?"
+        "sl": "Kaj pa praznično pecivo z rozinami?",
+        "de": "Und was ist mit englischen Mince Pies und Weihnachtskuchen?"
       },
       "a": {
         "en": "PDSA warns that mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to pets. Keep them out of your cat's reach.",
-        "sl": "PDSA opozarja, da praznično pecivo, kot so pite s suhim sadjem in božični kolač, vsebuje rozine, sultanine in ribez, ki so za hišne ljubljenčke zelo strupeni. Hranite ga izven muckinega dosega."
+        "sl": "PDSA opozarja, da praznično pecivo, kot so pite s suhim sadjem in božični kolač, vsebuje rozine, sultanine in ribez, ki so za hišne ljubljenčke zelo strupeni. Hranite ga izven muckinega dosega.",
+        "de": "Die PDSA warnt, dass Mince Pies und Weihnachtskuchen Rosinen, Sultaninen und Korinthen enthalten, die für Haustiere hochgiftig sind. Bewahren Sie sie außer Reichweite Ihrer Katze auf."
       }
     }
   ],
@@ -113,6 +125,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2fa9a4372fa611d3914ff43ed3966c18d88fb7bbe7c85135abddb3cefbb34de2"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "abfd205e8461ceb9bae9a72d2b516eec26034ec31dda8398241948bf092eca7b"
     }
   }
 }

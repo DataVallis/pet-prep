@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Raw fish",
-    "sl": "Surove ribe"
+    "sl": "Surove ribe",
+    "de": "Roher Fisch"
   },
   "question": {
     "en": "Can dogs eat raw fish?",
-    "sl": "Ali lahko psi jedo surove ribe?"
+    "sl": "Ali lahko psi jedo surove ribe?",
+    "de": "Dürfen Hunde rohen Fisch fressen?"
   },
   "url_slug": {
     "en": "raw-fish",
-    "sl": "surove-ribe"
+    "sl": "surove-ribe",
+    "de": "roher-fisch"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It is not recommended. Raw fish can carry bacteria such as Salmonella and Listeria, as well as parasites, and its small bones are a hazard. In the Pacific Northwest of the USA, raw salmon or trout can cause salmon poisoning disease. Cook fish plain and remove the bones.",
-    "sl": "Ni priporočljivo. Surove ribe lahko prenašajo bakterije, kot sta salmonela in listerija, pa tudi zajedavce, njihove drobne kosti pa so nevarne. Na pacifiškem severozahodu ZDA lahko surov losos ali postrv povzroči bolezen »zastrupitev z lososom«. Ribe skuhajte brez dodatkov in odstranite kosti."
+    "sl": "Ni priporočljivo. Surove ribe lahko prenašajo bakterije, kot sta salmonela in listerija, pa tudi zajedavce, njihove drobne kosti pa so nevarne. Na pacifiškem severozahodu ZDA lahko surov losos ali postrv povzroči bolezen »zastrupitev z lososom«. Ribe skuhajte brez dodatkov in odstranite kosti.",
+    "de": "Das wird nicht empfohlen. Roher Fisch kann Bakterien wie Salmonellen und Listerien sowie Parasiten übertragen, und seine kleinen Gräten sind gefährlich. Im pazifischen Nordwesten der USA kann roher Lachs oder rohe Forelle die Lachsvergiftung (Salmon Poisoning Disease) auslösen. Garen Sie Fisch ungewürzt und entfernen Sie die Gräten."
   },
   "why": {
     "en": "Raw fish is among the foods linked to food poisoning in dogs. Raw or undercooked salmon and trout from the Pacific Northwest can carry a parasite that causes salmon poisoning disease, which is serious if untreated. Fish bones are small and brittle and can cause choking or injure the mouth or gut. Raw and smoked fish are best avoided.",
-    "sl": "Surove ribe sodijo med živila, povezana z zastrupitvijo s hrano pri psih. Surov ali premalo kuhan losos in postrv s pacifiškega severozahoda lahko prenašata zajedavca, ki povzroči bolezen »zastrupitev z lososom«, ki je brez zdravljenja resna. Ribje kosti so drobne in krhke ter lahko povzročijo dušenje ali poškodujejo usta ali prebavila. Surovim in dimljenim ribam se je bolje izogniti."
+    "sl": "Surove ribe sodijo med živila, povezana z zastrupitvijo s hrano pri psih. Surov ali premalo kuhan losos in postrv s pacifiškega severozahoda lahko prenašata zajedavca, ki povzroči bolezen »zastrupitev z lososom«, ki je brez zdravljenja resna. Ribje kosti so drobne in krhke ter lahko povzročijo dušenje ali poškodujejo usta ali prebavila. Surovim in dimljenim ribam se je bolje izogniti.",
+    "de": "Roher Fisch gehört zu den Lebensmitteln, die mit Lebensmittelvergiftungen bei Hunden in Verbindung gebracht werden. Rohe oder nicht durchgegarte Lachse und Forellen aus dem pazifischen Nordwesten können einen Parasiten übertragen, der die Lachsvergiftung auslöst – unbehandelt eine ernste Erkrankung. Fischgräten sind klein und spröde und können zum Ersticken führen oder Maul und Darm verletzen. Rohen und geräucherten Fisch meiden Sie besser."
   },
   "signs": {
     "en": [
@@ -36,29 +41,41 @@
       "Utrujenost ali slab apetit",
       "Visoka vročina, šibkost in popolna izguba apetita (zastrupitev z lososom)",
       "Dušenje"
+    ],
+    "de": [
+      "Erbrechen",
+      "Durchfall",
+      "Mattigkeit oder wenig Appetit",
+      "Hohes Fieber, Schwäche und völlige Appetitlosigkeit (Lachsvergiftung)",
+      "Erstickungsanzeichen"
     ]
   },
   "what_to_do": {
     "en": "Watch for vomiting, diarrhoea or low energy and call your vet if they are severe or don't stop. If your dog ate raw salmon or trout from the Pacific Northwest, call your vet promptly and mention it — signs can take up to a week to appear.",
-    "sl": "Opazujte, ali pes bruha, ima drisko ali je utrujen, in pokličite veterinarja, če so težave hude ali ne prenehajo. Če je pes pojedel surovega lososa ali postrv s pacifiškega severozahoda ZDA, hitro pokličite veterinarja in mu to povejte — znaki se lahko pojavijo šele v tednu dni."
+    "sl": "Opazujte, ali pes bruha, ima drisko ali je utrujen, in pokličite veterinarja, če so težave hude ali ne prenehajo. Če je pes pojedel surovega lososa ali postrv s pacifiškega severozahoda ZDA, hitro pokličite veterinarja in mu to povejte — znaki se lahko pojavijo šele v tednu dni.",
+    "de": "Achten Sie auf Erbrechen, Durchfall oder Mattigkeit und rufen Sie Ihren Tierarzt an, wenn die Beschwerden stark sind oder nicht aufhören. Hat Ihr Hund rohen Lachs oder rohe Forelle aus dem pazifischen Nordwesten gefressen, rufen Sie umgehend Ihren Tierarzt an und erwähnen Sie das – Anzeichen können bis zu einer Woche später auftreten."
   },
   "serving": {
     "en": "Only fully cooked fish (baked, steamed or grilled), plain, with all bones removed.",
-    "sl": "Samo popolnoma kuhane ribe (pečene, kuhane na pari ali na žaru), brez dodatkov in brez vseh kosti."
+    "sl": "Samo popolnoma kuhane ribe (pečene, kuhane na pari ali na žaru), brez dodatkov in brez vseh kosti.",
+    "de": "Nur vollständig gegarter Fisch (gebacken, gedämpft oder gegrillt), pur und ohne Gräten."
   },
   "child": {
     "en": "Fish for dogs must be cooked and have no bones. Raw fish can have germs that upset a dog's tummy.",
-    "sl": "Riba za psa mora biti kuhana in brez kosti. Surova riba ima lahko klice, ki psu razdražijo trebušček."
+    "sl": "Riba za psa mora biti kuhana in brez kosti. Surova riba ima lahko klice, ki psu razdražijo trebušček.",
+    "de": "Fisch für Hunde muss gekocht sein und darf keine Gräten haben. Roher Fisch kann Keime enthalten, die einem Hund Bauchweh machen."
   },
   "faq": [
     {
       "q": {
         "en": "What is salmon poisoning disease?",
-        "sl": "Kaj je bolezen »zastrupitev z lososom«?"
+        "sl": "Kaj je bolezen »zastrupitev z lososom«?",
+        "de": "Was ist die Lachsvergiftung?"
       },
       "a": {
         "en": "An illness dogs get from eating raw or undercooked salmon, trout or similar fish from the Pacific Northwest of the USA; it is prevented by not feeding them raw.",
-        "sl": "Bolezen, ki jo psi dobijo, če pojedo surovega ali premalo kuhanega lososa, postrv ali podobne ribe s pacifiškega severozahoda ZDA; preprečimo jo tako, da jih ne hranimo s surovimi."
+        "sl": "Bolezen, ki jo psi dobijo, če pojedo surovega ali premalo kuhanega lososa, postrv ali podobne ribe s pacifiškega severozahoda ZDA; preprečimo jo tako, da jih ne hranimo s surovimi.",
+        "de": "Eine Krankheit, die Hunde bekommen, wenn sie rohen oder nicht durchgegarten Lachs, Forelle oder ähnlichen Fisch aus dem pazifischen Nordwesten der USA fressen. Man beugt ihr vor, indem man solchen Fisch nicht roh füttert."
       }
     }
   ],
@@ -150,6 +167,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2012d06a9008bd817bbb3efd9dae1bcddfb9f280a8369a4c59c6af7f17160404"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "989caf707eb1fa15dd0eac54db63275a30931e8e15befccce5c9de0ea1ebca3d"
     }
   }
 }

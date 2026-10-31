@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Macadamia nuts",
-    "sl": "Makadamija oreščki"
+    "sl": "Makadamija oreščki",
+    "de": "Macadamianüsse"
   },
   "question": {
     "en": "Can cats eat macadamia nuts?",
-    "sl": "Ali lahko mačke jedo makadamija oreščke?"
+    "sl": "Ali lahko mačke jedo makadamija oreščke?",
+    "de": "Dürfen Katzen Macadamianüsse fressen?"
   },
   "url_slug": {
     "en": "macadamia-nuts",
-    "sl": "makadamija-orescki"
+    "sl": "makadamija-orescki",
+    "de": "macadamianuesse"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Macadamia nuts are very fatty, and VCA says they are also toxic and can cause illness in cats. Keep them out of your cat's reach and contact your vet if your cat eats any.",
-    "sl": "Ne. Makadamija oreščki so zelo mastni, VCA pa navaja, da so tudi strupeni in lahko mačkam povzročijo bolezen. Hranite jih izven mucinega dosega in pokličite veterinarja, če jih muca poje."
+    "sl": "Ne. Makadamija oreščki so zelo mastni, VCA pa navaja, da so tudi strupeni in lahko mačkam povzročijo bolezen. Hranite jih izven mucinega dosega in pokličite veterinarja, če jih muca poje.",
+    "de": "Nein. Macadamianüsse sind sehr fettreich, und laut VCA sind sie außerdem giftig und können Katzen krank machen. Bewahren Sie sie außer Reichweite Ihrer Katze auf und wenden Sie sich an Ihren Tierarzt, wenn Ihre Katze welche frisst."
   },
   "why": {
     "en": "Cats Protection lists macadamia among nuts whose high oil and fat content can make cats unwell. VCA says macadamia nuts are very fatty, potentially causing pancreatitis, and also toxic, causing illness in cats. Detailed descriptions of macadamia poisoning mostly come from dogs, but we use the stricter level for cats.",
-    "sl": "Cats Protection makadamijo navaja med oreščki, ki zaradi veliko olj in maščob mački lahko škodijo. VCA navaja, da so makadamija oreščki zelo mastni in lahko povzročijo pankreatitis, poleg tega pa so strupeni in mačkam povzročajo bolezen. Podrobni opisi zastrupitve z makadamijo večinoma izhajajo iz psov, za mačke pa uporabljamo strožjo stopnjo."
+    "sl": "Cats Protection makadamijo navaja med oreščki, ki zaradi veliko olj in maščob mački lahko škodijo. VCA navaja, da so makadamija oreščki zelo mastni in lahko povzročijo pankreatitis, poleg tega pa so strupeni in mačkam povzročajo bolezen. Podrobni opisi zastrupitve z makadamijo večinoma izhajajo iz psov, za mačke pa uporabljamo strožjo stopnjo.",
+    "de": "Cats Protection zählt Macadamia zu den Nüssen, die Katzen wegen ihres hohen Öl- und Fettgehalts krank machen können. Laut VCA sind Macadamianüsse sehr fettreich, können möglicherweise eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen und sind außerdem giftig, was Katzen krank macht. Ausführliche Beschreibungen einer Macadamia-Vergiftung stammen überwiegend von Hunden, doch für Katzen verwenden wir die strengere Stufe."
   },
   "signs": {
     "en": [
@@ -32,26 +37,35 @@
       "Šibkost",
       "Tresenje",
       "Pregrevanje (zvišana telesna temperatura)"
+    ],
+    "de": [
+      "Schwäche",
+      "Zittern",
+      "Überhitzung (erhöhte Körpertemperatur)"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet straight away if your cat ate macadamia nuts. Note how many she ate and when, and keep the packaging. Don't try to make your cat sick at home.",
-    "sl": "Če je muca pojedla makadamija oreščke, takoj pokličite veterinarja. Zapišite, koliko jih je pojedla in kdaj, ter shranite embalažo. Muce doma ne poskušajte spraviti k bruhanju."
+    "sl": "Če je muca pojedla makadamija oreščke, takoj pokličite veterinarja. Zapišite, koliko jih je pojedla in kdaj, ter shranite embalažo. Muce doma ne poskušajte spraviti k bruhanju.",
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt, wenn Ihre Katze Macadamianüsse gefressen hat. Notieren Sie, wie viele sie gefressen hat und wann, und bewahren Sie die Verpackung auf. Versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen."
   },
   "serving": null,
   "child": {
     "en": "Macadamia nuts are not for cats. Keep the nut bowl out of kitty's reach and tell a grown-up if she eats some.",
-    "sl": "Makadamija oreščki niso za muce. Skledo z oreščki postavi izven mucinega dosega. Če jih muca poje, povej odraslemu."
+    "sl": "Makadamija oreščki niso za muce. Skledo z oreščki postavi izven mucinega dosega. Če jih muca poje, povej odraslemu.",
+    "de": "Macadamianüsse sind nichts für Katzen. Stell die Schüssel mit den Nüssen außer Reichweite deiner Katze und sag einem Erwachsenen Bescheid, wenn sie welche frisst."
   },
   "faq": [
     {
       "q": {
         "en": "Are macadamia nuts worse than other nuts?",
-        "sl": "Ali so makadamija oreščki hujši od drugih oreščkov?"
+        "sl": "Ali so makadamija oreščki hujši od drugih oreščkov?",
+        "de": "Sind Macadamianüsse schlimmer als andere Nüsse?"
       },
       "a": {
         "en": "Yes. Most nuts are very fatty, but VCA says macadamia nuts are also toxic and can cause illness in cats, such as weakness, tremors and overheating.",
-        "sl": "Da. Večina oreščkov je zelo mastnih, VCA pa navaja, da so makadamija oreščki tudi strupeni in mačkam lahko povzročijo bolezen, na primer šibkost, tresenje in pregrevanje."
+        "sl": "Da. Večina oreščkov je zelo mastnih, VCA pa navaja, da so makadamija oreščki tudi strupeni in mačkam lahko povzročijo bolezen, na primer šibkost, tresenje in pregrevanje.",
+        "de": "Ja. Die meisten Nüsse sind sehr fettreich, aber laut VCA sind Macadamianüsse zusätzlich giftig und können Katzen krank machen, etwa mit Schwäche, Zittern und Überhitzung."
       }
     }
   ],
@@ -106,6 +120,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c0bb62eba23b1b72c23f1a34bc01c7bb3bcd066113b69adce71949982b55d681"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d7c0bdb40acc003fd7cc4df67a7da9c7ef44b101104f338710821f029d435032"
     }
   }
 }
