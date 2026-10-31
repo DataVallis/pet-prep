@@ -1013,6 +1013,19 @@
             "prompt_hash": "sha256:2b999bfa5e9794dde539f73072eba5c9bb6849b3dcdafd2ebecd66760e48da5c",
             "generated_at": "2026-10-31T03:34:20+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "basenji",
+            "species": "dog",
+            "colour": "red-white",
+            "file": "dog/basenji.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:83a4ac2fbe889937a50b3c51989b810192f4ecc559c6b2bf330c4de24ed33d47",
+            "generated_at": "2026-10-31T07:15:42+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
