@@ -3,57 +3,69 @@
   "species": "dog",
   "name": {
     "en": "Peanut butter",
-    "sl": "Arašidovo maslo"
+    "sl": "Arašidovo maslo",
+    "de": "Erdnussbutter"
   },
   "question": {
     "en": "Can dogs eat peanut butter?",
-    "sl": "Ali lahko psi jedo arašidovo maslo?"
+    "sl": "Ali lahko psi jedo arašidovo maslo?",
+    "de": "Dürfen Hunde Erdnussbutter fressen?"
   },
   "url_slug": {
     "en": "peanut-butter",
-    "sl": "arasidovo-maslo"
+    "sl": "arasidovo-maslo",
+    "de": "erdnussbutter"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in small amounts, if it contains no xylitol. Most peanut butter is safe for dogs, but some brands use xylitol, a sweetener that is toxic to dogs, so always check the label. Unsalted peanut butter is best.",
-    "sl": "Da, v majhnih količinah, če ne vsebuje ksilitola. Večina arašidovega masla je za pse varna, a nekatere znamke uporabljajo ksilitol, sladilo, ki je za pse strupeno, zato vedno preverite etiketo. Najboljše je nesoljeno arašidovo maslo."
+    "sl": "Da, v majhnih količinah, če ne vsebuje ksilitola. Večina arašidovega masla je za pse varna, a nekatere znamke uporabljajo ksilitol, sladilo, ki je za pse strupeno, zato vedno preverite etiketo. Najboljše je nesoljeno arašidovo maslo.",
+    "de": "Ja, in kleinen Mengen, wenn sie kein Xylit enthält. Die meiste Erdnussbutter ist für Hunde unbedenklich, aber manche Marken verwenden Xylit, einen Süßstoff, der für Hunde giftig ist – prüfen Sie also immer das Etikett. Ungesalzene Erdnussbutter ist am besten."
   },
   "why": {
     "en": "Peanut butter is rich in fat and can be high in salt, so it suits only as an occasional treat, and it is not ideal for dogs on a diet. The real danger is xylitol: some peanut and nut butters contain it, and in dogs it can cause a sharp drop in blood sugar.",
-    "sl": "Arašidovo maslo je bogato z maščobo in je lahko zelo slano, zato je primerno le kot občasen priboljšek in ni idealno za pse na dieti. Prava nevarnost je ksilitol: vsebujejo ga nekatera arašidova in druga oreščkova masla, pri psih pa lahko povzroči močan padec krvnega sladkorja."
+    "sl": "Arašidovo maslo je bogato z maščobo in je lahko zelo slano, zato je primerno le kot občasen priboljšek in ni idealno za pse na dieti. Prava nevarnost je ksilitol: vsebujejo ga nekatera arašidova in druga oreščkova masla, pri psih pa lahko povzroči močan padec krvnega sladkorja.",
+    "de": "Erdnussbutter ist fettreich und kann viel Salz enthalten, daher eignet sie sich nur als gelegentliches Leckerli und ist für Hunde auf Diät nicht ideal. Die eigentliche Gefahr ist Xylit: Manche Erdnuss- und Nussbuttersorten enthalten es, und bei Hunden kann es einen starken Abfall des Blutzuckers verursachen."
   },
   "signs": null,
   "what_to_do": {
     "en": "If the peanut butter contained xylitol, contact your vet, an emergency clinic or a pet poison helpline right away, note how much was eaten, and don't wait for signs.",
-    "sl": "Če je arašidovo maslo vsebovalo ksilitol, takoj pokličite veterinarja, dežurno kliniko ali center za zastrupitve živali, zapišite, koliko je pes pojedel, in ne čakajte na znake."
+    "sl": "Če je arašidovo maslo vsebovalo ksilitol, takoj pokličite veterinarja, dežurno kliniko ali center za zastrupitve živali, zapišite, koliko je pes pojedel, in ne čakajte na znake.",
+    "de": "Enthielt die Erdnussbutter Xylit, wenden Sie sich sofort an Ihren Tierarzt, eine Notfallklinik oder einen Giftnotruf für Tiere, notieren Sie, wie viel gefressen wurde, und warten Sie nicht auf Anzeichen."
   },
   "serving": {
     "en": "A small amount of unsalted peanut butter whose label lists no xylitol; as a treat, not a daily food.",
-    "sl": "Malo nesoljenega arašidovega masla, na etiketi katerega ni ksilitola; kot priboljšek, ne vsak dan."
+    "sl": "Malo nesoljenega arašidovega masla, na etiketi katerega ni ksilitola; kot priboljšek, ne vsak dan.",
+    "de": "Eine kleine Menge ungesalzene Erdnussbutter, auf deren Etikett kein Xylit steht; als Leckerli, nicht als tägliches Futter."
   },
   "child": {
     "en": "Many dogs love a little peanut butter! A grown-up must check the jar first, because some kinds are not safe for dogs.",
-    "sl": "Mnogi psi obožujejo malo arašidovega masla! Odrasel mora najprej preveriti kozarec, ker nekatere vrste za pse niso varne."
+    "sl": "Mnogi psi obožujejo malo arašidovega masla! Odrasel mora najprej preveriti kozarec, ker nekatere vrste za pse niso varne.",
+    "de": "Viele Hunde lieben ein bisschen Erdnussbutter! Ein Erwachsener muss zuerst das Glas prüfen, denn manche Sorten sind für Hunde nicht sicher."
   },
   "faq": [
     {
       "q": {
         "en": "How do I know if peanut butter has xylitol?",
-        "sl": "Kako vem, ali arašidovo maslo vsebuje ksilitol?"
+        "sl": "Kako vem, ali arašidovo maslo vsebuje ksilitol?",
+        "de": "Woran erkenne ich, ob Erdnussbutter Xylit enthält?"
       },
       "a": {
         "en": "Read the ingredients on the label, especially on products marked sugar-free or low sugar.",
-        "sl": "Preberite sestavine na etiketi, posebej pri izdelkih z oznako brez sladkorja ali z malo sladkorja."
+        "sl": "Preberite sestavine na etiketi, posebej pri izdelkih z oznako brez sladkorja ali z malo sladkorja.",
+        "de": "Lesen Sie die Zutatenliste auf dem Etikett, besonders bei Produkten, die als zuckerfrei oder zuckerreduziert beworben werden."
       }
     },
     {
       "q": {
         "en": "Can I use peanut butter to give my dog a pill?",
-        "sl": "Ali lahko psu z arašidovim maslom dam tableto?"
+        "sl": "Ali lahko psu z arašidovim maslom dam tableto?",
+        "de": "Darf ich meinem Hund eine Tablette in Erdnussbutter geben?"
       },
       "a": {
         "en": "Many people do; the FDA advises checking the label first to make sure it doesn't contain xylitol.",
-        "sl": "Mnogi to počnejo; FDA svetuje, da najprej preverite etiketo, ali ne vsebuje ksilitola."
+        "sl": "Mnogi to počnejo; FDA svetuje, da najprej preverite etiketo, ali ne vsebuje ksilitola.",
+        "de": "Viele Menschen machen das; die FDA rät, vorher das Etikett zu prüfen, um sicherzugehen, dass sie kein Xylit enthält."
       }
     }
   ],
@@ -147,6 +159,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "dac4c3ffae3a9ea7489295d48682a91b66b548153004eaa49bf2c2464fecbbf6"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e8081c1dfdaf39547faa21c8cbaf57399beb1fcbc1fbfe2bcbd6519a0bef07f1"
     }
   }
 }

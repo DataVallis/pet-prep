@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Chives",
-    "sl": "Drobnjak"
+    "sl": "Drobnjak",
+    "de": "Schnittlauch"
   },
   "question": {
     "en": "Can dogs eat chives?",
-    "sl": "Ali lahko psi jedo drobnjak?"
+    "sl": "Ali lahko psi jedo drobnjak?",
+    "de": "Dürfen Hunde Schnittlauch fressen?"
   },
   "url_slug": {
     "en": "chives",
-    "sl": "drobnjak"
+    "sl": "drobnjak",
+    "de": "schnittlauch"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Chives belong to the allium family, like onion and garlic, and are toxic to dogs. Raw, cooked and dried chives can all damage red blood cells, and signs often take a few days to appear.",
-    "sl": "Ne. Drobnjak spada v družino lukov, tako kot čebula in česen, in je za pse strupen. Surov, kuhan in posušen drobnjak lahko poškodujejo rdeče krvničke, znaki pa se pogosto pokažejo šele po nekaj dneh."
+    "sl": "Ne. Drobnjak spada v družino lukov, tako kot čebula in česen, in je za pse strupen. Surov, kuhan in posušen drobnjak lahko poškodujejo rdeče krvničke, znaki pa se pogosto pokažejo šele po nekaj dneh.",
+    "de": "Nein. Schnittlauch gehört wie Zwiebeln und Knoblauch zur Familie der Lauchgewächse (Allium) und ist für Hunde giftig. Roher, gekochter und getrockneter Schnittlauch kann die roten Blutkörperchen schädigen, und Anzeichen zeigen sich oft erst nach einigen Tagen."
   },
   "why": {
     "en": "It belongs to the allium family (onion, garlic, leek, chives), which is toxic to dogs. These plants contain compounds that damage red blood cells and can lead to anaemia. All parts and all forms are harmful: raw, cooked, dried and powdered. Stomach upset can happen with any amount; larger amounts damage the blood.",
-    "sl": "Spada v družino lukov (čebula, česen, por, drobnjak), ki je za pse strupena. Te rastline vsebujejo snovi, ki poškodujejo rdeče krvničke in lahko povzročijo slabokrvnost. Škodljivi so vsi deli in vse oblike: surove, kuhane, posušene in v prahu. Prebavne težave se lahko pojavijo pri vsaki količini, večje količine pa poškodujejo kri."
+    "sl": "Spada v družino lukov (čebula, česen, por, drobnjak), ki je za pse strupena. Te rastline vsebujejo snovi, ki poškodujejo rdeče krvničke in lahko povzročijo slabokrvnost. Škodljivi so vsi deli in vse oblike: surove, kuhane, posušene in v prahu. Prebavne težave se lahko pojavijo pri vsaki količini, večje količine pa poškodujejo kri.",
+    "de": "Schnittlauch gehört zur Familie der Lauchgewächse (Zwiebeln, Knoblauch, Lauch, Schnittlauch), die für Hunde giftig sind. Diese Pflanzen enthalten Verbindungen, die rote Blutkörperchen schädigen und zu einer Blutarmut (Anämie) führen können. Alle Teile und alle Formen sind schädlich: roh, gekocht, getrocknet und als Pulver. Magen-Darm-Beschwerden können bei jeder Menge auftreten; größere Mengen schädigen das Blut."
   },
   "signs": {
     "en": [
@@ -34,36 +39,48 @@
       "Slabši apetit",
       "Prebavne težave, tudi po majhnih količinah",
       "Znaki slabokrvnosti (poškodovane rdeče krvničke), običajno po nekaj dneh"
+    ],
+    "de": [
+      "Erbrechen und Durchfall",
+      "Frisst weniger als sonst",
+      "Magen-Darm-Beschwerden, schon nach kleinen Mengen",
+      "Anzeichen einer Blutarmut (geschädigte rote Blutkörperchen), meist einige Tage später"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away. Note what was eaten (chives) and roughly how much. Don't wait for signs: damage to the blood usually shows only a few days later.",
-    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj je pes pojedel (drobnjak) in približno koliko. Ne čakajte na znake: okvara krvi se običajno pokaže šele po nekaj dneh."
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj je pes pojedel (drobnjak) in približno koliko. Ne čakajte na znake: okvara krvi se običajno pokaže šele po nekaj dneh.",
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was gefressen wurde (Schnittlauch) und ungefähr wie viel. Warten Sie nicht auf Anzeichen: Schäden am Blut zeigen sich meist erst nach einigen Tagen."
   },
   "serving": null,
   "child": {
     "en": "Chives look like little green grass, but they are in the onion family and not for dogs. Tell a grown-up if your dog eats some.",
-    "sl": "Drobnjak je videti kot zelena travica, a spada med čebule in ni za pse. Povej odraslemu, če ga pes poje."
+    "sl": "Drobnjak je videti kot zelena travica, a spada med čebule in ni za pse. Povej odraslemu, če ga pes poje.",
+    "de": "Schnittlauch sieht aus wie kleines grünes Gras, gehört aber zur Zwiebelfamilie und ist nichts für Hunde. Sag einem Erwachsenen Bescheid, wenn dein Hund davon frisst."
   },
   "faq": [
     {
       "q": {
         "en": "Is it safe when cooked or as powder?",
-        "sl": "Je varno, če je kuhano ali v prahu?"
+        "sl": "Je varno, če je kuhano ali v prahu?",
+        "de": "Ist er gekocht oder als Pulver unbedenklich?"
       },
       "a": {
         "en": "No. Raw, cooked, dried, powdered and liquid forms are all poisonous to dogs.",
-        "sl": "Ne. Za pse so strupene surove, kuhane, posušene, praškaste in tekoče oblike."
+        "sl": "Ne. Za pse so strupene surove, kuhane, posušene, praškaste in tekoče oblike.",
+        "de": "Nein. Roh, gekocht, getrocknet, als Pulver und in flüssiger Form ist er für Hunde giftig."
       }
     },
     {
       "q": {
         "en": "Why don't signs show straight away?",
-        "sl": "Zakaj se znaki ne pokažejo takoj?"
+        "sl": "Zakaj se znaki ne pokažejo takoj?",
+        "de": "Warum zeigen sich die Anzeichen nicht sofort?"
       },
       "a": {
         "en": "Symptoms can start within 24 hours but more often take a few days to appear; signs of anaemia typically develop several days after eating.",
-        "sl": "Znaki se lahko pojavijo v 24 urah, pogosteje pa šele po nekaj dneh; znaki slabokrvnosti se običajno razvijejo nekaj dni po zaužitju."
+        "sl": "Znaki se lahko pojavijo v 24 urah, pogosteje pa šele po nekaj dneh; znaki slabokrvnosti se običajno razvijejo nekaj dni po zaužitju.",
+        "de": "Beschwerden können innerhalb von 24 Stunden beginnen, zeigen sich aber häufiger erst nach einigen Tagen; Anzeichen einer Blutarmut entwickeln sich typischerweise mehrere Tage nach dem Fressen."
       }
     }
   ],
@@ -161,6 +178,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c0a19248bdb55378e63672e0c0c4862f5544e347f4863affef12272b0cabd7dc"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f522e34c8c97a6faa9376a6f346744f2ec5d16a8c678ad0b098cf4924473789a"
     }
   }
 }

@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Almonds",
-    "sl": "Mandlji"
+    "sl": "Mandlji",
+    "de": "Mandeln"
   },
   "question": {
     "en": "Can cats eat almonds?",
-    "sl": "Ali lahko mačke jedo mandlje?"
+    "sl": "Ali lahko mačke jedo mandlje?",
+    "de": "Dürfen Katzen Mandeln fressen?"
   },
   "url_slug": {
     "en": "almonds",
-    "sl": "mandlji"
+    "sl": "mandlji",
+    "de": "mandeln"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, almonds are best kept away from cats. Sweet almonds aren't considered toxic, but they are high in oils and fats and can make a cat unwell, with stomach upset or vomiting.",
-    "sl": "Ne, mandljev mački raje ne dajajte. Sladki mandlji ne veljajo za strupene, vendar imajo veliko olj in maščob in lahko mački povzročijo slabo počutje, razdražen želodec ali bruhanje."
+    "sl": "Ne, mandljev mački raje ne dajajte. Sladki mandlji ne veljajo za strupene, vendar imajo veliko olj in maščob in lahko mački povzročijo slabo počutje, razdražen želodec ali bruhanje.",
+    "de": "Nein, Mandeln halten Sie besser von Katzen fern. Süße Mandeln gelten nicht als giftig, enthalten aber viel Öl und Fett und können einer Katze zusetzen – etwa mit Magenverstimmung oder Erbrechen."
   },
   "why": {
     "en": "Cats Protection lists almonds among nuts that contain high amounts of oils and fats which can make a cat unwell. The ASPCA says sweet almonds sold for eating are not toxic to pets, but because they are not a normal part of a pet's diet they can cause digestive issues. Bitter almonds contain a cyanide compound and are considered toxic.",
-    "sl": "Cats Protection mandlje navaja med oreščki, ki vsebujejo veliko olj in maščob, zaradi katerih se mačka lahko slabo počuti. ASPCA navaja, da sladki mandlji, ki se prodajajo za uživanje, za hišne živali niso strupeni, a ker niso del njihove običajne prehrane, lahko povzročijo prebavne težave. Grenki mandlji vsebujejo cianidno spojino in veljajo za strupene."
+    "sl": "Cats Protection mandlje navaja med oreščki, ki vsebujejo veliko olj in maščob, zaradi katerih se mačka lahko slabo počuti. ASPCA navaja, da sladki mandlji, ki se prodajajo za uživanje, za hišne živali niso strupeni, a ker niso del njihove običajne prehrane, lahko povzročijo prebavne težave. Grenki mandlji vsebujejo cianidno spojino in veljajo za strupene.",
+    "de": "Cats Protection zählt Mandeln zu den Nüssen, die viel Öl und Fett enthalten und einer Katze schaden können. Laut ASPCA sind süße Mandeln, wie sie zum Essen verkauft werden, für Haustiere nicht giftig; da sie aber nicht zur normalen Ernährung eines Tieres gehören, können sie Verdauungsprobleme verursachen. Bittermandeln enthalten eine Cyanidverbindung und gelten als giftig."
   },
   "signs": {
     "en": [
@@ -34,36 +39,48 @@
       "Driska",
       "Razdražen želodec",
       "Mačka deluje bolna"
+    ],
+    "de": [
+      "Erbrechen",
+      "Durchfall",
+      "Magenverstimmung",
+      "Die Katze wirkt krank"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate almonds, contact your vet for advice, especially if she ate a lot or seems unwell. Note what she ate, how much and when. If they were bitter almonds, contact your vet straight away.",
-    "sl": "Če je muca pojedla mandlje, se za nasvet obrnite na veterinarja, zlasti če jih je pojedla veliko ali se ne počuti dobro. Zapišite, kaj je pojedla, koliko in kdaj. Če so bili to grenki mandlji, takoj pokličite veterinarja."
+    "sl": "Če je muca pojedla mandlje, se za nasvet obrnite na veterinarja, zlasti če jih je pojedla veliko ali se ne počuti dobro. Zapišite, kaj je pojedla, koliko in kdaj. Če so bili to grenki mandlji, takoj pokličite veterinarja.",
+    "de": "Wenn Ihre Katze Mandeln gefressen hat, fragen Sie Ihren Tierarzt um Rat, besonders wenn sie viele gefressen hat oder krank wirkt. Notieren Sie, was sie gefressen hat, wie viel und wann. Waren es Bittermandeln, wenden Sie sich sofort an Ihren Tierarzt."
   },
   "serving": null,
   "child": {
     "en": "Almonds are a snack for people. They are too oily for cats, so keep them in your lunchbox.",
-    "sl": "Mandlji so prigrizek za ljudi. Za mucke so preveč mastni, zato naj ostanejo v tvoji malici."
+    "sl": "Mandlji so prigrizek za ljudi. Za mucke so preveč mastni, zato naj ostanejo v tvoji malici.",
+    "de": "Mandeln sind ein Snack für Menschen. Für Katzen sind sie zu ölig – lass sie lieber in deiner Brotdose."
   },
   "faq": [
     {
       "q": {
         "en": "What about bitter almonds?",
-        "sl": "Kaj pa grenki mandlji?"
+        "sl": "Kaj pa grenki mandlji?",
+        "de": "Was ist mit Bittermandeln?"
       },
       "a": {
         "en": "Bitter almonds contain a cyanide compound and are considered toxic. If your cat ate bitter almonds, contact your vet straight away.",
-        "sl": "Grenki mandlji vsebujejo cianidno spojino in veljajo za strupene. Če je mačka pojedla grenke mandlje, takoj pokličite veterinarja."
+        "sl": "Grenki mandlji vsebujejo cianidno spojino in veljajo za strupene. Če je mačka pojedla grenke mandlje, takoj pokličite veterinarja.",
+        "de": "Bittermandeln enthalten eine Cyanidverbindung und gelten als giftig. Wenn Ihre Katze Bittermandeln gefressen hat, wenden Sie sich sofort an Ihren Tierarzt."
       }
     },
     {
       "q": {
         "en": "Are some nuts worse than others?",
-        "sl": "Ali so nekateri oreščki hujši od drugih?"
+        "sl": "Ali so nekateri oreščki hujši od drugih?",
+        "de": "Sind manche Nüsse schlimmer als andere?"
       },
       "a": {
         "en": "Yes. Macadamia nuts are fatty and also toxic to cats, so they are the ones to be most careful with.",
-        "sl": "Da. Makadamije so mastne in za mačke tudi strupene, zato je pri njih potrebna največja previdnost."
+        "sl": "Da. Makadamije so mastne in za mačke tudi strupene, zato je pri njih potrebna največja previdnost.",
+        "de": "Ja. Macadamianüsse sind fettreich und für Katzen außerdem giftig – bei ihnen ist daher die größte Vorsicht geboten."
       }
     }
   ],
@@ -112,6 +129,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5eec7080ec087e983d0bdecfa86b08f1bde42662d094c52da69a72aa18eb29b3"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cef9efca6ce027d780048681e212a12ea39accc133d4f7617b828659d9df0161"
     }
   }
 }

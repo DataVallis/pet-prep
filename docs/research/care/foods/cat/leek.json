@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Leek",
-    "sl": "Por"
+    "sl": "Por",
+    "de": "Lauch"
   },
   "question": {
     "en": "Can cats eat leek?",
-    "sl": "Ali lahko mačke jedo por?"
+    "sl": "Ali lahko mačke jedo por?",
+    "de": "Dürfen Katzen Lauch fressen?"
   },
   "url_slug": {
     "en": "leek",
-    "sl": "por"
+    "sl": "por",
+    "de": "lauch"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Leek is in the same family as onion and garlic and is poisonous to cats, raw or cooked. It can damage red blood cells and cause anaemia. Call your vet if your cat eats any.",
-    "sl": "Ne. Por spada v isto družino kot čebula in česen ter je za mačke strupen, surov ali kuhan. Lahko poškoduje rdeče krvničke in povzroči slabokrvnost. Če ga muca poje, pokličite veterinarja."
+    "sl": "Ne. Por spada v isto družino kot čebula in česen ter je za mačke strupen, surov ali kuhan. Lahko poškoduje rdeče krvničke in povzroči slabokrvnost. Če ga muca poje, pokličite veterinarja.",
+    "de": "Nein. Lauch gehört zur selben Familie wie Zwiebel und Knoblauch und ist für Katzen giftig – roh wie gekocht. Er kann rote Blutkörperchen schädigen und eine Blutarmut (Anämie) verursachen. Rufen Sie Ihren Tierarzt an, wenn Ihre Katze davon frisst."
   },
   "why": {
     "en": "Leek belongs to the allium family (the onion family). Alliums damage red blood cells and can lead to anaemia, and they also irritate the stomach and gut. Cats are the most sensitive species. All forms are poisonous to cats — raw, cooked, dried, powdered and liquid.",
-    "sl": "Por spada med lukovke (družina čebule). Lukovke poškodujejo rdeče krvničke in lahko povzročijo slabokrvnost, poleg tega dražijo želodec in črevesje. Mačke so med vsemi vrstami najbolj občutljive. Strupene so vse oblike – surove, kuhane, sušene, v prahu in tekoče."
+    "sl": "Por spada med lukovke (družina čebule). Lukovke poškodujejo rdeče krvničke in lahko povzročijo slabokrvnost, poleg tega dražijo želodec in črevesje. Mačke so med vsemi vrstami najbolj občutljive. Strupene so vse oblike – surove, kuhane, sušene, v prahu in tekoče.",
+    "de": "Lauch gehört zur Gattung Allium (den Zwiebelgewächsen). Allium-Pflanzen schädigen die roten Blutkörperchen, können zu Blutarmut (Anämie) führen und reizen außerdem Magen und Darm. Katzen sind die empfindlichste Tierart. Alle Formen sind für Katzen giftig – roh, gekocht, getrocknet, als Pulver und flüssig."
   },
   "signs": {
     "en": [
@@ -40,26 +45,39 @@
       "Blede dlesni",
       "Rdečkast urin",
       "Hitrejše ali težje dihanje"
+    ],
+    "de": [
+      "Erbrechen",
+      "Durchfall",
+      "Verminderter Appetit",
+      "Schwäche",
+      "Blasses Zahnfleisch",
+      "Rot gefärbter Urin",
+      "Schnellere oder angestrengte Atmung"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away, even if your cat seems well — signs of anaemia can take several days to show. Note what your cat ate (raw, cooked, powder or a dish containing it), how much and when. Don't try to make your cat sick at home.",
-    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če se muca zdi v redu, saj se znaki slabokrvnosti lahko pokažejo šele po nekaj dneh. Zapišite, kaj je pojedla (surovo, kuhano, v prahu ali jed, ki to vsebuje), koliko in kdaj. Muce doma ne poskušajte spraviti k bruhanju."
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če se muca zdi v redu, saj se znaki slabokrvnosti lahko pokažejo šele po nekaj dneh. Zapišite, kaj je pojedla (surovo, kuhano, v prahu ali jed, ki to vsebuje), koliko in kdaj. Muce doma ne poskušajte spraviti k bruhanju.",
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, auch wenn Ihre Katze gesund wirkt – Anzeichen einer Blutarmut können erst nach mehreren Tagen auftreten. Notieren Sie, was Ihre Katze gefressen hat (roh, gekocht, als Pulver oder in einem Gericht), wie viel und wann. Versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen."
   },
   "serving": null,
   "child": {
     "en": "Leeks are a cousin of onions, so they're not safe for cats. Tell a grown-up if kitty nibbles some.",
-    "sl": "Por je sorodnik čebule, zato za muce ni varen. Če ga muca grizlja, povej odraslemu."
+    "sl": "Por je sorodnik čebule, zato za muce ni varen. Če ga muca grizlja, povej odraslemu.",
+    "de": "Lauch ist ein Verwandter der Zwiebel und deshalb nicht sicher für Katzen. Sag einem Erwachsenen Bescheid, wenn deine Katze daran knabbert."
   },
   "faq": [
     {
       "q": {
         "en": "Is cooked or dried leek safe for cats?",
-        "sl": "Je kuhan ali sušen por za mačke varen?"
+        "sl": "Je kuhan ali sušen por za mačke varen?",
+        "de": "Ist gekochter oder getrockneter Lauch für Katzen unbedenklich?"
       },
       "a": {
         "en": "No. All forms are poisonous to cats, including raw, cooked and dried leek. Be careful with leftovers, sauces, soups and gravy that may contain it.",
-        "sl": "Ne. Za mačke so strupene vse oblike, tudi surov, kuhan in sušen por. Previdni bodite pri ostankih hrane, omakah, juhah in mesnih omakah, ki ga lahko vsebujejo."
+        "sl": "Ne. Za mačke so strupene vse oblike, tudi surov, kuhan in sušen por. Previdni bodite pri ostankih hrane, omakah, juhah in mesnih omakah, ki ga lahko vsebujejo.",
+        "de": "Nein. Alle Formen sind für Katzen giftig, auch roher, gekochter und getrockneter Lauch. Vorsicht bei Essensresten, Saucen, Suppen und Bratensoße, die Lauch enthalten können."
       }
     }
   ],
@@ -169,6 +187,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5cad41dc02ebf22655ba7c430737422400d7b34bbad47efe23c0fa098c81528f"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bec121a046518420ab80dc3c7b7bdb951ba72e4418354761330ab20cab737a03"
     }
   }
 }

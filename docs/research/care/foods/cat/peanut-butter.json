@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Peanut butter",
-    "sl": "Arašidovo maslo"
+    "sl": "Arašidovo maslo",
+    "de": "Erdnussbutter"
   },
   "question": {
     "en": "Can cats eat peanut butter?",
-    "sl": "Ali lahko mačke jedo arašidovo maslo?"
+    "sl": "Ali lahko mačke jedo arašidovo maslo?",
+    "de": "Dürfen Katzen Erdnussbutter fressen?"
   },
   "url_slug": {
     "en": "peanut-butter",
-    "sl": "arasidovo-maslo"
+    "sl": "arasidovo-maslo",
+    "de": "erdnussbutter"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to make it a habit. Some vets say natural peanut butter can be an occasional treat, but it must never contain xylitol, and Cats Protection advises sticking to cat treats instead of human foods.",
-    "sl": "Bolje je, da to ne postane navada. Nekateri veterinarji pravijo, da je naravno arašidovo maslo lahko občasen priboljšek, vendar nikoli ne sme vsebovati ksilitola, Cats Protection pa svetuje priboljške za mačke namesto človeške hrane."
+    "sl": "Bolje je, da to ne postane navada. Nekateri veterinarji pravijo, da je naravno arašidovo maslo lahko občasen priboljšek, vendar nikoli ne sme vsebovati ksilitola, Cats Protection pa svetuje priboljške za mačke namesto človeške hrane.",
+    "de": "Besser nicht regelmäßig. Manche Tierärzte halten naturbelassene Erdnussbutter für ein gelegentliches Leckerli, sie darf aber niemals Xylit (Birkenzucker) enthalten, und Cats Protection rät, bei Katzenleckerlis zu bleiben, statt Lebensmittel für Menschen zu geben."
   },
   "why": {
     "en": "Sources disagree. VCA describes natural peanut butter as a treat cats love, as long as it is free of preservatives and life-threatening additives such as xylitol. Cats Protection advises sticking to cat treats rather than human foods and warns that nuts can cause problems for cats. We use the stricter level.",
-    "sl": "Viri se razlikujejo. VCA naravno arašidovo maslo opisuje kot priboljšek, ki ga mačke imajo rade, če ne vsebuje konzervansov in življenjsko nevarnih dodatkov, kot je ksilitol. Cats Protection svetuje priboljške za mačke namesto človeške hrane in opozarja, da oreščki mačkam lahko povzročajo težave. Uporabljamo strožjo stopnjo."
+    "sl": "Viri se razlikujejo. VCA naravno arašidovo maslo opisuje kot priboljšek, ki ga mačke imajo rade, če ne vsebuje konzervansov in življenjsko nevarnih dodatkov, kot je ksilitol. Cats Protection svetuje priboljške za mačke namesto človeške hrane in opozarja, da oreščki mačkam lahko povzročajo težave. Uporabljamo strožjo stopnjo.",
+    "de": "Die Quellen sind sich nicht einig. VCA beschreibt naturbelassene Erdnussbutter als Leckerli, das Katzen lieben, solange sie frei von Konservierungsstoffen und lebensgefährlichen Zusätzen wie Xylit ist. Cats Protection rät, bei Katzenleckerlis zu bleiben, statt Lebensmittel für Menschen zu geben, und warnt, dass Nüsse bei Katzen Probleme verursachen können. Wir verwenden die strengere Stufe."
   },
   "signs": {
     "en": [
@@ -32,29 +37,39 @@
       "Bruhanje",
       "Driska",
       "Razdražen želodec"
+    ],
+    "de": [
+      "Erbrechen",
+      "Durchfall",
+      "Magenverstimmung"
     ]
   },
   "what_to_do": {
     "en": "A lick of plain peanut butter is unlikely to be serious; watch for vomiting or diarrhoea. If the peanut butter contains xylitol, contact your vet or a pet poison helpline right away, note how much was eaten, and don't wait for signs.",
-    "sl": "Malo navadnega arašidovega masla najverjetneje ne bo resna težava; bodite pozorni na bruhanje ali drisko. Če arašidovo maslo vsebuje ksilitol, takoj pokličite veterinarja ali center za zastrupitve živali, zapišite si, koliko ga je mačka pojedla, in ne čakajte na znake."
+    "sl": "Malo navadnega arašidovega masla najverjetneje ne bo resna težava; bodite pozorni na bruhanje ali drisko. Če arašidovo maslo vsebuje ksilitol, takoj pokličite veterinarja ali center za zastrupitve živali, zapišite si, koliko ga je mačka pojedla, in ne čakajte na znake.",
+    "de": "Hat Ihre Katze nur etwas naturbelassene Erdnussbutter abgeleckt, ist das wahrscheinlich nicht ernst; achten Sie auf Erbrechen oder Durchfall. Enthält die Erdnussbutter Xylit, wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, notieren Sie, wie viel gefressen wurde, und warten Sie nicht auf Anzeichen."
   },
   "serving": {
     "en": "If your vet is happy with it: natural peanut butter only, with no xylitol or preservatives, as a rare lick, not a habit.",
-    "sl": "Če se veterinar strinja: samo naravno arašidovo maslo brez ksilitola in konzervansov, redko in le za lizanje, ne kot navada."
+    "sl": "Če se veterinar strinja: samo naravno arašidovo maslo brez ksilitola in konzervansov, redko in le za lizanje, ne kot navada.",
+    "de": "Wenn Ihr Tierarzt einverstanden ist: nur naturbelassene Erdnussbutter ohne Xylit und Konservierungsstoffe, nur selten ein wenig zum Ablecken, nicht als Gewohnheit."
   },
   "child": {
     "en": "Peanut butter is a people food. Ask a grown-up before sharing anything with your cat.",
-    "sl": "Arašidovo maslo je hrana za ljudi. Preden mucki kaj ponudiš, vprašaj odraslega."
+    "sl": "Arašidovo maslo je hrana za ljudi. Preden mucki kaj ponudiš, vprašaj odraslega.",
+    "de": "Erdnussbutter ist Essen für Menschen. Frag einen Erwachsenen, bevor du etwas mit deiner Katze teilst."
   },
   "faq": [
     {
       "q": {
         "en": "Why does xylitol matter?",
-        "sl": "Zakaj je ksilitol pomemben?"
+        "sl": "Zakaj je ksilitol pomemben?",
+        "de": "Warum ist Xylit so wichtig?"
       },
       "a": {
         "en": "Xylitol is a sweetener added to some peanut butters. VCA calls it a life-threatening additive, so always check the label.",
-        "sl": "Ksilitol je sladilo, ki ga dodajajo nekaterim arašidovim maslom. VCA ga označuje kot življenjsko nevaren dodatek, zato vedno preverite deklaracijo."
+        "sl": "Ksilitol je sladilo, ki ga dodajajo nekaterim arašidovim maslom. VCA ga označuje kot življenjsko nevaren dodatek, zato vedno preverite deklaracijo.",
+        "de": "Xylit ist ein Süßungsmittel, das manchen Erdnussbutter-Sorten zugesetzt wird. VCA nennt es einen lebensgefährlichen Zusatz, also prüfen Sie immer das Etikett."
       }
     }
   ],
@@ -95,6 +110,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ad9ca3159de285016eae171712cae102f8c54b2b9bb793459c251b78f2848094"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9347a431b37d8621eec6d4191e9321fdb20a7b7db99ed7328f228d457688d151"
     }
   }
 }

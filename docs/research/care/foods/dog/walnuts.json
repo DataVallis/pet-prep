@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Walnuts",
-    "sl": "Orehi"
+    "sl": "Orehi",
+    "de": "Walnüsse"
   },
   "question": {
     "en": "Can dogs eat walnuts?",
-    "sl": "Ali lahko psi jedo orehe?"
+    "sl": "Ali lahko psi jedo orehe?",
+    "de": "Dürfen Hunde Walnüsse fressen?"
   },
   "url_slug": {
     "en": "walnuts",
-    "sl": "orehi"
+    "sl": "orehi",
+    "de": "walnuesse"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, it is best not to. A walnut or two is unlikely to cause harm, but walnuts are fatty and can be a choking hazard. Mouldy walnuts, such as old ones fallen in the garden, and black walnuts are much more dangerous.",
-    "sl": "Ne, bolje ne. En ali dva oreha verjetno ne bosta škodovala, a orehi so mastni in pes se lahko z njimi zaduši. Plesnivi orehi, na primer stari, odpadli na vrtu, in črni orehi so precej bolj nevarni."
+    "sl": "Ne, bolje ne. En ali dva oreha verjetno ne bosta škodovala, a orehi so mastni in pes se lahko z njimi zaduši. Plesnivi orehi, na primer stari, odpadli na vrtu, in črni orehi so precej bolj nevarni.",
+    "de": "Nein, besser nicht. Ein oder zwei Walnüsse schaden wahrscheinlich nicht, aber Walnüsse sind fettreich und können zum Ersticken führen. Schimmelige Walnüsse, etwa alte, die im Garten heruntergefallen sind, und Schwarznüsse sind deutlich gefährlicher."
   },
   "why": {
     "en": "Walnuts are high in fat, which can cause vomiting, diarrhoea and possibly pancreatitis. Mould can grow on the shell or kernel and produce toxins that can cause tremors, seizures and vomiting. Black walnuts are very toxic to dogs and may contain juglone.",
-    "sl": "Orehi so zelo mastni, kar lahko povzroči bruhanje, drisko in morda vnetje trebušne slinavke. Na lupini ali jedrcu lahko raste plesen, ki tvori strupe in lahko povzroči tresenje, krče in bruhanje. Črni orehi so za pse zelo strupeni in lahko vsebujejo juglon."
+    "sl": "Orehi so zelo mastni, kar lahko povzroči bruhanje, drisko in morda vnetje trebušne slinavke. Na lupini ali jedrcu lahko raste plesen, ki tvori strupe in lahko povzroči tresenje, krče in bruhanje. Črni orehi so za pse zelo strupeni in lahko vsebujejo juglon.",
+    "de": "Walnüsse sind sehr fettreich, was Erbrechen, Durchfall und möglicherweise eine Bauchspeicheldrüsenentzündung (Pankreatitis) verursachen kann. Auf Schale oder Kern kann Schimmel wachsen und Giftstoffe bilden, die Zittern, Krampfanfälle und Erbrechen auslösen können. Schwarznüsse sind für Hunde sehr giftig und können Juglon enthalten."
   },
   "signs": {
     "en": [
@@ -34,36 +39,48 @@
       "Driska",
       "Tresenje mišic ali krči (plesnivi orehi)",
       "Dušenje"
+    ],
+    "de": [
+      "Erbrechen",
+      "Durchfall",
+      "Muskelzittern oder Krampfanfälle (schimmelige Nüsse)",
+      "Erstickungsanzeichen"
     ]
   },
   "what_to_do": {
     "en": "After a walnut or two, watch for vomiting or diarrhoea. If your dog ate a black walnut or mouldy walnuts, contact your vet right away and don't wait for signs; also call if tremors, seizures or choking appear.",
-    "sl": "Po enem ali dveh orehih opazujte, ali pes bruha ali ima drisko. Če je pes pojedel črni oreh ali plesnive orehe, takoj pokličite veterinarja in ne čakajte na znake; pokličite tudi, če se pojavijo tresenje, krči ali dušenje."
+    "sl": "Po enem ali dveh orehih opazujte, ali pes bruha ali ima drisko. Če je pes pojedel črni oreh ali plesnive orehe, takoj pokličite veterinarja in ne čakajte na znake; pokličite tudi, če se pojavijo tresenje, krči ali dušenje.",
+    "de": "Achten Sie nach ein oder zwei Walnüssen auf Erbrechen oder Durchfall. Hat Ihr Hund eine Schwarznuss oder schimmelige Walnüsse gefressen, wenden Sie sich sofort an Ihren Tierarzt und warten Sie nicht auf Anzeichen; rufen Sie auch an, wenn Zittern, Krampfanfälle oder Erstickungsanzeichen auftreten."
   },
   "serving": null,
   "child": {
     "en": "Walnuts are not a dog snack. Old walnuts on the ground can make dogs sick, so tell a grown-up if your dog finds some.",
-    "sl": "Orehi niso pasji prigrizek. Stari orehi na tleh lahko psu škodijo, zato povej odraslemu, če jih pes najde."
+    "sl": "Orehi niso pasji prigrizek. Stari orehi na tleh lahko psu škodijo, zato povej odraslemu, če jih pes najde.",
+    "de": "Walnüsse sind kein Hundesnack. Alte Walnüsse auf dem Boden können Hunde krank machen, also sag einem Erwachsenen Bescheid, wenn dein Hund welche findet."
   },
   "faq": [
     {
       "q": {
         "en": "Why are fallen walnuts in the garden a risk?",
-        "sl": "Zakaj so odpadli orehi na vrtu nevarni?"
+        "sl": "Zakaj so odpadli orehi na vrtu nevarni?",
+        "de": "Warum sind heruntergefallene Walnüsse im Garten ein Risiko?"
       },
       "a": {
         "en": "Nuts lying on the ground can get damp and grow mould, which can be toxic to dogs.",
-        "sl": "Oreščki, ki ležijo na tleh, se navlažijo in na njih zraste plesen, ki je lahko za pse strupena."
+        "sl": "Oreščki, ki ležijo na tleh, se navlažijo in na njih zraste plesen, ki je lahko za pse strupena.",
+        "de": "Nüsse, die auf dem Boden liegen, können feucht werden und schimmeln, und dieser Schimmel kann für Hunde giftig sein."
       }
     },
     {
       "q": {
         "en": "What about black walnuts?",
-        "sl": "Kaj pa črni orehi?"
+        "sl": "Kaj pa črni orehi?",
+        "de": "Was ist mit Schwarznüssen?"
       },
       "a": {
         "en": "Black walnuts are very toxic to dogs. Contact your vet immediately if your dog eats one.",
-        "sl": "Črni orehi so za pse zelo strupeni. Če ga pes poje, takoj pokličite veterinarja."
+        "sl": "Črni orehi so za pse zelo strupeni. Če ga pes poje, takoj pokličite veterinarja.",
+        "de": "Schwarznüsse sind für Hunde sehr giftig. Wenden Sie sich sofort an Ihren Tierarzt, wenn Ihr Hund eine frisst."
       }
     }
   ],
@@ -134,6 +151,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7e370beacd04179ee3edc169c48ced95b4063595f3eb38d4b203d6e96c97d930"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0140a5174443bbfab8561f6f92062531b881ac97c679189738cee3d28739ea04"
     }
   }
 }

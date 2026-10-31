@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Butter",
-    "sl": "Maslo"
+    "sl": "Maslo",
+    "de": "Butter"
   },
   "question": {
     "en": "Can dogs eat butter?",
-    "sl": "Ali lahko psi jedo maslo?"
+    "sl": "Ali lahko psi jedo maslo?",
+    "de": "Dürfen Hunde Butter fressen?"
   },
   "url_slug": {
     "en": "butter",
-    "sl": "maslo"
+    "sl": "maslo",
+    "de": "butter"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, it is best not to. Butter is not poisonous, but it is very fatty, and fatty foods can upset a dog's stomach and may trigger pancreatitis, a painful inflammation. Food you share, such as eggs or mashed potato, is best prepared without butter.",
-    "sl": "Ne, bolje ne. Maslo ni strupeno, je pa zelo mastno, mastna hrana pa lahko psu razdraži želodec in sproži vnetje trebušne slinavke, ki je boleče. Hrano, ki jo delite s psom, na primer jajca ali pire, je najbolje pripraviti brez masla."
+    "sl": "Ne, bolje ne. Maslo ni strupeno, je pa zelo mastno, mastna hrana pa lahko psu razdraži želodec in sproži vnetje trebušne slinavke, ki je boleče. Hrano, ki jo delite s psom, na primer jajca ali pire, je najbolje pripraviti brez masla.",
+    "de": "Nein, besser nicht. Butter ist nicht giftig, aber sehr fettreich, und fettreiches Essen kann einem Hund auf den Magen schlagen und eine schmerzhafte Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen. Essen, das Sie mit ihm teilen, etwa Eier oder Kartoffelbrei, bereiten Sie am besten ohne Butter zu."
   },
   "why": {
     "en": "Fatty table foods are not a toxicity problem, but fatty foods such as butter, oils and meat drippings may cause pancreatitis. Some breeds, especially miniature Schnauzers, are more prone to it. Vets also suggest preparing food for dogs, such as eggs or mashed potato, without butter.",
-    "sl": "Mastna hrana z mize ni strupena, a mastna živila, kot so maslo, olja in mast od pečenke, lahko povzročijo vnetje trebušne slinavke. Nekatere pasme, predvsem mali šnavcerji, so zanj bolj dovzetne. Veterinarski viri tudi svetujejo, da hrano za pse, na primer jajca ali pire, pripravimo brez masla."
+    "sl": "Mastna hrana z mize ni strupena, a mastna živila, kot so maslo, olja in mast od pečenke, lahko povzročijo vnetje trebušne slinavke. Nekatere pasme, predvsem mali šnavcerji, so zanj bolj dovzetne. Veterinarski viri tudi svetujejo, da hrano za pse, na primer jajca ali pire, pripravimo brez masla.",
+    "de": "Fettes Essen vom Tisch ist kein Vergiftungsproblem, aber fette Lebensmittel wie Butter, Öle und Bratenfett können eine Pankreatitis auslösen. Manche Rassen, vor allem Zwergschnauzer, sind dafür anfälliger. Tierärzte raten außerdem, Essen für Hunde, etwa Eier oder Kartoffelbrei, ohne Butter zuzubereiten."
   },
   "signs": {
     "en": [
@@ -34,26 +39,36 @@
       "Boleč trebuh",
       "Driska",
       "Slab apetit in utrujenost"
+    ],
+    "de": [
+      "Erbrechen, manchmal erst 1–4 Tage nach einer fetten Mahlzeit",
+      "Bauchschmerzen",
+      "Durchfall",
+      "Wenig Appetit und wenig Energie"
     ]
   },
   "what_to_do": {
     "en": "If your dog ate a lot of butter, or shows vomiting, belly pain, diarrhoea or low energy in the next few days, call your vet as soon as possible.",
-    "sl": "Če je pes pojedel veliko masla ali v naslednjih dneh bruha, ga boli trebuh, ima drisko ali je utrujen, čim prej pokličite veterinarja."
+    "sl": "Če je pes pojedel veliko masla ali v naslednjih dneh bruha, ga boli trebuh, ima drisko ali je utrujen, čim prej pokličite veterinarja.",
+    "de": "Wenn Ihr Hund viel Butter gefressen hat oder in den nächsten Tagen Erbrechen, Bauchschmerzen, Durchfall oder Mattigkeit zeigt, rufen Sie so bald wie möglich Ihren Tierarzt an."
   },
   "serving": null,
   "child": {
     "en": "Butter is too fatty for dogs and can give them a sore tummy. Keep the butter dish out of reach!",
-    "sl": "Maslo je za pse premastno in jih lahko boli trebušček. Maslo pospravi, da ga pes ne doseže!"
+    "sl": "Maslo je za pse premastno in jih lahko boli trebušček. Maslo pospravi, da ga pes ne doseže!",
+    "de": "Butter ist zu fett für Hunde und kann ihnen Bauchweh machen. Stell die Butterdose außer Reichweite!"
   },
   "faq": [
     {
       "q": {
         "en": "Is butter toxic to dogs?",
-        "sl": "Je maslo za pse strupeno?"
+        "sl": "Je maslo za pse strupeno?",
+        "de": "Ist Butter für Hunde giftig?"
       },
       "a": {
         "en": "Not in the poisonous sense. The problem is the fat, which may cause stomach upset or pancreatitis.",
-        "sl": "Ne v smislu zastrupitve. Težava je maščoba, ki lahko povzroči prebavne težave ali vnetje trebušne slinavke."
+        "sl": "Ne v smislu zastrupitve. Težava je maščoba, ki lahko povzroči prebavne težave ali vnetje trebušne slinavke.",
+        "de": "Nicht im Sinne einer Vergiftung. Das Problem ist das Fett, das zu Magenverstimmung oder einer Pankreatitis führen kann."
       }
     }
   ],
@@ -108,6 +123,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "bc426f6340d42346e61608f1fa16e49f0906c308d511a82e16d7208aa5b3f7c8"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6e58ae4c12046c5325596dad45063bcdce25f157906d200bd430221865e5a5c2"
     }
   }
 }

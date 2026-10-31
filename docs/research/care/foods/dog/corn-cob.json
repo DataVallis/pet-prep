@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Corn cob",
-    "sl": "Koruzni storž"
+    "sl": "Koruzni storž",
+    "de": "Maiskolben"
   },
   "question": {
     "en": "Can dogs eat corn cobs?",
-    "sl": "Ali lahko psi jedo koruzne storže?"
+    "sl": "Ali lahko psi jedo koruzne storže?",
+    "de": "Dürfen Hunde Maiskolben fressen?"
   },
   "url_slug": {
     "en": "corn-cob",
-    "sl": "koruzni-storz"
+    "sl": "koruzni-storz",
+    "de": "maiskolben"
   },
   "level": "dangerous",
   "answer": {
     "en": "No. Never give a dog corn on the cob. Dogs may swallow pieces or even the whole cob, which can cause choking or a serious intestinal blockage that may need emergency treatment. Plain corn kernels off the cob are a different matter.",
-    "sl": "Ne. Psu nikoli ne dajajte koruze na storžu. Psi lahko pogoltnejo kose ali celo cel storž, kar lahko povzroči dušenje ali resno zaporo črevesja, ki lahko zahteva nujno zdravljenje. Navadna koruzna zrnca brez storža so nekaj drugega."
+    "sl": "Ne. Psu nikoli ne dajajte koruze na storžu. Psi lahko pogoltnejo kose ali celo cel storž, kar lahko povzroči dušenje ali resno zaporo črevesja, ki lahko zahteva nujno zdravljenje. Navadna koruzna zrnca brez storža so nekaj drugega.",
+    "de": "Nein. Geben Sie einem Hund niemals Maiskolben. Hunde können Stücke oder sogar den ganzen Kolben verschlucken – das kann zum Ersticken oder zu einem gefährlichen Darmverschluss führen, der eine Notfallbehandlung erfordern kann. Vom Kolben gelöste Maiskörner ohne Zusätze sind etwas anderes."
   },
   "why": {
     "en": "Swallowed pieces can block the intestines; in one reported case the blockage restricted the blood supply, and emergency treatment may be needed. Plain kernels in moderation are generally safe; the cob is the danger.",
-    "sl": "Pogoltnjeni kosi lahko zamašijo črevesje; v enem opisanem primeru je zapora ovirala prekrvavitev, potrebno pa je lahko nujno zdravljenje. Navadna zrnca so v zmernih količinah na splošno varna; nevaren je storž."
+    "sl": "Pogoltnjeni kosi lahko zamašijo črevesje; v enem opisanem primeru je zapora ovirala prekrvavitev, potrebno pa je lahko nujno zdravljenje. Navadna zrnca so v zmernih količinah na splošno varna; nevaren je storž.",
+    "de": "Verschluckte Stücke können den Darm blockieren; in einem dokumentierten Fall drosselte der Verschluss die Blutversorgung, und eine Notfallbehandlung kann nötig sein. Maiskörner ohne Zusätze sind in Maßen im Allgemeinen unbedenklich – gefährlich ist der Kolben."
   },
   "signs": {
     "en": [
@@ -36,36 +41,49 @@
       "Utrujenost in manj aktivnosti",
       "Driska",
       "Izsušenost"
+    ],
+    "de": [
+      "Wiederholtes Erbrechen",
+      "Appetitlosigkeit",
+      "Müdigkeit und weniger Aktivität",
+      "Durchfall",
+      "Austrocknung"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet right away if your dog swallowed a corn cob or part of one, even if it seems fine. Note when it happened and roughly how much was eaten. Don't wait for signs of a blockage.",
-    "sl": "Takoj pokličite veterinarja, če je pes pogoltnil koruzni storž ali njegov del, tudi če se zdi v redu. Zapišite si, kdaj se je to zgodilo in približno koliko je pojedel. Ne čakajte na znake zapore."
+    "sl": "Takoj pokličite veterinarja, če je pes pogoltnil koruzni storž ali njegov del, tudi če se zdi v redu. Zapišite si, kdaj se je to zgodilo in približno koliko je pojedel. Ne čakajte na znake zapore.",
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt, wenn Ihr Hund einen Maiskolben oder ein Stück davon verschluckt hat, auch wenn er unauffällig wirkt. Notieren Sie, wann es passiert ist und ungefähr wie viel gefressen wurde. Warten Sie nicht auf Anzeichen eines Darmverschlusses."
   },
   "serving": null,
   "child": {
     "en": "Corn cobs can get stuck in a dog's tummy. Put cobs straight in a closed bin, and tell a grown-up if your dog eats one.",
-    "sl": "Koruzni storži se lahko psu zataknejo v trebuščku. Storže takoj daj v zaprt koš in povej odraslemu, če ga pes poje."
+    "sl": "Koruzni storži se lahko psu zataknejo v trebuščku. Storže takoj daj v zaprt koš in povej odraslemu, če ga pes poje.",
+    "de": "Maiskolben können im Bauch eines Hundes stecken bleiben. Wirf Kolben gleich in einen geschlossenen Mülleimer und sag einem Erwachsenen Bescheid, wenn dein Hund einen frisst."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat corn kernels?",
-        "sl": "Lahko psi jedo koruzna zrnca?"
+        "sl": "Lahko psi jedo koruzna zrnca?",
+        "de": "Dürfen Hunde Maiskörner fressen?"
       },
       "a": {
         "en": "Plain corn kernels are generally safe for dogs in moderation. It's the cob that is dangerous.",
-        "sl": "Navadna koruzna zrnca so za pse v zmernih količinah na splošno varna. Nevaren je storž."
+        "sl": "Navadna koruzna zrnca so za pse v zmernih količinah na splošno varna. Nevaren je storž.",
+        "de": "Maiskörner ohne Zusätze sind für Hunde in Maßen im Allgemeinen unbedenklich. Gefährlich ist der Kolben."
       }
     },
     {
       "q": {
         "en": "Will a corn cob pass on its own?",
-        "sl": "Bo storž prešel sam od sebe?"
+        "sl": "Bo storž prešel sam od sebe?",
+        "de": "Geht ein Maiskolben von allein ab?"
       },
       "a": {
         "en": "Don't wait to find out. A swallowed cob can cause a serious blockage, so contact your vet straight away.",
-        "sl": "Ne čakajte, da bi to ugotovili. Pogoltnjen storž lahko povzroči resno zaporo, zato takoj pokličite veterinarja."
+        "sl": "Ne čakajte, da bi to ugotovili. Pogoltnjen storž lahko povzroči resno zaporo, zato takoj pokličite veterinarja.",
+        "de": "Warten Sie das nicht ab. Ein verschluckter Kolben kann einen gefährlichen Darmverschluss verursachen – wenden Sie sich sofort an Ihren Tierarzt."
       }
     }
   ],
@@ -147,6 +165,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "cc6b19483cebb291767e00d5e33d0c0b66c65999430fd8c9ab7541f2366fd897"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0c4ff10aa86bead46499493105b12a8012a47ba184679f1ecdced936de074dc3"
     }
   }
 }

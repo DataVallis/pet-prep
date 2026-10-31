@@ -3,47 +3,57 @@
   "species": "dog",
   "name": {
     "en": "Peanuts",
-    "sl": "Arašidi"
+    "sl": "Arašidi",
+    "de": "Erdnüsse"
   },
   "question": {
     "en": "Can dogs eat peanuts?",
-    "sl": "Ali lahko psi jedo arašide?"
+    "sl": "Ali lahko psi jedo arašide?",
+    "de": "Dürfen Hunde Erdnüsse fressen?"
   },
   "url_slug": {
     "en": "peanuts",
-    "sl": "arasidi"
+    "sl": "arasidi",
+    "de": "erdnuesse"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a few plain peanuts now and then: unsalted, unflavoured, dry-roasted or raw, with the shells removed. Salted, honey-roasted or flavoured peanuts are not suitable, and peanuts are fatty, so keep it to a few.",
-    "sl": "Da, občasno nekaj navadnih arašidov: nesoljenih, brez okusov, suho praženih ali surovih, brez lupin. Soljeni, medeni ali začinjeni arašidi niso primerni, arašidi pa so mastni, zato naj jih bo le nekaj."
+    "sl": "Da, občasno nekaj navadnih arašidov: nesoljenih, brez okusov, suho praženih ali surovih, brez lupin. Soljeni, medeni ali začinjeni arašidi niso primerni, arašidi pa so mastni, zato naj jih bo le nekaj.",
+    "de": "Ja, ab und zu ein paar naturbelassene Erdnüsse: ungesalzen, ohne Aroma, trocken geröstet oder roh und ohne Schale. Gesalzene, honiggeröstete oder aromatisierte Erdnüsse sind nicht geeignet. Erdnüsse sind zudem fettreich – bleiben Sie also bei ein paar wenigen."
   },
   "why": {
     "en": "Peanuts are high in fat, which can cause digestive upset and even pancreatitis if a dog eats too much. Salted peanuts add sodium a dog doesn't need, flavoured ones add other risky ingredients, and the fibrous shell can be a choking hazard, especially for small breeds.",
-    "sl": "Arašidi so zelo mastni, kar lahko pri preveliki količini povzroči prebavne težave in celo vnetje trebušne slinavke. Soljeni arašidi vsebujejo več natrija, kot ga pes potrebuje, začinjeni še druge tvegane sestavine, vlaknata lupina pa lahko povzroči dušenje, posebej pri majhnih pasmah."
+    "sl": "Arašidi so zelo mastni, kar lahko pri preveliki količini povzroči prebavne težave in celo vnetje trebušne slinavke. Soljeni arašidi vsebujejo več natrija, kot ga pes potrebuje, začinjeni še druge tvegane sestavine, vlaknata lupina pa lahko povzroči dušenje, posebej pri majhnih pasmah.",
+    "de": "Erdnüsse sind sehr fettreich, was Verdauungsbeschwerden und sogar eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen kann, wenn ein Hund zu viel davon frisst. Gesalzene Erdnüsse liefern Natrium, das ein Hund nicht braucht, aromatisierte bringen weitere riskante Zutaten mit, und die faserige Schale kann zur Erstickungsgefahr werden, besonders bei kleinen Rassen."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog ate a lot of peanuts, salted peanuts or shells, watch for vomiting, diarrhoea or belly pain, and call your vet if these appear or your dog seems to be choking.",
-    "sl": "Če je pes pojedel veliko arašidov, soljene arašide ali lupine, opazujte, ali bruha, ima drisko ali ga boli trebuh, in pokličite veterinarja, če se to pojavi ali če se pes duši."
+    "sl": "Če je pes pojedel veliko arašidov, soljene arašide ali lupine, opazujte, ali bruha, ima drisko ali ga boli trebuh, in pokličite veterinarja, če se to pojavi ali če se pes duši.",
+    "de": "Wenn Ihr Hund viele Erdnüsse, gesalzene Erdnüsse oder Schalen gefressen hat, achten Sie auf Erbrechen, Durchfall oder Bauchschmerzen und rufen Sie Ihren Tierarzt an, wenn diese auftreten oder Ihr Hund zu ersticken scheint."
   },
   "serving": {
     "en": "Only a few, plain: dry-roasted or raw, unsalted, unseasoned, uncoated, shells removed — not every day.",
-    "sl": "Le nekaj, navadnih: suho praženih ali surovih, nesoljenih, nezačinjenih, brez obloge in brez lupin — ne vsak dan."
+    "sl": "Le nekaj, navadnih: suho praženih ali surovih, nesoljenih, nezačinjenih, brez obloge in brez lupin — ne vsak dan.",
+    "de": "Nur ein paar, naturbelassen: trocken geröstet oder roh, ungesalzen, ungewürzt, ohne Überzug, ohne Schale – nicht jeden Tag."
   },
   "child": {
     "en": "A dog may have a few plain peanuts without shells. Salty or sweet peanuts are only for people.",
-    "sl": "Pes lahko dobi nekaj navadnih arašidov brez lupin. Slani ali sladki arašidi so samo za ljudi."
+    "sl": "Pes lahko dobi nekaj navadnih arašidov brez lupin. Slani ali sladki arašidi so samo za ljudi.",
+    "de": "Ein Hund darf ein paar Erdnüsse ohne Schale und ohne alles bekommen. Salzige oder süße Erdnüsse sind nur für Menschen."
   },
   "faq": [
     {
       "q": {
         "en": "Are honey-roasted peanuts OK?",
-        "sl": "So medeni arašidi v redu?"
+        "sl": "So medeni arašidi v redu?",
+        "de": "Sind honiggeröstete Erdnüsse in Ordnung?"
       },
       "a": {
         "en": "No. Honey-roasted and other flavoured peanuts are unsafe for dogs; only plain, unsalted peanuts are suitable.",
-        "sl": "Ne. Medeni in drugi začinjeni arašidi za pse niso varni; primerni so le navadni, nesoljeni arašidi."
+        "sl": "Ne. Medeni in drugi začinjeni arašidi za pse niso varni; primerni so le navadni, nesoljeni arašidi.",
+        "de": "Nein. Honiggeröstete und andere aromatisierte Erdnüsse sind für Hunde nicht sicher; geeignet sind nur naturbelassene, ungesalzene Erdnüsse."
       }
     }
   ],
@@ -107,6 +117,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "980390aaca656980381cfa88a907188dbb85d2567cc43fc826d9a7cc1ae55a4d"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0b03b8e5765edabc017699058e328116c0765a02adcd06b5b6190054135fdc91"
     }
   }
 }

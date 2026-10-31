@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Liver",
-    "sl": "Jetra"
+    "sl": "Jetra",
+    "de": "Leber"
   },
   "question": {
     "en": "Can cats eat liver?",
-    "sl": "Ali lahko mačke jedo jetra?"
+    "sl": "Ali lahko mačke jedo jetra?",
+    "de": "Dürfen Katzen Leber fressen?"
   },
   "url_slug": {
     "en": "liver",
-    "sl": "jetra"
+    "sl": "jetra",
+    "de": "leber"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Not as a home treat. Liver is very rich in vitamin A, and cats fed raw liver or a diet high in liver can develop vitamin A poisoning. Liver in a complete, balanced cat food is fine.",
-    "sl": "Ne kot domači priboljšek. Jetra so zelo bogata z vitaminom A, pri mačkah, ki dobivajo surova jetra ali prehrano z veliko jeter, pa se lahko razvije zastrupitev z vitaminom A. Jetra v popolni, uravnoteženi mačji hrani so v redu."
+    "sl": "Ne kot domači priboljšek. Jetra so zelo bogata z vitaminom A, pri mačkah, ki dobivajo surova jetra ali prehrano z veliko jeter, pa se lahko razvije zastrupitev z vitaminom A. Jetra v popolni, uravnoteženi mačji hrani so v redu.",
+    "de": "Nicht als Leckerli aus der eigenen Küche. Leber ist sehr reich an Vitamin A, und Katzen, die rohe Leber oder leberreiches Futter bekommen, können eine Vitamin-A-Vergiftung entwickeln. Leber in einem vollständigen, ausgewogenen Katzenfutter ist in Ordnung."
   },
   "why": {
     "en": "VCA says vitamin A poisoning most commonly occurs when pets are fed raw liver or vitamin A-rich supplements over weeks to months. The Merck Veterinary Manual notes that in cats it can occur when growing kittens are fed a diet high in liver, and that feeding only liver can cause it. VCA recommends a commercially prepared, balanced diet instead.",
-    "sl": "VCA navaja, da se zastrupitev z vitaminom A najpogosteje pojavi, ko živali več tednov ali mesecev dobivajo surova jetra ali dodatke, bogate z vitaminom A. Merckov veterinarski priročnik navaja, da se pri mačkah lahko pojavi, ko mladiči dobivajo prehrano z veliko jeter, in da jo lahko povzroči hranjenje samo z jetri. VCA namesto tega priporoča komercialno pripravljeno, uravnoteženo prehrano."
+    "sl": "VCA navaja, da se zastrupitev z vitaminom A najpogosteje pojavi, ko živali več tednov ali mesecev dobivajo surova jetra ali dodatke, bogate z vitaminom A. Merckov veterinarski priročnik navaja, da se pri mačkah lahko pojavi, ko mladiči dobivajo prehrano z veliko jeter, in da jo lahko povzroči hranjenje samo z jetri. VCA namesto tega priporoča komercialno pripravljeno, uravnoteženo prehrano.",
+    "de": "Laut VCA tritt eine Vitamin-A-Vergiftung am häufigsten auf, wenn Tiere über Wochen bis Monate rohe Leber oder Vitamin-A-reiche Ergänzungsmittel bekommen. Laut dem Merck Veterinary Manual kann sie bei Katzen auftreten, wenn wachsende Kätzchen leberreich gefüttert werden, und reine Leberfütterung kann sie auslösen. VCA empfiehlt stattdessen ein ausgewogenes Fertigfutter."
   },
   "signs": {
     "en": [
@@ -38,26 +43,38 @@
       "Šibkost",
       "Boleče ali omejeno gibanje",
       "Bruhanje ali zaspanost po zelo veliki količini"
+    ],
+    "de": [
+      "Stumpfes oder struppiges Fell",
+      "Trockene Haut",
+      "Gewichtsverlust",
+      "Schwäche",
+      "Schmerzhafte oder eingeschränkte Bewegung",
+      "Erbrechen oder Schläfrigkeit nach einer sehr großen Menge"
     ]
   },
   "what_to_do": {
     "en": "Vitamin A poisoning usually builds up over weeks to months, so don't feed liver regularly at home. If your cat has been eating a lot of liver and you notice a rough coat, weight loss, weakness or painful movement, talk to your vet.",
-    "sl": "Zastrupitev z vitaminom A se običajno razvija več tednov ali mesecev, zato doma jeter ne dajajte redno. Če je mačka jedla veliko jeter in opazite grobo dlako, hujšanje, šibkost ali boleče gibanje, se posvetujte z veterinarjem."
+    "sl": "Zastrupitev z vitaminom A se običajno razvija več tednov ali mesecev, zato doma jeter ne dajajte redno. Če je mačka jedla veliko jeter in opazite grobo dlako, hujšanje, šibkost ali boleče gibanje, se posvetujte z veterinarjem.",
+    "de": "Eine Vitamin-A-Vergiftung entwickelt sich meist über Wochen bis Monate. Füttern Sie Leber deshalb nicht regelmäßig selbst zu. Wenn Ihre Katze viel Leber gefressen hat und Ihnen struppiges Fell, Gewichtsverlust, Schwäche oder schmerzhafte Bewegungen auffallen, sprechen Sie mit Ihrem Tierarzt."
   },
   "serving": null,
   "child": {
     "en": "Liver has lots of one vitamin, and too much isn't good for cats. Their cat food already has the right amount.",
-    "sl": "Jetra imajo veliko enega vitamina, preveč pa za mucke ni dobro. Njihova mačja hrana ga že ima ravno prav."
+    "sl": "Jetra imajo veliko enega vitamina, preveč pa za mucke ni dobro. Njihova mačja hrana ga že ima ravno prav.",
+    "de": "Leber hat sehr viel von einem Vitamin, und zu viel davon ist nicht gut für Katzen. Im Katzenfutter ist schon die richtige Menge drin."
   },
   "faq": [
     {
       "q": {
         "en": "My cat food lists liver. Is that a problem?",
-        "sl": "Moja mačja hrana vsebuje jetra. Je to težava?"
+        "sl": "Moja mačja hrana vsebuje jetra. Je to težava?",
+        "de": "In meinem Katzenfutter steht Leber. Ist das ein Problem?"
       },
       "a": {
         "en": "No. Liver is a common ingredient in canned cat foods, and a complete, balanced cat food is what vets recommend.",
-        "sl": "Ne. Jetra so pogosta sestavina v konzervirani mačji hrani, veterinarji pa priporočajo prav popolno, uravnoteženo mačjo hrano."
+        "sl": "Ne. Jetra so pogosta sestavina v konzervirani mačji hrani, veterinarji pa priporočajo prav popolno, uravnoteženo mačjo hrano.",
+        "de": "Nein. Leber ist eine häufige Zutat in Katzenfutter aus der Dose, und Tierärzte empfehlen ein vollständiges, ausgewogenes Katzenfutter."
       }
     }
   ],
@@ -107,6 +124,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "dd5a809c624d1b656df3edf146d3c56af4f5077e3805dc2f81ee500de4d88564"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9841a9920bf597c4fac5435c8706f297a4a4864b6deedc6a0fb9556f4ad93e50"
     }
   }
 }

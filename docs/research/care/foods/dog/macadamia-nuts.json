@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Macadamia nuts",
-    "sl": "Makadamijini oreščki"
+    "sl": "Makadamijini oreščki",
+    "de": "Macadamianüsse"
   },
   "question": {
     "en": "Can dogs eat macadamia nuts?",
-    "sl": "Ali lahko psi jedo makadamijine oreščke?"
+    "sl": "Ali lahko psi jedo makadamijine oreščke?",
+    "de": "Dürfen Hunde Macadamianüsse fressen?"
   },
   "url_slug": {
     "en": "macadamia-nuts",
-    "sl": "makadamijini-orescki"
+    "sl": "makadamijini-orescki",
+    "de": "macadamianuesse"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Macadamia nuts are toxic to dogs, and dogs are the only species known to get ill from them. Even a small amount can cause weakness, vomiting, trembling and a high temperature. Their high fat content can also trigger pancreatitis.",
-    "sl": "Ne. Makadamijini oreščki so za pse strupeni; psi so edina znana vrsta, ki po njih zboli. Že majhna količina lahko povzroči šibkost, bruhanje, tresenje in povišano telesno temperaturo. Zaradi veliko maščob lahko sprožijo tudi vnetje trebušne slinavke."
+    "sl": "Ne. Makadamijini oreščki so za pse strupeni; psi so edina znana vrsta, ki po njih zboli. Že majhna količina lahko povzroči šibkost, bruhanje, tresenje in povišano telesno temperaturo. Zaradi veliko maščob lahko sprožijo tudi vnetje trebušne slinavke.",
+    "de": "Nein. Macadamianüsse sind für Hunde giftig, und Hunde sind die einzige Tierart, von der bekannt ist, dass sie davon krank wird. Schon eine kleine Menge kann Schwäche, Erbrechen, Zittern und erhöhte Körpertemperatur verursachen. Ihr hoher Fettgehalt kann außerdem eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen."
   },
   "why": {
     "en": "How macadamia nuts poison dogs is unknown, but they affect nerve and muscle function. Because they are very oily, some dogs also develop pancreatitis. Signs generally settle within 12–48 hours, but a vet should always be contacted.",
-    "sl": "Kako makadamijini oreščki zastrupijo psa, ni znano, vplivajo pa na delovanje živcev in mišic. Ker so zelo mastni, pri nekaterih psih povzročijo tudi vnetje trebušne slinavke. Znaki običajno izzvenijo v 12–48 urah, a veterinarja je treba vedno poklicati."
+    "sl": "Kako makadamijini oreščki zastrupijo psa, ni znano, vplivajo pa na delovanje živcev in mišic. Ker so zelo mastni, pri nekaterih psih povzročijo tudi vnetje trebušne slinavke. Znaki običajno izzvenijo v 12–48 urah, a veterinarja je treba vedno poklicati.",
+    "de": "Wie Macadamianüsse Hunde vergiften, ist nicht bekannt, sie beeinträchtigen aber die Nerven- und Muskelfunktion. Weil sie sehr ölhaltig sind, entwickeln manche Hunde außerdem eine Pankreatitis. Die Anzeichen klingen meist innerhalb von 12–48 Stunden ab, ein Tierarzt sollte aber immer verständigt werden."
   },
   "signs": {
     "en": [
@@ -38,36 +43,50 @@
       "Tresenje",
       "Povišana telesna temperatura",
       "Opotekanje"
+    ],
+    "de": [
+      "Muskelschwäche",
+      "Mattigkeit, Teilnahmslosigkeit",
+      "Erbrechen",
+      "Zittern",
+      "Erhöhte Körpertemperatur",
+      "Wackeliger Gang"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away. Note how many nuts were eaten, and whether they were coated in chocolate or mixed with other foods. Don't wait for signs.",
-    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite si, koliko oreščkov je pes pojedel in ali so bili obliti s čokolado ali pomešani z drugo hrano. Ne čakajte na znake."
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite si, koliko oreščkov je pes pojedel in ali so bili obliti s čokolado ali pomešani z drugo hrano. Ne čakajte na znake.",
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, wie viele Nüsse gefressen wurden und ob sie mit Schokolade überzogen oder mit anderen Lebensmitteln vermischt waren. Warten Sie nicht auf Anzeichen."
   },
   "serving": null,
   "child": {
     "en": "Macadamia nuts are round nuts that can make dogs weak and wobbly. Keep them away and tell a grown-up if your dog eats some.",
-    "sl": "Makadamijini oreščki so okrogli oreščki, po katerih je pes lahko šibek in se opoteka. Pospravi jih in povej odraslemu, če jih pes poje."
+    "sl": "Makadamijini oreščki so okrogli oreščki, po katerih je pes lahko šibek in se opoteka. Pospravi jih in povej odraslemu, če jih pes poje.",
+    "de": "Macadamianüsse sind runde Nüsse, die Hunde schwach und wackelig machen können. Halte sie von deinem Hund fern und sag einem Erwachsenen Bescheid, wenn dein Hund welche frisst."
   },
   "faq": [
     {
       "q": {
         "en": "Are other nuts toxic too?",
-        "sl": "So strupeni tudi drugi oreščki?"
+        "sl": "So strupeni tudi drugi oreščki?",
+        "de": "Sind andere Nüsse auch giftig?"
       },
       "a": {
         "en": "Macadamias are the toxic ones. Other nuts such as almonds, pecans and walnuts are very fatty and can cause vomiting, diarrhoea and possibly pancreatitis, so they are not a good treat either.",
-        "sl": "Strupeni so makadamijini. Drugi oreščki, kot so mandlji, pekan in orehi, so zelo mastni in lahko povzročijo bruhanje, drisko in morda vnetje trebušne slinavke, zato tudi niso dober priboljšek."
+        "sl": "Strupeni so makadamijini. Drugi oreščki, kot so mandlji, pekan in orehi, so zelo mastni in lahko povzročijo bruhanje, drisko in morda vnetje trebušne slinavke, zato tudi niso dober priboljšek.",
+        "de": "Giftig sind die Macadamianüsse. Andere Nüsse wie Mandeln, Pekannüsse und Walnüsse sind sehr fettreich und können Erbrechen, Durchfall und möglicherweise eine Pankreatitis verursachen – ein gutes Leckerli sind sie also auch nicht."
       }
     },
     {
       "q": {
         "en": "How long do signs last?",
-        "sl": "Kako dolgo trajajo znaki?"
+        "sl": "Kako dolgo trajajo znaki?",
+        "de": "Wie lange halten die Anzeichen an?"
       },
       "a": {
         "en": "Signs generally resolve within 12–48 hours, but your vet should still be told straight away.",
-        "sl": "Znaki običajno izzvenijo v 12–48 urah, a veterinarja vseeno obvestite takoj."
+        "sl": "Znaki običajno izzvenijo v 12–48 urah, a veterinarja vseeno obvestite takoj.",
+        "de": "Die Anzeichen klingen meist innerhalb von 12–48 Stunden ab, trotzdem sollten Sie Ihren Tierarzt sofort informieren."
       }
     }
   ],
@@ -142,6 +161,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b688a91667c8ed71df0bcbafd031ec39e7a8fe7584ff90545872a9f2fb780c98"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b61eeb82a03d5a5709e781bf4e221a21cdfdf3c977355b2eaacd6e9b6733cd08"
     }
   }
 }

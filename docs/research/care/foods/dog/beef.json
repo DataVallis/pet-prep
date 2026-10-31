@@ -3,47 +3,57 @@
   "species": "dog",
   "name": {
     "en": "Beef",
-    "sl": "Govedina"
+    "sl": "Govedina",
+    "de": "Rindfleisch"
   },
   "question": {
     "en": "Can dogs eat beef?",
-    "sl": "Ali lahko psi jedo govedino?"
+    "sl": "Ali lahko psi jedo govedino?",
+    "de": "Dürfen Hunde Rindfleisch fressen?"
   },
   "url_slug": {
     "en": "beef",
-    "sl": "govedina"
+    "sl": "govedina",
+    "de": "rindfleisch"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, plain cooked beef with the fat trimmed can be a healthy source of protein. Leave out salt, spices and toppings such as onion and garlic, never give cooked bones, and avoid raw beef, which can carry bacteria.",
-    "sl": "Da, navadna kuhana govedina z odstranjeno maščobo je lahko zdrav vir beljakovin. Izpustite sol, začimbe in dodatke, kot sta čebula in česen, nikoli ne dajte kuhanih kosti in se izogibajte surovi govedini, ki lahko prenaša bakterije."
+    "sl": "Da, navadna kuhana govedina z odstranjeno maščobo je lahko zdrav vir beljakovin. Izpustite sol, začimbe in dodatke, kot sta čebula in česen, nikoli ne dajte kuhanih kosti in se izogibajte surovi govedini, ki lahko prenaša bakterije.",
+    "de": "Ja, pures, gegartes Rindfleisch ohne Fettrand kann eine gesunde Proteinquelle sein. Verzichten Sie auf Salz, Gewürze und Beläge wie Zwiebeln und Knoblauch, geben Sie niemals gegarte Knochen und meiden Sie rohes Rindfleisch, das Bakterien übertragen kann."
   },
   "why": {
     "en": "Unseasoned, cooked beef can be a healthy protein, cut into bite-sized pieces with the fat trimmed. Burgers and steaks often contain salt, spices and toppings that can be dangerous; onions and garlic are toxic to dogs. Raw steak or burger can carry Salmonella and E. coli, and cooked bones of any kind should never be given.",
-    "sl": "Nezačinjena kuhana govedina je lahko zdrav vir beljakovin, narezana na grižljaje in brez maščobe. Burgerji in zrezki pogosto vsebujejo sol, začimbe in dodatke, ki so lahko nevarni; čebula in česen sta za pse strupena. Surov zrezek ali burger lahko prenaša salmonelo in E. coli, kuhanih kosti kakršne koli vrste pa psu nikoli ne dajte."
+    "sl": "Nezačinjena kuhana govedina je lahko zdrav vir beljakovin, narezana na grižljaje in brez maščobe. Burgerji in zrezki pogosto vsebujejo sol, začimbe in dodatke, ki so lahko nevarni; čebula in česen sta za pse strupena. Surov zrezek ali burger lahko prenaša salmonelo in E. coli, kuhanih kosti kakršne koli vrste pa psu nikoli ne dajte.",
+    "de": "Ungewürztes, gegartes Rindfleisch kann eine gesunde Proteinquelle sein – in mundgerechte Stücke geschnitten und mit abgeschnittenem Fett. Burger und Steaks enthalten oft Salz, Gewürze und Beläge, die gefährlich sein können; Zwiebeln und Knoblauch sind für Hunde giftig. Rohes Steak oder rohe Burger-Patties können Salmonellen und E. coli übertragen, und gegarte Knochen jeder Art sollten niemals gegeben werden."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog ate fatty or seasoned beef, watch for vomiting, diarrhoea or belly pain and call your vet if they appear. If it ate cooked bones or food with onion or garlic, call your vet straight away.",
-    "sl": "Če je pes pojedel mastno ali začinjeno govedino, opazujte, ali bruha, ima drisko ali ga boli trebuh, in pokličite veterinarja, če se to pojavi. Če je pojedel kuhane kosti ali hrano s čebulo ali česnom, takoj pokličite veterinarja."
+    "sl": "Če je pes pojedel mastno ali začinjeno govedino, opazujte, ali bruha, ima drisko ali ga boli trebuh, in pokličite veterinarja, če se to pojavi. Če je pojedel kuhane kosti ali hrano s čebulo ali česnom, takoj pokličite veterinarja.",
+    "de": "Wenn Ihr Hund fettes oder gewürztes Rindfleisch gefressen hat, achten Sie auf Erbrechen, Durchfall oder Bauchschmerzen und rufen Sie Ihren Tierarzt an, wenn diese auftreten. Hat er gegarte Knochen oder Essen mit Zwiebeln oder Knoblauch gefressen, rufen Sie sofort Ihren Tierarzt an."
   },
   "serving": {
     "en": "Plain, unseasoned, fully cooked beef, fat trimmed, boneless, in bite-sized pieces.",
-    "sl": "Navadna, nezačinjena, popolnoma kuhana govedina, brez maščobe in kosti, narezana na grižljaje."
+    "sl": "Navadna, nezačinjena, popolnoma kuhana govedina, brez maščobe in kosti, narezana na grižljaje.",
+    "de": "Pur, ungewürzt, vollständig gegart, Fett abgeschnitten, ohne Knochen, in mundgerechten Stücken."
   },
   "child": {
     "en": "A few bites of plain cooked beef can be a treat. Burgers with onions or sauce are only for people.",
-    "sl": "Nekaj grižljajev navadne kuhane govedine je lahko priboljšek. Burgerji s čebulo ali omako so samo za ljudi."
+    "sl": "Nekaj grižljajev navadne kuhane govedine je lahko priboljšek. Burgerji s čebulo ali omako so samo za ljudi.",
+    "de": "Ein paar Bissen gekochtes Rindfleisch ohne alles können ein Leckerli sein. Burger mit Zwiebeln oder Soße sind nur für Menschen."
   },
   "faq": [
     {
       "q": {
         "en": "Can my dog have a bite of my burger?",
-        "sl": "Ali lahko pes dobi grižljaj mojega burgerja?"
+        "sl": "Ali lahko pes dobi grižljaj mojega burgerja?",
+        "de": "Darf mein Hund von meinem Burger abbeißen?"
       },
       "a": {
         "en": "Better not: burgers often contain salt, spices and toppings such as onion that can be dangerous. Plain cooked meat is the safer choice.",
-        "sl": "Bolje ne: burgerji pogosto vsebujejo sol, začimbe in dodatke, kot je čebula, ki so lahko nevarni. Navadno kuhano meso je varnejša izbira."
+        "sl": "Bolje ne: burgerji pogosto vsebujejo sol, začimbe in dodatke, kot je čebula, ki so lahko nevarni. Navadno kuhano meso je varnejša izbira.",
+        "de": "Besser nicht: Burger enthalten oft Salz, Gewürze und Beläge wie Zwiebeln, die gefährlich sein können. Pures, gegartes Fleisch ist die sicherere Wahl."
       }
     }
   ],
@@ -104,6 +114,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1ad55f8ef755e81aac06e44ba144c0050bc06674ba215f57937c15ca8aeafd22"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "448645650b4ab235f80dcebf59ffb203ec1d9cf084a3ec8384ac8c25a55383e7"
     }
   }
 }

@@ -3,47 +3,57 @@
   "species": "dog",
   "name": {
     "en": "Shrimp",
-    "sl": "Kozice"
+    "sl": "Kozice",
+    "de": "Garnelen"
   },
   "question": {
     "en": "Can dogs eat shrimp?",
-    "sl": "Ali lahko psi jedo kozice?"
+    "sl": "Ali lahko psi jedo kozice?",
+    "de": "Dürfen Hunde Garnelen fressen?"
   },
   "url_slug": {
     "en": "shrimp",
-    "sl": "kozice"
+    "sl": "kozice",
+    "de": "garnelen"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a few pieces of plain, fully cooked shrimp are fine for dogs. Remove the shell, head, legs and tail first. Raw shrimp can carry harmful germs, and fried, breaded or seasoned shrimp are not suitable.",
-    "sl": "Da, nekaj koščkov navadnih, popolnoma kuhanih kozic je za pse v redu. Najprej odstranite oklep, glavo, nožice in rep. Surove kozice lahko prenašajo škodljive klice, ocvrte, panirane ali začinjene kozice pa niso primerne."
+    "sl": "Da, nekaj koščkov navadnih, popolnoma kuhanih kozic je za pse v redu. Najprej odstranite oklep, glavo, nožice in rep. Surove kozice lahko prenašajo škodljive klice, ocvrte, panirane ali začinjene kozice pa niso primerne.",
+    "de": "Ja, ein paar Stücke vollständig gegarter, ungewürzter Garnelen sind für Hunde in Ordnung. Entfernen Sie vorher Schale, Kopf, Beine und Schwanz. Rohe Garnelen können schädliche Keime enthalten, und frittierte, panierte oder gewürzte Garnelen sind nicht geeignet."
   },
   "why": {
     "en": "Raw shellfish contain harmful pathogens that cooking avoids. Shrimp shells are a choking hazard and can cause blockages. Fried or breaded shrimp add unnecessary fats and oils. Shrimp are low in fat and calories but high in cholesterol, so moderation is key.",
-    "sl": "Surovi raki in školjke vsebujejo škodljive klice, ki jih s kuhanjem odpravimo. Oklepi kozic lahko povzročijo dušenje in zamašitev. Ocvrte ali panirane kozice dodajo nepotrebne maščobe in olja. Kozice imajo malo maščob in kalorij, a veliko holesterola, zato je ključna zmernost."
+    "sl": "Surovi raki in školjke vsebujejo škodljive klice, ki jih s kuhanjem odpravimo. Oklepi kozic lahko povzročijo dušenje in zamašitev. Ocvrte ali panirane kozice dodajo nepotrebne maščobe in olja. Kozice imajo malo maščob in kalorij, a veliko holesterola, zato je ključna zmernost.",
+    "de": "Rohe Schalentiere enthalten schädliche Krankheitserreger, die durch das Garen vermieden werden. Garnelenschalen können zum Ersticken führen und einen Darmverschluss verursachen. Frittierte oder panierte Garnelen enthalten unnötige Fette und Öle. Garnelen sind fett- und kalorienarm, aber reich an Cholesterin – deshalb kommt es auf das richtige Maß an."
   },
   "signs": null,
   "what_to_do": {
     "en": "Stop giving shrimp if your dog shows tummy discomfort or seems unwell, and call your vet if signs get worse. Also call your vet if your dog swallowed shells and seems to be choking.",
-    "sl": "Prenehajte dajati kozice, če ima pes težave s trebuhom ali se ne počuti dobro, in pokličite veterinarja, če se znaki poslabšajo. Pokličite ga tudi, če je pes pogoltnil oklepe in se zdi, da se duši."
+    "sl": "Prenehajte dajati kozice, če ima pes težave s trebuhom ali se ne počuti dobro, in pokličite veterinarja, če se znaki poslabšajo. Pokličite ga tudi, če je pes pogoltnil oklepe in se zdi, da se duši.",
+    "de": "Geben Sie keine Garnelen mehr, wenn Ihr Hund Bauchbeschwerden zeigt oder krank wirkt, und rufen Sie Ihren Tierarzt an, wenn sich die Anzeichen verschlimmern. Rufen Sie auch Ihren Tierarzt an, wenn Ihr Hund Schalen verschluckt hat und zu ersticken droht."
   },
   "serving": {
     "en": "A few pieces, fully cooked (steamed is best), plain, with shell, head, legs and tail removed; not fried, breaded or seasoned.",
-    "sl": "Nekaj koščkov, popolnoma kuhanih (najboljše na pari), brez dodatkov, brez oklepa, glave, nožic in repa; ne ocvrtih, paniranih ali začinjenih."
+    "sl": "Nekaj koščkov, popolnoma kuhanih (najboljše na pari), brez dodatkov, brez oklepa, glave, nožic in repa; ne ocvrtih, paniranih ali začinjenih.",
+    "de": "Ein paar Stücke, vollständig gegart (am besten gedämpft), pur, ohne Schale, Kopf, Beine und Schwanz; nicht frittiert, paniert oder gewürzt."
   },
   "child": {
     "en": "A dog may have a couple of cooked, peeled shrimp. The shells and tails are not for dogs.",
-    "sl": "Pes lahko dobi nekaj kuhanih, olupljenih kozic. Oklepi in repki niso za pse."
+    "sl": "Pes lahko dobi nekaj kuhanih, olupljenih kozic. Oklepi in repki niso za pse.",
+    "de": "Ein Hund darf ein paar gekochte, geschälte Garnelen bekommen. Die Schalen und Schwänze sind nichts für Hunde."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat shrimp tails?",
-        "sl": "Ali lahko psi jedo repke kozic?"
+        "sl": "Ali lahko psi jedo repke kozic?",
+        "de": "Dürfen Hunde Garnelenschwänze fressen?"
       },
       "a": {
         "en": "No. Remove the shell, head, legs and tail, as shells are a choking hazard and can cause blockages.",
-        "sl": "Ne. Odstranite oklep, glavo, nožice in rep, ker oklepi lahko povzročijo dušenje in zamašitev."
+        "sl": "Ne. Odstranite oklep, glavo, nožice in rep, ker oklepi lahko povzročijo dušenje in zamašitev.",
+        "de": "Nein. Entfernen Sie Schale, Kopf, Beine und Schwanz, denn Schalen können zum Ersticken führen und einen Darmverschluss verursachen."
       }
     }
   ],
@@ -108,6 +118,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c8a0d85b9ff43e70487a9300ba44cbda4406962954afbfccbea20b8c939aa267"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "959498df8a1c8673729674c38bebf884efe25b9e88f6ac87ce0f4f867cfbd1c3"
     }
   }
 }

@@ -3,57 +3,69 @@
   "species": "dog",
   "name": {
     "en": "Cooked eggs",
-    "sl": "Kuhana jajca"
+    "sl": "Kuhana jajca",
+    "de": "Gekochte Eier"
   },
   "question": {
     "en": "Can dogs eat cooked eggs?",
-    "sl": "Ali lahko psi jedo kuhana jajca?"
+    "sl": "Ali lahko psi jedo kuhana jajca?",
+    "de": "Dürfen Hunde gekochte Eier fressen?"
   },
   "url_slug": {
     "en": "cooked-eggs",
-    "sl": "kuhana-jajca"
+    "sl": "kuhana-jajca",
+    "de": "gekochte-eier"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes. Fully cooked eggs are safe and nutritious for dogs in moderation, as long as they are plain: no oil, butter, salt or seasonings. Hard-boiled or scrambled eggs work well. Too many can lead to weight gain.",
-    "sl": "Da. Popolnoma kuhana jajca so za pse v zmernih količinah varna in hranljiva, če so navadna: brez olja, masla, soli in začimb. Primerna so trdo kuhana ali umešana jajca. Preveč jih lahko vodi do debelosti."
+    "sl": "Da. Popolnoma kuhana jajca so za pse v zmernih količinah varna in hranljiva, če so navadna: brez olja, masla, soli in začimb. Primerna so trdo kuhana ali umešana jajca. Preveč jih lahko vodi do debelosti.",
+    "de": "Ja. Vollständig gegarte Eier sind für Hunde in Maßen unbedenklich und nahrhaft, solange sie ohne Zusätze zubereitet sind: kein Öl, keine Butter, kein Salz, keine Gewürze. Hart gekochte Eier oder Rührei eignen sich gut. Zu viele können zu Gewichtszunahme führen."
   },
   "why": {
     "en": "Cooked eggs provide protein, vitamins and healthy fats, but they are not essential to a balanced diet. Vets advise always cooking eggs before giving them to a dog. Egg shells have sharp edges that can hurt a dog's throat, and like any treat, eggs add calories.",
-    "sl": "Kuhana jajca dajejo beljakovine, vitamine in zdrave maščobe, vendar za uravnoteženo prehrano niso nujna. Jajca je treba pred hranjenjem psa vedno skuhati. Lupine imajo ostre robove, ki lahko poškodujejo psu grlo, jajca pa kot vsak priboljšek dodajo kalorije."
+    "sl": "Kuhana jajca dajejo beljakovine, vitamine in zdrave maščobe, vendar za uravnoteženo prehrano niso nujna. Jajca je treba pred hranjenjem psa vedno skuhati. Lupine imajo ostre robove, ki lahko poškodujejo psu grlo, jajca pa kot vsak priboljšek dodajo kalorije.",
+    "de": "Gekochte Eier liefern Eiweiß, Vitamine und gesunde Fette, sind für eine ausgewogene Ernährung aber nicht notwendig. Tierärzte raten, Eier immer zu garen, bevor man sie einem Hund gibt. Eierschalen haben scharfe Kanten, die den Hals eines Hundes verletzen können, und wie jedes Leckerli liefern Eier zusätzliche Kalorien."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog ate eggs cooked with butter, salt or seasonings, or a lot of eggs, watch for tummy upset and call your vet if vomiting or diarrhoea is severe or doesn't stop.",
-    "sl": "Če je pes pojedel jajca, pripravljena z maslom, soljo ali začimbami, ali veliko jajc, opazujte prebavo in pokličite veterinarja, če sta bruhanje ali driska huda ali ne prenehata."
+    "sl": "Če je pes pojedel jajca, pripravljena z maslom, soljo ali začimbami, ali veliko jajc, opazujte prebavo in pokličite veterinarja, če sta bruhanje ali driska huda ali ne prenehata.",
+    "de": "Hat Ihr Hund Eier gefressen, die mit Butter, Salz oder Gewürzen zubereitet waren, oder sehr viele Eier, achten Sie auf Magen-Darm-Beschwerden und rufen Sie Ihren Tierarzt an, wenn Erbrechen oder Durchfall stark sind oder nicht aufhören."
   },
   "serving": {
     "en": "Fully cooked (hard-boiled or scrambled), plain, without oil, butter, salt, seasonings or other additives; as an occasional treat.",
-    "sl": "Popolnoma kuhana (trdo kuhana ali umešana), navadna, brez olja, masla, soli, začimb in drugih dodatkov; kot občasen priboljšek."
+    "sl": "Popolnoma kuhana (trdo kuhana ali umešana), navadna, brez olja, masla, soli, začimb in drugih dodatkov; kot občasen priboljšek.",
+    "de": "Vollständig gegart (hart gekocht oder als Rührei), ohne Öl, Butter, Salz, Gewürze oder andere Zusätze; als gelegentliches Leckerli."
   },
   "child": {
     "en": "A plain cooked egg can be a yummy treat for a dog. No salt or butter, please!",
-    "sl": "Navadno kuhano jajce je lahko za psa slasten priboljšek. Brez soli in masla, prosim!"
+    "sl": "Navadno kuhano jajce je lahko za psa slasten priboljšek. Brez soli in masla, prosim!",
+    "de": "Ein gekochtes Ei ohne alles kann ein leckerer Happen für deinen Hund sein. Aber bitte ohne Salz und Butter!"
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat eggshells?",
-        "sl": "Ali lahko psi jedo jajčne lupine?"
+        "sl": "Ali lahko psi jedo jajčne lupine?",
+        "de": "Dürfen Hunde Eierschalen fressen?"
       },
       "a": {
         "en": "Sources differ: Dogs Trust lists cooked eggshells as usually fine, while the AKC warns that shells have sharp edges. Leaving them out is the safer choice.",
-        "sl": "Viri se razlikujejo: Dogs Trust kuhane lupine navaja kot običajno primerne, AKC pa opozarja, da imajo lupine ostre robove. Varneje je, da jih ne dajete."
+        "sl": "Viri se razlikujejo: Dogs Trust kuhane lupine navaja kot običajno primerne, AKC pa opozarja, da imajo lupine ostre robove. Varneje je, da jih ne dajete.",
+        "de": "Die Quellen sind sich nicht einig: Dogs Trust führt gekochte Eierschalen als meist unproblematisch, der AKC warnt dagegen vor ihren scharfen Kanten. Sie wegzulassen ist die sicherere Wahl."
       }
     },
     {
       "q": {
         "en": "How should I cook eggs for my dog?",
-        "sl": "Kako naj psu pripravim jajca?"
+        "sl": "Kako naj psu pripravim jajca?",
+        "de": "Wie sollte ich Eier für meinen Hund zubereiten?"
       },
       "a": {
         "en": "Hard-boiled or scrambled, fully cooked and plain, with no salt, butter or seasonings.",
-        "sl": "Trdo kuhana ali umešana, popolnoma kuhana in navadna, brez soli, masla in začimb."
+        "sl": "Trdo kuhana ali umešana, popolnoma kuhana in navadna, brez soli, masla in začimb.",
+        "de": "Hart gekocht oder als Rührei, vollständig gegart und ohne Zusätze – ohne Salz, Butter oder Gewürze."
       }
     }
   ],
@@ -119,6 +131,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8dd4a5de0e0eedd62d7a9a866fabbb0aa801a823215195ac8c4580fd663194ef"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4645227d20ae110ade098cf07c4675ddc0f9c2a9c7aa8e67631d2c7601b941c1"
     }
   }
 }

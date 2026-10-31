@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Pistachios",
-    "sl": "Pistacije"
+    "sl": "Pistacije",
+    "de": "Pistazien"
   },
   "question": {
     "en": "Can dogs eat pistachios?",
-    "sl": "Ali lahko psi jedo pistacije?"
+    "sl": "Ali lahko psi jedo pistacije?",
+    "de": "Dürfen Hunde Pistazien fressen?"
   },
   "url_slug": {
     "en": "pistachios",
-    "sl": "pistacije"
+    "sl": "pistacije",
+    "de": "pistazien"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, it is best to avoid them. Pistachios are not toxic in themselves, but they are fatty and usually salty, can upset the stomach or lead to pancreatitis, and nuts or shells can cause choking. They can also grow harmful mould.",
-    "sl": "Ne, bolje se jim je izogniti. Pistacije same po sebi niso strupene, so pa mastne in običajno slane, lahko razdražijo prebavo ali vodijo do vnetja trebušne slinavke, oreščki ali lupine pa lahko povzročijo dušenje. Na njih lahko zraste tudi škodljiva plesen."
+    "sl": "Ne, bolje se jim je izogniti. Pistacije same po sebi niso strupene, so pa mastne in običajno slane, lahko razdražijo prebavo ali vodijo do vnetja trebušne slinavke, oreščki ali lupine pa lahko povzročijo dušenje. Na njih lahko zraste tudi škodljiva plesen.",
+    "de": "Nein, meiden Sie sie besser. Pistazien sind an sich nicht giftig, aber fettreich und meist gesalzen. Sie können auf den Magen schlagen oder zu einer Bauchspeicheldrüsenentzündung (Pankreatitis) führen, und Nüsse oder Schalen können zum Ersticken führen. Außerdem kann sich auf ihnen schädlicher Schimmel bilden."
   },
   "why": {
     "en": "Pistachios are high in fat and salt, which can cause stomach problems, and fatty, salty snacks can lead to pancreatitis. Even shelled nuts can be a choking hazard. Mould on nut shells can produce aflatoxin, which can make dogs weak and lethargic, upset the stomach and even cause seizures.",
-    "sl": "Pistacije vsebujejo veliko maščobe in soli, kar lahko povzroči prebavne težave, mastni in slani prigrizki pa lahko vodijo do vnetja trebušne slinavke. Tudi oluščeni oreščki lahko povzročijo dušenje. Plesen na lupinah lahko tvori aflatoksin, ki psa lahko oslabi in utrudi, mu razdraži prebavo in celo povzroči krče."
+    "sl": "Pistacije vsebujejo veliko maščobe in soli, kar lahko povzroči prebavne težave, mastni in slani prigrizki pa lahko vodijo do vnetja trebušne slinavke. Tudi oluščeni oreščki lahko povzročijo dušenje. Plesen na lupinah lahko tvori aflatoksin, ki psa lahko oslabi in utrudi, mu razdraži prebavo in celo povzroči krče.",
+    "de": "Pistazien enthalten viel Fett und Salz, was Magenprobleme verursachen kann, und fettige, salzige Snacks können zu einer Pankreatitis führen. Selbst geschälte Nüsse können zum Ersticken führen. Schimmel auf Nussschalen kann Aflatoxin bilden, das Hunde schwach und matt machen, auf den Magen schlagen und sogar Krampfanfälle auslösen kann."
   },
   "signs": {
     "en": [
@@ -34,26 +39,36 @@
       "Boleč trebuh, slabost ali utrujenost (možno vnetje trebušne slinavke)",
       "Šibkost in utrujenost",
       "Dušenje"
+    ],
+    "de": [
+      "Erbrechen oder Durchfall",
+      "Bauchschmerzen, Übelkeit oder wenig Energie (mögliche Pankreatitis)",
+      "Schwäche und Müdigkeit",
+      "Ersticken"
     ]
   },
   "what_to_do": {
     "en": "If your dog ate a few pistachios, watch for vomiting, diarrhoea or belly pain. Call your vet if your dog ate a lot of them or their shells, seems to be choking, or shows weakness, tiredness or any of these signs.",
-    "sl": "Če je pes pojedel nekaj pistacij, opazujte, ali bruha, ima drisko ali ga boli trebuh. Pokličite veterinarja, če jih je pojedel veliko ali z lupinami, se duši ali je šibek, utrujen ali kaže katerega od teh znakov."
+    "sl": "Če je pes pojedel nekaj pistacij, opazujte, ali bruha, ima drisko ali ga boli trebuh. Pokličite veterinarja, če jih je pojedel veliko ali z lupinami, se duši ali je šibek, utrujen ali kaže katerega od teh znakov.",
+    "de": "Wenn Ihr Hund ein paar Pistazien gefressen hat, achten Sie auf Erbrechen, Durchfall oder Bauchschmerzen. Rufen Sie Ihren Tierarzt an, wenn Ihr Hund viele davon oder ihre Schalen gefressen hat, zu ersticken droht oder Schwäche, Müdigkeit oder eines dieser Anzeichen zeigt."
   },
   "serving": null,
   "child": {
     "en": "Pistachios and their shells are not for dogs. They can upset a dog's tummy, so keep the bowl up high.",
-    "sl": "Pistacije in njihove lupine niso za pse. Psa lahko boli trebušček, zato skledico postavi visoko."
+    "sl": "Pistacije in njihove lupine niso za pse. Psa lahko boli trebušček, zato skledico postavi visoko.",
+    "de": "Pistazien und ihre Schalen sind nichts für Hunde. Sie können einem Hund Bauchweh machen, also stell die Schüssel hoch oben hin."
   },
   "faq": [
     {
       "q": {
         "en": "Are pistachio shells dangerous?",
-        "sl": "So lupine pistacij nevarne?"
+        "sl": "So lupine pistacij nevarne?",
+        "de": "Sind Pistazienschalen gefährlich?"
       },
       "a": {
         "en": "Yes. Pistachios and their shells can get lodged in a dog's throat, and mould can grow on nut shells.",
-        "sl": "Da. Pistacije in njihove lupine se lahko zataknejo v grlu, na lupinah pa lahko raste plesen."
+        "sl": "Da. Pistacije in njihove lupine se lahko zataknejo v grlu, na lupinah pa lahko raste plesen.",
+        "de": "Ja. Pistazien und ihre Schalen können einem Hund im Hals stecken bleiben, und auf Nussschalen kann Schimmel wachsen."
       }
     }
   ],
@@ -121,6 +136,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "80ed241ba2ba4b2206b98c53cf24e2b13ad0b98a624f6ac94f6bd94bdfdac637"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "27c45cc7e7df83d4a95db3ae6903b1813e403435e7996bd051884ebf52eb46a7"
     }
   }
 }
