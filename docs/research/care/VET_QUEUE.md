@@ -4,17 +4,16 @@ David 2026-10-31: every country in the world, one line per hourly run (`docs/eng
 Order: home and holiday countries, the 13 language markets, then by pet owners and travel, then the rest.
 Status: `[ ]` todo · `[~]` partial (follow-up line below) · `[x]` done · `[!]` blocked (reason).
 
-## Manual run (31. 10. 2026) — data being checked, do not pick
-- [~] SI Slovenia — all regions (manual run 2026-10-31)
-- [~] HR Croatia (manual run 2026-10-31)
-- [~] IT Italy (manual run 2026-10-31)
-- [~] AT Austria (manual run 2026-10-31)
-- [~] GR Greece (manual run 2026-10-31)
-- [~] ES Spain (manual run 2026-10-31)
-- [~] DE Germany (manual run 2026-10-31)
-- [~] FR France (manual run 2026-10-31)
-
 ## Queue
+- [ ] SI Slovenia — Osrednjeslovenska, Gorenjska, Primorsko-notranjska, Obalno-kraška, Goriška
+- [ ] SI Slovenia — Podravska, Pomurska, Koroška, Savinjska, Zasavska, Posavska, Jugovzhodna Slovenija
+- [ ] HR Croatia
+- [ ] IT Italy
+- [ ] AT Austria
+- [ ] GR Greece
+- [ ] ES Spain
+- [ ] DE Germany
+- [ ] FR France
 - [ ] HU Hungary
 - [ ] CZ Czechia
 - [ ] SK Slovakia
