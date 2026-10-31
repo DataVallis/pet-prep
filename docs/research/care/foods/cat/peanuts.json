@@ -46,15 +46,15 @@
   "faq": [],
   "sources": [
     {
-      "id": "KC223",
+      "id": "KC50",
       "quote": "Some foods that may seem harmless, such as grapes, nuts or avocado, can also cause problems for cats."
     },
     {
-      "id": "KC216",
+      "id": "KC43",
       "quote": "Most nuts are very fatty and can cause vomiting and diarrhea, but macadamia nuts specifically will lead to weakness, tremors and hyperthermia."
     },
     {
-      "id": "KC211",
+      "id": "KC38",
       "quote": "Large amounts of salt can produce excessive thirst and urination, or even sodium ion poisoning."
     }
   ],
@@ -62,7 +62,6 @@
     "peanut-butter",
     "almonds",
     "cashews",
-    "salty-snacks",
     "salt",
     "macadamia-nuts"
   ],

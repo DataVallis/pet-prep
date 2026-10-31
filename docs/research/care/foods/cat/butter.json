@@ -1,9 +1,18 @@
 {
   "slug": "butter",
   "species": "cat",
-  "name": {"en": "Butter", "sl": "Maslo"},
-  "question": {"en": "Can cats eat butter?", "sl": "Ali lahko mačke jedo maslo?"},
-  "url_slug": {"en": "butter", "sl": "maslo"},
+  "name": {
+    "en": "Butter",
+    "sl": "Maslo"
+  },
+  "question": {
+    "en": "Can cats eat butter?",
+    "sl": "Ali lahko mačke jedo maslo?"
+  },
+  "url_slug": {
+    "en": "butter",
+    "sl": "maslo"
+  },
   "level": "not_recommended",
   "answer": {
     "en": "No, butter is best avoided. It is a fatty dairy food, and cat-care guides list fatty foods among things not to feed cats. Fat can upset a cat's stomach and add weight.",
@@ -14,8 +23,16 @@
     "sl": "RSPCA Avstralija mastne ostanke in mastno hrano navaja med stvarmi, ki jih mačkam nikoli ne dajemo. Dodana maščoba lahko povzroči boleče stanje, imenovano pankreatitis, mlečni izdelki pa imajo veliko maščob in prispevajo k debelosti. Maslo je tudi mlečni izdelek, mnoge mačke pa ne prenašajo laktoze."
   },
   "signs": {
-    "en": ["Vomiting", "Diarrhoea", "Upset stomach"],
-    "sl": ["Bruhanje", "Driska", "Razdražen želodec"]
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Upset stomach"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Razdražen želodec"
+    ]
   },
   "what_to_do": {
     "en": "A small lick of butter is unlikely to be serious. Watch for vomiting, diarrhoea or a change in behaviour, and call your vet if your cat seems unwell or ate a lot.",
@@ -28,17 +45,47 @@
   },
   "faq": [],
   "sources": [
-    {"id": "KC205", "quote": "fatty trimmings / fatty foods"},
-    {"id": "KC205", "quote": "Do not ever feed the following substances as they can be harmful to cats (note this is not a complete list):"},
-    {"id": "KC216", "quote": "Added fat is not only unnecessary, but it also can lead to a painful condition called pancreatitis."},
-    {"id": "KC222", "quote": "Cream and dairy products are also high in fat so will contribute to your cat piling on the pounds."},
-    {"id": "KC206", "quote": "as many cats are lactose-intolerant and can develop gastrointestinal problems if fed dairy products."},
-    {"id": "KC219", "quote": "Feeding milk and milk-based products to cats can actually cause them to vomit or have diarrhea."}
+    {
+      "id": "KC32",
+      "quote": "fatty trimmings / fatty foods"
+    },
+    {
+      "id": "KC32",
+      "quote": "Do not ever feed the following substances as they can be harmful to cats (note this is not a complete list):"
+    },
+    {
+      "id": "KC43",
+      "quote": "Added fat is not only unnecessary, but it also can lead to a painful condition called pancreatitis."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cream and dairy products are also high in fat so will contribute to your cat piling on the pounds."
+    },
+    {
+      "id": "KC33",
+      "quote": "as many cats are lactose-intolerant and can develop gastrointestinal problems if fed dairy products."
+    },
+    {
+      "id": "KC46",
+      "quote": "Feeding milk and milk-based products to cats can actually cause them to vomit or have diarrhea."
+    }
   ],
-  "related": ["milk", "cheese", "fatty-meat", "bacon"],
+  "related": [
+    "milk",
+    "cheese",
+    "fatty-meat"
+  ],
   "updated": "2026-10-31",
   "verification": {
-    "en": {"status": "draft", "verified_by": null, "verified_hash": null},
-    "sl": {"status": "draft", "verified_by": null, "verified_hash": null}
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
   }
 }

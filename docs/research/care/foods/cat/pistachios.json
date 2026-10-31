@@ -59,23 +59,23 @@
   ],
   "sources": [
     {
-      "id": "KC229",
+      "id": "KC56",
       "quote": "We’re not sure why nuts get such a bad rap, but like sweet almonds, pistachios are not really toxic to animals."
     },
     {
-      "id": "KC229",
+      "id": "KC56",
       "quote": "That being said, if a pet ingests a large number of  pistachios it is likely to result in stomach upset"
     },
     {
-      "id": "KC223",
+      "id": "KC50",
       "quote": "Some foods that may seem harmless, such as grapes, nuts or avocado, can also cause problems for cats."
     },
     {
-      "id": "KC216",
+      "id": "KC43",
       "quote": "Most nuts are very fatty and can cause vomiting and diarrhea, but macadamia nuts specifically will lead to weakness, tremors and hyperthermia."
     },
     {
-      "id": "KC217",
+      "id": "KC44",
       "quote": "Not only are macadamia nuts very fatty, potentially causing pancreatitis, they're also toxic and can cause illness in cats."
     }
   ],
@@ -83,7 +83,6 @@
     "almonds",
     "cashews",
     "walnuts",
-    "salty-snacks",
     "macadamia-nuts"
   ],
   "updated": "2026-10-31",

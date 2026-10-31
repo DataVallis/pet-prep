@@ -1,9 +1,18 @@
 {
   "slug": "ice-cream",
   "species": "cat",
-  "name": {"en": "Ice cream", "sl": "Sladoled"},
-  "question": {"en": "Can cats eat ice cream?", "sl": "Ali lahko mačke jedo sladoled?"},
-  "url_slug": {"en": "ice-cream", "sl": "sladoled"},
+  "name": {
+    "en": "Ice cream",
+    "sl": "Sladoled"
+  },
+  "question": {
+    "en": "Can cats eat ice cream?",
+    "sl": "Ali lahko mačke jedo sladoled?"
+  },
+  "url_slug": {
+    "en": "ice-cream",
+    "sl": "sladoled"
+  },
   "level": "not_recommended",
   "answer": {
     "en": "No, ice cream is not a good treat for cats. It is made with milk and cream, which can upset a cat's stomach, and it adds fat and sugar that cats don't need.",
@@ -14,8 +23,16 @@
     "sl": "Odrasle mačke imajo malo laktaze, encima, ki prebavlja mlečni sladkor, zato lahko mleko in drugi mlečni izdelki povzročijo drisko ali druge prebavne težave. Smetana in mlečni izdelki imajo veliko maščob in lahko vodijo v debelost. Sladkor za mačke ni strupen, je pa nezdrav in jim prinaša nepotrebne kalorije."
   },
   "signs": {
-    "en": ["Diarrhoea", "Vomiting", "Upset stomach"],
-    "sl": ["Driska", "Bruhanje", "Razdražen želodec"]
+    "en": [
+      "Diarrhoea",
+      "Vomiting",
+      "Upset stomach"
+    ],
+    "sl": [
+      "Driska",
+      "Bruhanje",
+      "Razdražen želodec"
+    ]
   },
   "what_to_do": {
     "en": "A lick of plain ice cream is unlikely to be serious. Watch for diarrhoea or vomiting and call your vet if your cat seems unwell. If the ice cream contained chocolate, contact your vet straight away.",
@@ -28,7 +45,10 @@
   },
   "faq": [
     {
-      "q": {"en": "Do cats like ice cream because it is sweet?", "sl": "Ali imajo mačke rade sladoled, ker je sladek?"},
+      "q": {
+        "en": "Do cats like ice cream because it is sweet?",
+        "sl": "Ali imajo mačke rade sladoled, ker je sladek?"
+      },
       "a": {
         "en": "No. Cats can't taste sweetness at all, so sugar gives them nothing but extra calories.",
         "sl": "Ne. Mačke sladkega okusa sploh ne zaznajo, zato jim sladkor prinese le dodatne kalorije."
@@ -36,19 +56,56 @@
     }
   ],
   "sources": [
-    {"id": "KC211", "quote": "Adult cats do not possess significant amounts of lactase (the enzyme that breaks down lactose in milk), so milk and other dairy based products can cause diarrhoea or other digestive upset."},
-    {"id": "KC219", "quote": "Feeding milk and milk-based products to cats can actually cause them to vomit or have diarrhea."},
-    {"id": "KC222", "quote": "Cream and dairy products are also high in fat so will contribute to your cat piling on the pounds."},
-    {"id": "KC220", "quote": "Your cat is lactose intolerant, so dairy products might lead to diarrhea and upset stomach."},
-    {"id": "KC226", "quote": "Even though sugar isn't toxic to cats, it's still unhealthy for them."},
-    {"id": "KC226", "quote": "Sugar adds unnecessary calories, which can quickly lead to weight gain."},
-    {"id": "KC226", "quote": "Cats can't taste sweetness at all."},
-    {"id": "KC226", "quote": "Chocolate contains a chemical compound called theobromine which is toxic to cats."}
+    {
+      "id": "KC38",
+      "quote": "Adult cats do not possess significant amounts of lactase (the enzyme that breaks down lactose in milk), so milk and other dairy based products can cause diarrhoea or other digestive upset."
+    },
+    {
+      "id": "KC46",
+      "quote": "Feeding milk and milk-based products to cats can actually cause them to vomit or have diarrhea."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cream and dairy products are also high in fat so will contribute to your cat piling on the pounds."
+    },
+    {
+      "id": "KC47",
+      "quote": "Your cat is lactose intolerant, so dairy products might lead to diarrhea and upset stomach."
+    },
+    {
+      "id": "KC53",
+      "quote": "Even though sugar isn't toxic to cats, it's still unhealthy for them."
+    },
+    {
+      "id": "KC53",
+      "quote": "Sugar adds unnecessary calories, which can quickly lead to weight gain."
+    },
+    {
+      "id": "KC53",
+      "quote": "Cats can't taste sweetness at all."
+    },
+    {
+      "id": "KC53",
+      "quote": "Chocolate contains a chemical compound called theobromine which is toxic to cats."
+    }
   ],
-  "related": ["milk", "cheese", "yogurt", "chocolate", "xylitol"],
+  "related": [
+    "milk",
+    "cheese",
+    "yogurt",
+    "chocolate"
+  ],
   "updated": "2026-10-31",
   "verification": {
-    "en": {"status": "draft", "verified_by": null, "verified_hash": null},
-    "sl": {"status": "draft", "verified_by": null, "verified_hash": null}
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
   }
 }

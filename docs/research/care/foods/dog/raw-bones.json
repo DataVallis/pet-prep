@@ -1,0 +1,182 @@
+{
+  "slug": "raw-bones",
+  "species": "dog",
+  "name": {
+    "en": "Raw bones",
+    "sl": "Surove kosti"
+  },
+  "question": {
+    "en": "Can dogs eat raw bones?",
+    "sl": "Ali lahko psi jedo surove kosti?"
+  },
+  "url_slug": {
+    "en": "raw-bones",
+    "sl": "surove-kosti"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "Only after talking to your vet. Raw bones do not splinter like cooked ones, but they can still break teeth, cause choking or block the gut, and raw meat on them may carry bacteria such as Salmonella. Some vets allow them under supervision; others advise against bones.",
+    "sl": "Le po posvetu z veterinarjem. Surove kosti se ne cepijo kot kuhane, a lahko vseeno zlomijo zob, povzročijo dušenje ali zamašijo prebavila, surovo meso na njih pa lahko prenaša bakterije, kot je salmonela. Nekateri veterinarji jih dovolijo pod nadzorom, drugi kosti odsvetujejo."
+  },
+  "why": {
+    "en": "Sources differ, so we use the stricter level. The FDA lists blockages, choking and mouth injuries after bones and advises asking your vet about safer chews. AKC notes raw bones may carry Salmonella and very hard bones can damage teeth. Bones can injure or block the gut, and blockages are very serious.",
+    "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. FDA navaja zapore, dušenje in poškodbe ust po kosteh ter svetuje posvet z veterinarjem o varnejših grizalih. AKC opozarja, da surove kosti lahko prenašajo salmonelo in da pretrde kosti lahko poškodujejo zobe. Kosti lahko poškodujejo ali zamašijo prebavila, zapore pa so zelo resne."
+  },
+  "signs": {
+    "en": [
+      "Choking or gagging",
+      "Cuts or bleeding in the mouth",
+      "Vomiting",
+      "Diarrhoea",
+      "Bleeding from the bottom",
+      "Not eating, tiredness (possible blockage)"
+    ],
+    "sl": [
+      "Dušenje ali siljenje na bruhanje",
+      "Ureznine ali krvavitev v ustih",
+      "Bruhanje",
+      "Driska",
+      "Krvavitev iz zadnjika",
+      "Pes noče jesti, utrujenost (možna zapora)"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog swallowed a large piece of bone, or shows any of these signs, contact your vet right away. Note the kind and size of the bone.",
+    "sl": "Če je pes pogoltnil velik kos kosti ali kaže katerega od teh znakov, takoj pokličite veterinarja. Zapišite si, kakšna in kako velika je bila kost."
+  },
+  "serving": {
+    "en": "Ask your vet first. If they agree, choose a bone larger than your dog's muzzle so it can't be swallowed whole, avoid very hard bones, and always supervise chewing.",
+    "sl": "Najprej vprašajte veterinarja. Če se strinja, izberite kost, večjo od dolžine pasjega gobca, da je ne more pogoltniti cele, izogibajte se pretrdim kostem in grizenje vedno nadzorujte."
+  },
+  "child": {
+    "en": "Bones can hurt a dog's teeth and tummy. Only grown-ups and the vet decide if a dog gets a bone, and someone always watches.",
+    "sl": "Kosti lahko poškodujejo pasje zobe in trebušček. O kosti odločajo le odrasli in veterinar, med grizenjem pa vedno nekdo pazi."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are raw bones safer than cooked ones?",
+        "sl": "So surove kosti varnejše od kuhanih?"
+      },
+      "a": {
+        "en": "Cooked bones splinter, which is why they should never be given. Raw bones still carry risks of broken teeth, blockages and bacteria, so ask your vet first.",
+        "sl": "Kuhane kosti se cepijo, zato jih nikoli ne dajajte. Tudi surove kosti nosijo tveganje zlomljenih zob, zapor in bakterij, zato najprej vprašajte veterinarja."
+      }
+    },
+    {
+      "q": {
+        "en": "What size bone is safer?",
+        "sl": "Kako velika kost je varnejša?"
+      },
+      "a": {
+        "en": "A bone should be larger than the length of the dog's muzzle so it can't be swallowed whole, and you should check on your dog while it chews.",
+        "sl": "Kost naj bo večja od dolžine pasjega gobca, da je pes ne more pogoltniti cele, med grizenjem pa psa preverjajte."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD32",
+      "quote": "Many dog owners know not to toss a turkey or chicken bone to their dog; those bones are just too brittle."
+    },
+    {
+      "id": "KD32",
+      "quote": "Chicken bones and other bones from the kitchen table can cause injury when chewed by pets, too."
+    },
+    {
+      "id": "KD32",
+      "quote": "Gastrointestinal obstruction (blockage in the digestive tract)"
+    },
+    {
+      "id": "KD32",
+      "quote": "Choking"
+    },
+    {
+      "id": "KD32",
+      "quote": "Cuts and wounds in the mouth or on the tonsils"
+    },
+    {
+      "id": "KD32",
+      "quote": "Vomiting"
+    },
+    {
+      "id": "KD32",
+      "quote": "Diarrhea"
+    },
+    {
+      "id": "KD32",
+      "quote": "Bleeding from the rectum, and/or"
+    },
+    {
+      "id": "KD32",
+      "quote": "Be careful what you put in the trash can."
+    },
+    {
+      "id": "KD32",
+      "quote": "Dogs are notorious for helping themselves to the turkey carcass or steak bones disposed of there."
+    },
+    {
+      "id": "KD32",
+      "quote": "Talk with your veterinarian about other toys or treats that are most appropriate for your dog."
+    },
+    {
+      "id": "KD33",
+      "quote": "Cooked bones splinter into shards."
+    },
+    {
+      "id": "KD33",
+      "quote": "But raw meat bones may carry bacteria like salmonella."
+    },
+    {
+      "id": "KD33",
+      "quote": "And bones that are too hard, even raw bones, could damage your dog's teeth."
+    },
+    {
+      "id": "KD33",
+      "quote": "Obstructions are very serious and can quickly lead to severe illness and death."
+    },
+    {
+      "id": "KD33",
+      "quote": "It's very important to check periodically on your dog when they are chewing a bone."
+    },
+    {
+      "id": "KD33",
+      "quote": "Bones should be larger than the length of the dog's muzzle, so they can't be swallowed whole."
+    },
+    {
+      "id": "KD33",
+      "quote": "So before giving your dog a raw meat bone, ask your vet if this would be a safe treat."
+    },
+    {
+      "id": "KD1",
+      "quote": "Raw meat and raw eggs can contain bacteria such as Salmonella and E. coli that can be harmful to pets and humans alike."
+    },
+    {
+      "id": "KD1",
+      "quote": "Dogs/cats might sustain injury or obstruction to the gastrointestinal tract when ingesting bones,"
+    },
+    {
+      "id": "KD35",
+      "quote": "If you do suspect your pet has swallowed something you should contact your vet for advice immediately."
+    }
+  ],
+  "related": [
+    "cooked-bones",
+    "raw-meat",
+    "beef",
+    "lamb"
+  ],
+  "updated": "2026-10-31",
+  "verification": {
+    "en": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    },
+    "sl": {
+      "status": "draft",
+      "verified_by": null,
+      "verified_hash": null
+    }
+  }
+}

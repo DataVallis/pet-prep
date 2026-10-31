@@ -24,8 +24,8 @@
   },
   "signs": null,
   "what_to_do": {
-    "en": "Stop giving shrimp if your dog shows tummy discomfort or seems unwell, and call your vet if signs get worse. Call straight away if your dog swallowed shells and is choking or seems blocked up.",
-    "sl": "Prenehajte dajati kozice, če ima pes težave s trebuhom ali se ne počuti dobro, in pokličite veterinarja, če se znaki poslabšajo. Takoj pokličite, če je pes pogoltnil oklepe in se duši ali kaže znake zamašitve."
+    "en": "Stop giving shrimp if your dog shows tummy discomfort or seems unwell, and call your vet if signs get worse. Also call your vet if your dog swallowed shells and seems to be choking.",
+    "sl": "Prenehajte dajati kozice, če ima pes težave s trebuhom ali se ne počuti dobro, in pokličite veterinarja, če se znaki poslabšajo. Pokličite ga tudi, če je pes pogoltnil oklepe in se zdi, da se duši."
   },
   "serving": {
     "en": "A few pieces, fully cooked (steamed is best), plain, with shell, head, legs and tail removed; not fried, breaded or seasoned.",
@@ -87,6 +87,10 @@
     {
       "id": "KD232",
       "quote": "Prawns"
+    },
+    {
+      "id": "KD201",
+      "quote": "Skip deep-fried shrimp or shrimp cooked with butter, oil, garlic, salt, sauces, or seasoning."
     }
   ],
   "related": [
