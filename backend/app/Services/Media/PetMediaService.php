@@ -1896,12 +1896,13 @@ class PetMediaService
 
         // School smooth playback (David 2026-10-28): ffmpeg-derived clips (attention / success
         // loops, release) next to their source, like any phase clip (URL + real length).
-        // Games phase 1 (GAMES_SPEC §8.2 / §8.4): `ball_waiting_loop` the same way, and the
+        // Games phase 1 / 2 (GAMES_SPEC §8.2 / §8.4): `ball_waiting_loop` / `wand_crouch_loop` the same way, and the
         // measured / admin-set `phase_meta.ball_running.exit_side`. Missing = the app's fallback
         // (loop ball_waiting, ball to the centre) — never a lock.
         ['clips' => $derived, 'meta' => $phaseMeta] = app(SchoolClipDerivativeService::class)->derivedFor($derivedSources, $expires);
         foreach ($derived as $key => $clip) {
-            if (str_starts_with($key, PetPhaseClip::GROUP_SCHOOL.'_') || $key === SchoolClipDerivativeService::KEY_BALL_WAITING_LOOP) {
+            if (str_starts_with($key, PetPhaseClip::GROUP_SCHOOL.'_')
+                || in_array($key, [SchoolClipDerivativeService::KEY_BALL_WAITING_LOOP, SchoolClipDerivativeService::KEY_WAND_CROUCH_LOOP], true)) {
                 $phases[$key] = $clip['url'];
                 $phaseSeconds[$key] = $clip['seconds'];
             }

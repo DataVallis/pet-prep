@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "db374939df1b388d2c817a847599e3218c35ccce76e13f588336edd70bb54802"
+      "sha256": "1ad1ce302ff984ec1b497f4caef7a8fb7b78a5d710febcb8e0daa545f0301c77"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "b323b88bf24edaba83d9babd41cc4f13115c1029b32a23ea3cf3852bbd55b6ed"
+      "sha256": "06a5e4b69f08e16bdb652b8c235db39bca5f19bdc67428f84f0ede3a7da11b45"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "5dde80150394b4dca8c833e7b3744210103ad536204b458c2b3d1cab17dcf846"
+      "sha256": "a1aafba379e29e16bc1e8fe764c9293653ce7be544f42763a3e220b967bdd057"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,20 +40,20 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "a5417c968cdee8cecca019d350cd5893131f4b39fa2c8ca826c9285999d80990"
+      "sha256": "967d40477e4097838f285468a0919087df9681e4f8397e2f1fa4ffeed5c3be36"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "276c1e2c3cf222cb13dd7e74219a49bac1feceef63373ccb2579caa2c458cbfe"
+      "sha256": "b1f15fdc8cf807c0fb3616ac7bab26c7b7d93e85d277bfdbbb61b4d0992df269"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "e21c3e8d311f7bc5c746e0fa74cf0dd69854ba3b17da7ebeb2607f6fcbf4dbb7"
+      "sha256": "7a9a39358d284107f9e9629b58a234c51ea63f540c35de9f60047c9a14246476"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "b85e50a23cef213d68a3258d28fef81c71da428bf24085b20d1995b6d2f062ff"
+      "sha256": "459297036379dc804c5ef02b36b36340ad6ec826a018107dc7002eeec6c4aacc"
     },
     "app_release": {
       "path": "docs/research/app-release.json",
@@ -61,11 +61,11 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "abb61b0495b8ab86867c40f50efa47f5b1239e943a7f4e231fce70fecdaa3631"
+      "sha256": "4d09c8242f64aa6fe8045bcee612cee8e72aa7130a3975008196a4f0af5a7038"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "eb6e89f8c57f932703cc3a402f717826a5c2225f7eedefa04da1d809fde261d4"
+      "sha256": "5215043c28f67559147f2d4eff8fb0d4cfa182da3ad23c398b98d94d7192fd8b"
     }
   },
   "suitability_vocabulary": {
@@ -222,7 +222,7 @@
         }
       },
       "status": "available",
-      "breed_count": 75,
+      "breed_count": 77,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -45345,6 +45345,1229 @@
       ]
     },
     {
+      "id": "lagotto_romagnolo",
+      "species": "dog",
+      "order": 75,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Lagotto Romagnolo",
+        "sl": "Lagotto romagnolo"
+      },
+      "slug": {
+        "en": "lagotto-romagnolo",
+        "sl": "lagotto-romagnolo"
+      },
+      "synonyms": {
+        "en": [
+          "Lagotto",
+          "Romagna Water Dog",
+          "Truffle dog"
+        ],
+        "sl": [
+          "lagotto",
+          "romanjski vodni pes",
+          "pes za tartufe"
+        ]
+      },
+      "facets": {
+        "size": "small_medium",
+        "exercise": "over_2h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small_medium",
+          "source_ids": [
+            "S632"
+          ],
+          "ref": "lagotto_romagnolo.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              43,
+              48
+            ],
+            "female": [
+              41,
+              46
+            ]
+          },
+          "source_ids": [
+            "S631"
+          ],
+          "ref": "lagotto_romagnolo.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              13,
+              16
+            ],
+            "female": [
+              11,
+              14
+            ]
+          },
+          "source_ids": [
+            "S631"
+          ],
+          "ref": "lagotto_romagnolo.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "lagotto_romagnolo.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S632"
+          ],
+          "ref": "lagotto_romagnolo.lifespan.rkc",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            15,
+            17
+          ],
+          "source_ids": [
+            "S635"
+          ],
+          "ref": "lagotto_romagnolo.lifespan.petmd",
+          "confidence": "low"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S632"
+          ],
+          "ref": "lagotto_romagnolo.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S632"
+          ],
+          "ref": "lagotto_romagnolo.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S632"
+          ],
+          "ref": "lagotto_romagnolo.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "no",
+          "source_ids": [
+            "S632"
+          ],
+          "ref": "lagotto_romagnolo.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 298,
+            "group": 8,
+            "section": 3,
+            "origin": "IT"
+          },
+          "source_ids": [
+            "S630"
+          ],
+          "ref": "lagotto_romagnolo.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "epilepsy",
+          "source_ids": [
+            "S635"
+          ],
+          "ref": "lagotto_romagnolo.health.juvenile_epilepsy",
+          "confidence": "high"
+        },
+        {
+          "key": "storage_disease",
+          "source_ids": [
+            "S635"
+          ],
+          "ref": "lagotto_romagnolo.health.storage_disease",
+          "confidence": "high"
+        },
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S632"
+          ],
+          "ref": "lagotto_romagnolo.health.hip_elbow",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S633",
+              "S635"
+            ],
+            "refs": [
+              "lagotto_romagnolo.behaviour.family"
+            ]
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S632"
+            ],
+            "refs": [
+              "lagotto_romagnolo.suitability.rkc_shedding"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S632",
+              "S636"
+            ],
+            "refs": [
+              "lagotto_romagnolo.exercise.adult",
+              "lagotto_romagnolo.exercise.daily_text"
+            ]
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S635"
+            ],
+            "refs": [
+              "lagotto_romagnolo.exercise.mental"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S636"
+            ],
+            "refs": [
+              "lagotto_romagnolo.behaviour.time_alone",
+              "lagotto_romagnolo.suitability.woodgreen_time_alone"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S632",
+              "S636"
+            ],
+            "refs": [
+              "lagotto_romagnolo.suitability.rkc_grooming",
+              "lagotto_romagnolo.suitability.woodgreen_grooming"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 2
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "groomer_visit",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 42
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.lagotto_romagnolo.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S632"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S632 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.lagotto_romagnolo.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.lagotto_romagnolo.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S632"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S632)"
+          },
+          {
+            "ref": "proposed_game_parameters.lagotto_romagnolo.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.lagotto_romagnolo.grooming",
+            "basis_source_ids": [
+              "S632"
+            ],
+            "decision": "predlog Claude 2026-10-31 (RKC »More than once a week« brez števila, tudi Woodgreen / PetMD brez števila → 2, M5-R13, M5-R10-82) — čaka Davida"
+          },
+          {
+            "ref": "proposed_game_parameters.lagotto_romagnolo.professional_grooming",
+            "basis_source_ids": [
+              "S636"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): »every six to eight weeks« → 6–8 tednov = 42 dni"
+          },
+          {
+            "ref": "proposed_game_parameters.lagotto_romagnolo.bathing",
+            "basis_source_ids": [
+              "S635"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »once a month« → mesec = 4 tedni"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S632",
+          "S635",
+          "S636"
+        ]
+      },
+      "portrait": {
+        "file": "lagotto-romagnolo.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_je",
+            "level": "minimum",
+            "source_ids": [
+              "S632"
+            ]
+          },
+          {
+            "key": "dna_lsd",
+            "level": "minimum",
+            "source_ids": [
+              "S632"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S632"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S632"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S632"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S632"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S630",
+        "S631",
+        "S632",
+        "S633",
+        "S635",
+        "S636",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
+      "id": "alaskan_malamute",
+      "species": "dog",
+      "order": 76,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Alaskan Malamute",
+        "sl": "Aljaški malamut"
+      },
+      "slug": {
+        "en": "alaskan-malamute",
+        "sl": "aljaski-malamut"
+      },
+      "synonyms": {
+        "en": [
+          "Malamute",
+          "Mal"
+        ],
+        "sl": [
+          "malamut",
+          "aljaski malamut",
+          "malamute"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "daily"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S639"
+          ],
+          "ref": "alaskan_malamute.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              58,
+              64
+            ],
+            "female": [
+              58,
+              64
+            ]
+          },
+          "source_ids": [
+            "S639"
+          ],
+          "ref": "alaskan_malamute.height.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              34,
+              39
+            ],
+            "female": [
+              34,
+              39
+            ]
+          },
+          "source_ids": [
+            "S639"
+          ],
+          "ref": "alaskan_malamute.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            15,
+            18
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "alaskan_malamute.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S639"
+          ],
+          "ref": "alaskan_malamute.lifespan.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            10,
+            14
+          ],
+          "source_ids": [
+            "S640"
+          ],
+          "ref": "alaskan_malamute.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "at_least",
+          "value": 120,
+          "source_ids": [
+            "S639"
+          ],
+          "ref": "proposed_game_parameters.alaskan_malamute.exercise_minutes_adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "every_day",
+          "source_ids": [
+            "S639"
+          ],
+          "ref": "alaskan_malamute.suitability.pdsa_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S639"
+          ],
+          "ref": "alaskan_malamute.suitability.pdsa_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 50,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "alaskan_malamute.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 243,
+            "group": 5,
+            "section": 1,
+            "origin": "US"
+          },
+          "source_ids": [
+            "S637"
+          ],
+          "ref": "alaskan_malamute.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S639"
+          ],
+          "ref": "alaskan_malamute.health.hip_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "hypothyroidism",
+          "source_ids": [
+            "S640"
+          ],
+          "ref": "alaskan_malamute.health.hypothyroidism",
+          "confidence": "medium"
+        },
+        {
+          "key": "cataracts",
+          "source_ids": [
+            "S639"
+          ],
+          "ref": "alaskan_malamute.health.cataracts",
+          "confidence": "high"
+        },
+        {
+          "key": "chondrodysplasia",
+          "source_ids": [
+            "S639"
+          ],
+          "ref": "alaskan_malamute.health.chondrodysplasia",
+          "confidence": "medium"
+        },
+        {
+          "key": "polyneuropathy",
+          "source_ids": [
+            "S639"
+          ],
+          "ref": "alaskan_malamute.health.polyneuropathy",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S639"
+            ],
+            "refs": [
+              "alaskan_malamute.exercise.adult",
+              "alaskan_malamute.suitability.pdsa_exercise"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S639"
+            ],
+            "refs": [
+              "alaskan_malamute.exercise.adult",
+              "alaskan_malamute.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S639"
+            ],
+            "refs": [
+              "alaskan_malamute.behaviour.experienced_owner"
+            ]
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S639"
+            ],
+            "refs": [
+              "alaskan_malamute.behaviour.small_children"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S639"
+            ],
+            "refs": [
+              "alaskan_malamute.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S639"
+            ],
+            "refs": [
+              "alaskan_malamute.suitability.pdsa_shedding"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S639",
+              "S640"
+            ],
+            "refs": [
+              "alaskan_malamute.suitability.pdsa_grooming",
+              "alaskan_malamute.suitability.petmd_grooming"
+            ]
+          },
+          {
+            "tag": "heat_sensitive",
+            "source_ids": [
+              "S640"
+            ],
+            "refs": [
+              "alaskan_malamute.exercise.heat"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S639"
+            ],
+            "refs": [
+              "alaskan_malamute.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 42
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.alaskan_malamute.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S639"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (PDSA S639 'a minimum of two hours of heavy exercise every day'; RKC page not reachable)"
+          },
+          {
+            "ref": "proposed_game_parameters.alaskan_malamute.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.alaskan_malamute.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S639"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 90 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+          },
+          {
+            "ref": "proposed_game_parameters.alaskan_malamute.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 50, Average tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.alaskan_malamute.grooming",
+            "basis_source_ids": [
+              "S639"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden) (PDSA »daily brushing«; PetMD »needs daily brushing«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.alaskan_malamute.ear_care",
+            "basis_source_ids": [
+              "S640"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »once a week« → 1× na teden"
+          },
+          {
+            "ref": "proposed_game_parameters.alaskan_malamute.bathing",
+            "basis_source_ids": [
+              "S640"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »every 6-8 weeks« → 6–8 tednov = 42 dni"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S639",
+          "S640"
+        ]
+      },
+      "portrait": {
+        "file": "alaskan-malamute.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "hip_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K32"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K32"
+            ]
+          },
+          {
+            "key": "dna_ampn",
+            "level": "other_scheme",
+            "source_ids": [
+              "K32"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "K32"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S637",
+        "S639",
+        "S640",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19",
+        "K32"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -50530,6 +51753,69 @@
       "publisher": "VCA Animal Hospitals",
       "title": "American Staffordshire Terrier (Know your pet)",
       "url": "https://vcahospitals.com/know-your-pet/american-staffordshire-terrier"
+    },
+    {
+      "id": "S630",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — Lagotto Romagnolo (298)",
+      "url": "https://www.fci.be/en/nomenclature/LAGOTTO-ROMAGNOLO-298.html"
+    },
+    {
+      "id": "S631",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 298 Lagotto Romagnolo, English (PDF)",
+      "url": "https://fci.be/Nomenclature/Standards/298g08-en.pdf"
+    },
+    {
+      "id": "S632",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Lagotto Romagnolo (Breeds A to Z)",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/lagotto-romagnolo/"
+    },
+    {
+      "id": "S633",
+      "tier": "A",
+      "publisher": "The Royal Kennel Club",
+      "title": "Lagotto Romagnolo breed standard (last updated 1 November 2025)",
+      "url": "https://www.royalkennelclub.com/breed-standards/gundog/lagotto-romagnolo/"
+    },
+    {
+      "id": "S635",
+      "tier": "B",
+      "publisher": "PetMD — Zack Newman, reviewed by Barri J. Morrison, DVM (updated Jul. 24, 2023)",
+      "title": "Lagotto Romagnolo — dog breed health and care",
+      "url": "https://www.petmd.com/dog/breeds/lagotto-romagnolo"
+    },
+    {
+      "id": "S636",
+      "tier": "B",
+      "publisher": "Woodgreen Pets Charity",
+      "title": "Pet Explorer — Lagotto Romagnolo",
+      "url": "https://ask.woodgreen.org.uk/pet-explorer/results/lagotto-romagnolo"
+    },
+    {
+      "id": "S637",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — Alaskan Malamute (243)",
+      "url": "https://www.fci.be/en/nomenclature/ALASKAN-MALAMUTE-243.html"
+    },
+    {
+      "id": "S639",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Alaskan Malamute Breed Information",
+      "url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/alaskan-malamute"
+    },
+    {
+      "id": "S640",
+      "tier": "B",
+      "publisher": "PetMD — Zack Newman, reviewed by Barri J. Morrison, DVM (updated Jan. 10, 2023)",
+      "title": "Alaskan Malamute",
+      "url": "https://petmd.com/dog/breeds/alaskan-malamute"
     },
     {
       "id": "C1",

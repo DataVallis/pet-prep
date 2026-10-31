@@ -8,6 +8,22 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-31 — Palica s peresom: ko se muca pritaji, pero res miruje (tudi počasno »mahanje« ne prinese nič)
+
+**Kaj:** David je odločil **strogo pravilo mirovanja** za novo igro s palico (v2): znak 👀 se pokaže **1,5 s** pred vsakim skokom muce, v **zadnji sekundi** pred skokom pa mora pero popolnoma mirovati. Prej je bil znak 0,9 s pred skokom in v zadnjih 0,8 s je bil dovoljen en premik. Samo nastavitev na strežniku (`config/wand.php`), brez nove kode.
+**Zakaj je pomembno:** simulacija QA je pokazala luknjo — otrok, ki pero **enakomerno počasi premika ves čas** (poteg vsakih ~1 s) in se na muco sploh ne odziva, je pri starem pravilu dobil zvezdice v **~90 % lovov**. Po novem: tak »avtopilot« dobi zvezdice v **≈ 0 %** lovov (test: 0 od 200), pošten otrok, ki opazi znak in potezo ustavi v ~0,3–0,45 s, pa dobi **vse 4 zvezdice** (test: 100 od 100; simulacija QA ~98–100 %). Igra torej res nagrajuje to, kar uči: opazuj mačko.
+**Kako povedati:** 🧒 *načrt (aplikacija v2 še v gradnji):* »Ko vidiš 👀, ustavi pero — muca se pripravlja na skok!« · 👩 »Igra ne nagrajuje mahanja, ampak opazovanje: ko se mačka pritaji, plen obmiruje — tako se z mačko igramo tudi doma.« · 🛠 »Pravilo je v urniku vsake seje (znak = skok − 1500 ms, okno 1000 ms, 0 premikov), zato ga lahko spremenimo brez nove aplikacije; testi s 200 naključnimi lovi preverijo, da počasno mahanje pade in pošten igralec uspe.«
+
+---
+
+## 2026-10-30 — Palica s peresom in šola: nova pravila na strežniku (hitro metanje peresa ne prinese nič)
+
+**Kaj:** strežniški del faz 2–4 nove igre (GAMES_SPEC, pravila potrdil David 30. 10.). **Palica s peresom (muca):** namesto minute en **lov ~25 s** s tremi skoki in ulovom, točkovan v **zvezdicah** — izmik šteje samo, če otrok pero **umiri, ko se muca pritaji**, in ga **potegne stran 0,15–1,5 s po skoku**; ulov šteje, če muco pusti, da ujame. Igra šteje pri 2 od 4 zvezdic. **Šola (pes):** vaja = **2 kroga po 3 ukaze** s premorom, brez »previjanja nazaj« (rez skrije prekrivni odziv 1,2 s), otrok lahko **konča po prvem krogu** (napredek šteje, dnevna rutina samo cela vaja). Namesto »Pohvali« bo **priboljšek** — samo če ga je družina kupila v »Željah«, in šola ga ne porabi. Brezplačno (ffmpeg, 0 $) strežnik naredi še zanko pritajene muce. **Aplikacija za nova pravila je še *načrt*** — stare različice aplikacije ostanejo pri starih pravilih, nič se ne pokvari.
+**Zakaj je pomembno:** testerji so pri palici našli napako — **z metanjem peresa celo minuto si dobil boljši rezultat** kot z dobro igro. Novo pravilo nagrajuje odziv na viden znak (mačka se pritaji → miruj; skoči → umakni), ne števila potegov: test dokazuje, da neprekinjeno hitro metanje prinese **0 zvezdic**, pošten igralec pa vse 4 (počasno neprekinjeno premikanje je takrat še večinoma štelo — strožje pravilo je David odločil 31. 10., vnos zgoraj). Igre so krajše (~25 s namesto 60 s; vaja šole ~35–64 s), en zgrešen skok ne podre več cele igre.
+**Kako povedati:** 🧒 *načrt:* »Ko se muca pritaji, pero miruje. Ko skoči — hitro stran! Na koncu jo pusti, da ujame.« · 👩 »Igra uči, kako se z mačko res igramo: plen beži stran, na koncu ga muca ujame — sicer je razočarana (Ontario SPCA).« · 🛠 »Pravila so različičena: aplikacija ob začetku pošlje `rules: 2`, strežnik shrani različico v sejo; stare gradnje dobijo v1 bajt za bajtom.« · 💼 »Popravek goljufanja in krajše igre brez enega dodatnega evra za AI.«
+
+---
+
 ## 2026-10-30 — Kakec z vrečko, luža s krpo: čiščenje postane igra
 
 **Kaj:** GAMES_SPEC faza 1, del 2. Neredi imajo nove, jasne risbe po CGP v2 (David je 30. 10. izbral skico A): kakec je mehak trinadstropni rjav zavoj brez obraza (1–3 kosi, za isti nered vedno enako), luža je plitva rumena luža z robom, odsevom in kapljico, pregrizen copat ima 3 kosmiče, mačje grudice so svetle in zaobljene. Risbe zamenjajo »krogce in tulce« povsod — na glavnem zaslonu, v stari igri tapkanja in pri mačjem pesku (pridejo z OTA). Na novi gradnji (isti igralni sloj kot nova žoga) je čiščenje prava igra: **vrečko** povlečeš čez kakec (stisne se vanjo, vrečka se zaveže in odleti v koš), **lužo** obrišeš s krpo kot strgalno srečko do ~90 % (skrči se in posuši), **copat** in kosmiče povlečeš v škatlo in kužku daš **igračo za grizenje**, pri muci **lopatko** povlečeš skozi pesek, grudice se primejo, stresi jih navzgor v vrečko in pesek se zgladi. Ob prvem čiščenju vrste se enkrat pokaže učni namig.

@@ -88,6 +88,14 @@ use Random\Randomizer;
  * of having an accident (accidentAvoidanceChance, S47); place progress
  * lowers the teething chewing chance (chewingChanceFactor, S33).
  *
+ * Rules v2 (GAMES_SPEC §4.1, David 2026-10-30 Š1–Š3): a start with `rules: 2` (new app)
+ * gets 2 rounds × 3 cues with a ROUND_BREAK_MS break after cue 3, R = MASK_MS (the release
+ * clip is no longer played — a cut under the feedback mask), and may end after round 1
+ * (`ended_after_round: 1`: progress counts, the routine does not, duration = round 1).
+ * A start reserves its version's maxSessionMs(); the child state reserves the larger of
+ * both. Praise window, obey chance, progress / decay, budget, fair share and routines are
+ * the same for both versions; the version lives in the schedule (`rules_version`).
+ *
  * Only pets with training enabled (Pet::trainingEnabled — profile + app
  * feature `training`); legacy-profile pets never. All callers hold the
  * pet's row lock (backend/CLAUDE.md); pet attributes are written on $pet,
@@ -97,6 +105,21 @@ class TrainingService
 {
     /** David 2026-10-28: 6 commands per session (~60 s; was 8 × 6 s). */
     public const TRIALS_PER_SESSION = 6;
+
+    /** GAMES_SPEC §7.2: v1 schedule (old apps, a start without `rules`). */
+    public const RULES_V1 = 1;
+
+    /** GAMES_SPEC §4.1 (David 2026-10-30, Š1–Š3): 2 rounds × 3 cues, the mask instead of the release clip. */
+    public const RULES_V2 = 2;
+
+    /** v2 (Š1): cues per round — TRIALS_PER_SESSION / TRIALS_PER_ROUND rounds. */
+    public const TRIALS_PER_ROUND = 3;
+
+    /** v2 (Š1): the break after each round but the last (cue 3 → cue 4). */
+    public const ROUND_BREAK_MS = 2500;
+
+    /** v2 (Š2): the feedback mask the cut success_loop → attention_loop hides under — R of the schedule. */
+    public const MASK_MS = 1200;
 
     /**
      * Learning pace (orchestrator 2026-10-28, kept): progress per on-time praise ×
@@ -183,22 +206,39 @@ class TrainingService
      * longest think) — what the budget and the midnight checks reserve before the schedule
      * is drawn. The started session counts its real length (duration_ms).
      */
-    public static function maxSessionMs(int $performingMs = self::DEFAULT_PERFORMING_MS, int $releaseMs = self::DEFAULT_RELEASE_MS): int
+    public static function maxSessionMs(int $performingMs = self::DEFAULT_PERFORMING_MS, int $releaseMs = self::DEFAULT_RELEASE_MS, int $rules = self::RULES_V1): int
     {
-        $obeySlot = self::THINK_MAX_MS + self::clampPerforming($performingMs) + self::PRAISE_WINDOW_MS + self::clampRelease($releaseMs) + self::CALM_MS;
+        $r = $rules === self::RULES_V2 ? self::MASK_MS : self::clampRelease($releaseMs);
+        $obeySlot = self::THINK_MAX_MS + self::clampPerforming($performingMs) + self::PRAISE_WINDOW_MS + $r + self::CALM_MS;
+        $breaks = $rules === self::RULES_V2 ? (self::rounds() - 1) * self::ROUND_BREAK_MS : 0;
 
-        return self::LEAD_IN_MS + self::TRIALS_PER_SESSION * max($obeySlot, self::IGNORE_SLOT_MS);
+        return self::LEAD_IN_MS + self::TRIALS_PER_SESSION * max($obeySlot, self::IGNORE_SLOT_MS) + $breaks;
     }
 
-    /** maxSessionMs() of this pet: its longest command (stored clip lengths). */
-    public function maxSessionMsFor(Pet $pet): int
+    /** v2: rounds of a session (TRIALS_PER_SESSION / TRIALS_PER_ROUND = 2). */
+    public static function rounds(): int
     {
+        return intdiv(self::TRIALS_PER_SESSION + self::TRIALS_PER_ROUND - 1, self::TRIALS_PER_ROUND);
+    }
+
+    /**
+     * maxSessionMs() of this pet: its longest command (stored clip lengths). `$rules` 1 / 2 =
+     * that version (what a start of that version reserves); null = the larger of both — the
+     * child state (`can_start`, `session_seconds`) does not know the app's version, so it
+     * reserves what either start would and never offers a start the server refuses.
+     */
+    public function maxSessionMsFor(Pet $pet, ?int $rules = null): int
+    {
+        $versions = $rules === null ? [self::RULES_V1, self::RULES_V2] : [$rules];
+        $timings = $this->clipTimings($pet) ?: [['performing_ms' => self::DEFAULT_PERFORMING_MS, 'release_ms' => self::DEFAULT_RELEASE_MS]];
         $max = 0;
-        foreach ($this->clipTimings($pet) as $t) {
-            $max = max($max, self::maxSessionMs($t['performing_ms'], $t['release_ms']));
+        foreach ($timings as $t) {
+            foreach ($versions as $v) {
+                $max = max($max, self::maxSessionMs($t['performing_ms'], $t['release_ms'], $v));
+            }
         }
 
-        return $max > 0 ? $max : self::maxSessionMs();
+        return $max;
     }
 
     /**
@@ -305,9 +345,9 @@ class TrainingService
      * Whole seconds a session of this pet reserves from the budget before it starts (its
      * longest possible length, maxSessionMsFor); the started session counts its real length.
      */
-    public function sessionSecondsFor(Pet $pet): int
+    public function sessionSecondsFor(Pet $pet, ?int $rules = null): int
     {
-        return intdiv($this->maxSessionMsFor($pet) + 999, 1000);
+        return intdiv($this->maxSessionMsFor($pet, $rules) + 999, 1000);
     }
 
     /**
@@ -541,7 +581,7 @@ class TrainingService
      *
      * @return array{refusal: CareRefusal, next_allowed_at: CarbonInterface|null}|null
      */
-    public function startRefusal(Pet $pet, ?User $child, CarbonInterface $now, bool $logMissingData = false, ?bool $mediaReady = null): ?array
+    public function startRefusal(Pet $pet, ?User $child, CarbonInterface $now, bool $logMissingData = false, ?bool $mediaReady = null, ?int $rules = null): ?array
     {
         $now = CarbonImmutable::instance($now)->utc()->startOfSecond();
         $refuse = fn (CareRefusal $r, ?CarbonInterface $next = null): array => ['refusal' => $r, 'next_allowed_at' => $next];
@@ -561,7 +601,9 @@ class TrainingService
         if (! ($mediaReady ?? $this->mediaReady($pet))) {
             return $refuse(CareRefusal::MediaNotReady);
         }
-        $sessionMs = $this->maxSessionMsFor($pet);
+        // GAMES_SPEC §7.3: a start reserves its version's longest session; without a version
+        // (child state) the larger of both.
+        $sessionMs = $this->maxSessionMsFor($pet, $rules);
         if ($this->dayEndingAt($pet, $now, $sessionMs)) {
             return $refuse(CareRefusal::TrainingDayEnding, $this->dayEndsAt($pet, $now));
         }
@@ -612,14 +654,15 @@ class TrainingService
      *
      * @return array{refusal: CareRefusal|null, next_allowed_at: CarbonInterface|null, session: PetTrainingSession|null}
      */
-    public function start(Pet $pet, User $child, TrainingCommand $command, CarbonInterface $now): array
+    public function start(Pet $pet, User $child, TrainingCommand $command, CarbonInterface $now, int $rules = self::RULES_V1): array
     {
         $now = CarbonImmutable::instance($now)->utc()->startOfSecond();
+        $rules = $rules === self::RULES_V2 ? self::RULES_V2 : self::RULES_V1;
 
         if ($pet->trainingEnabled()) {
             $this->expireStale($pet, $now);
         }
-        if (($refusal = $this->startRefusal($pet, $child, $now, true)) !== null) {
+        if (($refusal = $this->startRefusal($pet, $child, $now, true, rules: $rules)) !== null) {
             return [...$refusal, 'session' => null];
         }
 
@@ -631,7 +674,7 @@ class TrainingService
         $rng = $this->scheduleSeed === null
             ? new Randomizer
             : new Randomizer(new Xoshiro256StarStar(hash('sha256', $this->scheduleSeed.'|schedule|'.$now->getTimestamp(), true)));
-        $schedule = $this->schedule($progress, $rng, $timing['performing_ms'], $timing['release_ms']);
+        $schedule = $this->schedule($progress, $rng, $timing['performing_ms'], $timing['release_ms'], $rules);
         $durationMs = $schedule['duration_ms'];
         $endsAt = $now->addMilliseconds($durationMs);
 
@@ -658,14 +701,25 @@ class TrainingService
      * A repeat for an already completed session of the same child returns
      * it again (`repeat` = true, nothing written — idempotent retry).
      *
+     * Early end (GAMES_SPEC §4.1 Š3, David 2026-10-30, rules v2 only): `$endedAfterRound` 1 =
+     * the child stopped after round 1. Accepted from round 1's end (minus
+     * FINISH_EARLY_TOLERANCE_MS) until round 2's start (plus the tolerance) — later →
+     * training_round_two_started (QA #461 M1: finish the session in full instead); only
+     * round 1's cues are scored (taps before round 2's first cue), progress counts with the
+     * session's pace factor (× 8 / 6 as a full session), `duration_ms` becomes the real time
+     * used = clamp(elapsed since the start, round 1's end, the scheduled duration) — the
+     * budget and the fair share count that — and `full` = false — the
+     * caller writes no `trained_pet` row, so the »Šolanje« routine counts only a full session.
+     * A v1 session refuses an early end (training_session_not_over).
+     *
      * @param  list<int>  $taps
-     * @return array{refusal: CareRefusal|null, session: PetTrainingSession|null, repeat: bool}
+     * @return array{refusal: CareRefusal|null, session: PetTrainingSession|null, repeat: bool, full: bool}
      */
-    public function finish(Pet $pet, User $child, string $publicId, array $taps, CarbonInterface $now): array
+    public function finish(Pet $pet, User $child, string $publicId, array $taps, CarbonInterface $now, ?int $endedAfterRound = null): array
     {
         $exact = CarbonImmutable::instance($now)->utc();
         $now = $exact->startOfSecond();
-        $refuse = fn (CareRefusal $r, ?PetTrainingSession $s = null): array => ['refusal' => $r, 'session' => $s, 'repeat' => false];
+        $refuse = fn (CareRefusal $r, ?PetTrainingSession $s = null): array => ['refusal' => $r, 'session' => $s, 'repeat' => false, 'full' => false];
 
         if (! $pet->trainingEnabled()) {
             return $refuse(CareRefusal::TrainingNotAvailable);
@@ -676,7 +730,7 @@ class TrainingService
             return $refuse(CareRefusal::TrainingSessionInvalid);
         }
         if ($session->status === PetTrainingSession::STATUS_COMPLETED) {
-            return ['refusal' => null, 'session' => $session, 'repeat' => true];
+            return ['refusal' => null, 'session' => $session, 'repeat' => true, 'full' => ($session->result['ended_after_round'] ?? null) === null];
         }
         $this->expireStale($pet, $now);
         $session->refresh();
@@ -690,8 +744,29 @@ class TrainingService
 
             return $refuse(CareRefusal::TrainingSessionExpired, $session);
         }
-        if ($exact->lessThan($session->ends_at->copy()->subMilliseconds(self::FINISH_EARLY_TOLERANCE_MS))) {
+        $schedule = (array) $session->schedule;
+        $round = null;
+        if ($endedAfterRound !== null) {
+            // Š3: only a v2 session, only after round 1 (and never the last round).
+            $round = self::rulesOf($schedule) === self::RULES_V2 ? ($schedule['rounds'][$endedAfterRound - 1] ?? null) : null;
+            if ($round === null || $endedAfterRound >= count($schedule['rounds'] ?? [])) {
+                return $refuse(CareRefusal::TrainingSessionNotOver, $session);
+            }
+        }
+        $endsAt = $round === null
+            ? $session->ends_at->copy()
+            : $session->started_at->copy()->addMilliseconds((int) $round['end_ms']);
+        if ($exact->lessThan($endsAt->subMilliseconds(self::FINISH_EARLY_TOLERANCE_MS))) {
             return $refuse(CareRefusal::TrainingSessionNotOver, $session);
+        }
+        $elapsedMs = (int) floor($session->started_at->diffInMilliseconds($exact, true));
+        if ($round !== null) {
+            // QA #461 M1: the early end is only for a child who stops in the break — once the
+            // next round has started (+ tolerance) the session is finished in full instead.
+            $nextStart = (int) ($schedule['rounds'][$endedAfterRound]['start_ms'] ?? PHP_INT_MAX);
+            if ($elapsedMs > $nextStart + self::FINISH_EARLY_TOLERANCE_MS) {
+                return $refuse(CareRefusal::TrainingRoundTwoStarted, $session);
+            }
         }
         foreach ($taps as $tap) {
             if (! is_int($tap) || $tap < 0 || $tap > $session->duration_ms) {
@@ -699,12 +774,23 @@ class TrainingService
             }
         }
 
+        $trials = $schedule['trials'];
+        $scoredTaps = $taps;
+        if ($round !== null) {
+            // Round 1's cues only; a tap counts up to the next round's first cue (as in a full session).
+            $next = $trials[(int) $round['last_index'] + 1]['cue_at_ms'] ?? PHP_INT_MAX;
+            $trials = array_slice($trials, (int) $round['first_index'], (int) $round['last_index'] - (int) $round['first_index'] + 1);
+            $scoredTaps = array_values(array_filter($taps, fn (int $t): bool => $t < $next));
+        }
         $score = self::score(
-            $session->schedule['trials'],
-            (int) $session->schedule['praise_window_ms'],
-            $taps,
-            (int) ($session->schedule['min_reaction_ms'] ?? self::MIN_REACTION_MS),
+            $trials,
+            (int) $schedule['praise_window_ms'],
+            $scoredTaps,
+            (int) ($schedule['min_reaction_ms'] ?? self::MIN_REACTION_MS),
         );
+        if (self::rulesOf($schedule) === self::RULES_V2) {
+            $score['ended_after_round'] = $round === null ? null : $endedAfterRound;
+        }
         $score['suspicious'] = self::looksScripted($score);
         if ($score['suspicious']) {
             // PR #53 M1: identical reaction times look like a modified app. Pet id only (no child data).
@@ -731,9 +817,12 @@ class TrainingService
             'result' => $score,
             'progress_before' => $before,
             'progress_gain' => $after - $before,
+            // Š3 (QA #461 M1): an early end counts the real time used — elapsed since the start,
+            // at least round 1, at most the scheduled session.
+            ...($round === null ? [] : ['duration_ms' => max((int) $round['end_ms'], min($elapsedMs, (int) $session->duration_ms))]),
         ])->save();
 
-        return ['refusal' => null, 'session' => $session, 'repeat' => false];
+        return ['refusal' => null, 'session' => $session, 'repeat' => false, 'full' => $round === null];
     }
 
     /**
@@ -834,13 +923,22 @@ class TrainingService
      *  - ignores: perform_at / obey_at / window_end / release_at null; slot end = cue + IGNORE_SLOT_MS;
      *  - duration_ms = the last slot end.
      *
-     * @return array{praise_window_ms: int, min_reaction_ms: int, duration_ms: int, trials: list<array{index: int, cue_at_ms: int, obeys: bool, perform_at_ms: int|null, obey_at_ms: int|null, window_end_ms: int|null, release_at_ms: int|null}>}
+     * Rules v2 (GAMES_SPEC §4.1, David 2026-10-30): R = MASK_MS (Š2 — the release clip is not
+     * played; the cut success_loop → attention_loop hides under the feedback mask) and after
+     * every TRIALS_PER_ROUND cues but the last a ROUND_BREAK_MS break (Š1: the next cue =
+     * that slot end + ROUND_BREAK_MS). The draw (obeys, think times) is the same as v1. Extra
+     * keys: `rules_version` 2, `mask_ms`, `round_break_ms`, `round_breaks_ms` (start of each
+     * break), `rounds` [{round, first_index, last_index, start_ms, end_ms}] — end_ms of round 1
+     * is where an early finish (Š3) ends the session.
+     *
+     * @return array{praise_window_ms: int, min_reaction_ms: int, duration_ms: int, trials: list<array{index: int, cue_at_ms: int, obeys: bool, perform_at_ms: int|null, obey_at_ms: int|null, window_end_ms: int|null, release_at_ms: int|null}>, rules_version?: int, mask_ms?: int, round_break_ms?: int, round_breaks_ms?: list<int>, rounds?: list<array{round: int, first_index: int, last_index: int, start_ms: int, end_ms: int}>}
      */
-    public function schedule(float $progress, Randomizer $rng, int $performingMs = self::DEFAULT_PERFORMING_MS, int $releaseMs = self::DEFAULT_RELEASE_MS): array
+    public function schedule(float $progress, Randomizer $rng, int $performingMs = self::DEFAULT_PERFORMING_MS, int $releaseMs = self::DEFAULT_RELEASE_MS, int $rules = self::RULES_V1): array
     {
+        $v2 = $rules === self::RULES_V2;
         $chance = self::OBEY_CHANCE_UNTRAINED + (self::OBEY_CHANCE_TRAINED - self::OBEY_CHANCE_UNTRAINED) * max(0.0, min(100.0, $progress)) / 100;
         $performingMs = self::clampPerforming($performingMs);
-        $releaseMs = self::clampRelease($releaseMs);
+        $releaseMs = $v2 ? self::MASK_MS : self::clampRelease($releaseMs);
 
         $obeys = [];
         for ($i = 0; $i < self::TRIALS_PER_SESSION; $i++) {
@@ -855,7 +953,17 @@ class TrainingService
 
         $trials = [];
         $cue = self::LEAD_IN_MS;
+        $rounds = [];
+        $breaks = [];
+        $roundStart = 0;
         for ($i = 0; $i < self::TRIALS_PER_SESSION; $i++) {
+            if ($v2 && $i > 0 && $i % self::TRIALS_PER_ROUND === 0) {
+                // Š1: the round ended at this slot end — a break, then the next round's first cue.
+                $rounds[] = ['round' => count($rounds) + 1, 'first_index' => $i - self::TRIALS_PER_ROUND, 'last_index' => $i - 1, 'start_ms' => $roundStart, 'end_ms' => $cue];
+                $breaks[] = $cue;
+                $cue += self::ROUND_BREAK_MS;
+                $roundStart = $cue;
+            }
             if ($obeys[$i]) {
                 $performAt = $cue + $rng->getInt(self::THINK_MIN_MS, self::THINK_MAX_MS);
                 $obeyAt = $performAt + $performingMs;
@@ -884,7 +992,54 @@ class TrainingService
             }
         }
 
-        return ['praise_window_ms' => self::PRAISE_WINDOW_MS, 'min_reaction_ms' => self::MIN_REACTION_MS, 'duration_ms' => $cue, 'trials' => $trials];
+        $schedule = ['praise_window_ms' => self::PRAISE_WINDOW_MS, 'min_reaction_ms' => self::MIN_REACTION_MS, 'duration_ms' => $cue, 'trials' => $trials];
+        if (! $v2) {
+            return $schedule;
+        }
+        $last = intdiv(self::TRIALS_PER_SESSION - 1, self::TRIALS_PER_ROUND) * self::TRIALS_PER_ROUND;
+        $rounds[] = ['round' => count($rounds) + 1, 'first_index' => $last, 'last_index' => self::TRIALS_PER_SESSION - 1, 'start_ms' => $roundStart, 'end_ms' => $cue];
+
+        return $schedule + [
+            'rules_version' => self::RULES_V2,
+            'mask_ms' => self::MASK_MS,
+            'round_break_ms' => self::ROUND_BREAK_MS,
+            'round_breaks_ms' => $breaks,
+            'rounds' => $rounds,
+        ];
+    }
+
+    /** The rules version of a stored schedule (none = v1). */
+    public static function rulesOf(array $schedule): int
+    {
+        return (int) ($schedule['rules_version'] ?? self::RULES_V1) === self::RULES_V2 ? self::RULES_V2 : self::RULES_V1;
+    }
+
+    /**
+     * The v2 keys of a stored schedule for the app (empty for v1 — a v1 payload stays byte
+     * for byte): rules_version, mask_ms, round_break_ms, round_breaks_ms, rounds.
+     *
+     * @param  array<string, mixed>  $schedule
+     * @return array{rules_version?: int, mask_ms?: int, round_break_ms?: int, round_breaks_ms?: list<int>, rounds?: list<array{round: int, first_index: int, last_index: int, start_ms: int, end_ms: int}>}
+     */
+    public static function v2KeysOf(array $schedule): array
+    {
+        if (self::rulesOf($schedule) !== self::RULES_V2) {
+            return [];
+        }
+
+        return [
+            'rules_version' => self::RULES_V2,
+            'mask_ms' => (int) ($schedule['mask_ms'] ?? self::MASK_MS),
+            'round_break_ms' => (int) ($schedule['round_break_ms'] ?? self::ROUND_BREAK_MS),
+            'round_breaks_ms' => array_map('intval', array_values($schedule['round_breaks_ms'] ?? [])),
+            'rounds' => array_map(fn (array $r): array => [
+                'round' => (int) $r['round'],
+                'first_index' => (int) $r['first_index'],
+                'last_index' => (int) $r['last_index'],
+                'start_ms' => (int) $r['start_ms'],
+                'end_ms' => (int) $r['end_ms'],
+            ], array_values($schedule['rounds'] ?? [])),
+        ];
     }
 
     /**

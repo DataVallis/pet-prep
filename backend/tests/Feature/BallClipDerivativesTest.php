@@ -119,13 +119,14 @@ function bcdProbe(string $path): array
     return (array) $probe;
 }
 
-it('names the ball derivative keys; wand clips get none in phase 1', function () {
+it('names the ball derivative keys (wand_stalking → wand_crouch_loop since phase 2)', function () {
     expect(SchoolClipDerivativeService::keyFor(PetPhaseClip::BallWaiting))->toBe('ball_waiting_loop')
         ->and(SchoolClipDerivativeService::keyFor(PetPhaseClip::BallRunning))->toBe('ball_running_exit_side')
         ->and(SchoolClipDerivativeService::keyFor(PetPhaseClip::BallFetching))->toBeNull()
-        ->and(SchoolClipDerivativeService::keyFor(PetPhaseClip::WandStalking))->toBeNull()
-        ->and(SchoolClipDerivativeService::phaseSourceStates())->toContain('ball_waiting', 'ball_running', 'school_sit_attention')
-        ->not->toContain('ball_fetching', 'wand_stalking');
+        ->and(SchoolClipDerivativeService::keyFor(PetPhaseClip::WandStalking))->toBe('wand_crouch_loop')
+        ->and(SchoolClipDerivativeService::keyFor(PetPhaseClip::WandPouncing))->toBeNull()
+        ->and(SchoolClipDerivativeService::phaseSourceStates())->toContain('ball_waiting', 'ball_running', 'school_sit_attention', 'wand_stalking')
+        ->not->toContain('ball_fetching', 'wand_pouncing', 'wand_catching');
 });
 
 it('makes ball_waiting_loop as a full-size ping-pong (no 1280 cap), at 0 $', function () {

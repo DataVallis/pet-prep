@@ -65,6 +65,12 @@ enum CareRefusal: string
     /** The session's schedule has not run its course yet. */
     case TrainingSessionNotOver = 'training_session_not_over';
 
+    /**
+     * GAMES_SPEC Š3 (QA #461 M1): `ended_after_round` arrived after round 2 had started
+     * (+ 2 s tolerance) — an early end is only for stopping in the break; finish in full.
+     */
+    case TrainingRoundTwoStarted = 'training_round_two_started';
+
     /** Finished after the session's expiry (TTL) — no progress. */
     case TrainingSessionExpired = 'training_session_expired';
 

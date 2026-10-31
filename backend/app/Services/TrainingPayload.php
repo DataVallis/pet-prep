@@ -32,6 +32,10 @@ use Illuminate\Support\Collection;
  *   can train the dog), `my_share_seconds` (budget / children_sharing, 0 when
  *   the viewer cannot train; at least one session, QA m3) and `my_seconds_left` (what the viewing child
  *   may still start today, never more than the dog's budget left).
+ * - `session_seconds`: the longest session of either rules version (GAMES_SPEC §7.3 — the
+ *   state does not know the app's version; a start reserves its own version's length).
+ * - `treat_token` (child state only): the school v2 shows a treat instead of »Pohvali« ♥
+ *   (David 2026-10-30) — the family bought treats for this pet; display only.
  *
  * summaryFor() (broadcast, parent dashboard) runs no budget / session-detail
  * queries (PR #53 m6).
@@ -42,7 +46,7 @@ final class TrainingPayload
 {
     /**
      * @param  list<array{command: 'sit'|'come'|'place'|'potty', progress: int, learned: bool, last_practised_at: string|null}>  $commands
-     * @param  array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, mine: bool, duration_ms: int|null, praise_window_ms: int|null, min_reaction_ms: int|null, trials: list<array{index: int, cue_at_ms: int, obeys: bool, perform_at_ms?: int|null, obey_at_ms: int|null, window_end_ms: int|null, release_at_ms?: int|null}>|null}|null  $session
+     * @param  array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, mine: bool, duration_ms: int|null, praise_window_ms: int|null, min_reaction_ms: int|null, trials: list<array{index: int, cue_at_ms: int, obeys: bool, perform_at_ms?: int|null, obey_at_ms: int|null, window_end_ms: int|null, release_at_ms?: int|null}>|null, rules_version?: int, mask_ms?: int, round_break_ms?: int, round_breaks_ms?: list<int>, rounds?: list<array{round: int, first_index: int, last_index: int, start_ms: int, end_ms: int}>}|null  $session
      */
     public function __construct(
         public readonly bool $enabled,
@@ -55,6 +59,7 @@ final class TrainingPayload
         public readonly int $myShareSeconds = 0,
         public readonly int $mySecondsLeft = 0,
         public readonly int $sessionSeconds = 0,
+        public readonly bool $treatToken = false,
     ) {}
 
     public static function for(Pet $pet, ?User $viewer = null, ?CarbonInterface $now = null, bool $full = true): self
@@ -99,6 +104,8 @@ final class TrainingPayload
                 'praise_window_ms' => $mine ? (int) $live->schedule['praise_window_ms'] : null,
                 'min_reaction_ms' => $mine ? (int) ($live->schedule['min_reaction_ms'] ?? TrainingService::MIN_REACTION_MS) : null,
                 'trials' => $mine ? TrainingService::trialsOf($live->schedule) : null,
+                // GAMES_SPEC §7.3: the rules-v2 keys of the child's own v2 session (resume).
+                ...($mine ? TrainingService::v2KeysOf((array) $live->schedule) : []),
             ],
             $budget,
             $left,
@@ -106,6 +113,8 @@ final class TrainingPayload
             $myShare,
             $myLeft,
             $full ? $service->sessionSecondsFor($pet) : 0,
+            // David 2026-10-30 (GAMES_SPEC V6): display only — school never gives away a treat.
+            $full && app(WishService::class)->hasBoughtTreats($pet),
         );
     }
 
@@ -149,7 +158,7 @@ final class TrainingPayload
     /**
      * Full object for the child state.
      *
-     * @return array{enabled: bool, commands: list<array{command: 'sit'|'come'|'place'|'potty', progress: int, learned: bool, last_practised_at: string|null}>, today_done: bool, session: array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, mine: bool, duration_ms: int|null, praise_window_ms: int|null, min_reaction_ms: int|null, trials: list<array{index: int, cue_at_ms: int, obeys: bool, perform_at_ms?: int|null, obey_at_ms: int|null, window_end_ms: int|null, release_at_ms?: int|null}>|null}|null, session_seconds: int, daily_budget_seconds: int, daily_budget_left_seconds: int, children_sharing: int, my_share_seconds: int, my_seconds_left: int}
+     * @return array{enabled: bool, commands: list<array{command: 'sit'|'come'|'place'|'potty', progress: int, learned: bool, last_practised_at: string|null}>, today_done: bool, session: array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, mine: bool, duration_ms: int|null, praise_window_ms: int|null, min_reaction_ms: int|null, trials: list<array{index: int, cue_at_ms: int, obeys: bool, perform_at_ms?: int|null, obey_at_ms: int|null, window_end_ms: int|null, release_at_ms?: int|null}>|null, rules_version?: int, mask_ms?: int, round_break_ms?: int, round_breaks_ms?: list<int>, rounds?: list<array{round: int, first_index: int, last_index: int, start_ms: int, end_ms: int}>}|null, session_seconds: int, daily_budget_seconds: int, daily_budget_left_seconds: int, children_sharing: int, my_share_seconds: int, my_seconds_left: int, treat_token: bool}
      */
     public function toArray(): array
     {
@@ -168,7 +177,7 @@ final class TrainingPayload
              * The running session (any caretaker), `mine` = started by this child; else null.
              * For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
              *
-             * @var array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, mine: bool, duration_ms: int|null, praise_window_ms: int|null, min_reaction_ms: int|null, trials: list<array{index: int, cue_at_ms: int, obeys: bool, perform_at_ms?: int|null, obey_at_ms: int|null, window_end_ms: int|null, release_at_ms?: int|null}>|null}|null
+             * @var array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, mine: bool, duration_ms: int|null, praise_window_ms: int|null, min_reaction_ms: int|null, trials: list<array{index: int, cue_at_ms: int, obeys: bool, perform_at_ms?: int|null, obey_at_ms: int|null, window_end_ms: int|null, release_at_ms?: int|null}>|null, rules_version?: int, mask_ms?: int, round_break_ms?: int, round_breaks_ms?: list<int>, rounds?: list<array{round: int, first_index: int, last_index: int, start_ms: int, end_ms: int}>}|null
              */
             'session' => $this->session,
             // At most this many seconds per session (the budget reserves it at the start; the started
@@ -183,6 +192,14 @@ final class TrainingPayload
             'my_share_seconds' => $this->myShareSeconds,
             // Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left).
             'my_seconds_left' => $this->mySecondsLeft,
+            /**
+             * David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+             * »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+             * `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+             * Display only: the school never consumes a treat (the 2-per-day treat rule is the
+             * home screen's, POST /api/child/pet/treat).
+             */
+            'treat_token' => $this->treatToken,
         ];
     }
 

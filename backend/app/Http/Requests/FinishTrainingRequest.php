@@ -13,6 +13,10 @@ use Illuminate\Foundation\Http\FormRequest;
  * start (the app's own clock from the moment it started the session).
  * Static bounds here; offsets beyond the session's own length are refused
  * by TrainingService (422 training_invalid_taps).
+ *
+ * Optional `ended_after_round: 1` (GAMES_SPEC §4.1 Š3, rules-v2 sessions only):
+ * the child stopped after round 1 — progress counts, the routine does not.
+ * A v1 session answers 422 training_session_not_over.
  */
 class FinishTrainingRequest extends FormRequest
 {
@@ -34,7 +38,17 @@ class FinishTrainingRequest extends FormRequest
             // May be empty (the child never tapped).
             'taps' => ['present', 'array', 'max:'.TrainingService::MAX_TAPS],
             'taps.*' => ['integer', 'min:0', 'max:'.self::MAX_TAP_MS],
+            // Š3: stop after round 1 (rules v2 only).
+            'ended_after_round' => ['sometimes', 'nullable', 'integer', 'min:1', 'max:1'],
         ];
+    }
+
+    /** Š3: the round after which the child stopped (null = the full session). */
+    public function endedAfterRound(): ?int
+    {
+        $round = $this->validated('ended_after_round');
+
+        return $round === null ? null : (int) $round;
     }
 
     public function sessionId(): string

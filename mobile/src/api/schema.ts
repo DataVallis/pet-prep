@@ -791,7 +791,10 @@ export interface paths {
          *     family-local midnight; next_allowed_at = midnight) |
          *     training_daily_budget_used (next_allowed_at = local midnight) |
          *     training_child_share_used (this child's fair share — budget / children
-         *     who can train — is used; next_allowed_at = local midnight); 423 while locked
+         *     who can train — is used; next_allowed_at = local midnight); 423 while locked.
+         *     Body `{command, rules?: 1|2}` (GAMES_SPEC §7.2): 2 = 2 rounds × 3 cues with a
+         *     2.5 s break, R = the 1.2 s mask — `session` then carries `rules_version: 2`,
+         *     `mask_ms`, `round_break_ms`, `round_breaks_ms`, `rounds`; without it v1 is unchanged
          * @description POST /api/child/pet/training/start
          */
         post: operations["childPet.startTraining"];
@@ -817,7 +820,11 @@ export interface paths {
          *     of a completed finish → `unchanged` with the same result.
          *     422 training_session_invalid | training_session_expired |
          *     training_session_not_over | training_invalid_taps | training_session_interrupted |
-         *     training_not_available
+         *     training_not_available. Rules v2: `ended_after_round: 1` ends after round 1
+         *     (Š3) — round 1 is scored, progress counts, no `trained_pet` row (the routine
+         *     counts only a full session; the budget counts the real time used, at least round 1);
+         *     after round 2 started (+ 2 s) → 422 training_round_two_started. `result` then carries
+         *     `rules_version`, `ended_after_round`, `counts_for_routine`
          * @description POST /api/child/pet/training/finish
          */
         post: operations["childPet.finishTraining"];
@@ -875,7 +882,10 @@ export interface paths {
          *     needs_cleaning | wand_too_soon (next_allowed_at = end of the 2 h gap
          *     after the last successful session) | wand_session_active (another
          *     child's game; next_allowed_at = its expiry) | wand_day_ending
-         *     (next_allowed_at = local midnight); 423 while locked
+         *     (next_allowed_at = local midnight); 423 while locked. Body `{rules?: 1|2}`
+         *     (GAMES_SPEC §7.2): 2 = the ~25 s v2 hunt scored in stars — `session`
+         *     then carries `rules_version: 2` and the v2 schedule keys; without it the
+         *     v1 minute is unchanged
          * @description POST /api/child/pet/wand/start
          */
         post: operations["childPet.startWand"];
@@ -903,7 +913,11 @@ export interface paths {
          *     `rejected` = it does not (no penalty — start again at once); a repeat
          *     → `unchanged` with the same result. 422 wand_not_available |
          *     wand_session_invalid | wand_session_expired | wand_session_not_over |
-         *     wand_invalid_moves | wand_session_interrupted; 423 while locked
+         *     wand_invalid_moves | wand_session_interrupted; 423 while locked.
+         *     A rules-v2 session (GAMES_SPEC §5.3) is judged in stars from the moves'
+         *     extra `in_zone` / `speed_ok`; `result` then also carries `rules_version`,
+         *     `stars`, `min_stars`, `max_stars`, `dodges`, `catch`, `hint`
+         *     (reason `too_few_stars`)
          * @description POST /api/child/pet/wand/finish
          */
         post: operations["childPet.finishWand"];
@@ -2000,7 +2014,7 @@ export interface components {
              * @description Enum value sent as `breed` to POST /api/parent/generate-pin.
              * @enum {string}
              */
-            breed: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+            breed: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
             /** @description breed_configs slug (admin / analytics key). */
             slug: string;
             /** @enum {string} */
@@ -2045,7 +2059,7 @@ export interface components {
          * @description Breeds (M5-R06_PLAN T1, T9): the enum stays (it is used in payments and ~20 files), the free / paid rule is data — `breed_configs.premium_unlock` is the single source of truth (read through BreedCatalogService, cached). Every new case needs: slug(), species(), defaultPremium(), the `pets_breed_type_check` / `pets_species_breed_check` constraints and a BreedConfigsSeeder row.
          * @enum {string}
          */
-        BreedType: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+        BreedType: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
         /**
          * ChallengePaidSource
          * @description Why a challenge pet counts as paid (pets.challenge_paid_source, M3-11). Mirrored by the pets_challenge_paid_check constraint.
@@ -2236,12 +2250,18 @@ export interface components {
          *     start (the app's own clock from the moment it started the session).
          *     Static bounds here; offsets beyond the session's own length are refused
          *     by TrainingService (422 training_invalid_taps).
+         *
+         *     Optional `ended_after_round: 1` (GAMES_SPEC §4.1 Š3, rules-v2 sessions only):
+         *     the child stopped after round 1 — progress counts, the routine does not.
+         *     A v1 session answers 422 training_session_not_over.
          */
         FinishTrainingRequest: {
             /** Format: uuid */
             session_id: string;
             /** @description May be empty (the child never tapped). */
             taps: number[];
+            /** @description Š3: stop after round 1 (rules v2 only). */
+            ended_after_round?: number | null;
         };
         /**
          * FinishWandRequest
@@ -2250,6 +2270,11 @@ export interface components {
          *     start (`t`) and whether the feather moved AWAY from the cat (`away`,
          *     C11: "like prey"). Static bounds here; offsets beyond the session's own
          *     length are refused by WandPlayService (422 wand_invalid_moves).
+         *
+         *     Rules v2 (GAMES_SPEC §5.3, additive — a v1 session ignores them): per move
+         *     `in_zone` (the stroke ended inside the play zone) and `speed_ok` (peak speed
+         *     ≤ max_speed_pt_s and length ≥ min_dodge_pt of the schedule). Both are
+         *     reported by the app; in a v2 session a move without them never earns a star.
          */
         FinishWandRequest: {
             /** Format: uuid */
@@ -2258,6 +2283,8 @@ export interface components {
             moves: {
                 t: number;
                 away: boolean;
+                in_zone?: boolean;
+                speed_ok?: boolean;
             }[];
         };
         /**
@@ -2551,7 +2578,9 @@ export interface components {
                  *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                  *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                  *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                 *     missing = loop `ball_waiting`). Always an object.
+                 *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                 *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                 *     missing = hold the `crouch` pose). Always an object.
                  */
                 phases: {
                     [key: string]: string;
@@ -2561,7 +2590,7 @@ export interface components {
                  *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                  *     made before) 3 s. The app times the school from it (the performing clip ends at
                  *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                 *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                 *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                  *     Always an object.
                  */
                 phase_seconds: {
@@ -2922,6 +2951,9 @@ export interface components {
         /**
          * StartTrainingRequest
          * @description POST /api/child/pet/training/start (M5-R03): the command to train.
+         *     Optional `rules` (GAMES_SPEC §7.2): 2 = the v2 school (2 rounds × 3 cues,
+         *     the mask instead of the release clip, early end after round 1 — a new
+         *     app); missing / 1 = the v1 schedule, unchanged for old apps.
          *     Only children (PetPolicy).
          */
         StartTrainingRequest: {
@@ -2936,6 +2968,19 @@ export interface components {
              *     | `potty` <br/> "Lulat zunaj" (house training). Reduces puppy accidents (proposal). |
              */
             command: components["schemas"]["TrainingCommand"];
+            /** @description GAMES_SPEC §7.2: the school rules the app implements (1 = v1, 2 = rounds + mask). */
+            rules?: number;
+        };
+        /**
+         * StartWandRequest
+         * @description POST /api/child/pet/wand/start (M5-R06-04): start the cat's ~60 s wand
+         *     game. The server generates the session. Optional `rules` (GAMES_SPEC §7.2):
+         *     2 = the v2 hunt (~25 s, stars — a new app); missing / 1 = the v1 minute,
+         *     unchanged for old apps. Only children (PetPolicy).
+         */
+        StartWandRequest: {
+            /** @description GAMES_SPEC §7.2: the game rules the app implements (1 = v1, 2 = the v2 hunt). */
+            rules?: number;
         };
         /**
          * SyncStepsRequest
@@ -4382,7 +4427,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -4392,7 +4439,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -4684,6 +4731,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 /**
                                  * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -4699,6 +4757,14 @@ export interface operations {
                                 my_share_seconds: number;
                                 /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                                 my_seconds_left: number;
+                                /**
+                                 * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                                 *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                                 *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                                 *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                                 *     home screen's, POST /api/child/pet/treat).
+                                 */
+                                treat_token: boolean;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                                  *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -4789,6 +4855,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                                 /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -4864,6 +4941,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -4900,6 +4988,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -5303,7 +5402,9 @@ export interface operations {
                                  *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                  *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                  *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                 *     missing = loop `ball_waiting`). Always an object.
+                                 *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                 *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                 *     missing = hold the `crouch` pose). Always an object.
                                  */
                                 phases: {
                                     [key: string]: string;
@@ -5313,7 +5414,7 @@ export interface operations {
                                  *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                  *     made before) 3 s. The app times the school from it (the performing clip ends at
                                  *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                 *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                 *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                  *     Always an object.
                                  */
                                 phase_seconds: {
@@ -5605,6 +5706,17 @@ export interface operations {
                                     window_end_ms: number | null;
                                     release_at_ms?: number | null;
                                 }[] | null;
+                                rules_version?: number;
+                                mask_ms?: number;
+                                round_break_ms?: number;
+                                round_breaks_ms?: number[];
+                                rounds?: {
+                                    round: number;
+                                    first_index: number;
+                                    last_index: number;
+                                    start_ms: number;
+                                    end_ms: number;
+                                }[];
                             } | null;
                             /**
                              * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -5620,6 +5732,14 @@ export interface operations {
                             my_share_seconds: number;
                             /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                             my_seconds_left: number;
+                            /**
+                             * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                             *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                             *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                             *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                             *     home screen's, POST /api/child/pet/treat).
+                             */
+                            treat_token: boolean;
                             /**
                              * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                              *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -5710,6 +5830,17 @@ export interface operations {
                                     window_end_ms: number | null;
                                     release_at_ms?: number | null;
                                 }[] | null;
+                                rules_version?: number;
+                                mask_ms?: number;
+                                round_break_ms?: number;
+                                round_breaks_ms?: number[];
+                                rounds?: {
+                                    round: number;
+                                    first_index: number;
+                                    last_index: number;
+                                    start_ms: number;
+                                    end_ms: number;
+                                }[];
                             } | null;
                             session_running: boolean;
                             /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -5785,6 +5916,17 @@ export interface operations {
                                     window_end_ms: number | null;
                                     release_at_ms?: number | null;
                                 }[] | null;
+                                rules_version?: number;
+                                mask_ms?: number;
+                                round_break_ms?: number;
+                                round_breaks_ms?: number[];
+                                rounds?: {
+                                    round: number;
+                                    first_index: number;
+                                    last_index: number;
+                                    start_ms: number;
+                                    end_ms: number;
+                                }[];
                             } | null;
                             session_running: boolean;
                         } | null;
@@ -5821,6 +5963,17 @@ export interface operations {
                                     window_end_ms: number | null;
                                     release_at_ms?: number | null;
                                 }[] | null;
+                                rules_version?: number;
+                                mask_ms?: number;
+                                round_break_ms?: number;
+                                round_breaks_ms?: number[];
+                                rounds?: {
+                                    round: number;
+                                    first_index: number;
+                                    last_index: number;
+                                    start_ms: number;
+                                    end_ms: number;
+                                }[];
                             } | null;
                             session_running: boolean;
                         } | null;
@@ -6244,7 +6397,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -6254,7 +6409,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -6546,6 +6701,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 /**
                                  * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -6561,6 +6727,14 @@ export interface operations {
                                 my_share_seconds: number;
                                 /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                                 my_seconds_left: number;
+                                /**
+                                 * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                                 *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                                 *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                                 *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                                 *     home screen's, POST /api/child/pet/treat).
+                                 */
+                                treat_token: boolean;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                                  *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -6651,6 +6825,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                                 /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -6726,6 +6911,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -6762,6 +6958,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -7183,7 +7390,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -7193,7 +7402,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -7485,6 +7694,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 /**
                                  * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -7500,6 +7720,14 @@ export interface operations {
                                 my_share_seconds: number;
                                 /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                                 my_seconds_left: number;
+                                /**
+                                 * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                                 *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                                 *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                                 *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                                 *     home screen's, POST /api/child/pet/treat).
+                                 */
+                                treat_token: boolean;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                                  *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -7590,6 +7818,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                                 /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -7665,6 +7904,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -7701,6 +7951,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -8122,7 +8383,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -8132,7 +8395,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -8424,6 +8687,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 /**
                                  * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -8439,6 +8713,14 @@ export interface operations {
                                 my_share_seconds: number;
                                 /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                                 my_seconds_left: number;
+                                /**
+                                 * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                                 *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                                 *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                                 *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                                 *     home screen's, POST /api/child/pet/treat).
+                                 */
+                                treat_token: boolean;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                                  *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -8529,6 +8811,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                                 /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -8604,6 +8897,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -8640,6 +8944,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -9061,7 +9376,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -9071,7 +9388,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -9363,6 +9680,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 /**
                                  * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -9378,6 +9706,14 @@ export interface operations {
                                 my_share_seconds: number;
                                 /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                                 my_seconds_left: number;
+                                /**
+                                 * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                                 *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                                 *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                                 *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                                 *     home screen's, POST /api/child/pet/treat).
+                                 */
+                                treat_token: boolean;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                                  *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -9468,6 +9804,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                                 /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -9543,6 +9890,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -9579,6 +9937,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -10000,7 +10369,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -10010,7 +10381,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -10302,6 +10673,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 /**
                                  * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -10317,6 +10699,14 @@ export interface operations {
                                 my_share_seconds: number;
                                 /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                                 my_seconds_left: number;
+                                /**
+                                 * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                                 *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                                 *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                                 *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                                 *     home screen's, POST /api/child/pet/treat).
+                                 */
+                                treat_token: boolean;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                                  *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -10407,6 +10797,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                                 /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -10482,6 +10883,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -10518,6 +10930,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -10943,7 +11366,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -10953,7 +11378,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -11245,6 +11670,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 /**
                                  * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -11260,6 +11696,14 @@ export interface operations {
                                 my_share_seconds: number;
                                 /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                                 my_seconds_left: number;
+                                /**
+                                 * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                                 *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                                 *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                                 *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                                 *     home screen's, POST /api/child/pet/treat).
+                                 */
+                                treat_token: boolean;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                                  *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -11350,6 +11794,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                                 /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -11425,6 +11880,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -11461,6 +11927,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -11886,7 +12363,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -11896,7 +12375,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -12188,6 +12667,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 /**
                                  * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -12203,6 +12693,14 @@ export interface operations {
                                 my_share_seconds: number;
                                 /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                                 my_seconds_left: number;
+                                /**
+                                 * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                                 *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                                 *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                                 *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                                 *     home screen's, POST /api/child/pet/treat).
+                                 */
+                                treat_token: boolean;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                                  *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -12293,6 +12791,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                                 /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -12368,6 +12877,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -12404,6 +12924,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -12829,7 +13360,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -12839,7 +13372,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -13131,6 +13664,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 /**
                                  * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -13146,6 +13690,14 @@ export interface operations {
                                 my_share_seconds: number;
                                 /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                                 my_seconds_left: number;
+                                /**
+                                 * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                                 *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                                 *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                                 *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                                 *     home screen's, POST /api/child/pet/treat).
+                                 */
+                                treat_token: boolean;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                                  *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -13236,6 +13788,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                                 /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -13311,6 +13874,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -13347,6 +13921,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -13544,7 +14129,11 @@ export interface operations {
             path?: never;
             cookie?: never;
         };
-        requestBody?: never;
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["StartWandRequest"];
+            };
+        };
         responses: {
             200: {
                 headers: {
@@ -13768,7 +14357,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -13778,7 +14369,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -14070,6 +14661,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 /**
                                  * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -14085,6 +14687,14 @@ export interface operations {
                                 my_share_seconds: number;
                                 /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                                 my_seconds_left: number;
+                                /**
+                                 * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                                 *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                                 *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                                 *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                                 *     home screen's, POST /api/child/pet/treat).
+                                 */
+                                treat_token: boolean;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                                  *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -14175,6 +14785,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                                 /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -14250,6 +14871,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -14286,6 +14918,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -14711,7 +15354,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -14721,7 +15366,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -15013,6 +15658,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 /**
                                  * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -15028,6 +15684,14 @@ export interface operations {
                                 my_share_seconds: number;
                                 /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                                 my_seconds_left: number;
+                                /**
+                                 * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                                 *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                                 *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                                 *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                                 *     home screen's, POST /api/child/pet/treat).
+                                 */
+                                treat_token: boolean;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                                  *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -15118,6 +15782,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                                 /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -15193,6 +15868,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -15229,6 +15915,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -15650,7 +16347,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -15660,7 +16359,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -15952,6 +16651,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 /**
                                  * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -15967,6 +16677,14 @@ export interface operations {
                                 my_share_seconds: number;
                                 /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                                 my_seconds_left: number;
+                                /**
+                                 * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                                 *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                                 *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                                 *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                                 *     home screen's, POST /api/child/pet/treat).
+                                 */
+                                treat_token: boolean;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                                  *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -16057,6 +16775,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                                 /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -16132,6 +16861,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -16168,6 +16908,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -16589,7 +17340,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -16599,7 +17352,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -16891,6 +17644,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 /**
                                  * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -16906,6 +17670,14 @@ export interface operations {
                                 my_share_seconds: number;
                                 /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                                 my_seconds_left: number;
+                                /**
+                                 * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                                 *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                                 *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                                 *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                                 *     home screen's, POST /api/child/pet/treat).
+                                 */
+                                treat_token: boolean;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                                  *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -16996,6 +17768,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                                 /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -17071,6 +17854,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -17107,6 +17901,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -17532,7 +18337,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -17542,7 +18349,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -17834,6 +18641,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 /**
                                  * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -17849,6 +18667,14 @@ export interface operations {
                                 my_share_seconds: number;
                                 /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                                 my_seconds_left: number;
+                                /**
+                                 * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                                 *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                                 *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                                 *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                                 *     home screen's, POST /api/child/pet/treat).
+                                 */
+                                treat_token: boolean;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                                  *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -17939,6 +18765,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                                 /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -18014,6 +18851,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -18050,6 +18898,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -18471,7 +19330,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -18481,7 +19342,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -18773,6 +19634,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 /**
                                  * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -18788,6 +19660,14 @@ export interface operations {
                                 my_share_seconds: number;
                                 /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                                 my_seconds_left: number;
+                                /**
+                                 * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                                 *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                                 *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                                 *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                                 *     home screen's, POST /api/child/pet/treat).
+                                 */
+                                treat_token: boolean;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                                  *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -18878,6 +19758,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                                 /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -18953,6 +19844,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -18989,6 +19891,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -19414,7 +20327,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -19424,7 +20339,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -19716,6 +20631,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 /**
                                  * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -19731,6 +20657,14 @@ export interface operations {
                                 my_share_seconds: number;
                                 /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                                 my_seconds_left: number;
+                                /**
+                                 * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                                 *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                                 *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                                 *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                                 *     home screen's, POST /api/child/pet/treat).
+                                 */
+                                treat_token: boolean;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                                  *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -19821,6 +20755,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                                 /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -19896,6 +20841,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -19932,6 +20888,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -20353,7 +21320,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -20363,7 +21332,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -20655,6 +21624,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 /**
                                  * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -20670,6 +21650,14 @@ export interface operations {
                                 my_share_seconds: number;
                                 /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                                 my_seconds_left: number;
+                                /**
+                                 * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                                 *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                                 *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                                 *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                                 *     home screen's, POST /api/child/pet/treat).
+                                 */
+                                treat_token: boolean;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                                  *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -20760,6 +21748,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                                 /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -20835,6 +21834,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -20871,6 +21881,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -21296,7 +22317,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -21306,7 +22329,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -21598,6 +22621,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 /**
                                  * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -21613,6 +22647,14 @@ export interface operations {
                                 my_share_seconds: number;
                                 /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                                 my_seconds_left: number;
+                                /**
+                                 * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                                 *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                                 *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                                 *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                                 *     home screen's, POST /api/child/pet/treat).
+                                 */
+                                treat_token: boolean;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                                  *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -21703,6 +22745,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                                 /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -21778,6 +22831,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -21814,6 +22878,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -22239,7 +23314,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -22249,7 +23326,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -22541,6 +23618,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 /**
                                  * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -22556,6 +23644,14 @@ export interface operations {
                                 my_share_seconds: number;
                                 /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                                 my_seconds_left: number;
+                                /**
+                                 * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                                 *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                                 *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                                 *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                                 *     home screen's, POST /api/child/pet/treat).
+                                 */
+                                treat_token: boolean;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                                  *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -22646,6 +23742,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                                 /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -22721,6 +23828,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -22757,6 +23875,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -23182,7 +24311,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -23192,7 +24323,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -23484,6 +24615,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 /**
                                  * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -23499,6 +24641,14 @@ export interface operations {
                                 my_share_seconds: number;
                                 /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                                 my_seconds_left: number;
+                                /**
+                                 * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                                 *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                                 *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                                 *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                                 *     home screen's, POST /api/child/pet/treat).
+                                 */
+                                treat_token: boolean;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                                  *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -23589,6 +24739,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                                 /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -23664,6 +24825,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -23700,6 +24872,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -24125,7 +25308,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -24135,7 +25320,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -24427,6 +25612,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 /**
                                  * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -24442,6 +25638,14 @@ export interface operations {
                                 my_share_seconds: number;
                                 /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                                 my_seconds_left: number;
+                                /**
+                                 * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                                 *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                                 *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                                 *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                                 *     home screen's, POST /api/child/pet/treat).
+                                 */
+                                treat_token: boolean;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                                  *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -24532,6 +25736,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                                 /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -24607,6 +25822,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -24643,6 +25869,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -25068,7 +26305,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -25078,7 +26317,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -25370,6 +26609,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 /**
                                  * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -25385,6 +26635,14 @@ export interface operations {
                                 my_share_seconds: number;
                                 /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                                 my_seconds_left: number;
+                                /**
+                                 * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                                 *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                                 *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                                 *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                                 *     home screen's, POST /api/child/pet/treat).
+                                 */
+                                treat_token: boolean;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                                  *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -25475,6 +26733,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                                 /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -25550,6 +26819,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -25586,6 +26866,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -26389,7 +27680,7 @@ export interface operations {
                          */
                         pet_profile: {
                             /** @enum {string} */
-                            breed: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                            breed: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
                             /** @enum {string} */
                             origin: "bought" | "adopted";
                             /** @enum {string} */
@@ -26653,7 +27944,9 @@ export interface operations {
                                  *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                  *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                  *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                 *     missing = loop `ball_waiting`). Always an object.
+                                 *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                 *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                 *     missing = hold the `crouch` pose). Always an object.
                                  */
                                 phases: {
                                     [key: string]: string;
@@ -26663,7 +27956,7 @@ export interface operations {
                                  *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                  *     made before) 3 s. The app times the school from it (the performing clip ends at
                                  *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                 *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                 *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                  *     Always an object.
                                  */
                                 phase_seconds: {
@@ -26964,7 +28257,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -26974,7 +28269,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -27480,7 +28775,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -27490,7 +28787,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -28739,7 +30036,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -28749,7 +30048,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -29041,6 +30340,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 /**
                                  * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -29056,6 +30366,14 @@ export interface operations {
                                 my_share_seconds: number;
                                 /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                                 my_seconds_left: number;
+                                /**
+                                 * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                                 *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                                 *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                                 *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                                 *     home screen's, POST /api/child/pet/treat).
+                                 */
+                                treat_token: boolean;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                                  *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -29146,6 +30464,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                                 /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -29221,6 +30550,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -29257,6 +30597,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -29660,7 +31011,9 @@ export interface operations {
                                      *     pose → standing, ≤ 2.5 s, played once). Missing until the server made them (fallbacks:
                                      *     SCHOOL_SMOOTH_PLAYBACK.md §C). Games phase 1 (GAMES_SPEC §8.2, 2026-10-30):
                                      *     `ball_waiting_loop` — `ball_waiting` ping-pong at full size (seamless loop: play looped;
-                                     *     missing = loop `ball_waiting`). Always an object.
+                                     *     missing = loop `ball_waiting`). Games phase 2 (GAMES_SPEC §8.2): `wand_crouch_loop` — the
+                                     *     ping-pong of the last 1 s of `wand_stalking` (crouched; seamless loop between pounces;
+                                     *     missing = hold the `crouch` pose). Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
@@ -29670,7 +31023,7 @@ export interface operations {
                                      *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
                                      *     made before) 3 s. The app times the school from it (the performing clip ends at
                                      *     the obey moment). Missing key (older server) = 3. Also the real length of every derived
-                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop`.
+                                     *     school clip (`*_attention_loop`, `*_success_loop`, `*_release`) and of `ball_waiting_loop` / `wand_crouch_loop`.
                                      *     Always an object.
                                      */
                                     phase_seconds: {
@@ -29962,6 +31315,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 /**
                                  * @description At most this many seconds per session (the budget reserves it at the start; the started
@@ -29977,6 +31341,14 @@ export interface operations {
                                 my_share_seconds: number;
                                 /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
                                 my_seconds_left: number;
+                                /**
+                                 * @description David 2026-10-30 (GAMES_SPEC §4.1, V6): the school v2 shows a treat token instead of
+                                 *     »Pohvali« ♥ — true only when the family has bought treats for this pet (»Želje«,
+                                 *     `petprep_wish_treats_10`: an unrevoked treats pack, even if it is used up).
+                                 *     Display only: the school never consumes a treat (the 2-per-day treat rule is the
+                                 *     home screen's, POST /api/child/pet/treat).
+                                 */
+                                treat_token: boolean;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
                                  *     locked, the pet awake — M5-T02, no running session, enough of the dog's
@@ -30067,6 +31439,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                                 /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
@@ -30142,6 +31525,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
@@ -30178,6 +31572,17 @@ export interface operations {
                                         window_end_ms: number | null;
                                         release_at_ms?: number | null;
                                     }[] | null;
+                                    rules_version?: number;
+                                    mask_ms?: number;
+                                    round_break_ms?: number;
+                                    round_breaks_ms?: number[];
+                                    rounds?: {
+                                        round: number;
+                                        first_index: number;
+                                        last_index: number;
+                                        start_ms: number;
+                                        end_ms: number;
+                                    }[];
                                 } | null;
                                 session_running: boolean;
                             } | null;
