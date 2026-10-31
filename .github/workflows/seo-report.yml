@@ -1,0 +1,44 @@
+name: SEO report (Search Console)
+
+# Monthly Search Console report for petprep.si (David 2026-10-31): our own service account
+# (secret GSC_SERVICE_ACCOUNT_JSON, read-only "Restricted" user in Search Console) instead of
+# Supermetrics. Runs on the 1st; the monthly scheduled task reads the artifact and sums it up for David.
+# Manual run: Actions → SEO report → Run workflow (month = YYYY-MM, empty = last full month).
+
+on:
+  schedule:
+    - cron: "17 5 1 * *"
+  workflow_dispatch:
+    inputs:
+      month:
+        description: "Month YYYY-MM (empty = last full month)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Query Search Console
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_SITE: ${{ vars.GSC_SITE }}
+        run: node scripts/seo-report.mjs "${{ inputs.month }}" seo-report
+      - name: Summary
+        if: always()
+        run: test -f seo-report/seo-report.md && cat seo-report/seo-report.md >> "$GITHUB_STEP_SUMMARY" || echo "No report." >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: seo-report
+          path: seo-report/
+          if-no-files-found: ignore
+          retention-days: 400
