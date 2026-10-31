@@ -160,7 +160,7 @@ Potrjeno v kodi:
 **Nadomestilo za »vstane«:**
 > **SPREMEMBA PRAVILA — potrdil David 30. 10. (Š2):** »vstane« (`school_<cmd>_release`, obrnjen `performing`, David 28. 10. 2026) se **ne predvaja več**; namesto njega trd rez `success_loop` → `attention_loop` pod masko odziva. V urniku `R` = `MASK_MS` 1200 (prej dolžina release ≤ 2500). Razlog: obrnjen posnetek pri pridi / prostor / lulat zunaj kaže psa, ki hodi vzvratno (previjanje traku). Izpeljani posnetki `release` ostanejo shranjeni (0 $), da je odločitev obrnljiva. Če maska ne zadošča, glej izbirni posnetek A (§8.3).
 
-**Kretnja:** velik žeton **priboljška** (kost, 96 pt) spodaj na sredini; **tap** (čas = dotik stekla, kot danes `onPressIn`). Vlečenje priboljška do psa bi dodalo zamik in bi bilo za počasnejše prste krivično — zato je kretnja tap, animacija leta je odziv po tapu. Po tapu je žeton 600 ms siv (vizualno; točkuje se prvi tap, kot danes).
+**Kretnja:** velik žeton **priboljška** (kost, 96 pt) spodaj na sredini; **tap** (čas = dotik stekla, kot danes `onPressIn`). Vlečenje priboljška do psa bi dodalo zamik in bi bilo za počasnejše prste krivično — zato je kretnja tap, animacija leta je odziv po tapu. Po tapu je žeton 600 ms siv (vizualno; točkuje se prvi tap, kot danes). **Tap ali vlečenje (David, test na telefonu 31. 10. 2026):** šteje vedno **dotik stekla** (`onPressIn`, prvi tap v rezini ukaza odloči — nespremenjeno), zato vlečenje ni krivično: če otrok prst nato vleče (≥ 8 pt), žeton sledi prstu in ob spustu priboljšek (ali ♥) odleti do psa od tam, kjer ga je spustil; vlečenje nikoli ne doda drugega tapa in ne premakne štetega časa. Pri tapu let začne ob dvigu prsta. Diskreten namig **»Tapni«** s prstom, ki rahlo poskakuje, je na žetonu, dokler v tej vaji še ni štel noben tap in je vklopljen začetniški namig (napredek ukaza < 50 %, ista meja kot »Zdaj!«); izgine po prvem štetem tapu, med »Počakaj« ga ni; »zmanjšaj gibanje« = mirna oznaka; bralnik zaslona ga ne bere (žeton je že gumb »Daj priboljšek«).
 
 **Točkovanje (nespremenjeno):** prvi tap v rezini ukaza odloči (`TrainingService::score`); spam (tapkanje ves čas) da `too_early` → brez napredka — pravilo je že odporno proti spamu. Odziv v aplikaciji je zrcalo (`game.ts#liveOutcome`), končni rezultat da strežnik.
 
@@ -179,6 +179,7 @@ Potrjeno v kodi:
 | `school.ignores` (čip) | Ne uboga — ne pohvali, počakaj. | Not obeying — don't praise, wait. |
 | `school.ignoring.*` | Kuža voha · Kuža ostane na mestu · Kuža se raje igra · Kuža gleda metuljčka | Your pup is sniffing · stays put · would rather play · watches a butterfly |
 | `school.now` | Zdaj! | Now! |
+| `school.tapHint` (namig na žetonu) | Tapni | Tap |
 | `school.continue` | Nadaljuj | Continue |
 | `school.fb.inTime` | Bravo! | Great job! |
 | `school.fb.early` | Prezgodaj | Too early |

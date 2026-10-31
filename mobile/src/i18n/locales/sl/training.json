@@ -136,6 +136,7 @@
     "ruleTreat": "Ko kuža uboga → pritisni priboljšek. Če ne uboga → počakaj.",
     "ruleA11y": "Pravilo: ko kuža uboga, ga pohvali. Če ne uboga, počakaj.",
     "now": "Zdaj!",
+    "tapHint": "Tapni",
     "hintA11y": "Kuža je ubogal — pohvali zdaj",
     "ignores": "Ne uboga — ne pohvali, počakaj.",
     "ignoring": {

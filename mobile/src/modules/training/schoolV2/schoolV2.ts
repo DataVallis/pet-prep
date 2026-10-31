@@ -356,6 +356,29 @@ export function tokenWaiting(frame: Pick<SchoolFrame, 'kind'>): boolean {
   return frame.kind === 'ignoring';
 }
 
+/**
+ * Tap hint (David's device test 2026-10-31: he tried to DRAG the treat to the dog — »mogoče bi
+ * lahko tak diskreten namig bil tap«): a small animated finger + »Tapni« on the token while the
+ * beginner hint is enabled for this session (same < 50 % gate as »Zdaj!») and no tap has counted
+ * yet. Gone after the first counted tap; hidden while the dog ignores (the token says »Počakaj«
+ * then). Display only.
+ */
+export function tapHintOn(enabled: boolean, counted: boolean, frame: Pick<SchoolFrame, 'kind'>): boolean {
+  return enabled && !counted && frame.kind !== 'ignoring';
+}
+
+/**
+ * Tap OR drag (David 2026-10-31): the praise counts at the touch-down (press-in) — timing is the
+ * scored skill — once per cue (first tap decides, `addTap`). A finger that then moves at least this
+ * far is a drag: the token follows the finger and the treat flies to the dog on release. A drag
+ * never adds a tap and never moves the counted time.
+ */
+export const TOKEN_DRAG_START_PT = 8;
+
+export function isTokenDrag(dx: number, dy: number): boolean {
+  return Math.hypot(dx, dy) >= TOKEN_DRAG_START_PT;
+}
+
 /** The break's auto-continue countdown (»Nadaljuj (3)«). */
 export const BREAK_COUNTDOWN_MS = 3_000;
 

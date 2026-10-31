@@ -134,6 +134,7 @@
     "ruleTreat": "When your pup obeys → tap the treat. If not → wait.",
     "ruleA11y": "Rule: when your pup obeys, praise it. If it doesn’t obey, wait.",
     "now": "Now!",
+    "tapHint": "Tap",
     "hintA11y": "Your pup obeyed — praise now",
     "ignores": "Not obeying — don’t praise, wait.",
     "ignoring": {

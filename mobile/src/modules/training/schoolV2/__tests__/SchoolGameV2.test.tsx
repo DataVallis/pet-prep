@@ -325,6 +325,141 @@ describe('school v2 on the game layer', () => {
     expect(finishTraining.mock.calls[0][1]).toEqual([10_600]);
   });
 
+  // ── Tap OR drag + the tap hint (David's device feedback 2026-10-31: he tried to drag the treat).
+  const finishBody = () => ({ status: 'accepted', result: makeTrainingResult({ rules_version: 2 }), state: makeLiveChildState({ training: makeEnabledTraining() }) });
+  const flights = (n: number) => screen.queryByTestId(`${ID}-flights-${n}`, { includeHiddenElements: true });
+  const surface = () => screen.getByTestId(`${ID}-token-drag-surface`);
+  const touch = (x: number, y: number) => ({ nativeEvent: { pageX: x, pageY: y, timestamp: null } });
+
+  it('a tap counts at its press-in, not at the release; the treat flies on the release', async () => {
+    setGameLayerAvailableForTests(true);
+    startTraining.mockResolvedValueOnce(startBody(makeSchoolV2SessionPayload()));
+    finishTraining.mockResolvedValueOnce(finishBody());
+    render(schoolView());
+    await pressStart();
+    await deckReady();
+    await advanceTo(5_900);
+    fireEvent(screen.getByTestId(`${ID}-token`), 'pressIn', { nativeEvent: {} });
+    await advance(0);
+    expect(screen.getByTestId(`${ID}-feedback-ok`)).toBeTruthy();
+    expect(flights(0)).toBeTruthy(); // still held: nothing flies yet
+    await advanceTo(6_400);
+    fireEvent(screen.getByTestId(`${ID}-token`), 'pressOut');
+    fireEvent.press(screen.getByTestId(`${ID}-token`));
+    await advance(0);
+    expect(flights(1)).toBeTruthy();
+    await advanceTo(41_200);
+    await advance(0);
+    expect(finishTraining.mock.calls[0][1]).toEqual([5_900]);
+  });
+
+  it('drag then release (treat): counted once, at the press-in; the token follows the finger and the treat flies on release', async () => {
+    setGameLayerAvailableForTests(true);
+    startTraining.mockResolvedValueOnce(startBody(makeSchoolV2SessionPayload()));
+    finishTraining.mockResolvedValueOnce(finishBody());
+    render(schoolView({ treat: true }));
+    await pressStart();
+    await deckReady();
+    await advanceTo(5_900);
+    fireEvent(surface(), 'touchStart', touch(200, 700));
+    fireEvent(screen.getByTestId(`${ID}-token`), 'pressIn', { nativeEvent: {} });
+    await advance(0);
+    expect(screen.getByTestId(`${ID}-feedback-ok`)).toBeTruthy();
+    // A tiny wobble is not a drag; 8 pt is.
+    expect(surface().props.onMoveShouldSetResponderCapture(touch(203, 697))).toBe(false);
+    await advanceTo(6_100);
+    let captured = false;
+    act(() => {
+      captured = surface().props.onMoveShouldSetResponderCapture(touch(200, 650));
+    });
+    expect(captured).toBe(true);
+    // The Pressable is cancelled (press-out, no press): that is not a release — nothing flies.
+    fireEvent(screen.getByTestId(`${ID}-token`), 'pressOut');
+    fireEvent(surface(), 'responderMove', touch(190, 500));
+    await advance(0);
+    expect(flights(0)).toBeTruthy();
+    await advanceTo(6_600);
+    fireEvent(surface(), 'responderRelease', touch(180, 420));
+    await advance(0);
+    expect(flights(1)).toBeTruthy();
+    // A second drag in the same cue changes nothing (first tap decides; a drag never taps).
+    fireEvent(surface(), 'touchStart', touch(200, 700));
+    act(() => {
+      surface().props.onMoveShouldSetResponderCapture(touch(200, 600));
+    });
+    fireEvent(surface(), 'responderRelease', touch(200, 500));
+    await advance(0);
+    expect(flights(1)).toBeTruthy();
+    await advanceTo(41_200);
+    await advance(0);
+    expect(finishTraining.mock.calls[0][1]).toEqual([5_900]);
+  });
+
+  it('drag works for »Pohvali« ♥ too: counted once at the press-in, the heart flies on release', async () => {
+    setGameLayerAvailableForTests(true);
+    startTraining.mockResolvedValueOnce(startBody(makeSchoolV2SessionPayload()));
+    finishTraining.mockResolvedValueOnce(finishBody());
+    render(schoolView());
+    await pressStart();
+    await deckReady();
+    await advanceTo(5_900);
+    fireEvent(surface(), 'touchStart', touch(200, 700));
+    fireEvent(screen.getByTestId(`${ID}-token`), 'pressIn', { nativeEvent: {} });
+    act(() => {
+      surface().props.onMoveShouldSetResponderCapture(touch(200, 600));
+    });
+    fireEvent(screen.getByTestId(`${ID}-token`), 'pressOut');
+    fireEvent(surface(), 'responderRelease', touch(200, 450));
+    await advance(0);
+    expect(flights(1)).toBeTruthy();
+    expect(screen.getByTestId(`${ID}-token-heart`)).toBeTruthy();
+    await advanceTo(41_200);
+    await advance(0);
+    expect(finishTraining.mock.calls[0][1]).toEqual([5_900]);
+  });
+
+  it('tap hint: the bobbing finger + »Tapni« before the first counted tap, gone after it (and stays gone)', async () => {
+    setGameLayerAvailableForTests(true);
+    startTraining.mockResolvedValueOnce(startBody(makeSchoolV2SessionPayload()));
+    render(schoolView({ sitProgress: 40 }));
+    await pressStart();
+    await deckReady();
+    await advanceTo(1_000);
+    expect(screen.getByTestId(`${ID}-tap-hint-text`, { includeHiddenElements: true }).props.children).toBe(SCHOOL_V2_STRINGS.tapHint);
+    expect(screen.getByTestId(`${ID}-tap-hint-anim`, { includeHiddenElements: true })).toBeTruthy();
+    // Hidden from the screen reader — the token's own label says what to do.
+    expect(screen.queryByTestId(`${ID}-tap-hint`)).toBeNull();
+    await advanceTo(5_900);
+    expect(screen.getByTestId(`${ID}-tap-hint`, { includeHiddenElements: true })).toBeTruthy();
+    fireEvent(screen.getByTestId(`${ID}-token`), 'pressIn', { nativeEvent: {} });
+    await advance(0);
+    expect(screen.queryByTestId(`${ID}-tap-hint`, { includeHiddenElements: true })).toBeNull();
+    await advanceTo(23_000); // round 2
+    expect(screen.getByTestId(`${ID}-token`)).toBeTruthy();
+    expect(screen.queryByTestId(`${ID}-tap-hint`, { includeHiddenElements: true })).toBeNull();
+  });
+
+  it('tap hint with reduce motion = a static label; none at ≥ 50 % progress', async () => {
+    setGameLayerAvailableForTests(true);
+    startTraining.mockResolvedValueOnce(startBody(makeSchoolV2SessionPayload()));
+    const first = renderWithQuery(<TrainingOverlay view={schoolView({ sitProgress: 0 })} onClose={jest.fn()} reduceMotion />);
+    await pressStart();
+    await deckReady();
+    await advanceTo(1_000);
+    expect(screen.getByTestId(`${ID}-tap-hint-text`, { includeHiddenElements: true })).toBeTruthy();
+    expect(screen.queryByTestId(`${ID}-tap-hint-anim`, { includeHiddenElements: true })).toBeNull();
+    first.unmount();
+
+    resetSchoolGameV2ForTests();
+    startTraining.mockResolvedValueOnce(startBody(makeSchoolV2SessionPayload()));
+    render(schoolView({ sitProgress: 50 }));
+    await pressStart();
+    await deckReady();
+    await advanceTo(1_000);
+    expect(screen.getByTestId(`${ID}-token`)).toBeTruthy();
+    expect(screen.queryByTestId(`${ID}-tap-hint`, { includeHiddenElements: true })).toBeNull();
+  });
+
   it('round break: »Nadaljuj« counts down to round 2 and continues exactly at its start; »Končaj« only while the server takes it', async () => {
     setGameLayerAvailableForTests(true);
     startTraining.mockResolvedValueOnce(startBody(makeSchoolV2SessionPayload()));
