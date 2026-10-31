@@ -1,9 +1,9 @@
 /**
  * Child HUD device fixes (TestFlight 3.0.0, 2026-10-07):
  * - M5-F05: the header is one short line; a tap opens a sheet with the full profile.
- * - M5-F06: "Kuža se pripravlja …" is a card of the HUD's stack (above "Obroki danes"), not
- *   drawn on the media where the meals row / dock covered it. Since David 2026-10-25 the stack
- *   sits under the header (the dog stays visible), not above the dock.
+ * - M5-F06: "Kuža se pripravlja …" is a card of the HUD's stack, not drawn on the media where
+ *   the meals row / dock covered it. Since David 2026-10-25 the stack sits under the header (the
+ *   dog stays visible), not above the dock; »Obroki danes« is above the dock (David 2026-10-31).
  */
 import { fireEvent, screen, within } from '@testing-library/react-native';
 import { StyleSheet } from 'react-native';
@@ -125,20 +125,16 @@ describe('ChildHudScreen header sheet (M5-F05)', () => {
 });
 
 describe('ChildHudScreen "getting ready" notice (M5-F06)', () => {
-  it('is a card of the top stack, above the meals row, at 375 × 667', async () => {
+  it('is a card of the top stack (the meals row is above the dock, not in the stack), at 375 × 667', async () => {
     await renderHud(makeLiveChildState({ pet: { profile: makePetProfile(), media: makeMedia({ status: 'pending' }) } }));
     const column = screen.getByTestId('hud-behaviour');
     const notice = within(column).getByTestId('hud-pet-media-pending');
     expect(within(notice).getByText(PET_MEDIA_STRINGS.pending)).toBeTruthy();
     // Nothing on the media itself any more (that copy sat behind the dock).
     expect(within(screen.getByTestId('hud-pet-media')).queryByText(PET_MEDIA_STRINGS.pending)).toBeNull();
-    // The notice is more urgent than the meals row, so it comes first.
-    // Queries return host elements in document order.
-    const order: string[] = within(column)
-      .getAllByTestId(/^hud-(pet-media-pending|meals(-compact)?)$/)
-      .map((el) => String(el.props.testID));
-    expect(order[0]).toBe('hud-pet-media-pending');
-    expect(order.some((id) => id.startsWith('hud-meals'))).toBe(true);
+    // David 2026-10-31: the meals row is no longer a stack card — it sits above the dock.
+    expect(within(column).queryByTestId(/^hud-meals(-compact)?$/)).toBeNull();
+    expect(within(screen.getByTestId('hud-meals-slot')).getByTestId(/^hud-meals(-compact)?$/)).toBeTruthy();
     // David 2026-10-25: the stack hangs under the header (layout.bannerTop), not above the dock.
     const style = StyleSheet.flatten(screen.getByTestId('hud-top-stack').props.style);
     expect(style.top).toBeGreaterThanOrEqual(28 + 64);

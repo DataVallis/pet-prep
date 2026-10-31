@@ -17,11 +17,12 @@
  * centre and lower half stay free. "Above the dock" in the notes below now means "in the top stack".
  * M5-R03: a pet with training gets a "Šola" chip above the dock (amber dot while today's
  * session is open) that opens the training mini-game (`modules/training/TrainingOverlay`).
- * M5-R04: "Obroki danes" chip row above the dock (today's windows, ✓, now, "nahrani starš")
+ * M5-R04: "Obroki danes" chip row above the dock (today's windows, ✓, now, "nahrani starš";
+ * David 2026-10-31: back directly above the dock, outside the top stack, `hud-meals-slot`)
  * and the growth section of the album ("Kako je kuža rasel", fetched only while it is open).
  * M5-F05: the header is one short line; tapping it opens `PetProfileSheet` (breed, stage,
- * age, origin, next stage, meals per day). M5-F06: "Kuža se pripravlja …" sits at the top
- * of the above-dock column (never under the meals row or the dock).
+ * age, origin, next stage, meals per day). M5-F06: "Kuža se pripravlja …" is a card of the
+ * top stack (never under the meals row or the dock).
  * M5-R05: a pet with play gets "Igra" next to "Šola" (disabled with its reason while the
  * server says no), the dog's invitation card instead of it while one is offered, the play
  * layer (`modules/play/PlayOverlay`: ball game / cuddles) and the 30-minute happy mood —
@@ -66,7 +67,6 @@ import {
   Info,
   Moon,
   Sun,
-  Utensils,
 } from 'lucide-react-native';
 import { useQueryClient } from '@tanstack/react-query';
 
@@ -125,9 +125,16 @@ import {
 } from '@/modules/behaviour/behaviour';
 import BehaviourPanel, { type StackCard } from '@/components/BehaviourPanel';
 import MealWindowsRow from '@/components/MealWindowsRow';
-import { buildMealWindows, MEAL_STRINGS } from '@/modules/childPet/mealWindows';
+import { buildMealWindows } from '@/modules/childPet/mealWindows';
 import { lockStateFromView, normalizeChildState, type CareAction, type ChildPetView } from '@/modules/childPet/childPetView';
-import { computeHudLayout, METRICS_RESERVED_RIGHT, METRICS_RIGHT, type HudLayout } from '@/modules/hud/hudLayout';
+import {
+  ABOVE_DOCK_HEIGHT_ESTIMATE,
+  computeHudLayout,
+  METRICS_RESERVED_RIGHT,
+  METRICS_RIGHT,
+  stackMaxHeightAbove,
+  type HudLayout,
+} from '@/modules/hud/hudLayout';
 import { STACK_PRIORITY } from '@/modules/hud/topStack';
 import { WS_BADGE_STRINGS, wsBadge } from '@/modules/hud/wsBadge';
 import { formatSteps } from '@/modules/steps/stepCounter';
@@ -267,11 +274,15 @@ function useHudLayout(): {
   layout: HudLayout;
   onHeaderLayout: (e: LayoutChangeEvent) => void;
   onDockLayout: (e: LayoutChangeEvent) => void;
+  /** Measured height of the »Obroki danes« card above the dock (estimate until measured). */
+  mealsHeight: number;
+  onMealsLayout: (e: LayoutChangeEvent) => void;
 } {
   const { height } = useWindowDimensions();
   const insets = useContext(SafeAreaInsetsContext) ?? ZERO_INSETS;
   const [headerHeight, setHeaderHeight] = useState<number | undefined>(undefined);
   const [dockHeight, setDockHeight] = useState<number | undefined>(undefined);
+  const [mealsHeight, setMealsHeight] = useState<number>(ABOVE_DOCK_HEIGHT_ESTIMATE);
 
   const layout = useMemo(
     () =>
@@ -291,7 +302,11 @@ function useHudLayout(): {
     const h = Math.round(e.nativeEvent.layout.height);
     if (h > 0) setDockHeight(h);
   }, []);
-  return { layout, onHeaderLayout, onDockLayout };
+  const onMealsLayout = useCallback((e: LayoutChangeEvent) => {
+    const h = Math.round(e.nativeEvent.layout.height);
+    if (h > 0) setMealsHeight(h);
+  }, []);
+  return { layout, onHeaderLayout, onDockLayout, mealsHeight, onMealsLayout };
 }
 
 /** Server lock → session lock overlay; per-child `awaiting_contract` → contract step. */
@@ -343,7 +358,7 @@ export default function ChildHudScreen() {
   useEffect(() => () => setHudVideoState(null), [setHudVideoState]);
 
   const queryClient = useQueryClient();
-  const { layout, onHeaderLayout, onDockLayout } = useHudLayout();
+  const { layout, onHeaderLayout, onDockLayout, mealsHeight, onMealsLayout } = useHudLayout();
   const petQuery = useChildPet();
   const view = petQuery.data;
   // M5-R06-08b: child texts follow the pet's species ("muca" for a cat). Set while rendering
@@ -773,6 +788,10 @@ export default function ChildHudScreen() {
   const showSlipper =
     slipperOpen && messGames !== null && !locked && view.behaviour.can_resolve_chewing && !showCleaning && !catGameOpen && !showTraining && !showAlbum && playOverlay === null;
   const coveredByOverlay = isWalkModalVisible || showCleaning || showTraining || showAlbum || showPlay || showCatGame || showCareTask || showSlipper;
+  // David 2026-10-31 (»Meals today prestaviš dol«): the card sits directly above the dock, outside
+  // the top stack — visible also while the stack is collapsed or a mess card is open; not under a
+  // lock (the lock screen covers the HUD) or under a full-screen layer (walk, cleaning, games, album).
+  const mealsShown = mealWindows.length > 0 && !locked && !coveredByOverlay;
   // M5-R09c: the »Moja pasma« layer covers the HUD like the album (video paused, hidden from TalkBack).
   const showGuide = facts.guideOpen && !locked;
   const factChip = facts.showChip && !coveredByOverlay && !locked;
@@ -1215,13 +1234,31 @@ export default function ChildHudScreen() {
           })}
         </View>
 
+        {/* M5-R04 »Obroki danes«, David 2026-10-31: directly above the dock (the pre-10-25 spot: left of
+            the metric column, centred), never in the top stack / its »+N« / the collapsed pill.
+            One line without the title on smaller phones. The top stack ends above it (stackMaxHeightAbove). */}
+        {mealsShown && (
+          <View
+            pointerEvents="box-none"
+            style={[styles.mealsSlot, { bottom: layout.aboveDock }]}
+            onLayout={onMealsLayout}
+            testID="hud-meals-slot"
+          >
+            <MealWindowsRow items={mealWindows} compact={layout.metric.variant !== 'regular'} />
+          </View>
+        )}
+
         {/* David 2026-10-25 »pes mora biti viden«: every message card sits in one compact stack under
             the header, left of the metric column (modules/hud/topStack: most urgent first, ≤ 2 cards,
-            the rest behind "+N"); the dog's centre / lower half stays free, only the dock is at the bottom.
+            the rest behind "+N"); the dog's centre / lower half stays free, only the dock and »Obroki danes« above it
+            (David 2026-10-31) are at the bottom.
             David 2026-10-26: the stack collapses (× / swipe up) into one slim pill row (BehaviourPanel). */}
         <View
           pointerEvents="box-none"
-          style={[styles.topStack, { top: layout.bannerTop, maxHeight: layout.stackMaxHeight }]}
+          style={[
+            styles.topStack,
+            { top: layout.bannerTop, maxHeight: mealsShown ? stackMaxHeightAbove(layout, mealsHeight) : layout.stackMaxHeight },
+          ]}
           testID="hud-top-stack"
         >
           {serverUpdating && (
@@ -1319,16 +1356,6 @@ export default function ChildHudScreen() {
               }
               cards={stackCards}
               renderChips={hasChips ? renderChips : null}
-              // Hidden by the panel while a scene card is open; one line on smaller screens.
-              meals={
-                mealWindows.length > 0
-                  ? {
-                      short: MEAL_STRINGS.title,
-                      icon: Utensils,
-                      node: <MealWindowsRow items={mealWindows} compact={layout.metric.variant !== 'regular'} />,
-                    }
-                  : null
-              }
             />
           )}
           {/* M5-T13: the party hat on the pet's first birthday (drawn, no AI media), under the stack. */}
@@ -1704,6 +1731,14 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: METRICS_RIGHT,
     zIndex: 20,
+  },
+  /** »Obroki danes« directly above the dock, left of the metric column (David 2026-10-31). */
+  mealsSlot: {
+    position: 'absolute',
+    left: 20,
+    right: METRICS_RESERVED_RIGHT,
+    zIndex: 15,
+    alignItems: 'center',
   },
   bottomDock: {
     position: 'absolute',
