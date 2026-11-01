@@ -120,6 +120,9 @@ async function main() {
     "## Skoraj (položaj 4–15, 0 klikov)",
     ...report.nearMisses.map((r) => `- ${r.page} — ${n(r.impressions)} prikazov, položaj ${n(r.position)}`),
     "",
+    "## Najpogostejša iskanja (cela stran)",
+    ...report.topQueries.map((r) => `- „${r.query}“ — ${n(r.impressions)} prikazov, ${n(r.clicks)} klikov, položaj ${n(r.position)}`),
+    "",
     `Strani skrbi s prikazi: ${report.pagesWithImpressions.care}.`,
   ].join("\n");
   mkdirSync(outDir, { recursive: true });

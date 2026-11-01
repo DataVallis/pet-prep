@@ -191,7 +191,7 @@ Postopek:
 
 ## 13. Merjenje (David, 31. 10. 2026)
 
-Samo Search Console. **Od 31. 10. 2026 brez Supermetricsa (David):** lasten Google servisni račun (uporabnik »Restricted« v Search Console, ključ v GitHub secretu `GSC_SERVICE_ACCOUNT_JSON`). Workflow `.github/workflows/seo-report.yml` (`scripts/seo-report.mjs`) 1. v mesecu ob 5:17 UTC prebere prejšnji mesec (celotna stran, skrb, pobarvanke, najboljše strani in iskanja, »skoraj« strani na položaju 4–15) in ga shrani kot artefakt `seo-report`; mesečno opravilo »PetPrep — mesečno SEO poročilo (skrb)« (1. v mesecu, 8:47) ga prebere in Davidu pošlje povzetek. Brez samodejnega preverjanja citatov v ChatGPT / Perplexity.
+Samo Search Console. **Od 31. 10. 2026 brez Supermetricsa (David):** lasten Google servisni račun (uporabnik »Restricted« v Search Console, ključ v GitHub secretu `GSC_SERVICE_ACCOUNT_JSON`). Workflow `.github/workflows/seo-report.yml` (`scripts/seo-report.mjs`) 1. v mesecu ob 5:17 UTC prebere prejšnji mesec (celotna stran, skrb, pobarvanke, najboljše strani in iskanja, »skoraj« strani na položaju 4–15) in ga izpiše v dnevnik zagona (ter kot artefakt `seo-report`); mesečno opravilo »PetPrep — mesečno SEO poročilo (skrb)« (1. v mesecu, 8:47) ga prebere in Davidu pošlje povzetek. Brez samodejnega preverjanja citatov v ChatGPT / Perplexity.
 
 ## 14. Vsebina zunaj strani — vrtiljaki (31. 10. 2026)
 
