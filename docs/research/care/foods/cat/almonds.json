@@ -9,7 +9,8 @@
     "es": "Almendras",
     "it": "Mandorle",
     "pt": "Amêndoas",
-    "nl": "Amandelen"
+    "nl": "Amandelen",
+    "pl": "Migdały"
   },
   "question": {
     "en": "Can cats eat almonds?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los gatos comer almendras?",
     "it": "I gatti possono mangiare le mandorle?",
     "pt": "Os gatos podem comer amêndoas?",
-    "nl": "Mogen katten amandelen eten?"
+    "nl": "Mogen katten amandelen eten?",
+    "pl": "Czy koty mogą jeść migdały?"
   },
   "url_slug": {
     "en": "almonds",
@@ -29,7 +31,8 @@
     "es": "almendras",
     "it": "mandorle",
     "pt": "amendoas",
-    "nl": "amandelen"
+    "nl": "amandelen",
+    "pl": "migdaly"
   },
   "level": "not_recommended",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No, es mejor mantener las almendras lejos de los gatos. Las almendras dulces no se consideran tóxicas, pero tienen mucho aceite y grasa y pueden sentarle mal a un gato, con malestar de estómago o vómitos.",
     "it": "No, è meglio tenere le mandorle lontane dai gatti. Le mandorle dolci non sono considerate tossiche, ma sono ricche di oli e grassi e possono far stare male un gatto, con disturbi di stomaco o vomito.",
     "pt": "Não, é melhor manter as amêndoas longe dos gatos. As amêndoas doces não são consideradas tóxicas, mas são ricas em óleos e gorduras e podem pôr o gato maldisposto, com mal-estar de estômago ou vómitos.",
-    "nl": "Nee, houd amandelen liever bij katten uit de buurt. Zoete amandelen gelden niet als giftig, maar ze bevatten veel olie en vet en kunnen een kat ziek maken, met maagklachten of braken."
+    "nl": "Nee, houd amandelen liever bij katten uit de buurt. Zoete amandelen gelden niet als giftig, maar ze bevatten veel olie en vet en kunnen een kat ziek maken, met maagklachten of braken.",
+    "pl": "Nie, migdały lepiej trzymać z dala od kota. Migdały słodkie nie są uważane za toksyczne, ale zawierają dużo olejów i tłuszczu i mogą zaszkodzić kotu, powodując rozstrój żołądka lub wymioty."
   },
   "why": {
     "en": "Cats Protection lists almonds among nuts that contain high amounts of oils and fats which can make a cat unwell. The ASPCA says sweet almonds sold for eating are not toxic to pets, but because they are not a normal part of a pet's diet they can cause digestive issues. Bitter almonds contain a cyanide compound and are considered toxic.",
@@ -50,7 +54,8 @@
     "es": "Cats Protection incluye las almendras entre los frutos secos que contienen grandes cantidades de aceites y grasas que pueden sentarle mal a un gato. La ASPCA indica que las almendras dulces que se venden para comer no son tóxicas para las mascotas, pero, como no forman parte de su dieta habitual, pueden causar problemas digestivos. Las almendras amargas contienen un compuesto de cianuro y se consideran tóxicas.",
     "it": "Cats Protection elenca le mandorle tra la frutta a guscio ricca di oli e grassi che può far stare male un gatto. L’ASPCA spiega che le mandorle dolci vendute per il consumo non sono tossiche per gli animali domestici, ma poiché non fanno parte della loro dieta abituale possono causare disturbi digestivi. Le mandorle amare contengono un composto del cianuro e sono considerate tossiche.",
     "pt": "A Cats Protection inclui as amêndoas entre os frutos secos com muitos óleos e gorduras, que podem pôr um gato maldisposto. A ASPCA diz que as amêndoas doces vendidas para consumo não são tóxicas para os animais de estimação, mas, como não fazem parte da sua alimentação normal, podem causar problemas digestivos. As amêndoas amargas contêm um composto de cianeto e são consideradas tóxicas.",
-    "nl": "Cats Protection noemt amandelen bij de noten die veel olie en vet bevatten en een kat ziek kunnen maken. Volgens de ASPCA zijn zoete amandelen die voor consumptie worden verkocht niet giftig voor huisdieren, maar omdat ze geen gewoon onderdeel van hun voeding zijn, kunnen ze spijsverteringsproblemen geven. Bittere amandelen bevatten een cyanideverbinding en gelden als giftig."
+    "nl": "Cats Protection noemt amandelen bij de noten die veel olie en vet bevatten en een kat ziek kunnen maken. Volgens de ASPCA zijn zoete amandelen die voor consumptie worden verkocht niet giftig voor huisdieren, maar omdat ze geen gewoon onderdeel van hun voeding zijn, kunnen ze spijsverteringsproblemen geven. Bittere amandelen bevatten een cyanideverbinding en gelden als giftig.",
+    "pl": "Cats Protection wymienia migdały wśród orzechów, które zawierają dużo olejów i tłuszczu i mogą zaszkodzić kotu. ASPCA podaje, że migdały słodkie sprzedawane do jedzenia nie są toksyczne dla zwierząt, ale ponieważ nie należą do ich zwykłej diety, mogą wywołać problemy trawienne. Migdały gorzkie zawierają związek cyjanogenny i są uważane za toksyczne."
   },
   "signs": {
     "en": [
@@ -100,6 +105,12 @@
       "Diarree",
       "Maagklachten",
       "Ziek lijken"
+    ],
+    "pl": [
+      "Wymioty",
+      "Biegunka",
+      "Rozstrój żołądka",
+      "Złe samopoczucie"
     ]
   },
   "what_to_do": {
@@ -110,7 +121,8 @@
     "es": "Si tu gato ha comido almendras, consulta a tu veterinario, sobre todo si ha comido muchas o parece encontrarse mal. Apunta qué ha comido, cuánto y cuándo. Si eran almendras amargas, ponte en contacto con tu veterinario de inmediato.",
     "it": "Se il tuo gatto ha mangiato delle mandorle, chiedi consiglio al veterinario, soprattutto se ne ha mangiate molte o sembra stare male. Annota che cosa ha mangiato, quanto e quando. Se erano mandorle amare, contatta subito il veterinario.",
     "pt": "Se o teu gato comeu amêndoas, contacta o teu veterinário para pedir conselho, sobretudo se comeu muitas ou parece doente. Toma nota do que comeu, da quantidade e de quando. Se eram amêndoas amargas, contacta imediatamente o teu veterinário.",
-    "nl": "Heeft je kat amandelen gegeten? Vraag je dierenarts om advies, zeker als ze er veel heeft gegeten of ziek lijkt. Schrijf op wat ze heeft gegeten, hoeveel en wanneer. Ging het om bittere amandelen, neem dan meteen contact op met je dierenarts."
+    "nl": "Heeft je kat amandelen gegeten? Vraag je dierenarts om advies, zeker als ze er veel heeft gegeten of ziek lijkt. Schrijf op wat ze heeft gegeten, hoeveel en wanneer. Ging het om bittere amandelen, neem dan meteen contact op met je dierenarts.",
+    "pl": "Jeśli twój kot zjadł migdały, poradź się weterynarza, zwłaszcza jeśli zjadł ich dużo lub źle się czuje. Zapisz, co zjadł, ile i kiedy. Jeśli były to migdały gorzkie, od razu skontaktuj się z weterynarzem."
   },
   "serving": null,
   "child": {
@@ -121,7 +133,8 @@
     "es": "Las almendras son un tentempié para personas. Tienen demasiado aceite para los gatos, así que guárdalas en tu fiambrera.",
     "it": "Le mandorle sono uno spuntino per le persone. Per i gatti sono troppo oleose, quindi tienile nel tuo portamerenda.",
     "pt": "As amêndoas são um petisco para pessoas. São demasiado oleosas para gatos, por isso guarda-as na tua lancheira.",
-    "nl": "Amandelen zijn een tussendoortje voor mensen. Ze zijn te vet voor katten, dus houd ze lekker in je broodtrommel."
+    "nl": "Amandelen zijn een tussendoortje voor mensen. Ze zijn te vet voor katten, dus houd ze lekker in je broodtrommel.",
+    "pl": "Migdały to przekąska dla ludzi. Są za tłuste dla kotów, więc zostaw je w swojej śniadaniówce."
   },
   "faq": [
     {
@@ -133,7 +146,8 @@
         "es": "¿Y las almendras amargas?",
         "it": "E le mandorle amare?",
         "pt": "E as amêndoas amargas?",
-        "nl": "En bittere amandelen?"
+        "nl": "En bittere amandelen?",
+        "pl": "A co z migdałami gorzkimi?"
       },
       "a": {
         "en": "Bitter almonds contain a cyanide compound and are considered toxic. If your cat ate bitter almonds, contact your vet straight away.",
@@ -143,7 +157,8 @@
         "es": "Las almendras amargas contienen un compuesto de cianuro y se consideran tóxicas. Si tu gato ha comido almendras amargas, ponte en contacto con tu veterinario de inmediato.",
         "it": "Le mandorle amare contengono un composto del cianuro e sono considerate tossiche. Se il tuo gatto ha mangiato mandorle amare, contatta subito il veterinario.",
         "pt": "As amêndoas amargas contêm um composto de cianeto e são consideradas tóxicas. Se o teu gato comeu amêndoas amargas, contacta imediatamente o teu veterinário.",
-        "nl": "Bittere amandelen bevatten een cyanideverbinding en gelden als giftig. Heeft je kat bittere amandelen gegeten, neem dan meteen contact op met je dierenarts."
+        "nl": "Bittere amandelen bevatten een cyanideverbinding en gelden als giftig. Heeft je kat bittere amandelen gegeten, neem dan meteen contact op met je dierenarts.",
+        "pl": "Migdały gorzkie zawierają związek cyjanogenny i są uważane za toksyczne. Jeśli twój kot zjadł migdały gorzkie, od razu skontaktuj się z weterynarzem."
       }
     },
     {
@@ -155,7 +170,8 @@
         "es": "¿Hay frutos secos peores que otros?",
         "it": "Ci sono tipi di frutta a guscio peggiori di altri?",
         "pt": "Há frutos secos piores do que outros?",
-        "nl": "Zijn sommige noten erger dan andere?"
+        "nl": "Zijn sommige noten erger dan andere?",
+        "pl": "Czy niektóre orzechy są gorsze od innych?"
       },
       "a": {
         "en": "Yes. Macadamia nuts are fatty and also toxic to cats, so they are the ones to be most careful with.",
@@ -165,7 +181,8 @@
         "es": "Sí. Las nueces de macadamia son grasas y además tóxicas para los gatos, así que son las que exigen más cuidado.",
         "it": "Sì. Le noci di macadamia sono grasse e anche tossiche per i gatti, quindi sono quelle a cui prestare più attenzione.",
         "pt": "Sim. As nozes de macadâmia são gordas e também tóxicas para os gatos, por isso são as que exigem mais cuidado.",
-        "nl": "Ja. Macadamianoten zijn vet en ook giftig voor katten, dus daarmee moet je het meest oppassen."
+        "nl": "Ja. Macadamianoten zijn vet en ook giftig voor katten, dus daarmee moet je het meest oppassen.",
+        "pl": "Tak. Orzechy makadamia są tłuste, a do tego toksyczne dla kotów, więc z nimi trzeba uważać najbardziej."
       }
     }
   ],
@@ -244,6 +261,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "24d88a003622ab6e3aa268fd0d2bbe49835ef68c088d5a2a2497e1a7bb835d0e"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5c47086b6fc219db8a6de0173b40cd7794a999ac81f94be804cdfe28304b1be3"
     }
   }
 }

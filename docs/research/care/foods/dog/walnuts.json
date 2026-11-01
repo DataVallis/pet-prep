@@ -9,7 +9,8 @@
     "es": "Nueces",
     "it": "Noci",
     "pt": "Nozes",
-    "nl": "Walnoten"
+    "nl": "Walnoten",
+    "pl": "Orzechy włoskie"
   },
   "question": {
     "en": "Can dogs eat walnuts?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros comer nueces?",
     "it": "I cani possono mangiare le noci?",
     "pt": "Os cães podem comer nozes?",
-    "nl": "Mogen honden walnoten eten?"
+    "nl": "Mogen honden walnoten eten?",
+    "pl": "Czy psy mogą jeść orzechy włoskie?"
   },
   "url_slug": {
     "en": "walnuts",
@@ -29,7 +31,8 @@
     "es": "nueces",
     "it": "noci",
     "pt": "nozes",
-    "nl": "walnoten"
+    "nl": "walnoten",
+    "pl": "orzechy-wloskie"
   },
   "level": "not_recommended",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No, es mejor no dárselas. Es poco probable que una o dos nueces le hagan daño, pero las nueces son grasas y pueden provocar atragantamiento. Las nueces enmohecidas, como las viejas caídas en el jardín, y las nueces negras son mucho más peligrosas.",
     "it": "No, è meglio di no. Una o due noci difficilmente fanno male, ma le noci sono grasse e possono causare soffocamento. Le noci ammuffite, come quelle vecchie cadute in giardino, e le noci nere sono molto più pericolose.",
     "pt": "Não, é melhor não. Uma ou duas nozes dificilmente fazem mal, mas as nozes são gordas e podem causar engasgamento. As nozes com bolor, como as velhas caídas no jardim, e as nozes-pretas são muito mais perigosas.",
-    "nl": "Nee, liever niet. Een of twee walnoten doen waarschijnlijk geen kwaad, maar walnoten zijn vet en een hond kan erin stikken. Beschimmelde walnoten, zoals oude noten die in de tuin zijn gevallen, en zwarte walnoten zijn veel gevaarlijker."
+    "nl": "Nee, liever niet. Een of twee walnoten doen waarschijnlijk geen kwaad, maar walnoten zijn vet en een hond kan erin stikken. Beschimmelde walnoten, zoals oude noten die in de tuin zijn gevallen, en zwarte walnoten zijn veel gevaarlijker.",
+    "pl": "Lepiej nie. Jeden czy dwa orzechy włoskie raczej nie zaszkodzą, ale są tłuste i mogą grozić zadławieniem. Spleśniałe orzechy włoskie, np. stare, które spadły w ogrodzie, oraz orzechy czarne są znacznie bardziej niebezpieczne."
   },
   "why": {
     "en": "Walnuts are high in fat, which can cause vomiting, diarrhoea and possibly pancreatitis. Mould can grow on the shell or kernel and produce toxins that can cause tremors, seizures and vomiting. Black walnuts are very toxic to dogs and may contain juglone.",
@@ -50,7 +54,8 @@
     "es": "Las nueces tienen mucha grasa, lo que puede causar vómitos, diarrea y posiblemente pancreatitis. En la cáscara o en el fruto puede crecer moho que produce toxinas capaces de provocar temblores, convulsiones y vómitos. Las nueces negras son muy tóxicas para los perros y pueden contener juglona.",
     "it": "Le noci sono ricche di grassi, che possono causare vomito, diarrea e forse una pancreatite. Sul guscio o sul gheriglio può crescere muffa che produce tossine capaci di causare tremori, convulsioni e vomito. Le noci nere sono molto tossiche per i cani e possono contenere juglone.",
     "pt": "As nozes têm muita gordura, o que pode causar vómitos, diarreia e possivelmente pancreatite. Pode crescer bolor na casca ou no miolo e produzir toxinas que podem causar tremores, convulsões e vómitos. As nozes-pretas são muito tóxicas para os cães e podem conter juglona.",
-    "nl": "Walnoten bevatten veel vet, wat braken, diarree en mogelijk alvleesklierontsteking kan veroorzaken. Op de dop of de kern kan schimmel groeien die gifstoffen maakt, en die kunnen trillingen, toevallen en braken veroorzaken. Zwarte walnoten zijn erg giftig voor honden en kunnen juglon bevatten."
+    "nl": "Walnoten bevatten veel vet, wat braken, diarree en mogelijk alvleesklierontsteking kan veroorzaken. Op de dop of de kern kan schimmel groeien die gifstoffen maakt, en die kunnen trillingen, toevallen en braken veroorzaken. Zwarte walnoten zijn erg giftig voor honden en kunnen juglon bevatten.",
+    "pl": "Orzechy włoskie mają dużo tłuszczu, który może wywołać wymioty, biegunkę, a być może także zapalenie trzustki. Na łupinie lub jądrze może wyrosnąć pleśń wytwarzająca toksyny, które mogą wywołać drżenie mięśni, drgawki i wymioty. Orzechy czarne są bardzo toksyczne dla psów i mogą zawierać juglon."
   },
   "signs": {
     "en": [
@@ -100,6 +105,12 @@
       "Diarree",
       "Spiertrillingen of toevallen (beschimmelde noten)",
       "Stikken"
+    ],
+    "pl": [
+      "Wymioty",
+      "Biegunka",
+      "Drżenie mięśni lub drgawki (spleśniałe orzechy)",
+      "Zadławienie"
     ]
   },
   "what_to_do": {
@@ -110,7 +121,8 @@
     "es": "Si tu perro se ha comido una o dos nueces, vigila si tiene vómitos o diarrea. Si se ha comido una nuez negra o nueces enmohecidas, contacta enseguida con tu veterinario y no esperes a que aparezcan síntomas; llama también si aparecen temblores, convulsiones o atragantamiento.",
     "it": "Dopo una o due noci, controlla se compaiono vomito o diarrea. Se il tuo cane ha mangiato una noce nera o noci ammuffite, contatta subito il veterinario e non aspettare che compaiano i sintomi; chiamalo anche se compaiono tremori, convulsioni o soffocamento.",
     "pt": "Depois de uma ou duas nozes, vigia se há vómitos ou diarreia. Se o teu cão comeu uma noz-preta ou nozes com bolor, contacta imediatamente o teu veterinário e não esperes pelos sinais; liga também se surgirem tremores, convulsões ou engasgamento.",
-    "nl": "Let na een of twee walnoten op braken of diarree. Heeft je hond een zwarte walnoot of beschimmelde walnoten gegeten? Neem dan meteen contact op met je dierenarts en wacht niet op verschijnselen; bel ook bij trillingen, toevallen of stikken."
+    "nl": "Let na een of twee walnoten op braken of diarree. Heeft je hond een zwarte walnoot of beschimmelde walnoten gegeten? Neem dan meteen contact op met je dierenarts en wacht niet op verschijnselen; bel ook bij trillingen, toevallen of stikken.",
+    "pl": "Po jednym czy dwóch orzechach włoskich obserwuj, czy nie pojawiają się wymioty lub biegunka. Jeśli twój pies zjadł orzech czarny lub spleśniałe orzechy włoskie, od razu skontaktuj się z weterynarzem i nie czekaj na objawy; zadzwoń też, jeśli pojawi się drżenie mięśni, drgawki lub zadławienie."
   },
   "serving": null,
   "child": {
@@ -121,7 +133,8 @@
     "es": "Las nueces no son un tentempié para perros. Las nueces viejas del suelo pueden poner malitos a los perros, así que avisa a un adulto si tu perro encuentra alguna.",
     "it": "Le noci non sono uno snack per cani. Le noci vecchie per terra possono far stare male i cani, quindi avvisa un adulto se il tuo cane ne trova.",
     "pt": "As nozes não são um petisco para cães. As nozes velhas no chão podem pôr os cães doentes, por isso avisa um adulto se o teu cão encontrar alguma.",
-    "nl": "Walnoten zijn geen snack voor honden. Van oude walnoten op de grond kunnen honden ziek worden, dus vertel het aan een volwassene als je hond er een paar vindt."
+    "nl": "Walnoten zijn geen snack voor honden. Van oude walnoten op de grond kunnen honden ziek worden, dus vertel het aan een volwassene als je hond er een paar vindt.",
+    "pl": "Orzechy włoskie to nie jest przekąska dla psa. Stare orzechy leżące na ziemi mogą sprawić, że pies się rozchoruje, więc powiedz dorosłemu, jeśli twój pies jakieś znajdzie."
   },
   "faq": [
     {
@@ -133,7 +146,8 @@
         "es": "¿Por qué son un riesgo las nueces caídas en el jardín?",
         "it": "Perché le noci cadute in giardino sono un rischio?",
         "pt": "Porque é que as nozes caídas no jardim são um risco?",
-        "nl": "Waarom zijn gevallen walnoten in de tuin een risico?"
+        "nl": "Waarom zijn gevallen walnoten in de tuin een risico?",
+        "pl": "Dlaczego orzechy włoskie, które spadły w ogrodzie, są groźne?"
       },
       "a": {
         "en": "Nuts lying on the ground can get damp and grow mould, which can be toxic to dogs.",
@@ -143,7 +157,8 @@
         "es": "Los frutos secos que quedan en el suelo pueden humedecerse y criar moho, que puede ser tóxico para los perros.",
         "it": "La frutta a guscio che resta a terra può diventare umida e fare la muffa, che può essere tossica per i cani.",
         "pt": "Os frutos secos caídos no chão podem ficar húmidos e ganhar bolor, que pode ser tóxico para os cães.",
-        "nl": "Noten die op de grond liggen, kunnen vochtig worden en gaan schimmelen, en die schimmel kan giftig zijn voor honden."
+        "nl": "Noten die op de grond liggen, kunnen vochtig worden en gaan schimmelen, en die schimmel kan giftig zijn voor honden.",
+        "pl": "Orzechy leżące na ziemi mogą zawilgotnieć i spleśnieć, a pleśń może być toksyczna dla psów."
       }
     },
     {
@@ -155,7 +170,8 @@
         "es": "¿Y las nueces negras?",
         "it": "E le noci nere?",
         "pt": "E as nozes-pretas?",
-        "nl": "En zwarte walnoten?"
+        "nl": "En zwarte walnoten?",
+        "pl": "A orzechy czarne?"
       },
       "a": {
         "en": "Black walnuts are very toxic to dogs. Contact your vet immediately if your dog eats one.",
@@ -165,7 +181,8 @@
         "es": "Las nueces negras son muy tóxicas para los perros. Contacta de inmediato con tu veterinario si tu perro se come una.",
         "it": "Le noci nere sono molto tossiche per i cani. Contatta subito il veterinario se il tuo cane ne mangia una.",
         "pt": "As nozes-pretas são muito tóxicas para os cães. Contacta imediatamente o teu veterinário se o teu cão comer uma.",
-        "nl": "Zwarte walnoten zijn erg giftig voor honden. Neem meteen contact op met je dierenarts als je hond er een eet."
+        "nl": "Zwarte walnoten zijn erg giftig voor honden. Neem meteen contact op met je dierenarts als je hond er een eet.",
+        "pl": "Orzechy czarne są bardzo toksyczne dla psów. Natychmiast skontaktuj się z weterynarzem, jeśli twój pies jakiś zje."
       }
     }
   ],
@@ -266,6 +283,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d15aed19ea331293fb3ab973c8cbdfadbcb1f29f82703932ac3958076af11595"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "85e318a7d8a4060aa472a8d83c39591311b9a2e48faa25cc3df6167b8d34844d"
     }
   }
 }

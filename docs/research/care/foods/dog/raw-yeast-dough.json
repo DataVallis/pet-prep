@@ -9,7 +9,8 @@
     "es": "Masa cruda con levadura",
     "it": "Impasto lievitato crudo",
     "pt": "Massa crua com fermento",
-    "nl": "Rauw gistdeeg"
+    "nl": "Rauw gistdeeg",
+    "pl": "Surowe ciasto drożdżowe"
   },
   "question": {
     "en": "Can dogs eat raw yeast dough?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros comer masa cruda con levadura?",
     "it": "I cani possono mangiare l’impasto lievitato crudo?",
     "pt": "Os cães podem comer massa crua com fermento?",
-    "nl": "Mogen honden rauw gistdeeg eten?"
+    "nl": "Mogen honden rauw gistdeeg eten?",
+    "pl": "Czy psy mogą jeść surowe ciasto drożdżowe?"
   },
   "url_slug": {
     "en": "raw-yeast-dough",
@@ -29,7 +31,8 @@
     "es": "masa-cruda-con-levadura",
     "it": "impasto-lievitato-crudo",
     "pt": "massa-crua-com-fermento",
-    "nl": "rauw-gistdeeg"
+    "nl": "rauw-gistdeeg",
+    "pl": "surowe-ciasto-drozdzowe"
   },
   "level": "toxic",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No. La masa cruda con levadura, sin hornear, es peligrosa para los perros. Sigue subiendo en el estómago caliente y provoca una hinchazón que puede acabar en una torsión de estómago (dilatación-torsión gástrica). Además, la levadura produce alcohol, que puede causar una intoxicación etílica. El peligro está en la masa sin hornear.",
     "it": "No. L’impasto crudo con lievito, non ancora cotto, è pericoloso per i cani. Continua a lievitare nello stomaco caldo e lo gonfia, e questo può portare a una torsione dello stomaco. Il lievito produce anche alcol, che può causare un’intossicazione da alcol. Il pericolo è l’impasto non cotto.",
     "pt": "Não. A massa crua com fermento, por cozer, é perigosa para os cães. Continua a crescer no estômago quente e causa um inchaço que pode levar a uma torção do estômago. O fermento também produz álcool, que pode causar intoxicação alcoólica. O perigo é a massa por cozer.",
-    "nl": "Nee. Rauw, ongebakken gistdeeg is gevaarlijk voor honden. Het blijft rijzen in de warme maag en veroorzaakt een opgezette buik, wat tot een maagtorsie kan leiden. De gist maakt ook alcohol, wat alcoholvergiftiging kan veroorzaken. Het gevaar zit in het ongebakken deeg."
+    "nl": "Nee. Rauw, ongebakken gistdeeg is gevaarlijk voor honden. Het blijft rijzen in de warme maag en veroorzaakt een opgezette buik, wat tot een maagtorsie kan leiden. De gist maakt ook alcohol, wat alcoholvergiftiging kan veroorzaken. Het gevaar zit in het ongebakken deeg.",
+    "pl": "Nie. Surowe, niewypieczone ciasto drożdżowe jest niebezpieczne dla psów. Nadal rośnie w ciepłym żołądku i powoduje wzdęcie, które może doprowadzić do skrętu żołądka. Drożdże wytwarzają też alkohol, który może wywołać zatrucie alkoholem. Zagrożeniem jest niewypieczone ciasto."
   },
   "why": {
     "en": "Yeast keeps working in the warm, moist stomach: the dough expands and gas builds up, which can block the gut or, less often, twist the stomach (bloat). At the same time the yeast produces alcohol, which is quickly absorbed into the blood. Dogs are affected most often because they eat whatever they find.",
@@ -50,7 +54,8 @@
     "es": "La levadura sigue actuando en el estómago, que es cálido y húmedo: la masa se expande y se acumulan gases, lo que puede obstruir el intestino o, con menos frecuencia, provocar una torsión de estómago (dilatación-torsión gástrica). Al mismo tiempo, la levadura produce alcohol, que pasa rápidamente a la sangre. Los perros son los más afectados porque se comen lo que encuentran.",
     "it": "Il lievito continua a lavorare nello stomaco caldo e umido: l’impasto si espande e si accumula gas, che può ostruire l’intestino o, più raramente, far torcere lo stomaco (dilatazione-torsione gastrica). Allo stesso tempo il lievito produce alcol, che passa rapidamente nel sangue. I cani sono i più colpiti perché mangiano tutto quello che trovano.",
     "pt": "O fermento continua a trabalhar no estômago quente e húmido: a massa expande-se e acumulam-se gases, o que pode obstruir o intestino ou, menos vezes, torcer o estômago (dilatação gástrica). Ao mesmo tempo, o fermento produz álcool, que é rapidamente absorvido para o sangue. Os cães são os mais afetados porque comem tudo o que encontram.",
-    "nl": "Gist blijft werken in de warme, vochtige maag: het deeg zet uit en er hoopt zich gas op, wat de darmen kan verstoppen of, minder vaak, de maag kan laten draaien (maagtorsie). Tegelijk maakt de gist alcohol, die snel in het bloed wordt opgenomen. Honden worden het vaakst getroffen, omdat ze alles eten wat ze vinden."
+    "nl": "Gist blijft werken in de warme, vochtige maag: het deeg zet uit en er hoopt zich gas op, wat de darmen kan verstoppen of, minder vaak, de maag kan laten draaien (maagtorsie). Tegelijk maakt de gist alcohol, die snel in het bloed wordt opgenomen. Honden worden het vaakst getroffen, omdat ze alles eten wat ze vinden.",
+    "pl": "Drożdże pracują dalej w ciepłym, wilgotnym żołądku: ciasto się powiększa i gromadzą się gazy, co może zatkać przewód pokarmowy lub, rzadziej, doprowadzić do skrętu żołądka. Jednocześnie drożdże wytwarzają alkohol, który szybko wchłania się do krwi. Najczęściej dotyczy to psów, bo jedzą wszystko, co znajdą."
   },
   "signs": {
     "en": [
@@ -100,6 +105,12 @@
       "Braken of kokhalzen zonder dat er iets uitkomt",
       "Wankelen en verwardheid",
       "Sufheid of lusteloosheid"
+    ],
+    "pl": [
+      "Wzdęty, napięty brzuch",
+      "Wymioty lub odruchy wymiotne bez zwracania treści",
+      "Chwiejny chód i dezorientacja",
+      "Senność lub apatia"
     ]
   },
   "what_to_do": {
@@ -110,7 +121,8 @@
     "es": "Contacta enseguida con tu veterinario. Apunta más o menos cuánta masa se comió y cuándo. No esperes a que aparezcan síntomas: tanto un estómago que se hincha como una intoxicación etílica necesitan atención rápida.",
     "it": "Contatta subito il veterinario. Annota più o meno quanto impasto ha mangiato il tuo cane e quando. Non aspettare che compaiano i sintomi: uno stomaco che si gonfia e l’intossicazione da alcol richiedono entrambi cure rapide.",
     "pt": "Contacta imediatamente o teu veterinário. Anota mais ou menos quanta massa comeu e quando. Não esperes pelos sinais: um estômago a inchar e a intoxicação alcoólica precisam ambos de cuidados rápidos.",
-    "nl": "Neem meteen contact op met je dierenarts. Schrijf op hoeveel deeg er ongeveer is gegeten en wanneer. Wacht niet op verschijnselen: een opzwellende maag en alcoholvergiftiging moeten allebei snel worden behandeld."
+    "nl": "Neem meteen contact op met je dierenarts. Schrijf op hoeveel deeg er ongeveer is gegeten en wanneer. Wacht niet op verschijnselen: een opzwellende maag en alcoholvergiftiging moeten allebei snel worden behandeld.",
+    "pl": "Od razu skontaktuj się z weterynarzem. Zanotuj, ile mniej więcej ciasta pies zjadł i kiedy. Nie czekaj na objawy: powiększający się żołądek i zatrucie alkoholem wymagają szybkiej pomocy."
   },
   "serving": null,
   "child": {
@@ -121,7 +133,8 @@
     "es": "La masa de pan que todavía está subiendo no es para perros. Sigue creciendo dentro de su barriguita. Si tu perro se come un poco, díselo a un adulto.",
     "it": "L’impasto del pane che sta ancora lievitando non è per i cani: continua a crescere nella loro pancia. Avvisa un adulto se il tuo cane ne mangia.",
     "pt": "A massa do pão que ainda está a crescer não é para cães. Continua a crescer dentro da barriga deles. Avisa um adulto se o teu cão comer alguma.",
-    "nl": "Brooddeeg dat nog rijst, is niet voor honden. Het blijft groeien in hun buikje. Vertel het aan een volwassene als je hond ervan eet."
+    "nl": "Brooddeeg dat nog rijst, is niet voor honden. Het blijft groeien in hun buikje. Vertel het aan een volwassene als je hond ervan eet.",
+    "pl": "Ciasto na chleb, które jeszcze rośnie, nie jest dla psów. Rośnie dalej w ich brzuszku. Powiedz dorosłemu, jeśli twój pies trochę go zje."
   },
   "faq": [
     {
@@ -133,7 +146,8 @@
         "es": "¿El pan ya horneado también es peligroso?",
         "it": "Anche il pane cotto è pericoloso?",
         "pt": "O pão cozido também é perigoso?",
-        "nl": "Is gebakken brood ook gevaarlijk?"
+        "nl": "Is gebakken brood ook gevaarlijk?",
+        "pl": "Czy upieczony chleb też jest niebezpieczny?"
       },
       "a": {
         "en": "The danger described here is raw, unbaked yeast dough, because the yeast is still alive and keeps working in the stomach.",
@@ -143,7 +157,8 @@
         "es": "El peligro que se describe aquí es el de la masa cruda con levadura, sin hornear, porque la levadura sigue viva y continúa actuando en el estómago.",
         "it": "Il pericolo descritto qui riguarda l’impasto crudo con lievito, non cotto, perché il lievito è ancora vivo e continua a lavorare nello stomaco.",
         "pt": "O perigo aqui descrito é a massa crua com fermento, por cozer, porque o fermento ainda está vivo e continua a trabalhar no estômago.",
-        "nl": "Het gevaar dat hier wordt beschreven, gaat over rauw, ongebakken gistdeeg, omdat de gist dan nog leeft en in de maag blijft werken."
+        "nl": "Het gevaar dat hier wordt beschreven, gaat over rauw, ongebakken gistdeeg, omdat de gist dan nog leeft en in de maag blijft werken.",
+        "pl": "Opisane tu zagrożenie dotyczy surowego, niewypieczonego ciasta drożdżowego, bo drożdże są wciąż żywe i dalej pracują w żołądku."
       }
     },
     {
@@ -155,7 +170,8 @@
         "es": "¿Por qué la masa provoca una intoxicación etílica?",
         "it": "Perché l’impasto causa un’intossicazione da alcol?",
         "pt": "Porque é que a massa causa intoxicação alcoólica?",
-        "nl": "Waarom veroorzaakt deeg alcoholvergiftiging?"
+        "nl": "Waarom veroorzaakt deeg alcoholvergiftiging?",
+        "pl": "Dlaczego ciasto wywołuje zatrucie alkoholem?"
       },
       "a": {
         "en": "Fermenting yeast produces alcohol in the stomach, and it is rapidly absorbed into the bloodstream.",
@@ -165,7 +181,8 @@
         "es": "La levadura, al fermentar, produce alcohol en el estómago, y este pasa rápidamente a la sangre.",
         "it": "Il lievito che fermenta produce alcol nello stomaco, e l’alcol passa rapidamente nel sangue.",
         "pt": "O fermento, ao fermentar, produz álcool no estômago, que é rapidamente absorvido para a corrente sanguínea.",
-        "nl": "Actieve gist maakt alcohol in de maag, en die wordt snel in het bloed opgenomen."
+        "nl": "Actieve gist maakt alcohol in de maag, en die wordt snel in het bloed opgenomen.",
+        "pl": "Fermentujące drożdże wytwarzają w żołądku alkohol, który szybko wchłania się do krwiobiegu."
       }
     }
   ],
@@ -261,6 +278,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d011fa80b644cc87b4e8f29fbc513b611e31d8071f1394fa2bb0f8f508a869e0"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ac75073223cc4091af58bd2fed3162b1b101e5f3254c144634490187bc63b582"
     }
   }
 }

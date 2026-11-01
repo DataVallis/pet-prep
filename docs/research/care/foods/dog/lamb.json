@@ -9,7 +9,8 @@
     "es": "Cordero",
     "it": "Agnello",
     "pt": "Borrego",
-    "nl": "Lamsvlees"
+    "nl": "Lamsvlees",
+    "pl": "Jagnięcina"
   },
   "question": {
     "en": "Can dogs eat lamb?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros comer cordero?",
     "it": "I cani possono mangiare l’agnello?",
     "pt": "Os cães podem comer borrego?",
-    "nl": "Mogen honden lamsvlees eten?"
+    "nl": "Mogen honden lamsvlees eten?",
+    "pl": "Czy psy mogą jeść jagnięcinę?"
   },
   "url_slug": {
     "en": "lamb",
@@ -29,7 +31,8 @@
     "es": "cordero",
     "it": "agnello",
     "pt": "borrego",
-    "nl": "lamsvlees"
+    "nl": "lamsvlees",
+    "pl": "jagniecina"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "Sí, un poco de carne de cordero cocinada, natural y sin huesos está bien para un perro sano sin alergia alimentaria. Nunca le des huesos de cordero cocinados, que se vuelven frágiles y se astillan, y evita los trozos grasos o salados y las salsas con cebolla.",
     "it": "Sì, un po’ di carne d’agnello cotta al naturale e senza ossa va bene per un cane sano senza allergie alimentari. Non dare mai ossa d’agnello cotte, che diventano fragili e si scheggiano, ed evita i pezzi grassi o salati e i sughi a base di cipolla.",
     "pt": "Sim, um pouco de carne de borrego cozinhada, simples e sem ossos, não faz mal a um cão saudável sem alergia alimentar. Nunca dês ossos de borrego cozinhados, que ficam quebradiços e lascam, e evita pedaços gordos ou salgados e molho com cebola.",
-    "nl": "Ja, een beetje gewoon gekookt lamsvlees zonder botten is prima voor een gezonde hond zonder voedselallergie. Geef nooit gekookte lamsbotten, want die worden broos en splinteren, en vermijd vette of zoute stukken en jus met ui."
+    "nl": "Ja, een beetje gewoon gekookt lamsvlees zonder botten is prima voor een gezonde hond zonder voedselallergie. Geef nooit gekookte lamsbotten, want die worden broos en splinteren, en vermijd vette of zoute stukken en jus met ui.",
+    "pl": "Tak, odrobina zwykłej gotowanej jagnięciny bez kości jest w porządku dla zdrowego psa bez alergii pokarmowej. Nigdy nie dawaj gotowanych kości jagnięcych, które stają się kruche i łamią się na odłamki, i unikaj tłustych lub słonych kawałków oraz sosu z cebulą."
   },
   "why": {
     "en": "Lamb meat itself is listed as safe for dogs in small amounts. All bones become brittle when cooked and can splinter. High-fat foods can trigger vomiting, diarrhoea or even pancreatitis, and foods high in fat or salt are best avoided. Onion-based gravies are not safe for dogs.",
@@ -50,7 +54,8 @@
     "es": "La carne de cordero en sí figura como segura para los perros en pequeñas cantidades. Todos los huesos se vuelven frágiles al cocinarlos y pueden astillarse. Los alimentos con mucha grasa pueden desencadenar vómitos, diarrea o incluso una pancreatitis, y es mejor evitar los alimentos con mucha grasa o sal. Las salsas a base de cebolla no son seguras para los perros.",
     "it": "La carne d’agnello in sé è indicata come sicura per i cani in piccole quantità. Con la cottura tutte le ossa diventano fragili e possono scheggiarsi. I cibi grassi possono scatenare vomito, diarrea o persino una pancreatite, ed è meglio evitare i cibi ricchi di grassi o di sale. I sughi a base di cipolla non sono sicuri per i cani.",
     "pt": "A carne de borrego em si é considerada segura para os cães em pequenas quantidades. Todos os ossos ficam quebradiços quando cozinhados e podem lascar. Os alimentos ricos em gordura podem provocar vómitos, diarreia ou até pancreatite, e é melhor evitar alimentos com muita gordura ou sal. Os molhos à base de cebola não são seguros para os cães.",
-    "nl": "Lamsvlees zelf staat in kleine hoeveelheden als veilig voor honden vermeld. Alle botten worden broos als ze gekookt zijn en kunnen splinteren. Vet eten kan braken, diarree of zelfs alvleesklierontsteking uitlokken, en eten met veel vet of zout kun je beter vermijden. Jus op basis van ui is niet veilig voor honden."
+    "nl": "Lamsvlees zelf staat in kleine hoeveelheden als veilig voor honden vermeld. Alle botten worden broos als ze gekookt zijn en kunnen splinteren. Vet eten kan braken, diarree of zelfs alvleesklierontsteking uitlokken, en eten met veel vet of zout kun je beter vermijden. Jus op basis van ui is niet veilig voor honden.",
+    "pl": "Samo mięso jagnięce figuruje jako bezpieczne dla psów w małych ilościach. Wszystkie kości po ugotowaniu stają się kruche i mogą łamać się na odłamki. Tłuste jedzenie może wywołać wymioty, biegunkę, a nawet zapalenie trzustki, a potraw tłustych lub słonych najlepiej unikać. Sosy na bazie cebuli nie są bezpieczne dla psów."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "es": "Si tu perro ha comido restos grasos de cordero, vigila si aparecen vómitos, diarrea o dolor de barriga y llama a tu veterinario si aparecen. Si ha comido huesos cocinados o cordero con salsa de cebolla, llama enseguida a tu veterinario y no intentes hacerle vomitar.",
     "it": "Se il tuo cane ha mangiato avanzi grassi di agnello, controlla se compaiono vomito, diarrea o mal di pancia e, in quel caso, chiama il veterinario. Se ha mangiato ossa cotte o agnello con un sugo a base di cipolla, chiama subito il veterinario e non cercare di farlo vomitare.",
     "pt": "Se o teu cão comeu restos gordos de borrego, vigia se há vómitos, diarreia ou dor de barriga e liga ao teu veterinário se surgirem. Se comeu ossos cozinhados ou borrego com molho de cebola, liga imediatamente ao teu veterinário e não tentes fazê-lo vomitar.",
-    "nl": "Heeft je hond vette restjes lamsvlees gegeten? Let dan op braken, diarree of buikpijn en bel je dierenarts als die optreden. Heeft hij gekookte botten of lamsvlees met uienjus gegeten, bel je dierenarts dan meteen en probeer je hond niet te laten braken."
+    "nl": "Heeft je hond vette restjes lamsvlees gegeten? Let dan op braken, diarree of buikpijn en bel je dierenarts als die optreden. Heeft hij gekookte botten of lamsvlees met uienjus gegeten, bel je dierenarts dan meteen en probeer je hond niet te laten braken.",
+    "pl": "Jeśli twój pies zjadł tłuste resztki jagnięciny, obserwuj, czy nie pojawiają się wymioty, biegunka lub ból brzucha, i zadzwoń do weterynarza, jeśli wystąpią. Jeśli zjadł gotowane kości lub jagnięcinę w sosie z cebulą, od razu zadzwoń do weterynarza i nie próbuj wywoływać u psa wymiotów."
   },
   "serving": {
     "en": "A little plain cooked lamb meat, no bones, no fatty or salty bits, no gravy.",
@@ -71,7 +77,8 @@
     "es": "Un poco de carne de cordero cocinada y natural, sin huesos, sin trozos grasos ni salados y sin salsa.",
     "it": "Un po’ di carne d’agnello cotta al naturale, senza ossa, senza pezzi grassi o salati, senza sugo.",
     "pt": "Um pouco de carne de borrego cozinhada e simples, sem ossos, sem partes gordas ou salgadas, sem molho.",
-    "nl": "Een beetje gewoon gekookt lamsvlees, zonder botten, zonder vette of zoute stukjes, zonder jus."
+    "nl": "Een beetje gewoon gekookt lamsvlees, zonder botten, zonder vette of zoute stukjes, zonder jus.",
+    "pl": "Odrobina zwykłej gotowanej jagnięciny, bez kości, bez tłustych lub słonych kawałków, bez sosu."
   },
   "child": {
     "en": "A small bit of plain lamb with no bones can be a treat. Lamb bones are never for dogs.",
@@ -81,7 +88,8 @@
     "es": "Un trocito de cordero natural y sin huesos puede ser un premio. Los huesos de cordero nunca son para perros.",
     "it": "Un pezzetto di agnello semplice e senza ossa può essere un premio. Le ossa d’agnello non sono mai per i cani.",
     "pt": "Um pedacinho de borrego simples e sem ossos pode ser uma guloseima. Os ossos de borrego nunca são para cães.",
-    "nl": "Een klein stukje gewoon lamsvlees zonder botten kan een traktatie zijn. Lamsbotten zijn nooit voor honden."
+    "nl": "Een klein stukje gewoon lamsvlees zonder botten kan een traktatie zijn. Lamsbotten zijn nooit voor honden.",
+    "pl": "Mały kawałek zwykłej jagnięciny bez kości może być smakołykiem. Kości jagnięce nigdy nie są dla psów."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "es": "¿Puede un perro mordisquear un hueso de cordero?",
         "it": "Posso dare al cane un osso d’agnello da rosicchiare?",
         "pt": "Os cães podem roer um osso de borrego?",
-        "nl": "Mag een hond op een lamsbot kauwen?"
+        "nl": "Mag een hond op een lamsbot kauwen?",
+        "pl": "Czy pies może dostać kość jagnięcą do gryzienia?"
       },
       "a": {
         "en": "Not a cooked one: cooked bones become brittle and can splinter. Never give cooked bones of any kind.",
@@ -103,7 +112,8 @@
         "es": "Cocinado no: los huesos cocinados se vuelven frágiles y pueden astillarse. Nunca le des huesos cocinados de ningún tipo.",
         "it": "Non se è cotto: le ossa cotte diventano fragili e possono scheggiarsi. Non dare mai ossa cotte di nessun tipo.",
         "pt": "Um osso cozinhado, não: os ossos cozinhados ficam quebradiços e podem lascar. Nunca dês ossos cozinhados de nenhum tipo.",
-        "nl": "Niet op een gekookt bot: gekookte botten worden broos en kunnen splinteren. Geef nooit gekookte botten, van welke soort ook."
+        "nl": "Niet op een gekookt bot: gekookte botten worden broos en kunnen splinteren. Geef nooit gekookte botten, van welke soort ook.",
+        "pl": "Gotowanej nie: gotowane kości stają się kruche i mogą łamać się na odłamki. Nigdy nie dawaj gotowanych kości żadnego rodzaju."
       }
     }
   ],
@@ -197,6 +207,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1b18852f558b95c4e63854157afb9b43f6b263fb54e408754de66e96e967cf0c"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "731cd9a700f581791c500ad364e517c77912be2519d5f17e4d33a0babcea285d"
     }
   }
 }

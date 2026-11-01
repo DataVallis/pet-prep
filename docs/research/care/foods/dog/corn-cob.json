@@ -9,7 +9,8 @@
     "es": "Mazorca de maíz",
     "it": "Pannocchia",
     "pt": "Maçaroca de milho",
-    "nl": "Maïskolf"
+    "nl": "Maïskolf",
+    "pl": "Kolby kukurydzy"
   },
   "question": {
     "en": "Can dogs eat corn cobs?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros comer mazorcas de maíz?",
     "it": "I cani possono mangiare le pannocchie?",
     "pt": "Os cães podem comer maçarocas de milho?",
-    "nl": "Mogen honden maïskolven eten?"
+    "nl": "Mogen honden maïskolven eten?",
+    "pl": "Czy psy mogą jeść kolby kukurydzy?"
   },
   "url_slug": {
     "en": "corn-cob",
@@ -29,7 +31,8 @@
     "es": "mazorca-de-maiz",
     "it": "pannocchia",
     "pt": "macaroca-de-milho",
-    "nl": "maiskolf"
+    "nl": "maiskolf",
+    "pl": "kolby-kukurydzy"
   },
   "level": "dangerous",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No. Nunca le des a un perro maíz en mazorca. Los perros pueden tragarse trozos o incluso la mazorca entera, lo que puede provocar atragantamiento o una obstrucción intestinal grave que puede requerir tratamiento de urgencia. Los granos de maíz naturales, ya desgranados, son otra cosa.",
     "it": "No. Non dare mai a un cane la pannocchia di mais. I cani possono ingoiarne dei pezzi o perfino la pannocchia intera, con il rischio di soffocamento o di una grave ostruzione intestinale che può richiedere un trattamento d’urgenza. I chicchi di mais al naturale, staccati dalla pannocchia, sono un’altra cosa.",
     "pt": "Não. Nunca dês a um cão milho na maçaroca. Os cães podem engolir pedaços ou até a maçaroca inteira, o que pode causar engasgamento ou uma obstrução intestinal grave que pode exigir tratamento de emergência. Os grãos de milho simples, já fora da maçaroca, são outra história.",
-    "nl": "Nee. Geef een hond nooit een maïskolf. Honden kunnen stukken of zelfs de hele kolf inslikken, wat verstikking of een ernstige darmverstopping kan veroorzaken waarvoor soms een spoedbehandeling nodig is. Losse, gewone maïskorrels zijn een ander verhaal."
+    "nl": "Nee. Geef een hond nooit een maïskolf. Honden kunnen stukken of zelfs de hele kolf inslikken, wat verstikking of een ernstige darmverstopping kan veroorzaken waarvoor soms een spoedbehandeling nodig is. Losse, gewone maïskorrels zijn een ander verhaal.",
+    "pl": "Nie. Nigdy nie dawaj psu kukurydzy w kolbie. Pies może połknąć kawałki, a nawet całą kolbę, co może spowodować zadławienie lub poważną niedrożność jelit wymagającą pilnego leczenia. Zwykłe ziarna kukurydzy zdjęte z kolby to inna sprawa."
   },
   "why": {
     "en": "Swallowed pieces can block the intestines; in one reported case the blockage restricted the blood supply, and emergency treatment may be needed. Plain kernels in moderation are generally safe; the cob is the danger.",
@@ -50,7 +54,8 @@
     "es": "Los trozos tragados pueden obstruir el intestino; en un caso descrito, la obstrucción reducía el riego sanguíneo, y puede hacer falta un tratamiento de urgencia. Los granos naturales con moderación suelen ser seguros; el peligro es la mazorca.",
     "it": "I pezzi ingoiati possono ostruire l’intestino; in un caso descritto l’ostruzione limitava l’afflusso di sangue, e può essere necessario un trattamento d’urgenza. I chicchi al naturale, con moderazione, sono in genere sicuri; il pericolo è la pannocchia.",
     "pt": "Os pedaços engolidos podem obstruir os intestinos; num caso relatado, a obstrução reduziu a irrigação sanguínea, e pode ser necessário tratamento de emergência. Os grãos simples, com moderação, são geralmente seguros; o perigo é a maçaroca.",
-    "nl": "Ingeslikte stukken kunnen de darmen verstoppen; in een beschreven geval belemmerde de verstopping de bloedtoevoer, en een spoedbehandeling kan nodig zijn. Gewone maïskorrels zijn met mate over het algemeen veilig; het gevaar zit in de kolf."
+    "nl": "Ingeslikte stukken kunnen de darmen verstoppen; in een beschreven geval belemmerde de verstopping de bloedtoevoer, en een spoedbehandeling kan nodig zijn. Gewone maïskorrels zijn met mate over het algemeen veilig; het gevaar zit in de kolf.",
+    "pl": "Połknięte kawałki mogą zatkać jelita; w jednym opisanym przypadku niedrożność ograniczyła dopływ krwi i może być potrzebne pilne leczenie. Zwykłe ziarna w umiarkowanej ilości są na ogół bezpieczne; zagrożeniem jest kolba."
   },
   "signs": {
     "en": [
@@ -108,6 +113,13 @@
       "Vermoeidheid en minder actief",
       "Diarree",
       "Uitdroging"
+    ],
+    "pl": [
+      "Powtarzające się wymioty",
+      "Niechęć do jedzenia",
+      "Zmęczenie i mniejsza aktywność",
+      "Biegunka",
+      "Odwodnienie"
     ]
   },
   "what_to_do": {
@@ -118,7 +130,8 @@
     "es": "Contacta enseguida con tu veterinario si tu perro se ha tragado una mazorca de maíz o parte de ella, aunque parezca estar bien. Apunta cuándo ha pasado y más o menos cuánto ha comido. No esperes a que aparezcan signos de obstrucción.",
     "it": "Contatta subito il veterinario se il tuo cane ha ingoiato una pannocchia o un pezzo di pannocchia, anche se sembra stare bene. Annota quando è successo e più o meno quanto ne ha mangiato. Non aspettare i segni di un’ostruzione.",
     "pt": "Contacta imediatamente o teu veterinário se o teu cão engoliu uma maçaroca de milho ou parte de uma, mesmo que pareça estar bem. Anota quando aconteceu e mais ou menos quanto comeu. Não esperes por sinais de obstrução.",
-    "nl": "Neem meteen contact op met je dierenarts als je hond een maïskolf of een deel ervan heeft ingeslikt, ook als hij in orde lijkt. Schrijf op wanneer het gebeurde en ongeveer hoeveel er is gegeten. Wacht niet op tekenen van een verstopping."
+    "nl": "Neem meteen contact op met je dierenarts als je hond een maïskolf of een deel ervan heeft ingeslikt, ook als hij in orde lijkt. Schrijf op wanneer het gebeurde en ongeveer hoeveel er is gegeten. Wacht niet op tekenen van een verstopping.",
+    "pl": "Od razu skontaktuj się z weterynarzem, jeśli twój pies połknął kolbę kukurydzy lub jej część, nawet jeśli wydaje się, że nic mu nie jest. Zanotuj, kiedy to się stało i mniej więcej ile zjadł. Nie czekaj na objawy niedrożności."
   },
   "serving": null,
   "child": {
@@ -129,7 +142,8 @@
     "es": "Las mazorcas se pueden quedar atascadas en la barriga de un perro. Tíralas enseguida a una basura con tapa y avisa a un adulto si tu perro se come una.",
     "it": "Le pannocchie possono bloccarsi nella pancia di un cane. Butta subito le pannocchie in un bidone chiuso e dillo a un adulto se il tuo cane ne mangia una.",
     "pt": "As maçarocas de milho podem ficar presas na barriga de um cão. Põe-nas logo num caixote do lixo fechado e avisa um adulto se o teu cão comer uma.",
-    "nl": "Maïskolven kunnen in het buikje van een hond vast komen te zitten. Gooi kolven meteen in een dichte vuilnisbak. Eet je hond er een? Vertel het aan een volwassene."
+    "nl": "Maïskolven kunnen in het buikje van een hond vast komen te zitten. Gooi kolven meteen in een dichte vuilnisbak. Eet je hond er een? Vertel het aan een volwassene.",
+    "pl": "Kolby kukurydzy mogą utknąć psu w brzuszku. Wyrzucaj je od razu do zamkniętego kosza i powiedz dorosłemu, jeśli twój pies jakąś zje."
   },
   "faq": [
     {
@@ -141,7 +155,8 @@
         "es": "¿Pueden los perros comer granos de maíz?",
         "it": "I cani possono mangiare i chicchi di mais?",
         "pt": "Os cães podem comer grãos de milho?",
-        "nl": "Mogen honden maïskorrels eten?"
+        "nl": "Mogen honden maïskorrels eten?",
+        "pl": "Czy psy mogą jeść ziarna kukurydzy?"
       },
       "a": {
         "en": "Plain corn kernels are generally safe for dogs in moderation. It's the cob that is dangerous.",
@@ -151,7 +166,8 @@
         "es": "Los granos de maíz naturales suelen ser seguros para los perros con moderación. Lo peligroso es la mazorca.",
         "it": "I chicchi di mais al naturale sono in genere sicuri per i cani, con moderazione. È la pannocchia a essere pericolosa.",
         "pt": "Os grãos de milho simples são geralmente seguros para os cães, com moderação. O perigo é a maçaroca.",
-        "nl": "Gewone maïskorrels zijn met mate over het algemeen veilig voor honden. Het is de kolf die gevaarlijk is."
+        "nl": "Gewone maïskorrels zijn met mate over het algemeen veilig voor honden. Het is de kolf die gevaarlijk is.",
+        "pl": "Zwykłe ziarna kukurydzy w umiarkowanej ilości są na ogół bezpieczne dla psów. Niebezpieczna jest kolba."
       }
     },
     {
@@ -163,7 +179,8 @@
         "es": "¿Una mazorca de maíz saldrá sola?",
         "it": "La pannocchia uscirà da sola?",
         "pt": "A maçaroca acaba por sair sozinha?",
-        "nl": "Komt een maïskolf er vanzelf weer uit?"
+        "nl": "Komt een maïskolf er vanzelf weer uit?",
+        "pl": "Czy kolba kukurydzy sama przejdzie przez jelita?"
       },
       "a": {
         "en": "Don't wait to find out. A swallowed cob can cause a serious blockage, so contact your vet straight away.",
@@ -173,7 +190,8 @@
         "es": "No esperes para comprobarlo. Una mazorca tragada puede causar una obstrucción grave, así que contacta enseguida con tu veterinario.",
         "it": "Non aspettare di scoprirlo. Una pannocchia ingoiata può causare una grave ostruzione, quindi contatta subito il veterinario.",
         "pt": "Não esperes para ver. Uma maçaroca engolida pode causar uma obstrução grave, por isso contacta imediatamente o teu veterinário.",
-        "nl": "Wacht dat niet af. Een ingeslikte kolf kan een ernstige verstopping veroorzaken, dus neem meteen contact op met je dierenarts."
+        "nl": "Wacht dat niet af. Een ingeslikte kolf kan een ernstige verstopping veroorzaken, dus neem meteen contact op met je dierenarts.",
+        "pl": "Nie czekaj, żeby się przekonać. Połknięta kolba może spowodować poważną niedrożność, więc od razu skontaktuj się z weterynarzem."
       }
     }
   ],
@@ -285,6 +303,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "123f02e333dcc90dad35a20438765cd9e6f563e69656678b09ae1289331f9f0d"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8f675a718462bc169cf64c940c98c7f9f8692b59c2a38d9dce07e2d1a03c4dfb"
     }
   }
 }

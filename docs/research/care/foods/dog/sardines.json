@@ -9,7 +9,8 @@
     "es": "Sardinas",
     "it": "Sardine",
     "pt": "Sardinhas",
-    "nl": "Sardines"
+    "nl": "Sardines",
+    "pl": "Sardynki"
   },
   "question": {
     "en": "Can dogs eat sardines?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros comer sardinas?",
     "it": "I cani possono mangiare le sardine?",
     "pt": "Os cães podem comer sardinhas?",
-    "nl": "Mogen honden sardines eten?"
+    "nl": "Mogen honden sardines eten?",
+    "pl": "Czy psy mogą jeść sardynki?"
   },
   "url_slug": {
     "en": "sardines",
@@ -29,7 +31,8 @@
     "es": "sardinas",
     "it": "sardine",
     "pt": "sardinhas",
-    "nl": "sardines"
+    "nl": "sardines",
+    "pl": "sardynki"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "Sí, con moderación. Las sardinas en lata al natural (en agua), sin sal y sin condimentos, son un premio de pescado adecuado, y sus diminutas espinas quedan blandas y comestibles tras el enlatado. Las sardinas frescas deben estar bien cocinadas. Evita el pescado salado, condimentado o crudo.",
     "it": "Sì, con moderazione. Le sardine in scatola al naturale, in acqua, senza sale e senza condimenti, sono un premio di pesce adatto, e le loro minuscole lische diventano morbide e commestibili con l’inscatolamento. Le sardine fresche vanno cotte bene. Evita il pesce salato, condito o crudo.",
     "pt": "Sim, com moderação. As sardinhas em lata ao natural, em água, sem sal e sem temperos, são uma guloseima de peixe adequada, e as espinhas pequeninas ficam moles e comestíveis depois do enlatamento. As sardinhas frescas têm de estar bem cozinhadas. Evita peixe salgado, temperado ou cru.",
-    "nl": "Ja, met mate. Sardines uit blik in water, ongezouten en ongekruid, zijn een geschikt vissnoepje, en de kleine graatjes zijn na het inblikken zacht en eetbaar. Verse sardines moeten helemaal gaar zijn. Vermijd zoute, gekruide of rauwe vis."
+    "nl": "Ja, met mate. Sardines uit blik in water, ongezouten en ongekruid, zijn een geschikt vissnoepje, en de kleine graatjes zijn na het inblikken zacht en eetbaar. Verse sardines moeten helemaal gaar zijn. Vermijd zoute, gekruide of rauwe vis.",
+    "pl": "Tak, z umiarem. Sardynki z puszki w wodzie, niesolone i nieprzyprawione, to odpowiedni rybny smakołyk, a ich drobne ości po konserwowaniu są miękkie i jadalne. Świeże sardynki muszą być dobrze ugotowane. Unikaj ryb słonych, przyprawionych lub surowych."
   },
   "why": {
     "en": "Plain, fully cooked fish provides protein and fatty acids. Cooking fully reduces the risk from parasites and bacteria. Canned sardines are the exception to the bones rule because their bones soften during canning; for other fish, bones must be removed. Canned fish should be unsalted and unseasoned.",
@@ -50,7 +54,8 @@
     "es": "El pescado natural y bien cocinado aporta proteínas y ácidos grasos. Cocinarlo bien reduce el riesgo de parásitos y bacterias. Las sardinas en lata son la excepción a la regla de las espinas, porque sus espinas se ablandan durante el enlatado; en otros pescados hay que quitarlas. El pescado en lata debe ir sin sal y sin condimentos.",
     "it": "Il pesce semplice e ben cotto fornisce proteine e acidi grassi. Una cottura completa riduce il rischio di parassiti e batteri. Le sardine in scatola sono l’eccezione alla regola delle lische, perché le lische si ammorbidiscono durante l’inscatolamento; negli altri pesci le lische vanno tolte. Il pesce in scatola deve essere senza sale e senza condimenti.",
     "pt": "O peixe simples e bem cozinhado fornece proteína e ácidos gordos. Cozinhar bem reduz o risco de parasitas e bactérias. As sardinhas em lata são a exceção à regra das espinhas, porque as espinhas amolecem durante o enlatamento; nos outros peixes, as espinhas têm de ser retiradas. O peixe em lata deve ser sem sal e sem temperos.",
-    "nl": "Gewone, helemaal gare vis levert eiwit en vetzuren. Goed garen verkleint het risico op parasieten en bacteriën. Sardines uit blik zijn de uitzondering op de regel over graten, omdat de graatjes bij het inblikken zacht worden; bij andere vis moeten de graten eruit. Vis uit blik moet ongezouten en ongekruid zijn."
+    "nl": "Gewone, helemaal gare vis levert eiwit en vetzuren. Goed garen verkleint het risico op parasieten en bacteriën. Sardines uit blik zijn de uitzondering op de regel over graten, omdat de graatjes bij het inblikken zacht worden; bij andere vis moeten de graten eruit. Vis uit blik moet ongezouten en ongekruid zijn.",
+    "pl": "Zwykła, dobrze ugotowana ryba dostarcza białka i kwasów tłuszczowych. Dokładne ugotowanie zmniejsza ryzyko związane z pasożytami i bakteriami. Sardynki z puszki to wyjątek od zasady dotyczącej ości, bo ości miękną podczas konserwowania; z innych ryb ości trzeba usunąć. Ryby z puszki powinny być niesolone i nieprzyprawione."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "es": "Si tu perro ha comido sardinas saladas o condimentadas o pescado crudo, vigila si tiene vómitos, diarrea o poca energía y llama a tu veterinario si son intensos o no se pasan.",
     "it": "Se il tuo cane ha mangiato sardine salate o condite o pesce crudo, controlla se compaiono vomito, diarrea o poca energia e chiama il veterinario se sono forti o non passano.",
     "pt": "Se o teu cão comeu sardinhas salgadas ou temperadas ou peixe cru, vigia se há vómitos, diarreia ou pouca energia e liga ao teu veterinário se forem fortes ou não pararem.",
-    "nl": "Heeft je hond zoute of gekruide sardines of rauwe vis gegeten? Let dan op braken, diarree of weinig energie en bel je dierenarts als die ernstig zijn of niet ophouden."
+    "nl": "Heeft je hond zoute of gekruide sardines of rauwe vis gegeten? Let dan op braken, diarree of weinig energie en bel je dierenarts als die ernstig zijn of niet ophouden.",
+    "pl": "Jeśli twój pies zjadł słone lub przyprawione sardynki albo surową rybę, obserwuj, czy nie pojawiają się wymioty, biegunka lub osłabienie, i zadzwoń do weterynarza, jeśli są silne albo nie ustępują."
   },
   "serving": {
     "en": "Canned in water, unsalted and unseasoned; or fresh sardines fully cooked (steamed, baked or poached) and plain; in moderation.",
@@ -71,7 +77,8 @@
     "es": "En lata al natural (en agua), sin sal y sin condimentos; o sardinas frescas bien cocinadas (al vapor, al horno o escalfadas) y sin nada; con moderación.",
     "it": "In scatola, in acqua, senza sale e senza condimenti; oppure sardine fresche ben cotte (al vapore, al forno o lessate) e semplici; con moderazione.",
     "pt": "Em lata, em água, sem sal e sem temperos; ou sardinhas frescas bem cozinhadas (a vapor, no forno ou escalfadas) e simples; com moderação.",
-    "nl": "Uit blik in water, ongezouten en ongekruid; of verse sardines, helemaal gaar (gestoomd, uit de oven of gepocheerd) en puur; met mate."
+    "nl": "Uit blik in water, ongezouten en ongekruid; of verse sardines, helemaal gaar (gestoomd, uit de oven of gepocheerd) en puur; met mate.",
+    "pl": "Z puszki w wodzie, niesolone i nieprzyprawione; albo świeże sardynki dobrze ugotowane (na parze, pieczone lub gotowane w wodzie) i zwykłe; z umiarem."
   },
   "child": {
     "en": "Sardines in water can be a fishy treat for a dog, now and then. Salty fish is not for dogs.",
@@ -81,7 +88,8 @@
     "es": "Las sardinas en agua pueden ser un premio de pescado para un perro, de vez en cuando. El pescado salado no es para perros.",
     "it": "Le sardine in acqua possono essere un premio al gusto di pesce per un cane, ogni tanto. Il pesce salato non è per i cani.",
     "pt": "As sardinhas em água podem ser uma guloseima de peixe para um cão, de vez em quando. O peixe salgado não é para cães.",
-    "nl": "Sardines in water kunnen af en toe een lekker vissnoepje zijn voor een hond. Zoute vis is niet voor honden."
+    "nl": "Sardines in water kunnen af en toe een lekker vissnoepje zijn voor een hond. Zoute vis is niet voor honden.",
+    "pl": "Sardynki w wodzie mogą być od czasu do czasu rybnym smakołykiem dla psa. Słona ryba nie jest dla psów."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "es": "¿Hay que quitar las espinas a las sardinas en lata?",
         "it": "Devo togliere le lische dalle sardine in scatola?",
         "pt": "Tenho de tirar as espinhas às sardinhas em lata?",
-        "nl": "Moet ik de graatjes uit sardines uit blik halen?"
+        "nl": "Moet ik de graatjes uit sardines uit blik halen?",
+        "pl": "Czy muszę usuwać ości z sardynek z puszki?"
       },
       "a": {
         "en": "No. The tiny bones are soft and fully edible after canning, so sardines canned in water can be fed without deboning.",
@@ -103,7 +112,8 @@
         "es": "No. Las diminutas espinas quedan blandas y totalmente comestibles tras el enlatado, así que las sardinas en lata al natural pueden darse sin quitarles las espinas.",
         "it": "No. Le minuscole lische diventano morbide e del tutto commestibili con l’inscatolamento, quindi le sardine in scatola in acqua si possono dare senza spinarle.",
         "pt": "Não. As espinhas pequeninas ficam moles e totalmente comestíveis depois do enlatamento, por isso as sardinhas em lata em água podem ser dadas sem tirar as espinhas.",
-        "nl": "Nee. De kleine graatjes zijn na het inblikken zacht en helemaal eetbaar, dus sardines in water uit blik kun je zonder ontgraten geven."
+        "nl": "Nee. De kleine graatjes zijn na het inblikken zacht en helemaal eetbaar, dus sardines in water uit blik kun je zonder ontgraten geven.",
+        "pl": "Nie. Drobne ości po konserwowaniu są miękkie i w pełni jadalne, więc sardynki z puszki w wodzie możesz podawać bez usuwania ości."
       }
     }
   ],
@@ -196,6 +206,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "bdcd12589fef938128837884b50b964b663e801bebe36578865c0d9f3e1eb39e"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "00f52ef07aa9cc112996dd1b19a4c9d07fae63faa439bf3bfafb691573ff1690"
     }
   }
 }

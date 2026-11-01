@@ -9,7 +9,8 @@
     "es": "Ciruelas",
     "it": "Prugne",
     "pt": "Ameixas",
-    "nl": "Pruimen"
+    "nl": "Pruimen",
+    "pl": "Śliwki"
   },
   "question": {
     "en": "Can dogs eat plums?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros comer ciruelas?",
     "it": "I cani possono mangiare le prugne?",
     "pt": "Os cães podem comer ameixas?",
-    "nl": "Mogen honden pruimen eten?"
+    "nl": "Mogen honden pruimen eten?",
+    "pl": "Czy psy mogą jeść śliwki?"
   },
   "url_slug": {
     "en": "plums",
@@ -29,7 +31,8 @@
     "es": "ciruelas",
     "it": "prugne",
     "pt": "ameixas",
-    "nl": "pruimen"
+    "nl": "pruimen",
+    "pl": "sliwki"
   },
   "level": "not_recommended",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No se recomienda. Un poco de pulpa de ciruela sin hueso no es la principal preocupación, pero los huesos de ciruela son tóxicos para los perros y pueden provocar atragantamiento u obstrucción intestinal. El rabito, las hojas y las semillas del ciruelo contienen cianuro.",
     "it": "Sconsigliate. Un po’ di polpa di prugna senza nocciolo non è il problema principale, ma i noccioli di prugna sono tossici per i cani e possono causare soffocamento o un’ostruzione intestinale. Piccioli, foglie e semi del susino contengono cianuro.",
     "pt": "Não é recomendado. Um pouco de polpa de ameixa sem caroço não é a principal preocupação, mas os caroços de ameixa são tóxicos para os cães e podem causar engasgamento ou uma obstrução intestinal. Os caules, as folhas e as sementes da ameixeira contêm cianeto.",
-    "nl": "Niet aan te raden. Een beetje pruimenvruchtvlees zonder pit is niet het grootste probleem, maar pruimenpitten zijn giftig voor honden en kunnen verstikking of een darmverstopping veroorzaken. De stelen, bladeren en pitten van de pruimenplant bevatten cyanide."
+    "nl": "Niet aan te raden. Een beetje pruimenvruchtvlees zonder pit is niet het grootste probleem, maar pruimenpitten zijn giftig voor honden en kunnen verstikking of een darmverstopping veroorzaken. De stelen, bladeren en pitten van de pruimenplant bevatten cyanide.",
+    "pl": "Nie zaleca się. Odrobina miąższu śliwki bez pestki nie jest głównym problemem, ale pestki śliwek są toksyczne dla psów i mogą spowodować zadławienie lub niedrożność jelit. Szypułki, liście i nasiona śliwy zawierają cyjanek."
   },
   "why": {
     "en": "The plum plant is listed as toxic to dogs because its stems, leaves and seeds contain cyanogenic glycosides. A pit can also be swallowed and get stuck. Some vets allow plum flesh as an occasional treat with the pit removed; because the plant itself is listed as toxic, we use the stricter rating. Prunes are even higher in sugar.",
@@ -50,7 +54,8 @@
     "es": "El ciruelo figura como tóxico para los perros porque su rabito, sus hojas y sus semillas contienen glucósidos cianogénicos. Además, el perro puede tragarse un hueso y que se quede atascado. Algunos veterinarios permiten la pulpa de ciruela como premio ocasional, sin el hueso; como la propia planta figura como tóxica, aplicamos la clasificación más estricta. Las ciruelas pasas tienen todavía más azúcar.",
     "it": "Il susino è classificato come tossico per i cani perché piccioli, foglie e semi contengono glicosidi cianogenici. Un nocciolo può anche essere ingoiato e restare incastrato. Alcuni veterinari permettono la polpa come premio occasionale, senza nocciolo; poiché la pianta stessa è classificata come tossica, adottiamo la valutazione più prudente. Le prugne secche contengono ancora più zucchero.",
     "pt": "A ameixeira está classificada como tóxica para os cães porque os caules, as folhas e as sementes contêm glicosídeos cianogénicos. Um caroço também pode ser engolido e ficar preso. Alguns veterinários permitem a polpa de ameixa como guloseima ocasional, sem caroço; como a planta em si está classificada como tóxica, usamos a classificação mais rigorosa. As ameixas secas têm ainda mais açúcar.",
-    "nl": "De pruimenplant staat te boek als giftig voor honden, omdat de stelen, bladeren en pitten cyanogene glycosiden bevatten. Een pit kan ook worden ingeslikt en vast komen te zitten. Sommige dierenartsen staan pruimenvruchtvlees zonder pit toe als af en toe een snoepje; omdat de plant zelf als giftig staat vermeld, kiezen wij de strengere beoordeling. Gedroogde pruimen bevatten nog meer suiker."
+    "nl": "De pruimenplant staat te boek als giftig voor honden, omdat de stelen, bladeren en pitten cyanogene glycosiden bevatten. Een pit kan ook worden ingeslikt en vast komen te zitten. Sommige dierenartsen staan pruimenvruchtvlees zonder pit toe als af en toe een snoepje; omdat de plant zelf als giftig staat vermeld, kiezen wij de strengere beoordeling. Gedroogde pruimen bevatten nog meer suiker.",
+    "pl": "Śliwa figuruje na listach roślin toksycznych dla psów, bo jej szypułki, liście i nasiona zawierają glikozydy cyjanogenne. Pies może też połknąć pestkę, a ta może utknąć. Niektórzy weterynarze dopuszczają miąższ śliwki bez pestki jako okazjonalny smakołyk; ponieważ sama roślina figuruje jako toksyczna, przyjmujemy surowszą ocenę. Suszone śliwki zawierają jeszcze więcej cukru."
   },
   "signs": {
     "en": [
@@ -92,6 +97,11 @@
       "Stikken of kokhalzen",
       "Tekenen van een verstopping: herhaald braken, niet eten, vermoeidheid",
       "Verwijde pupillen, steenrood tandvlees, moeite met ademhalen (cyanide)"
+    ],
+    "pl": [
+      "Zadławienie lub odruchy wymiotne",
+      "Objawy niedrożności: powtarzające się wymioty, brak apetytu, zmęczenie",
+      "Rozszerzone źrenice, ceglastoczerwone dziąsła, trudności z oddychaniem (cyjanek)"
     ]
   },
   "what_to_do": {
@@ -102,7 +112,8 @@
     "es": "Si tu perro se ha comido un hueso de ciruela, contacta enseguida con tu veterinario. Apunta cuándo ocurrió y cuántos huesos se comió.",
     "it": "Se il tuo cane ha mangiato un nocciolo di prugna, contatta subito il veterinario. Annota quando è successo e quanti noccioli ha mangiato.",
     "pt": "Se o teu cão comeu um caroço de ameixa, contacta imediatamente o teu veterinário. Anota quando aconteceu e quantos caroços comeu.",
-    "nl": "Heeft je hond een pruimenpit gegeten? Neem dan meteen contact op met je dierenarts. Schrijf op wanneer het gebeurde en hoeveel pitten er zijn gegeten."
+    "nl": "Heeft je hond een pruimenpit gegeten? Neem dan meteen contact op met je dierenarts. Schrijf op wanneer het gebeurde en hoeveel pitten er zijn gegeten.",
+    "pl": "Jeśli twój pies zjadł pestkę śliwki, od razu skontaktuj się z weterynarzem. Zanotuj, kiedy to się stało i ile pestek zjadł."
   },
   "serving": {
     "en": "If you share any, give only a little fresh flesh with the pit and stem removed. Skip prunes. Check with your vet first.",
@@ -112,7 +123,8 @@
     "es": "Si le das algo, que sea solo un poco de pulpa fresca, sin hueso ni rabito. Nada de ciruelas pasas. Consúltalo antes con tu veterinario.",
     "it": "Se gliene dai, offri solo un po’ di polpa fresca, senza nocciolo e picciolo. Evita le prugne secche. Chiedi prima al veterinario.",
     "pt": "Se partilhares, dá só um pouco de polpa fresca, sem caroço e sem pé. Evita ameixas secas. Fala primeiro com o teu veterinário.",
-    "nl": "Deel je toch iets, geef dan alleen een beetje vers vruchtvlees zonder pit en steel. Sla gedroogde pruimen over. Overleg eerst met je dierenarts."
+    "nl": "Deel je toch iets, geef dan alleen een beetje vers vruchtvlees zonder pit en steel. Sla gedroogde pruimen over. Overleg eerst met je dierenarts.",
+    "pl": "Jeśli już się dzielisz, daj tylko odrobinę świeżego miąższu bez pestki i szypułki. Pomiń suszone śliwki. Najpierw skonsultuj się z weterynarzem."
   },
   "child": {
     "en": "Plum stones are bad for dogs. Never give your dog a plum stone, and ask a grown-up before sharing any plum.",
@@ -122,7 +134,8 @@
     "es": "Los huesos de ciruela son malos para los perros. Nunca le des un hueso de ciruela a tu perro y pregunta a un adulto antes de compartir ciruela con él.",
     "it": "I noccioli di prugna fanno male ai cani. Non dare mai un nocciolo al tuo cane e chiedi a un adulto prima di dargli un pezzetto di prugna.",
     "pt": "Os caroços de ameixa fazem mal aos cães. Nunca dês um caroço ao teu cão e pergunta a um adulto antes de partilhares ameixa.",
-    "nl": "Pruimenpitten zijn slecht voor honden. Geef je hond nooit een pruimenpit, en vraag het eerst aan een volwassene voordat je een stukje pruim deelt."
+    "nl": "Pruimenpitten zijn slecht voor honden. Geef je hond nooit een pruimenpit, en vraag het eerst aan een volwassene voordat je een stukje pruim deelt.",
+    "pl": "Pestki śliwek szkodzą psom. Nigdy nie dawaj psu pestki i zanim podzielisz się śliwką, zapytaj dorosłego."
   },
   "faq": [
     {
@@ -134,7 +147,8 @@
         "es": "¿Pueden los perros comer ciruelas pasas?",
         "it": "Le prugne secche vanno bene per i cani?",
         "pt": "As ameixas secas podem ser dadas aos cães?",
-        "nl": "Zijn gedroogde pruimen oké voor honden?"
+        "nl": "Zijn gedroogde pruimen oké voor honden?",
+        "pl": "Czy suszone śliwki są w porządku dla psów?"
       },
       "a": {
         "en": "Prunes are even higher in sugar than fresh plums, so they are not a great option for dogs.",
@@ -144,7 +158,8 @@
         "es": "Las ciruelas pasas tienen todavía más azúcar que las frescas, así que no son una buena opción para los perros.",
         "it": "Le prugne secche contengono ancora più zucchero di quelle fresche, quindi non sono una buona scelta per i cani.",
         "pt": "As ameixas secas têm ainda mais açúcar do que as frescas, por isso não são uma boa opção para os cães.",
-        "nl": "Gedroogde pruimen bevatten nog meer suiker dan verse pruimen, dus ze zijn geen goede keuze voor honden."
+        "nl": "Gedroogde pruimen bevatten nog meer suiker dan verse pruimen, dus ze zijn geen goede keuze voor honden.",
+        "pl": "Suszone śliwki zawierają jeszcze więcej cukru niż świeże, więc nie są dobrym wyborem dla psów."
       }
     }
   ],
@@ -249,6 +264,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7d5fc0b792b50fab2955455cf95e98fe47113a5b22fd41fdaac00b783745e44a"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "18f7a7f62972d8629764836797e6536e579f043ed5fc1ac81b1fd91976b70bcc"
     }
   }
 }

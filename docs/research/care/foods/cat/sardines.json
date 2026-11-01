@@ -9,7 +9,8 @@
     "es": "Sardinas",
     "it": "Sardine",
     "pt": "Sardinhas",
-    "nl": "Sardines"
+    "nl": "Sardines",
+    "pl": "Sardynki"
   },
   "question": {
     "en": "Can cats eat sardines?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los gatos comer sardinas?",
     "it": "I gatti possono mangiare le sardine?",
     "pt": "Os gatos podem comer sardinhas?",
-    "nl": "Mogen katten sardines eten?"
+    "nl": "Mogen katten sardines eten?",
+    "pl": "Czy koty mogą jeść sardynki?"
   },
   "url_slug": {
     "en": "sardines",
@@ -29,7 +31,8 @@
     "es": "sardinas",
     "it": "sardine",
     "pt": "sardinhas",
-    "nl": "sardines"
+    "nl": "sardines",
+    "pl": "sardynki"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "Sí, como premio ocasional. Las sardinas en lata al natural (en agua) se pueden ofrecer de vez en cuando, con cuidado con las espinas. No deben convertirse en la base de la alimentación del gato.",
     "it": "Sì, come premio occasionale. Le sardine in scatola al naturale (in acqua) possono essere offerte ogni tanto, facendo attenzione alle lische. Non devono diventare la parte principale della dieta del gatto.",
     "pt": "Sim, como guloseima ocasional. As sardinhas em lata ao natural (em água) podem ser oferecidas de vez em quando, com atenção às espinhas. Não devem passar a ser a parte principal da alimentação do gato.",
-    "nl": "Ja, af en toe als snoepje. Sardines uit blik in bronwater kun je zo nu en dan geven; let wel op graten. Ze horen geen hoofdbestanddeel van het eten van een kat te worden."
+    "nl": "Ja, af en toe als snoepje. Sardines uit blik in bronwater kun je zo nu en dan geven; let wel op graten. Ze horen geen hoofdbestanddeel van het eten van een kat te worden.",
+    "pl": "Tak, jako okazjonalny smakołyk. Sardynki z puszki w wodzie źródlanej można od czasu do czasu podać, uważając na ości. Nie powinny stać się główną częścią diety kota."
   },
   "why": {
     "en": "RSPCA Australia says fish such as tinned sardines in spring water can be offered as an occasional treat, taking care with bones, but are not suitable as the main part of the diet. Cats Protection advises fish be properly cooked, with bones removed, and given only a few pieces at a time.",
@@ -50,7 +54,8 @@
     "es": "RSPCA Australia dice que el pescado, como las sardinas en lata al natural (en agua), se puede ofrecer como premio ocasional, con cuidado con las espinas, pero no es adecuado como base de la alimentación. Cats Protection aconseja que el pescado esté bien cocinado y sin espinas, y que se den solo unos pocos trozos cada vez.",
     "it": "RSPCA Australia afferma che il pesce, come le sardine in scatola al naturale (in acqua), può essere offerto come premio occasionale, facendo attenzione alle lische, ma non è adatto come parte principale della dieta. Cats Protection consiglia di dare il pesce ben cotto, senza lische, e solo pochi pezzi alla volta.",
     "pt": "A RSPCA Australia diz que peixe como as sardinhas em lata ao natural (em água) pode ser oferecido como guloseima ocasional, com cuidado com as espinhas, mas não é adequado como parte principal da alimentação. A Cats Protection aconselha que o peixe seja bem cozinhado, sem espinhas, e dado apenas em alguns pedaços de cada vez.",
-    "nl": "Volgens RSPCA Australia kan vis zoals sardines uit blik in bronwater af en toe als snoepje worden gegeven, met aandacht voor graten, maar is het niet geschikt als hoofdbestanddeel van het eten. Cats Protection raadt aan vis goed te koken, de graten te verwijderen en steeds maar een paar stukjes te geven."
+    "nl": "Volgens RSPCA Australia kan vis zoals sardines uit blik in bronwater af en toe als snoepje worden gegeven, met aandacht voor graten, maar is het niet geschikt als hoofdbestanddeel van het eten. Cats Protection raadt aan vis goed te koken, de graten te verwijderen en steeds maar een paar stukjes te geven.",
+    "pl": "RSPCA Australia podaje, że ryby takie jak sardynki z puszki w wodzie źródlanej można dawać jako okazjonalny smakołyk, uważając na ości, ale nie nadają się na główną część diety. Cats Protection radzi, by ryba była porządnie ugotowana, bez ości i podawana tylko po kilka kawałków naraz."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "es": "Ofrécele primero un trocito. Si después tu gato tiene vómitos o diarrea, deja de dárselo y consulta a tu veterinario.",
     "it": "Offrigli prima un pezzetto. Se poi il tuo gatto vomita o ha la diarrea, smetti e chiedi al veterinario.",
     "pt": "Começa por oferecer um pedacinho. Se o teu gato tiver vómitos ou diarreia depois, para e pergunta ao teu veterinário.",
-    "nl": "Geef eerst een klein stukje. Krijgt je kat daarna last van braken of diarree, stop dan en vraag je dierenarts om advies."
+    "nl": "Geef eerst een klein stukje. Krijgt je kat daarna last van braken of diarree, stop dan en vraag je dierenarts om advies.",
+    "pl": "Najpierw podaj mały kawałek. Jeśli potem twój kot wymiotuje lub ma biegunkę, przestań i zapytaj weterynarza."
   },
   "serving": {
     "en": "Tinned in spring water, with bones removed; a few pieces now and then.",
@@ -71,7 +77,8 @@
     "es": "En lata al natural (en agua) y sin espinas; unos trocitos de vez en cuando.",
     "it": "In scatola al naturale (in acqua), senza lische; qualche pezzo ogni tanto.",
     "pt": "Em lata ao natural (em água), sem espinhas; alguns pedaços de vez em quando.",
-    "nl": "Uit blik in bronwater, met de graten eruit; af en toe een paar stukjes."
+    "nl": "Uit blik in bronwater, met de graten eruit; af en toe een paar stukjes.",
+    "pl": "Z puszki w wodzie źródlanej, bez ości; od czasu do czasu kilka kawałków."
   },
   "child": {
     "en": "Sardines can be a little fishy treat for cats sometimes. A grown-up should check for bones.",
@@ -81,7 +88,8 @@
     "es": "Las sardinas pueden ser, alguna vez, un pequeño premio con sabor a pescado para los gatos. Un adulto debe revisar que no tengan espinas.",
     "it": "Ogni tanto le sardine possono essere un piccolo premio al gusto di pesce per i gatti. Un adulto deve controllare che non ci siano lische.",
     "pt": "As sardinhas podem ser, de vez em quando, uma pequena guloseima de peixe para os gatos. Um adulto deve ver se há espinhas.",
-    "nl": "Sardines kunnen soms een lekker visje zijn voor katten. Een volwassene moet eerst controleren of er geen graten in zitten."
+    "nl": "Sardines kunnen soms een lekker visje zijn voor katten. Een volwassene moet eerst controleren of er geen graten in zitten.",
+    "pl": "Sardynki mogą być czasem małym rybnym smakołykiem dla kota. Dorosły powinien sprawdzić, czy nie ma w nich ości."
   },
   "faq": [],
   "sources": [
@@ -149,6 +157,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c1bbfa45e36b274dc20b3c8770c46e4f1c28ddcc6cb019c0579ee43d47f906b1"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "102d12c8c37e29f575470338b6beb9be6266c31085cf53332c114cc1ef70a087"
     }
   }
 }

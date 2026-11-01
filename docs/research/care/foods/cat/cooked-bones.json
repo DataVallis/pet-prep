@@ -9,7 +9,8 @@
     "es": "Huesos cocinados",
     "it": "Ossa cotte",
     "pt": "Ossos cozinhados",
-    "nl": "Gekookte botten"
+    "nl": "Gekookte botten",
+    "pl": "Gotowane kości"
   },
   "question": {
     "en": "Can cats eat cooked bones?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los gatos comer huesos cocinados?",
     "it": "I gatti possono mangiare le ossa cotte?",
     "pt": "Os gatos podem comer ossos cozinhados?",
-    "nl": "Mogen katten gekookte botten eten?"
+    "nl": "Mogen katten gekookte botten eten?",
+    "pl": "Czy koty mogą jeść gotowane kości?"
   },
   "url_slug": {
     "en": "cooked-bones",
@@ -29,7 +31,8 @@
     "es": "huesos-cocinados",
     "it": "ossa-cotte",
     "pt": "ossos-cozinhados",
-    "nl": "gekookte-botten"
+    "nl": "gekookte-botten",
+    "pl": "gotowane-kosci"
   },
   "level": "dangerous",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No. Los huesos cocinados, como los de pollo o pavo, pueden astillarse y provocar atragantamiento, lesiones internas u obstrucciones en los gatos. Quita siempre la carne del hueso antes de compartirla y tira los restos del animal donde tu gato no pueda alcanzarlos.",
     "it": "No. Le ossa cotte, come quelle di pollo o di tacchino, possono scheggiarsi e causare soffocamento, lesioni interne od ostruzioni nei gatti. Togli sempre la carne dall’osso prima di condividerla e getta le carcasse dove il tuo gatto non può raggiungerle.",
     "pt": "Não. Os ossos cozinhados, como os de frango ou de peru, podem lascar e causar engasgamento, lesões internas ou obstruções nos gatos. Tira sempre a carne do osso antes de a partilhar e deita fora as carcaças onde o teu gato não lhes possa chegar.",
-    "nl": "Nee. Gekookte botten, zoals kip- of kalkoenbotjes, kunnen splinteren en bij katten verstikking, inwendig letsel of verstoppingen veroorzaken. Haal het vlees altijd van het bot voordat je deelt, en gooi karkassen weg waar je kat er niet bij kan."
+    "nl": "Nee. Gekookte botten, zoals kip- of kalkoenbotjes, kunnen splinteren en bij katten verstikking, inwendig letsel of verstoppingen veroorzaken. Haal het vlees altijd van het bot voordat je deelt, en gooi karkassen weg waar je kat er niet bij kan.",
+    "pl": "Nie. Gotowane kości, na przykład z kurczaka lub indyka, mogą się rozszczepiać i spowodować u kota zadławienie, obrażenia wewnętrzne lub niedrożność. Zawsze oddziel mięso od kości, zanim się nim podzielisz, i wyrzucaj resztki tuszki tam, gdzie kot ich nie dosięgnie."
   },
   "why": {
     "en": "Cooked bones can splinter into sharp pieces. Swallowed bones can injure or block a cat's gut, which can be serious and may need surgery.",
@@ -50,7 +54,8 @@
     "es": "Los huesos cocinados pueden astillarse en trozos afilados. Si el gato se los traga, pueden dañarle o bloquearle el intestino, algo que puede ser grave y requerir cirugía.",
     "it": "Le ossa cotte possono rompersi in schegge appuntite. Le ossa ingerite possono ferire od ostruire l’intestino del gatto, un problema che può essere grave e richiedere un intervento chirurgico.",
     "pt": "Os ossos cozinhados podem partir-se em pedaços afiados. Os ossos engolidos podem ferir ou obstruir o intestino do gato, o que pode ser grave e exigir cirurgia.",
-    "nl": "Gekookte botten kunnen in scherpe stukjes splinteren. Ingeslikte botten kunnen de darmen van een kat beschadigen of verstoppen; dat kan ernstig zijn en soms is een operatie nodig."
+    "nl": "Gekookte botten kunnen in scherpe stukjes splinteren. Ingeslikte botten kunnen de darmen van een kat beschadigen of verstoppen; dat kan ernstig zijn en soms is een operatie nodig.",
+    "pl": "Gotowane kości mogą się rozszczepiać na ostre kawałki. Połknięte kości mogą zranić lub zablokować przewód pokarmowy kota, co bywa poważne i może wymagać operacji."
   },
   "signs": {
     "en": [
@@ -92,6 +97,11 @@
       "Verslikken of stikken",
       "Braken",
       "Buikpijn (zich verstoppen, grommen, niet aangeraakt willen worden)"
+    ],
+    "pl": [
+      "Dławienie się",
+      "Wymioty",
+      "Ból brzucha (chowanie się, warczenie, niechęć do dotyku)"
     ]
   },
   "what_to_do": {
@@ -102,7 +112,8 @@
     "es": "Ponte en contacto enseguida con tu veterinario si tu gato se ha tragado un hueso cocinado, aunque parezca estar bien. Apunta qué tipo de hueso era y cuándo. No esperes a ver qué pasa y no intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario se il tuo gatto ha ingerito un osso cotto, anche se sembra stare bene. Annota che tipo di osso era e quando l’ha mangiato. Non aspettare di vedere che cosa succede e non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário se o teu gato engoliu um osso cozinhado, mesmo que pareça bem. Toma nota do tipo de osso e de quando foi. Não esperes para ver o que acontece e não tentes provocar o vómito ao teu gato em casa.",
-    "nl": "Neem meteen contact op met je dierenarts als je kat een gekookt bot heeft ingeslikt, ook als ze er gezond uitziet. Schrijf op wat voor bot het was en wanneer. Wacht niet af wat er gebeurt en probeer je kat niet zelf thuis te laten braken."
+    "nl": "Neem meteen contact op met je dierenarts als je kat een gekookt bot heeft ingeslikt, ook als ze er gezond uitziet. Schrijf op wat voor bot het was en wanneer. Wacht niet af wat er gebeurt en probeer je kat niet zelf thuis te laten braken.",
+    "pl": "Od razu skontaktuj się z weterynarzem, jeśli twój kot połknął gotowaną kość, nawet jeśli wygląda na zdrowego. Zapisz, jaka to była kość i kiedy ją połknął. Nie czekaj na rozwój sytuacji i nie próbuj wywoływać u kota wymiotów w domu."
   },
   "serving": {
     "en": "If you share plain cooked chicken or turkey, give only boneless meat.",
@@ -112,7 +123,8 @@
     "es": "Si compartes pollo o pavo cocinado y sin nada, dale solo carne sin huesos.",
     "it": "Se condividi pollo o tacchino cotto e semplice, dai solo carne senza ossa.",
     "pt": "Se partilhares frango ou peru cozinhado simples, dá apenas carne sem ossos.",
-    "nl": "Deel je gewone gekookte kip of kalkoen, geef dan alleen vlees zonder botten."
+    "nl": "Deel je gewone gekookte kip of kalkoen, geef dan alleen vlees zonder botten.",
+    "pl": "Jeśli dzielisz się zwykłym gotowanym kurczakiem lub indykiem, dawaj tylko mięso bez kości."
   },
   "child": {
     "en": "Bones can hurt a cat's tummy. Give kitty only boneless meat, and tell a grown-up if she grabs a bone.",
@@ -122,7 +134,8 @@
     "es": "Los huesos pueden hacerle daño en la barriga a un gato. Dale a tu gatito solo carne sin huesos y avisa a un adulto si coge un hueso.",
     "it": "Le ossa possono far male alla pancia di un gatto. Dai al micio solo carne senza ossa, e dillo a un adulto se afferra un osso.",
     "pt": "Os ossos podem magoar a barriga de um gato. Dá ao gatinho só carne sem ossos e avisa um adulto se ele apanhar um osso.",
-    "nl": "Botjes kunnen pijn doen in de buik van een kat. Geef je poes alleen vlees zonder botjes. Pakt ze toch een bot? Vertel het meteen aan een volwassene."
+    "nl": "Botjes kunnen pijn doen in de buik van een kat. Geef je poes alleen vlees zonder botjes. Pakt ze toch een bot? Vertel het meteen aan een volwassene.",
+    "pl": "Kości mogą zranić kotu brzuszek. Dawaj kotkowi tylko mięso bez kości i powiedz dorosłemu, jeśli kotek porwie kość."
   },
   "faq": [
     {
@@ -134,7 +147,8 @@
         "es": "¿Puedo darle a mi gato pavo del asado?",
         "it": "Posso dare al mio gatto il tacchino dell’arrosto?",
         "pt": "Posso dar ao meu gato peru do assado?",
-        "nl": "Mag ik mijn kat wat van de gebraden kalkoen geven?"
+        "nl": "Mag ik mijn kat wat van de gebraden kalkoen geven?",
+        "pl": "Czy mogę dać kotu pieczonego indyka?"
       },
       "a": {
         "en": "Cats Protection says plain, cooked turkey is fine as an occasional treat if it is boneless, unseasoned and skinless. Dispose of the carcass safely out of your cat's reach.",
@@ -144,7 +158,8 @@
         "es": "Cats Protection indica que el pavo cocinado y sin nada está bien como premio de vez en cuando si no tiene huesos, condimentos ni piel. Tira los restos del pavo de forma segura, fuera del alcance de tu gato.",
         "it": "Secondo Cats Protection un po’ di tacchino cotto e semplice va bene come premio occasionale, se è senza ossa, senza condimenti e senza pelle. Getta la carcassa in modo sicuro, fuori dalla portata del tuo gatto.",
         "pt": "A Cats Protection diz que o peru simples e cozinhado não faz mal como guloseima ocasional, se for sem ossos, sem temperos e sem pele. Deita fora a carcaça em segurança, fora do alcance do teu gato.",
-        "nl": "Volgens Cats Protection is gewone, gekookte kalkoen af en toe prima als snoepje, als het zonder botten, zonder kruiden en zonder vel is. Gooi het karkas veilig weg, buiten bereik van je kat."
+        "nl": "Volgens Cats Protection is gewone, gekookte kalkoen af en toe prima als snoepje, als het zonder botten, zonder kruiden en zonder vel is. Gooi het karkas veilig weg, buiten bereik van je kat.",
+        "pl": "Według Cats Protection zwykły gotowany indyk jest w porządku jako okazjonalny smakołyk, jeśli jest bez kości, bez przypraw i bez skóry. Tuszkę wyrzuć bezpiecznie, poza zasięgiem kota."
       }
     }
   ],
@@ -242,6 +257,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e2da72ca937b6b876e644be052d3e6a26fb01120bd8e9b83be187e2a581933d4"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a7aa7398582fe8cce4a066f72516cec88f157fee5f2796759f380ece14405b41"
     }
   }
 }

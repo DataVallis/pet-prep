@@ -9,7 +9,8 @@
     "es": "Pescado crudo",
     "it": "Pesce crudo",
     "pt": "Peixe cru",
-    "nl": "Rauwe vis"
+    "nl": "Rauwe vis",
+    "pl": "Surowa ryba"
   },
   "question": {
     "en": "Can cats eat raw fish?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los gatos comer pescado crudo?",
     "it": "I gatti possono mangiare il pesce crudo?",
     "pt": "Os gatos podem comer peixe cru?",
-    "nl": "Mogen katten rauwe vis eten?"
+    "nl": "Mogen katten rauwe vis eten?",
+    "pl": "Czy koty mogą jeść surową rybę?"
   },
   "url_slug": {
     "en": "raw-fish",
@@ -29,7 +31,8 @@
     "es": "pescado-crudo",
     "it": "pesce-crudo",
     "pt": "peixe-cru",
-    "nl": "rauwe-vis"
+    "nl": "rauwe-vis",
+    "pl": "surowa-ryba"
   },
   "level": "not_recommended",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No, el pescado crudo no es buena idea para los gatos. Puede contener bacterias y parásitos dañinos, y algunos pescados crudos contienen tiaminasa, una enzima que destruye la vitamina B1. El pescado para gatos debe estar bien cocinado y sin espinas.",
     "it": "No, il pesce crudo non è una buona idea per i gatti. Può contenere batteri e parassiti nocivi, e alcuni pesci crudi contengono tiaminasi, un enzima che distrugge la vitamina B1. Il pesce per i gatti deve essere ben cotto e senza lische.",
     "pt": "Não, o peixe cru não é boa ideia para os gatos. Pode ter bactérias e parasitas nocivos, e algum peixe cru contém tiaminase, uma enzima que destrói a vitamina B1. O peixe para gatos deve ser bem cozinhado e sem espinhas.",
-    "nl": "Nee, rauwe vis is geen goed idee voor katten. Het kan schadelijke bacteriën en parasieten bevatten, en sommige rauwe vis bevat thiaminase, een enzym dat vitamine B1 afbreekt. Vis voor katten moet goed gaar zijn en zonder graten."
+    "nl": "Nee, rauwe vis is geen goed idee voor katten. Het kan schadelijke bacteriën en parasieten bevatten, en sommige rauwe vis bevat thiaminase, een enzym dat vitamine B1 afbreekt. Vis voor katten moet goed gaar zijn en zonder graten.",
+    "pl": "Nie, surowa ryba to zły pomysł dla kota. Może przenosić szkodliwe bakterie i pasożyty, a niektóre surowe ryby zawierają tiaminazę – enzym niszczący witaminę B1. Ryba dla kota powinna być porządnie ugotowana i bez ości."
   },
   "why": {
     "en": "Cats Protection says uncooked fish may contain harmful bacteria and parasites. The Merck Veterinary Manual notes that thiaminases are found in raw freshwater fish and are destroyed by cooking. Thiamine (vitamin B1) is an essential nutrient, so cooking fish removes this risk.",
@@ -50,7 +54,8 @@
     "es": "Cats Protection dice que el pescado sin cocinar puede contener bacterias y parásitos dañinos. El Manual Merck de Veterinaria señala que las tiaminasas se encuentran en el pescado crudo de agua dulce y que la cocción las destruye. La tiamina (vitamina B1) es un nutriente esencial, así que cocinar el pescado elimina este riesgo.",
     "it": "Cats Protection afferma che il pesce crudo può contenere batteri e parassiti nocivi. Il Manuale Veterinario Merck osserva che le tiaminasi si trovano nel pesce crudo d’acqua dolce e vengono distrutte dalla cottura. La tiamina (vitamina B1) è un nutriente essenziale, quindi cuocere il pesce elimina questo rischio.",
     "pt": "A Cats Protection afirma que o peixe cru pode conter bactérias e parasitas nocivos. O Merck Veterinary Manual refere que as tiaminases existem no peixe cru de água doce e são destruídas pela cozedura. A tiamina (vitamina B1) é um nutriente essencial, por isso cozinhar o peixe elimina este risco.",
-    "nl": "Volgens Cats Protection kan ongekookte vis schadelijke bacteriën en parasieten bevatten. De Merck Veterinary Manual vermeldt dat thiaminasen voorkomen in rauwe zoetwatervis en door koken worden vernietigd. Thiamine (vitamine B1) is een essentiële voedingsstof, dus door vis te koken verdwijnt dit risico."
+    "nl": "Volgens Cats Protection kan ongekookte vis schadelijke bacteriën en parasieten bevatten. De Merck Veterinary Manual vermeldt dat thiaminasen voorkomen in rauwe zoetwatervis en door koken worden vernietigd. Thiamine (vitamine B1) is een essentiële voedingsstof, dus door vis te koken verdwijnt dit risico.",
+    "pl": "Cats Protection podaje, że niegotowana ryba może zawierać szkodliwe bakterie i pasożyty. Merck Veterinary Manual zaznacza, że tiaminazy występują w surowych rybach słodkowodnych i są niszczone podczas gotowania. Tiamina (witamina B1) jest niezbędnym składnikiem odżywczym, więc gotowanie ryby usuwa to ryzyko."
   },
   "signs": {
     "en": [
@@ -108,6 +113,13 @@
       "Koorts",
       "Niet willen eten",
       "Lusteloosheid"
+    ],
+    "pl": [
+      "Wymioty",
+      "Biegunka, czasem z krwią",
+      "Gorączka",
+      "Niechęć do jedzenia",
+      "Apatia"
     ]
   },
   "what_to_do": {
@@ -118,7 +130,8 @@
     "es": "Si tu gato ha comido un poco de pescado crudo, vigila si tiene vómitos, diarrea, fiebre o deja de comer, y llama a tu veterinario si aparece alguno de estos síntomas. El pescado crudo no debe convertirse en un alimento habitual.",
     "it": "Se il tuo gatto ha mangiato un po’ di pesce crudo, controlla se compaiono vomito, diarrea, febbre o rifiuto del cibo, e in tal caso chiama il veterinario. Il pesce crudo non deve diventare un alimento abituale.",
     "pt": "Se o teu gato comeu um pouco de peixe cru, vigia se aparecem vómitos, diarreia, febre ou falta de apetite e, se surgir algum destes sinais, liga ao teu veterinário. O peixe cru não deve tornar-se um alimento habitual.",
-    "nl": "Heeft je kat een beetje rauwe vis gegeten? Let op braken, diarree, koorts of niet eten, en bel je dierenarts als je daar iets van ziet. Rauwe vis hoort geen vast onderdeel van het eten te worden."
+    "nl": "Heeft je kat een beetje rauwe vis gegeten? Let op braken, diarree, koorts of niet eten, en bel je dierenarts als je daar iets van ziet. Rauwe vis hoort geen vast onderdeel van het eten te worden.",
+    "pl": "Jeśli twój kot zjadł odrobinę surowej ryby, obserwuj, czy nie pojawią się wymioty, biegunka, gorączka lub brak apetytu, a jeśli tak, zadzwoń do weterynarza. Surowa ryba nie powinna stać się stałym pokarmem."
   },
   "serving": {
     "en": "If you share fish: properly cooked, plain, with all bones removed, a few pieces at a time.",
@@ -128,7 +141,8 @@
     "es": "Si compartes pescado: bien cocinado, sin nada añadido, sin ninguna espina y unos pocos trozos cada vez.",
     "it": "Se condividi del pesce: ben cotto, semplice, senza nessuna lisca, pochi pezzi alla volta.",
     "pt": "Se partilhares peixe: bem cozinhado, simples, sem nenhuma espinha, apenas alguns pedaços de cada vez.",
-    "nl": "Als je vis deelt: goed gaar, zonder toevoegingen, met alle graten eruit, steeds maar een paar stukjes."
+    "nl": "Als je vis deelt: goed gaar, zonder toevoegingen, met alle graten eruit, steeds maar een paar stukjes.",
+    "pl": "Jeśli dzielisz się rybą: porządnie ugotowana, bez dodatków, bez żadnych ości, kilka kawałków naraz."
   },
   "child": {
     "en": "Cats love fish, but it needs to be cooked by a grown-up first, with no bones.",
@@ -138,7 +152,8 @@
     "es": "A los gatos les encanta el pescado, pero antes un adulto tiene que cocinarlo y quitarle las espinas.",
     "it": "I gatti adorano il pesce, ma prima deve cuocerlo un adulto, togliendo tutte le lische.",
     "pt": "Os gatos adoram peixe, mas primeiro um adulto tem de o cozinhar e tirar as espinhas todas.",
-    "nl": "Katten zijn dol op vis, maar een volwassene moet hem eerst koken en de graten eruit halen."
+    "nl": "Katten zijn dol op vis, maar een volwassene moet hem eerst koken en de graten eruit halen.",
+    "pl": "Koty uwielbiają ryby, ale najpierw dorosły musi rybę ugotować i usunąć ości."
   },
   "faq": [
     {
@@ -150,7 +165,8 @@
         "es": "¿Qué es la tiaminasa?",
         "it": "Che cos’è la tiaminasi?",
         "pt": "O que é a tiaminase?",
-        "nl": "Wat is thiaminase?"
+        "nl": "Wat is thiaminase?",
+        "pl": "Co to jest tiaminaza?"
       },
       "a": {
         "en": "It is an enzyme found in some raw fish that destroys thiamine (vitamin B1). Cooking destroys it.",
@@ -160,7 +176,8 @@
         "es": "Es una enzima presente en algunos pescados crudos que destruye la tiamina (vitamina B1). La cocción la destruye.",
         "it": "È un enzima presente in alcuni pesci crudi che distrugge la tiamina (vitamina B1). La cottura, invece, distrugge l’enzima.",
         "pt": "É uma enzima presente em algum peixe cru que destrói a tiamina (vitamina B1). A cozedura destrói-a.",
-        "nl": "Dat is een enzym in sommige rauwe vis dat thiamine (vitamine B1) afbreekt. Door koken wordt het vernietigd."
+        "nl": "Dat is een enzym in sommige rauwe vis dat thiamine (vitamine B1) afbreekt. Door koken wordt het vernietigd.",
+        "pl": "To enzym występujący w niektórych surowych rybach, który niszczy tiaminę (witaminę B1). Gotowanie go niszczy."
       }
     }
   ],
@@ -266,6 +283,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "cce68606cca3adcd2b5809009f47c8d63eba80c5d779a27e4d4dd00c15ee731f"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2571ac30d3759f47eaa0b9acb953e7a7e0c53d66847166d4b51cf044c36ffcc0"
     }
   }
 }

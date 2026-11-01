@@ -9,7 +9,8 @@
     "es": "Mantequilla",
     "it": "Burro",
     "pt": "Manteiga",
-    "nl": "Boter"
+    "nl": "Boter",
+    "pl": "Masło"
   },
   "question": {
     "en": "Can cats eat butter?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los gatos comer mantequilla?",
     "it": "I gatti possono mangiare il burro?",
     "pt": "Os gatos podem comer manteiga?",
-    "nl": "Mogen katten boter eten?"
+    "nl": "Mogen katten boter eten?",
+    "pl": "Czy koty mogą jeść masło?"
   },
   "url_slug": {
     "en": "butter",
@@ -29,7 +31,8 @@
     "es": "mantequilla",
     "it": "burro",
     "pt": "manteiga",
-    "nl": "boter"
+    "nl": "boter",
+    "pl": "maslo"
   },
   "level": "not_recommended",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No, es mejor evitar la mantequilla. Es un lácteo graso: las guías de cuidado de gatos incluyen los alimentos grasos entre los que nunca hay que dar a un gato, los lácteos pueden sentarle mal al estómago y su grasa hace engordar.",
     "it": "No, è meglio evitare il burro. È un latticino grasso: le guide sulla cura dei gatti mettono i cibi grassi tra quelli da non dare mai, i latticini possono disturbare lo stomaco del gatto e i loro grassi fanno ingrassare.",
     "pt": "Não, é melhor evitar a manteiga. É um laticínio gordo: os guias de cuidados com gatos incluem os alimentos gordos entre o que nunca se deve dar a gatos, os laticínios podem fazer mal ao estômago do gato e a gordura que têm faz engordar.",
-    "nl": "Nee, boter kun je beter vermijden. Het is een vet zuivelproduct: kattenverzorgingsgidsen noemen vet voedsel bij de dingen die je katten nooit moet geven, zuivel kan de maag van een kat van streek maken en het vet zorgt voor extra gewicht."
+    "nl": "Nee, boter kun je beter vermijden. Het is een vet zuivelproduct: kattenverzorgingsgidsen noemen vet voedsel bij de dingen die je katten nooit moet geven, zuivel kan de maag van een kat van streek maken en het vet zorgt voor extra gewicht.",
+    "pl": "Nie, lepiej unikać masła. To tłusty produkt mleczny: poradniki o opiece nad kotami wymieniają tłuste jedzenie wśród rzeczy, których nigdy nie wolno dawać kotom, produkty mleczne mogą wywołać u kota rozstrój żołądka, a ich tłuszcz sprzyja tyciu."
   },
   "why": {
     "en": "RSPCA Australia lists fatty trimmings and fatty foods among things never to feed cats, and added fat can lead to a painful condition called pancreatitis. Butter is also a dairy product: many cats are lactose intolerant, milk-based products can cause vomiting or diarrhoea, and dairy products are high in fat and contribute to weight gain.",
@@ -50,7 +54,8 @@
     "es": "RSPCA Australia incluye los recortes de grasa y los alimentos grasos entre lo que nunca hay que dar a los gatos, y la grasa añadida puede provocar una enfermedad dolorosa llamada pancreatitis. La mantequilla, además, es un lácteo: muchos gatos son intolerantes a la lactosa, los productos a base de leche pueden causar vómitos o diarrea, y los lácteos tienen mucha grasa y contribuyen a que el gato engorde.",
     "it": "RSPCA Australia elenca i ritagli di grasso e i cibi grassi tra le cose da non dare mai ai gatti, e i grassi aggiunti possono causare una malattia dolorosa chiamata pancreatite. Il burro è anche un latticino: molti gatti sono intolleranti al lattosio, i prodotti a base di latte possono causare vomito o diarrea e i latticini sono ricchi di grassi e contribuiscono all’aumento di peso.",
     "pt": "A RSPCA Australia inclui as aparas de gordura e os alimentos gordos entre o que nunca se deve dar a gatos, e a gordura a mais pode levar a uma doença dolorosa chamada pancreatite. A manteiga é também um laticínio: muitos gatos são intolerantes à lactose, os produtos à base de leite podem causar vómitos ou diarreia, e os laticínios são ricos em gordura e contribuem para o aumento de peso.",
-    "nl": "RSPCA Australia noemt vette afsnijdsels en vet voedsel bij de dingen die je katten nooit moet geven, en toegevoegd vet kan leiden tot een pijnlijke aandoening: alvleesklierontsteking (pancreatitis). Boter is ook een zuivelproduct: veel katten zijn lactose-intolerant, melkproducten kunnen braken of diarree veroorzaken, en zuivelproducten bevatten veel vet en dragen bij aan gewichtstoename."
+    "nl": "RSPCA Australia noemt vette afsnijdsels en vet voedsel bij de dingen die je katten nooit moet geven, en toegevoegd vet kan leiden tot een pijnlijke aandoening: alvleesklierontsteking (pancreatitis). Boter is ook een zuivelproduct: veel katten zijn lactose-intolerant, melkproducten kunnen braken of diarree veroorzaken, en zuivelproducten bevatten veel vet en dragen bij aan gewichtstoename.",
+    "pl": "RSPCA Australia wymienia tłuste ścinki i tłuste jedzenie wśród rzeczy, których nigdy nie wolno dawać kotom, a dodatkowy tłuszcz może prowadzić do bolesnej choroby – zapalenia trzustki. Masło jest też produktem mlecznym: wiele kotów nie toleruje laktozy, produkty na bazie mleka mogą wywołać wymioty lub biegunkę, a produkty mleczne zawierają dużo tłuszczu i sprzyjają tyciu."
   },
   "signs": {
     "en": [
@@ -92,6 +97,11 @@
       "Braken",
       "Diarree",
       "Maagklachten"
+    ],
+    "pl": [
+      "Wymioty",
+      "Biegunka",
+      "Rozstrój żołądka"
     ]
   },
   "what_to_do": {
@@ -102,7 +112,8 @@
     "es": "Si tu gato ha comido mantequilla, vigila si tiene vómitos o diarrea y consulta a tu veterinario si parece encontrarse mal o ha comido mucha.",
     "it": "Se il tuo gatto ha mangiato del burro, controlla se compaiono vomito o diarrea e chiedi consiglio al veterinario se sembra stare male o ne ha mangiato molto.",
     "pt": "Se o teu gato comeu manteiga, vigia se aparecem vómitos ou diarreia e contacta o teu veterinário para pedir conselho se ele parecer doente ou tiver comido muita.",
-    "nl": "Heeft je kat boter gegeten? Let op braken of diarree en vraag je dierenarts om advies als ze ziek lijkt of er veel van heeft gegeten."
+    "nl": "Heeft je kat boter gegeten? Let op braken of diarree en vraag je dierenarts om advies als ze ziek lijkt of er veel van heeft gegeten.",
+    "pl": "Jeśli twój kot zjadł masło, obserwuj, czy nie wymiotuje i nie ma biegunki, i poradź się weterynarza, jeśli źle się czuje lub zjadł dużo."
   },
   "serving": null,
   "child": {
@@ -113,7 +124,8 @@
     "es": "La mantequilla tiene demasiada grasa para los gatos. Déjala para tu tostada y dale a tu gato su propia comida.",
     "it": "Il burro è troppo grasso per i gatti. Lascialo sul tuo pane tostato e dai al tuo gatto il suo cibo.",
     "pt": "A manteiga tem demasiada gordura para gatos. Deixa-a na tua torrada e dá ao teu gato a comida dele.",
-    "nl": "Boter is te vet voor katten. Houd het op je boterham en geef je kat haar eigen eten."
+    "nl": "Boter is te vet voor katten. Houd het op je boterham en geef je kat haar eigen eten.",
+    "pl": "Masło jest za tłuste dla kotów. Zostaw je na swoim tościku, a kotu daj jego własne jedzenie."
   },
   "faq": [],
   "sources": [
@@ -196,6 +208,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f76e08a33ce34e0d680eb65c618b659c1bdcf3b9707683d3a20566b350e36295"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a43cf8b8514a740ff3eee7a7ee7b1a4c41cded34f7fa66f2bf493dedeedd8035"
     }
   }
 }

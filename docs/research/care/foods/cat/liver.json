@@ -9,7 +9,8 @@
     "es": "Hígado",
     "it": "Fegato",
     "pt": "Fígado",
-    "nl": "Lever"
+    "nl": "Lever",
+    "pl": "Wątróbka"
   },
   "question": {
     "en": "Can cats eat liver?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los gatos comer hígado?",
     "it": "I gatti possono mangiare il fegato?",
     "pt": "Os gatos podem comer fígado?",
-    "nl": "Mogen katten lever eten?"
+    "nl": "Mogen katten lever eten?",
+    "pl": "Czy koty mogą jeść wątróbkę?"
   },
   "url_slug": {
     "en": "liver",
@@ -29,7 +31,8 @@
     "es": "higado",
     "it": "fegato",
     "pt": "figado",
-    "nl": "lever"
+    "nl": "lever",
+    "pl": "watrobka"
   },
   "level": "not_recommended",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No como premio casero. El hígado es muy rico en vitamina A, y los gatos que comen hígado crudo o una dieta con mucho hígado pueden sufrir una intoxicación por vitamina A. El hígado que forma parte de una comida para gatos completa y equilibrada no es un problema.",
     "it": "Non come premio fatto in casa. Il fegato è molto ricco di vitamina A, e i gatti nutriti con fegato crudo o con una dieta ricca di fegato possono sviluppare un’intossicazione da vitamina A. Il fegato contenuto in un alimento per gatti completo e bilanciato va bene.",
     "pt": "Não como guloseima caseira. O fígado é muito rico em vitamina A, e os gatos alimentados com fígado cru ou com uma dieta rica em fígado podem desenvolver uma intoxicação por vitamina A. O fígado presente numa comida para gatos completa e equilibrada não faz mal.",
-    "nl": "Niet als snoepje thuis. Lever is heel rijk aan vitamine A, en katten die rauwe lever of voer met veel lever krijgen, kunnen een vitamine A-vergiftiging oplopen. Lever in een compleet, uitgebalanceerd kattenvoer is prima."
+    "nl": "Niet als snoepje thuis. Lever is heel rijk aan vitamine A, en katten die rauwe lever of voer met veel lever krijgen, kunnen een vitamine A-vergiftiging oplopen. Lever in een compleet, uitgebalanceerd kattenvoer is prima.",
+    "pl": "Nie jako domowy smakołyk. Wątróbka zawiera bardzo dużo witaminy A, a u kotów karmionych surową wątróbką lub dietą bogatą w wątróbkę może dojść do zatrucia witaminą A. Wątróbka w pełnoporcjowej, zbilansowanej karmie dla kotów jest w porządku."
   },
   "why": {
     "en": "VCA says vitamin A poisoning most commonly occurs when pets are fed raw liver or vitamin A-rich supplements over weeks to months. The Merck Veterinary Manual notes that in cats it can occur when growing kittens are fed a diet high in liver, and that feeding only liver can cause it. VCA recommends a commercially prepared, balanced diet instead.",
@@ -50,7 +54,8 @@
     "es": "VCA indica que la intoxicación por vitamina A se produce sobre todo cuando a las mascotas se les da hígado crudo o suplementos ricos en vitamina A durante semanas o meses. El Manual Merck de Veterinaria señala que en los gatos puede aparecer cuando a gatitos en crecimiento se les da una dieta con mucho hígado, y que dar solo hígado puede provocarla. En su lugar, VCA recomienda una dieta comercial equilibrada.",
     "it": "Secondo VCA l’intossicazione da vitamina A si verifica più spesso quando agli animali domestici vengono dati fegato crudo o integratori ricchi di vitamina A per settimane o mesi. Il Manuale Veterinario Merck osserva che nei gatti può verificarsi quando ai gattini in crescita si dà una dieta ricca di fegato, e che dare solo fegato può causarla. VCA consiglia invece una dieta commerciale bilanciata.",
     "pt": "A VCA diz que a intoxicação por vitamina A acontece sobretudo quando os animais de estimação comem fígado cru ou suplementos ricos em vitamina A durante semanas ou meses. O Merck Veterinary Manual refere que, nos gatos, pode acontecer quando gatinhos em crescimento recebem uma dieta rica em fígado, e que dar apenas fígado pode causá-la. A VCA recomenda, em vez disso, uma dieta comercial equilibrada.",
-    "nl": "Volgens VCA ontstaat een vitamine A-vergiftiging meestal als huisdieren weken tot maanden rauwe lever of supplementen met veel vitamine A krijgen. De Merck Veterinary Manual vermeldt dat het bij katten kan ontstaan als jonge, groeiende kittens voer met veel lever krijgen, en dat het geven van alleen lever het kan veroorzaken. VCA raadt in plaats daarvan kant-en-klaar, uitgebalanceerd voer aan."
+    "nl": "Volgens VCA ontstaat een vitamine A-vergiftiging meestal als huisdieren weken tot maanden rauwe lever of supplementen met veel vitamine A krijgen. De Merck Veterinary Manual vermeldt dat het bij katten kan ontstaan als jonge, groeiende kittens voer met veel lever krijgen, en dat het geven van alleen lever het kan veroorzaken. VCA raadt in plaats daarvan kant-en-klaar, uitgebalanceerd voer aan.",
+    "pl": "Według VCA do zatrucia witaminą A dochodzi najczęściej, gdy zwierzęta dostają surową wątróbkę lub suplementy bogate w witaminę A przez wiele tygodni lub miesięcy. Merck Veterinary Manual podaje, że u kotów może do niego dojść, gdy rosnące kocięta są karmione dietą bogatą w wątróbkę, oraz że może je wywołać karmienie wyłącznie wątróbką. VCA zaleca zamiast tego gotową, zbilansowaną karmę."
   },
   "signs": {
     "en": [
@@ -116,6 +121,14 @@
       "Zwakte",
       "Pijnlijk of beperkt bewegen",
       "Braken of sufheid na een heel grote hoeveelheid"
+    ],
+    "pl": [
+      "Matowa lub szorstka sierść",
+      "Sucha skóra",
+      "Utrata wagi",
+      "Osłabienie",
+      "Bolesne lub ograniczone ruchy",
+      "Wymioty lub senność po zjedzeniu bardzo dużej ilości"
     ]
   },
   "what_to_do": {
@@ -126,7 +139,8 @@
     "es": "La intoxicación por vitamina A suele desarrollarse a lo largo de semanas o meses, así que no le des hígado en casa de forma habitual. Si tu gato ha estado comiendo mucho hígado y notas el pelaje áspero, pérdida de peso, debilidad o que se mueve con dolor, habla con tu veterinario.",
     "it": "L’intossicazione da vitamina A di solito si sviluppa nell’arco di settimane o mesi, quindi non dare regolarmente fegato a casa. Se il tuo gatto ha mangiato molto fegato e noti pelo ruvido, perdita di peso, debolezza o movimenti dolorosi, parlane con il veterinario.",
     "pt": "A intoxicação por vitamina A costuma instalar-se ao longo de semanas ou meses, por isso não dês fígado em casa com regularidade. Se o teu gato tem comido muito fígado e notares o pelo áspero, perda de peso, fraqueza ou movimentos dolorosos, fala com o teu veterinário.",
-    "nl": "Een vitamine A-vergiftiging bouwt zich meestal op over weken tot maanden, dus geef thuis niet regelmatig lever. Heeft je kat veel lever gegeten en zie je een ruwe vacht, gewichtsverlies, zwakte of pijnlijk bewegen, overleg dan met je dierenarts."
+    "nl": "Een vitamine A-vergiftiging bouwt zich meestal op over weken tot maanden, dus geef thuis niet regelmatig lever. Heeft je kat veel lever gegeten en zie je een ruwe vacht, gewichtsverlies, zwakte of pijnlijk bewegen, overleg dan met je dierenarts.",
+    "pl": "Zatrucie witaminą A zwykle narasta przez tygodnie lub miesiące, więc nie dawaj wątróbki regularnie w domu. Jeśli twój kot jadł dużo wątróbki, a zauważysz szorstką sierść, utratę wagi, osłabienie lub bolesne ruchy, porozmawiaj z weterynarzem."
   },
   "serving": null,
   "child": {
@@ -137,7 +151,8 @@
     "es": "El hígado tiene muchísimo de una vitamina, y demasiada no es buena para los gatos. Su comida para gatos ya lleva la cantidad justa.",
     "it": "Il fegato è pieno di una vitamina che, se è troppa, non fa bene ai gatti. Il loro cibo per gatti ne contiene già la giusta quantità.",
     "pt": "O fígado tem uma vitamina em grande quantidade, e vitamina a mais não faz bem aos gatos. A comida de gato já tem a quantidade certa.",
-    "nl": "In lever zit heel veel van één vitamine, en te veel is niet goed voor katten. In kattenvoer zit al precies genoeg."
+    "nl": "In lever zit heel veel van één vitamine, en te veel is niet goed voor katten. In kattenvoer zit al precies genoeg.",
+    "pl": "Wątróbka ma bardzo dużo jednej witaminy, a jej nadmiar szkodzi kotom. Kocia karma ma już jej tyle, ile trzeba."
   },
   "faq": [
     {
@@ -149,7 +164,8 @@
         "es": "La comida de mi gato lleva hígado. ¿Es un problema?",
         "it": "Il cibo del mio gatto contiene fegato. È un problema?",
         "pt": "A comida do meu gato tem fígado. Isso é um problema?",
-        "nl": "Op mijn kattenvoer staat lever. Is dat een probleem?"
+        "nl": "Op mijn kattenvoer staat lever. Is dat een probleem?",
+        "pl": "Moja karma dla kota zawiera wątróbkę. Czy to problem?"
       },
       "a": {
         "en": "No. Liver is a common ingredient in canned cat foods, and a complete, balanced cat food is what vets recommend.",
@@ -159,7 +175,8 @@
         "es": "No. El hígado es un ingrediente habitual en la comida húmeda para gatos, y una comida para gatos completa y equilibrada es lo que recomiendan los veterinarios.",
         "it": "No. Il fegato è un ingrediente comune negli alimenti umidi per gatti, e un alimento per gatti completo e bilanciato è proprio ciò che consigliano i veterinari.",
         "pt": "Não. O fígado é um ingrediente comum nas latas de comida para gatos, e uma comida para gatos completa e equilibrada é o que os veterinários recomendam.",
-        "nl": "Nee. Lever is een veelgebruikt ingrediënt in kattenvoer uit blik, en een compleet, uitgebalanceerd kattenvoer is precies wat dierenartsen aanraden."
+        "nl": "Nee. Lever is een veelgebruikt ingrediënt in kattenvoer uit blik, en een compleet, uitgebalanceerd kattenvoer is precies wat dierenartsen aanraden.",
+        "pl": "Nie. Wątróbka to częsty składnik karm puszkowych dla kotów, a weterynarze zalecają właśnie pełnoporcjową, zbilansowaną karmę dla kotów."
       }
     }
   ],
@@ -239,6 +256,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ffd5379bc0e533e194de1c0ec99ddf966673f63196467329c533fb1c5d4f09fd"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b7faaca6d7de06e0695c186b0cca823977cd230253484b73ed7db407f03103be"
     }
   }
 }

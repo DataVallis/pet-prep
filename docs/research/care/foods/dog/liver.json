@@ -9,7 +9,8 @@
     "es": "Hígado",
     "it": "Fegato",
     "pt": "Fígado",
-    "nl": "Lever"
+    "nl": "Lever",
+    "pl": "Wątróbka"
   },
   "question": {
     "en": "Can dogs eat liver?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros comer hígado?",
     "it": "I cani possono mangiare il fegato?",
     "pt": "Os cães podem comer fígado?",
-    "nl": "Mogen honden lever eten?"
+    "nl": "Mogen honden lever eten?",
+    "pl": "Czy psy mogą jeść wątróbkę?"
   },
   "url_slug": {
     "en": "liver",
@@ -29,7 +31,8 @@
     "es": "higado",
     "it": "fegato",
     "pt": "figado",
-    "nl": "lever"
+    "nl": "lever",
+    "pl": "watrobka"
   },
   "level": "not_recommended",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No como alimento habitual, ni crudo. La intoxicación por vitamina A en las mascotas se produce sobre todo cuando se les da hígado crudo o suplementos ricos en vitamina A, y el hígado crudo tiene los mismos riesgos de gérmenes que toda la carne cruda. Consulta a tu veterinario antes de añadir hígado a la dieta de tu perro.",
     "it": "Non come alimento abituale, e non crudo. L’avvelenamento da vitamina A negli animali domestici si verifica soprattutto quando ricevono fegato crudo o integratori ricchi di vitamina A, e il fegato crudo comporta gli stessi rischi di germi di qualsiasi carne cruda. Chiedi al veterinario prima di aggiungere fegato alla dieta del tuo cane.",
     "pt": "Não como alimento habitual, nem cru. A intoxicação por vitamina A nos animais de estimação acontece sobretudo quando comem fígado cru ou suplementos ricos em vitamina A, e o fígado cru tem os mesmos riscos de germes que qualquer carne crua. Pergunta ao teu veterinário antes de incluir fígado na alimentação do teu cão.",
-    "nl": "Niet als vast voer, en niet rauw. Vitamine A-vergiftiging bij huisdieren ontstaat meestal als ze rauwe lever of supplementen met veel vitamine A krijgen, en rauwe lever brengt dezelfde risico’s op ziektekiemen mee als al het rauwe vlees. Vraag je dierenarts voordat je lever aan het voer van je hond toevoegt."
+    "nl": "Niet als vast voer, en niet rauw. Vitamine A-vergiftiging bij huisdieren ontstaat meestal als ze rauwe lever of supplementen met veel vitamine A krijgen, en rauwe lever brengt dezelfde risico’s op ziektekiemen mee als al het rauwe vlees. Vraag je dierenarts voordat je lever aan het voer van je hond toevoegt.",
+    "pl": "Nie jako stały pokarm i nie na surowo. Zatrucie witaminą A u zwierząt domowych najczęściej zdarza się, gdy dostają surową wątróbkę lub suplementy bogate w witaminę A, a surowa wątróbka, jak każde surowe mięso, może przenosić zarazki. Zanim dodasz wątróbkę do diety psa, zapytaj weterynarza."
   },
   "why": {
     "en": "Vitamin A poisoning most often happens when pets are fed raw liver, cod liver oil or other vitamin A-rich supplements. Too much over weeks or months can lead to a poor coat and dry skin; a large amount at once can cause vomiting, drowsiness and irritability. Raw animal protein can also carry Salmonella and other bacteria.",
@@ -50,7 +54,8 @@
     "es": "La intoxicación por vitamina A se produce sobre todo cuando a las mascotas se les da hígado crudo, aceite de hígado de bacalao u otros suplementos ricos en vitamina A. El exceso durante semanas o meses puede dejar el pelaje en mal estado y la piel seca; una gran cantidad de una vez puede causar vómitos, somnolencia e irritabilidad. Las proteínas animales crudas también pueden llevar salmonela y otras bacterias.",
     "it": "L’avvelenamento da vitamina A si verifica soprattutto quando agli animali domestici vengono dati fegato crudo, olio di fegato di merluzzo o altri integratori ricchi di vitamina A. Un eccesso per settimane o mesi può portare a un mantello opaco e alla pelle secca; una grande quantità in una sola volta può causare vomito, sonnolenza e irritabilità. Anche le proteine animali crude possono contenere Salmonella e altri batteri.",
     "pt": "A intoxicação por vitamina A acontece sobretudo quando os animais de estimação comem fígado cru, óleo de fígado de bacalhau ou outros suplementos ricos em vitamina A. Demasiada vitamina A ao longo de semanas ou meses pode deixar a pelagem baça e a pele seca; uma grande quantidade de uma só vez pode causar vómitos, sonolência e irritabilidade. A proteína animal crua também pode ter Salmonella e outras bactérias.",
-    "nl": "Vitamine A-vergiftiging ontstaat meestal als huisdieren rauwe lever, levertraan of andere supplementen met veel vitamine A krijgen. Weken- of maandenlang te veel kan leiden tot een slechte vacht en een droge huid; een grote hoeveelheid in één keer kan braken, sufheid en prikkelbaarheid veroorzaken. Rauw dierlijk eiwit kan ook salmonella en andere bacteriën bevatten."
+    "nl": "Vitamine A-vergiftiging ontstaat meestal als huisdieren rauwe lever, levertraan of andere supplementen met veel vitamine A krijgen. Weken- of maandenlang te veel kan leiden tot een slechte vacht en een droge huid; een grote hoeveelheid in één keer kan braken, sufheid en prikkelbaarheid veroorzaken. Rauw dierlijk eiwit kan ook salmonella en andere bacteriën bevatten.",
+    "pl": "Zatrucie witaminą A najczęściej zdarza się, gdy zwierzęta dostają surową wątróbkę, tran lub inne suplementy bogate w witaminę A. Nadmiar przez tygodnie lub miesiące może prowadzić do matowej sierści i suchej skóry; duża ilość naraz może wywołać wymioty, senność i drażliwość. Surowe białko zwierzęce może też przenosić bakterie Salmonella i inne."
   },
   "signs": {
     "en": [
@@ -84,6 +89,10 @@
     "nl": [
       "Braken, sufheid of prikkelbaarheid na een grote hoeveelheid",
       "Slechte, droge vacht of huid na weken of maanden"
+    ],
+    "pl": [
+      "Wymioty, senność lub drażliwość po dużej ilości",
+      "Matowa, sucha sierść lub skóra po tygodniach lub miesiącach"
     ]
   },
   "what_to_do": {
@@ -94,7 +103,8 @@
     "es": "Si tu perro ha comido una gran cantidad de hígado de una vez, o se le da hígado a menudo y tiene el pelaje en mal estado o la piel seca, llama a tu veterinario. Una dieta comercial equilibrada o una dieta casera formulada por un veterinario evita el problema.",
     "it": "Se il tuo cane ha mangiato molto fegato in una volta sola, oppure ne mangia spesso e ha il mantello opaco o la pelle secca, chiama il veterinario. Un’alimentazione commerciale bilanciata o una dieta casalinga formulata da un veterinario evita il problema.",
     "pt": "Se o teu cão comeu uma grande quantidade de fígado de uma só vez, ou se come fígado com frequência e tem a pelagem baça ou a pele seca, liga ao teu veterinário. Uma ração comercial equilibrada ou uma dieta caseira formulada por um veterinário evita o problema.",
-    "nl": "Heeft je hond in één keer veel lever gegeten, of krijgt hij vaak lever en heeft hij een slechte vacht of een droge huid? Bel dan je dierenarts. Met volwaardig commercieel voer of een thuisdieet dat door een dierenarts is samengesteld, voorkom je het probleem."
+    "nl": "Heeft je hond in één keer veel lever gegeten, of krijgt hij vaak lever en heeft hij een slechte vacht of een droge huid? Bel dan je dierenarts. Met volwaardig commercieel voer of een thuisdieet dat door een dierenarts is samengesteld, voorkom je het probleem.",
+    "pl": "Jeśli twój pies zjadł naraz dużo wątróbki albo często dostaje wątróbkę i ma matową sierść lub suchą skórę, zadzwoń do weterynarza. Zbilansowana karma gotowa lub domowa dieta ułożona przez weterynarza pozwala uniknąć tego problemu."
   },
   "serving": null,
   "child": {
@@ -105,7 +115,8 @@
     "es": "Demasiado hígado no es bueno para los perros. Un adulto y el veterinario deciden si un perro puede comer hígado.",
     "it": "Troppo fegato non fa bene ai cani. Se un cane può mangiare il fegato, lo decidono un adulto e il veterinario.",
     "pt": "Fígado a mais não faz bem aos cães. Um adulto e o veterinário decidem se o cão come fígado.",
-    "nl": "Te veel lever is niet goed voor honden. Een volwassene en de dierenarts beslissen of een hond lever krijgt."
+    "nl": "Te veel lever is niet goed voor honden. Een volwassene en de dierenarts beslissen of een hond lever krijgt.",
+    "pl": "Za dużo wątróbki nie jest dobre dla psów. To dorosły i weterynarz decydują, czy pies dostanie wątróbkę."
   },
   "faq": [
     {
@@ -117,7 +128,8 @@
         "es": "¿Por qué es un problema darle demasiado hígado?",
         "it": "Perché troppo fegato è un problema?",
         "pt": "Porque é que fígado a mais é um problema?",
-        "nl": "Waarom is te veel lever een probleem?"
+        "nl": "Waarom is te veel lever een probleem?",
+        "pl": "Dlaczego za dużo wątróbki to problem?"
       },
       "a": {
         "en": "Vitamin A poisoning in pets most often happens when they are fed raw liver, cod liver oil or other vitamin A-rich supplements.",
@@ -127,7 +139,8 @@
         "es": "La intoxicación por vitamina A en las mascotas se produce sobre todo cuando se les da hígado crudo, aceite de hígado de bacalao u otros suplementos ricos en vitamina A.",
         "it": "L’avvelenamento da vitamina A negli animali domestici si verifica soprattutto quando ricevono fegato crudo, olio di fegato di merluzzo o altri integratori ricchi di vitamina A.",
         "pt": "A intoxicação por vitamina A nos animais de estimação acontece sobretudo quando comem fígado cru, óleo de fígado de bacalhau ou outros suplementos ricos em vitamina A.",
-        "nl": "Vitamine A-vergiftiging bij huisdieren ontstaat meestal als ze rauwe lever, levertraan of andere supplementen met veel vitamine A krijgen."
+        "nl": "Vitamine A-vergiftiging bij huisdieren ontstaat meestal als ze rauwe lever, levertraan of andere supplementen met veel vitamine A krijgen.",
+        "pl": "Zatrucie witaminą A u zwierząt domowych najczęściej zdarza się, gdy dostają surową wątróbkę, tran lub inne suplementy bogate w witaminę A."
       }
     }
   ],
@@ -211,6 +224,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b8c8a45297fb7fef2d6cd976d555179f096029106788360c80f9000c6f46d3d4"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "01a8c6fd0e49b230050b95bac41a6b523b47b8c2f80d99c85cd9f189d856cb8e"
     }
   }
 }
