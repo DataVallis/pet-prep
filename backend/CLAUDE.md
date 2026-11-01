@@ -3,7 +3,8 @@
 Root rules in `../CLAUDE.md` apply. This file covers backend specifics.
 
 ## Stack
-Laravel 11 (upgrade planned, M0-07) · PHP 8.5 in Sail · PostgreSQL 18 · Redis · Reverb · Sanctum tokens · Filament 3 · Scramble · Pest 3.
+Laravel 12 (M0-07, 2026-10-31; `composer.json` `^12.70`, `config.platform.php` 8.3.0 = production) · PHP 8.5 in Sail, 8.3 in CI + production · PostgreSQL 18 · Redis · Reverb · Sanctum tokens · Filament 3 (3.3 supports Laravel 12 — no Filament 4) · Scramble · Pest 3 (`require-dev` — never in the production image).
+**Dependencies:** update `composer.lock` only with `config.platform.php` intact (it resolves for production PHP 8.3, whatever PHP runs Composer) — `docker run --rm -v "$PWD":/app -w /app composer:2 update … --no-install --no-scripts --ignore-platform-req='ext-*'` from `backend/` when the local PHP differs; CI and the production image install strictly from the lock. `league/commonmark` has an explicit floor (`^2.10.3`, GHSA-3q6v-r5mr-hxv8 / GHSA-97jj-33gv-5xf9) — keep it until `laravel/framework` requires a patched version itself. The default `local` disk has `serve => false` (nothing issues local temporary URLs; GHSA-crmm-hgp2-wgrp) — media / certificates use our own signed routes or S3 presigning, never `Storage::disk('local')->temporaryUrl()`. Laravel 12 container: a constructor parameter with a default (`?Service $x = null`) is NOT auto-injected any more — inject it without a default or resolve lazily (`$this->x ??= app(Service::class)`, as `HygieneEventService` / `ErrorRecorder` do).
 Run everything through Sail: `./vendor/bin/sail artisan …`, `./vendor/bin/sail test`, `./vendor/bin/sail pint`.
 
 ## Where things go
@@ -97,6 +98,7 @@ Run everything through Sail: `./vendor/bin/sail artisan …`, `./vendor/bin/sail
 - The global `beforeEach` in `tests/Pest.php` does **not** strip `ThrottleRequests` (observed M2-02); limiters return `Limit::none()` in testing instead — except `pin-login`, which is live (tests that log in more than 10× from one IP call `$this->withoutMiddleware([ThrottleRequests::class])`).
 - Randomness: `Tests\TestCase` pins the hygiene / chewing RNG salt (`TestCase::RNG_SALT`) — production salts with `APP_KEY`, which CI regenerates every run. Event times still depend on the pet id (order of tests), so a test not about messes calls `disableHygieneEvents()` **after** the birth (`Pet::giveBirth` resets the schedule). Filament tables that paginate need a unique sort (`->defaultKeySort()`).
 - Time: `$this->travel(...)` / `Carbon::setTestNow()`. For decay, simulate a full day minute-by-minute and assert against spec numbers.
+- **`Queue::fake()` twice in one test (Laravel 12):** the second call releases every `ShouldBeUnique` lock taken under the first fake (`QueueFake::releaseUniqueJobLocks()`), so a unique job that is "still in flight" (e.g. `SubmitPetStateVideo`) can be dispatched again. When the test means "the earlier job is still queued", keep the one fake and slice `Queue::pushed(...)` from the count before the second call (`PhaseClipsTest` »order: home key images first…«); re-fake only when the earlier jobs are meant to be finished.
 - External HTTP: `Http::fake()`; broadcasts: `Event::fake([PetUpdated::class])`, assert on `$e->petId` / `$e->eventType`.
 - `phpunit.xml` uses `BROADCAST_CONNECTION=log`, DB `testing` on the Sail pgsql service.
 

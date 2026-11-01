@@ -14,7 +14,7 @@ history of the breeds added up to M5-R10-40.
 
 ```
 PetPrep/                         git: DataVallis/pet-prep
-├── backend/                     Laravel 11 API + Filament admin + Reverb (PHP 8.5 via Sail)
+├── backend/                     Laravel 12 API + Filament 3 admin + Reverb (PHP 8.5 via Sail, 8.3 in CI + production)
 │   ├── app/Console/Commands/    pets:process-decay, pins:prune, openapi:export
 │   ├── app/Enums/               UserRole, BreedType, ActivityType, PetStateEnum, HygieneEventStatus,
 │   │                            PetLockReason, CareRefusal (child API reason codes)

@@ -8,6 +8,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-31 — Nadgradnja strežnika na Laravel 12 (pripravljena)
+
+**Kaj:** David je odobril nadgradnjo ogrodja strežnika z Laravel 11 na Laravel 12. Laravel 11 ne dobiva več varnostnih popravkov; GitHub je opozarjal na 5 znanih ranljivosti v ogrodju in knjižnici za Markdown, ki so popravljene samo v novi različici. Pripravljeno je vse razen datoteke z zaklenjenimi različicami paketov (`composer.lock`) — to David ustvari na svojem računalniku, ker oblačno okolje ne doseže repozitorija paketov. Med pregledom je Claude zaprl še eno nepotrebno pot za datoteke (`/storage/…`), ki je ni nič uporabljalo, in testna orodja (Pest) umaknil iz produkcijske slike.
+**Zakaj je pomembno:** varnost — podpisane povezave do videov in slik ljubljenčkov so jedro aplikacije; ostanemo na podprti različici z rednimi varnostnimi popravki. Za uporabnike se nič ne spremeni.
+- 👩 Starši: strežnik ostaja na podprti, varnostno posodobljeni različici ogrodja.
+- 💼 Investitorji: tehnični dolg iz revizije (M0-07) se zapira; brez spremembe funkcij in brez izpada.
+- 🛠 Nadgradnja ogrodja brez spremembe kode aplikacije: Filament 3 ostane (podpira Laravel 12), lock se razreši za produkcijski PHP 8.3 (`config.platform.php`), celoten nabor testov teče v CI.
+
 ## 2026-10-31 — »Zdaj!« v vsaki vaji šole
 
 **Kaj:** David je v angleški vaji videl namig »Now!« ob trenutku, ko kuža uboga, in mu je bil všeč; v poznejši slovenski vaji »Zdaj!« ni bilo in je tapnil prezgodaj. Mislil je, da gre za jezik, a vzrok je bil napredek: namig je bil le za začetnike (pod 50 % napredka ukaza), »Sedi« pa je vmes to mejo presegel. Na Davidovo željo se »Zdaj!« zdaj pokaže v vsaki vaji, pri vsakem napredku; prav tako je namig »Tapni« ves čas na žetonu (tudi po tapu; skrit le, ko piše »Počakaj«). Test zdaj preveri, da ima vsak jezik (tudi prihodnji) te napise.

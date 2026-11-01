@@ -70,7 +70,7 @@
 # MAINTENANCE (D19, David 2026-10-14: shorter downtime)
 #   Maintenance mode exists for the schema change: new code must never run on the old
 #   schema and a failed migration must be revertable. After the smoke test (step 3) the
-#   NEW image asks the live database `php artisan migrate:status --pending=3` (Laravel 11:
+#   NEW image asks the live database `php artisan migrate:status --pending=3` (Laravel 11/12:
 #   exit 3 = something pending, 0 = nothing pending):
 #     pending  → the full flow below (down → backup → switch → migrate → up -d → up).
 #     none     → NO `artisan down` / `artisan up`: backup, code switch, image promote,
@@ -666,7 +666,7 @@ fi
 
 # ---- 3b. Pending migrations? (D19, see MAINTENANCE above) -------------------------
 # Asked with the NEW image against the live database, still before anything changed.
-# Laravel 11 `migrate:status --pending=N` exits N when a migration is pending, 0 when
+# Laravel 11/12 `migrate:status --pending=N` exits N when a migration is pending, 0 when
 # none is; any other code (no migrations table, database down) → unknown → maintenance.
 if [ "${DEPLOY_FORCE_MAINTENANCE:-0}" = "1" ]; then
     log "DEPLOY_FORCE_MAINTENANCE=1 — maintenance mode whatever the migrations."
