@@ -94,6 +94,8 @@ async function main() {
   }
   if (!site) throw new Error(`The service account ${key.client_email} has no access to ${sites.join(" or ")} — add it as a user in Search Console.`);
 
+  // The API sorts by clicks; while clicks are few, impressions show better what people search for.
+  const byImpressions = (rows, n) => [...rows].sort((a, b) => b.impressions - a.impressions || b.clicks - a.clicks).slice(0, n);
   const filter = (regex) => ({ dimensionFilterGroups: [{ filters: [{ dimension: "page", operator: "includingRegex", expression: regex }] }] });
   const totals = async (range, regex) => {
     const [row] = await q(site, range, regex ? filter(regex) : {});
@@ -108,13 +110,13 @@ async function main() {
       care: { cur: await totals(cur, CARE), prev: await totals(prev, CARE) },
       coloring: { cur: await totals(cur, COLORING), prev: await totals(prev, COLORING) },
     },
-    topCarePages: (await q(site, cur, { dimensions: ["page"], rowLimit: 10, ...filter(CARE) })).map((r) => ({ page: r.keys[0], clicks: r.clicks, impressions: r.impressions, position: r.position })),
-    topCareQueries: (await q(site, cur, { dimensions: ["query"], rowLimit: 15, ...filter(CARE) })).map((r) => ({ query: r.keys[0], clicks: r.clicks, impressions: r.impressions, position: r.position })),
+    topCarePages: byImpressions(await q(site, cur, { dimensions: ["page"], rowLimit: 1000, ...filter(CARE) }), 10).map((r) => ({ page: r.keys[0], clicks: r.clicks, impressions: r.impressions, position: r.position })),
+    topCareQueries: byImpressions(await q(site, cur, { dimensions: ["query"], rowLimit: 1000, ...filter(CARE) }), 15).map((r) => ({ query: r.keys[0], clicks: r.clicks, impressions: r.impressions, position: r.position })),
     nearMisses: (await q(site, cur, { dimensions: ["page"], rowLimit: 500, ...filter(CARE) }))
       .filter((r) => r.clicks === 0 && r.position >= 4 && r.position <= 15)
       .slice(0, 20)
       .map((r) => ({ page: r.keys[0], impressions: r.impressions, position: r.position })),
-    topQueries: (await q(site, cur, { dimensions: ["query"], rowLimit: 15 })).map((r) => ({ query: r.keys[0], clicks: r.clicks, impressions: r.impressions, position: r.position })),
+    topQueries: byImpressions(await q(site, cur, { dimensions: ["query"], rowLimit: 1000 }), 15).map((r) => ({ query: r.keys[0], clicks: r.clicks, impressions: r.impressions, position: r.position })),
     pagesWithImpressions: { care: (await q(site, cur, { dimensions: ["page"], rowLimit: 5000, ...filter(CARE) })).length },
   };
 
