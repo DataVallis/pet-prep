@@ -10,7 +10,8 @@
     "it": "Burro di arachidi",
     "pt": "Manteiga de amendoim",
     "nl": "Pindakaas",
-    "pl": "Masło orzechowe"
+    "pl": "Masło orzechowe",
+    "cs": "Arašídové máslo"
   },
   "question": {
     "en": "Can cats eat peanut butter?",
@@ -21,7 +22,8 @@
     "it": "I gatti possono mangiare il burro di arachidi?",
     "pt": "Os gatos podem comer manteiga de amendoim?",
     "nl": "Mogen katten pindakaas eten?",
-    "pl": "Czy koty mogą jeść masło orzechowe?"
+    "pl": "Czy koty mogą jeść masło orzechowe?",
+    "cs": "Mohou kočky jíst arašídové máslo?"
   },
   "url_slug": {
     "en": "peanut-butter",
@@ -32,7 +34,8 @@
     "it": "burro-di-arachidi",
     "pt": "manteiga-de-amendoim",
     "nl": "pindakaas",
-    "pl": "maslo-orzechowe"
+    "pl": "maslo-orzechowe",
+    "cs": "arasidove-maslo"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "Meglio non farne un’abitudine. Alcuni veterinari dicono che il burro di arachidi naturale può essere un premio occasionale, ma non deve mai contenere xilitolo, e Cats Protection consiglia di limitarsi ai premi per gatti invece che ai cibi per le persone.",
     "pt": "É melhor não fazer disto um hábito. Alguns veterinários dizem que a manteiga de amendoim natural pode ser uma guloseima ocasional, mas nunca pode conter xilitol, e a Cats Protection aconselha a ficar pelas guloseimas para gatos em vez de comida de pessoas.",
     "nl": "Maak er liever geen gewoonte van. Sommige dierenartsen zeggen dat natuurlijke pindakaas af en toe een snoepje kan zijn, maar er mag nooit xylitol in zitten, en Cats Protection raadt aan om bij kattensnoepjes te blijven in plaats van mensenvoedsel.",
-    "pl": "Lepiej nie robić z tego zwyczaju. Niektórzy weterynarze uważają, że naturalne masło orzechowe może być okazjonalnym smakołykiem, ale nigdy nie może zawierać ksylitolu, a Cats Protection radzi trzymać się kocich smakołyków zamiast ludzkiego jedzenia."
+    "pl": "Lepiej nie robić z tego zwyczaju. Niektórzy weterynarze uważają, że naturalne masło orzechowe może być okazjonalnym smakołykiem, ale nigdy nie może zawierać ksylitolu, a Cats Protection radzi trzymać się kocich smakołyków zamiast ludzkiego jedzenia.",
+    "cs": "Raději z toho nedělejte zvyk. Někteří veterináři říkají, že přírodní arašídové máslo může být občasným pamlskem, nikdy však nesmí obsahovat xylitol, a Cats Protection doporučuje dávat místo lidských potravin raději pamlsky pro kočky."
   },
   "why": {
     "en": "Sources disagree. VCA describes natural peanut butter as a treat cats love, as long as it is free of preservatives and life-threatening additives such as xylitol. Cats Protection advises sticking to cat treats rather than human foods and warns that nuts can cause problems for cats. We use the stricter level.",
@@ -55,7 +59,8 @@
     "it": "Le fonti non sono concordi. VCA descrive il burro di arachidi naturale come un premio che i gatti adorano, purché sia privo di conservanti e di additivi potenzialmente letali come lo xilitolo. Cats Protection consiglia di limitarsi ai premi per gatti invece che ai cibi per le persone e avverte che la frutta a guscio può causare problemi ai gatti. Applichiamo il livello più severo.",
     "pt": "As fontes não estão de acordo. A VCA descreve a manteiga de amendoim natural como uma guloseima de que os gatos gostam muito, desde que não tenha conservantes nem aditivos que põem a vida em risco, como o xilitol. A Cats Protection aconselha a ficar pelas guloseimas para gatos em vez de comida de pessoas e avisa que os frutos secos podem causar problemas aos gatos. Seguimos o nível mais rigoroso.",
     "nl": "De bronnen zijn het niet met elkaar eens. VCA noemt natuurlijke pindakaas een snoepje waar katten dol op zijn, zolang er geen conserveermiddelen en levensgevaarlijke toevoegingen zoals xylitol in zitten. Cats Protection raadt aan om bij kattensnoepjes te blijven in plaats van mensenvoedsel en waarschuwt dat noten problemen kunnen geven bij katten. Wij volgen het strengste niveau.",
-    "pl": "Źródła się różnią. VCA opisuje naturalne masło orzechowe jako smakołyk, który koty uwielbiają, pod warunkiem że nie zawiera konserwantów ani zagrażających życiu dodatków, takich jak ksylitol. Cats Protection radzi trzymać się kocich smakołyków zamiast ludzkiego jedzenia i ostrzega, że orzechy mogą sprawiać kotom problemy. Przyjmujemy surowszą ocenę."
+    "pl": "Źródła się różnią. VCA opisuje naturalne masło orzechowe jako smakołyk, który koty uwielbiają, pod warunkiem że nie zawiera konserwantów ani zagrażających życiu dodatków, takich jak ksylitol. Cats Protection radzi trzymać się kocich smakołyków zamiast ludzkiego jedzenia i ostrzega, że orzechy mogą sprawiać kotom problemy. Przyjmujemy surowszą ocenę.",
+    "cs": "Zdroje se rozcházejí. VCA popisuje přírodní arašídové máslo jako pamlsek, který kočky milují, pokud neobsahuje konzervanty a život ohrožující přísady, jako je xylitol. Cats Protection doporučuje držet se pamlsků pro kočky místo lidského jídla a varuje, že ořechy mohou kočkám způsobit potíže. Používáme přísnější hodnocení."
   },
   "signs": {
     "en": [
@@ -102,6 +107,11 @@
       "Wymioty",
       "Biegunka",
       "Rozstrój żołądka"
+    ],
+    "cs": [
+      "Zvracení",
+      "Průjem",
+      "Podrážděný žaludek"
     ]
   },
   "what_to_do": {
@@ -113,7 +123,8 @@
     "it": "Una leccatina di burro di arachidi semplice difficilmente è grave; controlla se compaiono vomito o diarrea. Se il burro di arachidi contiene xilitolo, contatta subito il veterinario o un centro antiveleni veterinario, annota quanto ne ha mangiato e non aspettare che compaiano i sintomi.",
     "pt": "Uma lambidela de manteiga de amendoim simples dificilmente será grave; vigia se aparecem vómitos ou diarreia. Se a manteiga de amendoim tiver xilitol, contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, toma nota da quantidade comida e não esperes que surjam sinais.",
     "nl": "Eén likje gewone pindakaas is waarschijnlijk niet ernstig; let op braken of diarree. Zit er xylitol in de pindakaas, neem dan meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, schrijf op hoeveel er is gegeten en wacht niet tot er verschijnselen optreden.",
-    "pl": "Liźnięcie zwykłego masła orzechowego raczej nie jest groźne; obserwuj, czy kot nie wymiotuje i nie ma biegunki. Jeśli masło orzechowe zawiera ksylitol, od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, zapisz, ile kot zjadł, i nie czekaj na objawy."
+    "pl": "Liźnięcie zwykłego masła orzechowego raczej nie jest groźne; obserwuj, czy kot nie wymiotuje i nie ma biegunki. Jeśli masło orzechowe zawiera ksylitol, od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, zapisz, ile kot zjadł, i nie czekaj na objawy.",
+    "cs": "Olíznutí obyčejného arašídového másla pravděpodobně nebude nic vážného; sledujte, zda se neobjeví zvracení nebo průjem. Pokud arašídové máslo obsahuje xylitol, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, poznamenejte si, kolik ho kočka snědla, a nečekejte na příznaky."
   },
   "serving": {
     "en": "If your vet is happy with it: natural peanut butter only, with no xylitol or preservatives, as a rare lick, not a habit.",
@@ -124,7 +135,8 @@
     "it": "Se il veterinario è d’accordo: solo burro di arachidi naturale, senza xilitolo né conservanti, come leccatina rara, non come abitudine.",
     "pt": "Se o teu veterinário concordar: apenas manteiga de amendoim natural, sem xilitol nem conservantes, como uma lambidela rara e não como hábito.",
     "nl": "Als je dierenarts het goedvindt: alleen natuurlijke pindakaas, zonder xylitol of conserveermiddelen, als zeldzaam likje en niet als gewoonte.",
-    "pl": "Jeśli weterynarz się zgodzi: tylko naturalne masło orzechowe, bez ksylitolu i konserwantów, rzadko odrobina do polizania, nie jako stały zwyczaj."
+    "pl": "Jeśli weterynarz się zgodzi: tylko naturalne masło orzechowe, bez ksylitolu i konserwantów, rzadko odrobina do polizania, nie jako stały zwyczaj.",
+    "cs": "Pokud s tím veterinář souhlasí: jen přírodní arašídové máslo bez xylitolu a konzervantů, výjimečně na olíznutí, ne pravidelně."
   },
   "child": {
     "en": "Peanut butter is a people food. Ask a grown-up before sharing anything with your cat.",
@@ -135,7 +147,8 @@
     "it": "Il burro di arachidi è un cibo per le persone. Chiedi a un adulto prima di condividere qualsiasi cosa con il tuo gatto.",
     "pt": "A manteiga de amendoim é comida de pessoas. Pergunta a um adulto antes de partilhares alguma coisa com o teu gato.",
     "nl": "Pindakaas is eten voor mensen. Vraag het altijd eerst aan een volwassene voordat je iets met je kat deelt.",
-    "pl": "Masło orzechowe to jedzenie dla ludzi. Zanim podzielisz się czymś z kotem, zapytaj dorosłego."
+    "pl": "Masło orzechowe to jedzenie dla ludzi. Zanim podzielisz się czymś z kotem, zapytaj dorosłego.",
+    "cs": "Arašídové máslo je jídlo pro lidi. Než se s kočkou o něco podělíš, zeptej se dospělého."
   },
   "faq": [
     {
@@ -148,7 +161,8 @@
         "it": "Perché lo xilitolo è importante?",
         "pt": "Porque é que o xilitol é importante?",
         "nl": "Waarom is xylitol belangrijk?",
-        "pl": "Dlaczego ksylitol ma znaczenie?"
+        "pl": "Dlaczego ksylitol ma znaczenie?",
+        "cs": "Proč záleží na xylitolu?"
       },
       "a": {
         "en": "Xylitol is a sweetener added to some peanut butters. VCA calls it a life-threatening additive, so always check the label.",
@@ -159,7 +173,8 @@
         "it": "Lo xilitolo è un dolcificante aggiunto ad alcuni burri di arachidi. VCA lo definisce un additivo potenzialmente letale, quindi controlla sempre l’etichetta.",
         "pt": "O xilitol é um adoçante adicionado a algumas manteigas de amendoim. A VCA considera-o um aditivo que põe a vida em risco, por isso verifica sempre o rótulo.",
         "nl": "Xylitol is een zoetstof die aan sommige soorten pindakaas wordt toegevoegd. VCA noemt het een levensgevaarlijke toevoeging, dus lees altijd het etiket.",
-        "pl": "Ksylitol to słodzik dodawany do niektórych maseł orzechowych. VCA nazywa go dodatkiem zagrażającym życiu, więc zawsze sprawdzaj etykietę."
+        "pl": "Ksylitol to słodzik dodawany do niektórych maseł orzechowych. VCA nazywa go dodatkiem zagrażającym życiu, więc zawsze sprawdzaj etykietę.",
+        "cs": "Xylitol je sladidlo, které se přidává do některých arašídových másel. VCA ho označuje za život ohrožující přísadu, proto vždy kontrolujte složení na obalu."
       }
     }
   ],
@@ -235,6 +250,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b91db2614da237eba07bf8d8a62d319e2cf1b7ac52d8670388e25479b5b4b742"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "88242d90f5ada463c84913e5d83899d4c585e8db140ed8672aba741c4c3d3ed3"
     }
   }
 }

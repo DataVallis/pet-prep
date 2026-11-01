@@ -3,47 +3,57 @@
   "species": "cat",
   "name": {
     "en": "Watermelon",
-    "sl": "Lubenica"
+    "sl": "Lubenica",
+    "cs": "Vodní meloun"
   },
   "question": {
     "en": "Can cats eat watermelon?",
-    "sl": "Ali lahko mačke jedo lubenico?"
+    "sl": "Ali lahko mačke jedo lubenico?",
+    "cs": "Mohou kočky jíst vodní meloun?"
   },
   "url_slug": {
     "en": "watermelon",
-    "sl": "lubenica"
+    "sl": "lubenica",
+    "cs": "vodni-meloun"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a small piece of watermelon is fine as an occasional treat. A university vet hospital lists it among healthy human-food treats for cats and dogs, but cats are meat eaters and don't need fruit, so keep it to a small extra.",
-    "sl": "Da, majhen košček lubenice je v redu kot občasen priboljšek. Univerzitetna veterinarska bolnišnica jo navaja med zdravimi priboljški iz človeške hrane za mačke in pse, vendar so mačke mesojede in sadja ne potrebujejo, zato naj bo le majhen dodatek."
+    "sl": "Da, majhen košček lubenice je v redu kot občasen priboljšek. Univerzitetna veterinarska bolnišnica jo navaja med zdravimi priboljški iz človeške hrane za mačke in pse, vendar so mačke mesojede in sadja ne potrebujejo, zato naj bo le majhen dodatek.",
+    "cs": "Ano, malý kousek vodního melounu je v pořádku jako občasný pamlsek. Jedna univerzitní veterinární nemocnice ho řadí mezi zdravé pamlsky z lidské stravy pro kočky a psy, ale kočky jsou masožravci a ovoce nepotřebují, takže ho nabízejte jen jako malý doplněk."
   },
   "why": {
     "en": "NC State's veterinary hospital lists watermelon among healthy human-food treats for cats and dogs, given in measured amounts and counted in the daily calories. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
-    "sl": "Veterinarska bolnišnica univerze NC State lubenico navaja med zdravimi priboljški iz človeške hrane za mačke in pse, ki jih dajemo v odmerjenih količinah in upoštevamo v dnevnem vnosu kalorij. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave."
+    "sl": "Veterinarska bolnišnica univerze NC State lubenico navaja med zdravimi priboljški iz človeške hrane za mačke in pse, ki jih dajemo v odmerjenih količinah in upoštevamo v dnevnem vnosu kalorij. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave.",
+    "cs": "Veterinární nemocnice Státní univerzity Severní Karolíny (NC State) řadí vodní meloun mezi zdravé pamlsky z lidské stravy pro kočky a psy, podávané v odměřeném množství a započítané do denního příjmu kalorií. Kočky jsou obligátní masožravci a ovoce nepotřebují, pamlsky by měly tvořit jen malou část denní stravy a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku."
   },
   "signs": null,
   "what_to_do": {
     "en": "Offer a small piece first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
-    "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+    "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
+    "cs": "Nejdřív nabídněte malý kousek. Pokud vaše kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem."
   },
   "serving": {
     "en": "A small piece now and then, counted in your cat's daily food.",
-    "sl": "Občasno majhen košček, upoštevan v dnevnem obroku."
+    "sl": "Občasno majhen košček, upoštevan v dnevnem obroku.",
+    "cs": "Občas malý kousek, započítaný do denní dávky krmiva vaší kočky."
   },
   "child": {
     "en": "A little piece of watermelon can be a cat treat now and then. Cats mostly need meat, so fruit is only a small extra.",
-    "sl": "Majhen košček lubenice je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek."
+    "sl": "Majhen košček lubenice je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek.",
+    "cs": "Malý kousek vodního melounu může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže ovoce je jen malý přídavek."
   },
   "faq": [
     {
       "q": {
         "en": "Do cats need fruit?",
-        "sl": "Ali mačke potrebujejo sadje?"
+        "sl": "Ali mačke potrebujejo sadje?",
+        "cs": "Potřebují kočky ovoce?"
       },
       "a": {
         "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
-        "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek."
+        "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek.",
+        "cs": "Ne. Kočky jsou masožravci: potřebují živiny, které obsahuje maso, a ovoce ani zeleninu ve stravě nepotřebují. Ovoce může být vždy jen malým doplňkem."
       }
     }
   ],
@@ -98,6 +108,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e10b1cafd582329bc0dc4e1212b4512b69dd8c4915624cf4d5261c8a017c3985"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1b6f9b9a53aa7fa788dbfccf1cd23ec0f8756651ca5b110aaaa16d5e19697183"
     }
   }
 }

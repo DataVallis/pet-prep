@@ -3,57 +3,69 @@
   "species": "dog",
   "name": {
     "en": "Apples",
-    "sl": "Jabolka"
+    "sl": "Jabolka",
+    "cs": "Jablka"
   },
   "question": {
     "en": "Can dogs eat apples?",
-    "sl": "Ali lahko psi jedo jabolka?"
+    "sl": "Ali lahko psi jedo jabolka?",
+    "cs": "Mohou psi jíst jablka?"
   },
   "url_slug": {
     "en": "apples",
-    "sl": "jabolka"
+    "sl": "jabolka",
+    "cs": "jablka"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in moderation. Apples are a safe, nutritious treat for dogs, but remove the seeds, core and stem first, because the seeds contain cyanide and the core and stem could choke your dog.",
-    "sl": "Da, zmerno. Jabolka so za pse varen in hranljiv priboljšek, a najprej odstranite pečke, ogrizek in pecelj, ker pečke vsebujejo cianid, ogrizek in pecelj pa se lahko psu zataknejo v grlu."
+    "sl": "Da, zmerno. Jabolka so za pse varen in hranljiv priboljšek, a najprej odstranite pečke, ogrizek in pecelj, ker pečke vsebujejo cianid, ogrizek in pecelj pa se lahko psu zataknejo v grlu.",
+    "cs": "Ano, s mírou. Jablka jsou pro psy bezpečný a výživný pamlsek, ale nejdřív odstraňte jádra, ohryzek a stopku: jádra obsahují kyanid a ohryzek se stopkou by mohl způsobit dušení."
   },
   "why": {
     "en": "Apples are a low-calorie treat with vitamins A and C, potassium, antioxidants and fibre, especially in the peel. Because of the sugar in each apple, a whole apple is likely too much for your dog, and eating too many apples can cause bellyache or diarrhoea.",
-    "sl": "Jabolka so nizkokaloričen priboljšek z vitaminoma A in C, kalijem, antioksidanti in vlakninami, zlasti v lupini. Zaradi sladkorja v vsakem jabolku je celo jabolko za psa verjetno preveč, preveč jabolk pa lahko povzroči bolečine v trebuhu ali drisko."
+    "sl": "Jabolka so nizkokaloričen priboljšek z vitaminoma A in C, kalijem, antioksidanti in vlakninami, zlasti v lupini. Zaradi sladkorja v vsakem jabolku je celo jabolko za psa verjetno preveč, preveč jabolk pa lahko povzroči bolečine v trebuhu ali drisko.",
+    "cs": "Jablka jsou nízkokalorický pamlsek s vitaminy A a C, draslíkem, antioxidanty a vlákninou, hlavně ve slupce. Kvůli obsahu cukru je celé jablko pro psa nejspíš příliš mnoho a velké množství jablek může způsobit bolest břicha nebo průjem."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog eats an apple core or seeds, watch for signs of digestive trouble or blockage. If your dog has problems, stop giving apples and contact a vet.",
-    "sl": "Če pes poje ogrizek ali pečke, ga opazujte, ali se pojavijo znaki prebavnih težav ali zapore. Če ima pes težave, mu jabolk ne dajajte več in se obrnite na veterinarja."
+    "sl": "Če pes poje ogrizek ali pečke, ga opazujte, ali se pojavijo znaki prebavnih težav ali zapore. Če ima pes težave, mu jabolk ne dajajte več in se obrnite na veterinarja.",
+    "cs": "Pokud váš pes sní ohryzek nebo jádra, sledujte, zda se neobjeví známky zažívacích potíží nebo ucpání. Pokud má pes potíže, přestaňte mu jablka dávat a obraťte se na veterináře."
   },
   "serving": {
     "en": "Wash and scrub the apple, remove the seeds, core and stem, and cut it into slices or small cubes; in moderation, not a whole apple.",
-    "sl": "Jabolko operite in očistite, odstranite pečke, ogrizek in pecelj ter ga narežite na krhlje ali majhne kocke; zmerno, ne celo jabolko."
+    "sl": "Jabolko operite in očistite, odstranite pečke, ogrizek in pecelj ter ga narežite na krhlje ali majhne kocke; zmerno, ne celo jabolko.",
+    "cs": "Jablko umyjte a očistěte kartáčkem, odstraňte jádra, ohryzek a stopku a nakrájejte ho na plátky nebo malé kostičky; s mírou, ne celé jablko."
   },
   "child": {
     "en": "Dogs can enjoy a few apple slices! A grown-up should cut them and take out the core and seeds first.",
-    "sl": "Psi lahko uživajo v nekaj krhljih jabolka! Odrasel naj jih nareže in najprej odstrani ogrizek in pečke."
+    "sl": "Psi lahko uživajo v nekaj krhljih jabolka! Odrasel naj jih nareže in najprej odstrani ogrizek in pečke.",
+    "cs": "Psi si můžou pochutnat na pár plátcích jablka! Dospělý je nakrájí a předtím vyřízne ohryzek a jádra."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat applesauce?",
-        "sl": "Ali lahko psi jedo jabolčno čežano?"
+        "sl": "Ali lahko psi jedo jabolčno čežano?",
+        "cs": "Mohou psi jíst jablečné pyré?"
       },
       "a": {
         "en": "Plain applesauce is fine in moderation, but most applesauce has added sugar, so always choose unsweetened.",
-        "sl": "Navadna jabolčna čežana je v zmernih količinah v redu, a večina ima dodan sladkor, zato vedno izberite nesladkano."
+        "sl": "Navadna jabolčna čežana je v zmernih količinah v redu, a večina ima dodan sladkor, zato vedno izberite nesladkano.",
+        "cs": "Čisté jablečné pyré je s mírou v pořádku, ale většina pyré má přidaný cukr, proto vždy volte neslazené."
       }
     },
     {
       "q": {
         "en": "Can dogs eat apple pie?",
-        "sl": "Ali lahko psi jedo jabolčno pito?"
+        "sl": "Ali lahko psi jedo jabolčno pito?",
+        "cs": "Mohou psi jíst jablečný koláč?"
       },
       "a": {
         "en": "No. The added sugar and crust are too much for dogs; avoid apple foods with added sugar or spices such as nutmeg.",
-        "sl": "Ne. Dodani sladkor in testo sta za pse preveč; izogibajte se jabolčnim jedem z dodanim sladkorjem ali začimbami, kot je muškatni orešček."
+        "sl": "Ne. Dodani sladkor in testo sta za pse preveč; izogibajte se jabolčnim jedem z dodanim sladkorjem ali začimbami, kot je muškatni orešček.",
+        "cs": "Ne. Přidaný cukr a těsto jsou pro psy příliš; vyhněte se jablečným jídlům s přidaným cukrem nebo kořením, například muškátovým oříškem."
       }
     }
   ],
@@ -147,6 +159,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "946fd08e57d70c8eb409f71f10ee1752c8bacc0c6c712d34fd62998460642d6b"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9047bffd9fb23a43b277fc650277548a339f92dae3565cfae3b36871194d5925"
     }
   }
 }

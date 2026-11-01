@@ -10,7 +10,8 @@
     "it": "Carne cruda",
     "pt": "Carne crua",
     "nl": "Rauw vlees",
-    "pl": "Surowe mięso"
+    "pl": "Surowe mięso",
+    "cs": "Syrové maso"
   },
   "question": {
     "en": "Can dogs eat raw meat?",
@@ -21,7 +22,8 @@
     "it": "I cani possono mangiare la carne cruda?",
     "pt": "Os cães podem comer carne crua?",
     "nl": "Mogen honden rauw vlees eten?",
-    "pl": "Czy psy mogą jeść surowe mięso?"
+    "pl": "Czy psy mogą jeść surowe mięso?",
+    "cs": "Mohou psi jíst syrové maso?"
   },
   "url_slug": {
     "en": "raw-meat",
@@ -32,7 +34,8 @@
     "it": "carne-cruda",
     "pt": "carne-crua",
     "nl": "rauw-vlees",
-    "pl": "surowe-mieso"
+    "pl": "surowe-mieso",
+    "cs": "syrove-maso"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "È sconsigliata. La carne cruda porta spesso batteri come Salmonella, Listeria ed E. coli, che possono far ammalare i cani e passare alle persone di casa, anche quando il cane sembra sano. Enti veterinari come l’AVMA sconsigliano l’alimentazione a crudo.",
     "pt": "Não é recomendado. A carne crua tem muitas vezes bactérias como Salmonella, Listeria e E. coli, que podem pôr os cães doentes e passar para as pessoas da casa, mesmo quando o cão parece saudável. Organismos veterinários como a AVMA desaconselham a alimentação crua.",
     "nl": "Niet aan te raden. Rauw vlees bevat vaak bacteriën zoals salmonella, listeria en E. coli, waar honden ziek van kunnen worden en die zich naar mensen in huis kunnen verspreiden, ook als de hond gezond lijkt. Veterinaire organisaties zoals de AVMA raden het voeren van rauw vlees af.",
-    "pl": "Nie zaleca się. Surowe mięso często przenosi bakterie, takie jak Salmonella, Listeria i E. coli, które mogą wywołać chorobę u psa i przenieść się na domowników, nawet gdy pies wygląda na zdrowego. Organizacje weterynaryjne, takie jak AVMA, odradzają karmienie surowym mięsem."
+    "pl": "Nie zaleca się. Surowe mięso często przenosi bakterie, takie jak Salmonella, Listeria i E. coli, które mogą wywołać chorobę u psa i przenieść się na domowników, nawet gdy pies wygląda na zdrowego. Organizacje weterynaryjne, takie jak AVMA, odradzają karmienie surowym mięsem.",
+    "cs": "Nedoporučuje se. Syrové maso často obsahuje bakterie, například salmonelu, listerii a E. coli, které mohou psům uškodit a přenést se na lidi v domácnosti, i když pes vypadá zdravě. Veterinární organizace, například AVMA, od krmení syrovou stravou odrazují."
   },
   "why": {
     "en": "Contamination of raw meat by bacteria is common. Dogs can carry these germs without signs and shed them in saliva and faeces, putting family members at risk, especially high-risk groups such as the young and the old. Raw pork can carry a parasite, raw bones can block the gut, and home-made raw diets are likely not balanced unless a nutritionist formulated the recipe.",
@@ -55,7 +59,8 @@
     "it": "La contaminazione batterica della carne cruda è frequente. I cani possono portare questi germi senza sintomi ed eliminarli con la saliva e le feci, mettendo a rischio i familiari, soprattutto i gruppi più fragili come i più piccoli e gli anziani. Il maiale crudo può trasmettere un parassita, le ossa crude possono ostruire l’intestino e le diete crude fatte in casa probabilmente non sono bilanciate, a meno che la ricetta non sia stata formulata da un nutrizionista.",
     "pt": "A contaminação da carne crua por bactérias é comum. Os cães podem ter estes germes sem mostrar sinais e eliminá-los na saliva e nas fezes, pondo em risco a família, sobretudo os grupos de risco, como os mais novos e os mais velhos. A carne de porco crua pode ter um parasita, os ossos crus podem obstruir o intestino, e as dietas cruas caseiras provavelmente não são equilibradas, a não ser que a receita tenha sido formulada por um nutricionista.",
     "nl": "Besmetting van rauw vlees met bacteriën komt vaak voor. Honden kunnen deze bacteriën dragen zonder verschijnselen en ze uitscheiden via speeksel en ontlasting, wat gezinsleden in gevaar brengt, vooral risicogroepen zoals jonge kinderen en ouderen. Rauw varkensvlees kan een parasiet bevatten, rauwe botten kunnen de darmen verstoppen, en zelfgemaakte rauwe voeding is waarschijnlijk niet uitgebalanceerd, tenzij een voedingsdeskundige het recept heeft samengesteld.",
-    "pl": "Skażenie surowego mięsa bakteriami jest częste. Psy mogą przenosić te zarazki bez objawów i wydalać je w ślinie i kale, narażając członków rodziny, zwłaszcza grupy wysokiego ryzyka, takie jak dzieci i osoby starsze. Surowa wieprzowina może przenosić pasożyta, surowe kości mogą zatkać przewód pokarmowy, a domowe surowe diety najpewniej nie są zbilansowane, jeśli przepisu nie ułożył specjalista od żywienia."
+    "pl": "Skażenie surowego mięsa bakteriami jest częste. Psy mogą przenosić te zarazki bez objawów i wydalać je w ślinie i kale, narażając członków rodziny, zwłaszcza grupy wysokiego ryzyka, takie jak dzieci i osoby starsze. Surowa wieprzowina może przenosić pasożyta, surowe kości mogą zatkać przewód pokarmowy, a domowe surowe diety najpewniej nie są zbilansowane, jeśli przepisu nie ułożył specjalista od żywienia.",
+    "cs": "Kontaminace syrového masa bakteriemi je běžná. Psi mohou tyto bakterie nosit bez příznaků a vylučovat je slinami a trusem, čímž ohrožují členy rodiny, zejména rizikové skupiny, jako jsou děti a starší lidé. Syrové vepřové může přenášet parazita, syrové kosti mohou ucpat střeva a domácí syrová strava pravděpodobně není vyvážená, pokud recept nesestavil odborník na výživu."
   },
   "signs": {
     "en": [
@@ -111,6 +116,12 @@
       "Biegunka",
       "Osłabienie lub słaby apetyt",
       "Dyskomfort w brzuchu"
+    ],
+    "cs": [
+      "Zvracení",
+      "Průjem",
+      "Malátnost nebo nechuť k jídlu",
+      "Břišní potíže"
     ]
   },
   "what_to_do": {
@@ -122,7 +133,8 @@
     "it": "Se il tuo cane ha preso della carne cruda, controlla se compaiono vomito, diarrea o poca energia e chiama il veterinario se sono forti o non passano. Lava bene mani, ciotole e superfici. Parla con il veterinario prima di cambiare l’alimentazione del tuo cane.",
     "pt": "Se o teu cão apanhou um pouco de carne crua, vigia se há vómitos, diarreia ou pouca energia e liga ao teu veterinário se forem fortes ou não pararem. Lava bem as mãos, as taças e as superfícies. Fala com o teu veterinário antes de mudares a alimentação do teu cão.",
     "nl": "Heeft je hond een stuk rauw vlees gepakt? Let dan op braken, diarree of weinig energie en bel je dierenarts als die ernstig zijn of niet ophouden. Was je handen, de bakjes en de oppervlakken grondig. Overleg met je dierenarts voordat je het voer van je hond verandert.",
-    "pl": "Jeśli twój pies podkradł trochę surowego mięsa, obserwuj, czy nie pojawiają się wymioty, biegunka lub osłabienie, i zadzwoń do weterynarza, jeśli są silne albo nie ustępują. Dokładnie umyj ręce, miski i blaty. Zanim zmienisz dietę psa, porozmawiaj z weterynarzem."
+    "pl": "Jeśli twój pies podkradł trochę surowego mięsa, obserwuj, czy nie pojawiają się wymioty, biegunka lub osłabienie, i zadzwoń do weterynarza, jeśli są silne albo nie ustępują. Dokładnie umyj ręce, miski i blaty. Zanim zmienisz dietę psa, porozmawiaj z weterynarzem.",
+    "cs": "Pokud váš pes ukořistil kus syrového masa, sledujte, zda nezvrací, nemá průjem nebo není malátný, a pokud jsou potíže silné nebo neustávají, zavolejte veterináři. Důkladně umyjte ruce, misky i povrchy. Než psovi změníte stravu, poraďte se s veterinářem."
   },
   "serving": {
     "en": "Share meat only fully cooked, plain and boneless.",
@@ -133,7 +145,8 @@
     "it": "Dagli la carne solo ben cotta, semplice e senza ossa.",
     "pt": "Partilha carne só bem cozinhada, simples e sem ossos.",
     "nl": "Deel vlees alleen helemaal gaar, puur en zonder botten.",
-    "pl": "Dziel się mięsem tylko dobrze ugotowanym, zwykłym i bez kości."
+    "pl": "Dziel się mięsem tylko dobrze ugotowanym, zwykłym i bez kości.",
+    "cs": "Maso dávejte jen důkladně tepelně upravené, bez přísad a bez kostí."
   },
   "child": {
     "en": "Raw meat can have germs. Dogs should only get cooked meat from people food, and everyone washes hands after touching raw meat.",
@@ -144,7 +157,8 @@
     "it": "La carne cruda può avere germi. Tra i cibi delle persone, ai cani si dà solo carne cotta, e dopo aver toccato carne cruda tutti si lavano le mani.",
     "pt": "A carne crua pode ter germes. Da comida das pessoas, os cães só devem comer carne cozinhada, e todos lavam as mãos depois de mexer em carne crua.",
     "nl": "In rauw vlees kunnen bacteriën zitten. Honden krijgen van ons eten alleen gekookt vlees, en iedereen wast zijn handen na het aanraken van rauw vlees.",
-    "pl": "Surowe mięso może mieć zarazki. Z ludzkiego jedzenia psy powinny dostawać tylko gotowane mięso, a po dotknięciu surowego mięsa wszyscy myją ręce."
+    "pl": "Surowe mięso może mieć zarazki. Z ludzkiego jedzenia psy powinny dostawać tylko gotowane mięso, a po dotknięciu surowego mięsa wszyscy myją ręce.",
+    "cs": "Na syrovém mase můžou být bacily. Z lidského jídla smějí psi dostat jen uvařené nebo upečené maso, a kdo sahá na syrové maso, musí si potom umýt ruce."
   },
   "faq": [
     {
@@ -157,7 +171,8 @@
         "it": "Il mio cane sembra stare bene con il cibo crudo. C’è comunque un rischio?",
         "pt": "O meu cão parece bem com comida crua. Continua a haver risco?",
         "nl": "Mijn hond lijkt het prima te doen op rauwe voeding. Is er dan nog een risico?",
-        "pl": "Mój pies dobrze się czuje na surowej diecie. Czy nadal jest jakieś ryzyko?"
+        "pl": "Mój pies dobrze się czuje na surowej diecie. Czy nadal jest jakieś ryzyko?",
+        "cs": "Můj pes na syrové stravě vypadá v pořádku. Hrozí i tak nějaké riziko?"
       },
       "a": {
         "en": "Yes. Apparently healthy dogs can carry these bacteria and shed them, which can harm people in the home.",
@@ -168,7 +183,8 @@
         "it": "Sì. Anche i cani apparentemente sani possono portare questi batteri ed eliminarli, e questo può fare male alle persone di casa.",
         "pt": "Sim. Cães aparentemente saudáveis podem ter estas bactérias e eliminá-las, o que pode fazer mal às pessoas da casa.",
         "nl": "Ja. Honden die gezond lijken, kunnen deze bacteriën dragen en uitscheiden, en dat kan mensen in huis schaden.",
-        "pl": "Tak. Psy, które wyglądają na zdrowe, mogą przenosić te bakterie i je wydalać, co może zaszkodzić domownikom."
+        "pl": "Tak. Psy, które wyglądają na zdrowe, mogą przenosić te bakterie i je wydalać, co może zaszkodzić domownikom.",
+        "cs": "Ano. I zdánlivě zdraví psi mohou tyto bakterie nosit a vylučovat, což může uškodit lidem v domácnosti."
       }
     },
     {
@@ -181,7 +197,8 @@
         "it": "Il cibo crudo liofilizzato è più sicuro?",
         "pt": "A comida crua liofilizada é mais segura?",
         "nl": "Is gevriesdroogde rauwe voeding veiliger?",
-        "pl": "Czy liofilizowana surowa karma jest bezpieczniejsza?"
+        "pl": "Czy liofilizowana surowa karma jest bezpieczniejsza?",
+        "cs": "Je bezpečnější lyofilizovaná (mrazem sušená) syrová strava?"
       },
       "a": {
         "en": "Not for germs: freeze-drying is not equivalent to cooking when it comes to bacteria and parasites.",
@@ -192,7 +209,8 @@
         "it": "Non per i germi: per quanto riguarda batteri e parassiti, la liofilizzazione non equivale alla cottura.",
         "pt": "Quanto aos germes, não: a liofilização não equivale a cozinhar no que toca a bactérias e parasitas.",
         "nl": "Niet wat bacteriën betreft: vriesdrogen staat niet gelijk aan koken als het om bacteriën en parasieten gaat.",
-        "pl": "Nie pod względem zarazków: liofilizacja nie jest równoważna gotowaniu, jeśli chodzi o bakterie i pasożyty."
+        "pl": "Nie pod względem zarazków: liofilizacja nie jest równoważna gotowaniu, jeśli chodzi o bakterie i pasożyty.",
+        "cs": "Co se týče bakterií a parazitů, ne: lyofilizace není rovnocenná tepelné úpravě."
       }
     }
   ],
@@ -324,6 +342,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "73211f93eb83310d628705d0236fc2e96aaf6933cb0fd40780d06a48078e7b4c"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "33dcfcfced9af667b29457f7537587a98901daebd225904d8ec9df22c4c8d2cb"
     }
   }
 }

@@ -10,7 +10,8 @@
     "it": "Uova crude",
     "pt": "Ovos crus",
     "nl": "Rauwe eieren",
-    "pl": "Surowe jajka"
+    "pl": "Surowe jajka",
+    "cs": "Syrová vejce"
   },
   "question": {
     "en": "Can dogs eat raw eggs?",
@@ -21,7 +22,8 @@
     "it": "I cani possono mangiare le uova crude?",
     "pt": "Os cães podem comer ovos crus?",
     "nl": "Mogen honden rauwe eieren eten?",
-    "pl": "Czy psy mogą jeść surowe jajka?"
+    "pl": "Czy psy mogą jeść surowe jajka?",
+    "cs": "Mohou psi jíst syrová vejce?"
   },
   "url_slug": {
     "en": "raw-eggs",
@@ -32,7 +34,8 @@
     "it": "uova-crude",
     "pt": "ovos-crus",
     "nl": "rauwe-eieren",
-    "pl": "surowe-jajka"
+    "pl": "surowe-jajka",
+    "cs": "syrova-vejce"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "No, è meglio di no. Le uova crude possono contenere batteri come la Salmonella, dannosi per i cani e per le persone che vivono con loro, e l’albume crudo può interferire con una vitamina. Cuoci bene le uova prima di dargliele.",
     "pt": "Não, é melhor não. Os ovos crus podem ter bactérias como Salmonella, que podem fazer mal aos cães e às pessoas à sua volta, e a clara crua pode interferir com uma vitamina. Cozinha bem os ovos antes de os partilhares.",
     "nl": "Nee, liever niet. Rauwe eieren kunnen bacteriën zoals salmonella bevatten, die schadelijk kunnen zijn voor honden en de mensen om hen heen, en rauw eiwit kan de opname van een vitamine verstoren. Maak eieren helemaal gaar voordat je ze deelt.",
-    "pl": "Lepiej nie. Surowe jajka mogą przenosić bakterie, takie jak Salmonella, które mogą zaszkodzić psom i ludziom wokół nich, a surowe białko jaja może zaburzać przyswajanie jednej z witamin. Zanim podzielisz się jajkami, dobrze je ugotuj."
+    "pl": "Lepiej nie. Surowe jajka mogą przenosić bakterie, takie jak Salmonella, które mogą zaszkodzić psom i ludziom wokół nich, a surowe białko jaja może zaburzać przyswajanie jednej z witamin. Zanim podzielisz się jajkami, dobrze je ugotuj.",
+    "cs": "Ne, raději ne. Syrová vejce mohou obsahovat bakterie, například salmonelu, které mohou uškodit psům i lidem kolem nich, a syrový bílek může blokovat jeden z vitaminů. Vejce před podáním důkladně tepelně upravte."
   },
   "why": {
     "en": "Raw eggs can contain Salmonella and E. coli, harmful to pets and people alike. Raw egg white contains avidin, which blocks the vitamin biotin; deficiency is rare, but it can affect skin and coat. Most vets recommend cooking eggs fully before giving them to a dog.",
@@ -55,7 +59,8 @@
     "it": "Le uova crude possono contenere Salmonella ed E. coli, dannosi sia per gli animali sia per le persone. L’albume crudo contiene avidina, che blocca la vitamina biotina; la carenza è rara, ma può colpire pelle e pelo. La maggior parte dei veterinari consiglia di cuocere bene le uova prima di darle a un cane.",
     "pt": "Os ovos crus podem conter Salmonella e E. coli, que fazem mal tanto aos animais de estimação como às pessoas. A clara crua contém avidina, que bloqueia a vitamina biotina; a carência é rara, mas pode afetar a pele e a pelagem. A maioria dos veterinários recomenda cozinhar bem os ovos antes de os dar a um cão.",
     "nl": "Rauwe eieren kunnen salmonella en E. coli bevatten, die schadelijk zijn voor huisdieren en mensen. Rauw eiwit bevat avidine, dat de vitamine biotine blokkeert; een tekort is zeldzaam, maar kan huid en vacht aantasten. De meeste dierenartsen raden aan eieren helemaal gaar te maken voordat je ze aan een hond geeft.",
-    "pl": "Surowe jajka mogą zawierać bakterie Salmonella i E. coli, szkodliwe zarówno dla zwierząt, jak i ludzi. Surowe białko jaja zawiera awidynę, która blokuje witaminę biotynę; niedobór zdarza się rzadko, ale może wpływać na skórę i sierść. Większość weterynarzy zaleca dobrze ugotować jajka przed podaniem ich psu."
+    "pl": "Surowe jajka mogą zawierać bakterie Salmonella i E. coli, szkodliwe zarówno dla zwierząt, jak i ludzi. Surowe białko jaja zawiera awidynę, która blokuje witaminę biotynę; niedobór zdarza się rzadko, ale może wpływać na skórę i sierść. Większość weterynarzy zaleca dobrze ugotować jajka przed podaniem ich psu.",
+    "cs": "Syrová vejce mohou obsahovat salmonelu a E. coli, které škodí zvířatům i lidem. Syrový bílek obsahuje avidin, který blokuje vitamin biotin; jeho nedostatek je vzácný, může se ale projevit na kůži a srsti. Většina veterinářů doporučuje vejce před podáním psovi důkladně tepelně upravit."
   },
   "signs": {
     "en": [
@@ -111,6 +116,12 @@
       "Biegunka",
       "Osłabienie lub słaby apetyt",
       "Dyskomfort w brzuchu"
+    ],
+    "cs": [
+      "Zvracení",
+      "Průjem",
+      "Malátnost nebo nechuť k jídlu",
+      "Břišní potíže"
     ]
   },
   "what_to_do": {
@@ -122,7 +133,8 @@
     "it": "Se il tuo cane ha leccato un uovo crudo, nei giorni successivi controlla se compaiono vomito, diarrea o poca energia e chiama il veterinario se vomito o diarrea sono forti o non passano. Lavati le mani e pulisci bene.",
     "pt": "Se o teu cão lambeu um ovo cru, vigia nos dias seguintes se há vómitos, diarreia ou pouca energia e liga ao teu veterinário se os vómitos ou a diarreia forem fortes ou não pararem. Lava as mãos e limpa bem.",
     "nl": "Heeft je hond een rauw ei opgelikt? Let dan de komende dagen op braken, diarree of weinig energie en bel je dierenarts als het braken of de diarree ernstig is of niet ophoudt. Was je handen en maak alles goed schoon.",
-    "pl": "Jeśli twój pies zlizał surowe jajko, przez kolejne dni obserwuj, czy nie pojawiają się wymioty, biegunka lub osłabienie, i zadzwoń do weterynarza, jeśli wymioty lub biegunka są silne albo nie ustępują. Umyj ręce i dokładnie posprzątaj."
+    "pl": "Jeśli twój pies zlizał surowe jajko, przez kolejne dni obserwuj, czy nie pojawiają się wymioty, biegunka lub osłabienie, i zadzwoń do weterynarza, jeśli wymioty lub biegunka są silne albo nie ustępują. Umyj ręce i dokładnie posprzątaj.",
+    "cs": "Pokud váš pes olízal syrové vejce, sledujte v následujících dnech, zda nezvrací, nemá průjem nebo není malátný, a pokud je zvracení nebo průjem silný nebo neustává, zavolejte veterináři. Umyjte si ruce a vše důkladně ukliďte."
   },
   "serving": {
     "en": "Cook the egg fully (hard-boiled or scrambled), plain, without oil, butter, salt or seasonings.",
@@ -133,7 +145,8 @@
     "it": "Cuoci bene l’uovo (sodo o strapazzato), semplice, senza olio, burro, sale o condimenti.",
     "pt": "Cozinha bem o ovo (cozido ou mexido), simples, sem óleo, manteiga, sal ou temperos.",
     "nl": "Maak het ei helemaal gaar (hardgekookt of als roerei), puur, zonder olie, boter, zout of kruiden.",
-    "pl": "Podawaj jajko dobrze ścięte (na twardo lub jako jajecznicę), zwykłe, bez oleju, masła, soli i przypraw."
+    "pl": "Podawaj jajko dobrze ścięte (na twardo lub jako jajecznicę), zwykłe, bez oleju, masła, soli i przypraw.",
+    "cs": "Vejce důkladně tepelně upravte (natvrdo uvařené nebo míchané), bez přísad, bez oleje, másla, soli a koření."
   },
   "child": {
     "en": "Dogs should only have eggs that are cooked. Raw eggs can carry germs that make dogs and people poorly.",
@@ -144,7 +157,8 @@
     "it": "I cani possono mangiare solo uova cotte. Le uova crude possono avere germi che fanno stare male cani e persone.",
     "pt": "Os cães só devem comer ovos cozinhados. Os ovos crus podem ter germes que põem doentes os cães e as pessoas.",
     "nl": "Honden mogen alleen gekookte eieren. In rauwe eieren kunnen bacteriën zitten waar honden en mensen ziek van worden.",
-    "pl": "Psy mogą jeść tylko ugotowane jajka. Surowe jajka mogą mieć zarazki, przez które psy i ludzie źle się czują."
+    "pl": "Psy mogą jeść tylko ugotowane jajka. Surowe jajka mogą mieć zarazki, przez które psy i ludzie źle się czują.",
+    "cs": "Psi smějí jen vajíčka, která jsou dobře uvařená. Na syrových vajíčkách můžou být bacily, ze kterých je psům i lidem zle."
   },
   "faq": [
     {
@@ -157,7 +171,8 @@
         "it": "L’uovo crudo non fa bene al pelo lucido?",
         "pt": "O ovo cru não faz bem a uma pelagem brilhante?",
         "nl": "Is rauw ei niet goed voor een glanzende vacht?",
-        "pl": "Czy surowe jajko nie jest dobre na lśniącą sierść?"
+        "pl": "Czy surowe jajko nie jest dobre na lśniącą sierść?",
+        "cs": "Není syrové vejce dobré na lesklou srst?"
       },
       "a": {
         "en": "Not reliably: raw egg white can block biotin absorption, which can lead to skin and coat problems.",
@@ -168,7 +183,8 @@
         "it": "Non in modo affidabile: l’albume crudo può bloccare l’assorbimento della biotina, e questo può causare problemi di pelle e pelo.",
         "pt": "Não de forma fiável: a clara crua pode bloquear a absorção de biotina, o que pode causar problemas de pele e de pelagem.",
         "nl": "Daar kun je niet op rekenen: rauw eiwit kan de opname van biotine blokkeren, wat tot problemen met huid en vacht kan leiden.",
-        "pl": "Nie da się na tym polegać: surowe białko jaja może blokować wchłanianie biotyny, co może prowadzić do problemów ze skórą i sierścią."
+        "pl": "Nie da się na tym polegać: surowe białko jaja może blokować wchłanianie biotyny, co może prowadzić do problemów ze skórą i sierścią.",
+        "cs": "Na to se nedá spolehnout: syrový bílek může blokovat vstřebávání biotinu, což může vést k potížím s kůží a srstí."
       }
     }
   ],
@@ -273,6 +289,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "06b4a4df8a9ad79dd205887c1eb9d18547e96dfdccb7bd4b3e34ac01bcfd7273"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c1e28a10bf6ef46bc54d191ad3e028c56a8ac40b7f82716caff3f993358fd44f"
     }
   }
 }

@@ -10,7 +10,8 @@
     "it": "Uova crude",
     "pt": "Ovos crus",
     "nl": "Rauwe eieren",
-    "pl": "Surowe jajka"
+    "pl": "Surowe jajka",
+    "cs": "Syrová vejce"
   },
   "question": {
     "en": "Can cats eat raw eggs?",
@@ -21,7 +22,8 @@
     "it": "I gatti possono mangiare le uova crude?",
     "pt": "Os gatos podem comer ovos crus?",
     "nl": "Mogen katten rauwe eieren eten?",
-    "pl": "Czy koty mogą jeść surowe jajka?"
+    "pl": "Czy koty mogą jeść surowe jajka?",
+    "cs": "Mohou kočky jíst syrová vejce?"
   },
   "url_slug": {
     "en": "raw-eggs",
@@ -32,7 +34,8 @@
     "it": "uova-crude",
     "pt": "ovos-crus",
     "nl": "rauwe-eieren",
-    "pl": "surowe-jajka"
+    "pl": "surowe-jajka",
+    "cs": "syrova-vejce"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "No, non dare uova crude ai gatti. Le uova crude possono contenere batteri nocivi come la Salmonella, che possono far ammalare sia i gatti sia le persone, e l’albume crudo contiene una proteina che può bloccare una vitamina.",
     "pt": "Não, não dês ovos crus aos gatos. Os ovos crus podem ter bactérias nocivas, como a Salmonella, que podem pôr doentes tanto os gatos como as pessoas, e a clara crua contém uma proteína que pode bloquear uma vitamina.",
     "nl": "Nee, geef katten geen rauwe eieren. Rauwe eieren kunnen schadelijke bacteriën zoals Salmonella bevatten, waar zowel katten als mensen ziek van kunnen worden, en rauw eiwit bevat een eiwitstof die een vitamine kan blokkeren.",
-    "pl": "Nie, nie dawaj kotom surowych jajek. Surowe jajka mogą przenosić szkodliwe bakterie, takie jak Salmonella, które mogą wywołać chorobę zarówno u kotów, jak i u ludzi, a surowe białko jaja zawiera proteinę, która może blokować jedną z witamin."
+    "pl": "Nie, nie dawaj kotom surowych jajek. Surowe jajka mogą przenosić szkodliwe bakterie, takie jak Salmonella, które mogą wywołać chorobę zarówno u kotów, jak i u ludzi, a surowe białko jaja zawiera proteinę, która może blokować jedną z witamin.",
+    "cs": "Ne, syrová vejce kočkám nedávejte. Mohou obsahovat škodlivé bakterie, například salmonely, které mohou způsobit onemocnění koček i lidí, a syrový bílek obsahuje bílkovinu, která může blokovat jeden vitamin."
   },
   "why": {
     "en": "Raw eggs may contain harmful bacteria and parasites and could mean food poisoning for cats and humans alike. Raw egg white also contains avidin, which binds the vitamin biotin and stops it being absorbed. Cooking food thoroughly protects pets from salmonella.",
@@ -55,7 +59,8 @@
     "it": "Le uova crude possono contenere batteri e parassiti nocivi e causare un’intossicazione alimentare sia nei gatti sia nelle persone. L’albume crudo contiene anche avidina, che lega la vitamina biotina e ne impedisce l’assorbimento. Cuocere bene il cibo protegge gli animali domestici dalla Salmonella.",
     "pt": "Os ovos crus podem conter bactérias e parasitas nocivos e causar intoxicação alimentar tanto em gatos como em pessoas. A clara crua contém também avidina, que se liga à vitamina biotina e impede a sua absorção. Cozinhar bem os alimentos protege os animais de estimação da salmonela.",
     "nl": "Rauwe eieren kunnen schadelijke bacteriën en parasieten bevatten en kunnen bij katten én mensen voedselvergiftiging veroorzaken. Rauw eiwit bevat ook avidine, dat de vitamine biotine bindt, waardoor die niet wordt opgenomen. Voedsel goed doorgaren beschermt huisdieren tegen Salmonella.",
-    "pl": "Surowe jajka mogą zawierać szkodliwe bakterie i pasożyty i grożą zatruciem pokarmowym zarówno kotom, jak i ludziom. Surowe białko jaja zawiera też awidynę, która wiąże witaminę biotynę i uniemożliwia jej wchłanianie. Dokładna obróbka termiczna jedzenia chroni zwierzęta przed salmonellą."
+    "pl": "Surowe jajka mogą zawierać szkodliwe bakterie i pasożyty i grożą zatruciem pokarmowym zarówno kotom, jak i ludziom. Surowe białko jaja zawiera też awidynę, która wiąże witaminę biotynę i uniemożliwia jej wchłanianie. Dokładna obróbka termiczna jedzenia chroni zwierzęta przed salmonellą.",
+    "cs": "Syrová vejce mohou obsahovat škodlivé bakterie a parazity a mohou způsobit otravu jídlem u koček i lidí. Syrový bílek navíc obsahuje avidin, který váže vitamin biotin a brání jeho vstřebávání. Důkladná tepelná úprava potravy chrání zvířata před salmonelou."
   },
   "signs": {
     "en": [
@@ -120,6 +125,13 @@
       "Gorączka",
       "Niechęć do jedzenia",
       "Apatia"
+    ],
+    "cs": [
+      "Zvracení",
+      "Průjem, někdy s krví",
+      "Horečka",
+      "Nechuť k jídlu",
+      "Malátnost"
     ]
   },
   "what_to_do": {
@@ -131,7 +143,8 @@
     "it": "Se il tuo gatto ha leccato un po’ di uovo crudo, controlla se compaiono vomito, diarrea, febbre o rifiuto del cibo, e in tal caso chiama il veterinario. Lavati le mani e pulisci le superfici toccate dall’uovo.",
     "pt": "Se o teu gato lambeu um pouco de ovo cru, vigia se aparecem vómitos, diarreia, febre ou falta de apetite e liga ao teu veterinário se algum destes sinais surgir. Lava as mãos e as superfícies em que o ovo tocou.",
     "nl": "Heeft je kat een beetje rauw ei gelikt? Let op braken, diarree, koorts of niet eten, en bel je dierenarts als je daar iets van ziet. Was je handen en alle oppervlakken waar het ei mee in aanraking is gekomen.",
-    "pl": "Jeśli twój kot polizał odrobinę surowego jajka, obserwuj, czy nie pojawią się wymioty, biegunka, gorączka lub brak apetytu, a jeśli tak, zadzwoń do weterynarza. Umyj ręce i wszystkie powierzchnie, których dotknęło jajko."
+    "pl": "Jeśli twój kot polizał odrobinę surowego jajka, obserwuj, czy nie pojawią się wymioty, biegunka, gorączka lub brak apetytu, a jeśli tak, zadzwoń do weterynarza. Umyj ręce i wszystkie powierzchnie, których dotknęło jajko.",
+    "cs": "Pokud vaše kočka olízla trochu syrového vejce, sledujte, zda se neobjeví zvracení, průjem, horečka nebo nechuť k jídlu, a pokud ano, zavolejte veterináři. Umyjte si ruce i všechny povrchy, kterých se vejce dotklo."
   },
   "serving": null,
   "child": {
@@ -143,7 +156,8 @@
     "it": "Le uova crude possono avere dei germi. Solo gli adulti dovrebbero toccarle, e i gatti non devono mangiarle.",
     "pt": "Os ovos crus podem ter micróbios. Só os adultos devem mexer neles, e os gatos não os devem comer.",
     "nl": "Op rauwe eieren kunnen bacteriën zitten. Alleen volwassenen horen ze aan te raken, en katten mogen ze niet eten.",
-    "pl": "Na surowych jajkach mogą być zarazki. Zajmować się nimi powinni tylko dorośli, a koty nie powinny ich jeść."
+    "pl": "Na surowych jajkach mogą być zarazki. Zajmować się nimi powinni tylko dorośli, a koty nie powinny ich jeść.",
+    "cs": "Na syrových vejcích můžou být bacily. Brát je do ruky mají jen dospělí a kočky je jíst nemají."
   },
   "faq": [
     {
@@ -156,7 +170,8 @@
         "it": "Le uova cotte vanno bene, invece?",
         "pt": "E os ovos cozinhados?",
         "nl": "Zijn gekookte eieren dan wel oké?",
-        "pl": "Czy w takim razie gotowane jajka są w porządku?"
+        "pl": "Czy w takim razie gotowane jajka są w porządku?",
+        "cs": "Jsou místo toho v pořádku tepelně upravená vejce?"
       },
       "a": {
         "en": "Cooked egg is a different matter: PDSA says eggs can suit pets, but only in moderation. Cook it fully and serve it plain.",
@@ -167,7 +182,8 @@
         "it": "L’uovo cotto è un’altra cosa: secondo PDSA le uova possono essere adatte agli animali domestici, ma solo con moderazione. Cuocilo bene e servilo semplice.",
         "pt": "O ovo cozinhado é outra história: a PDSA diz que os ovos podem ser adequados para animais de estimação, mas só com moderação. Cozinha-o bem e serve-o simples.",
         "nl": "Gekookt ei is iets anders: volgens PDSA kunnen eieren geschikt zijn voor huisdieren, maar alleen met mate. Kook het goed gaar en geef het zonder toevoegingen.",
-        "pl": "Gotowane jajko to inna sprawa: według PDSA jajka mogą być odpowiednie dla zwierząt, ale tylko z umiarem. Ugotuj je dokładnie i podawaj bez dodatków."
+        "pl": "Gotowane jajko to inna sprawa: według PDSA jajka mogą być odpowiednie dla zwierząt, ale tylko z umiarem. Ugotuj je dokładnie i podawaj bez dodatków.",
+        "cs": "Tepelně upravené vejce je jiná věc: podle PDSA mohou být vejce pro zvířata vhodná, ale jen s mírou. Vejce důkladně tepelně upravte a podávejte bez ochucení."
       }
     }
   ],
@@ -272,6 +288,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "100370f4caedfee811a9610a3c97b61d1d70d8db28cbf46f49116a3e11a3ddb6"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5d5b2bf0640f97936de87ae488f19ffe3f6aa52268d13cef824155f752b13f27"
     }
   }
 }

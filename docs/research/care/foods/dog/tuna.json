@@ -10,7 +10,8 @@
     "it": "Tonno",
     "pt": "Atum",
     "nl": "Tonijn",
-    "pl": "Tuńczyk"
+    "pl": "Tuńczyk",
+    "cs": "Tuňák"
   },
   "question": {
     "en": "Can dogs eat tuna?",
@@ -21,7 +22,8 @@
     "it": "I cani possono mangiare il tonno?",
     "pt": "Os cães podem comer atum?",
     "nl": "Mogen honden tonijn eten?",
-    "pl": "Czy psy mogą jeść tuńczyka?"
+    "pl": "Czy psy mogą jeść tuńczyka?",
+    "cs": "Mohou psi jíst tuňáka?"
   },
   "url_slug": {
     "en": "tuna",
@@ -32,7 +34,8 @@
     "it": "tonno",
     "pt": "atum",
     "nl": "tonijn",
-    "pl": "tunczyk"
+    "pl": "tunczyk",
+    "cs": "tunak"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "Sì, ogni tanto e in piccole quantità. Il tonno non è tossico per i cani, ma contiene molto mercurio, quindi non deve essere un cibo abituale. Scegli tonno cotto o tonno in scatola «light» (tonnetto striato) solo in acqua, senza sale né olio aggiunti.",
     "pt": "Sim, de vez em quando e em pequenas quantidades. O atum não é tóxico para os cães, mas tem muito mercúrio, por isso não deve ser um alimento habitual. Escolhe atum cozinhado ou atum em lata «light» (gaiado) só em água, sem sal nem óleo adicionados.",
     "nl": "Ja, af en toe en in kleine hoeveelheden. Tonijn is niet giftig voor honden, maar bevat veel kwik, dus het hoort geen vast voer te zijn. Kies gekookte tonijn of “lichte” tonijn uit blik (skipjack) in alleen water, zonder toegevoegd zout of olie.",
-    "pl": "Tak, od czasu do czasu i w małych ilościach. Tuńczyk nie jest toksyczny dla psów, ale zawiera dużo rtęci, więc nie powinien być stałym pożywieniem. Wybieraj tuńczyka gotowanego lub tuńczyka z puszki typu „light” (bonito) tylko w wodzie, bez dodatku soli i oleju."
+    "pl": "Tak, od czasu do czasu i w małych ilościach. Tuńczyk nie jest toksyczny dla psów, ale zawiera dużo rtęci, więc nie powinien być stałym pożywieniem. Wybieraj tuńczyka gotowanego lub tuńczyka z puszki typu „light” (bonito) tylko w wodzie, bez dodatku soli i oleju.",
+    "cs": "Ano, občas a v malém množství. Tuňák není pro psy jedovatý, obsahuje ale hodně rtuti, takže by neměl být běžnou součástí stravy. Vybírejte tepelně upraveného tuňáka nebo „light“ tuňáka (pruhovaného) z konzervy jen ve vodě, bez přidané soli a oleje."
   },
   "why": {
     "en": "Tuna are large, long-lived fish, so their mercury levels are high, and dogs are more sensitive to mercury than people. Feeding tuna regularly can lead to mercury poisoning over time. Albacore, yellowfin and 'white' tuna carry more mercury than skipjack. Canned tuna often has added salt or oil, which isn't healthy for dogs.",
@@ -55,7 +59,8 @@
     "it": "I tonni sono pesci grandi e longevi, quindi hanno livelli di mercurio alti, e i cani sono più sensibili al mercurio delle persone. Dare tonno regolarmente può portare nel tempo a un avvelenamento da mercurio. Alalunga, tonno pinna gialla e tonno in scatola «white» contengono più mercurio del tonnetto striato. Il tonno in scatola ha spesso sale o olio aggiunti, che non fanno bene ai cani.",
     "pt": "Os atuns são peixes grandes e de vida longa, por isso têm níveis altos de mercúrio, e os cães são mais sensíveis ao mercúrio do que as pessoas. Dar atum com regularidade pode levar a intoxicação por mercúrio ao longo do tempo. O atum voador, o atum albacora e o atum «branco» têm mais mercúrio do que o gaiado. O atum em lata tem muitas vezes sal ou óleo adicionados, o que não é saudável para os cães.",
     "nl": "Tonijnen zijn grote vissen die lang leven, dus hun kwikgehalte is hoog, en honden zijn gevoeliger voor kwik dan mensen. Regelmatig tonijn geven kan na verloop van tijd tot kwikvergiftiging leiden. Witte tonijn (albacore), geelvintonijn en “witte” tonijn uit blik bevatten meer kwik dan skipjack. Tonijn uit blik bevat vaak toegevoegd zout of olie, en dat is niet gezond voor honden.",
-    "pl": "Tuńczyki to duże, długo żyjące ryby, więc mają wysoki poziom rtęci, a psy są na rtęć bardziej wrażliwe niż ludzie. Regularne karmienie tuńczykiem może z czasem doprowadzić do zatrucia rtęcią. Albakora, tuńczyk żółtopłetwy i tuńczyk „biały” zawierają więcej rtęci niż bonito. Tuńczyk z puszki często ma dodatek soli lub oleju, co nie jest zdrowe dla psów."
+    "pl": "Tuńczyki to duże, długo żyjące ryby, więc mają wysoki poziom rtęci, a psy są na rtęć bardziej wrażliwe niż ludzie. Regularne karmienie tuńczykiem może z czasem doprowadzić do zatrucia rtęcią. Albakora, tuńczyk żółtopłetwy i tuńczyk „biały” zawierają więcej rtęci niż bonito. Tuńczyk z puszki często ma dodatek soli lub oleju, co nie jest zdrowe dla psów.",
+    "cs": "Tuňáci jsou velké, dlouho žijící ryby, proto mají vysoký obsah rtuti, a psi jsou na rtuť citlivější než lidé. Pravidelné krmení tuňákem může časem vést k otravě rtutí. Tuňák křídlatý (albacore), tuňák žlutoploutvý a „bílý“ tuňák obsahují více rtuti než tuňák pruhovaný. Tuňák z konzervy má často přidanou sůl nebo olej, což psům nesvědčí."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "it": "Un boccone di tonno rubato non è motivo di panico. Se il tuo cane mangia tonno regolarmente e mostra sintomi come tremori, perdita di coordinazione, vomito con sangue o diarrea con sangue, portalo subito dal veterinario.",
     "pt": "Uma dentada de atum roubada não é motivo para pânico. Se o teu cão tem comido atum com regularidade e mostrar sinais como tremores, perda de coordenação, vómitos com sangue ou diarreia com sangue, leva-o imediatamente ao veterinário.",
     "nl": "Een gestolen hapje tonijn is geen reden tot paniek. Eet je hond regelmatig tonijn en zie je verschijnselen zoals trillingen, slechte coördinatie, bloed braken of bloederige diarree? Ga dan meteen naar de dierenarts.",
-    "pl": "Podkradziony kęs tuńczyka to nie powód do paniki. Jeśli twój pies regularnie je tuńczyka i ma objawy takie jak drżenie mięśni, utrata koordynacji, wymioty z krwią lub krwawa biegunka, natychmiast zabierz go do weterynarza."
+    "pl": "Podkradziony kęs tuńczyka to nie powód do paniki. Jeśli twój pies regularnie je tuńczyka i ma objawy takie jak drżenie mięśni, utrata koordynacji, wymioty z krwią lub krwawa biegunka, natychmiast zabierz go do weterynarza.",
+    "cs": "Ukradené sousto tuňáka není důvod k panice. Pokud váš pes jí tuňáka pravidelně a objeví se u něj příznaky, jako je třes, ztráta koordinace, zvracení krve nebo krvavý průjem, okamžitě s ním jeďte k veterináři."
   },
   "serving": {
     "en": "Occasionally, a small amount of cooked tuna or 'light' (skipjack) canned tuna in water only, no salt or oil; avoid albacore, yellowfin and 'white' tuna.",
@@ -78,7 +84,8 @@
     "it": "Ogni tanto, una piccola quantità di tonno cotto o di tonno in scatola «light» (tonnetto striato) solo in acqua, senza sale né olio; evita alalunga, tonno pinna gialla e tonno «white».",
     "pt": "De vez em quando, uma pequena quantidade de atum cozinhado ou de atum em lata «light» (gaiado) só em água, sem sal nem óleo; evita o atum voador, o atum albacora e o atum «branco».",
     "nl": "Af en toe een kleine hoeveelheid gekookte tonijn of “lichte” tonijn uit blik (skipjack) in alleen water, zonder zout of olie; vermijd witte tonijn (albacore), geelvintonijn en “witte” tonijn.",
-    "pl": "Od czasu do czasu odrobina gotowanego tuńczyka lub tuńczyka z puszki typu „light” (bonito) tylko w wodzie, bez soli i oleju; unikaj albakory, tuńczyka żółtopłetwego i tuńczyka „białego”."
+    "pl": "Od czasu do czasu odrobina gotowanego tuńczyka lub tuńczyka z puszki typu „light” (bonito) tylko w wodzie, bez soli i oleju; unikaj albakory, tuńczyka żółtopłetwego i tuńczyka „białego”.",
+    "cs": "Občas malé množství tepelně upraveného tuňáka nebo „light“ tuňáka (pruhovaného) z konzervy jen ve vodě, bez soli a oleje; vyhněte se tuňáku křídlatému (albacore), žlutoploutvému a „bílému“."
   },
   "child": {
     "en": "A little tuna is a rare treat for a dog, not everyday food. Ask a grown-up to pick tuna in water.",
@@ -89,7 +96,8 @@
     "it": "Un po’ di tonno è un premio raro per un cane, non cibo di tutti i giorni. Chiedi a un adulto di scegliere il tonno in acqua.",
     "pt": "Um pouco de atum é uma guloseima rara para um cão, não comida de todos os dias. Pede a um adulto para escolher atum em água.",
     "nl": "Een beetje tonijn is een snoepje voor heel af en toe, geen eten voor elke dag. Vraag een volwassene om tonijn in water te kiezen.",
-    "pl": "Odrobina tuńczyka to rzadki smakołyk dla psa, nie codzienne jedzenie. Poproś dorosłego, żeby wybrał tuńczyka w wodzie."
+    "pl": "Odrobina tuńczyka to rzadki smakołyk dla psa, nie codzienne jedzenie. Poproś dorosłego, żeby wybrał tuńczyka w wodzie.",
+    "cs": "Trocha tuňáka je pro psa vzácný pamlsek, ne jídlo na každý den. Popros dospělého, ať vybere tuňáka ve vodě."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "it": "Il mio cane ha rubato un po’ di tonno. Devo preoccuparmi?",
         "pt": "O meu cão roubou um pouco de atum. Devo preocupar-me?",
         "nl": "Mijn hond heeft wat tonijn gestolen. Moet ik me zorgen maken?",
-        "pl": "Mój pies podkradł trochę tuńczyka. Czy mam się martwić?"
+        "pl": "Mój pies podkradł trochę tuńczyka. Czy mam się martwić?",
+        "cs": "Můj pes ukradl kousek tuňáka. Mám se bát?"
       },
       "a": {
         "en": "Usually not: tuna isn't toxic, and the concern is regular feeding over time.",
@@ -113,7 +122,8 @@
         "it": "Di solito no: il tonno non è tossico, il problema è darlo regolarmente nel tempo.",
         "pt": "Normalmente não: o atum não é tóxico, e a preocupação é dar atum com regularidade ao longo do tempo.",
         "nl": "Meestal niet: tonijn is niet giftig, en het probleem zit in regelmatig geven over langere tijd.",
-        "pl": "Zwykle nie: tuńczyk nie jest toksyczny, a problemem jest regularne karmienie nim przez dłuższy czas."
+        "pl": "Zwykle nie: tuńczyk nie jest toksyczny, a problemem jest regularne karmienie nim przez dłuższy czas.",
+        "cs": "Většinou ne: tuňák není jedovatý a problémem je pravidelné krmení po delší dobu."
       }
     },
     {
@@ -126,7 +136,8 @@
         "it": "Qual è il tonno in scatola migliore?",
         "pt": "Qual é o melhor atum em lata?",
         "nl": "Welke tonijn uit blik is het best?",
-        "pl": "Który tuńczyk z puszki jest najlepszy?"
+        "pl": "Który tuńczyk z puszki jest najlepszy?",
+        "cs": "Jaký tuňák z konzervy je nejlepší?"
       },
       "a": {
         "en": "'Light' or skipjack tuna packed only in water, given occasionally.",
@@ -137,7 +148,8 @@
         "it": "Il tonno «light», o tonnetto striato, solo in acqua, dato ogni tanto.",
         "pt": "Atum «light» ou gaiado só em água, dado de vez em quando.",
         "nl": "“Lichte” tonijn of skipjack in alleen water, af en toe gegeven.",
-        "pl": "Tuńczyk typu „light” lub bonito, tylko w wodzie, podawany od czasu do czasu."
+        "pl": "Tuńczyk typu „light” lub bonito, tylko w wodzie, podawany od czasu do czasu.",
+        "cs": "„Light“ neboli pruhovaný tuňák jen ve vodě, podávaný občas."
       }
     }
   ],
@@ -259,6 +271,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8e64476a4a1eb9f5f716d25369dd8baa84b6512c8ad095ef9cfa458cddd7a999"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "46e180b21bc6f993cf67d937a4204501cace8db80fd7676a079aed9738c30b7f"
     }
   }
 }

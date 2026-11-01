@@ -10,7 +10,8 @@
     "it": "Ossa crude",
     "pt": "Ossos crus",
     "nl": "Rauwe botten",
-    "pl": "Surowe kości"
+    "pl": "Surowe kości",
+    "cs": "Syrové kosti"
   },
   "question": {
     "en": "Can dogs eat raw bones?",
@@ -21,7 +22,8 @@
     "it": "I cani possono mangiare le ossa crude?",
     "pt": "Os cães podem comer ossos crus?",
     "nl": "Mogen honden rauwe botten eten?",
-    "pl": "Czy psy mogą jeść surowe kości?"
+    "pl": "Czy psy mogą jeść surowe kości?",
+    "cs": "Mohou psi jíst syrové kosti?"
   },
   "url_slug": {
     "en": "raw-bones",
@@ -32,7 +34,8 @@
     "it": "ossa-crude",
     "pt": "ossos-crus",
     "nl": "rauwe-botten",
-    "pl": "surowe-kosci"
+    "pl": "surowe-kosci",
+    "cs": "syrove-kosti"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "Solo dopo averne parlato con il veterinario. Le ossa cotte si scheggiano, ma anche quelle crude comportano rischi: possono rompere i denti, causare soffocamento o ostruire l’intestino, e la carne cruda attaccata può portare batteri come la Salmonella. Alcuni veterinari le permettono sotto sorveglianza; altri sconsigliano le ossa.",
     "pt": "Só depois de falares com o teu veterinário. Os ossos cozinhados lascam, mas os ossos crus também têm riscos: podem partir dentes, causar engasgamento ou obstruir o intestino, e a carne crua que têm pode ter bactérias como Salmonella. Alguns veterinários permitem-nos com supervisão; outros desaconselham ossos.",
     "nl": "Alleen na overleg met je dierenarts. Gekookte botten splinteren, maar ook rauwe botten brengen risico’s mee: ze kunnen tanden breken, verstikking veroorzaken of de darmen verstoppen, en rauw vlees eraan kan bacteriën zoals salmonella bevatten. Sommige dierenartsen staan ze onder toezicht toe; andere raden botten af.",
-    "pl": "Tylko po rozmowie z weterynarzem. Gotowane kości łamią się na odłamki, ale surowe też niosą ryzyko: mogą złamać zęby, spowodować zadławienie lub zatkać przewód pokarmowy, a mięso na nich może przenosić bakterie, takie jak Salmonella. Niektórzy weterynarze dopuszczają je pod nadzorem, inni odradzają kości."
+    "pl": "Tylko po rozmowie z weterynarzem. Gotowane kości łamią się na odłamki, ale surowe też niosą ryzyko: mogą złamać zęby, spowodować zadławienie lub zatkać przewód pokarmowy, a mięso na nich może przenosić bakterie, takie jak Salmonella. Niektórzy weterynarze dopuszczają je pod nadzorem, inni odradzają kości.",
+    "cs": "Jen po poradě s veterinářem. Tepelně upravené kosti se tříští, rizika ale nesou i syrové kosti: mohou zlomit zuby, způsobit dušení nebo ucpat střeva a syrové maso na nich může obsahovat bakterie, například salmonelu. Někteří veterináři je pod dohledem povolují, jiní kosti nedoporučují."
   },
   "why": {
     "en": "Sources differ, so we use the stricter level. The FDA lists blockages, choking and mouth injuries after bones and advises asking your vet about safer chews. AKC notes raw bones may carry Salmonella and very hard bones can damage teeth. Bones can injure or block the gut, and blockages are very serious.",
@@ -55,7 +59,8 @@
     "it": "Le fonti non concordano, quindi adottiamo il livello più prudente. La FDA segnala ostruzioni, soffocamento e lesioni alla bocca dopo l’ingestione di ossa e consiglia di chiedere al veterinario alternative da masticare più sicure. L’AKC osserva che le ossa crude possono portare Salmonella e che quelle molto dure possono danneggiare i denti. Le ossa possono ferire od ostruire l’intestino, e le ostruzioni sono molto gravi.",
     "pt": "As fontes divergem, por isso usamos o nível mais rigoroso. A FDA refere obstruções, engasgamento e lesões na boca depois de ossos e aconselha a perguntar ao veterinário por alternativas mais seguras para roer. O AKC refere que os ossos crus podem ter Salmonella e que os ossos muito duros podem danificar os dentes. Os ossos podem ferir ou obstruir o intestino, e as obstruções são muito graves.",
     "nl": "De bronnen verschillen, dus kiezen we het strengere niveau. De FDA noemt verstoppingen, verstikking en verwondingen in de bek na het eten van botten en raadt aan je dierenarts te vragen naar veiligere kauwartikelen. De AKC wijst erop dat rauwe botten salmonella kunnen bevatten en dat heel harde botten de tanden kunnen beschadigen. Botten kunnen de darmen verwonden of verstoppen, en verstoppingen zijn heel ernstig.",
-    "pl": "Źródła się różnią, dlatego przyjmujemy surowszą ocenę. FDA odnotowuje przypadki niedrożności, zadławień i urazów pyska spowodowanych kośćmi i radzi zapytać weterynarza o bezpieczniejsze gryzaki. AKC zauważa, że surowe kości mogą przenosić bakterie Salmonella, a bardzo twarde kości mogą uszkodzić zęby. Kości mogą zranić lub zatkać przewód pokarmowy, a niedrożność jest bardzo poważna."
+    "pl": "Źródła się różnią, dlatego przyjmujemy surowszą ocenę. FDA odnotowuje przypadki niedrożności, zadławień i urazów pyska spowodowanych kośćmi i radzi zapytać weterynarza o bezpieczniejsze gryzaki. AKC zauważa, że surowe kości mogą przenosić bakterie Salmonella, a bardzo twarde kości mogą uszkodzić zęby. Kości mogą zranić lub zatkać przewód pokarmowy, a niedrożność jest bardzo poważna.",
+    "cs": "Zdroje se liší, proto používáme přísnější hodnocení. FDA uvádí případy ucpání střev, dušení a poranění tlamy po kostech a doporučuje zeptat se veterináře na bezpečnější pamlsky na žvýkání. AKC upozorňuje, že syrové kosti mohou přenášet salmonelu a velmi tvrdé kosti mohou poškodit zuby. Kosti mohou poranit nebo ucpat trávicí trakt a ucpání je velmi vážné."
   },
   "signs": {
     "en": [
@@ -120,6 +125,13 @@
       "Wymioty",
       "Biegunka",
       "Krwawienie z odbytu"
+    ],
+    "cs": [
+      "Dušení nebo dávení",
+      "Poranění nebo krvácení v tlamě",
+      "Zvracení",
+      "Průjem",
+      "Krvácení z konečníku"
     ]
   },
   "what_to_do": {
@@ -131,7 +143,8 @@
     "it": "Se il tuo cane ha ingoiato un grosso pezzo d’osso o mostra uno di questi sintomi, contatta subito il veterinario. Annota il tipo e la dimensione dell’osso.",
     "pt": "Se o teu cão engoliu um pedaço grande de osso, ou mostrar algum destes sinais, contacta imediatamente o teu veterinário. Anota o tipo e o tamanho do osso.",
     "nl": "Heeft je hond een groot stuk bot ingeslikt, of heeft hij een van deze verschijnselen? Neem dan meteen contact op met je dierenarts. Schrijf op wat voor bot het was en hoe groot.",
-    "pl": "Jeśli twój pies połknął duży kawałek kości lub ma któryś z tych objawów, od razu skontaktuj się z weterynarzem. Zanotuj rodzaj i wielkość kości."
+    "pl": "Jeśli twój pies połknął duży kawałek kości lub ma któryś z tych objawów, od razu skontaktuj się z weterynarzem. Zanotuj rodzaj i wielkość kości.",
+    "cs": "Pokud váš pes spolkl velký kus kosti nebo má některý z těchto příznaků, okamžitě se obraťte na veterináře. Poznamenejte si druh a velikost kosti."
   },
   "serving": {
     "en": "Ask your vet first. If they agree, choose a bone larger than your dog's muzzle so it can't be swallowed whole, avoid very hard bones, and always supervise chewing.",
@@ -142,7 +155,8 @@
     "it": "Chiedi prima al veterinario. Se è d’accordo, scegli un osso più grande del muso del tuo cane, così non può ingoiarlo intero, evita le ossa molto dure e sorveglialo sempre mentre mastica.",
     "pt": "Pergunta primeiro ao teu veterinário. Se ele concordar, escolhe um osso maior do que o focinho do teu cão, para que não o consiga engolir inteiro, evita ossos muito duros e vigia-o sempre enquanto roer.",
     "nl": "Vraag het eerst aan je dierenarts. Vindt die het goed, kies dan een bot dat groter is dan de snuit van je hond, zodat hij het niet heel kan doorslikken, vermijd heel harde botten en houd altijd toezicht tijdens het kauwen.",
-    "pl": "Najpierw zapytaj weterynarza. Jeśli się zgodzi, wybierz kość większą niż kufa psa, żeby nie dało się jej połknąć w całości, unikaj bardzo twardych kości i zawsze pilnuj psa podczas gryzienia."
+    "pl": "Najpierw zapytaj weterynarza. Jeśli się zgodzi, wybierz kość większą niż kufa psa, żeby nie dało się jej połknąć w całości, unikaj bardzo twardych kości i zawsze pilnuj psa podczas gryzienia.",
+    "cs": "Nejdřív se zeptejte veterináře. Pokud souhlasí, vyberte kost větší, než je délka psí tlamy, aby ji pes nemohl spolknout celou, vyhněte se velmi tvrdým kostem a při žvýkání psa vždy hlídejte."
   },
   "child": {
     "en": "Bones can hurt a dog's teeth and tummy. Only grown-ups and the vet decide if a dog gets a bone, and someone always watches.",
@@ -153,7 +167,8 @@
     "it": "Le ossa possono fare male ai denti e alla pancia di un cane. Solo gli adulti e il veterinario decidono se dargli un osso, e qualcuno controlla sempre.",
     "pt": "Os ossos podem magoar os dentes e a barriga de um cão. Só os adultos e o veterinário decidem se o cão come um osso, e alguém vigia sempre.",
     "nl": "Botten kunnen de tanden en het buikje van een hond pijn doen. Alleen volwassenen en de dierenarts beslissen of een hond een bot krijgt, en er kijkt altijd iemand mee.",
-    "pl": "Kości mogą zaszkodzić psim zębom i brzuszkowi. Tylko dorośli i weterynarz decydują, czy pies dostanie kość, a ktoś zawsze musi go pilnować."
+    "pl": "Kości mogą zaszkodzić psim zębom i brzuszkowi. Tylko dorośli i weterynarz decydują, czy pies dostanie kość, a ktoś zawsze musi go pilnować.",
+    "cs": "Kosti můžou psovi ublížit na zubech i v bříšku. Jestli pes dostane kost, rozhodují jen dospělí a veterinář, a vždycky ho při tom někdo hlídá."
   },
   "faq": [
     {
@@ -166,7 +181,8 @@
         "it": "Le ossa crude sono più sicure di quelle cotte?",
         "pt": "Os ossos crus são mais seguros do que os cozinhados?",
         "nl": "Zijn rauwe botten veiliger dan gekookte?",
-        "pl": "Czy surowe kości są bezpieczniejsze niż gotowane?"
+        "pl": "Czy surowe kości są bezpieczniejsze niż gotowane?",
+        "cs": "Jsou syrové kosti bezpečnější než tepelně upravené?"
       },
       "a": {
         "en": "Cooked bones splinter, which is why they should never be given. Raw bones still carry risks of broken teeth, blockages and bacteria, so ask your vet first.",
@@ -177,7 +193,8 @@
         "it": "Le ossa cotte si scheggiano, ed è per questo che non vanno mai date. Le ossa crude comportano comunque rischi di denti rotti, ostruzioni e batteri, quindi chiedi prima al veterinario.",
         "pt": "Os ossos cozinhados lascam, e é por isso que nunca se devem dar. Os ossos crus continuam a ter riscos de dentes partidos, obstruções e bactérias, por isso pergunta primeiro ao teu veterinário.",
         "nl": "Gekookte botten splinteren, en daarom mag je ze nooit geven. Rauwe botten brengen nog steeds risico’s mee, zoals gebroken tanden, verstoppingen en bacteriën, dus vraag het eerst aan je dierenarts.",
-        "pl": "Gotowane kości łamią się na odłamki, dlatego nigdy nie wolno ich podawać. Surowe kości nadal niosą ryzyko złamania zębów, niedrożności i bakterii, więc najpierw zapytaj weterynarza."
+        "pl": "Gotowane kości łamią się na odłamki, dlatego nigdy nie wolno ich podawać. Surowe kości nadal niosą ryzyko złamania zębów, niedrożności i bakterii, więc najpierw zapytaj weterynarza.",
+        "cs": "Tepelně upravené kosti se tříští, a proto se nesmějí dávat nikdy. Syrové kosti s sebou ale stále nesou riziko zlomených zubů, ucpání střev a bakterií, proto se nejdřív zeptejte veterináře."
       }
     },
     {
@@ -190,7 +207,8 @@
         "it": "Quale dimensione dell’osso è più sicura?",
         "pt": "Que tamanho de osso é mais seguro?",
         "nl": "Welk formaat bot is veiliger?",
-        "pl": "Jaka wielkość kości jest bezpieczniejsza?"
+        "pl": "Jaka wielkość kości jest bezpieczniejsza?",
+        "cs": "Jak velká kost je bezpečnější?"
       },
       "a": {
         "en": "A bone should be larger than the length of the dog's muzzle so it can't be swallowed whole, and you should check on your dog while it chews.",
@@ -201,7 +219,8 @@
         "it": "L’osso deve essere più grande della lunghezza del muso del cane, così non può ingoiarlo intero, e devi controllare il cane mentre mastica.",
         "pt": "O osso deve ser maior do que o comprimento do focinho do cão, para que não o consiga engolir inteiro, e deves vigiar o teu cão enquanto rói.",
         "nl": "Een bot moet groter zijn dan de lengte van de snuit van de hond, zodat hij het niet heel kan doorslikken, en je moet regelmatig bij je hond kijken terwijl hij kauwt.",
-        "pl": "Kość powinna być większa niż długość kufy psa, żeby nie dało się jej połknąć w całości, a podczas gryzienia pilnuj psa."
+        "pl": "Kość powinna być większa niż długość kufy psa, żeby nie dało się jej połknąć w całości, a podczas gryzienia pilnuj psa.",
+        "cs": "Kost by měla být větší, než je délka psí tlamy, aby ji pes nemohl spolknout celou, a při žvýkání byste psa měli hlídat."
       }
     }
   ],
@@ -343,6 +362,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2f4113418b85582eb1b3c939112e848c7513e3037a3fc9afed881c7fadabd87f"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "58d341bf3e56524aec4bd1582b06c1746f8f3a503b139bdbcb5d0089d33f0fff"
     }
   }
 }

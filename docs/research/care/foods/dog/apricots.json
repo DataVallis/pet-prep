@@ -10,7 +10,8 @@
     "it": "Albicocche",
     "pt": "Alperces",
     "nl": "Abrikozen",
-    "pl": "Morele"
+    "pl": "Morele",
+    "cs": "Meruňky"
   },
   "question": {
     "en": "Can dogs eat apricots?",
@@ -21,7 +22,8 @@
     "it": "I cani possono mangiare le albicocche?",
     "pt": "Os cães podem comer alperces?",
     "nl": "Mogen honden abrikozen eten?",
-    "pl": "Czy psy mogą jeść morele?"
+    "pl": "Czy psy mogą jeść morele?",
+    "cs": "Mohou psi jíst meruňky?"
   },
   "url_slug": {
     "en": "apricots",
@@ -32,7 +34,8 @@
     "it": "albicocche",
     "pt": "alperces",
     "nl": "abrikozen",
-    "pl": "morele"
+    "pl": "morele",
+    "cs": "merunky"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "Sconsigliate. La pianta di albicocco è classificata come tossica per i cani: gambi, foglie e semi contengono cianuro, soprattutto quando appassiscono. Non lasciare mai che il tuo cane mastichi noccioli, foglie o gambi di albicocca.",
     "pt": "Não é recomendado. O alperceiro está classificado como tóxico para os cães: os caules, as folhas e as sementes contêm cianeto, sobretudo quando murcham. Nunca deixes o teu cão roer caroços, folhas ou caules de alperce.",
     "nl": "Niet aan te raden. De abrikozenplant staat te boek als giftig voor honden: de stelen, bladeren en pitten bevatten cyanide, vooral als ze verwelken. Laat je hond nooit op abrikozenpitten, -bladeren of -stelen kauwen.",
-    "pl": "Nie zaleca się. Morela figuruje na listach roślin toksycznych dla psów: jej łodygi, liście i nasiona zawierają cyjanek, zwłaszcza gdy więdną. Nigdy nie pozwalaj psu gryźć pestek, liści ani łodyg moreli."
+    "pl": "Nie zaleca się. Morela figuruje na listach roślin toksycznych dla psów: jej łodygi, liście i nasiona zawierają cyjanek, zwłaszcza gdy więdną. Nigdy nie pozwalaj psu gryźć pestek, liści ani łodyg moreli.",
+    "cs": "Nedoporučuje se. Meruňka je uváděna jako rostlina jedovatá pro psy: její stonky, listy a semena obsahují kyanid, zvlášť když vadnou. Nikdy nenechte psa kousat meruňkové pecky, listy ani stonky."
   },
   "why": {
     "en": "Apricot stems, leaves and seeds contain cyanogenic glycosides, which release cyanide. Cyanide reduces the body's ability to use oxygen. Because the plant is listed as toxic to dogs, we do not rate apricots as a safe treat.",
@@ -55,7 +59,8 @@
     "it": "Gambi, foglie e semi dell’albicocco contengono glicosidi cianogenici, che rilasciano cianuro. Il cianuro riduce la capacità dell’organismo di utilizzare l’ossigeno. Poiché la pianta è classificata come tossica per i cani, non consideriamo le albicocche un premio sicuro.",
     "pt": "Os caules, as folhas e as sementes do alperce contêm glicosídeos cianogénicos, que libertam cianeto. O cianeto reduz a capacidade do organismo de usar o oxigénio. Como a planta está classificada como tóxica para os cães, não consideramos os alperces uma guloseima segura.",
     "nl": "Stelen, bladeren en pitten van de abrikoos bevatten cyanogene glycosiden, waaruit cyanide vrijkomt. Cyanide vermindert het vermogen van het lichaam om zuurstof te gebruiken. Omdat de plant als giftig voor honden staat vermeld, beschouwen wij abrikozen niet als een veilig snoepje.",
-    "pl": "Łodygi, liście i nasiona moreli zawierają glikozydy cyjanogenne, które uwalniają cyjanek. Cyjanek ogranicza zdolność organizmu do wykorzystywania tlenu. Ponieważ roślina figuruje na listach roślin toksycznych dla psów, nie uznajemy moreli za bezpieczny smakołyk."
+    "pl": "Łodygi, liście i nasiona moreli zawierają glikozydy cyjanogenne, które uwalniają cyjanek. Cyjanek ogranicza zdolność organizmu do wykorzystywania tlenu. Ponieważ roślina figuruje na listach roślin toksycznych dla psów, nie uznajemy moreli za bezpieczny smakołyk.",
+    "cs": "Stonky, listy a semena meruňky obsahují kyanogenní glykosidy, ze kterých se uvolňuje kyanid. Kyanid snižuje schopnost těla využívat kyslík. Protože je rostlina uváděna jako jedovatá pro psy, nepovažujeme meruňky za bezpečný pamlsek."
   },
   "signs": {
     "en": [
@@ -111,6 +116,12 @@
       "Ceglastoczerwone dziąsła",
       "Trudności z oddychaniem, ziajanie",
       "Wstrząs"
+    ],
+    "cs": [
+      "Rozšířené zorničky",
+      "Cihlově červené dásně",
+      "Potíže s dýcháním, zrychlené dýchání",
+      "Šok"
     ]
   },
   "what_to_do": {
@@ -122,7 +133,8 @@
     "it": "Se il tuo cane ha masticato o ingoiato noccioli, foglie o gambi di albicocca, contatta subito il veterinario per un consiglio. Annota che cosa ha mangiato e più o meno quanto.",
     "pt": "Se o teu cão roeu ou engoliu caroços, folhas ou caules de alperce, contacta imediatamente o teu veterinário para te aconselhar. Anota o que comeu e mais ou menos quanto.",
     "nl": "Heeft je hond op abrikozenpitten, -bladeren of -stelen gekauwd of ze ingeslikt? Neem dan meteen contact op met je dierenarts voor advies. Schrijf op wat er is gegeten en ongeveer hoeveel.",
-    "pl": "Jeśli twój pies gryzł lub połknął pestki, liście albo łodygi moreli, od razu poradź się weterynarza. Zanotuj, co zjadł i mniej więcej ile."
+    "pl": "Jeśli twój pies gryzł lub połknął pestki, liście albo łodygi moreli, od razu poradź się weterynarza. Zanotuj, co zjadł i mniej więcej ile.",
+    "cs": "Pokud váš pes kousal nebo spolkl meruňkové pecky, listy nebo stonky, okamžitě se obraťte na veterináře. Poznamenejte si, co pes snědl a zhruba kolik."
   },
   "serving": null,
   "child": {
@@ -134,7 +146,8 @@
     "it": "Noccioli, foglie e gambi delle albicocche fanno male ai cani. Lascia le albicocche alle persone e dillo a un adulto se il tuo cane mastica un nocciolo.",
     "pt": "Os caroços, as folhas e os pés dos alperces fazem mal aos cães. Os alperces são para as pessoas; avisa um adulto se o teu cão roer um caroço.",
     "nl": "Abrikozenpitten, -bladeren en -stelen zijn slecht voor honden. Abrikozen zijn voor mensen. Vertel het aan een volwassene als je hond op een pit kauwt.",
-    "pl": "Pestki, liście i łodyżki moreli szkodzą psom. Morele zostaw dla ludzi i powiedz dorosłemu, jeśli twój pies gryzie pestkę."
+    "pl": "Pestki, liście i łodyżki moreli szkodzą psom. Morele zostaw dla ludzi i powiedz dorosłemu, jeśli twój pies gryzie pestkę.",
+    "cs": "Meruňkové pecky, listy a stonky psům škodí. Meruňky nech pro lidi, a když pes kouše pecku, řekni to dospělému."
   },
   "faq": [
     {
@@ -147,7 +160,8 @@
         "it": "Quali parti dell’albicocca sono tossiche?",
         "pt": "Que partes do alperce são tóxicas?",
         "nl": "Welke delen van de abrikoos zijn giftig?",
-        "pl": "Które części moreli są toksyczne?"
+        "pl": "Które części moreli są toksyczne?",
+        "cs": "Které části meruňky jsou jedovaté?"
       },
       "a": {
         "en": "The stems, leaves and seeds contain cyanide, and they are particularly toxic as they wilt.",
@@ -158,7 +172,8 @@
         "it": "Gambi, foglie e semi contengono cianuro e sono particolarmente tossici quando appassiscono.",
         "pt": "Os caules, as folhas e as sementes contêm cianeto e são particularmente tóxicos quando murcham.",
         "nl": "De stelen, bladeren en pitten bevatten cyanide en zijn vooral giftig als ze aan het verwelken zijn.",
-        "pl": "Łodygi, liście i nasiona zawierają cyjanek i są szczególnie toksyczne, gdy więdną."
+        "pl": "Łodygi, liście i nasiona zawierają cyjanek i są szczególnie toksyczne, gdy więdną.",
+        "cs": "Stonky, listy a semena obsahují kyanid a jsou zvlášť jedovaté, když vadnou."
       }
     }
   ],
@@ -239,6 +254,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "14019cbdf570bdc886c65bbada9a3757e8fb47cfa40abf9d4a30684fd099248c"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "21e8f0bd49e0bcfae93f61cc0e21794a12f81451f46ae6873eb5aa93db500b4d"
     }
   }
 }

@@ -10,7 +10,8 @@
     "it": "Tè",
     "pt": "Chá",
     "nl": "Thee",
-    "pl": "Herbata"
+    "pl": "Herbata",
+    "cs": "Čaj"
   },
   "question": {
     "en": "Can dogs drink tea?",
@@ -21,7 +22,8 @@
     "it": "I cani possono bere il tè?",
     "pt": "Os cães podem beber chá?",
     "nl": "Mogen honden thee drinken?",
-    "pl": "Czy psy mogą pić herbatę?"
+    "pl": "Czy psy mogą pić herbatę?",
+    "cs": "Mohou psi pít čaj?"
   },
   "url_slug": {
     "en": "tea",
@@ -32,7 +34,8 @@
     "it": "te",
     "pt": "cha",
     "nl": "thee",
-    "pl": "herbata"
+    "pl": "herbata",
+    "cs": "caj"
   },
   "level": "toxic",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "No, il tè con caffeina non è per i cani. Il tè contiene caffeina, che è tossica per i cani. Un piccolo assaggio difficilmente fa male, ma quantità maggiori possono essere pericolose, soprattutto per i cani piccoli, e le bustine di tè mangiate possono causare un avvelenamento grave.",
     "pt": "Não, o chá com cafeína não é para cães. O chá contém cafeína, que é tóxica para os cães. Provar um pouco dificilmente faz mal, mas quantidades maiores podem ser perigosas, sobretudo para cães pequenos, e as saquetas de chá engolidas podem causar uma intoxicação grave.",
     "nl": "Nee, thee met cafeïne is niet voor honden. Thee bevat cafeïne, en dat is giftig voor honden. Een klein slokje doet waarschijnlijk geen kwaad, maar grotere hoeveelheden kunnen gevaarlijk zijn, vooral voor kleine honden, en opgegeten theezakjes kunnen ernstige vergiftiging veroorzaken.",
-    "pl": "Nie, herbata z kofeiną nie jest dla psów. Herbata zawiera kofeinę, która jest toksyczna dla psów. Mały łyk raczej nie zaszkodzi, ale większe ilości mogą być niebezpieczne, zwłaszcza dla małych psów, a zjedzone torebki herbaty mogą wywołać poważne zatrucie."
+    "pl": "Nie, herbata z kofeiną nie jest dla psów. Herbata zawiera kofeinę, która jest toksyczna dla psów. Mały łyk raczej nie zaszkodzi, ale większe ilości mogą być niebezpieczne, zwłaszcza dla małych psów, a zjedzone torebki herbaty mogą wywołać poważne zatrucie.",
+    "cs": "Ne, čaj s kofeinem není pro psy. Čaj obsahuje kofein, který je pro psy jedovatý. Trocha čaje pravděpodobně neuškodí, větší množství ale může být nebezpečné, zejména pro malé psy, a snědené čajové sáčky mohou způsobit vážnou otravu."
   },
   "why": {
     "en": "Many teas contain caffeine, which overstimulates a dog's heart and nervous system. Dogs are more sensitive to caffeine than people. One or two licks of tea are unlikely to poison, but swallowed tea bags can cause serious toxicity.",
@@ -55,7 +59,8 @@
     "it": "Molti tè contengono caffeina, che stimola troppo il cuore e il sistema nervoso del cane. I cani sono più sensibili alla caffeina delle persone. Una o due leccate di tè difficilmente causano un avvelenamento, ma le bustine ingoiate possono causare una grave intossicazione.",
     "pt": "Muitos chás contêm cafeína, que estimula em excesso o coração e o sistema nervoso do cão. Os cães são mais sensíveis à cafeína do que as pessoas. Uma ou duas lambidelas de chá dificilmente intoxicam, mas as saquetas de chá engolidas podem causar uma intoxicação grave.",
     "nl": "Veel theesoorten bevatten cafeïne, die het hart en het zenuwstelsel van een hond te veel prikkelt. Honden zijn gevoeliger voor cafeïne dan mensen. Een of twee likjes thee veroorzaken waarschijnlijk geen vergiftiging, maar ingeslikte theezakjes kunnen ernstige vergiftiging veroorzaken.",
-    "pl": "Wiele herbat zawiera kofeinę, która nadmiernie pobudza serce i układ nerwowy psa. Psy są bardziej wrażliwe na kofeinę niż ludzie. Jedno czy dwa liźnięcia herbaty raczej nie zatrują psa, ale połknięte torebki herbaty mogą wywołać poważne zatrucie."
+    "pl": "Wiele herbat zawiera kofeinę, która nadmiernie pobudza serce i układ nerwowy psa. Psy są bardziej wrażliwe na kofeinę niż ludzie. Jedno czy dwa liźnięcia herbaty raczej nie zatrują psa, ale połknięte torebki herbaty mogą wywołać poważne zatrucie.",
+    "cs": "Mnoho čajů obsahuje kofein, který nadměrně stimuluje srdce a nervovou soustavu psa. Psi jsou na kofein citlivější než lidé. Jedno nebo dvě líznutí čaje otravu pravděpodobně nezpůsobí, spolknuté čajové sáčky ale mohou vést k vážné otravě."
   },
   "signs": {
     "en": [
@@ -129,6 +134,14 @@
       "Ślinienie się",
       "Drżenie mięśni",
       "Częstsze oddawanie moczu"
+    ],
+    "cs": [
+      "Neklid, hyperaktivita, přecházení sem a tam",
+      "Rychlý tep",
+      "Zvracení a průjem",
+      "Slinění",
+      "Třes",
+      "Častější močení"
     ]
   },
   "what_to_do": {
@@ -140,7 +153,8 @@
     "it": "Contatta il veterinario o un centro antiveleni veterinario appena ti accorgi che il tuo cane ha assunto caffeina. Annota che cosa era (bevanda, fondi, chicchi, bustine di tè) e più o meno quanto. Non aspettare che compaiano i sintomi: un trattamento precoce è importante.",
     "pt": "Contacta o teu veterinário ou uma linha de apoio toxicológico para animais assim que perceberes que o teu cão ingeriu cafeína. Anota o que era (bebida, borras, grãos, saquetas de chá) e mais ou menos quanto. Não esperes pelos sinais: o tratamento precoce faz diferença.",
     "nl": "Neem contact op met je dierenarts of een vergiftigingenlijn voor dieren zodra je merkt dat je hond cafeïne binnen heeft gekregen. Schrijf op wat het was (drankje, koffiedik, bonen, theezakjes) en ongeveer hoeveel. Wacht niet op verschijnselen: een vroege behandeling is belangrijk.",
-    "pl": "Skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt, gdy tylko zorientujesz się, że twój pies zjadł lub wypił coś z kofeiną. Zanotuj, co to było (napój, fusy, ziarna, torebki herbaty) i mniej więcej ile. Nie czekaj na objawy: liczy się wczesne leczenie."
+    "pl": "Skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt, gdy tylko zorientujesz się, że twój pies zjadł lub wypił coś z kofeiną. Zanotuj, co to było (napój, fusy, ziarna, torebki herbaty) i mniej więcej ile. Nie czekaj na objawy: liczy się wczesne leczenie.",
+    "cs": "Jakmile zjistíte, že váš pes pozřel kofein, obraťte se na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, o co šlo (nápoj, kávová sedlina, zrna, čajové sáčky) a zhruba kolik. Nečekejte, až se objeví příznaky: na včasné léčbě záleží."
   },
   "serving": null,
   "child": {
@@ -152,7 +166,8 @@
     "it": "Il tè con la caffeina è una bevanda per le persone, non per i cani. Dai al tuo cane acqua fresca.",
     "pt": "O chá com cafeína é uma bebida de pessoas, não de cães. Dá antes água fresca ao teu cão.",
     "nl": "Thee met cafeïne is een drankje voor mensen, niet voor honden. Geef je hond liever vers water.",
-    "pl": "Herbata z kofeiną to napój dla ludzi, nie dla psów. Zamiast niej daj psu świeżą wodę."
+    "pl": "Herbata z kofeiną to napój dla ludzi, nie dla psów. Zamiast niej daj psu świeżą wodę.",
+    "cs": "Čaj s kofeinem je nápoj pro lidi, ne pro psy. Dej svému psovi radši čerstvou vodu."
   },
   "faq": [
     {
@@ -165,7 +180,8 @@
         "it": "Il mio cane ha leccato la mia tazza. È un’emergenza?",
         "pt": "O meu cão lambeu a minha chávena. É uma emergência?",
         "nl": "Mijn hond heeft aan mijn kopje gelikt. Is dat een noodgeval?",
-        "pl": "Mój pies polizał mój kubek. Czy to nagły przypadek?"
+        "pl": "Mój pies polizał mój kubek. Czy to nagły przypadek?",
+        "cs": "Můj pes mi olízl hrnek. Je to pohotovost?"
       },
       "a": {
         "en": "One or two licks are unlikely to poison most dogs. If your dog drank more, or ate grounds, beans or tea bags, call your vet or a pet poison helpline.",
@@ -176,7 +192,8 @@
         "it": "È improbabile che una o due leccate avvelenino la maggior parte dei cani. Se il tuo cane ne ha bevuto di più, o ha mangiato fondi, chicchi o bustine di tè, chiama il veterinario o un centro antiveleni veterinario.",
         "pt": "Uma ou duas lambidelas dificilmente intoxicam a maioria dos cães. Se o teu cão bebeu mais, ou comeu borras, grãos ou saquetas de chá, liga ao teu veterinário ou a uma linha de apoio toxicológico para animais.",
         "nl": "Een of twee likjes veroorzaken bij de meeste honden waarschijnlijk geen vergiftiging. Heeft je hond meer gedronken, of koffiedik, bonen of theezakjes gegeten? Bel dan je dierenarts of een vergiftigingenlijn voor dieren.",
-        "pl": "Jedno czy dwa liźnięcia raczej nie zatrują większości psów. Jeśli pies wypił więcej albo zjadł fusy, ziarna lub torebki herbaty, zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt."
+        "pl": "Jedno czy dwa liźnięcia raczej nie zatrują większości psów. Jeśli pies wypił więcej albo zjadł fusy, ziarna lub torebki herbaty, zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt.",
+        "cs": "Jedno nebo dvě líznutí většinu psů pravděpodobně neotráví. Pokud váš pes vypil víc nebo snědl kávovou sedlinu, zrna nebo čajové sáčky, zavolejte veterináři nebo na toxikologickou linku pro zvířata."
       }
     },
     {
@@ -189,7 +206,8 @@
         "it": "E se il mio cane ha mangiato una bustina di tè?",
         "pt": "E se o meu cão comeu uma saqueta de chá?",
         "nl": "Wat als mijn hond een theezakje heeft opgegeten?",
-        "pl": "Co zrobić, jeśli mój pies zjadł torebkę herbaty?"
+        "pl": "Co zrobić, jeśli mój pies zjadł torebkę herbaty?",
+        "cs": "Co když pes snědl čajový sáček?"
       },
       "a": {
         "en": "Tea bags can cause serious caffeine poisoning. Contact your vet or a pet poison helpline right away.",
@@ -200,7 +218,8 @@
         "it": "Le bustine di tè possono causare un grave avvelenamento da caffeina. Contatta subito il veterinario o un centro antiveleni veterinario.",
         "pt": "As saquetas de chá podem causar uma intoxicação grave por cafeína. Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais.",
         "nl": "Theezakjes kunnen ernstige cafeïnevergiftiging veroorzaken. Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren.",
-        "pl": "Torebki herbaty mogą wywołać poważne zatrucie kofeiną. Od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt."
+        "pl": "Torebki herbaty mogą wywołać poważne zatrucie kofeiną. Od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt.",
+        "cs": "Čajové sáčky mohou způsobit vážnou otravu kofeinem. Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata."
       }
     }
   ],
@@ -322,6 +341,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c0e2c2c87dfa67a1028f4ad335126fe569a96580c14dce1bd33b3c2ede61b6ae"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7a7e9158b4aa585be53aca99dd0260ed674b0f45599a4637eb9cf4e1168b8b25"
     }
   }
 }

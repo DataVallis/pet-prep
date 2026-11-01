@@ -10,7 +10,8 @@
     "it": "Gelato",
     "pt": "Gelado",
     "nl": "IJs",
-    "pl": "Lody"
+    "pl": "Lody",
+    "cs": "Zmrzlina"
   },
   "question": {
     "en": "Can dogs eat ice cream?",
@@ -21,7 +22,8 @@
     "it": "I cani possono mangiare il gelato?",
     "pt": "Os cães podem comer gelado?",
     "nl": "Mogen honden ijs eten?",
-    "pl": "Czy psy mogą jeść lody?"
+    "pl": "Czy psy mogą jeść lody?",
+    "cs": "Mohou psi jíst zmrzlinu?"
   },
   "url_slug": {
     "en": "ice-cream",
@@ -32,7 +34,8 @@
     "it": "gelato",
     "pt": "gelado",
     "nl": "ijs",
-    "pl": "lody"
+    "pl": "lody",
+    "cs": "zmrzlina"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "Meglio di no. Il gelato è pieno di lattosio, grassi e zuccheri, che possono disturbare la pancia del cane, e alcuni gusti contengono cioccolato o il dolcificante xilitolo, tossici per i cani.",
     "pt": "Não, é melhor não. O gelado está cheio de lactose, gordura e açúcar, que podem fazer mal à barriga do cão, e alguns sabores contêm chocolate ou o adoçante xilitol, que são tóxicos para os cães.",
     "nl": "Nee, liever niet. IJs zit vol lactose, vet en suiker, waar een hond buikpijn van kan krijgen, en sommige smaken bevatten chocolade of de zoetstof xylitol, die giftig zijn voor honden.",
-    "pl": "Lepiej nie. Lody są pełne laktozy, tłuszczu i cukru, które mogą podrażnić brzuch psa, a niektóre smaki zawierają czekoladę lub słodzik ksylitol, które są toksyczne dla psów."
+    "pl": "Lepiej nie. Lody są pełne laktozy, tłuszczu i cukru, które mogą podrażnić brzuch psa, a niektóre smaki zawierają czekoladę lub słodzik ksylitol, które są toksyczne dla psów.",
+    "cs": "Raději ne. Zmrzlina je plná laktózy, tuku a cukru, které mohou psovi podráždit žaludek, a některé příchutě obsahují čokoládu nebo sladidlo xylitol, které jsou pro psy jedovaté."
   },
   "why": {
     "en": "Many adult dogs are lactose intolerant to some degree and cannot digest milk products properly. High-fat dairy can cause pancreatitis, and the sugar adds to weight gain. Even 'sugar-free' ice cream may contain xylitol, and chocolate flavours are toxic.",
@@ -55,7 +59,8 @@
     "it": "Molti cani adulti sono intolleranti al lattosio in misura diversa e non riescono a digerire bene i latticini. I latticini molto grassi possono causare pancreatite, e lo zucchero contribuisce all’aumento di peso. Anche il gelato «senza zucchero» può contenere xilitolo, e i gusti al cioccolato sono tossici.",
     "pt": "Muitos cães adultos têm algum grau de intolerância à lactose e não conseguem digerir bem os laticínios. Os laticínios ricos em gordura podem causar pancreatite, e o açúcar contribui para o aumento de peso. Até o gelado «sem açúcar» pode conter xilitol, e os sabores de chocolate são tóxicos.",
     "nl": "Veel volwassen honden zijn in meer of mindere mate lactose-intolerant en kunnen melkproducten niet goed verteren. Vette zuivel kan alvleesklierontsteking veroorzaken, en de suiker draagt bij aan overgewicht. Zelfs “suikervrij” ijs kan xylitol bevatten, en chocoladesmaken zijn giftig.",
-    "pl": "Wiele dorosłych psów w pewnym stopniu nie toleruje laktozy i nie potrafi prawidłowo trawić produktów mlecznych. Tłusty nabiał może wywołać zapalenie trzustki, a cukier sprzyja przybieraniu na wadze. Nawet lody „bez cukru” mogą zawierać ksylitol, a smaki czekoladowe są toksyczne."
+    "pl": "Wiele dorosłych psów w pewnym stopniu nie toleruje laktozy i nie potrafi prawidłowo trawić produktów mlecznych. Tłusty nabiał może wywołać zapalenie trzustki, a cukier sprzyja przybieraniu na wadze. Nawet lody „bez cukru” mogą zawierać ksylitol, a smaki czekoladowe są toksyczne.",
+    "cs": "Mnoho dospělých psů do jisté míry nesnáší laktózu a neumí mléčné výrobky správně strávit. Tučné mléčné výrobky mohou způsobit zánět slinivky břišní a cukr přispívá k přibírání na váze. I zmrzlina „bez cukru“ může obsahovat xylitol a čokoládové příchutě jsou jedovaté."
   },
   "signs": {
     "en": [
@@ -102,6 +107,11 @@
       "Biegunka lub inne dolegliwości żołądkowe",
       "Wymioty",
       "Ból brzucha, nudności lub osłabienie (możliwe zapalenie trzustki)"
+    ],
+    "cs": [
+      "Průjem nebo jiné zažívací potíže",
+      "Zvracení",
+      "Bolest břicha, nevolnost nebo malátnost (možný zánět slinivky břišní)"
     ]
   },
   "what_to_do": {
@@ -113,7 +123,8 @@
     "it": "Di solito, dopo una leccata di gelato semplice alla vaniglia, basta controllare se compaiono disturbi di pancia. Se il gelato conteneva cioccolato o xilitolo, contatta subito il veterinario o un centro antiveleni veterinario, annota che cosa e quanto ha mangiato e non aspettare che compaiano i sintomi.",
     "pt": "Uma lambidela de gelado simples de baunilha normalmente só exige que vigies se há mal-estar de barriga. Se o gelado tinha chocolate ou xilitol, contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, anota o que comeu e quanto, e não esperes pelos sinais.",
     "nl": "Na een likje gewoon vanille-ijs hoef je meestal alleen op maag-darmklachten te letten. Zat er chocolade of xylitol in het ijs? Neem dan meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, schrijf op wat en hoeveel er is gegeten en wacht niet op verschijnselen.",
-    "pl": "Po liźnięciu zwykłych lodów waniliowych zazwyczaj wystarczy obserwować, czy nie pojawiają się dolegliwości żołądkowe. Jeśli lody zawierały czekoladę lub ksylitol, od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt, zanotuj, co i ile pies zjadł, i nie czekaj na objawy."
+    "pl": "Po liźnięciu zwykłych lodów waniliowych zazwyczaj wystarczy obserwować, czy nie pojawiają się dolegliwości żołądkowe. Jeśli lody zawierały czekoladę lub ksylitol, od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt, zanotuj, co i ile pies zjadł, i nie czekaj na objawy.",
+    "cs": "Po líznutí obyčejné vanilkové zmrzliny obvykle stačí sledovat, zda se neobjeví zažívací potíže. Pokud zmrzlina obsahovala čokoládu nebo xylitol, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, poznamenejte si, co a kolik pes snědl, a nečekejte, až se objeví příznaky."
   },
   "serving": {
     "en": "Instead of ice cream: a little frozen plain fat-free yogurt, if your dog tolerates it.",
@@ -124,7 +135,8 @@
     "it": "Al posto del gelato: un po’ di yogurt bianco magro congelato, se il tuo cane lo tollera.",
     "pt": "Em vez de gelado: um pouco de iogurte natural magro congelado, se o teu cão o tolerar.",
     "nl": "In plaats van ijs: een beetje bevroren magere yoghurt naturel, als je hond dat verdraagt.",
-    "pl": "Zamiast lodów: odrobina zamrożonego jogurtu naturalnego bez tłuszczu, jeśli twój pies go toleruje."
+    "pl": "Zamiast lodów: odrobina zamrożonego jogurtu naturalnego bez tłuszczu, jeśli twój pies go toleruje.",
+    "cs": "Místo zmrzliny: trochu zmraženého bílého odtučněného jogurtu, pokud ho váš pes snáší."
   },
   "child": {
     "en": "Ice cream is a people treat. It can give dogs a sore tummy, so keep your cone to yourself.",
@@ -135,7 +147,8 @@
     "it": "Il gelato è una golosità per le persone. Può far venire mal di pancia ai cani, quindi il cono tienilo per te.",
     "pt": "O gelado é uma guloseima de pessoas. Pode dar dor de barriga aos cães, por isso guarda o teu cone só para ti.",
     "nl": "IJs is een traktatie voor mensen. Honden kunnen er buikpijn van krijgen, dus houd je ijsje voor jezelf.",
-    "pl": "Lody to przysmak dla ludzi. Od lodów może psa rozboleć brzuszek, więc nie dziel się z psem swoim rożkiem."
+    "pl": "Lody to przysmak dla ludzi. Od lodów może psa rozboleć brzuszek, więc nie dziel się z psem swoim rożkiem.",
+    "cs": "Zmrzlina je dobrota pro lidi. Psa z ní může bolet bříško, a tak si kornout nech pro sebe."
   },
   "faq": [
     {
@@ -148,7 +161,8 @@
         "it": "Il gelato senza zucchero è più sicuro?",
         "pt": "O gelado sem açúcar é mais seguro?",
         "nl": "Is suikervrij ijs veiliger?",
-        "pl": "Czy lody bez cukru są bezpieczniejsze?"
+        "pl": "Czy lody bez cukru są bezpieczniejsze?",
+        "cs": "Je zmrzlina bez cukru bezpečnější?"
       },
       "a": {
         "en": "No. Sugar-free products may contain xylitol, which is toxic to dogs, so always read the label.",
@@ -159,7 +173,8 @@
         "it": "No. I prodotti senza zucchero possono contenere xilitolo, che è tossico per i cani, quindi leggi sempre l’etichetta.",
         "pt": "Não. Os produtos sem açúcar podem conter xilitol, que é tóxico para os cães, por isso lê sempre o rótulo.",
         "nl": "Nee. Suikervrije producten kunnen xylitol bevatten, en dat is giftig voor honden. Lees dus altijd het etiket.",
-        "pl": "Nie. Produkty bez cukru mogą zawierać ksylitol, który jest toksyczny dla psów, więc zawsze czytaj etykietę."
+        "pl": "Nie. Produkty bez cukru mogą zawierać ksylitol, który jest toksyczny dla psów, więc zawsze czytaj etykietę.",
+        "cs": "Ne. Výrobky bez cukru mohou obsahovat xylitol, který je pro psy jedovatý, proto vždy čtěte etiketu."
       }
     }
   ],
@@ -262,6 +277,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "06e837ecfa428922808b64ff9ffb944f1fb64ed70c54c0752d382d789963e89b"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e44c7f28a6dcfafefeb27deceff6b1761ec6d5049aaf76a679256d77ca08776d"
     }
   }
 }

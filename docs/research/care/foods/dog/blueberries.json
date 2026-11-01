@@ -3,47 +3,57 @@
   "species": "dog",
   "name": {
     "en": "Blueberries",
-    "sl": "Borovnice"
+    "sl": "Borovnice",
+    "cs": "Borůvky"
   },
   "question": {
     "en": "Can dogs eat blueberries?",
-    "sl": "Ali lahko psi jedo borovnice?"
+    "sl": "Ali lahko psi jedo borovnice?",
+    "cs": "Mohou psi jíst borůvky?"
   },
   "url_slug": {
     "en": "blueberries",
-    "sl": "borovnice"
+    "sl": "borovnice",
+    "cs": "boruvky"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in moderation. Blueberries are low in calories and provide fibre, vitamin C and antioxidants, but they should be an occasional treat rather than a big part of your dog's diet.",
-    "sl": "Da, zmerno. Borovnice imajo malo kalorij ter vsebujejo vlaknine, vitamin C in antioksidante, a naj bodo občasen priboljšek in ne velik del psove prehrane."
+    "sl": "Da, zmerno. Borovnice imajo malo kalorij ter vsebujejo vlaknine, vitamin C in antioksidante, a naj bodo občasen priboljšek in ne velik del psove prehrane.",
+    "cs": "Ano, s mírou. Borůvky mají málo kalorií a obsahují vlákninu, vitamin C a antioxidanty, ale měly by být spíš občasným pamlskem než velkou součástí psí stravy."
   },
   "why": {
     "en": "Their size and shape can pose a choking risk, particularly for very small dogs. As with any new food, start with a small amount and watch how your dog reacts.",
-    "sl": "Njihova velikost in oblika lahko predstavljata nevarnost zadušitve, zlasti pri zelo majhnih psih. Kot pri vsaki novi hrani začnite z majhno količino in opazujte, kako se pes odzove."
+    "sl": "Njihova velikost in oblika lahko predstavljata nevarnost zadušitve, zlasti pri zelo majhnih psih. Kot pri vsaki novi hrani začnite z majhno količino in opazujte, kako se pes odzove.",
+    "cs": "Kvůli své velikosti a tvaru mohou představovat riziko dušení, zvlášť u velmi malých psů. Jako u každé nové potraviny začněte malým množstvím a sledujte, jak pes reaguje."
   },
   "signs": null,
   "what_to_do": {
     "en": "Start with a small amount and observe your dog. If you are unsure whether blueberries are right for your dog, ask your vet.",
-    "sl": "Začnite z majhno količino in psa opazujte. Če niste prepričani, ali so borovnice primerne za vašega psa, vprašajte veterinarja."
+    "sl": "Začnite z majhno količino in psa opazujte. Če niste prepričani, ali so borovnice primerne za vašega psa, vprašajte veterinarja.",
+    "cs": "Začněte malým množstvím a psa pozorujte. Pokud si nejste jistí, zda jsou borůvky pro vašeho psa vhodné, zeptejte se veterináře."
   },
   "serving": {
     "en": "Washed thoroughly, fresh or frozen; cut in halves for very small dogs; as an occasional treat.",
-    "sl": "Temeljito oprane, sveže ali zamrznjene; za zelo majhne pse prerezane na pol; kot občasen priboljšek."
+    "sl": "Temeljito oprane, sveže ali zamrznjene; za zelo majhne pse prerezane na pol; kot občasen priboljšek.",
+    "cs": "Důkladně omyté, čerstvé nebo mražené; pro velmi malé psy rozpůlené; jako občasný pamlsek."
   },
   "child": {
     "en": "Blueberries can be a yummy little treat for dogs! A grown-up washes them first and gives just a few.",
-    "sl": "Borovnice so lahko za pse slasten majhen priboljšek! Odrasel jih najprej opere in da le nekaj."
+    "sl": "Borovnice so lahko za pse slasten majhen priboljšek! Odrasel jih najprej opere in da le nekaj.",
+    "cs": "Borůvky můžou být pro psy dobrý malý pamlsek! Dospělý je nejdřív omyje a dá jich jen pár."
   },
   "faq": [
     {
       "q": {
         "en": "Fresh or frozen blueberries?",
-        "sl": "Sveže ali zamrznjene borovnice?"
+        "sl": "Sveže ali zamrznjene borovnice?",
+        "cs": "Čerstvé, nebo mražené borůvky?"
       },
       "a": {
         "en": "Both are fine. You can offer your dog either fresh or frozen blueberries.",
-        "sl": "Oboje je v redu. Psu lahko ponudite sveže ali zamrznjene borovnice."
+        "sl": "Oboje je v redu. Psu lahko ponudite sveže ali zamrznjene borovnice.",
+        "cs": "Obojí je v pořádku. Psovi můžete nabídnout čerstvé i mražené borůvky."
       }
     }
   ],
@@ -106,6 +116,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a643355f01fd206e3329dafadbd4fd4b352ab383256d1adf97242f69241c1c4a"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4a7418654768f506a59278e62ba1938c6037187ba0ca2679af5a96035bcc7468"
     }
   }
 }

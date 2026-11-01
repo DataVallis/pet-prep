@@ -10,7 +10,8 @@
     "it": "Pesce crudo",
     "pt": "Peixe cru",
     "nl": "Rauwe vis",
-    "pl": "Surowa ryba"
+    "pl": "Surowa ryba",
+    "cs": "Syrové ryby"
   },
   "question": {
     "en": "Can dogs eat raw fish?",
@@ -21,7 +22,8 @@
     "it": "I cani possono mangiare il pesce crudo?",
     "pt": "Os cães podem comer peixe cru?",
     "nl": "Mogen honden rauwe vis eten?",
-    "pl": "Czy psy mogą jeść surową rybę?"
+    "pl": "Czy psy mogą jeść surową rybę?",
+    "cs": "Mohou psi jíst syrové ryby?"
   },
   "url_slug": {
     "en": "raw-fish",
@@ -32,7 +34,8 @@
     "it": "pesce-crudo",
     "pt": "peixe-cru",
     "nl": "rauwe-vis",
-    "pl": "surowa-ryba"
+    "pl": "surowa-ryba",
+    "cs": "syrove-ryby"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "È sconsigliato. Il pesce crudo può portare batteri come Salmonella e Listeria, oltre a parassiti, e le sue piccole lische sono un pericolo. Nel Pacifico nord-occidentale degli Stati Uniti, salmone o trota crudi possono causare la malattia da avvelenamento da salmone. Cuoci il pesce senza condimenti e togli le lische.",
     "pt": "Não é recomendado. O peixe cru pode ter bactérias como Salmonella e Listeria, além de parasitas, e as espinhas pequenas são um perigo. No noroeste do Pacífico, nos EUA, o salmão ou a truta crus podem causar a doença do envenenamento por salmão. Cozinha o peixe simples e tira as espinhas.",
     "nl": "Niet aan te raden. Rauwe vis kan bacteriën zoals salmonella en listeria en ook parasieten bevatten, en de kleine graten zijn gevaarlijk. In het noordwesten van de VS (Pacific Northwest) kan rauwe zalm of forel zalmvergiftiging (salmon poisoning disease) veroorzaken. Maak vis zonder toevoegingen gaar en haal de graten eruit.",
-    "pl": "Nie zaleca się. Surowa ryba może przenosić bakterie, takie jak Salmonella i Listeria, a także pasożyty, a jej drobne ości stanowią zagrożenie. Na północno-zachodnim wybrzeżu Pacyfiku w USA surowy łosoś lub pstrąg może wywołać chorobę łososiową. Podawaj rybę zwykłą, ugotowaną i bez ości."
+    "pl": "Nie zaleca się. Surowa ryba może przenosić bakterie, takie jak Salmonella i Listeria, a także pasożyty, a jej drobne ości stanowią zagrożenie. Na północno-zachodnim wybrzeżu Pacyfiku w USA surowy łosoś lub pstrąg może wywołać chorobę łososiową. Podawaj rybę zwykłą, ugotowaną i bez ości.",
+    "cs": "Nedoporučuje se. Syrové ryby mohou obsahovat bakterie, například salmonelu a listerii, i parazity a jejich drobné kosti jsou nebezpečné. Na tichomořském severozápadě USA může syrový losos nebo pstruh způsobit otravu lososem (salmon poisoning disease). Rybu tepelně upravte bez přísad a odstraňte kosti."
   },
   "why": {
     "en": "Raw fish is among the foods linked to food poisoning in dogs. Raw or undercooked salmon and trout from the Pacific Northwest can carry a parasite that causes salmon poisoning disease, which is serious if untreated. Fish bones are small and brittle and can cause choking or injure the mouth or gut. Raw and smoked fish are best avoided.",
@@ -55,7 +59,8 @@
     "it": "Il pesce crudo è tra i cibi associati alle intossicazioni alimentari nei cani. Salmone e trota crudi o poco cotti del Pacifico nord-occidentale possono portare un parassita che causa la malattia da avvelenamento da salmone, grave se non curata. Le lische sono piccole e fragili e possono causare soffocamento o ferire la bocca o l’intestino. Meglio evitare il pesce crudo e affumicato.",
     "pt": "O peixe cru está entre os alimentos associados a intoxicações alimentares nos cães. O salmão e a truta crus ou mal cozinhados do noroeste do Pacífico podem ter um parasita que causa a doença do envenenamento por salmão, que é grave se não for tratada. As espinhas são pequenas e quebradiças e podem causar engasgamento ou ferir a boca ou o intestino. É melhor evitar peixe cru e fumado.",
     "nl": "Rauwe vis hoort bij het eten dat in verband wordt gebracht met voedselvergiftiging bij honden. Rauwe of niet goed gare zalm en forel uit het noordwesten van de VS kunnen een parasiet bevatten die zalmvergiftiging veroorzaakt, wat zonder behandeling ernstig is. Visgraten zijn klein en broos en kunnen verstikking veroorzaken of de bek of darmen verwonden. Rauwe en gerookte vis kun je beter vermijden.",
-    "pl": "Surowa ryba należy do produktów kojarzonych z zatruciami pokarmowymi u psów. Surowy lub niedogotowany łosoś i pstrąg z północno-zachodniego wybrzeża Pacyfiku mogą przenosić pasożyta wywołującego chorobę łososiową, która bez leczenia jest groźna. Ości ryb są drobne i kruche, mogą spowodować zadławienie lub zranić pysk albo przewód pokarmowy. Ryb surowych i wędzonych najlepiej unikać."
+    "pl": "Surowa ryba należy do produktów kojarzonych z zatruciami pokarmowymi u psów. Surowy lub niedogotowany łosoś i pstrąg z północno-zachodniego wybrzeża Pacyfiku mogą przenosić pasożyta wywołującego chorobę łososiową, która bez leczenia jest groźna. Ości ryb są drobne i kruche, mogą spowodować zadławienie lub zranić pysk albo przewód pokarmowy. Ryb surowych i wędzonych najlepiej unikać.",
+    "cs": "Syrové ryby patří mezi potraviny spojované s otravou jídlem u psů. Syrový nebo nedostatečně tepelně upravený losos a pstruh z tichomořského severozápadu USA mohou přenášet parazita, který způsobuje otravu lososem – bez léčby jde o vážné onemocnění. Rybí kosti jsou malé a křehké a mohou způsobit dušení nebo poranit tlamu či trávicí trakt. Syrovým a uzeným rybám je lepší se vyhnout."
   },
   "signs": {
     "en": [
@@ -120,6 +125,13 @@
       "Osłabienie lub słaby apetyt",
       "Wysoka gorączka, osłabienie i całkowita utrata apetytu (choroba łososiowa)",
       "Zadławienie"
+    ],
+    "cs": [
+      "Zvracení",
+      "Průjem",
+      "Malátnost nebo nechuť k jídlu",
+      "Vysoká horečka, slabost a úplná nechuť k jídlu (otrava lososem)",
+      "Dušení"
     ]
   },
   "what_to_do": {
@@ -131,7 +143,8 @@
     "it": "Controlla se compaiono vomito, diarrea o poca energia e chiama il veterinario se sono forti o non passano. Se il tuo cane ha mangiato salmone o trota crudi del Pacifico nord-occidentale, chiama presto il veterinario e diglielo – i sintomi possono comparire fino a una settimana dopo.",
     "pt": "Vigia se há vómitos, diarreia ou pouca energia e liga ao teu veterinário se forem fortes ou não pararem. Se o teu cão comeu salmão ou truta crus do noroeste do Pacífico, liga logo ao teu veterinário e diz-lhe isso – os sinais podem demorar até uma semana a aparecer.",
     "nl": "Let op braken, diarree of weinig energie en bel je dierenarts als die ernstig zijn of niet ophouden. Heeft je hond rauwe zalm of forel uit het noordwesten van de VS gegeten? Bel dan snel je dierenarts en vertel het erbij – verschijnselen kunnen tot een week later komen.",
-    "pl": "Obserwuj, czy nie pojawiają się wymioty, biegunka lub osłabienie, i zadzwoń do weterynarza, jeśli są silne albo nie ustępują. Jeśli twój pies zjadł surowego łososia lub pstrąga z północno-zachodniego wybrzeża Pacyfiku, szybko zadzwoń do weterynarza i o tym powiedz – objawy mogą pojawić się nawet po tygodniu."
+    "pl": "Obserwuj, czy nie pojawiają się wymioty, biegunka lub osłabienie, i zadzwoń do weterynarza, jeśli są silne albo nie ustępują. Jeśli twój pies zjadł surowego łososia lub pstrąga z północno-zachodniego wybrzeża Pacyfiku, szybko zadzwoń do weterynarza i o tym powiedz – objawy mogą pojawić się nawet po tygodniu.",
+    "cs": "Sledujte, zda pes nezvrací, nemá průjem nebo není malátný, a pokud jsou potíže silné nebo neustávají, zavolejte veterináři. Pokud váš pes snědl syrového lososa nebo pstruha z tichomořského severozápadu USA, neprodleně zavolejte veterináři a řekněte mu to – příznaky se mohou objevit až za týden."
   },
   "serving": {
     "en": "Only fully cooked fish (baked, steamed or grilled), plain, with all bones removed.",
@@ -142,7 +155,8 @@
     "it": "Solo pesce ben cotto (al forno, al vapore o alla griglia), semplice e senza nessuna lisca.",
     "pt": "Só peixe bem cozinhado (no forno, a vapor ou grelhado), simples, sem nenhuma espinha.",
     "nl": "Alleen helemaal gare vis (uit de oven, gestoomd of gegrild), puur, met alle graten eruit.",
-    "pl": "Tylko dobrze ugotowana ryba (pieczona, gotowana na parze lub grillowana), zwykła, bez żadnych ości."
+    "pl": "Tylko dobrze ugotowana ryba (pieczona, gotowana na parze lub grillowana), zwykła, bez żadnych ości.",
+    "cs": "Jen důkladně tepelně upravenou rybu (pečenou, dušenou v páře nebo grilovanou), bez přísad a bez kostí."
   },
   "child": {
     "en": "Fish for dogs must be cooked and have no bones. Raw fish can have germs that upset a dog's tummy.",
@@ -153,7 +167,8 @@
     "it": "Il pesce per i cani deve essere cotto e senza lische. Il pesce crudo può avere germi che fanno venire il mal di pancia ai cani.",
     "pt": "O peixe para cães tem de estar cozinhado e sem espinhas. O peixe cru pode ter germes que fazem mal à barriga do cão.",
     "nl": "Vis voor honden moet gekookt zijn en mag geen graten hebben. In rauwe vis kunnen bacteriën zitten waar een hond buikpijn van krijgt.",
-    "pl": "Ryba dla psa musi być ugotowana i bez ości. Surowa ryba może mieć zarazki, które rozstrajają psi brzuszek."
+    "pl": "Ryba dla psa musi być ugotowana i bez ości. Surowa ryba może mieć zarazki, które rozstrajają psi brzuszek.",
+    "cs": "Ryba pro psa musí být uvařená a bez kostí. Na syrové rybě můžou být bacily, ze kterých psa rozbolí bříško."
   },
   "faq": [
     {
@@ -166,7 +181,8 @@
         "it": "Che cos’è la malattia da avvelenamento da salmone?",
         "pt": "O que é a doença do envenenamento por salmão?",
         "nl": "Wat is zalmvergiftiging?",
-        "pl": "Co to jest choroba łososiowa?"
+        "pl": "Co to jest choroba łososiowa?",
+        "cs": "Co je otrava lososem?"
       },
       "a": {
         "en": "An illness dogs get from eating raw or undercooked salmon, trout or similar fish from the Pacific Northwest of the USA; it is prevented by not feeding them raw.",
@@ -177,7 +193,8 @@
         "it": "Una malattia che i cani prendono mangiando salmone, trota o pesci simili crudi o poco cotti del Pacifico nord-occidentale degli Stati Uniti; si previene non dandoglieli crudi.",
         "pt": "Uma doença que os cães apanham ao comer salmão, truta ou peixes semelhantes, crus ou mal cozinhados, do noroeste do Pacífico, nos EUA; previne-se não lhes dando peixe cru.",
         "nl": "Een ziekte die honden krijgen door rauwe of niet goed gare zalm, forel of vergelijkbare vis uit het noordwesten van de VS (Pacific Northwest) te eten; je voorkomt die door die vis niet rauw te geven.",
-        "pl": "Choroba, na którą psy zapadają po zjedzeniu surowego lub niedogotowanego łososia, pstrąga lub podobnych ryb z północno-zachodniego wybrzeża Pacyfiku w USA; można jej zapobiec, nie karmiąc psa surowymi rybami."
+        "pl": "Choroba, na którą psy zapadają po zjedzeniu surowego lub niedogotowanego łososia, pstrąga lub podobnych ryb z północno-zachodniego wybrzeża Pacyfiku w USA; można jej zapobiec, nie karmiąc psa surowymi rybami.",
+        "cs": "Onemocnění, které psi dostanou po snědení syrového nebo nedostatečně tepelně upraveného lososa, pstruha nebo podobných ryb z tichomořského severozápadu USA; předejdete mu tím, že psovi tyto ryby nebudete dávat syrové."
       }
     }
   ],
@@ -304,6 +321,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "85fbe28715ef0f556af5b37330e2f2cbfa3ae1e38796ae4f75f03ebea3f8ab4e"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e8a083946230f14c1923763bbf62bd2f84738082207ebf56b45eb07c61a9ffa3"
     }
   }
 }

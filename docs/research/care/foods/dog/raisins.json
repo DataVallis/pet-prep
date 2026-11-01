@@ -10,7 +10,8 @@
     "it": "Uvetta",
     "pt": "Passas",
     "nl": "Rozijnen",
-    "pl": "Rodzynki"
+    "pl": "Rodzynki",
+    "cs": "Rozinky"
   },
   "question": {
     "en": "Can dogs eat raisins?",
@@ -21,7 +22,8 @@
     "it": "I cani possono mangiare l’uvetta?",
     "pt": "Os cães podem comer passas?",
     "nl": "Mogen honden rozijnen eten?",
-    "pl": "Czy psy mogą jeść rodzynki?"
+    "pl": "Czy psy mogą jeść rodzynki?",
+    "cs": "Mohou psi jíst rozinky?"
   },
   "url_slug": {
     "en": "raisins",
@@ -32,7 +34,8 @@
     "it": "uvetta",
     "pt": "passas",
     "nl": "rozijnen",
-    "pl": "rodzynki"
+    "pl": "rodzynki",
+    "cs": "rozinky"
   },
   "level": "toxic",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "No. L’uvetta è uva secca, e i cani non devono mai mangiarla. Può causare insufficienza renale, e anche una piccola quantità può far stare molto male un cane. Non c’è modo di prevedere quali cani ne saranno colpiti.",
     "pt": "Não. As passas são uvas secas, e os cães nunca as devem comer. Podem causar insuficiência renal, e até uma pequena quantidade pode pôr um cão gravemente doente. Não há forma de prever que cães serão afetados.",
     "nl": "Nee. Rozijnen zijn gedroogde druiven, en honden mogen ze nooit eten. Ze kunnen nierfalen veroorzaken, en zelfs een kleine hoeveelheid kan een hond ernstig ziek maken. Niemand kan voorspellen welke honden erop reageren.",
-    "pl": "Nie. Rodzynki to suszone winogrona i psy nigdy nie powinny ich jeść. Mogą wywołać niewydolność nerek, a nawet mała ilość może poważnie zaszkodzić psu. Nie da się przewidzieć, których psów to dotknie."
+    "pl": "Nie. Rodzynki to suszone winogrona i psy nigdy nie powinny ich jeść. Mogą wywołać niewydolność nerek, a nawet mała ilość może poważnie zaszkodzić psu. Nie da się przewidzieć, których psów to dotknie.",
+    "cs": "Ne. Rozinky jsou sušené hrozny a psi by je nikdy neměli jíst. Mohou způsobit selhání ledvin a i malé množství může psovi vážně uškodit. Nedá se předem odhadnout, kterého psa zasáhnou."
   },
   "why": {
     "en": "Raisins, grapes and currants can damage a dog's kidneys. Tartaric acid is suspected to be the toxic part; its amount varies, so effects are unpredictable, and there is no way to tell which dogs are more sensitive. Because the cause is uncertain, any amount is treated as a concern.",
@@ -55,7 +59,8 @@
     "it": "Uvetta, uva e uva passa di Corinto possono danneggiare i reni del cane. Si sospetta che la parte tossica sia l’acido tartarico; la sua quantità varia, quindi gli effetti sono imprevedibili, e non c’è modo di sapere quali cani siano più sensibili. Poiché la causa non è certa, qualsiasi quantità va considerata preoccupante.",
     "pt": "As passas, as uvas e as passas de Corinto podem danificar os rins de um cão. Suspeita-se que a parte tóxica seja o ácido tartárico; a sua quantidade varia, por isso os efeitos são imprevisíveis, e não há forma de saber que cães são mais sensíveis. Como a causa é incerta, qualquer quantidade é motivo de preocupação.",
     "nl": "Rozijnen, druiven en krenten kunnen de nieren van een hond beschadigen. Wijnsteenzuur is vermoedelijk de giftige stof; de hoeveelheid verschilt, dus het effect is onvoorspelbaar, en je kunt niet zien welke honden gevoeliger zijn. Omdat de oorzaak onzeker is, wordt elke hoeveelheid als zorgwekkend beschouwd.",
-    "pl": "Rodzynki, winogrona i porzeczki koryntki mogą uszkodzić nerki psa. Podejrzewa się, że toksycznym składnikiem jest kwas winowy; jego ilość bywa różna, więc skutki są nieprzewidywalne i nie da się określić, które psy są bardziej wrażliwe. Ponieważ przyczyna nie jest pewna, każdą ilość traktuje się jako powód do niepokoju."
+    "pl": "Rodzynki, winogrona i porzeczki koryntki mogą uszkodzić nerki psa. Podejrzewa się, że toksycznym składnikiem jest kwas winowy; jego ilość bywa różna, więc skutki są nieprzewidywalne i nie da się określić, które psy są bardziej wrażliwe. Ponieważ przyczyna nie jest pewna, każdą ilość traktuje się jako powód do niepokoju.",
+    "cs": "Rozinky, hrozny a korintky mohou poškodit psí ledviny. Jako jedovatá složka je podezřelá kyselina vinná; její množství se liší, takže účinky jsou nepředvídatelné a nelze poznat, kteří psi jsou citlivější. Protože příčina není jistá, považuje se za problém jakékoli množství."
   },
   "signs": {
     "en": [
@@ -129,6 +134,14 @@
       "Ból brzucha",
       "Odwodnienie i picie dużych ilości wody",
       "Drżenie mięśni"
+    ],
+    "cs": [
+      "Zvracení nebo průjem, často do 6–24 hodin",
+      "Malátnost a slabost",
+      "Nechuť k jídlu",
+      "Bolest břicha",
+      "Dehydratace a velká žízeň",
+      "Třes"
     ]
   },
   "what_to_do": {
@@ -140,7 +153,8 @@
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario, anche se il tuo cane ha mangiato solo pochi chicchi di uvetta. Annota più o meno quanti ne ha mangiati. Non aspettare che compaiano i sintomi: prima inizia il trattamento, meglio è.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, mesmo que o teu cão tenha comido só algumas passas. Anota mais ou menos quantas comeu. Não esperes pelos sinais: quanto mais cedo começar o tratamento, melhor.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als er maar een paar rozijnen zijn gegeten. Schrijf op hoeveel er ongeveer zijn gegeten. Wacht niet op verschijnselen: hoe eerder de behandeling begint, hoe beter.",
-    "pl": "Od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt, nawet jeśli pies zjadł tylko kilka rodzynek. Zanotuj, ile mniej więcej zjadł. Nie czekaj na objawy: im szybciej zacznie się leczenie, tym lepiej."
+    "pl": "Od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt, nawet jeśli pies zjadł tylko kilka rodzynek. Zanotuj, ile mniej więcej zjadł. Nie czekaj na objawy: im szybciej zacznie się leczenie, tym lepiej.",
+    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, i když pes snědl jen pár rozinek. Poznamenejte si, kolik jich zhruba snědl. Nečekejte, až se objeví příznaky: čím dříve léčba začne, tím lépe."
   },
   "serving": null,
   "child": {
@@ -152,7 +166,8 @@
     "it": "L’uvetta è uva piccola e secca, e non è per i cani. Se il tuo cane ne mangia un po’, avvisa subito un adulto.",
     "pt": "As passas são uvas pequeninas secas e não são para cães. Se o teu cão comer algumas, avisa logo um adulto.",
     "nl": "Rozijnen zijn kleine gedroogde druiven, en ze zijn niet voor honden. Eet je hond ervan? Vertel het meteen aan een volwassene.",
-    "pl": "Rodzynki to malutkie suszone winogrona i nie są dla psów. Jeśli twój pies jakieś zje, od razu powiedz dorosłemu."
+    "pl": "Rodzynki to malutkie suszone winogrona i nie są dla psów. Jeśli twój pies jakieś zje, od razu powiedz dorosłemu.",
+    "cs": "Rozinky jsou malinké sušené hrozny a pro psy nejsou. Když je pes sní, řekni to hned dospělému."
   },
   "faq": [
     {
@@ -165,7 +180,8 @@
         "it": "L’uvetta è peggio dell’uva?",
         "pt": "As passas são piores do que as uvas?",
         "nl": "Zijn rozijnen erger dan druiven?",
-        "pl": "Czy rodzynki są gorsze niż winogrona?"
+        "pl": "Czy rodzynki są gorsze niż winogrona?",
+        "cs": "Jsou rozinky horší než hrozny?"
       },
       "a": {
         "en": "Both are dangerous. Sources treat grapes, raisins and currants as the same risk and advise calling the vet after any amount.",
@@ -176,7 +192,8 @@
         "it": "Sono pericolose entrambe. Le fonti considerano uva, uvetta e uva passa di Corinto lo stesso rischio e consigliano di chiamare il veterinario qualunque sia la quantità.",
         "pt": "Ambas são perigosas. As fontes tratam as uvas, as passas e as passas de Corinto como o mesmo risco e aconselham a ligar ao veterinário depois de qualquer quantidade.",
         "nl": "Ze zijn allebei gevaarlijk. Bronnen zien druiven, rozijnen en krenten als hetzelfde risico en raden aan na elke hoeveelheid de dierenarts te bellen.",
-        "pl": "Jedne i drugie są niebezpieczne. Źródła traktują winogrona, rodzynki i porzeczki koryntki jako takie samo zagrożenie i radzą dzwonić do weterynarza bez względu na zjedzoną ilość."
+        "pl": "Jedne i drugie są niebezpieczne. Źródła traktują winogrona, rodzynki i porzeczki koryntki jako takie samo zagrożenie i radzą dzwonić do weterynarza bez względu na zjedzoną ilość.",
+        "cs": "Nebezpečné jsou obojí. Zdroje považují hrozny, rozinky i korintky za stejné riziko a po jakémkoli množství doporučují zavolat veterináři."
       }
     },
     {
@@ -189,7 +206,8 @@
         "it": "E l’uva passa di Corinto?",
         "pt": "E as passas de Corinto?",
         "nl": "En krenten?",
-        "pl": "A porzeczki koryntki?"
+        "pl": "A porzeczki koryntki?",
+        "cs": "A co korintky?"
       },
       "a": {
         "en": "Currants are named in the same warnings as grapes and raisins, so they are not safe for dogs either.",
@@ -200,7 +218,8 @@
         "it": "L’uva passa di Corinto compare negli stessi avvertimenti di uva e uvetta, quindi nemmeno lei è sicura per i cani.",
         "pt": "As passas de Corinto são referidas nos mesmos avisos que as uvas e as passas, por isso também não são seguras para os cães.",
         "nl": "Krenten worden in dezelfde waarschuwingen genoemd als druiven en rozijnen, dus ook die zijn niet veilig voor honden.",
-        "pl": "Porzeczki koryntki wymienia się w tych samych ostrzeżeniach co winogrona i rodzynki, więc one też nie są bezpieczne dla psów."
+        "pl": "Porzeczki koryntki wymienia się w tych samych ostrzeżeniach co winogrona i rodzynki, więc one też nie są bezpieczne dla psów.",
+        "cs": "Korintky jsou uváděny ve stejných varováních jako hrozny a rozinky, takže ani ony nejsou pro psy bezpečné."
       }
     }
   ],
@@ -306,6 +325,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "91bc0507187cdd22adf8c606e88c4d08c9e420aa91d87cd1fd67df141d27b081"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e028aed13134d89604cd655e6fafe03570e413fef4bc49329c4486fa68707041"
     }
   }
 }

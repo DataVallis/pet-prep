@@ -10,7 +10,8 @@
     "it": "Carne grassa",
     "pt": "Carne gorda",
     "nl": "Vet vlees",
-    "pl": "Tłuste mięso"
+    "pl": "Tłuste mięso",
+    "cs": "Tučné maso"
   },
   "question": {
     "en": "Can cats eat fatty meat?",
@@ -21,7 +22,8 @@
     "it": "I gatti possono mangiare la carne grassa?",
     "pt": "Os gatos podem comer carne gorda?",
     "nl": "Mogen katten vet vlees eten?",
-    "pl": "Czy koty mogą jeść tłuste mięso?"
+    "pl": "Czy koty mogą jeść tłuste mięso?",
+    "cs": "Mohou kočky jíst tučné maso?"
   },
   "url_slug": {
     "en": "fatty-meat",
@@ -32,7 +34,8 @@
     "it": "carne-grassa",
     "pt": "carne-gorda",
     "nl": "vet-vlees",
-    "pl": "tluste-mieso"
+    "pl": "tluste-mieso",
+    "cs": "tucne-maso"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "Meglio di no. La carne grassa e la pelle del pollame possono disturbare la digestione del gatto e, nei gatti sensibili, causare persino una pancreatite. Se condividi della carne, offrigli un po’ di carne magra, cotta e semplice, senza pelle, ossa né condimenti.",
     "pt": "É melhor não. A carne gorda e a pele das aves podem fazer mal à digestão do gato e, em gatos sensíveis, podem até levar a pancreatite. Se partilhares carne, dá um pouco de carne magra, simples e cozinhada, sem pele, ossos nem temperos.",
     "nl": "Liever niet. Vet vlees en vel van gevogelte kunnen de spijsvertering van een kat verstoren en bij gevoelige katten zelfs tot alvleesklierontsteking (pancreatitis) leiden. Deel je vlees, geef dan een beetje gewoon, mager, gekookt vlees zonder vel, botten of kruiden.",
-    "pl": "Lepiej nie. Tłuste mięso i skóra drobiu mogą wywołać u kota problemy trawienne, a u wrażliwych kotów nawet zapalenie trzustki. Jeśli dzielisz się mięsem, daj odrobinę zwykłego, chudego, gotowanego mięsa bez skóry, kości i przypraw."
+    "pl": "Lepiej nie. Tłuste mięso i skóra drobiu mogą wywołać u kota problemy trawienne, a u wrażliwych kotów nawet zapalenie trzustki. Jeśli dzielisz się mięsem, daj odrobinę zwykłego, chudego, gotowanego mięsa bez skóry, kości i przypraw.",
+    "cs": "Raději ne. Tučné maso a drůbeží kůže mohou kočce narušit trávení a u citlivých koček mohou dokonce vést k zánětu slinivky břišní. Pokud se s kočkou o maso dělíte, dejte jí trochu obyčejného, libového, tepelně upraveného masa bez kůže, kostí a koření."
   },
   "why": {
     "en": "Too much fat can affect a cat's digestive tract, especially the pancreas. Cats Protection warns that turkey skin is high in fat and can cause digestive upset or even pancreatitis in sensitive cats, and a University of Georgia vet advises avoiding the fattier pieces of ham altogether.",
@@ -55,7 +59,8 @@
     "it": "Troppi grassi possono colpire l’apparato digerente del gatto, soprattutto il pancreas. Cats Protection avverte che la pelle del tacchino è molto grassa e può causare disturbi digestivi o persino una pancreatite nei gatti sensibili, e un veterinario dell’Università della Georgia consiglia di evitare del tutto le parti più grasse del prosciutto.",
     "pt": "A gordura em excesso pode afetar o aparelho digestivo do gato, sobretudo o pâncreas. A Cats Protection avisa que a pele do peru é rica em gordura e pode causar problemas digestivos ou até pancreatite em gatos sensíveis, e um veterinário da Universidade da Geórgia aconselha a evitar completamente as partes mais gordas do fiambre.",
     "nl": "Te veel vet kan het spijsverteringskanaal van een kat aantasten, vooral de alvleesklier. Cats Protection waarschuwt dat kalkoenvel veel vet bevat en bij gevoelige katten spijsverteringsproblemen of zelfs alvleesklierontsteking kan veroorzaken, en een dierenarts van de University of Georgia raadt aan de vettere stukken ham helemaal te vermijden.",
-    "pl": "Zbyt dużo tłuszczu może zaszkodzić przewodowi pokarmowemu kota, zwłaszcza trzustce. Cats Protection ostrzega, że skóra indyka zawiera dużo tłuszczu i może wywołać problemy trawienne, a u wrażliwych kotów nawet zapalenie trzustki. Z kolei weterynarz z University of Georgia radzi całkowicie unikać tłustszych kawałków szynki."
+    "pl": "Zbyt dużo tłuszczu może zaszkodzić przewodowi pokarmowemu kota, zwłaszcza trzustce. Cats Protection ostrzega, że skóra indyka zawiera dużo tłuszczu i może wywołać problemy trawienne, a u wrażliwych kotów nawet zapalenie trzustki. Z kolei weterynarz z University of Georgia radzi całkowicie unikać tłustszych kawałków szynki.",
+    "cs": "Příliš mnoho tuku může ovlivnit kočičí trávicí trakt, zejména slinivku břišní. Cats Protection varuje, že krůtí kůže má vysoký obsah tuku a u citlivých koček může způsobit trávicí potíže, nebo dokonce zánět slinivky břišní, a veterinář z University of Georgia doporučuje se tučnějším kouskům šunky úplně vyhnout."
   },
   "signs": {
     "en": [
@@ -102,6 +107,11 @@
       "Wymioty",
       "Biegunka",
       "Rozstrój żołądka"
+    ],
+    "cs": [
+      "Zvracení",
+      "Průjem",
+      "Žaludeční potíže"
     ]
   },
   "what_to_do": {
@@ -113,7 +123,8 @@
     "it": "Se il tuo gatto ha mangiato molto cibo grasso, o se poi vomita, ha la diarrea o sembra soffrire, chiedi consiglio al veterinario.",
     "pt": "Se o teu gato comeu muita comida gorda, ou se depois tiver vómitos, diarreia ou parecer ter dores, contacta o teu veterinário para pedir conselho.",
     "nl": "Heeft je kat veel vet eten gegeten, of braakt ze daarna, heeft ze diarree of lijkt ze pijn te hebben? Vraag dan je dierenarts om advies.",
-    "pl": "Jeśli twój kot zjadł dużo tłustego jedzenia albo potem wymiotuje, ma biegunkę lub wydaje się, że coś go boli, poradź się weterynarza."
+    "pl": "Jeśli twój kot zjadł dużo tłustego jedzenia albo potem wymiotuje, ma biegunkę lub wydaje się, że coś go boli, poradź się weterynarza.",
+    "cs": "Pokud kočka snědla hodně tučného jídla nebo potom zvrací, má průjem či se zdá, že ji něco bolí, poraďte se s veterinářem."
   },
   "serving": {
     "en": "Only plain, cooked, lean meat as an occasional treat: no skin, fat, bones or seasoning.",
@@ -124,7 +135,8 @@
     "it": "Solo carne magra, cotta e semplice come premio occasionale: senza pelle, grasso, ossa né condimenti.",
     "pt": "Apenas carne magra, simples e cozinhada, como guloseima ocasional: sem pele, gordura, ossos nem temperos.",
     "nl": "Alleen gewoon, gekookt, mager vlees, af en toe als snoepje: zonder vel, vet, botten of kruiden.",
-    "pl": "Tylko zwykłe, gotowane, chude mięso jako okazjonalny smakołyk: bez skóry, tłuszczu, kości i przypraw."
+    "pl": "Tylko zwykłe, gotowane, chude mięso jako okazjonalny smakołyk: bez skóry, tłuszczu, kości i przypraw.",
+    "cs": "Jen obyčejné, tepelně upravené, libové maso jako občasný pamlsek: bez kůže, tuku, kostí a koření."
   },
   "child": {
     "en": "Fatty bits can give a cat a sore tummy. If a grown-up says yes, kitty can have a tiny bit of plain lean meat.",
@@ -135,7 +147,8 @@
     "it": "I pezzi grassi possono far venire il mal di pancia a un gatto. Se un adulto dice di sì, il micio può avere un pezzettino di carne magra semplice.",
     "pt": "As partes gordas podem dar dor de barriga a um gato. Se um adulto disser que sim, o gatinho pode comer um bocadinho de carne magra simples.",
     "nl": "Van vette stukjes kan een kat buikpijn krijgen. Als een volwassene het goed vindt, mag je poes een klein stukje gewoon mager vlees.",
-    "pl": "Od tłustych kawałków kota może boleć brzuszek. Jeśli dorosły się zgodzi, kotek może dostać odrobinę zwykłego chudego mięsa."
+    "pl": "Od tłustych kawałków kota może boleć brzuszek. Jeśli dorosły się zgodzi, kotek może dostać odrobinę zwykłego chudego mięsa.",
+    "cs": "Z tučných kousků může kočku bolet bříško. Když dospělý řekne, že ano, může kočička dostat kousíček obyčejného libového masa."
   },
   "faq": [
     {
@@ -148,7 +161,8 @@
         "it": "La pelle del pollo o del tacchino va bene?",
         "pt": "Posso dar pele de frango ou de peru?",
         "nl": "Is vel van kip of kalkoen oké?",
-        "pl": "Czy skóra kurczaka lub indyka jest w porządku?"
+        "pl": "Czy skóra kurczaka lub indyka jest w porządku?",
+        "cs": "Je kuřecí nebo krůtí kůže v pořádku?"
       },
       "a": {
         "en": "No. Cats Protection says turkey skin is high in fat and can cause digestive upset or even pancreatitis in sensitive cats. Give skinless meat instead.",
@@ -159,7 +173,8 @@
         "it": "No. Secondo Cats Protection la pelle del tacchino è molto grassa e può causare disturbi digestivi o persino una pancreatite nei gatti sensibili. Dai invece carne senza pelle.",
         "pt": "Não. A Cats Protection diz que a pele do peru é rica em gordura e pode causar problemas digestivos ou até pancreatite em gatos sensíveis. Dá antes carne sem pele.",
         "nl": "Nee. Volgens Cats Protection bevat kalkoenvel veel vet en kan het bij gevoelige katten spijsverteringsproblemen of zelfs alvleesklierontsteking veroorzaken. Geef liever vlees zonder vel.",
-        "pl": "Nie. Według Cats Protection skóra indyka zawiera dużo tłuszczu i może wywołać problemy trawienne, a u wrażliwych kotów nawet zapalenie trzustki. Zamiast tego daj mięso bez skóry."
+        "pl": "Nie. Według Cats Protection skóra indyka zawiera dużo tłuszczu i może wywołać problemy trawienne, a u wrażliwych kotów nawet zapalenie trzustki. Zamiast tego daj mięso bez skóry.",
+        "cs": "Ne. Podle Cats Protection má krůtí kůže vysoký obsah tuku a u citlivých koček může způsobit trávicí potíže, nebo dokonce zánět slinivky břišní. Dávejte raději maso bez kůže."
       }
     }
   ],
@@ -242,6 +257,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4d09ab8cee2a9d05e8fd6d364651847d97470c2e0b88004e6ccfb41a4229a819"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4ad5658890994cd7f70587f0317244f5694af36066fff81d9e80ffe7e6506d4c"
     }
   }
 }

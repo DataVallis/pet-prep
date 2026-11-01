@@ -10,7 +10,8 @@
     "it": "Formaggio",
     "pt": "Queijo",
     "nl": "Kaas",
-    "pl": "Ser"
+    "pl": "Ser",
+    "cs": "Sýr"
   },
   "question": {
     "en": "Can cats eat cheese?",
@@ -21,7 +22,8 @@
     "it": "I gatti possono mangiare il formaggio?",
     "pt": "Os gatos podem comer queijo?",
     "nl": "Mogen katten kaas eten?",
-    "pl": "Czy koty mogą jeść ser?"
+    "pl": "Czy koty mogą jeść ser?",
+    "cs": "Mohou kočky jíst sýr?"
   },
   "url_slug": {
     "en": "cheese",
@@ -32,7 +34,8 @@
     "it": "formaggio",
     "pt": "queijo",
     "nl": "kaas",
-    "pl": "ser"
+    "pl": "ser",
+    "cs": "syr"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "No, è meglio evitare il formaggio. Non è tossico, ma molti gatti sono intolleranti al lattosio, quindi può disturbare il loro stomaco. È anche ricco di grassi e sale e non fornisce ai gatti i nutrienti di cui hanno bisogno.",
     "pt": "Não, é melhor evitar o queijo. Não é tóxico, mas muitos gatos são intolerantes à lactose, por isso pode fazer-lhes mal ao estômago. Também é rico em gordura e sal e não dá aos gatos os nutrientes de que precisam.",
     "nl": "Nee, kaas kun je beter vermijden. Het is niet giftig, maar veel katten zijn lactose-intolerant, dus het kan hun maag van streek maken. Kaas bevat ook veel vet en zout en geeft katten niet de voedingsstoffen die ze nodig hebben.",
-    "pl": "Nie, lepiej unikać sera. Nie jest toksyczny, ale wiele kotów nie toleruje laktozy, więc ser może wywołać rozstrój żołądka. Zawiera też dużo tłuszczu i soli i nie dostarcza kotom potrzebnych składników odżywczych."
+    "pl": "Nie, lepiej unikać sera. Nie jest toksyczny, ale wiele kotów nie toleruje laktozy, więc ser może wywołać rozstrój żołądka. Zawiera też dużo tłuszczu i soli i nie dostarcza kotom potrzebnych składników odżywczych.",
+    "cs": "Ne, sýru je lepší se vyhnout. Není toxický, ale mnoho koček nesnáší laktózu, takže jim může podráždit žaludek. Navíc má vysoký obsah tuku a soli a nedává kočkám živiny, které potřebují."
   },
   "why": {
     "en": "Most adult cats can't properly digest lactose, the sugar in milk and in dairy products such as cheese. This can cause vomiting or diarrhoea and make a cat sluggish. Cheese is also high in fat and salt, and eaten regularly it can lead to weight gain. Lactose-free and plant-based cheeses are not a safe swap, because some dairy alternatives contain ingredients that could be toxic to cats.",
@@ -55,7 +59,8 @@
     "it": "La maggior parte dei gatti adulti non riesce a digerire bene il lattosio, lo zucchero presente nel latte e nei latticini come il formaggio. Questo può causare vomito o diarrea e rendere il gatto fiacco. Il formaggio è anche ricco di grassi e sale e, se mangiato regolarmente, può far ingrassare. I formaggi senza lattosio e vegetali non sono un’alternativa sicura, perché alcune alternative ai latticini contengono ingredienti che potrebbero essere tossici per i gatti.",
     "pt": "A maioria dos gatos adultos não consegue digerir bem a lactose, o açúcar do leite e de laticínios como o queijo. Isto pode causar vómitos ou diarreia e deixar o gato apático. O queijo é também rico em gordura e sal e, comido com regularidade, pode levar ao aumento de peso. Os queijos sem lactose e os de origem vegetal não são uma alternativa segura, porque algumas alternativas aos laticínios contêm ingredientes que podem ser tóxicos para gatos.",
     "nl": "De meeste volwassen katten kunnen lactose, de suiker in melk en in zuivelproducten zoals kaas, niet goed verteren. Dat kan braken of diarree veroorzaken en een kat sloom maken. Kaas bevat ook veel vet en zout, en als een kat het regelmatig eet, kan ze aankomen. Lactosevrije en plantaardige kaas zijn geen veilig alternatief, want sommige zuivelvervangers bevatten ingrediënten die giftig kunnen zijn voor katten.",
-    "pl": "Większość dorosłych kotów nie trawi dobrze laktozy, czyli cukru zawartego w mleku i produktach mlecznych, takich jak ser. Może to wywołać wymioty lub biegunkę i sprawić, że kot będzie ospały. Ser zawiera też dużo tłuszczu i soli, a jedzony regularnie może prowadzić do tycia. Sery bez laktozy i roślinne nie są bezpiecznym zamiennikiem, bo niektóre zamienniki nabiału zawierają składniki, które mogą być dla kotów toksyczne."
+    "pl": "Większość dorosłych kotów nie trawi dobrze laktozy, czyli cukru zawartego w mleku i produktach mlecznych, takich jak ser. Może to wywołać wymioty lub biegunkę i sprawić, że kot będzie ospały. Ser zawiera też dużo tłuszczu i soli, a jedzony regularnie może prowadzić do tycia. Sery bez laktozy i roślinne nie są bezpiecznym zamiennikiem, bo niektóre zamienniki nabiału zawierają składniki, które mogą być dla kotów toksyczne.",
+    "cs": "Většina dospělých koček nedokáže správně strávit laktózu, cukr obsažený v mléce a v mléčných výrobcích, jako je sýr. To může způsobit zvracení nebo průjem a kočka může být malátná. Sýr má také vysoký obsah tuku a soli, a pokud ho kočka jí pravidelně, může vést k přibírání na váze. Sýry bez laktózy a rostlinné sýry nejsou bezpečnou náhradou, protože některé alternativy mléčných výrobků obsahují složky, které by mohly být pro kočky toxické."
   },
   "signs": {
     "en": [
@@ -111,6 +116,12 @@
       "Biegunka",
       "Ospałość lub brak energii",
       "Gazy lub wzdęcia"
+    ],
+    "cs": [
+      "Zvracení",
+      "Průjem",
+      "Malátnost nebo nedostatek energie",
+      "Plynatost nebo nadýmání"
     ]
   },
   "what_to_do": {
@@ -122,7 +133,8 @@
     "it": "Se il tuo gatto ha mangiato un po’ di formaggio, non serve correre dal veterinario. Tienilo d’occhio. Se sta male o si comporta in modo diverso, chiama il veterinario e digli quanto formaggio ha mangiato.",
     "pt": "Se o teu gato comeu um pouco de queijo, não há necessidade de correr para o veterinário. Vigia-o. Se ficar doente ou se comportar de forma diferente, liga ao teu veterinário e diz-lhe quanto queijo o teu gato comeu.",
     "nl": "Heeft je kat een beetje kaas gegeten? Dan hoef je niet meteen naar de dierenarts. Houd je kat goed in de gaten. Wordt ze ziek of gedraagt ze zich anders, bel dan je dierenarts en vertel hoeveel kaas je kat heeft gegeten.",
-    "pl": "Jeśli twój kot zjadł odrobinę sera, nie musisz pędzić do weterynarza. Obserwuj go. Jeśli źle się poczuje lub zacznie się zachowywać inaczej, zadzwoń do weterynarza i powiedz, ile sera zjadł."
+    "pl": "Jeśli twój kot zjadł odrobinę sera, nie musisz pędzić do weterynarza. Obserwuj go. Jeśli źle się poczuje lub zacznie się zachowywać inaczej, zadzwoń do weterynarza i powiedz, ile sera zjadł.",
+    "cs": "Pokud kočka snědla trochu sýra, není třeba spěchat k veterináři. Sledujte ji. Pokud se jí udělá špatně nebo se začne chovat jinak, zavolejte veterináři a řekněte mu, kolik sýra kočka snědla."
   },
   "serving": null,
   "child": {
@@ -134,7 +146,8 @@
     "it": "Il formaggio può far venire il mal di pancia ai gatti. Dai al tuo gatto un premio per gatti e lascia il formaggio alle persone.",
     "pt": "O queijo pode dar dor de barriga aos gatos. Dá ao teu gato uma guloseima para gatos e guarda o queijo para as pessoas.",
     "nl": "Van kaas kan een kat buikpijn krijgen. Geef je kat liever een kattensnoepje en houd de kaas voor mensen.",
-    "pl": "Od sera koty może boleć brzuszek. Daj kotu kocią przekąskę, a ser zostaw dla ludzi."
+    "pl": "Od sera koty może boleć brzuszek. Daj kotu kocią przekąskę, a ser zostaw dla ludzi.",
+    "cs": "Ze sýra může kočku bolet bříško. Dej kočce radši kočičí pamlsek a sýr nech pro lidi."
   },
   "faq": [
     {
@@ -147,7 +160,8 @@
         "it": "I premi per gatti al gusto di formaggio vanno bene?",
         "pt": "Posso dar guloseimas para gatos com sabor a queijo?",
         "nl": "Zijn kattensnoepjes met kaassmaak oké?",
-        "pl": "Czy smakołyki dla kotów o smaku sera są w porządku?"
+        "pl": "Czy smakołyki dla kotów o smaku sera są w porządku?",
+        "cs": "Jsou kočičí pamlsky se sýrovou příchutí v pořádku?"
       },
       "a": {
         "en": "Treats made for cats with a little cheese are fine in small amounts now and then. If your cat gets an upset stomach, choose a different treat next time.",
@@ -158,7 +172,8 @@
         "it": "I premi per gatti che contengono un po’ di formaggio vanno bene in piccole quantità, ogni tanto. Se il tuo gatto ha mal di stomaco, la prossima volta scegli un premio diverso.",
         "pt": "As guloseimas feitas para gatos com um pouco de queijo não fazem mal em pequenas quantidades, de vez em quando. Se o teu gato ficar com o estômago irritado, escolhe outra guloseima da próxima vez.",
         "nl": "Snoepjes die voor katten zijn gemaakt en een beetje kaas bevatten, zijn prima in kleine hoeveelheden af en toe. Krijgt je kat er maagklachten van, kies dan de volgende keer een ander snoepje.",
-        "pl": "Smakołyki dla kotów z niewielkim dodatkiem sera można podawać w małych ilościach od czasu do czasu. Jeśli kot dostanie rozstroju żołądka, następnym razem wybierz inny smakołyk."
+        "pl": "Smakołyki dla kotów z niewielkim dodatkiem sera można podawać w małych ilościach od czasu do czasu. Jeśli kot dostanie rozstroju żołądka, następnym razem wybierz inny smakołyk.",
+        "cs": "Pamlsky vyrobené pro kočky s trochou sýra jsou v malém množství občas v pořádku. Pokud má kočka po nich podrážděný žaludek, vyberte příště jiný pamlsek."
       }
     },
     {
@@ -171,7 +186,8 @@
         "it": "Il formaggio senza lattosio o vegano è più sicuro?",
         "pt": "O queijo sem lactose ou vegano é mais seguro?",
         "nl": "Is lactosevrije of vegan kaas veiliger?",
-        "pl": "Czy ser bez laktozy albo wegański jest bezpieczniejszy?"
+        "pl": "Czy ser bez laktozy albo wegański jest bezpieczniejszy?",
+        "cs": "Je sýr bez laktózy nebo veganský sýr bezpečnější?"
       },
       "a": {
         "en": "No. Avoid lactose-free and plant-based cheese too, because many dairy alternatives contain ingredients that could be toxic to cats.",
@@ -182,7 +198,8 @@
         "it": "No. Evita anche il formaggio senza lattosio e quello vegetale, perché molte alternative ai latticini contengono ingredienti che potrebbero essere tossici per i gatti.",
         "pt": "Não. Evita também o queijo sem lactose e o de origem vegetal, porque muitas alternativas aos laticínios contêm ingredientes que podem ser tóxicos para gatos.",
         "nl": "Nee. Vermijd ook lactosevrije en plantaardige kaas, want veel zuivelvervangers bevatten ingrediënten die giftig kunnen zijn voor katten.",
-        "pl": "Nie. Unikaj także serów bez laktozy i roślinnych, bo wiele zamienników nabiału zawiera składniki, które mogą być dla kotów toksyczne."
+        "pl": "Nie. Unikaj także serów bez laktozy i roślinnych, bo wiele zamienników nabiału zawiera składniki, które mogą być dla kotów toksyczne.",
+        "cs": "Ne. Vyhněte se i sýrům bez laktózy a rostlinným sýrům, protože mnoho alternativ mléčných výrobků obsahuje složky, které by mohly být pro kočky toxické."
       }
     }
   ],
@@ -312,6 +329,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "33c67648a5bdac6cb936f037105217f64d4f1e2fa63f9b6d08799117a3447eb2"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "81788d84d09d911bb47fef05d7ba8e5aebc26d6be4d00c3abaa5982b25b4c266"
     }
   }
 }

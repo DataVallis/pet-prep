@@ -10,7 +10,8 @@
     "it": "Prosciutto",
     "pt": "Fiambre",
     "nl": "Ham",
-    "pl": "Szynka"
+    "pl": "Szynka",
+    "cs": "Šunka"
   },
   "question": {
     "en": "Can dogs eat ham?",
@@ -21,7 +22,8 @@
     "it": "I cani possono mangiare il prosciutto?",
     "pt": "Os cães podem comer fiambre?",
     "nl": "Mogen honden ham eten?",
-    "pl": "Czy psy mogą jeść szynkę?"
+    "pl": "Czy psy mogą jeść szynkę?",
+    "cs": "Mohou psi jíst šunku?"
   },
   "url_slug": {
     "en": "ham",
@@ -32,7 +34,8 @@
     "it": "prosciutto",
     "pt": "fiambre",
     "nl": "ham",
-    "pl": "szynka"
+    "pl": "szynka",
+    "cs": "sunka"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "Sconsigliato. Il prosciutto non è tossico per i cani, ma è ricco di grassi e di sodio. Il prosciutto del supermercato contiene molto sale, e troppi grassi possono portare a pancreatite e altri disturbi digestivi. Un premio per cani più sano è la scelta migliore.",
     "pt": "Não é recomendado. O fiambre não é tóxico para os cães, mas tem muita gordura e sódio. O fiambre comprado no supermercado tem muito sal, e o excesso de gordura pode causar pancreatite e outros problemas digestivos. Uma guloseima para cães é uma escolha mais saudável.",
     "nl": "Niet aan te raden. Ham is niet giftig voor honden, maar bevat veel vet en natrium. Ham uit de winkel bevat veel zout, en te veel vet kan tot alvleesklierontsteking en andere spijsverteringsproblemen leiden. Een gezonder hondensnoepje is de betere keuze.",
-    "pl": "Nie zaleca się. Szynka nie jest toksyczna dla psów, ale zawiera dużo tłuszczu i sodu. Szynka ze sklepu ma dużo soli, a nadmiar tłuszczu może prowadzić do zapalenia trzustki i innych problemów trawiennych. Lepszym wyborem jest zdrowszy psi smakołyk."
+    "pl": "Nie zaleca się. Szynka nie jest toksyczna dla psów, ale zawiera dużo tłuszczu i sodu. Szynka ze sklepu ma dużo soli, a nadmiar tłuszczu może prowadzić do zapalenia trzustki i innych problemów trawiennych. Lepszym wyborem jest zdrowszy psi smakołyk.",
+    "cs": "Nedoporučuje se. Šunka není pro psy jedovatá, ale obsahuje hodně tuku a sodíku. Kupovaná šunka je velmi slaná a příliš mnoho tuku může vést k zánětu slinivky břišní a dalším zažívacím potížím. Lepší volbou je zdravější psí pamlsek."
   },
   "why": {
     "en": "Ham has a higher fat content than many other meats, and fatty meals are a known trigger of pancreatitis. Most ham is also very salty, and excess salt can be harmful to dogs.",
@@ -55,7 +59,8 @@
     "it": "Il prosciutto ha un contenuto di grassi più alto di molte altre carni, e i pasti grassi sono un noto fattore scatenante della pancreatite. Inoltre la maggior parte del prosciutto è molto salata, e il sale in eccesso può fare male ai cani.",
     "pt": "O fiambre tem mais gordura do que muitas outras carnes, e as refeições gordas são um conhecido desencadeador de pancreatite. A maior parte do fiambre também é muito salgada, e o excesso de sal pode fazer mal aos cães.",
     "nl": "Ham bevat meer vet dan veel andere vleessoorten, en vette maaltijden zijn een bekende uitlokker van alvleesklierontsteking. De meeste ham is ook erg zout, en te veel zout kan schadelijk zijn voor honden.",
-    "pl": "Szynka ma więcej tłuszczu niż wiele innych rodzajów mięsa, a tłuste posiłki to znany czynnik wywołujący zapalenie trzustki. Większość szynek jest też bardzo słona, a nadmiar soli może szkodzić psom."
+    "pl": "Szynka ma więcej tłuszczu niż wiele innych rodzajów mięsa, a tłuste posiłki to znany czynnik wywołujący zapalenie trzustki. Większość szynek jest też bardzo słona, a nadmiar soli może szkodzić psom.",
+    "cs": "Šunka má vyšší obsah tuku než mnoho jiných druhů masa a tučná jídla jsou známým spouštěčem zánětu slinivky břišní. Většina šunky je navíc velmi slaná a nadbytek soli může psům škodit."
   },
   "signs": {
     "en": [
@@ -120,6 +125,13 @@
       "Biegunka",
       "Niechęć do jedzenia",
       "Zmęczenie, gorączka"
+    ],
+    "cs": [
+      "Zvracení, někdy až 1–4 dny po tučném jídle",
+      "Bolest břicha (pes může zaujímat ‚modlitební‘ polohu)",
+      "Průjem",
+      "Nechuť k jídlu",
+      "Malátnost, horečka"
     ]
   },
   "what_to_do": {
@@ -131,7 +143,8 @@
     "it": "Se il tuo cane ha mangiato molto cibo grasso o nei giorni successivi mostra vomito, mal di pancia o stanchezza, contatta il veterinario. Annota che cosa ha mangiato e più o meno quanto. I sintomi della pancreatite possono comparire con qualche giorno di ritardo.",
     "pt": "Se o teu cão comeu muita comida gorda, ou se nos dias seguintes tiver vómitos, dor de barriga ou cansaço, contacta o teu veterinário. Anota o que comeu e mais ou menos quanto. Os sinais de pancreatite podem surgir só alguns dias depois.",
     "nl": "Heeft je hond veel vet eten gegeten, of braakt hij, heeft hij buikpijn of is hij moe in de dagen erna? Neem dan contact op met je dierenarts. Schrijf op wat er is gegeten en ongeveer hoeveel. Verschijnselen van alvleesklierontsteking kunnen een paar dagen later komen.",
-    "pl": "Jeśli twój pies zjadł dużo tłustego jedzenia albo w kolejnych dniach wymiotuje, boli go brzuch lub jest zmęczony, skontaktuj się z weterynarzem. Zanotuj, co zjadł i mniej więcej ile. Objawy zapalenia trzustki mogą pojawić się z opóźnieniem kilku dni."
+    "pl": "Jeśli twój pies zjadł dużo tłustego jedzenia albo w kolejnych dniach wymiotuje, boli go brzuch lub jest zmęczony, skontaktuj się z weterynarzem. Zanotuj, co zjadł i mniej więcej ile. Objawy zapalenia trzustki mogą pojawić się z opóźnieniem kilku dni.",
+    "cs": "Pokud váš pes snědl hodně tučného jídla nebo se u něj v následujících dnech objeví zvracení, bolest břicha či malátnost, obraťte se na veterináře. Poznamenejte si, co pes snědl a zhruba kolik. Příznaky zánětu slinivky břišní se mohou objevit až o několik dní později."
   },
   "serving": null,
   "child": {
@@ -143,7 +156,8 @@
     "it": "Il prosciutto è un cibo per le persone, troppo salato e grasso per i cani. Tienilo per il tuo panino e dai al tuo cane un premio per cani.",
     "pt": "O fiambre é comida de pessoas, salgado e gordo demais para os cães. Guarda-o para a tua sandes e dá ao teu cão uma guloseima para cães.",
     "nl": "Ham is eten voor mensen en te zout en te vet voor honden. Houd het voor je boterham en geef je hond een hondensnoepje.",
-    "pl": "Szynka to jedzenie dla ludzi, za słone i za tłuste dla psów. Zostaw ją na swoją kanapkę i daj psu psi smakołyk."
+    "pl": "Szynka to jedzenie dla ludzi, za słone i za tłuste dla psów. Zostaw ją na swoją kanapkę i daj psu psi smakołyk.",
+    "cs": "Šunka je jídlo pro lidi a pro psy je moc slaná a tučná. Nech si ji do chleba a dej psovi psí pamlsek."
   },
   "faq": [
     {
@@ -156,7 +170,8 @@
         "it": "Perché il prosciutto è peggio di altre carni?",
         "pt": "Porque é que o fiambre é pior do que outras carnes?",
         "nl": "Waarom is ham erger dan ander vlees?",
-        "pl": "Dlaczego szynka jest gorsza niż inne mięso?"
+        "pl": "Dlaczego szynka jest gorsza niż inne mięso?",
+        "cs": "Proč je šunka horší než jiné maso?"
       },
       "a": {
         "en": "It has more fat than many meats and store-bought ham contains a great deal of sodium.",
@@ -167,7 +182,8 @@
         "it": "Ha più grassi di molte carni e il prosciutto del supermercato contiene moltissimo sodio.",
         "pt": "Tem mais gordura do que muitas carnes, e o fiambre comprado no supermercado tem muito sódio.",
         "nl": "Ham bevat meer vet dan veel andere vleessoorten, en ham uit de winkel bevat erg veel natrium.",
-        "pl": "Ma więcej tłuszczu niż wiele rodzajów mięsa, a szynka ze sklepu zawiera bardzo dużo sodu."
+        "pl": "Ma więcej tłuszczu niż wiele rodzajów mięsa, a szynka ze sklepu zawiera bardzo dużo sodu.",
+        "cs": "Má víc tuku než mnoho jiných druhů masa a kupovaná šunka obsahuje velké množství sodíku."
       }
     }
   ],
@@ -281,6 +297,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "43214a91f4294f63f1ea61b9526585375f69d870ca7cd19e27bdd1d1900f9cf8"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d7f33ae5925c067250079214826f6588ae11f3d79da0433c4db3750ab91d4a84"
     }
   }
 }

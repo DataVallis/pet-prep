@@ -10,7 +10,8 @@
     "it": "Porro",
     "pt": "Alho-francês",
     "nl": "Prei",
-    "pl": "Por"
+    "pl": "Por",
+    "cs": "Pórek"
   },
   "question": {
     "en": "Can dogs eat leek?",
@@ -21,7 +22,8 @@
     "it": "I cani possono mangiare il porro?",
     "pt": "Os cães podem comer alho-francês?",
     "nl": "Mogen honden prei eten?",
-    "pl": "Czy psy mogą jeść pora?"
+    "pl": "Czy psy mogą jeść pora?",
+    "cs": "Mohou psi jíst pórek?"
   },
   "url_slug": {
     "en": "leek",
@@ -32,7 +34,8 @@
     "it": "porro",
     "pt": "alho-frances",
     "nl": "prei",
-    "pl": "por"
+    "pl": "por",
+    "cs": "porek"
   },
   "level": "toxic",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "No. Il porro appartiene alla famiglia degli allium, come cipolla e aglio, ed è tossico per i cani. Tutte le parti della pianta sono dannose, anche cotte o secche. Può danneggiare i globuli rossi, e spesso i sintomi compaiono solo dopo qualche giorno.",
     "pt": "Não. O alho-francês é uma aliácea, como a cebola e o alho, e é tóxico para os cães. Todas as partes da planta fazem mal, mesmo cozinhadas ou secas. Pode danificar os glóbulos vermelhos, e os sinais muitas vezes demoram alguns dias a aparecer.",
     "nl": "Nee. Prei hoort, net als ui en knoflook, bij de lookfamilie (allium) en is giftig voor honden. Alle delen van de plant zijn schadelijk, ook gekookt of gedroogd. Prei kan rode bloedcellen beschadigen, en verschijnselen komen vaak pas na een paar dagen.",
-    "pl": "Nie. Por należy do rodziny czosnkowatych, tak jak cebula i czosnek, i jest toksyczny dla psów. Szkodliwe są wszystkie części rośliny, także po ugotowaniu lub wysuszeniu. Może uszkadzać czerwone krwinki, a objawy często pojawiają się dopiero po kilku dniach."
+    "pl": "Nie. Por należy do rodziny czosnkowatych, tak jak cebula i czosnek, i jest toksyczny dla psów. Szkodliwe są wszystkie części rośliny, także po ugotowaniu lub wysuszeniu. Może uszkadzać czerwone krwinki, a objawy często pojawiają się dopiero po kilku dniach.",
+    "cs": "Ne. Pórek patří stejně jako cibule a česnek mezi cibuloviny (rod Allium) a je pro psy jedovatý. Škodlivé jsou všechny části rostliny, i tepelně upravené nebo sušené. Může poškodit červené krvinky a příznaky se často objeví až po několika dnech."
   },
   "why": {
     "en": "It belongs to the allium family (onion, garlic, leek, chives), which is toxic to dogs. These plants contain compounds that damage red blood cells and can lead to anaemia. All parts and all forms are harmful: raw, cooked, dried and powdered. Stomach upset can happen with any amount; larger amounts damage the blood.",
@@ -55,7 +59,8 @@
     "it": "Appartiene alla famiglia degli allium (cipolla, aglio, porro, erba cipollina), tossica per i cani. Queste piante contengono sostanze che danneggiano i globuli rossi e possono portare all’anemia. Sono dannose tutte le parti, in qualsiasi forma: crude, cotte, secche o in polvere. Disturbi di stomaco possono comparire con qualsiasi quantità; quantità maggiori danneggiano il sangue.",
     "pt": "O alho-francês pertence à família das aliáceas (cebola, alho, alho-francês, cebolinho), que é tóxica para os cães. Estas plantas contêm compostos que danificam os glóbulos vermelhos e podem levar a anemia. Todas as partes e todas as formas fazem mal: cru, cozinhado, seco e em pó. Qualquer quantidade pode causar mal-estar de estômago; quantidades maiores danificam o sangue.",
     "nl": "Prei hoort bij de lookfamilie (ui, knoflook, prei, bieslook), die giftig is voor honden. Deze planten bevatten stoffen die rode bloedcellen beschadigen en tot bloedarmoede kunnen leiden. Alle delen en alle vormen zijn schadelijk: rauw, gekookt, gedroogd en als poeder. Maag-darmklachten kunnen bij elke hoeveelheid optreden; grotere hoeveelheden beschadigen het bloed.",
-    "pl": "Por należy do rodziny czosnkowatych (cebula, czosnek, por, szczypiorek), toksycznej dla psów. Te rośliny zawierają związki, które uszkadzają czerwone krwinki i mogą prowadzić do anemii. Szkodliwe są wszystkie części i wszystkie postacie: surowa, gotowana, suszona i w proszku. Dolegliwości żołądkowe mogą wystąpić po każdej ilości; większe ilości uszkadzają krew."
+    "pl": "Por należy do rodziny czosnkowatych (cebula, czosnek, por, szczypiorek), toksycznej dla psów. Te rośliny zawierają związki, które uszkadzają czerwone krwinki i mogą prowadzić do anemii. Szkodliwe są wszystkie części i wszystkie postacie: surowa, gotowana, suszona i w proszku. Dolegliwości żołądkowe mogą wystąpić po każdej ilości; większe ilości uszkadzają krew.",
+    "cs": "Patří mezi cibuloviny (rod Allium: cibule, česnek, pórek, pažitka), které jsou pro psy jedovaté. Tyto rostliny obsahují látky, které poškozují červené krvinky a mohou vést k chudokrevnosti (anémii). Škodlivé jsou všechny části a všechny podoby: syrová, tepelně upravená, sušená i v prášku. Podrážděný žaludek může způsobit jakékoli množství; větší množství poškozuje krev."
   },
   "signs": {
     "en": [
@@ -111,6 +116,12 @@
       "Mniejszy apetyt niż zwykle",
       "Rozstrój żołądka, nawet po małych ilościach",
       "Objawy anemii (uszkodzone czerwone krwinki), zwykle po kilku dniach"
+    ],
+    "cs": [
+      "Zvracení a průjem",
+      "Nechuť k jídlu",
+      "Podrážděný žaludek, i po malém množství",
+      "Známky chudokrevnosti (poškozené červené krvinky), obvykle o několik dní později"
     ]
   },
   "what_to_do": {
@@ -122,7 +133,8 @@
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha mangiato (porro) e più o meno quanto. Non aspettare che compaiano i sintomi: i danni al sangue di solito si vedono solo dopo qualche giorno.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota o que comeu (alho-francês) e mais ou menos quanto. Não esperes pelos sinais: os danos no sangue normalmente só se veem alguns dias depois.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat er is gegeten (prei) en ongeveer hoeveel. Wacht niet op verschijnselen: schade aan het bloed is meestal pas een paar dagen later te zien.",
-    "pl": "Od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co pies zjadł (pora) i mniej więcej ile. Nie czekaj na objawy: uszkodzenie krwi zwykle ujawnia się dopiero po kilku dniach."
+    "pl": "Od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co pies zjadł (pora) i mniej więcej ile. Nie czekaj na objawy: uszkodzenie krwi zwykle ujawnia się dopiero po kilku dniach.",
+    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co pes snědl (pórek) a zhruba kolik. Nečekejte, až se objeví příznaky: poškození krve se obvykle projeví až po několika dnech."
   },
   "serving": null,
   "child": {
@@ -134,7 +146,8 @@
     "it": "I porri fanno parte della famiglia della cipolla, quindi non sono per i cani. Dillo a un adulto se il tuo cane ne mangia un po’.",
     "pt": "O alho-francês é da família da cebola, por isso não é para cães. Avisa um adulto se o teu cão comer algum.",
     "nl": "Prei hoort bij de uienfamilie, dus het is niet voor honden. Vertel het aan een volwassene als je hond ervan eet.",
-    "pl": "Por należy do rodziny cebuli, więc nie jest dla psów. Powiedz dorosłemu, jeśli twój pies go zje."
+    "pl": "Por należy do rodziny cebuli, więc nie jest dla psów. Powiedz dorosłemu, jeśli twój pies go zje.",
+    "cs": "Pórek patří do stejné rodiny jako cibule, takže není pro psy. Když ho pes sní, řekni to dospělému."
   },
   "faq": [
     {
@@ -147,7 +160,8 @@
         "it": "Il porro è pericoloso quanto la cipolla?",
         "pt": "O alho-francês é tão perigoso como a cebola?",
         "nl": "Is prei net zo gevaarlijk als ui?",
-        "pl": "Czy por jest tak samo niebezpieczny jak cebula?"
+        "pl": "Czy por jest tak samo niebezpieczny jak cebula?",
+        "cs": "Je pórek stejně nebezpečný jako cibule?"
       },
       "a": {
         "en": "Garlic and onion are the most common causes of poisoning, but leek belongs to the same toxic plant family and should be treated the same way.",
@@ -158,7 +172,8 @@
         "it": "Aglio e cipolla sono le cause più comuni di avvelenamento, ma il porro appartiene alla stessa famiglia di piante tossiche e va considerato allo stesso modo.",
         "pt": "O alho e a cebola são as causas mais comuns de intoxicação, mas o alho-francês pertence à mesma família de plantas tóxicas e deve ser tratado da mesma forma.",
         "nl": "Knoflook en ui zijn de meest voorkomende oorzaken van vergiftiging, maar prei hoort bij dezelfde giftige plantenfamilie en moet je op dezelfde manier behandelen.",
-        "pl": "Czosnek i cebula najczęściej powodują zatrucia, ale por należy do tej samej toksycznej rodziny roślin i trzeba go traktować tak samo."
+        "pl": "Czosnek i cebula najczęściej powodują zatrucia, ale por należy do tej samej toksycznej rodziny roślin i trzeba go traktować tak samo.",
+        "cs": "Nejčastější příčinou otravy jsou česnek a cibule, pórek ale patří do stejné jedovaté skupiny rostlin a je třeba k němu přistupovat stejně."
       }
     },
     {
@@ -171,7 +186,8 @@
         "it": "È sicuro cotto o in polvere?",
         "pt": "É seguro cozinhado ou em pó?",
         "nl": "Is het veilig als het gekookt is of als poeder?",
-        "pl": "Czy po ugotowaniu lub w proszku jest bezpieczny?"
+        "pl": "Czy po ugotowaniu lub w proszku jest bezpieczny?",
+        "cs": "Je bezpečný tepelně upravený pórek nebo pórek v prášku?"
       },
       "a": {
         "en": "No. Raw, cooked, dried, powdered and liquid forms are all poisonous to dogs.",
@@ -182,7 +198,8 @@
         "it": "No. Crudo, cotto, secco, in polvere o liquido: in tutte le forme è velenoso per i cani.",
         "pt": "Não. Cru, cozinhado, seco, em pó ou líquido, todas as formas são venenosas para os cães.",
         "nl": "Nee. Rauw, gekookt, gedroogd, als poeder en vloeibaar: alle vormen zijn giftig voor honden.",
-        "pl": "Nie. Postać surowa, gotowana, suszona, w proszku i płynna – wszystkie są trujące dla psów."
+        "pl": "Nie. Postać surowa, gotowana, suszona, w proszku i płynna – wszystkie są trujące dla psów.",
+        "cs": "Ne. Syrová, tepelně upravená, sušená, prášková i tekutá podoba je pro psy jedovatá."
       }
     }
   ],
@@ -311,6 +328,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9d1b2f2b479098533ddf6c108493050100454640acab556c01ec65c13eb8bb53"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5d27f3f832bae458bc8052905e73fb46d7a3be2e946128fd7406e83c48e4b7c5"
     }
   }
 }

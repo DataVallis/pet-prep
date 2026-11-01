@@ -10,7 +10,8 @@
     "it": "Caffè",
     "pt": "Café",
     "nl": "Koffie",
-    "pl": "Kawa"
+    "pl": "Kawa",
+    "cs": "Káva"
   },
   "question": {
     "en": "Can cats drink coffee?",
@@ -21,7 +22,8 @@
     "it": "I gatti possono bere il caffè?",
     "pt": "Os gatos podem beber café?",
     "nl": "Mogen katten koffie drinken?",
-    "pl": "Czy koty mogą pić kawę?"
+    "pl": "Czy koty mogą pić kawę?",
+    "cs": "Mohou kočky pít kávu?"
   },
   "url_slug": {
     "en": "coffee",
@@ -32,7 +34,8 @@
     "it": "caffe",
     "pt": "cafe",
     "nl": "koffie",
-    "pl": "kawa"
+    "pl": "kawa",
+    "cs": "kava"
   },
   "level": "toxic",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "No. Il caffè contiene caffeina, e i gatti sono più sensibili alla caffeina rispetto alle persone. I fondi di caffè non usati e i chicchi possono causare un’intossicazione grave. Tieni il caffè fuori dalla portata del tuo gatto e chiama il veterinario se ne mangia o ne beve.",
     "pt": "Não. O café contém cafeína, e os gatos são mais sensíveis à cafeína do que as pessoas. O café moído e os grãos por usar podem causar uma intoxicação grave. Mantém o café fora do alcance e liga ao teu veterinário se o teu gato comer ou beber algum.",
     "nl": "Nee. Koffie bevat cafeïne, en katten zijn gevoeliger voor cafeïne dan mensen. Ongebruikt koffiedik en koffiebonen kunnen een ernstige vergiftiging veroorzaken. Houd koffie buiten bereik en bel je dierenarts als je kat er iets van eet of drinkt.",
-    "pl": "Nie. Kawa zawiera kofeinę, a koty są na nią bardziej wrażliwe niż ludzie. Niezaparzona kawa mielona i ziarna kawy mogą wywołać poważne zatrucie. Trzymaj kawę poza zasięgiem kota i zadzwoń do weterynarza, jeśli kot ją zje lub wypije."
+    "pl": "Nie. Kawa zawiera kofeinę, a koty są na nią bardziej wrażliwe niż ludzie. Niezaparzona kawa mielona i ziarna kawy mogą wywołać poważne zatrucie. Trzymaj kawę poza zasięgiem kota i zadzwoń do weterynarza, jeśli kot ją zje lub wypije.",
+    "cs": "Ne. Káva obsahuje kofein a kočky jsou na kofein citlivější než lidé. Nepoužitá mletá káva a kávová zrna mohou způsobit vážnou otravu. Kávu uchovávejte mimo dosah kočky, a pokud ji kočka sní nebo vypije, zavolejte veterináři."
   },
   "why": {
     "en": "Coffee is one of the main sources of caffeine at home. Cats are more sensitive to caffeine than people. Like chocolate, coffee and other caffeine-containing foods have high levels of stimulants called methylxanthines; caffeine speeds up the heart, makes cats restless and upsets the stomach.",
@@ -55,7 +59,8 @@
     "it": "Il caffè è una delle principali fonti di caffeina in casa. I gatti sono più sensibili alla caffeina rispetto alle persone. Come il cioccolato, anche il caffè e gli altri alimenti che contengono caffeina hanno alte concentrazioni di sostanze stimolanti chiamate metilxantine: la caffeina accelera il battito cardiaco, rende i gatti irrequieti e disturba lo stomaco.",
     "pt": "O café é uma das principais fontes de cafeína em casa. Os gatos são mais sensíveis à cafeína do que as pessoas. Tal como o chocolate, o café e outros alimentos com cafeína têm níveis elevados de estimulantes chamados metilxantinas; a cafeína acelera o coração, deixa os gatos agitados e faz mal ao estômago.",
     "nl": "Koffie is thuis een van de belangrijkste bronnen van cafeïne. Katten zijn gevoeliger voor cafeïne dan mensen. Net als chocolade bevatten koffie en andere producten met cafeïne veel stimulerende stoffen, methylxanthinen genoemd; cafeïne laat het hart sneller kloppen, maakt katten onrustig en geeft maagklachten.",
-    "pl": "Kawa to jedno z głównych źródeł kofeiny w domu. Koty są bardziej wrażliwe na kofeinę niż ludzie. Kawa i inne produkty z kofeiną, podobnie jak czekolada, zawierają dużo substancji pobudzających zwanych metyloksantynami; kofeina przyspiesza pracę serca, wywołuje u kota niepokój i rozstrój żołądka."
+    "pl": "Kawa to jedno z głównych źródeł kofeiny w domu. Koty są bardziej wrażliwe na kofeinę niż ludzie. Kawa i inne produkty z kofeiną, podobnie jak czekolada, zawierają dużo substancji pobudzających zwanych metyloksantynami; kofeina przyspiesza pracę serca, wywołuje u kota niepokój i rozstrój żołądka.",
+    "cs": "Káva je jedním z hlavních zdrojů kofeinu v domácnosti. Kočky jsou na kofein citlivější než lidé. Káva a další potraviny s kofeinem obsahují stejně jako čokoláda velké množství stimulačních látek zvaných methylxanthiny; kofein zrychluje tep, způsobuje u koček neklid a dráždí žaludek."
   },
   "signs": {
     "en": [
@@ -111,6 +116,12 @@
       "Nadpobudliwość",
       "Rozstrój żołądka",
       "Szybkie bicie serca lub zaburzenia rytmu serca"
+    ],
+    "cs": [
+      "Neklid, roztřesenost, kočka nevydrží ležet v klidu",
+      "Hyperaktivita",
+      "Podrážděný žaludek",
+      "Zrychlený tep nebo změny srdečního rytmu"
     ]
   },
   "what_to_do": {
@@ -122,7 +133,8 @@
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha ingerito il tuo gatto (bevanda, fondi, chicchi, bustina di tè o compresse), quanto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Toma nota do que o teu gato engoliu (bebida, café moído, grãos, saqueta de chá ou comprimidos), da quantidade e de quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat je kat heeft binnengekregen (drank, koffiedik, bonen, een theezakje of tabletten), hoeveel en wanneer. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
-    "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt. Zapisz, co połknął twój kot (napój, kawę mieloną, ziarna, torebkę herbaty czy tabletki), ile i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu."
+    "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt. Zapisz, co połknął twój kot (napój, kawę mieloną, ziarna, torebkę herbaty czy tabletki), ile i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
+    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co kočka spolkla (nápoj, mletou kávu, zrna, čajový sáček nebo tablety), kolik a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení."
   },
   "serving": null,
   "child": {
@@ -134,7 +146,8 @@
     "it": "Il caffè è una bevanda per i grandi. Rende i gatti agitati, quindi non condividerlo mai, e dillo a un adulto se il micio ne lecca un po’.",
     "pt": "O café é uma bebida de adultos. Deixa os gatos nervosos, por isso nunca o partilhes, e avisa um adulto se o gatinho beber um pouco.",
     "nl": "Koffie is een drankje voor volwassenen. Katten worden er zenuwachtig van, dus deel het nooit. Likt je poes ervan? Vertel het meteen aan een volwassene.",
-    "pl": "Kawa to napój dla dorosłych. Koty robią się od niej roztrzęsione, więc nigdy się nią nie dziel, a jeśli kotek trochę wychłepcze, powiedz dorosłemu."
+    "pl": "Kawa to napój dla dorosłych. Koty robią się od niej roztrzęsione, więc nigdy się nią nie dziel, a jeśli kotek trochę wychłepcze, powiedz dorosłemu.",
+    "cs": "Káva je pití pro dospělé. Kočky z ní jsou neklidné, tak se o ni s kočičkou nikdy nedělej, a když kočička trochu vylíže, řekni to dospělému."
   },
   "faq": [
     {
@@ -147,7 +160,8 @@
         "it": "I fondi e i chicchi di caffè sono peggio di una tazza di caffè?",
         "pt": "O café moído e os grãos são piores do que uma chávena de café?",
         "nl": "Zijn koffiedik en koffiebonen erger dan een kopje koffie?",
-        "pl": "Czy kawa mielona i ziarna są gorsze niż filiżanka kawy?"
+        "pl": "Czy kawa mielona i ziarna są gorsze niż filiżanka kawy?",
+        "cs": "Jsou mletá káva a zrna horší než šálek kávy?"
       },
       "a": {
         "en": "Yes, they can be. Pet Poison Helpline warns that unused coffee grounds or beans could cause serious toxicity in cats. Keep coffee grounds and beans where your cat can't reach them.",
@@ -158,7 +172,8 @@
         "it": "Sì, possono esserlo. Pet Poison Helpline avverte che i fondi di caffè non usati o i chicchi potrebbero causare un’intossicazione grave nei gatti. Tieni fondi e chicchi di caffè dove il tuo gatto non può arrivare.",
         "pt": "Sim, podem ser. A Pet Poison Helpline avisa que o café moído ou os grãos por usar podem causar uma intoxicação grave nos gatos. Guarda o café moído e os grãos onde o teu gato não lhes chegue.",
         "nl": "Ja, dat kan. Pet Poison Helpline waarschuwt dat ongebruikt koffiedik of ongebruikte koffiebonen een ernstige vergiftiging kunnen veroorzaken bij katten. Bewaar koffiedik en koffiebonen waar je kat er niet bij kan.",
-        "pl": "Tak, mogą być. Pet Poison Helpline ostrzega, że niezaparzona kawa mielona lub ziarna kawy mogą wywołać u kotów poważne zatrucie. Trzymaj kawę mieloną i ziarna tam, gdzie kot ich nie dosięgnie."
+        "pl": "Tak, mogą być. Pet Poison Helpline ostrzega, że niezaparzona kawa mielona lub ziarna kawy mogą wywołać u kotów poważne zatrucie. Trzymaj kawę mieloną i ziarna tam, gdzie kot ich nie dosięgnie.",
+        "cs": "Ano, mohou být. Pet Poison Helpline varuje, že nepoužitá mletá káva nebo kávová zrna by mohly u koček způsobit vážnou otravu. Mletou kávu i zrna uchovávejte tam, kam kočka nedosáhne."
       }
     }
   ],
@@ -272,6 +287,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ed62704c80528189cce7c63d7e5b847345bff15ee31d6e815a15c1f3d5e8b67d"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "eede1478eb90e2af2c728d40ee852891960cfaab20a92dfa04075f9b2dec5a41"
     }
   }
 }

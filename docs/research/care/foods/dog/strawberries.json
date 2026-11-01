@@ -3,57 +3,69 @@
   "species": "dog",
   "name": {
     "en": "Strawberries",
-    "sl": "Jagode"
+    "sl": "Jagode",
+    "cs": "Jahody"
   },
   "question": {
     "en": "Can dogs eat strawberries?",
-    "sl": "Ali lahko psi jedo jagode?"
+    "sl": "Ali lahko psi jedo jagode?",
+    "cs": "Mohou psi jíst jahody?"
   },
   "url_slug": {
     "en": "strawberries",
-    "sl": "jagode"
+    "sl": "jagode",
+    "cs": "jahody"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in moderation. Strawberries are full of antioxidants, fibre and vitamin C, but they contain natural sugar, and too many at once can cause loose stools or diarrhoea. Wash them, remove the stems and leaves, and cut them small.",
-    "sl": "Da, zmerno. Jagode so polne antioksidantov, vlaknin in vitamina C, a vsebujejo naravni sladkor, preveč naenkrat pa lahko povzroči mehko blato ali drisko. Operite jih, odstranite peclje in liste ter jih narežite na majhne koščke."
+    "sl": "Da, zmerno. Jagode so polne antioksidantov, vlaknin in vitamina C, a vsebujejo naravni sladkor, preveč naenkrat pa lahko povzroči mehko blato ali drisko. Operite jih, odstranite peclje in liste ter jih narežite na majhne koščke.",
+    "cs": "Ano, s mírou. Jahody jsou plné antioxidantů, vlákniny a vitaminu C, obsahují ale přirozený cukr a příliš mnoho najednou může způsobit řidší stolici nebo průjem. Omyjte je, odstraňte stopky a lístky a nakrájejte je na malé kousky."
   },
   "why": {
     "en": "The stems and leaves are not toxic but can cause stomach upset, and whole strawberries can be a choking risk, especially for smaller breeds. Avoid strawberries in syrup or canned strawberries, which have too much sugar and may even contain artificial sweeteners that are toxic to dogs.",
-    "sl": "Peclji in listi niso strupeni, a lahko povzročijo prebavne težave, cele jagode pa lahko predstavljajo nevarnost zadušitve, zlasti pri manjših pasmah. Izogibajte se jagodam v sirupu ali konzerviranim jagodam, ki imajo preveč sladkorja in lahko celo vsebujejo umetna sladila, strupena za pse."
+    "sl": "Peclji in listi niso strupeni, a lahko povzročijo prebavne težave, cele jagode pa lahko predstavljajo nevarnost zadušitve, zlasti pri manjših pasmah. Izogibajte se jagodam v sirupu ali konzerviranim jagodam, ki imajo preveč sladkorja in lahko celo vsebujejo umetna sladila, strupena za pse.",
+    "cs": "Stopky a lístky nejsou jedovaté, mohou ale podráždit žaludek, a celé jahody mohou způsobit dušení, zejména u menších plemen. Vyhněte se jahodám v sirupu nebo z konzervy, které mají příliš mnoho cukru a mohou dokonce obsahovat umělá sladidla, která jsou pro psy jedovatá."
   },
   "signs": null,
   "what_to_do": {
     "en": "If you notice anything different after your dog eats strawberries, stop giving them and check with your vet.",
-    "sl": "Če po jagodah pri psu opazite kaj nenavadnega, mu jih ne dajajte več in se posvetujte z veterinarjem."
+    "sl": "Če po jagodah pri psu opazite kaj nenavadnega, mu jih ne dajajte več in se posvetujte z veterinarjem.",
+    "cs": "Pokud si po jahodách u svého psa všimnete jakékoli změny, přestaňte mu je dávat a poraďte se s veterinářem."
   },
   "serving": {
     "en": "Washed thoroughly, stems and leaves removed, cut into small pieces, or mashed for small dogs; fresh or frozen, never in syrup or canned.",
-    "sl": "Temeljito oprane, brez pecljev in listov, narezane na majhne koščke ali za majhne pse pretlačene; sveže ali zamrznjene, nikoli v sirupu ali iz konzerve."
+    "sl": "Temeljito oprane, brez pecljev in listov, narezane na majhne koščke ali za majhne pse pretlačene; sveže ali zamrznjene, nikoli v sirupu ali iz konzerve.",
+    "cs": "Důkladně omyté, bez stopek a lístků, nakrájené na malé kousky, pro malé psy rozmačkané; čerstvé nebo mražené, nikdy v sirupu ani z konzervy."
   },
   "child": {
     "en": "Dogs can have a little strawberry! A grown-up washes it, takes off the green leaves and cuts it small.",
-    "sl": "Psi lahko dobijo malo jagode! Odrasel jo opere, odstrani zelene liste in jo nareže na majhne koščke."
+    "sl": "Psi lahko dobijo malo jagode! Odrasel jo opere, odstrani zelene liste in jo nareže na majhne koščke.",
+    "cs": "Pejsci můžou dostat kousek jahody! Dospělý ji omyje, utrhne zelené lístky a nakrájí ji na malé kousky."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat frozen strawberries?",
-        "sl": "Ali lahko psi jedo zamrznjene jagode?"
+        "sl": "Ali lahko psi jedo zamrznjene jagode?",
+        "cs": "Mohou psi jíst mražené jahody?"
       },
       "a": {
         "en": "Yes. Frozen strawberries cut into suitably sized pieces can be a safe, refreshing treat.",
-        "sl": "Da. Zamrznjene jagode, narezane na primerno velike koščke, so lahko varen in osvežilen priboljšek."
+        "sl": "Da. Zamrznjene jagode, narezane na primerno velike koščke, so lahko varen in osvežilen priboljšek.",
+        "cs": "Ano. Mražené jahody nakrájené na vhodně velké kousky mohou být bezpečným, osvěžujícím pamlskem."
       }
     },
     {
       "q": {
         "en": "Should I ask my vet first?",
-        "sl": "Naj najprej vprašam veterinarja?"
+        "sl": "Naj najprej vprašam veterinarja?",
+        "cs": "Mám se nejdřív zeptat veterináře?"
       },
       "a": {
         "en": "Whenever you introduce a new food to your dog's diet, it is best to talk to your vet first.",
-        "sl": "Kadar psu uvajate novo hrano, se je najbolje najprej pogovoriti z veterinarjem."
+        "sl": "Kadar psu uvajate novo hrano, se je najbolje najprej pogovoriti z veterinarjem.",
+        "cs": "Kdykoli zařazujete do jídelníčku psa novou potravinu, je nejlepší se nejdřív poradit s veterinářem."
       }
     }
   ],
@@ -128,6 +140,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "515bd5af2cf4b8a3adb6d2eab5ec3f7529f91405b931b7aa3d5fa13369a3b705"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c1a60af0c1d9c26c0a1869b0572f991df029d1c2828a9954473d67044a8cd86c"
     }
   }
 }

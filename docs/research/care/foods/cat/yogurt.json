@@ -10,7 +10,8 @@
     "it": "Yogurt",
     "pt": "Iogurte",
     "nl": "Yoghurt",
-    "pl": "Jogurt"
+    "pl": "Jogurt",
+    "cs": "Jogurt"
   },
   "question": {
     "en": "Can cats eat yogurt?",
@@ -21,7 +22,8 @@
     "it": "I gatti possono mangiare lo yogurt?",
     "pt": "Os gatos podem comer iogurte?",
     "nl": "Mogen katten yoghurt eten?",
-    "pl": "Czy koty mogą jeść jogurt?"
+    "pl": "Czy koty mogą jeść jogurt?",
+    "cs": "Mohou kočky jíst jogurt?"
   },
   "url_slug": {
     "en": "yogurt",
@@ -32,7 +34,8 @@
     "it": "yogurt",
     "pt": "iogurte",
     "nl": "yoghurt",
-    "pl": "jogurt"
+    "pl": "jogurt",
+    "cs": "jogurt"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "No, è meglio evitare lo yogurt. È un latticino, e i gatti adulti hanno poco enzima per digerire lo zucchero del latte, quindi i latticini possono causare diarrea o mal di stomaco. Le guide veterinarie sconsigliano di dare latticini ai gatti.",
     "pt": "Não, é melhor evitar o iogurte. É um laticínio, e os gatos adultos têm pouca da enzima que digere o açúcar do leite, por isso os laticínios podem causar diarreia ou mal-estar de estômago. Os guias veterinários desaconselham dar laticínios aos gatos.",
     "nl": "Nee, yoghurt kun je beter vermijden. Het is een zuivelproduct, en volwassen katten hebben weinig van het enzym dat melksuiker verteert, dus zuivel kan diarree of maagklachten veroorzaken. Diergeneeskundige gidsen raden af katten zuivelproducten te geven.",
-    "pl": "Nie, lepiej unikać jogurtu. To produkt mleczny, a dorosłe koty mają mało enzymu trawiącego cukier mleczny, więc nabiał może wywołać biegunkę lub rozstrój żołądka. Poradniki weterynaryjne odradzają podawanie kotom produktów mlecznych."
+    "pl": "Nie, lepiej unikać jogurtu. To produkt mleczny, a dorosłe koty mają mało enzymu trawiącego cukier mleczny, więc nabiał może wywołać biegunkę lub rozstrój żołądka. Poradniki weterynaryjne odradzają podawanie kotom produktów mlecznych.",
+    "cs": "Ne, jogurtu se raději vyhněte. Je to mléčný výrobek a dospělé kočky mají málo enzymu, který tráví mléčný cukr, takže mléčné výrobky mohou způsobit průjem nebo podráždění žaludku. Veterinární příručky nedoporučují krmit kočky mléčnými výrobky."
   },
   "why": {
     "en": "Adult cats have little lactase, the enzyme that breaks down lactose, so milk and other dairy-based products can cause diarrhoea or other digestive upset. Many cats are lactose intolerant. Dairy products are also high in fat and can add to weight gain. Plant-based alternatives are not automatically safe, as some contain ingredients that could be toxic to cats.",
@@ -55,7 +59,8 @@
     "it": "I gatti adulti hanno poca lattasi, l’enzima che scompone il lattosio, quindi il latte e gli altri prodotti a base di latte possono causare diarrea o altri disturbi digestivi. Molti gatti sono intolleranti al lattosio. I latticini sono anche ricchi di grassi e possono contribuire all’aumento di peso. Le alternative vegetali non sono automaticamente sicure, perché alcune contengono ingredienti che potrebbero essere tossici per i gatti.",
     "pt": "Os gatos adultos têm pouca lactase, a enzima que decompõe a lactose, por isso o leite e outros produtos lácteos podem causar diarreia ou outros problemas digestivos. Muitos gatos são intolerantes à lactose. Os laticínios também têm muita gordura e podem contribuir para o aumento de peso. As alternativas vegetais não são automaticamente seguras, porque algumas contêm ingredientes que podem ser tóxicos para os gatos.",
     "nl": "Volwassen katten hebben weinig lactase, het enzym dat lactose afbreekt, dus melk en andere zuivelproducten kunnen diarree of andere spijsverteringsklachten veroorzaken. Veel katten zijn lactose-intolerant. Zuivelproducten bevatten ook veel vet en kunnen bijdragen aan gewichtstoename. Plantaardige alternatieven zijn niet vanzelf veilig, want sommige bevatten ingrediënten die giftig kunnen zijn voor katten.",
-    "pl": "Dorosłe koty mają mało laktazy, czyli enzymu rozkładającego laktozę, więc mleko i inne produkty na bazie mleka mogą wywołać biegunkę lub inne problemy trawienne. Wiele kotów nie toleruje laktozy. Produkty mleczne zawierają też dużo tłuszczu i mogą sprzyjać tyciu. Zamienniki roślinne nie są automatycznie bezpieczne, bo niektóre zawierają składniki, które mogą być dla kotów toksyczne."
+    "pl": "Dorosłe koty mają mało laktazy, czyli enzymu rozkładającego laktozę, więc mleko i inne produkty na bazie mleka mogą wywołać biegunkę lub inne problemy trawienne. Wiele kotów nie toleruje laktozy. Produkty mleczne zawierają też dużo tłuszczu i mogą sprzyjać tyciu. Zamienniki roślinne nie są automatycznie bezpieczne, bo niektóre zawierają składniki, które mogą być dla kotów toksyczne.",
+    "cs": "Dospělé kočky mají málo laktázy, enzymu, který štěpí laktózu, takže mléko a další mléčné výrobky mohou způsobit průjem nebo jiné trávicí potíže. Mnoho koček laktózu nesnáší. Mléčné výrobky jsou také tučné a mohou přispívat k přibírání na váze. Rostlinné alternativy nejsou automaticky bezpečné, protože některé obsahují složky, které by mohly být pro kočky toxické."
   },
   "signs": {
     "en": [
@@ -111,6 +116,12 @@
       "Wymioty",
       "Rozstrój żołądka",
       "Gazy lub wzdęcia"
+    ],
+    "cs": [
+      "Průjem",
+      "Zvracení",
+      "Podrážděný žaludek",
+      "Plynatost nebo nadýmání"
     ]
   },
   "what_to_do": {
@@ -122,7 +133,8 @@
     "it": "Se il tuo gatto ha mangiato dello yogurt, controlla se compaiono diarrea, vomito o cambiamenti nel comportamento, e chiedi consiglio al veterinario se sembra stare male.",
     "pt": "Se o teu gato comeu iogurte, vigia se aparecem diarreia, vómitos ou mudanças de comportamento, e contacta o teu veterinário para pedir conselho se ele parecer doente.",
     "nl": "Heeft je kat yoghurt gegeten? Let op diarree, braken of veranderd gedrag, en vraag je dierenarts om advies als ze ziek lijkt.",
-    "pl": "Jeśli twój kot zjadł jogurt, obserwuj, czy nie ma biegunki, wymiotów lub zmian w zachowaniu, i poradź się weterynarza, jeśli źle się czuje."
+    "pl": "Jeśli twój kot zjadł jogurt, obserwuj, czy nie ma biegunki, wymiotów lub zmian w zachowaniu, i poradź się weterynarza, jeśli źle się czuje.",
+    "cs": "Pokud vaše kočka snědla jogurt, sledujte, zda se neobjeví průjem, zvracení nebo změna chování, a pokud se nezdá v pořádku, obraťte se o radu na veterináře."
   },
   "serving": null,
   "child": {
@@ -134,7 +146,8 @@
     "it": "Lo yogurt è un cibo per le persone. Può far venire il mal di pancia a un gatto, quindi tienilo nella tua ciotola, non nella sua.",
     "pt": "O iogurte é comida de pessoas. Pode dar dor de barriga ao gato, por isso deixa-o na tua taça, não na dele.",
     "nl": "Yoghurt is eten voor mensen. Een kat kan er buikpijn van krijgen, dus houd het in jouw kommetje, niet in dat van je kat.",
-    "pl": "Jogurt to jedzenie dla ludzi. Może rozstroić kotu brzuszek, więc niech zostanie w twojej misce, a nie w kociej."
+    "pl": "Jogurt to jedzenie dla ludzi. Może rozstroić kotu brzuszek, więc niech zostanie w twojej misce, a nie w kociej.",
+    "cs": "Jogurt je jídlo pro lidi. Kočce může rozbolet bříško, takže ho nech ve své misce, ne v kočičí."
   },
   "faq": [
     {
@@ -147,7 +160,8 @@
         "it": "Lo yogurt senza latte è meglio per i gatti?",
         "pt": "O iogurte vegetal, sem laticínios, é melhor para os gatos?",
         "nl": "Is zuivelvrije yoghurt beter voor katten?",
-        "pl": "Czy jogurt bez nabiału jest lepszy dla kotów?"
+        "pl": "Czy jogurt bez nabiału jest lepszy dla kotów?",
+        "cs": "Je pro kočky lepší rostlinný jogurt?"
       },
       "a": {
         "en": "Not necessarily. Many dairy alternatives contain ingredients that could be toxic to cats, so they are best avoided too.",
@@ -158,7 +172,8 @@
         "it": "Non necessariamente. Molte alternative ai latticini contengono ingredienti che potrebbero essere tossici per i gatti, quindi è meglio evitare anche quelle.",
         "pt": "Não necessariamente. Muitas alternativas aos laticínios contêm ingredientes que podem ser tóxicos para os gatos, por isso também é melhor evitá-las.",
         "nl": "Niet per se. Veel zuivelvervangers bevatten ingrediënten die giftig kunnen zijn voor katten, dus die kun je ook beter vermijden.",
-        "pl": "Niekoniecznie. Wiele zamienników nabiału zawiera składniki, które mogą być dla kotów toksyczne, więc lepiej ich też unikać."
+        "pl": "Niekoniecznie. Wiele zamienników nabiału zawiera składniki, które mogą być dla kotów toksyczne, więc lepiej ich też unikać.",
+        "cs": "Ne nutně. Mnoho rostlinných náhražek mléčných výrobků obsahuje složky, které by mohly být pro kočky toxické, proto je lepší se jim také vyhnout."
       }
     }
   ],
@@ -256,6 +271,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1815eca97022e3cfd77bd39117fbf114a9dc6fd182a3d87103d9e1eb82cae1e3"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f59cb9ac20103dbf908d85a54d27b39573bf516f6b92e6655572ba015596b42e"
     }
   }
 }

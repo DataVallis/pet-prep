@@ -10,7 +10,8 @@
     "it": "Salmone",
     "pt": "Salmão",
     "nl": "Zalm",
-    "pl": "Łosoś"
+    "pl": "Łosoś",
+    "cs": "Losos"
   },
   "question": {
     "en": "Can dogs eat salmon?",
@@ -21,7 +22,8 @@
     "it": "I cani possono mangiare il salmone?",
     "pt": "Os cães podem comer salmão?",
     "nl": "Mogen honden zalm eten?",
-    "pl": "Czy psy mogą jeść łososia?"
+    "pl": "Czy psy mogą jeść łososia?",
+    "cs": "Mohou psi jíst lososa?"
   },
   "url_slug": {
     "en": "salmon",
@@ -32,7 +34,8 @@
     "it": "salmone",
     "pt": "salmao",
     "nl": "zalm",
-    "pl": "losos"
+    "pl": "losos",
+    "cs": "losos"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "Sì, se è ben cotto, semplice e senza lische. Il salmone cotto è una buona fonte di proteine e di grassi omega-3. Il salmone crudo o poco cotto non è sicuro, e quello affumicato è troppo salato: tienili lontani dal tuo cane.",
     "pt": "Sim, se estiver bem cozinhado, simples e sem espinhas. O salmão cozinhado é uma boa fonte de proteína e de gorduras ómega-3. O salmão cru ou mal cozinhado não é seguro, e o salmão fumado é salgado demais, por isso mantém-nos longe do teu cão.",
     "nl": "Ja, als hij helemaal gaar, puur en zonder graten is. Gekookte zalm is een goede bron van eiwit en omega-3-vetzuren. Rauwe of niet goed gare zalm is niet veilig, en gerookte zalm is te zout, dus houd die bij je hond weg.",
-    "pl": "Tak, jeśli jest dobrze ugotowany, zwykły i bez ości. Gotowany łosoś to dobre źródło białka i kwasów tłuszczowych omega-3. Surowy lub niedogotowany łosoś nie jest bezpieczny, a łosoś wędzony jest za słony, więc trzymaj je z dala od psa."
+    "pl": "Tak, jeśli jest dobrze ugotowany, zwykły i bez ości. Gotowany łosoś to dobre źródło białka i kwasów tłuszczowych omega-3. Surowy lub niedogotowany łosoś nie jest bezpieczny, a łosoś wędzony jest za słony, więc trzymaj je z dala od psa.",
+    "cs": "Ano, pokud je důkladně tepelně upravený, bez přísad a bez kostí. Tepelně upravený losos je dobrým zdrojem bílkovin a omega-3 mastných kyselin. Syrový nebo nedostatečně tepelně upravený losos bezpečný není a uzený losos je příliš slaný, proto je psovi nedávejte."
   },
   "why": {
     "en": "Raw salmon can carry parasites and bacteria; in the Pacific Northwest of the USA it can cause salmon poisoning disease, which is serious if untreated. Salmon has small, brittle bones that can cause choking. Smoked salmon and lox are high in salt. Seasonings, oils and sauces don't belong on a dog's portion.",
@@ -55,7 +59,8 @@
     "it": "Il salmone crudo può portare parassiti e batteri; nel Pacifico nord-occidentale degli Stati Uniti può causare la malattia da avvelenamento da salmone, grave se non curata. Il salmone ha lische piccole e fragili che possono causare soffocamento. Il salmone affumicato e il lox sono molto salati. Condimenti, oli e salse non vanno nella porzione del cane.",
     "pt": "O salmão cru pode ter parasitas e bactérias; no noroeste do Pacífico, nos EUA, pode causar a doença do envenenamento por salmão, que é grave se não for tratada. O salmão tem espinhas pequenas e quebradiças que podem causar engasgamento. O salmão fumado e o lox têm muito sal. Temperos, óleos e molhos não devem ir para a porção do cão.",
     "nl": "Rauwe zalm kan parasieten en bacteriën bevatten; in het noordwesten van de VS (Pacific Northwest) kan hij zalmvergiftiging (salmon poisoning disease) veroorzaken, wat zonder behandeling ernstig is. Zalm heeft kleine, brosse graten waarin een hond kan stikken. Gerookte zalm en lox (gepekelde zalm) bevatten veel zout. Kruiden, olie en sauzen horen niet op de portie van een hond.",
-    "pl": "Surowy łosoś może przenosić pasożyty i bakterie; na północno-zachodnim wybrzeżu Pacyfiku w USA może wywołać chorobę łososiową, która bez leczenia jest groźna. Łosoś ma drobne, kruche ości, które mogą spowodować zadławienie. Łosoś wędzony i lox (solony łosoś) mają dużo soli. Przyprawy, oleje i sosy nie powinny trafiać do psiej porcji."
+    "pl": "Surowy łosoś może przenosić pasożyty i bakterie; na północno-zachodnim wybrzeżu Pacyfiku w USA może wywołać chorobę łososiową, która bez leczenia jest groźna. Łosoś ma drobne, kruche ości, które mogą spowodować zadławienie. Łosoś wędzony i lox (solony łosoś) mają dużo soli. Przyprawy, oleje i sosy nie powinny trafiać do psiej porcji.",
+    "cs": "Syrový losos může obsahovat parazity a bakterie; na tichomořském severozápadě USA může způsobit otravu lososem, která je bez léčby vážná. Losos má drobné, křehké kosti, které mohou způsobit dušení. Uzený a nakládaný losos (lox) obsahuje hodně soli. Koření, oleje a omáčky do psí porce nepatří."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "it": "Se il tuo cane ha mangiato salmone crudo, soprattutto del Pacifico nord-occidentale degli Stati Uniti, chiama il veterinario e diglielo; controlla se compaiono febbre, debolezza, perdita di appetito, vomito o diarrea. Se ha ingoiato delle lische e sta soffocando, chiama subito il veterinario.",
     "pt": "Se o teu cão comeu salmão cru, sobretudo do noroeste do Pacífico, nos EUA, liga ao teu veterinário e diz-lhe isso; vigia se há febre, fraqueza, perda de apetite, vómitos ou diarreia. Se o teu cão engoliu espinhas e está a engasgar-se, liga imediatamente ao teu veterinário.",
     "nl": "Heeft je hond rauwe zalm gegeten, vooral uit het noordwesten van de VS? Bel dan je dierenarts en vertel het erbij; let op koorts, zwakte, weinig eetlust, braken of diarree. Heeft je hond graten ingeslikt en stikt hij? Bel je dierenarts dan meteen.",
-    "pl": "Jeśli twój pies zjadł surowego łososia, zwłaszcza z północno-zachodniego wybrzeża Pacyfiku w USA, zadzwoń do weterynarza i powiedz mu o tym; obserwuj, czy nie pojawiają się gorączka, osłabienie, utrata apetytu, wymioty lub biegunka. Jeśli pies połknął ości i się dławi, od razu zadzwoń do weterynarza."
+    "pl": "Jeśli twój pies zjadł surowego łososia, zwłaszcza z północno-zachodniego wybrzeża Pacyfiku w USA, zadzwoń do weterynarza i powiedz mu o tym; obserwuj, czy nie pojawiają się gorączka, osłabienie, utrata apetytu, wymioty lub biegunka. Jeśli pies połknął ości i się dławi, od razu zadzwoń do weterynarza.",
+    "cs": "Pokud váš pes snědl syrového lososa, zejména z tichomořského severozápadu USA, zavolejte veterináři a řekněte mu to; sledujte, zda nemá horečku, není slabý, nemá nechuť k jídlu, nezvrací nebo nemá průjem. Pokud pes spolkl kosti a dusí se, zavolejte veterináři hned."
   },
   "serving": {
     "en": "Fully cooked (baked, steamed or grilled), plain, no seasoning, oils or sauces, boneless fillet; never raw or smoked.",
@@ -78,7 +84,8 @@
     "it": "Ben cotto (al forno, al vapore o alla griglia), semplice, senza condimenti, oli o salse, in filetto senza lische; mai crudo o affumicato.",
     "pt": "Bem cozinhado (no forno, a vapor ou grelhado), simples, sem temperos, óleos ou molhos, em filete sem espinhas; nunca cru nem fumado.",
     "nl": "Helemaal gaar (uit de oven, gestoomd of gegrild), puur, zonder kruiden, olie of sauzen, filet zonder graten; nooit rauw of gerookt.",
-    "pl": "Dobrze ugotowany (pieczony, gotowany na parze lub grillowany), zwykły, bez przypraw, olejów i sosów, filet bez ości; nigdy surowy ani wędzony."
+    "pl": "Dobrze ugotowany (pieczony, gotowany na parze lub grillowany), zwykły, bez przypraw, olejów i sosów, filet bez ości; nigdy surowy ani wędzony.",
+    "cs": "Důkladně tepelně upravený (pečený, dušený v páře nebo grilovaný), bez koření, olejů a omáček, filet bez kostí; nikdy syrový ani uzený."
   },
   "child": {
     "en": "Cooked salmon without bones can be a healthy treat for a dog. Raw or smoked salmon is not for dogs.",
@@ -89,7 +96,8 @@
     "it": "Il salmone cotto senza lische può essere un premio sano per un cane. Il salmone crudo o affumicato non è per i cani.",
     "pt": "O salmão cozinhado e sem espinhas pode ser uma guloseima saudável para um cão. O salmão cru ou fumado não é para cães.",
     "nl": "Gekookte zalm zonder graten kan een gezond snoepje zijn voor een hond. Rauwe of gerookte zalm is niet voor honden.",
-    "pl": "Gotowany łosoś bez ości może być zdrowym smakołykiem dla psa. Surowy lub wędzony łosoś nie jest dla psów."
+    "pl": "Gotowany łosoś bez ości może być zdrowym smakołykiem dla psa. Surowy lub wędzony łosoś nie jest dla psów.",
+    "cs": "Uvařený losos bez kostí může být pro psa zdravý pamlsek. Syrový nebo uzený losos pro psy není."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "it": "I cani possono mangiare il salmone affumicato?",
         "pt": "Os cães podem comer salmão fumado?",
         "nl": "Mogen honden gerookte zalm eten?",
-        "pl": "Czy psy mogą jeść wędzonego łososia?"
+        "pl": "Czy psy mogą jeść wędzonego łososia?",
+        "cs": "Mohou psi jíst uzeného lososa?"
       },
       "a": {
         "en": "It isn't a good choice: smoked salmon and lox are high in salt.",
@@ -113,7 +122,8 @@
         "it": "Non è una buona scelta: il salmone affumicato e il lox sono molto salati.",
         "pt": "Não é uma boa escolha: o salmão fumado e o lox têm muito sal.",
         "nl": "Dat is geen goede keuze: gerookte zalm en lox (gepekelde zalm) bevatten veel zout.",
-        "pl": "To nie jest dobry wybór: łosoś wędzony i lox (solony łosoś) mają dużo soli."
+        "pl": "To nie jest dobry wybór: łosoś wędzony i lox (solony łosoś) mają dużo soli.",
+        "cs": "Není to dobrá volba: uzený a nakládaný losos (lox) obsahuje hodně soli."
       }
     },
     {
@@ -126,7 +136,8 @@
         "it": "Il salmone nel cibo per cani è sicuro?",
         "pt": "O salmão na ração para cães é seguro?",
         "nl": "Is zalm in hondenvoer veilig?",
-        "pl": "Czy łosoś w karmie dla psów jest bezpieczny?"
+        "pl": "Czy łosoś w karmie dla psów jest bezpieczny?",
+        "cs": "Je losos v krmivu pro psy bezpečný?"
       },
       "a": {
         "en": "Salmon in commercial diets is typically safe because it is cooked.",
@@ -137,7 +148,8 @@
         "it": "Il salmone negli alimenti industriali per cani di solito è sicuro, perché è cotto.",
         "pt": "O salmão nas rações comerciais é normalmente seguro porque está cozinhado.",
         "nl": "Zalm in commercieel hondenvoer is meestal veilig, omdat hij gekookt is.",
-        "pl": "Łosoś w gotowych karmach jest zazwyczaj bezpieczny, bo jest ugotowany."
+        "pl": "Łosoś w gotowych karmach jest zazwyczaj bezpieczny, bo jest ugotowany.",
+        "cs": "Losos v komerčních krmivech je obvykle bezpečný, protože je tepelně upravený."
       }
     }
   ],
@@ -247,6 +259,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6f8b6794990c60786ea0e7bec66a730f8f7a79a8165b4d0bc2649b42b0b61853"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1cdfa1662e0f898ae19e289438c20672d2ddfec79e6bf2c8e04b5b4b0bd76f82"
     }
   }
 }
