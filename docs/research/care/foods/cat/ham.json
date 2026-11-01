@@ -7,7 +7,8 @@
     "de": "Schinken",
     "fr": "Jambon",
     "es": "Jamón",
-    "it": "Prosciutto"
+    "it": "Prosciutto",
+    "pt": "Fiambre"
   },
   "question": {
     "en": "Can cats eat ham?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Katzen Schinken fressen?",
     "fr": "Les chats peuvent-ils manger du jambon ?",
     "es": "¿Pueden los gatos comer jamón?",
-    "it": "I gatti possono mangiare il prosciutto?"
+    "it": "I gatti possono mangiare il prosciutto?",
+    "pt": "Os gatos podem comer fiambre?"
   },
   "url_slug": {
     "en": "ham",
@@ -23,7 +25,8 @@
     "de": "schinken",
     "fr": "jambon",
     "es": "jamon",
-    "it": "prosciutto"
+    "it": "prosciutto",
+    "pt": "fiambre"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Besser nicht. Schinken ist fett und salzreich, was die Verdauung einer Katze stören und das Risiko einer Bauchspeicheldrüsenentzündung (Pankreatitis) erhöhen kann. Mit Zwiebeln oder Knoblauch zubereiteter Schinken ist für Katzen giftig. Ein Tierarzt der University of Georgia empfiehlt, ganz auf Schinken zu verzichten.",
     "fr": "Mieux vaut s’en abstenir. Le jambon est gras et très salé, ce qui peut perturber la digestion du chat et augmenter le risque de pancréatite. Le jambon cuisiné avec de l’oignon ou de l’ail est toxique pour les chats. Un vétérinaire de l’université de Géorgie recommande d’éviter complètement le jambon.",
     "es": "Es mejor no dárselo. El jamón es graso y tiene mucha sal, lo que puede sentarle mal a la digestión de un gato y aumentar el riesgo de pancreatitis. El jamón cocinado con cebolla o ajo es tóxico para los gatos. Un veterinario de la Universidad de Georgia recomienda evitar el jamón por completo.",
-    "it": "Meglio di no. Il prosciutto è grasso e molto salato, e questo può disturbare la digestione del gatto e aumentare il rischio di pancreatite. Il prosciutto cucinato con cipolla o aglio è tossico per i gatti. Un veterinario dell’Università della Georgia consiglia di evitarlo del tutto."
+    "it": "Meglio di no. Il prosciutto è grasso e molto salato, e questo può disturbare la digestione del gatto e aumentare il rischio di pancreatite. Il prosciutto cucinato con cipolla o aglio è tossico per i gatti. Un veterinario dell’Università della Georgia consiglia di evitarlo del tutto.",
+    "pt": "É melhor não. O fiambre é gordo e tem muito sal, o que pode fazer mal à digestão do gato e aumentar o risco de pancreatite. O fiambre cozinhado com cebola ou alho é tóxico para gatos. Um veterinário da Universidade da Geórgia recomenda evitar completamente o fiambre."
   },
   "why": {
     "en": "Ham is a fatty meat that is also high in sodium, and both can cause health problems. Too much fat affects the digestive tract, especially the pancreas. Seasonings such as onion or garlic make it toxic. Small amounts may not be extremely harmful, but it is not a good treat. Salty food can also leave cats more dehydrated, and cats with kidney, heart or urinary problems should especially avoid ham.",
@@ -40,7 +44,8 @@
     "de": "Schinken ist ein fettes Fleisch und zugleich reich an Natrium; beides kann gesundheitliche Probleme verursachen. Zu viel Fett belastet den Verdauungstrakt, besonders die Bauchspeicheldrüse. Gewürze wie Zwiebeln oder Knoblauch machen ihn giftig. Kleine Mengen sind vielleicht nicht extrem schädlich, ein gutes Leckerli ist Schinken aber nicht. Salziges Futter kann Katzen außerdem stärker austrocknen, und Katzen mit Nieren-, Herz- oder Harnwegsproblemen sollten Schinken besonders meiden.",
     "fr": "Le jambon est une viande grasse, également riche en sodium, et les deux peuvent causer des problèmes de santé. Trop de graisse affecte l’appareil digestif, en particulier le pancréas. Les assaisonnements comme l’oignon ou l’ail le rendent toxique. Une petite quantité n’est peut-être pas très nocive, mais ce n’est pas une bonne friandise. Les aliments salés peuvent aussi déshydrater davantage les chats, et les chats souffrant de problèmes rénaux, cardiaques ou urinaires doivent tout particulièrement éviter le jambon.",
     "es": "El jamón es una carne grasa que además tiene mucho sodio, y ambas cosas pueden causar problemas de salud. Demasiada grasa afecta al aparato digestivo, sobre todo al páncreas. Condimentos como la cebolla o el ajo lo vuelven tóxico. Puede que pequeñas cantidades no sean extremadamente dañinas, pero no es un buen premio. La comida salada también puede deshidratar más a los gatos, y los gatos con problemas de riñón, corazón o vías urinarias deberían evitar el jamón especialmente.",
-    "it": "Il prosciutto è una carne grassa e ricca di sodio, ed entrambi possono causare problemi di salute. Troppi grassi colpiscono l’apparato digerente, soprattutto il pancreas. Condimenti come cipolla o aglio lo rendono tossico. Piccole quantità potrebbero non essere molto dannose, ma non è un buon premio. I cibi salati possono anche disidratare di più i gatti, e i gatti con problemi renali, cardiaci o urinari dovrebbero evitare il prosciutto in particolare."
+    "it": "Il prosciutto è una carne grassa e ricca di sodio, ed entrambi possono causare problemi di salute. Troppi grassi colpiscono l’apparato digerente, soprattutto il pancreas. Condimenti come cipolla o aglio lo rendono tossico. Piccole quantità potrebbero non essere molto dannose, ma non è un buon premio. I cibi salati possono anche disidratare di più i gatti, e i gatti con problemi renali, cardiaci o urinari dovrebbero evitare il prosciutto in particolare.",
+    "pt": "O fiambre é uma carne gorda e também rica em sódio, e ambos podem causar problemas de saúde. A gordura em excesso afeta o aparelho digestivo, sobretudo o pâncreas. Temperos como a cebola ou o alho tornam-no tóxico. Pequenas quantidades podem não ser extremamente prejudiciais, mas não é uma boa guloseima. A comida salgada também pode deixar os gatos mais desidratados, e os gatos com problemas renais, cardíacos ou urinários devem evitar especialmente o fiambre."
   },
   "signs": {
     "en": [
@@ -72,6 +77,11 @@
       "Vomito",
       "Diarrea",
       "Mal di pancia"
+    ],
+    "pt": [
+      "Vómitos",
+      "Diarreia",
+      "Mal-estar de barriga"
     ]
   },
   "what_to_do": {
@@ -80,7 +90,8 @@
     "de": "Wenn Ihre Katze mit Zwiebeln oder Knoblauch gewürzten Schinken gefressen hat, wenden Sie sich sofort an Ihren Tierarzt. Hat sie viel ungewürzten Schinken gefressen, erbricht sie oder hat sie Durchfall, rufen Sie Ihren Tierarzt an und lassen Sie sich beraten.",
     "fr": "Si votre chat a mangé du jambon assaisonné à l’oignon ou à l’ail, contactez immédiatement votre vétérinaire. S’il a mangé beaucoup de jambon nature, ou s’il vomit ou a la diarrhée, demandez conseil à votre vétérinaire.",
     "es": "Si tu gato ha comido jamón condimentado con cebolla o ajo, ponte en contacto con tu veterinario de inmediato. Si ha comido mucho jamón sin condimentar, o tiene vómitos o diarrea, llama a tu veterinario para que te aconseje.",
-    "it": "Se il tuo gatto ha mangiato prosciutto insaporito con cipolla o aglio, contatta subito il veterinario. Se ha mangiato molto prosciutto semplice, o ha vomito o diarrea, chiama il veterinario per un consiglio."
+    "it": "Se il tuo gatto ha mangiato prosciutto insaporito con cipolla o aglio, contatta subito il veterinario. Se ha mangiato molto prosciutto semplice, o ha vomito o diarrea, chiama il veterinario per un consiglio.",
+    "pt": "Se o teu gato comeu fiambre temperado com cebola ou alho, contacta imediatamente o teu veterinário. Se comeu muito fiambre simples, ou se tiver vómitos ou diarreia, liga ao teu veterinário para pedir conselho."
   },
   "serving": null,
   "child": {
@@ -89,7 +100,8 @@
     "de": "Schinken ist zu salzig und zu fett für Katzen. Katzenleckerlis sind für deine Katze eine bessere Überraschung.",
     "fr": "Le jambon est trop salé et trop gras pour les chats. Les friandises pour chat font une bien meilleure surprise.",
     "es": "El jamón tiene demasiada sal y grasa para los gatos. Para tu gatito, sus propios premios son una sorpresa mejor.",
-    "it": "Il prosciutto è troppo salato e grasso per i gatti. Per il micio, i suoi premi per gatti sono una sorpresa migliore."
+    "it": "Il prosciutto è troppo salato e grasso per i gatti. Per il micio, i suoi premi per gatti sono una sorpresa migliore.",
+    "pt": "O fiambre é demasiado salgado e gordo para gatos. As guloseimas próprias do gatinho são uma surpresa melhor."
   },
   "faq": [
     {
@@ -99,7 +111,8 @@
         "de": "Ist ein winziger Bissen Schinken gefährlich?",
         "fr": "Une toute petite bouchée de jambon, c’est dangereux ?",
         "es": "¿Es peligroso un mordisquito de jamón?",
-        "it": "Un pezzettino di prosciutto è pericoloso?"
+        "it": "Un pezzettino di prosciutto è pericoloso?",
+        "pt": "Uma dentadinha de fiambre é perigosa?"
       },
       "a": {
         "en": "Small amounts may not be extremely harmful, but ham seasoned with onion or garlic is toxic to cats, and a University of Georgia vet still recommends avoiding ham altogether.",
@@ -107,7 +120,8 @@
         "de": "Kleine Mengen sind vielleicht nicht extrem schädlich, aber mit Zwiebeln oder Knoblauch gewürzter Schinken ist für Katzen giftig, und ein Tierarzt der University of Georgia empfiehlt trotzdem, ganz auf Schinken zu verzichten.",
         "fr": "Une petite quantité n’est peut-être pas très nocive, mais le jambon assaisonné à l’oignon ou à l’ail est toxique pour les chats, et un vétérinaire de l’université de Géorgie recommande tout de même d’éviter complètement le jambon.",
         "es": "Puede que pequeñas cantidades no sean extremadamente dañinas, pero el jamón condimentado con cebolla o ajo es tóxico para los gatos, y un veterinario de la Universidad de Georgia sigue recomendando evitar el jamón por completo.",
-        "it": "Piccole quantità potrebbero non essere molto dannose, ma il prosciutto insaporito con cipolla o aglio è tossico per i gatti, e un veterinario dell’Università della Georgia consiglia comunque di evitarlo del tutto."
+        "it": "Piccole quantità potrebbero non essere molto dannose, ma il prosciutto insaporito con cipolla o aglio è tossico per i gatti, e un veterinario dell’Università della Georgia consiglia comunque di evitarlo del tutto.",
+        "pt": "Pequenas quantidades podem não ser extremamente prejudiciais, mas o fiambre temperado com cebola ou alho é tóxico para gatos, e um veterinário da Universidade da Geórgia recomenda, mesmo assim, evitar completamente o fiambre."
       }
     }
   ],
@@ -191,6 +205,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "90d835545c7e6c1af881e8d170f049a62f82ac84f8e343bf200e7c25ab1be2cf"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1d1e1e9a3ca40abb60036cf234dbe0cdc122fd34a2065f350277b88f061260d6"
     }
   }
 }

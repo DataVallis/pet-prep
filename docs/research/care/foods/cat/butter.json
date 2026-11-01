@@ -7,7 +7,8 @@
     "de": "Butter",
     "fr": "Beurre",
     "es": "Mantequilla",
-    "it": "Burro"
+    "it": "Burro",
+    "pt": "Manteiga"
   },
   "question": {
     "en": "Can cats eat butter?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Katzen Butter fressen?",
     "fr": "Les chats peuvent-ils manger du beurre ?",
     "es": "¿Pueden los gatos comer mantequilla?",
-    "it": "I gatti possono mangiare il burro?"
+    "it": "I gatti possono mangiare il burro?",
+    "pt": "Os gatos podem comer manteiga?"
   },
   "url_slug": {
     "en": "butter",
@@ -23,7 +25,8 @@
     "de": "butter",
     "fr": "beurre",
     "es": "mantequilla",
-    "it": "burro"
+    "it": "burro",
+    "pt": "manteiga"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nein, auf Butter verzichten Sie besser. Sie ist ein fettes Milchprodukt: Ratgeber zur Katzenhaltung zählen fettreiche Lebensmittel zu den Dingen, die Katzen nie bekommen sollten, Milchprodukte können den Magen einer Katze verstimmen, und ihr Fett treibt das Gewicht nach oben.",
     "fr": "Non, mieux vaut éviter le beurre. C’est un produit laitier gras : les guides de soins félins classent les aliments gras parmi ceux à ne jamais donner aux chats, les produits laitiers peuvent leur déranger l’estomac et leurs graisses font prendre du poids.",
     "es": "No, es mejor evitar la mantequilla. Es un lácteo graso: las guías de cuidado de gatos incluyen los alimentos grasos entre los que nunca hay que dar a un gato, los lácteos pueden sentarle mal al estómago y su grasa hace engordar.",
-    "it": "No, è meglio evitare il burro. È un latticino grasso: le guide sulla cura dei gatti mettono i cibi grassi tra quelli da non dare mai, i latticini possono disturbare lo stomaco del gatto e i loro grassi fanno ingrassare."
+    "it": "No, è meglio evitare il burro. È un latticino grasso: le guide sulla cura dei gatti mettono i cibi grassi tra quelli da non dare mai, i latticini possono disturbare lo stomaco del gatto e i loro grassi fanno ingrassare.",
+    "pt": "Não, é melhor evitar a manteiga. É um laticínio gordo: os guias de cuidados com gatos incluem os alimentos gordos entre o que nunca se deve dar a gatos, os laticínios podem fazer mal ao estômago do gato e a gordura que têm faz engordar."
   },
   "why": {
     "en": "RSPCA Australia lists fatty trimmings and fatty foods among things never to feed cats, and added fat can lead to a painful condition called pancreatitis. Butter is also a dairy product: many cats are lactose intolerant, milk-based products can cause vomiting or diarrhoea, and dairy products are high in fat and contribute to weight gain.",
@@ -40,7 +44,8 @@
     "de": "RSPCA Australia zählt fette Fleischreste und fettreiche Lebensmittel zu den Dingen, die Katzen nie bekommen sollten, und zusätzliches Fett kann zu einer schmerzhaften Erkrankung führen, der Bauchspeicheldrüsenentzündung (Pankreatitis). Butter ist außerdem ein Milchprodukt: Viele Katzen vertragen keine Laktose, Produkte auf Milchbasis können Erbrechen oder Durchfall auslösen, und Milchprodukte sind fettreich und tragen zur Gewichtszunahme bei.",
     "fr": "La RSPCA Australia classe les chutes de gras et les aliments gras parmi ce qu’il ne faut jamais donner aux chats, et les graisses ajoutées peuvent provoquer une maladie douloureuse, la pancréatite. Le beurre est aussi un produit laitier : beaucoup de chats sont intolérants au lactose, les produits à base de lait peuvent provoquer des vomissements ou de la diarrhée, et les produits laitiers, riches en graisses, font prendre du poids.",
     "es": "RSPCA Australia incluye los recortes de grasa y los alimentos grasos entre lo que nunca hay que dar a los gatos, y la grasa añadida puede provocar una enfermedad dolorosa llamada pancreatitis. La mantequilla, además, es un lácteo: muchos gatos son intolerantes a la lactosa, los productos a base de leche pueden causar vómitos o diarrea, y los lácteos tienen mucha grasa y contribuyen a que el gato engorde.",
-    "it": "RSPCA Australia elenca i ritagli di grasso e i cibi grassi tra le cose da non dare mai ai gatti, e i grassi aggiunti possono causare una malattia dolorosa chiamata pancreatite. Il burro è anche un latticino: molti gatti sono intolleranti al lattosio, i prodotti a base di latte possono causare vomito o diarrea e i latticini sono ricchi di grassi e contribuiscono all’aumento di peso."
+    "it": "RSPCA Australia elenca i ritagli di grasso e i cibi grassi tra le cose da non dare mai ai gatti, e i grassi aggiunti possono causare una malattia dolorosa chiamata pancreatite. Il burro è anche un latticino: molti gatti sono intolleranti al lattosio, i prodotti a base di latte possono causare vomito o diarrea e i latticini sono ricchi di grassi e contribuiscono all’aumento di peso.",
+    "pt": "A RSPCA Australia inclui as aparas de gordura e os alimentos gordos entre o que nunca se deve dar a gatos, e a gordura a mais pode levar a uma doença dolorosa chamada pancreatite. A manteiga é também um laticínio: muitos gatos são intolerantes à lactose, os produtos à base de leite podem causar vómitos ou diarreia, e os laticínios são ricos em gordura e contribuem para o aumento de peso."
   },
   "signs": {
     "en": [
@@ -72,6 +77,11 @@
       "Vomito",
       "Diarrea",
       "Mal di stomaco"
+    ],
+    "pt": [
+      "Vómitos",
+      "Diarreia",
+      "Mal-estar de estômago"
     ]
   },
   "what_to_do": {
@@ -80,7 +90,8 @@
     "de": "Wenn Ihre Katze Butter gefressen hat, achten Sie auf Erbrechen oder Durchfall und fragen Sie Ihren Tierarzt um Rat, wenn sie krank wirkt oder viel gefressen hat.",
     "fr": "Si votre chat a mangé du beurre, surveillez l’apparition de vomissements ou de diarrhée et demandez conseil à votre vétérinaire s’il semble malade ou en a mangé beaucoup.",
     "es": "Si tu gato ha comido mantequilla, vigila si tiene vómitos o diarrea y consulta a tu veterinario si parece encontrarse mal o ha comido mucha.",
-    "it": "Se il tuo gatto ha mangiato del burro, controlla se compaiono vomito o diarrea e chiedi consiglio al veterinario se sembra stare male o ne ha mangiato molto."
+    "it": "Se il tuo gatto ha mangiato del burro, controlla se compaiono vomito o diarrea e chiedi consiglio al veterinario se sembra stare male o ne ha mangiato molto.",
+    "pt": "Se o teu gato comeu manteiga, vigia se aparecem vómitos ou diarreia e contacta o teu veterinário para pedir conselho se ele parecer doente ou tiver comido muita."
   },
   "serving": null,
   "child": {
@@ -89,7 +100,8 @@
     "de": "Butter ist für Katzen zu fettig. Lass sie auf deinem Brot und gib deiner Katze ihr eigenes Futter.",
     "fr": "Le beurre est trop gras pour les chats. Garde-le pour tes tartines et donne à ton chat sa propre nourriture.",
     "es": "La mantequilla tiene demasiada grasa para los gatos. Déjala para tu tostada y dale a tu gato su propia comida.",
-    "it": "Il burro è troppo grasso per i gatti. Lascialo sul tuo pane tostato e dai al tuo gatto il suo cibo."
+    "it": "Il burro è troppo grasso per i gatti. Lascialo sul tuo pane tostato e dai al tuo gatto il suo cibo.",
+    "pt": "A manteiga tem demasiada gordura para gatos. Deixa-a na tua torrada e dá ao teu gato a comida dele."
   },
   "faq": [],
   "sources": [
@@ -162,6 +174,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3989dfd676baff45ac6506b3ef67c1199237ebf422e2f0a5396ca962bb9aff63"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7776402e0205ff1381007e78501e56ade36eae9b9dbce57894926fb7002111ab"
     }
   }
 }

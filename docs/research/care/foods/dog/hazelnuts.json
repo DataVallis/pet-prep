@@ -7,7 +7,8 @@
     "de": "Haselnüsse",
     "fr": "Noisettes",
     "es": "Avellanas",
-    "it": "Nocciole"
+    "it": "Nocciole",
+    "pt": "Avelãs"
   },
   "question": {
     "en": "Can dogs eat hazelnuts?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Hunde Haselnüsse fressen?",
     "fr": "Les chiens peuvent-ils manger des noisettes ?",
     "es": "¿Pueden los perros comer avellanas?",
-    "it": "I cani possono mangiare le nocciole?"
+    "it": "I cani possono mangiare le nocciole?",
+    "pt": "Os cães podem comer avelãs?"
   },
   "url_slug": {
     "en": "hazelnuts",
@@ -23,7 +25,8 @@
     "de": "haselnuesse",
     "fr": "noisettes",
     "es": "avellanas",
-    "it": "nocciole"
+    "it": "nocciole",
+    "pt": "avelas"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nein, besser nicht. Haselnüsse sind nicht giftig, aber ihre sehr harten Schalen können zum Ersticken und zu Blockaden führen, und wie andere Nüsse sind sie fettreich, was einem Hund auf den Magen schlagen und zu einer Bauchspeicheldrüsenentzündung (Pankreatitis) führen kann.",
     "fr": "Non, mieux vaut éviter. Les noisettes ne sont pas toxiques, mais leur coque très dure peut provoquer un étouffement et des obstructions et, comme les autres fruits à coque, elles sont riches en graisses, ce qui peut dérégler l’estomac d’un chien et parfois mener à une pancréatite.",
     "es": "No, mejor que no. Las avellanas no son tóxicas, pero su cáscara, muy dura, puede provocar atragantamiento y obstrucciones y, como otros frutos secos, tienen mucha grasa, que puede sentarle mal al estómago de un perro y llegar a provocar una pancreatitis.",
-    "it": "Meglio di no. Le nocciole non sono tossiche, ma il loro guscio durissimo può causare soffocamento e ostruzioni e, come altra frutta a guscio, sono ricche di grassi, che possono disturbare lo stomaco del cane e portare alla pancreatite."
+    "it": "Meglio di no. Le nocciole non sono tossiche, ma il loro guscio durissimo può causare soffocamento e ostruzioni e, come altra frutta a guscio, sono ricche di grassi, che possono disturbare lo stomaco del cane e portare alla pancreatite.",
+    "pt": "Não, é melhor não. As avelãs não são tóxicas, mas as cascas muito duras podem causar engasgamento e obstruções e, como outros frutos secos, têm muita gordura, o que pode fazer mal ao estômago do cão e levar a pancreatite."
   },
   "why": {
     "en": "Hazelnut shells are extremely hard and can cause choking and gut blockages. Nuts in general are high in fat and calories: they can be too rich for a dog, cause pancreatitis and add to weight gain. Nuts left lying on the ground can also grow mould that can be toxic to dogs.",
@@ -40,7 +44,8 @@
     "de": "Haselnussschalen sind extrem hart und können zum Ersticken und zu Darmverschlüssen führen. Nüsse sind allgemein reich an Fett und Kalorien: Sie können für einen Hund zu gehaltvoll sein, eine Pankreatitis auslösen und zu Gewichtszunahme beitragen. Auf dem Boden liegende Nüsse können außerdem Schimmel bilden, der für Hunde giftig sein kann.",
     "fr": "La coque des noisettes est extrêmement dure et peut provoquer un étouffement et des obstructions intestinales. Les fruits à coque en général sont riches en graisses et en calories : ils peuvent être trop riches pour un chien, provoquer une pancréatite et favoriser la prise de poids. Les fruits à coque restés par terre peuvent aussi développer des moisissures susceptibles d’être toxiques pour les chiens.",
     "es": "La cáscara de las avellanas es durísima y puede provocar atragantamiento y obstrucciones intestinales. Los frutos secos en general tienen muchas grasas y calorías: pueden ser demasiado pesados para un perro, provocar pancreatitis y hacerle engordar. Además, los frutos secos que se quedan en el suelo pueden criar un moho que puede ser tóxico para los perros.",
-    "it": "Il guscio delle nocciole è estremamente duro e può causare soffocamento e ostruzioni intestinali. La frutta a guscio in generale è ricca di grassi e calorie: può essere troppo pesante per un cane, causare pancreatite e contribuire all’aumento di peso. La frutta a guscio rimasta a terra può anche sviluppare una muffa che può essere tossica per i cani."
+    "it": "Il guscio delle nocciole è estremamente duro e può causare soffocamento e ostruzioni intestinali. La frutta a guscio in generale è ricca di grassi e calorie: può essere troppo pesante per un cane, causare pancreatite e contribuire all’aumento di peso. La frutta a guscio rimasta a terra può anche sviluppare una muffa che può essere tossica per i cani.",
+    "pt": "As cascas das avelãs são extremamente duras e podem causar engasgamento e obstruções intestinais. Os frutos secos em geral têm muita gordura e muitas calorias: podem ser demasiado ricos para um cão, causar pancreatite e contribuir para o aumento de peso. Os frutos secos caídos no chão também podem ganhar bolor, que pode ser tóxico para os cães."
   },
   "signs": {
     "en": [
@@ -72,6 +77,11 @@
       "Soffocamento o conati",
       "Vomito o diarrea",
       "Disturbi di pancia o segni di un’ostruzione"
+    ],
+    "pt": [
+      "Engasgamento ou ânsias",
+      "Vómitos ou diarreia",
+      "Mal-estar de barriga ou sinais de obstrução"
     ]
   },
   "what_to_do": {
@@ -80,7 +90,8 @@
     "de": "Achten Sie nach ein oder zwei Nüssen auf Erbrechen, Durchfall oder Bauchschmerzen. Rufen Sie Ihren Tierarzt an, wenn Ihr Hund Schalen verschluckt, viele Nüsse oder schimmelige Nüsse gefressen hat, zu ersticken droht oder eines dieser Anzeichen zeigt.",
     "fr": "Après une ou deux noisettes, surveillez les vomissements, la diarrhée ou les douleurs au ventre. Appelez votre vétérinaire si votre chien a avalé des coques, a mangé beaucoup de noisettes ou des noisettes moisies, semble s’étouffer ou présente l’un de ces signes.",
     "es": "Si tu perro se ha comido una o dos avellanas, vigila si aparecen vómitos, diarrea o dolor de barriga. Llama a tu veterinario si se ha tragado cáscaras, ha comido muchos frutos secos o frutos secos con moho, parece que se atraganta o muestra alguno de estos signos.",
-    "it": "Dopo una o due nocciole, controlla se compaiono vomito, diarrea o mal di pancia. Chiama il veterinario se il tuo cane ha ingoiato gusci, ha mangiato molta frutta a guscio o frutta a guscio ammuffita, se sembra soffocare o se mostra uno di questi sintomi."
+    "it": "Dopo una o due nocciole, controlla se compaiono vomito, diarrea o mal di pancia. Chiama il veterinario se il tuo cane ha ingoiato gusci, ha mangiato molta frutta a guscio o frutta a guscio ammuffita, se sembra soffocare o se mostra uno di questi sintomi.",
+    "pt": "Depois de uma ou duas avelãs, vigia se há vómitos, diarreia ou dor de barriga. Liga ao teu veterinário se o teu cão engoliu cascas, comeu muitos frutos secos ou frutos secos com bolor, parecer estar a engasgar-se ou mostrar algum destes sinais."
   },
   "serving": null,
   "child": {
@@ -89,7 +100,8 @@
     "de": "Haselnüsse sind ein Snack für Menschen. Ihre harten Schalen können in einem Hund stecken bleiben, also halte sie von deinem Hund fern.",
     "fr": "Les noisettes, c’est un en-cas pour les humains. Leur coque dure peut rester coincée dans le ventre d’un chien, alors garde-les loin de ton animal.",
     "es": "Las avellanas son un tentempié para personas. Su cáscara dura se le puede quedar atascada a un perro, así que mantenlas lejos de tu mascota.",
-    "it": "Le nocciole sono uno snack per le persone. Il loro guscio duro può bloccarsi dentro il cane, quindi tienile lontane dal tuo animale."
+    "it": "Le nocciole sono uno snack per le persone. Il loro guscio duro può bloccarsi dentro il cane, quindi tienile lontane dal tuo animale.",
+    "pt": "As avelãs são um petisco de pessoas. As cascas duras podem ficar presas dentro de um cão, por isso mantém-nas longe do teu animal."
   },
   "faq": [
     {
@@ -99,7 +111,8 @@
         "de": "Sind Haselnüsse für Hunde giftig?",
         "fr": "Les noisettes sont-elles toxiques pour les chiens ?",
         "es": "¿Las avellanas son tóxicas para los perros?",
-        "it": "Le nocciole sono tossiche per i cani?"
+        "it": "Le nocciole sono tossiche per i cani?",
+        "pt": "As avelãs são tóxicas para os cães?"
       },
       "a": {
         "en": "No, they aren't toxic; the main risks are the hard shells and the high fat content.",
@@ -107,7 +120,8 @@
         "de": "Nein, sie sind nicht giftig; die Hauptrisiken sind die harten Schalen und der hohe Fettgehalt.",
         "fr": "Non, elles ne sont pas toxiques ; les principaux risques sont la coque dure et la forte teneur en graisses.",
         "es": "No, no son tóxicas; los principales riesgos son la cáscara dura y la gran cantidad de grasa.",
-        "it": "No, non sono tossiche; i rischi principali sono il guscio duro e l’alto contenuto di grassi."
+        "it": "No, non sono tossiche; i rischi principali sono il guscio duro e l’alto contenuto di grassi.",
+        "pt": "Não, não são tóxicas; os principais riscos são as cascas duras e o elevado teor de gordura."
       }
     }
   ],
@@ -182,6 +196,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6c212705dbd3d7cc31500986fbdae29ba8c953e31dc3552049632e103405936e"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "745340a5e0895d00a2a60c99be3240bd396f4ab61d0f5d23a736eb23363bdb55"
     }
   }
 }

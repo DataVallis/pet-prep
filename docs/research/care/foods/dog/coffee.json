@@ -7,7 +7,8 @@
     "de": "Kaffee",
     "fr": "Café",
     "es": "Café",
-    "it": "Caffè"
+    "it": "Caffè",
+    "pt": "Café"
   },
   "question": {
     "en": "Can dogs drink coffee?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Hunde Kaffee trinken?",
     "fr": "Les chiens peuvent-ils boire du café ?",
     "es": "¿Pueden los perros beber café?",
-    "it": "I cani possono bere il caffè?"
+    "it": "I cani possono bere il caffè?",
+    "pt": "Os cães podem beber café?"
   },
   "url_slug": {
     "en": "coffee",
@@ -23,7 +25,8 @@
     "de": "kaffee",
     "fr": "cafe",
     "es": "cafe",
-    "it": "caffe"
+    "it": "caffe",
+    "pt": "cafe"
   },
   "level": "toxic",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nein. Kaffee enthält Koffein, das für Hunde giftig ist; Hunde reagieren empfindlicher darauf als Menschen. Ein- oder zweimal Lecken führt kaum zu einer Vergiftung, aber Kaffeepulver und Kaffeebohnen können eine schwere Vergiftung verursachen. Schokolierte Kaffeebohnen sind eine doppelte Gefahr.",
     "fr": "Non. Le café contient de la caféine, toxique pour les chiens, qui y sont plus sensibles que nous. Un ou deux coups de langue ont peu de chances de provoquer une intoxication, mais le marc et les grains de café peuvent causer une intoxication grave. Les grains de café enrobés de chocolat représentent une double menace.",
     "es": "No. El café contiene cafeína, que es tóxica para los perros; los perros son más sensibles a ella que las personas. Es poco probable que un par de lametones causen una intoxicación, pero los posos y los granos de café pueden causar una intoxicación grave. Los granos de café cubiertos de chocolate son una doble amenaza.",
-    "it": "No. Il caffè contiene caffeina, che è tossica per i cani; i cani sono più sensibili delle persone. È improbabile che una o due leccate causino un avvelenamento, ma i fondi e i chicchi di caffè possono provocare una grave intossicazione. I chicchi di caffè ricoperti di cioccolato sono una doppia minaccia."
+    "it": "No. Il caffè contiene caffeina, che è tossica per i cani; i cani sono più sensibili delle persone. È improbabile che una o due leccate causino un avvelenamento, ma i fondi e i chicchi di caffè possono provocare una grave intossicazione. I chicchi di caffè ricoperti di cioccolato sono una doppia minaccia.",
+    "pt": "Não. O café contém cafeína, que é tóxica para os cães; os cães são mais sensíveis a ela do que as pessoas. Uma ou duas lambidelas dificilmente causam intoxicação, mas as borras e os grãos de café podem causar uma intoxicação grave. Os grãos de café cobertos de chocolate são uma dupla ameaça."
   },
   "why": {
     "en": "Caffeine overstimulates the heart and nervous system. It is the same kind of substance that makes chocolate toxic. A lick or two of coffee is unlikely to poison, but unused coffee grounds and beans can cause serious toxicity, and chocolate-covered beans are a double threat.",
@@ -40,7 +44,8 @@
     "de": "Koffein überreizt Herz und Nervensystem. Es ist die gleiche Art von Stoff, die Schokolade giftig macht. Ein- oder zweimal Lecken an Kaffee führt kaum zu einer Vergiftung, aber unbenutztes Kaffeepulver und Kaffeebohnen können eine schwere Vergiftung verursachen, und schokolierte Bohnen sind eine doppelte Gefahr.",
     "fr": "La caféine surstimule le cœur et le système nerveux. C’est le même type de substance qui rend le chocolat toxique. Un ou deux coups de langue de café ont peu de chances d’intoxiquer, mais le marc non utilisé et les grains peuvent causer une intoxication grave, et les grains enrobés de chocolat représentent une double menace.",
     "es": "La cafeína sobreestimula el corazón y el sistema nervioso. Es el mismo tipo de sustancia que hace que el chocolate sea tóxico. Es poco probable que uno o dos lametones de café intoxiquen, pero el café molido sin usar y los granos pueden causar una intoxicación grave, y los granos cubiertos de chocolate son una doble amenaza.",
-    "it": "La caffeina sovrastimola il cuore e il sistema nervoso. È lo stesso tipo di sostanza che rende tossico il cioccolato. È improbabile che una o due leccate di caffè causino un avvelenamento, ma i fondi di caffè non usati e i chicchi possono provocare una grave intossicazione, e i chicchi ricoperti di cioccolato sono una doppia minaccia."
+    "it": "La caffeina sovrastimola il cuore e il sistema nervoso. È lo stesso tipo di sostanza che rende tossico il cioccolato. È improbabile che una o due leccate di caffè causino un avvelenamento, ma i fondi di caffè non usati e i chicchi possono provocare una grave intossicazione, e i chicchi ricoperti di cioccolato sono una doppia minaccia.",
+    "pt": "A cafeína estimula em excesso o coração e o sistema nervoso. É o mesmo tipo de substância que torna o chocolate tóxico. Uma ou duas lambidelas de café dificilmente envenenam, mas as borras de café por usar e os grãos podem causar uma intoxicação grave, e os grãos cobertos de chocolate são uma dupla ameaça."
   },
   "signs": {
     "en": [
@@ -90,6 +95,14 @@
       "Salivazione eccessiva",
       "Tremori",
       "Più pipì"
+    ],
+    "pt": [
+      "Agitação, hiperatividade, andar de um lado para o outro",
+      "Batimento cardíaco acelerado",
+      "Vómitos e diarreia",
+      "Babar-se",
+      "Tremores",
+      "Fazer mais xixi"
     ]
   },
   "what_to_do": {
@@ -98,7 +111,8 @@
     "de": "Wenden Sie sich an Ihren Tierarzt oder einen Giftnotruf für Tiere, sobald Sie merken, dass Ihr Hund Koffein aufgenommen hat. Notieren Sie, was es war (Getränk, Kaffeepulver, Bohnen, Teebeutel) und ungefähr wie viel. Warten Sie nicht auf Anzeichen: Eine frühe Behandlung ist wichtig.",
     "fr": "Contactez votre vétérinaire ou un centre antipoison vétérinaire dès que vous vous rendez compte que votre chien a consommé de la caféine. Notez ce que c’était (boisson, marc, grains, sachets de thé) et en quelle quantité approximative. N’attendez pas l’apparition des signes : un traitement précoce compte.",
     "es": "Contacta con tu veterinario o con una línea de información toxicológica para animales en cuanto te des cuenta de que tu perro ha tomado cafeína. Apunta qué era (bebida, posos, granos, bolsitas de té) y más o menos cuánto. No esperes a que aparezcan síntomas: tratarlo pronto es importante.",
-    "it": "Contatta il veterinario o un centro antiveleni veterinario appena ti accorgi che il tuo cane ha assunto caffeina. Annota che cosa era (bevanda, fondi, chicchi, bustine di tè) e più o meno quanto. Non aspettare che compaiano i sintomi: un trattamento precoce è importante."
+    "it": "Contatta il veterinario o un centro antiveleni veterinario appena ti accorgi che il tuo cane ha assunto caffeina. Annota che cosa era (bevanda, fondi, chicchi, bustine di tè) e più o meno quanto. Non aspettare che compaiano i sintomi: un trattamento precoce è importante.",
+    "pt": "Contacta o teu veterinário ou uma linha de apoio toxicológico para animais assim que perceberes que o teu cão ingeriu cafeína. Anota o que era (bebida, borras, grãos, saquetas de chá) e mais ou menos quanto. Não esperes pelos sinais: o tratamento precoce é importante."
   },
   "serving": null,
   "child": {
@@ -107,7 +121,8 @@
     "de": "Kaffee ist ein Getränk für Erwachsene, nicht für Hunde. Stell Tassen und Kaffeebohnen außer Reichweite.",
     "fr": "Le café est une boisson de grands et n’est pas pour les chiens. Range les tasses et les grains de café hors de portée.",
     "es": "El café es una bebida de adultos y no es para perros. Guarda las tazas y los granos de café donde el perro no llegue.",
-    "it": "Il caffè è una bevanda dei grandi e non è per i cani. Tieni tazze e chicchi di caffè fuori dalla loro portata."
+    "it": "Il caffè è una bevanda dei grandi e non è per i cani. Tieni tazze e chicchi di caffè fuori dalla loro portata.",
+    "pt": "O café é uma bebida de adultos e não é para cães. Guarda as chávenas e os grãos de café fora do alcance."
   },
   "faq": [
     {
@@ -117,7 +132,8 @@
         "de": "Mein Hund hat an meiner Tasse geleckt. Ist das ein Notfall?",
         "fr": "Mon chien a léché ma tasse. Est-ce une urgence ?",
         "es": "Mi perro ha lamido mi taza. ¿Es una urgencia?",
-        "it": "Il mio cane ha leccato la mia tazza. È un’emergenza?"
+        "it": "Il mio cane ha leccato la mia tazza. È un’emergenza?",
+        "pt": "O meu cão lambeu a minha chávena. É uma emergência?"
       },
       "a": {
         "en": "One or two licks are unlikely to poison most dogs. If your dog drank more, or ate grounds, beans or tea bags, call your vet or a pet poison helpline.",
@@ -125,7 +141,8 @@
         "de": "Ein- oder zweimal Lecken führt bei den meisten Hunden kaum zu einer Vergiftung. Hat Ihr Hund mehr getrunken oder Kaffeepulver, Bohnen oder Teebeutel gefressen, rufen Sie Ihren Tierarzt oder einen Giftnotruf für Tiere an.",
         "fr": "Un ou deux coups de langue ont peu de chances d’intoxiquer la plupart des chiens. Si votre chien en a bu davantage, ou a mangé du marc, des grains ou des sachets de thé, appelez votre vétérinaire ou un centre antipoison vétérinaire.",
         "es": "Es poco probable que uno o dos lametones intoxiquen a la mayoría de los perros. Si ha bebido más, o se ha comido posos, granos o bolsitas de té, llama a tu veterinario o a una línea de información toxicológica para animales.",
-        "it": "È improbabile che una o due leccate avvelenino la maggior parte dei cani. Se il tuo cane ne ha bevuto di più, o ha mangiato fondi, chicchi o bustine di tè, chiama il veterinario o un centro antiveleni veterinario."
+        "it": "È improbabile che una o due leccate avvelenino la maggior parte dei cani. Se il tuo cane ne ha bevuto di più, o ha mangiato fondi, chicchi o bustine di tè, chiama il veterinario o un centro antiveleni veterinario.",
+        "pt": "Uma ou duas lambidelas dificilmente envenenam a maioria dos cães. Se o teu cão bebeu mais, ou comeu borras, grãos ou saquetas de chá, liga ao teu veterinário ou a uma linha de apoio toxicológico para animais."
       }
     },
     {
@@ -135,7 +152,8 @@
         "de": "Ist Kaffeepulver gefährlich?",
         "fr": "Le marc de café est-il dangereux ?",
         "es": "¿Los posos de café son peligrosos?",
-        "it": "I fondi di caffè sono pericolosi?"
+        "it": "I fondi di caffè sono pericolosi?",
+        "pt": "As borras de café são perigosas?"
       },
       "a": {
         "en": "Coffee grounds are a known source of caffeine for pets. Keep grounds and beans away from your dog and call your vet if it eats some.",
@@ -143,7 +161,8 @@
         "de": "Kaffeepulver ist eine bekannte Koffeinquelle für Haustiere. Halten Sie Kaffeepulver und Bohnen von Ihrem Hund fern und rufen Sie Ihren Tierarzt an, wenn er davon frisst.",
         "fr": "Le marc de café est une source connue de caféine pour les animaux. Tenez le marc et les grains hors de portée de votre chien et appelez votre vétérinaire s’il en mange.",
         "es": "Los posos de café son una fuente conocida de cafeína para las mascotas. Mantén los posos y los granos lejos de tu perro y llama a tu veterinario si se come algunos.",
-        "it": "I fondi di caffè sono una fonte nota di caffeina per gli animali domestici. Tieni fondi e chicchi lontani dal tuo cane e chiama il veterinario se ne mangia."
+        "it": "I fondi di caffè sono una fonte nota di caffeina per gli animali domestici. Tieni fondi e chicchi lontani dal tuo cane e chiama il veterinario se ne mangia.",
+        "pt": "As borras de café são uma fonte conhecida de cafeína para os animais de estimação. Mantém as borras e os grãos longe do teu cão e liga ao teu veterinário se ele comer alguns."
       }
     }
   ],
@@ -258,6 +277,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d8bc25ca75caa98429c413f8f73afe1f44ecd4e3caef6f5f7d36050d1d5e557e"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b55b7e5fe76140bf7ff36860c8c382936eaa78ac0853cedc8cb01ce2ac919da2"
     }
   }
 }

@@ -7,7 +7,8 @@
     "de": "Kirschen",
     "fr": "Cerises",
     "es": "Cerezas",
-    "it": "Ciliegie"
+    "it": "Ciliegie",
+    "pt": "Cerejas"
   },
   "question": {
     "en": "Can dogs eat cherries?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Hunde Kirschen fressen?",
     "fr": "Les chiens peuvent-ils manger des cerises ?",
     "es": "¿Pueden los perros comer cerezas?",
-    "it": "I cani possono mangiare le ciliegie?"
+    "it": "I cani possono mangiare le ciliegie?",
+    "pt": "Os cães podem comer cerejas?"
   },
   "url_slug": {
     "en": "cherries",
@@ -23,7 +25,8 @@
     "de": "kirschen",
     "fr": "cerises",
     "es": "cerezas",
-    "it": "ciliegie"
+    "it": "ciliegie",
+    "pt": "cerejas"
   },
   "level": "dangerous",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nein, Kirschen meiden Sie besser. Das reife Fruchtfleisch ist nicht der giftige Teil, aber Kerne, Stiele und Blätter enthalten Stoffe, die Cyanid freisetzen können, und Kerne können den Darm eines Hundes blockieren. Laut Pet Poison Helpline überwiegt das Risiko jeden Nutzen.",
     "fr": "Non, mieux vaut éviter les cerises. La chair mûre n’est pas la partie toxique, mais les noyaux, les queues et les feuilles contiennent des composés qui peuvent libérer du cyanure, et les noyaux peuvent bloquer l’intestin d’un chien. Selon le Pet Poison Helpline, le risque l’emporte sur tout bénéfice.",
     "es": "No, es mejor evitar las cerezas. La pulpa madura no es la parte tóxica, pero los huesos, los rabitos y las hojas contienen compuestos que pueden liberar cianuro, y los huesos pueden obstruir el intestino de un perro. Pet Poison Helpline afirma que el riesgo es mayor que cualquier beneficio.",
-    "it": "No, è meglio evitare le ciliegie. La polpa matura non è la parte tossica, ma noccioli, gambi e foglie contengono sostanze che possono liberare cianuro, e i noccioli possono ostruire l’intestino del cane. Secondo Pet Poison Helpline il rischio supera qualsiasi beneficio."
+    "it": "No, è meglio evitare le ciliegie. La polpa matura non è la parte tossica, ma noccioli, gambi e foglie contengono sostanze che possono liberare cianuro, e i noccioli possono ostruire l’intestino del cane. Secondo Pet Poison Helpline il rischio supera qualsiasi beneficio.",
+    "pt": "Não, é melhor evitar as cerejas. A polpa madura não é a parte tóxica, mas os caroços, os pés e as folhas contêm compostos que podem libertar cianeto, e os caroços podem obstruir os intestinos do cão. A Pet Poison Helpline diz que o risco é maior do que qualquer benefício."
   },
   "why": {
     "en": "Cherry pits, stems and leaves contain cyanogenic glycosides, which can turn into cyanide. Cyanide is released when a pit is chewed and broken; a pit swallowed whole is not expected to poison, but it can get stuck and cause a blockage. One cherry will not cause cyanide poisoning, yet the risk is not worth it.",
@@ -40,7 +44,8 @@
     "de": "Kirschkerne, Stiele und Blätter enthalten cyanogene Glykoside, die sich in Cyanid umwandeln können. Cyanid wird freigesetzt, wenn ein Kern zerkaut und zerbrochen wird; ein ganz verschluckter Kern führt voraussichtlich nicht zu einer Vergiftung, kann aber stecken bleiben und eine Blockade verursachen. Eine einzelne Kirsche verursacht keine Cyanidvergiftung – das Risiko lohnt sich trotzdem nicht.",
     "fr": "Les noyaux, les queues et les feuilles de cerise contiennent des glycosides cyanogènes, qui peuvent se transformer en cyanure. Le cyanure est libéré lorsqu’un noyau est mâché et cassé ; un noyau avalé entier ne devrait pas provoquer d’intoxication, mais il peut rester coincé et causer une obstruction. Une seule cerise ne provoquera pas d’intoxication au cyanure, mais le risque n’en vaut pas la peine.",
     "es": "Los huesos, los rabitos y las hojas de la cereza contienen glucósidos cianogénicos, que pueden convertirse en cianuro. El cianuro se libera cuando el hueso se mastica y se rompe; no se espera intoxicación si el hueso se traga entero, pero puede quedarse atascado y causar una obstrucción. Una cereza no provoca una intoxicación por cianuro, pero no merece la pena correr el riesgo.",
-    "it": "Noccioli, gambi e foglie del ciliegio contengono glicosidi cianogenici, che possono trasformarsi in cianuro. Il cianuro si libera quando il nocciolo viene masticato e rotto; un nocciolo ingoiato intero non dovrebbe causare avvelenamento, ma può bloccarsi e provocare un’ostruzione. Una sola ciliegia non provoca avvelenamento da cianuro, ma non vale la pena correre il rischio."
+    "it": "Noccioli, gambi e foglie del ciliegio contengono glicosidi cianogenici, che possono trasformarsi in cianuro. Il cianuro si libera quando il nocciolo viene masticato e rotto; un nocciolo ingoiato intero non dovrebbe causare avvelenamento, ma può bloccarsi e provocare un’ostruzione. Una sola ciliegia non provoca avvelenamento da cianuro, ma non vale la pena correre il rischio.",
+    "pt": "Os caroços, os pés e as folhas da cereja contêm glicosídeos cianogénicos, que se podem transformar em cianeto. O cianeto é libertado quando o caroço é mastigado e partido; um caroço engolido inteiro não deverá envenenar, mas pode ficar preso e causar uma obstrução. Uma cereja não causa intoxicação por cianeto, mas o risco não compensa."
   },
   "signs": {
     "en": [
@@ -84,6 +89,13 @@
       "Difficoltà respiratorie, respiro affannoso",
       "Mal di stomaco o diarrea",
       "Shock"
+    ],
+    "pt": [
+      "Pupilas dilatadas",
+      "Gengivas vermelho-tijolo",
+      "Dificuldade em respirar, respiração ofegante",
+      "Mal-estar de estômago ou diarreia",
+      "Choque"
     ]
   },
   "what_to_do": {
@@ -92,7 +104,8 @@
     "de": "Wenn Ihr Hund Kirschkerne, Stiele oder Blätter oder viele Kirschen gefressen hat, wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie ungefähr, wie viele es waren und ob Kerne zerkaut wurden. Warten Sie nicht auf Anzeichen.",
     "fr": "Si votre chien a mangé des noyaux, des queues ou des feuilles de cerise, ou beaucoup de cerises, contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez combien il en a mangé environ et si les noyaux ont été mâchés. N’attendez pas l’apparition des signes.",
     "es": "Si tu perro ha comido huesos, rabitos u hojas de cereza, o muchas cerezas, contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta más o menos cuántas ha comido y si ha masticado los huesos. No esperes a que aparezcan síntomas.",
-    "it": "Se il tuo cane ha mangiato noccioli, gambi o foglie di ciliegio, o molte ciliegie, contatta subito il veterinario o un centro antiveleni veterinario. Annota più o meno quante ne ha mangiate e se ha masticato i noccioli. Non aspettare che compaiano i sintomi."
+    "it": "Se il tuo cane ha mangiato noccioli, gambi o foglie di ciliegio, o molte ciliegie, contatta subito il veterinario o un centro antiveleni veterinario. Annota più o meno quante ne ha mangiate e se ha masticato i noccioli. Non aspettare che compaiano i sintomi.",
+    "pt": "Se o teu cão comeu caroços, pés ou folhas de cereja, ou muitas cerejas, contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota mais ou menos quantas comeu e se mastigou os caroços. Não esperes pelos sinais."
   },
   "serving": null,
   "child": {
@@ -101,7 +114,8 @@
     "de": "In Kirschen stecken harte Kerne, die für Hunde schlecht sind. Kirschen sind für Menschen – sag einem Erwachsenen Bescheid, wenn dein Hund welche frisst.",
     "fr": "Les cerises ont des noyaux durs qui sont mauvais pour les chiens. Garde les cerises pour les humains et préviens un adulte si ton chien en mange.",
     "es": "Las cerezas tienen dentro unos huesos duros que son malos para los perros. Las cerezas, para las personas; avisa a un adulto si tu perro se come alguna.",
-    "it": "Le ciliegie hanno dentro dei noccioli duri che fanno male ai cani. Lascia le ciliegie alle persone e dillo a un adulto se il tuo cane ne mangia qualcuna."
+    "it": "Le ciliegie hanno dentro dei noccioli duri che fanno male ai cani. Lascia le ciliegie alle persone e dillo a un adulto se il tuo cane ne mangia qualcuna.",
+    "pt": "As cerejas têm caroços duros lá dentro que fazem mal aos cães. As cerejas são para as pessoas; avisa um adulto se o teu cão comer algumas."
   },
   "faq": [
     {
@@ -111,7 +125,8 @@
         "de": "Ist eine einzelne Kirsche ein Notfall?",
         "fr": "Une seule cerise, est-ce une urgence ?",
         "es": "¿Una cereza es una urgencia?",
-        "it": "Una ciliegia è un’emergenza?"
+        "it": "Una ciliegia è un’emergenza?",
+        "pt": "Uma cereja é uma emergência?"
       },
       "a": {
         "en": "One cherry will not cause cyanide poisoning, and a healthy dog that eats one or two does not need panic. Still, pits can cause blockages, so ask your vet if you are unsure.",
@@ -119,7 +134,8 @@
         "de": "Eine Kirsche verursacht keine Cyanidvergiftung, und wenn ein gesunder Hund ein oder zwei frisst, ist keine Panik nötig. Kerne können aber Blockaden verursachen – fragen Sie im Zweifel Ihren Tierarzt.",
         "fr": "Une seule cerise ne provoquera pas d’intoxication au cyanure, et si un chien en bonne santé en mange une ou deux, inutile de paniquer. Les noyaux peuvent toutefois causer une obstruction : en cas de doute, demandez conseil à votre vétérinaire.",
         "es": "Una cereza no provoca una intoxicación por cianuro, y si un perro sano se come una o dos, no hace falta entrar en pánico. Aun así, los huesos pueden causar obstrucciones, así que pregunta a tu veterinario si tienes dudas.",
-        "it": "Una sola ciliegia non provoca avvelenamento da cianuro, e se un cane sano ne mangia una o due non c’è motivo di farsi prendere dal panico. I noccioli però possono causare ostruzioni, quindi nel dubbio chiedi al veterinario."
+        "it": "Una sola ciliegia non provoca avvelenamento da cianuro, e se un cane sano ne mangia una o due non c’è motivo di farsi prendere dal panico. I noccioli però possono causare ostruzioni, quindi nel dubbio chiedi al veterinario.",
+        "pt": "Uma cereja não causa intoxicação por cianeto, e, se um cão saudável comer uma ou duas, não há motivo para pânico. Mesmo assim, os caroços podem causar obstruções, por isso pergunta ao teu veterinário se tiveres dúvidas."
       }
     },
     {
@@ -129,7 +145,8 @@
         "de": "Darf ich entsteinte Kirschen geben?",
         "fr": "Puis-je donner des cerises dénoyautées ?",
         "es": "¿Puedo darle cerezas sin hueso?",
-        "it": "Posso dare al mio cane ciliegie snocciolate?"
+        "it": "Posso dare al mio cane ciliegie snocciolate?",
+        "pt": "Posso dar cerejas sem caroço?"
       },
       "a": {
         "en": "The ripe pulp is not the toxic part, but Pet Poison Helpline advises that the risk of feeding cherries outweighs the benefits.",
@@ -137,7 +154,8 @@
         "de": "Das reife Fruchtfleisch ist nicht der giftige Teil, aber laut Pet Poison Helpline überwiegt beim Füttern von Kirschen das Risiko den Nutzen.",
         "fr": "La pulpe mûre n’est pas la partie toxique, mais selon le Pet Poison Helpline, le risque de donner des cerises à un chien l’emporte sur les bénéfices.",
         "es": "La pulpa madura no es la parte tóxica, pero Pet Poison Helpline advierte de que el riesgo de dar cerezas a un perro es mayor que los beneficios.",
-        "it": "La polpa matura non è la parte tossica, ma Pet Poison Helpline avverte che i rischi di dare ciliegie al cane superano i benefici."
+        "it": "La polpa matura non è la parte tossica, ma Pet Poison Helpline avverte che i rischi di dare ciliegie al cane superano i benefici.",
+        "pt": "A polpa madura não é a parte tóxica, mas a Pet Poison Helpline considera que o risco de dar cerejas é maior do que os benefícios."
       }
     }
   ],
@@ -232,6 +250,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "dba146fb68ba8639049344633357de19481412843f293a73fc9869d404e60731"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "791bac9580fbcb42a640fb414b0f8218de2aa7e1d858f468c3bc823c5dbe62e3"
     }
   }
 }

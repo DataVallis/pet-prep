@@ -7,7 +7,8 @@
     "de": "Pflaumen",
     "fr": "Prunes",
     "es": "Ciruelas",
-    "it": "Prugne"
+    "it": "Prugne",
+    "pt": "Ameixas"
   },
   "question": {
     "en": "Can cats eat plums?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Katzen Pflaumen fressen?",
     "fr": "Les chats peuvent-ils manger des prunes ?",
     "es": "¿Pueden los gatos comer ciruelas?",
-    "it": "I gatti possono mangiare le prugne?"
+    "it": "I gatti possono mangiare le prugne?",
+    "pt": "Os gatos podem comer ameixas?"
   },
   "url_slug": {
     "en": "plums",
@@ -23,7 +25,8 @@
     "de": "pflaumen",
     "fr": "prunes",
     "es": "ciruelas",
-    "it": "prugne"
+    "it": "prugne",
+    "pt": "ameixas"
   },
   "level": "dangerous",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nein, besser nicht. Die ASPCA führt die Pflaume als für Katzen giftige Pflanze: Ihre Stiele, Blätter und Samen (der Kern) enthalten Cyanid. Bieten Sie Ihrer Katze keine Pflaumen an, bewahren Sie Kerne und Pflanzenteile außer Reichweite auf, und rufen Sie Ihren Tierarzt an, wenn Ihre Katze darauf kaut.",
     "fr": "Non, mieux vaut s’en abstenir. L’ASPCA classe le prunier parmi les plantes toxiques pour les chats : ses tiges, ses feuilles et ses graines (le noyau) contiennent du cyanure. Ne donnez pas de prunes à votre chat, rangez noyaux et parties de la plante hors de sa portée, et appelez votre vétérinaire s’il en mâchouille.",
     "es": "No, mejor que no. La ASPCA considera la planta del ciruelo tóxica para los gatos: sus tallos, hojas y semillas (el hueso) contienen cianuro. No le ofrezcas ciruelas a tu gato, guarda los huesos y las partes de la planta fuera de su alcance y llama a tu veterinario si tu gato mordisquea alguno.",
-    "it": "No, è meglio di no. L’ASPCA classifica la pianta del susino come tossica per i gatti: steli, foglie e semi (il nocciolo) contengono cianuro. Non offrire prugne al tuo gatto, tieni noccioli e parti della pianta fuori dalla sua portata e chiama il veterinario se ne mastica anche solo un pezzo."
+    "it": "No, è meglio di no. L’ASPCA classifica la pianta del susino come tossica per i gatti: steli, foglie e semi (il nocciolo) contengono cianuro. Non offrire prugne al tuo gatto, tieni noccioli e parti della pianta fuori dalla sua portata e chiama il veterinario se ne mastica anche solo un pezzo.",
+    "pt": "Não, é melhor não. A ASPCA classifica a ameixeira como tóxica para gatos: os caules, as folhas e as sementes (o caroço) contêm cianeto. Não ofereças ameixas ao teu gato, mantém os caroços e as partes da planta fora do alcance e liga ao teu veterinário se ele mastigar alguma."
   },
   "why": {
     "en": "The stems, leaves and seeds contain cyanide (as cyanogenic glycosides) and are particularly toxic while wilting. The sources we found describe the risk from these plant parts and do not say the fruit flesh is safe for cats, so we do not recommend sharing it.",
@@ -40,7 +44,8 @@
     "de": "Stiele, Blätter und Samen enthalten Cyanid (in Form cyanogener Glykoside) und sind beim Welken besonders giftig. Die von uns gefundenen Quellen beschreiben das Risiko durch diese Pflanzenteile und sagen nicht, dass das Fruchtfleisch für Katzen unbedenklich ist – daher raten wir davon ab, es zu teilen.",
     "fr": "Les tiges, les feuilles et les graines contiennent du cyanure (sous forme de glycosides cyanogènes) et sont particulièrement toxiques lorsqu’elles se flétrissent. Les sources que nous avons trouvées décrivent le risque lié à ces parties de la plante et n’indiquent pas que la chair du fruit est sans danger pour les chats ; nous déconseillons donc de la partager.",
     "es": "Los tallos, las hojas y las semillas contienen cianuro (en forma de glucósidos cianogénicos) y son especialmente tóxicos cuando se están marchitando. Las fuentes que hemos encontrado describen el riesgo de estas partes de la planta y no dicen que la pulpa de la fruta sea segura para los gatos, así que no recomendamos compartirla.",
-    "it": "Steli, foglie e semi contengono cianuro (sotto forma di glicosidi cianogenetici) e sono particolarmente tossici quando appassiscono. Le fonti che abbiamo trovato descrivono il rischio legato a queste parti della pianta e non affermano che la polpa del frutto sia sicura per i gatti, quindi sconsigliamo di condividerla."
+    "it": "Steli, foglie e semi contengono cianuro (sotto forma di glicosidi cianogenetici) e sono particolarmente tossici quando appassiscono. Le fonti che abbiamo trovato descrivono il rischio legato a queste parti della pianta e non affermano che la polpa del frutto sia sicura per i gatti, quindi sconsigliamo di condividerla.",
+    "pt": "Os caules, as folhas e as sementes contêm cianeto (sob a forma de glicosídeos cianogénicos) e são particularmente tóxicos quando estão a murchar. As fontes que encontrámos descrevem o risco destas partes da planta e não dizem que a polpa do fruto seja segura para gatos, por isso não recomendamos partilhá-la."
   },
   "signs": {
     "en": [
@@ -84,6 +89,13 @@
       "Difficoltà respiratorie",
       "Respiro affannoso a bocca aperta",
       "Shock"
+    ],
+    "pt": [
+      "Gengivas vermelho-tijolo",
+      "Pupilas dilatadas",
+      "Dificuldade em respirar",
+      "Respiração ofegante",
+      "Choque"
     ]
   },
   "what_to_do": {
@@ -92,7 +104,8 @@
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, wenn Ihre Katze auf einem Kern, einem Stiel oder Blättern herumgekaut hat. Notieren Sie, was gefressen wurde, wie viel und wann. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire si votre chat a mâchouillé un noyau, une tige ou des feuilles. Notez ce qu’il a mangé, en quelle quantité et à quelle heure. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
     "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales si tu gato ha mordisqueado un hueso, tallos u hojas. Anota qué ha comido, cuánto y cuándo. No esperes a que aparezcan síntomas y no intentes hacer vomitar a tu gato en casa.",
-    "it": "Contatta subito il veterinario o un centro antiveleni veterinario se il tuo gatto ha masticato un nocciolo, uno stelo o delle foglie. Annota che cosa ha mangiato, quanto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa."
+    "it": "Contatta subito il veterinario o un centro antiveleni veterinario se il tuo gatto ha masticato un nocciolo, uno stelo o delle foglie. Annota che cosa ha mangiato, quanto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
+    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais se o teu gato mastigou um caroço, um caule ou folhas. Toma nota do que foi comido, da quantidade e de quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa."
   },
   "serving": null,
   "child": {
@@ -101,7 +114,8 @@
     "de": "Pflaumen sind ein Snack für Menschen. Ihre Kerne und Blätter sind für Katzen nicht sicher, also sag einem Erwachsenen Bescheid, wenn deine Katze daran herumkaut.",
     "fr": "Les prunes, c’est un en-cas pour les humains. Leurs noyaux et leurs feuilles sont dangereux pour les chats : préviens un adulte si ton chat en mâchouille un.",
     "es": "Las ciruelas son un tentempié para personas. Sus huesos y sus hojas no son seguros para los gatos, así que avisa a un adulto si tu gato mordisquea uno.",
-    "it": "Le prugne sono uno spuntino per le persone. Noccioli e foglie non sono sicuri per i gatti: se il micio ne mastica uno, dillo a un adulto."
+    "it": "Le prugne sono uno spuntino per le persone. Noccioli e foglie non sono sicuri per i gatti: se il micio ne mastica uno, dillo a un adulto.",
+    "pt": "As ameixas são um petisco para pessoas. Os caroços e as folhas não são seguros para gatos, por isso avisa um adulto se o gatinho mastigar um."
   },
   "faq": [
     {
@@ -111,7 +125,8 @@
         "de": "Welcher Teil ist das Problem?",
         "fr": "Quelle partie pose problème ?",
         "es": "¿Qué parte es la peligrosa?",
-        "it": "Qual è la parte pericolosa?"
+        "it": "Qual è la parte pericolosa?",
+        "pt": "Qual é a parte problemática?"
       },
       "a": {
         "en": "The ASPCA says the stems, leaves and seeds contain cyanide, and that they are particularly toxic while wilting.",
@@ -119,7 +134,8 @@
         "de": "Laut ASPCA enthalten Stiele, Blätter und Samen Cyanid und sind beim Welken besonders giftig.",
         "fr": "Selon l’ASPCA, les tiges, les feuilles et les graines contiennent du cyanure, et elles sont particulièrement toxiques lorsqu’elles se flétrissent.",
         "es": "La ASPCA indica que los tallos, las hojas y las semillas contienen cianuro y que son especialmente tóxicos cuando se están marchitando.",
-        "it": "Secondo l’ASPCA steli, foglie e semi contengono cianuro e sono particolarmente tossici quando appassiscono."
+        "it": "Secondo l’ASPCA steli, foglie e semi contengono cianuro e sono particolarmente tossici quando appassiscono.",
+        "pt": "A ASPCA diz que os caules, as folhas e as sementes contêm cianeto e que são particularmente tóxicos quando estão a murchar."
       }
     }
   ],
@@ -190,6 +206,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "53e7da75599a0cfee6c8d452e3dab8bb84b50e6f5270fb8881a6a00022cdfcab"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2a0b010517bc4dd01710634feb83a54c84fdff142b9bf4f12a61e57f74b08099"
     }
   }
 }

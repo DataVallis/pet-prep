@@ -7,7 +7,8 @@
     "de": "Salzige Snacks",
     "fr": "En-cas salés",
     "es": "Aperitivos salados",
-    "it": "Snack salati"
+    "it": "Snack salati",
+    "pt": "Petiscos salgados"
   },
   "question": {
     "en": "Can dogs eat salty snacks?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Hunde salzige Snacks fressen?",
     "fr": "Les chiens peuvent-ils manger des en-cas salés ?",
     "es": "¿Pueden los perros comer aperitivos salados?",
-    "it": "I cani possono mangiare gli snack salati?"
+    "it": "I cani possono mangiare gli snack salati?",
+    "pt": "Os cães podem comer petiscos salgados?"
   },
   "url_slug": {
     "en": "salty-snacks",
@@ -23,7 +25,8 @@
     "de": "salzige-snacks",
     "fr": "en-cas-sales",
     "es": "aperitivos-salados",
-    "it": "snack-salati"
+    "it": "snack-salati",
+    "pt": "petiscos-salgados"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nicht empfohlen. Ein paar salzige Snacks lösen bei einem gesunden Hund mit frischem Wasser wahrscheinlich keine Salzvergiftung aus, aber salziges Essen ist grundsätzlich nicht gut für Hunde, besonders bei Herzerkrankungen. Große Mengen können Durst, Erbrechen und Schlimmeres verursachen.",
     "fr": "Déconseillé. Quelques en-cas salés ont peu de chances de provoquer une intoxication au sel chez un chien en bonne santé qui a de l’eau fraîche, mais les aliments salés ne sont généralement pas bons pour les chiens, surtout ceux qui ont une maladie cardiaque. En manger beaucoup peut provoquer soif, vomissements, voire pire.",
     "es": "No se recomienda. Unos pocos aperitivos salados difícilmente causarán una intoxicación por sal a un perro sano con agua fresca, pero la comida salada en general no es buena para los perros, sobre todo para los que tienen enfermedades del corazón. Comer mucho puede causar sed, vómitos y cosas peores.",
-    "it": "Sconsigliati. Pochi snack salati difficilmente causano un avvelenamento da sale in un cane sano che ha acqua fresca, ma i cibi salati in generale non fanno bene ai cani, soprattutto a quelli con malattie cardiache. Mangiarne molti può causare sete, vomito e problemi peggiori."
+    "it": "Sconsigliati. Pochi snack salati difficilmente causano un avvelenamento da sale in un cane sano che ha acqua fresca, ma i cibi salati in generale non fanno bene ai cani, soprattutto a quelli con malattie cardiache. Mangiarne molti può causare sete, vomito e problemi peggiori.",
+    "pt": "Não é recomendado. Alguns petiscos salgados dificilmente causam intoxicação por sal num cão saudável com água fresca, mas a comida salgada em geral não faz bem aos cães, sobretudo aos que têm doença cardíaca. Comer muitos pode causar sede, vómitos e pior."
   },
   "why": {
     "en": "Salty food in moderation should not cause salt toxicity, but too much salt can lead to fluid retention and, in large amounts, salt poisoning. Small dogs with health issues are more at risk when fresh water isn't available. Dog foods are best served without added salt or seasoning.",
@@ -40,7 +44,8 @@
     "de": "Salziges Essen in Maßen sollte keine Salzvergiftung verursachen, aber zu viel Salz kann zu Wassereinlagerungen und in großen Mengen zu einer Salzvergiftung führen. Kleine Hunde mit gesundheitlichen Problemen sind stärker gefährdet, wenn kein frisches Wasser verfügbar ist. Essen für Hunde serviert man am besten ohne zugesetztes Salz und ohne Gewürze.",
     "fr": "Des aliments salés avec modération ne devraient pas provoquer d’intoxication au sel, mais trop de sel peut entraîner une rétention d’eau et, en grande quantité, une intoxication au sel. Les petits chiens ayant des problèmes de santé sont plus à risque lorsqu’ils n’ont pas d’eau fraîche. Les aliments destinés au chien sont à servir de préférence sans sel ajouté ni assaisonnement.",
     "es": "La comida salada con moderación no debería causar una intoxicación por sal, pero demasiada sal puede provocar retención de líquidos y, en grandes cantidades, intoxicación por sal. Los perros pequeños con problemas de salud corren más riesgo cuando no tienen agua fresca a mano. Lo mejor es servir la comida de los perros sin sal añadida ni condimentos.",
-    "it": "I cibi salati con moderazione non dovrebbero causare un avvelenamento da sale, ma troppo sale può portare a ritenzione di liquidi e, in grandi quantità, ad avvelenamento da sale. I cani piccoli con problemi di salute sono più a rischio quando non hanno acqua fresca. Il cibo per il cane va servito senza sale e senza condimenti aggiunti."
+    "it": "I cibi salati con moderazione non dovrebbero causare un avvelenamento da sale, ma troppo sale può portare a ritenzione di liquidi e, in grandi quantità, ad avvelenamento da sale. I cani piccoli con problemi di salute sono più a rischio quando non hanno acqua fresca. Il cibo per il cane va servito senza sale e senza condimenti aggiunti.",
+    "pt": "A comida salgada com moderação não deve causar intoxicação por sal, mas sal a mais pode levar à retenção de líquidos e, em grandes quantidades, a intoxicação por sal. Os cães pequenos com problemas de saúde correm mais risco quando não têm água fresca. A comida para cães deve ser servida sem sal adicionado nem temperos."
   },
   "signs": {
     "en": [
@@ -84,6 +89,13 @@
       "Diarrea",
       "Andatura barcollante, stanchezza",
       "Tremori o convulsioni"
+    ],
+    "pt": [
+      "Muita sede e fazer muito xixi",
+      "Vómitos, muitas vezes em poucas horas",
+      "Diarreia",
+      "Andar cambaleante, cansaço",
+      "Tremores ou convulsões"
     ]
   },
   "what_to_do": {
@@ -92,7 +104,8 @@
     "de": "Wenn Ihr Hund eine große Menge salziger Snacks gefressen hat, wenden Sie sich an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was und wie viel gefressen wurde. Frisches Wasser sollte immer bereitstehen.",
     "fr": "Si votre chien a mangé une grande quantité d’en-cas salés, contactez votre vétérinaire ou un centre antipoison vétérinaire. Notez ce qu’il a mangé et en quelle quantité. De l’eau fraîche doit toujours être à sa disposition.",
     "es": "Si tu perro se ha comido una gran cantidad de aperitivos salados, contacta con tu veterinario o con una línea de información toxicológica para animales. Apunta qué comió y cuánto. Siempre debe tener agua fresca a su alcance.",
-    "it": "Se il tuo cane ha mangiato molti snack salati, contatta il veterinario o un centro antiveleni veterinario. Annota che cosa e quanto ha mangiato. Deve sempre avere a disposizione acqua fresca."
+    "it": "Se il tuo cane ha mangiato molti snack salati, contatta il veterinario o un centro antiveleni veterinario. Annota che cosa e quanto ha mangiato. Deve sempre avere a disposizione acqua fresca.",
+    "pt": "Se o teu cão comeu uma grande quantidade de petiscos salgados, contacta o teu veterinário ou uma linha de apoio toxicológico para animais. Anota o que comeu e quanto. Deve haver sempre água fresca disponível."
   },
   "serving": {
     "en": "Better not to share. If you give people food, serve it plain, without salt or seasoning.",
@@ -100,7 +113,8 @@
     "de": "Besser nicht teilen. Wenn Sie Ihrem Hund doch etwas von Ihrem Essen geben, dann pur, ohne Salz und Gewürze.",
     "fr": "Mieux vaut ne pas en partager. Si vous donnez des aliments pour humains, servez-les nature, sans sel ni assaisonnement.",
     "es": "Mejor no compartirlos. Si le das comida de personas, sírvela sin nada, sin sal ni condimentos.",
-    "it": "Meglio non dargliene. Se gli dai cibo delle persone, servilo semplice, senza sale né condimenti."
+    "it": "Meglio non dargliene. Se gli dai cibo delle persone, servilo semplice, senza sale né condimenti.",
+    "pt": "É melhor não partilhar. Se deres comida de pessoas, serve-a simples, sem sal nem temperos."
   },
   "child": {
     "en": "Salty snacks are for people. Too much salt makes dogs thirsty and sick, so give your dog its own treats.",
@@ -108,7 +122,8 @@
     "de": "Salzige Snacks sind für Menschen. Zu viel Salz macht Hunde durstig und krank. Gib deinem Hund lieber seine eigenen Leckerlis.",
     "fr": "Les en-cas salés sont pour les humains. Trop de sel donne soif aux chiens et les rend malades, alors donne à ton chien ses propres friandises.",
     "es": "Los aperitivos salados son para las personas. Demasiada sal da sed a los perros y los pone malitos, así que dale a tu perro sus propios premios.",
-    "it": "Gli snack salati sono per le persone. Troppo sale fa venire sete ai cani e li fa stare male, quindi dai al tuo cane i suoi premi."
+    "it": "Gli snack salati sono per le persone. Troppo sale fa venire sete ai cani e li fa stare male, quindi dai al tuo cane i suoi premi.",
+    "pt": "Os petiscos salgados são para pessoas. Sal a mais dá sede aos cães e põe-nos doentes, por isso dá ao teu cão as guloseimas dele."
   },
   "faq": [
     {
@@ -118,7 +133,8 @@
         "de": "Braucht mein Hund nach salzigem Essen Wasser?",
         "fr": "Mon chien a-t-il besoin d’eau après un aliment salé ?",
         "es": "¿Mi perro necesita agua después de comer algo salado?",
-        "it": "Il mio cane ha bisogno di acqua dopo un cibo salato?"
+        "it": "Il mio cane ha bisogno di acqua dopo un cibo salato?",
+        "pt": "O meu cão precisa de água depois de comida salgada?"
       },
       "a": {
         "en": "Yes. Fresh drinking water helps a dog flush out salt; salt poisoning is unlikely when fresh water is available.",
@@ -126,7 +142,8 @@
         "de": "Ja. Frisches Trinkwasser hilft einem Hund, das Salz auszuspülen; eine Salzvergiftung ist unwahrscheinlich, solange frisches Wasser verfügbar ist.",
         "fr": "Oui. L’eau fraîche aide le chien à éliminer le sel ; l’intoxication au sel est peu probable quand il a de l’eau fraîche.",
         "es": "Sí. El agua fresca ayuda al perro a eliminar la sal; la intoxicación por sal es poco probable cuando tiene agua fresca a su alcance.",
-        "it": "Sì. L’acqua fresca aiuta il cane a eliminare il sale; l’avvelenamento da sale è improbabile quando ha acqua fresca a disposizione."
+        "it": "Sì. L’acqua fresca aiuta il cane a eliminare il sale; l’avvelenamento da sale è improbabile quando ha acqua fresca a disposizione.",
+        "pt": "Sim. A água fresca ajuda o cão a eliminar o sal; a intoxicação por sal é pouco provável quando há água fresca disponível."
       }
     }
   ],
@@ -229,6 +246,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "386c999e02b71c956c84a70cfe11f0c4e699e5f2944f38e8e985808ff629bdf1"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6e33dde414b418e9bc3c2a2884900aa4fbd372286a3ef9b825a76d4acdc4dcd6"
     }
   }
 }

@@ -7,7 +7,8 @@
     "de": "Macadamianüsse",
     "fr": "Noix de macadamia",
     "es": "Nueces de macadamia",
-    "it": "Noci di macadamia"
+    "it": "Noci di macadamia",
+    "pt": "Nozes de macadâmia"
   },
   "question": {
     "en": "Can cats eat macadamia nuts?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Katzen Macadamianüsse fressen?",
     "fr": "Les chats peuvent-ils manger des noix de macadamia ?",
     "es": "¿Pueden los gatos comer nueces de macadamia?",
-    "it": "I gatti possono mangiare le noci di macadamia?"
+    "it": "I gatti possono mangiare le noci di macadamia?",
+    "pt": "Os gatos podem comer nozes de macadâmia?"
   },
   "url_slug": {
     "en": "macadamia-nuts",
@@ -23,7 +25,8 @@
     "de": "macadamianuesse",
     "fr": "noix-de-macadamia",
     "es": "nueces-de-macadamia",
-    "it": "noci-di-macadamia"
+    "it": "noci-di-macadamia",
+    "pt": "nozes-de-macadamia"
   },
   "level": "toxic",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nein. Macadamianüsse sind sehr fettreich, und laut VCA sind sie außerdem giftig und können Katzen krank machen. Bewahren Sie sie außer Reichweite Ihrer Katze auf und wenden Sie sich an Ihren Tierarzt, wenn Ihre Katze welche frisst.",
     "fr": "Non. Les noix de macadamia sont très grasses et, selon VCA, elles sont aussi toxiques et peuvent rendre les chats malades. Gardez-les hors de portée de votre chat et contactez votre vétérinaire s’il en mange.",
     "es": "No. Las nueces de macadamia son muy grasas, y VCA indica que además son tóxicas y pueden hacer enfermar a los gatos. Mantenlas fuera del alcance de tu gato y ponte en contacto con tu veterinario si come alguna.",
-    "it": "No. Le noci di macadamia sono molto grasse e, secondo VCA, sono anche tossiche e possono far ammalare i gatti. Tienile fuori dalla portata del tuo gatto e contatta il veterinario se ne mangia."
+    "it": "No. Le noci di macadamia sono molto grasse e, secondo VCA, sono anche tossiche e possono far ammalare i gatti. Tienile fuori dalla portata del tuo gatto e contatta il veterinario se ne mangia.",
+    "pt": "Não. As nozes de macadâmia são muito gordas e, segundo a VCA, também são tóxicas e podem pôr os gatos doentes. Mantém-nas fora do alcance do teu gato e contacta o teu veterinário se ele comer alguma."
   },
   "why": {
     "en": "Cats Protection lists macadamia among nuts whose high oil and fat content can make cats unwell. VCA says macadamia nuts are very fatty, potentially causing pancreatitis, and also toxic, causing illness in cats. Detailed descriptions of macadamia poisoning mostly come from dogs, but we use the stricter level for cats.",
@@ -40,7 +44,8 @@
     "de": "Cats Protection zählt Macadamia zu den Nüssen, die Katzen wegen ihres hohen Öl- und Fettgehalts krank machen können. Laut VCA sind Macadamianüsse sehr fettreich, können möglicherweise eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen und sind außerdem giftig, was Katzen krank macht. Ausführliche Beschreibungen einer Macadamia-Vergiftung stammen überwiegend von Hunden, doch für Katzen verwenden wir die strengere Stufe.",
     "fr": "Cats Protection cite la noix de macadamia parmi les fruits à coque dont la forte teneur en huiles et en graisses peut rendre les chats malades. Selon VCA, les noix de macadamia sont très grasses, ce qui peut provoquer une pancréatite, et elles sont aussi toxiques pour les chats, qu’elles rendent malades. Les descriptions détaillées de l’intoxication concernent surtout le chien, mais nous retenons le niveau le plus prudent pour les chats.",
     "es": "Cats Protection incluye la macadamia entre los frutos secos cuyo alto contenido en aceite y grasa puede sentarles mal a los gatos. VCA indica que las nueces de macadamia son muy grasas, por lo que pueden provocar pancreatitis, y además tóxicas, por lo que hacen enfermar a los gatos. Las descripciones detalladas de la intoxicación por macadamia proceden sobre todo de perros, pero para los gatos aplicamos el nivel más estricto.",
-    "it": "Cats Protection elenca le noci di macadamia tra la frutta a guscio il cui alto contenuto di oli e grassi può far stare male i gatti. Secondo VCA le noci di macadamia sono molto grasse, possono causare pancreatite e sono anche tossiche, facendo ammalare i gatti. Le descrizioni dettagliate dell’intossicazione da macadamia riguardano soprattutto i cani, ma per i gatti applichiamo il livello più severo."
+    "it": "Cats Protection elenca le noci di macadamia tra la frutta a guscio il cui alto contenuto di oli e grassi può far stare male i gatti. Secondo VCA le noci di macadamia sono molto grasse, possono causare pancreatite e sono anche tossiche, facendo ammalare i gatti. Le descrizioni dettagliate dell’intossicazione da macadamia riguardano soprattutto i cani, ma per i gatti applichiamo il livello più severo.",
+    "pt": "A Cats Protection inclui a macadâmia entre os frutos secos cujo elevado teor de óleo e gordura pode pôr os gatos doentes. A VCA diz que as nozes de macadâmia são muito gordas, podendo causar pancreatite, e também tóxicas, causando doença nos gatos. As descrições pormenorizadas da intoxicação por macadâmia vêm sobretudo de cães, mas seguimos o nível mais rigoroso para os gatos."
   },
   "signs": {
     "en": [
@@ -72,6 +77,11 @@
       "Debolezza",
       "Tremori",
       "Surriscaldamento (temperatura corporea alta)"
+    ],
+    "pt": [
+      "Fraqueza",
+      "Tremores",
+      "Sobreaquecimento (temperatura corporal elevada)"
     ]
   },
   "what_to_do": {
@@ -80,7 +90,8 @@
     "de": "Wenden Sie sich sofort an Ihren Tierarzt, wenn Ihre Katze Macadamianüsse gefressen hat. Notieren Sie, wie viele sie gefressen hat und wann, und bewahren Sie die Verpackung auf. Versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire si votre chat a mangé des noix de macadamia. Notez combien il en a mangé et à quelle heure, et gardez l’emballage. N’essayez pas de faire vomir votre chat vous-même.",
     "es": "Ponte en contacto con tu veterinario de inmediato si tu gato ha comido nueces de macadamia. Apunta cuántas ha comido y cuándo, y guarda el envase. No intentes provocarle el vómito en casa.",
-    "it": "Contatta subito il veterinario se il tuo gatto ha mangiato noci di macadamia. Annota quante ne ha mangiate e quando, e conserva la confezione. Non cercare di farlo vomitare a casa."
+    "it": "Contatta subito il veterinario se il tuo gatto ha mangiato noci di macadamia. Annota quante ne ha mangiate e quando, e conserva la confezione. Non cercare di farlo vomitare a casa.",
+    "pt": "Contacta imediatamente o teu veterinário se o teu gato comeu nozes de macadâmia. Toma nota de quantas comeu e de quando, e guarda a embalagem. Não tentes provocar o vómito ao teu gato em casa."
   },
   "serving": null,
   "child": {
@@ -89,7 +100,8 @@
     "de": "Macadamianüsse sind nichts für Katzen. Stell die Schüssel mit den Nüssen außer Reichweite deiner Katze und sag einem Erwachsenen Bescheid, wenn sie welche frisst.",
     "fr": "Les noix de macadamia ne sont pas pour les chats. Range le bol de fruits à coque hors de portée de ton chat et préviens un adulte s’il en mange.",
     "es": "Las nueces de macadamia no son para gatos. Deja el cuenco de frutos secos donde tu gatito no llegue y avisa a un adulto si se come alguna.",
-    "it": "Le noci di macadamia non sono per i gatti. Tieni la ciotola della frutta secca lontana dal micio e dillo a un adulto se ne mangia."
+    "it": "Le noci di macadamia non sono per i gatti. Tieni la ciotola della frutta secca lontana dal micio e dillo a un adulto se ne mangia.",
+    "pt": "As nozes de macadâmia não são para gatos. Mantém a taça dos frutos secos fora do alcance do gatinho e avisa um adulto se ele comer alguma."
   },
   "faq": [
     {
@@ -99,7 +111,8 @@
         "de": "Sind Macadamianüsse schlimmer als andere Nüsse?",
         "fr": "Les noix de macadamia sont-elles plus dangereuses que les autres fruits à coque ?",
         "es": "¿Son las nueces de macadamia peores que otros frutos secos?",
-        "it": "Le noci di macadamia sono peggio di altra frutta a guscio?"
+        "it": "Le noci di macadamia sono peggio di altra frutta a guscio?",
+        "pt": "As nozes de macadâmia são piores do que os outros frutos secos?"
       },
       "a": {
         "en": "Yes. Most nuts are very fatty, but VCA says macadamia nuts are also toxic and can cause illness in cats, such as weakness, tremors and overheating.",
@@ -107,7 +120,8 @@
         "de": "Ja. Die meisten Nüsse sind sehr fettreich, aber laut VCA sind Macadamianüsse zusätzlich giftig und können Katzen krank machen, etwa mit Schwäche, Zittern und Überhitzung.",
         "fr": "Oui. La plupart des fruits à coque sont très gras, mais selon VCA, les noix de macadamia sont aussi toxiques et peuvent rendre les chats malades, avec par exemple de la faiblesse, des tremblements et une hyperthermie.",
         "es": "Sí. La mayoría de los frutos secos son muy grasos, pero VCA indica que las nueces de macadamia además son tóxicas y pueden hacer enfermar a los gatos, con debilidad, temblores y sobrecalentamiento.",
-        "it": "Sì. Quasi tutta la frutta a guscio è molto grassa, ma secondo VCA le noci di macadamia sono anche tossiche e possono far ammalare i gatti, con debolezza, tremori e surriscaldamento."
+        "it": "Sì. Quasi tutta la frutta a guscio è molto grassa, ma secondo VCA le noci di macadamia sono anche tossiche e possono far ammalare i gatti, con debolezza, tremori e surriscaldamento.",
+        "pt": "Sim. A maioria dos frutos secos é muito gorda, mas a VCA diz que as nozes de macadâmia também são tóxicas e podem pôr os gatos doentes, com fraqueza, tremores e sobreaquecimento."
       }
     }
   ],
@@ -182,6 +196,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7caf63d4c98dc3a156b132960c2bfef75f7073953ef9ab817809c6cfe54c9930"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4fc6b8559619ae9e1d582e13ddc684638eeb106b4559db172bf8aa6ba8f1c6f1"
     }
   }
 }

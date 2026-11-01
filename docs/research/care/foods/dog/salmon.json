@@ -7,7 +7,8 @@
     "de": "Lachs",
     "fr": "Saumon",
     "es": "Salmón",
-    "it": "Salmone"
+    "it": "Salmone",
+    "pt": "Salmão"
   },
   "question": {
     "en": "Can dogs eat salmon?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Hunde Lachs fressen?",
     "fr": "Les chiens peuvent-ils manger du saumon ?",
     "es": "¿Pueden los perros comer salmón?",
-    "it": "I cani possono mangiare il salmone?"
+    "it": "I cani possono mangiare il salmone?",
+    "pt": "Os cães podem comer salmão?"
   },
   "url_slug": {
     "en": "salmon",
@@ -23,7 +25,8 @@
     "de": "lachs",
     "fr": "saumon",
     "es": "salmon",
-    "it": "salmone"
+    "it": "salmone",
+    "pt": "salmao"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Ja, wenn er vollständig gegart, ungewürzt und grätenfrei ist. Gegarter Lachs ist eine gute Quelle für Eiweiß und Omega-3-Fette. Roher oder nicht ausreichend gegarter Lachs ist nicht sicher, und Räucherlachs ist zu salzig – halten Sie beides von Ihrem Hund fern.",
     "fr": "Oui, s’il est bien cuit, nature et sans arêtes. Le saumon cuit est une bonne source de protéines et d’oméga-3. Le saumon cru ou pas assez cuit n’est pas sans danger, et le saumon fumé est trop salé : tenez-les hors de portée de votre chien.",
     "es": "Sí, si está bien cocinado, sin nada y sin espinas. El salmón cocinado es una buena fuente de proteínas y de grasas omega-3. El salmón crudo o poco hecho no es seguro, y el ahumado tiene demasiada sal, así que mantenlos lejos de tu perro.",
-    "it": "Sì, se è ben cotto, semplice e senza lische. Il salmone cotto è una buona fonte di proteine e di grassi omega-3. Il salmone crudo o poco cotto non è sicuro, e quello affumicato è troppo salato: tienili lontani dal tuo cane."
+    "it": "Sì, se è ben cotto, semplice e senza lische. Il salmone cotto è una buona fonte di proteine e di grassi omega-3. Il salmone crudo o poco cotto non è sicuro, e quello affumicato è troppo salato: tienili lontani dal tuo cane.",
+    "pt": "Sim, se estiver bem cozinhado, simples e sem espinhas. O salmão cozinhado é uma boa fonte de proteína e de gorduras ómega-3. O salmão cru ou mal cozinhado não é seguro, e o salmão fumado é salgado demais, por isso mantém-nos longe do teu cão."
   },
   "why": {
     "en": "Raw salmon can carry parasites and bacteria; in the Pacific Northwest of the USA it can cause salmon poisoning disease, which is serious if untreated. Salmon has small, brittle bones that can cause choking. Smoked salmon and lox are high in salt. Seasonings, oils and sauces don't belong on a dog's portion.",
@@ -40,7 +44,8 @@
     "de": "Roher Lachs kann Parasiten und Bakterien übertragen; im pazifischen Nordwesten der USA kann er die Lachsvergiftung (Salmon Poisoning Disease) auslösen, die unbehandelt schwer verläuft. Lachs hat kleine, brüchige Gräten, an denen ein Hund ersticken kann. Räucherlachs und Lox sind sehr salzig. Gewürze, Öle und Saucen gehören nicht auf die Portion eines Hundes.",
     "fr": "Le saumon cru peut porter des parasites et des bactéries ; dans le Nord-Ouest Pacifique des États-Unis, il peut provoquer la maladie de l’empoisonnement au saumon, grave sans traitement. Le saumon a de petites arêtes cassantes qui peuvent provoquer un étouffement. Le saumon fumé et le lox sont très salés. Les assaisonnements, les huiles et les sauces n’ont pas leur place dans la portion d’un chien.",
     "es": "El salmón crudo puede llevar parásitos y bacterias; en el noroeste del Pacífico de Estados Unidos puede causar la enfermedad por intoxicación del salmón, que es grave si no se trata. El salmón tiene espinas pequeñas y quebradizas que pueden provocar atragantamiento. El salmón ahumado y el lox tienen mucha sal. Los condimentos, aceites y salsas no deben estar en la ración del perro.",
-    "it": "Il salmone crudo può portare parassiti e batteri; nel Pacifico nord-occidentale degli Stati Uniti può causare la malattia da avvelenamento da salmone, grave se non curata. Il salmone ha lische piccole e fragili che possono causare soffocamento. Il salmone affumicato e il lox sono molto salati. Condimenti, oli e salse non vanno nella porzione del cane."
+    "it": "Il salmone crudo può portare parassiti e batteri; nel Pacifico nord-occidentale degli Stati Uniti può causare la malattia da avvelenamento da salmone, grave se non curata. Il salmone ha lische piccole e fragili che possono causare soffocamento. Il salmone affumicato e il lox sono molto salati. Condimenti, oli e salse non vanno nella porzione del cane.",
+    "pt": "O salmão cru pode ter parasitas e bactérias; no noroeste do Pacífico, nos EUA, pode causar a doença do envenenamento por salmão, que é grave se não for tratada. O salmão tem espinhas pequenas e quebradiças que podem causar engasgamento. O salmão fumado e o lox têm muito sal. Temperos, óleos e molhos não devem ir para a porção do cão."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "de": "Hat Ihr Hund rohen Lachs gefressen, besonders aus dem pazifischen Nordwesten der USA, rufen Sie Ihren Tierarzt an und erwähnen Sie das; achten Sie auf Fieber, Schwäche, Appetitlosigkeit, Erbrechen oder Durchfall. Hat Ihr Hund Gräten verschluckt und droht zu ersticken, rufen Sie sofort Ihren Tierarzt an.",
     "fr": "Si votre chien a mangé du saumon cru, surtout venant du Nord-Ouest Pacifique des États-Unis, appelez votre vétérinaire et signalez-le ; surveillez fièvre, faiblesse, perte d’appétit, vomissements ou diarrhée. Si votre chien a avalé des arêtes et s’étouffe, appelez immédiatement votre vétérinaire.",
     "es": "Si tu perro ha comido salmón crudo, sobre todo del noroeste del Pacífico de Estados Unidos, llama a tu veterinario y díselo; vigila si tiene fiebre, debilidad, pérdida de apetito, vómitos o diarrea. Si se ha tragado espinas y se está atragantando, llama a tu veterinario de inmediato.",
-    "it": "Se il tuo cane ha mangiato salmone crudo, soprattutto del Pacifico nord-occidentale degli Stati Uniti, chiama il veterinario e diglielo; controlla se compaiono febbre, debolezza, perdita di appetito, vomito o diarrea. Se ha ingoiato delle lische e sta soffocando, chiama subito il veterinario."
+    "it": "Se il tuo cane ha mangiato salmone crudo, soprattutto del Pacifico nord-occidentale degli Stati Uniti, chiama il veterinario e diglielo; controlla se compaiono febbre, debolezza, perdita di appetito, vomito o diarrea. Se ha ingoiato delle lische e sta soffocando, chiama subito il veterinario.",
+    "pt": "Se o teu cão comeu salmão cru, sobretudo do noroeste do Pacífico, nos EUA, liga ao teu veterinário e diz-lhe isso; vigia se há febre, fraqueza, perda de apetite, vómitos ou diarreia. Se o teu cão engoliu espinhas e está a engasgar-se, liga imediatamente ao teu veterinário."
   },
   "serving": {
     "en": "Fully cooked (baked, steamed or grilled), plain, no seasoning, oils or sauces, boneless fillet; never raw or smoked.",
@@ -57,7 +63,8 @@
     "de": "Vollständig gegart (gebacken, gedämpft oder gegrillt), pur, ohne Gewürze, Öle oder Saucen, als grätenfreies Filet; nie roh oder geräuchert.",
     "fr": "Bien cuit (au four, à la vapeur ou grillé), nature, sans assaisonnement, huile ni sauce, en filet sans arêtes ; jamais cru ni fumé.",
     "es": "Bien cocinado (al horno, al vapor o a la plancha), sin nada, sin condimentos, aceites ni salsas, en filete sin espinas; nunca crudo ni ahumado.",
-    "it": "Ben cotto (al forno, al vapore o alla griglia), semplice, senza condimenti, oli o salse, in filetto senza lische; mai crudo o affumicato."
+    "it": "Ben cotto (al forno, al vapore o alla griglia), semplice, senza condimenti, oli o salse, in filetto senza lische; mai crudo o affumicato.",
+    "pt": "Bem cozinhado (no forno, a vapor ou grelhado), simples, sem temperos, óleos ou molhos, em filete sem espinhas; nunca cru nem fumado."
   },
   "child": {
     "en": "Cooked salmon without bones can be a healthy treat for a dog. Raw or smoked salmon is not for dogs.",
@@ -65,7 +72,8 @@
     "de": "Gegarter Lachs ohne Gräten kann ein gesundes Leckerli für einen Hund sein. Roher oder geräucherter Lachs ist nichts für Hunde.",
     "fr": "Le saumon cuit et sans arêtes peut être une friandise saine pour un chien. Le saumon cru ou fumé n’est pas pour les chiens.",
     "es": "El salmón cocinado y sin espinas puede ser un premio sano para un perro. El salmón crudo o ahumado no es para perros.",
-    "it": "Il salmone cotto senza lische può essere un premio sano per un cane. Il salmone crudo o affumicato non è per i cani."
+    "it": "Il salmone cotto senza lische può essere un premio sano per un cane. Il salmone crudo o affumicato non è per i cani.",
+    "pt": "O salmão cozinhado e sem espinhas pode ser uma guloseima saudável para um cão. O salmão cru ou fumado não é para cães."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "de": "Dürfen Hunde Räucherlachs fressen?",
         "fr": "Les chiens peuvent-ils manger du saumon fumé ?",
         "es": "¿Pueden los perros comer salmón ahumado?",
-        "it": "I cani possono mangiare il salmone affumicato?"
+        "it": "I cani possono mangiare il salmone affumicato?",
+        "pt": "Os cães podem comer salmão fumado?"
       },
       "a": {
         "en": "It isn't a good choice: smoked salmon and lox are high in salt.",
@@ -83,7 +92,8 @@
         "de": "Er ist keine gute Wahl: Räucherlachs und Lox sind sehr salzig.",
         "fr": "Ce n’est pas un bon choix : le saumon fumé et le lox sont très salés.",
         "es": "No es una buena opción: el salmón ahumado y el lox tienen mucha sal.",
-        "it": "Non è una buona scelta: il salmone affumicato e il lox sono molto salati."
+        "it": "Non è una buona scelta: il salmone affumicato e il lox sono molto salati.",
+        "pt": "Não é uma boa escolha: o salmão fumado e o lox têm muito sal."
       }
     },
     {
@@ -93,7 +103,8 @@
         "de": "Ist Lachs im Hundefutter unbedenklich?",
         "fr": "Le saumon dans les aliments pour chiens est-il sans danger ?",
         "es": "¿Es seguro el salmón de la comida para perros?",
-        "it": "Il salmone nel cibo per cani è sicuro?"
+        "it": "Il salmone nel cibo per cani è sicuro?",
+        "pt": "O salmão na ração para cães é seguro?"
       },
       "a": {
         "en": "Salmon in commercial diets is typically safe because it is cooked.",
@@ -101,7 +112,8 @@
         "de": "Lachs in handelsüblichem Hundefutter ist in der Regel unbedenklich, weil er gegart ist.",
         "fr": "Le saumon des aliments industriels est généralement sans danger, car il est cuit.",
         "es": "El salmón de los piensos comerciales suele ser seguro porque está cocinado.",
-        "it": "Il salmone negli alimenti industriali per cani di solito è sicuro, perché è cotto."
+        "it": "Il salmone negli alimenti industriali per cani di solito è sicuro, perché è cotto.",
+        "pt": "O salmão nas rações comerciais é normalmente seguro porque está cozinhado."
       }
     }
   ],
@@ -196,6 +208,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f97f0ff68a914d651a7612d83331faa76a650338f64d8d24902b4d0ee821304b"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3561a628df6f36ac32d230e99e93ae2fec51124101b715f46ba6a5fb3c38bbfe"
     }
   }
 }

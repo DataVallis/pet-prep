@@ -7,7 +7,8 @@
     "de": "Lauch",
     "fr": "Poireau",
     "es": "Puerro",
-    "it": "Porro"
+    "it": "Porro",
+    "pt": "Alho-francês"
   },
   "question": {
     "en": "Can cats eat leek?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Katzen Lauch fressen?",
     "fr": "Les chats peuvent-ils manger du poireau ?",
     "es": "¿Pueden los gatos comer puerro?",
-    "it": "I gatti possono mangiare il porro?"
+    "it": "I gatti possono mangiare il porro?",
+    "pt": "Os gatos podem comer alho-francês?"
   },
   "url_slug": {
     "en": "leek",
@@ -23,7 +25,8 @@
     "de": "lauch",
     "fr": "poireau",
     "es": "puerro",
-    "it": "porro"
+    "it": "porro",
+    "pt": "alho-frances"
   },
   "level": "toxic",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nein. Lauch gehört zur selben Familie wie Zwiebel und Knoblauch und ist für Katzen giftig – roh wie gekocht. Er kann rote Blutkörperchen schädigen und eine Blutarmut (Anämie) verursachen. Rufen Sie Ihren Tierarzt an, wenn Ihre Katze davon frisst.",
     "fr": "Non. Le poireau fait partie de la même famille que l’oignon et l’ail et il est toxique pour les chats, cru ou cuit. Il peut endommager les globules rouges et provoquer une anémie. Appelez votre vétérinaire si votre chat en mange.",
     "es": "No. El puerro es de la misma familia que la cebolla y el ajo y es venenoso para los gatos, crudo o cocinado. Puede dañar los glóbulos rojos y causar anemia. Llama a tu veterinario si tu gato come algo.",
-    "it": "No. Il porro appartiene alla stessa famiglia della cipolla e dell’aglio ed è velenoso per i gatti, che sia crudo o cotto. Può danneggiare i globuli rossi e causare anemia. Chiama il veterinario se il tuo gatto ne mangia."
+    "it": "No. Il porro appartiene alla stessa famiglia della cipolla e dell’aglio ed è velenoso per i gatti, che sia crudo o cotto. Può danneggiare i globuli rossi e causare anemia. Chiama il veterinario se il tuo gatto ne mangia.",
+    "pt": "Não. O alho-francês é da mesma família da cebola e do alho e é venenoso para os gatos, cru ou cozinhado. Pode danificar os glóbulos vermelhos e causar anemia. Liga ao teu veterinário se o teu gato comer algum."
   },
   "why": {
     "en": "Leek belongs to the allium family (the onion family). Alliums damage red blood cells and can lead to anaemia, and they also irritate the stomach and gut. Cats are the most sensitive species. All forms are poisonous to cats — raw, cooked, dried, powdered and liquid.",
@@ -40,7 +44,8 @@
     "de": "Lauch gehört zur Gattung Allium (den Zwiebelgewächsen). Allium-Pflanzen schädigen die roten Blutkörperchen, können zu Blutarmut (Anämie) führen und reizen außerdem Magen und Darm. Katzen sind die empfindlichste Tierart. Alle Formen sind für Katzen giftig – roh, gekocht, getrocknet, als Pulver und flüssig.",
     "fr": "Le poireau appartient à la famille des alliums (la famille de l’oignon). Les alliums endommagent les globules rouges et peuvent entraîner une anémie ; ils irritent aussi l’estomac et l’intestin. Le chat est l’espèce la plus sensible. Le poireau est toxique pour les chats sous toutes ses formes – cru, cuit, séché, en poudre ou liquide.",
     "es": "El puerro pertenece a la familia de las aliáceas (la familia de la cebolla). Las aliáceas dañan los glóbulos rojos y pueden provocar anemia, y además irritan el estómago y el intestino. Los gatos son la especie más sensible. Todas las formas son venenosas para los gatos: cruda, cocinada, seca, en polvo y líquida.",
-    "it": "Il porro appartiene al genere Allium (la famiglia della cipolla). Le piante di questo genere danneggiano i globuli rossi, possono portare all’anemia e irritano anche stomaco e intestino. I gatti sono la specie più sensibile. Tutte le forme sono velenose per i gatti: crude, cotte, essiccate, in polvere e liquide."
+    "it": "Il porro appartiene al genere Allium (la famiglia della cipolla). Le piante di questo genere danneggiano i globuli rossi, possono portare all’anemia e irritano anche stomaco e intestino. I gatti sono la specie più sensibile. Tutte le forme sono velenose per i gatti: crude, cotte, essiccate, in polvere e liquide.",
+    "pt": "O alho-francês pertence à família das aliáceas (a família da cebola). As aliáceas danificam os glóbulos vermelhos e podem levar a anemia, e também irritam o estômago e o intestino. Os gatos são a espécie mais sensível. Todas as formas são venenosas para gatos – cruas, cozinhadas, secas, em pó e líquidas."
   },
   "signs": {
     "en": [
@@ -96,6 +101,15 @@
       "Gengive pallide",
       "Urina rossastra",
       "Respiro più rapido o affannoso"
+    ],
+    "pt": [
+      "Vómitos",
+      "Diarreia",
+      "Menos apetite",
+      "Fraqueza",
+      "Gengivas pálidas",
+      "Urina avermelhada",
+      "Respiração mais rápida ou mais difícil"
     ]
   },
   "what_to_do": {
@@ -104,7 +118,8 @@
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, auch wenn Ihre Katze gesund wirkt – Anzeichen einer Blutarmut können erst nach mehreren Tagen auftreten. Notieren Sie, was Ihre Katze gefressen hat (roh, gekocht, als Pulver oder in einem Gericht), wie viel und wann. Versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, même si votre chat semble aller bien – les signes d’anémie peuvent mettre plusieurs jours à apparaître. Notez ce qu’il a mangé (cru, cuit, en poudre ou dans un plat), en quelle quantité et à quelle heure. N’essayez pas de faire vomir votre chat vous-même.",
     "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales, aunque tu gato parezca estar bien: los signos de anemia pueden tardar varios días en aparecer. Apunta qué ha comido tu gato (crudo, cocinado, en polvo o un plato que lo lleve), cuánto y cuándo. No intentes provocarle el vómito en casa.",
-    "it": "Contatta subito il veterinario o un centro antiveleni veterinario, anche se il tuo gatto sembra stare bene: i sintomi dell’anemia possono impiegare diversi giorni a manifestarsi. Annota che cosa ha mangiato (crudo, cotto, in polvere o in un piatto che lo conteneva), quanto e quando. Non cercare di farlo vomitare a casa."
+    "it": "Contatta subito il veterinario o un centro antiveleni veterinario, anche se il tuo gatto sembra stare bene: i sintomi dell’anemia possono impiegare diversi giorni a manifestarsi. Annota che cosa ha mangiato (crudo, cotto, in polvere o in un piatto che lo conteneva), quanto e quando. Non cercare di farlo vomitare a casa.",
+    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, mesmo que o teu gato pareça bem – os sinais de anemia podem demorar vários dias a aparecer. Toma nota do que o teu gato comeu (cru, cozinhado, em pó ou num prato que o continha), da quantidade e de quando. Não tentes provocar o vómito ao teu gato em casa."
   },
   "serving": null,
   "child": {
@@ -113,7 +128,8 @@
     "de": "Lauch ist ein Verwandter der Zwiebel und deshalb nicht sicher für Katzen. Sag einem Erwachsenen Bescheid, wenn deine Katze daran knabbert.",
     "fr": "Le poireau est un cousin de l’oignon, alors il est dangereux pour les chats. Préviens un adulte si ton chat en grignote.",
     "es": "El puerro es primo de la cebolla, así que no es seguro para los gatos. Avisa a un adulto si tu gatito mordisquea un poco.",
-    "it": "Il porro è un cugino della cipolla, quindi non è sicuro per i gatti. Dillo a un adulto se il micio ne sgranocchia un po’."
+    "it": "Il porro è un cugino della cipolla, quindi non è sicuro per i gatti. Dillo a un adulto se il micio ne sgranocchia un po’.",
+    "pt": "O alho-francês é primo da cebola, por isso não é seguro para gatos. Avisa um adulto se o gatinho o mordiscar."
   },
   "faq": [
     {
@@ -123,7 +139,8 @@
         "de": "Ist gekochter oder getrockneter Lauch für Katzen unbedenklich?",
         "fr": "Le poireau cuit ou séché est-il sans danger pour les chats ?",
         "es": "¿El puerro cocinado o seco es seguro para los gatos?",
-        "it": "Il porro cotto o essiccato è sicuro per i gatti?"
+        "it": "Il porro cotto o essiccato è sicuro per i gatti?",
+        "pt": "O alho-francês cozinhado ou seco é seguro para gatos?"
       },
       "a": {
         "en": "No. All forms are poisonous to cats, including raw, cooked and dried leek. Be careful with leftovers, sauces, soups and gravy that may contain it.",
@@ -131,7 +148,8 @@
         "de": "Nein. Alle Formen sind für Katzen giftig, auch roher, gekochter und getrockneter Lauch. Vorsicht bei Essensresten, Saucen, Suppen und Bratensoße, die Lauch enthalten können.",
         "fr": "Non. Le poireau est toxique pour les chats sous toutes ses formes, y compris cru, cuit et séché. Faites attention aux restes, aux sauces, aux soupes et aux jus de viande qui peuvent en contenir.",
         "es": "No. Todas las formas son venenosas para los gatos, también el puerro crudo, cocinado y seco. Ten cuidado con las sobras, las salsas, las sopas y los jugos de asado que puedan llevarlo.",
-        "it": "No. Tutte le forme sono velenose per i gatti, compreso il porro crudo, cotto ed essiccato. Fai attenzione ad avanzi, salse, zuppe e sughi che potrebbero contenerlo."
+        "it": "No. Tutte le forme sono velenose per i gatti, compreso il porro crudo, cotto ed essiccato. Fai attenzione ad avanzi, salse, zuppe e sughi che potrebbero contenerlo.",
+        "pt": "Não. Todas as formas são venenosas para gatos, incluindo o alho-francês cru, cozinhado e seco. Tem cuidado com restos de comida, molhos, sopas e molho de assado que o possam conter."
       }
     }
   ],
@@ -261,6 +279,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "35ee02a9afb646ef5d8b899bb116001da722c93aa22797224a05babd62c3c776"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "39da4c48a5a7b99cb8c9c0e072a09e3b3c91efc402f177af9362355c389fd91e"
     }
   }
 }

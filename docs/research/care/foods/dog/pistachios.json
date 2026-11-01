@@ -7,7 +7,8 @@
     "de": "Pistazien",
     "fr": "Pistaches",
     "es": "Pistachos",
-    "it": "Pistacchi"
+    "it": "Pistacchi",
+    "pt": "Pistácios"
   },
   "question": {
     "en": "Can dogs eat pistachios?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Hunde Pistazien fressen?",
     "fr": "Les chiens peuvent-ils manger des pistaches ?",
     "es": "¿Pueden los perros comer pistachos?",
-    "it": "I cani possono mangiare i pistacchi?"
+    "it": "I cani possono mangiare i pistacchi?",
+    "pt": "Os cães podem comer pistácios?"
   },
   "url_slug": {
     "en": "pistachios",
@@ -23,7 +25,8 @@
     "de": "pistazien",
     "fr": "pistaches",
     "es": "pistachos",
-    "it": "pistacchi"
+    "it": "pistacchi",
+    "pt": "pistacios"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nein, meiden Sie sie besser. Pistazien sind an sich nicht giftig, aber fettreich und meist gesalzen. Sie können auf den Magen schlagen oder zu einer Bauchspeicheldrüsenentzündung (Pankreatitis) führen, und Nüsse oder Schalen können zum Ersticken führen. Außerdem kann sich auf ihnen schädlicher Schimmel bilden.",
     "fr": "Non, mieux vaut les éviter. Les pistaches ne sont pas toxiques en elles-mêmes, mais elles sont grasses et généralement salées, peuvent dérégler l’estomac ou entraîner une pancréatite, et les pistaches ou leurs coques peuvent provoquer un étouffement. Elles peuvent aussi développer des moisissures nocives.",
     "es": "No, es mejor evitarlos. Los pistachos no son tóxicos en sí mismos, pero son grasos y suelen llevar sal, pueden sentar mal al estómago o provocar pancreatitis, y tanto el fruto como la cáscara pueden causar atragantamiento. Además, pueden criar moho dañino.",
-    "it": "No, è meglio evitarli. I pistacchi non sono tossici di per sé, ma sono grassi e di solito salati, possono disturbare lo stomaco o portare a una pancreatite, e i frutti o i gusci possono causare soffocamento. Possono anche sviluppare muffe dannose."
+    "it": "No, è meglio evitarli. I pistacchi non sono tossici di per sé, ma sono grassi e di solito salati, possono disturbare lo stomaco o portare a una pancreatite, e i frutti o i gusci possono causare soffocamento. Possono anche sviluppare muffe dannose.",
+    "pt": "Não, é melhor evitar. Os pistácios não são tóxicos em si, mas são gordos e normalmente salgados, podem fazer mal ao estômago ou levar a pancreatite, e os frutos ou as cascas podem causar engasgamento. Também podem ganhar bolor nocivo."
   },
   "why": {
     "en": "Pistachios are high in fat and salt, which can cause stomach problems, and fatty, salty snacks can lead to pancreatitis. Even shelled nuts can be a choking hazard. Mould on nut shells can produce aflatoxin, which can make dogs weak and lethargic, upset the stomach and even cause seizures.",
@@ -40,7 +44,8 @@
     "de": "Pistazien enthalten viel Fett und Salz, was Magenprobleme verursachen kann, und fettige, salzige Snacks können zu einer Pankreatitis führen. Selbst geschälte Nüsse können zum Ersticken führen. Schimmel auf Nussschalen kann Aflatoxin bilden, das Hunde schwach und matt machen, auf den Magen schlagen und sogar Krampfanfälle auslösen kann.",
     "fr": "Les pistaches sont riches en graisses et en sel, ce qui peut provoquer des troubles digestifs, et les en-cas gras et salés peuvent entraîner une pancréatite. Même décortiquées, elles peuvent provoquer un étouffement. Les moisissures sur les coques peuvent produire de l’aflatoxine, qui peut rendre les chiens faibles et léthargiques, dérégler l’estomac et même provoquer des convulsions.",
     "es": "Los pistachos tienen mucha grasa y sal, lo que puede causar problemas de estómago, y los tentempiés grasos y salados pueden provocar pancreatitis. Incluso pelados pueden causar atragantamiento. El moho de la cáscara de los frutos secos puede producir aflatoxina, que puede dejar al perro débil y aletargado, sentarle mal al estómago e incluso provocar convulsiones.",
-    "it": "I pistacchi sono ricchi di grassi e sale, che possono causare problemi di stomaco, e gli snack grassi e salati possono portare a una pancreatite. Anche sgusciati possono causare soffocamento. La muffa sui gusci della frutta a guscio può produrre aflatossina, che può rendere i cani deboli e apatici, disturbare lo stomaco e persino causare convulsioni."
+    "it": "I pistacchi sono ricchi di grassi e sale, che possono causare problemi di stomaco, e gli snack grassi e salati possono portare a una pancreatite. Anche sgusciati possono causare soffocamento. La muffa sui gusci della frutta a guscio può produrre aflatossina, che può rendere i cani deboli e apatici, disturbare lo stomaco e persino causare convulsioni.",
+    "pt": "Os pistácios têm muita gordura e sal, o que pode causar problemas de estômago, e os petiscos gordos e salgados podem levar a pancreatite. Mesmo sem casca podem causar engasgamento. O bolor nas cascas dos frutos secos pode produzir aflatoxina, que pode deixar os cães fracos e prostrados, fazer mal ao estômago e até causar convulsões."
   },
   "signs": {
     "en": [
@@ -78,6 +83,12 @@
       "Mal di pancia, nausea o poca energia (possibile pancreatite)",
       "Debolezza e stanchezza",
       "Soffocamento"
+    ],
+    "pt": [
+      "Vómitos ou diarreia",
+      "Dor de barriga, náuseas ou pouca energia (possível pancreatite)",
+      "Fraqueza e cansaço",
+      "Engasgamento"
     ]
   },
   "what_to_do": {
@@ -86,7 +97,8 @@
     "de": "Wenn Ihr Hund ein paar Pistazien gefressen hat, achten Sie auf Erbrechen, Durchfall oder Bauchschmerzen. Rufen Sie Ihren Tierarzt an, wenn Ihr Hund viele davon oder ihre Schalen gefressen hat, zu ersticken droht oder Schwäche, Müdigkeit oder eines dieser Anzeichen zeigt.",
     "fr": "Si votre chien a mangé quelques pistaches, surveillez les vomissements, la diarrhée ou les douleurs au ventre. Appelez votre vétérinaire s’il en a mangé beaucoup ou a mangé des coques, s’il semble s’étouffer, ou s’il montre de la faiblesse, de la fatigue ou l’un de ces signes.",
     "es": "Si tu perro se ha comido unos pocos pistachos, vigila si tiene vómitos, diarrea o dolor de barriga. Llama a tu veterinario si se ha comido muchos o sus cáscaras, si parece que se atraganta o si muestra debilidad, cansancio o cualquiera de estos signos.",
-    "it": "Se il tuo cane ha mangiato qualche pistacchio, controlla se compaiono vomito, diarrea o mal di pancia. Chiama il veterinario se ne ha mangiati molti o ne ha mangiato i gusci, se sembra soffocare o se mostra debolezza, stanchezza o uno di questi sintomi."
+    "it": "Se il tuo cane ha mangiato qualche pistacchio, controlla se compaiono vomito, diarrea o mal di pancia. Chiama il veterinario se ne ha mangiati molti o ne ha mangiato i gusci, se sembra soffocare o se mostra debolezza, stanchezza o uno di questi sintomi.",
+    "pt": "Se o teu cão comeu alguns pistácios, vigia se há vómitos, diarreia ou dor de barriga. Liga ao teu veterinário se o teu cão comeu muitos pistácios ou as cascas, parecer estar a engasgar-se ou mostrar fraqueza, cansaço ou algum destes sinais."
   },
   "serving": null,
   "child": {
@@ -95,7 +107,8 @@
     "de": "Pistazien und ihre Schalen sind nichts für Hunde. Sie können einem Hund Bauchweh machen, also stell die Schüssel hoch oben hin.",
     "fr": "Les pistaches et leurs coques ne sont pas pour les chiens. Elles peuvent leur donner mal au ventre, alors range le bol en hauteur.",
     "es": "Los pistachos y sus cáscaras no son para perros. Pueden sentarle mal a la barriguita de un perro, así que deja el cuenco en alto.",
-    "it": "I pistacchi e i loro gusci non sono per i cani. Possono fargli venire il mal di pancia, quindi tieni la ciotola in alto."
+    "it": "I pistacchi e i loro gusci non sono per i cani. Possono fargli venire il mal di pancia, quindi tieni la ciotola in alto.",
+    "pt": "Os pistácios e as cascas não são para cães. Podem fazer mal à barriga de um cão, por isso põe a taça num sítio alto."
   },
   "faq": [
     {
@@ -105,7 +118,8 @@
         "de": "Sind Pistazienschalen gefährlich?",
         "fr": "Les coques de pistache sont-elles dangereuses ?",
         "es": "¿Son peligrosas las cáscaras de pistacho?",
-        "it": "I gusci dei pistacchi sono pericolosi?"
+        "it": "I gusci dei pistacchi sono pericolosi?",
+        "pt": "As cascas de pistácio são perigosas?"
       },
       "a": {
         "en": "Yes. Pistachios and their shells can get lodged in a dog's throat, and mould can grow on nut shells.",
@@ -113,7 +127,8 @@
         "de": "Ja. Pistazien und ihre Schalen können einem Hund im Hals stecken bleiben, und auf Nussschalen kann Schimmel wachsen.",
         "fr": "Oui. Les pistaches et leurs coques peuvent rester coincées dans la gorge d’un chien, et des moisissures peuvent se développer sur les coques.",
         "es": "Sí. Los pistachos y sus cáscaras pueden quedarse atascados en la garganta del perro, y en la cáscara de los frutos secos puede crecer moho.",
-        "it": "Sì. I pistacchi e i loro gusci possono incastrarsi nella gola del cane, e sui gusci può crescere la muffa."
+        "it": "Sì. I pistacchi e i loro gusci possono incastrarsi nella gola del cane, e sui gusci può crescere la muffa.",
+        "pt": "Sim. Os pistácios e as cascas podem ficar presos na garganta de um cão, e as cascas dos frutos secos podem ganhar bolor."
       }
     }
   ],
@@ -201,6 +216,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8ad6746a0d6be068fe10dc386771b00805bb32f1ec630cd392e11ba9aa753676"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d315ec3f11b4ecfe8e90aaed14cd5afa22815a1e1057265798cb6e74b65667ee"
     }
   }
 }

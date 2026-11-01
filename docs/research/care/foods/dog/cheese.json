@@ -7,7 +7,8 @@
     "de": "Käse",
     "fr": "Fromage",
     "es": "Queso",
-    "it": "Formaggio"
+    "it": "Formaggio",
+    "pt": "Queijo"
   },
   "question": {
     "en": "Can dogs eat cheese?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Hunde Käse fressen?",
     "fr": "Les chiens peuvent-ils manger du fromage ?",
     "es": "¿Pueden los perros comer queso?",
-    "it": "I cani possono mangiare il formaggio?"
+    "it": "I cani possono mangiare il formaggio?",
+    "pt": "Os cães podem comer queijo?"
   },
   "url_slug": {
     "en": "cheese",
@@ -23,7 +25,8 @@
     "de": "kaese",
     "fr": "fromage",
     "es": "queso",
-    "it": "formaggio"
+    "it": "formaggio",
+    "pt": "queijo"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nicht als regelmäßiges Leckerli. Manche tierärztlichen Quellen erlauben kleine Stückchen fettärmeren Käses ohne Zusätze, aber Käse ist fett, viele Hunde vertragen Milchprodukte schlecht, und manche Käsesorten enthalten Zwiebel, Knoblauch oder Schnittlauch. Blauschimmelkäse ist besonders bedenklich.",
     "fr": "Pas comme friandise régulière. Certaines sources vétérinaires autorisent de petits morceaux de fromage nature et moins gras, mais le fromage est gras, beaucoup de chiens digèrent mal les produits laitiers et certains fromages contiennent de l’oignon, de l’ail ou de la ciboulette. Les fromages à pâte persillée sont particulièrement préoccupants.",
     "es": "No como premio habitual. Algunas fuentes veterinarias permiten trocitos de queso natural con menos grasa, pero el queso es graso, muchos perros digieren mal los lácteos y algunos quesos llevan cebolla, ajo o cebollino. Los quesos azules son especialmente preocupantes.",
-    "it": "Non come premio abituale. Alcune fonti veterinarie ammettono pezzetti di formaggio semplice e meno grasso, ma il formaggio è grasso, molti cani digeriscono male i latticini e alcuni formaggi contengono cipolla, aglio o erba cipollina. I formaggi erborinati destano particolare preoccupazione."
+    "it": "Non come premio abituale. Alcune fonti veterinarie ammettono pezzetti di formaggio semplice e meno grasso, ma il formaggio è grasso, molti cani digeriscono male i latticini e alcuni formaggi contengono cipolla, aglio o erba cipollina. I formaggi erborinati destano particolare preoccupazione.",
+    "pt": "Não como guloseima habitual. Algumas fontes veterinárias aceitam pedacinhos de queijo simples e com menos gordura, mas o queijo é gordo, muitos cães digerem mal os laticínios e alguns queijos têm cebola, alho ou cebolinho. Os queijos azuis são uma preocupação especial."
   },
   "why": {
     "en": "Dogs have little lactase, the enzyme that digests milk sugar, so dairy can upset the stomach. Cheese is high in fat: too much leads to weight gain and can trigger pancreatitis. Flavoured cheeses may contain onion, garlic or chives, and blue cheeses such as Roquefort contain roquefortine C, to which dogs appear sensitive. Sources differ: the AKC and Dogs Trust allow small amounts, while Cornell lists cheese among fatty foods to avoid, so we use the stricter level.",
@@ -40,7 +44,8 @@
     "de": "Hunde haben wenig Laktase, das Enzym, das Milchzucker verdaut, deshalb können Milchprodukte auf den Magen schlagen. Käse ist sehr fettreich: Zu viel führt zu Gewichtszunahme und kann eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen. Käse mit Geschmackszusätzen kann Zwiebel, Knoblauch oder Schnittlauch enthalten, und Blauschimmelkäse wie Roquefort enthält Roquefortin C, auf das Hunde offenbar empfindlich reagieren. Die Quellen sind sich nicht einig: Der AKC und Dogs Trust erlauben kleine Mengen, Cornell zählt Käse zu den fetten Lebensmitteln, die man meiden sollte – daher wählen wir die strengere Einstufung.",
     "fr": "Les chiens ont peu de lactase, l’enzyme qui digère le sucre du lait : les produits laitiers peuvent donc dérégler l’estomac. Le fromage est riche en graisses : en excès, il fait grossir et peut déclencher une pancréatite. Les fromages aromatisés peuvent contenir de l’oignon, de l’ail ou de la ciboulette, et les fromages à pâte persillée comme le roquefort contiennent de la roquefortine C, à laquelle les chiens semblent sensibles. Les sources divergent : l’AKC et Dogs Trust autorisent de petites quantités, tandis que Cornell classe le fromage parmi les aliments gras à éviter ; nous retenons donc le niveau le plus strict.",
     "es": "Los perros tienen poca lactasa, la enzima que digiere el azúcar de la leche, así que los lácteos pueden sentarles mal al estómago. El queso tiene mucha grasa: demasiado hace engordar y puede desencadenar una pancreatitis. Los quesos con sabores pueden llevar cebolla, ajo o cebollino, y los quesos azules como el roquefort contienen roquefortina C, a la que los perros parecen ser sensibles. Las fuentes no coinciden: el AKC y Dogs Trust permiten pequeñas cantidades, mientras que Cornell incluye el queso entre los alimentos grasos que hay que evitar, así que usamos el nivel más estricto.",
-    "it": "I cani hanno poca lattasi, l’enzima che digerisce lo zucchero del latte, quindi i latticini possono disturbare lo stomaco. Il formaggio è ricco di grassi: troppo fa ingrassare e può scatenare una pancreatite. I formaggi aromatizzati possono contenere cipolla, aglio o erba cipollina, e gli erborinati come il Roquefort contengono roquefortina C, a cui i cani sembrano sensibili. Le fonti non concordano: l’AKC e Dogs Trust ammettono piccole quantità, mentre Cornell elenca il formaggio tra i cibi grassi da evitare, quindi adottiamo il livello più prudente."
+    "it": "I cani hanno poca lattasi, l’enzima che digerisce lo zucchero del latte, quindi i latticini possono disturbare lo stomaco. Il formaggio è ricco di grassi: troppo fa ingrassare e può scatenare una pancreatite. I formaggi aromatizzati possono contenere cipolla, aglio o erba cipollina, e gli erborinati come il Roquefort contengono roquefortina C, a cui i cani sembrano sensibili. Le fonti non concordano: l’AKC e Dogs Trust ammettono piccole quantità, mentre Cornell elenca il formaggio tra i cibi grassi da evitare, quindi adottiamo il livello più prudente.",
+    "pt": "Os cães têm pouca lactase, a enzima que digere o açúcar do leite, por isso os laticínios podem perturbar o estômago. O queijo tem muita gordura: em excesso faz engordar e pode desencadear uma pancreatite. Os queijos aromatizados podem ter cebola, alho ou cebolinho, e os queijos azuis, como o Roquefort, contêm roquefortina C, à qual os cães parecem ser sensíveis. As fontes divergem: o AKC e a Dogs Trust aceitam pequenas quantidades, enquanto a Cornell inclui o queijo entre os alimentos gordos a evitar, por isso seguimos a mais rigorosa."
   },
   "signs": {
     "en": [
@@ -78,6 +83,12 @@
       "Vomito",
       "Mal di pancia, nausea, poca energia o poco appetito (possibile pancreatite)",
       "Tremori muscolari dopo un formaggio erborinato"
+    ],
+    "pt": [
+      "Diarreia ou outro mal-estar de barriga",
+      "Vómitos",
+      "Dor de barriga, náuseas, pouca energia ou pouco apetite (possível pancreatite)",
+      "Tremores musculares depois de queijo azul"
     ]
   },
   "what_to_do": {
@@ -86,7 +97,8 @@
     "de": "Nach einem kleinen Stück Käse ohne Zusätze genügt es meist, auf Magen-Darm-Beschwerden zu achten. Rufen Sie Ihren Tierarzt an, wenn Ihr Hund viel Käse, Blauschimmelkäse oder Käse mit Zwiebel, Knoblauch oder Schnittlauch gefressen hat oder Erbrechen, Bauchschmerzen oder Zittern zeigt.",
     "fr": "Après un petit morceau nature, il suffit généralement de surveiller les troubles digestifs. Appelez votre vétérinaire si votre chien a mangé beaucoup de fromage, du fromage à pâte persillée ou un fromage à l’oignon, à l’ail ou à la ciboulette, ou s’il vomit, a mal au ventre ou tremble.",
     "es": "Un trocito de queso natural normalmente solo requiere vigilar si aparecen molestias de barriga. Llama a tu veterinario si tu perro ha comido mucho queso, ha comido queso azul o queso con cebolla, ajo o cebollino, o si vomita, le duele la barriga o tiembla.",
-    "it": "Di solito, per un pezzetto di formaggio semplice, basta controllare se compaiono disturbi di pancia. Chiama il veterinario se il tuo cane ha mangiato molto formaggio, un formaggio erborinato o un formaggio con cipolla, aglio o erba cipollina, oppure se mostra vomito, mal di pancia o tremori."
+    "it": "Di solito, per un pezzetto di formaggio semplice, basta controllare se compaiono disturbi di pancia. Chiama il veterinario se il tuo cane ha mangiato molto formaggio, un formaggio erborinato o un formaggio con cipolla, aglio o erba cipollina, oppure se mostra vomito, mal di pancia o tremori.",
+    "pt": "Um pedacinho simples normalmente só exige que vigies se há mal-estar de barriga. Liga ao teu veterinário se o teu cão comeu muito queijo, comeu queijo azul ou queijo com cebola, alho ou cebolinho, ou se tiver vómitos, dor de barriga ou tremores."
   },
   "serving": {
     "en": "If you share at all: a tiny piece of plain, lower-fat cheese such as mozzarella or cottage cheese, never flavoured or blue cheese.",
@@ -94,7 +106,8 @@
     "de": "Wenn überhaupt: ein winziges Stück fettärmerer Käse ohne Zusätze, z. B. Mozzarella oder Hüttenkäse, nie Käse mit Geschmackszusätzen oder Blauschimmelkäse.",
     "fr": "Si vous en partagez : un tout petit morceau de fromage nature et moins gras, comme la mozzarella ou le cottage cheese, jamais de fromage aromatisé ou à pâte persillée.",
     "es": "Si lo compartes: un trocito diminuto de queso natural con menos grasa, como mozzarella o requesón, nunca queso con sabores ni queso azul.",
-    "it": "Se proprio vuoi condividerlo: un pezzetto di formaggio semplice e meno grasso, come mozzarella o fiocchi di latte, mai aromatizzato né erborinato."
+    "it": "Se proprio vuoi condividerlo: un pezzetto di formaggio semplice e meno grasso, come mozzarella o fiocchi di latte, mai aromatizzato né erborinato.",
+    "pt": "Se partilhares: um pedacinho de queijo simples e com menos gordura, como mozzarella ou queijo cottage, nunca queijo aromatizado ou azul."
   },
   "child": {
     "en": "Cheese is very fatty for a dog's tummy. A tiny plain piece now and then is plenty — ask a grown-up first.",
@@ -102,7 +115,8 @@
     "de": "Käse ist sehr fett für den Bauch eines Hundes. Ein winziges Stück ohne Gewürze ab und zu reicht völlig – frag zuerst einen Erwachsenen.",
     "fr": "Le fromage est très gras pour le ventre d’un chien. Un tout petit morceau nature de temps en temps, c’est bien assez – demande d’abord à un adulte.",
     "es": "El queso es muy graso para la barriga de un perro. Un trocito natural de vez en cuando es más que suficiente: pregunta antes a un adulto.",
-    "it": "Il formaggio è molto grasso per la pancia di un cane. Un pezzettino semplice ogni tanto basta e avanza – prima chiedi a un adulto."
+    "it": "Il formaggio è molto grasso per la pancia di un cane. Un pezzettino semplice ogni tanto basta e avanza – prima chiedi a un adulto.",
+    "pt": "O queijo é muito gordo para a barriga de um cão. Um pedacinho simples de vez em quando chega – pergunta primeiro a um adulto."
   },
   "faq": [
     {
@@ -112,7 +126,8 @@
         "de": "Ist Blauschimmelkäse für Hunde schlimmer als anderer Käse?",
         "fr": "Le fromage à pâte persillée est-il pire que les autres pour les chiens ?",
         "es": "¿El queso azul es peor que otros quesos para los perros?",
-        "it": "Il formaggio erborinato è peggio degli altri per i cani?"
+        "it": "Il formaggio erborinato è peggio degli altri per i cani?",
+        "pt": "O queijo azul é pior do que outros queijos para os cães?"
       },
       "a": {
         "en": "Yes. Roquefort and other blue cheeses contain roquefortine C, and dogs appear sensitive to it; severe cases can bring muscle tremors.",
@@ -120,7 +135,8 @@
         "de": "Ja. Roquefort und andere Blauschimmelkäse enthalten Roquefortin C, und Hunde reagieren offenbar empfindlich darauf; in schweren Fällen kann es zu Muskelzittern kommen.",
         "fr": "Oui. Le roquefort et les autres fromages à pâte persillée contiennent de la roquefortine C, à laquelle les chiens semblent sensibles ; dans les cas graves, elle peut provoquer des tremblements musculaires.",
         "es": "Sí. El roquefort y otros quesos azules contienen roquefortina C, y los perros parecen ser sensibles a ella; en los casos graves puede provocar temblores musculares.",
-        "it": "Sì. Il Roquefort e gli altri formaggi erborinati contengono roquefortina C, a cui i cani sembrano sensibili; nei casi gravi possono comparire tremori muscolari."
+        "it": "Sì. Il Roquefort e gli altri formaggi erborinati contengono roquefortina C, a cui i cani sembrano sensibili; nei casi gravi possono comparire tremori muscolari.",
+        "pt": "Sim. O Roquefort e outros queijos azuis contêm roquefortina C, à qual os cães parecem ser sensíveis; os casos graves podem causar tremores musculares."
       }
     },
     {
@@ -130,7 +146,8 @@
         "de": "Welcher Käse ist am wenigsten riskant?",
         "fr": "Quel fromage est le moins risqué ?",
         "es": "¿Qué queso tiene menos riesgo?",
-        "it": "Qual è il formaggio meno rischioso?"
+        "it": "Qual è il formaggio meno rischioso?",
+        "pt": "Qual é o queijo menos arriscado?"
       },
       "a": {
         "en": "Lower-fat plain cheeses such as mozzarella, cottage cheese or soft goat cheese, in a small amount.",
@@ -138,7 +155,8 @@
         "de": "Fettärmere Käsesorten ohne Zusätze wie Mozzarella, Hüttenkäse oder weicher Ziegenkäse, in kleiner Menge.",
         "fr": "Les fromages nature moins gras comme la mozzarella, le cottage cheese ou le fromage de chèvre frais, en petite quantité.",
         "es": "Los quesos naturales con menos grasa, como la mozzarella, el requesón o el queso de cabra fresco, en poca cantidad.",
-        "it": "I formaggi semplici e meno grassi, come mozzarella, fiocchi di latte o formaggio di capra fresco, in piccola quantità."
+        "it": "I formaggi semplici e meno grassi, come mozzarella, fiocchi di latte o formaggio di capra fresco, in piccola quantità.",
+        "pt": "Os queijos simples com menos gordura, como mozzarella, queijo cottage ou queijo de cabra fresco, em pequena quantidade."
       }
     }
   ],
@@ -244,6 +262,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "dd03782e0cdd44a163d27ff89f69b72a8c1958ae89eb9574b81e1fda90d85b5f"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "529f50f322bbc6468676f55cb16de387fda29cc154a58d95d7456948761c1290"
     }
   }
 }

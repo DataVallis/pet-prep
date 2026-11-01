@@ -7,7 +7,8 @@
     "de": "Rohe Eier",
     "fr": "Œufs crus",
     "es": "Huevos crudos",
-    "it": "Uova crude"
+    "it": "Uova crude",
+    "pt": "Ovos crus"
   },
   "question": {
     "en": "Can cats eat raw eggs?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Katzen rohe Eier fressen?",
     "fr": "Les chats peuvent-ils manger des œufs crus ?",
     "es": "¿Pueden los gatos comer huevos crudos?",
-    "it": "I gatti possono mangiare le uova crude?"
+    "it": "I gatti possono mangiare le uova crude?",
+    "pt": "Os gatos podem comer ovos crus?"
   },
   "url_slug": {
     "en": "raw-eggs",
@@ -23,7 +25,8 @@
     "de": "rohe-eier",
     "fr": "oeufs-crus",
     "es": "huevos-crudos",
-    "it": "uova-crude"
+    "it": "uova-crude",
+    "pt": "ovos-crus"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nein, geben Sie Katzen keine rohen Eier. Rohe Eier können schädliche Bakterien wie Salmonellen enthalten, die Katzen und Menschen krank machen können, und rohes Eiweiß enthält ein Protein, das ein Vitamin blockieren kann.",
     "fr": "Non, ne donnez pas d’œufs crus aux chats. Les œufs crus peuvent contenir des bactéries dangereuses comme les salmonelles, qui peuvent rendre malades les chats comme les humains, et le blanc d’œuf cru contient une protéine qui peut bloquer une vitamine.",
     "es": "No, no le des huevos crudos a tu gato. Los huevos crudos pueden contener bacterias dañinas como Salmonella, que pueden hacer enfermar tanto a los gatos como a las personas, y la clara cruda contiene una proteína que puede bloquear una vitamina.",
-    "it": "No, non dare uova crude ai gatti. Le uova crude possono contenere batteri nocivi come la Salmonella, che possono far ammalare sia i gatti sia le persone, e l’albume crudo contiene una proteina che può bloccare una vitamina."
+    "it": "No, non dare uova crude ai gatti. Le uova crude possono contenere batteri nocivi come la Salmonella, che possono far ammalare sia i gatti sia le persone, e l’albume crudo contiene una proteina che può bloccare una vitamina.",
+    "pt": "Não, não dês ovos crus aos gatos. Os ovos crus podem ter bactérias nocivas, como a Salmonella, que podem pôr doentes tanto os gatos como as pessoas, e a clara crua contém uma proteína que pode bloquear uma vitamina."
   },
   "why": {
     "en": "Raw eggs may contain harmful bacteria and parasites and could mean food poisoning for cats and humans alike. Raw egg white also contains avidin, which binds the vitamin biotin and stops it being absorbed. Cooking food thoroughly protects pets from salmonella.",
@@ -40,7 +44,8 @@
     "de": "Rohe Eier können schädliche Bakterien und Parasiten enthalten und bei Katzen wie Menschen eine Lebensmittelvergiftung auslösen. Rohes Eiweiß enthält außerdem Avidin, das das Vitamin Biotin bindet und dessen Aufnahme verhindert. Gründliches Durchgaren schützt Haustiere vor Salmonellen.",
     "fr": "Les œufs crus peuvent contenir des bactéries et des parasites dangereux et provoquer une intoxication alimentaire chez les chats comme chez les humains. Le blanc d’œuf cru contient aussi de l’avidine, qui fixe la biotine, une vitamine, et empêche son absorption. Bien cuire les aliments protège les animaux des salmonelles.",
     "es": "Los huevos crudos pueden contener bacterias y parásitos dañinos y podrían causar una intoxicación alimentaria tanto a gatos como a personas. Además, la clara de huevo cruda contiene avidina, que se une a la vitamina biotina e impide que se absorba. Cocinar bien los alimentos protege a las mascotas de la salmonela.",
-    "it": "Le uova crude possono contenere batteri e parassiti nocivi e causare un’intossicazione alimentare sia nei gatti sia nelle persone. L’albume crudo contiene anche avidina, che lega la vitamina biotina e ne impedisce l’assorbimento. Cuocere bene il cibo protegge gli animali domestici dalla Salmonella."
+    "it": "Le uova crude possono contenere batteri e parassiti nocivi e causare un’intossicazione alimentare sia nei gatti sia nelle persone. L’albume crudo contiene anche avidina, che lega la vitamina biotina e ne impedisce l’assorbimento. Cuocere bene il cibo protegge gli animali domestici dalla Salmonella.",
+    "pt": "Os ovos crus podem conter bactérias e parasitas nocivos e causar intoxicação alimentar tanto em gatos como em pessoas. A clara crua contém também avidina, que se liga à vitamina biotina e impede a sua absorção. Cozinhar bem os alimentos protege os animais de estimação da salmonela."
   },
   "signs": {
     "en": [
@@ -84,6 +89,13 @@
       "Febbre",
       "Non vuole mangiare",
       "Letargia"
+    ],
+    "pt": [
+      "Vómitos",
+      "Diarreia, por vezes com sangue",
+      "Febre",
+      "Falta de apetite",
+      "Letargia"
     ]
   },
   "what_to_do": {
@@ -92,7 +104,8 @@
     "de": "Hat Ihre Katze ein wenig rohes Ei aufgeleckt, achten Sie auf Erbrechen, Durchfall, Fieber oder Appetitlosigkeit, und rufen Sie Ihren Tierarzt an, wenn eines davon auftritt. Waschen Sie sich die Hände und reinigen Sie alle Flächen, die mit dem Ei in Berührung gekommen sind.",
     "fr": "Si votre chat a léché un peu d’œuf cru, surveillez l’apparition de vomissements, de diarrhée, de fièvre ou d’un refus de manger, et appelez votre vétérinaire si l’un de ces signes apparaît. Lavez-vous les mains et nettoyez toutes les surfaces touchées par l’œuf.",
     "es": "Si tu gato ha lamido un poco de huevo crudo, vigila si tiene vómitos, diarrea, fiebre o deja de comer, y llama a tu veterinario si aparece alguno de estos síntomas. Lávate las manos y limpia las superficies que haya tocado el huevo.",
-    "it": "Se il tuo gatto ha leccato un po’ di uovo crudo, controlla se compaiono vomito, diarrea, febbre o rifiuto del cibo, e in tal caso chiama il veterinario. Lavati le mani e pulisci le superfici toccate dall’uovo."
+    "it": "Se il tuo gatto ha leccato un po’ di uovo crudo, controlla se compaiono vomito, diarrea, febbre o rifiuto del cibo, e in tal caso chiama il veterinario. Lavati le mani e pulisci le superfici toccate dall’uovo.",
+    "pt": "Se o teu gato lambeu um pouco de ovo cru, vigia se aparecem vómitos, diarreia, febre ou falta de apetite e liga ao teu veterinário se algum destes sinais surgir. Lava as mãos e as superfícies em que o ovo tocou."
   },
   "serving": null,
   "child": {
@@ -101,7 +114,8 @@
     "de": "Rohe Eier können Keime enthalten. Nur Erwachsene sollten sie anfassen, und Katzen sollten sie nicht fressen.",
     "fr": "Les œufs crus peuvent contenir des microbes. Seuls les adultes doivent les manipuler, et les chats ne doivent pas en manger.",
     "es": "Los huevos crudos pueden tener gérmenes. Solo los adultos deben manipularlos, y los gatos no deben comerlos.",
-    "it": "Le uova crude possono avere dei germi. Solo gli adulti dovrebbero toccarle, e i gatti non devono mangiarle."
+    "it": "Le uova crude possono avere dei germi. Solo gli adulti dovrebbero toccarle, e i gatti non devono mangiarle.",
+    "pt": "Os ovos crus podem ter micróbios. Só os adultos devem mexer neles, e os gatos não os devem comer."
   },
   "faq": [
     {
@@ -111,7 +125,8 @@
         "de": "Sind gekochte Eier stattdessen in Ordnung?",
         "fr": "Peut-on donner des œufs cuits à la place ?",
         "es": "¿Y los huevos cocinados?",
-        "it": "Le uova cotte vanno bene, invece?"
+        "it": "Le uova cotte vanno bene, invece?",
+        "pt": "E os ovos cozinhados?"
       },
       "a": {
         "en": "Cooked egg is a different matter: PDSA says eggs can suit pets, but only in moderation. Cook it fully and serve it plain.",
@@ -119,7 +134,8 @@
         "de": "Gekochtes Ei ist etwas anderes: Laut PDSA können Eier für Haustiere geeignet sein, aber nur in Maßen. Garen Sie es vollständig durch und servieren Sie es ohne Zusätze.",
         "fr": "L’œuf cuit, c’est autre chose : selon la PDSA, les œufs peuvent convenir aux animaux, mais seulement avec modération. Faites-le bien cuire et servez-le nature.",
         "es": "El huevo cocinado es otra cosa: PDSA dice que los huevos pueden ser adecuados para las mascotas, pero solo con moderación. Cocínalo del todo y sírvelo sin nada añadido.",
-        "it": "L’uovo cotto è un’altra cosa: secondo PDSA le uova possono essere adatte agli animali domestici, ma solo con moderazione. Cuocilo bene e servilo semplice."
+        "it": "L’uovo cotto è un’altra cosa: secondo PDSA le uova possono essere adatte agli animali domestici, ma solo con moderazione. Cuocilo bene e servilo semplice.",
+        "pt": "O ovo cozinhado é outra história: a PDSA diz que os ovos podem ser adequados para animais de estimação, mas só com moderação. Cozinha-o bem e serve-o simples."
       }
     }
   ],
@@ -209,6 +225,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6e7cf2fc84026bb5f935dc7e7c77c99161faf90decbfb308176acf82cca60202"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "433121081f93164553266a2a99f0db5649ebd0e2da2fd5ca7bee05c5088484c1"
     }
   }
 }

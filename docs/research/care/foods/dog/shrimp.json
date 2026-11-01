@@ -7,7 +7,8 @@
     "de": "Garnelen",
     "fr": "Crevettes",
     "es": "Gambas",
-    "it": "Gamberetti"
+    "it": "Gamberetti",
+    "pt": "Camarão"
   },
   "question": {
     "en": "Can dogs eat shrimp?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Hunde Garnelen fressen?",
     "fr": "Les chiens peuvent-ils manger des crevettes ?",
     "es": "¿Pueden los perros comer gambas?",
-    "it": "I cani possono mangiare i gamberetti?"
+    "it": "I cani possono mangiare i gamberetti?",
+    "pt": "Os cães podem comer camarão?"
   },
   "url_slug": {
     "en": "shrimp",
@@ -23,7 +25,8 @@
     "de": "garnelen",
     "fr": "crevettes",
     "es": "gambas",
-    "it": "gamberetti"
+    "it": "gamberetti",
+    "pt": "camarao"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Ja, ein paar Stücke vollständig gegarter, ungewürzter Garnelen sind für Hunde in Ordnung. Entfernen Sie vorher Schale, Kopf, Beine und Schwanz. Rohe Garnelen können schädliche Keime enthalten, und frittierte, panierte oder gewürzte Garnelen sind nicht geeignet.",
     "fr": "Oui, quelques morceaux de crevettes nature et bien cuites conviennent aux chiens. Retirez d’abord la carapace, la tête, les pattes et la queue. Les crevettes crues peuvent porter des germes nocifs, et les crevettes frites, panées ou assaisonnées ne conviennent pas.",
     "es": "Sí, unos pocos trozos de gamba bien cocinada y sin nada están bien para los perros. Quítales antes la cáscara, la cabeza, las patas y la cola. Las gambas crudas pueden llevar gérmenes dañinos, y las fritas, rebozadas o condimentadas no son adecuadas.",
-    "it": "Sì, qualche gamberetto semplice e ben cotto va bene per i cani. Prima togli guscio, testa, zampe e coda. I gamberetti crudi possono portare germi dannosi, e quelli fritti, impanati o conditi non sono adatti."
+    "it": "Sì, qualche gamberetto semplice e ben cotto va bene per i cani. Prima togli guscio, testa, zampe e coda. I gamberetti crudi possono portare germi dannosi, e quelli fritti, impanati o conditi non sono adatti.",
+    "pt": "Sim, alguns pedaços de camarão simples e bem cozinhado não fazem mal aos cães. Tira primeiro a casca, a cabeça, as patas e a cauda. O camarão cru pode ter germes nocivos, e o camarão frito, panado ou temperado não é adequado."
   },
   "why": {
     "en": "Raw shellfish contain harmful pathogens that cooking avoids. Shrimp shells are a choking hazard and can cause blockages. Fried or breaded shrimp add unnecessary fats and oils. Shrimp are low in fat and calories but high in cholesterol, so moderation is key.",
@@ -40,7 +44,8 @@
     "de": "Rohe Schalentiere enthalten schädliche Krankheitserreger, die durch das Garen vermieden werden. Garnelenschalen können zum Ersticken führen und einen Darmverschluss verursachen. Frittierte oder panierte Garnelen enthalten unnötige Fette und Öle. Garnelen sind fett- und kalorienarm, aber reich an Cholesterin – deshalb kommt es auf das richtige Maß an.",
     "fr": "Les crustacés crus contiennent des agents pathogènes nocifs que la cuisson permet d’éviter. Les carapaces de crevettes peuvent provoquer un étouffement et des obstructions. Les crevettes frites ou panées apportent des graisses et des huiles inutiles. Les crevettes sont pauvres en graisses et en calories mais riches en cholestérol : la modération est essentielle.",
     "es": "El marisco crudo contiene patógenos dañinos que se evitan cocinándolo. La cáscara de las gambas puede provocar atragantamiento y obstrucciones. Las gambas fritas o rebozadas añaden grasas y aceites innecesarios. Las gambas tienen poca grasa y pocas calorías, pero mucho colesterol, así que la clave es la moderación.",
-    "it": "I crostacei crudi contengono patogeni dannosi che la cottura elimina. Il guscio dei gamberetti può causare soffocamento e ostruzioni. I gamberetti fritti o impanati aggiungono grassi e oli inutili. I gamberetti hanno pochi grassi e poche calorie ma molto colesterolo, quindi la moderazione è fondamentale."
+    "it": "I crostacei crudi contengono patogeni dannosi che la cottura elimina. Il guscio dei gamberetti può causare soffocamento e ostruzioni. I gamberetti fritti o impanati aggiungono grassi e oli inutili. I gamberetti hanno pochi grassi e poche calorie ma molto colesterolo, quindi la moderazione è fondamentale.",
+    "pt": "O marisco cru contém agentes patogénicos nocivos que a cozedura evita. As cascas do camarão podem causar engasgamento e obstruções. O camarão frito ou panado acrescenta gorduras e óleos desnecessários. O camarão tem pouca gordura e poucas calorias, mas muito colesterol, por isso a moderação é essencial."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "de": "Geben Sie keine Garnelen mehr, wenn Ihr Hund Bauchbeschwerden zeigt oder krank wirkt, und rufen Sie Ihren Tierarzt an, wenn sich die Anzeichen verschlimmern. Rufen Sie auch Ihren Tierarzt an, wenn Ihr Hund Schalen verschluckt hat und zu ersticken droht.",
     "fr": "Arrêtez de donner des crevettes si votre chien a mal au ventre ou semble malade, et appelez votre vétérinaire si les signes s’aggravent. Appelez aussi votre vétérinaire si votre chien a avalé des carapaces et semble s’étouffer.",
     "es": "Deja de darle gambas si tu perro muestra molestias en la barriga o parece encontrarse mal, y llama a tu veterinario si los signos empeoran. Llama también a tu veterinario si se ha tragado cáscaras y parece que se atraganta.",
-    "it": "Smetti di dare gamberetti se il tuo cane ha fastidi alla pancia o sembra stare male, e chiama il veterinario se i sintomi peggiorano. Chiama il veterinario anche se ha ingoiato dei gusci e sembra soffocare."
+    "it": "Smetti di dare gamberetti se il tuo cane ha fastidi alla pancia o sembra stare male, e chiama il veterinario se i sintomi peggiorano. Chiama il veterinario anche se ha ingoiato dei gusci e sembra soffocare.",
+    "pt": "Deixa de dar camarão se o teu cão mostrar desconforto na barriga ou parecer adoentado, e liga ao teu veterinário se os sinais piorarem. Liga também ao teu veterinário se o teu cão engoliu cascas e parecer estar a engasgar-se."
   },
   "serving": {
     "en": "A few pieces, fully cooked (steamed is best), plain, with shell, head, legs and tail removed; not fried, breaded or seasoned.",
@@ -57,7 +63,8 @@
     "de": "Ein paar Stücke, vollständig gegart (am besten gedämpft), pur, ohne Schale, Kopf, Beine und Schwanz; nicht frittiert, paniert oder gewürzt.",
     "fr": "Quelques morceaux, bien cuits (de préférence à la vapeur), nature, sans carapace, tête, pattes ni queue ; ni frits, ni panés, ni assaisonnés.",
     "es": "Unos pocos trozos, bien cocinados (mejor al vapor), sin nada, sin cáscara, cabeza, patas ni cola; nada de gambas fritas, rebozadas ni condimentadas.",
-    "it": "Pochi pezzi, ben cotti (meglio al vapore), semplici, senza guscio, testa, zampe e coda; non fritti, impanati o conditi."
+    "it": "Pochi pezzi, ben cotti (meglio al vapore), semplici, senza guscio, testa, zampe e coda; non fritti, impanati o conditi.",
+    "pt": "Alguns pedaços, bem cozinhados (a vapor é o melhor), simples, sem casca, cabeça, patas e cauda; nem frito, nem panado, nem temperado."
   },
   "child": {
     "en": "A dog may have a couple of cooked, peeled shrimp. The shells and tails are not for dogs.",
@@ -65,7 +72,8 @@
     "de": "Ein Hund darf ein paar gekochte, geschälte Garnelen bekommen. Die Schalen und Schwänze sind nichts für Hunde.",
     "fr": "Un chien peut manger une ou deux crevettes cuites et décortiquées. Les carapaces et les queues ne sont pas pour les chiens.",
     "es": "Un perro puede comer un par de gambas cocinadas y peladas. Las cáscaras y las colas no son para perros.",
-    "it": "Un cane può mangiare un paio di gamberetti cotti e sgusciati. I gusci e le code non sono per i cani."
+    "it": "Un cane può mangiare un paio di gamberetti cotti e sgusciati. I gusci e le code non sono per i cani.",
+    "pt": "Um cão pode comer um ou dois camarões cozinhados e descascados. As cascas e as caudas não são para cães."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "de": "Dürfen Hunde Garnelenschwänze fressen?",
         "fr": "Les chiens peuvent-ils manger les queues de crevettes ?",
         "es": "¿Pueden los perros comer colas de gamba?",
-        "it": "I cani possono mangiare le code dei gamberetti?"
+        "it": "I cani possono mangiare le code dei gamberetti?",
+        "pt": "Os cães podem comer a cauda do camarão?"
       },
       "a": {
         "en": "No. Remove the shell, head, legs and tail, as shells are a choking hazard and can cause blockages.",
@@ -83,7 +92,8 @@
         "de": "Nein. Entfernen Sie Schale, Kopf, Beine und Schwanz, denn Schalen können zum Ersticken führen und einen Darmverschluss verursachen.",
         "fr": "Non. Retirez la carapace, la tête, les pattes et la queue, car les carapaces peuvent provoquer un étouffement et des obstructions.",
         "es": "No. Quita la cáscara, la cabeza, las patas y la cola, porque la cáscara puede provocar atragantamiento y obstrucciones.",
-        "it": "No. Togli guscio, testa, zampe e coda, perché i gusci possono causare soffocamento e ostruzioni."
+        "it": "No. Togli guscio, testa, zampe e coda, perché i gusci possono causare soffocamento e ostruzioni.",
+        "pt": "Não. Tira a casca, a cabeça, as patas e a cauda, porque as cascas podem causar engasgamento e obstruções."
       }
     }
   ],
@@ -168,6 +178,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1246aedbad1f0a1b8f663d4455b54e000a987ba9b5e44a9a1e88596bd7e4b44f"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "43ba7acab6ed0692c35c29ef6e53b740113b01dd9b28cd2932d343f8cb3bb07c"
     }
   }
 }

@@ -7,7 +7,8 @@
     "de": "Knoblauch",
     "fr": "Ail",
     "es": "Ajo",
-    "it": "Aglio"
+    "it": "Aglio",
+    "pt": "Alho"
   },
   "question": {
     "en": "Can dogs eat garlic?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Hunde Knoblauch fressen?",
     "fr": "Les chiens peuvent-ils manger de l’ail ?",
     "es": "¿Pueden los perros comer ajo?",
-    "it": "I cani possono mangiare l’aglio?"
+    "it": "I cani possono mangiare l’aglio?",
+    "pt": "Os cães podem comer alho?"
   },
   "url_slug": {
     "en": "garlic",
@@ -23,7 +25,8 @@
     "de": "knoblauch",
     "fr": "ail",
     "es": "ajo",
-    "it": "aglio"
+    "it": "aglio",
+    "pt": "alho"
   },
   "level": "toxic",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nein. Knoblauch ist für Hunde giftig und etwa 3- bis 5-mal giftiger als Zwiebeln. Roher, gekochter, getrockneter Knoblauch und Knoblauchpulver können die roten Blutkörperchen schädigen und eine Blutarmut (Anämie) verursachen. Anzeichen treten oft erst einige Tage nach dem Fressen auf.",
     "fr": "Non. L’ail est toxique pour les chiens, environ 3 à 5 fois plus que l’oignon. Cru, cuit, séché ou en poudre, il peut endommager les globules rouges et provoquer une anémie. Les signes n’apparaissent souvent que quelques jours après l’ingestion.",
     "es": "No. El ajo es tóxico para los perros y es entre 3 y 5 veces más tóxico que la cebolla. Crudo, cocinado, seco o en polvo, puede dañar los glóbulos rojos y provocar anemia. Los síntomas a menudo aparecen solo unos días después de comerlo.",
-    "it": "No. L’aglio è tossico per i cani ed è circa da 3 a 5 volte più tossico della cipolla. Crudo, cotto, secco o in polvere, può danneggiare i globuli rossi e causare anemia. Spesso i sintomi compaiono solo qualche giorno dopo averlo mangiato."
+    "it": "No. L’aglio è tossico per i cani ed è circa da 3 a 5 volte più tossico della cipolla. Crudo, cotto, secco o in polvere, può danneggiare i globuli rossi e causare anemia. Spesso i sintomi compaiono solo qualche giorno dopo averlo mangiato.",
+    "pt": "Não. O alho é tóxico para os cães e cerca de 3–5 vezes mais tóxico do que a cebola. O alho cru, cozinhado, seco ou em pó pode danificar os glóbulos vermelhos e causar anemia. Os sinais muitas vezes só aparecem alguns dias depois."
   },
   "why": {
     "en": "It belongs to the allium family (onion, garlic, leek, chives), which is toxic to dogs. These plants contain compounds that damage red blood cells and can lead to anaemia. All parts and all forms are harmful: raw, cooked, dried and powdered. Stomach upset can happen with any amount; larger amounts damage the blood.",
@@ -40,7 +44,8 @@
     "de": "Knoblauch gehört zur Gattung Allium (Zwiebel, Knoblauch, Lauch, Schnittlauch), die für Hunde giftig ist. Diese Pflanzen enthalten Stoffe, die die roten Blutkörperchen schädigen und zu Blutarmut führen können. Alle Pflanzenteile und alle Formen sind schädlich: roh, gekocht, getrocknet und als Pulver. Magen-Darm-Beschwerden können bei jeder Menge auftreten; größere Mengen schädigen das Blut.",
     "fr": "L’ail appartient à la famille des alliums (oignon, ail, poireau, ciboulette), toxique pour les chiens. Ces plantes contiennent des composés qui endommagent les globules rouges et peuvent provoquer une anémie. Toutes les parties et toutes les formes sont nocives : cru, cuit, séché et en poudre. Des troubles digestifs peuvent survenir quelle que soit la quantité ; de plus grandes quantités endommagent le sang.",
     "es": "Pertenece a la familia de las aliáceas (cebolla, ajo, puerro, cebollino), que es tóxica para los perros. Estas plantas contienen compuestos que dañan los glóbulos rojos y pueden provocar anemia. Todas las partes y todas las formas son perjudiciales: crudo, cocinado, seco y en polvo. Cualquier cantidad puede causar malestar de estómago; las cantidades mayores dañan la sangre.",
-    "it": "Appartiene alla famiglia degli allium (cipolla, aglio, porro, erba cipollina), tossica per i cani. Queste piante contengono sostanze che danneggiano i globuli rossi e possono portare all’anemia. Sono dannose tutte le parti, in qualsiasi forma: crude, cotte, secche o in polvere. Disturbi di stomaco possono comparire con qualsiasi quantità; quantità maggiori danneggiano il sangue."
+    "it": "Appartiene alla famiglia degli allium (cipolla, aglio, porro, erba cipollina), tossica per i cani. Queste piante contengono sostanze che danneggiano i globuli rossi e possono portare all’anemia. Sono dannose tutte le parti, in qualsiasi forma: crude, cotte, secche o in polvere. Disturbi di stomaco possono comparire con qualsiasi quantità; quantità maggiori danneggiano il sangue.",
+    "pt": "O alho pertence à família das aliáceas (cebola, alho, alho-francês, cebolinho), que é tóxica para os cães. Estas plantas contêm compostos que danificam os glóbulos vermelhos e podem levar a anemia. Todas as partes e todas as formas fazem mal: cru, cozinhado, seco e em pó. Qualquer quantidade pode causar mal-estar de estômago; quantidades maiores danificam o sangue."
   },
   "signs": {
     "en": [
@@ -78,6 +83,12 @@
       "Mangia meno del solito",
       "Disturbi di pancia, anche dopo piccole quantità",
       "Segni di anemia (globuli rossi danneggiati), di solito qualche giorno dopo"
+    ],
+    "pt": [
+      "Vómitos e diarreia",
+      "Comer menos do que o habitual",
+      "Mal-estar de barriga, mesmo depois de pequenas quantidades",
+      "Sinais de anemia (glóbulos vermelhos danificados), normalmente alguns dias depois"
     ]
   },
   "what_to_do": {
@@ -86,7 +97,8 @@
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was gefressen wurde (Knoblauch) und ungefähr wie viel. Warten Sie nicht auf Anzeichen: Schäden am Blut zeigen sich meist erst einige Tage später.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce qui a été mangé (ail) et en quelle quantité approximative. N’attendez pas l’apparition des signes : les dommages au sang n’apparaissent généralement qu’après quelques jours.",
     "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué ha comido (ajo) y más o menos cuánto. No esperes a que aparezcan síntomas: el daño en la sangre suele notarse solo unos días después.",
-    "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha mangiato (aglio) e più o meno quanto. Non aspettare che compaiano i sintomi: i danni al sangue di solito si vedono solo dopo qualche giorno."
+    "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha mangiato (aglio) e più o meno quanto. Non aspettare che compaiano i sintomi: i danni al sangue di solito si vedono solo dopo qualche giorno.",
+    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota o que comeu (alho) e mais ou menos quanto. Não esperes pelos sinais: os danos no sangue normalmente só se veem alguns dias depois."
   },
   "serving": null,
   "child": {
@@ -95,7 +107,8 @@
     "de": "Knoblauch riecht stark und schmeckt Menschen gut, aber er ist nichts für Hunde. Sag einem Erwachsenen Bescheid, wenn dein Hund welchen frisst.",
     "fr": "L’ail sent fort et plaît aux humains, mais il n’est pas pour les chiens. Préviens un adulte si ton chien en mange.",
     "es": "El ajo huele fuerte y a las personas les gusta su sabor, pero no es para perros. Avisa a un adulto si tu perro se come un poco.",
-    "it": "L’aglio ha un odore forte e alle persone piace, ma non è per i cani. Dillo a un adulto se il tuo cane ne mangia un po’."
+    "it": "L’aglio ha un odore forte e alle persone piace, ma non è per i cani. Dillo a un adulto se il tuo cane ne mangia un po’.",
+    "pt": "O alho tem um cheiro forte e as pessoas gostam do sabor, mas não é para cães. Avisa um adulto se o teu cão comer um bocadinho."
   },
   "faq": [
     {
@@ -105,7 +118,8 @@
         "de": "Ist Knoblauch schlimmer als Zwiebeln?",
         "fr": "L’ail est-il pire que l’oignon ?",
         "es": "¿El ajo es peor que la cebolla?",
-        "it": "L’aglio è peggio della cipolla?"
+        "it": "L’aglio è peggio della cipolla?",
+        "pt": "O alho é pior do que a cebola?"
       },
       "a": {
         "en": "Yes. Garlic is described as about 3 to 5 times more toxic to dogs than onion.",
@@ -113,7 +127,8 @@
         "de": "Ja. Knoblauch gilt für Hunde als etwa 3- bis 5-mal giftiger als Zwiebeln.",
         "fr": "Oui. L’ail est décrit comme environ 3 à 5 fois plus toxique que l’oignon pour les chiens.",
         "es": "Sí. Se describe que el ajo es entre 3 y 5 veces más tóxico para los perros que la cebolla.",
-        "it": "Sì. L’aglio è descritto come circa da 3 a 5 volte più tossico della cipolla per i cani."
+        "it": "Sì. L’aglio è descritto come circa da 3 a 5 volte più tossico della cipolla per i cani.",
+        "pt": "Sim. O alho é descrito como cerca de 3–5 vezes mais tóxico para os cães do que a cebola."
       }
     },
     {
@@ -123,7 +138,8 @@
         "de": "Ist er gekocht oder als Pulver unbedenklich?",
         "fr": "L’ail cuit ou en poudre est-il sans danger ?",
         "es": "¿Es seguro cocinado o en polvo?",
-        "it": "È sicuro cotto o in polvere?"
+        "it": "È sicuro cotto o in polvere?",
+        "pt": "É seguro cozinhado ou em pó?"
       },
       "a": {
         "en": "No. Raw, cooked, dried, powdered and liquid forms are all poisonous to dogs.",
@@ -131,7 +147,8 @@
         "de": "Nein. Roh, gekocht, getrocknet, als Pulver und in flüssiger Form – alle sind für Hunde giftig.",
         "fr": "Non. Cru, cuit, séché, en poudre ou sous forme liquide, il est toujours toxique pour les chiens.",
         "es": "No. Crudo, cocinado, seco, en polvo o en forma líquida, siempre es tóxico para los perros.",
-        "it": "No. Crudo, cotto, secco, in polvere o liquido: in tutte le forme è velenoso per i cani."
+        "it": "No. Crudo, cotto, secco, in polvere o liquido: in tutte le forme è velenoso per i cani.",
+        "pt": "Não. As formas cruas, cozinhadas, secas, em pó e líquidas são todas venenosas para os cães."
       }
     },
     {
@@ -141,7 +158,8 @@
         "de": "Warum zeigen sich die Anzeichen nicht sofort?",
         "fr": "Pourquoi les signes n’apparaissent-ils pas tout de suite ?",
         "es": "¿Por qué los síntomas no aparecen enseguida?",
-        "it": "Perché i sintomi non si vedono subito?"
+        "it": "Perché i sintomi non si vedono subito?",
+        "pt": "Porque é que os sinais não aparecem logo?"
       },
       "a": {
         "en": "Symptoms can start within 24 hours but more often take a few days to appear; signs of anaemia typically develop several days after eating.",
@@ -149,7 +167,8 @@
         "de": "Beschwerden können innerhalb von 24 Stunden beginnen, treten aber häufiger erst nach einigen Tagen auf; Anzeichen einer Blutarmut entwickeln sich typischerweise mehrere Tage nach dem Fressen.",
         "fr": "Les symptômes peuvent commencer dans les 24 heures, mais mettent plus souvent quelques jours à apparaître ; les signes d’anémie se développent généralement plusieurs jours après l’ingestion.",
         "es": "Los síntomas pueden empezar en las primeras 24 horas, pero lo más habitual es que tarden unos días; los signos de anemia suelen aparecer varios días después de comerlo.",
-        "it": "I sintomi possono comparire entro 24 ore, ma più spesso servono alcuni giorni; i segni di anemia di solito si sviluppano diversi giorni dopo l’ingestione."
+        "it": "I sintomi possono comparire entro 24 ore, ma più spesso servono alcuni giorni; i segni di anemia di solito si sviluppano diversi giorni dopo l’ingestione.",
+        "pt": "Os sintomas podem começar nas primeiras 24 horas, mas é mais frequente demorarem alguns dias a aparecer; os sinais de anemia costumam surgir vários dias depois de o cão comer."
       }
     }
   ],
@@ -272,6 +291,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "acd5c553174fd69d2d82917988711e340439c50e94826d36a4d26c39e03d848c"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ac1d95d72b3c160492c367dfa76406f4473ea8eb17f4076946c4f177395cb683"
     }
   }
 }

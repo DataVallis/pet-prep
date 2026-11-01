@@ -7,7 +7,8 @@
     "de": "Rohes Fleisch",
     "fr": "Viande crue",
     "es": "Carne cruda",
-    "it": "Carne cruda"
+    "it": "Carne cruda",
+    "pt": "Carne crua"
   },
   "question": {
     "en": "Can dogs eat raw meat?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Hunde rohes Fleisch fressen?",
     "fr": "Les chiens peuvent-ils manger de la viande crue ?",
     "es": "¿Pueden los perros comer carne cruda?",
-    "it": "I cani possono mangiare la carne cruda?"
+    "it": "I cani possono mangiare la carne cruda?",
+    "pt": "Os cães podem comer carne crua?"
   },
   "url_slug": {
     "en": "raw-meat",
@@ -23,7 +25,8 @@
     "de": "rohes-fleisch",
     "fr": "viande-crue",
     "es": "carne-cruda",
-    "it": "carne-cruda"
+    "it": "carne-cruda",
+    "pt": "carne-crua"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nicht empfohlen. Rohes Fleisch enthält oft Bakterien wie Salmonellen, Listerien und E. coli, die Hunde krank machen und sich auf Menschen im Haushalt übertragen können, selbst wenn der Hund gesund aussieht. Tierärztliche Fachverbände wie die AVMA raten von Rohfütterung ab.",
     "fr": "C’est déconseillé. La viande crue contient souvent des bactéries comme les salmonelles, la listeria et E. coli, qui peuvent rendre les chiens malades et se transmettre aux personnes du foyer, même si le chien semble en bonne santé. Des organismes vétérinaires comme l’AVMA déconseillent l’alimentation crue.",
     "es": "No se recomienda. La carne cruda suele llevar bacterias como Salmonella, Listeria y E. coli, que pueden hacer enfermar a los perros y pasar a las personas de la casa, aunque el perro parezca sano. Organismos veterinarios como la AVMA desaconsejan la alimentación cruda.",
-    "it": "È sconsigliata. La carne cruda porta spesso batteri come Salmonella, Listeria ed E. coli, che possono far ammalare i cani e passare alle persone di casa, anche quando il cane sembra sano. Enti veterinari come l’AVMA sconsigliano l’alimentazione a crudo."
+    "it": "È sconsigliata. La carne cruda porta spesso batteri come Salmonella, Listeria ed E. coli, che possono far ammalare i cani e passare alle persone di casa, anche quando il cane sembra sano. Enti veterinari come l’AVMA sconsigliano l’alimentazione a crudo.",
+    "pt": "Não é recomendado. A carne crua tem muitas vezes bactérias como Salmonella, Listeria e E. coli, que podem pôr os cães doentes e passar para as pessoas da casa, mesmo quando o cão parece saudável. Organismos veterinários como a AVMA desaconselham a alimentação crua."
   },
   "why": {
     "en": "Contamination of raw meat by bacteria is common. Dogs can carry these germs without signs and shed them in saliva and faeces, putting family members at risk, especially high-risk groups such as the young and the old. Raw pork can carry a parasite, raw bones can block the gut, and home-made raw diets are likely not balanced unless a nutritionist formulated the recipe.",
@@ -40,7 +44,8 @@
     "de": "Rohes Fleisch ist häufig mit Bakterien verunreinigt. Hunde können diese Keime ohne Anzeichen tragen und mit Speichel und Kot ausscheiden, was Familienmitglieder gefährdet, besonders Risikogruppen wie junge und alte Menschen. Rohes Schweinefleisch kann einen Parasiten übertragen, rohe Knochen können den Darm blockieren, und selbst zusammengestellte Rohfutterrationen sind wahrscheinlich nicht ausgewogen, sofern das Rezept nicht von einer Fachperson für Tierernährung erstellt wurde.",
     "fr": "La contamination de la viande crue par des bactéries est fréquente. Les chiens peuvent porter ces germes sans aucun signe et les rejeter dans leur salive et leurs selles, ce qui met en danger les membres de la famille, en particulier les personnes à risque comme les jeunes enfants et les personnes âgées. Le porc cru peut transmettre un parasite, les os crus peuvent bloquer l’intestin, et les rations crues faites maison ne sont probablement pas équilibrées si la recette n’a pas été formulée par un nutritionniste.",
     "es": "La contaminación de la carne cruda por bacterias es frecuente. Los perros pueden llevar estos gérmenes sin mostrar signos y eliminarlos con la saliva y las heces, lo que pone en riesgo a la familia, sobre todo a los grupos de riesgo como los niños pequeños y las personas mayores. El cerdo crudo puede llevar un parásito, los huesos crudos pueden obstruir el intestino y las dietas crudas caseras probablemente no estén equilibradas, salvo que la receta la haya formulado un nutricionista.",
-    "it": "La contaminazione batterica della carne cruda è frequente. I cani possono portare questi germi senza sintomi ed eliminarli con la saliva e le feci, mettendo a rischio i familiari, soprattutto i gruppi più fragili come i più piccoli e gli anziani. Il maiale crudo può trasmettere un parassita, le ossa crude possono ostruire l’intestino e le diete crude fatte in casa probabilmente non sono bilanciate, a meno che la ricetta non sia stata formulata da un nutrizionista."
+    "it": "La contaminazione batterica della carne cruda è frequente. I cani possono portare questi germi senza sintomi ed eliminarli con la saliva e le feci, mettendo a rischio i familiari, soprattutto i gruppi più fragili come i più piccoli e gli anziani. Il maiale crudo può trasmettere un parassita, le ossa crude possono ostruire l’intestino e le diete crude fatte in casa probabilmente non sono bilanciate, a meno che la ricetta non sia stata formulata da un nutrizionista.",
+    "pt": "A contaminação da carne crua por bactérias é comum. Os cães podem ter estes germes sem mostrar sinais e eliminá-los na saliva e nas fezes, pondo em risco a família, sobretudo os grupos de risco, como os mais novos e os mais velhos. A carne de porco crua pode ter um parasita, os ossos crus podem obstruir o intestino, e as dietas cruas caseiras provavelmente não são equilibradas, a não ser que a receita tenha sido formulada por um nutricionista."
   },
   "signs": {
     "en": [
@@ -78,6 +83,12 @@
       "Diarrea",
       "Poca energia o poco appetito",
       "Fastidio alla pancia"
+    ],
+    "pt": [
+      "Vómitos",
+      "Diarreia",
+      "Pouca energia ou pouco apetite",
+      "Desconforto na barriga"
     ]
   },
   "what_to_do": {
@@ -86,7 +97,8 @@
     "de": "Wenn Ihr Hund rohes Fleisch stibitzt hat, achten Sie auf Erbrechen, Durchfall oder Mattigkeit und rufen Sie Ihren Tierarzt an, wenn diese stark ausgeprägt sind oder nicht aufhören. Waschen Sie Hände, Näpfe und Flächen gründlich. Sprechen Sie mit Ihrem Tierarzt, bevor Sie das Futter Ihres Hundes umstellen.",
     "fr": "Si votre chien a chapardé de la viande crue, surveillez les vomissements, la diarrhée ou le manque d’énergie, et appelez votre vétérinaire s’ils sont importants ou ne s’arrêtent pas. Lavez soigneusement vos mains, les gamelles et les surfaces. Parlez-en à votre vétérinaire avant de changer l’alimentation de votre chien.",
     "es": "Si tu perro ha cogido carne cruda, vigila si tiene vómitos, diarrea o poca energía y llama a tu veterinario si son intensos o no se pasan. Lávate bien las manos y lava los cuencos y las superficies. Habla con tu veterinario antes de cambiar la dieta de tu perro.",
-    "it": "Se il tuo cane ha preso della carne cruda, controlla se compaiono vomito, diarrea o poca energia e chiama il veterinario se sono forti o non passano. Lava bene mani, ciotole e superfici. Parla con il veterinario prima di cambiare l’alimentazione del tuo cane."
+    "it": "Se il tuo cane ha preso della carne cruda, controlla se compaiono vomito, diarrea o poca energia e chiama il veterinario se sono forti o non passano. Lava bene mani, ciotole e superfici. Parla con il veterinario prima di cambiare l’alimentazione del tuo cane.",
+    "pt": "Se o teu cão apanhou um pouco de carne crua, vigia se há vómitos, diarreia ou pouca energia e liga ao teu veterinário se forem fortes ou não pararem. Lava bem as mãos, as taças e as superfícies. Fala com o teu veterinário antes de mudares a alimentação do teu cão."
   },
   "serving": {
     "en": "Share meat only fully cooked, plain and boneless.",
@@ -94,7 +106,8 @@
     "de": "Fleisch nur vollständig durchgegart, ungewürzt und ohne Knochen teilen.",
     "fr": "Ne partagez de la viande que bien cuite, nature et sans os.",
     "es": "Comparte carne solo bien cocinada, sin nada y sin huesos.",
-    "it": "Dagli la carne solo ben cotta, semplice e senza ossa."
+    "it": "Dagli la carne solo ben cotta, semplice e senza ossa.",
+    "pt": "Partilha carne só bem cozinhada, simples e sem ossos."
   },
   "child": {
     "en": "Raw meat can have germs. Dogs should only get cooked meat from people food, and everyone washes hands after touching raw meat.",
@@ -102,7 +115,8 @@
     "de": "Rohes Fleisch kann Keime haben. Hunde sollten vom Essen der Menschen nur gekochtes Fleisch bekommen, und alle waschen sich die Hände, wenn sie rohes Fleisch angefasst haben.",
     "fr": "La viande crue peut avoir des microbes. Quand on partage, un chien n’a droit qu’à la viande cuite. Chacun se lave les mains après avoir touché de la viande crue.",
     "es": "La carne cruda puede tener gérmenes. De la comida de las personas, los perros solo pueden comer carne cocinada, y todos se lavan las manos después de tocar carne cruda.",
-    "it": "La carne cruda può avere germi. Tra i cibi delle persone, ai cani si dà solo carne cotta, e dopo aver toccato carne cruda tutti si lavano le mani."
+    "it": "La carne cruda può avere germi. Tra i cibi delle persone, ai cani si dà solo carne cotta, e dopo aver toccato carne cruda tutti si lavano le mani.",
+    "pt": "A carne crua pode ter germes. Da comida das pessoas, os cães só devem comer carne cozinhada, e todos lavam as mãos depois de mexer em carne crua."
   },
   "faq": [
     {
@@ -112,7 +126,8 @@
         "de": "Meinem Hund scheint Rohfutter gut zu bekommen. Gibt es trotzdem ein Risiko?",
         "fr": "Mon chien semble aller bien avec une alimentation crue. Y a-t-il quand même un risque ?",
         "es": "Mi perro parece estar bien con comida cruda. ¿Sigue habiendo riesgo?",
-        "it": "Il mio cane sembra stare bene con il cibo crudo. C’è comunque un rischio?"
+        "it": "Il mio cane sembra stare bene con il cibo crudo. C’è comunque un rischio?",
+        "pt": "O meu cão parece bem com comida crua. Continua a haver risco?"
       },
       "a": {
         "en": "Yes. Apparently healthy dogs can carry these bacteria and shed them, which can harm people in the home.",
@@ -120,7 +135,8 @@
         "de": "Ja. Auch scheinbar gesunde Hunde können diese Bakterien tragen und ausscheiden, was Menschen im Haushalt schaden kann.",
         "fr": "Oui. Des chiens apparemment en bonne santé peuvent porter ces bactéries et les rejeter, ce qui peut nuire aux personnes du foyer.",
         "es": "Sí. Los perros aparentemente sanos pueden llevar estas bacterias y eliminarlas, lo que puede hacer daño a las personas de la casa.",
-        "it": "Sì. Anche i cani apparentemente sani possono portare questi batteri ed eliminarli, e questo può fare male alle persone di casa."
+        "it": "Sì. Anche i cani apparentemente sani possono portare questi batteri ed eliminarli, e questo può fare male alle persone di casa.",
+        "pt": "Sim. Cães aparentemente saudáveis podem ter estas bactérias e eliminá-las, o que pode fazer mal às pessoas da casa."
       }
     },
     {
@@ -130,7 +146,8 @@
         "de": "Ist gefriergetrocknetes Rohfutter sicherer?",
         "fr": "L’alimentation crue lyophilisée est-elle plus sûre ?",
         "es": "¿Es más segura la comida cruda liofilizada?",
-        "it": "Il cibo crudo liofilizzato è più sicuro?"
+        "it": "Il cibo crudo liofilizzato è più sicuro?",
+        "pt": "A comida crua liofilizada é mais segura?"
       },
       "a": {
         "en": "Not for germs: freeze-drying is not equivalent to cooking when it comes to bacteria and parasites.",
@@ -138,7 +155,8 @@
         "de": "Nicht, was Keime angeht: Gefriertrocknen ist bei Bakterien und Parasiten nicht gleichwertig mit Kochen.",
         "fr": "Pas pour les germes : face aux bactéries et aux parasites, la lyophilisation n’équivaut pas à la cuisson.",
         "es": "No en cuanto a gérmenes: en lo que respecta a bacterias y parásitos, liofilizar no equivale a cocinar.",
-        "it": "Non per i germi: per quanto riguarda batteri e parassiti, la liofilizzazione non equivale alla cottura."
+        "it": "Non per i germi: per quanto riguarda batteri e parassiti, la liofilizzazione non equivale alla cottura.",
+        "pt": "Quanto aos germes, não: a liofilização não equivale a cozinhar no que toca a bactérias e parasitas."
       }
     }
   ],
@@ -255,6 +273,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "39c7190767e2762f62c428c32a5e7846975904d88139a98aeec13d0fb8a2621b"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "05d2155d2b271d1f23940cece6d5bb81a40710061957ce6d1bf3b5cbea2ff2c4"
     }
   }
 }

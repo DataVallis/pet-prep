@@ -7,7 +7,8 @@
     "de": "Gegartes Hähnchen",
     "fr": "Poulet cuit",
     "es": "Pollo cocinado",
-    "it": "Pollo cotto"
+    "it": "Pollo cotto",
+    "pt": "Frango cozinhado"
   },
   "question": {
     "en": "Can dogs eat cooked chicken?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Hunde gegartes Hähnchen fressen?",
     "fr": "Les chiens peuvent-ils manger du poulet cuit ?",
     "es": "¿Pueden los perros comer pollo cocinado?",
-    "it": "I cani possono mangiare il pollo cotto?"
+    "it": "I cani possono mangiare il pollo cotto?",
+    "pt": "Os cães podem comer frango cozinhado?"
   },
   "url_slug": {
     "en": "cooked-chicken",
@@ -23,7 +25,8 @@
     "de": "gegartes-haehnchen",
     "fr": "poulet-cuit",
     "es": "pollo-cocinado",
-    "it": "pollo-cotto"
+    "it": "pollo-cotto",
+    "pt": "frango-cozinhado"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Ja. Pures, ungewürztes, gegartes Hähnchenfleisch ohne Knochen kann einem Hund für sich allein gegeben werden. Geben Sie niemals gekochte Hähnchenknochen, die leicht splittern, und verzichten Sie auf gewürztes, fettes oder rohes Hähnchen.",
     "fr": "Oui. Du poulet cuit nature, sans assaisonnement et désossé, peut être donné tel quel à un chien. Ne donnez jamais d’os de poulet cuits, qui éclatent facilement, et évitez le poulet assaisonné, gras ou cru.",
     "es": "Sí. El pollo cocinado natural, sin condimentos y sin hueso, se le puede dar a un perro tal cual. Nunca le des huesos de pollo cocinados, que se astillan con facilidad, y evita el pollo condimentado, graso o crudo.",
-    "it": "Sì. Il pollo cotto al naturale e non condito, staccato dall’osso, si può dare al cane anche da solo, senza altri alimenti. Non dare mai ossa di pollo cotte, che si scheggiano facilmente, ed evita il pollo condito, grasso o crudo."
+    "it": "Sì. Il pollo cotto al naturale e non condito, staccato dall’osso, si può dare al cane anche da solo, senza altri alimenti. Non dare mai ossa di pollo cotte, che si scheggiano facilmente, ed evita il pollo condito, grasso o crudo.",
+    "pt": "Sim. O frango cozinhado, simples, sem temperos e sem osso pode ser dado a um cão, sem acompanhamentos. Nunca dês ossos de frango cozinhados, que lascam com facilidade, e evita o frango temperado, gordo ou cru."
   },
   "why": {
     "en": "Unseasoned roasted, poached, grilled or baked chicken is fine on its own. Cooked chicken bones splinter easily and can cause choking or puncture the gut. Raw chicken is not recommended because of Salmonella and other bacteria. Thigh meat has about twice the fat of breast, and fatty foods can upset the stomach.",
@@ -40,7 +44,8 @@
     "de": "Ungewürztes gebratenes, pochiertes, gegrilltes oder im Ofen gegartes Hähnchen ist für sich allein in Ordnung. Gekochte Hähnchenknochen splittern leicht und können zum Ersticken führen oder den Magen-Darm-Trakt durchbohren. Von rohem Hähnchen wird wegen Salmonellen und anderer Bakterien abgeraten. Schenkelfleisch hat etwa doppelt so viel Fett wie Brust, und fettreiches Futter kann auf den Magen schlagen.",
     "fr": "Le poulet rôti, poché, grillé ou cuit au four sans assaisonnement convient tel quel. Les os de poulet cuits éclatent facilement et peuvent provoquer un étouffement ou perforer l’intestin. Le poulet cru est déconseillé à cause des salmonelles et d’autres bactéries. La cuisse contient environ deux fois plus de graisses que le blanc, et les aliments gras peuvent dérégler l’estomac.",
     "es": "El pollo asado, escalfado, a la plancha o al horno sin condimentos se puede dar tal cual. Los huesos de pollo cocinados se astillan con facilidad y pueden provocar atragantamiento o perforar el intestino. No se recomienda el pollo crudo por la salmonela y otras bacterias. El muslo tiene aproximadamente el doble de grasa que la pechuga, y los alimentos grasos pueden sentar mal al estómago.",
-    "it": "Il pollo arrosto, lesso, alla griglia o al forno senza condimenti va bene da solo. Le ossa di pollo cotte si scheggiano facilmente e possono causare soffocamento o perforare l’intestino. Il pollo crudo è sconsigliato per il rischio di Salmonella e altri batteri. La coscia ha circa il doppio dei grassi del petto, e i cibi grassi possono disturbare lo stomaco."
+    "it": "Il pollo arrosto, lesso, alla griglia o al forno senza condimenti va bene da solo. Le ossa di pollo cotte si scheggiano facilmente e possono causare soffocamento o perforare l’intestino. Il pollo crudo è sconsigliato per il rischio di Salmonella e altri batteri. La coscia ha circa il doppio dei grassi del petto, e i cibi grassi possono disturbare lo stomaco.",
+    "pt": "O frango assado, cozido, grelhado ou no forno, sem temperos, pode ser dado sem acompanhamentos. Os ossos de frango cozinhados lascam com facilidade e podem causar engasgamento ou perfurar o intestino. O frango cru não é recomendado por causa da Salmonella e de outras bactérias. A carne da coxa tem cerca do dobro da gordura do peito, e os alimentos gordos podem perturbar o estômago."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "de": "Wenn Ihr Hund gekochte Hähnchenknochen verschluckt hat, fragen Sie Ihren Tierarzt um Rat und versuchen Sie nicht, Ihren Hund zum Erbrechen zu bringen. Rufen Sie sofort an, wenn Ihr Hund zu ersticken droht, erbricht oder Anzeichen von Bauchschmerzen zeigt.",
     "fr": "Si votre chien a avalé des os de poulet cuits, appelez votre vétérinaire pour obtenir des conseils et n’essayez pas de le faire vomir. Appelez immédiatement si vous remarquez un étouffement, des vomissements ou des signes de douleur au ventre.",
     "es": "Si tu perro se ha tragado huesos de pollo cocinados, llama a tu veterinario para que te aconseje y no intentes hacerle vomitar. Llama enseguida si ves que se atraganta, vomita o tiene signos de dolor de barriga.",
-    "it": "Se il tuo cane ha ingoiato ossa di pollo cotte, chiama il veterinario per un consiglio e non cercare di farlo vomitare. Chiama subito se noti soffocamento, vomito o segni di mal di pancia."
+    "it": "Se il tuo cane ha ingoiato ossa di pollo cotte, chiama il veterinario per un consiglio e non cercare di farlo vomitare. Chiama subito se noti soffocamento, vomito o segni di mal di pancia.",
+    "pt": "Se o teu cão engoliu ossos de frango cozinhados, liga ao teu veterinário para te aconselhar e não tentes fazer o teu cão vomitar. Liga imediatamente se vires engasgamento, vómitos ou sinais de dor de barriga."
   },
   "serving": {
     "en": "Plain cooked chicken (breast is leanest), no seasoning, fully cooked, taken off the bone, in small pieces.",
@@ -57,7 +63,8 @@
     "de": "Pures gegartes Hähnchen (Brust ist am magersten), ungewürzt, vollständig durchgegart, ohne Knochen, in kleinen Stücken.",
     "fr": "Poulet cuit nature (le blanc est le plus maigre), sans assaisonnement, bien cuit, désossé, en petits morceaux.",
     "es": "Pollo cocinado natural (la pechuga es lo más magro), sin condimentos, bien hecho, sin hueso y en trozos pequeños.",
-    "it": "Pollo cotto al naturale (il petto è la parte più magra), senza condimenti, ben cotto, staccato dall’osso, a pezzetti."
+    "it": "Pollo cotto al naturale (il petto è la parte più magra), senza condimenti, ben cotto, staccato dall’osso, a pezzetti.",
+    "pt": "Frango cozinhado simples (o peito é o mais magro), sem temperos, bem cozinhado, sem osso, em pedaços pequenos."
   },
   "child": {
     "en": "Plain cooked chicken with no bones is a tasty dog treat. Chicken bones are never for dogs.",
@@ -65,7 +72,8 @@
     "de": "Pures gegartes Hähnchen ohne Knochen ist ein leckeres Hundeleckerli. Hähnchenknochen sind nie etwas für Hunde.",
     "fr": "Du poulet cuit nature et sans os est une friandise délicieuse pour un chien. Les os de poulet ne sont jamais pour les chiens.",
     "es": "El pollo cocinado natural y sin huesos es un premio muy rico para un perro. Los huesos de pollo nunca son para perros.",
-    "it": "Il pollo cotto al naturale e senza ossa è un premio gustoso per un cane. Le ossa di pollo non sono mai per i cani."
+    "it": "Il pollo cotto al naturale e senza ossa è un premio gustoso per un cane. Le ossa di pollo non sono mai per i cani.",
+    "pt": "Frango cozinhado simples e sem ossos é uma guloseima saborosa para cães. Os ossos de frango nunca são para cães."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "de": "Warum sind gekochte Hähnchenknochen gefährlich?",
         "fr": "Pourquoi les os de poulet cuits sont-ils dangereux ?",
         "es": "¿Por qué son peligrosos los huesos de pollo cocinados?",
-        "it": "Perché le ossa di pollo cotte sono pericolose?"
+        "it": "Perché le ossa di pollo cotte sono pericolose?",
+        "pt": "Porque são perigosos os ossos de frango cozinhados?"
       },
       "a": {
         "en": "Cooked chicken bones splinter easily and can cause choking or a puncture in the gut.",
@@ -83,7 +92,8 @@
         "de": "Gekochte Hähnchenknochen splittern leicht und können zum Ersticken führen oder den Magen-Darm-Trakt durchbohren.",
         "fr": "Les os de poulet cuits éclatent facilement et peuvent provoquer un étouffement ou une perforation de l’intestin.",
         "es": "Los huesos de pollo cocinados se astillan con facilidad y pueden provocar atragantamiento o una perforación en el intestino.",
-        "it": "Le ossa di pollo cotte si scheggiano facilmente e possono causare soffocamento o una perforazione intestinale."
+        "it": "Le ossa di pollo cotte si scheggiano facilmente e possono causare soffocamento o una perforazione intestinale.",
+        "pt": "Os ossos de frango cozinhados lascam com facilidade e podem causar engasgamento ou uma perfuração no intestino."
       }
     }
   ],
@@ -176,6 +186,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "16019921a2d26d033e98ee737da24c32abd69a35d86d62fdd4afe50688230bf9"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "525d808e0c3e7d31f401e08a02c3ec1fd7c7aa5fe1ec6d663a24e5eb290435f6"
     }
   }
 }
