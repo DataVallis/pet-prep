@@ -8,7 +8,8 @@
     "fr": "Noix de pécan",
     "es": "Nueces pecanas",
     "it": "Noci pecan",
-    "pt": "Nozes-pecã"
+    "pt": "Nozes-pecã",
+    "nl": "Pecannoten"
   },
   "question": {
     "en": "Can dogs eat pecans?",
@@ -17,7 +18,8 @@
     "fr": "Les chiens peuvent-ils manger des noix de pécan ?",
     "es": "¿Pueden los perros comer nueces pecanas?",
     "it": "I cani possono mangiare le noci pecan?",
-    "pt": "Os cães podem comer nozes-pecã?"
+    "pt": "Os cães podem comer nozes-pecã?",
+    "nl": "Mogen honden pecannoten eten?"
   },
   "url_slug": {
     "en": "pecans",
@@ -26,7 +28,8 @@
     "fr": "noix-de-pecan",
     "es": "nueces-pecanas",
     "it": "noci-pecan",
-    "pt": "nozes-peca"
+    "pt": "nozes-peca",
+    "nl": "pecannoten"
   },
   "level": "dangerous",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Non. Les noix de pécan ne sont pas bonnes pour les chiens : même quelques-unes peuvent rendre un chien très malade. Elles contiennent de la juglone, peuvent porter des moisissures toxiques, sont grasses, et leur coque dure peut provoquer un étouffement ou des obstructions. Appelez votre vétérinaire si votre chien en mange.",
     "es": "No. Las nueces pecanas no son buenas para los perros: incluso unas pocas pueden hacer que un perro enferme gravemente. Contienen juglona, pueden tener moho tóxico, son grasas y su cáscara dura puede provocar atragantamiento u obstrucciones. Llama a tu veterinario si tu perro se come alguna.",
     "it": "No. Le noci pecan non fanno bene ai cani: anche poche possono farli stare molto male. Contengono juglone, possono avere muffe tossiche, sono grasse e il loro guscio duro può causare soffocamento od ostruzioni. Chiama il veterinario se il tuo cane ne mangia.",
-    "pt": "Não. As nozes-pecã não fazem bem aos cães: mesmo poucas podem pôr um cão muito doente. Contêm juglona, podem ter bolor tóxico, são gordas e as cascas duras podem causar engasgamento ou obstruções. Liga ao teu veterinário se o teu cão comer alguma."
+    "pt": "Não. As nozes-pecã não fazem bem aos cães: mesmo poucas podem pôr um cão muito doente. Contêm juglona, podem ter bolor tóxico, são gordas e as cascas duras podem causar engasgamento ou obstruções. Liga ao teu veterinário se o teu cão comer alguma.",
+    "nl": "Nee. Pecannoten zijn niet goed voor honden: zelfs een klein aantal kan een hond erg ziek maken. Ze bevatten juglon, er kan giftige schimmel op zitten, ze zijn vet en een hond kan stikken in de harde doppen of er een verstopping door krijgen. Bel je dierenarts als je hond ervan heeft gegeten."
   },
   "why": {
     "en": "Pecans contain juglone, which can cause digestive problems, and they are very prone to moulds that produce mycotoxins such as aflatoxin, which can cause serious illness, including neurological problems. Their fat raises the risk of pancreatitis, and the hard shells can block the gut. Sources range from 'not good' to 'can make very sick'; we use the stricter level.",
@@ -45,7 +49,8 @@
     "fr": "Les noix de pécan contiennent de la juglone, qui peut provoquer des troubles digestifs, et elles sont très sujettes aux moisissures qui produisent des mycotoxines comme l’aflatoxine, pouvant causer des maladies graves, notamment des troubles neurologiques. Leurs graisses augmentent le risque de pancréatite, et la coque dure peut bloquer l’intestin. Les sources vont de « pas bonnes » à « peuvent rendre très malade » ; nous retenons le niveau le plus strict.",
     "es": "Las nueces pecanas contienen juglona, que puede causar problemas digestivos, y son muy propensas a mohos que producen micotoxinas como la aflatoxina, que pueden causar enfermedades graves, incluidos problemas neurológicos. Su grasa aumenta el riesgo de pancreatitis, y la cáscara dura puede obstruir el intestino. Las fuentes van de «no son buenas» a «pueden hacer enfermar gravemente»; nosotros aplicamos el nivel más estricto.",
     "it": "Le noci pecan contengono juglone, che può causare disturbi digestivi, e sono molto soggette a muffe che producono micotossine come l’aflatossina, capaci di causare malattie gravi, anche problemi neurologici. I loro grassi aumentano il rischio di pancreatite e il guscio duro può ostruire l’intestino. Le fonti vanno da «non fanno bene» a «possono far stare molto male»; adottiamo il livello più prudente.",
-    "pt": "As nozes-pecã contêm juglona, que pode causar problemas digestivos, e ganham bolor com muita facilidade; esses bolores produzem micotoxinas como a aflatoxina, que podem causar doença grave, incluindo problemas neurológicos. A gordura aumenta o risco de pancreatite, e as cascas duras podem obstruir o intestino. As fontes vão de «não fazem bem» a «podem pôr muito doente»; usamos o nível mais rigoroso."
+    "pt": "As nozes-pecã contêm juglona, que pode causar problemas digestivos, e ganham bolor com muita facilidade; esses bolores produzem micotoxinas como a aflatoxina, que podem causar doença grave, incluindo problemas neurológicos. A gordura aumenta o risco de pancreatite, e as cascas duras podem obstruir o intestino. As fontes vão de «não fazem bem» a «podem pôr muito doente»; usamos o nível mais rigoroso.",
+    "nl": "Pecannoten bevatten juglon, dat spijsverteringsproblemen kan veroorzaken, en ze zijn erg gevoelig voor schimmels die mycotoxinen zoals aflatoxine maken, die ernstige ziekte kunnen veroorzaken, waaronder neurologische problemen. Het vet verhoogt het risico op alvleesklierontsteking, en de harde doppen kunnen de darmen verstoppen. De bronnen lopen uiteen van “niet goed” tot “kan erg ziek maken”; wij kiezen het strengere niveau."
   },
   "signs": {
     "en": [
@@ -89,6 +94,12 @@
       "Diarreia",
       "Perda de apetite e cansaço",
       "Sinais de problemas no sistema nervoso"
+    ],
+    "nl": [
+      "Braken",
+      "Diarree",
+      "Weinig eetlust en vermoeidheid",
+      "Tekenen van problemen met het zenuwstelsel"
     ]
   },
   "what_to_do": {
@@ -98,7 +109,8 @@
     "fr": "Contactez immédiatement votre vétérinaire, même si votre chien n’a mangé que quelques noix de pécan. Notez combien il en a mangé et si elles étaient vieilles ou moisies, et n’attendez pas l’apparition des signes.",
     "es": "Contacta enseguida con tu veterinario, aunque tu perro solo se haya comido unas pocas nueces pecanas. Apunta cuántas se comió y si estaban viejas o enmohecidas, y no esperes a que aparezcan síntomas.",
     "it": "Contatta subito il veterinario, anche se il tuo cane ha mangiato solo poche noci pecan. Annota quante ne ha mangiate e se erano vecchie o ammuffite, e non aspettare che compaiano i sintomi.",
-    "pt": "Contacta imediatamente o teu veterinário, mesmo que o teu cão tenha comido só algumas nozes-pecã. Anota quantas comeu e se eram velhas ou tinham bolor, e não esperes pelos sinais."
+    "pt": "Contacta imediatamente o teu veterinário, mesmo que o teu cão tenha comido só algumas nozes-pecã. Anota quantas comeu e se eram velhas ou tinham bolor, e não esperes pelos sinais.",
+    "nl": "Neem meteen contact op met je dierenarts, ook als je hond maar een paar pecannoten heeft gegeten. Schrijf op hoeveel er zijn gegeten en of ze oud of beschimmeld waren, en wacht niet op verschijnselen."
   },
   "serving": null,
   "child": {
@@ -108,7 +120,8 @@
     "fr": "Les noix de pécan ne sont pas pour les chiens. Si un chien en mange, préviens tout de suite un adulte pour qu’il appelle le vétérinaire.",
     "es": "Las nueces pecanas no son para perros. Si un perro se come alguna, díselo enseguida a un adulto para que llame al veterinario.",
     "it": "Le noci pecan non sono per i cani. Se un cane ne mangia, avvisa subito un adulto, così può chiamare il veterinario.",
-    "pt": "As nozes-pecã não são para cães. Se um cão comer alguma, avisa logo um adulto para ele ligar ao veterinário."
+    "pt": "As nozes-pecã não são para cães. Se um cão comer alguma, avisa logo um adulto para ele ligar ao veterinário.",
+    "nl": "Pecannoten zijn niet voor honden. Eet een hond ervan? Vertel het meteen aan een volwassene, zodat die de dierenarts kan bellen."
   },
   "faq": [
     {
@@ -119,7 +132,8 @@
         "fr": "Pourquoi les noix de pécan sont-elles plus risquées que d’autres fruits à coque ?",
         "es": "¿Por qué las nueces pecanas son más arriesgadas que otros frutos secos?",
         "it": "Perché le noci pecan sono più rischiose di altra frutta a guscio?",
-        "pt": "Porque é que as nozes-pecã são mais arriscadas do que outros frutos secos?"
+        "pt": "Porque é que as nozes-pecã são mais arriscadas do que outros frutos secos?",
+        "nl": "Waarom zijn pecannoten riskanter dan sommige andere noten?"
       },
       "a": {
         "en": "Every part of the pecan contains juglone, and pecans easily grow mould that produces mycotoxins.",
@@ -128,7 +142,8 @@
         "fr": "Toutes les parties de la noix de pécan contiennent de la juglone, et les noix de pécan moisissent facilement en produisant des mycotoxines.",
         "es": "Todas las partes de la nuez pecana contienen juglona, y a las pecanas les sale con facilidad moho que produce micotoxinas.",
         "it": "Ogni parte della noce pecan contiene juglone, e le noci pecan sviluppano facilmente muffe che producono micotossine.",
-        "pt": "Todas as partes da noz-pecã contêm juglona, e as nozes-pecã ganham facilmente bolor, que produz micotoxinas."
+        "pt": "Todas as partes da noz-pecã contêm juglona, e as nozes-pecã ganham facilmente bolor, que produz micotoxinas.",
+        "nl": "Elk deel van de pecannoot bevat juglon, en op pecannoten groeit makkelijk schimmel die mycotoxinen maakt."
       }
     }
   ],
@@ -216,6 +231,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5eb5babcf20aa587127828cbde21f4c0da2f3463c893072472032e035a684f97"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9bf2312c69544741df931958c6116d5072d7587a1a18f0906a2d1c17f68ba2eb"
     }
   }
 }

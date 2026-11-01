@@ -8,7 +8,8 @@
     "fr": "Pâte à pain crue",
     "es": "Masa cruda con levadura",
     "it": "Impasto crudo lievitato",
-    "pt": "Massa crua com fermento"
+    "pt": "Massa crua com fermento",
+    "nl": "Rauw gistdeeg"
   },
   "question": {
     "en": "Can cats eat raw yeast dough?",
@@ -17,7 +18,8 @@
     "fr": "Les chats peuvent-ils manger de la pâte à pain crue ?",
     "es": "¿Pueden los gatos comer masa cruda con levadura?",
     "it": "I gatti possono mangiare l’impasto crudo lievitato?",
-    "pt": "Os gatos podem comer massa crua com fermento?"
+    "pt": "Os gatos podem comer massa crua com fermento?",
+    "nl": "Mogen katten rauw gistdeeg eten?"
   },
   "url_slug": {
     "en": "raw-yeast-dough",
@@ -26,7 +28,8 @@
     "fr": "pate-a-pain-crue",
     "es": "masa-cruda-con-levadura",
     "it": "impasto-crudo-lievitato",
-    "pt": "massa-crua-com-fermento"
+    "pt": "massa-crua-com-fermento",
+    "nl": "rauw-gistdeeg"
   },
   "level": "toxic",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Non. La pâte crue à la levure est doublement dangereuse pour les chats : elle peut continuer à gonfler dans l’estomac et provoquer une occlusion, et la levure produit de l’alcool, toxique pour les chats. Gardez la pâte qui lève hors de portée et appelez votre vétérinaire si votre chat en mange.",
     "es": "No. La masa cruda con levadura es peligrosa para los gatos por dos motivos: puede seguir creciendo en el estómago y causar una obstrucción, y la levadura produce alcohol, que es tóxico para los gatos. Mantén la masa que está subiendo fuera de su alcance y llama a tu veterinario si tu gato se come un poco.",
     "it": "No. L’impasto crudo con lievito è pericoloso per i gatti in due modi: può continuare a gonfiarsi nello stomaco e causare un’ostruzione, e il lievito produce alcol, che è tossico per i gatti. Tieni l’impasto in lievitazione fuori dalla portata del tuo gatto e chiama il veterinario se ne mangia.",
-    "pt": "Não. A massa crua com fermento é perigosa para os gatos de duas formas: pode continuar a crescer no estômago e causar uma obstrução, e o fermento produz álcool, que é tóxico para os gatos. Guarda a massa a levedar fora do alcance e liga ao teu veterinário se o teu gato comer alguma."
+    "pt": "Não. A massa crua com fermento é perigosa para os gatos de duas formas: pode continuar a crescer no estômago e causar uma obstrução, e o fermento produz álcool, que é tóxico para os gatos. Guarda a massa a levedar fora do alcance e liga ao teu veterinário se o teu gato comer alguma.",
+    "nl": "Nee. Rauw gistdeeg is op twee manieren gevaarlijk voor katten: het kan in de maag blijven uitzetten en een verstopping veroorzaken, en de gist maakt alcohol aan, die giftig is voor katten. Houd rijzend deeg buiten bereik en bel je dierenarts als je kat er iets van eet."
   },
   "why": {
     "en": "Raw dough contains some alcohol and produces carbon dioxide. Once swallowed, the yeast keeps working in the stomach: the dough expands and can cause an obstruction, while the alcohol it produces is absorbed into the blood. Cats are especially sensitive to alcohol.",
@@ -45,7 +49,8 @@
     "fr": "La pâte crue contient un peu d’alcool et produit du dioxyde de carbone. Une fois avalée, la levure continue d’agir dans l’estomac : la pâte gonfle et peut provoquer une obstruction, tandis que l’alcool produit passe dans le sang. Les chats sont particulièrement sensibles à l’alcool.",
     "es": "La masa cruda contiene algo de alcohol y produce dióxido de carbono. Una vez tragada, la levadura sigue actuando en el estómago: la masa crece y puede causar una obstrucción, mientras que el alcohol que produce pasa a la sangre. Los gatos son especialmente sensibles al alcohol.",
     "it": "L’impasto crudo contiene un po’ di alcol e produce anidride carbonica. Una volta ingerito, il lievito continua a lavorare nello stomaco: l’impasto si gonfia e può causare un’ostruzione, mentre l’alcol prodotto viene assorbito nel sangue. I gatti sono particolarmente sensibili all’alcol.",
-    "pt": "A massa crua contém algum álcool e produz dióxido de carbono. Depois de a massa ser engolida, o fermento continua a trabalhar no estômago: a massa cresce e pode causar uma obstrução, enquanto o álcool produzido é absorvido para o sangue. Os gatos são especialmente sensíveis ao álcool."
+    "pt": "A massa crua contém algum álcool e produz dióxido de carbono. Depois de a massa ser engolida, o fermento continua a trabalhar no estômago: a massa cresce e pode causar uma obstrução, enquanto o álcool produzido é absorvido para o sangue. Os gatos são especialmente sensíveis ao álcool.",
+    "nl": "Rauw deeg bevat wat alcohol en produceert koolstofdioxide. Na het inslikken blijft de gist in de maag actief: het deeg zet uit en kan een verstopping veroorzaken, terwijl de alcohol die ontstaat in het bloed wordt opgenomen. Katten zijn bijzonder gevoelig voor alcohol."
   },
   "signs": {
     "en": [
@@ -89,6 +94,12 @@
       "Tentativas de vomitar sem deitar nada cá para fora",
       "Andar cambaleante ou ar confuso",
       "Fraqueza ou sonolência fora do normal"
+    ],
+    "nl": [
+      "Gezwollen, opgeblazen buik",
+      "Proberen te braken zonder dat er iets uitkomt",
+      "Wankel lopen of verward lijken",
+      "Ongewone zwakte of slaperigheid"
     ]
   },
   "what_to_do": {
@@ -98,7 +109,8 @@
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez la quantité de pâte mangée et l’heure. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
     "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Anota cuánta masa ha comido tu gato y cuándo. No esperes a que aparezcan síntomas y no intentes hacer vomitar a tu gato en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota quanto impasto ha mangiato il tuo gatto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
-    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Toma nota de quanta massa o teu gato comeu e de quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa."
+    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Toma nota de quanta massa o teu gato comeu e de quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
+    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op hoeveel deeg je kat heeft gegeten en wanneer. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken."
   },
   "serving": null,
   "child": {
@@ -108,7 +120,8 @@
     "fr": "La pâte à pain doit lever dans un saladier, pas dans un ventre ! Garde la pâte loin de ton chat et préviens un adulte s’il en mange.",
     "es": "La masa de pan tiene que subir en un bol, no en una barriga. Mantenla lejos de tu gato y avisa a un adulto si se come un poco.",
     "it": "L’impasto del pane deve lievitare in una ciotola, non in una pancia. Tienilo lontano dal micio e dillo a un adulto se ne mangia un po’.",
-    "pt": "A massa do pão cresce numa tigela, não numa barriga. Mantém a massa longe do gatinho e avisa um adulto se ele comer um bocadinho."
+    "pt": "A massa do pão cresce numa tigela, não numa barriga. Mantém a massa longe do gatinho e avisa um adulto se ele comer um bocadinho.",
+    "nl": "Brooddeeg moet rijzen in een kom, niet in een buik. Houd deeg weg bij je poes. Eet ze er toch van? Vertel het meteen aan een volwassene."
   },
   "faq": [
     {
@@ -119,7 +132,8 @@
         "fr": "Pourquoi la pâte crue est-elle dangereuse si ce n’est pas un poison en soi ?",
         "es": "¿Por qué es peligrosa la masa cruda si no es un veneno en sí misma?",
         "it": "Perché l’impasto crudo è pericoloso se di per sé non è un veleno?",
-        "pt": "Porque é que a massa crua é perigosa, se não é um veneno?"
+        "pt": "Porque é que a massa crua é perigosa, se não é um veneno?",
+        "nl": "Waarom is rauw deeg gevaarlijk als het zelf geen gif is?"
       },
       "a": {
         "en": "Raw dough contains live yeast. In the stomach it keeps rising and producing alcohol, so it can both cause a blockage and lead to alcohol poisoning.",
@@ -128,7 +142,8 @@
         "fr": "La pâte crue contient de la levure vivante. Dans l’estomac, elle continue de lever et de produire de l’alcool : elle peut donc à la fois provoquer une occlusion et entraîner une intoxication à l’alcool.",
         "es": "La masa cruda contiene levadura viva. En el estómago sigue subiendo y produciendo alcohol, así que puede causar una obstrucción y también una intoxicación por alcohol.",
         "it": "L’impasto crudo contiene lievito vivo. Nello stomaco continua a lievitare e a produrre alcol, quindi può sia causare un’ostruzione sia portare a un’intossicazione da alcol.",
-        "pt": "A massa crua tem fermento vivo. No estômago continua a crescer e a produzir álcool, por isso pode causar uma obstrução e também uma intoxicação por álcool."
+        "pt": "A massa crua tem fermento vivo. No estômago continua a crescer e a produzir álcool, por isso pode causar uma obstrução e também uma intoxicação por álcool.",
+        "nl": "Rauw deeg bevat levende gist. In de maag blijft het rijzen en alcohol aanmaken, dus het kan zowel een verstopping veroorzaken als tot een alcoholvergiftiging leiden."
       }
     }
   ],
@@ -231,6 +246,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5a1b7cba82fc0cc3acfbfa859e77b88c3ac6c8a53cde3c201bf427c0c9ea9862"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dbb9c853c7feb5d55ec741363dcff0278658e7a103996426df4520a4297382e0"
     }
   }
 }

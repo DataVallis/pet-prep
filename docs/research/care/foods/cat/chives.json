@@ -8,7 +8,8 @@
     "fr": "Ciboulette",
     "es": "Cebollino",
     "it": "Erba cipollina",
-    "pt": "Cebolinho"
+    "pt": "Cebolinho",
+    "nl": "Bieslook"
   },
   "question": {
     "en": "Can cats eat chives?",
@@ -17,7 +18,8 @@
     "fr": "Les chats peuvent-ils manger de la ciboulette ?",
     "es": "¿Pueden los gatos comer cebollino?",
     "it": "I gatti possono mangiare l’erba cipollina?",
-    "pt": "Os gatos podem comer cebolinho?"
+    "pt": "Os gatos podem comer cebolinho?",
+    "nl": "Mogen katten bieslook eten?"
   },
   "url_slug": {
     "en": "chives",
@@ -26,7 +28,8 @@
     "fr": "ciboulette",
     "es": "cebollino",
     "it": "erba-cipollina",
-    "pt": "cebolinho"
+    "pt": "cebolinho",
+    "nl": "bieslook"
   },
   "level": "toxic",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Non. La ciboulette fait partie de la famille de l’oignon et est toxique pour les chats, fraîche, cuite ou séchée. Elle peut endommager les globules rouges et provoquer une anémie. Appelez votre vétérinaire si votre chat en mange, et placez les pots de ciboulette hors de sa portée.",
     "es": "No. El cebollino pertenece a la familia de la cebolla y es venenoso para los gatos, ya sea fresco, cocinado o seco. Puede dañar los glóbulos rojos y causar anemia. Llama a tu veterinario si tu gato come algo y mantén las macetas de cebollino fuera de su alcance.",
     "it": "No. L’erba cipollina appartiene alla famiglia della cipolla ed è velenosa per i gatti, che sia fresca, cotta o essiccata. Può danneggiare i globuli rossi e causare anemia. Chiama il veterinario se il tuo gatto ne mangia, e tieni i vasi di erba cipollina fuori dalla sua portata.",
-    "pt": "Não. O cebolinho pertence à família da cebola e é venenoso para os gatos, fresco, cozinhado ou seco. Pode danificar os glóbulos vermelhos e causar anemia. Liga ao teu veterinário se o teu gato comer algum e mantém os vasos de cebolinho fora do alcance."
+    "pt": "Não. O cebolinho pertence à família da cebola e é venenoso para os gatos, fresco, cozinhado ou seco. Pode danificar os glóbulos vermelhos e causar anemia. Liga ao teu veterinário se o teu gato comer algum e mantém os vasos de cebolinho fora do alcance.",
+    "nl": "Nee. Bieslook hoort bij de uienfamilie en is giftig voor katten, of het nu vers, gekookt of gedroogd is. Het kan rode bloedcellen beschadigen en bloedarmoede veroorzaken. Bel je dierenarts als je kat er iets van eet, en zet bieslook in een pot buiten bereik."
   },
   "why": {
     "en": "Chives belong to the allium family (the onion family). Alliums damage red blood cells and can lead to anaemia, and they also irritate the stomach and gut. Cats are the most sensitive species. All forms are poisonous to cats — raw, cooked, dried, powdered and liquid.",
@@ -45,7 +49,8 @@
     "fr": "La ciboulette appartient à la famille des alliums (la famille de l’oignon). Les alliums endommagent les globules rouges et peuvent entraîner une anémie ; ils irritent aussi l’estomac et l’intestin. Le chat est l’espèce la plus sensible. La ciboulette est toxique pour les chats sous toutes ses formes – crue, cuite, séchée, en poudre ou liquide.",
     "es": "El cebollino pertenece a la familia de las aliáceas (la familia de la cebolla). Las aliáceas dañan los glóbulos rojos y pueden provocar anemia, y además irritan el estómago y el intestino. Los gatos son la especie más sensible. Todas las formas son venenosas para los gatos: cruda, cocinada, seca, en polvo y líquida.",
     "it": "L’erba cipollina appartiene al genere Allium (la famiglia della cipolla). Le piante di questo genere danneggiano i globuli rossi, possono portare all’anemia e irritano anche stomaco e intestino. I gatti sono la specie più sensibile. Tutte le forme sono velenose per i gatti: crude, cotte, essiccate, in polvere e liquide.",
-    "pt": "O cebolinho pertence à família das aliáceas (a família da cebola). As aliáceas danificam os glóbulos vermelhos e podem levar a anemia, e também irritam o estômago e o intestino. Os gatos são a espécie mais sensível. Todas as formas são venenosas para gatos – cruas, cozinhadas, secas, em pó e líquidas."
+    "pt": "O cebolinho pertence à família das aliáceas (a família da cebola). As aliáceas danificam os glóbulos vermelhos e podem levar a anemia, e também irritam o estômago e o intestino. Os gatos são a espécie mais sensível. Todas as formas são venenosas para gatos – cruas, cozinhadas, secas, em pó e líquidas.",
+    "nl": "Bieslook hoort bij de alliumfamilie (de uienfamilie). Alliums beschadigen rode bloedcellen en kunnen tot bloedarmoede leiden, en ze irriteren ook de maag en darmen. Katten zijn de gevoeligste diersoort. Alle vormen zijn giftig voor katten – rauw, gekookt, gedroogd, in poedervorm en vloeibaar."
   },
   "signs": {
     "en": [
@@ -110,6 +115,15 @@
       "Gengivas pálidas",
       "Urina avermelhada",
       "Respiração mais rápida ou mais difícil"
+    ],
+    "nl": [
+      "Braken",
+      "Diarree",
+      "Minder eetlust",
+      "Zwakte",
+      "Bleek tandvlees",
+      "Rood gekleurde urine",
+      "Snellere of zwaardere ademhaling"
     ]
   },
   "what_to_do": {
@@ -119,7 +133,8 @@
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, même si votre chat semble aller bien – les signes d’anémie peuvent mettre plusieurs jours à apparaître. Notez ce qu’il a mangé (crue, cuite, en poudre ou dans un plat), en quelle quantité et à quelle heure. N’essayez pas de faire vomir votre chat vous-même.",
     "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales, aunque tu gato parezca estar bien: los signos de anemia pueden tardar varios días en aparecer. Apunta qué ha comido tu gato (crudo, cocinado, en polvo o un plato que lo lleve), cuánto y cuándo. No intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario, anche se il tuo gatto sembra stare bene: i sintomi dell’anemia possono impiegare diversi giorni a manifestarsi. Annota che cosa ha mangiato (crudo, cotto, in polvere o in un piatto che lo conteneva), quanto e quando. Non cercare di farlo vomitare a casa.",
-    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, mesmo que o teu gato pareça bem – os sinais de anemia podem demorar vários dias a aparecer. Toma nota do que o teu gato comeu (cru, cozinhado, em pó ou num prato que o continha), da quantidade e de quando. Não tentes provocar o vómito ao teu gato em casa."
+    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, mesmo que o teu gato pareça bem – os sinais de anemia podem demorar vários dias a aparecer. Toma nota do que o teu gato comeu (cru, cozinhado, em pó ou num prato que o continha), da quantidade e de quando. Não tentes provocar o vómito ao teu gato em casa.",
+    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als je kat er gezond uitziet – verschijnselen van bloedarmoede kunnen een paar dagen op zich laten wachten. Schrijf op wat je kat heeft gegeten (rauw, gekookt, als poeder of in een gerecht), hoeveel en wanneer. Probeer je kat niet zelf thuis te laten braken."
   },
   "serving": null,
   "child": {
@@ -129,7 +144,8 @@
     "fr": "La ciboulette ressemble à de l’herbe, mais ce n’est pas de l’herbe pour chat ! Garde-la loin de ton chat et préviens un adulte s’il en mâchouille.",
     "es": "El cebollino parece hierba, ¡pero no es hierba para gatos! Mantenlo lejos de tu gatito y avisa a un adulto si mordisquea un poco.",
     "it": "L’erba cipollina sembra erba, ma non è erba gatta! Tienila lontana dal micio e dillo a un adulto se ne mastica un po’.",
-    "pt": "O cebolinho parece erva, mas não é erva para gatos! Mantém-no longe do gatinho e avisa um adulto se ele o mastigar."
+    "pt": "O cebolinho parece erva, mas não é erva para gatos! Mantém-no longe do gatinho e avisa um adulto se ele o mastigar.",
+    "nl": "Bieslook lijkt op gras, maar het is geen kattengras! Houd het uit de buurt van je poes. Kauwt ze erop? Vertel het meteen aan een volwassene."
   },
   "faq": [
     {
@@ -140,7 +156,8 @@
         "fr": "La ciboulette cuite ou séchée est-elle sans danger pour les chats ?",
         "es": "¿El cebollino cocinado o seco es seguro para los gatos?",
         "it": "L’erba cipollina cotta o essiccata è sicura per i gatti?",
-        "pt": "O cebolinho cozinhado ou seco é seguro para gatos?"
+        "pt": "O cebolinho cozinhado ou seco é seguro para gatos?",
+        "nl": "Is gekookte of gedroogde bieslook veilig voor katten?"
       },
       "a": {
         "en": "No. All forms are poisonous to cats, including raw, cooked and dried chives. Be careful with leftovers, sauces, soups and gravy that may contain them.",
@@ -149,7 +166,8 @@
         "fr": "Non. La ciboulette est toxique pour les chats sous toutes ses formes, y compris crue, cuite et séchée. Faites attention aux restes, aux sauces, aux soupes et aux jus de viande qui peuvent en contenir.",
         "es": "No. Todas las formas son venenosas para los gatos, también el cebollino crudo, cocinado y seco. Ten cuidado con las sobras, las salsas, las sopas y los jugos de asado que puedan llevarlo.",
         "it": "No. Tutte le forme sono velenose per i gatti, compresa l’erba cipollina cruda, cotta ed essiccata. Fai attenzione ad avanzi, salse, zuppe e sughi che potrebbero contenerla.",
-        "pt": "Não. Todas as formas são venenosas para gatos, incluindo o cebolinho cru, cozinhado e seco. Tem cuidado com restos de comida, molhos, sopas e molho de assado que o possam conter."
+        "pt": "Não. Todas as formas são venenosas para gatos, incluindo o cebolinho cru, cozinhado e seco. Tem cuidado com restos de comida, molhos, sopas e molho de assado que o possam conter.",
+        "nl": "Nee. Alle vormen zijn giftig voor katten, ook rauwe, gekookte en gedroogde bieslook. Wees voorzichtig met restjes, sauzen, soepen en jus waar het in kan zitten."
       }
     }
   ],
@@ -280,6 +298,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2a85919f030d4b33e225efe080dbab466659b04f04faa11285bd876360d30c9a"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1b84307f116311b2eb9f5bc6025f30b6ed2c64bc2cdb2ebf6040dcb71d43d3b9"
     }
   }
 }

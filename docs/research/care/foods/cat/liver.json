@@ -8,7 +8,8 @@
     "fr": "Foie",
     "es": "Hígado",
     "it": "Fegato",
-    "pt": "Fígado"
+    "pt": "Fígado",
+    "nl": "Lever"
   },
   "question": {
     "en": "Can cats eat liver?",
@@ -17,7 +18,8 @@
     "fr": "Les chats peuvent-ils manger du foie ?",
     "es": "¿Pueden los gatos comer hígado?",
     "it": "I gatti possono mangiare il fegato?",
-    "pt": "Os gatos podem comer fígado?"
+    "pt": "Os gatos podem comer fígado?",
+    "nl": "Mogen katten lever eten?"
   },
   "url_slug": {
     "en": "liver",
@@ -26,7 +28,8 @@
     "fr": "foie",
     "es": "higado",
     "it": "fegato",
-    "pt": "figado"
+    "pt": "figado",
+    "nl": "lever"
   },
   "level": "not_recommended",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Pas en friandise maison. Le foie est très riche en vitamine A, et les chats nourris de foie cru ou d’une alimentation riche en foie peuvent développer une intoxication à la vitamine A. Le foie contenu dans un aliment complet et équilibré pour chats ne pose pas de problème.",
     "es": "No como premio casero. El hígado es muy rico en vitamina A, y los gatos que comen hígado crudo o una dieta con mucho hígado pueden sufrir una intoxicación por vitamina A. El hígado que forma parte de una comida para gatos completa y equilibrada no es un problema.",
     "it": "Non come premio fatto in casa. Il fegato è molto ricco di vitamina A, e i gatti nutriti con fegato crudo o con una dieta ricca di fegato possono sviluppare un’intossicazione da vitamina A. Il fegato contenuto in un alimento per gatti completo e bilanciato va bene.",
-    "pt": "Não como guloseima caseira. O fígado é muito rico em vitamina A, e os gatos alimentados com fígado cru ou com uma dieta rica em fígado podem desenvolver uma intoxicação por vitamina A. O fígado presente numa comida para gatos completa e equilibrada não faz mal."
+    "pt": "Não como guloseima caseira. O fígado é muito rico em vitamina A, e os gatos alimentados com fígado cru ou com uma dieta rica em fígado podem desenvolver uma intoxicação por vitamina A. O fígado presente numa comida para gatos completa e equilibrada não faz mal.",
+    "nl": "Niet als snoepje thuis. Lever is heel rijk aan vitamine A, en katten die rauwe lever of voer met veel lever krijgen, kunnen een vitamine A-vergiftiging oplopen. Lever in een compleet, uitgebalanceerd kattenvoer is prima."
   },
   "why": {
     "en": "VCA says vitamin A poisoning most commonly occurs when pets are fed raw liver or vitamin A-rich supplements over weeks to months. The Merck Veterinary Manual notes that in cats it can occur when growing kittens are fed a diet high in liver, and that feeding only liver can cause it. VCA recommends a commercially prepared, balanced diet instead.",
@@ -45,7 +49,8 @@
     "fr": "Selon VCA, l’intoxication à la vitamine A survient le plus souvent lorsque les animaux reçoivent du foie cru ou des compléments riches en vitamine A pendant des semaines, voire des mois. Le Merck Veterinary Manual indique que chez le chat, elle peut survenir quand des chatons en croissance reçoivent une alimentation riche en foie, et qu’une alimentation composée uniquement de foie peut la provoquer. VCA recommande plutôt un aliment industriel équilibré.",
     "es": "VCA indica que la intoxicación por vitamina A se produce sobre todo cuando a las mascotas se les da hígado crudo o suplementos ricos en vitamina A durante semanas o meses. El Manual Merck de Veterinaria señala que en los gatos puede aparecer cuando a gatitos en crecimiento se les da una dieta con mucho hígado, y que dar solo hígado puede provocarla. En su lugar, VCA recomienda una dieta comercial equilibrada.",
     "it": "Secondo VCA l’intossicazione da vitamina A si verifica più spesso quando agli animali domestici vengono dati fegato crudo o integratori ricchi di vitamina A per settimane o mesi. Il Manuale Veterinario Merck osserva che nei gatti può verificarsi quando ai gattini in crescita si dà una dieta ricca di fegato, e che dare solo fegato può causarla. VCA consiglia invece una dieta commerciale bilanciata.",
-    "pt": "A VCA diz que a intoxicação por vitamina A acontece sobretudo quando os animais de estimação comem fígado cru ou suplementos ricos em vitamina A durante semanas ou meses. O Merck Veterinary Manual refere que, nos gatos, pode acontecer quando gatinhos em crescimento recebem uma dieta rica em fígado, e que dar apenas fígado pode causá-la. A VCA recomenda, em vez disso, uma dieta comercial equilibrada."
+    "pt": "A VCA diz que a intoxicação por vitamina A acontece sobretudo quando os animais de estimação comem fígado cru ou suplementos ricos em vitamina A durante semanas ou meses. O Merck Veterinary Manual refere que, nos gatos, pode acontecer quando gatinhos em crescimento recebem uma dieta rica em fígado, e que dar apenas fígado pode causá-la. A VCA recomenda, em vez disso, uma dieta comercial equilibrada.",
+    "nl": "Volgens VCA ontstaat een vitamine A-vergiftiging meestal als huisdieren weken tot maanden rauwe lever of supplementen met veel vitamine A krijgen. De Merck Veterinary Manual vermeldt dat het bij katten kan ontstaan als jonge, groeiende kittens voer met veel lever krijgen, en dat het geven van alleen lever het kan veroorzaken. VCA raadt in plaats daarvan kant-en-klaar, uitgebalanceerd voer aan."
   },
   "signs": {
     "en": [
@@ -103,6 +108,14 @@
       "Fraqueza",
       "Movimentos dolorosos ou limitados",
       "Vómitos ou sonolência depois de uma quantidade muito grande"
+    ],
+    "nl": [
+      "Slechte of ruwe vacht",
+      "Droge huid",
+      "Gewichtsverlies",
+      "Zwakte",
+      "Pijnlijk of beperkt bewegen",
+      "Braken of sufheid na een heel grote hoeveelheid"
     ]
   },
   "what_to_do": {
@@ -112,7 +125,8 @@
     "fr": "L’intoxication à la vitamine A s’installe généralement sur des semaines, voire des mois : ne donnez donc pas régulièrement de foie à la maison. Si votre chat a mangé beaucoup de foie et que vous remarquez un pelage rêche, une perte de poids, de la faiblesse ou des mouvements douloureux, parlez-en à votre vétérinaire.",
     "es": "La intoxicación por vitamina A suele desarrollarse a lo largo de semanas o meses, así que no le des hígado en casa de forma habitual. Si tu gato ha estado comiendo mucho hígado y notas el pelaje áspero, pérdida de peso, debilidad o que se mueve con dolor, habla con tu veterinario.",
     "it": "L’intossicazione da vitamina A di solito si sviluppa nell’arco di settimane o mesi, quindi non dare regolarmente fegato a casa. Se il tuo gatto ha mangiato molto fegato e noti pelo ruvido, perdita di peso, debolezza o movimenti dolorosi, parlane con il veterinario.",
-    "pt": "A intoxicação por vitamina A costuma instalar-se ao longo de semanas ou meses, por isso não dês fígado em casa com regularidade. Se o teu gato tem comido muito fígado e notares o pelo áspero, perda de peso, fraqueza ou movimentos dolorosos, fala com o teu veterinário."
+    "pt": "A intoxicação por vitamina A costuma instalar-se ao longo de semanas ou meses, por isso não dês fígado em casa com regularidade. Se o teu gato tem comido muito fígado e notares o pelo áspero, perda de peso, fraqueza ou movimentos dolorosos, fala com o teu veterinário.",
+    "nl": "Een vitamine A-vergiftiging bouwt zich meestal op over weken tot maanden, dus geef thuis niet regelmatig lever. Heeft je kat veel lever gegeten en zie je een ruwe vacht, gewichtsverlies, zwakte of pijnlijk bewegen, overleg dan met je dierenarts."
   },
   "serving": null,
   "child": {
@@ -122,7 +136,8 @@
     "fr": "Le foie est plein d’une certaine vitamine, et trop, ce n’est pas bon pour les chats. Leur nourriture en contient déjà juste ce qu’il faut.",
     "es": "El hígado tiene muchísimo de una vitamina, y demasiada no es buena para los gatos. Su comida para gatos ya lleva la cantidad justa.",
     "it": "Il fegato è pieno di una vitamina che, se è troppa, non fa bene ai gatti. Il loro cibo per gatti ne contiene già la giusta quantità.",
-    "pt": "O fígado tem uma vitamina em grande quantidade, e vitamina a mais não faz bem aos gatos. A comida de gato já tem a quantidade certa."
+    "pt": "O fígado tem uma vitamina em grande quantidade, e vitamina a mais não faz bem aos gatos. A comida de gato já tem a quantidade certa.",
+    "nl": "In lever zit heel veel van één vitamine, en te veel is niet goed voor katten. In kattenvoer zit al precies genoeg."
   },
   "faq": [
     {
@@ -133,7 +148,8 @@
         "fr": "La composition de l’aliment de mon chat mentionne du foie. Est-ce un problème ?",
         "es": "La comida de mi gato lleva hígado. ¿Es un problema?",
         "it": "Il cibo del mio gatto contiene fegato. È un problema?",
-        "pt": "A comida do meu gato tem fígado. Isso é um problema?"
+        "pt": "A comida do meu gato tem fígado. Isso é um problema?",
+        "nl": "Op mijn kattenvoer staat lever. Is dat een probleem?"
       },
       "a": {
         "en": "No. Liver is a common ingredient in canned cat foods, and a complete, balanced cat food is what vets recommend.",
@@ -142,7 +158,8 @@
         "fr": "Non. Le foie est un ingrédient courant des pâtées pour chats, et les vétérinaires recommandent un aliment complet et équilibré pour chats.",
         "es": "No. El hígado es un ingrediente habitual en la comida húmeda para gatos, y una comida para gatos completa y equilibrada es lo que recomiendan los veterinarios.",
         "it": "No. Il fegato è un ingrediente comune negli alimenti umidi per gatti, e un alimento per gatti completo e bilanciato è proprio ciò che consigliano i veterinari.",
-        "pt": "Não. O fígado é um ingrediente comum nas latas de comida para gatos, e uma comida para gatos completa e equilibrada é o que os veterinários recomendam."
+        "pt": "Não. O fígado é um ingrediente comum nas latas de comida para gatos, e uma comida para gatos completa e equilibrada é o que os veterinários recomendam.",
+        "nl": "Nee. Lever is een veelgebruikt ingrediënt in kattenvoer uit blik, en een compleet, uitgebalanceerd kattenvoer is precies wat dierenartsen aanraden."
       }
     }
   ],
@@ -217,6 +234,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "aa3702d564f7f9c1d7cc16a78b02c13e40698312484b39ebad2669b60b59614f"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ffd5379bc0e533e194de1c0ec99ddf966673f63196467329c533fb1c5d4f09fd"
     }
   }
 }

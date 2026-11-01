@@ -8,7 +8,8 @@
     "fr": "Pêches",
     "es": "Melocotones",
     "it": "Pesche",
-    "pt": "Pêssegos"
+    "pt": "Pêssegos",
+    "nl": "Perziken"
   },
   "question": {
     "en": "Can cats eat peaches?",
@@ -17,7 +18,8 @@
     "fr": "Les chats peuvent-ils manger des pêches ?",
     "es": "¿Pueden los gatos comer melocotones?",
     "it": "I gatti possono mangiare le pesche?",
-    "pt": "Os gatos podem comer pêssegos?"
+    "pt": "Os gatos podem comer pêssegos?",
+    "nl": "Mogen katten perziken eten?"
   },
   "url_slug": {
     "en": "peaches",
@@ -26,7 +28,8 @@
     "fr": "peches",
     "es": "melocotones",
     "it": "pesche",
-    "pt": "pessegos"
+    "pt": "pessegos",
+    "nl": "perziken"
   },
   "level": "dangerous",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Non, mieux vaut s’en abstenir. L’ASPCA classe le pêcher parmi les plantes toxiques pour les chats : ses tiges, ses feuilles et ses graines (le noyau) contiennent du cyanure. Ne donnez pas de pêches à votre chat, rangez noyaux et parties de la plante hors de sa portée, et appelez votre vétérinaire s’il en mâchouille.",
     "es": "No, mejor que no. La ASPCA considera la planta del melocotonero tóxica para los gatos: sus tallos, hojas y semillas (el hueso) contienen cianuro. No le ofrezcas melocotones a tu gato, guarda los huesos y las partes de la planta fuera de su alcance y llama a tu veterinario si tu gato mordisquea alguno.",
     "it": "No, è meglio di no. L’ASPCA classifica la pianta del pesco come tossica per i gatti: steli, foglie e semi (il nocciolo) contengono cianuro. Non offrire pesche al tuo gatto, tieni noccioli e parti della pianta fuori dalla sua portata e chiama il veterinario se ne mastica anche solo un pezzo.",
-    "pt": "Não, é melhor não. A ASPCA classifica o pessegueiro como tóxico para gatos: os caules, as folhas e as sementes (o caroço) contêm cianeto. Não ofereças pêssegos ao teu gato, mantém os caroços e as partes da planta fora do alcance e liga ao teu veterinário se ele mastigar alguma."
+    "pt": "Não, é melhor não. A ASPCA classifica o pessegueiro como tóxico para gatos: os caules, as folhas e as sementes (o caroço) contêm cianeto. Não ofereças pêssegos ao teu gato, mantém os caroços e as partes da planta fora do alcance e liga ao teu veterinário se ele mastigar alguma.",
+    "nl": "Nee, liever niet. De ASPCA noemt de perzikplant giftig voor katten: de stelen, bladeren en zaden (de pit) bevatten cyanide. Geef je kat geen perziken, houd pitten en plantendelen buiten bereik en bel je dierenarts als je kat erop kauwt."
   },
   "why": {
     "en": "The stems, leaves and seeds contain cyanide (as cyanogenic glycosides) and are particularly toxic while wilting. The sources we found describe the risk from these plant parts and do not say the fruit flesh is safe for cats, so we do not recommend sharing it.",
@@ -45,7 +49,8 @@
     "fr": "Les tiges, les feuilles et les graines contiennent du cyanure (sous forme de glycosides cyanogènes) et sont particulièrement toxiques lorsqu’elles se flétrissent. Les sources que nous avons trouvées décrivent le risque lié à ces parties de la plante et n’indiquent pas que la chair du fruit est sans danger pour les chats ; nous déconseillons donc de la partager.",
     "es": "Los tallos, las hojas y las semillas contienen cianuro (en forma de glucósidos cianogénicos) y son especialmente tóxicos cuando se están marchitando. Las fuentes que hemos encontrado describen el riesgo de estas partes de la planta y no dicen que la pulpa de la fruta sea segura para los gatos, así que no recomendamos compartirla.",
     "it": "Steli, foglie e semi contengono cianuro (sotto forma di glicosidi cianogenetici) e sono particolarmente tossici quando appassiscono. Le fonti che abbiamo trovato descrivono il rischio legato a queste parti della pianta e non affermano che la polpa del frutto sia sicura per i gatti, quindi sconsigliamo di condividerla.",
-    "pt": "Os caules, as folhas e as sementes contêm cianeto (sob a forma de glicosídeos cianogénicos) e são particularmente tóxicos quando estão a murchar. As fontes que encontrámos descrevem o risco destas partes da planta e não dizem que a polpa do fruto seja segura para gatos, por isso não recomendamos partilhá-la."
+    "pt": "Os caules, as folhas e as sementes contêm cianeto (sob a forma de glicosídeos cianogénicos) e são particularmente tóxicos quando estão a murchar. As fontes que encontrámos descrevem o risco destas partes da planta e não dizem que a polpa do fruto seja segura para gatos, por isso não recomendamos partilhá-la.",
+    "nl": "De stelen, bladeren en zaden bevatten cyanide (in de vorm van cyanogene glycosiden) en zijn vooral giftig als ze verwelken. De bronnen die we hebben gevonden beschrijven het risico van deze plantendelen en zeggen niet dat het vruchtvlees veilig is voor katten. Daarom raden we af om het te delen."
   },
   "signs": {
     "en": [
@@ -96,6 +101,13 @@
       "Dificuldade em respirar",
       "Respiração ofegante",
       "Choque"
+    ],
+    "nl": [
+      "Steenrood tandvlees",
+      "Verwijde pupillen",
+      "Moeite met ademhalen",
+      "Hijgen",
+      "Shock"
     ]
   },
   "what_to_do": {
@@ -105,7 +117,8 @@
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire si votre chat a mâchouillé un noyau, une tige ou des feuilles. Notez ce qu’il a mangé, en quelle quantité et à quelle heure. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
     "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales si tu gato ha mordisqueado un hueso, tallos u hojas. Anota qué ha comido, cuánto y cuándo. No esperes a que aparezcan síntomas y no intentes hacer vomitar a tu gato en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario se il tuo gatto ha masticato un nocciolo, uno stelo o delle foglie. Annota che cosa ha mangiato, quanto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
-    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais se o teu gato mastigou um caroço, um caule ou folhas. Toma nota do que foi comido, da quantidade e de quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa."
+    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais se o teu gato mastigou um caroço, um caule ou folhas. Toma nota do que foi comido, da quantidade e de quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
+    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren als je kat op een pit, steel of bladeren heeft gekauwd. Schrijf op wat er is gegeten, hoeveel en wanneer. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken."
   },
   "serving": null,
   "child": {
@@ -115,7 +128,8 @@
     "fr": "Les pêches, c’est un en-cas pour les humains. Leurs noyaux et leurs feuilles sont dangereux pour les chats : préviens un adulte si ton chat en mâchouille un.",
     "es": "Los melocotones son un tentempié para personas. Sus huesos y sus hojas no son seguros para los gatos, así que avisa a un adulto si tu gato mordisquea uno.",
     "it": "Le pesche sono uno spuntino per le persone. Noccioli e foglie non sono sicuri per i gatti: se il micio ne mastica uno, dillo a un adulto.",
-    "pt": "Os pêssegos são um petisco para pessoas. Os caroços e as folhas não são seguros para gatos, por isso avisa um adulto se o gatinho mastigar um."
+    "pt": "Os pêssegos são um petisco para pessoas. Os caroços e as folhas não são seguros para gatos, por isso avisa um adulto se o gatinho mastigar um.",
+    "nl": "Perziken zijn een tussendoortje voor mensen. De pitten en bladeren zijn niet veilig voor katten. Kauwt je poes erop? Vertel het meteen aan een volwassene."
   },
   "faq": [
     {
@@ -126,7 +140,8 @@
         "fr": "Quelle partie pose problème ?",
         "es": "¿Qué parte es la peligrosa?",
         "it": "Qual è la parte pericolosa?",
-        "pt": "Qual é a parte problemática?"
+        "pt": "Qual é a parte problemática?",
+        "nl": "Welk deel is het probleem?"
       },
       "a": {
         "en": "The ASPCA says the stems, leaves and seeds contain cyanide, and that they are particularly toxic while wilting.",
@@ -135,7 +150,8 @@
         "fr": "Selon l’ASPCA, les tiges, les feuilles et les graines contiennent du cyanure, et elles sont particulièrement toxiques lorsqu’elles se flétrissent.",
         "es": "La ASPCA indica que los tallos, las hojas y las semillas contienen cianuro y que son especialmente tóxicos cuando se están marchitando.",
         "it": "Secondo l’ASPCA steli, foglie e semi contengono cianuro e sono particolarmente tossici quando appassiscono.",
-        "pt": "A ASPCA diz que os caules, as folhas e as sementes contêm cianeto e que são particularmente tóxicos quando estão a murchar."
+        "pt": "A ASPCA diz que os caules, as folhas e as sementes contêm cianeto e que são particularmente tóxicos quando estão a murchar.",
+        "nl": "Volgens de ASPCA bevatten de stelen, bladeren en zaden cyanide en zijn ze vooral giftig als ze verwelken."
       }
     }
   ],
@@ -211,6 +227,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f63a1f449575d2736646e32eb3a863f213dc544fb3b3fae72a47a07d78a61186"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5c49e718b3b3dfa610a8d156e66779a791f1435e165089ce57b7da1329762058"
     }
   }
 }

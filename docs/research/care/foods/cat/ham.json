@@ -8,7 +8,8 @@
     "fr": "Jambon",
     "es": "Jamón",
     "it": "Prosciutto",
-    "pt": "Fiambre"
+    "pt": "Fiambre",
+    "nl": "Ham"
   },
   "question": {
     "en": "Can cats eat ham?",
@@ -17,7 +18,8 @@
     "fr": "Les chats peuvent-ils manger du jambon ?",
     "es": "¿Pueden los gatos comer jamón?",
     "it": "I gatti possono mangiare il prosciutto?",
-    "pt": "Os gatos podem comer fiambre?"
+    "pt": "Os gatos podem comer fiambre?",
+    "nl": "Mogen katten ham eten?"
   },
   "url_slug": {
     "en": "ham",
@@ -26,7 +28,8 @@
     "fr": "jambon",
     "es": "jamon",
     "it": "prosciutto",
-    "pt": "fiambre"
+    "pt": "fiambre",
+    "nl": "ham"
   },
   "level": "not_recommended",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Mieux vaut s’en abstenir. Le jambon est gras et très salé, ce qui peut perturber la digestion du chat et augmenter le risque de pancréatite. Le jambon cuisiné avec de l’oignon ou de l’ail est toxique pour les chats. Un vétérinaire de l’université de Géorgie recommande d’éviter complètement le jambon.",
     "es": "Es mejor no dárselo. El jamón es graso y tiene mucha sal, lo que puede sentarle mal a la digestión de un gato y aumentar el riesgo de pancreatitis. El jamón cocinado con cebolla o ajo es tóxico para los gatos. Un veterinario de la Universidad de Georgia recomienda evitar el jamón por completo.",
     "it": "Meglio di no. Il prosciutto è grasso e molto salato, e questo può disturbare la digestione del gatto e aumentare il rischio di pancreatite. Il prosciutto cucinato con cipolla o aglio è tossico per i gatti. Un veterinario dell’Università della Georgia consiglia di evitarlo del tutto.",
-    "pt": "É melhor não. O fiambre é gordo e tem muito sal, o que pode fazer mal à digestão do gato e aumentar o risco de pancreatite. O fiambre cozinhado com cebola ou alho é tóxico para gatos. Um veterinário da Universidade da Geórgia recomenda evitar completamente o fiambre."
+    "pt": "É melhor não. O fiambre é gordo e tem muito sal, o que pode fazer mal à digestão do gato e aumentar o risco de pancreatite. O fiambre cozinhado com cebola ou alho é tóxico para gatos. Um veterinário da Universidade da Geórgia recomenda evitar completamente o fiambre.",
+    "nl": "Liever niet. Ham is vet en bevat veel zout, wat de spijsvertering van een kat kan verstoren en het risico op alvleesklierontsteking (pancreatitis) verhoogt. Ham die met ui of knoflook is bereid, is giftig voor katten. Een dierenarts van de University of Georgia raadt aan ham helemaal te vermijden."
   },
   "why": {
     "en": "Ham is a fatty meat that is also high in sodium, and both can cause health problems. Too much fat affects the digestive tract, especially the pancreas. Seasonings such as onion or garlic make it toxic. Small amounts may not be extremely harmful, but it is not a good treat. Salty food can also leave cats more dehydrated, and cats with kidney, heart or urinary problems should especially avoid ham.",
@@ -45,7 +49,8 @@
     "fr": "Le jambon est une viande grasse, également riche en sodium, et les deux peuvent causer des problèmes de santé. Trop de graisse affecte l’appareil digestif, en particulier le pancréas. Les assaisonnements comme l’oignon ou l’ail le rendent toxique. Une petite quantité n’est peut-être pas très nocive, mais ce n’est pas une bonne friandise. Les aliments salés peuvent aussi déshydrater davantage les chats, et les chats souffrant de problèmes rénaux, cardiaques ou urinaires doivent tout particulièrement éviter le jambon.",
     "es": "El jamón es una carne grasa que además tiene mucho sodio, y ambas cosas pueden causar problemas de salud. Demasiada grasa afecta al aparato digestivo, sobre todo al páncreas. Condimentos como la cebolla o el ajo lo vuelven tóxico. Puede que pequeñas cantidades no sean extremadamente dañinas, pero no es un buen premio. La comida salada también puede deshidratar más a los gatos, y los gatos con problemas de riñón, corazón o vías urinarias deberían evitar el jamón especialmente.",
     "it": "Il prosciutto è una carne grassa e ricca di sodio, ed entrambi possono causare problemi di salute. Troppi grassi colpiscono l’apparato digerente, soprattutto il pancreas. Condimenti come cipolla o aglio lo rendono tossico. Piccole quantità potrebbero non essere molto dannose, ma non è un buon premio. I cibi salati possono anche disidratare di più i gatti, e i gatti con problemi renali, cardiaci o urinari dovrebbero evitare il prosciutto in particolare.",
-    "pt": "O fiambre é uma carne gorda e também rica em sódio, e ambos podem causar problemas de saúde. A gordura em excesso afeta o aparelho digestivo, sobretudo o pâncreas. Temperos como a cebola ou o alho tornam-no tóxico. Pequenas quantidades podem não ser extremamente prejudiciais, mas não é uma boa guloseima. A comida salgada também pode deixar os gatos mais desidratados, e os gatos com problemas renais, cardíacos ou urinários devem evitar especialmente o fiambre."
+    "pt": "O fiambre é uma carne gorda e também rica em sódio, e ambos podem causar problemas de saúde. A gordura em excesso afeta o aparelho digestivo, sobretudo o pâncreas. Temperos como a cebola ou o alho tornam-no tóxico. Pequenas quantidades podem não ser extremamente prejudiciais, mas não é uma boa guloseima. A comida salgada também pode deixar os gatos mais desidratados, e os gatos com problemas renais, cardíacos ou urinários devem evitar especialmente o fiambre.",
+    "nl": "Ham is vet vlees dat ook veel natrium bevat, en allebei kunnen ze gezondheidsproblemen geven. Te veel vet tast het spijsverteringskanaal aan, vooral de alvleesklier. Kruiden zoals ui of knoflook maken het giftig. Kleine hoeveelheden zijn misschien niet heel schadelijk, maar het is geen goed snoepje. Door zout eten kunnen katten ook sneller uitdrogen, en katten met nier-, hart- of urinewegproblemen moeten ham zeker vermijden."
   },
   "signs": {
     "en": [
@@ -82,6 +87,11 @@
       "Vómitos",
       "Diarreia",
       "Mal-estar de barriga"
+    ],
+    "nl": [
+      "Braken",
+      "Diarree",
+      "Last van de buik"
     ]
   },
   "what_to_do": {
@@ -91,7 +101,8 @@
     "fr": "Si votre chat a mangé du jambon assaisonné à l’oignon ou à l’ail, contactez immédiatement votre vétérinaire. S’il a mangé beaucoup de jambon nature, ou s’il vomit ou a la diarrhée, demandez conseil à votre vétérinaire.",
     "es": "Si tu gato ha comido jamón condimentado con cebolla o ajo, ponte en contacto con tu veterinario de inmediato. Si ha comido mucho jamón sin condimentar, o tiene vómitos o diarrea, llama a tu veterinario para que te aconseje.",
     "it": "Se il tuo gatto ha mangiato prosciutto insaporito con cipolla o aglio, contatta subito il veterinario. Se ha mangiato molto prosciutto semplice, o ha vomito o diarrea, chiama il veterinario per un consiglio.",
-    "pt": "Se o teu gato comeu fiambre temperado com cebola ou alho, contacta imediatamente o teu veterinário. Se comeu muito fiambre simples, ou se tiver vómitos ou diarreia, liga ao teu veterinário para pedir conselho."
+    "pt": "Se o teu gato comeu fiambre temperado com cebola ou alho, contacta imediatamente o teu veterinário. Se comeu muito fiambre simples, ou se tiver vómitos ou diarreia, liga ao teu veterinário para pedir conselho.",
+    "nl": "Heeft je kat ham gegeten die met ui of knoflook is gekruid, neem dan meteen contact op met je dierenarts. Heeft ze veel gewone ham gegeten, of braakt ze of heeft ze diarree, bel dan je dierenarts voor advies."
   },
   "serving": null,
   "child": {
@@ -101,7 +112,8 @@
     "fr": "Le jambon est trop salé et trop gras pour les chats. Les friandises pour chat font une bien meilleure surprise.",
     "es": "El jamón tiene demasiada sal y grasa para los gatos. Para tu gatito, sus propios premios son una sorpresa mejor.",
     "it": "Il prosciutto è troppo salato e grasso per i gatti. Per il micio, i suoi premi per gatti sono una sorpresa migliore.",
-    "pt": "O fiambre é demasiado salgado e gordo para gatos. As guloseimas próprias do gatinho são uma surpresa melhor."
+    "pt": "O fiambre é demasiado salgado e gordo para gatos. As guloseimas próprias do gatinho são uma surpresa melhor.",
+    "nl": "Ham is te zout en te vet voor katten. De eigen kattensnoepjes van je poes zijn een veel betere verrassing."
   },
   "faq": [
     {
@@ -112,7 +124,8 @@
         "fr": "Une toute petite bouchée de jambon, c’est dangereux ?",
         "es": "¿Es peligroso un mordisquito de jamón?",
         "it": "Un pezzettino di prosciutto è pericoloso?",
-        "pt": "Uma dentadinha de fiambre é perigosa?"
+        "pt": "Uma dentadinha de fiambre é perigosa?",
+        "nl": "Is een klein hapje ham gevaarlijk?"
       },
       "a": {
         "en": "Small amounts may not be extremely harmful, but ham seasoned with onion or garlic is toxic to cats, and a University of Georgia vet still recommends avoiding ham altogether.",
@@ -121,7 +134,8 @@
         "fr": "Une petite quantité n’est peut-être pas très nocive, mais le jambon assaisonné à l’oignon ou à l’ail est toxique pour les chats, et un vétérinaire de l’université de Géorgie recommande tout de même d’éviter complètement le jambon.",
         "es": "Puede que pequeñas cantidades no sean extremadamente dañinas, pero el jamón condimentado con cebolla o ajo es tóxico para los gatos, y un veterinario de la Universidad de Georgia sigue recomendando evitar el jamón por completo.",
         "it": "Piccole quantità potrebbero non essere molto dannose, ma il prosciutto insaporito con cipolla o aglio è tossico per i gatti, e un veterinario dell’Università della Georgia consiglia comunque di evitarlo del tutto.",
-        "pt": "Pequenas quantidades podem não ser extremamente prejudiciais, mas o fiambre temperado com cebola ou alho é tóxico para gatos, e um veterinário da Universidade da Geórgia recomenda, mesmo assim, evitar completamente o fiambre."
+        "pt": "Pequenas quantidades podem não ser extremamente prejudiciais, mas o fiambre temperado com cebola ou alho é tóxico para gatos, e um veterinário da Universidade da Geórgia recomenda, mesmo assim, evitar completamente o fiambre.",
+        "nl": "Kleine hoeveelheden zijn misschien niet heel schadelijk, maar ham die met ui of knoflook is gekruid, is giftig voor katten, en een dierenarts van de University of Georgia raadt toch aan ham helemaal te vermijden."
       }
     }
   ],
@@ -210,6 +224,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1d1e1e9a3ca40abb60036cf234dbe0cdc122fd34a2065f350277b88f061260d6"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2a1a7e704f6ab04fe26e59e3e9da064718bbf80ee22923c16fb8ce1bfe985d77"
     }
   }
 }

@@ -8,7 +8,8 @@
     "fr": "Viande grasse",
     "es": "Carne grasa",
     "it": "Carne grassa",
-    "pt": "Carne gorda"
+    "pt": "Carne gorda",
+    "nl": "Vet vlees"
   },
   "question": {
     "en": "Can cats eat fatty meat?",
@@ -17,7 +18,8 @@
     "fr": "Les chats peuvent-ils manger de la viande grasse ?",
     "es": "¿Pueden los gatos comer carne grasa?",
     "it": "I gatti possono mangiare la carne grassa?",
-    "pt": "Os gatos podem comer carne gorda?"
+    "pt": "Os gatos podem comer carne gorda?",
+    "nl": "Mogen katten vet vlees eten?"
   },
   "url_slug": {
     "en": "fatty-meat",
@@ -26,7 +28,8 @@
     "fr": "viande-grasse",
     "es": "carne-grasa",
     "it": "carne-grassa",
-    "pt": "carne-gorda"
+    "pt": "carne-gorda",
+    "nl": "vet-vlees"
   },
   "level": "not_recommended",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Mieux vaut s’en abstenir. La viande grasse et la peau de volaille peuvent perturber la digestion du chat et, chez les chats sensibles, même entraîner une pancréatite. Si vous partagez de la viande, donnez un peu de viande maigre cuite nature, sans peau, sans os ni assaisonnement.",
     "es": "Es mejor no dársela. La carne grasa y la piel de las aves pueden sentarle mal a la digestión de un gato y, en gatos sensibles, incluso provocar pancreatitis. Si compartes carne, dale un poco de carne magra, cocinada y sin nada, sin piel, huesos ni condimentos.",
     "it": "Meglio di no. La carne grassa e la pelle del pollame possono disturbare la digestione del gatto e, nei gatti sensibili, causare persino una pancreatite. Se condividi della carne, offrigli un po’ di carne magra, cotta e semplice, senza pelle, ossa né condimenti.",
-    "pt": "É melhor não. A carne gorda e a pele das aves podem fazer mal à digestão do gato e, em gatos sensíveis, podem até levar a pancreatite. Se partilhares carne, dá um pouco de carne magra, simples e cozinhada, sem pele, ossos nem temperos."
+    "pt": "É melhor não. A carne gorda e a pele das aves podem fazer mal à digestão do gato e, em gatos sensíveis, podem até levar a pancreatite. Se partilhares carne, dá um pouco de carne magra, simples e cozinhada, sem pele, ossos nem temperos.",
+    "nl": "Liever niet. Vet vlees en vel van gevogelte kunnen de spijsvertering van een kat verstoren en bij gevoelige katten zelfs tot alvleesklierontsteking (pancreatitis) leiden. Deel je vlees, geef dan een beetje gewoon, mager, gekookt vlees zonder vel, botten of kruiden."
   },
   "why": {
     "en": "Too much fat can affect a cat's digestive tract, especially the pancreas. Cats Protection warns that turkey skin is high in fat and can cause digestive upset or even pancreatitis in sensitive cats, and a University of Georgia vet advises avoiding the fattier pieces of ham altogether.",
@@ -45,7 +49,8 @@
     "fr": "Trop de graisse peut affecter l’appareil digestif du chat, en particulier le pancréas. Cats Protection avertit que la peau de dinde est très grasse et peut provoquer des troubles digestifs, voire une pancréatite chez les chats sensibles, et un vétérinaire de l’université de Géorgie conseille d’éviter complètement les morceaux de jambon les plus gras.",
     "es": "Demasiada grasa puede afectar al aparato digestivo del gato, sobre todo al páncreas. Cats Protection advierte de que la piel del pavo tiene mucha grasa y puede causar trastornos digestivos o incluso pancreatitis en gatos sensibles, y un veterinario de la Universidad de Georgia aconseja evitar por completo las partes más grasas del jamón.",
     "it": "Troppi grassi possono colpire l’apparato digerente del gatto, soprattutto il pancreas. Cats Protection avverte che la pelle del tacchino è molto grassa e può causare disturbi digestivi o persino una pancreatite nei gatti sensibili, e un veterinario dell’Università della Georgia consiglia di evitare del tutto le parti più grasse del prosciutto.",
-    "pt": "A gordura em excesso pode afetar o aparelho digestivo do gato, sobretudo o pâncreas. A Cats Protection avisa que a pele do peru é rica em gordura e pode causar problemas digestivos ou até pancreatite em gatos sensíveis, e um veterinário da Universidade da Geórgia aconselha a evitar completamente as partes mais gordas do fiambre."
+    "pt": "A gordura em excesso pode afetar o aparelho digestivo do gato, sobretudo o pâncreas. A Cats Protection avisa que a pele do peru é rica em gordura e pode causar problemas digestivos ou até pancreatite em gatos sensíveis, e um veterinário da Universidade da Geórgia aconselha a evitar completamente as partes mais gordas do fiambre.",
+    "nl": "Te veel vet kan het spijsverteringskanaal van een kat aantasten, vooral de alvleesklier. Cats Protection waarschuwt dat kalkoenvel veel vet bevat en bij gevoelige katten spijsverteringsproblemen of zelfs alvleesklierontsteking kan veroorzaken, en een dierenarts van de University of Georgia raadt aan de vettere stukken ham helemaal te vermijden."
   },
   "signs": {
     "en": [
@@ -82,6 +87,11 @@
       "Vómitos",
       "Diarreia",
       "Mal-estar de barriga"
+    ],
+    "nl": [
+      "Braken",
+      "Diarree",
+      "Last van de buik"
     ]
   },
   "what_to_do": {
@@ -91,7 +101,8 @@
     "fr": "Si votre chat a mangé beaucoup d’aliments gras, ou s’il vomit, a la diarrhée ou semble souffrir ensuite, demandez conseil à votre vétérinaire.",
     "es": "Si tu gato ha comido mucha comida grasa, o después tiene vómitos, diarrea o parece dolorido, consulta a tu veterinario.",
     "it": "Se il tuo gatto ha mangiato molto cibo grasso, o se poi vomita, ha la diarrea o sembra soffrire, chiedi consiglio al veterinario.",
-    "pt": "Se o teu gato comeu muita comida gorda, ou se depois tiver vómitos, diarreia ou parecer ter dores, contacta o teu veterinário para pedir conselho."
+    "pt": "Se o teu gato comeu muita comida gorda, ou se depois tiver vómitos, diarreia ou parecer ter dores, contacta o teu veterinário para pedir conselho.",
+    "nl": "Heeft je kat veel vet eten gegeten, of braakt ze daarna, heeft ze diarree of lijkt ze pijn te hebben? Vraag dan je dierenarts om advies."
   },
   "serving": {
     "en": "Only plain, cooked, lean meat as an occasional treat: no skin, fat, bones or seasoning.",
@@ -100,7 +111,8 @@
     "fr": "Uniquement de la viande maigre cuite nature, comme friandise occasionnelle : sans peau, sans gras, sans os ni assaisonnement.",
     "es": "Solo carne magra, cocinada y sin nada como premio de vez en cuando: sin piel, grasa, huesos ni condimentos.",
     "it": "Solo carne magra, cotta e semplice come premio occasionale: senza pelle, grasso, ossa né condimenti.",
-    "pt": "Apenas carne magra, simples e cozinhada, como guloseima ocasional: sem pele, gordura, ossos nem temperos."
+    "pt": "Apenas carne magra, simples e cozinhada, como guloseima ocasional: sem pele, gordura, ossos nem temperos.",
+    "nl": "Alleen gewoon, gekookt, mager vlees, af en toe als snoepje: zonder vel, vet, botten of kruiden."
   },
   "child": {
     "en": "Fatty bits can give a cat a sore tummy. If a grown-up says yes, kitty can have a tiny bit of plain lean meat.",
@@ -109,7 +121,8 @@
     "fr": "Les morceaux gras peuvent donner mal au ventre à un chat. Si un adulte est d’accord, ton chat peut avoir un tout petit peu de viande maigre nature.",
     "es": "Los trozos con grasa pueden darle dolor de barriga a un gato. Si un adulto dice que sí, tu gatito puede comer un poquito de carne magra sin nada.",
     "it": "I pezzi grassi possono far venire il mal di pancia a un gatto. Se un adulto dice di sì, il micio può avere un pezzettino di carne magra semplice.",
-    "pt": "As partes gordas podem dar dor de barriga a um gato. Se um adulto disser que sim, o gatinho pode comer um bocadinho de carne magra simples."
+    "pt": "As partes gordas podem dar dor de barriga a um gato. Se um adulto disser que sim, o gatinho pode comer um bocadinho de carne magra simples.",
+    "nl": "Van vette stukjes kan een kat buikpijn krijgen. Als een volwassene het goed vindt, mag je poes een klein stukje gewoon mager vlees."
   },
   "faq": [
     {
@@ -120,7 +133,8 @@
         "fr": "Peut-on donner de la peau de poulet ou de dinde ?",
         "es": "¿Está bien la piel del pollo o del pavo?",
         "it": "La pelle del pollo o del tacchino va bene?",
-        "pt": "Posso dar pele de frango ou de peru?"
+        "pt": "Posso dar pele de frango ou de peru?",
+        "nl": "Is vel van kip of kalkoen oké?"
       },
       "a": {
         "en": "No. Cats Protection says turkey skin is high in fat and can cause digestive upset or even pancreatitis in sensitive cats. Give skinless meat instead.",
@@ -129,7 +143,8 @@
         "fr": "Non. Selon Cats Protection, la peau de dinde est très grasse et peut provoquer des troubles digestifs, voire une pancréatite chez les chats sensibles. Donnez plutôt de la viande sans peau.",
         "es": "No. Cats Protection indica que la piel del pavo tiene mucha grasa y puede causar trastornos digestivos o incluso pancreatitis en gatos sensibles. Dale carne sin piel.",
         "it": "No. Secondo Cats Protection la pelle del tacchino è molto grassa e può causare disturbi digestivi o persino una pancreatite nei gatti sensibili. Dai invece carne senza pelle.",
-        "pt": "Não. A Cats Protection diz que a pele do peru é rica em gordura e pode causar problemas digestivos ou até pancreatite em gatos sensíveis. Dá antes carne sem pele."
+        "pt": "Não. A Cats Protection diz que a pele do peru é rica em gordura e pode causar problemas digestivos ou até pancreatite em gatos sensíveis. Dá antes carne sem pele.",
+        "nl": "Nee. Volgens Cats Protection bevat kalkoenvel veel vet en kan het bij gevoelige katten spijsverteringsproblemen of zelfs alvleesklierontsteking veroorzaken. Geef liever vlees zonder vel."
       }
     }
   ],
@@ -202,6 +217,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e9481910fd838e4789295b9bdce94f128042dda4f83cacafef63e717637582e1"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "921e39d526c2b7904a250fa028f9eb1e896af19b0472b11e18cb322d6b0be74e"
     }
   }
 }
