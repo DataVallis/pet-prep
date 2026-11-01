@@ -7,7 +7,8 @@
     "de": "Maiskolben",
     "fr": "Épi de maïs",
     "es": "Mazorca de maíz",
-    "it": "Pannocchia"
+    "it": "Pannocchia",
+    "pt": "Maçaroca de milho"
   },
   "question": {
     "en": "Can dogs eat corn cobs?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Hunde Maiskolben fressen?",
     "fr": "Les chiens peuvent-ils manger des épis de maïs ?",
     "es": "¿Pueden los perros comer mazorcas de maíz?",
-    "it": "I cani possono mangiare le pannocchie?"
+    "it": "I cani possono mangiare le pannocchie?",
+    "pt": "Os cães podem comer maçarocas de milho?"
   },
   "url_slug": {
     "en": "corn-cob",
@@ -23,7 +25,8 @@
     "de": "maiskolben",
     "fr": "epi-de-mais",
     "es": "mazorca-de-maiz",
-    "it": "pannocchia"
+    "it": "pannocchia",
+    "pt": "macaroca-de-milho"
   },
   "level": "dangerous",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nein. Geben Sie einem Hund niemals Maiskolben. Hunde können Stücke oder sogar den ganzen Kolben verschlucken – das kann zum Ersticken oder zu einem gefährlichen Darmverschluss führen, der eine Notfallbehandlung erfordern kann. Vom Kolben gelöste Maiskörner ohne Zusätze sind etwas anderes.",
     "fr": "Non. Ne donnez jamais d’épi de maïs à un chien. Les chiens peuvent en avaler des morceaux, voire l’épi entier, ce qui peut provoquer un étouffement ou une grave obstruction intestinale nécessitant parfois un traitement d’urgence. Les grains de maïs nature, détachés de l’épi, c’est une autre histoire.",
     "es": "No. Nunca le des a un perro maíz en mazorca. Los perros pueden tragarse trozos o incluso la mazorca entera, lo que puede provocar atragantamiento o una obstrucción intestinal grave que puede requerir tratamiento de urgencia. Los granos de maíz naturales, ya desgranados, son otra cosa.",
-    "it": "No. Non dare mai a un cane la pannocchia di mais. I cani possono ingoiarne dei pezzi o perfino la pannocchia intera, con il rischio di soffocamento o di una grave ostruzione intestinale che può richiedere un trattamento d’urgenza. I chicchi di mais al naturale, staccati dalla pannocchia, sono un’altra cosa."
+    "it": "No. Non dare mai a un cane la pannocchia di mais. I cani possono ingoiarne dei pezzi o perfino la pannocchia intera, con il rischio di soffocamento o di una grave ostruzione intestinale che può richiedere un trattamento d’urgenza. I chicchi di mais al naturale, staccati dalla pannocchia, sono un’altra cosa.",
+    "pt": "Não. Nunca dês a um cão milho na maçaroca. Os cães podem engolir pedaços ou até a maçaroca inteira, o que pode causar engasgamento ou uma obstrução intestinal grave que pode exigir tratamento de emergência. Os grãos de milho simples, já fora da maçaroca, são outra história."
   },
   "why": {
     "en": "Swallowed pieces can block the intestines; in one reported case the blockage restricted the blood supply, and emergency treatment may be needed. Plain kernels in moderation are generally safe; the cob is the danger.",
@@ -40,7 +44,8 @@
     "de": "Verschluckte Stücke können den Darm blockieren; in einem dokumentierten Fall drosselte der Verschluss die Blutversorgung, und eine Notfallbehandlung kann nötig sein. Maiskörner ohne Zusätze sind in Maßen im Allgemeinen unbedenklich – gefährlich ist der Kolben.",
     "fr": "Des morceaux avalés peuvent bloquer l’intestin ; dans un cas rapporté, l’obstruction a réduit l’irrigation sanguine, et un traitement d’urgence peut être nécessaire. Les grains nature, avec modération, sont généralement sans danger ; c’est l’épi qui est dangereux.",
     "es": "Los trozos tragados pueden obstruir el intestino; en un caso descrito, la obstrucción reducía el riego sanguíneo, y puede hacer falta un tratamiento de urgencia. Los granos naturales con moderación suelen ser seguros; el peligro es la mazorca.",
-    "it": "I pezzi ingoiati possono ostruire l’intestino; in un caso descritto l’ostruzione limitava l’afflusso di sangue, e può essere necessario un trattamento d’urgenza. I chicchi al naturale, con moderazione, sono in genere sicuri; il pericolo è la pannocchia."
+    "it": "I pezzi ingoiati possono ostruire l’intestino; in un caso descritto l’ostruzione limitava l’afflusso di sangue, e può essere necessario un trattamento d’urgenza. I chicchi al naturale, con moderazione, sono in genere sicuri; il pericolo è la pannocchia.",
+    "pt": "Os pedaços engolidos podem obstruir os intestinos; num caso relatado, a obstrução reduziu a irrigação sanguínea, e pode ser necessário tratamento de emergência. Os grãos simples, com moderação, são geralmente seguros; o perigo é a maçaroca."
   },
   "signs": {
     "en": [
@@ -84,6 +89,13 @@
       "Stanchezza e meno attività",
       "Diarrea",
       "Disidratazione"
+    ],
+    "pt": [
+      "Vómitos repetidos",
+      "Falta de vontade de comer",
+      "Cansaço e menos atividade",
+      "Diarreia",
+      "Desidratação"
     ]
   },
   "what_to_do": {
@@ -92,7 +104,8 @@
     "de": "Wenden Sie sich sofort an Ihren Tierarzt, wenn Ihr Hund einen Maiskolben oder ein Stück davon verschluckt hat, auch wenn er unauffällig wirkt. Notieren Sie, wann es passiert ist und ungefähr wie viel gefressen wurde. Warten Sie nicht auf Anzeichen eines Darmverschlusses.",
     "fr": "Contactez immédiatement votre vétérinaire si votre chien a avalé un épi de maïs ou un morceau d’épi, même s’il semble aller bien. Notez quand c’est arrivé et en quelle quantité approximative. N’attendez pas les signes d’une obstruction.",
     "es": "Contacta enseguida con tu veterinario si tu perro se ha tragado una mazorca de maíz o parte de ella, aunque parezca estar bien. Apunta cuándo ha pasado y más o menos cuánto ha comido. No esperes a que aparezcan signos de obstrucción.",
-    "it": "Contatta subito il veterinario se il tuo cane ha ingoiato una pannocchia o un pezzo di pannocchia, anche se sembra stare bene. Annota quando è successo e più o meno quanto ne ha mangiato. Non aspettare i segni di un’ostruzione."
+    "it": "Contatta subito il veterinario se il tuo cane ha ingoiato una pannocchia o un pezzo di pannocchia, anche se sembra stare bene. Annota quando è successo e più o meno quanto ne ha mangiato. Non aspettare i segni di un’ostruzione.",
+    "pt": "Contacta imediatamente o teu veterinário se o teu cão engoliu uma maçaroca de milho ou parte de uma, mesmo que pareça estar bem. Anota quando aconteceu e mais ou menos quanto comeu. Não esperes por sinais de obstrução."
   },
   "serving": null,
   "child": {
@@ -101,7 +114,8 @@
     "de": "Maiskolben können im Bauch eines Hundes stecken bleiben. Wirf Kolben gleich in einen geschlossenen Mülleimer und sag einem Erwachsenen Bescheid, wenn dein Hund einen frisst.",
     "fr": "Les épis de maïs peuvent rester coincés dans le ventre d’un chien. Jette-les tout de suite dans une poubelle fermée et préviens un adulte si ton chien en mange un.",
     "es": "Las mazorcas se pueden quedar atascadas en la barriga de un perro. Tíralas enseguida a una basura con tapa y avisa a un adulto si tu perro se come una.",
-    "it": "Le pannocchie possono bloccarsi nella pancia di un cane. Butta subito le pannocchie in un bidone chiuso e dillo a un adulto se il tuo cane ne mangia una."
+    "it": "Le pannocchie possono bloccarsi nella pancia di un cane. Butta subito le pannocchie in un bidone chiuso e dillo a un adulto se il tuo cane ne mangia una.",
+    "pt": "As maçarocas de milho podem ficar presas na barriga de um cão. Põe-nas logo num caixote do lixo fechado e avisa um adulto se o teu cão comer uma."
   },
   "faq": [
     {
@@ -111,7 +125,8 @@
         "de": "Dürfen Hunde Maiskörner fressen?",
         "fr": "Les chiens peuvent-ils manger des grains de maïs ?",
         "es": "¿Pueden los perros comer granos de maíz?",
-        "it": "I cani possono mangiare i chicchi di mais?"
+        "it": "I cani possono mangiare i chicchi di mais?",
+        "pt": "Os cães podem comer grãos de milho?"
       },
       "a": {
         "en": "Plain corn kernels are generally safe for dogs in moderation. It's the cob that is dangerous.",
@@ -119,7 +134,8 @@
         "de": "Maiskörner ohne Zusätze sind für Hunde in Maßen im Allgemeinen unbedenklich. Gefährlich ist der Kolben.",
         "fr": "Les grains de maïs nature sont généralement sans danger pour les chiens avec modération. C’est l’épi qui est dangereux.",
         "es": "Los granos de maíz naturales suelen ser seguros para los perros con moderación. Lo peligroso es la mazorca.",
-        "it": "I chicchi di mais al naturale sono in genere sicuri per i cani, con moderazione. È la pannocchia a essere pericolosa."
+        "it": "I chicchi di mais al naturale sono in genere sicuri per i cani, con moderazione. È la pannocchia a essere pericolosa.",
+        "pt": "Os grãos de milho simples são geralmente seguros para os cães, com moderação. O perigo é a maçaroca."
       }
     },
     {
@@ -129,7 +145,8 @@
         "de": "Geht ein Maiskolben von allein ab?",
         "fr": "Un épi de maïs finira-t-il par passer tout seul ?",
         "es": "¿Una mazorca de maíz saldrá sola?",
-        "it": "La pannocchia uscirà da sola?"
+        "it": "La pannocchia uscirà da sola?",
+        "pt": "A maçaroca acaba por sair sozinha?"
       },
       "a": {
         "en": "Don't wait to find out. A swallowed cob can cause a serious blockage, so contact your vet straight away.",
@@ -137,7 +154,8 @@
         "de": "Warten Sie das nicht ab. Ein verschluckter Kolben kann einen gefährlichen Darmverschluss verursachen – wenden Sie sich sofort an Ihren Tierarzt.",
         "fr": "N’attendez pas de le savoir. Un épi avalé peut provoquer une grave obstruction : contactez immédiatement votre vétérinaire.",
         "es": "No esperes para comprobarlo. Una mazorca tragada puede causar una obstrucción grave, así que contacta enseguida con tu veterinario.",
-        "it": "Non aspettare di scoprirlo. Una pannocchia ingoiata può causare una grave ostruzione, quindi contatta subito il veterinario."
+        "it": "Non aspettare di scoprirlo. Una pannocchia ingoiata può causare una grave ostruzione, quindi contatta subito il veterinario.",
+        "pt": "Não esperes para ver. Uma maçaroca engolida pode causar uma obstrução grave, por isso contacta imediatamente o teu veterinário."
       }
     }
   ],
@@ -239,6 +257,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1e55df5fddc3a4ac2d1714a9cb2036d6358cc6c6e853d49ac30d7b215c47aa62"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9b0b234fd6d23148056d1fc93a2ecfa8bda17c08e3399ddeb508845fce774093"
     }
   }
 }

@@ -7,7 +7,8 @@
     "de": "Weintrauben",
     "fr": "Raisin",
     "es": "Uvas",
-    "it": "Uva"
+    "it": "Uva",
+    "pt": "Uvas"
   },
   "question": {
     "en": "Can cats eat grapes?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Katzen Weintrauben fressen?",
     "fr": "Les chats peuvent-ils manger du raisin ?",
     "es": "¿Pueden los gatos comer uvas?",
-    "it": "I gatti possono mangiare l’uva?"
+    "it": "I gatti possono mangiare l’uva?",
+    "pt": "Os gatos podem comer uvas?"
   },
   "url_slug": {
     "en": "grapes",
@@ -23,7 +25,8 @@
     "de": "weintrauben",
     "fr": "raisin",
     "es": "uvas",
-    "it": "uva"
+    "it": "uva",
+    "pt": "uvas"
   },
   "level": "toxic",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nein. Weintrauben stehen auf der Liste der für Katzen giftigen Lebensmittel und können Nierenversagen verursachen. Meiden Sie sie vollständig, auch in kleinen Mengen, und rufen Sie Ihren Tierarzt an, wenn Ihre Katze welche frisst.",
     "fr": "Non. Le raisin figure sur la liste des aliments toxiques pour les chats, et en manger peut provoquer une insuffisance rénale. Évitez-le complètement, même en petite quantité, et appelez votre vétérinaire si votre chat en mange.",
     "es": "No. Las uvas están en la lista de alimentos tóxicos para los gatos, y comerlas puede provocar insuficiencia renal. Evítalas por completo, incluso en pequeñas cantidades, y llama a tu veterinario si tu gato come alguna.",
-    "it": "No. L’uva è nell’elenco degli alimenti tossici per i gatti, e mangiarla può causare insufficienza renale. Evitala del tutto, anche in piccole quantità, e chiama il veterinario se il tuo gatto ne mangia."
+    "it": "No. L’uva è nell’elenco degli alimenti tossici per i gatti, e mangiarla può causare insufficienza renale. Evitala del tutto, anche in piccole quantità, e chiama il veterinario se il tuo gatto ne mangia.",
+    "pt": "Não. As uvas estão na lista de alimentos tóxicos para gatos e comê-las pode causar insuficiência renal. Evita-as por completo, mesmo em pequenas quantidades, e liga ao teu veterinário se o teu gato comer alguma."
   },
   "why": {
     "en": "Cat welfare charities warn that grapes can cause kidney failure in cats, and that cats with chronic kidney disease may be at greater risk. Grape poisoning in cats is rare and not well understood, and some sources only describe it in dogs, so we use the stricter level: treat any amount as an emergency.",
@@ -40,7 +44,8 @@
     "de": "Tierschutzorganisationen für Katzen warnen, dass Weintrauben bei Katzen Nierenversagen verursachen können und dass Katzen mit chronischer Nierenerkrankung möglicherweise stärker gefährdet sind. Traubenvergiftungen bei Katzen sind selten und kaum erforscht, und manche Quellen beschreiben sie nur bei Hunden. Deshalb wählen wir die strengere Einstufung: Behandeln Sie jede Menge als Notfall.",
     "fr": "Les associations de protection des chats avertissent que le raisin peut provoquer une insuffisance rénale chez le chat, et que les chats atteints d’une maladie rénale chronique pourraient être plus à risque. L’intoxication au raisin est rare chez le chat et mal comprise, et certaines sources ne la décrivent que chez le chien ; nous retenons donc le niveau le plus prudent : considérez toute quantité comme une urgence.",
     "es": "Las organizaciones de bienestar felino advierten de que las uvas pueden provocar insuficiencia renal en los gatos, y de que los gatos con enfermedad renal crónica pueden correr más riesgo. La intoxicación por uvas en los gatos es rara y no se conoce bien, y algunas fuentes solo la describen en perros, así que aplicamos el nivel más estricto: cualquier cantidad debe tratarse como una urgencia.",
-    "it": "Le associazioni per il benessere dei gatti avvertono che l’uva può causare insufficienza renale nei gatti e che i gatti con malattia renale cronica potrebbero essere più a rischio. L’intossicazione da uva nei gatti è rara e poco conosciuta, e alcune fonti la descrivono solo nei cani, quindi applichiamo il livello più severo: considera qualsiasi quantità un’emergenza."
+    "it": "Le associazioni per il benessere dei gatti avvertono che l’uva può causare insufficienza renale nei gatti e che i gatti con malattia renale cronica potrebbero essere più a rischio. L’intossicazione da uva nei gatti è rara e poco conosciuta, e alcune fonti la descrivono solo nei cani, quindi applichiamo il livello più severo: considera qualsiasi quantità un’emergenza.",
+    "pt": "As associações de proteção dos gatos avisam que as uvas podem causar insuficiência renal nos gatos e que os gatos com doença renal crónica podem correr mais risco. A intoxicação por uvas nos gatos é rara e pouco conhecida, e algumas fontes só a descrevem em cães, por isso seguimos o nível mais rigoroso: trata qualquer quantidade como uma emergência."
   },
   "signs": {
     "en": [
@@ -60,6 +65,9 @@
     ],
     "it": [
       "Vomito, spesso entro un giorno"
+    ],
+    "pt": [
+      "Vómitos, muitas vezes no espaço de um dia"
     ]
   },
   "what_to_do": {
@@ -68,7 +76,8 @@
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, wie viele Trauben Ihre Katze gefressen hat und wann. Warten Sie nicht auf Anzeichen und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez combien de grains votre chat a mangés et à quelle heure. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
     "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta cuántas uvas ha comido tu gato y cuándo. No esperes a que aparezcan signos y no intentes provocarle el vómito en casa.",
-    "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota quanti acini ha mangiato il tuo gatto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa."
+    "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota quanti acini ha mangiato il tuo gatto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
+    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Toma nota de quantas uvas o teu gato comeu e de quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa."
   },
   "serving": null,
   "child": {
@@ -77,7 +86,8 @@
     "de": "Weintrauben schmecken uns lecker, sind für Katzen aber nicht sicher. Lass sie auf deinem Teller und sag einem Erwachsenen Bescheid, wenn deine Katze eine frisst.",
     "fr": "Le raisin, c’est bon pour nous mais dangereux pour les chats. Garde-le dans ton assiette et préviens un adulte si ton chat en mange un grain.",
     "es": "Las uvas están ricas para nosotros, pero no son seguras para los gatos. Déjalas en tu plato y avisa a un adulto si tu gatito se come una.",
-    "it": "L’uva è buona per noi, ma non è sicura per i gatti. Lasciala nel tuo piatto e dillo a un adulto se il micio ne mangia un acino."
+    "it": "L’uva è buona per noi, ma non è sicura per i gatti. Lasciala nel tuo piatto e dillo a un adulto se il micio ne mangia un acino.",
+    "pt": "As uvas são deliciosas para nós, mas não são seguras para gatos. Deixa-as no teu prato e avisa um adulto se o gatinho comer uma."
   },
   "faq": [
     {
@@ -87,7 +97,8 @@
         "de": "Sind Katzen mit Nierenerkrankung stärker gefährdet?",
         "fr": "Les chats atteints d’une maladie rénale sont-ils plus à risque ?",
         "es": "¿Corren más riesgo los gatos con enfermedad renal?",
-        "it": "I gatti con malattie renali sono più a rischio?"
+        "it": "I gatti con malattie renali sono più a rischio?",
+        "pt": "Os gatos com doença renal correm mais risco?"
       },
       "a": {
         "en": "Cats Protection says cats with chronic kidney disease may be at greater risk from grapes.",
@@ -95,7 +106,8 @@
         "de": "Laut Cats Protection können Katzen mit chronischer Nierenerkrankung durch Weintrauben stärker gefährdet sein.",
         "fr": "Selon Cats Protection, les chats atteints d’une maladie rénale chronique pourraient être plus à risque face au raisin.",
         "es": "Cats Protection indica que los gatos con enfermedad renal crónica pueden correr más riesgo con las uvas.",
-        "it": "Secondo Cats Protection i gatti con malattia renale cronica potrebbero essere più a rischio con l’uva."
+        "it": "Secondo Cats Protection i gatti con malattia renale cronica potrebbero essere più a rischio con l’uva.",
+        "pt": "A Cats Protection diz que os gatos com doença renal crónica podem correr mais risco com as uvas."
       }
     }
   ],
@@ -178,6 +190,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1662d241c7be5c2fe6dca5f0bb4796a51f7323bb4e7a1cd167c199a9a5c2267a"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b90b66f360e206e6bad1544bb978ea6a9fa15bbb938c0ce174f1890c46ef7810"
     }
   }
 }

@@ -7,7 +7,8 @@
     "de": "Lachs",
     "fr": "Saumon",
     "es": "Salmón",
-    "it": "Salmone"
+    "it": "Salmone",
+    "pt": "Salmão"
   },
   "question": {
     "en": "Can cats eat salmon?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Katzen Lachs fressen?",
     "fr": "Les chats peuvent-ils manger du saumon ?",
     "es": "¿Pueden los gatos comer salmón?",
-    "it": "I gatti possono mangiare il salmone?"
+    "it": "I gatti possono mangiare il salmone?",
+    "pt": "Os gatos podem comer salmão?"
   },
   "url_slug": {
     "en": "salmon",
@@ -23,7 +25,8 @@
     "de": "lachs",
     "fr": "saumon",
     "es": "salmon",
-    "it": "salmone"
+    "it": "salmone",
+    "pt": "salmao"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Ja, ein wenig gegarter Lachs ist als gelegentliches Leckerli in Ordnung. Servieren Sie ihn pur, ohne Gräten und Gewürze und nur in kleinen Mengen. Fisch sollte das Alleinfutter einer Katze nicht ersetzen.",
     "fr": "Oui, un peu de saumon cuit convient comme friandise occasionnelle. Servez-le nature, sans arêtes ni assaisonnement, en petite quantité. Le poisson ne doit pas remplacer l’aliment complet du chat.",
     "es": "Sí, un poco de salmón cocinado está bien como premio ocasional. Sírvelo sin nada añadido, sin espinas ni condimentos, y en poca cantidad. El pescado no debe sustituir a la comida completa del gato.",
-    "it": "Sì, un po’ di salmone cotto va bene come premio occasionale. Servilo semplice, senza lische né condimenti, e in piccole quantità. Il pesce non deve sostituire l’alimento completo del gatto."
+    "it": "Sì, un po’ di salmone cotto va bene come premio occasionale. Servilo semplice, senza lische né condimenti, e in piccole quantità. Il pesce non deve sostituire l’alimento completo del gatto.",
+    "pt": "Sim, um pouco de salmão cozinhado pode ser dado como guloseima ocasional. Serve-o simples, sem espinhas nem temperos, e em pouca quantidade. O peixe não deve substituir a alimentação completa do gato."
   },
   "why": {
     "en": "Cats Protection lists cooked salmon with no bones or seasoning among safe festive foods and says small amounts of cooked fish such as salmon are suitable. RSPCA Australia says tinned salmon in spring water can be an occasional treat. Raw fish is different: it may carry bacteria and parasites.",
@@ -40,7 +44,8 @@
     "de": "Cats Protection zählt gegarten Lachs ohne Gräten und Gewürze zu den unbedenklichen Festtagsspeisen und sagt, dass kleine Mengen gegarter Fisch wie Lachs geeignet sind. Laut RSPCA Australia kann Lachs aus der Dose in Quellwasser ein gelegentliches Leckerli sein. Roher Fisch ist etwas anderes: Er kann Bakterien und Parasiten enthalten.",
     "fr": "Cats Protection cite le saumon cuit sans arêtes ni assaisonnement parmi les aliments de fête sans danger et indique que de petites quantités de poisson cuit, comme le saumon, conviennent. Selon la RSPCA Australia, le saumon en conserve au naturel (à l’eau) peut être une friandise occasionnelle. Le poisson cru, c’est autre chose : il peut contenir des bactéries et des parasites.",
     "es": "Cats Protection incluye el salmón cocinado sin espinas ni condimentos entre los alimentos navideños seguros y dice que pequeñas cantidades de pescado cocinado, como el salmón, son adecuadas. RSPCA Australia dice que el salmón en lata al natural (en agua) puede ser un premio ocasional. El pescado crudo es otra cosa: puede contener bacterias y parásitos.",
-    "it": "Cats Protection inserisce il salmone cotto senza lische né condimenti tra i cibi delle feste sicuri e afferma che piccole quantità di pesce cotto, come il salmone, sono adatte. RSPCA Australia dice che il salmone in scatola al naturale (in acqua) può essere un premio occasionale. Il pesce crudo è un’altra cosa: può contenere batteri e parassiti."
+    "it": "Cats Protection inserisce il salmone cotto senza lische né condimenti tra i cibi delle feste sicuri e afferma che piccole quantità di pesce cotto, come il salmone, sono adatte. RSPCA Australia dice che il salmone in scatola al naturale (in acqua) può essere un premio occasionale. Il pesce crudo è un’altra cosa: può contenere batteri e parassiti.",
+    "pt": "A Cats Protection inclui o salmão cozinhado, sem espinhas nem temperos, entre os alimentos festivos seguros e diz que pequenas quantidades de peixe cozinhado, como o salmão, são adequadas. A RSPCA Australia afirma que o salmão em lata ao natural (em água) pode ser uma guloseima ocasional. O peixe cru é diferente: pode ter bactérias e parasitas."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "de": "Bieten Sie zuerst ein kleines Stück an. Bekommt Ihre Katze danach Erbrechen oder Durchfall, hören Sie auf und fragen Sie Ihren Tierarzt. Entfernen Sie alle Gräten, die Sie finden.",
     "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou a la diarrhée ensuite, arrêtez et demandez conseil à votre vétérinaire. Retirez toutes les arêtes que vous trouvez.",
     "es": "Ofrécele primero un trocito. Si después tu gato tiene vómitos o diarrea, deja de dárselo y consulta a tu veterinario. Quita las espinas que encuentres.",
-    "it": "Offrigli prima un pezzetto. Se poi il tuo gatto vomita o ha la diarrea, smetti e chiedi al veterinario. Togli tutte le lische che trovi."
+    "it": "Offrigli prima un pezzetto. Se poi il tuo gatto vomita o ha la diarrea, smetti e chiedi al veterinario. Togli tutte le lische che trovi.",
+    "pt": "Começa por oferecer um pedacinho. Se o teu gato tiver vómitos ou diarreia depois, para e pergunta ao teu veterinário. Retira as espinhas que encontrares."
   },
   "serving": {
     "en": "Cooked, plain, boneless and unseasoned, or tinned in spring water; a few small pieces now and then.",
@@ -57,7 +63,8 @@
     "de": "Gegart, pur, ohne Gräten und ungewürzt – oder aus der Dose in Quellwasser; ab und zu ein paar kleine Stücke.",
     "fr": "Cuit, nature, sans arêtes et sans assaisonnement, ou en conserve au naturel (à l’eau) ; quelques petits morceaux de temps en temps.",
     "es": "Cocinado, sin nada añadido, sin espinas y sin condimentar, o en lata al natural (en agua); unos trocitos de vez en cuando.",
-    "it": "Cotto, semplice, senza lische e senza condimenti, oppure in scatola al naturale (in acqua); qualche pezzetto ogni tanto."
+    "it": "Cotto, semplice, senza lische e senza condimenti, oppure in scatola al naturale (in acqua); qualche pezzetto ogni tanto.",
+    "pt": "Cozinhado, simples, sem espinhas e sem temperos, ou em lata ao natural (em água); alguns pedacinhos de vez em quando."
   },
   "child": {
     "en": "A tiny bit of cooked salmon with no bones can be a special treat. Ask a grown-up first.",
@@ -65,7 +72,8 @@
     "de": "Ein kleines bisschen gegarter Lachs ohne Gräten kann ein besonderes Leckerli sein. Frag zuerst einen Erwachsenen.",
     "fr": "Un tout petit peu de saumon cuit sans arêtes peut être une friandise spéciale. Demande d’abord à un adulte.",
     "es": "Un poquito de salmón cocinado y sin espinas puede ser un premio especial. Pregunta antes a un adulto.",
-    "it": "Un pezzettino di salmone cotto senza lische può essere un premio speciale. Chiedi prima a un adulto."
+    "it": "Un pezzettino di salmone cotto senza lische può essere un premio speciale. Chiedi prima a un adulto.",
+    "pt": "Um bocadinho de salmão cozinhado e sem espinhas pode ser uma guloseima especial. Pergunta primeiro a um adulto."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "de": "Dürfen Katzen rohen Lachs oder Sushi fressen?",
         "fr": "Les chats peuvent-ils manger du saumon cru ou des sushis ?",
         "es": "¿Pueden los gatos comer salmón crudo o sushi?",
-        "it": "I gatti possono mangiare salmone crudo o sushi?"
+        "it": "I gatti possono mangiare salmone crudo o sushi?",
+        "pt": "Os gatos podem comer salmão cru ou sushi?"
       },
       "a": {
         "en": "It's best not to. Uncooked fish may contain harmful bacteria and parasites, so fish for cats should be properly cooked.",
@@ -83,7 +92,8 @@
         "de": "Besser nicht. Roher Fisch kann schädliche Bakterien und Parasiten enthalten, deshalb sollte Fisch für Katzen richtig gegart sein.",
         "fr": "Mieux vaut s’en abstenir. Le poisson cru peut contenir des bactéries et des parasites dangereux : le poisson destiné aux chats doit donc être bien cuit.",
         "es": "Mejor que no. El pescado sin cocinar puede contener bacterias y parásitos dañinos, así que el pescado para gatos debe estar bien cocinado.",
-        "it": "Meglio di no. Il pesce crudo può contenere batteri e parassiti nocivi, quindi il pesce per i gatti deve essere ben cotto."
+        "it": "Meglio di no. Il pesce crudo può contenere batteri e parassiti nocivi, quindi il pesce per i gatti deve essere ben cotto.",
+        "pt": "É melhor não. O peixe cru pode conter bactérias e parasitas nocivos, por isso o peixe para gatos deve ser bem cozinhado."
       }
     }
   ],
@@ -150,6 +160,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b1911c15698c4023abceb465b9765b1d902c26a3cc4c5ccf3ae37af3ee8e3e3d"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "66657552cb9d36008456d8dc4b9d3a4cffb4356c0ff902a348371752137b7f4d"
     }
   }
 }

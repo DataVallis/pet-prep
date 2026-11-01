@@ -7,7 +7,8 @@
     "de": "Energydrinks",
     "fr": "Boissons énergisantes",
     "es": "Bebidas energéticas",
-    "it": "Bevande energetiche"
+    "it": "Bevande energetiche",
+    "pt": "Bebidas energéticas"
   },
   "question": {
     "en": "Can cats drink energy drinks?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Katzen Energydrinks trinken?",
     "fr": "Les chats peuvent-ils boire des boissons énergisantes ?",
     "es": "¿Pueden los gatos beber bebidas energéticas?",
-    "it": "I gatti possono bere le bevande energetiche?"
+    "it": "I gatti possono bere le bevande energetiche?",
+    "pt": "Os gatos podem beber bebidas energéticas?"
   },
   "url_slug": {
     "en": "energy-drinks",
@@ -23,7 +25,8 @@
     "de": "energydrinks",
     "fr": "boissons-energisantes",
     "es": "bebidas-energeticas",
-    "it": "bevande-energetiche"
+    "it": "bevande-energetiche",
+    "pt": "bebidas-energeticas"
   },
   "level": "toxic",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nein. Energydrinks enthalten oft viel Koffein, und Katzen reagieren empfindlicher auf Koffein als Menschen. Lassen Sie Ihre Katze nie aus einer Dose oder einem Glas trinken und rufen Sie Ihren Tierarzt an, wenn sie etwas davon geschluckt hat.",
     "fr": "Non. Les boissons énergisantes contiennent souvent beaucoup de caféine, et les chats y sont plus sensibles que les humains. Ne laissez jamais votre chat boire dans une canette ou un verre, et appelez votre vétérinaire s’il en avale.",
     "es": "No. Las bebidas energéticas suelen contener mucha cafeína, y los gatos son más sensibles a la cafeína que las personas. No dejes nunca que tu gato beba de una lata o un vaso, y llama a tu veterinario si se traga algo.",
-    "it": "No. Le bevande energetiche contengono spesso molta caffeina, e i gatti sono più sensibili alla caffeina rispetto alle persone. Non lasciare mai che il tuo gatto beva da una lattina o da un bicchiere, e chiama il veterinario se ne ingerisce."
+    "it": "No. Le bevande energetiche contengono spesso molta caffeina, e i gatti sono più sensibili alla caffeina rispetto alle persone. Non lasciare mai che il tuo gatto beva da una lattina o da un bicchiere, e chiama il veterinario se ne ingerisce.",
+    "pt": "Não. As bebidas energéticas têm muitas vezes muita cafeína, e os gatos são mais sensíveis à cafeína do que as pessoas. Nunca deixes o teu gato beber de uma lata ou de um copo e liga ao teu veterinário se ele engolir alguma."
   },
   "why": {
     "en": "Energy and sports drinks often contain a lot of caffeine. Cats are more sensitive to caffeine than people. Like chocolate, coffee and other caffeine-containing foods have high levels of stimulants called methylxanthines; caffeine speeds up the heart, makes cats restless and upsets the stomach.",
@@ -40,7 +44,8 @@
     "de": "Energy- und Sportgetränke enthalten oft viel Koffein. Katzen reagieren empfindlicher auf Koffein als Menschen. Wie Schokolade enthalten Kaffee und andere koffeinhaltige Lebensmittel große Mengen anregender Stoffe, sogenannter Methylxanthine; Koffein beschleunigt den Herzschlag, macht Katzen unruhig und schlägt auf den Magen.",
     "fr": "Les boissons énergisantes et les boissons pour sportifs contiennent souvent beaucoup de caféine. Les chats sont plus sensibles à la caféine que les humains. Comme le chocolat, le café et les autres aliments contenant de la caféine renferment beaucoup de stimulants appelés méthylxanthines ; la caféine accélère le cœur, rend les chats agités et dérange l’estomac.",
     "es": "Las bebidas energéticas y deportivas suelen contener mucha cafeína. Los gatos son más sensibles a la cafeína que las personas. Al igual que el chocolate, el café y otros alimentos con cafeína tienen niveles altos de unos estimulantes llamados metilxantinas; la cafeína acelera el corazón, pone inquietos a los gatos y les sienta mal al estómago.",
-    "it": "Le bevande energetiche e quelle per sportivi contengono spesso molta caffeina. I gatti sono più sensibili alla caffeina rispetto alle persone. Come il cioccolato, anche il caffè e gli altri alimenti che contengono caffeina hanno alte concentrazioni di sostanze stimolanti chiamate metilxantine: la caffeina accelera il battito cardiaco, rende i gatti irrequieti e disturba lo stomaco."
+    "it": "Le bevande energetiche e quelle per sportivi contengono spesso molta caffeina. I gatti sono più sensibili alla caffeina rispetto alle persone. Come il cioccolato, anche il caffè e gli altri alimenti che contengono caffeina hanno alte concentrazioni di sostanze stimolanti chiamate metilxantine: la caffeina accelera il battito cardiaco, rende i gatti irrequieti e disturba lo stomaco.",
+    "pt": "As bebidas energéticas e desportivas contêm muitas vezes muita cafeína. Os gatos são mais sensíveis à cafeína do que as pessoas. Tal como o chocolate, o café e outros alimentos com cafeína têm níveis elevados de estimulantes chamados metilxantinas; a cafeína acelera o coração, deixa os gatos agitados e faz mal ao estômago."
   },
   "signs": {
     "en": [
@@ -78,6 +83,12 @@
       "Iperattività",
       "Disturbi di stomaco",
       "Battito cardiaco accelerato o alterazioni del ritmo cardiaco"
+    ],
+    "pt": [
+      "Agitação, nervosismo, não querer ficar quieto",
+      "Hiperatividade",
+      "Mal-estar de estômago",
+      "Batimento cardíaco acelerado ou alterações do ritmo cardíaco"
     ]
   },
   "what_to_do": {
@@ -86,7 +97,8 @@
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was Ihre Katze getrunken hat, wie viel und wann. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce que votre chat a bu, en quelle quantité et à quelle heure. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
     "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué ha bebido tu gato, cuánto y cuándo. No esperes a que aparezcan signos y no intentes provocarle el vómito en casa.",
-    "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha bevuto il tuo gatto, quanto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa."
+    "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha bevuto il tuo gatto, quanto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
+    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Toma nota do que o teu gato bebeu, da quantidade e de quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa."
   },
   "serving": null,
   "child": {
@@ -95,7 +107,8 @@
     "de": "Energydrinks sind für Erwachsene, nicht für Katzen. Deine Katze braucht nur frisches Wasser. Wenn sie etwas davon trinkt, sag einem Erwachsenen Bescheid.",
     "fr": "Les boissons énergisantes sont pour les grands, pas pour les chats. Ton chat n’a besoin que d’eau fraîche. Préviens un adulte s’il en boit.",
     "es": "Las bebidas energéticas son para mayores, no para gatos. Tu gatito solo necesita agua fresca. Avisa a un adulto si bebe un poco.",
-    "it": "Le bevande energetiche sono per i grandi, non per i gatti. Al micio basta acqua fresca. Dillo a un adulto se ne beve un po’."
+    "it": "Le bevande energetiche sono per i grandi, non per i gatti. Al micio basta acqua fresca. Dillo a un adulto se ne beve un po’.",
+    "pt": "As bebidas energéticas são para adultos, não para gatos. O gatinho só precisa de água fresca. Avisa um adulto se ele beber alguma."
   },
   "faq": [],
   "sources": [
@@ -193,6 +206,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "521ce9703cc333e4052a226c51338eac7ddb2ea3cb2bda5d0bba78e872a16cb0"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "af5ac1cb138a7fd5fc1df2d56d6e0f0aea98d111d4d739c02d662eb94461375c"
     }
   }
 }

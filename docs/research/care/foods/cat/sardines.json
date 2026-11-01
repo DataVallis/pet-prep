@@ -7,7 +7,8 @@
     "de": "Sardinen",
     "fr": "Sardines",
     "es": "Sardinas",
-    "it": "Sardine"
+    "it": "Sardine",
+    "pt": "Sardinhas"
   },
   "question": {
     "en": "Can cats eat sardines?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Katzen Sardinen fressen?",
     "fr": "Les chats peuvent-ils manger des sardines ?",
     "es": "¿Pueden los gatos comer sardinas?",
-    "it": "I gatti possono mangiare le sardine?"
+    "it": "I gatti possono mangiare le sardine?",
+    "pt": "Os gatos podem comer sardinhas?"
   },
   "url_slug": {
     "en": "sardines",
@@ -23,7 +25,8 @@
     "de": "sardinen",
     "fr": "sardines",
     "es": "sardinas",
-    "it": "sardine"
+    "it": "sardine",
+    "pt": "sardinhas"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Ja, als gelegentliches Leckerli. Sardinen aus der Dose in Quellwasser können Sie ab und zu anbieten; achten Sie dabei auf Gräten. Sie sollten nicht zum Hauptbestandteil der Ernährung einer Katze werden.",
     "fr": "Oui, comme friandise occasionnelle. Les sardines en conserve au naturel (à l’eau) peuvent être proposées de temps en temps, en faisant attention aux arêtes. Elles ne doivent pas devenir l’essentiel de l’alimentation du chat.",
     "es": "Sí, como premio ocasional. Las sardinas en lata al natural (en agua) se pueden ofrecer de vez en cuando, con cuidado con las espinas. No deben convertirse en la base de la alimentación del gato.",
-    "it": "Sì, come premio occasionale. Le sardine in scatola al naturale (in acqua) possono essere offerte ogni tanto, facendo attenzione alle lische. Non devono diventare la parte principale della dieta del gatto."
+    "it": "Sì, come premio occasionale. Le sardine in scatola al naturale (in acqua) possono essere offerte ogni tanto, facendo attenzione alle lische. Non devono diventare la parte principale della dieta del gatto.",
+    "pt": "Sim, como guloseima ocasional. As sardinhas em lata ao natural (em água) podem ser oferecidas de vez em quando, com atenção às espinhas. Não devem passar a ser a parte principal da alimentação do gato."
   },
   "why": {
     "en": "RSPCA Australia says fish such as tinned sardines in spring water can be offered as an occasional treat, taking care with bones, but are not suitable as the main part of the diet. Cats Protection advises fish be properly cooked, with bones removed, and given only a few pieces at a time.",
@@ -40,7 +44,8 @@
     "de": "Laut RSPCA Australia kann Fisch wie Dosensardinen in Quellwasser gelegentlich als Leckerli angeboten werden, wobei auf Gräten zu achten ist; als Hauptbestandteil der Ernährung eignet er sich nicht. Cats Protection rät, Fisch richtig durchzugaren, die Gräten zu entfernen und nur wenige Stücke auf einmal zu geben.",
     "fr": "Selon la RSPCA Australia, le poisson, comme les sardines en conserve au naturel (à l’eau), peut être proposé comme friandise occasionnelle, en faisant attention aux arêtes, mais ne convient pas comme base de l’alimentation. Cats Protection conseille de bien cuire le poisson, de retirer les arêtes et de n’en donner que quelques morceaux à la fois.",
     "es": "RSPCA Australia dice que el pescado, como las sardinas en lata al natural (en agua), se puede ofrecer como premio ocasional, con cuidado con las espinas, pero no es adecuado como base de la alimentación. Cats Protection aconseja que el pescado esté bien cocinado y sin espinas, y que se den solo unos pocos trozos cada vez.",
-    "it": "RSPCA Australia afferma che il pesce, come le sardine in scatola al naturale (in acqua), può essere offerto come premio occasionale, facendo attenzione alle lische, ma non è adatto come parte principale della dieta. Cats Protection consiglia di dare il pesce ben cotto, senza lische, e solo pochi pezzi alla volta."
+    "it": "RSPCA Australia afferma che il pesce, come le sardine in scatola al naturale (in acqua), può essere offerto come premio occasionale, facendo attenzione alle lische, ma non è adatto come parte principale della dieta. Cats Protection consiglia di dare il pesce ben cotto, senza lische, e solo pochi pezzi alla volta.",
+    "pt": "A RSPCA Australia diz que peixe como as sardinhas em lata ao natural (em água) pode ser oferecido como guloseima ocasional, com cuidado com as espinhas, mas não é adequado como parte principal da alimentação. A Cats Protection aconselha que o peixe seja bem cozinhado, sem espinhas, e dado apenas em alguns pedaços de cada vez."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "de": "Bieten Sie zuerst ein kleines Stück an. Bekommt Ihre Katze danach Erbrechen oder Durchfall, hören Sie auf und fragen Sie Ihren Tierarzt.",
     "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou a la diarrhée ensuite, arrêtez et demandez conseil à votre vétérinaire.",
     "es": "Ofrécele primero un trocito. Si después tu gato tiene vómitos o diarrea, deja de dárselo y consulta a tu veterinario.",
-    "it": "Offrigli prima un pezzetto. Se poi il tuo gatto vomita o ha la diarrea, smetti e chiedi al veterinario."
+    "it": "Offrigli prima un pezzetto. Se poi il tuo gatto vomita o ha la diarrea, smetti e chiedi al veterinario.",
+    "pt": "Começa por oferecer um pedacinho. Se o teu gato tiver vómitos ou diarreia depois, para e pergunta ao teu veterinário."
   },
   "serving": {
     "en": "Tinned in spring water, with bones removed; a few pieces now and then.",
@@ -57,7 +63,8 @@
     "de": "Aus der Dose in Quellwasser, ohne Gräten; ab und zu ein paar Stücke.",
     "fr": "En conserve au naturel (à l’eau), sans arêtes ; quelques morceaux de temps en temps.",
     "es": "En lata al natural (en agua) y sin espinas; unos trocitos de vez en cuando.",
-    "it": "In scatola al naturale (in acqua), senza lische; qualche pezzo ogni tanto."
+    "it": "In scatola al naturale (in acqua), senza lische; qualche pezzo ogni tanto.",
+    "pt": "Em lata ao natural (em água), sem espinhas; alguns pedaços de vez em quando."
   },
   "child": {
     "en": "Sardines can be a little fishy treat for cats sometimes. A grown-up should check for bones.",
@@ -65,7 +72,8 @@
     "de": "Sardinen können ab und zu ein kleines Fisch-Leckerli für Katzen sein. Ein Erwachsener sollte nach Gräten schauen.",
     "fr": "Les sardines peuvent parfois être une petite friandise au goût de poisson pour les chats. Un adulte doit vérifier qu’il n’y a pas d’arêtes.",
     "es": "Las sardinas pueden ser, alguna vez, un pequeño premio con sabor a pescado para los gatos. Un adulto debe revisar que no tengan espinas.",
-    "it": "Ogni tanto le sardine possono essere un piccolo premio al gusto di pesce per i gatti. Un adulto deve controllare che non ci siano lische."
+    "it": "Ogni tanto le sardine possono essere un piccolo premio al gusto di pesce per i gatti. Un adulto deve controllare che non ci siano lische.",
+    "pt": "As sardinhas podem ser, de vez em quando, uma pequena guloseima de peixe para os gatos. Um adulto deve ver se há espinhas."
   },
   "faq": [],
   "sources": [
@@ -123,6 +131,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "be966ab73006c4a8dc5ad404900057cb2982e191df340b8867a6c7cfd0a98bb9"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4fde39651b69cc8cb84141e2f96ce6319c3bfa11e4fb79053b7ce833e522551f"
     }
   }
 }

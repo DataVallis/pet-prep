@@ -7,7 +7,8 @@
     "de": "Erdnussbutter",
     "fr": "Beurre de cacahuète",
     "es": "Crema de cacahuete",
-    "it": "Burro di arachidi"
+    "it": "Burro di arachidi",
+    "pt": "Manteiga de amendoim"
   },
   "question": {
     "en": "Can dogs eat peanut butter?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Hunde Erdnussbutter fressen?",
     "fr": "Les chiens peuvent-ils manger du beurre de cacahuète ?",
     "es": "¿Pueden los perros comer crema de cacahuete?",
-    "it": "I cani possono mangiare il burro di arachidi?"
+    "it": "I cani possono mangiare il burro di arachidi?",
+    "pt": "Os cães podem comer manteiga de amendoim?"
   },
   "url_slug": {
     "en": "peanut-butter",
@@ -23,7 +25,8 @@
     "de": "erdnussbutter",
     "fr": "beurre-de-cacahuete",
     "es": "crema-de-cacahuete",
-    "it": "burro-di-arachidi"
+    "it": "burro-di-arachidi",
+    "pt": "manteiga-de-amendoim"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Ja, in kleinen Mengen, wenn sie kein Xylit enthält. Die meiste Erdnussbutter ist für Hunde unbedenklich, aber manche Marken verwenden Xylit, einen Süßstoff, der für Hunde giftig ist – prüfen Sie also immer das Etikett. Ungesalzene Erdnussbutter ist am besten.",
     "fr": "Oui, en petite quantité, s’il ne contient pas de xylitol. La plupart des beurres de cacahuète sont sans danger pour les chiens, mais certaines marques utilisent du xylitol, un édulcorant toxique pour les chiens : vérifiez toujours l’étiquette. Le beurre de cacahuète sans sel est le meilleur choix.",
     "es": "Sí, en pequeñas cantidades, si no contiene xilitol. La mayoría de las cremas de cacahuete son seguras para los perros, pero algunas marcas usan xilitol, un edulcorante tóxico para los perros, así que revisa siempre la etiqueta. Lo mejor es la crema de cacahuete sin sal.",
-    "it": "Sì, in piccole quantità, se non contiene xilitolo. Quasi tutto il burro di arachidi è sicuro per i cani, ma alcune marche usano lo xilitolo, un dolcificante tossico per i cani: controlla sempre l’etichetta. La scelta migliore è il burro di arachidi senza sale."
+    "it": "Sì, in piccole quantità, se non contiene xilitolo. Quasi tutto il burro di arachidi è sicuro per i cani, ma alcune marche usano lo xilitolo, un dolcificante tossico per i cani: controlla sempre l’etichetta. La scelta migliore è il burro di arachidi senza sale.",
+    "pt": "Sim, em pequenas quantidades, se não tiver xilitol. A maior parte da manteiga de amendoim é segura para os cães, mas algumas marcas usam xilitol, um adoçante tóxico para os cães, por isso lê sempre o rótulo. A manteiga de amendoim sem sal é a melhor."
   },
   "why": {
     "en": "Peanut butter is rich in fat and can be high in salt, so it suits only as an occasional treat, and it is not ideal for dogs on a diet. The real danger is xylitol: some peanut and nut butters contain it, and in dogs it can cause a sharp drop in blood sugar.",
@@ -40,7 +44,8 @@
     "de": "Erdnussbutter ist fettreich und kann viel Salz enthalten, daher eignet sie sich nur als gelegentliches Leckerli und ist für Hunde auf Diät nicht ideal. Die eigentliche Gefahr ist Xylit: Manche Erdnuss- und Nussbuttersorten enthalten es, und bei Hunden kann es einen starken Abfall des Blutzuckers verursachen.",
     "fr": "Le beurre de cacahuète est riche en graisses et peut être très salé : il ne convient donc qu’en friandise occasionnelle, et il n’est pas idéal pour les chiens au régime. Le vrai danger, c’est le xylitol : certains beurres de cacahuète et d’oléagineux en contiennent, et chez le chien il peut provoquer une forte chute du taux de sucre dans le sang.",
     "es": "La crema de cacahuete es rica en grasa y puede llevar mucha sal, así que solo sirve como premio ocasional y no es lo ideal para perros a dieta. El verdadero peligro es el xilitol: algunas cremas de cacahuete y de otros frutos secos lo contienen, y en los perros puede provocar una bajada brusca del azúcar en sangre.",
-    "it": "Il burro di arachidi è ricco di grassi e può contenere molto sale, quindi va bene solo come premio occasionale e non è ideale per i cani a dieta. Il vero pericolo è lo xilitolo: alcuni burri di arachidi e di frutta a guscio lo contengono, e nei cani può causare un brusco calo degli zuccheri nel sangue."
+    "it": "Il burro di arachidi è ricco di grassi e può contenere molto sale, quindi va bene solo come premio occasionale e non è ideale per i cani a dieta. Il vero pericolo è lo xilitolo: alcuni burri di arachidi e di frutta a guscio lo contengono, e nei cani può causare un brusco calo degli zuccheri nel sangue.",
+    "pt": "A manteiga de amendoim é rica em gordura e pode ter muito sal, por isso só serve como guloseima ocasional e não é ideal para cães em dieta. O verdadeiro perigo é o xilitol: algumas manteigas de amendoim e de outros frutos secos contêm-no e, nos cães, pode causar uma descida brusca do açúcar no sangue."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "de": "Enthielt die Erdnussbutter Xylit, wenden Sie sich sofort an Ihren Tierarzt, eine Notfallklinik oder einen Giftnotruf für Tiere, notieren Sie, wie viel gefressen wurde, und warten Sie nicht auf Anzeichen.",
     "fr": "Si le beurre de cacahuète contenait du xylitol, contactez immédiatement votre vétérinaire, une clinique d’urgence ou un centre antipoison vétérinaire, notez la quantité mangée et n’attendez pas l’apparition des signes.",
     "es": "Si la crema de cacahuete contenía xilitol, contacta enseguida con tu veterinario, una clínica de urgencias o una línea de información toxicológica para animales, apunta cuánto se comió y no esperes a que aparezcan síntomas.",
-    "it": "Se il burro di arachidi conteneva xilitolo, contatta subito il veterinario, una clinica d’emergenza o un centro antiveleni veterinario, annota quanto ne ha mangiato il tuo cane e non aspettare che compaiano i sintomi."
+    "it": "Se il burro di arachidi conteneva xilitolo, contatta subito il veterinario, una clinica d’emergenza o un centro antiveleni veterinario, annota quanto ne ha mangiato il tuo cane e non aspettare che compaiano i sintomi.",
+    "pt": "Se a manteiga de amendoim tinha xilitol, contacta imediatamente o teu veterinário, uma clínica veterinária de urgência ou uma linha de apoio toxicológico para animais, anota quanto comeu e não esperes pelos sinais."
   },
   "serving": {
     "en": "A small amount of unsalted peanut butter whose label lists no xylitol; as a treat, not a daily food.",
@@ -57,7 +63,8 @@
     "de": "Eine kleine Menge ungesalzene Erdnussbutter, auf deren Etikett kein Xylit steht; als Leckerli, nicht als tägliches Futter.",
     "fr": "Un peu de beurre de cacahuète sans sel dont l’étiquette ne mentionne pas de xylitol ; en friandise, pas comme aliment quotidien.",
     "es": "Un poco de crema de cacahuete sin sal cuya etiqueta no incluya xilitol; como premio, no como comida diaria.",
-    "it": "Una piccola quantità di burro di arachidi senza sale, che in etichetta non riporti xilitolo; come premio, non come cibo quotidiano."
+    "it": "Una piccola quantità di burro di arachidi senza sale, che in etichetta non riporti xilitolo; come premio, non come cibo quotidiano.",
+    "pt": "Uma pequena quantidade de manteiga de amendoim sem sal cujo rótulo não indique xilitol; como guloseima, não como alimento diário."
   },
   "child": {
     "en": "Many dogs love a little peanut butter! A grown-up must check the jar first, because some kinds are not safe for dogs.",
@@ -65,7 +72,8 @@
     "de": "Viele Hunde lieben ein bisschen Erdnussbutter! Ein Erwachsener muss zuerst das Glas prüfen, denn manche Sorten sind für Hunde nicht sicher.",
     "fr": "Beaucoup de chiens adorent un peu de beurre de cacahuète ! Un adulte doit d’abord vérifier le pot, car certaines sortes sont dangereuses pour les chiens.",
     "es": "¡A muchos perros les encanta un poquito de crema de cacahuete! Antes, un adulto tiene que revisar el bote, porque algunas no son seguras para los perros.",
-    "it": "Molti cani adorano un po’ di burro di arachidi! Ma prima un adulto deve controllare il barattolo, perché alcuni tipi non sono sicuri per i cani."
+    "it": "Molti cani adorano un po’ di burro di arachidi! Ma prima un adulto deve controllare il barattolo, perché alcuni tipi non sono sicuri per i cani.",
+    "pt": "Muitos cães adoram um pouco de manteiga de amendoim! Um adulto tem de ver o frasco primeiro, porque alguns tipos não são seguros para cães."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "de": "Woran erkenne ich, ob Erdnussbutter Xylit enthält?",
         "fr": "Comment savoir si un beurre de cacahuète contient du xylitol ?",
         "es": "¿Cómo sé si una crema de cacahuete lleva xilitol?",
-        "it": "Come faccio a sapere se il burro di arachidi contiene xilitolo?"
+        "it": "Come faccio a sapere se il burro di arachidi contiene xilitolo?",
+        "pt": "Como sei se a manteiga de amendoim tem xilitol?"
       },
       "a": {
         "en": "Read the ingredients on the label, especially on products marked sugar-free or low sugar.",
@@ -83,7 +92,8 @@
         "de": "Lesen Sie die Zutatenliste auf dem Etikett, besonders bei Produkten, die als zuckerfrei oder zuckerreduziert beworben werden.",
         "fr": "Lisez la liste des ingrédients sur l’étiquette, surtout sur les produits « sans sucre » ou « allégés en sucre ».",
         "es": "Lee los ingredientes de la etiqueta, sobre todo en productos que se anuncian como «sin azúcar» o «bajos en azúcar».",
-        "it": "Leggi gli ingredienti in etichetta, soprattutto sui prodotti indicati come senza zucchero o a basso contenuto di zuccheri."
+        "it": "Leggi gli ingredienti in etichetta, soprattutto sui prodotti indicati come senza zucchero o a basso contenuto di zuccheri.",
+        "pt": "Lê os ingredientes no rótulo, sobretudo nos produtos «sem açúcar» ou «com baixo teor de açúcar»."
       }
     },
     {
@@ -93,7 +103,8 @@
         "de": "Darf ich meinem Hund eine Tablette in Erdnussbutter geben?",
         "fr": "Puis-je utiliser du beurre de cacahuète pour donner un comprimé à mon chien ?",
         "es": "¿Puedo usar crema de cacahuete para darle una pastilla a mi perro?",
-        "it": "Posso usare il burro di arachidi per dare una pastiglia al mio cane?"
+        "it": "Posso usare il burro di arachidi per dare una pastiglia al mio cane?",
+        "pt": "Posso usar manteiga de amendoim para dar um comprimido ao meu cão?"
       },
       "a": {
         "en": "Many people do; the FDA advises checking the label first to make sure it doesn't contain xylitol.",
@@ -101,7 +112,8 @@
         "de": "Viele Menschen machen das; die FDA rät, vorher das Etikett zu prüfen, um sicherzugehen, dass sie kein Xylit enthält.",
         "fr": "Beaucoup de gens le font ; la FDA conseille de vérifier d’abord l’étiquette pour s’assurer qu’il ne contient pas de xylitol.",
         "es": "Mucha gente lo hace; la FDA aconseja revisar antes la etiqueta para asegurarse de que no contiene xilitol.",
-        "it": "Lo fanno in molti; la FDA consiglia di controllare prima l’etichetta per assicurarti che non contenga xilitolo."
+        "it": "Lo fanno in molti; la FDA consiglia di controllare prima l’etichetta per assicurarti che non contenga xilitolo.",
+        "pt": "Muitas pessoas fazem-no; a FDA aconselha a ler primeiro o rótulo para confirmar que não tem xilitol."
       }
     }
   ],
@@ -215,6 +227,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "41cbeb0e90bf2e322b654c89771e6924dbe080e36b6c213ff22de70af621ddf6"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8501eda95fe22aaf16f008fc71a91bdbfe2a1f02521c05378e20bf855f48ff5e"
     }
   }
 }

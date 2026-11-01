@@ -7,7 +7,8 @@
     "de": "Macadamianüsse",
     "fr": "Noix de macadamia",
     "es": "Nueces de macadamia",
-    "it": "Noci di macadamia"
+    "it": "Noci di macadamia",
+    "pt": "Nozes de macadâmia"
   },
   "question": {
     "en": "Can dogs eat macadamia nuts?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Hunde Macadamianüsse fressen?",
     "fr": "Les chiens peuvent-ils manger des noix de macadamia ?",
     "es": "¿Pueden los perros comer nueces de macadamia?",
-    "it": "I cani possono mangiare le noci di macadamia?"
+    "it": "I cani possono mangiare le noci di macadamia?",
+    "pt": "Os cães podem comer nozes de macadâmia?"
   },
   "url_slug": {
     "en": "macadamia-nuts",
@@ -23,7 +25,8 @@
     "de": "macadamianuesse",
     "fr": "noix-de-macadamia",
     "es": "nueces-de-macadamia",
-    "it": "noci-di-macadamia"
+    "it": "noci-di-macadamia",
+    "pt": "nozes-de-macadamia"
   },
   "level": "toxic",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nein. Macadamianüsse sind für Hunde giftig, und Hunde sind die einzige Tierart, von der bekannt ist, dass sie davon krank wird. Schon eine kleine Menge kann Schwäche, Erbrechen, Zittern und erhöhte Körpertemperatur verursachen. Ihr hoher Fettgehalt kann außerdem eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen.",
     "fr": "Non. Les noix de macadamia sont toxiques pour les chiens, la seule espèce connue pour en tomber malade. Même une petite quantité peut provoquer faiblesse, vomissements, tremblements et une température corporelle élevée. Leur forte teneur en graisses peut aussi déclencher une pancréatite.",
     "es": "No. Las nueces de macadamia son tóxicas para los perros, y los perros son la única especie de la que se sabe que enferma con ellas. Incluso una pequeña cantidad puede causar debilidad, vómitos, temblores y una temperatura corporal alta. Su gran cantidad de grasa también puede desencadenar una pancreatitis.",
-    "it": "No. Le noci di macadamia sono tossiche per i cani, e il cane è l’unica specie nota che si ammala mangiandole. Anche una piccola quantità può causare debolezza, vomito, tremori e temperatura corporea elevata. Il loro alto contenuto di grassi può anche scatenare una pancreatite."
+    "it": "No. Le noci di macadamia sono tossiche per i cani, e il cane è l’unica specie nota che si ammala mangiandole. Anche una piccola quantità può causare debolezza, vomito, tremori e temperatura corporea elevata. Il loro alto contenuto di grassi può anche scatenare una pancreatite.",
+    "pt": "Não. As nozes de macadâmia são tóxicas para os cães, e os cães são a única espécie que se sabe que adoece com elas. Até uma pequena quantidade pode causar fraqueza, vómitos, tremores e temperatura corporal alta. O seu elevado teor de gordura também pode provocar pancreatite."
   },
   "why": {
     "en": "How macadamia nuts poison dogs is unknown, but they affect nerve and muscle function. Because they are very oily, some dogs also develop pancreatitis. Signs generally settle within 12–48 hours, but a vet should always be contacted.",
@@ -40,7 +44,8 @@
     "de": "Wie Macadamianüsse Hunde vergiften, ist nicht bekannt, sie beeinträchtigen aber die Nerven- und Muskelfunktion. Weil sie sehr ölhaltig sind, entwickeln manche Hunde außerdem eine Pankreatitis. Die Anzeichen klingen meist innerhalb von 12–48 Stunden ab, ein Tierarzt sollte aber immer verständigt werden.",
     "fr": "On ne sait pas comment les noix de macadamia intoxiquent les chiens, mais elles perturbent le fonctionnement des nerfs et des muscles. Comme elles sont très grasses, certains chiens développent aussi une pancréatite. Les signes disparaissent généralement en 12 à 48 heures, mais il faut toujours contacter un vétérinaire.",
     "es": "No se sabe cómo intoxican las nueces de macadamia a los perros, pero afectan al funcionamiento de los nervios y los músculos. Como son muy oleosas, algunos perros también desarrollan pancreatitis. Los síntomas suelen desaparecer en un plazo de 12 a 48 horas, pero siempre hay que contactar con un veterinario.",
-    "it": "Non si sa come le noci di macadamia avvelenino i cani, ma agiscono sulla funzione dei nervi e dei muscoli. Poiché sono molto oleose, alcuni cani sviluppano anche una pancreatite. In genere i sintomi si risolvono entro 12–48 ore, ma bisogna sempre contattare il veterinario."
+    "it": "Non si sa come le noci di macadamia avvelenino i cani, ma agiscono sulla funzione dei nervi e dei muscoli. Poiché sono molto oleose, alcuni cani sviluppano anche una pancreatite. In genere i sintomi si risolvono entro 12–48 ore, ma bisogna sempre contattare il veterinario.",
+    "pt": "Não se sabe como as nozes de macadâmia intoxicam os cães, mas afetam o funcionamento dos nervos e dos músculos. Como são muito oleosas, alguns cães também desenvolvem pancreatite. Os sinais costumam passar em 12–48 horas, mas deves contactar sempre um veterinário."
   },
   "signs": {
     "en": [
@@ -90,6 +95,14 @@
       "Tremori",
       "Temperatura corporea elevata",
       "Andatura traballante"
+    ],
+    "pt": [
+      "Fraqueza muscular",
+      "Pouca energia, abatimento",
+      "Vómitos",
+      "Tremores",
+      "Temperatura corporal alta",
+      "Andar cambaleante"
     ]
   },
   "what_to_do": {
@@ -98,7 +111,8 @@
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, wie viele Nüsse gefressen wurden und ob sie mit Schokolade überzogen oder mit anderen Lebensmitteln vermischt waren. Warten Sie nicht auf Anzeichen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez combien de noix de macadamia ont été mangées et si elles étaient enrobées de chocolat ou mélangées à d’autres aliments. N’attendez pas l’apparition des signes.",
     "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta cuántas nueces ha comido y si estaban recubiertas de chocolate o mezcladas con otros alimentos. No esperes a que aparezcan síntomas.",
-    "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota quante noci ha mangiato il tuo cane e se erano ricoperte di cioccolato o mescolate ad altri alimenti. Non aspettare che compaiano i sintomi."
+    "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota quante noci ha mangiato il tuo cane e se erano ricoperte di cioccolato o mescolate ad altri alimenti. Non aspettare che compaiano i sintomi.",
+    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota quantas nozes comeu e se estavam cobertas de chocolate ou misturadas com outros alimentos. Não esperes pelos sinais."
   },
   "serving": null,
   "child": {
@@ -107,7 +121,8 @@
     "de": "Macadamianüsse sind runde Nüsse, die Hunde schwach und wackelig machen können. Halte sie von deinem Hund fern und sag einem Erwachsenen Bescheid, wenn dein Hund welche frisst.",
     "fr": "Les noix de macadamia sont toutes rondes et peuvent rendre les chiens faibles et chancelants. Range-les et préviens un adulte si ton chien en mange.",
     "es": "Las macadamias son frutos secos redondos que pueden dejar a los perros débiles y tambaleantes. Guárdalas lejos y avisa a un adulto si tu perro se come alguna.",
-    "it": "Le macadamia sono piccoli frutti tondi che possono rendere i cani deboli e traballanti. Tienile lontane e avvisa un adulto se il tuo cane ne mangia."
+    "it": "Le macadamia sono piccoli frutti tondi che possono rendere i cani deboli e traballanti. Tienile lontane e avvisa un adulto se il tuo cane ne mangia.",
+    "pt": "As nozes de macadâmia são redondinhas e podem deixar os cães fracos e a cambalear. Mantém-nas longe e avisa um adulto se o teu cão comer alguma."
   },
   "faq": [
     {
@@ -117,7 +132,8 @@
         "de": "Sind andere Nüsse auch giftig?",
         "fr": "Les autres fruits à coque sont-ils toxiques aussi ?",
         "es": "¿Otros frutos secos también son tóxicos?",
-        "it": "Anche altra frutta a guscio è tossica?"
+        "it": "Anche altra frutta a guscio è tossica?",
+        "pt": "Os outros frutos secos também são tóxicos?"
       },
       "a": {
         "en": "Macadamias are the toxic ones. Other nuts such as almonds, pecans and walnuts are very fatty and can cause vomiting, diarrhoea and possibly pancreatitis, so they are not a good treat either.",
@@ -125,7 +141,8 @@
         "de": "Giftig sind die Macadamianüsse. Andere Nüsse wie Mandeln, Pekannüsse und Walnüsse sind sehr fettreich und können Erbrechen, Durchfall und möglicherweise eine Pankreatitis verursachen – ein gutes Leckerli sind sie also auch nicht.",
         "fr": "Ce sont les noix de macadamia qui sont toxiques. Les autres fruits à coque comme les amandes, les noix de pécan et les noix sont très gras et peuvent provoquer vomissements, diarrhée et parfois une pancréatite : ce ne sont pas non plus de bonnes friandises.",
         "es": "Las tóxicas son las nueces de macadamia. Otros frutos secos, como las almendras, las pacanas y las nueces, son muy grasos y pueden causar vómitos, diarrea y posiblemente pancreatitis, así que tampoco son un buen premio.",
-        "it": "Quelle tossiche sono le macadamia. Altra frutta a guscio, come mandorle, noci pecan e noci, è molto grassa e può causare vomito, diarrea e forse una pancreatite, quindi non è comunque un buon premio."
+        "it": "Quelle tossiche sono le macadamia. Altra frutta a guscio, come mandorle, noci pecan e noci, è molto grassa e può causare vomito, diarrea e forse una pancreatite, quindi non è comunque un buon premio.",
+        "pt": "As macadâmias são as tóxicas. Outros frutos secos, como amêndoas, nozes-pecã e nozes, são muito gordos e podem causar vómitos, diarreia e possivelmente pancreatite, por isso também não são uma boa guloseima."
       }
     },
     {
@@ -135,7 +152,8 @@
         "de": "Wie lange halten die Anzeichen an?",
         "fr": "Combien de temps durent les signes ?",
         "es": "¿Cuánto duran los síntomas?",
-        "it": "Quanto durano i sintomi?"
+        "it": "Quanto durano i sintomi?",
+        "pt": "Quanto tempo duram os sinais?"
       },
       "a": {
         "en": "Signs generally resolve within 12–48 hours, but your vet should still be told straight away.",
@@ -143,7 +161,8 @@
         "de": "Die Anzeichen klingen meist innerhalb von 12–48 Stunden ab, trotzdem sollten Sie Ihren Tierarzt sofort informieren.",
         "fr": "Les signes disparaissent généralement en 12 à 48 heures, mais prévenez quand même immédiatement votre vétérinaire.",
         "es": "Los síntomas suelen desaparecer en un plazo de 12 a 48 horas, pero aun así hay que avisar enseguida a tu veterinario.",
-        "it": "In genere i sintomi si risolvono entro 12–48 ore, ma devi comunque avvisare subito il veterinario."
+        "it": "In genere i sintomi si risolvono entro 12–48 ore, ma devi comunque avvisare subito il veterinario.",
+        "pt": "Os sinais costumam passar em 12–48 horas, mas deves avisar imediatamente o teu veterinário na mesma."
       }
     }
   ],
@@ -238,6 +257,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b5e8352116eea41c02004716d8d2a383ec6ddf187e566fc8c025ca22e58e1c30"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8650e6ee6be6a6f97e08950245911b8088f1f08425bd820d653a909e1ba41159"
     }
   }
 }

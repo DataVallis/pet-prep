@@ -7,7 +7,8 @@
     "de": "Aprikosen",
     "fr": "Abricots",
     "es": "Albaricoques",
-    "it": "Albicocche"
+    "it": "Albicocche",
+    "pt": "Alperces"
   },
   "question": {
     "en": "Can cats eat apricots?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Katzen Aprikosen fressen?",
     "fr": "Les chats peuvent-ils manger des abricots ?",
     "es": "¿Pueden los gatos comer albaricoques?",
-    "it": "I gatti possono mangiare le albicocche?"
+    "it": "I gatti possono mangiare le albicocche?",
+    "pt": "Os gatos podem comer alperces?"
   },
   "url_slug": {
     "en": "apricots",
@@ -23,7 +25,8 @@
     "de": "aprikosen",
     "fr": "abricots",
     "es": "albaricoques",
-    "it": "albicocche"
+    "it": "albicocche",
+    "pt": "alperces"
   },
   "level": "dangerous",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nein, besser nicht. Die ASPCA stuft die Aprikosenpflanze als giftig für Katzen ein: Stiele, Blätter und Samen (der Kern) enthalten Cyanid. Bieten Sie Ihrer Katze keine Aprikosen an, bewahren Sie Kerne und Pflanzenteile außer Reichweite auf und rufen Sie Ihren Tierarzt an, wenn Ihre Katze darauf kaut.",
     "fr": "Non, mieux vaut s’en abstenir. L’ASPCA classe l’abricotier parmi les plantes toxiques pour les chats : ses tiges, ses feuilles et ses graines (le noyau) contiennent du cyanure. Ne donnez pas d’abricots à votre chat, rangez noyaux et parties de la plante hors de sa portée, et appelez votre vétérinaire s’il en mâchouille.",
     "es": "No, es mejor no dárselos. La ASPCA clasifica la planta del albaricoque como tóxica para los gatos: sus tallos, hojas y semillas (el hueso) contienen cianuro. No le ofrezcas albaricoques a tu gato, mantén los huesos y las partes de la planta fuera de su alcance y llama a tu veterinario si mordisquea alguno.",
-    "it": "No, è meglio di no. L’ASPCA classifica la pianta dell’albicocco come tossica per i gatti: steli, foglie e semi (il nocciolo) contengono cianuro. Non offrire albicocche al tuo gatto, tieni noccioli e parti della pianta fuori dalla sua portata e chiama il veterinario se ne mastica anche solo un pezzo."
+    "it": "No, è meglio di no. L’ASPCA classifica la pianta dell’albicocco come tossica per i gatti: steli, foglie e semi (il nocciolo) contengono cianuro. Non offrire albicocche al tuo gatto, tieni noccioli e parti della pianta fuori dalla sua portata e chiama il veterinario se ne mastica anche solo un pezzo.",
+    "pt": "Não, é melhor não. A ASPCA classifica o alperceiro como tóxico para gatos: os caules, as folhas e as sementes (o caroço) contêm cianeto. Não ofereças alperces ao teu gato, mantém os caroços e as partes da planta fora do alcance e liga ao teu veterinário se ele mastigar alguma."
   },
   "why": {
     "en": "The stems, leaves and seeds contain cyanide (as cyanogenic glycosides) and are particularly toxic while wilting. The sources we found describe the risk from these plant parts and do not say the fruit flesh is safe for cats, so we do not recommend sharing it.",
@@ -40,7 +44,8 @@
     "de": "Stiele, Blätter und Samen enthalten Cyanid (in Form cyanogener Glykoside) und sind beim Welken besonders giftig. Die von uns gefundenen Quellen beschreiben das Risiko dieser Pflanzenteile und sagen nicht, dass das Fruchtfleisch für Katzen unbedenklich ist. Deshalb empfehlen wir nicht, es mit Ihrer Katze zu teilen.",
     "fr": "Les tiges, les feuilles et les graines contiennent du cyanure (sous forme de glycosides cyanogènes) et sont particulièrement toxiques lorsqu’elles se flétrissent. Les sources que nous avons trouvées décrivent le risque lié à ces parties de la plante et n’indiquent pas que la chair du fruit est sans danger pour les chats ; nous déconseillons donc de la partager.",
     "es": "Los tallos, las hojas y las semillas contienen cianuro (en forma de glucósidos cianogénicos) y son especialmente tóxicos cuando se están marchitando. Las fuentes que hemos encontrado describen el riesgo de estas partes de la planta y no dicen que la pulpa de la fruta sea segura para los gatos, así que no recomendamos compartirla.",
-    "it": "Steli, foglie e semi contengono cianuro (sotto forma di glicosidi cianogenetici) e sono particolarmente tossici quando appassiscono. Le fonti che abbiamo trovato descrivono il rischio legato a queste parti della pianta e non affermano che la polpa del frutto sia sicura per i gatti, quindi sconsigliamo di condividerla."
+    "it": "Steli, foglie e semi contengono cianuro (sotto forma di glicosidi cianogenetici) e sono particolarmente tossici quando appassiscono. Le fonti che abbiamo trovato descrivono il rischio legato a queste parti della pianta e non affermano che la polpa del frutto sia sicura per i gatti, quindi sconsigliamo di condividerla.",
+    "pt": "Os caules, as folhas e as sementes contêm cianeto (sob a forma de glicosídeos cianogénicos) e são particularmente tóxicos quando estão a murchar. As fontes que encontrámos descrevem o risco destas partes da planta e não dizem que a polpa do fruto seja segura para gatos, por isso não recomendamos partilhá-la."
   },
   "signs": {
     "en": [
@@ -84,6 +89,13 @@
       "Difficoltà respiratorie",
       "Respiro affannoso a bocca aperta",
       "Shock"
+    ],
+    "pt": [
+      "Gengivas vermelho-tijolo",
+      "Pupilas dilatadas",
+      "Dificuldade em respirar",
+      "Respiração ofegante",
+      "Choque"
     ]
   },
   "what_to_do": {
@@ -92,7 +104,8 @@
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, wenn Ihre Katze auf einem Kern, Stielen oder Blättern gekaut hat. Notieren Sie, was gefressen wurde, wie viel und wann. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire si votre chat a mâchouillé un noyau, une tige ou des feuilles. Notez ce qu’il a mangé, en quelle quantité et à quelle heure. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
     "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales si tu gato ha mordisqueado un hueso, un tallo o hojas. Apunta qué ha comido, cuánto y cuándo. No esperes a que aparezcan signos y no intentes provocarle el vómito en casa.",
-    "it": "Contatta subito il veterinario o un centro antiveleni veterinario se il tuo gatto ha masticato un nocciolo, uno stelo o delle foglie. Annota che cosa ha mangiato, quanto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa."
+    "it": "Contatta subito il veterinario o un centro antiveleni veterinario se il tuo gatto ha masticato un nocciolo, uno stelo o delle foglie. Annota che cosa ha mangiato, quanto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
+    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais se o teu gato mastigou um caroço, um caule ou folhas. Toma nota do que foi comido, da quantidade e de quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa."
   },
   "serving": null,
   "child": {
@@ -101,7 +114,8 @@
     "de": "Aprikosen sind ein Snack für Menschen. Kerne und Blätter sind für Katzen nicht sicher. Wenn deine Katze an einem Kern kaut, sag einem Erwachsenen Bescheid.",
     "fr": "Les abricots, c’est un en-cas pour les humains. Leurs noyaux et leurs feuilles sont dangereux pour les chats : préviens un adulte si ton chat en mâchouille un.",
     "es": "Los albaricoques son un tentempié para personas. Sus huesos y sus hojas no son seguros para los gatos, así que avisa a un adulto si tu gatito mordisquea uno.",
-    "it": "Le albicocche sono uno spuntino per le persone. Noccioli e foglie non sono sicuri per i gatti: se il micio ne mastica uno, dillo a un adulto."
+    "it": "Le albicocche sono uno spuntino per le persone. Noccioli e foglie non sono sicuri per i gatti: se il micio ne mastica uno, dillo a un adulto.",
+    "pt": "Os alperces são um petisco para pessoas. Os caroços e as folhas não são seguros para gatos, por isso avisa um adulto se o gatinho mastigar um."
   },
   "faq": [
     {
@@ -111,7 +125,8 @@
         "de": "Welcher Teil ist das Problem?",
         "fr": "Quelle partie pose problème ?",
         "es": "¿Qué parte es la peligrosa?",
-        "it": "Qual è la parte pericolosa?"
+        "it": "Qual è la parte pericolosa?",
+        "pt": "Qual é a parte problemática?"
       },
       "a": {
         "en": "The ASPCA says the stems, leaves and seeds contain cyanide, and that they are particularly toxic while wilting.",
@@ -119,7 +134,8 @@
         "de": "Laut ASPCA enthalten Stiele, Blätter und Samen Cyanid und sind beim Welken besonders giftig.",
         "fr": "Selon l’ASPCA, les tiges, les feuilles et les graines contiennent du cyanure, et elles sont particulièrement toxiques lorsqu’elles se flétrissent.",
         "es": "La ASPCA indica que los tallos, las hojas y las semillas contienen cianuro y que son especialmente tóxicos cuando se están marchitando.",
-        "it": "Secondo l’ASPCA steli, foglie e semi contengono cianuro e sono particolarmente tossici quando appassiscono."
+        "it": "Secondo l’ASPCA steli, foglie e semi contengono cianuro e sono particolarmente tossici quando appassiscono.",
+        "pt": "A ASPCA diz que os caules, as folhas e as sementes contêm cianeto e que são particularmente tóxicos quando estão a murchar."
       }
     }
   ],
@@ -194,6 +210,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c32b859a5640cb023fb3a9c9a24063fa6a094272e8c72bad4968a893b3f56a14"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "793cd4d580e94e24d080ea0279d35f617b22da28b20db28791af95bc94760313"
     }
   }
 }

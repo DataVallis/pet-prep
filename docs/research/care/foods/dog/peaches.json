@@ -7,7 +7,8 @@
     "de": "Pfirsiche",
     "fr": "Pêches",
     "es": "Melocotones",
-    "it": "Pesche"
+    "it": "Pesche",
+    "pt": "Pêssegos"
   },
   "question": {
     "en": "Can dogs eat peaches?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Hunde Pfirsiche fressen?",
     "fr": "Les chiens peuvent-ils manger des pêches ?",
     "es": "¿Pueden los perros comer melocotones?",
-    "it": "I cani possono mangiare le pesche?"
+    "it": "I cani possono mangiare le pesche?",
+    "pt": "Os cães podem comer pêssegos?"
   },
   "url_slug": {
     "en": "peaches",
@@ -23,7 +25,8 @@
     "de": "pfirsiche",
     "fr": "peches",
     "es": "melocotones",
-    "it": "pesche"
+    "it": "pesche",
+    "pt": "pessegos"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nicht empfohlen. Manche Tierärzte erlauben frisches Pfirsichfruchtfleisch in kleinen Würfeln ohne Stiel und Kern, doch der Kern ist eine echte Gefahr: Er kann zum Ersticken oder zu einem Darmverschluss führen und enthält eine Form von Cyanid.",
     "fr": "Déconseillé. Certains vétérinaires autorisent la chair de pêche fraîche en petits dés, sans la queue ni le noyau, mais le noyau est un vrai danger : il peut provoquer un étouffement ou une obstruction intestinale, et il contient une forme de cyanure.",
     "es": "No se recomienda. Algunos veterinarios permiten la pulpa fresca de melocotón en daditos, sin el rabito ni el hueso, pero el hueso es un peligro real: puede provocar atragantamiento u obstrucción intestinal y contiene una forma de cianuro.",
-    "it": "Sconsigliate. Alcuni veterinari permettono la polpa fresca di pesca a cubetti, senza picciolo e nocciolo, ma il nocciolo è un vero pericolo: può causare soffocamento o un’ostruzione intestinale e contiene una forma di cianuro."
+    "it": "Sconsigliate. Alcuni veterinari permettono la polpa fresca di pesca a cubetti, senza picciolo e nocciolo, ma il nocciolo è un vero pericolo: può causare soffocamento o un’ostruzione intestinale e contiene una forma di cianuro.",
+    "pt": "Não é recomendado. Alguns veterinários permitem a polpa de pêssego fresco em cubinhos, sem o pé e sem o caroço, mas o caroço é um perigo real: pode causar engasgamento ou uma obstrução intestinal e contém uma forma de cianeto."
   },
   "why": {
     "en": "Peach stems, leaves and seeds contain cyanogenic glycosides. If a pit is thoroughly chewed, cyanide can be released, and a swallowed pit may block the gut, especially in small dogs. Canned or dried peaches often contain extra sugar. Because the plant is listed as toxic to dogs, we rate peaches as not recommended rather than a safe treat.",
@@ -40,7 +44,8 @@
     "de": "Stiele, Blätter und Samen des Pfirsichs enthalten cyanogene Glykoside. Wird ein Kern gründlich zerkaut, kann Cyanid freigesetzt werden, und ein verschluckter Kern kann den Darm blockieren, besonders bei kleinen Hunden. Pfirsiche aus der Dose oder getrocknete Pfirsiche enthalten oft zusätzlichen Zucker. Weil die Pflanze als giftig für Hunde gilt, stufen wir Pfirsiche als nicht empfohlen ein, nicht als unbedenkliches Leckerli.",
     "fr": "Les tiges, les feuilles et les graines du pêcher contiennent des glycosides cyanogènes. Si un noyau est bien mâché, du cyanure peut être libéré, et un noyau avalé peut bloquer l’intestin, surtout chez les petits chiens. Les pêches en conserve ou séchées contiennent souvent du sucre ajouté. Comme la plante est répertoriée comme toxique pour les chiens, nous classons la pêche comme déconseillée plutôt que comme une friandise sûre.",
     "es": "El rabito, las hojas y las semillas del melocotón contienen glucósidos cianogénicos. Si el perro mastica bien un hueso, puede liberarse cianuro, y un hueso tragado puede obstruir el intestino, sobre todo en perros pequeños. El melocotón en almíbar o deshidratado suele llevar azúcar añadido. Como la planta figura como tóxica para los perros, clasificamos el melocotón como no recomendado y no como un premio seguro.",
-    "it": "Piccioli, foglie e semi del pesco contengono glicosidi cianogenici. Se il nocciolo viene masticato a fondo, può liberarsi cianuro, e un nocciolo ingoiato può ostruire l’intestino, soprattutto nei cani di piccola taglia. Le pesche in scatola o essiccate contengono spesso zucchero aggiunto. Poiché la pianta è classificata come tossica per i cani, consideriamo le pesche sconsigliate e non un premio sicuro."
+    "it": "Piccioli, foglie e semi del pesco contengono glicosidi cianogenici. Se il nocciolo viene masticato a fondo, può liberarsi cianuro, e un nocciolo ingoiato può ostruire l’intestino, soprattutto nei cani di piccola taglia. Le pesche in scatola o essiccate contengono spesso zucchero aggiunto. Poiché la pianta è classificata come tossica per i cani, consideriamo le pesche sconsigliate e non un premio sicuro.",
+    "pt": "Os caules, as folhas e as sementes do pessegueiro contêm glicosídeos cianogénicos. Se um caroço for bem mastigado, pode libertar cianeto, e um caroço engolido pode obstruir o intestino, sobretudo em cães pequenos. Os pêssegos em calda ou secos têm muitas vezes açúcar adicionado. Como a planta está classificada como tóxica para os cães, classificamos os pêssegos como não recomendados e não como uma guloseima segura."
   },
   "signs": {
     "en": [
@@ -72,6 +77,11 @@
       "Soffocamento o conati",
       "Segni di un’ostruzione: vomito ripetuto, rifiuto del cibo, stanchezza",
       "Pupille dilatate, gengive rosso mattone, difficoltà a respirare (cianuro)"
+    ],
+    "pt": [
+      "Engasgamento ou ânsias",
+      "Sinais de obstrução: vómitos repetidos, não comer, cansaço",
+      "Pupilas dilatadas, gengivas vermelho-tijolo, dificuldade em respirar (cianeto)"
     ]
   },
   "what_to_do": {
@@ -80,7 +90,8 @@
     "de": "Wenn Ihr Hund einen Pfirsichkern verschluckt oder angekaut hat, fragen Sie sofort Ihren Tierarzt um Rat. Notieren Sie, wann es passiert ist und wie viele Kerne gefressen wurden.",
     "fr": "Si votre chien a avalé ou mâché un noyau de pêche, demandez immédiatement conseil à votre vétérinaire. Notez quand c’est arrivé et combien de noyaux ont été mangés.",
     "es": "Si tu perro se ha tragado o ha mordisqueado un hueso de melocotón, pide consejo a tu veterinario enseguida. Apunta cuándo ocurrió y cuántos huesos se comió.",
-    "it": "Se il tuo cane ha ingoiato o masticato un nocciolo di pesca, contatta subito il veterinario per un consiglio. Annota quando è successo e quanti noccioli ha mangiato."
+    "it": "Se il tuo cane ha ingoiato o masticato un nocciolo di pesca, contatta subito il veterinario per un consiglio. Annota quando è successo e quanti noccioli ha mangiato.",
+    "pt": "Se o teu cão engoliu ou mastigou um caroço de pêssego, contacta imediatamente o teu veterinário para te aconselhar. Anota quando aconteceu e quantos caroços comeu."
   },
   "serving": {
     "en": "Fresh flesh only, in small cubes, with the stem and pit removed. Skip canned and dried peaches.",
@@ -88,7 +99,8 @@
     "de": "Nur frisches Fruchtfleisch in kleinen Würfeln, ohne Stiel und Kern. Verzichten Sie auf Pfirsiche aus der Dose und getrocknete Pfirsiche.",
     "fr": "Uniquement la chair fraîche, en petits dés, sans la queue ni le noyau. Pas de pêches en conserve ni séchées.",
     "es": "Solo la pulpa fresca, en daditos, sin el rabito ni el hueso. Nada de melocotón en almíbar ni deshidratado.",
-    "it": "Solo polpa fresca, a cubetti, senza picciolo e nocciolo. Evita le pesche in scatola ed essiccate."
+    "it": "Solo polpa fresca, a cubetti, senza picciolo e nocciolo. Evita le pesche in scatola ed essiccate.",
+    "pt": "Só polpa fresca, em cubinhos, sem o pé e sem o caroço. Evita pêssegos em calda e secos."
   },
   "child": {
     "en": "Peach stones are dangerous for dogs. Never give your dog a peach stone, and ask a grown-up before sharing any peach.",
@@ -96,7 +108,8 @@
     "de": "Pfirsichkerne sind gefährlich für Hunde. Gib deinem Hund nie einen Pfirsichkern und frag einen Erwachsenen, bevor du Pfirsich mit ihm teilst.",
     "fr": "Les noyaux de pêche sont dangereux pour les chiens. Ne donne jamais de noyau à ton chien, et demande à un adulte avant de partager un morceau de pêche.",
     "es": "Los huesos de melocotón son peligrosos para los perros. Nunca le des un hueso de melocotón a tu perro y pregunta a un adulto antes de compartir melocotón con él.",
-    "it": "I noccioli di pesca sono pericolosi per i cani. Non dare mai un nocciolo al tuo cane e chiedi a un adulto prima di dargli un pezzetto di pesca."
+    "it": "I noccioli di pesca sono pericolosi per i cani. Non dare mai un nocciolo al tuo cane e chiedi a un adulto prima di dargli un pezzetto di pesca.",
+    "pt": "Os caroços de pêssego são perigosos para os cães. Nunca dês um caroço ao teu cão e pergunta a um adulto antes de partilhares pêssego."
   },
   "faq": [
     {
@@ -106,7 +119,8 @@
         "de": "Sind Pfirsiche aus der Dose in Ordnung?",
         "fr": "Les pêches en conserve, c’est permis ?",
         "es": "¿Se puede dar melocotón en almíbar?",
-        "it": "Le pesche in scatola vanno bene?"
+        "it": "Le pesche in scatola vanno bene?",
+        "pt": "Os pêssegos em calda são adequados?"
       },
       "a": {
         "en": "They are not recommended, because canned or dried peaches often contain extra sugar and other ingredients.",
@@ -114,7 +128,8 @@
         "de": "Sie werden nicht empfohlen, weil Pfirsiche aus der Dose oder getrocknete Pfirsiche oft zusätzlichen Zucker und andere Zutaten enthalten.",
         "fr": "Elles sont déconseillées, car les pêches en conserve ou séchées contiennent souvent du sucre ajouté et d’autres ingrédients.",
         "es": "No se recomienda, porque el melocotón en almíbar o deshidratado suele llevar azúcar añadido y otros ingredientes.",
-        "it": "Sono sconsigliate, perché le pesche in scatola o essiccate contengono spesso zucchero aggiunto e altri ingredienti."
+        "it": "Sono sconsigliate, perché le pesche in scatola o essiccate contengono spesso zucchero aggiunto e altri ingredienti.",
+        "pt": "Não são recomendados, porque os pêssegos em calda ou secos têm muitas vezes açúcar adicionado e outros ingredientes."
       }
     },
     {
@@ -124,7 +139,8 @@
         "de": "Warum ist der Kern so riskant?",
         "fr": "Pourquoi le noyau est-il si risqué ?",
         "es": "¿Por qué es tan arriesgado el hueso?",
-        "it": "Perché il nocciolo è così rischioso?"
+        "it": "Perché il nocciolo è così rischioso?",
+        "pt": "Porque é que o caroço é tão arriscado?"
       },
       "a": {
         "en": "It is a choking hazard, can block the intestines, and its seed contains cyanide-releasing compounds.",
@@ -132,7 +148,8 @@
         "de": "Er kann zum Ersticken führen und den Darm blockieren, und sein Samen enthält Verbindungen, die Cyanid freisetzen.",
         "fr": "Il peut provoquer un étouffement, bloquer l’intestin, et son amande contient des composés qui libèrent du cyanure.",
         "es": "Puede provocar atragantamiento, obstruir el intestino, y su semilla contiene compuestos que liberan cianuro.",
-        "it": "Può causare soffocamento, può ostruire l’intestino e il suo seme contiene sostanze che liberano cianuro."
+        "it": "Può causare soffocamento, può ostruire l’intestino e il suo seme contiene sostanze che liberano cianuro.",
+        "pt": "Pode causar engasgamento, pode obstruir o intestino e a sua semente contém compostos que libertam cianeto."
       }
     }
   ],
@@ -235,6 +252,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d093fa3ee579a99ccc8aa8a564ef01dd0f191dc102da463de2471dc90a628263"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9321b2f828d571f3ee8c05a43ce03cb4a7bb7ae4a97e7a5ed45712b4b3317724"
     }
   }
 }

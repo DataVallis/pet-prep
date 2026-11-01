@@ -7,7 +7,8 @@
     "de": "Lammfleisch",
     "fr": "Agneau",
     "es": "Cordero",
-    "it": "Agnello"
+    "it": "Agnello",
+    "pt": "Borrego"
   },
   "question": {
     "en": "Can cats eat lamb?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Katzen Lammfleisch fressen?",
     "fr": "Les chats peuvent-ils manger de l’agneau ?",
     "es": "¿Pueden los gatos comer cordero?",
-    "it": "I gatti possono mangiare l’agnello?"
+    "it": "I gatti possono mangiare l’agnello?",
+    "pt": "Os gatos podem comer borrego?"
   },
   "url_slug": {
     "en": "lamb",
@@ -23,7 +25,8 @@
     "de": "lammfleisch",
     "fr": "agneau",
     "es": "cordero",
-    "it": "agnello"
+    "it": "agnello",
+    "pt": "borrego"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Ja, ein wenig pures, gut durchgegartes Lammfleisch ist als gelegentliches Leckerli in Ordnung. Schneiden Sie das Fett ab, entfernen Sie alle Knochen und würzen Sie nicht. Rohes Lammfleisch wird nicht empfohlen.",
     "fr": "Oui, un peu d’agneau nature et bien cuit convient comme friandise occasionnelle. Retirez le gras, enlevez tous les os et n’ajoutez aucun assaisonnement. L’agneau cru est déconseillé.",
     "es": "Sí, un poco de cordero solo y bien cocinado está bien como premio de vez en cuando. Quítale la grasa, retira todos los huesos y no le añadas condimentos. No se recomienda el cordero crudo.",
-    "it": "Sì, un po’ di agnello semplice e ben cotto va bene come premio occasionale. Togli il grasso, elimina tutte le ossa e non aggiungere condimenti. L’agnello crudo è sconsigliato."
+    "it": "Sì, un po’ di agnello semplice e ben cotto va bene come premio occasionale. Togli il grasso, elimina tutte le ossa e non aggiungere condimenti. L’agnello crudo è sconsigliato.",
+    "pt": "Sim, um pouco de borrego simples e bem cozinhado pode ser dado como guloseima ocasional. Retira a gordura, tira todos os ossos e não juntes temperos. O borrego cru não é recomendado."
   },
   "why": {
     "en": "Lamb is one of the most common proteins in cat food. As a home treat it must be properly cooked: International Cat Care warns that raw or undercooked meat such as beef, lamb and pork can carry Toxoplasma, and advises feeding only properly cooked food. Fatty trimmings are on RSPCA Australia's do-not-feed list, and cooked bones can splinter.",
@@ -40,7 +44,8 @@
     "de": "Lammfleisch gehört zu den häufigsten Eiweißquellen in Katzenfutter. Als Leckerli aus der eigenen Küche muss es richtig durchgegart sein: International Cat Care warnt, dass rohes oder nicht ausreichend gegartes Fleisch wie Rind, Lamm und Schwein Toxoplasmen übertragen kann, und rät, nur richtig gegartes Futter zu geben. Fette Fleischabschnitte stehen bei der RSPCA Australia auf der Liste der Dinge, die man nicht füttern sollte, und gekochte Knochen können splittern.",
     "fr": "L’agneau est l’une des protéines les plus courantes dans les aliments pour chats. En friandise maison, il doit être bien cuit : International Cat Care avertit que la viande crue ou insuffisamment cuite, comme le bœuf, l’agneau ou le porc, peut transmettre la toxoplasmose, et recommande de ne donner que des aliments bien cuits. Les chutes de gras figurent sur la liste des aliments à ne pas donner de la RSPCA Australia, et les os cuits peuvent se briser en éclats.",
     "es": "El cordero es una de las proteínas más habituales en la comida para gatos. Como premio casero tiene que estar bien cocinado: International Cat Care advierte de que la carne cruda o poco hecha, como la de ternera, cordero o cerdo, puede transmitir Toxoplasma, y aconseja dar solo comida bien cocinada. Los recortes de grasa están en la lista de alimentos que no se deben dar de RSPCA Australia, y los huesos cocinados pueden astillarse.",
-    "it": "L’agnello è una delle proteine più usate negli alimenti per gatti. Come premio fatto in casa deve essere ben cotto: International Cat Care avverte che la carne cruda o poco cotta, come manzo, agnello e maiale, può trasmettere il Toxoplasma e consiglia di dare solo cibo ben cotto. I ritagli di grasso sono nell’elenco degli alimenti da non dare di RSPCA Australia, e le ossa cotte possono scheggiarsi."
+    "it": "L’agnello è una delle proteine più usate negli alimenti per gatti. Come premio fatto in casa deve essere ben cotto: International Cat Care avverte che la carne cruda o poco cotta, come manzo, agnello e maiale, può trasmettere il Toxoplasma e consiglia di dare solo cibo ben cotto. I ritagli di grasso sono nell’elenco degli alimenti da non dare di RSPCA Australia, e le ossa cotte possono scheggiarsi.",
+    "pt": "O borrego é uma das proteínas mais comuns na comida para gatos. Como guloseima caseira, tem de estar bem cozinhado: a International Cat Care avisa que a carne crua ou mal cozinhada, como a de vaca, de borrego e de porco, pode conter Toxoplasma e aconselha a dar apenas comida bem cozinhada. As aparas de gordura estão na lista do que nunca se deve dar da RSPCA Australia, e os ossos cozinhados podem lascar."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "de": "Bieten Sie zuerst ein kleines Stück an. Bekommt Ihre Katze danach Erbrechen oder Durchfall, hören Sie auf und fragen Sie Ihren Tierarzt. Hat Ihre Katze einen gekochten Knochen verschluckt, rufen Sie Ihren Tierarzt an.",
     "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou a la diarrhée ensuite, arrêtez et demandez conseil à votre vétérinaire. S’il a avalé un os cuit, appelez votre vétérinaire.",
     "es": "Ofrécele primero un trocito. Si después tu gato tiene vómitos o diarrea, deja de dárselo y consulta a tu veterinario. Si tu gato se ha tragado un hueso cocinado, llama a tu veterinario.",
-    "it": "Offrigli prima un pezzetto. Se poi il tuo gatto vomita o ha la diarrea, smetti e chiedi al veterinario. Se ha ingerito un osso cotto, chiama il veterinario."
+    "it": "Offrigli prima un pezzetto. Se poi il tuo gatto vomita o ha la diarrea, smetti e chiedi al veterinario. Se ha ingerito un osso cotto, chiama il veterinario.",
+    "pt": "Começa por oferecer um pedaço pequeno. Se depois o teu gato tiver vómitos ou diarreia, para e pergunta ao teu veterinário. Se o teu gato engoliu um osso cozinhado, liga ao teu veterinário."
   },
   "serving": {
     "en": "Well cooked, plain, lean, boneless and unseasoned; a few small pieces now and then.",
@@ -57,7 +63,8 @@
     "de": "Gut durchgegart, pur, mager, ohne Knochen und ungewürzt; ab und zu ein paar kleine Stücke.",
     "fr": "Bien cuit, nature, maigre, sans os et sans assaisonnement ; quelques petits morceaux de temps en temps.",
     "es": "Bien cocinado, solo, magro, sin huesos y sin condimentos; unos pocos trocitos de vez en cuando.",
-    "it": "Ben cotto, semplice, magro, senza ossa e senza condimenti; qualche pezzetto ogni tanto."
+    "it": "Ben cotto, semplice, magro, senza ossa e senza condimenti; qualche pezzetto ogni tanto.",
+    "pt": "Bem cozinhado, simples, magro, sem ossos e sem temperos; alguns pedaços pequenos de vez em quando."
   },
   "child": {
     "en": "A tiny bit of plain cooked lamb can be a treat. A grown-up should cook it and take out the bones.",
@@ -65,7 +72,8 @@
     "de": "Ein kleines bisschen gekochtes Lammfleisch ohne Gewürze kann ein Leckerli sein. Ein Erwachsener sollte es kochen und die Knochen herausnehmen.",
     "fr": "Un tout petit peu d’agneau cuit nature peut être une friandise. C’est un adulte qui doit le cuire et enlever les os.",
     "es": "Un poquito de cordero cocinado y sin nada puede ser un premio. Un adulto tiene que cocinarlo y quitarle los huesos.",
-    "it": "Un pezzettino di agnello cotto e semplice può essere un premio. Deve cuocerlo un adulto, togliendo le ossa."
+    "it": "Un pezzettino di agnello cotto e semplice può essere un premio. Deve cuocerlo un adulto, togliendo le ossa.",
+    "pt": "Um bocadinho de borrego simples e cozinhado pode ser uma guloseima. Um adulto deve cozinhá-lo e tirar os ossos."
   },
   "faq": [],
   "sources": [
@@ -152,6 +160,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9fcecdd9fab983c9d4b43d3980eb3a4bb0654074095e8ebb8c6013bca47cefb3"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3562694960f8fda6eddc0f790dd84ad9a8a0237ed54d09fe0f857bb2d62bd025"
     }
   }
 }

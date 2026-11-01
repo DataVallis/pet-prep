@@ -7,7 +7,8 @@
     "de": "Xylit",
     "fr": "Xylitol",
     "es": "Xilitol",
-    "it": "Xilitolo"
+    "it": "Xilitolo",
+    "pt": "Xilitol"
   },
   "question": {
     "en": "Can dogs eat xylitol?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Hunde Xylit fressen?",
     "fr": "Les chiens peuvent-ils manger du xylitol ?",
     "es": "¿Pueden los perros comer xilitol?",
-    "it": "I cani possono mangiare lo xilitolo?"
+    "it": "I cani possono mangiare lo xilitolo?",
+    "pt": "Os cães podem comer xilitol?"
   },
   "url_slug": {
     "en": "xylitol",
@@ -23,7 +25,8 @@
     "de": "xylit",
     "fr": "xylitol",
     "es": "xilitol",
-    "it": "xilitolo"
+    "it": "xilitolo",
+    "pt": "xilitol"
   },
   "level": "toxic",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nein. Xylit (Birkenzucker), ein zuckerfreier Süßstoff, ist für Hunde giftig. Schon kleine Mengen können einen gefährlichen Abfall des Blutzuckers, Krampfanfälle und Leberversagen verursachen. Xylit steckt in zuckerfreiem Kaugummi, Süßigkeiten, Backwaren, Zahnpasta und Nahrungsergänzungsmitteln.",
     "fr": "Non. Le xylitol, un édulcorant « sans sucre », est toxique pour les chiens. Même en petite quantité, il peut provoquer une chute dangereuse du taux de sucre dans le sang, des convulsions et une insuffisance hépatique. On le trouve dans les chewing-gums sans sucre, les bonbons, les pâtisseries, le dentifrice et les compléments alimentaires.",
     "es": "No. El xilitol, un edulcorante de los productos sin azúcar, es tóxico para los perros. Incluso pequeñas cantidades pueden provocar una bajada peligrosa del azúcar en sangre, convulsiones e insuficiencia hepática. Se encuentra en chicles sin azúcar, golosinas, bollería, pasta de dientes y suplementos.",
-    "it": "No. Lo xilitolo, un dolcificante dei prodotti senza zucchero, è tossico per i cani. Anche piccole quantità possono causare un pericoloso calo degli zuccheri nel sangue, convulsioni e insufficienza epatica. Si trova in gomme da masticare senza zucchero, caramelle, prodotti da forno, dentifrici e integratori."
+    "it": "No. Lo xilitolo, un dolcificante dei prodotti senza zucchero, è tossico per i cani. Anche piccole quantità possono causare un pericoloso calo degli zuccheri nel sangue, convulsioni e insufficienza epatica. Si trova in gomme da masticare senza zucchero, caramelle, prodotti da forno, dentifrici e integratori.",
+    "pt": "Não. O xilitol, um adoçante sem açúcar, é tóxico para os cães. Até pequenas quantidades podem causar uma descida perigosa do açúcar no sangue, convulsões e insuficiência hepática. Existe em pastilhas elásticas sem açúcar, doces, bolos, pasta de dentes e suplementos."
   },
   "why": {
     "en": "In dogs, xylitol can cause a rapid, dangerous drop in blood sugar. Some dogs also develop severe liver injury; how this happens is not yet known. Sugar-free gum is the most common source, and the amount of xylitol can differ even between flavours of one brand.",
@@ -40,7 +44,8 @@
     "de": "Xylit kann bei Hunden einen schnellen, gefährlichen Abfall des Blutzuckers verursachen. Manche Hunde entwickeln außerdem eine schwere Leberschädigung; wie es dazu kommt, ist noch nicht bekannt. Zuckerfreier Kaugummi ist die häufigste Quelle, und die Xylitmenge kann sogar zwischen den Geschmacksrichtungen einer einzigen Marke schwanken.",
     "fr": "Chez le chien, le xylitol peut provoquer une chute rapide et dangereuse du taux de sucre dans le sang. Certains chiens développent aussi une grave atteinte du foie, dont le mécanisme n’est pas encore connu. Le chewing-gum sans sucre en est la source la plus fréquente, et la quantité de xylitol peut varier même entre les parfums d’une même marque.",
     "es": "En los perros, el xilitol puede provocar una bajada rápida y peligrosa del azúcar en sangre. Algunos perros sufren además un daño hepático grave; todavía no se sabe cómo ocurre. Los chicles sin azúcar son la fuente más frecuente, y la cantidad de xilitol puede variar incluso entre los sabores de una misma marca.",
-    "it": "Nei cani lo xilitolo può causare un calo rapido e pericoloso degli zuccheri nel sangue. Alcuni cani sviluppano anche un grave danno al fegato; non si sa ancora come avvenga. La fonte più comune sono le gomme da masticare senza zucchero, e la quantità di xilitolo può variare perfino tra i gusti della stessa marca."
+    "it": "Nei cani lo xilitolo può causare un calo rapido e pericoloso degli zuccheri nel sangue. Alcuni cani sviluppano anche un grave danno al fegato; non si sa ancora come avvenga. La fonte più comune sono le gomme da masticare senza zucchero, e la quantità di xilitolo può variare perfino tra i gusti della stessa marca.",
+    "pt": "Nos cães, o xilitol pode causar uma descida rápida e perigosa do açúcar no sangue. Alguns cães também desenvolvem lesões graves no fígado; ainda não se sabe como isto acontece. As pastilhas elásticas sem açúcar são a fonte mais comum, e a quantidade de xilitol pode variar até entre sabores da mesma marca."
   },
   "signs": {
     "en": [
@@ -84,6 +89,13 @@
       "Andatura traballante, perdita di coordinazione",
       "Convulsioni",
       "I segni di glicemia bassa possono iniziare entro 30 minuti"
+    ],
+    "pt": [
+      "Vómitos",
+      "Fraqueza e cansaço",
+      "Andar cambaleante, perda de coordenação",
+      "Convulsões",
+      "Os sinais de açúcar baixo no sangue podem começar em 30 minutos"
     ]
   },
   "what_to_do": {
@@ -92,7 +104,8 @@
     "de": "Wenden Sie sich an Ihren Tierarzt oder einen Giftnotruf für Tiere, sobald Sie merken, dass Ihr Hund etwas mit Xylit gefressen hat. Notieren Sie das Produkt und wie viel gefressen wurde. Warten Sie nicht auf Anzeichen und geben Sie Ihrem Hund nichts ein, es sei denn, Ihr Tierarzt weist Sie dazu an.",
     "fr": "Contactez votre vétérinaire ou un centre antipoison vétérinaire dès que vous vous rendez compte que votre chien a mangé un produit contenant du xylitol. Notez le produit et la quantité mangée. N’attendez pas l’apparition des signes et ne lui donnez rien par la bouche, sauf si votre vétérinaire vous le demande.",
     "es": "Contacta con tu veterinario o con una línea de información toxicológica para animales en cuanto te des cuenta de que tu perro ha comido algo con xilitol. Apunta el producto y cuánto se comió. No esperes a que aparezcan síntomas y no le des nada por la boca salvo que tu veterinario te lo indique.",
-    "it": "Contatta il veterinario o un centro antiveleni veterinario appena ti accorgi che il tuo cane ha mangiato qualcosa con xilitolo. Annota il prodotto e quanto ne ha mangiato. Non aspettare che compaiano i sintomi e non dargli niente per bocca, a meno che non te lo dica il veterinario."
+    "it": "Contatta il veterinario o un centro antiveleni veterinario appena ti accorgi che il tuo cane ha mangiato qualcosa con xilitolo. Annota il prodotto e quanto ne ha mangiato. Non aspettare che compaiano i sintomi e non dargli niente per bocca, a meno che non te lo dica il veterinario.",
+    "pt": "Contacta o teu veterinário ou uma linha de apoio toxicológico para animais assim que perceberes que o teu cão comeu algo com xilitol. Anota o produto e quanto comeu. Não esperes pelos sinais e não dês nada pela boca, a não ser que o teu veterinário te diga."
   },
   "serving": null,
   "child": {
@@ -101,7 +114,8 @@
     "de": "Zuckerfreier Kaugummi kann Xylit enthalten, und das ist für Hunde sehr schlecht. Räum Kaugummi und Zahnpasta weg und sag einem Erwachsenen Bescheid, wenn dein Hund davon frisst.",
     "fr": "Le chewing-gum sans sucre peut contenir du xylitol, très mauvais pour les chiens. Range le chewing-gum et le dentifrice, et préviens un adulte si ton chien en mange.",
     "es": "Los chicles sin azúcar pueden llevar xilitol, muy malo para los perros. Guarda chicles y pasta de dientes lejos y avisa a un adulto si tu perro se come alguno.",
-    "it": "Le gomme da masticare senza zucchero possono contenere xilitolo, che fa molto male ai cani. Tieni lontani gomme e dentifricio e avvisa un adulto se il tuo cane ne mangia."
+    "it": "Le gomme da masticare senza zucchero possono contenere xilitolo, che fa molto male ai cani. Tieni lontani gomme e dentifricio e avvisa un adulto se il tuo cane ne mangia.",
+    "pt": "As pastilhas sem açúcar podem ter xilitol, que faz muito mal aos cães. Guarda pastilhas e pasta de dentes longe e avisa um adulto se o cão comer alguma."
   },
   "faq": [
     {
@@ -111,7 +125,8 @@
         "de": "Wo steckt Xylit drin?",
         "fr": "Où trouve-t-on du xylitol ?",
         "es": "¿Dónde se encuentra el xilitol?",
-        "it": "Dove si trova lo xilitolo?"
+        "it": "Dove si trova lo xilitolo?",
+        "pt": "Onde existe xilitol?"
       },
       "a": {
         "en": "In sugar-free gum, sweets, baked goods, toothpaste, vitamins and supplements. Sugar-free gum is the most common source of poisoning.",
@@ -119,7 +134,8 @@
         "de": "In zuckerfreiem Kaugummi, Süßigkeiten, Backwaren, Zahnpasta, Vitaminpräparaten und Nahrungsergänzungsmitteln. Zuckerfreier Kaugummi ist die häufigste Quelle von Vergiftungen.",
         "fr": "Dans les chewing-gums sans sucre, les bonbons, les pâtisseries, le dentifrice, les vitamines et les compléments alimentaires. Le chewing-gum sans sucre est la source d’intoxication la plus fréquente.",
         "es": "En chicles sin azúcar, golosinas, bollería, pasta de dientes, vitaminas y suplementos. Los chicles sin azúcar son la fuente más frecuente de intoxicación.",
-        "it": "Nelle gomme da masticare senza zucchero, nelle caramelle, nei prodotti da forno, nei dentifrici, nelle vitamine e negli integratori. Le gomme senza zucchero sono la causa più comune di avvelenamento."
+        "it": "Nelle gomme da masticare senza zucchero, nelle caramelle, nei prodotti da forno, nei dentifrici, nelle vitamine e negli integratori. Le gomme senza zucchero sono la causa più comune di avvelenamento.",
+        "pt": "Em pastilhas elásticas sem açúcar, doces, bolos, pasta de dentes, vitaminas e suplementos. As pastilhas elásticas sem açúcar são a fonte mais comum de intoxicação."
       }
     },
     {
@@ -129,7 +145,8 @@
         "de": "Darf ich für meinen Hund Zahnpasta für Menschen verwenden?",
         "fr": "Puis-je utiliser du dentifrice pour humains pour mon chien ?",
         "es": "¿Puedo usar pasta de dientes de personas para mi perro?",
-        "it": "Posso usare il dentifricio per persone per il mio cane?"
+        "it": "Posso usare il dentifricio per persone per il mio cane?",
+        "pt": "Posso usar pasta de dentes de pessoas no meu cão?"
       },
       "a": {
         "en": "Some toothpastes contain xylitol, which is toxic to dogs, so human toothpaste is not a safe choice.",
@@ -137,7 +154,8 @@
         "de": "Manche Zahnpasten enthalten Xylit, das für Hunde giftig ist – Zahnpasta für Menschen ist daher keine sichere Wahl.",
         "fr": "Certains dentifrices contiennent du xylitol, toxique pour les chiens : le dentifrice pour humains n’est donc pas un choix sûr.",
         "es": "Algunas pastas de dientes contienen xilitol, que es tóxico para los perros, así que la pasta de dientes de personas no es una opción segura.",
-        "it": "Alcuni dentifrici contengono xilitolo, che è tossico per i cani, quindi il dentifricio per persone non è una scelta sicura."
+        "it": "Alcuni dentifrici contengono xilitolo, che è tossico per i cani, quindi il dentifricio per persone non è una scelta sicura.",
+        "pt": "Algumas pastas de dentes contêm xilitol, que é tóxico para os cães, por isso a pasta de dentes de pessoas não é uma escolha segura."
       }
     }
   ],
@@ -247,6 +265,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "eb37775c29a49052a6b98d040ae65ea66b199af403ce357145840f39814c49d0"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "99edc1446f64490e5e3239c419cdc8ea09b86b1fb591de4ad7a0418ad3b23a52"
     }
   }
 }

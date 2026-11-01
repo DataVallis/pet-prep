@@ -7,7 +7,8 @@
     "de": "Fettes Fleisch",
     "fr": "Viande grasse",
     "es": "Carne grasa",
-    "it": "Carne grassa"
+    "it": "Carne grassa",
+    "pt": "Carne gorda"
   },
   "question": {
     "en": "Can cats eat fatty meat?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Katzen fettes Fleisch fressen?",
     "fr": "Les chats peuvent-ils manger de la viande grasse ?",
     "es": "¿Pueden los gatos comer carne grasa?",
-    "it": "I gatti possono mangiare la carne grassa?"
+    "it": "I gatti possono mangiare la carne grassa?",
+    "pt": "Os gatos podem comer carne gorda?"
   },
   "url_slug": {
     "en": "fatty-meat",
@@ -23,7 +25,8 @@
     "de": "fettes-fleisch",
     "fr": "viande-grasse",
     "es": "carne-grasa",
-    "it": "carne-grassa"
+    "it": "carne-grassa",
+    "pt": "carne-gorda"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Besser nicht. Fettes Fleisch und Geflügelhaut können die Verdauung einer Katze durcheinanderbringen und bei empfindlichen Katzen sogar zu einer Bauchspeicheldrüsenentzündung (Pankreatitis) führen. Wenn Sie Fleisch teilen, geben Sie ein wenig pures, mageres, gegartes Fleisch ohne Haut, Knochen oder Gewürze.",
     "fr": "Mieux vaut s’en abstenir. La viande grasse et la peau de volaille peuvent perturber la digestion du chat et, chez les chats sensibles, même entraîner une pancréatite. Si vous partagez de la viande, donnez un peu de viande maigre cuite nature, sans peau, sans os ni assaisonnement.",
     "es": "Es mejor no dársela. La carne grasa y la piel de las aves pueden sentarle mal a la digestión de un gato y, en gatos sensibles, incluso provocar pancreatitis. Si compartes carne, dale un poco de carne magra, cocinada y sin nada, sin piel, huesos ni condimentos.",
-    "it": "Meglio di no. La carne grassa e la pelle del pollame possono disturbare la digestione del gatto e, nei gatti sensibili, causare persino una pancreatite. Se condividi della carne, offrigli un po’ di carne magra, cotta e semplice, senza pelle, ossa né condimenti."
+    "it": "Meglio di no. La carne grassa e la pelle del pollame possono disturbare la digestione del gatto e, nei gatti sensibili, causare persino una pancreatite. Se condividi della carne, offrigli un po’ di carne magra, cotta e semplice, senza pelle, ossa né condimenti.",
+    "pt": "É melhor não. A carne gorda e a pele das aves podem fazer mal à digestão do gato e, em gatos sensíveis, podem até levar a pancreatite. Se partilhares carne, dá um pouco de carne magra, simples e cozinhada, sem pele, ossos nem temperos."
   },
   "why": {
     "en": "Too much fat can affect a cat's digestive tract, especially the pancreas. Cats Protection warns that turkey skin is high in fat and can cause digestive upset or even pancreatitis in sensitive cats, and a University of Georgia vet advises avoiding the fattier pieces of ham altogether.",
@@ -40,7 +44,8 @@
     "de": "Zu viel Fett kann den Verdauungstrakt einer Katze belasten, vor allem die Bauchspeicheldrüse. Cats Protection warnt, dass Putenhaut fettreich ist und bei empfindlichen Katzen Verdauungsbeschwerden oder sogar eine Pankreatitis auslösen kann, und ein Tierarzt der University of Georgia rät, die fetteren Stücke Schinken ganz zu meiden.",
     "fr": "Trop de graisse peut affecter l’appareil digestif du chat, en particulier le pancréas. Cats Protection avertit que la peau de dinde est très grasse et peut provoquer des troubles digestifs, voire une pancréatite chez les chats sensibles, et un vétérinaire de l’université de Géorgie conseille d’éviter complètement les morceaux de jambon les plus gras.",
     "es": "Demasiada grasa puede afectar al aparato digestivo del gato, sobre todo al páncreas. Cats Protection advierte de que la piel del pavo tiene mucha grasa y puede causar trastornos digestivos o incluso pancreatitis en gatos sensibles, y un veterinario de la Universidad de Georgia aconseja evitar por completo las partes más grasas del jamón.",
-    "it": "Troppi grassi possono colpire l’apparato digerente del gatto, soprattutto il pancreas. Cats Protection avverte che la pelle del tacchino è molto grassa e può causare disturbi digestivi o persino una pancreatite nei gatti sensibili, e un veterinario dell’Università della Georgia consiglia di evitare del tutto le parti più grasse del prosciutto."
+    "it": "Troppi grassi possono colpire l’apparato digerente del gatto, soprattutto il pancreas. Cats Protection avverte che la pelle del tacchino è molto grassa e può causare disturbi digestivi o persino una pancreatite nei gatti sensibili, e un veterinario dell’Università della Georgia consiglia di evitare del tutto le parti più grasse del prosciutto.",
+    "pt": "A gordura em excesso pode afetar o aparelho digestivo do gato, sobretudo o pâncreas. A Cats Protection avisa que a pele do peru é rica em gordura e pode causar problemas digestivos ou até pancreatite em gatos sensíveis, e um veterinário da Universidade da Geórgia aconselha a evitar completamente as partes mais gordas do fiambre."
   },
   "signs": {
     "en": [
@@ -72,6 +77,11 @@
       "Vomito",
       "Diarrea",
       "Mal di pancia"
+    ],
+    "pt": [
+      "Vómitos",
+      "Diarreia",
+      "Mal-estar de barriga"
     ]
   },
   "what_to_do": {
@@ -80,7 +90,8 @@
     "de": "Wenn Ihre Katze viel Fettes gefressen hat oder danach erbricht, Durchfall hat oder Schmerzen zu haben scheint, fragen Sie Ihren Tierarzt um Rat.",
     "fr": "Si votre chat a mangé beaucoup d’aliments gras, ou s’il vomit, a la diarrhée ou semble souffrir ensuite, demandez conseil à votre vétérinaire.",
     "es": "Si tu gato ha comido mucha comida grasa, o después tiene vómitos, diarrea o parece dolorido, consulta a tu veterinario.",
-    "it": "Se il tuo gatto ha mangiato molto cibo grasso, o se poi vomita, ha la diarrea o sembra soffrire, chiedi consiglio al veterinario."
+    "it": "Se il tuo gatto ha mangiato molto cibo grasso, o se poi vomita, ha la diarrea o sembra soffrire, chiedi consiglio al veterinario.",
+    "pt": "Se o teu gato comeu muita comida gorda, ou se depois tiver vómitos, diarreia ou parecer ter dores, contacta o teu veterinário para pedir conselho."
   },
   "serving": {
     "en": "Only plain, cooked, lean meat as an occasional treat: no skin, fat, bones or seasoning.",
@@ -88,7 +99,8 @@
     "de": "Nur pures, gegartes, mageres Fleisch als gelegentliches Leckerli: ohne Haut, Fett, Knochen oder Gewürze.",
     "fr": "Uniquement de la viande maigre cuite nature, comme friandise occasionnelle : sans peau, sans gras, sans os ni assaisonnement.",
     "es": "Solo carne magra, cocinada y sin nada como premio de vez en cuando: sin piel, grasa, huesos ni condimentos.",
-    "it": "Solo carne magra, cotta e semplice come premio occasionale: senza pelle, grasso, ossa né condimenti."
+    "it": "Solo carne magra, cotta e semplice come premio occasionale: senza pelle, grasso, ossa né condimenti.",
+    "pt": "Apenas carne magra, simples e cozinhada, como guloseima ocasional: sem pele, gordura, ossos nem temperos."
   },
   "child": {
     "en": "Fatty bits can give a cat a sore tummy. If a grown-up says yes, kitty can have a tiny bit of plain lean meat.",
@@ -96,7 +108,8 @@
     "de": "Fettige Stückchen können einer Katze Bauchweh machen. Wenn ein Erwachsener Ja sagt, darf deine Katze ein winziges Stück pures, mageres Fleisch haben.",
     "fr": "Les morceaux gras peuvent donner mal au ventre à un chat. Si un adulte est d’accord, ton chat peut avoir un tout petit peu de viande maigre nature.",
     "es": "Los trozos con grasa pueden darle dolor de barriga a un gato. Si un adulto dice que sí, tu gatito puede comer un poquito de carne magra sin nada.",
-    "it": "I pezzi grassi possono far venire il mal di pancia a un gatto. Se un adulto dice di sì, il micio può avere un pezzettino di carne magra semplice."
+    "it": "I pezzi grassi possono far venire il mal di pancia a un gatto. Se un adulto dice di sì, il micio può avere un pezzettino di carne magra semplice.",
+    "pt": "As partes gordas podem dar dor de barriga a um gato. Se um adulto disser que sim, o gatinho pode comer um bocadinho de carne magra simples."
   },
   "faq": [
     {
@@ -106,7 +119,8 @@
         "de": "Ist Hähnchen- oder Putenhaut in Ordnung?",
         "fr": "Peut-on donner de la peau de poulet ou de dinde ?",
         "es": "¿Está bien la piel del pollo o del pavo?",
-        "it": "La pelle del pollo o del tacchino va bene?"
+        "it": "La pelle del pollo o del tacchino va bene?",
+        "pt": "Posso dar pele de frango ou de peru?"
       },
       "a": {
         "en": "No. Cats Protection says turkey skin is high in fat and can cause digestive upset or even pancreatitis in sensitive cats. Give skinless meat instead.",
@@ -114,7 +128,8 @@
         "de": "Nein. Laut Cats Protection ist Putenhaut fettreich und kann bei empfindlichen Katzen Verdauungsbeschwerden oder sogar eine Pankreatitis auslösen. Geben Sie stattdessen Fleisch ohne Haut.",
         "fr": "Non. Selon Cats Protection, la peau de dinde est très grasse et peut provoquer des troubles digestifs, voire une pancréatite chez les chats sensibles. Donnez plutôt de la viande sans peau.",
         "es": "No. Cats Protection indica que la piel del pavo tiene mucha grasa y puede causar trastornos digestivos o incluso pancreatitis en gatos sensibles. Dale carne sin piel.",
-        "it": "No. Secondo Cats Protection la pelle del tacchino è molto grassa e può causare disturbi digestivi o persino una pancreatite nei gatti sensibili. Dai invece carne senza pelle."
+        "it": "No. Secondo Cats Protection la pelle del tacchino è molto grassa e può causare disturbi digestivi o persino una pancreatite nei gatti sensibili. Dai invece carne senza pelle.",
+        "pt": "Não. A Cats Protection diz que a pele do peru é rica em gordura e pode causar problemas digestivos ou até pancreatite em gatos sensíveis. Dá antes carne sem pele."
       }
     }
   ],
@@ -182,6 +197,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "33b5a33b9865af7d7330bf0c143dcce31a6fee2d18fc68b3e55aa050fb0073c4"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e9481910fd838e4789295b9bdce94f128042dda4f83cacafef63e717637582e1"
     }
   }
 }

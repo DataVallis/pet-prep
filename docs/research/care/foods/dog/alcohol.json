@@ -7,7 +7,8 @@
     "de": "Alkohol",
     "fr": "Alcool",
     "es": "Alcohol",
-    "it": "Alcol"
+    "it": "Alcol",
+    "pt": "Álcool"
   },
   "question": {
     "en": "Can dogs drink alcohol?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Hunde Alkohol trinken?",
     "fr": "Les chiens peuvent-ils boire de l’alcool ?",
     "es": "¿Pueden los perros beber alcohol?",
-    "it": "I cani possono bere l’alcol?"
+    "it": "I cani possono bere l’alcol?",
+    "pt": "Os cães podem beber álcool?"
   },
   "url_slug": {
     "en": "alcohol",
@@ -23,7 +25,8 @@
     "de": "alkohol",
     "fr": "alcool",
     "es": "alcohol",
-    "it": "alcol"
+    "it": "alcol",
+    "pt": "alcool"
   },
   "level": "toxic",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nein. Alkohol ist für Hunde giftig. Alkoholhaltige Getränke und Speisen können Erbrechen, Taumeln, Atemprobleme und Zittern verursachen. Alkohol wird schnell aufgenommen, und die Anzeichen beginnen meist innerhalb von 15–90 Minuten – handeln Sie also schnell.",
     "fr": "Non. L’alcool est toxique pour les chiens. Les boissons et les aliments qui en contiennent peuvent provoquer des vomissements, une démarche titubante, des difficultés respiratoires et des tremblements. L’alcool est absorbé rapidement et les signes apparaissent généralement en 15 à 90 minutes : agissez vite.",
     "es": "No. El alcohol es tóxico para los perros. Las bebidas y los alimentos con alcohol pueden causar vómitos, tambaleo, problemas para respirar y temblores. El alcohol se absorbe rápido y los síntomas suelen empezar en un plazo de 15 a 90 minutos, así que actúa deprisa.",
-    "it": "No. L’alcol è tossico per i cani. Bevande e alimenti che lo contengono possono causare vomito, andatura barcollante, difficoltà respiratorie e tremori. L’alcol viene assorbito rapidamente e i sintomi compaiono di solito entro 15–90 minuti: agisci in fretta."
+    "it": "No. L’alcol è tossico per i cani. Bevande e alimenti che lo contengono possono causare vomito, andatura barcollante, difficoltà respiratorie e tremori. L’alcol viene assorbito rapidamente e i sintomi compaiono di solito entro 15–90 minuti: agisci in fretta.",
+    "pt": "Não. O álcool é tóxico para os cães. Bebidas e alimentos com álcool podem causar vómitos, desequilíbrio, dificuldades respiratórias e tremores. O álcool é absorvido rapidamente e os sinais costumam surgir em 15–90 minutos, por isso age depressa."
   },
   "why": {
     "en": "Alcohol (ethanol) is rapidly absorbed into the blood and depresses the nervous system. It is not only in drinks: it is also in liquor-filled sweets, raw rising bread dough, hand sanitiser and mouthwash. All animals are at risk.",
@@ -40,7 +44,8 @@
     "de": "Alkohol (Ethanol) gelangt rasch ins Blut und dämpft das Nervensystem. Er steckt nicht nur in Getränken, sondern auch in Likörpralinen, rohem, aufgehendem Brotteig, Handdesinfektionsmittel und Mundspülung. Alle Tiere sind gefährdet.",
     "fr": "L’alcool (éthanol) passe rapidement dans le sang et déprime le système nerveux. On ne le trouve pas seulement dans les boissons : il y en a aussi dans les bonbons à la liqueur, la pâte à pain crue en train de lever, le gel hydroalcoolique et le bain de bouche. Tous les animaux sont concernés.",
     "es": "El alcohol (etanol) pasa rápidamente a la sangre y deprime el sistema nervioso. No solo está en las bebidas: también está en los bombones o caramelos rellenos de licor, en la masa de pan cruda con levadura que está subiendo, en el gel hidroalcohólico y en el enjuague bucal. Todos los animales corren riesgo.",
-    "it": "L’alcol (etanolo) passa rapidamente nel sangue e deprime il sistema nervoso. Non si trova solo nelle bevande: è presente anche nei dolci ripieni di liquore, nell’impasto crudo del pane in lievitazione, nel gel igienizzante per le mani e nel collutorio. Tutti gli animali sono a rischio."
+    "it": "L’alcol (etanolo) passa rapidamente nel sangue e deprime il sistema nervoso. Non si trova solo nelle bevande: è presente anche nei dolci ripieni di liquore, nell’impasto crudo del pane in lievitazione, nel gel igienizzante per le mani e nel collutorio. Tutti gli animali sono a rischio.",
+    "pt": "O álcool (etanol) é absorvido rapidamente para o sangue e deprime o sistema nervoso. Não está só nas bebidas: também existe em bombons com licor, massa de pão crua a levedar, desinfetante para as mãos e elixir bucal. Todos os animais correm risco."
   },
   "signs": {
     "en": [
@@ -90,6 +95,14 @@
       "Difficoltà respiratorie",
       "Tremori",
       "I sintomi compaiono di solito entro 15–90 minuti"
+    ],
+    "pt": [
+      "Vómitos e diarreia",
+      "Desequilíbrio e perda de coordenação",
+      "Sonolência, prostração",
+      "Dificuldade em respirar",
+      "Tremores",
+      "Os sinais costumam surgir em 15–90 minutos"
     ]
   },
   "what_to_do": {
@@ -98,7 +111,8 @@
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was Ihr Hund getrunken oder gefressen hat und ungefähr wie viel. Warten Sie nicht auf Anzeichen: Alkohol wirkt schnell, und eine frühe Behandlung ist entscheidend.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce que votre chien a bu ou mangé, et en quelle quantité approximative. N’attendez pas l’apparition des signes : l’alcool agit vite et un traitement précoce est essentiel.",
     "es": "Contacta inmediatamente con tu veterinario o con una línea de información toxicológica para animales. Anota qué ha bebido o comido tu perro y, más o menos, cuánto. No esperes a que aparezcan síntomas: el alcohol actúa rápido y el tratamiento precoz es clave.",
-    "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha bevuto o mangiato il tuo cane e più o meno quanto. Non aspettare che compaiano i sintomi: l’alcol agisce in fretta e un trattamento precoce è fondamentale."
+    "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha bevuto o mangiato il tuo cane e più o meno quanto. Non aspettare che compaiano i sintomi: l’alcol agisce in fretta e un trattamento precoce è fondamentale.",
+    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota o que o teu cão bebeu ou comeu e mais ou menos quanto. Não esperes pelos sinais: o álcool atua depressa e o tratamento precoce é fundamental."
   },
   "serving": null,
   "child": {
@@ -107,7 +121,8 @@
     "de": "Getränke für Erwachsene sind nie etwas für Hunde. Trinkt ein Hund davon, kann er schnell sehr krank werden – sag sofort einem Erwachsenen Bescheid.",
     "fr": "Les boissons des grands ne sont jamais pour les chiens. Si un chien en boit, il peut vite tomber très malade, alors préviens tout de suite un adulte.",
     "es": "Las bebidas de los adultos nunca son para los perros. Si un perro bebe un poco, puede ponerse muy malito muy rápido, así que avisa enseguida a un adulto.",
-    "it": "Le bevande dei grandi non sono mai per i cani. Se un cane ne beve un po’, può stare molto male in fretta: dillo subito a un adulto."
+    "it": "Le bevande dei grandi non sono mai per i cani. Se un cane ne beve un po’, può stare molto male in fretta: dillo subito a un adulto.",
+    "pt": "As bebidas dos adultos nunca são para cães. Se um cão beber um pouco, pode ficar muito doente depressa, por isso avisa logo um adulto."
   },
   "faq": [
     {
@@ -117,7 +132,8 @@
         "de": "Darf mein Hund ein bisschen Bier ablecken?",
         "fr": "Un petit coup de langue dans une bière, c’est permis ?",
         "es": "¿Un lametón de cerveza está bien?",
-        "it": "Una leccatina di birra va bene?"
+        "it": "Una leccatina di birra va bene?",
+        "pt": "Posso deixar o meu cão dar uma lambidela de cerveja?"
       },
       "a": {
         "en": "No. Drinks and foods containing alcohol are toxic to dogs. Never offer alcohol, and call your vet if your dog drinks some.",
@@ -125,7 +141,8 @@
         "de": "Nein. Alkoholhaltige Getränke und Speisen sind für Hunde giftig. Bieten Sie nie Alkohol an, und rufen Sie Ihren Tierarzt an, wenn Ihr Hund davon getrunken hat.",
         "fr": "Non. Les boissons et les aliments contenant de l’alcool sont toxiques pour les chiens. Ne proposez jamais d’alcool à votre chien et appelez votre vétérinaire s’il en a bu.",
         "es": "No. Las bebidas y los alimentos con alcohol son tóxicos para los perros. No le ofrezcas nunca alcohol y llama a tu veterinario si tu perro bebe un poco.",
-        "it": "No. Bevande e alimenti che contengono alcol sono tossici per i cani. Non offrirgli mai alcol e chiama il veterinario se il tuo cane ne ha bevuto un po’."
+        "it": "No. Bevande e alimenti che contengono alcol sono tossici per i cani. Non offrirgli mai alcol e chiama il veterinario se il tuo cane ne ha bevuto un po’.",
+        "pt": "Não. As bebidas e os alimentos com álcool são tóxicos para os cães. Nunca lhes ofereças álcool e liga ao teu veterinário se o teu cão beber um pouco."
       }
     },
     {
@@ -135,7 +152,8 @@
         "de": "Wo kann ein Hund zu Hause noch Alkohol finden?",
         "fr": "Où un chien peut-il encore trouver de l’alcool à la maison ?",
         "es": "¿Dónde más puede encontrar alcohol un perro en casa?",
-        "it": "In quali altri posti di casa un cane può trovare alcol?"
+        "it": "In quali altri posti di casa un cane può trovare alcol?",
+        "pt": "Onde mais pode um cão encontrar álcool em casa?"
       },
       "a": {
         "en": "In liquor-filled sweets, raw rising bread dough, hand sanitiser and mouthwash.",
@@ -143,7 +161,8 @@
         "de": "In Likörpralinen, rohem, aufgehendem Brotteig, Handdesinfektionsmittel und Mundspülung.",
         "fr": "Dans les bonbons à la liqueur, la pâte à pain crue en train de lever, le gel hydroalcoolique et le bain de bouche.",
         "es": "En los bombones o caramelos rellenos de licor, en la masa de pan cruda con levadura que está subiendo, en el gel hidroalcohólico y en el enjuague bucal.",
-        "it": "Nei dolci ripieni di liquore, nell’impasto crudo del pane in lievitazione, nel gel igienizzante per le mani e nel collutorio."
+        "it": "Nei dolci ripieni di liquore, nell’impasto crudo del pane in lievitazione, nel gel igienizzante per le mani e nel collutorio.",
+        "pt": "Em bombons com licor, massa de pão crua a levedar, desinfetante para as mãos e elixir bucal."
       }
     }
   ],
@@ -238,6 +257,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "571a73e63f16f36f6617fff9170ebb5283f47406da7a0d3b74f21ad9dcf912e3"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cdc41e7cb1b2696bc3d9b2c58490146db6bbe35cd8a3debd47ece9059288a90a"
     }
   }
 }

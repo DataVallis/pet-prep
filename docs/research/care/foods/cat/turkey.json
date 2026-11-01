@@ -7,7 +7,8 @@
     "de": "Putenfleisch",
     "fr": "Dinde",
     "es": "Pavo",
-    "it": "Tacchino"
+    "it": "Tacchino",
+    "pt": "Peru"
   },
   "question": {
     "en": "Can cats eat turkey?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Katzen Putenfleisch fressen?",
     "fr": "Les chats peuvent-ils manger de la dinde ?",
     "es": "¿Pueden los gatos comer pavo?",
-    "it": "I gatti possono mangiare il tacchino?"
+    "it": "I gatti possono mangiare il tacchino?",
+    "pt": "Os gatos podem comer peru?"
   },
   "url_slug": {
     "en": "turkey",
@@ -23,7 +25,8 @@
     "de": "putenfleisch",
     "fr": "dinde",
     "es": "pavo",
-    "it": "tacchino"
+    "it": "tacchino",
+    "pt": "peru"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Ja, ein wenig pures, gegartes Putenfleisch ist als gelegentliches Leckerli in Ordnung. Entfernen Sie Knochen und Haut und verzichten Sie auf Gewürze, Füllung und Bratensoße. Putenfleisch allein ist keine vollwertige Ernährung.",
     "fr": "Oui, un peu de dinde cuite nature convient comme friandise occasionnelle. Retirez les os et la peau, et évitez assaisonnement, farce et jus de cuisson. La dinde seule n’est pas une alimentation complète.",
     "es": "Sí, un poco de pavo cocinado y sin nada añadido está bien como premio ocasional. Quítale los huesos y la piel, y nada de condimentos, relleno ni salsa. El pavo por sí solo no es una alimentación completa.",
-    "it": "Sì, un po’ di tacchino cotto e semplice va bene come premio occasionale. Togli ossa e pelle ed evita condimenti, ripieno e sugo d’arrosto. Il tacchino da solo non è una dieta completa."
+    "it": "Sì, un po’ di tacchino cotto e semplice va bene come premio occasionale. Togli ossa e pelle ed evita condimenti, ripieno e sugo d’arrosto. Il tacchino da solo non è una dieta completa.",
+    "pt": "Sim, um pouco de peru cozinhado e simples pode ser dado como guloseima ocasional. Tira os ossos e a pele, e nada de temperos, recheio ou molho. O peru, por si só, não é uma alimentação completa."
   },
   "why": {
     "en": "Cats Protection says plain cooked turkey is fine as an occasional treat but shouldn't be given regularly, as turkey alone lacks nutrients cats need. Turkey skin is high in fat and can cause digestive upset or even pancreatitis, and roast skin may carry garlic or herbs. Turkey bones can splinter and cause choking or blockages.",
@@ -40,7 +44,8 @@
     "de": "Laut Cats Protection ist pures, gegartes Putenfleisch als gelegentliches Leckerli in Ordnung, sollte aber nicht regelmäßig gegeben werden, da Pute allein nicht alle Nährstoffe enthält, die Katzen brauchen. Putenhaut ist sehr fettreich und kann Verdauungsbeschwerden oder sogar eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen, und die Haut eines Bratens kann Knoblauch oder Kräuter abbekommen haben. Putenknochen können splittern und zum Ersticken oder zu Blockaden im Verdauungstrakt führen.",
     "fr": "Selon Cats Protection, un peu de dinde cuite nature convient comme friandise occasionnelle, mais ne doit pas être donnée régulièrement, car la dinde seule n’apporte pas tous les nutriments dont les chats ont besoin. La peau de dinde est très grasse et peut provoquer des troubles digestifs, voire une pancréatite, et la peau d’une dinde rôtie peut avoir été en contact avec de l’ail ou des herbes. Les os de dinde peuvent se briser en éclats et provoquer un étouffement ou une occlusion.",
     "es": "Cats Protection dice que el pavo cocinado sin nada añadido está bien como premio ocasional, pero que no hay que darlo de forma habitual, porque el pavo solo no tiene todos los nutrientes que los gatos necesitan. La piel del pavo tiene mucha grasa y puede causar molestias digestivas o incluso pancreatitis, y la piel del pavo asado puede llevar ajo o hierbas. Los huesos de pavo pueden astillarse y causar atragantamiento u obstrucciones.",
-    "it": "Secondo Cats Protection un po’ di tacchino cotto e semplice va bene come premio occasionale, ma non andrebbe dato regolarmente, perché il tacchino da solo non contiene tutti i nutrienti di cui i gatti hanno bisogno. La pelle del tacchino è molto grassa e può causare disturbi digestivi o persino una pancreatite, e la pelle dell’arrosto può contenere aglio o erbe aromatiche. Le ossa di tacchino possono scheggiarsi e causare soffocamento od ostruzioni."
+    "it": "Secondo Cats Protection un po’ di tacchino cotto e semplice va bene come premio occasionale, ma non andrebbe dato regolarmente, perché il tacchino da solo non contiene tutti i nutrienti di cui i gatti hanno bisogno. La pelle del tacchino è molto grassa e può causare disturbi digestivi o persino una pancreatite, e la pelle dell’arrosto può contenere aglio o erbe aromatiche. Le ossa di tacchino possono scheggiarsi e causare soffocamento od ostruzioni.",
+    "pt": "A Cats Protection diz que o peru cozinhado e simples pode ser dado como guloseima ocasional, mas não com regularidade, porque o peru sozinho não tem todos os nutrientes de que os gatos precisam. A pele do peru tem muita gordura e pode causar problemas digestivos ou até pancreatite, e a pele assada pode ter alho ou ervas aromáticas. Os ossos de peru podem lascar e causar engasgamento ou obstruções."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "de": "Geben Sie zuerst ein kleines Stück. Bekommt Ihre Katze danach Erbrechen oder Durchfall, hören Sie auf und fragen Sie Ihren Tierarzt. Hat Ihre Katze Putenknochen, Füllung oder Bratensoße mit Zwiebeln oder Knoblauch gefressen, rufen Sie sofort Ihren Tierarzt an.",
     "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou a la diarrhée ensuite, arrêtez et demandez conseil à votre vétérinaire. S’il a mangé des os de dinde, de la farce ou un jus de cuisson contenant de l’oignon ou de l’ail, appelez immédiatement votre vétérinaire.",
     "es": "Ofrécele primero un trocito. Si después tu gato tiene vómitos o diarrea, deja de dárselo y consulta a tu veterinario. Si tu gato ha comido huesos de pavo, relleno o salsa con cebolla o ajo, llama a tu veterinario enseguida.",
-    "it": "Offrigli prima un pezzetto. Se poi il tuo gatto vomita o ha la diarrea, smetti e chiedi al veterinario. Se ha mangiato ossa di tacchino, ripieno o sugo con cipolla o aglio, chiama subito il veterinario."
+    "it": "Offrigli prima un pezzetto. Se poi il tuo gatto vomita o ha la diarrea, smetti e chiedi al veterinario. Se ha mangiato ossa di tacchino, ripieno o sugo con cipolla o aglio, chiama subito il veterinario.",
+    "pt": "Começa por oferecer um pedacinho. Se o teu gato tiver vómitos ou diarreia depois, para e pergunta ao teu veterinário. Se o teu gato comeu ossos de peru, recheio ou molho com cebola ou alho, liga imediatamente ao teu veterinário."
   },
   "serving": {
     "en": "Plain cooked meat with no bones, skin or seasoning; a small amount, counted in the daily food.",
@@ -57,7 +63,8 @@
     "de": "Gegartes Fleisch pur, ohne Knochen, Haut und Gewürze; eine kleine Menge, die zur täglichen Futtermenge zählt.",
     "fr": "Viande cuite nature, sans os, sans peau ni assaisonnement ; une petite quantité, comptée dans la ration quotidienne.",
     "es": "Carne cocinada sin nada añadido, sin huesos, piel ni condimentos; una pequeña cantidad, contada dentro de su comida diaria.",
-    "it": "Carne cotta e semplice, senza ossa, pelle né condimenti; una piccola quantità, calcolata nella razione giornaliera."
+    "it": "Carne cotta e semplice, senza ossa, pelle né condimenti; una piccola quantità, calcolata nella razione giornaliera.",
+    "pt": "Carne cozinhada simples, sem ossos, pele nem temperos; uma pequena quantidade, contada na comida do dia."
   },
   "child": {
     "en": "A little plain turkey with no bones can be a cat treat. The skin and gravy stay on your plate.",
@@ -65,7 +72,8 @@
     "de": "Ein bisschen Putenfleisch ohne alles und ohne Knochen kann ein Leckerli für Katzen sein. Die Haut und die Soße bleiben auf deinem Teller.",
     "fr": "Un peu de dinde nature sans os peut être une friandise pour chat. La peau et la sauce restent dans ton assiette.",
     "es": "Un poco de pavo sin nada añadido y sin huesos puede ser un premio para gatos. La piel y la salsa se quedan en tu plato.",
-    "it": "Un po’ di tacchino semplice e senza ossa può essere un premio per gatti. La pelle e il sugo restano nel tuo piatto."
+    "it": "Un po’ di tacchino semplice e senza ossa può essere un premio per gatti. La pelle e il sugo restano nel tuo piatto.",
+    "pt": "Um bocadinho de peru simples e sem ossos pode ser uma guloseima para o gato. A pele e o molho ficam no teu prato."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "de": "Dürfen Katzen Putenhaut fressen?",
         "fr": "Les chats peuvent-ils manger de la peau de dinde ?",
         "es": "¿Pueden los gatos comer piel de pavo?",
-        "it": "I gatti possono mangiare la pelle del tacchino?"
+        "it": "I gatti possono mangiare la pelle del tacchino?",
+        "pt": "Os gatos podem comer pele de peru?"
       },
       "a": {
         "en": "It's best not to. Turkey skin is high in fat and can cause digestive upset or even pancreatitis, and it may have touched seasoning or garlic.",
@@ -83,7 +92,8 @@
         "de": "Besser nicht. Putenhaut ist sehr fettreich und kann Verdauungsbeschwerden oder sogar eine Pankreatitis auslösen, und sie kann mit Gewürzen oder Knoblauch in Berührung gekommen sein.",
         "fr": "Mieux vaut s’en abstenir. La peau de dinde est très grasse et peut provoquer des troubles digestifs, voire une pancréatite, et elle a pu être en contact avec un assaisonnement ou de l’ail.",
         "es": "Mejor que no. La piel del pavo tiene mucha grasa y puede causar molestias digestivas o incluso pancreatitis, y puede haber estado en contacto con condimentos o ajo.",
-        "it": "Meglio di no. La pelle del tacchino è molto grassa e può causare disturbi digestivi o persino una pancreatite, e potrebbe essere stata a contatto con condimenti o aglio."
+        "it": "Meglio di no. La pelle del tacchino è molto grassa e può causare disturbi digestivi o persino una pancreatite, e potrebbe essere stata a contatto con condimenti o aglio.",
+        "pt": "É melhor não. A pele do peru tem muita gordura e pode causar problemas digestivos ou até pancreatite, e pode ter estado em contacto com temperos ou alho."
       }
     }
   ],
@@ -168,6 +178,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "88511a90bc109a8ffc7108059c37c8ad3684f89a167de7cb0125ccb11855ce66"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e0986495b476e6c23170898e13078eed84eef75eeba20fb6d44120025fe75c1f"
     }
   }
 }

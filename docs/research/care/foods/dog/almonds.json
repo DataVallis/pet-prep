@@ -7,7 +7,8 @@
     "de": "Mandeln",
     "fr": "Amandes",
     "es": "Almendras",
-    "it": "Mandorle"
+    "it": "Mandorle",
+    "pt": "Amêndoas"
   },
   "question": {
     "en": "Can dogs eat almonds?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Hunde Mandeln fressen?",
     "fr": "Les chiens peuvent-ils manger des amandes ?",
     "es": "¿Pueden los perros comer almendras?",
-    "it": "I cani possono mangiare le mandorle?"
+    "it": "I cani possono mangiare le mandorle?",
+    "pt": "Os cães podem comer amêndoas?"
   },
   "url_slug": {
     "en": "almonds",
@@ -23,7 +25,8 @@
     "de": "mandeln",
     "fr": "amandes",
     "es": "almendras",
-    "it": "mandorle"
+    "it": "mandorle",
+    "pt": "amendoas"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nein, besser nicht. Mandeln sind nicht so gefährlich wie Macadamianüsse, aber sie sind fettreich und können Erbrechen, Durchfall und möglicherweise eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen. Ganze Mandeln können außerdem stecken bleiben, besonders bei kleinen Hunden.",
     "fr": "Non, mieux vaut éviter. Les amandes ne sont pas aussi dangereuses que les noix de macadamia, mais elles sont grasses et peuvent provoquer des vomissements, de la diarrhée et parfois une pancréatite. Entières, elles peuvent aussi rester coincées, surtout chez les petits chiens.",
     "es": "No, mejor que no. Las almendras no son tan peligrosas como las nueces de macadamia, pero son grasas y pueden causar vómitos, diarrea y posiblemente pancreatitis. Las almendras enteras también pueden quedarse atascadas, sobre todo en perros pequeños.",
-    "it": "Meglio di no. Le mandorle non sono pericolose quanto le noci di macadamia, ma sono grasse e possono causare vomito, diarrea e forse pancreatite. Le mandorle intere possono anche rimanere bloccate, soprattutto nei cani di piccola taglia."
+    "it": "Meglio di no. Le mandorle non sono pericolose quanto le noci di macadamia, ma sono grasse e possono causare vomito, diarrea e forse pancreatite. Le mandorle intere possono anche rimanere bloccate, soprattutto nei cani di piccola taglia.",
+    "pt": "Não, é melhor não. As amêndoas não são tão perigosas como as nozes de macadâmia, mas são gordas e podem causar vómitos, diarreia e, possivelmente, pancreatite. As amêndoas inteiras também podem ficar presas, sobretudo nos cães pequenos."
   },
   "why": {
     "en": "Almonds, like most nuts, are high in fat, which can upset the stomach and put a dog at risk of pancreatitis. Whole almonds can block the food pipe, intestines or windpipe, especially in small breeds. Salted and flavoured almonds bring extra risks from salt and seasonings.",
@@ -40,7 +44,8 @@
     "de": "Mandeln sind wie die meisten Nüsse sehr fettreich; das kann den Magen verstimmen und das Risiko einer Pankreatitis erhöhen. Ganze Mandeln können Speiseröhre, Darm oder Luftröhre blockieren, besonders bei kleinen Rassen. Gesalzene und aromatisierte Mandeln bringen zusätzliche Risiken durch Salz und Gewürze mit sich.",
     "fr": "Comme la plupart des fruits à coque, les amandes sont riches en graisses, ce qui peut dérégler l’estomac et exposer le chien à une pancréatite. Entières, elles peuvent obstruer l’œsophage, l’intestin ou la trachée, surtout chez les petites races. Les amandes salées ou aromatisées ajoutent les risques liés au sel et aux assaisonnements.",
     "es": "Las almendras, como la mayoría de los frutos secos, tienen mucha grasa, que puede sentar mal al estómago y exponer al perro a una pancreatitis. Las almendras enteras pueden obstruir el esófago, el intestino o la tráquea, sobre todo en razas pequeñas. Las almendras saladas y aromatizadas suponen riesgos añadidos por la sal y los condimentos.",
-    "it": "Le mandorle, come la maggior parte della frutta a guscio, sono ricche di grassi, che possono disturbare lo stomaco ed esporre il cane al rischio di pancreatite. Le mandorle intere possono ostruire l’esofago, l’intestino o la trachea, soprattutto nelle razze piccole. Le mandorle salate e aromatizzate comportano rischi in più per il sale e i condimenti."
+    "it": "Le mandorle, come la maggior parte della frutta a guscio, sono ricche di grassi, che possono disturbare lo stomaco ed esporre il cane al rischio di pancreatite. Le mandorle intere possono ostruire l’esofago, l’intestino o la trachea, soprattutto nelle razze piccole. Le mandorle salate e aromatizzate comportano rischi in più per il sale e i condimenti.",
+    "pt": "As amêndoas, como a maioria dos frutos secos, têm muita gordura, que pode perturbar o estômago e pôr o cão em risco de pancreatite. As amêndoas inteiras podem obstruir o esófago, os intestinos ou a traqueia, sobretudo nas raças pequenas. As amêndoas salgadas ou aromatizadas trazem riscos extra por causa do sal e dos temperos."
   },
   "signs": {
     "en": [
@@ -78,6 +83,12 @@
       "Diarrea",
       "Mal di pancia, nausea o poca energia (possibile pancreatite)",
       "Soffocamento o segni di un’ostruzione"
+    ],
+    "pt": [
+      "Vómitos",
+      "Diarreia",
+      "Dor de barriga, náuseas ou pouca energia (possível pancreatite)",
+      "Engasgamento ou sinais de obstrução"
     ]
   },
   "what_to_do": {
@@ -86,7 +97,8 @@
     "de": "Ein oder zwei Mandeln sind meist kein Grund zur Panik: Achten Sie bei Ihrem Hund auf Erbrechen, Durchfall oder Bauchschmerzen. Rufen Sie Ihren Tierarzt an, wenn Ihr Hund viele Mandeln oder aromatisierte Mandeln gefressen hat, zu ersticken scheint oder eines dieser Anzeichen zeigt.",
     "fr": "Une ou deux amandes ne justifient généralement pas de paniquer : surveillez les vomissements, la diarrhée ou les douleurs au ventre. Appelez votre vétérinaire si votre chien a mangé beaucoup d’amandes ou des amandes aromatisées, semble s’étouffer ou présente l’un de ces signes.",
     "es": "Una o dos almendras no suelen ser motivo de pánico: vigila si tu perro tiene vómitos, diarrea o dolor de barriga. Llama a tu veterinario si tu perro ha comido muchas almendras o almendras aromatizadas, parece estar atragantándose o muestra alguno de estos síntomas.",
-    "it": "Una o due mandorle di solito non sono motivo di panico: controlla se il tuo cane ha vomito, diarrea o mal di pancia. Chiama il veterinario se ha mangiato molte mandorle o mandorle aromatizzate, se sembra soffocare o se mostra uno di questi sintomi."
+    "it": "Una o due mandorle di solito non sono motivo di panico: controlla se il tuo cane ha vomito, diarrea o mal di pancia. Chiama il veterinario se ha mangiato molte mandorle o mandorle aromatizzate, se sembra soffocare o se mostra uno di questi sintomi.",
+    "pt": "Uma ou duas amêndoas normalmente não são motivo para pânico: vigia se o teu cão tem vómitos, diarreia ou dor de barriga. Liga ao teu veterinário se o teu cão comeu muitas amêndoas ou amêndoas aromatizadas, parecer estar engasgado ou mostrar algum destes sinais."
   },
   "serving": null,
   "child": {
@@ -95,7 +107,8 @@
     "de": "Mandeln sind ein Snack für Menschen. Hunde können sie schwer verdauen, und sie können ihnen Bauchweh machen. Gib lieber ein Hundeleckerli!",
     "fr": "Les amandes, c’est un en-cas pour les humains. Les chiens les digèrent mal et elles peuvent leur donner mal au ventre. Donne-leur plutôt une friandise pour chien !",
     "es": "Las almendras son un tentempié para personas. A los perros les cuesta digerirlas y les pueden sentar mal a la barriga. ¡Mejor dale un premio para perros!",
-    "it": "Le mandorle sono uno snack per le persone. Per i cani sono difficili da digerire e possono far venire mal di pancia. Dagli invece un premio per cani!"
+    "it": "Le mandorle sono uno snack per le persone. Per i cani sono difficili da digerire e possono far venire mal di pancia. Dagli invece un premio per cani!",
+    "pt": "As amêndoas são um petisco para pessoas. São difíceis de digerir para os cães e podem fazer-lhes doer a barriga. Dá antes uma guloseima para cães!"
   },
   "faq": [
     {
@@ -105,7 +118,8 @@
         "de": "Sind Mandeln so gefährlich wie Macadamianüsse?",
         "fr": "Les amandes sont-elles aussi dangereuses que les noix de macadamia ?",
         "es": "¿Las almendras son tan peligrosas como las nueces de macadamia?",
-        "it": "Le mandorle sono pericolose quanto le noci di macadamia?"
+        "it": "Le mandorle sono pericolose quanto le noci di macadamia?",
+        "pt": "As amêndoas são tão perigosas como as nozes de macadâmia?"
       },
       "a": {
         "en": "No. Macadamia nuts are toxic to dogs; almonds are a problem mainly because of their fat and the risk of blockage.",
@@ -113,7 +127,8 @@
         "de": "Nein. Macadamianüsse sind für Hunde giftig; Mandeln sind vor allem wegen ihres Fettgehalts und der Gefahr einer Blockade ein Problem.",
         "fr": "Non. Les noix de macadamia sont toxiques pour les chiens ; les amandes posent surtout problème à cause de leurs graisses et du risque d’obstruction.",
         "es": "No. Las nueces de macadamia son tóxicas para los perros; las almendras son un problema sobre todo por su grasa y por el riesgo de obstrucción.",
-        "it": "No. Le noci di macadamia sono tossiche per i cani; le mandorle sono un problema soprattutto per i grassi e per il rischio di ostruzione."
+        "it": "No. Le noci di macadamia sono tossiche per i cani; le mandorle sono un problema soprattutto per i grassi e per il rischio di ostruzione.",
+        "pt": "Não. As nozes de macadâmia são tóxicas para os cães; as amêndoas são um problema sobretudo pela gordura e pelo risco de obstrução."
       }
     },
     {
@@ -123,7 +138,8 @@
         "de": "Mein Hund hat eine Mandel gefressen. Was nun?",
         "fr": "Mon chien a mangé une amande. Que faire ?",
         "es": "Mi perro se ha comido una almendra. ¿Y ahora qué?",
-        "it": "Il mio cane ha mangiato una mandorla. E adesso?"
+        "it": "Il mio cane ha mangiato una mandorla. E adesso?",
+        "pt": "O meu cão comeu uma amêndoa. E agora?"
       },
       "a": {
         "en": "Don't panic. Watch for tummy upset and call your vet if signs appear.",
@@ -131,7 +147,8 @@
         "de": "Keine Panik. Achten Sie auf Magen-Darm-Beschwerden und rufen Sie Ihren Tierarzt an, wenn Anzeichen auftreten.",
         "fr": "Pas de panique. Surveillez les troubles digestifs et appelez votre vétérinaire si des signes apparaissent.",
         "es": "Que no cunda el pánico. Vigila si tiene molestias de barriga y llama a tu veterinario si aparecen síntomas.",
-        "it": "Niente panico. Controlla se ha disturbi di pancia e chiama il veterinario se compaiono sintomi."
+        "it": "Niente panico. Controlla se ha disturbi di pancia e chiama il veterinario se compaiono sintomi.",
+        "pt": "Não entres em pânico. Vigia se tem a barriga perturbada e liga ao teu veterinário se aparecerem sinais."
       }
     }
   ],
@@ -223,6 +240,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "32c05a73dbde1f0d8b19d45b7a4c85d770beef5c97f9fe54205e87f222bf8d6c"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "27ab5343c0e86f80859b7128b5ce7d31c30fa7506c2642cab290f8c85a3c1707"
     }
   }
 }

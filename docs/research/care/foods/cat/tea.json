@@ -7,7 +7,8 @@
     "de": "Tee",
     "fr": "Thé",
     "es": "Té",
-    "it": "Tè"
+    "it": "Tè",
+    "pt": "Chá"
   },
   "question": {
     "en": "Can cats drink tea?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Katzen Tee trinken?",
     "fr": "Les chats peuvent-ils boire du thé ?",
     "es": "¿Pueden los gatos beber té?",
-    "it": "I gatti possono bere il tè?"
+    "it": "I gatti possono bere il tè?",
+    "pt": "Os gatos podem beber chá?"
   },
   "url_slug": {
     "en": "tea",
@@ -23,7 +25,8 @@
     "de": "tee",
     "fr": "the",
     "es": "te",
-    "it": "te"
+    "it": "te",
+    "pt": "cha"
   },
   "level": "toxic",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nein. Viele Teesorten enthalten Koffein, und Katzen reagieren empfindlicher auf Koffein als Menschen. Teebeutel sind besonders riskant. Teilen Sie Ihren Tee nicht und rufen Sie Ihren Tierarzt an, wenn Ihre Katze auf einem Teebeutel kaut oder koffeinhaltigen Tee trinkt.",
     "fr": "Non. Beaucoup de thés contiennent de la caféine, et les chats y sont plus sensibles que les humains. Les sachets de thé sont particulièrement risqués. Ne partagez pas votre thé, et appelez votre vétérinaire si votre chat mâchouille un sachet ou boit du thé contenant de la caféine.",
     "es": "No. Muchos tés contienen cafeína, y los gatos son más sensibles a la cafeína que las personas. Las bolsitas de té son especialmente peligrosas. No compartas tu té y llama a tu veterinario si tu gato mordisquea una bolsita de té o bebe té con cafeína.",
-    "it": "No. Molti tè contengono caffeina, e i gatti sono più sensibili alla caffeina rispetto alle persone. Le bustine di tè sono particolarmente rischiose. Non condividere il tuo tè e chiama il veterinario se il tuo gatto mastica una bustina o beve tè con caffeina."
+    "it": "No. Molti tè contengono caffeina, e i gatti sono più sensibili alla caffeina rispetto alle persone. Le bustine di tè sono particolarmente rischiose. Non condividere il tuo tè e chiama il veterinario se il tuo gatto mastica una bustina o beve tè con caffeina.",
+    "pt": "Não. Muitos chás contêm cafeína, e os gatos são mais sensíveis à cafeína do que as pessoas. As saquetas de chá são especialmente perigosas. Não partilhes o teu chá e liga ao teu veterinário se o teu gato mastigar uma saqueta ou beber chá com cafeína."
   },
   "why": {
     "en": "Many teas contain caffeine. Cats are more sensitive to caffeine than people. Like chocolate, coffee and other caffeine-containing foods have high levels of stimulants called methylxanthines; caffeine speeds up the heart, makes cats restless and upsets the stomach.",
@@ -40,7 +44,8 @@
     "de": "Viele Teesorten enthalten Koffein. Katzen reagieren empfindlicher auf Koffein als Menschen. Wie Schokolade enthalten auch Kaffee und andere koffeinhaltige Lebensmittel große Mengen anregender Stoffe, sogenannter Methylxanthine; Koffein beschleunigt den Herzschlag, macht Katzen unruhig und schlägt auf den Magen.",
     "fr": "Beaucoup de thés contiennent de la caféine. Les chats sont plus sensibles à la caféine que les humains. Comme le chocolat, le café et les autres aliments contenant de la caféine renferment beaucoup de stimulants appelés méthylxanthines ; la caféine accélère le cœur, rend les chats agités et dérange l’estomac.",
     "es": "Muchos tés contienen cafeína. Los gatos son más sensibles a la cafeína que las personas. Al igual que el chocolate, el café y otros alimentos con cafeína tienen niveles altos de unos estimulantes llamados metilxantinas; la cafeína acelera el corazón, pone nerviosos a los gatos y les sienta mal al estómago.",
-    "it": "Molti tè contengono caffeina. I gatti sono più sensibili alla caffeina rispetto alle persone. Come il cioccolato, anche il caffè e gli altri alimenti che contengono caffeina hanno alte concentrazioni di sostanze stimolanti chiamate metilxantine: la caffeina accelera il battito cardiaco, rende i gatti irrequieti e disturba lo stomaco."
+    "it": "Molti tè contengono caffeina. I gatti sono più sensibili alla caffeina rispetto alle persone. Come il cioccolato, anche il caffè e gli altri alimenti che contengono caffeina hanno alte concentrazioni di sostanze stimolanti chiamate metilxantine: la caffeina accelera il battito cardiaco, rende i gatti irrequieti e disturba lo stomaco.",
+    "pt": "Muitos chás contêm cafeína. Os gatos são mais sensíveis à cafeína do que as pessoas. Tal como o chocolate, o café e outros alimentos com cafeína têm níveis elevados de estimulantes chamados metilxantinas; a cafeína acelera o coração, deixa os gatos agitados e faz mal ao estômago."
   },
   "signs": {
     "en": [
@@ -78,6 +83,12 @@
       "Iperattività",
       "Disturbi di stomaco",
       "Battito cardiaco accelerato o alterazioni del ritmo cardiaco"
+    ],
+    "pt": [
+      "Agitação, nervosismo, não querer ficar quieto",
+      "Hiperatividade",
+      "Mal-estar de estômago",
+      "Batimento cardíaco acelerado ou alterações do ritmo cardíaco"
     ]
   },
   "what_to_do": {
@@ -86,7 +97,8 @@
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was Ihre Katze geschluckt hat (Getränk, Kaffeepulver, Bohnen, Teebeutel oder Tabletten), wie viel und wann. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce que votre chat a avalé (boisson, café moulu, grains, sachet de thé ou comprimés), en quelle quantité et à quelle heure. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
     "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Anota qué ha tragado tu gato (bebida, posos, granos, bolsita de té o comprimidos), cuánto y cuándo. No esperes a que aparezcan síntomas y no intentes hacer vomitar a tu gato en casa.",
-    "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha ingerito il tuo gatto (bevanda, fondi di caffè, chicchi, bustina di tè o compresse), quanto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa."
+    "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha ingerito il tuo gatto (bevanda, fondi di caffè, chicchi, bustina di tè o compresse), quanto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
+    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Toma nota do que o teu gato engoliu (bebida, borras, grãos, saqueta de chá ou comprimidos), da quantidade e de quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa."
   },
   "serving": null,
   "child": {
@@ -95,7 +107,8 @@
     "de": "Tee ist für Menschen. Halte Tassen und benutzte Teebeutel von deiner Katze fern und sag einem Erwachsenen Bescheid, wenn sie trotzdem drankommt.",
     "fr": "Le thé, c’est pour les humains. Garde les tasses et les sachets usagés loin de ton chat, et préviens un adulte s’il y touche.",
     "es": "El té es para las personas. Mantén las tazas y las bolsitas usadas lejos de tu gato, y avisa a un adulto si las alcanza.",
-    "it": "Il tè è per le persone. Tieni tazze e bustine usate lontane dal micio, e dillo a un adulto se ci mette il muso."
+    "it": "Il tè è per le persone. Tieni tazze e bustine usate lontane dal micio, e dillo a un adulto se ci mette il muso.",
+    "pt": "O chá é para as pessoas. Mantém as chávenas e as saquetas usadas longe do gatinho e avisa um adulto se ele mexer nelas."
   },
   "faq": [
     {
@@ -105,7 +118,8 @@
         "de": "Sind Teebeutel gefährlich?",
         "fr": "Les sachets de thé sont-ils dangereux ?",
         "es": "¿Son peligrosas las bolsitas de té?",
-        "it": "Le bustine di tè sono pericolose?"
+        "it": "Le bustine di tè sono pericolose?",
+        "pt": "As saquetas de chá são perigosas?"
       },
       "a": {
         "en": "Yes. Pet Poison Helpline warns that eating tea bags could cause serious toxicity in cats. Throw used tea bags away where your cat can't reach them.",
@@ -113,7 +127,8 @@
         "de": "Ja. Die Pet Poison Helpline warnt, dass das Fressen von Teebeuteln bei Katzen zu einer schweren Vergiftung führen könnte. Werfen Sie benutzte Teebeutel so weg, dass Ihre Katze nicht herankommt.",
         "fr": "Oui. Pet Poison Helpline avertit que manger des sachets de thé peut provoquer une intoxication grave chez le chat. Jetez les sachets usagés là où votre chat ne peut pas les atteindre.",
         "es": "Sí. Pet Poison Helpline advierte de que comerse bolsitas de té podría causar una intoxicación grave en los gatos. Tira las bolsitas usadas donde tu gato no pueda alcanzarlas.",
-        "it": "Sì. Pet Poison Helpline avverte che mangiare bustine di tè potrebbe causare un’intossicazione grave nei gatti. Getta le bustine usate dove il tuo gatto non può arrivare."
+        "it": "Sì. Pet Poison Helpline avverte che mangiare bustine di tè potrebbe causare un’intossicazione grave nei gatti. Getta le bustine usate dove il tuo gatto non può arrivare.",
+        "pt": "Sim. A Pet Poison Helpline avisa que comer saquetas de chá pode causar uma intoxicação grave nos gatos. Deita as saquetas usadas fora num sítio onde o teu gato não lhes chegue."
       }
     }
   ],
@@ -212,6 +227,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "57295d818988f7f62d1cd5865761012d24b030075d40b787336567af3f88e73b"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9267c436040d2e292a7d5b797cc624693354cfbfa68f8de900e54dd5fae46925"
     }
   }
 }

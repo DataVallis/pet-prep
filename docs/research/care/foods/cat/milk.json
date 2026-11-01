@@ -7,7 +7,8 @@
     "de": "Milch",
     "fr": "Lait",
     "es": "Leche",
-    "it": "Latte"
+    "it": "Latte",
+    "pt": "Leite"
   },
   "question": {
     "en": "Can cats drink milk?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Katzen Milch trinken?",
     "fr": "Les chats peuvent-ils boire du lait ?",
     "es": "¿Pueden los gatos beber leche?",
-    "it": "I gatti possono bere il latte?"
+    "it": "I gatti possono bere il latte?",
+    "pt": "Os gatos podem beber leite?"
   },
   "url_slug": {
     "en": "milk",
@@ -23,7 +25,8 @@
     "de": "milch",
     "fr": "lait",
     "es": "leche",
-    "it": "latte"
+    "it": "latte",
+    "pt": "leite"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Besser nicht. Die meisten erwachsenen Katzen vertragen keine Laktose, daher kann Kuhmilch Erbrechen, Durchfall und Bauchschmerzen verursachen. Milch bringt Katzen keinen Nutzen; zum Trinken brauchen sie nur frisches Wasser.",
     "fr": "Mieux vaut s’en abstenir. La plupart des chats adultes sont intolérants au lactose : le lait de vache peut provoquer des vomissements, de la diarrhée et des maux de ventre. Le lait n’apporte rien aux chats ; pour boire, ils n’ont besoin que d’eau fraîche.",
     "es": "Es mejor no dársela. La mayoría de los gatos adultos son intolerantes a la lactosa, así que la leche de vaca puede causarles vómitos, diarrea y dolor de estómago. La leche no les aporta ningún beneficio; lo único que necesitan beber es agua fresca.",
-    "it": "Meglio di no. La maggior parte dei gatti adulti è intollerante al lattosio, quindi il latte vaccino può causare vomito, diarrea e mal di stomaco. Il latte non porta alcun beneficio ai gatti: per bere, a loro basta l’acqua fresca."
+    "it": "Meglio di no. La maggior parte dei gatti adulti è intollerante al lattosio, quindi il latte vaccino può causare vomito, diarrea e mal di stomaco. Il latte non porta alcun beneficio ai gatti: per bere, a loro basta l’acqua fresca.",
+    "pt": "É melhor não. A maioria dos gatos adultos é intolerante à lactose, por isso o leite de vaca pode causar vómitos, diarreia e dores de estômago. Os gatos não ganham nada com o leite; a água fresca é tudo o que precisam de beber."
   },
   "why": {
     "en": "Milk contains lactose, a sugar that needs the enzyme lactase to be digested. Cats have very little lactase, so most are lactose intolerant and dairy often upsets their stomach. Kittens drink their mother's milk, but orphaned kittens need special kitten milk, not cow's milk.",
@@ -40,7 +44,8 @@
     "de": "Milch enthält Laktose, einen Zucker, für dessen Verdauung das Enzym Laktase nötig ist. Katzen haben nur sehr wenig Laktase, daher sind die meisten laktoseintolerant, und Milchprodukte schlagen ihnen oft auf den Magen. Kätzchen trinken die Milch ihrer Mutter, verwaiste Kätzchen brauchen aber spezielle Kätzchenmilch, keine Kuhmilch.",
     "fr": "Le lait contient du lactose, un sucre qui a besoin d’une enzyme, la lactase, pour être digéré. Les chats ont très peu de lactase : la plupart sont donc intolérants au lactose et les produits laitiers leur dérangent souvent l’estomac. Les chatons boivent le lait de leur mère, mais les chatons orphelins ont besoin d’un lait spécial pour chatons, pas de lait de vache.",
     "es": "La leche contiene lactosa, un azúcar que necesita la enzima lactasa para digerirse. Los gatos tienen muy poca lactasa, así que la mayoría son intolerantes a la lactosa y los lácteos a menudo les sientan mal al estómago. Los gatitos beben la leche de su madre, pero los gatitos huérfanos necesitan leche especial para gatitos, no leche de vaca.",
-    "it": "Il latte contiene lattosio, uno zucchero che per essere digerito ha bisogno dell’enzima lattasi. I gatti hanno pochissima lattasi, quindi la maggior parte è intollerante al lattosio e i latticini spesso disturbano il loro stomaco. I gattini bevono il latte della mamma, ma i gattini orfani hanno bisogno di un latte speciale per gattini, non di latte vaccino."
+    "it": "Il latte contiene lattosio, uno zucchero che per essere digerito ha bisogno dell’enzima lattasi. I gatti hanno pochissima lattasi, quindi la maggior parte è intollerante al lattosio e i latticini spesso disturbano il loro stomaco. I gattini bevono il latte della mamma, ma i gattini orfani hanno bisogno di un latte speciale per gattini, non di latte vaccino.",
+    "pt": "O leite contém lactose, um açúcar que precisa da enzima lactase para ser digerido. Os gatos têm muito pouca lactase, por isso a maioria é intolerante à lactose e os laticínios fazem-lhes muitas vezes mal ao estômago. Os gatinhos bebem o leite da mãe, mas os gatinhos órfãos precisam de leite especial para gatinhos, e não de leite de vaca."
   },
   "signs": {
     "en": [
@@ -72,6 +77,11 @@
       "Vomito",
       "Diarrea",
       "Mal di stomaco"
+    ],
+    "pt": [
+      "Vómitos",
+      "Diarreia",
+      "Dores de estômago"
     ]
   },
   "what_to_do": {
@@ -80,7 +90,8 @@
     "de": "Hat Ihre Katze Milch getrunken und klingen Erbrechen oder Durchfall nicht ab oder wirkt sie krank, fragen Sie Ihren Tierarzt um Rat.",
     "fr": "Si votre chat a bu du lait et a des vomissements ou une diarrhée qui ne passent pas, ou s’il semble malade, demandez conseil à votre vétérinaire.",
     "es": "Si tu gato ha bebido leche y tiene vómitos o diarrea que no se le pasan, o parece encontrarse mal, consulta a tu veterinario.",
-    "it": "Se il tuo gatto ha bevuto del latte e ha vomito o diarrea che non passano, o sembra stare male, chiedi consiglio al veterinario."
+    "it": "Se il tuo gatto ha bevuto del latte e ha vomito o diarrea che non passano, o sembra stare male, chiedi consiglio al veterinario.",
+    "pt": "Se o teu gato bebeu leite e tem vómitos ou diarreia que não passam, ou parece doente, contacta o teu veterinário para pedir conselho."
   },
   "serving": {
     "en": "If you want to offer milk, choose a milk made for cats (usually low-lactose or lactose-free) and count its calories in your cat's daily food.",
@@ -88,7 +99,8 @@
     "de": "Wenn Sie Milch anbieten möchten, wählen Sie eine Milch für Katzen (meist laktosearm oder laktosefrei) und rechnen Sie ihre Kalorien in die tägliche Futtermenge Ihrer Katze ein.",
     "fr": "Si vous souhaitez proposer du lait à votre chat, choisissez un lait conçu pour les chats (généralement pauvre en lactose ou sans lactose) et comptez ses calories dans sa ration quotidienne.",
     "es": "Si quieres ofrecerle leche, elige una leche hecha para gatos (normalmente baja en lactosa o sin lactosa) y cuenta sus calorías dentro de la comida diaria de tu gato.",
-    "it": "Se vuoi offrire del latte, scegline uno formulato per gatti (di solito a basso contenuto di lattosio o senza lattosio) e conta le sue calorie nella razione giornaliera del tuo gatto."
+    "it": "Se vuoi offrire del latte, scegline uno formulato per gatti (di solito a basso contenuto di lattosio o senza lattosio) e conta le sue calorie nella razione giornaliera del tuo gatto.",
+    "pt": "Se quiseres oferecer leite, escolhe um leite próprio para gatos (normalmente com pouca ou nenhuma lactose) e conta as calorias dele na comida diária do teu gato."
   },
   "child": {
     "en": "Cartoon cats love milk, but real cats get a sore tummy from it. Fresh water is kitty's best drink!",
@@ -96,7 +108,8 @@
     "de": "Katzen im Zeichentrickfilm lieben Milch, aber echte Katzen bekommen davon Bauchweh. Frisches Wasser ist das beste Getränk für deine Katze!",
     "fr": "Les chats des dessins animés adorent le lait, mais les vrais chats en ont mal au ventre. L’eau fraîche est la meilleure boisson pour ton chat !",
     "es": "A los gatos de los dibujos les encanta la leche, pero a los gatos de verdad les da dolor de barriga. ¡El agua fresca es su mejor bebida!",
-    "it": "I gatti dei cartoni animati adorano il latte, ma ai gatti veri fa venire il mal di pancia. L’acqua fresca è la bevanda migliore per il micio!"
+    "it": "I gatti dei cartoni animati adorano il latte, ma ai gatti veri fa venire il mal di pancia. L’acqua fresca è la bevanda migliore per il micio!",
+    "pt": "Os gatos dos desenhos animados adoram leite, mas os gatos a sério ficam com dor de barriga. A água fresca é a melhor bebida para o gatinho!"
   },
   "faq": [
     {
@@ -106,7 +119,8 @@
         "de": "Sind erwachsene Katzen laktoseintolerant?",
         "fr": "Les chats adultes sont-ils intolérants au lactose ?",
         "es": "¿Los gatos adultos son intolerantes a la lactosa?",
-        "it": "I gatti adulti sono intolleranti al lattosio?"
+        "it": "I gatti adulti sono intolleranti al lattosio?",
+        "pt": "Os gatos adultos são intolerantes à lactose?"
       },
       "a": {
         "en": "Yes, most are. Cats lack significant amounts of lactase, the enzyme that breaks down lactose in milk, so milk can cause vomiting, diarrhoea and stomach pain.",
@@ -114,7 +128,8 @@
         "de": "Ja, die meisten. Katzen haben kaum Laktase, das Enzym, das die Laktose in der Milch spaltet. Deshalb kann Milch Erbrechen, Durchfall und Bauchschmerzen verursachen.",
         "fr": "Oui, pour la plupart. Les chats ont très peu de lactase, l’enzyme qui dégrade le lactose du lait ; le lait peut donc provoquer des vomissements, de la diarrhée et des maux de ventre.",
         "es": "Sí, la mayoría. Los gatos no tienen cantidades importantes de lactasa, la enzima que descompone la lactosa de la leche, así que la leche puede causarles vómitos, diarrea y dolor de estómago.",
-        "it": "Sì, quasi tutti. I gatti hanno poca lattasi, l’enzima che scompone il lattosio del latte, quindi il latte può causare vomito, diarrea e mal di stomaco."
+        "it": "Sì, quasi tutti. I gatti hanno poca lattasi, l’enzima che scompone il lattosio del latte, quindi il latte può causare vomito, diarrea e mal di stomaco.",
+        "pt": "Sim, a maioria é. Os gatos não têm quantidades significativas de lactase, a enzima que decompõe a lactose do leite, por isso o leite pode causar vómitos, diarreia e dores de estômago."
       }
     },
     {
@@ -124,7 +139,8 @@
         "de": "Was sollen Kätzchen trinken?",
         "fr": "Que doivent boire les chatons ?",
         "es": "¿Qué deben beber los gatitos?",
-        "it": "Che cosa devono bere i gattini?"
+        "it": "Che cosa devono bere i gattini?",
+        "pt": "O que devem beber os gatinhos?"
       },
       "a": {
         "en": "Kittens need their mother's milk. If a kitten has to be bottle-fed, give only special kitten milk, because other milks don't have the right balance of nutrients.",
@@ -132,7 +148,8 @@
         "de": "Kätzchen brauchen die Milch ihrer Mutter. Muss ein Kätzchen mit der Flasche aufgezogen werden, geben Sie nur spezielle Kätzchenmilch, denn andere Milchsorten haben nicht die richtige Nährstoffzusammensetzung.",
         "fr": "Les chatons ont besoin du lait de leur mère. Si un chaton doit être nourri au biberon, donnez-lui uniquement un lait spécial pour chatons, car les autres laits n’ont pas le bon équilibre de nutriments.",
         "es": "Los gatitos necesitan la leche de su madre. Si hay que dar biberón a un gatito, dale solo leche especial para gatitos, porque las demás leches no tienen el equilibrio de nutrientes adecuado.",
-        "it": "I gattini hanno bisogno del latte della mamma. Se un gattino deve essere allattato con il biberon, dagli solo un latte speciale per gattini, perché gli altri tipi di latte non hanno il giusto equilibrio di nutrienti."
+        "it": "I gattini hanno bisogno del latte della mamma. Se un gattino deve essere allattato con il biberon, dagli solo un latte speciale per gattini, perché gli altri tipi di latte non hanno il giusto equilibrio di nutrienti.",
+        "pt": "Os gatinhos precisam do leite da mãe. Se um gatinho tiver de ser alimentado a biberão, dá-lhe apenas leite especial para gatinhos, porque os outros leites não têm o equilíbrio certo de nutrientes."
       }
     },
     {
@@ -142,7 +159,8 @@
         "de": "Ist Katzenmilch aus dem Handel in Ordnung?",
         "fr": "Le lait pour chats du commerce convient-il ?",
         "es": "¿Está bien la leche para gatos de la tienda?",
-        "it": "Il latte per gatti del negozio va bene?"
+        "it": "Il latte per gatti del negozio va bene?",
+        "pt": "Posso dar o leite para gatos que se vende nas lojas?"
       },
       "a": {
         "en": "Milk made for cats usually has much less lactose or none. It still has calories, so count it in your cat's daily food. Your cat only needs water to drink.",
@@ -150,7 +168,8 @@
         "de": "Milch für Katzen enthält meist deutlich weniger Laktose oder gar keine. Sie hat trotzdem Kalorien, also rechnen Sie sie in die tägliche Futtermenge Ihrer Katze ein. Zum Trinken braucht Ihre Katze nur Wasser.",
         "fr": "Le lait conçu pour les chats contient généralement beaucoup moins de lactose, ou pas du tout. Il apporte quand même des calories : comptez-le dans la ration quotidienne de votre chat. Pour boire, votre chat n’a besoin que d’eau.",
         "es": "La leche hecha para gatos suele tener mucha menos lactosa o ninguna. Aun así tiene calorías, así que cuéntala dentro de la comida diaria de tu gato. Tu gato solo necesita agua para beber.",
-        "it": "Il latte formulato per gatti di solito contiene molto meno lattosio o non ne contiene affatto. Ha comunque delle calorie, quindi contalo nella razione giornaliera del tuo gatto. Per bere, al tuo gatto basta l’acqua."
+        "it": "Il latte formulato per gatti di solito contiene molto meno lattosio o non ne contiene affatto. Ha comunque delle calorie, quindi contalo nella razione giornaliera del tuo gatto. Per bere, al tuo gatto basta l’acqua.",
+        "pt": "O leite próprio para gatos tem normalmente muito menos lactose ou nenhuma. Mesmo assim, tem calorias, por isso conta-o na comida diária do teu gato. O teu gato só precisa de beber água."
       }
     }
   ],
@@ -242,6 +261,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "912ee55cc0aea7c1cbfee37aeabda064264f3a3b8ff8517c2d090bfcfc1c7190"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "798e52132f080fa2c550f870c5e3ad8638cecb227150bdc8acfd3378371c081c"
     }
   }
 }

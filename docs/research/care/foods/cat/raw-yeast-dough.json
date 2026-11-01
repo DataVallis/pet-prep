@@ -7,7 +7,8 @@
     "de": "Roher Hefeteig",
     "fr": "Pâte à pain crue",
     "es": "Masa cruda con levadura",
-    "it": "Impasto crudo lievitato"
+    "it": "Impasto crudo lievitato",
+    "pt": "Massa crua com fermento"
   },
   "question": {
     "en": "Can cats eat raw yeast dough?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Katzen rohen Hefeteig fressen?",
     "fr": "Les chats peuvent-ils manger de la pâte à pain crue ?",
     "es": "¿Pueden los gatos comer masa cruda con levadura?",
-    "it": "I gatti possono mangiare l’impasto crudo lievitato?"
+    "it": "I gatti possono mangiare l’impasto crudo lievitato?",
+    "pt": "Os gatos podem comer massa crua com fermento?"
   },
   "url_slug": {
     "en": "raw-yeast-dough",
@@ -23,7 +25,8 @@
     "de": "roher-hefeteig",
     "fr": "pate-a-pain-crue",
     "es": "masa-cruda-con-levadura",
-    "it": "impasto-crudo-lievitato"
+    "it": "impasto-crudo-lievitato",
+    "pt": "massa-crua-com-fermento"
   },
   "level": "toxic",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nein. Roher Hefeteig ist für Katzen auf zwei Arten gefährlich: Er kann im Magen weiter aufgehen und eine Blockade verursachen, und die Hefe bildet Alkohol, der für Katzen giftig ist. Stellen Sie aufgehenden Teig außer Reichweite und rufen Sie Ihren Tierarzt an, wenn Ihre Katze davon frisst.",
     "fr": "Non. La pâte crue à la levure est doublement dangereuse pour les chats : elle peut continuer à gonfler dans l’estomac et provoquer une occlusion, et la levure produit de l’alcool, toxique pour les chats. Gardez la pâte qui lève hors de portée et appelez votre vétérinaire si votre chat en mange.",
     "es": "No. La masa cruda con levadura es peligrosa para los gatos por dos motivos: puede seguir creciendo en el estómago y causar una obstrucción, y la levadura produce alcohol, que es tóxico para los gatos. Mantén la masa que está subiendo fuera de su alcance y llama a tu veterinario si tu gato se come un poco.",
-    "it": "No. L’impasto crudo con lievito è pericoloso per i gatti in due modi: può continuare a gonfiarsi nello stomaco e causare un’ostruzione, e il lievito produce alcol, che è tossico per i gatti. Tieni l’impasto in lievitazione fuori dalla portata del tuo gatto e chiama il veterinario se ne mangia."
+    "it": "No. L’impasto crudo con lievito è pericoloso per i gatti in due modi: può continuare a gonfiarsi nello stomaco e causare un’ostruzione, e il lievito produce alcol, che è tossico per i gatti. Tieni l’impasto in lievitazione fuori dalla portata del tuo gatto e chiama il veterinario se ne mangia.",
+    "pt": "Não. A massa crua com fermento é perigosa para os gatos de duas formas: pode continuar a crescer no estômago e causar uma obstrução, e o fermento produz álcool, que é tóxico para os gatos. Guarda a massa a levedar fora do alcance e liga ao teu veterinário se o teu gato comer alguma."
   },
   "why": {
     "en": "Raw dough contains some alcohol and produces carbon dioxide. Once swallowed, the yeast keeps working in the stomach: the dough expands and can cause an obstruction, while the alcohol it produces is absorbed into the blood. Cats are especially sensitive to alcohol.",
@@ -40,7 +44,8 @@
     "de": "Roher Teig enthält etwas Alkohol und bildet Kohlendioxid. Nach dem Verschlucken arbeitet die Hefe im Magen weiter: Der Teig dehnt sich aus und kann einen Verschluss verursachen, während der entstehende Alkohol ins Blut aufgenommen wird. Katzen reagieren besonders empfindlich auf Alkohol.",
     "fr": "La pâte crue contient un peu d’alcool et produit du dioxyde de carbone. Une fois avalée, la levure continue d’agir dans l’estomac : la pâte gonfle et peut provoquer une obstruction, tandis que l’alcool produit passe dans le sang. Les chats sont particulièrement sensibles à l’alcool.",
     "es": "La masa cruda contiene algo de alcohol y produce dióxido de carbono. Una vez tragada, la levadura sigue actuando en el estómago: la masa crece y puede causar una obstrucción, mientras que el alcohol que produce pasa a la sangre. Los gatos son especialmente sensibles al alcohol.",
-    "it": "L’impasto crudo contiene un po’ di alcol e produce anidride carbonica. Una volta ingerito, il lievito continua a lavorare nello stomaco: l’impasto si gonfia e può causare un’ostruzione, mentre l’alcol prodotto viene assorbito nel sangue. I gatti sono particolarmente sensibili all’alcol."
+    "it": "L’impasto crudo contiene un po’ di alcol e produce anidride carbonica. Una volta ingerito, il lievito continua a lavorare nello stomaco: l’impasto si gonfia e può causare un’ostruzione, mentre l’alcol prodotto viene assorbito nel sangue. I gatti sono particolarmente sensibili all’alcol.",
+    "pt": "A massa crua contém algum álcool e produz dióxido de carbono. Depois de a massa ser engolida, o fermento continua a trabalhar no estômago: a massa cresce e pode causar uma obstrução, enquanto o álcool produzido é absorvido para o sangue. Os gatos são especialmente sensíveis ao álcool."
   },
   "signs": {
     "en": [
@@ -78,6 +83,12 @@
       "Tenta di vomitare senza riuscirci",
       "Andatura barcollante o aria confusa",
       "Debolezza o sonnolenza insolite"
+    ],
+    "pt": [
+      "Barriga inchada e distendida",
+      "Tentativas de vomitar sem deitar nada cá para fora",
+      "Andar cambaleante ou ar confuso",
+      "Fraqueza ou sonolência fora do normal"
     ]
   },
   "what_to_do": {
@@ -86,7 +97,8 @@
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, wie viel Teig Ihre Katze gefressen hat und wann. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez la quantité de pâte mangée et l’heure. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
     "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Anota cuánta masa ha comido tu gato y cuándo. No esperes a que aparezcan síntomas y no intentes hacer vomitar a tu gato en casa.",
-    "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota quanto impasto ha mangiato il tuo gatto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa."
+    "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota quanto impasto ha mangiato il tuo gatto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
+    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Toma nota de quanta massa o teu gato comeu e de quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa."
   },
   "serving": null,
   "child": {
@@ -95,7 +107,8 @@
     "de": "Brotteig soll in einer Schüssel aufgehen, nicht im Bauch. Halte Teig von deiner Katze fern und sag einem Erwachsenen Bescheid, wenn sie davon frisst.",
     "fr": "La pâte à pain doit lever dans un saladier, pas dans un ventre ! Garde la pâte loin de ton chat et préviens un adulte s’il en mange.",
     "es": "La masa de pan tiene que subir en un bol, no en una barriga. Mantenla lejos de tu gato y avisa a un adulto si se come un poco.",
-    "it": "L’impasto del pane deve lievitare in una ciotola, non in una pancia. Tienilo lontano dal micio e dillo a un adulto se ne mangia un po’."
+    "it": "L’impasto del pane deve lievitare in una ciotola, non in una pancia. Tienilo lontano dal micio e dillo a un adulto se ne mangia un po’.",
+    "pt": "A massa do pão cresce numa tigela, não numa barriga. Mantém a massa longe do gatinho e avisa um adulto se ele comer um bocadinho."
   },
   "faq": [
     {
@@ -105,7 +118,8 @@
         "de": "Warum ist roher Teig gefährlich, wenn er selbst kein Gift ist?",
         "fr": "Pourquoi la pâte crue est-elle dangereuse si ce n’est pas un poison en soi ?",
         "es": "¿Por qué es peligrosa la masa cruda si no es un veneno en sí misma?",
-        "it": "Perché l’impasto crudo è pericoloso se di per sé non è un veleno?"
+        "it": "Perché l’impasto crudo è pericoloso se di per sé non è un veleno?",
+        "pt": "Porque é que a massa crua é perigosa, se não é um veneno?"
       },
       "a": {
         "en": "Raw dough contains live yeast. In the stomach it keeps rising and producing alcohol, so it can both cause a blockage and lead to alcohol poisoning.",
@@ -113,7 +127,8 @@
         "de": "Roher Teig enthält lebende Hefe. Im Magen geht er weiter auf und bildet Alkohol. So kann er sowohl eine Blockade als auch eine Alkoholvergiftung verursachen.",
         "fr": "La pâte crue contient de la levure vivante. Dans l’estomac, elle continue de lever et de produire de l’alcool : elle peut donc à la fois provoquer une occlusion et entraîner une intoxication à l’alcool.",
         "es": "La masa cruda contiene levadura viva. En el estómago sigue subiendo y produciendo alcohol, así que puede causar una obstrucción y también una intoxicación por alcohol.",
-        "it": "L’impasto crudo contiene lievito vivo. Nello stomaco continua a lievitare e a produrre alcol, quindi può sia causare un’ostruzione sia portare a un’intossicazione da alcol."
+        "it": "L’impasto crudo contiene lievito vivo. Nello stomaco continua a lievitare e a produrre alcol, quindi può sia causare un’ostruzione sia portare a un’intossicazione da alcol.",
+        "pt": "A massa crua tem fermento vivo. No estômago continua a crescer e a produzir álcool, por isso pode causar uma obstrução e também uma intoxicação por álcool."
       }
     }
   ],
@@ -211,6 +226,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "73999516a035047ec79a902e2a2fbad306e41c370a08a5674b9ddedb43196f1c"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5a1b7cba82fc0cc3acfbfa859e77b88c3ac6c8a53cde3c201bf427c0c9ea9862"
     }
   }
 }
