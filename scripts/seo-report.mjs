@@ -45,12 +45,31 @@ function months(arg) {
   return { cur: range(y, m), prev: m === 1 ? range(y - 1, 12) : range(y, m - 1) };
 }
 
-const CARE = "/(care|skrb|ratgeber)/"; // care knowledge paths in every live language (pageSlugs.care)
-const COLORING = "/(coloring-pages|pobarvanke|ausmalbilder)";
+/**
+ * Slugs of a page in every live language, read from the hreflang alternates of its English URL in
+ * petprep.si/sitemap.xml (languages are added hourly, so a fixed list would miss new ones).
+ */
+async function slugsOf(enPath, fallback) {
+  try {
+    const xml = await (await fetch("https://petprep.si/sitemap.xml")).text();
+    const block = xml.split("<url>").find((b) => b.includes(`<loc>https://petprep.si${enPath}</loc>`));
+    const hrefs = [...(block ?? "").matchAll(/href="([^"]+)"/g)].map((m) => new URL(m[1]).pathname.split("/").filter(Boolean).pop());
+    const slugs = [...new Set(hrefs.filter(Boolean))];
+    return slugs.length ? slugs : fallback;
+  } catch {
+    return fallback;
+  }
+}
+let CARE = "/(care|skrb|ratgeber)/";
+let COLORING = "/(coloring-pages|pobarvanke|ausmalbilder)";
 
 async function main() {
   const [arg, outDir = "seo-report"] = process.argv.slice(2);
   const { cur, prev } = months(arg);
+  const esc = (x) => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  CARE = `/(${(await slugsOf("/care", ["care", "skrb", "ratgeber"])).map(esc).join("|")})/`;
+  COLORING = `/(${(await slugsOf("/coloring-pages", ["coloring-pages", "pobarvanke", "ausmalbilder"])).map(esc).join("|")})`;
+  console.error(`care pages: ${CARE} · colouring pages: ${COLORING}`);
   const access = await token();
   const sites = process.env.GSC_SITE ? [process.env.GSC_SITE] : ["sc-domain:petprep.si", "https://petprep.si/"];
   let site = null;
