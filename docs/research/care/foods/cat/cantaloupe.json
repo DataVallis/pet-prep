@@ -1,0 +1,102 @@
+{
+  "slug": "cantaloupe",
+  "species": "cat",
+  "name": {
+    "en": "Cantaloupe",
+    "sl": "Kantalupa"
+  },
+  "question": {
+    "en": "Can cats eat cantaloupe?",
+    "sl": "Ali lahko mačke jedo melono kantalupo?"
+  },
+  "url_slug": {
+    "en": "cantaloupe",
+    "sl": "kantalupa"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a small piece of cantaloupe is fine as an occasional treat. The ASPCA lists cantaloupe as non-toxic to cats, but cats are meat eaters and don't need fruit, and any plant can upset the stomach, so keep it to a tiny extra.",
+    "sl": "Da, majhen košček kantalupe je v redu kot občasen priboljšek. ASPCA kantalupo navaja kot nestrupeno za mačke, vendar so mačke mesojede in sadja ne potrebujejo, vsaka rastlina pa lahko razdraži želodec, zato naj bo le majhen dodatek."
+  },
+  "why": {
+    "en": "The ASPCA lists true cantaloupe (Cucumis melo) as non-toxic to cats. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
+    "sl": "ASPCA pravo kantalupo (Cucumis melo) navaja kot nestrupeno za mačke. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Offer a small piece first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+    "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "A small piece now and then, counted in your cat's daily food.",
+    "sl": "Občasno majhen košček, upoštevan v dnevnem obroku."
+  },
+  "child": {
+    "en": "A tiny piece of cantaloupe is OK for a cat now and then. Cats mostly need meat, so fruit is only a small extra.",
+    "sl": "Majhen košček kantalupe je za muco občasno v redu. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Do cats need fruit?",
+        "sl": "Ali mačke potrebujejo sadje?"
+      },
+      "a": {
+        "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
+        "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC61",
+      "quote": "Additional Common Names: cantaloupe"
+    },
+    {
+      "id": "KC61",
+      "quote": "Scientific Name: Cucumis melo"
+    },
+    {
+      "id": "KC61",
+      "quote": "Non-Toxicity: Non-Toxic to Dogs, Non-Toxic to Cats, Non-Toxic to Horses"
+    },
+    {
+      "id": "KC33",
+      "quote": "Cats are obligate carnivores, which means that they rely on nutrients found only in animal products."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats are carnivores (meat eaters) because they require specific nutrients found in meat such as Taurine and Arginine."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats don’t need fruit or vegetables as part of their diet"
+    },
+    {
+      "id": "KC49",
+      "quote": "Stick to a small number and don’t let treats exceed 10-15% of your cat’s daily calorie allowance."
+    },
+    {
+      "id": "KC62",
+      "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."
+    }
+  ],
+  "related": [
+    "watermelon",
+    "bananas",
+    "strawberries"
+  ],
+  "updated": "2026-11-01",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b6a0b34d526e8d51ea5e426437f9f916312869a109f5dce44d8d5538bef7347e"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "805d6dc177abda93b56accc312c4d075202f4618692842552642ded8bfed2a09"
+    }
+  }
+}

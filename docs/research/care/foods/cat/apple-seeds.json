@@ -1,0 +1,136 @@
+{
+  "slug": "apple-seeds",
+  "species": "cat",
+  "name": {
+    "en": "Apple seeds",
+    "sl": "Jabolčne pečke"
+  },
+  "question": {
+    "en": "Can cats eat apple seeds?",
+    "sl": "Ali lahko mačke jedo jabolčne pečke?"
+  },
+  "url_slug": {
+    "en": "apple-seeds",
+    "sl": "jabolcne-pecke"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "No. Apple seeds should not be given to cats: they contain cyanide, and seeds and cores can cause choking or a gut blockage. Poisoning mainly matters when many seeds are eaten, so call your vet if your cat ate many seeds or chewed apple stems or leaves.",
+    "sl": "Ne. Jabolčnih pečk mačkam ne dajajte: vsebujejo cianid, pečke in peščišče pa lahko povzročijo dušenje ali zamašitev črevesja. Zastrupitev je predvsem skrb, ko žival poje veliko pečk, zato pokličite veterinarja, če je mačka pojedla veliko pečk ali grizljala peclje ali liste jablane."
+  },
+  "why": {
+    "en": "NC State's veterinary hospital lists apple seeds under \"Toxic to pets: do not feed!\" on its page for cats and dogs, and the ASPCA lists the apple plant as toxic to cats because its stems, leaves and seeds contain cyanide (as cyanogenic glycosides). Pet Poison Helpline adds that the core and seeds can cause choking and intestinal obstruction, but that a pet would need to eat massive amounts of seeds for the cyanide to be a concern. We follow the stricter advice: don't give them.",
+    "sl": "Veterinarska bolnišnica univerze NC State na svoji strani za mačke in pse navaja jabolčne pečke pod »Strupeno za živali: ne hranite!«, ASPCA pa rastlino jablane navaja kot strupeno za mačke, ker njeni peclji, listi in pečke vsebujejo cianid (v obliki cianogenih glikozidov). Pet Poison Helpline dodaja, da lahko peščišče in pečke povzročijo dušenje in zamašitev črevesja, za zastrupitev s cianidom pa bi morala žival pojesti ogromno pečk. Sledimo strožjemu nasvetu: ne dajajte jih."
+  },
+  "signs": {
+    "en": [
+      "Brick-red gums",
+      "Dilated pupils",
+      "Difficulty breathing",
+      "Panting",
+      "Shock"
+    ],
+    "sl": [
+      "Opečnato rdeče dlesni",
+      "Razširjene zenice",
+      "Težave z dihanjem",
+      "Sopihanje",
+      "Šok"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline as soon as possible if your cat ate many apple seeds, chewed apple stems or leaves, or shows any of these signs.",
+    "sl": "Čim prej se obrnite na veterinarja ali center za zastrupitve živali, če je mačka pojedla veliko jabolčnih pečk, grizljala peclje ali liste jablane ali kaže katerega od teh znakov."
+  },
+  "serving": null,
+  "child": {
+    "en": "Apple seeds are not for cats. If kitty finds some, tell a grown-up.",
+    "sl": "Jabolčne pečke niso za muce. Če jih muca najde, povej odraslemu."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "My cat swallowed one apple seed. What now?",
+        "sl": "Muca je pogoltnila eno jabolčno pečko. Kaj zdaj?"
+      },
+      "a": {
+        "en": "Pet Poison Helpline says a pet would need to eat massive amounts of apple seeds for them to be a concern. If you are unsure or see any signs, contact your vet.",
+        "sl": "Pet Poison Helpline navaja, da bi morala žival pojesti ogromno jabolčnih pečk, da bi bile skrb vzbujajoče. Če niste prepričani ali opazite znake, se obrnite na veterinarja."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC63",
+      "quote": "Cats and Dogs"
+    },
+    {
+      "id": "KC63",
+      "quote": "Toxic To Pets: Do Not Feed!"
+    },
+    {
+      "id": "KC63",
+      "quote": "Apple seeds, peach & plum pits"
+    },
+    {
+      "id": "KC58",
+      "quote": "Toxicity: Toxic to Dogs, Toxic to Cats, Toxic to Horses"
+    },
+    {
+      "id": "KC58",
+      "quote": "Cyanogenic glycosides"
+    },
+    {
+      "id": "KC58",
+      "quote": "Stems, leaves, seeds contain cyanide, particularly toxic in the process of wilting: brick red mucous membranes"
+    },
+    {
+      "id": "KC58",
+      "quote": "dilated pupils, difficulty breathing, panting, shock."
+    },
+    {
+      "id": "KC58",
+      "quote": "If you suspect your pet may have ingested a potentially toxic substance"
+    },
+    {
+      "id": "KC58",
+      "quote": "call the ASPCA Poison Control at (888) 426-4435 or contact your local veterinarian as soon as possible."
+    },
+    {
+      "id": "KC64",
+      "quote": "Be sure to remove the core and the seeds of the apple before giving it to your pet,"
+    },
+    {
+      "id": "KC64",
+      "quote": "as these pose risks for choking and intestinal obstruction."
+    },
+    {
+      "id": "KC64",
+      "quote": "The seeds also contain a small amount of cyanide, which is toxic to humans and animals alike."
+    },
+    {
+      "id": "KC64",
+      "quote": "However, your pet would need to ingest massive amounts of apple seeds to be of concern."
+    }
+  ],
+  "related": [
+    "apples",
+    "cherries",
+    "peaches",
+    "plums",
+    "apricots"
+  ],
+  "updated": "2026-11-01",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5e251aa924235fd47b01726a6f48f59bce27be98ea1b8a92e526806652b04971"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "49a035f878142a73948a8d0c4b96aebed80ffdb416b56344de75c5f4df80848c"
+    }
+  }
+}

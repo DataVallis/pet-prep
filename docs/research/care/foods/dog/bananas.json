@@ -1,0 +1,114 @@
+{
+  "slug": "bananas",
+  "species": "dog",
+  "name": {
+    "en": "Bananas",
+    "sl": "Banane"
+  },
+  "question": {
+    "en": "Can dogs eat bananas?",
+    "sl": "Ali lahko psi jedo banane?"
+  },
+  "url_slug": {
+    "en": "bananas",
+    "sl": "banane"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, as an occasional treat. Bananas are high in potassium, vitamin B6 and vitamin C, but they are high in sugar, so they are best kept as a treat rather than part of your dog's daily diet. Always remove the peel.",
+    "sl": "Da, kot občasen priboljšek. Banane vsebujejo veliko kalija, vitamina B6 in vitamina C, a tudi veliko sladkorja, zato naj bodo priboljšek in ne del psove vsakodnevne prehrane. Vedno odstranite olupek."
+  },
+  "why": {
+    "en": "Too much banana can add extra calories and may cause digestive upset in some dogs. Banana peels are not toxic to dogs, but they are hard to digest and could cause stomach discomfort or, in some cases, an intestinal blockage.",
+    "sl": "Preveč banane lahko doda odvečne kalorije in pri nekaterih psih povzroči prebavne težave. Bananin olupek za pse ni strupen, a je težko prebavljiv in lahko povzroči neugodje v prebavilih ali v nekaterih primerih zaporo črevesja."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "A banana peel could cause stomach discomfort or, in some cases, an intestinal blockage, so always remove it. If you are unsure how much banana suits your dog's size, age or health, ask your vet.",
+    "sl": "Bananin olupek lahko povzroči neugodje v prebavilih ali v nekaterih primerih zaporo črevesja, zato ga vedno odstranite. Če niste prepričani, koliko banane je primerno za velikost, starost ali zdravje vašega psa, vprašajte veterinarja."
+  },
+  "serving": {
+    "en": "Peeled, in bite-sized pieces, mashed into food or frozen; as an occasional treat.",
+    "sl": "Olupljena, v majhnih koščkih, pretlačena v hrano ali zamrznjena; kot občasen priboljšek."
+  },
+  "child": {
+    "en": "Dogs can have a small piece of banana as a treat! A grown-up takes the peel off first.",
+    "sl": "Psi lahko kot priboljšek dobijo košček banane! Odrasel najprej odstrani olupek."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat banana peels?",
+        "sl": "Ali lahko psi jedo bananine olupke?"
+      },
+      "a": {
+        "en": "No. Peels are not toxic, but they are hard to digest, so always remove the peel first.",
+        "sl": "Ne. Olupki niso strupeni, a so težko prebavljivi, zato vedno najprej odstranite olupek."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD90",
+      "quote": "If you’ve ever asked, “Can dogs eat bananas?” the answer is yes."
+    },
+    {
+      "id": "KD90",
+      "quote": "They’re high in potassium, vitamin B6, and vitamin C, all of which contribute to your dog’s overall well-being."
+    },
+    {
+      "id": "KD90",
+      "quote": "bananas are best reserved as an occasional treat rather than a regular part of your dog’s daily diet."
+    },
+    {
+      "id": "KD90",
+      "quote": "Feeding too much banana can contribute to excess calorie intake and may cause digestive upset in some dogs."
+    },
+    {
+      "id": "KD90",
+      "quote": "Banana peels aren’t toxic to dogs, but they are difficult to digest."
+    },
+    {
+      "id": "KD90",
+      "quote": "If a dog eats a peel, it could lead to gastrointestinal discomfort or, in some cases, an intestinal blockage."
+    },
+    {
+      "id": "KD90",
+      "quote": "To reduce the risk of digestive problems, always remove the peel before offering bananas to your dog."
+    },
+    {
+      "id": "KD90",
+      "quote": "Mash banana into your dog’s food"
+    },
+    {
+      "id": "KD90",
+      "quote": "Freeze a peeled banana and cut it into bite-sized pieces"
+    },
+    {
+      "id": "KD89",
+      "quote": "because of their high sugar content, bananas should be given as a treat, not part of your dog’s main diet."
+    },
+    {
+      "id": "KD90",
+      "quote": "If you’re unsure how much banana is appropriate for your dog’s size, age, or health status, consult your veterinarian"
+    }
+  ],
+  "related": [
+    "apples",
+    "blueberries",
+    "watermelon"
+  ],
+  "updated": "2026-11-01",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "394fa99240acbaccbb286d8e90e5283c2861e7f17571274acb39970a01c766d6"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e9a0ace5c36ff19dba57f48f215571267bf777eeb79b149401e6de53b226adc5"
+    }
+  }
+}

@@ -393,6 +393,183 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "apple-seeds",
+      "species": "cat",
+      "level": "dangerous",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Apple seeds",
+        "sl": "Jabolčne pečke"
+      },
+      "question": {
+        "en": "Can cats eat apple seeds?",
+        "sl": "Ali lahko mačke jedo jabolčne pečke?"
+      },
+      "url_slug": {
+        "en": "apple-seeds",
+        "sl": "jabolcne-pecke"
+      },
+      "answer": {
+        "en": "No. Apple seeds should not be given to cats: they contain cyanide, and seeds and cores can cause choking or a gut blockage. Poisoning mainly matters when many seeds are eaten, so call your vet if your cat ate many seeds or chewed apple stems or leaves.",
+        "sl": "Ne. Jabolčnih pečk mačkam ne dajajte: vsebujejo cianid, pečke in peščišče pa lahko povzročijo dušenje ali zamašitev črevesja. Zastrupitev je predvsem skrb, ko žival poje veliko pečk, zato pokličite veterinarja, če je mačka pojedla veliko pečk ali grizljala peclje ali liste jablane."
+      },
+      "why": {
+        "en": "NC State's veterinary hospital lists apple seeds under \"Toxic to pets: do not feed!\" on its page for cats and dogs, and the ASPCA lists the apple plant as toxic to cats because its stems, leaves and seeds contain cyanide (as cyanogenic glycosides). Pet Poison Helpline adds that the core and seeds can cause choking and intestinal obstruction, but that a pet would need to eat massive amounts of seeds for the cyanide to be a concern. We follow the stricter advice: don't give them.",
+        "sl": "Veterinarska bolnišnica univerze NC State na svoji strani za mačke in pse navaja jabolčne pečke pod »Strupeno za živali: ne hranite!«, ASPCA pa rastlino jablane navaja kot strupeno za mačke, ker njeni peclji, listi in pečke vsebujejo cianid (v obliki cianogenih glikozidov). Pet Poison Helpline dodaja, da lahko peščišče in pečke povzročijo dušenje in zamašitev črevesja, za zastrupitev s cianidom pa bi morala žival pojesti ogromno pečk. Sledimo strožjemu nasvetu: ne dajajte jih."
+      },
+      "signs": {
+        "en": [
+          "Brick-red gums",
+          "Dilated pupils",
+          "Difficulty breathing",
+          "Panting",
+          "Shock"
+        ],
+        "sl": [
+          "Opečnato rdeče dlesni",
+          "Razširjene zenice",
+          "Težave z dihanjem",
+          "Sopihanje",
+          "Šok"
+        ]
+      },
+      "what_to_do": {
+        "en": "Contact your vet or a pet poison helpline as soon as possible if your cat ate many apple seeds, chewed apple stems or leaves, or shows any of these signs.",
+        "sl": "Čim prej se obrnite na veterinarja ali center za zastrupitve živali, če je mačka pojedla veliko jabolčnih pečk, grizljala peclje ali liste jablane ali kaže katerega od teh znakov."
+      },
+      "serving": null,
+      "child": {
+        "en": "Apple seeds are not for cats. If kitty finds some, tell a grown-up.",
+        "sl": "Jabolčne pečke niso za muce. Če jih muca najde, povej odraslemu."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "My cat swallowed one apple seed. What now?",
+            "sl": "Muca je pogoltnila eno jabolčno pečko. Kaj zdaj?"
+          },
+          "a": {
+            "en": "Pet Poison Helpline says a pet would need to eat massive amounts of apple seeds for them to be a concern. If you are unsure or see any signs, contact your vet.",
+            "sl": "Pet Poison Helpline navaja, da bi morala žival pojesti ogromno jabolčnih pečk, da bi bile skrb vzbujajoče. Če niste prepričani ali opazite znake, se obrnite na veterinarja."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC63",
+        "KC63",
+        "KC63",
+        "KC58",
+        "KC58",
+        "KC58",
+        "KC58",
+        "KC58",
+        "KC58",
+        "KC64",
+        "KC64",
+        "KC64",
+        "KC64"
+      ],
+      "related": [
+        "apples",
+        "cherries",
+        "peaches",
+        "plums",
+        "apricots"
+      ],
+      "updated": "2026-11-01"
+    },
+    {
+      "slug": "apples",
+      "species": "cat",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Apples",
+        "sl": "Jabolka"
+      },
+      "question": {
+        "en": "Can cats eat apples?",
+        "sl": "Ali lahko mačke jedo jabolka?"
+      },
+      "url_slug": {
+        "en": "apples",
+        "sl": "jabolka"
+      },
+      "answer": {
+        "en": "Yes, a small piece of apple is fine now and then, as long as you remove the core, seeds and stem first. Cats are meat eaters and don't need fruit, so apple is only an occasional extra.",
+        "sl": "Da, majhen košček jabolka je občasno v redu, če prej odstranite peščišče, pečke in pecelj. Mačke so mesojede in sadja ne potrebujejo, zato je jabolko le občasen dodatek."
+      },
+      "why": {
+        "en": "NC State's veterinary hospital lists apple without seeds among healthy human-food treats for cats and dogs, and Pet Poison Helpline says apples are safe raw or cooked once the core and seeds are removed. The ASPCA lists the apple plant as toxic to cats because its stems, leaves and seeds contain cyanide. Cats are obligate carnivores, and any plant material can cause vomiting or stomach upset.",
+        "sl": "Veterinarska bolnišnica univerze NC State navaja jabolko brez pečk med zdravimi priboljški iz človeške hrane za mačke in pse, Pet Poison Helpline pa navaja, da so jabolka varna surova ali kuhana, ko odstranite peščišče in pečke. ASPCA rastlino jablane navaja kot strupeno za mačke, ker njeni peclji, listi in pečke vsebujejo cianid. Mačke so obvezni mesojedci, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Offer a small piece first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet. If your cat chewed apple seeds, stems or leaves, contact your vet or a pet poison helpline as soon as possible.",
+        "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem. Če je mačka grizljala jabolčne pečke, peclje ali liste, se čim prej obrnite na veterinarja ali center za zastrupitve živali."
+      },
+      "serving": {
+        "en": "Apple flesh only, raw or cooked, with the core, seeds and stem removed; a small piece now and then, counted in your cat's daily food.",
+        "sl": "Samo jabolčno meso, surovo ali kuhano, brez peščišča, pečk in peclja; občasno majhen košček, upoštevan v dnevnem obroku."
+      },
+      "child": {
+        "en": "A tiny piece of apple with no seeds can be a cat treat. Cats mostly need meat, so fruit is just a little extra.",
+        "sl": "Majhen košček jabolka brez pečk je lahko priboljšek za muco. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Why remove the core and seeds?",
+            "sl": "Zakaj odstraniti peščišče in pečke?"
+          },
+          "a": {
+            "en": "The core and seeds can cause choking or a blockage in the gut, and the seeds contain a small amount of cyanide.",
+            "sl": "Peščišče in pečke lahko povzročijo dušenje ali zamašitev črevesja, pečke pa vsebujejo tudi majhno količino cianida."
+          }
+        },
+        {
+          "q": {
+            "en": "Do cats need fruit?",
+            "sl": "Ali mačke potrebujejo sadje?"
+          },
+          "a": {
+            "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
+            "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC63",
+        "KC63",
+        "KC63",
+        "KC64",
+        "KC64",
+        "KC64",
+        "KC64",
+        "KC58",
+        "KC58",
+        "KC58",
+        "KC33",
+        "KC49",
+        "KC49",
+        "KC49",
+        "KC62"
+      ],
+      "related": [
+        "apple-seeds",
+        "bananas",
+        "strawberries",
+        "cherries"
+      ],
+      "updated": "2026-11-01"
+    },
+    {
       "slug": "apricots",
       "species": "cat",
       "level": "dangerous",
@@ -728,6 +905,79 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "bananas",
+      "species": "cat",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Bananas",
+        "sl": "Banane"
+      },
+      "question": {
+        "en": "Can cats eat bananas?",
+        "sl": "Ali lahko mačke jedo banane?"
+      },
+      "url_slug": {
+        "en": "bananas",
+        "sl": "banane"
+      },
+      "answer": {
+        "en": "Yes, a small piece of banana is fine as an occasional treat. The ASPCA lists banana as non-toxic to cats, but cats are meat eaters and don't need fruit, so keep it to a tiny extra.",
+        "sl": "Da, majhen košček banane je v redu kot občasen priboljšek. ASPCA banano navaja kot nestrupeno za mačke, vendar so mačke mesojede in sadja ne potrebujejo, zato naj bo le majhen dodatek."
+      },
+      "why": {
+        "en": "The ASPCA lists the banana plant as non-toxic to cats, and NC State's veterinary hospital lists banana among healthy human-food treats for cats and dogs, given in measured amounts and counted in the daily calories. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
+        "sl": "ASPCA rastlino banane navaja kot nestrupeno za mačke, veterinarska bolnišnica univerze NC State pa banano navaja med zdravimi priboljški iz človeške hrane za mačke in pse, ki jih dajemo v odmerjenih količinah in upoštevamo v dnevnem vnosu kalorij. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Offer a small piece first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+        "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "A small piece now and then, counted in your cat's daily food.",
+        "sl": "Občasno majhen košček, upoštevan v dnevnem obroku."
+      },
+      "child": {
+        "en": "A tiny bit of banana is OK for a cat now and then. Cats mostly need meat, so fruit is only a small extra.",
+        "sl": "Majhen košček banane je za muco občasno v redu. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Do cats need fruit?",
+            "sl": "Ali mačke potrebujejo sadje?"
+          },
+          "a": {
+            "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
+            "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC59",
+        "KC59",
+        "KC63",
+        "KC63",
+        "KC63",
+        "KC33",
+        "KC49",
+        "KC49",
+        "KC49",
+        "KC62"
+      ],
+      "related": [
+        "apples",
+        "strawberries",
+        "blueberries",
+        "watermelon"
+      ],
+      "updated": "2026-11-01"
+    },
+    {
       "slug": "beef",
       "species": "cat",
       "level": "small_amounts",
@@ -844,6 +1094,77 @@
         "cooked-bones"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "blueberries",
+      "species": "cat",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Blueberries",
+        "sl": "Borovnice"
+      },
+      "question": {
+        "en": "Can cats eat blueberries?",
+        "sl": "Ali lahko mačke jedo borovnice?"
+      },
+      "url_slug": {
+        "en": "blueberries",
+        "sl": "borovnice"
+      },
+      "answer": {
+        "en": "Yes, a few blueberries are fine as an occasional treat. A university vet hospital lists them among healthy human-food treats for cats and dogs, but cats are meat eaters and don't need fruit, so keep it to a small extra.",
+        "sl": "Da, nekaj borovnic je v redu kot občasen priboljšek. Univerzitetna veterinarska bolnišnica jih navaja med zdravimi priboljški iz človeške hrane za mačke in pse, vendar so mačke mesojede in sadja ne potrebujejo, zato naj bodo le majhen dodatek."
+      },
+      "why": {
+        "en": "NC State's veterinary hospital lists blueberries among healthy human-food treats for cats and dogs, given in measured amounts and counted in the daily calories. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
+        "sl": "Veterinarska bolnišnica univerze NC State borovnice navaja med zdravimi priboljški iz človeške hrane za mačke in pse, ki jih dajemo v odmerjenih količinah in upoštevamo v dnevnem vnosu kalorij. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Offer just a little first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+        "sl": "Najprej ponudite le malo. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "A few berries now and then, counted in your cat's daily food.",
+        "sl": "Občasno nekaj borovnic, upoštevanih v dnevnem obroku."
+      },
+      "child": {
+        "en": "A few blueberries can be a cat treat now and then. Cats mostly need meat, so fruit is only a small extra.",
+        "sl": "Nekaj borovnic je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Do cats need fruit?",
+            "sl": "Ali mačke potrebujejo sadje?"
+          },
+          "a": {
+            "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
+            "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC63",
+        "KC63",
+        "KC63",
+        "KC33",
+        "KC49",
+        "KC49",
+        "KC49",
+        "KC62"
+      ],
+      "related": [
+        "strawberries",
+        "cranberries",
+        "bananas",
+        "apples"
+      ],
+      "updated": "2026-11-01"
     },
     {
       "slug": "butter",
@@ -989,6 +1310,76 @@
         "fatty-meat"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "cantaloupe",
+      "species": "cat",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Cantaloupe",
+        "sl": "Kantalupa"
+      },
+      "question": {
+        "en": "Can cats eat cantaloupe?",
+        "sl": "Ali lahko mačke jedo melono kantalupo?"
+      },
+      "url_slug": {
+        "en": "cantaloupe",
+        "sl": "kantalupa"
+      },
+      "answer": {
+        "en": "Yes, a small piece of cantaloupe is fine as an occasional treat. The ASPCA lists cantaloupe as non-toxic to cats, but cats are meat eaters and don't need fruit, and any plant can upset the stomach, so keep it to a tiny extra.",
+        "sl": "Da, majhen košček kantalupe je v redu kot občasen priboljšek. ASPCA kantalupo navaja kot nestrupeno za mačke, vendar so mačke mesojede in sadja ne potrebujejo, vsaka rastlina pa lahko razdraži želodec, zato naj bo le majhen dodatek."
+      },
+      "why": {
+        "en": "The ASPCA lists true cantaloupe (Cucumis melo) as non-toxic to cats. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
+        "sl": "ASPCA pravo kantalupo (Cucumis melo) navaja kot nestrupeno za mačke. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Offer a small piece first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+        "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "A small piece now and then, counted in your cat's daily food.",
+        "sl": "Občasno majhen košček, upoštevan v dnevnem obroku."
+      },
+      "child": {
+        "en": "A tiny piece of cantaloupe is OK for a cat now and then. Cats mostly need meat, so fruit is only a small extra.",
+        "sl": "Majhen košček kantalupe je za muco občasno v redu. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Do cats need fruit?",
+            "sl": "Ali mačke potrebujejo sadje?"
+          },
+          "a": {
+            "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
+            "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC61",
+        "KC61",
+        "KC61",
+        "KC33",
+        "KC49",
+        "KC49",
+        "KC49",
+        "KC62"
+      ],
+      "related": [
+        "watermelon",
+        "bananas",
+        "strawberries"
+      ],
+      "updated": "2026-11-01"
     },
     {
       "slug": "cheese",
@@ -2469,6 +2860,92 @@
         "garlic"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "cranberries",
+      "species": "cat",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Cranberries",
+        "sl": "Brusnice"
+      },
+      "question": {
+        "en": "Can cats eat cranberries?",
+        "sl": "Ali lahko mačke jedo brusnice?"
+      },
+      "url_slug": {
+        "en": "cranberries",
+        "sl": "brusnice"
+      },
+      "answer": {
+        "en": "Yes, a few cranberries are fine as an occasional treat. Pet Poison Helpline calls cranberries pet safe, raw or processed, but dried cranberries, juice, sauce and jelly often have added sugar or sweeteners, so check the label for xylitol or grape ingredients first.",
+        "sl": "Da, nekaj brusnic je v redu kot občasen priboljšek. Pet Poison Helpline brusnice navaja kot varne za živali, surove ali predelane, vendar imajo suhe brusnice, sok, omaka in žele pogosto dodan sladkor ali sladila, zato najprej na deklaraciji preverite, ali vsebujejo ksilitol ali sestavine iz grozdja."
+      },
+      "why": {
+        "en": "Pet Poison Helpline, on a page about pet-safe fall foods that also names cats, says cranberries are pet safe both raw and processed. Dried cranberries, juice, sauce and jelly often contain added sugar or other sweeteners, and some products may contain toxic ingredients such as xylitol or grape derivatives. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
+        "sl": "Pet Poison Helpline na strani o jesenskih živilih, varnih za živali, kjer omenja tudi mačke, navaja, da so brusnice za živali varne, surove in predelane. Suhe brusnice, sok, omaka in žele pogosto vsebujejo dodan sladkor ali druga sladila, nekateri izdelki pa lahko vsebujejo strupene sestavine, kot sta ksilitol ali sestavine iz grozdja. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Offer just a little first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+        "sl": "Najprej ponudite le malo. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "A few berries now and then, counted in your cat's daily food. For dried cranberries, juice, sauce or jelly, check the label first for xylitol or grape ingredients.",
+        "sl": "Občasno nekaj brusnic, upoštevanih v dnevnem obroku. Pri suhih brusnicah, soku, omaki ali želeju najprej na deklaraciji preverite, ali vsebujejo ksilitol ali sestavine iz grozdja."
+      },
+      "child": {
+        "en": "A few cranberries can be a cat treat now and then. Ask a grown-up to check sweet cranberry snacks first.",
+        "sl": "Nekaj brusnic je lahko občasno priboljšek za muco. Sladke brusnične prigrizke naj najprej preveri odrasla oseba."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Are dried cranberries OK for cats?",
+            "sl": "Ali so suhe brusnice primerne za mačke?"
+          },
+          "a": {
+            "en": "Dried cranberries often have added sugar or sweeteners. Check the label first and skip any product with xylitol or grape ingredients.",
+            "sl": "Suhe brusnice imajo pogosto dodan sladkor ali sladila. Najprej preverite deklaracijo in ne dajajte izdelkov s ksilitolom ali sestavinami iz grozdja."
+          }
+        },
+        {
+          "q": {
+            "en": "Do cats need fruit?",
+            "sl": "Ali mačke potrebujejo sadje?"
+          },
+          "a": {
+            "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
+            "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC64",
+        "KC64",
+        "KC64",
+        "KC64",
+        "KC64",
+        "KC64",
+        "KC64",
+        "KC63",
+        "KC33",
+        "KC49",
+        "KC49",
+        "KC49",
+        "KC62"
+      ],
+      "related": [
+        "blueberries",
+        "grapes",
+        "raisins",
+        "strawberries"
+      ],
+      "updated": "2026-11-01"
     },
     {
       "slug": "energy-drinks",
@@ -6896,6 +7373,79 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "strawberries",
+      "species": "cat",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Strawberries",
+        "sl": "Jagode"
+      },
+      "question": {
+        "en": "Can cats eat strawberries?",
+        "sl": "Ali lahko mačke jedo jagode?"
+      },
+      "url_slug": {
+        "en": "strawberries",
+        "sl": "jagode"
+      },
+      "answer": {
+        "en": "Yes, a small piece of strawberry is fine as an occasional treat. The ASPCA lists strawberry as non-toxic to cats, but cats are meat eaters and don't need fruit, so keep it to a tiny extra.",
+        "sl": "Da, majhen košček jagode je v redu kot občasen priboljšek. ASPCA jagodo navaja kot nestrupeno za mačke, vendar so mačke mesojede in sadja ne potrebujejo, zato naj bo le majhen dodatek."
+      },
+      "why": {
+        "en": "The ASPCA lists the strawberry plant as non-toxic to cats, and NC State's veterinary hospital lists strawberry among healthy human-food treats for cats and dogs, given in measured amounts and counted in the daily calories. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
+        "sl": "ASPCA rastlino jagode navaja kot nestrupeno za mačke, veterinarska bolnišnica univerze NC State pa jagodo navaja med zdravimi priboljški iz človeške hrane za mačke in pse, ki jih dajemo v odmerjenih količinah in upoštevamo v dnevnem vnosu kalorij. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Offer a small piece first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+        "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "A small piece now and then, counted in your cat's daily food.",
+        "sl": "Občasno majhen košček, upoštevan v dnevnem obroku."
+      },
+      "child": {
+        "en": "A little piece of strawberry can be a cat treat now and then. Cats mostly need meat, so fruit is only a small extra.",
+        "sl": "Majhen košček jagode je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Do cats need fruit?",
+            "sl": "Ali mačke potrebujejo sadje?"
+          },
+          "a": {
+            "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
+            "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC60",
+        "KC60",
+        "KC63",
+        "KC63",
+        "KC63",
+        "KC33",
+        "KC49",
+        "KC49",
+        "KC49",
+        "KC62"
+      ],
+      "related": [
+        "blueberries",
+        "bananas",
+        "apples",
+        "watermelon"
+      ],
+      "updated": "2026-11-01"
+    },
+    {
       "slug": "tea",
       "species": "cat",
       "level": "toxic",
@@ -7556,6 +8106,77 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "watermelon",
+      "species": "cat",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Watermelon",
+        "sl": "Lubenica"
+      },
+      "question": {
+        "en": "Can cats eat watermelon?",
+        "sl": "Ali lahko mačke jedo lubenico?"
+      },
+      "url_slug": {
+        "en": "watermelon",
+        "sl": "lubenica"
+      },
+      "answer": {
+        "en": "Yes, a small piece of watermelon is fine as an occasional treat. A university vet hospital lists it among healthy human-food treats for cats and dogs, but cats are meat eaters and don't need fruit, so keep it to a small extra.",
+        "sl": "Da, majhen košček lubenice je v redu kot občasen priboljšek. Univerzitetna veterinarska bolnišnica jo navaja med zdravimi priboljški iz človeške hrane za mačke in pse, vendar so mačke mesojede in sadja ne potrebujejo, zato naj bo le majhen dodatek."
+      },
+      "why": {
+        "en": "NC State's veterinary hospital lists watermelon among healthy human-food treats for cats and dogs, given in measured amounts and counted in the daily calories. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
+        "sl": "Veterinarska bolnišnica univerze NC State lubenico navaja med zdravimi priboljški iz človeške hrane za mačke in pse, ki jih dajemo v odmerjenih količinah in upoštevamo v dnevnem vnosu kalorij. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Offer a small piece first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+        "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "A small piece now and then, counted in your cat's daily food.",
+        "sl": "Občasno majhen košček, upoštevan v dnevnem obroku."
+      },
+      "child": {
+        "en": "A little piece of watermelon can be a cat treat now and then. Cats mostly need meat, so fruit is only a small extra.",
+        "sl": "Majhen košček lubenice je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Do cats need fruit?",
+            "sl": "Ali mačke potrebujejo sadje?"
+          },
+          "a": {
+            "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
+            "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC63",
+        "KC63",
+        "KC63",
+        "KC33",
+        "KC49",
+        "KC49",
+        "KC49",
+        "KC62"
+      ],
+      "related": [
+        "cantaloupe",
+        "strawberries",
+        "bananas",
+        "blueberries"
+      ],
+      "updated": "2026-11-01"
+    },
+    {
       "slug": "yogurt",
       "species": "cat",
       "level": "not_recommended",
@@ -8159,6 +8780,184 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "apple-seeds",
+      "species": "dog",
+      "level": "dangerous",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Apple seeds",
+        "sl": "Jabolčne pečke"
+      },
+      "question": {
+        "en": "Can dogs eat apple seeds?",
+        "sl": "Ali lahko psi jedo jabolčne pečke?"
+      },
+      "url_slug": {
+        "en": "apple-seeds",
+        "sl": "jabolcne-pecke"
+      },
+      "answer": {
+        "en": "No, apple seeds should be avoided. They contain cyanide, and the core and stem around them could choke your dog. A small number of seeds is unlikely to cause harm, but remove the seeds and core before sharing apple.",
+        "sl": "Ne, jabolčnim pečkam se izogibajte. Vsebujejo cianid, ogrizek in pecelj okoli njih pa se lahko psu zataknejo v grlu. Majhno število pečk verjetno ne bo škodilo, a preden psu daste jabolko, odstranite pečke in ogrizek."
+      },
+      "why": {
+        "en": "The ASPCA lists the apple plant as toxic to dogs: its stems, leaves and seeds contain cyanide (from cyanogenic glycosides). AKC says a small number of seeds is unlikely to cause harm, and Pet Poison Helpline says a pet would need to eat massive amounts to be of concern. We follow the stricter view because the seeds contain cyanide and the core can also cause choking or intestinal obstruction.",
+        "sl": "ASPCA jablano navaja kot strupeno za pse: njeni peclji, listi in pečke vsebujejo cianid (iz cianogenih glikozidov). AKC pravi, da majhno število pečk verjetno ne bo škodilo, Pet Poison Helpline pa, da bi moral ljubljenček pojesti ogromne količine, da bi bilo zaskrbljujoče. Upoštevamo strožje stališče, ker pečke vsebujejo cianid, ogrizek pa lahko povzroči tudi dušenje ali zaporo črevesja."
+      },
+      "signs": {
+        "en": [
+          "Brick-red gums or other mucous membranes",
+          "Dilated pupils",
+          "Difficulty breathing, panting",
+          "Shock",
+          "Signs of digestive trouble or blockage"
+        ],
+        "sl": [
+          "Opečnato rdeče dlesni ali druge sluznice",
+          "Razširjene zenice",
+          "Težko dihanje, sopihanje",
+          "Šok",
+          "Znaki prebavnih težav ali zapore"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your dog eats an apple core or seeds, watch for signs of digestive trouble or blockage, and contact a vet if your dog has problems.",
+        "sl": "Če pes poje ogrizek ali pečke, ga opazujte, ali se pojavijo znaki prebavnih težav ali zapore, in se obrnite na veterinarja, če ima težave."
+      },
+      "serving": null,
+      "child": {
+        "en": "Apple seeds are not for dogs. A grown-up takes out the core and seeds before your dog gets a piece of apple.",
+        "sl": "Jabolčne pečke niso za pse. Odrasel odstrani ogrizek in pečke, preden pes dobi košček jabolka."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "My dog ate a whole apple with the seeds. Is that an emergency?",
+            "sl": "Pes je pojedel celo jabolko s pečkami. Je to nujen primer?"
+          },
+          "a": {
+            "en": "A small number of seeds is unlikely to cause harm. Watch your dog for signs of digestive trouble or blockage from the core, and contact a vet if your dog has problems.",
+            "sl": "Majhno število pečk verjetno ne bo škodilo. Psa opazujte, ali se pojavijo znaki prebavnih težav ali zapore zaradi ogrizka, in se obrnite na veterinarja, če ima težave."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD86",
+        "KD86",
+        "KD86",
+        "KD86",
+        "KD86",
+        "KD86",
+        "KD87",
+        "KD87",
+        "KD87",
+        "KD87",
+        "KD88",
+        "KD88"
+      ],
+      "related": [
+        "apples",
+        "cherries",
+        "peaches",
+        "plums",
+        "apricots"
+      ],
+      "updated": "2026-11-01"
+    },
+    {
+      "slug": "apples",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Apples",
+        "sl": "Jabolka"
+      },
+      "question": {
+        "en": "Can dogs eat apples?",
+        "sl": "Ali lahko psi jedo jabolka?"
+      },
+      "url_slug": {
+        "en": "apples",
+        "sl": "jabolka"
+      },
+      "answer": {
+        "en": "Yes, in moderation. Apples are a safe, nutritious treat for dogs, but remove the seeds, core and stem first, because the seeds contain cyanide and the core and stem could choke your dog.",
+        "sl": "Da, zmerno. Jabolka so za pse varen in hranljiv priboljšek, a najprej odstranite pečke, ogrizek in pecelj, ker pečke vsebujejo cianid, ogrizek in pecelj pa se lahko psu zataknejo v grlu."
+      },
+      "why": {
+        "en": "Apples are a low-calorie treat with vitamins A and C, potassium, antioxidants and fibre, especially in the peel. Because of the sugar in each apple, a whole apple is likely too much for your dog, and eating too many apples can cause bellyache or diarrhoea.",
+        "sl": "Jabolka so nizkokaloričen priboljšek z vitaminoma A in C, kalijem, antioksidanti in vlakninami, zlasti v lupini. Zaradi sladkorja v vsakem jabolku je celo jabolko za psa verjetno preveč, preveč jabolk pa lahko povzroči bolečine v trebuhu ali drisko."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "If your dog eats an apple core or seeds, watch for signs of digestive trouble or blockage. If your dog has problems, stop giving apples and contact a vet.",
+        "sl": "Če pes poje ogrizek ali pečke, ga opazujte, ali se pojavijo znaki prebavnih težav ali zapore. Če ima pes težave, mu jabolk ne dajajte več in se obrnite na veterinarja."
+      },
+      "serving": {
+        "en": "Wash and scrub the apple, remove the seeds, core and stem, and cut it into slices or small cubes; in moderation, not a whole apple.",
+        "sl": "Jabolko operite in očistite, odstranite pečke, ogrizek in pecelj ter ga narežite na krhlje ali majhne kocke; zmerno, ne celo jabolko."
+      },
+      "child": {
+        "en": "Dogs can enjoy a few apple slices! A grown-up should cut them and take out the core and seeds first.",
+        "sl": "Psi lahko uživajo v nekaj krhljih jabolka! Odrasel naj jih nareže in najprej odstrani ogrizek in pečke."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat applesauce?",
+            "sl": "Ali lahko psi jedo jabolčno čežano?"
+          },
+          "a": {
+            "en": "Plain applesauce is fine in moderation, but most applesauce has added sugar, so always choose unsweetened.",
+            "sl": "Navadna jabolčna čežana je v zmernih količinah v redu, a večina ima dodan sladkor, zato vedno izberite nesladkano."
+          }
+        },
+        {
+          "q": {
+            "en": "Can dogs eat apple pie?",
+            "sl": "Ali lahko psi jedo jabolčno pito?"
+          },
+          "a": {
+            "en": "No. The added sugar and crust are too much for dogs; avoid apple foods with added sugar or spices such as nutmeg.",
+            "sl": "Ne. Dodani sladkor in testo sta za pse preveč; izogibajte se jabolčnim jedem z dodanim sladkorjem ali začimbami, kot je muškatni orešček."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD86",
+        "KD86",
+        "KD86",
+        "KD86",
+        "KD86",
+        "KD86",
+        "KD86",
+        "KD86",
+        "KD86",
+        "KD86",
+        "KD86",
+        "KD86",
+        "KD86",
+        "KD86",
+        "KD86",
+        "KD86",
+        "KD86",
+        "KD89"
+      ],
+      "related": [
+        "apple-seeds",
+        "bananas",
+        "cherries"
+      ],
+      "updated": "2026-11-01"
+    },
+    {
       "slug": "apricots",
       "species": "dog",
       "level": "not_recommended",
@@ -8745,6 +9544,79 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "bananas",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Bananas",
+        "sl": "Banane"
+      },
+      "question": {
+        "en": "Can dogs eat bananas?",
+        "sl": "Ali lahko psi jedo banane?"
+      },
+      "url_slug": {
+        "en": "bananas",
+        "sl": "banane"
+      },
+      "answer": {
+        "en": "Yes, as an occasional treat. Bananas are high in potassium, vitamin B6 and vitamin C, but they are high in sugar, so they are best kept as a treat rather than part of your dog's daily diet. Always remove the peel.",
+        "sl": "Da, kot občasen priboljšek. Banane vsebujejo veliko kalija, vitamina B6 in vitamina C, a tudi veliko sladkorja, zato naj bodo priboljšek in ne del psove vsakodnevne prehrane. Vedno odstranite olupek."
+      },
+      "why": {
+        "en": "Too much banana can add extra calories and may cause digestive upset in some dogs. Banana peels are not toxic to dogs, but they are hard to digest and could cause stomach discomfort or, in some cases, an intestinal blockage.",
+        "sl": "Preveč banane lahko doda odvečne kalorije in pri nekaterih psih povzroči prebavne težave. Bananin olupek za pse ni strupen, a je težko prebavljiv in lahko povzroči neugodje v prebavilih ali v nekaterih primerih zaporo črevesja."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "A banana peel could cause stomach discomfort or, in some cases, an intestinal blockage, so always remove it. If you are unsure how much banana suits your dog's size, age or health, ask your vet.",
+        "sl": "Bananin olupek lahko povzroči neugodje v prebavilih ali v nekaterih primerih zaporo črevesja, zato ga vedno odstranite. Če niste prepričani, koliko banane je primerno za velikost, starost ali zdravje vašega psa, vprašajte veterinarja."
+      },
+      "serving": {
+        "en": "Peeled, in bite-sized pieces, mashed into food or frozen; as an occasional treat.",
+        "sl": "Olupljena, v majhnih koščkih, pretlačena v hrano ali zamrznjena; kot občasen priboljšek."
+      },
+      "child": {
+        "en": "Dogs can have a small piece of banana as a treat! A grown-up takes the peel off first.",
+        "sl": "Psi lahko kot priboljšek dobijo košček banane! Odrasel najprej odstrani olupek."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat banana peels?",
+            "sl": "Ali lahko psi jedo bananine olupke?"
+          },
+          "a": {
+            "en": "No. Peels are not toxic, but they are hard to digest, so always remove the peel first.",
+            "sl": "Ne. Olupki niso strupeni, a so težko prebavljivi, zato vedno najprej odstranite olupek."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD90",
+        "KD90",
+        "KD90",
+        "KD90",
+        "KD90",
+        "KD90",
+        "KD90",
+        "KD90",
+        "KD90",
+        "KD89",
+        "KD90"
+      ],
+      "related": [
+        "apples",
+        "blueberries",
+        "watermelon"
+      ],
+      "updated": "2026-11-01"
+    },
+    {
       "slug": "beef",
       "species": "dog",
       "level": "small_amounts",
@@ -8883,6 +9755,153 @@
         "salt"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "blackberries",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Blackberries",
+        "sl": "Robide"
+      },
+      "question": {
+        "en": "Can dogs eat blackberries?",
+        "sl": "Ali lahko psi jedo robide?"
+      },
+      "url_slug": {
+        "en": "blackberries",
+        "sl": "robide"
+      },
+      "answer": {
+        "en": "Yes, in moderation. Blackberries contain lots of vitamins and nutrients and are lower in sugar and calories than some other fruits. Wash them first, and avoid frozen berries, which usually have added sugar or xylitol.",
+        "sl": "Da, zmerno. Robide vsebujejo veliko vitaminov in hranil ter imajo manj sladkorja in kalorij kot nekatere druge vrste sadja. Najprej jih operite in se izogibajte zamrznjenemu jagodičju, ki ima običajno dodan sladkor ali ksilitol."
+      },
+      "why": {
+        "en": "Blackberries contain naturally occurring xylitol in trace amounts, as do other fruits and vegetables. Like any food, too many blackberries can cause stomach upset, and treats should make up only a small part of a dog's diet.",
+        "sl": "Robide vsebujejo naravni ksilitol v sledovih, tako kot tudi druge vrste sadja in zelenjave. Kot pri vsaki hrani lahko preveč robid povzroči prebavne težave, priboljški pa naj bodo le majhen del pasje prehrane."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "If your dog has a reaction after eating blackberries, call your vet immediately.",
+        "sl": "Če se pes po robidah odzove s težavami, takoj pokličite veterinarja."
+      },
+      "serving": {
+        "en": "Washed, plain fresh blackberries; no frozen berries, which usually have added sugar or xylitol; only wild berries you are sure are blackberries.",
+        "sl": "Oprane, navadne sveže robide; brez zamrznjenega jagodičja, ki ima običajno dodan sladkor ali ksilitol; divje le, če ste prepričani, da so robide."
+      },
+      "child": {
+        "en": "Dogs can share a few washed blackberries! Ask a grown-up first, especially for berries picked outside.",
+        "sl": "Psi lahko dobijo nekaj opranih robid! Najprej vprašaj odraslega, posebej za robide, nabrane v naravi."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat wild blackberries?",
+            "sl": "Ali lahko psi jedo divje robide?"
+          },
+          "a": {
+            "en": "Yes, as long as you are sure they are blackberries.",
+            "sl": "Da, če ste prepričani, da so to robide."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD94",
+        "KD94",
+        "KD94",
+        "KD94",
+        "KD94",
+        "KD94",
+        "KD94",
+        "KD94",
+        "KD94",
+        "KD94",
+        "KD94"
+      ],
+      "related": [
+        "raspberries",
+        "blueberries",
+        "strawberries",
+        "xylitol"
+      ],
+      "updated": "2026-11-01"
+    },
+    {
+      "slug": "blueberries",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Blueberries",
+        "sl": "Borovnice"
+      },
+      "question": {
+        "en": "Can dogs eat blueberries?",
+        "sl": "Ali lahko psi jedo borovnice?"
+      },
+      "url_slug": {
+        "en": "blueberries",
+        "sl": "borovnice"
+      },
+      "answer": {
+        "en": "Yes, in moderation. Blueberries are low in calories and provide fibre, vitamin C and antioxidants, but they should be an occasional treat rather than a big part of your dog's diet.",
+        "sl": "Da, zmerno. Borovnice imajo malo kalorij ter vsebujejo vlaknine, vitamin C in antioksidante, a naj bodo občasen priboljšek in ne velik del psove prehrane."
+      },
+      "why": {
+        "en": "Their size and shape can pose a choking risk, particularly for very small dogs. As with any new food, start with a small amount and watch how your dog reacts.",
+        "sl": "Njihova velikost in oblika lahko predstavljata nevarnost zadušitve, zlasti pri zelo majhnih psih. Kot pri vsaki novi hrani začnite z majhno količino in opazujte, kako se pes odzove."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Start with a small amount and observe your dog. If you are unsure whether blueberries are right for your dog, ask your vet.",
+        "sl": "Začnite z majhno količino in psa opazujte. Če niste prepričani, ali so borovnice primerne za vašega psa, vprašajte veterinarja."
+      },
+      "serving": {
+        "en": "Washed thoroughly, fresh or frozen; cut in halves for very small dogs; as an occasional treat.",
+        "sl": "Temeljito oprane, sveže ali zamrznjene; za zelo majhne pse prerezane na pol; kot občasen priboljšek."
+      },
+      "child": {
+        "en": "Blueberries can be a yummy little treat for dogs! A grown-up washes them first and gives just a few.",
+        "sl": "Borovnice so lahko za pse slasten majhen priboljšek! Odrasel jih najprej opere in da le nekaj."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Fresh or frozen blueberries?",
+            "sl": "Sveže ali zamrznjene borovnice?"
+          },
+          "a": {
+            "en": "Both are fine. You can offer your dog either fresh or frozen blueberries.",
+            "sl": "Oboje je v redu. Psu lahko ponudite sveže ali zamrznjene borovnice."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD91",
+        "KD91",
+        "KD91",
+        "KD91",
+        "KD91",
+        "KD91",
+        "KD91",
+        "KD91",
+        "KD91",
+        "KD89"
+      ],
+      "related": [
+        "strawberries",
+        "raspberries",
+        "blackberries",
+        "cranberries"
+      ],
+      "updated": "2026-11-01"
     },
     {
       "slug": "butter",
@@ -9060,6 +10079,78 @@
         "bacon"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "cantaloupe",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Cantaloupe",
+        "sl": "Melona kantalupa"
+      },
+      "question": {
+        "en": "Can dogs eat cantaloupe?",
+        "sl": "Ali lahko psi jedo melono kantalupo?"
+      },
+      "url_slug": {
+        "en": "cantaloupe",
+        "sl": "melona-kantalupa"
+      },
+      "answer": {
+        "en": "Yes, in moderation. Cantaloupe is low in calories and a good source of water and fibre, but it is high in sugar, so share it sparingly, especially with dogs who are overweight or diabetic. Do not give the rind or seeds.",
+        "sl": "Da, zmerno. Kantalupa ima malo kalorij ter je dober vir vode in vlaknin, a vsebuje veliko sladkorja, zato jo dajajte zmerno, zlasti psom s prekomerno težo ali sladkorno boleznijo. Ne dajajte lupine ali pečk."
+      },
+      "why": {
+        "en": "Cantaloupe rinds, like watermelon rinds, can cause stomach upset, can become impacted in the digestive tract and are a choking hazard. The seeds are harmless but can also be a choking hazard. Too many treats on top of a healthy diet can lead to obesity.",
+        "sl": "Lupina kantalupe lahko, tako kot lubenična, povzroči prebavne težave, se zagozdi v prebavilih in predstavlja nevarnost zadušitve. Pečke so neškodljive, a se lahko prav tako zataknejo v grlu. Preveč priboljškov poleg zdrave prehrane lahko vodi v debelost."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "If you have questions or concerns about feeding your dog cantaloupe, for example if your dog is diabetic, ask your vet.",
+        "sl": "Če imate vprašanja ali pomisleke glede hranjenja psa s kantalupo, na primer če ima pes sladkorno bolezen, vprašajte veterinarja."
+      },
+      "serving": {
+        "en": "Only the flesh, without the rind and seeds; as an occasional treat.",
+        "sl": "Samo meso, brez lupine in pečk; kot občasen priboljšek."
+      },
+      "child": {
+        "en": "Dogs can enjoy a little piece of melon! A grown-up cuts off the hard skin and takes out the seeds.",
+        "sl": "Psi lahko uživajo v koščku melone! Odrasel odreže trdo lupino in odstrani pečke."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is cantaloupe okay for a diabetic dog?",
+            "sl": "Je kantalupa primerna za psa s sladkorno boleznijo?"
+          },
+          "a": {
+            "en": "It may not be a good choice, because it is high in sugar. Ask your vet first.",
+            "sl": "Morda ni dobra izbira, ker vsebuje veliko sladkorja. Najprej vprašajte veterinarja."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD97",
+        "KD97",
+        "KD97",
+        "KD97",
+        "KD97",
+        "KD97",
+        "KD97",
+        "KD89",
+        "KD89",
+        "KD89"
+      ],
+      "related": [
+        "watermelon",
+        "bananas",
+        "apples"
+      ],
+      "updated": "2026-11-01"
     },
     {
       "slug": "cashews",
@@ -11236,6 +12327,95 @@
         "avocado"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "cranberries",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Cranberries",
+        "sl": "Brusnice"
+      },
+      "question": {
+        "en": "Can dogs eat cranberries?",
+        "sl": "Ali lahko psi jedo brusnice?"
+      },
+      "url_slug": {
+        "en": "cranberries",
+        "sl": "brusnice"
+      },
+      "answer": {
+        "en": "Yes, in small quantities. Plain fresh, cooked or dried cranberries are not toxic to dogs, but too many can upset the stomach. Avoid cranberry sauce and dried fruit mixes, which may contain sugar, raisins or other harmful ingredients.",
+        "sl": "Da, v majhnih količinah. Navadne sveže, kuhane ali suhe brusnice za pse niso strupene, a preveč jih lahko razburi želodec. Izogibajte se brusnični omaki in mešanicam suhega sadja, ki lahko vsebujejo sladkor, rozine ali druge škodljive sestavine."
+      },
+      "why": {
+        "en": "Dried cranberries sometimes come mixed with raisins, and grapes and raisins are very toxic to dogs. Cranberry sauce is high in sugar, which can cause stomach upset, and some recipes include grapes, raisins, currants or alcohol. Many dried cranberries sold for people are sweetened, which adds unneeded sugar.",
+        "sl": "Suhe brusnice so včasih pomešane z rozinami, grozdje in rozine pa so za pse zelo strupeni. Brusnična omaka vsebuje veliko sladkorja, ki lahko povzroči prebavne težave, nekateri recepti pa vsebujejo grozdje, rozine, ribez ali alkohol. Veliko suhih brusnic, namenjenih ljudem, je sladkanih, kar doda nepotreben sladkor."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Feed cranberries in moderation and under the guidance of a vet. Grapes and raisins are very toxic to dogs, so avoid cranberry mixes that contain raisins.",
+        "sl": "Brusnice dajajte zmerno in po nasvetu veterinarja. Grozdje in rozine so za pse zelo strupeni, zato se izogibajte mešanicam brusnic z rozinami."
+      },
+      "serving": {
+        "en": "Plain fresh, cooked or dried cranberries without added sugar and without raisins; in small quantities.",
+        "sl": "Navadne sveže, kuhane ali suhe brusnice brez dodanega sladkorja in brez rozin; v majhnih količinah."
+      },
+      "child": {
+        "en": "A few plain cranberries are okay for dogs. Cranberry sauce and fruit mixes are for people, so ask a grown-up first.",
+        "sl": "Nekaj navadnih brusnic je za pse v redu. Brusnična omaka in mešanice sadja so za ljudi, zato najprej vprašaj odraslega."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat cranberry sauce?",
+            "sl": "Ali lahko psi jedo brusnično omako?"
+          },
+          "a": {
+            "en": "It is best avoided. Cranberry sauce is high in sugar, and some recipes include grapes, raisins, currants, which are toxic to dogs, or brandy, and alcohol is toxic to dogs too.",
+            "sl": "Bolje se ji je izogniti. Brusnična omaka vsebuje veliko sladkorja, nekateri recepti pa vsebujejo grozdje, rozine, ribez, ki so za pse strupeni, ali žganje, alkohol pa je za pse prav tako strupen."
+          }
+        },
+        {
+          "q": {
+            "en": "Do cranberries help with urinary tract infections in dogs?",
+            "sl": "Ali brusnice pomagajo pri okužbah sečil pri psih?"
+          },
+          "a": {
+            "en": "Many people believe so, but there have not been enough studies in dogs to confirm it.",
+            "sl": "Mnogi tako mislijo, a pri psih ni bilo dovolj raziskav, ki bi to potrdile."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD95",
+        "KD95",
+        "KD95",
+        "KD95",
+        "KD95",
+        "KD95",
+        "KD95",
+        "KD95",
+        "KD95",
+        "KD95",
+        "KD95",
+        "KD95",
+        "KD95",
+        "KD89",
+        "KD89",
+        "KD88"
+      ],
+      "related": [
+        "raisins",
+        "grapes",
+        "alcohol",
+        "blueberries"
+      ],
+      "updated": "2026-11-01"
     },
     {
       "slug": "energy-drinks",
@@ -15206,6 +16386,80 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "raspberries",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Raspberries",
+        "sl": "Maline"
+      },
+      "question": {
+        "en": "Can dogs eat raspberries?",
+        "sl": "Ali lahko psi jedo maline?"
+      },
+      "url_slug": {
+        "en": "raspberries",
+        "sl": "maline"
+      },
+      "answer": {
+        "en": "Yes, in moderation. Raspberries can be a healthy occasional treat and are relatively low in sugar and calories, but they contain naturally occurring xylitol, so give them only in moderation. Fresh or frozen raspberries are best.",
+        "sl": "Da, zmerno. Maline so lahko zdrav občasen priboljšek in imajo razmeroma malo sladkorja in kalorij, a vsebujejo naravni ksilitol, zato jih dajajte le zmerno. Najboljše so sveže ali zamrznjene maline."
+      },
+      "why": {
+        "en": "Raspberries contain naturally occurring xylitol at higher levels than most other fruits, although the amount is low compared with what is known to harm dogs. Overfeeding raspberries may cause vomiting, diarrhoea, constipation or other digestive upset. Sweetened raspberry products should be avoided.",
+        "sl": "Maline vsebujejo naravni ksilitol, in sicer več kot večina drugih vrst sadja, čeprav je te količine malo v primerjavi s tisto, za katero je znano, da psom škoduje. Preveč malin lahko povzroči bruhanje, drisko, zaprtje ali druge prebavne težave. Sladkanim malinovim izdelkom se izogibajte."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Give raspberries only in moderation, because overfeeding may upset digestion. Owners of diabetic dogs should ask their vet before giving any new treats.",
+        "sl": "Maline dajajte le zmerno, ker lahko preveč malin povzroči prebavne težave. Lastniki psov s sladkorno boleznijo naj pred vsakim novim priboljškom vprašajo veterinarja."
+      },
+      "serving": {
+        "en": "Plain fresh or frozen raspberries, never sweetened products; as an occasional treat.",
+        "sl": "Navadne sveže ali zamrznjene maline, nikoli sladkani izdelki; kot občasen priboljšek."
+      },
+      "child": {
+        "en": "Dogs can have a few raspberries as a treat! A grown-up decides how many, because too many can upset a tummy.",
+        "sl": "Psi lahko kot priboljšek dobijo nekaj malin! Odrasel odloči, koliko, ker lahko preveč malin povzroči težave s trebuščkom."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is the xylitol in raspberries a problem?",
+            "sl": "Je ksilitol v malinah težava?"
+          },
+          "a": {
+            "en": "The amount of xylitol in raspberries is low relative to the amount known to harm dogs, but give raspberries only in moderation.",
+            "sl": "Količina ksilitola v malinah je majhna v primerjavi s količino, za katero je znano, da psom škoduje, a maline dajajte le zmerno."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD93",
+        "KD93",
+        "KD93",
+        "KD93",
+        "KD93",
+        "KD93",
+        "KD93",
+        "KD93",
+        "KD93",
+        "KD89",
+        "KD89"
+      ],
+      "related": [
+        "blackberries",
+        "blueberries",
+        "strawberries",
+        "xylitol"
+      ],
+      "updated": "2026-11-01"
+    },
+    {
       "slug": "raw-bones",
       "species": "dog",
       "level": "not_recommended",
@@ -17108,6 +18362,92 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "strawberries",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Strawberries",
+        "sl": "Jagode"
+      },
+      "question": {
+        "en": "Can dogs eat strawberries?",
+        "sl": "Ali lahko psi jedo jagode?"
+      },
+      "url_slug": {
+        "en": "strawberries",
+        "sl": "jagode"
+      },
+      "answer": {
+        "en": "Yes, in moderation. Strawberries are full of antioxidants, fibre and vitamin C, but they contain natural sugar, and too many at once can cause loose stools or diarrhoea. Wash them, remove the stems and leaves, and cut them small.",
+        "sl": "Da, zmerno. Jagode so polne antioksidantov, vlaknin in vitamina C, a vsebujejo naravni sladkor, preveč naenkrat pa lahko povzroči mehko blato ali drisko. Operite jih, odstranite peclje in liste ter jih narežite na majhne koščke."
+      },
+      "why": {
+        "en": "The stems and leaves are not toxic but can cause stomach upset, and whole strawberries can be a choking risk, especially for smaller breeds. Avoid strawberries in syrup or canned strawberries, which have too much sugar and may even contain artificial sweeteners that are toxic to dogs.",
+        "sl": "Peclji in listi niso strupeni, a lahko povzročijo prebavne težave, cele jagode pa lahko predstavljajo nevarnost zadušitve, zlasti pri manjših pasmah. Izogibajte se jagodam v sirupu ali konzerviranim jagodam, ki imajo preveč sladkorja in lahko celo vsebujejo umetna sladila, strupena za pse."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "If you notice anything different after your dog eats strawberries, stop giving them and check with your vet.",
+        "sl": "Če po jagodah pri psu opazite kaj nenavadnega, mu jih ne dajajte več in se posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "Washed thoroughly, stems and leaves removed, cut into small pieces, or mashed for small dogs; fresh or frozen, never in syrup or canned.",
+        "sl": "Temeljito oprane, brez pecljev in listov, narezane na majhne koščke ali za majhne pse pretlačene; sveže ali zamrznjene, nikoli v sirupu ali iz konzerve."
+      },
+      "child": {
+        "en": "Dogs can have a little strawberry! A grown-up washes it, takes off the green leaves and cuts it small.",
+        "sl": "Psi lahko dobijo malo jagode! Odrasel jo opere, odstrani zelene liste in jo nareže na majhne koščke."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat frozen strawberries?",
+            "sl": "Ali lahko psi jedo zamrznjene jagode?"
+          },
+          "a": {
+            "en": "Yes. Frozen strawberries cut into suitably sized pieces can be a safe, refreshing treat.",
+            "sl": "Da. Zamrznjene jagode, narezane na primerno velike koščke, so lahko varen in osvežilen priboljšek."
+          }
+        },
+        {
+          "q": {
+            "en": "Should I ask my vet first?",
+            "sl": "Naj najprej vprašam veterinarja?"
+          },
+          "a": {
+            "en": "Whenever you introduce a new food to your dog's diet, it is best to talk to your vet first.",
+            "sl": "Kadar psu uvajate novo hrano, se je najbolje najprej pogovoriti z veterinarjem."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD92",
+        "KD92",
+        "KD92",
+        "KD92",
+        "KD92",
+        "KD92",
+        "KD92",
+        "KD92",
+        "KD92",
+        "KD92",
+        "KD92",
+        "KD92",
+        "KD89"
+      ],
+      "related": [
+        "blueberries",
+        "raspberries",
+        "blackberries",
+        "xylitol"
+      ],
+      "updated": "2026-11-01"
+    },
+    {
       "slug": "tea",
       "species": "dog",
       "level": "toxic",
@@ -17844,6 +19184,82 @@
         "macadamia-nuts"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "watermelon",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Watermelon",
+        "sl": "Lubenica"
+      },
+      "question": {
+        "en": "Can dogs eat watermelon?",
+        "sl": "Ali lahko psi jedo lubenico?"
+      },
+      "url_slug": {
+        "en": "watermelon",
+        "sl": "lubenica"
+      },
+      "answer": {
+        "en": "Yes, if you prepare it correctly. Watermelon is a low-calorie fruit with a high water content, but remove all seeds and the rind first, because both can cause digestive upset or an intestinal blockage.",
+        "sl": "Da, če jo pravilno pripravite. Lubenica je nizkokalorično sadje z veliko vode, a najprej odstranite vse pečke in lupino, ker lahko oboje povzroči prebavne težave ali zaporo črevesja."
+      },
+      "why": {
+        "en": "Seeds can cause an intestinal blockage, especially if a dog eats many, and can be a choking hazard for small dogs. The rind may cause stomach upset, vomiting, diarrhoea or intestinal obstruction if eaten in large pieces. Too much watermelon may cause stomach discomfort or diarrhoea because of its natural sugar and fibre.",
+        "sl": "Pečke lahko povzročijo zaporo črevesja, zlasti če jih pes poje veliko, majhnim psom pa se lahko zataknejo v grlu. Lupina lahko povzroči prebavne težave, bruhanje, drisko ali zaporo črevesja, če jo pes poje v velikih kosih. Preveč lubenice lahko zaradi naravnega sladkorja in vlaknin povzroči neugodje v trebuhu ali drisko."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "The first time, give a small amount and watch for digestive upset. Contact your vet if your dog shows symptoms after eating watermelon.",
+        "sl": "Prvič dajte majhno količino in opazujte, ali se pojavijo prebavne težave. Če ima pes po lubenici znake težav, se obrnite na veterinarja."
+      },
+      "serving": {
+        "en": "Bite-sized pieces with all seeds and the rind removed; seedless pieces can also be frozen as a cooling treat.",
+        "sl": "Majhni koščki brez vseh pečk in lupine; koščke brez pečk lahko tudi zamrznete kot osvežilen priboljšek."
+      },
+      "child": {
+        "en": "On a hot day, dogs can enjoy small pieces of watermelon! A grown-up removes the seeds and the green skin.",
+        "sl": "Na vroč dan lahko psi uživajo v majhnih koščkih lubenice! Odrasel odstrani pečke in zeleno lupino."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat watermelon rind?",
+            "sl": "Ali lahko psi jedo lubenično lupino?"
+          },
+          "a": {
+            "en": "No, the rind is not recommended. In large pieces it may cause stomach upset, vomiting, diarrhoea or intestinal obstruction.",
+            "sl": "Ne, lupina ni priporočljiva. V velikih kosih lahko povzroči prebavne težave, bruhanje, drisko ali zaporo črevesja."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD96",
+        "KD96",
+        "KD96",
+        "KD96",
+        "KD96",
+        "KD96",
+        "KD96",
+        "KD96",
+        "KD96",
+        "KD96",
+        "KD96",
+        "KD96",
+        "KD96",
+        "KD89"
+      ],
+      "related": [
+        "cantaloupe",
+        "bananas",
+        "apples"
+      ],
+      "updated": "2026-11-01"
     },
     {
       "slug": "xylitol",
@@ -18636,6 +20052,62 @@
     },
     {
       "species": "cat",
+      "id": "KC58",
+      "tier": "B",
+      "publisher": "ASPCA Animal Poison Control (no date shown)",
+      "title": "Toxic and Non-toxic Plants: Apple",
+      "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/apple"
+    },
+    {
+      "species": "cat",
+      "id": "KC59",
+      "tier": "B",
+      "publisher": "ASPCA Animal Poison Control (no date shown)",
+      "title": "Toxic and Non-toxic Plants: Banana",
+      "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/banana"
+    },
+    {
+      "species": "cat",
+      "id": "KC60",
+      "tier": "B",
+      "publisher": "ASPCA Animal Poison Control (no date shown)",
+      "title": "Toxic and Non-toxic Plants: Strawberry",
+      "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/strawberry"
+    },
+    {
+      "species": "cat",
+      "id": "KC61",
+      "tier": "B",
+      "publisher": "ASPCA Animal Poison Control (no date shown)",
+      "title": "Toxic and Non-toxic Plants: True Cantaloupe",
+      "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/true-cantaloupe"
+    },
+    {
+      "species": "cat",
+      "id": "KC62",
+      "tier": "B",
+      "publisher": "ASPCA Animal Poison Control (no date shown)",
+      "title": "Toxic and Non-Toxic Plants",
+      "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants"
+    },
+    {
+      "species": "cat",
+      "id": "KC63",
+      "tier": "B",
+      "publisher": "NC State College of Veterinary Medicine, Veterinary Hospital – Nutrition (no date shown)",
+      "title": "Healthy Human Food Treats For Pets",
+      "url": "https://hospital.cvm.ncsu.edu/services/small-animals/nutrition/healthy-human-food-treats-for-pets/"
+    },
+    {
+      "species": "cat",
+      "id": "KC64",
+      "tier": "B",
+      "publisher": "Pet Poison Helpline (I. Kiekhafer, S. Koch; published 2023-09-28, modified 2026-05-27)",
+      "title": "Friendly Fall Foods",
+      "url": "https://www.petpoisonhelpline.com/pet-owner-blog/friendly-fall-foods/"
+    },
+    {
+      "species": "cat",
       "id": "KC7",
       "tier": "B",
       "publisher": "VCA Animal Hospitals (R. Schmid, DVM, DABT, for Pet Poison Helpline)",
@@ -19332,11 +20804,107 @@
     },
     {
       "species": "dog",
+      "id": "KD86",
+      "tier": "B",
+      "publisher": "American Kennel Club, Kaitlyn Arford (updated 2026-06-02)",
+      "title": "Can Dogs Eat Apples? How to Safely Feed Apples to Dogs",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-apples/"
+    },
+    {
+      "species": "dog",
+      "id": "KD87",
+      "tier": "B",
+      "publisher": "ASPCA Animal Poison Control",
+      "title": "Toxic and Non-toxic Plants: Apple",
+      "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/apple"
+    },
+    {
+      "species": "dog",
+      "id": "KD88",
+      "tier": "B",
+      "publisher": "Pet Poison Helpline (published 2023-09-28; modified 2026-05-27)",
+      "title": "Friendly Fall Foods",
+      "url": "https://www.petpoisonhelpline.com/pet-owner-blog/friendly-fall-foods/"
+    },
+    {
+      "species": "dog",
+      "id": "KD89",
+      "tier": "B",
+      "publisher": "American Kennel Club, AKC Staff (updated 2026-08-04)",
+      "title": "Fruits and Vegetables Dogs Can or Can't Eat",
+      "url": "https://www.akc.org/expert-advice/nutrition/fruits-vegetables-dogs-can-and-cant-eat/"
+    },
+    {
+      "species": "dog",
       "id": "KD9",
       "tier": "B",
       "publisher": "PDSA (Published: September 2022)",
       "title": "Onion and garlic poisoning in dogs",
       "url": "https://www.pdsa.org.uk/pet-help-and-advice/pet-health-hub/conditions/onion-and-garlic-poisoning-in-dogs"
+    },
+    {
+      "species": "dog",
+      "id": "KD90",
+      "tier": "B",
+      "publisher": "American Kennel Club, AKC Staff (updated 2026-09-01)",
+      "title": "Can Dogs Eat Bananas? Benefits, Risks, and Safe Serving Tips",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-bananas/"
+    },
+    {
+      "species": "dog",
+      "id": "KD91",
+      "tier": "B",
+      "publisher": "American Kennel Club, Anna Burke (updated 2026-10-20)",
+      "title": "Can Dogs Eat Blueberries? Benefits, Risks, and Feeding Tips",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-blueberries/"
+    },
+    {
+      "species": "dog",
+      "id": "KD92",
+      "tier": "B",
+      "publisher": "American Kennel Club, Harriet Meyers (updated 2026-08-18)",
+      "title": "Can Dogs Eat Strawberries?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-strawberries/"
+    },
+    {
+      "species": "dog",
+      "id": "KD93",
+      "tier": "B",
+      "publisher": "American Kennel Club, AKC Staff (updated 2026-08-11)",
+      "title": "Can Dogs Eat Raspberries? Yes, But There Is a Catch",
+      "url": "https://www.akc.org/expert-advice/nutrition/natural-foods/can-my-dog-eat-raspberries/"
+    },
+    {
+      "species": "dog",
+      "id": "KD94",
+      "tier": "B",
+      "publisher": "American Kennel Club, Jan Reisen (updated 2025-01-06)",
+      "title": "Can Dogs Eat Blackberries?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-blackberries/"
+    },
+    {
+      "species": "dog",
+      "id": "KD95",
+      "tier": "B",
+      "publisher": "American Kennel Club, Anna Burke (updated 2025-05-22)",
+      "title": "Can Dogs Eat Cranberries?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-cranberries/"
+    },
+    {
+      "species": "dog",
+      "id": "KD96",
+      "tier": "B",
+      "publisher": "American Kennel Club, Mara Bovsun (updated 2026-09-01)",
+      "title": "Can Dogs Eat Watermelon? Benefits, Risks, and Safe Serving Tips",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-watermelon/"
+    },
+    {
+      "species": "dog",
+      "id": "KD97",
+      "tier": "B",
+      "publisher": "American Kennel Club, Anna Burke (updated 2026-03-25)",
+      "title": "Can Dogs Eat Cantaloupe? Is Cantaloupe Good For Dogs?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-cantaloupe/"
     }
   ],
   "vets": [
