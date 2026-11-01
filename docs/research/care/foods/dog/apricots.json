@@ -8,7 +8,8 @@
     "fr": "Abricots",
     "es": "Albaricoques",
     "it": "Albicocche",
-    "pt": "Alperces"
+    "pt": "Alperces",
+    "nl": "Abrikozen"
   },
   "question": {
     "en": "Can dogs eat apricots?",
@@ -17,7 +18,8 @@
     "fr": "Les chiens peuvent-ils manger des abricots ?",
     "es": "¿Pueden los perros comer albaricoques?",
     "it": "I cani possono mangiare le albicocche?",
-    "pt": "Os cães podem comer alperces?"
+    "pt": "Os cães podem comer alperces?",
+    "nl": "Mogen honden abrikozen eten?"
   },
   "url_slug": {
     "en": "apricots",
@@ -26,7 +28,8 @@
     "fr": "abricots",
     "es": "albaricoques",
     "it": "albicocche",
-    "pt": "alperces"
+    "pt": "alperces",
+    "nl": "abrikozen"
   },
   "level": "not_recommended",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Déconseillé. L’abricotier est répertorié comme toxique pour les chiens : ses tiges, ses feuilles et ses graines contiennent du cyanure, surtout lorsqu’elles se flétrissent. Ne laissez jamais votre chien mâchouiller des noyaux, des feuilles ou des tiges d’abricot.",
     "es": "No se recomienda. La planta del albaricoquero figura como tóxica para los perros: sus tallos, hojas y semillas contienen cianuro, sobre todo cuando se marchitan. No dejes nunca que tu perro mordisquee huesos, hojas o tallos de albaricoque.",
     "it": "Sconsigliate. La pianta di albicocco è classificata come tossica per i cani: gambi, foglie e semi contengono cianuro, soprattutto quando appassiscono. Non lasciare mai che il tuo cane mastichi noccioli, foglie o gambi di albicocca.",
-    "pt": "Não é recomendado. O alperceiro está classificado como tóxico para os cães: os caules, as folhas e as sementes contêm cianeto, sobretudo quando murcham. Nunca deixes o teu cão roer caroços, folhas ou caules de alperce."
+    "pt": "Não é recomendado. O alperceiro está classificado como tóxico para os cães: os caules, as folhas e as sementes contêm cianeto, sobretudo quando murcham. Nunca deixes o teu cão roer caroços, folhas ou caules de alperce.",
+    "nl": "Niet aan te raden. De abrikozenplant staat te boek als giftig voor honden: de stelen, bladeren en pitten bevatten cyanide, vooral als ze verwelken. Laat je hond nooit op abrikozenpitten, -bladeren of -stelen kauwen."
   },
   "why": {
     "en": "Apricot stems, leaves and seeds contain cyanogenic glycosides, which release cyanide. Cyanide reduces the body's ability to use oxygen. Because the plant is listed as toxic to dogs, we do not rate apricots as a safe treat.",
@@ -45,7 +49,8 @@
     "fr": "Les tiges, les feuilles et les graines de l’abricotier contiennent des glycosides cyanogènes, qui libèrent du cyanure. Le cyanure réduit la capacité de l’organisme à utiliser l’oxygène. Comme la plante est répertoriée comme toxique pour les chiens, nous ne considérons pas l’abricot comme une friandise sûre.",
     "es": "Los tallos, las hojas y las semillas del albaricoque contienen glucósidos cianogénicos, que liberan cianuro. El cianuro reduce la capacidad del organismo para usar el oxígeno. Como la planta figura como tóxica para los perros, no consideramos los albaricoques un premio seguro.",
     "it": "Gambi, foglie e semi dell’albicocco contengono glicosidi cianogenici, che rilasciano cianuro. Il cianuro riduce la capacità dell’organismo di utilizzare l’ossigeno. Poiché la pianta è classificata come tossica per i cani, non consideriamo le albicocche un premio sicuro.",
-    "pt": "Os caules, as folhas e as sementes do alperce contêm glicosídeos cianogénicos, que libertam cianeto. O cianeto reduz a capacidade do organismo de usar o oxigénio. Como a planta está classificada como tóxica para os cães, não consideramos os alperces uma guloseima segura."
+    "pt": "Os caules, as folhas e as sementes do alperce contêm glicosídeos cianogénicos, que libertam cianeto. O cianeto reduz a capacidade do organismo de usar o oxigénio. Como a planta está classificada como tóxica para os cães, não consideramos os alperces uma guloseima segura.",
+    "nl": "Stelen, bladeren en pitten van de abrikoos bevatten cyanogene glycosiden, waaruit cyanide vrijkomt. Cyanide vermindert het vermogen van het lichaam om zuurstof te gebruiken. Omdat de plant als giftig voor honden staat vermeld, beschouwen wij abrikozen niet als een veilig snoepje."
   },
   "signs": {
     "en": [
@@ -89,6 +94,12 @@
       "Gengivas vermelho-tijolo",
       "Dificuldade em respirar, respiração ofegante",
       "Choque"
+    ],
+    "nl": [
+      "Verwijde pupillen",
+      "Steenrood tandvlees",
+      "Moeite met ademhalen, hijgen",
+      "Shock"
     ]
   },
   "what_to_do": {
@@ -98,7 +109,8 @@
     "fr": "Si votre chien a mâchouillé ou avalé des noyaux, des feuilles ou des tiges d’abricot, demandez immédiatement conseil à votre vétérinaire. Notez ce qu’il a mangé et en quelle quantité approximative.",
     "es": "Si tu perro ha mordisqueado o se ha tragado huesos, hojas o tallos de albaricoque, pide consejo a tu veterinario enseguida. Anota qué ha comido y, más o menos, cuánto.",
     "it": "Se il tuo cane ha masticato o ingoiato noccioli, foglie o gambi di albicocca, contatta subito il veterinario per un consiglio. Annota che cosa ha mangiato e più o meno quanto.",
-    "pt": "Se o teu cão roeu ou engoliu caroços, folhas ou caules de alperce, contacta imediatamente o teu veterinário para te aconselhar. Anota o que comeu e mais ou menos quanto."
+    "pt": "Se o teu cão roeu ou engoliu caroços, folhas ou caules de alperce, contacta imediatamente o teu veterinário para te aconselhar. Anota o que comeu e mais ou menos quanto.",
+    "nl": "Heeft je hond op abrikozenpitten, -bladeren of -stelen gekauwd of ze ingeslikt? Neem dan meteen contact op met je dierenarts voor advies. Schrijf op wat er is gegeten en ongeveer hoeveel."
   },
   "serving": null,
   "child": {
@@ -108,7 +120,8 @@
     "fr": "Les noyaux, les feuilles et les tiges d’abricot sont mauvais pour les chiens. Garde les abricots pour les humains et préviens un adulte si ton chien mâchouille un noyau.",
     "es": "Los huesos, hojas y tallos del albaricoque son malos para los perros. Deja los albaricoques para las personas y avisa a un adulto si tu perro mordisquea un hueso.",
     "it": "Noccioli, foglie e gambi delle albicocche fanno male ai cani. Lascia le albicocche alle persone e dillo a un adulto se il tuo cane mastica un nocciolo.",
-    "pt": "Os caroços, as folhas e os pés dos alperces fazem mal aos cães. Os alperces são para as pessoas; avisa um adulto se o teu cão roer um caroço."
+    "pt": "Os caroços, as folhas e os pés dos alperces fazem mal aos cães. Os alperces são para as pessoas; avisa um adulto se o teu cão roer um caroço.",
+    "nl": "Abrikozenpitten, -bladeren en -stelen zijn slecht voor honden. Abrikozen zijn voor mensen. Vertel het aan een volwassene als je hond op een pit kauwt."
   },
   "faq": [
     {
@@ -119,7 +132,8 @@
         "fr": "Quelles parties de l’abricot sont toxiques ?",
         "es": "¿Qué partes del albaricoque son tóxicas?",
         "it": "Quali parti dell’albicocca sono tossiche?",
-        "pt": "Que partes do alperce são tóxicas?"
+        "pt": "Que partes do alperce são tóxicas?",
+        "nl": "Welke delen van de abrikoos zijn giftig?"
       },
       "a": {
         "en": "The stems, leaves and seeds contain cyanide, and they are particularly toxic as they wilt.",
@@ -128,7 +142,8 @@
         "fr": "Les tiges, les feuilles et les graines contiennent du cyanure, et elles sont particulièrement toxiques lorsqu’elles se flétrissent.",
         "es": "Los tallos, las hojas y las semillas contienen cianuro, y son especialmente tóxicos cuando se marchitan.",
         "it": "Gambi, foglie e semi contengono cianuro e sono particolarmente tossici quando appassiscono.",
-        "pt": "Os caules, as folhas e as sementes contêm cianeto e são particularmente tóxicos quando murcham."
+        "pt": "Os caules, as folhas e as sementes contêm cianeto e são particularmente tóxicos quando murcham.",
+        "nl": "De stelen, bladeren en pitten bevatten cyanide en zijn vooral giftig als ze aan het verwelken zijn."
       }
     }
   ],
@@ -199,6 +214,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "35afc41ab7c57159f788e0de7c42a8ab45be71e52d4d6ed8c4e9cb2e6905e002"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "974f7e0489feaad8c8232312b2e0cdb1dcd692435524fc479e00566ce3b67c56"
     }
   }
 }

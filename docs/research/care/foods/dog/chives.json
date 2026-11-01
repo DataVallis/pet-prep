@@ -8,7 +8,8 @@
     "fr": "Ciboulette",
     "es": "Cebollino",
     "it": "Erba cipollina",
-    "pt": "Cebolinho"
+    "pt": "Cebolinho",
+    "nl": "Bieslook"
   },
   "question": {
     "en": "Can dogs eat chives?",
@@ -17,7 +18,8 @@
     "fr": "Les chiens peuvent-ils manger de la ciboulette ?",
     "es": "¿Pueden los perros comer cebollino?",
     "it": "I cani possono mangiare l’erba cipollina?",
-    "pt": "Os cães podem comer cebolinho?"
+    "pt": "Os cães podem comer cebolinho?",
+    "nl": "Mogen honden bieslook eten?"
   },
   "url_slug": {
     "en": "chives",
@@ -26,7 +28,8 @@
     "fr": "ciboulette",
     "es": "cebollino",
     "it": "erba-cipollina",
-    "pt": "cebolinho"
+    "pt": "cebolinho",
+    "nl": "bieslook"
   },
   "level": "toxic",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Non. La ciboulette fait partie de la famille des alliums, comme l’oignon et l’ail, et elle est toxique pour les chiens. Crue, cuite ou séchée, elle peut endommager les globules rouges, et les signes mettent souvent quelques jours à apparaître.",
     "es": "No. El cebollino pertenece a la familia de las aliáceas, como la cebolla y el ajo, y es tóxico para los perros. Crudo, cocinado o seco, puede dañar los glóbulos rojos, y los síntomas suelen tardar unos días en aparecer.",
     "it": "No. L’erba cipollina appartiene alla famiglia degli allium, come cipolla e aglio, ed è tossica per i cani. Cruda, cotta o secca, può danneggiare i globuli rossi, e spesso i sintomi compaiono solo dopo qualche giorno.",
-    "pt": "Não. O cebolinho é uma aliácea, como a cebola e o alho, e é tóxico para os cães. O cebolinho cru, cozinhado ou seco pode danificar os glóbulos vermelhos, e os sinais muitas vezes demoram alguns dias a aparecer."
+    "pt": "Não. O cebolinho é uma aliácea, como a cebola e o alho, e é tóxico para os cães. O cebolinho cru, cozinhado ou seco pode danificar os glóbulos vermelhos, e os sinais muitas vezes demoram alguns dias a aparecer.",
+    "nl": "Nee. Bieslook hoort, net als ui en knoflook, bij de lookfamilie (allium) en is giftig voor honden. Rauw, gekookt en gedroogd bieslook kunnen allemaal de rode bloedcellen beschadigen, en verschijnselen komen vaak pas na een paar dagen."
   },
   "why": {
     "en": "It belongs to the allium family (onion, garlic, leek, chives), which is toxic to dogs. These plants contain compounds that damage red blood cells and can lead to anaemia. All parts and all forms are harmful: raw, cooked, dried and powdered. Stomach upset can happen with any amount; larger amounts damage the blood.",
@@ -45,7 +49,8 @@
     "fr": "La ciboulette appartient à la famille des alliums (oignon, ail, poireau, ciboulette), toxique pour les chiens. Ces plantes contiennent des composés qui endommagent les globules rouges et peuvent provoquer une anémie. Toutes les parties et toutes les formes sont nocives : crue, cuite, séchée et en poudre. Des troubles digestifs peuvent survenir quelle que soit la quantité ; de plus grandes quantités endommagent le sang.",
     "es": "Pertenece a la familia de las aliáceas (cebolla, ajo, puerro, cebollino), que es tóxica para los perros. Estas plantas contienen compuestos que dañan los glóbulos rojos y pueden provocar anemia. Todas las partes y todas las formas son perjudiciales: crudo, cocinado, seco y en polvo. Cualquier cantidad puede causar malestar de estómago; las cantidades mayores dañan la sangre.",
     "it": "Appartiene alla famiglia degli allium (cipolla, aglio, porro, erba cipollina), tossica per i cani. Queste piante contengono sostanze che danneggiano i globuli rossi e possono portare all’anemia. Sono dannose tutte le parti, in qualsiasi forma: crude, cotte, secche o in polvere. Disturbi di stomaco possono comparire con qualsiasi quantità; quantità maggiori danneggiano il sangue.",
-    "pt": "O cebolinho pertence à família das aliáceas (cebola, alho, alho-francês, cebolinho), que é tóxica para os cães. Estas plantas contêm compostos que danificam os glóbulos vermelhos e podem levar a anemia. Todas as partes e todas as formas fazem mal: cru, cozinhado, seco e em pó. Qualquer quantidade pode causar mal-estar de estômago; quantidades maiores danificam o sangue."
+    "pt": "O cebolinho pertence à família das aliáceas (cebola, alho, alho-francês, cebolinho), que é tóxica para os cães. Estas plantas contêm compostos que danificam os glóbulos vermelhos e podem levar a anemia. Todas as partes e todas as formas fazem mal: cru, cozinhado, seco e em pó. Qualquer quantidade pode causar mal-estar de estômago; quantidades maiores danificam o sangue.",
+    "nl": "Bieslook hoort bij de lookfamilie (ui, knoflook, prei, bieslook), die giftig is voor honden. Deze planten bevatten stoffen die rode bloedcellen beschadigen en tot bloedarmoede kunnen leiden. Alle delen en alle vormen zijn schadelijk: rauw, gekookt, gedroogd en als poeder. Maag-darmklachten kunnen bij elke hoeveelheid optreden; grotere hoeveelheden beschadigen het bloed."
   },
   "signs": {
     "en": [
@@ -89,6 +94,12 @@
       "Comer menos do que o habitual",
       "Mal-estar de barriga, mesmo depois de pequenas quantidades",
       "Sinais de anemia (glóbulos vermelhos danificados), normalmente alguns dias depois"
+    ],
+    "nl": [
+      "Braken en diarree",
+      "Minder eten dan normaal",
+      "Maag-darmklachten, ook na kleine hoeveelheden",
+      "Tekenen van bloedarmoede (beschadigde rode bloedcellen), meestal een paar dagen later"
     ]
   },
   "what_to_do": {
@@ -98,7 +109,8 @@
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce qui a été mangé (ciboulette) et en quelle quantité approximative. N’attendez pas l’apparition des signes : les dommages au sang n’apparaissent généralement qu’après quelques jours.",
     "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué ha comido (cebollino) y más o menos cuánto. No esperes a que aparezcan síntomas: el daño en la sangre suele notarse solo unos días después.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha mangiato (erba cipollina) e più o meno quanto. Non aspettare che compaiano i sintomi: i danni al sangue di solito si vedono solo dopo qualche giorno.",
-    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota o que comeu (cebolinho) e mais ou menos quanto. Não esperes pelos sinais: os danos no sangue normalmente só se veem alguns dias depois."
+    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota o que comeu (cebolinho) e mais ou menos quanto. Não esperes pelos sinais: os danos no sangue normalmente só se veem alguns dias depois.",
+    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat er is gegeten (bieslook) en ongeveer hoeveel. Wacht niet op verschijnselen: schade aan het bloed is meestal pas een paar dagen later te zien."
   },
   "serving": null,
   "child": {
@@ -108,7 +120,8 @@
     "fr": "La ciboulette ressemble à de la petite herbe verte, mais c’est une cousine de l’oignon : pas pour les chiens ! Préviens un adulte si ton chien en mange.",
     "es": "El cebollino parece hierbita verde, pero es de la familia de la cebolla y no es para perros. Avisa a un adulto si tu perro se come un poco.",
     "it": "L’erba cipollina sembra erbetta verde, ma fa parte della famiglia della cipolla e non è per i cani. Dillo a un adulto se il tuo cane ne mangia un po’.",
-    "pt": "O cebolinho parece relva verde fininha, mas é da família da cebola e não é para cães. Avisa um adulto se o teu cão comer um bocadinho."
+    "pt": "O cebolinho parece relva verde fininha, mas é da família da cebola e não é para cães. Avisa um adulto se o teu cão comer um bocadinho.",
+    "nl": "Bieslook lijkt op klein groen gras, maar het hoort bij de uienfamilie en is niet voor honden. Vertel het aan een volwassene als je hond ervan eet."
   },
   "faq": [
     {
@@ -119,7 +132,8 @@
         "fr": "La ciboulette cuite ou en poudre est-elle sans danger ?",
         "es": "¿Es seguro cocinado o en polvo?",
         "it": "È sicura cotta o in polvere?",
-        "pt": "É seguro cozinhado ou em pó?"
+        "pt": "É seguro cozinhado ou em pó?",
+        "nl": "Is het veilig als het gekookt is of als poeder?"
       },
       "a": {
         "en": "No. Raw, cooked, dried, powdered and liquid forms are all poisonous to dogs.",
@@ -128,7 +142,8 @@
         "fr": "Non. Crue, cuite, séchée, en poudre ou sous forme liquide, elle est toujours toxique pour les chiens.",
         "es": "No. Crudo, cocinado, seco, en polvo o en forma líquida, siempre es tóxico para los perros.",
         "it": "No. Cruda, cotta, secca, in polvere o liquida: in tutte le forme è velenosa per i cani.",
-        "pt": "Não. As formas cruas, cozinhadas, secas, em pó e líquidas são todas venenosas para os cães."
+        "pt": "Não. As formas cruas, cozinhadas, secas, em pó e líquidas são todas venenosas para os cães.",
+        "nl": "Nee. Rauw, gekookt, gedroogd, als poeder en vloeibaar: alle vormen zijn giftig voor honden."
       }
     },
     {
@@ -139,7 +154,8 @@
         "fr": "Pourquoi les signes n’apparaissent-ils pas tout de suite ?",
         "es": "¿Por qué los síntomas no aparecen enseguida?",
         "it": "Perché i sintomi non si vedono subito?",
-        "pt": "Porque é que os sinais não aparecem logo?"
+        "pt": "Porque é que os sinais não aparecem logo?",
+        "nl": "Waarom zie je niet meteen verschijnselen?"
       },
       "a": {
         "en": "Symptoms can start within 24 hours but more often take a few days to appear; signs of anaemia typically develop several days after eating.",
@@ -148,7 +164,8 @@
         "fr": "Les symptômes peuvent commencer dans les 24 heures, mais mettent plus souvent quelques jours à apparaître ; les signes d’anémie se développent généralement plusieurs jours après l’ingestion.",
         "es": "Los síntomas pueden empezar en las primeras 24 horas, pero lo más habitual es que tarden unos días; los signos de anemia suelen aparecer varios días después de comerlo.",
         "it": "I sintomi possono comparire entro 24 ore, ma più spesso servono alcuni giorni; i segni di anemia di solito si sviluppano diversi giorni dopo l’ingestione.",
-        "pt": "Os sintomas podem começar nas primeiras 24 horas, mas é mais frequente demorarem alguns dias a aparecer; os sinais de anemia costumam surgir vários dias depois de o cão comer."
+        "pt": "Os sintomas podem começar nas primeiras 24 horas, mas é mais frequente demorarem alguns dias a aparecer; os sinais de anemia costumam surgir vários dias depois de o cão comer.",
+        "nl": "Verschijnselen kunnen binnen 24 uur beginnen, maar komen vaker pas na een paar dagen; tekenen van bloedarmoede ontstaan meestal enkele dagen na het eten."
       }
     }
   ],
@@ -271,6 +288,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2d2ce294e5bf3e9a43a3fd6d228a5b453f7ad44c17289034a0513df49faa384f"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "792d4e311df9b54b97625c87198709e4099f5643f098e3a6e34a3d15f0050a7f"
     }
   }
 }

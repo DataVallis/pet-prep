@@ -8,7 +8,8 @@
     "fr": "Œufs cuits",
     "es": "Huevos cocinados",
     "it": "Uova cotte",
-    "pt": "Ovos cozinhados"
+    "pt": "Ovos cozinhados",
+    "nl": "Gekookte eieren"
   },
   "question": {
     "en": "Can cats eat cooked eggs?",
@@ -17,7 +18,8 @@
     "fr": "Les chats peuvent-ils manger des œufs cuits ?",
     "es": "¿Pueden los gatos comer huevos cocinados?",
     "it": "I gatti possono mangiare le uova cotte?",
-    "pt": "Os gatos podem comer ovos cozinhados?"
+    "pt": "Os gatos podem comer ovos cozinhados?",
+    "nl": "Mogen katten gekookte eieren eten?"
   },
   "url_slug": {
     "en": "cooked-eggs",
@@ -26,7 +28,8 @@
     "fr": "oeufs-cuits",
     "es": "huevos-cocinados",
     "it": "uova-cotte",
-    "pt": "ovos-cozinhados"
+    "pt": "ovos-cozinhados",
+    "nl": "gekookte-eieren"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Oui, en petite quantité. Un peu d’œuf bien cuit et nature convient comme friandise occasionnelle. Les œufs sont une protéine courante dans les aliments pour chats, mais ils ne doivent être donnés qu’avec modération, et jamais crus.",
     "es": "Sí, en pequeñas cantidades. Un poco de huevo bien cocinado y sin nada está bien como premio de vez en cuando. El huevo es una proteína habitual en la comida para gatos, pero solo debe darse con moderación y nunca crudo.",
     "it": "Sì, in piccole quantità. Un po’ di uovo ben cotto e semplice va bene come premio occasionale. Le uova sono una proteina comune negli alimenti per gatti, ma vanno date con moderazione e mai crude.",
-    "pt": "Sim, em pequenas quantidades. Um pouco de ovo simples e bem cozinhado pode ser uma guloseima ocasional. Os ovos são uma proteína comum na comida para gatos, mas só devem ser dados com moderação e nunca crus."
+    "pt": "Sim, em pequenas quantidades. Um pouco de ovo simples e bem cozinhado pode ser uma guloseima ocasional. Os ovos são uma proteína comum na comida para gatos, mas só devem ser dados com moderação e nunca crus.",
+    "nl": "Ja, in kleine hoeveelheden. Een beetje goed gaar, onbewerkt ei is af en toe prima als snoepje. Eieren zijn een veelgebruikte eiwitbron in kattenvoer, maar geef ze alleen met mate en nooit rauw."
   },
   "why": {
     "en": "Cornell lists eggs among the protein sources most commonly used in cat food, and PDSA says eggs suit pets, but only in moderation. Cooking matters: raw eggs can carry Salmonella and raw egg white blocks the vitamin biotin. Treats should be a small part of a cat's diet.",
@@ -45,7 +49,8 @@
     "fr": "Cornell cite les œufs parmi les sources de protéines les plus utilisées dans les aliments pour chats, et la PDSA indique qu’ils conviennent aux animaux, mais seulement avec modération. La cuisson compte : les œufs crus peuvent transmettre des salmonelles et le blanc d’œuf cru bloque la biotine, une vitamine. Les friandises ne doivent représenter qu’une petite part de l’alimentation du chat.",
     "es": "Cornell incluye el huevo entre las fuentes de proteína más usadas en la comida para gatos, y PDSA indica que el huevo es adecuado para las mascotas, pero solo con moderación. Cocinarlo es importante: el huevo crudo puede transmitir Salmonella y la clara cruda impide aprovechar la vitamina biotina. Los premios deben ser una parte pequeña de la dieta de un gato.",
     "it": "La Cornell University elenca le uova tra le fonti proteiche più usate negli alimenti per gatti, e PDSA afferma che le uova sono adatte agli animali domestici, ma solo con moderazione. La cottura è importante: le uova crude possono trasmettere la Salmonella e l’albume crudo blocca la vitamina biotina. I premi dovrebbero essere una piccola parte della dieta del gatto.",
-    "pt": "A Universidade Cornell inclui os ovos entre as fontes de proteína mais usadas na comida para gatos, e a PDSA diz que os ovos são adequados para animais de estimação, mas só com moderação. A cozedura é importante: os ovos crus podem conter Salmonella e a clara crua bloqueia a vitamina biotina. As guloseimas devem ser uma pequena parte da alimentação do gato."
+    "pt": "A Universidade Cornell inclui os ovos entre as fontes de proteína mais usadas na comida para gatos, e a PDSA diz que os ovos são adequados para animais de estimação, mas só com moderação. A cozedura é importante: os ovos crus podem conter Salmonella e a clara crua bloqueia a vitamina biotina. As guloseimas devem ser uma pequena parte da alimentação do gato.",
+    "nl": "Cornell noemt eieren bij de eiwitbronnen die het meest worden gebruikt in kattenvoer, en volgens PDSA zijn eieren geschikt voor huisdieren, maar alleen met mate. Garen is belangrijk: rauwe eieren kunnen Salmonella bevatten en rauw eiwit blokkeert de vitamine biotine. Snoepjes horen maar een klein deel van het eten van een kat te zijn."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou a la diarrhée ensuite, arrêtez et demandez conseil à votre vétérinaire avant de recommencer.",
     "es": "Ofrécele primero un trocito. Si después tu gato tiene vómitos o diarrea, deja de dárselo y consulta a tu veterinario antes de volver a probar.",
     "it": "Offrigli prima un pezzetto. Se poi il tuo gatto vomita o ha la diarrea, smetti e chiedi al veterinario prima di riprovare.",
-    "pt": "Começa por oferecer um pedaço pequeno. Se depois o teu gato tiver vómitos ou diarreia, para e pergunta ao teu veterinário antes de voltar a tentar."
+    "pt": "Começa por oferecer um pedaço pequeno. Se depois o teu gato tiver vómitos ou diarreia, para e pergunta ao teu veterinário antes de voltar a tentar.",
+    "nl": "Geef eerst een klein stukje. Krijgt je kat daarna last van braken of diarree, stop dan en vraag je dierenarts om advies voordat je het opnieuw probeert."
   },
   "serving": {
     "en": "Fully cooked and plain, with nothing added; a small piece as an occasional treat.",
@@ -64,7 +70,8 @@
     "fr": "Bien cuit et nature, sans rien ajouter ; un petit morceau comme friandise occasionnelle.",
     "es": "Bien cocinado y sin nada, sin añadir ningún ingrediente; un trocito como premio de vez en cuando.",
     "it": "Ben cotto e semplice, senza aggiunte; un pezzetto come premio occasionale.",
-    "pt": "Bem cozinhado e simples, sem nada adicionado; um pedaço pequeno como guloseima ocasional."
+    "pt": "Bem cozinhado e simples, sem nada adicionado; um pedaço pequeno como guloseima ocasional.",
+    "nl": "Goed gaar en onbewerkt, zonder toevoegingen; af en toe een klein stukje als snoepje."
   },
   "child": {
     "en": "A tiny bit of plain cooked egg can be a treat for a cat. Ask a grown-up to cook it first.",
@@ -73,7 +80,8 @@
     "fr": "Un tout petit peu d’œuf cuit nature peut être une friandise pour un chat. Demande d’abord à un adulte de le cuire.",
     "es": "Un poquito de huevo cocinado y sin nada puede ser un premio para un gato. Pídele a un adulto que lo cocine primero.",
     "it": "Un pezzettino di uovo cotto e semplice può essere un premio per un gatto. Chiedi a un adulto di cuocerlo prima.",
-    "pt": "Um bocadinho de ovo cozinhado simples pode ser uma guloseima para um gato. Pede primeiro a um adulto que o cozinhe."
+    "pt": "Um bocadinho de ovo cozinhado simples pode ser uma guloseima para um gato. Pede primeiro a um adulto que o cozinhe.",
+    "nl": "Een klein beetje gewoon gekookt ei kan een snoepje zijn voor een kat. Vraag een volwassene om het eerst te koken."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "fr": "Pourquoi pas crus ?",
         "es": "¿Por qué no crudo?",
         "it": "Perché non crude?",
-        "pt": "Porque não crus?"
+        "pt": "Porque não crus?",
+        "nl": "Waarom niet rauw?"
       },
       "a": {
         "en": "Raw eggs can carry bacteria such as Salmonella, and raw egg white contains avidin, which stops the vitamin biotin being absorbed.",
@@ -93,7 +102,8 @@
         "fr": "Les œufs crus peuvent transmettre des bactéries comme les salmonelles, et le blanc d’œuf cru contient de l’avidine, qui empêche l’absorption de la biotine, une vitamine.",
         "es": "El huevo crudo puede transmitir bacterias como Salmonella, y la clara cruda contiene avidina, que impide que se absorba la vitamina biotina.",
         "it": "Le uova crude possono trasmettere batteri come la Salmonella, e l’albume crudo contiene avidina, che impedisce l’assorbimento della vitamina biotina.",
-        "pt": "Os ovos crus podem conter bactérias como a Salmonella, e a clara crua contém avidina, que impede a absorção da vitamina biotina."
+        "pt": "Os ovos crus podem conter bactérias como a Salmonella, e a clara crua contém avidina, que impede a absorção da vitamina biotina.",
+        "nl": "Rauwe eieren kunnen bacteriën zoals Salmonella bevatten, en rauw eiwit bevat avidine, waardoor de vitamine biotine niet wordt opgenomen."
       }
     }
   ],
@@ -167,6 +177,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f8aa580ff22069e6ee57917a0a92cc27ab1e806c83408c99f7bc300500029fee"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b5be91ec08766bf1cc02ecb87fa9164f815643d563e9631beb327d1e45c16066"
     }
   }
 }

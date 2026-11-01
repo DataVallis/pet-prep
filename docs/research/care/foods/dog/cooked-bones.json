@@ -8,7 +8,8 @@
     "fr": "Os cuits",
     "es": "Huesos cocinados",
     "it": "Ossa cotte",
-    "pt": "Ossos cozinhados"
+    "pt": "Ossos cozinhados",
+    "nl": "Gekookte botten"
   },
   "question": {
     "en": "Can dogs eat cooked bones?",
@@ -17,7 +18,8 @@
     "fr": "Les chiens peuvent-ils manger des os cuits ?",
     "es": "¿Pueden los perros comer huesos cocinados?",
     "it": "I cani possono mangiare le ossa cotte?",
-    "pt": "Os cães podem comer ossos cozinhados?"
+    "pt": "Os cães podem comer ossos cozinhados?",
+    "nl": "Mogen honden gekookte botten eten?"
   },
   "url_slug": {
     "en": "cooked-bones",
@@ -26,7 +28,8 @@
     "fr": "os-cuits",
     "es": "huesos-cocinados",
     "it": "ossa-cotte",
-    "pt": "ossos-cozinhados"
+    "pt": "ossos-cozinhados",
+    "nl": "gekookte-botten"
   },
   "level": "dangerous",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Non. Ne donnez jamais d’os cuits à un chien. Les os cuits se brisent en éclats tranchants qui peuvent blesser la bouche, provoquer un étouffement ou bloquer l’intestin. Les os de volaille cuits sont particulièrement cassants et peuvent mener à une urgence vétérinaire.",
     "es": "No. Nunca le des huesos cocinados a un perro. Los huesos cocinados se astillan en trozos afilados que pueden cortar la boca, provocar atragantamiento u obstruir el intestino. Los huesos de ave cocinados son especialmente frágiles y pueden convertirse en una urgencia veterinaria.",
     "it": "No. Non dare mai ossa cotte a un cane. Le ossa cotte si scheggiano in frammenti appuntiti che possono ferire la bocca, causare soffocamento o ostruire l’intestino. Le ossa cotte di pollame sono particolarmente fragili e possono trasformarsi in un’emergenza veterinaria.",
-    "pt": "Não. Nunca dês ossos cozinhados a um cão. Os ossos cozinhados partem-se em lascas afiadas que podem cortar a boca, causar engasgamento ou obstruir o intestino. Os ossos de aves cozinhados são especialmente quebradiços e podem tornar-se uma emergência veterinária."
+    "pt": "Não. Nunca dês ossos cozinhados a um cão. Os ossos cozinhados partem-se em lascas afiadas que podem cortar a boca, causar engasgamento ou obstruir o intestino. Os ossos de aves cozinhados são especialmente quebradiços e podem tornar-se uma emergência veterinária.",
+    "nl": "Nee. Geef een hond nooit gekookte botten. Gekookte botten splinteren in scherpe stukjes die de bek kunnen verwonden, verstikking kunnen veroorzaken of de darmen kunnen verstoppen. Gekookte botten van gevogelte zijn extra broos en kunnen tot een spoedgeval bij de dierenarts leiden."
   },
   "why": {
     "en": "Cooking makes bones brittle, so they break into sharp splinters. Chicken and turkey bones are the classic example, but any bones from the kitchen table can injure a dog. The FDA has received reports of choking, mouth wounds, vomiting, diarrhoea, rectal bleeding and gut blockages in dogs that ate bones or bone treats.",
@@ -45,7 +49,8 @@
     "fr": "La cuisson rend les os cassants : ils se brisent en éclats pointus. Les os de poulet et de dinde en sont l’exemple classique, mais tous les os venant de la table peuvent blesser un chien. La FDA a reçu des signalements d’étouffements, de plaies dans la bouche, de vomissements, de diarrhées, de saignements rectaux et d’obstructions intestinales chez des chiens ayant mangé des os ou des friandises à base d’os.",
     "es": "Al cocinarlos, los huesos se vuelven frágiles y se rompen en astillas afiladas. Los huesos de pollo y de pavo son el ejemplo clásico, pero cualquier hueso de la mesa puede herir a un perro. La FDA ha recibido notificaciones de atragantamientos, heridas en la boca, vómitos, diarrea, sangrado por el recto y obstrucciones intestinales en perros que comieron huesos o premios de hueso.",
     "it": "La cottura rende le ossa fragili, quindi si rompono in schegge appuntite. Le ossa di pollo e di tacchino sono l’esempio classico, ma qualsiasi osso avanzato dalla tavola può ferire un cane. La FDA ha ricevuto segnalazioni di soffocamento, ferite in bocca, vomito, diarrea, sanguinamento rettale e ostruzioni intestinali in cani che avevano mangiato ossa o snack a base di ossa.",
-    "pt": "A cozedura torna os ossos quebradiços, por isso partem-se em lascas afiadas. Os ossos de frango e de peru são o exemplo clássico, mas quaisquer ossos da mesa podem ferir um cão. A FDA recebeu relatos de engasgamento, feridas na boca, vómitos, diarreia, hemorragia retal e obstruções intestinais em cães que comeram ossos ou guloseimas de osso."
+    "pt": "A cozedura torna os ossos quebradiços, por isso partem-se em lascas afiadas. Os ossos de frango e de peru são o exemplo clássico, mas quaisquer ossos da mesa podem ferir um cão. A FDA recebeu relatos de engasgamento, feridas na boca, vómitos, diarreia, hemorragia retal e obstruções intestinais em cães que comeram ossos ou guloseimas de osso.",
+    "nl": "Door koken worden botten broos, zodat ze in scherpe splinters breken. Kippen- en kalkoenbotten zijn het bekende voorbeeld, maar alle botten van de eettafel kunnen een hond verwonden. De FDA heeft meldingen gekregen van verstikking, wonden in de bek, braken, diarree, bloedingen uit de anus en darmverstoppingen bij honden die botten of botsnacks hadden gegeten."
   },
   "signs": {
     "en": [
@@ -96,6 +101,13 @@
       "Vómitos",
       "Diarreia",
       "Sangue a sair pelo rabo"
+    ],
+    "nl": [
+      "Stikken of kokhalzen",
+      "Snijwonden of bloed in de bek",
+      "Braken",
+      "Diarree",
+      "Bloed uit de anus"
     ]
   },
   "what_to_do": {
@@ -105,7 +117,8 @@
     "fr": "Contactez immédiatement votre vétérinaire si votre chien a mangé des os cuits, même s’il semble aller bien. Notez de quel type d’os il s’agissait et en quelle quantité approximative. N’attendez pas les signes d’une obstruction.",
     "es": "Contacta enseguida con tu veterinario si tu perro se ha comido huesos cocinados, aunque parezca estar bien. Apunta qué tipo de hueso era y más o menos cuánto ha comido. No esperes a que aparezcan signos de obstrucción.",
     "it": "Contatta subito il veterinario se il tuo cane ha mangiato ossa cotte, anche se sembra stare bene. Annota che tipo di osso era e più o meno quanto ne ha mangiato. Non aspettare i segni di un’ostruzione.",
-    "pt": "Contacta imediatamente o teu veterinário se o teu cão comeu ossos cozinhados, mesmo que pareça estar bem. Anota que tipo de osso era e mais ou menos quanto comeu. Não esperes por sinais de obstrução."
+    "pt": "Contacta imediatamente o teu veterinário se o teu cão comeu ossos cozinhados, mesmo que pareça estar bem. Anota que tipo de osso era e mais ou menos quanto comeu. Não esperes por sinais de obstrução.",
+    "nl": "Neem meteen contact op met je dierenarts als je hond gekookte botten heeft gegeten, ook als hij in orde lijkt. Schrijf op wat voor bot het was en ongeveer hoeveel er is gegeten. Wacht niet op tekenen van een verstopping."
   },
   "serving": null,
   "child": {
@@ -115,7 +128,8 @@
     "fr": "Les os de nos assiettes ne sont pas pour les chiens. Ils se cassent en morceaux pointus. Préviens un adulte si ton chien en trouve un.",
     "es": "Los huesos de nuestros platos no son para perros. Se rompen en trocitos que pinchan. Avisa a un adulto si tu perro encuentra uno.",
     "it": "Le ossa dei nostri piatti non sono per i cani. Si rompono in pezzetti appuntiti. Dillo a un adulto se il tuo cane ne trova uno.",
-    "pt": "Os ossos dos nossos pratos não são para cães. Partem-se em pedacinhos afiados. Avisa um adulto se o teu cão encontrar um."
+    "pt": "Os ossos dos nossos pratos não são para cães. Partem-se em pedacinhos afiados. Avisa um adulto se o teu cão encontrar um.",
+    "nl": "Botten van ons bord zijn niet voor honden. Ze breken in scherpe stukjes. Vertel het aan een volwassene als je hond er een vindt."
   },
   "faq": [
     {
@@ -126,7 +140,8 @@
         "fr": "Les os de poulet sont-ils les pires ?",
         "es": "¿Los huesos de pollo son los peores?",
         "it": "Le ossa di pollo sono le peggiori?",
-        "pt": "Os ossos de frango são os piores?"
+        "pt": "Os ossos de frango são os piores?",
+        "nl": "Zijn kippenbotten het ergst?"
       },
       "a": {
         "en": "Cooked poultry bones are especially brittle and splinter easily, but any cooked bone from the table can cause injury.",
@@ -135,7 +150,8 @@
         "fr": "Les os de volaille cuits sont particulièrement cassants et éclatent facilement, mais tout os cuit venant de la table peut blesser un chien.",
         "es": "Los huesos de ave cocinados son especialmente frágiles y se astillan con facilidad, pero cualquier hueso cocinado de la mesa puede causar heridas.",
         "it": "Le ossa cotte di pollame sono particolarmente fragili e si scheggiano facilmente, ma qualsiasi osso cotto della tavola può causare ferite.",
-        "pt": "Os ossos de aves cozinhados são especialmente quebradiços e lascam com facilidade, mas qualquer osso cozinhado da mesa pode causar ferimentos."
+        "pt": "Os ossos de aves cozinhados são especialmente quebradiços e lascam com facilidade, mas qualquer osso cozinhado da mesa pode causar ferimentos.",
+        "nl": "Gekookte botten van gevogelte zijn extra broos en splinteren makkelijk, maar elk gekookt bot van tafel kan letsel veroorzaken."
       }
     },
     {
@@ -146,7 +162,8 @@
         "fr": "Comment empêcher mon chien d’attraper des os ?",
         "es": "¿Cómo evito que mi perro coja huesos?",
         "it": "Come evito che il mio cane prenda le ossa?",
-        "pt": "Como evito que o meu cão apanhe ossos?"
+        "pt": "Como evito que o meu cão apanhe ossos?",
+        "nl": "Hoe voorkom ik dat mijn hond aan botten komt?"
       },
       "a": {
         "en": "Keep platters out of reach while cooking and eating, and be careful what goes in the bin: dogs often raid the trash for carcasses and steak bones.",
@@ -155,7 +172,8 @@
         "fr": "Gardez les plats hors de portée pendant la cuisine et les repas, et faites attention à ce que vous jetez : les chiens fouillent souvent la poubelle à la recherche de carcasses et d’os de steak.",
         "es": "Deja las fuentes fuera de su alcance mientras cocinas y durante las comidas, y ten cuidado con lo que tiras a la basura: los perros suelen rebuscar en ella las carcasas y los huesos de chuleta.",
         "it": "Tieni i vassoi lontano dal cane mentre cucini e mentre mangiate, e fai attenzione a cosa butti nella spazzatura: i cani spesso frugano nei rifiuti in cerca di carcasse e ossa di bistecca.",
-        "pt": "Mantém as travessas fora do alcance enquanto cozinhas e comes, e tem cuidado com o que deitas ao lixo: os cães vão muitas vezes ao lixo à procura de carcaças e ossos de bife."
+        "pt": "Mantém as travessas fora do alcance enquanto cozinhas e comes, e tem cuidado com o que deitas ao lixo: os cães vão muitas vezes ao lixo à procura de carcaças e ossos de bife.",
+        "nl": "Zet schalen buiten bereik tijdens het koken en eten, en let op wat je in de vuilnisbak gooit: honden plunderen vaak de vuilnisbak op zoek naar karkassen en biefstukbotten."
       }
     }
   ],
@@ -271,6 +289,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d47f81d6d50d617c5288c039c50241a42091e3a0f7b34880879482da9ff1fb5a"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "42084197187bd74fdc3f6733a799cc7d21a90b6ef7d29f7fd9e433ada5af21dc"
     }
   }
 }

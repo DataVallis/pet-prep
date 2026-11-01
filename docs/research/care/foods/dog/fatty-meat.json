@@ -8,7 +8,8 @@
     "fr": "Viande grasse",
     "es": "Carne grasa",
     "it": "Carne grassa",
-    "pt": "Carne gorda"
+    "pt": "Carne gorda",
+    "nl": "Vet vlees"
   },
   "question": {
     "en": "Can dogs eat fatty meat?",
@@ -17,7 +18,8 @@
     "fr": "Les chiens peuvent-ils manger de la viande grasse ?",
     "es": "¿Pueden los perros comer carne grasa?",
     "it": "I cani possono mangiare la carne grassa?",
-    "pt": "Os cães podem comer carne gorda?"
+    "pt": "Os cães podem comer carne gorda?",
+    "nl": "Mogen honden vet vlees eten?"
   },
   "url_slug": {
     "en": "fatty-meat",
@@ -26,7 +28,8 @@
     "fr": "viande-grasse",
     "es": "carne-grasa",
     "it": "carne-grassa",
-    "pt": "carne-gorda"
+    "pt": "carne-gorda",
+    "nl": "vet-vlees"
   },
   "level": "not_recommended",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Déconseillé. La viande grasse, la peau de volaille et les nerfs ne sont pas toxiques, mais ils peuvent provoquer vomissements et diarrhée, ou déclencher une pancréatite, une inflammation douloureuse et parfois grave. Certaines races, comme le schnauzer nain, y sont plus sujettes.",
     "es": "No se recomienda. La carne grasa, la piel de ave y los cartílagos no son tóxicos, pero pueden causar vómitos y diarrea o desencadenar una pancreatitis, una inflamación dolorosa y a veces grave. Algunas razas, como el schnauzer miniatura, son más propensas a sufrirla.",
     "it": "Sconsigliata. Carne grassa, pelle del pollame e nervetti non sono tossici, ma possono causare vomito e diarrea o scatenare una pancreatite, un’infiammazione dolorosa e talvolta grave. Alcune razze, come lo schnauzer nano, sono più predisposte.",
-    "pt": "Não é recomendado. A carne gorda, a pele das aves e as cartilagens não são tóxicas, mas podem causar vómitos e diarreia ou desencadear uma pancreatite, uma inflamação dolorosa e por vezes grave. Algumas raças, como o schnauzer miniatura, são mais propensas."
+    "pt": "Não é recomendado. A carne gorda, a pele das aves e as cartilagens não são tóxicas, mas podem causar vómitos e diarreia ou desencadear uma pancreatite, uma inflamação dolorosa e por vezes grave. Algumas raças, como o schnauzer miniatura, são mais propensas.",
+    "nl": "Niet aan te raden. Vet vlees, vel van gevogelte en zeen zijn niet giftig, maar ze kunnen braken en diarree veroorzaken of alvleesklierontsteking uitlokken, een pijnlijke en soms ernstige ontsteking. Sommige rassen, zoals de dwergschnauzer, zijn er gevoeliger voor."
   },
   "why": {
     "en": "A fatty meal is a known trigger of pancreatitis in dogs. Effects range from a mild upset stomach to a severe, even life-threatening pancreatitis. Dogs that have had pancreatitis before should avoid fatty foods.",
@@ -45,7 +49,8 @@
     "fr": "Un repas gras est un déclencheur connu de la pancréatite chez le chien. Les effets vont de légers troubles digestifs à une pancréatite grave, voire mortelle. Les chiens qui ont déjà eu une pancréatite doivent éviter les aliments gras.",
     "es": "Una comida grasa es un desencadenante conocido de la pancreatitis en los perros. Los efectos van desde un leve malestar de estómago hasta una pancreatitis grave que incluso puede poner en peligro su vida. Los perros que ya han tenido pancreatitis deben evitar los alimentos grasos.",
     "it": "Un pasto grasso è un noto fattore scatenante della pancreatite nei cani. Gli effetti vanno da un lieve mal di stomaco a una pancreatite grave, potenzialmente mortale. I cani che hanno già avuto una pancreatite dovrebbero evitare i cibi grassi.",
-    "pt": "Uma refeição gorda é um desencadeador conhecido de pancreatite nos cães. Os efeitos vão de uma ligeira perturbação do estômago a uma pancreatite grave, que pode até pôr a vida em risco. Os cães que já tiveram pancreatite devem evitar alimentos gordos."
+    "pt": "Uma refeição gorda é um desencadeador conhecido de pancreatite nos cães. Os efeitos vão de uma ligeira perturbação do estômago a uma pancreatite grave, que pode até pôr a vida em risco. Os cães que já tiveram pancreatite devem evitar alimentos gordos.",
+    "nl": "Een vette maaltijd is een bekende uitlokker van alvleesklierontsteking bij honden. De gevolgen lopen uiteen van een lichte maagstoornis tot een ernstige, zelfs levensbedreigende alvleesklierontsteking. Honden die eerder alvleesklierontsteking hebben gehad, moeten vet eten vermijden."
   },
   "signs": {
     "en": [
@@ -96,6 +101,13 @@
       "Diarreia",
       "Falta de vontade de comer",
       "Cansaço, febre"
+    ],
+    "nl": [
+      "Braken, soms pas 1–4 dagen na de vette maaltijd",
+      "Buikpijn (een hond kan zich uitstrekken in een ‘biddende’ houding)",
+      "Diarree",
+      "Niet willen eten",
+      "Vermoeidheid, koorts"
     ]
   },
   "what_to_do": {
@@ -105,7 +117,8 @@
     "fr": "Si votre chien a mangé beaucoup d’aliments gras, ou s’il vomit, a mal au ventre ou semble fatigué dans les jours qui suivent, contactez votre vétérinaire. Notez ce qu’il a mangé et en quelle quantité approximative. Les signes de pancréatite peuvent n’apparaître qu’après quelques jours.",
     "es": "Si tu perro ha comido mucha comida grasa, o en los días siguientes vomita, le duele la barriga o está cansado, contacta con tu veterinario. Apunta qué ha comido y más o menos cuánto. Los signos de pancreatitis pueden tardar unos días en aparecer.",
     "it": "Se il tuo cane ha mangiato molto cibo grasso o nei giorni successivi mostra vomito, mal di pancia o stanchezza, contatta il veterinario. Annota che cosa ha mangiato e più o meno quanto. I sintomi della pancreatite possono comparire con qualche giorno di ritardo.",
-    "pt": "Se o teu cão comeu muita comida gorda, ou se nos dias seguintes tiver vómitos, dor de barriga ou cansaço, contacta o teu veterinário. Anota o que comeu e mais ou menos quanto. Os sinais de pancreatite podem demorar alguns dias a aparecer."
+    "pt": "Se o teu cão comeu muita comida gorda, ou se nos dias seguintes tiver vómitos, dor de barriga ou cansaço, contacta o teu veterinário. Anota o que comeu e mais ou menos quanto. Os sinais de pancreatite podem demorar alguns dias a aparecer.",
+    "nl": "Heeft je hond veel vet eten gegeten, of braakt hij, heeft hij buikpijn of is hij moe in de dagen erna? Neem dan contact op met je dierenarts. Schrijf op wat er is gegeten en ongeveer hoeveel. Verschijnselen van alvleesklierontsteking kunnen een paar dagen later komen."
   },
   "serving": {
     "en": "If you share meat, choose plain, lean, cooked meat without skin, fat or seasoning, and no bones.",
@@ -114,7 +127,8 @@
     "fr": "Si vous partagez de la viande, choisissez une viande maigre, nature et cuite, sans peau, sans gras, sans assaisonnement et sans os.",
     "es": "Si compartes carne, elige carne magra cocinada y natural, sin piel, grasa ni condimentos, y sin huesos.",
     "it": "Se condividi la carne, scegli carne magra, cotta e al naturale, senza pelle, grasso o condimenti, e senza ossa.",
-    "pt": "Se partilhares carne, escolhe carne cozinhada simples e magra, sem pele, gordura nem temperos, e sem ossos."
+    "pt": "Se partilhares carne, escolhe carne cozinhada simples e magra, sem pele, gordura nem temperos, e sem ossos.",
+    "nl": "Deel je vlees, kies dan gewoon, mager, gekookt vlees zonder vel, vet of kruiden, en zonder botten."
   },
   "child": {
     "en": "Fatty bits of meat can give dogs a sore tummy. Leave the fat on your plate and give your dog its own food.",
@@ -123,7 +137,8 @@
     "fr": "Les morceaux de viande grasse peuvent donner mal au ventre aux chiens. Laisse le gras dans ton assiette et donne à ton chien sa propre nourriture.",
     "es": "Los trozos de grasa de la carne pueden darles dolor de barriga a los perros. Deja la grasa en tu plato y dale a tu perro su propia comida.",
     "it": "I pezzetti grassi di carne possono far venire mal di pancia ai cani. Lascia il grasso nel piatto e dai al tuo cane il suo cibo.",
-    "pt": "Os pedaços de gordura da carne podem fazer doer a barriga dos cães. Deixa a gordura no teu prato e dá ao teu cão a comida dele."
+    "pt": "Os pedaços de gordura da carne podem fazer doer a barriga dos cães. Deixa a gordura no teu prato e dá ao teu cão a comida dele.",
+    "nl": "Vette stukjes vlees kunnen het buikje van een hond pijn doen. Laat het vet op je bord liggen en geef je hond zijn eigen eten."
   },
   "faq": [
     {
@@ -134,7 +149,8 @@
         "fr": "Qu’est-ce que la pancréatite ?",
         "es": "¿Qué es la pancreatitis?",
         "it": "Che cos’è la pancreatite?",
-        "pt": "O que é a pancreatite?"
+        "pt": "O que é a pancreatite?",
+        "nl": "Wat is alvleesklierontsteking?"
       },
       "a": {
         "en": "An inflammation of the pancreas that causes vomiting, nausea and pain. In dogs it can be triggered by a fatty meal.",
@@ -143,7 +159,8 @@
         "fr": "Une inflammation du pancréas qui provoque vomissements, nausées et douleurs. Chez le chien, elle peut être déclenchée par un repas gras.",
         "es": "Una inflamación del páncreas que provoca vómitos, náuseas y dolor. En los perros puede desencadenarla una comida grasa.",
         "it": "Un’infiammazione del pancreas che causa vomito, nausea e dolore. Nei cani può essere scatenata da un pasto grasso.",
-        "pt": "Uma inflamação do pâncreas que causa vómitos, náuseas e dor. Nos cães pode ser desencadeada por uma refeição gorda."
+        "pt": "Uma inflamação do pâncreas que causa vómitos, náuseas e dor. Nos cães pode ser desencadeada por uma refeição gorda.",
+        "nl": "Een ontsteking van de alvleesklier (pancreatitis) die braken, misselijkheid en pijn veroorzaakt. Bij honden kan een vette maaltijd die uitlokken."
       }
     },
     {
@@ -154,7 +171,8 @@
         "fr": "La peau de dinde à Noël, c’est permis ?",
         "es": "¿La piel del pavo está bien en Navidad?",
         "it": "La pelle del tacchino va bene a Natale?",
-        "pt": "Posso dar pele de peru ao meu cão no Natal?"
+        "pt": "Posso dar pele de peru ao meu cão no Natal?",
+        "nl": "Is kalkoenvel met kerst oké?"
       },
       "a": {
         "en": "No. Turkey skin and other fatty table foods can cause anything from stomach upset to severe pancreatitis.",
@@ -163,7 +181,8 @@
         "fr": "Non. La peau de dinde et les autres aliments de table gras peuvent provoquer aussi bien des troubles digestifs qu’une pancréatite grave.",
         "es": "No. La piel del pavo y otras comidas grasas de la mesa pueden causar desde un malestar de estómago hasta una pancreatitis grave.",
         "it": "No. La pelle del tacchino e gli altri cibi grassi della tavola possono causare di tutto, da un mal di stomaco a una pancreatite grave.",
-        "pt": "Não. A pele do peru e outros alimentos gordos da mesa podem causar desde uma perturbação do estômago até uma pancreatite grave."
+        "pt": "Não. A pele do peru e outros alimentos gordos da mesa podem causar desde uma perturbação do estômago até uma pancreatite grave.",
+        "nl": "Nee. Kalkoenvel en ander vet tafelvoedsel kunnen van alles veroorzaken, van een maagstoornis tot ernstige alvleesklierontsteking."
       }
     }
   ],
@@ -267,6 +286,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "61733fb4f49dc26e23e9c83db440ec0584f8dd043f0b804c37f1df805e874470"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "562ec8795a45994459979fff11bbfce5e58be083cca30293720b5feb33e35cdb"
     }
   }
 }

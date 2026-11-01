@@ -8,7 +8,8 @@
     "fr": "Beurre de cacahuète",
     "es": "Crema de cacahuete",
     "it": "Burro di arachidi",
-    "pt": "Manteiga de amendoim"
+    "pt": "Manteiga de amendoim",
+    "nl": "Pindakaas"
   },
   "question": {
     "en": "Can dogs eat peanut butter?",
@@ -17,7 +18,8 @@
     "fr": "Les chiens peuvent-ils manger du beurre de cacahuète ?",
     "es": "¿Pueden los perros comer crema de cacahuete?",
     "it": "I cani possono mangiare il burro di arachidi?",
-    "pt": "Os cães podem comer manteiga de amendoim?"
+    "pt": "Os cães podem comer manteiga de amendoim?",
+    "nl": "Mogen honden pindakaas eten?"
   },
   "url_slug": {
     "en": "peanut-butter",
@@ -26,7 +28,8 @@
     "fr": "beurre-de-cacahuete",
     "es": "crema-de-cacahuete",
     "it": "burro-di-arachidi",
-    "pt": "manteiga-de-amendoim"
+    "pt": "manteiga-de-amendoim",
+    "nl": "pindakaas"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Oui, en petite quantité, s’il ne contient pas de xylitol. La plupart des beurres de cacahuète sont sans danger pour les chiens, mais certaines marques utilisent du xylitol, un édulcorant toxique pour les chiens : vérifiez toujours l’étiquette. Le beurre de cacahuète sans sel est le meilleur choix.",
     "es": "Sí, en pequeñas cantidades, si no contiene xilitol. La mayoría de las cremas de cacahuete son seguras para los perros, pero algunas marcas usan xilitol, un edulcorante tóxico para los perros, así que revisa siempre la etiqueta. Lo mejor es la crema de cacahuete sin sal.",
     "it": "Sì, in piccole quantità, se non contiene xilitolo. Quasi tutto il burro di arachidi è sicuro per i cani, ma alcune marche usano lo xilitolo, un dolcificante tossico per i cani: controlla sempre l’etichetta. La scelta migliore è il burro di arachidi senza sale.",
-    "pt": "Sim, em pequenas quantidades, se não tiver xilitol. A maior parte da manteiga de amendoim é segura para os cães, mas algumas marcas usam xilitol, um adoçante tóxico para os cães, por isso lê sempre o rótulo. A manteiga de amendoim sem sal é a melhor."
+    "pt": "Sim, em pequenas quantidades, se não tiver xilitol. A maior parte da manteiga de amendoim é segura para os cães, mas algumas marcas usam xilitol, um adoçante tóxico para os cães, por isso lê sempre o rótulo. A manteiga de amendoim sem sal é a melhor.",
+    "nl": "Ja, in kleine hoeveelheden, als er geen xylitol in zit. De meeste pindakaas is veilig voor honden, maar sommige merken gebruiken xylitol, een zoetstof die giftig is voor honden. Controleer dus altijd het etiket. Ongezouten pindakaas is het best."
   },
   "why": {
     "en": "Peanut butter is rich in fat and can be high in salt, so it suits only as an occasional treat, and it is not ideal for dogs on a diet. The real danger is xylitol: some peanut and nut butters contain it, and in dogs it can cause a sharp drop in blood sugar.",
@@ -45,7 +49,8 @@
     "fr": "Le beurre de cacahuète est riche en graisses et peut être très salé : il ne convient donc qu’en friandise occasionnelle, et il n’est pas idéal pour les chiens au régime. Le vrai danger, c’est le xylitol : certains beurres de cacahuète et d’oléagineux en contiennent, et chez le chien il peut provoquer une forte chute du taux de sucre dans le sang.",
     "es": "La crema de cacahuete es rica en grasa y puede llevar mucha sal, así que solo sirve como premio ocasional y no es lo ideal para perros a dieta. El verdadero peligro es el xilitol: algunas cremas de cacahuete y de otros frutos secos lo contienen, y en los perros puede provocar una bajada brusca del azúcar en sangre.",
     "it": "Il burro di arachidi è ricco di grassi e può contenere molto sale, quindi va bene solo come premio occasionale e non è ideale per i cani a dieta. Il vero pericolo è lo xilitolo: alcuni burri di arachidi e di frutta a guscio lo contengono, e nei cani può causare un brusco calo degli zuccheri nel sangue.",
-    "pt": "A manteiga de amendoim é rica em gordura e pode ter muito sal, por isso só serve como guloseima ocasional e não é ideal para cães em dieta. O verdadeiro perigo é o xilitol: algumas manteigas de amendoim e de outros frutos secos contêm-no e, nos cães, pode causar uma descida brusca do açúcar no sangue."
+    "pt": "A manteiga de amendoim é rica em gordura e pode ter muito sal, por isso só serve como guloseima ocasional e não é ideal para cães em dieta. O verdadeiro perigo é o xilitol: algumas manteigas de amendoim e de outros frutos secos contêm-no e, nos cães, pode causar uma descida brusca do açúcar no sangue.",
+    "nl": "Pindakaas bevat veel vet en kan veel zout bevatten, dus het is alleen geschikt als af en toe een snoepje, en niet ideaal voor honden op dieet. Het echte gevaar is xylitol: sommige pinda- en notenpasta’s bevatten het, en bij honden kan het een sterke daling van de bloedsuiker veroorzaken."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "fr": "Si le beurre de cacahuète contenait du xylitol, contactez immédiatement votre vétérinaire, une clinique d’urgence ou un centre antipoison vétérinaire, notez la quantité mangée et n’attendez pas l’apparition des signes.",
     "es": "Si la crema de cacahuete contenía xilitol, contacta enseguida con tu veterinario, una clínica de urgencias o una línea de información toxicológica para animales, apunta cuánto se comió y no esperes a que aparezcan síntomas.",
     "it": "Se il burro di arachidi conteneva xilitolo, contatta subito il veterinario, una clinica d’emergenza o un centro antiveleni veterinario, annota quanto ne ha mangiato il tuo cane e non aspettare che compaiano i sintomi.",
-    "pt": "Se a manteiga de amendoim tinha xilitol, contacta imediatamente o teu veterinário, uma clínica veterinária de urgência ou uma linha de apoio toxicológico para animais, anota quanto comeu e não esperes pelos sinais."
+    "pt": "Se a manteiga de amendoim tinha xilitol, contacta imediatamente o teu veterinário, uma clínica veterinária de urgência ou uma linha de apoio toxicológico para animais, anota quanto comeu e não esperes pelos sinais.",
+    "nl": "Zat er xylitol in de pindakaas? Neem dan meteen contact op met je dierenarts, een spoedkliniek of een vergiftigingenlijn voor dieren, schrijf op hoeveel er is gegeten en wacht niet op verschijnselen."
   },
   "serving": {
     "en": "A small amount of unsalted peanut butter whose label lists no xylitol; as a treat, not a daily food.",
@@ -64,7 +70,8 @@
     "fr": "Un peu de beurre de cacahuète sans sel dont l’étiquette ne mentionne pas de xylitol ; en friandise, pas comme aliment quotidien.",
     "es": "Un poco de crema de cacahuete sin sal cuya etiqueta no incluya xilitol; como premio, no como comida diaria.",
     "it": "Una piccola quantità di burro di arachidi senza sale, che in etichetta non riporti xilitolo; come premio, non come cibo quotidiano.",
-    "pt": "Uma pequena quantidade de manteiga de amendoim sem sal cujo rótulo não indique xilitol; como guloseima, não como alimento diário."
+    "pt": "Uma pequena quantidade de manteiga de amendoim sem sal cujo rótulo não indique xilitol; como guloseima, não como alimento diário.",
+    "nl": "Een kleine hoeveelheid ongezouten pindakaas zonder xylitol op het etiket; als snoepje, niet als dagelijks eten."
   },
   "child": {
     "en": "Many dogs love a little peanut butter! A grown-up must check the jar first, because some kinds are not safe for dogs.",
@@ -73,7 +80,8 @@
     "fr": "Beaucoup de chiens adorent un peu de beurre de cacahuète ! Un adulte doit d’abord vérifier le pot, car certaines sortes sont dangereuses pour les chiens.",
     "es": "¡A muchos perros les encanta un poquito de crema de cacahuete! Antes, un adulto tiene que revisar el bote, porque algunas no son seguras para los perros.",
     "it": "Molti cani adorano un po’ di burro di arachidi! Ma prima un adulto deve controllare il barattolo, perché alcuni tipi non sono sicuri per i cani.",
-    "pt": "Muitos cães adoram um pouco de manteiga de amendoim! Um adulto tem de ver o frasco primeiro, porque alguns tipos não são seguros para cães."
+    "pt": "Muitos cães adoram um pouco de manteiga de amendoim! Um adulto tem de ver o frasco primeiro, porque alguns tipos não são seguros para cães.",
+    "nl": "Veel honden zijn dol op een beetje pindakaas! Een volwassene moet eerst de pot controleren, want sommige soorten zijn niet veilig voor honden."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "fr": "Comment savoir si un beurre de cacahuète contient du xylitol ?",
         "es": "¿Cómo sé si una crema de cacahuete lleva xilitol?",
         "it": "Come faccio a sapere se il burro di arachidi contiene xilitolo?",
-        "pt": "Como sei se a manteiga de amendoim tem xilitol?"
+        "pt": "Como sei se a manteiga de amendoim tem xilitol?",
+        "nl": "Hoe weet ik of er xylitol in pindakaas zit?"
       },
       "a": {
         "en": "Read the ingredients on the label, especially on products marked sugar-free or low sugar.",
@@ -93,7 +102,8 @@
         "fr": "Lisez la liste des ingrédients sur l’étiquette, surtout sur les produits « sans sucre » ou « allégés en sucre ».",
         "es": "Lee los ingredientes de la etiqueta, sobre todo en productos que se anuncian como «sin azúcar» o «bajos en azúcar».",
         "it": "Leggi gli ingredienti in etichetta, soprattutto sui prodotti indicati come senza zucchero o a basso contenuto di zuccheri.",
-        "pt": "Lê os ingredientes no rótulo, sobretudo nos produtos «sem açúcar» ou «com baixo teor de açúcar»."
+        "pt": "Lê os ingredientes no rótulo, sobretudo nos produtos «sem açúcar» ou «com baixo teor de açúcar».",
+        "nl": "Lees de ingrediënten op het etiket, vooral bij producten die suikervrij of suikerarm heten."
       }
     },
     {
@@ -104,7 +114,8 @@
         "fr": "Puis-je utiliser du beurre de cacahuète pour donner un comprimé à mon chien ?",
         "es": "¿Puedo usar crema de cacahuete para darle una pastilla a mi perro?",
         "it": "Posso usare il burro di arachidi per dare una pastiglia al mio cane?",
-        "pt": "Posso usar manteiga de amendoim para dar um comprimido ao meu cão?"
+        "pt": "Posso usar manteiga de amendoim para dar um comprimido ao meu cão?",
+        "nl": "Mag ik pindakaas gebruiken om mijn hond een pil te geven?"
       },
       "a": {
         "en": "Many people do; the FDA advises checking the label first to make sure it doesn't contain xylitol.",
@@ -113,7 +124,8 @@
         "fr": "Beaucoup de gens le font ; la FDA conseille de vérifier d’abord l’étiquette pour s’assurer qu’il ne contient pas de xylitol.",
         "es": "Mucha gente lo hace; la FDA aconseja revisar antes la etiqueta para asegurarse de que no contiene xilitol.",
         "it": "Lo fanno in molti; la FDA consiglia di controllare prima l’etichetta per assicurarti che non contenga xilitolo.",
-        "pt": "Muitas pessoas fazem-no; a FDA aconselha a ler primeiro o rótulo para confirmar que não tem xilitol."
+        "pt": "Muitas pessoas fazem-no; a FDA aconselha a ler primeiro o rótulo para confirmar que não tem xilitol.",
+        "nl": "Veel mensen doen dat; de FDA raadt aan eerst het etiket te controleren om zeker te weten dat er geen xylitol in zit."
       }
     }
   ],
@@ -232,6 +244,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8501eda95fe22aaf16f008fc71a91bdbfe2a1f02521c05378e20bf855f48ff5e"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2384a4fa5ebf6df742fd3996b24655f5d318ffb24f6a45edc81cb7c024684e6d"
     }
   }
 }

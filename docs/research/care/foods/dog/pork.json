@@ -8,7 +8,8 @@
     "fr": "Porc",
     "es": "Cerdo",
     "it": "Carne di maiale",
-    "pt": "Carne de porco"
+    "pt": "Carne de porco",
+    "nl": "Varkensvlees"
   },
   "question": {
     "en": "Can dogs eat pork?",
@@ -17,7 +18,8 @@
     "fr": "Les chiens peuvent-ils manger du porc ?",
     "es": "¿Pueden los perros comer cerdo?",
     "it": "I cani possono mangiare la carne di maiale?",
-    "pt": "Os cães podem comer carne de porco?"
+    "pt": "Os cães podem comer carne de porco?",
+    "nl": "Mogen honden varkensvlees eten?"
   },
   "url_slug": {
     "en": "pork",
@@ -26,7 +28,8 @@
     "fr": "porc",
     "es": "cerdo",
     "it": "maiale",
-    "pt": "carne-de-porco"
+    "pt": "carne-de-porco",
+    "nl": "varkensvlees"
   },
   "level": "not_recommended",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Pas comme friandise régulière. Certaines sources vétérinaires autorisent un peu de porc maigre nature et bien cuit, mais le porc est gras et difficile à digérer pour les chiens, et les aliments gras peuvent déclencher une pancréatite. Le porc cru, les os cuits, le jambon et le bacon ne conviennent pas.",
     "es": "No como premio habitual. Algunas fuentes veterinarias permiten un poco de cerdo magro, natural y bien cocinado, pero el cerdo es graso y difícil de digerir para los perros, y los alimentos grasos pueden desencadenar una pancreatitis. El cerdo crudo, los huesos cocinados, el jamón y el beicon no son adecuados.",
     "it": "Non come premio abituale. Alcune fonti veterinarie permettono un po’ di carne di maiale magra, semplice e ben cotta, ma il maiale è grasso e difficile da digerire per i cani, e i cibi grassi possono scatenare una pancreatite. Maiale crudo, ossa cotte, prosciutto e bacon non sono adatti.",
-    "pt": "Não como guloseima habitual. Algumas fontes veterinárias permitem um pouco de carne de porco magra, simples e bem cozinhada, mas a carne de porco é gorda e difícil de digerir para os cães, e os alimentos gordos podem provocar pancreatite. Carne de porco crua, ossos cozinhados, fiambre e bacon não são adequados."
+    "pt": "Não como guloseima habitual. Algumas fontes veterinárias permitem um pouco de carne de porco magra, simples e bem cozinhada, mas a carne de porco é gorda e difícil de digerir para os cães, e os alimentos gordos podem provocar pancreatite. Carne de porco crua, ossos cozinhados, fiambre e bacon não são adequados.",
+    "nl": "Niet als vast snoepje. Sommige veterinaire bronnen staan een beetje gewoon, helemaal gaar, mager varkensvlees toe, maar varkensvlees is vet en moeilijk verteerbaar voor honden, en vet eten kan alvleesklierontsteking uitlokken. Rauw varkensvlees, gekookte botten, ham en spek zijn niet geschikt."
   },
   "why": {
     "en": "Pork is rich in a type of fat that is difficult for dogs to digest. Raw or undercooked pork can carry the parasite Trichinella. Cooked bones become brittle, and seasonings can be dangerous. Ham is high in salt and fat. Sources differ: the AKC calls plain cooked lean pork safe in moderation, while PDSA lists pork among high-fat foods that can lead to pancreatitis and advises dogs that have had it to avoid high-fat treats like pork, so we use the stricter level.",
@@ -45,7 +49,8 @@
     "fr": "Le porc est riche en un type de graisse que les chiens digèrent difficilement. Le porc cru ou pas assez cuit peut transmettre un parasite, la trichine (Trichinella). Les os cuits deviennent cassants, et les assaisonnements peuvent être dangereux. Le jambon est riche en sel et en graisses. Les sources divergent : l’AKC juge le porc maigre cuit nature sans danger avec modération, tandis que la PDSA classe le porc parmi les aliments gras pouvant mener à une pancréatite et conseille aux chiens qui en ont déjà eu une d’éviter les friandises grasses comme le porc ; nous retenons donc le niveau le plus strict.",
     "es": "El cerdo es rico en un tipo de grasa difícil de digerir para los perros. El cerdo crudo o poco hecho puede transmitir el parásito Trichinella. Los huesos cocinados se vuelven quebradizos, y los condimentos pueden ser peligrosos. El jamón tiene mucha sal y grasa. Las fuentes difieren: el AKC considera seguro con moderación el cerdo magro natural y cocinado, mientras que la PDSA incluye el cerdo entre los alimentos grasos que pueden provocar pancreatitis y aconseja que los perros que la han tenido eviten premios grasos como el cerdo, así que aplicamos el nivel más estricto.",
     "it": "La carne di maiale è ricca di un tipo di grasso che i cani digeriscono con difficoltà. Il maiale crudo o poco cotto può trasmettere il parassita Trichinella. Le ossa cotte diventano fragili e i condimenti possono essere pericolosi. Il prosciutto è ricco di sale e di grassi. Le fonti non concordano: l’AKC considera sicura con moderazione la carne di maiale magra, semplice e cotta, mentre il PDSA inserisce il maiale tra i cibi grassi che possono portare alla pancreatite e consiglia ai cani che l’hanno già avuta di evitare premi grassi come il maiale; quindi adottiamo il livello più prudente.",
-    "pt": "A carne de porco é rica num tipo de gordura difícil de digerir para os cães. A carne de porco crua ou mal cozinhada pode ter o parasita Trichinella. Os ossos cozinhados ficam quebradiços, e os temperos podem ser perigosos. O fiambre tem muito sal e gordura. As fontes divergem: o AKC considera segura, com moderação, a carne de porco magra simples e cozinhada, enquanto o PDSA inclui a carne de porco nos alimentos gordos que podem levar a pancreatite e aconselha os cães que já a tiveram a evitar guloseimas gordas como a carne de porco; por isso usamos o nível mais rigoroso."
+    "pt": "A carne de porco é rica num tipo de gordura difícil de digerir para os cães. A carne de porco crua ou mal cozinhada pode ter o parasita Trichinella. Os ossos cozinhados ficam quebradiços, e os temperos podem ser perigosos. O fiambre tem muito sal e gordura. As fontes divergem: o AKC considera segura, com moderação, a carne de porco magra simples e cozinhada, enquanto o PDSA inclui a carne de porco nos alimentos gordos que podem levar a pancreatite e aconselha os cães que já a tiveram a evitar guloseimas gordas como a carne de porco; por isso usamos o nível mais rigoroso.",
+    "nl": "Varkensvlees bevat veel van een soort vet dat honden moeilijk kunnen verteren. Rauw of niet goed gaar varkensvlees kan de parasiet Trichinella bevatten. Gekookte botten worden broos, en kruiden kunnen gevaarlijk zijn. Ham bevat veel zout en vet. De bronnen verschillen: de AKC noemt gewoon gekookt mager varkensvlees met mate veilig, terwijl PDSA varkensvlees rekent tot het vette eten dat tot alvleesklierontsteking kan leiden, en honden die dat hebben gehad aanraadt vette snoepjes zoals varkensvlees te vermijden. Daarom kiezen we het strengere niveau."
   },
   "signs": {
     "en": [
@@ -89,6 +94,12 @@
       "Diarreia",
       "Dor de barriga",
       "Pouco apetite e pouca energia"
+    ],
+    "nl": [
+      "Braken, soms pas 1–4 dagen na een vette maaltijd",
+      "Diarree",
+      "Buikpijn",
+      "Weinig eetlust en weinig energie"
     ]
   },
   "what_to_do": {
@@ -98,7 +109,8 @@
     "fr": "Si votre chien a mangé du porc gras ou assaisonné, surveillez les vomissements, la diarrhée ou les douleurs au ventre pendant les jours qui suivent, et appelez votre vétérinaire dès que possible s’ils apparaissent. S’il a mangé du porc cru, des os cuits ou un plat contenant de l’oignon ou de l’ail, appelez immédiatement votre vétérinaire.",
     "es": "Si tu perro se ha comido cerdo graso o condimentado, vigila si tiene vómitos, diarrea o dolor de barriga durante los días siguientes y, si aparecen, llama a tu veterinario lo antes posible. Si ha comido cerdo crudo, huesos cocinados o comida con cebolla o ajo, llama a tu veterinario de inmediato.",
     "it": "Se il tuo cane ha mangiato carne di maiale grassa o condita, nei giorni successivi controlla se compaiono vomito, diarrea o mal di pancia e, se compaiono, chiama il veterinario il prima possibile. Se ha mangiato maiale crudo, ossa cotte o cibo con cipolla o aglio, chiama subito il veterinario.",
-    "pt": "Se o teu cão comeu carne de porco gorda ou temperada, vigia nos dias seguintes se há vómitos, diarreia ou dor de barriga e liga ao teu veterinário o mais depressa possível se surgirem. Se comeu carne de porco crua, ossos cozinhados ou comida com cebola ou alho, liga imediatamente ao teu veterinário."
+    "pt": "Se o teu cão comeu carne de porco gorda ou temperada, vigia nos dias seguintes se há vómitos, diarreia ou dor de barriga e liga ao teu veterinário o mais depressa possível se surgirem. Se comeu carne de porco crua, ossos cozinhados ou comida com cebola ou alho, liga imediatamente ao teu veterinário.",
+    "nl": "Heeft je hond vet of gekruid varkensvlees gegeten? Let dan de komende dagen op braken, diarree of buikpijn en bel zo snel mogelijk je dierenarts als die optreden. Heeft hij rauw varkensvlees, gekookte botten of eten met ui of knoflook gegeten, bel je dierenarts dan meteen."
   },
   "serving": {
     "en": "If you share at all: a small piece of plain, fully cooked lean pork, fat trimmed, boneless, unseasoned.",
@@ -107,7 +119,8 @@
     "fr": "Si vous en partagez : un petit morceau de porc maigre nature, bien cuit, dégraissé, sans os et sans assaisonnement.",
     "es": "Si le das algo: un trocito de cerdo magro, natural y bien cocinado, sin grasa, sin huesos y sin condimentos.",
     "it": "Se proprio vuoi dargliene: un pezzetto di carne di maiale magra, semplice e ben cotta, senza grasso, senza ossa e senza condimenti.",
-    "pt": "Se partilhares: um pedaço pequeno de carne de porco magra, simples e bem cozinhada, sem gordura, sem ossos e sem temperos."
+    "pt": "Se partilhares: um pedaço pequeno de carne de porco magra, simples e bem cozinhada, sem gordura, sem ossos e sem temperos.",
+    "nl": "Als je al iets deelt: een klein stukje gewoon, helemaal gaar, mager varkensvlees, zonder vet, zonder botten en ongekruid."
   },
   "child": {
     "en": "Pork is very fatty for a dog's tummy. Only a grown-up should decide if a dog gets a tiny plain piece.",
@@ -116,7 +129,8 @@
     "fr": "Le porc est très gras pour le ventre d’un chien. Seul un adulte peut décider si un chien a droit à un tout petit morceau nature.",
     "es": "El cerdo es muy graso para la barriguita de un perro. Solo un adulto puede decidir si el perro come un trocito pequeño sin nada.",
     "it": "La carne di maiale è molto grassa per la pancia di un cane. Solo un adulto può decidere se dargliene un pezzettino semplice.",
-    "pt": "A carne de porco é muito gorda para a barriga de um cão. Só um adulto decide se o cão come um pedacinho simples."
+    "pt": "A carne de porco é muito gorda para a barriga de um cão. Só um adulto decide se o cão come um pedacinho simples.",
+    "nl": "Varkensvlees is erg vet voor het buikje van een hond. Alleen een volwassene mag beslissen of een hond een heel klein, gewoon stukje krijgt."
   },
   "faq": [
     {
@@ -127,7 +141,8 @@
         "fr": "Les chiens peuvent-ils manger du jambon ou du bacon ?",
         "es": "¿Pueden los perros comer jamón o beicon?",
         "it": "I cani possono mangiare prosciutto o bacon?",
-        "pt": "Os cães podem comer fiambre ou bacon?"
+        "pt": "Os cães podem comer fiambre ou bacon?",
+        "nl": "Mogen honden ham of spek eten?"
       },
       "a": {
         "en": "They aren't good choices: ham is high in fat and sodium, and eating a lot of bacon can cause pancreatitis.",
@@ -136,7 +151,8 @@
         "fr": "Ce n’est pas un bon choix : le jambon est riche en graisses et en sodium, et manger beaucoup de bacon peut provoquer une pancréatite.",
         "es": "No son buenas opciones: el jamón tiene mucha grasa y sodio, y comer mucho beicon puede provocar pancreatitis.",
         "it": "Non sono buone scelte: il prosciutto è ricco di grassi e di sodio, e mangiare molto bacon può causare una pancreatite.",
-        "pt": "Não são boas escolhas: o fiambre tem muita gordura e sódio, e comer muito bacon pode causar pancreatite."
+        "pt": "Não são boas escolhas: o fiambre tem muita gordura e sódio, e comer muito bacon pode causar pancreatite.",
+        "nl": "Dat zijn geen goede keuzes: ham bevat veel vet en natrium, en veel spek eten kan alvleesklierontsteking veroorzaken."
       }
     }
   ],
@@ -249,6 +265,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9ab58de78c4cefe1ff91ac2074c2644590081e0f208c4d1c916ca9bf10582f48"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dd12dce9e7db23ac033842750e91e62ff25c0c93bb54e2d616260de76f4c4778"
     }
   }
 }

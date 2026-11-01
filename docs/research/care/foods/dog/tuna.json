@@ -8,7 +8,8 @@
     "fr": "Thon",
     "es": "Atún",
     "it": "Tonno",
-    "pt": "Atum"
+    "pt": "Atum",
+    "nl": "Tonijn"
   },
   "question": {
     "en": "Can dogs eat tuna?",
@@ -17,7 +18,8 @@
     "fr": "Les chiens peuvent-ils manger du thon ?",
     "es": "¿Pueden los perros comer atún?",
     "it": "I cani possono mangiare il tonno?",
-    "pt": "Os cães podem comer atum?"
+    "pt": "Os cães podem comer atum?",
+    "nl": "Mogen honden tonijn eten?"
   },
   "url_slug": {
     "en": "tuna",
@@ -26,7 +28,8 @@
     "fr": "thon",
     "es": "atun",
     "it": "tonno",
-    "pt": "atum"
+    "pt": "atum",
+    "nl": "tonijn"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Oui, de temps en temps et en petite quantité. Le thon n’est pas toxique pour les chiens, mais il est riche en mercure : il ne doit donc pas être un aliment régulier. Choisissez du thon cuit ou du thon « light » (listao) en conserve, uniquement au naturel (dans l’eau), sans sel ni huile ajoutés.",
     "es": "Sí, de vez en cuando y en pequeñas cantidades. El atún no es tóxico para los perros, pero tiene mucho mercurio, así que no debería ser una comida habitual. Elige atún cocinado o atún listado (skipjack) en lata, solo al natural (en agua), sin sal ni aceite añadidos.",
     "it": "Sì, ogni tanto e in piccole quantità. Il tonno non è tossico per i cani, ma contiene molto mercurio, quindi non deve essere un cibo abituale. Scegli tonno cotto o tonno in scatola «light» (tonnetto striato) solo in acqua, senza sale né olio aggiunti.",
-    "pt": "Sim, de vez em quando e em pequenas quantidades. O atum não é tóxico para os cães, mas tem muito mercúrio, por isso não deve ser um alimento habitual. Escolhe atum cozinhado ou atum em lata «light» (gaiado) só em água, sem sal nem óleo adicionados."
+    "pt": "Sim, de vez em quando e em pequenas quantidades. O atum não é tóxico para os cães, mas tem muito mercúrio, por isso não deve ser um alimento habitual. Escolhe atum cozinhado ou atum em lata «light» (gaiado) só em água, sem sal nem óleo adicionados.",
+    "nl": "Ja, af en toe en in kleine hoeveelheden. Tonijn is niet giftig voor honden, maar bevat veel kwik, dus het hoort geen vast voer te zijn. Kies gekookte tonijn of “lichte” tonijn uit blik (skipjack) in alleen water, zonder toegevoegd zout of olie."
   },
   "why": {
     "en": "Tuna are large, long-lived fish, so their mercury levels are high, and dogs are more sensitive to mercury than people. Feeding tuna regularly can lead to mercury poisoning over time. Albacore, yellowfin and 'white' tuna carry more mercury than skipjack. Canned tuna often has added salt or oil, which isn't healthy for dogs.",
@@ -45,7 +49,8 @@
     "fr": "Les thons sont de grands poissons qui vivent longtemps : leur taux de mercure est donc élevé, et les chiens sont plus sensibles au mercure que nous. Donner du thon régulièrement peut entraîner, avec le temps, une intoxication au mercure. Le thon germon, le thon albacore et le thon « blanc » contiennent plus de mercure que le listao. Le thon en conserve contient souvent du sel ou de l’huile ajoutés, ce qui n’est pas sain pour les chiens.",
     "es": "Los atunes son peces grandes y longevos, por eso sus niveles de mercurio son altos, y los perros son más sensibles al mercurio que las personas. Dar atún con regularidad puede provocar con el tiempo una intoxicación por mercurio. El bonito del norte (albacora), el rabil y el atún «blanco» tienen más mercurio que el listado. El atún en lata suele llevar sal o aceite añadidos, que no son sanos para los perros.",
     "it": "I tonni sono pesci grandi e longevi, quindi hanno livelli di mercurio alti, e i cani sono più sensibili al mercurio delle persone. Dare tonno regolarmente può portare nel tempo a un avvelenamento da mercurio. Alalunga, tonno pinna gialla e tonno in scatola «white» contengono più mercurio del tonnetto striato. Il tonno in scatola ha spesso sale o olio aggiunti, che non fanno bene ai cani.",
-    "pt": "Os atuns são peixes grandes e de vida longa, por isso têm níveis altos de mercúrio, e os cães são mais sensíveis ao mercúrio do que as pessoas. Dar atum com regularidade pode levar a intoxicação por mercúrio ao longo do tempo. O atum voador, o atum albacora e o atum «branco» têm mais mercúrio do que o gaiado. O atum em lata tem muitas vezes sal ou óleo adicionados, o que não é saudável para os cães."
+    "pt": "Os atuns são peixes grandes e de vida longa, por isso têm níveis altos de mercúrio, e os cães são mais sensíveis ao mercúrio do que as pessoas. Dar atum com regularidade pode levar a intoxicação por mercúrio ao longo do tempo. O atum voador, o atum albacora e o atum «branco» têm mais mercúrio do que o gaiado. O atum em lata tem muitas vezes sal ou óleo adicionados, o que não é saudável para os cães.",
+    "nl": "Tonijnen zijn grote vissen die lang leven, dus hun kwikgehalte is hoog, en honden zijn gevoeliger voor kwik dan mensen. Regelmatig tonijn geven kan na verloop van tijd tot kwikvergiftiging leiden. Witte tonijn (albacore), geelvintonijn en “witte” tonijn uit blik bevatten meer kwik dan skipjack. Tonijn uit blik bevat vaak toegevoegd zout of olie, en dat is niet gezond voor honden."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "fr": "Une bouchée de thon chapardée n’est pas une raison de paniquer. Si votre chien mange du thon régulièrement et présente des signes comme des tremblements, une perte de coordination, des vomissements de sang ou une diarrhée sanglante, emmenez-le immédiatement chez le vétérinaire.",
     "es": "Que tu perro robe un bocado de atún no es motivo de pánico. Si tu perro ha estado comiendo atún con regularidad y muestra signos como temblores, falta de coordinación, vómitos con sangre o diarrea con sangre, llévalo al veterinario de inmediato.",
     "it": "Un boccone di tonno rubato non è motivo di panico. Se il tuo cane mangia tonno regolarmente e mostra sintomi come tremori, perdita di coordinazione, vomito con sangue o diarrea con sangue, portalo subito dal veterinario.",
-    "pt": "Uma dentada de atum roubada não é motivo para pânico. Se o teu cão tem comido atum com regularidade e mostrar sinais como tremores, perda de coordenação, vómitos com sangue ou diarreia com sangue, leva-o imediatamente ao veterinário."
+    "pt": "Uma dentada de atum roubada não é motivo para pânico. Se o teu cão tem comido atum com regularidade e mostrar sinais como tremores, perda de coordenação, vómitos com sangue ou diarreia com sangue, leva-o imediatamente ao veterinário.",
+    "nl": "Een gestolen hapje tonijn is geen reden tot paniek. Eet je hond regelmatig tonijn en zie je verschijnselen zoals trillingen, slechte coördinatie, bloed braken of bloederige diarree? Ga dan meteen naar de dierenarts."
   },
   "serving": {
     "en": "Occasionally, a small amount of cooked tuna or 'light' (skipjack) canned tuna in water only, no salt or oil; avoid albacore, yellowfin and 'white' tuna.",
@@ -64,7 +70,8 @@
     "fr": "De temps en temps, un peu de thon cuit ou de thon « light » (listao) en conserve, uniquement au naturel, sans sel ni huile ; évitez le thon germon, l’albacore et le thon « blanc ».",
     "es": "De vez en cuando, un poco de atún cocinado o de atún listado (skipjack) en lata, solo al natural, sin sal ni aceite; evita el bonito del norte (albacora), el rabil y el atún «blanco».",
     "it": "Ogni tanto, una piccola quantità di tonno cotto o di tonno in scatola «light» (tonnetto striato) solo in acqua, senza sale né olio; evita alalunga, tonno pinna gialla e tonno «white».",
-    "pt": "De vez em quando, uma pequena quantidade de atum cozinhado ou de atum em lata «light» (gaiado) só em água, sem sal nem óleo; evita o atum voador, o atum albacora e o atum «branco»."
+    "pt": "De vez em quando, uma pequena quantidade de atum cozinhado ou de atum em lata «light» (gaiado) só em água, sem sal nem óleo; evita o atum voador, o atum albacora e o atum «branco».",
+    "nl": "Af en toe een kleine hoeveelheid gekookte tonijn of “lichte” tonijn uit blik (skipjack) in alleen water, zonder zout of olie; vermijd witte tonijn (albacore), geelvintonijn en “witte” tonijn."
   },
   "child": {
     "en": "A little tuna is a rare treat for a dog, not everyday food. Ask a grown-up to pick tuna in water.",
@@ -73,7 +80,8 @@
     "fr": "Un peu de thon, c’est une friandise rare pour un chien, pas un repas de tous les jours. Demande à un adulte de choisir du thon au naturel.",
     "es": "Un poco de atún es un premio para un perro de vez en cuando, no comida de todos los días. Pide a un adulto que elija atún al natural.",
     "it": "Un po’ di tonno è un premio raro per un cane, non cibo di tutti i giorni. Chiedi a un adulto di scegliere il tonno in acqua.",
-    "pt": "Um pouco de atum é uma guloseima rara para um cão, não comida de todos os dias. Pede a um adulto para escolher atum em água."
+    "pt": "Um pouco de atum é uma guloseima rara para um cão, não comida de todos os dias. Pede a um adulto para escolher atum em água.",
+    "nl": "Een beetje tonijn is een snoepje voor heel af en toe, geen eten voor elke dag. Vraag een volwassene om tonijn in water te kiezen."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "fr": "Mon chien a chapardé du thon. Dois-je m’inquiéter ?",
         "es": "Mi perro ha robado un poco de atún. ¿Debo preocuparme?",
         "it": "Il mio cane ha rubato un po’ di tonno. Devo preoccuparmi?",
-        "pt": "O meu cão roubou um pouco de atum. Devo preocupar-me?"
+        "pt": "O meu cão roubou um pouco de atum. Devo preocupar-me?",
+        "nl": "Mijn hond heeft wat tonijn gestolen. Moet ik me zorgen maken?"
       },
       "a": {
         "en": "Usually not: tuna isn't toxic, and the concern is regular feeding over time.",
@@ -93,7 +102,8 @@
         "fr": "Généralement pas : le thon n’est pas toxique, le problème vient d’une consommation régulière dans le temps.",
         "es": "Normalmente no: el atún no es tóxico, y lo que preocupa es darlo con regularidad durante mucho tiempo.",
         "it": "Di solito no: il tonno non è tossico, il problema è darlo regolarmente nel tempo.",
-        "pt": "Normalmente não: o atum não é tóxico, e a preocupação é dar atum com regularidade ao longo do tempo."
+        "pt": "Normalmente não: o atum não é tóxico, e a preocupação é dar atum com regularidade ao longo do tempo.",
+        "nl": "Meestal niet: tonijn is niet giftig, en het probleem zit in regelmatig geven over langere tijd."
       }
     },
     {
@@ -104,7 +114,8 @@
         "fr": "Quel thon en conserve est le meilleur ?",
         "es": "¿Qué atún en lata es mejor?",
         "it": "Qual è il tonno in scatola migliore?",
-        "pt": "Qual é o melhor atum em lata?"
+        "pt": "Qual é o melhor atum em lata?",
+        "nl": "Welke tonijn uit blik is het best?"
       },
       "a": {
         "en": "'Light' or skipjack tuna packed only in water, given occasionally.",
@@ -113,7 +124,8 @@
         "fr": "Le thon « light » ou listao, uniquement au naturel, donné de temps en temps.",
         "es": "El atún listado (skipjack) solo al natural, de vez en cuando.",
         "it": "Il tonno «light», o tonnetto striato, solo in acqua, dato ogni tanto.",
-        "pt": "Atum «light» ou gaiado só em água, dado de vez em quando."
+        "pt": "Atum «light» ou gaiado só em água, dado de vez em quando.",
+        "nl": "“Lichte” tonijn of skipjack in alleen water, af en toe gegeven."
       }
     }
   ],
@@ -225,6 +237,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4ee5aac8c3265380731fddd09e57c6231095acb1561b6b41f8be97ad038dd701"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d8ddac184b6bdaf5e173621d926ca3c904db2745e7b7a9187ff27b39e264e659"
     }
   }
 }

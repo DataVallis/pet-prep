@@ -8,7 +8,8 @@
     "fr": "Poulet cuit",
     "es": "Pollo cocinado",
     "it": "Pollo cotto",
-    "pt": "Frango cozinhado"
+    "pt": "Frango cozinhado",
+    "nl": "Gekookte kip"
   },
   "question": {
     "en": "Can cats eat cooked chicken?",
@@ -17,7 +18,8 @@
     "fr": "Les chats peuvent-ils manger du poulet cuit ?",
     "es": "¿Pueden los gatos comer pollo cocinado?",
     "it": "I gatti possono mangiare il pollo cotto?",
-    "pt": "Os gatos podem comer frango cozinhado?"
+    "pt": "Os gatos podem comer frango cozinhado?",
+    "nl": "Mogen katten gekookte kip eten?"
   },
   "url_slug": {
     "en": "cooked-chicken",
@@ -26,7 +28,8 @@
     "fr": "poulet-cuit",
     "es": "pollo-cocinado",
     "it": "pollo-cotto",
-    "pt": "frango-cozinhado"
+    "pt": "frango-cozinhado",
+    "nl": "gekookte-kip"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Oui, du poulet cuit nature convient comme friandise occasionnelle pour les chats. Faites-le bouillir, retirez tous les os et la peau, et n’ajoutez aucun assaisonnement. Comptez-le dans la ration quotidienne de votre chat, sans qu’il la remplace.",
     "es": "Sí, el pollo cocinado y sin nada está bien como premio de vez en cuando para los gatos. Hiérvelo, quítale todos los huesos y la piel y no le añadas condimentos. Cuéntalo como parte de la comida diaria de tu gato, no como sustituto de ella.",
     "it": "Sì, il pollo cotto e semplice va bene come premio occasionale per i gatti. Lessalo, togli tutte le ossa e la pelle e non aggiungere condimenti. Consideralo parte della razione giornaliera del tuo gatto, non un sostituto.",
-    "pt": "Sim, o frango cozinhado simples não faz mal como guloseima ocasional para gatos. Coze-o, tira todos os ossos e a pele e não juntes temperos. Conta-o como parte da comida diária do teu gato, e não como substituto dela."
+    "pt": "Sim, o frango cozinhado simples não faz mal como guloseima ocasional para gatos. Coze-o, tira todos os ossos e a pele e não juntes temperos. Conta-o como parte da comida diária do teu gato, e não como substituto dela.",
+    "nl": "Ja, gewone gekookte kip is af en toe prima als snoepje voor katten. Kook het, haal alle botten eruit en het vel eraf en voeg geen kruiden of zout toe. Tel het mee bij het dagelijkse eten van je kat; het is geen vervanging ervan."
   },
   "why": {
     "en": "Cats Protection and RSPCA Australia both say boiled or steamed chicken can be offered occasionally. It must be cooked and boneless, because cooked bones can splinter. Feeding only cooked chicken long-term can lead to nutritional deficiencies, so it stays a treat.",
@@ -45,7 +49,8 @@
     "fr": "Cats Protection et la RSPCA Australia indiquent toutes deux que l’on peut proposer de temps en temps du poulet bouilli ou cuit à la vapeur. Il doit être cuit et sans os, car les os cuits peuvent se briser en éclats. Nourrir un chat uniquement de poulet cuit sur le long terme peut entraîner des carences ; il doit donc rester une friandise.",
     "es": "Tanto Cats Protection como RSPCA Australia indican que se puede ofrecer de vez en cuando pollo hervido o al vapor. Tiene que estar cocinado y sin huesos, porque los huesos cocinados pueden astillarse. Dar solo pollo cocinado durante mucho tiempo puede provocar carencias nutricionales, así que debe seguir siendo un premio.",
     "it": "Sia Cats Protection sia RSPCA Australia affermano che il pollo lesso o cotto al vapore può essere offerto ogni tanto. Deve essere cotto e senza ossa, perché le ossa cotte possono scheggiarsi. Dare solo pollo cotto a lungo termine può causare carenze nutrizionali, quindi deve restare un premio.",
-    "pt": "A Cats Protection e a RSPCA Australia dizem ambas que se pode dar frango cozido ou cozinhado a vapor de vez em quando. Tem de estar cozinhado e sem ossos, porque os ossos cozinhados podem lascar. Dar só frango cozinhado durante muito tempo pode levar a carências nutricionais, por isso deve continuar a ser uma guloseima."
+    "pt": "A Cats Protection e a RSPCA Australia dizem ambas que se pode dar frango cozido ou cozinhado a vapor de vez em quando. Tem de estar cozinhado e sem ossos, porque os ossos cozinhados podem lascar. Dar só frango cozinhado durante muito tempo pode levar a carências nutricionais, por isso deve continuar a ser uma guloseima.",
+    "nl": "Cats Protection en RSPCA Australia zeggen allebei dat je af en toe gekookte of gestoomde kip kunt geven. Het moet gaar zijn en zonder botten, want gekookte botten kunnen splinteren. Langdurig alleen gekookte kip geven kan tot voedingstekorten leiden, dus het blijft een snoepje."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou a la diarrhée ensuite, arrêtez et demandez conseil à votre vétérinaire. S’il a avalé un os de poulet cuit, appelez votre vétérinaire.",
     "es": "Ofrécele primero un trocito. Si después tu gato tiene vómitos o diarrea, deja de dárselo y consulta a tu veterinario. Si tu gato se ha tragado un hueso de pollo cocinado, llama a tu veterinario.",
     "it": "Offrigli prima un pezzetto. Se poi il tuo gatto vomita o ha la diarrea, smetti e chiedi al veterinario. Se ha ingerito un osso di pollo cotto, chiama il veterinario.",
-    "pt": "Começa por oferecer um pedaço pequeno. Se depois o teu gato tiver vómitos ou diarreia, para e pergunta ao teu veterinário. Se o teu gato engoliu um osso de frango cozinhado, liga ao teu veterinário."
+    "pt": "Começa por oferecer um pedaço pequeno. Se depois o teu gato tiver vómitos ou diarreia, para e pergunta ao teu veterinário. Se o teu gato engoliu um osso de frango cozinhado, liga ao teu veterinário.",
+    "nl": "Geef eerst een klein stukje. Krijgt je kat daarna last van braken of diarree, stop dan en vraag je dierenarts om advies. Heeft je kat een gekookt kippenbotje ingeslikt, bel dan je dierenarts."
   },
   "serving": {
     "en": "Boiled or steamed, plain, with no bones, skin or seasoning; small pieces within the daily food allowance.",
@@ -64,7 +70,8 @@
     "fr": "Bouilli ou cuit à la vapeur, nature, sans os, sans peau ni assaisonnement ; de petits morceaux, compris dans la ration quotidienne.",
     "es": "Hervido o al vapor, sin nada, sin huesos, piel ni condimentos; trocitos dentro de la ración diaria de comida.",
     "it": "Lesso o cotto al vapore, semplice, senza ossa, pelle né condimenti; piccoli pezzi all’interno della razione giornaliera.",
-    "pt": "Cozido ou a vapor, simples, sem ossos, pele ou temperos; pedaços pequenos dentro da quantidade diária de comida."
+    "pt": "Cozido ou a vapor, simples, sem ossos, pele ou temperos; pedaços pequenos dentro da quantidade diária de comida.",
+    "nl": "Gekookt of gestoomd, onbewerkt, zonder botten, vel, kruiden of zout; kleine stukjes binnen de dagelijkse hoeveelheid voer."
   },
   "child": {
     "en": "Plain cooked chicken with no bones is a yummy cat treat. Ask a grown-up to get it ready.",
@@ -73,7 +80,8 @@
     "fr": "Le poulet cuit nature sans os est une friandise délicieuse pour un chat. Demande à un adulte de le préparer.",
     "es": "El pollo cocinado sin nada y sin huesos es un premio riquísimo para gatos. Pídele a un adulto que lo prepare.",
     "it": "Il pollo cotto semplice e senza ossa è un premio buonissimo per i gatti. Chiedi a un adulto di prepararlo.",
-    "pt": "Frango cozinhado simples e sem ossos é uma guloseima deliciosa para gatos. Pede a um adulto que o prepare."
+    "pt": "Frango cozinhado simples e sem ossos é uma guloseima deliciosa para gatos. Pede a um adulto que o prepare.",
+    "nl": "Gewone gekookte kip zonder botjes is een lekker kattensnoepje. Vraag een volwassene om het klaar te maken."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "fr": "Mon chat peut-il manger uniquement du poulet ?",
         "es": "¿Puede mi gato comer solo pollo?",
         "it": "Il mio gatto può mangiare solo pollo?",
-        "pt": "O meu gato pode comer só frango?"
+        "pt": "O meu gato pode comer só frango?",
+        "nl": "Mag mijn kat alleen kip eten?"
       },
       "a": {
         "en": "No. Feeding only cooked chicken long-term can lead to nutritional deficiencies. Keep it as an extra.",
@@ -93,7 +102,8 @@
         "fr": "Non. Nourrir un chat uniquement de poulet cuit sur le long terme peut entraîner des carences. Il doit rester un petit extra.",
         "es": "No. Dar solo pollo cocinado durante mucho tiempo puede provocar carencias nutricionales. Que sea un extra.",
         "it": "No. Dare solo pollo cotto a lungo termine può causare carenze nutrizionali. Tienilo come extra.",
-        "pt": "Não. Dar só frango cozinhado durante muito tempo pode levar a carências nutricionais. Mantém-no como um extra."
+        "pt": "Não. Dar só frango cozinhado durante muito tempo pode levar a carências nutricionais. Mantém-no como um extra.",
+        "nl": "Nee. Langdurig alleen gekookte kip geven kan tot voedingstekorten leiden. Houd het bij iets extra’s."
       }
     }
   ],
@@ -177,6 +187,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f42b2ee395bf354c9797efc7f5ac6445e13e09cc80e7adb2de947ddcbee29b6c"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d7275ba8ec2b03a647f53908900bb311943351acea566d67b869c31c8db3d549"
     }
   }
 }

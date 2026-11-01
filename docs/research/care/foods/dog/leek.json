@@ -8,7 +8,8 @@
     "fr": "Poireau",
     "es": "Puerro",
     "it": "Porro",
-    "pt": "Alho-francês"
+    "pt": "Alho-francês",
+    "nl": "Prei"
   },
   "question": {
     "en": "Can dogs eat leek?",
@@ -17,7 +18,8 @@
     "fr": "Les chiens peuvent-ils manger du poireau ?",
     "es": "¿Pueden los perros comer puerro?",
     "it": "I cani possono mangiare il porro?",
-    "pt": "Os cães podem comer alho-francês?"
+    "pt": "Os cães podem comer alho-francês?",
+    "nl": "Mogen honden prei eten?"
   },
   "url_slug": {
     "en": "leek",
@@ -26,7 +28,8 @@
     "fr": "poireau",
     "es": "puerro",
     "it": "porro",
-    "pt": "alho-frances"
+    "pt": "alho-frances",
+    "nl": "prei"
   },
   "level": "toxic",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Non. Le poireau est un allium, comme l’oignon et l’ail, et il est toxique pour les chiens. Toutes les parties de la plante sont nocives, même cuites ou séchées. Il peut endommager les globules rouges, et les signes mettent souvent quelques jours à apparaître.",
     "es": "No. El puerro es una aliácea, como la cebolla y el ajo, y es tóxico para los perros. Todas las partes de la planta son perjudiciales, incluso cocinadas o secas. Puede dañar los glóbulos rojos, y los síntomas suelen tardar unos días en aparecer.",
     "it": "No. Il porro appartiene alla famiglia degli allium, come cipolla e aglio, ed è tossico per i cani. Tutte le parti della pianta sono dannose, anche cotte o secche. Può danneggiare i globuli rossi, e spesso i sintomi compaiono solo dopo qualche giorno.",
-    "pt": "Não. O alho-francês é uma aliácea, como a cebola e o alho, e é tóxico para os cães. Todas as partes da planta fazem mal, mesmo cozinhadas ou secas. Pode danificar os glóbulos vermelhos, e os sinais muitas vezes demoram alguns dias a aparecer."
+    "pt": "Não. O alho-francês é uma aliácea, como a cebola e o alho, e é tóxico para os cães. Todas as partes da planta fazem mal, mesmo cozinhadas ou secas. Pode danificar os glóbulos vermelhos, e os sinais muitas vezes demoram alguns dias a aparecer.",
+    "nl": "Nee. Prei hoort, net als ui en knoflook, bij de lookfamilie (allium) en is giftig voor honden. Alle delen van de plant zijn schadelijk, ook gekookt of gedroogd. Prei kan rode bloedcellen beschadigen, en verschijnselen komen vaak pas na een paar dagen."
   },
   "why": {
     "en": "It belongs to the allium family (onion, garlic, leek, chives), which is toxic to dogs. These plants contain compounds that damage red blood cells and can lead to anaemia. All parts and all forms are harmful: raw, cooked, dried and powdered. Stomach upset can happen with any amount; larger amounts damage the blood.",
@@ -45,7 +49,8 @@
     "fr": "Le poireau appartient à la famille des alliums (oignon, ail, poireau, ciboulette), toxique pour les chiens. Ces plantes contiennent des composés qui endommagent les globules rouges et peuvent provoquer une anémie. Toutes les parties et toutes les formes sont nocives : cru, cuit, séché et en poudre. Des troubles digestifs peuvent survenir quelle que soit la quantité ; de plus grandes quantités endommagent le sang.",
     "es": "Pertenece a la familia de las aliáceas (cebolla, ajo, puerro, cebollino), que es tóxica para los perros. Estas plantas contienen compuestos que dañan los glóbulos rojos y pueden provocar anemia. Todas las partes y todas las formas son perjudiciales: crudo, cocinado, seco y en polvo. Cualquier cantidad puede causar malestar de estómago; las cantidades mayores dañan la sangre.",
     "it": "Appartiene alla famiglia degli allium (cipolla, aglio, porro, erba cipollina), tossica per i cani. Queste piante contengono sostanze che danneggiano i globuli rossi e possono portare all’anemia. Sono dannose tutte le parti, in qualsiasi forma: crude, cotte, secche o in polvere. Disturbi di stomaco possono comparire con qualsiasi quantità; quantità maggiori danneggiano il sangue.",
-    "pt": "O alho-francês pertence à família das aliáceas (cebola, alho, alho-francês, cebolinho), que é tóxica para os cães. Estas plantas contêm compostos que danificam os glóbulos vermelhos e podem levar a anemia. Todas as partes e todas as formas fazem mal: cru, cozinhado, seco e em pó. Qualquer quantidade pode causar mal-estar de estômago; quantidades maiores danificam o sangue."
+    "pt": "O alho-francês pertence à família das aliáceas (cebola, alho, alho-francês, cebolinho), que é tóxica para os cães. Estas plantas contêm compostos que danificam os glóbulos vermelhos e podem levar a anemia. Todas as partes e todas as formas fazem mal: cru, cozinhado, seco e em pó. Qualquer quantidade pode causar mal-estar de estômago; quantidades maiores danificam o sangue.",
+    "nl": "Prei hoort bij de lookfamilie (ui, knoflook, prei, bieslook), die giftig is voor honden. Deze planten bevatten stoffen die rode bloedcellen beschadigen en tot bloedarmoede kunnen leiden. Alle delen en alle vormen zijn schadelijk: rauw, gekookt, gedroogd en als poeder. Maag-darmklachten kunnen bij elke hoeveelheid optreden; grotere hoeveelheden beschadigen het bloed."
   },
   "signs": {
     "en": [
@@ -89,6 +94,12 @@
       "Comer menos do que o habitual",
       "Mal-estar de barriga, mesmo depois de pequenas quantidades",
       "Sinais de anemia (glóbulos vermelhos danificados), normalmente alguns dias depois"
+    ],
+    "nl": [
+      "Braken en diarree",
+      "Minder eten dan normaal",
+      "Maag-darmklachten, ook na kleine hoeveelheden",
+      "Tekenen van bloedarmoede (beschadigde rode bloedcellen), meestal een paar dagen later"
     ]
   },
   "what_to_do": {
@@ -98,7 +109,8 @@
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce qui a été mangé (poireau) et en quelle quantité approximative. N’attendez pas l’apparition des signes : les dommages au sang n’apparaissent généralement qu’après quelques jours.",
     "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué ha comido (puerro) y más o menos cuánto. No esperes a que aparezcan síntomas: el daño en la sangre suele notarse solo unos días después.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha mangiato (porro) e più o meno quanto. Non aspettare che compaiano i sintomi: i danni al sangue di solito si vedono solo dopo qualche giorno.",
-    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota o que comeu (alho-francês) e mais ou menos quanto. Não esperes pelos sinais: os danos no sangue normalmente só se veem alguns dias depois."
+    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota o que comeu (alho-francês) e mais ou menos quanto. Não esperes pelos sinais: os danos no sangue normalmente só se veem alguns dias depois.",
+    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat er is gegeten (prei) en ongeveer hoeveel. Wacht niet op verschijnselen: schade aan het bloed is meestal pas een paar dagen later te zien."
   },
   "serving": null,
   "child": {
@@ -108,7 +120,8 @@
     "fr": "Le poireau est de la famille de l’oignon, alors il n’est pas pour les chiens. Préviens un adulte si ton chien en mange.",
     "es": "Los puerros son de la familia de la cebolla, así que no son para perros. Avisa a un adulto si tu perro se come un poco.",
     "it": "I porri fanno parte della famiglia della cipolla, quindi non sono per i cani. Dillo a un adulto se il tuo cane ne mangia un po’.",
-    "pt": "O alho-francês é da família da cebola, por isso não é para cães. Avisa um adulto se o teu cão comer algum."
+    "pt": "O alho-francês é da família da cebola, por isso não é para cães. Avisa um adulto se o teu cão comer algum.",
+    "nl": "Prei hoort bij de uienfamilie, dus het is niet voor honden. Vertel het aan een volwassene als je hond ervan eet."
   },
   "faq": [
     {
@@ -119,7 +132,8 @@
         "fr": "Le poireau est-il aussi dangereux que l’oignon ?",
         "es": "¿El puerro es tan peligroso como la cebolla?",
         "it": "Il porro è pericoloso quanto la cipolla?",
-        "pt": "O alho-francês é tão perigoso como a cebola?"
+        "pt": "O alho-francês é tão perigoso como a cebola?",
+        "nl": "Is prei net zo gevaarlijk als ui?"
       },
       "a": {
         "en": "Garlic and onion are the most common causes of poisoning, but leek belongs to the same toxic plant family and should be treated the same way.",
@@ -128,7 +142,8 @@
         "fr": "L’ail et l’oignon sont les causes d’intoxication les plus fréquentes, mais le poireau appartient à la même famille de plantes toxiques et doit être traité de la même façon.",
         "es": "El ajo y la cebolla son las causas más frecuentes de intoxicación, pero el puerro pertenece a la misma familia de plantas tóxicas y hay que tratarlo igual.",
         "it": "Aglio e cipolla sono le cause più comuni di avvelenamento, ma il porro appartiene alla stessa famiglia di piante tossiche e va considerato allo stesso modo.",
-        "pt": "O alho e a cebola são as causas mais comuns de intoxicação, mas o alho-francês pertence à mesma família de plantas tóxicas e deve ser tratado da mesma forma."
+        "pt": "O alho e a cebola são as causas mais comuns de intoxicação, mas o alho-francês pertence à mesma família de plantas tóxicas e deve ser tratado da mesma forma.",
+        "nl": "Knoflook en ui zijn de meest voorkomende oorzaken van vergiftiging, maar prei hoort bij dezelfde giftige plantenfamilie en moet je op dezelfde manier behandelen."
       }
     },
     {
@@ -139,7 +154,8 @@
         "fr": "Le poireau cuit ou en poudre est-il sans danger ?",
         "es": "¿Es seguro cocinado o en polvo?",
         "it": "È sicuro cotto o in polvere?",
-        "pt": "É seguro cozinhado ou em pó?"
+        "pt": "É seguro cozinhado ou em pó?",
+        "nl": "Is het veilig als het gekookt is of als poeder?"
       },
       "a": {
         "en": "No. Raw, cooked, dried, powdered and liquid forms are all poisonous to dogs.",
@@ -148,7 +164,8 @@
         "fr": "Non. Cru, cuit, séché, en poudre ou sous forme liquide, il est toujours toxique pour les chiens.",
         "es": "No. Crudo, cocinado, seco, en polvo o en forma líquida, siempre es tóxico para los perros.",
         "it": "No. Crudo, cotto, secco, in polvere o liquido: in tutte le forme è velenoso per i cani.",
-        "pt": "Não. Cru, cozinhado, seco, em pó ou líquido, todas as formas são venenosas para os cães."
+        "pt": "Não. Cru, cozinhado, seco, em pó ou líquido, todas as formas são venenosas para os cães.",
+        "nl": "Nee. Rauw, gekookt, gedroogd, als poeder en vloeibaar: alle vormen zijn giftig voor honden."
       }
     }
   ],
@@ -267,6 +284,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5ca5ef8250d59bb7665bef16fb9abfba17b0007a042e9aef27bfafc0ffa98969"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5350af84faa4b548ef37bacbb97b53e3350d3d0d43eb5cf5879a00b066339953"
     }
   }
 }

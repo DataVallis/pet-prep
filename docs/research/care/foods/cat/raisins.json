@@ -8,7 +8,8 @@
     "fr": "Raisins secs",
     "es": "Pasas",
     "it": "Uvetta",
-    "pt": "Passas"
+    "pt": "Passas",
+    "nl": "Rozijnen"
   },
   "question": {
     "en": "Can cats eat raisins?",
@@ -17,7 +18,8 @@
     "fr": "Les chats peuvent-ils manger des raisins secs ?",
     "es": "¿Pueden los gatos comer pasas?",
     "it": "I gatti possono mangiare l’uvetta?",
-    "pt": "Os gatos podem comer passas?"
+    "pt": "Os gatos podem comer passas?",
+    "nl": "Mogen katten rozijnen eten?"
   },
   "url_slug": {
     "en": "raisins",
@@ -26,7 +28,8 @@
     "fr": "raisins-secs",
     "es": "pasas",
     "it": "uvetta",
-    "pt": "passas"
+    "pt": "passas",
+    "nl": "rozijnen"
   },
   "level": "toxic",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Non. Les raisins secs, comme le raisin frais et les raisins de Corinthe, figurent sur la liste des aliments toxiques pour les chats et peuvent provoquer une insuffisance rénale. Méfiez-vous des gâteaux, des mince pies (petites tartes de Noël aux fruits secs) et autres pâtisseries qui en contiennent, et appelez votre vétérinaire si votre chat en mange.",
     "es": "No. Las pasas, igual que las uvas y las pasas de Corinto, están en la lista de alimentos tóxicos para los gatos y pueden causar insuficiencia renal. Ten cuidado con los bizcochos, los pasteles navideños y otros productos horneados que las lleven, y llama a tu veterinario si tu gato se come alguna.",
     "it": "No. L’uvetta, come l’uva e l’uva passa di Corinto, è nell’elenco degli alimenti tossici per i gatti e può causare insufficienza renale. Fai attenzione a torte, dolci natalizi come i mince pie e altri prodotti da forno che la contengono, e chiama il veterinario se il tuo gatto ne mangia.",
-    "pt": "Não. As passas, tal como as uvas e as uvas de Corinto, estão na lista de alimentos tóxicos para gatos e podem causar insuficiência renal. Atenção aos bolos, tartes e outros produtos de pastelaria que as contenham, e liga ao teu veterinário se o teu gato comer alguma."
+    "pt": "Não. As passas, tal como as uvas e as uvas de Corinto, estão na lista de alimentos tóxicos para gatos e podem causar insuficiência renal. Atenção aos bolos, tartes e outros produtos de pastelaria que as contenham, e liga ao teu veterinário se o teu gato comer alguma.",
+    "nl": "Nee. Rozijnen staan net als druiven en krenten op de lijst van voedingsmiddelen die giftig zijn voor katten, en ze kunnen nierfalen veroorzaken. Let op cake, kersttaartjes en ander gebak waar ze in zitten, en bel je dierenarts als je kat er iets van eet."
   },
   "why": {
     "en": "Cat welfare charities warn that grapes, raisins and currants can cause kidney failure in cats, with cats that have chronic kidney disease possibly at greater risk. Cats are unlikely to eat many raisins on their own but may be tempted by foods that contain them. Cat cases are rare and not well understood, so we use the stricter level.",
@@ -45,7 +49,8 @@
     "fr": "Les associations de protection des chats avertissent que le raisin, les raisins secs et les raisins de Corinthe peuvent provoquer une insuffisance rénale chez le chat, les chats atteints d’une maladie rénale chronique pouvant être plus à risque. Un chat a peu de chances de manger beaucoup de raisins secs seuls, mais il peut être tenté par des aliments qui en contiennent. Les cas félins sont rares et mal compris ; nous retenons donc le niveau le plus prudent.",
     "es": "Las organizaciones de bienestar felino advierten de que las uvas, las pasas y las pasas de Corinto pueden causar insuficiencia renal en los gatos, y los gatos con enfermedad renal crónica podrían correr más riesgo. Es poco probable que un gato coma muchas pasas por sí solo, pero puede sentirse atraído por alimentos que las contienen. Los casos en gatos son raros y no se conocen bien, así que aplicamos el nivel más estricto.",
     "it": "Le associazioni per il benessere dei gatti avvertono che uva, uvetta e uva passa di Corinto possono causare insufficienza renale nei gatti, e che i gatti con malattia renale cronica potrebbero essere più a rischio. È improbabile che un gatto mangi molta uvetta da sola, ma può essere attratto dai cibi che la contengono. I casi nei gatti sono rari e poco conosciuti, quindi applichiamo il livello più severo.",
-    "pt": "As associações de proteção dos gatos avisam que as uvas, as passas e as uvas de Corinto podem causar insuficiência renal nos gatos, e os gatos com doença renal crónica podem correr mais risco. É pouco provável que os gatos comam muitas passas sozinhas, mas podem sentir-se atraídos por alimentos que as contenham. Os casos em gatos são raros e pouco conhecidos, por isso seguimos o nível mais rigoroso."
+    "pt": "As associações de proteção dos gatos avisam que as uvas, as passas e as uvas de Corinto podem causar insuficiência renal nos gatos, e os gatos com doença renal crónica podem correr mais risco. É pouco provável que os gatos comam muitas passas sozinhas, mas podem sentir-se atraídos por alimentos que as contenham. Os casos em gatos são raros e pouco conhecidos, por isso seguimos o nível mais rigoroso.",
+    "nl": "Organisaties voor kattenwelzijn waarschuwen dat druiven, rozijnen en krenten bij katten nierfalen kunnen veroorzaken, en dat katten met een chronische nierziekte mogelijk een groter risico lopen. Katten eten niet snel veel losse rozijnen, maar kunnen wel in de verleiding komen door eten waar ze in zitten. Gevallen bij katten zijn zeldzaam en nog niet goed begrepen. Daarom volgen wij het strengste niveau."
   },
   "signs": {
     "en": [
@@ -68,6 +73,9 @@
     ],
     "pt": [
       "Vómitos, muitas vezes no espaço de um dia"
+    ],
+    "nl": [
+      "Braken, vaak binnen een dag"
     ]
   },
   "what_to_do": {
@@ -77,7 +85,8 @@
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce que votre chat a mangé (raisins secs ou aliment en contenant), en quelle quantité et à quelle heure, et gardez l’emballage. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
     "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Anota qué ha comido tu gato (pasas o un alimento que las lleve), cuánto y cuándo, y guarda el envase. No esperes a que aparezcan síntomas y no intentes hacer vomitar a tu gato en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha mangiato il tuo gatto (uvetta o un cibo che la conteneva), quanto e quando, e conserva la confezione. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
-    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Toma nota do que o teu gato comeu (passas ou um alimento que as contenha), da quantidade e de quando, e guarda a embalagem. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa."
+    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Toma nota do que o teu gato comeu (passas ou um alimento que as contenha), da quantidade e de quando, e guarda a embalagem. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
+    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat je kat heeft gegeten (rozijnen of iets waar ze in zitten), hoeveel en wanneer, en bewaar de verpakking. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken."
   },
   "serving": null,
   "child": {
@@ -87,7 +96,8 @@
     "fr": "Les raisins secs ne sont pas un en-cas pour chat. Garde les raisins secs et les gâteaux aux raisins loin de ton chat, et préviens un adulte s’il en mange.",
     "es": "Las pasas no son un tentempié para gatos. Mantén las pasas y los bizcochos con pasas lejos de tu gato, y avisa a un adulto si se come alguna.",
     "it": "L’uvetta non è uno spuntino per gatti. Tieni uvetta e dolci con l’uvetta lontani dal micio, e dillo a un adulto se ne mangia un po’.",
-    "pt": "As passas não são um petisco para gatos. Mantém as passas e os bolos com passas longe do gatinho e avisa um adulto se ele comer alguma."
+    "pt": "As passas não são um petisco para gatos. Mantém as passas e os bolos com passas longe do gatinho e avisa um adulto se ele comer alguma.",
+    "nl": "Rozijnen zijn geen snoepje voor katten. Houd rozijnen en krentencake uit de buurt van je poes. Eet ze er toch van? Vertel het meteen aan een volwassene."
   },
   "faq": [
     {
@@ -98,7 +108,8 @@
         "fr": "Et les mince pies (tartes de Noël aux fruits secs) ou le cake de Noël ?",
         "es": "¿Y los pastelitos de frutas y el pastel de Navidad?",
         "it": "E i dolci natalizi con l’uvetta?",
-        "pt": "E as mince pies e o bolo de Natal?"
+        "pt": "E as mince pies e o bolo de Natal?",
+        "nl": "En kersttaartjes en kerstcake?"
       },
       "a": {
         "en": "PDSA warns that mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to pets. Keep them out of your cat's reach.",
@@ -107,7 +118,8 @@
         "fr": "La PDSA avertit que les mince pies et le cake de Noël contiennent des raisins secs, des raisins de Smyrne et des raisins de Corinthe, très toxiques pour les animaux. Gardez-les hors de portée de votre chat.",
         "es": "PDSA advierte de que los mince pies (pastelitos de frutas) y el pastel de Navidad llevan pasas, pasas sultanas y pasas de Corinto, que son muy tóxicas para las mascotas. Mantenlos fuera del alcance de tu gato.",
         "it": "PDSA avverte che i mince pie e il Christmas cake, dolci natalizi inglesi, contengono uvetta, uva sultanina e uva passa di Corinto, che sono altamente tossiche per gli animali domestici. Tienili fuori dalla portata del tuo gatto.",
-        "pt": "A PDSA avisa que as mince pies (tartes de Natal inglesas) e o bolo de Natal contêm passas, sultanas e uvas de Corinto, que são muito tóxicas para os animais de estimação. Mantém-nos fora do alcance do teu gato."
+        "pt": "A PDSA avisa que as mince pies (tartes de Natal inglesas) e o bolo de Natal contêm passas, sultanas e uvas de Corinto, que são muito tóxicas para os animais de estimação. Mantém-nos fora do alcance do teu gato.",
+        "nl": "PDSA waarschuwt dat mince pies (Britse kersttaartjes) en kerstcake rozijnen, sultanarozijnen en krenten bevatten, die zeer giftig zijn voor huisdieren. Houd ze buiten bereik van je kat."
       }
     }
   ],
@@ -198,6 +210,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1efeb65115857e0f57e9df2fed1eb2b71d095ef1591136a691d95b5b4e6b0818"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9f22edcea7017343b1751259b256240fafbfc52a2088175f2e2843f60bf3be61"
     }
   }
 }

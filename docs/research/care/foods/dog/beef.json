@@ -8,7 +8,8 @@
     "fr": "Bœuf",
     "es": "Ternera",
     "it": "Manzo",
-    "pt": "Carne de vaca"
+    "pt": "Carne de vaca",
+    "nl": "Rundvlees"
   },
   "question": {
     "en": "Can dogs eat beef?",
@@ -17,7 +18,8 @@
     "fr": "Les chiens peuvent-ils manger du bœuf ?",
     "es": "¿Pueden los perros comer ternera?",
     "it": "I cani possono mangiare il manzo?",
-    "pt": "Os cães podem comer carne de vaca?"
+    "pt": "Os cães podem comer carne de vaca?",
+    "nl": "Mogen honden rundvlees eten?"
   },
   "url_slug": {
     "en": "beef",
@@ -26,7 +28,8 @@
     "fr": "boeuf",
     "es": "ternera",
     "it": "manzo",
-    "pt": "carne-de-vaca"
+    "pt": "carne-de-vaca",
+    "nl": "rundvlees"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Oui, du bœuf cuit nature, dégraissé, peut être une bonne source de protéines. Évitez le sel, les épices et les garnitures comme l’oignon et l’ail, ne donnez jamais d’os cuits et évitez le bœuf cru, qui peut contenir des bactéries.",
     "es": "Sí, la ternera cocinada, sin nada añadido y sin la grasa, puede ser una fuente sana de proteína. No le pongas sal, especias ni añadidos como cebolla y ajo, no le des nunca huesos cocinados y evita la ternera cruda, que puede contener bacterias.",
     "it": "Sì, il manzo cotto al naturale e privato del grasso può essere una sana fonte di proteine. Niente sale, spezie o aggiunte come cipolla e aglio, mai ossa cotte, ed evita il manzo crudo, che può contenere batteri.",
-    "pt": "Sim, a carne de vaca cozinhada, simples e sem gordura pode ser uma fonte saudável de proteína. Não lhe juntes sal, especiarias nem acompanhamentos como cebola e alho, nunca dês ossos cozinhados e evita a carne de vaca crua, que pode ter bactérias."
+    "pt": "Sim, a carne de vaca cozinhada, simples e sem gordura pode ser uma fonte saudável de proteína. Não lhe juntes sal, especiarias nem acompanhamentos como cebola e alho, nunca dês ossos cozinhados e evita a carne de vaca crua, que pode ter bactérias.",
+    "nl": "Ja, gewoon gekookt rundvlees zonder vet kan een gezonde bron van eiwit zijn. Laat zout, kruiden en toevoegingen zoals ui en knoflook weg, geef nooit gekookte botten en vermijd rauw rundvlees, dat bacteriën kan bevatten."
   },
   "why": {
     "en": "Unseasoned, cooked beef can be a healthy protein, cut into bite-sized pieces with the fat trimmed. Burgers and steaks often contain salt, spices and toppings that can be dangerous; onions and garlic are toxic to dogs. Raw steak or burger can carry Salmonella and E. coli, and cooked bones of any kind should never be given.",
@@ -45,7 +49,8 @@
     "fr": "Cuit et sans assaisonnement, le bœuf peut être une protéine saine, coupé en petits morceaux et dégraissé. Les burgers et les steaks contiennent souvent du sel, des épices et des garnitures qui peuvent être dangereux ; l’oignon et l’ail sont toxiques pour les chiens. Le steak ou le burger cru peut contenir des salmonelles et des E. coli, et il ne faut jamais donner d’os cuits, quels qu’ils soient.",
     "es": "La ternera cocinada y sin condimentar puede ser una proteína sana, cortada en trocitos y sin la grasa. Las hamburguesas y los filetes suelen llevar sal, especias y añadidos que pueden ser peligrosos; la cebolla y el ajo son tóxicos para los perros. Un filete o una hamburguesa crudos pueden contener Salmonella y E. coli, y nunca hay que darle huesos cocinados de ningún tipo.",
     "it": "Il manzo cotto e non condito può essere una proteina sana, tagliato a bocconcini e privato del grasso. Hamburger e bistecche spesso contengono sale, spezie e aggiunte che possono essere pericolose; cipolla e aglio sono tossici per i cani. La bistecca o l’hamburger crudi possono contenere Salmonella ed E. coli, e non bisogna mai dare ossa cotte di nessun tipo.",
-    "pt": "A carne de vaca cozinhada e sem temperos pode ser uma proteína saudável, cortada em pedaços pequenos e sem gordura. Os hambúrgueres e os bifes costumam ter sal, especiarias e acompanhamentos que podem ser perigosos; a cebola e o alho são tóxicos para os cães. O bife ou o hambúrguer crus podem ter Salmonella e E. coli, e nunca se devem dar ossos cozinhados de nenhum tipo."
+    "pt": "A carne de vaca cozinhada e sem temperos pode ser uma proteína saudável, cortada em pedaços pequenos e sem gordura. Os hambúrgueres e os bifes costumam ter sal, especiarias e acompanhamentos que podem ser perigosos; a cebola e o alho são tóxicos para os cães. O bife ou o hambúrguer crus podem ter Salmonella e E. coli, e nunca se devem dar ossos cozinhados de nenhum tipo.",
+    "nl": "Ongekruid, gaar rundvlees kan een gezonde eiwitbron zijn, in hapklare stukjes en met het vet eraf. Hamburgers en biefstukken bevatten vaak zout, kruiden en toevoegingen die gevaarlijk kunnen zijn; ui en knoflook zijn giftig voor honden. Rauwe biefstuk of hamburger kan salmonella en E. coli bevatten, en gekookte botten van welke soort ook mag je nooit geven."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "fr": "Si votre chien a mangé du bœuf gras ou assaisonné, surveillez les vomissements, la diarrhée ou les douleurs au ventre, et appelez votre vétérinaire s’ils apparaissent. S’il a mangé des os cuits ou un plat contenant de l’oignon ou de l’ail, appelez immédiatement votre vétérinaire.",
     "es": "Si tu perro ha comido ternera grasa o condimentada, vigila si tiene vómitos, diarrea o dolor de barriga y llama a tu veterinario si aparecen. Si ha comido huesos cocinados o comida con cebolla o ajo, llama a tu veterinario enseguida.",
     "it": "Se il tuo cane ha mangiato manzo grasso o condito, controlla se compaiono vomito, diarrea o mal di pancia e, in quel caso, chiama il veterinario. Se ha mangiato ossa cotte o cibo con cipolla o aglio, chiama subito il veterinario.",
-    "pt": "Se o teu cão comeu carne de vaca gorda ou temperada, vigia se aparecem vómitos, diarreia ou dor de barriga e liga ao teu veterinário se surgirem. Se comeu ossos cozinhados ou comida com cebola ou alho, liga imediatamente ao teu veterinário."
+    "pt": "Se o teu cão comeu carne de vaca gorda ou temperada, vigia se aparecem vómitos, diarreia ou dor de barriga e liga ao teu veterinário se surgirem. Se comeu ossos cozinhados ou comida com cebola ou alho, liga imediatamente ao teu veterinário.",
+    "nl": "Heeft je hond vet of gekruid rundvlees gegeten? Let dan op braken, diarree of buikpijn en bel je dierenarts als die optreden. Heeft hij gekookte botten of eten met ui of knoflook gegeten, bel je dierenarts dan meteen."
   },
   "serving": {
     "en": "Plain, unseasoned, fully cooked beef, fat trimmed, boneless, in bite-sized pieces.",
@@ -64,7 +70,8 @@
     "fr": "Bœuf nature, sans assaisonnement, bien cuit, dégraissé, sans os, coupé en petits morceaux.",
     "es": "Ternera bien cocinada, sin nada añadido ni condimentos, sin grasa, sin huesos y en trocitos.",
     "it": "Manzo al naturale, non condito, ben cotto, privato del grasso, senza ossa, a bocconcini.",
-    "pt": "Carne de vaca simples, sem temperos, bem cozinhada, sem gordura, sem ossos, em pedaços pequenos."
+    "pt": "Carne de vaca simples, sem temperos, bem cozinhada, sem gordura, sem ossos, em pedaços pequenos.",
+    "nl": "Gewoon, ongekruid, helemaal gaar rundvlees, zonder vet en zonder botten, in hapklare stukjes."
   },
   "child": {
     "en": "A few bites of plain cooked beef can be a treat. Burgers with onions or sauce are only for people.",
@@ -73,7 +80,8 @@
     "fr": "Quelques bouchées de bœuf cuit nature peuvent être une friandise. Les burgers avec de l’oignon ou de la sauce, c’est seulement pour les humains.",
     "es": "Unos bocaditos de ternera cocinada sin nada añadido pueden ser un premio. Las hamburguesas con cebolla o salsa son solo para las personas.",
     "it": "Qualche boccone di manzo cotto al naturale può essere un premio. Gli hamburger con cipolla o salse sono solo per le persone.",
-    "pt": "Uns pedacinhos de carne de vaca cozinhada e simples podem ser uma guloseima. Hambúrgueres com cebola ou molho são só para pessoas."
+    "pt": "Uns pedacinhos de carne de vaca cozinhada e simples podem ser uma guloseima. Hambúrgueres com cebola ou molho são só para pessoas.",
+    "nl": "Een paar hapjes gewoon gekookt rundvlees kunnen een traktatie zijn. Hamburgers met ui of saus zijn alleen voor mensen."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "fr": "Mon chien peut-il avoir une bouchée de mon burger ?",
         "es": "¿Puede mi perro probar un bocado de mi hamburguesa?",
         "it": "Il mio cane può assaggiare il mio hamburger?",
-        "pt": "O meu cão pode dar uma dentada no meu hambúrguer?"
+        "pt": "O meu cão pode dar uma dentada no meu hambúrguer?",
+        "nl": "Mag mijn hond een hapje van mijn hamburger?"
       },
       "a": {
         "en": "Better not: burgers often contain salt, spices and toppings such as onion that can be dangerous. Plain cooked meat is the safer choice.",
@@ -93,7 +102,8 @@
         "fr": "Mieux vaut éviter : les burgers contiennent souvent du sel, des épices et des garnitures comme l’oignon qui peuvent être dangereux. La viande cuite nature est le choix le plus sûr.",
         "es": "Mejor que no: las hamburguesas suelen llevar sal, especias y añadidos como la cebolla, que pueden ser peligrosos. La carne cocinada sin nada añadido es la opción más segura.",
         "it": "Meglio di no: gli hamburger spesso contengono sale, spezie e aggiunte come la cipolla che possono essere pericolose. La carne cotta al naturale è la scelta più sicura.",
-        "pt": "É melhor não: os hambúrgueres costumam ter sal, especiarias e acompanhamentos como cebola, que podem ser perigosos. A carne cozinhada simples é a escolha mais segura."
+        "pt": "É melhor não: os hambúrgueres costumam ter sal, especiarias e acompanhamentos como cebola, que podem ser perigosos. A carne cozinhada simples é a escolha mais segura.",
+        "nl": "Liever niet: hamburgers bevatten vaak zout, kruiden en toevoegingen zoals ui die gevaarlijk kunnen zijn. Gewoon gekookt vlees is de veiligere keuze."
       }
     }
   ],
@@ -179,6 +189,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "13af189898b30ac3b25b6e1830b8994c7497964b6de3c900d9f12bf488e570e4"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1c7dfb0ba63bae3512d05721b5e95f1e0beaaaac092ac636ee569ea9efbc3ee9"
     }
   }
 }

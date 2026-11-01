@@ -8,7 +8,8 @@
     "fr": "Boissons énergisantes",
     "es": "Bebidas energéticas",
     "it": "Bevande energetiche",
-    "pt": "Bebidas energéticas"
+    "pt": "Bebidas energéticas",
+    "nl": "Energiedrankjes"
   },
   "question": {
     "en": "Can dogs drink energy drinks?",
@@ -17,7 +18,8 @@
     "fr": "Les chiens peuvent-ils boire des boissons énergisantes ?",
     "es": "¿Pueden los perros tomar bebidas energéticas?",
     "it": "I cani possono bere le bevande energetiche?",
-    "pt": "Os cães podem beber bebidas energéticas?"
+    "pt": "Os cães podem beber bebidas energéticas?",
+    "nl": "Mogen honden energiedrankjes drinken?"
   },
   "url_slug": {
     "en": "energy-drinks",
@@ -26,7 +28,8 @@
     "fr": "boissons-energisantes",
     "es": "bebidas-energeticas",
     "it": "bevande-energetiche",
-    "pt": "bebidas-energeticas"
+    "pt": "bebidas-energeticas",
+    "nl": "energiedrankjes"
   },
   "level": "toxic",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Non. Les boissons énergisantes contiennent souvent beaucoup de caféine, toxique pour les chiens. La caféine surstimule le cœur et le système nerveux, et les chiens y sont plus sensibles que nous. Même laper une boisson énergisante renversée peut poser problème.",
     "es": "No. Las bebidas energéticas suelen contener mucha cafeína, que es tóxica para los perros. La cafeína sobreestimula el corazón y el sistema nervioso, y los perros son más sensibles a ella que las personas. Incluso lamer una bebida energética derramada puede ser un problema.",
     "it": "No. Le bevande energetiche contengono spesso molta caffeina, che è tossica per i cani. La caffeina sovrastimola il cuore e il sistema nervoso, e i cani sono più sensibili delle persone. Anche leccare una bevanda energetica versata può essere un problema.",
-    "pt": "Não. As bebidas energéticas costumam ter muita cafeína, que é tóxica para os cães. A cafeína estimula em excesso o coração e o sistema nervoso, e os cães são mais sensíveis a ela do que as pessoas. Até lamber uma bebida energética entornada pode ser um problema."
+    "pt": "Não. As bebidas energéticas costumam ter muita cafeína, que é tóxica para os cães. A cafeína estimula em excesso o coração e o sistema nervoso, e os cães são mais sensíveis a ela do que as pessoas. Até lamber uma bebida energética entornada pode ser um problema.",
+    "nl": "Nee. Energiedrankjes bevatten vaak veel cafeïne, en dat is giftig voor honden. Cafeïne prikkelt het hart en het zenuwstelsel te veel, en honden zijn er gevoeliger voor dan mensen. Zelfs een gemorst energiedrankje oplikken kan een probleem zijn."
   },
   "why": {
     "en": "Energy and sports drinks often contain a lot of caffeine, and energy shots, pouches and tablets contain caffeine too. Caffeine stimulates the heart and nervous system, which can be dangerous for dogs.",
@@ -45,7 +49,8 @@
     "fr": "Les boissons énergisantes et les boissons pour sportifs contiennent souvent beaucoup de caféine, et les shots, sachets et comprimés énergisants en contiennent aussi. La caféine stimule le cœur et le système nerveux, ce qui peut être dangereux pour les chiens.",
     "es": "Las bebidas energéticas y deportivas suelen contener mucha cafeína, y los shots, las bolsitas y las pastillas energéticas también contienen cafeína. La cafeína estimula el corazón y el sistema nervioso, lo que puede ser peligroso para los perros.",
     "it": "Le bevande energetiche e sportive contengono spesso molta caffeina, e anche shot energetici, bustine e compresse ne contengono. La caffeina stimola il cuore e il sistema nervoso, e questo può essere pericoloso per i cani.",
-    "pt": "As bebidas energéticas e desportivas costumam ter muita cafeína, e os shots energéticos, as saquetas e os comprimidos também contêm cafeína. A cafeína estimula o coração e o sistema nervoso, o que pode ser perigoso para os cães."
+    "pt": "As bebidas energéticas e desportivas costumam ter muita cafeína, e os shots energéticos, as saquetas e os comprimidos também contêm cafeína. A cafeína estimula o coração e o sistema nervoso, o que pode ser perigoso para os cães.",
+    "nl": "Energie- en sportdrankjes bevatten vaak veel cafeïne, en energieshots, -zakjes en -tabletten bevatten ook cafeïne. Cafeïne prikkelt het hart en het zenuwstelsel, wat gevaarlijk kan zijn voor honden."
   },
   "signs": {
     "en": [
@@ -103,6 +108,14 @@
       "Babar-se",
       "Tremores",
       "Fazer mais xixi"
+    ],
+    "nl": [
+      "Onrust, hyperactiviteit, ijsberen",
+      "Snelle hartslag",
+      "Braken en diarree",
+      "Kwijlen",
+      "Trillen",
+      "Meer plassen"
     ]
   },
   "what_to_do": {
@@ -112,7 +125,8 @@
     "fr": "Contactez votre vétérinaire ou un centre antipoison vétérinaire dès que vous vous rendez compte que votre chien a consommé de la caféine. Notez ce que c’était (boisson, shot, sachet ou comprimé) et en quelle quantité approximative. N’attendez pas l’apparition des signes : un traitement précoce compte.",
     "es": "Contacta con tu veterinario o con una línea de información toxicológica para animales en cuanto te des cuenta de que tu perro ha tomado cafeína. Apunta qué era (bebida, shot, bolsita o pastilla) y más o menos cuánto. No esperes a que aparezcan síntomas: tratarlo pronto es importante.",
     "it": "Contatta il veterinario o un centro antiveleni veterinario appena ti accorgi che il tuo cane ha assunto caffeina. Annota che cosa era (bevanda, shot, bustina o compressa) e più o meno quanto. Non aspettare che compaiano i sintomi: un trattamento precoce è importante.",
-    "pt": "Contacta o teu veterinário ou uma linha de apoio toxicológico para animais assim que perceberes que o teu cão ingeriu cafeína. Anota o que era (bebida, shot, saqueta ou comprimido) e mais ou menos quanto. Não esperes pelos sinais: o tratamento precoce é importante."
+    "pt": "Contacta o teu veterinário ou uma linha de apoio toxicológico para animais assim que perceberes que o teu cão ingeriu cafeína. Anota o que era (bebida, shot, saqueta ou comprimido) e mais ou menos quanto. Não esperes pelos sinais: o tratamento precoce é importante.",
+    "nl": "Neem contact op met je dierenarts of een vergiftigingenlijn voor dieren zodra je merkt dat je hond cafeïne binnen heeft gekregen. Schrijf op wat het was (drankje, shot, zakje of tablet) en ongeveer hoeveel. Wacht niet op verschijnselen: een vroege behandeling is belangrijk."
   },
   "serving": null,
   "child": {
@@ -122,7 +136,8 @@
     "fr": "Les boissons énergisantes ne sont pas du tout pour les chiens. Essuie vite ce qui est renversé et préviens un adulte si ton chien en boit.",
     "es": "Las bebidas energéticas no son para perros, nunca. Limpia rápido lo que se derrame y avisa a un adulto si tu perro bebe un poco.",
     "it": "Le bevande energetiche non sono per niente adatte ai cani. Asciuga subito quello che si rovescia e dillo a un adulto se il tuo cane ne beve un po’.",
-    "pt": "As bebidas energéticas não são, de todo, para cães. Limpa depressa o que se entornar e avisa um adulto se o teu cão beber um pouco."
+    "pt": "As bebidas energéticas não são, de todo, para cães. Limpa depressa o que se entornar e avisa um adulto se o teu cão beber um pouco.",
+    "nl": "Energiedrankjes zijn helemaal niet voor honden. Veeg gemorste drank snel op en vertel het aan een volwassene als je hond ervan drinkt."
   },
   "faq": [
     {
@@ -133,7 +148,8 @@
         "fr": "Et les shots énergisants et les comprimés de caféine ?",
         "es": "¿Y los shots energéticos y las pastillas de cafeína?",
         "it": "E gli shot energetici e le compresse di caffeina?",
-        "pt": "E os shots energéticos e os comprimidos de cafeína?"
+        "pt": "E os shots energéticos e os comprimidos de cafeína?",
+        "nl": "En energieshots en cafeïnetabletten?"
       },
       "a": {
         "en": "They contain caffeine too. Keep them out of reach and call your vet straight away if your dog gets into them.",
@@ -142,7 +158,8 @@
         "fr": "Ils contiennent aussi de la caféine. Gardez-les hors de portée et appelez immédiatement votre vétérinaire si votre chien en a trouvé.",
         "es": "También contienen cafeína. Guárdalos fuera de su alcance y llama enseguida a tu veterinario si tu perro se hace con ellos.",
         "it": "Contengono anche loro caffeina. Tienili fuori dalla portata del cane e chiama subito il veterinario se ci arriva.",
-        "pt": "Também contêm cafeína. Guarda-os fora do alcance e liga imediatamente ao teu veterinário se o teu cão chegar a eles."
+        "pt": "Também contêm cafeína. Guarda-os fora do alcance e liga imediatamente ao teu veterinário se o teu cão chegar a eles.",
+        "nl": "Die bevatten ook cafeïne. Houd ze buiten bereik en bel meteen je dierenarts als je hond eraan heeft gezeten."
       }
     }
   ],
@@ -250,6 +267,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1b48c79911b8a43342f729acfe40565d7c02ea6e9fe95da052097eb55ddc28f1"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ef2d424b03da10e979f904e27da5082e2b55e6e19a67b97f4b8f7dc7fdf00532"
     }
   }
 }
