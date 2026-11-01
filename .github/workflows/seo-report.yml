@@ -2,7 +2,8 @@ name: SEO report (Search Console)
 
 # Monthly Search Console report for petprep.si (David 2026-10-31): our own service account
 # (secret GSC_SERVICE_ACCOUNT_JSON, read-only "Restricted" user in Search Console) instead of
-# Supermetrics. Runs on the 1st; the monthly scheduled task reads the artifact and sums it up for David.
+# Supermetrics. Runs on the 1st; the report is printed in the job log, the step summary and the artifact.
+# The monthly scheduled task reads it from the job log (artifact downloads are blocked in agent sessions).
 # Manual run: Actions → SEO report → Run workflow (month = YYYY-MM, empty = last full month).
 
 on:
@@ -41,4 +42,4 @@ jobs:
           name: seo-report
           path: seo-report/
           if-no-files-found: ignore
-          retention-days: 400
+          retention-days: 90
