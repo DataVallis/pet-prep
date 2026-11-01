@@ -9,7 +9,8 @@
     "es": "Mantequilla",
     "it": "Burro",
     "pt": "Manteiga",
-    "nl": "Boter"
+    "nl": "Boter",
+    "pl": "Masło"
   },
   "question": {
     "en": "Can dogs eat butter?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros comer mantequilla?",
     "it": "I cani possono mangiare il burro?",
     "pt": "Os cães podem comer manteiga?",
-    "nl": "Mogen honden boter eten?"
+    "nl": "Mogen honden boter eten?",
+    "pl": "Czy psy mogą jeść masło?"
   },
   "url_slug": {
     "en": "butter",
@@ -29,7 +31,8 @@
     "es": "mantequilla",
     "it": "burro",
     "pt": "manteiga",
-    "nl": "boter"
+    "nl": "boter",
+    "pl": "maslo"
   },
   "level": "not_recommended",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No, mejor que no. La mantequilla no es tóxica, pero es muy grasa, y los alimentos grasos pueden sentarle mal al estómago de un perro y llegar a desencadenar una pancreatitis, una inflamación dolorosa. La comida que compartas con él, como los huevos o el puré de patatas, es mejor prepararla sin mantequilla.",
     "it": "Meglio di no. Il burro non è velenoso, ma è molto grasso, e i cibi grassi possono disturbare lo stomaco del cane e scatenare una pancreatite, un’infiammazione dolorosa. Il cibo che condividi, come uova o purè di patate, è meglio prepararlo senza burro.",
     "pt": "Não, é melhor não. A manteiga não é venenosa, mas é muito gorda, e os alimentos gordos podem perturbar o estômago do cão e desencadear uma pancreatite, uma inflamação dolorosa. A comida que partilhas, como ovos ou puré de batata, é melhor ser preparada sem manteiga.",
-    "nl": "Nee, liever niet. Boter is niet giftig, maar wel erg vet, en vet eten kan de maag van een hond van streek maken en mogelijk alvleesklierontsteking uitlokken, een pijnlijke ontsteking. Eten dat je deelt, zoals ei of aardappelpuree, maak je het best zonder boter klaar."
+    "nl": "Nee, liever niet. Boter is niet giftig, maar wel erg vet, en vet eten kan de maag van een hond van streek maken en mogelijk alvleesklierontsteking uitlokken, een pijnlijke ontsteking. Eten dat je deelt, zoals ei of aardappelpuree, maak je het best zonder boter klaar.",
+    "pl": "Lepiej nie. Masło nie jest trujące, ale jest bardzo tłuste, a tłuste jedzenie może podrażnić żołądek psa i wywołać zapalenie trzustki, czyli bolesny stan zapalny. Jedzenie, którym się dzielisz, np. jajka czy puree ziemniaczane, najlepiej przygotuj bez masła."
   },
   "why": {
     "en": "Fatty table foods are not a toxicity problem, but fatty foods such as butter, oils and meat drippings may cause pancreatitis. Some breeds, especially miniature Schnauzers, are more prone to it. Vets also suggest preparing food for dogs, such as eggs or mashed potato, without butter.",
@@ -50,7 +54,8 @@
     "es": "La comida grasa de la mesa no es un problema de toxicidad, pero los alimentos grasos como la mantequilla, los aceites y la grasa que suelta la carne al cocinarse pueden provocar pancreatitis. Algunas razas, sobre todo el schnauzer miniatura, son más propensas a sufrirla. Los veterinarios también aconsejan preparar sin mantequilla la comida para perros, como los huevos o el puré de patatas.",
     "it": "I cibi grassi della tavola non sono un problema di tossicità, ma cibi grassi come burro, oli e sughi di cottura della carne possono causare pancreatite. Alcune razze, soprattutto lo schnauzer nano, sono più predisposte. I veterinari consigliano anche di preparare il cibo per i cani, come uova o purè di patate, senza burro.",
     "pt": "Os alimentos gordos da mesa não são um problema de toxicidade, mas alimentos gordos como a manteiga, os óleos e a gordura da carne podem causar pancreatite. Algumas raças, sobretudo o schnauzer miniatura, são mais propensas. Os veterinários também sugerem preparar a comida para cães, como ovos ou puré de batata, sem manteiga.",
-    "nl": "Vet tafelvoedsel is geen vergiftigingsprobleem, maar vet eten zoals boter, olie en braadvet kan alvleesklierontsteking veroorzaken. Sommige rassen, vooral de dwergschnauzer, zijn er gevoeliger voor. Dierenartsen raden ook aan eten voor honden, zoals ei of aardappelpuree, zonder boter klaar te maken."
+    "nl": "Vet tafelvoedsel is geen vergiftigingsprobleem, maar vet eten zoals boter, olie en braadvet kan alvleesklierontsteking veroorzaken. Sommige rassen, vooral de dwergschnauzer, zijn er gevoeliger voor. Dierenartsen raden ook aan eten voor honden, zoals ei of aardappelpuree, zonder boter klaar te maken.",
+    "pl": "W przypadku tłustego jedzenia ze stołu nie chodzi o toksyczność, ale tłuste produkty, takie jak masło, oleje i tłuszcz spod pieczeni, mogą wywołać zapalenie trzustki. Niektóre rasy, zwłaszcza sznaucer miniaturowy, są na nie bardziej podatne. Weterynarze radzą też przygotowywać jedzenie dla psa, np. jajka czy puree ziemniaczane, bez masła."
   },
   "signs": {
     "en": [
@@ -100,6 +105,12 @@
       "Buikpijn",
       "Diarree",
       "Weinig eetlust en weinig energie"
+    ],
+    "pl": [
+      "Wymioty, czasem pojawiające się 1–4 dni po tłustym posiłku",
+      "Ból brzucha",
+      "Biegunka",
+      "Słaby apetyt i osłabienie"
     ]
   },
   "what_to_do": {
@@ -110,7 +121,8 @@
     "es": "Si tu perro ha comido mucha mantequilla, o en los días siguientes vomita, le duele la barriga, tiene diarrea o está sin energía, llama a tu veterinario lo antes posible.",
     "it": "Se il tuo cane ha mangiato molto burro o nei giorni successivi mostra vomito, mal di pancia, diarrea o poca energia, chiama il veterinario il prima possibile.",
     "pt": "Se o teu cão comeu muita manteiga, ou se nos dias seguintes tiver vómitos, dor de barriga, diarreia ou pouca energia, liga ao teu veterinário o mais depressa possível.",
-    "nl": "Heeft je hond veel boter gegeten, of braakt hij, heeft hij buikpijn, diarree of weinig energie in de dagen erna? Bel dan zo snel mogelijk je dierenarts."
+    "nl": "Heeft je hond veel boter gegeten, of braakt hij, heeft hij buikpijn, diarree of weinig energie in de dagen erna? Bel dan zo snel mogelijk je dierenarts.",
+    "pl": "Jeśli twój pies zjadł dużo masła albo w kolejnych dniach wymiotuje, boli go brzuch, ma biegunkę lub jest osłabiony, jak najszybciej zadzwoń do weterynarza."
   },
   "serving": null,
   "child": {
@@ -121,7 +133,8 @@
     "es": "La mantequilla es demasiado grasa para los perros y les puede doler la barriga. ¡Guarda la mantequilla donde el perro no llegue!",
     "it": "Il burro è troppo grasso per i cani e può fargli venire mal di pancia. Tieni il burro fuori dalla loro portata!",
     "pt": "A manteiga é demasiado gorda para os cães e pode fazer-lhes doer a barriga. Guarda a manteigueira fora do alcance!",
-    "nl": "Boter is te vet voor honden en kan hun buikje pijn doen. Zet het botervlootje buiten bereik!"
+    "nl": "Boter is te vet voor honden en kan hun buikje pijn doen. Zet het botervlootje buiten bereik!",
+    "pl": "Masło jest dla psów za tłuste i może je od niego rozboleć brzuszek. Trzymaj maselniczkę poza zasięgiem psa!"
   },
   "faq": [
     {
@@ -133,7 +146,8 @@
         "es": "¿La mantequilla es tóxica para los perros?",
         "it": "Il burro è tossico per i cani?",
         "pt": "A manteiga é tóxica para os cães?",
-        "nl": "Is boter giftig voor honden?"
+        "nl": "Is boter giftig voor honden?",
+        "pl": "Czy masło jest toksyczne dla psów?"
       },
       "a": {
         "en": "Not in the poisonous sense. The problem is the fat, which may cause stomach upset or pancreatitis.",
@@ -143,7 +157,8 @@
         "es": "No en el sentido de un veneno. El problema es la grasa, que puede causar problemas de estómago o pancreatitis.",
         "it": "Non nel senso di velenoso. Il problema sono i grassi, che possono causare disturbi di stomaco o pancreatite.",
         "pt": "Não no sentido de ser venenosa. O problema é a gordura, que pode perturbar o estômago ou causar pancreatite.",
-        "nl": "Niet in de zin van vergiftiging. Het probleem is het vet, dat een maagstoornis of alvleesklierontsteking kan veroorzaken."
+        "nl": "Niet in de zin van vergiftiging. Het probleem is het vet, dat een maagstoornis of alvleesklierontsteking kan veroorzaken.",
+        "pl": "Nie jest trujące. Problemem jest tłuszcz, który może wywołać dolegliwości żołądkowe lub zapalenie trzustki."
       }
     }
   ],
@@ -228,6 +243,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "51e0c198d81b346a3a9d62b1c41c6181c08c3d391c30049caf1371c911857954"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a2a509e29148ac6adf887f0d4179ec12dcb903b1c5f7e19511393de845c3d8b2"
     }
   }
 }

@@ -9,7 +9,8 @@
     "es": "Chocolate",
     "it": "Cioccolato",
     "pt": "Chocolate",
-    "nl": "Chocolade"
+    "nl": "Chocolade",
+    "pl": "Czekolada"
   },
   "question": {
     "en": "Can dogs eat chocolate?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros comer chocolate?",
     "it": "I cani possono mangiare il cioccolato?",
     "pt": "Os cães podem comer chocolate?",
-    "nl": "Mogen honden chocolade eten?"
+    "nl": "Mogen honden chocolade eten?",
+    "pl": "Czy psy mogą jeść czekoladę?"
   },
   "url_slug": {
     "en": "chocolate",
@@ -29,7 +31,8 @@
     "es": "chocolate",
     "it": "cioccolato",
     "pt": "chocolate",
-    "nl": "chocolade"
+    "nl": "chocolade",
+    "pl": "czekolada"
   },
   "level": "toxic",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No. El chocolate es tóxico para los perros, incluso en cantidades bastante pequeñas. Contiene teobromina y cafeína, y cuanto más negro es el chocolate, mayor es el riesgo. El chocolate para repostería y el cacao en polvo son los más peligrosos; el chocolate blanco es el que menos contiene de estas sustancias.",
     "it": "No. Il cioccolato è tossico per i cani, anche in quantità piuttosto piccole. Contiene teobromina e caffeina, e più è fondente, maggiore è il rischio. Il cioccolato da cucina e il cacao in polvere sono i più pericolosi; il cioccolato bianco contiene meno di queste sostanze.",
     "pt": "Não. O chocolate é tóxico para os cães, mesmo em quantidades bastante pequenas. Contém teobromina e cafeína, e quanto mais escuro for o chocolate, maior é o risco. O chocolate de culinária e o cacau em pó são os mais perigosos; o chocolate branco é o que tem menos destas substâncias.",
-    "nl": "Nee. Chocolade is giftig voor honden, zelfs in vrij kleine hoeveelheden. Het bevat theobromine en cafeïne, en hoe donkerder de chocolade, hoe groter het risico. Bakchocolade en cacaopoeder zijn het gevaarlijkst; witte chocolade bevat het minst van deze stoffen."
+    "nl": "Nee. Chocolade is giftig voor honden, zelfs in vrij kleine hoeveelheden. Het bevat theobromine en cafeïne, en hoe donkerder de chocolade, hoe groter het risico. Bakchocolade en cacaopoeder zijn het gevaarlijkst; witte chocolade bevat het minst van deze stoffen.",
+    "pl": "Nie. Czekolada jest toksyczna dla psów, nawet w dość małych ilościach. Zawiera teobrominę i kofeinę, a im ciemniejsza czekolada, tym większe ryzyko. Najbardziej niebezpieczne są czekolada do pieczenia i kakao; biała czekolada zawiera tych substancji najmniej."
   },
   "why": {
     "en": "Chocolate contains methylxanthines, mainly theobromine and caffeine, which are toxic to dogs. Dark chocolate, cooking chocolate and cocoa powder contain more of them than milk chocolate. Dogs are affected most often because they eat whatever they find and can easily reach chocolate. Sweets and baked goods may also contain other harmful ingredients.",
@@ -50,7 +54,8 @@
     "es": "El chocolate contiene metilxantinas, sobre todo teobromina y cafeína, que son tóxicas para los perros. El chocolate negro, el chocolate para repostería y el cacao en polvo contienen más que el chocolate con leche. Los perros son los más afectados porque se comen lo que encuentran y llegan con facilidad al chocolate. Los dulces y la bollería también pueden llevar otros ingredientes perjudiciales.",
     "it": "Il cioccolato contiene metilxantine, soprattutto teobromina e caffeina, che sono tossiche per i cani. Il cioccolato fondente, quello da cucina e il cacao in polvere ne contengono più del cioccolato al latte. I cani sono i più colpiti perché mangiano tutto ciò che trovano e arrivano facilmente al cioccolato. Dolci e prodotti da forno possono contenere anche altri ingredienti dannosi.",
     "pt": "O chocolate contém metilxantinas, sobretudo teobromina e cafeína, que são tóxicas para os cães. O chocolate preto, o chocolate de culinária e o cacau em pó têm mais destas substâncias do que o chocolate de leite. Os cães são os mais afetados porque comem tudo o que encontram e chegam facilmente ao chocolate. Os doces e os bolos podem ter também outros ingredientes nocivos.",
-    "nl": "Chocolade bevat methylxanthinen, vooral theobromine en cafeïne, die giftig zijn voor honden. Pure chocolade, bakchocolade en cacaopoeder bevatten er meer van dan melkchocolade. Honden worden het vaakst getroffen, omdat ze alles eten wat ze vinden en makkelijk bij chocolade kunnen. Snoep en gebak kunnen ook nog andere schadelijke ingrediënten bevatten."
+    "nl": "Chocolade bevat methylxanthinen, vooral theobromine en cafeïne, die giftig zijn voor honden. Pure chocolade, bakchocolade en cacaopoeder bevatten er meer van dan melkchocolade. Honden worden het vaakst getroffen, omdat ze alles eten wat ze vinden en makkelijk bij chocolade kunnen. Snoep en gebak kunnen ook nog andere schadelijke ingrediënten bevatten.",
+    "pl": "Czekolada zawiera metyloksantyny, głównie teobrominę i kofeinę, które są toksyczne dla psów. Gorzka czekolada, czekolada do pieczenia i kakao zawierają ich więcej niż czekolada mleczna. Najczęściej zatruwają się psy, bo jedzą wszystko, co znajdą, i łatwo dosięgają czekolady. Słodycze i wypieki mogą też zawierać inne szkodliwe składniki."
   },
   "signs": {
     "en": [
@@ -116,6 +121,14 @@
       "Snelle of onregelmatige hartslag",
       "Trillen of toevallen",
       "Verschijnselen komen meestal binnen 6–12 uur"
+    ],
+    "pl": [
+      "Wymioty i biegunka",
+      "Ziajanie, silne pragnienie i częstsze oddawanie moczu",
+      "Niepokój i nadpobudliwość",
+      "Szybkie lub nieregularne bicie serca",
+      "Drżenie mięśni lub drgawki",
+      "Objawy zwykle pojawiają się w ciągu 6–12 godzin"
     ]
   },
   "what_to_do": {
@@ -126,7 +139,8 @@
     "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales, aunque tu perro haya comido solo un poco. Apunta qué tipo de chocolate era y cuánto ha comido. No esperes a que aparezcan síntomas, porque pueden tardar horas.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario, anche se il tuo cane ne ha mangiato solo un po’. Annota che tipo di cioccolato era e quanto ne ha mangiato. Non aspettare che compaiano i sintomi, perché possono manifestarsi anche dopo ore.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, mesmo que o teu cão tenha comido só um pouco. Anota que tipo de chocolate era e quanto comeu. Não esperes pelos sinais, porque podem demorar horas a aparecer.",
-    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als je hond maar een beetje heeft gegeten. Schrijf op wat voor chocolade het was en hoeveel er is gegeten. Wacht niet op verschijnselen, want die kunnen uren op zich laten wachten."
+    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als je hond maar een beetje heeft gegeten. Schrijf op wat voor chocolade het was en hoeveel er is gegeten. Wacht niet op verschijnselen, want die kunnen uren op zich laten wachten.",
+    "pl": "Od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt, nawet jeśli twój pies zjadł tylko trochę. Zanotuj, jaki to był rodzaj czekolady i ile zjadł. Nie czekaj na objawy, bo mogą pojawić się dopiero po kilku godzinach."
   },
   "serving": null,
   "child": {
@@ -137,7 +151,8 @@
     "es": "El chocolate es para las personas, no para los perros. Los puede poner muy malitos. Guárdalo lejos y avisa a un adulto si tu perro se come un poco.",
     "it": "Il cioccolato è per le persone, non per i cani. Può farli stare molto male. Tienilo lontano e dillo a un adulto se il tuo cane ne mangia un po’.",
     "pt": "O chocolate é para as pessoas, não para os cães. Pode pôr os cães muito doentes. Guarda-o longe e avisa um adulto se o teu cão comer algum.",
-    "nl": "Chocolade is voor mensen, niet voor honden. Honden kunnen er heel ziek van worden. Leg het weg en vertel het aan een volwassene als je hond ervan eet."
+    "nl": "Chocolade is voor mensen, niet voor honden. Honden kunnen er heel ziek van worden. Leg het weg en vertel het aan een volwassene als je hond ervan eet.",
+    "pl": "Czekolada jest dla ludzi, nie dla psów. Może sprawić, że pies bardzo się rozchoruje. Trzymaj ją z dala od psa i powiedz dorosłemu, jeśli twój pies ją zje."
   },
   "faq": [
     {
@@ -149,7 +164,8 @@
         "es": "¿El chocolate blanco es seguro para los perros?",
         "it": "Il cioccolato bianco è sicuro per i cani?",
         "pt": "O chocolate branco é seguro para os cães?",
-        "nl": "Is witte chocolade veilig voor honden?"
+        "nl": "Is witte chocolade veilig voor honden?",
+        "pl": "Czy biała czekolada jest bezpieczna dla psów?"
       },
       "a": {
         "en": "It is not a safe treat. White chocolate has the lowest content of the harmful substances, but the risk still depends on the type and amount eaten, so call your vet if your dog ate some.",
@@ -159,7 +175,8 @@
         "es": "No es un premio seguro. El chocolate blanco es el que menos contiene de las sustancias perjudiciales, pero el riesgo sigue dependiendo del tipo y de la cantidad, así que llama a tu veterinario si tu perro ha comido un poco.",
         "it": "Non è un premio sicuro. Il cioccolato bianco ha il contenuto più basso di sostanze dannose, ma il rischio dipende comunque dal tipo e dalla quantità mangiata, quindi chiama il veterinario se il tuo cane ne ha mangiato.",
         "pt": "Não é uma guloseima segura. O chocolate branco é o que tem menos substâncias nocivas, mas o risco depende sempre do tipo e da quantidade, por isso liga ao teu veterinário se o teu cão comeu algum.",
-        "nl": "Het is geen veilig snoepje. Witte chocolade bevat het minst van de schadelijke stoffen, maar het risico hangt nog steeds af van de soort en de hoeveelheid, dus bel je dierenarts als je hond ervan heeft gegeten."
+        "nl": "Het is geen veilig snoepje. Witte chocolade bevat het minst van de schadelijke stoffen, maar het risico hangt nog steeds af van de soort en de hoeveelheid, dus bel je dierenarts als je hond ervan heeft gegeten.",
+        "pl": "To nie jest bezpieczny smakołyk. Biała czekolada zawiera najmniej szkodliwych substancji, ale ryzyko i tak zależy od rodzaju i zjedzonej ilości, więc zadzwoń do weterynarza, jeśli twój pies ją zjadł."
       }
     },
     {
@@ -171,7 +188,8 @@
         "es": "¿Qué chocolate es el más peligroso?",
         "it": "Qual è il cioccolato più pericoloso?",
         "pt": "Qual é o chocolate mais perigoso?",
-        "nl": "Welke chocolade is het gevaarlijkst?"
+        "nl": "Welke chocolade is het gevaarlijkst?",
+        "pl": "Która czekolada jest najbardziej niebezpieczna?"
       },
       "a": {
         "en": "Baking chocolate and cocoa powder, followed by dark chocolate. The darker the chocolate, the greater the risk.",
@@ -181,7 +199,8 @@
         "es": "El chocolate para repostería y el cacao en polvo, seguidos del chocolate negro. Cuanto más negro es el chocolate, mayor es el riesgo.",
         "it": "Il cioccolato da cucina e il cacao in polvere, seguiti dal cioccolato fondente. Più il cioccolato è scuro, maggiore è il rischio.",
         "pt": "O chocolate de culinária e o cacau em pó, seguidos do chocolate preto. Quanto mais escuro o chocolate, maior o risco.",
-        "nl": "Bakchocolade en cacaopoeder, daarna pure chocolade. Hoe donkerder de chocolade, hoe groter het risico."
+        "nl": "Bakchocolade en cacaopoeder, daarna pure chocolade. Hoe donkerder de chocolade, hoe groter het risico.",
+        "pl": "Czekolada do pieczenia i kakao, a zaraz po nich gorzka czekolada. Im ciemniejsza czekolada, tym większe ryzyko."
       }
     },
     {
@@ -193,7 +212,8 @@
         "es": "¿Cuándo aparecen los síntomas de intoxicación por chocolate?",
         "it": "Quando compaiono i sintomi dell’avvelenamento da cioccolato?",
         "pt": "Quando aparecem os sinais de intoxicação por chocolate?",
-        "nl": "Wanneer komen de verschijnselen van chocoladevergiftiging?"
+        "nl": "Wanneer komen de verschijnselen van chocoladevergiftiging?",
+        "pl": "Kiedy pojawiają się objawy zatrucia czekoladą?"
       },
       "a": {
         "en": "Usually within 6–12 hours after eating it, which is why you should call the vet straight away instead of waiting.",
@@ -203,7 +223,8 @@
         "es": "Normalmente en un plazo de 6 a 12 horas después de comerlo; por eso hay que llamar al veterinario enseguida en lugar de esperar.",
         "it": "Di solito entro 6–12 ore dall’ingestione: per questo devi chiamare subito il veterinario invece di aspettare.",
         "pt": "Normalmente nas 6–12 horas seguintes a tê-lo comido, e é por isso que deves ligar logo ao veterinário em vez de esperar.",
-        "nl": "Meestal binnen 6–12 uur na het eten. Bel daarom meteen de dierenarts in plaats van af te wachten."
+        "nl": "Meestal binnen 6–12 uur na het eten. Bel daarom meteen de dierenarts in plaats van af te wachten.",
+        "pl": "Zwykle w ciągu 6–12 godzin od zjedzenia, dlatego zadzwoń do weterynarza od razu, zamiast czekać."
       }
     }
   ],
@@ -317,6 +338,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "06f39998bdd85671804f17efef5bc0eab1714d9f03020fbe5b28a3a573438945"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1e4f9660d906227a4c0adf589eac306b4ea67b440d9eb4b3e9687b5e2481297a"
     }
   }
 }

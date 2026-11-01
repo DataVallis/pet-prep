@@ -9,7 +9,8 @@
     "es": "Albaricoques",
     "it": "Albicocche",
     "pt": "Alperces",
-    "nl": "Abrikozen"
+    "nl": "Abrikozen",
+    "pl": "Morele"
   },
   "question": {
     "en": "Can dogs eat apricots?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros comer albaricoques?",
     "it": "I cani possono mangiare le albicocche?",
     "pt": "Os cães podem comer alperces?",
-    "nl": "Mogen honden abrikozen eten?"
+    "nl": "Mogen honden abrikozen eten?",
+    "pl": "Czy psy mogą jeść morele?"
   },
   "url_slug": {
     "en": "apricots",
@@ -29,7 +31,8 @@
     "es": "albaricoques",
     "it": "albicocche",
     "pt": "alperces",
-    "nl": "abrikozen"
+    "nl": "abrikozen",
+    "pl": "morele"
   },
   "level": "not_recommended",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No se recomienda. La planta del albaricoquero figura como tóxica para los perros: sus tallos, hojas y semillas contienen cianuro, sobre todo cuando se marchitan. No dejes nunca que tu perro mordisquee huesos, hojas o tallos de albaricoque.",
     "it": "Sconsigliate. La pianta di albicocco è classificata come tossica per i cani: gambi, foglie e semi contengono cianuro, soprattutto quando appassiscono. Non lasciare mai che il tuo cane mastichi noccioli, foglie o gambi di albicocca.",
     "pt": "Não é recomendado. O alperceiro está classificado como tóxico para os cães: os caules, as folhas e as sementes contêm cianeto, sobretudo quando murcham. Nunca deixes o teu cão roer caroços, folhas ou caules de alperce.",
-    "nl": "Niet aan te raden. De abrikozenplant staat te boek als giftig voor honden: de stelen, bladeren en pitten bevatten cyanide, vooral als ze verwelken. Laat je hond nooit op abrikozenpitten, -bladeren of -stelen kauwen."
+    "nl": "Niet aan te raden. De abrikozenplant staat te boek als giftig voor honden: de stelen, bladeren en pitten bevatten cyanide, vooral als ze verwelken. Laat je hond nooit op abrikozenpitten, -bladeren of -stelen kauwen.",
+    "pl": "Nie zaleca się. Morela figuruje na listach roślin toksycznych dla psów: jej łodygi, liście i nasiona zawierają cyjanek, zwłaszcza gdy więdną. Nigdy nie pozwalaj psu gryźć pestek, liści ani łodyg moreli."
   },
   "why": {
     "en": "Apricot stems, leaves and seeds contain cyanogenic glycosides, which release cyanide. Cyanide reduces the body's ability to use oxygen. Because the plant is listed as toxic to dogs, we do not rate apricots as a safe treat.",
@@ -50,7 +54,8 @@
     "es": "Los tallos, las hojas y las semillas del albaricoque contienen glucósidos cianogénicos, que liberan cianuro. El cianuro reduce la capacidad del organismo para usar el oxígeno. Como la planta figura como tóxica para los perros, no consideramos los albaricoques un premio seguro.",
     "it": "Gambi, foglie e semi dell’albicocco contengono glicosidi cianogenici, che rilasciano cianuro. Il cianuro riduce la capacità dell’organismo di utilizzare l’ossigeno. Poiché la pianta è classificata come tossica per i cani, non consideriamo le albicocche un premio sicuro.",
     "pt": "Os caules, as folhas e as sementes do alperce contêm glicosídeos cianogénicos, que libertam cianeto. O cianeto reduz a capacidade do organismo de usar o oxigénio. Como a planta está classificada como tóxica para os cães, não consideramos os alperces uma guloseima segura.",
-    "nl": "Stelen, bladeren en pitten van de abrikoos bevatten cyanogene glycosiden, waaruit cyanide vrijkomt. Cyanide vermindert het vermogen van het lichaam om zuurstof te gebruiken. Omdat de plant als giftig voor honden staat vermeld, beschouwen wij abrikozen niet als een veilig snoepje."
+    "nl": "Stelen, bladeren en pitten van de abrikoos bevatten cyanogene glycosiden, waaruit cyanide vrijkomt. Cyanide vermindert het vermogen van het lichaam om zuurstof te gebruiken. Omdat de plant als giftig voor honden staat vermeld, beschouwen wij abrikozen niet als een veilig snoepje.",
+    "pl": "Łodygi, liście i nasiona moreli zawierają glikozydy cyjanogenne, które uwalniają cyjanek. Cyjanek ogranicza zdolność organizmu do wykorzystywania tlenu. Ponieważ roślina figuruje na listach roślin toksycznych dla psów, nie uznajemy moreli za bezpieczny smakołyk."
   },
   "signs": {
     "en": [
@@ -100,6 +105,12 @@
       "Steenrood tandvlees",
       "Moeite met ademhalen, hijgen",
       "Shock"
+    ],
+    "pl": [
+      "Rozszerzone źrenice",
+      "Ceglastoczerwone dziąsła",
+      "Trudności z oddychaniem, ziajanie",
+      "Wstrząs"
     ]
   },
   "what_to_do": {
@@ -110,7 +121,8 @@
     "es": "Si tu perro ha mordisqueado o se ha tragado huesos, hojas o tallos de albaricoque, pide consejo a tu veterinario enseguida. Anota qué ha comido y, más o menos, cuánto.",
     "it": "Se il tuo cane ha masticato o ingoiato noccioli, foglie o gambi di albicocca, contatta subito il veterinario per un consiglio. Annota che cosa ha mangiato e più o meno quanto.",
     "pt": "Se o teu cão roeu ou engoliu caroços, folhas ou caules de alperce, contacta imediatamente o teu veterinário para te aconselhar. Anota o que comeu e mais ou menos quanto.",
-    "nl": "Heeft je hond op abrikozenpitten, -bladeren of -stelen gekauwd of ze ingeslikt? Neem dan meteen contact op met je dierenarts voor advies. Schrijf op wat er is gegeten en ongeveer hoeveel."
+    "nl": "Heeft je hond op abrikozenpitten, -bladeren of -stelen gekauwd of ze ingeslikt? Neem dan meteen contact op met je dierenarts voor advies. Schrijf op wat er is gegeten en ongeveer hoeveel.",
+    "pl": "Jeśli twój pies gryzł lub połknął pestki, liście albo łodygi moreli, od razu poradź się weterynarza. Zanotuj, co zjadł i mniej więcej ile."
   },
   "serving": null,
   "child": {
@@ -121,7 +133,8 @@
     "es": "Los huesos, hojas y tallos del albaricoque son malos para los perros. Deja los albaricoques para las personas y avisa a un adulto si tu perro mordisquea un hueso.",
     "it": "Noccioli, foglie e gambi delle albicocche fanno male ai cani. Lascia le albicocche alle persone e dillo a un adulto se il tuo cane mastica un nocciolo.",
     "pt": "Os caroços, as folhas e os pés dos alperces fazem mal aos cães. Os alperces são para as pessoas; avisa um adulto se o teu cão roer um caroço.",
-    "nl": "Abrikozenpitten, -bladeren en -stelen zijn slecht voor honden. Abrikozen zijn voor mensen. Vertel het aan een volwassene als je hond op een pit kauwt."
+    "nl": "Abrikozenpitten, -bladeren en -stelen zijn slecht voor honden. Abrikozen zijn voor mensen. Vertel het aan een volwassene als je hond op een pit kauwt.",
+    "pl": "Pestki, liście i łodyżki moreli szkodzą psom. Morele zostaw dla ludzi i powiedz dorosłemu, jeśli twój pies gryzie pestkę."
   },
   "faq": [
     {
@@ -133,7 +146,8 @@
         "es": "¿Qué partes del albaricoque son tóxicas?",
         "it": "Quali parti dell’albicocca sono tossiche?",
         "pt": "Que partes do alperce são tóxicas?",
-        "nl": "Welke delen van de abrikoos zijn giftig?"
+        "nl": "Welke delen van de abrikoos zijn giftig?",
+        "pl": "Które części moreli są toksyczne?"
       },
       "a": {
         "en": "The stems, leaves and seeds contain cyanide, and they are particularly toxic as they wilt.",
@@ -143,7 +157,8 @@
         "es": "Los tallos, las hojas y las semillas contienen cianuro, y son especialmente tóxicos cuando se marchitan.",
         "it": "Gambi, foglie e semi contengono cianuro e sono particolarmente tossici quando appassiscono.",
         "pt": "Os caules, as folhas e as sementes contêm cianeto e são particularmente tóxicos quando murcham.",
-        "nl": "De stelen, bladeren en pitten bevatten cyanide en zijn vooral giftig als ze aan het verwelken zijn."
+        "nl": "De stelen, bladeren en pitten bevatten cyanide en zijn vooral giftig als ze aan het verwelken zijn.",
+        "pl": "Łodygi, liście i nasiona zawierają cyjanek i są szczególnie toksyczne, gdy więdną."
       }
     }
   ],
@@ -219,6 +234,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "974f7e0489feaad8c8232312b2e0cdb1dcd692435524fc479e00566ce3b67c56"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "14019cbdf570bdc886c65bbada9a3757e8fb47cfa40abf9d4a30684fd099248c"
     }
   }
 }

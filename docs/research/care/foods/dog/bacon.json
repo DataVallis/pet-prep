@@ -9,7 +9,8 @@
     "es": "Beicon",
     "it": "Bacon",
     "pt": "Bacon",
-    "nl": "Spek"
+    "nl": "Spek",
+    "pl": "Boczek"
   },
   "question": {
     "en": "Can dogs eat bacon?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros comer beicon?",
     "it": "I cani possono mangiare il bacon?",
     "pt": "Os cães podem comer bacon?",
-    "nl": "Mogen honden spek eten?"
+    "nl": "Mogen honden spek eten?",
+    "pl": "Czy psy mogą jeść boczek?"
   },
   "url_slug": {
     "en": "bacon",
@@ -29,7 +31,8 @@
     "es": "beicon",
     "it": "bacon",
     "pt": "bacon",
-    "nl": "spek"
+    "nl": "spek",
+    "pl": "boczek"
   },
   "level": "not_recommended",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No se recomienda. El beicon no es tóxico, pero es una comida de mesa grasa que puede causar vómitos y diarrea o desencadenar una pancreatitis, que puede ser grave. Ante la duda, no compartas comida de la mesa con tu perro.",
     "it": "Sconsigliato. Il bacon non è tossico, ma è un cibo grasso della tavola che può causare vomito e diarrea o scatenare una pancreatite, anche grave. Nel dubbio, non condividere con il tuo cane il cibo della tavola.",
     "pt": "Não é recomendado. O bacon não é tóxico, mas é comida gorda da mesa que pode causar vómitos e diarreia ou desencadear uma pancreatite, que pode ser grave. Na dúvida, não partilhes comida da mesa com o teu cão.",
-    "nl": "Niet aan te raden. Spek is niet giftig, maar het is vet tafelvoedsel dat braken en diarree kan veroorzaken of alvleesklierontsteking kan uitlokken, en die kan ernstig zijn. Twijfel je? Deel dan geen tafelvoedsel met je hond."
+    "nl": "Niet aan te raden. Spek is niet giftig, maar het is vet tafelvoedsel dat braken en diarree kan veroorzaken of alvleesklierontsteking kan uitlokken, en die kan ernstig zijn. Twijfel je? Deel dan geen tafelvoedsel met je hond.",
+    "pl": "Nie zaleca się. Boczek nie jest toksyczny, ale to tłuste jedzenie ze stołu, które może wywołać wymioty i biegunkę albo zapalenie trzustki, czasem ciężkie. W razie wątpliwości nie dziel się z psem jedzeniem ze stołu."
   },
   "why": {
     "en": "Pet Poison Helpline names bacon among fatty table foods that cause problems ranging from mild stomach upset to severe pancreatitis. A fatty meal is a known pancreatitis trigger, and some breeds, such as Miniature Schnauzers, are more prone to it.",
@@ -50,7 +54,8 @@
     "es": "Pet Poison Helpline incluye el beicon entre las comidas de mesa grasas que causan problemas, desde un leve malestar de estómago hasta una pancreatitis grave. Una comida grasa es un desencadenante conocido de la pancreatitis, y algunas razas, como el schnauzer miniatura, son más propensas a sufrirla.",
     "it": "Pet Poison Helpline cita il bacon tra i cibi grassi della tavola che causano problemi che vanno da un lieve mal di stomaco a una pancreatite grave. Un pasto grasso è un noto fattore scatenante della pancreatite, e alcune razze, come lo schnauzer nano, sono più predisposte.",
     "pt": "A Pet Poison Helpline inclui o bacon entre os alimentos gordos da mesa que causam problemas que vão de uma ligeira perturbação do estômago a uma pancreatite grave. Uma refeição gorda é um desencadeador conhecido de pancreatite, e algumas raças, como o schnauzer miniatura, são mais propensas.",
-    "nl": "Pet Poison Helpline rekent spek tot het vette tafelvoedsel dat problemen geeft, van een lichte maagstoornis tot ernstige alvleesklierontsteking. Een vette maaltijd is een bekende uitlokker van alvleesklierontsteking, en sommige rassen, zoals de dwergschnauzer, zijn er gevoeliger voor."
+    "nl": "Pet Poison Helpline rekent spek tot het vette tafelvoedsel dat problemen geeft, van een lichte maagstoornis tot ernstige alvleesklierontsteking. Een vette maaltijd is een bekende uitlokker van alvleesklierontsteking, en sommige rassen, zoals de dwergschnauzer, zijn er gevoeliger voor.",
+    "pl": "Pet Poison Helpline wymienia boczek wśród tłustych potraw ze stołu, które powodują problemy – od łagodnych dolegliwości żołądkowych po ciężkie zapalenie trzustki. Tłusty posiłek to znany czynnik wywołujący zapalenie trzustki, a niektóre rasy, np. sznaucer miniaturowy, są na nie bardziej podatne."
   },
   "signs": {
     "en": [
@@ -108,6 +113,13 @@
       "Diarree",
       "Niet willen eten",
       "Vermoeidheid, koorts"
+    ],
+    "pl": [
+      "Wymioty, czasem pojawiające się 1–4 dni po tłustym posiłku",
+      "Ból brzucha (pies może przybierać „pozycję modlitewną”)",
+      "Biegunka",
+      "Niechęć do jedzenia",
+      "Zmęczenie, gorączka"
     ]
   },
   "what_to_do": {
@@ -118,7 +130,8 @@
     "es": "Si tu perro ha comido mucha comida grasa, o en los días siguientes tiene vómitos, dolor de barriga o cansancio, contacta con tu veterinario. Anota qué ha comido y, más o menos, cuánto. Los síntomas de la pancreatitis pueden tardar unos días en aparecer.",
     "it": "Se il tuo cane ha mangiato molto cibo grasso o nei giorni successivi mostra vomito, mal di pancia o stanchezza, contatta il veterinario. Annota che cosa ha mangiato e più o meno quanto. I sintomi della pancreatite possono comparire con qualche giorno di ritardo.",
     "pt": "Se o teu cão comeu muita comida gorda, ou se nos dias seguintes tiver vómitos, dor de barriga ou cansaço, contacta o teu veterinário. Anota o que comeu e mais ou menos quanto. Os sinais de pancreatite podem demorar alguns dias a aparecer.",
-    "nl": "Heeft je hond veel vet eten gegeten, of braakt hij, heeft hij buikpijn of is hij moe in de dagen erna? Neem dan contact op met je dierenarts. Schrijf op wat er is gegeten en ongeveer hoeveel. Verschijnselen van alvleesklierontsteking kunnen een paar dagen later komen."
+    "nl": "Heeft je hond veel vet eten gegeten, of braakt hij, heeft hij buikpijn of is hij moe in de dagen erna? Neem dan contact op met je dierenarts. Schrijf op wat er is gegeten en ongeveer hoeveel. Verschijnselen van alvleesklierontsteking kunnen een paar dagen later komen.",
+    "pl": "Jeśli twój pies zjadł dużo tłustego jedzenia albo w kolejnych dniach wymiotuje, boli go brzuch lub jest zmęczony, skontaktuj się z weterynarzem. Zanotuj, co zjadł i mniej więcej ile. Objawy zapalenia trzustki mogą pojawić się z opóźnieniem kilku dni."
   },
   "serving": null,
   "child": {
@@ -129,7 +142,8 @@
     "es": "El beicon huele muy rico, pero es demasiado graso para los perros y les puede doler la barriga. Mejor elige un premio para perros.",
     "it": "Il bacon ha un profumino buonissimo, ma è troppo grasso per i cani e può fargli venire mal di pancia. Scegli invece un premio per cani.",
     "pt": "O bacon cheira bem, mas é demasiado gordo para os cães e pode fazer-lhes doer a barriga. Escolhe antes uma guloseima para cães.",
-    "nl": "Spek ruikt lekker, maar het is te vet voor honden en kan hun buikje pijn doen. Kies liever een hondensnoepje."
+    "nl": "Spek ruikt lekker, maar het is te vet voor honden en kan hun buikje pijn doen. Kies liever een hondensnoepje.",
+    "pl": "Boczek pięknie pachnie, ale jest dla psów za tłusty i może je od niego rozboleć brzuszek. Wybierz lepiej psi smakołyk."
   },
   "faq": [
     {
@@ -141,7 +155,8 @@
         "es": "¿Es peligroso un trocito de beicon?",
         "it": "Un pezzettino di bacon è pericoloso?",
         "pt": "Um pedacinho de bacon é perigoso?",
-        "nl": "Is een klein stukje spek gevaarlijk?"
+        "nl": "Is een klein stukje spek gevaarlijk?",
+        "pl": "Czy malutki kawałek boczku jest niebezpieczny?"
       },
       "a": {
         "en": "Bacon is not toxic, but fatty table food can upset a dog's stomach or trigger pancreatitis, so it's best not to share it.",
@@ -151,7 +166,8 @@
         "es": "El beicon no es tóxico, pero la comida de mesa grasa puede sentar mal al estómago del perro o desencadenar una pancreatitis, así que es mejor no compartirlo.",
         "it": "Il bacon non è tossico, ma il cibo grasso della tavola può disturbare lo stomaco del cane o scatenare una pancreatite, quindi è meglio non condividerlo.",
         "pt": "O bacon não é tóxico, mas a comida gorda da mesa pode perturbar o estômago do cão ou desencadear uma pancreatite, por isso é melhor não o partilhar.",
-        "nl": "Spek is niet giftig, maar vet tafelvoedsel kan de maag van een hond van streek maken of alvleesklierontsteking uitlokken. Je kunt het dus beter niet delen."
+        "nl": "Spek is niet giftig, maar vet tafelvoedsel kan de maag van een hond van streek maken of alvleesklierontsteking uitlokken. Je kunt het dus beter niet delen.",
+        "pl": "Boczek nie jest toksyczny, ale tłuste jedzenie ze stołu może podrażnić żołądek psa lub wywołać zapalenie trzustki, więc lepiej się nim nie dzielić."
       }
     }
   ],
@@ -252,6 +268,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "cf6899d63344d6371225175a8718045756c9760a2fb05af44e55666126af2027"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ae64bc4d7ea6b8a857ffe5d9c1d15781963b1ddba046be47c45a92f34a0de439"
     }
   }
 }

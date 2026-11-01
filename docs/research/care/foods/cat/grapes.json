@@ -9,7 +9,8 @@
     "es": "Uvas",
     "it": "Uva",
     "pt": "Uvas",
-    "nl": "Druiven"
+    "nl": "Druiven",
+    "pl": "Winogrona"
   },
   "question": {
     "en": "Can cats eat grapes?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los gatos comer uvas?",
     "it": "I gatti possono mangiare l’uva?",
     "pt": "Os gatos podem comer uvas?",
-    "nl": "Mogen katten druiven eten?"
+    "nl": "Mogen katten druiven eten?",
+    "pl": "Czy koty mogą jeść winogrona?"
   },
   "url_slug": {
     "en": "grapes",
@@ -29,7 +31,8 @@
     "es": "uvas",
     "it": "uva",
     "pt": "uvas",
-    "nl": "druiven"
+    "nl": "druiven",
+    "pl": "winogrona"
   },
   "level": "toxic",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No. Las uvas están en la lista de alimentos tóxicos para los gatos, y comerlas puede provocar insuficiencia renal. Evítalas por completo, incluso en pequeñas cantidades, y llama a tu veterinario si tu gato come alguna.",
     "it": "No. L’uva è nell’elenco degli alimenti tossici per i gatti, e mangiarla può causare insufficienza renale. Evitala del tutto, anche in piccole quantità, e chiama il veterinario se il tuo gatto ne mangia.",
     "pt": "Não. As uvas estão na lista de alimentos tóxicos para gatos e comê-las pode causar insuficiência renal. Evita-as por completo, mesmo em pequenas quantidades, e liga ao teu veterinário se o teu gato comer alguma.",
-    "nl": "Nee. Druiven staan op de lijst van voedingsmiddelen die giftig zijn voor katten, en ze kunnen nierfalen veroorzaken. Vermijd ze helemaal, ook in kleine hoeveelheden, en bel je dierenarts als je kat er een eet."
+    "nl": "Nee. Druiven staan op de lijst van voedingsmiddelen die giftig zijn voor katten, en ze kunnen nierfalen veroorzaken. Vermijd ze helemaal, ook in kleine hoeveelheden, en bel je dierenarts als je kat er een eet.",
+    "pl": "Nie. Winogrona są na liście pokarmów toksycznych dla kotów, a ich zjedzenie może wywołać niewydolność nerek. Unikaj ich całkowicie, nawet w małych ilościach, i zadzwoń do weterynarza, jeśli kot zje choć jedno."
   },
   "why": {
     "en": "Cat welfare charities warn that grapes can cause kidney failure in cats, and that cats with chronic kidney disease may be at greater risk. Grape poisoning in cats is rare and not well understood, and some sources only describe it in dogs, so we use the stricter level: treat any amount as an emergency.",
@@ -50,7 +54,8 @@
     "es": "Las organizaciones de bienestar felino advierten de que las uvas pueden provocar insuficiencia renal en los gatos, y de que los gatos con enfermedad renal crónica pueden correr más riesgo. La intoxicación por uvas en los gatos es rara y no se conoce bien, y algunas fuentes solo la describen en perros, así que aplicamos el nivel más estricto: cualquier cantidad debe tratarse como una urgencia.",
     "it": "Le associazioni per il benessere dei gatti avvertono che l’uva può causare insufficienza renale nei gatti e che i gatti con malattia renale cronica potrebbero essere più a rischio. L’intossicazione da uva nei gatti è rara e poco conosciuta, e alcune fonti la descrivono solo nei cani, quindi applichiamo il livello più severo: considera qualsiasi quantità un’emergenza.",
     "pt": "As associações de proteção dos gatos avisam que as uvas podem causar insuficiência renal nos gatos e que os gatos com doença renal crónica podem correr mais risco. A intoxicação por uvas nos gatos é rara e pouco conhecida, e algumas fontes só a descrevem em cães, por isso seguimos o nível mais rigoroso: trata qualquer quantidade como uma emergência.",
-    "nl": "Organisaties voor kattenwelzijn waarschuwen dat druiven bij katten nierfalen kunnen veroorzaken, en dat katten met een chronische nierziekte mogelijk een groter risico lopen. Druivenvergiftiging bij katten is zeldzaam en nog niet goed begrepen, en sommige bronnen beschrijven het alleen bij honden. Daarom volgen wij het strengste niveau: behandel elke hoeveelheid als een noodgeval."
+    "nl": "Organisaties voor kattenwelzijn waarschuwen dat druiven bij katten nierfalen kunnen veroorzaken, en dat katten met een chronische nierziekte mogelijk een groter risico lopen. Druivenvergiftiging bij katten is zeldzaam en nog niet goed begrepen, en sommige bronnen beschrijven het alleen bij honden. Daarom volgen wij het strengste niveau: behandel elke hoeveelheid als een noodgeval.",
+    "pl": "Organizacje działające na rzecz kotów ostrzegają, że winogrona mogą wywołać u kotów niewydolność nerek, a koty z przewlekłą chorobą nerek mogą być bardziej narażone. Zatrucie winogronami u kotów jest rzadkie i słabo poznane, a niektóre źródła opisują je tylko u psów, dlatego przyjmujemy surowszą ocenę: każdą ilość traktuj jak nagły przypadek."
   },
   "signs": {
     "en": [
@@ -76,6 +81,9 @@
     ],
     "nl": [
       "Braken, vaak binnen een dag"
+    ],
+    "pl": [
+      "Wymioty, często w ciągu doby"
     ]
   },
   "what_to_do": {
@@ -86,7 +94,8 @@
     "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta cuántas uvas ha comido tu gato y cuándo. No esperes a que aparezcan signos y no intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota quanti acini ha mangiato il tuo gatto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Toma nota de quantas uvas o teu gato comeu e de quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
-    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op hoeveel druiven je kat heeft gegeten en wanneer. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken."
+    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op hoeveel druiven je kat heeft gegeten en wanneer. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
+    "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt. Zapisz, ile winogron zjadł twój kot i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu."
   },
   "serving": null,
   "child": {
@@ -97,7 +106,8 @@
     "es": "Las uvas están ricas para nosotros, pero no son seguras para los gatos. Déjalas en tu plato y avisa a un adulto si tu gatito se come una.",
     "it": "L’uva è buona per noi, ma non è sicura per i gatti. Lasciala nel tuo piatto e dillo a un adulto se il micio ne mangia un acino.",
     "pt": "As uvas são deliciosas para nós, mas não são seguras para gatos. Deixa-as no teu prato e avisa um adulto se o gatinho comer uma.",
-    "nl": "Druiven zijn lekker voor ons, maar niet veilig voor katten. Houd ze op je bord. Eet je poes er een? Vertel het meteen aan een volwassene."
+    "nl": "Druiven zijn lekker voor ons, maar niet veilig voor katten. Houd ze op je bord. Eet je poes er een? Vertel het meteen aan een volwassene.",
+    "pl": "Winogrona są dla nas pyszne, ale nie są bezpieczne dla kotów. Trzymaj je na swoim talerzu i powiedz dorosłemu, jeśli kotek jakieś zje."
   },
   "faq": [
     {
@@ -109,7 +119,8 @@
         "es": "¿Corren más riesgo los gatos con enfermedad renal?",
         "it": "I gatti con malattie renali sono più a rischio?",
         "pt": "Os gatos com doença renal correm mais risco?",
-        "nl": "Lopen katten met een nierziekte meer risico?"
+        "nl": "Lopen katten met een nierziekte meer risico?",
+        "pl": "Czy koty z chorobą nerek są bardziej narażone?"
       },
       "a": {
         "en": "Cats Protection says cats with chronic kidney disease may be at greater risk from grapes.",
@@ -119,7 +130,8 @@
         "es": "Cats Protection indica que los gatos con enfermedad renal crónica pueden correr más riesgo con las uvas.",
         "it": "Secondo Cats Protection i gatti con malattia renale cronica potrebbero essere più a rischio con l’uva.",
         "pt": "A Cats Protection diz que os gatos com doença renal crónica podem correr mais risco com as uvas.",
-        "nl": "Volgens Cats Protection lopen katten met een chronische nierziekte mogelijk een groter risico door druiven."
+        "nl": "Volgens Cats Protection lopen katten met een chronische nierziekte mogelijk een groter risico door druiven.",
+        "pl": "Według Cats Protection koty z przewlekłą chorobą nerek mogą być bardziej narażone na szkodliwe działanie winogron."
       }
     }
   ],
@@ -212,6 +224,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ec099d9365268aa0be14084a8e3a1465385a04e12af89a71f602f9e9ab042560"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e2d97f793bbc15cb6ac7748b632c234739089dd5e354d4780062a1168e7a668e"
     }
   }
 }

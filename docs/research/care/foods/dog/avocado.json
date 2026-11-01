@@ -9,7 +9,8 @@
     "es": "Aguacate",
     "it": "Avocado",
     "pt": "Abacate",
-    "nl": "Avocado"
+    "nl": "Avocado",
+    "pl": "Awokado"
   },
   "question": {
     "en": "Can dogs eat avocado?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros comer aguacate?",
     "it": "I cani possono mangiare l’avocado?",
     "pt": "Os cães podem comer abacate?",
-    "nl": "Mogen honden avocado eten?"
+    "nl": "Mogen honden avocado eten?",
+    "pl": "Czy psy mogą jeść awokado?"
   },
   "url_slug": {
     "en": "avocado",
@@ -29,7 +31,8 @@
     "es": "aguacate",
     "it": "avocado",
     "pt": "abacate",
-    "nl": "avocado"
+    "nl": "avocado",
+    "pl": "awokado"
   },
   "level": "dangerous",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No, es más seguro mantener el aguacate lejos de los perros. Algunos veterinarios dicen que la pulpa no es tóxica, pero la piel, el hueso y las hojas contienen persina, y el hueso, que es grande, puede atragantar al perro u obstruirle el intestino. Además, el aguacate es muy graso, lo que puede provocar pancreatitis.",
     "it": "No, è più sicuro tenere l’avocado lontano dai cani. Secondo alcuni veterinari la polpa non è tossica, ma buccia, nocciolo e foglie contengono persina, e il grosso nocciolo può soffocare il cane o ostruirgli l’intestino. L’avocado è anche molto grasso e può portare alla pancreatite.",
     "pt": "Não, é mais seguro manter o abacate longe dos cães. Alguns veterinários dizem que a polpa não é tóxica, mas a casca, o caroço e as folhas contêm persina, e o caroço grande pode engasgar o cão ou obstruir-lhe o intestino. O abacate também é muito gordo, o que pode levar a pancreatite.",
-    "nl": "Nee, het is veiliger om avocado bij honden weg te houden. Sommige dierenartsen zeggen dat het vruchtvlees niet giftig is, maar de schil, pit en bladeren bevatten persine, en de grote pit kan verstikking of een darmverstopping veroorzaken. Avocado is ook erg vet, wat tot alvleesklierontsteking kan leiden."
+    "nl": "Nee, het is veiliger om avocado bij honden weg te houden. Sommige dierenartsen zeggen dat het vruchtvlees niet giftig is, maar de schil, pit en bladeren bevatten persine, en de grote pit kan verstikking of een darmverstopping veroorzaken. Avocado is ook erg vet, wat tot alvleesklierontsteking kan leiden.",
+    "pl": "Nie, bezpieczniej trzymać awokado z dala od psów. Niektórzy weterynarze uważają, że miąższ nie jest toksyczny, ale skórka, pestka i liście zawierają persynę, a duża pestka może zadławić psa lub zatkać jego jelita. Awokado jest też bardzo tłuste, co może prowadzić do zapalenia trzustki."
   },
   "why": {
     "en": "Sources disagree, so we use the stricter level. The Merck Veterinary Manual says dogs seem relatively resistant compared with other species, the ASPCA names birds and rabbits as the biggest concern, and AKC says the flesh is not toxic. Blue Cross calls persin poisonous to dogs. All agree that the pit can choke a dog or cause a blockage and that the high fat can cause pancreatitis.",
@@ -50,7 +54,8 @@
     "es": "Las fuentes no coinciden, así que aplicamos el nivel más estricto. El Manual Merck de Veterinaria dice que los perros parecen relativamente resistentes en comparación con otras especies, la ASPCA señala a las aves y los conejos como la mayor preocupación y el AKC dice que la pulpa no es tóxica. Blue Cross considera la persina venenosa para los perros. Todas coinciden en que el hueso puede atragantar al perro o causar una obstrucción y en que su alto contenido en grasa puede causar pancreatitis.",
     "it": "Le fonti non concordano, quindi adottiamo il livello più prudente. Il Merck Veterinary Manual afferma che i cani sembrano relativamente resistenti rispetto ad altre specie, l’ASPCA indica uccelli e conigli come la preoccupazione maggiore e l’AKC afferma che la polpa non è tossica. Blue Cross definisce la persina velenosa per i cani. Tutte concordano sul fatto che il nocciolo può soffocare il cane o causare un’ostruzione e che l’alto contenuto di grassi può causare pancreatite.",
     "pt": "As fontes não estão de acordo, por isso seguimos a mais rigorosa. O Merck Veterinary Manual diz que os cães parecem relativamente resistentes em comparação com outras espécies, a ASPCA aponta as aves e os coelhos como a maior preocupação e o AKC diz que a polpa não é tóxica. A Blue Cross considera a persina venenosa para os cães. Todos concordam que o caroço pode engasgar o cão ou causar uma obstrução e que a gordura elevada pode causar pancreatite.",
-    "nl": "De bronnen zijn het niet met elkaar eens, dus kiezen we het strengere niveau. Volgens de Merck Veterinary Manual lijken honden vergeleken met andere diersoorten vrij ongevoelig, de ASPCA noemt vogels en konijnen als grootste zorg en de AKC zegt dat het vruchtvlees niet giftig is. Blue Cross noemt persine giftig voor honden. Ze zijn het er allemaal over eens dat een hond in de pit kan stikken of er een verstopping door kan krijgen, en dat het hoge vetgehalte alvleesklierontsteking kan veroorzaken."
+    "nl": "De bronnen zijn het niet met elkaar eens, dus kiezen we het strengere niveau. Volgens de Merck Veterinary Manual lijken honden vergeleken met andere diersoorten vrij ongevoelig, de ASPCA noemt vogels en konijnen als grootste zorg en de AKC zegt dat het vruchtvlees niet giftig is. Blue Cross noemt persine giftig voor honden. Ze zijn het er allemaal over eens dat een hond in de pit kan stikken of er een verstopping door kan krijgen, en dat het hoge vetgehalte alvleesklierontsteking kan veroorzaken.",
+    "pl": "Źródła się różnią, dlatego przyjmujemy surowszą ocenę. Merck Veterinary Manual podaje, że psy wydają się stosunkowo odporne w porównaniu z innymi gatunkami, ASPCA wskazuje, że największe zagrożenie dotyczy ptaków i królików, a AKC twierdzi, że miąższ nie jest toksyczny. Blue Cross uznaje persynę za trującą dla psów. Wszystkie źródła są zgodne, że pestka może zadławić psa lub spowodować niedrożność, a duża zawartość tłuszczu może wywołać zapalenie trzustki."
   },
   "signs": {
     "en": [
@@ -92,6 +97,11 @@
       "Stikken in de pit",
       "Tekenen van een verstopping na het inslikken van de pit: herhaald braken, niet eten, vermoeidheid",
       "Zich niet lekker voelen door het hoge vetgehalte, wat tot alvleesklierontsteking kan leiden"
+    ],
+    "pl": [
+      "Zadławienie pestką",
+      "Objawy niedrożności po połknięciu pestki: powtarzające się wymioty, brak apetytu, zmęczenie",
+      "Złe samopoczucie z powodu dużej ilości tłuszczu, co może prowadzić do zapalenia trzustki"
     ]
   },
   "what_to_do": {
@@ -102,7 +112,8 @@
     "es": "Si tu perro ha mordisqueado o se ha tragado un hueso de aguacate, contacta enseguida con tu veterinario y no esperes a que aparezcan síntomas. Si ha comido guacamole, llama también a tu veterinario o a una línea de información toxicológica para animales, porque el guacamole suele llevar cebolla y ajo. Anota qué ha comido y cuánto.",
     "it": "Se il tuo cane ha masticato o ingoiato un nocciolo di avocado, contatta subito il veterinario senza aspettare che compaiano i sintomi. Se ha mangiato del guacamole, chiama anche in questo caso il veterinario o un centro antiveleni veterinario, perché il guacamole di solito contiene cipolla e aglio. Annota che cosa ha mangiato e quanto.",
     "pt": "Se o teu cão roeu ou engoliu um caroço de abacate, contacta imediatamente o teu veterinário e não esperes pelos sinais. Se comeu guacamole, liga também ao teu veterinário ou a uma linha de apoio toxicológico para animais, porque o guacamole costuma ter cebola e alho. Anota o que comeu e quanto.",
-    "nl": "Heeft je hond op een avocadopit gekauwd of er een ingeslikt? Neem dan meteen contact op met je dierenarts en wacht niet op verschijnselen. Heeft hij guacamole gegeten, bel dan ook je dierenarts of een vergiftigingenlijn voor dieren, want guacamole bevat meestal ui en knoflook. Schrijf op wat er is gegeten en hoeveel."
+    "nl": "Heeft je hond op een avocadopit gekauwd of er een ingeslikt? Neem dan meteen contact op met je dierenarts en wacht niet op verschijnselen. Heeft hij guacamole gegeten, bel dan ook je dierenarts of een vergiftigingenlijn voor dieren, want guacamole bevat meestal ui en knoflook. Schrijf op wat er is gegeten en hoeveel.",
+    "pl": "Jeśli twój pies gryzł lub połknął pestkę awokado, od razu skontaktuj się z weterynarzem i nie czekaj na objawy. Jeśli zjadł guacamole, także zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, bo guacamole zwykle zawiera cebulę i czosnek. Zanotuj, co i ile zjadł."
   },
   "serving": null,
   "child": {
@@ -113,7 +124,8 @@
     "es": "El aguacate no es un buen tentempié para perros. El hueso grande de dentro se le puede quedar atascado en la barriga, así que mantén los aguacates lejos.",
     "it": "L’avocado non è un buon snack per cani. Il grosso nocciolo che ha dentro può bloccarsi nella pancia del cane, quindi tieni lontani gli avocado.",
     "pt": "O abacate não é um bom petisco para cães. O caroço grande lá dentro pode ficar preso na barriga do cão, por isso mantém os abacates longe.",
-    "nl": "Avocado is geen goed hondensnoepje. De grote pit kan vast komen te zitten in het buikje van een hond, dus houd avocado’s uit de buurt."
+    "nl": "Avocado is geen goed hondensnoepje. De grote pit kan vast komen te zitten in het buikje van een hond, dus houd avocado’s uit de buurt.",
+    "pl": "Awokado to nie jest dobra przekąska dla psa. Duża pestka w środku może utknąć mu w brzuszku, więc trzymaj awokado z dala od psa."
   },
   "faq": [
     {
@@ -125,7 +137,8 @@
         "es": "¿El guacamole es seguro para los perros?",
         "it": "Il guacamole è sicuro per i cani?",
         "pt": "O guacamole é seguro para os cães?",
-        "nl": "Is guacamole veilig voor honden?"
+        "nl": "Is guacamole veilig voor honden?",
+        "pl": "Czy guacamole jest bezpieczne dla psów?"
       },
       "a": {
         "en": "No. Guacamole usually contains onion and garlic, which are toxic to dogs.",
@@ -135,7 +148,8 @@
         "es": "No. El guacamole suele llevar cebolla y ajo, que son tóxicos para los perros.",
         "it": "No. Il guacamole di solito contiene cipolla e aglio, che sono tossici per i cani.",
         "pt": "Não. O guacamole costuma ter cebola e alho, que são tóxicos para os cães.",
-        "nl": "Nee. Guacamole bevat meestal ui en knoflook, en die zijn giftig voor honden."
+        "nl": "Nee. Guacamole bevat meestal ui en knoflook, en die zijn giftig voor honden.",
+        "pl": "Nie. Guacamole zwykle zawiera cebulę i czosnek, które są toksyczne dla psów."
       }
     },
     {
@@ -147,7 +161,8 @@
         "es": "¿Y si mi perro se ha tragado el hueso?",
         "it": "E se il mio cane ha ingoiato il nocciolo?",
         "pt": "E se o meu cão engoliu o caroço?",
-        "nl": "Wat als mijn hond de pit heeft ingeslikt?"
+        "nl": "Wat als mijn hond de pit heeft ingeslikt?",
+        "pl": "Co zrobić, jeśli mój pies połknął pestkę?"
       },
       "a": {
         "en": "Contact your vet right away. The pit can cause a blockage in the gut.",
@@ -157,7 +172,8 @@
         "es": "Contacta enseguida con tu veterinario. El hueso puede causar una obstrucción en el intestino.",
         "it": "Contatta subito il veterinario. Il nocciolo può causare un’ostruzione intestinale.",
         "pt": "Contacta imediatamente o teu veterinário. O caroço pode causar uma obstrução no intestino.",
-        "nl": "Neem meteen contact op met je dierenarts. De pit kan een verstopping in de darmen veroorzaken."
+        "nl": "Neem meteen contact op met je dierenarts. De pit kan een verstopping in de darmen veroorzaken.",
+        "pl": "Od razu skontaktuj się z weterynarzem. Pestka może spowodować niedrożność jelit."
       }
     },
     {
@@ -169,7 +185,8 @@
         "es": "¿La pulpa del aguacate es venenosa para los perros?",
         "it": "La polpa dell’avocado è velenosa per i cani?",
         "pt": "A polpa do abacate é venenosa para os cães?",
-        "nl": "Is het vruchtvlees van avocado giftig voor honden?"
+        "nl": "Is het vruchtvlees van avocado giftig voor honden?",
+        "pl": "Czy miąższ awokado jest trujący dla psów?"
       },
       "a": {
         "en": "Sources disagree: some say the flesh is not toxic, others call avocado poisonous to dogs. Because it is also very fatty and the pit is a hazard, we advise keeping it away.",
@@ -179,7 +196,8 @@
         "es": "Las fuentes no coinciden: algunas dicen que la pulpa no es tóxica y otras consideran el aguacate venenoso para los perros. Como además es muy graso y el hueso es un peligro, aconsejamos mantenerlo lejos.",
         "it": "Le fonti non concordano: alcune dicono che la polpa non è tossica, altre definiscono l’avocado velenoso per i cani. Poiché è anche molto grasso e il nocciolo è un pericolo, ti consigliamo di tenerlo lontano.",
         "pt": "As fontes não estão de acordo: umas dizem que a polpa não é tóxica, outras consideram o abacate venenoso para os cães. Como também é muito gordo e o caroço é um perigo, aconselhamos a mantê-lo longe.",
-        "nl": "De bronnen zijn het niet eens: sommige zeggen dat het vruchtvlees niet giftig is, andere noemen avocado giftig voor honden. Omdat avocado ook erg vet is en de pit gevaarlijk is, raden we aan het uit de buurt te houden."
+        "nl": "De bronnen zijn het niet eens: sommige zeggen dat het vruchtvlees niet giftig is, andere noemen avocado giftig voor honden. Omdat avocado ook erg vet is en de pit gevaarlijk is, raden we aan het uit de buurt te houden.",
+        "pl": "Źródła się różnią: według jednych miąższ nie jest toksyczny, inne uznają awokado za trujące dla psów. Ponieważ jest też bardzo tłuste, a pestka stanowi zagrożenie, radzimy trzymać je z dala od psa."
       }
     }
   ],
@@ -304,6 +322,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4eff4e7d72eb160c453243f3810302ad75cd0ecfbf3c595b9371d20e6244c90f"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9b1ef2438459d0b1ee1c1b7f2ee9974516a4e03b43c88d4f36884b892462900c"
     }
   }
 }

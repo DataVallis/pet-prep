@@ -9,7 +9,8 @@
     "es": "Chocolate",
     "it": "Cioccolato",
     "pt": "Chocolate",
-    "nl": "Chocolade"
+    "nl": "Chocolade",
+    "pl": "Czekolada"
   },
   "question": {
     "en": "Can cats eat chocolate?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los gatos comer chocolate?",
     "it": "I gatti possono mangiare il cioccolato?",
     "pt": "Os gatos podem comer chocolate?",
-    "nl": "Mogen katten chocolade eten?"
+    "nl": "Mogen katten chocolade eten?",
+    "pl": "Czy koty mogą jeść czekoladę?"
   },
   "url_slug": {
     "en": "chocolate",
@@ -29,7 +31,8 @@
     "es": "chocolate",
     "it": "cioccolato",
     "pt": "chocolate",
-    "nl": "chocolade"
+    "nl": "chocolade",
+    "pl": "czekolada"
   },
   "level": "toxic",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No. El chocolate es tóxico para los gatos. Contiene teobromina y cafeína, que los gatos toleran mal, y cuanto más negro y amargo es el chocolate, más peligroso resulta. Si tu gato come algo, llama a tu veterinario de inmediato.",
     "it": "No. Il cioccolato è tossico per i gatti. Contiene teobromina e caffeina, che i gatti tollerano male, e più il cioccolato è fondente e amaro, più è pericoloso. Se il tuo gatto ne mangia, chiama subito il veterinario.",
     "pt": "Não. O chocolate é tóxico para os gatos. Contém teobromina e cafeína, que os gatos toleram mal, e quanto mais escuro e amargo for o chocolate, mais perigoso é. Se o teu gato comer algum, liga imediatamente ao teu veterinário.",
-    "nl": "Nee. Chocolade is giftig voor katten. Het bevat theobromine en cafeïne, waar katten slecht tegen kunnen, en hoe donkerder en bitterder de chocolade, hoe gevaarlijker. Eet je kat er iets van, bel dan meteen je dierenarts."
+    "nl": "Nee. Chocolade is giftig voor katten. Het bevat theobromine en cafeïne, waar katten slecht tegen kunnen, en hoe donkerder en bitterder de chocolade, hoe gevaarlijker. Eet je kat er iets van, bel dan meteen je dierenarts.",
+    "pl": "Nie. Czekolada jest dla kotów toksyczna. Zawiera teobrominę i kofeinę, z którymi koty słabo sobie radzą, a im ciemniejsza i bardziej gorzka czekolada, tym groźniejsza. Jeśli kot zje choć trochę, od razu zadzwoń do weterynarza."
   },
   "why": {
     "en": "Chocolate contains theobromine and caffeine. Cats process these substances differently from people, which makes them more sensitive to their effects. Because cats struggle to break down theobromine, it stays in the blood and can quickly build up to dangerous levels. Dark and bitter chocolate carries the most risk; white chocolate has the least theobromine.",
@@ -50,7 +54,8 @@
     "es": "El chocolate contiene teobromina y cafeína. Los gatos procesan estas sustancias de forma distinta a las personas, lo que los hace más sensibles a sus efectos. Como a los gatos les cuesta descomponer la teobromina, esta se queda en la sangre y puede acumularse rápidamente hasta niveles peligrosos. El chocolate negro y amargo es el de mayor riesgo; el chocolate blanco es el que menos teobromina tiene.",
     "it": "Il cioccolato contiene teobromina e caffeina. I gatti metabolizzano queste sostanze in modo diverso dalle persone, e questo li rende più sensibili ai loro effetti. Poiché i gatti fanno fatica a smaltire la teobromina, questa resta nel sangue e può raggiungere rapidamente livelli pericolosi. Il cioccolato fondente e amaro è il più rischioso; quello bianco contiene meno teobromina.",
     "pt": "O chocolate contém teobromina e cafeína. Os gatos processam estas substâncias de forma diferente das pessoas, o que os torna mais sensíveis aos seus efeitos. Como os gatos têm dificuldade em decompor a teobromina, esta fica no sangue e pode acumular-se rapidamente até níveis perigosos. O chocolate negro e amargo é o de maior risco; o chocolate branco é o que tem menos teobromina.",
-    "nl": "Chocolade bevat theobromine en cafeïne. Katten verwerken deze stoffen anders dan mensen, waardoor ze gevoeliger zijn voor de effecten. Omdat katten theobromine moeilijk kunnen afbreken, blijft het in het bloed en kan het snel oplopen tot een gevaarlijk niveau. Donkere en bittere chocolade geeft het meeste risico; witte chocolade bevat de minste theobromine."
+    "nl": "Chocolade bevat theobromine en cafeïne. Katten verwerken deze stoffen anders dan mensen, waardoor ze gevoeliger zijn voor de effecten. Omdat katten theobromine moeilijk kunnen afbreken, blijft het in het bloed en kan het snel oplopen tot een gevaarlijk niveau. Donkere en bittere chocolade geeft het meeste risico; witte chocolade bevat de minste theobromine.",
+    "pl": "Czekolada zawiera teobrominę i kofeinę. Koty przetwarzają te substancje inaczej niż ludzie, dlatego są bardziej wrażliwe na ich działanie. Ponieważ koty z trudem rozkładają teobrominę, pozostaje ona we krwi i może szybko osiągnąć niebezpieczny poziom. Największe ryzyko niesie czekolada ciemna i gorzka; biała czekolada zawiera najmniej teobrominy."
   },
   "signs": {
     "en": [
@@ -124,6 +129,15 @@
       "Vaker plassen dan normaal",
       "Jagend hart",
       "In ernstige gevallen: spiertrillingen of epileptische aanvallen"
+    ],
+    "pl": [
+      "Wymioty",
+      "Biegunka",
+      "Wzmożone pragnienie",
+      "Ziajanie lub niepokój",
+      "Oddawanie moczu częściej niż zwykle",
+      "Przyspieszone bicie serca",
+      "W ciężkich przypadkach: drżenie mięśni lub drgawki"
     ]
   },
   "what_to_do": {
@@ -134,7 +148,8 @@
     "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales, aunque tu gato parezca estar bien. Apunta qué tipo de chocolate ha comido, cuánto y cuándo, y guarda el envoltorio. No esperes a que aparezcan signos y no intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario, anche se il tuo gatto sembra stare bene. Annota che tipo di cioccolato ha mangiato, quanto e quando, e conserva l’involucro. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, mesmo que o teu gato pareça bem. Toma nota do tipo de chocolate que o teu gato comeu, da quantidade e de quando, e guarda a embalagem. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
-    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als je kat er gezond uitziet. Schrijf op wat voor chocolade je kat heeft gegeten, hoeveel en wanneer, en bewaar de verpakking. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken."
+    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als je kat er gezond uitziet. Schrijf op wat voor chocolade je kat heeft gegeten, hoeveel en wanneer, en bewaar de verpakking. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
+    "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, nawet jeśli kot wygląda na zdrowego. Zapisz, jaką czekoladę zjadł twój kot, ile i kiedy, i zachowaj opakowanie. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu."
   },
   "serving": null,
   "child": {
@@ -145,7 +160,8 @@
     "es": "El chocolate es un capricho para personas, no un premio para gatos. Guárdalo bien y avisa a un adulto si tu gatito encuentra un poco.",
     "it": "Il cioccolato è un dolce per le persone, non per i gatti. Tienilo ben riposto e dillo a un adulto se il micio ne trova un po’.",
     "pt": "O chocolate é uma guloseima para pessoas, não para gatos. Guarda-o bem e avisa um adulto se o gatinho encontrar algum.",
-    "nl": "Chocolade is een snoepje voor mensen, niet voor katten. Berg het goed op. Vindt je poes toch wat? Vertel het meteen aan een volwassene."
+    "nl": "Chocolade is een snoepje voor mensen, niet voor katten. Berg het goed op. Vindt je poes toch wat? Vertel het meteen aan een volwassene.",
+    "pl": "Czekolada to smakołyk dla ludzi, nie dla kotów. Chowaj ją, a jeśli kotek jakąś znajdzie, powiedz dorosłemu."
   },
   "faq": [
     {
@@ -157,7 +173,8 @@
         "es": "¿El chocolate blanco es seguro para los gatos?",
         "it": "Il cioccolato bianco è sicuro per i gatti?",
         "pt": "O chocolate branco é seguro para gatos?",
-        "nl": "Is witte chocolade veilig voor katten?"
+        "nl": "Is witte chocolade veilig voor katten?",
+        "pl": "Czy biała czekolada jest bezpieczna dla kotów?"
       },
       "a": {
         "en": "White chocolate has the least theobromine, while darker, more bitter chocolate is the most dangerous. Keep all chocolate out of your cat's reach and call your vet if your cat eats any.",
@@ -167,7 +184,8 @@
         "es": "El chocolate blanco es el que menos teobromina tiene, mientras que el chocolate más negro y amargo es el más peligroso. Mantén todo el chocolate fuera del alcance de tu gato y llama a tu veterinario si come algo.",
         "it": "Il cioccolato bianco contiene meno teobromina, mentre quello più fondente e amaro è il più pericoloso. Tieni tutto il cioccolato fuori dalla portata del tuo gatto e chiama il veterinario se ne mangia.",
         "pt": "O chocolate branco é o que tem menos teobromina, e o chocolate mais escuro e amargo é o mais perigoso. Mantém todo o chocolate fora do alcance do teu gato e liga ao teu veterinário se ele comer algum.",
-        "nl": "Witte chocolade bevat de minste theobromine, terwijl donkerdere, bitterdere chocolade het gevaarlijkst is. Houd alle chocolade buiten bereik van je kat en bel je dierenarts als je kat er iets van eet."
+        "nl": "Witte chocolade bevat de minste theobromine, terwijl donkerdere, bitterdere chocolade het gevaarlijkst is. Houd alle chocolade buiten bereik van je kat en bel je dierenarts als je kat er iets van eet.",
+        "pl": "Biała czekolada zawiera najmniej teobrominy, a najgroźniejsza jest czekolada ciemniejsza i bardziej gorzka. Trzymaj każdą czekoladę poza zasięgiem kota i zadzwoń do weterynarza, jeśli kot zje choć trochę."
       }
     },
     {
@@ -179,7 +197,8 @@
         "es": "¿Por qué los gatos son más sensibles que las personas?",
         "it": "Perché i gatti sono più sensibili delle persone?",
         "pt": "Porque é que os gatos são mais sensíveis do que as pessoas?",
-        "nl": "Waarom zijn katten gevoeliger dan mensen?"
+        "nl": "Waarom zijn katten gevoeliger dan mensen?",
+        "pl": "Dlaczego koty są bardziej wrażliwe niż ludzie?"
       },
       "a": {
         "en": "Cats process theobromine and caffeine differently from people. Theobromine stays in a cat's bloodstream and can quickly reach dangerous levels.",
@@ -189,7 +208,8 @@
         "es": "Los gatos procesan la teobromina y la cafeína de forma distinta a las personas. La teobromina se queda en la sangre del gato y puede alcanzar rápidamente niveles peligrosos.",
         "it": "I gatti metabolizzano teobromina e caffeina in modo diverso dalle persone. La teobromina resta nel sangue del gatto e può raggiungere rapidamente livelli pericolosi.",
         "pt": "Os gatos processam a teobromina e a cafeína de forma diferente das pessoas. A teobromina fica na corrente sanguínea do gato e pode atingir rapidamente níveis perigosos.",
-        "nl": "Katten verwerken theobromine en cafeïne anders dan mensen. Theobromine blijft in het bloed van een kat en kan snel een gevaarlijk niveau bereiken."
+        "nl": "Katten verwerken theobromine en cafeïne anders dan mensen. Theobromine blijft in het bloed van een kat en kan snel een gevaarlijk niveau bereiken.",
+        "pl": "Koty przetwarzają teobrominę i kofeinę inaczej niż ludzie. Teobromina pozostaje we krwi kota i może szybko osiągnąć niebezpieczny poziom."
       }
     }
   ],
@@ -318,6 +338,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "84ce654fae715dc40b49d731a9fe1c87b8a22131e25fab041eeea1020ac06193"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fdba9a27e955010820295678994b0068686d4d445ce7e7e04a45537c2ccebda5"
     }
   }
 }

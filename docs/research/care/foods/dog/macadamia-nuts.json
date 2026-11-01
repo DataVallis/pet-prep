@@ -9,7 +9,8 @@
     "es": "Nueces de macadamia",
     "it": "Noci di macadamia",
     "pt": "Nozes de macadâmia",
-    "nl": "Macadamianoten"
+    "nl": "Macadamianoten",
+    "pl": "Orzechy makadamia"
   },
   "question": {
     "en": "Can dogs eat macadamia nuts?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros comer nueces de macadamia?",
     "it": "I cani possono mangiare le noci di macadamia?",
     "pt": "Os cães podem comer nozes de macadâmia?",
-    "nl": "Mogen honden macadamianoten eten?"
+    "nl": "Mogen honden macadamianoten eten?",
+    "pl": "Czy psy mogą jeść orzechy makadamia?"
   },
   "url_slug": {
     "en": "macadamia-nuts",
@@ -29,7 +31,8 @@
     "es": "nueces-de-macadamia",
     "it": "noci-di-macadamia",
     "pt": "nozes-de-macadamia",
-    "nl": "macadamianoten"
+    "nl": "macadamianoten",
+    "pl": "orzechy-makadamia"
   },
   "level": "toxic",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No. Las nueces de macadamia son tóxicas para los perros, y los perros son la única especie de la que se sabe que enferma con ellas. Incluso una pequeña cantidad puede causar debilidad, vómitos, temblores y una temperatura corporal alta. Su gran cantidad de grasa también puede desencadenar una pancreatitis.",
     "it": "No. Le noci di macadamia sono tossiche per i cani, e il cane è l’unica specie nota che si ammala mangiandole. Anche una piccola quantità può causare debolezza, vomito, tremori e temperatura corporea elevata. Il loro alto contenuto di grassi può anche scatenare una pancreatite.",
     "pt": "Não. As nozes de macadâmia são tóxicas para os cães, e os cães são a única espécie que se sabe que adoece com elas. Até uma pequena quantidade pode causar fraqueza, vómitos, tremores e temperatura corporal alta. O seu elevado teor de gordura também pode provocar pancreatite.",
-    "nl": "Nee. Macadamianoten zijn giftig voor honden, en honden zijn de enige diersoort waarvan bekend is dat ze er ziek van worden. Zelfs een kleine hoeveelheid kan zwakte, braken, trillingen en een hoge lichaamstemperatuur veroorzaken. Door het hoge vetgehalte kunnen ze ook alvleesklierontsteking uitlokken."
+    "nl": "Nee. Macadamianoten zijn giftig voor honden, en honden zijn de enige diersoort waarvan bekend is dat ze er ziek van worden. Zelfs een kleine hoeveelheid kan zwakte, braken, trillingen en een hoge lichaamstemperatuur veroorzaken. Door het hoge vetgehalte kunnen ze ook alvleesklierontsteking uitlokken.",
+    "pl": "Nie. Orzechy makadamia są toksyczne dla psów, a psy to jedyny gatunek, o którym wiadomo, że się po nich rozchorowuje. Nawet mała ilość może wywołać osłabienie, wymioty, drżenie mięśni i wysoką temperaturę. Duża zawartość tłuszczu może też wywołać zapalenie trzustki."
   },
   "why": {
     "en": "How macadamia nuts poison dogs is unknown, but they affect nerve and muscle function. Because they are very oily, some dogs also develop pancreatitis. Signs generally settle within 12–48 hours, but a vet should always be contacted.",
@@ -50,7 +54,8 @@
     "es": "No se sabe cómo intoxican las nueces de macadamia a los perros, pero afectan al funcionamiento de los nervios y los músculos. Como son muy oleosas, algunos perros también desarrollan pancreatitis. Los síntomas suelen desaparecer en un plazo de 12 a 48 horas, pero siempre hay que contactar con un veterinario.",
     "it": "Non si sa come le noci di macadamia avvelenino i cani, ma agiscono sulla funzione dei nervi e dei muscoli. Poiché sono molto oleose, alcuni cani sviluppano anche una pancreatite. In genere i sintomi si risolvono entro 12–48 ore, ma bisogna sempre contattare il veterinario.",
     "pt": "Não se sabe como as nozes de macadâmia intoxicam os cães, mas afetam o funcionamento dos nervos e dos músculos. Como são muito oleosas, alguns cães também desenvolvem pancreatite. Os sinais costumam passar em 12–48 horas, mas deves contactar sempre um veterinário.",
-    "nl": "Hoe macadamianoten honden vergiftigen, is onbekend, maar ze tasten de werking van zenuwen en spieren aan. Omdat ze erg olierijk zijn, krijgen sommige honden ook alvleesklierontsteking. Verschijnselen verdwijnen meestal binnen 12–48 uur, maar neem altijd contact op met een dierenarts."
+    "nl": "Hoe macadamianoten honden vergiftigen, is onbekend, maar ze tasten de werking van zenuwen en spieren aan. Omdat ze erg olierijk zijn, krijgen sommige honden ook alvleesklierontsteking. Verschijnselen verdwijnen meestal binnen 12–48 uur, maar neem altijd contact op met een dierenarts.",
+    "pl": "Nie wiadomo, w jaki sposób orzechy makadamia zatruwają psy, ale wpływają na pracę nerwów i mięśni. Ponieważ są bardzo oleiste, u niektórych psów rozwija się też zapalenie trzustki. Objawy na ogół ustępują w ciągu 12–48 godzin, ale zawsze trzeba skontaktować się z weterynarzem."
   },
   "signs": {
     "en": [
@@ -116,6 +121,14 @@
       "Trillen",
       "Hoge lichaamstemperatuur",
       "Wankel lopen"
+    ],
+    "pl": [
+      "Osłabienie mięśni",
+      "Brak energii, apatia",
+      "Wymioty",
+      "Drżenie mięśni",
+      "Wysoka temperatura ciała",
+      "Chwiejny chód"
     ]
   },
   "what_to_do": {
@@ -126,7 +139,8 @@
     "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta cuántas nueces ha comido y si estaban recubiertas de chocolate o mezcladas con otros alimentos. No esperes a que aparezcan síntomas.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota quante noci ha mangiato il tuo cane e se erano ricoperte di cioccolato o mescolate ad altri alimenti. Non aspettare che compaiano i sintomi.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota quantas nozes comeu e se estavam cobertas de chocolate ou misturadas com outros alimentos. Não esperes pelos sinais.",
-    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op hoeveel noten er zijn gegeten en of ze met chocolade waren omhuld of met ander eten waren gemengd. Wacht niet op verschijnselen."
+    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op hoeveel noten er zijn gegeten en of ze met chocolade waren omhuld of met ander eten waren gemengd. Wacht niet op verschijnselen.",
+    "pl": "Od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, ile orzechów pies zjadł i czy były w czekoladzie albo zmieszane z innym jedzeniem. Nie czekaj na objawy."
   },
   "serving": null,
   "child": {
@@ -137,7 +151,8 @@
     "es": "Las macadamias son frutos secos redondos que pueden dejar a los perros débiles y tambaleantes. Guárdalas lejos y avisa a un adulto si tu perro se come alguna.",
     "it": "Le macadamia sono piccoli frutti tondi che possono rendere i cani deboli e traballanti. Tienile lontane e avvisa un adulto se il tuo cane ne mangia.",
     "pt": "As nozes de macadâmia são redondinhas e podem deixar os cães fracos e a cambalear. Mantém-nas longe e avisa um adulto se o teu cão comer alguma.",
-    "nl": "Macadamianoten zijn ronde noten waar honden zwak en wiebelig van kunnen worden. Houd ze uit de buurt en vertel het aan een volwassene als je hond ervan eet."
+    "nl": "Macadamianoten zijn ronde noten waar honden zwak en wiebelig van kunnen worden. Houd ze uit de buurt en vertel het aan een volwassene als je hond ervan eet.",
+    "pl": "Orzechy makadamia to okrągłe orzechy, po których psy mogą osłabnąć i chwiać się na łapach. Trzymaj je z dala od psa i powiedz dorosłemu, jeśli twój pies je zje."
   },
   "faq": [
     {
@@ -149,7 +164,8 @@
         "es": "¿Otros frutos secos también son tóxicos?",
         "it": "Anche altra frutta a guscio è tossica?",
         "pt": "Os outros frutos secos também são tóxicos?",
-        "nl": "Zijn andere noten ook giftig?"
+        "nl": "Zijn andere noten ook giftig?",
+        "pl": "Czy inne orzechy też są toksyczne?"
       },
       "a": {
         "en": "Macadamias are the toxic ones. Other nuts such as almonds, pecans and walnuts are very fatty and can cause vomiting, diarrhoea and possibly pancreatitis, so they are not a good treat either.",
@@ -159,7 +175,8 @@
         "es": "Las tóxicas son las nueces de macadamia. Otros frutos secos, como las almendras, las pacanas y las nueces, son muy grasos y pueden causar vómitos, diarrea y posiblemente pancreatitis, así que tampoco son un buen premio.",
         "it": "Quelle tossiche sono le macadamia. Altra frutta a guscio, come mandorle, noci pecan e noci, è molto grassa e può causare vomito, diarrea e forse una pancreatite, quindi non è comunque un buon premio.",
         "pt": "As macadâmias são as tóxicas. Outros frutos secos, como amêndoas, nozes-pecã e nozes, são muito gordos e podem causar vómitos, diarreia e possivelmente pancreatite, por isso também não são uma boa guloseima.",
-        "nl": "Macadamianoten zijn de echt giftige noten. Andere noten, zoals amandelen, pecannoten en walnoten, zijn erg vet en kunnen braken, diarree en mogelijk alvleesklierontsteking veroorzaken, dus ook die zijn geen goed snoepje."
+        "nl": "Macadamianoten zijn de echt giftige noten. Andere noten, zoals amandelen, pecannoten en walnoten, zijn erg vet en kunnen braken, diarree en mogelijk alvleesklierontsteking veroorzaken, dus ook die zijn geen goed snoepje.",
+        "pl": "Toksyczne są orzechy makadamia. Inne orzechy, takie jak migdały, orzechy pekan i orzechy włoskie, są bardzo tłuste i mogą wywołać wymioty, biegunkę, a być może także zapalenie trzustki, więc też nie są dobrym smakołykiem."
       }
     },
     {
@@ -171,7 +188,8 @@
         "es": "¿Cuánto duran los síntomas?",
         "it": "Quanto durano i sintomi?",
         "pt": "Quanto tempo duram os sinais?",
-        "nl": "Hoelang duren de verschijnselen?"
+        "nl": "Hoelang duren de verschijnselen?",
+        "pl": "Jak długo trwają objawy?"
       },
       "a": {
         "en": "Signs generally resolve within 12–48 hours, but your vet should still be told straight away.",
@@ -181,7 +199,8 @@
         "es": "Los síntomas suelen desaparecer en un plazo de 12 a 48 horas, pero aun así hay que avisar enseguida a tu veterinario.",
         "it": "In genere i sintomi si risolvono entro 12–48 ore, ma devi comunque avvisare subito il veterinario.",
         "pt": "Os sinais costumam passar em 12–48 horas, mas deves avisar imediatamente o teu veterinário na mesma.",
-        "nl": "Verschijnselen verdwijnen meestal binnen 12–48 uur, maar laat het je dierenarts toch meteen weten."
+        "nl": "Verschijnselen verdwijnen meestal binnen 12–48 uur, maar laat het je dierenarts toch meteen weten.",
+        "pl": "Objawy na ogół ustępują w ciągu 12–48 godzin, ale i tak trzeba od razu powiadomić weterynarza."
       }
     }
   ],
@@ -286,6 +305,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6dc39a67098eb11c2a7cc6770915cb9ec499ccebc10aecd54ddd7b5fd89da62a"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5e8a6aa7fa90d7064a948ee91ea3cc65439573286fa62c3c1995dc06b7fe7222"
     }
   }
 }

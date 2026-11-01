@@ -9,7 +9,8 @@
     "es": "Anacardos",
     "it": "Anacardi",
     "pt": "Cajus",
-    "nl": "Cashewnoten"
+    "nl": "Cashewnoten",
+    "pl": "Orzechy nerkowca"
   },
   "question": {
     "en": "Can dogs eat cashews?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros comer anacardos?",
     "it": "I cani possono mangiare gli anacardi?",
     "pt": "Os cães podem comer cajus?",
-    "nl": "Mogen honden cashewnoten eten?"
+    "nl": "Mogen honden cashewnoten eten?",
+    "pl": "Czy psy mogą jeść orzechy nerkowca?"
   },
   "url_slug": {
     "en": "cashews",
@@ -29,7 +31,8 @@
     "es": "anacardos",
     "it": "anacardi",
     "pt": "cajus",
-    "nl": "cashewnoten"
+    "nl": "cashewnoten",
+    "pl": "orzechy-nerkowca"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "Sí, unos pocos anacardos naturales como premio ocasional suelen ser seguros: pelados, sin sal y sin condimentos. Tienen mucha grasa, así que demasiados pueden causar malestar de barriga o pancreatitis. Evita las mezclas de frutos secos, que pueden llevar nueces de macadamia, que son tóxicas.",
     "it": "Sì, qualche anacardo al naturale come premio occasionale è in genere sicuro: sgusciato, non salato e non condito. Gli anacardi sono molto grassi, quindi mangiarne troppi può causare mal di pancia o pancreatite. Evita i mix di frutta a guscio, che possono contenere noci di macadamia, tossiche.",
     "pt": "Sim, alguns cajus simples, como guloseima ocasional, são geralmente seguros: sem casca, sem sal e sem temperos. Têm muita gordura, por isso demasiados podem causar dor de barriga ou pancreatite. Evita as misturas de frutos secos, que podem ter nozes de macadâmia, tóxicas.",
-    "nl": "Ja, een paar gewone cashewnoten als af en toe een snoepje zijn over het algemeen veilig: gepeld, ongezouten en ongekruid. Ze bevatten veel vet, dus te veel kan maagklachten of alvleesklierontsteking veroorzaken. Vermijd gemengde noten, want daar kunnen giftige macadamianoten in zitten."
+    "nl": "Ja, een paar gewone cashewnoten als af en toe een snoepje zijn over het algemeen veilig: gepeld, ongezouten en ongekruid. Ze bevatten veel vet, dus te veel kan maagklachten of alvleesklierontsteking veroorzaken. Vermijd gemengde noten, want daar kunnen giftige macadamianoten in zitten.",
+    "pl": "Tak, kilka zwykłych orzechów nerkowca jako okazjonalny smakołyk jest zazwyczaj bezpiecznych: łuskanych, niesolonych i nieprzyprawionych. Mają dużo tłuszczu, więc zbyt wiele może wywołać problemy z brzuchem lub zapalenie trzustki. Unikaj mieszanek orzechów, które mogą zawierać toksyczne orzechy makadamia."
   },
   "why": {
     "en": "Cashews aren't toxic, but they are a high-fat snack: eating too many can lead to tummy upset, pancreatitis and weight gain. Salted cashews add salt, which in excess is harmful. The biggest risk comes from other nuts in a mix, such as macadamias. Some dogs may react with swelling, itching or hives.",
@@ -50,7 +54,8 @@
     "es": "Los anacardos no son tóxicos, pero son un tentempié con mucha grasa: comer demasiados puede provocar malestar de barriga, pancreatitis y aumento de peso. Los anacardos salados añaden sal, que en exceso es perjudicial. El mayor riesgo viene de otros frutos secos de la mezcla, como las nueces de macadamia. Algunos perros pueden reaccionar con hinchazón, picor o ronchas.",
     "it": "Gli anacardi non sono tossici, ma sono uno snack molto grasso: mangiarne troppi può portare a disturbi di pancia, pancreatite e aumento di peso. Gli anacardi salati aggiungono sale, che in eccesso fa male. Il rischio maggiore viene da altra frutta a guscio presente nei mix, come le noci di macadamia. Alcuni cani possono reagire con gonfiore, prurito od orticaria.",
     "pt": "Os cajus não são tóxicos, mas são um petisco com muita gordura: comer demasiados pode levar a dor de barriga, pancreatite e aumento de peso. Os cajus salgados juntam sal, que em excesso faz mal. O maior risco vem de outros frutos secos da mistura, como as nozes de macadâmia. Alguns cães podem reagir com inchaço, comichão ou urticária.",
-    "nl": "Cashewnoten zijn niet giftig, maar wel een vette snack: te veel eten kan leiden tot maag-darmklachten, alvleesklierontsteking en overgewicht. Gezouten cashewnoten bevatten zout, en te veel zout is schadelijk. Het grootste risico komt van andere noten in een mix, zoals macadamianoten. Sommige honden kunnen reageren met zwelling, jeuk of netelroos (bultjes)."
+    "nl": "Cashewnoten zijn niet giftig, maar wel een vette snack: te veel eten kan leiden tot maag-darmklachten, alvleesklierontsteking en overgewicht. Gezouten cashewnoten bevatten zout, en te veel zout is schadelijk. Het grootste risico komt van andere noten in een mix, zoals macadamianoten. Sommige honden kunnen reageren met zwelling, jeuk of netelroos (bultjes).",
+    "pl": "Orzechy nerkowca nie są toksyczne, ale to bardzo tłusta przekąska: zbyt duża ilość może prowadzić do problemów z brzuchem, zapalenia trzustki i przybierania na wadze. Solone orzechy nerkowca dostarczają soli, która w nadmiarze szkodzi. Największe ryzyko stanowią inne orzechy w mieszance, np. makadamia. Niektóre psy mogą zareagować obrzękiem, swędzeniem lub pokrzywką."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "es": "Vigila si aparecen vómitos, diarrea, hinchazón, picor o ronchas y, si aparecen, llama a tu veterinario. Si tu perro ha comido una gran cantidad, frutos secos salados o una mezcla que pueda llevar nueces de macadamia, llama a tu veterinario enseguida.",
     "it": "Controlla se compaiono vomito, diarrea, gonfiore, prurito od orticaria e, in quel caso, chiama il veterinario. Se il tuo cane ne ha mangiato una grande quantità, frutta a guscio salata o un mix che potrebbe contenere noci di macadamia, chiama subito il veterinario.",
     "pt": "Vigia se aparecem vómitos, diarreia, inchaço, comichão ou urticária e liga ao teu veterinário se surgirem. Se o teu cão comeu uma grande quantidade, frutos secos salgados ou uma mistura que possa ter nozes de macadâmia, liga imediatamente ao teu veterinário.",
-    "nl": "Let op braken, diarree, zwelling, jeuk of netelroos (bultjes) en bel je dierenarts als die optreden. Heeft je hond veel gegeten, gezouten noten of een mix waar macadamianoten in kunnen zitten? Bel je dierenarts dan meteen."
+    "nl": "Let op braken, diarree, zwelling, jeuk of netelroos (bultjes) en bel je dierenarts als die optreden. Heeft je hond veel gegeten, gezouten noten of een mix waar macadamianoten in kunnen zitten? Bel je dierenarts dan meteen.",
+    "pl": "Obserwuj, czy nie pojawiają się wymioty, biegunka, obrzęk, swędzenie lub pokrzywka, i zadzwoń do weterynarza, jeśli wystąpią. Jeśli twój pies zjadł dużą ilość, solone orzechy albo mieszankę, która może zawierać orzechy makadamia, od razu zadzwoń do weterynarza."
   },
   "serving": {
     "en": "Only a few plain cashews, shelled and unsalted, never from a mixed-nut bag.",
@@ -71,7 +77,8 @@
     "es": "Solo unos pocos anacardos naturales, pelados y sin sal, nunca de una bolsa de frutos secos variados.",
     "it": "Solo qualche anacardo al naturale, sgusciato e non salato, mai da un sacchetto di frutta a guscio mista.",
     "pt": "Apenas alguns cajus simples, sem casca e sem sal, nunca de um saco de frutos secos misturados.",
-    "nl": "Alleen een paar gewone cashewnoten, gepeld en ongezouten, nooit uit een zak gemengde noten."
+    "nl": "Alleen een paar gewone cashewnoten, gepeld en ongezouten, nooit uit een zak gemengde noten.",
+    "pl": "Tylko kilka zwykłych orzechów nerkowca, łuskanych i niesolonych, nigdy z torebki z mieszanką orzechów."
   },
   "child": {
     "en": "A dog may have one or two plain cashews sometimes. Salty nut mixes are not for dogs.",
@@ -81,7 +88,8 @@
     "es": "Un perro puede comer uno o dos anacardos naturales de vez en cuando. Las mezclas de frutos secos saladas no son para perros.",
     "it": "Ogni tanto un cane può mangiare uno o due anacardi al naturale. I mix salati di frutta a guscio non sono per i cani.",
     "pt": "Um cão pode comer um ou dois cajus simples de vez em quando. As misturas de frutos secos salgadas não são para cães.",
-    "nl": "Een hond mag af en toe een of twee gewone cashewnoten. Zoute notenmixen zijn niet voor honden."
+    "nl": "Een hond mag af en toe een of twee gewone cashewnoten. Zoute notenmixen zijn niet voor honden.",
+    "pl": "Pies może czasem dostać jeden lub dwa zwykłe orzechy nerkowca. Słone mieszanki orzechów nie są dla psów."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "es": "¿Por qué no los frutos secos variados?",
         "it": "Perché niente frutta a guscio mista?",
         "pt": "Porque não dar frutos secos misturados?",
-        "nl": "Waarom geen gemengde noten?"
+        "nl": "Waarom geen gemengde noten?",
+        "pl": "Dlaczego nie mieszanka orzechów?"
       },
       "a": {
         "en": "Mixes may contain macadamia nuts, which are very toxic to dogs, and are often salted.",
@@ -103,7 +112,8 @@
         "es": "Las mezclas pueden llevar nueces de macadamia, que son muy tóxicas para los perros, y a menudo están saladas.",
         "it": "I mix possono contenere noci di macadamia, molto tossiche per i cani, e spesso sono salati.",
         "pt": "As misturas podem ter nozes de macadâmia, que são muito tóxicas para os cães, e costumam ser salgadas.",
-        "nl": "In een mix kunnen macadamianoten zitten, en die zijn erg giftig voor honden. Bovendien zijn mixen vaak gezouten."
+        "nl": "In een mix kunnen macadamianoten zitten, en die zijn erg giftig voor honden. Bovendien zijn mixen vaak gezouten.",
+        "pl": "Mieszanki mogą zawierać orzechy makadamia, które są bardzo toksyczne dla psów, i często są solone."
       }
     }
   ],
@@ -205,6 +215,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "39b9d29fd0b51896dd17351f277ff22a441e31982cfff1855dc8a01c4980e434"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1eec65d8b65692408b7578b19c0ba9baef1b60862f1ea22cfbadddb3ee779307"
     }
   }
 }

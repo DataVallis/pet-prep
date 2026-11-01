@@ -9,7 +9,8 @@
     "es": "Leche",
     "it": "Latte",
     "pt": "Leite",
-    "nl": "Melk"
+    "nl": "Melk",
+    "pl": "Mleko"
   },
   "question": {
     "en": "Can dogs drink milk?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros beber leche?",
     "it": "I cani possono bere il latte?",
     "pt": "Os cães podem beber leite?",
-    "nl": "Mogen honden melk drinken?"
+    "nl": "Mogen honden melk drinken?",
+    "pl": "Czy psy mogą pić mleko?"
   },
   "url_slug": {
     "en": "milk",
@@ -29,7 +31,8 @@
     "es": "leche",
     "it": "latte",
     "pt": "leite",
-    "nl": "melk"
+    "nl": "melk",
+    "pl": "mleko"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "Sí, pero solo un poco. La leche es un premio seguro en pequeñas cantidades, pero muchos perros tienen intolerancia a la lactosa y les provoca diarrea, gases o vómitos. Además, la leche tiene mucha grasa y azúcares naturales.",
     "it": "Sì, ma solo un po’. In piccole quantità il latte è un premio sicuro, ma molti cani sono intolleranti al lattosio e possono avere diarrea, gas intestinali o vomito. Il latte è anche ricco di grassi e di zuccheri naturali.",
     "pt": "Sim, mas só um pouco. O leite é uma guloseima segura em pequenas quantidades, mas muitos cães são intolerantes à lactose e ficam com diarreia, gases ou vómitos. O leite também tem muita gordura e açúcares naturais.",
-    "nl": "Ja, maar alleen een beetje. Melk is in kleine hoeveelheden een veilige traktatie, maar veel honden zijn lactose-intolerant en krijgen er diarree, winderigheid of braken van. Melk bevat ook veel vet en natuurlijke suikers."
+    "nl": "Ja, maar alleen een beetje. Melk is in kleine hoeveelheden een veilige traktatie, maar veel honden zijn lactose-intolerant en krijgen er diarree, winderigheid of braken van. Melk bevat ook veel vet en natuurlijke suikers.",
+    "pl": "Tak, ale tylko trochę. Mleko w małych ilościach to bezpieczny smakołyk, ale wiele psów nie toleruje laktozy i dostaje po nim biegunki, wzdęć lub wymiotów. Mleko zawiera też dużo tłuszczu i naturalnych cukrów."
   },
   "why": {
     "en": "Dogs have little lactase, the enzyme that digests the sugar in milk, so milk and dairy often cause diarrhoea or other digestive upset. Individual dogs differ in how well they tolerate dairy.",
@@ -50,7 +54,8 @@
     "es": "Los perros tienen poca lactasa, la enzima que digiere el azúcar de la leche, así que la leche y los lácteos a menudo causan diarrea u otras molestias digestivas. Cada perro tolera los lácteos de forma distinta.",
     "it": "I cani hanno poca lattasi, l’enzima che digerisce lo zucchero del latte, quindi latte e latticini causano spesso diarrea o altri disturbi digestivi. Ogni cane tollera i latticini in modo diverso.",
     "pt": "Os cães têm pouca lactase, a enzima que digere o açúcar do leite, por isso o leite e os laticínios causam muitas vezes diarreia ou outro mal-estar digestivo. Cada cão tolera os laticínios de forma diferente.",
-    "nl": "Honden hebben weinig lactase, het enzym dat de suiker in melk verteert, dus melk en zuivel veroorzaken vaak diarree of andere spijsverteringsklachten. Honden verschillen onderling in hoe goed ze zuivel verdragen."
+    "nl": "Honden hebben weinig lactase, het enzym dat de suiker in melk verteert, dus melk en zuivel veroorzaken vaak diarree of andere spijsverteringsklachten. Honden verschillen onderling in hoe goed ze zuivel verdragen.",
+    "pl": "Psy mają mało laktazy, enzymu trawiącego cukier mleczny, więc mleko i nabiał często wywołują biegunkę lub inne problemy trawienne. Psy różnią się tym, jak dobrze tolerują nabiał."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "es": "Si tu perro tiene heces blandas, gases, vómitos o dolor de barriga después de tomar leche, deja de dársela. Contacta con tu veterinario si estás preocupado.",
     "it": "Se dopo il latte il tuo cane ha feci molli, gas intestinali, vomito o mal di pancia, smetti di darglielo. Se sei preoccupato, contatta il veterinario.",
     "pt": "Se o teu cão ficar com fezes moles, gases, vómitos ou dor de barriga depois de beber leite, deixa de lhe dar leite. Contacta o teu veterinário se estiveres preocupado.",
-    "nl": "Krijgt je hond na melk dunne ontlasting, winderigheid, braken of buikpijn? Geef dan geen melk meer. Neem contact op met je dierenarts als je je zorgen maakt."
+    "nl": "Krijgt je hond na melk dunne ontlasting, winderigheid, braken of buikpijn? Geef dan geen melk meer. Neem contact op met je dierenarts als je je zorgen maakt.",
+    "pl": "Jeśli po mleku twój pies ma luźne stolce, wzdęcia, wymioty lub ból brzucha, przestań mu je dawać. Skontaktuj się z weterynarzem, jeśli się niepokoisz."
   },
   "serving": {
     "en": "Only a small amount of plain milk now and then, and none if your dog's tummy reacts.",
@@ -71,7 +77,8 @@
     "es": "Solo un poco de leche natural de vez en cuando, y nada si a tu perro le sienta mal.",
     "it": "Solo una piccola quantità di latte semplice ogni tanto, e niente se la pancia del tuo cane reagisce male.",
     "pt": "Só uma pequena quantidade de leite simples de vez em quando, e nenhum se a barriga do teu cão reagir mal.",
-    "nl": "Alleen af en toe een klein beetje gewone melk, en helemaal niet als het buikje van je hond erop reageert."
+    "nl": "Alleen af en toe een klein beetje gewone melk, en helemaal niet als het buikje van je hond erop reageert.",
+    "pl": "Tylko odrobina zwykłego mleka od czasu do czasu, a jeśli brzuch twojego psa źle na nie reaguje – wcale."
   },
   "child": {
     "en": "Some dogs get a tummy ache from milk, so only a little, and only if a grown-up says yes.",
@@ -81,7 +88,8 @@
     "es": "A algunos perros la leche les da dolor de barriga, así que solo un poquito, y solo si un adulto dice que sí.",
     "it": "Ad alcuni cani il latte fa venire il mal di pancia: quindi solo un pochino, e solo se un adulto dice di sì.",
     "pt": "Alguns cães ficam com dor de barriga com o leite, por isso só um pouquinho, e só se um adulto disser que sim.",
-    "nl": "Sommige honden krijgen buikpijn van melk. Dus maar een klein beetje, en alleen als een volwassene het goed vindt."
+    "nl": "Sommige honden krijgen buikpijn van melk. Dus maar een klein beetje, en alleen als een volwassene het goed vindt.",
+    "pl": "Po mleku niektóre psy boli brzuszek, więc daj tylko trochę i tylko wtedy, gdy dorosły się zgodzi."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "es": "¿Por qué a algunos perros la leche les da diarrea?",
         "it": "Perché ad alcuni cani il latte fa venire la diarrea?",
         "pt": "Porque é que alguns cães ficam com diarreia com o leite?",
-        "nl": "Waarom krijgen sommige honden diarree van melk?"
+        "nl": "Waarom krijgen sommige honden diarree van melk?",
+        "pl": "Dlaczego niektóre psy dostają biegunki po mleku?"
       },
       "a": {
         "en": "Many dogs are lactose intolerant: they don't have much lactase, the enzyme that digests milk sugar.",
@@ -103,7 +112,8 @@
         "es": "Muchos perros tienen intolerancia a la lactosa: no tienen mucha lactasa, la enzima que digiere el azúcar de la leche.",
         "it": "Molti cani sono intolleranti al lattosio: hanno poca lattasi, l’enzima che digerisce lo zucchero del latte.",
         "pt": "Muitos cães são intolerantes à lactose: têm pouca lactase, a enzima que digere o açúcar do leite.",
-        "nl": "Veel honden zijn lactose-intolerant: ze hebben weinig lactase, het enzym dat melksuiker verteert."
+        "nl": "Veel honden zijn lactose-intolerant: ze hebben weinig lactase, het enzym dat melksuiker verteert.",
+        "pl": "Wiele psów nie toleruje laktozy: mają mało laktazy, enzymu trawiącego cukier mleczny."
       }
     }
   ],
@@ -200,6 +210,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "67171c4d4112b9e759cebfad3434004cec5e641fb114a5fdbd8b7cb29e79a6d7"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0cc5530ca8c7a4b9cb96567d5c8c810fbf2c30b2b4edd6102c29ebebb103ec73"
     }
   }
 }

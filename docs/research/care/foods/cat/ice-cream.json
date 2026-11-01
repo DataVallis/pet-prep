@@ -9,7 +9,8 @@
     "es": "Helado",
     "it": "Gelato",
     "pt": "Gelado",
-    "nl": "IJs"
+    "nl": "IJs",
+    "pl": "Lody"
   },
   "question": {
     "en": "Can cats eat ice cream?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los gatos comer helado?",
     "it": "I gatti possono mangiare il gelato?",
     "pt": "Os gatos podem comer gelado?",
-    "nl": "Mogen katten ijs eten?"
+    "nl": "Mogen katten ijs eten?",
+    "pl": "Czy koty mogą jeść lody?"
   },
   "url_slug": {
     "en": "ice-cream",
@@ -29,7 +31,8 @@
     "es": "helado",
     "it": "gelato",
     "pt": "gelado",
-    "nl": "ijs"
+    "nl": "ijs",
+    "pl": "lody"
   },
   "level": "not_recommended",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No, el helado no es un buen premio para los gatos. Se hace con leche y nata, que pueden sentarle mal al estómago de un gato, y aporta grasa y azúcar que los gatos no necesitan.",
     "it": "No, il gelato non è un buon premio per i gatti. È fatto con latte e panna, che possono disturbare lo stomaco del gatto, e apporta grassi e zuccheri di cui i gatti non hanno bisogno.",
     "pt": "Não, o gelado não é uma boa guloseima para gatos. É feito com leite e natas, que podem fazer mal ao estômago do gato, e acrescenta gordura e açúcar de que os gatos não precisam.",
-    "nl": "Nee, ijs is geen goed snoepje voor katten. Het wordt gemaakt met melk en room, die de maag van een kat van streek kunnen maken, en het bevat vet en suiker die katten niet nodig hebben."
+    "nl": "Nee, ijs is geen goed snoepje voor katten. Het wordt gemaakt met melk en room, die de maag van een kat van streek kunnen maken, en het bevat vet en suiker die katten niet nodig hebben.",
+    "pl": "Nie, lody nie są dobrym smakołykiem dla kotów. Robi się je z mleka i śmietanki, które mogą wywołać u kota rozstrój żołądka, a do tego dostarczają tłuszczu i cukru, których koty nie potrzebują."
   },
   "why": {
     "en": "Adult cats have little lactase, the enzyme that digests milk sugar, so milk and other dairy-based products can cause diarrhoea or other digestive upset. Cream and dairy products are high in fat and can lead to weight gain. Sugar isn't toxic to cats, but it is still unhealthy for them and adds calories they don't need.",
@@ -50,7 +54,8 @@
     "es": "Los gatos adultos tienen poca lactasa, la enzima que digiere el azúcar de la leche, así que la leche y otros productos lácteos pueden causar diarrea u otros trastornos digestivos. La nata y los lácteos tienen mucha grasa y pueden hacer que el gato engorde. El azúcar no es tóxico para los gatos, pero aun así no es sano para ellos y aporta calorías que no necesitan.",
     "it": "I gatti adulti hanno poca lattasi, l’enzima che digerisce lo zucchero del latte, quindi il latte e gli altri prodotti a base di latte possono causare diarrea o altri disturbi digestivi. La panna e i latticini sono ricchi di grassi e possono far ingrassare. Lo zucchero non è tossico per i gatti, ma è comunque poco salutare e aggiunge calorie di cui non hanno bisogno.",
     "pt": "Os gatos adultos têm pouca lactase, a enzima que digere o açúcar do leite, por isso o leite e outros produtos lácteos podem causar diarreia ou outros problemas digestivos. As natas e os laticínios são ricos em gordura e podem levar ao aumento de peso. O açúcar não é tóxico para os gatos, mas continua a não ser saudável para eles e acrescenta calorias de que não precisam.",
-    "nl": "Volwassen katten hebben weinig lactase, het enzym dat melksuiker verteert, dus melk en andere zuivelproducten kunnen diarree of andere spijsverteringsklachten veroorzaken. Room en zuivelproducten bevatten veel vet en kunnen tot gewichtstoename leiden. Suiker is niet giftig voor katten, maar wel ongezond en levert calorieën op die ze niet nodig hebben."
+    "nl": "Volwassen katten hebben weinig lactase, het enzym dat melksuiker verteert, dus melk en andere zuivelproducten kunnen diarree of andere spijsverteringsklachten veroorzaken. Room en zuivelproducten bevatten veel vet en kunnen tot gewichtstoename leiden. Suiker is niet giftig voor katten, maar wel ongezond en levert calorieën op die ze niet nodig hebben.",
+    "pl": "Dorosłe koty mają mało laktazy, czyli enzymu trawiącego cukier mleczny, więc mleko i inne produkty na bazie mleka mogą wywołać biegunkę lub inne problemy trawienne. Śmietanka i produkty mleczne zawierają dużo tłuszczu i mogą prowadzić do tycia. Cukier nie jest dla kotów toksyczny, ale i tak jest dla nich niezdrowy i dostarcza zbędnych kalorii."
   },
   "signs": {
     "en": [
@@ -92,6 +97,11 @@
       "Diarree",
       "Braken",
       "Maagklachten"
+    ],
+    "pl": [
+      "Biegunka",
+      "Wymioty",
+      "Rozstrój żołądka"
     ]
   },
   "what_to_do": {
@@ -102,7 +112,8 @@
     "es": "Si tu gato ha comido helado, vigila si tiene diarrea o vómitos y consulta a tu veterinario si parece encontrarse mal. Si el helado llevaba chocolate, ponte en contacto con tu veterinario de inmediato.",
     "it": "Se il tuo gatto ha mangiato del gelato, controlla se compaiono diarrea o vomito e chiedi consiglio al veterinario se sembra stare male. Se il gelato conteneva cioccolato, contatta subito il veterinario.",
     "pt": "Se o teu gato comeu gelado, vigia se aparecem diarreia ou vómitos e contacta o teu veterinário para pedir conselho se ele parecer doente. Se o gelado tinha chocolate, contacta imediatamente o teu veterinário.",
-    "nl": "Heeft je kat ijs gegeten? Let op diarree of braken en vraag je dierenarts om advies als ze ziek lijkt. Zat er chocolade in het ijs, neem dan meteen contact op met je dierenarts."
+    "nl": "Heeft je kat ijs gegeten? Let op diarree of braken en vraag je dierenarts om advies als ze ziek lijkt. Zat er chocolade in het ijs, neem dan meteen contact op met je dierenarts.",
+    "pl": "Jeśli twój kot zjadł lody, obserwuj, czy nie ma biegunki ani wymiotów, i poradź się weterynarza, jeśli źle się czuje. Jeśli lody zawierały czekoladę, od razu skontaktuj się z weterynarzem."
   },
   "serving": null,
   "child": {
@@ -113,7 +124,8 @@
     "es": "El helado es un capricho para personas. Puede darles dolor de barriga a los gatos, así que el cucurucho, para ti.",
     "it": "Il gelato è un dolce per le persone. Può far venire il mal di pancia ai gatti, quindi il cono tienilo per te.",
     "pt": "O gelado é uma guloseima para pessoas. Pode dar dor de barriga aos gatos, por isso guarda o teu gelado só para ti.",
-    "nl": "IJs is een snoepje voor mensen. Een kat kan er buikpijn van krijgen, dus houd je ijsje lekker voor jezelf."
+    "nl": "IJs is een snoepje voor mensen. Een kat kan er buikpijn van krijgen, dus houd je ijsje lekker voor jezelf.",
+    "pl": "Lody to smakołyk dla ludzi. Od nich kota może boleć brzuszek, więc swojego rożka nie oddawaj."
   },
   "faq": [
     {
@@ -125,7 +137,8 @@
         "es": "¿A los gatos les gusta el helado porque es dulce?",
         "it": "Ai gatti piace il gelato perché è dolce?",
         "pt": "Os gatos gostam de gelado por ser doce?",
-        "nl": "Vinden katten ijs lekker omdat het zoet is?"
+        "nl": "Vinden katten ijs lekker omdat het zoet is?",
+        "pl": "Czy koty lubią lody, bo są słodkie?"
       },
       "a": {
         "en": "No. Cats can't taste sweetness at all, so sugar gives them nothing but extra calories.",
@@ -135,7 +148,8 @@
         "es": "No. Los gatos no pueden notar el sabor dulce, así que el azúcar solo les aporta calorías de más.",
         "it": "No. I gatti non sentono affatto il sapore dolce, quindi lo zucchero dà loro solo calorie in più.",
         "pt": "Não. Os gatos não sentem o sabor doce, por isso o açúcar não lhes dá nada além de calorias a mais.",
-        "nl": "Nee. Katten kunnen helemaal geen zoet proeven, dus suiker geeft ze niets anders dan extra calorieën."
+        "nl": "Nee. Katten kunnen helemaal geen zoet proeven, dus suiker geeft ze niets anders dan extra calorieën.",
+        "pl": "Nie. Koty w ogóle nie czują smaku słodkiego, więc cukier nie daje im nic poza dodatkowymi kaloriami."
       }
     }
   ],
@@ -224,6 +238,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6d4f1d9958638ff0cb50ae6c7e3d19acce63536a66de41bfe4c191663d95f45e"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "01d3040007813fe536e237359b3dd609c05ad2426c66fa4b9dfa130442a15e39"
     }
   }
 }

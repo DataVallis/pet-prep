@@ -9,7 +9,8 @@
     "es": "Ternera",
     "it": "Manzo",
     "pt": "Carne de vaca",
-    "nl": "Rundvlees"
+    "nl": "Rundvlees",
+    "pl": "Wołowina"
   },
   "question": {
     "en": "Can cats eat beef?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los gatos comer ternera?",
     "it": "I gatti possono mangiare il manzo?",
     "pt": "Os gatos podem comer carne de vaca?",
-    "nl": "Mogen katten rundvlees eten?"
+    "nl": "Mogen katten rundvlees eten?",
+    "pl": "Czy koty mogą jeść wołowinę?"
   },
   "url_slug": {
     "en": "beef",
@@ -29,7 +31,8 @@
     "es": "ternera",
     "it": "manzo",
     "pt": "carne-de-vaca",
-    "nl": "rundvlees"
+    "nl": "rundvlees",
+    "pl": "wolowina"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "Sí, un poco de ternera sola y bien cocinada está bien como premio de vez en cuando. Quítale la grasa, retira todos los huesos y no le añadas condimentos. No se recomienda la ternera cruda.",
     "it": "Sì, un po’ di manzo semplice e ben cotto va bene come premio occasionale. Togli il grasso, elimina tutte le ossa e non aggiungere condimenti. Il manzo crudo è sconsigliato.",
     "pt": "Sim, um pouco de carne de vaca simples e bem cozinhada pode ser dada como guloseima ocasional. Retira a gordura, tira todos os ossos e não juntes temperos. A carne de vaca crua não é recomendada.",
-    "nl": "Ja, een beetje onbewerkt, goed doorbakken rundvlees is af en toe prima als snoepje. Snijd het vet eraf, haal alle botjes eruit en voeg geen kruiden of zout toe. Rauw rundvlees raden we af."
+    "nl": "Ja, een beetje onbewerkt, goed doorbakken rundvlees is af en toe prima als snoepje. Snijd het vet eraf, haal alle botjes eruit en voeg geen kruiden of zout toe. Rauw rundvlees raden we af.",
+    "pl": "Tak, odrobina zwykłej, dobrze ugotowanej wołowiny jest w porządku jako okazjonalny smakołyk. Odkrój tłuszcz, usuń wszystkie kości i nie dodawaj przypraw. Surowa wołowina nie jest zalecana."
   },
   "why": {
     "en": "Beef is one of the most common proteins in cat food. As a home treat it must be properly cooked: International Cat Care warns that raw or undercooked meat such as beef, lamb and pork can carry Toxoplasma, and advises feeding only properly cooked food. Fatty trimmings are on RSPCA Australia's do-not-feed list, and cooked bones can splinter.",
@@ -50,7 +54,8 @@
     "es": "La ternera es una de las proteínas más habituales en la comida para gatos. Como premio casero tiene que estar bien cocinada: International Cat Care advierte de que la carne cruda o poco hecha, como la de ternera, cordero o cerdo, puede transmitir Toxoplasma, y aconseja dar solo comida bien cocinada. Los recortes de grasa están en la lista de alimentos que no se deben dar de RSPCA Australia, y los huesos cocinados pueden astillarse.",
     "it": "Il manzo è una delle proteine più usate negli alimenti per gatti. Come premio fatto in casa deve essere ben cotto: International Cat Care avverte che la carne cruda o poco cotta, come manzo, agnello e maiale, può trasmettere il Toxoplasma e consiglia di dare solo cibo ben cotto. I ritagli di grasso sono nell’elenco degli alimenti da non dare di RSPCA Australia, e le ossa cotte possono scheggiarsi.",
     "pt": "A carne de vaca é uma das proteínas mais comuns na comida para gatos. Como guloseima caseira, tem de estar bem cozinhada: a International Cat Care avisa que a carne crua ou mal cozinhada, como a de vaca, de borrego e de porco, pode conter Toxoplasma e aconselha a dar apenas comida bem cozinhada. As aparas de gordura estão na lista do que nunca se deve dar da RSPCA Australia, e os ossos cozinhados podem lascar.",
-    "nl": "Rundvlees is een van de meest gebruikte eiwitbronnen in kattenvoer. Als snoepje thuis moet het goed gaar zijn: International Cat Care waarschuwt dat rauw of onvoldoende gaar vlees zoals rund-, lams- en varkensvlees Toxoplasma kan bevatten, en raadt aan alleen goed gekookt voedsel te geven. Vette afsnijdsels staan bij RSPCA Australia op de lijst van wat je katten niet moet geven, en gekookte botten kunnen splinteren."
+    "nl": "Rundvlees is een van de meest gebruikte eiwitbronnen in kattenvoer. Als snoepje thuis moet het goed gaar zijn: International Cat Care waarschuwt dat rauw of onvoldoende gaar vlees zoals rund-, lams- en varkensvlees Toxoplasma kan bevatten, en raadt aan alleen goed gekookt voedsel te geven. Vette afsnijdsels staan bij RSPCA Australia op de lijst van wat je katten niet moet geven, en gekookte botten kunnen splinteren.",
+    "pl": "Wołowina to jedno z najczęstszych źródeł białka w karmie dla kotów. Jako domowy smakołyk musi być porządnie obrobiona termicznie: International Cat Care ostrzega, że surowe lub niedogotowane mięso, takie jak wołowina, jagnięcina i wieprzowina, może przenosić toksoplazmę, i zaleca podawanie wyłącznie porządnie ugotowanego jedzenia. RSPCA Australia umieszcza tłuste ścinki na liście rzeczy, których nie wolno podawać, a gotowane kości mogą się rozszczepiać."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "es": "Ofrécele primero un trocito. Si después tu gato tiene vómitos o diarrea, deja de dársela y consulta a tu veterinario. Si tu gato se ha tragado un hueso cocinado, llama a tu veterinario.",
     "it": "Offrigli prima un pezzetto. Se poi il tuo gatto vomita o ha la diarrea, smetti e chiedi al veterinario. Se ha ingerito un osso cotto, chiama il veterinario.",
     "pt": "Começa por oferecer um pedaço pequeno. Se depois o teu gato tiver vómitos ou diarreia, para e pergunta ao teu veterinário. Se o teu gato engoliu um osso cozinhado, liga ao teu veterinário.",
-    "nl": "Geef eerst een klein stukje. Krijgt je kat daarna last van braken of diarree, stop dan en vraag je dierenarts om advies. Heeft je kat een gekookt bot ingeslikt, bel dan je dierenarts."
+    "nl": "Geef eerst een klein stukje. Krijgt je kat daarna last van braken of diarree, stop dan en vraag je dierenarts om advies. Heeft je kat een gekookt bot ingeslikt, bel dan je dierenarts.",
+    "pl": "Najpierw podaj mały kawałek. Jeśli potem twój kot wymiotuje lub ma biegunkę, przestań i zapytaj weterynarza. Jeśli kot połknął gotowaną kość, zadzwoń do weterynarza."
   },
   "serving": {
     "en": "Well cooked, plain, lean, boneless and unseasoned; a few small pieces now and then.",
@@ -71,7 +77,8 @@
     "es": "Bien cocinada, sola, magra, sin huesos y sin condimentos; unos pocos trocitos de vez en cuando.",
     "it": "Ben cotto, semplice, magro, senza ossa e senza condimenti; qualche pezzetto ogni tanto.",
     "pt": "Bem cozinhada, simples, magra, sem ossos e sem temperos; alguns pedaços pequenos de vez em quando.",
-    "nl": "Goed gaar, onbewerkt, mager, zonder botten en zonder kruiden of zout; af en toe een paar kleine stukjes."
+    "nl": "Goed gaar, onbewerkt, mager, zonder botten en zonder kruiden of zout; af en toe een paar kleine stukjes.",
+    "pl": "Dobrze ugotowana, bez dodatków, chuda, bez kości i bez przypraw; od czasu do czasu kilka małych kawałków."
   },
   "child": {
     "en": "A tiny bit of plain cooked beef can be a treat. A grown-up should cook it and take out the bones.",
@@ -81,7 +88,8 @@
     "es": "Un poquito de ternera cocinada y sin nada puede ser un premio. Un adulto tiene que cocinarla y quitarle los huesos.",
     "it": "Un pezzettino di manzo cotto e semplice può essere un premio. Deve cuocerlo un adulto, togliendo le ossa.",
     "pt": "Um bocadinho de carne de vaca simples e cozinhada pode ser uma guloseima. Um adulto deve cozinhá-la e tirar os ossos.",
-    "nl": "Een klein beetje gewoon gekookt rundvlees kan een snoepje zijn. Een volwassene moet het klaarmaken en de botjes eruit halen."
+    "nl": "Een klein beetje gewoon gekookt rundvlees kan een snoepje zijn. Een volwassene moet het klaarmaken en de botjes eruit halen.",
+    "pl": "Odrobina zwykłej gotowanej wołowiny może być smakołykiem. Dorosły powinien ją ugotować i wyjąć kości."
   },
   "faq": [],
   "sources": [
@@ -178,6 +186,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "62c1bc753acbfac7cc0b7d88eb10b1ceebe781c892a794ded25355b7c70e4bdc"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "76a681cbaf6c5ee90657c9952e7da3905fc7d12a2039f9f1f4e5a5d573b568f3"
     }
   }
 }

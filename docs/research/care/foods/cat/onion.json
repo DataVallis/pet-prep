@@ -9,7 +9,8 @@
     "es": "Cebolla",
     "it": "Cipolla",
     "pt": "Cebola",
-    "nl": "Ui"
+    "nl": "Ui",
+    "pl": "Cebula"
   },
   "question": {
     "en": "Can cats eat onion?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los gatos comer cebolla?",
     "it": "I gatti possono mangiare la cipolla?",
     "pt": "Os gatos podem comer cebola?",
-    "nl": "Mogen katten ui eten?"
+    "nl": "Mogen katten ui eten?",
+    "pl": "Czy koty mogą jeść cebulę?"
   },
   "url_slug": {
     "en": "onion",
@@ -29,7 +31,8 @@
     "es": "cebolla",
     "it": "cipolla",
     "pt": "cebola",
-    "nl": "ui"
+    "nl": "ui",
+    "pl": "cebula"
   },
   "level": "toxic",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No. La cebolla es tóxica para los gatos en cualquier forma: cruda, cocinada, deshidratada o en polvo. Puede dañar los glóbulos rojos y causar anemia, y el gato es la especie más sensible. Llama a tu veterinario si tu gato se come un poco.",
     "it": "No. La cipolla è tossica per i gatti in ogni forma: cruda, cotta, essiccata o in polvere. Può danneggiare i globuli rossi e causare anemia, e i gatti sono la specie più sensibile. Chiama il veterinario se il tuo gatto ne mangia.",
     "pt": "Não. A cebola é tóxica para os gatos em todas as formas – crua, cozinhada, seca ou em pó. Pode danificar os glóbulos vermelhos e causar anemia, e os gatos são a espécie mais sensível. Liga ao teu veterinário se o teu gato comer alguma.",
-    "nl": "Nee. Ui is in elke vorm giftig voor katten – rauw, gekookt, gedroogd of als poeder. Het kan rode bloedcellen beschadigen en bloedarmoede veroorzaken, en katten zijn de gevoeligste diersoort. Bel je dierenarts als je kat er iets van eet."
+    "nl": "Nee. Ui is in elke vorm giftig voor katten – rauw, gekookt, gedroogd of als poeder. Het kan rode bloedcellen beschadigen en bloedarmoede veroorzaken, en katten zijn de gevoeligste diersoort. Bel je dierenarts als je kat er iets van eet.",
+    "pl": "Nie. Cebula jest toksyczna dla kotów w każdej postaci – surowa, gotowana, suszona i w proszku. Może uszkadzać czerwone krwinki i wywołać anemię, a koty są gatunkiem najbardziej wrażliwym. Zadzwoń do weterynarza, jeśli kot zje choć trochę."
   },
   "why": {
     "en": "Onion belongs to the allium family (the onion family). Alliums damage red blood cells and can lead to anaemia, and they also irritate the stomach and gut. Cats are the most sensitive species. All forms are poisonous to cats — raw, cooked, dried, powdered and liquid.",
@@ -50,7 +54,8 @@
     "es": "La cebolla pertenece a la familia de las aliáceas (la familia de la cebolla). Las aliáceas dañan los glóbulos rojos y pueden provocar anemia, y además irritan el estómago y el intestino. El gato es la especie más sensible. Todas las formas son tóxicas para los gatos: cruda, cocinada, deshidratada, en polvo y líquida.",
     "it": "La cipolla appartiene al genere Allium (la famiglia della cipolla). Le piante di questo genere danneggiano i globuli rossi, possono portare all’anemia e irritano anche stomaco e intestino. I gatti sono la specie più sensibile. Tutte le forme sono velenose per i gatti: crude, cotte, essiccate, in polvere e liquide.",
     "pt": "A cebola pertence à família das aliáceas (a família da cebola). As aliáceas danificam os glóbulos vermelhos e podem levar a anemia, e também irritam o estômago e o intestino. Os gatos são a espécie mais sensível. Todas as formas são venenosas para gatos – cruas, cozinhadas, secas, em pó e líquidas.",
-    "nl": "Ui hoort bij de alliumfamilie (de uienfamilie). Alliums beschadigen rode bloedcellen en kunnen tot bloedarmoede leiden, en ze irriteren ook de maag en darmen. Katten zijn de gevoeligste diersoort. Alle vormen zijn giftig voor katten – rauw, gekookt, gedroogd, in poedervorm en vloeibaar."
+    "nl": "Ui hoort bij de alliumfamilie (de uienfamilie). Alliums beschadigen rode bloedcellen en kunnen tot bloedarmoede leiden, en ze irriteren ook de maag en darmen. Katten zijn de gevoeligste diersoort. Alle vormen zijn giftig voor katten – rauw, gekookt, gedroogd, in poedervorm en vloeibaar.",
+    "pl": "Cebula należy do roślin z rodzaju Allium, czyli z rodziny cebulowatych. Rośliny z tego rodzaju uszkadzają czerwone krwinki, mogą prowadzić do anemii, a do tego podrażniają żołądek i jelita. Koty są gatunkiem najbardziej wrażliwym. Każda postać jest dla kotów trująca – surowa, gotowana, suszona, sproszkowana i płynna."
   },
   "signs": {
     "en": [
@@ -124,6 +129,15 @@
       "Bleek tandvlees",
       "Rood gekleurde urine",
       "Snellere of zwaardere ademhaling"
+    ],
+    "pl": [
+      "Wymioty",
+      "Biegunka",
+      "Zmniejszony apetyt",
+      "Osłabienie",
+      "Blade dziąsła",
+      "Mocz zabarwiony na czerwono",
+      "Szybszy lub cięższy oddech"
     ]
   },
   "what_to_do": {
@@ -134,7 +148,8 @@
     "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales, aunque tu gato parezca estar bien: los signos de anemia pueden tardar varios días en aparecer. Anota qué ha comido tu gato (cebolla cruda, cocinada, en polvo o un plato que la lleve), cuánto y cuándo. No intentes hacer vomitar a tu gato en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario, anche se il tuo gatto sembra stare bene: i sintomi dell’anemia possono impiegare diversi giorni a manifestarsi. Annota che cosa ha mangiato (crudo, cotto, in polvere o in un piatto che lo conteneva), quanto e quando. Non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, mesmo que o teu gato pareça bem – os sinais de anemia podem demorar vários dias a aparecer. Toma nota do que o teu gato comeu (cru, cozinhado, em pó ou num prato que o continha), da quantidade e de quando. Não tentes provocar o vómito ao teu gato em casa.",
-    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als je kat er gezond uitziet – verschijnselen van bloedarmoede kunnen een paar dagen op zich laten wachten. Schrijf op wat je kat heeft gegeten (rauw, gekookt, als poeder of in een gerecht), hoeveel en wanneer. Probeer je kat niet zelf thuis te laten braken."
+    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als je kat er gezond uitziet – verschijnselen van bloedarmoede kunnen een paar dagen op zich laten wachten. Schrijf op wat je kat heeft gegeten (rauw, gekookt, als poeder of in een gerecht), hoeveel en wanneer. Probeer je kat niet zelf thuis te laten braken.",
+    "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, nawet jeśli kot wygląda na zdrowego – objawy anemii mogą się pojawić dopiero po kilku dniach. Zapisz, co zjadł twój kot (surowy, gotowany, w proszku czy w potrawie), ile i kiedy. Nie próbuj wywoływać u kota wymiotów w domu."
   },
   "serving": null,
   "child": {
@@ -145,7 +160,8 @@
     "es": "La cebolla no es para los gatos, ni siquiera cocinada en la comida. Si tu gato se come un poco, díselo a un adulto para que llame al veterinario.",
     "it": "La cipolla non è per i gatti, nemmeno cotta nel cibo. Se il micio ne mangia un po’, dillo a un adulto, così può chiamare il veterinario.",
     "pt": "As cebolas não são para gatos, nem cozinhadas na comida. Se o gatinho comer alguma, avisa um adulto, que pode ligar ao veterinário.",
-    "nl": "Uien zijn niet voor katten, ook niet als ze in het eten zijn meegekookt. Eet je poes ervan? Vertel het meteen aan een volwassene, die dan de dierenarts kan bellen."
+    "nl": "Uien zijn niet voor katten, ook niet als ze in het eten zijn meegekookt. Eet je poes ervan? Vertel het meteen aan een volwassene, die dan de dierenarts kan bellen.",
+    "pl": "Cebula nie jest dla kotów, nawet ugotowana w jedzeniu. Jeśli kotek trochę zje, powiedz dorosłemu, żeby mógł zadzwonić do weterynarza."
   },
   "faq": [
     {
@@ -157,7 +173,8 @@
         "es": "¿La cebolla cocinada o en polvo es segura para los gatos?",
         "it": "La cipolla cotta o in polvere è sicura per i gatti?",
         "pt": "A cebola cozinhada ou em pó é segura para gatos?",
-        "nl": "Is gekookte ui of uienpoeder veilig voor katten?"
+        "nl": "Is gekookte ui of uienpoeder veilig voor katten?",
+        "pl": "Czy gotowana lub sproszkowana cebula jest bezpieczna dla kotów?"
       },
       "a": {
         "en": "No. All forms are poisonous to cats, including raw, cooked, dried, powdered and liquid onion. Be careful with leftovers, stuffing and gravy that may contain it.",
@@ -167,7 +184,8 @@
         "es": "No. Todas las formas son tóxicas para los gatos, también la cebolla cruda, cocinada, deshidratada, en polvo y líquida. Ten cuidado con las sobras, los rellenos y las salsas de carne que puedan llevarla.",
         "it": "No. Tutte le forme sono velenose per i gatti, compresa la cipolla cruda, cotta, essiccata, in polvere e liquida. Fai attenzione ad avanzi, ripieni e sughi che potrebbero contenerla.",
         "pt": "Não. Todas as formas são venenosas para gatos, incluindo a cebola crua, cozinhada, seca, em pó e líquida. Tem cuidado com restos de comida, recheios e molho de assado que a possam conter.",
-        "nl": "Nee. Alle vormen zijn giftig voor katten, ook rauwe, gekookte, gedroogde, gemalen en vloeibare ui. Wees voorzichtig met restjes, vulling en jus waar het in kan zitten."
+        "nl": "Nee. Alle vormen zijn giftig voor katten, ook rauwe, gekookte, gedroogde, gemalen en vloeibare ui. Wees voorzichtig met restjes, vulling en jus waar het in kan zitten.",
+        "pl": "Nie. Każda postać jest dla kotów trująca, także cebula surowa, gotowana, suszona, w proszku i w płynie. Uważaj na resztki jedzenia, farsz i sos pieczeniowy, które mogą ją zawierać."
       }
     },
     {
@@ -179,7 +197,8 @@
         "es": "¿Por qué a veces los síntomas aparecen días después?",
         "it": "Perché a volte i sintomi compaiono giorni dopo?",
         "pt": "Porque é que os sinais às vezes aparecem dias depois?",
-        "nl": "Waarom treden de verschijnselen soms pas dagen later op?"
+        "nl": "Waarom treden de verschijnselen soms pas dagen later op?",
+        "pl": "Dlaczego objawy pojawiają się czasem dopiero po kilku dniach?"
       },
       "a": {
         "en": "Tummy upset often shows first, but signs of anaemia usually take longer and can appear within one to five days. That is why you should call your vet straight away rather than wait.",
@@ -189,7 +208,8 @@
         "es": "Las molestias de estómago suelen aparecer primero, pero los signos de anemia normalmente tardan más y pueden aparecer en un plazo de uno a cinco días. Por eso debes llamar a tu veterinario enseguida en lugar de esperar.",
         "it": "Spesso il mal di pancia si vede per primo, ma i sintomi dell’anemia di solito impiegano più tempo e possono comparire entro 1–5 giorni. Per questo devi chiamare subito il veterinario invece di aspettare.",
         "pt": "O mal-estar de barriga aparece muitas vezes primeiro, mas os sinais de anemia costumam demorar mais e podem surgir entre um e cinco dias depois. É por isso que deves ligar logo ao teu veterinário em vez de esperar.",
-        "nl": "Maag- en darmklachten zie je vaak als eerste, maar verschijnselen van bloedarmoede laten meestal langer op zich wachten en kunnen binnen één tot vijf dagen optreden. Daarom bel je je dierenarts meteen in plaats van af te wachten."
+        "nl": "Maag- en darmklachten zie je vaak als eerste, maar verschijnselen van bloedarmoede laten meestal langer op zich wachten en kunnen binnen één tot vijf dagen optreden. Daarom bel je je dierenarts meteen in plaats van af te wachten.",
+        "pl": "Najpierw często widać rozstrój żołądka, ale objawy anemii zwykle pojawiają się później i mogą wystąpić w ciągu od jednego do pięciu dni. Dlatego od razu zadzwoń do weterynarza, zamiast czekać."
       }
     }
   ],
@@ -326,6 +346,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "008cd6901f2dff2c470029f0c2ef6e8e04dd851a36ab658be86fbda09a814eff"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "443d3db8d776d2f21d20844ca6d930f121bf6634f10fd7f70a2611fae7cbc7a0"
     }
   }
 }

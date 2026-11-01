@@ -9,7 +9,8 @@
     "es": "Cacahuetes",
     "it": "Arachidi",
     "pt": "Amendoins",
-    "nl": "Pinda’s"
+    "nl": "Pinda’s",
+    "pl": "Orzeszki ziemne"
   },
   "question": {
     "en": "Can dogs eat peanuts?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros comer cacahuetes?",
     "it": "I cani possono mangiare le arachidi?",
     "pt": "Os cães podem comer amendoins?",
-    "nl": "Mogen honden pinda’s eten?"
+    "nl": "Mogen honden pinda’s eten?",
+    "pl": "Czy psy mogą jeść orzeszki ziemne?"
   },
   "url_slug": {
     "en": "peanuts",
@@ -29,7 +31,8 @@
     "es": "cacahuetes",
     "it": "arachidi",
     "pt": "amendoins",
-    "nl": "pindas"
+    "nl": "pindas",
+    "pl": "orzeszki-ziemne"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "Sí, unos pocos cacahuetes naturales de vez en cuando: sin sal, sin sabores, tostados sin aceite o crudos, y sin cáscara. Los cacahuetes salados, garrapiñados con miel o con sabores no son adecuados, y los cacahuetes son grasos, así que limítate a unos pocos.",
     "it": "Sì, qualche arachide semplice ogni tanto: senza sale, senza aromi, tostata a secco o cruda e sgusciata. Le arachidi salate, tostate al miele o aromatizzate non sono adatte, e le arachidi sono grasse: dagliene solo poche.",
     "pt": "Sim, alguns amendoins simples de vez em quando: sem sal, sem sabores, torrados a seco ou crus, sem casca. Os amendoins salgados, com mel ou com sabores não são adequados, e os amendoins são gordos, por isso dá só alguns.",
-    "nl": "Ja, af en toe een paar gewone pinda’s: ongezouten, zonder smaakje, droog geroosterd of rauw, en zonder dop. Gezouten, met honing geroosterde of gekruide pinda’s zijn niet geschikt, en pinda’s zijn vet, dus houd het bij een paar."
+    "nl": "Ja, af en toe een paar gewone pinda’s: ongezouten, zonder smaakje, droog geroosterd of rauw, en zonder dop. Gezouten, met honing geroosterde of gekruide pinda’s zijn niet geschikt, en pinda’s zijn vet, dus houd het bij een paar.",
+    "pl": "Tak, kilka zwykłych orzeszków ziemnych od czasu do czasu: niesolonych, bez dodatków smakowych, prażonych na sucho lub surowych, bez łupin. Orzeszki solone, prażone w miodzie lub smakowe się nie nadają, a orzeszki są tłuste, więc poprzestań na kilku."
   },
   "why": {
     "en": "Peanuts are high in fat, which can cause digestive upset and even pancreatitis if a dog eats too much. Salted peanuts add sodium a dog doesn't need, flavoured ones add other risky ingredients, and the fibrous shell can be a choking hazard, especially for small breeds.",
@@ -50,7 +54,8 @@
     "es": "Los cacahuetes tienen mucha grasa, lo que puede provocar molestias digestivas e incluso pancreatitis si el perro come demasiados. Los salados aportan un sodio que el perro no necesita, los de sabores añaden otros ingredientes con riesgo, y la cáscara fibrosa puede provocar atragantamiento, sobre todo en razas pequeñas.",
     "it": "Le arachidi sono ricche di grassi, che possono causare disturbi digestivi e perfino una pancreatite se il cane ne mangia troppe. Quelle salate aggiungono sodio di cui il cane non ha bisogno, quelle aromatizzate altri ingredienti rischiosi, e il guscio fibroso può causare soffocamento, soprattutto nelle razze piccole.",
     "pt": "Os amendoins têm muita gordura, que pode causar mal-estar digestivo e até pancreatite se o cão comer demasiados. Os amendoins salgados acrescentam sódio de que o cão não precisa, os que têm sabores acrescentam outros ingredientes arriscados, e a casca fibrosa pode causar engasgamento, sobretudo em raças pequenas.",
-    "nl": "Pinda’s bevatten veel vet, wat spijsverteringsklachten en zelfs alvleesklierontsteking kan veroorzaken als een hond te veel eet. Gezouten pinda’s bevatten natrium dat een hond niet nodig heeft, pinda’s met een smaakje bevatten andere riskante ingrediënten, en vooral kleine honden kunnen stikken in de vezelige dop."
+    "nl": "Pinda’s bevatten veel vet, wat spijsverteringsklachten en zelfs alvleesklierontsteking kan veroorzaken als een hond te veel eet. Gezouten pinda’s bevatten natrium dat een hond niet nodig heeft, pinda’s met een smaakje bevatten andere riskante ingrediënten, en vooral kleine honden kunnen stikken in de vezelige dop.",
+    "pl": "Orzeszki ziemne mają dużo tłuszczu, który może wywołać problemy trawienne, a nawet zapalenie trzustki, jeśli pies zje ich za dużo. Solone orzeszki dostarczają sodu, którego pies nie potrzebuje, smakowe – innych ryzykownych składników, a włóknista łupina może grozić zadławieniem, zwłaszcza u małych ras."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "es": "Si tu perro se ha comido muchos cacahuetes, cacahuetes salados o cáscaras, vigila si tiene vómitos, diarrea o dolor de barriga, y llama a tu veterinario si aparecen o si parece que se atraganta.",
     "it": "Se il tuo cane ha mangiato molte arachidi, arachidi salate o gusci, controlla se compaiono vomito, diarrea o mal di pancia, e chiama il veterinario se compaiono o se sembra che stia soffocando.",
     "pt": "Se o teu cão comeu muitos amendoins, amendoins salgados ou cascas, vigia se há vómitos, diarreia ou dor de barriga, e liga ao teu veterinário se surgirem ou se o teu cão parecer estar a engasgar-se.",
-    "nl": "Heeft je hond veel pinda’s, gezouten pinda’s of doppen gegeten? Let dan op braken, diarree of buikpijn, en bel je dierenarts als die optreden of als je hond lijkt te stikken."
+    "nl": "Heeft je hond veel pinda’s, gezouten pinda’s of doppen gegeten? Let dan op braken, diarree of buikpijn, en bel je dierenarts als die optreden of als je hond lijkt te stikken.",
+    "pl": "Jeśli twój pies zjadł dużo orzeszków ziemnych, orzeszki solone lub łupiny, obserwuj, czy nie pojawiają się wymioty, biegunka lub ból brzucha, i zadzwoń do weterynarza, jeśli wystąpią albo pies wygląda, jakby się dławił."
   },
   "serving": {
     "en": "Only a few, plain: dry-roasted or raw, unsalted, unseasoned, uncoated, shells removed — not every day.",
@@ -71,7 +77,8 @@
     "es": "Solo unos pocos, naturales: tostados sin aceite o crudos, sin sal, sin condimentos, sin recubrimiento y sin cáscara; no todos los días.",
     "it": "Solo poche e semplici: tostate a secco o crude, senza sale, senza condimenti, senza rivestimenti e sgusciate – non tutti i giorni.",
     "pt": "Só alguns, simples: torrados a seco ou crus, sem sal, sem temperos, sem cobertura, sem casca – não todos os dias.",
-    "nl": "Maar een paar, puur: droog geroosterd of rauw, ongezouten, ongekruid, zonder laagje, zonder dop – niet elke dag."
+    "nl": "Maar een paar, puur: droog geroosterd of rauw, ongezouten, ongekruid, zonder laagje, zonder dop – niet elke dag.",
+    "pl": "Tylko kilka zwykłych orzeszków: prażonych na sucho lub surowych, niesolonych, nieprzyprawionych, bez polewy, bez łupin – nie codziennie."
   },
   "child": {
     "en": "A dog may have a few plain peanuts without shells. Salty or sweet peanuts are only for people.",
@@ -81,7 +88,8 @@
     "es": "Un perro puede comer unos pocos cacahuetes naturales sin cáscara. Los cacahuetes salados o dulces son solo para las personas.",
     "it": "Un cane può mangiare qualche arachide semplice senza guscio. Le arachidi salate o dolci sono solo per le persone.",
     "pt": "Um cão pode comer alguns amendoins simples sem casca. Os amendoins salgados ou doces são só para pessoas.",
-    "nl": "Een hond mag een paar gewone pinda’s zonder dop. Zoute of zoete pinda’s zijn alleen voor mensen."
+    "nl": "Een hond mag een paar gewone pinda’s zonder dop. Zoute of zoete pinda’s zijn alleen voor mensen.",
+    "pl": "Pies może dostać kilka zwykłych orzeszków ziemnych bez łupinek. Słone lub słodkie orzeszki są tylko dla ludzi."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "es": "¿Se pueden dar cacahuetes con miel?",
         "it": "Le arachidi tostate al miele vanno bene?",
         "pt": "Os amendoins com mel são adequados?",
-        "nl": "Zijn met honing geroosterde pinda’s oké?"
+        "nl": "Zijn met honing geroosterde pinda’s oké?",
+        "pl": "Czy orzeszki prażone w miodzie są w porządku?"
       },
       "a": {
         "en": "No. Honey-roasted and other flavoured peanuts are unsafe for dogs; only plain, unsalted peanuts are suitable.",
@@ -103,7 +112,8 @@
         "es": "No. Los cacahuetes con miel y otros cacahuetes con sabores no son seguros para los perros; solo son adecuados los cacahuetes naturales sin sal.",
         "it": "No. Le arachidi tostate al miele e le altre arachidi aromatizzate non sono sicure per i cani; vanno bene solo arachidi semplici e senza sale.",
         "pt": "Não. Os amendoins com mel e outros com sabores não são seguros para os cães; só os amendoins simples, sem sal, são adequados.",
-        "nl": "Nee. Met honing geroosterde pinda’s en andere pinda’s met een smaakje zijn niet veilig voor honden; alleen gewone, ongezouten pinda’s zijn geschikt."
+        "nl": "Nee. Met honing geroosterde pinda’s en andere pinda’s met een smaakje zijn niet veilig voor honden; alleen gewone, ongezouten pinda’s zijn geschikt.",
+        "pl": "Nie. Orzeszki prażone w miodzie i inne smakowe nie są bezpieczne dla psów; nadają się tylko zwykłe, niesolone orzeszki."
       }
     }
   ],
@@ -197,6 +207,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "455299292819cfb9ef71786bdc362035ac3c2d820a285146f202d018ab5407c3"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3eecd1da03441543c3d54133538c4902224a0a96cdb31a9ed80befe8cd7fbb58"
     }
   }
 }

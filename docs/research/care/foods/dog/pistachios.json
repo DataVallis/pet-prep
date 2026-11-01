@@ -9,7 +9,8 @@
     "es": "Pistachos",
     "it": "Pistacchi",
     "pt": "Pistácios",
-    "nl": "Pistachenoten"
+    "nl": "Pistachenoten",
+    "pl": "Pistacje"
   },
   "question": {
     "en": "Can dogs eat pistachios?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros comer pistachos?",
     "it": "I cani possono mangiare i pistacchi?",
     "pt": "Os cães podem comer pistácios?",
-    "nl": "Mogen honden pistachenoten eten?"
+    "nl": "Mogen honden pistachenoten eten?",
+    "pl": "Czy psy mogą jeść pistacje?"
   },
   "url_slug": {
     "en": "pistachios",
@@ -29,7 +31,8 @@
     "es": "pistachos",
     "it": "pistacchi",
     "pt": "pistacios",
-    "nl": "pistachenoten"
+    "nl": "pistachenoten",
+    "pl": "pistacje"
   },
   "level": "not_recommended",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No, es mejor evitarlos. Los pistachos no son tóxicos en sí mismos, pero son grasos y suelen llevar sal, pueden sentar mal al estómago o provocar pancreatitis, y tanto el fruto como la cáscara pueden causar atragantamiento. Además, pueden criar moho dañino.",
     "it": "No, è meglio evitarli. I pistacchi non sono tossici di per sé, ma sono grassi e di solito salati, possono disturbare lo stomaco o portare a una pancreatite, e i frutti o i gusci possono causare soffocamento. Possono anche sviluppare muffe dannose.",
     "pt": "Não, é melhor evitar. Os pistácios não são tóxicos em si, mas são gordos e normalmente salgados, podem fazer mal ao estômago ou levar a pancreatite, e os frutos ou as cascas podem causar engasgamento. Também podem ganhar bolor nocivo.",
-    "nl": "Nee, die kun je beter vermijden. Pistachenoten zijn op zich niet giftig, maar ze zijn vet en meestal zout, kunnen de maag van streek maken of tot alvleesklierontsteking leiden, en een hond kan stikken in de noten of doppen. Er kan ook schadelijke schimmel op groeien."
+    "nl": "Nee, die kun je beter vermijden. Pistachenoten zijn op zich niet giftig, maar ze zijn vet en meestal zout, kunnen de maag van streek maken of tot alvleesklierontsteking leiden, en een hond kan stikken in de noten of doppen. Er kan ook schadelijke schimmel op groeien.",
+    "pl": "Lepiej ich unikać. Pistacje same w sobie nie są toksyczne, ale są tłuste i zwykle słone, mogą podrażnić żołądek lub prowadzić do zapalenia trzustki, a orzechy lub łupiny mogą spowodować zadławienie. Mogą też porastać szkodliwą pleśnią."
   },
   "why": {
     "en": "Pistachios are high in fat and salt, which can cause stomach problems, and fatty, salty snacks can lead to pancreatitis. Even shelled nuts can be a choking hazard. Mould on nut shells can produce aflatoxin, which can make dogs weak and lethargic, upset the stomach and even cause seizures.",
@@ -50,7 +54,8 @@
     "es": "Los pistachos tienen mucha grasa y sal, lo que puede causar problemas de estómago, y los tentempiés grasos y salados pueden provocar pancreatitis. Incluso pelados pueden causar atragantamiento. El moho de la cáscara de los frutos secos puede producir aflatoxina, que puede dejar al perro débil y aletargado, sentarle mal al estómago e incluso provocar convulsiones.",
     "it": "I pistacchi sono ricchi di grassi e sale, che possono causare problemi di stomaco, e gli snack grassi e salati possono portare a una pancreatite. Anche sgusciati possono causare soffocamento. La muffa sui gusci della frutta a guscio può produrre aflatossina, che può rendere i cani deboli e apatici, disturbare lo stomaco e persino causare convulsioni.",
     "pt": "Os pistácios têm muita gordura e sal, o que pode causar problemas de estômago, e os petiscos gordos e salgados podem levar a pancreatite. Mesmo sem casca podem causar engasgamento. O bolor nas cascas dos frutos secos pode produzir aflatoxina, que pode deixar os cães fracos e prostrados, fazer mal ao estômago e até causar convulsões.",
-    "nl": "Pistachenoten bevatten veel vet en zout, wat maagproblemen kan veroorzaken, en vette, zoute snacks kunnen tot alvleesklierontsteking leiden. Zelfs gepelde noten kunnen verstikking veroorzaken. Schimmel op notendoppen kan aflatoxine maken; daar kunnen honden zwak en lusteloos van worden, het kan de maag van streek maken en zelfs toevallen veroorzaken."
+    "nl": "Pistachenoten bevatten veel vet en zout, wat maagproblemen kan veroorzaken, en vette, zoute snacks kunnen tot alvleesklierontsteking leiden. Zelfs gepelde noten kunnen verstikking veroorzaken. Schimmel op notendoppen kan aflatoxine maken; daar kunnen honden zwak en lusteloos van worden, het kan de maag van streek maken en zelfs toevallen veroorzaken.",
+    "pl": "Pistacje mają dużo tłuszczu i soli, które mogą wywołać problemy z żołądkiem, a tłuste, słone przekąski mogą prowadzić do zapalenia trzustki. Nawet łuskane orzechy mogą grozić zadławieniem. Pleśń na łupinach orzechów może wytwarzać aflatoksynę, przez którą pies może stać się słaby i ospały, mieć rozstrój żołądka, a nawet drgawki."
   },
   "signs": {
     "en": [
@@ -100,6 +105,12 @@
       "Buikpijn, misselijkheid of weinig energie (mogelijk alvleesklierontsteking)",
       "Zwakte en vermoeidheid",
       "Stikken"
+    ],
+    "pl": [
+      "Wymioty lub biegunka",
+      "Ból brzucha, nudności lub osłabienie (możliwe zapalenie trzustki)",
+      "Osłabienie i zmęczenie",
+      "Zadławienie"
     ]
   },
   "what_to_do": {
@@ -110,7 +121,8 @@
     "es": "Si tu perro se ha comido unos pocos pistachos, vigila si tiene vómitos, diarrea o dolor de barriga. Llama a tu veterinario si se ha comido muchos o sus cáscaras, si parece que se atraganta o si muestra debilidad, cansancio o cualquiera de estos signos.",
     "it": "Se il tuo cane ha mangiato qualche pistacchio, controlla se compaiono vomito, diarrea o mal di pancia. Chiama il veterinario se ne ha mangiati molti o ne ha mangiato i gusci, se sembra soffocare o se mostra debolezza, stanchezza o uno di questi sintomi.",
     "pt": "Se o teu cão comeu alguns pistácios, vigia se há vómitos, diarreia ou dor de barriga. Liga ao teu veterinário se o teu cão comeu muitos pistácios ou as cascas, parecer estar a engasgar-se ou mostrar fraqueza, cansaço ou algum destes sinais.",
-    "nl": "Heeft je hond een paar pistachenoten gegeten? Let dan op braken, diarree of buikpijn. Bel je dierenarts als je hond er veel of de doppen heeft gegeten, lijkt te stikken, of zwak of moe is of een van deze verschijnselen heeft."
+    "nl": "Heeft je hond een paar pistachenoten gegeten? Let dan op braken, diarree of buikpijn. Bel je dierenarts als je hond er veel of de doppen heeft gegeten, lijkt te stikken, of zwak of moe is of een van deze verschijnselen heeft.",
+    "pl": "Jeśli twój pies zjadł kilka pistacji, obserwuj, czy nie pojawiają się wymioty, biegunka lub ból brzucha. Zadzwoń do weterynarza, jeśli zjadł ich dużo albo zjadł łupiny, wygląda, jakby się dławił, albo jest słaby, zmęczony lub ma któryś z tych objawów."
   },
   "serving": null,
   "child": {
@@ -121,7 +133,8 @@
     "es": "Los pistachos y sus cáscaras no son para perros. Pueden sentarle mal a la barriguita de un perro, así que deja el cuenco en alto.",
     "it": "I pistacchi e i loro gusci non sono per i cani. Possono fargli venire il mal di pancia, quindi tieni la ciotola in alto.",
     "pt": "Os pistácios e as cascas não são para cães. Podem fazer mal à barriga de um cão, por isso põe a taça num sítio alto.",
-    "nl": "Pistachenoten en hun doppen zijn niet voor honden. Ze kunnen het buikje van een hond van streek maken, dus zet de schaal hoog weg."
+    "nl": "Pistachenoten en hun doppen zijn niet voor honden. Ze kunnen het buikje van een hond van streek maken, dus zet de schaal hoog weg.",
+    "pl": "Pistacje i ich łupinki nie są dla psów. Może psa od nich rozboleć brzuszek, więc trzymaj miseczkę wysoko."
   },
   "faq": [
     {
@@ -133,7 +146,8 @@
         "es": "¿Son peligrosas las cáscaras de pistacho?",
         "it": "I gusci dei pistacchi sono pericolosi?",
         "pt": "As cascas de pistácio são perigosas?",
-        "nl": "Zijn pistachedoppen gevaarlijk?"
+        "nl": "Zijn pistachedoppen gevaarlijk?",
+        "pl": "Czy łupiny pistacji są niebezpieczne?"
       },
       "a": {
         "en": "Yes. Pistachios and their shells can get lodged in a dog's throat, and mould can grow on nut shells.",
@@ -143,7 +157,8 @@
         "es": "Sí. Los pistachos y sus cáscaras pueden quedarse atascados en la garganta del perro, y en la cáscara de los frutos secos puede crecer moho.",
         "it": "Sì. I pistacchi e i loro gusci possono incastrarsi nella gola del cane, e sui gusci può crescere la muffa.",
         "pt": "Sim. Os pistácios e as cascas podem ficar presos na garganta de um cão, e as cascas dos frutos secos podem ganhar bolor.",
-        "nl": "Ja. Pistachenoten en hun doppen kunnen in de keel van een hond vast komen te zitten, en op notendoppen kan schimmel groeien."
+        "nl": "Ja. Pistachenoten en hun doppen kunnen in de keel van een hond vast komen te zitten, en op notendoppen kan schimmel groeien.",
+        "pl": "Tak. Pistacje i ich łupiny mogą utknąć psu w gardle, a na łupinach orzechów może rosnąć pleśń."
       }
     }
   ],
@@ -241,6 +256,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2ccf655a03398a1f973d73f6d7a45a855f257711f77ab00822a9a66b0db3419b"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a93351fa48b0c1a6bf4515899bb87c8ce0f2ad0fba6bd27d5e96fd1772f81ce7"
     }
   }
 }

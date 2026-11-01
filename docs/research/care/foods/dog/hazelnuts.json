@@ -9,7 +9,8 @@
     "es": "Avellanas",
     "it": "Nocciole",
     "pt": "Avelãs",
-    "nl": "Hazelnoten"
+    "nl": "Hazelnoten",
+    "pl": "Orzechy laskowe"
   },
   "question": {
     "en": "Can dogs eat hazelnuts?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros comer avellanas?",
     "it": "I cani possono mangiare le nocciole?",
     "pt": "Os cães podem comer avelãs?",
-    "nl": "Mogen honden hazelnoten eten?"
+    "nl": "Mogen honden hazelnoten eten?",
+    "pl": "Czy psy mogą jeść orzechy laskowe?"
   },
   "url_slug": {
     "en": "hazelnuts",
@@ -29,7 +31,8 @@
     "es": "avellanas",
     "it": "nocciole",
     "pt": "avelas",
-    "nl": "hazelnoten"
+    "nl": "hazelnoten",
+    "pl": "orzechy-laskowe"
   },
   "level": "not_recommended",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No, mejor que no. Las avellanas no son tóxicas, pero su cáscara, muy dura, puede provocar atragantamiento y obstrucciones y, como otros frutos secos, tienen mucha grasa, que puede sentarle mal al estómago de un perro y llegar a provocar una pancreatitis.",
     "it": "Meglio di no. Le nocciole non sono tossiche, ma il loro guscio durissimo può causare soffocamento e ostruzioni e, come altra frutta a guscio, sono ricche di grassi, che possono disturbare lo stomaco del cane e portare alla pancreatite.",
     "pt": "Não, é melhor não. As avelãs não são tóxicas, mas as cascas muito duras podem causar engasgamento e obstruções e, como outros frutos secos, têm muita gordura, o que pode fazer mal ao estômago do cão e levar a pancreatite.",
-    "nl": "Nee, liever niet. Hazelnoten zijn niet giftig, maar de heel harde doppen kunnen verstikking en verstoppingen veroorzaken. En net als andere noten bevatten ze veel vet, wat de maag van een hond van streek kan maken en tot alvleesklierontsteking kan leiden."
+    "nl": "Nee, liever niet. Hazelnoten zijn niet giftig, maar de heel harde doppen kunnen verstikking en verstoppingen veroorzaken. En net als andere noten bevatten ze veel vet, wat de maag van een hond van streek kan maken en tot alvleesklierontsteking kan leiden.",
+    "pl": "Lepiej nie. Orzechy laskowe nie są toksyczne, ale ich bardzo twarde łupiny mogą spowodować zadławienie i niedrożność, a jak inne orzechy zawierają dużo tłuszczu, który może podrażnić żołądek psa i prowadzić do zapalenia trzustki."
   },
   "why": {
     "en": "Hazelnut shells are extremely hard and can cause choking and gut blockages. Nuts in general are high in fat and calories: they can be too rich for a dog, cause pancreatitis and add to weight gain. Nuts left lying on the ground can also grow mould that can be toxic to dogs.",
@@ -50,7 +54,8 @@
     "es": "La cáscara de las avellanas es durísima y puede provocar atragantamiento y obstrucciones intestinales. Los frutos secos en general tienen muchas grasas y calorías: pueden ser demasiado pesados para un perro, provocar pancreatitis y hacerle engordar. Además, los frutos secos que se quedan en el suelo pueden criar un moho que puede ser tóxico para los perros.",
     "it": "Il guscio delle nocciole è estremamente duro e può causare soffocamento e ostruzioni intestinali. La frutta a guscio in generale è ricca di grassi e calorie: può essere troppo pesante per un cane, causare pancreatite e contribuire all’aumento di peso. La frutta a guscio rimasta a terra può anche sviluppare una muffa che può essere tossica per i cani.",
     "pt": "As cascas das avelãs são extremamente duras e podem causar engasgamento e obstruções intestinais. Os frutos secos em geral têm muita gordura e muitas calorias: podem ser demasiado ricos para um cão, causar pancreatite e contribuir para o aumento de peso. Os frutos secos caídos no chão também podem ganhar bolor, que pode ser tóxico para os cães.",
-    "nl": "Hazelnootdoppen zijn extreem hard en kunnen verstikking en darmverstoppingen veroorzaken. Noten bevatten in het algemeen veel vet en calorieën: ze kunnen te machtig zijn voor een hond, alvleesklierontsteking veroorzaken en bijdragen aan overgewicht. Op de grond liggende noten kunnen ook schimmel krijgen die giftig kan zijn voor honden."
+    "nl": "Hazelnootdoppen zijn extreem hard en kunnen verstikking en darmverstoppingen veroorzaken. Noten bevatten in het algemeen veel vet en calorieën: ze kunnen te machtig zijn voor een hond, alvleesklierontsteking veroorzaken en bijdragen aan overgewicht. Op de grond liggende noten kunnen ook schimmel krijgen die giftig kan zijn voor honden.",
+    "pl": "Łupiny orzechów laskowych są niezwykle twarde i mogą spowodować zadławienie oraz niedrożność przewodu pokarmowego. Orzechy na ogół mają dużo tłuszczu i kalorii: mogą być dla psa zbyt ciężkie, wywołać zapalenie trzustki i sprzyjać przybieraniu na wadze. Na orzechach leżących na ziemi może też wyrosnąć pleśń, która bywa toksyczna dla psów."
   },
   "signs": {
     "en": [
@@ -92,6 +97,11 @@
       "Stikken of kokhalzen",
       "Braken of diarree",
       "Maag-darmklachten of tekenen van een verstopping"
+    ],
+    "pl": [
+      "Zadławienie lub odruchy wymiotne",
+      "Wymioty lub biegunka",
+      "Rozstrój żołądka lub objawy niedrożności"
     ]
   },
   "what_to_do": {
@@ -102,7 +112,8 @@
     "es": "Si tu perro se ha comido una o dos avellanas, vigila si aparecen vómitos, diarrea o dolor de barriga. Llama a tu veterinario si se ha tragado cáscaras, ha comido muchos frutos secos o frutos secos con moho, parece que se atraganta o muestra alguno de estos signos.",
     "it": "Dopo una o due nocciole, controlla se compaiono vomito, diarrea o mal di pancia. Chiama il veterinario se il tuo cane ha ingoiato gusci, ha mangiato molta frutta a guscio o frutta a guscio ammuffita, se sembra soffocare o se mostra uno di questi sintomi.",
     "pt": "Depois de uma ou duas avelãs, vigia se há vómitos, diarreia ou dor de barriga. Liga ao teu veterinário se o teu cão engoliu cascas, comeu muitos frutos secos ou frutos secos com bolor, parecer estar a engasgar-se ou mostrar algum destes sinais.",
-    "nl": "Let na een of twee noten op braken, diarree of buikpijn. Bel je dierenarts als je hond doppen heeft ingeslikt, veel noten of beschimmelde noten heeft gegeten, lijkt te stikken of een van deze verschijnselen heeft."
+    "nl": "Let na een of twee noten op braken, diarree of buikpijn. Bel je dierenarts als je hond doppen heeft ingeslikt, veel noten of beschimmelde noten heeft gegeten, lijkt te stikken of een van deze verschijnselen heeft.",
+    "pl": "Po jednym czy dwóch orzechach obserwuj, czy nie pojawiają się wymioty, biegunka lub ból brzucha. Zadzwoń do weterynarza, jeśli twój pies połknął łupiny, zjadł dużo orzechów lub orzechy spleśniałe, wygląda, jakby się dławił, albo ma któryś z tych objawów."
   },
   "serving": null,
   "child": {
@@ -113,7 +124,8 @@
     "es": "Las avellanas son un tentempié para personas. Su cáscara dura se le puede quedar atascada a un perro, así que mantenlas lejos de tu mascota.",
     "it": "Le nocciole sono uno snack per le persone. Il loro guscio duro può bloccarsi dentro il cane, quindi tienile lontane dal tuo animale.",
     "pt": "As avelãs são um petisco de pessoas. As cascas duras podem ficar presas dentro de um cão, por isso mantém-nas longe do teu animal.",
-    "nl": "Hazelnoten zijn een snack voor mensen. De harde doppen kunnen bij een hond vast komen te zitten, dus houd ze uit de buurt van je huisdier."
+    "nl": "Hazelnoten zijn een snack voor mensen. De harde doppen kunnen bij een hond vast komen te zitten, dus houd ze uit de buurt van je huisdier.",
+    "pl": "Orzechy laskowe to przekąska dla ludzi. Ich twarde łupinki mogą utknąć psu w środku, więc trzymaj je z dala od swojego pupila."
   },
   "faq": [
     {
@@ -125,7 +137,8 @@
         "es": "¿Las avellanas son tóxicas para los perros?",
         "it": "Le nocciole sono tossiche per i cani?",
         "pt": "As avelãs são tóxicas para os cães?",
-        "nl": "Zijn hazelnoten giftig voor honden?"
+        "nl": "Zijn hazelnoten giftig voor honden?",
+        "pl": "Czy orzechy laskowe są toksyczne dla psów?"
       },
       "a": {
         "en": "No, they aren't toxic; the main risks are the hard shells and the high fat content.",
@@ -135,7 +148,8 @@
         "es": "No, no son tóxicas; los principales riesgos son la cáscara dura y la gran cantidad de grasa.",
         "it": "No, non sono tossiche; i rischi principali sono il guscio duro e l’alto contenuto di grassi.",
         "pt": "Não, não são tóxicas; os principais riscos são as cascas duras e o elevado teor de gordura.",
-        "nl": "Nee, ze zijn niet giftig; de grootste risico’s zijn de harde doppen en het hoge vetgehalte."
+        "nl": "Nee, ze zijn niet giftig; de grootste risico’s zijn de harde doppen en het hoge vetgehalte.",
+        "pl": "Nie, nie są toksyczne; główne zagrożenia to twarde łupiny i duża zawartość tłuszczu."
       }
     }
   ],
@@ -220,6 +234,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0f47b0d7987c334faa0209e8a3a589bbd836719728065e54a7f37122bb8e60c3"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9ec30302669e3cb72950e254f2048fab712fd99328648616f684d4f50e90c114"
     }
   }
 }

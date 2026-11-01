@@ -9,7 +9,8 @@
     "es": "Salmón",
     "it": "Salmone",
     "pt": "Salmão",
-    "nl": "Zalm"
+    "nl": "Zalm",
+    "pl": "Łosoś"
   },
   "question": {
     "en": "Can cats eat salmon?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los gatos comer salmón?",
     "it": "I gatti possono mangiare il salmone?",
     "pt": "Os gatos podem comer salmão?",
-    "nl": "Mogen katten zalm eten?"
+    "nl": "Mogen katten zalm eten?",
+    "pl": "Czy koty mogą jeść łososia?"
   },
   "url_slug": {
     "en": "salmon",
@@ -29,7 +31,8 @@
     "es": "salmon",
     "it": "salmone",
     "pt": "salmao",
-    "nl": "zalm"
+    "nl": "zalm",
+    "pl": "losos"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "Sí, un poco de salmón cocinado está bien como premio ocasional. Sírvelo sin nada añadido, sin espinas ni condimentos, y en poca cantidad. El pescado no debe sustituir a la comida completa del gato.",
     "it": "Sì, un po’ di salmone cotto va bene come premio occasionale. Servilo semplice, senza lische né condimenti, e in piccole quantità. Il pesce non deve sostituire l’alimento completo del gatto.",
     "pt": "Sim, um pouco de salmão cozinhado pode ser dado como guloseima ocasional. Serve-o simples, sem espinhas nem temperos, e em pouca quantidade. O peixe não deve substituir a alimentação completa do gato.",
-    "nl": "Ja, een beetje gekookte zalm is af en toe prima als snoepje. Geef het zonder toevoegingen, zonder graten en zonder kruiden, en houd het klein. Vis hoort het complete voer van een kat niet te vervangen."
+    "nl": "Ja, een beetje gekookte zalm is af en toe prima als snoepje. Geef het zonder toevoegingen, zonder graten en zonder kruiden, en houd het klein. Vis hoort het complete voer van een kat niet te vervangen.",
+    "pl": "Tak, odrobina gotowanego łososia jest w porządku jako okazjonalny smakołyk. Podawaj go bez dodatków, bez ości i przypraw, w małej ilości. Ryba nie powinna zastępować pełnoporcjowej karmy kota."
   },
   "why": {
     "en": "Cats Protection lists cooked salmon with no bones or seasoning among safe festive foods and says small amounts of cooked fish such as salmon are suitable. RSPCA Australia says tinned salmon in spring water can be an occasional treat. Raw fish is different: it may carry bacteria and parasites.",
@@ -50,7 +54,8 @@
     "es": "Cats Protection incluye el salmón cocinado sin espinas ni condimentos entre los alimentos navideños seguros y dice que pequeñas cantidades de pescado cocinado, como el salmón, son adecuadas. RSPCA Australia dice que el salmón en lata al natural (en agua) puede ser un premio ocasional. El pescado crudo es otra cosa: puede contener bacterias y parásitos.",
     "it": "Cats Protection inserisce il salmone cotto senza lische né condimenti tra i cibi delle feste sicuri e afferma che piccole quantità di pesce cotto, come il salmone, sono adatte. RSPCA Australia dice che il salmone in scatola al naturale (in acqua) può essere un premio occasionale. Il pesce crudo è un’altra cosa: può contenere batteri e parassiti.",
     "pt": "A Cats Protection inclui o salmão cozinhado, sem espinhas nem temperos, entre os alimentos festivos seguros e diz que pequenas quantidades de peixe cozinhado, como o salmão, são adequadas. A RSPCA Australia afirma que o salmão em lata ao natural (em água) pode ser uma guloseima ocasional. O peixe cru é diferente: pode ter bactérias e parasitas.",
-    "nl": "Cats Protection noemt gekookte zalm zonder graten of kruiden bij de veilige feestdagenhapjes en zegt dat kleine hoeveelheden gekookte vis zoals zalm geschikt zijn. Volgens RSPCA Australia kan zalm uit blik in bronwater af en toe een snoepje zijn. Rauwe vis is iets anders: die kan bacteriën en parasieten bevatten."
+    "nl": "Cats Protection noemt gekookte zalm zonder graten of kruiden bij de veilige feestdagenhapjes en zegt dat kleine hoeveelheden gekookte vis zoals zalm geschikt zijn. Volgens RSPCA Australia kan zalm uit blik in bronwater af en toe een snoepje zijn. Rauwe vis is iets anders: die kan bacteriën en parasieten bevatten.",
+    "pl": "Cats Protection wymienia gotowanego łososia bez ości i przypraw wśród bezpiecznych potraw świątecznych i podaje, że małe ilości gotowanej ryby, takiej jak łosoś, są odpowiednie. RSPCA Australia podaje, że łosoś z puszki w wodzie źródlanej może być okazjonalnym smakołykiem. Z surową rybą jest inaczej: może przenosić bakterie i pasożyty."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "es": "Ofrécele primero un trocito. Si después tu gato tiene vómitos o diarrea, deja de dárselo y consulta a tu veterinario. Quita las espinas que encuentres.",
     "it": "Offrigli prima un pezzetto. Se poi il tuo gatto vomita o ha la diarrea, smetti e chiedi al veterinario. Togli tutte le lische che trovi.",
     "pt": "Começa por oferecer um pedacinho. Se o teu gato tiver vómitos ou diarreia depois, para e pergunta ao teu veterinário. Retira as espinhas que encontrares.",
-    "nl": "Geef eerst een klein stukje. Krijgt je kat daarna last van braken of diarree, stop dan en vraag je dierenarts om advies. Haal alle graten eruit die je vindt."
+    "nl": "Geef eerst een klein stukje. Krijgt je kat daarna last van braken of diarree, stop dan en vraag je dierenarts om advies. Haal alle graten eruit die je vindt.",
+    "pl": "Najpierw podaj mały kawałek. Jeśli potem twój kot wymiotuje lub ma biegunkę, przestań i zapytaj weterynarza. Usuń wszystkie ości, które znajdziesz."
   },
   "serving": {
     "en": "Cooked, plain, boneless and unseasoned, or tinned in spring water; a few small pieces now and then.",
@@ -71,7 +77,8 @@
     "es": "Cocinado, sin nada añadido, sin espinas y sin condimentar, o en lata al natural (en agua); unos trocitos de vez en cuando.",
     "it": "Cotto, semplice, senza lische e senza condimenti, oppure in scatola al naturale (in acqua); qualche pezzetto ogni tanto.",
     "pt": "Cozinhado, simples, sem espinhas e sem temperos, ou em lata ao natural (em água); alguns pedacinhos de vez em quando.",
-    "nl": "Gekookt, zonder toevoegingen, zonder graten en zonder kruiden, of uit blik in bronwater; af en toe een paar kleine stukjes."
+    "nl": "Gekookt, zonder toevoegingen, zonder graten en zonder kruiden, of uit blik in bronwater; af en toe een paar kleine stukjes.",
+    "pl": "Gotowany, bez dodatków, bez ości i przypraw albo z puszki w wodzie źródlanej; od czasu do czasu kilka małych kawałków."
   },
   "child": {
     "en": "A tiny bit of cooked salmon with no bones can be a special treat. Ask a grown-up first.",
@@ -81,7 +88,8 @@
     "es": "Un poquito de salmón cocinado y sin espinas puede ser un premio especial. Pregunta antes a un adulto.",
     "it": "Un pezzettino di salmone cotto senza lische può essere un premio speciale. Chiedi prima a un adulto.",
     "pt": "Um bocadinho de salmão cozinhado e sem espinhas pode ser uma guloseima especial. Pergunta primeiro a um adulto.",
-    "nl": "Een klein beetje gekookte zalm zonder graten kan een extra lekker snoepje zijn. Vraag het eerst aan een volwassene."
+    "nl": "Een klein beetje gekookte zalm zonder graten kan een extra lekker snoepje zijn. Vraag het eerst aan een volwassene.",
+    "pl": "Odrobina gotowanego łososia bez ości może być wyjątkowym smakołykiem. Najpierw zapytaj dorosłego."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "es": "¿Pueden los gatos comer salmón crudo o sushi?",
         "it": "I gatti possono mangiare salmone crudo o sushi?",
         "pt": "Os gatos podem comer salmão cru ou sushi?",
-        "nl": "Mogen katten rauwe zalm of sushi eten?"
+        "nl": "Mogen katten rauwe zalm of sushi eten?",
+        "pl": "Czy koty mogą jeść surowego łososia albo sushi?"
       },
       "a": {
         "en": "It's best not to. Uncooked fish may contain harmful bacteria and parasites, so fish for cats should be properly cooked.",
@@ -103,7 +112,8 @@
         "es": "Mejor que no. El pescado sin cocinar puede contener bacterias y parásitos dañinos, así que el pescado para gatos debe estar bien cocinado.",
         "it": "Meglio di no. Il pesce crudo può contenere batteri e parassiti nocivi, quindi il pesce per i gatti deve essere ben cotto.",
         "pt": "É melhor não. O peixe cru pode conter bactérias e parasitas nocivos, por isso o peixe para gatos deve ser bem cozinhado.",
-        "nl": "Liever niet. Ongekookte vis kan schadelijke bacteriën en parasieten bevatten, dus vis voor katten moet goed gaar zijn."
+        "nl": "Liever niet. Ongekookte vis kan schadelijke bacteriën en parasieten bevatten, dus vis voor katten moet goed gaar zijn.",
+        "pl": "Lepiej nie. Niegotowana ryba może zawierać szkodliwe bakterie i pasożyty, więc ryba dla kota powinna być porządnie ugotowana."
       }
     }
   ],
@@ -180,6 +190,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2993d6f59d721624f1b621062eaa539cabc82950348a0f5550f88bcbb04b0063"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fb485e0d16b5b08bc71ad6903de71b74712b8f44fbef0fc08188225e42b811f3"
     }
   }
 }

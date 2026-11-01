@@ -9,7 +9,8 @@
     "es": "Pasas",
     "it": "Uvetta",
     "pt": "Passas",
-    "nl": "Rozijnen"
+    "nl": "Rozijnen",
+    "pl": "Rodzynki"
   },
   "question": {
     "en": "Can cats eat raisins?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los gatos comer pasas?",
     "it": "I gatti possono mangiare l’uvetta?",
     "pt": "Os gatos podem comer passas?",
-    "nl": "Mogen katten rozijnen eten?"
+    "nl": "Mogen katten rozijnen eten?",
+    "pl": "Czy koty mogą jeść rodzynki?"
   },
   "url_slug": {
     "en": "raisins",
@@ -29,7 +31,8 @@
     "es": "pasas",
     "it": "uvetta",
     "pt": "passas",
-    "nl": "rozijnen"
+    "nl": "rozijnen",
+    "pl": "rodzynki"
   },
   "level": "toxic",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No. Las pasas, igual que las uvas y las pasas de Corinto, están en la lista de alimentos tóxicos para los gatos y pueden causar insuficiencia renal. Ten cuidado con los bizcochos, los pasteles navideños y otros productos horneados que las lleven, y llama a tu veterinario si tu gato se come alguna.",
     "it": "No. L’uvetta, come l’uva e l’uva passa di Corinto, è nell’elenco degli alimenti tossici per i gatti e può causare insufficienza renale. Fai attenzione a torte, dolci natalizi come i mince pie e altri prodotti da forno che la contengono, e chiama il veterinario se il tuo gatto ne mangia.",
     "pt": "Não. As passas, tal como as uvas e as uvas de Corinto, estão na lista de alimentos tóxicos para gatos e podem causar insuficiência renal. Atenção aos bolos, tartes e outros produtos de pastelaria que as contenham, e liga ao teu veterinário se o teu gato comer alguma.",
-    "nl": "Nee. Rozijnen staan net als druiven en krenten op de lijst van voedingsmiddelen die giftig zijn voor katten, en ze kunnen nierfalen veroorzaken. Let op cake, kersttaartjes en ander gebak waar ze in zitten, en bel je dierenarts als je kat er iets van eet."
+    "nl": "Nee. Rozijnen staan net als druiven en krenten op de lijst van voedingsmiddelen die giftig zijn voor katten, en ze kunnen nierfalen veroorzaken. Let op cake, kersttaartjes en ander gebak waar ze in zitten, en bel je dierenarts als je kat er iets van eet.",
+    "pl": "Nie. Rodzynki, podobnie jak winogrona i koryntki, są na liście pokarmów toksycznych dla kotów i mogą wywołać niewydolność nerek. Uważaj na ciasta, babeczki z bakaliami i inne wypieki, które je zawierają, i zadzwoń do weterynarza, jeśli kot zje choć trochę."
   },
   "why": {
     "en": "Cat welfare charities warn that grapes, raisins and currants can cause kidney failure in cats, with cats that have chronic kidney disease possibly at greater risk. Cats are unlikely to eat many raisins on their own but may be tempted by foods that contain them. Cat cases are rare and not well understood, so we use the stricter level.",
@@ -50,7 +54,8 @@
     "es": "Las organizaciones de bienestar felino advierten de que las uvas, las pasas y las pasas de Corinto pueden causar insuficiencia renal en los gatos, y los gatos con enfermedad renal crónica podrían correr más riesgo. Es poco probable que un gato coma muchas pasas por sí solo, pero puede sentirse atraído por alimentos que las contienen. Los casos en gatos son raros y no se conocen bien, así que aplicamos el nivel más estricto.",
     "it": "Le associazioni per il benessere dei gatti avvertono che uva, uvetta e uva passa di Corinto possono causare insufficienza renale nei gatti, e che i gatti con malattia renale cronica potrebbero essere più a rischio. È improbabile che un gatto mangi molta uvetta da sola, ma può essere attratto dai cibi che la contengono. I casi nei gatti sono rari e poco conosciuti, quindi applichiamo il livello più severo.",
     "pt": "As associações de proteção dos gatos avisam que as uvas, as passas e as uvas de Corinto podem causar insuficiência renal nos gatos, e os gatos com doença renal crónica podem correr mais risco. É pouco provável que os gatos comam muitas passas sozinhas, mas podem sentir-se atraídos por alimentos que as contenham. Os casos em gatos são raros e pouco conhecidos, por isso seguimos o nível mais rigoroso.",
-    "nl": "Organisaties voor kattenwelzijn waarschuwen dat druiven, rozijnen en krenten bij katten nierfalen kunnen veroorzaken, en dat katten met een chronische nierziekte mogelijk een groter risico lopen. Katten eten niet snel veel losse rozijnen, maar kunnen wel in de verleiding komen door eten waar ze in zitten. Gevallen bij katten zijn zeldzaam en nog niet goed begrepen. Daarom volgen wij het strengste niveau."
+    "nl": "Organisaties voor kattenwelzijn waarschuwen dat druiven, rozijnen en krenten bij katten nierfalen kunnen veroorzaken, en dat katten met een chronische nierziekte mogelijk een groter risico lopen. Katten eten niet snel veel losse rozijnen, maar kunnen wel in de verleiding komen door eten waar ze in zitten. Gevallen bij katten zijn zeldzaam en nog niet goed begrepen. Daarom volgen wij het strengste niveau.",
+    "pl": "Organizacje działające na rzecz kotów ostrzegają, że winogrona, rodzynki i koryntki mogą wywołać u kotów niewydolność nerek, a koty z przewlekłą chorobą nerek mogą być bardziej narażone. Koty raczej nie zjedzą dużo samych rodzynek, ale mogą je skusić produkty, które je zawierają. Przypadki u kotów są rzadkie i słabo poznane, dlatego przyjmujemy surowszą ocenę."
   },
   "signs": {
     "en": [
@@ -76,6 +81,9 @@
     ],
     "nl": [
       "Braken, vaak binnen een dag"
+    ],
+    "pl": [
+      "Wymioty, często w ciągu doby"
     ]
   },
   "what_to_do": {
@@ -86,7 +94,8 @@
     "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Anota qué ha comido tu gato (pasas o un alimento que las lleve), cuánto y cuándo, y guarda el envase. No esperes a que aparezcan síntomas y no intentes hacer vomitar a tu gato en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha mangiato il tuo gatto (uvetta o un cibo che la conteneva), quanto e quando, e conserva la confezione. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Toma nota do que o teu gato comeu (passas ou um alimento que as contenha), da quantidade e de quando, e guarda a embalagem. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
-    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat je kat heeft gegeten (rozijnen of iets waar ze in zitten), hoeveel en wanneer, en bewaar de verpakking. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken."
+    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat je kat heeft gegeten (rozijnen of iets waar ze in zitten), hoeveel en wanneer, en bewaar de verpakking. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
+    "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt. Zapisz, co zjadł twój kot (rodzynki czy produkt, który je zawiera), ile i kiedy, i zachowaj opakowanie. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu."
   },
   "serving": null,
   "child": {
@@ -97,7 +106,8 @@
     "es": "Las pasas no son un tentempié para gatos. Mantén las pasas y los bizcochos con pasas lejos de tu gato, y avisa a un adulto si se come alguna.",
     "it": "L’uvetta non è uno spuntino per gatti. Tieni uvetta e dolci con l’uvetta lontani dal micio, e dillo a un adulto se ne mangia un po’.",
     "pt": "As passas não são um petisco para gatos. Mantém as passas e os bolos com passas longe do gatinho e avisa um adulto se ele comer alguma.",
-    "nl": "Rozijnen zijn geen snoepje voor katten. Houd rozijnen en krentencake uit de buurt van je poes. Eet ze er toch van? Vertel het meteen aan een volwassene."
+    "nl": "Rozijnen zijn geen snoepje voor katten. Houd rozijnen en krentencake uit de buurt van je poes. Eet ze er toch van? Vertel het meteen aan een volwassene.",
+    "pl": "Rodzynki to nie przekąska dla kota. Trzymaj rodzynki i ciasto z rodzynkami z dala od kotka i powiedz dorosłemu, jeśli kotek trochę zje."
   },
   "faq": [
     {
@@ -109,7 +119,8 @@
         "es": "¿Y los pastelitos de frutas y el pastel de Navidad?",
         "it": "E i dolci natalizi con l’uvetta?",
         "pt": "E as mince pies e o bolo de Natal?",
-        "nl": "En kersttaartjes en kerstcake?"
+        "nl": "En kersttaartjes en kerstcake?",
+        "pl": "A co z babeczkami z bakaliami i keksem świątecznym?"
       },
       "a": {
         "en": "PDSA warns that mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to pets. Keep them out of your cat's reach.",
@@ -119,7 +130,8 @@
         "es": "PDSA advierte de que los mince pies (pastelitos de frutas) y el pastel de Navidad llevan pasas, pasas sultanas y pasas de Corinto, que son muy tóxicas para las mascotas. Mantenlos fuera del alcance de tu gato.",
         "it": "PDSA avverte che i mince pie e il Christmas cake, dolci natalizi inglesi, contengono uvetta, uva sultanina e uva passa di Corinto, che sono altamente tossiche per gli animali domestici. Tienili fuori dalla portata del tuo gatto.",
         "pt": "A PDSA avisa que as mince pies (tartes de Natal inglesas) e o bolo de Natal contêm passas, sultanas e uvas de Corinto, que são muito tóxicas para os animais de estimação. Mantém-nos fora do alcance do teu gato.",
-        "nl": "PDSA waarschuwt dat mince pies (Britse kersttaartjes) en kerstcake rozijnen, sultanarozijnen en krenten bevatten, die zeer giftig zijn voor huisdieren. Houd ze buiten bereik van je kat."
+        "nl": "PDSA waarschuwt dat mince pies (Britse kersttaartjes) en kerstcake rozijnen, sultanarozijnen en krenten bevatten, die zeer giftig zijn voor huisdieren. Houd ze buiten bereik van je kat.",
+        "pl": "PDSA ostrzega, że babeczki z bakaliami (mince pies) i keks świąteczny zawierają rodzynki, sułtanki i koryntki, które są dla zwierząt wysoce toksyczne. Trzymaj je poza zasięgiem kota."
       }
     }
   ],
@@ -215,6 +227,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9f22edcea7017343b1751259b256240fafbfc52a2088175f2e2843f60bf3be61"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5abee8468ac6a3abec1395761c00e729f7121bdb434229fc8d8799f3771ccbc6"
     }
   }
 }

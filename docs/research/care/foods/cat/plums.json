@@ -9,7 +9,8 @@
     "es": "Ciruelas",
     "it": "Prugne",
     "pt": "Ameixas",
-    "nl": "Pruimen"
+    "nl": "Pruimen",
+    "pl": "Śliwki"
   },
   "question": {
     "en": "Can cats eat plums?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los gatos comer ciruelas?",
     "it": "I gatti possono mangiare le prugne?",
     "pt": "Os gatos podem comer ameixas?",
-    "nl": "Mogen katten pruimen eten?"
+    "nl": "Mogen katten pruimen eten?",
+    "pl": "Czy koty mogą jeść śliwki?"
   },
   "url_slug": {
     "en": "plums",
@@ -29,7 +31,8 @@
     "es": "ciruelas",
     "it": "prugne",
     "pt": "ameixas",
-    "nl": "pruimen"
+    "nl": "pruimen",
+    "pl": "sliwki"
   },
   "level": "dangerous",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No, mejor que no. La ASPCA considera la planta del ciruelo tóxica para los gatos: sus tallos, hojas y semillas (el hueso) contienen cianuro. No le ofrezcas ciruelas a tu gato, guarda los huesos y las partes de la planta fuera de su alcance y llama a tu veterinario si tu gato mordisquea alguno.",
     "it": "No, è meglio di no. L’ASPCA classifica la pianta del susino come tossica per i gatti: steli, foglie e semi (il nocciolo) contengono cianuro. Non offrire prugne al tuo gatto, tieni noccioli e parti della pianta fuori dalla sua portata e chiama il veterinario se ne mastica anche solo un pezzo.",
     "pt": "Não, é melhor não. A ASPCA classifica a ameixeira como tóxica para gatos: os caules, as folhas e as sementes (o caroço) contêm cianeto. Não ofereças ameixas ao teu gato, mantém os caroços e as partes da planta fora do alcance e liga ao teu veterinário se ele mastigar alguma.",
-    "nl": "Nee, liever niet. De ASPCA noemt de pruimenplant giftig voor katten: de stelen, bladeren en zaden (de pit) bevatten cyanide. Geef je kat geen pruimen, houd pitten en plantendelen buiten bereik en bel je dierenarts als je kat erop kauwt."
+    "nl": "Nee, liever niet. De ASPCA noemt de pruimenplant giftig voor katten: de stelen, bladeren en zaden (de pit) bevatten cyanide. Geef je kat geen pruimen, houd pitten en plantendelen buiten bereik en bel je dierenarts als je kat erop kauwt.",
+    "pl": "Nie, lepiej nie. ASPCA uznaje śliwę za roślinę toksyczną dla kotów: jej łodygi, liście i nasiona (pestka) zawierają cyjanek. Nie dawaj kotu śliwek, trzymaj pestki i części rośliny poza jego zasięgiem i zadzwoń do weterynarza, jeśli kot coś z nich pogryzie."
   },
   "why": {
     "en": "The stems, leaves and seeds contain cyanide (as cyanogenic glycosides) and are particularly toxic while wilting. The sources we found describe the risk from these plant parts and do not say the fruit flesh is safe for cats, so we do not recommend sharing it.",
@@ -50,7 +54,8 @@
     "es": "Los tallos, las hojas y las semillas contienen cianuro (en forma de glucósidos cianogénicos) y son especialmente tóxicos cuando se están marchitando. Las fuentes que hemos encontrado describen el riesgo de estas partes de la planta y no dicen que la pulpa de la fruta sea segura para los gatos, así que no recomendamos compartirla.",
     "it": "Steli, foglie e semi contengono cianuro (sotto forma di glicosidi cianogenetici) e sono particolarmente tossici quando appassiscono. Le fonti che abbiamo trovato descrivono il rischio legato a queste parti della pianta e non affermano che la polpa del frutto sia sicura per i gatti, quindi sconsigliamo di condividerla.",
     "pt": "Os caules, as folhas e as sementes contêm cianeto (sob a forma de glicosídeos cianogénicos) e são particularmente tóxicos quando estão a murchar. As fontes que encontrámos descrevem o risco destas partes da planta e não dizem que a polpa do fruto seja segura para gatos, por isso não recomendamos partilhá-la.",
-    "nl": "De stelen, bladeren en zaden bevatten cyanide (in de vorm van cyanogene glycosiden) en zijn vooral giftig als ze verwelken. De bronnen die we hebben gevonden beschrijven het risico van deze plantendelen en zeggen niet dat het vruchtvlees veilig is voor katten. Daarom raden we af om het te delen."
+    "nl": "De stelen, bladeren en zaden bevatten cyanide (in de vorm van cyanogene glycosiden) en zijn vooral giftig als ze verwelken. De bronnen die we hebben gevonden beschrijven het risico van deze plantendelen en zeggen niet dat het vruchtvlees veilig is voor katten. Daarom raden we af om het te delen.",
+    "pl": "Łodygi, liście i nasiona zawierają cyjanek (w postaci glikozydów cyjanogennych) i są szczególnie toksyczne podczas więdnięcia. Źródła, które znaleźliśmy, opisują ryzyko związane z tymi częściami rośliny i nie podają, że miąższ owocu jest bezpieczny dla kotów, dlatego nie zalecamy dzielenia się nim."
   },
   "signs": {
     "en": [
@@ -108,6 +113,13 @@
       "Moeite met ademhalen",
       "Hijgen",
       "Shock"
+    ],
+    "pl": [
+      "Ceglastoczerwone dziąsła",
+      "Rozszerzone źrenice",
+      "Trudności z oddychaniem",
+      "Ziajanie",
+      "Wstrząs"
     ]
   },
   "what_to_do": {
@@ -118,7 +130,8 @@
     "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales si tu gato ha mordisqueado un hueso, tallos u hojas. Anota qué ha comido, cuánto y cuándo. No esperes a que aparezcan síntomas y no intentes hacer vomitar a tu gato en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario se il tuo gatto ha masticato un nocciolo, uno stelo o delle foglie. Annota che cosa ha mangiato, quanto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais se o teu gato mastigou um caroço, um caule ou folhas. Toma nota do que foi comido, da quantidade e de quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
-    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren als je kat op een pit, steel of bladeren heeft gekauwd. Schrijf op wat er is gegeten, hoeveel en wanneer. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken."
+    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren als je kat op een pit, steel of bladeren heeft gekauwd. Schrijf op wat er is gegeten, hoeveel en wanneer. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
+    "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, jeśli twój kot pogryzł pestkę, łodygę lub liście. Zapisz, co zjadł, ile i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu."
   },
   "serving": null,
   "child": {
@@ -129,7 +142,8 @@
     "es": "Las ciruelas son un tentempié para personas. Sus huesos y sus hojas no son seguros para los gatos, así que avisa a un adulto si tu gato mordisquea uno.",
     "it": "Le prugne sono uno spuntino per le persone. Noccioli e foglie non sono sicuri per i gatti: se il micio ne mastica uno, dillo a un adulto.",
     "pt": "As ameixas são um petisco para pessoas. Os caroços e as folhas não são seguros para gatos, por isso avisa um adulto se o gatinho mastigar um.",
-    "nl": "Pruimen zijn een tussendoortje voor mensen. De pitten en bladeren zijn niet veilig voor katten. Kauwt je poes erop? Vertel het meteen aan een volwassene."
+    "nl": "Pruimen zijn een tussendoortje voor mensen. De pitten en bladeren zijn niet veilig voor katten. Kauwt je poes erop? Vertel het meteen aan een volwassene.",
+    "pl": "Śliwki to przekąska dla ludzi. Ich pestki i liście nie są bezpieczne dla kotów, więc powiedz dorosłemu, jeśli kotek coś z nich pogryzie."
   },
   "faq": [
     {
@@ -141,7 +155,8 @@
         "es": "¿Qué parte es la peligrosa?",
         "it": "Qual è la parte pericolosa?",
         "pt": "Qual é a parte problemática?",
-        "nl": "Welk deel is het probleem?"
+        "nl": "Welk deel is het probleem?",
+        "pl": "Która część jest problemem?"
       },
       "a": {
         "en": "The ASPCA says the stems, leaves and seeds contain cyanide, and that they are particularly toxic while wilting.",
@@ -151,7 +166,8 @@
         "es": "La ASPCA indica que los tallos, las hojas y las semillas contienen cianuro y que son especialmente tóxicos cuando se están marchitando.",
         "it": "Secondo l’ASPCA steli, foglie e semi contengono cianuro e sono particolarmente tossici quando appassiscono.",
         "pt": "A ASPCA diz que os caules, as folhas e as sementes contêm cianeto e que são particularmente tóxicos quando estão a murchar.",
-        "nl": "Volgens de ASPCA bevatten de stelen, bladeren en zaden cyanide en zijn ze vooral giftig als ze verwelken."
+        "nl": "Volgens de ASPCA bevatten de stelen, bladeren en zaden cyanide en zijn ze vooral giftig als ze verwelken.",
+        "pl": "Według ASPCA łodygi, liście i nasiona zawierają cyjanek i są szczególnie toksyczne podczas więdnięcia."
       }
     }
   ],
@@ -232,6 +248,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e65164c5c4242121bfe65d96caa3cfb3643213d9630605068bd0f99761eca378"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "09ae40987f1d214c19287fab16e574d2c2c3583a6444b5f25ca4b42290ec200b"
     }
   }
 }
