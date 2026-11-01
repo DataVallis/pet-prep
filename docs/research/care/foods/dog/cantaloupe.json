@@ -1,0 +1,110 @@
+{
+  "slug": "cantaloupe",
+  "species": "dog",
+  "name": {
+    "en": "Cantaloupe",
+    "sl": "Melona kantalupa"
+  },
+  "question": {
+    "en": "Can dogs eat cantaloupe?",
+    "sl": "Ali lahko psi jedo melono kantalupo?"
+  },
+  "url_slug": {
+    "en": "cantaloupe",
+    "sl": "melona-kantalupa"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, in moderation. Cantaloupe is low in calories and a good source of water and fibre, but it is high in sugar, so share it sparingly, especially with dogs who are overweight or diabetic. Do not give the rind or seeds.",
+    "sl": "Da, zmerno. Kantalupa ima malo kalorij ter je dober vir vode in vlaknin, a vsebuje veliko sladkorja, zato jo dajajte zmerno, zlasti psom s prekomerno težo ali sladkorno boleznijo. Ne dajajte lupine ali pečk."
+  },
+  "why": {
+    "en": "Cantaloupe rinds, like watermelon rinds, can cause stomach upset, can become impacted in the digestive tract and are a choking hazard. The seeds are harmless but can also be a choking hazard. Too many treats on top of a healthy diet can lead to obesity.",
+    "sl": "Lupina kantalupe lahko, tako kot lubenična, povzroči prebavne težave, se zagozdi v prebavilih in predstavlja nevarnost zadušitve. Pečke so neškodljive, a se lahko prav tako zataknejo v grlu. Preveč priboljškov poleg zdrave prehrane lahko vodi v debelost."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If you have questions or concerns about feeding your dog cantaloupe, for example if your dog is diabetic, ask your vet.",
+    "sl": "Če imate vprašanja ali pomisleke glede hranjenja psa s kantalupo, na primer če ima pes sladkorno bolezen, vprašajte veterinarja."
+  },
+  "serving": {
+    "en": "Only the flesh, without the rind and seeds; as an occasional treat.",
+    "sl": "Samo meso, brez lupine in pečk; kot občasen priboljšek."
+  },
+  "child": {
+    "en": "Dogs can enjoy a little piece of melon! A grown-up cuts off the hard skin and takes out the seeds.",
+    "sl": "Psi lahko uživajo v koščku melone! Odrasel odreže trdo lupino in odstrani pečke."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is cantaloupe okay for a diabetic dog?",
+        "sl": "Je kantalupa primerna za psa s sladkorno boleznijo?"
+      },
+      "a": {
+        "en": "It may not be a good choice, because it is high in sugar. Ask your vet first.",
+        "sl": "Morda ni dobra izbira, ker vsebuje veliko sladkorja. Najprej vprašajte veterinarja."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD97",
+      "quote": "So, can dogs eat cantaloupe? Yes, in moderation."
+    },
+    {
+      "id": "KD97",
+      "quote": "This fruit is also high in sugar and may not be a good choice for diabetic dogs."
+    },
+    {
+      "id": "KD97",
+      "quote": "Too many treats, on top of a healthy diet, can lead to canine obesity."
+    },
+    {
+      "id": "KD97",
+      "quote": "Cantaloupe rinds, like watermelon rinds, can cause gastrointestinal upset and become impacted in your dog's digestive tract."
+    },
+    {
+      "id": "KD97",
+      "quote": "These tough, fibrous skins are also a choking hazard."
+    },
+    {
+      "id": "KD97",
+      "quote": "Even the seeds are harmless, but you should avoid feeding them to your dog intentionally, as they can be a choking hazard."
+    },
+    {
+      "id": "KD97",
+      "quote": "If you have questions or concerns about feeding your dog cantaloupe, consult a veterinarian."
+    },
+    {
+      "id": "KD89",
+      "quote": "Cantaloupe is packed with nutrients, low in calories, and a great source of water and fiber."
+    },
+    {
+      "id": "KD89",
+      "quote": "It is, however, high in sugar, so should be shared in moderation,"
+    },
+    {
+      "id": "KD89",
+      "quote": "especially for dogs who are overweight or have diabetes."
+    }
+  ],
+  "related": [
+    "watermelon",
+    "bananas",
+    "apples"
+  ],
+  "updated": "2026-11-01",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e8659b5d4d9c40b9b4cb53263823c9cd3df286f6a02ff8d534d44afd6039e892"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "db70e70c2e433f86a5f87f07783d330ca307658843d26c2acb97eb93e2a4b8a1"
+    }
+  }
+}

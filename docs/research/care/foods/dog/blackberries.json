@@ -1,0 +1,115 @@
+{
+  "slug": "blackberries",
+  "species": "dog",
+  "name": {
+    "en": "Blackberries",
+    "sl": "Robide"
+  },
+  "question": {
+    "en": "Can dogs eat blackberries?",
+    "sl": "Ali lahko psi jedo robide?"
+  },
+  "url_slug": {
+    "en": "blackberries",
+    "sl": "robide"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, in moderation. Blackberries contain lots of vitamins and nutrients and are lower in sugar and calories than some other fruits. Wash them first, and avoid frozen berries, which usually have added sugar or xylitol.",
+    "sl": "Da, zmerno. Robide vsebujejo veliko vitaminov in hranil ter imajo manj sladkorja in kalorij kot nekatere druge vrste sadja. Najprej jih operite in se izogibajte zamrznjenemu jagodičju, ki ima običajno dodan sladkor ali ksilitol."
+  },
+  "why": {
+    "en": "Blackberries contain naturally occurring xylitol in trace amounts, as do other fruits and vegetables. Like any food, too many blackberries can cause stomach upset, and treats should make up only a small part of a dog's diet.",
+    "sl": "Robide vsebujejo naravni ksilitol v sledovih, tako kot tudi druge vrste sadja in zelenjave. Kot pri vsaki hrani lahko preveč robid povzroči prebavne težave, priboljški pa naj bodo le majhen del pasje prehrane."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If your dog has a reaction after eating blackberries, call your vet immediately.",
+    "sl": "Če se pes po robidah odzove s težavami, takoj pokličite veterinarja."
+  },
+  "serving": {
+    "en": "Washed, plain fresh blackberries; no frozen berries, which usually have added sugar or xylitol; only wild berries you are sure are blackberries.",
+    "sl": "Oprane, navadne sveže robide; brez zamrznjenega jagodičja, ki ima običajno dodan sladkor ali ksilitol; divje le, če ste prepričani, da so robide."
+  },
+  "child": {
+    "en": "Dogs can share a few washed blackberries! Ask a grown-up first, especially for berries picked outside.",
+    "sl": "Psi lahko dobijo nekaj opranih robid! Najprej vprašaj odraslega, posebej za robide, nabrane v naravi."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat wild blackberries?",
+        "sl": "Ali lahko psi jedo divje robide?"
+      },
+      "a": {
+        "en": "Yes, as long as you are sure they are blackberries.",
+        "sl": "Da, če ste prepričani, da so to robide."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD94",
+      "quote": "Can your dog eat blackberries? In short, yes."
+    },
+    {
+      "id": "KD94",
+      "quote": "Blackberries contain lots of vitamins and nutrients essential for canine health"
+    },
+    {
+      "id": "KD94",
+      "quote": "They’re also lower in sugar and calories than some other fruits."
+    },
+    {
+      "id": "KD94",
+      "quote": "Blackberries also contain naturally occurring xylitol in trace amounts, as do other vegetables and fruits."
+    },
+    {
+      "id": "KD94",
+      "quote": "Like any food, too many blackberries can cause stomach upset"
+    },
+    {
+      "id": "KD94",
+      "quote": "And, as with almost all human foods, blackberries should be given in moderation."
+    },
+    {
+      "id": "KD94",
+      "quote": "A dog’s nutritional needs should be met by their regular food, and treats should only comprise 10% of their diet."
+    },
+    {
+      "id": "KD94",
+      "quote": "Be sure to wash the fruit first."
+    },
+    {
+      "id": "KD94",
+      "quote": "Avoid frozen berries, which usually have added sugar or xylitol."
+    },
+    {
+      "id": "KD94",
+      "quote": "Dogs can eat wild blackberries, too, as long as you’re sure they are blackberries."
+    },
+    {
+      "id": "KD94",
+      "quote": "But should your dog have any of the following reactions, call your vet immediately:"
+    }
+  ],
+  "related": [
+    "raspberries",
+    "blueberries",
+    "strawberries",
+    "xylitol"
+  ],
+  "updated": "2026-11-01",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "62875cbe89a6f16f7d5986df8da35dcf4bc4a2c91886458877629771f657ffbc"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cd26960c5a0af524b70dd200ba9981c2db6d73cf79981b739ae574a1bab9ac67"
+    }
+  }
+}

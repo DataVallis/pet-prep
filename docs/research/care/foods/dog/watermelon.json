@@ -1,0 +1,126 @@
+{
+  "slug": "watermelon",
+  "species": "dog",
+  "name": {
+    "en": "Watermelon",
+    "sl": "Lubenica"
+  },
+  "question": {
+    "en": "Can dogs eat watermelon?",
+    "sl": "Ali lahko psi jedo lubenico?"
+  },
+  "url_slug": {
+    "en": "watermelon",
+    "sl": "lubenica"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, if you prepare it correctly. Watermelon is a low-calorie fruit with a high water content, but remove all seeds and the rind first, because both can cause digestive upset or an intestinal blockage.",
+    "sl": "Da, če jo pravilno pripravite. Lubenica je nizkokalorično sadje z veliko vode, a najprej odstranite vse pečke in lupino, ker lahko oboje povzroči prebavne težave ali zaporo črevesja."
+  },
+  "why": {
+    "en": "Seeds can cause an intestinal blockage, especially if a dog eats many, and can be a choking hazard for small dogs. The rind may cause stomach upset, vomiting, diarrhoea or intestinal obstruction if eaten in large pieces. Too much watermelon may cause stomach discomfort or diarrhoea because of its natural sugar and fibre.",
+    "sl": "Pečke lahko povzročijo zaporo črevesja, zlasti če jih pes poje veliko, majhnim psom pa se lahko zataknejo v grlu. Lupina lahko povzroči prebavne težave, bruhanje, drisko ali zaporo črevesja, če jo pes poje v velikih kosih. Preveč lubenice lahko zaradi naravnega sladkorja in vlaknin povzroči neugodje v trebuhu ali drisko."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "The first time, give a small amount and watch for digestive upset. Contact your vet if your dog shows symptoms after eating watermelon.",
+    "sl": "Prvič dajte majhno količino in opazujte, ali se pojavijo prebavne težave. Če ima pes po lubenici znake težav, se obrnite na veterinarja."
+  },
+  "serving": {
+    "en": "Bite-sized pieces with all seeds and the rind removed; seedless pieces can also be frozen as a cooling treat.",
+    "sl": "Majhni koščki brez vseh pečk in lupine; koščke brez pečk lahko tudi zamrznete kot osvežilen priboljšek."
+  },
+  "child": {
+    "en": "On a hot day, dogs can enjoy small pieces of watermelon! A grown-up removes the seeds and the green skin.",
+    "sl": "Na vroč dan lahko psi uživajo v majhnih koščkih lubenice! Odrasel odstrani pečke in zeleno lupino."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat watermelon rind?",
+        "sl": "Ali lahko psi jedo lubenično lupino?"
+      },
+      "a": {
+        "en": "No, the rind is not recommended. In large pieces it may cause stomach upset, vomiting, diarrhoea or intestinal obstruction.",
+        "sl": "Ne, lupina ni priporočljiva. V velikih kosih lahko povzroči prebavne težave, bruhanje, drisko ali zaporo črevesja."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD96",
+      "quote": "Watermelon is safe for dogs as long as you prepare it correctly."
+    },
+    {
+      "id": "KD96",
+      "quote": "Watermelon is a low-calorie fruit packed with nutrients, including vitamins A, B6, and C, and potassium."
+    },
+    {
+      "id": "KD96",
+      "quote": "One of the fruit’s biggest advantages is its high water content."
+    },
+    {
+      "id": "KD96",
+      "quote": "Remove all seeds and the tough rind before feeding it to your dog, since both can cause digestive upset."
+    },
+    {
+      "id": "KD96",
+      "quote": "They can also cause intestinal blockage, especially if a dog consumes a large number of seeds."
+    },
+    {
+      "id": "KD96",
+      "quote": "Watermelon seeds can present a choking hazard, particularly for small dogs."
+    },
+    {
+      "id": "KD96",
+      "quote": "The rind is also not recommended."
+    },
+    {
+      "id": "KD96",
+      "quote": "may cause stomach upset, vomiting, diarrhea, or intestinal obstruction if eaten in large pieces."
+    },
+    {
+      "id": "KD96",
+      "quote": "Too much watermelon may lead to stomach discomfort or diarrhea because of its natural sugar and fiber content."
+    },
+    {
+      "id": "KD96",
+      "quote": "Cut watermelon into bite-sized pieces and remove all seeds and rind."
+    },
+    {
+      "id": "KD96",
+      "quote": "Freeze seedless watermelon pieces for a cooling treat on a hot day."
+    },
+    {
+      "id": "KD96",
+      "quote": "When introducing watermelon for the first time, start with a small amount and monitor your dog for any signs of digestive upset."
+    },
+    {
+      "id": "KD96",
+      "quote": "Contact your veterinarian if your dog shows any of these symptoms after eating watermelon:"
+    },
+    {
+      "id": "KD89",
+      "quote": "Dogs can eat watermelon, but it’s important to remove the rind and seeds first, as they can cause intestinal blockage."
+    }
+  ],
+  "related": [
+    "cantaloupe",
+    "bananas",
+    "apples"
+  ],
+  "updated": "2026-11-01",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fda87e1f7869347abcd26adc3b965c4d0fc778e8b10a91a6e7d9be59f667f0fd"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "993216eb834efe18c1e49075310d5f542e4e98d0905a256919399b6ae0cb5031"
+    }
+  }
+}

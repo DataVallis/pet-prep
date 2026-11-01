@@ -1,0 +1,152 @@
+{
+  "slug": "apples",
+  "species": "dog",
+  "name": {
+    "en": "Apples",
+    "sl": "Jabolka"
+  },
+  "question": {
+    "en": "Can dogs eat apples?",
+    "sl": "Ali lahko psi jedo jabolka?"
+  },
+  "url_slug": {
+    "en": "apples",
+    "sl": "jabolka"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, in moderation. Apples are a safe, nutritious treat for dogs, but remove the seeds, core and stem first, because the seeds contain cyanide and the core and stem could choke your dog.",
+    "sl": "Da, zmerno. Jabolka so za pse varen in hranljiv priboljšek, a najprej odstranite pečke, ogrizek in pecelj, ker pečke vsebujejo cianid, ogrizek in pecelj pa se lahko psu zataknejo v grlu."
+  },
+  "why": {
+    "en": "Apples are a low-calorie treat with vitamins A and C, potassium, antioxidants and fibre, especially in the peel. Because of the sugar in each apple, a whole apple is likely too much for your dog, and eating too many apples can cause bellyache or diarrhoea.",
+    "sl": "Jabolka so nizkokaloričen priboljšek z vitaminoma A in C, kalijem, antioksidanti in vlakninami, zlasti v lupini. Zaradi sladkorja v vsakem jabolku je celo jabolko za psa verjetno preveč, preveč jabolk pa lahko povzroči bolečine v trebuhu ali drisko."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If your dog eats an apple core or seeds, watch for signs of digestive trouble or blockage. If your dog has problems, stop giving apples and contact a vet.",
+    "sl": "Če pes poje ogrizek ali pečke, ga opazujte, ali se pojavijo znaki prebavnih težav ali zapore. Če ima pes težave, mu jabolk ne dajajte več in se obrnite na veterinarja."
+  },
+  "serving": {
+    "en": "Wash and scrub the apple, remove the seeds, core and stem, and cut it into slices or small cubes; in moderation, not a whole apple.",
+    "sl": "Jabolko operite in očistite, odstranite pečke, ogrizek in pecelj ter ga narežite na krhlje ali majhne kocke; zmerno, ne celo jabolko."
+  },
+  "child": {
+    "en": "Dogs can enjoy a few apple slices! A grown-up should cut them and take out the core and seeds first.",
+    "sl": "Psi lahko uživajo v nekaj krhljih jabolka! Odrasel naj jih nareže in najprej odstrani ogrizek in pečke."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat applesauce?",
+        "sl": "Ali lahko psi jedo jabolčno čežano?"
+      },
+      "a": {
+        "en": "Plain applesauce is fine in moderation, but most applesauce has added sugar, so always choose unsweetened.",
+        "sl": "Navadna jabolčna čežana je v zmernih količinah v redu, a večina ima dodan sladkor, zato vedno izberite nesladkano."
+      }
+    },
+    {
+      "q": {
+        "en": "Can dogs eat apple pie?",
+        "sl": "Ali lahko psi jedo jabolčno pito?"
+      },
+      "a": {
+        "en": "No. The added sugar and crust are too much for dogs; avoid apple foods with added sugar or spices such as nutmeg.",
+        "sl": "Ne. Dodani sladkor in testo sta za pse preveč; izogibajte se jabolčnim jedem z dodanim sladkorjem ali začimbami, kot je muškatni orešček."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD86",
+      "quote": "Apples are a safe, nutritious treat for dogs when served in moderation"
+    },
+    {
+      "id": "KD86",
+      "quote": "Remove seeds, core, and stem to prevent choking and toxin exposure"
+    },
+    {
+      "id": "KD86",
+      "quote": "The seeds contain a small amount of cyanide, a toxin, which can harm your dog in large doses."
+    },
+    {
+      "id": "KD86",
+      "quote": "The tough apple core, and the stem, could also choke your dog."
+    },
+    {
+      "id": "KD86",
+      "quote": "Apples are a great source of vitamin C, vitamin A, potassium, and antioxidants."
+    },
+    {
+      "id": "KD86",
+      "quote": "They're chock full of fiber, especially in the peels,"
+    },
+    {
+      "id": "KD86",
+      "quote": "Apples are a low-calorie treat."
+    },
+    {
+      "id": "KD86",
+      "quote": "But since each apple has about 19 grams of sugar, a whole apple will likely be too much for your dog."
+    },
+    {
+      "id": "KD86",
+      "quote": "Eating an excess of apples can lead to your dog experiencing bellyache or diarrhea, so always serve them in moderation."
+    },
+    {
+      "id": "KD86",
+      "quote": "Begin by washing and scrubbing your apples to remove any bacteria and germs."
+    },
+    {
+      "id": "KD86",
+      "quote": "Cut apples into slices or small cubes so that your dog can easily eat them."
+    },
+    {
+      "id": "KD86",
+      "quote": "If your dog eats an apple core or seeds, you need to watch them for any signs of digestive trouble or blockage"
+    },
+    {
+      "id": "KD86",
+      "quote": "If your dog has problems, refrain from feeding them apples and contact a veterinarian as needed."
+    },
+    {
+      "id": "KD86",
+      "quote": "Yes, dogs can safely eat plain applesauce!"
+    },
+    {
+      "id": "KD86",
+      "quote": "However, applesauce generally includes added sugars, so always choose unsweetened applesauce"
+    },
+    {
+      "id": "KD86",
+      "quote": "The added sugar and golden crust that humans enjoy are too much for dogs."
+    },
+    {
+      "id": "KD86",
+      "quote": "Avoid apple-based foods with added sugar or spices like nutmeg"
+    },
+    {
+      "id": "KD89",
+      "quote": "Just be sure to remove the seeds and core first."
+    }
+  ],
+  "related": [
+    "apple-seeds",
+    "bananas",
+    "cherries"
+  ],
+  "updated": "2026-11-01",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9573dc7f0e5a71801aafafdb4e667e6cb1bef42c10d079446da3923d20342d18"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "946fd08e57d70c8eb409f71f10ee1752c8bacc0c6c712d34fd62998460642d6b"
+    }
+  }
+}

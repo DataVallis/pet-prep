@@ -68,8 +68,17 @@ Status per line: `[ ]` todo · `[d]` dog done · `[c]` cat done · `[x]` both ·
 - [-] crab — no source dog 2026-10-31 — no source cat 2026-10-31
 
 ## W2 — fruit
-- [ ] apples · apple-seeds · bananas · blueberries · strawberries · raspberries · blackberries · cranberries
-- [ ] watermelon · cantaloupe · honeydew · pineapple · mango · papaya · kiwi · oranges · mandarins · lemons
+- [x] apples
+- [x] apple-seeds
+- [x] bananas
+- [x] blueberries
+- [x] strawberries
+- [d] raspberries — no source cat 2026-11-01
+- [d] blackberries — no source cat 2026-11-01
+- [x] cranberries
+- [x] watermelon
+- [x] cantaloupe
+- [ ] honeydew · pineapple · mango · papaya · kiwi · oranges · mandarins · lemons
 - [ ] limes · grapefruit · pears · figs · dates · pomegranate · coconut · coconut-oil · lychee · persimmon
 - [ ] dried-fruit · fruit-pits · rhubarb · star-fruit · passion-fruit · olives
 

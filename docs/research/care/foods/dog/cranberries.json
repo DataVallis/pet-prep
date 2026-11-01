@@ -1,0 +1,145 @@
+{
+  "slug": "cranberries",
+  "species": "dog",
+  "name": {
+    "en": "Cranberries",
+    "sl": "Brusnice"
+  },
+  "question": {
+    "en": "Can dogs eat cranberries?",
+    "sl": "Ali lahko psi jedo brusnice?"
+  },
+  "url_slug": {
+    "en": "cranberries",
+    "sl": "brusnice"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, in small quantities. Plain fresh, cooked or dried cranberries are not toxic to dogs, but too many can upset the stomach. Avoid cranberry sauce and dried fruit mixes, which may contain sugar, raisins or other harmful ingredients.",
+    "sl": "Da, v majhnih količinah. Navadne sveže, kuhane ali suhe brusnice za pse niso strupene, a preveč jih lahko razburi želodec. Izogibajte se brusnični omaki in mešanicam suhega sadja, ki lahko vsebujejo sladkor, rozine ali druge škodljive sestavine."
+  },
+  "why": {
+    "en": "Dried cranberries sometimes come mixed with raisins, and grapes and raisins are very toxic to dogs. Cranberry sauce is high in sugar, which can cause stomach upset, and some recipes include grapes, raisins, currants or alcohol. Many dried cranberries sold for people are sweetened, which adds unneeded sugar.",
+    "sl": "Suhe brusnice so včasih pomešane z rozinami, grozdje in rozine pa so za pse zelo strupeni. Brusnična omaka vsebuje veliko sladkorja, ki lahko povzroči prebavne težave, nekateri recepti pa vsebujejo grozdje, rozine, ribez ali alkohol. Veliko suhih brusnic, namenjenih ljudem, je sladkanih, kar doda nepotreben sladkor."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Feed cranberries in moderation and under the guidance of a vet. Grapes and raisins are very toxic to dogs, so avoid cranberry mixes that contain raisins.",
+    "sl": "Brusnice dajajte zmerno in po nasvetu veterinarja. Grozdje in rozine so za pse zelo strupeni, zato se izogibajte mešanicam brusnic z rozinami."
+  },
+  "serving": {
+    "en": "Plain fresh, cooked or dried cranberries without added sugar and without raisins; in small quantities.",
+    "sl": "Navadne sveže, kuhane ali suhe brusnice brez dodanega sladkorja in brez rozin; v majhnih količinah."
+  },
+  "child": {
+    "en": "A few plain cranberries are okay for dogs. Cranberry sauce and fruit mixes are for people, so ask a grown-up first.",
+    "sl": "Nekaj navadnih brusnic je za pse v redu. Brusnična omaka in mešanice sadja so za ljudi, zato najprej vprašaj odraslega."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat cranberry sauce?",
+        "sl": "Ali lahko psi jedo brusnično omako?"
+      },
+      "a": {
+        "en": "It is best avoided. Cranberry sauce is high in sugar, and some recipes include grapes, raisins, currants, which are toxic to dogs, or brandy, and alcohol is toxic to dogs too.",
+        "sl": "Bolje se ji je izogniti. Brusnična omaka vsebuje veliko sladkorja, nekateri recepti pa vsebujejo grozdje, rozine, ribez, ki so za pse strupeni, ali žganje, alkohol pa je za pse prav tako strupen."
+      }
+    },
+    {
+      "q": {
+        "en": "Do cranberries help with urinary tract infections in dogs?",
+        "sl": "Ali brusnice pomagajo pri okužbah sečil pri psih?"
+      },
+      "a": {
+        "en": "Many people believe so, but there have not been enough studies in dogs to confirm it.",
+        "sl": "Mnogi tako mislijo, a pri psih ni bilo dovolj raziskav, ki bi to potrdile."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD95",
+      "quote": "The answer is both yes and no."
+    },
+    {
+      "id": "KD95",
+      "quote": "Fresh or cooked cranberries, when plain, aren’t inherently toxic for dogs."
+    },
+    {
+      "id": "KD95",
+      "quote": "Both fresh and dried cranberries are safe to feed to dogs in small quantities."
+    },
+    {
+      "id": "KD95",
+      "quote": "too many can lead to an upset stomach."
+    },
+    {
+      "id": "KD95",
+      "quote": "Dried cranberries sometimes come mixed with other dried fruits, like raisins."
+    },
+    {
+      "id": "KD95",
+      "quote": "Grapes (and raisins) are very toxic to dogs; even a few can cause health problems."
+    },
+    {
+      "id": "KD95",
+      "quote": "Cranberry sauce is high in sugar, which can cause gastrointestinal upset."
+    },
+    {
+      "id": "KD95",
+      "quote": "Some recipes also include grapes, raisins, or currants, which are toxic to dogs."
+    },
+    {
+      "id": "KD95",
+      "quote": "Recipes that use brandy are also problematic, as alcohol is toxic to dogs."
+    },
+    {
+      "id": "KD95",
+      "quote": "feed cranberries in moderation and under the guidance of a veterinarian"
+    },
+    {
+      "id": "KD95",
+      "quote": "or talk to your vet about the best options for your dog’s health."
+    },
+    {
+      "id": "KD95",
+      "quote": "Many Americans believe that cranberries can help fight and prevent canine urinary tract infections (UTIs)."
+    },
+    {
+      "id": "KD95",
+      "quote": "However, there have not been enough studies done with dogs to confirm this."
+    },
+    {
+      "id": "KD89",
+      "quote": "many dried cranberries sold for people to eat are sweetened,"
+    },
+    {
+      "id": "KD89",
+      "quote": "so giving them to your dog is adding unneeded sugar to their diet."
+    },
+    {
+      "id": "KD88",
+      "quote": "This one may surprise you, but cranberries are pet safe, both raw and processed!"
+    }
+  ],
+  "related": [
+    "raisins",
+    "grapes",
+    "alcohol",
+    "blueberries"
+  ],
+  "updated": "2026-11-01",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8da73cb8376b333fa502a24b8b8cffbcaa3d207b6a5cacedaef09bd9df6fb87e"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7039c907be5dc2a220702f32549b543e63f2335f7ce016584d5ff0843aaa4354"
+    }
+  }
+}

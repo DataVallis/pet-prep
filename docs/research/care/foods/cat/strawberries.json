@@ -1,0 +1,111 @@
+{
+  "slug": "strawberries",
+  "species": "cat",
+  "name": {
+    "en": "Strawberries",
+    "sl": "Jagode"
+  },
+  "question": {
+    "en": "Can cats eat strawberries?",
+    "sl": "Ali lahko mačke jedo jagode?"
+  },
+  "url_slug": {
+    "en": "strawberries",
+    "sl": "jagode"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a small piece of strawberry is fine as an occasional treat. The ASPCA lists strawberry as non-toxic to cats, but cats are meat eaters and don't need fruit, so keep it to a tiny extra.",
+    "sl": "Da, majhen košček jagode je v redu kot občasen priboljšek. ASPCA jagodo navaja kot nestrupeno za mačke, vendar so mačke mesojede in sadja ne potrebujejo, zato naj bo le majhen dodatek."
+  },
+  "why": {
+    "en": "The ASPCA lists the strawberry plant as non-toxic to cats, and NC State's veterinary hospital lists strawberry among healthy human-food treats for cats and dogs, given in measured amounts and counted in the daily calories. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
+    "sl": "ASPCA rastlino jagode navaja kot nestrupeno za mačke, veterinarska bolnišnica univerze NC State pa jagodo navaja med zdravimi priboljški iz človeške hrane za mačke in pse, ki jih dajemo v odmerjenih količinah in upoštevamo v dnevnem vnosu kalorij. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Offer a small piece first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+    "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "A small piece now and then, counted in your cat's daily food.",
+    "sl": "Občasno majhen košček, upoštevan v dnevnem obroku."
+  },
+  "child": {
+    "en": "A little piece of strawberry can be a cat treat now and then. Cats mostly need meat, so fruit is only a small extra.",
+    "sl": "Majhen košček jagode je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Do cats need fruit?",
+        "sl": "Ali mačke potrebujejo sadje?"
+      },
+      "a": {
+        "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
+        "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC60",
+      "quote": "Non-Toxicity: Non-Toxic to Dogs, Non-Toxic to Cats, Non-Toxic to Horses"
+    },
+    {
+      "id": "KC60",
+      "quote": "Scientific Name: Fragaria spp."
+    },
+    {
+      "id": "KC63",
+      "quote": "Cats and Dogs"
+    },
+    {
+      "id": "KC63",
+      "quote": "Strawberry"
+    },
+    {
+      "id": "KC63",
+      "quote": "Treats should be given in measured amounts and accounted for in daily caloric intake."
+    },
+    {
+      "id": "KC33",
+      "quote": "Cats are obligate carnivores, which means that they rely on nutrients found only in animal products."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats are carnivores (meat eaters) because they require specific nutrients found in meat such as Taurine and Arginine."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats don’t need fruit or vegetables as part of their diet"
+    },
+    {
+      "id": "KC49",
+      "quote": "Stick to a small number and don’t let treats exceed 10-15% of your cat’s daily calorie allowance."
+    },
+    {
+      "id": "KC62",
+      "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."
+    }
+  ],
+  "related": [
+    "blueberries",
+    "bananas",
+    "apples",
+    "watermelon"
+  ],
+  "updated": "2026-11-01",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "261b09fa682dd281ea4aa38793803add1b5ee170d716426a62d7d3d5cfc79893"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3af1c5a8cf671136e0e9a0535880c793a58078409af96eef851b724ec685f40c"
+    }
+  }
+}

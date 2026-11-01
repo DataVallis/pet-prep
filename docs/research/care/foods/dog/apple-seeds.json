@@ -1,0 +1,132 @@
+{
+  "slug": "apple-seeds",
+  "species": "dog",
+  "name": {
+    "en": "Apple seeds",
+    "sl": "Jabolčne pečke"
+  },
+  "question": {
+    "en": "Can dogs eat apple seeds?",
+    "sl": "Ali lahko psi jedo jabolčne pečke?"
+  },
+  "url_slug": {
+    "en": "apple-seeds",
+    "sl": "jabolcne-pecke"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "No, apple seeds should be avoided. They contain cyanide, and the core and stem around them could choke your dog. A small number of seeds is unlikely to cause harm, but remove the seeds and core before sharing apple.",
+    "sl": "Ne, jabolčnim pečkam se izogibajte. Vsebujejo cianid, ogrizek in pecelj okoli njih pa se lahko psu zataknejo v grlu. Majhno število pečk verjetno ne bo škodilo, a preden psu daste jabolko, odstranite pečke in ogrizek."
+  },
+  "why": {
+    "en": "The ASPCA lists the apple plant as toxic to dogs: its stems, leaves and seeds contain cyanide (from cyanogenic glycosides). AKC says a small number of seeds is unlikely to cause harm, and Pet Poison Helpline says a pet would need to eat massive amounts to be of concern. We follow the stricter view because the seeds contain cyanide and the core can also cause choking or intestinal obstruction.",
+    "sl": "ASPCA jablano navaja kot strupeno za pse: njeni peclji, listi in pečke vsebujejo cianid (iz cianogenih glikozidov). AKC pravi, da majhno število pečk verjetno ne bo škodilo, Pet Poison Helpline pa, da bi moral ljubljenček pojesti ogromne količine, da bi bilo zaskrbljujoče. Upoštevamo strožje stališče, ker pečke vsebujejo cianid, ogrizek pa lahko povzroči tudi dušenje ali zaporo črevesja."
+  },
+  "signs": {
+    "en": [
+      "Brick-red gums or other mucous membranes",
+      "Dilated pupils",
+      "Difficulty breathing, panting",
+      "Shock",
+      "Signs of digestive trouble or blockage"
+    ],
+    "sl": [
+      "Opečnato rdeče dlesni ali druge sluznice",
+      "Razširjene zenice",
+      "Težko dihanje, sopihanje",
+      "Šok",
+      "Znaki prebavnih težav ali zapore"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog eats an apple core or seeds, watch for signs of digestive trouble or blockage, and contact a vet if your dog has problems.",
+    "sl": "Če pes poje ogrizek ali pečke, ga opazujte, ali se pojavijo znaki prebavnih težav ali zapore, in se obrnite na veterinarja, če ima težave."
+  },
+  "serving": null,
+  "child": {
+    "en": "Apple seeds are not for dogs. A grown-up takes out the core and seeds before your dog gets a piece of apple.",
+    "sl": "Jabolčne pečke niso za pse. Odrasel odstrani ogrizek in pečke, preden pes dobi košček jabolka."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "My dog ate a whole apple with the seeds. Is that an emergency?",
+        "sl": "Pes je pojedel celo jabolko s pečkami. Je to nujen primer?"
+      },
+      "a": {
+        "en": "A small number of seeds is unlikely to cause harm. Watch your dog for signs of digestive trouble or blockage from the core, and contact a vet if your dog has problems.",
+        "sl": "Majhno število pečk verjetno ne bo škodilo. Psa opazujte, ali se pojavijo znaki prebavnih težav ali zapore zaradi ogrizka, in se obrnite na veterinarja, če ima težave."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD86",
+      "quote": "A small number of seeds is unlikely to cause harm, but they contain cyanide and should be avoided."
+    },
+    {
+      "id": "KD86",
+      "quote": "The seeds contain a small amount of cyanide, a toxin, which can harm your dog in large doses."
+    },
+    {
+      "id": "KD86",
+      "quote": "The tough apple core, and the stem, could also choke your dog."
+    },
+    {
+      "id": "KD86",
+      "quote": "Remove seeds, core, and stem to prevent choking and toxin exposure"
+    },
+    {
+      "id": "KD86",
+      "quote": "If your dog eats an apple core or seeds, you need to watch them for any signs of digestive trouble or blockage"
+    },
+    {
+      "id": "KD86",
+      "quote": "If your dog has problems, refrain from feeding them apples and contact a veterinarian as needed."
+    },
+    {
+      "id": "KD87",
+      "quote": "Toxic to Dogs"
+    },
+    {
+      "id": "KD87",
+      "quote": "Cyanogenic glycosides"
+    },
+    {
+      "id": "KD87",
+      "quote": "Stems, leaves, seeds contain cyanide, particularly toxic in the process of wilting"
+    },
+    {
+      "id": "KD87",
+      "quote": "brick red mucous membranes, dilated pupils, difficulty breathing, panting, shock"
+    },
+    {
+      "id": "KD88",
+      "quote": "Be sure to remove the core and the seeds of the apple before giving it to your pet, as these pose risks for choking and intestinal obstruction."
+    },
+    {
+      "id": "KD88",
+      "quote": "However, your pet would need to ingest massive amounts of apple seeds to be of concern."
+    }
+  ],
+  "related": [
+    "apples",
+    "cherries",
+    "peaches",
+    "plums",
+    "apricots"
+  ],
+  "updated": "2026-11-01",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "702019ade76a3d574a4badcc1737909f5fa108a176c2811f00486096fc8bafa4"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9abe64ab16f750d8188c4048f62b29c064e311dc41330bf93aeee5ef3858327a"
+    }
+  }
+}

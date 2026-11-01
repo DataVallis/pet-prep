@@ -1,0 +1,133 @@
+{
+  "slug": "cranberries",
+  "species": "cat",
+  "name": {
+    "en": "Cranberries",
+    "sl": "Brusnice"
+  },
+  "question": {
+    "en": "Can cats eat cranberries?",
+    "sl": "Ali lahko mačke jedo brusnice?"
+  },
+  "url_slug": {
+    "en": "cranberries",
+    "sl": "brusnice"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a few cranberries are fine as an occasional treat. Pet Poison Helpline calls cranberries pet safe, raw or processed, but dried cranberries, juice, sauce and jelly often have added sugar or sweeteners, so check the label for xylitol or grape ingredients first.",
+    "sl": "Da, nekaj brusnic je v redu kot občasen priboljšek. Pet Poison Helpline brusnice navaja kot varne za živali, surove ali predelane, vendar imajo suhe brusnice, sok, omaka in žele pogosto dodan sladkor ali sladila, zato najprej na deklaraciji preverite, ali vsebujejo ksilitol ali sestavine iz grozdja."
+  },
+  "why": {
+    "en": "Pet Poison Helpline, on a page about pet-safe fall foods that also names cats, says cranberries are pet safe both raw and processed. Dried cranberries, juice, sauce and jelly often contain added sugar or other sweeteners, and some products may contain toxic ingredients such as xylitol or grape derivatives. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
+    "sl": "Pet Poison Helpline na strani o jesenskih živilih, varnih za živali, kjer omenja tudi mačke, navaja, da so brusnice za živali varne, surove in predelane. Suhe brusnice, sok, omaka in žele pogosto vsebujejo dodan sladkor ali druga sladila, nekateri izdelki pa lahko vsebujejo strupene sestavine, kot sta ksilitol ali sestavine iz grozdja. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Offer just a little first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+    "sl": "Najprej ponudite le malo. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "A few berries now and then, counted in your cat's daily food. For dried cranberries, juice, sauce or jelly, check the label first for xylitol or grape ingredients.",
+    "sl": "Občasno nekaj brusnic, upoštevanih v dnevnem obroku. Pri suhih brusnicah, soku, omaki ali želeju najprej na deklaraciji preverite, ali vsebujejo ksilitol ali sestavine iz grozdja."
+  },
+  "child": {
+    "en": "A few cranberries can be a cat treat now and then. Ask a grown-up to check sweet cranberry snacks first.",
+    "sl": "Nekaj brusnic je lahko občasno priboljšek za muco. Sladke brusnične prigrizke naj najprej preveri odrasla oseba."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are dried cranberries OK for cats?",
+        "sl": "Ali so suhe brusnice primerne za mačke?"
+      },
+      "a": {
+        "en": "Dried cranberries often have added sugar or sweeteners. Check the label first and skip any product with xylitol or grape ingredients.",
+        "sl": "Suhe brusnice imajo pogosto dodan sladkor ali sladila. Najprej preverite deklaracijo in ne dajajte izdelkov s ksilitolom ali sestavinami iz grozdja."
+      }
+    },
+    {
+      "q": {
+        "en": "Do cats need fruit?",
+        "sl": "Ali mačke potrebujejo sadje?"
+      },
+      "a": {
+        "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
+        "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC64",
+      "quote": "Not only is it amazing in pies and lattes, but it is also very nutritious and safe for dogs and cats!"
+    },
+    {
+      "id": "KC64",
+      "quote": "This one may surprise you, but cranberries are pet safe, both raw and processed!"
+    },
+    {
+      "id": "KC64",
+      "quote": "Most commonly, cranberries are sold dried, or as juice, sauce, or jelly."
+    },
+    {
+      "id": "KC64",
+      "quote": "Sugar or other sweeteners are often added to offset the tartness,"
+    },
+    {
+      "id": "KC64",
+      "quote": "so check the nutrition label before giving any to your pet to ensure they do not contain any ingredients"
+    },
+    {
+      "id": "KC64",
+      "quote": "that may be toxic, such as xylitol or grape derivatives."
+    },
+    {
+      "id": "KC64",
+      "quote": "As with any special treats in your pet’s diet, moderation is key!"
+    },
+    {
+      "id": "KC63",
+      "quote": "Treats should be given in measured amounts and accounted for in daily caloric intake."
+    },
+    {
+      "id": "KC33",
+      "quote": "Cats are obligate carnivores, which means that they rely on nutrients found only in animal products."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats are carnivores (meat eaters) because they require specific nutrients found in meat such as Taurine and Arginine."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats don’t need fruit or vegetables as part of their diet"
+    },
+    {
+      "id": "KC49",
+      "quote": "Stick to a small number and don’t let treats exceed 10-15% of your cat’s daily calorie allowance."
+    },
+    {
+      "id": "KC62",
+      "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."
+    }
+  ],
+  "related": [
+    "blueberries",
+    "grapes",
+    "raisins",
+    "strawberries"
+  ],
+  "updated": "2026-11-01",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5bb5c52dce48b3cbd91f520c2a8f8f585b61c4241ff2a0cb9bb3035ba35c34a3"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a34709bc77f652dfcbf1c0956089432924908171020bf8b5c4e9c8a47f02e3c5"
+    }
+  }
+}

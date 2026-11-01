@@ -1,0 +1,103 @@
+{
+  "slug": "watermelon",
+  "species": "cat",
+  "name": {
+    "en": "Watermelon",
+    "sl": "Lubenica"
+  },
+  "question": {
+    "en": "Can cats eat watermelon?",
+    "sl": "Ali lahko mačke jedo lubenico?"
+  },
+  "url_slug": {
+    "en": "watermelon",
+    "sl": "lubenica"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a small piece of watermelon is fine as an occasional treat. A university vet hospital lists it among healthy human-food treats for cats and dogs, but cats are meat eaters and don't need fruit, so keep it to a small extra.",
+    "sl": "Da, majhen košček lubenice je v redu kot občasen priboljšek. Univerzitetna veterinarska bolnišnica jo navaja med zdravimi priboljški iz človeške hrane za mačke in pse, vendar so mačke mesojede in sadja ne potrebujejo, zato naj bo le majhen dodatek."
+  },
+  "why": {
+    "en": "NC State's veterinary hospital lists watermelon among healthy human-food treats for cats and dogs, given in measured amounts and counted in the daily calories. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
+    "sl": "Veterinarska bolnišnica univerze NC State lubenico navaja med zdravimi priboljški iz človeške hrane za mačke in pse, ki jih dajemo v odmerjenih količinah in upoštevamo v dnevnem vnosu kalorij. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Offer a small piece first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+    "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "A small piece now and then, counted in your cat's daily food.",
+    "sl": "Občasno majhen košček, upoštevan v dnevnem obroku."
+  },
+  "child": {
+    "en": "A little piece of watermelon can be a cat treat now and then. Cats mostly need meat, so fruit is only a small extra.",
+    "sl": "Majhen košček lubenice je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Do cats need fruit?",
+        "sl": "Ali mačke potrebujejo sadje?"
+      },
+      "a": {
+        "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
+        "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC63",
+      "quote": "Cats and Dogs"
+    },
+    {
+      "id": "KC63",
+      "quote": "Watermelon"
+    },
+    {
+      "id": "KC63",
+      "quote": "Treats should be given in measured amounts and accounted for in daily caloric intake."
+    },
+    {
+      "id": "KC33",
+      "quote": "Cats are obligate carnivores, which means that they rely on nutrients found only in animal products."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats are carnivores (meat eaters) because they require specific nutrients found in meat such as Taurine and Arginine."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats don’t need fruit or vegetables as part of their diet"
+    },
+    {
+      "id": "KC49",
+      "quote": "Stick to a small number and don’t let treats exceed 10-15% of your cat’s daily calorie allowance."
+    },
+    {
+      "id": "KC62",
+      "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."
+    }
+  ],
+  "related": [
+    "cantaloupe",
+    "strawberries",
+    "bananas",
+    "blueberries"
+  ],
+  "updated": "2026-11-01",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "456532efd2a8b6efbb372a06d1f953f94b4a1d5630b94fada8e1d559909f4821"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e10b1cafd582329bc0dc4e1212b4512b69dd8c4915624cf4d5261c8a017c3985"
+    }
+  }
+}

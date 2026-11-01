@@ -1,0 +1,111 @@
+{
+  "slug": "blueberries",
+  "species": "dog",
+  "name": {
+    "en": "Blueberries",
+    "sl": "Borovnice"
+  },
+  "question": {
+    "en": "Can dogs eat blueberries?",
+    "sl": "Ali lahko psi jedo borovnice?"
+  },
+  "url_slug": {
+    "en": "blueberries",
+    "sl": "borovnice"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, in moderation. Blueberries are low in calories and provide fibre, vitamin C and antioxidants, but they should be an occasional treat rather than a big part of your dog's diet.",
+    "sl": "Da, zmerno. Borovnice imajo malo kalorij ter vsebujejo vlaknine, vitamin C in antioksidante, a naj bodo občasen priboljšek in ne velik del psove prehrane."
+  },
+  "why": {
+    "en": "Their size and shape can pose a choking risk, particularly for very small dogs. As with any new food, start with a small amount and watch how your dog reacts.",
+    "sl": "Njihova velikost in oblika lahko predstavljata nevarnost zadušitve, zlasti pri zelo majhnih psih. Kot pri vsaki novi hrani začnite z majhno količino in opazujte, kako se pes odzove."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Start with a small amount and observe your dog. If you are unsure whether blueberries are right for your dog, ask your vet.",
+    "sl": "Začnite z majhno količino in psa opazujte. Če niste prepričani, ali so borovnice primerne za vašega psa, vprašajte veterinarja."
+  },
+  "serving": {
+    "en": "Washed thoroughly, fresh or frozen; cut in halves for very small dogs; as an occasional treat.",
+    "sl": "Temeljito oprane, sveže ali zamrznjene; za zelo majhne pse prerezane na pol; kot občasen priboljšek."
+  },
+  "child": {
+    "en": "Blueberries can be a yummy little treat for dogs! A grown-up washes them first and gives just a few.",
+    "sl": "Borovnice so lahko za pse slasten majhen priboljšek! Odrasel jih najprej opere in da le nekaj."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Fresh or frozen blueberries?",
+        "sl": "Sveže ali zamrznjene borovnice?"
+      },
+      "a": {
+        "en": "Both are fine. You can offer your dog either fresh or frozen blueberries.",
+        "sl": "Oboje je v redu. Psu lahko ponudite sveže ali zamrznjene borovnice."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD91",
+      "quote": "Yes, dogs can eat blueberries in moderation."
+    },
+    {
+      "id": "KD91",
+      "quote": "These low-calorie berries provide fiber, vitamin C, and antioxidants."
+    },
+    {
+      "id": "KD91",
+      "quote": "Blueberries should only be an occasional treat rather than a significant part of your dog’s diet."
+    },
+    {
+      "id": "KD91",
+      "quote": "their size and shape can pose a choking risk, particularly for very small dogs."
+    },
+    {
+      "id": "KD91",
+      "quote": "As with any new food, start with a small amount and observe your dog’s reaction."
+    },
+    {
+      "id": "KD91",
+      "quote": "Before serving, wash blueberries thoroughly to remove dirt, bacteria, or pesticide residue."
+    },
+    {
+      "id": "KD91",
+      "quote": "You can offer your dog either fresh or frozen blueberries."
+    },
+    {
+      "id": "KD91",
+      "quote": "Their small size makes them convenient to serve, though you may want to cut them into halves for very small dogs."
+    },
+    {
+      "id": "KD91",
+      "quote": "If you’re unsure whether blueberries are right for your dog, ask your veterinarian."
+    },
+    {
+      "id": "KD89",
+      "quote": "Blueberries are a superfood rich in antioxidants, which prevent cell damage in humans and canines alike."
+    }
+  ],
+  "related": [
+    "strawberries",
+    "raspberries",
+    "blackberries",
+    "cranberries"
+  ],
+  "updated": "2026-11-01",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0d3e6d2503889573c69661ecb9bf2d5747335fefa1de3acc1104a79a3d307583"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a643355f01fd206e3329dafadbd4fd4b352ab383256d1adf97242f69241c1c4a"
+    }
+  }
+}

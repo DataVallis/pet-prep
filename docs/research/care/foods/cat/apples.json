@@ -1,0 +1,141 @@
+{
+  "slug": "apples",
+  "species": "cat",
+  "name": {
+    "en": "Apples",
+    "sl": "Jabolka"
+  },
+  "question": {
+    "en": "Can cats eat apples?",
+    "sl": "Ali lahko mačke jedo jabolka?"
+  },
+  "url_slug": {
+    "en": "apples",
+    "sl": "jabolka"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a small piece of apple is fine now and then, as long as you remove the core, seeds and stem first. Cats are meat eaters and don't need fruit, so apple is only an occasional extra.",
+    "sl": "Da, majhen košček jabolka je občasno v redu, če prej odstranite peščišče, pečke in pecelj. Mačke so mesojede in sadja ne potrebujejo, zato je jabolko le občasen dodatek."
+  },
+  "why": {
+    "en": "NC State's veterinary hospital lists apple without seeds among healthy human-food treats for cats and dogs, and Pet Poison Helpline says apples are safe raw or cooked once the core and seeds are removed. The ASPCA lists the apple plant as toxic to cats because its stems, leaves and seeds contain cyanide. Cats are obligate carnivores, and any plant material can cause vomiting or stomach upset.",
+    "sl": "Veterinarska bolnišnica univerze NC State navaja jabolko brez pečk med zdravimi priboljški iz človeške hrane za mačke in pse, Pet Poison Helpline pa navaja, da so jabolka varna surova ali kuhana, ko odstranite peščišče in pečke. ASPCA rastlino jablane navaja kot strupeno za mačke, ker njeni peclji, listi in pečke vsebujejo cianid. Mačke so obvezni mesojedci, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Offer a small piece first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet. If your cat chewed apple seeds, stems or leaves, contact your vet or a pet poison helpline as soon as possible.",
+    "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem. Če je mačka grizljala jabolčne pečke, peclje ali liste, se čim prej obrnite na veterinarja ali center za zastrupitve živali."
+  },
+  "serving": {
+    "en": "Apple flesh only, raw or cooked, with the core, seeds and stem removed; a small piece now and then, counted in your cat's daily food.",
+    "sl": "Samo jabolčno meso, surovo ali kuhano, brez peščišča, pečk in peclja; občasno majhen košček, upoštevan v dnevnem obroku."
+  },
+  "child": {
+    "en": "A tiny piece of apple with no seeds can be a cat treat. Cats mostly need meat, so fruit is just a little extra.",
+    "sl": "Majhen košček jabolka brez pečk je lahko priboljšek za muco. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Why remove the core and seeds?",
+        "sl": "Zakaj odstraniti peščišče in pečke?"
+      },
+      "a": {
+        "en": "The core and seeds can cause choking or a blockage in the gut, and the seeds contain a small amount of cyanide.",
+        "sl": "Peščišče in pečke lahko povzročijo dušenje ali zamašitev črevesja, pečke pa vsebujejo tudi majhno količino cianida."
+      }
+    },
+    {
+      "q": {
+        "en": "Do cats need fruit?",
+        "sl": "Ali mačke potrebujejo sadje?"
+      },
+      "a": {
+        "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
+        "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC63",
+      "quote": "Cats and Dogs"
+    },
+    {
+      "id": "KC63",
+      "quote": "Apple (no seeds)"
+    },
+    {
+      "id": "KC63",
+      "quote": "Treats should be given in measured amounts and accounted for in daily caloric intake."
+    },
+    {
+      "id": "KC64",
+      "quote": "They are safe to be fed raw or cooked."
+    },
+    {
+      "id": "KC64",
+      "quote": "Be sure to remove the core and the seeds of the apple before giving it to your pet,"
+    },
+    {
+      "id": "KC64",
+      "quote": "as these pose risks for choking and intestinal obstruction."
+    },
+    {
+      "id": "KC64",
+      "quote": "The seeds also contain a small amount of cyanide, which is toxic to humans and animals alike."
+    },
+    {
+      "id": "KC58",
+      "quote": "Toxicity: Toxic to Dogs, Toxic to Cats, Toxic to Horses"
+    },
+    {
+      "id": "KC58",
+      "quote": "Stems, leaves, seeds contain cyanide, particularly toxic in the process of wilting: brick red mucous membranes"
+    },
+    {
+      "id": "KC58",
+      "quote": "call the ASPCA Poison Control at (888) 426-4435 or contact your local veterinarian as soon as possible."
+    },
+    {
+      "id": "KC33",
+      "quote": "Cats are obligate carnivores, which means that they rely on nutrients found only in animal products."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats are carnivores (meat eaters) because they require specific nutrients found in meat such as Taurine and Arginine."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats don’t need fruit or vegetables as part of their diet"
+    },
+    {
+      "id": "KC49",
+      "quote": "Stick to a small number and don’t let treats exceed 10-15% of your cat’s daily calorie allowance."
+    },
+    {
+      "id": "KC62",
+      "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."
+    }
+  ],
+  "related": [
+    "apple-seeds",
+    "bananas",
+    "strawberries",
+    "cherries"
+  ],
+  "updated": "2026-11-01",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e14629d8ea40391bbf407278f17e1d472bc3f64ef3897ded44380b26571eb607"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b87e2cd40c2fb8ded3bc595859ba7842dbb0f8d8faaceaa5cf72ca9017fb72e0"
+    }
+  }
+}

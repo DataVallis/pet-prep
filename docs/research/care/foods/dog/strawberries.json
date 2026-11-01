@@ -1,0 +1,133 @@
+{
+  "slug": "strawberries",
+  "species": "dog",
+  "name": {
+    "en": "Strawberries",
+    "sl": "Jagode"
+  },
+  "question": {
+    "en": "Can dogs eat strawberries?",
+    "sl": "Ali lahko psi jedo jagode?"
+  },
+  "url_slug": {
+    "en": "strawberries",
+    "sl": "jagode"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, in moderation. Strawberries are full of antioxidants, fibre and vitamin C, but they contain natural sugar, and too many at once can cause loose stools or diarrhoea. Wash them, remove the stems and leaves, and cut them small.",
+    "sl": "Da, zmerno. Jagode so polne antioksidantov, vlaknin in vitamina C, a vsebujejo naravni sladkor, preveč naenkrat pa lahko povzroči mehko blato ali drisko. Operite jih, odstranite peclje in liste ter jih narežite na majhne koščke."
+  },
+  "why": {
+    "en": "The stems and leaves are not toxic but can cause stomach upset, and whole strawberries can be a choking risk, especially for smaller breeds. Avoid strawberries in syrup or canned strawberries, which have too much sugar and may even contain artificial sweeteners that are toxic to dogs.",
+    "sl": "Peclji in listi niso strupeni, a lahko povzročijo prebavne težave, cele jagode pa lahko predstavljajo nevarnost zadušitve, zlasti pri manjših pasmah. Izogibajte se jagodam v sirupu ali konzerviranim jagodam, ki imajo preveč sladkorja in lahko celo vsebujejo umetna sladila, strupena za pse."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If you notice anything different after your dog eats strawberries, stop giving them and check with your vet.",
+    "sl": "Če po jagodah pri psu opazite kaj nenavadnega, mu jih ne dajajte več in se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "Washed thoroughly, stems and leaves removed, cut into small pieces, or mashed for small dogs; fresh or frozen, never in syrup or canned.",
+    "sl": "Temeljito oprane, brez pecljev in listov, narezane na majhne koščke ali za majhne pse pretlačene; sveže ali zamrznjene, nikoli v sirupu ali iz konzerve."
+  },
+  "child": {
+    "en": "Dogs can have a little strawberry! A grown-up washes it, takes off the green leaves and cuts it small.",
+    "sl": "Psi lahko dobijo malo jagode! Odrasel jo opere, odstrani zelene liste in jo nareže na majhne koščke."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat frozen strawberries?",
+        "sl": "Ali lahko psi jedo zamrznjene jagode?"
+      },
+      "a": {
+        "en": "Yes. Frozen strawberries cut into suitably sized pieces can be a safe, refreshing treat.",
+        "sl": "Da. Zamrznjene jagode, narezane na primerno velike koščke, so lahko varen in osvežilen priboljšek."
+      }
+    },
+    {
+      "q": {
+        "en": "Should I ask my vet first?",
+        "sl": "Naj najprej vprašam veterinarja?"
+      },
+      "a": {
+        "en": "Whenever you introduce a new food to your dog's diet, it is best to talk to your vet first.",
+        "sl": "Kadar psu uvajate novo hrano, se je najbolje najprej pogovoriti z veterinarjem."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD92",
+      "quote": "Can dogs eat strawberries? Yes, in moderation."
+    },
+    {
+      "id": "KD92",
+      "quote": "They’re full of antioxidants, high in fiber and vitamin C."
+    },
+    {
+      "id": "KD92",
+      "quote": "Too many strawberries at once can cause loose stools or diarrhea."
+    },
+    {
+      "id": "KD92",
+      "quote": "While not toxic, the stems and leaves can cause stomach upset."
+    },
+    {
+      "id": "KD92",
+      "quote": "Wash strawberries thoroughly, remove stems and leaves, and cut them into small pieces before serving."
+    },
+    {
+      "id": "KD92",
+      "quote": "Whole strawberries can be a choking risk, especially for smaller breeds."
+    },
+    {
+      "id": "KD92",
+      "quote": "If you have a small dog, you can mash up the berries or puree them and add them to the dog’s food."
+    },
+    {
+      "id": "KD92",
+      "quote": "Avoid feeding your dog strawberries in syrup or canned strawberries;"
+    },
+    {
+      "id": "KD92",
+      "quote": "these options have too much sugar and may even contain artificial sweeteners that are toxic to dogs"
+    },
+    {
+      "id": "KD92",
+      "quote": "Frozen strawberries can be a safe and refreshing treat for dogs when cut into appropriately sized pieces."
+    },
+    {
+      "id": "KD92",
+      "quote": "If you notice anything different, stop giving strawberries to the dog and check with your veterinarian."
+    },
+    {
+      "id": "KD92",
+      "quote": "Whenever you introduce any new food to your dog’s diet, it is best to talk to your veterinarian first."
+    },
+    {
+      "id": "KD89",
+      "quote": "Like all fruits, strawberries contain natural sugar, so offer them in moderation."
+    }
+  ],
+  "related": [
+    "blueberries",
+    "raspberries",
+    "blackberries",
+    "xylitol"
+  ],
+  "updated": "2026-11-01",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4de62ba671b3593e7f111a42d6053fed6850f36520abf3d2327a31a46a1d210e"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "515bd5af2cf4b8a3adb6d2eab5ec3f7529f91405b931b7aa3d5fa13369a3b705"
+    }
+  }
+}

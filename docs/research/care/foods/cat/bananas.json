@@ -1,0 +1,111 @@
+{
+  "slug": "bananas",
+  "species": "cat",
+  "name": {
+    "en": "Bananas",
+    "sl": "Banane"
+  },
+  "question": {
+    "en": "Can cats eat bananas?",
+    "sl": "Ali lahko mačke jedo banane?"
+  },
+  "url_slug": {
+    "en": "bananas",
+    "sl": "banane"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a small piece of banana is fine as an occasional treat. The ASPCA lists banana as non-toxic to cats, but cats are meat eaters and don't need fruit, so keep it to a tiny extra.",
+    "sl": "Da, majhen košček banane je v redu kot občasen priboljšek. ASPCA banano navaja kot nestrupeno za mačke, vendar so mačke mesojede in sadja ne potrebujejo, zato naj bo le majhen dodatek."
+  },
+  "why": {
+    "en": "The ASPCA lists the banana plant as non-toxic to cats, and NC State's veterinary hospital lists banana among healthy human-food treats for cats and dogs, given in measured amounts and counted in the daily calories. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
+    "sl": "ASPCA rastlino banane navaja kot nestrupeno za mačke, veterinarska bolnišnica univerze NC State pa banano navaja med zdravimi priboljški iz človeške hrane za mačke in pse, ki jih dajemo v odmerjenih količinah in upoštevamo v dnevnem vnosu kalorij. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Offer a small piece first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+    "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "A small piece now and then, counted in your cat's daily food.",
+    "sl": "Občasno majhen košček, upoštevan v dnevnem obroku."
+  },
+  "child": {
+    "en": "A tiny bit of banana is OK for a cat now and then. Cats mostly need meat, so fruit is only a small extra.",
+    "sl": "Majhen košček banane je za muco občasno v redu. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Do cats need fruit?",
+        "sl": "Ali mačke potrebujejo sadje?"
+      },
+      "a": {
+        "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
+        "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC59",
+      "quote": "Non-Toxicity: Non-Toxic to Dogs, Non-Toxic to Cats, Non-Toxic to Horses"
+    },
+    {
+      "id": "KC59",
+      "quote": "Scientific Name: Musa acuminata"
+    },
+    {
+      "id": "KC63",
+      "quote": "Cats and Dogs"
+    },
+    {
+      "id": "KC63",
+      "quote": "Banana"
+    },
+    {
+      "id": "KC63",
+      "quote": "Treats should be given in measured amounts and accounted for in daily caloric intake."
+    },
+    {
+      "id": "KC33",
+      "quote": "Cats are obligate carnivores, which means that they rely on nutrients found only in animal products."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats are carnivores (meat eaters) because they require specific nutrients found in meat such as Taurine and Arginine."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats don’t need fruit or vegetables as part of their diet"
+    },
+    {
+      "id": "KC49",
+      "quote": "Stick to a small number and don’t let treats exceed 10-15% of your cat’s daily calorie allowance."
+    },
+    {
+      "id": "KC62",
+      "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."
+    }
+  ],
+  "related": [
+    "apples",
+    "strawberries",
+    "blueberries",
+    "watermelon"
+  ],
+  "updated": "2026-11-01",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1d8360f87c97028d846aae71bf31a9ce221b5a557902642e51a79d16a3166119"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "807ff2a45c7e704b15b8047b28149b435c49ca05e6a98d1f8341d7eec6bd18d0"
+    }
+  }
+}
