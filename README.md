@@ -10,7 +10,7 @@ PetPrep uses a **dual-profile model**:
 
 ## Tech Stack
 - **Frontend:** React Native (Expo SDK 57), styled with React Native `StyleSheet` (NativeWind removed 2026-10-05, see ADR-002)
-- **Backend:** Laravel 11 API (PHP 8.5) + Laravel Filament (admin)
+- **Backend:** Laravel 12 API (PHP 8.5 v Sail, 8.3 v CI in produkciji) + Laravel Filament (admin)
 - **Database:** PostgreSQL 18
 - **Real-time:** Laravel Reverb WebSockets
 - **IAP:** RevenueCat SDK
@@ -20,7 +20,7 @@ PetPrep uses a **dual-profile model**:
 ## Project Structure
 ```
 PetPrep/
-├── backend/        # Laravel 11 API (PHP 8.5, PostgreSQL, Reverb, Filament, Scramble)
+├── backend/        # Laravel 12 API (PHP 8.5 Sail / 8.3 prod, PostgreSQL, Reverb, Filament, Scramble)
 │   ├── compose.yaml    # Laravel Sail Docker Compose config
 │   ├── sail            # Sail launcher script
 │   └── docker/         # Published Sail Dockerfiles (PHP 8.0–8.5, pgsql, mysql, mariadb)

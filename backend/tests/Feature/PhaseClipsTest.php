@@ -774,9 +774,12 @@ describe('home first, school and games locked (David 2026-10-28)', function () {
         foreach (PetMedia::where('pet_id', $pet->id)->where('kind', 'keyframe')->get() as $key) {
             $key->update(['status' => 'ready', 'storage_path' => "{$pet->id}/key-{$key->state}.jpg", 'source_generation' => 1]);
         }
-        Queue::fake([GeneratePetKeyframe::class, SubmitPetStateVideo::class]);
+        // Keep the same fake: the idle loop submitted above is still in flight and holds its
+        // ShouldBeUnique lock (as on a real queue). Re-faking would release that lock (Laravel 12
+        // QueueFake::releaseUniqueJobLocks()) and let the idle loop be submitted a second time.
+        $alreadySubmitted = Queue::pushed(SubmitPetStateVideo::class)->count();
         app(PetMediaService::class)->queueStateVideos($pet->fresh());
-        $kinds = Queue::pushed(SubmitPetStateVideo::class)->map(fn (SubmitPetStateVideo $j) => PetMedia::find($j->petMediaId)->kind)->values()->all();
+        $kinds = Queue::pushed(SubmitPetStateVideo::class)->slice($alreadySubmitted)->map(fn (SubmitPetStateVideo $j) => PetMedia::find($j->petMediaId)->kind)->values()->all();
         $firstPhase = array_search('phase', $kinds, true);
         expect($firstPhase)->not->toBeFalse()
             ->and(array_slice($kinds, 0, $firstPhase))->not->toContain('phase')

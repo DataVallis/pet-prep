@@ -37,7 +37,7 @@
 - **websocketi** → §2 (Reverb prek Redis pub/sub).
 Laravel ima za to vse: brezstanjske API strežnike za load balancerjem, Octane, Horizon, Redis. Prepis v drug jezik bi pomenil mesece brez novih funkcij (> 5.000 testov, game loop, plačila, AI pipeline, admin) — smiselno le ob konkretnem problemu, ki ga Laravel ne zmore; takega ni.
 
-**Pogoj:** ogrodje mora biti na podprti verziji z varnostnimi popravki. Laravel 11 jih ne dobiva več (Dependabot 31. 10. 2026: popravki samo za 12.68+ / 13.29+) → **nadgradnja na Laravel 12 (M0-07) pred javnim zagonom**, nato vsako leto ob novi glavni verziji. Enako za Expo SDK v aplikaciji.
+**Pogoj:** ogrodje mora biti na podprti verziji z varnostnimi popravki. Laravel 11 jih ne dobiva več (Dependabot 31. 10. 2026: popravki samo za 12.68+ / 13.29+) → **nadgradnja na Laravel 12 opravljena** (M0-07, PR #496, 1. 11. 2026: 12.70.2); naslednji korak: vsako leto ob novi glavni verziji. Enako za Expo SDK v aplikaciji.
 
 **Odprto (Claude pripravi, ko David reče):** konkreten načrt »od 1 strežnika do 1 milijona uporabnikov« po korakih s stroški (strežniki, baza, CDN, Reverb, vrste) — dopolni §1–§4 in §7.
 

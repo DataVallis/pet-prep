@@ -30,10 +30,15 @@ return [
 
     'disks' => [
 
+        // M0-07 (Laravel 12): `serve` off — nothing issues temporary URLs for this disk
+        // (pet media / certificates / quality sheets use our own signed routes or S3
+        // presigning), so Laravel's GET /storage/{path} route is not registered at all.
+        // That route is the component of GHSA-crmm-hgp2-wgrp (temporary signed URL path
+        // confusion), and this root contains the certificates disk (app/private/certificates).
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app/private'),
-            'serve' => true,
+            'serve' => false,
             'throw' => false,
             'report' => false,
         ],

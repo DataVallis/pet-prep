@@ -68,7 +68,7 @@ The stack runs as a single-server Docker Compose environment inside an isolated 
    - `deployment/Caddyfile` is a single-file bind mount (see §4 for how a changed file is rolled out).
 
 2. **Laravel Application (`petprep-app:production`, `backend/docker/production/Dockerfile`, M4-05b):**
-   - Laravel 11 on **PHP-FPM 8.3** (official `php:8.3-fpm-bookworm` + pdo_pgsql, pgsql, redis, intl, zip, bcmath, gd, exif, pcntl, opcache), listening on 9000 inside the Docker network only.
+   - Laravel 12 (M0-07) on **PHP-FPM 8.3** (official `php:8.3-fpm-bookworm` + pdo_pgsql, pgsql, redis, intl, zip, bcmath, gd, exif, pcntl, opcache), listening on 9000 inside the Docker network only.
    - Code + `vendor/` (`composer install --no-dev --optimize-autoloader`) are **baked into the image**; nothing is bind-mounted except `/opt/petprep/.env` (read-only) and the `app_storage` volume (`storage/`).
    - Runs as the non-root user `petprep` (uid 1000 — same owner as the files in `app_storage`).
    - OPcache on, never re-checks files (`validate_timestamps=0`; every deploy recreates the containers). FPM `pm=dynamic`, max 12 children, `request_terminate_timeout=65s`.
