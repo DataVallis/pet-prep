@@ -10,7 +10,8 @@
     "it": "Alcol",
     "pt": "Álcool",
     "nl": "Alcohol",
-    "pl": "Alkohol"
+    "pl": "Alkohol",
+    "cs": "Alkohol"
   },
   "question": {
     "en": "Can cats drink alcohol?",
@@ -21,7 +22,8 @@
     "it": "I gatti possono bere l’alcol?",
     "pt": "Os gatos podem beber álcool?",
     "nl": "Mogen katten alcohol drinken?",
-    "pl": "Czy koty mogą pić alkohol?"
+    "pl": "Czy koty mogą pić alkohol?",
+    "cs": "Mohou kočky pít alkohol?"
   },
   "url_slug": {
     "en": "alcohol",
@@ -32,7 +34,8 @@
     "it": "alcol",
     "pt": "alcool",
     "nl": "alcohol",
-    "pl": "alkohol"
+    "pl": "alkohol",
+    "cs": "alkohol"
   },
   "level": "toxic",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "No. Anche una minima quantità di alcol può essere estremamente tossica per i gatti, che sono particolarmente sensibili. Tieni lontani dal tuo gatto bevande, cibi preparati con alcol e prodotti come il gel igienizzante per le mani, e chiama il veterinario se ne ingerisce anche solo un po’.",
     "pt": "Não. Mesmo uma quantidade mínima de álcool pode ser extremamente tóxica para os gatos, que são especialmente sensíveis a ele. Mantém bebidas, alimentos preparados com álcool e produtos como o gel desinfetante para as mãos longe do teu gato e liga ao teu veterinário se ele engolir algum.",
     "nl": "Nee. Zelfs een heel klein beetje alcohol kan extreem giftig zijn voor katten, en katten zijn er bijzonder gevoelig voor. Houd drankjes, gerechten met alcohol en producten zoals handgel uit de buurt van je kat, en bel je dierenarts als je kat er iets van binnenkrijgt.",
-    "pl": "Nie. Nawet odrobina alkoholu może być dla kota skrajnie toksyczna, a koty są na niego szczególnie wrażliwe. Trzymaj napoje, potrawy z alkoholem i produkty takie jak żel do dezynfekcji rąk z dala od kota i zadzwoń do weterynarza, jeśli kot połknie choć trochę."
+    "pl": "Nie. Nawet odrobina alkoholu może być dla kota skrajnie toksyczna, a koty są na niego szczególnie wrażliwe. Trzymaj napoje, potrawy z alkoholem i produkty takie jak żel do dezynfekcji rąk z dala od kota i zadzwoń do weterynarza, jeśli kot połknie choć trochę.",
+    "cs": "Ne. I nepatrné množství alkoholu může být pro kočky mimořádně toxické a kočky jsou na něj obzvlášť citlivé. Nápoje, jídla s alkoholem a výrobky, jako je dezinfekce na ruce, uchovávejte mimo dosah kočky, a pokud kočka nějaký alkohol spolkne, zavolejte veterináři."
   },
   "why": {
     "en": "All animals can get alcohol poisoning, but cats are especially sensitive. Alcohol is not only in drinks: it can also be in liqueur sweets, hand sanitiser, mouthwash and raw, rising bread dough. Signs usually appear quickly after a cat swallows it.",
@@ -55,7 +59,8 @@
     "it": "Tutti gli animali possono subire un’intossicazione da alcol, ma i gatti sono particolarmente sensibili. L’alcol non si trova solo nelle bevande: può essere presente anche nei dolcetti al liquore, nel gel igienizzante per le mani, nel collutorio e nell’impasto crudo del pane in lievitazione. Di solito i sintomi compaiono poco dopo che il gatto lo ha ingerito.",
     "pt": "Todos os animais podem sofrer uma intoxicação por álcool, mas os gatos são especialmente sensíveis. O álcool não está só nas bebidas: também pode estar em bombons de licor, gel desinfetante para as mãos, elixir bucal e massa de pão crua a levedar. Os sinais costumam surgir pouco depois de o gato o engolir.",
     "nl": "Alle dieren kunnen een alcoholvergiftiging krijgen, maar katten zijn bijzonder gevoelig. Alcohol zit niet alleen in drankjes: het kan ook zitten in likeurbonbons, handgel, mondwater en rauw, rijzend brooddeeg. Verschijnselen treden meestal snel op nadat een kat het heeft binnengekregen.",
-    "pl": "Każde zwierzę może zatruć się alkoholem, ale koty są szczególnie wrażliwe. Alkohol jest nie tylko w napojach: może się też znajdować w cukierkach z likierem, żelu do dezynfekcji rąk, płynie do płukania ust oraz w surowym, rosnącym cieście drożdżowym. Objawy zwykle pojawiają się szybko po połknięciu."
+    "pl": "Każde zwierzę może zatruć się alkoholem, ale koty są szczególnie wrażliwe. Alkohol jest nie tylko w napojach: może się też znajdować w cukierkach z likierem, żelu do dezynfekcji rąk, płynie do płukania ust oraz w surowym, rosnącym cieście drożdżowym. Objawy zwykle pojawiają się szybko po połknięciu.",
+    "cs": "Otravu alkoholem mohou dostat všechna zvířata, kočky jsou však obzvlášť citlivé. Alkohol není jen v nápojích: může být také v likérových bonbonech, dezinfekci na ruce, ústní vodě a v syrovém kynoucím chlebovém těstě. Příznaky se obvykle objeví brzy poté, co ho kočka spolkne."
   },
   "signs": {
     "en": [
@@ -111,6 +116,12 @@
       "Trudności z chodzeniem, chwianie się",
       "Spowolniony oddech",
       "W ciężkich przypadkach: drgawki lub zapaść"
+    ],
+    "cs": [
+      "Neobvyklá ospalost nebo otupělost",
+      "Potíže s chůzí, vrávorání",
+      "Zpomalené dýchání",
+      "V závažných případech: záchvaty nebo kolaps"
     ]
   },
   "what_to_do": {
@@ -122,7 +133,8 @@
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha ingerito il tuo gatto, quanto e quando, e conserva la bottiglia o la confezione. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Toma nota do que o teu gato engoliu, da quantidade e de quando, e guarda a garrafa ou a embalagem. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat je kat heeft binnengekregen, hoeveel en wanneer, en bewaar de fles of verpakking. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
-    "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt. Zapisz, co połknął twój kot, ile i kiedy, i zachowaj butelkę lub opakowanie. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu."
+    "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt. Zapisz, co połknął twój kot, ile i kiedy, i zachowaj butelkę lub opakowanie. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
+    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co kočka spolkla, kolik a kdy, a láhev nebo obal si schovejte. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení."
   },
   "serving": null,
   "child": {
@@ -134,7 +146,8 @@
     "it": "Le bevande dei grandi non sono mai per i gatti. Se il micio lecca un bicchiere o una bevanda rovesciata, dillo subito a un adulto.",
     "pt": "As bebidas dos adultos nunca são para gatos. Se o gatinho lamber um copo ou uma bebida entornada, avisa logo um adulto.",
     "nl": "Drankjes voor volwassenen zijn nooit voor katten. Likt je poes aan een glas of aan een gemorst drankje? Vertel het meteen aan een volwassene.",
-    "pl": "Napoje dorosłych nigdy nie są dla kotów. Jeśli kotek poliże szklankę albo rozlany napój, od razu powiedz dorosłemu."
+    "pl": "Napoje dorosłych nigdy nie są dla kotów. Jeśli kotek poliże szklankę albo rozlany napój, od razu powiedz dorosłemu.",
+    "cs": "Nápoje pro dospělé nejsou pro kočky nikdy. Když kočička olízne skleničku nebo rozlité pití, hned to řekni dospělému."
   },
   "faq": [
     {
@@ -147,7 +160,8 @@
         "it": "Dove altro può nascondersi l’alcol?",
         "pt": "Onde mais se pode esconder o álcool?",
         "nl": "Waar kan alcohol nog meer in zitten?",
-        "pl": "Gdzie jeszcze może kryć się alkohol?"
+        "pl": "Gdzie jeszcze może kryć się alkohol?",
+        "cs": "Kde všude se může alkohol skrývat?"
       },
       "a": {
         "en": "Besides drinks, alcohol can be found in liqueur sweets, hand sanitiser, mouthwash and raw, rising bread dough.",
@@ -158,7 +172,8 @@
         "it": "Oltre che nelle bevande, l’alcol può trovarsi nei dolcetti al liquore, nel gel igienizzante per le mani, nel collutorio e nell’impasto crudo del pane in lievitazione.",
         "pt": "Além das bebidas, o álcool pode estar em bombons de licor, gel desinfetante para as mãos, elixir bucal e massa de pão crua a levedar.",
         "nl": "Behalve in drankjes kan alcohol ook zitten in likeurbonbons, handgel, mondwater en rauw, rijzend brooddeeg.",
-        "pl": "Oprócz napojów alkohol może się znajdować w cukierkach z likierem, żelu do dezynfekcji rąk, płynie do płukania ust oraz w surowym, rosnącym cieście drożdżowym."
+        "pl": "Oprócz napojów alkohol może się znajdować w cukierkach z likierem, żelu do dezynfekcji rąk, płynie do płukania ust oraz w surowym, rosnącym cieście drożdżowym.",
+        "cs": "Kromě nápojů může být alkohol v likérových bonbonech, dezinfekci na ruce, ústní vodě a v syrovém kynoucím chlebovém těstě."
       }
     }
   ],
@@ -276,6 +291,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f41759fee5cf27675a371936192ef531cb47f408214da7da9ae73784267566ad"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d6b671a67a46c05e886e20aade3950bf1d803315418eadba8019ecb4223532f1"
     }
   }
 }

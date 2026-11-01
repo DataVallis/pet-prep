@@ -10,7 +10,8 @@
     "it": "Snack salati",
     "pt": "Petiscos salgados",
     "nl": "Zoute snacks",
-    "pl": "Słone przekąski"
+    "pl": "Słone przekąski",
+    "cs": "Slané pochutiny"
   },
   "question": {
     "en": "Can dogs eat salty snacks?",
@@ -21,7 +22,8 @@
     "it": "I cani possono mangiare gli snack salati?",
     "pt": "Os cães podem comer petiscos salgados?",
     "nl": "Mogen honden zoute snacks eten?",
-    "pl": "Czy psy mogą jeść słone przekąski?"
+    "pl": "Czy psy mogą jeść słone przekąski?",
+    "cs": "Mohou psi jíst slané pochutiny?"
   },
   "url_slug": {
     "en": "salty-snacks",
@@ -32,7 +34,8 @@
     "it": "snack-salati",
     "pt": "petiscos-salgados",
     "nl": "zoute-snacks",
-    "pl": "slone-przekaski"
+    "pl": "slone-przekaski",
+    "cs": "slane-pochutiny"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "Sconsigliati. Pochi snack salati difficilmente causano un avvelenamento da sale in un cane sano che ha acqua fresca, ma i cibi salati in generale non fanno bene ai cani, soprattutto a quelli con malattie cardiache. Mangiarne molti può causare sete, vomito e problemi peggiori.",
     "pt": "Não é recomendado. Alguns petiscos salgados dificilmente causam intoxicação por sal num cão saudável com água fresca, mas a comida salgada em geral não faz bem aos cães, sobretudo aos que têm doença cardíaca. Comer muitos pode causar sede, vómitos e pior.",
     "nl": "Niet aan te raden. Een paar zoute snacks veroorzaken bij een gezonde hond met vers water waarschijnlijk geen zoutvergiftiging, maar zout eten is over het algemeen niet goed voor honden, vooral niet bij hartziekte. Veel ervan eten kan dorst, braken en ergere klachten veroorzaken.",
-    "pl": "Nie zaleca się. Kilka słonych przekąsek raczej nie wywoła zatrucia solą u zdrowego psa z dostępem do świeżej wody, ale słone jedzenie na ogół nie jest dobre dla psów, zwłaszcza tych z chorobami serca. Zjedzenie dużej ilości może wywołać pragnienie, wymioty i poważniejsze problemy."
+    "pl": "Nie zaleca się. Kilka słonych przekąsek raczej nie wywoła zatrucia solą u zdrowego psa z dostępem do świeżej wody, ale słone jedzenie na ogół nie jest dobre dla psów, zwłaszcza tych z chorobami serca. Zjedzenie dużej ilości może wywołać pragnienie, wymioty i poważniejsze problemy.",
+    "cs": "Nedoporučuje se. Pár slaných pochutin u zdravého psa s přístupem k čerstvé vodě otravu solí pravděpodobně nezpůsobí, slaná jídla ale psům obecně neprospívají, zejména psům s onemocněním srdce. Velké množství může způsobit žízeň, zvracení i horší potíže."
   },
   "why": {
     "en": "Salty food in moderation should not cause salt toxicity, but too much salt can lead to fluid retention and, in large amounts, salt poisoning. Small dogs with health issues are more at risk when fresh water isn't available. Dog foods are best served without added salt or seasoning.",
@@ -55,7 +59,8 @@
     "it": "I cibi salati con moderazione non dovrebbero causare un avvelenamento da sale, ma troppo sale può portare a ritenzione di liquidi e, in grandi quantità, ad avvelenamento da sale. I cani piccoli con problemi di salute sono più a rischio quando non hanno acqua fresca. Il cibo per il cane va servito senza sale e senza condimenti aggiunti.",
     "pt": "A comida salgada com moderação não deve causar intoxicação por sal, mas sal a mais pode levar à retenção de líquidos e, em grandes quantidades, a intoxicação por sal. Os cães pequenos com problemas de saúde correm mais risco quando não têm água fresca. A comida para cães deve ser servida sem sal adicionado nem temperos.",
     "nl": "Zout eten met mate zou geen zoutvergiftiging moeten veroorzaken, maar te veel zout kan ervoor zorgen dat het lichaam vocht vasthoudt, en in grote hoeveelheden tot zoutvergiftiging leiden. Kleine honden met gezondheidsproblemen lopen meer risico als er geen vers water is. Eten voor honden geef je het best zonder toegevoegd zout of kruiden.",
-    "pl": "Słone jedzenie w umiarkowanej ilości nie powinno wywołać zatrucia solą, ale nadmiar soli może prowadzić do zatrzymywania wody w organizmie, a w dużych ilościach – do zatrucia solą. Małe psy z problemami zdrowotnymi są bardziej zagrożone, gdy nie mają dostępu do świeżej wody. Jedzenie dla psa najlepiej podawać bez dodatku soli i przypraw."
+    "pl": "Słone jedzenie w umiarkowanej ilości nie powinno wywołać zatrucia solą, ale nadmiar soli może prowadzić do zatrzymywania wody w organizmie, a w dużych ilościach – do zatrucia solą. Małe psy z problemami zdrowotnymi są bardziej zagrożone, gdy nie mają dostępu do świeżej wody. Jedzenie dla psa najlepiej podawać bez dodatku soli i przypraw.",
+    "cs": "Slané jídlo s mírou by otravu solí způsobit nemělo, příliš mnoho soli však může vést k zadržování tekutin a ve velkém množství k otravě solí. Malí psi se zdravotními problémy jsou ohroženější, když nemají k dispozici čerstvou vodu. Jídlo pro psy je nejlepší podávat bez přidané soli a koření."
   },
   "signs": {
     "en": [
@@ -120,6 +125,13 @@
       "Biegunka",
       "Chwiejny chód, zmęczenie",
       "Drżenie mięśni lub drgawki"
+    ],
+    "cs": [
+      "Silná žízeň a časté močení",
+      "Zvracení, často do několika hodin",
+      "Průjem",
+      "Vrávorání, malátnost",
+      "Třes nebo záchvaty"
     ]
   },
   "what_to_do": {
@@ -131,7 +143,8 @@
     "it": "Se il tuo cane ha mangiato molti snack salati, contatta il veterinario o un centro antiveleni veterinario. Annota che cosa e quanto ha mangiato. Deve sempre avere a disposizione acqua fresca.",
     "pt": "Se o teu cão comeu uma grande quantidade de petiscos salgados, contacta o teu veterinário ou uma linha de apoio toxicológico para animais. Anota o que comeu e quanto. Deve haver sempre água fresca disponível.",
     "nl": "Heeft je hond een grote hoeveelheid zoute snacks gegeten? Neem dan contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat en hoeveel er is gegeten. Zorg dat er altijd vers water klaarstaat.",
-    "pl": "Jeśli twój pies zjadł dużą ilość słonych przekąsek, skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co i ile zjadł. Świeża woda powinna być zawsze dostępna."
+    "pl": "Jeśli twój pies zjadł dużą ilość słonych przekąsek, skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co i ile zjadł. Świeża woda powinna być zawsze dostępna.",
+    "cs": "Pokud váš pes snědl velké množství slaných pochutin, obraťte se na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co a kolik pes snědl. Čerstvá voda by měla být vždy k dispozici."
   },
   "serving": {
     "en": "Better not to share. If you give people food, serve it plain, without salt or seasoning.",
@@ -142,7 +155,8 @@
     "it": "Meglio non dargliene. Se gli dai cibo delle persone, servilo semplice, senza sale né condimenti.",
     "pt": "É melhor não partilhar. Se deres comida de pessoas, serve-a simples, sem sal nem temperos.",
     "nl": "Liever niet delen. Geef je mensenvoedsel, geef het dan puur, zonder zout of kruiden.",
-    "pl": "Lepiej się nie dzielić. Jeśli dajesz psu ludzkie jedzenie, podawaj je zwykłe, bez soli i przypraw."
+    "pl": "Lepiej się nie dzielić. Jeśli dajesz psu ludzkie jedzenie, podawaj je zwykłe, bez soli i przypraw.",
+    "cs": "Raději se o ně nedělte. Pokud psovi dáváte lidské jídlo, podávejte ho bez soli a koření."
   },
   "child": {
     "en": "Salty snacks are for people. Too much salt makes dogs thirsty and sick, so give your dog its own treats.",
@@ -153,7 +167,8 @@
     "it": "Gli snack salati sono per le persone. Troppo sale fa venire sete ai cani e li fa stare male, quindi dai al tuo cane i suoi premi.",
     "pt": "Os petiscos salgados são para pessoas. Sal a mais dá sede aos cães e põe-nos doentes, por isso dá ao teu cão as guloseimas dele.",
     "nl": "Zoute snacks zijn voor mensen. Van te veel zout krijgen honden dorst en worden ze ziek, dus geef je hond zijn eigen snoepjes.",
-    "pl": "Słone przekąski są dla ludzi. Od nadmiaru soli psom chce się pić i rozchorowują się, więc dawaj psu jego własne smakołyki."
+    "pl": "Słone przekąski są dla ludzi. Od nadmiaru soli psom chce się pić i rozchorowują się, więc dawaj psu jego własne smakołyki.",
+    "cs": "Slané pochutiny jsou pro lidi. Po moc velkém množství soli mají psi žízeň a je jim zle, tak dej svému psovi jeho vlastní pamlsky."
   },
   "faq": [
     {
@@ -166,7 +181,8 @@
         "it": "Il mio cane ha bisogno di acqua dopo un cibo salato?",
         "pt": "O meu cão precisa de água depois de comida salgada?",
         "nl": "Heeft mijn hond water nodig na zout eten?",
-        "pl": "Czy mój pies potrzebuje wody po słonym jedzeniu?"
+        "pl": "Czy mój pies potrzebuje wody po słonym jedzeniu?",
+        "cs": "Potřebuje můj pes po slaném jídle vodu?"
       },
       "a": {
         "en": "Yes. Fresh drinking water helps a dog flush out salt; salt poisoning is unlikely when fresh water is available.",
@@ -177,7 +193,8 @@
         "it": "Sì. L’acqua fresca aiuta il cane a eliminare il sale; l’avvelenamento da sale è improbabile quando ha acqua fresca a disposizione.",
         "pt": "Sim. A água fresca ajuda o cão a eliminar o sal; a intoxicação por sal é pouco provável quando há água fresca disponível.",
         "nl": "Ja. Vers drinkwater helpt een hond het zout kwijt te raken; zoutvergiftiging is onwaarschijnlijk als er vers water is.",
-        "pl": "Tak. Świeża woda do picia pomaga psu wypłukać sól; zatrucie solą jest mało prawdopodobne, gdy świeża woda jest dostępna."
+        "pl": "Tak. Świeża woda do picia pomaga psu wypłukać sól; zatrucie solą jest mało prawdopodobne, gdy świeża woda jest dostępna.",
+        "cs": "Ano. Čerstvá pitná voda pomáhá psovi sůl vyplavit; otrava solí je nepravděpodobná, pokud má pes k dispozici čerstvou vodu."
       }
     }
   ],
@@ -295,6 +312,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "478e591a2748289fd0de300d551b3998a6ba6457f75b3f694dfa7a2a1cdc4832"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3d4de62a585cd8018aab7cf42ceb20992bad0b6f492c4fb42e71335a90eadced"
     }
   }
 }

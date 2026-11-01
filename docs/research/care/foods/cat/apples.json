@@ -3,57 +3,69 @@
   "species": "cat",
   "name": {
     "en": "Apples",
-    "sl": "Jabolka"
+    "sl": "Jabolka",
+    "cs": "Jablka"
   },
   "question": {
     "en": "Can cats eat apples?",
-    "sl": "Ali lahko mačke jedo jabolka?"
+    "sl": "Ali lahko mačke jedo jabolka?",
+    "cs": "Mohou kočky jíst jablka?"
   },
   "url_slug": {
     "en": "apples",
-    "sl": "jabolka"
+    "sl": "jabolka",
+    "cs": "jablka"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a small piece of apple is fine now and then, as long as you remove the core, seeds and stem first. Cats are meat eaters and don't need fruit, so apple is only an occasional extra.",
-    "sl": "Da, majhen košček jabolka je občasno v redu, če prej odstranite peščišče, pečke in pecelj. Mačke so mesojede in sadja ne potrebujejo, zato je jabolko le občasen dodatek."
+    "sl": "Da, majhen košček jabolka je občasno v redu, če prej odstranite peščišče, pečke in pecelj. Mačke so mesojede in sadja ne potrebujejo, zato je jabolko le občasen dodatek.",
+    "cs": "Ano, malý kousek jablka je občas v pořádku, pokud předem odstraníte ohryzek, jádra a stopku. Kočky jsou masožravci a ovoce nepotřebují, takže jablko je jen občasný doplněk."
   },
   "why": {
     "en": "NC State's veterinary hospital lists apple without seeds among healthy human-food treats for cats and dogs, and Pet Poison Helpline says apples are safe raw or cooked once the core and seeds are removed. The ASPCA lists the apple plant as toxic to cats because its stems, leaves and seeds contain cyanide. Cats are obligate carnivores, and any plant material can cause vomiting or stomach upset.",
-    "sl": "Veterinarska bolnišnica univerze NC State navaja jabolko brez pečk med zdravimi priboljški iz človeške hrane za mačke in pse, Pet Poison Helpline pa navaja, da so jabolka varna surova ali kuhana, ko odstranite peščišče in pečke. ASPCA rastlino jablane navaja kot strupeno za mačke, ker njeni peclji, listi in pečke vsebujejo cianid. Mačke so obvezni mesojedci, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave."
+    "sl": "Veterinarska bolnišnica univerze NC State navaja jabolko brez pečk med zdravimi priboljški iz človeške hrane za mačke in pse, Pet Poison Helpline pa navaja, da so jabolka varna surova ali kuhana, ko odstranite peščišče in pečke. ASPCA rastlino jablane navaja kot strupeno za mačke, ker njeni peclji, listi in pečke vsebujejo cianid. Mačke so obvezni mesojedci, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave.",
+    "cs": "Veterinární nemocnice Státní univerzity Severní Karolíny (NC State) uvádí jablko bez jader mezi zdravými pamlsky z lidské stravy pro kočky a psy a podle Pet Poison Helpline jsou jablka bezpečná syrová i tepelně upravená, jakmile se odstraní ohryzek a jádra. ASPCA vede jabloň jako rostlinu toxickou pro kočky, protože její stonky, listy a semena obsahují kyanid. Kočky jsou obligátní masožravci a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku."
   },
   "signs": null,
   "what_to_do": {
     "en": "Offer a small piece first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet. If your cat chewed apple seeds, stems or leaves, contact your vet or a pet poison helpline as soon as possible.",
-    "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem. Če je mačka grizljala jabolčne pečke, peclje ali liste, se čim prej obrnite na veterinarja ali center za zastrupitve živali."
+    "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem. Če je mačka grizljala jabolčne pečke, peclje ali liste, se čim prej obrnite na veterinarja ali center za zastrupitve živali.",
+    "cs": "Nejdřív nabídněte malý kousek. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem. Pokud kočka okusovala jablečná jádra, stopky nebo listy, co nejdříve se obraťte na veterináře nebo na toxikologickou linku pro zvířata."
   },
   "serving": {
     "en": "Apple flesh only, raw or cooked, with the core, seeds and stem removed; a small piece now and then, counted in your cat's daily food.",
-    "sl": "Samo jabolčno meso, surovo ali kuhano, brez peščišča, pečk in peclja; občasno majhen košček, upoštevan v dnevnem obroku."
+    "sl": "Samo jabolčno meso, surovo ali kuhano, brez peščišča, pečk in peclja; občasno majhen košček, upoštevan v dnevnem obroku.",
+    "cs": "Pouze dužina jablka, syrová nebo tepelně upravená, bez ohryzku, jader a stopky; občas malý kousek, započítaný do denní dávky krmiva vaší kočky."
   },
   "child": {
     "en": "A tiny piece of apple with no seeds can be a cat treat. Cats mostly need meat, so fruit is just a little extra.",
-    "sl": "Majhen košček jabolka brez pečk je lahko priboljšek za muco. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek."
+    "sl": "Majhen košček jabolka brez pečk je lahko priboljšek za muco. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek.",
+    "cs": "Malinký kousek jablka bez jadérek může být pro kočku pamlsek. Kočky potřebují hlavně maso, takže ovoce je jen malý přídavek."
   },
   "faq": [
     {
       "q": {
         "en": "Why remove the core and seeds?",
-        "sl": "Zakaj odstraniti peščišče in pečke?"
+        "sl": "Zakaj odstraniti peščišče in pečke?",
+        "cs": "Proč odstranit ohryzek a jádra?"
       },
       "a": {
         "en": "The core and seeds can cause choking or a blockage in the gut, and the seeds contain a small amount of cyanide.",
-        "sl": "Peščišče in pečke lahko povzročijo dušenje ali zamašitev črevesja, pečke pa vsebujejo tudi majhno količino cianida."
+        "sl": "Peščišče in pečke lahko povzročijo dušenje ali zamašitev črevesja, pečke pa vsebujejo tudi majhno količino cianida.",
+        "cs": "Ohryzek a jádra mohou způsobit dušení nebo ucpání střev a jádra obsahují malé množství kyanidu."
       }
     },
     {
       "q": {
         "en": "Do cats need fruit?",
-        "sl": "Ali mačke potrebujejo sadje?"
+        "sl": "Ali mačke potrebujejo sadje?",
+        "cs": "Potřebují kočky ovoce?"
       },
       "a": {
         "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
-        "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek."
+        "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek.",
+        "cs": "Ne. Kočky jsou masožravci: potřebují živiny, které obsahuje maso, a ovoce ani zeleninu ve stravě nepotřebují. Ovoce může být vždy jen malým doplňkem."
       }
     }
   ],
@@ -136,6 +148,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b87e2cd40c2fb8ded3bc595859ba7842dbb0f8d8faaceaa5cf72ca9017fb72e0"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0e6eb6dba7f19b92548485368ba0df1a49ec8a72f92477f4763bc0a894a07580"
     }
   }
 }

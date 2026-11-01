@@ -10,7 +10,8 @@
     "it": "Prugne",
     "pt": "Ameixas",
     "nl": "Pruimen",
-    "pl": "Śliwki"
+    "pl": "Śliwki",
+    "cs": "Švestky"
   },
   "question": {
     "en": "Can dogs eat plums?",
@@ -21,7 +22,8 @@
     "it": "I cani possono mangiare le prugne?",
     "pt": "Os cães podem comer ameixas?",
     "nl": "Mogen honden pruimen eten?",
-    "pl": "Czy psy mogą jeść śliwki?"
+    "pl": "Czy psy mogą jeść śliwki?",
+    "cs": "Mohou psi jíst švestky?"
   },
   "url_slug": {
     "en": "plums",
@@ -32,7 +34,8 @@
     "it": "prugne",
     "pt": "ameixas",
     "nl": "pruimen",
-    "pl": "sliwki"
+    "pl": "sliwki",
+    "cs": "svestky"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "Sconsigliate. Un po’ di polpa di prugna senza nocciolo non è il problema principale, ma i noccioli di prugna sono tossici per i cani e possono causare soffocamento o un’ostruzione intestinale. Piccioli, foglie e semi del susino contengono cianuro.",
     "pt": "Não é recomendado. Um pouco de polpa de ameixa sem caroço não é a principal preocupação, mas os caroços de ameixa são tóxicos para os cães e podem causar engasgamento ou uma obstrução intestinal. Os caules, as folhas e as sementes da ameixeira contêm cianeto.",
     "nl": "Niet aan te raden. Een beetje pruimenvruchtvlees zonder pit is niet het grootste probleem, maar pruimenpitten zijn giftig voor honden en kunnen verstikking of een darmverstopping veroorzaken. De stelen, bladeren en pitten van de pruimenplant bevatten cyanide.",
-    "pl": "Nie zaleca się. Odrobina miąższu śliwki bez pestki nie jest głównym problemem, ale pestki śliwek są toksyczne dla psów i mogą spowodować zadławienie lub niedrożność jelit. Szypułki, liście i nasiona śliwy zawierają cyjanek."
+    "pl": "Nie zaleca się. Odrobina miąższu śliwki bez pestki nie jest głównym problemem, ale pestki śliwek są toksyczne dla psów i mogą spowodować zadławienie lub niedrożność jelit. Szypułki, liście i nasiona śliwy zawierają cyjanek.",
+    "cs": "Nedoporučuje se. Trocha švestkové dužiny bez pecky není hlavní problém, švestkové pecky jsou ale pro psy jedovaté a mohou způsobit dušení nebo ucpání střev. Stopky, listy a semena švestky obsahují kyanid."
   },
   "why": {
     "en": "The plum plant is listed as toxic to dogs because its stems, leaves and seeds contain cyanogenic glycosides. A pit can also be swallowed and get stuck. Some vets allow plum flesh as an occasional treat with the pit removed; because the plant itself is listed as toxic, we use the stricter rating. Prunes are even higher in sugar.",
@@ -55,7 +59,8 @@
     "it": "Il susino è classificato come tossico per i cani perché piccioli, foglie e semi contengono glicosidi cianogenici. Un nocciolo può anche essere ingoiato e restare incastrato. Alcuni veterinari permettono la polpa come premio occasionale, senza nocciolo; poiché la pianta stessa è classificata come tossica, adottiamo la valutazione più prudente. Le prugne secche contengono ancora più zucchero.",
     "pt": "A ameixeira está classificada como tóxica para os cães porque os caules, as folhas e as sementes contêm glicosídeos cianogénicos. Um caroço também pode ser engolido e ficar preso. Alguns veterinários permitem a polpa de ameixa como guloseima ocasional, sem caroço; como a planta em si está classificada como tóxica, usamos a classificação mais rigorosa. As ameixas secas têm ainda mais açúcar.",
     "nl": "De pruimenplant staat te boek als giftig voor honden, omdat de stelen, bladeren en pitten cyanogene glycosiden bevatten. Een pit kan ook worden ingeslikt en vast komen te zitten. Sommige dierenartsen staan pruimenvruchtvlees zonder pit toe als af en toe een snoepje; omdat de plant zelf als giftig staat vermeld, kiezen wij de strengere beoordeling. Gedroogde pruimen bevatten nog meer suiker.",
-    "pl": "Śliwa figuruje na listach roślin toksycznych dla psów, bo jej szypułki, liście i nasiona zawierają glikozydy cyjanogenne. Pies może też połknąć pestkę, a ta może utknąć. Niektórzy weterynarze dopuszczają miąższ śliwki bez pestki jako okazjonalny smakołyk; ponieważ sama roślina figuruje jako toksyczna, przyjmujemy surowszą ocenę. Suszone śliwki zawierają jeszcze więcej cukru."
+    "pl": "Śliwa figuruje na listach roślin toksycznych dla psów, bo jej szypułki, liście i nasiona zawierają glikozydy cyjanogenne. Pies może też połknąć pestkę, a ta może utknąć. Niektórzy weterynarze dopuszczają miąższ śliwki bez pestki jako okazjonalny smakołyk; ponieważ sama roślina figuruje jako toksyczna, przyjmujemy surowszą ocenę. Suszone śliwki zawierają jeszcze więcej cukru.",
+    "cs": "Švestka je vedena jako rostlina jedovatá pro psy, protože její stopky, listy a semena obsahují kyanogenní glykosidy. Pes může pecku také spolknout a ta mu může někde uvíznout. Někteří veterináři povolují švestkovou dužinu bez pecky jako občasný pamlsek; protože je ale samotná rostlina vedena jako jedovatá, používáme přísnější hodnocení. Sušené švestky mají ještě více cukru."
   },
   "signs": {
     "en": [
@@ -102,6 +107,11 @@
       "Zadławienie lub odruchy wymiotne",
       "Objawy niedrożności: powtarzające się wymioty, brak apetytu, zmęczenie",
       "Rozszerzone źrenice, ceglastoczerwone dziąsła, trudności z oddychaniem (cyjanek)"
+    ],
+    "cs": [
+      "Dušení nebo dávení",
+      "Známky ucpání střev: opakované zvracení, nechuť k jídlu, malátnost",
+      "Rozšířené zorničky, cihlově červené dásně, potíže s dýcháním (kyanid)"
     ]
   },
   "what_to_do": {
@@ -113,7 +123,8 @@
     "it": "Se il tuo cane ha mangiato un nocciolo di prugna, contatta subito il veterinario. Annota quando è successo e quanti noccioli ha mangiato.",
     "pt": "Se o teu cão comeu um caroço de ameixa, contacta imediatamente o teu veterinário. Anota quando aconteceu e quantos caroços comeu.",
     "nl": "Heeft je hond een pruimenpit gegeten? Neem dan meteen contact op met je dierenarts. Schrijf op wanneer het gebeurde en hoeveel pitten er zijn gegeten.",
-    "pl": "Jeśli twój pies zjadł pestkę śliwki, od razu skontaktuj się z weterynarzem. Zanotuj, kiedy to się stało i ile pestek zjadł."
+    "pl": "Jeśli twój pies zjadł pestkę śliwki, od razu skontaktuj się z weterynarzem. Zanotuj, kiedy to się stało i ile pestek zjadł.",
+    "cs": "Pokud váš pes snědl švestkovou pecku, okamžitě se obraťte na veterináře. Poznamenejte si, kdy se to stalo a kolik pecek snědl."
   },
   "serving": {
     "en": "If you share any, give only a little fresh flesh with the pit and stem removed. Skip prunes. Check with your vet first.",
@@ -124,7 +135,8 @@
     "it": "Se gliene dai, offri solo un po’ di polpa fresca, senza nocciolo e picciolo. Evita le prugne secche. Chiedi prima al veterinario.",
     "pt": "Se partilhares, dá só um pouco de polpa fresca, sem caroço e sem pé. Evita ameixas secas. Fala primeiro com o teu veterinário.",
     "nl": "Deel je toch iets, geef dan alleen een beetje vers vruchtvlees zonder pit en steel. Sla gedroogde pruimen over. Overleg eerst met je dierenarts.",
-    "pl": "Jeśli już się dzielisz, daj tylko odrobinę świeżego miąższu bez pestki i szypułki. Pomiń suszone śliwki. Najpierw skonsultuj się z weterynarzem."
+    "pl": "Jeśli już się dzielisz, daj tylko odrobinę świeżego miąższu bez pestki i szypułki. Pomiń suszone śliwki. Najpierw skonsultuj się z weterynarzem.",
+    "cs": "Pokud se o švestku rozdělíte, dejte jen trochu čerstvé dužiny bez pecky a stopky. Sušené švestky vynechte. Nejdřív se poraďte s veterinářem."
   },
   "child": {
     "en": "Plum stones are bad for dogs. Never give your dog a plum stone, and ask a grown-up before sharing any plum.",
@@ -135,7 +147,8 @@
     "it": "I noccioli di prugna fanno male ai cani. Non dare mai un nocciolo al tuo cane e chiedi a un adulto prima di dargli un pezzetto di prugna.",
     "pt": "Os caroços de ameixa fazem mal aos cães. Nunca dês um caroço ao teu cão e pergunta a um adulto antes de partilhares ameixa.",
     "nl": "Pruimenpitten zijn slecht voor honden. Geef je hond nooit een pruimenpit, en vraag het eerst aan een volwassene voordat je een stukje pruim deelt.",
-    "pl": "Pestki śliwek szkodzą psom. Nigdy nie dawaj psu pestki i zanim podzielisz się śliwką, zapytaj dorosłego."
+    "pl": "Pestki śliwek szkodzą psom. Nigdy nie dawaj psu pestki i zanim podzielisz się śliwką, zapytaj dorosłego.",
+    "cs": "Švestkové pecky psům škodí. Nikdy psovi pecku nedávej, a než se s ním o švestku rozdělíš, zeptej se dospělého."
   },
   "faq": [
     {
@@ -148,7 +161,8 @@
         "it": "Le prugne secche vanno bene per i cani?",
         "pt": "As ameixas secas podem ser dadas aos cães?",
         "nl": "Zijn gedroogde pruimen oké voor honden?",
-        "pl": "Czy suszone śliwki są w porządku dla psów?"
+        "pl": "Czy suszone śliwki są w porządku dla psów?",
+        "cs": "Mohou psi jíst sušené švestky?"
       },
       "a": {
         "en": "Prunes are even higher in sugar than fresh plums, so they are not a great option for dogs.",
@@ -159,7 +173,8 @@
         "it": "Le prugne secche contengono ancora più zucchero di quelle fresche, quindi non sono una buona scelta per i cani.",
         "pt": "As ameixas secas têm ainda mais açúcar do que as frescas, por isso não são uma boa opção para os cães.",
         "nl": "Gedroogde pruimen bevatten nog meer suiker dan verse pruimen, dus ze zijn geen goede keuze voor honden.",
-        "pl": "Suszone śliwki zawierają jeszcze więcej cukru niż świeże, więc nie są dobrym wyborem dla psów."
+        "pl": "Suszone śliwki zawierają jeszcze więcej cukru niż świeże, więc nie są dobrym wyborem dla psów.",
+        "cs": "Sušené švestky mají ještě více cukru než čerstvé, takže pro psy nejsou dobrou volbou."
       }
     }
   ],
@@ -269,6 +284,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "18f7a7f62972d8629764836797e6536e579f043ed5fc1ac81b1fd91976b70bcc"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fdd9850a048e10e553f1f99f69ead203db71b8314a564315551be867aa5c56ce"
     }
   }
 }

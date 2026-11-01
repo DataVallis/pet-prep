@@ -10,7 +10,8 @@
     "it": "Tacchino",
     "pt": "Peru",
     "nl": "Kalkoen",
-    "pl": "Indyk"
+    "pl": "Indyk",
+    "cs": "Krůtí maso"
   },
   "question": {
     "en": "Can dogs eat turkey?",
@@ -21,7 +22,8 @@
     "it": "I cani possono mangiare il tacchino?",
     "pt": "Os cães podem comer peru?",
     "nl": "Mogen honden kalkoen eten?",
-    "pl": "Czy psy mogą jeść indyka?"
+    "pl": "Czy psy mogą jeść indyka?",
+    "cs": "Mohou psi jíst krůtí maso?"
   },
   "url_slug": {
     "en": "turkey",
@@ -32,7 +34,8 @@
     "it": "tacchino",
     "pt": "peru",
     "nl": "kalkoen",
-    "pl": "indyk"
+    "pl": "indyk",
+    "cs": "kruti-maso"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "Sì, un po’ di carne di tacchino cotta e semplice è sicura per la maggior parte dei cani. Prima togli la pelle, il grasso in eccesso e tutte le ossa. Il tacchino cucinato con condimenti, cipolla o aglio, il sugo a base di cipolla e il ripieno non sono per i cani.",
     "pt": "Sim, um pouco de carne de peru cozinhada e simples é segura para a maioria dos cães. Tira primeiro a pele, o excesso de gordura e todos os ossos. O peru cozinhado com temperos, cebola ou alho, e o molho de cebola ou o recheio, não são para cães.",
     "nl": "Ja, een beetje gewoon gekookt kalkoenvlees is veilig voor de meeste honden. Haal eerst het vel, overtollig vet en alle botten eraf. Kalkoen bereid met kruiden, ui of knoflook, en jus met ui of vulling zijn niet voor honden.",
-    "pl": "Tak, odrobina zwykłego gotowanego mięsa z indyka jest bezpieczna dla większości psów. Najpierw usuń skórę, nadmiar tłuszczu i wszystkie kości. Indyk przygotowany z przyprawami, cebulą lub czosnkiem, a także sos cebulowy czy nadzienie nie są dla psów."
+    "pl": "Tak, odrobina zwykłego gotowanego mięsa z indyka jest bezpieczna dla większości psów. Najpierw usuń skórę, nadmiar tłuszczu i wszystkie kości. Indyk przygotowany z przyprawami, cebulą lub czosnkiem, a także sos cebulowy czy nadzienie nie są dla psów.",
+    "cs": "Ano, trocha obyčejného tepelně upraveného krůtího masa je pro většinu psů bezpečná. Nejdřív odstraňte kůži, přebytečný tuk a všechny kosti. Krůtí maso s kořením, cibulí nebo česnekem, cibulová omáčka ani nádivka pro psy nejsou."
   },
   "why": {
     "en": "Turkey isn't toxic, but how it is cooked matters. Skin and fat are rich and can cause pancreatitis, while extra seasonings can irritate a dog's stomach. Onions and garlic can be toxic to dogs. Cooked poultry bones are brittle and can splinter. White meat is leaner than dark meat.",
@@ -55,7 +59,8 @@
     "it": "Il tacchino non è tossico, ma conta come viene cucinato. Pelle e grasso sono pesanti e possono causare una pancreatite, mentre i condimenti in più possono irritare lo stomaco del cane. Cipolla e aglio possono essere tossici per i cani. Le ossa cotte del pollame sono fragili e possono scheggiarsi. La carne bianca è più magra di quella scura.",
     "pt": "O peru não é tóxico, mas a forma como é cozinhado faz diferença. A pele e a gordura são pesadas e podem causar pancreatite, e os temperos a mais podem irritar o estômago do cão. A cebola e o alho podem ser tóxicos para os cães. Os ossos de aves cozinhados são quebradiços e podem lascar. A carne branca é mais magra do que a carne escura.",
     "nl": "Kalkoen is niet giftig, maar de bereiding doet ertoe. Vel en vet zijn zwaar en kunnen alvleesklierontsteking veroorzaken, terwijl extra kruiden de maag van een hond kunnen irriteren. Ui en knoflook kunnen giftig zijn voor honden. Gekookte botten van gevogelte zijn broos en kunnen splinteren. Wit vlees is magerder dan donker vlees.",
-    "pl": "Indyk nie jest toksyczny, ale ważne jest, jak został przygotowany. Skóra i tłuszcz są ciężkostrawne i mogą wywołać zapalenie trzustki, a dodatkowe przyprawy mogą podrażnić żołądek psa. Cebula i czosnek mogą być toksyczne dla psów. Gotowane kości drobiowe są kruche i mogą łamać się na odłamki. Białe mięso jest chudsze niż ciemne."
+    "pl": "Indyk nie jest toksyczny, ale ważne jest, jak został przygotowany. Skóra i tłuszcz są ciężkostrawne i mogą wywołać zapalenie trzustki, a dodatkowe przyprawy mogą podrażnić żołądek psa. Cebula i czosnek mogą być toksyczne dla psów. Gotowane kości drobiowe są kruche i mogą łamać się na odłamki. Białe mięso jest chudsze niż ciemne.",
+    "cs": "Krůtí maso není jedovaté, záleží ale na tom, jak je připravené. Kůže a tuk jsou těžké a mohou způsobit zánět slinivky břišní, zatímco koření navíc může podráždit psí žaludek. Cibule a česnek mohou být pro psy jedovaté. Tepelně upravené drůbeží kosti jsou křehké a mohou se tříštit. Bílé maso je libovější než tmavé."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "it": "Se il tuo cane ha mangiato pelle di tacchino, avanzi grassi o carne condita, nei giorni successivi controlla se compaiono vomito, diarrea o mal di pancia e chiama il veterinario se compaiono. Se ha mangiato ossa o cibo con cipolla o aglio, chiama subito il veterinario.",
     "pt": "Se o teu cão comeu pele de peru, restos gordos ou carne temperada, vigia nos dias seguintes se há vómitos, diarreia ou dor de barriga e liga ao teu veterinário se surgirem. Se comeu ossos ou comida com cebola ou alho, liga imediatamente ao teu veterinário.",
     "nl": "Heeft je hond kalkoenvel, vette restjes of gekruid vlees gegeten? Let dan de komende dagen op braken, diarree of buikpijn en bel je dierenarts als die optreden. Heeft hij botten of eten met ui of knoflook gegeten, bel je dierenarts dan meteen.",
-    "pl": "Jeśli twój pies zjadł skórę z indyka, tłuste resztki lub przyprawione mięso, przez kilka kolejnych dni obserwuj, czy nie pojawiają się wymioty, biegunka lub ból brzucha, i zadzwoń do weterynarza, jeśli wystąpią. Jeśli zjadł kości lub jedzenie z cebulą lub czosnkiem, od razu zadzwoń do weterynarza."
+    "pl": "Jeśli twój pies zjadł skórę z indyka, tłuste resztki lub przyprawione mięso, przez kilka kolejnych dni obserwuj, czy nie pojawiają się wymioty, biegunka lub ból brzucha, i zadzwoń do weterynarza, jeśli wystąpią. Jeśli zjadł kości lub jedzenie z cebulą lub czosnkiem, od razu zadzwoń do weterynarza.",
+    "cs": "Pokud váš pes snědl krůtí kůži, tučné zbytky nebo kořeněné maso, sledujte v následujících dnech, zda nezvrací, nemá průjem nebo bolesti břicha, a pokud se tyto potíže objeví, zavolejte veterináři. Pokud snědl kosti nebo jídlo s cibulí či česnekem, zavolejte veterináři hned."
   },
   "serving": {
     "en": "Plain cooked turkey meat, ideally white meat, with no skin, excess fat or bones, no seasoning; a small amount.",
@@ -78,7 +84,8 @@
     "it": "Carne di tacchino cotta e semplice, meglio se bianca, senza pelle, grasso in eccesso né ossa, senza condimenti; in piccola quantità.",
     "pt": "Carne de peru cozinhada e simples, de preferência carne branca, sem pele, sem excesso de gordura nem ossos, sem temperos; uma pequena quantidade.",
     "nl": "Gewoon gekookt kalkoenvlees, bij voorkeur wit vlees, zonder vel, overtollig vet of botten, zonder kruiden; een kleine hoeveelheid.",
-    "pl": "Zwykłe gotowane mięso z indyka, najlepiej białe, bez skóry, nadmiaru tłuszczu i kości, bez przypraw; w małej ilości."
+    "pl": "Zwykłe gotowane mięso z indyka, najlepiej białe, bez skóry, nadmiaru tłuszczu i kości, bez przypraw; w małej ilości.",
+    "cs": "Obyčejné tepelně upravené krůtí maso, ideálně bílé, bez kůže, přebytečného tuku a kostí, bez koření; malé množství."
   },
   "child": {
     "en": "A little plain turkey with no skin or bones is a nice dog treat. Turkey bones are never for dogs.",
@@ -89,7 +96,8 @@
     "it": "Un po’ di tacchino semplice, senza pelle né ossa, è un bel premio per un cane. Le ossa di tacchino non sono mai per i cani.",
     "pt": "Um pouco de peru simples, sem pele e sem ossos, é uma boa guloseima para cães. Os ossos de peru nunca são para cães.",
     "nl": "Een beetje gewone kalkoen zonder vel of botten is een lekker hondensnoepje. Kalkoenbotten zijn nooit voor honden.",
-    "pl": "Odrobina zwykłego indyka bez skóry i kości to miły smakołyk dla psa. Kości indyka nigdy nie są dla psów."
+    "pl": "Odrobina zwykłego indyka bez skóry i kości to miły smakołyk dla psa. Kości indyka nigdy nie są dla psów.",
+    "cs": "Kousek obyčejného krůtího masa bez kůže a kostí je pro psa fajn pamlsek. Krůtí kosti ale pes nesmí dostat nikdy."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "it": "Posso dare al mio cane gli avanzi del tacchino delle feste?",
         "pt": "Posso dar ao meu cão restos do peru das festas?",
         "nl": "Mag ik mijn hond restjes van de feestkalkoen geven?",
-        "pl": "Czy mogę dać psu resztki świątecznego indyka?"
+        "pl": "Czy mogę dać psu resztki świątecznego indyka?",
+        "cs": "Mohu psovi dát zbytky ze sváteční krůty?"
       },
       "a": {
         "en": "Only plain meat without skin or bones. Keep stuffing and onion-based gravy away from your dog.",
@@ -113,7 +122,8 @@
         "it": "Solo carne semplice, senza pelle né ossa. Tieni il ripieno e il sugo a base di cipolla lontani dal tuo cane.",
         "pt": "Só carne simples, sem pele nem ossos. Mantém o recheio e o molho à base de cebola longe do teu cão.",
         "nl": "Alleen gewoon vlees zonder vel of botten. Houd vulling en jus op basis van ui uit de buurt van je hond.",
-        "pl": "Tylko zwykłe mięso bez skóry i kości. Nadzienie i sos na bazie cebuli trzymaj z dala od psa."
+        "pl": "Tylko zwykłe mięso bez skóry i kości. Nadzienie i sos na bazie cebuli trzymaj z dala od psa.",
+        "cs": "Jen obyčejné maso bez kůže a kostí. Nádivku a cibulovou omáčku držte od psa dál."
       }
     }
   ],
@@ -229,6 +239,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "66bc061884861c92d924c086e6df0e6929a663a0df26949233c0fef4d71deed8"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "012d2667c168322061978707485eda9c7ce7e8b438e5f54b83b44b686810fe90"
     }
   }
 }

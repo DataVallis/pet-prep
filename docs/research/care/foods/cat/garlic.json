@@ -10,7 +10,8 @@
     "it": "Aglio",
     "pt": "Alho",
     "nl": "Knoflook",
-    "pl": "Czosnek"
+    "pl": "Czosnek",
+    "cs": "Česnek"
   },
   "question": {
     "en": "Can cats eat garlic?",
@@ -21,7 +22,8 @@
     "it": "I gatti possono mangiare l’aglio?",
     "pt": "Os gatos podem comer alho?",
     "nl": "Mogen katten knoflook eten?",
-    "pl": "Czy koty mogą jeść czosnek?"
+    "pl": "Czy koty mogą jeść czosnek?",
+    "cs": "Mohou kočky jíst česnek?"
   },
   "url_slug": {
     "en": "garlic",
@@ -32,7 +34,8 @@
     "it": "aglio",
     "pt": "alho",
     "nl": "knoflook",
-    "pl": "czosnek"
+    "pl": "czosnek",
+    "cs": "cesnek"
   },
   "level": "toxic",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "No. L’aglio è tossico per i gatti ed è, per loro, il membro più tossico della famiglia della cipolla. L’aglio, crudo, cotto, essiccato o in polvere, può danneggiare i globuli rossi e causare anemia. Chiama il veterinario se il tuo gatto ne mangia.",
     "pt": "Não. O alho é tóxico para os gatos e, para eles, é o membro mais tóxico da família da cebola. O alho cru, cozinhado, seco e em pó pode danificar os glóbulos vermelhos e causar anemia. Liga ao teu veterinário se o teu gato comer algum.",
     "nl": "Nee. Knoflook is giftig voor katten en voor hen het giftigste lid van de uienfamilie. Rauwe, gekookte, gedroogde en gemalen knoflook kunnen allemaal rode bloedcellen beschadigen en bloedarmoede veroorzaken. Bel je dierenarts als je kat er iets van eet.",
-    "pl": "Nie. Czosnek jest dla kotów toksyczny – to najbardziej toksyczny dla nich przedstawiciel rodziny cebulowatych. Czosnek surowy, gotowany, suszony i w proszku może uszkadzać czerwone krwinki i wywołać anemię. Zadzwoń do weterynarza, jeśli kot zje choć trochę."
+    "pl": "Nie. Czosnek jest dla kotów toksyczny – to najbardziej toksyczny dla nich przedstawiciel rodziny cebulowatych. Czosnek surowy, gotowany, suszony i w proszku może uszkadzać czerwone krwinki i wywołać anemię. Zadzwoń do weterynarza, jeśli kot zje choć trochę.",
+    "cs": "Ne. Česnek je pro kočky toxický a ze všech cibulovin (rod Allium) je pro ně nejtoxičtější. Syrový, tepelně upravený, sušený i práškový česnek může poškodit červené krvinky a způsobit chudokrevnost (anémii). Pokud ho kočka sní, zavolejte veterináři."
   },
   "why": {
     "en": "Garlic belongs to the allium family (the onion family). Alliums damage red blood cells and can lead to anaemia, and they also irritate the stomach and gut. Cats are the most sensitive species. All forms are poisonous to cats — raw, cooked, dried, powdered and liquid. Of the alliums, garlic is the most toxic for cats.",
@@ -55,7 +59,8 @@
     "it": "L’aglio appartiene al genere Allium (la famiglia della cipolla). Le piante di questo genere danneggiano i globuli rossi, possono portare all’anemia e irritano anche stomaco e intestino. I gatti sono la specie più sensibile. Tutte le forme sono velenose per i gatti: crudo, cotto, essiccato, in polvere e liquido. Tra le piante di questo genere, l’aglio è la più tossica per i gatti.",
     "pt": "O alho pertence à família das aliáceas (a família da cebola). As aliáceas danificam os glóbulos vermelhos e podem levar a anemia, e também irritam o estômago e o intestino. Os gatos são a espécie mais sensível. Todas as formas são venenosas para gatos – cruas, cozinhadas, secas, em pó e líquidas. Das aliáceas, o alho é a mais tóxica para os gatos.",
     "nl": "Knoflook hoort bij de alliumfamilie (de uienfamilie). Alliums beschadigen rode bloedcellen en kunnen tot bloedarmoede leiden, en ze irriteren ook de maag en darmen. Katten zijn de gevoeligste diersoort. Alle vormen zijn giftig voor katten – rauw, gekookt, gedroogd, in poedervorm en vloeibaar. Van alle alliums is knoflook het giftigst voor katten.",
-    "pl": "Czosnek należy do roślin z rodzaju Allium, czyli z rodziny cebulowatych. Rośliny z tego rodzaju uszkadzają czerwone krwinki, mogą prowadzić do anemii, a do tego podrażniają żołądek i jelita. Koty są gatunkiem najbardziej wrażliwym. Każda postać jest dla kotów trująca – surowa, gotowana, suszona, sproszkowana i płynna. Spośród tych roślin czosnek jest dla kotów najbardziej toksyczny."
+    "pl": "Czosnek należy do roślin z rodzaju Allium, czyli z rodziny cebulowatych. Rośliny z tego rodzaju uszkadzają czerwone krwinki, mogą prowadzić do anemii, a do tego podrażniają żołądek i jelita. Koty są gatunkiem najbardziej wrażliwym. Każda postać jest dla kotów trująca – surowa, gotowana, suszona, sproszkowana i płynna. Spośród tych roślin czosnek jest dla kotów najbardziej toksyczny.",
+    "cs": "Česnek patří mezi cibuloviny (rod Allium). Cibuloviny poškozují červené krvinky, mohou vést k chudokrevnosti a navíc dráždí žaludek a střeva. Kočky jsou ze všech druhů zvířat nejcitlivější. Pro kočky jsou jedovaté všechny formy – syrová, tepelně upravená, sušená, v prášku i tekutá. Ze všech cibulovin je pro kočky nejtoxičtější právě česnek."
   },
   "signs": {
     "en": [
@@ -138,6 +143,15 @@
       "Blade dziąsła",
       "Mocz zabarwiony na czerwono",
       "Szybszy lub cięższy oddech"
+    ],
+    "cs": [
+      "Zvracení",
+      "Průjem",
+      "Snížená chuť k jídlu",
+      "Slabost",
+      "Bledé dásně",
+      "Červeně zbarvená moč",
+      "Zrychlené nebo namáhavé dýchání"
     ]
   },
   "what_to_do": {
@@ -149,7 +163,8 @@
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario, anche se il tuo gatto sembra stare bene: i sintomi dell’anemia possono impiegare diversi giorni a manifestarsi. Annota che cosa ha mangiato (crudo, cotto, in polvere o in un piatto che lo conteneva), quanto e quando. Non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, mesmo que o teu gato pareça bem – os sinais de anemia podem demorar vários dias a aparecer. Toma nota do que o teu gato comeu (cru, cozinhado, em pó ou num prato que o continha), da quantidade e de quando. Não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als je kat er gezond uitziet – verschijnselen van bloedarmoede kunnen een paar dagen op zich laten wachten. Schrijf op wat je kat heeft gegeten (rauw, gekookt, als poeder of in een gerecht), hoeveel en wanneer. Probeer je kat niet zelf thuis te laten braken.",
-    "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, nawet jeśli kot wygląda na zdrowego – objawy anemii mogą się pojawić dopiero po kilku dniach. Zapisz, co zjadł twój kot (surowy, gotowany, w proszku czy w potrawie), ile i kiedy. Nie próbuj wywoływać u kota wymiotów w domu."
+    "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, nawet jeśli kot wygląda na zdrowego – objawy anemii mogą się pojawić dopiero po kilku dniach. Zapisz, co zjadł twój kot (surowy, gotowany, w proszku czy w potrawie), ile i kiedy. Nie próbuj wywoływać u kota wymiotów w domu.",
+    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, i když se kočka zdá v pořádku – příznaky chudokrevnosti se mohou projevit až po několika dnech. Poznamenejte si, co kočka snědla (syrový česnek, tepelně upravený, v prášku nebo pokrm, který ho obsahoval), kolik a kdy. Nesnažte se u kočky doma vyvolat zvracení."
   },
   "serving": null,
   "child": {
@@ -161,7 +176,8 @@
     "it": "Per noi l’aglio ha un odore forte, e per i gatti non è sicuro. Tienilo lontano dal micio e avvisa un adulto se ne mangia.",
     "pt": "Para nós, o alho tem um cheiro forte, mas não é seguro para gatos. Mantém a comida com alho longe do gatinho e avisa um adulto se ele a comer.",
     "nl": "Knoflook ruikt voor ons sterk en is niet veilig voor katten. Houd eten met knoflook weg bij je poes. Eet ze ervan? Vertel het meteen aan een volwassene.",
-    "pl": "Dla nas czosnek mocno pachnie, a dla kotów nie jest bezpieczny. Trzymaj jedzenie z czosnkiem z dala od kotka i powiedz dorosłemu, jeśli kotek trochę zje."
+    "pl": "Dla nas czosnek mocno pachnie, a dla kotów nie jest bezpieczny. Trzymaj jedzenie z czosnkiem z dala od kotka i powiedz dorosłemu, jeśli kotek trochę zje.",
+    "cs": "Česnek je cítit hodně silně a pro kočky není bezpečný. Jídlo s česnekem drž od kočičky dál, a když nějaké sní, řekni to dospělému."
   },
   "faq": [
     {
@@ -174,7 +190,8 @@
         "it": "L’aglio cotto o in polvere è sicuro per i gatti?",
         "pt": "O alho cozinhado ou em pó é seguro para gatos?",
         "nl": "Is gekookte of gemalen knoflook veilig voor katten?",
-        "pl": "Czy gotowany lub sproszkowany czosnek jest bezpieczny dla kotów?"
+        "pl": "Czy gotowany lub sproszkowany czosnek jest bezpieczny dla kotów?",
+        "cs": "Je tepelně upravený nebo práškový česnek pro kočky bezpečný?"
       },
       "a": {
         "en": "No. All forms are poisonous to cats, including raw, cooked, dried, powdered and liquid garlic. Be careful with leftovers, sauces, soups and gravy that may contain it.",
@@ -185,7 +202,8 @@
         "it": "No. Tutte le forme sono velenose per i gatti, compreso l’aglio crudo, cotto, essiccato, in polvere e liquido. Fai attenzione ad avanzi, salse, zuppe e sughi che potrebbero contenerlo.",
         "pt": "Não. Todas as formas são venenosas para gatos, incluindo o alho cru, cozinhado, seco, em pó e líquido. Tem cuidado com restos de comida, molhos, sopas e molho de assado que o possam conter.",
         "nl": "Nee. Alle vormen zijn giftig voor katten, ook rauwe, gekookte, gedroogde, gemalen en vloeibare knoflook. Wees voorzichtig met restjes, sauzen, soepen en jus waar het in kan zitten.",
-        "pl": "Nie. Każda postać jest dla kotów trująca, także czosnek surowy, gotowany, suszony, w proszku i w płynie. Uważaj na resztki jedzenia, sosy, zupy i sos pieczeniowy, które mogą go zawierać."
+        "pl": "Nie. Każda postać jest dla kotów trująca, także czosnek surowy, gotowany, suszony, w proszku i w płynie. Uważaj na resztki jedzenia, sosy, zupy i sos pieczeniowy, które mogą go zawierać.",
+        "cs": "Ne. Pro kočky jsou jedovaté všechny formy, včetně syrového, tepelně upraveného, sušeného, práškového a tekutého česneku. Dávejte pozor na zbytky jídla, omáčky, polévky a šťávy z masa, které ho mohou obsahovat."
       }
     },
     {
@@ -198,7 +216,8 @@
         "it": "L’aglio serve a tenere lontane le pulci?",
         "pt": "O alho serve para afastar as pulgas?",
         "nl": "Helpt knoflook tegen vlooien?",
-        "pl": "Czy czosnek pomaga odstraszać pchły?"
+        "pl": "Czy czosnek pomaga odstraszać pchły?",
+        "cs": "Pomáhá česnek proti blechám?"
       },
       "a": {
         "en": "Don't give garlic to your cat for any reason. All forms are poisonous to cats, and Blue Cross notes there is also concern that long-term use of garlic may cause problems. Ask your vet about safe flea treatment.",
@@ -209,7 +228,8 @@
         "it": "Non dare aglio al tuo gatto per nessun motivo. Tutte le forme sono velenose per i gatti, e Blue Cross osserva che si teme anche che l’uso prolungato di aglio possa causare problemi. Chiedi al veterinario un trattamento antipulci sicuro.",
         "pt": "Não dês alho ao teu gato por nenhum motivo. Todas as formas são venenosas para gatos, e a Blue Cross refere que também há a preocupação de que o uso prolongado de alho possa causar problemas. Pede ao teu veterinário um tratamento seguro contra as pulgas.",
         "nl": "Geef je kat om geen enkele reden knoflook. Alle vormen zijn giftig voor katten, en Blue Cross wijst erop dat er ook zorgen zijn dat langdurig gebruik van knoflook problemen kan geven. Vraag je dierenarts naar een veilige vlooienbehandeling.",
-        "pl": "Nie dawaj kotu czosnku z żadnego powodu. Każda jego postać jest dla kotów trująca, a Blue Cross zwraca uwagę, że są też obawy, iż długotrwałe stosowanie czosnku może powodować problemy. Zapytaj weterynarza o bezpieczne środki na pchły."
+        "pl": "Nie dawaj kotu czosnku z żadnego powodu. Każda jego postać jest dla kotów trująca, a Blue Cross zwraca uwagę, że są też obawy, iż długotrwałe stosowanie czosnku może powodować problemy. Zapytaj weterynarza o bezpieczne środki na pchły.",
+        "cs": "Nedávejte kočce česnek z žádného důvodu. Pro kočky jsou jedovaté všechny jeho formy a Blue Cross upozorňuje, že existují i obavy, že dlouhodobé užívání česneku může způsobit potíže. Na bezpečnou ochranu proti blechám se zeptejte veterináře."
       }
     }
   ],
@@ -350,6 +370,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7f61c33a065e1ae9274a7fb95d6f056cd78e779c588bb93b4da04576123202c8"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ba289a53f84f08065d4866b89ba253d98466e9d0e5cd9f9e0c46f0df901d58d1"
     }
   }
 }

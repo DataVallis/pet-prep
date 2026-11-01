@@ -10,7 +10,8 @@
     "it": "Avocado",
     "pt": "Abacate",
     "nl": "Avocado",
-    "pl": "Awokado"
+    "pl": "Awokado",
+    "cs": "Avokádo"
   },
   "question": {
     "en": "Can cats eat avocado?",
@@ -21,7 +22,8 @@
     "it": "I gatti possono mangiare l’avocado?",
     "pt": "Os gatos podem comer abacate?",
     "nl": "Mogen katten avocado eten?",
-    "pl": "Czy koty mogą jeść awokado?"
+    "pl": "Czy koty mogą jeść awokado?",
+    "cs": "Mohou kočky jíst avokádo?"
   },
   "url_slug": {
     "en": "avocado",
@@ -32,7 +34,8 @@
     "it": "avocado",
     "pt": "abacate",
     "nl": "avocado",
-    "pl": "awokado"
+    "pl": "awokado",
+    "cs": "avokado"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "Meglio di no. L’avocado è molto grasso e contiene una tossina chiamata persina, e secondo Cats Protection mangiarne in grandi quantità può causare problemi di salute ai gatti. L’avocado è pericoloso soprattutto per uccelli, cavalli e alcuni altri animali, ma non è comunque un buon alimento per i gatti.",
     "pt": "É melhor não. O abacate é rico em gordura e contém uma toxina chamada persina, e a Cats Protection diz que comer muito pode causar problemas de saúde aos gatos. O abacate é perigoso sobretudo para aves, cavalos e alguns outros animais, mas, mesmo assim, não é um bom alimento para gatos.",
     "nl": "Liever niet. Avocado bevat veel vet en een gifstof die persine heet, en volgens Cats Protection kan het eten van een grote hoeveelheid gezondheidsproblemen geven bij katten. Avocado is vooral gevaarlijk voor vogels, paarden en sommige andere dieren, maar het is ook geen goed voedsel voor katten.",
-    "pl": "Lepiej nie. Awokado jest bardzo tłuste i zawiera toksynę o nazwie persyna, a według Cats Protection zjedzenie go w dużej ilości może wywołać u kota problemy zdrowotne. Awokado jest groźne głównie dla ptaków, koni i niektórych innych zwierząt, ale i tak nie jest dobrym pokarmem dla kotów."
+    "pl": "Lepiej nie. Awokado jest bardzo tłuste i zawiera toksynę o nazwie persyna, a według Cats Protection zjedzenie go w dużej ilości może wywołać u kota problemy zdrowotne. Awokado jest groźne głównie dla ptaków, koni i niektórych innych zwierząt, ale i tak nie jest dobrym pokarmem dla kotów.",
+    "cs": "Raději ne. Avokádo má vysoký obsah tuku a obsahuje toxin zvaný persin; podle Cats Protection může kočkám způsobit zdravotní potíže, pokud ho snědí hodně. Avokádo je nebezpečné hlavně pro ptáky, koně a některá další zvířata, ani pro kočky to ale není vhodné jídlo."
   },
   "why": {
     "en": "Sources disagree. Cats Protection lists avocado among foods toxic to cats because of its high fat content and persin, with problems when large amounts are eaten. The ASPCA plant database lists avocado as toxic to horses only and says it is mainly a problem for birds, rabbits, horses and ruminants. We use the stricter view and do not recommend it.",
@@ -55,7 +59,8 @@
     "it": "Le fonti non sono concordi. Cats Protection inserisce l’avocado tra gli alimenti tossici per i gatti per via dell’elevato contenuto di grassi e della persina, con problemi quando se ne mangiano grandi quantità. Il database delle piante dell’ASPCA lo indica come tossico solo per i cavalli e spiega che è un problema soprattutto per uccelli, conigli, cavalli e ruminanti. Adottiamo la posizione più prudente e lo sconsigliamo.",
     "pt": "As fontes não estão de acordo. A Cats Protection inclui o abacate entre os alimentos tóxicos para gatos por causa do elevado teor de gordura e da persina, com problemas quando é comido em grande quantidade. A base de dados de plantas da ASPCA indica o abacate como tóxico apenas para cavalos e diz que é sobretudo um problema para aves, coelhos, cavalos e ruminantes. Seguimos a posição mais rigorosa e não o recomendamos.",
     "nl": "De bronnen zijn het niet met elkaar eens. Cats Protection noemt avocado bij de voedingsmiddelen die giftig zijn voor katten, vanwege het hoge vetgehalte en persine, met problemen als er veel van wordt gegeten. De plantendatabase van de ASPCA noemt avocado alleen giftig voor paarden en zegt dat het vooral een probleem is voor vogels, konijnen, paarden en herkauwers. Wij volgen de strengste lijn en raden het af.",
-    "pl": "Źródła się różnią. Cats Protection wymienia awokado wśród pokarmów toksycznych dla kotów ze względu na wysoką zawartość tłuszczu i persynę, przy czym problemy pojawiają się po zjedzeniu dużych ilości. Baza roślin ASPCA podaje awokado jako toksyczne tylko dla koni i pisze, że jest problemem głównie dla ptaków, królików, koni i przeżuwaczy. Przyjmujemy surowszą ocenę i go nie zalecamy."
+    "pl": "Źródła się różnią. Cats Protection wymienia awokado wśród pokarmów toksycznych dla kotów ze względu na wysoką zawartość tłuszczu i persynę, przy czym problemy pojawiają się po zjedzeniu dużych ilości. Baza roślin ASPCA podaje awokado jako toksyczne tylko dla koni i pisze, że jest problemem głównie dla ptaków, królików, koni i przeżuwaczy. Przyjmujemy surowszą ocenę i go nie zalecamy.",
+    "cs": "Zdroje se rozcházejí. Cats Protection řadí avokádo mezi potraviny toxické pro kočky kvůli vysokému obsahu tuku a persinu, přičemž potíže nastávají při snědení velkého množství. Rostlinná databáze ASPCA uvádí avokádo jako toxické pouze pro koně a píše, že je problémem hlavně pro ptáky, králíky, koně a přežvýkavce. Držíme se přísnějšího pohledu a nedoporučujeme ho."
   },
   "signs": {
     "en": [
@@ -84,6 +89,9 @@
     ],
     "pl": [
       "Jakiekolwiek objawy złego samopoczucia po zjedzeniu dużej ilości (nasze źródła nie podają konkretnych objawów u kotów)"
+    ],
+    "cs": [
+      "Jakékoli známky toho, že je kočce po snědení většího množství špatně (naše zdroje neuvádějí konkrétní příznaky u koček)"
     ]
   },
   "what_to_do": {
@@ -95,7 +103,8 @@
     "it": "Se il tuo gatto ha mangiato dell’avocado, chiedi consiglio al veterinario, soprattutto se ne ha mangiato molto o sembra stare male. Annota quanto ne ha mangiato e quando.",
     "pt": "Se o teu gato comeu abacate, contacta o teu veterinário para pedir conselho, sobretudo se comeu muito ou parece doente. Toma nota da quantidade que o teu gato comeu e de quando.",
     "nl": "Heeft je kat avocado gegeten? Vraag je dierenarts om advies, zeker als het om een grote hoeveelheid ging of je kat ziek lijkt. Schrijf op hoeveel je kat heeft gegeten en wanneer.",
-    "pl": "Jeśli twój kot zjadł awokado, poradź się weterynarza, zwłaszcza jeśli zjadł dużo lub źle się czuje. Zapisz, ile zjadł i kiedy."
+    "pl": "Jeśli twój kot zjadł awokado, poradź się weterynarza, zwłaszcza jeśli zjadł dużo lub źle się czuje. Zapisz, ile zjadł i kiedy.",
+    "cs": "Pokud kočka snědla avokádo, poraďte se s veterinářem, zejména pokud ho snědla hodně nebo se zdá, že jí není dobře. Poznamenejte si, kolik ho kočka snědla a kdy."
   },
   "serving": null,
   "child": {
@@ -107,7 +116,8 @@
     "it": "L’avocado è un cibo per le persone. È troppo grasso per i gatti, quindi dai al micio i suoi premi per gatti.",
     "pt": "O abacate é comida de pessoas. Tem demasiada gordura para gatos, por isso dá ao gatinho as guloseimas próprias para gatos.",
     "nl": "Avocado is eten voor mensen. Het is te vet voor katten, dus geef je poes liever haar eigen kattensnoepjes.",
-    "pl": "Awokado to jedzenie dla ludzi. Jest za tłuste dla kotów, więc daj kotkowi jego własne kocie smakołyki."
+    "pl": "Awokado to jedzenie dla ludzi. Jest za tłuste dla kotów, więc daj kotkowi jego własne kocie smakołyki.",
+    "cs": "Avokádo je jídlo pro lidi. Pro kočky je moc tučné, tak dej kočičce radši její vlastní kočičí pamlsky."
   },
   "faq": [
     {
@@ -120,7 +130,8 @@
         "it": "L’avocado è velenoso per i gatti come per gli uccelli?",
         "pt": "O abacate é venenoso para os gatos como é para as aves?",
         "nl": "Is avocado net zo giftig voor katten als voor vogels?",
-        "pl": "Czy awokado jest dla kotów tak samo trujące jak dla ptaków?"
+        "pl": "Czy awokado jest dla kotów tak samo trujące jak dla ptaków?",
+        "cs": "Je avokádo pro kočky jedovaté stejně jako pro ptáky?"
       },
       "a": {
         "en": "The ASPCA says avocado is primarily a problem for birds, rabbits, donkeys, horses and ruminants. Cats Protection still advises against it for cats because of its fat and persin.",
@@ -131,7 +142,8 @@
         "it": "Secondo l’ASPCA l’avocado è un problema soprattutto per uccelli, conigli, asini, cavalli e ruminanti. Cats Protection lo sconsiglia comunque per i gatti a causa dei grassi e della persina.",
         "pt": "A ASPCA diz que o abacate é sobretudo um problema para aves, coelhos, burros, cavalos e ruminantes. Mesmo assim, a Cats Protection desaconselha-o para gatos por causa da gordura e da persina.",
         "nl": "Volgens de ASPCA is avocado vooral een probleem voor vogels, konijnen, ezels, paarden en herkauwers. Cats Protection raadt het voor katten toch af, vanwege het vet en de persine.",
-        "pl": "ASPCA podaje, że awokado jest problemem przede wszystkim dla ptaków, królików, osłów, koni i przeżuwaczy. Cats Protection mimo to odradza je kotom ze względu na tłuszcz i persynę."
+        "pl": "ASPCA podaje, że awokado jest problemem przede wszystkim dla ptaków, królików, osłów, koni i przeżuwaczy. Cats Protection mimo to odradza je kotom ze względu na tłuszcz i persynę.",
+        "cs": "Podle ASPCA je avokádo problémem především pro ptáky, králíky, osly, koně a přežvýkavce. Cats Protection ho přesto kočkám nedoporučuje kvůli tuku a persinu."
       }
     }
   ],
@@ -212,6 +224,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "aa1f100fbfb674247481fd1f181f5fb211b1c196dab621358cb750334c76ac29"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "00e48fbfe51f437b157a41284b52093c027f89b7ad35e883cd2dbea8c181dcb1"
     }
   }
 }

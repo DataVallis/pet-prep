@@ -10,7 +10,8 @@
     "it": "Manzo",
     "pt": "Carne de vaca",
     "nl": "Rundvlees",
-    "pl": "Wołowina"
+    "pl": "Wołowina",
+    "cs": "Hovězí maso"
   },
   "question": {
     "en": "Can dogs eat beef?",
@@ -21,7 +22,8 @@
     "it": "I cani possono mangiare il manzo?",
     "pt": "Os cães podem comer carne de vaca?",
     "nl": "Mogen honden rundvlees eten?",
-    "pl": "Czy psy mogą jeść wołowinę?"
+    "pl": "Czy psy mogą jeść wołowinę?",
+    "cs": "Mohou psi jíst hovězí maso?"
   },
   "url_slug": {
     "en": "beef",
@@ -32,7 +34,8 @@
     "it": "manzo",
     "pt": "carne-de-vaca",
     "nl": "rundvlees",
-    "pl": "wolowina"
+    "pl": "wolowina",
+    "cs": "hovezi-maso"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "Sì, il manzo cotto al naturale e privato del grasso può essere una sana fonte di proteine. Niente sale, spezie o aggiunte come cipolla e aglio, mai ossa cotte, ed evita il manzo crudo, che può contenere batteri.",
     "pt": "Sim, a carne de vaca cozinhada, simples e sem gordura pode ser uma fonte saudável de proteína. Não lhe juntes sal, especiarias nem acompanhamentos como cebola e alho, nunca dês ossos cozinhados e evita a carne de vaca crua, que pode ter bactérias.",
     "nl": "Ja, gewoon gekookt rundvlees zonder vet kan een gezonde bron van eiwit zijn. Laat zout, kruiden en toevoegingen zoals ui en knoflook weg, geef nooit gekookte botten en vermijd rauw rundvlees, dat bacteriën kan bevatten.",
-    "pl": "Tak, zwykła gotowana wołowina bez tłuszczu może być zdrowym źródłem białka. Pomiń sól, przyprawy i dodatki, takie jak cebula i czosnek, nigdy nie dawaj gotowanych kości i unikaj surowej wołowiny, która może przenosić bakterie."
+    "pl": "Tak, zwykła gotowana wołowina bez tłuszczu może być zdrowym źródłem białka. Pomiń sól, przyprawy i dodatki, takie jak cebula i czosnek, nigdy nie dawaj gotowanych kości i unikaj surowej wołowiny, która może przenosić bakterie.",
+    "cs": "Ano, čisté tepelně upravené hovězí maso bez tuku může být zdravým zdrojem bílkovin. Vynechte sůl, koření a přísady jako cibuli a česnek, nikdy nedávejte tepelně upravené kosti a vyhněte se syrovému hovězímu, které může přenášet bakterie."
   },
   "why": {
     "en": "Unseasoned, cooked beef can be a healthy protein, cut into bite-sized pieces with the fat trimmed. Burgers and steaks often contain salt, spices and toppings that can be dangerous; onions and garlic are toxic to dogs. Raw steak or burger can carry Salmonella and E. coli, and cooked bones of any kind should never be given.",
@@ -55,7 +59,8 @@
     "it": "Il manzo cotto e non condito può essere una proteina sana, tagliato a bocconcini e privato del grasso. Hamburger e bistecche spesso contengono sale, spezie e aggiunte che possono essere pericolose; cipolla e aglio sono tossici per i cani. La bistecca o l’hamburger crudi possono contenere Salmonella ed E. coli, e non bisogna mai dare ossa cotte di nessun tipo.",
     "pt": "A carne de vaca cozinhada e sem temperos pode ser uma proteína saudável, cortada em pedaços pequenos e sem gordura. Os hambúrgueres e os bifes costumam ter sal, especiarias e acompanhamentos que podem ser perigosos; a cebola e o alho são tóxicos para os cães. O bife ou o hambúrguer crus podem ter Salmonella e E. coli, e nunca se devem dar ossos cozinhados de nenhum tipo.",
     "nl": "Ongekruid, gaar rundvlees kan een gezonde eiwitbron zijn, in hapklare stukjes en met het vet eraf. Hamburgers en biefstukken bevatten vaak zout, kruiden en toevoegingen die gevaarlijk kunnen zijn; ui en knoflook zijn giftig voor honden. Rauwe biefstuk of hamburger kan salmonella en E. coli bevatten, en gekookte botten van welke soort ook mag je nooit geven.",
-    "pl": "Nieprzyprawiona, gotowana wołowina pokrojona na małe kawałki i pozbawiona tłuszczu może być zdrowym białkiem. Burgery i steki często zawierają sól, przyprawy i dodatki, które mogą być niebezpieczne; cebula i czosnek są toksyczne dla psów. Surowy stek lub burger może przenosić bakterie Salmonella i E. coli, a gotowanych kości żadnego rodzaju nigdy nie wolno podawać."
+    "pl": "Nieprzyprawiona, gotowana wołowina pokrojona na małe kawałki i pozbawiona tłuszczu może być zdrowym białkiem. Burgery i steki często zawierają sól, przyprawy i dodatki, które mogą być niebezpieczne; cebula i czosnek są toksyczne dla psów. Surowy stek lub burger może przenosić bakterie Salmonella i E. coli, a gotowanych kości żadnego rodzaju nigdy nie wolno podawać.",
+    "cs": "Nekořeněné, tepelně upravené hovězí maso nakrájené na malé kousky a zbavené tuku může být zdravou bílkovinou. Burgery a steaky často obsahují sůl, koření a přísady, které mohou být nebezpečné; cibule a česnek jsou pro psy jedovaté. Syrový steak nebo burger může přenášet salmonelu a E. coli a tepelně upravené kosti jakéhokoli druhu se nikdy nesmějí dávat."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "it": "Se il tuo cane ha mangiato manzo grasso o condito, controlla se compaiono vomito, diarrea o mal di pancia e, in quel caso, chiama il veterinario. Se ha mangiato ossa cotte o cibo con cipolla o aglio, chiama subito il veterinario.",
     "pt": "Se o teu cão comeu carne de vaca gorda ou temperada, vigia se aparecem vómitos, diarreia ou dor de barriga e liga ao teu veterinário se surgirem. Se comeu ossos cozinhados ou comida com cebola ou alho, liga imediatamente ao teu veterinário.",
     "nl": "Heeft je hond vet of gekruid rundvlees gegeten? Let dan op braken, diarree of buikpijn en bel je dierenarts als die optreden. Heeft hij gekookte botten of eten met ui of knoflook gegeten, bel je dierenarts dan meteen.",
-    "pl": "Jeśli twój pies zjadł tłustą lub przyprawioną wołowinę, obserwuj, czy nie pojawiają się wymioty, biegunka lub ból brzucha, i zadzwoń do weterynarza, jeśli wystąpią. Jeśli zjadł gotowane kości albo jedzenie z cebulą lub czosnkiem, od razu zadzwoń do weterynarza."
+    "pl": "Jeśli twój pies zjadł tłustą lub przyprawioną wołowinę, obserwuj, czy nie pojawiają się wymioty, biegunka lub ból brzucha, i zadzwoń do weterynarza, jeśli wystąpią. Jeśli zjadł gotowane kości albo jedzenie z cebulą lub czosnkiem, od razu zadzwoń do weterynarza.",
+    "cs": "Pokud váš pes snědl tučné nebo kořeněné hovězí, sledujte, zda se neobjeví zvracení, průjem nebo bolest břicha, a pokud ano, zavolejte veterináři. Pokud snědl tepelně upravené kosti nebo jídlo s cibulí či česnekem, zavolejte veterináři hned."
   },
   "serving": {
     "en": "Plain, unseasoned, fully cooked beef, fat trimmed, boneless, in bite-sized pieces.",
@@ -78,7 +84,8 @@
     "it": "Manzo al naturale, non condito, ben cotto, privato del grasso, senza ossa, a bocconcini.",
     "pt": "Carne de vaca simples, sem temperos, bem cozinhada, sem gordura, sem ossos, em pedaços pequenos.",
     "nl": "Gewoon, ongekruid, helemaal gaar rundvlees, zonder vet en zonder botten, in hapklare stukjes.",
-    "pl": "Zwykła, nieprzyprawiona, dobrze ugotowana wołowina bez tłuszczu i kości, pokrojona na małe kawałki."
+    "pl": "Zwykła, nieprzyprawiona, dobrze ugotowana wołowina bez tłuszczu i kości, pokrojona na małe kawałki.",
+    "cs": "Čisté, nekořeněné, důkladně tepelně upravené hovězí maso bez tuku a bez kostí, v malých kouscích."
   },
   "child": {
     "en": "A few bites of plain cooked beef can be a treat. Burgers with onions or sauce are only for people.",
@@ -89,7 +96,8 @@
     "it": "Qualche boccone di manzo cotto al naturale può essere un premio. Gli hamburger con cipolla o salse sono solo per le persone.",
     "pt": "Uns pedacinhos de carne de vaca cozinhada e simples podem ser uma guloseima. Hambúrgueres com cebola ou molho são só para pessoas.",
     "nl": "Een paar hapjes gewoon gekookt rundvlees kunnen een traktatie zijn. Hamburgers met ui of saus zijn alleen voor mensen.",
-    "pl": "Kilka kęsów zwykłej gotowanej wołowiny może być smakołykiem. Burgery z cebulą lub sosem są tylko dla ludzi."
+    "pl": "Kilka kęsów zwykłej gotowanej wołowiny może być smakołykiem. Burgery z cebulą lub sosem są tylko dla ludzi.",
+    "cs": "Pár soust čistého tepelně upraveného hovězího může být pamlsek. Burgery s cibulí nebo omáčkou jsou jen pro lidi."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "it": "Il mio cane può assaggiare il mio hamburger?",
         "pt": "O meu cão pode dar uma dentada no meu hambúrguer?",
         "nl": "Mag mijn hond een hapje van mijn hamburger?",
-        "pl": "Czy mój pies może dostać kęs mojego burgera?"
+        "pl": "Czy mój pies może dostać kęs mojego burgera?",
+        "cs": "Může můj pes kousnout do mého burgeru?"
       },
       "a": {
         "en": "Better not: burgers often contain salt, spices and toppings such as onion that can be dangerous. Plain cooked meat is the safer choice.",
@@ -113,7 +122,8 @@
         "it": "Meglio di no: gli hamburger spesso contengono sale, spezie e aggiunte come la cipolla che possono essere pericolose. La carne cotta al naturale è la scelta più sicura.",
         "pt": "É melhor não: os hambúrgueres costumam ter sal, especiarias e acompanhamentos como cebola, que podem ser perigosos. A carne cozinhada simples é a escolha mais segura.",
         "nl": "Liever niet: hamburgers bevatten vaak zout, kruiden en toevoegingen zoals ui die gevaarlijk kunnen zijn. Gewoon gekookt vlees is de veiligere keuze.",
-        "pl": "Lepiej nie: burgery często zawierają sól, przyprawy i dodatki, np. cebulę, które mogą być niebezpieczne. Zwykłe gotowane mięso to bezpieczniejszy wybór."
+        "pl": "Lepiej nie: burgery często zawierają sól, przyprawy i dodatki, np. cebulę, które mogą być niebezpieczne. Zwykłe gotowane mięso to bezpieczniejszy wybór.",
+        "cs": "Raději ne: burgery často obsahují sůl, koření a přísady jako cibuli, které mohou být nebezpečné. Čisté tepelně upravené maso je bezpečnější volba."
       }
     }
   ],
@@ -209,6 +219,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "91a63dcf3b97fe1597d7db705a4e2f62a8e8d1bbb05c5fe5caf5c84fbdded53d"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ba08abbb27b1277a75bc6d0686dcbb7c9c1a09d736d5ef52d998c9c7ba2692e8"
     }
   }
 }

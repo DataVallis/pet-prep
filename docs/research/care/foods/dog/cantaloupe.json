@@ -3,47 +3,57 @@
   "species": "dog",
   "name": {
     "en": "Cantaloupe",
-    "sl": "Melona kantalupa"
+    "sl": "Melona kantalupa",
+    "cs": "Cukrový meloun"
   },
   "question": {
     "en": "Can dogs eat cantaloupe?",
-    "sl": "Ali lahko psi jedo melono kantalupo?"
+    "sl": "Ali lahko psi jedo melono kantalupo?",
+    "cs": "Mohou psi jíst cukrový meloun?"
   },
   "url_slug": {
     "en": "cantaloupe",
-    "sl": "melona-kantalupa"
+    "sl": "melona-kantalupa",
+    "cs": "cukrovy-meloun"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in moderation. Cantaloupe is low in calories and a good source of water and fibre, but it is high in sugar, so share it sparingly, especially with dogs who are overweight or diabetic. Do not give the rind or seeds.",
-    "sl": "Da, zmerno. Kantalupa ima malo kalorij ter je dober vir vode in vlaknin, a vsebuje veliko sladkorja, zato jo dajajte zmerno, zlasti psom s prekomerno težo ali sladkorno boleznijo. Ne dajajte lupine ali pečk."
+    "sl": "Da, zmerno. Kantalupa ima malo kalorij ter je dober vir vode in vlaknin, a vsebuje veliko sladkorja, zato jo dajajte zmerno, zlasti psom s prekomerno težo ali sladkorno boleznijo. Ne dajajte lupine ali pečk.",
+    "cs": "Ano, s mírou. Cukrový meloun má málo kalorií a je dobrým zdrojem vody a vlákniny, ale obsahuje hodně cukru, proto ho dávejte střídmě, zvlášť psům s nadváhou nebo cukrovkou. Nedávejte slupku ani semínka."
   },
   "why": {
     "en": "Cantaloupe rinds, like watermelon rinds, can cause stomach upset, can become impacted in the digestive tract and are a choking hazard. The seeds are harmless but can also be a choking hazard. Too many treats on top of a healthy diet can lead to obesity.",
-    "sl": "Lupina kantalupe lahko, tako kot lubenična, povzroči prebavne težave, se zagozdi v prebavilih in predstavlja nevarnost zadušitve. Pečke so neškodljive, a se lahko prav tako zataknejo v grlu. Preveč priboljškov poleg zdrave prehrane lahko vodi v debelost."
+    "sl": "Lupina kantalupe lahko, tako kot lubenična, povzroči prebavne težave, se zagozdi v prebavilih in predstavlja nevarnost zadušitve. Pečke so neškodljive, a se lahko prav tako zataknejo v grlu. Preveč priboljškov poleg zdrave prehrane lahko vodi v debelost.",
+    "cs": "Slupka cukrového melounu může stejně jako slupka vodního melounu podráždit žaludek, uvíznout v trávicím traktu nebo způsobit dušení. Semínka jsou neškodná, ale také mohou způsobit dušení. Příliš mnoho pamlsků navíc ke zdravé stravě může vést k obezitě."
   },
   "signs": null,
   "what_to_do": {
     "en": "If you have questions or concerns about feeding your dog cantaloupe, for example if your dog is diabetic, ask your vet.",
-    "sl": "Če imate vprašanja ali pomisleke glede hranjenja psa s kantalupo, na primer če ima pes sladkorno bolezen, vprašajte veterinarja."
+    "sl": "Če imate vprašanja ali pomisleke glede hranjenja psa s kantalupo, na primer če ima pes sladkorno bolezen, vprašajte veterinarja.",
+    "cs": "Pokud máte otázky nebo obavy ohledně krmení psa cukrovým melounem, například pokud má váš pes cukrovku, zeptejte se veterináře."
   },
   "serving": {
     "en": "Only the flesh, without the rind and seeds; as an occasional treat.",
-    "sl": "Samo meso, brez lupine in pečk; kot občasen priboljšek."
+    "sl": "Samo meso, brez lupine in pečk; kot občasen priboljšek.",
+    "cs": "Jen dužnina, bez slupky a semínek; jako občasný pamlsek."
   },
   "child": {
     "en": "Dogs can enjoy a little piece of melon! A grown-up cuts off the hard skin and takes out the seeds.",
-    "sl": "Psi lahko uživajo v koščku melone! Odrasel odreže trdo lupino in odstrani pečke."
+    "sl": "Psi lahko uživajo v koščku melone! Odrasel odreže trdo lupino in odstrani pečke.",
+    "cs": "Psi si můžou pochutnat na kousku melounu! Dospělý odkrojí tvrdou slupku a vybere semínka."
   },
   "faq": [
     {
       "q": {
         "en": "Is cantaloupe okay for a diabetic dog?",
-        "sl": "Je kantalupa primerna za psa s sladkorno boleznijo?"
+        "sl": "Je kantalupa primerna za psa s sladkorno boleznijo?",
+        "cs": "Hodí se cukrový meloun pro psa s cukrovkou?"
       },
       "a": {
         "en": "It may not be a good choice, because it is high in sugar. Ask your vet first.",
-        "sl": "Morda ni dobra izbira, ker vsebuje veliko sladkorja. Najprej vprašajte veterinarja."
+        "sl": "Morda ni dobra izbira, ker vsebuje veliko sladkorja. Najprej vprašajte veterinarja.",
+        "cs": "Nemusí to být dobrá volba, protože obsahuje hodně cukru. Nejdřív se zeptejte veterináře."
       }
     }
   ],
@@ -105,6 +115,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "db70e70c2e433f86a5f87f07783d330ca307658843d26c2acb97eb93e2a4b8a1"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f7d43fe23d219878c0b40cbea28c1e1a4afd1eed5034d7f5810baf307fc3779c"
     }
   }
 }

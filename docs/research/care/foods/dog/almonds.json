@@ -10,7 +10,8 @@
     "it": "Mandorle",
     "pt": "Amêndoas",
     "nl": "Amandelen",
-    "pl": "Migdały"
+    "pl": "Migdały",
+    "cs": "Mandle"
   },
   "question": {
     "en": "Can dogs eat almonds?",
@@ -21,7 +22,8 @@
     "it": "I cani possono mangiare le mandorle?",
     "pt": "Os cães podem comer amêndoas?",
     "nl": "Mogen honden amandelen eten?",
-    "pl": "Czy psy mogą jeść migdały?"
+    "pl": "Czy psy mogą jeść migdały?",
+    "cs": "Mohou psi jíst mandle?"
   },
   "url_slug": {
     "en": "almonds",
@@ -32,7 +34,8 @@
     "it": "mandorle",
     "pt": "amendoas",
     "nl": "amandelen",
-    "pl": "migdaly"
+    "pl": "migdaly",
+    "cs": "mandle"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "Meglio di no. Le mandorle non sono pericolose quanto le noci di macadamia, ma sono grasse e possono causare vomito, diarrea e forse pancreatite. Le mandorle intere possono anche rimanere bloccate, soprattutto nei cani di piccola taglia.",
     "pt": "Não, é melhor não. As amêndoas não são tão perigosas como as nozes de macadâmia, mas são gordas e podem causar vómitos, diarreia e, possivelmente, pancreatite. As amêndoas inteiras também podem ficar presas, sobretudo nos cães pequenos.",
     "nl": "Nee, liever niet. Amandelen zijn niet zo gevaarlijk als macadamianoten, maar ze zijn vet en kunnen braken, diarree en mogelijk alvleesklierontsteking veroorzaken. Hele amandelen kunnen ook vast komen te zitten, vooral bij kleine honden.",
-    "pl": "Lepiej nie. Migdały nie są tak niebezpieczne jak orzechy makadamia, ale są tłuste i mogą wywołać wymioty, biegunkę, a być może także zapalenie trzustki. Całe migdały mogą też utknąć, zwłaszcza u małych psów."
+    "pl": "Lepiej nie. Migdały nie są tak niebezpieczne jak orzechy makadamia, ale są tłuste i mogą wywołać wymioty, biegunkę, a być może także zapalenie trzustki. Całe migdały mogą też utknąć, zwłaszcza u małych psów.",
+    "cs": "Raději ne. Mandle nejsou tak nebezpečné jako makadamové ořechy, ale jsou tučné a mohou způsobit zvracení, průjem a případně i zánět slinivky břišní. Celé mandle mohou také uvíznout, zvlášť u malých psů."
   },
   "why": {
     "en": "Almonds, like most nuts, are high in fat, which can upset the stomach and put a dog at risk of pancreatitis. Whole almonds can block the food pipe, intestines or windpipe, especially in small breeds. Salted and flavoured almonds bring extra risks from salt and seasonings.",
@@ -55,7 +59,8 @@
     "it": "Le mandorle, come la maggior parte della frutta a guscio, sono ricche di grassi, che possono disturbare lo stomaco ed esporre il cane al rischio di pancreatite. Le mandorle intere possono ostruire l’esofago, l’intestino o la trachea, soprattutto nelle razze piccole. Le mandorle salate e aromatizzate comportano rischi in più per il sale e i condimenti.",
     "pt": "As amêndoas, como a maioria dos frutos secos, têm muita gordura, que pode perturbar o estômago e pôr o cão em risco de pancreatite. As amêndoas inteiras podem obstruir o esófago, os intestinos ou a traqueia, sobretudo nas raças pequenas. As amêndoas salgadas ou aromatizadas trazem riscos extra por causa do sal e dos temperos.",
     "nl": "Amandelen bevatten, zoals de meeste noten, veel vet. Dat kan de maag van streek maken en een hond vatbaar maken voor alvleesklierontsteking. Hele amandelen kunnen de slokdarm, de darmen of de luchtpijp blokkeren, vooral bij kleine rassen. Gezouten en gekruide amandelen brengen extra risico’s mee door het zout en de kruiden.",
-    "pl": "Migdały, jak większość orzechów, zawierają dużo tłuszczu, który może podrażnić żołądek i narazić psa na zapalenie trzustki. Całe migdały mogą zatkać przełyk, jelita lub tchawicę, zwłaszcza u małych ras. Migdały solone i smakowe niosą dodatkowe ryzyko związane z solą i przyprawami."
+    "pl": "Migdały, jak większość orzechów, zawierają dużo tłuszczu, który może podrażnić żołądek i narazić psa na zapalenie trzustki. Całe migdały mogą zatkać przełyk, jelita lub tchawicę, zwłaszcza u małych ras. Migdały solone i smakowe niosą dodatkowe ryzyko związane z solą i przyprawami.",
+    "cs": "Mandle mají jako většina ořechů vysoký obsah tuku, který může podráždit žaludek a vystavit psa riziku zánětu slinivky břišní. Celé mandle mohou ucpat jícen, střeva nebo průdušnici, zvlášť u malých plemen. Solené a ochucené mandle přinášejí další rizika kvůli soli a koření."
   },
   "signs": {
     "en": [
@@ -111,6 +116,12 @@
       "Biegunka",
       "Ból brzucha, nudności lub osłabienie (możliwe zapalenie trzustki)",
       "Zadławienie lub objawy niedrożności"
+    ],
+    "cs": [
+      "Zvracení",
+      "Průjem",
+      "Bolest břicha, nevolnost nebo malátnost (možný zánět slinivky břišní)",
+      "Dušení nebo známky ucpání"
     ]
   },
   "what_to_do": {
@@ -122,7 +133,8 @@
     "it": "Una o due mandorle di solito non sono motivo di panico: controlla se il tuo cane ha vomito, diarrea o mal di pancia. Chiama il veterinario se ha mangiato molte mandorle o mandorle aromatizzate, se sembra soffocare o se mostra uno di questi sintomi.",
     "pt": "Uma ou duas amêndoas normalmente não são motivo para pânico: vigia se o teu cão tem vómitos, diarreia ou dor de barriga. Liga ao teu veterinário se o teu cão comeu muitas amêndoas ou amêndoas aromatizadas, parecer estar engasgado ou mostrar algum destes sinais.",
     "nl": "Een of twee amandelen zijn meestal geen reden tot paniek: let op braken, diarree of buikpijn. Bel je dierenarts als je hond veel amandelen of gekruide amandelen heeft gegeten, lijkt te stikken of een van deze verschijnselen heeft.",
-    "pl": "Jeden czy dwa migdały zwykle nie są powodem do paniki: obserwuj, czy u psa nie pojawiają się wymioty, biegunka lub ból brzucha. Zadzwoń do weterynarza, jeśli pies zjadł dużo migdałów lub migdały smakowe, wygląda, jakby się dławił, albo ma któryś z tych objawów."
+    "pl": "Jeden czy dwa migdały zwykle nie są powodem do paniki: obserwuj, czy u psa nie pojawiają się wymioty, biegunka lub ból brzucha. Zadzwoń do weterynarza, jeśli pies zjadł dużo migdałów lub migdały smakowe, wygląda, jakby się dławił, albo ma któryś z tych objawów.",
+    "cs": "Jedna nebo dvě mandle obvykle nejsou důvodem k panice: sledujte, zda se u psa neobjeví zvracení, průjem nebo bolest břicha. Zavolejte veterináři, pokud váš pes snědl hodně mandlí nebo ochucené mandle, zdá se, že se dusí, nebo má některý z těchto příznaků."
   },
   "serving": null,
   "child": {
@@ -134,7 +146,8 @@
     "it": "Le mandorle sono uno snack per le persone. Per i cani sono difficili da digerire e possono far venire mal di pancia. Dagli invece un premio per cani!",
     "pt": "As amêndoas são um petisco para pessoas. São difíceis de digerir para os cães e podem fazer-lhes doer a barriga. Dá antes uma guloseima para cães!",
     "nl": "Amandelen zijn een snack voor mensen. Honden kunnen ze moeilijk verteren en kunnen er buikpijn van krijgen. Geef liever een hondensnoepje!",
-    "pl": "Migdały to przekąska dla ludzi. Psom trudno je strawić i może je od nich rozboleć brzuszek. Daj psu jego smakołyk!"
+    "pl": "Migdały to przekąska dla ludzi. Psom trudno je strawić i może je od nich rozboleć brzuszek. Daj psu jego smakołyk!",
+    "cs": "Mandle jsou svačinka pro lidi. Psi je špatně tráví a může je z nich bolet bříško. Dej psovi radši psí pamlsek!"
   },
   "faq": [
     {
@@ -147,7 +160,8 @@
         "it": "Le mandorle sono pericolose quanto le noci di macadamia?",
         "pt": "As amêndoas são tão perigosas como as nozes de macadâmia?",
         "nl": "Zijn amandelen net zo gevaarlijk als macadamianoten?",
-        "pl": "Czy migdały są tak samo niebezpieczne jak orzechy makadamia?"
+        "pl": "Czy migdały są tak samo niebezpieczne jak orzechy makadamia?",
+        "cs": "Jsou mandle stejně nebezpečné jako makadamové ořechy?"
       },
       "a": {
         "en": "No. Macadamia nuts are toxic to dogs; almonds are a problem mainly because of their fat and the risk of blockage.",
@@ -158,7 +172,8 @@
         "it": "No. Le noci di macadamia sono tossiche per i cani; le mandorle sono un problema soprattutto per i grassi e per il rischio di ostruzione.",
         "pt": "Não. As nozes de macadâmia são tóxicas para os cães; as amêndoas são um problema sobretudo pela gordura e pelo risco de obstrução.",
         "nl": "Nee. Macadamianoten zijn giftig voor honden; amandelen zijn vooral een probleem door het vet en het risico op een verstopping.",
-        "pl": "Nie. Orzechy makadamia są toksyczne dla psów; migdały szkodzą głównie z powodu tłuszczu i ryzyka niedrożności."
+        "pl": "Nie. Orzechy makadamia są toksyczne dla psów; migdały szkodzą głównie z powodu tłuszczu i ryzyka niedrożności.",
+        "cs": "Ne. Makadamové ořechy jsou pro psy jedovaté; u mandlí je problémem hlavně tuk a riziko ucpání."
       }
     },
     {
@@ -171,7 +186,8 @@
         "it": "Il mio cane ha mangiato una mandorla. E adesso?",
         "pt": "O meu cão comeu uma amêndoa. E agora?",
         "nl": "Mijn hond heeft één amandel gegeten. Wat nu?",
-        "pl": "Mój pies zjadł jeden migdał. Co teraz?"
+        "pl": "Mój pies zjadł jeden migdał. Co teraz?",
+        "cs": "Můj pes snědl jednu mandli. Co teď?"
       },
       "a": {
         "en": "Don't panic. Watch for tummy upset and call your vet if signs appear.",
@@ -182,7 +198,8 @@
         "it": "Niente panico. Controlla se ha disturbi di pancia e chiama il veterinario se compaiono sintomi.",
         "pt": "Não entres em pânico. Vigia se tem a barriga perturbada e liga ao teu veterinário se aparecerem sinais.",
         "nl": "Geen paniek. Let op maagklachten en bel je dierenarts als er verschijnselen optreden.",
-        "pl": "Nie panikuj. Obserwuj, czy nie ma problemów z brzuchem, i zadzwoń do weterynarza, jeśli pojawią się objawy."
+        "pl": "Nie panikuj. Obserwuj, czy nie ma problemów z brzuchem, i zadzwoń do weterynarza, jeśli pojawią się objawy.",
+        "cs": "Nepanikařte. Sledujte, zda nemá zažívací potíže, a pokud se objeví příznaky, zavolejte veterináři."
       }
     }
   ],
@@ -289,6 +306,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e41bcc6822553faa63193d96925b2b4c418250eba81327c36aab44ced8527c05"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "382beba042dac4ea04bdb16a64e332133cc24e883a2dcbbb1e07b6ba52e79958"
     }
   }
 }

@@ -10,7 +10,8 @@
     "it": "Burro di arachidi",
     "pt": "Manteiga de amendoim",
     "nl": "Pindakaas",
-    "pl": "Masło orzechowe"
+    "pl": "Masło orzechowe",
+    "cs": "Arašídové máslo"
   },
   "question": {
     "en": "Can dogs eat peanut butter?",
@@ -21,7 +22,8 @@
     "it": "I cani possono mangiare il burro di arachidi?",
     "pt": "Os cães podem comer manteiga de amendoim?",
     "nl": "Mogen honden pindakaas eten?",
-    "pl": "Czy psy mogą jeść masło orzechowe?"
+    "pl": "Czy psy mogą jeść masło orzechowe?",
+    "cs": "Mohou psi jíst arašídové máslo?"
   },
   "url_slug": {
     "en": "peanut-butter",
@@ -32,7 +34,8 @@
     "it": "burro-di-arachidi",
     "pt": "manteiga-de-amendoim",
     "nl": "pindakaas",
-    "pl": "maslo-orzechowe"
+    "pl": "maslo-orzechowe",
+    "cs": "arasidove-maslo"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "Sì, in piccole quantità, se non contiene xilitolo. Quasi tutto il burro di arachidi è sicuro per i cani, ma alcune marche usano lo xilitolo, un dolcificante tossico per i cani: controlla sempre l’etichetta. La scelta migliore è il burro di arachidi senza sale.",
     "pt": "Sim, em pequenas quantidades, se não tiver xilitol. A maior parte da manteiga de amendoim é segura para os cães, mas algumas marcas usam xilitol, um adoçante tóxico para os cães, por isso lê sempre o rótulo. A manteiga de amendoim sem sal é a melhor.",
     "nl": "Ja, in kleine hoeveelheden, als er geen xylitol in zit. De meeste pindakaas is veilig voor honden, maar sommige merken gebruiken xylitol, een zoetstof die giftig is voor honden. Controleer dus altijd het etiket. Ongezouten pindakaas is het best.",
-    "pl": "Tak, w małych ilościach, jeśli nie zawiera ksylitolu. Większość maseł orzechowych jest bezpieczna dla psów, ale niektóre marki dodają ksylitol, słodzik toksyczny dla psów, więc zawsze sprawdzaj etykietę. Najlepsze jest masło orzechowe niesolone."
+    "pl": "Tak, w małych ilościach, jeśli nie zawiera ksylitolu. Większość maseł orzechowych jest bezpieczna dla psów, ale niektóre marki dodają ksylitol, słodzik toksyczny dla psów, więc zawsze sprawdzaj etykietę. Najlepsze jest masło orzechowe niesolone.",
+    "cs": "Ano, v malém množství, pokud neobsahuje xylitol. Většina arašídových másel je pro psy bezpečná, některé značky ale používají xylitol, sladidlo, které je pro psy jedovaté, proto vždy zkontrolujte etiketu. Nejlepší je arašídové máslo bez soli."
   },
   "why": {
     "en": "Peanut butter is rich in fat and can be high in salt, so it suits only as an occasional treat, and it is not ideal for dogs on a diet. The real danger is xylitol: some peanut and nut butters contain it, and in dogs it can cause a sharp drop in blood sugar.",
@@ -55,7 +59,8 @@
     "it": "Il burro di arachidi è ricco di grassi e può contenere molto sale, quindi va bene solo come premio occasionale e non è ideale per i cani a dieta. Il vero pericolo è lo xilitolo: alcuni burri di arachidi e di frutta a guscio lo contengono, e nei cani può causare un brusco calo degli zuccheri nel sangue.",
     "pt": "A manteiga de amendoim é rica em gordura e pode ter muito sal, por isso só serve como guloseima ocasional e não é ideal para cães em dieta. O verdadeiro perigo é o xilitol: algumas manteigas de amendoim e de outros frutos secos contêm-no e, nos cães, pode causar uma descida brusca do açúcar no sangue.",
     "nl": "Pindakaas bevat veel vet en kan veel zout bevatten, dus het is alleen geschikt als af en toe een snoepje, en niet ideaal voor honden op dieet. Het echte gevaar is xylitol: sommige pinda- en notenpasta’s bevatten het, en bij honden kan het een sterke daling van de bloedsuiker veroorzaken.",
-    "pl": "Masło orzechowe ma dużo tłuszczu i może zawierać dużo soli, więc nadaje się tylko jako okazjonalny smakołyk i nie jest idealne dla psów na diecie. Prawdziwym zagrożeniem jest ksylitol: zawierają go niektóre masła z orzeszków ziemnych i innych orzechów, a u psów może wywołać gwałtowny spadek poziomu cukru we krwi."
+    "pl": "Masło orzechowe ma dużo tłuszczu i może zawierać dużo soli, więc nadaje się tylko jako okazjonalny smakołyk i nie jest idealne dla psów na diecie. Prawdziwym zagrożeniem jest ksylitol: zawierają go niektóre masła z orzeszków ziemnych i innych orzechów, a u psów może wywołać gwałtowny spadek poziomu cukru we krwi.",
+    "cs": "Arašídové máslo je bohaté na tuk a může obsahovat hodně soli, proto se hodí jen jako občasný pamlsek a pro psy na dietě není ideální. Skutečným nebezpečím je xylitol: obsahují ho některá arašídová a ořechová másla a u psů může způsobit prudký pokles hladiny cukru v krvi."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "it": "Se il burro di arachidi conteneva xilitolo, contatta subito il veterinario, una clinica d’emergenza o un centro antiveleni veterinario, annota quanto ne ha mangiato il tuo cane e non aspettare che compaiano i sintomi.",
     "pt": "Se a manteiga de amendoim tinha xilitol, contacta imediatamente o teu veterinário, uma clínica veterinária de urgência ou uma linha de apoio toxicológico para animais, anota quanto comeu e não esperes pelos sinais.",
     "nl": "Zat er xylitol in de pindakaas? Neem dan meteen contact op met je dierenarts, een spoedkliniek of een vergiftigingenlijn voor dieren, schrijf op hoeveel er is gegeten en wacht niet op verschijnselen.",
-    "pl": "Jeśli masło orzechowe zawierało ksylitol, od razu skontaktuj się z weterynarzem lub całodobową przychodnią weterynaryjną albo zadzwoń na telefon informacji toksykologicznej dla zwierząt, zanotuj, ile pies zjadł, i nie czekaj na objawy."
+    "pl": "Jeśli masło orzechowe zawierało ksylitol, od razu skontaktuj się z weterynarzem lub całodobową przychodnią weterynaryjną albo zadzwoń na telefon informacji toksykologicznej dla zwierząt, zanotuj, ile pies zjadł, i nie czekaj na objawy.",
+    "cs": "Pokud arašídové máslo obsahovalo xylitol, okamžitě se obraťte na veterináře, nonstop veterinární pohotovost nebo toxikologickou linku pro zvířata, poznamenejte si, kolik ho pes snědl, a nečekejte, až se objeví příznaky."
   },
   "serving": {
     "en": "A small amount of unsalted peanut butter whose label lists no xylitol; as a treat, not a daily food.",
@@ -78,7 +84,8 @@
     "it": "Una piccola quantità di burro di arachidi senza sale, che in etichetta non riporti xilitolo; come premio, non come cibo quotidiano.",
     "pt": "Uma pequena quantidade de manteiga de amendoim sem sal cujo rótulo não indique xilitol; como guloseima, não como alimento diário.",
     "nl": "Een kleine hoeveelheid ongezouten pindakaas zonder xylitol op het etiket; als snoepje, niet als dagelijks eten.",
-    "pl": "Odrobina niesolonego masła orzechowego, w którego składzie na etykiecie nie ma ksylitolu; jako smakołyk, nie codzienne jedzenie."
+    "pl": "Odrobina niesolonego masła orzechowego, w którego składzie na etykiecie nie ma ksylitolu; jako smakołyk, nie codzienne jedzenie.",
+    "cs": "Malé množství arašídového másla bez soli, na jehož etiketě není uveden xylitol; jako pamlsek, ne jako každodenní jídlo."
   },
   "child": {
     "en": "Many dogs love a little peanut butter! A grown-up must check the jar first, because some kinds are not safe for dogs.",
@@ -89,7 +96,8 @@
     "it": "Molti cani adorano un po’ di burro di arachidi! Ma prima un adulto deve controllare il barattolo, perché alcuni tipi non sono sicuri per i cani.",
     "pt": "Muitos cães adoram um pouco de manteiga de amendoim! Um adulto tem de ver o frasco primeiro, porque alguns tipos não são seguros para cães.",
     "nl": "Veel honden zijn dol op een beetje pindakaas! Een volwassene moet eerst de pot controleren, want sommige soorten zijn niet veilig voor honden.",
-    "pl": "Wiele psów uwielbia odrobinę masła orzechowego! Dorosły musi najpierw sprawdzić słoik, bo niektóre rodzaje nie są bezpieczne dla psów."
+    "pl": "Wiele psów uwielbia odrobinę masła orzechowego! Dorosły musi najpierw sprawdzić słoik, bo niektóre rodzaje nie są bezpieczne dla psów.",
+    "cs": "Spousta pejsků miluje trošku arašídového másla! Dospělý ale musí nejdřív zkontrolovat sklenici, protože některé druhy pro psy bezpečné nejsou."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "it": "Come faccio a sapere se il burro di arachidi contiene xilitolo?",
         "pt": "Como sei se a manteiga de amendoim tem xilitol?",
         "nl": "Hoe weet ik of er xylitol in pindakaas zit?",
-        "pl": "Jak sprawdzić, czy masło orzechowe zawiera ksylitol?"
+        "pl": "Jak sprawdzić, czy masło orzechowe zawiera ksylitol?",
+        "cs": "Jak poznám, že arašídové máslo obsahuje xylitol?"
       },
       "a": {
         "en": "Read the ingredients on the label, especially on products marked sugar-free or low sugar.",
@@ -113,7 +122,8 @@
         "it": "Leggi gli ingredienti in etichetta, soprattutto sui prodotti indicati come senza zucchero o a basso contenuto di zuccheri.",
         "pt": "Lê os ingredientes no rótulo, sobretudo nos produtos «sem açúcar» ou «com baixo teor de açúcar».",
         "nl": "Lees de ingrediënten op het etiket, vooral bij producten die suikervrij of suikerarm heten.",
-        "pl": "Przeczytaj skład na etykiecie, zwłaszcza na produktach oznaczonych jako bez cukru lub o obniżonej zawartości cukru."
+        "pl": "Przeczytaj skład na etykiecie, zwłaszcza na produktach oznaczonych jako bez cukru lub o obniżonej zawartości cukru.",
+        "cs": "Přečtěte si složení na etiketě, zejména u výrobků označených jako bez cukru nebo se sníženým obsahem cukru."
       }
     },
     {
@@ -126,7 +136,8 @@
         "it": "Posso usare il burro di arachidi per dare una pastiglia al mio cane?",
         "pt": "Posso usar manteiga de amendoim para dar um comprimido ao meu cão?",
         "nl": "Mag ik pindakaas gebruiken om mijn hond een pil te geven?",
-        "pl": "Czy mogę podać psu tabletkę w maśle orzechowym?"
+        "pl": "Czy mogę podać psu tabletkę w maśle orzechowym?",
+        "cs": "Mohu psovi podat tabletku v arašídovém másle?"
       },
       "a": {
         "en": "Many people do; the FDA advises checking the label first to make sure it doesn't contain xylitol.",
@@ -137,7 +148,8 @@
         "it": "Lo fanno in molti; la FDA consiglia di controllare prima l’etichetta per assicurarti che non contenga xilitolo.",
         "pt": "Muitas pessoas fazem-no; a FDA aconselha a ler primeiro o rótulo para confirmar que não tem xilitol.",
         "nl": "Veel mensen doen dat; de FDA raadt aan eerst het etiket te controleren om zeker te weten dat er geen xylitol in zit.",
-        "pl": "Wiele osób tak robi; FDA radzi najpierw sprawdzić etykietę, żeby upewnić się, że produkt nie zawiera ksylitolu."
+        "pl": "Wiele osób tak robi; FDA radzi najpierw sprawdzić etykietę, żeby upewnić się, że produkt nie zawiera ksylitolu.",
+        "cs": "Mnoho lidí to tak dělá; úřad FDA doporučuje nejdřív zkontrolovat etiketu, zda máslo neobsahuje xylitol."
       }
     }
   ],
@@ -266,6 +278,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0e4f7149df2c5c2d2b1cb427d469427f04ec1b264d81fad1fcdf4dcc0e8096c9"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0070594fa892e8491d79d90abd8cc2eea6cdcc4802c4ddaca99933fc2ebd1114"
     }
   }
 }

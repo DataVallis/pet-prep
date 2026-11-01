@@ -10,7 +10,8 @@
     "it": "Agnello",
     "pt": "Borrego",
     "nl": "Lamsvlees",
-    "pl": "Jagnięcina"
+    "pl": "Jagnięcina",
+    "cs": "Jehněčí maso"
   },
   "question": {
     "en": "Can cats eat lamb?",
@@ -21,7 +22,8 @@
     "it": "I gatti possono mangiare l’agnello?",
     "pt": "Os gatos podem comer borrego?",
     "nl": "Mogen katten lamsvlees eten?",
-    "pl": "Czy koty mogą jeść jagnięcinę?"
+    "pl": "Czy koty mogą jeść jagnięcinę?",
+    "cs": "Mohou kočky jíst jehněčí maso?"
   },
   "url_slug": {
     "en": "lamb",
@@ -32,7 +34,8 @@
     "it": "agnello",
     "pt": "borrego",
     "nl": "lamsvlees",
-    "pl": "jagniecina"
+    "pl": "jagniecina",
+    "cs": "jehneci-maso"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "Sì, un po’ di agnello semplice e ben cotto va bene come premio occasionale. Togli il grasso, elimina tutte le ossa e non aggiungere condimenti. L’agnello crudo è sconsigliato.",
     "pt": "Sim, um pouco de borrego simples e bem cozinhado pode ser dado como guloseima ocasional. Retira a gordura, tira todos os ossos e não juntes temperos. O borrego cru não é recomendado.",
     "nl": "Ja, een beetje onbewerkt, goed doorbakken lamsvlees is af en toe prima als snoepje. Snijd het vet eraf, haal alle botjes eruit en voeg geen kruiden of zout toe. Rauw lamsvlees raden we af.",
-    "pl": "Tak, odrobina zwykłej, dobrze ugotowanej jagnięciny jest w porządku jako okazjonalny smakołyk. Odkrój tłuszcz, usuń wszystkie kości i nie dodawaj przypraw. Surowa jagnięcina nie jest zalecana."
+    "pl": "Tak, odrobina zwykłej, dobrze ugotowanej jagnięciny jest w porządku jako okazjonalny smakołyk. Odkrój tłuszcz, usuń wszystkie kości i nie dodawaj przypraw. Surowa jagnięcina nie jest zalecana.",
+    "cs": "Ano, trocha obyčejného, důkladně tepelně upraveného jehněčího masa je v pořádku jako občasný pamlsek. Odkrojte tuk, odstraňte všechny kosti a maso nekořeňte. Syrové jehněčí se nedoporučuje."
   },
   "why": {
     "en": "Lamb is one of the most common proteins in cat food. As a home treat it must be properly cooked: International Cat Care warns that raw or undercooked meat such as beef, lamb and pork can carry Toxoplasma, and advises feeding only properly cooked food. Fatty trimmings are on RSPCA Australia's do-not-feed list, and cooked bones can splinter.",
@@ -55,7 +59,8 @@
     "it": "L’agnello è una delle proteine più usate negli alimenti per gatti. Come premio fatto in casa deve essere ben cotto: International Cat Care avverte che la carne cruda o poco cotta, come manzo, agnello e maiale, può trasmettere il Toxoplasma e consiglia di dare solo cibo ben cotto. I ritagli di grasso sono nell’elenco degli alimenti da non dare di RSPCA Australia, e le ossa cotte possono scheggiarsi.",
     "pt": "O borrego é uma das proteínas mais comuns na comida para gatos. Como guloseima caseira, tem de estar bem cozinhado: a International Cat Care avisa que a carne crua ou mal cozinhada, como a de vaca, de borrego e de porco, pode conter Toxoplasma e aconselha a dar apenas comida bem cozinhada. As aparas de gordura estão na lista do que nunca se deve dar da RSPCA Australia, e os ossos cozinhados podem lascar.",
     "nl": "Lamsvlees is een van de meest gebruikte eiwitbronnen in kattenvoer. Als snoepje thuis moet het goed gaar zijn: International Cat Care waarschuwt dat rauw of onvoldoende gaar vlees zoals rund-, lams- en varkensvlees Toxoplasma kan bevatten, en raadt aan alleen goed gekookt voedsel te geven. Vette afsnijdsels staan bij RSPCA Australia op de lijst van wat je katten niet moet geven, en gekookte botten kunnen splinteren.",
-    "pl": "Jagnięcina to jedno z najczęstszych źródeł białka w karmie dla kotów. Jako domowy smakołyk musi być porządnie obrobiona termicznie: International Cat Care ostrzega, że surowe lub niedogotowane mięso, takie jak wołowina, jagnięcina i wieprzowina, może przenosić toksoplazmę, i zaleca podawanie wyłącznie porządnie ugotowanego jedzenia. RSPCA Australia umieszcza tłuste ścinki na liście rzeczy, których nie wolno podawać, a gotowane kości mogą się rozszczepiać."
+    "pl": "Jagnięcina to jedno z najczęstszych źródeł białka w karmie dla kotów. Jako domowy smakołyk musi być porządnie obrobiona termicznie: International Cat Care ostrzega, że surowe lub niedogotowane mięso, takie jak wołowina, jagnięcina i wieprzowina, może przenosić toksoplazmę, i zaleca podawanie wyłącznie porządnie ugotowanego jedzenia. RSPCA Australia umieszcza tłuste ścinki na liście rzeczy, których nie wolno podawać, a gotowane kości mogą się rozszczepiać.",
+    "cs": "Jehněčí patří k nejběžnějším zdrojům bílkovin v krmivech pro kočky. Jako domácí pamlsek musí být řádně tepelně upravené: International Cat Care varuje, že syrové nebo nedostatečně tepelně upravené maso, například hovězí, jehněčí a vepřové, může přenášet toxoplazmu, a doporučuje krmit jen řádně tepelně upravenou potravu. Tučné odřezky RSPCA Australia řadí mezi potraviny, které se kočkám nemají dávat, a tepelně upravené kosti se mohou roztříštit."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "it": "Offrigli prima un pezzetto. Se poi il tuo gatto vomita o ha la diarrea, smetti e chiedi al veterinario. Se ha ingerito un osso cotto, chiama il veterinario.",
     "pt": "Começa por oferecer um pedaço pequeno. Se depois o teu gato tiver vómitos ou diarreia, para e pergunta ao teu veterinário. Se o teu gato engoliu um osso cozinhado, liga ao teu veterinário.",
     "nl": "Geef eerst een klein stukje. Krijgt je kat daarna last van braken of diarree, stop dan en vraag je dierenarts om advies. Heeft je kat een gekookt bot ingeslikt, bel dan je dierenarts.",
-    "pl": "Najpierw podaj mały kawałek. Jeśli potem twój kot wymiotuje lub ma biegunkę, przestań i zapytaj weterynarza. Jeśli kot połknął gotowaną kość, zadzwoń do weterynarza."
+    "pl": "Najpierw podaj mały kawałek. Jeśli potem twój kot wymiotuje lub ma biegunkę, przestań i zapytaj weterynarza. Jeśli kot połknął gotowaną kość, zadzwoń do weterynarza.",
+    "cs": "Nejdřív nabídněte malý kousek. Pokud vaše kočka potom zvrací nebo má průjem, přestaňte a poraďte se s veterinářem. Pokud vaše kočka spolkla tepelně upravenou kost, zavolejte veterináři."
   },
   "serving": {
     "en": "Well cooked, plain, lean, boneless and unseasoned; a few small pieces now and then.",
@@ -78,7 +84,8 @@
     "it": "Ben cotto, semplice, magro, senza ossa e senza condimenti; qualche pezzetto ogni tanto.",
     "pt": "Bem cozinhado, simples, magro, sem ossos e sem temperos; alguns pedaços pequenos de vez em quando.",
     "nl": "Goed gaar, onbewerkt, mager, zonder botten en zonder kruiden of zout; af en toe een paar kleine stukjes.",
-    "pl": "Dobrze ugotowana, bez dodatków, chuda, bez kości i bez przypraw; od czasu do czasu kilka małych kawałków."
+    "pl": "Dobrze ugotowana, bez dodatków, chuda, bez kości i bez przypraw; od czasu do czasu kilka małych kawałków.",
+    "cs": "Důkladně tepelně upravené, bez přísad, libové, bez kostí a nekořeněné; občas několik malých kousků."
   },
   "child": {
     "en": "A tiny bit of plain cooked lamb can be a treat. A grown-up should cook it and take out the bones.",
@@ -89,7 +96,8 @@
     "it": "Un pezzettino di agnello cotto e semplice può essere un premio. Deve cuocerlo un adulto, togliendo le ossa.",
     "pt": "Um bocadinho de borrego simples e cozinhado pode ser uma guloseima. Um adulto deve cozinhá-lo e tirar os ossos.",
     "nl": "Een klein beetje gewoon gekookt lamsvlees kan een snoepje zijn. Een volwassene moet het klaarmaken en de botjes eruit halen.",
-    "pl": "Odrobina zwykłej gotowanej jagnięciny może być smakołykiem. Dorosły powinien ją ugotować i wyjąć kości."
+    "pl": "Odrobina zwykłej gotowanej jagnięciny może być smakołykiem. Dorosły powinien ją ugotować i wyjąć kości.",
+    "cs": "Malinký kousek obyčejného, dobře propečeného jehněčího může být pamlsek. Připravit ho a vyndat z něj kosti by měl dospělý."
   },
   "faq": [],
   "sources": [
@@ -191,6 +199,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f9869ad02d07b951c2a9b0752c54ecb5a3d2358da3212b52bad8900d194c4ba0"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "39195c97a7a19bb5cfafb3a6d6e7db06f90dad60d781e64f9d788aa1c59291c2"
     }
   }
 }

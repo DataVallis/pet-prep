@@ -3,47 +3,57 @@
   "species": "dog",
   "name": {
     "en": "Bananas",
-    "sl": "Banane"
+    "sl": "Banane",
+    "cs": "Banány"
   },
   "question": {
     "en": "Can dogs eat bananas?",
-    "sl": "Ali lahko psi jedo banane?"
+    "sl": "Ali lahko psi jedo banane?",
+    "cs": "Mohou psi jíst banány?"
   },
   "url_slug": {
     "en": "bananas",
-    "sl": "banane"
+    "sl": "banane",
+    "cs": "banany"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, as an occasional treat. Bananas are high in potassium, vitamin B6 and vitamin C, but they are high in sugar, so they are best kept as a treat rather than part of your dog's daily diet. Always remove the peel.",
-    "sl": "Da, kot občasen priboljšek. Banane vsebujejo veliko kalija, vitamina B6 in vitamina C, a tudi veliko sladkorja, zato naj bodo priboljšek in ne del psove vsakodnevne prehrane. Vedno odstranite olupek."
+    "sl": "Da, kot občasen priboljšek. Banane vsebujejo veliko kalija, vitamina B6 in vitamina C, a tudi veliko sladkorja, zato naj bodo priboljšek in ne del psove vsakodnevne prehrane. Vedno odstranite olupek.",
+    "cs": "Ano, jako občasný pamlsek. Banány mají hodně draslíku, vitaminu B6 a vitaminu C, ale také hodně cukru, proto je nechte jako pamlsek, ne jako součást každodenní stravy vašeho psa. Vždy odstraňte slupku."
   },
   "why": {
     "en": "Too much banana can add extra calories and may cause digestive upset in some dogs. Banana peels are not toxic to dogs, but they are hard to digest and could cause stomach discomfort or, in some cases, an intestinal blockage.",
-    "sl": "Preveč banane lahko doda odvečne kalorije in pri nekaterih psih povzroči prebavne težave. Bananin olupek za pse ni strupen, a je težko prebavljiv in lahko povzroči neugodje v prebavilih ali v nekaterih primerih zaporo črevesja."
+    "sl": "Preveč banane lahko doda odvečne kalorije in pri nekaterih psih povzroči prebavne težave. Bananin olupek za pse ni strupen, a je težko prebavljiv in lahko povzroči neugodje v prebavilih ali v nekaterih primerih zaporo črevesja.",
+    "cs": "Příliš mnoho banánu může přidat kalorie navíc a u některých psů může způsobit zažívací potíže. Banánové slupky nejsou pro psy jedovaté, ale špatně se tráví a mohly by způsobit žaludeční potíže nebo v některých případech ucpání střev."
   },
   "signs": null,
   "what_to_do": {
     "en": "A banana peel could cause stomach discomfort or, in some cases, an intestinal blockage, so always remove it. If you are unsure how much banana suits your dog's size, age or health, ask your vet.",
-    "sl": "Bananin olupek lahko povzroči neugodje v prebavilih ali v nekaterih primerih zaporo črevesja, zato ga vedno odstranite. Če niste prepričani, koliko banane je primerno za velikost, starost ali zdravje vašega psa, vprašajte veterinarja."
+    "sl": "Bananin olupek lahko povzroči neugodje v prebavilih ali v nekaterih primerih zaporo črevesja, zato ga vedno odstranite. Če niste prepričani, koliko banane je primerno za velikost, starost ali zdravje vašega psa, vprašajte veterinarja.",
+    "cs": "Banánová slupka by mohla způsobit žaludeční potíže nebo v některých případech ucpání střev, proto ji vždy odstraňte. Pokud si nejste jistí, kolik banánu se hodí k velikosti, věku nebo zdraví vašeho psa, zeptejte se veterináře."
   },
   "serving": {
     "en": "Peeled, in bite-sized pieces, mashed into food or frozen; as an occasional treat.",
-    "sl": "Olupljena, v majhnih koščkih, pretlačena v hrano ali zamrznjena; kot občasen priboljšek."
+    "sl": "Olupljena, v majhnih koščkih, pretlačena v hrano ali zamrznjena; kot občasen priboljšek.",
+    "cs": "Oloupané, v malých kouscích, rozmačkané do krmiva nebo zmražené; jako občasný pamlsek."
   },
   "child": {
     "en": "Dogs can have a small piece of banana as a treat! A grown-up takes the peel off first.",
-    "sl": "Psi lahko kot priboljšek dobijo košček banane! Odrasel najprej odstrani olupek."
+    "sl": "Psi lahko kot priboljšek dobijo košček banane! Odrasel najprej odstrani olupek.",
+    "cs": "Psi můžou dostat malý kousek banánu jako pamlsek! Dospělý ho nejdřív oloupe."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat banana peels?",
-        "sl": "Ali lahko psi jedo bananine olupke?"
+        "sl": "Ali lahko psi jedo bananine olupke?",
+        "cs": "Mohou psi jíst banánové slupky?"
       },
       "a": {
         "en": "No. Peels are not toxic, but they are hard to digest, so always remove the peel first.",
-        "sl": "Ne. Olupki niso strupeni, a so težko prebavljivi, zato vedno najprej odstranite olupek."
+        "sl": "Ne. Olupki niso strupeni, a so težko prebavljivi, zato vedno najprej odstranite olupek.",
+        "cs": "Ne. Slupky nejsou jedovaté, ale špatně se tráví, proto je vždy nejdřív odstraňte."
       }
     }
   ],
@@ -109,6 +119,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e9a0ace5c36ff19dba57f48f215571267bf777eeb79b149401e6de53b226adc5"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "acd778a1f44371d80663490580afff9ac0dea68006df5988b065da7870b03d5f"
     }
   }
 }

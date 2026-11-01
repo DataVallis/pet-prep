@@ -10,7 +10,8 @@
     "it": "Tacchino",
     "pt": "Peru",
     "nl": "Kalkoen",
-    "pl": "Indyk"
+    "pl": "Indyk",
+    "cs": "Krůtí maso"
   },
   "question": {
     "en": "Can cats eat turkey?",
@@ -21,7 +22,8 @@
     "it": "I gatti possono mangiare il tacchino?",
     "pt": "Os gatos podem comer peru?",
     "nl": "Mogen katten kalkoen eten?",
-    "pl": "Czy koty mogą jeść indyka?"
+    "pl": "Czy koty mogą jeść indyka?",
+    "cs": "Mohou kočky jíst krůtí maso?"
   },
   "url_slug": {
     "en": "turkey",
@@ -32,7 +34,8 @@
     "it": "tacchino",
     "pt": "peru",
     "nl": "kalkoen",
-    "pl": "indyk"
+    "pl": "indyk",
+    "cs": "kruti-maso"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "Sì, un po’ di tacchino cotto e semplice va bene come premio occasionale. Togli ossa e pelle ed evita condimenti, ripieno e sugo d’arrosto. Il tacchino da solo non è una dieta completa.",
     "pt": "Sim, um pouco de peru cozinhado e simples pode ser dado como guloseima ocasional. Tira os ossos e a pele, e nada de temperos, recheio ou molho. O peru, por si só, não é uma alimentação completa.",
     "nl": "Ja, een beetje gewone gekookte kalkoen is af en toe prima als snoepje. Haal de botten eruit en het vel eraf en sla kruiden, vulling en jus over. Alleen kalkoen is geen complete voeding.",
-    "pl": "Tak, odrobina zwykłego gotowanego indyka jest w porządku jako okazjonalny smakołyk. Usuń kości i skórę i nie dodawaj przypraw, farszu ani sosu pieczeniowego. Sam indyk nie jest pełnowartościową dietą."
+    "pl": "Tak, odrobina zwykłego gotowanego indyka jest w porządku jako okazjonalny smakołyk. Usuń kości i skórę i nie dodawaj przypraw, farszu ani sosu pieczeniowego. Sam indyk nie jest pełnowartościową dietą.",
+    "cs": "Ano, trocha tepelně upraveného krůtího masa bez přísad je v pořádku jako občasný pamlsek. Odstraňte kosti a kůži a vynechejte koření, nádivku i omáčku. Samotné krůtí maso není kompletní strava."
   },
   "why": {
     "en": "Cats Protection says plain cooked turkey is fine as an occasional treat but shouldn't be given regularly, as turkey alone lacks nutrients cats need. Turkey skin is high in fat and can cause digestive upset or even pancreatitis, and roast skin may carry garlic or herbs. Turkey bones can splinter and cause choking or blockages.",
@@ -55,7 +59,8 @@
     "it": "Secondo Cats Protection un po’ di tacchino cotto e semplice va bene come premio occasionale, ma non andrebbe dato regolarmente, perché il tacchino da solo non contiene tutti i nutrienti di cui i gatti hanno bisogno. La pelle del tacchino è molto grassa e può causare disturbi digestivi o persino una pancreatite, e la pelle dell’arrosto può contenere aglio o erbe aromatiche. Le ossa di tacchino possono scheggiarsi e causare soffocamento od ostruzioni.",
     "pt": "A Cats Protection diz que o peru cozinhado e simples pode ser dado como guloseima ocasional, mas não com regularidade, porque o peru sozinho não tem todos os nutrientes de que os gatos precisam. A pele do peru tem muita gordura e pode causar problemas digestivos ou até pancreatite, e a pele assada pode ter alho ou ervas aromáticas. Os ossos de peru podem lascar e causar engasgamento ou obstruções.",
     "nl": "Volgens Cats Protection is gewone gekookte kalkoen af en toe prima als snoepje, maar niet om regelmatig te geven, want alleen kalkoen mist voedingsstoffen die katten nodig hebben. Kalkoenvel bevat veel vet en kan spijsverteringsproblemen of zelfs alvleesklierontsteking (pancreatitis) veroorzaken, en het vel van een gebraden kalkoen kan in contact zijn geweest met knoflook of kruiden. Kalkoenbotten kunnen splinteren en verstikking of verstoppingen veroorzaken.",
-    "pl": "Według Cats Protection zwykły gotowany indyk jest w porządku jako okazjonalny smakołyk, ale nie należy go podawać regularnie, bo w samym indyku brakuje składników odżywczych potrzebnych kotom. Skóra indyka zawiera dużo tłuszczu i może wywołać problemy trawienne, a nawet zapalenie trzustki. Skóra z pieczeni może też mieć na sobie czosnek lub zioła. Kości indyka mogą się rozszczepiać i spowodować zadławienie lub niedrożność."
+    "pl": "Według Cats Protection zwykły gotowany indyk jest w porządku jako okazjonalny smakołyk, ale nie należy go podawać regularnie, bo w samym indyku brakuje składników odżywczych potrzebnych kotom. Skóra indyka zawiera dużo tłuszczu i może wywołać problemy trawienne, a nawet zapalenie trzustki. Skóra z pieczeni może też mieć na sobie czosnek lub zioła. Kości indyka mogą się rozszczepiać i spowodować zadławienie lub niedrożność.",
+    "cs": "Podle Cats Protection je tepelně upravené krůtí maso bez přísad v pořádku jako občasný pamlsek, nemělo by se však dávat pravidelně, protože samotnému krůtímu masu chybějí živiny, které kočky potřebují. Krůtí kůže je velmi tučná a může způsobit trávicí potíže, nebo dokonce zánět slinivky břišní, a kůže z pečeně může obsahovat česnek nebo bylinky. Krůtí kosti se mohou roztříštit a způsobit dušení nebo ucpání trávicího traktu."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "it": "Offrigli prima un pezzetto. Se poi il tuo gatto vomita o ha la diarrea, smetti e chiedi al veterinario. Se ha mangiato ossa di tacchino, ripieno o sugo con cipolla o aglio, chiama subito il veterinario.",
     "pt": "Começa por oferecer um pedacinho. Se o teu gato tiver vómitos ou diarreia depois, para e pergunta ao teu veterinário. Se o teu gato comeu ossos de peru, recheio ou molho com cebola ou alho, liga imediatamente ao teu veterinário.",
     "nl": "Geef eerst een klein stukje. Krijgt je kat daarna last van braken of diarree, stop dan en vraag je dierenarts om advies. Heeft je kat kalkoenbotten gegeten, of vulling of jus met ui of knoflook, bel dan meteen je dierenarts.",
-    "pl": "Najpierw podaj mały kawałek. Jeśli potem twój kot wymiotuje lub ma biegunkę, przestań i zapytaj weterynarza. Jeśli kot zjadł kości indyka, farsz lub sos pieczeniowy z cebulą lub czosnkiem, od razu zadzwoń do weterynarza."
+    "pl": "Najpierw podaj mały kawałek. Jeśli potem twój kot wymiotuje lub ma biegunkę, przestań i zapytaj weterynarza. Jeśli kot zjadł kości indyka, farsz lub sos pieczeniowy z cebulą lub czosnkiem, od razu zadzwoń do weterynarza.",
+    "cs": "Nejdřív nabídněte malý kousek. Pokud vaše kočka potom zvrací nebo má průjem, přestaňte a poraďte se s veterinářem. Pokud vaše kočka snědla krůtí kosti, nádivku nebo omáčku s cibulí či česnekem, okamžitě zavolejte veterináři."
   },
   "serving": {
     "en": "Plain cooked meat with no bones, skin or seasoning; a small amount, counted in the daily food.",
@@ -78,7 +84,8 @@
     "it": "Carne cotta e semplice, senza ossa, pelle né condimenti; una piccola quantità, calcolata nella razione giornaliera.",
     "pt": "Carne cozinhada simples, sem ossos, pele nem temperos; uma pequena quantidade, contada na comida do dia.",
     "nl": "Gewoon gekookt vlees zonder botten, vel of kruiden; een kleine hoeveelheid, meegeteld bij het dagelijkse eten.",
-    "pl": "Zwykłe gotowane mięso bez kości, skóry i przypraw; mała ilość wliczona do dziennej porcji jedzenia."
+    "pl": "Zwykłe gotowane mięso bez kości, skóry i przypraw; mała ilość wliczona do dziennej porcji jedzenia.",
+    "cs": "Tepelně upravené maso bez přísad, bez kostí, kůže a koření; malé množství započítané do denní dávky krmiva."
   },
   "child": {
     "en": "A little plain turkey with no bones can be a cat treat. The skin and gravy stay on your plate.",
@@ -89,7 +96,8 @@
     "it": "Un po’ di tacchino semplice e senza ossa può essere un premio per gatti. La pelle e il sugo restano nel tuo piatto.",
     "pt": "Um bocadinho de peru simples e sem ossos pode ser uma guloseima para o gato. A pele e o molho ficam no teu prato.",
     "nl": "Een beetje gewone kalkoen zonder botjes kan een kattensnoepje zijn. Het vel en de jus blijven op jouw bord.",
-    "pl": "Odrobina zwykłego indyka bez kości może być smakołykiem dla kota. Skóra i sos zostają na twoim talerzu."
+    "pl": "Odrobina zwykłego indyka bez kości może być smakołykiem dla kota. Skóra i sos zostają na twoim talerzu.",
+    "cs": "Trocha obyčejného krůtího masa bez kostí může být pro kočku pamlsek. Kůže a omáčka zůstanou na tvém talíři."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "it": "I gatti possono mangiare la pelle del tacchino?",
         "pt": "Os gatos podem comer pele de peru?",
         "nl": "Mogen katten kalkoenvel eten?",
-        "pl": "Czy koty mogą jeść skórę indyka?"
+        "pl": "Czy koty mogą jeść skórę indyka?",
+        "cs": "Mohou kočky jíst krůtí kůži?"
       },
       "a": {
         "en": "It's best not to. Turkey skin is high in fat and can cause digestive upset or even pancreatitis, and it may have touched seasoning or garlic.",
@@ -113,7 +122,8 @@
         "it": "Meglio di no. La pelle del tacchino è molto grassa e può causare disturbi digestivi o persino una pancreatite, e potrebbe essere stata a contatto con condimenti o aglio.",
         "pt": "É melhor não. A pele do peru tem muita gordura e pode causar problemas digestivos ou até pancreatite, e pode ter estado em contacto com temperos ou alho.",
         "nl": "Liever niet. Kalkoenvel bevat veel vet en kan spijsverteringsproblemen of zelfs alvleesklierontsteking veroorzaken, en het kan in contact zijn geweest met kruiden of knoflook.",
-        "pl": "Lepiej nie. Skóra indyka zawiera dużo tłuszczu i może wywołać problemy trawienne, a nawet zapalenie trzustki. Do tego mogła mieć kontakt z przyprawami lub czosnkiem."
+        "pl": "Lepiej nie. Skóra indyka zawiera dużo tłuszczu i może wywołać problemy trawienne, a nawet zapalenie trzustki. Do tego mogła mieć kontakt z przyprawami lub czosnkiem.",
+        "cs": "Raději ne. Krůtí kůže je velmi tučná a může způsobit trávicí potíže, nebo dokonce zánět slinivky břišní, a mohla přijít do styku s kořením nebo česnekem."
       }
     }
   ],
@@ -213,6 +223,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ab9d6c8ffe15c9139d930282ff5710436c8a4c957cf633a228484197adbc968a"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "67dd53bec071b21c82ca711588622f3fc7ebe33225ba369c557fc75f68961504"
     }
   }
 }

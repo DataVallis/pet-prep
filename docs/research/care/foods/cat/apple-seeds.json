@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Apple seeds",
-    "sl": "Jabolčne pečke"
+    "sl": "Jabolčne pečke",
+    "cs": "Jablečná jádra"
   },
   "question": {
     "en": "Can cats eat apple seeds?",
-    "sl": "Ali lahko mačke jedo jabolčne pečke?"
+    "sl": "Ali lahko mačke jedo jabolčne pečke?",
+    "cs": "Mohou kočky jíst jablečná jádra?"
   },
   "url_slug": {
     "en": "apple-seeds",
-    "sl": "jabolcne-pecke"
+    "sl": "jabolcne-pecke",
+    "cs": "jablecna-jadra"
   },
   "level": "dangerous",
   "answer": {
     "en": "No. Apple seeds should not be given to cats: they contain cyanide, and seeds and cores can cause choking or a gut blockage. Poisoning mainly matters when many seeds are eaten, so call your vet if your cat ate many seeds or chewed apple stems or leaves.",
-    "sl": "Ne. Jabolčnih pečk mačkam ne dajajte: vsebujejo cianid, pečke in peščišče pa lahko povzročijo dušenje ali zamašitev črevesja. Zastrupitev je predvsem skrb, ko žival poje veliko pečk, zato pokličite veterinarja, če je mačka pojedla veliko pečk ali grizljala peclje ali liste jablane."
+    "sl": "Ne. Jabolčnih pečk mačkam ne dajajte: vsebujejo cianid, pečke in peščišče pa lahko povzročijo dušenje ali zamašitev črevesja. Zastrupitev je predvsem skrb, ko žival poje veliko pečk, zato pokličite veterinarja, če je mačka pojedla veliko pečk ali grizljala peclje ali liste jablane.",
+    "cs": "Ne. Jablečná jádra kočkám nedávejte: obsahují kyanid a jádra i ohryzky mohou způsobit dušení nebo ucpání střev. Otrava hrozí hlavně tehdy, když kočka sní hodně jader, proto zavolejte veterináři, pokud kočka snědla hodně jader nebo okusovala jablečné stopky či listy."
   },
   "why": {
     "en": "NC State's veterinary hospital lists apple seeds under \"Toxic to pets: do not feed!\" on its page for cats and dogs, and the ASPCA lists the apple plant as toxic to cats because its stems, leaves and seeds contain cyanide (as cyanogenic glycosides). Pet Poison Helpline adds that the core and seeds can cause choking and intestinal obstruction, but that a pet would need to eat massive amounts of seeds for the cyanide to be a concern. We follow the stricter advice: don't give them.",
-    "sl": "Veterinarska bolnišnica univerze NC State na svoji strani za mačke in pse navaja jabolčne pečke pod »Strupeno za živali: ne hranite!«, ASPCA pa rastlino jablane navaja kot strupeno za mačke, ker njeni peclji, listi in pečke vsebujejo cianid (v obliki cianogenih glikozidov). Pet Poison Helpline dodaja, da lahko peščišče in pečke povzročijo dušenje in zamašitev črevesja, za zastrupitev s cianidom pa bi morala žival pojesti ogromno pečk. Sledimo strožjemu nasvetu: ne dajajte jih."
+    "sl": "Veterinarska bolnišnica univerze NC State na svoji strani za mačke in pse navaja jabolčne pečke pod »Strupeno za živali: ne hranite!«, ASPCA pa rastlino jablane navaja kot strupeno za mačke, ker njeni peclji, listi in pečke vsebujejo cianid (v obliki cianogenih glikozidov). Pet Poison Helpline dodaja, da lahko peščišče in pečke povzročijo dušenje in zamašitev črevesja, za zastrupitev s cianidom pa bi morala žival pojesti ogromno pečk. Sledimo strožjemu nasvetu: ne dajajte jih.",
+    "cs": "Veterinární nemocnice Státní univerzity Severní Karolíny (NC State) uvádí jablečná jádra na své stránce pro kočky a psy v části „Toxické pro zvířata: nekrmte!“ a ASPCA vede jabloň jako rostlinu toxickou pro kočky, protože její stonky, listy a semena obsahují kyanid (ve formě kyanogenních glykosidů). Pet Poison Helpline dodává, že ohryzek a jádra mohou způsobit dušení a ucpání střev, ale aby byl kyanid problémem, muselo by zvíře sníst obrovské množství jader. Držíme se přísnějšího doporučení: nedávejte je."
   },
   "signs": {
     "en": [
@@ -36,26 +41,37 @@
       "Težave z dihanjem",
       "Sopihanje",
       "Šok"
+    ],
+    "cs": [
+      "Cihlově červené dásně",
+      "Rozšířené zorničky",
+      "Dýchací potíže",
+      "Dýchání s otevřenou tlamou",
+      "Šok"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline as soon as possible if your cat ate many apple seeds, chewed apple stems or leaves, or shows any of these signs.",
-    "sl": "Čim prej se obrnite na veterinarja ali center za zastrupitve živali, če je mačka pojedla veliko jabolčnih pečk, grizljala peclje ali liste jablane ali kaže katerega od teh znakov."
+    "sl": "Čim prej se obrnite na veterinarja ali center za zastrupitve živali, če je mačka pojedla veliko jabolčnih pečk, grizljala peclje ali liste jablane ali kaže katerega od teh znakov.",
+    "cs": "Co nejdříve se obraťte na veterináře nebo na toxikologickou linku pro zvířata, pokud kočka snědla hodně jablečných jader, okusovala jablečné stopky nebo listy nebo má některý z těchto příznaků."
   },
   "serving": null,
   "child": {
     "en": "Apple seeds are not for cats. If kitty finds some, tell a grown-up.",
-    "sl": "Jabolčne pečke niso za muce. Če jih muca najde, povej odraslemu."
+    "sl": "Jabolčne pečke niso za muce. Če jih muca najde, povej odraslemu.",
+    "cs": "Jablečná jádra nejsou pro kočky. Když na nějaká kočička narazí, řekni to dospělému."
   },
   "faq": [
     {
       "q": {
         "en": "My cat swallowed one apple seed. What now?",
-        "sl": "Muca je pogoltnila eno jabolčno pečko. Kaj zdaj?"
+        "sl": "Muca je pogoltnila eno jabolčno pečko. Kaj zdaj?",
+        "cs": "Moje kočka spolkla jedno jablečné jádro. Co teď?"
       },
       "a": {
         "en": "Pet Poison Helpline says a pet would need to eat massive amounts of apple seeds for them to be a concern. If you are unsure or see any signs, contact your vet.",
-        "sl": "Pet Poison Helpline navaja, da bi morala žival pojesti ogromno jabolčnih pečk, da bi bile skrb vzbujajoče. Če niste prepričani ali opazite znake, se obrnite na veterinarja."
+        "sl": "Pet Poison Helpline navaja, da bi morala žival pojesti ogromno jabolčnih pečk, da bi bile skrb vzbujajoče. Če niste prepričani ali opazite znake, se obrnite na veterinarja.",
+        "cs": "Podle Pet Poison Helpline by zvíře muselo sníst obrovské množství jablečných jader, aby byla problémem. Pokud si nejste jistí nebo si všimnete jakýchkoli příznaků, obraťte se na veterináře."
       }
     }
   ],
@@ -131,6 +147,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "49a035f878142a73948a8d0c4b96aebed80ffdb416b56344de75c5f4df80848c"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "86a2220b2ac4db15296bb92491eab5fc82e0efb79775cbf0797e346a40002695"
     }
   }
 }
