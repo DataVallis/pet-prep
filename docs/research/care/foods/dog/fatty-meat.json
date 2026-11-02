@@ -55,7 +55,7 @@
   "level": "not_recommended",
   "answer": {
     "en": "Not recommended. Fatty meat, poultry skin and gristle are not toxic, but they can cause vomiting and diarrhoea or trigger pancreatitis, a painful and sometimes severe inflammation. Some breeds, such as Miniature Schnauzers, are more prone to it.",
-    "sl": "Ni priporočljivo. Mastno meso, kožica perutnine in hrustanec niso strupeni, lahko pa povzročijo bruhanje in drisko ali sprožijo vnetje trebušne slinavke, ki je boleče in včasih hudo. Nekatere pasme, na primer pritlikavi šnavcerji, so zanj bolj dovzetne.",
+    "sl": "Ni priporočljivo. Mastno meso, kožica perutnine in hrustanec niso strupeni, lahko pa povzročijo bruhanje in drisko ali sprožijo boleče, včasih hudo vnetje trebušne slinavke. Nekatere pasme, na primer pritlikavi šnavcerji, so zanj bolj dovzetne.",
     "de": "Nicht empfohlen. Fettes Fleisch, Geflügelhaut und Knorpel sind nicht giftig, können aber Erbrechen und Durchfall verursachen oder eine schmerzhafte, manchmal schwere Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen. Manche Rassen, etwa Zwergschnauzer, sind dafür anfälliger.",
     "fr": "Déconseillé. La viande grasse, la peau de volaille et les nerfs ne sont pas toxiques, mais ils peuvent provoquer vomissements et diarrhée, ou déclencher une pancréatite, une inflammation douloureuse et parfois grave. Certaines races, comme le schnauzer nain, y sont plus sujettes.",
     "es": "No se recomienda. La carne grasa, la piel de ave y los cartílagos no son tóxicos, pero pueden causar vómitos y diarrea o desencadenar una pancreatitis, una inflamación dolorosa y a veces grave. Algunas razas, como el schnauzer miniatura, son más propensas a sufrirla.",
@@ -96,8 +96,8 @@
       "Tiredness, fever"
     ],
     "sl": [
-      "Bruhanje, včasih šele 1–4 dni po mastnem obroku",
-      "Bolečine v trebuhu (pes se lahko raztegne v »molitveni« položaj)",
+      "Bruhanje, včasih šele 1–4 dni po mastnem obroku",
+      "Bolečine v trebuhu (pes se lahko raztegne v „molitveni“ položaj)",
       "Driska",
       "Pes noče jesti",
       "Utrujenost, vročina"
@@ -230,7 +230,7 @@
   },
   "child": {
     "en": "Fatty bits of meat can give dogs a sore tummy. Leave the fat on your plate and give your dog its own food.",
-    "sl": "Mastni koščki mesa lahko psu povzročijo boleč trebušček. Maščobo pusti na krožniku, psu pa daj njegovo hrano.",
+    "sl": "Mastni koščki mesa lahko psu povzročijo bolečine v trebuščku. Maščobo pusti na krožniku, psu pa daj njegovo hrano.",
     "de": "Fettige Fleischstückchen können Hunden Bauchweh machen. Lass das Fett auf deinem Teller und gib deinem Hund sein eigenes Futter.",
     "fr": "Les morceaux de viande grasse peuvent donner mal au ventre aux chiens. Laisse le gras dans ton assiette et donne à ton chien sa propre nourriture.",
     "es": "Los trozos de grasa de la carne pueden darles dolor de barriga a los perros. Deja la grasa en tu plato y dale a tu perro su propia comida.",
@@ -266,7 +266,7 @@
       },
       "a": {
         "en": "An inflammation of the pancreas that causes vomiting, nausea and pain. In dogs it can be triggered by a fatty meal.",
-        "sl": "Vnetje trebušne slinavke povzroča bruhanje, slabost in bolečine. Pri psih ga lahko sproži mastni obrok.",
+        "sl": "To je vnetje trebušne slinavke, ki povzroča bruhanje, slabost in bolečine. Pri psih ga lahko sproži mastni obrok.",
         "de": "Eine Entzündung der Bauchspeicheldrüse, die Erbrechen, Übelkeit und Schmerzen verursacht. Bei Hunden kann sie durch eine fettreiche Mahlzeit ausgelöst werden.",
         "fr": "Une inflammation du pancréas qui provoque vomissements, nausées et douleurs. Chez le chien, elle peut être déclenchée par un repas gras.",
         "es": "Una inflamación del páncreas que provoca vómitos, náuseas y dolor. En los perros puede desencadenarla una comida grasa.",
@@ -285,7 +285,7 @@
     {
       "q": {
         "en": "Is turkey skin okay at Christmas?",
-        "sl": "Je puranja kožica za praznike v redu?",
+        "sl": "Je puranja kožica za božič v redu?",
         "de": "Ist Putenhaut an Weihnachten in Ordnung?",
         "fr": "La peau de dinde à Noël, c’est permis ?",
         "es": "¿La piel del pavo está bien en Navidad?",
@@ -302,7 +302,7 @@
       },
       "a": {
         "en": "No. Turkey skin and other fatty table foods can cause anything from stomach upset to severe pancreatitis.",
-        "sl": "Ne. Puranja kožica in druga mastna hrana z mize lahko povzroči vse od prebavnih težav do hudega vnetja trebušne slinavke.",
+        "sl": "Ne. Puranja kožica in druga mastna hrana z mize lahko povzročita vse od prebavnih težav do hudega vnetja trebušne slinavke.",
         "de": "Nein. Putenhaut und andere fettige Essensreste vom Tisch können alles von einer Magenverstimmung bis zu einer schweren Pankreatitis verursachen.",
         "fr": "Non. La peau de dinde et les autres aliments de table gras peuvent provoquer aussi bien des troubles digestifs qu’une pancréatite grave.",
         "es": "No. La piel del pavo y otras comidas grasas de la mesa pueden causar desde un malestar de estómago hasta una pancreatitis grave.",
@@ -393,7 +393,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0efc35bebde80921a5b83b72d86cb07e2e1ba9be4c133e47b1dd8632d29f45a9"
+      "verified_hash": "31136359b8f56f4c8825fbf329b864fe43b55bd6bc33de628eaaa6e1868b2eb2"
     },
     "de": {
       "status": "verified",

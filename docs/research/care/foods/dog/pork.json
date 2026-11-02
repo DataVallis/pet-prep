@@ -55,7 +55,7 @@
   "level": "not_recommended",
   "answer": {
     "en": "Not as a regular treat. Some vet sources allow a little plain, fully cooked lean pork, but pork is fatty and hard for dogs to digest, and fatty foods can trigger pancreatitis. Raw pork, cooked bones, ham and bacon are not suitable.",
-    "sl": "Ne kot reden priboljšek. Nekateri veterinarski viri dovolijo malo navadne, popolnoma kuhane puste svinjine, a svinjina je mastna in jo psi težko prebavijo, mastna hrana pa lahko sproži vnetje trebušne slinavke. Surova svinjina, kuhane kosti, šunka in slanina niso primerne.",
+    "sl": "Ne kot redni priboljšek. Nekateri veterinarski viri dovolijo malo navadne, popolnoma kuhane puste svinjine, a svinjina je mastna in jo psi težko prebavijo, mastna hrana pa lahko sproži vnetje trebušne slinavke. Surova svinjina, kuhane kosti, šunka in slanina niso primerne.",
     "de": "Nicht als regelmäßiges Leckerli. Manche tierärztlichen Quellen erlauben ein wenig pures, mageres, vollständig gegartes Schweinefleisch, aber Schweinefleisch ist fettreich und für Hunde schwer verdaulich, und fettreiches Futter kann eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen. Rohes Schweinefleisch, gegarte Knochen, Schinken und Speck sind nicht geeignet.",
     "fr": "Pas comme friandise régulière. Certaines sources vétérinaires autorisent un peu de porc maigre nature et bien cuit, mais le porc est gras et difficile à digérer pour les chiens, et les aliments gras peuvent déclencher une pancréatite. Le porc cru, les os cuits, le jambon et le bacon ne conviennent pas.",
     "es": "No como premio habitual. Algunas fuentes veterinarias permiten un poco de cerdo magro, natural y bien cocinado, pero el cerdo es graso y difícil de digerir para los perros, y los alimentos grasos pueden desencadenar una pancreatitis. El cerdo crudo, los huesos cocinados, el jamón y el beicon no son adecuados.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Pork is rich in a type of fat that is difficult for dogs to digest. Raw or undercooked pork can carry the parasite Trichinella. Cooked bones become brittle, and seasonings can be dangerous. Ham is high in salt and fat. Sources differ: the AKC calls plain cooked lean pork safe in moderation, while PDSA lists pork among high-fat foods that can lead to pancreatitis and advises dogs that have had it to avoid high-fat treats like pork, so we use the stricter level.",
-    "sl": "Svinjina vsebuje vrsto maščobe, ki jo psi težko prebavijo. Surova ali premalo kuhana svinjina lahko prenaša zajedavca trihinelo. Kuhane kosti postanejo krhke, začimbe pa so lahko nevarne. Šunka vsebuje veliko soli in maščobe. Viri se razlikujejo: AKC navadno kuhano pusto svinjino v zmernih količinah označuje kot varno, PDSA pa svinjino navaja med mastno hrano, ki lahko sproži vnetje trebušne slinavke, psom, ki so ga že imeli, pa svetuje, naj se izogibajo mastnim priboljškom, kot je svinjina, zato smo izbrali strožjo stopnjo.",
+    "sl": "Svinjina vsebuje vrsto maščobe, ki jo psi težko prebavijo. Surova ali premalo kuhana svinjina lahko vsebuje zajedavca trihinelo. Kuhane kosti postanejo krhke, začimbe pa so lahko nevarne. Šunka vsebuje veliko soli in maščobe. Viri se razlikujejo: AKC navadno kuhano pusto svinjino v zmernih količinah označuje kot varno, PDSA pa svinjino navaja med mastno hrano, ki lahko sproži vnetje trebušne slinavke, in psom, ki so ga že preboleli, svetuje, naj se mastnim priboljškom, kot je svinjina, izogibajo; zato smo izbrali strožjo stopnjo.",
     "de": "Schweinefleisch enthält viel von einer Fettart, die Hunde schwer verdauen können. Rohes oder nicht durchgegartes Schweinefleisch kann den Parasiten Trichinella übertragen. Gegarte Knochen werden spröde, und Gewürze können gefährlich sein. Schinken ist sehr salz- und fettreich. Die Quellen sind sich nicht einig: Der AKC hält pures, mageres, gegartes Schweinefleisch in Maßen für unbedenklich, während PDSA Schweinefleisch zu den fettreichen Lebensmitteln zählt, die zu einer Pankreatitis führen können, und Hunden, die schon eine hatten, von fettreichen Leckerlis wie Schweinefleisch abrät. Deshalb wählen wir die strengere Einstufung.",
     "fr": "Le porc est riche en un type de graisse que les chiens digèrent difficilement. Le porc cru ou pas assez cuit peut transmettre un parasite, la trichine (Trichinella). Les os cuits deviennent cassants, et les assaisonnements peuvent être dangereux. Le jambon est riche en sel et en graisses. Les sources divergent : l’AKC juge le porc maigre cuit nature sans danger avec modération, tandis que la PDSA classe le porc parmi les aliments gras pouvant mener à une pancréatite et conseille aux chiens qui en ont déjà eu une d’éviter les friandises grasses comme le porc ; nous retenons donc le niveau le plus strict.",
     "es": "El cerdo es rico en un tipo de grasa difícil de digerir para los perros. El cerdo crudo o poco hecho puede transmitir el parásito Trichinella. Los huesos cocinados se vuelven quebradizos, y los condimentos pueden ser peligrosos. El jamón tiene mucha sal y grasa. Las fuentes difieren: el AKC considera seguro con moderación el cerdo magro natural y cocinado, mientras que la PDSA incluye el cerdo entre los alimentos grasos que pueden provocar pancreatitis y aconseja que los perros que la han tenido eviten premios grasos como el cerdo, así que aplicamos el nivel más estricto.",
@@ -95,9 +95,9 @@
       "Poor appetite and low energy"
     ],
     "sl": [
-      "Bruhanje, ki se lahko začne 1–4 dni po mastnem obroku",
+      "Bruhanje, ki se lahko začne 1–4 dni po mastnem obroku",
       "Driska",
-      "Boleč trebuh",
+      "Bolečine v trebuhu",
       "Slab apetit in utrujenost"
     ],
     "de": [
@@ -198,7 +198,7 @@
   },
   "serving": {
     "en": "If you share at all: a small piece of plain, fully cooked lean pork, fat trimmed, boneless, unseasoned.",
-    "sl": "Če jo sploh daste: majhen košček navadne, popolnoma kuhane puste svinjine, brez maščobe, kosti in začimb.",
+    "sl": "Če jo sploh ponudite: majhen košček navadne, popolnoma kuhane puste svinjine, brez maščobe, kosti in začimb.",
     "de": "Wenn überhaupt: ein kleines Stück pures, mageres, vollständig gegartes Schweinefleisch, Fett abgeschnitten, ohne Knochen, ungewürzt.",
     "fr": "Si vous en partagez : un petit morceau de porc maigre nature, bien cuit, dégraissé, sans os et sans assaisonnement.",
     "es": "Si le das algo: un trocito de cerdo magro, natural y bien cocinado, sin grasa, sin huesos y sin condimentos.",
@@ -351,7 +351,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "220cb297aece627e41278872fb57fac0bafb9c9059559f84a320baea98a2a886"
+      "verified_hash": "be0eb7ca800e5faf323051b1bb4c11b07b774eb69eae17fcdba3771ce81f898b"
     },
     "de": {
       "status": "verified",

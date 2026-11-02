@@ -55,7 +55,7 @@
   "level": "toxic",
   "answer": {
     "en": "No. Raisins are dried grapes, and dogs should never eat them. They can cause kidney failure, and even a small amount can make a dog seriously ill. There is no way to predict which dogs will be affected.",
-    "sl": "Ne. Rozine so posušeno grozdje in psi jih ne smejo nikoli jesti. Lahko povzročijo odpoved ledvic, že majhna količina pa lahko psu resno škodi. Ni mogoče napovedati, kateri psi bodo prizadeti.",
+    "sl": "Ne. Rozine so suho grozdje, psi pa jih nikoli ne smejo jesti. Lahko povzročijo odpoved ledvic, že majhna količina pa lahko psu resno škodi. Ni mogoče napovedati, kateri psi bodo prizadeti.",
     "de": "Nein. Rosinen sind getrocknete Weintrauben, und Hunde sollten sie niemals fressen. Sie können Nierenversagen verursachen, und schon eine kleine Menge kann einen Hund schwer krank machen. Es lässt sich nicht vorhersagen, welche Hunde betroffen sein werden.",
     "fr": "Non. Les raisins secs sont du raisin séché, et les chiens ne doivent jamais en manger. Ils peuvent provoquer une insuffisance rénale, et même une petite quantité peut rendre un chien gravement malade. Impossible de prévoir quels chiens seront touchés.",
     "es": "No. Las pasas son uvas secas, y los perros no deben comerlas nunca. Pueden provocar insuficiencia renal, e incluso una pequeña cantidad puede hacer que un perro enferme gravemente. No hay forma de predecir a qué perros les afectará.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Raisins, grapes and currants can damage a dog's kidneys. Tartaric acid is suspected to be the toxic part; its amount varies, so effects are unpredictable, and there is no way to tell which dogs are more sensitive. Because the cause is uncertain, any amount is treated as a concern.",
-    "sl": "Rozine, grozdje in korinte lahko poškodujejo pasje ledvice. Za strupeno sestavino velja vinska kislina; njena količina se razlikuje, zato so učinki nepredvidljivi, in ni mogoče vedeti, kateri psi so bolj občutljivi. Ker vzrok ni pojasnjen, se vsaka količina jemlje resno.",
+    "sl": "Rozine, grozdje in korintske rozine lahko poškodujejo pasje ledvice. Za strupeno sestavino sumijo vinsko kislino; njena količina se razlikuje, zato so učinki nepredvidljivi, prav tako pa ni mogoče vedeti, kateri psi so bolj občutljivi. Ker vzrok ni pojasnjen, vsako količino jemljemo resno.",
     "de": "Rosinen, Weintrauben und Korinthen können die Nieren eines Hundes schädigen. Als giftiger Bestandteil wird Weinsäure vermutet; ihr Gehalt schwankt, deshalb sind die Folgen unberechenbar, und es lässt sich nicht erkennen, welche Hunde empfindlicher sind. Weil die Ursache unklar ist, gilt jede Menge als bedenklich.",
     "fr": "Les raisins secs, le raisin et les raisins de Corinthe peuvent endommager les reins d’un chien. L’acide tartrique est soupçonné d’être la substance toxique ; sa teneur varie, les effets sont donc imprévisibles, et on ne peut pas savoir quels chiens sont plus sensibles. Comme la cause est incertaine, toute quantité est considérée comme préoccupante.",
     "es": "Las pasas, las uvas y las pasas de Corinto pueden dañar los riñones del perro. Se sospecha que la parte tóxica es el ácido tartárico; su cantidad varía, así que los efectos son impredecibles, y no hay forma de saber qué perros son más sensibles. Como la causa no es segura, cualquier cantidad se considera preocupante.",
@@ -97,11 +97,11 @@
       "Trembling"
     ],
     "sl": [
-      "Bruhanje ali driska, pogosto v 6–24 urah",
+      "Bruhanje ali driska, pogosto v 6–24 urah",
       "Utrujenost in šibkost",
       "Pes noče jesti",
       "Bolečine v trebuhu",
-      "Izsušenost in veliko pitja",
+      "Dehidracija in veliko pitja",
       "Tresenje"
     ],
     "de": [
@@ -211,7 +211,7 @@
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away, even if only a few raisins were eaten. Note roughly how many were eaten. Don't wait for signs: the sooner treatment starts, the better.",
-    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če je pes pojedel le nekaj rozin. Zapišite si, približno koliko jih je pojedel. Ne čakajte na znake: prej ko se zdravljenje začne, bolje je.",
+    "sl": "Takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali, tudi če je pes pojedel le nekaj rozin. Zapišite si, približno koliko jih je pojedel. Ne čakajte na znake: čim prej se začne zdravljenje, tem bolje.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, auch wenn nur wenige Rosinen gefressen wurden. Notieren Sie ungefähr, wie viele es waren. Warten Sie nicht auf Anzeichen: Je früher die Behandlung beginnt, desto besser.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, même si votre chien n’a mangé que quelques raisins secs. Notez combien il en a mangé environ. N’attendez pas l’apparition des signes : plus le traitement commence tôt, mieux c’est.",
     "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales, aunque tu perro solo se haya comido unas pocas pasas. Apunta más o menos cuántas se ha comido. No esperes a que aparezcan síntomas: cuanto antes empiece el tratamiento, mejor.",
@@ -265,7 +265,7 @@
       },
       "a": {
         "en": "Both are dangerous. Sources treat grapes, raisins and currants as the same risk and advise calling the vet after any amount.",
-        "sl": "Oboje je nevarno. Viri grozdje, rozine in korinte obravnavajo kot enako tveganje in svetujejo klic veterinarju po kateri koli količini.",
+        "sl": "Oboje je nevarno. Viri grozdje, rozine in korintske rozine obravnavajo kot enako tveganje in svetujejo, da po kateri koli količini pokličete veterinarja.",
         "de": "Beide sind gefährlich. Die Quellen behandeln Weintrauben, Rosinen und Korinthen als gleiches Risiko und raten, nach jeder Menge den Tierarzt anzurufen.",
         "fr": "Les deux sont dangereux. Les sources considèrent que le raisin, les raisins secs et les raisins de Corinthe présentent le même risque et conseillent d’appeler le vétérinaire quelle que soit la quantité.",
         "es": "Las dos son peligrosas. Las fuentes consideran que las uvas, las pasas y las pasas de Corinto tienen el mismo riesgo y aconsejan llamar al veterinario sea cual sea la cantidad.",
@@ -284,7 +284,7 @@
     {
       "q": {
         "en": "What about currants?",
-        "sl": "Kaj pa korinte?",
+        "sl": "Kaj pa korintske rozine?",
         "de": "Und Korinthen?",
         "fr": "Et les raisins de Corinthe ?",
         "es": "¿Y las pasas de Corinto?",
@@ -301,7 +301,7 @@
       },
       "a": {
         "en": "Currants are named in the same warnings as grapes and raisins, so they are not safe for dogs either.",
-        "sl": "Korinte so navedene v istih opozorilih kot grozdje in rozine, zato tudi one za pse niso varne.",
+        "sl": "Korintske rozine so navedene v istih opozorilih kot grozdje in rozine, zato tudi te za pse niso varne.",
         "de": "Korinthen werden in denselben Warnungen genannt wie Weintrauben und Rosinen, sie sind also ebenfalls nicht sicher für Hunde.",
         "fr": "Les raisins de Corinthe figurent dans les mêmes mises en garde que le raisin et les raisins secs : ils ne sont pas sans danger pour les chiens non plus.",
         "es": "Las pasas de Corinto aparecen en las mismas advertencias que las uvas y las pasas, así que tampoco son seguras para los perros.",
@@ -384,7 +384,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "c21f3739809b972942c2dada1540ac5c16b2245034a73724a16bf17cd28fc01a"
+      "verified_hash": "bdf0297a6c956a86277b2856241bff44a0eccfeb3bf500a36947e23d08992478"
     },
     "de": {
       "status": "verified",

@@ -90,7 +90,7 @@
   "signs": null,
   "what_to_do": {
     "en": "If your dog eats an apple core or seeds, watch for signs of digestive trouble or blockage. If your dog has problems, stop giving apples and contact a vet.",
-    "sl": "Če pes poje ogrizek ali pečke, ga opazujte, ali se pojavijo znaki prebavnih težav ali zapore. Če ima pes težave, mu jabolk ne dajajte več in se obrnite na veterinarja.",
+    "sl": "Če pes poje ogrizek ali pečke, opazujte, ali se pojavijo znaki prebavnih težav ali zapore. Če ima pes težave, mu jabolk ne dajajte več in se obrnite na veterinarja.",
     "de": "Hat Ihr Hund ein Kerngehäuse oder Apfelkerne gefressen, achten Sie auf Anzeichen von Verdauungsproblemen oder einem Darmverschluss. Hat Ihr Hund Beschwerden, geben Sie ihm keine Äpfel mehr und wenden Sie sich an einen Tierarzt.",
     "fr": "Si votre chien a mangé un trognon de pomme ou des pépins, surveillez l’apparition de troubles digestifs ou de signes d’obstruction. S’il a des problèmes, arrêtez de lui donner des pommes et contactez un vétérinaire.",
     "es": "Si tu perro se come un corazón o semillas de manzana, vigila si aparecen signos de problemas digestivos o de obstrucción. Si tiene algún problema, deja de darle manzana y contacta con un veterinario.",
@@ -107,7 +107,7 @@
   },
   "serving": {
     "en": "Wash and scrub the apple, remove the seeds, core and stem, and cut it into slices or small cubes; in moderation, not a whole apple.",
-    "sl": "Jabolko operite in očistite, odstranite pečke, ogrizek in pecelj ter ga narežite na krhlje ali majhne kocke; zmerno, ne celo jabolko.",
+    "sl": "Jabolko dobro operite ali zdrgnite, odstranite pečke, ogrizek in pecelj ter ga narežite na krhlje ali majhne kocke; v zmernih količinah, ne celega jabolka.",
     "de": "Waschen Sie den Apfel und reiben Sie ihn gründlich ab, entfernen Sie Kerne, Kerngehäuse und Stiel und schneiden Sie ihn in Scheiben oder kleine Würfel; in Maßen, keinen ganzen Apfel.",
     "fr": "Lavez et frottez la pomme, retirez les pépins, le trognon et la queue, puis coupez-la en tranches ou en petits dés ; avec modération, pas une pomme entière.",
     "es": "Lava y frota bien la manzana, quita las semillas, el corazón y el tallo, y córtala en rodajas o en dados pequeños; con moderación, no una manzana entera.",
@@ -124,7 +124,7 @@
   },
   "child": {
     "en": "Dogs can enjoy a few apple slices! A grown-up should cut them and take out the core and seeds first.",
-    "sl": "Psi lahko uživajo v nekaj krhljih jabolka! Odrasel naj jih nareže in najprej odstrani ogrizek in pečke.",
+    "sl": "Psi se lahko posladkajo z nekaj krhlji jabolka! Odrasel naj jih nareže in prej odstrani ogrizek in pečke.",
     "de": "Hunde dürfen ein paar Apfelscheiben naschen! Ein Erwachsener sollte sie vorher schneiden und Kerngehäuse und Kerne entfernen.",
     "fr": "Les chiens peuvent se régaler de quelques tranches de pomme ! Un adulte doit d’abord les couper et retirer le trognon et les pépins.",
     "es": "¡Los perros pueden disfrutar de unas rodajas de manzana! Antes, un adulto tiene que cortarlas y quitar el corazón y las semillas.",
@@ -302,7 +302,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "946fd08e57d70c8eb409f71f10ee1752c8bacc0c6c712d34fd62998460642d6b"
+      "verified_hash": "8d24f23e8602a52009929e4f433c94685a8bf09d7a6f5b1393af7a03ce263c57"
     },
     "de": {
       "status": "verified",

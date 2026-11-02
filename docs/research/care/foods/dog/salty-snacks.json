@@ -196,7 +196,7 @@
   },
   "what_to_do": {
     "en": "If your dog ate a large amount of salty snacks, contact your vet or a pet poison helpline. Note what and how much was eaten. Fresh water should always be available.",
-    "sl": "Če je pes pojedel veliko slanih prigrizkov, pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj in koliko je pojedel. Sveža voda naj bo vedno na voljo.",
+    "sl": "Če je pes pojedel veliko slanih prigrizkov, pokličite veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si, kaj in koliko je pojedel. Sveža voda naj bo vedno na voljo.",
     "de": "Wenn Ihr Hund eine große Menge salziger Snacks gefressen hat, wenden Sie sich an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was und wie viel gefressen wurde. Frisches Wasser sollte immer bereitstehen.",
     "fr": "Si votre chien a mangé une grande quantité d’en-cas salés, contactez votre vétérinaire ou un centre antipoison vétérinaire. Notez ce qu’il a mangé et en quelle quantité. De l’eau fraîche doit toujours être à sa disposition.",
     "es": "Si tu perro se ha comido una gran cantidad de aperitivos salados, contacta con tu veterinario o con una línea de información toxicológica para animales. Apunta qué comió y cuánto. Siempre debe tener agua fresca a su alcance.",
@@ -213,7 +213,7 @@
   },
   "serving": {
     "en": "Better not to share. If you give people food, serve it plain, without salt or seasoning.",
-    "sl": "Raje jih ne delite. Če psu daste človeško hrano, naj bo navadna, brez soli in začimb.",
+    "sl": "Raje jih ne delite. Če psu daste hrano za ljudi, naj bo navadna, brez soli in začimb.",
     "de": "Besser nicht teilen. Wenn Sie Ihrem Hund doch etwas von Ihrem Essen geben, dann pur, ohne Salz und Gewürze.",
     "fr": "Mieux vaut ne pas en partager. Si vous donnez des aliments pour humains, servez-les nature, sans sel ni assaisonnement.",
     "es": "Mejor no compartirlos. Si le das comida de personas, sírvela sin nada, sin sal ni condimentos.",
@@ -266,7 +266,7 @@
       },
       "a": {
         "en": "Yes. Fresh drinking water helps a dog flush out salt; salt poisoning is unlikely when fresh water is available.",
-        "sl": "Da. Sveža pitna voda psu pomaga izplakniti sol; zastrupitev s soljo je malo verjetna, kadar ima pes svežo vodo.",
+        "sl": "Da. Sveža pitna voda psu pomaga izločiti sol; zastrupitev s soljo je malo verjetna, kadar ima pes svežo vodo.",
         "de": "Ja. Frisches Trinkwasser hilft einem Hund, das Salz auszuspülen; eine Salzvergiftung ist unwahrscheinlich, solange frisches Wasser verfügbar ist.",
         "fr": "Oui. L’eau fraîche aide le chien à éliminer le sel ; l’intoxication au sel est peu probable quand il a de l’eau fraîche.",
         "es": "Sí. El agua fresca ayuda al perro a eliminar la sal; la intoxicación por sal es poco probable cuando tiene agua fresca a su alcance.",
@@ -361,7 +361,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "34eee76d3dd53546c154e2f7d44a41e864494fb5d5b3c3b4ec80d4bff2aa6b1f"
+      "verified_hash": "a47d36ed07c98e9ab3b98b439f4033dea30452d293ace68b64821f1fb200afc7"
     },
     "de": {
       "status": "verified",

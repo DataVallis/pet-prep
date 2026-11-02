@@ -55,7 +55,7 @@
   "level": "not_recommended",
   "answer": {
     "en": "No, raw meat is not recommended for cats. Even though wild cats eat raw prey, raw meat can carry germs such as Salmonella, Listeria and E. coli, and parasites such as Toxoplasma, which can make cats and people ill.",
-    "sl": "Ne, surovo meso za mačke ni priporočljivo. Čeprav divje mačke jedo surov plen, lahko surovo meso prenaša klice, kot so salmonela, listerija in E. coli, ter zajedavce, kot je toksoplazma, ki lahko povzročijo bolezen pri mačkah in ljudeh.",
+    "sl": "Ne, surovo meso za mačke ni priporočljivo. Čeprav divje mačke jedo surov plen, lahko surovo meso prenaša klice, kot so salmonela, listerija in E. coli, ter zajedavce, kot je toksoplazma, zaradi katerih lahko zbolijo mačke in ljudje.",
     "de": "Nein, rohes Fleisch wird für Katzen nicht empfohlen. Auch wenn wilde Katzen rohe Beute fressen, kann rohes Fleisch Keime wie Salmonellen, Listerien und E. coli sowie Parasiten wie Toxoplasmen übertragen, die Katzen und Menschen krank machen können.",
     "fr": "Non, la viande crue est déconseillée pour les chats. Même si les chats sauvages mangent des proies crues, la viande crue peut transmettre des microbes comme Salmonella, Listeria et E. coli, ainsi que des parasites comme Toxoplasma, qui peuvent rendre malades les chats et les humains.",
     "es": "No, no se recomienda la carne cruda para los gatos. Aunque los gatos salvajes comen presas crudas, la carne cruda puede contener gérmenes como Salmonella, Listeria y E. coli, y parásitos como Toxoplasma, que pueden hacer enfermar a gatos y personas.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Cornell and the Merck Veterinary Manual both advise against raw meat for cats, as food or as a treat, because it can spread toxoplasmosis and other infections. Contamination of raw meat by bacteria is common, and some cats seem fine but shed the bacteria in their stool, which can spread to people and other pets. Supermarket meat for people is meant to be cooked.",
-    "sl": "Cornell in Merckov veterinarski priročnik odsvetujeta surovo meso za mačke, kot hrano ali priboljšek, ker lahko prenaša toksoplazmozo in druge okužbe. Surovo meso je pogosto okuženo z bakterijami, nekatere mačke pa so videti zdrave, a bakterije izločajo z iztrebki, s čimer se lahko okužijo ljudje in druge živali. Meso za ljudi iz trgovine je namenjeno kuhanju.",
+    "sl": "Cornell in Merckov veterinarski priročnik odsvetujeta surovo meso za mačke, bodisi kot obrok bodisi kot priboljšek, ker lahko širi toksoplazmozo in druge okužbe. Surovo meso je pogosto okuženo z bakterijami, nekatere mačke pa so videti zdrave, a bakterije izločajo z iztrebki, s čimer se lahko okužijo ljudje in drugi hišni ljubljenčki. Meso, ki ga ljudje kupijo v trgovini, je namenjeno kuhanju.",
     "de": "Cornell und das Merck Veterinary Manual raten beide von rohem Fleisch für Katzen ab, sowohl als Futter als auch als Leckerli, weil es Toxoplasmose und andere Infektionen übertragen kann. Rohes Fleisch ist häufig mit Bakterien verunreinigt, und manche Katzen wirken gesund, scheiden die Bakterien aber mit dem Kot aus; so können diese auf Menschen und andere Haustiere übergehen. Supermarktfleisch für Menschen ist zum Garen bestimmt.",
     "fr": "Cornell et le Merck Veterinary Manual déconseillent tous deux la viande crue pour les chats, comme aliment ou comme friandise, car elle peut transmettre la toxoplasmose et d’autres infections. La contamination de la viande crue par des bactéries est fréquente, et certains chats semblent aller bien mais excrètent les bactéries dans leurs selles, ce qui peut contaminer les humains et les autres animaux. La viande vendue en supermarché pour les humains est destinée à être cuite.",
     "es": "Cornell y el Manual Merck de Veterinaria desaconsejan la carne cruda para los gatos, ya sea como comida o como premio, porque puede transmitir la toxoplasmosis y otras infecciones. Es frecuente que la carne cruda esté contaminada por bacterias, y algunos gatos parecen estar bien pero eliminan las bacterias en las heces, desde donde pueden pasar a las personas y a otras mascotas. La carne del supermercado para personas está pensada para cocinarse.",
@@ -100,7 +100,7 @@
       "Driska, včasih s krvjo",
       "Vročina",
       "Mačka noče jesti",
-      "Utrujenost"
+      "Medlost"
     ],
     "de": [
       "Erbrechen",
@@ -214,7 +214,7 @@
   "serving": null,
   "child": {
     "en": "Raw meat can carry germs. Cats should only get meat that a grown-up has cooked.",
-    "sl": "Na surovem mesu so lahko klice. Mucke naj dobijo le meso, ki ga je skuhal odrasel.",
+    "sl": "Na surovem mesu so lahko klice. Muce naj dobijo le meso, ki ga je skuhal odrasel.",
     "de": "Rohes Fleisch kann Keime haben. Katzen sollten nur Fleisch bekommen, das ein Erwachsener gekocht hat.",
     "fr": "La viande crue peut contenir des microbes. Les chats ne doivent manger que de la viande cuite par un adulte.",
     "es": "La carne cruda puede tener gérmenes. Los gatos solo deben comer carne que haya cocinado un adulto.",
@@ -233,7 +233,7 @@
     {
       "q": {
         "en": "Cats eat raw prey in the wild, so why not?",
-        "sl": "Divje mačke jedo surov plen, zakaj torej ne?",
+        "sl": "Mačke v naravi jedo surov plen, zakaj torej ne?",
         "de": "Katzen fressen in freier Natur rohe Beute – warum also nicht?",
         "fr": "Dans la nature, les chats mangent des proies crues : pourquoi pas ?",
         "es": "Si en la naturaleza los gatos comen presas crudas, ¿por qué no?",
@@ -286,7 +286,7 @@
       },
       "a": {
         "en": "People at highest risk of serious illness are the very old, the very young and people with weak immune systems.",
-        "sl": "Najbolj ogroženi za resno bolezen so zelo stari ljudje, zelo majhni otroci in ljudje z oslabljenim imunskim sistemom.",
+        "sl": "Za resno bolezen so najbolj ogroženi zelo stari ljudje, zelo majhni otroci in ljudje z oslabljenim imunskim sistemom.",
         "de": "Am höchsten ist das Risiko einer schweren Erkrankung bei sehr alten und sehr jungen Menschen sowie bei Menschen mit geschwächtem Immunsystem.",
         "fr": "Les personnes les plus exposées à une maladie grave sont les personnes très âgées, les très jeunes enfants et les personnes dont le système immunitaire est affaibli.",
         "es": "Las personas con más riesgo de enfermar gravemente son las muy mayores, los niños muy pequeños y las personas con el sistema inmunitario debilitado.",
@@ -394,7 +394,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "cf8073b3efccfba5da1de4ad2bc0ef39b40381c0eae9094762e47e5de64eba19"
+      "verified_hash": "fcfc82eb03512a1a3868034dcd82608a190ead60cbe896e01f2e848d96eb38e9"
     },
     "de": {
       "status": "verified",

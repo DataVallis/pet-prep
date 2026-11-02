@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Cats Protection says uncooked fish may contain harmful bacteria and parasites. The Merck Veterinary Manual notes that thiaminases are found in raw freshwater fish and are destroyed by cooking. Thiamine (vitamin B1) is an essential nutrient, so cooking fish removes this risk.",
-    "sl": "Cats Protection navaja, da surova riba lahko vsebuje škodljive bakterije in zajedavce. Merckov veterinarski priročnik navaja, da so tiaminaze prisotne v surovih sladkovodnih ribah in da jih kuhanje uniči. Tiamin (vitamin B1) je nujno hranilo, zato kuhanje ribe to tveganje odpravi.",
+    "sl": "Cats Protection navaja, da surova riba lahko vsebuje škodljive bakterije in zajedavce. Merckov veterinarski priročnik navaja, da tiaminaze najdemo v surovih sladkovodnih ribah in da jih kuhanje uniči. Tiamin (vitamin B1) je nujno hranilo, zato kuhanje ribe to tveganje odpravi.",
     "de": "Laut Cats Protection kann ungegarter Fisch schädliche Bakterien und Parasiten enthalten. Das Merck Veterinary Manual weist darauf hin, dass Thiaminasen in rohem Süßwasserfisch vorkommen und durch Garen zerstört werden. Thiamin (Vitamin B1) ist ein lebenswichtiger Nährstoff – das Garen von Fisch beseitigt also dieses Risiko.",
     "fr": "Selon Cats Protection, le poisson cru peut contenir des bactéries et des parasites dangereux. Le Merck Veterinary Manual indique que les thiaminases se trouvent dans le poisson d’eau douce cru et sont détruites par la cuisson. La thiamine (vitamine B1) est un nutriment essentiel : cuire le poisson écarte donc ce risque.",
     "es": "Cats Protection dice que el pescado sin cocinar puede contener bacterias y parásitos dañinos. El Manual Merck de Veterinaria señala que las tiaminasas se encuentran en el pescado crudo de agua dulce y que la cocción las destruye. La tiamina (vitamina B1) es un nutriente esencial, así que cocinar el pescado elimina este riesgo.",
@@ -100,7 +100,7 @@
       "Driska, včasih s krvjo",
       "Vročina",
       "Mačka noče jesti",
-      "Utrujenost"
+      "Medlost"
     ],
     "de": [
       "Erbrechen",
@@ -213,7 +213,7 @@
   },
   "serving": {
     "en": "If you share fish: properly cooked, plain, with all bones removed, a few pieces at a time.",
-    "sl": "Če ribo delite: dobro kuhano, brez dodatkov, z odstranjenimi vsemi kostmi, po nekaj koščkov naenkrat.",
+    "sl": "Če mački date ribo: dobro kuhano, navadno, s popolnoma odstranjenimi kostmi, naenkrat le nekaj koščkov.",
     "de": "Wenn Sie Fisch teilen: richtig gegart, pur, ohne Gräten, jeweils nur ein paar Stücke.",
     "fr": "Si vous partagez du poisson : bien cuit, nature, sans aucune arête, quelques morceaux à la fois.",
     "es": "Si compartes pescado: bien cocinado, sin nada añadido, sin ninguna espina y unos pocos trozos cada vez.",
@@ -230,7 +230,7 @@
   },
   "child": {
     "en": "Cats love fish, but it needs to be cooked by a grown-up first, with no bones.",
-    "sl": "Mucke imajo rade ribe, a jih mora odrasel najprej skuhati in odstraniti kosti.",
+    "sl": "Muce imajo rade ribe, vendar mora odrasel ribo najprej skuhati in odstraniti vse kosti.",
     "de": "Katzen lieben Fisch, aber ein Erwachsener muss ihn zuerst kochen und alle Gräten entfernen.",
     "fr": "Les chats adorent le poisson, mais un adulte doit d’abord le cuire et enlever les arêtes.",
     "es": "A los gatos les encanta el pescado, pero antes un adulto tiene que cocinarlo y quitarle las espinas.",
@@ -354,7 +354,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "1a89f9c984821be5e9098778cca7f3db932331096f0381a857334a87b2177752"
+      "verified_hash": "f7132c016d96ddc70c854cd2153026d3c82a9697d5257a764b54404cae7ae41e"
     },
     "de": {
       "status": "verified",

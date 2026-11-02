@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "The ASPCA lists the banana plant as non-toxic to cats, and NC State's veterinary hospital lists banana among healthy human-food treats for cats and dogs, given in measured amounts and counted in the daily calories. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
-    "sl": "ASPCA rastlino banane navaja kot nestrupeno za mačke, veterinarska bolnišnica univerze NC State pa banano navaja med zdravimi priboljški iz človeške hrane za mačke in pse, ki jih dajemo v odmerjenih količinah in upoštevamo v dnevnem vnosu kalorij. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave.",
+    "sl": "ASPCA bananovec navaja kot nestrupen za mačke, veterinarska bolnišnica univerze NC State pa banano uvršča med zdrave priboljške iz hrane za ljudi, ki jih mačkam in psom dajemo v odmerjenih količinah in vštevamo v dnevni vnos kalorij. Mačke so obligatni mesojedci in sadja ne potrebujejo; priboljški naj bodo le majhen del dnevne hrane, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave.",
     "de": "Die ASPCA stuft die Bananenpflanze als ungiftig für Katzen ein, und die Tierklinik der NC State University zählt Banane zu den gesunden Leckerlis aus der Menschenküche für Katzen und Hunde – in abgemessenen Mengen und angerechnet auf die tägliche Kalorienmenge. Katzen sind obligate Fleischfresser und brauchen kein Obst. Leckerlis sollten nur einen kleinen Teil des täglichen Futters ausmachen, und jedes Pflanzenmaterial kann Erbrechen oder Magenverstimmungen auslösen.",
     "fr": "L’ASPCA classe le bananier comme non toxique pour les chats, et l’hôpital vétérinaire de NC State range la banane parmi les friandises saines issues de l’alimentation humaine pour les chats et les chiens, à donner en quantités mesurées et à compter dans les calories de la journée. Les chats sont des carnivores stricts et n’ont pas besoin de fruits ; les friandises doivent rester une petite part de l’alimentation quotidienne, et toute matière végétale peut provoquer des vomissements ou des troubles digestifs.",
     "es": "La ASPCA considera la planta del plátano no tóxica para los gatos, y el hospital veterinario de NC State incluye el plátano entre los alimentos humanos saludables que pueden darse como premio a gatos y perros, en cantidades medidas y incluyendo sus calorías en el total diario. Los gatos son carnívoros estrictos y no necesitan fruta; los premios deben ser una parte pequeña de su comida diaria, y cualquier material vegetal puede provocar vómitos o malestar de estómago.",
@@ -107,7 +107,7 @@
   },
   "serving": {
     "en": "A small piece now and then, counted in your cat's daily food.",
-    "sl": "Občasno majhen košček, upoštevan v dnevnem obroku.",
+    "sl": "Občasno majhen košček, všteti ga je treba v dnevno količino hrane.",
     "de": "Ab und zu ein kleines Stück, das zur täglichen Futtermenge Ihrer Katze zählt.",
     "fr": "Un petit morceau de temps en temps, compté dans la ration quotidienne de votre chat.",
     "es": "Un trocito de vez en cuando, contándolo como parte de la comida diaria de tu gato.",
@@ -160,7 +160,7 @@
       },
       "a": {
         "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
-        "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek.",
+        "sl": "Ne. Mačke so mesojede: hranila, ki jih potrebujejo, dobijo iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek.",
         "de": "Nein. Katzen sind Fleischfresser: Sie brauchen Nährstoffe, die in Fleisch stecken, und benötigen weder Obst noch Gemüse in ihrer Ernährung. Obst kann immer nur ein kleines Extra sein.",
         "fr": "Non. Les chats sont carnivores : ils ont besoin de nutriments présents dans la viande et n’ont besoin ni de fruits ni de légumes dans leur alimentation. Les fruits ne peuvent jamais être qu’un petit plus.",
         "es": "No. Los gatos son carnívoros: necesitan nutrientes que se encuentran en la carne y no necesitan fruta ni verdura en su dieta. La fruta solo puede ser un pequeño extra.",
@@ -235,7 +235,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "807ff2a45c7e704b15b8047b28149b435c49ca05e6a98d1f8341d7eec6bd18d0"
+      "verified_hash": "1e1091c230fa127a2dd878c5bf92f630d1ad71b354c7ab4c8aec40748d5a03ae"
     },
     "de": {
       "status": "verified",

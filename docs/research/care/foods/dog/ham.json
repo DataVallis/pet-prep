@@ -55,7 +55,7 @@
   "level": "not_recommended",
   "answer": {
     "en": "Not recommended. Ham isn't toxic to dogs, but it is high in fat and sodium. Store-bought ham contains a lot of salt, and too much fat can lead to pancreatitis and other digestive upsets. A healthier dog treat is the better choice.",
-    "sl": "Ni priporočljivo. Šunka za pse ni strupena, vsebuje pa veliko maščob in natrija. Kupljena šunka je zelo slana, preveč maščobe pa lahko vodi v vnetje trebušne slinavke in druge prebavne težave. Bolje je izbrati bolj zdrav pasji priboljšek.",
+    "sl": "Ni priporočljivo. Šunka za pse ni strupena, vsebuje pa veliko maščob in natrija. Kupljena šunka je zelo slana, preveč maščobe pa lahko vodi v vnetje trebušne slinavke in druge prebavne težave. Raje izberite bolj zdrav pasji priboljšek.",
     "de": "Nicht empfohlen. Schinken ist für Hunde nicht giftig, aber reich an Fett und Natrium. Gekaufter Schinken enthält viel Salz, und zu viel Fett kann zu einer Bauchspeicheldrüsenentzündung (Pankreatitis) und anderen Verdauungsproblemen führen. Ein gesünderes Hundeleckerli ist die bessere Wahl.",
     "fr": "Déconseillé. Le jambon n’est pas toxique pour les chiens, mais il est riche en graisses et en sodium. Le jambon du commerce contient beaucoup de sel, et trop de graisses peuvent entraîner une pancréatite et d’autres troubles digestifs. Une friandise pour chien plus saine est un meilleur choix.",
     "es": "No se recomienda. El jamón no es tóxico para los perros, pero tiene mucha grasa y mucho sodio. El jamón comprado en la tienda lleva mucha sal, y el exceso de grasa puede provocar pancreatitis y otros problemas digestivos. Es mejor elegir un premio más saludable para perros.",
@@ -96,8 +96,8 @@
       "Tiredness, fever"
     ],
     "sl": [
-      "Bruhanje, včasih šele 1–4 dni po mastnem obroku",
-      "Bolečine v trebuhu (pes se lahko raztegne v »molitveni« položaj)",
+      "Bruhanje, včasih šele 1–4 dni po mastnem obroku",
+      "Bolečine v trebuhu (pes se lahko raztegne v „molitveni“ položaj)",
       "Driska",
       "Pes noče jesti",
       "Utrujenost, vročina"
@@ -341,7 +341,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "75098f029578364659579a45ba403f78cc28a56fd7451ca174f55ed319f87b37"
+      "verified_hash": "fa9bbc53ea5241fc1e3b211df00bc675c86e6f8ea0801e203181a27810df2735"
     },
     "de": {
       "status": "verified",

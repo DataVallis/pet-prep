@@ -96,8 +96,8 @@
       "Tiredness, fever"
     ],
     "sl": [
-      "Bruhanje, včasih šele 1–4 dni po mastnem obroku",
-      "Bolečine v trebuhu (pes se lahko raztegne v »molitveni« položaj)",
+      "Bruhanje, včasih šele 1–4 dni po mastnem obroku",
+      "Bolečine v trebuhu (pes se lahko raztegne v „molitveni“ položaj)",
       "Driska",
       "Pes noče jesti",
       "Utrujenost, vročina"
@@ -333,7 +333,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "6b0df363af3cbf780a16248058a2c3f7928a55728493135c0d8aa3e01f14e0d6"
+      "verified_hash": "bfab218d4f6f5d90167e3398fb1adc1bdf2947db7fe66ed9737033629262f92b"
     },
     "de": {
       "status": "verified",

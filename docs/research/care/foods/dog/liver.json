@@ -55,7 +55,7 @@
   "level": "not_recommended",
   "answer": {
     "en": "Not as a regular food, and not raw. Vitamin A poisoning in pets most often happens when they are fed raw liver or vitamin A-rich supplements, and raw liver carries the germ risks of all raw meat. Ask your vet before adding liver to your dog's diet.",
-    "sl": "Ne kot redna hrana in ne surova. Zastrupitev z vitaminom A se pri hišnih živalih najpogosteje zgodi pri hranjenju s surovimi jetri ali dodatki, bogatimi z vitaminom A, surova jetra pa nosijo tudi tveganje klic kot vse surovo meso. Preden psu dodate jetra v prehrano, vprašajte veterinarja.",
+    "sl": "Ne kot redna hrana in ne surova. Do zastrupitve z vitaminom A najpogosteje pride, če hišne ljubljenčke hranimo s surovimi jetri ali dodatki, bogatimi z vitaminom A, surova jetra pa imajo tudi tveganje okužbe z bakterijami, kot vse surovo meso. Preden psu dodate jetra v prehrano, vprašajte veterinarja.",
     "de": "Nicht als regelmäßiges Futter und nicht roh. Eine Vitamin-A-Vergiftung entsteht bei Haustieren am häufigsten, wenn sie rohe Leber oder Vitamin-A-reiche Nahrungsergänzungsmittel bekommen, und rohe Leber birgt die gleichen Keimrisiken wie jedes rohe Fleisch. Fragen Sie Ihren Tierarzt, bevor Sie Leber in den Speiseplan Ihres Hundes aufnehmen.",
     "fr": "Pas comme aliment régulier, et pas cru. L’intoxication à la vitamine A chez les animaux survient le plus souvent lorsqu’on leur donne du foie cru ou des compléments riches en vitamine A, et le foie cru présente les mêmes risques de germes que toute viande crue. Demandez l’avis de votre vétérinaire avant d’ajouter du foie à l’alimentation de votre chien.",
     "es": "No como alimento habitual, ni crudo. La intoxicación por vitamina A en las mascotas se produce sobre todo cuando se les da hígado crudo o suplementos ricos en vitamina A, y el hígado crudo tiene los mismos riesgos de gérmenes que toda la carne cruda. Consulta a tu veterinario antes de añadir hígado a la dieta de tu perro.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Vitamin A poisoning most often happens when pets are fed raw liver, cod liver oil or other vitamin A-rich supplements. Too much over weeks or months can lead to a poor coat and dry skin; a large amount at once can cause vomiting, drowsiness and irritability. Raw animal protein can also carry Salmonella and other bacteria.",
-    "sl": "Zastrupitev z vitaminom A se najpogosteje zgodi, ko živali hranimo s surovimi jetri, z oljem iz trskinih jeter ali drugimi dodatki, bogatimi z vitaminom A. Preveč tedne ali mesece lahko vodi do slabe dlake in suhe kože; velika količina naenkrat lahko povzroči bruhanje, zaspanost in razdražljivost. Surove živalske beljakovine lahko prenašajo tudi salmonelo in druge bakterije.",
+    "sl": "Do zastrupitve z vitaminom A najpogosteje pride, če hišne ljubljenčke hranimo s surovimi jetri, z oljem iz trskinih jeter ali drugimi dodatki, bogatimi z vitaminom A. Če jih je preveč več tednov ali mesecev, lahko pride do slabe dlake in suhe kože; velika količina naenkrat lahko povzroči bruhanje, zaspanost in razdražljivost. Surove živalske beljakovine lahko vsebujejo tudi salmonelo in druge bakterije.",
     "de": "Eine Vitamin-A-Vergiftung entsteht am häufigsten, wenn Haustiere rohe Leber, Lebertran oder andere Vitamin-A-reiche Nahrungsergänzungsmittel bekommen. Zu viel über Wochen oder Monate kann zu stumpfem Fell und trockener Haut führen; eine große Menge auf einmal kann Erbrechen, Schläfrigkeit und Reizbarkeit verursachen. Rohes tierisches Eiweiß kann außerdem Salmonellen und andere Bakterien enthalten.",
     "fr": "L’intoxication à la vitamine A survient le plus souvent lorsqu’on donne aux animaux du foie cru, de l’huile de foie de morue ou d’autres compléments riches en vitamine A. Un excès pendant des semaines ou des mois peut entraîner un pelage terne et une peau sèche ; une grande quantité en une fois peut provoquer vomissements, somnolence et irritabilité. Les protéines animales crues peuvent aussi contenir des salmonelles et d’autres bactéries.",
     "es": "La intoxicación por vitamina A se produce sobre todo cuando a las mascotas se les da hígado crudo, aceite de hígado de bacalao u otros suplementos ricos en vitamina A. El exceso durante semanas o meses puede dejar el pelaje en mal estado y la piel seca; una gran cantidad de una vez puede causar vómitos, somnolencia e irritabilidad. Las proteínas animales crudas también pueden llevar salmonela y otras bacterias.",
@@ -94,7 +94,7 @@
     ],
     "sl": [
       "Bruhanje, zaspanost ali razdražljivost po veliki količini",
-      "Slaba, suha dlaka ali koža po tednih ali mesecih"
+      "Slaba dlaka ali suha koža po več tednih ali mesecih"
     ],
     "de": [
       "Erbrechen, Schläfrigkeit oder Reizbarkeit nach einer großen Menge",
@@ -151,7 +151,7 @@
   },
   "what_to_do": {
     "en": "If your dog ate a large amount of liver at once, or has been fed liver often and has a poor coat or dry skin, call your vet. A balanced commercial diet or a vet-formulated home diet avoids the problem.",
-    "sl": "Če je pes naenkrat pojedel veliko jeter ali jih je pogosto dobival in ima slabo dlako ali suho kožo, pokličite veterinarja. Uravnotežena komercialna hrana ali domača prehrana, ki jo sestavi veterinar, težavo prepreči.",
+    "sl": "Če je pes naenkrat pojedel veliko jeter ali jih je pogosto dobival in ima slabo dlako ali suho kožo, pokličite veterinarja. Uravnotežena industrijsko pripravljena hrana ali domača prehrana, ki jo sestavi veterinar, težavo prepreči.",
     "de": "Wenn Ihr Hund auf einmal viel Leber gefressen hat oder oft Leber bekommt und stumpfes Fell oder trockene Haut hat, rufen Sie Ihren Tierarzt an. Ein ausgewogenes Fertigfutter oder eine tierärztlich zusammengestellte, selbst zubereitete Ration vermeidet das Problem.",
     "fr": "Si votre chien a mangé une grande quantité de foie en une fois, ou s’il reçoit souvent du foie et a le pelage terne ou la peau sèche, appelez votre vétérinaire. Une alimentation industrielle équilibrée ou une ration ménagère formulée par un vétérinaire évite le problème.",
     "es": "Si tu perro ha comido una gran cantidad de hígado de una vez, o se le da hígado a menudo y tiene el pelaje en mal estado o la piel seca, llama a tu veterinario. Una dieta comercial equilibrada o una dieta casera formulada por un veterinario evita el problema.",
@@ -205,7 +205,7 @@
       },
       "a": {
         "en": "Vitamin A poisoning in pets most often happens when they are fed raw liver, cod liver oil or other vitamin A-rich supplements.",
-        "sl": "Zastrupitev z vitaminom A se pri živalih najpogosteje zgodi, ko jih hranimo s surovimi jetri, z oljem iz trskinih jeter ali drugimi dodatki, bogatimi z vitaminom A.",
+        "sl": "Do zastrupitve z vitaminom A najpogosteje pride, če hišne ljubljenčke hranimo s surovimi jetri, z oljem iz trskinih jeter ali drugimi dodatki, bogatimi z vitaminom A.",
         "de": "Eine Vitamin-A-Vergiftung entsteht bei Haustieren am häufigsten, wenn sie rohe Leber, Lebertran oder andere Vitamin-A-reiche Nahrungsergänzungsmittel bekommen.",
         "fr": "L’intoxication à la vitamine A chez les animaux survient le plus souvent lorsqu’on leur donne du foie cru, de l’huile de foie de morue ou d’autres compléments riches en vitamine A.",
         "es": "La intoxicación por vitamina A en las mascotas se produce sobre todo cuando se les da hígado crudo, aceite de hígado de bacalao u otros suplementos ricos en vitamina A.",
@@ -271,7 +271,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "35b4b2ae4a00a876eda6367ad9f70c3eecfae38417a65ce3d5d0df2a3d24937c"
+      "verified_hash": "758f09d19e70a4ed97a9373334ac44c7040e7994c6dac57ee36af4ba716e0855"
     },
     "de": {
       "status": "verified",

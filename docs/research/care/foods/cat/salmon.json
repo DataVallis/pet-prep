@@ -90,7 +90,7 @@
   "signs": null,
   "what_to_do": {
     "en": "Offer a small piece first. If your cat gets vomiting or diarrhoea afterwards, stop and ask your vet. Remove any bones you find.",
-    "sl": "Najprej ponudite majhen košček. Če ima mačka potem bruhanje ali drisko, prenehajte in se posvetujte z veterinarjem. Odstranite vse kosti, ki jih najdete.",
+    "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima drisko, nehajte in se posvetujte z veterinarjem. Odstranite vse kosti, ki jih najdete.",
     "de": "Bieten Sie zuerst ein kleines Stück an. Bekommt Ihre Katze danach Erbrechen oder Durchfall, hören Sie auf und fragen Sie Ihren Tierarzt. Entfernen Sie alle Gräten, die Sie finden.",
     "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou a la diarrhée ensuite, arrêtez et demandez conseil à votre vétérinaire. Retirez toutes les arêtes que vous trouvez.",
     "es": "Ofrécele primero un trocito. Si después tu gato tiene vómitos o diarrea, deja de dárselo y consulta a tu veterinario. Quita las espinas que encuentres.",
@@ -107,7 +107,7 @@
   },
   "serving": {
     "en": "Cooked, plain, boneless and unseasoned, or tinned in spring water; a few small pieces now and then.",
-    "sl": "Kuhan, brez dodatkov, kosti in začimb, ali konzerviran v izvirski vodi; nekaj majhnih koščkov občasno.",
+    "sl": "Kuhan, navaden, brez kosti in začimb, ali konzerviran v izvirski vodi; občasno nekaj majhnih koščkov.",
     "de": "Gegart, pur, ohne Gräten und ungewürzt – oder aus der Dose in Quellwasser; ab und zu ein paar kleine Stücke.",
     "fr": "Cuit, nature, sans arêtes et sans assaisonnement, ou en conserve au naturel (à l’eau) ; quelques petits morceaux de temps en temps.",
     "es": "Cocinado, sin nada añadido, sin espinas y sin condimentar, o en lata al natural (en agua); unos trocitos de vez en cuando.",
@@ -219,7 +219,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ba9cc5269d84714e72e2850ab6dcfc8eb57886e3809fb90e2b5be930c615c8be"
+      "verified_hash": "942ed7a14d3a20137fdce4988c7fdd34c242e739e3a623c58dc6c1d947cbc04f"
     },
     "de": {
       "status": "verified",

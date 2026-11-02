@@ -55,7 +55,7 @@
   "level": "dangerous",
   "answer": {
     "en": "No. Never give a dog cooked bones. Cooked bones splinter into sharp shards that can cut the mouth, cause choking or block the gut. Cooked poultry bones are especially brittle and can turn into a veterinary emergency.",
-    "sl": "Ne. Psu nikoli ne dajajte kuhanih kosti. Kuhane kosti se razcepijo v ostre drobce, ki lahko porežejo usta, povzročijo dušenje ali zamašijo prebavila. Kuhane kosti perutnine so posebej krhke in lahko povzročijo nujno stanje pri veterinarju.",
+    "sl": "Ne. Psu nikoli ne dajajte kuhanih kosti. Kuhane kosti se razcepijo v ostre drobce, ki lahko porežejo usta, povzročijo dušenje ali zamašijo prebavila. Kuhane kosti perutnine so posebej krhke in lahko pripeljejo do nujnega obiska pri veterinarju.",
     "de": "Nein. Geben Sie einem Hund niemals gekochte Knochen. Gekochte Knochen splittern in scharfe Stücke, die das Maul verletzen, zum Ersticken führen oder den Darm blockieren können. Gekochte Geflügelknochen sind besonders brüchig und können zum tierärztlichen Notfall werden.",
     "fr": "Non. Ne donnez jamais d’os cuits à un chien. Les os cuits se brisent en éclats tranchants qui peuvent blesser la bouche, provoquer un étouffement ou bloquer l’intestin. Les os de volaille cuits sont particulièrement cassants et peuvent mener à une urgence vétérinaire.",
     "es": "No. Nunca le des huesos cocinados a un perro. Los huesos cocinados se astillan en trozos afilados que pueden cortar la boca, provocar atragantamiento u obstruir el intestino. Los huesos de ave cocinados son especialmente frágiles y pueden convertirse en una urgencia veterinaria.",
@@ -286,7 +286,7 @@
       },
       "a": {
         "en": "Keep platters out of reach while cooking and eating, and be careful what goes in the bin: dogs often raid the trash for carcasses and steak bones.",
-        "sl": "Med kuhanjem in jedjo imejte krožnike izven dosega in pazite, kaj vržete v koš: psi pogosto stikajo po smeteh za ostanki perutnine in kostmi zrezkov.",
+        "sl": "Med kuhanjem in jedjo poskrbite, da pes ne more do krožnikov, in pazite, kaj vržete v koš: psi se pogosto lotijo smeti zaradi ostankov perutnine in kosti od zrezkov.",
         "de": "Stellen Sie Platten beim Kochen und Essen außer Reichweite und achten Sie darauf, was in den Müll kommt: Hunde plündern oft den Mülleimer nach Karkassen und Steakknochen.",
         "fr": "Gardez les plats hors de portée pendant la cuisine et les repas, et faites attention à ce que vous jetez : les chiens fouillent souvent la poubelle à la recherche de carcasses et d’os de steak.",
         "es": "Deja las fuentes fuera de su alcance mientras cocinas y durante las comidas, y ten cuidado con lo que tiras a la basura: los perros suelen rebuscar en ella las carcasas y los huesos de chuleta.",
@@ -389,7 +389,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "bf61767248e67a95e7701b1575703f5a612c821152dec2689e7751deae67114a"
+      "verified_hash": "e4776b9bdcaee6b24eff77583df5f7dcf838cf606902be902ecfd983fbbc9a87"
     },
     "de": {
       "status": "verified",

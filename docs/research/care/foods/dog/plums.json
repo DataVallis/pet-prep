@@ -55,7 +55,7 @@
   "level": "not_recommended",
   "answer": {
     "en": "Not recommended. A little plum flesh with the pit removed is not the main worry, but plum pits are toxic to dogs and can cause choking or an intestinal blockage. The stems, leaves and seeds of the plum plant contain cyanide.",
-    "sl": "Ni priporočljivo. Malo mesa slive brez koščice ni glavna skrb, koščice sliv pa so za pse strupene in lahko povzročijo zadušitev ali zaporo črevesja. Peclji, listi in semena slive vsebujejo cianid.",
+    "sl": "Ni priporočljivo. Malo mesa slive brez koščice ni glavna težava, koščice sliv pa so za pse strupene in lahko povzročijo dušenje ali zaporo črevesja. Peclji, listi in semena slive vsebujejo cianid.",
     "de": "Nicht empfohlen. Ein wenig Pflaumenfruchtfleisch ohne Kern ist nicht die Hauptsorge, aber Pflaumenkerne sind für Hunde giftig und können zum Ersticken oder zu einem Darmverschluss führen. Stiele, Blätter und Samen der Pflaumenpflanze enthalten Cyanid.",
     "fr": "Déconseillé. Un peu de chair de prune sans le noyau n’est pas le principal souci, mais les noyaux de prune sont toxiques pour les chiens et peuvent provoquer un étouffement ou une obstruction intestinale. Les tiges, les feuilles et les graines du prunier contiennent du cyanure.",
     "es": "No se recomienda. Un poco de pulpa de ciruela sin hueso no es la principal preocupación, pero los huesos de ciruela son tóxicos para los perros y pueden provocar atragantamiento u obstrucción intestinal. El rabito, las hojas y las semillas del ciruelo contienen cianuro.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "The plum plant is listed as toxic to dogs because its stems, leaves and seeds contain cyanogenic glycosides. A pit can also be swallowed and get stuck. Some vets allow plum flesh as an occasional treat with the pit removed; because the plant itself is listed as toxic, we use the stricter rating. Prunes are even higher in sugar.",
-    "sl": "Sliva je navedena kot strupena za pse, ker njeni peclji, listi in semena vsebujejo cianogene glikozide. Pes lahko koščico tudi pogoltne in ta se zatakne. Nekateri veterinarji dovolijo meso slive kot občasen priboljšek brez koščice; ker je rastlina navedena kot strupena, uporabljamo strožjo oceno. Suhe slive imajo še več sladkorja.",
+    "sl": "Sliva je navedena kot strupena za pse, ker njeni peclji, listi in semena vsebujejo cianogene glikozide. Koščico lahko pes tudi pogoltne in se mu zatakne. Nekateri veterinarji dovolijo meso slive brez koščice kot občasen priboljšek; ker je rastlina sama navedena kot strupena, uporabljamo strožjo oceno. Suhe slive imajo še več sladkorja.",
     "de": "Die Pflaume ist als für Hunde giftige Pflanze gelistet, weil ihre Stiele, Blätter und Samen cyanogene Glykoside enthalten. Ein Kern kann außerdem verschluckt werden und stecken bleiben. Manche Tierärzte erlauben Pflaumenfruchtfleisch ohne Kern als gelegentliches Leckerli; da die Pflanze selbst als giftig gelistet ist, wählen wir die strengere Einstufung. Trockenpflaumen enthalten noch mehr Zucker.",
     "fr": "Le prunier est répertorié comme toxique pour les chiens, car ses tiges, ses feuilles et ses graines contiennent des glycosides cyanogènes. Un noyau peut aussi être avalé et rester coincé. Certains vétérinaires autorisent la chair de prune en friandise occasionnelle, sans le noyau ; comme la plante elle-même est répertoriée comme toxique, nous retenons le classement le plus strict. Les pruneaux sont encore plus sucrés.",
     "es": "El ciruelo figura como tóxico para los perros porque su rabito, sus hojas y sus semillas contienen glucósidos cianogénicos. Además, el perro puede tragarse un hueso y que se quede atascado. Algunos veterinarios permiten la pulpa de ciruela como premio ocasional, sin el hueso; como la propia planta figura como tóxica, aplicamos la clasificación más estricta. Las ciruelas pasas tienen todavía más azúcar.",
@@ -183,7 +183,7 @@
   },
   "serving": {
     "en": "If you share any, give only a little fresh flesh with the pit and stem removed. Skip prunes. Check with your vet first.",
-    "sl": "Če jo delite, dajte le malo svežega mesa brez koščice in peclja. Suhih sliv ne dajajte. Najprej se posvetujte z veterinarjem.",
+    "sl": "Če jo sploh ponudite, dajte le malo svežega mesa brez koščice in peclja. Suhih sliv ne dajajte. Najprej se posvetujte z veterinarjem.",
     "de": "Wenn überhaupt, geben Sie nur ein wenig frisches Fruchtfleisch ohne Kern und Stiel. Verzichten Sie auf Trockenpflaumen. Fragen Sie vorher Ihren Tierarzt.",
     "fr": "Si vous en partagez, donnez seulement un peu de chair fraîche, sans le noyau ni la queue. Pas de pruneaux. Demandez d’abord l’avis de votre vétérinaire.",
     "es": "Si le das algo, que sea solo un poco de pulpa fresca, sin hueso ni rabito. Nada de ciruelas pasas. Consúltalo antes con tu veterinario.",
@@ -323,7 +323,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e9c8bb3910f38fe619c3c37c483aa0dc75371479fd7c80464a763f2f7d13e6a0"
+      "verified_hash": "7af98d610eb0e9a3098c41e9abd00c7dd5e7cfd115afdd7161a54c4217d803d8"
     },
     "de": {
       "status": "verified",

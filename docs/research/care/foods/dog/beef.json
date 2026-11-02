@@ -55,7 +55,7 @@
   "level": "small_amounts",
   "answer": {
     "en": "Yes, plain cooked beef with the fat trimmed can be a healthy source of protein. Leave out salt, spices and toppings such as onion and garlic, never give cooked bones, and avoid raw beef, which can carry bacteria.",
-    "sl": "Da, navadna kuhana govedina z odstranjeno maščobo je lahko zdrav vir beljakovin. Izpustite sol, začimbe in dodatke, kot sta čebula in česen, nikoli ne dajte kuhanih kosti in se izogibajte surovi govedini, ki lahko prenaša bakterije.",
+    "sl": "Da, nezačinjena kuhana govedina brez maščobe je lahko zdrav vir beljakovin. Ne uporabljajte soli, začimb in dodatkov, kot sta čebula in česen, nikoli ne dajte kuhanih kosti in se izogibajte surovi govedini, ki lahko vsebuje bakterije.",
     "de": "Ja, pures, gegartes Rindfleisch ohne Fettrand kann eine gesunde Proteinquelle sein. Verzichten Sie auf Salz, Gewürze und Beläge wie Zwiebeln und Knoblauch, geben Sie niemals gegarte Knochen und meiden Sie rohes Rindfleisch, das Bakterien übertragen kann.",
     "fr": "Oui, du bœuf cuit nature, dégraissé, peut être une bonne source de protéines. Évitez le sel, les épices et les garnitures comme l’oignon et l’ail, ne donnez jamais d’os cuits et évitez le bœuf cru, qui peut contenir des bactéries.",
     "es": "Sí, la ternera cocinada, sin nada añadido y sin la grasa, puede ser una fuente sana de proteína. No le pongas sal, especias ni añadidos como cebolla y ajo, no le des nunca huesos cocinados y evita la ternera cruda, que puede contener bacterias.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Unseasoned, cooked beef can be a healthy protein, cut into bite-sized pieces with the fat trimmed. Burgers and steaks often contain salt, spices and toppings that can be dangerous; onions and garlic are toxic to dogs. Raw steak or burger can carry Salmonella and E. coli, and cooked bones of any kind should never be given.",
-    "sl": "Nezačinjena kuhana govedina je lahko zdrav vir beljakovin, narezana na grižljaje in brez maščobe. Burgerji in zrezki pogosto vsebujejo sol, začimbe in dodatke, ki so lahko nevarni; čebula in česen sta za pse strupena. Surov zrezek ali burger lahko prenaša salmonelo in E. coli, kuhanih kosti kakršne koli vrste pa psu nikoli ne dajte.",
+    "sl": "Nezačinjena kuhana govedina, narezana na grižljaje in brez maščobe, je lahko zdrav vir beljakovin. Burgerji in zrezki pogosto vsebujejo sol, začimbe in dodatke, ki so lahko nevarni; čebula in česen sta za pse strupena. Surov zrezek ali burger lahko vsebuje salmonelo in bakterijo E. coli, kuhanih kosti katere koli vrste pa psu ne dajajte nikoli.",
     "de": "Ungewürztes, gegartes Rindfleisch kann eine gesunde Proteinquelle sein – in mundgerechte Stücke geschnitten und mit abgeschnittenem Fett. Burger und Steaks enthalten oft Salz, Gewürze und Beläge, die gefährlich sein können; Zwiebeln und Knoblauch sind für Hunde giftig. Rohes Steak oder rohe Burger-Patties können Salmonellen und E. coli übertragen, und gegarte Knochen jeder Art sollten niemals gegeben werden.",
     "fr": "Cuit et sans assaisonnement, le bœuf peut être une protéine saine, coupé en petits morceaux et dégraissé. Les burgers et les steaks contiennent souvent du sel, des épices et des garnitures qui peuvent être dangereux ; l’oignon et l’ail sont toxiques pour les chiens. Le steak ou le burger cru peut contenir des salmonelles et des E. coli, et il ne faut jamais donner d’os cuits, quels qu’ils soient.",
     "es": "La ternera cocinada y sin condimentar puede ser una proteína sana, cortada en trocitos y sin la grasa. Las hamburguesas y los filetes suelen llevar sal, especias y añadidos que pueden ser peligrosos; la cebolla y el ajo son tóxicos para los perros. Un filete o una hamburguesa crudos pueden contener Salmonella y E. coli, y nunca hay que darle huesos cocinados de ningún tipo.",
@@ -107,7 +107,7 @@
   },
   "serving": {
     "en": "Plain, unseasoned, fully cooked beef, fat trimmed, boneless, in bite-sized pieces.",
-    "sl": "Navadna, nezačinjena, popolnoma kuhana govedina, brez maščobe in kosti, narezana na grižljaje.",
+    "sl": "Nezačinjena, povsem kuhana govedina brez maščobe in kosti, narezana na grižljaje.",
     "de": "Pur, ungewürzt, vollständig gegart, Fett abgeschnitten, ohne Knochen, in mundgerechten Stücken.",
     "fr": "Bœuf nature, sans assaisonnement, bien cuit, dégraissé, sans os, coupé en petits morceaux.",
     "es": "Ternera bien cocinada, sin nada añadido ni condimentos, sin grasa, sin huesos y en trocitos.",
@@ -233,7 +233,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "1ad55f8ef755e81aac06e44ba144c0050bc06674ba215f57937c15ca8aeafd22"
+      "verified_hash": "a305b539574512cbad5e56eed1c54e56f94d042cf24d74ecba43582633ca9621"
     },
     "de": {
       "status": "verified",

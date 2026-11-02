@@ -55,7 +55,7 @@
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to. Fatty meat and poultry skin can upset a cat's digestion and, in sensitive cats, may even lead to pancreatitis. If you share meat, give a little plain, lean, cooked meat with no skin, bones or seasoning.",
-    "sl": "Raje ne. Mastno meso in perutninska koža lahko muci povzročijo prebavne težave, pri občutljivih mačkah pa celo vnetje trebušne slinavke. Če delite meso, ponudite malo navadnega, pustega, kuhanega mesa brez kože, kosti in začimb.",
+    "sl": "Raje ne. Mastno meso in perutninska koža lahko mački povzročijo prebavne težave, pri občutljivih mačkah pa celo vnetje trebušne slinavke. Če mački vseeno date meso, naj bo to malo navadnega, pustega, kuhanega mesa brez kože, kosti in začimb.",
     "de": "Besser nicht. Fettes Fleisch und Geflügelhaut können die Verdauung einer Katze durcheinanderbringen und bei empfindlichen Katzen sogar zu einer Bauchspeicheldrüsenentzündung (Pankreatitis) führen. Wenn Sie Fleisch teilen, geben Sie ein wenig pures, mageres, gegartes Fleisch ohne Haut, Knochen oder Gewürze.",
     "fr": "Mieux vaut s’en abstenir. La viande grasse et la peau de volaille peuvent perturber la digestion du chat et, chez les chats sensibles, même entraîner une pancréatite. Si vous partagez de la viande, donnez un peu de viande maigre cuite nature, sans peau, sans os ni assaisonnement.",
     "es": "Es mejor no dársela. La carne grasa y la piel de las aves pueden sentarle mal a la digestión de un gato y, en gatos sensibles, incluso provocar pancreatitis. Si compartes carne, dale un poco de carne magra, cocinada y sin nada, sin piel, huesos ni condimentos.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Too much fat can affect a cat's digestive tract, especially the pancreas. Cats Protection warns that turkey skin is high in fat and can cause digestive upset or even pancreatitis in sensitive cats, and a University of Georgia vet advises avoiding the fattier pieces of ham altogether.",
-    "sl": "Preveč maščobe lahko obremeni mačja prebavila, zlasti trebušno slinavko. Cats Protection opozarja, da je puranja koža zelo mastna in lahko pri občutljivih mačkah povzroči prebavne težave ali celo vnetje trebušne slinavke, veterinarka z Univerze v Georgii pa svetuje, naj se bolj mastnim kosom šunke povsem izognemo.",
+    "sl": "Preveč maščobe lahko obremeni mačja prebavila, zlasti trebušno slinavko. Cats Protection opozarja, da je puranja koža zelo mastna in lahko pri občutljivih mačkah povzroči prebavne težave ali celo vnetje trebušne slinavke, veterinarka z Univerze v Georgii pa svetuje, da se mastnejšim kosom šunke povsem izognete.",
     "de": "Zu viel Fett kann den Verdauungstrakt einer Katze belasten, vor allem die Bauchspeicheldrüse. Cats Protection warnt, dass Putenhaut fettreich ist und bei empfindlichen Katzen Verdauungsbeschwerden oder sogar eine Pankreatitis auslösen kann, und ein Tierarzt der University of Georgia rät, die fetteren Stücke Schinken ganz zu meiden.",
     "fr": "Trop de graisse peut affecter l’appareil digestif du chat, en particulier le pancréas. Cats Protection avertit que la peau de dinde est très grasse et peut provoquer des troubles digestifs, voire une pancréatite chez les chats sensibles, et un vétérinaire de l’université de Géorgie conseille d’éviter complètement les morceaux de jambon les plus gras.",
     "es": "Demasiada grasa puede afectar al aparato digestivo del gato, sobre todo al páncreas. Cats Protection advierte de que la piel del pavo tiene mucha grasa y puede causar trastornos digestivos o incluso pancreatitis en gatos sensibles, y un veterinario de la Universidad de Georgia aconseja evitar por completo las partes más grasas del jamón.",
@@ -200,7 +200,7 @@
   },
   "child": {
     "en": "Fatty bits can give a cat a sore tummy. If a grown-up says yes, kitty can have a tiny bit of plain lean meat.",
-    "sl": "Zaradi mastnih koščkov lahko muco boli trebušček. Če odrasli dovoli, lahko muca dobi košček navadnega pustega mesa.",
+    "sl": "Zaradi mastnih koščkov lahko muco zaboli trebušček. Če odrasli dovoli, lahko muca dobi čisto majhen košček navadnega pustega mesa.",
     "de": "Fettige Stückchen können einer Katze Bauchweh machen. Wenn ein Erwachsener Ja sagt, darf deine Katze ein winziges Stück pures, mageres Fleisch haben.",
     "fr": "Les morceaux gras peuvent donner mal au ventre à un chat. Si un adulte est d’accord, ton chat peut avoir un tout petit peu de viande maigre nature.",
     "es": "Los trozos con grasa pueden darle dolor de barriga a un gato. Si un adulto dice que sí, tu gatito puede comer un poquito de carne magra sin nada.",
@@ -296,7 +296,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "11f0e6ddd91530e32e30fb55f576d98b3d75602bb2ea5a12a6b5455516320c80"
+      "verified_hash": "1d0fc9f13f090c1f56ae9db6e2d42e7a2677d24bbb3c2e56d75848f81dcaedc9"
     },
     "de": {
       "status": "verified",

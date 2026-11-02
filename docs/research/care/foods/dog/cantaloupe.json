@@ -55,7 +55,7 @@
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in moderation. Cantaloupe is low in calories and a good source of water and fibre, but it is high in sugar, so share it sparingly, especially with dogs who are overweight or diabetic. Do not give the rind or seeds.",
-    "sl": "Da, zmerno. Kantalupa ima malo kalorij ter je dober vir vode in vlaknin, a vsebuje veliko sladkorja, zato jo dajajte zmerno, zlasti psom s prekomerno težo ali sladkorno boleznijo. Ne dajajte lupine ali pečk.",
+    "sl": "Da, zmerno. Kantalupa ima malo kalorij ter je dober vir vode in vlaknin, a vsebuje veliko sladkorja, zato jo dajajte v majhnih količinah, zlasti psom s prekomerno težo ali sladkorno boleznijo. Lupine in pečk ne dajajte.",
     "de": "Ja, in Maßen. Cantaloupe-Melone ist kalorienarm und liefert viel Wasser und Ballaststoffe, enthält aber viel Zucker – teilen Sie sie also sparsam, besonders mit übergewichtigen Hunden oder Hunden mit Diabetes. Geben Sie weder Schale noch Kerne.",
     "fr": "Oui, avec modération. Le melon cantaloup est peu calorique et apporte de l’eau et des fibres, mais il est riche en sucre : partagez-le avec parcimonie, surtout avec un chien en surpoids ou diabétique. Ne donnez ni l’écorce ni les graines.",
     "es": "Sí, con moderación. El melón cantalupo tiene pocas calorías y es una buena fuente de agua y fibra, pero tiene mucho azúcar, así que compártelo con moderación, sobre todo con perros con sobrepeso o diabetes. No le des la corteza ni las semillas.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Cantaloupe rinds, like watermelon rinds, can cause stomach upset, can become impacted in the digestive tract and are a choking hazard. The seeds are harmless but can also be a choking hazard. Too many treats on top of a healthy diet can lead to obesity.",
-    "sl": "Lupina kantalupe lahko, tako kot lubenična, povzroči prebavne težave, se zagozdi v prebavilih in predstavlja nevarnost zadušitve. Pečke so neškodljive, a se lahko prav tako zataknejo v grlu. Preveč priboljškov poleg zdrave prehrane lahko vodi v debelost.",
+    "sl": "Lupina kantalupe lahko tako kot lupina lubenice povzroči prebavne težave, se zagozdi v prebavilih in je nevarna, ker se pes lahko zaduši. Pečke so neškodljive, a se lahko prav tako zataknejo v grlu. Preveč priboljškov poleg zdrave prehrane lahko vodi v debelost.",
     "de": "Die Schale der Cantaloupe-Melone kann – wie die der Wassermelone – den Magen verstimmen, sich im Verdauungstrakt festsetzen und zum Ersticken führen. Die Kerne sind harmlos, können aber ebenfalls zur Erstickungsgefahr werden. Zu viele Leckerlis zusätzlich zu einer gesunden Ernährung können zu Fettleibigkeit führen.",
     "fr": "L’écorce du melon cantaloup, comme celle de la pastèque, peut déranger l’estomac, se bloquer dans le tube digestif, et elle présente un risque d’étouffement. Les graines sont inoffensives mais peuvent elles aussi présenter un risque d’étouffement. Trop de friandises en plus d’une alimentation équilibrée peuvent mener à l’obésité.",
     "es": "La corteza del melón cantalupo, como la de la sandía, puede sentar mal al estómago, quedarse atascada en el aparato digestivo y provocar atragantamiento. Las semillas son inofensivas, pero también pueden provocar atragantamiento. Demasiados premios, sumados a una dieta sana, pueden llevar a la obesidad.",
@@ -90,7 +90,7 @@
   "signs": null,
   "what_to_do": {
     "en": "If you have questions or concerns about feeding your dog cantaloupe, for example if your dog is diabetic, ask your vet.",
-    "sl": "Če imate vprašanja ali pomisleke glede hranjenja psa s kantalupo, na primer če ima pes sladkorno bolezen, vprašajte veterinarja.",
+    "sl": "Če imate vprašanja ali pomisleke glede dajanja kantalupe psu, na primer če ima pes sladkorno bolezen, se posvetujte z veterinarjem.",
     "de": "Wenn Sie Fragen oder Bedenken dazu haben, Ihrem Hund Cantaloupe-Melone zu geben – etwa wenn er Diabetes hat –, fragen Sie Ihren Tierarzt.",
     "fr": "Si vous avez des questions ou des doutes sur le fait de donner du melon cantaloup à votre chien, par exemple s’il est diabétique, demandez conseil à votre vétérinaire.",
     "es": "Si tienes preguntas o dudas sobre darle melón cantalupo a tu perro, por ejemplo si es diabético, consulta a tu veterinario.",
@@ -124,7 +124,7 @@
   },
   "child": {
     "en": "Dogs can enjoy a little piece of melon! A grown-up cuts off the hard skin and takes out the seeds.",
-    "sl": "Psi lahko uživajo v koščku melone! Odrasel odreže trdo lupino in odstrani pečke.",
+    "sl": "Psi se lahko posladkajo s koščkom melone! Odrasel odreže trdo lupino in odstrani pečke.",
     "de": "Hunde dürfen ein kleines Stück Melone genießen! Ein Erwachsener schneidet die harte Schale ab und entfernt die Kerne.",
     "fr": "Les chiens peuvent se régaler d’un petit morceau de melon ! Un adulte enlève la peau dure et retire les graines.",
     "es": "¡Los perros pueden disfrutar de un trocito de melón! Un adulto le quita la piel dura y las semillas.",
@@ -234,7 +234,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "db70e70c2e433f86a5f87f07783d330ca307658843d26c2acb97eb93e2a4b8a1"
+      "verified_hash": "cdeefc4896bc38a8064a4e209e3b68dc2df077e217ef7cdb1d800baece7365ef"
     },
     "de": {
       "status": "verified",

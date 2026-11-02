@@ -55,7 +55,7 @@
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to. Most adult cats are lactose intolerant, so cow's milk can cause vomiting, diarrhoea and stomach pain. Cats get no benefit from milk; fresh water is all they need to drink.",
-    "sl": "Raje ne. Večina odraslih mačk ne prenaša laktoze, zato jim kravje mleko lahko povzroči bruhanje, drisko in bolečine v trebuhu. Mleko mačkam ne koristi; piti potrebujejo le svežo vodo.",
+    "sl": "Raje ne. Večina odraslih mačk ne prenaša laktoze, zato jim kravje mleko lahko povzroči bruhanje, drisko in bolečine v trebuhu. Mačkam mleko ne koristi; za pitje potrebujejo le svežo vodo.",
     "de": "Besser nicht. Die meisten erwachsenen Katzen vertragen keine Laktose, daher kann Kuhmilch Erbrechen, Durchfall und Bauchschmerzen verursachen. Milch bringt Katzen keinen Nutzen; zum Trinken brauchen sie nur frisches Wasser.",
     "fr": "Mieux vaut s’en abstenir. La plupart des chats adultes sont intolérants au lactose : le lait de vache peut provoquer des vomissements, de la diarrhée et des maux de ventre. Le lait n’apporte rien aux chats ; pour boire, ils n’ont besoin que d’eau fraîche.",
     "es": "Es mejor no dársela. La mayoría de los gatos adultos son intolerantes a la lactosa, así que la leche de vaca puede causarles vómitos, diarrea y dolor de estómago. La leche no les aporta ningún beneficio; lo único que necesitan beber es agua fresca.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Milk contains lactose, a sugar that needs the enzyme lactase to be digested. Cats have very little lactase, so most are lactose intolerant and dairy often upsets their stomach. Kittens drink their mother's milk, but orphaned kittens need special kitten milk, not cow's milk.",
-    "sl": "Mleko vsebuje laktozo, sladkor, za katerega prebavo je potreben encim laktaza. Mačke imajo laktaze zelo malo, zato večina ne prenaša laktoze in mlečni izdelki jim pogosto povzročijo prebavne težave. Mladički pijejo mleko svoje mame, osirotelim mladičkom pa je treba dajati posebno mleko za mladiče, ne kravjega.",
+    "sl": "Mleko vsebuje laktozo, sladkor, za katerega prebavo je potreben encim laktaza. Mačke imajo laktaze zelo malo, zato večina ne prenaša laktoze in jim mlečni izdelki pogosto povzročijo prebavne težave. Mladički pijejo materino mleko, osirotele mladičke pa je treba hraniti s posebnim mlekom za mladičke, ne s kravjim.",
     "de": "Milch enthält Laktose, einen Zucker, für dessen Verdauung das Enzym Laktase nötig ist. Katzen haben nur sehr wenig Laktase, daher sind die meisten laktoseintolerant, und Milchprodukte schlagen ihnen oft auf den Magen. Kätzchen trinken die Milch ihrer Mutter, verwaiste Kätzchen brauchen aber spezielle Kätzchenmilch, keine Kuhmilch.",
     "fr": "Le lait contient du lactose, un sucre qui a besoin d’une enzyme, la lactase, pour être digéré. Les chats ont très peu de lactase : la plupart sont donc intolérants au lactose et les produits laitiers leur dérangent souvent l’estomac. Les chatons boivent le lait de leur mère, mais les chatons orphelins ont besoin d’un lait spécial pour chatons, pas de lait de vache.",
     "es": "La leche contiene lactosa, un azúcar que necesita la enzima lactasa para digerirse. Los gatos tienen muy poca lactasa, así que la mayoría son intolerantes a la lactosa y los lácteos a menudo les sientan mal al estómago. Los gatitos beben la leche de su madre, pero los gatitos huérfanos necesitan leche especial para gatitos, no leche de vaca.",
@@ -166,7 +166,7 @@
   },
   "what_to_do": {
     "en": "If your cat drank milk and has vomiting or diarrhoea that doesn't settle, or seems unwell, contact your vet for advice.",
-    "sl": "Če je muca popila mleko in ima bruhanje ali drisko, ki ne mineta, ali se ne počuti dobro, se za nasvet obrnite na veterinarja.",
+    "sl": "Če je mačka popila mleko in bruha ali ima drisko, ki ne mine, ali se ne počuti dobro, se za nasvet obrnite na veterinarja.",
     "de": "Hat Ihre Katze Milch getrunken und klingen Erbrechen oder Durchfall nicht ab oder wirkt sie krank, fragen Sie Ihren Tierarzt um Rat.",
     "fr": "Si votre chat a bu du lait et a des vomissements ou une diarrhée qui ne passent pas, ou s’il semble malade, demandez conseil à votre vétérinaire.",
     "es": "Si tu gato ha bebido leche y tiene vómitos o diarrea que no se le pasan, o parece encontrarse mal, consulta a tu veterinario.",
@@ -183,7 +183,7 @@
   },
   "serving": {
     "en": "If you want to offer milk, choose a milk made for cats (usually low-lactose or lactose-free) and count its calories in your cat's daily food.",
-    "sl": "Če želite muci ponuditi mleko, izberite mleko za mačke (običajno z malo laktoze ali brez nje) in njegove kalorije upoštevajte pri dnevnem obroku.",
+    "sl": "Če želite mački ponuditi mleko, izberite mleko, narejeno za mačke (običajno z malo laktoze ali brez nje), njegove kalorije pa vštejte v dnevno količino hrane.",
     "de": "Wenn Sie Milch anbieten möchten, wählen Sie eine Milch für Katzen (meist laktosearm oder laktosefrei) und rechnen Sie ihre Kalorien in die tägliche Futtermenge Ihrer Katze ein.",
     "fr": "Si vous souhaitez proposer du lait à votre chat, choisissez un lait conçu pour les chats (généralement pauvre en lactose ou sans lactose) et comptez ses calories dans sa ration quotidienne.",
     "es": "Si quieres ofrecerle leche, elige una leche hecha para gatos (normalmente baja en lactosa o sin lactosa) y cuenta sus calorías dentro de la comida diaria de tu gato.",
@@ -200,7 +200,7 @@
   },
   "child": {
     "en": "Cartoon cats love milk, but real cats get a sore tummy from it. Fresh water is kitty's best drink!",
-    "sl": "Risane muce obožujejo mleko, prave pa jih od njega boli trebušček. Sveža voda je za muco najboljša pijača!",
+    "sl": "Muce iz risank obožujejo mleko, prave pa jih od njega boli trebušček. Sveža voda je za muco najboljša pijača!",
     "de": "Katzen im Zeichentrickfilm lieben Milch, aber echte Katzen bekommen davon Bauchweh. Frisches Wasser ist das beste Getränk für deine Katze!",
     "fr": "Les chats des dessins animés adorent le lait, mais les vrais chats en ont mal au ventre. L’eau fraîche est la meilleure boisson pour ton chat !",
     "es": "A los gatos de los dibujos les encanta la leche, pero a los gatos de verdad les da dolor de barriga. ¡El agua fresca es su mejor bebida!",
@@ -308,7 +308,7 @@
       },
       "a": {
         "en": "Milk made for cats usually has much less lactose or none. It still has calories, so count it in your cat's daily food. Your cat only needs water to drink.",
-        "sl": "Mleko za mačke ima običajno veliko manj laktoze ali je sploh nima. Še vedno ima kalorije, zato ga upoštevajte pri dnevnem obroku. Muca za pitje potrebuje le vodo.",
+        "sl": "Mleko, narejeno za mačke, ima običajno veliko manj laktoze ali je sploh nima. Še vedno vsebuje kalorije, zato ga vštejte v dnevno količino hrane. Mačka za pitje potrebuje le vodo.",
         "de": "Milch für Katzen enthält meist deutlich weniger Laktose oder gar keine. Sie hat trotzdem Kalorien, also rechnen Sie sie in die tägliche Futtermenge Ihrer Katze ein. Zum Trinken braucht Ihre Katze nur Wasser.",
         "fr": "Le lait conçu pour les chats contient généralement beaucoup moins de lactose, ou pas du tout. Il apporte quand même des calories : comptez-le dans la ration quotidienne de votre chat. Pour boire, votre chat n’a besoin que d’eau.",
         "es": "La leche hecha para gatos suele tener mucha menos lactosa o ninguna. Aun así tiene calorías, así que cuéntala dentro de la comida diaria de tu gato. Tu gato solo necesita agua para beber.",
@@ -392,7 +392,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "7263462bc054bf9695e7d63d5506aeb0521a667eca583e98da0e8892cdffcd9f"
+      "verified_hash": "c08762e4b6a2ab5ccd84b4fa2904e2f6265d94f0c07f6ab4fc0925737699c167"
     },
     "de": {
       "status": "verified",

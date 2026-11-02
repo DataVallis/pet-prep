@@ -55,7 +55,7 @@
   "level": "not_recommended",
   "answer": {
     "en": "Not recommended. A few potato chips are unlikely to cause salt poisoning, but chips are salty and excessive salty food is not good for dogs, especially those with heart problems. Onion- or garlic-flavoured chips add a further risk, because onion and garlic are toxic to dogs.",
-    "sl": "Ni priporočljivo. Nekaj čipsa verjetno ne povzroči zastrupitve s soljo, a čips je slan, preveč slane hrane pa psom ne koristi, zlasti tistim s srčnimi težavami. Čips z okusom čebule ali česna je še bolj tvegan, ker sta čebula in česen za pse strupena.",
+    "sl": "Ni priporočljivo. Nekaj koščkov čipsa verjetno ne povzroči zastrupitve s soljo, a čips je slan, preveč slane hrane pa psom ne koristi, zlasti tistim s težavami s srcem. Čips z okusom čebule ali česna je še bolj tvegan, ker sta čebula in česen za pse strupena.",
     "de": "Nicht empfohlen. Ein paar Kartoffelchips lösen wahrscheinlich keine Salzvergiftung aus, aber Chips sind salzig, und zu viel salziges Essen ist nicht gut für Hunde, besonders bei Herzproblemen. Chips mit Zwiebel- oder Knoblauchgeschmack bergen ein zusätzliches Risiko, denn Zwiebeln und Knoblauch sind für Hunde giftig.",
     "fr": "Déconseillé. Quelques chips ont peu de chances de provoquer une intoxication au sel, mais elles sont salées, et manger trop d’aliments salés n’est pas bon pour les chiens, surtout ceux qui ont des problèmes cardiaques. Les chips à l’oignon ou à l’ail ajoutent un risque, car l’oignon et l’ail sont toxiques pour les chiens.",
     "es": "No se recomiendan. Es poco probable que unas pocas patatas fritas causen una intoxicación por sal, pero son saladas, y el exceso de sal no es bueno para los perros, sobre todo si tienen problemas de corazón. Las de sabor a cebolla o ajo añaden otro riesgo: la cebolla y el ajo son tóxicos para los perros.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "AKC says a dog can have salty foods like potato chips in limited amounts, but excess salt is not good for dogs and can cause fluid retention. Large amounts of salt can lead to salt poisoning. Onion and garlic are toxic to dogs in every form, including powders.",
-    "sl": "AKC pravi, da lahko pes slano hrano, kot je čips, je v omejenih količinah, a presežek soli psom ne koristi in lahko povzroči zastajanje tekočine. Velike količine soli lahko vodijo v zastrupitev s soljo. Čebula in česen sta za pse strupena v vseh oblikah, tudi v prahu.",
+    "sl": "AKC pravi, da lahko pes slano hrano, kot je čips, zaužije v omejenih količinah, a presežek soli psom ne koristi in lahko povzroči zadrževanje tekočine v telesu. Velike količine soli lahko vodijo v zastrupitev s soljo. Čebula in česen sta za pse strupena v vseh oblikah, tudi v prahu.",
     "de": "Laut AKC darf ein Hund salzige Lebensmittel wie Kartoffelchips in begrenzten Mengen bekommen, aber zu viel Salz ist nicht gut für Hunde und kann zu Wassereinlagerungen führen. Große Mengen Salz können eine Salzvergiftung verursachen. Zwiebeln und Knoblauch sind für Hunde in jeder Form giftig, auch als Pulver.",
     "fr": "Selon l’AKC, un chien peut manger des aliments salés comme les chips en quantité limitée, mais l’excès de sel n’est pas bon pour lui et peut provoquer une rétention d’eau. De grandes quantités de sel peuvent entraîner une intoxication au sel. L’oignon et l’ail sont toxiques pour les chiens sous toutes leurs formes, y compris en poudre.",
     "es": "Según el AKC, un perro puede comer alimentos salados como las patatas fritas en cantidades limitadas, pero el exceso de sal no es bueno para los perros y puede hacer que retengan líquidos. Las cantidades grandes de sal pueden provocar una intoxicación por sal. La cebolla y el ajo son tóxicos para los perros en cualquier forma, también en polvo.",
@@ -196,7 +196,7 @@
   },
   "what_to_do": {
     "en": "If your dog ate a lot of chips, especially onion- or garlic-flavoured ones, contact your vet or a pet poison helpline. Note the flavour and roughly how much was eaten.",
-    "sl": "Če je pes pojedel veliko čipsa, zlasti z okusom čebule ali česna, pokličite veterinarja ali center za zastrupitve živali. Zapišite si okus in približno koliko je pojedel.",
+    "sl": "Če je pes pojedel veliko čipsa, zlasti z okusom čebule ali česna, pokličite veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si okus in približno koliko je pojedel.",
     "de": "Wenn Ihr Hund viele Chips gefressen hat, besonders solche mit Zwiebel- oder Knoblauchgeschmack, wenden Sie sich an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie die Geschmacksrichtung und ungefähr die Menge.",
     "fr": "Si votre chien a mangé beaucoup de chips, surtout à l’oignon ou à l’ail, contactez votre vétérinaire ou un centre antipoison vétérinaire. Notez le parfum et la quantité approximative.",
     "es": "Si tu perro ha comido muchas patatas fritas, sobre todo con sabor a cebolla o a ajo, contacta con tu veterinario o con una línea de información toxicológica para animales. Apunta el sabor y más o menos cuántas ha comido.",
@@ -345,7 +345,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "133ebf5f13143c6519257c37a98aa39eda9dcfe8a0c6674b8e660975bc9dee5a"
+      "verified_hash": "ba1d64472205c6e39c9b669e74ef8e332fae850873935355a9f86411b4474bfb"
     },
     "de": {
       "status": "verified",

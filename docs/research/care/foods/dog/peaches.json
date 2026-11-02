@@ -55,7 +55,7 @@
   "level": "not_recommended",
   "answer": {
     "en": "Not recommended. Some vets allow fresh peach flesh in small cubes with the stem and pit removed, but the pit is a real danger: it can cause choking or a gut blockage and contains a form of cyanide.",
-    "sl": "Ni priporočljivo. Nekateri veterinarji dovolijo sveže meso breskve v majhnih kockah brez peclja in koščice, koščica pa je resna nevarnost: lahko povzroči zadušitev ali zaporo prebavil in vsebuje obliko cianida.",
+    "sl": "Ni priporočljivo. Nekateri veterinarji dovolijo sveže meso breskve v majhnih kockah brez peclja in koščice, koščica pa je resna nevarnost: lahko povzroči dušenje ali zaporo prebavil in vsebuje cianidno spojino.",
     "de": "Nicht empfohlen. Manche Tierärzte erlauben frisches Pfirsichfruchtfleisch in kleinen Würfeln ohne Stiel und Kern, doch der Kern ist eine echte Gefahr: Er kann zum Ersticken oder zu einem Darmverschluss führen und enthält eine Form von Cyanid.",
     "fr": "Déconseillé. Certains vétérinaires autorisent la chair de pêche fraîche en petits dés, sans la queue ni le noyau, mais le noyau est un vrai danger : il peut provoquer un étouffement ou une obstruction intestinale, et il contient une forme de cyanure.",
     "es": "No se recomienda. Algunos veterinarios permiten la pulpa fresca de melocotón en daditos, sin el rabito ni el hueso, pero el hueso es un peligro real: puede provocar atragantamiento u obstrucción intestinal y contiene una forma de cianuro.",
@@ -183,7 +183,7 @@
   },
   "serving": {
     "en": "Fresh flesh only, in small cubes, with the stem and pit removed. Skip canned and dried peaches.",
-    "sl": "Samo sveže meso, v majhnih kockah, brez peclja in koščice. Breskev iz konzerve in posušenih ne dajajte.",
+    "sl": "Samo sveže meso, v majhnih kockah, brez peclja in koščice. Konzerviranih in suhih breskev ne dajajte.",
     "de": "Nur frisches Fruchtfleisch in kleinen Würfeln, ohne Stiel und Kern. Verzichten Sie auf Pfirsiche aus der Dose und getrocknete Pfirsiche.",
     "fr": "Uniquement la chair fraîche, en petits dés, sans la queue ni le noyau. Pas de pêches en conserve ni séchées.",
     "es": "Solo la pulpa fresca, en daditos, sin el rabito ni el hueso. Nada de melocotón en almíbar ni deshidratado.",
@@ -272,7 +272,7 @@
       },
       "a": {
         "en": "It is a choking hazard, can block the intestines, and its seed contains cyanide-releasing compounds.",
-        "sl": "Lahko povzroči zadušitev, zamaši črevesje, njeno seme pa vsebuje snovi, ki sproščajo cianid.",
+        "sl": "Lahko povzroči dušenje, zamaši črevesje, njeno seme pa vsebuje snovi, ki sproščajo cianid.",
         "de": "Er kann zum Ersticken führen und den Darm blockieren, und sein Samen enthält Verbindungen, die Cyanid freisetzen.",
         "fr": "Il peut provoquer un étouffement, bloquer l’intestin, et son amande contient des composés qui libèrent du cyanure.",
         "es": "Puede provocar atragantamiento, obstruir el intestino, y su semilla contiene compuestos que liberan cianuro.",
@@ -367,7 +367,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "978850b72b730f1309a8c84ad5489763e1583f589ac60312fbd06073fb6854d4"
+      "verified_hash": "f0ca75553f2b6f7422be3d6ff6d240d5445aa5f1a3e60d95543894bf16254018"
     },
     "de": {
       "status": "verified",

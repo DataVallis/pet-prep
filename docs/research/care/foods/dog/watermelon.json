@@ -55,7 +55,7 @@
   "level": "small_amounts",
   "answer": {
     "en": "Yes, if you prepare it correctly. Watermelon is a low-calorie fruit with a high water content, but remove all seeds and the rind first, because both can cause digestive upset or an intestinal blockage.",
-    "sl": "Da, če jo pravilno pripravite. Lubenica je nizkokalorično sadje z veliko vode, a najprej odstranite vse pečke in lupino, ker lahko oboje povzroči prebavne težave ali zaporo črevesja.",
+    "sl": "Da, če jo pravilno pripravite. Lubenica je nizkokalorično sadje z visoko vsebnostjo vode, a najprej odstranite vse pečke in lupino, ker lahko oboje povzroči prebavne težave ali zaporo črevesja.",
     "de": "Ja, wenn Sie sie richtig zubereiten. Wassermelone ist eine kalorienarme Frucht mit hohem Wassergehalt. Entfernen Sie aber vorher alle Kerne und die Schale, denn beides kann Verdauungsbeschwerden oder einen Darmverschluss verursachen.",
     "fr": "Oui, si elle est bien préparée. La pastèque est un fruit peu calorique, très riche en eau, mais retirez d’abord toutes les graines et l’écorce, car toutes deux peuvent provoquer des troubles digestifs ou une obstruction intestinale.",
     "es": "Sí, si la preparas bien. La sandía es una fruta baja en calorías con mucha agua, pero quítale antes todas las semillas y la corteza, porque ambas pueden provocar malestar digestivo o una obstrucción intestinal.",
@@ -124,7 +124,7 @@
   },
   "child": {
     "en": "On a hot day, dogs can enjoy small pieces of watermelon! A grown-up removes the seeds and the green skin.",
-    "sl": "Na vroč dan lahko psi uživajo v majhnih koščkih lubenice! Odrasel odstrani pečke in zeleno lupino.",
+    "sl": "Na vroč dan se lahko psi osvežijo z majhnimi koščki lubenice! Odrasel odstrani pečke in zeleno lupino.",
     "de": "An heißen Tagen dürfen Hunde kleine Stücke Wassermelone genießen! Ein Erwachsener entfernt die Kerne und die grüne Schale.",
     "fr": "Quand il fait chaud, les chiens peuvent se régaler de petits morceaux de pastèque ! Un adulte enlève les graines et la peau verte.",
     "es": "¡Los días de calor, los perros pueden disfrutar de trocitos de sandía! Un adulto quita las semillas y la piel verde.",
@@ -250,7 +250,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "993216eb834efe18c1e49075310d5f542e4e98d0905a256919399b6ae0cb5031"
+      "verified_hash": "ca6c2ecffd62f5546e6f0613842e4b9795bfa904b03628d1760e0beead36f7de"
     },
     "de": {
       "status": "verified",

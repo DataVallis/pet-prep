@@ -55,7 +55,7 @@
   "level": "dangerous",
   "answer": {
     "en": "No, it's safer to keep avocado away from dogs. Some vets say the flesh is not toxic, but the skin, pit and leaves contain persin, and the large pit can choke a dog or block its gut. Avocado is also very fatty, which can lead to pancreatitis.",
-    "sl": "Ne, avokado je bolje držati stran od psov. Nekateri veterinarji pravijo, da meso ni strupeno, lupina, koščica in listi pa vsebujejo persin, velika koščica pa lahko psa zaduši ali mu zamaši prebavila. Avokado je tudi zelo masten, kar lahko vodi v vnetje trebušne slinavke.",
+    "sl": "Ne, avokada psom raje ne dajajte. Nekateri veterinarji pravijo, da meso ni strupeno, lupina, koščica in listi pa vsebujejo persin, velika koščica pa lahko psa zaduši ali mu zamaši prebavila. Avokado je tudi zelo masten, kar lahko privede do vnetja trebušne slinavke.",
     "de": "Nein, sicherer ist es, Avocado von Hunden fernzuhalten. Laut manchen Tierärzten ist das Fruchtfleisch nicht giftig, doch Schale, Kern und Blätter enthalten Persin, und der große Kern kann zum Ersticken führen oder den Darm blockieren. Avocado ist außerdem sehr fettreich, was zu einer Bauchspeicheldrüsenentzündung (Pankreatitis) führen kann.",
     "fr": "Non, il est plus sûr de tenir l’avocat hors de portée des chiens. Certains vétérinaires disent que la chair n’est pas toxique, mais la peau, le noyau et les feuilles contiennent de la persine, et le gros noyau peut étouffer un chien ou bloquer son intestin. L’avocat est aussi très gras, ce qui peut entraîner une pancréatite.",
     "es": "No, es más seguro mantener el aguacate lejos de los perros. Algunos veterinarios dicen que la pulpa no es tóxica, pero la piel, el hueso y las hojas contienen persina, y el hueso, que es grande, puede atragantar al perro u obstruirle el intestino. Además, el aguacate es muy graso, lo que puede provocar pancreatitis.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Sources disagree, so we use the stricter level. The Merck Veterinary Manual says dogs seem relatively resistant compared with other species, the ASPCA names birds and rabbits as the biggest concern, and AKC says the flesh is not toxic. Blue Cross calls persin poisonous to dogs. All agree that the pit can choke a dog or cause a blockage and that the high fat can cause pancreatitis.",
-    "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. Veterinarski priročnik Merck pravi, da so psi v primerjavi z drugimi vrstami razmeroma odporni, ASPCA kot največjo skrb navaja ptice in kunce, AKC pa pravi, da meso ni strupeno. Blue Cross persin označuje kot strupen za pse. Vsi se strinjajo, da lahko koščica psa zaduši ali povzroči zaporo in da lahko veliko maščobe povzroči vnetje trebušne slinavke.",
+    "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. Veterinarski priročnik Merck pravi, da so psi v primerjavi z drugimi vrstami razmeroma odporni, ASPCA kot največjo skrb navaja ptice in kunce, AKC pa pravi, da meso ni strupeno. Blue Cross persin označuje kot strupen za pse. Vsi se strinjajo, da lahko koščica psa zaduši ali povzroči zaporo in da lahko obilo maščobe povzroči vnetje trebušne slinavke.",
     "de": "Die Quellen sind sich nicht einig, deshalb verwenden wir die strengere Stufe. Laut Merck Veterinary Manual scheinen Hunde im Vergleich zu anderen Arten relativ widerstandsfähig zu sein, die ASPCA sieht bei Vögeln und Kaninchen die größte Gefahr, und laut AKC ist das Fruchtfleisch nicht giftig. Blue Cross bezeichnet Persin als giftig für Hunde. Alle sind sich einig, dass der Kern zum Ersticken oder zu einer Blockade führen und der hohe Fettgehalt eine Pankreatitis auslösen kann.",
     "fr": "Les sources ne sont pas d’accord, nous retenons donc le niveau le plus strict. Le Merck Veterinary Manual indique que les chiens semblent relativement résistants par rapport à d’autres espèces, l’ASPCA cite les oiseaux et les lapins comme les plus concernés, et l’AKC affirme que la chair n’est pas toxique. Blue Cross qualifie la persine de toxique pour les chiens. Toutes s’accordent : le noyau peut étouffer un chien ou provoquer une obstruction, et la forte teneur en graisses peut causer une pancréatite.",
     "es": "Las fuentes no coinciden, así que aplicamos el nivel más estricto. El Manual Merck de Veterinaria dice que los perros parecen relativamente resistentes en comparación con otras especies, la ASPCA señala a las aves y los conejos como la mayor preocupación y el AKC dice que la pulpa no es tóxica. Blue Cross considera la persina venenosa para los perros. Todas coinciden en que el hueso puede atragantar al perro o causar una obstrucción y en que su alto contenido en grasa puede causar pancreatitis.",
@@ -95,8 +95,8 @@
     ],
     "sl": [
       "Dušenje s koščico",
-      "Znaki zapore po zaužitju koščice: ponavljajoče se bruhanje, pes noče jesti, utrujenost",
-      "Slabo počutje zaradi veliko maščobe, ki lahko vodi v vnetje trebušne slinavke"
+      "Znaki zapore po zaužitju koščice: ponavljajoče se bruhanje, odklanjanje hrane, utrujenost",
+      "Slabo počutje zaradi velike količine maščobe, kar lahko vodi v vnetje trebušne slinavke"
     ],
     "de": [
       "Ersticken am Kern",
@@ -166,7 +166,7 @@
   },
   "what_to_do": {
     "en": "If your dog chewed or swallowed an avocado pit, contact your vet right away and don't wait for signs. If it ate guacamole, call your vet or a pet poison helpline too, because guacamole usually contains onion and garlic. Note what and how much was eaten.",
-    "sl": "Če je pes žvečil ali pogoltnil koščico avokada, takoj pokličite veterinarja in ne čakajte na znake. Če je pojedel guacamole, prav tako pokličite veterinarja ali center za zastrupitve živali, saj guacamole običajno vsebuje čebulo in česen. Zapišite si, kaj in koliko je pojedel.",
+    "sl": "Če je pes žvečil ali pogoltnil koščico avokada, takoj pokličite veterinarja in ne čakajte na znake. Če je pojedel guacamole, prav tako pokličite veterinarja ali telefonsko linijo za zastrupitve živali, saj guacamole običajno vsebuje čebulo in česen. Zapišite si, kaj in koliko je pojedel.",
     "de": "Wenn Ihr Hund einen Avocadokern angekaut oder verschluckt hat, wenden Sie sich sofort an Ihren Tierarzt und warten Sie nicht auf Anzeichen. Hat er Guacamole gefressen, rufen Sie ebenfalls Ihren Tierarzt oder einen Giftnotruf für Tiere an, denn Guacamole enthält meist Zwiebeln und Knoblauch. Notieren Sie, was und wie viel gefressen wurde.",
     "fr": "Si votre chien a mâchouillé ou avalé un noyau d’avocat, contactez immédiatement votre vétérinaire sans attendre l’apparition de signes. S’il a mangé du guacamole, appelez aussi votre vétérinaire ou un centre antipoison vétérinaire, car le guacamole contient généralement de l’oignon et de l’ail. Notez ce qu’il a mangé et en quelle quantité.",
     "es": "Si tu perro ha mordisqueado o se ha tragado un hueso de aguacate, contacta enseguida con tu veterinario y no esperes a que aparezcan síntomas. Si ha comido guacamole, llama también a tu veterinario o a una línea de información toxicológica para animales, porque el guacamole suele llevar cebolla y ajo. Anota qué ha comido y cuánto.",
@@ -399,7 +399,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "dc858a3a4b59ad61654257132c4a10b7590ea188376e603901d45569c98b09c8"
+      "verified_hash": "375d8e26f420e9853c84f28013b6fe64b855d46823e712e3810ba6bea4978921"
     },
     "de": {
       "status": "verified",

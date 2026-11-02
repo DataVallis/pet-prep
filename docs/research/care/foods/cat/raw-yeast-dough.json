@@ -55,7 +55,7 @@
   "level": "toxic",
   "answer": {
     "en": "No. Raw yeast dough is dangerous for cats in two ways: it can keep expanding in the stomach and cause a blockage, and the yeast makes alcohol, which is toxic to cats. Keep rising dough out of reach and call your vet if your cat eats any.",
-    "sl": "Ne. Surovo kvašeno testo je za mačke nevarno na dva načina: v želodcu lahko še naprej narašča in povzroči zaporo, kvas pa tvori alkohol, ki je za mačke strupen. Vzhajajoče testo postavite izven dosega in pokličite veterinarja, če ga muca poje.",
+    "sl": "Ne. Surovo kvašeno testo je za mačke nevarno na dva načina: v želodcu lahko še naprej narašča in povzroči zaporo, kvas pa tvori alkohol, ki je za mačke strupen. Vzhajajoče testo naj bo zunaj mačjega dosega, veterinarja pa pokličite, če ga mačka poje.",
     "de": "Nein. Roher Hefeteig ist für Katzen auf zwei Arten gefährlich: Er kann im Magen weiter aufgehen und eine Blockade verursachen, und die Hefe bildet Alkohol, der für Katzen giftig ist. Stellen Sie aufgehenden Teig außer Reichweite und rufen Sie Ihren Tierarzt an, wenn Ihre Katze davon frisst.",
     "fr": "Non. La pâte crue à la levure est doublement dangereuse pour les chats : elle peut continuer à gonfler dans l’estomac et provoquer une occlusion, et la levure produit de l’alcool, toxique pour les chats. Gardez la pâte qui lève hors de portée et appelez votre vétérinaire si votre chat en mange.",
     "es": "No. La masa cruda con levadura es peligrosa para los gatos por dos motivos: puede seguir creciendo en el estómago y causar una obstrucción, y la levadura produce alcohol, que es tóxico para los gatos. Mantén la masa que está subiendo fuera de su alcance y llama a tu veterinario si tu gato se come un poco.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Raw dough contains some alcohol and produces carbon dioxide. Once swallowed, the yeast keeps working in the stomach: the dough expands and can cause an obstruction, while the alcohol it produces is absorbed into the blood. Cats are especially sensitive to alcohol.",
-    "sl": "Surovo testo vsebuje nekaj alkohola in tvori ogljikov dioksid. Ko ga žival poje, kvas v želodcu deluje naprej: testo se širi in lahko povzroči zaporo, nastali alkohol pa se vsrka v kri. Mačke so na alkohol še posebej občutljive.",
+    "sl": "Surovo testo vsebuje nekaj alkohola in tvori ogljikov dioksid. Ko mačka testo poje, kvas v želodcu deluje naprej: testo se širi in lahko povzroči zaporo, nastali alkohol pa se absorbira v kri. Mačke so na alkohol še posebej občutljive.",
     "de": "Roher Teig enthält etwas Alkohol und bildet Kohlendioxid. Nach dem Verschlucken arbeitet die Hefe im Magen weiter: Der Teig dehnt sich aus und kann einen Verschluss verursachen, während der entstehende Alkohol ins Blut aufgenommen wird. Katzen reagieren besonders empfindlich auf Alkohol.",
     "fr": "La pâte crue contient un peu d’alcool et produit du dioxyde de carbone. Une fois avalée, la levure continue d’agir dans l’estomac : la pâte gonfle et peut provoquer une obstruction, tandis que l’alcool produit passe dans le sang. Les chats sont particulièrement sensibles à l’alcool.",
     "es": "La masa cruda contiene algo de alcohol y produce dióxido de carbono. Una vez tragada, la levadura sigue actuando en el estómago: la masa crece y puede causar una obstrucción, mientras que el alcohol que produce pasa a la sangre. Los gatos son especialmente sensibles al alcohol.",
@@ -95,7 +95,7 @@
       "Unusual weakness or sleepiness"
     ],
     "sl": [
-      "Napihnjen trebušček",
+      "Napihnjen, napet trebuh",
       "Poskusi bruhanja brez izbruhane vsebine",
       "Opotekanje ali zmedenost",
       "Nenavadna šibkost ali zaspanost"
@@ -181,7 +181,7 @@
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away. Note how much dough your cat ate and when. Don't wait for signs to appear, and don't try to make your cat sick at home.",
-    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite, koliko testa je muca pojedla in kdaj. Ne čakajte na znake in muce doma ne poskušajte spraviti k bruhanju.",
+    "sl": "Takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si, koliko testa je mačka pojedla in kdaj. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, wie viel Teig Ihre Katze gefressen hat und wann. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez la quantité de pâte mangée et l’heure. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
     "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Anota cuánta masa ha comido tu gato y cuándo. No esperes a que aparezcan síntomas y no intentes hacer vomitar a tu gato en casa.",
@@ -325,7 +325,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "c02dac9f28dd5081831962b17e9cd1dbd409bc4ffc7a9d68e90151d6909b7ff1"
+      "verified_hash": "b75bff14936dae2b18afc8e74c32ff687f09c5be6cd0a5747c8c81d2390644b8"
     },
     "de": {
       "status": "verified",
