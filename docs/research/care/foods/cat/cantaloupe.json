@@ -75,7 +75,7 @@
     "sl": "ASPCA pravo kantalupo (Cucumis melo) navaja kot nestrupeno za mačke. Mačke so obligatni mesojedci in sadja ne potrebujejo; priboljški naj bodo le majhen del dnevne hrane, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave.",
     "de": "Die ASPCA stuft die echte Cantaloupe-Melone (Cucumis melo) als ungiftig für Katzen ein. Katzen sind obligate Fleischfresser und brauchen kein Obst. Leckerlis sollten nur einen kleinen Teil des täglichen Futters ausmachen, und jedes Pflanzenmaterial kann Erbrechen oder Magenverstimmungen auslösen.",
     "fr": "L’ASPCA classe le véritable melon cantaloup (Cucumis melo) comme non toxique pour les chats. Les chats sont des carnivores stricts et n’ont pas besoin de fruits ; les friandises doivent rester une petite part de l’alimentation quotidienne, et toute matière végétale peut provoquer des vomissements ou des troubles digestifs.",
-    "es": "La ASPCA considera el auténtico melón cantalupo (Cucumis melo) no tóxico para los gatos. Los gatos son carnívoros estrictos y no necesitan fruta; los premios deben ser una parte pequeña de su comida diaria, y cualquier material vegetal puede provocar vómitos o malestar de estómago.",
+    "es": "La ASPCA considera el auténtico melón cantalupo (Cucumis melo) no tóxico para los gatos. Los gatos son carnívoros estrictos y no necesitan fruta; los premios deben ser una parte pequeña de su comida diaria, y cualquier materia vegetal puede provocar vómitos o malestar de estómago.",
     "it": "L’ASPCA classifica il vero melone cantalupo (Cucumis melo) come non tossico per i gatti. I gatti sono carnivori obbligati e non hanno bisogno della frutta; i premi devono restare una piccola parte del cibo quotidiano e qualsiasi materiale vegetale può causare vomito o mal di stomaco.",
     "pt": "A ASPCA classifica a meloa propriamente dita (Cucumis melo) como não tóxica para gatos. Os gatos são carnívoros estritos e não precisam de fruta, as guloseimas devem continuar a ser uma pequena parte da alimentação diária e qualquer matéria vegetal pode causar vómitos ou mal-estar de estômago.",
     "nl": "De ASPCA noemt echte cantaloupe (Cucumis melo) niet giftig voor katten. Katten zijn strikte vleeseters en hebben geen fruit nodig, snoepjes horen maar een klein deel van het dagelijkse eten te zijn, en elk plantaardig materiaal kan braken of maagklachten veroorzaken.",
@@ -241,7 +241,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "1554a2b9d7b35b5162929bdd236d9b62a4dc1c6420b0c7815c662a3ea10eed06"
+      "verified_hash": "65f1011068698749ae2bff45830a58def70ca0b37a3b3296dc8e081ca93bc498"
     },
     "it": {
       "status": "verified",

@@ -75,7 +75,7 @@
     "sl": "Surovo meso je pogosto okuženo z bakterijami. Psi lahko te klice nosijo brez znakov in jih izločajo s slino in iztrebki, kar ogroža družinske člane, zlasti skupine z večjim tveganjem, kot so otroci in starejši. Surova svinjina lahko vsebuje zajedavca, surove kosti lahko zamašijo črevesje, doma pripravljeni surovi obroki pa verjetno niso uravnoteženi, če recepta ni sestavil strokovnjak za prehrano.",
     "de": "Rohes Fleisch ist häufig mit Bakterien verunreinigt. Hunde können diese Keime ohne Anzeichen tragen und mit Speichel und Kot ausscheiden, was Familienmitglieder gefährdet, besonders Risikogruppen wie junge und alte Menschen. Rohes Schweinefleisch kann einen Parasiten übertragen, rohe Knochen können den Darm blockieren, und selbst zusammengestellte Rohfutterrationen sind wahrscheinlich nicht ausgewogen, sofern das Rezept nicht von einer Fachperson für Tierernährung erstellt wurde.",
     "fr": "La contamination de la viande crue par des bactéries est fréquente. Les chiens peuvent porter ces germes sans aucun signe et les rejeter dans leur salive et leurs selles, ce qui met en danger les membres de la famille, en particulier les personnes à risque comme les jeunes enfants et les personnes âgées. Le porc cru peut transmettre un parasite, les os crus peuvent bloquer l’intestin, et les rations crues faites maison ne sont probablement pas équilibrées si la recette n’a pas été formulée par un nutritionniste.",
-    "es": "La contaminación de la carne cruda por bacterias es frecuente. Los perros pueden llevar estos gérmenes sin mostrar signos y eliminarlos con la saliva y las heces, lo que pone en riesgo a la familia, sobre todo a los grupos de riesgo como los niños pequeños y las personas mayores. El cerdo crudo puede llevar un parásito, los huesos crudos pueden obstruir el intestino y las dietas crudas caseras probablemente no estén equilibradas, salvo que la receta la haya formulado un nutricionista.",
+    "es": "La contaminación de la carne cruda por bacterias es frecuente. Los perros pueden llevar estos gérmenes sin mostrar síntomas y eliminarlos con la saliva y las heces, lo que pone en riesgo a la familia, sobre todo a los grupos de riesgo como los niños pequeños y las personas mayores. El cerdo crudo puede llevar un parásito, los huesos crudos pueden obstruir el intestino y las dietas crudas caseras probablemente no estén equilibradas, salvo que la receta la haya formulado un nutricionista.",
     "it": "La contaminazione batterica della carne cruda è frequente. I cani possono portare questi germi senza sintomi ed eliminarli con la saliva e le feci, mettendo a rischio i familiari, soprattutto i gruppi più fragili come i più piccoli e gli anziani. Il maiale crudo può trasmettere un parassita, le ossa crude possono ostruire l’intestino e le diete crude fatte in casa probabilmente non sono bilanciate, a meno che la ricetta non sia stata formulata da un nutrizionista.",
     "pt": "A contaminação da carne crua por bactérias é comum. Os cães podem ter estes germes sem mostrar sinais e eliminá-los na saliva e nas fezes, pondo em risco a família, sobretudo os grupos de risco, como os mais novos e os mais velhos. A carne de porco crua pode ter um parasita, os ossos crus podem obstruir o intestino, e as dietas cruas caseiras provavelmente não são equilibradas, a não ser que a receita tenha sido formulada por um nutricionista.",
     "nl": "Besmetting van rauw vlees met bacteriën komt vaak voor. Honden kunnen deze bacteriën dragen zonder verschijnselen en ze uitscheiden via speeksel en ontlasting, wat gezinsleden in gevaar brengt, vooral risicogroepen zoals jonge kinderen en ouderen. Rauw varkensvlees kan een parasiet bevatten, rauwe botten kunnen de darmen verstoppen, en zelfgemaakte rauwe voeding is waarschijnlijk niet uitgebalanceerd, tenzij een voedingsdeskundige het recept heeft samengesteld.",
@@ -201,7 +201,7 @@
     "sl": "Meso delite samo popolnoma kuhano, navadno in brez kosti.",
     "de": "Fleisch nur vollständig durchgegart, ungewürzt und ohne Knochen teilen.",
     "fr": "Ne partagez de la viande que bien cuite, nature et sans os.",
-    "es": "Comparte carne solo bien cocinada, sin nada y sin huesos.",
+    "es": "Comparte carne solo bien cocinada, sin condimentar y sin huesos.",
     "it": "Dagli la carne solo ben cotta, semplice e senza ossa.",
     "pt": "Partilha carne só bem cozinhada, simples e sem ossos.",
     "nl": "Deel vlees alleen helemaal gaar, puur en zonder botten.",
@@ -411,7 +411,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "504fbecd87d73543b3e8e746af0619d005ed2cf8d6e142b43d08fd6f6f1bf44a"
+      "verified_hash": "0efc69ba12d9a83194699be5295bf0caf89d9930c2515de162944fb13df8d472"
     },
     "it": {
       "status": "verified",

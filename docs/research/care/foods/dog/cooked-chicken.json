@@ -93,7 +93,7 @@
     "sl": "Če je pes pogoltnil kuhane piščančje kosti, pokličite veterinarja za nasvet in ne poskušajte izzvati bruhanja. Takoj pokličite, če opazite dušenje, bruhanje ali znake bolečine v trebuhu.",
     "de": "Wenn Ihr Hund gekochte Hähnchenknochen verschluckt hat, fragen Sie Ihren Tierarzt um Rat und versuchen Sie nicht, Ihren Hund zum Erbrechen zu bringen. Rufen Sie sofort an, wenn Ihr Hund zu ersticken droht, erbricht oder Anzeichen von Bauchschmerzen zeigt.",
     "fr": "Si votre chien a avalé des os de poulet cuits, appelez votre vétérinaire pour obtenir des conseils et n’essayez pas de le faire vomir. Appelez immédiatement si vous remarquez un étouffement, des vomissements ou des signes de douleur au ventre.",
-    "es": "Si tu perro se ha tragado huesos de pollo cocinados, llama a tu veterinario para que te aconseje y no intentes hacerle vomitar. Llama enseguida si ves que se atraganta, vomita o tiene signos de dolor de barriga.",
+    "es": "Si tu perro se ha tragado huesos de pollo cocinados, llama a tu veterinario para que te aconseje y no intentes hacerle vomitar. Llama enseguida si ves que se atraganta, vomita o tiene síntomas de dolor de barriga.",
     "it": "Se il tuo cane ha ingoiato ossa di pollo cotte, chiama il veterinario per un consiglio e non cercare di farlo vomitare. Chiama subito se noti soffocamento, vomito o segni di mal di pancia.",
     "pt": "Se o teu cão engoliu ossos de frango cozinhados, liga ao teu veterinário para te aconselhar e não tentes fazer o teu cão vomitar. Liga imediatamente se vires engasgamento, vómitos ou sinais de dor de barriga.",
     "nl": "Heeft je hond gekookte kippenbotten ingeslikt? Bel je dierenarts voor advies en probeer je hond niet te laten braken. Bel meteen als je ziet dat hij stikt, braakt of buikpijn lijkt te hebben.",
@@ -260,7 +260,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e37a20cdf82372f69eead3ba31fa00bd8b5938a1c257f5ba478ba2b6fc8f0f30"
+      "verified_hash": "af8e6b8e3c51c79bfddbffaffe13fbd2d8e7c4dffbc9f961bd96c6598068eb1e"
     },
     "it": {
       "status": "verified",

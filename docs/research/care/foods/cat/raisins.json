@@ -139,7 +139,7 @@
     "sl": "Takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si, kaj je mačka pojedla (rozine ali hrano z njimi), koliko in kdaj, ter shranite embalažo. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was Ihre Katze gefressen hat (Rosinen oder ein Lebensmittel mit Rosinen), wie viel und wann, und heben Sie die Verpackung auf. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce que votre chat a mangé (raisins secs ou aliment en contenant), en quelle quantité et à quelle heure, et gardez l’emballage. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
-    "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Anota qué ha comido tu gato (pasas o un alimento que las lleve), cuánto y cuándo, y guarda el envase. No esperes a que aparezcan síntomas y no intentes hacer vomitar a tu gato en casa.",
+    "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué ha comido tu gato (pasas o un alimento que las lleve), cuánto y cuándo, y guarda el envase. No esperes a que aparezcan síntomas y no intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha mangiato il tuo gatto (uvetta o un cibo che la conteneva), quanto e quando, e conserva la confezione. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Toma nota do que o teu gato comeu (passas ou um alimento que as contenha), da quantidade e de quando, e guarda a embalagem. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat je kat heeft gegeten (rozijnen of iets waar ze in zitten), hoeveel en wanneer, en bewaar de verpakking. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
@@ -283,7 +283,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ca34b228bbb6c3cfdc2f4d9c3906414475854c98384e75b50f6fec83f94ca38a"
+      "verified_hash": "36411bfbaa9088b156e7c995d070d202e6f256cc4250309d645cd7010c7ca9e3"
     },
     "it": {
       "status": "verified",

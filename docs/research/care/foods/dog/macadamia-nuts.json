@@ -58,7 +58,7 @@
     "sl": "Ne. Makadamijini oreščki so za pse strupeni; psi so edina znana vrsta, ki po njih zboli. Že majhna količina lahko povzroči šibkost, bruhanje, tresenje in povišano telesno temperaturo. Zaradi velike količine maščobe lahko sprožijo tudi vnetje trebušne slinavke.",
     "de": "Nein. Macadamianüsse sind für Hunde giftig, und Hunde sind die einzige Tierart, die bekanntermaßen davon krank wird. Schon eine kleine Menge kann Schwäche, Erbrechen, Zittern und erhöhte Körpertemperatur verursachen. Ihr hoher Fettgehalt kann außerdem eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen.",
     "fr": "Non. Les noix de macadamia sont toxiques pour les chiens, la seule espèce connue pour en tomber malade. Même une petite quantité peut provoquer faiblesse, vomissements, tremblements et une température corporelle élevée. Leur forte teneur en graisses peut aussi déclencher une pancréatite.",
-    "es": "No. Las nueces de macadamia son tóxicas para los perros, y los perros son la única especie de la que se sabe que enferma con ellas. Incluso una pequeña cantidad puede causar debilidad, vómitos, temblores y una temperatura corporal alta. Su gran cantidad de grasa también puede desencadenar una pancreatitis.",
+    "es": "No. Las nueces de macadamia son tóxicas para los perros, y los perros son la única especie que se sabe que enferma por comerlas. Incluso una pequeña cantidad puede causar debilidad, vómitos, temblores y una temperatura corporal alta. Su alto contenido en grasa también puede desencadenar una pancreatitis.",
     "it": "No. Le noci di macadamia sono tossiche per i cani, e il cane è l’unica specie nota che si ammala mangiandole. Anche una piccola quantità può causare debolezza, vomito, tremori e temperatura corporea elevata. Il loro alto contenuto di grassi può anche scatenare una pancreatite.",
     "pt": "Não. As nozes de macadâmia são tóxicas para os cães, e os cães são a única espécie que se sabe que adoece com elas. Até uma pequena quantidade pode causar fraqueza, vómitos, tremores e temperatura corporal alta. O seu elevado teor de gordura também pode provocar pancreatite.",
     "nl": "Nee. Macadamianoten zijn giftig voor honden, en honden zijn de enige diersoort waarvan bekend is dat ze er ziek van worden. Zelfs een kleine hoeveelheid kan zwakte, braken, trillingen en een hoge lichaamstemperatuur veroorzaken. Door het hoge vetgehalte kunnen ze ook alvleesklierontsteking uitlokken.",
@@ -268,7 +268,7 @@
         "sl": "Strupeni so makadamijini oreščki. Drugi oreščki, kot so mandlji, pekan orehi in orehi, so zelo mastni in lahko povzročijo bruhanje, drisko in morda vnetje trebušne slinavke, zato tudi niso dober priboljšek.",
         "de": "Giftig sind die Macadamianüsse. Andere Nüsse wie Mandeln, Pekannüsse und Walnüsse sind sehr fettreich und können Erbrechen, Durchfall und möglicherweise eine Pankreatitis verursachen – ein gutes Leckerli sind sie also auch nicht.",
         "fr": "Ce sont les noix de macadamia qui sont toxiques. Les autres fruits à coque comme les amandes, les noix de pécan et les noix sont très gras et peuvent provoquer vomissements, diarrhée et parfois une pancréatite : ce ne sont pas non plus de bonnes friandises.",
-        "es": "Las tóxicas son las nueces de macadamia. Otros frutos secos, como las almendras, las pacanas y las nueces, son muy grasos y pueden causar vómitos, diarrea y posiblemente pancreatitis, así que tampoco son un buen premio.",
+        "es": "Las tóxicas son las nueces de macadamia. Otros frutos secos, como las almendras, las nueces pecanas y las nueces, son muy grasos y pueden causar vómitos, diarrea y posiblemente pancreatitis, así que tampoco son un buen premio.",
         "it": "Quelle tossiche sono le macadamia. Altra frutta a guscio, come mandorle, noci pecan e noci, è molto grassa e può causare vomito, diarrea e forse una pancreatite, quindi non è comunque un buon premio.",
         "pt": "As macadâmias são as tóxicas. Outros frutos secos, como amêndoas, nozes-pecã e nozes, são muito gordos e podem causar vómitos, diarreia e possivelmente pancreatite, por isso também não são uma boa guloseima.",
         "nl": "Macadamianoten zijn de echt giftige noten. Andere noten, zoals amandelen, pecannoten en walnoten, zijn erg vet en kunnen braken, diarree en mogelijk alvleesklierontsteking veroorzaken, dus ook die zijn geen goed snoepje.",
@@ -403,7 +403,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "bd565a02cdbdf5949586dd69f09485f38cab813bbe42ef2a61ee19420b64d348"
+      "verified_hash": "44b70ecceb44ddada358f517e5eb87cbe3a027f80fb24cf822c56e015d1ddd4c"
     },
     "it": {
       "status": "verified",

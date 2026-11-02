@@ -199,7 +199,7 @@
     "sl": "Takoj pokličite veterinarja, če je pes pojedel kuhane kosti, tudi če se zdi v redu. Zapišite si, kakšna kost je bila in približno koliko je pojedel. Ne čakajte na znake zapore.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt, wenn Ihr Hund gekochte Knochen gefressen hat, auch wenn er gesund wirkt. Notieren Sie, was für ein Knochen es war und ungefähr wie viel gefressen wurde. Warten Sie nicht auf Anzeichen eines Darmverschlusses.",
     "fr": "Contactez immédiatement votre vétérinaire si votre chien a mangé des os cuits, même s’il semble aller bien. Notez de quel type d’os il s’agissait et en quelle quantité approximative. N’attendez pas les signes d’une obstruction.",
-    "es": "Contacta enseguida con tu veterinario si tu perro se ha comido huesos cocinados, aunque parezca estar bien. Apunta qué tipo de hueso era y más o menos cuánto ha comido. No esperes a que aparezcan signos de obstrucción.",
+    "es": "Contacta enseguida con tu veterinario si tu perro se ha comido huesos cocinados, aunque parezca estar bien. Apunta qué tipo de hueso era y más o menos cuánto ha comido. No esperes a que aparezcan síntomas de obstrucción.",
     "it": "Contatta subito il veterinario se il tuo cane ha mangiato ossa cotte, anche se sembra stare bene. Annota che tipo di osso era e più o meno quanto ne ha mangiato. Non aspettare i segni di un’ostruzione.",
     "pt": "Contacta imediatamente o teu veterinário se o teu cão comeu ossos cozinhados, mesmo que pareça estar bem. Anota que tipo de osso era e mais ou menos quanto comeu. Não esperes por sinais de obstrução.",
     "nl": "Neem meteen contact op met je dierenarts als je hond gekookte botten heeft gegeten, ook als hij in orde lijkt. Schrijf op wat voor bot het was en ongeveer hoeveel er is gegeten. Wacht niet op tekenen van een verstopping.",
@@ -404,7 +404,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f04a9cbc15c3917acb2a5e711eb74bbc69a4c8e37299c75a6c6fbe36e5863bc6"
+      "verified_hash": "f246deb7dc69a1506aae42adc6ab52a8e04ef54585e918fab93d461bd4d1f1e2"
     },
     "it": {
       "status": "verified",

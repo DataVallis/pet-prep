@@ -116,7 +116,7 @@
       "Vómitos y diarrea",
       "Come menos de lo habitual",
       "Malestar de barriga, incluso con poca cantidad",
-      "Signos de anemia (glóbulos rojos dañados), normalmente unos días después"
+      "Síntomas de anemia (glóbulos rojos dañados), normalmente unos días después"
     ],
     "it": [
       "Vomito e diarrea",
@@ -392,7 +392,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "02dafabe754044b3d5789a59187885be75034ef4a8192840bd24478519f4c3cd"
+      "verified_hash": "862cf27ed91893c76610bd1aeee8ce2a236d8910b2e17729ff70104a76b79d24"
     },
     "it": {
       "status": "verified",

@@ -110,7 +110,7 @@
     "sl": "V konzervi v vodi, nesoljene in nezačinjene; ali sveže, popolnoma kuhane (na pari, pečene ali poširane) in brez dodatkov; zmerno.",
     "de": "Aus der Dose in Wasser, ungesalzen und ungewürzt; oder frische Sardinen, vollständig durchgegart (gedämpft, im Ofen gegart oder pochiert) und pur; in Maßen.",
     "fr": "En conserve au naturel (à l’eau), sans sel ni assaisonnement ; ou des sardines fraîches bien cuites (à la vapeur, au four ou pochées) et nature ; avec modération.",
-    "es": "En lata al natural (en agua), sin sal y sin condimentos; o sardinas frescas bien cocinadas (al vapor, al horno o escalfadas) y sin nada; con moderación.",
+    "es": "En lata al natural (en agua), sin sal y sin condimentos; o sardinas frescas bien cocinadas (al vapor, al horno o escalfadas) y sin condimentos; con moderación.",
     "it": "In scatola, in acqua, senza sale e senza condimenti; oppure sardine fresche ben cotte (al vapore, al forno o lessate) e semplici; con moderazione.",
     "pt": "Em lata, em água, sem sal e sem temperos; ou sardinhas frescas bem cozinhadas (a vapor, no forno ou escalfadas) e simples; com moderação.",
     "nl": "Uit blik in water, ongezouten en ongekruid; of verse sardines, helemaal gaar (gestoomd, uit de oven of gepocheerd) en puur; met mate.",
@@ -250,7 +250,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "8c5aea189f45432835a89aeeb938f0ff2577ec6501c2af86ff1a46ff9843b579"
+      "verified_hash": "1b3ede01e590b05b4b5c9582f2dc1da6d05aacee83c4ef9f83689d382c766d33"
     },
     "it": {
       "status": "verified",

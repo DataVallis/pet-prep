@@ -121,7 +121,7 @@
       "Debilidad y cansancio",
       "Andar tambaleante, falta de coordinación",
       "Convulsiones",
-      "Los signos de azúcar bajo en sangre pueden empezar en menos de 30 minutos"
+      "Los síntomas de azúcar bajo en sangre pueden empezar en menos de 30 minutos"
     ],
     "it": [
       "Vomito",
@@ -403,7 +403,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "1e9b732046c34707983b3e177eb56466c34db706e07fa43b86124ab4df822bd9"
+      "verified_hash": "541cb28fdcdb87399209f2795e89204f347140f18d15a2ca83f71295ff591e27"
     },
     "it": {
       "status": "verified",

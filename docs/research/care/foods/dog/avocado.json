@@ -110,7 +110,7 @@
     ],
     "es": [
       "Atragantamiento con el hueso",
-      "Signos de obstrucción tras tragarse el hueso: vómitos repetidos, no come, cansancio",
+      "Síntomas de obstrucción tras tragarse el hueso: vómitos repetidos, no come, cansancio",
       "Malestar por la mucha grasa, que puede llevar a una pancreatitis"
     ],
     "it": [
@@ -414,7 +414,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f7750c05424744249a24a9abeabeb1e5a758210153866f440580446dc2ec4920"
+      "verified_hash": "c5ec2e1c025f1df246b8723ef86c03aa939ba4bbb4765f21158541fcdab2ba6b"
     },
     "it": {
       "status": "verified",

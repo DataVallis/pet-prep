@@ -75,7 +75,7 @@
     "sl": "Sliva je navedena kot strupena za pse, ker njeni peclji, listi in semena vsebujejo cianogene glikozide. Koščico lahko pes tudi pogoltne in se mu zatakne. Nekateri veterinarji dovolijo meso slive brez koščice kot občasen priboljšek; ker je rastlina sama navedena kot strupena, uporabljamo strožjo oceno. Suhe slive imajo še več sladkorja.",
     "de": "Die Pflaumenpflanze gilt als giftig für Hunde, weil ihre Stiele, Blätter und Samen cyanogene Glykoside enthalten. Ein Kern kann außerdem verschluckt werden und stecken bleiben. Manche Tierärzte erlauben Pflaumenfruchtfleisch ohne Kern als gelegentliches Leckerli; da die Pflanze selbst als giftig gilt, wählen wir die strengere Einstufung. Trockenpflaumen enthalten noch mehr Zucker.",
     "fr": "Le prunier est répertorié comme toxique pour les chiens, car ses tiges, ses feuilles et ses graines contiennent des glycosides cyanogènes. Un noyau peut aussi être avalé et rester coincé. Certains vétérinaires autorisent la chair de prune en friandise occasionnelle, sans le noyau ; comme la plante elle-même est répertoriée comme toxique, nous retenons le classement le plus strict. Les pruneaux sont encore plus sucrés.",
-    "es": "El ciruelo figura como tóxico para los perros porque su rabito, sus hojas y sus semillas contienen glucósidos cianogénicos. Además, el perro puede tragarse un hueso y que se quede atascado. Algunos veterinarios permiten la pulpa de ciruela como premio ocasional, sin el hueso; como la propia planta figura como tóxica, aplicamos la clasificación más estricta. Las ciruelas pasas tienen todavía más azúcar.",
+    "es": "El ciruelo figura como tóxico para los perros porque su rabito, sus hojas y sus semillas contienen glucósidos cianogénicos. Además, un hueso tragado puede quedarse atascado. Algunos veterinarios permiten la pulpa de ciruela como premio ocasional, sin el hueso; como la propia planta figura como tóxica, aplicamos la clasificación más estricta. Las ciruelas pasas tienen todavía más azúcar.",
     "it": "Il susino è classificato come tossico per i cani perché piccioli, foglie e semi contengono glicosidi cianogenici. Un nocciolo può anche essere ingoiato e restare incastrato. Alcuni veterinari permettono la polpa come premio occasionale, senza nocciolo; poiché la pianta stessa è classificata come tossica, adottiamo la valutazione più prudente. Le prugne secche contengono ancora più zucchero.",
     "pt": "A ameixeira está classificada como tóxica para os cães porque os caules, as folhas e as sementes contêm glicosídeos cianogénicos. Um caroço também pode ser engolido e ficar preso. Alguns veterinários permitem a polpa de ameixa como guloseima ocasional, sem caroço; como a planta em si está classificada como tóxica, usamos a classificação mais rigorosa. As ameixas secas têm ainda mais açúcar.",
     "nl": "De pruimenplant staat te boek als giftig voor honden, omdat de stelen, bladeren en pitten cyanogene glycosiden bevatten. Een pit kan ook worden ingeslikt en vast komen te zitten. Sommige dierenartsen staan pruimenvruchtvlees zonder pit toe als af en toe een snoepje; omdat de plant zelf als giftig staat vermeld, kiezen wij de strengere beoordeling. Gedroogde pruimen bevatten nog meer suiker.",
@@ -110,7 +110,7 @@
     ],
     "es": [
       "Atragantamiento o arcadas",
-      "Signos de obstrucción: vómitos repetidos, no come, cansancio",
+      "Síntomas de obstrucción: vómitos repetidos, no come, cansancio",
       "Pupilas dilatadas, encías de color rojo ladrillo, dificultad para respirar (cianuro)"
     ],
     "it": [
@@ -338,7 +338,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "5158f5ed34633f4b326aa592bbc4e2d23d4efaa66fd8069fd4cfcd9eba1aa8cf"
+      "verified_hash": "ff64db251d0da30c02810bd5b04c85591345cc3dd70ec413e5e22b164e67ea74"
     },
     "it": {
       "status": "verified",

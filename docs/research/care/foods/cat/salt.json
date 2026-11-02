@@ -130,7 +130,7 @@
       "Menos apetito",
       "Apatía",
       "Camina tambaleándose",
-      "Sed excesiva u orina mucho",
+      "Sed excesiva y orinar mucho",
       "Temblores o convulsiones"
     ],
     "it": [
@@ -229,7 +229,7 @@
     "sl": "Takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali, če je mačka pojedla sol ali zelo slano hrano ali lizala sol za posipanje. Zapišite si, kaj je pojedla, koliko in kdaj. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, wenn Ihre Katze Salz oder ein sehr salziges Lebensmittel gefressen oder an Streusalz geleckt hat. Notieren Sie, was sie gefressen hat, wie viel und wann. Warten Sie nicht auf Anzeichen und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire si votre chat a mangé du sel ou un aliment très salé, ou s’il a léché du sel de déneigement. Notez ce qu’il a mangé, en quelle quantité et à quelle heure. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
-    "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales si tu gato ha comido sal o un alimento muy salado, o ha lamido sal gorda para el hielo. Anota qué ha comido, cuánto y cuándo. No esperes a que aparezcan síntomas y no intentes hacer vomitar a tu gato en casa.",
+    "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales si tu gato ha comido sal o un alimento muy salado, o ha lamido sal gorda para el hielo. Apunta qué ha comido, cuánto y cuándo. No esperes a que aparezcan síntomas y no intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario se il tuo gatto ha mangiato sale o un cibo molto salato o ha leccato del sale antighiaccio. Annota che cosa ha mangiato, quanto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais se o teu gato comeu sal ou um alimento muito salgado, ou lambeu sal-gema. Toma nota do que comeu, da quantidade e de quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren als je kat zout of heel zout eten heeft gegeten of aan strooizout heeft gelikt. Schrijf op wat ze heeft gegeten, hoeveel en wanneer. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
@@ -397,7 +397,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e5d071bd029c6b98481ac3e799e78add0765fa11d80434b326de6d1c4d7fd9e1"
+      "verified_hash": "dde6d629e369240f3b2e626e7874c4211643b74717f400f5f85bec348da557fb"
     },
     "it": {
       "status": "verified",

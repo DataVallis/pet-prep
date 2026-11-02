@@ -184,7 +184,7 @@
     "sl": "Če je mačka pojedla orehe, se za nasvet obrnite na veterinarja, zlasti če jih je bilo veliko ali se ne počuti dobro. Zapišite si, kaj je pojedla, koliko in kdaj.",
     "de": "Wenn Ihre Katze Walnüsse gefressen hat, lassen Sie sich von Ihrem Tierarzt beraten, besonders wenn sie viele gefressen hat oder krank wirkt. Notieren Sie, was sie gefressen hat, wie viel und wann.",
     "fr": "Si votre chat a mangé des noix, demandez conseil à votre vétérinaire, surtout s’il en a mangé beaucoup ou semble malade. Notez ce qu’il a mangé, en quelle quantité et à quelle heure.",
-    "es": "Si tu gato ha comido nueces, pide consejo a tu veterinario, sobre todo si ha comido muchas o parece encontrarse mal. Anota qué ha comido, cuánto y cuándo.",
+    "es": "Si tu gato ha comido nueces, pide consejo a tu veterinario, sobre todo si ha comido muchas o parece encontrarse mal. Apunta qué ha comido, cuánto y cuándo.",
     "it": "Se il tuo gatto ha mangiato delle noci, chiedi consiglio al veterinario, soprattutto se ne ha mangiate molte o sembra stare male. Annota che cosa ha mangiato, quanto e quando.",
     "pt": "Se o teu gato comeu nozes, contacta o teu veterinário para pedir conselho, sobretudo se comeu muitas ou parece doente. Toma nota do que comeu, da quantidade e de quando.",
     "nl": "Heeft je kat walnoten gegeten? Vraag je dierenarts om advies, zeker als ze er veel heeft gegeten of ziek lijkt. Schrijf op wat ze heeft gegeten, hoeveel en wanneer.",
@@ -299,7 +299,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e570d7bec698ec652922ba759de2fdeee35441bf145a6ab016a746feda4cf3de"
+      "verified_hash": "ac2590a6f34b670dcd88d37b8f77d7e5b57c05fd137e40461635bcb2a669a254"
     },
     "it": {
       "status": "verified",

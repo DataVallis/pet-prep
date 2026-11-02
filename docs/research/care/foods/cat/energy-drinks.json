@@ -75,7 +75,7 @@
     "sl": "Energijske in športne pijače pogosto vsebujejo veliko kofeina. Mačke so na kofein bolj občutljive kot ljudje. Tako kot čokolada tudi kava in druga živila s kofeinom vsebujejo veliko poživil, imenovanih metilksantini; kofein pospeši delo srca, povzroča nemir in draži želodec.",
     "de": "Energy- und Sportgetränke enthalten oft viel Koffein. Katzen reagieren empfindlicher auf Koffein als Menschen. Wie Schokolade enthalten Kaffee und andere koffeinhaltige Lebensmittel große Mengen anregender Stoffe, sogenannter Methylxanthine; Koffein beschleunigt den Herzschlag, macht Katzen unruhig und schlägt auf den Magen.",
     "fr": "Les boissons énergisantes et les boissons pour sportifs contiennent souvent beaucoup de caféine. Les chats sont plus sensibles à la caféine que les humains. Comme le chocolat, le café et les autres aliments contenant de la caféine renferment beaucoup de stimulants appelés méthylxanthines ; la caféine accélère le cœur, rend les chats agités et dérange l’estomac.",
-    "es": "Las bebidas energéticas y deportivas suelen contener mucha cafeína. Los gatos son más sensibles a la cafeína que las personas. Al igual que el chocolate, el café y otros alimentos con cafeína tienen niveles altos de unos estimulantes llamados metilxantinas; la cafeína acelera el corazón, pone inquietos a los gatos y les sienta mal al estómago.",
+    "es": "Las bebidas energéticas y deportivas suelen contener mucha cafeína. Los gatos son más sensibles a la cafeína que las personas. Al igual que el chocolate, el café y los demás alimentos con cafeína contienen mucha cantidad de unos estimulantes llamados metilxantinas; la cafeína acelera el corazón, pone inquietos a los gatos y les sienta mal al estómago.",
     "it": "Le bevande energetiche e quelle per sportivi contengono spesso molta caffeina. I gatti sono più sensibili alla caffeina rispetto alle persone. Come il cioccolato, anche il caffè e gli altri alimenti che contengono caffeina hanno alte concentrazioni di sostanze stimolanti chiamate metilxantine: la caffeina accelera il battito cardiaco, rende i gatti irrequieti e disturba lo stomaco.",
     "pt": "As bebidas energéticas e desportivas contêm muitas vezes muita cafeína. Os gatos são mais sensíveis à cafeína do que as pessoas. Tal como o chocolate, o café e outros alimentos com cafeína têm níveis elevados de estimulantes chamados metilxantinas; a cafeína acelera o coração, deixa os gatos agitados e faz mal ao estômago.",
     "nl": "Energie- en sportdrankjes bevatten vaak veel cafeïne. Katten zijn gevoeliger voor cafeïne dan mensen. Net als chocolade bevatten koffie en andere producten met cafeïne veel stimulerende stoffen, methylxanthinen genoemd; cafeïne laat het hart sneller kloppen, maakt katten onrustig en geeft maagklachten.",
@@ -113,10 +113,10 @@
       "Cœur rapide ou troubles du rythme cardiaque"
     ],
     "es": [
-      "Inquietud, nerviosismo, no querer quedarse tumbado",
+      "Inquietud, nerviosismo, no querer quedarse quieto",
       "Hiperactividad",
       "Malestar de estómago",
-      "Latido rápido o cambios en el ritmo del corazón"
+      "Latidos rápidos o cambios en el ritmo cardiaco"
     ],
     "it": [
       "Irrequietezza, nervosismo, non vuole stare fermo",
@@ -184,7 +184,7 @@
     "sl": "Takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si, kaj je mačka popila, koliko in kdaj. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was Ihre Katze getrunken hat, wie viel und wann. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce que votre chat a bu, en quelle quantité et à quelle heure. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
-    "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué ha bebido tu gato, cuánto y cuándo. No esperes a que aparezcan signos y no intentes provocarle el vómito en casa.",
+    "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué ha bebido tu gato, cuánto y cuándo. No esperes a que aparezcan síntomas y no intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha bevuto il tuo gatto, quanto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Toma nota do que o teu gato bebeu, da quantidade e de quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat je kat heeft gedronken, hoeveel en wanneer. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
@@ -304,7 +304,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "cc2f9a43d84a5149d2278b531673d913f7e0185ce888b33511d3c54717c626dc"
+      "verified_hash": "bd90f5bc5021da802002cddcb14728233095092d60918c42ae1647d2c3b9e4d1"
     },
     "it": {
       "status": "verified",

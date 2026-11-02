@@ -58,7 +58,7 @@
     "sl": "Da, občasno nekaj navadnih arašidov: nesoljenih, nearomatiziranih, suho praženih ali surovih, brez lupin. Soljeni, medeni ali aromatizirani arašidi niso primerni, arašidi pa so mastni, zato naj jih bo le nekaj.",
     "de": "Ja, ab und zu ein paar naturbelassene Erdnüsse: ungesalzen, ohne Aroma, trocken geröstet oder roh und ohne Schale. Gesalzene, honiggeröstete oder aromatisierte Erdnüsse sind nicht geeignet. Erdnüsse sind zudem fettreich – belassen Sie es also bei ein paar Stück.",
     "fr": "Oui, quelques cacahuètes nature de temps en temps : non salées, non aromatisées, grillées à sec ou crues, sans leur coque. Les cacahuètes salées, au miel ou aromatisées ne conviennent pas, et les cacahuètes sont grasses : limitez-vous à quelques-unes.",
-    "es": "Sí, unos pocos cacahuetes naturales de vez en cuando: sin sal, sin sabores, tostados sin aceite o crudos, y sin cáscara. Los cacahuetes salados, garrapiñados con miel o con sabores no son adecuados, y los cacahuetes son grasos, así que limítate a unos pocos.",
+    "es": "Sí, unos pocos cacahuetes naturales de vez en cuando: sin sal, sin aromatizar, tostados sin aceite o crudos, y sin cáscara. Los cacahuetes salados, tostados con miel o aromatizados no son adecuados, y los cacahuetes son grasos, así que limítate a unos pocos.",
     "it": "Sì, qualche arachide semplice ogni tanto: senza sale, senza aromi, tostata a secco o cruda e sgusciata. Le arachidi salate, tostate al miele o aromatizzate non sono adatte, e le arachidi sono grasse: dagliene solo poche.",
     "pt": "Sim, alguns amendoins simples de vez em quando: sem sal, sem sabores, torrados a seco ou crus, sem casca. Os amendoins salgados, com mel ou com sabores não são adequados, e os amendoins são gordos, por isso dá só alguns.",
     "nl": "Ja, af en toe een paar gewone pinda’s: ongezouten, zonder smaakje, droog geroosterd of rauw, en zonder dop. Gezouten, met honing geroosterde of gekruide pinda’s zijn niet geschikt, en pinda’s zijn vet, dus houd het bij een paar.",
@@ -75,7 +75,7 @@
     "sl": "Arašidi so zelo mastni, kar lahko pri preveliki količini povzroči prebavne težave in celo vnetje trebušne slinavke. Soljeni arašidi vsebujejo več natrija, kot ga pes potrebuje, aromatizirani pa druge tvegane sestavine; vlaknata lupina lahko povzroči dušenje, zlasti pri majhnih pasmah.",
     "de": "Erdnüsse sind sehr fettreich, was Verdauungsbeschwerden und sogar eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen kann, wenn ein Hund zu viel davon frisst. Gesalzene Erdnüsse liefern Natrium, das ein Hund nicht braucht, aromatisierte bringen weitere riskante Zutaten mit, und die faserige Schale kann zur Erstickungsgefahr werden, besonders bei kleinen Rassen.",
     "fr": "Les cacahuètes sont riches en graisses, ce qui peut provoquer des troubles digestifs, voire une pancréatite si un chien en mange trop. Salées, elles apportent du sodium dont le chien n’a pas besoin ; aromatisées, d’autres ingrédients à risque ; et la coque fibreuse peut provoquer un étouffement, surtout chez les petites races.",
-    "es": "Los cacahuetes tienen mucha grasa, lo que puede provocar molestias digestivas e incluso pancreatitis si el perro come demasiados. Los salados aportan un sodio que el perro no necesita, los de sabores añaden otros ingredientes con riesgo, y la cáscara fibrosa puede provocar atragantamiento, sobre todo en razas pequeñas.",
+    "es": "Los cacahuetes tienen mucha grasa, lo que puede provocar molestias digestivas e incluso pancreatitis si el perro come demasiados. Los salados aportan un sodio que el perro no necesita, los aromatizados añaden otros ingredientes con riesgo, y la cáscara fibrosa puede provocar atragantamiento, sobre todo en razas pequeñas.",
     "it": "Le arachidi sono ricche di grassi, che possono causare disturbi digestivi e perfino una pancreatite se il cane ne mangia troppe. Quelle salate aggiungono sodio di cui il cane non ha bisogno, quelle aromatizzate altri ingredienti rischiosi, e il guscio fibroso può causare soffocamento, soprattutto nelle razze piccole.",
     "pt": "Os amendoins têm muita gordura, que pode causar mal-estar digestivo e até pancreatite se o cão comer demasiados. Os amendoins salgados acrescentam sódio de que o cão não precisa, os que têm sabores acrescentam outros ingredientes arriscados, e a casca fibrosa pode causar engasgamento, sobretudo em raças pequenas.",
     "nl": "Pinda’s bevatten veel vet, wat spijsverteringsklachten en zelfs alvleesklierontsteking kan veroorzaken als een hond te veel eet. Gezouten pinda’s bevatten natrium dat een hond niet nodig heeft, pinda’s met een smaakje bevatten andere riskante ingrediënten, en vooral kleine honden kunnen stikken in de vezelige dop.",
@@ -146,7 +146,7 @@
         "sl": "So medeni arašidi v redu?",
         "de": "Sind honiggeröstete Erdnüsse in Ordnung?",
         "fr": "Les cacahuètes grillées au miel, c’est permis ?",
-        "es": "¿Se pueden dar cacahuetes con miel?",
+        "es": "¿Se pueden dar cacahuetes tostados con miel?",
         "it": "Le arachidi tostate al miele vanno bene?",
         "pt": "Os amendoins com mel são adequados?",
         "nl": "Zijn met honing geroosterde pinda’s oké?",
@@ -163,7 +163,7 @@
         "sl": "Ne. Medeni in drugi aromatizirani arašidi za pse niso varni; primerni so le navadni, nesoljeni arašidi.",
         "de": "Nein. Honiggeröstete und andere aromatisierte Erdnüsse sind für Hunde nicht sicher; geeignet sind nur naturbelassene, ungesalzene Erdnüsse.",
         "fr": "Non. Les cacahuètes grillées au miel et les autres cacahuètes aromatisées sont dangereuses pour les chiens ; seules les cacahuètes nature non salées conviennent.",
-        "es": "No. Los cacahuetes con miel y otros cacahuetes con sabores no son seguros para los perros; solo son adecuados los cacahuetes naturales sin sal.",
+        "es": "No. Los cacahuetes tostados con miel y otros aromatizados no son seguros para los perros; solo son adecuados los cacahuetes naturales sin sal.",
         "it": "No. Le arachidi tostate al miele e le altre arachidi aromatizzate non sono sicure per i cani; vanno bene solo arachidi semplici e senza sale.",
         "pt": "Não. Os amendoins com mel e outros com sabores não são seguros para os cães; só os amendoins simples, sem sal, são adequados.",
         "nl": "Nee. Met honing geroosterde pinda’s en andere pinda’s met een smaakje zijn niet veilig voor honden; alleen gewone, ongezouten pinda’s zijn geschikt.",
@@ -251,7 +251,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "1ff1819aa803a72c964b1f391638b71aa3ff7e716b5bb55dddd70345a0e277c0"
+      "verified_hash": "2332301a3658893ab15a83dd177d9a66a9f39193bca2a72c62f8c7346e835272"
     },
     "it": {
       "status": "verified",

@@ -58,7 +58,7 @@
     "sl": "Ne, raje ne. En ali dva oreha verjetno ne bosta škodovala, a orehi so mastni in pes se lahko z njimi zaduši. Veliko nevarnejši so plesnivi orehi, na primer stari, ki so odpadli na vrtu, in črni orehi.",
     "de": "Nein, besser nicht. Ein oder zwei Walnüsse schaden wahrscheinlich nicht, aber Walnüsse sind fettreich und können zum Ersticken führen. Schimmelige Walnüsse, etwa alte, die im Garten heruntergefallen sind, und Schwarznüsse sind deutlich gefährlicher.",
     "fr": "Non, mieux vaut éviter. Une ou deux noix ont peu de chances de faire du mal, mais les noix sont grasses et peuvent provoquer un étouffement. Les noix moisies, comme les vieilles noix tombées dans le jardin, et les noix noires sont bien plus dangereuses.",
-    "es": "No, es mejor no dárselas. Es poco probable que una o dos nueces le hagan daño, pero las nueces son grasas y pueden provocar atragantamiento. Las nueces enmohecidas, como las viejas caídas en el jardín, y las nueces negras son mucho más peligrosas.",
+    "es": "No, es mejor no dárselas. Es poco probable que una o dos nueces le hagan daño, pero las nueces tienen mucha grasa y pueden provocar atragantamiento. Las nueces enmohecidas, como las viejas caídas en el jardín, y las nueces negras son mucho más peligrosas.",
     "it": "No, è meglio di no. Una o due noci difficilmente fanno male, ma le noci sono grasse e possono causare soffocamento. Le noci ammuffite, come quelle vecchie cadute in giardino, e le noci nere sono molto più pericolose.",
     "pt": "Não, é melhor não. Uma ou duas nozes dificilmente fazem mal, mas as nozes são gordas e podem causar engasgamento. As nozes com bolor, como as velhas caídas no jardim, e as nozes-pretas são muito mais perigosas.",
     "nl": "Nee, liever niet. Een of twee walnoten doen waarschijnlijk geen kwaad, maar walnoten zijn vet en een hond kan erin stikken. Beschimmelde walnoten, zoals oude noten die in de tuin zijn gevallen, en zwarte walnoten zijn veel gevaarlijker.",
@@ -238,7 +238,7 @@
         "sl": "Oreščki, ki ležijo na tleh, se navlažijo in na njih zraste plesen, ki je lahko za pse strupena.",
         "de": "Nüsse, die auf dem Boden liegen, können feucht werden und schimmeln, und dieser Schimmel kann für Hunde giftig sein.",
         "fr": "Les noix restées par terre peuvent prendre l’humidité et moisir, et ces moisissures peuvent être toxiques pour les chiens.",
-        "es": "Los frutos secos que quedan en el suelo pueden humedecerse y criar moho, que puede ser tóxico para los perros.",
+        "es": "Los frutos secos que quedan en el suelo pueden humedecerse y desarrollar moho, que puede ser tóxico para los perros.",
         "it": "La frutta a guscio che resta a terra può diventare umida e fare la muffa, che può essere tossica per i cani.",
         "pt": "Os frutos secos caídos no chão podem ficar húmidos e ganhar bolor, que pode ser tóxico para os cães.",
         "nl": "Noten die op de grond liggen, kunnen vochtig worden en gaan schimmelen, en die schimmel kan giftig zijn voor honden.",
@@ -274,7 +274,7 @@
         "sl": "Črni orehi so za pse zelo strupeni. Če pes poje enega, takoj pokličite veterinarja.",
         "de": "Schwarznüsse sind für Hunde sehr giftig. Wenden Sie sich sofort an Ihren Tierarzt, wenn Ihr Hund eine frisst.",
         "fr": "Les noix noires sont très toxiques pour les chiens. Contactez immédiatement votre vétérinaire si votre chien en mange une.",
-        "es": "Las nueces negras son muy tóxicas para los perros. Contacta de inmediato con tu veterinario si tu perro se come una.",
+        "es": "Las nueces negras son muy tóxicas para los perros. Contacta enseguida con tu veterinario si tu perro se come una.",
         "it": "Le noci nere sono molto tossiche per i cani. Contatta subito il veterinario se il tuo cane ne mangia una.",
         "pt": "As nozes-pretas são muito tóxicas para os cães. Contacta imediatamente o teu veterinário se o teu cão comer uma.",
         "nl": "Zwarte walnoten zijn erg giftig voor honden. Neem meteen contact op met je dierenarts als je hond er een eet.",
@@ -369,7 +369,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "a3b7166eac8cbbe797e1f0a80be0d023f670a1147630ee8ed8bdec7f88ddfc3e"
+      "verified_hash": "d33f3186d9c23fd4a79897c942b77599f42c1429a19cded13aee4300cac3889b"
     },
     "it": {
       "status": "verified",

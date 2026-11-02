@@ -229,7 +229,7 @@
     "sl": "Takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali, tudi če se mačka zdi v redu, saj se znaki slabokrvnosti lahko pokažejo šele po nekaj dneh. Zapišite si, kaj je pojedla (surov por, kuhan, v prahu ali jed s porom), koliko in kdaj. Mački ne poskušajte sami izzvati bruhanja.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, auch wenn Ihre Katze gesund wirkt – Anzeichen einer Blutarmut können erst nach mehreren Tagen auftreten. Notieren Sie, was Ihre Katze gefressen hat (roh, gekocht, als Pulver oder in einem Gericht), wie viel und wann. Versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, même si votre chat semble aller bien – les signes d’anémie peuvent mettre plusieurs jours à apparaître. Notez ce qu’il a mangé (cru, cuit, en poudre ou dans un plat), en quelle quantité et à quelle heure. N’essayez pas de faire vomir votre chat vous-même.",
-    "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales, aunque tu gato parezca estar bien: los signos de anemia pueden tardar varios días en aparecer. Apunta qué ha comido tu gato (crudo, cocinado, en polvo o un plato que lo lleve), cuánto y cuándo. No intentes provocarle el vómito en casa.",
+    "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales, aunque tu gato parezca estar bien: los síntomas de anemia pueden tardar varios días en aparecer. Apunta qué ha comido tu gato (crudo, cocinado, en polvo o un plato que lo lleve), cuánto y cuándo. No intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario, anche se il tuo gatto sembra stare bene: i sintomi dell’anemia possono impiegare diversi giorni a manifestarsi. Annota che cosa ha mangiato (crudo, cotto, in polvere o in un piatto che lo conteneva), quanto e quando. Non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, mesmo que o teu gato pareça bem – os sinais de anemia podem demorar vários dias a aparecer. Toma nota do que o teu gato comeu (cru, cozinhado, em pó ou num prato que o continha), da quantidade e de quando. Não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als je kat er gezond uitziet – verschijnselen van bloedarmoede kunnen een paar dagen op zich laten wachten. Schrijf op wat je kat heeft gegeten (rauw, gekookt, als poeder of in een gerecht), hoeveel en wanneer. Probeer je kat niet zelf thuis te laten braken.",
@@ -283,7 +283,7 @@
         "sl": "Ne. Za mačke so strupene vse oblike, tudi surov, kuhan in sušen por. Bodite previdni pri ostankih hrane, omakah, juhah in mesnih sokovih, ki ga lahko vsebujejo.",
         "de": "Nein. Alle Formen sind für Katzen giftig, auch roher, gekochter und getrockneter Lauch. Vorsicht bei Essensresten, Soßen, Suppen und Bratensoße, die Lauch enthalten können.",
         "fr": "Non. Le poireau est toxique pour les chats sous toutes ses formes, y compris cru, cuit et séché. Faites attention aux restes, aux sauces, aux soupes et aux jus de viande qui peuvent en contenir.",
-        "es": "No. Todas las formas son venenosas para los gatos, también el puerro crudo, cocinado y seco. Ten cuidado con las sobras, las salsas, las sopas y los jugos de asado que puedan llevarlo.",
+        "es": "No. Todas las formas son venenosas para los gatos, también el puerro crudo, cocinado y seco. Ten cuidado con las sobras, las salsas, las sopas y las salsas de carne que puedan llevarlo.",
         "it": "No. Tutte le forme sono velenose per i gatti, compreso il porro crudo, cotto ed essiccato. Fai attenzione ad avanzi, salse, zuppe e sughi che potrebbero contenerlo.",
         "pt": "Não. Todas as formas são venenosas para gatos, incluindo o alho-francês cru, cozinhado e seco. Tem cuidado com restos de comida, molhos, sopas e molho de assado que o possam conter.",
         "nl": "Nee. Alle vormen zijn giftig voor katten, ook rauwe, gekookte en gedroogde prei. Wees voorzichtig met restjes, sauzen, soepen en jus waar het in kan zitten.",
@@ -417,7 +417,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "daf14c82ad6a8807f8df339536c471e34f9da38d8c07ff8616a416b568326eb5"
+      "verified_hash": "7a764b11bd7f7e6fac9dc796271587533555db14114c8ec4df82424ae323a685"
     },
     "it": {
       "status": "verified",

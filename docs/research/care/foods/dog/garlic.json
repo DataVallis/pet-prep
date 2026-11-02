@@ -116,7 +116,7 @@
       "Vómitos y diarrea",
       "Come menos de lo habitual",
       "Malestar de barriga, incluso con poca cantidad",
-      "Signos de anemia (glóbulos rojos dañados), normalmente unos días después"
+      "Síntomas de anemia (glóbulos rojos dañados), normalmente unos días después"
     ],
     "it": [
       "Vomito e diarrea",
@@ -238,7 +238,7 @@
         "sl": "Da. Po opisih je česen za pse približno 3- do 5-krat strupenejši od čebule.",
         "de": "Ja. Knoblauch gilt für Hunde als etwa 3- bis 5-mal giftiger als Zwiebeln.",
         "fr": "Oui. L’ail est décrit comme environ 3 à 5 fois plus toxique que l’oignon pour les chiens.",
-        "es": "Sí. Se describe que el ajo es entre 3 y 5 veces más tóxico para los perros que la cebolla.",
+        "es": "Sí. Según las fuentes, el ajo es entre 3 y 5 veces más tóxico para los perros que la cebolla.",
         "it": "Sì. L’aglio è descritto come circa da 3 a 5 volte più tossico della cipolla per i cani.",
         "pt": "Sim. O alho é descrito como cerca de 3–5 vezes mais tóxico para os cães do que a cebola.",
         "nl": "Ja. Knoflook wordt beschreven als ongeveer 3 tot 5 keer giftiger voor honden dan ui.",
@@ -310,7 +310,7 @@
         "sl": "Znaki se lahko pojavijo v 24 urah, pogosteje pa šele čez nekaj dni; znaki slabokrvnosti se običajno razvijejo nekaj dni po zaužitju.",
         "de": "Beschwerden können innerhalb von 24 Stunden beginnen, treten aber häufiger erst nach einigen Tagen auf; Anzeichen einer Blutarmut entwickeln sich typischerweise mehrere Tage nach dem Fressen.",
         "fr": "Les signes peuvent commencer dans les 24 heures, mais mettent plus souvent quelques jours à apparaître ; les signes d’anémie se développent généralement plusieurs jours après l’ingestion.",
-        "es": "Los síntomas pueden empezar en las primeras 24 horas, pero lo más habitual es que tarden unos días; los signos de anemia suelen aparecer varios días después de comerlo.",
+        "es": "Los síntomas pueden empezar en las primeras 24 horas, pero lo más habitual es que tarden unos días; los síntomas de anemia suelen aparecer varios días después de comerlo.",
         "it": "I sintomi possono comparire entro 24 ore, ma più spesso servono alcuni giorni; i segni di anemia di solito si sviluppano diversi giorni dopo l’ingestione.",
         "pt": "Os sintomas podem começar nas primeiras 24 horas, mas é mais frequente demorarem alguns dias a aparecer; os sinais de anemia costumam surgir vários dias depois de o cão comer.",
         "nl": "Verschijnselen kunnen binnen 24 uur beginnen, maar komen vaker pas na een paar dagen; tekenen van bloedarmoede ontstaan meestal enkele dagen na het eten.",
@@ -437,7 +437,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "5cbbfcc6d910137b4cd0e6042b8c69a521cfbc207cbcfafe607524d662bcb236"
+      "verified_hash": "65308a66ee0aeacfb4b23a794637be386c1d588c44c6541fd6258e0adbe55d54"
     },
     "it": {
       "status": "verified",

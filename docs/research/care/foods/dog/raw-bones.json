@@ -75,7 +75,7 @@
     "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. FDA navaja zapore, dušenje in poškodbe ust po kosteh ter svetuje posvet z veterinarjem o varnejših stvareh za žvečenje. AKC opozarja, da lahko surove kosti vsebujejo salmonelo in da pretrde kosti lahko poškodujejo zobe. Kosti lahko poškodujejo ali zamašijo prebavila, zapore pa so zelo resne.",
     "de": "Die Quellen unterscheiden sich, deshalb verwenden wir die strengere Stufe. Die FDA nennt Blockaden, Ersticken und Verletzungen im Maul durch Knochen und rät, den Tierarzt nach sichereren Kauartikeln zu fragen. Laut AKC können rohe Knochen Salmonellen enthalten, und sehr harte Knochen können die Zähne beschädigen. Knochen können den Magen-Darm-Trakt verletzen oder blockieren, und Blockaden sind sehr ernst.",
     "fr": "Les sources divergent ; nous retenons donc le niveau le plus strict. La FDA signale des obstructions, des étouffements et des blessures dans la bouche après des os et conseille de demander à votre vétérinaire des objets à mâcher plus sûrs. L’AKC indique que les os crus peuvent contenir des salmonelles et que les os très durs peuvent abîmer les dents. Les os peuvent blesser ou bloquer l’intestin, et les obstructions sont très graves.",
-    "es": "Las fuentes difieren, así que aplicamos el nivel más estricto. La FDA enumera obstrucciones, atragantamientos y heridas en la boca tras comer huesos y aconseja preguntar al veterinario por mordedores más seguros. El AKC señala que los huesos crudos pueden llevar Salmonella y que los huesos muy duros pueden dañar los dientes. Los huesos pueden herir u obstruir el intestino, y las obstrucciones son muy graves.",
+    "es": "Las fuentes no coinciden, así que aplicamos el nivel más estricto. La FDA enumera obstrucciones, atragantamientos y heridas en la boca tras comer huesos y aconseja preguntar al veterinario por alternativas masticables más seguras. El AKC señala que los huesos crudos pueden llevar Salmonella y que los huesos muy duros pueden dañar los dientes. Los huesos pueden herir u obstruir el intestino, y las obstrucciones son muy graves.",
     "it": "Le fonti non concordano, quindi adottiamo il livello più prudente. La FDA segnala ostruzioni, soffocamento e lesioni alla bocca dopo l’ingestione di ossa e consiglia di chiedere al veterinario alternative da masticare più sicure. L’AKC osserva che le ossa crude possono portare Salmonella e che quelle molto dure possono danneggiare i denti. Le ossa possono ferire od ostruire l’intestino, e le ostruzioni sono molto gravi.",
     "pt": "As fontes divergem, por isso usamos o nível mais rigoroso. A FDA refere obstruções, engasgamento e lesões na boca depois de ossos e aconselha a perguntar ao veterinário por alternativas mais seguras para roer. O AKC refere que os ossos crus podem ter Salmonella e que os ossos muito duros podem danificar os dentes. Os ossos podem ferir ou obstruir o intestino, e as obstruções são muito graves.",
     "nl": "De bronnen verschillen, dus kiezen we het strengere niveau. De FDA noemt verstoppingen, verstikking en verwondingen in de bek na het eten van botten en raadt aan je dierenarts te vragen naar veiligere kauwartikelen. De AKC wijst erop dat rauwe botten salmonella kunnen bevatten en dat heel harde botten de tanden kunnen beschadigen. Botten kunnen de darmen verwonden of verstoppen, en verstoppingen zijn heel ernstig.",
@@ -199,7 +199,7 @@
     "sl": "Če je pes pogoltnil velik kos kosti ali kaže katerega od teh znakov, takoj pokličite veterinarja. Zapišite si, kakšna in kako velika je bila kost.",
     "de": "Wenn Ihr Hund ein großes Stück Knochen verschluckt hat oder eines dieser Anzeichen zeigt, wenden Sie sich sofort an Ihren Tierarzt. Notieren Sie Art und Größe des Knochens.",
     "fr": "Si votre chien a avalé un gros morceau d’os, ou s’il présente l’un de ces signes, contactez immédiatement votre vétérinaire. Notez le type et la taille de l’os.",
-    "es": "Si tu perro se ha tragado un trozo grande de hueso o muestra cualquiera de estos signos, contacta enseguida con tu veterinario. Apunta el tipo y el tamaño del hueso.",
+    "es": "Si tu perro se ha tragado un trozo grande de hueso o muestra cualquiera de estos síntomas, contacta enseguida con tu veterinario. Apunta el tipo y el tamaño del hueso.",
     "it": "Se il tuo cane ha ingoiato un grosso pezzo d’osso o mostra uno di questi sintomi, contatta subito il veterinario. Annota il tipo e la dimensione dell’osso.",
     "pt": "Se o teu cão engoliu um pedaço grande de osso, ou mostrar algum destes sinais, contacta imediatamente o teu veterinário. Anota o tipo e o tamanho do osso.",
     "nl": "Heeft je hond een groot stuk bot ingeslikt, of heeft hij een van deze verschijnselen? Neem dan meteen contact op met je dierenarts. Schrijf op wat voor bot het was en hoe groot.",
@@ -305,7 +305,7 @@
         "sl": "Kost naj bo večja od dolžine pasjega gobca, da je pes ne more pogoltniti cele, med glodanjem pa psa nadzorujte.",
         "de": "Ein Knochen sollte länger sein als die Schnauze des Hundes, damit er nicht im Ganzen verschluckt werden kann, und Sie sollten immer wieder nach Ihrem Hund sehen, während er kaut.",
         "fr": "Un os doit être plus grand que la longueur du museau du chien pour qu’il ne puisse pas l’avaler entier ; surveillez votre chien pendant qu’il le mâche.",
-        "es": "El hueso debe ser más grande que la longitud del hocico del perro para que no pueda tragárselo entero, y conviene echarle un ojo a tu perro mientras lo roe.",
+        "es": "El hueso debe ser más grande que la longitud del hocico del perro para que no pueda tragárselo entero, y conviene vigilar a tu perro mientras lo roe.",
         "it": "L’osso deve essere più grande della lunghezza del muso del cane, così non può ingoiarlo intero, e devi controllare il cane mentre mastica.",
         "pt": "O osso deve ser maior do que o comprimento do focinho do cão, para que não o consiga engolir inteiro, e deves vigiar o teu cão enquanto rói.",
         "nl": "Een bot moet groter zijn dan de lengte van de snuit van de hond, zodat hij het niet heel kan doorslikken, en je moet regelmatig bij je hond kijken terwijl hij kauwt.",
@@ -436,7 +436,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f1c13e1e8252c83429292888ccb99ba5a02c9b0e1b661904e180a4c19c04adb1"
+      "verified_hash": "36a30e0bef8a70469b0b9e7e935a71b0dbf491e8ce036e9904cf5e2f232b9742"
     },
     "it": {
       "status": "verified",

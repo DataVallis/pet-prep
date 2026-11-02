@@ -169,7 +169,7 @@
     "sl": "Če je mačka pojedla makadamije, takoj pokličite veterinarja. Zapišite si, koliko jih je pojedla in kdaj, ter shranite embalažo. Mački ne poskušajte sami izzvati bruhanja.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt, wenn Ihre Katze Macadamianüsse gefressen hat. Notieren Sie, wie viele sie gefressen hat und wann, und bewahren Sie die Verpackung auf. Versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire si votre chat a mangé des noix de macadamia. Notez combien il en a mangé et à quelle heure, et gardez l’emballage. N’essayez pas de faire vomir votre chat vous-même.",
-    "es": "Ponte en contacto con tu veterinario de inmediato si tu gato ha comido nueces de macadamia. Apunta cuántas ha comido y cuándo, y guarda el envase. No intentes provocarle el vómito en casa.",
+    "es": "Ponte en contacto con tu veterinario enseguida si tu gato ha comido nueces de macadamia. Apunta cuántas ha comido y cuándo, y guarda el envase. No intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario se il tuo gatto ha mangiato noci di macadamia. Annota quante ne ha mangiate e quando, e conserva la confezione. Non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário se o teu gato comeu nozes de macadâmia. Toma nota de quantas comeu e de quando, e guarda a embalagem. Não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts als je kat macadamianoten heeft gegeten. Schrijf op hoeveel ze er heeft gegeten en wanneer, en bewaar de verpakking. Probeer je kat niet zelf thuis te laten braken.",
@@ -302,7 +302,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "af6d288663c91ce86941b39789d2a38c1b7e3e31206732389fc03a1a2f8dbdc9"
+      "verified_hash": "053f883459b68c06ccfdd35b12b2196cb176f22670723e0f467a28cd8d740ed8"
     },
     "it": {
       "status": "verified",

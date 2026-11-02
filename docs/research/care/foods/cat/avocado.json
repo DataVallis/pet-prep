@@ -75,7 +75,7 @@
     "sl": "Viri se razlikujejo. Cats Protection avokado uvršča med živila, strupena za mačke, zaradi velike vsebnosti maščob in persina, težave pa omenja pri večjih količinah. ASPCA ga v svoji bazi rastlin navaja kot strupenega le za konje in pravi, da je težava predvsem za ptice, kunce, konje in prežvekovalce. Držimo se strožjega stališča in ga ne priporočamo.",
     "de": "Die Quellen sind sich nicht einig. Cats Protection zählt Avocado wegen des hohen Fettgehalts und des Persins zu den für Katzen giftigen Lebensmitteln, mit Problemen bei größeren Mengen. Die Pflanzendatenbank der ASPCA stuft Avocado nur für Pferde als giftig ein und bezeichnet sie vor allem als Problem für Vögel, Kaninchen, Pferde und Wiederkäuer. Wir folgen der strengeren Einschätzung und raten davon ab.",
     "fr": "Les sources divergent. Cats Protection classe l’avocat parmi les aliments toxiques pour les chats, en raison de sa teneur élevée en graisses et de la persine, avec des problèmes en cas de grandes quantités. La base de données des plantes de l’ASPCA ne le classe comme toxique que pour les chevaux et indique qu’il pose surtout problème aux oiseaux, aux lapins, aux chevaux et aux ruminants. Nous retenons l’avis le plus prudent et le déconseillons.",
-    "es": "Las fuentes no coinciden. Cats Protection incluye el aguacate entre los alimentos tóxicos para los gatos por su alto contenido en grasa y por la persina, con problemas cuando se come en grandes cantidades. La base de datos de plantas de la ASPCA clasifica el aguacate como tóxico solo para los caballos y dice que es un problema sobre todo para las aves, los conejos, los caballos y los rumiantes. Seguimos el criterio más estricto y no lo recomendamos.",
+    "es": "Las fuentes no coinciden. Cats Protection incluye el aguacate entre los alimentos tóxicos para los gatos por su alto contenido en grasa y por la persina, con problemas cuando se come en grandes cantidades. La base de datos de plantas de la ASPCA clasifica el aguacate como tóxico solo para los caballos y dice que es un problema sobre todo para las aves, los conejos, los caballos y los rumiantes. Aplicamos el nivel más estricto y no lo recomendamos.",
     "it": "Le fonti non sono concordi. Cats Protection inserisce l’avocado tra gli alimenti tossici per i gatti per via dell’elevato contenuto di grassi e della persina, con problemi quando se ne mangiano grandi quantità. Il database delle piante dell’ASPCA lo indica come tossico solo per i cavalli e spiega che è un problema soprattutto per uccelli, conigli, cavalli e ruminanti. Adottiamo la posizione più prudente e lo sconsigliamo.",
     "pt": "As fontes não estão de acordo. A Cats Protection inclui o abacate entre os alimentos tóxicos para gatos por causa do elevado teor de gordura e da persina, com problemas quando é comido em grande quantidade. A base de dados de plantas da ASPCA indica o abacate como tóxico apenas para cavalos e diz que é sobretudo um problema para aves, coelhos, cavalos e ruminantes. Seguimos a posição mais rigorosa e não o recomendamos.",
     "nl": "De bronnen zijn het niet met elkaar eens. Cats Protection noemt avocado bij de voedingsmiddelen die giftig zijn voor katten, vanwege het hoge vetgehalte en persine, met problemen als er veel van wordt gegeten. De plantendatabase van de ASPCA noemt avocado alleen giftig voor paarden en zegt dat het vooral een probleem is voor vogels, konijnen, paarden en herkauwers. Wij volgen de strengste lijn en raden het af.",
@@ -101,7 +101,7 @@
       "Tout signe de malaise après en avoir mangé beaucoup (nos sources ne citent pas de signes précis chez le chat)"
     ],
     "es": [
-      "Cualquier signo de malestar después de comer mucho (nuestras fuentes no indican signos concretos en los gatos)"
+      "Cualquier síntoma de malestar después de comer mucho (nuestras fuentes no indican síntomas concretos en los gatos)"
     ],
     "it": [
       "Qualsiasi segno di malessere dopo averne mangiato molto (le nostre fonti non indicano sintomi specifici nei gatti)"
@@ -263,7 +263,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0e45dad600ee28e2b332288f66b09407fca99cd8a8f4cce0902f8dc9ec245adc"
+      "verified_hash": "aa390c54f45dde96c97cc4737e355802a70da8e759c07e73d69606ac48bc9fd7"
     },
     "it": {
       "status": "verified",

@@ -58,7 +58,7 @@
     "sl": "Ne. Surovo kvašeno testo je za mačke nevarno na dva načina: v želodcu lahko še naprej narašča in povzroči zaporo, kvas pa tvori alkohol, ki je za mačke strupen. Vzhajajoče testo naj bo zunaj mačjega dosega, veterinarja pa pokličite, če ga mačka poje.",
     "de": "Nein. Roher Hefeteig ist für Katzen auf zwei Arten gefährlich: Er kann im Magen weiter aufgehen und eine Blockade verursachen, und die Hefe bildet Alkohol, der für Katzen giftig ist. Stellen Sie aufgehenden Teig außer Reichweite und rufen Sie Ihren Tierarzt an, wenn Ihre Katze davon frisst.",
     "fr": "Non. La pâte crue à la levure est doublement dangereuse pour les chats : elle peut continuer à gonfler dans l’estomac et provoquer une occlusion, et la levure produit de l’alcool, toxique pour les chats. Gardez la pâte qui lève hors de portée et appelez votre vétérinaire si votre chat en mange.",
-    "es": "No. La masa cruda con levadura es peligrosa para los gatos por dos motivos: puede seguir creciendo en el estómago y causar una obstrucción, y la levadura produce alcohol, que es tóxico para los gatos. Mantén la masa que está subiendo fuera de su alcance y llama a tu veterinario si tu gato se come un poco.",
+    "es": "No. La masa cruda con levadura es peligrosa para los gatos por dos motivos: puede seguir creciendo en el estómago y causar una obstrucción, y la levadura produce alcohol, que es tóxico para los gatos. Mantén la masa que está subiendo fuera de su alcance y llama a tu veterinario si tu gato come algo.",
     "it": "No. L’impasto crudo con lievito è pericoloso per i gatti in due modi: può continuare a gonfiarsi nello stomaco e causare un’ostruzione, e il lievito produce alcol, che è tossico per i gatti. Tieni l’impasto in lievitazione fuori dalla portata del tuo gatto e chiama il veterinario se ne mangia.",
     "pt": "Não. A massa crua com fermento é perigosa para os gatos de duas formas: pode continuar a crescer no estômago e causar uma obstrução, e o fermento produz álcool, que é tóxico para os gatos. Guarda a massa a levedar fora do alcance e liga ao teu veterinário se o teu gato comer alguma.",
     "nl": "Nee. Rauw gistdeeg is op twee manieren gevaarlijk voor katten: het kan in de maag blijven uitzetten en een verstopping veroorzaken, en de gist maakt alcohol aan, die giftig is voor katten. Houd rijzend deeg buiten bereik en bel je dierenarts als je kat er iets van eet.",
@@ -184,7 +184,7 @@
     "sl": "Takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si, koliko testa je mačka pojedla in kdaj. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, wie viel Teig Ihre Katze gefressen hat und wann. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez la quantité de pâte mangée et l’heure. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
-    "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Anota cuánta masa ha comido tu gato y cuándo. No esperes a que aparezcan síntomas y no intentes hacer vomitar a tu gato en casa.",
+    "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta cuánta masa ha comido tu gato y cuándo. No esperes a que aparezcan síntomas y no intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota quanto impasto ha mangiato il tuo gatto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Toma nota de quanta massa o teu gato comeu e de quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op hoeveel deeg je kat heeft gegeten en wanneer. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
@@ -340,7 +340,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2d8f0bf4f239954850fe4aa817053c87f3d541ab070973230e7bf0c95818c871"
+      "verified_hash": "89a2e99354416648d6a97cf775ba916f82a5bcd6ffb0b76346ddfe760d97c486"
     },
     "it": {
       "status": "verified",

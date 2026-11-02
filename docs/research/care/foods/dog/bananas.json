@@ -110,7 +110,7 @@
     "sl": "Olupljeno banano narežite na grižljaju primerne koščke, jo pretlačite v hrano ali zamrznite; kot občasen priboljšek.",
     "de": "Geschält, in mundgerechten Stücken, zerdrückt unter das Futter gemischt oder gefroren; als gelegentliches Leckerli.",
     "fr": "Épluchée, en petites bouchées, écrasée dans la gamelle ou congelée ; comme friandise occasionnelle.",
-    "es": "Pelado, en trocitos, aplastado y mezclado con su comida, o congelado; como premio ocasional.",
+    "es": "Pelado, en trocitos, machacado y mezclado con su comida, o congelado; como premio ocasional.",
     "it": "Sbucciata, a bocconcini, schiacciata nel cibo o congelata; come premio occasionale.",
     "pt": "Descascada, em pedacinhos, esmagada na comida ou congelada; como guloseima ocasional.",
     "nl": "Geschild, in hapklare stukjes, geprakt door het eten of bevroren; als snoepje voor af en toe.",
@@ -253,7 +253,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "5aa04643dc75c47838080092049f1647e58267aed95878fc35e05296cbf1422c"
+      "verified_hash": "f8eb3275622edc38f6b848e2aebba9710e8c07ef460eacc7b016de7fcf9965c6"
     },
     "it": {
       "status": "verified",

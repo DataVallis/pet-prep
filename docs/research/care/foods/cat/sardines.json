@@ -127,7 +127,7 @@
     "sl": "Sardine so lahko občasno majhen ribji priboljšek za muce. Odrasel naj preveri, da ni kosti.",
     "de": "Sardinen können ab und zu ein kleines Fisch-Leckerli für Katzen sein. Ein Erwachsener sollte nach Gräten schauen.",
     "fr": "Les sardines peuvent parfois être une petite friandise au goût de poisson pour les chats. Un adulte doit vérifier qu’il n’y a pas d’arêtes.",
-    "es": "Las sardinas pueden ser, alguna vez, un pequeño premio con sabor a pescado para los gatos. Un adulto debe revisar que no tengan espinas.",
+    "es": "De vez en cuando, las sardinas pueden ser un pequeño premio de pescado para los gatos. Un adulto debe revisar que no tengan espinas.",
     "it": "Ogni tanto le sardine possono essere un piccolo premio al gusto di pesce per i gatti. Un adulto deve controllare che non ci siano lische.",
     "pt": "As sardinhas podem ser, de vez em quando, uma pequena guloseima de peixe para os gatos. Um adulto deve ver se há espinhas.",
     "nl": "Sardines kunnen soms een lekker visje zijn voor katten. Een volwassene moet eerst controleren of er geen graten in zitten.",
@@ -189,7 +189,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "72298013e7838957811b7c3b803ac5ada690a6628daa6725daa868f5c69f5d70"
+      "verified_hash": "aa3c8c8043b5c033a844ddac7464c32f044505a27e48a647014d8c9ce79e1071"
     },
     "it": {
       "status": "verified",

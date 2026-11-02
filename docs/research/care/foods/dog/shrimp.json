@@ -58,7 +58,7 @@
     "sl": "Da, nekaj koščkov navadnih, popolnoma kuhanih kozic je za pse v redu. Najprej odstranite oklep, glavo, nožice in rep. Surove kozice lahko vsebujejo škodljive klice, ocvrte, panirane ali začinjene kozice pa niso primerne.",
     "de": "Ja, ein paar Stücke vollständig gegarter, ungewürzter Garnelen sind für Hunde in Ordnung. Entfernen Sie vorher Schale, Kopf, Beine und Schwanz. Rohe Garnelen können schädliche Keime enthalten, und frittierte, panierte oder gewürzte Garnelen sind nicht geeignet.",
     "fr": "Oui, quelques morceaux de crevettes nature et bien cuites conviennent aux chiens. Retirez d’abord la carapace, la tête, les pattes et la queue. Les crevettes crues peuvent porter des germes nocifs, et les crevettes frites, panées ou assaisonnées ne conviennent pas.",
-    "es": "Sí, unos pocos trozos de gamba bien cocinada y sin nada están bien para los perros. Quítales antes la cáscara, la cabeza, las patas y la cola. Las gambas crudas pueden llevar gérmenes dañinos, y las fritas, rebozadas o condimentadas no son adecuadas.",
+    "es": "Sí, unos pocos trozos de gamba bien cocinada y al natural están bien para los perros. Quítales antes la cáscara, la cabeza, las patas y la cola. Las gambas crudas pueden llevar gérmenes dañinos, y las fritas, rebozadas o condimentadas no son adecuadas.",
     "it": "Sì, qualche gamberetto semplice e ben cotto va bene per i cani. Prima togli guscio, testa, zampe e coda. I gamberetti crudi possono portare germi dannosi, e quelli fritti, impanati o conditi non sono adatti.",
     "pt": "Sim, alguns pedaços de camarão simples e bem cozinhado não fazem mal aos cães. Tira primeiro a casca, a cabeça, as patas e a cauda. O camarão cru pode ter germes nocivos, e o camarão frito, panado ou temperado não é adequado.",
     "nl": "Ja, een paar stukjes gewone, helemaal gare garnalen zijn prima voor honden. Haal eerst de schaal, kop, pootjes en staart eraf. Rauwe garnalen kunnen schadelijke bacteriën bevatten, en gefrituurde, gepaneerde of gekruide garnalen zijn niet geschikt.",
@@ -93,7 +93,7 @@
     "sl": "Prenehajte dajati kozice, če ima pes težave s trebuhom ali se ne počuti dobro, in pokličite veterinarja, če se znaki poslabšajo. Pokličite ga tudi, če je pes pogoltnil oklepe in se zdi, da se duši.",
     "de": "Geben Sie keine Garnelen mehr, wenn Ihr Hund Bauchbeschwerden zeigt oder krank wirkt, und rufen Sie Ihren Tierarzt an, wenn sich die Anzeichen verschlimmern. Rufen Sie auch Ihren Tierarzt an, wenn Ihr Hund Schalen verschluckt hat und zu ersticken droht.",
     "fr": "Arrêtez de donner des crevettes si votre chien a mal au ventre ou semble malade, et appelez votre vétérinaire si les signes s’aggravent. Appelez aussi votre vétérinaire si votre chien a avalé des carapaces et semble s’étouffer.",
-    "es": "Deja de darle gambas si tu perro muestra molestias en la barriga o parece encontrarse mal, y llama a tu veterinario si los signos empeoran. Llama también a tu veterinario si se ha tragado cáscaras y parece que se atraganta.",
+    "es": "Deja de darle gambas si tu perro muestra molestias en la barriga o parece encontrarse mal, y llama a tu veterinario si los síntomas empeoran. Llama también a tu veterinario si se ha tragado cáscaras y parece que se atraganta.",
     "it": "Smetti di dare gamberetti se il tuo cane ha fastidi alla pancia o sembra stare male, e chiama il veterinario se i sintomi peggiorano. Chiama il veterinario anche se ha ingoiato dei gusci e sembra soffocare.",
     "pt": "Deixa de dar camarão se o teu cão mostrar desconforto na barriga ou parecer adoentado, e liga ao teu veterinário se os sinais piorarem. Liga também ao teu veterinário se o teu cão engoliu cascas e parecer estar a engasgar-se.",
     "nl": "Geef geen garnalen meer als je hond last van zijn buik heeft of zich niet lekker lijkt te voelen, en bel je dierenarts als de verschijnselen erger worden. Bel ook je dierenarts als je hond schalen heeft ingeslikt en lijkt te stikken.",
@@ -110,7 +110,7 @@
     "sl": "Nekaj koščkov, popolnoma kuhanih (najboljše na pari), brez dodatkov, brez oklepa, glave, nožic in repa; ne ocvrtih, paniranih ali začinjenih.",
     "de": "Ein paar Stücke, vollständig gegart (am besten gedämpft), pur, ohne Schale, Kopf, Beine und Schwanz; nicht frittiert, paniert oder gewürzt.",
     "fr": "Quelques morceaux, bien cuits (de préférence à la vapeur), nature, sans carapace, tête, pattes ni queue ; ni frits, ni panés, ni assaisonnés.",
-    "es": "Unos pocos trozos, bien cocinados (mejor al vapor), sin nada, sin cáscara, cabeza, patas ni cola; nada de gambas fritas, rebozadas ni condimentadas.",
+    "es": "Unos pocos trozos, bien cocinados (mejor al vapor), al natural, sin cáscara, cabeza, patas ni cola; nada de gambas fritas, rebozadas ni condimentadas.",
     "it": "Pochi pezzi, ben cotti (meglio al vapore), semplici, senza guscio, testa, zampe e coda; non fritti, impanati o conditi.",
     "pt": "Alguns pedaços, bem cozinhados (a vapor é o melhor), simples, sem casca, cabeça, patas e cauda; nem frito, nem panado, nem temperado.",
     "nl": "Een paar stukjes, helemaal gaar (gestoomd is het best), puur, zonder schaal, kop, pootjes en staart; niet gefrituurd, gepaneerd of gekruid.",
@@ -252,7 +252,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0a504076666f953418ee9a75dc35830d9168c73c13dcca400a4985f5d286cb56"
+      "verified_hash": "ba789d7cfdcb5cbc04143b38a02f2cb5f88003a8694e7c5b8a8871588331b942"
     },
     "it": {
       "status": "verified",

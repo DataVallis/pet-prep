@@ -58,7 +58,7 @@
     "sl": "Ne, češnjam se je bolje izogniti. Zrelo meso ni strupeno, koščice, peclji in listi pa vsebujejo snovi, iz katerih se lahko sprosti cianid, koščice pa lahko psu zamašijo črevesje. Pet Poison Helpline pravi, da je tveganje večje od koristi.",
     "de": "Nein, Kirschen meiden Sie besser. Das reife Fruchtfleisch ist nicht der giftige Teil, aber Kerne, Stiele und Blätter enthalten Stoffe, die Cyanid freisetzen können, und Kerne können den Darm eines Hundes blockieren. Laut Pet Poison Helpline überwiegt das Risiko jeden Nutzen.",
     "fr": "Non, mieux vaut éviter les cerises. La chair mûre n’est pas la partie toxique, mais les noyaux, les queues et les feuilles contiennent des composés qui peuvent libérer du cyanure, et les noyaux peuvent bloquer l’intestin d’un chien. Selon le Pet Poison Helpline, le risque l’emporte sur tout bénéfice.",
-    "es": "No, es mejor evitar las cerezas. La pulpa madura no es la parte tóxica, pero los huesos, los rabitos y las hojas contienen compuestos que pueden liberar cianuro, y los huesos pueden obstruir el intestino de un perro. Pet Poison Helpline afirma que el riesgo es mayor que cualquier beneficio.",
+    "es": "No, es mejor evitar las cerezas. La pulpa madura no es la parte tóxica, pero los huesos, los rabitos y las hojas contienen compuestos que pueden liberar cianuro, y los huesos pueden obstruir el intestino de un perro. Pet Poison Helpline afirma que el riesgo supera cualquier beneficio.",
     "it": "No, è meglio evitare le ciliegie. La polpa matura non è la parte tossica, ma noccioli, gambi e foglie contengono sostanze che possono liberare cianuro, e i noccioli possono ostruire l’intestino del cane. Secondo Pet Poison Helpline il rischio supera qualsiasi beneficio.",
     "pt": "Não, é melhor evitar as cerejas. A polpa madura não é a parte tóxica, mas os caroços, os pés e as folhas contêm compostos que podem libertar cianeto, e os caroços podem obstruir os intestinos do cão. A Pet Poison Helpline diz que o risco é maior do que qualquer benefício.",
     "nl": "Nee, kersen kun je beter vermijden. Het rijpe vruchtvlees is niet het giftige deel, maar de pitten, stelen en bladeren bevatten stoffen waaruit cyanide kan vrijkomen, en pitten kunnen de darmen van een hond verstoppen. Volgens Pet Poison Helpline weegt het risico zwaarder dan elk voordeel.",
@@ -289,7 +289,7 @@
         "sl": "Zrelo meso ni strupeni del, a Pet Poison Helpline svetuje, da je tveganje ob dajanju češenj večje od koristi.",
         "de": "Das reife Fruchtfleisch ist nicht der giftige Teil, aber laut Pet Poison Helpline überwiegt beim Füttern von Kirschen das Risiko den Nutzen.",
         "fr": "La pulpe mûre n’est pas la partie toxique, mais selon le Pet Poison Helpline, le risque de donner des cerises à un chien l’emporte sur les bénéfices.",
-        "es": "La pulpa madura no es la parte tóxica, pero Pet Poison Helpline advierte de que el riesgo de dar cerezas a un perro es mayor que los beneficios.",
+        "es": "La pulpa madura no es la parte tóxica, pero Pet Poison Helpline advierte de que el riesgo de dar cerezas a un perro supera los beneficios.",
         "it": "La polpa matura non è la parte tossica, ma Pet Poison Helpline avverte che i rischi di dare ciliegie al cane superano i benefici.",
         "pt": "A polpa madura não é a parte tóxica, mas a Pet Poison Helpline considera que o risco de dar cerejas é maior do que os benefícios.",
         "nl": "Het rijpe vruchtvlees is niet het giftige deel, maar volgens Pet Poison Helpline weegt het risico van het geven van kersen zwaarder dan de voordelen.",
@@ -388,7 +388,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "8acea815c2a53c437785cf65e8ad556fcfb21f8eb6c98e91fa452c58214a3d0e"
+      "verified_hash": "6504ee8b2d23f1327a8f3e6854a4b2ea574aaa7930c4702336a8569a3ce54e12"
     },
     "it": {
       "status": "verified",

@@ -115,7 +115,7 @@
     "es": [
       "Vómitos",
       "Diarrea",
-      "Aletargamiento o falta de energía",
+      "Decaimiento o falta de energía",
       "Gases o hinchazón"
     ],
     "it": [
@@ -393,7 +393,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "a5fee7dbca2868f166981684da84fc926347127ceb10ff2d8dcc682d3b087380"
+      "verified_hash": "58e89776e91a3b0815968341af93837f955d3ccee0afa58715760f7d828619b3"
     },
     "it": {
       "status": "verified",

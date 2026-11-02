@@ -75,7 +75,7 @@
     "sl": "Lupine lešnikov so izjemno trde in lahko povzročijo dušenje ter zaporo črevesja. Oreščki so na splošno zelo mastni in kalorični: za psa so lahko preobilni, povzročijo vnetje trebušne slinavke in prispevajo k povečanju telesne teže. Na oreščkih, ki ležijo na tleh, lahko zraste tudi plesen, ki je za pse lahko strupena.",
     "de": "Haselnussschalen sind extrem hart und können zum Ersticken und zu Darmverschlüssen führen. Nüsse sind allgemein reich an Fett und Kalorien: Sie können für einen Hund zu gehaltvoll sein, eine Pankreatitis auslösen und zu Gewichtszunahme beitragen. Auf dem Boden liegende Nüsse können außerdem Schimmel bilden, der für Hunde giftig sein kann.",
     "fr": "La coque des noisettes est extrêmement dure et peut provoquer un étouffement et des obstructions intestinales. Les fruits à coque en général sont riches en graisses et en calories : ils peuvent être trop riches pour un chien, provoquer une pancréatite et favoriser la prise de poids. Les fruits à coque restés par terre peuvent aussi développer des moisissures susceptibles d’être toxiques pour les chiens.",
-    "es": "La cáscara de las avellanas es durísima y puede provocar atragantamiento y obstrucciones intestinales. Los frutos secos en general tienen muchas grasas y calorías: pueden ser demasiado pesados para un perro, provocar pancreatitis y hacerle engordar. Además, los frutos secos que se quedan en el suelo pueden criar un moho que puede ser tóxico para los perros.",
+    "es": "La cáscara de las avellanas es durísima y puede provocar atragantamiento y obstrucciones intestinales. Los frutos secos en general tienen muchas grasas y calorías: pueden ser demasiado pesados para un perro, provocar pancreatitis y hacerle engordar. Además, los frutos secos que se quedan en el suelo pueden desarrollar un moho que puede ser tóxico para los perros.",
     "it": "Il guscio delle nocciole è estremamente duro e può causare soffocamento e ostruzioni intestinali. La frutta a guscio in generale è ricca di grassi e calorie: può essere troppo pesante per un cane, causare pancreatite e contribuire all’aumento di peso. La frutta a guscio rimasta a terra può anche sviluppare una muffa che può essere tossica per i cani.",
     "pt": "As cascas das avelãs são extremamente duras e podem causar engasgamento e obstruções intestinais. Os frutos secos em geral têm muita gordura e muitas calorias: podem ser demasiado ricos para um cão, causar pancreatite e contribuir para o aumento de peso. Os frutos secos caídos no chão também podem ganhar bolor, que pode ser tóxico para os cães.",
     "nl": "Hazelnootdoppen zijn extreem hard en kunnen verstikking en darmverstoppingen veroorzaken. Noten bevatten in het algemeen veel vet en calorieën: ze kunnen te machtig zijn voor een hond, alvleesklierontsteking veroorzaken en bijdragen aan overgewicht. Op de grond liggende noten kunnen ook schimmel krijgen die giftig kan zijn voor honden.",
@@ -111,7 +111,7 @@
     "es": [
       "Atragantamiento o arcadas",
       "Vómitos o diarrea",
-      "Malestar de barriga o signos de obstrucción"
+      "Malestar de barriga o síntomas de obstrucción"
     ],
     "it": [
       "Soffocamento o conati",
@@ -169,7 +169,7 @@
     "sl": "Po enem ali dveh oreščkih opazujte, ali pes bruha, ima drisko ali ga boli trebuh. Pokličite veterinarja, če je pes pogoltnil lupine, pojedel veliko oreščkov ali plesnive oreščke, se duši ali kaže katerega od teh znakov.",
     "de": "Achten Sie nach ein oder zwei Nüssen auf Erbrechen, Durchfall oder Bauchschmerzen. Rufen Sie Ihren Tierarzt an, wenn Ihr Hund Schalen verschluckt, viele Nüsse oder schimmelige Nüsse gefressen hat, zu ersticken droht oder eines dieser Anzeichen zeigt.",
     "fr": "Après une ou deux noisettes, surveillez les vomissements, la diarrhée ou les douleurs au ventre. Appelez votre vétérinaire si votre chien a avalé des coques, a mangé beaucoup de noisettes ou des noisettes moisies, semble s’étouffer ou présente l’un de ces signes.",
-    "es": "Si tu perro se ha comido una o dos avellanas, vigila si aparecen vómitos, diarrea o dolor de barriga. Llama a tu veterinario si se ha tragado cáscaras, ha comido muchos frutos secos o frutos secos con moho, parece que se atraganta o muestra alguno de estos signos.",
+    "es": "Si tu perro se ha comido una o dos avellanas, vigila si aparecen vómitos, diarrea o dolor de barriga. Llama a tu veterinario si se ha tragado cáscaras, ha comido muchos frutos secos o frutos secos con moho, parece que se atraganta o muestra alguno de estos síntomas.",
     "it": "Dopo una o due nocciole, controlla se compaiono vomito, diarrea o mal di pancia. Chiama il veterinario se il tuo cane ha ingoiato gusci, ha mangiato molta frutta a guscio o frutta a guscio ammuffita, se sembra soffocare o se mostra uno di questi sintomi.",
     "pt": "Depois de uma ou duas avelãs, vigia se há vómitos, diarreia ou dor de barriga. Liga ao teu veterinário se o teu cão engoliu cascas, comeu muitos frutos secos ou frutos secos com bolor, parecer estar a engasgar-se ou mostrar algum destes sinais.",
     "nl": "Let na een of twee noten op braken, diarree of buikpijn. Bel je dierenarts als je hond doppen heeft ingeslikt, veel noten of beschimmelde noten heeft gegeten, lijkt te stikken of een van deze verschijnselen heeft.",
@@ -302,7 +302,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "35d3d442f097afaa145a9b768ac19f878f85be1a10fec42658110ea7357a0cbc"
+      "verified_hash": "5a621c33c3437358a920010b2c7b4d81118c6808475517280ca985a4d9831705"
     },
     "it": {
       "status": "verified",

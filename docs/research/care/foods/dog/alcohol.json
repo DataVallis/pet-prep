@@ -214,7 +214,7 @@
     "sl": "Takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si, kaj je pes popil ali pojedel in približno koliko. Ne čakajte na znake: alkohol deluje hitro, ključno pa je zgodnje zdravljenje.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was Ihr Hund getrunken oder gefressen hat und ungefähr wie viel. Warten Sie nicht auf Anzeichen: Alkohol wirkt schnell, und eine frühe Behandlung ist entscheidend.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce que votre chien a bu ou mangé, et en quelle quantité approximative. N’attendez pas l’apparition des signes : l’alcool agit vite et un traitement précoce est essentiel.",
-    "es": "Contacta inmediatamente con tu veterinario o con una línea de información toxicológica para animales. Anota qué ha bebido o comido tu perro y, más o menos, cuánto. No esperes a que aparezcan síntomas: el alcohol actúa rápido y el tratamiento precoz es clave.",
+    "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Anota qué ha bebido o comido tu perro y, más o menos, cuánto. No esperes a que aparezcan síntomas: el alcohol actúa rápido y el tratamiento precoz es clave.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha bevuto o mangiato il tuo cane e più o meno quanto. Non aspettare che compaiano i sintomi: l’alcol agisce in fretta e un trattamento precoce è fondamentale.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota o que o teu cão bebeu ou comeu e mais ou menos quanto. Não esperes pelos sinais: o álcool atua depressa e o tratamento precoce é fundamental.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat je hond heeft gedronken of gegeten en ongeveer hoeveel. Wacht niet op verschijnselen: alcohol werkt snel en een vroege behandeling is cruciaal.",
@@ -403,7 +403,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "7e7dd977589df62588f78929c90bca760173ba38946bdc1aca0920258df3d8a1"
+      "verified_hash": "8013e6c766a7ed52d86ceb4e09027afe4638c2be4153ad4d0df073c2ba879e13"
     },
     "it": {
       "status": "verified",
