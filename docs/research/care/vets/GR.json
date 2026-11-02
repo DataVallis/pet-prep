@@ -51,6 +51,21 @@
       "name": "Κτηνιατρικό Κέντρο Γέρακα — 24-h emergency page",
       "url": "https://kkg.gr/epeigonta-peristatika/",
       "note": "Own page confirming 24-h emergency operation."
+    },
+    {
+      "name": "Kefalonia Animal Trust — Vets working with KAT",
+      "url": "https://kefaloniaanimaltrust.org/vets-working-with-kat/",
+      "note": "Local animal charity; four Kefalonia vets with phones and weekly hours (first names only, no towns)."
+    },
+    {
+      "name": "University of Thessaly, Department of Veterinary Medicine — contact",
+      "url": "https://www.vet.uth.gr/en/?page_id=496",
+      "note": "Official university page with clinic appointment phones (Karditsa)."
+    },
+    {
+      "name": "GoChalkidiki — Κτηνιατρικές υπηρεσίες στην Χαλκιδική (Jan 2024)",
+      "url": "https://gochalkidiki.gr/2024/01/02/%CE%BA%CF%84%CE%B7%CE%BD%CE%B9%CE%B1%CF%84%CF%81%CE%B9%CE%BA%CE%AD%CF%82-%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%AF%CE%B5%CF%82-%CF%83%CF%84%CE%B7%CE%BD-%CF%87%CE%B1%CE%BB%CE%BA%CE%B9%CE%B4%CE%B9/",
+      "note": "Local-guide list of Halkidiki vets (Nea Moudania x7, Pet Family near Nikiti/Agios Nikolaos Sithonia, Polygyros x2, Ierissos) — discovery only; the clinics' own sites linked there (vetpractice.business.site, veterinarian-281.business.site, almapet.gr, ierissosvet.gr) were blocked by fetch provenance, so not entered."
     }
   ],
   "entries": [
@@ -1432,7 +1447,163 @@
       "source_url": "https://pharmavet.gr/",
       "checked": "2026-11-02",
       "note": "Small-animal clinic plus livestock work and pet shop."
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinary Centre of Kos (Κτηνιατρικό Κέντρο Κω)",
+      "city": "Kos",
+      "region": "South Aegean",
+      "address": "Galias & Panagi Tsaldari, 85300 Kos",
+      "phone": "+30 2242 024 726",
+      "emergency_24h": false,
+      "duty": "Mon–Fri 09:00–13:00 & 17:00–20:00; Sat 09:00–13:00",
+      "small_animals": true,
+      "source_url": "https://animalrescuekos.weebly.com/sheltervet-contactgeneral-inquiry-form.html",
+      "note": "Listed by Animal Rescue Kos (local rescue charity) as its vet contact. Separate emergency number published: +30 694 587 6727 (no 24 h wording). Clinic has no website found.",
+      "checked": "2026-11-02"
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinary Center Milos",
+      "city": "Milos",
+      "region": "South Aegean",
+      "phone": "+30 697 245 8467",
+      "emergency_24h": false,
+      "duty": "Mon–Fri 10:00–18:00, by appointment; outside clinic hours emergencies only",
+      "small_animals": true,
+      "source_url": "https://forthecatsofmilos.org/",
+      "note": "Listed by the cat-welfare charity For The Cats Of Milos; same number on WhatsApp/Viber. Address not published. Has a few hospitalisation cages.",
+      "checked": "2026-11-02"
+    },
+    {
+      "kind": "clinic",
+      "name": "Vet Niki — Argostoli",
+      "city": "Argostoli (Kefalonia)",
+      "region": "Ionian Islands",
+      "address": "K. Karamanli Street (near the hospital), Argostoli, Kefalonia",
+      "phone": "+30 2671 102 620",
+      "emergency_24h": false,
+      "duty": "Mon, Wed 08:30–14:30; Tue, Thu, Fri 08:30–14:30 & 18:00–20:00; Sat 09:00–14:00",
+      "small_animals": true,
+      "source_url": "https://kefaloniaanimaltrust.org/vets-working-with-kat/",
+      "note": "Hours and phone from Kefalonia Animal Trust's 'Vets working with KAT' page; address from greekcats.org.uk Kefalonia guide (https://greekcats.org.uk/what-to-do-if-you-find-an-injured-or-ill-cat-or-dog-in-kefalonia/).",
+      "checked": "2026-11-02"
+    },
+    {
+      "kind": "clinic",
+      "name": "Κτηνιατρείο Σπυριδούλα Βαβάση (Vet Clinic Spyridoula Vavasi)",
+      "city": "Argostoli (Kefalonia)",
+      "region": "Ionian Islands",
+      "address": "18 Lassis Street, Argostoli, Kefalonia",
+      "phone": "+30 2671 033 800",
+      "emergency_24h": false,
+      "duty": "Mon, Wed 08:30–15:00; Tue, Thu, Fri 08:30–15:00 & 17:30–20:00",
+      "small_animals": true,
+      "source_url": "https://kefaloniaanimaltrust.org/vets-working-with-kat/",
+      "note": "Mobile +30 697 080 5740. KAT page lists her as \"Spiridoula\" (no surname), landline 26710 33800 and these hours; surname and address from greekcats.org.uk Kefalonia guide, which gives landline +30 2671 038 800 and different (older) hours. Phone set to KAT value.",
+      "checked": "2026-11-02"
+    },
+    {
+      "kind": "clinic",
+      "name": "John Galidis — vet, Lixouri",
+      "city": "Lixouri (Kefalonia)",
+      "region": "Ionian Islands",
+      "address": "Evaggellatou Antiochou Street, Lixouri, Kefalonia",
+      "phone": "+30 2671 094 226",
+      "emergency_24h": false,
+      "duty": "Mon–Fri 09:00–13:00 (mornings only)",
+      "small_animals": true,
+      "source_url": "https://greekcats.org.uk/what-to-do-if-you-find-an-injured-or-ill-cat-or-dog-in-kefalonia/",
+      "note": "From a UK cat-welfare charity's Kefalonia guide (undated); verify before publishing.",
+      "checked": "2026-11-02"
+    },
+    {
+      "kind": "clinic",
+      "name": "Toulatos Pantelis — vet, Sami",
+      "city": "Sami (Kefalonia)",
+      "region": "Ionian Islands",
+      "address": "Souidas Street, Sami, Kefalonia",
+      "phone": "+30 2674 022 262",
+      "emergency_24h": false,
+      "duty": "Mon–Fri 09:30–14:00 & 18:15–20:00; Sat 09:30–13:00",
+      "small_animals": true,
+      "source_url": "https://greekcats.org.uk/what-to-do-if-you-find-an-injured-or-ill-cat-or-dog-in-kefalonia/",
+      "note": "From a UK cat-welfare charity's Kefalonia guide (undated); verify before publishing.",
+      "checked": "2026-11-02"
+    },
+    {
+      "kind": "clinic",
+      "name": "Άρτεμις Σαμανδούρου — Κτηνίατρος (Artemis Samandourou vet)",
+      "city": "Corinth",
+      "region": "Peloponnese",
+      "address": "Patron 146, 20100 Korinthos",
+      "phone": "+30 2741 073 273",
+      "emergency_24h": false,
+      "small_animals": true,
+      "url": "https://petscare.gr/",
+      "source_url": "https://petscare.gr/",
+      "note": "Urgent cases line +30 693 796 4626 ('Για επείγοντα περιστατικά'); takes urgent hospitalisation after phone contact. No 24 h wording; hours not published.",
+      "checked": "2026-11-02"
+    },
+    {
+      "kind": "clinic",
+      "name": "Κτηνιατρείο Μαριάννα Τάλλαρου (Marianna Tallarou vet clinic)",
+      "city": "Trikala",
+      "region": "Thessaly",
+      "address": "Amalias 46 & Christou Giota, 42100 Trikala",
+      "phone": "+30 2431 071 751",
+      "emergency_24h": false,
+      "duty": "Mon & Wed 09:00–14:00 & 18:00–20:45; Tue, Thu 09:00–14:00; Fri 09:00–14:00 & evening (page text garbled: \"9:00-20:45\"); Sat closed",
+      "small_animals": true,
+      "url": "https://65f30c8884419.site123.me/",
+      "source_url": "https://65f30c8884419.site123.me/",
+      "note": "Dogs and cats. Mobile +30 697 333 3766.",
+      "checked": "2026-11-02"
+    },
+    {
+      "kind": "clinic",
+      "name": "Vet Pal — Κτηνιατρείο Παλαμά",
+      "city": "Palamas (Karditsa)",
+      "region": "Thessaly",
+      "address": "Mantopoulou 2, Palamas",
+      "phone": "+30 2444 301 203",
+      "emergency_24h": false,
+      "small_animals": true,
+      "url": "https://vetpal.gr/el/Vet-Pal-Ktiniatreio",
+      "source_url": "https://vetpal.gr/el/Vet-Pal-Ktiniatreio",
+      "note": "Companion and farm animals (dogs, cats, birds, horses, cattle). Mobile +30 694 513 8514. Hours not published. Palamas is ~25 km from Karditsa town.",
+      "checked": "2026-11-02"
+    },
+    {
+      "kind": "clinic",
+      "name": "Τμήμα Κτηνιατρικής Πανεπιστημίου Θεσσαλίας — κλινικές (University of Thessaly Veterinary Faculty clinics)",
+      "city": "Karditsa",
+      "region": "Thessaly",
+      "address": "Trikallon 224, 43100 Karditsa",
+      "phone": "+30 2441 066 000",
+      "emergency_24h": true,
+      "url": "https://www.vet.uth.gr/en/",
+      "source_url": "https://www.vet.uth.gr/en/",
+      "note": "University body. vet.uth.gr/en/ says \"The Faculty receives emergencies 24/7\" (emergency lines +30 698 234 0617, +30 698 234 0618) and links a \"Companion Animals - Clinic of Medicine\" website. Appointment lines: Clinic of Medicine +30 693 425 4654, Clinic of Surgery +30 2441 066 060, Obstetrics & Reproduction +30 2441 066 070. No opening hours published. Address and main phone from https://www.vet.uth.gr/en/?page_id=496.",
+      "small_animals": true,
+      "checked": "2026-11-02",
+      "quote": "The Faculty receives emergencies 24/7",
+      "duty": "Emergencies 24/7 (emergency lines +30 698 234 0617, +30 698 234 0618); clinic visits by appointment"
+    },
+    {
+      "kind": "clinic",
+      "name": "Κτηνιατρείο Χαλκιδική — Νιτσοτόλη Ελένη",
+      "city": "Nea Moudania (Halkidiki)",
+      "region": "Central Macedonia",
+      "address": "Panagias Koryfinis 42 (opposite Panagia Koryfini church), 63200 Nea Moudania",
+      "phone": "+30 2373 025 657",
+      "emergency_24h": false,
+      "small_animals": true,
+      "url": "https://nitsotoli.4ty.gr/",
+      "source_url": "https://nitsotoli.4ty.gr/",
+      "note": "Dogs, cats, songbirds, exotic pets (also goats/pigs). Mobile +30 694 668 0013. Hours not published. (Her other site helennitsotoli.com is on the unreachable list.)",
+      "checked": "2026-11-02"
     }
   ],
-  "notes": "No official national or regional out-of-hours duty rota for companion animals was found: the Panhellenic Veterinary Association and regional associations (e.g. Attica) have no reachable public duty page, and the Ministry list (minagric.gr xlsx) is licensed for personal non-commercial use only, so it was not reused. Greece relies on private 24-h clinics: Attica (Plakentia Agia Paraskevi, Attikovet Paiania, Pikermi Animal Hospital, hospetal Kallithea, Modestos Nea Erythraia, Pawsitive Chalandri, Athens Vet Clinic Glyfada and Medic Animal Nea Smyrni on-call), Thessaloniki (AUTh university clinic weekday nights + weekends, Agios Modestos, Κτηνιατρικό Κέντρο Θεσσαλονίκης, Plakentia Thermi, Agathangelidis, ktiniatreio.net), Volos, Patras (on-call), Syros, Chania (Sirius, phone on-call). Duty rotas: only NGO-published out-of-hours numbers for Chania and Heraklion. Poison line: none for animals — the Greek Poison Centre (Κέντρο Δηλητηριάσεων, 210 7793777) is described only for human poisonings (no page found saying it advises on animals), so it is not listed as poison_line. Left / not covered: no 24-h clinic confirmed for Heraklion, Larissa, Ioannina, Kalamata, Rhodes or any Ionian island; Rethymno (rethymnovetclinic.gr, to-ktiniatrio.gr robots-disallowed), Agios Nikolaos/Lasithi, Kos, Kefalonia, Paros (fepvet.gr redirect loop), Halkidiki (only a Nea Moudania weekend duty vet for strays found in local news), Nafplio, Corinth, Tripoli, Lamia, Chalkida, Serres, Komotini, Chios, Samos and Karditsa (University of Thessaly clinic PDF robots-disallowed) have no entry. Unverified leads (named 24-h in NGO/blog lists, own site not reachable): Zoophilos 24h Pangrati (Filolaou 220), K. Anastopoulos Ilioupoli (24κτηνιατρειο.gr), A. Antonopoulos N. Filadelfeia/Patisia (nights 21-09 + weekends), Κτηνιατρικό Κέντρο Αγ. Στεφάνου, Papaioannou (vets.gr), Αμεση Κτηνιατρική Δράση Nikaia, Stavropoulos Korydallos, Liapis Chalandri. Also blocked/failed: sintosvet.gr (Ioannina), southparkvets.gr (Patras), lesvosvet.gr, corfuvet.gr, syrosvets.gr, dasmivet.gr / VET365 Heraklion (redirect loop), kontostolivet.gr (Kavala, server error), larissanet.gr. Aggregators seen but not used as sources: vetfinder.gr (contains placeholder numbers), vetsos.gr, hotelswithpets.com, vrisko.gr, xo.gr. Follow-up 2026-11-02: Follow-up run 2026-11-02 (Greece): added 45 entries; 8 with 24 h confirmed on their own pages (Gerakas KKG and Mantakas N. Irakleio in Attica, City Paws Thessaloniki, MyVet Larissa [site description only, no phone], Kontostoli Kavala [phone on-call], Marinou Chios [by phone arrangement], Vet Clinic of Pyrgos [phone on-call], Ktiniatriki Lamia [24-h emergency first aid]). Correction for an existing entry: Animal Zante (Zakynthos) own page https://animalzante.gr/gr_veterinary.php says 'Η 24ωρη διάθεση των υπηρεσιών μας' — its emergency_24h can be set to true (address Αγίου Λαζάρου 103; also 26950 45155, 6944 920 878). No duty rota found: no association/municipal page with a current rota (Pyrgos vets' weekend rota exists only as a 2020 newspaper article; Komotini rota articles on xronos.gr robots-disallowed, inkomotini.news and paratiritis-news.gr unreachable; Nea Propontida/Moudania weekend vet is a one-off municipal notice for strays). Municipal stray clinics seen but not listed (strays only): Agioi Anargyroi–Kamatero (agan.gov.gr), Lamia dog shelter (animals.lamia.gr, 24/7 for strays), Athens municipal clinic (news only). Athens 24-h leads NOT confirmed on own sites: Zoophilos Pangrati (no site found), Anastopoulos Ilioupoli (24κτηνιατρειο.gr not fetchable; added from ΣΚΜΖΑ without 24 h), A. Antonopoulos N. Filadelfeia/Patisia (no site), Κτηνιατρικό Κέντρο Αγ. Στεφάνου (no site), Άμεση Κτηνιατρική Δράση/Pet+Vet Nikaia (no site), Stavropoulos Korydallos (own site pet-vet.gr has no 24-h claim; added as non-24), Liapis Chalandri (ΣΚΜΖΑ listing, no 24-h). KMY Alimos and Papaioannou (vets.com.gr) also show no 24-h claim. Still no 24-h clinic confirmed for Heraklion (cretalive reader letter says none exists), Rhodes (vet-center.gr, animalcareclinic.gr: emergency phone only), Corfu (corfuanimalclinic.com: appointments only), Kalamata (kalamatavet.gr shows 'closed' banner), Ioannina, Kefalonia. Not covered (only directory listings, no own site found): Rethymno, Agios Nikolaos, Ierapetra, Sitia, Kos (only local guides), Kalymnos, Milos, Ios, Lemnos (no private vet found), Ithaca, Kefalonia, Lesvos extra (VetHub Mytilene only in a news article), Nafplio/Argos, Corinth, Tripoli, Sparti, Chalkida (vet-gerontiti.gr has no phone/address), Karditsa, Trikala, Drama, Nea Moudania. Failed/blocked: helennitsotoli.com, sintosvet.gr, animalmedcare.gr (Serres), ktiniatreiovetcare.gr (Agios Nikolaos) — robots-disallowed; vet-me.gr (Karditsa) and dasmivet.gr — redirect loop; corfuanimalclinic.com/contact-us, vetgr5.wixsite.com (Lesvos) — client error. Aggregators seen, not used as sources: vrisko, xo, 11888, vetsos, vetfinder, aetoitonktiniatron, doctors4u, instadoctor, katoikidia.com, merimno/valkanasdogs/pet-insurance.gr blog lists (leads only)."
+  "notes": "No official national or regional out-of-hours duty rota for companion animals was found: the Panhellenic Veterinary Association and regional associations (e.g. Attica) have no reachable public duty page, and the Ministry list (minagric.gr xlsx) is licensed for personal non-commercial use only, so it was not reused. Greece relies on private 24-h clinics: Attica (Plakentia Agia Paraskevi, Attikovet Paiania, Pikermi Animal Hospital, hospetal Kallithea, Modestos Nea Erythraia, Pawsitive Chalandri, Athens Vet Clinic Glyfada and Medic Animal Nea Smyrni on-call), Thessaloniki (AUTh university clinic weekday nights + weekends, Agios Modestos, Κτηνιατρικό Κέντρο Θεσσαλονίκης, Plakentia Thermi, Agathangelidis, ktiniatreio.net), Volos, Patras (on-call), Syros, Chania (Sirius, phone on-call). Duty rotas: only NGO-published out-of-hours numbers for Chania and Heraklion. Poison line: none for animals — the Greek Poison Centre (Κέντρο Δηλητηριάσεων, 210 7793777) is described only for human poisonings (no page found saying it advises on animals), so it is not listed as poison_line. Left / not covered: no 24-h clinic confirmed for Heraklion, Larissa, Ioannina, Kalamata, Rhodes or any Ionian island; Rethymno (rethymnovetclinic.gr, to-ktiniatrio.gr robots-disallowed), Agios Nikolaos/Lasithi, Kos, Kefalonia, Paros (fepvet.gr redirect loop), Halkidiki (only a Nea Moudania weekend duty vet for strays found in local news), Nafplio, Corinth, Tripoli, Lamia, Chalkida, Serres, Komotini, Chios, Samos and Karditsa (University of Thessaly clinic PDF robots-disallowed) have no entry. Unverified leads (named 24-h in NGO/blog lists, own site not reachable): Zoophilos 24h Pangrati (Filolaou 220), K. Anastopoulos Ilioupoli (24κτηνιατρειο.gr), A. Antonopoulos N. Filadelfeia/Patisia (nights 21-09 + weekends), Κτηνιατρικό Κέντρο Αγ. Στεφάνου, Papaioannou (vets.gr), Αμεση Κτηνιατρική Δράση Nikaia, Stavropoulos Korydallos, Liapis Chalandri. Also blocked/failed: sintosvet.gr (Ioannina), southparkvets.gr (Patras), lesvosvet.gr, corfuvet.gr, syrosvets.gr, dasmivet.gr / VET365 Heraklion (redirect loop), kontostolivet.gr (Kavala, server error), larissanet.gr. Aggregators seen but not used as sources: vetfinder.gr (contains placeholder numbers), vetsos.gr, hotelswithpets.com, vrisko.gr, xo.gr. Follow-up 2026-11-02: Follow-up run 2026-11-02 (Greece): added 45 entries; 8 with 24 h confirmed on their own pages (Gerakas KKG and Mantakas N. Irakleio in Attica, City Paws Thessaloniki, MyVet Larissa [site description only, no phone], Kontostoli Kavala [phone on-call], Marinou Chios [by phone arrangement], Vet Clinic of Pyrgos [phone on-call], Ktiniatriki Lamia [24-h emergency first aid]). Correction for an existing entry: Animal Zante (Zakynthos) own page https://animalzante.gr/gr_veterinary.php says 'Η 24ωρη διάθεση των υπηρεσιών μας' — its emergency_24h can be set to true (address Αγίου Λαζάρου 103; also 26950 45155, 6944 920 878). No duty rota found: no association/municipal page with a current rota (Pyrgos vets' weekend rota exists only as a 2020 newspaper article; Komotini rota articles on xronos.gr robots-disallowed, inkomotini.news and paratiritis-news.gr unreachable; Nea Propontida/Moudania weekend vet is a one-off municipal notice for strays). Municipal stray clinics seen but not listed (strays only): Agioi Anargyroi–Kamatero (agan.gov.gr), Lamia dog shelter (animals.lamia.gr, 24/7 for strays), Athens municipal clinic (news only). Athens 24-h leads NOT confirmed on own sites: Zoophilos Pangrati (no site found), Anastopoulos Ilioupoli (24κτηνιατρειο.gr not fetchable; added from ΣΚΜΖΑ without 24 h), A. Antonopoulos N. Filadelfeia/Patisia (no site), Κτηνιατρικό Κέντρο Αγ. Στεφάνου (no site), Άμεση Κτηνιατρική Δράση/Pet+Vet Nikaia (no site), Stavropoulos Korydallos (own site pet-vet.gr has no 24-h claim; added as non-24), Liapis Chalandri (ΣΚΜΖΑ listing, no 24-h). KMY Alimos and Papaioannou (vets.com.gr) also show no 24-h claim. Still no 24-h clinic confirmed for Heraklion (cretalive reader letter says none exists), Rhodes (vet-center.gr, animalcareclinic.gr: emergency phone only), Corfu (corfuanimalclinic.com: appointments only), Kalamata (kalamatavet.gr shows 'closed' banner), Ioannina, Kefalonia. Not covered (only directory listings, no own site found): Rethymno, Agios Nikolaos, Ierapetra, Sitia, Kos (only local guides), Kalymnos, Milos, Ios, Lemnos (no private vet found), Ithaca, Kefalonia, Lesvos extra (VetHub Mytilene only in a news article), Nafplio/Argos, Corinth, Tripoli, Sparti, Chalkida (vet-gerontiti.gr has no phone/address), Karditsa, Trikala, Drama, Nea Moudania. Failed/blocked: helennitsotoli.com, sintosvet.gr, animalmedcare.gr (Serres), ktiniatreiovetcare.gr (Agios Nikolaos) — robots-disallowed; vet-me.gr (Karditsa) and dasmivet.gr — redirect loop; corfuanimalclinic.com/contact-us, vetgr5.wixsite.com (Lesvos) — client error. Aggregators seen, not used as sources: vrisko, xo, 11888, vetsos, vetfinder, aetoitonktiniatron, doctors4u, instadoctor, katoikidia.com, merimno/valkanasdogs/pet-insurance.gr blog lists (leads only). Follow-up 2 (2026-11-02): Covered with verified entries: Kos (1), Milos (1), Kefalonia (6: Argostoli x2 named, 2 KAT vets without town, Lixouri, Sami), Corinth (1), Trikala (1), Karditsa (Palamas clinic + University of Thessaly vet faculty), Nea Moudania (1). No 24-h clinic, no duty rota and no animal poison line found anywhere in scope (the only poison-bait leaflet found, LIFE ARCPROM/UoWM, lists forestry/NGO numbers, not a pet poison line; Greece's Poison Control Centre is for humans). A Dec 2024 news item (xalkidikipolitiki.com) named a single weekend stray-animal on-duty vet in Nea Moudania — one-off, not a rota, not entered. Nothing usable found for: Agios Nikolaos, Ierapetra, Sitia, Rethymno, Kalymnos, Ios, Lemnos, Ithaca, Nafplio, Argos, Tripoli, Sparti, Chalkida, Drama, Kassandra, Sithonia — candidates there exist only on SEO directories (vrisko, xo, 11888, aetoitonktiniatron, instadoctor, ogiatrosmou etc.), Facebook pages, or a 2021 personal blog (lunathecretanbordercollie.com lists ~9 Rethymno, 3 Agios Nikolaos, 3 Ierapetra vets with phones — not used as sole source). Blocked/unreachable this run: ktiniatreia-chalkida.gr and vet-pouliou.gr (Ierapetra) and dr-koumarelas.gr (Tripoli) — robots-disallowed; evia-vet.gr (server error); xo.gr and stichtingzwerfdierenkreta.com (client error); vetpractice.business.site, veterinarian-281.business.site, almapet.gr, ierissosvet.gr (provenance-blocked). Lemnos: no private small-animal clinic site found (lemnos.gr veterinary-department page failed on an http/https redirect loop). Two Kefalonia Animal Trust vets published only by first name without town were not entered. University of Thessaly vet faculty (Karditsa) states \"emergencies 24/7\" on its own page (added as 24 h)."
 }
