@@ -11,7 +11,8 @@
     "pt": "Cebolinho",
     "nl": "Bieslook",
     "pl": "Szczypiorek",
-    "cs": "Pažitka"
+    "cs": "Pažitka",
+    "hr": "Vlasac"
   },
   "question": {
     "en": "Can cats eat chives?",
@@ -23,7 +24,8 @@
     "pt": "Os gatos podem comer cebolinho?",
     "nl": "Mogen katten bieslook eten?",
     "pl": "Czy koty mogą jeść szczypiorek?",
-    "cs": "Mohou kočky jíst pažitku?"
+    "cs": "Mohou kočky jíst pažitku?",
+    "hr": "Smiju li mačke jesti vlasac?"
   },
   "url_slug": {
     "en": "chives",
@@ -35,7 +37,8 @@
     "pt": "cebolinho",
     "nl": "bieslook",
     "pl": "szczypiorek",
-    "cs": "pazitka"
+    "cs": "pazitka",
+    "hr": "vlasac"
   },
   "level": "toxic",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Não. O cebolinho pertence à família da cebola e é venenoso para os gatos, fresco, cozinhado ou seco. Pode danificar os glóbulos vermelhos e causar anemia. Liga ao teu veterinário se o teu gato comer algum e mantém os vasos de cebolinho fora do alcance.",
     "nl": "Nee. Bieslook hoort bij de uienfamilie en is giftig voor katten, of het nu vers, gekookt of gedroogd is. Het kan rode bloedcellen beschadigen en bloedarmoede veroorzaken. Bel je dierenarts als je kat er iets van eet, en zet bieslook in een pot buiten bereik.",
     "pl": "Nie. Szczypiorek jest spokrewniony z cebulą i jest trujący dla kotów – świeży, gotowany i suszony. Może uszkadzać czerwone krwinki i wywołać anemię. Zadzwoń do weterynarza, jeśli kot zje choć trochę, i trzymaj doniczki ze szczypiorkiem poza jego zasięgiem.",
-    "cs": "Ne. Pažitka patří mezi cibuloviny (rod Allium) a je pro kočky jedovatá, ať už čerstvá, tepelně upravená, nebo sušená. Může poškodit červené krvinky a způsobit chudokrevnost (anémii). Pokud ji kočka sní, zavolejte veterináři, a pažitku v květináči mějte mimo její dosah."
+    "cs": "Ne. Pažitka patří mezi cibuloviny (rod Allium) a je pro kočky jedovatá, ať už čerstvá, tepelně upravená, nebo sušená. Může poškodit červené krvinky a způsobit chudokrevnost (anémii). Pokud ji kočka sní, zavolejte veterináři, a pažitku v květináči mějte mimo její dosah.",
+    "hr": "Ne. Vlasac pripada porodici luka i otrovan je za mačke, bilo svjež, termički obrađen ili sušen. Može oštetiti crvene krvne stanice i izazvati anemiju. Ako tvoja mačka pojede imalo vlasca, nazovi veterinara, a vlasac u posudi drži izvan njezina dosega."
   },
   "why": {
     "en": "Chives belong to the allium family (the onion family). Alliums damage red blood cells and can lead to anaemia, and they also irritate the stomach and gut. Cats are the most sensitive species. All forms are poisonous to cats — raw, cooked, dried, powdered and liquid.",
@@ -60,7 +64,8 @@
     "pt": "O cebolinho pertence à família das aliáceas (a família da cebola). As aliáceas danificam os glóbulos vermelhos e podem levar a anemia, e também irritam o estômago e o intestino. Os gatos são a espécie mais sensível. Todas as formas são venenosas para gatos – cruas, cozinhadas, secas, em pó e líquidas.",
     "nl": "Bieslook hoort bij de alliumfamilie (de uienfamilie). Alliums beschadigen rode bloedcellen en kunnen tot bloedarmoede leiden, en ze irriteren ook de maag en darmen. Katten zijn de gevoeligste diersoort. Alle vormen zijn giftig voor katten – rauw, gekookt, gedroogd, in poedervorm en vloeibaar.",
     "pl": "Szczypiorek należy do roślin z rodzaju Allium, czyli z rodziny cebulowatych. Rośliny z tego rodzaju uszkadzają czerwone krwinki, mogą prowadzić do anemii, a do tego podrażniają żołądek i jelita. Koty są gatunkiem najbardziej wrażliwym. Każda postać jest dla kotów trująca – surowa, gotowana, suszona, sproszkowana i płynna.",
-    "cs": "Pažitka patří mezi cibuloviny (rod Allium). Cibuloviny poškozují červené krvinky, mohou vést k chudokrevnosti a navíc dráždí žaludek a střeva. Kočky jsou ze všech druhů zvířat nejcitlivější. Pro kočky jsou jedovaté všechny formy – syrová, tepelně upravená, sušená, v prášku i tekutá."
+    "cs": "Pažitka patří mezi cibuloviny (rod Allium). Cibuloviny poškozují červené krvinky, mohou vést k chudokrevnosti a navíc dráždí žaludek a střeva. Kočky jsou ze všech druhů zvířat nejcitlivější. Pro kočky jsou jedovaté všechny formy – syrová, tepelně upravená, sušená, v prášku i tekutá.",
+    "hr": "Vlasac pripada biljkama iz roda Allium (porodici luka). Biljke iz roda Allium oštećuju crvene krvne stanice i mogu dovesti do anemije, a uz to nadražuju želudac i crijeva. Mačke su najosjetljivija vrsta. Svi su oblici otrovni za mačke – sirov, termički obrađen, sušen, u prahu i tekući."
   },
   "signs": {
     "en": [
@@ -152,6 +157,15 @@
       "Bledé dásně",
       "Červeně zbarvená moč",
       "Zrychlené nebo namáhavé dýchání"
+    ],
+    "hr": [
+      "Povraćanje",
+      "Proljev",
+      "Slab apetit",
+      "Slabost",
+      "Blijede desni",
+      "Crveno obojena mokraća",
+      "Ubrzano ili otežano disanje"
     ]
   },
   "what_to_do": {
@@ -164,7 +178,8 @@
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, mesmo que o teu gato pareça bem – os sinais de anemia podem demorar vários dias a aparecer. Toma nota do que o teu gato comeu (cru, cozinhado, em pó ou num prato que o continha), da quantidade e de quando. Não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als je kat er gezond uitziet – verschijnselen van bloedarmoede kunnen een paar dagen op zich laten wachten. Schrijf op wat je kat heeft gegeten (rauw, gekookt, als poeder of in een gerecht), hoeveel en wanneer. Probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, nawet jeśli kot wygląda na zdrowego – objawy anemii mogą się pojawić dopiero po kilku dniach. Zapisz, co zjadł twój kot (surowy, gotowany, w proszku czy w potrawie), ile i kiedy. Nie próbuj wywoływać u kota wymiotów w domu.",
-    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, i když se kočka zdá v pořádku – příznaky chudokrevnosti se mohou projevit až po několika dnech. Poznamenejte si, co kočka snědla (syrovou pažitku, tepelně upravenou, v prášku nebo pokrm, který ji obsahoval), kolik a kdy. Nesnažte se u kočky doma vyvolat zvracení."
+    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, i když se kočka zdá v pořádku – příznaky chudokrevnosti se mohou projevit až po několika dnech. Poznamenejte si, co kočka snědla (syrovou pažitku, tepelně upravenou, v prášku nebo pokrm, který ji obsahoval), kolik a kdy. Nesnažte se u kočky doma vyvolat zvracení.",
+    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako se čini da je mačka dobro – znakovi anemije mogu se pokazati tek nakon nekoliko dana. Zapiši što je mačka pojela (sirovo, termički obrađeno, u prahu ili jelo koje ga sadrži), koliko i kada. Ne pokušavaj kod kuće izazvati povraćanje."
   },
   "serving": null,
   "child": {
@@ -177,7 +192,8 @@
     "pt": "O cebolinho parece erva, mas não é erva para gatos! Mantém-no longe do gatinho e avisa um adulto se ele o mastigar.",
     "nl": "Bieslook lijkt op gras, maar het is geen kattengras! Houd het uit de buurt van je poes. Kauwt ze erop? Vertel het meteen aan een volwassene.",
     "pl": "Szczypiorek wygląda jak trawa, ale to nie jest kocia trawka! Trzymaj go z dala od kotka i powiedz dorosłemu, jeśli kotek trochę go pogryzie.",
-    "cs": "Pažitka vypadá jako tráva, ale kočičí tráva to není! Drž ji od kočičky dál, a když ji kočička okusuje, řekni to dospělému."
+    "cs": "Pažitka vypadá jako tráva, ale kočičí tráva to není! Drž ji od kočičky dál, a když ji kočička okusuje, řekni to dospělému.",
+    "hr": "Vlasac izgleda kao trava, ali nije trava za mace! Drži ga podalje od mace i reci odrasloj osobi ako ga malo prožvače."
   },
   "faq": [
     {
@@ -191,7 +207,8 @@
         "pt": "O cebolinho cozinhado ou seco é seguro para gatos?",
         "nl": "Is gekookte of gedroogde bieslook veilig voor katten?",
         "pl": "Czy gotowany lub suszony szczypiorek jest bezpieczny dla kotów?",
-        "cs": "Je tepelně upravená nebo sušená pažitka pro kočky bezpečná?"
+        "cs": "Je tepelně upravená nebo sušená pažitka pro kočky bezpečná?",
+        "hr": "Je li termički obrađen ili sušen vlasac siguran za mačke?"
       },
       "a": {
         "en": "No. All forms are poisonous to cats, including raw, cooked and dried chives. Be careful with leftovers, sauces, soups and gravy that may contain them.",
@@ -203,7 +220,8 @@
         "pt": "Não. Todas as formas são venenosas para gatos, incluindo o cebolinho cru, cozinhado e seco. Tem cuidado com restos de comida, molhos, sopas e molho de assado que o possam conter.",
         "nl": "Nee. Alle vormen zijn giftig voor katten, ook rauwe, gekookte en gedroogde bieslook. Wees voorzichtig met restjes, sauzen, soepen en jus waar het in kan zitten.",
         "pl": "Nie. Każda postać jest dla kotów trująca, także szczypiorek surowy, gotowany i suszony. Uważaj na resztki jedzenia, sosy, zupy i sos pieczeniowy, które mogą go zawierać.",
-        "cs": "Ne. Pro kočky jsou jedovaté všechny formy, včetně syrové, tepelně upravené a sušené pažitky. Dávejte pozor na zbytky jídla, omáčky, polévky a šťávy z masa, které ji mohou obsahovat."
+        "cs": "Ne. Pro kočky jsou jedovaté všechny formy, včetně syrové, tepelně upravené a sušené pažitky. Dávejte pozor na zbytky jídla, omáčky, polévky a šťávy z masa, které ji mohou obsahovat.",
+        "hr": "Ne. Svi su oblici otrovni za mačke, uključujući sirov, termički obrađen i sušen vlasac. Pripazi na ostatke hrane, umake, juhe i sok od pečenja koji ga mogu sadržavati."
       }
     }
   ],
@@ -349,6 +367,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "917fab3ccc686c8692ea262f139b132c9c0c9b285edcc20f736c0be44de6be75"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9340160470059005331b2452594abe1d35d0db35afbf16dfa1d3d84836ec8b91"
     }
   }
 }

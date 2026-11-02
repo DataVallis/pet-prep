@@ -11,7 +11,8 @@
     "pt": "Nozes de macadâmia",
     "nl": "Macadamianoten",
     "pl": "Orzechy makadamia",
-    "cs": "Makadamové ořechy"
+    "cs": "Makadamové ořechy",
+    "hr": "Makadamija"
   },
   "question": {
     "en": "Can dogs eat macadamia nuts?",
@@ -23,7 +24,8 @@
     "pt": "Os cães podem comer nozes de macadâmia?",
     "nl": "Mogen honden macadamianoten eten?",
     "pl": "Czy psy mogą jeść orzechy makadamia?",
-    "cs": "Mohou psi jíst makadamové ořechy?"
+    "cs": "Mohou psi jíst makadamové ořechy?",
+    "hr": "Smiju li psi jesti makadamiju?"
   },
   "url_slug": {
     "en": "macadamia-nuts",
@@ -35,7 +37,8 @@
     "pt": "nozes-de-macadamia",
     "nl": "macadamianoten",
     "pl": "orzechy-makadamia",
-    "cs": "makadamove-orechy"
+    "cs": "makadamove-orechy",
+    "hr": "makadamija"
   },
   "level": "toxic",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Não. As nozes de macadâmia são tóxicas para os cães, e os cães são a única espécie que se sabe que adoece com elas. Até uma pequena quantidade pode causar fraqueza, vómitos, tremores e temperatura corporal alta. O seu elevado teor de gordura também pode provocar pancreatite.",
     "nl": "Nee. Macadamianoten zijn giftig voor honden, en honden zijn de enige diersoort waarvan bekend is dat ze er ziek van worden. Zelfs een kleine hoeveelheid kan zwakte, braken, trillingen en een hoge lichaamstemperatuur veroorzaken. Door het hoge vetgehalte kunnen ze ook alvleesklierontsteking uitlokken.",
     "pl": "Nie. Orzechy makadamia są toksyczne dla psów, a psy to jedyny gatunek, o którym wiadomo, że się po nich rozchorowuje. Nawet mała ilość może wywołać osłabienie, wymioty, drżenie mięśni i wysoką temperaturę. Duża zawartość tłuszczu może też wywołać zapalenie trzustki.",
-    "cs": "Ne. Makadamové ořechy jsou pro psy jedovaté a psi jsou jediný známý živočišný druh, kterému škodí. I malé množství může způsobit slabost, zvracení, třes a vysokou teplotu. Vysoký obsah tuku může navíc vyvolat zánět slinivky břišní."
+    "cs": "Ne. Makadamové ořechy jsou pro psy jedovaté a psi jsou jediný známý živočišný druh, kterému škodí. I malé množství může způsobit slabost, zvracení, třes a vysokou teplotu. Vysoký obsah tuku může navíc vyvolat zánět slinivky břišní.",
+    "hr": "Ne. Makadamija je otrovna za pse, a psi su jedina vrsta za koju je poznato da od nje obolijevaju. Već mala količina može izazvati slabost, povraćanje, drhtanje i visoku tjelesnu temperaturu. Zbog velikog udjela masti može izazvati i upalu gušterače."
   },
   "why": {
     "en": "How macadamia nuts poison dogs is unknown, but they affect nerve and muscle function. Because they are very oily, some dogs also develop pancreatitis. Signs generally settle within 12–48 hours, but a vet should always be contacted.",
@@ -60,7 +64,8 @@
     "pt": "Não se sabe como as nozes de macadâmia intoxicam os cães, mas afetam o funcionamento dos nervos e dos músculos. Como são muito oleosas, alguns cães também desenvolvem pancreatite. Os sinais costumam passar em 12–48 horas, mas deves contactar sempre um veterinário.",
     "nl": "Hoe macadamianoten honden vergiftigen, is onbekend, maar ze tasten de werking van zenuwen en spieren aan. Omdat ze erg olierijk zijn, krijgen sommige honden ook alvleesklierontsteking. Verschijnselen verdwijnen meestal binnen 12–48 uur, maar neem altijd contact op met een dierenarts.",
     "pl": "Nie wiadomo, w jaki sposób orzechy makadamia zatruwają psy, ale wpływają na pracę nerwów i mięśni. Ponieważ są bardzo oleiste, u niektórych psów rozwija się też zapalenie trzustki. Objawy na ogół ustępują w ciągu 12–48 godzin, ale zawsze trzeba skontaktować się z weterynarzem.",
-    "cs": "Jak přesně makadamové ořechy psy otravují, není známo, ovlivňují ale činnost nervů a svalů. Protože jsou velmi tučné, u některých psů se rozvine i zánět slinivky břišní. Příznaky obvykle odezní během 12–48 hodin, přesto se ale vždy obraťte na veterináře."
+    "cs": "Jak přesně makadamové ořechy psy otravují, není známo, ovlivňují ale činnost nervů a svalů. Protože jsou velmi tučné, u některých psů se rozvine i zánět slinivky břišní. Příznaky obvykle odezní během 12–48 hodin, přesto se ale vždy obraťte na veterináře.",
+    "hr": "Nije poznato kako točno makadamija truje pse, ali utječe na rad živaca i mišića. Budući da je vrlo masna, kod nekih se pasa razvije i upala gušterače. Znakovi uglavnom prođu unutar 12–48 sati, ali uvijek se treba obratiti veterinaru."
   },
   "signs": {
     "en": [
@@ -142,6 +147,14 @@
       "Třes",
       "Vysoká tělesná teplota",
       "Vrávoravá chůze"
+    ],
+    "hr": [
+      "Slabost mišića",
+      "Manjak energije, potištenost",
+      "Povraćanje",
+      "Drhtanje",
+      "Visoka tjelesna temperatura",
+      "Nesiguran, teturav hod"
     ]
   },
   "what_to_do": {
@@ -154,7 +167,8 @@
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota quantas nozes comeu e se estavam cobertas de chocolate ou misturadas com outros alimentos. Não esperes pelos sinais.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op hoeveel noten er zijn gegeten en of ze met chocolade waren omhuld of met ander eten waren gemengd. Wacht niet op verschijnselen.",
     "pl": "Od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, ile orzechów pies zjadł i czy były w czekoladzie albo zmieszane z innym jedzeniem. Nie czekaj na objawy.",
-    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, kolik ořechů pes snědl a zda byly v čokoládě nebo smíchané s jinými potravinami. Nečekejte, až se objeví příznaky."
+    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, kolik ořechů pes snědl a zda byly v čokoládě nebo smíchané s jinými potravinami. Nečekejte, až se objeví příznaky.",
+    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši koliko je plodova pas pojeo i jesu li bili preliveni čokoladom ili pomiješani s drugom hranom. Ne čekaj da se pojave znakovi."
   },
   "serving": null,
   "child": {
@@ -167,7 +181,8 @@
     "pt": "As nozes de macadâmia são redondinhas e podem deixar os cães fracos e a cambalear. Mantém-nas longe e avisa um adulto se o teu cão comer alguma.",
     "nl": "Macadamianoten zijn ronde noten waar honden zwak en wiebelig van kunnen worden. Houd ze uit de buurt en vertel het aan een volwassene als je hond ervan eet.",
     "pl": "Orzechy makadamia to okrągłe orzechy, po których psy mogą osłabnąć i chwiać się na łapach. Trzymaj je z dala od psa i powiedz dorosłemu, jeśli twój pies je zje.",
-    "cs": "Makadamové ořechy jsou kulaté oříšky, po kterých může být pes slabý a vrávorat. Dej je tam, kam pes nedosáhne, a když nějaké sní, řekni to dospělému."
+    "cs": "Makadamové ořechy jsou kulaté oříšky, po kterých může být pes slabý a vrávorat. Dej je tam, kam pes nedosáhne, a když nějaké sní, řekni to dospělému.",
+    "hr": "Makadamija je okrugli orašasti plod od kojeg pas može postati slab i nesiguran na nogama. Drži je podalje od psa i reci odrasloj osobi ako je tvoj pas pojede."
   },
   "faq": [
     {
@@ -181,7 +196,8 @@
         "pt": "Os outros frutos secos também são tóxicos?",
         "nl": "Zijn andere noten ook giftig?",
         "pl": "Czy inne orzechy też są toksyczne?",
-        "cs": "Jsou jedovaté i jiné ořechy?"
+        "cs": "Jsou jedovaté i jiné ořechy?",
+        "hr": "Jesu li i drugi orašasti plodovi otrovni?"
       },
       "a": {
         "en": "Macadamias are the toxic ones. Other nuts such as almonds, pecans and walnuts are very fatty and can cause vomiting, diarrhoea and possibly pancreatitis, so they are not a good treat either.",
@@ -193,7 +209,8 @@
         "pt": "As macadâmias são as tóxicas. Outros frutos secos, como amêndoas, nozes-pecã e nozes, são muito gordos e podem causar vómitos, diarreia e possivelmente pancreatite, por isso também não são uma boa guloseima.",
         "nl": "Macadamianoten zijn de echt giftige noten. Andere noten, zoals amandelen, pecannoten en walnoten, zijn erg vet en kunnen braken, diarree en mogelijk alvleesklierontsteking veroorzaken, dus ook die zijn geen goed snoepje.",
         "pl": "Toksyczne są orzechy makadamia. Inne orzechy, takie jak migdały, orzechy pekan i orzechy włoskie, są bardzo tłuste i mogą wywołać wymioty, biegunkę, a być może także zapalenie trzustki, więc też nie są dobrym smakołykiem.",
-        "cs": "Jedovaté jsou makadamové ořechy. Jiné ořechy, například mandle, pekanové a vlašské ořechy, jsou velmi tučné a mohou způsobit zvracení, průjem a případně zánět slinivky břišní, takže ani ony nejsou vhodným pamlskem."
+        "cs": "Jedovaté jsou makadamové ořechy. Jiné ořechy, například mandle, pekanové a vlašské ořechy, jsou velmi tučné a mohou způsobit zvracení, průjem a případně zánět slinivky břišní, takže ani ony nejsou vhodným pamlskem.",
+        "hr": "Otrovna je makadamija. Drugi orašasti plodovi, poput badema, pekan oraha i oraha, vrlo su masni i mogu izazvati povraćanje, proljev, a možda i upalu gušterače, pa ni oni nisu dobra poslastica."
       }
     },
     {
@@ -207,7 +224,8 @@
         "pt": "Quanto tempo duram os sinais?",
         "nl": "Hoelang duren de verschijnselen?",
         "pl": "Jak długo trwają objawy?",
-        "cs": "Jak dlouho příznaky trvají?"
+        "cs": "Jak dlouho příznaky trvají?",
+        "hr": "Koliko dugo traju znakovi?"
       },
       "a": {
         "en": "Signs generally resolve within 12–48 hours, but your vet should still be told straight away.",
@@ -219,7 +237,8 @@
         "pt": "Os sinais costumam passar em 12–48 horas, mas deves avisar imediatamente o teu veterinário na mesma.",
         "nl": "Verschijnselen verdwijnen meestal binnen 12–48 uur, maar laat het je dierenarts toch meteen weten.",
         "pl": "Objawy na ogół ustępują w ciągu 12–48 godzin, ale i tak trzeba od razu powiadomić weterynarza.",
-        "cs": "Příznaky obvykle odezní během 12–48 hodin, přesto ale dejte veterináři vědět hned."
+        "cs": "Příznaky obvykle odezní během 12–48 hodin, přesto ale dejte veterináři vědět hned.",
+        "hr": "Znakovi uglavnom prođu unutar 12–48 sati, ali svejedno odmah obavijesti veterinara."
       }
     }
   ],
@@ -334,6 +353,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9d9a0afa41c22668bde1a26fa15d3c4c80c3457a8dadf74c75536aa0dc186015"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "90b3f9f5c3de0077c95e98fb6c8e2eabb51e0edb1167bc39f57e699a4a7b1cd4"
     }
   }
 }

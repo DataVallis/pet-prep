@@ -4,28 +4,33 @@
   "name": {
     "en": "Apple seeds",
     "sl": "Jabolčne pečke",
-    "cs": "Jablečná jádra"
+    "cs": "Jablečná jádra",
+    "hr": "Sjemenke jabuke"
   },
   "question": {
     "en": "Can cats eat apple seeds?",
     "sl": "Ali lahko mačke jedo jabolčne pečke?",
-    "cs": "Mohou kočky jíst jablečná jádra?"
+    "cs": "Mohou kočky jíst jablečná jádra?",
+    "hr": "Smiju li mačke jesti sjemenke jabuke?"
   },
   "url_slug": {
     "en": "apple-seeds",
     "sl": "jabolcne-pecke",
-    "cs": "jablecna-jadra"
+    "cs": "jablecna-jadra",
+    "hr": "sjemenke-jabuke"
   },
   "level": "dangerous",
   "answer": {
     "en": "No. Apple seeds should not be given to cats: they contain cyanide, and seeds and cores can cause choking or a gut blockage. Poisoning mainly matters when many seeds are eaten, so call your vet if your cat ate many seeds or chewed apple stems or leaves.",
     "sl": "Ne. Jabolčnih pečk mačkam ne dajajte: vsebujejo cianid, pečke in peščišče pa lahko povzročijo dušenje ali zamašitev črevesja. Zastrupitev je predvsem skrb, ko žival poje veliko pečk, zato pokličite veterinarja, če je mačka pojedla veliko pečk ali grizljala peclje ali liste jablane.",
-    "cs": "Ne. Jablečná jádra kočkám nedávejte: obsahují kyanid a jádra i ohryzky mohou způsobit dušení nebo ucpání střev. Otrava hrozí hlavně tehdy, když kočka sní hodně jader, proto zavolejte veterináři, pokud kočka snědla hodně jader nebo okusovala jablečné stopky či listy."
+    "cs": "Ne. Jablečná jádra kočkám nedávejte: obsahují kyanid a jádra i ohryzky mohou způsobit dušení nebo ucpání střev. Otrava hrozí hlavně tehdy, když kočka sní hodně jader, proto zavolejte veterináři, pokud kočka snědla hodně jader nebo okusovala jablečné stopky či listy.",
+    "hr": "Ne. Sjemenke jabuke ne treba davati mačkama: sadrže cijanid, a sjemenke i sredina jabuke mogu izazvati gušenje ili začepljenje crijeva. Otrovanje je uglavnom problem kad mačka pojede mnogo sjemenki, zato nazovi veterinara ako je tvoja mačka pojela mnogo sjemenki ili žvakala peteljke ili listove jabuke."
   },
   "why": {
     "en": "NC State's veterinary hospital lists apple seeds under \"Toxic to pets: do not feed!\" on its page for cats and dogs, and the ASPCA lists the apple plant as toxic to cats because its stems, leaves and seeds contain cyanide (as cyanogenic glycosides). Pet Poison Helpline adds that the core and seeds can cause choking and intestinal obstruction, but that a pet would need to eat massive amounts of seeds for the cyanide to be a concern. We follow the stricter advice: don't give them.",
     "sl": "Veterinarska bolnišnica univerze NC State na svoji strani za mačke in pse navaja jabolčne pečke pod »Strupeno za živali: ne hranite!«, ASPCA pa rastlino jablane navaja kot strupeno za mačke, ker njeni peclji, listi in pečke vsebujejo cianid (v obliki cianogenih glikozidov). Pet Poison Helpline dodaja, da lahko peščišče in pečke povzročijo dušenje in zamašitev črevesja, za zastrupitev s cianidom pa bi morala žival pojesti ogromno pečk. Sledimo strožjemu nasvetu: ne dajajte jih.",
-    "cs": "Veterinární nemocnice Státní univerzity Severní Karolíny (NC State) uvádí jablečná jádra na své stránce pro kočky a psy v části „Toxické pro zvířata: nekrmte!“ a ASPCA vede jabloň jako rostlinu toxickou pro kočky, protože její stonky, listy a semena obsahují kyanid (ve formě kyanogenních glykosidů). Pet Poison Helpline dodává, že ohryzek a jádra mohou způsobit dušení a ucpání střev, ale aby byl kyanid problémem, muselo by zvíře sníst obrovské množství jader. Držíme se přísnějšího doporučení: nedávejte je."
+    "cs": "Veterinární nemocnice Státní univerzity Severní Karolíny (NC State) uvádí jablečná jádra na své stránce pro kočky a psy v části „Toxické pro zvířata: nekrmte!“ a ASPCA vede jabloň jako rostlinu toxickou pro kočky, protože její stonky, listy a semena obsahují kyanid (ve formě kyanogenních glykosidů). Pet Poison Helpline dodává, že ohryzek a jádra mohou způsobit dušení a ucpání střev, ale aby byl kyanid problémem, muselo by zvíře sníst obrovské množství jader. Držíme se přísnějšího doporučení: nedávejte je.",
+    "hr": "Veterinarska bolnica sveučilišta NC State na svojoj stranici za mačke i pse navodi sjemenke jabuke pod „Otrovno za ljubimce: ne davati!“, a ASPCA navodi biljku jabuke kao otrovnu za mačke jer njezine peteljke, listovi i sjemenke sadrže cijanid (u obliku cijanogenih glikozida). Pet Poison Helpline dodaje da sredina i sjemenke mogu izazvati gušenje i začepljenje crijeva, ali da bi ljubimac morao pojesti golemu količinu sjemenki da bi cijanid bio razlog za brigu. Mi se držimo strožeg savjeta: ne daj ih mački."
   },
   "signs": {
     "en": [
@@ -48,30 +53,41 @@
       "Dýchací potíže",
       "Dýchání s otevřenou tlamou",
       "Šok"
+    ],
+    "hr": [
+      "Ciglastocrvene desni",
+      "Proširene zjenice",
+      "Otežano disanje",
+      "Dahtanje",
+      "Šok"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline as soon as possible if your cat ate many apple seeds, chewed apple stems or leaves, or shows any of these signs.",
     "sl": "Čim prej se obrnite na veterinarja ali center za zastrupitve živali, če je mačka pojedla veliko jabolčnih pečk, grizljala peclje ali liste jablane ali kaže katerega od teh znakov.",
-    "cs": "Co nejdříve se obraťte na veterináře nebo na toxikologickou linku pro zvířata, pokud kočka snědla hodně jablečných jader, okusovala jablečné stopky nebo listy nebo má některý z těchto příznaků."
+    "cs": "Co nejdříve se obraťte na veterináře nebo na toxikologickou linku pro zvířata, pokud kočka snědla hodně jablečných jader, okusovala jablečné stopky nebo listy nebo má některý z těchto příznaků.",
+    "hr": "Što prije se obrati veterinaru ili telefonskoj liniji za otrovanja životinja ako je tvoja mačka pojela mnogo sjemenki jabuke, žvakala peteljke ili listove jabuke ili pokazuje bilo koji od ovih znakova."
   },
   "serving": null,
   "child": {
     "en": "Apple seeds are not for cats. If kitty finds some, tell a grown-up.",
     "sl": "Jabolčne pečke niso za muce. Če jih muca najde, povej odraslemu.",
-    "cs": "Jablečná jádra nejsou pro kočky. Když na nějaká kočička narazí, řekni to dospělému."
+    "cs": "Jablečná jádra nejsou pro kočky. Když na nějaká kočička narazí, řekni to dospělému.",
+    "hr": "Sjemenke jabuke nisu za mace. Ako ih maca pronađe, reci odrasloj osobi."
   },
   "faq": [
     {
       "q": {
         "en": "My cat swallowed one apple seed. What now?",
         "sl": "Muca je pogoltnila eno jabolčno pečko. Kaj zdaj?",
-        "cs": "Moje kočka spolkla jedno jablečné jádro. Co teď?"
+        "cs": "Moje kočka spolkla jedno jablečné jádro. Co teď?",
+        "hr": "Moja je mačka progutala jednu sjemenku jabuke. Što sad?"
       },
       "a": {
         "en": "Pet Poison Helpline says a pet would need to eat massive amounts of apple seeds for them to be a concern. If you are unsure or see any signs, contact your vet.",
         "sl": "Pet Poison Helpline navaja, da bi morala žival pojesti ogromno jabolčnih pečk, da bi bile skrb vzbujajoče. Če niste prepričani ali opazite znake, se obrnite na veterinarja.",
-        "cs": "Podle Pet Poison Helpline by zvíře muselo sníst obrovské množství jablečných jader, aby byla problémem. Pokud si nejste jistí nebo si všimnete jakýchkoli příznaků, obraťte se na veterináře."
+        "cs": "Podle Pet Poison Helpline by zvíře muselo sníst obrovské množství jablečných jader, aby byla problémem. Pokud si nejste jistí nebo si všimnete jakýchkoli příznaků, obraťte se na veterináře.",
+        "hr": "Pet Poison Helpline navodi da bi ljubimac morao pojesti golemu količinu sjemenki jabuke da bi one bile razlog za brigu. U slučaju dvojbe ili ako primijetiš bilo kakve znakove, obrati se veterinaru."
       }
     }
   ],
@@ -152,6 +168,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "86a2220b2ac4db15296bb92491eab5fc82e0efb79775cbf0797e346a40002695"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "155952176be6f7856bdd63cff62653d134e9626b2559a3e3ee12ace8f6b5aeb1"
     }
   }
 }

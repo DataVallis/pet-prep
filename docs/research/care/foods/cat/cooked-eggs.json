@@ -11,7 +11,8 @@
     "pt": "Ovos cozinhados",
     "nl": "Gekookte eieren",
     "pl": "Gotowane jajka",
-    "cs": "Tepelně upravená vejce"
+    "cs": "Tepelně upravená vejce",
+    "hr": "Kuhana jaja"
   },
   "question": {
     "en": "Can cats eat cooked eggs?",
@@ -23,7 +24,8 @@
     "pt": "Os gatos podem comer ovos cozinhados?",
     "nl": "Mogen katten gekookte eieren eten?",
     "pl": "Czy koty mogą jeść gotowane jajka?",
-    "cs": "Mohou kočky jíst tepelně upravená vejce?"
+    "cs": "Mohou kočky jíst tepelně upravená vejce?",
+    "hr": "Smiju li mačke jesti kuhana jaja?"
   },
   "url_slug": {
     "en": "cooked-eggs",
@@ -35,7 +37,8 @@
     "pt": "ovos-cozinhados",
     "nl": "gekookte-eieren",
     "pl": "gotowane-jajka",
-    "cs": "tepelne-upravena-vejce"
+    "cs": "tepelne-upravena-vejce",
+    "hr": "kuhana-jaja"
   },
   "level": "small_amounts",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Sim, em pequenas quantidades. Um pouco de ovo simples e bem cozinhado pode ser uma guloseima ocasional. Os ovos são uma proteína comum na comida para gatos, mas só devem ser dados com moderação e nunca crus.",
     "nl": "Ja, in kleine hoeveelheden. Een beetje goed gaar, onbewerkt ei is af en toe prima als snoepje. Eieren zijn een veelgebruikte eiwitbron in kattenvoer, maar geef ze alleen met mate en nooit rauw.",
     "pl": "Tak, w małych ilościach. Odrobina dobrze ugotowanego jajka bez dodatków jest w porządku jako okazjonalny smakołyk. Jajka to częste źródło białka w karmie dla kotów, ale należy je podawać z umiarem i nigdy na surowo.",
-    "cs": "Ano, v malém množství. Trocha důkladně tepelně upraveného vejce bez přísad je jako občasný pamlsek v pořádku. Vejce jsou běžným zdrojem bílkovin v kočičím krmivu, ale měla by se podávat jen s mírou a nikdy syrová."
+    "cs": "Ano, v malém množství. Trocha důkladně tepelně upraveného vejce bez přísad je jako občasný pamlsek v pořádku. Vejce jsou běžným zdrojem bílkovin v kočičím krmivu, ale měla by se podávat jen s mírou a nikdy syrová.",
+    "hr": "Da, u malim količinama. Malo potpuno termički obrađenog, običnog jajeta u redu je kao povremena poslastica. Jaja su čest izvor bjelančevina u hrani za mačke, ali treba ih davati samo umjereno i nikad sirova."
   },
   "why": {
     "en": "Cornell lists eggs among the protein sources most commonly used in cat food, and PDSA says eggs suit pets, but only in moderation. Cooking matters: raw eggs can carry Salmonella and raw egg white blocks the vitamin biotin. Treats should be a small part of a cat's diet.",
@@ -60,7 +64,8 @@
     "pt": "A Universidade Cornell inclui os ovos entre as fontes de proteína mais usadas na comida para gatos, e a PDSA diz que os ovos são adequados para animais de estimação, mas só com moderação. A cozedura é importante: os ovos crus podem conter Salmonella e a clara crua bloqueia a vitamina biotina. As guloseimas devem ser uma pequena parte da alimentação do gato.",
     "nl": "Cornell noemt eieren bij de eiwitbronnen die het meest worden gebruikt in kattenvoer, en volgens PDSA zijn eieren geschikt voor huisdieren, maar alleen met mate. Garen is belangrijk: rauwe eieren kunnen Salmonella bevatten en rauw eiwit blokkeert de vitamine biotine. Snoepjes horen maar een klein deel van het eten van een kat te zijn.",
     "pl": "Cornell wymienia jajka wśród źródeł białka najczęściej używanych w karmie dla kotów, a PDSA podaje, że jajka nadają się dla zwierząt, ale tylko z umiarem. Obróbka termiczna ma znaczenie: surowe jajka mogą przenosić bakterie Salmonella, a surowe białko jaja blokuje witaminę biotynę. Smakołyki powinny stanowić niewielką część diety kota.",
-    "cs": "Cornellova univerzita uvádí vejce mezi nejčastěji používanými zdroji bílkovin v kočičím krmivu a podle PDSA jsou vejce pro zvířata vhodná, ale jen s mírou. Záleží na tepelné úpravě: syrová vejce mohou přenášet salmonelu a syrový bílek blokuje vitamin biotin. Pamlsky by měly tvořit jen malou část kočičí stravy."
+    "cs": "Cornellova univerzita uvádí vejce mezi nejčastěji používanými zdroji bílkovin v kočičím krmivu a podle PDSA jsou vejce pro zvířata vhodná, ale jen s mírou. Záleží na tepelné úpravě: syrová vejce mohou přenášet salmonelu a syrový bílek blokuje vitamin biotin. Pamlsky by měly tvořit jen malou část kočičí stravy.",
+    "hr": "Cornell navodi jaja među najčešćim izvorima bjelančevina u hrani za mačke, a PDSA navodi da su jaja prikladna za ljubimce, ali samo umjereno. Termička obrada je važna: sirova jaja mogu prenositi salmonelu, a sirovi bjelanjak sprječava iskorištavanje vitamina biotina. Poslastice trebaju biti mali dio mačje prehrane."
   },
   "signs": null,
   "what_to_do": {
@@ -73,7 +78,8 @@
     "pt": "Começa por oferecer um pedaço pequeno. Se depois o teu gato tiver vómitos ou diarreia, para e pergunta ao teu veterinário antes de voltar a tentar.",
     "nl": "Geef eerst een klein stukje. Krijgt je kat daarna last van braken of diarree, stop dan en vraag je dierenarts om advies voordat je het opnieuw probeert.",
     "pl": "Najpierw podaj mały kawałek. Jeśli potem twój kot wymiotuje lub ma biegunkę, przestań i zapytaj weterynarza, zanim spróbujesz ponownie.",
-    "cs": "Nejdřív nabídněte malý kousek. Pokud kočka potom zvrací nebo má průjem, přestaňte, a než to zkusíte znovu, poraďte se s veterinářem."
+    "cs": "Nejdřív nabídněte malý kousek. Pokud kočka potom zvrací nebo má průjem, přestaňte, a než to zkusíte znovu, poraďte se s veterinářem.",
+    "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili dobije proljev, prestani i pitaj veterinara prije nego što pokušaš ponovno."
   },
   "serving": {
     "en": "Fully cooked and plain, with nothing added; a small piece as an occasional treat.",
@@ -85,7 +91,8 @@
     "pt": "Bem cozinhado e simples, sem nada adicionado; um pedaço pequeno como guloseima ocasional.",
     "nl": "Goed gaar en onbewerkt, zonder toevoegingen; af en toe een klein stukje als snoepje.",
     "pl": "Dobrze ugotowane i bez żadnych dodatków; mały kawałek jako okazjonalny smakołyk.",
-    "cs": "Důkladně tepelně upravené a bez jakýchkoli přísad; malý kousek jako občasný pamlsek."
+    "cs": "Důkladně tepelně upravené a bez jakýchkoli přísad; malý kousek jako občasný pamlsek.",
+    "hr": "Potpuno termički obrađeno i obično, bez ičega dodanog; mali komadić kao povremena poslastica."
   },
   "child": {
     "en": "A tiny bit of plain cooked egg can be a treat for a cat. Ask a grown-up to cook it first.",
@@ -97,7 +104,8 @@
     "pt": "Um bocadinho de ovo cozinhado simples pode ser uma guloseima para um gato. Pede primeiro a um adulto que o cozinhe.",
     "nl": "Een klein beetje gewoon gekookt ei kan een snoepje zijn voor een kat. Vraag een volwassene om het eerst te koken.",
     "pl": "Odrobina zwykłego gotowanego jajka może być smakołykiem dla kota. Poproś dorosłego, żeby najpierw je ugotował.",
-    "cs": "Kousíček obyčejného uvařeného vajíčka může být pro kočku pamlsek. Požádej dospělého, ať ho nejdřív připraví."
+    "cs": "Kousíček obyčejného uvařeného vajíčka může být pro kočku pamlsek. Požádej dospělého, ať ho nejdřív připraví.",
+    "hr": "Malo običnog kuhanog jajeta može biti poslastica za macu. Zamoli odraslu osobu da ga najprije skuha."
   },
   "faq": [
     {
@@ -111,7 +119,8 @@
         "pt": "Porque não crus?",
         "nl": "Waarom niet rauw?",
         "pl": "Dlaczego nie na surowo?",
-        "cs": "Proč ne syrová?"
+        "cs": "Proč ne syrová?",
+        "hr": "Zašto ne sirova?"
       },
       "a": {
         "en": "Raw eggs can carry bacteria such as Salmonella, and raw egg white contains avidin, which stops the vitamin biotin being absorbed.",
@@ -123,7 +132,8 @@
         "pt": "Os ovos crus podem conter bactérias como a Salmonella, e a clara crua contém avidina, que impede a absorção da vitamina biotina.",
         "nl": "Rauwe eieren kunnen bacteriën zoals Salmonella bevatten, en rauw eiwit bevat avidine, waardoor de vitamine biotine niet wordt opgenomen.",
         "pl": "Surowe jajka mogą przenosić bakterie, takie jak Salmonella, a surowe białko jaja zawiera awidynę, która uniemożliwia wchłanianie witaminy biotyny.",
-        "cs": "Syrová vejce mohou přenášet bakterie, například salmonelu, a syrový bílek obsahuje avidin, který brání vstřebávání vitaminu biotinu."
+        "cs": "Syrová vejce mohou přenášet bakterie, například salmonelu, a syrový bílek obsahuje avidin, který brání vstřebávání vitaminu biotinu.",
+        "hr": "Sirova jaja mogu prenositi bakterije poput salmonele, a sirovi bjelanjak sadrži avidin, koji sprječava apsorpciju vitamina biotina."
       }
     }
   ],
@@ -212,6 +222,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3913367cfe6fa2f338e0d89257acbe1a9e4f540a4f102b7813264ac86fe15f3d"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7f249faa17db06fadd71cc11746f0aa80ec610c8625808f34f49484091fd03ff"
     }
   }
 }

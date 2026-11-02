@@ -11,7 +11,8 @@
     "pt": "Carne de porco",
     "nl": "Varkensvlees",
     "pl": "Wieprzowina",
-    "cs": "Vepřové maso"
+    "cs": "Vepřové maso",
+    "hr": "Svinjetina"
   },
   "question": {
     "en": "Can cats eat pork?",
@@ -23,7 +24,8 @@
     "pt": "Os gatos podem comer carne de porco?",
     "nl": "Mogen katten varkensvlees eten?",
     "pl": "Czy koty mogą jeść wieprzowinę?",
-    "cs": "Mohou kočky jíst vepřové maso?"
+    "cs": "Mohou kočky jíst vepřové maso?",
+    "hr": "Smiju li mačke jesti svinjetinu?"
   },
   "url_slug": {
     "en": "pork",
@@ -35,7 +37,8 @@
     "pt": "carne-de-porco",
     "nl": "varkensvlees",
     "pl": "wieprzowina",
-    "cs": "veprove-maso"
+    "cs": "veprove-maso",
+    "hr": "svinjetina"
   },
   "level": "small_amounts",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Sim, um pouco de carne de porco simples e bem cozinhada pode ser dada como guloseima ocasional. Retira a gordura, tira todos os ossos e não juntes temperos. A carne de porco crua não é recomendada.",
     "nl": "Ja, een beetje onbewerkt, goed doorbakken varkensvlees is af en toe prima als snoepje. Snijd het vet eraf, haal alle botjes eruit en voeg geen kruiden of zout toe. Rauw varkensvlees raden we af.",
     "pl": "Tak, odrobina zwykłej, dobrze ugotowanej wieprzowiny jest w porządku jako okazjonalny smakołyk. Odkrój tłuszcz, usuń wszystkie kości i nie dodawaj przypraw. Surowa wieprzowina nie jest zalecana.",
-    "cs": "Ano, trocha obyčejného, důkladně tepelně upraveného vepřového masa je v pořádku jako občasný pamlsek. Odkrojte tuk, odstraňte všechny kosti a maso nekořeňte. Syrové vepřové se nedoporučuje."
+    "cs": "Ano, trocha obyčejného, důkladně tepelně upraveného vepřového masa je v pořádku jako občasný pamlsek. Odkrojte tuk, odstraňte všechny kosti a maso nekořeňte. Syrové vepřové se nedoporučuje.",
+    "hr": "Da, malo obične, dobro termički obrađene svinjetine u redu je kao povremena poslastica. Odreži masnoću, ukloni sve kosti i ne dodaji začine. Sirova se svinjetina ne preporučuje."
   },
   "why": {
     "en": "Pork is one of the most common proteins in cat food. As a home treat it must be properly cooked: International Cat Care warns that raw or undercooked meat such as beef, lamb and pork can carry Toxoplasma, and advises feeding only properly cooked food. Fatty trimmings are on RSPCA Australia's do-not-feed list, and cooked bones can splinter. Ham is a different food and is covered separately.",
@@ -60,7 +64,8 @@
     "pt": "A carne de porco é uma das proteínas mais comuns na comida para gatos. Como guloseima caseira, tem de estar bem cozinhada: a International Cat Care avisa que a carne crua ou mal cozinhada, como a de vaca, de borrego e de porco, pode conter Toxoplasma e aconselha a dar apenas comida bem cozinhada. As aparas de gordura estão na lista do que nunca se deve dar da RSPCA Australia, e os ossos cozinhados podem lascar. O fiambre é um alimento diferente e é tratado à parte.",
     "nl": "Varkensvlees is een van de meest gebruikte eiwitbronnen in kattenvoer. Als snoepje thuis moet het goed gaar zijn: International Cat Care waarschuwt dat rauw of onvoldoende gaar vlees zoals rund-, lams- en varkensvlees Toxoplasma kan bevatten, en raadt aan alleen goed gekookt voedsel te geven. Vette afsnijdsels staan bij RSPCA Australia op de lijst van wat je katten niet moet geven, en gekookte botten kunnen splinteren. Ham is een ander voedingsmiddel en wordt apart besproken.",
     "pl": "Wieprzowina to jedno z najczęstszych źródeł białka w karmie dla kotów. Jako domowy smakołyk musi być porządnie obrobiona termicznie: International Cat Care ostrzega, że surowe lub niedogotowane mięso, takie jak wołowina, jagnięcina i wieprzowina, może przenosić toksoplazmę, i zaleca podawanie wyłącznie porządnie ugotowanego jedzenia. RSPCA Australia umieszcza tłuste ścinki na liście rzeczy, których nie wolno podawać, a gotowane kości mogą się rozszczepiać. Szynka to inny produkt i jest opisana osobno.",
-    "cs": "Vepřové patří k nejběžnějším zdrojům bílkovin v krmivech pro kočky. Jako domácí pamlsek musí být řádně tepelně upravené: International Cat Care varuje, že syrové nebo nedostatečně tepelně upravené maso, například hovězí, jehněčí a vepřové, může přenášet toxoplazmu, a doporučuje krmit jen řádně tepelně upravenou potravu. Tučné odřezky RSPCA Australia řadí mezi potraviny, které se kočkám nemají dávat, a tepelně upravené kosti se mohou roztříštit. Šunka je jiná potravina a věnujeme se jí zvlášť."
+    "cs": "Vepřové patří k nejběžnějším zdrojům bílkovin v krmivech pro kočky. Jako domácí pamlsek musí být řádně tepelně upravené: International Cat Care varuje, že syrové nebo nedostatečně tepelně upravené maso, například hovězí, jehněčí a vepřové, může přenášet toxoplazmu, a doporučuje krmit jen řádně tepelně upravenou potravu. Tučné odřezky RSPCA Australia řadí mezi potraviny, které se kočkám nemají dávat, a tepelně upravené kosti se mohou roztříštit. Šunka je jiná potravina a věnujeme se jí zvlášť.",
+    "hr": "Svinjetina je jedan od najčešćih izvora bjelančevina u hrani za mačke. Kao domaća poslastica mora biti dobro termički obrađena: International Cat Care upozorava da sirovo ili nedovoljno termički obrađeno meso, poput govedine, janjetine i svinjetine, može prenositi toksoplazmu (Toxoplasma) i savjetuje davati samo dobro termički obrađenu hranu. Masni obresci nalaze se na popisu RSPCA Australia s namirnicama koje se ne smiju davati, a termički obrađene kosti mogu se rascijepiti. Šunka je druga namirnica i opisana je zasebno."
   },
   "signs": null,
   "what_to_do": {
@@ -73,7 +78,8 @@
     "pt": "Começa por oferecer um pedaço pequeno. Se depois o teu gato tiver vómitos ou diarreia, para e pergunta ao teu veterinário. Se o teu gato engoliu um osso cozinhado, liga ao teu veterinário.",
     "nl": "Geef eerst een klein stukje. Krijgt je kat daarna last van braken of diarree, stop dan en vraag je dierenarts om advies. Heeft je kat een gekookt bot ingeslikt, bel dan je dierenarts.",
     "pl": "Najpierw podaj mały kawałek. Jeśli potem twój kot wymiotuje lub ma biegunkę, przestań i zapytaj weterynarza. Jeśli kot połknął gotowaną kość, zadzwoń do weterynarza.",
-    "cs": "Nejdřív nabídněte malý kousek. Pokud vaše kočka potom zvrací nebo má průjem, přestaňte a poraďte se s veterinářem. Pokud vaše kočka spolkla tepelně upravenou kost, zavolejte veterináři."
+    "cs": "Nejdřív nabídněte malý kousek. Pokud vaše kočka potom zvrací nebo má průjem, přestaňte a poraďte se s veterinářem. Pokud vaše kočka spolkla tepelně upravenou kost, zavolejte veterináři.",
+    "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili ima proljev, prestani i pitaj veterinara. Ako je mačka progutala termički obrađenu kost, nazovi veterinara."
   },
   "serving": {
     "en": "Well cooked, plain, lean, boneless and unseasoned; a few small pieces now and then.",
@@ -85,7 +91,8 @@
     "pt": "Bem cozinhada, simples, magra, sem ossos e sem temperos; alguns pedaços pequenos de vez em quando.",
     "nl": "Goed gaar, onbewerkt, mager, zonder botten en zonder kruiden of zout; af en toe een paar kleine stukjes.",
     "pl": "Dobrze ugotowana, bez dodatków, chuda, bez kości i bez przypraw; od czasu do czasu kilka małych kawałków.",
-    "cs": "Důkladně tepelně upravené, bez přísad, libové, bez kostí a nekořeněné; občas několik malých kousků."
+    "cs": "Důkladně tepelně upravené, bez přísad, libové, bez kostí a nekořeněné; občas několik malých kousků.",
+    "hr": "Dobro termički obrađena, obična, nemasna, bez kostiju i bez začina; nekoliko malih komadića povremeno."
   },
   "child": {
     "en": "A tiny bit of plain cooked pork can be a treat. A grown-up should cook it and take out the bones.",
@@ -97,7 +104,8 @@
     "pt": "Um bocadinho de carne de porco simples e cozinhada pode ser uma guloseima. Um adulto deve cozinhá-la e tirar os ossos.",
     "nl": "Een klein beetje gewoon gekookt varkensvlees kan een snoepje zijn. Een volwassene moet het klaarmaken en de botjes eruit halen.",
     "pl": "Odrobina zwykłej gotowanej wieprzowiny może być smakołykiem. Dorosły powinien ją ugotować i wyjąć kości.",
-    "cs": "Malinký kousek obyčejného, dobře propečeného vepřového může být pamlsek. Připravit ho a vyndat z něj kosti by měl dospělý."
+    "cs": "Malinký kousek obyčejného, dobře propečeného vepřového může být pamlsek. Připravit ho a vyndat z něj kosti by měl dospělý.",
+    "hr": "Mrvica obične kuhane svinjetine može biti poslastica. Neka je odrasla osoba skuha i izvadi kosti."
   },
   "faq": [],
   "sources": [
@@ -203,6 +211,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e0ceec4e363166498903543a3209f9f0fcf04347474ac30fbffaf68bc7cc2815"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1cc58a2c088930817fc2ee417e1138a9f47d731838f09d7c29a965700f4f1c4c"
     }
   }
 }

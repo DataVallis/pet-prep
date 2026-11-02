@@ -11,7 +11,8 @@
     "pt": "Ovos crus",
     "nl": "Rauwe eieren",
     "pl": "Surowe jajka",
-    "cs": "Syrová vejce"
+    "cs": "Syrová vejce",
+    "hr": "Sirova jaja"
   },
   "question": {
     "en": "Can cats eat raw eggs?",
@@ -23,7 +24,8 @@
     "pt": "Os gatos podem comer ovos crus?",
     "nl": "Mogen katten rauwe eieren eten?",
     "pl": "Czy koty mogą jeść surowe jajka?",
-    "cs": "Mohou kočky jíst syrová vejce?"
+    "cs": "Mohou kočky jíst syrová vejce?",
+    "hr": "Smiju li mačke jesti sirova jaja?"
   },
   "url_slug": {
     "en": "raw-eggs",
@@ -35,7 +37,8 @@
     "pt": "ovos-crus",
     "nl": "rauwe-eieren",
     "pl": "surowe-jajka",
-    "cs": "syrova-vejce"
+    "cs": "syrova-vejce",
+    "hr": "sirova-jaja"
   },
   "level": "not_recommended",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Não, não dês ovos crus aos gatos. Os ovos crus podem ter bactérias nocivas, como a Salmonella, que podem pôr doentes tanto os gatos como as pessoas, e a clara crua contém uma proteína que pode bloquear uma vitamina.",
     "nl": "Nee, geef katten geen rauwe eieren. Rauwe eieren kunnen schadelijke bacteriën zoals Salmonella bevatten, waar zowel katten als mensen ziek van kunnen worden, en rauw eiwit bevat een eiwitstof die een vitamine kan blokkeren.",
     "pl": "Nie, nie dawaj kotom surowych jajek. Surowe jajka mogą przenosić szkodliwe bakterie, takie jak Salmonella, które mogą wywołać chorobę zarówno u kotów, jak i u ludzi, a surowe białko jaja zawiera proteinę, która może blokować jedną z witamin.",
-    "cs": "Ne, syrová vejce kočkám nedávejte. Mohou obsahovat škodlivé bakterie, například salmonely, které mohou způsobit onemocnění koček i lidí, a syrový bílek obsahuje bílkovinu, která může blokovat jeden vitamin."
+    "cs": "Ne, syrová vejce kočkám nedávejte. Mohou obsahovat škodlivé bakterie, například salmonely, které mohou způsobit onemocnění koček i lidí, a syrový bílek obsahuje bílkovinu, která může blokovat jeden vitamin.",
+    "hr": "Ne, ne daj mački sirova jaja. Sirova jaja mogu sadržavati štetne bakterije poput salmonele (Salmonella), od kojih se mogu razboljeti i mačke i ljudi, a sirovi bjelanjak sadrži bjelančevinu koja može blokirati jedan vitamin."
   },
   "why": {
     "en": "Raw eggs may contain harmful bacteria and parasites and could mean food poisoning for cats and humans alike. Raw egg white also contains avidin, which binds the vitamin biotin and stops it being absorbed. Cooking food thoroughly protects pets from salmonella.",
@@ -60,7 +64,8 @@
     "pt": "Os ovos crus podem conter bactérias e parasitas nocivos e causar intoxicação alimentar tanto em gatos como em pessoas. A clara crua contém também avidina, que se liga à vitamina biotina e impede a sua absorção. Cozinhar bem os alimentos protege os animais de estimação da salmonela.",
     "nl": "Rauwe eieren kunnen schadelijke bacteriën en parasieten bevatten en kunnen bij katten én mensen voedselvergiftiging veroorzaken. Rauw eiwit bevat ook avidine, dat de vitamine biotine bindt, waardoor die niet wordt opgenomen. Voedsel goed doorgaren beschermt huisdieren tegen Salmonella.",
     "pl": "Surowe jajka mogą zawierać szkodliwe bakterie i pasożyty i grożą zatruciem pokarmowym zarówno kotom, jak i ludziom. Surowe białko jaja zawiera też awidynę, która wiąże witaminę biotynę i uniemożliwia jej wchłanianie. Dokładna obróbka termiczna jedzenia chroni zwierzęta przed salmonellą.",
-    "cs": "Syrová vejce mohou obsahovat škodlivé bakterie a parazity a mohou způsobit otravu jídlem u koček i lidí. Syrový bílek navíc obsahuje avidin, který váže vitamin biotin a brání jeho vstřebávání. Důkladná tepelná úprava potravy chrání zvířata před salmonelou."
+    "cs": "Syrová vejce mohou obsahovat škodlivé bakterie a parazity a mohou způsobit otravu jídlem u koček i lidí. Syrový bílek navíc obsahuje avidin, který váže vitamin biotin a brání jeho vstřebávání. Důkladná tepelná úprava potravy chrání zvířata před salmonelou.",
+    "hr": "Sirova jaja mogu sadržavati štetne bakterije i parazite i mogu izazvati trovanje hranom i kod mačaka i kod ljudi. Sirovi bjelanjak sadrži i avidin, koji veže vitamin biotin i sprječava njegovu apsorpciju. Temeljita termička obrada hrane štiti ljubimce od salmonele."
   },
   "signs": {
     "en": [
@@ -132,6 +137,13 @@
       "Horečka",
       "Nechuť k jídlu",
       "Malátnost"
+    ],
+    "hr": [
+      "Povraćanje",
+      "Proljev, ponekad s krvlju",
+      "Vrućica",
+      "Odbijanje hrane",
+      "Malaksalost"
     ]
   },
   "what_to_do": {
@@ -144,7 +156,8 @@
     "pt": "Se o teu gato lambeu um pouco de ovo cru, vigia se aparecem vómitos, diarreia, febre ou falta de apetite e liga ao teu veterinário se algum destes sinais surgir. Lava as mãos e as superfícies em que o ovo tocou.",
     "nl": "Heeft je kat een beetje rauw ei gelikt? Let op braken, diarree, koorts of niet eten, en bel je dierenarts als je daar iets van ziet. Was je handen en alle oppervlakken waar het ei mee in aanraking is gekomen.",
     "pl": "Jeśli twój kot polizał odrobinę surowego jajka, obserwuj, czy nie pojawią się wymioty, biegunka, gorączka lub brak apetytu, a jeśli tak, zadzwoń do weterynarza. Umyj ręce i wszystkie powierzchnie, których dotknęło jajko.",
-    "cs": "Pokud vaše kočka olízla trochu syrového vejce, sledujte, zda se neobjeví zvracení, průjem, horečka nebo nechuť k jídlu, a pokud ano, zavolejte veterináři. Umyjte si ruce i všechny povrchy, kterých se vejce dotklo."
+    "cs": "Pokud vaše kočka olízla trochu syrového vejce, sledujte, zda se neobjeví zvracení, průjem, horečka nebo nechuť k jídlu, a pokud ano, zavolejte veterináři. Umyjte si ruce i všechny povrchy, kterých se vejce dotklo.",
+    "hr": "Ako je mačka polizala malo sirovog jajeta, prati pojavu povraćanja, proljeva, vrućice ili odbijanja hrane i nazovi veterinara ako se išta od toga pojavi. Operi ruke i sve površine koje su došle u dodir s jajetom."
   },
   "serving": null,
   "child": {
@@ -157,7 +170,8 @@
     "pt": "Os ovos crus podem ter micróbios. Só os adultos devem mexer neles, e os gatos não os devem comer.",
     "nl": "Op rauwe eieren kunnen bacteriën zitten. Alleen volwassenen horen ze aan te raken, en katten mogen ze niet eten.",
     "pl": "Na surowych jajkach mogą być zarazki. Zajmować się nimi powinni tylko dorośli, a koty nie powinny ich jeść.",
-    "cs": "Na syrových vejcích můžou být bacily. Brát je do ruky mají jen dospělí a kočky je jíst nemají."
+    "cs": "Na syrových vejcích můžou být bacily. Brát je do ruky mají jen dospělí a kočky je jíst nemají.",
+    "hr": "Na sirovim jajima mogu biti klice. Smiju ih dirati samo odrasli, a mace ih ne bi smjele jesti."
   },
   "faq": [
     {
@@ -171,7 +185,8 @@
         "pt": "E os ovos cozinhados?",
         "nl": "Zijn gekookte eieren dan wel oké?",
         "pl": "Czy w takim razie gotowane jajka są w porządku?",
-        "cs": "Jsou místo toho v pořádku tepelně upravená vejce?"
+        "cs": "Jsou místo toho v pořádku tepelně upravená vejce?",
+        "hr": "Jesu li onda kuhana jaja u redu?"
       },
       "a": {
         "en": "Cooked egg is a different matter: PDSA says eggs can suit pets, but only in moderation. Cook it fully and serve it plain.",
@@ -183,7 +198,8 @@
         "pt": "O ovo cozinhado é outra história: a PDSA diz que os ovos podem ser adequados para animais de estimação, mas só com moderação. Cozinha-o bem e serve-o simples.",
         "nl": "Gekookt ei is iets anders: volgens PDSA kunnen eieren geschikt zijn voor huisdieren, maar alleen met mate. Kook het goed gaar en geef het zonder toevoegingen.",
         "pl": "Gotowane jajko to inna sprawa: według PDSA jajka mogą być odpowiednie dla zwierząt, ale tylko z umiarem. Ugotuj je dokładnie i podawaj bez dodatków.",
-        "cs": "Tepelně upravené vejce je jiná věc: podle PDSA mohou být vejce pro zvířata vhodná, ale jen s mírou. Vejce důkladně tepelně upravte a podávejte bez ochucení."
+        "cs": "Tepelně upravené vejce je jiná věc: podle PDSA mohou být vejce pro zvířata vhodná, ale jen s mírou. Vejce důkladně tepelně upravte a podávejte bez ochucení.",
+        "hr": "Termički obrađeno jaje nešto je drugo: PDSA navodi da jaja mogu biti prikladna za ljubimce, ali samo umjereno. Potpuno ga termički obradi i posluži bez dodataka."
       }
     }
   ],
@@ -293,6 +309,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5d5b2bf0640f97936de87ae488f19ffe3f6aa52268d13cef824155f752b13f27"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "97ff8ff25c8302fdf432689185d4d783d3bc99bf782e4d150e36f8544b141f83"
     }
   }
 }

@@ -11,7 +11,8 @@
     "pt": "Ossos crus",
     "nl": "Rauwe botten",
     "pl": "Surowe kości",
-    "cs": "Syrové kosti"
+    "cs": "Syrové kosti",
+    "hr": "Sirove kosti"
   },
   "question": {
     "en": "Can cats eat raw bones?",
@@ -23,7 +24,8 @@
     "pt": "Os gatos podem comer ossos crus?",
     "nl": "Mogen katten rauwe botten eten?",
     "pl": "Czy koty mogą jeść surowe kości?",
-    "cs": "Mohou kočky jíst syrové kosti?"
+    "cs": "Mohou kočky jíst syrové kosti?",
+    "hr": "Smiju li mačke jesti sirove kosti?"
   },
   "url_slug": {
     "en": "raw-bones",
@@ -35,7 +37,8 @@
     "pt": "ossos-crus",
     "nl": "rauwe-botten",
     "pl": "surowe-kosci",
-    "cs": "syrove-kosti"
+    "cs": "syrove-kosti",
+    "hr": "sirove-kosti"
   },
   "level": "dangerous",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "É melhor não. A Cats Protection aconselha a evitar os ossos crus, porque aumentam o risco de engasgamento ou de obstrução no estômago. Os ossos também podem ferir o intestino do gato, e a carne crua pode ter bactérias e parasitas nocivos.",
     "nl": "Liever niet. Cats Protection raadt rauwe botten af, omdat ze de kans op verslikken of een verstopping in de maag vergroten. Botten kunnen ook de darmen van een kat beschadigen, en rauw vlees kan schadelijke bacteriën en parasieten bevatten.",
     "pl": "Lepiej nie. Cats Protection radzi unikać surowych kości, bo zwiększają ryzyko zadławienia lub niedrożności żołądka. Kości mogą też zranić przewód pokarmowy kota, a surowe mięso może przenosić szkodliwe bakterie i pasożyty.",
-    "cs": "Raději ne. Cats Protection doporučuje se syrovým kostem vyhnout, protože zvyšují riziko udušení nebo ucpání žaludku. Kosti mohou kočce také poranit trávicí trakt a syrové maso může přenášet škodlivé bakterie a parazity."
+    "cs": "Raději ne. Cats Protection doporučuje se syrovým kostem vyhnout, protože zvyšují riziko udušení nebo ucpání žaludku. Kosti mohou kočce také poranit trávicí trakt a syrové maso může přenášet škodlivé bakterie a parazity.",
+    "hr": "Bolje ne. Cats Protection savjetuje izbjegavati sirove kosti jer povećavaju rizik od gušenja ili začepljenja želuca. Kosti mogu i ozlijediti mačji probavni sustav, a sirovo meso može sadržavati štetne bakterije i parazite."
   },
   "why": {
     "en": "Swallowed bones can injure or block the gut, which can be serious and may need surgery. Raw meat attached to bones may also contain harmful bacteria and parasites.",
@@ -60,7 +64,8 @@
     "pt": "Os ossos engolidos podem ferir ou obstruir o intestino, o que pode ser grave e exigir cirurgia. A carne crua agarrada aos ossos também pode conter bactérias e parasitas nocivos.",
     "nl": "Ingeslikte botten kunnen de darmen beschadigen of verstoppen; dat kan ernstig zijn en soms is een operatie nodig. Rauw vlees aan de botten kan ook schadelijke bacteriën en parasieten bevatten.",
     "pl": "Połknięte kości mogą zranić lub zablokować przewód pokarmowy, co bywa poważne i może wymagać operacji. Surowe mięso na kościach może też zawierać szkodliwe bakterie i pasożyty.",
-    "cs": "Spolknuté kosti mohou poranit nebo ucpat trávicí trakt, což může být vážné a může si to vyžádat operaci. Syrové maso na kostech může také obsahovat škodlivé bakterie a parazity."
+    "cs": "Spolknuté kosti mohou poranit nebo ucpat trávicí trakt, což může být vážné a může si to vyžádat operaci. Syrové maso na kostech může také obsahovat škodlivé bakterie a parazity.",
+    "hr": "Progutane kosti mogu ozlijediti ili začepiti probavni sustav, što može biti ozbiljno i zahtijevati operaciju. Sirovo meso na kostima može sadržavati i štetne bakterije i parazite."
   },
   "signs": {
     "en": [
@@ -112,6 +117,11 @@
       "Dušení",
       "Zvracení",
       "Bolest břicha (kočka se schovává, vrčí, nechce, aby se jí někdo dotýkal)"
+    ],
+    "hr": [
+      "Gušenje",
+      "Povraćanje",
+      "Bol u trbuhu (skrivanje, režanje, izbjegavanje dodira)"
     ]
   },
   "what_to_do": {
@@ -124,7 +134,8 @@
     "pt": "Contacta imediatamente o teu veterinário se o teu gato engoliu um osso ou se estiver a engasgar-se ou a vomitar. Toma nota do tipo de osso e de quando foi. Não esperes para ver o que acontece e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts als je kat een bot heeft ingeslikt, zich verslikt of braakt. Schrijf op wat voor bot het was en wanneer. Wacht niet af wat er gebeurt en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu skontaktuj się z weterynarzem, jeśli twój kot połknął kość, dławi się lub wymiotuje. Zapisz, jaka to była kość i kiedy ją połknął. Nie czekaj na rozwój sytuacji i nie próbuj wywoływać u kota wymiotów w domu.",
-    "cs": "Pokud vaše kočka spolkla kost, dusí se nebo zvrací, okamžitě se obraťte na veterináře. Poznamenejte si, o jakou kost šlo a kdy se to stalo. Nečekejte, co se stane, a nesnažte se u kočky doma vyvolat zvracení."
+    "cs": "Pokud vaše kočka spolkla kost, dusí se nebo zvrací, okamžitě se obraťte na veterináře. Poznamenejte si, o jakou kost šlo a kdy se to stalo. Nečekejte, co se stane, a nesnažte se u kočky doma vyvolat zvracení.",
+    "hr": "Odmah se obrati veterinaru ako je mačka progutala kost, guši se ili povraća. Zapiši o kakvoj se kosti radi i kada se to dogodilo. Ne čekaj da vidiš što će se dogoditi i ne pokušavaj kod kuće izazvati povraćanje."
   },
   "serving": null,
   "child": {
@@ -137,7 +148,8 @@
     "pt": "Os ossos podem ficar presos na garganta ou na barriga de um gato. Não ponhas ossos na tigela do gatinho e avisa um adulto se ele encontrar um.",
     "nl": "Botten kunnen vastraken in de keel of buik van een kat. Geen botten in het bakje van je poes! Vindt ze er een? Vertel het meteen aan een volwassene.",
     "pl": "Kości mogą utknąć kotu w gardle albo w brzuszku. Nie wkładaj kości do miski kotka i powiedz dorosłemu, jeśli kotek jakąś znajdzie.",
-    "cs": "Kosti se kočce můžou zaseknout v krku nebo v bříšku. Do kočičí misky kosti nepatří, a když nějakou kočička najde, řekni to dospělému."
+    "cs": "Kosti se kočce můžou zaseknout v krku nebo v bříšku. Do kočičí misky kosti nepatří, a když nějakou kočička najde, řekni to dospělému.",
+    "hr": "Kosti mogu zapeti maci u grlu ili trbuščiću. Ne stavljaj kosti u macinu zdjelicu i reci odrasloj osobi ako maca neku pronađe."
   },
   "faq": [],
   "sources": [
@@ -231,6 +243,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f67aad29f32b06ece2141ea93a83822d2dec209bd46f7c365d9489f253cc0b6c"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ed7eb801faee9d11b43be19d5569727f8c7afe88f29dc99fc01e790a098d705b"
     }
   }
 }

@@ -11,7 +11,8 @@
     "pt": "Gelado",
     "nl": "IJs",
     "pl": "Lody",
-    "cs": "Zmrzlina"
+    "cs": "Zmrzlina",
+    "hr": "Sladoled"
   },
   "question": {
     "en": "Can cats eat ice cream?",
@@ -23,7 +24,8 @@
     "pt": "Os gatos podem comer gelado?",
     "nl": "Mogen katten ijs eten?",
     "pl": "Czy koty mogą jeść lody?",
-    "cs": "Mohou kočky jíst zmrzlinu?"
+    "cs": "Mohou kočky jíst zmrzlinu?",
+    "hr": "Smiju li mačke jesti sladoled?"
   },
   "url_slug": {
     "en": "ice-cream",
@@ -35,7 +37,8 @@
     "pt": "gelado",
     "nl": "ijs",
     "pl": "lody",
-    "cs": "zmrzlina"
+    "cs": "zmrzlina",
+    "hr": "sladoled"
   },
   "level": "not_recommended",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Não, o gelado não é uma boa guloseima para gatos. É feito com leite e natas, que podem fazer mal ao estômago do gato, e acrescenta gordura e açúcar de que os gatos não precisam.",
     "nl": "Nee, ijs is geen goed snoepje voor katten. Het wordt gemaakt met melk en room, die de maag van een kat van streek kunnen maken, en het bevat vet en suiker die katten niet nodig hebben.",
     "pl": "Nie, lody nie są dobrym smakołykiem dla kotów. Robi się je z mleka i śmietanki, które mogą wywołać u kota rozstrój żołądka, a do tego dostarczają tłuszczu i cukru, których koty nie potrzebują.",
-    "cs": "Ne, zmrzlina není pro kočky dobrý pamlsek. Je vyrobená z mléka a smetany, které mohou kočce podráždit žaludek, a přidává tuk a cukr, které kočky nepotřebují."
+    "cs": "Ne, zmrzlina není pro kočky dobrý pamlsek. Je vyrobená z mléka a smetany, které mohou kočce podráždit žaludek, a přidává tuk a cukr, které kočky nepotřebují.",
+    "hr": "Ne, sladoled nije dobra poslastica za mačke. Napravljen je od mlijeka i vrhnja, koji mački mogu izazvati želučane tegobe, a donosi i mast i šećer koji mačkama ne trebaju."
   },
   "why": {
     "en": "Adult cats have little lactase, the enzyme that digests milk sugar, so milk and other dairy-based products can cause diarrhoea or other digestive upset. Cream and dairy products are high in fat and can lead to weight gain. Sugar isn't toxic to cats, but it is still unhealthy for them and adds calories they don't need.",
@@ -60,7 +64,8 @@
     "pt": "Os gatos adultos têm pouca lactase, a enzima que digere o açúcar do leite, por isso o leite e outros produtos lácteos podem causar diarreia ou outros problemas digestivos. As natas e os laticínios são ricos em gordura e podem levar ao aumento de peso. O açúcar não é tóxico para os gatos, mas continua a não ser saudável para eles e acrescenta calorias de que não precisam.",
     "nl": "Volwassen katten hebben weinig lactase, het enzym dat melksuiker verteert, dus melk en andere zuivelproducten kunnen diarree of andere spijsverteringsklachten veroorzaken. Room en zuivelproducten bevatten veel vet en kunnen tot gewichtstoename leiden. Suiker is niet giftig voor katten, maar wel ongezond en levert calorieën op die ze niet nodig hebben.",
     "pl": "Dorosłe koty mają mało laktazy, czyli enzymu trawiącego cukier mleczny, więc mleko i inne produkty na bazie mleka mogą wywołać biegunkę lub inne problemy trawienne. Śmietanka i produkty mleczne zawierają dużo tłuszczu i mogą prowadzić do tycia. Cukier nie jest dla kotów toksyczny, ale i tak jest dla nich niezdrowy i dostarcza zbędnych kalorii.",
-    "cs": "Dospělé kočky mají málo laktázy, enzymu, který tráví mléčný cukr, takže mléko a další výrobky z mléka mohou způsobit průjem nebo jiné trávicí potíže. Smetana a mléčné výrobky mají vysoký obsah tuku a mohou vést k přibírání na váze. Cukr pro kočky není toxický, přesto pro ně není zdravý a dodává kalorie, které nepotřebují."
+    "cs": "Dospělé kočky mají málo laktázy, enzymu, který tráví mléčný cukr, takže mléko a další výrobky z mléka mohou způsobit průjem nebo jiné trávicí potíže. Smetana a mléčné výrobky mají vysoký obsah tuku a mohou vést k přibírání na váze. Cukr pro kočky není toxický, přesto pro ně není zdravý a dodává kalorie, které nepotřebují.",
+    "hr": "Odrasle mačke imaju malo laktaze, enzima koji probavlja mliječni šećer, pa mlijeko i drugi mliječni proizvodi mogu izazvati proljev ili druge probavne smetnje. Vrhnje i mliječni proizvodi imaju mnogo masti i mogu dovesti do debljanja. Šećer nije otrovan za mačke, ali im ipak nije zdrav i donosi kalorije koje im ne trebaju."
   },
   "signs": {
     "en": [
@@ -112,6 +117,11 @@
       "Průjem",
       "Zvracení",
       "Podrážděný žaludek"
+    ],
+    "hr": [
+      "Proljev",
+      "Povraćanje",
+      "Želučane tegobe"
     ]
   },
   "what_to_do": {
@@ -124,7 +134,8 @@
     "pt": "Se o teu gato comeu gelado, vigia se aparecem diarreia ou vómitos e contacta o teu veterinário para pedir conselho se ele parecer doente. Se o gelado tinha chocolate, contacta imediatamente o teu veterinário.",
     "nl": "Heeft je kat ijs gegeten? Let op diarree of braken en vraag je dierenarts om advies als ze ziek lijkt. Zat er chocolade in het ijs, neem dan meteen contact op met je dierenarts.",
     "pl": "Jeśli twój kot zjadł lody, obserwuj, czy nie ma biegunki ani wymiotów, i poradź się weterynarza, jeśli źle się czuje. Jeśli lody zawierały czekoladę, od razu skontaktuj się z weterynarzem.",
-    "cs": "Pokud kočka snědla zmrzlinu, sledujte, zda nemá průjem nebo nezvrací, a pokud se zdá, že jí není dobře, poraďte se s veterinářem. Pokud zmrzlina obsahovala čokoládu, okamžitě se obraťte na veterináře."
+    "cs": "Pokud kočka snědla zmrzlinu, sledujte, zda nemá průjem nebo nezvrací, a pokud se zdá, že jí není dobře, poraďte se s veterinářem. Pokud zmrzlina obsahovala čokoládu, okamžitě se obraťte na veterináře.",
+    "hr": "Ako je tvoja mačka pojela sladoled, pripazi na proljev ili povraćanje i obrati se veterinaru za savjet ako se čini da joj nije dobro. Ako je sladoled sadržavao čokoladu, odmah se obrati veterinaru."
   },
   "serving": null,
   "child": {
@@ -137,7 +148,8 @@
     "pt": "O gelado é uma guloseima para pessoas. Pode dar dor de barriga aos gatos, por isso guarda o teu gelado só para ti.",
     "nl": "IJs is een snoepje voor mensen. Een kat kan er buikpijn van krijgen, dus houd je ijsje lekker voor jezelf.",
     "pl": "Lody to smakołyk dla ludzi. Od nich kota może boleć brzuszek, więc swojego rożka nie oddawaj.",
-    "cs": "Zmrzlina je mlsání pro lidi. Kočku z ní může bolet bříško, tak si kornoutek nech pro sebe."
+    "cs": "Zmrzlina je mlsání pro lidi. Kočku z ní může bolet bříško, tak si kornoutek nech pro sebe.",
+    "hr": "Sladoled je poslastica za ljude. Od njega mace može zaboljeti trbuščić, zato kornet zadrži za sebe."
   },
   "faq": [
     {
@@ -151,7 +163,8 @@
         "pt": "Os gatos gostam de gelado por ser doce?",
         "nl": "Vinden katten ijs lekker omdat het zoet is?",
         "pl": "Czy koty lubią lody, bo są słodkie?",
-        "cs": "Mají kočky rády zmrzlinu, protože je sladká?"
+        "cs": "Mají kočky rády zmrzlinu, protože je sladká?",
+        "hr": "Vole li mačke sladoled zato što je sladak?"
       },
       "a": {
         "en": "No. Cats can't taste sweetness at all, so sugar gives them nothing but extra calories.",
@@ -163,7 +176,8 @@
         "pt": "Não. Os gatos não sentem o sabor doce, por isso o açúcar não lhes dá nada além de calorias a mais.",
         "nl": "Nee. Katten kunnen helemaal geen zoet proeven, dus suiker geeft ze niets anders dan extra calorieën.",
         "pl": "Nie. Koty w ogóle nie czują smaku słodkiego, więc cukier nie daje im nic poza dodatkowymi kaloriami.",
-        "cs": "Ne. Kočky sladkou chuť vůbec necítí, takže jim cukr nedává nic než kalorie navíc."
+        "cs": "Ne. Kočky sladkou chuť vůbec necítí, takže jim cukr nedává nic než kalorie navíc.",
+        "hr": "Ne. Mačke uopće ne osjećaju slatki okus, pa im šećer ne daje ništa osim dodatnih kalorija."
       }
     }
   ],
@@ -262,6 +276,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d36cc6a79dd2d6e8c79e77373565d71e54354d6cfbb4516ffb433925f191db5a"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bbd81a1cf86bdd7118af265ab61083c9e8de98a834984d7b86f39c2159d5875e"
     }
   }
 }

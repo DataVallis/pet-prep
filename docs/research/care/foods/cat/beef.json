@@ -11,7 +11,8 @@
     "pt": "Carne de vaca",
     "nl": "Rundvlees",
     "pl": "Wołowina",
-    "cs": "Hovězí maso"
+    "cs": "Hovězí maso",
+    "hr": "Govedina"
   },
   "question": {
     "en": "Can cats eat beef?",
@@ -23,7 +24,8 @@
     "pt": "Os gatos podem comer carne de vaca?",
     "nl": "Mogen katten rundvlees eten?",
     "pl": "Czy koty mogą jeść wołowinę?",
-    "cs": "Mohou kočky jíst hovězí maso?"
+    "cs": "Mohou kočky jíst hovězí maso?",
+    "hr": "Smiju li mačke jesti govedinu?"
   },
   "url_slug": {
     "en": "beef",
@@ -35,7 +37,8 @@
     "pt": "carne-de-vaca",
     "nl": "rundvlees",
     "pl": "wolowina",
-    "cs": "hovezi-maso"
+    "cs": "hovezi-maso",
+    "hr": "govedina"
   },
   "level": "small_amounts",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Sim, um pouco de carne de vaca simples e bem cozinhada pode ser dada como guloseima ocasional. Retira a gordura, tira todos os ossos e não juntes temperos. A carne de vaca crua não é recomendada.",
     "nl": "Ja, een beetje onbewerkt, goed doorbakken rundvlees is af en toe prima als snoepje. Snijd het vet eraf, haal alle botjes eruit en voeg geen kruiden of zout toe. Rauw rundvlees raden we af.",
     "pl": "Tak, odrobina zwykłej, dobrze ugotowanej wołowiny jest w porządku jako okazjonalny smakołyk. Odkrój tłuszcz, usuń wszystkie kości i nie dodawaj przypraw. Surowa wołowina nie jest zalecana.",
-    "cs": "Ano, trocha obyčejného, důkladně tepelně upraveného hovězího masa je jako občasný pamlsek v pořádku. Odkrojte tuk, odstraňte všechny kosti a maso nekořeňte. Syrové hovězí maso se nedoporučuje."
+    "cs": "Ano, trocha obyčejného, důkladně tepelně upraveného hovězího masa je jako občasný pamlsek v pořádku. Odkrojte tuk, odstraňte všechny kosti a maso nekořeňte. Syrové hovězí maso se nedoporučuje.",
+    "hr": "Da, malo obične, dobro termički obrađene govedine u redu je kao povremena poslastica. Odreži masnoću, ukloni sve kosti i ne dodaji začine. Sirova se govedina ne preporučuje."
   },
   "why": {
     "en": "Beef is one of the most common proteins in cat food. As a home treat it must be properly cooked: International Cat Care warns that raw or undercooked meat such as beef, lamb and pork can carry Toxoplasma, and advises feeding only properly cooked food. Fatty trimmings are on RSPCA Australia's do-not-feed list, and cooked bones can splinter.",
@@ -60,7 +64,8 @@
     "pt": "A carne de vaca é uma das proteínas mais comuns na comida para gatos. Como guloseima caseira, tem de estar bem cozinhada: a International Cat Care avisa que a carne crua ou mal cozinhada, como a de vaca, de borrego e de porco, pode conter Toxoplasma e aconselha a dar apenas comida bem cozinhada. As aparas de gordura estão na lista do que nunca se deve dar da RSPCA Australia, e os ossos cozinhados podem lascar.",
     "nl": "Rundvlees is een van de meest gebruikte eiwitbronnen in kattenvoer. Als snoepje thuis moet het goed gaar zijn: International Cat Care waarschuwt dat rauw of onvoldoende gaar vlees zoals rund-, lams- en varkensvlees Toxoplasma kan bevatten, en raadt aan alleen goed gekookt voedsel te geven. Vette afsnijdsels staan bij RSPCA Australia op de lijst van wat je katten niet moet geven, en gekookte botten kunnen splinteren.",
     "pl": "Wołowina to jedno z najczęstszych źródeł białka w karmie dla kotów. Jako domowy smakołyk musi być porządnie obrobiona termicznie: International Cat Care ostrzega, że surowe lub niedogotowane mięso, takie jak wołowina, jagnięcina i wieprzowina, może przenosić toksoplazmę, i zaleca podawanie wyłącznie porządnie ugotowanego jedzenia. RSPCA Australia umieszcza tłuste ścinki na liście rzeczy, których nie wolno podawać, a gotowane kości mogą się rozszczepiać.",
-    "cs": "Hovězí maso patří k nejběžnějším zdrojům bílkovin v kočičím krmivu. Jako domácí pamlsek musí být řádně tepelně upravené: International Cat Care upozorňuje, že syrové nebo nedostatečně tepelně upravené maso, například hovězí, jehněčí a vepřové, může přenášet toxoplazmu, a doporučuje krmit pouze řádně tepelně upraveným jídlem. Tučné odřezky RSPCA Australia řadí mezi potraviny, které se kočkám nemají dávat, a tepelně upravené kosti se mohou tříštit."
+    "cs": "Hovězí maso patří k nejběžnějším zdrojům bílkovin v kočičím krmivu. Jako domácí pamlsek musí být řádně tepelně upravené: International Cat Care upozorňuje, že syrové nebo nedostatečně tepelně upravené maso, například hovězí, jehněčí a vepřové, může přenášet toxoplazmu, a doporučuje krmit pouze řádně tepelně upraveným jídlem. Tučné odřezky RSPCA Australia řadí mezi potraviny, které se kočkám nemají dávat, a tepelně upravené kosti se mohou tříštit.",
+    "hr": "Govedina je jedan od najčešćih izvora bjelančevina u hrani za mačke. Kao domaća poslastica mora biti dobro termički obrađena: International Cat Care upozorava da sirovo ili nedovoljno termički obrađeno meso, poput govedine, janjetine i svinjetine, može prenositi toksoplazmu (Toxoplasma) i savjetuje davanje samo dobro termički obrađene hrane. Masni obresci nalaze se na popisu RSPCA Australia s namirnicama koje se ne smiju davati, a termički obrađene kosti mogu se rascijepiti."
   },
   "signs": null,
   "what_to_do": {
@@ -73,7 +78,8 @@
     "pt": "Começa por oferecer um pedaço pequeno. Se depois o teu gato tiver vómitos ou diarreia, para e pergunta ao teu veterinário. Se o teu gato engoliu um osso cozinhado, liga ao teu veterinário.",
     "nl": "Geef eerst een klein stukje. Krijgt je kat daarna last van braken of diarree, stop dan en vraag je dierenarts om advies. Heeft je kat een gekookt bot ingeslikt, bel dan je dierenarts.",
     "pl": "Najpierw podaj mały kawałek. Jeśli potem twój kot wymiotuje lub ma biegunkę, przestań i zapytaj weterynarza. Jeśli kot połknął gotowaną kość, zadzwoń do weterynarza.",
-    "cs": "Nejdřív nabídněte malý kousek. Pokud kočka potom zvrací nebo má průjem, přestaňte a poraďte se s veterinářem. Pokud kočka spolkla tepelně upravenou kost, zavolejte veterináři."
+    "cs": "Nejdřív nabídněte malý kousek. Pokud kočka potom zvrací nebo má průjem, přestaňte a poraďte se s veterinářem. Pokud kočka spolkla tepelně upravenou kost, zavolejte veterináři.",
+    "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili dobije proljev, prestani i pitaj veterinara. Ako je mačka progutala termički obrađenu kost, nazovi veterinara."
   },
   "serving": {
     "en": "Well cooked, plain, lean, boneless and unseasoned; a few small pieces now and then.",
@@ -85,7 +91,8 @@
     "pt": "Bem cozinhada, simples, magra, sem ossos e sem temperos; alguns pedaços pequenos de vez em quando.",
     "nl": "Goed gaar, onbewerkt, mager, zonder botten en zonder kruiden of zout; af en toe een paar kleine stukjes.",
     "pl": "Dobrze ugotowana, bez dodatków, chuda, bez kości i bez przypraw; od czasu do czasu kilka małych kawałków.",
-    "cs": "Důkladně tepelně upravené, bez přísad, libové, bez kostí a nekořeněné; občas několik malých kousků."
+    "cs": "Důkladně tepelně upravené, bez přísad, libové, bez kostí a nekořeněné; občas několik malých kousků.",
+    "hr": "Dobro termički obrađena, obična, nemasna, bez kostiju i bez začina; nekoliko malih komadića povremeno."
   },
   "child": {
     "en": "A tiny bit of plain cooked beef can be a treat. A grown-up should cook it and take out the bones.",
@@ -97,7 +104,8 @@
     "pt": "Um bocadinho de carne de vaca simples e cozinhada pode ser uma guloseima. Um adulto deve cozinhá-la e tirar os ossos.",
     "nl": "Een klein beetje gewoon gekookt rundvlees kan een snoepje zijn. Een volwassene moet het klaarmaken en de botjes eruit halen.",
     "pl": "Odrobina zwykłej gotowanej wołowiny może być smakołykiem. Dorosły powinien ją ugotować i wyjąć kości.",
-    "cs": "Kousíček obyčejného hovězího může být pamlsek, ale jen dobře uvařený nebo upečený. Připravit ho a vyndat kosti by měl dospělý."
+    "cs": "Kousíček obyčejného hovězího může být pamlsek, ale jen dobře uvařený nebo upečený. Připravit ho a vyndat kosti by měl dospělý.",
+    "hr": "Sićušan komadić obične kuhane govedine može biti poslastica. Odrasla osoba treba je skuhati i izvaditi kosti."
   },
   "faq": [],
   "sources": [
@@ -204,6 +212,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e254f09c71d0fb1a8f8febf3b74e8b0ff5408ede9e235b285cf45f43ed12ca14"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "16266f57007901281e00bf0d86d77e8a47323655e9513279c8e452cc3c029da8"
     }
   }
 }

@@ -4,56 +4,66 @@
   "name": {
     "en": "Cantaloupe",
     "sl": "Kantalupa",
-    "cs": "Cukrový meloun"
+    "cs": "Cukrový meloun",
+    "hr": "Dinja"
   },
   "question": {
     "en": "Can cats eat cantaloupe?",
     "sl": "Ali lahko mačke jedo melono kantalupo?",
-    "cs": "Mohou kočky jíst cukrový meloun?"
+    "cs": "Mohou kočky jíst cukrový meloun?",
+    "hr": "Smiju li mačke jesti dinju?"
   },
   "url_slug": {
     "en": "cantaloupe",
     "sl": "kantalupa",
-    "cs": "cukrovy-meloun"
+    "cs": "cukrovy-meloun",
+    "hr": "dinja"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a small piece of cantaloupe is fine as an occasional treat. The ASPCA lists cantaloupe as non-toxic to cats, but cats are meat eaters and don't need fruit, and any plant can upset the stomach, so keep it to a tiny extra.",
     "sl": "Da, majhen košček kantalupe je v redu kot občasen priboljšek. ASPCA kantalupo navaja kot nestrupeno za mačke, vendar so mačke mesojede in sadja ne potrebujejo, vsaka rastlina pa lahko razdraži želodec, zato naj bo le majhen dodatek.",
-    "cs": "Ano, malý kousek cukrového melounu je jako občasný pamlsek v pořádku. ASPCA uvádí cukrový meloun jako netoxický pro kočky, kočky jsou ale masožravci a ovoce nepotřebují a jakákoli rostlina může podráždit žaludek, takže ať je to jen malinký doplněk."
+    "cs": "Ano, malý kousek cukrového melounu je jako občasný pamlsek v pořádku. ASPCA uvádí cukrový meloun jako netoxický pro kočky, kočky jsou ale masožravci a ovoce nepotřebují a jakákoli rostlina může podráždit žaludek, takže ať je to jen malinký doplněk.",
+    "hr": "Da, mali komadić dinje u redu je kao povremena poslastica. ASPCA navodi dinju kao neotrovnu za mačke, ali mačke su mesojedi i ne trebaju voće, a bilo koja biljka može izazvati želučane tegobe, pa neka ostane samo sitan dodatak."
   },
   "why": {
     "en": "The ASPCA lists true cantaloupe (Cucumis melo) as non-toxic to cats. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
     "sl": "ASPCA pravo kantalupo (Cucumis melo) navaja kot nestrupeno za mačke. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave.",
-    "cs": "ASPCA uvádí pravý cukrový meloun (Cucumis melo) jako netoxický pro kočky. Kočky jsou obligátní masožravci a ovoce nepotřebují, pamlsky by měly tvořit jen malou část denní stravy a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku."
+    "cs": "ASPCA uvádí pravý cukrový meloun (Cucumis melo) jako netoxický pro kočky. Kočky jsou obligátní masožravci a ovoce nepotřebují, pamlsky by měly tvořit jen malou část denní stravy a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
+    "hr": "ASPCA navodi pravu dinju kantalupu (Cucumis melo) kao neotrovnu za mačke. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe."
   },
   "signs": null,
   "what_to_do": {
     "en": "Offer a small piece first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
     "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
-    "cs": "Nejdřív nabídněte malý kousek. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem."
+    "cs": "Nejdřív nabídněte malý kousek. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
+    "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara."
   },
   "serving": {
     "en": "A small piece now and then, counted in your cat's daily food.",
     "sl": "Občasno majhen košček, upoštevan v dnevnem obroku.",
-    "cs": "Občas malý kousek, započítaný do denní dávky krmiva vaší kočky."
+    "cs": "Občas malý kousek, započítaný do denní dávky krmiva vaší kočky.",
+    "hr": "Mali komadić povremeno, uračunat u dnevni obrok tvoje mačke."
   },
   "child": {
     "en": "A tiny piece of cantaloupe is OK for a cat now and then. Cats mostly need meat, so fruit is only a small extra.",
     "sl": "Majhen košček kantalupe je za muco občasno v redu. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek.",
-    "cs": "Kousíček cukrového melounu je pro kočku občas v pohodě. Kočky potřebují hlavně maso, takže ovoce je jen malý přídavek."
+    "cs": "Kousíček cukrového melounu je pro kočku občas v pohodě. Kočky potřebují hlavně maso, takže ovoce je jen malý přídavek.",
+    "hr": "Sićušan komadić dinje povremeno je u redu za macu. Mačkama uglavnom treba meso, pa je voće samo mali dodatak."
   },
   "faq": [
     {
       "q": {
         "en": "Do cats need fruit?",
         "sl": "Ali mačke potrebujejo sadje?",
-        "cs": "Potřebují kočky ovoce?"
+        "cs": "Potřebují kočky ovoce?",
+        "hr": "Trebaju li mačke voće?"
       },
       "a": {
         "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
         "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek.",
-        "cs": "Ne. Kočky jsou masožravci: potřebují živiny, které obsahuje maso, a ovoce ani zeleninu ve stravě nepotřebují. Ovoce může být vždy jen malým doplňkem."
+        "cs": "Ne. Kočky jsou masožravci: potřebují živiny, které obsahuje maso, a ovoce ani zeleninu ve stravě nepotřebují. Ovoce může být vždy jen malým doplňkem.",
+        "hr": "Ne. Mačke su mesojedi: trebaju hranjive tvari koje se nalaze u mesu i u prehrani im ne treba ni voće ni povrće. Voće može biti samo mali dodatak."
       }
     }
   ],
@@ -112,6 +122,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ef764d8b42a64d2c01f90d6965268ba699bd5c2a9dd457371e569b5488d94b99"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dff4617bad53f5cf29be2654e56bbfd386bf14e764bbcdaaa70b9154fe7896a7"
     }
   }
 }

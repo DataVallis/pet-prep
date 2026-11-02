@@ -11,7 +11,8 @@
     "pt": "Nozes de macadâmia",
     "nl": "Macadamianoten",
     "pl": "Orzechy makadamia",
-    "cs": "Makadamové ořechy"
+    "cs": "Makadamové ořechy",
+    "hr": "Makadamija"
   },
   "question": {
     "en": "Can cats eat macadamia nuts?",
@@ -23,7 +24,8 @@
     "pt": "Os gatos podem comer nozes de macadâmia?",
     "nl": "Mogen katten macadamianoten eten?",
     "pl": "Czy koty mogą jeść orzechy makadamia?",
-    "cs": "Mohou kočky jíst makadamové ořechy?"
+    "cs": "Mohou kočky jíst makadamové ořechy?",
+    "hr": "Smiju li mačke jesti makadamiju?"
   },
   "url_slug": {
     "en": "macadamia-nuts",
@@ -35,7 +37,8 @@
     "pt": "nozes-de-macadamia",
     "nl": "macadamianoten",
     "pl": "orzechy-makadamia",
-    "cs": "makadamove-orechy"
+    "cs": "makadamove-orechy",
+    "hr": "makadamija"
   },
   "level": "toxic",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Não. As nozes de macadâmia são muito gordas e, segundo a VCA, também são tóxicas e podem pôr os gatos doentes. Mantém-nas fora do alcance do teu gato e contacta o teu veterinário se ele comer alguma.",
     "nl": "Nee. Macadamianoten zijn erg vet, en volgens VCA zijn ze ook giftig en kunnen ze katten ziek maken. Houd ze buiten bereik van je kat en neem contact op met je dierenarts als je kat er iets van eet.",
     "pl": "Nie. Orzechy makadamia są bardzo tłuste, a według VCA także toksyczne i mogą wywołać u kotów chorobę. Trzymaj je poza zasięgiem kota i skontaktuj się z weterynarzem, jeśli kot jakieś zje.",
-    "cs": "Ne. Makadamové ořechy jsou velmi tučné a podle VCA jsou navíc toxické a mohou kočkám způsobit onemocnění. Uchovávejte je mimo dosah kočky, a pokud nějaké sní, obraťte se na veterináře."
+    "cs": "Ne. Makadamové ořechy jsou velmi tučné a podle VCA jsou navíc toxické a mohou kočkám způsobit onemocnění. Uchovávejte je mimo dosah kočky, a pokud nějaké sní, obraťte se na veterináře.",
+    "hr": "Ne. Makadamija je vrlo masna, a prema VCA-u i otrovna te kod mačaka može izazvati bolest. Drži je izvan mačkina dosega i obrati se veterinaru ako je mačka pojede makar malo."
   },
   "why": {
     "en": "Cats Protection lists macadamia among nuts whose high oil and fat content can make cats unwell. VCA says macadamia nuts are very fatty, potentially causing pancreatitis, and also toxic, causing illness in cats. Detailed descriptions of macadamia poisoning mostly come from dogs, but we use the stricter level for cats.",
@@ -60,7 +64,8 @@
     "pt": "A Cats Protection inclui a macadâmia entre os frutos secos cujo elevado teor de óleo e gordura pode pôr os gatos doentes. A VCA diz que as nozes de macadâmia são muito gordas, podendo causar pancreatite, e também tóxicas, causando doença nos gatos. As descrições pormenorizadas da intoxicação por macadâmia vêm sobretudo de cães, mas seguimos o nível mais rigoroso para os gatos.",
     "nl": "Cats Protection noemt macadamia bij de noten die door hun hoge olie- en vetgehalte katten ziek kunnen maken. Volgens VCA zijn macadamianoten erg vet, waardoor ze mogelijk alvleesklierontsteking (pancreatitis) veroorzaken, en ook giftig, waardoor katten ziek worden. Gedetailleerde beschrijvingen van macadamiavergiftiging gaan vooral over honden, maar voor katten volgen wij het strengste niveau.",
     "pl": "Cats Protection wymienia makadamię wśród orzechów, które przez dużą zawartość olejów i tłuszczu mogą zaszkodzić kotom. Według VCA orzechy makadamia są bardzo tłuste, co może wywołać zapalenie trzustki, a do tego są toksyczne i wywołują u kotów chorobę. Szczegółowe opisy zatrucia orzechami makadamia dotyczą głównie psów, ale w przypadku kotów przyjmujemy surowszą ocenę.",
-    "cs": "Cats Protection uvádí makadamové ořechy mezi ořechy, jejichž vysoký obsah oleje a tuku může kočkám uškodit. Podle VCA jsou makadamové ořechy velmi tučné, což může vést k zánětu slinivky břišní, a navíc toxické, takže kočkám způsobují onemocnění. Podrobné popisy otravy makadamovými ořechy se většinou týkají psů, u koček však používáme přísnější hodnocení."
+    "cs": "Cats Protection uvádí makadamové ořechy mezi ořechy, jejichž vysoký obsah oleje a tuku může kočkám uškodit. Podle VCA jsou makadamové ořechy velmi tučné, což může vést k zánětu slinivky břišní, a navíc toxické, takže kočkám způsobují onemocnění. Podrobné popisy otravy makadamovými ořechy se většinou týkají psů, u koček však používáme přísnější hodnocení.",
+    "hr": "Cats Protection navodi makadamiju među orašastim plodovima koji zbog visokog udjela ulja i masti mački mogu naškoditi. VCA navodi da je makadamija vrlo masna, pa može izazvati upalu gušterače, ali i da je otrovna te kod mačaka može izazvati bolest. Detaljni opisi otrovanja makadamijom uglavnom se odnose na pse, ali za mačke primjenjujemo strožu razinu."
   },
   "signs": {
     "en": [
@@ -112,6 +117,11 @@
       "Slabost",
       "Třes",
       "Přehřátí (vysoká tělesná teplota)"
+    ],
+    "hr": [
+      "Slabost",
+      "Drhtanje",
+      "Pregrijavanje (povišena tjelesna temperatura)"
     ]
   },
   "what_to_do": {
@@ -124,7 +134,8 @@
     "pt": "Contacta imediatamente o teu veterinário se o teu gato comeu nozes de macadâmia. Toma nota de quantas comeu e de quando, e guarda a embalagem. Não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts als je kat macadamianoten heeft gegeten. Schrijf op hoeveel ze er heeft gegeten en wanneer, en bewaar de verpakking. Probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu skontaktuj się z weterynarzem, jeśli twój kot zjadł orzechy makadamia. Zapisz, ile ich zjadł i kiedy, i zachowaj opakowanie. Nie próbuj wywoływać u kota wymiotów w domu.",
-    "cs": "Pokud vaše kočka snědla makadamové ořechy, okamžitě se obraťte na veterináře. Poznamenejte si, kolik jich snědla a kdy, a uschovejte obal. Nesnažte se u kočky doma vyvolat zvracení."
+    "cs": "Pokud vaše kočka snědla makadamové ořechy, okamžitě se obraťte na veterináře. Poznamenejte si, kolik jich snědla a kdy, a uschovejte obal. Nesnažte se u kočky doma vyvolat zvracení.",
+    "hr": "Odmah se obrati veterinaru ako je mačka pojela makadamiju. Zapiši koliko je plodova pojela i kada te sačuvaj ambalažu. Ne pokušavaj kod kuće izazvati povraćanje."
   },
   "serving": null,
   "child": {
@@ -137,7 +148,8 @@
     "pt": "As nozes de macadâmia não são para gatos. Mantém a taça dos frutos secos fora do alcance do gatinho e avisa um adulto se ele comer alguma.",
     "nl": "Macadamianoten zijn niet voor katten. Zet het notenschaaltje buiten bereik van je poes. Eet ze er toch van? Vertel het meteen aan een volwassene.",
     "pl": "Orzechy makadamia nie są dla kotów. Trzymaj miseczkę z orzechami poza zasięgiem kotka i powiedz dorosłemu, jeśli kotek jakieś zje.",
-    "cs": "Makadamové ořechy nejsou pro kočky. Misku s ořechy dej tam, kam kočička nedosáhne, a když nějaký sní, řekni to dospělému."
+    "cs": "Makadamové ořechy nejsou pro kočky. Misku s ořechy dej tam, kam kočička nedosáhne, a když nějaký sní, řekni to dospělému.",
+    "hr": "Makadamija nije za mace. Zdjelicu s orašastim plodovima drži tamo gdje je maca ne može dohvatiti, a ako maca ipak pojede koji, reci odrasloj osobi."
   },
   "faq": [
     {
@@ -151,7 +163,8 @@
         "pt": "As nozes de macadâmia são piores do que os outros frutos secos?",
         "nl": "Zijn macadamianoten erger dan andere noten?",
         "pl": "Czy orzechy makadamia są gorsze od innych orzechów?",
-        "cs": "Jsou makadamové ořechy horší než jiné ořechy?"
+        "cs": "Jsou makadamové ořechy horší než jiné ořechy?",
+        "hr": "Je li makadamija opasnija od drugih orašastih plodova?"
       },
       "a": {
         "en": "Yes. Most nuts are very fatty, but VCA says macadamia nuts are also toxic and can cause illness in cats, such as weakness, tremors and overheating.",
@@ -163,7 +176,8 @@
         "pt": "Sim. A maioria dos frutos secos é muito gorda, mas a VCA diz que as nozes de macadâmia também são tóxicas e podem pôr os gatos doentes, com fraqueza, tremores e sobreaquecimento.",
         "nl": "Ja. De meeste noten zijn erg vet, maar volgens VCA zijn macadamianoten ook giftig en kunnen ze katten ziek maken, met verschijnselen zoals zwakte, trillingen en oververhitting.",
         "pl": "Tak. Większość orzechów jest bardzo tłusta, ale według VCA orzechy makadamia są też toksyczne i mogą wywołać u kotów chorobę z objawami takimi jak osłabienie, drżenie mięśni i przegrzanie.",
-        "cs": "Ano. Většina ořechů je velmi tučná, ale makadamové ořechy jsou podle VCA navíc toxické a mohou kočkám způsobit potíže, jako je slabost, třes a přehřátí."
+        "cs": "Ano. Většina ořechů je velmi tučná, ale makadamové ořechy jsou podle VCA navíc toxické a mohou kočkám způsobit potíže, jako je slabost, třes a přehřátí.",
+        "hr": "Jest. Većina orašastih plodova vrlo je masna, ali prema VCA-u makadamija je i otrovna te kod mačaka može izazvati bolest, primjerice slabost, drhtanje i pregrijavanje."
       }
     }
   ],
@@ -258,6 +272,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "da4f888825378cc6a6382a3173ba6887e9586c85251e4bd43817808f4cc706d1"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "924206a7eca3f39fbfea1fd9df329f587c6186e69e690483c05d111e795b085c"
     }
   }
 }

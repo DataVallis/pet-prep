@@ -11,7 +11,8 @@
     "pt": "Alho-francês",
     "nl": "Prei",
     "pl": "Por",
-    "cs": "Pórek"
+    "cs": "Pórek",
+    "hr": "Poriluk"
   },
   "question": {
     "en": "Can cats eat leek?",
@@ -23,7 +24,8 @@
     "pt": "Os gatos podem comer alho-francês?",
     "nl": "Mogen katten prei eten?",
     "pl": "Czy koty mogą jeść pora?",
-    "cs": "Mohou kočky jíst pórek?"
+    "cs": "Mohou kočky jíst pórek?",
+    "hr": "Smiju li mačke jesti poriluk?"
   },
   "url_slug": {
     "en": "leek",
@@ -35,7 +37,8 @@
     "pt": "alho-frances",
     "nl": "prei",
     "pl": "por",
-    "cs": "porek"
+    "cs": "porek",
+    "hr": "poriluk"
   },
   "level": "toxic",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Não. O alho-francês é da mesma família da cebola e do alho e é venenoso para os gatos, cru ou cozinhado. Pode danificar os glóbulos vermelhos e causar anemia. Liga ao teu veterinário se o teu gato comer algum.",
     "nl": "Nee. Prei hoort bij dezelfde familie als ui en knoflook en is giftig voor katten, rauw of gekookt. Het kan rode bloedcellen beschadigen en bloedarmoede veroorzaken. Bel je dierenarts als je kat er iets van eet.",
     "pl": "Nie. Por należy do tej samej rodziny co cebula i czosnek i jest trujący dla kotów – surowy i gotowany. Może uszkadzać czerwone krwinki i wywołać anemię. Zadzwoń do weterynarza, jeśli kot zje choć trochę.",
-    "cs": "Ne. Pórek patří stejně jako cibule a česnek mezi cibuloviny (rod Allium) a je pro kočky jedovatý, syrový i tepelně upravený. Může poškodit červené krvinky a způsobit chudokrevnost (anémii). Pokud ho vaše kočka sní byť jen trochu, zavolejte veterináři."
+    "cs": "Ne. Pórek patří stejně jako cibule a česnek mezi cibuloviny (rod Allium) a je pro kočky jedovatý, syrový i tepelně upravený. Může poškodit červené krvinky a způsobit chudokrevnost (anémii). Pokud ho vaše kočka sní byť jen trochu, zavolejte veterináři.",
+    "hr": "Ne. Poriluk je u istoj porodici kao luk i češnjak i otrovan je za mačke, sirov ili termički obrađen. Može oštetiti crvene krvne stanice i uzrokovati anemiju. Ako mačka pojede imalo poriluka, nazovi veterinara."
   },
   "why": {
     "en": "Leek belongs to the allium family (the onion family). Alliums damage red blood cells and can lead to anaemia, and they also irritate the stomach and gut. Cats are the most sensitive species. All forms are poisonous to cats — raw, cooked, dried, powdered and liquid.",
@@ -60,7 +64,8 @@
     "pt": "O alho-francês pertence à família das aliáceas (a família da cebola). As aliáceas danificam os glóbulos vermelhos e podem levar a anemia, e também irritam o estômago e o intestino. Os gatos são a espécie mais sensível. Todas as formas são venenosas para gatos – cruas, cozinhadas, secas, em pó e líquidas.",
     "nl": "Prei hoort bij de alliumfamilie (de uienfamilie). Alliums beschadigen rode bloedcellen en kunnen tot bloedarmoede leiden, en ze irriteren ook de maag en darmen. Katten zijn de gevoeligste diersoort. Alle vormen zijn giftig voor katten – rauw, gekookt, gedroogd, in poedervorm en vloeibaar.",
     "pl": "Por należy do roślin z rodzaju Allium, czyli z rodziny cebulowatych. Rośliny z tego rodzaju uszkadzają czerwone krwinki, mogą prowadzić do anemii, a do tego podrażniają żołądek i jelita. Koty są gatunkiem najbardziej wrażliwym. Każda postać jest dla kotów trująca – surowa, gotowana, suszona, sproszkowana i płynna.",
-    "cs": "Pórek patří mezi cibuloviny (rod Allium). Cibuloviny poškozují červené krvinky, mohou vést k chudokrevnosti a navíc dráždí žaludek a střeva. Kočky jsou ze všech druhů zvířat nejcitlivější. Pro kočky jsou jedovaté všechny formy – syrová, tepelně upravená, sušená, v prášku i tekutá."
+    "cs": "Pórek patří mezi cibuloviny (rod Allium). Cibuloviny poškozují červené krvinky, mohou vést k chudokrevnosti a navíc dráždí žaludek a střeva. Kočky jsou ze všech druhů zvířat nejcitlivější. Pro kočky jsou jedovaté všechny formy – syrová, tepelně upravená, sušená, v prášku i tekutá.",
+    "hr": "Poriluk pripada biljkama iz roda Allium (porodici luka). Biljke iz roda Allium oštećuju crvene krvne stanice i mogu dovesti do anemije, a uz to nadražuju želudac i crijeva. Mačke su najosjetljivija vrsta. Svi su oblici otrovni za mačke – sirov, termički obrađen, sušen, u prahu i tekući."
   },
   "signs": {
     "en": [
@@ -152,6 +157,15 @@
       "Bledé dásně",
       "Červeně zbarvená moč",
       "Zrychlené nebo namáhavé dýchání"
+    ],
+    "hr": [
+      "Povraćanje",
+      "Proljev",
+      "Slab apetit",
+      "Slabost",
+      "Blijede desni",
+      "Crveno obojena mokraća",
+      "Ubrzano ili otežano disanje"
     ]
   },
   "what_to_do": {
@@ -164,7 +178,8 @@
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, mesmo que o teu gato pareça bem – os sinais de anemia podem demorar vários dias a aparecer. Toma nota do que o teu gato comeu (cru, cozinhado, em pó ou num prato que o continha), da quantidade e de quando. Não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als je kat er gezond uitziet – verschijnselen van bloedarmoede kunnen een paar dagen op zich laten wachten. Schrijf op wat je kat heeft gegeten (rauw, gekookt, als poeder of in een gerecht), hoeveel en wanneer. Probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, nawet jeśli kot wygląda na zdrowego – objawy anemii mogą się pojawić dopiero po kilku dniach. Zapisz, co zjadł twój kot (surowy, gotowany, w proszku czy w potrawie), ile i kiedy. Nie próbuj wywoływać u kota wymiotów w domu.",
-    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, i když se vaše kočka zdá v pořádku – příznaky chudokrevnosti se mohou projevit až po několika dnech. Poznamenejte si, co kočka snědla (syrový pórek, tepelně upravený, v prášku nebo pokrm, který ho obsahoval), kolik a kdy. Nesnažte se u kočky doma vyvolat zvracení."
+    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, i když se vaše kočka zdá v pořádku – příznaky chudokrevnosti se mohou projevit až po několika dnech. Poznamenejte si, co kočka snědla (syrový pórek, tepelně upravený, v prášku nebo pokrm, který ho obsahoval), kolik a kdy. Nesnažte se u kočky doma vyvolat zvracení.",
+    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako se čini da je mačka dobro – znakovi anemije mogu se pokazati tek nakon nekoliko dana. Zapiši što je mačka pojela (sirovo, termički obrađeno, u prahu ili jelo koje ga sadrži), koliko i kada. Ne pokušavaj kod kuće izazvati povraćanje."
   },
   "serving": null,
   "child": {
@@ -177,7 +192,8 @@
     "pt": "O alho-francês é primo da cebola, por isso não é seguro para gatos. Avisa um adulto se o gatinho o mordiscar.",
     "nl": "Prei is familie van de ui, dus het is niet veilig voor katten. Knabbelt je poes eraan? Vertel het meteen aan een volwassene.",
     "pl": "Por to kuzyn cebuli, więc nie jest bezpieczny dla kotów. Powiedz dorosłemu, jeśli kotek trochę go podgryzie.",
-    "cs": "Pórek je bratranec cibule, takže pro kočky není bezpečný. Když ho kočička ochutná, řekni to dospělému."
+    "cs": "Pórek je bratranec cibule, takže pro kočky není bezpečný. Když ho kočička ochutná, řekni to dospělému.",
+    "hr": "Poriluk je rođak luka, pa nije siguran za mace. Ako ga maca malo grickne, reci odrasloj osobi."
   },
   "faq": [
     {
@@ -191,7 +207,8 @@
         "pt": "O alho-francês cozinhado ou seco é seguro para gatos?",
         "nl": "Is gekookte of gedroogde prei veilig voor katten?",
         "pl": "Czy gotowany lub suszony por jest bezpieczny dla kotów?",
-        "cs": "Je tepelně upravený nebo sušený pórek pro kočky bezpečný?"
+        "cs": "Je tepelně upravený nebo sušený pórek pro kočky bezpečný?",
+        "hr": "Je li termički obrađen ili sušen poriluk siguran za mačke?"
       },
       "a": {
         "en": "No. All forms are poisonous to cats, including raw, cooked and dried leek. Be careful with leftovers, sauces, soups and gravy that may contain it.",
@@ -203,7 +220,8 @@
         "pt": "Não. Todas as formas são venenosas para gatos, incluindo o alho-francês cru, cozinhado e seco. Tem cuidado com restos de comida, molhos, sopas e molho de assado que o possam conter.",
         "nl": "Nee. Alle vormen zijn giftig voor katten, ook rauwe, gekookte en gedroogde prei. Wees voorzichtig met restjes, sauzen, soepen en jus waar het in kan zitten.",
         "pl": "Nie. Każda postać jest dla kotów trująca, także por surowy, gotowany i suszony. Uważaj na resztki jedzenia, sosy, zupy i sos pieczeniowy, które mogą go zawierać.",
-        "cs": "Ne. Pro kočky jsou jedovaté všechny formy, včetně syrového, tepelně upraveného i sušeného pórku. Dávejte pozor na zbytky jídla, omáčky, polévky a šťávu z masa, které ho mohou obsahovat."
+        "cs": "Ne. Pro kočky jsou jedovaté všechny formy, včetně syrového, tepelně upraveného i sušeného pórku. Dávejte pozor na zbytky jídla, omáčky, polévky a šťávu z masa, které ho mohou obsahovat.",
+        "hr": "Nije. Za mačke su otrovni svi oblici, uključujući sirov, termički obrađen i sušen poriluk. Pripazi na ostatke hrane, umake, juhe i sok od pečenja koji ga mogu sadržavati."
       }
     }
   ],
@@ -353,6 +371,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "41cf42694ec90c4879edba0db1cfc7d251b09796d113a89d2cd9a26e2028b76c"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "89e127383fa13a0f25727a3d51c62218b666385fd3819448cb45e45e67e5de88"
     }
   }
 }

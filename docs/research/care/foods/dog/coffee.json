@@ -11,7 +11,8 @@
     "pt": "Café",
     "nl": "Koffie",
     "pl": "Kawa",
-    "cs": "Káva"
+    "cs": "Káva",
+    "hr": "Kava"
   },
   "question": {
     "en": "Can dogs drink coffee?",
@@ -23,7 +24,8 @@
     "pt": "Os cães podem beber café?",
     "nl": "Mogen honden koffie drinken?",
     "pl": "Czy psy mogą pić kawę?",
-    "cs": "Mohou psi pít kávu?"
+    "cs": "Mohou psi pít kávu?",
+    "hr": "Smiju li psi piti kavu?"
   },
   "url_slug": {
     "en": "coffee",
@@ -35,7 +37,8 @@
     "pt": "cafe",
     "nl": "koffie",
     "pl": "kawa",
-    "cs": "kava"
+    "cs": "kava",
+    "hr": "kava"
   },
   "level": "toxic",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Não. O café contém cafeína, que é tóxica para os cães; os cães são mais sensíveis a ela do que as pessoas. Uma ou duas lambidelas dificilmente causam intoxicação, mas as borras e os grãos de café podem causar uma intoxicação grave. Os grãos de café cobertos de chocolate são uma dupla ameaça.",
     "nl": "Nee. Koffie bevat cafeïne, en dat is giftig voor honden; honden zijn er gevoeliger voor dan mensen. Een likje of twee veroorzaakt waarschijnlijk geen vergiftiging, maar koffiedik en koffiebonen kunnen ernstige vergiftiging veroorzaken. Koffiebonen met chocolade zijn dubbel gevaarlijk.",
     "pl": "Nie. Kawa zawiera kofeinę, która jest toksyczna dla psów; psy są na nią bardziej wrażliwe niż ludzie. Jedno czy dwa liźnięcia raczej nie spowodują zatrucia, ale fusy i ziarna kawy mogą wywołać poważne zatrucie. Ziarna kawy w czekoladzie to podwójne zagrożenie.",
-    "cs": "Ne. Káva obsahuje kofein, který je pro psy jedovatý; psi jsou na něj citlivější než lidé. Jedno nebo dvě líznutí pravděpodobně otravu nezpůsobí, ale kávová sedlina a zrna mohou vyvolat vážnou otravu. Kávová zrna v čokoládě jsou dvojí hrozbou."
+    "cs": "Ne. Káva obsahuje kofein, který je pro psy jedovatý; psi jsou na něj citlivější než lidé. Jedno nebo dvě líznutí pravděpodobně otravu nezpůsobí, ale kávová sedlina a zrna mohou vyvolat vážnou otravu. Kávová zrna v čokoládě jsou dvojí hrozbou.",
+    "hr": "Ne. Kava sadrži kofein, koji je otrovan za pse; psi su na njega osjetljiviji od ljudi. Jedno ili dva liznuća vjerojatno neće izazvati otrovanje, ali mljevena kava i zrna kave mogu izazvati ozbiljno otrovanje. Zrna kave u čokoladi dvostruka su prijetnja."
   },
   "why": {
     "en": "Caffeine overstimulates the heart and nervous system. It is the same kind of substance that makes chocolate toxic. A lick or two of coffee is unlikely to poison, but unused coffee grounds and beans can cause serious toxicity, and chocolate-covered beans are a double threat.",
@@ -60,7 +64,8 @@
     "pt": "A cafeína estimula em excesso o coração e o sistema nervoso. É o mesmo tipo de substância que torna o chocolate tóxico. Uma ou duas lambidelas de café dificilmente envenenam, mas as borras de café por usar e os grãos podem causar uma intoxicação grave, e os grãos cobertos de chocolate são uma dupla ameaça.",
     "nl": "Cafeïne prikkelt het hart en het zenuwstelsel te veel. Het is dezelfde soort stof die chocolade giftig maakt. Een likje of twee koffie veroorzaakt waarschijnlijk geen vergiftiging, maar ongebruikt koffiedik en koffiebonen kunnen ernstige vergiftiging veroorzaken, en koffiebonen met chocolade zijn dubbel gevaarlijk.",
     "pl": "Kofeina nadmiernie pobudza serce i układ nerwowy. To ten sam rodzaj substancji, który sprawia, że czekolada jest toksyczna. Jedno czy dwa liźnięcia kawy raczej nie zatrują psa, ale niezużyte fusy i ziarna kawy mogą wywołać poważne zatrucie, a ziarna w czekoladzie to podwójne zagrożenie.",
-    "cs": "Kofein nadměrně stimuluje srdce a nervovou soustavu. Patří do stejné skupiny látek, kvůli které je jedovatá čokoláda. Jedno nebo dvě líznutí kávy pravděpodobně otravu nezpůsobí, ale nepoužitá kávová sedlina a zrna mohou vyvolat vážnou otravu a zrna v čokoládě jsou dvojí hrozbou."
+    "cs": "Kofein nadměrně stimuluje srdce a nervovou soustavu. Patří do stejné skupiny látek, kvůli které je jedovatá čokoláda. Jedno nebo dvě líznutí kávy pravděpodobně otravu nezpůsobí, ale nepoužitá kávová sedlina a zrna mohou vyvolat vážnou otravu a zrna v čokoládě jsou dvojí hrozbou.",
+    "hr": "Kofein pretjerano potiče rad srca i živčanog sustava. To je ista vrsta tvari zbog koje je čokolada otrovna. Jedno ili dva liznuća kave vjerojatno neće izazvati otrovanje, ali neiskorištena mljevena kava i zrna mogu izazvati ozbiljno otrovanje, a zrna u čokoladi dvostruka su prijetnja."
   },
   "signs": {
     "en": [
@@ -142,6 +147,14 @@
       "Slinění",
       "Třes",
       "Častější močení"
+    ],
+    "hr": [
+      "Nemir, pretjerana aktivnost, hodanje amo-tamo",
+      "Ubrzan rad srca",
+      "Povraćanje i proljev",
+      "Slinjenje",
+      "Drhtanje",
+      "Češće mokrenje"
     ]
   },
   "what_to_do": {
@@ -154,7 +167,8 @@
     "pt": "Contacta o teu veterinário ou uma linha de apoio toxicológico para animais assim que perceberes que o teu cão ingeriu cafeína. Anota o que era (bebida, borras, grãos, saquetas de chá) e mais ou menos quanto. Não esperes pelos sinais: o tratamento precoce é importante.",
     "nl": "Neem contact op met je dierenarts of een vergiftigingenlijn voor dieren zodra je merkt dat je hond cafeïne binnen heeft gekregen. Schrijf op wat het was (drankje, koffiedik, bonen, theezakjes) en ongeveer hoeveel. Wacht niet op verschijnselen: een vroege behandeling is belangrijk.",
     "pl": "Skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt, gdy tylko zorientujesz się, że twój pies zjadł lub wypił coś z kofeiną. Zanotuj, co to było (napój, fusy, ziarna, torebki herbaty) i mniej więcej ile. Nie czekaj na objawy: liczy się wczesne leczenie.",
-    "cs": "Jakmile zjistíte, že váš pes pozřel kofein, obraťte se na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, o co šlo (nápoj, sedlina, zrna, čajové sáčky) a zhruba kolik. Nečekejte, až se objeví příznaky: na včasné léčbě záleží."
+    "cs": "Jakmile zjistíte, že váš pes pozřel kofein, obraťte se na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, o co šlo (nápoj, sedlina, zrna, čajové sáčky) a zhruba kolik. Nečekejte, až se objeví příznaky: na včasné léčbě záleží.",
+    "hr": "Obrati se veterinaru ili telefonskoj liniji za otrovanja životinja čim shvatiš da je pas unio kofein. Zapiši što je to bilo (piće, mljevena kava, zrna, vrećice čaja) i otprilike koliko. Ne čekaj da se pojave znakovi: rano liječenje je važno."
   },
   "serving": null,
   "child": {
@@ -167,7 +181,8 @@
     "pt": "O café é uma bebida de adultos e não é para cães. Guarda as chávenas e os grãos de café fora do alcance.",
     "nl": "Koffie is een drankje voor volwassenen en niet voor honden. Houd kopjes en koffiebonen buiten bereik.",
     "pl": "Kawa to napój dla dorosłych i nie jest dla psów. Trzymaj kubki i ziarna kawy poza zasięgiem psa.",
-    "cs": "Káva je nápoj pro dospělé a pro psy není. Hrnky i kávová zrna dej tam, kam pes nedosáhne."
+    "cs": "Káva je nápoj pro dospělé a pro psy není. Hrnky i kávová zrna dej tam, kam pes nedosáhne.",
+    "hr": "Kava je piće za odrasle i nije za pse. Drži šalice i zrna kave izvan njihova dosega."
   },
   "faq": [
     {
@@ -181,7 +196,8 @@
         "pt": "O meu cão lambeu a minha chávena. É uma emergência?",
         "nl": "Mijn hond heeft aan mijn kopje gelikt. Is dat een noodgeval?",
         "pl": "Mój pies polizał mój kubek. Czy to nagły przypadek?",
-        "cs": "Můj pes mi olízl hrnek. Je to pohotovost?"
+        "cs": "Můj pes mi olízl hrnek. Je to pohotovost?",
+        "hr": "Moj je pas liznuo moju šalicu. Je li to hitan slučaj?"
       },
       "a": {
         "en": "One or two licks are unlikely to poison most dogs. If your dog drank more, or ate grounds, beans or tea bags, call your vet or a pet poison helpline.",
@@ -193,7 +209,8 @@
         "pt": "Uma ou duas lambidelas dificilmente envenenam a maioria dos cães. Se o teu cão bebeu mais, ou comeu borras, grãos ou saquetas de chá, liga ao teu veterinário ou a uma linha de apoio toxicológico para animais.",
         "nl": "Een of twee likjes veroorzaken bij de meeste honden waarschijnlijk geen vergiftiging. Heeft je hond meer gedronken, of koffiedik, bonen of theezakjes gegeten? Bel dan je dierenarts of een vergiftigingenlijn voor dieren.",
         "pl": "Jedno czy dwa liźnięcia raczej nie zatrują większości psów. Jeśli pies wypił więcej albo zjadł fusy, ziarna lub torebki herbaty, zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt.",
-        "cs": "Jedno nebo dvě líznutí většinu psů pravděpodobně neotráví. Pokud pes vypil víc nebo snědl sedlinu, zrna či čajové sáčky, zavolejte veterináři nebo na toxikologickou linku pro zvířata."
+        "cs": "Jedno nebo dvě líznutí většinu psů pravděpodobně neotráví. Pokud pes vypil víc nebo snědl sedlinu, zrna či čajové sáčky, zavolejte veterináři nebo na toxikologickou linku pro zvířata.",
+        "hr": "Jedno ili dva liznuća vjerojatno neće otrovati većinu pasa. Ako je pas popio više ili pojeo mljevenu kavu, zrna ili vrećice čaja, nazovi veterinara ili telefonsku liniju za otrovanja životinja."
       }
     },
     {
@@ -207,7 +224,8 @@
         "pt": "As borras de café são perigosas?",
         "nl": "Is koffiedik gevaarlijk?",
         "pl": "Czy fusy z kawy są niebezpieczne?",
-        "cs": "Je kávová sedlina nebezpečná?"
+        "cs": "Je kávová sedlina nebezpečná?",
+        "hr": "Je li mljevena kava opasna?"
       },
       "a": {
         "en": "Coffee grounds are a known source of caffeine for pets. Keep grounds and beans away from your dog and call your vet if it eats some.",
@@ -219,7 +237,8 @@
         "pt": "As borras de café são uma fonte conhecida de cafeína para os animais de estimação. Mantém as borras e os grãos longe do teu cão e liga ao teu veterinário se ele comer alguns.",
         "nl": "Koffiedik is een bekende bron van cafeïne voor huisdieren. Houd koffiedik en bonen uit de buurt van je hond en bel je dierenarts als hij ervan eet.",
         "pl": "Fusy z kawy to znane źródło kofeiny dla zwierząt. Trzymaj fusy i ziarna z dala od psa i zadzwoń do weterynarza, jeśli trochę zje.",
-        "cs": "Kávová sedlina je známým zdrojem kofeinu pro zvířata. Sedlinu i zrna držte mimo dosah psa, a pokud je sní, zavolejte veterináři."
+        "cs": "Kávová sedlina je známým zdrojem kofeinu pro zvířata. Sedlinu i zrna držte mimo dosah psa, a pokud je sní, zavolejte veterináři.",
+        "hr": "Mljevena kava poznat je izvor kofeina za ljubimce. Drži mljevenu kavu i zrna podalje od psa i nazovi veterinara ako ih pojede."
       }
     }
   ],
@@ -354,6 +373,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "40340e95cb3509a0a2d9a930685b6292963cdcc141f686766c643eb3ed09c331"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "54ecf255756acb50c4a1262ed86d526828330a0db7593a04d66622e103e930eb"
     }
   }
 }

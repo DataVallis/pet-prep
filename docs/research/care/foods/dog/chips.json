@@ -11,7 +11,8 @@
     "pt": "Batatas fritas de pacote",
     "nl": "Chips",
     "pl": "Chipsy",
-    "cs": "Brambůrky"
+    "cs": "Brambůrky",
+    "hr": "Čips"
   },
   "question": {
     "en": "Can dogs eat chips?",
@@ -23,7 +24,8 @@
     "pt": "Os cães podem comer batatas fritas de pacote?",
     "nl": "Mogen honden chips eten?",
     "pl": "Czy psy mogą jeść chipsy?",
-    "cs": "Mohou psi jíst brambůrky?"
+    "cs": "Mohou psi jíst brambůrky?",
+    "hr": "Smiju li psi jesti čips?"
   },
   "url_slug": {
     "en": "chips",
@@ -35,7 +37,8 @@
     "pt": "batatas-fritas-de-pacote",
     "nl": "chips",
     "pl": "chipsy",
-    "cs": "bramburky"
+    "cs": "bramburky",
+    "hr": "cips"
   },
   "level": "not_recommended",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Não é recomendado. Algumas batatas fritas dificilmente causam intoxicação por sal, mas são salgadas, e comida salgada em excesso não faz bem aos cães, sobretudo aos que têm problemas cardíacos. As batatas fritas com sabor a cebola ou alho trazem um risco extra, porque a cebola e o alho são tóxicos para os cães.",
     "nl": "Niet aan te raden. Een paar chips veroorzaken waarschijnlijk geen zoutvergiftiging, maar chips zijn zout en te veel zout eten is niet goed voor honden, vooral niet voor honden met hartproblemen. Chips met ui- of knoflooksmaak brengen extra risico, want ui en knoflook zijn giftig voor honden.",
     "pl": "Nie zaleca się. Kilka chipsów ziemniaczanych raczej nie spowoduje zatrucia solą, ale chipsy są słone, a nadmiar słonego jedzenia nie jest dobry dla psów, zwłaszcza tych z problemami z sercem. Chipsy o smaku cebulowym lub czosnkowym to dodatkowe ryzyko, bo cebula i czosnek są toksyczne dla psów.",
-    "cs": "Nedoporučuje se. Pár brambůrků pravděpodobně otravu solí nezpůsobí, ale brambůrky jsou slané a nadměrné množství slaných jídel psům nesvědčí, zvlášť psům se srdečními potížemi. Brambůrky s příchutí cibule nebo česneku přinášejí další riziko, protože cibule a česnek jsou pro psy jedovaté."
+    "cs": "Nedoporučuje se. Pár brambůrků pravděpodobně otravu solí nezpůsobí, ale brambůrky jsou slané a nadměrné množství slaných jídel psům nesvědčí, zvlášť psům se srdečními potížemi. Brambůrky s příchutí cibule nebo česneku přinášejí další riziko, protože cibule a česnek jsou pro psy jedovaté.",
+    "hr": "Ne preporučuje se. Nekoliko listića čipsa vjerojatno neće izazvati otrovanje solju, ali čips je slan, a previše slane hrane nije dobro za pse, osobito za one sa srčanim tegobama. Čips s okusom luka ili češnjaka donosi dodatni rizik, jer su luk i češnjak otrovni za pse."
   },
   "why": {
     "en": "AKC says a dog can have salty foods like potato chips in limited amounts, but excess salt is not good for dogs and can cause fluid retention. Large amounts of salt can lead to salt poisoning. Onion and garlic are toxic to dogs in every form, including powders.",
@@ -60,7 +64,8 @@
     "pt": "O AKC diz que um cão pode comer alimentos salgados, como batatas fritas de pacote, em quantidades limitadas, mas o excesso de sal não faz bem aos cães e pode causar retenção de líquidos. Grandes quantidades de sal podem levar a intoxicação por sal. A cebola e o alho são tóxicos para os cães em todas as formas, incluindo em pó.",
     "nl": "Volgens de AKC mag een hond zoute dingen zoals chips in beperkte hoeveelheden, maar te veel zout is niet goed voor honden en kan ervoor zorgen dat het lichaam vocht vasthoudt. Grote hoeveelheden zout kunnen tot zoutvergiftiging leiden. Ui en knoflook zijn in elke vorm giftig voor honden, ook als poeder.",
     "pl": "AKC podaje, że pies może jeść słone produkty, takie jak chipsy ziemniaczane, w ograniczonych ilościach, ale nadmiar soli nie jest dla psów dobry i może powodować zatrzymywanie wody w organizmie. Duże ilości soli mogą prowadzić do zatrucia solą. Cebula i czosnek są toksyczne dla psów w każdej postaci, także w proszku.",
-    "cs": "Podle AKC může pes slaná jídla, jako jsou brambůrky, dostat v omezeném množství, ale nadbytek soli psům nesvědčí a může způsobit zadržování tekutin. Velké množství soli může vést k otravě solí. Cibule a česnek jsou pro psy jedovaté v jakékoli podobě, včetně prášku."
+    "cs": "Podle AKC může pes slaná jídla, jako jsou brambůrky, dostat v omezeném množství, ale nadbytek soli psům nesvědčí a může způsobit zadržování tekutin. Velké množství soli může vést k otravě solí. Cibule a česnek jsou pro psy jedovaté v jakékoli podobě, včetně prášku.",
+    "hr": "AKC navodi da pas može dobiti slanu hranu poput čipsa u ograničenim količinama, ali da višak soli nije dobar za pse i može izazvati zadržavanje tekućine. Velike količine soli mogu dovesti do otrovanja solju. Luk i češnjak otrovni su za pse u svakom obliku, i u prahu."
   },
   "signs": {
     "en": [
@@ -132,6 +137,13 @@
       "Průjem",
       "Vrávorání, malátnost",
       "Třes nebo záchvaty"
+    ],
+    "hr": [
+      "Jaka žeđ i često mokrenje",
+      "Povraćanje, često unutar nekoliko sati",
+      "Proljev",
+      "Teturanje, umor",
+      "Drhtanje mišića ili napadaji"
     ]
   },
   "what_to_do": {
@@ -144,7 +156,8 @@
     "pt": "Se o teu cão comeu muitas batatas fritas, sobretudo com sabor a cebola ou alho, contacta o teu veterinário ou uma linha de apoio toxicológico para animais. Anota o sabor e mais ou menos quanto comeu.",
     "nl": "Heeft je hond veel chips gegeten, vooral met ui- of knoflooksmaak? Neem dan contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op welke smaak het was en ongeveer hoeveel er is gegeten.",
     "pl": "Jeśli twój pies zjadł dużo chipsów, zwłaszcza o smaku cebulowym lub czosnkowym, skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj smak i mniej więcej ile zjadł.",
-    "cs": "Pokud váš pes snědl hodně brambůrků, zvlášť s příchutí cibule nebo česneku, obraťte se na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si příchuť a zhruba kolik pes snědl."
+    "cs": "Pokud váš pes snědl hodně brambůrků, zvlášť s příchutí cibule nebo česneku, obraťte se na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si příchuť a zhruba kolik pes snědl.",
+    "hr": "Ako je pas pojeo mnogo čipsa, osobito s okusom luka ili češnjaka, obrati se veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši okus i otprilike koliko je pojeo."
   },
   "serving": null,
   "child": {
@@ -157,7 +170,8 @@
     "pt": "As batatas fritas de pacote são um petisco salgado para pessoas. Não fazem bem aos cães, por isso fecha o pacote e dá ao teu cão a guloseima dele.",
     "nl": "Chips zijn een zoute snack voor mensen. Ze zijn niet goed voor honden, dus houd de zak dicht en geef je hond zijn eigen snoepje.",
     "pl": "Chipsy to słona przekąska dla ludzi. Nie są dobre dla psów, więc trzymaj paczkę zamkniętą i daj psu jego własny smakołyk.",
-    "cs": "Brambůrky jsou slaná svačinka pro lidi. Psům nesvědčí, a tak sáček zavři a dej psovi jeho vlastní pamlsek."
+    "cs": "Brambůrky jsou slaná svačinka pro lidi. Psům nesvědčí, a tak sáček zavři a dej psovi jeho vlastní pamlsek.",
+    "hr": "Čips je slana grickalica za ljude. Nije dobar za pse, zato drži vrećicu zatvorenom i daj psu njegovu poslasticu."
   },
   "faq": [
     {
@@ -171,7 +185,8 @@
         "pt": "As batatas fritas com sabores são piores?",
         "nl": "Zijn chips met een smaakje erger?",
         "pl": "Czy chipsy smakowe są gorsze?",
-        "cs": "Jsou ochucené brambůrky horší?"
+        "cs": "Jsou ochucené brambůrky horší?",
+        "hr": "Je li čips s okusima gori?"
       },
       "a": {
         "en": "They can be. Onion and garlic are toxic to dogs in every form, including powders, so check the flavour.",
@@ -183,7 +198,8 @@
         "pt": "Podem ser. A cebola e o alho são tóxicos para os cães em todas as formas, incluindo em pó, por isso verifica o sabor.",
         "nl": "Dat kan. Ui en knoflook zijn in elke vorm giftig voor honden, ook als poeder, dus kijk goed welke smaak het is.",
         "pl": "Mogą być. Cebula i czosnek są toksyczne dla psów w każdej postaci, także w proszku, więc sprawdź smak.",
-        "cs": "Mohou být. Cibule a česnek jsou pro psy jedovaté v jakékoli podobě, včetně prášku, proto zkontrolujte příchuť."
+        "cs": "Mohou být. Cibule a česnek jsou pro psy jedovaté v jakékoli podobě, včetně prášku, proto zkontrolujte příchuť.",
+        "hr": "Može biti. Luk i češnjak otrovni su za pse u svakom obliku, i u prahu, zato provjeri okus."
       }
     }
   ],
@@ -306,6 +322,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "725590425c82f54bfb6000dccb66f98ae6d64167d699b2e7b85503c6ab3a0ceb"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e996074580ba71aedd19ebe6e156b59b3d53b590067c00a47b92b9c23222584b"
     }
   }
 }

@@ -11,7 +11,8 @@
     "pt": "Fiambre",
     "nl": "Ham",
     "pl": "Szynka",
-    "cs": "Šunka"
+    "cs": "Šunka",
+    "hr": "Šunka"
   },
   "question": {
     "en": "Can dogs eat ham?",
@@ -23,7 +24,8 @@
     "pt": "Os cães podem comer fiambre?",
     "nl": "Mogen honden ham eten?",
     "pl": "Czy psy mogą jeść szynkę?",
-    "cs": "Mohou psi jíst šunku?"
+    "cs": "Mohou psi jíst šunku?",
+    "hr": "Smiju li psi jesti šunku?"
   },
   "url_slug": {
     "en": "ham",
@@ -35,7 +37,8 @@
     "pt": "fiambre",
     "nl": "ham",
     "pl": "szynka",
-    "cs": "sunka"
+    "cs": "sunka",
+    "hr": "sunka"
   },
   "level": "not_recommended",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Não é recomendado. O fiambre não é tóxico para os cães, mas tem muita gordura e sódio. O fiambre comprado no supermercado tem muito sal, e o excesso de gordura pode causar pancreatite e outros problemas digestivos. Uma guloseima para cães é uma escolha mais saudável.",
     "nl": "Niet aan te raden. Ham is niet giftig voor honden, maar bevat veel vet en natrium. Ham uit de winkel bevat veel zout, en te veel vet kan tot alvleesklierontsteking en andere spijsverteringsproblemen leiden. Een gezonder hondensnoepje is de betere keuze.",
     "pl": "Nie zaleca się. Szynka nie jest toksyczna dla psów, ale zawiera dużo tłuszczu i sodu. Szynka ze sklepu ma dużo soli, a nadmiar tłuszczu może prowadzić do zapalenia trzustki i innych problemów trawiennych. Lepszym wyborem jest zdrowszy psi smakołyk.",
-    "cs": "Nedoporučuje se. Šunka není pro psy jedovatá, ale obsahuje hodně tuku a sodíku. Kupovaná šunka je velmi slaná a příliš mnoho tuku může vést k zánětu slinivky břišní a dalším zažívacím potížím. Lepší volbou je zdravější psí pamlsek."
+    "cs": "Nedoporučuje se. Šunka není pro psy jedovatá, ale obsahuje hodně tuku a sodíku. Kupovaná šunka je velmi slaná a příliš mnoho tuku může vést k zánětu slinivky břišní a dalším zažívacím potížím. Lepší volbou je zdravější psí pamlsek.",
+    "hr": "Ne preporučuje se. Šunka nije otrovna za pse, ali sadrži mnogo masti i natrija. Kupovna šunka sadrži mnogo soli, a previše masti može dovesti do upale gušterače i drugih probavnih smetnji. Zdravija pseća poslastica bolji je izbor."
   },
   "why": {
     "en": "Ham has a higher fat content than many other meats, and fatty meals are a known trigger of pancreatitis. Most ham is also very salty, and excess salt can be harmful to dogs.",
@@ -60,7 +64,8 @@
     "pt": "O fiambre tem mais gordura do que muitas outras carnes, e as refeições gordas são um conhecido desencadeador de pancreatite. A maior parte do fiambre também é muito salgada, e o excesso de sal pode fazer mal aos cães.",
     "nl": "Ham bevat meer vet dan veel andere vleessoorten, en vette maaltijden zijn een bekende uitlokker van alvleesklierontsteking. De meeste ham is ook erg zout, en te veel zout kan schadelijk zijn voor honden.",
     "pl": "Szynka ma więcej tłuszczu niż wiele innych rodzajów mięsa, a tłuste posiłki to znany czynnik wywołujący zapalenie trzustki. Większość szynek jest też bardzo słona, a nadmiar soli może szkodzić psom.",
-    "cs": "Šunka má vyšší obsah tuku než mnoho jiných druhů masa a tučná jídla jsou známým spouštěčem zánětu slinivky břišní. Většina šunky je navíc velmi slaná a nadbytek soli může psům škodit."
+    "cs": "Šunka má vyšší obsah tuku než mnoho jiných druhů masa a tučná jídla jsou známým spouštěčem zánětu slinivky břišní. Většina šunky je navíc velmi slaná a nadbytek soli může psům škodit.",
+    "hr": "Šunka ima više masti od mnogih drugih vrsta mesa, a masni obroci poznati su okidač upale gušterače. Većina šunke uz to je vrlo slana, a višak soli može psima naštetiti."
   },
   "signs": {
     "en": [
@@ -132,6 +137,13 @@
       "Průjem",
       "Nechuť k jídlu",
       "Malátnost, horečka"
+    ],
+    "hr": [
+      "Povraćanje, ponekad tek 1–4 dana nakon masnog obroka",
+      "Bolovi u trbuhu (pas se može ispružiti u „molitveni“ položaj)",
+      "Proljev",
+      "Odbijanje hrane",
+      "Umor, vrućica"
     ]
   },
   "what_to_do": {
@@ -144,7 +156,8 @@
     "pt": "Se o teu cão comeu muita comida gorda, ou se nos dias seguintes tiver vómitos, dor de barriga ou cansaço, contacta o teu veterinário. Anota o que comeu e mais ou menos quanto. Os sinais de pancreatite podem surgir só alguns dias depois.",
     "nl": "Heeft je hond veel vet eten gegeten, of braakt hij, heeft hij buikpijn of is hij moe in de dagen erna? Neem dan contact op met je dierenarts. Schrijf op wat er is gegeten en ongeveer hoeveel. Verschijnselen van alvleesklierontsteking kunnen een paar dagen later komen.",
     "pl": "Jeśli twój pies zjadł dużo tłustego jedzenia albo w kolejnych dniach wymiotuje, boli go brzuch lub jest zmęczony, skontaktuj się z weterynarzem. Zanotuj, co zjadł i mniej więcej ile. Objawy zapalenia trzustki mogą pojawić się z opóźnieniem kilku dni.",
-    "cs": "Pokud váš pes snědl hodně tučného jídla nebo se u něj v následujících dnech objeví zvracení, bolest břicha či malátnost, obraťte se na veterináře. Poznamenejte si, co pes snědl a zhruba kolik. Příznaky zánětu slinivky břišní se mohou objevit až o několik dní později."
+    "cs": "Pokud váš pes snědl hodně tučného jídla nebo se u něj v následujících dnech objeví zvracení, bolest břicha či malátnost, obraťte se na veterináře. Poznamenejte si, co pes snědl a zhruba kolik. Příznaky zánětu slinivky břišní se mohou objevit až o několik dní později.",
+    "hr": "Ako je pas pojeo mnogo masne hrane ili sljedećih dana povraća, ima bolove u trbuhu ili je umoran, obrati se veterinaru. Zapiši što je pojeo i otprilike koliko. Znakovi upale gušterače mogu se pojaviti tek nakon nekoliko dana."
   },
   "serving": null,
   "child": {
@@ -157,7 +170,8 @@
     "pt": "O fiambre é comida de pessoas, salgado e gordo demais para os cães. Guarda-o para a tua sandes e dá ao teu cão uma guloseima para cães.",
     "nl": "Ham is eten voor mensen en te zout en te vet voor honden. Houd het voor je boterham en geef je hond een hondensnoepje.",
     "pl": "Szynka to jedzenie dla ludzi, za słone i za tłuste dla psów. Zostaw ją na swoją kanapkę i daj psu psi smakołyk.",
-    "cs": "Šunka je jídlo pro lidi a pro psy je moc slaná a tučná. Nech si ji do chleba a dej psovi psí pamlsek."
+    "cs": "Šunka je jídlo pro lidi a pro psy je moc slaná a tučná. Nech si ji do chleba a dej psovi psí pamlsek.",
+    "hr": "Šunka je hrana za ljude i preslana je i premasna za pse. Ostavi je za svoj sendvič, a psu daj pseću poslasticu."
   },
   "faq": [
     {
@@ -171,7 +185,8 @@
         "pt": "Porque é que o fiambre é pior do que outras carnes?",
         "nl": "Waarom is ham erger dan ander vlees?",
         "pl": "Dlaczego szynka jest gorsza niż inne mięso?",
-        "cs": "Proč je šunka horší než jiné maso?"
+        "cs": "Proč je šunka horší než jiné maso?",
+        "hr": "Zašto je šunka gora od drugog mesa?"
       },
       "a": {
         "en": "It has more fat than many meats and store-bought ham contains a great deal of sodium.",
@@ -183,7 +198,8 @@
         "pt": "Tem mais gordura do que muitas carnes, e o fiambre comprado no supermercado tem muito sódio.",
         "nl": "Ham bevat meer vet dan veel andere vleessoorten, en ham uit de winkel bevat erg veel natrium.",
         "pl": "Ma więcej tłuszczu niż wiele rodzajów mięsa, a szynka ze sklepu zawiera bardzo dużo sodu.",
-        "cs": "Má víc tuku než mnoho jiných druhů masa a kupovaná šunka obsahuje velké množství sodíku."
+        "cs": "Má víc tuku než mnoho jiných druhů masa a kupovaná šunka obsahuje velké množství sodíku.",
+        "hr": "Ima više masti od mnogih vrsta mesa, a kupovna šunka sadrži jako mnogo natrija."
       }
     }
   ],
@@ -302,6 +318,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d7f33ae5925c067250079214826f6588ae11f3d79da0433c4db3750ab91d4a84"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "91746e03700ddfec4bf80c2ec0411eef5c0747f47ef3bd2072b0e01e7589f8a7"
     }
   }
 }
