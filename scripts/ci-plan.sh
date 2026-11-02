@@ -304,7 +304,7 @@ derive_from_pr() {
     log "derive: PR run ${id} base ${pbase}; between base and HEAD^1: backend=${m_backend} mobile=${m_mobile} scripts=${m_scripts} image=${m_image}"
     for suite in backend mobile scripts image; do
       local runvar="run_${suite}" mvar="m_${suite}"
-      [ "${!runvar}" = true ] && [ "${!mvar}" = false ] || continue
+      if [ "${!runvar}" != true ] || [ "${!mvar}" != false ]; then continue; fi
       f="$(grep -m1 "^ci-green-${suite}-" <<< "$arts" | cut -d' ' -f2)" || true
       [ -n "$f" ] || continue
       fetch_marker "$f" "${DERIVED_DIR}/src-${suite}" || continue
