@@ -8,12 +8,12 @@
 # would switch them before maintenance mode / migrations. deploy-production.sh syncs
 # incoming/ → repo/ itself and reverts on a pre-migration failure (DEPLOYMENT.md D10).
 #
-# Prebuilt images (D28): with IMAGE_OWNER + REGISTRY_USER + REGISTRY_TOKEN (the job's
-# GITHUB_TOKEN, packages: read) the server logs in to ghcr.io over ssh stdin (the token
-# never appears in a command line), deploy-production.sh pulls
-# ghcr.io/<owner>/petprep-{app,web}:be-<git tree of backend/> and the server logs out
-# again in the same ssh command. Missing env / no git tree / failed login → the server
-# builds the images itself (old behaviour).
+# Prebuilt images (D28): with APP_IMAGE + WEB_IMAGE (digest refs from
+# scripts/ci-image-refs.sh) + REGISTRY_USER + REGISTRY_TOKEN (the job's GITHUB_TOKEN,
+# packages: read) the server logs in to ghcr.io over ssh stdin (the token never appears in
+# a command line), deploy-production.sh pulls exactly those digests and logs out right
+# after the pull; the ssh command logs out again at the end. Missing / malformed refs or a
+# failed login → the server builds the images itself (old behaviour).
 #
 # Env: SSH_PRIVATE_KEY, SSH_HOST, SSH_USER (default deploy), COMMIT_SHA, EXPECT_DOMAIN
 #      (the API domain the server must have — deploy-production.sh --expect-domain),
@@ -64,20 +64,18 @@ rsync -az --delete \
 
 IMAGE_ARGS=""
 LOGIN_CMD=""
-if [ -n "${IMAGE_OWNER:-}" ] && [ -n "${REGISTRY_USER:-}" ] && [ -n "${REGISTRY_TOKEN:-}" ]; then
-    owner="$(printf '%s' "$IMAGE_OWNER" | tr '[:upper:]' '[:lower:]')"
+if [ -n "${APP_IMAGE:-}" ] && [ -n "${WEB_IMAGE:-}" ] && [ -n "${REGISTRY_USER:-}" ] && [ -n "${REGISTRY_TOKEN:-}" ]; then
+    ref_re='^ghcr\.io/[a-z0-9-]+/petprep-(app|web)@sha256:[0-9a-f]{64}$'
     user_re='^[][A-Za-z0-9_.-]+$' # also "github-actions[bot]" (the daily deploy's dispatch)
-    if ! [[ "$owner" =~ ^[a-z0-9-]+$ ]] || ! [[ "$REGISTRY_USER" =~ $user_re ]]; then
-        echo "ERROR: IMAGE_OWNER / REGISTRY_USER have unexpected characters."
+    if ! [[ "$APP_IMAGE" =~ $ref_re ]] || ! [[ "$WEB_IMAGE" =~ $ref_re ]] || ! [[ "$REGISTRY_USER" =~ $user_re ]]; then
+        echo "ERROR: APP_IMAGE / WEB_IMAGE / REGISTRY_USER have unexpected characters."
         exit 1
     fi
-    if be_tree="$(git rev-parse HEAD:backend 2>/dev/null)" && [[ "$be_tree" =~ ^[0-9a-f]{40}$ ]]; then
-        IMAGE_ARGS="--registry ghcr.io/${owner} --image-tag be-${be_tree}"
-        LOGIN_CMD="docker login ghcr.io -u '${REGISTRY_USER}' --password-stdin > /dev/null 2>&1 || echo 'WARNING: ghcr.io login failed - the images are built on the server.'; "
-        echo "   Prebuilt images: ghcr.io/${owner}/petprep-{app,web}:be-${be_tree}"
-    else
-        echo "   WARNING: no git tree for backend/ — the server builds the images."
-    fi
+    IMAGE_ARGS="--app-image ${APP_IMAGE} --web-image ${WEB_IMAGE}"
+    LOGIN_CMD="docker login ghcr.io -u '${REGISTRY_USER}' --password-stdin > /dev/null 2>&1 || echo 'WARNING: ghcr.io login failed - the images are built on the server.'; "
+    echo "   CI images: ${APP_IMAGE} ${WEB_IMAGE}"
+else
+    echo "   No CI image digests — the server builds the images."
 fi
 
 echo "2. Triggering the deployment script on the ${TARGET} server for commit: ${COMMIT_SHA}..."

@@ -7,7 +7,8 @@ name: CI & Deploy
 #         └─ production-image ────┘
 # `plan` (scripts/ci-plan.sh) runs only the suites whose paths changed and, on a push to
 # main, skips a suite that already passed in a successful PR run on the identical git
-# tree (marker artifacts "ci-green-<suite>-<tree>", uploaded below on pull_request).
+# tree (marker artifacts "ci-green-<suite>-<tree>", uploaded below on every event); a production
+# "Run workflow" skips every suite already green on its tree (D28, ci-plan.sh §4).
 # `ci-ok` fails unless every suite either passed or was skipped because plan said so.
 # A push / merge to main runs CI only and deploys NOTHING (David 2026-10-14). Production is
 # deployed only by "Run workflow" on main with target = production (scripts/ci-deploy-target.sh),
@@ -58,6 +59,7 @@ jobs:
       scripts: ${{ steps.plan.outputs.scripts }}
       image: ${{ steps.plan.outputs.image }}
       deploy: ${{ steps.plan.outputs.deploy }}
+      image_run: ${{ steps.plan.outputs.image_run }}
       target: ${{ steps.target.outputs.target }}
     steps:
       - name: Checkout Code (full history, no blobs)
@@ -254,7 +256,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Shellcheck
-        run: shellcheck scripts/deploy-production.sh scripts/tests/deploy-production.test.sh scripts/ci-plan.sh scripts/tests/ci-plan.test.sh scripts/ci-deploy-guard.sh scripts/reset-game-data.sh scripts/tests/reset-game-data.test.sh scripts/restore-production-db.sh scripts/backup-production-db.sh scripts/tests/backup-production-db.test.sh scripts/backup-offsite.sh scripts/tests/backup-offsite.test.sh scripts/ci-deploy-target.sh scripts/ci-remote-deploy.sh scripts/mobile-ota-plan.sh scripts/tests/mobile-ota-plan.test.sh scripts/mobile-ota.sh scripts/tests/mobile-ota.test.sh scripts/daily-deploy.sh scripts/tests/daily-deploy.test.sh scripts/ci-install-ffmpeg.sh scripts/tests/ci-install-ffmpeg.test.sh
+        run: shellcheck scripts/deploy-production.sh scripts/tests/deploy-production.test.sh scripts/ci-plan.sh scripts/tests/ci-plan.test.sh scripts/ci-deploy-guard.sh scripts/reset-game-data.sh scripts/tests/reset-game-data.test.sh scripts/restore-production-db.sh scripts/backup-production-db.sh scripts/tests/backup-production-db.test.sh scripts/backup-offsite.sh scripts/tests/backup-offsite.test.sh scripts/ci-deploy-target.sh scripts/ci-remote-deploy.sh scripts/ci-image-refs.sh scripts/mobile-ota-plan.sh scripts/tests/mobile-ota-plan.test.sh scripts/mobile-ota.sh scripts/tests/mobile-ota.test.sh scripts/daily-deploy.sh scripts/tests/daily-deploy.test.sh scripts/ci-install-ffmpeg.sh scripts/tests/ci-install-ffmpeg.test.sh
 
       # Stubbed docker/git/curl in a temp dir; needs only bash, git and rsync.
       - name: Harness (deploy-production.sh)
@@ -324,16 +326,12 @@ jobs:
           retention-days: 14
           overwrite: true
 
-  # M4-05b: the server builds the same Dockerfile on every deploy (before maintenance
-  # mode) and smoke-tests it there too. Building it here first catches Dockerfile /
-  # composer / Caddyfile breakage in the PR. Nothing is pushed; layers are cached in the
-  # GitHub Actions cache.
-  # D28 (David 2026-11-02, "deploy max 10 min"): the same images are PUSHED to GHCR as
-  # ghcr.io/<owner>/petprep-{app,web}:be-<git tree of backend/> (the build context) from
-  # every same-repo run; the deploy pulls them instead of building on the CX23 (5–6 min,
-  # the base stage recompiled the PHP extensions after each builder prune). Fork PRs
-  # build without pushing. A docs / mobile-only change keeps the backend tree, so the
-  # deploy reuses the image of the last backend change.
+  # M4-05b: building the production Dockerfile here catches Dockerfile / composer /
+  # Caddyfile breakage in the PR; layers are cached in the GitHub Actions cache.
+  # D28 (David 2026-11-02, "deploy max 10 min"): AFTER every check below passed, same-repo
+  # runs push the images to GHCR under a per-run tag (be-<backend tree>-<run>-<attempt>) and
+  # record their DIGESTS in the green-tree marker; the deploy pulls exactly those digests
+  # (never a tag) instead of building on the CX23 (5–6 min). Fork PRs build without pushing.
   production-image:
     name: Production image (build + smoke test, push to GHCR)
     needs: plan
@@ -343,6 +341,9 @@ jobs:
     permissions:
       contents: read
       packages: write
+    outputs:
+      app: ${{ steps.push.outputs.app }}
+      web: ${{ steps.push.outputs.web }}
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -356,7 +357,7 @@ jobs:
           set -eu
           {
             echo "registry=ghcr.io/${OWNER,,}"
-            echo "tag=be-$(git rev-parse HEAD:backend)"
+            echo "tag=be-$(git rev-parse HEAD:backend)-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
             echo "push=${SAME_REPO}"
           } >> "$GITHUB_OUTPUT"
 
@@ -406,9 +407,9 @@ jobs:
           context: backend
           file: backend/docker/production/Dockerfile
           target: app
-          push: ${{ steps.img.outputs.push == 'true' }}
+          push: false
           load: true
-          tags: ${{ steps.img.outputs.registry }}/petprep-app:${{ steps.img.outputs.tag }}
+          tags: petprep-app:ci
           labels: |
             org.petprep.base-id=${{ steps.base.outputs.app }}
             org.opencontainers.image.source=https://github.com/${{ github.repository }}
@@ -421,23 +422,13 @@ jobs:
           context: backend
           file: backend/docker/production/Dockerfile
           target: web
-          push: ${{ steps.img.outputs.push == 'true' }}
+          push: false
           load: true
-          tags: ${{ steps.img.outputs.registry }}/petprep-web:${{ steps.img.outputs.tag }}
+          tags: petprep-web:ci
           labels: |
             org.petprep.base-id=${{ steps.base.outputs.web }}
             org.opencontainers.image.source=https://github.com/${{ github.repository }}
           cache-from: type=gha,scope=petprep-production
-
-      # Only the GHCR name goes to build-push-action (with push every tag is pushed — a bare
-      # petprep-app:ci would go to Docker Hub); the local :ci names for the checks below.
-      - name: Local tags for the checks
-        env:
-          REG: ${{ steps.img.outputs.registry }}
-          TAG: ${{ steps.img.outputs.tag }}
-        run: |
-          docker tag "${REG}/petprep-app:${TAG}" petprep-app:ci
-          docker tag "${REG}/petprep-web:${TAG}" petprep-web:ci
 
       # D18: one Caddyfile for both servers. Production = the defaults (no env), exactly as
       # compose passes them on api.petprep.si; a second API-only server (dev server, postponed)
@@ -482,12 +473,55 @@ jobs:
           docker run --rm -e APP_KEY="base64:$(openssl rand -base64 32)" -e CACHE_STORE=array \
             -e SESSION_DRIVER=array -e PETPREP_OPTIMIZE=full petprep-app:ci php artisan route:list --path=api/media
 
+      # Only now — every check above passed. Digests, not tags, identify what was tested.
+      - name: Push to GHCR (after the checks)
+        id: push
+        if: steps.img.outputs.push == 'true'
+        env:
+          REG: ${{ steps.img.outputs.registry }}
+          TAG: ${{ steps.img.outputs.tag }}
+        run: |
+          set -eu
+          for i in app web; do
+            ref="${REG}/petprep-${i}:${TAG}"
+            docker tag "petprep-${i}:ci" "$ref"
+            docker push -q "$ref" > /dev/null
+            digest="$(docker image inspect --format '{{range .RepoDigests}}{{println .}}{{end}}' "$ref" | grep -m1 "^${REG}/petprep-${i}@sha256:")"
+            echo "${i}=${digest}" >> "$GITHUB_OUTPUT"
+            echo "pushed ${digest}"
+          done
+
+      # Retention (D28): every same-repo run pushes a version; keep the newest 60 per image
+      # (markers live 14 days — an older digest is gone → that deploy builds on the server).
+      - name: Prune old GHCR versions
+        if: steps.push.outcome == 'success' && github.event_name == 'push'
+        continue-on-error: true
+        uses: actions/delete-package-versions@v5
+        with:
+          package-name: petprep-app
+          package-type: container
+          min-versions-to-keep: 60
+
+      - name: Prune old GHCR versions (web)
+        if: steps.push.outcome == 'success' && github.event_name == 'push'
+        continue-on-error: true
+        uses: actions/delete-package-versions@v5
+        with:
+          package-name: petprep-web
+          package-type: container
+          min-versions-to-keep: 60
+
       - name: Record green tree
         id: green
+        env:
+          APP_DIGEST: ${{ steps.push.outputs.app }}
+          WEB_DIGEST: ${{ steps.push.outputs.web }}
         run: |
           tree="$(git rev-parse 'HEAD^{tree}')"
           echo "tree=${tree}" >> "$GITHUB_OUTPUT"
           echo "${tree} ${GITHUB_RUN_ID}" > "${RUNNER_TEMP}/ci-green.txt"
+          # D28: the deploy reads the digests from this marker (empty for fork PRs → server build).
+          printf 'app=%s\nweb=%s\n' "$APP_DIGEST" "$WEB_DIGEST" >> "${RUNNER_TEMP}/ci-green.txt"
 
       - name: Upload green-tree marker
         uses: actions/upload-artifact@v4
@@ -524,7 +558,7 @@ jobs:
           if [ "$PLAN_RESULT" != success ]; then echo "plan: $PLAN_RESULT"; ok=0; fi
           verdict() { # verdict NAME PLANNED RESULT
             if [ "$3" = success ]; then echo "$1: passed"
-            elif [ "$3" = skipped ] && [ "$2" = false ]; then echo "$1: skipped (not needed / already green on the PR)"
+            elif [ "$3" = skipped ] && [ "$2" = false ]; then echo "$1: skipped (not needed / already green on this tree)"
             else echo "::error::$1: result '$3' (planned: '$2')"; ok=0; fi
           }
           verdict backend-tests "$PLAN_BACKEND" "$BACKEND_RESULT"
@@ -544,7 +578,7 @@ jobs:
   deploy:
     # The job name marks a deployed main run for scripts/ci-plan.sh — keep it.
     name: Deploy to Hetzner Production
-    needs: [plan, ci-ok]
+    needs: [plan, ci-ok, production-image]
     if: >-
       !cancelled() && needs.plan.result == 'success' && needs.ci-ok.result == 'success' &&
       needs.plan.outputs.deploy == 'true' && needs.plan.outputs.target == 'production' &&
@@ -559,6 +593,7 @@ jobs:
       url: https://api.petprep.si
     permissions:
       contents: read
+      actions: read # the image digests from the green marker of the run that tested this tree (D28)
       packages: read # the server pulls the CI images with this job's token (D28)
     steps:
       - name: Checkout Code
@@ -574,6 +609,19 @@ jobs:
           COMMIT_SHA: ${{ github.sha }}
         run: bash scripts/ci-deploy-guard.sh
 
+      # D28: digests from this run's image job, else from the marker of the run that tested
+      # this tree (plan.image_run); none → the server builds (old path). Never a tag.
+      - name: Image digests (CI-built, tested)
+        id: images
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          TREE: ${{ needs.plan.outputs.tree }}
+          RUN_APP: ${{ needs.production-image.outputs.app }}
+          RUN_WEB: ${{ needs.production-image.outputs.web }}
+          MARKER_RUN: ${{ needs.plan.outputs.image_run }}
+        run: bash scripts/ci-image-refs.sh
+
       - name: Upload + deploy-production.sh on the production server
         env:
           TARGET: production
@@ -583,7 +631,8 @@ jobs:
           SSH_USER: ${{ secrets.PRODUCTION_USER || 'deploy' }}
           EXPECT_DOMAIN: api.petprep.si
           COMMIT_SHA: ${{ github.sha }}
-          IMAGE_OWNER: ${{ github.repository_owner }}
+          APP_IMAGE: ${{ steps.images.outputs.app }}
+          WEB_IMAGE: ${{ steps.images.outputs.web }}
           REGISTRY_USER: ${{ github.actor }}
           REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bash scripts/ci-remote-deploy.sh

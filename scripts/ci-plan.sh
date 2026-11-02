@@ -19,7 +19,7 @@
 #                           Base not found / not an ancestor (force push) / API error /
 #                           diff error / empty diff between different trees → full run.
 #        workflow_dispatch  full run (deploy=true on main; the job deploys only with
-#                           target production).
+#                           target production — which then skips green suites, §4).
 #        re-run (attempt>1) full run — "Re-run all jobs" of a production dispatch run repeats
 #                           its deploy (only of the current main head: ci-deploy-guard.sh);
 #                           a re-run of a push run deploys nothing.
@@ -45,7 +45,7 @@
 #                           (D21 daily deploy trigger; runs in Actions, nothing ships)
 #        backend + scripts  scripts/ci-install-ffmpeg.sh + its test (D24: ffmpeg for the backend
 #                           test job; runs in Actions, nothing ships → no image, no deploy)
-#   3. Tested tree (push to main only): a needed suite is skipped when a pull_request
+#   3. Tested tree (push to main; production dispatch: §4): a needed suite is skipped when a pull_request
 #      run of THIS workflow, from this repository (no forks), with conclusion success,
 #      ran that suite on the identical git tree — marker artifact
 #      "ci-green-<suite>-<tree>" uploaded by the suite job itself. PR runs test the
@@ -59,14 +59,16 @@
 #      this workflow from this repository — a pull_request, push or earlier dispatch run
 #      (every suite job uploads its marker since D28). The daily deploy only dispatches
 #      after the push CI of the main head is green, so it normally deploys without
-#      re-testing. No marker / API error → the suite runs (fail closed). Target none
+#      re-testing. The image run's id is output as image_run: its marker holds the pushed
+#      image DIGESTS the deploy pulls (scripts/ci-image-refs.sh). No marker / API error →
+#      the suite runs (fail closed). Target none
 #      (the "test everything" button), FORCE_TESTS=true and re-runs still test everything.
 #
 # Env: EVENT_NAME, GIT_REF, RUN_ATTEMPT, REPO (owner/name), WORKFLOW_FILE (basename),
 # DEPLOY_TARGET (none / production, from ci-deploy-target.sh), FORCE_TESTS (true / false),
 # DEPLOY_JOB_NAME (default "Deploy to Hetzner Production"), GH_TOKEN (for gh),
 # GITHUB_OUTPUT, GITHUB_STEP_SUMMARY (optional). Test hooks: CI_PLAN_GH (gh binary).
-# Output (GITHUB_OUTPUT): tree, base, mode, backend, mobile, scripts, image, deploy
+# Output (GITHUB_OUTPUT): tree, base, mode, backend, mobile, scripts, image, deploy, image_run
 # (each suite/deploy "true"/"false"). The whole decision is also printed as a
 # "::notice title=plan::" annotation (readable through the check-runs API).
 set -Eeuo pipefail
@@ -222,6 +224,7 @@ green_on_pr() {
     if [ "$ok" = "$id" ]; then
       log "${suite}: tree ${tree} already green in run ${id}"
       verified_by="${verified_by}${suite}=run ${id} "
+      [ "$suite" = image ] && image_run="$id"
       return 0
     fi
   done
@@ -229,6 +232,7 @@ green_on_pr() {
 }
 
 verified_by=""
+image_run=""
 run_backend="$need_backend" run_mobile="$need_mobile" run_scripts="$need_scripts" run_image="$need_image"
 if [ "$EVENT_NAME" = push ] && [ "$GIT_REF" = "refs/heads/main" ]; then
   if [ "$run_backend" = true ] && green_on_pr backend; then run_backend=false; fi
@@ -253,6 +257,7 @@ fi
   echo "scripts=${run_scripts}"
   echo "image=${run_image}"
   echo "deploy=${deploy}"
+  echo "image_run=${image_run}"
 } >> "$OUT"
 
 {

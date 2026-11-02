@@ -251,11 +251,12 @@ check "no env secret in output" no_secret
 finish
 
 start prebuilt "prebuilt images from the registry (D28)"
-new_root dir; run_deploy -- --from "$ROOT/incoming" --registry ghcr.io/datavallis --image-tag be-abc123 sha-v2
+new_root dir; run_deploy -- --from "$ROOT/incoming" --app-image ghcr.io/datavallis/petprep-app@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa --web-image ghcr.io/datavallis/petprep-web@sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb sha-v2
 check "exit 0" rc_is 0
-check "pulls the app image" called 'pull -q ghcr.io/datavallis/petprep-app:be-abc123'
-check "pulls the web image" called 'pull -q ghcr.io/datavallis/petprep-web:be-abc123'
-check "tags them :next" called 'tag ghcr.io/datavallis/petprep-app:be-abc123 petprep-app:next'
+check "pulls the app digest" called 'pull -q ghcr.io/datavallis/petprep-app@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+check "pulls the web digest" called 'pull -q ghcr.io/datavallis/petprep-web@sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
+check "tags them :next" called 'tag ghcr.io/datavallis/petprep-app@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa petprep-app:next'
+check "logs out of the registry after the pull" before 'logout ghcr.io' 'run --rm --no-deps -T app php artisan optimize'
 check "no build on the server" not_called 'build app caddy'
 check "no local base-stage build" not_called 'buildx build -q --load --target base'
 check "pull before the smoke test" before 'pull -q ghcr.io/datavallis/petprep-app' 'run --rm --no-deps -T app php artisan optimize'
@@ -264,7 +265,7 @@ check "promotes :next → :production" called 'tag petprep-app:next petprep-app:
 finish
 
 start prebuilt_fallback "prebuilt pull fails → builds on the server"
-new_root dir; run_deploy FAIL_MATCH='^pull ' -- --from "$ROOT/incoming" --registry ghcr.io/datavallis --image-tag be-abc123 sha-v2
+new_root dir; run_deploy FAIL_MATCH='^pull ' -- --from "$ROOT/incoming" --app-image ghcr.io/datavallis/petprep-app@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa --web-image ghcr.io/datavallis/petprep-web@sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb sha-v2
 check "exit 0" rc_is 0
 check "warns" out_has "could not pull the prebuilt images"
 check "builds instead" called 'PETPREP_IMAGE_TAG=next .*build app caddy'
@@ -272,17 +273,21 @@ check "base id from the local build" called 'buildx build -q --load --target bas
 finish
 
 start prebuilt_nolabel "prebuilt image without base label → services recreated, no error"
-new_root dir; run_deploy LABEL_APP= LABEL_WEB= -- --from "$ROOT/incoming" --registry ghcr.io/datavallis --image-tag be-abc123 sha-v2
+new_root dir; run_deploy LABEL_APP= LABEL_WEB= -- --from "$ROOT/incoming" --app-image ghcr.io/datavallis/petprep-app@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa --web-image ghcr.io/datavallis/petprep-web@sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb sha-v2
 check "exit 0" rc_is 0
 check "warns about the web label" out_has "has no base-id label"
 finish
 
 start prebuilt_bad "bad --registry / --image-tag → refused before anything"
-new_root dir; run_deploy -- --from "$ROOT/incoming" --registry 'ghcr.io/x;rm' --image-tag be-1 sha-v2
+new_root dir; run_deploy -- --from "$ROOT/incoming" --app-image 'ghcr.io/x;rm@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' --web-image ghcr.io/datavallis/petprep-web@sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb sha-v2
 check "exit 2" rc_is 2
 check "no docker call" not_called 'docker'
-new_root dir; run_deploy -- --from "$ROOT/incoming" --image-tag be-1 sha-v2
-check "tag without registry → exit 2" rc_is 2
+new_root dir; run_deploy -- --from "$ROOT/incoming" --app-image ghcr.io/datavallis/petprep-app@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa sha-v2
+check "app without web → exit 2" rc_is 2
+new_root dir; run_deploy -- --from "$ROOT/incoming" --app-image ghcr.io/datavallis/petprep-app:be-1 --web-image ghcr.io/datavallis/petprep-web@sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb sha-v2
+check "a tag instead of a digest → exit 2" rc_is 2
+new_root dir; run_deploy -- --from "$ROOT/incoming" --app-image ghcr.io/datavallis/petprep-web@sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb --web-image ghcr.io/datavallis/petprep-app@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa sha-v2
+check "app / web swapped → exit 2" rc_is 2
 finish
 
 start no_buildx "docker buildx missing → clear error, nothing changed"

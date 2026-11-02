@@ -6,9 +6,9 @@
 #   deploy-production.sh <COMMIT_SHA>                                # manual, git checkout in repo/
 #   deploy-production.sh                                             # manual, re-deploy tree in place
 #   --expect-domain HOST: refuse (before any change) unless this server's API domain is HOST.
-#   --registry PREFIX --image-tag TAG (D28): pull PREFIX/petprep-{app,web}:TAG (built and
-#     pushed by CI, tag = be-<git tree of backend/>) instead of building on this server;
-#     a failed pull falls back to the local build (old behaviour). CI logs in before.
+#   --app-image REF@sha256:… --web-image REF@sha256:… (D28): pull exactly these digests
+#     (pushed by CI after its image checks) instead of building on this server; a failed
+#     pull falls back to the local build (old behaviour). CI logs in before; logout here.
 #
 # RUNTIME (M4-05b, DEPLOYMENT.md D14)
 #   The PHP containers (app = php-fpm, reverb, queue, queue-broadcasts, scheduler)
@@ -31,7 +31,7 @@
 #   2. Record the previous release: PREV_SHA (repo/.deployed-sha, or git HEAD in git
 #      mode) and, for --from deploys, a copy of the current tree in
 #      /opt/petprep/releases/previous.
-#   3. Prebuilt images (D28): with --registry/--image-tag pull both images and tag them
+#   3. Prebuilt images (D28): with --app-image/--web-image pull both digests and tag them
 #      :next (base ids for the fingerprints from the label org.petprep.base-id); else /
 #      on a failed pull: preflight `docker buildx version` (compose builds through
 #      BuildKit), then build the new images as :next from the NEW tree (--from dir, `git archive` of the
@@ -237,8 +237,8 @@ usage() { sed -n '4,11p' "$0" | sed 's/^# \{0,1\}//'; }
 
 SOURCE_DIR=""
 EXPECT_DOMAIN=""
-REGISTRY=""
-IMAGE_TAG=""
+APP_IMAGE=""
+WEB_IMAGE=""
 while [ $# -gt 0 ]; do
     case "$1" in
         --from)
@@ -251,13 +251,13 @@ while [ $# -gt 0 ]; do
             [ -n "$EXPECT_DOMAIN" ] || { echo "ERROR: --expect-domain needs a host name" >&2; exit 2; }
             shift 2 ;;
         --expect-domain=*) EXPECT_DOMAIN="${1#--expect-domain=}"; shift ;;
-        --registry)
-            REGISTRY="${2:-}"
-            [ -n "$REGISTRY" ] || { echo "ERROR: --registry needs a prefix" >&2; exit 2; }
+        --app-image)
+            APP_IMAGE="${2:-}"
+            [ -n "$APP_IMAGE" ] || { echo "ERROR: --app-image needs a digest ref" >&2; exit 2; }
             shift 2 ;;
-        --image-tag)
-            IMAGE_TAG="${2:-}"
-            [ -n "$IMAGE_TAG" ] || { echo "ERROR: --image-tag needs a tag" >&2; exit 2; }
+        --web-image)
+            WEB_IMAGE="${2:-}"
+            [ -n "$WEB_IMAGE" ] || { echo "ERROR: --web-image needs a digest ref" >&2; exit 2; }
             shift 2 ;;
         -h|--help) usage; exit 0 ;;
         --) shift; break ;;
@@ -266,9 +266,11 @@ while [ $# -gt 0 ]; do
     esac
 done
 COMMIT_SHA="${1:-}"
-if [ -n "$REGISTRY$IMAGE_TAG" ]; then
-    if ! [[ "$REGISTRY" =~ ^[a-z0-9.-]+(:[0-9]+)?(/[a-z0-9._-]+)+$ ]] || ! [[ "$IMAGE_TAG" =~ ^[A-Za-z0-9_][A-Za-z0-9_.-]{0,127}$ ]]; then
-        echo "ERROR: --registry and --image-tag go together (lower-case registry/path, docker tag)." >&2
+if [ -n "$APP_IMAGE$WEB_IMAGE" ]; then
+    digest_re='^[a-z0-9.-]+(:[0-9]+)?(/[a-z0-9._-]+)+@sha256:[0-9a-f]{64}$'
+    if ! [[ "$APP_IMAGE" =~ $digest_re ]] || ! [[ "$WEB_IMAGE" =~ $digest_re ]] \
+        || [[ "$APP_IMAGE" != */petprep-app@* ]] || [[ "$WEB_IMAGE" != */petprep-web@* ]]; then
+        echo "ERROR: --app-image / --web-image go together and must be petprep-app / petprep-web digest refs (…@sha256:<64 hex>)." >&2
         exit 2
     fi
 fi
@@ -636,30 +638,30 @@ fi
 log "Previous release: ${PREV_SHA:-unknown}"
 
 # ---- 3. Build + smoke-test the new images (old release keeps serving) -------------
-# pull_prebuilt: REGISTRY/<img>:IMAGE_TAG → <img>:next for both images (D28). Returns 1
-# (nothing tagged half-way matters: :next is rebuilt by the fallback) on any failure.
+# pull_prebuilt: APP_IMAGE → petprep-app:next, WEB_IMAGE → petprep-web:next (digests, D28).
+# Returns 1 on any failure (a half-tagged :next is rebuilt by the fallback).
 pull_prebuilt() {
-    local img
-    for img in "${IMAGES[@]}"; do
-        docker pull -q "${REGISTRY}/${img}:${IMAGE_TAG}" > /dev/null || return 1
+    local ref
+    for ref in "$APP_IMAGE" "$WEB_IMAGE"; do
+        docker pull -q "$ref" > /dev/null || return 1
     done
-    for img in "${IMAGES[@]}"; do
-        docker tag "${REGISTRY}/${img}:${IMAGE_TAG}" "${img}:next" || return 1
-        docker image rm "${REGISTRY}/${img}:${IMAGE_TAG}" > /dev/null 2>&1 || true # :next keeps the layers
-    done
+    docker tag "$APP_IMAGE" petprep-app:next || return 1
+    docker tag "$WEB_IMAGE" petprep-web:next || return 1
 }
 image_label() { # image_label IMAGE: org.petprep.base-id of IMAGE (empty when missing)
     docker image inspect --format '{{ index .Config.Labels "org.petprep.base-id" }}' "$1" 2>/dev/null | grep -E '^sha256:[0-9a-f]+$' || true
 }
 
 PREBUILT=0
-if [ -n "$IMAGE_TAG" ]; then
-    log "Pulling prebuilt images ${REGISTRY}/petprep-{app,web}:${IMAGE_TAG} (built by CI)..."
+if [ -n "$APP_IMAGE" ]; then
+    log "Pulling the CI images ${APP_IMAGE} / ${WEB_IMAGE}..."
     if pull_prebuilt; then
         PREBUILT=1
     else
         warn "could not pull the prebuilt images — building them on this server instead (slower)."
     fi
+    # The registry login (by CI, over ssh stdin) is needed only for the pull.
+    docker logout "${APP_IMAGE%%/*}" > /dev/null 2>&1 || true
 fi
 if [ "$PREBUILT" = 0 ]; then
     if ! docker buildx version > /dev/null 2>&1; then
