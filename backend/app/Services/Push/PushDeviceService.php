@@ -24,6 +24,13 @@ use Laravel\Sanctum\PersonalAccessToken;
  * registered it: deleting that token (logout, revoke, prune) deletes the row
  * (FK cascade) — a profile signed out on the phone stops getting pushes there.
  *
+ * Shared phone follows the pet opened last (David 2026-11-02): a
+ * registration by a CHILD user stamps `followed_at` on that child's row — the
+ * app registers on every sign-in / profile switch / cold start, so the latest
+ * child row of an install is the pet opened last there. Child-audience pushes
+ * go only to that row (`followedChildRows()`, applied at delivery); parent
+ * registrations never touch it, parent rows are never filtered.
+ *
  * Language (M1-18): `$locale` is the explicit `locale` body field (en | sl)
  * — stored, and refreshed on every re-registration that sends it. Without
  * it the stored language is kept; a new row gets `locales.unstated_device`
@@ -43,6 +50,8 @@ class PushDeviceService
         $locale = RequestLocale::isSupported($locale) ? $locale : null;
         $unstated = config('locales.unstated_device');
         $insertLocale = $locale ?? (RequestLocale::isSupported(is_string($unstated) ? $unstated : null) ? $unstated : null);
+        // Microseconds kept (the query grammar's default format drops them), so two quick switches never tie.
+        $followed = $user->isChild() ? $now->format('Y-m-d H:i:s.u') : null;
         $accessTokenId = $accessToken !== null && $accessToken->exists ? $accessToken->getKey() : null;
 
         // Other accounts on this install: keep family members with a live
@@ -77,15 +86,46 @@ class PushDeviceService
             'app_version' => $appVersion,
             'locale' => $insertLocale,
             'last_seen_at' => $now,
+            'followed_at' => $followed,
             'disabled_at' => null,
             'disabled_reason' => null,
         ]], ['user_id', 'expo_push_token'], [
             'user_id', 'personal_access_token_id', 'platform', 'app_version',
             'last_seen_at', 'disabled_at', 'disabled_reason', 'updated_at',
             ...($locale !== null ? ['locale'] : []),
+            ...($followed !== null ? ['followed_at'] : []),
         ]);
 
         return DevicePushToken::where('user_id', $user->id)->where('expo_push_token', $expoPushToken)->firstOrFail();
+    }
+
+    /**
+     * Shared phone follows the pet opened last (David 2026-11-02): per Expo
+     * token, the id of the row with the latest `followed_at` (ties by id) —
+     * the child whose pet was opened on that install last. Tokens without any
+     * stamped row (legacy, before the rule) are absent: callers keep every
+     * child row of those.
+     *
+     * @param  list<string>  $expoPushTokens
+     * @return array<string, int> token => followed row id
+     */
+    public function followedChildRows(array $expoPushTokens): array
+    {
+        if ($expoPushTokens === []) {
+            return [];
+        }
+
+        $followed = [];
+        DevicePushToken::whereIn('expo_push_token', array_values(array_unique($expoPushTokens)))
+            ->whereNotNull('followed_at')
+            ->orderByDesc('followed_at')
+            ->orderByDesc('id')
+            ->get(['id', 'expo_push_token'])
+            ->each(function (DevicePushToken $row) use (&$followed): void {
+                $followed[$row->expo_push_token] ??= (int) $row->id;
+            });
+
+        return $followed;
     }
 
     /**

@@ -514,6 +514,7 @@ class NotificationService
             ->whereIn('user_id', $audience->keys()->all())
             ->orderBy('id')
             ->get();
+        $devices = $this->onlyFollowedChildRows($devices, $audience);
 
         if ($devices->isEmpty()) {
             $this->markSuppressed($notification, 'no_devices');
@@ -598,6 +599,32 @@ class NotificationService
     }
 
     // ──────────────────────────────────────────────────────────────
+
+    /**
+     * Shared phone follows the pet opened last (David 2026-11-02): a child row
+     * gets the push only when it is its install's followed child row (the
+     * child who registered there last). Installs without a stamped row keep
+     * every child row (legacy); parent rows are never filtered. Decided at
+     * delivery, so a profile switch after the decision counts. Skipped rows
+     * get no ticket and nothing is marked failed.
+     *
+     * @param  Collection<int, DevicePushToken>  $devices
+     * @param  Collection<int, string>  $audience  user id => audience
+     * @return Collection<int, DevicePushToken>
+     */
+    private function onlyFollowedChildRows(Collection $devices, Collection $audience): Collection
+    {
+        $isChildRow = fn (DevicePushToken $d): bool => $audience->get((int) $d->user_id) === PushNotification::AUDIENCE_CHILD;
+        $childTokens = $devices->filter($isChildRow)->pluck('expo_push_token')->all();
+        if ($childTokens === []) {
+            return $devices;
+        }
+        $followed = $this->devices->followedChildRows($childTokens);
+
+        return $devices->reject(fn (DevicePushToken $d): bool => $isChildRow($d)
+            && isset($followed[$d->expo_push_token])
+            && $followed[$d->expo_push_token] !== (int) $d->id)->values();
+    }
 
     /**
      * Who hears about which step (single recipient resolution: FamilyService).

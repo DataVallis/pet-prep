@@ -1960,7 +1960,8 @@ flowchart LR
   GR -->|"DeviceNotRegistered"| DIS["device_push_tokens.disabled_at"]
   GR -->|"ok / other error"| OK["receipt stored"]
   S --> PR["delete push rows older than 30 days"]
-  REG["POST /api/devices (login, app start, token rotation)"] -->|"upsert by token; re-enables;<br/>moves to the account that registered last"| DEV["device_push_tokens"]
+  REG["POST /api/devices (login, app start, token rotation)"] -->|"upsert per (user, token); re-enables;<br/>keeps live family rows (shared phone), moves the rest;<br/>child caller → followed_at = now"| DEV["device_push_tokens"]
+  DEV -->|"delivery: per token only the latest followed_at child row<br/>gets child pushes; parent rows unfiltered (2026-11-02)"| CJ2
   DEV -.->|"FK cascade"| PAT["personal_access_tokens<br/>(logout · revoke all · prune 4th device)"]
   DEL["POST /api/devices/unregister {expo_push_token} (logout)"] --> DEV
   DS["push:dispatch-scheduled (every minute)"] -->|"scheduled → queued when send_after passed"| CJ2["SendPushNotification"]

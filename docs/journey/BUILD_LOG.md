@@ -8,6 +8,13 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-02 — Skupni telefon: obvestila samo za kužka, ki je odprt
+
+**Kaj:** starš, ki na enem telefonu igra kot več otrok (»Igraj kot«), je dobival otroška obvestila (»kuža je naredil nered«, lačen, ven …) za vse kužke, ki so se kdaj igrali na tem telefonu — tap pa je odprl kužka, ki je bil ravno odprt, torej pogosto napačnega. David je odločil: telefon sledi kužku, ki je bil na njem nazadnje odprt; starševska obvestila pa gredo še naprej za vse kužke.
+**Zakaj je pomembno:** obvestilo vedno vodi do pravega kužka; manj zmede in odvečnih obvestil v družinah z enim telefonom.
+- 👩 Starši: na skupnem telefonu otroška obvestila samo za kužka, ki je odprt; vaša nujna obvestila (alarm, bolezen …) za vse.
+- 🛠 Samo strežnik (časovni žig zadnje otroške registracije naprave, filter ob pošiljanju) — brez nove različice aplikacije, deluje tudi na starih gradnjah.
+
 ## 2026-10-31 — Nadgradnja strežnika na Laravel 12 (pripravljena)
 
 **Kaj:** David je odobril nadgradnjo ogrodja strežnika z Laravel 11 na Laravel 12. Laravel 11 ne dobiva več varnostnih popravkov; GitHub je opozarjal na 5 znanih ranljivosti v ogrodju in knjižnici za Markdown, ki so popravljene samo v novi različici. Pripravljeno je vse razen datoteke z zaklenjenimi različicami paketov (`composer.lock`) — to David ustvari na svojem računalniku, ker oblačno okolje ne doseže repozitorija paketov. Med pregledom je Claude zaprl še eno nepotrebno pot za datoteke (`/storage/…`), ki je ni nič uporabljalo, in testna orodja (Pest) umaknil iz produkcijske slike.
