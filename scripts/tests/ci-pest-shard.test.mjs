@@ -64,7 +64,8 @@ test('--update-durations sums junit testcases per file', () => {
   const junit = join(dir, 'j.xml');
   writeFileSync(junit, '<testsuites><testcase name="a" file="/x/backend/tests/Feature/ATest.php::a" time="1.25"/>'
     + '<testcase name="b" file="/x/backend/tests/Feature/ATest.php::b" time="0.75"/>'
-    + '<testcase name="c" file="/x/backend/tests/Unit/UTest.php::c" time="3"/></testsuites>');
+    + '<testcase name="c" file="/var/www/html/tests/Unit/UTest.php::c" time="2"/>'
+    + '<testcase name="d" file="C:\\work\\pp\\backend\\tests\\Unit\\UTest.php::d" time="1"/></testsuites>');
   execFileSync('node', [SCRIPT, '--update-durations', junit, '--backend', dir]);
   assert.deepEqual(JSON.parse(readFileSync(join(dir, 'tests', 'durations.json'), 'utf8')).files,
     { 'tests/Feature/ATest.php': 2, 'tests/Unit/UTest.php': 3 });

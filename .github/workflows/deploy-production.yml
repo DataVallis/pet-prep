@@ -7,8 +7,9 @@ name: CI & Deploy
 #         └─ production-image ────┘
 # `plan` (scripts/ci-plan.sh) runs only the suites whose paths changed and, on a push to
 # main, skips a suite that already passed in a successful PR run on the identical git
-# tree (marker artifacts "ci-green-<suite>-<tree>", uploaded below on every event); a production
-# "Run workflow" skips every suite already green on its tree (D28, ci-plan.sh §4).
+# tree (marker artifacts "ci-green-<suite>-<tree>", uploaded on every event) or proven by the merged
+# PR's green run when main moved only elsewhere (D29, ci-plan.sh §3b); a production "Run workflow"
+# diffs against the last production deploy and skips every suite green on its tree (D28/D29, §4).
 # `ci-ok` fails unless every suite either passed or was skipped because plan said so.
 # A push / merge to main runs CI only and deploys NOTHING (David 2026-10-14). Production is
 # deployed only by "Run workflow" on main with target = production (scripts/ci-deploy-target.sh),
@@ -46,7 +47,7 @@ concurrency:
 permissions:
   contents: read
   actions: read # plan: read runs + marker artifacts of this repository
-  pull-requests: read # plan (D28b): the merged PR of a push to main
+  pull-requests: read # plan (D29): the merged PR of a push to main
 
 jobs:
   plan:
@@ -94,7 +95,7 @@ jobs:
           FORCE_TESTS: ${{ inputs.force_tests == true }}
         run: bash scripts/ci-plan.sh
 
-      # D28b: this tree is proven by the merged PR's green run (main moved only elsewhere).
+      # D29: this tree is proven by the merged PR's green run (main moved only elsewhere).
       - name: Upload derived marker (backend)
         if: steps.plan.outputs.derived_backend == 'true'
         uses: actions/upload-artifact@v4
@@ -104,7 +105,7 @@ jobs:
           retention-days: 14
           overwrite: true
 
-      # D28b: this tree is proven by the merged PR's green run (main moved only elsewhere).
+      # D29: this tree is proven by the merged PR's green run (main moved only elsewhere).
       - name: Upload derived marker (mobile)
         if: steps.plan.outputs.derived_mobile == 'true'
         uses: actions/upload-artifact@v4
@@ -114,7 +115,7 @@ jobs:
           retention-days: 14
           overwrite: true
 
-      # D28b: this tree is proven by the merged PR's green run (main moved only elsewhere).
+      # D29: this tree is proven by the merged PR's green run (main moved only elsewhere).
       - name: Upload derived marker (scripts)
         if: steps.plan.outputs.derived_scripts == 'true'
         uses: actions/upload-artifact@v4
@@ -124,7 +125,7 @@ jobs:
           retention-days: 14
           overwrite: true
 
-      # D28b: this tree is proven by the merged PR's green run (main moved only elsewhere).
+      # D29: this tree is proven by the merged PR's green run (main moved only elsewhere).
       - name: Upload derived marker (image)
         if: steps.plan.outputs.derived_image == 'true'
         uses: actions/upload-artifact@v4
@@ -134,7 +135,7 @@ jobs:
           retention-days: 14
           overwrite: true
 
-  # D28b (David 2026-11-02): 6 shards (scripts/ci-pest-shard.mjs, balanced by the measured
+  # D29 (David 2026-11-02): 6 shards (scripts/ci-pest-shard.mjs, balanced by the measured
   # backend/tests/durations.json) — one runner took 26–28 min. The marker for this tree is
   # uploaded by the job "backend-green" only after EVERY shard passed.
   backend-tests:
@@ -236,7 +237,7 @@ jobs:
         working-directory: backend
         run: php artisan test --parallel --configuration=phpunit.shard.xml
 
-  # Marker for this tree only when every shard of backend-tests passed (D28b).
+  # Marker for this tree only when every shard of backend-tests passed (D29).
   backend-green:
     name: Backend tests (all shards)
     needs: [plan, backend-tests]
@@ -250,7 +251,7 @@ jobs:
           PR_BASE: ${{ github.event_name == 'pull_request' && needs.plan.outputs.base || '' }}
         run: |
           echo "${TREE} ${GITHUB_RUN_ID}" > "${RUNNER_TEMP}/ci-green.txt"
-          # D28b: the PR merge commit's first parent (plan's base in PR mode).
+          # D29: the PR merge commit's first parent (plan's base in PR mode).
           if [ -n "$PR_BASE" ]; then echo "base=${PR_BASE}" >> "${RUNNER_TEMP}/ci-green.txt"; fi
 
       - name: Upload green-tree marker
@@ -296,7 +297,7 @@ jobs:
           tree="$(git rev-parse 'HEAD^{tree}')"
           echo "tree=${tree}" >> "$GITHUB_OUTPUT"
           echo "${tree} ${GITHUB_RUN_ID}" > "${RUNNER_TEMP}/ci-green.txt"
-          # D28b: the PR merge commit's first parent = the main the PR was tested on
+          # D29: the PR merge commit's first parent = the main the PR was tested on
           # (cat-file: the raw parent line also exists in a depth-1 checkout).
           if [ "$GITHUB_EVENT_NAME" = pull_request ]; then
             echo "base=$(git cat-file -p HEAD | sed -n 's/^parent //p' | head -n1)" >> "${RUNNER_TEMP}/ci-green.txt"
@@ -372,7 +373,7 @@ jobs:
       - name: Care knowledge export (node --test)
         run: node --test scripts/tests/export-care-knowledge.test.mjs
 
-      # D28b: Pest shard planner (every test file in exactly one shard).
+      # D29: Pest shard planner (every test file in exactly one shard).
       - name: Pest shard plan (node --test)
         run: node --test scripts/tests/ci-pest-shard.test.mjs
 
@@ -386,7 +387,7 @@ jobs:
           tree="$(git rev-parse 'HEAD^{tree}')"
           echo "tree=${tree}" >> "$GITHUB_OUTPUT"
           echo "${tree} ${GITHUB_RUN_ID}" > "${RUNNER_TEMP}/ci-green.txt"
-          # D28b: the PR merge commit's first parent = the main the PR was tested on
+          # D29: the PR merge commit's first parent = the main the PR was tested on
           # (cat-file: the raw parent line also exists in a depth-1 checkout).
           if [ "$GITHUB_EVENT_NAME" = pull_request ]; then
             echo "base=$(git cat-file -p HEAD | sed -n 's/^parent //p' | head -n1)" >> "${RUNNER_TEMP}/ci-green.txt"
@@ -594,7 +595,7 @@ jobs:
           tree="$(git rev-parse 'HEAD^{tree}')"
           echo "tree=${tree}" >> "$GITHUB_OUTPUT"
           echo "${tree} ${GITHUB_RUN_ID}" > "${RUNNER_TEMP}/ci-green.txt"
-          # D28b: the PR merge commit's first parent = the main the PR was tested on
+          # D29: the PR merge commit's first parent = the main the PR was tested on
           # (cat-file: the raw parent line also exists in a depth-1 checkout).
           if [ "$GITHUB_EVENT_NAME" = pull_request ]; then
             echo "base=$(git cat-file -p HEAD | sed -n 's/^parent //p' | head -n1)" >> "${RUNNER_TEMP}/ci-green.txt"

@@ -691,19 +691,20 @@ derive_setup() {
   commit "$1"
   git -C "$W" checkout -q feature -- backend/app/A.php; git -C "$W" commit -qm squash
   t="$(tree)"
+  TT="$(git -C "$W" merge-tree --write-tree --no-messages "$B" "$PRHEAD")" # what the PR run tested
   jq -n --arg h "$PRHEAD" --arg r "$REPO_NAME" '[{number:5,merged_at:"2026-11-02T20:00:00Z",base:{ref:"main"},head:{sha:$h,repo:{full_name:$r}}}]' > "$FIX/pulls.json"
   jq -n --arg r "$REPO_NAME" '{workflow_runs:[{id:77,event:"pull_request",conclusion:"success",head_repository:{full_name:$r}}]}' > "$FIX/prruns.json"
   jq -n '{artifacts:[{name:"ci-green-backend-x",expired:false,archive_download_url:"https://zip/backend"},
     {name:"ci-green-image-x",expired:false,archive_download_url:"https://zip/image"},
     {name:"ci-green-scripts-x",expired:false,archive_download_url:"https://zip/scripts"}]}' > "$FIX/runarts-77.json"
-  local mb="${2:-$B}"
-  zipmk backend "x 77
+  local mb="${2:-$B}" mt="${3:-$TT}"
+  zipmk backend "$mt 77
 base=$mb
 "
-  zipmk scripts "x 77
+  zipmk scripts "$mt 77
 base=$mb
 "
-  zipmk image "x 77
+  zipmk image "$mt 77
 base=$mb
 app=ghcr.io/datavallis/petprep-app@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 web=ghcr.io/datavallis/petprep-web@sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
@@ -713,7 +714,7 @@ out_of() { sed -n "s/^$1=//p" "$FIX/out"; }
 derive_setup docs/X.md; plan push refs/heads/main
 check "main moved by docs only → backend + image proven by the PR run" "$S_NONE" "$o_suites"
 check "… derived markers for backend + image" "true true" "$(out_of derived_backend) $(out_of derived_image)"
-check "… derived backend marker names this tree + the PR run" "$t 900|derived-from=77 base=$B" "$(sed -n 1,2p "$FIX/derived/backend/ci-green.txt" | paste -sd'|')"
+check "… derived backend marker names this tree + the PR run" "$t 900|derived-from=77 tested=$TT" "$(sed -n 1,2p "$FIX/derived/backend/ci-green.txt" | paste -sd'|')"
 check "… image digests copied" "app=ghcr.io/datavallis/petprep-app@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa|web=ghcr.io/datavallis/petprep-web@sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb" "$(grep -E '^(app|web)=' "$FIX/derived/image/ci-green.txt" | paste -sd'|')"
 check "… image_run = this push run (its derived marker)" 900 "$(out_of image_run)"
 derive_setup backend/app/B.php; plan push refs/heads/main
@@ -722,10 +723,20 @@ check "… nothing derived" "" "$(out_of derived_backend)"
 derive_setup mobile/src/a.ts; plan push refs/heads/main
 check "main moved by mobile only → backend proven, mobile runs (needed since deploy)" "backend=false mobile=true scripts=false image=false " "$o_suites"
 derive_setup docs/X.md "$(printf 'f%.0s' $(seq 40))"; plan push refs/heads/main
-check "marker base not an ancestor → run" "$S_BACKEND" "$o_suites"
-derive_setup docs/X.md; zipmk backend "x 77
-"; zipmk image "x 77
-"; zipmk scripts "x 77
+check "marker base not in the clone → run" "$S_BACKEND" "$o_suites"
+derive_setup docs/X.md "" "$(printf 'e%.0s' $(seq 40))"; plan push refs/heads/main
+check "base + PR head does not rebuild the marker's tree → run" "$S_BACKEND" "$o_suites"
+# QA #573 B1: a merge commit with an extra backend change on top of the tested PR.
+derive_setup docs/X.md; git -C "$W" reset -q --hard HEAD~1
+git -C "$W" merge -q --no-ff --no-commit feature; echo extra > "$W/backend/app/Extra.php"
+git -C "$W" add -A; git -C "$W" commit -qm "merge PR + extra"; plan push refs/heads/main
+check "merge commit with an extra backend change → backend + image run" "$S_BACKEND" "$o_suites"
+check "… nothing derived for backend" "" "$(out_of derived_backend)"
+derive_setup docs/X.md; plan push refs/heads/main 2
+check "push re-run → no PR proof" "" "$(out_of derived_backend)"
+derive_setup docs/X.md; zipmk backend "$TT 77
+"; zipmk image "$TT 77
+"; zipmk scripts "$TT 77
 "; plan push refs/heads/main
 check "pre-D28b marker without base line → run" "$S_BACKEND" "$o_suites"
 derive_setup docs/X.md; echo '[]' > "$FIX/pulls.json"; plan push refs/heads/main

@@ -30,7 +30,10 @@ if (ui >= 0) {
     const file = /\bfile="([^"]*)"/.exec(m[0])?.[1];
     const time = Number(/\btime="([^"]*)"/.exec(m[0])?.[1]);
     if (!file || !Number.isFinite(time)) continue;
-    const rel = file.split('::')[0].split('/backend/').pop();
+    // Any checkout path (CI, Sail /var/www/html, Windows): keep from the tests/ segment on.
+    const norm = file.split('::')[0].split('\\').join('/');
+    const at = norm.lastIndexOf('/tests/');
+    const rel = at >= 0 ? norm.slice(at + 1) : norm;
     per[rel] = (per[rel] ?? 0) + time;
   }
   const out = Object.fromEntries(Object.keys(per).sort().map((k) => [k, Math.round(per[k] * 10) / 10]));

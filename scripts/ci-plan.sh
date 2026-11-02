@@ -18,8 +18,9 @@
 #                           2026-10-06 incident) never drops changes from the next diff.
 #                           Base not found / not an ancestor (force push) / API error /
 #                           diff error / empty diff between different trees → full run.
-#        workflow_dispatch  full run (deploy=true on main; the job deploys only with
-#                           target production — which then skips green suites, §4).
+#        workflow_dispatch  target production (attempt 1, no force_tests): like a push —
+#                           diff against the last production deploy (§4); otherwise full run.
+#                           deploy=true on main; the job deploys only with target production.
 #        re-run (attempt>1) full run — "Re-run all jobs" of a production dispatch run repeats
 #                           its deploy (only of the current main head: ci-deploy-guard.sh);
 #                           a re-run of a push run deploys nothing.
@@ -45,7 +46,7 @@
 #                           (D21 daily deploy trigger; runs in Actions, nothing ships)
 #        backend + scripts  scripts/ci-install-ffmpeg.sh + its test (D24: ffmpeg for the backend
 #                           test job; runs in Actions, nothing ships → no image, no deploy);
-#                           scripts/ci-pest-shard.mjs + its test (D28b shard plan, same)
+#                           scripts/ci-pest-shard.mjs + its test (D29 shard plan, same)
 #   3. Tested tree (push to main; production dispatch: §4): a needed suite is skipped when a pull_request
 #      run of THIS workflow, from this repository (no forks), with conclusion success,
 #      ran that suite on the identical git tree — marker artifact
@@ -54,13 +55,14 @@
 #      in between (then the trees differ and everything needed runs again). Applies to
 #      push runs in full mode too (a marker proves the exact tree, whatever the base).
 #      pull_request runs never skip on markers.
-#   3b. Merged PR proof (push to main, D28b): when main moved between the PR's green run and
-#      the merge, the trees differ and no marker matches. A suite is still skipped when
-#      the commit's merged PR (same repo) has a successful pull_request run on its final
-#      head that uploaded the suite's marker, that marker records the PR merge commit's
-#      first parent B ("base=" line), B is an ancestor of HEAD^1, and nothing between B and
-#      HEAD^1 touches the suite's paths (classify) — then HEAD's files for that suite are
-#      exactly the ones the PR run tested. The plan job uploads a marker for HEAD's tree
+#   3b. Merged PR proof (push to main attempt 1, D29): when main moved between the PR's green
+#      run and the merge, the trees differ and no marker matches. A suite is still skipped
+#      when the commit's merged PR (same repo) has a successful pull_request run on its final
+#      head that uploaded the suite's marker, the marker records the PR merge commit's first
+#      parent B ("base=") and tested tree T (first field), `git merge-tree B <PR head>`
+#      rebuilds exactly T, and no file that differs between T and HEAD needs the suite
+#      (classify) — then HEAD's files for that suite are exactly the ones the PR run tested
+#      (also catches a conflict resolution / extra change inside a merge commit). The plan job uploads a marker for HEAD's tree
 #      ("derived from run N", image digests copied) so the deploy finds it. Any doubt
 #      (no PR, no base line, not an ancestor, API / git error) → the suite runs.
 #   4. Production deploy reuses the tested tree (D28, David 2026-11-02: "deploy max 10 min"):
@@ -80,7 +82,8 @@
 # DEPLOY_TARGET (none / production, from ci-deploy-target.sh), FORCE_TESTS (true / false),
 # DEPLOY_JOB_NAME (default "Deploy to Hetzner Production"), GH_TOKEN (for gh),
 # GITHUB_OUTPUT, GITHUB_STEP_SUMMARY (optional). Test hooks: CI_PLAN_GH (gh binary).
-# Output (GITHUB_OUTPUT): tree, base, mode, backend, mobile, scripts, image, deploy, image_run
+# Output (GITHUB_OUTPUT): tree, base, mode, backend, mobile, scripts, image, deploy, image_run,
+# derived_{backend,mobile,scripts,image} (true when §3b proved it), derived_dir
 # (each suite/deploy "true"/"false"). The whole decision is also printed as a
 # "::notice title=plan::" annotation (readable through the check-runs API).
 set -Eeuo pipefail
@@ -197,8 +200,8 @@ classify() {
       scripts/generate-api-types.mjs) need_mobile=true ;;
       scripts/export-breed-registry.mjs|scripts/tests/export-breed-registry.test.mjs) need_scripts=true ;; # website export, nothing ships
       scripts/daily-deploy.sh|scripts/tests/daily-deploy.test.sh|.github/workflows/daily-deploy.yml) need_scripts=true ;; # D21 daily deploy trigger (Actions only), nothing ships
-      scripts/ci-install-ffmpeg.sh|scripts/tests/ci-install-ffmpeg.test.sh) need_backend=true need_scripts=true ;;
-      scripts/ci-pest-shard.mjs|scripts/tests/ci-pest-shard.test.mjs) need_backend=true need_scripts=true ;; # D28b Pest shard plan (Actions only), nothing ships # D24 ffmpeg for the backend test job (Actions only), nothing ships
+      scripts/ci-install-ffmpeg.sh|scripts/tests/ci-install-ffmpeg.test.sh) need_backend=true need_scripts=true ;; # D24 ffmpeg for the backend test job (Actions only), nothing ships
+      scripts/ci-pest-shard.mjs|scripts/tests/ci-pest-shard.test.mjs) need_backend=true need_scripts=true ;; # D29 Pest shard plan (Actions only), nothing ships # D24 ffmpeg for the backend test job (Actions only), nothing ships
       scripts/breeds-index.mjs|scripts/tests/breeds-index.test.mjs|docs/breeds/*) need_scripts=true ;; # docs/breeds index (one doc per breed), nothing ships
       scripts/*) need_backend=true need_deploy=true need_scripts=true ;;
       mobile/src/i18n/locales/*/pet.json|mobile/src/i18n/locales/*/family.json) need_mobile=true need_scripts=true ;; # + breed registry labels / names
@@ -228,7 +231,7 @@ else
   log "full run: ${reason}"
 fi
 need_image="$need_deploy" # the image holds what ships (backend/), not research fixtures
-# A production deploy always needs the image digests (D28b): verified by a marker or built.
+# A production deploy always needs the image digests (D29): verified by a marker or built.
 if [ "$EVENT_NAME" = workflow_dispatch ]; then need_image=true; fi
 
 deploy=false
@@ -271,16 +274,20 @@ fetch_marker() { # fetch_marker URL DIR → DIR/ci-green.txt
   "$GH" api "$1" > "$2/m.zip" 2>/dev/null && unzip -q -o "$2/m.zip" -d "$2" 2>/dev/null && [ -f "$2/ci-green.txt" ]
 }
 derive_from_pr() {
-  local head parent pr prhead runs id arts suite url pbase between f
+  local head pr prnum prhead runs id arts suite url pbase ptree tested between f
   local b_need_backend b_need_mobile b_need_scripts b_need_deploy
   head="$(git rev-parse HEAD)"
-  parent="$(git rev-parse -q --verify 'HEAD^1' 2>/dev/null)" || { log "derive: no parent"; return 0; }
   pr="$("$GH" api "repos/${REPO}/commits/${head}/pulls" \
         --jq '[.[] | select(.merged_at != null and .base.ref == "main" and .head.repo.full_name == "'"${REPO}"'")][0] | select(. != null) | "\(.number) \(.head.sha)"' \
         2>/dev/null)" || { log "derive: PR lookup failed"; return 0; }
   [ -n "$pr" ] || { log "derive: no merged same-repo PR for ${head}"; return 0; }
-  prhead="${pr#* }"
-  [[ "$prhead" =~ ^[0-9a-f]{40}$ ]] || return 0
+  prnum="${pr%% *}" prhead="${pr#* }"
+  [[ "$prhead" =~ ^[0-9a-f]{40}$ ]] && [[ "$prnum" =~ ^[0-9]+$ ]] || return 0
+  # The PR head's objects (trees only; blobs come lazily when merge-tree needs them).
+  if ! git cat-file -e "${prhead}^{commit}" 2>/dev/null; then
+    git fetch -q --no-tags --filter=blob:none origin "refs/pull/${prnum}/head" 2>/dev/null || true
+  fi
+  git cat-file -e "${prhead}^{commit}" 2>/dev/null || { log "derive: PR head ${prhead} not fetchable"; return 0; }
   runs="$("$GH" api "repos/${REPO}/actions/workflows/${WORKFLOW_FILE}/runs?event=pull_request&head_sha=${prhead}&status=success&per_page=10" \
         --jq '.workflow_runs[] | select(.event == "pull_request" and .conclusion == "success" and .head_repository.full_name == "'"${REPO}"'") | .id' \
         2>/dev/null)" || { log "derive: PR runs lookup failed"; return 0; }
@@ -292,16 +299,24 @@ derive_from_pr() {
     url="$(head -n1 <<< "$arts" | cut -d' ' -f2)"
     fetch_marker "$url" "${DERIVED_DIR}/probe" || continue
     pbase="$(sed -n 's/^base=//p' "${DERIVED_DIR}/probe/ci-green.txt" | head -n1)"
-    if ! [[ "$pbase" =~ ^[0-9a-f]{40}$ ]]; then log "derive: run ${id} marker has no base line"; continue; fi
-    if ! git merge-base --is-ancestor "$pbase" "$parent" 2>/dev/null; then log "derive: base ${pbase} not an ancestor of HEAD^1"; continue; fi
-    if ! between="$(git diff --name-only --no-renames "$pbase" "$parent")"; then log "derive: git diff failed"; continue; fi
-    # Classify what landed on main between the PR's test base and the merge (own flags).
+    ptree="$(head -n1 "${DERIVED_DIR}/probe/ci-green.txt" | cut -d' ' -f1)"
+    if ! [[ "$pbase" =~ ^[0-9a-f]{40}$ ]] || ! [[ "$ptree" =~ ^[0-9a-f]{40}$ ]]; then log "derive: run ${id} marker has no base / tree"; continue; fi
+    git cat-file -e "${pbase}^{commit}" 2>/dev/null || { log "derive: base ${pbase} not in this clone"; continue; }
+    # QA #573 B1: rebuild the tree the PR run tested (its merge commit = base + PR head) and
+    # require it to be exactly the marker's tree; then compare THAT tree with HEAD's — any
+    # difference (other PRs on main, a conflict resolution or extra change in a merge
+    # commit) is classified, never assumed away.
+    if ! tested="$(git merge-tree --write-tree --no-messages "$pbase" "$prhead" 2>/dev/null)" || [ "$tested" != "$ptree" ]; then
+      log "derive: base + PR head does not rebuild the tested tree ${ptree} (got ${tested:-conflict})"; continue
+    fi
+    if ! between="$(git diff --name-only --no-renames "$tested" HEAD)"; then log "derive: git diff failed"; continue; fi
+    # Classify every file that differs between the tested tree and HEAD (own flags).
     b_need_backend=$need_backend b_need_mobile=$need_mobile b_need_scripts=$need_scripts b_need_deploy=$need_deploy
     need_backend=false need_mobile=false need_scripts=false need_deploy=false
     if [ -n "$between" ]; then mapfile -t bfiles <<< "$between"; classify "${bfiles[@]}"; fi
     local m_backend=$need_backend m_mobile=$need_mobile m_scripts=$need_scripts m_image=$need_deploy
     need_backend=$b_need_backend need_mobile=$b_need_mobile need_scripts=$b_need_scripts need_deploy=$b_need_deploy
-    log "derive: PR run ${id} base ${pbase}; between base and HEAD^1: backend=${m_backend} mobile=${m_mobile} scripts=${m_scripts} image=${m_image}"
+    log "derive: PR run ${id} tested ${tested} (base ${pbase}); tested tree vs HEAD: backend=${m_backend} mobile=${m_mobile} scripts=${m_scripts} image=${m_image}"
     for suite in backend mobile scripts image; do
       local runvar="run_${suite}" mvar="m_${suite}"
       if [ "${!runvar}" != true ] || [ "${!mvar}" != false ]; then continue; fi
@@ -310,7 +325,7 @@ derive_from_pr() {
       fetch_marker "$f" "${DERIVED_DIR}/src-${suite}" || continue
       [ "$(sed -n 's/^base=//p' "${DERIVED_DIR}/src-${suite}/ci-green.txt" | head -n1)" = "$pbase" ] || continue
       mkdir -p "${DERIVED_DIR}/${suite}"
-      { echo "${tree} ${GITHUB_RUN_ID:-0}"; echo "derived-from=${id} base=${pbase}"
+      { echo "${tree} ${GITHUB_RUN_ID:-0}"; echo "derived-from=${id} tested=${tested}"
         grep -E '^(app|web)=' "${DERIVED_DIR}/src-${suite}/ci-green.txt" || true
       } > "${DERIVED_DIR}/${suite}/ci-green.txt"
       printf -v "$runvar" false
@@ -332,7 +347,8 @@ if [ "$EVENT_NAME" = push ] && [ "$GIT_REF" = "refs/heads/main" ]; then
   if [ "$run_mobile" = true ] && green_on_pr mobile; then run_mobile=false; fi
   if [ "$run_scripts" = true ] && green_on_pr scripts; then run_scripts=false; fi
   if [ "$run_image" = true ] && green_on_pr image; then run_image=false; fi
-  if [ "$run_backend$run_mobile$run_scripts$run_image" != falsefalsefalsefalse ]; then derive_from_pr; fi
+  # Re-runs ("Re-run all jobs") test everything they need — no PR proof (QA #573 m1).
+  if [ "${RUN_ATTEMPT:-1}" = 1 ] && [ "$run_backend$run_mobile$run_scripts$run_image" != falsefalsefalsefalse ]; then derive_from_pr; fi
 elif [ "$EVENT_NAME" = workflow_dispatch ] && [ "$GIT_REF" = "refs/heads/main" ] \
      && [ "$DEPLOY_TARGET" = production ] && [ "${RUN_ATTEMPT:-1}" = 1 ] && [ "$FORCE_TESTS" != true ]; then
   any='["pull_request","push","workflow_dispatch"]'
