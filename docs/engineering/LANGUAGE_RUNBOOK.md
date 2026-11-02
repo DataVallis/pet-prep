@@ -22,6 +22,7 @@ First `[ ]` line of `LANGUAGE_QUEUE.md` (e.g. `de German`). Branch `feat/L-<code
 When every line is `[x]`, the run is a **top-up run**: find texts that exist in EN but not in a live language
 (new care foods from the nightly food run, new breeds from the breed run, new website copy) and translate +
 review those the same way (one language per run, round-robin from the oldest top-up).
+A `[ ] review <code>` line (section "Review" of the queue) is a **review run** — see §3R; it comes before top-ups.
 
 ## 2. Translate (agent A — translator)
 
@@ -74,6 +75,21 @@ quotes**, never adding claims; verification `<code>: draft`.
   after B's and its own last edit.
 - If B or C finds more than 5 % of strings needing a meaning fix, A re-translates those parts and B + C run again
   (max. 2 rounds), else the line is marked `[!]`.
+
+## 3R. Review run — re-read a live language (David 2026-11-02: "vse je treba pregledat")
+
+For a `[ ] review <code>` line. Branch `feat/L-<code>-review` in both repos (the §0 lock still applies). No
+translator: two fresh agents who did not translate the language.
+1. **B (native copywriter + grammar)** reads **every** string of that locale in context, page by page: website
+   `src/content/<code>.ts`, every `Record<Locale, …>` entry (kids, colouring, care copy, emergency, register words,
+   `registry/locales/<code>.json` labels), then every food text in `docs/research/care/foods/*/*.json`. Applies §2
+   "Meaning, not words" and the core glossary: rewrites every sentence a native parent would not write, fixes
+   grammar, consistency and typography. Does not change facts, numbers, slugs or URLs (a wrong slug → note only).
+2. **C (meaning & safety)** checks every changed string against EN (foods also against the quotes) and re-sets
+   `verification[<code>] = verified` with the new hash for every food it passes.
+3. Ship as §4 with PR titles `fix(i18n): <language> review [L-review]`; queue line →
+   `[x] review <code> — <n> strings rewritten (B) / <n> meaning fixes (C), PRs #…, <date>` + any new glossary terms
+   on the language's main queue line. The summary lists 3–5 typical before → after examples.
 
 ## 4. Ship
 
