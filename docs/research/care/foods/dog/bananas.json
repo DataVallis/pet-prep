@@ -4,6 +4,7 @@
   "name": {
     "en": "Bananas",
     "sl": "Banane",
+    "de": "Bananen",
     "cs": "Banány",
     "hr": "Banane",
     "sv": "Bananer",
@@ -14,6 +15,7 @@
   "question": {
     "en": "Can dogs eat bananas?",
     "sl": "Ali lahko psi jedo banane?",
+    "de": "Dürfen Hunde Bananen fressen?",
     "cs": "Mohou psi jíst banány?",
     "hr": "Smiju li psi jesti banane?",
     "sv": "Får hundar äta bananer?",
@@ -24,6 +26,7 @@
   "url_slug": {
     "en": "bananas",
     "sl": "banane",
+    "de": "bananen",
     "cs": "banany",
     "hr": "banane",
     "sv": "bananer",
@@ -35,6 +38,7 @@
   "answer": {
     "en": "Yes, as an occasional treat. Bananas are high in potassium, vitamin B6 and vitamin C, but they are high in sugar, so they are best kept as a treat rather than part of your dog's daily diet. Always remove the peel.",
     "sl": "Da, kot občasen priboljšek. Banane vsebujejo veliko kalija, vitamina B6 in vitamina C, a tudi veliko sladkorja, zato naj bodo priboljšek in ne del psove vsakodnevne prehrane. Vedno odstranite olupek.",
+    "de": "Ja, als gelegentliches Leckerli. Bananen enthalten viel Kalium, Vitamin B6 und Vitamin C, aber auch viel Zucker – sie sollten daher ein Leckerli bleiben und nicht zum täglichen Futter Ihres Hundes gehören. Entfernen Sie immer die Schale.",
     "cs": "Ano, jako občasný pamlsek. Banány mají hodně draslíku, vitaminu B6 a vitaminu C, ale také hodně cukru, proto je nechte jako pamlsek, ne jako součást každodenní stravy vašeho psa. Vždy odstraňte slupku.",
     "hr": "Da, kao povremenu poslasticu. Banane su bogate kalijem, vitaminom B6 i vitaminom C, ali sadrže mnogo šećera, pa je bolje da budu poslastica, a ne dio svakodnevne prehrane tvog psa. Koru uvijek ukloni.",
     "sv": "Ja, som en godbit ibland. Bananer innehåller mycket kalium, B6-vitamin och C-vitamin, men också mycket socker, så de passar bäst som godbit och inte som en del av hundens dagliga kost. Ta alltid bort skalet.",
@@ -45,6 +49,7 @@
   "why": {
     "en": "Too much banana can add extra calories and may cause digestive upset in some dogs. Banana peels are not toxic to dogs, but they are hard to digest and could cause stomach discomfort or, in some cases, an intestinal blockage.",
     "sl": "Preveč banane lahko doda odvečne kalorije in pri nekaterih psih povzroči prebavne težave. Bananin olupek za pse ni strupen, a je težko prebavljiv in lahko povzroči neugodje v prebavilih ali v nekaterih primerih zaporo črevesja.",
+    "de": "Zu viel Banane kann zusätzliche Kalorien liefern und bei manchen Hunden Verdauungsbeschwerden verursachen. Bananenschalen sind für Hunde nicht giftig, aber schwer verdaulich und könnten Magenbeschwerden oder in manchen Fällen einen Darmverschluss verursachen.",
     "cs": "Příliš mnoho banánu může přidat kalorie navíc a u některých psů může způsobit zažívací potíže. Banánové slupky nejsou pro psy jedovaté, ale špatně se tráví a mohly by způsobit žaludeční potíže nebo v některých případech ucpání střev.",
     "hr": "Previše banane može donijeti višak kalorija i kod nekih pasa izazvati probavne smetnje. Kora banane nije otrovna za pse, ali se teško probavlja i može izazvati želučane tegobe ili, u nekim slučajevima, začepljenje crijeva.",
     "sv": "För mycket banan kan ge extra kalorier och hos vissa hundar orsaka magbesvär. Bananskal är inte giftiga för hundar, men de är svåra att smälta och kan ge obehag i magen eller i vissa fall tarmstopp.",
@@ -56,6 +61,7 @@
   "what_to_do": {
     "en": "A banana peel could cause stomach discomfort or, in some cases, an intestinal blockage, so always remove it. If you are unsure how much banana suits your dog's size, age or health, ask your vet.",
     "sl": "Bananin olupek lahko povzroči neugodje v prebavilih ali v nekaterih primerih zaporo črevesja, zato ga vedno odstranite. Če niste prepričani, koliko banane je primerno za velikost, starost ali zdravje vašega psa, vprašajte veterinarja.",
+    "de": "Eine Bananenschale könnte Magenbeschwerden oder in manchen Fällen einen Darmverschluss verursachen – entfernen Sie sie also immer. Wenn Sie unsicher sind, wie viel Banane zur Größe, zum Alter oder zur Gesundheit Ihres Hundes passt, fragen Sie Ihren Tierarzt.",
     "cs": "Banánová slupka by mohla způsobit žaludeční potíže nebo v některých případech ucpání střev, proto ji vždy odstraňte. Pokud si nejste jistí, kolik banánu se hodí k velikosti, věku nebo zdraví vašeho psa, zeptejte se veterináře.",
     "hr": "Kora banane može izazvati želučane tegobe ili, u nekim slučajevima, začepljenje crijeva, zato je uvijek ukloni. Ako nisi siguran koliko banane odgovara veličini, dobi ili zdravlju tvog psa, pitaj veterinara.",
     "sv": "Ett bananskal kan ge obehag i magen eller i vissa fall tarmstopp, så ta alltid bort det. Om du är osäker på hur mycket banan som passar hundens storlek, ålder eller hälsa, fråga veterinären.",
@@ -66,6 +72,7 @@
   "serving": {
     "en": "Peeled, in bite-sized pieces, mashed into food or frozen; as an occasional treat.",
     "sl": "Olupljena, v majhnih koščkih, pretlačena v hrano ali zamrznjena; kot občasen priboljšek.",
+    "de": "Geschält, in mundgerechten Stücken, zerdrückt unter das Futter gemischt oder gefroren; als gelegentliches Leckerli.",
     "cs": "Oloupané, v malých kouscích, rozmačkané do krmiva nebo zmražené; jako občasný pamlsek.",
     "hr": "Oguljena, u komadićima za jedan zalogaj, zgnječena i umiješana u hranu ili zamrznuta; kao povremena poslastica.",
     "sv": "Skalad, i små bitar, mosad i maten eller fryst; som en godbit ibland.",
@@ -76,6 +83,7 @@
   "child": {
     "en": "Dogs can have a small piece of banana as a treat! A grown-up takes the peel off first.",
     "sl": "Psi lahko kot priboljšek dobijo košček banane! Odrasel najprej odstrani olupek.",
+    "de": "Hunde dürfen ein kleines Stück Banane als Leckerli bekommen! Ein Erwachsener macht vorher die Schale ab.",
     "cs": "Psi můžou dostat malý kousek banánu jako pamlsek! Dospělý ho nejdřív oloupe.",
     "hr": "Psi smiju dobiti komadić banane kao poslasticu! Odrasla osoba prvo skine koru.",
     "sv": "Hundar kan få en liten bit banan som godbit! En vuxen tar bort skalet först.",
@@ -88,6 +96,7 @@
       "q": {
         "en": "Can dogs eat banana peels?",
         "sl": "Ali lahko psi jedo bananine olupke?",
+        "de": "Dürfen Hunde Bananenschalen fressen?",
         "cs": "Mohou psi jíst banánové slupky?",
         "hr": "Smiju li psi jesti koru banane?",
         "sv": "Får hundar äta bananskal?",
@@ -98,6 +107,7 @@
       "a": {
         "en": "No. Peels are not toxic, but they are hard to digest, so always remove the peel first.",
         "sl": "Ne. Olupki niso strupeni, a so težko prebavljivi, zato vedno najprej odstranite olupek.",
+        "de": "Nein. Die Schalen sind nicht giftig, aber schwer verdaulich – entfernen Sie die Schale also immer vorher.",
         "cs": "Ne. Slupky nejsou jedovaté, ale špatně se tráví, proto je vždy nejdřív odstraňte.",
         "hr": "Ne. Kora nije otrovna, ali se teško probavlja, zato je uvijek prvo ukloni.",
         "sv": "Nej. Skalen är inte giftiga, men de är svåra att smälta, så ta alltid bort skalet först.",
@@ -169,6 +179,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e9a0ace5c36ff19dba57f48f215571267bf777eeb79b149401e6de53b226adc5"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "880bc968ff83f8347a43b417cbfbd23c359e2fad4391690eb140280d6bf1d320"
     },
     "cs": {
       "status": "verified",

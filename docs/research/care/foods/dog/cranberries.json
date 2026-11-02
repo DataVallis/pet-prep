@@ -4,6 +4,7 @@
   "name": {
     "en": "Cranberries",
     "sl": "Brusnice",
+    "de": "Cranberrys",
     "cs": "Brusinky",
     "hr": "Brusnice",
     "sv": "Tranbär",
@@ -14,6 +15,7 @@
   "question": {
     "en": "Can dogs eat cranberries?",
     "sl": "Ali lahko psi jedo brusnice?",
+    "de": "Dürfen Hunde Cranberrys fressen?",
     "cs": "Mohou psi jíst brusinky?",
     "hr": "Smiju li psi jesti brusnice?",
     "sv": "Får hundar äta tranbär?",
@@ -24,6 +26,7 @@
   "url_slug": {
     "en": "cranberries",
     "sl": "brusnice",
+    "de": "cranberrys",
     "cs": "brusinky",
     "hr": "brusnice",
     "sv": "tranbar",
@@ -35,6 +38,7 @@
   "answer": {
     "en": "Yes, in small quantities. Plain fresh, cooked or dried cranberries are not toxic to dogs, but too many can upset the stomach. Avoid cranberry sauce and dried fruit mixes, which may contain sugar, raisins or other harmful ingredients.",
     "sl": "Da, v majhnih količinah. Navadne sveže, kuhane ali suhe brusnice za pse niso strupene, a preveč jih lahko razburi želodec. Izogibajte se brusnični omaki in mešanicam suhega sadja, ki lahko vsebujejo sladkor, rozine ali druge škodljive sestavine.",
+    "de": "Ja, in kleinen Mengen. Frische, gekochte oder getrocknete Cranberrys ohne Zusätze sind für Hunde nicht giftig, aber zu viele können den Magen verstimmen. Meiden Sie Cranberrysoße und getrocknete Fruchtmischungen, die Zucker, Rosinen oder andere schädliche Zutaten enthalten können.",
     "cs": "Ano, v malém množství. Čisté čerstvé, tepelně upravené nebo sušené brusinky nejsou pro psy jedovaté, ale příliš mnoho jich může podráždit žaludek. Vyhněte se brusinkové omáčce a směsím sušeného ovoce, které mohou obsahovat cukr, rozinky nebo jiné škodlivé přísady.",
     "hr": "Da, u malim količinama. Obične svježe, termički obrađene ili sušene brusnice nisu otrovne za pse, ali previše njih može uznemiriti želudac. Izbjegavaj umak od brusnica i mješavine sušenog voća, koje mogu sadržavati šećer, grožđice ili druge štetne sastojke.",
     "sv": "Ja, i små mängder. Naturella färska, tillagade eller torkade tranbär är inte giftiga för hundar, men för många kan ge orolig mage. Undvik tranbärssås och torkade fruktblandningar, som kan innehålla socker, russin eller andra skadliga ingredienser.",
@@ -45,6 +49,7 @@
   "why": {
     "en": "Dried cranberries sometimes come mixed with raisins, and grapes and raisins are very toxic to dogs. Cranberry sauce is high in sugar, which can cause stomach upset, and some recipes include grapes, raisins, currants or alcohol. Many dried cranberries sold for people are sweetened, which adds unneeded sugar.",
     "sl": "Suhe brusnice so včasih pomešane z rozinami, grozdje in rozine pa so za pse zelo strupeni. Brusnična omaka vsebuje veliko sladkorja, ki lahko povzroči prebavne težave, nekateri recepti pa vsebujejo grozdje, rozine, ribez ali alkohol. Veliko suhih brusnic, namenjenih ljudem, je sladkanih, kar doda nepotreben sladkor.",
+    "de": "Getrocknete Cranberrys werden manchmal mit Rosinen gemischt verkauft, und Weintrauben und Rosinen sind für Hunde sehr giftig. Cranberrysoße enthält viel Zucker, der den Magen verstimmen kann, und manche Rezepte enthalten Weintrauben, Rosinen, Korinthen oder Alkohol. Viele getrocknete Cranberrys für Menschen sind gesüßt und liefern so unnötigen Zucker.",
     "cs": "Sušené brusinky se někdy prodávají ve směsi s rozinkami, a hrozny i rozinky jsou pro psy velmi jedovaté. Brusinková omáčka obsahuje hodně cukru, který může podráždit žaludek, a některé recepty obsahují hrozny, rozinky, korintky nebo alkohol. Mnoho sušených brusinek určených pro lidi je slazených, což přidává zbytečný cukr.",
     "hr": "Sušene brusnice ponekad dolaze pomiješane s grožđicama, a grožđe i grožđice vrlo su otrovni za pse. Umak od brusnica sadrži mnogo šećera, koji može uznemiriti želudac, a neki recepti sadrže grožđe, grožđice, korintsko grožđe ili alkohol. Mnoge sušene brusnice koje se prodaju za ljude zaslađene su, što psu donosi nepotreban šećer.",
     "sv": "Torkade tranbär säljs ibland blandade med russin, och vindruvor och russin är mycket giftiga för hundar. Tranbärssås innehåller mycket socker, som kan ge orolig mage, och vissa recept innehåller vindruvor, russin, korinter eller alkohol. Många torkade tranbär för människor är sötade, vilket ger onödigt socker.",
@@ -56,6 +61,7 @@
   "what_to_do": {
     "en": "Feed cranberries in moderation and under the guidance of a vet. Grapes and raisins are very toxic to dogs, so avoid cranberry mixes that contain raisins.",
     "sl": "Brusnice dajajte zmerno in po nasvetu veterinarja. Grozdje in rozine so za pse zelo strupeni, zato se izogibajte mešanicam brusnic z rozinami.",
+    "de": "Füttern Sie Cranberrys in Maßen und nach Rücksprache mit einem Tierarzt. Weintrauben und Rosinen sind für Hunde sehr giftig – meiden Sie daher Cranberry-Mischungen mit Rosinen.",
     "cs": "Brusinky dávejte s mírou a podle doporučení veterináře. Hrozny a rozinky jsou pro psy velmi jedovaté, proto se vyhněte brusinkovým směsím s rozinkami.",
     "hr": "Brusnice daj umjereno i uz savjet veterinara. Grožđe i grožđice vrlo su otrovni za pse, zato izbjegavaj mješavine brusnica s grožđicama.",
     "sv": "Ge tranbär med måtta och enligt veterinärens råd. Vindruvor och russin är mycket giftiga för hundar, så undvik tranbärsblandningar som innehåller russin.",
@@ -66,6 +72,7 @@
   "serving": {
     "en": "Plain fresh, cooked or dried cranberries without added sugar and without raisins; in small quantities.",
     "sl": "Navadne sveže, kuhane ali suhe brusnice brez dodanega sladkorja in brez rozin; v majhnih količinah.",
+    "de": "Frische, gekochte oder getrocknete Cranberrys ohne Zusätze, ohne zugesetzten Zucker und ohne Rosinen; in kleinen Mengen.",
     "cs": "Čisté čerstvé, tepelně upravené nebo sušené brusinky bez přidaného cukru a bez rozinek; v malém množství.",
     "hr": "Obične svježe, termički obrađene ili sušene brusnice bez dodanog šećera i bez grožđica; u malim količinama.",
     "sv": "Naturella färska, tillagade eller torkade tranbär utan tillsatt socker och utan russin; i små mängder.",
@@ -76,6 +83,7 @@
   "child": {
     "en": "A few plain cranberries are okay for dogs. Cranberry sauce and fruit mixes are for people, so ask a grown-up first.",
     "sl": "Nekaj navadnih brusnic je za pse v redu. Brusnična omaka in mešanice sadja so za ljudi, zato najprej vprašaj odraslega.",
+    "de": "Ein paar Cranberrys ohne Zusätze sind für Hunde okay. Cranberrysoße und Fruchtmischungen sind für Menschen – frag also vorher einen Erwachsenen.",
     "cs": "Pár obyčejných brusinek je pro psy v pořádku. Brusinková omáčka a ovocné směsi jsou pro lidi, a tak se nejdřív zeptej dospělého.",
     "hr": "Nekoliko običnih brusnica u redu je za pse. Umak od brusnica i voćne mješavine su za ljude, zato prvo pitaj odraslu osobu.",
     "sv": "Några vanliga tranbär går bra för hundar. Tranbärssås och fruktblandningar är för människor, så fråga en vuxen först.",
@@ -88,6 +96,7 @@
       "q": {
         "en": "Can dogs eat cranberry sauce?",
         "sl": "Ali lahko psi jedo brusnično omako?",
+        "de": "Dürfen Hunde Cranberrysoße fressen?",
         "cs": "Mohou psi jíst brusinkovou omáčku?",
         "hr": "Smiju li psi jesti umak od brusnica?",
         "sv": "Får hundar äta tranbärssås?",
@@ -98,6 +107,7 @@
       "a": {
         "en": "It is best avoided. Cranberry sauce is high in sugar, and some recipes include grapes, raisins, currants, which are toxic to dogs, or brandy, and alcohol is toxic to dogs too.",
         "sl": "Bolje se ji je izogniti. Brusnična omaka vsebuje veliko sladkorja, nekateri recepti pa vsebujejo grozdje, rozine, ribez, ki so za pse strupeni, ali žganje, alkohol pa je za pse prav tako strupen.",
+        "de": "Besser nicht. Cranberrysoße enthält viel Zucker, und manche Rezepte enthalten Weintrauben, Rosinen oder Korinthen, die für Hunde giftig sind, oder Brandy – und auch Alkohol ist für Hunde giftig.",
         "cs": "Raději ne. Brusinková omáčka obsahuje hodně cukru a některé recepty obsahují hrozny, rozinky nebo korintky, které jsou pro psy jedovaté, nebo brandy – a alkohol je pro psy také jedovatý.",
         "hr": "Bolje ga je izbjegavati. Umak od brusnica sadrži mnogo šećera, a neki recepti sadrže grožđe, grožđice ili korintsko grožđe, koji su otrovni za pse, ili brendi, a i alkohol je otrovan za pse.",
         "sv": "Den är bäst att undvika. Tranbärssås innehåller mycket socker, och vissa recept innehåller vindruvor, russin eller korinter, som är giftiga för hundar, eller konjak, och alkohol är också giftig för hundar.",
@@ -110,6 +120,7 @@
       "q": {
         "en": "Do cranberries help with urinary tract infections in dogs?",
         "sl": "Ali brusnice pomagajo pri okužbah sečil pri psih?",
+        "de": "Helfen Cranberrys Hunden bei Harnwegsinfekten?",
         "cs": "Pomáhají brusinky psům při infekcích močových cest?",
         "hr": "Pomažu li brusnice psima kod infekcija mokraćnog sustava?",
         "sv": "Hjälper tranbär mot urinvägsinfektion hos hundar?",
@@ -120,6 +131,7 @@
       "a": {
         "en": "Many people believe so, but there have not been enough studies in dogs to confirm it.",
         "sl": "Mnogi tako mislijo, a pri psih ni bilo dovolj raziskav, ki bi to potrdile.",
+        "de": "Viele glauben das, aber es gibt noch nicht genug Studien an Hunden, um es zu bestätigen.",
         "cs": "Mnoho lidí si to myslí, ale u psů zatím nebylo dost studií, které by to potvrdily.",
         "hr": "Mnogi ljudi tako misle, ali nema dovoljno istraživanja na psima koja bi to potvrdila.",
         "sv": "Många tror det, men det finns inte tillräckligt med studier på hundar för att bekräfta det.",
@@ -212,6 +224,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7039c907be5dc2a220702f32549b543e63f2335f7ce016584d5ff0843aaa4354"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "beb58bb7c8134c2b9ce69d296d1d4360d571beb4089ebe14d078485146e827b9"
     },
     "cs": {
       "status": "verified",
