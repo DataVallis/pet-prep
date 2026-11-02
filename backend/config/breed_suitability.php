@@ -2220,8 +2220,6 @@ return [
             'consider' => [
                 // S660 same sentence + "We wouldn't recommend getting a Shar Pei if you have younger children" (independent dogs).
                 ['tag' => 'independent_older_children', 'source_ids' => ['S660'], 'refs' => ['shar_pei.behaviour.family', 'shar_pei.suitability.pdsa_children']],
-                // S660 "Shar Peis tend to do really well in an experienced household with owners used to the breed as they can be strong-willed."
-                ['tag' => 'independent_experienced_owner', 'source_ids' => ['S660'], 'refs' => ['shar_pei.behaviour.experienced_owner']],
                 // S664 "Sheds: Yes"
                 ['tag' => 'sheds', 'source_ids' => ['S664'], 'refs' => ['shar_pei.suitability.rkc_shedding']],
                 // S660 BOAS "this can cause severe breathing problems and is caused by their flatter face."

@@ -40,7 +40,7 @@ use function Pest\Laravel\postJson;
 | socialisation with the PDSA quote (M5-R17), the 60-minute meal / exercise warning (PDSA, M5-R16); no care task (no source
 | gives a frequency for folds, ears, teeth, nails or baths).
 | Welfare breed (RKC Breed Watch Category 2, PDSA BOAS): suits family_pet; consider independent_older_children (new) /
-| independent_experienced_owner / sheds / short_muzzle_breathing / eyelid_problems / sensitive_skin / shorter_lifespan /
+| sheds / short_muzzle_breathing / eyelid_problems / sensitive_skin / shorter_lifespan /
 | chases_small_pets; fawn portrait with moderate wrinkles; not in marketing (BVA S92).
 */
 
@@ -418,7 +418,7 @@ describe('GET /api/breeds', function () {
             'search_keywords' => seededBreedConfig('shar_pei')['search_keywords'], 'sort_order' => 810,
             'suitability' => [
                 'suits' => ['family_pet'],
-                'consider' => ['independent_older_children', 'independent_experienced_owner', 'sheds', 'short_muzzle_breathing', 'eyelid_problems', 'sensitive_skin', 'shorter_lifespan', 'chases_small_pets'],
+                'consider' => ['independent_older_children', 'sheds', 'short_muzzle_breathing', 'eyelid_problems', 'sensitive_skin', 'shorter_lifespan', 'chases_small_pets'],
             ],
         ]);
     });
@@ -502,11 +502,13 @@ describe('no health statistics in the app; welfare chips, not in marketing (runb
 });
 
 describe('suitability tags (own file, runbook "Own files only")', function () {
-    it('suits families; consider older children, an experienced owner, shedding, the welfare chips and small pets; never children or apartment', function () {
+    it('suits families; consider older children, shedding, the welfare chips and small pets; never children or apartment', function () {
         $tags = app(BreedSuitability::class)->for(BreedType::SharPei);
         expect($tags['suits'])->toBe(['family_pet'])
-            ->and($tags['consider'])->toBe(['independent_older_children', 'independent_experienced_owner', 'sheds', 'short_muzzle_breathing', 'eyelid_problems', 'sensitive_skin', 'shorter_lifespan', 'chases_small_pets'])
+            ->and($tags['consider'])->toBe(['independent_older_children', 'sheds', 'short_muzzle_breathing', 'eyelid_problems', 'sensitive_skin', 'shorter_lifespan', 'chases_small_pets'])
             ->and($tags['suits'])->not->toContain('children')->not->toContain('small_children')->not->toContain('apartment')
+            // Shiba-only by its own test (ShibaInuBreedTest) — open for David.
+            ->and($tags['consider'])->not->toContain('independent_experienced_owner')
             ->and(config('breed_suitability.vocabulary.independent_older_children'))->toBe('consider');
 
         expect(sharpData('shar_pei.exercise.adult.quote'))->toBe('Up to 1 hour per day')

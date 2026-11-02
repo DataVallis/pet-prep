@@ -59,7 +59,7 @@ describe('M5-R10-87 Shar Pei', () => {
     expect(dog?.search_keywords).toEqual(['shar pei', 'shar-pei', 'sharpei', 'chinese shar-pei', 'chinese shar pei', 'šarpej', 'sarpej', 'šar pej', 'sar pej', 'kitajski šarpej', 'kitajski sarpej']);
     expect(dog?.suitability).toEqual({
       suits: ['family_pet'],
-      consider: ['independent_older_children', 'independent_experienced_owner', 'sheds', 'short_muzzle_breathing', 'eyelid_problems', 'sensitive_skin', 'shorter_lifespan', 'chases_small_pets'],
+      consider: ['independent_older_children', 'sheds', 'short_muzzle_breathing', 'eyelid_problems', 'sensitive_skin', 'shorter_lifespan', 'chases_small_pets'],
     });
   });
 
@@ -82,7 +82,7 @@ describe('M5-R10-87 Shar Pei', () => {
     expect(suits).not.toHaveTextContent(/družino z otroki/);
     const consider = screen.getByTestId(`breed-suitability-${KEY}-consider`);
     expect(consider).toHaveTextContent(/samosvoj pes — bolje za starejše otroke/);
-    expect(consider).toHaveTextContent(/izkušenim lastnikom/);
+    expect(consider).not.toHaveTextContent(/izkušenim lastnikom/);
     expect(consider).toHaveTextContent(/izpada mu dlaka/);
     expect(consider).toHaveTextContent(/krajši gobček/);
     expect(consider).toHaveTextContent(/veke in oči/);

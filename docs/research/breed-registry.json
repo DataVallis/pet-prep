@@ -9,7 +9,7 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "e449449b2420957205f4f86e3f93d07629b93dbc1e5ee4db63992965c882dca9"
+      "sha256": "a0a0b45504f944b4ed3019ae58685ac49e53da50b7061a806f79c8f915635f8f"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "bb54df849d0b464dcc779647795ed35c12349268f0eddf44ae9b96f21fbb03fe"
+      "sha256": "a7ae4942dc39e569e9714c4d4bd609e447a94ce89e37d1c3e31ccb4b25ccf3a9"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -48664,15 +48664,6 @@
             "refs": [
               "shar_pei.behaviour.family",
               "shar_pei.suitability.pdsa_children"
-            ]
-          },
-          {
-            "tag": "independent_experienced_owner",
-            "source_ids": [
-              "S660"
-            ],
-            "refs": [
-              "shar_pei.behaviour.experienced_owner"
             ]
           },
           {

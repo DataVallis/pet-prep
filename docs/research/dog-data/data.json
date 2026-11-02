@@ -45008,7 +45008,7 @@
         "source_id": "S660",
         "quote": "Shar Peis tend to do really well in an experienced household with owners used to the breed as they can be strong-willed.",
         "confidence": "high",
-        "notes": "PDSA (S660); also 'Because of this they're better suited to more experienced owners familiar with their personality quirks.' VCA (S661): 'Tends to be independent and stubborn. Rebels against forceful methods.' Basis of independent_experienced_owner."
+        "notes": "PDSA (S660); also 'Because of this they're better suited to more experienced owners familiar with their personality quirks.' VCA (S661): 'Tends to be independent and stubborn. Rebels against forceful methods.' Would be the basis of independent_experienced_owner — not given (Shiba-only by its own test; open for David)."
       },
       "time_alone": {
         "value": "never alone for more than four hours (general PDSA rule)",
@@ -67722,7 +67722,7 @@
       }
     },
     "shar_pei": {
-      "_note": "Unattended run M5-R10-87 (2026-11-02): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S664 'Up to 1 hour per day' → 60; PDSA S660 'a minimum of an hour' agrees). Senior 66 from the VetCompass median 7.28 y (O'Neill et al. 2023, S667 — 190 deaths; McMillan 2024 not reachable → provisional). Coren rank 51 (Average) → 1.0. Built: weekly brushing (RKC 'Once a week' → 1, M5-R13), puppy socialisation with the PDSA quote (S660, M5-R17), the 60-minute meal / exercise warning (PDSA S660, M5-R16). No care task: fold cleaning and ear checks have no frequency (PDSA / VCA 'regularly'), no bath ('unlikely to need'), no teeth / nail statement. Welfare breed (RKC Breed Watch Category 2, S666; PDSA BOAS, S660) → chips eyelid_problems, sensitive_skin, short_muzzle_breathing; not in marketing (BVA S92). New vocabulary key independent_older_children; new register health key shar_pei_fever; new breeder-checklist key dna_poag_pll. Never hypoallergenic.",
+      "_note": "Unattended run M5-R10-87 (2026-11-02): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S664 'Up to 1 hour per day' → 60; PDSA S660 'a minimum of an hour' agrees). Senior 66 from the VetCompass median 7.28 y (O'Neill et al. 2023, S667 — 190 deaths; McMillan 2024 not reachable → provisional). Coren rank 51 (Average) → 1.0. Built: weekly brushing (RKC 'Once a week' → 1, M5-R13), puppy socialisation with the PDSA quote (S660, M5-R17), the 60-minute meal / exercise warning (PDSA S660, M5-R16). No care task: fold cleaning and ear checks have no frequency (PDSA / VCA 'regularly'), no bath ('unlikely to need'), no teeth / nail statement. Welfare breed (RKC Breed Watch Category 2, S666; PDSA BOAS, S660) → chips eyelid_problems, sensitive_skin, short_muzzle_breathing; not in marketing (BVA S92). New vocabulary key independent_older_children (independent_experienced_owner not given — Shiba-only by its own test, open for David); new register health key shar_pei_fever; new breeder-checklist key dna_poag_pll. Never hypoallergenic.",
       "exercise_minutes_adult": {
         "value": 60,
         "unit": "minutes/day",
@@ -67905,16 +67905,6 @@
             "quote": "S660 'We wouldn't recommend getting a Shar Pei if you have younger children' — 'they can be such independent dogs who prefer to do their own thing at times' (fragments)"
           },
           {
-            "tag": "independent_experienced_owner",
-            "source_ids": [
-              "S660"
-            ],
-            "refs": [
-              "shar_pei.behaviour.experienced_owner"
-            ],
-            "quote": "S660 'Shar Peis tend to do really well in an experienced household with owners used to the breed as they can be strong-willed.'"
-          },
-          {
             "tag": "sheds",
             "source_ids": [
               "S664"
@@ -67993,9 +67983,10 @@
           "food_motivated_weight": "No breed-specific statement.",
           "hypoallergenic": "Never a tag (runbook).",
           "frequent_grooming": "RKC 'Once a week' (S664).",
-          "shorter_lifespan_conflict": "RKC / PDSA 'Over 10 years' (S664 / S660) contradict the peer-reviewed VetCompass median 7.28 y (S667) and VCA '8 - 10 years' (S661); the A-tier median and the VCA upper bound ≤ 10 (the runbook trigger) decide → chip given (open for David)."
+          "shorter_lifespan_conflict": "RKC / PDSA 'Over 10 years' (S664 / S660) contradict the peer-reviewed VetCompass median 7.28 y (S667) and VCA '8 - 10 years' (S661); the A-tier median and the VCA upper bound ≤ 10 (the runbook trigger) decide → chip given (open for David).",
+          "independent_experienced_owner": "PDSA 'Shar Peis tend to do really well in an experienced household with owners used to the breed as they can be strong-willed.' (S660) would fit, but the chip is Shiba-only by its own test (ShibaInuBreedTest 'Only the Shiba Inu carries the new key') and a breed run never edits another breed's test → not given; open for David."
         },
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet; consider independent_older_children, independent_experienced_owner, sheds, short_muzzle_breathing, eyelid_problems, sensitive_skin, shorter_lifespan, chases_small_pets"
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet; consider independent_older_children, sheds, short_muzzle_breathing, eyelid_problems, sensitive_skin, shorter_lifespan, chases_small_pets"
       },
       "marketing": {
         "value": "in the app: yes; in marketing / store screenshots / social: no",

@@ -2790,7 +2790,7 @@ test('Shar Pei (M5-R10-87): RKC up to 1 hour, RKC standard height, PDSA weight (
   assert.deepEqual(d.game.rules.find((r) => r.key === 'grooming_rule').params, { per_week: 1 });
   assert.deepEqual(d.game.rules.filter((r) => r.key === 'care_task'), []);
   assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['family_pet']);
-  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['independent_older_children', 'independent_experienced_owner', 'sheds', 'short_muzzle_breathing', 'eyelid_problems', 'sensitive_skin', 'shorter_lifespan', 'chases_small_pets']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['independent_older_children', 'sheds', 'short_muzzle_breathing', 'eyelid_problems', 'sensitive_skin', 'shorter_lifespan', 'chases_small_pets']);
   assert.ok(registry.suitability_labels.en.tags.independent_older_children && registry.suitability_labels.sl.tags.independent_older_children);
   assert.deepEqual(d.health.map((h) => h.key), ['entropion', 'skin_fold_ear_problems', 'itchy_skin_allergy', 'shorter_face_boas', 'shar_pei_fever', 'hip_elbow_dysplasia']);
   assert.equal(d.breeder_checklist.status, 'listed');

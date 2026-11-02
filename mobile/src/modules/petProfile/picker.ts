@@ -1306,7 +1306,7 @@ const FALLBACK_BREEDS: ReadonlyArray<Omit<CatalogueBreed, 'colours'>> = [
     sort_order: 810,
     suitability: {
       suits: ['family_pet'],
-      consider: ['independent_older_children', 'independent_experienced_owner', 'sheds', 'short_muzzle_breathing', 'eyelid_problems', 'sensitive_skin', 'shorter_lifespan', 'chases_small_pets'],
+      consider: ['independent_older_children', 'sheds', 'short_muzzle_breathing', 'eyelid_problems', 'sensitive_skin', 'shorter_lifespan', 'chases_small_pets'],
     },
   },
 ];
