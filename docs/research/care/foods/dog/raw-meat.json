@@ -12,7 +12,8 @@
     "nl": "Rauw vlees",
     "pl": "Surowe mięso",
     "cs": "Syrové maso",
-    "hr": "Sirovo meso"
+    "hr": "Sirovo meso",
+    "sv": "Rått kött"
   },
   "question": {
     "en": "Can dogs eat raw meat?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden rauw vlees eten?",
     "pl": "Czy psy mogą jeść surowe mięso?",
     "cs": "Mohou psi jíst syrové maso?",
-    "hr": "Smiju li psi jesti sirovo meso?"
+    "hr": "Smiju li psi jesti sirovo meso?",
+    "sv": "Får hundar äta rått kött?"
   },
   "url_slug": {
     "en": "raw-meat",
@@ -38,7 +40,8 @@
     "nl": "rauw-vlees",
     "pl": "surowe-mieso",
     "cs": "syrove-maso",
-    "hr": "sirovo-meso"
+    "hr": "sirovo-meso",
+    "sv": "ratt-kott"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Niet aan te raden. Rauw vlees bevat vaak bacteriën zoals salmonella, listeria en E. coli, waar honden ziek van kunnen worden en die zich naar mensen in huis kunnen verspreiden, ook als de hond gezond lijkt. Veterinaire organisaties zoals de AVMA raden het voeren van rauw vlees af.",
     "pl": "Nie zaleca się. Surowe mięso często przenosi bakterie, takie jak Salmonella, Listeria i E. coli, które mogą wywołać chorobę u psa i przenieść się na domowników, nawet gdy pies wygląda na zdrowego. Organizacje weterynaryjne, takie jak AVMA, odradzają karmienie surowym mięsem.",
     "cs": "Nedoporučuje se. Syrové maso často obsahuje bakterie, například salmonelu, listerii a E. coli, které mohou psům uškodit a přenést se na lidi v domácnosti, i když pes vypadá zdravě. Veterinární organizace, například AVMA, od krmení syrovou stravou odrazují.",
-    "hr": "Ne preporučuje se. Sirovo meso često sadrži bakterije poput salmonele, listerije i E. coli, koje mogu razboljeti psa i prenijeti se na ljude u kućanstvu, čak i kad pas izgleda zdravo. Veterinarske organizacije poput AVMA-e ne preporučuju hranjenje sirovom hranom."
+    "hr": "Ne preporučuje se. Sirovo meso često sadrži bakterije poput salmonele, listerije i E. coli, koje mogu razboljeti psa i prenijeti se na ljude u kućanstvu, čak i kad pas izgleda zdravo. Veterinarske organizacije poput AVMA-e ne preporučuju hranjenje sirovom hranom.",
+    "sv": "Det rekommenderas inte. Rått kött bär ofta på bakterier som salmonella, listeria och E. coli, som kan göra hundar sjuka och spridas till människor i hemmet, även när hunden ser frisk ut. Veterinärorganisationer som AVMA avråder från råfodring."
   },
   "why": {
     "en": "Contamination of raw meat by bacteria is common. Dogs can carry these germs without signs and shed them in saliva and faeces, putting family members at risk, especially high-risk groups such as the young and the old. Raw pork can carry a parasite, raw bones can block the gut, and home-made raw diets are likely not balanced unless a nutritionist formulated the recipe.",
@@ -65,7 +69,8 @@
     "nl": "Besmetting van rauw vlees met bacteriën komt vaak voor. Honden kunnen deze bacteriën dragen zonder verschijnselen en ze uitscheiden via speeksel en ontlasting, wat gezinsleden in gevaar brengt, vooral risicogroepen zoals jonge kinderen en ouderen. Rauw varkensvlees kan een parasiet bevatten, rauwe botten kunnen de darmen verstoppen, en zelfgemaakte rauwe voeding is waarschijnlijk niet uitgebalanceerd, tenzij een voedingsdeskundige het recept heeft samengesteld.",
     "pl": "Skażenie surowego mięsa bakteriami jest częste. Psy mogą przenosić te zarazki bez objawów i wydalać je w ślinie i kale, narażając członków rodziny, zwłaszcza grupy wysokiego ryzyka, takie jak dzieci i osoby starsze. Surowa wieprzowina może przenosić pasożyta, surowe kości mogą zatkać przewód pokarmowy, a domowe surowe diety najpewniej nie są zbilansowane, jeśli przepisu nie ułożył specjalista od żywienia.",
     "cs": "Kontaminace syrového masa bakteriemi je běžná. Psi mohou tyto bakterie nosit bez příznaků a vylučovat je slinami a trusem, čímž ohrožují členy rodiny, zejména rizikové skupiny, jako jsou děti a starší lidé. Syrové vepřové může přenášet parazita, syrové kosti mohou ucpat střeva a domácí syrová strava pravděpodobně není vyvážená, pokud recept nesestavil odborník na výživu.",
-    "hr": "Bakterije često kontaminiraju sirovo meso. Psi mogu nositi te klice bez ikakvih znakova i izlučivati ih slinom i izmetom, čime ugrožavaju članove obitelji, osobito rizične skupine poput male djece i starijih osoba. Sirova svinjetina može prenijeti parazita, sirove kosti mogu začepiti crijeva, a domaća sirova prehrana vjerojatno nije uravnotežena ako recept nije sastavio stručnjak za prehranu."
+    "hr": "Bakterije često kontaminiraju sirovo meso. Psi mogu nositi te klice bez ikakvih znakova i izlučivati ih slinom i izmetom, čime ugrožavaju članove obitelji, osobito rizične skupine poput male djece i starijih osoba. Sirova svinjetina može prenijeti parazita, sirove kosti mogu začepiti crijeva, a domaća sirova prehrana vjerojatno nije uravnotežena ako recept nije sastavio stručnjak za prehranu.",
+    "sv": "Det är vanligt att rått kött är förorenat av bakterier. Hundar kan bära på bakterierna utan symtom och utsöndra dem med saliv och avföring, vilket utsätter familjen för risk, särskilt riskgrupper som små barn och äldre. Rått fläskkött kan bära på en parasit, råa ben kan orsaka tarmstopp, och hemlagat råfoder är troligen inte balanserat om inte en nutritionist har tagit fram receptet."
   },
   "signs": {
     "en": [
@@ -133,6 +138,12 @@
       "Proljev",
       "Manjak energije ili slab apetit",
       "Nelagoda u trbuhu"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Diarré",
+      "Orkeslöshet eller dålig aptit",
+      "Obehag i magen"
     ]
   },
   "what_to_do": {
@@ -146,7 +157,8 @@
     "nl": "Heeft je hond een stuk rauw vlees gepakt? Let dan op braken, diarree of weinig energie en bel je dierenarts als die ernstig zijn of niet ophouden. Was je handen, de bakjes en de oppervlakken grondig. Overleg met je dierenarts voordat je het voer van je hond verandert.",
     "pl": "Jeśli twój pies podkradł trochę surowego mięsa, obserwuj, czy nie pojawiają się wymioty, biegunka lub osłabienie, i zadzwoń do weterynarza, jeśli są silne albo nie ustępują. Dokładnie umyj ręce, miski i blaty. Zanim zmienisz dietę psa, porozmawiaj z weterynarzem.",
     "cs": "Pokud váš pes ukořistil kus syrového masa, sledujte, zda nezvrací, nemá průjem nebo není malátný, a pokud jsou potíže silné nebo neustávají, zavolejte veterináři. Důkladně umyjte ruce, misky i povrchy. Než psovi změníte stravu, poraďte se s veterinářem.",
-    "hr": "Ako je tvoj pas zgrabio komad sirovog mesa, prati pojavljuju li se povraćanje, proljev ili manjak energije i nazovi veterinara ako su jaki ili ne prestaju. Temeljito operi ruke, zdjelice i površine. Razgovaraj s veterinarom prije nego što promijeniš psu prehranu."
+    "hr": "Ako je tvoj pas zgrabio komad sirovog mesa, prati pojavljuju li se povraćanje, proljev ili manjak energije i nazovi veterinara ako su jaki ili ne prestaju. Temeljito operi ruke, zdjelice i površine. Razgovaraj s veterinarom prije nego što promijeniš psu prehranu.",
+    "sv": "Om hunden kommit åt lite rått kött, håll utkik efter kräkningar, diarré eller orkeslöshet och ring veterinären om symtomen är svåra eller inte går över. Tvätta händer, skålar och ytor noga. Prata med veterinären innan du ändrar hundens kost."
   },
   "serving": {
     "en": "Share meat only fully cooked, plain and boneless.",
@@ -159,7 +171,8 @@
     "nl": "Deel vlees alleen helemaal gaar, puur en zonder botten.",
     "pl": "Dziel się mięsem tylko dobrze ugotowanym, zwykłym i bez kości.",
     "cs": "Maso dávejte jen důkladně tepelně upravené, bez přísad a bez kostí.",
-    "hr": "Meso daj samo potpuno termički obrađeno, bez dodataka i bez kostiju."
+    "hr": "Meso daj samo potpuno termički obrađeno, bez dodataka i bez kostiju.",
+    "sv": "Dela bara med dig av kött som är helt tillagat, utan kryddor och utan ben."
   },
   "child": {
     "en": "Raw meat can have germs. Dogs should only get cooked meat from people food, and everyone washes hands after touching raw meat.",
@@ -172,7 +185,8 @@
     "nl": "In rauw vlees kunnen bacteriën zitten. Honden krijgen van ons eten alleen gekookt vlees, en iedereen wast zijn handen na het aanraken van rauw vlees.",
     "pl": "Surowe mięso może mieć zarazki. Z ludzkiego jedzenia psy powinny dostawać tylko gotowane mięso, a po dotknięciu surowego mięsa wszyscy myją ręce.",
     "cs": "Na syrovém mase můžou být bacily. Z lidského jídla smějí psi dostat jen uvařené nebo upečené maso, a kdo sahá na syrové maso, musí si potom umýt ruce.",
-    "hr": "Sirovo meso može imati klice. Od ljudske hrane psi smiju dobiti samo kuhano meso, a svi peru ruke nakon što dodirnu sirovo meso."
+    "hr": "Sirovo meso može imati klice. Od ljudske hrane psi smiju dobiti samo kuhano meso, a svi peru ruke nakon što dodirnu sirovo meso.",
+    "sv": "Rått kött kan ha bakterier. Hundar ska bara få tillagat kött från människomat, och alla tvättar händerna efter att ha rört rått kött."
   },
   "faq": [
     {
@@ -187,7 +201,8 @@
         "nl": "Mijn hond lijkt het prima te doen op rauwe voeding. Is er dan nog een risico?",
         "pl": "Mój pies dobrze się czuje na surowej diecie. Czy nadal jest jakieś ryzyko?",
         "cs": "Můj pes na syrové stravě vypadá v pořádku. Hrozí i tak nějaké riziko?",
-        "hr": "Mom je psu dobro na sirovoj hrani. Postoji li i dalje rizik?"
+        "hr": "Mom je psu dobro na sirovoj hrani. Postoji li i dalje rizik?",
+        "sv": "Min hund verkar må bra av råfoder. Finns det ändå en risk?"
       },
       "a": {
         "en": "Yes. Apparently healthy dogs can carry these bacteria and shed them, which can harm people in the home.",
@@ -200,7 +215,8 @@
         "nl": "Ja. Honden die gezond lijken, kunnen deze bacteriën dragen en uitscheiden, en dat kan mensen in huis schaden.",
         "pl": "Tak. Psy, które wyglądają na zdrowe, mogą przenosić te bakterie i je wydalać, co może zaszkodzić domownikom.",
         "cs": "Ano. I zdánlivě zdraví psi mohou tyto bakterie nosit a vylučovat, což může uškodit lidem v domácnosti.",
-        "hr": "Postoji. I psi koji izgledaju zdravo mogu nositi te bakterije i izlučivati ih, što može naštetiti ljudima u kućanstvu."
+        "hr": "Postoji. I psi koji izgledaju zdravo mogu nositi te bakterije i izlučivati ih, što može naštetiti ljudima u kućanstvu.",
+        "sv": "Ja. Hundar som verkar friska kan bära på bakterierna och utsöndra dem, vilket kan skada människor i hemmet."
       }
     },
     {
@@ -215,7 +231,8 @@
         "nl": "Is gevriesdroogde rauwe voeding veiliger?",
         "pl": "Czy liofilizowana surowa karma jest bezpieczniejsza?",
         "cs": "Je bezpečnější lyofilizovaná (mrazem sušená) syrová strava?",
-        "hr": "Je li liofilizirana sirova hrana sigurnija?"
+        "hr": "Je li liofilizirana sirova hrana sigurnija?",
+        "sv": "Är frystorkat råfoder säkrare?"
       },
       "a": {
         "en": "Not for germs: freeze-drying is not equivalent to cooking when it comes to bacteria and parasites.",
@@ -228,7 +245,8 @@
         "nl": "Niet wat bacteriën betreft: vriesdrogen staat niet gelijk aan koken als het om bacteriën en parasieten gaat.",
         "pl": "Nie pod względem zarazków: liofilizacja nie jest równoważna gotowaniu, jeśli chodzi o bakterie i pasożyty.",
         "cs": "Co se týče bakterií a parazitů, ne: lyofilizace není rovnocenná tepelné úpravě.",
-        "hr": "Ne kad je riječ o klicama: liofilizacija nije isto što i termička obrada kad su u pitanju bakterije i paraziti."
+        "hr": "Ne kad je riječ o klicama: liofilizacija nije isto što i termička obrada kad su u pitanju bakterije i paraziti.",
+        "sv": "Inte när det gäller smitta: mot bakterier och parasiter är frystorkning inte likvärdigt med tillagning."
       }
     }
   ],
@@ -370,6 +388,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f9665d90525a9092071585e59e44acdf414efe8a93675b763ef48d04512c4fcb"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c3879c66361962c050132b8bd9cadbefb74036180e91100d84d2f25046bbcf85"
     }
   }
 }

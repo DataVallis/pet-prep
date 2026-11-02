@@ -12,7 +12,8 @@
     "nl": "Gekookte botten",
     "pl": "Gotowane kości",
     "cs": "Tepelně upravené kosti",
-    "hr": "Kuhane kosti"
+    "hr": "Kuhane kosti",
+    "sv": "Kokta ben"
   },
   "question": {
     "en": "Can cats eat cooked bones?",
@@ -25,7 +26,8 @@
     "nl": "Mogen katten gekookte botten eten?",
     "pl": "Czy koty mogą jeść gotowane kości?",
     "cs": "Mohou kočky jíst tepelně upravené kosti?",
-    "hr": "Smiju li mačke jesti kuhane kosti?"
+    "hr": "Smiju li mačke jesti kuhane kosti?",
+    "sv": "Får katter äta kokta ben?"
   },
   "url_slug": {
     "en": "cooked-bones",
@@ -38,7 +40,8 @@
     "nl": "gekookte-botten",
     "pl": "gotowane-kosci",
     "cs": "tepelne-upravene-kosti",
-    "hr": "kuhane-kosti"
+    "hr": "kuhane-kosti",
+    "sv": "kokta-ben"
   },
   "level": "dangerous",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee. Gekookte botten, zoals kip- of kalkoenbotjes, kunnen splinteren en bij katten verstikking, inwendig letsel of verstoppingen veroorzaken. Haal het vlees altijd van het bot voordat je deelt, en gooi karkassen weg waar je kat er niet bij kan.",
     "pl": "Nie. Gotowane kości, na przykład z kurczaka lub indyka, mogą się rozszczepiać i spowodować u kota zadławienie, obrażenia wewnętrzne lub niedrożność. Zawsze oddziel mięso od kości, zanim się nim podzielisz, i wyrzucaj resztki tuszki tam, gdzie kot ich nie dosięgnie.",
     "cs": "Ne. Tepelně upravené kosti, například kuřecí nebo krůtí, se mohou tříštit a u koček způsobit dušení, vnitřní poranění nebo ucpání. Než se s kočkou o maso podělíte, vždy ho oberte od kostí a zbytky kostry vyhazujte tam, kam kočka nedosáhne.",
-    "hr": "Ne. Termički obrađene kosti, poput pilećih ili purećih, mogu se rascijepiti i kod mačaka izazvati gušenje, unutarnje ozljede ili začepljenje. Prije nego što podijeliš meso s mačkom, uvijek ga skini s kosti, a ostatke peradi baci ondje gdje ih mačka ne može dohvatiti."
+    "hr": "Ne. Termički obrađene kosti, poput pilećih ili purećih, mogu se rascijepiti i kod mačaka izazvati gušenje, unutarnje ozljede ili začepljenje. Prije nego što podijeliš meso s mačkom, uvijek ga skini s kosti, a ostatke peradi baci ondje gdje ih mačka ne može dohvatiti.",
+    "sv": "Nej. Tillagade ben, till exempel kyckling- eller kalkonben, kan splittras och orsaka kvävning, inre skador eller tarmstopp hos katter. Ta alltid bort köttet från benet innan du delar med dig, och släng skrovet där katten inte kommer åt det."
   },
   "why": {
     "en": "Cooked bones can splinter into sharp pieces. Swallowed bones can injure or block a cat's gut, which can be serious and may need surgery.",
@@ -65,7 +69,8 @@
     "nl": "Gekookte botten kunnen in scherpe stukjes splinteren. Ingeslikte botten kunnen de darmen van een kat beschadigen of verstoppen; dat kan ernstig zijn en soms is een operatie nodig.",
     "pl": "Gotowane kości mogą się rozszczepiać na ostre kawałki. Połknięte kości mogą zranić lub zablokować przewód pokarmowy kota, co bywa poważne i może wymagać operacji.",
     "cs": "Tepelně upravené kosti se mohou roztříštit na ostré úlomky. Spolknuté kosti mohou kočce poranit nebo ucpat trávicí trakt, což může být vážné a může to vyžadovat operaci.",
-    "hr": "Termički obrađene kosti mogu se rascijepiti na oštre komadiće. Progutane kosti mogu ozlijediti ili začepiti mačja crijeva, što može biti ozbiljno i možda zahtijevati operaciju."
+    "hr": "Termički obrađene kosti mogu se rascijepiti na oštre komadiće. Progutane kosti mogu ozlijediti ili začepiti mačja crijeva, što može biti ozbiljno i možda zahtijevati operaciju.",
+    "sv": "Tillagade ben kan splittras i vassa bitar. Ben som katten sväljer kan skada eller blockera tarmen, vilket kan vara allvarligt och kräva operation."
   },
   "signs": {
     "en": [
@@ -122,6 +127,11 @@
       "Gušenje",
       "Povraćanje",
       "Bol u trbuhu (skrivanje, režanje, izbjegavanje dodira)"
+    ],
+    "sv": [
+      "Kvävning",
+      "Kräkningar",
+      "Ont i magen (gömmer sig, morrar, vill inte bli berörd)"
     ]
   },
   "what_to_do": {
@@ -135,7 +145,8 @@
     "nl": "Neem meteen contact op met je dierenarts als je kat een gekookt bot heeft ingeslikt, ook als ze er gezond uitziet. Schrijf op wat voor bot het was en wanneer. Wacht niet af wat er gebeurt en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu skontaktuj się z weterynarzem, jeśli twój kot połknął gotowaną kość, nawet jeśli wygląda na zdrowego. Zapisz, jaka to była kość i kiedy ją połknął. Nie czekaj na rozwój sytuacji i nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Okamžitě se obraťte na veterináře, pokud kočka spolkla tepelně upravenou kost, i když se zdá v pořádku. Poznamenejte si, o jakou kost šlo a kdy. Nečekejte, co se stane, a nesnažte se u kočky doma vyvolat zvracení.",
-    "hr": "Odmah se obrati veterinaru ako je tvoja mačka progutala termički obrađenu kost, čak i ako se čini da je dobro. Zapiši o kakvoj je kosti riječ i kada ju je progutala. Ne čekaj da vidiš što će se dogoditi i ne pokušavaj kod kuće izazvati povraćanje."
+    "hr": "Odmah se obrati veterinaru ako je tvoja mačka progutala termički obrađenu kost, čak i ako se čini da je dobro. Zapiši o kakvoj je kosti riječ i kada ju je progutala. Ne čekaj da vidiš što će se dogoditi i ne pokušavaj kod kuće izazvati povraćanje.",
+    "sv": "Kontakta veterinären direkt om katten har svalt ett tillagat ben, även om den verkar må bra. Notera vilken sorts ben det var och när. Vänta inte och se vad som händer, och försök inte få katten att kräkas hemma."
   },
   "serving": {
     "en": "If you share plain cooked chicken or turkey, give only boneless meat.",
@@ -148,7 +159,8 @@
     "nl": "Deel je gewone gekookte kip of kalkoen, geef dan alleen vlees zonder botten.",
     "pl": "Jeśli dzielisz się zwykłym gotowanym kurczakiem lub indykiem, dawaj tylko mięso bez kości.",
     "cs": "Pokud se s kočkou dělíte o obyčejné tepelně upravené kuřecí nebo krůtí maso, dávejte jí pouze maso bez kostí.",
-    "hr": "Ako s mačkom dijeliš običnu termički obrađenu piletinu ili puretinu, daj joj samo meso bez kostiju."
+    "hr": "Ako s mačkom dijeliš običnu termički obrađenu piletinu ili puretinu, daj joj samo meso bez kostiju.",
+    "sv": "Om du delar med dig av naturell tillagad kyckling eller kalkon, ge bara benfritt kött."
   },
   "child": {
     "en": "Bones can hurt a cat's tummy. Give kitty only boneless meat, and tell a grown-up if she grabs a bone.",
@@ -161,7 +173,8 @@
     "nl": "Botjes kunnen pijn doen in de buik van een kat. Geef je poes alleen vlees zonder botjes. Pakt ze toch een bot? Vertel het meteen aan een volwassene.",
     "pl": "Kości mogą zranić kotu brzuszek. Dawaj kotkowi tylko mięso bez kości i powiedz dorosłemu, jeśli kotek porwie kość.",
     "cs": "Z kostí může kočku bolet bříško. Dávej kočičce jen maso bez kostí, a když si nějakou kost čmajzne, řekni to dospělému.",
-    "hr": "Kosti mogu macu zaboljeti u trbuščiću. Maci daj samo meso bez kostiju i reci odrasloj osobi ako zgrabi kost."
+    "hr": "Kosti mogu macu zaboljeti u trbuščiću. Maci daj samo meso bez kostiju i reci odrasloj osobi ako zgrabi kost.",
+    "sv": "Ben kan göra ont i kattens mage. Ge katten bara kött utan ben, och säg till en vuxen om katten tar ett ben."
   },
   "faq": [
     {
@@ -176,7 +189,8 @@
         "nl": "Mag ik mijn kat wat van de gebraden kalkoen geven?",
         "pl": "Czy mogę dać kotu pieczonego indyka?",
         "cs": "Mohu dát kočce krůtí maso z pečené krůty?",
-        "hr": "Smijem li mački dati puretinu od pečenja?"
+        "hr": "Smijem li mački dati puretinu od pečenja?",
+        "sv": "Kan jag ge katten lite av kalkonsteken?"
       },
       "a": {
         "en": "Cats Protection says plain, cooked turkey is fine as an occasional treat if it is boneless, unseasoned and skinless. Dispose of the carcass safely out of your cat's reach.",
@@ -189,7 +203,8 @@
         "nl": "Volgens Cats Protection is gewone, gekookte kalkoen af en toe prima als snoepje, als het zonder botten, zonder kruiden en zonder vel is. Gooi het karkas veilig weg, buiten bereik van je kat.",
         "pl": "Według Cats Protection zwykły gotowany indyk jest w porządku jako okazjonalny smakołyk, jeśli jest bez kości, bez przypraw i bez skóry. Tuszkę wyrzuć bezpiecznie, poza zasięgiem kota.",
         "cs": "Podle Cats Protection je obyčejné tepelně upravené krůtí maso jako občasný pamlsek v pořádku, pokud je bez kostí, nekořeněné a bez kůže. Zbytky kostry bezpečně vyhoďte mimo dosah kočky.",
-        "hr": "Cats Protection navodi da je obična termički obrađena puretina u redu kao povremena poslastica ako je bez kostiju, bez začina i bez kože. Ostatke purice baci na sigurno mjesto izvan dosega mačke."
+        "hr": "Cats Protection navodi da je obična termički obrađena puretina u redu kao povremena poslastica ako je bez kostiju, bez začina i bez kože. Ostatke purice baci na sigurno mjesto izvan dosega mačke.",
+        "sv": "Enligt Cats Protection går naturell, tillagad kalkon bra som godbit någon gång ibland om den är benfri, okryddad och utan skinn. Släng skrovet säkert, utom räckhåll för katten."
       }
     }
   ],
@@ -302,6 +317,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1f2089a2e6fdb82cfd309db09a696892e980a588b7ed8810b038783d6ee0e729"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b92e4c0cbb81f4754c51cc177f345692e7e79357246b1bc33d12ff1fb280b79c"
     }
   }
 }

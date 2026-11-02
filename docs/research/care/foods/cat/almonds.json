@@ -12,7 +12,8 @@
     "nl": "Amandelen",
     "pl": "Migdały",
     "cs": "Mandle",
-    "hr": "Bademi"
+    "hr": "Bademi",
+    "sv": "Mandlar"
   },
   "question": {
     "en": "Can cats eat almonds?",
@@ -25,7 +26,8 @@
     "nl": "Mogen katten amandelen eten?",
     "pl": "Czy koty mogą jeść migdały?",
     "cs": "Mohou kočky jíst mandle?",
-    "hr": "Smiju li mačke jesti bademe?"
+    "hr": "Smiju li mačke jesti bademe?",
+    "sv": "Får katter äta mandlar?"
   },
   "url_slug": {
     "en": "almonds",
@@ -38,7 +40,8 @@
     "nl": "amandelen",
     "pl": "migdaly",
     "cs": "mandle",
-    "hr": "bademi"
+    "hr": "bademi",
+    "sv": "mandlar"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee, houd amandelen liever bij katten uit de buurt. Zoete amandelen gelden niet als giftig, maar ze bevatten veel olie en vet en kunnen een kat ziek maken, met maagklachten of braken.",
     "pl": "Nie, migdały lepiej trzymać z dala od kota. Migdały słodkie nie są uważane za toksyczne, ale zawierają dużo olejów i tłuszczu i mogą zaszkodzić kotu, powodując rozstrój żołądka lub wymioty.",
     "cs": "Ne, mandle je lepší držet mimo dosah koček. Sladké mandle se nepovažují za toxické, obsahují však hodně olejů a tuků a kočce po nich může být špatně – může mít podrážděný žaludek nebo zvracet.",
-    "hr": "Ne, bademe je najbolje držati podalje od mačaka. Slatki bademi ne smatraju se otrovnima, ali imaju mnogo ulja i masti pa mački od njih može pozliti, uz želučane tegobe ili povraćanje."
+    "hr": "Ne, bademe je najbolje držati podalje od mačaka. Slatki bademi ne smatraju se otrovnima, ali imaju mnogo ulja i masti pa mački od njih može pozliti, uz želučane tegobe ili povraćanje.",
+    "sv": "Nej, mandlar bör hållas borta från katter. Söta mandlar anses inte giftiga, men de innehåller mycket olja och fett och kan få katten att må dåligt, med orolig mage eller kräkningar."
   },
   "why": {
     "en": "Cats Protection lists almonds among nuts that contain high amounts of oils and fats which can make a cat unwell. The ASPCA says sweet almonds sold for eating are not toxic to pets, but because they are not a normal part of a pet's diet they can cause digestive issues. Bitter almonds contain a cyanide compound and are considered toxic.",
@@ -65,7 +69,8 @@
     "nl": "Cats Protection noemt amandelen bij de noten die veel olie en vet bevatten en een kat ziek kunnen maken. Volgens de ASPCA zijn zoete amandelen die voor consumptie worden verkocht niet giftig voor huisdieren, maar omdat ze geen gewoon onderdeel van hun voeding zijn, kunnen ze spijsverteringsproblemen geven. Bittere amandelen bevatten een cyanideverbinding en gelden als giftig.",
     "pl": "Cats Protection wymienia migdały wśród orzechów, które zawierają dużo olejów i tłuszczu i mogą zaszkodzić kotu. ASPCA podaje, że migdały słodkie sprzedawane do jedzenia nie są toksyczne dla zwierząt, ale ponieważ nie należą do ich zwykłej diety, mogą wywołać problemy trawienne. Migdały gorzkie zawierają związek cyjanogenny i są uważane za toksyczne.",
     "cs": "Cats Protection řadí mandle mezi ořechy s vysokým obsahem olejů a tuků, po kterých může být kočce špatně. Podle ASPCA nejsou sladké mandle, které se prodávají k jídlu, pro zvířata toxické, ale protože nejsou běžnou součástí jejich stravy, mohou způsobit trávicí potíže. Hořké mandle obsahují sloučeninu kyanidu a považují se za toxické.",
-    "hr": "Cats Protection navodi bademe među orašastim plodovima s mnogo ulja i masti, od kojih mački može pozliti. ASPCA navodi da slatki bademi koji se prodaju za jelo nisu otrovni za kućne ljubimce, ali budući da nisu uobičajen dio prehrane ljubimca, mogu izazvati probavne smetnje. Gorki bademi sadrže spoj cijanida i smatraju se otrovnima."
+    "hr": "Cats Protection navodi bademe među orašastim plodovima s mnogo ulja i masti, od kojih mački može pozliti. ASPCA navodi da slatki bademi koji se prodaju za jelo nisu otrovni za kućne ljubimce, ali budući da nisu uobičajen dio prehrane ljubimca, mogu izazvati probavne smetnje. Gorki bademi sadrže spoj cijanida i smatraju se otrovnima.",
+    "sv": "Cats Protection räknar mandlar till de nötter som innehåller mycket olja och fett och kan få en katt att må dåligt. ASPCA skriver att söta mandlar som säljs som livsmedel inte är giftiga för husdjur, men eftersom de inte hör till djurens vanliga kost kan de ge matsmältningsbesvär. Bittermandlar innehåller en cyanidförening och anses giftiga."
   },
   "signs": {
     "en": [
@@ -133,6 +138,12 @@
       "Proljev",
       "Želučane tegobe",
       "Djeluje kao da joj nije dobro"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Diarré",
+      "Orolig mage",
+      "Verkar må dåligt"
     ]
   },
   "what_to_do": {
@@ -146,7 +157,8 @@
     "nl": "Heeft je kat amandelen gegeten? Vraag je dierenarts om advies, zeker als ze er veel heeft gegeten of ziek lijkt. Schrijf op wat ze heeft gegeten, hoeveel en wanneer. Ging het om bittere amandelen, neem dan meteen contact op met je dierenarts.",
     "pl": "Jeśli twój kot zjadł migdały, poradź się weterynarza, zwłaszcza jeśli zjadł ich dużo lub źle się czuje. Zapisz, co zjadł, ile i kiedy. Jeśli były to migdały gorzkie, od razu skontaktuj się z weterynarzem.",
     "cs": "Pokud kočka snědla mandle, poraďte se s veterinářem, zejména pokud jich snědla hodně nebo se zdá, že jí není dobře. Poznamenejte si, co snědla, kolik a kdy. Pokud šlo o hořké mandle, okamžitě se obraťte na veterináře.",
-    "hr": "Ako je tvoja mačka pojela bademe, obrati se veterinaru za savjet, osobito ako ih je pojela mnogo ili se čini da joj nije dobro. Zapiši što je pojela, koliko i kada. Ako su to bili gorki bademi, odmah se obrati veterinaru."
+    "hr": "Ako je tvoja mačka pojela bademe, obrati se veterinaru za savjet, osobito ako ih je pojela mnogo ili se čini da joj nije dobro. Zapiši što je pojela, koliko i kada. Ako su to bili gorki bademi, odmah se obrati veterinaru.",
+    "sv": "Om katten har ätit mandlar, kontakta veterinären för råd, särskilt om den har ätit mycket eller verkar må dåligt. Notera vad den åt, hur mycket och när. Om det var bittermandlar, kontakta veterinären direkt."
   },
   "serving": null,
   "child": {
@@ -160,7 +172,8 @@
     "nl": "Amandelen zijn een tussendoortje voor mensen. Ze zijn te vet voor katten, dus houd ze lekker in je broodtrommel.",
     "pl": "Migdały to przekąska dla ludzi. Są za tłuste dla kotów, więc zostaw je w swojej śniadaniówce.",
     "cs": "Mandle jsou svačinka pro lidi. Pro kočky jsou moc mastné, tak si je nech ve své krabičce na svačinu.",
-    "hr": "Bademi su grickalica za ljude. Za mace su premasni, zato ih čuvaj u svojoj kutiji za užinu."
+    "hr": "Bademi su grickalica za ljude. Za mace su premasni, zato ih čuvaj u svojoj kutiji za užinu.",
+    "sv": "Mandlar är mellanmål för människor. De är för oljiga för katter, så låt dem ligga kvar i din matlåda."
   },
   "faq": [
     {
@@ -175,7 +188,8 @@
         "nl": "En bittere amandelen?",
         "pl": "A co z migdałami gorzkimi?",
         "cs": "A co hořké mandle?",
-        "hr": "A gorki bademi?"
+        "hr": "A gorki bademi?",
+        "sv": "Hur är det med bittermandlar?"
       },
       "a": {
         "en": "Bitter almonds contain a cyanide compound and are considered toxic. If your cat ate bitter almonds, contact your vet straight away.",
@@ -188,7 +202,8 @@
         "nl": "Bittere amandelen bevatten een cyanideverbinding en gelden als giftig. Heeft je kat bittere amandelen gegeten, neem dan meteen contact op met je dierenarts.",
         "pl": "Migdały gorzkie zawierają związek cyjanogenny i są uważane za toksyczne. Jeśli twój kot zjadł migdały gorzkie, od razu skontaktuj się z weterynarzem.",
         "cs": "Hořké mandle obsahují sloučeninu kyanidu a považují se za toxické. Pokud vaše kočka snědla hořké mandle, okamžitě se obraťte na veterináře.",
-        "hr": "Gorki bademi sadrže spoj cijanida i smatraju se otrovnima. Ako je tvoja mačka pojela gorke bademe, odmah se obrati veterinaru."
+        "hr": "Gorki bademi sadrže spoj cijanida i smatraju se otrovnima. Ako je tvoja mačka pojela gorke bademe, odmah se obrati veterinaru.",
+        "sv": "Bittermandlar innehåller en cyanidförening och anses giftiga. Om katten har ätit bittermandlar, kontakta veterinären direkt."
       }
     },
     {
@@ -203,7 +218,8 @@
         "nl": "Zijn sommige noten erger dan andere?",
         "pl": "Czy niektóre orzechy są gorsze od innych?",
         "cs": "Jsou některé ořechy horší než jiné?",
-        "hr": "Jesu li neki orašasti plodovi opasniji od drugih?"
+        "hr": "Jesu li neki orašasti plodovi opasniji od drugih?",
+        "sv": "Är vissa nötter värre än andra?"
       },
       "a": {
         "en": "Yes. Macadamia nuts are fatty and also toxic to cats, so they are the ones to be most careful with.",
@@ -216,7 +232,8 @@
         "nl": "Ja. Macadamianoten zijn vet en ook giftig voor katten, dus daarmee moet je het meest oppassen.",
         "pl": "Tak. Orzechy makadamia są tłuste, a do tego toksyczne dla kotów, więc z nimi trzeba uważać najbardziej.",
         "cs": "Ano. Makadamové ořechy jsou tučné a pro kočky navíc toxické, takže právě s nimi je třeba být nejopatrnější.",
-        "hr": "Da. Makadamija je masna i uz to otrovna za mačke, pa na nju treba najviše paziti."
+        "hr": "Da. Makadamija je masna i uz to otrovna za mačke, pa na nju treba najviše paziti.",
+        "sv": "Ja. Macadamianötter är feta och dessutom giftiga för katter, så det är dem du ska vara mest försiktig med."
       }
     }
   ],
@@ -310,6 +327,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8669ed2dad6ee9077a72e6faae913e83ca816d97265770ba41c0014c370b2d0b"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "57bfd57f93355a0996acba3969d044b8c1d243ad000502c326c28de5cb494b37"
     }
   }
 }

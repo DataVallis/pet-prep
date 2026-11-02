@@ -12,7 +12,8 @@
     "nl": "Pinda’s",
     "pl": "Orzeszki ziemne",
     "cs": "Arašídy",
-    "hr": "Kikiriki"
+    "hr": "Kikiriki",
+    "sv": "Jordnötter"
   },
   "question": {
     "en": "Can dogs eat peanuts?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden pinda’s eten?",
     "pl": "Czy psy mogą jeść orzeszki ziemne?",
     "cs": "Mohou psi jíst arašídy?",
-    "hr": "Smiju li psi jesti kikiriki?"
+    "hr": "Smiju li psi jesti kikiriki?",
+    "sv": "Får hundar äta jordnötter?"
   },
   "url_slug": {
     "en": "peanuts",
@@ -38,7 +40,8 @@
     "nl": "pindas",
     "pl": "orzeszki-ziemne",
     "cs": "arasidy",
-    "hr": "kikiriki"
+    "hr": "kikiriki",
+    "sv": "jordnotter"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Ja, af en toe een paar gewone pinda’s: ongezouten, zonder smaakje, droog geroosterd of rauw, en zonder dop. Gezouten, met honing geroosterde of gekruide pinda’s zijn niet geschikt, en pinda’s zijn vet, dus houd het bij een paar.",
     "pl": "Tak, kilka zwykłych orzeszków ziemnych od czasu do czasu: niesolonych, bez dodatków smakowych, prażonych na sucho lub surowych, bez łupin. Orzeszki solone, prażone w miodzie lub smakowe się nie nadają, a orzeszki są tłuste, więc poprzestań na kilku.",
     "cs": "Ano, pár obyčejných arašídů jednou za čas: nesolené, neochucené, pražené nasucho nebo syrové a vyloupané. Solené, v medu pražené nebo ochucené arašídy vhodné nejsou, a protože jsou arašídy tučné, zůstaňte jen u několika kusů.",
-    "hr": "Da, nekoliko zrna običnog kikirikija s vremena na vrijeme: neslanog, bez arome, prženog na suho ili sirovog, bez ljuske. Slani, medom prženi ili aromatizirani kikiriki nije prikladan, a kikiriki je mastan, zato neka to bude samo nekoliko zrna."
+    "hr": "Da, nekoliko zrna običnog kikirikija s vremena na vrijeme: neslanog, bez arome, prženog na suho ili sirovog, bez ljuske. Slani, medom prženi ili aromatizirani kikiriki nije prikladan, a kikiriki je mastan, zato neka to bude samo nekoliko zrna.",
+    "sv": "Ja, några naturella jordnötter då och då: osaltade, utan smaksättning, torrostade eller råa och utan skal. Saltade, honungsrostade eller smaksatta jordnötter passar inte, och jordnötter är feta, så håll dig till några få."
   },
   "why": {
     "en": "Peanuts are high in fat, which can cause digestive upset and even pancreatitis if a dog eats too much. Salted peanuts add sodium a dog doesn't need, flavoured ones add other risky ingredients, and the fibrous shell can be a choking hazard, especially for small breeds.",
@@ -65,7 +69,8 @@
     "nl": "Pinda’s bevatten veel vet, wat spijsverteringsklachten en zelfs alvleesklierontsteking kan veroorzaken als een hond te veel eet. Gezouten pinda’s bevatten natrium dat een hond niet nodig heeft, pinda’s met een smaakje bevatten andere riskante ingrediënten, en vooral kleine honden kunnen stikken in de vezelige dop.",
     "pl": "Orzeszki ziemne mają dużo tłuszczu, który może wywołać problemy trawienne, a nawet zapalenie trzustki, jeśli pies zje ich za dużo. Solone orzeszki dostarczają sodu, którego pies nie potrzebuje, smakowe – innych ryzykownych składników, a włóknista łupina może grozić zadławieniem, zwłaszcza u małych ras.",
     "cs": "Arašídy mají hodně tuku, který může při nadměrném množství způsobit zažívací potíže, a dokonce zánět slinivky břišní. Solené arašídy obsahují navíc sodík, který pes nepotřebuje, ochucené obsahují další rizikové přísady a vláknitá skořápka může způsobit dušení, zejména u malých plemen.",
-    "hr": "Kikiriki ima puno masti, što može izazvati probavne tegobe, pa čak i upalu gušterače ako pas pojede previše. Slani kikiriki donosi natrij koji psu ne treba, aromatizirani sadrži druge rizične sastojke, a vlaknasta ljuska može izazvati gušenje, osobito kod malih pasmina."
+    "hr": "Kikiriki ima puno masti, što može izazvati probavne tegobe, pa čak i upalu gušterače ako pas pojede previše. Slani kikiriki donosi natrij koji psu ne treba, aromatizirani sadrži druge rizične sastojke, a vlaknasta ljuska može izazvati gušenje, osobito kod malih pasmina.",
+    "sv": "Jordnötter innehåller mycket fett, som kan orsaka matsmältningsbesvär och till och med bukspottkörtelinflammation (pankreatit) om hunden äter för mycket. Saltade jordnötter tillför natrium som hunden inte behöver, smaksatta tillför andra riskabla ingredienser, och det fibrösa skalet kan orsaka kvävning, särskilt hos små raser."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "nl": "Heeft je hond veel pinda’s, gezouten pinda’s of doppen gegeten? Let dan op braken, diarree of buikpijn, en bel je dierenarts als die optreden of als je hond lijkt te stikken.",
     "pl": "Jeśli twój pies zjadł dużo orzeszków ziemnych, orzeszki solone lub łupiny, obserwuj, czy nie pojawiają się wymioty, biegunka lub ból brzucha, i zadzwoń do weterynarza, jeśli wystąpią albo pies wygląda, jakby się dławił.",
     "cs": "Pokud váš pes snědl hodně arašídů, solené arašídy nebo skořápky, sledujte, zda nezvrací, nemá průjem nebo bolesti břicha, a pokud se tyto potíže objeví nebo se zdá, že se pes dusí, zavolejte veterináři.",
-    "hr": "Ako je tvoj pas pojeo puno kikirikija, slani kikiriki ili ljuske, prati pojavljuju li se povraćanje, proljev ili bolovi u trbuhu i nazovi veterinara ako se pojave ili ako se čini da se pas guši."
+    "hr": "Ako je tvoj pas pojeo puno kikirikija, slani kikiriki ili ljuske, prati pojavljuju li se povraćanje, proljev ili bolovi u trbuhu i nazovi veterinara ako se pojave ili ako se čini da se pas guši.",
+    "sv": "Om hunden ätit många jordnötter, saltade jordnötter eller skal, håll utkik efter kräkningar, diarré eller ont i magen, och ring veterinären om de dyker upp eller om hunden verkar ha satt något i halsen."
   },
   "serving": {
     "en": "Only a few, plain: dry-roasted or raw, unsalted, unseasoned, uncoated, shells removed — not every day.",
@@ -92,7 +98,8 @@
     "nl": "Maar een paar, puur: droog geroosterd of rauw, ongezouten, ongekruid, zonder laagje, zonder dop – niet elke dag.",
     "pl": "Tylko kilka zwykłych orzeszków: prażonych na sucho lub surowych, niesolonych, nieprzyprawionych, bez polewy, bez łupin – nie codziennie.",
     "cs": "Jen pár kusů, obyčejných: pražených nasucho nebo syrových, nesolených, nekořeněných, bez obalu a vyloupaných – ne každý den.",
-    "hr": "Samo nekoliko zrna običnog kikirikija: prženog na suho ili sirovog, neslanog, bez začina, bez preljeva i bez ljuske – ne svaki dan."
+    "hr": "Samo nekoliko zrna običnog kikirikija: prženog na suho ili sirovog, neslanog, bez začina, bez preljeva i bez ljuske – ne svaki dan.",
+    "sv": "Bara några få, naturella: torrostade eller råa, osaltade, okryddade, utan överdrag och utan skal – inte varje dag."
   },
   "child": {
     "en": "A dog may have a few plain peanuts without shells. Salty or sweet peanuts are only for people.",
@@ -105,7 +112,8 @@
     "nl": "Een hond mag een paar gewone pinda’s zonder dop. Zoute of zoete pinda’s zijn alleen voor mensen.",
     "pl": "Pies może dostać kilka zwykłych orzeszków ziemnych bez łupinek. Słone lub słodkie orzeszki są tylko dla ludzi.",
     "cs": "Pes může dostat pár obyčejných arašídů bez skořápky. Slané nebo sladké arašídy jsou jen pro lidi.",
-    "hr": "Pas smije pojesti nekoliko zrna običnog kikirikija bez ljuske. Slani ili slatki kikiriki samo je za ljude."
+    "hr": "Pas smije pojesti nekoliko zrna običnog kikirikija bez ljuske. Slani ili slatki kikiriki samo je za ljude.",
+    "sv": "En hund får äta några naturella jordnötter utan skal. Salta eller söta jordnötter är bara för människor."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "nl": "Zijn met honing geroosterde pinda’s oké?",
         "pl": "Czy orzeszki prażone w miodzie są w porządku?",
         "cs": "Jsou v pořádku arašídy pražené v medu?",
-        "hr": "Je li kikiriki pržen s medom u redu?"
+        "hr": "Je li kikiriki pržen s medom u redu?",
+        "sv": "Går det bra med honungsrostade jordnötter?"
       },
       "a": {
         "en": "No. Honey-roasted and other flavoured peanuts are unsafe for dogs; only plain, unsalted peanuts are suitable.",
@@ -133,7 +142,8 @@
         "nl": "Nee. Met honing geroosterde pinda’s en andere pinda’s met een smaakje zijn niet veilig voor honden; alleen gewone, ongezouten pinda’s zijn geschikt.",
         "pl": "Nie. Orzeszki prażone w miodzie i inne smakowe nie są bezpieczne dla psów; nadają się tylko zwykłe, niesolone orzeszki.",
         "cs": "Ne. Arašídy pražené v medu a jiné ochucené arašídy nejsou pro psy bezpečné; vhodné jsou jen obyčejné, nesolené arašídy.",
-        "hr": "Nije. Kikiriki pržen s medom i drugi aromatizirani kikiriki nisu sigurni za pse; prikladan je samo običan, neslan kikiriki."
+        "hr": "Nije. Kikiriki pržen s medom i drugi aromatizirani kikiriki nisu sigurni za pse; prikladan je samo običan, neslan kikiriki.",
+        "sv": "Nej. Honungsrostade och andra smaksatta jordnötter är inte ofarliga för hundar; bara naturella, osaltade jordnötter passar."
       }
     }
   ],
@@ -242,6 +252,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e7d3ced7e55a5c33e1a1826cadacd241062f5f401514d3cd3c2fb614db579ec1"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3f15088fb2c4f22d04e4f8099886f36ae794fe6d83bcd38834cd090041d29946"
     }
   }
 }

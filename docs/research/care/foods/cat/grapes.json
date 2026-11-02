@@ -12,7 +12,8 @@
     "nl": "Druiven",
     "pl": "Winogrona",
     "cs": "Hrozny",
-    "hr": "Grožđe"
+    "hr": "Grožđe",
+    "sv": "Vindruvor"
   },
   "question": {
     "en": "Can cats eat grapes?",
@@ -25,7 +26,8 @@
     "nl": "Mogen katten druiven eten?",
     "pl": "Czy koty mogą jeść winogrona?",
     "cs": "Mohou kočky jíst hrozny?",
-    "hr": "Smiju li mačke jesti grožđe?"
+    "hr": "Smiju li mačke jesti grožđe?",
+    "sv": "Får katter äta vindruvor?"
   },
   "url_slug": {
     "en": "grapes",
@@ -38,7 +40,8 @@
     "nl": "druiven",
     "pl": "winogrona",
     "cs": "hrozny",
-    "hr": "grozde"
+    "hr": "grozde",
+    "sv": "vindruvor"
   },
   "level": "toxic",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee. Druiven staan op de lijst van voedingsmiddelen die giftig zijn voor katten, en ze kunnen nierfalen veroorzaken. Vermijd ze helemaal, ook in kleine hoeveelheden, en bel je dierenarts als je kat er een eet.",
     "pl": "Nie. Winogrona są na liście pokarmów toksycznych dla kotów, a ich zjedzenie może wywołać niewydolność nerek. Unikaj ich całkowicie, nawet w małych ilościach, i zadzwoń do weterynarza, jeśli kot zje choć jedno.",
     "cs": "Ne. Hrozny patří mezi potraviny toxické pro kočky a mohou způsobit selhání ledvin. Úplně se jim vyhněte, i v malém množství, a pokud je kočka sní, zavolejte veterináři.",
-    "hr": "Ne. Grožđe je na popisu namirnica otrovnih za mačke, a može izazvati zatajenje bubrega. Potpuno ga izbjegavaj, čak i u malim količinama, i nazovi veterinara ako tvoja mačka pojede imalo grožđa."
+    "hr": "Ne. Grožđe je na popisu namirnica otrovnih za mačke, a može izazvati zatajenje bubrega. Potpuno ga izbjegavaj, čak i u malim količinama, i nazovi veterinara ako tvoja mačka pojede imalo grožđa.",
+    "sv": "Nej. Vindruvor finns på listan över livsmedel som är giftiga för katter, och de kan orsaka njursvikt. Undvik dem helt, även i små mängder, och ring veterinären om katten äter någon."
   },
   "why": {
     "en": "Cat welfare charities warn that grapes can cause kidney failure in cats, and that cats with chronic kidney disease may be at greater risk. Grape poisoning in cats is rare and not well understood, and some sources only describe it in dogs, so we use the stricter level: treat any amount as an emergency.",
@@ -65,7 +69,8 @@
     "nl": "Organisaties voor kattenwelzijn waarschuwen dat druiven bij katten nierfalen kunnen veroorzaken, en dat katten met een chronische nierziekte mogelijk een groter risico lopen. Druivenvergiftiging bij katten is zeldzaam en nog niet goed begrepen, en sommige bronnen beschrijven het alleen bij honden. Daarom volgen wij het strengste niveau: behandel elke hoeveelheid als een noodgeval.",
     "pl": "Organizacje działające na rzecz kotów ostrzegają, że winogrona mogą wywołać u kotów niewydolność nerek, a koty z przewlekłą chorobą nerek mogą być bardziej narażone. Zatrucie winogronami u kotów jest rzadkie i słabo poznane, a niektóre źródła opisują je tylko u psów, dlatego przyjmujemy surowszą ocenę: każdą ilość traktuj jak nagły przypadek.",
     "cs": "Organizace na ochranu koček varují, že hrozny mohou u koček způsobit selhání ledvin a že kočky s chronickým onemocněním ledvin mohou být ohroženy víc. Otrava hrozny je u koček vzácná a není dobře prozkoumaná a některé zdroje ji popisují jen u psů, proto používáme přísnější hodnocení: jakékoli množství berte jako naléhavý stav.",
-    "hr": "Udruge za dobrobit mačaka upozoravaju da grožđe kod mačaka može izazvati zatajenje bubrega te da mačke s kroničnom bolešću bubrega mogu biti izložene većem riziku. Otrovanje grožđem kod mačaka rijetko je i nije dobro istraženo, a neki ga izvori opisuju samo kod pasa, pa se držimo strože razine: svaku količinu smatraj hitnim slučajem."
+    "hr": "Udruge za dobrobit mačaka upozoravaju da grožđe kod mačaka može izazvati zatajenje bubrega te da mačke s kroničnom bolešću bubrega mogu biti izložene većem riziku. Otrovanje grožđem kod mačaka rijetko je i nije dobro istraženo, a neki ga izvori opisuju samo kod pasa, pa se držimo strože razine: svaku količinu smatraj hitnim slučajem.",
+    "sv": "Djurskyddsorganisationer för katter varnar för att vindruvor kan orsaka njursvikt hos katter, och att katter med kronisk njursjukdom kan löpa större risk. Vindruvsförgiftning hos katter är ovanlig och inte väl utredd, och vissa källor beskriver den bara hos hundar, så vi använder den strängare nivån: behandla alla mängder som ett akutfall."
   },
   "signs": {
     "en": [
@@ -100,6 +105,9 @@
     ],
     "hr": [
       "Povraćanje, često unutar jednog dana"
+    ],
+    "sv": [
+      "Kräkningar, ofta inom ett dygn"
     ]
   },
   "what_to_do": {
@@ -113,7 +121,8 @@
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op hoeveel druiven je kat heeft gegeten en wanneer. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt. Zapisz, ile winogron zjadł twój kot i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, kolik kuliček hroznů kočka snědla a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
-    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši koliko je bobica grožđa mačka pojela i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje."
+    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši koliko je bobica grožđa mačka pojela i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
+    "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur. Notera hur många vindruvor katten åt och när. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma."
   },
   "serving": null,
   "child": {
@@ -127,7 +136,8 @@
     "nl": "Druiven zijn lekker voor ons, maar niet veilig voor katten. Houd ze op je bord. Eet je poes er een? Vertel het meteen aan een volwassene.",
     "pl": "Winogrona są dla nas pyszne, ale nie są bezpieczne dla kotów. Trzymaj je na swoim talerzu i powiedz dorosłemu, jeśli kotek jakieś zje.",
     "cs": "Hrozny nám chutnají, ale pro kočky nejsou bezpečné. Nech si je na talíři, a když kočička nějakou kuličku sní, řekni to dospělému.",
-    "hr": "Grožđe je nama fino, ali za mace nije sigurno. Drži ga na svom tanjuru i reci odrasloj osobi ako maca pojede bobicu grožđa."
+    "hr": "Grožđe je nama fino, ali za mace nije sigurno. Drži ga na svom tanjuru i reci odrasloj osobi ako maca pojede bobicu grožđa.",
+    "sv": "Vindruvor är goda för oss men inte säkra för katter. Låt dem ligga kvar på din tallrik och säg till en vuxen om katten äter en."
   },
   "faq": [
     {
@@ -142,7 +152,8 @@
         "nl": "Lopen katten met een nierziekte meer risico?",
         "pl": "Czy koty z chorobą nerek są bardziej narażone?",
         "cs": "Jsou kočky s onemocněním ledvin ohroženy víc?",
-        "hr": "Jesu li mačke s bolešću bubrega izložene većem riziku?"
+        "hr": "Jesu li mačke s bolešću bubrega izložene većem riziku?",
+        "sv": "Löper katter med njursjukdom större risk?"
       },
       "a": {
         "en": "Cats Protection says cats with chronic kidney disease may be at greater risk from grapes.",
@@ -155,7 +166,8 @@
         "nl": "Volgens Cats Protection lopen katten met een chronische nierziekte mogelijk een groter risico door druiven.",
         "pl": "Według Cats Protection koty z przewlekłą chorobą nerek mogą być bardziej narażone na szkodliwe działanie winogron.",
         "cs": "Podle Cats Protection mohou být kočky s chronickým onemocněním ledvin hrozny ohroženy víc.",
-        "hr": "Cats Protection navodi da mačke s kroničnom bolešću bubrega mogu biti izložene većem riziku od grožđa."
+        "hr": "Cats Protection navodi da mačke s kroničnom bolešću bubrega mogu biti izložene većem riziku od grožđa.",
+        "sv": "Enligt Cats Protection kan katter med kronisk njursjukdom löpa större risk att bli sjuka av vindruvor."
       }
     }
   ],
@@ -263,6 +275,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1e2665a8390c47875ce53938c922e6b5803ad80549fe63792b6f6e6d8a9306f4"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "785e133b67f49dc58e19ee0a45383bcb38d7fbd6416d3c632861a913e6f08e9a"
     }
   }
 }

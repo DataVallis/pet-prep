@@ -12,7 +12,8 @@
     "nl": "Rauwe botten",
     "pl": "Surowe kości",
     "cs": "Syrové kosti",
-    "hr": "Sirove kosti"
+    "hr": "Sirove kosti",
+    "sv": "Råa ben"
   },
   "question": {
     "en": "Can cats eat raw bones?",
@@ -25,7 +26,8 @@
     "nl": "Mogen katten rauwe botten eten?",
     "pl": "Czy koty mogą jeść surowe kości?",
     "cs": "Mohou kočky jíst syrové kosti?",
-    "hr": "Smiju li mačke jesti sirove kosti?"
+    "hr": "Smiju li mačke jesti sirove kosti?",
+    "sv": "Får katter äta råa ben?"
   },
   "url_slug": {
     "en": "raw-bones",
@@ -38,7 +40,8 @@
     "nl": "rauwe-botten",
     "pl": "surowe-kosci",
     "cs": "syrove-kosti",
-    "hr": "sirove-kosti"
+    "hr": "sirove-kosti",
+    "sv": "raa-ben"
   },
   "level": "dangerous",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Liever niet. Cats Protection raadt rauwe botten af, omdat ze de kans op verslikken of een verstopping in de maag vergroten. Botten kunnen ook de darmen van een kat beschadigen, en rauw vlees kan schadelijke bacteriën en parasieten bevatten.",
     "pl": "Lepiej nie. Cats Protection radzi unikać surowych kości, bo zwiększają ryzyko zadławienia lub niedrożności żołądka. Kości mogą też zranić przewód pokarmowy kota, a surowe mięso może przenosić szkodliwe bakterie i pasożyty.",
     "cs": "Raději ne. Cats Protection doporučuje se syrovým kostem vyhnout, protože zvyšují riziko udušení nebo ucpání žaludku. Kosti mohou kočce také poranit trávicí trakt a syrové maso může přenášet škodlivé bakterie a parazity.",
-    "hr": "Bolje ne. Cats Protection savjetuje izbjegavati sirove kosti jer povećavaju rizik od gušenja ili začepljenja želuca. Kosti mogu i ozlijediti mačji probavni sustav, a sirovo meso može sadržavati štetne bakterije i parazite."
+    "hr": "Bolje ne. Cats Protection savjetuje izbjegavati sirove kosti jer povećavaju rizik od gušenja ili začepljenja želuca. Kosti mogu i ozlijediti mačji probavni sustav, a sirovo meso može sadržavati štetne bakterije i parazite.",
+    "sv": "Helst inte. Cats Protection avråder från råa ben eftersom de ökar risken för kvävning eller stopp i magen. Ben kan också skada kattens tarm, och rått kött kan bära på skadliga bakterier och parasiter."
   },
   "why": {
     "en": "Swallowed bones can injure or block the gut, which can be serious and may need surgery. Raw meat attached to bones may also contain harmful bacteria and parasites.",
@@ -65,7 +69,8 @@
     "nl": "Ingeslikte botten kunnen de darmen beschadigen of verstoppen; dat kan ernstig zijn en soms is een operatie nodig. Rauw vlees aan de botten kan ook schadelijke bacteriën en parasieten bevatten.",
     "pl": "Połknięte kości mogą zranić lub zablokować przewód pokarmowy, co bywa poważne i może wymagać operacji. Surowe mięso na kościach może też zawierać szkodliwe bakterie i pasożyty.",
     "cs": "Spolknuté kosti mohou poranit nebo ucpat trávicí trakt, což může být vážné a může si to vyžádat operaci. Syrové maso na kostech může také obsahovat škodlivé bakterie a parazity.",
-    "hr": "Progutane kosti mogu ozlijediti ili začepiti probavni sustav, što može biti ozbiljno i zahtijevati operaciju. Sirovo meso na kostima može sadržavati i štetne bakterije i parazite."
+    "hr": "Progutane kosti mogu ozlijediti ili začepiti probavni sustav, što može biti ozbiljno i zahtijevati operaciju. Sirovo meso na kostima može sadržavati i štetne bakterije i parazite.",
+    "sv": "Ben som katten sväljer kan skada eller blockera tarmen, vilket kan vara allvarligt och kräva operation. Rått kött som sitter kvar på benen kan också innehålla skadliga bakterier och parasiter."
   },
   "signs": {
     "en": [
@@ -122,6 +127,11 @@
       "Gušenje",
       "Povraćanje",
       "Bol u trbuhu (skrivanje, režanje, izbjegavanje dodira)"
+    ],
+    "sv": [
+      "Kvävning",
+      "Kräkningar",
+      "Ont i magen (gömmer sig, morrar, vill inte bli berörd)"
     ]
   },
   "what_to_do": {
@@ -135,7 +145,8 @@
     "nl": "Neem meteen contact op met je dierenarts als je kat een bot heeft ingeslikt, zich verslikt of braakt. Schrijf op wat voor bot het was en wanneer. Wacht niet af wat er gebeurt en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu skontaktuj się z weterynarzem, jeśli twój kot połknął kość, dławi się lub wymiotuje. Zapisz, jaka to była kość i kiedy ją połknął. Nie czekaj na rozwój sytuacji i nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Pokud vaše kočka spolkla kost, dusí se nebo zvrací, okamžitě se obraťte na veterináře. Poznamenejte si, o jakou kost šlo a kdy se to stalo. Nečekejte, co se stane, a nesnažte se u kočky doma vyvolat zvracení.",
-    "hr": "Odmah se obrati veterinaru ako je mačka progutala kost, guši se ili povraća. Zapiši o kakvoj se kosti radi i kada se to dogodilo. Ne čekaj da vidiš što će se dogoditi i ne pokušavaj kod kuće izazvati povraćanje."
+    "hr": "Odmah se obrati veterinaru ako je mačka progutala kost, guši se ili povraća. Zapiši o kakvoj se kosti radi i kada se to dogodilo. Ne čekaj da vidiš što će se dogoditi i ne pokušavaj kod kuće izazvati povraćanje.",
+    "sv": "Kontakta veterinären direkt om katten har svalt ett ben eller håller på att kvävas eller kräks. Notera vilken sorts ben det var och när. Vänta inte och se vad som händer, och försök inte få katten att kräkas hemma."
   },
   "serving": null,
   "child": {
@@ -149,7 +160,8 @@
     "nl": "Botten kunnen vastraken in de keel of buik van een kat. Geen botten in het bakje van je poes! Vindt ze er een? Vertel het meteen aan een volwassene.",
     "pl": "Kości mogą utknąć kotu w gardle albo w brzuszku. Nie wkładaj kości do miski kotka i powiedz dorosłemu, jeśli kotek jakąś znajdzie.",
     "cs": "Kosti se kočce můžou zaseknout v krku nebo v bříšku. Do kočičí misky kosti nepatří, a když nějakou kočička najde, řekni to dospělému.",
-    "hr": "Kosti mogu zapeti maci u grlu ili trbuščiću. Ne stavljaj kosti u macinu zdjelicu i reci odrasloj osobi ako maca neku pronađe."
+    "hr": "Kosti mogu zapeti maci u grlu ili trbuščiću. Ne stavljaj kosti u macinu zdjelicu i reci odrasloj osobi ako maca neku pronađe.",
+    "sv": "Ben kan fastna i kattens hals eller mage. Lägg inga ben i kattens skål och säg till en vuxen om katten hittar ett."
   },
   "faq": [],
   "sources": [
@@ -248,6 +260,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ed7eb801faee9d11b43be19d5569727f8c7afe88f29dc99fc01e790a098d705b"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c8e268565537ba8004cbfd6721ad1ea490fd4a62197e5bd4f9361e9370379548"
     }
   }
 }

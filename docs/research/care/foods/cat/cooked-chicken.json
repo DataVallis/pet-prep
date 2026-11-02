@@ -12,7 +12,8 @@
     "nl": "Gekookte kip",
     "pl": "Gotowany kurczak",
     "cs": "Tepelně upravené kuřecí maso",
-    "hr": "Kuhana piletina"
+    "hr": "Kuhana piletina",
+    "sv": "Kokt kyckling"
   },
   "question": {
     "en": "Can cats eat cooked chicken?",
@@ -25,7 +26,8 @@
     "nl": "Mogen katten gekookte kip eten?",
     "pl": "Czy koty mogą jeść gotowanego kurczaka?",
     "cs": "Mohou kočky jíst tepelně upravené kuřecí maso?",
-    "hr": "Smiju li mačke jesti kuhanu piletinu?"
+    "hr": "Smiju li mačke jesti kuhanu piletinu?",
+    "sv": "Får katter äta kokt kyckling?"
   },
   "url_slug": {
     "en": "cooked-chicken",
@@ -38,7 +40,8 @@
     "nl": "gekookte-kip",
     "pl": "gotowany-kurczak",
     "cs": "tepelne-upravene-kureci-maso",
-    "hr": "kuhana-piletina"
+    "hr": "kuhana-piletina",
+    "sv": "kokt-kyckling"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Ja, gewone gekookte kip is af en toe prima als snoepje voor katten. Kook het, haal alle botten eruit en het vel eraf en voeg geen kruiden of zout toe. Tel het mee bij het dagelijkse eten van je kat; het is geen vervanging ervan.",
     "pl": "Tak, zwykły gotowany kurczak jest w porządku jako okazjonalny smakołyk dla kota. Ugotuj go, usuń wszystkie kości i skórę i nie dodawaj przypraw. Wliczaj go do dziennej porcji jedzenia kota, a nie podawaj zamiast niej.",
     "cs": "Ano, obyčejné tepelně upravené kuřecí maso je pro kočky jako občasný pamlsek v pořádku. Uvařte ho, odstraňte všechny kosti a kůži a nekořeňte ho. Počítejte ho jako součást denní dávky krmiva vaší kočky, ne jako její náhradu.",
-    "hr": "Da, obična kuhana piletina u redu je kao povremena poslastica za mačke. Skuhaj je, ukloni sve kosti i kožu i ne dodaji začine. Uračunaj je u dnevni obrok svoje mačke – ona ga ne zamjenjuje."
+    "hr": "Da, obična kuhana piletina u redu je kao povremena poslastica za mačke. Skuhaj je, ukloni sve kosti i kožu i ne dodaji začine. Uračunaj je u dnevni obrok svoje mačke – ona ga ne zamjenjuje.",
+    "sv": "Ja, naturell kokt kyckling går bra som godbit för katter någon gång ibland. Koka den, ta bort alla ben och skinnet, och krydda inte. Räkna in den i kattens dagliga matranson – den ersätter inte maten."
   },
   "why": {
     "en": "Cats Protection and RSPCA Australia both say boiled or steamed chicken can be offered occasionally. It must be cooked and boneless, because cooked bones can splinter. Feeding only cooked chicken long-term can lead to nutritional deficiencies, so it stays a treat.",
@@ -65,7 +69,8 @@
     "nl": "Cats Protection en RSPCA Australia zeggen allebei dat je af en toe gekookte of gestoomde kip kunt geven. Het moet gaar zijn en zonder botten, want gekookte botten kunnen splinteren. Langdurig alleen gekookte kip geven kan tot voedingstekorten leiden, dus het blijft een snoepje.",
     "pl": "Cats Protection i RSPCA Australia podają, że od czasu do czasu można dać kotu kurczaka gotowanego w wodzie lub na parze. Musi być ugotowany i bez kości, bo gotowane kości mogą się rozszczepiać. Karmienie wyłącznie gotowanym kurczakiem przez dłuższy czas może prowadzić do niedoborów żywieniowych, więc powinien pozostać smakołykiem.",
     "cs": "Cats Protection i RSPCA Australia uvádějí, že vařené nebo v páře připravené kuřecí maso lze kočce občas nabídnout. Musí být tepelně upravené a bez kostí, protože tepelně upravené kosti se mohou tříštit. Dlouhodobé krmení pouze tepelně upraveným kuřecím masem může vést k nedostatku živin, proto ať zůstane jen pamlskem.",
-    "hr": "Cats Protection i RSPCA Australia navode da se kuhana ili na pari pripremljena piletina može povremeno ponuditi. Mora biti termički obrađena i bez kostiju jer se termički obrađene kosti mogu rascijepiti. Dugotrajno hranjenje isključivo termički obrađenom piletinom može dovesti do nedostatka hranjivih tvari, pa ona ostaje poslastica."
+    "hr": "Cats Protection i RSPCA Australia navode da se kuhana ili na pari pripremljena piletina može povremeno ponuditi. Mora biti termički obrađena i bez kostiju jer se termički obrađene kosti mogu rascijepiti. Dugotrajno hranjenje isključivo termički obrađenom piletinom može dovesti do nedostatka hranjivih tvari, pa ona ostaje poslastica.",
+    "sv": "Både Cats Protection och RSPCA Australia skriver att kokt eller ångkokt kyckling kan ges någon gång ibland. Den måste vara tillagad och benfri, eftersom tillagade ben kan splittras. Om katten under lång tid bara får kokt kyckling kan den få näringsbrist, så kycklingen ska förbli en godbit."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "nl": "Geef eerst een klein stukje. Krijgt je kat daarna last van braken of diarree, stop dan en vraag je dierenarts om advies. Heeft je kat een gekookt kippenbotje ingeslikt, bel dan je dierenarts.",
     "pl": "Najpierw podaj mały kawałek. Jeśli potem twój kot wymiotuje lub ma biegunkę, przestań i zapytaj weterynarza. Jeśli kot połknął gotowaną kość kurczaka, zadzwoń do weterynarza.",
     "cs": "Nejdřív nabídněte malý kousek. Pokud kočka potom zvrací nebo má průjem, přestaňte a poraďte se s veterinářem. Pokud kočka spolkla tepelně upravenou kuřecí kost, zavolejte veterináři.",
-    "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili dobije proljev, prestani i pitaj veterinara. Ako je mačka progutala termički obrađenu pileću kost, nazovi veterinara."
+    "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili dobije proljev, prestani i pitaj veterinara. Ako je mačka progutala termički obrađenu pileću kost, nazovi veterinara.",
+    "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären. Om katten har svalt ett tillagat kycklingben, ring veterinären."
   },
   "serving": {
     "en": "Boiled or steamed, plain, with no bones, skin or seasoning; small pieces within the daily food allowance.",
@@ -92,7 +98,8 @@
     "nl": "Gekookt of gestoomd, onbewerkt, zonder botten, vel, kruiden of zout; kleine stukjes binnen de dagelijkse hoeveelheid voer.",
     "pl": "Gotowany w wodzie lub na parze, bez dodatków, bez kości, skóry i przypraw; małe kawałki w ramach dziennej porcji jedzenia.",
     "cs": "Vařené nebo připravené v páře, bez přísad, bez kostí, kůže a koření; malé kousky v rámci denní dávky krmiva.",
-    "hr": "Kuhana ili pripremljena na pari, obična, bez kostiju, kože i začina; mali komadići unutar dnevnog obroka."
+    "hr": "Kuhana ili pripremljena na pari, obična, bez kostiju, kože i začina; mali komadići unutar dnevnog obroka.",
+    "sv": "Kokt eller ångkokt, naturell, utan ben, skinn och kryddor; små bitar inom den dagliga matransonen."
   },
   "child": {
     "en": "Plain cooked chicken with no bones is a yummy cat treat. Ask a grown-up to get it ready.",
@@ -105,7 +112,8 @@
     "nl": "Gewone gekookte kip zonder botjes is een lekker kattensnoepje. Vraag een volwassene om het klaar te maken.",
     "pl": "Zwykły gotowany kurczak bez kości to pyszny smakołyk dla kota. Poproś dorosłego, żeby go przygotował.",
     "cs": "Obyčejné uvařené kuřecí maso bez kostí je pro kočku mňamózní pamlsek. Požádej dospělého, ať ho připraví.",
-    "hr": "Obična kuhana piletina bez kostiju fina je poslastica za macu. Zamoli odraslu osobu da je pripremi."
+    "hr": "Obična kuhana piletina bez kostiju fina je poslastica za macu. Zamoli odraslu osobu da je pripremi.",
+    "sv": "Kokt kyckling utan ben och kryddor är en jättegod godbit för katter. Be en vuxen att göra i ordning den."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "nl": "Mag mijn kat alleen kip eten?",
         "pl": "Czy mój kot może jeść tylko kurczaka?",
         "cs": "Může moje kočka jíst jen kuřecí maso?",
-        "hr": "Smije li moja mačka jesti samo piletinu?"
+        "hr": "Smije li moja mačka jesti samo piletinu?",
+        "sv": "Kan min katt äta bara kyckling?"
       },
       "a": {
         "en": "No. Feeding only cooked chicken long-term can lead to nutritional deficiencies. Keep it as an extra.",
@@ -133,7 +142,8 @@
         "nl": "Nee. Langdurig alleen gekookte kip geven kan tot voedingstekorten leiden. Houd het bij iets extra’s.",
         "pl": "Nie. Karmienie wyłącznie gotowanym kurczakiem przez dłuższy czas może prowadzić do niedoborów żywieniowych. Traktuj go jako dodatek.",
         "cs": "Ne. Dlouhodobé krmení pouze tepelně upraveným kuřecím masem může vést k nedostatku živin. Ať zůstane jen doplňkem.",
-        "hr": "Ne. Dugotrajno hranjenje isključivo termički obrađenom piletinom može dovesti do nedostatka hranjivih tvari. Neka ostane dodatak."
+        "hr": "Ne. Dugotrajno hranjenje isključivo termički obrađenom piletinom može dovesti do nedostatka hranjivih tvari. Neka ostane dodatak.",
+        "sv": "Nej. Om katten under lång tid bara får kokt kyckling kan den få näringsbrist. Låt kycklingen vara något extra."
       }
     }
   ],
@@ -237,6 +247,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "abc2c803c7d89cfa2e376dc4138d2e642c7fed4b9c04483b4beb6c9ba1fba172"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8e6da464cd8cc7bc2a65e6b36668683525cbbf22dc02ea7ae951c57550534c78"
     }
   }
 }

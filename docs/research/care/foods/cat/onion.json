@@ -12,7 +12,8 @@
     "nl": "Ui",
     "pl": "Cebula",
     "cs": "Cibule",
-    "hr": "Luk"
+    "hr": "Luk",
+    "sv": "Lök"
   },
   "question": {
     "en": "Can cats eat onion?",
@@ -25,7 +26,8 @@
     "nl": "Mogen katten ui eten?",
     "pl": "Czy koty mogą jeść cebulę?",
     "cs": "Mohou kočky jíst cibuli?",
-    "hr": "Smiju li mačke jesti luk?"
+    "hr": "Smiju li mačke jesti luk?",
+    "sv": "Får katter äta lök?"
   },
   "url_slug": {
     "en": "onion",
@@ -38,7 +40,8 @@
     "nl": "ui",
     "pl": "cebula",
     "cs": "cibule",
-    "hr": "luk"
+    "hr": "luk",
+    "sv": "lok"
   },
   "level": "toxic",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee. Ui is in elke vorm giftig voor katten – rauw, gekookt, gedroogd of als poeder. Het kan rode bloedcellen beschadigen en bloedarmoede veroorzaken, en katten zijn de gevoeligste diersoort. Bel je dierenarts als je kat er iets van eet.",
     "pl": "Nie. Cebula jest toksyczna dla kotów w każdej postaci – surowa, gotowana, suszona i w proszku. Może uszkadzać czerwone krwinki i wywołać anemię, a koty są gatunkiem najbardziej wrażliwym. Zadzwoń do weterynarza, jeśli kot zje choć trochę.",
     "cs": "Ne. Cibule patří mezi cibuloviny (rod Allium) a je pro kočky toxická v jakékoli podobě – syrová, tepelně upravená, sušená i v prášku. Může poškodit červené krvinky a způsobit chudokrevnost (anémii), přičemž kočky jsou ze všech druhů nejcitlivější. Pokud ji vaše kočka sní byť jen trochu, zavolejte veterináři.",
-    "hr": "Ne. Luk je otrovan za mačke u svakom obliku – sirov, termički obrađen, sušen ili u prahu. Može oštetiti crvene krvne stanice i uzrokovati anemiju, a mačke su najosjetljivija vrsta. Ako mačka pojede imalo luka, nazovi veterinara."
+    "hr": "Ne. Luk je otrovan za mačke u svakom obliku – sirov, termički obrađen, sušen ili u prahu. Može oštetiti crvene krvne stanice i uzrokovati anemiju, a mačke su najosjetljivija vrsta. Ako mačka pojede imalo luka, nazovi veterinara.",
+    "sv": "Nej. Lök är giftig för katter i alla former – rå, tillagad, torkad eller som pulver. Den kan skada de röda blodkropparna och orsaka blodbrist (anemi), och katter är den känsligaste arten. Ring veterinären om katten äter någon lök."
   },
   "why": {
     "en": "Onion belongs to the allium family (the onion family). Alliums damage red blood cells and can lead to anaemia, and they also irritate the stomach and gut. Cats are the most sensitive species. All forms are poisonous to cats — raw, cooked, dried, powdered and liquid.",
@@ -65,7 +69,8 @@
     "nl": "Ui hoort bij de alliumfamilie (de uienfamilie). Alliums beschadigen rode bloedcellen en kunnen tot bloedarmoede leiden, en ze irriteren ook de maag en darmen. Katten zijn de gevoeligste diersoort. Alle vormen zijn giftig voor katten – rauw, gekookt, gedroogd, in poedervorm en vloeibaar.",
     "pl": "Cebula należy do roślin z rodzaju Allium, czyli z rodziny cebulowatych. Rośliny z tego rodzaju uszkadzają czerwone krwinki, mogą prowadzić do anemii, a do tego podrażniają żołądek i jelita. Koty są gatunkiem najbardziej wrażliwym. Każda postać jest dla kotów trująca – surowa, gotowana, suszona, sproszkowana i płynna.",
     "cs": "Cibule patří mezi cibuloviny (rod Allium). Cibuloviny poškozují červené krvinky, mohou vést k chudokrevnosti a navíc dráždí žaludek a střeva. Kočky jsou ze všech druhů zvířat nejcitlivější. Pro kočky jsou jedovaté všechny formy – syrová, tepelně upravená, sušená, v prášku i tekutá.",
-    "hr": "Luk pripada biljkama iz roda Allium (porodici luka). Biljke iz roda Allium oštećuju crvene krvne stanice i mogu dovesti do anemije, a uz to nadražuju želudac i crijeva. Mačke su najosjetljivija vrsta. Svi su oblici otrovni za mačke – sirov, termički obrađen, sušen, u prahu i tekući."
+    "hr": "Luk pripada biljkama iz roda Allium (porodici luka). Biljke iz roda Allium oštećuju crvene krvne stanice i mogu dovesti do anemije, a uz to nadražuju želudac i crijeva. Mačke su najosjetljivija vrsta. Svi su oblici otrovni za mačke – sirov, termički obrađen, sušen, u prahu i tekući.",
+    "sv": "Lök hör till släktet Allium (lökfamiljen). Lökväxter skadar de röda blodkropparna och kan leda till blodbrist (anemi), och de irriterar också magen och tarmarna. Katter är den känsligaste arten. Alla former är giftiga för katter – rå, tillagad, torkad, i pulverform och i flytande form."
   },
   "signs": {
     "en": [
@@ -166,6 +171,15 @@
       "Blijede desni",
       "Crveno obojena mokraća",
       "Ubrzano ili otežano disanje"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Diarré",
+      "Minskad aptit",
+      "Svaghet",
+      "Blekt tandkött",
+      "Rödfärgad urin",
+      "Snabbare eller ansträngd andning"
     ]
   },
   "what_to_do": {
@@ -179,7 +193,8 @@
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als je kat er gezond uitziet – verschijnselen van bloedarmoede kunnen een paar dagen op zich laten wachten. Schrijf op wat je kat heeft gegeten (rauw, gekookt, als poeder of in een gerecht), hoeveel en wanneer. Probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, nawet jeśli kot wygląda na zdrowego – objawy anemii mogą się pojawić dopiero po kilku dniach. Zapisz, co zjadł twój kot (surowy, gotowany, w proszku czy w potrawie), ile i kiedy. Nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, i když se vaše kočka zdá v pořádku – příznaky chudokrevnosti se mohou projevit až po několika dnech. Poznamenejte si, co kočka snědla (syrovou cibuli, tepelně upravenou, v prášku nebo pokrm, který ji obsahoval), kolik a kdy. Nesnažte se u kočky doma vyvolat zvracení.",
-    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako se čini da je mačka dobro – znakovi anemije mogu se pokazati tek nakon nekoliko dana. Zapiši što je mačka pojela (sirovo, termički obrađeno, u prahu ili jelo koje ga sadrži), koliko i kada. Ne pokušavaj kod kuće izazvati povraćanje."
+    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako se čini da je mačka dobro – znakovi anemije mogu se pokazati tek nakon nekoliko dana. Zapiši što je mačka pojela (sirovo, termički obrađeno, u prahu ili jelo koje ga sadrži), koliko i kada. Ne pokušavaj kod kuće izazvati povraćanje.",
+    "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur, även om katten verkar må bra – tecken på blodbrist kan dröja flera dagar. Notera vad katten åt (rått, tillagat, pulver eller en maträtt som innehöll det), hur mycket och när. Försök inte få katten att kräkas hemma."
   },
   "serving": null,
   "child": {
@@ -193,7 +208,8 @@
     "nl": "Uien zijn niet voor katten, ook niet als ze in het eten zijn meegekookt. Eet je poes ervan? Vertel het meteen aan een volwassene, die dan de dierenarts kan bellen.",
     "pl": "Cebula nie jest dla kotów, nawet ugotowana w jedzeniu. Jeśli kotek trochę zje, powiedz dorosłemu, żeby mógł zadzwonić do weterynarza.",
     "cs": "Cibule není pro kočky, ani když je uvařená nebo upečená v jídle. Když ji kočička sní, řekni to dospělému, aby mohl zavolat veterináři.",
-    "hr": "Luk nije za mace, čak ni kuhan u jelu. Ako ga maca pojede, reci odrasloj osobi da nazove veterinara."
+    "hr": "Luk nije za mace, čak ni kuhan u jelu. Ako ga maca pojede, reci odrasloj osobi da nazove veterinara.",
+    "sv": "Lök är inte för katter, inte ens tillagad i maten. Om katten äter lite, säg till en vuxen så att den vuxna kan ringa veterinären."
   },
   "faq": [
     {
@@ -208,7 +224,8 @@
         "nl": "Is gekookte ui of uienpoeder veilig voor katten?",
         "pl": "Czy gotowana lub sproszkowana cebula jest bezpieczna dla kotów?",
         "cs": "Je tepelně upravená cibule nebo cibule v prášku pro kočky bezpečná?",
-        "hr": "Je li termički obrađen luk ili luk u prahu siguran za mačke?"
+        "hr": "Je li termički obrađen luk ili luk u prahu siguran za mačke?",
+        "sv": "Är tillagad lök eller lökpulver säkert för katter?"
       },
       "a": {
         "en": "No. All forms are poisonous to cats, including raw, cooked, dried, powdered and liquid onion. Be careful with leftovers, stuffing and gravy that may contain it.",
@@ -221,7 +238,8 @@
         "nl": "Nee. Alle vormen zijn giftig voor katten, ook rauwe, gekookte, gedroogde, gemalen en vloeibare ui. Wees voorzichtig met restjes, vulling en jus waar het in kan zitten.",
         "pl": "Nie. Każda postać jest dla kotów trująca, także cebula surowa, gotowana, suszona, w proszku i w płynie. Uważaj na resztki jedzenia, farsz i sos pieczeniowy, które mogą ją zawierać.",
         "cs": "Ne. Pro kočky jsou jedovaté všechny formy cibule – syrová, tepelně upravená, sušená, v prášku i tekutá. Dávejte pozor na zbytky jídla, nádivky a šťávu z masa, které ji mohou obsahovat.",
-        "hr": "Nije. Za mačke su otrovni svi oblici, uključujući sirov, termički obrađen, sušen, tekući luk i luk u prahu. Pripazi na ostatke hrane, nadjeve i sok od pečenja koji ga mogu sadržavati."
+        "hr": "Nije. Za mačke su otrovni svi oblici, uključujući sirov, termički obrađen, sušen, tekući luk i luk u prahu. Pripazi na ostatke hrane, nadjeve i sok od pečenja koji ga mogu sadržavati.",
+        "sv": "Nej. Alla former är giftiga för katter, även rå, tillagad, torkad, pulveriserad och flytande lök. Var försiktig med rester, fyllning och sky som kan innehålla lök."
       }
     },
     {
@@ -236,7 +254,8 @@
         "nl": "Waarom treden de verschijnselen soms pas dagen later op?",
         "pl": "Dlaczego objawy pojawiają się czasem dopiero po kilku dniach?",
         "cs": "Proč se příznaky někdy objeví až po několika dnech?",
-        "hr": "Zašto se znakovi ponekad pojave tek nakon nekoliko dana?"
+        "hr": "Zašto se znakovi ponekad pojave tek nakon nekoliko dana?",
+        "sv": "Varför kommer symtomen ibland först efter några dagar?"
       },
       "a": {
         "en": "Tummy upset often shows first, but signs of anaemia usually take longer and can appear within one to five days. That is why you should call your vet straight away rather than wait.",
@@ -249,7 +268,8 @@
         "nl": "Maag- en darmklachten zie je vaak als eerste, maar verschijnselen van bloedarmoede laten meestal langer op zich wachten en kunnen binnen één tot vijf dagen optreden. Daarom bel je je dierenarts meteen in plaats van af te wachten.",
         "pl": "Najpierw często widać rozstrój żołądka, ale objawy anemii zwykle pojawiają się później i mogą wystąpić w ciągu od jednego do pięciu dni. Dlatego od razu zadzwoń do weterynarza, zamiast czekać.",
         "cs": "Nejdřív se často projeví podrážděný žaludek, ale příznaky chudokrevnosti obvykle nastupují později a mohou se objevit během jednoho až pěti dnů. Proto byste měli veterináři zavolat hned a nečekat.",
-        "hr": "Probavne smetnje često se pojave prve, ali znakovima anemije obično treba dulje i mogu se pojaviti unutar jednog do pet dana. Zato odmah nazovi veterinara, umjesto da čekaš."
+        "hr": "Probavne smetnje često se pojave prve, ali znakovima anemije obično treba dulje i mogu se pojaviti unutar jednog do pet dana. Zato odmah nazovi veterinara, umjesto da čekaš.",
+        "sv": "Magbesvär syns ofta först, men tecken på blodbrist dröjer oftast längre och kan komma inom en till fem dagar. Därför ska du ringa veterinären direkt i stället för att vänta."
       }
     }
   ],
@@ -401,6 +421,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0f95ad826a3a2c3c84e3f52be4fb8b4f228d5a6860296d0501fa4ee5f74c301d"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7a959cb6d58932456d4a451aa091e0ff66507a4090205e53bfbfd030eec89c97"
     }
   }
 }

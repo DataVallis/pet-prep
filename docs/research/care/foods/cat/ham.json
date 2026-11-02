@@ -12,7 +12,8 @@
     "nl": "Ham",
     "pl": "Szynka",
     "cs": "Šunka",
-    "hr": "Šunka"
+    "hr": "Šunka",
+    "sv": "Skinka"
   },
   "question": {
     "en": "Can cats eat ham?",
@@ -25,7 +26,8 @@
     "nl": "Mogen katten ham eten?",
     "pl": "Czy koty mogą jeść szynkę?",
     "cs": "Mohou kočky jíst šunku?",
-    "hr": "Smiju li mačke jesti šunku?"
+    "hr": "Smiju li mačke jesti šunku?",
+    "sv": "Får katter äta skinka?"
   },
   "url_slug": {
     "en": "ham",
@@ -38,7 +40,8 @@
     "nl": "ham",
     "pl": "szynka",
     "cs": "sunka",
-    "hr": "sunka"
+    "hr": "sunka",
+    "sv": "skinka"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Liever niet. Ham is vet en bevat veel zout, wat de spijsvertering van een kat kan verstoren en het risico op alvleesklierontsteking (pancreatitis) verhoogt. Ham die met ui of knoflook is bereid, is giftig voor katten. Een dierenarts van de University of Georgia raadt aan ham helemaal te vermijden.",
     "pl": "Lepiej nie. Szynka jest tłusta i słona, co może wywołać u kota problemy trawienne i zwiększyć ryzyko zapalenia trzustki. Szynka przyrządzona z cebulą lub czosnkiem jest dla kotów toksyczna. Weterynarz z University of Georgia zaleca całkowicie unikać szynki.",
     "cs": "Raději ne. Šunka je tučná a slaná, což může kočce narušit trávení a zvýšit riziko zánětu slinivky břišní. Šunka připravená s cibulí nebo česnekem je pro kočky toxická. Veterinář z University of Georgia doporučuje se šunce úplně vyhnout.",
-    "hr": "Bolje ne. Šunka je masna i ima mnogo soli, što može poremetiti mačju probavu i povećati rizik od upale gušterače. Šunka pripremljena s lukom ili češnjakom otrovna je za mačke. Jedan veterinar sa Sveučilišta Georgia preporučuje da se šunka potpuno izbjegava."
+    "hr": "Bolje ne. Šunka je masna i ima mnogo soli, što može poremetiti mačju probavu i povećati rizik od upale gušterače. Šunka pripremljena s lukom ili češnjakom otrovna je za mačke. Jedan veterinar sa Sveučilišta Georgia preporučuje da se šunka potpuno izbjegava.",
+    "sv": "Helst inte. Skinka är fet och salt, vilket kan störa kattens matsmältning och öka risken för bukspottkörtelinflammation (pankreatit). Skinka som tillagats med lök eller vitlök är giftig för katter. En veterinär vid University of Georgia rekommenderar att helt undvika skinka."
   },
   "why": {
     "en": "Ham is a fatty meat that is also high in sodium, and both can cause health problems. Too much fat affects the digestive tract, especially the pancreas. Seasonings such as onion or garlic make it toxic. Small amounts may not be extremely harmful, but it is not a good treat. Salty food can also leave cats more dehydrated, and cats with kidney, heart or urinary problems should especially avoid ham.",
@@ -65,7 +69,8 @@
     "nl": "Ham is vet vlees dat ook veel natrium bevat, en allebei kunnen ze gezondheidsproblemen geven. Te veel vet tast het spijsverteringskanaal aan, vooral de alvleesklier. Kruiden zoals ui of knoflook maken het giftig. Kleine hoeveelheden zijn misschien niet heel schadelijk, maar het is geen goed snoepje. Door zout eten kunnen katten ook sneller uitdrogen, en katten met nier-, hart- of urinewegproblemen moeten ham zeker vermijden.",
     "pl": "Szynka to tłuste mięso, które zawiera też dużo sodu, a jedno i drugie może powodować problemy zdrowotne. Zbyt dużo tłuszczu szkodzi przewodowi pokarmowemu, zwłaszcza trzustce. Przyprawy takie jak cebula czy czosnek sprawiają, że szynka staje się toksyczna. Małe ilości mogą nie być bardzo szkodliwe, ale to nie jest dobry smakołyk. Słone jedzenie może też pogłębiać odwodnienie kota, a koty z problemami nerek, serca lub dróg moczowych szczególnie powinny unikać szynki.",
     "cs": "Šunka je tučné maso s vysokým obsahem sodíku a obojí může způsobit zdravotní potíže. Příliš mnoho tuku ovlivňuje trávicí trakt, zejména slinivku břišní. Koření, jako je cibule nebo česnek, ji činí toxickou. Malé množství nemusí být mimořádně škodlivé, dobrý pamlsek to ale není. Slané jídlo může kočky také víc dehydratovat a kočky s potížemi s ledvinami, srdcem nebo močovými cestami by se šunce měly vyhýbat obzvlášť.",
-    "hr": "Šunka je masno meso koje ima i mnogo natrija, a oboje može izazvati zdravstvene probleme. Previše masti utječe na probavni sustav, osobito na gušteraču. Začini poput luka ili češnjaka čine je otrovnom. Male količine možda nisu iznimno štetne, ali šunka nije dobra poslastica. Slana hrana može mačke i dodatno dehidrirati, a mačke s problemima s bubrezima, srcem ili mokraćnim sustavom trebaju šunku osobito izbjegavati."
+    "hr": "Šunka je masno meso koje ima i mnogo natrija, a oboje može izazvati zdravstvene probleme. Previše masti utječe na probavni sustav, osobito na gušteraču. Začini poput luka ili češnjaka čine je otrovnom. Male količine možda nisu iznimno štetne, ali šunka nije dobra poslastica. Slana hrana može mačke i dodatno dehidrirati, a mačke s problemima s bubrezima, srcem ili mokraćnim sustavom trebaju šunku osobito izbjegavati.",
+    "sv": "Skinka är ett fett kött som också innehåller mycket natrium, och båda kan ge hälsoproblem. För mycket fett påverkar matsmältningskanalen, särskilt bukspottkörteln. Kryddor som lök eller vitlök gör den giftig. Små mängder är kanske inte extremt skadliga, men det är ingen bra godbit. Salt mat kan också göra katter mer uttorkade, och katter med njur-, hjärt- eller urinvägsproblem bör särskilt undvika skinka."
   },
   "signs": {
     "en": [
@@ -122,6 +127,11 @@
       "Povraćanje",
       "Proljev",
       "Probavne smetnje"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Diarré",
+      "Orolig mage"
     ]
   },
   "what_to_do": {
@@ -135,7 +145,8 @@
     "nl": "Heeft je kat ham gegeten die met ui of knoflook is gekruid, neem dan meteen contact op met je dierenarts. Heeft ze veel gewone ham gegeten, of braakt ze of heeft ze diarree, bel dan je dierenarts voor advies.",
     "pl": "Jeśli twój kot zjadł szynkę przyprawioną cebulą lub czosnkiem, od razu skontaktuj się z weterynarzem. Jeśli zjadł dużo zwykłej szynki albo wymiotuje lub ma biegunkę, zadzwoń do weterynarza po poradę.",
     "cs": "Pokud kočka snědla šunku ochucenou cibulí nebo česnekem, okamžitě se obraťte na veterináře. Pokud snědla hodně obyčejné šunky nebo zvrací či má průjem, zavolejte veterináři a poraďte se.",
-    "hr": "Ako je tvoja mačka pojela šunku začinjenu lukom ili češnjakom, odmah se obrati veterinaru. Ako je pojela mnogo obične šunke ili povraća ili ima proljev, nazovi veterinara za savjet."
+    "hr": "Ako je tvoja mačka pojela šunku začinjenu lukom ili češnjakom, odmah se obrati veterinaru. Ako je pojela mnogo obične šunke ili povraća ili ima proljev, nazovi veterinara za savjet.",
+    "sv": "Om katten har ätit skinka kryddad med lök eller vitlök, kontakta veterinären direkt. Om den har ätit mycket naturell skinka, eller kräks eller har diarré, ring veterinären för råd."
   },
   "serving": null,
   "child": {
@@ -149,7 +160,8 @@
     "nl": "Ham is te zout en te vet voor katten. De eigen kattensnoepjes van je poes zijn een veel betere verrassing.",
     "pl": "Szynka jest za słona i za tłusta dla kotów. Kocie smakołyki to dla kotka lepsza niespodzianka.",
     "cs": "Šunka je pro kočky moc slaná a tučná. Kočičí pamlsky jsou pro kočičku lepší překvapení.",
-    "hr": "Šunka je preslana i premasna za mace. Macine poslastice za mačke bolje su iznenađenje."
+    "hr": "Šunka je preslana i premasna za mace. Macine poslastice za mačke bolje su iznenađenje.",
+    "sv": "Skinka är för salt och fet för katter. Kattgodis är en bättre överraskning för katten."
   },
   "faq": [
     {
@@ -164,7 +176,8 @@
         "nl": "Is een klein hapje ham gevaarlijk?",
         "pl": "Czy malutki kęs szynki jest niebezpieczny?",
         "cs": "Je malý kousek šunky nebezpečný?",
-        "hr": "Je li mali zalogaj šunke opasan?"
+        "hr": "Je li mali zalogaj šunke opasan?",
+        "sv": "Är en pytteliten bit skinka farlig?"
       },
       "a": {
         "en": "Small amounts may not be extremely harmful, but ham seasoned with onion or garlic is toxic to cats, and a University of Georgia vet still recommends avoiding ham altogether.",
@@ -177,7 +190,8 @@
         "nl": "Kleine hoeveelheden zijn misschien niet heel schadelijk, maar ham die met ui of knoflook is gekruid, is giftig voor katten, en een dierenarts van de University of Georgia raadt toch aan ham helemaal te vermijden.",
         "pl": "Małe ilości mogą nie być bardzo szkodliwe, ale szynka przyprawiona cebulą lub czosnkiem jest dla kotów toksyczna, a weterynarz z University of Georgia i tak zaleca całkowicie unikać szynki.",
         "cs": "Malé množství nemusí být mimořádně škodlivé, ale šunka ochucená cibulí nebo česnekem je pro kočky toxická a veterinář z University of Georgia i tak doporučuje se šunce úplně vyhnout.",
-        "hr": "Male količine možda nisu iznimno štetne, ali šunka začinjena lukom ili češnjakom otrovna je za mačke, a jedan veterinar sa Sveučilišta Georgia ipak preporučuje da se šunka potpuno izbjegava."
+        "hr": "Male količine možda nisu iznimno štetne, ali šunka začinjena lukom ili češnjakom otrovna je za mačke, a jedan veterinar sa Sveučilišta Georgia ipak preporučuje da se šunka potpuno izbjegava.",
+        "sv": "Små mängder är kanske inte extremt skadliga, men skinka kryddad med lök eller vitlök är giftig för katter, och en veterinär vid University of Georgia rekommenderar ändå att helt undvika skinka."
       }
     }
   ],
@@ -286,6 +300,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "672436c4b77f9121c5ab9af735b60c99f12db335c335cd910547d3ed3717ac3c"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "eef33ec4e7be202c80a7ee48efcb75b95f275d1f2e332b5705d2d3e31d11faf7"
     }
   }
 }

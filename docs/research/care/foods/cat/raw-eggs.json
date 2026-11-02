@@ -12,7 +12,8 @@
     "nl": "Rauwe eieren",
     "pl": "Surowe jajka",
     "cs": "Syrová vejce",
-    "hr": "Sirova jaja"
+    "hr": "Sirova jaja",
+    "sv": "Råa ägg"
   },
   "question": {
     "en": "Can cats eat raw eggs?",
@@ -25,7 +26,8 @@
     "nl": "Mogen katten rauwe eieren eten?",
     "pl": "Czy koty mogą jeść surowe jajka?",
     "cs": "Mohou kočky jíst syrová vejce?",
-    "hr": "Smiju li mačke jesti sirova jaja?"
+    "hr": "Smiju li mačke jesti sirova jaja?",
+    "sv": "Får katter äta råa ägg?"
   },
   "url_slug": {
     "en": "raw-eggs",
@@ -38,7 +40,8 @@
     "nl": "rauwe-eieren",
     "pl": "surowe-jajka",
     "cs": "syrova-vejce",
-    "hr": "sirova-jaja"
+    "hr": "sirova-jaja",
+    "sv": "raa-agg"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee, geef katten geen rauwe eieren. Rauwe eieren kunnen schadelijke bacteriën zoals Salmonella bevatten, waar zowel katten als mensen ziek van kunnen worden, en rauw eiwit bevat een eiwitstof die een vitamine kan blokkeren.",
     "pl": "Nie, nie dawaj kotom surowych jajek. Surowe jajka mogą przenosić szkodliwe bakterie, takie jak Salmonella, które mogą wywołać chorobę zarówno u kotów, jak i u ludzi, a surowe białko jaja zawiera proteinę, która może blokować jedną z witamin.",
     "cs": "Ne, syrová vejce kočkám nedávejte. Mohou obsahovat škodlivé bakterie, například salmonely, které mohou způsobit onemocnění koček i lidí, a syrový bílek obsahuje bílkovinu, která může blokovat jeden vitamin.",
-    "hr": "Ne, ne daj mački sirova jaja. Sirova jaja mogu sadržavati štetne bakterije poput salmonele (Salmonella), od kojih se mogu razboljeti i mačke i ljudi, a sirovi bjelanjak sadrži bjelančevinu koja može blokirati jedan vitamin."
+    "hr": "Ne, ne daj mački sirova jaja. Sirova jaja mogu sadržavati štetne bakterije poput salmonele (Salmonella), od kojih se mogu razboljeti i mačke i ljudi, a sirovi bjelanjak sadrži bjelančevinu koja može blokirati jedan vitamin.",
+    "sv": "Nej, ge inte katter råa ägg. Råa ägg kan bära på skadliga bakterier som salmonella, som kan göra både katter och människor sjuka, och rå äggvita innehåller ett protein som kan blockera ett vitamin."
   },
   "why": {
     "en": "Raw eggs may contain harmful bacteria and parasites and could mean food poisoning for cats and humans alike. Raw egg white also contains avidin, which binds the vitamin biotin and stops it being absorbed. Cooking food thoroughly protects pets from salmonella.",
@@ -65,7 +69,8 @@
     "nl": "Rauwe eieren kunnen schadelijke bacteriën en parasieten bevatten en kunnen bij katten én mensen voedselvergiftiging veroorzaken. Rauw eiwit bevat ook avidine, dat de vitamine biotine bindt, waardoor die niet wordt opgenomen. Voedsel goed doorgaren beschermt huisdieren tegen Salmonella.",
     "pl": "Surowe jajka mogą zawierać szkodliwe bakterie i pasożyty i grożą zatruciem pokarmowym zarówno kotom, jak i ludziom. Surowe białko jaja zawiera też awidynę, która wiąże witaminę biotynę i uniemożliwia jej wchłanianie. Dokładna obróbka termiczna jedzenia chroni zwierzęta przed salmonellą.",
     "cs": "Syrová vejce mohou obsahovat škodlivé bakterie a parazity a mohou způsobit otravu jídlem u koček i lidí. Syrový bílek navíc obsahuje avidin, který váže vitamin biotin a brání jeho vstřebávání. Důkladná tepelná úprava potravy chrání zvířata před salmonelou.",
-    "hr": "Sirova jaja mogu sadržavati štetne bakterije i parazite i mogu izazvati trovanje hranom i kod mačaka i kod ljudi. Sirovi bjelanjak sadrži i avidin, koji veže vitamin biotin i sprječava njegovu apsorpciju. Temeljita termička obrada hrane štiti ljubimce od salmonele."
+    "hr": "Sirova jaja mogu sadržavati štetne bakterije i parazite i mogu izazvati trovanje hranom i kod mačaka i kod ljudi. Sirovi bjelanjak sadrži i avidin, koji veže vitamin biotin i sprječava njegovu apsorpciju. Temeljita termička obrada hrane štiti ljubimce od salmonele.",
+    "sv": "Råa ägg kan innehålla skadliga bakterier och parasiter och kan ge matförgiftning hos både katter och människor. Rå äggvita innehåller också avidin, som binder vitaminet biotin och hindrar att det tas upp. Att tillaga maten ordentligt skyddar husdjur mot salmonella."
   },
   "signs": {
     "en": [
@@ -144,6 +149,13 @@
       "Vrućica",
       "Odbijanje hrane",
       "Malaksalost"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Diarré, ibland med blod",
+      "Feber",
+      "Vill inte äta",
+      "Slöhet"
     ]
   },
   "what_to_do": {
@@ -157,7 +169,8 @@
     "nl": "Heeft je kat een beetje rauw ei gelikt? Let op braken, diarree, koorts of niet eten, en bel je dierenarts als je daar iets van ziet. Was je handen en alle oppervlakken waar het ei mee in aanraking is gekomen.",
     "pl": "Jeśli twój kot polizał odrobinę surowego jajka, obserwuj, czy nie pojawią się wymioty, biegunka, gorączka lub brak apetytu, a jeśli tak, zadzwoń do weterynarza. Umyj ręce i wszystkie powierzchnie, których dotknęło jajko.",
     "cs": "Pokud vaše kočka olízla trochu syrového vejce, sledujte, zda se neobjeví zvracení, průjem, horečka nebo nechuť k jídlu, a pokud ano, zavolejte veterináři. Umyjte si ruce i všechny povrchy, kterých se vejce dotklo.",
-    "hr": "Ako je mačka polizala malo sirovog jajeta, prati pojavu povraćanja, proljeva, vrućice ili odbijanja hrane i nazovi veterinara ako se išta od toga pojavi. Operi ruke i sve površine koje su došle u dodir s jajetom."
+    "hr": "Ako je mačka polizala malo sirovog jajeta, prati pojavu povraćanja, proljeva, vrućice ili odbijanja hrane i nazovi veterinara ako se išta od toga pojavi. Operi ruke i sve površine koje su došle u dodir s jajetom.",
+    "sv": "Om katten har slickat i sig lite rått ägg, håll utkik efter kräkningar, diarré, feber eller att den inte äter, och ring veterinären om något av det visar sig. Tvätta händerna och alla ytor som ägget har kommit i kontakt med."
   },
   "serving": null,
   "child": {
@@ -171,7 +184,8 @@
     "nl": "Op rauwe eieren kunnen bacteriën zitten. Alleen volwassenen horen ze aan te raken, en katten mogen ze niet eten.",
     "pl": "Na surowych jajkach mogą być zarazki. Zajmować się nimi powinni tylko dorośli, a koty nie powinny ich jeść.",
     "cs": "Na syrových vejcích můžou být bacily. Brát je do ruky mají jen dospělí a kočky je jíst nemají.",
-    "hr": "Na sirovim jajima mogu biti klice. Smiju ih dirati samo odrasli, a mace ih ne bi smjele jesti."
+    "hr": "Na sirovim jajima mogu biti klice. Smiju ih dirati samo odrasli, a mace ih ne bi smjele jesti.",
+    "sv": "Råa ägg kan ha bakterier på sig. Bara vuxna ska hantera dem, och katter ska inte äta dem."
   },
   "faq": [
     {
@@ -186,7 +200,8 @@
         "nl": "Zijn gekookte eieren dan wel oké?",
         "pl": "Czy w takim razie gotowane jajka są w porządku?",
         "cs": "Jsou místo toho v pořádku tepelně upravená vejce?",
-        "hr": "Jesu li onda kuhana jaja u redu?"
+        "hr": "Jesu li onda kuhana jaja u redu?",
+        "sv": "Går tillagade ägg bra i stället?"
       },
       "a": {
         "en": "Cooked egg is a different matter: PDSA says eggs can suit pets, but only in moderation. Cook it fully and serve it plain.",
@@ -199,7 +214,8 @@
         "nl": "Gekookt ei is iets anders: volgens PDSA kunnen eieren geschikt zijn voor huisdieren, maar alleen met mate. Kook het goed gaar en geef het zonder toevoegingen.",
         "pl": "Gotowane jajko to inna sprawa: według PDSA jajka mogą być odpowiednie dla zwierząt, ale tylko z umiarem. Ugotuj je dokładnie i podawaj bez dodatków.",
         "cs": "Tepelně upravené vejce je jiná věc: podle PDSA mohou být vejce pro zvířata vhodná, ale jen s mírou. Vejce důkladně tepelně upravte a podávejte bez ochucení.",
-        "hr": "Termički obrađeno jaje nešto je drugo: PDSA navodi da jaja mogu biti prikladna za ljubimce, ali samo umjereno. Potpuno ga termički obradi i posluži bez dodataka."
+        "hr": "Termički obrađeno jaje nešto je drugo: PDSA navodi da jaja mogu biti prikladna za ljubimce, ali samo umjereno. Potpuno ga termički obradi i posluži bez dodataka.",
+        "sv": "Tillagade ägg är en annan sak: enligt PDSA kan ägg passa husdjur, men bara med måtta. Tillaga ägget helt och servera det naturellt."
       }
     }
   ],
@@ -314,6 +330,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "97ff8ff25c8302fdf432689185d4d783d3bc99bf782e4d150e36f8544b141f83"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "28617b384cc56cfa6ed5eb5272090b77cad8e2afeafe48ba9189452b50e03af3"
     }
   }
 }

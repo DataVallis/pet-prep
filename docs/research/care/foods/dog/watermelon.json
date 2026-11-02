@@ -5,51 +5,59 @@
     "en": "Watermelon",
     "sl": "Lubenica",
     "cs": "Vodní meloun",
-    "hr": "Lubenica"
+    "hr": "Lubenica",
+    "sv": "Vattenmelon"
   },
   "question": {
     "en": "Can dogs eat watermelon?",
     "sl": "Ali lahko psi jedo lubenico?",
     "cs": "Mohou psi jíst vodní meloun?",
-    "hr": "Smiju li psi jesti lubenicu?"
+    "hr": "Smiju li psi jesti lubenicu?",
+    "sv": "Får hundar äta vattenmelon?"
   },
   "url_slug": {
     "en": "watermelon",
     "sl": "lubenica",
     "cs": "vodni-meloun",
-    "hr": "lubenica"
+    "hr": "lubenica",
+    "sv": "vattenmelon"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, if you prepare it correctly. Watermelon is a low-calorie fruit with a high water content, but remove all seeds and the rind first, because both can cause digestive upset or an intestinal blockage.",
     "sl": "Da, če jo pravilno pripravite. Lubenica je nizkokalorično sadje z veliko vode, a najprej odstranite vse pečke in lupino, ker lahko oboje povzroči prebavne težave ali zaporo črevesja.",
     "cs": "Ano, pokud ho správně připravíte. Vodní meloun je nízkokalorické ovoce s vysokým obsahem vody, nejdřív ale odstraňte všechna semínka a kůru, protože obojí může způsobit zažívací potíže nebo ucpání střev.",
-    "hr": "Da, ako je pravilno pripremiš. Lubenica je niskokalorično voće s puno vode, ali prije toga ukloni sve sjemenke i koru jer i jedno i drugo može izazvati probavne tegobe ili začepljenje crijeva."
+    "hr": "Da, ako je pravilno pripremiš. Lubenica je niskokalorično voće s puno vode, ali prije toga ukloni sve sjemenke i koru jer i jedno i drugo može izazvati probavne tegobe ili začepljenje crijeva.",
+    "sv": "Ja, om du förbereder den rätt. Vattenmelon är en kalorisnål frukt med hög vattenhalt, men ta först bort alla kärnor och skalet, eftersom båda kan ge matsmältningsbesvär eller tarmstopp."
   },
   "why": {
     "en": "Seeds can cause an intestinal blockage, especially if a dog eats many, and can be a choking hazard for small dogs. The rind may cause stomach upset, vomiting, diarrhoea or intestinal obstruction if eaten in large pieces. Too much watermelon may cause stomach discomfort or diarrhoea because of its natural sugar and fibre.",
     "sl": "Pečke lahko povzročijo zaporo črevesja, zlasti če jih pes poje veliko, majhnim psom pa se lahko zataknejo v grlu. Lupina lahko povzroči prebavne težave, bruhanje, drisko ali zaporo črevesja, če jo pes poje v velikih kosih. Preveč lubenice lahko zaradi naravnega sladkorja in vlaknin povzroči neugodje v trebuhu ali drisko.",
     "cs": "Semínka mohou způsobit ucpání střev, zejména když jich pes sní hodně, a malí psi se jimi mohou udusit. Kůra může při snědení ve velkých kusech způsobit žaludeční potíže, zvracení, průjem nebo ucpání střev. Příliš mnoho melounu může kvůli přirozenému cukru a vláknině způsobit žaludeční potíže nebo průjem.",
-    "hr": "Sjemenke mogu izazvati začepljenje crijeva, osobito ako ih pas pojede puno, a kod malih pasa mogu izazvati gušenje. Kora može izazvati probavne tegobe, povraćanje, proljev ili začepljenje crijeva ako pas pojede velike komade. Previše lubenice može izazvati nelagodu u trbuhu ili proljev zbog prirodnog šećera i vlakana."
+    "hr": "Sjemenke mogu izazvati začepljenje crijeva, osobito ako ih pas pojede puno, a kod malih pasa mogu izazvati gušenje. Kora može izazvati probavne tegobe, povraćanje, proljev ili začepljenje crijeva ako pas pojede velike komade. Previše lubenice može izazvati nelagodu u trbuhu ili proljev zbog prirodnog šećera i vlakana.",
+    "sv": "Kärnorna kan orsaka tarmstopp, särskilt om hunden äter många, och kan orsaka kvävning hos små hundar. Skalet kan ge magbesvär, kräkningar, diarré eller tarmstopp om hunden äter stora bitar. För mycket vattenmelon kan ge obehag i magen eller diarré på grund av det naturliga sockret och fibrerna."
   },
   "signs": null,
   "what_to_do": {
     "en": "The first time, give a small amount and watch for digestive upset. Contact your vet if your dog shows symptoms after eating watermelon.",
     "sl": "Prvič dajte majhno količino in opazujte, ali se pojavijo prebavne težave. Če ima pes po lubenici znake težav, se obrnite na veterinarja.",
     "cs": "Poprvé dejte malé množství a sledujte, zda se neobjeví zažívací potíže. Pokud má váš pes po snědení melounu nějaké příznaky, obraťte se na veterináře.",
-    "hr": "Prvi put daj malu količinu i prati pojavljuju li se probavne tegobe. Obrati se veterinaru ako tvoj pas nakon lubenice pokazuje simptome."
+    "hr": "Prvi put daj malu količinu i prati pojavljuju li se probavne tegobe. Obrati se veterinaru ako tvoj pas nakon lubenice pokazuje simptome.",
+    "sv": "Ge en liten mängd första gången och håll utkik efter matsmältningsbesvär. Kontakta veterinären om hunden får symtom efter att ha ätit vattenmelon."
   },
   "serving": {
     "en": "Bite-sized pieces with all seeds and the rind removed; seedless pieces can also be frozen as a cooling treat.",
     "sl": "Majhni koščki brez vseh pečk in lupine; koščke brez pečk lahko tudi zamrznete kot osvežilen priboljšek.",
     "cs": "Kousky na jedno kousnutí, bez všech semínek a kůry; kousky bez semínek můžete také zamrazit jako osvěžující pamlsek.",
-    "hr": "Komadići veličine zalogaja, bez ijedne sjemenke i bez kore; komadiće bez sjemenki možeš i zamrznuti kao osvježavajuću poslasticu."
+    "hr": "Komadići veličine zalogaja, bez ijedne sjemenke i bez kore; komadiće bez sjemenki možeš i zamrznuti kao osvježavajuću poslasticu.",
+    "sv": "Lagom stora bitar utan kärnor och skal; kärnfria bitar kan också frysas som en svalkande godbit."
   },
   "child": {
     "en": "On a hot day, dogs can enjoy small pieces of watermelon! A grown-up removes the seeds and the green skin.",
     "sl": "Na vroč dan lahko psi uživajo v majhnih koščkih lubenice! Odrasel odstrani pečke in zeleno lupino.",
     "cs": "Za horkého dne si psi můžou pochutnat na kouscích melounu! Dospělý odstraní semínka a zelenou slupku.",
-    "hr": "Za vrućeg dana psi mogu uživati u malim komadićima lubenice! Odrasla osoba ukloni sjemenke i zelenu koru."
+    "hr": "Za vrućeg dana psi mogu uživati u malim komadićima lubenice! Odrasla osoba ukloni sjemenke i zelenu koru.",
+    "sv": "En varm dag kan hundar njuta av små bitar vattenmelon! En vuxen tar bort kärnorna och det gröna skalet."
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "Can dogs eat watermelon rind?",
         "sl": "Ali lahko psi jedo lubenično lupino?",
         "cs": "Mohou psi jíst kůru vodního melounu?",
-        "hr": "Smiju li psi jesti koru lubenice?"
+        "hr": "Smiju li psi jesti koru lubenice?",
+        "sv": "Får hundar äta vattenmelonskal?"
       },
       "a": {
         "en": "No, the rind is not recommended. In large pieces it may cause stomach upset, vomiting, diarrhoea or intestinal obstruction.",
         "sl": "Ne, lupina ni priporočljiva. V velikih kosih lahko povzroči prebavne težave, bruhanje, drisko ali zaporo črevesja.",
         "cs": "Ne, kůru nedoporučujeme. Ve velkých kusech může způsobit žaludeční potíže, zvracení, průjem nebo ucpání střev.",
-        "hr": "Ne, kora se ne preporučuje. U velikim komadima može izazvati probavne tegobe, povraćanje, proljev ili začepljenje crijeva."
+        "hr": "Ne, kora se ne preporučuje. U velikim komadima može izazvati probavne tegobe, povraćanje, proljev ili začepljenje crijeva.",
+        "sv": "Nej, skalet rekommenderas inte. I stora bitar kan det ge magbesvär, kräkningar, diarré eller tarmstopp."
       }
     }
   ],
@@ -151,6 +161,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "765ed4ee5824d85beecfae9fdaa24d0f3b15f4de758b99c3f4f724693862f3ff"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "db3a81de374ee722b60ac8f0fd88212071137eb48e420621e19f95ffc0e0ceea"
     }
   }
 }

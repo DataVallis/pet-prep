@@ -12,7 +12,8 @@
     "nl": "Sardines",
     "pl": "Sardynki",
     "cs": "Sardinky",
-    "hr": "Srdele"
+    "hr": "Srdele",
+    "sv": "Sardiner"
   },
   "question": {
     "en": "Can dogs eat sardines?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden sardines eten?",
     "pl": "Czy psy mogą jeść sardynki?",
     "cs": "Mohou psi jíst sardinky?",
-    "hr": "Smiju li psi jesti srdele?"
+    "hr": "Smiju li psi jesti srdele?",
+    "sv": "Får hundar äta sardiner?"
   },
   "url_slug": {
     "en": "sardines",
@@ -38,7 +40,8 @@
     "nl": "sardines",
     "pl": "sardynki",
     "cs": "sardinky",
-    "hr": "srdele"
+    "hr": "srdele",
+    "sv": "sardiner"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Ja, met mate. Sardines uit blik in water, ongezouten en ongekruid, zijn een geschikt vissnoepje, en de kleine graatjes zijn na het inblikken zacht en eetbaar. Verse sardines moeten helemaal gaar zijn. Vermijd zoute, gekruide of rauwe vis.",
     "pl": "Tak, z umiarem. Sardynki z puszki w wodzie, niesolone i nieprzyprawione, to odpowiedni rybny smakołyk, a ich drobne ości po konserwowaniu są miękkie i jadalne. Świeże sardynki muszą być dobrze ugotowane. Unikaj ryb słonych, przyprawionych lub surowych.",
     "cs": "Ano, s mírou. Sardinky z konzervy ve vodě, nesolené a nekořeněné, jsou vhodným rybím pamlskem a jejich drobné kosti jsou po zavaření měkké a jedlé. Čerstvé sardinky musí být důkladně tepelně upravené. Vyhněte se slaným, kořeněným nebo syrovým rybám.",
-    "hr": "Da, umjereno. Srdele iz konzerve u vodi, neslane i bez začina, prikladna su riblja poslastica, a njihove sitne kosti nakon konzerviranja postanu mekane i jestive. Svježe srdele moraju biti potpuno termički obrađene. Izbjegavaj slanu, začinjenu ili sirovu ribu."
+    "hr": "Da, umjereno. Srdele iz konzerve u vodi, neslane i bez začina, prikladna su riblja poslastica, a njihove sitne kosti nakon konzerviranja postanu mekane i jestive. Svježe srdele moraju biti potpuno termički obrađene. Izbjegavaj slanu, začinjenu ili sirovu ribu.",
+    "sv": "Ja, med måtta. Sardiner på burk i vatten, osaltade och okryddade, är en passande fiskgodbit, och de små benen är mjuka och ätbara efter konserveringen. Färska sardiner måste vara helt tillagade. Undvik salt, kryddad eller rå fisk."
   },
   "why": {
     "en": "Plain, fully cooked fish provides protein and fatty acids. Cooking fully reduces the risk from parasites and bacteria. Canned sardines are the exception to the bones rule because their bones soften during canning; for other fish, bones must be removed. Canned fish should be unsalted and unseasoned.",
@@ -65,7 +69,8 @@
     "nl": "Gewone, helemaal gare vis levert eiwit en vetzuren. Goed garen verkleint het risico op parasieten en bacteriën. Sardines uit blik zijn de uitzondering op de regel over graten, omdat de graatjes bij het inblikken zacht worden; bij andere vis moeten de graten eruit. Vis uit blik moet ongezouten en ongekruid zijn.",
     "pl": "Zwykła, dobrze ugotowana ryba dostarcza białka i kwasów tłuszczowych. Dokładne ugotowanie zmniejsza ryzyko związane z pasożytami i bakteriami. Sardynki z puszki to wyjątek od zasady dotyczącej ości, bo ości miękną podczas konserwowania; z innych ryb ości trzeba usunąć. Ryby z puszki powinny być niesolone i nieprzyprawione.",
     "cs": "Obyčejná, důkladně tepelně upravená ryba dodává bílkoviny a mastné kyseliny. Důkladná tepelná úprava snižuje riziko parazitů a bakterií. Sardinky z konzervy jsou výjimkou z pravidla o kostech, protože jejich kosti při zavařování změknou; u ostatních ryb je třeba kosti odstranit. Rybí konzervy by měly být nesolené a nekořeněné.",
-    "hr": "Obična, potpuno termički obrađena riba daje bjelančevine i masne kiseline. Potpuna termička obrada smanjuje rizik od parazita i bakterija. Srdele iz konzerve iznimka su od pravila o kostima jer im kosti tijekom konzerviranja omekšaju; drugoj ribi kosti treba ukloniti. Riba iz konzerve treba biti neslana i bez začina."
+    "hr": "Obična, potpuno termički obrađena riba daje bjelančevine i masne kiseline. Potpuna termička obrada smanjuje rizik od parazita i bakterija. Srdele iz konzerve iznimka su od pravila o kostima jer im kosti tijekom konzerviranja omekšaju; drugoj ribi kosti treba ukloniti. Riba iz konzerve treba biti neslana i bez začina.",
+    "sv": "Helt tillagad fisk utan kryddor ger protein och fettsyror. Att tillaga fisken helt minskar risken för parasiter och bakterier. Sardiner på burk är undantaget från regeln om ben, eftersom benen mjuknar vid konserveringen; i annan fisk måste benen tas bort. Fisk på burk ska vara osaltad och okryddad."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "nl": "Heeft je hond zoute of gekruide sardines of rauwe vis gegeten? Let dan op braken, diarree of weinig energie en bel je dierenarts als die ernstig zijn of niet ophouden.",
     "pl": "Jeśli twój pies zjadł słone lub przyprawione sardynki albo surową rybę, obserwuj, czy nie pojawiają się wymioty, biegunka lub osłabienie, i zadzwoń do weterynarza, jeśli są silne albo nie ustępują.",
     "cs": "Pokud váš pes snědl slané nebo kořeněné sardinky nebo syrovou rybu, sledujte, zda nezvrací, nemá průjem nebo není malátný, a pokud jsou potíže silné nebo neustávají, zavolejte veterináři.",
-    "hr": "Ako je tvoj pas pojeo slane ili začinjene srdele ili sirovu ribu, prati pojavljuju li se povraćanje, proljev ili manjak energije i nazovi veterinara ako su jaki ili ne prestaju."
+    "hr": "Ako je tvoj pas pojeo slane ili začinjene srdele ili sirovu ribu, prati pojavljuju li se povraćanje, proljev ili manjak energije i nazovi veterinara ako su jaki ili ne prestaju.",
+    "sv": "Om hunden ätit salta eller kryddade sardiner eller rå fisk, håll utkik efter kräkningar, diarré eller orkeslöshet och ring veterinären om symtomen är svåra eller inte går över."
   },
   "serving": {
     "en": "Canned in water, unsalted and unseasoned; or fresh sardines fully cooked (steamed, baked or poached) and plain; in moderation.",
@@ -92,7 +98,8 @@
     "nl": "Uit blik in water, ongezouten en ongekruid; of verse sardines, helemaal gaar (gestoomd, uit de oven of gepocheerd) en puur; met mate.",
     "pl": "Z puszki w wodzie, niesolone i nieprzyprawione; albo świeże sardynki dobrze ugotowane (na parze, pieczone lub gotowane w wodzie) i zwykłe; z umiarem.",
     "cs": "Z konzervy ve vodě, nesolené a nekořeněné; nebo čerstvé sardinky důkladně tepelně upravené (v páře, pečené nebo pošírované) a bez přísad; s mírou.",
-    "hr": "Iz konzerve u vodi, neslane i bez začina; ili svježe srdele, potpuno termički obrađene (kuhane na pari, pečene u pećnici ili poširane) i bez dodataka; umjereno."
+    "hr": "Iz konzerve u vodi, neslane i bez začina; ili svježe srdele, potpuno termički obrađene (kuhane na pari, pečene u pećnici ili poširane) i bez dodataka; umjereno.",
+    "sv": "På burk i vatten, osaltade och okryddade; eller färska sardiner, helt tillagade (ångkokta, ugnsbakade eller pocherade) och utan kryddor; med måtta."
   },
   "child": {
     "en": "Sardines in water can be a fishy treat for a dog, now and then. Salty fish is not for dogs.",
@@ -105,7 +112,8 @@
     "nl": "Sardines in water kunnen af en toe een lekker vissnoepje zijn voor een hond. Zoute vis is niet voor honden.",
     "pl": "Sardynki w wodzie mogą być od czasu do czasu rybnym smakołykiem dla psa. Słona ryba nie jest dla psów.",
     "cs": "Sardinky ve vodě můžou být pro psa občas rybí pamlsek. Slaná ryba pro psy není.",
-    "hr": "Srdele u vodi mogu biti riblja poslastica za psa, s vremena na vrijeme. Slana riba nije za pse."
+    "hr": "Srdele u vodi mogu biti riblja poslastica za psa, s vremena na vrijeme. Slana riba nije za pse.",
+    "sv": "Sardiner i vatten kan vara en fiskig godbit för en hund ibland. Salt fisk är inte för hundar."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "nl": "Moet ik de graatjes uit sardines uit blik halen?",
         "pl": "Czy muszę usuwać ości z sardynek z puszki?",
         "cs": "Musím ze sardinek z konzervy vybírat kosti?",
-        "hr": "Trebam li srdelama iz konzerve ukloniti kosti?"
+        "hr": "Trebam li srdelama iz konzerve ukloniti kosti?",
+        "sv": "Måste jag ta bort benen ur sardiner på burk?"
       },
       "a": {
         "en": "No. The tiny bones are soft and fully edible after canning, so sardines canned in water can be fed without deboning.",
@@ -133,7 +142,8 @@
         "nl": "Nee. De kleine graatjes zijn na het inblikken zacht en helemaal eetbaar, dus sardines in water uit blik kun je zonder ontgraten geven.",
         "pl": "Nie. Drobne ości po konserwowaniu są miękkie i w pełni jadalne, więc sardynki z puszki w wodzie możesz podawać bez usuwania ości.",
         "cs": "Ne. Drobné kosti jsou po zavaření měkké a zcela jedlé, takže sardinky ve vodě můžete psovi dát i s kostmi.",
-        "hr": "Ne trebaš. Sitne kosti nakon konzerviranja postanu mekane i potpuno jestive, pa psu možeš dati srdele iz konzerve u vodi bez uklanjanja kostiju."
+        "hr": "Ne trebaš. Sitne kosti nakon konzerviranja postanu mekane i potpuno jestive, pa psu možeš dati srdele iz konzerve u vodi bez uklanjanja kostiju.",
+        "sv": "Nej. De små benen är mjuka och helt ätbara efter konserveringen, så sardiner i vatten kan ges utan att benen tas bort."
       }
     }
   ],
@@ -241,6 +251,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c024da5ddca668868b174c912851238647d1756965574d56fbd2cced18f1131a"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0ea97eedf7692425e91366d6469188a00b87d4e404a1c828c7f096e86beb1030"
     }
   }
 }

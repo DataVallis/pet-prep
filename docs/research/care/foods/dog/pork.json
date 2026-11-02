@@ -12,7 +12,8 @@
     "nl": "Varkensvlees",
     "pl": "Wieprzowina",
     "cs": "Vepřové maso",
-    "hr": "Svinjetina"
+    "hr": "Svinjetina",
+    "sv": "Fläskkött"
   },
   "question": {
     "en": "Can dogs eat pork?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden varkensvlees eten?",
     "pl": "Czy psy mogą jeść wieprzowinę?",
     "cs": "Mohou psi jíst vepřové maso?",
-    "hr": "Smiju li psi jesti svinjetinu?"
+    "hr": "Smiju li psi jesti svinjetinu?",
+    "sv": "Får hundar äta fläskkött?"
   },
   "url_slug": {
     "en": "pork",
@@ -38,7 +40,8 @@
     "nl": "varkensvlees",
     "pl": "wieprzowina",
     "cs": "veprove-maso",
-    "hr": "svinjetina"
+    "hr": "svinjetina",
+    "sv": "flaskkott"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Niet als vast snoepje. Sommige veterinaire bronnen staan een beetje gewoon, helemaal gaar, mager varkensvlees toe, maar varkensvlees is vet en moeilijk verteerbaar voor honden, en vet eten kan alvleesklierontsteking uitlokken. Rauw varkensvlees, gekookte botten, ham en spek zijn niet geschikt.",
     "pl": "Nie jako stały smakołyk. Niektóre źródła weterynaryjne dopuszczają odrobinę zwykłej, dobrze ugotowanej chudej wieprzowiny, ale wieprzowina jest tłusta i ciężkostrawna dla psów, a tłuste jedzenie może wywołać zapalenie trzustki. Surowa wieprzowina, gotowane kości, szynka i boczek się nie nadają.",
     "cs": "Ne jako pravidelný pamlsek. Některé veterinární zdroje povolují trochu obyčejného, důkladně tepelně upraveného libového vepřového, vepřové je ale tučné a pro psy těžko stravitelné a tučná jídla mohou vyvolat zánět slinivky břišní. Syrové vepřové, tepelně upravené kosti, šunka a slanina vhodné nejsou.",
-    "hr": "Ne kao redovitu poslasticu. Neki veterinarski izvori dopuštaju malo obične, potpuno termički obrađene posne svinjetine, ali svinjetina je masna i psi je teško probavljaju, a masna hrana može izazvati upalu gušterače. Sirova svinjetina, termički obrađene kosti, šunka i slanina nisu prikladni."
+    "hr": "Ne kao redovitu poslasticu. Neki veterinarski izvori dopuštaju malo obične, potpuno termički obrađene posne svinjetine, ali svinjetina je masna i psi je teško probavljaju, a masna hrana može izazvati upalu gušterače. Sirova svinjetina, termički obrađene kosti, šunka i slanina nisu prikladni.",
+    "sv": "Inte som vanlig godbit. Vissa veterinärkällor tillåter lite naturellt, helt tillagat magert fläskkött, men fläskkött är fett och svårsmält för hundar, och fet mat kan utlösa bukspottkörtelinflammation (pankreatit). Rått fläskkött, tillagade ben, skinka och bacon passar inte."
   },
   "why": {
     "en": "Pork is rich in a type of fat that is difficult for dogs to digest. Raw or undercooked pork can carry the parasite Trichinella. Cooked bones become brittle, and seasonings can be dangerous. Ham is high in salt and fat. Sources differ: the AKC calls plain cooked lean pork safe in moderation, while PDSA lists pork among high-fat foods that can lead to pancreatitis and advises dogs that have had it to avoid high-fat treats like pork, so we use the stricter level.",
@@ -65,7 +69,8 @@
     "nl": "Varkensvlees bevat veel van een soort vet dat honden moeilijk kunnen verteren. Rauw of niet goed gaar varkensvlees kan de parasiet Trichinella bevatten. Gekookte botten worden broos, en kruiden kunnen gevaarlijk zijn. Ham bevat veel zout en vet. De bronnen verschillen: de AKC noemt gewoon gekookt mager varkensvlees met mate veilig, terwijl PDSA varkensvlees rekent tot het vette eten dat tot alvleesklierontsteking kan leiden, en honden die dat hebben gehad aanraadt vette snoepjes zoals varkensvlees te vermijden. Daarom kiezen we het strengere niveau.",
     "pl": "Wieprzowina zawiera dużo tłuszczu takiego rodzaju, który psy trudno trawią. Surowa lub niedogotowana wieprzowina może przenosić pasożyta włośnia (Trichinella). Gotowane kości stają się kruche, a przyprawy mogą być niebezpieczne. Szynka ma dużo soli i tłuszczu. Źródła się różnią: AKC uznaje zwykłą gotowaną chudą wieprzowinę za bezpieczną w umiarkowanych ilościach, a PDSA wymienia wieprzowinę wśród tłustych produktów, które mogą prowadzić do zapalenia trzustki, i radzi psom, które je przeszły, unikać tłustych smakołyków, takich jak wieprzowina, dlatego przyjmujemy surowszą ocenę.",
     "cs": "Vepřové maso obsahuje druh tuku, který psi obtížně tráví. Syrové nebo nedostatečně tepelně upravené vepřové může přenášet parazita svalovce (Trichinella). Tepelně upravené kosti jsou křehké a koření může být nebezpečné. Šunka má hodně soli a tuku. Zdroje se liší: AKC považuje obyčejné tepelně upravené libové vepřové v rozumném množství za bezpečné, zatímco PDSA řadí vepřové mezi tučná jídla, která mohou vést k zánětu slinivky břišní, a psům, kteří ho už prodělali, doporučuje vyhýbat se tučným pamlskům, jako je vepřové; proto používáme přísnější hodnocení.",
-    "hr": "Svinjetina je bogata vrstom masti koju psi teško probavljaju. Sirova ili nedovoljno termički obrađena svinjetina može prenijeti parazita trihinelu. Termički obrađene kosti postaju krhke, a začini mogu biti opasni. Šunka ima puno soli i masti. Izvori se razlikuju: AKC smatra običnu termički obrađenu posnu svinjetinu sigurnom u umjerenim količinama, dok PDSA svinjetinu navodi među masnom hranom koja može dovesti do upale gušterače i psima koji su je već imali savjetuje izbjegavanje masnih poslastica poput svinjetine, pa koristimo strožu ocjenu."
+    "hr": "Svinjetina je bogata vrstom masti koju psi teško probavljaju. Sirova ili nedovoljno termički obrađena svinjetina može prenijeti parazita trihinelu. Termički obrađene kosti postaju krhke, a začini mogu biti opasni. Šunka ima puno soli i masti. Izvori se razlikuju: AKC smatra običnu termički obrađenu posnu svinjetinu sigurnom u umjerenim količinama, dok PDSA svinjetinu navodi među masnom hranom koja može dovesti do upale gušterače i psima koji su je već imali savjetuje izbjegavanje masnih poslastica poput svinjetine, pa koristimo strožu ocjenu.",
+    "sv": "Fläskkött innehåller en typ av fett som är svår för hundar att smälta. Rått eller otillräckligt tillagat fläskkött kan bära på parasiten Trichinella. Tillagade ben blir sköra, och kryddor kan vara farliga. Skinka innehåller mycket salt och fett. Källorna går isär: AKC kallar naturellt, tillagat magert fläskkött ofarligt med måtta, medan PDSA räknar fläskkött till den feta mat som kan leda till bukspottkörtelinflammation och avråder hundar som haft den från feta godbitar som fläskkött, så vi använder den strängare nivån."
   },
   "signs": {
     "en": [
@@ -133,6 +138,12 @@
       "Proljev",
       "Bolovi u trbuhu",
       "Slab apetit i malaksalost"
+    ],
+    "sv": [
+      "Kräkningar, ibland först 1–4 dagar efter en fet måltid",
+      "Diarré",
+      "Ont i magen",
+      "Dålig aptit och orkeslöshet"
     ]
   },
   "what_to_do": {
@@ -146,7 +157,8 @@
     "nl": "Heeft je hond vet of gekruid varkensvlees gegeten? Let dan de komende dagen op braken, diarree of buikpijn en bel zo snel mogelijk je dierenarts als die optreden. Heeft hij rauw varkensvlees, gekookte botten of eten met ui of knoflook gegeten, bel je dierenarts dan meteen.",
     "pl": "Jeśli twój pies zjadł tłustą lub przyprawioną wieprzowinę, przez kilka kolejnych dni obserwuj, czy nie pojawiają się wymioty, biegunka lub ból brzucha, i jak najszybciej zadzwoń do weterynarza, jeśli wystąpią. Jeśli zjadł surową wieprzowinę, gotowane kości lub jedzenie z cebulą lub czosnkiem, od razu zadzwoń do weterynarza.",
     "cs": "Pokud váš pes snědl tučné nebo kořeněné vepřové, sledujte v následujících dnech, zda nezvrací, nemá průjem nebo bolesti břicha, a pokud se tyto potíže objeví, co nejdříve zavolejte veterináři. Pokud snědl syrové vepřové, tepelně upravené kosti nebo jídlo s cibulí či česnekem, zavolejte veterináři hned.",
-    "hr": "Ako je tvoj pas pojeo masnu ili začinjenu svinjetinu, sljedećih nekoliko dana prati pojavljuju li se povraćanje, proljev ili bolovi u trbuhu i što prije nazovi veterinara ako se pojave. Ako je pojeo sirovu svinjetinu, termički obrađene kosti ili hranu s lukom ili češnjakom, odmah nazovi veterinara."
+    "hr": "Ako je tvoj pas pojeo masnu ili začinjenu svinjetinu, sljedećih nekoliko dana prati pojavljuju li se povraćanje, proljev ili bolovi u trbuhu i što prije nazovi veterinara ako se pojave. Ako je pojeo sirovu svinjetinu, termički obrađene kosti ili hranu s lukom ili češnjakom, odmah nazovi veterinara.",
+    "sv": "Om hunden ätit fett eller kryddat fläskkött, håll utkik efter kräkningar, diarré eller ont i magen de närmaste dagarna och ring veterinären så snart som möjligt om de dyker upp. Om den ätit rått fläskkött, tillagade ben eller mat med lök eller vitlök, ring veterinären direkt."
   },
   "serving": {
     "en": "If you share at all: a small piece of plain, fully cooked lean pork, fat trimmed, boneless, unseasoned.",
@@ -159,7 +171,8 @@
     "nl": "Als je al iets deelt: een klein stukje gewoon, helemaal gaar, mager varkensvlees, zonder vet, zonder botten en ongekruid.",
     "pl": "Jeśli już się dzielisz: mały kawałek zwykłej, dobrze ugotowanej chudej wieprzowiny, bez tłuszczu, bez kości, bez przypraw.",
     "cs": "Pokud vůbec: malý kousek obyčejného, důkladně tepelně upraveného libového vepřového, bez tuku, bez kostí a bez koření.",
-    "hr": "Ako je uopće daješ: mali komad obične, potpuno termički obrađene posne svinjetine, bez masnoće, bez kostiju i bez začina."
+    "hr": "Ako je uopće daješ: mali komad obične, potpuno termički obrađene posne svinjetine, bez masnoće, bez kostiju i bez začina.",
+    "sv": "Om du delar med dig alls: en liten bit naturellt, helt tillagat magert fläskkött, utan fett, ben och kryddor."
   },
   "child": {
     "en": "Pork is very fatty for a dog's tummy. Only a grown-up should decide if a dog gets a tiny plain piece.",
@@ -172,7 +185,8 @@
     "nl": "Varkensvlees is erg vet voor het buikje van een hond. Alleen een volwassene mag beslissen of een hond een heel klein, gewoon stukje krijgt.",
     "pl": "Wieprzowina jest bardzo tłusta dla psiego brzuszka. Tylko dorosły może zdecydować, czy pies dostanie malutki zwykły kawałek.",
     "cs": "Vepřové je pro psí bříško hodně tučné. O tom, jestli pes dostane malinký kousek bez koření, rozhoduje jen dospělý.",
-    "hr": "Svinjetina je jako masna za pseći trbuh. Samo odrasla osoba smije odlučiti hoće li pas dobiti sićušan običan komadić."
+    "hr": "Svinjetina je jako masna za pseći trbuh. Samo odrasla osoba smije odlučiti hoće li pas dobiti sićušan običan komadić.",
+    "sv": "Fläskkött är väldigt fett för en hundmage. Bara en vuxen ska bestämma om en hund får en pytteliten bit utan kryddor."
   },
   "faq": [
     {
@@ -187,7 +201,8 @@
         "nl": "Mogen honden ham of spek eten?",
         "pl": "Czy psy mogą jeść szynkę lub boczek?",
         "cs": "Mohou psi jíst šunku nebo slaninu?",
-        "hr": "Smiju li psi jesti šunku ili slaninu?"
+        "hr": "Smiju li psi jesti šunku ili slaninu?",
+        "sv": "Får hundar äta skinka eller bacon?"
       },
       "a": {
         "en": "They aren't good choices: ham is high in fat and sodium, and eating a lot of bacon can cause pancreatitis.",
@@ -200,7 +215,8 @@
         "nl": "Dat zijn geen goede keuzes: ham bevat veel vet en natrium, en veel spek eten kan alvleesklierontsteking veroorzaken.",
         "pl": "To nie jest dobry wybór: szynka ma dużo tłuszczu i sodu, a zjedzenie dużej ilości boczku może wywołać zapalenie trzustki.",
         "cs": "Nejsou to dobré volby: šunka má hodně tuku a sodíku a velké množství slaniny může způsobit zánět slinivky břišní.",
-        "hr": "To nije dobar izbor: šunka ima puno masti i natrija, a ako pas pojede puno slanine, može dobiti upalu gušterače."
+        "hr": "To nije dobar izbor: šunka ima puno masti i natrija, a ako pas pojede puno slanine, može dobiti upalu gušterače.",
+        "sv": "De är inga bra val: skinka innehåller mycket fett och natrium, och mycket bacon kan orsaka bukspottkörtelinflammation."
       }
     }
   ],
@@ -333,6 +349,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "fb8f8432913a014ad5adde8fd7f964baf857f200ffacaf5717084e8cf192e8a1"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "17d78c3fbdbad95678d617ad52712e25e5cfe94d5884d301f8a601246658b0f3"
     }
   }
 }

@@ -12,7 +12,8 @@
     "nl": "Kalkoen",
     "pl": "Indyk",
     "cs": "Krůtí maso",
-    "hr": "Puretina"
+    "hr": "Puretina",
+    "sv": "Kalkon"
   },
   "question": {
     "en": "Can cats eat turkey?",
@@ -25,7 +26,8 @@
     "nl": "Mogen katten kalkoen eten?",
     "pl": "Czy koty mogą jeść indyka?",
     "cs": "Mohou kočky jíst krůtí maso?",
-    "hr": "Smiju li mačke jesti puretinu?"
+    "hr": "Smiju li mačke jesti puretinu?",
+    "sv": "Får katter äta kalkon?"
   },
   "url_slug": {
     "en": "turkey",
@@ -38,7 +40,8 @@
     "nl": "kalkoen",
     "pl": "indyk",
     "cs": "kruti-maso",
-    "hr": "puretina"
+    "hr": "puretina",
+    "sv": "kalkon"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Ja, een beetje gewone gekookte kalkoen is af en toe prima als snoepje. Haal de botten eruit en het vel eraf en sla kruiden, vulling en jus over. Alleen kalkoen is geen complete voeding.",
     "pl": "Tak, odrobina zwykłego gotowanego indyka jest w porządku jako okazjonalny smakołyk. Usuń kości i skórę i nie dodawaj przypraw, farszu ani sosu pieczeniowego. Sam indyk nie jest pełnowartościową dietą.",
     "cs": "Ano, trocha tepelně upraveného krůtího masa bez přísad je v pořádku jako občasný pamlsek. Odstraňte kosti a kůži a vynechejte koření, nádivku i omáčku. Samotné krůtí maso není kompletní strava.",
-    "hr": "Da, malo obične termički obrađene puretine u redu je kao povremena poslastica. Ukloni kosti i kožu i izostavi začine, nadjev i sok od pečenja. Puretina sama po sebi nije potpuna prehrana."
+    "hr": "Da, malo obične termički obrađene puretine u redu je kao povremena poslastica. Ukloni kosti i kožu i izostavi začine, nadjev i sok od pečenja. Puretina sama po sebi nije potpuna prehrana.",
+    "sv": "Ja, lite naturell tillagad kalkon går bra som en godbit ibland. Ta bort ben och skinn och hoppa över kryddor, fyllning och sås. Kalkon ensam är ingen fullständig kost."
   },
   "why": {
     "en": "Cats Protection says plain cooked turkey is fine as an occasional treat but shouldn't be given regularly, as turkey alone lacks nutrients cats need. Turkey skin is high in fat and can cause digestive upset or even pancreatitis, and roast skin may carry garlic or herbs. Turkey bones can splinter and cause choking or blockages.",
@@ -65,7 +69,8 @@
     "nl": "Volgens Cats Protection is gewone gekookte kalkoen af en toe prima als snoepje, maar niet om regelmatig te geven, want alleen kalkoen mist voedingsstoffen die katten nodig hebben. Kalkoenvel bevat veel vet en kan spijsverteringsproblemen of zelfs alvleesklierontsteking (pancreatitis) veroorzaken, en het vel van een gebraden kalkoen kan in contact zijn geweest met knoflook of kruiden. Kalkoenbotten kunnen splinteren en verstikking of verstoppingen veroorzaken.",
     "pl": "Według Cats Protection zwykły gotowany indyk jest w porządku jako okazjonalny smakołyk, ale nie należy go podawać regularnie, bo w samym indyku brakuje składników odżywczych potrzebnych kotom. Skóra indyka zawiera dużo tłuszczu i może wywołać problemy trawienne, a nawet zapalenie trzustki. Skóra z pieczeni może też mieć na sobie czosnek lub zioła. Kości indyka mogą się rozszczepiać i spowodować zadławienie lub niedrożność.",
     "cs": "Podle Cats Protection je tepelně upravené krůtí maso bez přísad v pořádku jako občasný pamlsek, nemělo by se však dávat pravidelně, protože samotnému krůtímu masu chybějí živiny, které kočky potřebují. Krůtí kůže je velmi tučná a může způsobit trávicí potíže, nebo dokonce zánět slinivky břišní, a kůže z pečeně může obsahovat česnek nebo bylinky. Krůtí kosti se mohou roztříštit a způsobit dušení nebo ucpání trávicího traktu.",
-    "hr": "Cats Protection navodi da je obična termički obrađena puretina u redu kao povremena poslastica, ali da je ne treba davati redovito jer sama puretina nema sve hranjive tvari koje mačke trebaju. Pureća koža ima puno masti i može izazvati probavne smetnje ili čak upalu gušterače, a koža pečene purice može sadržavati češnjak ili začinsko bilje. Pureće kosti mogu se rascijepiti i izazvati gušenje ili začepljenje."
+    "hr": "Cats Protection navodi da je obična termički obrađena puretina u redu kao povremena poslastica, ali da je ne treba davati redovito jer sama puretina nema sve hranjive tvari koje mačke trebaju. Pureća koža ima puno masti i može izazvati probavne smetnje ili čak upalu gušterače, a koža pečene purice može sadržavati češnjak ili začinsko bilje. Pureće kosti mogu se rascijepiti i izazvati gušenje ili začepljenje.",
+    "sv": "Cats Protection skriver att naturell tillagad kalkon går bra som en godbit ibland men inte ska ges regelbundet, eftersom kalkon ensam saknar näringsämnen som katter behöver. Kalkonskinn är mycket fett och kan ge magbesvär eller till och med bukspottkörtelinflammation (pankreatit), och skinnet på en ugnsstekt kalkon kan ha vitlök eller örter på sig. Kalkonben kan splittras och orsaka kvävning eller tarmstopp."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "nl": "Geef eerst een klein stukje. Krijgt je kat daarna last van braken of diarree, stop dan en vraag je dierenarts om advies. Heeft je kat kalkoenbotten gegeten, of vulling of jus met ui of knoflook, bel dan meteen je dierenarts.",
     "pl": "Najpierw podaj mały kawałek. Jeśli potem twój kot wymiotuje lub ma biegunkę, przestań i zapytaj weterynarza. Jeśli kot zjadł kości indyka, farsz lub sos pieczeniowy z cebulą lub czosnkiem, od razu zadzwoń do weterynarza.",
     "cs": "Nejdřív nabídněte malý kousek. Pokud vaše kočka potom zvrací nebo má průjem, přestaňte a poraďte se s veterinářem. Pokud vaše kočka snědla krůtí kosti, nádivku nebo omáčku s cibulí či česnekem, okamžitě zavolejte veterináři.",
-    "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili ima proljev, prestani i pitaj veterinara. Ako je mačka pojela pureće kosti, nadjev ili sok od pečenja s lukom ili češnjakom, odmah nazovi veterinara."
+    "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili ima proljev, prestani i pitaj veterinara. Ako je mačka pojela pureće kosti, nadjev ili sok od pečenja s lukom ili češnjakom, odmah nazovi veterinara.",
+    "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären. Om katten har ätit kalkonben, fyllning eller sås med lök eller vitlök, ring veterinären direkt."
   },
   "serving": {
     "en": "Plain cooked meat with no bones, skin or seasoning; a small amount, counted in the daily food.",
@@ -92,7 +98,8 @@
     "nl": "Gewoon gekookt vlees zonder botten, vel of kruiden; een kleine hoeveelheid, meegeteld bij het dagelijkse eten.",
     "pl": "Zwykłe gotowane mięso bez kości, skóry i przypraw; mała ilość wliczona do dziennej porcji jedzenia.",
     "cs": "Tepelně upravené maso bez přísad, bez kostí, kůže a koření; malé množství započítané do denní dávky krmiva.",
-    "hr": "Obično termički obrađeno meso bez kostiju, kože i začina; mala količina, uračunata u dnevni obrok."
+    "hr": "Obično termički obrađeno meso bez kostiju, kože i začina; mala količina, uračunata u dnevni obrok.",
+    "sv": "Naturellt tillagat kött utan ben, skinn eller kryddor; en liten mängd, inräknad i den dagliga maten."
   },
   "child": {
     "en": "A little plain turkey with no bones can be a cat treat. The skin and gravy stay on your plate.",
@@ -105,7 +112,8 @@
     "nl": "Een beetje gewone kalkoen zonder botjes kan een kattensnoepje zijn. Het vel en de jus blijven op jouw bord.",
     "pl": "Odrobina zwykłego indyka bez kości może być smakołykiem dla kota. Skóra i sos zostają na twoim talerzu.",
     "cs": "Trocha obyčejného krůtího masa bez kostí může být pro kočku pamlsek. Kůže a omáčka zůstanou na tvém talíři.",
-    "hr": "Malo obične puretine bez kostiju može biti poslastica za macu. Koža i sok od pečenja ostaju na tvom tanjuru."
+    "hr": "Malo obične puretine bez kostiju može biti poslastica za macu. Koža i sok od pečenja ostaju na tvom tanjuru.",
+    "sv": "Lite kokt kalkon utan ben och kryddor kan vara en godbit för katten. Skinnet och såsen stannar på din tallrik."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "nl": "Mogen katten kalkoenvel eten?",
         "pl": "Czy koty mogą jeść skórę indyka?",
         "cs": "Mohou kočky jíst krůtí kůži?",
-        "hr": "Smiju li mačke jesti pureću kožu?"
+        "hr": "Smiju li mačke jesti pureću kožu?",
+        "sv": "Får katter äta kalkonskinn?"
       },
       "a": {
         "en": "It's best not to. Turkey skin is high in fat and can cause digestive upset or even pancreatitis, and it may have touched seasoning or garlic.",
@@ -133,7 +142,8 @@
         "nl": "Liever niet. Kalkoenvel bevat veel vet en kan spijsverteringsproblemen of zelfs alvleesklierontsteking veroorzaken, en het kan in contact zijn geweest met kruiden of knoflook.",
         "pl": "Lepiej nie. Skóra indyka zawiera dużo tłuszczu i może wywołać problemy trawienne, a nawet zapalenie trzustki. Do tego mogła mieć kontakt z przyprawami lub czosnkiem.",
         "cs": "Raději ne. Krůtí kůže je velmi tučná a může způsobit trávicí potíže, nebo dokonce zánět slinivky břišní, a mohla přijít do styku s kořením nebo česnekem.",
-        "hr": "Bolje ne. Pureća koža ima puno masti i može izazvati probavne smetnje ili čak upalu gušterače, a možda je bila u dodiru sa začinima ili češnjakom."
+        "hr": "Bolje ne. Pureća koža ima puno masti i može izazvati probavne smetnje ili čak upalu gušterače, a možda je bila u dodiru sa začinima ili češnjakom.",
+        "sv": "Helst inte. Kalkonskinn är mycket fett och kan ge magbesvär eller till och med bukspottkörtelinflammation, och det kan ha varit i kontakt med kryddor eller vitlök."
       }
     }
   ],
@@ -243,6 +253,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "23e709cd9a260ebb820ef9da256d10d1e022fb2a91c54b03f16c2f4a12ccc5ca"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dd6c94743608b4de4d2fd0792205841bada6729662851724ef4d231ba71d0dc7"
     }
   }
 }

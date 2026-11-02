@@ -12,7 +12,8 @@
     "nl": "Gekookte kip",
     "pl": "Gotowany kurczak",
     "cs": "Tepelně upravené kuřecí maso",
-    "hr": "Kuhana piletina"
+    "hr": "Kuhana piletina",
+    "sv": "Kokt kyckling"
   },
   "question": {
     "en": "Can dogs eat cooked chicken?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden gekookte kip eten?",
     "pl": "Czy psy mogą jeść gotowanego kurczaka?",
     "cs": "Mohou psi jíst tepelně upravené kuřecí maso?",
-    "hr": "Smiju li psi jesti kuhanu piletinu?"
+    "hr": "Smiju li psi jesti kuhanu piletinu?",
+    "sv": "Får hundar äta kokt kyckling?"
   },
   "url_slug": {
     "en": "cooked-chicken",
@@ -38,7 +40,8 @@
     "nl": "gekookte-kip",
     "pl": "gotowany-kurczak",
     "cs": "tepelne-upravene-kureci-maso",
-    "hr": "kuhana-piletina"
+    "hr": "kuhana-piletina",
+    "sv": "kokt-kyckling"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Ja. Gewone, ongekruide gekookte kip, van het bot gehaald, kun je een hond los geven. Geef nooit gekookte kippenbotten, want die splinteren makkelijk, en sla gekruide, vette of rauwe kip over.",
     "pl": "Tak. Zwykłego, nieprzyprawionego gotowanego kurczaka, zdjętego z kości, możesz podać psu bez dodatków. Nigdy nie dawaj gotowanych kości kurczaka, które łatwo się łamią na odłamki, i pomiń kurczaka przyprawionego, tłustego lub surowego.",
     "cs": "Ano. Čisté, nekořeněné tepelně upravené kuřecí maso, oddělené od kostí, můžete psovi podávat samotné. Nikdy nedávejte tepelně upravené kuřecí kosti, které se snadno tříští, a vynechte kořeněné, tučné nebo syrové kuřecí maso.",
-    "hr": "Da. Obična, nezačinjena, termički obrađena piletina skinuta s kosti može se psu dati i sama, bez dodataka. Nikad ne daj termički obrađene pileće kosti, koje se lako lome u krhotine, i preskoči začinjenu, masnu ili sirovu piletinu."
+    "hr": "Da. Obična, nezačinjena, termički obrađena piletina skinuta s kosti može se psu dati i sama, bez dodataka. Nikad ne daj termički obrađene pileće kosti, koje se lako lome u krhotine, i preskoči začinjenu, masnu ili sirovu piletinu.",
+    "sv": "Ja. Naturell, okryddad tillagad kyckling, borttagen från benet, kan ges till hunden som den är. Ge aldrig tillagade kycklingben, som splittras lätt, och hoppa över kryddad, fet eller rå kyckling."
   },
   "why": {
     "en": "Unseasoned roasted, poached, grilled or baked chicken is fine on its own. Cooked chicken bones splinter easily and can cause choking or puncture the gut. Raw chicken is not recommended because of Salmonella and other bacteria. Thigh meat has about twice the fat of breast, and fatty foods can upset the stomach.",
@@ -65,7 +69,8 @@
     "nl": "Ongekruide kip die geroosterd, gepocheerd, gegrild of in de oven gebakken is, is prima om los te geven. Gekookte kippenbotten splinteren makkelijk en kunnen verstikking veroorzaken of de darmen doorboren. Rauwe kip is niet aan te raden vanwege salmonella en andere bacteriën. Dijvlees bevat ongeveer twee keer zoveel vet als borstvlees, en vet eten kan de maag van streek maken.",
     "pl": "Nieprzyprawiony kurczak pieczony, gotowany, grillowany lub zapiekany sam w sobie jest w porządku. Gotowane kości kurczaka łatwo łamią się na odłamki i mogą spowodować zadławienie lub przebicie przewodu pokarmowego. Surowy kurczak nie jest zalecany ze względu na bakterie Salmonella i inne. Mięso z udka ma około dwukrotnie więcej tłuszczu niż pierś, a tłuste jedzenie może podrażnić żołądek.",
     "cs": "Nekořeněné pečené, pošírované, grilované nebo zapékané kuřecí maso je samotné v pořádku. Tepelně upravené kuřecí kosti se snadno tříští a mohou způsobit dušení nebo protržení střeva. Syrové kuřecí maso se nedoporučuje kvůli salmonele a dalším bakteriím. Stehenní maso má zhruba dvakrát víc tuku než prsa a tučná jídla mohou podráždit žaludek.",
-    "hr": "Nezačinjena piletina – pečena, poširana, s roštilja ili iz pećnice – u redu je i sama. Termički obrađene pileće kosti lako se lome u krhotine i mogu izazvati gušenje ili probušiti crijeva. Sirova piletina ne preporučuje se zbog salmonele i drugih bakterija. Meso bataka ima otprilike dvostruko više masti od prsa, a masna hrana može uznemiriti želudac."
+    "hr": "Nezačinjena piletina – pečena, poširana, s roštilja ili iz pećnice – u redu je i sama. Termički obrađene pileće kosti lako se lome u krhotine i mogu izazvati gušenje ili probušiti crijeva. Sirova piletina ne preporučuje se zbog salmonele i drugih bakterija. Meso bataka ima otprilike dvostruko više masti od prsa, a masna hrana može uznemiriti želudac.",
+    "sv": "Okryddad kyckling som är ugnsstekt, pocherad, grillad eller ugnsbakad går bra som den är. Tillagade kycklingben splittras lätt och kan orsaka kvävning eller hål på tarmen. Rå kyckling rekommenderas inte på grund av salmonella och andra bakterier. Lårkött har ungefär dubbelt så mycket fett som bröstfilé, och fet mat kan ge orolig mage."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "nl": "Heeft je hond gekookte kippenbotten ingeslikt? Bel je dierenarts voor advies en probeer je hond niet te laten braken. Bel meteen als je ziet dat hij stikt, braakt of buikpijn lijkt te hebben.",
     "pl": "Jeśli twój pies połknął gotowane kości kurczaka, zadzwoń do weterynarza po poradę i nie próbuj wywoływać u psa wymiotów. Zadzwoń od razu, jeśli zauważysz zadławienie, wymioty lub objawy bólu brzucha.",
     "cs": "Pokud váš pes spolkl tepelně upravené kuřecí kosti, zavolejte veterináři o radu a nesnažte se psa přimět ke zvracení. Pokud se dusí, zvrací nebo má známky bolesti břicha, volejte hned.",
-    "hr": "Ako je pas progutao termički obrađene pileće kosti, nazovi veterinara za savjet i ne pokušavaj sam izazvati povraćanje. Odmah nazovi ako primijetiš gušenje, povraćanje ili znakove bolova u trbuhu."
+    "hr": "Ako je pas progutao termički obrađene pileće kosti, nazovi veterinara za savjet i ne pokušavaj sam izazvati povraćanje. Odmah nazovi ako primijetiš gušenje, povraćanje ili znakove bolova u trbuhu.",
+    "sv": "Om hunden har svalt tillagade kycklingben, ring veterinären för råd och försök inte få hunden att kräkas. Ring direkt om du ser kvävning, kräkningar eller tecken på ont i magen."
   },
   "serving": {
     "en": "Plain cooked chicken (breast is leanest), no seasoning, fully cooked, taken off the bone, in small pieces.",
@@ -92,7 +98,8 @@
     "nl": "Gewone gekookte kip (borstvlees is het magerst), zonder kruiden, helemaal gaar, van het bot gehaald, in kleine stukjes.",
     "pl": "Zwykły gotowany kurczak (pierś jest najchudsza), bez przypraw, dobrze ugotowany, zdjęty z kości, w małych kawałkach.",
     "cs": "Čisté kuřecí maso (nejlibovější jsou prsa), bez koření, důkladně tepelně upravené, oddělené od kostí, v malých kouscích.",
-    "hr": "Obična termički obrađena piletina (prsa su najposnija), bez začina, potpuno termički obrađena, skinuta s kosti, u malim komadićima."
+    "hr": "Obična termički obrađena piletina (prsa su najposnija), bez začina, potpuno termički obrađena, skinuta s kosti, u malim komadićima.",
+    "sv": "Naturell tillagad kyckling (bröstfilé är magrast), okryddad, genomstekt eller genomkokt, borttagen från benet, i små bitar."
   },
   "child": {
     "en": "Plain cooked chicken with no bones is a tasty dog treat. Chicken bones are never for dogs.",
@@ -105,7 +112,8 @@
     "nl": "Gewone gekookte kip zonder botten is een lekker hondensnoepje. Kippenbotten zijn nooit voor honden.",
     "pl": "Zwykły gotowany kurczak bez kości to pyszny smakołyk dla psa. Kości kurczaka nigdy nie są dla psów.",
     "cs": "Obyčejné uvařené nebo upečené kuřecí maso bez kostí je pro psa dobrý pamlsek. Kuřecí kosti ale psi nesmějí dostat nikdy.",
-    "hr": "Obična kuhana piletina bez kostiju fina je poslastica za pse. Pileće kosti nikad nisu za pse."
+    "hr": "Obična kuhana piletina bez kostiju fina je poslastica za pse. Pileće kosti nikad nisu za pse.",
+    "sv": "Kokt kyckling utan ben och kryddor är en god hundgodbit. Kycklingben är aldrig för hundar."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "nl": "Waarom zijn gekookte kippenbotten gevaarlijk?",
         "pl": "Dlaczego gotowane kości kurczaka są niebezpieczne?",
         "cs": "Proč jsou tepelně upravené kuřecí kosti nebezpečné?",
-        "hr": "Zašto su termički obrađene pileće kosti opasne?"
+        "hr": "Zašto su termički obrađene pileće kosti opasne?",
+        "sv": "Varför är tillagade kycklingben farliga?"
       },
       "a": {
         "en": "Cooked chicken bones splinter easily and can cause choking or a puncture in the gut.",
@@ -133,7 +142,8 @@
         "nl": "Gekookte kippenbotten splinteren makkelijk en kunnen verstikking veroorzaken of de darmen doorboren.",
         "pl": "Gotowane kości kurczaka łatwo łamią się na odłamki i mogą spowodować zadławienie lub przebicie przewodu pokarmowego.",
         "cs": "Tepelně upravené kuřecí kosti se snadno tříští a mohou způsobit dušení nebo protržení střeva.",
-        "hr": "Termički obrađene pileće kosti lako se lome u krhotine i mogu izazvati gušenje ili probušiti crijeva."
+        "hr": "Termički obrađene pileće kosti lako se lome u krhotine i mogu izazvati gušenje ili probušiti crijeva.",
+        "sv": "Tillagade kycklingben splittras lätt och kan orsaka kvävning eller hål på tarmen."
       }
     }
   ],
@@ -251,6 +261,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "729b49ea40cdd113fee7b627c748af968be4896a786fc66c689cf637e3cdad73"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e22f903467e65782f80622fda365a690b5ee1ec4b8170fcb3d67c04a2b914361"
     }
   }
 }

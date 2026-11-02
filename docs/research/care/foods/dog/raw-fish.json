@@ -12,7 +12,8 @@
     "nl": "Rauwe vis",
     "pl": "Surowa ryba",
     "cs": "Syrové ryby",
-    "hr": "Sirova riba"
+    "hr": "Sirova riba",
+    "sv": "Rå fisk"
   },
   "question": {
     "en": "Can dogs eat raw fish?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden rauwe vis eten?",
     "pl": "Czy psy mogą jeść surową rybę?",
     "cs": "Mohou psi jíst syrové ryby?",
-    "hr": "Smiju li psi jesti sirovu ribu?"
+    "hr": "Smiju li psi jesti sirovu ribu?",
+    "sv": "Får hundar äta rå fisk?"
   },
   "url_slug": {
     "en": "raw-fish",
@@ -38,7 +40,8 @@
     "nl": "rauwe-vis",
     "pl": "surowa-ryba",
     "cs": "syrove-ryby",
-    "hr": "sirova-riba"
+    "hr": "sirova-riba",
+    "sv": "ra-fisk"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Niet aan te raden. Rauwe vis kan bacteriën zoals salmonella en listeria en ook parasieten bevatten, en de kleine graten zijn gevaarlijk. In het noordwesten van de VS (Pacific Northwest) kan rauwe zalm of forel zalmvergiftiging (salmon poisoning disease) veroorzaken. Maak vis zonder toevoegingen gaar en haal de graten eruit.",
     "pl": "Nie zaleca się. Surowa ryba może przenosić bakterie, takie jak Salmonella i Listeria, a także pasożyty, a jej drobne ości stanowią zagrożenie. Na północno-zachodnim wybrzeżu Pacyfiku w USA surowy łosoś lub pstrąg może wywołać chorobę łososiową. Podawaj rybę zwykłą, ugotowaną i bez ości.",
     "cs": "Nedoporučuje se. Syrové ryby mohou obsahovat bakterie, například salmonelu a listerii, i parazity a jejich drobné kosti jsou nebezpečné. Na tichomořském severozápadě USA může syrový losos nebo pstruh způsobit otravu lososem (salmon poisoning disease). Rybu tepelně upravte bez přísad a odstraňte kosti.",
-    "hr": "Ne preporučuje se. Sirova riba može sadržavati bakterije poput salmonele i listerije, kao i parazite, a njezine sitne kosti su opasne. Na pacifičkom sjeverozapadu SAD-a sirovi losos ili pastrva mogu izazvati bolest trovanja lososom. Ribu termički obradi bez dodataka i ukloni kosti."
+    "hr": "Ne preporučuje se. Sirova riba može sadržavati bakterije poput salmonele i listerije, kao i parazite, a njezine sitne kosti su opasne. Na pacifičkom sjeverozapadu SAD-a sirovi losos ili pastrva mogu izazvati bolest trovanja lososom. Ribu termički obradi bez dodataka i ukloni kosti.",
+    "sv": "Det rekommenderas inte. Rå fisk kan bära på bakterier som salmonella och listeria samt parasiter, och de små benen är en fara. I nordvästra USA kan rå lax eller öring orsaka laxförgiftning (salmon poisoning disease). Tillaga fisken utan kryddor och ta bort benen."
   },
   "why": {
     "en": "Raw fish is among the foods linked to food poisoning in dogs. Raw or undercooked salmon and trout from the Pacific Northwest can carry a parasite that causes salmon poisoning disease, which is serious if untreated. Fish bones are small and brittle and can cause choking or injure the mouth or gut. Raw and smoked fish are best avoided.",
@@ -65,7 +69,8 @@
     "nl": "Rauwe vis hoort bij het eten dat in verband wordt gebracht met voedselvergiftiging bij honden. Rauwe of niet goed gare zalm en forel uit het noordwesten van de VS kunnen een parasiet bevatten die zalmvergiftiging veroorzaakt, wat zonder behandeling ernstig is. Visgraten zijn klein en broos en kunnen verstikking veroorzaken of de bek of darmen verwonden. Rauwe en gerookte vis kun je beter vermijden.",
     "pl": "Surowa ryba należy do produktów kojarzonych z zatruciami pokarmowymi u psów. Surowy lub niedogotowany łosoś i pstrąg z północno-zachodniego wybrzeża Pacyfiku mogą przenosić pasożyta wywołującego chorobę łososiową, która bez leczenia jest groźna. Ości ryb są drobne i kruche, mogą spowodować zadławienie lub zranić pysk albo przewód pokarmowy. Ryb surowych i wędzonych najlepiej unikać.",
     "cs": "Syrové ryby patří mezi potraviny spojované s otravou jídlem u psů. Syrový nebo nedostatečně tepelně upravený losos a pstruh z tichomořského severozápadu USA mohou přenášet parazita, který způsobuje otravu lososem – bez léčby jde o vážné onemocnění. Rybí kosti jsou malé a křehké a mohou způsobit dušení nebo poranit tlamu či trávicí trakt. Syrovým a uzeným rybám je lepší se vyhnout.",
-    "hr": "Sirova riba jedna je od namirnica povezanih s trovanjem hranom kod pasa. Sirovi ili nedovoljno termički obrađeni losos i pastrva s pacifičkog sjeverozapada SAD-a mogu prenijeti parazita koji uzrokuje bolest trovanja lososom, koja je ozbiljna ako se ne liječi. Riblje kosti su sitne i krhke, mogu izazvati gušenje ili ozlijediti usta ili probavni sustav. Sirovu i dimljenu ribu najbolje je izbjegavati."
+    "hr": "Sirova riba jedna je od namirnica povezanih s trovanjem hranom kod pasa. Sirovi ili nedovoljno termički obrađeni losos i pastrva s pacifičkog sjeverozapada SAD-a mogu prenijeti parazita koji uzrokuje bolest trovanja lososom, koja je ozbiljna ako se ne liječi. Riblje kosti su sitne i krhke, mogu izazvati gušenje ili ozlijediti usta ili probavni sustav. Sirovu i dimljenu ribu najbolje je izbjegavati.",
+    "sv": "Rå fisk hör till de livsmedel som kopplas till matförgiftning hos hundar. Rå eller otillräckligt tillagad lax och öring från nordvästra USA kan bära på en parasit som orsakar laxförgiftning, som är allvarlig om den inte behandlas. Fiskben är små och sköra och kan orsaka kvävning eller skada munnen eller mag-tarmkanalen. Rå och rökt fisk är bäst att undvika."
   },
   "signs": {
     "en": [
@@ -144,6 +149,13 @@
       "Manjak energije ili slab apetit",
       "Visoka temperatura, slabost i potpun gubitak apetita (trovanje lososom)",
       "Gušenje"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Diarré",
+      "Orkeslöshet eller dålig aptit",
+      "Hög feber, svaghet och total aptitlöshet (laxförgiftning)",
+      "Kvävning"
     ]
   },
   "what_to_do": {
@@ -157,7 +169,8 @@
     "nl": "Let op braken, diarree of weinig energie en bel je dierenarts als die ernstig zijn of niet ophouden. Heeft je hond rauwe zalm of forel uit het noordwesten van de VS gegeten? Bel dan snel je dierenarts en vertel het erbij – verschijnselen kunnen tot een week later komen.",
     "pl": "Obserwuj, czy nie pojawiają się wymioty, biegunka lub osłabienie, i zadzwoń do weterynarza, jeśli są silne albo nie ustępują. Jeśli twój pies zjadł surowego łososia lub pstrąga z północno-zachodniego wybrzeża Pacyfiku, szybko zadzwoń do weterynarza i o tym powiedz – objawy mogą pojawić się nawet po tygodniu.",
     "cs": "Sledujte, zda pes nezvrací, nemá průjem nebo není malátný, a pokud jsou potíže silné nebo neustávají, zavolejte veterináři. Pokud váš pes snědl syrového lososa nebo pstruha z tichomořského severozápadu USA, neprodleně zavolejte veterináři a řekněte mu to – příznaky se mohou objevit až za týden.",
-    "hr": "Prati pojavljuju li se povraćanje, proljev ili manjak energije i nazovi veterinara ako su jaki ili ne prestaju. Ako je tvoj pas pojeo sirovog lososa ili pastrvu s pacifičkog sjeverozapada SAD-a, što prije nazovi veterinara i spomeni to – do pojave znakova može proći i do tjedan dana."
+    "hr": "Prati pojavljuju li se povraćanje, proljev ili manjak energije i nazovi veterinara ako su jaki ili ne prestaju. Ako je tvoj pas pojeo sirovog lososa ili pastrvu s pacifičkog sjeverozapada SAD-a, što prije nazovi veterinara i spomeni to – do pojave znakova može proći i do tjedan dana.",
+    "sv": "Håll utkik efter kräkningar, diarré eller orkeslöshet och ring veterinären om symtomen är svåra eller inte går över. Om hunden ätit rå lax eller öring från nordvästra USA, ring veterinären snabbt och berätta det – symtomen kan dröja upp till en vecka."
   },
   "serving": {
     "en": "Only fully cooked fish (baked, steamed or grilled), plain, with all bones removed.",
@@ -170,7 +183,8 @@
     "nl": "Alleen helemaal gare vis (uit de oven, gestoomd of gegrild), puur, met alle graten eruit.",
     "pl": "Tylko dobrze ugotowana ryba (pieczona, gotowana na parze lub grillowana), zwykła, bez żadnych ości.",
     "cs": "Jen důkladně tepelně upravenou rybu (pečenou, dušenou v páře nebo grilovanou), bez přísad a bez kostí.",
-    "hr": "Samo potpuno termički obrađena riba (pečena u pećnici, kuhana na pari ili na roštilju), bez dodataka, bez ijedne kosti."
+    "hr": "Samo potpuno termički obrađena riba (pečena u pećnici, kuhana na pari ili na roštilju), bez dodataka, bez ijedne kosti.",
+    "sv": "Bara helt tillagad fisk (ugnsbakad, ångkokt eller grillad), utan kryddor, med alla ben borttagna."
   },
   "child": {
     "en": "Fish for dogs must be cooked and have no bones. Raw fish can have germs that upset a dog's tummy.",
@@ -183,7 +197,8 @@
     "nl": "Vis voor honden moet gekookt zijn en mag geen graten hebben. In rauwe vis kunnen bacteriën zitten waar een hond buikpijn van krijgt.",
     "pl": "Ryba dla psa musi być ugotowana i bez ości. Surowa ryba może mieć zarazki, które rozstrajają psi brzuszek.",
     "cs": "Ryba pro psa musí být uvařená a bez kostí. Na syrové rybě můžou být bacily, ze kterých psa rozbolí bříško.",
-    "hr": "Riba za pse mora biti kuhana i bez kostiju. Sirova riba može imati klice od kojih psa zaboli trbuh."
+    "hr": "Riba za pse mora biti kuhana i bez kostiju. Sirova riba može imati klice od kojih psa zaboli trbuh.",
+    "sv": "Fisk till hundar måste vara tillagad och utan ben. Rå fisk kan ha bakterier som ger hunden ont i magen."
   },
   "faq": [
     {
@@ -198,7 +213,8 @@
         "nl": "Wat is zalmvergiftiging?",
         "pl": "Co to jest choroba łososiowa?",
         "cs": "Co je otrava lososem?",
-        "hr": "Što je bolest trovanja lososom?"
+        "hr": "Što je bolest trovanja lososom?",
+        "sv": "Vad är laxförgiftning?"
       },
       "a": {
         "en": "An illness dogs get from eating raw or undercooked salmon, trout or similar fish from the Pacific Northwest of the USA; it is prevented by not feeding them raw.",
@@ -211,7 +227,8 @@
         "nl": "Een ziekte die honden krijgen door rauwe of niet goed gare zalm, forel of vergelijkbare vis uit het noordwesten van de VS (Pacific Northwest) te eten; je voorkomt die door die vis niet rauw te geven.",
         "pl": "Choroba, na którą psy zapadają po zjedzeniu surowego lub niedogotowanego łososia, pstrąga lub podobnych ryb z północno-zachodniego wybrzeża Pacyfiku w USA; można jej zapobiec, nie karmiąc psa surowymi rybami.",
         "cs": "Onemocnění, které psi dostanou po snědení syrového nebo nedostatečně tepelně upraveného lososa, pstruha nebo podobných ryb z tichomořského severozápadu USA; předejdete mu tím, že psovi tyto ryby nebudete dávat syrové.",
-        "hr": "Bolest koju psi dobiju kad pojedu sirovog ili nedovoljno termički obrađenog lososa, pastrvu ili sličnu ribu s pacifičkog sjeverozapada SAD-a; sprječava se tako da im se takva riba ne daje sirova."
+        "hr": "Bolest koju psi dobiju kad pojedu sirovog ili nedovoljno termički obrađenog lososa, pastrvu ili sličnu ribu s pacifičkog sjeverozapada SAD-a; sprječava se tako da im se takva riba ne daje sirova.",
+        "sv": "En sjukdom som hundar får av att äta rå eller otillräckligt tillagad lax, öring eller liknande fisk från nordvästra USA; den förebyggs genom att man inte ger fisken rå."
       }
     }
   ],
@@ -348,6 +365,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e61bdf9db9607a9d2cc8ab58ab175db3242cfc50d2d90ad26a0902d53d31d001"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "153dc96b8471f0aa04215d33290c43efe60767f259e1b3ce72768af837b62047"
     }
   }
 }

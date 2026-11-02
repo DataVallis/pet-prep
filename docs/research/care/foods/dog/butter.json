@@ -12,7 +12,8 @@
     "nl": "Boter",
     "pl": "Masło",
     "cs": "Máslo",
-    "hr": "Maslac"
+    "hr": "Maslac",
+    "sv": "Smör"
   },
   "question": {
     "en": "Can dogs eat butter?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden boter eten?",
     "pl": "Czy psy mogą jeść masło?",
     "cs": "Mohou psi jíst máslo?",
-    "hr": "Smiju li psi jesti maslac?"
+    "hr": "Smiju li psi jesti maslac?",
+    "sv": "Får hundar äta smör?"
   },
   "url_slug": {
     "en": "butter",
@@ -38,7 +40,8 @@
     "nl": "boter",
     "pl": "maslo",
     "cs": "maslo",
-    "hr": "maslac"
+    "hr": "maslac",
+    "sv": "smor"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee, liever niet. Boter is niet giftig, maar wel erg vet, en vet eten kan de maag van een hond van streek maken en mogelijk alvleesklierontsteking uitlokken, een pijnlijke ontsteking. Eten dat je deelt, zoals ei of aardappelpuree, maak je het best zonder boter klaar.",
     "pl": "Lepiej nie. Masło nie jest trujące, ale jest bardzo tłuste, a tłuste jedzenie może podrażnić żołądek psa i wywołać zapalenie trzustki, czyli bolesny stan zapalny. Jedzenie, którym się dzielisz, np. jajka czy puree ziemniaczane, najlepiej przygotuj bez masła.",
     "cs": "Raději ne. Máslo není jedovaté, ale je velmi tučné a tučná jídla mohou psovi podráždit žaludek nebo spustit bolestivý zánět slinivky břišní. Jídlo, o které se se psem dělíte, například vejce nebo bramborovou kaši, je lepší připravovat bez másla.",
-    "hr": "Bolje ne. Maslac nije otrovan, ali je vrlo mastan, a masna hrana može psu uznemiriti želudac i potaknuti upalu gušterače, koja je bolna. Hranu koju dijeliš sa psom, poput jaja ili pire krumpira, najbolje je pripremiti bez maslaca."
+    "hr": "Bolje ne. Maslac nije otrovan, ali je vrlo mastan, a masna hrana može psu uznemiriti želudac i potaknuti upalu gušterače, koja je bolna. Hranu koju dijeliš sa psom, poput jaja ili pire krumpira, najbolje je pripremiti bez maslaca.",
+    "sv": "Nej, helst inte. Smör är inte giftigt, men det är mycket fett, och fet mat kan ge hunden orolig mage och kanske utlösa bukspottkörtelinflammation, en smärtsam inflammation. Mat som du delar med dig av, som ägg eller potatismos, lagas helst utan smör."
   },
   "why": {
     "en": "Fatty table foods are not a toxicity problem, but fatty foods such as butter, oils and meat drippings may cause pancreatitis. Some breeds, especially miniature Schnauzers, are more prone to it. Vets also suggest preparing food for dogs, such as eggs or mashed potato, without butter.",
@@ -65,7 +69,8 @@
     "nl": "Vet tafelvoedsel is geen vergiftigingsprobleem, maar vet eten zoals boter, olie en braadvet kan alvleesklierontsteking veroorzaken. Sommige rassen, vooral de dwergschnauzer, zijn er gevoeliger voor. Dierenartsen raden ook aan eten voor honden, zoals ei of aardappelpuree, zonder boter klaar te maken.",
     "pl": "W przypadku tłustego jedzenia ze stołu nie chodzi o toksyczność, ale tłuste produkty, takie jak masło, oleje i tłuszcz spod pieczeni, mogą wywołać zapalenie trzustki. Niektóre rasy, zwłaszcza sznaucer miniaturowy, są na nie bardziej podatne. Weterynarze radzą też przygotowywać jedzenie dla psa, np. jajka czy puree ziemniaczane, bez masła.",
     "cs": "Tučná jídla ze stolu nejsou problémem kvůli jedovatosti, ale tučné potraviny jako máslo, oleje a výpek z masa mohou způsobit zánět slinivky břišní. Některá plemena, hlavně knírač malý, jsou k němu náchylnější. Veterináři také doporučují připravovat jídlo pro psy, například vejce nebo bramborovou kaši, bez másla.",
-    "hr": "Masna hrana sa stola nije problem otrovnosti, ali masna hrana poput maslaca, ulja i masnoće od pečenja mesa može izazvati upalu gušterače. Neke su joj pasmine, osobito patuljasti šnauceri, sklonije. Veterinari savjetuju i da se hrana za pse, poput jaja ili pire krumpira, priprema bez maslaca."
+    "hr": "Masna hrana sa stola nije problem otrovnosti, ali masna hrana poput maslaca, ulja i masnoće od pečenja mesa može izazvati upalu gušterače. Neke su joj pasmine, osobito patuljasti šnauceri, sklonije. Veterinari savjetuju i da se hrana za pse, poput jaja ili pire krumpira, priprema bez maslaca.",
+    "sv": "Fet bordsmat är inget förgiftningsproblem, men fet mat som smör, oljor och stekflott kan orsaka bukspottkörtelinflammation (pankreatit). Vissa raser, särskilt dvärgschnauzer, är mer benägna att drabbas. Veterinärer föreslår också att mat till hundar, som ägg eller potatismos, lagas utan smör."
   },
   "signs": {
     "en": [
@@ -133,6 +138,12 @@
       "Bolovi u trbuhu",
       "Proljev",
       "Slab apetit i malaksalost"
+    ],
+    "sv": [
+      "Kräkningar, ibland först 1–4 dagar efter en fet måltid",
+      "Ont i magen",
+      "Diarré",
+      "Dålig aptit och låg energi"
     ]
   },
   "what_to_do": {
@@ -146,7 +157,8 @@
     "nl": "Heeft je hond veel boter gegeten, of braakt hij, heeft hij buikpijn, diarree of weinig energie in de dagen erna? Bel dan zo snel mogelijk je dierenarts.",
     "pl": "Jeśli twój pies zjadł dużo masła albo w kolejnych dniach wymiotuje, boli go brzuch, ma biegunkę lub jest osłabiony, jak najszybciej zadzwoń do weterynarza.",
     "cs": "Pokud váš pes snědl hodně másla nebo se u něj v následujících dnech objeví zvracení, bolest břicha, průjem či malátnost, zavolejte co nejdříve veterináři.",
-    "hr": "Ako je pas pojeo mnogo maslaca ili sljedećih dana povraća, ima bolove u trbuhu, proljev ili je malaksao, što prije nazovi veterinara."
+    "hr": "Ako je pas pojeo mnogo maslaca ili sljedećih dana povraća, ima bolove u trbuhu, proljev ili je malaksao, što prije nazovi veterinara.",
+    "sv": "Om hunden har ätit mycket smör, eller får kräkningar, ont i magen, diarré eller låg energi under de närmaste dagarna, ring veterinären så snart som möjligt."
   },
   "serving": null,
   "child": {
@@ -160,7 +172,8 @@
     "nl": "Boter is te vet voor honden en kan hun buikje pijn doen. Zet het botervlootje buiten bereik!",
     "pl": "Masło jest dla psów za tłuste i może je od niego rozboleć brzuszek. Trzymaj maselniczkę poza zasięgiem psa!",
     "cs": "Máslo je pro psy moc tučné a může je z něj bolet bříško. Dej máslenku tam, kam pes nedosáhne!",
-    "hr": "Maslac je premastan za pse i od njega ih može zaboljeti trbuščić. Drži posudu s maslacem izvan njihova dosega!"
+    "hr": "Maslac je premastan za pse i od njega ih može zaboljeti trbuščić. Drži posudu s maslacem izvan njihova dosega!",
+    "sv": "Smör är för fett för hundar och kan ge dem ont i magen. Ställ smörasken där hunden inte når den!"
   },
   "faq": [
     {
@@ -175,7 +188,8 @@
         "nl": "Is boter giftig voor honden?",
         "pl": "Czy masło jest toksyczne dla psów?",
         "cs": "Je máslo pro psy jedovaté?",
-        "hr": "Je li maslac otrovan za pse?"
+        "hr": "Je li maslac otrovan za pse?",
+        "sv": "Är smör giftigt för hundar?"
       },
       "a": {
         "en": "Not in the poisonous sense. The problem is the fat, which may cause stomach upset or pancreatitis.",
@@ -188,7 +202,8 @@
         "nl": "Niet in de zin van vergiftiging. Het probleem is het vet, dat een maagstoornis of alvleesklierontsteking kan veroorzaken.",
         "pl": "Nie jest trujące. Problemem jest tłuszcz, który może wywołać dolegliwości żołądkowe lub zapalenie trzustki.",
         "cs": "Ne v tom smyslu, že by bylo jedem. Problémem je tuk, který může podráždit žaludek nebo způsobit zánět slinivky břišní.",
-        "hr": "Ne u smislu otrova. Problem je mast, koja može uznemiriti želudac ili izazvati upalu gušterače."
+        "hr": "Ne u smislu otrova. Problem je mast, koja može uznemiriti želudac ili izazvati upalu gušterače.",
+        "sv": "Inte i betydelsen förgiftning. Problemet är fettet, som kan ge orolig mage eller bukspottkörtelinflammation."
       }
     }
   ],
@@ -288,6 +303,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7a19782742e518d747c24994a920857fd245c9ffd9796af43a634fc4aec18962"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e65b40975f8cf1a9ce33f851d0d61b20a0b26d4685176e95e05b72eb3fc53fa6"
     }
   }
 }

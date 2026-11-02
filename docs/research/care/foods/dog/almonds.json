@@ -12,7 +12,8 @@
     "nl": "Amandelen",
     "pl": "Migdały",
     "cs": "Mandle",
-    "hr": "Bademi"
+    "hr": "Bademi",
+    "sv": "Mandlar"
   },
   "question": {
     "en": "Can dogs eat almonds?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden amandelen eten?",
     "pl": "Czy psy mogą jeść migdały?",
     "cs": "Mohou psi jíst mandle?",
-    "hr": "Smiju li psi jesti bademe?"
+    "hr": "Smiju li psi jesti bademe?",
+    "sv": "Får hundar äta mandlar?"
   },
   "url_slug": {
     "en": "almonds",
@@ -38,7 +40,8 @@
     "nl": "amandelen",
     "pl": "migdaly",
     "cs": "mandle",
-    "hr": "bademi"
+    "hr": "bademi",
+    "sv": "mandlar"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee, liever niet. Amandelen zijn niet zo gevaarlijk als macadamianoten, maar ze zijn vet en kunnen braken, diarree en mogelijk alvleesklierontsteking veroorzaken. Hele amandelen kunnen ook vast komen te zitten, vooral bij kleine honden.",
     "pl": "Lepiej nie. Migdały nie są tak niebezpieczne jak orzechy makadamia, ale są tłuste i mogą wywołać wymioty, biegunkę, a być może także zapalenie trzustki. Całe migdały mogą też utknąć, zwłaszcza u małych psów.",
     "cs": "Raději ne. Mandle nejsou tak nebezpečné jako makadamové ořechy, ale jsou tučné a mohou způsobit zvracení, průjem a případně i zánět slinivky břišní. Celé mandle mohou také uvíznout, zvlášť u malých psů.",
-    "hr": "Bolje ne. Bademi nisu opasni kao makadamija, ali su masni i mogu izazvati povraćanje, proljev, a moguće i upalu gušterače. Cijeli bademi mogu i zapeti, osobito kod malih pasa."
+    "hr": "Bolje ne. Bademi nisu opasni kao makadamija, ali su masni i mogu izazvati povraćanje, proljev, a moguće i upalu gušterače. Cijeli bademi mogu i zapeti, osobito kod malih pasa.",
+    "sv": "Nej, helst inte. Mandlar är inte lika farliga som macadamianötter, men de är feta och kan ge kräkningar, diarré och möjligen bukspottkörtelinflammation. Hela mandlar kan också fastna, särskilt hos små hundar."
   },
   "why": {
     "en": "Almonds, like most nuts, are high in fat, which can upset the stomach and put a dog at risk of pancreatitis. Whole almonds can block the food pipe, intestines or windpipe, especially in small breeds. Salted and flavoured almonds bring extra risks from salt and seasonings.",
@@ -65,7 +69,8 @@
     "nl": "Amandelen bevatten, zoals de meeste noten, veel vet. Dat kan de maag van streek maken en een hond vatbaar maken voor alvleesklierontsteking. Hele amandelen kunnen de slokdarm, de darmen of de luchtpijp blokkeren, vooral bij kleine rassen. Gezouten en gekruide amandelen brengen extra risico’s mee door het zout en de kruiden.",
     "pl": "Migdały, jak większość orzechów, zawierają dużo tłuszczu, który może podrażnić żołądek i narazić psa na zapalenie trzustki. Całe migdały mogą zatkać przełyk, jelita lub tchawicę, zwłaszcza u małych ras. Migdały solone i smakowe niosą dodatkowe ryzyko związane z solą i przyprawami.",
     "cs": "Mandle mají jako většina ořechů vysoký obsah tuku, který může podráždit žaludek a vystavit psa riziku zánětu slinivky břišní. Celé mandle mohou ucpat jícen, střeva nebo průdušnici, zvlášť u malých plemen. Solené a ochucené mandle přinášejí další rizika kvůli soli a koření.",
-    "hr": "Bademi, kao i većina orašastih plodova, sadrže mnogo masti, koja može uznemiriti želudac i izložiti psa riziku od upale gušterače. Cijeli bademi mogu začepiti jednjak, crijeva ili dušnik, osobito kod malih pasmina. Slani bademi i bademi s okusima nose dodatne rizike zbog soli i začina."
+    "hr": "Bademi, kao i većina orašastih plodova, sadrže mnogo masti, koja može uznemiriti želudac i izložiti psa riziku od upale gušterače. Cijeli bademi mogu začepiti jednjak, crijeva ili dušnik, osobito kod malih pasmina. Slani bademi i bademi s okusima nose dodatne rizike zbog soli i začina.",
+    "sv": "Mandlar är, som de flesta nötter, mycket feta, vilket kan ge orolig mage och göra att hunden riskerar bukspottkörtelinflammation (pankreatit). Hela mandlar kan blockera matstrupen, tarmarna eller luftstrupen, särskilt hos små raser. Saltade och smaksatta mandlar ger extra risker från salt och kryddor."
   },
   "signs": {
     "en": [
@@ -133,6 +138,12 @@
       "Proljev",
       "Bolovi u trbuhu, mučnina ili malaksalost (moguća upala gušterače)",
       "Gušenje ili znakovi začepljenja"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Diarré",
+      "Ont i magen, illamående eller låg energi (möjlig bukspottkörtelinflammation)",
+      "Kvävning eller tecken på stopp"
     ]
   },
   "what_to_do": {
@@ -146,7 +157,8 @@
     "nl": "Een of twee amandelen zijn meestal geen reden tot paniek: let op braken, diarree of buikpijn. Bel je dierenarts als je hond veel amandelen of gekruide amandelen heeft gegeten, lijkt te stikken of een van deze verschijnselen heeft.",
     "pl": "Jeden czy dwa migdały zwykle nie są powodem do paniki: obserwuj, czy u psa nie pojawiają się wymioty, biegunka lub ból brzucha. Zadzwoń do weterynarza, jeśli pies zjadł dużo migdałów lub migdały smakowe, wygląda, jakby się dławił, albo ma któryś z tych objawów.",
     "cs": "Jedna nebo dvě mandle obvykle nejsou důvodem k panice: sledujte, zda se u psa neobjeví zvracení, průjem nebo bolest břicha. Zavolejte veterináři, pokud váš pes snědl hodně mandlí nebo ochucené mandle, zdá se, že se dusí, nebo má některý z těchto příznaků.",
-    "hr": "Jedan ili dva badema obično nisu razlog za paniku: prati pojavljuju li se kod psa povraćanje, proljev ili bolovi u trbuhu. Nazovi veterinara ako je pas pojeo mnogo badema ili bademe s okusima, ako se čini da se guši ili ako pokazuje neki od ovih znakova."
+    "hr": "Jedan ili dva badema obično nisu razlog za paniku: prati pojavljuju li se kod psa povraćanje, proljev ili bolovi u trbuhu. Nazovi veterinara ako je pas pojeo mnogo badema ili bademe s okusima, ako se čini da se guši ili ako pokazuje neki od ovih znakova.",
+    "sv": "En eller två mandlar är oftast ingen anledning till panik: håll utkik efter kräkningar, diarré eller ont i magen. Ring veterinären om hunden har ätit många mandlar eller smaksatta mandlar, verkar kvävas eller visar något av dessa symtom."
   },
   "serving": null,
   "child": {
@@ -160,7 +172,8 @@
     "nl": "Amandelen zijn een snack voor mensen. Honden kunnen ze moeilijk verteren en kunnen er buikpijn van krijgen. Geef liever een hondensnoepje!",
     "pl": "Migdały to przekąska dla ludzi. Psom trudno je strawić i może je od nich rozboleć brzuszek. Daj psu jego smakołyk!",
     "cs": "Mandle jsou svačinka pro lidi. Psi je špatně tráví a může je z nich bolet bříško. Dej psovi radši psí pamlsek!",
-    "hr": "Bademi su grickalica za ljude. Psi ih teško probavljaju i može ih zaboljeti trbuščić. Radije psu daj pseću poslasticu!"
+    "hr": "Bademi su grickalica za ljude. Psi ih teško probavljaju i može ih zaboljeti trbuščić. Radije psu daj pseću poslasticu!",
+    "sv": "Mandlar är ett mellanmål för människor. Hundar har svårt att smälta dem och kan få ont i magen. Ge en hundgodbit i stället!"
   },
   "faq": [
     {
@@ -175,7 +188,8 @@
         "nl": "Zijn amandelen net zo gevaarlijk als macadamianoten?",
         "pl": "Czy migdały są tak samo niebezpieczne jak orzechy makadamia?",
         "cs": "Jsou mandle stejně nebezpečné jako makadamové ořechy?",
-        "hr": "Jesu li bademi opasni kao makadamija?"
+        "hr": "Jesu li bademi opasni kao makadamija?",
+        "sv": "Är mandlar lika farliga som macadamianötter?"
       },
       "a": {
         "en": "No. Macadamia nuts are toxic to dogs; almonds are a problem mainly because of their fat and the risk of blockage.",
@@ -188,7 +202,8 @@
         "nl": "Nee. Macadamianoten zijn giftig voor honden; amandelen zijn vooral een probleem door het vet en het risico op een verstopping.",
         "pl": "Nie. Orzechy makadamia są toksyczne dla psów; migdały szkodzą głównie z powodu tłuszczu i ryzyka niedrożności.",
         "cs": "Ne. Makadamové ořechy jsou pro psy jedovaté; u mandlí je problémem hlavně tuk a riziko ucpání.",
-        "hr": "Ne. Makadamija je otrovna za pse, a bademi su problem uglavnom zbog masti i rizika od začepljenja."
+        "hr": "Ne. Makadamija je otrovna za pse, a bademi su problem uglavnom zbog masti i rizika od začepljenja.",
+        "sv": "Nej. Macadamianötter är giftiga för hundar; mandlar är ett problem främst på grund av fettet och risken för stopp."
       }
     },
     {
@@ -203,7 +218,8 @@
         "nl": "Mijn hond heeft één amandel gegeten. Wat nu?",
         "pl": "Mój pies zjadł jeden migdał. Co teraz?",
         "cs": "Můj pes snědl jednu mandli. Co teď?",
-        "hr": "Moj je pas pojeo jedan badem. Što sad?"
+        "hr": "Moj je pas pojeo jedan badem. Što sad?",
+        "sv": "Min hund åt en mandel. Vad gör jag nu?"
       },
       "a": {
         "en": "Don't panic. Watch for tummy upset and call your vet if signs appear.",
@@ -216,7 +232,8 @@
         "nl": "Geen paniek. Let op maagklachten en bel je dierenarts als er verschijnselen optreden.",
         "pl": "Nie panikuj. Obserwuj, czy nie ma problemów z brzuchem, i zadzwoń do weterynarza, jeśli pojawią się objawy.",
         "cs": "Nepanikařte. Sledujte, zda nemá zažívací potíže, a pokud se objeví příznaky, zavolejte veterináři.",
-        "hr": "Bez panike. Prati ima li pas probavnih tegoba i nazovi veterinara ako se pojave znakovi."
+        "hr": "Bez panike. Prati ima li pas probavnih tegoba i nazovi veterinara ako se pojave znakovi.",
+        "sv": "Ingen panik. Håll utkik efter magbesvär och ring veterinären om symtom dyker upp."
       }
     }
   ],
@@ -333,6 +350,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "16d89ded56c99611848bd3c9b041854785d4b1ca745bf838c04f2112a245deae"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "07878bf1d971fc97903e2fc2d869869c5d65c6affadc4020b9d593f1f2928f8c"
     }
   }
 }

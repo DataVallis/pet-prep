@@ -12,7 +12,8 @@
     "nl": "Gekookte eieren",
     "pl": "Gotowane jajka",
     "cs": "Tepelně upravená vejce",
-    "hr": "Kuhana jaja"
+    "hr": "Kuhana jaja",
+    "sv": "Kokta ägg"
   },
   "question": {
     "en": "Can dogs eat cooked eggs?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden gekookte eieren eten?",
     "pl": "Czy psy mogą jeść gotowane jajka?",
     "cs": "Mohou psi jíst tepelně upravená vejce?",
-    "hr": "Smiju li psi jesti kuhana jaja?"
+    "hr": "Smiju li psi jesti kuhana jaja?",
+    "sv": "Får hundar äta kokta ägg?"
   },
   "url_slug": {
     "en": "cooked-eggs",
@@ -38,7 +40,8 @@
     "nl": "gekookte-eieren",
     "pl": "gotowane-jajka",
     "cs": "tepelne-upravena-vejce",
-    "hr": "kuhana-jaja"
+    "hr": "kuhana-jaja",
+    "sv": "kokta-agg"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Ja. Helemaal gare eieren zijn met mate veilig en voedzaam voor honden, zolang ze puur zijn: zonder olie, boter, zout of kruiden. Hardgekookte eieren of roerei zijn prima. Te veel eieren kunnen tot overgewicht leiden.",
     "pl": "Tak. Dobrze ścięte jajka są dla psów bezpieczne i pożywne w umiarkowanych ilościach, o ile są zwykłe: bez oleju, masła, soli i przypraw. Dobrze sprawdzają się jajka na twardo lub jajecznica. Zbyt duża ilość może prowadzić do przybierania na wadze.",
     "cs": "Ano. Důkladně tepelně upravená vejce jsou pro psy s mírou bezpečná a výživná, pokud jsou bez přísad: bez oleje, másla, soli a koření. Dobře se hodí vejce natvrdo nebo míchaná vejce. Příliš mnoho vajec může vést k přibírání na váze.",
-    "hr": "Da. Potpuno termički obrađena jaja sigurna su i hranjiva za pse u umjerenim količinama, ako su obična: bez ulja, maslaca, soli ili začina. Tvrdo kuhana jaja ili kajgana dobar su izbor. Previše jaja može dovesti do debljanja."
+    "hr": "Da. Potpuno termički obrađena jaja sigurna su i hranjiva za pse u umjerenim količinama, ako su obična: bez ulja, maslaca, soli ili začina. Tvrdo kuhana jaja ili kajgana dobar su izbor. Previše jaja može dovesti do debljanja.",
+    "sv": "Ja. Genomkokta eller genomstekta ägg är säkra och näringsrika för hundar med måtta, så länge de är naturella: utan olja, smör, salt eller kryddor. Hårdkokta ägg eller äggröra passar bra. För många kan leda till viktökning."
   },
   "why": {
     "en": "Cooked eggs provide protein, vitamins and healthy fats, but they are not essential to a balanced diet. Vets advise always cooking eggs before giving them to a dog. Egg shells have sharp edges that can hurt a dog's throat, and like any treat, eggs add calories.",
@@ -65,7 +69,8 @@
     "nl": "Gekookte eieren leveren eiwitten, vitamines en gezonde vetten, maar ze zijn niet nodig voor een uitgebalanceerd voer. Dierenartsen raden aan eieren altijd gaar te maken voordat je ze aan een hond geeft. Eierschalen hebben scherpe randen die de keel van een hond kunnen verwonden, en net als elk snoepje leveren eieren extra calorieën.",
     "pl": "Gotowane jajka dostarczają białka, witamin i zdrowych tłuszczów, ale nie są niezbędne w zbilansowanej diecie. Weterynarze radzą zawsze gotować jajka przed podaniem ich psu. Skorupki mają ostre krawędzie, które mogą zranić gardło psa, a jak każdy smakołyk jajka dostarczają kalorii.",
     "cs": "Tepelně upravená vejce dodávají bílkoviny, vitaminy a zdravé tuky, ale pro vyváženou stravu nejsou nezbytná. Veterináři doporučují vejce před podáním psovi vždy tepelně upravit. Vaječné skořápky mají ostré hrany, které mohou psovi poranit krk, a jako každý pamlsek přidávají vejce kalorie.",
-    "hr": "Termički obrađena jaja daju bjelančevine, vitamine i zdrave masti, ali nisu nužna za uravnoteženu prehranu. Veterinari savjetuju da jaja uvijek termički obradiš prije nego što ih daš psu. Ljuske jaja imaju oštre rubove koji mogu ozlijediti psu grlo, a kao i svaka poslastica, jaja donose kalorije."
+    "hr": "Termički obrađena jaja daju bjelančevine, vitamine i zdrave masti, ali nisu nužna za uravnoteženu prehranu. Veterinari savjetuju da jaja uvijek termički obradiš prije nego što ih daš psu. Ljuske jaja imaju oštre rubove koji mogu ozlijediti psu grlo, a kao i svaka poslastica, jaja donose kalorije.",
+    "sv": "Tillagade ägg ger protein, vitaminer och nyttiga fetter, men de är inte nödvändiga i en balanserad kost. Veterinärer råder att alltid tillaga ägg innan hunden får dem. Äggskal har vassa kanter som kan skada hundens hals, och som alla godbitar ger ägg extra kalorier."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "nl": "Heeft je hond eieren gegeten die met boter, zout of kruiden zijn bereid, of veel eieren? Let dan op maag-darmklachten en bel je dierenarts als het braken of de diarree ernstig is of niet ophoudt.",
     "pl": "Jeśli twój pies zjadł jajka przygotowane z masłem, solą lub przyprawami albo dużo jajek, obserwuj, czy nie ma problemów z brzuchem, i zadzwoń do weterynarza, jeśli wymioty lub biegunka są silne albo nie ustępują.",
     "cs": "Pokud váš pes snědl vejce připravená s máslem, solí nebo kořením nebo hodně vajec, sledujte, zda nemá zažívací potíže, a pokud je zvracení nebo průjem silný či neustává, zavolejte veterináři.",
-    "hr": "Ako je pas pojeo jaja pripremljena s maslacem, soli ili začinima, ili mnogo jaja, prati ima li probavnih smetnji i nazovi veterinara ako su povraćanje ili proljev jaki ili ne prestaju."
+    "hr": "Ako je pas pojeo jaja pripremljena s maslacem, soli ili začinima, ili mnogo jaja, prati ima li probavnih smetnji i nazovi veterinara ako su povraćanje ili proljev jaki ili ne prestaju.",
+    "sv": "Om hunden har ätit ägg tillagade med smör, salt eller kryddor, eller många ägg: håll utkik efter magbesvär och ring veterinären om kräkningarna eller diarrén är kraftig eller inte går över."
   },
   "serving": {
     "en": "Fully cooked (hard-boiled or scrambled), plain, without oil, butter, salt, seasonings or other additives; as an occasional treat.",
@@ -92,7 +98,8 @@
     "nl": "Helemaal gaar (hardgekookt of als roerei), puur, zonder olie, boter, zout, kruiden of andere toevoegingen; af en toe als snoepje.",
     "pl": "Dobrze ścięte (na twardo lub jako jajecznica), zwykłe, bez oleju, masła, soli, przypraw i innych dodatków; jako okazjonalny smakołyk.",
     "cs": "Důkladně tepelně upravená (natvrdo nebo míchaná), bez oleje, másla, soli, koření a dalších přísad; jako občasný pamlsek.",
-    "hr": "Potpuno termički obrađena (tvrdo kuhana ili kao kajgana), obična, bez ulja, maslaca, soli, začina ili drugih dodataka; kao povremena poslastica."
+    "hr": "Potpuno termički obrađena (tvrdo kuhana ili kao kajgana), obična, bez ulja, maslaca, soli, začina ili drugih dodataka; kao povremena poslastica.",
+    "sv": "Helt genomtillagade (hårdkokta eller äggröra), naturella, utan olja, smör, salt, kryddor eller andra tillsatser; som en godbit ibland."
   },
   "child": {
     "en": "A plain cooked egg can be a yummy treat for a dog. No salt or butter, please!",
@@ -105,7 +112,8 @@
     "nl": "Een gewoon gekookt eitje kan een lekker snoepje zijn voor een hond. Wel zonder zout of boter!",
     "pl": "Zwykłe gotowane jajko może być pysznym smakołykiem dla psa. Tylko bez soli i masła!",
     "cs": "Obyčejné uvařené vajíčko může být pro psa dobrý pamlsek. Ale bez soli a másla, prosím!",
-    "hr": "Obično kuhano jaje može biti fina poslastica za psa. Bez soli i maslaca, molim!"
+    "hr": "Obično kuhano jaje može biti fina poslastica za psa. Bez soli i maslaca, molim!",
+    "sv": "Ett kokt ägg kan vara en smaskig godbit för en hund. Inget salt eller smör, tack!"
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "nl": "Mogen honden eierschalen eten?",
         "pl": "Czy psy mogą jeść skorupki jajek?",
         "cs": "Mohou psi jíst vaječné skořápky?",
-        "hr": "Smiju li psi jesti ljuske jaja?"
+        "hr": "Smiju li psi jesti ljuske jaja?",
+        "sv": "Får hundar äta äggskal?"
       },
       "a": {
         "en": "Sources differ: Dogs Trust lists cooked eggshells as usually fine, while the AKC warns that shells have sharp edges. Leaving them out is the safer choice.",
@@ -133,7 +142,8 @@
         "nl": "De bronnen verschillen: Dogs Trust noemt gekookte eierschalen meestal prima, terwijl de AKC waarschuwt dat schalen scherpe randen hebben. Ze weglaten is de veiligere keuze.",
         "pl": "Źródła się różnią: Dogs Trust podaje, że gotowane skorupki są zwykle w porządku, a AKC ostrzega, że skorupki mają ostre krawędzie. Bezpieczniej je pominąć.",
         "cs": "Zdroje se liší: Dogs Trust uvádí, že tepelně upravené skořápky jsou obvykle v pořádku, zatímco AKC upozorňuje, že skořápky mají ostré hrany. Bezpečnější je skořápky vynechat.",
-        "hr": "Izvori se razlikuju: Dogs Trust navodi da su termički obrađene ljuske obično u redu, a AKC upozorava da ljuske imaju oštre rubove. Sigurnije je izostaviti ih."
+        "hr": "Izvori se razlikuju: Dogs Trust navodi da su termički obrađene ljuske obično u redu, a AKC upozorava da ljuske imaju oštre rubove. Sigurnije je izostaviti ih.",
+        "sv": "Källorna skiljer sig åt: Dogs Trust anger att tillagade äggskal oftast går bra, medan AKC varnar för att skalen har vassa kanter. Det säkrare valet är att låta bli."
       }
     },
     {
@@ -148,7 +158,8 @@
         "nl": "Hoe bereid ik eieren voor mijn hond?",
         "pl": "Jak przygotować jajka dla psa?",
         "cs": "Jak mám vejce pro psa připravit?",
-        "hr": "Kako pripremiti jaja za psa?"
+        "hr": "Kako pripremiti jaja za psa?",
+        "sv": "Hur ska jag tillaga ägg till hunden?"
       },
       "a": {
         "en": "Hard-boiled or scrambled, fully cooked and plain, with no salt, butter or seasonings.",
@@ -161,7 +172,8 @@
         "nl": "Hardgekookt of als roerei, helemaal gaar en puur, zonder zout, boter of kruiden.",
         "pl": "Na twardo lub jako jajecznicę, dobrze ścięte i zwykłe, bez soli, masła i przypraw.",
         "cs": "Natvrdo nebo jako míchaná vejce, důkladně tepelně upravená a bez přísad, bez soli, másla a koření.",
-        "hr": "Tvrdo kuhana ili kao kajgana, potpuno termički obrađena i obična, bez soli, maslaca ili začina."
+        "hr": "Tvrdo kuhana ili kao kajgana, potpuno termički obrađena i obična, bez soli, maslaca ili začina.",
+        "sv": "Hårdkokta eller som äggröra, helt genomtillagade och naturella, utan salt, smör eller kryddor."
       }
     }
   ],
@@ -272,6 +284,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "832b4ee660f8ae7c482ac0125f038336d84612ce912f65c8fae27f020d2c3f8b"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6478c6cac63e6f745cb219291208dfe104d0f45a4af468ae0a3757706d5d83d9"
     }
   }
 }

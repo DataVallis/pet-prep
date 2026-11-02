@@ -12,7 +12,8 @@
     "nl": "Lamsvlees",
     "pl": "Jagnięcina",
     "cs": "Jehněčí maso",
-    "hr": "Janjetina"
+    "hr": "Janjetina",
+    "sv": "Lammkött"
   },
   "question": {
     "en": "Can dogs eat lamb?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden lamsvlees eten?",
     "pl": "Czy psy mogą jeść jagnięcinę?",
     "cs": "Mohou psi jíst jehněčí maso?",
-    "hr": "Smiju li psi jesti janjetinu?"
+    "hr": "Smiju li psi jesti janjetinu?",
+    "sv": "Får hundar äta lammkött?"
   },
   "url_slug": {
     "en": "lamb",
@@ -38,7 +40,8 @@
     "nl": "lamsvlees",
     "pl": "jagniecina",
     "cs": "jehneci-maso",
-    "hr": "janjetina"
+    "hr": "janjetina",
+    "sv": "lammkott"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Ja, een beetje gewoon gekookt lamsvlees zonder botten is prima voor een gezonde hond zonder voedselallergie. Geef nooit gekookte lamsbotten, want die worden broos en splinteren, en vermijd vette of zoute stukken en jus met ui.",
     "pl": "Tak, odrobina zwykłej gotowanej jagnięciny bez kości jest w porządku dla zdrowego psa bez alergii pokarmowej. Nigdy nie dawaj gotowanych kości jagnięcych, które stają się kruche i łamią się na odłamki, i unikaj tłustych lub słonych kawałków oraz sosu z cebulą.",
     "cs": "Ano, trochu čistého tepelně upraveného jehněčího masa bez kostí je pro zdravého psa bez potravinové alergie v pořádku. Nikdy nedávejte tepelně upravené jehněčí kosti, které zkřehnou a tříští se, a vyhněte se tučným nebo slaným kouskům a cibulové omáčce.",
-    "hr": "Da, malo obične termički obrađene janjetine bez kostiju u redu je za zdravog psa bez alergije na hranu. Nikad ne daj termički obrađene janjeće kosti, koje postaju krhke i lome se u krhotine, i izbjegavaj masne ili slane komade te umak s lukom."
+    "hr": "Da, malo obične termički obrađene janjetine bez kostiju u redu je za zdravog psa bez alergije na hranu. Nikad ne daj termički obrađene janjeće kosti, koje postaju krhke i lome se u krhotine, i izbjegavaj masne ili slane komade te umak s lukom.",
+    "sv": "Ja, lite naturellt, tillagat lammkött utan ben går bra för en frisk hund utan födoämnesallergi. Ge aldrig tillagade lammben, som blir sköra och splittras, och undvik feta eller salta bitar och sky med lök."
   },
   "why": {
     "en": "Lamb meat itself is listed as safe for dogs in small amounts. All bones become brittle when cooked and can splinter. High-fat foods can trigger vomiting, diarrhoea or even pancreatitis, and foods high in fat or salt are best avoided. Onion-based gravies are not safe for dogs.",
@@ -65,7 +69,8 @@
     "nl": "Lamsvlees zelf staat in kleine hoeveelheden als veilig voor honden vermeld. Alle botten worden broos als ze gekookt zijn en kunnen splinteren. Vet eten kan braken, diarree of zelfs alvleesklierontsteking uitlokken, en eten met veel vet of zout kun je beter vermijden. Jus op basis van ui is niet veilig voor honden.",
     "pl": "Samo mięso jagnięce figuruje jako bezpieczne dla psów w małych ilościach. Wszystkie kości po ugotowaniu stają się kruche i mogą łamać się na odłamki. Tłuste jedzenie może wywołać wymioty, biegunkę, a nawet zapalenie trzustki, a potraw tłustych lub słonych najlepiej unikać. Sosy na bazie cebuli nie są bezpieczne dla psów.",
     "cs": "Samotné jehněčí maso je uváděno jako bezpečné pro psy v malém množství. Všechny kosti tepelnou úpravou zkřehnou a mohou se roztříštit. Tučná jídla mohou vyvolat zvracení, průjem, nebo dokonce zánět slinivky břišní a jídlům s vysokým obsahem tuku nebo soli je lepší se vyhnout. Cibulové omáčky nejsou pro psy bezpečné.",
-    "hr": "Samo janjeće meso navodi se kao sigurno za pse u malim količinama. Sve kosti termičkom obradom postaju krhke i mogu se lomiti u krhotine. Masna hrana može izazvati povraćanje, proljev ili čak upalu gušterače, a hranu s mnogo masti ili soli najbolje je izbjegavati. Umaci s lukom nisu sigurni za pse."
+    "hr": "Samo janjeće meso navodi se kao sigurno za pse u malim količinama. Sve kosti termičkom obradom postaju krhke i mogu se lomiti u krhotine. Masna hrana može izazvati povraćanje, proljev ili čak upalu gušterače, a hranu s mnogo masti ili soli najbolje je izbjegavati. Umaci s lukom nisu sigurni za pse.",
+    "sv": "Lammkött i sig anges som ofarligt för hundar i små mängder. Alla ben blir sköra när de tillagas och kan splittras. Fet mat kan utlösa kräkningar, diarré och till och med bukspottkörtelinflammation (pankreatit), och mat med mycket fett eller salt är bäst att undvika. Sky med lök är inte ofarlig för hundar."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "nl": "Heeft je hond vette restjes lamsvlees gegeten? Let dan op braken, diarree of buikpijn en bel je dierenarts als die optreden. Heeft hij gekookte botten of lamsvlees met uienjus gegeten, bel je dierenarts dan meteen en probeer je hond niet te laten braken.",
     "pl": "Jeśli twój pies zjadł tłuste resztki jagnięciny, obserwuj, czy nie pojawiają się wymioty, biegunka lub ból brzucha, i zadzwoń do weterynarza, jeśli wystąpią. Jeśli zjadł gotowane kości lub jagnięcinę w sosie z cebulą, od razu zadzwoń do weterynarza i nie próbuj wywoływać u psa wymiotów.",
     "cs": "Pokud váš pes snědl tučné zbytky jehněčího, sledujte, zda se neobjeví zvracení, průjem nebo bolest břicha, a pokud ano, zavolejte veterináři. Pokud snědl tepelně upravené kosti nebo jehněčí s cibulovou omáčkou, zavolejte veterináři hned a nesnažte se psa přimět ke zvracení.",
-    "hr": "Ako je pas pojeo masne ostatke janjetine, prati pojavljuju li se povraćanje, proljev ili bolovi u trbuhu i nazovi veterinara ako se pojave. Ako je pojeo termički obrađene kosti ili janjetinu s umakom s lukom, odmah nazovi veterinara i ne pokušavaj sam izazvati povraćanje."
+    "hr": "Ako je pas pojeo masne ostatke janjetine, prati pojavljuju li se povraćanje, proljev ili bolovi u trbuhu i nazovi veterinara ako se pojave. Ako je pojeo termički obrađene kosti ili janjetinu s umakom s lukom, odmah nazovi veterinara i ne pokušavaj sam izazvati povraćanje.",
+    "sv": "Har hunden ätit feta rester av lammkött, håll utkik efter kräkningar, diarré eller ont i magen och ring veterinären om de dyker upp. Har den ätit tillagade ben eller lammkött med löksky, ring veterinären direkt och försök inte få hunden att kräkas."
   },
   "serving": {
     "en": "A little plain cooked lamb meat, no bones, no fatty or salty bits, no gravy.",
@@ -92,7 +98,8 @@
     "nl": "Een beetje gewoon gekookt lamsvlees, zonder botten, zonder vette of zoute stukjes, zonder jus.",
     "pl": "Odrobina zwykłej gotowanej jagnięciny, bez kości, bez tłustych lub słonych kawałków, bez sosu.",
     "cs": "Trochu čistého tepelně upraveného jehněčího masa, bez kostí, bez tučných nebo slaných kousků, bez omáčky.",
-    "hr": "Malo obične termički obrađene janjetine, bez kostiju, bez masnih ili slanih komadića, bez umaka."
+    "hr": "Malo obične termički obrađene janjetine, bez kostiju, bez masnih ili slanih komadića, bez umaka.",
+    "sv": "Lite naturellt, tillagat lammkött, utan ben, utan feta eller salta bitar och utan sky."
   },
   "child": {
     "en": "A small bit of plain lamb with no bones can be a treat. Lamb bones are never for dogs.",
@@ -105,7 +112,8 @@
     "nl": "Een klein stukje gewoon lamsvlees zonder botten kan een traktatie zijn. Lamsbotten zijn nooit voor honden.",
     "pl": "Mały kawałek zwykłej jagnięciny bez kości może być smakołykiem. Kości jagnięce nigdy nie są dla psów.",
     "cs": "Malý kousek obyčejného jehněčího bez kostí může být pamlsek. Jehněčí kosti ale psi nesmějí dostat nikdy.",
-    "hr": "Komadić obične janjetine bez kostiju može biti poslastica. Janjeće kosti nikad nisu za pse."
+    "hr": "Komadić obične janjetine bez kostiju može biti poslastica. Janjeće kosti nikad nisu za pse.",
+    "sv": "En liten bit naturellt lammkött utan ben kan vara en godbit. Lammben är aldrig för hundar."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "nl": "Mag een hond op een lamsbot kauwen?",
         "pl": "Czy pies może dostać kość jagnięcą do gryzienia?",
         "cs": "Může pes dostat jehněčí kost na hryzání?",
-        "hr": "Smije li pas glodati janjeću kost?"
+        "hr": "Smije li pas glodati janjeću kost?",
+        "sv": "Får hundar tugga på ett lammben?"
       },
       "a": {
         "en": "Not a cooked one: cooked bones become brittle and can splinter. Never give cooked bones of any kind.",
@@ -133,7 +142,8 @@
         "nl": "Niet op een gekookt bot: gekookte botten worden broos en kunnen splinteren. Geef nooit gekookte botten, van welke soort ook.",
         "pl": "Gotowanej nie: gotowane kości stają się kruche i mogą łamać się na odłamki. Nigdy nie dawaj gotowanych kości żadnego rodzaju.",
         "cs": "Tepelně upravenou ne: tepelně upravené kosti zkřehnou a mohou se roztříštit. Nikdy nedávejte tepelně upravené kosti jakéhokoli druhu.",
-        "hr": "Termički obrađenu ne: termički obrađene kosti postaju krhke i mogu se lomiti u krhotine. Nikad ne daj termički obrađene kosti bilo koje vrste."
+        "hr": "Termički obrađenu ne: termički obrađene kosti postaju krhke i mogu se lomiti u krhotine. Nikad ne daj termički obrađene kosti bilo koje vrste.",
+        "sv": "Inte ett tillagat: tillagade ben blir sköra och kan splittras. Ge aldrig tillagade ben av något slag."
       }
     }
   ],
@@ -242,6 +252,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a20477bcf5fec9de65cd30185dc981d2689c89d4b5f2419bc9ee32c7fdbddaa2"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cfb41bc71eb14a5aa87b5452a93269f84ae287f43d6649bd1fe5aa6b847bb9f3"
     }
   }
 }

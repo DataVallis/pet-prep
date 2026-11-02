@@ -12,7 +12,8 @@
     "nl": "Energiedrankjes",
     "pl": "Napoje energetyczne",
     "cs": "Energetické nápoje",
-    "hr": "Energetska pića"
+    "hr": "Energetska pića",
+    "sv": "Energidrycker"
   },
   "question": {
     "en": "Can dogs drink energy drinks?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden energiedrankjes drinken?",
     "pl": "Czy psy mogą pić napoje energetyczne?",
     "cs": "Mohou psi pít energetické nápoje?",
-    "hr": "Smiju li psi piti energetska pića?"
+    "hr": "Smiju li psi piti energetska pića?",
+    "sv": "Får hundar dricka energidrycker?"
   },
   "url_slug": {
     "en": "energy-drinks",
@@ -38,7 +40,8 @@
     "nl": "energiedrankjes",
     "pl": "napoje-energetyczne",
     "cs": "energeticke-napoje",
-    "hr": "energetska-pica"
+    "hr": "energetska-pica",
+    "sv": "energidrycker"
   },
   "level": "toxic",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee. Energiedrankjes bevatten vaak veel cafeïne, en dat is giftig voor honden. Cafeïne prikkelt het hart en het zenuwstelsel te veel, en honden zijn er gevoeliger voor dan mensen. Zelfs een gemorst energiedrankje oplikken kan een probleem zijn.",
     "pl": "Nie. Napoje energetyczne często zawierają dużo kofeiny, która jest toksyczna dla psów. Kofeina nadmiernie pobudza serce i układ nerwowy, a psy są na nią bardziej wrażliwe niż ludzie. Nawet wylizanie rozlanego napoju energetycznego może być problemem.",
     "cs": "Ne. Energetické nápoje často obsahují hodně kofeinu, který je pro psy jedovatý. Kofein nadměrně stimuluje srdce a nervovou soustavu a psi jsou na něj citlivější než lidé. Problém může nastat, i když pes jen vylíže rozlitý energetický nápoj.",
-    "hr": "Ne. Energetska pića često sadrže mnogo kofeina, koji je otrovan za pse. Kofein pretjerano potiče rad srca i živčanog sustava, a psi su na njega osjetljiviji od ljudi. Problem može biti čak i kad pas polize proliveno energetsko piće."
+    "hr": "Ne. Energetska pića često sadrže mnogo kofeina, koji je otrovan za pse. Kofein pretjerano potiče rad srca i živčanog sustava, a psi su na njega osjetljiviji od ljudi. Problem može biti čak i kad pas polize proliveno energetsko piće.",
+    "sv": "Nej. Energidrycker innehåller ofta mycket koffein, som är giftigt för hundar. Koffein överstimulerar hjärtat och nervsystemet, och hundar är känsligare för det än människor. Även att lapa i sig utspilld energidryck kan vara ett problem."
   },
   "why": {
     "en": "Energy and sports drinks often contain a lot of caffeine, and energy shots, pouches and tablets contain caffeine too. Caffeine stimulates the heart and nervous system, which can be dangerous for dogs.",
@@ -65,7 +69,8 @@
     "nl": "Energie- en sportdrankjes bevatten vaak veel cafeïne, en energieshots, -zakjes en -tabletten bevatten ook cafeïne. Cafeïne prikkelt het hart en het zenuwstelsel, wat gevaarlijk kan zijn voor honden.",
     "pl": "Napoje energetyczne i dla sportowców często zawierają dużo kofeiny; kofeinę zawierają też shoty energetyczne, saszetki i tabletki. Kofeina pobudza serce i układ nerwowy, co może być niebezpieczne dla psów.",
     "cs": "Energetické a sportovní nápoje často obsahují hodně kofeinu a kofein obsahují i energetické shoty, sáčky a tablety. Kofein stimuluje srdce a nervovou soustavu, což může být pro psy nebezpečné.",
-    "hr": "Energetska i sportska pića često sadrže mnogo kofeina, a kofein sadrže i energetski shotovi, vrećice i tablete. Kofein potiče rad srca i živčanog sustava, što za pse može biti opasno."
+    "hr": "Energetska i sportska pića često sadrže mnogo kofeina, a kofein sadrže i energetski shotovi, vrećice i tablete. Kofein potiče rad srca i živčanog sustava, što za pse može biti opasno.",
+    "sv": "Energidrycker och sportdrycker innehåller ofta mycket koffein, och energishots, portionspåsar och tabletter innehåller också koffein. Koffein stimulerar hjärtat och nervsystemet, vilket kan vara farligt för hundar."
   },
   "signs": {
     "en": [
@@ -155,6 +160,14 @@
       "Slinjenje",
       "Drhtanje",
       "Češće mokrenje"
+    ],
+    "sv": [
+      "Rastlöshet, överaktivitet, går fram och tillbaka",
+      "Snabb puls",
+      "Kräkningar och diarré",
+      "Dreglar",
+      "Darrningar",
+      "Kissar mer"
     ]
   },
   "what_to_do": {
@@ -168,7 +181,8 @@
     "nl": "Neem contact op met je dierenarts of een vergiftigingenlijn voor dieren zodra je merkt dat je hond cafeïne binnen heeft gekregen. Schrijf op wat het was (drankje, shot, zakje of tablet) en ongeveer hoeveel. Wacht niet op verschijnselen: een vroege behandeling is belangrijk.",
     "pl": "Skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt, gdy tylko zorientujesz się, że twój pies zjadł lub wypił coś z kofeiną. Zanotuj, co to było (napój, shot, saszetka czy tabletka) i mniej więcej ile. Nie czekaj na objawy: liczy się wczesne leczenie.",
     "cs": "Jakmile zjistíte, že váš pes pozřel kofein, obraťte se na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, o co šlo (nápoj, shot, sáček nebo tableta) a zhruba kolik. Nečekejte, až se objeví příznaky: na včasné léčbě záleží.",
-    "hr": "Obrati se veterinaru ili telefonskoj liniji za otrovanja životinja čim shvatiš da je pas unio kofein. Zapiši što je to bilo (piće, shot, vrećica ili tableta) i otprilike koliko. Ne čekaj da se pojave znakovi: rano liječenje je važno."
+    "hr": "Obrati se veterinaru ili telefonskoj liniji za otrovanja životinja čim shvatiš da je pas unio kofein. Zapiši što je to bilo (piće, shot, vrećica ili tableta) i otprilike koliko. Ne čekaj da se pojave znakovi: rano liječenje je važno.",
+    "sv": "Kontakta veterinären eller en giftrådgivning för djur så snart du förstår att hunden har fått i sig koffein. Notera vad det var (dryck, shot, påse eller tablett) och ungefär hur mycket. Vänta inte på symtom: tidig behandling gör skillnad."
   },
   "serving": null,
   "child": {
@@ -182,7 +196,8 @@
     "nl": "Energiedrankjes zijn helemaal niet voor honden. Veeg gemorste drank snel op en vertel het aan een volwassene als je hond ervan drinkt.",
     "pl": "Napoje energetyczne w ogóle nie są dla psów. Szybko wycieraj rozlany napój i powiedz dorosłemu, jeśli twój pies trochę wypije.",
     "cs": "Energetické nápoje nejsou pro psy vůbec. Rozlitý nápoj hned utři, a když se ho pes napije, řekni to dospělému.",
-    "hr": "Energetska pića uopće nisu za pse. Brzo obriši ono što se prolije, a ako pas popije malo, reci odrasloj osobi."
+    "hr": "Energetska pića uopće nisu za pse. Brzo obriši ono što se prolije, a ako pas popije malo, reci odrasloj osobi.",
+    "sv": "Energidrycker är inte alls för hundar. Torka snabbt upp spill och säg till en vuxen om hunden dricker energidryck."
   },
   "faq": [
     {
@@ -197,7 +212,8 @@
         "nl": "En energieshots en cafeïnetabletten?",
         "pl": "A shoty energetyczne i tabletki z kofeiną?",
         "cs": "A co energetické shoty a kofeinové tablety?",
-        "hr": "A energetski shotovi i tablete s kofeinom?"
+        "hr": "A energetski shotovi i tablete s kofeinom?",
+        "sv": "Vad gäller för energishots och koffeintabletter?"
       },
       "a": {
         "en": "They contain caffeine too. Keep them out of reach and call your vet straight away if your dog gets into them.",
@@ -210,7 +226,8 @@
         "nl": "Die bevatten ook cafeïne. Houd ze buiten bereik en bel meteen je dierenarts als je hond eraan heeft gezeten.",
         "pl": "One też zawierają kofeinę. Trzymaj je poza zasięgiem psa i od razu zadzwoń do weterynarza, jeśli pies się do nich dobierze.",
         "cs": "Také obsahují kofein. Mějte je mimo dosah psa, a pokud se k nim pes dostane, zavolejte hned veterináři.",
-        "hr": "I oni sadrže kofein. Drži ih izvan dosega i odmah nazovi veterinara ako pas dođe do njih."
+        "hr": "I oni sadrže kofein. Drži ih izvan dosega i odmah nazovi veterinara ako pas dođe do njih.",
+        "sv": "De innehåller också koffein. Förvara dem utom räckhåll och ring veterinären direkt om hunden kommer åt dem."
       }
     }
   ],
@@ -338,6 +355,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b436424cfceed085330eb53e301a94070de38669d15f80c888954667ba44b108"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "590c4f0466a4483d48a5d8f76f097ade25bebf45b049007e7f3bc47fc3754d62"
     }
   }
 }

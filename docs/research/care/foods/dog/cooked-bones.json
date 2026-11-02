@@ -12,7 +12,8 @@
     "nl": "Gekookte botten",
     "pl": "Gotowane kości",
     "cs": "Tepelně upravené kosti",
-    "hr": "Kuhane kosti"
+    "hr": "Kuhane kosti",
+    "sv": "Kokta ben"
   },
   "question": {
     "en": "Can dogs eat cooked bones?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden gekookte botten eten?",
     "pl": "Czy psy mogą jeść gotowane kości?",
     "cs": "Mohou psi jíst tepelně upravené kosti?",
-    "hr": "Smiju li psi jesti kuhane kosti?"
+    "hr": "Smiju li psi jesti kuhane kosti?",
+    "sv": "Får hundar äta kokta ben?"
   },
   "url_slug": {
     "en": "cooked-bones",
@@ -38,7 +40,8 @@
     "nl": "gekookte-botten",
     "pl": "gotowane-kosci",
     "cs": "tepelne-upravene-kosti",
-    "hr": "kuhane-kosti"
+    "hr": "kuhane-kosti",
+    "sv": "kokta-ben"
   },
   "level": "dangerous",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee. Geef een hond nooit gekookte botten. Gekookte botten splinteren in scherpe stukjes die de bek kunnen verwonden, verstikking kunnen veroorzaken of de darmen kunnen verstoppen. Gekookte botten van gevogelte zijn extra broos en kunnen tot een spoedgeval bij de dierenarts leiden.",
     "pl": "Nie. Nigdy nie dawaj psu gotowanych kości. Gotowane kości rozpadają się na ostre odłamki, które mogą skaleczyć pysk, spowodować zadławienie lub zatkać przewód pokarmowy. Gotowane kości drobiowe są szczególnie kruche i mogą sprawić, że pies będzie potrzebował pilnej pomocy weterynarza.",
     "cs": "Ne. Nikdy psovi nedávejte tepelně upravené kosti. Tepelně upravené kosti se tříští na ostré úlomky, které mohou poranit tlamu, způsobit dušení nebo ucpat střeva. Tepelně upravené drůbeží kosti jsou zvlášť křehké a mohou si vyžádat návštěvu veterinární pohotovosti.",
-    "hr": "Ne. Nikad ne daj psu termički obrađene kosti. One se lome u oštre krhotine koje mogu porezati usta, izazvati gušenje ili začepiti crijeva. Termički obrađene kosti peradi osobito su krhke i mogu dovesti do hitnog slučaja kod veterinara."
+    "hr": "Ne. Nikad ne daj psu termički obrađene kosti. One se lome u oštre krhotine koje mogu porezati usta, izazvati gušenje ili začepiti crijeva. Termički obrađene kosti peradi osobito su krhke i mogu dovesti do hitnog slučaja kod veterinara.",
+    "sv": "Nej. Ge aldrig en hund tillagade ben. Tillagade ben splittras i vassa flisor som kan skära i munnen, orsaka kvävning eller ge stopp i tarmen. Tillagade fågelben är särskilt sköra och kan kräva akut veterinärvård."
   },
   "why": {
     "en": "Cooking makes bones brittle, so they break into sharp splinters. Chicken and turkey bones are the classic example, but any bones from the kitchen table can injure a dog. The FDA has received reports of choking, mouth wounds, vomiting, diarrhoea, rectal bleeding and gut blockages in dogs that ate bones or bone treats.",
@@ -65,7 +69,8 @@
     "nl": "Door koken worden botten broos, zodat ze in scherpe splinters breken. Kippen- en kalkoenbotten zijn het bekende voorbeeld, maar alle botten van de eettafel kunnen een hond verwonden. De FDA heeft meldingen gekregen van verstikking, wonden in de bek, braken, diarree, bloedingen uit de anus en darmverstoppingen bij honden die botten of botsnacks hadden gegeten.",
     "pl": "Gotowanie sprawia, że kości stają się kruche i łamią się na ostre odłamki. Kości kurczaka i indyka to klasyczny przykład, ale każda kość ze stołu może zranić psa. Do FDA wpłynęły zgłoszenia zadławień, ran w pysku, wymiotów, biegunki, krwawienia z odbytu i niedrożności jelit u psów, które zjadły kości lub gryzaki z kości.",
     "cs": "Tepelnou úpravou kosti zkřehnou, takže se lámou na ostré střípky. Typickým příkladem jsou kuřecí a krůtí kosti, ale psa může poranit jakákoli kost ze stolu. FDA obdržela hlášení o dušení, poraněních tlamy, zvracení, průjmu, krvácení z konečníku a ucpání střev u psů, kteří snědli kosti nebo kostěné pamlsky.",
-    "hr": "Termičkom obradom kosti postaju krhke pa se lome u oštre krhotine. Pileće i pureće kosti klasičan su primjer, ali svaka kost sa stola može ozlijediti psa. FDA je zaprimila prijave gušenja, rana u ustima, povraćanja, proljeva, krvarenja iz rektuma i začepljenja crijeva kod pasa koji su jeli kosti ili poslastice od kostiju."
+    "hr": "Termičkom obradom kosti postaju krhke pa se lome u oštre krhotine. Pileće i pureće kosti klasičan su primjer, ali svaka kost sa stola može ozlijediti psa. FDA je zaprimila prijave gušenja, rana u ustima, povraćanja, proljeva, krvarenja iz rektuma i začepljenja crijeva kod pasa koji su jeli kosti ili poslastice od kostiju.",
+    "sv": "Tillagning gör benen sköra, så de bryts i vassa flisor. Kyckling- och kalkonben är det klassiska exemplet, men alla ben från matbordet kan skada en hund. FDA har fått rapporter om kvävning, sår i munnen, kräkningar, diarré, blödning från ändtarmen och tarmstopp hos hundar som ätit ben eller godbitar av ben."
   },
   "signs": {
     "en": [
@@ -144,6 +149,13 @@
       "Povraćanje",
       "Proljev",
       "Krvarenje iz anusa"
+    ],
+    "sv": [
+      "Kvävning eller kväljningar",
+      "Sår eller blödning i munnen",
+      "Kräkningar",
+      "Diarré",
+      "Blödning från stjärten"
     ]
   },
   "what_to_do": {
@@ -157,7 +169,8 @@
     "nl": "Neem meteen contact op met je dierenarts als je hond gekookte botten heeft gegeten, ook als hij in orde lijkt. Schrijf op wat voor bot het was en ongeveer hoeveel er is gegeten. Wacht niet op tekenen van een verstopping.",
     "pl": "Od razu skontaktuj się z weterynarzem, jeśli twój pies zjadł gotowane kości, nawet jeśli wydaje się, że nic mu nie jest. Zanotuj, jaka to była kość i mniej więcej ile zjadł. Nie czekaj na objawy niedrożności.",
     "cs": "Pokud váš pes snědl tepelně upravené kosti, okamžitě se obraťte na veterináře, i když se zdá, že je v pořádku. Poznamenejte si, o jakou kost šlo a zhruba kolik pes snědl. Nečekejte na známky ucpání.",
-    "hr": "Odmah se obrati veterinaru ako je pas pojeo termički obrađene kosti, čak i ako se čini da je dobro. Zapiši o kakvoj je kosti riječ i otprilike koliko je pojeo. Ne čekaj da se pojave znakovi začepljenja."
+    "hr": "Odmah se obrati veterinaru ako je pas pojeo termički obrađene kosti, čak i ako se čini da je dobro. Zapiši o kakvoj je kosti riječ i otprilike koliko je pojeo. Ne čekaj da se pojave znakovi začepljenja.",
+    "sv": "Kontakta veterinären direkt om hunden har ätit tillagade ben, även om den verkar må bra. Notera vilken sorts ben det var och ungefär hur mycket den åt. Vänta inte på tecken på stopp."
   },
   "serving": null,
   "child": {
@@ -171,7 +184,8 @@
     "nl": "Botten van ons bord zijn niet voor honden. Ze breken in scherpe stukjes. Vertel het aan een volwassene als je hond er een vindt.",
     "pl": "Kości z naszych talerzy nie są dla psów. Łamią się na ostre kawałki. Powiedz dorosłemu, jeśli twój pies jakąś znajdzie.",
     "cs": "Kosti z našich talířů nejsou pro psy. Lámou se na ostré kousky. Když pes nějakou najde, řekni to dospělému.",
-    "hr": "Kosti s naših tanjura nisu za pse. Lome se na oštre komadiće. Ako pas nađe kost, reci odrasloj osobi."
+    "hr": "Kosti s naših tanjura nisu za pse. Lome se na oštre komadiće. Ako pas nađe kost, reci odrasloj osobi.",
+    "sv": "Ben från våra tallrikar är inte för hundar. De går sönder i vassa bitar. Säg till en vuxen om hunden hittar ett."
   },
   "faq": [
     {
@@ -186,7 +200,8 @@
         "nl": "Zijn kippenbotten het ergst?",
         "pl": "Czy kości kurczaka są najgorsze?",
         "cs": "Jsou nejhorší kuřecí kosti?",
-        "hr": "Jesu li pileće kosti najgore?"
+        "hr": "Jesu li pileće kosti najgore?",
+        "sv": "Är kycklingben värst?"
       },
       "a": {
         "en": "Cooked poultry bones are especially brittle and splinter easily, but any cooked bone from the table can cause injury.",
@@ -199,7 +214,8 @@
         "nl": "Gekookte botten van gevogelte zijn extra broos en splinteren makkelijk, maar elk gekookt bot van tafel kan letsel veroorzaken.",
         "pl": "Gotowane kości drobiowe są szczególnie kruche i łatwo się łamią na odłamki, ale każda gotowana kość ze stołu może spowodować uraz.",
         "cs": "Tepelně upravené drůbeží kosti jsou zvlášť křehké a snadno se tříští, ale poranit může jakákoli tepelně upravená kost ze stolu.",
-        "hr": "Termički obrađene kosti peradi osobito su krhke i lako se lome u krhotine, ali svaka termički obrađena kost sa stola može izazvati ozljedu."
+        "hr": "Termički obrađene kosti peradi osobito su krhke i lako se lome u krhotine, ali svaka termički obrađena kost sa stola može izazvati ozljedu.",
+        "sv": "Tillagade fågelben är särskilt sköra och splittras lätt, men alla tillagade ben från matbordet kan orsaka skador."
       }
     },
     {
@@ -214,7 +230,8 @@
         "nl": "Hoe voorkom ik dat mijn hond aan botten komt?",
         "pl": "Jak sprawić, żeby pies nie dobierał się do kości?",
         "cs": "Jak zabránit tomu, aby se pes ke kostem dostal?",
-        "hr": "Kako spriječiti da pas dođe do kostiju?"
+        "hr": "Kako spriječiti da pas dođe do kostiju?",
+        "sv": "Hur hindrar jag att hunden får tag på ben?"
       },
       "a": {
         "en": "Keep platters out of reach while cooking and eating, and be careful what goes in the bin: dogs often raid the trash for carcasses and steak bones.",
@@ -227,7 +244,8 @@
         "nl": "Zet schalen buiten bereik tijdens het koken en eten, en let op wat je in de vuilnisbak gooit: honden plunderen vaak de vuilnisbak op zoek naar karkassen en biefstukbotten.",
         "pl": "Podczas gotowania i jedzenia trzymaj półmiski poza zasięgiem psa i uważaj, co wyrzucasz do kosza: psy często przeszukują śmieci w poszukiwaniu resztek drobiu i kości ze steków.",
         "cs": "Při vaření a jídle mějte mísy mimo dosah psa a dávejte pozor, co vyhazujete do koše: psi často vybírají odpadky kvůli zbytkům drůbeže a kostem ze steaků.",
-        "hr": "Dok se kuha i jede, drži pladnjeve izvan njegova dosega i pazi što bacaš u smeće: psi često prekapaju po smeću tražeći ostatke peradi i kosti od odrezaka."
+        "hr": "Dok se kuha i jede, drži pladnjeve izvan njegova dosega i pazi što bacaš u smeće: psi često prekapaju po smeću tražeći ostatke peradi i kosti od odrezaka.",
+        "sv": "Ställ fat utom räckhåll när du lagar mat och äter, och tänk på vad du slänger i soporna: hundar letar ofta i soporna efter kycklingskrov och benbitar från stekar."
       }
     }
   ],
@@ -363,6 +381,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3c4acaacae084b2f026c1109559de5fb773642760edc83d59a12fdeb1eea530b"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e2e92d70ac1e57881869da2e0e7e2694e278ce57171851b6f9aa15de53a5e3d9"
     }
   }
 }

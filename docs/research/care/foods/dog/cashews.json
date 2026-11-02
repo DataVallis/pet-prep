@@ -12,7 +12,8 @@
     "nl": "Cashewnoten",
     "pl": "Orzechy nerkowca",
     "cs": "Kešu ořechy",
-    "hr": "Indijski oraščići"
+    "hr": "Indijski oraščići",
+    "sv": "Cashewnötter"
   },
   "question": {
     "en": "Can dogs eat cashews?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden cashewnoten eten?",
     "pl": "Czy psy mogą jeść orzechy nerkowca?",
     "cs": "Mohou psi jíst kešu ořechy?",
-    "hr": "Smiju li psi jesti indijske oraščiće?"
+    "hr": "Smiju li psi jesti indijske oraščiće?",
+    "sv": "Får hundar äta cashewnötter?"
   },
   "url_slug": {
     "en": "cashews",
@@ -38,7 +40,8 @@
     "nl": "cashewnoten",
     "pl": "orzechy-nerkowca",
     "cs": "kesu-orechy",
-    "hr": "indijski-orascici"
+    "hr": "indijski-orascici",
+    "sv": "cashewnotter"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Ja, een paar gewone cashewnoten als af en toe een snoepje zijn over het algemeen veilig: gepeld, ongezouten en ongekruid. Ze bevatten veel vet, dus te veel kan maagklachten of alvleesklierontsteking veroorzaken. Vermijd gemengde noten, want daar kunnen giftige macadamianoten in zitten.",
     "pl": "Tak, kilka zwykłych orzechów nerkowca jako okazjonalny smakołyk jest zazwyczaj bezpiecznych: łuskanych, niesolonych i nieprzyprawionych. Mają dużo tłuszczu, więc zbyt wiele może wywołać problemy z brzuchem lub zapalenie trzustki. Unikaj mieszanek orzechów, które mogą zawierać toksyczne orzechy makadamia.",
     "cs": "Ano, pár čistých kešu ořechů jako občasný pamlsek je obecně bezpečných: loupaných, nesolených a neochucených. Mají hodně tuku, takže příliš mnoho jich může podráždit žaludek nebo způsobit zánět slinivky břišní. Vyhněte se směsím ořechů, které mohou obsahovat jedovaté makadamové ořechy.",
-    "hr": "Da, nekoliko običnih indijskih oraščića kao povremena poslastica uglavnom je sigurno: oljuštenih, neslanih i nezačinjenih. Sadrže mnogo masti, pa previše njih može izazvati probavne smetnje ili upalu gušterače. Izbjegavaj mješavine orašastih plodova, koje mogu sadržavati otrovnu makadamiju."
+    "hr": "Da, nekoliko običnih indijskih oraščića kao povremena poslastica uglavnom je sigurno: oljuštenih, neslanih i nezačinjenih. Sadrže mnogo masti, pa previše njih može izazvati probavne smetnje ili upalu gušterače. Izbjegavaj mješavine orašastih plodova, koje mogu sadržavati otrovnu makadamiju.",
+    "sv": "Ja, några naturella cashewnötter som en godbit ibland är i regel säkra: skalade, osaltade och okryddade. De är mycket feta, så för många kan ge orolig mage eller bukspottkörtelinflammation. Undvik nötblandningar, som kan innehålla giftiga macadamianötter."
   },
   "why": {
     "en": "Cashews aren't toxic, but they are a high-fat snack: eating too many can lead to tummy upset, pancreatitis and weight gain. Salted cashews add salt, which in excess is harmful. The biggest risk comes from other nuts in a mix, such as macadamias. Some dogs may react with swelling, itching or hives.",
@@ -65,7 +69,8 @@
     "nl": "Cashewnoten zijn niet giftig, maar wel een vette snack: te veel eten kan leiden tot maag-darmklachten, alvleesklierontsteking en overgewicht. Gezouten cashewnoten bevatten zout, en te veel zout is schadelijk. Het grootste risico komt van andere noten in een mix, zoals macadamianoten. Sommige honden kunnen reageren met zwelling, jeuk of netelroos (bultjes).",
     "pl": "Orzechy nerkowca nie są toksyczne, ale to bardzo tłusta przekąska: zbyt duża ilość może prowadzić do problemów z brzuchem, zapalenia trzustki i przybierania na wadze. Solone orzechy nerkowca dostarczają soli, która w nadmiarze szkodzi. Największe ryzyko stanowią inne orzechy w mieszance, np. makadamia. Niektóre psy mogą zareagować obrzękiem, swędzeniem lub pokrzywką.",
     "cs": "Kešu ořechy nejsou jedovaté, ale jsou to velmi tučné pochutiny: když jich pes sní příliš, může mít zažívací potíže, zánět slinivky břišní a přibrat na váze. Solené kešu obsahují navíc sůl, která je v nadbytku škodlivá. Největší riziko představují jiné ořechy ve směsi, například makadamové. Někteří psi mohou reagovat otokem, svěděním nebo kopřivkou.",
-    "hr": "Indijski oraščići nisu otrovni, ali su vrlo masna grickalica: previše njih može dovesti do probavnih smetnji, upale gušterače i debljanja. Slani indijski oraščići donose i sol, koja je u višku štetna. Najveći rizik dolazi od drugih orašastih plodova u mješavini, poput makadamije. Neki psi mogu reagirati oticanjem, svrbežom ili koprivnjačom."
+    "hr": "Indijski oraščići nisu otrovni, ali su vrlo masna grickalica: previše njih može dovesti do probavnih smetnji, upale gušterače i debljanja. Slani indijski oraščići donose i sol, koja je u višku štetna. Najveći rizik dolazi od drugih orašastih plodova u mješavini, poput makadamije. Neki psi mogu reagirati oticanjem, svrbežom ili koprivnjačom.",
+    "sv": "Cashewnötter är inte giftiga, men de är ett fett mellanmål: för många kan leda till orolig mage, bukspottkörtelinflammation (pankreatit) och viktökning. Saltade cashewnötter ger salt, som är skadligt i för stora mängder. Den största risken kommer från andra nötter i en blandning, som macadamianötter. Vissa hundar kan reagera med svullnad, klåda eller nässelutslag."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "nl": "Let op braken, diarree, zwelling, jeuk of netelroos (bultjes) en bel je dierenarts als die optreden. Heeft je hond veel gegeten, gezouten noten of een mix waar macadamianoten in kunnen zitten? Bel je dierenarts dan meteen.",
     "pl": "Obserwuj, czy nie pojawiają się wymioty, biegunka, obrzęk, swędzenie lub pokrzywka, i zadzwoń do weterynarza, jeśli wystąpią. Jeśli twój pies zjadł dużą ilość, solone orzechy albo mieszankę, która może zawierać orzechy makadamia, od razu zadzwoń do weterynarza.",
     "cs": "Sledujte, zda se neobjeví zvracení, průjem, otok, svědění nebo kopřivka, a pokud ano, zavolejte veterináři. Pokud váš pes snědl velké množství, solené ořechy nebo směs, ve které mohly být makadamové ořechy, zavolejte veterináři hned.",
-    "hr": "Prati pojavljuju li se povraćanje, proljev, oticanje, svrbež ili koprivnjača i nazovi veterinara ako se pojave. Ako je pas pojeo veliku količinu, slane oraščiće ili mješavinu koja može sadržavati makadamiju, odmah nazovi veterinara."
+    "hr": "Prati pojavljuju li se povraćanje, proljev, oticanje, svrbež ili koprivnjača i nazovi veterinara ako se pojave. Ako je pas pojeo veliku količinu, slane oraščiće ili mješavinu koja može sadržavati makadamiju, odmah nazovi veterinara.",
+    "sv": "Håll utkik efter kräkningar, diarré, svullnad, klåda eller nässelutslag och ring veterinären om det dyker upp. Om hunden har ätit en stor mängd, saltade nötter eller en blandning som kan innehålla macadamianötter, ring veterinären direkt."
   },
   "serving": {
     "en": "Only a few plain cashews, shelled and unsalted, never from a mixed-nut bag.",
@@ -92,7 +98,8 @@
     "nl": "Alleen een paar gewone cashewnoten, gepeld en ongezouten, nooit uit een zak gemengde noten.",
     "pl": "Tylko kilka zwykłych orzechów nerkowca, łuskanych i niesolonych, nigdy z torebki z mieszanką orzechów.",
     "cs": "Jen pár čistých kešu ořechů, loupaných a nesolených, nikdy ze sáčku se směsí ořechů.",
-    "hr": "Samo nekoliko običnih indijskih oraščića, oljuštenih i neslanih, nikad iz vrećice s mješavinom orašastih plodova."
+    "hr": "Samo nekoliko običnih indijskih oraščića, oljuštenih i neslanih, nikad iz vrećice s mješavinom orašastih plodova.",
+    "sv": "Bara några naturella cashewnötter, skalade och osaltade, aldrig ur en påse med nötblandning."
   },
   "child": {
     "en": "A dog may have one or two plain cashews sometimes. Salty nut mixes are not for dogs.",
@@ -105,7 +112,8 @@
     "nl": "Een hond mag af en toe een of twee gewone cashewnoten. Zoute notenmixen zijn niet voor honden.",
     "pl": "Pies może czasem dostać jeden lub dwa zwykłe orzechy nerkowca. Słone mieszanki orzechów nie są dla psów.",
     "cs": "Pes může občas dostat jeden nebo dva čisté kešu ořechy. Slané směsi ořechů nejsou pro psy.",
-    "hr": "Pas ponekad smije dobiti jedan ili dva obična indijska oraščića. Slane mješavine orašastih plodova nisu za pse."
+    "hr": "Pas ponekad smije dobiti jedan ili dva obična indijska oraščića. Slane mješavine orašastih plodova nisu za pse.",
+    "sv": "En hund kan ibland få en eller två osaltade cashewnötter. Salta nötblandningar är inte för hundar."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "nl": "Waarom geen gemengde noten?",
         "pl": "Dlaczego nie mieszanka orzechów?",
         "cs": "Proč ne směs ořechů?",
-        "hr": "Zašto izbjegavati mješavine orašastih plodova?"
+        "hr": "Zašto izbjegavati mješavine orašastih plodova?",
+        "sv": "Varför inte nötblandningar?"
       },
       "a": {
         "en": "Mixes may contain macadamia nuts, which are very toxic to dogs, and are often salted.",
@@ -133,7 +142,8 @@
         "nl": "In een mix kunnen macadamianoten zitten, en die zijn erg giftig voor honden. Bovendien zijn mixen vaak gezouten.",
         "pl": "Mieszanki mogą zawierać orzechy makadamia, które są bardzo toksyczne dla psów, i często są solone.",
         "cs": "Směsi mohou obsahovat makadamové ořechy, které jsou pro psy velmi jedovaté, a často jsou solené.",
-        "hr": "Mješavine mogu sadržavati makadamiju, koja je vrlo otrovna za pse, a često su i slane."
+        "hr": "Mješavine mogu sadržavati makadamiju, koja je vrlo otrovna za pse, a često su i slane.",
+        "sv": "Blandningar kan innehålla macadamianötter, som är mycket giftiga för hundar, och är ofta saltade."
       }
     }
   ],
@@ -250,6 +260,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "af46da435cc93b936ff0aa726ba5c961d8884520d2aa3eaadb22394c6cb23e91"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1b53b7bbd8496b992b510d454a3cb19e3758ec9eccc13623bc643e5c4f5255fe"
     }
   }
 }

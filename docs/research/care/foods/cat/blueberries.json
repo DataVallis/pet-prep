@@ -5,51 +5,59 @@
     "en": "Blueberries",
     "sl": "Borovnice",
     "cs": "Borůvky",
-    "hr": "Borovnice"
+    "hr": "Borovnice",
+    "sv": "Blåbär"
   },
   "question": {
     "en": "Can cats eat blueberries?",
     "sl": "Ali lahko mačke jedo borovnice?",
     "cs": "Mohou kočky jíst borůvky?",
-    "hr": "Smiju li mačke jesti borovnice?"
+    "hr": "Smiju li mačke jesti borovnice?",
+    "sv": "Får katter äta blåbär?"
   },
   "url_slug": {
     "en": "blueberries",
     "sl": "borovnice",
     "cs": "boruvky",
-    "hr": "borovnice"
+    "hr": "borovnice",
+    "sv": "blabar"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a few blueberries are fine as an occasional treat. A university vet hospital lists them among healthy human-food treats for cats and dogs, but cats are meat eaters and don't need fruit, so keep it to a small extra.",
     "sl": "Da, nekaj borovnic je v redu kot občasen priboljšek. Univerzitetna veterinarska bolnišnica jih navaja med zdravimi priboljški iz človeške hrane za mačke in pse, vendar so mačke mesojede in sadja ne potrebujejo, zato naj bodo le majhen dodatek.",
     "cs": "Ano, pár borůvek je jako občasný pamlsek v pořádku. Jedna univerzitní veterinární nemocnice je řadí mezi zdravé pamlsky z lidské stravy pro kočky a psy, kočky jsou ale masožravci a ovoce nepotřebují, takže ať jsou jen malým doplňkem.",
-    "hr": "Da, nekoliko borovnica u redu je kao povremena poslastica. Jedna sveučilišna veterinarska bolnica navodi ih među zdravim poslasticama iz ljudske hrane za mačke i pse, ali mačke su mesojedi i ne trebaju voće, pa neka ostanu mali dodatak."
+    "hr": "Da, nekoliko borovnica u redu je kao povremena poslastica. Jedna sveučilišna veterinarska bolnica navodi ih među zdravim poslasticama iz ljudske hrane za mačke i pse, ali mačke su mesojedi i ne trebaju voće, pa neka ostanu mali dodatak.",
+    "sv": "Ja, några blåbär går bra som godbit någon gång ibland. Ett universitetsdjursjukhus räknar dem till de hälsosamma godbitarna från människomat för katter och hundar, men katter är köttätare och behöver inte frukt, så låt det bara vara något litet extra."
   },
   "why": {
     "en": "NC State's veterinary hospital lists blueberries among healthy human-food treats for cats and dogs, given in measured amounts and counted in the daily calories. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
     "sl": "Veterinarska bolnišnica univerze NC State borovnice navaja med zdravimi priboljški iz človeške hrane za mačke in pse, ki jih dajemo v odmerjenih količinah in upoštevamo v dnevnem vnosu kalorij. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave.",
     "cs": "Veterinární nemocnice Státní univerzity Severní Karolíny (NC State) řadí borůvky mezi zdravé pamlsky z lidské stravy pro kočky a psy, podávané v odměřeném množství a započítané do denního příjmu kalorií. Kočky jsou obligátní masožravci a ovoce nepotřebují, pamlsky by měly tvořit jen malou část denní stravy a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
-    "hr": "Veterinarska bolnica sveučilišta NC State navodi borovnice među zdravim poslasticama iz ljudske hrane za mačke i pse, koje se daju u odmjerenim količinama i uračunavaju u dnevni unos kalorija. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe."
+    "hr": "Veterinarska bolnica sveučilišta NC State navodi borovnice među zdravim poslasticama iz ljudske hrane za mačke i pse, koje se daju u odmjerenim količinama i uračunavaju u dnevni unos kalorija. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
+    "sv": "NC States djursjukhus räknar blåbär till de hälsosamma godbitarna från människomat för katter och hundar, i avvägda mängder som räknas in i det dagliga kaloriintaget. Katter är obligata köttätare och behöver inte frukt, godbitar ska bara vara en liten del av den dagliga maten, och allt växtmaterial kan ge kräkningar eller orolig mage."
   },
   "signs": null,
   "what_to_do": {
     "en": "Offer just a little first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
     "sl": "Najprej ponudite le malo. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
     "cs": "Nejdřív nabídněte jen trochu. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
-    "hr": "Najprije ponudi samo malo. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara."
+    "hr": "Najprije ponudi samo malo. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
+    "sv": "Ge bara lite först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären."
   },
   "serving": {
     "en": "A few berries now and then, counted in your cat's daily food.",
     "sl": "Občasno nekaj borovnic, upoštevanih v dnevnem obroku.",
     "cs": "Občas pár bobulí, započítaných do denní dávky krmiva vaší kočky.",
-    "hr": "Nekoliko bobica povremeno, uračunato u dnevni obrok tvoje mačke."
+    "hr": "Nekoliko bobica povremeno, uračunato u dnevni obrok tvoje mačke.",
+    "sv": "Några bär då och då, inräknade i kattens dagliga matranson."
   },
   "child": {
     "en": "A few blueberries can be a cat treat now and then. Cats mostly need meat, so fruit is only a small extra.",
     "sl": "Nekaj borovnic je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek.",
     "cs": "Pár borůvek může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže ovoce je jen malý přídavek.",
-    "hr": "Nekoliko borovnica povremeno može biti poslastica za macu. Mačkama uglavnom treba meso, pa je voće samo mali dodatak."
+    "hr": "Nekoliko borovnica povremeno može biti poslastica za macu. Mačkama uglavnom treba meso, pa je voće samo mali dodatak.",
+    "sv": "Några blåbär kan bli en godbit för katten då och då. Katter behöver mest kött, så frukt är bara något litet extra."
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "Do cats need fruit?",
         "sl": "Ali mačke potrebujejo sadje?",
         "cs": "Potřebují kočky ovoce?",
-        "hr": "Trebaju li mačke voće?"
+        "hr": "Trebaju li mačke voće?",
+        "sv": "Behöver katter frukt?"
       },
       "a": {
         "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
         "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek.",
         "cs": "Ne. Kočky jsou masožravci: potřebují živiny, které obsahuje maso, a ovoce ani zeleninu ve stravě nepotřebují. Ovoce může být vždy jen malým doplňkem.",
-        "hr": "Ne. Mačke su mesojedi: trebaju hranjive tvari koje se nalaze u mesu i u prehrani im ne treba ni voće ni povrće. Voće može biti samo mali dodatak."
+        "hr": "Ne. Mačke su mesojedi: trebaju hranjive tvari koje se nalaze u mesu i u prehrani im ne treba ni voće ni povrće. Voće može biti samo mali dodatak.",
+        "sv": "Nej. Katter är köttätare: de behöver näringsämnen som finns i kött och behöver inte frukt eller grönsaker i maten. Frukt kan bara vara något litet extra."
       }
     }
   ],
@@ -128,6 +138,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "17d790e85158aa82577f94d0feac9cdbf2e986d1aa8e40f7d3ff2687886322ea"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ab2867e30ede1a202cce74604caa536becd15b40d8ff71fa4990d745fc66ede5"
     }
   }
 }

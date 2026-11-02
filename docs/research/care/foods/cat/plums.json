@@ -12,7 +12,8 @@
     "nl": "Pruimen",
     "pl": "Śliwki",
     "cs": "Švestky",
-    "hr": "Šljive"
+    "hr": "Šljive",
+    "sv": "Plommon"
   },
   "question": {
     "en": "Can cats eat plums?",
@@ -25,7 +26,8 @@
     "nl": "Mogen katten pruimen eten?",
     "pl": "Czy koty mogą jeść śliwki?",
     "cs": "Mohou kočky jíst švestky?",
-    "hr": "Smiju li mačke jesti šljive?"
+    "hr": "Smiju li mačke jesti šljive?",
+    "sv": "Får katter äta plommon?"
   },
   "url_slug": {
     "en": "plums",
@@ -38,7 +40,8 @@
     "nl": "pruimen",
     "pl": "sliwki",
     "cs": "svestky",
-    "hr": "sljive"
+    "hr": "sljive",
+    "sv": "plommon"
   },
   "level": "dangerous",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee, liever niet. De ASPCA noemt de pruimenplant giftig voor katten: de stelen, bladeren en zaden (de pit) bevatten cyanide. Geef je kat geen pruimen, houd pitten en plantendelen buiten bereik en bel je dierenarts als je kat erop kauwt.",
     "pl": "Nie, lepiej nie. ASPCA uznaje śliwę za roślinę toksyczną dla kotów: jej łodygi, liście i nasiona (pestka) zawierają cyjanek. Nie dawaj kotu śliwek, trzymaj pestki i części rośliny poza jego zasięgiem i zadzwoń do weterynarza, jeśli kot coś z nich pogryzie.",
     "cs": "Ne, raději ne. ASPCA uvádí slivoň jako rostlinu toxickou pro kočky: její stonky, listy a semena (pecka) obsahují kyanid. Švestky kočce nenabízejte, pecky a části rostliny uchovávejte mimo její dosah, a pokud kočka něco z toho okouše, zavolejte veterináři.",
-    "hr": "Ne, bolje ne. ASPCA navodi biljku šljive kao otrovnu za mačke: njezine peteljke, listovi i sjemenke (koštica) sadrže cijanid. Ne nudi mački šljive, koštice i dijelove biljke drži izvan njezina dosega i nazovi veterinara ako mačka išta od toga sažvače."
+    "hr": "Ne, bolje ne. ASPCA navodi biljku šljive kao otrovnu za mačke: njezine peteljke, listovi i sjemenke (koštica) sadrže cijanid. Ne nudi mački šljive, koštice i dijelove biljke drži izvan njezina dosega i nazovi veterinara ako mačka išta od toga sažvače.",
+    "sv": "Nej, helst inte. ASPCA anger att plommonträdet är giftigt för katter: skaft, blad och kärnor (stenen) innehåller cyanid. Ge inte katten plommon, håll stenar och växtdelar utom räckhåll, och ring veterinären om katten tuggar på något av dem."
   },
   "why": {
     "en": "The stems, leaves and seeds contain cyanide (as cyanogenic glycosides) and are particularly toxic while wilting. The sources we found describe the risk from these plant parts and do not say the fruit flesh is safe for cats, so we do not recommend sharing it.",
@@ -65,7 +69,8 @@
     "nl": "De stelen, bladeren en zaden bevatten cyanide (in de vorm van cyanogene glycosiden) en zijn vooral giftig als ze verwelken. De bronnen die we hebben gevonden beschrijven het risico van deze plantendelen en zeggen niet dat het vruchtvlees veilig is voor katten. Daarom raden we af om het te delen.",
     "pl": "Łodygi, liście i nasiona zawierają cyjanek (w postaci glikozydów cyjanogennych) i są szczególnie toksyczne podczas więdnięcia. Źródła, które znaleźliśmy, opisują ryzyko związane z tymi częściami rośliny i nie podają, że miąższ owocu jest bezpieczny dla kotów, dlatego nie zalecamy dzielenia się nim.",
     "cs": "Stonky, listy a semena obsahují kyanid (ve formě kyanogenních glykosidů) a zvlášť toxické jsou při vadnutí. Zdroje, které jsme našli, popisují riziko těchto částí rostliny a neuvádějí, že by dužina plodu byla pro kočky bezpečná, proto ji kočkám nedoporučujeme.",
-    "hr": "Peteljke, listovi i sjemenke sadrže cijanid (u obliku cijanogenih glikozida) i posebno su otrovni dok venu. Izvori koje smo pronašli opisuju opasnost od tih dijelova biljke i ne navode da je meso ploda sigurno za mačke, pa ga ne preporučujemo dijeliti s mačkom."
+    "hr": "Peteljke, listovi i sjemenke sadrže cijanid (u obliku cijanogenih glikozida) i posebno su otrovni dok venu. Izvori koje smo pronašli opisuju opasnost od tih dijelova biljke i ne navode da je meso ploda sigurno za mačke, pa ga ne preporučujemo dijeliti s mačkom.",
+    "sv": "Skaft, blad och kärnor innehåller cyanid (i form av cyanogena glykosider) och är särskilt giftiga när de vissnar. Källorna vi har hittat beskriver risken med dessa växtdelar och säger inte att fruktköttet är säkert för katter, så vi avråder från att ge katten fruktköttet."
   },
   "signs": {
     "en": [
@@ -144,6 +149,13 @@
       "Otežano disanje",
       "Dahtanje",
       "Šok"
+    ],
+    "sv": [
+      "Tegelrött tandkött",
+      "Vidgade pupiller",
+      "Andningssvårigheter",
+      "Flämtning",
+      "Chock"
     ]
   },
   "what_to_do": {
@@ -157,7 +169,8 @@
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren als je kat op een pit, steel of bladeren heeft gekauwd. Schrijf op wat er is gegeten, hoeveel en wanneer. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, jeśli twój kot pogryzł pestkę, łodygę lub liście. Zapisz, co zjadł, ile i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Pokud vaše kočka okousala pecku, stonek nebo listy, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co snědla, kolik a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
-    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja ako je mačka žvakala košticu, peteljku ili listove. Zapiši što je pojedeno, koliko i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje."
+    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja ako je mačka žvakala košticu, peteljku ili listove. Zapiši što je pojedeno, koliko i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
+    "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur om katten har tuggat på en sten, ett skaft eller blad. Notera vad den åt, hur mycket och när. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma."
   },
   "serving": null,
   "child": {
@@ -171,7 +184,8 @@
     "nl": "Pruimen zijn een tussendoortje voor mensen. De pitten en bladeren zijn niet veilig voor katten. Kauwt je poes erop? Vertel het meteen aan een volwassene.",
     "pl": "Śliwki to przekąska dla ludzi. Ich pestki i liście nie są bezpieczne dla kotów, więc powiedz dorosłemu, jeśli kotek coś z nich pogryzie.",
     "cs": "Švestky jsou svačinka pro lidi. Jejich pecky a listy nejsou pro kočky bezpečné, takže když nějakou kočička okouše, řekni to dospělému.",
-    "hr": "Šljive su grickalica za ljude. Njihove koštice i listovi nisu sigurni za mace, zato reci odrasloj osobi ako maca neku žvače."
+    "hr": "Šljive su grickalica za ljude. Njihove koštice i listovi nisu sigurni za mace, zato reci odrasloj osobi ako maca neku žvače.",
+    "sv": "Plommon är mellanmål för människor. Stenarna och bladen är inte säkra för katter, så säg till en vuxen om katten tuggar på något av dem."
   },
   "faq": [
     {
@@ -186,7 +200,8 @@
         "nl": "Welk deel is het probleem?",
         "pl": "Która część jest problemem?",
         "cs": "Které části jsou nebezpečné?",
-        "hr": "Koji je dio problem?"
+        "hr": "Koji je dio problem?",
+        "sv": "Vilken del är problemet?"
       },
       "a": {
         "en": "The ASPCA says the stems, leaves and seeds contain cyanide, and that they are particularly toxic while wilting.",
@@ -199,7 +214,8 @@
         "nl": "Volgens de ASPCA bevatten de stelen, bladeren en zaden cyanide en zijn ze vooral giftig als ze verwelken.",
         "pl": "Według ASPCA łodygi, liście i nasiona zawierają cyjanek i są szczególnie toksyczne podczas więdnięcia.",
         "cs": "Podle ASPCA obsahují stonky, listy a semena kyanid a zvlášť toxické jsou při vadnutí.",
-        "hr": "ASPCA navodi da peteljke, listovi i sjemenke sadrže cijanid te da su posebno otrovni dok venu."
+        "hr": "ASPCA navodi da peteljke, listovi i sjemenke sadrže cijanid te da su posebno otrovni dok venu.",
+        "sv": "Enligt ASPCA innehåller skaft, blad och kärnor cyanid, och de är särskilt giftiga när de vissnar."
       }
     }
   ],
@@ -295,6 +311,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d64529ac89cf5cdbf200d67b9c7ec7dd4436897a405d9300af85d78d1da2cc1c"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f00aed4b9508e416c8b2aa0622ba9a92d1b81bc6fced9d87fb7f67d75820bca3"
     }
   }
 }

@@ -12,7 +12,8 @@
     "nl": "Ui",
     "pl": "Cebula",
     "cs": "Cibule",
-    "hr": "Luk"
+    "hr": "Luk",
+    "sv": "Lök"
   },
   "question": {
     "en": "Can dogs eat onion?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden ui eten?",
     "pl": "Czy psy mogą jeść cebulę?",
     "cs": "Mohou psi jíst cibuli?",
-    "hr": "Smiju li psi jesti luk?"
+    "hr": "Smiju li psi jesti luk?",
+    "sv": "Får hundar äta lök?"
   },
   "url_slug": {
     "en": "onion",
@@ -38,7 +40,8 @@
     "nl": "ui",
     "pl": "cebula",
     "cs": "cibule",
-    "hr": "luk"
+    "hr": "luk",
+    "sv": "lok"
   },
   "level": "toxic",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee. Ui is in elke vorm giftig voor honden: rauw, gekookt, gedroogd of als poeder. Ui beschadigt rode bloedcellen en kan bloedarmoede veroorzaken, waarbij verschijnselen vaak pas dagen later komen. Ook poeders en soepmixen tellen mee.",
     "pl": "Nie. Cebula jest toksyczna dla psów w każdej postaci: surowa, gotowana, suszona i w proszku. Uszkadza czerwone krwinki i może wywołać anemię, a objawy często pojawiają się dopiero po kilku dniach. Liczą się też przyprawy w proszku i zupy w proszku.",
     "cs": "Ne. Cibule je pro psy jedovatá v jakékoli podobě: syrová, tepelně upravená, sušená i v prášku. Poškozuje červené krvinky a může způsobit chudokrevnost (anémii), přičemž příznaky se často objeví až po několika dnech. Platí to i pro koření v prášku a polévkové směsi.",
-    "hr": "Ne. Luk je otrovan za pse u svakom obliku: sirov, termički obrađen, sušen ili u prahu. Oštećuje crvene krvne stanice i može izazvati anemiju, a znakovi se često pojave tek nakon nekoliko dana. To vrijedi i za luk u prahu i mješavine za juhu."
+    "hr": "Ne. Luk je otrovan za pse u svakom obliku: sirov, termički obrađen, sušen ili u prahu. Oštećuje crvene krvne stanice i može izazvati anemiju, a znakovi se često pojave tek nakon nekoliko dana. To vrijedi i za luk u prahu i mješavine za juhu.",
+    "sv": "Nej. Lök är giftig för hundar i alla former: rå, tillagad, torkad eller i pulverform. Den skadar de röda blodkropparna och kan orsaka blodbrist (anemi), och symtomen visar sig ofta först efter några dagar. Lökpulver och soppmixar räknas också."
   },
   "why": {
     "en": "It belongs to the allium family (onion, garlic, leek, chives), which is toxic to dogs. These plants contain compounds that damage red blood cells and can lead to anaemia. All parts and all forms are harmful: raw, cooked, dried and powdered. Stomach upset can happen with any amount; larger amounts damage the blood.",
@@ -65,7 +69,8 @@
     "nl": "Ui hoort bij de lookfamilie (ui, knoflook, prei, bieslook), die giftig is voor honden. Deze planten bevatten stoffen die rode bloedcellen beschadigen en tot bloedarmoede kunnen leiden. Alle delen en alle vormen zijn schadelijk: rauw, gekookt, gedroogd en als poeder. Maag-darmklachten kunnen bij elke hoeveelheid optreden; grotere hoeveelheden beschadigen het bloed.",
     "pl": "Cebula należy do rodziny czosnkowatych (cebula, czosnek, por, szczypiorek), toksycznej dla psów. Te rośliny zawierają związki, które uszkadzają czerwone krwinki i mogą prowadzić do anemii. Szkodliwe są wszystkie części i wszystkie postacie: surowa, gotowana, suszona i w proszku. Dolegliwości żołądkowe mogą wystąpić po każdej ilości; większe ilości uszkadzają krew.",
     "cs": "Patří mezi cibuloviny (rod Allium: cibule, česnek, pórek, pažitka), které jsou pro psy jedovaté. Tyto rostliny obsahují látky, které poškozují červené krvinky a mohou vést k chudokrevnosti (anémii). Škodlivé jsou všechny části a všechny podoby: syrová, tepelně upravená, sušená i v prášku. Podrážděný žaludek může způsobit jakékoli množství; větší množství poškozuje krev.",
-    "hr": "Pripada biljkama iz roda Allium (luk, češnjak, poriluk, vlasac), koje su otrovne za pse. Te biljke sadrže spojeve koji oštećuju crvene krvne stanice i mogu dovesti do anemije. Štetni su svi dijelovi i svi oblici: sirovi, termički obrađeni, sušeni i u prahu. Probavne tegobe mogu se pojaviti nakon bilo koje količine, a veće količine oštećuju krv."
+    "hr": "Pripada biljkama iz roda Allium (luk, češnjak, poriluk, vlasac), koje su otrovne za pse. Te biljke sadrže spojeve koji oštećuju crvene krvne stanice i mogu dovesti do anemije. Štetni su svi dijelovi i svi oblici: sirovi, termički obrađeni, sušeni i u prahu. Probavne tegobe mogu se pojaviti nakon bilo koje količine, a veće količine oštećuju krv.",
+    "sv": "Den hör till lökväxterna (lök, vitlök, purjolök, gräslök), som är giftiga för hundar. Växterna innehåller ämnen som skadar de röda blodkropparna och kan leda till blodbrist (anemi). Alla delar och alla former är skadliga: råa, tillagade, torkade och i pulverform. Magbesvär kan uppstå efter vilken mängd som helst; större mängder skadar blodet."
   },
   "signs": {
     "en": [
@@ -133,6 +138,12 @@
       "Pas jede manje nego inače",
       "Probavne tegobe, čak i nakon malih količina",
       "Znakovi anemije (oštećene crvene krvne stanice), obično nekoliko dana kasnije"
+    ],
+    "sv": [
+      "Kräkningar och diarré",
+      "Äter mindre än vanligt",
+      "Magbesvär, även efter små mängder",
+      "Tecken på blodbrist (skadade röda blodkroppar), oftast några dagar senare"
     ]
   },
   "what_to_do": {
@@ -146,7 +157,8 @@
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat er is gegeten (ui) en ongeveer hoeveel. Wacht niet op verschijnselen: schade aan het bloed is meestal pas een paar dagen later te zien.",
     "pl": "Od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co pies zjadł (cebulę) i mniej więcej ile. Nie czekaj na objawy: uszkodzenie krwi zwykle ujawnia się dopiero po kilku dniach.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co pes snědl (cibuli) a zhruba kolik. Nečekejte, až se objeví příznaky: poškození krve se obvykle projeví až po několika dnech.",
-    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je pas pojeo (luk) i otprilike koliko. Ne čekaj da se pojave znakovi: oštećenje krvi obično se pokaže tek nakon nekoliko dana."
+    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je pas pojeo (luk) i otprilike koliko. Ne čekaj da se pojave znakovi: oštećenje krvi obično se pokaže tek nakon nekoliko dana.",
+    "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt. Notera vad hunden åt (lök) och ungefär hur mycket. Vänta inte på symtom: skadorna på blodet syns oftast först några dagar senare."
   },
   "serving": null,
   "child": {
@@ -160,7 +172,8 @@
     "nl": "Uien zijn niet voor honden, ook niet gekookt in het eten. Ze kunnen het bloed van een hond ziek maken. Vertel het aan een volwassene als je hond ervan eet.",
     "pl": "Cebula nie jest dla psów, nawet ugotowana w jedzeniu. Może zaszkodzić psiej krwi. Powiedz dorosłemu, jeśli twój pies ją zje.",
     "cs": "Cibule není pro psy, ani ta uvařená v jídle. Může psovi poškodit krev. Když ji pes sní, řekni to dospělému.",
-    "hr": "Luk nije za pse, čak ni kuhan u hrani. Može naštetiti psećoj krvi. Reci odrasloj osobi ako ga tvoj pas pojede."
+    "hr": "Luk nije za pse, čak ni kuhan u hrani. Može naštetiti psećoj krvi. Reci odrasloj osobi ako ga tvoj pas pojede.",
+    "sv": "Lök är inte för hundar, inte ens stekt eller kokt lök i maten. Den kan göra hundens blod sjukt. Säg till en vuxen om din hund äter lök."
   },
   "faq": [
     {
@@ -175,7 +188,8 @@
         "nl": "Is het veilig als het gekookt is of als poeder?",
         "pl": "Czy po ugotowaniu lub w proszku jest bezpieczna?",
         "cs": "Je bezpečná tepelně upravená cibule nebo cibule v prášku?",
-        "hr": "Je li siguran kad je termički obrađen ili u prahu?"
+        "hr": "Je li siguran kad je termički obrađen ili u prahu?",
+        "sv": "Är lök ofarlig om den är tillagad eller i pulverform?"
       },
       "a": {
         "en": "No. Raw, cooked, dried, powdered and liquid forms are all poisonous to dogs.",
@@ -188,7 +202,8 @@
         "nl": "Nee. Rauw, gekookt, gedroogd, als poeder en vloeibaar: alle vormen zijn giftig voor honden.",
         "pl": "Nie. Postać surowa, gotowana, suszona, w proszku i płynna – wszystkie są trujące dla psów.",
         "cs": "Ne. Syrová, tepelně upravená, sušená, prášková i tekutá podoba je pro psy jedovatá.",
-        "hr": "Nije. Otrovan je za pse u svakom obliku: sirov, termički obrađen, sušen, u prahu i u tekućem obliku."
+        "hr": "Nije. Otrovan je za pse u svakom obliku: sirov, termički obrađen, sušen, u prahu i u tekućem obliku.",
+        "sv": "Nej. Råa, tillagade, torkade, pulveriserade och flytande former är alla giftiga för hundar."
       }
     },
     {
@@ -203,7 +218,8 @@
         "nl": "Waarom zie je niet meteen verschijnselen?",
         "pl": "Dlaczego objawy nie pojawiają się od razu?",
         "cs": "Proč se příznaky neobjeví hned?",
-        "hr": "Zašto se znakovi ne pokažu odmah?"
+        "hr": "Zašto se znakovi ne pokažu odmah?",
+        "sv": "Varför syns inte symtomen direkt?"
       },
       "a": {
         "en": "Symptoms can start within 24 hours but more often take a few days to appear; signs of anaemia typically develop several days after eating.",
@@ -216,7 +232,8 @@
         "nl": "Verschijnselen kunnen binnen 24 uur beginnen, maar komen vaker pas na een paar dagen; tekenen van bloedarmoede ontstaan meestal enkele dagen na het eten.",
         "pl": "Objawy mogą wystąpić w ciągu 24 godzin, ale częściej pojawiają się po kilku dniach; objawy anemii zwykle rozwijają się kilka dni po zjedzeniu.",
         "cs": "Příznaky mohou začít do 24 hodin, ale častěji se objeví až po několika dnech; známky chudokrevnosti se obvykle rozvinou několik dní po snědení.",
-        "hr": "Simptomi se mogu pojaviti unutar 24 sata, ali se češće pojave tek nakon nekoliko dana; znakovi anemije obično se razviju nekoliko dana nakon što je pas pojeo luk."
+        "hr": "Simptomi se mogu pojaviti unutar 24 sata, ali se češće pojave tek nakon nekoliko dana; znakovi anemije obično se razviju nekoliko dana nakon što je pas pojeo luk.",
+        "sv": "Symtomen kan börja inom 24 timmar men dröjer oftare några dagar; tecken på blodbrist utvecklas vanligtvis flera dagar efter att hunden ätit."
       }
     }
   ],
@@ -364,6 +381,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "556e86b6ca6c3fd34d2876fbe32b156809fa05693f99bf1a954d46e8db412c4b"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8032c244bc39a10305f9322cd0de4e72afcd062096082f0a90bb28b3be80f263"
     }
   }
 }

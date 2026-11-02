@@ -12,7 +12,8 @@
     "nl": "Xylitol",
     "pl": "Ksylitol",
     "cs": "Xylitol",
-    "hr": "Ksilitol"
+    "hr": "Ksilitol",
+    "sv": "Xylitol"
   },
   "question": {
     "en": "Can dogs eat xylitol?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden xylitol eten?",
     "pl": "Czy psy mogą jeść ksylitol?",
     "cs": "Mohou psi jíst xylitol?",
-    "hr": "Smiju li psi jesti ksilitol?"
+    "hr": "Smiju li psi jesti ksilitol?",
+    "sv": "Får hundar äta xylitol?"
   },
   "url_slug": {
     "en": "xylitol",
@@ -38,7 +40,8 @@
     "nl": "xylitol",
     "pl": "ksylitol",
     "cs": "xylitol",
-    "hr": "ksilitol"
+    "hr": "ksilitol",
+    "sv": "xylitol"
   },
   "level": "toxic",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee. Xylitol, een suikervrije zoetstof, is giftig voor honden. Zelfs kleine hoeveelheden kunnen een gevaarlijke daling van de bloedsuiker, toevallen en leverfalen veroorzaken. Het zit in suikervrije kauwgom, snoep, gebak, tandpasta en supplementen.",
     "pl": "Nie. Ksylitol, słodzik stosowany w produktach bez cukru, jest toksyczny dla psów. Nawet małe ilości mogą wywołać niebezpieczny spadek poziomu cukru we krwi, drgawki i niewydolność wątroby. Występuje w gumach do żucia bez cukru, słodyczach, wypiekach, pastach do zębów i suplementach.",
     "cs": "Ne. Xylitol, sladidlo používané místo cukru, je pro psy jedovatý. I malé množství může způsobit nebezpečný pokles hladiny cukru v krvi, záchvaty a selhání jater. Najdete ho ve žvýkačkách bez cukru, bonbonech, pekařských výrobcích, zubní pastě a doplňcích stravy.",
-    "hr": "Ne. Ksilitol, sladilo bez šećera, otrovan je za pse. Već male količine mogu izazvati opasan pad šećera u krvi, napadaje i zatajenje jetre. Nalazi se u žvakaćim gumama bez šećera, slatkišima, pekarskim proizvodima i kolačima, zubnim pastama i dodacima prehrani."
+    "hr": "Ne. Ksilitol, sladilo bez šećera, otrovan je za pse. Već male količine mogu izazvati opasan pad šećera u krvi, napadaje i zatajenje jetre. Nalazi se u žvakaćim gumama bez šećera, slatkišima, pekarskim proizvodima i kolačima, zubnim pastama i dodacima prehrani.",
+    "sv": "Nej. Xylitol, ett sötningsmedel i sockerfria produkter, är giftigt för hundar. Redan små mängder kan orsaka ett farligt blodsockerfall, kramper och leversvikt. Det finns i sockerfritt tuggummi, godis, bakverk, tandkräm och kosttillskott."
   },
   "why": {
     "en": "In dogs, xylitol can cause a rapid, dangerous drop in blood sugar. Some dogs also develop severe liver injury; how this happens is not yet known. Sugar-free gum is the most common source, and the amount of xylitol can differ even between flavours of one brand.",
@@ -65,7 +69,8 @@
     "nl": "Bij honden kan xylitol een snelle, gevaarlijke daling van de bloedsuiker veroorzaken. Sommige honden krijgen ook ernstige leverschade; hoe dat gebeurt, is nog niet bekend. Suikervrije kauwgom is de meest voorkomende bron, en de hoeveelheid xylitol kan zelfs per smaak van één merk verschillen.",
     "pl": "U psów ksylitol może wywołać gwałtowny, niebezpieczny spadek poziomu cukru we krwi. U niektórych psów dochodzi też do ciężkiego uszkodzenia wątroby; jego mechanizm nie jest jeszcze znany. Najczęstszym źródłem jest guma do żucia bez cukru, a ilość ksylitolu może się różnić nawet między smakami jednej marki.",
     "cs": "U psů může xylitol způsobit rychlý, nebezpečný pokles hladiny cukru v krvi. U některých psů dojde také k vážnému poškození jater; jak k němu dochází, zatím není známo. Nejčastějším zdrojem jsou žvýkačky bez cukru a množství xylitolu se může lišit i mezi příchutěmi jedné značky.",
-    "hr": "Kod pasa ksilitol može izazvati brz i opasan pad šećera u krvi. Kod nekih se pasa razvije i teško oštećenje jetre; još nije poznato kako do toga dolazi. Najčešći izvor su žvakaće gume bez šećera, a količina ksilitola može se razlikovati čak i između okusa iste marke."
+    "hr": "Kod pasa ksilitol može izazvati brz i opasan pad šećera u krvi. Kod nekih se pasa razvije i teško oštećenje jetre; još nije poznato kako do toga dolazi. Najčešći izvor su žvakaće gume bez šećera, a količina ksilitola može se razlikovati čak i između okusa iste marke.",
+    "sv": "Hos hundar kan xylitol orsaka ett snabbt, farligt blodsockerfall. Vissa hundar får också en allvarlig leverskada; hur det går till vet man ännu inte. Sockerfritt tuggummi är den vanligaste källan, och mängden xylitol kan skilja sig även mellan olika smaker av samma märke."
   },
   "signs": {
     "en": [
@@ -144,6 +149,13 @@
       "Nesiguran hod, gubitak koordinacije",
       "Napadaji",
       "Znakovi niskog šećera u krvi mogu se pojaviti unutar 30 minuta"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Svaghet och trötthet",
+      "Ostadig gång, nedsatt koordination",
+      "Kramper",
+      "Tecken på lågt blodsocker kan börja inom 30 minuter"
     ]
   },
   "what_to_do": {
@@ -157,7 +169,8 @@
     "nl": "Neem contact op met je dierenarts of een vergiftigingenlijn voor dieren zodra je merkt dat je hond iets met xylitol heeft gegeten. Schrijf op welk product het was en hoeveel er is gegeten. Wacht niet op verschijnselen, en geef je hond niets via de mond tenzij je dierenarts dat zegt.",
     "pl": "Skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt, gdy tylko zorientujesz się, że twój pies zjadł coś z ksylitolem. Zanotuj nazwę produktu i ile pies zjadł. Nie czekaj na objawy i nie podawaj niczego doustnie, chyba że weterynarz tak zaleci.",
     "cs": "Jakmile zjistíte, že váš pes snědl něco s xylitolem, obraťte se na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si výrobek a kolik ho pes snědl. Nečekejte, až se objeví příznaky a nic mu nepodávejte do tlamy, pokud vám to veterinář neřekne.",
-    "hr": "Obrati se veterinaru ili telefonskoj liniji za otrovanja životinja čim shvatiš da je tvoj pas pojeo nešto s ksilitolom. Zapiši o kojem je proizvodu riječ i koliko ga je pojeo. Ne čekaj da se pojave znakovi i ne daj mu ništa na usta osim ako ti veterinar tako kaže."
+    "hr": "Obrati se veterinaru ili telefonskoj liniji za otrovanja životinja čim shvatiš da je tvoj pas pojeo nešto s ksilitolom. Zapiši o kojem je proizvodu riječ i koliko ga je pojeo. Ne čekaj da se pojave znakovi i ne daj mu ništa na usta osim ako ti veterinar tako kaže.",
+    "sv": "Kontakta veterinären eller en giftrådgivning för djur så snart du inser att hunden ätit något med xylitol. Notera produkten och hur mycket hunden åt. Vänta inte på symtom, och ge inget via munnen om inte veterinären säger åt dig att göra det."
   },
   "serving": null,
   "child": {
@@ -171,7 +184,8 @@
     "nl": "In suikervrije kauwgom kan xylitol zitten, en dat is heel slecht voor honden. Houd kauwgom en tandpasta weg en vertel het aan een volwassene als je hond ervan eet.",
     "pl": "Guma do żucia bez cukru może zawierać ksylitol, który bardzo szkodzi psom. Trzymaj gumy i pastę do zębów poza zasięgiem psa i powiedz dorosłemu, jeśli pies coś takiego zje.",
     "cs": "Žvýkačky bez cukru můžou obsahovat xylitol, který je pro psy hodně špatný. Žvýkačky i zubní pastu dej tam, kam pes nedosáhne, a když je pes sní, řekni to dospělému.",
-    "hr": "Žvakaća guma bez šećera može sadržavati ksilitol, koji je jako loš za pse. Drži gume i zubnu pastu daleko od psa i reci odrasloj osobi ako ih pojede."
+    "hr": "Žvakaća guma bez šećera može sadržavati ksilitol, koji je jako loš za pse. Drži gume i zubnu pastu daleko od psa i reci odrasloj osobi ako ih pojede.",
+    "sv": "Sockerfritt tuggummi kan innehålla xylitol, som är jättedåligt för hundar. Håll tuggummi och tandkräm borta, och säg till en vuxen om hunden äter något av det."
   },
   "faq": [
     {
@@ -186,7 +200,8 @@
         "nl": "Waar zit xylitol in?",
         "pl": "Gdzie występuje ksylitol?",
         "cs": "Kde se xylitol vyskytuje?",
-        "hr": "Gdje se nalazi ksilitol?"
+        "hr": "Gdje se nalazi ksilitol?",
+        "sv": "Var finns xylitol?"
       },
       "a": {
         "en": "In sugar-free gum, sweets, baked goods, toothpaste, vitamins and supplements. Sugar-free gum is the most common source of poisoning.",
@@ -199,7 +214,8 @@
         "nl": "In suikervrije kauwgom, snoep, gebak, tandpasta, vitamines en supplementen. Suikervrije kauwgom is de meest voorkomende bron van vergiftiging.",
         "pl": "W gumach do żucia bez cukru, słodyczach, wypiekach, pastach do zębów, witaminach i suplementach. Guma do żucia bez cukru to najczęstsze źródło zatruć.",
         "cs": "Ve žvýkačkách bez cukru, bonbonech, pekařských výrobcích, zubní pastě, vitaminech a doplňcích stravy. Nejčastějším zdrojem otrav jsou žvýkačky bez cukru.",
-        "hr": "U žvakaćim gumama bez šećera, slatkišima, pekarskim proizvodima i kolačima, zubnim pastama, vitaminima i dodacima prehrani. Žvakaće gume bez šećera najčešći su izvor otrovanja."
+        "hr": "U žvakaćim gumama bez šećera, slatkišima, pekarskim proizvodima i kolačima, zubnim pastama, vitaminima i dodacima prehrani. Žvakaće gume bez šećera najčešći su izvor otrovanja.",
+        "sv": "I sockerfritt tuggummi, godis, bakverk, tandkräm, vitaminer och kosttillskott. Sockerfritt tuggummi är den vanligaste orsaken till förgiftning."
       }
     },
     {
@@ -214,7 +230,8 @@
         "nl": "Mag ik tandpasta voor mensen gebruiken voor mijn hond?",
         "pl": "Czy mogę używać ludzkiej pasty do zębów u psa?",
         "cs": "Mohu psovi čistit zuby lidskou zubní pastou?",
-        "hr": "Smijem li za psa koristiti zubnu pastu za ljude?"
+        "hr": "Smijem li za psa koristiti zubnu pastu za ljude?",
+        "sv": "Kan jag använda tandkräm för människor till min hund?"
       },
       "a": {
         "en": "Some toothpastes contain xylitol, which is toxic to dogs, so human toothpaste is not a safe choice.",
@@ -227,7 +244,8 @@
         "nl": "Sommige tandpasta’s bevatten xylitol, en dat is giftig voor honden, dus tandpasta voor mensen is geen veilige keuze.",
         "pl": "Niektóre pasty do zębów zawierają ksylitol, który jest toksyczny dla psów, więc ludzka pasta do zębów nie jest bezpiecznym wyborem.",
         "cs": "Některé zubní pasty obsahují xylitol, který je pro psy jedovatý, proto lidská zubní pasta není bezpečná volba.",
-        "hr": "Neke zubne paste sadrže ksilitol, koji je otrovan za pse, pa zubna pasta za ljude nije siguran izbor."
+        "hr": "Neke zubne paste sadrže ksilitol, koji je otrovan za pse, pa zubna pasta za ljude nije siguran izbor.",
+        "sv": "Vissa tandkrämer innehåller xylitol, som är giftigt för hundar, så tandkräm för människor är inget säkert val."
       }
     }
   ],
@@ -362,6 +380,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "382f495c2ba27bfa63d2791eb10ec3702dd64bf3fa8a3e03b5ab762758b5fe14"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9fd15d8a11024ea41b5a5a96f0b02fe9ead7603e921a5a361076183b23d4d52f"
     }
   }
 }

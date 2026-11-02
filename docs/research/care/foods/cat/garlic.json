@@ -12,7 +12,8 @@
     "nl": "Knoflook",
     "pl": "Czosnek",
     "cs": "Česnek",
-    "hr": "Češnjak"
+    "hr": "Češnjak",
+    "sv": "Vitlök"
   },
   "question": {
     "en": "Can cats eat garlic?",
@@ -25,7 +26,8 @@
     "nl": "Mogen katten knoflook eten?",
     "pl": "Czy koty mogą jeść czosnek?",
     "cs": "Mohou kočky jíst česnek?",
-    "hr": "Smiju li mačke jesti češnjak?"
+    "hr": "Smiju li mačke jesti češnjak?",
+    "sv": "Får katter äta vitlök?"
   },
   "url_slug": {
     "en": "garlic",
@@ -38,7 +40,8 @@
     "nl": "knoflook",
     "pl": "czosnek",
     "cs": "cesnek",
-    "hr": "cesnjak"
+    "hr": "cesnjak",
+    "sv": "vitlok"
   },
   "level": "toxic",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee. Knoflook is giftig voor katten en voor hen het giftigste lid van de uienfamilie. Rauwe, gekookte, gedroogde en gemalen knoflook kunnen allemaal rode bloedcellen beschadigen en bloedarmoede veroorzaken. Bel je dierenarts als je kat er iets van eet.",
     "pl": "Nie. Czosnek jest dla kotów toksyczny – to najbardziej toksyczny dla nich przedstawiciel rodziny cebulowatych. Czosnek surowy, gotowany, suszony i w proszku może uszkadzać czerwone krwinki i wywołać anemię. Zadzwoń do weterynarza, jeśli kot zje choć trochę.",
     "cs": "Ne. Česnek je pro kočky toxický a ze všech cibulovin (rod Allium) je pro ně nejtoxičtější. Syrový, tepelně upravený, sušený i práškový česnek může poškodit červené krvinky a způsobit chudokrevnost (anémii). Pokud ho kočka sní, zavolejte veterináři.",
-    "hr": "Ne. Češnjak je otrovan za mačke i za njih je najotrovniji član porodice luka. Sirov, termički obrađen, sušen i češnjak u prahu mogu oštetiti crvene krvne stanice i izazvati anemiju. Ako tvoja mačka pojede imalo češnjaka, nazovi veterinara."
+    "hr": "Ne. Češnjak je otrovan za mačke i za njih je najotrovniji član porodice luka. Sirov, termički obrađen, sušen i češnjak u prahu mogu oštetiti crvene krvne stanice i izazvati anemiju. Ako tvoja mačka pojede imalo češnjaka, nazovi veterinara.",
+    "sv": "Nej. Vitlök är giftig för katter och är för dem den giftigaste medlemmen i lökfamiljen. Rå, tillagad, torkad vitlök och vitlökspulver kan alla skada de röda blodkropparna och orsaka blodbrist (anemi). Ring veterinären om katten äter någon vitlök."
   },
   "why": {
     "en": "Garlic belongs to the allium family (the onion family). Alliums damage red blood cells and can lead to anaemia, and they also irritate the stomach and gut. Cats are the most sensitive species. All forms are poisonous to cats — raw, cooked, dried, powdered and liquid. Of the alliums, garlic is the most toxic for cats.",
@@ -65,7 +69,8 @@
     "nl": "Knoflook hoort bij de alliumfamilie (de uienfamilie). Alliums beschadigen rode bloedcellen en kunnen tot bloedarmoede leiden, en ze irriteren ook de maag en darmen. Katten zijn de gevoeligste diersoort. Alle vormen zijn giftig voor katten – rauw, gekookt, gedroogd, in poedervorm en vloeibaar. Van alle alliums is knoflook het giftigst voor katten.",
     "pl": "Czosnek należy do roślin z rodzaju Allium, czyli z rodziny cebulowatych. Rośliny z tego rodzaju uszkadzają czerwone krwinki, mogą prowadzić do anemii, a do tego podrażniają żołądek i jelita. Koty są gatunkiem najbardziej wrażliwym. Każda postać jest dla kotów trująca – surowa, gotowana, suszona, sproszkowana i płynna. Spośród tych roślin czosnek jest dla kotów najbardziej toksyczny.",
     "cs": "Česnek patří mezi cibuloviny (rod Allium). Cibuloviny poškozují červené krvinky, mohou vést k chudokrevnosti a navíc dráždí žaludek a střeva. Kočky jsou ze všech druhů zvířat nejcitlivější. Pro kočky jsou jedovaté všechny formy – syrová, tepelně upravená, sušená, v prášku i tekutá. Ze všech cibulovin je pro kočky nejtoxičtější právě česnek.",
-    "hr": "Češnjak pripada biljkama iz roda Allium (porodici luka). Biljke iz roda Allium oštećuju crvene krvne stanice i mogu dovesti do anemije, a uz to nadražuju želudac i crijeva. Mačke su najosjetljivija vrsta. Svi su oblici otrovni za mačke – sirov, termički obrađen, sušen, u prahu i tekući. Od svih biljaka iz roda Allium češnjak je za mačke najotrovniji."
+    "hr": "Češnjak pripada biljkama iz roda Allium (porodici luka). Biljke iz roda Allium oštećuju crvene krvne stanice i mogu dovesti do anemije, a uz to nadražuju želudac i crijeva. Mačke su najosjetljivija vrsta. Svi su oblici otrovni za mačke – sirov, termički obrađen, sušen, u prahu i tekući. Od svih biljaka iz roda Allium češnjak je za mačke najotrovniji.",
+    "sv": "Vitlök hör till släktet Allium (lökfamiljen). Lökväxter skadar de röda blodkropparna och kan leda till blodbrist (anemi), och de irriterar också magen och tarmarna. Katter är den känsligaste arten. Alla former är giftiga för katter – rå, tillagad, torkad, i pulverform och i flytande form. Av lökväxterna är vitlök den giftigaste för katter."
   },
   "signs": {
     "en": [
@@ -166,6 +171,15 @@
       "Blijede desni",
       "Crveno obojena mokraća",
       "Ubrzano ili otežano disanje"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Diarré",
+      "Minskad aptit",
+      "Svaghet",
+      "Blekt tandkött",
+      "Rödfärgad urin",
+      "Snabbare eller ansträngd andning"
     ]
   },
   "what_to_do": {
@@ -179,7 +193,8 @@
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als je kat er gezond uitziet – verschijnselen van bloedarmoede kunnen een paar dagen op zich laten wachten. Schrijf op wat je kat heeft gegeten (rauw, gekookt, als poeder of in een gerecht), hoeveel en wanneer. Probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, nawet jeśli kot wygląda na zdrowego – objawy anemii mogą się pojawić dopiero po kilku dniach. Zapisz, co zjadł twój kot (surowy, gotowany, w proszku czy w potrawie), ile i kiedy. Nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, i když se kočka zdá v pořádku – příznaky chudokrevnosti se mohou projevit až po několika dnech. Poznamenejte si, co kočka snědla (syrový česnek, tepelně upravený, v prášku nebo pokrm, který ho obsahoval), kolik a kdy. Nesnažte se u kočky doma vyvolat zvracení.",
-    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako se čini da je mačka dobro – znakovi anemije mogu se pokazati tek nakon nekoliko dana. Zapiši što je mačka pojela (sirovo, termički obrađeno, u prahu ili jelo koje ga sadrži), koliko i kada. Ne pokušavaj kod kuće izazvati povraćanje."
+    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako se čini da je mačka dobro – znakovi anemije mogu se pokazati tek nakon nekoliko dana. Zapiši što je mačka pojela (sirovo, termički obrađeno, u prahu ili jelo koje ga sadrži), koliko i kada. Ne pokušavaj kod kuće izazvati povraćanje.",
+    "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur, även om katten verkar må bra – tecken på blodbrist kan dröja flera dagar. Notera vad katten åt (rått, tillagat, pulver eller en maträtt som innehöll det), hur mycket och när. Försök inte få katten att kräkas hemma."
   },
   "serving": null,
   "child": {
@@ -193,7 +208,8 @@
     "nl": "Knoflook ruikt voor ons sterk en is niet veilig voor katten. Houd eten met knoflook weg bij je poes. Eet ze ervan? Vertel het meteen aan een volwassene.",
     "pl": "Dla nas czosnek mocno pachnie, a dla kotów nie jest bezpieczny. Trzymaj jedzenie z czosnkiem z dala od kotka i powiedz dorosłemu, jeśli kotek trochę zje.",
     "cs": "Česnek je cítit hodně silně a pro kočky není bezpečný. Jídlo s česnekem drž od kočičky dál, a když nějaké sní, řekni to dospělému.",
-    "hr": "Češnjak nama jako miriše, a za mace nije siguran. Hranu s češnjakom drži podalje od mace i reci odrasloj osobi ako je malo pojela."
+    "hr": "Češnjak nama jako miriše, a za mace nije siguran. Hranu s češnjakom drži podalje od mace i reci odrasloj osobi ako je malo pojela.",
+    "sv": "Vitlök luktar starkt för oss, och den är inte säker för katter. Håll mat med vitlök borta från katten och säg till en vuxen om katten äter lite."
   },
   "faq": [
     {
@@ -208,7 +224,8 @@
         "nl": "Is gekookte of gemalen knoflook veilig voor katten?",
         "pl": "Czy gotowany lub sproszkowany czosnek jest bezpieczny dla kotów?",
         "cs": "Je tepelně upravený nebo práškový česnek pro kočky bezpečný?",
-        "hr": "Je li termički obrađen češnjak ili češnjak u prahu siguran za mačke?"
+        "hr": "Je li termički obrađen češnjak ili češnjak u prahu siguran za mačke?",
+        "sv": "Är tillagad vitlök eller vitlökspulver säkert för katter?"
       },
       "a": {
         "en": "No. All forms are poisonous to cats, including raw, cooked, dried, powdered and liquid garlic. Be careful with leftovers, sauces, soups and gravy that may contain it.",
@@ -221,7 +238,8 @@
         "nl": "Nee. Alle vormen zijn giftig voor katten, ook rauwe, gekookte, gedroogde, gemalen en vloeibare knoflook. Wees voorzichtig met restjes, sauzen, soepen en jus waar het in kan zitten.",
         "pl": "Nie. Każda postać jest dla kotów trująca, także czosnek surowy, gotowany, suszony, w proszku i w płynie. Uważaj na resztki jedzenia, sosy, zupy i sos pieczeniowy, które mogą go zawierać.",
         "cs": "Ne. Pro kočky jsou jedovaté všechny formy, včetně syrového, tepelně upraveného, sušeného, práškového a tekutého česneku. Dávejte pozor na zbytky jídla, omáčky, polévky a šťávy z masa, které ho mohou obsahovat.",
-        "hr": "Ne. Svi su oblici otrovni za mačke, uključujući sirov, termički obrađen, sušen, tekući i češnjak u prahu. Pripazi na ostatke hrane, umake, juhe i sok od pečenja koji ga mogu sadržavati."
+        "hr": "Ne. Svi su oblici otrovni za mačke, uključujući sirov, termički obrađen, sušen, tekući i češnjak u prahu. Pripazi na ostatke hrane, umake, juhe i sok od pečenja koji ga mogu sadržavati.",
+        "sv": "Nej. Alla former är giftiga för katter, även rå, tillagad, torkad, pulveriserad och flytande vitlök. Var försiktig med rester, såser, soppor och sky som kan innehålla vitlök."
       }
     },
     {
@@ -236,7 +254,8 @@
         "nl": "Helpt knoflook tegen vlooien?",
         "pl": "Czy czosnek pomaga odstraszać pchły?",
         "cs": "Pomáhá česnek proti blechám?",
-        "hr": "Pomaže li češnjak protiv buha?"
+        "hr": "Pomaže li češnjak protiv buha?",
+        "sv": "Hjälper vitlök mot loppor?"
       },
       "a": {
         "en": "Don't give garlic to your cat for any reason. All forms are poisonous to cats, and Blue Cross notes there is also concern that long-term use of garlic may cause problems. Ask your vet about safe flea treatment.",
@@ -249,7 +268,8 @@
         "nl": "Geef je kat om geen enkele reden knoflook. Alle vormen zijn giftig voor katten, en Blue Cross wijst erop dat er ook zorgen zijn dat langdurig gebruik van knoflook problemen kan geven. Vraag je dierenarts naar een veilige vlooienbehandeling.",
         "pl": "Nie dawaj kotu czosnku z żadnego powodu. Każda jego postać jest dla kotów trująca, a Blue Cross zwraca uwagę, że są też obawy, iż długotrwałe stosowanie czosnku może powodować problemy. Zapytaj weterynarza o bezpieczne środki na pchły.",
         "cs": "Nedávejte kočce česnek z žádného důvodu. Pro kočky jsou jedovaté všechny jeho formy a Blue Cross upozorňuje, že existují i obavy, že dlouhodobé užívání česneku může způsobit potíže. Na bezpečnou ochranu proti blechám se zeptejte veterináře.",
-        "hr": "Ne daj mački češnjak ni iz kojeg razloga. Svi su oblici otrovni za mačke, a Blue Cross napominje da postoji i zabrinutost da dugotrajna upotreba češnjaka može izazvati probleme. Pitaj veterinara za sigurnu zaštitu od buha."
+        "hr": "Ne daj mački češnjak ni iz kojeg razloga. Svi su oblici otrovni za mačke, a Blue Cross napominje da postoji i zabrinutost da dugotrajna upotreba češnjaka može izazvati probleme. Pitaj veterinara za sigurnu zaštitu od buha.",
+        "sv": "Ge inte katten vitlök av någon anledning. Alla former är giftiga för katter, och Blue Cross påpekar att det också finns oro för att vitlök som används under lång tid kan ge problem. Fråga veterinären om säker loppbehandling."
       }
     }
   ],
@@ -400,6 +420,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "510c70e3827bc061219148496b1f863245fbd41c9b0d715461dbf1c242a99e4e"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "58c0297083c06866fa4f4d50fc1312479d5018591677f094822779f70aa2c4dc"
     }
   }
 }

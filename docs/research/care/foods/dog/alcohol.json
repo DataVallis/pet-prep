@@ -12,7 +12,8 @@
     "nl": "Alcohol",
     "pl": "Alkohol",
     "cs": "Alkohol",
-    "hr": "Alkohol"
+    "hr": "Alkohol",
+    "sv": "Alkohol"
   },
   "question": {
     "en": "Can dogs drink alcohol?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden alcohol drinken?",
     "pl": "Czy psy mogą pić alkohol?",
     "cs": "Mohou psi pít alkohol?",
-    "hr": "Smiju li psi piti alkohol?"
+    "hr": "Smiju li psi piti alkohol?",
+    "sv": "Får hundar dricka alkohol?"
   },
   "url_slug": {
     "en": "alcohol",
@@ -38,7 +40,8 @@
     "nl": "alcohol",
     "pl": "alkohol",
     "cs": "alkohol",
-    "hr": "alkohol"
+    "hr": "alkohol",
+    "sv": "alkohol"
   },
   "level": "toxic",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee. Alcohol is giftig voor honden. Drankjes en etenswaren met alcohol kunnen braken, wankelen, ademhalingsproblemen en trillingen veroorzaken. Alcohol wordt snel opgenomen en de verschijnselen beginnen meestal binnen 15–90 minuten, dus handel snel.",
     "pl": "Nie. Alkohol jest toksyczny dla psów. Napoje i potrawy zawierające alkohol mogą wywołać wymioty, chwiejny chód, problemy z oddychaniem i drżenie mięśni. Alkohol szybko się wchłania, a objawy zwykle pojawiają się w ciągu 15–90 minut, więc działaj szybko.",
     "cs": "Ne. Alkohol je pro psy jedovatý. Nápoje a potraviny s alkoholem mohou vyvolat zvracení, vrávorání, potíže s dýcháním a třes. Alkohol se vstřebává rychle a příznaky se obvykle objeví do 15–90 minut, proto jednejte rychle.",
-    "hr": "Ne. Alkohol je otrovan za pse. Pića i hrana s alkoholom mogu izazvati povraćanje, teturanje, otežano disanje i drhtanje. Alkohol se brzo upija, a znakovi se obično pojave unutar 15–90 minuta, zato djeluj brzo."
+    "hr": "Ne. Alkohol je otrovan za pse. Pića i hrana s alkoholom mogu izazvati povraćanje, teturanje, otežano disanje i drhtanje. Alkohol se brzo upija, a znakovi se obično pojave unutar 15–90 minuta, zato djeluj brzo.",
+    "sv": "Nej. Alkohol är giftig för hundar. Drycker och mat som innehåller alkohol kan ge kräkningar, vinglighet, andningsproblem och darrningar. Alkohol tas upp snabbt och symtomen börjar oftast inom 15–90 minuter, så agera snabbt."
   },
   "why": {
     "en": "Alcohol (ethanol) is rapidly absorbed into the blood and depresses the nervous system. It is not only in drinks: it is also in liquor-filled sweets, raw rising bread dough, hand sanitiser and mouthwash. All animals are at risk.",
@@ -65,7 +69,8 @@
     "nl": "Alcohol (ethanol) wordt snel in het bloed opgenomen en remt het zenuwstelsel af. Het zit niet alleen in drankjes, maar ook in likeurbonbons, rauw rijzend brooddeeg, desinfecterende handgel en mondwater. Alle dieren lopen risico.",
     "pl": "Alkohol (etanol) szybko przenika do krwi i hamuje działanie układu nerwowego. Jest nie tylko w napojach: znajdziesz go też w słodyczach nadziewanych alkoholem, surowym rosnącym cieście drożdżowym, płynie do dezynfekcji rąk i płynie do płukania ust. Zagrożone są wszystkie zwierzęta.",
     "cs": "Alkohol (etanol) se rychle vstřebává do krve a tlumí nervovou soustavu. Nenajdete ho jen v nápojích: obsahují ho i likérové bonbony, syrové kynuté těsto, dezinfekce na ruce a ústní voda. Ohrožena jsou všechna zvířata.",
-    "hr": "Alkohol (etanol) brzo prelazi u krv i usporava rad živčanog sustava. Nema ga samo u pićima: ima ga i u slatkišima punjenima likerom, sirovom tijestu za kruh koje se diže, sredstvu za dezinfekciju ruku i vodici za ispiranje usta. Ugrožene su sve životinje."
+    "hr": "Alkohol (etanol) brzo prelazi u krv i usporava rad živčanog sustava. Nema ga samo u pićima: ima ga i u slatkišima punjenima likerom, sirovom tijestu za kruh koje se diže, sredstvu za dezinfekciju ruku i vodici za ispiranje usta. Ugrožene su sve životinje.",
+    "sv": "Alkohol (etanol) tas snabbt upp i blodet och dämpar nervsystemet. Den finns inte bara i drycker utan också i godis med spritfyllning, rå jäsande bröddeg, handsprit och munskölj. Alla djur är i riskzonen."
   },
   "signs": {
     "en": [
@@ -155,6 +160,14 @@
       "Otežano disanje",
       "Drhtanje",
       "Znakovi se obično pojave unutar 15–90 minuta"
+    ],
+    "sv": [
+      "Kräkningar och diarré",
+      "Vinglighet och dålig koordination",
+      "Dåsighet, slöhet",
+      "Svårt att andas",
+      "Darrningar",
+      "Symtomen börjar oftast inom 15–90 minuter"
     ]
   },
   "what_to_do": {
@@ -168,7 +181,8 @@
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat je hond heeft gedronken of gegeten en ongeveer hoeveel. Wacht niet op verschijnselen: alcohol werkt snel en een vroege behandeling is cruciaal.",
     "pl": "Natychmiast skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co twój pies wypił lub zjadł i mniej więcej ile. Nie czekaj na objawy: alkohol działa szybko, a wczesne leczenie jest kluczowe.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co váš pes vypil nebo snědl a zhruba kolik. Nečekejte, až se objeví příznaky: alkohol působí rychle a včasná léčba je klíčová.",
-    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je pas popio ili pojeo i otprilike koliko. Ne čekaj da se pojave znakovi: alkohol djeluje brzo, a rano liječenje je ključno."
+    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je pas popio ili pojeo i otprilike koliko. Ne čekaj da se pojave znakovi: alkohol djeluje brzo, a rano liječenje je ključno.",
+    "sv": "Kontakta veterinären eller en giftrådgivning för djur omedelbart. Notera vad hunden drack eller åt och ungefär hur mycket. Vänta inte på symtom: alkohol verkar snabbt, och tidig behandling är avgörande."
   },
   "serving": null,
   "child": {
@@ -182,7 +196,8 @@
     "nl": "Drankjes voor volwassenen zijn nooit voor honden. Een hond die ervan drinkt, kan snel heel ziek worden. Vertel het dan meteen aan een volwassene.",
     "pl": "Napoje dorosłych nigdy nie są dla psów. Jeśli pies trochę wypije, może szybko bardzo się rozchorować, więc od razu powiedz dorosłemu.",
     "cs": "Nápoje pro dospělé nejsou nikdy pro psy. Když se pes napije, může mu být rychle moc zle, a tak to hned řekni dospělému.",
-    "hr": "Pića za odrasle nikad nisu za pse. Ako pas popije malo, može se brzo jako razboljeti, zato odmah reci odrasloj osobi."
+    "hr": "Pića za odrasle nikad nisu za pse. Ako pas popije malo, može se brzo jako razboljeti, zato odmah reci odrasloj osobi.",
+    "sv": "Vuxendrycker är aldrig för hundar. Om en hund dricker sådant kan den snabbt bli mycket sjuk, så säg till en vuxen direkt."
   },
   "faq": [
     {
@@ -197,7 +212,8 @@
         "nl": "Is een likje bier oké?",
         "pl": "Czy liźnięcie piwa jest w porządku?",
         "cs": "Je v pořádku, když pes lízne pivo?",
-        "hr": "Smije li pas liznuti malo piva?"
+        "hr": "Smije li pas liznuti malo piva?",
+        "sv": "Är det okej om hunden slickar i sig lite öl?"
       },
       "a": {
         "en": "No. Drinks and foods containing alcohol are toxic to dogs. Never offer alcohol, and call your vet if your dog drinks some.",
@@ -210,7 +226,8 @@
         "nl": "Nee. Drankjes en etenswaren met alcohol zijn giftig voor honden. Geef nooit alcohol en bel je dierenarts als je hond ervan heeft gedronken.",
         "pl": "Nie. Napoje i potrawy zawierające alkohol są toksyczne dla psów. Nigdy nie częstuj psa alkoholem, a jeśli trochę wypije, zadzwoń do weterynarza.",
         "cs": "Ne. Nápoje a potraviny s alkoholem jsou pro psy jedovaté. Alkohol mu nikdy nenabízejte, a pokud se ho pes napije, zavolejte veterináři.",
-        "hr": "Ne. Pića i hrana s alkoholom otrovni su za pse. Nikad ne nudi psu alkohol, a ako ga pas popije, nazovi veterinara."
+        "hr": "Ne. Pića i hrana s alkoholom otrovni su za pse. Nikad ne nudi psu alkohol, a ako ga pas popije, nazovi veterinara.",
+        "sv": "Nej. Drycker och mat som innehåller alkohol är giftiga för hundar. Ge aldrig alkohol, och ring veterinären om hunden har druckit något."
       }
     },
     {
@@ -225,7 +242,8 @@
         "nl": "Waar kan een hond thuis nog meer alcohol vinden?",
         "pl": "Gdzie jeszcze pies może znaleźć alkohol w domu?",
         "cs": "Kde jinde může pes doma najít alkohol?",
-        "hr": "Gdje još pas kod kuće može naći alkohol?"
+        "hr": "Gdje još pas kod kuće može naći alkohol?",
+        "sv": "Var mer kan en hund hitta alkohol hemma?"
       },
       "a": {
         "en": "In liquor-filled sweets, raw rising bread dough, hand sanitiser and mouthwash.",
@@ -238,7 +256,8 @@
         "nl": "In likeurbonbons, rauw rijzend brooddeeg, desinfecterende handgel en mondwater.",
         "pl": "W słodyczach nadziewanych alkoholem, surowym rosnącym cieście drożdżowym, płynie do dezynfekcji rąk i płynie do płukania ust.",
         "cs": "V likérových bonbonech, syrovém kynutém těstě, dezinfekci na ruce a ústní vodě.",
-        "hr": "U slatkišima punjenima likerom, sirovom tijestu za kruh koje se diže, sredstvu za dezinfekciju ruku i vodici za ispiranje usta."
+        "hr": "U slatkišima punjenima likerom, sirovom tijestu za kruh koje se diže, sredstvu za dezinfekciju ruku i vodici za ispiranje usta.",
+        "sv": "I godis med spritfyllning, rå jäsande bröddeg, handsprit och munskölj."
       }
     }
   ],
@@ -358,6 +377,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c60b16e4d0e374d2933960709ad1e88a99f26157e6a093d3e8cc35eb777a2fbc"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fc5605adb754dcefe9ddc2c48dcfcddd40c1803f01ad62dfcef4560d4b1b37e4"
     }
   }
 }
