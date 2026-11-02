@@ -13,7 +13,8 @@
     "pl": "Por",
     "cs": "Pórek",
     "hr": "Poriluk",
-    "sv": "Purjolök"
+    "sv": "Purjolök",
+    "da": "Porre"
   },
   "question": {
     "en": "Can cats eat leek?",
@@ -27,7 +28,8 @@
     "pl": "Czy koty mogą jeść pora?",
     "cs": "Mohou kočky jíst pórek?",
     "hr": "Smiju li mačke jesti poriluk?",
-    "sv": "Får katter äta purjolök?"
+    "sv": "Får katter äta purjolök?",
+    "da": "Må katte spise porre?"
   },
   "url_slug": {
     "en": "leek",
@@ -41,7 +43,8 @@
     "pl": "por",
     "cs": "porek",
     "hr": "poriluk",
-    "sv": "purjolok"
+    "sv": "purjolok",
+    "da": "porre"
   },
   "level": "toxic",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Nie. Por należy do tej samej rodziny co cebula i czosnek i jest trujący dla kotów – surowy i gotowany. Może uszkadzać czerwone krwinki i wywołać anemię. Zadzwoń do weterynarza, jeśli kot zje choć trochę.",
     "cs": "Ne. Pórek patří stejně jako cibule a česnek mezi cibuloviny (rod Allium) a je pro kočky jedovatý, syrový i tepelně upravený. Může poškodit červené krvinky a způsobit chudokrevnost (anémii). Pokud ho vaše kočka sní byť jen trochu, zavolejte veterináři.",
     "hr": "Ne. Poriluk je u istoj porodici kao luk i češnjak i otrovan je za mačke, sirov ili termički obrađen. Može oštetiti crvene krvne stanice i uzrokovati anemiju. Ako mačka pojede imalo poriluka, nazovi veterinara.",
-    "sv": "Nej. Purjolök hör till samma familj som lök och vitlök och är giftig för katter, både rå och tillagad. Den kan skada de röda blodkropparna och orsaka blodbrist (anemi). Ring veterinären om katten äter någon purjolök."
+    "sv": "Nej. Purjolök hör till samma familj som lök och vitlök och är giftig för katter, både rå och tillagad. Den kan skada de röda blodkropparna och orsaka blodbrist (anemi). Ring veterinären om katten äter någon purjolök.",
+    "da": "Nej. Porre hører til samme familie som løg og hvidløg og er giftig for katte, både rå og tilberedt. Den kan skade de røde blodlegemer og give blodmangel (anæmi). Ring til din dyrlæge hvis din kat spiser noget af den."
   },
   "why": {
     "en": "Leek belongs to the allium family (the onion family). Alliums damage red blood cells and can lead to anaemia, and they also irritate the stomach and gut. Cats are the most sensitive species. All forms are poisonous to cats — raw, cooked, dried, powdered and liquid.",
@@ -70,7 +74,8 @@
     "pl": "Por należy do roślin z rodzaju Allium, czyli z rodziny cebulowatych. Rośliny z tego rodzaju uszkadzają czerwone krwinki, mogą prowadzić do anemii, a do tego podrażniają żołądek i jelita. Koty są gatunkiem najbardziej wrażliwym. Każda postać jest dla kotów trująca – surowa, gotowana, suszona, sproszkowana i płynna.",
     "cs": "Pórek patří mezi cibuloviny (rod Allium). Cibuloviny poškozují červené krvinky, mohou vést k chudokrevnosti a navíc dráždí žaludek a střeva. Kočky jsou ze všech druhů zvířat nejcitlivější. Pro kočky jsou jedovaté všechny formy – syrová, tepelně upravená, sušená, v prášku i tekutá.",
     "hr": "Poriluk pripada biljkama iz roda Allium (porodici luka). Biljke iz roda Allium oštećuju crvene krvne stanice i mogu dovesti do anemije, a uz to nadražuju želudac i crijeva. Mačke su najosjetljivija vrsta. Svi su oblici otrovni za mačke – sirov, termički obrađen, sušen, u prahu i tekući.",
-    "sv": "Purjolök hör till släktet Allium (lökfamiljen). Lökväxter skadar de röda blodkropparna och kan leda till blodbrist (anemi), och de irriterar också magen och tarmarna. Katter är den känsligaste arten. Alla former är giftiga för katter – rå, tillagad, torkad, i pulverform och i flytande form."
+    "sv": "Purjolök hör till släktet Allium (lökfamiljen). Lökväxter skadar de röda blodkropparna och kan leda till blodbrist (anemi), och de irriterar också magen och tarmarna. Katter är den känsligaste arten. Alla former är giftiga för katter – rå, tillagad, torkad, i pulverform och i flytande form.",
+    "da": "Porre hører til løgplanterne (Allium, løgfamilien). Løgplanter skader de røde blodlegemer og kan føre til blodmangel, og de irriterer også mave og tarm. Katte er den mest følsomme dyreart. Alle former er giftige for katte – rå, tilberedte, tørrede, i pulverform og flydende."
   },
   "signs": {
     "en": [
@@ -180,6 +185,15 @@
       "Blekt tandkött",
       "Rödfärgad urin",
       "Snabbare eller ansträngd andning"
+    ],
+    "da": [
+      "Opkast",
+      "Diarré",
+      "Nedsat appetit",
+      "Svaghed",
+      "Blegt tandkød",
+      "Rødfarvet urin",
+      "Hurtigere eller mere anstrengt vejrtrækning"
     ]
   },
   "what_to_do": {
@@ -194,7 +208,8 @@
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, nawet jeśli kot wygląda na zdrowego – objawy anemii mogą się pojawić dopiero po kilku dniach. Zapisz, co zjadł twój kot (surowy, gotowany, w proszku czy w potrawie), ile i kiedy. Nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, i když se vaše kočka zdá v pořádku – příznaky chudokrevnosti se mohou projevit až po několika dnech. Poznamenejte si, co kočka snědla (syrový pórek, tepelně upravený, v prášku nebo pokrm, který ho obsahoval), kolik a kdy. Nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako se čini da je mačka dobro – znakovi anemije mogu se pokazati tek nakon nekoliko dana. Zapiši što je mačka pojela (sirovo, termički obrađeno, u prahu ili jelo koje ga sadrži), koliko i kada. Ne pokušavaj kod kuće izazvati povraćanje.",
-    "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur, även om katten verkar må bra – tecken på blodbrist kan dröja flera dagar. Notera vad katten åt (rått, tillagat, pulver eller en maträtt som innehöll det), hur mycket och när. Försök inte få katten att kräkas hemma."
+    "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur, även om katten verkar må bra – tecken på blodbrist kan dröja flera dagar. Notera vad katten åt (rått, tillagat, pulver eller en maträtt som innehöll det), hur mycket och när. Försök inte få katten att kräkas hemma.",
+    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr, også selvom din kat virker rask – tegn på blodmangel kan først vise sig efter flere dage. Skriv ned hvad din kat har spist (råt, tilberedt, pulver eller en ret med porre), hvor meget og hvornår. Prøv ikke selv at få katten til at kaste op."
   },
   "serving": null,
   "child": {
@@ -209,7 +224,8 @@
     "pl": "Por to kuzyn cebuli, więc nie jest bezpieczny dla kotów. Powiedz dorosłemu, jeśli kotek trochę go podgryzie.",
     "cs": "Pórek je bratranec cibule, takže pro kočky není bezpečný. Když ho kočička ochutná, řekni to dospělému.",
     "hr": "Poriluk je rođak luka, pa nije siguran za mace. Ako ga maca malo grickne, reci odrasloj osobi.",
-    "sv": "Purjolök är släkt med vanlig lök, så den är inte säker för katter. Säg till en vuxen om katten smakar på den."
+    "sv": "Purjolök är släkt med vanlig lök, så den är inte säker för katter. Säg till en vuxen om katten smakar på den.",
+    "da": "Porrer er i familie med løg, så de er ikke sikre for katte. Sig det til en voksen hvis katten smager på en porre."
   },
   "faq": [
     {
@@ -225,7 +241,8 @@
         "pl": "Czy gotowany lub suszony por jest bezpieczny dla kotów?",
         "cs": "Je tepelně upravený nebo sušený pórek pro kočky bezpečný?",
         "hr": "Je li termički obrađen ili sušen poriluk siguran za mačke?",
-        "sv": "Är tillagad eller torkad purjolök säker för katter?"
+        "sv": "Är tillagad eller torkad purjolök säker för katter?",
+        "da": "Er tilberedt eller tørret porre sikkert for katte?"
       },
       "a": {
         "en": "No. All forms are poisonous to cats, including raw, cooked and dried leek. Be careful with leftovers, sauces, soups and gravy that may contain it.",
@@ -239,7 +256,8 @@
         "pl": "Nie. Każda postać jest dla kotów trująca, także por surowy, gotowany i suszony. Uważaj na resztki jedzenia, sosy, zupy i sos pieczeniowy, które mogą go zawierać.",
         "cs": "Ne. Pro kočky jsou jedovaté všechny formy, včetně syrového, tepelně upraveného i sušeného pórku. Dávejte pozor na zbytky jídla, omáčky, polévky a šťávu z masa, které ho mohou obsahovat.",
         "hr": "Nije. Za mačke su otrovni svi oblici, uključujući sirov, termički obrađen i sušen poriluk. Pripazi na ostatke hrane, umake, juhe i sok od pečenja koji ga mogu sadržavati.",
-        "sv": "Nej. Alla former är giftiga för katter, även rå, tillagad och torkad purjolök. Var försiktig med rester, såser, soppor och sky som kan innehålla den."
+        "sv": "Nej. Alla former är giftiga för katter, även rå, tillagad och torkad purjolök. Var försiktig med rester, såser, soppor och sky som kan innehålla den.",
+        "da": "Nej. Alle former er giftige for katte, også rå, tilberedt og tørret porre. Pas på med rester, saucer, supper og sovs der kan indeholde porre."
       }
     }
   ],
@@ -399,6 +417,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "32394b4c0016843c38fe689c5505d8046dafbb71a4c5a86d3be6cce0a6655adc"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7f2ada0920d1e99ccfe953a2228f8266627f86295c1d5b8acb0d1d2f858765d2"
     }
   }
 }

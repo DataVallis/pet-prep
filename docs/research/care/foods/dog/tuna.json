@@ -13,7 +13,8 @@
     "pl": "Tuńczyk",
     "cs": "Tuňák",
     "hr": "Tuna",
-    "sv": "Tonfisk"
+    "sv": "Tonfisk",
+    "da": "Tun"
   },
   "question": {
     "en": "Can dogs eat tuna?",
@@ -27,7 +28,8 @@
     "pl": "Czy psy mogą jeść tuńczyka?",
     "cs": "Mohou psi jíst tuňáka?",
     "hr": "Smiju li psi jesti tunu?",
-    "sv": "Får hundar äta tonfisk?"
+    "sv": "Får hundar äta tonfisk?",
+    "da": "Må hunde spise tun?"
   },
   "url_slug": {
     "en": "tuna",
@@ -41,7 +43,8 @@
     "pl": "tunczyk",
     "cs": "tunak",
     "hr": "tuna",
-    "sv": "tonfisk"
+    "sv": "tonfisk",
+    "da": "tun"
   },
   "level": "small_amounts",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Tak, od czasu do czasu i w małych ilościach. Tuńczyk nie jest toksyczny dla psów, ale zawiera dużo rtęci, więc nie powinien być stałym pożywieniem. Wybieraj tuńczyka gotowanego lub tuńczyka z puszki typu „light” (bonito) tylko w wodzie, bez dodatku soli i oleju.",
     "cs": "Ano, občas a v malém množství. Tuňák není pro psy jedovatý, obsahuje ale hodně rtuti, takže by neměl být běžnou součástí stravy. Vybírejte tepelně upraveného tuňáka nebo „light“ tuňáka (pruhovaného) z konzervy jen ve vodě, bez přidané soli a oleje.",
     "hr": "Da, povremeno i u malim količinama. Tuna nije otrovna za pse, ali sadrži puno žive, pa ne bi trebala biti redovita hrana. Odaberi termički obrađenu tunu ili prugastu tunu iz konzerve (često označenu kao „light“) samo u vodi, bez dodane soli i ulja.",
-    "sv": "Ja, ibland och i små mängder. Tonfisk är inte giftig för hundar, men den innehåller mycket kvicksilver, så den ska inte vara vanlig mat. Välj tillagad tonfisk eller ”light”-tonfisk (skipjack) på burk i vatten, utan tillsatt salt eller olja."
+    "sv": "Ja, ibland och i små mängder. Tonfisk är inte giftig för hundar, men den innehåller mycket kvicksilver, så den ska inte vara vanlig mat. Välj tillagad tonfisk eller ”light”-tonfisk (skipjack) på burk i vatten, utan tillsatt salt eller olja.",
+    "da": "Ja, en gang imellem og i små mængder. Tun er ikke giftig for hunde, men indeholder meget kviksølv, så den bør ikke være fast føde. Vælg tilberedt tun eller »light« tun på dåse (skipjack) kun i vand, uden tilsat salt eller olie."
   },
   "why": {
     "en": "Tuna are large, long-lived fish, so their mercury levels are high, and dogs are more sensitive to mercury than people. Feeding tuna regularly can lead to mercury poisoning over time. Albacore, yellowfin and 'white' tuna carry more mercury than skipjack. Canned tuna often has added salt or oil, which isn't healthy for dogs.",
@@ -70,7 +74,8 @@
     "pl": "Tuńczyki to duże, długo żyjące ryby, więc mają wysoki poziom rtęci, a psy są na rtęć bardziej wrażliwe niż ludzie. Regularne karmienie tuńczykiem może z czasem doprowadzić do zatrucia rtęcią. Albakora, tuńczyk żółtopłetwy i tuńczyk „biały” zawierają więcej rtęci niż bonito. Tuńczyk z puszki często ma dodatek soli lub oleju, co nie jest zdrowe dla psów.",
     "cs": "Tuňáci jsou velké, dlouho žijící ryby, proto mají vysoký obsah rtuti, a psi jsou na rtuť citlivější než lidé. Pravidelné krmení tuňákem může časem vést k otravě rtutí. Tuňák křídlatý (albacore), tuňák žlutoploutvý a „bílý“ tuňák obsahují více rtuti než tuňák pruhovaný. Tuňák z konzervy má často přidanou sůl nebo olej, což psům nesvědčí.",
     "hr": "Tune su velike ribe koje dugo žive, pa sadrže puno žive, a psi su na živu osjetljiviji od ljudi. Redovito hranjenje tunom s vremenom može dovesti do trovanja živom. Dugoperajna, žutoperajna i „bijela“ tuna sadrže više žive od prugaste tune. Tuna iz konzerve često ima dodanu sol ili ulje, što nije zdravo za pse.",
-    "sv": "Tonfiskar är stora, långlivade fiskar, så deras kvicksilverhalter är höga, och hundar är känsligare för kvicksilver än människor. Om hunden regelbundet får tonfisk kan det med tiden leda till kvicksilverförgiftning. Albacore, gulfenad och ”vit” tonfisk innehåller mer kvicksilver än skipjack. Tonfisk på burk har ofta tillsatt salt eller olja, vilket inte är nyttigt för hundar."
+    "sv": "Tonfiskar är stora, långlivade fiskar, så deras kvicksilverhalter är höga, och hundar är känsligare för kvicksilver än människor. Om hunden regelbundet får tonfisk kan det med tiden leda till kvicksilverförgiftning. Albacore, gulfenad och ”vit” tonfisk innehåller mer kvicksilver än skipjack. Tonfisk på burk har ofta tillsatt salt eller olja, vilket inte är nyttigt för hundar.",
+    "da": "Tun er store fisk der lever længe, så de har et højt indhold af kviksølv, og hunde er mere følsomme over for kviksølv end mennesker. Regelmæssig fodring med tun kan med tiden føre til kviksølvforgiftning. Albacore, gulfinnet tun og »hvid« tun indeholder mere kviksølv end skipjack. Tun på dåse har ofte tilsat salt eller olie, hvilket ikke er sundt for hunde."
   },
   "signs": null,
   "what_to_do": {
@@ -85,7 +90,8 @@
     "pl": "Podkradziony kęs tuńczyka to nie powód do paniki. Jeśli twój pies regularnie je tuńczyka i ma objawy takie jak drżenie mięśni, utrata koordynacji, wymioty z krwią lub krwawa biegunka, natychmiast zabierz go do weterynarza.",
     "cs": "Ukradené sousto tuňáka není důvod k panice. Pokud váš pes jí tuňáka pravidelně a objeví se u něj příznaky, jako je třes, ztráta koordinace, zvracení krve nebo krvavý průjem, okamžitě s ním jeďte k veterináři.",
     "hr": "Ukradeni zalogaj tune nije razlog za paniku. Ako tvoj pas redovito jede tunu i pokazuje znakove poput drhtanja, gubitka koordinacije, povraćanja krvi ili krvavog proljeva, odmah ga odvedi veterinaru.",
-    "sv": "En stulen tugga tonfisk är inget att få panik över. Om hunden regelbundet ätit tonfisk och visar symtom som darrningar, nedsatt koordination, blodiga kräkningar eller blodig diarré, åk till veterinären omedelbart."
+    "sv": "En stulen tugga tonfisk är inget att få panik över. Om hunden regelbundet ätit tonfisk och visar symtom som darrningar, nedsatt koordination, blodiga kräkningar eller blodig diarré, åk till veterinären omedelbart.",
+    "da": "En stjålen bid tun er ingen grund til panik. Hvis din hund har spist tun regelmæssigt og viser symptomer som rysten, manglende koordination, blodigt opkast eller blodig diarré, skal du straks tage den til dyrlægen."
   },
   "serving": {
     "en": "Occasionally, a small amount of cooked tuna or 'light' (skipjack) canned tuna in water only, no salt or oil; avoid albacore, yellowfin and 'white' tuna.",
@@ -99,7 +105,8 @@
     "pl": "Od czasu do czasu odrobina gotowanego tuńczyka lub tuńczyka z puszki typu „light” (bonito) tylko w wodzie, bez soli i oleju; unikaj albakory, tuńczyka żółtopłetwego i tuńczyka „białego”.",
     "cs": "Občas malé množství tepelně upraveného tuňáka nebo „light“ tuňáka (pruhovaného) z konzervy jen ve vodě, bez soli a oleje; vyhněte se tuňáku křídlatému (albacore), žlutoploutvému a „bílému“.",
     "hr": "Povremeno malo termički obrađene tune ili prugaste tune iz konzerve (često označene kao „light“) samo u vodi, bez soli i ulja; izbjegavaj dugoperajnu, žutoperajnu i „bijelu“ tunu.",
-    "sv": "Ibland, en liten mängd tillagad tonfisk eller ”light”-tonfisk (skipjack) på burk, enbart i vatten, utan salt eller olja; undvik albacore, gulfenad och ”vit” tonfisk."
+    "sv": "Ibland, en liten mängd tillagad tonfisk eller ”light”-tonfisk (skipjack) på burk, enbart i vatten, utan salt eller olja; undvik albacore, gulfenad och ”vit” tonfisk.",
+    "da": "En gang imellem en lille mængde tilberedt tun eller »light« tun på dåse (skipjack) kun i vand, uden salt eller olie; undgå albacore, gulfinnet tun og »hvid« tun."
   },
   "child": {
     "en": "A little tuna is a rare treat for a dog, not everyday food. Ask a grown-up to pick tuna in water.",
@@ -113,7 +120,8 @@
     "pl": "Odrobina tuńczyka to rzadki smakołyk dla psa, nie codzienne jedzenie. Poproś dorosłego, żeby wybrał tuńczyka w wodzie.",
     "cs": "Trocha tuňáka je pro psa vzácný pamlsek, ne jídlo na každý den. Popros dospělého, ať vybere tuňáka ve vodě.",
     "hr": "Malo tune rijetka je poslastica za psa, a ne svakodnevna hrana. Zamoli odraslu osobu da odabere tunu u vodi.",
-    "sv": "Lite tonfisk är en godbit för en hund ibland, inte vardagsmat. Be en vuxen välja tonfisk i vatten."
+    "sv": "Lite tonfisk är en godbit för en hund ibland, inte vardagsmat. Be en vuxen välja tonfisk i vatten.",
+    "da": "Lidt tun er en sjælden godbid til en hund, ikke hverdagsmad. Bed en voksen om at vælge tun i vand."
   },
   "faq": [
     {
@@ -129,7 +137,8 @@
         "pl": "Mój pies podkradł trochę tuńczyka. Czy mam się martwić?",
         "cs": "Můj pes ukradl kousek tuňáka. Mám se bát?",
         "hr": "Moj je pas ukrao malo tune. Trebam li se brinuti?",
-        "sv": "Min hund stal lite tonfisk. Ska jag oroa mig?"
+        "sv": "Min hund stal lite tonfisk. Ska jag oroa mig?",
+        "da": "Min hund har stjålet lidt tun. Skal jeg være bekymret?"
       },
       "a": {
         "en": "Usually not: tuna isn't toxic, and the concern is regular feeding over time.",
@@ -143,7 +152,8 @@
         "pl": "Zwykle nie: tuńczyk nie jest toksyczny, a problemem jest regularne karmienie nim przez dłuższy czas.",
         "cs": "Většinou ne: tuňák není jedovatý a problémem je pravidelné krmení po delší dobu.",
         "hr": "Obično ne: tuna nije otrovna, a problem je redovito hranjenje tunom tijekom duljeg vremena.",
-        "sv": "Oftast inte: tonfisk är inte giftig, och problemet gäller regelbunden utfodring under lång tid."
+        "sv": "Oftast inte: tonfisk är inte giftig, och problemet gäller regelbunden utfodring under lång tid.",
+        "da": "Som regel ikke: Tun er ikke giftig, og bekymringen gælder regelmæssig fodring over længere tid."
       }
     },
     {
@@ -159,7 +169,8 @@
         "pl": "Który tuńczyk z puszki jest najlepszy?",
         "cs": "Jaký tuňák z konzervy je nejlepší?",
         "hr": "Koja je tuna iz konzerve najbolja?",
-        "sv": "Vilken tonfisk på burk är bäst?"
+        "sv": "Vilken tonfisk på burk är bäst?",
+        "da": "Hvilken tun på dåse er bedst?"
       },
       "a": {
         "en": "'Light' or skipjack tuna packed only in water, given occasionally.",
@@ -173,7 +184,8 @@
         "pl": "Tuńczyk typu „light” lub bonito, tylko w wodzie, podawany od czasu do czasu.",
         "cs": "„Light“ neboli pruhovaný tuňák jen ve vodě, podávaný občas.",
         "hr": "Prugasta tuna (često označena kao „light“) samo u vodi, i to povremeno.",
-        "sv": "”Light”-tonfisk eller skipjack, enbart i vatten, som ges ibland."
+        "sv": "”Light”-tonfisk eller skipjack, enbart i vatten, som ges ibland.",
+        "da": "»Light« tun eller skipjack kun i vand, givet en gang imellem."
       }
     }
   ],
@@ -310,6 +322,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "972893bc9111b0ace9915a77a0b50eb98e5840fce2b09741973cb82049605618"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "15c703a697f786a7448b6712703857fc732652800fe37d56fa344c58a60f04c9"
     }
   }
 }

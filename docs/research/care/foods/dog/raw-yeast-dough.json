@@ -13,7 +13,8 @@
     "pl": "Surowe ciasto drożdżowe",
     "cs": "Syrové kynuté těsto",
     "hr": "Sirovo tijesto s kvascem",
-    "sv": "Rå jäsdeg"
+    "sv": "Rå jäsdeg",
+    "da": "Rå gærdej"
   },
   "question": {
     "en": "Can dogs eat raw yeast dough?",
@@ -27,7 +28,8 @@
     "pl": "Czy psy mogą jeść surowe ciasto drożdżowe?",
     "cs": "Mohou psi jíst syrové kynuté těsto?",
     "hr": "Smiju li psi jesti sirovo tijesto s kvascem?",
-    "sv": "Får hundar äta rå jäsdeg?"
+    "sv": "Får hundar äta rå jäsdeg?",
+    "da": "Må hunde spise rå gærdej?"
   },
   "url_slug": {
     "en": "raw-yeast-dough",
@@ -41,7 +43,8 @@
     "pl": "surowe-ciasto-drozdzowe",
     "cs": "syrove-kynute-testo",
     "hr": "sirovo-tijesto-s-kvascem",
-    "sv": "ra-jasdeg"
+    "sv": "ra-jasdeg",
+    "da": "raa-gaerdej"
   },
   "level": "toxic",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Nie. Surowe, niewypieczone ciasto drożdżowe jest niebezpieczne dla psów. Nadal rośnie w ciepłym żołądku i powoduje wzdęcie, które może doprowadzić do skrętu żołądka. Drożdże wytwarzają też alkohol, który może wywołać zatrucie alkoholem. Zagrożeniem jest niewypieczone ciasto.",
     "cs": "Ne. Syrové, nepečené kynuté těsto je pro psy nebezpečné. V teplém žaludku dál kyne a způsobuje nadmutí, které může vést až k torzi žaludku. Kvasinky navíc vytvářejí alkohol, který může způsobit otravu alkoholem. Nebezpečné je právě nepečené těsto.",
     "hr": "Ne. Sirovo, nepečeno tijesto s kvascem opasno je za pse. U toplom želucu nastavlja rasti i nadima ga, što može dovesti do torzije želuca. Kvasac stvara i alkohol, koji može izazvati trovanje alkoholom. Opasno je nepečeno tijesto.",
-    "sv": "Nej. Rå, ogräddad deg med jäst är farlig för hundar. Den fortsätter att jäsa i den varma magen och orsakar uppblåsthet som kan leda till magomvridning. Jästen bildar också alkohol, som kan orsaka alkoholförgiftning. Faran är den ogräddade degen."
+    "sv": "Nej. Rå, ogräddad deg med jäst är farlig för hundar. Den fortsätter att jäsa i den varma magen och orsakar uppblåsthet som kan leda till magomvridning. Jästen bildar också alkohol, som kan orsaka alkoholförgiftning. Faran är den ogräddade degen.",
+    "da": "Nej. Rå, ubagt gærdej er farlig for hunde. Den fortsætter med at hæve i den varme mave og giver oppustethed, som kan føre til mavedrejning. Gæren danner også alkohol, som kan give alkoholforgiftning. Faren er den ubagte dej."
   },
   "why": {
     "en": "Yeast keeps working in the warm, moist stomach: the dough expands and gas builds up, which can block the gut or, less often, twist the stomach (bloat). At the same time the yeast produces alcohol, which is quickly absorbed into the blood. Dogs are affected most often because they eat whatever they find.",
@@ -70,7 +74,8 @@
     "pl": "Drożdże pracują dalej w ciepłym, wilgotnym żołądku: ciasto się powiększa i gromadzą się gazy, co może zatkać przewód pokarmowy lub, rzadziej, doprowadzić do skrętu żołądka. Jednocześnie drożdże wytwarzają alkohol, który szybko wchłania się do krwi. Najczęściej dotyczy to psów, bo jedzą wszystko, co znajdą.",
     "cs": "Kvasinky v teplém, vlhkém žaludku dál pracují: těsto se zvětšuje a hromadí se plyn, který může ucpat trávicí trakt nebo vzácněji způsobit otočení žaludku (torzi žaludku). Kvasinky zároveň produkují alkohol, který se rychle vstřebává do krve. Nejčastěji to postihuje psy, protože sežerou, co najdou.",
     "hr": "Kvasac nastavlja djelovati u toplom i vlažnom želucu: tijesto se širi i nakupljaju se plinovi, što može začepiti probavni sustav ili, rjeđe, izazvati torziju želuca. Istodobno kvasac stvara alkohol, koji se brzo upija u krv. Najčešće stradaju psi jer pojedu sve što nađu.",
-    "sv": "Jästen fortsätter att arbeta i den varma, fuktiga magen: degen sväller och gas samlas, vilket kan orsaka stopp i mag-tarmkanalen eller, mer sällan, magomvridning. Samtidigt bildar jästen alkohol, som snabbt tas upp i blodet. Hundar drabbas oftast eftersom de äter vad de än hittar."
+    "sv": "Jästen fortsätter att arbeta i den varma, fuktiga magen: degen sväller och gas samlas, vilket kan orsaka stopp i mag-tarmkanalen eller, mer sällan, magomvridning. Samtidigt bildar jästen alkohol, som snabbt tas upp i blodet. Hundar drabbas oftast eftersom de äter vad de än hittar.",
+    "da": "Gæren arbejder videre i den varme, fugtige mave: Dejen udvider sig, og der ophobes gas, som kan blokere tarmen eller, sjældnere, få mavesækken til at dreje (mavedrejning). Samtidig danner gæren alkohol, som hurtigt optages i blodet. Hunde rammes oftest, fordi de spiser hvad som helst de finder."
   },
   "signs": {
     "en": [
@@ -144,6 +149,12 @@
       "Kräkningar eller kräkreflexer utan att något kommer upp",
       "Ostadighet och förvirring",
       "Dåsighet eller nedstämdhet"
+    ],
+    "da": [
+      "Opsvulmet, spændt mave",
+      "Opkast eller opkastningsforsøg uden at der kommer noget op",
+      "Usikker gang og forvirring",
+      "Døsighed eller nedtrykthed"
     ]
   },
   "what_to_do": {
@@ -158,7 +169,8 @@
     "pl": "Od razu skontaktuj się z weterynarzem. Zanotuj, ile mniej więcej ciasta pies zjadł i kiedy. Nie czekaj na objawy: powiększający się żołądek i zatrucie alkoholem wymagają szybkiej pomocy.",
     "cs": "Okamžitě se obraťte na veterináře. Poznamenejte si, kolik těsta pes zhruba snědl a kdy. Nečekejte, až se objeví příznaky: nafukující se žaludek i otrava alkoholem vyžadují rychlou péči.",
     "hr": "Odmah se obrati veterinaru. Zapiši otprilike koliko je tijesta pas pojeo i kada. Ne čekaj da se pojave znakovi: i želudac koji se nadima i trovanje alkoholom zahtijevaju brzu pomoć.",
-    "sv": "Kontakta veterinären direkt. Notera ungefär hur mycket deg hunden åt och när. Vänta inte på symtom: både en svällande mage och alkoholförgiftning kräver snabb vård."
+    "sv": "Kontakta veterinären direkt. Notera ungefär hur mycket deg hunden åt och när. Vänta inte på symtom: både en svällande mage och alkoholförgiftning kräver snabb vård.",
+    "da": "Kontakt straks din dyrlæge. Skriv ned omtrent hvor meget dej hunden har spist, og hvornår. Vent ikke på symptomer: Både en mave der svulmer op, og alkoholforgiftning kræver hurtig behandling."
   },
   "serving": null,
   "child": {
@@ -173,7 +185,8 @@
     "pl": "Ciasto na chleb, które jeszcze rośnie, nie jest dla psów. Rośnie dalej w ich brzuszku. Powiedz dorosłemu, jeśli twój pies trochę go zje.",
     "cs": "Těsto na chleba, které ještě kyne, není pro psy. V bříšku jim dál roste. Když ho pes sní, řekni to dospělému.",
     "hr": "Tijesto za kruh koje još raste nije za pse. U njihovu trbuhu nastavi rasti. Reci odrasloj osobi ako ga tvoj pas pojede.",
-    "sv": "Bröddeg som fortfarande jäser är inte för hundar. Den fortsätter att växa i magen. Säg till en vuxen om din hund äter deg."
+    "sv": "Bröddeg som fortfarande jäser är inte för hundar. Den fortsätter att växa i magen. Säg till en vuxen om din hund äter deg.",
+    "da": "Brøddej der stadig hæver, er ikke til hunde. Den bliver ved med at vokse i maven. Sig det til en voksen hvis din hund spiser noget."
   },
   "faq": [
     {
@@ -189,7 +202,8 @@
         "pl": "Czy upieczony chleb też jest niebezpieczny?",
         "cs": "Je nebezpečný i upečený chléb?",
         "hr": "Je li i pečeni kruh opasan?",
-        "sv": "Är gräddat bröd också farligt?"
+        "sv": "Är gräddat bröd också farligt?",
+        "da": "Er bagt brød også farligt?"
       },
       "a": {
         "en": "The danger described here is raw, unbaked yeast dough, because the yeast is still alive and keeps working in the stomach.",
@@ -203,7 +217,8 @@
         "pl": "Opisane tu zagrożenie dotyczy surowego, niewypieczonego ciasta drożdżowego, bo drożdże są wciąż żywe i dalej pracują w żołądku.",
         "cs": "Nebezpečí, které tu popisujeme, se týká syrového, nepečeného kynutého těsta, protože kvasinky jsou v něm ještě živé a v žaludku dál pracují.",
         "hr": "Ovdje opisana opasnost odnosi se na sirovo, nepečeno tijesto s kvascem, jer je kvasac još živ i nastavlja djelovati u želucu.",
-        "sv": "Faran som beskrivs här gäller rå, ogräddad deg med jäst, eftersom jästen fortfarande lever och fortsätter att arbeta i magen."
+        "sv": "Faran som beskrivs här gäller rå, ogräddad deg med jäst, eftersom jästen fortfarande lever och fortsätter att arbeta i magen.",
+        "da": "Faren der beskrives her, gælder rå, ubagt gærdej, fordi gæren stadig er levende og arbejder videre i maven."
       }
     },
     {
@@ -219,7 +234,8 @@
         "pl": "Dlaczego ciasto wywołuje zatrucie alkoholem?",
         "cs": "Proč těsto způsobuje otravu alkoholem?",
         "hr": "Zašto tijesto izaziva trovanje alkoholom?",
-        "sv": "Varför orsakar deg alkoholförgiftning?"
+        "sv": "Varför orsakar deg alkoholförgiftning?",
+        "da": "Hvorfor giver dej alkoholforgiftning?"
       },
       "a": {
         "en": "Fermenting yeast produces alcohol in the stomach, and it is rapidly absorbed into the bloodstream.",
@@ -233,7 +249,8 @@
         "pl": "Fermentujące drożdże wytwarzają w żołądku alkohol, który szybko wchłania się do krwiobiegu.",
         "cs": "Kvasící kvasinky produkují v žaludku alkohol, který se rychle vstřebává do krevního oběhu.",
         "hr": "Kvasac koji fermentira stvara alkohol u želucu, a on se brzo upija u krvotok.",
-        "sv": "Jästen jäser och bildar alkohol i magen, och alkoholen tas snabbt upp i blodet."
+        "sv": "Jästen jäser och bildar alkohol i magen, och alkoholen tas snabbt upp i blodet.",
+        "da": "Gær der gærer, danner alkohol i maven, og alkoholen optages hurtigt i blodet."
       }
     }
   ],
@@ -349,6 +366,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6464ff410e5b162c6ab7b72f4e083af3d481d8474dc2ec4fcc2e257e78062fed"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b6d45d85db005287218f49d538e98c1d23b41103fced012255978db9fc37c825"
     }
   }
 }

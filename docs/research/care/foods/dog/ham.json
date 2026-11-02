@@ -13,7 +13,8 @@
     "pl": "Szynka",
     "cs": "Šunka",
     "hr": "Šunka",
-    "sv": "Skinka"
+    "sv": "Skinka",
+    "da": "Skinke"
   },
   "question": {
     "en": "Can dogs eat ham?",
@@ -27,7 +28,8 @@
     "pl": "Czy psy mogą jeść szynkę?",
     "cs": "Mohou psi jíst šunku?",
     "hr": "Smiju li psi jesti šunku?",
-    "sv": "Får hundar äta skinka?"
+    "sv": "Får hundar äta skinka?",
+    "da": "Må hunde spise skinke?"
   },
   "url_slug": {
     "en": "ham",
@@ -41,7 +43,8 @@
     "pl": "szynka",
     "cs": "sunka",
     "hr": "sunka",
-    "sv": "skinka"
+    "sv": "skinka",
+    "da": "skinke"
   },
   "level": "not_recommended",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Nie zaleca się. Szynka nie jest toksyczna dla psów, ale zawiera dużo tłuszczu i sodu. Szynka ze sklepu ma dużo soli, a nadmiar tłuszczu może prowadzić do zapalenia trzustki i innych problemów trawiennych. Lepszym wyborem jest zdrowszy psi smakołyk.",
     "cs": "Nedoporučuje se. Šunka není pro psy jedovatá, ale obsahuje hodně tuku a sodíku. Kupovaná šunka je velmi slaná a příliš mnoho tuku může vést k zánětu slinivky břišní a dalším zažívacím potížím. Lepší volbou je zdravější psí pamlsek.",
     "hr": "Ne preporučuje se. Šunka nije otrovna za pse, ali sadrži mnogo masti i natrija. Kupovna šunka sadrži mnogo soli, a previše masti može dovesti do upale gušterače i drugih probavnih smetnji. Zdravija pseća poslastica bolji je izbor.",
-    "sv": "Nej, det rekommenderas inte. Skinka är inte giftig för hundar, men den innehåller mycket fett och natrium. Köpt skinka är mycket salt, och för mycket fett kan leda till bukspottkörtelinflammation (pankreatit) och andra matsmältningsbesvär. En nyttigare hundgodbit är ett bättre val."
+    "sv": "Nej, det rekommenderas inte. Skinka är inte giftig för hundar, men den innehåller mycket fett och natrium. Köpt skinka är mycket salt, och för mycket fett kan leda till bukspottkörtelinflammation (pankreatit) och andra matsmältningsbesvär. En nyttigare hundgodbit är ett bättre val.",
+    "da": "Det frarådes. Skinke er ikke giftigt for hunde, men det har et højt indhold af fedt og natrium. Købt skinke indeholder meget salt, og for meget fedt kan føre til betændelse i bugspytkirtlen (pankreatitis) og andre fordøjelsesproblemer. En sundere hundegodbid er det bedre valg."
   },
   "why": {
     "en": "Ham has a higher fat content than many other meats, and fatty meals are a known trigger of pancreatitis. Most ham is also very salty, and excess salt can be harmful to dogs.",
@@ -70,7 +74,8 @@
     "pl": "Szynka ma więcej tłuszczu niż wiele innych rodzajów mięsa, a tłuste posiłki to znany czynnik wywołujący zapalenie trzustki. Większość szynek jest też bardzo słona, a nadmiar soli może szkodzić psom.",
     "cs": "Šunka má vyšší obsah tuku než mnoho jiných druhů masa a tučná jídla jsou známým spouštěčem zánětu slinivky břišní. Většina šunky je navíc velmi slaná a nadbytek soli může psům škodit.",
     "hr": "Šunka ima više masti od mnogih drugih vrsta mesa, a masni obroci poznati su okidač upale gušterače. Većina šunke uz to je vrlo slana, a višak soli može psima naštetiti.",
-    "sv": "Skinka har högre fetthalt än många andra köttsorter, och feta måltider är en känd utlösande faktor för bukspottkörtelinflammation. Den mesta skinkan är dessutom mycket salt, och för mycket salt kan skada hundar."
+    "sv": "Skinka har högre fetthalt än många andra köttsorter, och feta måltider är en känd utlösande faktor för bukspottkörtelinflammation. Den mesta skinkan är dessutom mycket salt, och för mycket salt kan skada hundar.",
+    "da": "Skinke har et højere fedtindhold end mange andre kødtyper, og fede måltider er en kendt udløser af betændelse i bugspytkirtlen. Det meste skinke er også meget salt, og for meget salt kan være skadeligt for hunde."
   },
   "signs": {
     "en": [
@@ -156,6 +161,13 @@
       "Diarré",
       "Ingen matlust",
       "Trötthet, feber"
+    ],
+    "da": [
+      "Opkast, som nogle gange begynder 1–4 dage efter det fede måltid",
+      "Mavesmerter (hunden kan strække sig i en »bedestilling«)",
+      "Diarré",
+      "Vil ikke spise",
+      "Træthed, feber"
     ]
   },
   "what_to_do": {
@@ -170,7 +182,8 @@
     "pl": "Jeśli twój pies zjadł dużo tłustego jedzenia albo w kolejnych dniach wymiotuje, boli go brzuch lub jest zmęczony, skontaktuj się z weterynarzem. Zanotuj, co zjadł i mniej więcej ile. Objawy zapalenia trzustki mogą pojawić się z opóźnieniem kilku dni.",
     "cs": "Pokud váš pes snědl hodně tučného jídla nebo se u něj v následujících dnech objeví zvracení, bolest břicha či malátnost, obraťte se na veterináře. Poznamenejte si, co pes snědl a zhruba kolik. Příznaky zánětu slinivky břišní se mohou objevit až o několik dní později.",
     "hr": "Ako je pas pojeo mnogo masne hrane ili sljedećih dana povraća, ima bolove u trbuhu ili je umoran, obrati se veterinaru. Zapiši što je pojeo i otprilike koliko. Znakovi upale gušterače mogu se pojaviti tek nakon nekoliko dana.",
-    "sv": "Kontakta veterinären om hunden ätit mycket fet mat eller får kräkningar, ont i magen eller blir trött under de följande dagarna. Notera vad den åt och ungefär hur mycket. Tecken på bukspottkörtelinflammation (pankreatit) kan dröja några dagar."
+    "sv": "Kontakta veterinären om hunden ätit mycket fet mat eller får kräkningar, ont i magen eller blir trött under de följande dagarna. Notera vad den åt och ungefär hur mycket. Tecken på bukspottkörtelinflammation (pankreatit) kan dröja några dagar.",
+    "da": "Kontakt din dyrlæge hvis hunden har spist meget fed mad eller får opkast, mavesmerter eller bliver træt i dagene efter. Skriv ned hvad hunden har spist og omtrent hvor meget. Symptomer på betændelse i bugspytkirtlen kan først vise sig nogle dage senere."
   },
   "serving": null,
   "child": {
@@ -185,7 +198,8 @@
     "pl": "Szynka to jedzenie dla ludzi, za słone i za tłuste dla psów. Zostaw ją na swoją kanapkę i daj psu psi smakołyk.",
     "cs": "Šunka je jídlo pro lidi a pro psy je moc slaná a tučná. Nech si ji do chleba a dej psovi psí pamlsek.",
     "hr": "Šunka je hrana za ljude i preslana je i premasna za pse. Ostavi je za svoj sendvič, a psu daj pseću poslasticu.",
-    "sv": "Skinka är människomat som är för salt och fet för hundar. Spara den till din smörgås och ge hunden en hundgodbit."
+    "sv": "Skinka är människomat som är för salt och fet för hundar. Spara den till din smörgås och ge hunden en hundgodbit.",
+    "da": "Skinke er menneskemad, der er for salt og fed til hunde. Gem den til din sandwich, og giv din hund en hundegodbid."
   },
   "faq": [
     {
@@ -201,7 +215,8 @@
         "pl": "Dlaczego szynka jest gorsza niż inne mięso?",
         "cs": "Proč je šunka horší než jiné maso?",
         "hr": "Zašto je šunka gora od drugog mesa?",
-        "sv": "Varför är skinka sämre än annat kött?"
+        "sv": "Varför är skinka sämre än annat kött?",
+        "da": "Hvorfor er skinke værre end andet kød?"
       },
       "a": {
         "en": "It has more fat than many meats and store-bought ham contains a great deal of sodium.",
@@ -215,7 +230,8 @@
         "pl": "Ma więcej tłuszczu niż wiele rodzajów mięsa, a szynka ze sklepu zawiera bardzo dużo sodu.",
         "cs": "Má víc tuku než mnoho jiných druhů masa a kupovaná šunka obsahuje velké množství sodíku.",
         "hr": "Ima više masti od mnogih vrsta mesa, a kupovna šunka sadrži jako mnogo natrija.",
-        "sv": "Den innehåller mer fett än många köttsorter, och köpt skinka innehåller väldigt mycket natrium."
+        "sv": "Den innehåller mer fett än många köttsorter, och köpt skinka innehåller väldigt mycket natrium.",
+        "da": "Skinke har mere fedt end mange andre kødtyper, og købt skinke indeholder rigtig meget natrium."
       }
     }
   ],
@@ -344,6 +360,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ce0faaaa47c38db26a7c9e398ff20e5743dfd37cd26e8be23a7d03fa9dc7bfb6"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "40eaaa77f6140d7a34856e40e7eaeaff5bb3ba803d6e511c8f0b4ff70ddef50d"
     }
   }
 }

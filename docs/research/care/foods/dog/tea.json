@@ -13,7 +13,8 @@
     "pl": "Herbata",
     "cs": "Čaj",
     "hr": "Čaj",
-    "sv": "Te"
+    "sv": "Te",
+    "da": "Te"
   },
   "question": {
     "en": "Can dogs drink tea?",
@@ -27,7 +28,8 @@
     "pl": "Czy psy mogą pić herbatę?",
     "cs": "Mohou psi pít čaj?",
     "hr": "Smiju li psi piti čaj?",
-    "sv": "Får hundar dricka te?"
+    "sv": "Får hundar dricka te?",
+    "da": "Må hunde drikke te?"
   },
   "url_slug": {
     "en": "tea",
@@ -41,7 +43,8 @@
     "pl": "herbata",
     "cs": "caj",
     "hr": "caj",
-    "sv": "te"
+    "sv": "te",
+    "da": "te"
   },
   "level": "toxic",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Nie, herbata z kofeiną nie jest dla psów. Herbata zawiera kofeinę, która jest toksyczna dla psów. Mały łyk raczej nie zaszkodzi, ale większe ilości mogą być niebezpieczne, zwłaszcza dla małych psów, a zjedzone torebki herbaty mogą wywołać poważne zatrucie.",
     "cs": "Ne, čaj s kofeinem není pro psy. Čaj obsahuje kofein, který je pro psy jedovatý. Trocha čaje pravděpodobně neuškodí, větší množství ale může být nebezpečné, zejména pro malé psy, a snědené čajové sáčky mohou způsobit vážnou otravu.",
     "hr": "Ne, čaj s kofeinom nije za pse. Čaj sadrži kofein, koji je otrovan za pse. Mali gutljaj vjerojatno neće naštetiti, ali veće količine mogu biti opasne, osobito za male pse, a pojedene vrećice čaja mogu izazvati ozbiljno otrovanje.",
-    "sv": "Nej, te med koffein är inte för hundar. Te innehåller koffein, som är giftigt för hundar. Lite att smaka på skadar sannolikt inte, men större mängder kan vara farliga, särskilt för små hundar, och uppätna tepåsar kan orsaka allvarlig förgiftning."
+    "sv": "Nej, te med koffein är inte för hundar. Te innehåller koffein, som är giftigt för hundar. Lite att smaka på skadar sannolikt inte, men större mängder kan vara farliga, särskilt för små hundar, och uppätna tepåsar kan orsaka allvarlig förgiftning.",
+    "da": "Nej, te med koffein er ikke til hunde. Te indeholder koffein, som er giftigt for hunde. En lille smagsprøve gør næppe skade, men større mængder kan være farlige, især for små hunde, og hvis hunden spiser tebreve, kan det give alvorlig forgiftning."
   },
   "why": {
     "en": "Many teas contain caffeine, which overstimulates a dog's heart and nervous system. Dogs are more sensitive to caffeine than people. One or two licks of tea are unlikely to poison, but swallowed tea bags can cause serious toxicity.",
@@ -70,7 +74,8 @@
     "pl": "Wiele herbat zawiera kofeinę, która nadmiernie pobudza serce i układ nerwowy psa. Psy są bardziej wrażliwe na kofeinę niż ludzie. Jedno czy dwa liźnięcia herbaty raczej nie zatrują psa, ale połknięte torebki herbaty mogą wywołać poważne zatrucie.",
     "cs": "Mnoho čajů obsahuje kofein, který nadměrně stimuluje srdce a nervovou soustavu psa. Psi jsou na kofein citlivější než lidé. Jedno nebo dvě líznutí čaje otravu pravděpodobně nezpůsobí, spolknuté čajové sáčky ale mohou vést k vážné otravě.",
     "hr": "Mnogi čajevi sadrže kofein, koji pretjerano potiče rad psećeg srca i živčanog sustava. Psi su osjetljiviji na kofein od ljudi. Jedno ili dva liznuća čaja vjerojatno neće izazvati otrovanje, ali progutane vrećice čaja mogu izazvati ozbiljno otrovanje.",
-    "sv": "Många tesorter innehåller koffein, som överstimulerar hundens hjärta och nervsystem. Hundar är känsligare för koffein än människor. Om hunden slickar i sig lite te en eller två gånger orsakar det sannolikt ingen förgiftning, men nedsvalda tepåsar kan orsaka allvarlig förgiftning."
+    "sv": "Många tesorter innehåller koffein, som överstimulerar hundens hjärta och nervsystem. Hundar är känsligare för koffein än människor. Om hunden slickar i sig lite te en eller två gånger orsakar det sannolikt ingen förgiftning, men nedsvalda tepåsar kan orsaka allvarlig förgiftning.",
+    "da": "Mange slags te indeholder koffein, som overstimulerer hundens hjerte og nervesystem. Hunde er mere følsomme over for koffein end mennesker. Et eller to slik af te giver næppe forgiftning, men slugte tebreve kan give alvorlig forgiftning."
   },
   "signs": {
     "en": [
@@ -168,6 +173,14 @@
       "Dreglar",
       "Darrningar",
       "Kissar mer"
+    ],
+    "da": [
+      "Uro, hyperaktivitet, går frem og tilbage",
+      "Hurtig puls",
+      "Opkast og diarré",
+      "Savlen",
+      "Rysten",
+      "Tisser mere"
     ]
   },
   "what_to_do": {
@@ -182,7 +195,8 @@
     "pl": "Skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt, gdy tylko zorientujesz się, że twój pies zjadł lub wypił coś z kofeiną. Zanotuj, co to było (napój, fusy, ziarna, torebki herbaty) i mniej więcej ile. Nie czekaj na objawy: liczy się wczesne leczenie.",
     "cs": "Jakmile zjistíte, že váš pes pozřel kofein, obraťte se na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, o co šlo (nápoj, kávová sedlina, zrna, čajové sáčky) a zhruba kolik. Nečekejte, až se objeví příznaky: na včasné léčbě záleží.",
     "hr": "Obrati se veterinaru ili telefonskoj liniji za otrovanja životinja čim shvatiš da je tvoj pas unio kofein. Zapiši što je to bilo (piće, mljevena kava, zrna, vrećice čaja) i otprilike koliko. Ne čekaj da se pojave znakovi: rano liječenje je važno.",
-    "sv": "Kontakta veterinären eller en giftrådgivning för djur så snart du inser att hunden fått i sig koffein. Notera vad det var (dryck, sump, bönor, tepåsar) och ungefär hur mycket. Vänta inte på symtom: tidig behandling är viktig."
+    "sv": "Kontakta veterinären eller en giftrådgivning för djur så snart du inser att hunden fått i sig koffein. Notera vad det var (dryck, sump, bönor, tepåsar) och ungefär hur mycket. Vänta inte på symtom: tidig behandling är viktig.",
+    "da": "Kontakt din dyrlæge eller en giftrådgivning for dyr så snart du opdager at din hund har fået koffein. Skriv ned hvad det var (drik, kaffegrums, bønner, tebreve), og omtrent hvor meget. Vent ikke på symptomer: Tidlig behandling er vigtig."
   },
   "serving": null,
   "child": {
@@ -197,7 +211,8 @@
     "pl": "Herbata z kofeiną to napój dla ludzi, nie dla psów. Zamiast niej daj psu świeżą wodę.",
     "cs": "Čaj s kofeinem je nápoj pro lidi, ne pro psy. Dej svému psovi radši čerstvou vodu.",
     "hr": "Čaj s kofeinom je napitak za ljude, a ne za pse. Umjesto toga daj svom psu svježu vodu.",
-    "sv": "Te med koffein är en dryck för människor, inte för hundar. Ge din hund färskt vatten i stället."
+    "sv": "Te med koffein är en dryck för människor, inte för hundar. Ge din hund färskt vatten i stället.",
+    "da": "Te med koffein er en drik til mennesker, ikke til hunde. Giv i stedet din hund frisk vand."
   },
   "faq": [
     {
@@ -213,7 +228,8 @@
         "pl": "Mój pies polizał mój kubek. Czy to nagły przypadek?",
         "cs": "Můj pes mi olízl hrnek. Je to pohotovost?",
         "hr": "Pas mi je polizao šalicu. Je li to hitan slučaj?",
-        "sv": "Min hund slickade i min kopp. Är det akut?"
+        "sv": "Min hund slickade i min kopp. Är det akut?",
+        "da": "Min hund slikkede i min kop. Er det akut?"
       },
       "a": {
         "en": "One or two licks are unlikely to poison most dogs. If your dog drank more, or ate grounds, beans or tea bags, call your vet or a pet poison helpline.",
@@ -227,7 +243,8 @@
         "pl": "Jedno czy dwa liźnięcia raczej nie zatrują większości psów. Jeśli pies wypił więcej albo zjadł fusy, ziarna lub torebki herbaty, zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt.",
         "cs": "Jedno nebo dvě líznutí většinu psů pravděpodobně neotráví. Pokud váš pes vypil víc nebo snědl kávovou sedlinu, zrna nebo čajové sáčky, zavolejte veterináři nebo na toxikologickou linku pro zvířata.",
         "hr": "Jedno ili dva liznuća kod većine pasa vjerojatno neće izazvati otrovanje. Ako je tvoj pas popio više ili je pojeo mljevenu kavu, zrna ili vrećice čaja, nazovi veterinara ili telefonsku liniju za otrovanja životinja.",
-        "sv": "En eller två slickningar orsakar sannolikt ingen förgiftning hos de flesta hundar. Om hunden druckit mer eller ätit sump, bönor eller tepåsar, ring veterinären eller en giftrådgivning för djur."
+        "sv": "En eller två slickningar orsakar sannolikt ingen förgiftning hos de flesta hundar. Om hunden druckit mer eller ätit sump, bönor eller tepåsar, ring veterinären eller en giftrådgivning för djur.",
+        "da": "Et eller to slik giver næppe forgiftning hos de fleste hunde. Hvis din hund har drukket mere eller spist grums, bønner eller tebreve, så kontakt din dyrlæge eller en giftrådgivning for dyr."
       }
     },
     {
@@ -243,7 +260,8 @@
         "pl": "Co zrobić, jeśli mój pies zjadł torebkę herbaty?",
         "cs": "Co když pes snědl čajový sáček?",
         "hr": "Što ako je moj pas pojeo vrećicu čaja?",
-        "sv": "Vad gör jag om hunden ätit en tepåse?"
+        "sv": "Vad gör jag om hunden ätit en tepåse?",
+        "da": "Hvad hvis min hund har spist et tebrev?"
       },
       "a": {
         "en": "Tea bags can cause serious caffeine poisoning. Contact your vet or a pet poison helpline right away.",
@@ -257,7 +275,8 @@
         "pl": "Torebki herbaty mogą wywołać poważne zatrucie kofeiną. Od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt.",
         "cs": "Čajové sáčky mohou způsobit vážnou otravu kofeinem. Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata.",
         "hr": "Vrećice čaja mogu izazvati ozbiljno otrovanje kofeinom. Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja.",
-        "sv": "Tepåsar kan orsaka allvarlig koffeinförgiftning. Kontakta veterinären eller en giftrådgivning för djur direkt."
+        "sv": "Tepåsar kan orsaka allvarlig koffeinförgiftning. Kontakta veterinären eller en giftrådgivning för djur direkt.",
+        "da": "Tebreve kan give alvorlig koffeinforgiftning. Kontakt straks din dyrlæge eller en giftrådgivning for dyr."
       }
     }
   ],
@@ -394,6 +413,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "07c10c04a5a4946a2291396bd65e4997b0191bb93bb0376d27a28786730b2ce0"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2573013db082af46d248aa7450f6fe4e40609b209c8204b9434a6cdac93679be"
     }
   }
 }

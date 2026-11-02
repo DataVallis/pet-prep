@@ -13,7 +13,8 @@
     "pl": "Sól",
     "cs": "Sůl",
     "hr": "Sol",
-    "sv": "Salt"
+    "sv": "Salt",
+    "da": "Salt"
   },
   "question": {
     "en": "Can cats eat salt?",
@@ -27,7 +28,8 @@
     "pl": "Czy koty mogą jeść sól?",
     "cs": "Mohou kočky jíst sůl?",
     "hr": "Smiju li mačke jesti sol?",
-    "sv": "Får katter äta salt?"
+    "sv": "Får katter äta salt?",
+    "da": "Må katte spise salt?"
   },
   "url_slug": {
     "en": "salt",
@@ -41,7 +43,8 @@
     "pl": "sol",
     "cs": "sul",
     "hr": "sol",
-    "sv": "salt"
+    "sv": "salt",
+    "da": "salt"
   },
   "level": "dangerous",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Nie, ani jako pokarm, ani jako smakołyk. Układ pokarmowy kota nie jest przystosowany do dużych ilości soli, a jej nadmiar może wywołać zatrucie solą. Trzymaj sól kuchenną, sól drogową i bardzo słone jedzenie z dala od kota i zadzwoń do weterynarza, jeśli kot zje jej dużo.",
     "cs": "Ne, jako potravina ani pamlsek ne. Trávicí soustava koček není uzpůsobená ke zpracování velkého množství soli a jejím nadbytkem si kočka může přivodit otravu solí. Kuchyňskou sůl, posypovou sůl a velmi slaná jídla držte mimo dosah kočky, a pokud jich kočka sní hodně, zavolejte veterináři.",
     "hr": "Ne, ni kao hrana ni kao poslastica. Mačji probavni sustav nije građen za velike količine soli, a previše soli može izazvati otrovanje solju. Kuhinjsku sol, sol za posipanje i vrlo slanu hranu drži daleko od mačke i nazovi veterinara ako je pojede mnogo.",
-    "sv": "Nej, inte som mat eller godbit. Kattens matsmältning är inte gjord för stora mängder salt, och för mycket kan ge saltförgiftning. Håll bordssalt, vägsalt och mycket salt mat borta från katten, och ring veterinären om den har ätit mycket."
+    "sv": "Nej, inte som mat eller godbit. Kattens matsmältning är inte gjord för stora mängder salt, och för mycket kan ge saltförgiftning. Håll bordssalt, vägsalt och mycket salt mat borta från katten, och ring veterinären om den har ätit mycket.",
+    "da": "Nej, ikke som mad eller godbid. Kattens fordøjelsessystem er ikke skabt til at håndtere store mængder salt, og for meget kan give saltforgiftning. Hold bordsalt, vejsalt og meget salt mad væk fra din kat, og ring til din dyrlæge hvis den spiser meget."
   },
   "why": {
     "en": "Too much salt causes thirst and frequent urination and, in serious cases, tremors and seizures. Salt sources at home include table salt used in cooking and rock salt used as a de-icer in winter.",
@@ -70,7 +74,8 @@
     "pl": "Nadmiar soli wywołuje pragnienie i częste oddawanie moczu, a w poważnych przypadkach drżenie mięśni i drgawki. W domu źródłem soli jest sól kuchenna używana do gotowania oraz sól drogowa (kamienna) używana zimą do odladzania.",
     "cs": "Nadbytek soli způsobuje žízeň a časté močení, v závažných případech i třes a záchvaty. Zdrojem soli v domácnosti je kuchyňská sůl používaná při vaření a posypová sůl, kterou se v zimě odmrazují chodníky a silnice.",
     "hr": "Previše soli izaziva žeđ i učestalo mokrenje, a u ozbiljnim slučajevima drhtanje i napadaje. Izvori soli u kući uključuju kuhinjsku sol za kuhanje i sol za posipanje protiv leda zimi.",
-    "sv": "För mycket salt ger törst och gör att katten kissar ofta, och i allvarliga fall ger det darrningar och kramper. Saltkällor i hemmet är bland annat bordssalt i matlagningen och vägsalt som används mot halka på vintern."
+    "sv": "För mycket salt ger törst och gör att katten kissar ofta, och i allvarliga fall ger det darrningar och kramper. Saltkällor i hemmet är bland annat bordssalt i matlagningen och vägsalt som används mot halka på vintern.",
+    "da": "For meget salt giver tørst og hyppig vandladning og i alvorlige tilfælde rysten og kramper. Kilder til salt i hjemmet er blandt andet bordsalt til madlavning og vejsalt der bruges mod glatføre om vinteren."
   },
   "signs": {
     "en": [
@@ -180,6 +185,15 @@
       "Vinglig gång",
       "Onormal törst eller kissar mycket",
       "Darrningar eller kramper"
+    ],
+    "da": [
+      "Opkast",
+      "Diarré",
+      "Nedsat appetit",
+      "Sløvhed",
+      "Vaklende gang",
+      "Overdreven tørst eller vandladning",
+      "Rysten eller kramper"
     ]
   },
   "what_to_do": {
@@ -194,7 +208,8 @@
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, jeśli twój kot zjadł sól lub bardzo słone jedzenie albo lizał sól drogową. Zapisz, co zjadł, ile i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Pokud vaše kočka snědla sůl nebo velmi slané jídlo či olízla posypovou sůl, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co snědla, kolik a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja ako je mačka pojela sol ili vrlo slanu hranu ili polizala sol za posipanje. Zapiši što je pojela, koliko i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
-    "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt om katten har ätit salt eller mycket salt mat eller slickat på vägsalt. Notera vad den åt, hur mycket och när. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma."
+    "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt om katten har ätit salt eller mycket salt mat eller slickat på vägsalt. Notera vad den åt, hur mycket och när. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
+    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr hvis din kat har spist salt eller meget salt mad eller har slikket vejsalt. Skriv ned hvad den har spist, hvor meget og hvornår. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op."
   },
   "serving": null,
   "child": {
@@ -209,7 +224,8 @@
     "pl": "Sól to nie smakołyk dla kota. Trzymaj solniczkę i bardzo słone jedzenie z dala od kotka.",
     "cs": "Sůl není pamlsek pro kočky. Slánku a hodně slané jídlo drž daleko od kočičky.",
     "hr": "Sol nije poslastica za mace. Soljenku i vrlo slanu hranu drži daleko od mace.",
-    "sv": "Salt är ingen godbit för katter. Håll saltkaret och väldigt salt mat borta från katten."
+    "sv": "Salt är ingen godbit för katter. Håll saltkaret och väldigt salt mat borta från katten.",
+    "da": "Salt er ikke en kattegodbid. Hold saltbøssen og meget salt mad væk fra katten."
   },
   "faq": [
     {
@@ -225,7 +241,8 @@
         "pl": "Czy zimowa sól drogowa jest groźna dla kotów?",
         "cs": "Je zimní posypová sůl pro kočky nebezpečná?",
         "hr": "Je li zimska sol za posipanje cesta opasna za mačke?",
-        "sv": "Är vägsalt på vintern farligt för katter?"
+        "sv": "Är vägsalt på vintern farligt för katter?",
+        "da": "Er vejsalt om vinteren farligt for katte?"
       },
       "a": {
         "en": "It can be. Pet Poison Helpline lists rock salt used as a de-icer in winter among the salt sources that can harm cats, so keep bags of it out of reach.",
@@ -239,7 +256,8 @@
         "pl": "Może być. Pet Poison Helpline wymienia sól kamienną używaną zimą do odladzania wśród źródeł soli, które mogą zaszkodzić kotom, więc trzymaj worki z nią poza zasięgiem kota.",
         "cs": "Může být. Pet Poison Helpline uvádí posypovou sůl, která se v zimě používá k odmrazování, mezi zdroji soli, které mohou kočkám ublížit, proto pytle s ní uchovávejte mimo jejich dosah.",
         "hr": "Može biti. Pet Poison Helpline navodi sol za posipanje protiv leda među izvorima soli koji mogu naškoditi mačkama, zato vreće soli drži izvan dosega.",
-        "sv": "Det kan det vara. Pet Poison Helpline räknar vägsalt som används mot halka på vintern till de saltkällor som kan skada katter, så förvara säckarna utom räckhåll."
+        "sv": "Det kan det vara. Pet Poison Helpline räknar vägsalt som används mot halka på vintern till de saltkällor som kan skada katter, så förvara säckarna utom räckhåll.",
+        "da": "Det kan det være. Pet Poison Helpline nævner vejsalt mod glatføre blandt de saltkilder der kan skade katte, så opbevar poserne uden for rækkevidde."
       }
     }
   ],
@@ -379,6 +397,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0003d6423bfe8697e29153b9bef30540e96a230586a621fd3a33717f778b84bc"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "76fc78d2c81df98053421cfe097941e8627fdaa81bdc713f2aa95d23ef5d04ef"
     }
   }
 }

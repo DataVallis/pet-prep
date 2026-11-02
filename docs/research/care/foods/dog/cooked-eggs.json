@@ -13,7 +13,8 @@
     "pl": "Gotowane jajka",
     "cs": "Tepelně upravená vejce",
     "hr": "Kuhana jaja",
-    "sv": "Kokta ägg"
+    "sv": "Kokta ägg",
+    "da": "Kogte æg"
   },
   "question": {
     "en": "Can dogs eat cooked eggs?",
@@ -27,7 +28,8 @@
     "pl": "Czy psy mogą jeść gotowane jajka?",
     "cs": "Mohou psi jíst tepelně upravená vejce?",
     "hr": "Smiju li psi jesti kuhana jaja?",
-    "sv": "Får hundar äta kokta ägg?"
+    "sv": "Får hundar äta kokta ägg?",
+    "da": "Må hunde spise kogte æg?"
   },
   "url_slug": {
     "en": "cooked-eggs",
@@ -41,7 +43,8 @@
     "pl": "gotowane-jajka",
     "cs": "tepelne-upravena-vejce",
     "hr": "kuhana-jaja",
-    "sv": "kokta-agg"
+    "sv": "kokta-agg",
+    "da": "kogte-aeg"
   },
   "level": "small_amounts",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Tak. Dobrze ścięte jajka są dla psów bezpieczne i pożywne w umiarkowanych ilościach, o ile są zwykłe: bez oleju, masła, soli i przypraw. Dobrze sprawdzają się jajka na twardo lub jajecznica. Zbyt duża ilość może prowadzić do przybierania na wadze.",
     "cs": "Ano. Důkladně tepelně upravená vejce jsou pro psy s mírou bezpečná a výživná, pokud jsou bez přísad: bez oleje, másla, soli a koření. Dobře se hodí vejce natvrdo nebo míchaná vejce. Příliš mnoho vajec může vést k přibírání na váze.",
     "hr": "Da. Potpuno termički obrađena jaja sigurna su i hranjiva za pse u umjerenim količinama, ako su obična: bez ulja, maslaca, soli ili začina. Tvrdo kuhana jaja ili kajgana dobar su izbor. Previše jaja može dovesti do debljanja.",
-    "sv": "Ja. Genomkokta eller genomstekta ägg är säkra och näringsrika för hundar med måtta, så länge de är naturella: utan olja, smör, salt eller kryddor. Hårdkokta ägg eller äggröra passar bra. För många kan leda till viktökning."
+    "sv": "Ja. Genomkokta eller genomstekta ägg är säkra och näringsrika för hundar med måtta, så länge de är naturella: utan olja, smör, salt eller kryddor. Hårdkokta ägg eller äggröra passar bra. För många kan leda till viktökning.",
+    "da": "Ja. Gennemtilberedte æg er sikre og nærende for hunde med måde, så længe de er rene: uden olie, smør, salt eller krydderier. Hårdkogte æg og røræg er gode valg. For mange kan føre til vægtøgning."
   },
   "why": {
     "en": "Cooked eggs provide protein, vitamins and healthy fats, but they are not essential to a balanced diet. Vets advise always cooking eggs before giving them to a dog. Egg shells have sharp edges that can hurt a dog's throat, and like any treat, eggs add calories.",
@@ -70,7 +74,8 @@
     "pl": "Gotowane jajka dostarczają białka, witamin i zdrowych tłuszczów, ale nie są niezbędne w zbilansowanej diecie. Weterynarze radzą zawsze gotować jajka przed podaniem ich psu. Skorupki mają ostre krawędzie, które mogą zranić gardło psa, a jak każdy smakołyk jajka dostarczają kalorii.",
     "cs": "Tepelně upravená vejce dodávají bílkoviny, vitaminy a zdravé tuky, ale pro vyváženou stravu nejsou nezbytná. Veterináři doporučují vejce před podáním psovi vždy tepelně upravit. Vaječné skořápky mají ostré hrany, které mohou psovi poranit krk, a jako každý pamlsek přidávají vejce kalorie.",
     "hr": "Termički obrađena jaja daju bjelančevine, vitamine i zdrave masti, ali nisu nužna za uravnoteženu prehranu. Veterinari savjetuju da jaja uvijek termički obradiš prije nego što ih daš psu. Ljuske jaja imaju oštre rubove koji mogu ozlijediti psu grlo, a kao i svaka poslastica, jaja donose kalorije.",
-    "sv": "Tillagade ägg ger protein, vitaminer och nyttiga fetter, men de är inte nödvändiga i en balanserad kost. Veterinärer råder att alltid tillaga ägg innan hunden får dem. Äggskal har vassa kanter som kan skada hundens hals, och som alla godbitar ger ägg extra kalorier."
+    "sv": "Tillagade ägg ger protein, vitaminer och nyttiga fetter, men de är inte nödvändiga i en balanserad kost. Veterinärer råder att alltid tillaga ägg innan hunden får dem. Äggskal har vassa kanter som kan skada hundens hals, och som alla godbitar ger ägg extra kalorier.",
+    "da": "Tilberedte æg giver protein, vitaminer og sunde fedtstoffer, men de er ikke nødvendige i en afbalanceret kost. Dyrlæger anbefaler altid at tilberede æg, før de gives til en hund. Æggeskaller har skarpe kanter, som kan skade hundens hals, og som alle godbidder giver æg ekstra kalorier."
   },
   "signs": null,
   "what_to_do": {
@@ -85,7 +90,8 @@
     "pl": "Jeśli twój pies zjadł jajka przygotowane z masłem, solą lub przyprawami albo dużo jajek, obserwuj, czy nie ma problemów z brzuchem, i zadzwoń do weterynarza, jeśli wymioty lub biegunka są silne albo nie ustępują.",
     "cs": "Pokud váš pes snědl vejce připravená s máslem, solí nebo kořením nebo hodně vajec, sledujte, zda nemá zažívací potíže, a pokud je zvracení nebo průjem silný či neustává, zavolejte veterináři.",
     "hr": "Ako je pas pojeo jaja pripremljena s maslacem, soli ili začinima, ili mnogo jaja, prati ima li probavnih smetnji i nazovi veterinara ako su povraćanje ili proljev jaki ili ne prestaju.",
-    "sv": "Om hunden har ätit ägg tillagade med smör, salt eller kryddor, eller många ägg: håll utkik efter magbesvär och ring veterinären om kräkningarna eller diarrén är kraftig eller inte går över."
+    "sv": "Om hunden har ätit ägg tillagade med smör, salt eller kryddor, eller många ägg: håll utkik efter magbesvär och ring veterinären om kräkningarna eller diarrén är kraftig eller inte går över.",
+    "da": "Hvis hunden har spist mange æg eller æg tilberedt med smør, salt eller krydderier, skal du holde øje med dårlig mave og ringe til din dyrlæge hvis opkast eller diarré er voldsom eller ikke går over."
   },
   "serving": {
     "en": "Fully cooked (hard-boiled or scrambled), plain, without oil, butter, salt, seasonings or other additives; as an occasional treat.",
@@ -99,7 +105,8 @@
     "pl": "Dobrze ścięte (na twardo lub jako jajecznica), zwykłe, bez oleju, masła, soli, przypraw i innych dodatków; jako okazjonalny smakołyk.",
     "cs": "Důkladně tepelně upravená (natvrdo nebo míchaná), bez oleje, másla, soli, koření a dalších přísad; jako občasný pamlsek.",
     "hr": "Potpuno termički obrađena (tvrdo kuhana ili kao kajgana), obična, bez ulja, maslaca, soli, začina ili drugih dodataka; kao povremena poslastica.",
-    "sv": "Helt genomtillagade (hårdkokta eller äggröra), naturella, utan olja, smör, salt, kryddor eller andra tillsatser; som en godbit ibland."
+    "sv": "Helt genomtillagade (hårdkokta eller äggröra), naturella, utan olja, smör, salt, kryddor eller andra tillsatser; som en godbit ibland.",
+    "da": "Gennemtilberedte (hårdkogte eller som røræg), rene, uden olie, smør, salt, krydderier eller andre tilsætninger; som en godbid en gang imellem."
   },
   "child": {
     "en": "A plain cooked egg can be a yummy treat for a dog. No salt or butter, please!",
@@ -113,7 +120,8 @@
     "pl": "Zwykłe gotowane jajko może być pysznym smakołykiem dla psa. Tylko bez soli i masła!",
     "cs": "Obyčejné uvařené vajíčko může být pro psa dobrý pamlsek. Ale bez soli a másla, prosím!",
     "hr": "Obično kuhano jaje može biti fina poslastica za psa. Bez soli i maslaca, molim!",
-    "sv": "Ett kokt ägg kan vara en smaskig godbit för en hund. Inget salt eller smör, tack!"
+    "sv": "Ett kokt ägg kan vara en smaskig godbit för en hund. Inget salt eller smör, tack!",
+    "da": "Et almindeligt kogt æg kan være en lækker godbid til en hund. Uden salt og smør, tak!"
   },
   "faq": [
     {
@@ -129,7 +137,8 @@
         "pl": "Czy psy mogą jeść skorupki jajek?",
         "cs": "Mohou psi jíst vaječné skořápky?",
         "hr": "Smiju li psi jesti ljuske jaja?",
-        "sv": "Får hundar äta äggskal?"
+        "sv": "Får hundar äta äggskal?",
+        "da": "Må hunde spise æggeskaller?"
       },
       "a": {
         "en": "Sources differ: Dogs Trust lists cooked eggshells as usually fine, while the AKC warns that shells have sharp edges. Leaving them out is the safer choice.",
@@ -143,7 +152,8 @@
         "pl": "Źródła się różnią: Dogs Trust podaje, że gotowane skorupki są zwykle w porządku, a AKC ostrzega, że skorupki mają ostre krawędzie. Bezpieczniej je pominąć.",
         "cs": "Zdroje se liší: Dogs Trust uvádí, že tepelně upravené skořápky jsou obvykle v pořádku, zatímco AKC upozorňuje, že skořápky mají ostré hrany. Bezpečnější je skořápky vynechat.",
         "hr": "Izvori se razlikuju: Dogs Trust navodi da su termički obrađene ljuske obično u redu, a AKC upozorava da ljuske imaju oštre rubove. Sigurnije je izostaviti ih.",
-        "sv": "Källorna skiljer sig åt: Dogs Trust anger att tillagade äggskal oftast går bra, medan AKC varnar för att skalen har vassa kanter. Det säkrare valet är att låta bli."
+        "sv": "Källorna skiljer sig åt: Dogs Trust anger att tillagade äggskal oftast går bra, medan AKC varnar för att skalen har vassa kanter. Det säkrare valet är att låta bli.",
+        "da": "Kilderne er uenige: Dogs Trust skriver at tilberedte æggeskaller som regel er fine, mens AKC advarer om at skallerne har skarpe kanter. Det sikreste er at lade dem være."
       }
     },
     {
@@ -159,7 +169,8 @@
         "pl": "Jak przygotować jajka dla psa?",
         "cs": "Jak mám vejce pro psa připravit?",
         "hr": "Kako pripremiti jaja za psa?",
-        "sv": "Hur ska jag tillaga ägg till hunden?"
+        "sv": "Hur ska jag tillaga ägg till hunden?",
+        "da": "Hvordan skal jeg tilberede æg til min hund?"
       },
       "a": {
         "en": "Hard-boiled or scrambled, fully cooked and plain, with no salt, butter or seasonings.",
@@ -173,7 +184,8 @@
         "pl": "Na twardo lub jako jajecznicę, dobrze ścięte i zwykłe, bez soli, masła i przypraw.",
         "cs": "Natvrdo nebo jako míchaná vejce, důkladně tepelně upravená a bez přísad, bez soli, másla a koření.",
         "hr": "Tvrdo kuhana ili kao kajgana, potpuno termički obrađena i obična, bez soli, maslaca ili začina.",
-        "sv": "Hårdkokta eller som äggröra, helt genomtillagade och naturella, utan salt, smör eller kryddor."
+        "sv": "Hårdkokta eller som äggröra, helt genomtillagade och naturella, utan salt, smör eller kryddor.",
+        "da": "Hårdkogte eller som røræg, gennemtilberedte og rene, uden salt, smør eller krydderier."
       }
     }
   ],
@@ -289,6 +301,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6478c6cac63e6f745cb219291208dfe104d0f45a4af468ae0a3757706d5d83d9"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "96200e9de00f24b88030fac02369f7a61f6e7d0c40b8d369aa3d42010d20cdaf"
     }
   }
 }

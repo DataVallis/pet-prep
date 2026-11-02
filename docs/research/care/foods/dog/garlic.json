@@ -13,7 +13,8 @@
     "pl": "Czosnek",
     "cs": "Česnek",
     "hr": "Češnjak",
-    "sv": "Vitlök"
+    "sv": "Vitlök",
+    "da": "Hvidløg"
   },
   "question": {
     "en": "Can dogs eat garlic?",
@@ -27,7 +28,8 @@
     "pl": "Czy psy mogą jeść czosnek?",
     "cs": "Mohou psi jíst česnek?",
     "hr": "Smiju li psi jesti češnjak?",
-    "sv": "Får hundar äta vitlök?"
+    "sv": "Får hundar äta vitlök?",
+    "da": "Må hunde spise hvidløg?"
   },
   "url_slug": {
     "en": "garlic",
@@ -41,7 +43,8 @@
     "pl": "czosnek",
     "cs": "cesnek",
     "hr": "cesnjak",
-    "sv": "vitlok"
+    "sv": "vitlok",
+    "da": "hvidloeg"
   },
   "level": "toxic",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Nie. Czosnek jest toksyczny dla psów i około 3–5 razy bardziej toksyczny niż cebula. Surowy, gotowany, suszony i sproszkowany czosnek może uszkadzać czerwone krwinki i wywołać anemię. Objawy często pojawiają się dopiero kilka dni po zjedzeniu.",
     "cs": "Ne. Česnek je pro psy jedovatý a je zhruba 3–5krát jedovatější než cibule. Syrový, tepelně upravený, sušený i práškový česnek může poškodit červené krvinky a způsobit chudokrevnost (anémii). Příznaky se často objeví až několik dní po snědení.",
     "hr": "Ne. Češnjak je otrovan za pse i otprilike 3 do 5 puta otrovniji od luka. Češnjak u svakom obliku – sirov, termički obrađen, sušen ili u prahu – može oštetiti crvene krvne stanice i izazvati anemiju. Znakovi se često pojave tek nekoliko dana nakon jedenja.",
-    "sv": "Nej. Vitlök är giftig för hundar och ungefär 3 till 5 gånger giftigare än lök. Vitlök kan skada de röda blodkropparna och orsaka blodbrist (anemi), oavsett om den är rå, tillagad, torkad eller i pulverform. Symtomen visar sig ofta först några dagar efter att hunden ätit."
+    "sv": "Nej. Vitlök är giftig för hundar och ungefär 3 till 5 gånger giftigare än lök. Vitlök kan skada de röda blodkropparna och orsaka blodbrist (anemi), oavsett om den är rå, tillagad, torkad eller i pulverform. Symtomen visar sig ofta först några dagar efter att hunden ätit.",
+    "da": "Nej. Hvidløg er giftigt for hunde og omtrent 3 til 5 gange mere giftigt end løg. Råt, tilberedt, tørret og pulveriseret hvidløg kan alt sammen skade de røde blodlegemer og give blodmangel (anæmi). Symptomerne viser sig ofte først nogle dage efter at hunden har spist det."
   },
   "why": {
     "en": "It belongs to the allium family (onion, garlic, leek, chives), which is toxic to dogs. These plants contain compounds that damage red blood cells and can lead to anaemia. All parts and all forms are harmful: raw, cooked, dried and powdered. Stomach upset can happen with any amount; larger amounts damage the blood.",
@@ -70,7 +74,8 @@
     "pl": "Czosnek należy do rodziny czosnkowatych (cebula, czosnek, por, szczypiorek), toksycznej dla psów. Te rośliny zawierają związki, które uszkadzają czerwone krwinki i mogą prowadzić do anemii. Szkodliwe są wszystkie części i wszystkie postacie: surowa, gotowana, suszona i w proszku. Dolegliwości żołądkowe mogą wystąpić po każdej ilości; większe ilości uszkadzają krew.",
     "cs": "Patří mezi cibuloviny (rod Allium: cibule, česnek, pórek, pažitka), které jsou pro psy jedovaté. Tyto rostliny obsahují látky, které poškozují červené krvinky a mohou vést k chudokrevnosti (anémii). Škodlivé jsou všechny části a všechny podoby: syrová, tepelně upravená, sušená i v prášku. Podrážděný žaludek může způsobit jakékoli množství; větší množství poškozuje krev.",
     "hr": "Pripada biljkama iz roda Allium (luk, češnjak, poriluk, vlasac), koje su otrovne za pse. Te biljke sadrže spojeve koji oštećuju crvene krvne stanice i mogu dovesti do anemije. Štetni su svi dijelovi i svi oblici: sirovi, termički obrađeni, sušeni i u prahu. Probavne tegobe mogu se pojaviti nakon bilo koje količine, a veće količine oštećuju krv.",
-    "sv": "Den hör till lökväxterna (lök, vitlök, purjolök, gräslök), som är giftiga för hundar. Växterna innehåller ämnen som skadar de röda blodkropparna och kan leda till blodbrist (anemi). Alla delar och alla former är skadliga: råa, tillagade, torkade och i pulverform. Magbesvär kan uppstå efter vilken mängd som helst; större mängder skadar blodet."
+    "sv": "Den hör till lökväxterna (lök, vitlök, purjolök, gräslök), som är giftiga för hundar. Växterna innehåller ämnen som skadar de röda blodkropparna och kan leda till blodbrist (anemi). Alla delar och alla former är skadliga: råa, tillagade, torkade och i pulverform. Magbesvär kan uppstå efter vilken mängd som helst; större mängder skadar blodet.",
+    "da": "Det hører til løgplanterne (løg, hvidløg, porre, purløg), som er giftige for hunde. Disse planter indeholder stoffer der skader de røde blodlegemer og kan føre til blodmangel (anæmi). Alle dele og alle former er skadelige: rå, tilberedte, tørrede og i pulverform. Dårlig mave kan opstå efter enhver mængde; større mængder skader blodet."
   },
   "signs": {
     "en": [
@@ -144,6 +149,12 @@
       "Äter mindre än vanligt",
       "Magbesvär, även efter små mängder",
       "Tecken på blodbrist (skadade röda blodkroppar), oftast några dagar senare"
+    ],
+    "da": [
+      "Opkast og diarré",
+      "Spiser mindre end normalt",
+      "Dårlig mave, selv efter små mængder",
+      "Tegn på blodmangel (skadede røde blodlegemer), som regel nogle dage senere"
     ]
   },
   "what_to_do": {
@@ -158,7 +169,8 @@
     "pl": "Od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co pies zjadł (czosnek) i mniej więcej ile. Nie czekaj na objawy: uszkodzenie krwi zwykle ujawnia się dopiero po kilku dniach.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co pes snědl (česnek) a zhruba kolik. Nečekejte, až se objeví příznaky: poškození krve se obvykle projeví až po několika dnech.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je pas pojeo (češnjak) i otprilike koliko. Ne čekaj da se pojave znakovi: oštećenje krvi obično se pokaže tek nakon nekoliko dana.",
-    "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt. Notera vad hunden åt (vitlök) och ungefär hur mycket. Vänta inte på symtom: skadorna på blodet syns oftast först några dagar senare."
+    "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt. Notera vad hunden åt (vitlök) och ungefär hur mycket. Vänta inte på symtom: skadorna på blodet syns oftast först några dagar senare.",
+    "da": "Kontakt din dyrlæge eller en giftrådgivning for dyr med det samme. Skriv ned hvad hunden har spist (hvidløg) og omtrent hvor meget. Vent ikke på symptomer: skader på blodet viser sig som regel først nogle dage senere."
   },
   "serving": null,
   "child": {
@@ -173,7 +185,8 @@
     "pl": "Czosnek mocno pachnie i ludziom smakuje, ale nie jest dla psów. Powiedz dorosłemu, jeśli twój pies go zje.",
     "cs": "Česnek silně voní a lidem chutná, ale pro psy není. Když ho pes sní, řekni to dospělému.",
     "hr": "Češnjak jako miriše i ljudima je fin, ali nije za pse. Ako ga pas pojede, reci odrasloj osobi.",
-    "sv": "Vitlök luktar starkt och människor tycker att den smakar gott, men den är inte för hundar. Säg till en vuxen om din hund äter vitlök."
+    "sv": "Vitlök luktar starkt och människor tycker att den smakar gott, men den är inte för hundar. Säg till en vuxen om din hund äter vitlök.",
+    "da": "Hvidløg dufter stærkt og smager godt for mennesker, men det er ikke til hunde. Sig det til en voksen hvis din hund spiser noget."
   },
   "faq": [
     {
@@ -189,7 +202,8 @@
         "pl": "Czy czosnek jest gorszy niż cebula?",
         "cs": "Je česnek horší než cibule?",
         "hr": "Je li češnjak gori od luka?",
-        "sv": "Är vitlök värre än lök?"
+        "sv": "Är vitlök värre än lök?",
+        "da": "Er hvidløg værre end løg?"
       },
       "a": {
         "en": "Yes. Garlic is described as about 3 to 5 times more toxic to dogs than onion.",
@@ -203,7 +217,8 @@
         "pl": "Tak. Czosnek opisuje się jako około 3–5 razy bardziej toksyczny dla psów niż cebula.",
         "cs": "Ano. Česnek je pro psy popisován jako zhruba 3–5krát jedovatější než cibule.",
         "hr": "Da. Za češnjak se navodi da je za pse otprilike 3 do 5 puta otrovniji od luka.",
-        "sv": "Ja. Vitlök beskrivs som ungefär 3 till 5 gånger giftigare för hundar än lök."
+        "sv": "Ja. Vitlök beskrivs som ungefär 3 till 5 gånger giftigare för hundar än lök.",
+        "da": "Ja. Hvidløg beskrives som omtrent 3 til 5 gange mere giftigt for hunde end løg."
       }
     },
     {
@@ -219,7 +234,8 @@
         "pl": "Czy po ugotowaniu lub w proszku jest bezpieczny?",
         "cs": "Je bezpečný tepelně upravený česnek nebo česnek v prášku?",
         "hr": "Je li siguran kad je termički obrađen ili u prahu?",
-        "sv": "Är vitlök ofarlig om den är tillagad eller i pulverform?"
+        "sv": "Är vitlök ofarlig om den är tillagad eller i pulverform?",
+        "da": "Er det sikkert når det er tilberedt eller i pulverform?"
       },
       "a": {
         "en": "No. Raw, cooked, dried, powdered and liquid forms are all poisonous to dogs.",
@@ -233,7 +249,8 @@
         "pl": "Nie. Postać surowa, gotowana, suszona, w proszku i płynna – wszystkie są trujące dla psów.",
         "cs": "Ne. Syrová, tepelně upravená, sušená, prášková i tekutá podoba je pro psy jedovatá.",
         "hr": "Nije. Otrovan je za pse u svakom obliku: sirov, termički obrađen, sušen, u prahu i u tekućem obliku.",
-        "sv": "Nej. Råa, tillagade, torkade, pulveriserade och flytande former är alla giftiga för hundar."
+        "sv": "Nej. Råa, tillagade, torkade, pulveriserade och flytande former är alla giftiga för hundar.",
+        "da": "Nej. Rå, tilberedte, tørrede, pulveriserede og flydende former er alle giftige for hunde."
       }
     },
     {
@@ -249,7 +266,8 @@
         "pl": "Dlaczego objawy nie pojawiają się od razu?",
         "cs": "Proč se příznaky neobjeví hned?",
         "hr": "Zašto se znakovi ne pokažu odmah?",
-        "sv": "Varför syns inte symtomen direkt?"
+        "sv": "Varför syns inte symtomen direkt?",
+        "da": "Hvorfor viser symptomerne sig ikke med det samme?"
       },
       "a": {
         "en": "Symptoms can start within 24 hours but more often take a few days to appear; signs of anaemia typically develop several days after eating.",
@@ -263,7 +281,8 @@
         "pl": "Objawy mogą wystąpić w ciągu 24 godzin, ale częściej pojawiają się po kilku dniach; objawy anemii zwykle rozwijają się kilka dni po zjedzeniu.",
         "cs": "Příznaky mohou začít do 24 hodin, ale častěji se objeví až po několika dnech; známky chudokrevnosti se obvykle rozvinou několik dní po snědení.",
         "hr": "Simptomi se mogu pojaviti unutar 24 sata, ali se češće pojave tek nakon nekoliko dana; znakovi anemije obično se razviju nekoliko dana nakon jedenja.",
-        "sv": "Symtomen kan börja inom 24 timmar men dröjer oftare några dagar; tecken på blodbrist utvecklas vanligtvis flera dagar efter att hunden ätit."
+        "sv": "Symtomen kan börja inom 24 timmar men dröjer oftare några dagar; tecken på blodbrist utvecklas vanligtvis flera dagar efter att hunden ätit.",
+        "da": "Symptomerne kan begynde inden for 24 timer, men viser sig oftere først efter nogle dage; tegn på blodmangel udvikler sig typisk flere dage efter at hunden har spist det."
       }
     }
   ],
@@ -416,6 +435,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "37469eff589b0ffc83fa79b8ad01a5c8a693a8b0851bc8401377a06e1d67d5eb"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8aa86e2a3a938cf86391a228c14036eb9b35c2772302e57ff7f682e862bf594c"
     }
   }
 }
