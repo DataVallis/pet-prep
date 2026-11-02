@@ -134,6 +134,7 @@ plan() {
   local out="$FIX/out" rc=0 fix="$FIX"
   : > "$out"
   ( cd "$W" && PATH="$TMP/bin:$PATH" FIX="$fix" EVENT_NAME="$1" GIT_REF="$2" RUN_ATTEMPT="${3:-1}" \
+      DEPLOY_TARGET="${P_TARGET:-none}" FORCE_TESTS="${P_FORCE:-false}" \
       REPO="$REPO_NAME" WORKFLOW_FILE=deploy-production.yml GITHUB_OUTPUT="$out" \
       GITHUB_STEP_SUMMARY="$fix/summary" bash "$SCRIPT" >"$fix/stdout" 2>"$fix/stderr" ) || rc=$?
   o_rc=$rc
@@ -474,6 +475,30 @@ r=1; grep -q 'PRODUCTION_SSH_PRIVATE_KEY secret is not set' "$TMP/remote.out" &&
 check "… names the secret" 0 "$r"
 check "missing host → fail, nothing uploaded" "1 0" "$(remote "fake-key" "") $(wc -l < "$TMP/remote.log" | tr -d ' ')"
 check "SHA with shell characters → fail, nothing uploaded" "1 0" "$(remote "fake-key" 203.0.113.9 'abc1234;id') $(wc -l < "$TMP/remote.log" | tr -d ' ')"
+# D28 prebuilt images: login over stdin, --registry/--image-tag = backend tree, logout.
+RG="$TMP/remote-git"; mkdir -p "$RG/backend"; echo x > "$RG/backend/a"
+git -C "$RG" init -q; git -C "$RG" add -A; git -C "$RG" -c user.email=t@t -c user.name=t commit -qm x
+be="$(git -C "$RG" rev-parse HEAD:backend)"
+remote_img() { # remote_img DIR OWNER → rc
+  local rc=0
+  : > "$TMP/remote.log"
+  ( cd "$1" && PATH="$TMP/rbin:$PATH" REMOTE_LOG="$TMP/remote.log" CI_REMOTE_SSH_DIR="$TMP/sshdir" \
+      SSH_PRIVATE_KEY=k SSH_HOST=203.0.113.9 SSH_USER=deploy COMMIT_SHA=abc1234 EXPECT_DOMAIN=api.petprep.si \
+      IMAGE_OWNER="$2" REGISTRY_USER='github-actions[bot]' REGISTRY_TOKEN=tok-sentinel-123 \
+      TARGET=production KEY_SECRET=PRODUCTION_SSH_PRIVATE_KEY bash "$REMOTE_SH" > "$TMP/remote.out" 2>&1 ) || rc=$?
+  echo "$rc"
+}
+check "prebuilt: deploys" 0 "$(remote_img "$RG" DataVallis)"
+r=1; grep -q -- "--expect-domain api.petprep.si --registry ghcr.io/datavallis --image-tag be-${be} abc1234" "$TMP/remote.log" && r=0
+check "prebuilt: lower-case registry + backend tree tag passed" 0 "$r"
+r=1; grep -q -- "docker login ghcr.io -u 'github-actions\\[bot\\]' --password-stdin" "$TMP/remote.log" && grep -q "docker logout ghcr.io" "$TMP/remote.log" && r=0
+check "prebuilt: login via stdin, logout after" 0 "$r"
+r=0; grep -q "tok-sentinel-123" "$TMP/remote.log" "$TMP/remote.out" && r=1
+check "prebuilt: token never on a command line / in the output" 0 "$r"
+check "prebuilt: no git tree → plain deploy" 0 "$(remote_img "$TMP" DataVallis)"
+r=0; grep -q -- "--registry" "$TMP/remote.log" && r=1
+check "… without --registry" 0 "$r"
+check "prebuilt: bad owner → fail" 1 "$(remote_img "$RG" 'Data;Vallis')"
 
 echo "== push to main: a failed / cancelled run in between is not lost =="
 new_repo; base="$(sha)"; commit backend/app/A.php; commit docs/X.md; green_runs "$base"
@@ -520,7 +545,7 @@ setup_green() { # backend change merged; PR run 77 green for backend + image + s
 }
 setup_green; run_json 77 pull_request success; plan push refs/heads/main
 check "verified: tests skipped" "$S_NONE" "$o_suites"; check "verified: still deploys" true "$o_deploy"
-if grep -q "already green on the PR.*run 77" "$FIX/summary"; then r=0; else r=1; fi
+if grep -q "already green (same tree).*run 77" "$FIX/summary"; then r=0; else r=1; fi
 check "summary names the PR run" 0 "$r"
 
 setup_green; marker backend "$t" 78; marker image "$t" 78; marker scripts "$t" 78
@@ -569,6 +594,28 @@ new_repo; plan workflow_dispatch refs/heads/main
 check "dispatch on main: full + deploy" "full true" "$o_mode $o_deploy"; check "dispatch: all suites" "$S_ALL" "$o_suites"
 new_repo; plan workflow_dispatch refs/heads/feature
 check "dispatch elsewhere: full, no deploy" "full false" "$o_mode $o_deploy"
+
+echo "== production dispatch reuses the tested tree (D28) =="
+setup_green; marker mobile "$t" 77; run_json 77 push success; P_TARGET=production plan workflow_dispatch refs/heads/main
+check "production: green push run on the tree → no tests" "$S_NONE" "$o_suites"; check "production: deploys" true "$o_deploy"
+setup_green; marker mobile "$t" 77; run_json 77 pull_request success; P_TARGET=production plan workflow_dispatch refs/heads/main
+check "production: green PR run on the tree → no tests" "$S_NONE" "$o_suites"
+setup_green; marker mobile "$t" 77; run_json 77 workflow_dispatch success; P_TARGET=production plan workflow_dispatch refs/heads/main
+check "production: earlier green dispatch on the tree → no tests" "$S_NONE" "$o_suites"
+setup_green; run_json 77 push success; P_TARGET=production plan workflow_dispatch refs/heads/main
+check "production: suite without marker still runs" "backend=false mobile=true scripts=false image=false " "$o_suites"
+setup_green; marker mobile "$t" 77; run_json 77 push failure; P_TARGET=production plan workflow_dispatch refs/heads/main
+check "production: failed run's markers ignored" "$S_ALL" "$o_suites"
+setup_green; marker mobile "$t" 77; run_json 77 push success; P_TARGET=production P_FORCE=true plan workflow_dispatch refs/heads/main
+check "production + force_tests → everything" "$S_ALL" "$o_suites"
+setup_green; marker mobile "$t" 77; run_json 77 push success; plan workflow_dispatch refs/heads/main
+check "target none (test button) → everything" "$S_ALL" "$o_suites"
+setup_green; marker mobile "$t" 77; run_json 77 push success; P_TARGET=production plan workflow_dispatch refs/heads/main 2
+check "production re-run → everything" "$S_ALL" "$o_suites"
+setup_green; marker mobile "$t" 77; run_json 77 push success; GH_FAIL_MATCH='artifacts' P_TARGET=production plan workflow_dispatch refs/heads/main
+check "production: artifact API error → everything" "$S_ALL" "$o_suites"; check "production: API error exit 0" 0 "$o_rc"
+setup_green; marker mobile "$t" 77; run_json 77 push success ".github/workflows/other.yml"; P_TARGET=production plan workflow_dispatch refs/heads/main
+check "production: marker from another workflow → everything" "$S_ALL" "$o_suites"
 
 echo "== deploy guard (scripts/ci-deploy-guard.sh) =="
 GUARD="${HERE}/../ci-deploy-guard.sh"

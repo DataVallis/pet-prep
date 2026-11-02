@@ -11,7 +11,7 @@ name: CI & Deploy
 # `ci-ok` fails unless every suite either passed or was skipped because plan said so.
 # A push / merge to main runs CI only and deploys NOTHING (David 2026-10-14). Production is
 # deployed only by "Run workflow" on main with target = production (scripts/ci-deploy-target.sh),
-# which tests everything: daily at ~03:17 Europe/Ljubljana (GitHub may start it later) by .github/workflows/daily-deploy.yml
+# which skips the suites already green on the identical tree (D28; input force_tests = test everything): daily at ~03:17 Europe/Ljubljana (GitHub may start it later) by .github/workflows/daily-deploy.yml
 # when main has new commits and their push CI is green (D21, David 2026-10-15), or manually by
 # David — agents never dispatch it. The deploy job runs only when plan and ci-ok succeeded
 # (explicit result checks — see the job) and its first step refuses a re-run of an older commit.
@@ -24,12 +24,16 @@ on:
   workflow_dispatch:
     inputs:
       target:
-        description: "none = full test run only; production = test everything on main, then deploy to api.petprep.si"
+        description: "none = full test run only; production = reuse CI already green on this tree (else test), then deploy to api.petprep.si"
         type: choice
         options:
           - none
           - production
         default: none
+      force_tests:
+        description: "true = run every suite even if this exact tree is already green (production deploys reuse green CI by default, D28)"
+        type: boolean
+        default: false
 
 # Dispatch runs (manual production deploys) get their own group: a push run queued behind
 # a pending dispatch in the same group would replace it silently (GitHub keeps only one
@@ -82,6 +86,8 @@ jobs:
           RUN_ATTEMPT: ${{ github.run_attempt }}
           REPO: ${{ github.repository }}
           WORKFLOW_FILE: deploy-production.yml
+          DEPLOY_TARGET: ${{ steps.target.outputs.target }}
+          FORCE_TESTS: ${{ inputs.force_tests == true }}
         run: bash scripts/ci-plan.sh
 
   backend-tests:
@@ -180,14 +186,12 @@ jobs:
 
       - name: Record green tree
         id: green
-        if: github.event_name == 'pull_request'
         run: |
           tree="$(git rev-parse 'HEAD^{tree}')"
           echo "tree=${tree}" >> "$GITHUB_OUTPUT"
           echo "${tree} ${GITHUB_RUN_ID}" > "${RUNNER_TEMP}/ci-green.txt"
 
       - name: Upload green-tree marker
-        if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
         with:
           name: ci-green-backend-${{ steps.green.outputs.tree }}
@@ -226,14 +230,12 @@ jobs:
 
       - name: Record green tree
         id: green
-        if: github.event_name == 'pull_request'
         run: |
           tree="$(git rev-parse 'HEAD^{tree}')"
           echo "tree=${tree}" >> "$GITHUB_OUTPUT"
           echo "${tree} ${GITHUB_RUN_ID}" > "${RUNNER_TEMP}/ci-green.txt"
 
       - name: Upload green-tree marker
-        if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
         with:
           name: ci-green-mobile-${{ steps.green.outputs.tree }}
@@ -309,14 +311,12 @@ jobs:
 
       - name: Record green tree
         id: green
-        if: github.event_name == 'pull_request'
         run: |
           tree="$(git rev-parse 'HEAD^{tree}')"
           echo "tree=${tree}" >> "$GITHUB_OUTPUT"
           echo "${tree} ${GITHUB_RUN_ID}" > "${RUNNER_TEMP}/ci-green.txt"
 
       - name: Upload green-tree marker
-        if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
         with:
           name: ci-green-scripts-${{ steps.green.outputs.tree }}
@@ -328,15 +328,45 @@ jobs:
   # mode) and smoke-tests it there too. Building it here first catches Dockerfile /
   # composer / Caddyfile breakage in the PR. Nothing is pushed; layers are cached in the
   # GitHub Actions cache.
+  # D28 (David 2026-11-02, "deploy max 10 min"): the same images are PUSHED to GHCR as
+  # ghcr.io/<owner>/petprep-{app,web}:be-<git tree of backend/> (the build context) from
+  # every same-repo run; the deploy pulls them instead of building on the CX23 (5–6 min,
+  # the base stage recompiled the PHP extensions after each builder prune). Fork PRs
+  # build without pushing. A docs / mobile-only change keeps the backend tree, so the
+  # deploy reuses the image of the last backend change.
   production-image:
-    name: Production image (build + smoke test, no push)
+    name: Production image (build + smoke test, push to GHCR)
     needs: plan
     if: needs.plan.outputs.image == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    permissions:
+      contents: read
+      packages: write
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+
+      - name: Image coordinates
+        id: img
+        env:
+          OWNER: ${{ github.repository_owner }}
+          SAME_REPO: ${{ github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository }}
+        run: |
+          set -eu
+          {
+            echo "registry=ghcr.io/${OWNER,,}"
+            echo "tag=be-$(git rev-parse HEAD:backend)"
+            echo "push=${SAME_REPO}"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Log in to GHCR
+        if: steps.img.outputs.push == 'true'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Lint Dockerfile
         uses: hadolint/hadolint-action@v3.1.0
@@ -346,15 +376,44 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
+      # Base ids for the server's reverb / caddy fingerprints (D19), carried as the label
+      # org.petprep.base-id — the server has no build cache to resolve them itself.
+      - name: Build PHP base stage (cache hit)
+        id: phpbase
+        uses: docker/build-push-action@v6
+        with:
+          context: backend
+          file: backend/docker/production/Dockerfile
+          target: base
+          push: false
+          load: true
+          tags: petprep-base:ci
+          cache-from: type=gha,scope=petprep-production
+
+      - name: Base ids
+        id: base
+        env:
+          APP_BASE: ${{ steps.phpbase.outputs.imageid }}
+        run: |
+          set -eu
+          docker pull -q caddy:2.8-alpine > /dev/null
+          echo "app=${APP_BASE}" >> "$GITHUB_OUTPUT"
+          echo "web=$(docker image inspect --format '{{.Id}}' caddy:2.8-alpine)" >> "$GITHUB_OUTPUT"
+
       - name: Build app image (php-fpm + code + vendor)
         uses: docker/build-push-action@v6
         with:
           context: backend
           file: backend/docker/production/Dockerfile
           target: app
-          push: false
+          push: ${{ steps.img.outputs.push == 'true' }}
           load: true
-          tags: petprep-app:ci
+          tags: |
+            petprep-app:ci
+            ${{ steps.img.outputs.registry }}/petprep-app:${{ steps.img.outputs.tag }}
+          labels: |
+            org.petprep.base-id=${{ steps.base.outputs.app }}
+            org.opencontainers.image.source=https://github.com/${{ github.repository }}
           cache-from: type=gha,scope=petprep-production
           cache-to: type=gha,mode=max,scope=petprep-production
 
@@ -364,9 +423,14 @@ jobs:
           context: backend
           file: backend/docker/production/Dockerfile
           target: web
-          push: false
+          push: ${{ steps.img.outputs.push == 'true' }}
           load: true
-          tags: petprep-web:ci
+          tags: |
+            petprep-web:ci
+            ${{ steps.img.outputs.registry }}/petprep-web:${{ steps.img.outputs.tag }}
+          labels: |
+            org.petprep.base-id=${{ steps.base.outputs.web }}
+            org.opencontainers.image.source=https://github.com/${{ github.repository }}
           cache-from: type=gha,scope=petprep-production
 
       # D18: one Caddyfile for both servers. Production = the defaults (no env), exactly as
@@ -414,14 +478,12 @@ jobs:
 
       - name: Record green tree
         id: green
-        if: github.event_name == 'pull_request'
         run: |
           tree="$(git rev-parse 'HEAD^{tree}')"
           echo "tree=${tree}" >> "$GITHUB_OUTPUT"
           echo "${tree} ${GITHUB_RUN_ID}" > "${RUNNER_TEMP}/ci-green.txt"
 
       - name: Upload green-tree marker
-        if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
         with:
           name: ci-green-image-${{ steps.green.outputs.tree }}
@@ -489,6 +551,9 @@ jobs:
     environment:
       name: production
       url: https://api.petprep.si
+    permissions:
+      contents: read
+      packages: read # the server pulls the CI images with this job's token (D28)
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -512,4 +577,7 @@ jobs:
           SSH_USER: ${{ secrets.PRODUCTION_USER || 'deploy' }}
           EXPECT_DOMAIN: api.petprep.si
           COMMIT_SHA: ${{ github.sha }}
+          IMAGE_OWNER: ${{ github.repository_owner }}
+          REGISTRY_USER: ${{ github.actor }}
+          REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bash scripts/ci-remote-deploy.sh

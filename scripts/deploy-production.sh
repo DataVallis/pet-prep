@@ -6,6 +6,9 @@
 #   deploy-production.sh <COMMIT_SHA>                                # manual, git checkout in repo/
 #   deploy-production.sh                                             # manual, re-deploy tree in place
 #   --expect-domain HOST: refuse (before any change) unless this server's API domain is HOST.
+#   --registry PREFIX --image-tag TAG (D28): pull PREFIX/petprep-{app,web}:TAG (built and
+#     pushed by CI, tag = be-<git tree of backend/>) instead of building on this server;
+#     a failed pull falls back to the local build (old behaviour). CI logs in before.
 #
 # RUNTIME (M4-05b, DEPLOYMENT.md D14)
 #   The PHP containers (app = php-fpm, reverb, queue, queue-broadcasts, scheduler)
@@ -28,8 +31,10 @@
 #   2. Record the previous release: PREV_SHA (repo/.deployed-sha, or git HEAD in git
 #      mode) and, for --from deploys, a copy of the current tree in
 #      /opt/petprep/releases/previous.
-#   3. Preflight `docker buildx version` (compose builds through BuildKit), then build
-#      the new images as :next from the NEW tree (--from dir, `git archive` of the
+#   3. Prebuilt images (D28): with --registry/--image-tag pull both images and tag them
+#      :next (base ids for the fingerprints from the label org.petprep.base-id); else /
+#      on a failed pull: preflight `docker buildx version` (compose builds through
+#      BuildKit), then build the new images as :next from the NEW tree (--from dir, `git archive` of the
 #      commit, or repo/ in place) and smoke-test them: `php artisan optimize`
 #      (config / events / routes / views / Filament) in a one-off container with
 #      the production env. Then normalise the storage volume for the non-root
@@ -228,10 +233,12 @@ RSYNC_EXCLUDES=(
     --exclude=/mobile/node_modules
 )
 
-usage() { sed -n '4,8p' "$0" | sed 's/^# \{0,1\}//'; }
+usage() { sed -n '4,11p' "$0" | sed 's/^# \{0,1\}//'; }
 
 SOURCE_DIR=""
 EXPECT_DOMAIN=""
+REGISTRY=""
+IMAGE_TAG=""
 while [ $# -gt 0 ]; do
     case "$1" in
         --from)
@@ -244,6 +251,14 @@ while [ $# -gt 0 ]; do
             [ -n "$EXPECT_DOMAIN" ] || { echo "ERROR: --expect-domain needs a host name" >&2; exit 2; }
             shift 2 ;;
         --expect-domain=*) EXPECT_DOMAIN="${1#--expect-domain=}"; shift ;;
+        --registry)
+            REGISTRY="${2:-}"
+            [ -n "$REGISTRY" ] || { echo "ERROR: --registry needs a prefix" >&2; exit 2; }
+            shift 2 ;;
+        --image-tag)
+            IMAGE_TAG="${2:-}"
+            [ -n "$IMAGE_TAG" ] || { echo "ERROR: --image-tag needs a tag" >&2; exit 2; }
+            shift 2 ;;
         -h|--help) usage; exit 0 ;;
         --) shift; break ;;
         -*) echo "ERROR: unknown option $1" >&2; usage >&2; exit 2 ;;
@@ -251,6 +266,12 @@ while [ $# -gt 0 ]; do
     esac
 done
 COMMIT_SHA="${1:-}"
+if [ -n "$REGISTRY$IMAGE_TAG" ]; then
+    if ! [[ "$REGISTRY" =~ ^[a-z0-9.-]+(:[0-9]+)?(/[a-z0-9._-]+)+$ ]] || ! [[ "$IMAGE_TAG" =~ ^[A-Za-z0-9_][A-Za-z0-9_.-]{0,127}$ ]]; then
+        echo "ERROR: --registry and --image-tag go together (lower-case registry/path, docker tag)." >&2
+        exit 2
+    fi
+fi
 
 log()  { echo "[deploy] $*"; }
 warn() { echo "[deploy] WARNING: $*" >&2; }
@@ -615,15 +636,42 @@ fi
 log "Previous release: ${PREV_SHA:-unknown}"
 
 # ---- 3. Build + smoke-test the new images (old release keeps serving) -------------
-if ! docker buildx version > /dev/null 2>&1; then
-    echo "ERROR: docker buildx (BuildKit) is not available — compose cannot build the production images." >&2
-    echo "       Install it (apt-get install docker-buildx-plugin) and redeploy. Nothing was changed." >&2
-    exit 1
+# pull_prebuilt: REGISTRY/<img>:IMAGE_TAG → <img>:next for both images (D28). Returns 1
+# (nothing tagged half-way matters: :next is rebuilt by the fallback) on any failure.
+pull_prebuilt() {
+    local img
+    for img in "${IMAGES[@]}"; do
+        docker pull -q "${REGISTRY}/${img}:${IMAGE_TAG}" > /dev/null || return 1
+    done
+    for img in "${IMAGES[@]}"; do
+        docker tag "${REGISTRY}/${img}:${IMAGE_TAG}" "${img}:next" || return 1
+        docker image rm "${REGISTRY}/${img}:${IMAGE_TAG}" > /dev/null 2>&1 || true # :next keeps the layers
+    done
+}
+image_label() { # image_label IMAGE: org.petprep.base-id of IMAGE (empty when missing)
+    docker image inspect --format '{{ index .Config.Labels "org.petprep.base-id" }}' "$1" 2>/dev/null | grep -E '^sha256:[0-9a-f]+$' || true
+}
+
+PREBUILT=0
+if [ -n "$IMAGE_TAG" ]; then
+    log "Pulling prebuilt images ${REGISTRY}/petprep-{app,web}:${IMAGE_TAG} (built by CI)..."
+    if pull_prebuilt; then
+        PREBUILT=1
+    else
+        warn "could not pull the prebuilt images — building them on this server instead (slower)."
+    fi
 fi
-log "Building production images petprep-app:next / petprep-web:next from ${BUILD_DIR}..."
-if ! dcn build app caddy; then
-    echo "ERROR: image build failed — nothing was changed, the current release keeps serving." >&2
-    exit 1
+if [ "$PREBUILT" = 0 ]; then
+    if ! docker buildx version > /dev/null 2>&1; then
+        echo "ERROR: docker buildx (BuildKit) is not available — compose cannot build the production images." >&2
+        echo "       Install it (apt-get install docker-buildx-plugin) and redeploy. Nothing was changed." >&2
+        exit 1
+    fi
+    log "Building production images petprep-app:next / petprep-web:next from ${BUILD_DIR}..."
+    if ! dcn build app caddy; then
+        echo "ERROR: image build failed — nothing was changed, the current release keeps serving." >&2
+        exit 1
+    fi
 fi
 log "Smoke test: php artisan optimize in a one-off container of the new image..."
 if ! dcn run --rm --no-deps -T app php artisan optimize; then
@@ -633,8 +681,16 @@ fi
 # Base image ids for the reverb / caddy fingerprints (D19): the PHP base stage (php:8.3-fpm +
 # extensions — a refreshed upstream image changes it; cache hit after the build above) and
 # the Caddy base image. Unknown → the service is recreated (fail safe), never an error.
-BASE_APP_ID="$(docker buildx build -q --load --target base -f "${BUILD_DIR}/backend/docker/production/Dockerfile" "${BUILD_DIR}/backend" 2>/dev/null | tail -n1)" || BASE_APP_ID=""
-BASE_WEB_ID="$(docker image inspect --format '{{.Id}}' caddy:2.8-alpine 2>/dev/null)" || BASE_WEB_ID=""
+# Prebuilt images carry both ids as the label org.petprep.base-id (set by CI, D28) — a
+# local `--target base` build would have no cache here and recompile the extensions.
+if [ "$PREBUILT" = 1 ]; then
+    BASE_APP_ID="$(image_label petprep-app:next)"
+    BASE_WEB_ID="$(image_label petprep-web:next)"
+    [ -n "$BASE_WEB_ID" ] || warn "prebuilt petprep-web:next has no base-id label — caddy will be recreated."
+else
+    BASE_APP_ID="$(docker buildx build -q --load --target base -f "${BUILD_DIR}/backend/docker/production/Dockerfile" "${BUILD_DIR}/backend" 2>/dev/null | tail -n1)" || BASE_APP_ID=""
+    BASE_WEB_ID="$(docker image inspect --format '{{.Id}}' caddy:2.8-alpine 2>/dev/null)" || BASE_WEB_ID=""
+fi
 [ -n "$BASE_APP_ID" ] || warn "could not resolve the PHP base image id — reverb will be recreated."
 
 # Storage volume ownership for the non-root runtime (see STORAGE above).

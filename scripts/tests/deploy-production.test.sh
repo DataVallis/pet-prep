@@ -12,7 +12,8 @@
 #           STORAGE_BAD=1 (the uid-1000 storage check in the new image fails),
 #           PENDING_RC (exit of `migrate:status --pending=3`: 3 = pending — default,
 #           0 = none → no maintenance, other = unknown), REVERB_RUNNING=0, CADDY_RUNNING=0,
-#           PHP_BASE_ID / CADDY_BASE_ID (base image ids), BASE_BUILD_FAIL=1.
+#           PHP_BASE_ID / CADDY_BASE_ID (base image ids), BASE_BUILD_FAIL=1,
+#           LABEL_APP / LABEL_WEB (org.petprep.base-id of the pulled :next images, D28).
 #           PETPREP_IMAGE_TAG (compose against the new tree) is logged in front.
 #   git     logs the call, then runs the real git (git-mode cases use a real temp repo).
 #   curl    prints CURL_STATUS (default 200).
@@ -57,6 +58,8 @@ if [ -n "${FAIL_MATCH:-}" ] && [[ "$args" =~ $FAIL_MATCH ]]; then exit 1; fi
 case "$args" in
     # D19 base ids: the caddy base image and the PHP `base` build stage.
     "image inspect --format {{.Id}} caddy:2.8-alpine"*) echo "${CADDY_BASE_ID:-sha256:caddybase1}" ;;
+    *'org.petprep.base-id'*petprep-app:next) echo "${LABEL_APP-sha256:phpbase1}" ;;
+    *'org.petprep.base-id'*petprep-web:next) echo "${LABEL_WEB-sha256:caddybase1}" ;;
     "buildx build -q --load --target base "*)
         [ "${BASE_BUILD_FAIL:-0}" = "1" ] && exit 1
         echo "${PHP_BASE_ID:-sha256:phpbase1}" ;;
@@ -245,6 +248,41 @@ run_deploy -- --from "$ROOT/incoming" sha-v2
 check "exit 0" rc_is 0
 check "warns about the override" out_has "PET_MEDIA_SERVE_VIA='php'"
 check "no env secret in output" no_secret
+finish
+
+start prebuilt "prebuilt images from the registry (D28)"
+new_root dir; run_deploy -- --from "$ROOT/incoming" --registry ghcr.io/datavallis --image-tag be-abc123 sha-v2
+check "exit 0" rc_is 0
+check "pulls the app image" called 'pull -q ghcr.io/datavallis/petprep-app:be-abc123'
+check "pulls the web image" called 'pull -q ghcr.io/datavallis/petprep-web:be-abc123'
+check "tags them :next" called 'tag ghcr.io/datavallis/petprep-app:be-abc123 petprep-app:next'
+check "no build on the server" not_called 'build app caddy'
+check "no local base-stage build" not_called 'buildx build -q --load --target base'
+check "pull before the smoke test" before 'pull -q ghcr.io/datavallis/petprep-app' 'run --rm --no-deps -T app php artisan optimize'
+check "smoke test still runs" called 'PETPREP_IMAGE_TAG=next .*run --rm --no-deps -T app php artisan optimize'
+check "promotes :next → :production" called 'tag petprep-app:next petprep-app:production'
+finish
+
+start prebuilt_fallback "prebuilt pull fails → builds on the server"
+new_root dir; run_deploy FAIL_MATCH='^pull ' -- --from "$ROOT/incoming" --registry ghcr.io/datavallis --image-tag be-abc123 sha-v2
+check "exit 0" rc_is 0
+check "warns" out_has "could not pull the prebuilt images"
+check "builds instead" called 'PETPREP_IMAGE_TAG=next .*build app caddy'
+check "base id from the local build" called 'buildx build -q --load --target base'
+finish
+
+start prebuilt_nolabel "prebuilt image without base label → services recreated, no error"
+new_root dir; run_deploy LABEL_APP= LABEL_WEB= -- --from "$ROOT/incoming" --registry ghcr.io/datavallis --image-tag be-abc123 sha-v2
+check "exit 0" rc_is 0
+check "warns about the web label" out_has "has no base-id label"
+finish
+
+start prebuilt_bad "bad --registry / --image-tag → refused before anything"
+new_root dir; run_deploy -- --from "$ROOT/incoming" --registry 'ghcr.io/x;rm' --image-tag be-1 sha-v2
+check "exit 2" rc_is 2
+check "no docker call" not_called 'docker'
+new_root dir; run_deploy -- --from "$ROOT/incoming" --image-tag be-1 sha-v2
+check "tag without registry → exit 2" rc_is 2
 finish
 
 start no_buildx "docker buildx missing → clear error, nothing changed"

@@ -52,10 +52,18 @@
 #      merge commit, so its tree equals main's tree after the merge unless main moved
 #      in between (then the trees differ and everything needed runs again). Applies to
 #      push runs in full mode too (a marker proves the exact tree, whatever the base).
-#      pull_request and workflow_dispatch runs never skip on markers (dispatch = the
-#      manual "test everything (+ deploy with target production)" button).
+#      pull_request runs never skip on markers.
+#   4. Production deploy reuses the tested tree (D28, David 2026-11-02: "deploy max 10 min"):
+#      a "Run workflow" on main with DEPLOY_TARGET=production, attempt 1 and FORCE_TESTS not
+#      "true" skips every suite already green on exactly this tree in a successful run of
+#      this workflow from this repository — a pull_request, push or earlier dispatch run
+#      (every suite job uploads its marker since D28). The daily deploy only dispatches
+#      after the push CI of the main head is green, so it normally deploys without
+#      re-testing. No marker / API error → the suite runs (fail closed). Target none
+#      (the "test everything" button), FORCE_TESTS=true and re-runs still test everything.
 #
 # Env: EVENT_NAME, GIT_REF, RUN_ATTEMPT, REPO (owner/name), WORKFLOW_FILE (basename),
+# DEPLOY_TARGET (none / production, from ci-deploy-target.sh), FORCE_TESTS (true / false),
 # DEPLOY_JOB_NAME (default "Deploy to Hetzner Production"), GH_TOKEN (for gh),
 # GITHUB_OUTPUT, GITHUB_STEP_SUMMARY (optional). Test hooks: CI_PLAN_GH (gh binary).
 # Output (GITHUB_OUTPUT): tree, base, mode, backend, mobile, scripts, image, deploy
@@ -72,6 +80,8 @@ OUT="${GITHUB_OUTPUT:-/dev/stdout}"
 SUMMARY="${GITHUB_STEP_SUMMARY:-/dev/null}"
 WORKFLOW_PATH=".github/workflows/${WORKFLOW_FILE}"
 DEPLOY_JOB_NAME="${DEPLOY_JOB_NAME:-Deploy to Hetzner Production}"
+DEPLOY_TARGET="${DEPLOY_TARGET:-none}"
+FORCE_TESTS="${FORCE_TESTS:-false}"
 
 log() { echo "ci-plan: $*" >&2; }
 
@@ -196,19 +206,21 @@ if [ "$GIT_REF" = "refs/heads/main" ]; then
   esac
 fi
 
-# green_on_pr SUITE: true when a successful same-repo PR run of this workflow ran SUITE
-# on exactly this tree. Any API error → false (the suite runs).
+# green_on_pr SUITE [EVENTS]: true when a successful same-repo run of this workflow with
+# one of EVENTS (jq array, default only pull_request) ran SUITE on exactly this tree.
+# Any API error → false (the suite runs).
 green_on_pr() {
-  local suite="$1" ids id ok
+  local suite="$1" events="${2:-[\"pull_request\"]}" ids id ok
   ids="$("$GH" api "repos/${REPO}/actions/artifacts?name=ci-green-${suite}-${tree}&per_page=30" \
         --jq '.artifacts[] | select(.expired | not) | select(.workflow_run.head_repository_id == .workflow_run.repository_id) | .workflow_run.id' \
         2>/dev/null)" || return 1
   for id in $ids; do
+    # shellcheck disable=SC2016 # $e is a jq variable, not a shell one
     ok="$("$GH" api "repos/${REPO}/actions/runs/${id}" \
-          --jq 'select(.event == "pull_request" and .status == "completed" and .conclusion == "success" and ((.path // "") | split("@")[0]) == "'"${WORKFLOW_PATH}"'") | .id' \
+          --jq 'select((.event as $e | '"${events}"' | index($e)) and .status == "completed" and .conclusion == "success" and ((.path // "") | split("@")[0]) == "'"${WORKFLOW_PATH}"'") | .id' \
           2>/dev/null)" || continue
     if [ "$ok" = "$id" ]; then
-      log "${suite}: tree ${tree} already green in PR run ${id}"
+      log "${suite}: tree ${tree} already green in run ${id}"
       verified_by="${verified_by}${suite}=run ${id} "
       return 0
     fi
@@ -223,6 +235,13 @@ if [ "$EVENT_NAME" = push ] && [ "$GIT_REF" = "refs/heads/main" ]; then
   if [ "$run_mobile" = true ] && green_on_pr mobile; then run_mobile=false; fi
   if [ "$run_scripts" = true ] && green_on_pr scripts; then run_scripts=false; fi
   if [ "$run_image" = true ] && green_on_pr image; then run_image=false; fi
+elif [ "$EVENT_NAME" = workflow_dispatch ] && [ "$GIT_REF" = "refs/heads/main" ] \
+     && [ "$DEPLOY_TARGET" = production ] && [ "${RUN_ATTEMPT:-1}" = 1 ] && [ "$FORCE_TESTS" != true ]; then
+  any='["pull_request","push","workflow_dispatch"]'
+  if [ "$run_backend" = true ] && green_on_pr backend "$any"; then run_backend=false; fi
+  if [ "$run_mobile" = true ] && green_on_pr mobile "$any"; then run_mobile=false; fi
+  if [ "$run_scripts" = true ] && green_on_pr scripts "$any"; then run_scripts=false; fi
+  if [ "$run_image" = true ] && green_on_pr image "$any"; then run_image=false; fi
 fi
 
 {
@@ -250,13 +269,13 @@ fi
   fi
   echo "| needed by paths | backend ${need_backend} · mobile ${need_mobile} · scripts ${need_scripts} · image ${need_image} |"
   echo "| runs here | backend ${run_backend} · mobile ${run_mobile} · scripts ${run_scripts} · image ${run_image} |"
-  [ -n "$verified_by" ] && echo "| already green on the PR (same tree) | ${verified_by}|"
+  [ -n "$verified_by" ] && echo "| already green (same tree) | ${verified_by}|"
   echo "| deploy | ${deploy} |"
 } >> "$SUMMARY"
 
 # One-line decision as a workflow annotation (stdout; GitHub reads "::notice::"), so it
 # can be read without the job log (check-runs annotations API). % / CR / LF escaped.
-notice="event=${EVENT_NAME} ref=${GIT_REF} attempt=${RUN_ATTEMPT:-1} mode=${mode} base=${base:-none} reason=${reason:-none} changed_files=${#files[@]} tree=${tree}"
+notice="event=${EVENT_NAME} ref=${GIT_REF} attempt=${RUN_ATTEMPT:-1} target=${DEPLOY_TARGET} force_tests=${FORCE_TESTS} mode=${mode} base=${base:-none} reason=${reason:-none} changed_files=${#files[@]} tree=${tree}"
 notice="${notice} need: backend=${need_backend} mobile=${need_mobile} scripts=${need_scripts} image=${need_image} deploy_paths=${need_deploy}"
 notice="${notice} run: backend=${run_backend} mobile=${run_mobile} scripts=${run_scripts} image=${run_image} green_on_pr=${verified_by:-none} deploy=${deploy}"
 notice="${notice//'%'/'%25'}"; notice="${notice//$'\r'/'%0D'}"; notice="${notice//$'\n'/'%0A'}"

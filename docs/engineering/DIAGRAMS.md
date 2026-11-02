@@ -1158,7 +1158,7 @@ flowchart LR
 ```mermaid
 flowchart TD
   A["1 env preflight<br/>(no git / docker before)<br/>server identity from APP_URL: API domain + Caddy sites<br/>--expect-domain mismatch → exit, nothing changed (D18)"] --> B["2 record previous release<br/>.deployed-sha + releases/previous"]
-  B --> C["3 buildx preflight · build petprep-app:next + petprep-web:next<br/>from the NEW tree (incoming/ or git archive)"]
+  B --> C["3 pull ghcr.io …/petprep-{app,web}:be-&lt;backend tree&gt; → :next (CI-built, D28)<br/>pull fails → buildx preflight · build from the NEW tree (incoming/ or git archive)"]
   C --> D["smoke: run --rm app php artisan optimize<br/>(new image, production env)"]
   D --> ST["storage: chown -R 1000:1000 as root (new image)<br/>verify writable as uid 1000"]
   C -- fails --> X0["exit ≠ 0 · nothing changed<br/>old release keeps serving"]

@@ -24,7 +24,7 @@
 #   d. a workflow_dispatch run of deploy-production.yml is already queued / running → exit 0.
 #   e. gh workflow run deploy-production.yml --ref main -f target=production; the new run
 #      goes to the job summary. (Residual race: a merge between the last head check and the
-#      dispatch makes the run deploy the newer head — that run still tests everything first.)
+#      dispatch makes the run deploy the newer head — that run tests whatever is not yet green on its tree first, D28.)
 #   f. DRY_RUN=true: decide and print, dispatch nothing.
 #
 # Env: EVENT_NAME (schedule | workflow_dispatch), SCHEDULE (github.event.schedule), DRY_RUN,
