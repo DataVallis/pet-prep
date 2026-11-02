@@ -188,6 +188,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-11-02 (cloud, backend) — shared phone: child pushes only for the pet opened last (`fix/push-follow-open-pet`)
+- David 2026-11-02: `device_push_tokens.followed_at` (stamped by every child registration); `NotificationService::deliver` sends child-audience pushes only to each token's latest stamped child row; parent rows unfiltered; legacy tokens unchanged. No app change. Tests `PushFollowOpenPetTest`. Reaches users with the next production deploy (migration, additive).
+
 ### 2026-10-31 (cloud, backend) — Laravel 11 → 12 (`chore/M0-07-laravel-12`, PR #496 — lock by David, CI green, QA passed, merged 1. 11.)
 - `composer.json`: `laravel/framework ^12.70`, explicit `league/commonmark ^2.10.3`, `php ^8.3`, `config.platform.php` 8.3.0, Pest 3 + pest-plugin-laravel → `require-dev`, floors at the already-locked L12-compatible versions; skeleton `pre-package-uninstall` script. Filament 3.3.55 / Sanctum 4.3.3 / Reverb 1.11.1 / Scramble 0.13.43 / tinker 2.11.1 / collision 8.9.5 / pest-plugin-laravel 3.2.0 in the current lock already allow `illuminate/* ^12` — no Filament 4. Carbon is already 3.14.
 - Code: default `local` disk `serve => false` (GHSA-crmm-hgp2-wgrp hardening; unused route). Upgrade guide checked item by item (PR body); container default-param change hits `HygieneEventService` / `ErrorRecorder` — both already resolve lazily, no change. CI smoke test asserts no `vendor/pestphp` in the image.
