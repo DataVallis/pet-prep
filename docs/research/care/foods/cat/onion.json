@@ -15,7 +15,8 @@
     "hr": "Luk",
     "sv": "Lök",
     "da": "Løg",
-    "fi": "Sipuli"
+    "fi": "Sipuli",
+    "nb": "Løk"
   },
   "question": {
     "en": "Can cats eat onion?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti luk?",
     "sv": "Får katter äta lök?",
     "da": "Må katte spise løg?",
-    "fi": "Saako kissa syödä sipulia?"
+    "fi": "Saako kissa syödä sipulia?",
+    "nb": "Kan katter spise løk?"
   },
   "url_slug": {
     "en": "onion",
@@ -47,7 +49,8 @@
     "hr": "luk",
     "sv": "lok",
     "da": "loeg",
-    "fi": "sipuli"
+    "fi": "sipuli",
+    "nb": "lok"
   },
   "level": "toxic",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne. Luk je otrovan za mačke u svakom obliku – sirov, termički obrađen, sušen ili u prahu. Može oštetiti crvene krvne stanice i uzrokovati anemiju, a mačke su najosjetljivija vrsta. Ako mačka pojede imalo luka, nazovi veterinara.",
     "sv": "Nej. Lök är giftig för katter i alla former – rå, tillagad, torkad eller som pulver. Den kan skada de röda blodkropparna och orsaka blodbrist (anemi), och katter är den känsligaste arten. Ring veterinären om katten äter någon lök.",
     "da": "Nej. Løg er giftigt for katte i alle former – råt, tilberedt, tørret eller i pulverform. Det kan skade de røde blodlegemer og give blodmangel (anæmi), og katte er den mest følsomme dyreart. Ring til din dyrlæge hvis din kat spiser noget af det.",
-    "fi": "Ei saa. Sipuli on kissalle myrkyllistä kaikissa muodoissa – raakana, kypsennettynä, kuivattuna tai jauheena. Se voi vaurioittaa punasoluja ja aiheuttaa anemiaa, ja kissat ovat eläinlajeista herkimpiä. Soita eläinlääkärille, jos kissasi syö sitä vähänkin."
+    "fi": "Ei saa. Sipuli on kissalle myrkyllistä kaikissa muodoissa – raakana, kypsennettynä, kuivattuna tai jauheena. Se voi vaurioittaa punasoluja ja aiheuttaa anemiaa, ja kissat ovat eläinlajeista herkimpiä. Soita eläinlääkärille, jos kissasi syö sitä vähänkin.",
+    "nb": "Nei. Løk er giftig for katter i alle former – rå, tilberedt, tørket eller som pulver. Den kan skade de røde blodcellene og gi blodmangel (anemi), og katter er den mest følsomme arten. Ring dyrlegen hvis katten spiser noe løk."
   },
   "why": {
     "en": "Onion belongs to the allium family (the onion family). Alliums damage red blood cells and can lead to anaemia, and they also irritate the stomach and gut. Cats are the most sensitive species. All forms are poisonous to cats — raw, cooked, dried, powdered and liquid.",
@@ -80,7 +84,8 @@
     "hr": "Luk pripada biljkama iz roda Allium (porodici luka). Biljke iz roda Allium oštećuju crvene krvne stanice i mogu dovesti do anemije, a uz to nadražuju želudac i crijeva. Mačke su najosjetljivija vrsta. Svi su oblici otrovni za mačke – sirov, termički obrađen, sušen, u prahu i tekući.",
     "sv": "Lök hör till släktet Allium (lökfamiljen). Lökväxter skadar de röda blodkropparna och kan leda till blodbrist (anemi), och de irriterar också magen och tarmarna. Katter är den känsligaste arten. Alla former är giftiga för katter – rå, tillagad, torkad, i pulverform och i flytande form.",
     "da": "Løg hører til løgplanterne (Allium, løgfamilien). Løgplanter skader de røde blodlegemer og kan føre til blodmangel, og de irriterer også mave og tarm. Katte er den mest følsomme dyreart. Alle former er giftige for katte – rå, tilberedte, tørrede, i pulverform og flydende.",
-    "fi": "Sipuli kuuluu sipulikasveihin eli sipulin sukuun. Sipulikasvit vaurioittavat punasoluja ja voivat johtaa anemiaan, ja ne myös ärsyttävät mahaa ja suolistoa. Kissat ovat eläinlajeista herkimpiä. Kaikki muodot ovat kissalle myrkyllisiä – raaka, kypsennetty, kuivattu, jauhettu ja nestemäinen."
+    "fi": "Sipuli kuuluu sipulikasveihin eli sipulin sukuun. Sipulikasvit vaurioittavat punasoluja ja voivat johtaa anemiaan, ja ne myös ärsyttävät mahaa ja suolistoa. Kissat ovat eläinlajeista herkimpiä. Kaikki muodot ovat kissalle myrkyllisiä – raaka, kypsennetty, kuivattu, jauhettu ja nestemäinen.",
+    "nb": "Løk hører til løkplantene (Allium). Løkplanter skader de røde blodcellene og kan føre til blodmangel (anemi), og de irriterer også magen og tarmen. Katter er den mest følsomme arten. Alle former er giftige for katter – rå, tilberedt, tørket, som pulver og i flytende form."
   },
   "signs": {
     "en": [
@@ -208,6 +213,15 @@
       "Kalpeat ikenet",
       "Punertava virtsa",
       "Nopeutunut tai raskas hengitys"
+    ],
+    "nb": [
+      "Oppkast",
+      "Diaré",
+      "Nedsatt matlyst",
+      "Svakhet",
+      "Blekt tannkjøtt",
+      "Rødfarget urin",
+      "Raskere eller tyngre pust"
     ]
   },
   "what_to_do": {
@@ -224,7 +238,8 @@
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako se čini da je mačka dobro – znakovi anemije mogu se pokazati tek nakon nekoliko dana. Zapiši što je mačka pojela (sirovo, termički obrađeno, u prahu ili jelo koje ga sadrži), koliko i kada. Ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur, även om katten verkar må bra – tecken på blodbrist kan dröja flera dagar. Notera vad katten åt (rått, tillagat, pulver eller en maträtt som innehöll det), hur mycket och när. Försök inte få katten att kräkas hemma.",
     "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr, også selvom din kat virker rask – tegn på blodmangel kan først vise sig efter flere dage. Skriv ned hvad din kat har spist (råt, tilberedt, pulver eller en ret med løg), hvor meget og hvornår. Prøv ikke selv at få katten til at kaste op.",
-    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, vaikka kissasi vaikuttaisi voivan hyvin – anemian oireet voivat näkyä vasta usean päivän kuluttua. Kirjaa ylös, mitä kissasi söi (raakaa, kypsennettyä, jauhetta vai ruokaa, jossa sitä oli), kuinka paljon ja milloin. Älä yritä itse oksennuttaa kissaasi."
+    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, vaikka kissasi vaikuttaisi voivan hyvin – anemian oireet voivat näkyä vasta usean päivän kuluttua. Kirjaa ylös, mitä kissasi söi (raakaa, kypsennettyä, jauhetta vai ruokaa, jossa sitä oli), kuinka paljon ja milloin. Älä yritä itse oksennuttaa kissaasi.",
+    "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang, selv om katten virker frisk – det kan ta flere dager før tegn på blodmangel viser seg. Skriv ned hva katten har spist (rå, tilberedt, som pulver eller i en rett med løk), hvor mye og når. Ikke prøv å få katten til å kaste opp selv."
   },
   "serving": null,
   "child": {
@@ -241,7 +256,8 @@
     "hr": "Luk nije za mace, čak ni kuhan u jelu. Ako ga maca pojede, reci odrasloj osobi da nazove veterinara.",
     "sv": "Lök är inte för katter, inte ens tillagad i maten. Om katten äter lite, säg till en vuxen så att den vuxna kan ringa veterinären.",
     "da": "Løg er ikke for katte, heller ikke når de er kogt i maden. Hvis katten spiser noget, så sig det til en voksen, så den voksne kan ringe til dyrlægen.",
-    "fi": "Sipuli ei sovi kissoille, ei edes keitettynä ruoassa. Jos kisu syö sitä, kerro aikuiselle, niin hän voi soittaa eläinlääkärille."
+    "fi": "Sipuli ei sovi kissoille, ei edes keitettynä ruoassa. Jos kisu syö sitä, kerro aikuiselle, niin hän voi soittaa eläinlääkärille.",
+    "nb": "Løk er ikke for katter, heller ikke når den er kokt i maten. Hvis pusen spiser litt, si fra til en voksen, så den voksne kan ringe dyrlegen."
   },
   "faq": [
     {
@@ -259,7 +275,8 @@
         "hr": "Je li termički obrađen luk ili luk u prahu siguran za mačke?",
         "sv": "Är tillagad lök eller lökpulver säkert för katter?",
         "da": "Er tilberedt løg eller løgpulver sikkert for katte?",
-        "fi": "Onko kypsennetty tai jauhettu sipuli kissalle turvallista?"
+        "fi": "Onko kypsennetty tai jauhettu sipuli kissalle turvallista?",
+        "nb": "Er tilberedt løk eller løkpulver trygt for katter?"
       },
       "a": {
         "en": "No. All forms are poisonous to cats, including raw, cooked, dried, powdered and liquid onion. Be careful with leftovers, stuffing and gravy that may contain it.",
@@ -275,7 +292,8 @@
         "hr": "Nije. Za mačke su otrovni svi oblici, uključujući sirov, termički obrađen, sušen, tekući luk i luk u prahu. Pripazi na ostatke hrane, nadjeve i sok od pečenja koji ga mogu sadržavati.",
         "sv": "Nej. Alla former är giftiga för katter, även rå, tillagad, torkad, pulveriserad och flytande lök. Var försiktig med rester, fyllning och sky som kan innehålla lök.",
         "da": "Nej. Alle former er giftige for katte, også råt, tilberedt, tørret, pulveriseret og flydende løg. Pas på med rester, fyld og sovs der kan indeholde løg.",
-        "fi": "Ei ole. Kaikki muodot ovat kissalle myrkyllisiä, myös raaka, kypsennetty, kuivattu, jauhettu ja nestemäinen sipuli. Ole varovainen ruoantähteiden, täytteiden ja kastikkeiden kanssa, sillä niissä voi olla sipulia."
+        "fi": "Ei ole. Kaikki muodot ovat kissalle myrkyllisiä, myös raaka, kypsennetty, kuivattu, jauhettu ja nestemäinen sipuli. Ole varovainen ruoantähteiden, täytteiden ja kastikkeiden kanssa, sillä niissä voi olla sipulia.",
+        "nb": "Nei. Alle former er giftige for katter, også rå, tilberedt, tørket, pulverisert og flytende løk. Vær forsiktig med matrester, fyll og brun saus som kan inneholde løk."
       }
     },
     {
@@ -293,7 +311,8 @@
         "hr": "Zašto se znakovi ponekad pojave tek nakon nekoliko dana?",
         "sv": "Varför kommer symtomen ibland först efter några dagar?",
         "da": "Hvorfor viser symptomerne sig nogle gange først efter flere dage?",
-        "fi": "Miksi oireet ilmaantuvat joskus vasta päivien kuluttua?"
+        "fi": "Miksi oireet ilmaantuvat joskus vasta päivien kuluttua?",
+        "nb": "Hvorfor kommer symptomene noen ganger flere dager senere?"
       },
       "a": {
         "en": "Tummy upset often shows first, but signs of anaemia usually take longer and can appear within one to five days. That is why you should call your vet straight away rather than wait.",
@@ -309,7 +328,8 @@
         "hr": "Probavne smetnje često se pojave prve, ali znakovima anemije obično treba dulje i mogu se pojaviti unutar jednog do pet dana. Zato odmah nazovi veterinara, umjesto da čekaš.",
         "sv": "Magbesvär syns ofta först, men tecken på blodbrist dröjer oftast längre och kan komma inom en till fem dagar. Därför ska du ringa veterinären direkt i stället för att vänta.",
         "da": "Maveproblemer viser sig ofte først, men tegn på blodmangel kommer som regel senere og kan vise sig inden for en til fem dage. Derfor skal du ringe til din dyrlæge med det samme i stedet for at vente.",
-        "fi": "Vatsavaivat näkyvät usein ensin, mutta anemian oireet tulevat yleensä myöhemmin ja voivat ilmaantua 1–5 päivän kuluessa. Siksi eläinlääkärille pitää soittaa heti eikä jäädä odottamaan."
+        "fi": "Vatsavaivat näkyvät usein ensin, mutta anemian oireet tulevat yleensä myöhemmin ja voivat ilmaantua 1–5 päivän kuluessa. Siksi eläinlääkärille pitää soittaa heti eikä jäädä odottamaan.",
+        "nb": "Urolig mage viser seg ofte først, men tegn på blodmangel tar vanligvis lengre tid og kan komme i løpet av én til fem dager. Derfor bør du ringe dyrlegen med en gang i stedet for å vente."
       }
     }
   ],
@@ -476,6 +496,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c7b0fd445daf678d68a3d00083fbc117a91d5e63ad05d707a34af78f35807ded"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "72d60c8266b35f9ee615b77acd73b3b4a826668a70e85ccbc7a960c99fa1a955"
     }
   }
 }

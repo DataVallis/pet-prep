@@ -8,7 +8,8 @@
     "hr": "Lubenica",
     "sv": "Vattenmelon",
     "da": "Vandmelon",
-    "fi": "Vesimeloni"
+    "fi": "Vesimeloni",
+    "nb": "Vannmelon"
   },
   "question": {
     "en": "Can dogs eat watermelon?",
@@ -17,7 +18,8 @@
     "hr": "Smiju li psi jesti lubenicu?",
     "sv": "Får hundar äta vattenmelon?",
     "da": "Må hunde spise vandmelon?",
-    "fi": "Saako koira syödä vesimelonia?"
+    "fi": "Saako koira syödä vesimelonia?",
+    "nb": "Kan hunder spise vannmelon?"
   },
   "url_slug": {
     "en": "watermelon",
@@ -26,7 +28,8 @@
     "hr": "lubenica",
     "sv": "vattenmelon",
     "da": "vandmelon",
-    "fi": "vesimeloni"
+    "fi": "vesimeloni",
+    "nb": "vannmelon"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "hr": "Da, ako je pravilno pripremiš. Lubenica je niskokalorično voće s puno vode, ali prije toga ukloni sve sjemenke i koru jer i jedno i drugo može izazvati probavne tegobe ili začepljenje crijeva.",
     "sv": "Ja, om du förbereder den rätt. Vattenmelon är en kalorisnål frukt med hög vattenhalt, men ta först bort alla kärnor och skalet, eftersom båda kan ge matsmältningsbesvär eller tarmstopp.",
     "da": "Ja, hvis du gør den klar på den rigtige måde. Vandmelon er en kaloriefattig frugt med et højt vandindhold, men fjern først alle kerner og skrællen, fordi begge dele kan give fordøjelsesproblemer eller tarmblokering.",
-    "fi": "Saa, kunhan se on oikein valmisteltu. Vesimeloni on vähäkalorinen ja hyvin vesipitoinen hedelmä, mutta poista ensin kaikki siemenet ja kuori, koska molemmat voivat aiheuttaa ruoansulatusvaivoja tai suolitukoksen."
+    "fi": "Saa, kunhan se on oikein valmisteltu. Vesimeloni on vähäkalorinen ja hyvin vesipitoinen hedelmä, mutta poista ensin kaikki siemenet ja kuori, koska molemmat voivat aiheuttaa ruoansulatusvaivoja tai suolitukoksen.",
+    "nb": "Ja, hvis den gjøres klar på riktig måte. Vannmelon er en kalorifattig frukt med mye vann, men fjern alle kjerner og skallet først, fordi begge deler kan gi fordøyelsesplager eller tarmblokkering."
   },
   "why": {
     "en": "Seeds can cause an intestinal blockage, especially if a dog eats many, and can be a choking hazard for small dogs. The rind may cause stomach upset, vomiting, diarrhoea or intestinal obstruction if eaten in large pieces. Too much watermelon may cause stomach discomfort or diarrhoea because of its natural sugar and fibre.",
@@ -45,7 +49,8 @@
     "hr": "Sjemenke mogu izazvati začepljenje crijeva, osobito ako ih pas pojede puno, a kod malih pasa mogu izazvati gušenje. Kora može izazvati probavne tegobe, povraćanje, proljev ili začepljenje crijeva ako pas pojede velike komade. Previše lubenice može izazvati nelagodu u trbuhu ili proljev zbog prirodnog šećera i vlakana.",
     "sv": "Kärnorna kan orsaka tarmstopp, särskilt om hunden äter många, och kan orsaka kvävning hos små hundar. Skalet kan ge magbesvär, kräkningar, diarré eller tarmstopp om hunden äter stora bitar. För mycket vattenmelon kan ge obehag i magen eller diarré på grund av det naturliga sockret och fibrerna.",
     "da": "Kerner kan give tarmblokering, især hvis en hund spiser mange, og kan sætte sig fast i halsen på små hunde. Skrællen kan give maveproblemer, opkast, diarré eller tarmblokering hvis den spises i store stykker. For meget vandmelon kan give ubehag i maven eller diarré på grund af det naturlige sukker og fibrene.",
-    "fi": "Siemenet voivat aiheuttaa suolitukoksen, etenkin jos koira syö niitä paljon, ja ne voivat aiheuttaa tukehtumisvaaran pienille koirille. Kuori voi aiheuttaa vatsavaivoja, oksentelua, ripulia tai suolitukoksen, jos koira syö sitä suurina paloina. Liika vesimeloni voi luonnollisen sokerin ja kuidun vuoksi aiheuttaa vatsavaivoja tai ripulia."
+    "fi": "Siemenet voivat aiheuttaa suolitukoksen, etenkin jos koira syö niitä paljon, ja ne voivat aiheuttaa tukehtumisvaaran pienille koirille. Kuori voi aiheuttaa vatsavaivoja, oksentelua, ripulia tai suolitukoksen, jos koira syö sitä suurina paloina. Liika vesimeloni voi luonnollisen sokerin ja kuidun vuoksi aiheuttaa vatsavaivoja tai ripulia.",
+    "nb": "Kjernene kan gi tarmblokkering, særlig hvis hunden spiser mange, og kan sette seg fast i halsen på små hunder. Skallet kan gi urolig mage, oppkast, diaré eller tarmblokkering hvis det spises i store biter. For mye vannmelon kan gi ubehag i magen eller diaré på grunn av det naturlige sukkeret og fibrene."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "hr": "Prvi put daj malu količinu i prati pojavljuju li se probavne tegobe. Obrati se veterinaru ako tvoj pas nakon lubenice pokazuje simptome.",
     "sv": "Ge en liten mängd första gången och håll utkik efter matsmältningsbesvär. Kontakta veterinären om hunden får symtom efter att ha ätit vattenmelon.",
     "da": "Giv en lille mængde første gang, og hold øje med fordøjelsesproblemer. Kontakt din dyrlæge hvis din hund får symptomer efter at have spist vandmelon.",
-    "fi": "Anna ensimmäisellä kerralla pieni määrä ja seuraa, tuleeko ruoansulatusvaivoja. Ota yhteyttä eläinlääkäriin, jos koirallasi ilmenee oireita vesimelonin syömisen jälkeen."
+    "fi": "Anna ensimmäisellä kerralla pieni määrä ja seuraa, tuleeko ruoansulatusvaivoja. Ota yhteyttä eläinlääkäriin, jos koirallasi ilmenee oireita vesimelonin syömisen jälkeen.",
+    "nb": "Gi bare litt første gang, og følg med på fordøyelsesplager. Kontakt dyrlegen hvis hunden får symptomer etter å ha spist vannmelon."
   },
   "serving": {
     "en": "Bite-sized pieces with all seeds and the rind removed; seedless pieces can also be frozen as a cooling treat.",
@@ -64,7 +70,8 @@
     "hr": "Komadići veličine zalogaja, bez ijedne sjemenke i bez kore; komadiće bez sjemenki možeš i zamrznuti kao osvježavajuću poslasticu.",
     "sv": "Lagom stora bitar utan kärnor och skal; kärnfria bitar kan också frysas som en svalkande godbit.",
     "da": "Mundrette stykker uden kerner og skræl; kernefri stykker kan også fryses som en kølende godbid.",
-    "fi": "Suupaloina, kaikki siemenet ja kuori poistettuina; siemenettömiä paloja voi myös pakastaa viilentäväksi herkuksi."
+    "fi": "Suupaloina, kaikki siemenet ja kuori poistettuina; siemenettömiä paloja voi myös pakastaa viilentäväksi herkuksi.",
+    "nb": "Små biter med alle kjerner og skallet fjernet; kjernefrie biter kan også fryses som en avkjølende godbit."
   },
   "child": {
     "en": "On a hot day, dogs can enjoy small pieces of watermelon! A grown-up removes the seeds and the green skin.",
@@ -73,7 +80,8 @@
     "hr": "Za vrućeg dana psi mogu uživati u malim komadićima lubenice! Odrasla osoba ukloni sjemenke i zelenu koru.",
     "sv": "En varm dag kan hundar njuta av små bitar vattenmelon! En vuxen tar bort kärnorna och det gröna skalet.",
     "da": "På en varm dag kan hunde nyde små stykker vandmelon! En voksen fjerner kernerne og den grønne skræl.",
-    "fi": "Kuumana päivänä koira voi herkutella pienillä vesimelonin paloilla! Aikuinen poistaa siemenet ja vihreän kuoren."
+    "fi": "Kuumana päivänä koira voi herkutella pienillä vesimelonin paloilla! Aikuinen poistaa siemenet ja vihreän kuoren.",
+    "nb": "På varme dager kan hunder kose seg med små biter vannmelon! En voksen fjerner kjernene og det grønne skallet."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "hr": "Smiju li psi jesti koru lubenice?",
         "sv": "Får hundar äta vattenmelonskal?",
         "da": "Må hunde spise vandmelonskræl?",
-        "fi": "Saako koira syödä vesimelonin kuorta?"
+        "fi": "Saako koira syödä vesimelonin kuorta?",
+        "nb": "Kan hunder spise vannmelonskall?"
       },
       "a": {
         "en": "No, the rind is not recommended. In large pieces it may cause stomach upset, vomiting, diarrhoea or intestinal obstruction.",
@@ -93,7 +102,8 @@
         "hr": "Ne, kora se ne preporučuje. U velikim komadima može izazvati probavne tegobe, povraćanje, proljev ili začepljenje crijeva.",
         "sv": "Nej, skalet rekommenderas inte. I stora bitar kan det ge magbesvär, kräkningar, diarré eller tarmstopp.",
         "da": "Nej, skrællen frarådes. I store stykker kan den give maveproblemer, opkast, diarré eller tarmblokering.",
-        "fi": "Ei, kuorta ei suositella. Suurina paloina se voi aiheuttaa vatsavaivoja, oksentelua, ripulia tai suolitukoksen."
+        "fi": "Ei, kuorta ei suositella. Suurina paloina se voi aiheuttaa vatsavaivoja, oksentelua, ripulia tai suolitukoksen.",
+        "nb": "Nei, skallet anbefales ikke. I store biter kan det gi urolig mage, oppkast, diaré eller tarmblokkering."
       }
     }
   ],
@@ -196,6 +206,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0183180c365bf641e72842378c76281caee42df1baa6bd18f15df79fad29bc2d"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2025045926869b986fd6aab9fafbec96939e2352a9322ebfe5364c84af05e84d"
     }
   }
 }

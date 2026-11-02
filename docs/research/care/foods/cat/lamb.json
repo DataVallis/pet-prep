@@ -15,7 +15,8 @@
     "hr": "Janjetina",
     "sv": "Lammkött",
     "da": "Lammekød",
-    "fi": "Lampaanliha"
+    "fi": "Lampaanliha",
+    "nb": "Lammekjøtt"
   },
   "question": {
     "en": "Can cats eat lamb?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti janjetinu?",
     "sv": "Får katter äta lammkött?",
     "da": "Må katte spise lammekød?",
-    "fi": "Saako kissa syödä lampaanlihaa?"
+    "fi": "Saako kissa syödä lampaanlihaa?",
+    "nb": "Kan katter spise lammekjøtt?"
   },
   "url_slug": {
     "en": "lamb",
@@ -47,7 +49,8 @@
     "hr": "janjetina",
     "sv": "lammkott",
     "da": "lammekoed",
-    "fi": "lampaanliha"
+    "fi": "lampaanliha",
+    "nb": "lammekjott"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Da, malo obične, dobro termički obrađene janjetine u redu je kao povremena poslastica. Odreži masnoću, ukloni sve kosti i ne dodaji začine. Sirova se janjetina ne preporučuje.",
     "sv": "Ja, lite naturellt, ordentligt tillagat lammkött går bra som godbit någon gång ibland. Skär bort fettet, ta bort alla ben och krydda inte. Rått lammkött rekommenderas inte.",
     "da": "Ja, lidt naturelt, gennemtilberedt lammekød er fint som en godbid en gang imellem. Skær fedtet fra, fjern alle knogler, og tilsæt ingen krydderier. Råt lammekød anbefales ikke.",
-    "fi": "Saa, vähän maustamatonta, hyvin kypsennettyä lampaanlihaa sopii satunnaiseksi herkuksi. Leikkaa rasva pois, poista kaikki luut äläkä lisää mausteita. Raakaa lampaanlihaa ei suositella."
+    "fi": "Saa, vähän maustamatonta, hyvin kypsennettyä lampaanlihaa sopii satunnaiseksi herkuksi. Leikkaa rasva pois, poista kaikki luut äläkä lisää mausteita. Raakaa lampaanlihaa ei suositella.",
+    "nb": "Ja, litt naturelt, gjennomstekt lammekjøtt er greit som en godbit en gang iblant. Skjær bort fettet, fjern alle bein og ikke bruk krydder. Rått lammekjøtt anbefales ikke."
   },
   "why": {
     "en": "Lamb is one of the most common proteins in cat food. As a home treat it must be properly cooked: International Cat Care warns that raw or undercooked meat such as beef, lamb and pork can carry Toxoplasma, and advises feeding only properly cooked food. Fatty trimmings are on RSPCA Australia's do-not-feed list, and cooked bones can splinter.",
@@ -80,7 +84,8 @@
     "hr": "Janjetina je jedan od najčešćih izvora bjelančevina u hrani za mačke. Kao domaća poslastica mora biti dobro termički obrađena: International Cat Care upozorava da sirovo ili nedovoljno termički obrađeno meso, poput govedine, janjetine i svinjetine, može prenositi toksoplazmu (Toxoplasma) i savjetuje davati samo dobro termički obrađenu hranu. Masni obresci nalaze se na popisu RSPCA Australia s namirnicama koje se ne smiju davati, a termički obrađene kosti mogu se rascijepiti.",
     "sv": "Lammkött är ett av de vanligaste proteinerna i kattmat. Som godbit hemma måste det vara ordentligt tillagat: International Cat Care varnar för att rått eller otillräckligt tillagat kött, som nöt-, lamm- och fläskkött, kan bära på toxoplasma och råder till att bara ge ordentligt tillagad mat. Fettrester från kött finns på RSPCA Australias lista över sådant man inte ska ge, och tillagade ben kan splittras.",
     "da": "Lammekød er en af de mest almindelige proteinkilder i kattefoder. Som hjemmelavet godbid skal det være ordentligt tilberedt: International Cat Care advarer om at råt eller utilstrækkeligt tilberedt kød som oksekød, lammekød og svinekød kan indeholde Toxoplasma, og anbefaler kun at give ordentligt tilberedt mad. Fedtafskær står på RSPCA Australias liste over ting katte ikke må få, og tilberedte knogler kan splintre.",
-    "fi": "Lampaanliha on yksi kissanruoan yleisimmistä proteiininlähteistä. Kotona annettavana herkkuna sen on oltava kunnolla kypsennettyä: International Cat Care varoittaa, että raa’assa tai riittämättömästi kypsennetyssä lihassa, kuten naudan-, lampaan- ja sianlihassa, voi olla toksoplasmaa, ja neuvoo antamaan vain kunnolla kypsennettyä ruokaa. Rasvaiset lihanleikkuujätteet ovat RSPCA Australian kieltolistalla, ja kypsennetyt luut voivat sirpaloitua."
+    "fi": "Lampaanliha on yksi kissanruoan yleisimmistä proteiininlähteistä. Kotona annettavana herkkuna sen on oltava kunnolla kypsennettyä: International Cat Care varoittaa, että raa’assa tai riittämättömästi kypsennetyssä lihassa, kuten naudan-, lampaan- ja sianlihassa, voi olla toksoplasmaa, ja neuvoo antamaan vain kunnolla kypsennettyä ruokaa. Rasvaiset lihanleikkuujätteet ovat RSPCA Australian kieltolistalla, ja kypsennetyt luut voivat sirpaloitua.",
+    "nb": "Lammekjøtt er en av de vanligste proteinkildene i kattefôr. Som godbit hjemme må det være ordentlig tilberedt: International Cat Care advarer om at rått eller for lite tilberedt kjøtt, som storfe-, lamme- og svinekjøtt, kan inneholde parasitten Toxoplasma, og anbefaler å gi bare ordentlig tilberedt mat. Fettrester står på RSPCA Australias liste over mat du ikke skal gi, og tilberedte bein kan splintres."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili ima proljev, prestani i pitaj veterinara. Ako je mačka progutala termički obrađenu kost, nazovi veterinara.",
     "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären. Om katten har svalt ett tillagat ben, ring veterinären.",
     "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, skal du stoppe og spørge din dyrlæge. Hvis din kat har slugt en tilberedt knogle, skal du ringe til din dyrlæge.",
-    "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai sille tulee ripuli sen jälkeen, lopeta ja kysy neuvoa eläinlääkäriltä. Jos kissasi nielaisi kypsennetyn luun, soita eläinlääkärille."
+    "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai sille tulee ripuli sen jälkeen, lopeta ja kysy neuvoa eläinlääkäriltä. Jos kissasi nielaisi kypsennetyn luun, soita eläinlääkärille.",
+    "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt og spør dyrlegen. Hvis katten har svelget et tilberedt bein, ring dyrlegen."
   },
   "serving": {
     "en": "Well cooked, plain, lean, boneless and unseasoned; a few small pieces now and then.",
@@ -113,7 +119,8 @@
     "hr": "Dobro termički obrađena, obična, nemasna, bez kostiju i bez začina; nekoliko malih komadića povremeno.",
     "sv": "Ordentligt tillagat, naturellt, magert, utan ben och okryddat; några små bitar då och då.",
     "da": "Gennemtilberedt, naturelt, magert, uden knogler og uden krydderier; et par små stykker en gang imellem.",
-    "fi": "Hyvin kypsennettynä, maustamattomana, vähärasvaisena ja luuttomana; muutama pieni pala silloin tällöin."
+    "fi": "Hyvin kypsennettynä, maustamattomana, vähärasvaisena ja luuttomana; muutama pieni pala silloin tällöin.",
+    "nb": "Gjennomstekt, naturelt, magert, uten bein og uten krydder; noen små biter nå og da."
   },
   "child": {
     "en": "A tiny bit of plain cooked lamb can be a treat. A grown-up should cook it and take out the bones.",
@@ -129,7 +136,8 @@
     "hr": "Mrvica obične kuhane janjetine može biti poslastica. Neka je odrasla osoba skuha i izvadi kosti.",
     "sv": "En pytteliten bit kokt lammkött utan kryddor kan bli en godbit. En vuxen ska koka köttet och ta bort benen.",
     "da": "En lille smule almindeligt kogt lammekød kan være en godbid. En voksen skal lave kødet og tage knoglerne ud.",
-    "fi": "Pikkuinen pala maustamatonta keitettyä lampaanlihaa voi olla herkku. Aikuisen pitää kypsentää se ja poistaa luut."
+    "fi": "Pikkuinen pala maustamatonta keitettyä lampaanlihaa voi olla herkku. Aikuisen pitää kypsentää se ja poistaa luut.",
+    "nb": "En bitteliten bit kokt lammekjøtt uten krydder kan være en godbit. En voksen bør lage det og ta ut beina."
   },
   "faq": [],
   "sources": [
@@ -256,6 +264,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "59e8d5d1aa86c140c8ea734613c0a139d57c832a616c7d1fdfcc1327e657c425"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3eb18e202d4b0737e771393bb86e8ae84c45656395296d47cdcb3a06154a2025"
     }
   }
 }

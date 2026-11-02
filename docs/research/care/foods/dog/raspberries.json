@@ -8,7 +8,8 @@
     "hr": "Maline",
     "sv": "Hallon",
     "da": "Hindbær",
-    "fi": "Vadelmat"
+    "fi": "Vadelmat",
+    "nb": "Bringebær"
   },
   "question": {
     "en": "Can dogs eat raspberries?",
@@ -17,7 +18,8 @@
     "hr": "Smiju li psi jesti maline?",
     "sv": "Får hundar äta hallon?",
     "da": "Må hunde spise hindbær?",
-    "fi": "Saako koira syödä vadelmia?"
+    "fi": "Saako koira syödä vadelmia?",
+    "nb": "Kan hunder spise bringebær?"
   },
   "url_slug": {
     "en": "raspberries",
@@ -26,7 +28,8 @@
     "hr": "maline",
     "sv": "hallon",
     "da": "hindbaer",
-    "fi": "vadelmat"
+    "fi": "vadelmat",
+    "nb": "bringebaer"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "hr": "Da, umjereno. Maline mogu biti zdrava povremena poslastica i imaju relativno malo šećera i kalorija, ali prirodno sadrže ksilitol, pa ih daj samo umjereno. Najbolje su svježe ili smrznute maline.",
     "sv": "Ja, med måtta. Hallon kan vara en nyttig godbit ibland och innehåller relativt lite socker och kalorier, men de innehåller naturligt xylitol, så ge dem bara med måtta. Färska eller frysta hallon är bäst.",
     "da": "Ja, med måde. Hindbær kan være en sund godbid en gang imellem og indeholder relativt lidt sukker og få kalorier, men de indeholder naturligt xylitol, så giv dem kun med måde. Friske eller frosne hindbær er bedst.",
-    "fi": "Saa, kohtuudella. Vadelmat voivat olla terveellinen satunnainen herkku, ja niissä on suhteellisen vähän sokeria ja kaloreita, mutta niissä on luonnostaan ksylitolia, joten anna niitä vain kohtuudella. Tuoreet tai pakastetut vadelmat ovat parhaita."
+    "fi": "Saa, kohtuudella. Vadelmat voivat olla terveellinen satunnainen herkku, ja niissä on suhteellisen vähän sokeria ja kaloreita, mutta niissä on luonnostaan ksylitolia, joten anna niitä vain kohtuudella. Tuoreet tai pakastetut vadelmat ovat parhaita.",
+    "nb": "Ja, med måte. Bringebær kan være en sunn godbit av og til og inneholder relativt lite sukker og kalorier, men de inneholder naturlig xylitol, så gi dem bare med måte. Ferske eller frosne bringebær er best."
   },
   "why": {
     "en": "Raspberries contain naturally occurring xylitol at higher levels than most other fruits, although the amount is low compared with what is known to harm dogs. Overfeeding raspberries may cause vomiting, diarrhoea, constipation or other digestive upset. Sweetened raspberry products should be avoided.",
@@ -45,7 +49,8 @@
     "hr": "Maline prirodno sadrže više ksilitola nego većina drugog voća, iako je ta količina mala u usporedbi s onom za koju se zna da šteti psima. Previše malina može izazvati povraćanje, proljev, zatvor ili druge probavne tegobe. Zaslađene proizvode od malina treba izbjegavati.",
     "sv": "Hallon innehåller naturligt xylitol i högre halter än de flesta andra frukter, även om mängden är låg jämfört med den som man vet skadar hundar. För mycket hallon kan orsaka kräkningar, diarré, förstoppning eller andra matsmältningsbesvär. Sötade hallonprodukter bör undvikas.",
     "da": "Hindbær indeholder naturligt xylitol i højere mængder end de fleste andre frugter, selv om mængden er lav sammenlignet med den mængde man ved skader hunde. For mange hindbær kan give opkast, diarré, forstoppelse eller andre fordøjelsesproblemer. Sødede hindbærprodukter bør undgås.",
-    "fi": "Vadelmissa on luonnostaan enemmän ksylitolia kuin useimmissa muissa hedelmissä, vaikka määrä on pieni verrattuna siihen, minkä tiedetään vahingoittavan koiria. Liian suuri määrä vadelmia voi aiheuttaa oksentelua, ripulia, ummetusta tai muita ruoansulatusvaivoja. Makeutettuja vadelmatuotteita pitää välttää."
+    "fi": "Vadelmissa on luonnostaan enemmän ksylitolia kuin useimmissa muissa hedelmissä, vaikka määrä on pieni verrattuna siihen, minkä tiedetään vahingoittavan koiria. Liian suuri määrä vadelmia voi aiheuttaa oksentelua, ripulia, ummetusta tai muita ruoansulatusvaivoja. Makeutettuja vadelmatuotteita pitää välttää.",
+    "nb": "Bringebær inneholder naturlig xylitol i høyere mengder enn de fleste andre frukter, selv om mengden er lav sammenlignet med det man vet skader hunder. For mange bringebær kan gi oppkast, diaré, forstoppelse eller andre fordøyelsesplager. Søtede bringebærprodukter bør unngås."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "hr": "Daj maline samo umjereno jer previše malina može izazvati probavne tegobe. Ako tvoj pas ima šećernu bolest, pitaj veterinara prije nego što mu daš bilo koju novu poslasticu.",
     "sv": "Ge hallon bara med måtta, eftersom för mycket kan ge matsmältningsbesvär. Har du en hund med diabetes, fråga veterinären innan du ger nya godbitar.",
     "da": "Giv kun hindbær med måde – for mange kan give fordøjelsesproblemer. Har din hund sukkersyge, så spørg din dyrlæge før du giver den nye godbidder.",
-    "fi": "Anna vadelmia vain kohtuudella, koska liian suuri määrä voi aiheuttaa ruoansulatusvaivoja. Diabetesta sairastavien koirien omistajien tulisi kysyä eläinlääkäriltä ennen uusien herkkujen antamista."
+    "fi": "Anna vadelmia vain kohtuudella, koska liian suuri määrä voi aiheuttaa ruoansulatusvaivoja. Diabetesta sairastavien koirien omistajien tulisi kysyä eläinlääkäriltä ennen uusien herkkujen antamista.",
+    "nb": "Gi bringebær bare med måte, siden for mange kan gi fordøyelsesplager. Eiere av hunder med diabetes bør spørre dyrlegen før de gir nye godbiter."
   },
   "serving": {
     "en": "Plain fresh or frozen raspberries, never sweetened products; as an occasional treat.",
@@ -64,7 +70,8 @@
     "hr": "Obične svježe ili smrznute maline, nikad zaslađeni proizvodi; kao povremena poslastica.",
     "sv": "Färska eller frysta hallon utan tillsatser, aldrig sötade produkter; som en godbit ibland.",
     "da": "Almindelige friske eller frosne hindbær, aldrig sødede produkter; som en godbid en gang imellem.",
-    "fi": "Pelkkiä tuoreita tai pakastettuja vadelmia, ei koskaan makeutettuja tuotteita; satunnaisena herkkuna."
+    "fi": "Pelkkiä tuoreita tai pakastettuja vadelmia, ei koskaan makeutettuja tuotteita; satunnaisena herkkuna.",
+    "nb": "Naturelle, ferske eller frosne bringebær, aldri søtede produkter; som godbit av og til."
   },
   "child": {
     "en": "Dogs can have a few raspberries as a treat! A grown-up decides how many, because too many can upset a tummy.",
@@ -73,7 +80,8 @@
     "hr": "Psi smiju pojesti nekoliko malina kao poslasticu! Odrasla osoba odlučuje koliko, jer od previše malina može zaboljeti trbuh.",
     "sv": "Hundar får äta några hallon som godbit! En vuxen bestämmer hur många, eftersom för många kan ge ont i magen.",
     "da": "Hunde må gerne få nogle få hindbær som godbid! En voksen bestemmer hvor mange – for mange kan give ondt i maven.",
-    "fi": "Koira saa syödä muutaman vadelman herkkuna! Aikuinen päättää, kuinka monta, koska liian monesta voi tulla vatsa kipeäksi."
+    "fi": "Koira saa syödä muutaman vadelman herkkuna! Aikuinen päättää, kuinka monta, koska liian monesta voi tulla vatsa kipeäksi.",
+    "nb": "Hunder kan få noen bringebær som godbit! En voksen bestemmer hvor mange, siden for mange kan gi vondt i magen."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "hr": "Je li ksilitol u malinama problem?",
         "sv": "Är xylitolet i hallon ett problem?",
         "da": "Er xylitolen i hindbær et problem?",
-        "fi": "Onko vadelmien ksylitoli ongelma?"
+        "fi": "Onko vadelmien ksylitoli ongelma?",
+        "nb": "Er xylitolen i bringebær et problem?"
       },
       "a": {
         "en": "The amount of xylitol in raspberries is low relative to the amount known to harm dogs, but give raspberries only in moderation.",
@@ -93,7 +102,8 @@
         "hr": "Količina ksilitola u malinama mala je u usporedbi s količinom za koju se zna da šteti psima, ali maline svejedno daj samo umjereno.",
         "sv": "Mängden xylitol i hallon är låg jämfört med den mängd man vet skadar hundar, men ge ändå hallon bara med måtta.",
         "da": "Mængden af xylitol i hindbær er lav i forhold til den mængde man ved skader hunde, men giv kun hindbær med måde.",
-        "fi": "Vadelmissa on vähän ksylitolia verrattuna määrään, jonka tiedetään vahingoittavan koiria, mutta anna vadelmia silti vain kohtuudella."
+        "fi": "Vadelmissa on vähän ksylitolia verrattuna määrään, jonka tiedetään vahingoittavan koiria, mutta anna vadelmia silti vain kohtuudella.",
+        "nb": "Mengden xylitol i bringebær er lav sammenlignet med mengden man vet skader hunder, men gi bringebær bare med måte."
       }
     }
   ],
@@ -185,6 +195,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "92b47f73d521059795a58b3961982c81e145ea6dd8f6a49eedeb56519c3d3cae"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "746d1de6fecfeb214289ac3f04148adb7559dfd2b7f0423f22b970892461ef19"
     }
   }
 }

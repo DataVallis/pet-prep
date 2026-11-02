@@ -15,7 +15,8 @@
     "hr": "Kikiriki",
     "sv": "Jordnötter",
     "da": "Jordnødder",
-    "fi": "Maapähkinät"
+    "fi": "Maapähkinät",
+    "nb": "Peanøtter"
   },
   "question": {
     "en": "Can dogs eat peanuts?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti kikiriki?",
     "sv": "Får hundar äta jordnötter?",
     "da": "Må hunde spise jordnødder?",
-    "fi": "Saako koira syödä maapähkinöitä?"
+    "fi": "Saako koira syödä maapähkinöitä?",
+    "nb": "Kan hunder spise peanøtter?"
   },
   "url_slug": {
     "en": "peanuts",
@@ -47,7 +49,8 @@
     "hr": "kikiriki",
     "sv": "jordnotter",
     "da": "jordnoedder",
-    "fi": "maapahkinat"
+    "fi": "maapahkinat",
+    "nb": "peanotter"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Da, nekoliko zrna običnog kikirikija s vremena na vrijeme: neslanog, bez arome, prženog na suho ili sirovog, bez ljuske. Slani, medom prženi ili aromatizirani kikiriki nije prikladan, a kikiriki je mastan, zato neka to bude samo nekoliko zrna.",
     "sv": "Ja, några naturella jordnötter då och då: osaltade, utan smaksättning, torrostade eller råa och utan skal. Saltade, honungsrostade eller smaksatta jordnötter passar inte, och jordnötter är feta, så håll dig till några få.",
     "da": "Ja, nogle få almindelige jordnødder en gang imellem: usaltede, uden smag, tørristede eller rå og uden skal. Saltede, honningristede eller krydrede jordnødder er ikke egnede, og jordnødder er fede, så hold dig til nogle få.",
-    "fi": "Saa, silloin tällöin muutaman maapähkinän, kunhan ne ovat suolattomia, maustamattomia ja kuivapaahdettuja tai raakoja ja kuoret on poistettu. Suolatut, hunajapaahdetut tai maustetut maapähkinät eivät sovi, ja maapähkinät ovat rasvaisia, joten anna vain muutama."
+    "fi": "Saa, silloin tällöin muutaman maapähkinän, kunhan ne ovat suolattomia, maustamattomia ja kuivapaahdettuja tai raakoja ja kuoret on poistettu. Suolatut, hunajapaahdetut tai maustetut maapähkinät eivät sovi, ja maapähkinät ovat rasvaisia, joten anna vain muutama.",
+    "nb": "Ja, noen få naturelle peanøtter av og til: usaltede, uten smakstilsetning, tørristede eller rå, og uten skall. Saltede, honningristede eller smaksatte peanøtter passer ikke, og peanøtter er fete, så hold deg til noen få."
   },
   "why": {
     "en": "Peanuts are high in fat, which can cause digestive upset and even pancreatitis if a dog eats too much. Salted peanuts add sodium a dog doesn't need, flavoured ones add other risky ingredients, and the fibrous shell can be a choking hazard, especially for small breeds.",
@@ -80,7 +84,8 @@
     "hr": "Kikiriki ima puno masti, što može izazvati probavne tegobe, pa čak i upalu gušterače ako pas pojede previše. Slani kikiriki donosi natrij koji psu ne treba, aromatizirani sadrži druge rizične sastojke, a vlaknasta ljuska može izazvati gušenje, osobito kod malih pasmina.",
     "sv": "Jordnötter innehåller mycket fett, som kan orsaka matsmältningsbesvär och till och med bukspottkörtelinflammation (pankreatit) om hunden äter för mycket. Saltade jordnötter tillför natrium som hunden inte behöver, smaksatta tillför andra riskabla ingredienser, och det fibrösa skalet kan orsaka kvävning, särskilt hos små raser.",
     "da": "Jordnødder indeholder meget fedt, som kan give fordøjelsesproblemer og endda betændelse i bugspytkirtlen hvis hunden spiser for mange. Saltede jordnødder tilfører natrium, som hunden ikke har brug for, jordnødder med smag tilfører andre risikable ingredienser, og den fiberrige skal kan sætte sig fast i halsen, især hos små racer.",
-    "fi": "Maapähkinöissä on paljon rasvaa, mikä voi aiheuttaa ruoansulatusvaivoja ja jopa haimatulehduksen, jos koira syö niitä liikaa. Suolatuissa maapähkinöissä on natriumia, jota koira ei tarvitse, maustetuissa on muita riskialttiita ainesosia, ja kuitupitoinen kuori voi aiheuttaa tukehtumisvaaran etenkin pienillä roduilla."
+    "fi": "Maapähkinöissä on paljon rasvaa, mikä voi aiheuttaa ruoansulatusvaivoja ja jopa haimatulehduksen, jos koira syö niitä liikaa. Suolatuissa maapähkinöissä on natriumia, jota koira ei tarvitse, maustetuissa on muita riskialttiita ainesosia, ja kuitupitoinen kuori voi aiheuttaa tukehtumisvaaran etenkin pienillä roduilla.",
+    "nb": "Peanøtter inneholder mye fett, som kan gi fordøyelsesplager og til og med betennelse i bukspyttkjertelen hvis hunden spiser for mye. Saltede peanøtter gir natrium hunden ikke trenger, smaksatte gir andre risikable ingredienser, og det fiberrike skallet kan sette seg fast i halsen, særlig hos små raser."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "hr": "Ako je tvoj pas pojeo puno kikirikija, slani kikiriki ili ljuske, prati pojavljuju li se povraćanje, proljev ili bolovi u trbuhu i nazovi veterinara ako se pojave ili ako se čini da se pas guši.",
     "sv": "Om hunden ätit många jordnötter, saltade jordnötter eller skal, håll utkik efter kräkningar, diarré eller ont i magen, och ring veterinären om de dyker upp eller om hunden verkar ha satt något i halsen.",
     "da": "Hvis din hund har spist mange jordnødder, saltede jordnødder eller skaller, så hold øje med opkast, diarré eller mavesmerter, og kontakt din dyrlæge hvis de opstår, eller hvis hunden ser ud til at være ved at blive kvalt.",
-    "fi": "Jos koirasi söi paljon maapähkinöitä, suolattuja maapähkinöitä tai kuoria, seuraa, tuleeko oksentelua, ripulia tai vatsakipua, ja soita eläinlääkärille, jos niitä ilmenee tai koira näyttää tukehtuvan."
+    "fi": "Jos koirasi söi paljon maapähkinöitä, suolattuja maapähkinöitä tai kuoria, seuraa, tuleeko oksentelua, ripulia tai vatsakipua, ja soita eläinlääkärille, jos niitä ilmenee tai koira näyttää tukehtuvan.",
+    "nb": "Hvis hunden har spist mange peanøtter, saltede peanøtter eller skall, må du følge med på oppkast, diaré eller vondt i magen og ringe dyrlegen hvis dette oppstår, eller hvis hunden ser ut til å ha satt noe i halsen."
   },
   "serving": {
     "en": "Only a few, plain: dry-roasted or raw, unsalted, unseasoned, uncoated, shells removed — not every day.",
@@ -113,7 +119,8 @@
     "hr": "Samo nekoliko zrna običnog kikirikija: prženog na suho ili sirovog, neslanog, bez začina, bez preljeva i bez ljuske – ne svaki dan.",
     "sv": "Bara några få, naturella: torrostade eller råa, osaltade, okryddade, utan överdrag och utan skal – inte varje dag.",
     "da": "Kun nogle få og helt almindelige: tørristede eller rå, usaltede, ukrydrede, uden overtræk og uden skal – ikke hver dag.",
-    "fi": "Vain muutama, pelkkänä: kuivapaahdettuna tai raakana, suolattomana, maustamattomana ja kuorrutteettomana, kuoret poistettuina – ei joka päivä."
+    "fi": "Vain muutama, pelkkänä: kuivapaahdettuna tai raakana, suolattomana, maustamattomana ja kuorrutteettomana, kuoret poistettuina – ei joka päivä.",
+    "nb": "Bare noen få, naturelle: tørristede eller rå, usaltede, ukrydrede, uten overtrekk og uten skall – ikke hver dag."
   },
   "child": {
     "en": "A dog may have a few plain peanuts without shells. Salty or sweet peanuts are only for people.",
@@ -129,7 +136,8 @@
     "hr": "Pas smije pojesti nekoliko zrna običnog kikirikija bez ljuske. Slani ili slatki kikiriki samo je za ljude.",
     "sv": "En hund får äta några naturella jordnötter utan skal. Salta eller söta jordnötter är bara för människor.",
     "da": "En hund må gerne få nogle få almindelige jordnødder uden skal. Saltede eller søde jordnødder er kun til mennesker.",
-    "fi": "Koira saa syödä muutaman maustamattoman maapähkinän ilman kuoria. Suolaiset tai makeat maapähkinät ovat vain ihmisille."
+    "fi": "Koira saa syödä muutaman maustamattoman maapähkinän ilman kuoria. Suolaiset tai makeat maapähkinät ovat vain ihmisille.",
+    "nb": "En hund kan få noen få naturelle peanøtter uten skall. Salte eller søte peanøtter er bare for mennesker."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "hr": "Je li kikiriki pržen s medom u redu?",
         "sv": "Går det bra med honungsrostade jordnötter?",
         "da": "Er honningristede jordnødder i orden?",
-        "fi": "Sopivatko hunajapaahdetut maapähkinät?"
+        "fi": "Sopivatko hunajapaahdetut maapähkinät?",
+        "nb": "Er honningristede peanøtter greit?"
       },
       "a": {
         "en": "No. Honey-roasted and other flavoured peanuts are unsafe for dogs; only plain, unsalted peanuts are suitable.",
@@ -163,7 +172,8 @@
         "hr": "Nije. Kikiriki pržen s medom i drugi aromatizirani kikiriki nisu sigurni za pse; prikladan je samo običan, neslan kikiriki.",
         "sv": "Nej. Honungsrostade och andra smaksatta jordnötter är inte ofarliga för hundar; bara naturella, osaltade jordnötter passar.",
         "da": "Nej. Honningristede jordnødder og andre jordnødder med smag er ikke sikre for hunde; kun almindelige, usaltede jordnødder er egnede.",
-        "fi": "Eivät. Hunajapaahdetut ja muut maustetut maapähkinät eivät ole koirille turvallisia; vain pelkät, suolattomat maapähkinät sopivat."
+        "fi": "Eivät. Hunajapaahdetut ja muut maustetut maapähkinät eivät ole koirille turvallisia; vain pelkät, suolattomat maapähkinät sopivat.",
+        "nb": "Nei. Honningristede og andre smaksatte peanøtter er ikke trygge for hunder; bare naturelle, usaltede peanøtter passer."
       }
     }
   ],
@@ -287,6 +297,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "34b16dad81b4ccd5f617a5efec359b472f15c65524154618f7f2636fe148909a"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "17475b8bbac1bb66d7a67ecdd15699fe254edcd085a22c6db1cee26b703c334e"
     }
   }
 }

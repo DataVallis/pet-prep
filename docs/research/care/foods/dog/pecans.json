@@ -15,7 +15,8 @@
     "hr": "Pekan orasi",
     "sv": "Pekannötter",
     "da": "Pekannødder",
-    "fi": "Pekaanipähkinät"
+    "fi": "Pekaanipähkinät",
+    "nb": "Pekannøtter"
   },
   "question": {
     "en": "Can dogs eat pecans?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti pekan orahe?",
     "sv": "Får hundar äta pekannötter?",
     "da": "Må hunde spise pekannødder?",
-    "fi": "Saako koira syödä pekaanipähkinöitä?"
+    "fi": "Saako koira syödä pekaanipähkinöitä?",
+    "nb": "Kan hunder spise pekannøtter?"
   },
   "url_slug": {
     "en": "pecans",
@@ -47,7 +49,8 @@
     "hr": "pekan-orasi",
     "sv": "pekannotter",
     "da": "pekannoedder",
-    "fi": "pekaanipahkinat"
+    "fi": "pekaanipahkinat",
+    "nb": "pekannotter"
   },
   "level": "dangerous",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne. Pekan orasi nisu dobri za pse: već nekoliko njih može psa ozbiljno razboljeti. Sadrže juglon, na njima se može razviti otrovna plijesan, masni su, a njihova tvrda ljuska može izazvati gušenje ili začepiti crijeva. Nazovi veterinara ako ih tvoj pas pojede.",
     "sv": "Nej. Pekannötter är inte bra för hundar: redan ett fåtal kan göra en hund mycket sjuk. De innehåller juglon, kan bära på giftigt mögel och är feta, och de hårda skalen kan orsaka kvävning eller tarmstopp. Ring veterinären om hunden äter några.",
     "da": "Nej. Pekannødder er ikke gode for hunde: Selv nogle få kan gøre en hund meget syg. De indeholder juglon, kan have giftig skimmel og er fede, og de hårde skaller kan sætte sig fast i halsen eller give blokeringer. Kontakt din dyrlæge hvis din hund spiser nogle.",
-    "fi": "Ei saa. Pekaanipähkinät eivät ole hyväksi koirille: pienikin määrä voi sairastuttaa koiran vakavasti. Niissä on juglonia, niissä voi olla myrkyllistä hometta, ne ovat rasvaisia, ja niiden kovat kuoret voivat aiheuttaa tukehtumisen tai tukoksia. Soita eläinlääkärille, jos koirasi syö niitä."
+    "fi": "Ei saa. Pekaanipähkinät eivät ole hyväksi koirille: pienikin määrä voi sairastuttaa koiran vakavasti. Niissä on juglonia, niissä voi olla myrkyllistä hometta, ne ovat rasvaisia, ja niiden kovat kuoret voivat aiheuttaa tukehtumisen tai tukoksia. Soita eläinlääkärille, jos koirasi syö niitä.",
+    "nb": "Nei. Pekannøtter er ikke bra for hunder: Selv noen få kan gjøre en hund svært syk. De inneholder juglon, kan ha giftig mugg, er fete, og de harde skallene kan sette seg fast i halsen eller gi blokkering. Ring dyrlegen hvis hunden din spiser noen."
   },
   "why": {
     "en": "Pecans contain juglone, which can cause digestive problems, and they are very prone to moulds that produce mycotoxins such as aflatoxin, which can cause serious illness, including neurological problems. Their fat raises the risk of pancreatitis, and the hard shells can block the gut. Sources range from 'not good' to 'can make very sick'; we use the stricter level.",
@@ -80,7 +84,8 @@
     "hr": "Pekan orasi sadrže juglon, koji može izazvati probavne tegobe, a na njima se vrlo lako razvijaju plijesni koje stvaraju mikotoksine poput aflatoksina, a oni mogu izazvati ozbiljnu bolest, uključujući neurološke tegobe. Zbog masti povećavaju rizik od upale gušterače, a tvrda ljuska može začepiti crijeva. Izvori se kreću od „nisu dobri“ do „mogu ozbiljno razboljeti“; mi koristimo strožu ocjenu.",
     "sv": "Pekannötter innehåller juglon, som kan orsaka matsmältningsproblem, och de möglar mycket lätt. Möglet bildar mykotoxiner som aflatoxin, som kan orsaka allvarlig sjukdom, bland annat neurologiska problem. Fettet ökar risken för bukspottkörtelinflammation (pankreatit), och de hårda skalen kan orsaka tarmstopp. Källorna varierar från ”inte bra” till ”kan göra mycket sjuk”; vi använder den strängare nivån.",
     "da": "Pekannødder indeholder juglon, som kan give fordøjelsesproblemer, og de får meget let skimmel, der danner mykotoksiner som aflatoksin. Mykotoksinerne kan give alvorlig sygdom, herunder neurologiske problemer. Fedtet øger risikoen for betændelse i bugspytkirtlen, og de hårde skaller kan blokere tarmen. Kilderne spænder fra »ikke gode« til »kan gøre meget syg«; vi bruger det strengeste niveau.",
-    "fi": "Pekaanipähkinöissä on juglonia, joka voi aiheuttaa ruoansulatusongelmia, ja ne homehtuvat hyvin herkästi; homeet tuottavat mykotoksiineja, kuten aflatoksiinia, jotka voivat aiheuttaa vakavan sairauden, myös neurologisia ongelmia. Niiden rasva lisää haimatulehduksen riskiä, ja kovat kuoret voivat tukkia suoliston. Lähteiden arviot vaihtelevat ilmauksesta ”eivät ole hyväksi” ilmaukseen ”voivat sairastuttaa vakavasti”; käytämme tiukempaa luokitusta."
+    "fi": "Pekaanipähkinöissä on juglonia, joka voi aiheuttaa ruoansulatusongelmia, ja ne homehtuvat hyvin herkästi; homeet tuottavat mykotoksiineja, kuten aflatoksiinia, jotka voivat aiheuttaa vakavan sairauden, myös neurologisia ongelmia. Niiden rasva lisää haimatulehduksen riskiä, ja kovat kuoret voivat tukkia suoliston. Lähteiden arviot vaihtelevat ilmauksesta ”eivät ole hyväksi” ilmaukseen ”voivat sairastuttaa vakavasti”; käytämme tiukempaa luokitusta.",
+    "nb": "Pekannøtter inneholder juglon, som kan gi fordøyelsesproblemer, og de får lett mugg som danner mykotoksiner som aflatoksin, som kan gi alvorlig sykdom, også nevrologiske problemer. Fettet øker risikoen for betennelse i bukspyttkjertelen, og de harde skallene kan blokkere tarmen. Kildene spenner fra «ikke bra» til «kan gjøre svært syk»; vi bruker det strengeste nivået."
   },
   "signs": {
     "en": [
@@ -166,6 +171,12 @@
       "Ripuli",
       "Ruokahaluttomuus ja väsymys",
       "Hermoston oireet"
+    ],
+    "nb": [
+      "Oppkast",
+      "Diaré",
+      "Dårlig matlyst og sløvhet",
+      "Tegn på problemer med nervesystemet"
     ]
   },
   "what_to_do": {
@@ -182,7 +193,8 @@
     "hr": "Odmah se obrati veterinaru, čak i ako je tvoj pas pojeo samo nekoliko pekan oraha. Zapiši koliko ih je pojeo i jesu li bili stari ili pljesnivi i ne čekaj da se pojave znakovi.",
     "sv": "Kontakta veterinären direkt, även om hunden bara ätit några få pekannötter. Notera hur många den åt och om de var gamla eller möglade, och vänta inte på symtom.",
     "da": "Kontakt straks din dyrlæge, også selv om din hund kun har spist nogle få pekannødder. Skriv ned hvor mange hunden har spist, og om de var gamle eller mugne, og vent ikke på symptomer.",
-    "fi": "Ota heti yhteyttä eläinlääkäriin, vaikka koirasi söi vain muutaman pekaanipähkinän. Kirjaa ylös, montako se söi ja olivatko pähkinät vanhoja tai homeisia, äläkä odota oireita."
+    "fi": "Ota heti yhteyttä eläinlääkäriin, vaikka koirasi söi vain muutaman pekaanipähkinän. Kirjaa ylös, montako se söi ja olivatko pähkinät vanhoja tai homeisia, äläkä odota oireita.",
+    "nb": "Kontakt dyrlegen med en gang, selv om hunden bare har spist noen få pekannøtter. Skriv ned hvor mange hunden har spist, og om de var gamle eller mugne, og ikke vent på symptomer."
   },
   "serving": null,
   "child": {
@@ -199,7 +211,8 @@
     "hr": "Pekan orasi nisu za pse. Ako ih pas pojede, odmah reci odrasloj osobi da može nazvati veterinara.",
     "sv": "Pekannötter är inte för hundar. Om en hund äter några, säg till en vuxen direkt så att den vuxna kan ringa veterinären.",
     "da": "Pekannødder er ikke til hunde. Hvis en hund spiser nogle, så sig det straks til en voksen, så den voksne kan ringe til dyrlægen.",
-    "fi": "Pekaanipähkinät eivät sovi koirille. Jos koira syö niitä, kerro heti aikuiselle, niin hän voi soittaa eläinlääkärille."
+    "fi": "Pekaanipähkinät eivät sovi koirille. Jos koira syö niitä, kerro heti aikuiselle, niin hän voi soittaa eläinlääkärille.",
+    "nb": "Pekannøtter er ikke noe for hunder. Hvis en hund spiser noen, må du si fra til en voksen med en gang, så den voksne kan ringe dyrlegen."
   },
   "faq": [
     {
@@ -217,7 +230,8 @@
         "hr": "Zašto su pekan orasi rizičniji od nekih drugih orašastih plodova?",
         "sv": "Varför är pekannötter mer riskabla än vissa andra nötter?",
         "da": "Hvorfor er pekannødder mere risikable end nogle andre nødder?",
-        "fi": "Miksi pekaanipähkinät ovat riskialttiimpia kuin jotkin muut pähkinät?"
+        "fi": "Miksi pekaanipähkinät ovat riskialttiimpia kuin jotkin muut pähkinät?",
+        "nb": "Hvorfor er pekannøtter mer risikable enn enkelte andre nøtter?"
       },
       "a": {
         "en": "Every part of the pecan contains juglone, and pecans easily grow mould that produces mycotoxins.",
@@ -233,7 +247,8 @@
         "hr": "Svaki dio pekan oraha sadrži juglon, a na pekan orasima lako raste plijesan koja stvara mikotoksine.",
         "sv": "Alla delar av pekannöten innehåller juglon. Dessutom möglar pekannötter lätt, och möglet bildar mykotoxiner.",
         "da": "Alle dele af pekannødden indeholder juglon, og pekannødder får let skimmel, der danner mykotoksiner.",
-        "fi": "Pekaanipähkinän kaikissa osissa on juglonia, ja pekaanipähkinöihin kasvaa helposti hometta, joka tuottaa mykotoksiineja."
+        "fi": "Pekaanipähkinän kaikissa osissa on juglonia, ja pekaanipähkinöihin kasvaa helposti hometta, joka tuottaa mykotoksiineja.",
+        "nb": "Alle deler av pekannøtten inneholder juglon, og pekannøtter får lett mugg som danner mykotoksiner."
       }
     }
   ],
@@ -356,6 +371,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "80ac79cf0b5b6cff631bc1d49cc3b541d5a40e8477fa7fe46dd9e533dedcf22d"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ae1625772356e19e1053f3162f5d4d9ac6d704e921b78c2241d1946fa6b4a5cf"
     }
   }
 }

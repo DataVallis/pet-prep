@@ -15,7 +15,8 @@
     "hr": "Sirove kosti",
     "sv": "Råa ben",
     "da": "Rå knogler",
-    "fi": "Raakaluut"
+    "fi": "Raakaluut",
+    "nb": "Rå bein"
   },
   "question": {
     "en": "Can cats eat raw bones?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti sirove kosti?",
     "sv": "Får katter äta råa ben?",
     "da": "Må katte spise rå knogler?",
-    "fi": "Saako kissa syödä raakaluita?"
+    "fi": "Saako kissa syödä raakaluita?",
+    "nb": "Kan katter spise rå bein?"
   },
   "url_slug": {
     "en": "raw-bones",
@@ -47,7 +49,8 @@
     "hr": "sirove-kosti",
     "sv": "raa-ben",
     "da": "raa-knogler",
-    "fi": "raakaluut"
+    "fi": "raakaluut",
+    "nb": "ra-bein"
   },
   "level": "dangerous",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Bolje ne. Cats Protection savjetuje izbjegavati sirove kosti jer povećavaju rizik od gušenja ili začepljenja želuca. Kosti mogu i ozlijediti mačji probavni sustav, a sirovo meso može sadržavati štetne bakterije i parazite.",
     "sv": "Helst inte. Cats Protection avråder från råa ben eftersom de ökar risken för kvävning eller stopp i magen. Ben kan också skada kattens tarm, och rått kött kan bära på skadliga bakterier och parasiter.",
     "da": "Helst ikke. Cats Protection fraråder rå knogler fordi de øger risikoen for kvælning eller en blokering i maven. Knogler kan også skade kattens tarm, og råt kød kan indeholde skadelige bakterier og parasitter.",
-    "fi": "Parempi olla antamatta. Cats Protection neuvoo välttämään raakaluita, koska ne lisäävät tukehtumisen tai mahalaukun tukoksen riskiä. Luut voivat myös vaurioittaa kissan ruoansulatuskanavaa, ja raa’assa lihassa voi olla haitallisia bakteereja ja loisia."
+    "fi": "Parempi olla antamatta. Cats Protection neuvoo välttämään raakaluita, koska ne lisäävät tukehtumisen tai mahalaukun tukoksen riskiä. Luut voivat myös vaurioittaa kissan ruoansulatuskanavaa, ja raa’assa lihassa voi olla haitallisia bakteereja ja loisia.",
+    "nb": "Helst ikke. Cats Protection fraråder rå bein fordi de øker risikoen for kvelning eller blokkering i magen. Bein kan også skade kattens fordøyelseskanal, og rått kjøtt kan inneholde skadelige bakterier og parasitter."
   },
   "why": {
     "en": "Swallowed bones can injure or block the gut, which can be serious and may need surgery. Raw meat attached to bones may also contain harmful bacteria and parasites.",
@@ -80,7 +84,8 @@
     "hr": "Progutane kosti mogu ozlijediti ili začepiti probavni sustav, što može biti ozbiljno i zahtijevati operaciju. Sirovo meso na kostima može sadržavati i štetne bakterije i parazite.",
     "sv": "Ben som katten sväljer kan skada eller blockera tarmen, vilket kan vara allvarligt och kräva operation. Rått kött som sitter kvar på benen kan också innehålla skadliga bakterier och parasiter.",
     "da": "Slugte knogler kan skade eller blokere mave-tarm-kanalen, hvilket kan være alvorligt og kræve en operation. Råt kød på knoglerne kan også indeholde skadelige bakterier og parasitter.",
-    "fi": "Nielty luu voi vaurioittaa tai tukkia ruoansulatuskanavan, mikä voi olla vakavaa ja vaatia leikkausta. Luihin kiinnittyneessä raa’assa lihassa voi myös olla haitallisia bakteereja ja loisia."
+    "fi": "Nielty luu voi vaurioittaa tai tukkia ruoansulatuskanavan, mikä voi olla vakavaa ja vaatia leikkausta. Luihin kiinnittyneessä raa’assa lihassa voi myös olla haitallisia bakteereja ja loisia.",
+    "nb": "Bein som svelges, kan skade eller blokkere fordøyelseskanalen, noe som kan være alvorlig og kreve operasjon. Rått kjøtt som sitter på beina, kan også inneholde skadelige bakterier og parasitter."
   },
   "signs": {
     "en": [
@@ -152,6 +157,11 @@
       "Tukehtuminen",
       "Oksentelu",
       "Vatsakipu (piiloutuminen, murina, kosketuksen välttely)"
+    ],
+    "nb": [
+      "Kvelning",
+      "Oppkast",
+      "Vondt i magen (gjemmer seg, knurrer, vil ikke bli tatt på)"
     ]
   },
   "what_to_do": {
@@ -168,7 +178,8 @@
     "hr": "Odmah se obrati veterinaru ako je mačka progutala kost, guši se ili povraća. Zapiši o kakvoj se kosti radi i kada se to dogodilo. Ne čekaj da vidiš što će se dogoditi i ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Kontakta veterinären direkt om katten har svalt ett ben eller håller på att kvävas eller kräks. Notera vilken sorts ben det var och när. Vänta inte och se vad som händer, och försök inte få katten att kräkas hemma.",
     "da": "Kontakt straks din dyrlæge hvis din kat har slugt en knogle, er ved at blive kvalt eller kaster op. Skriv ned hvilken slags knogle det var og hvornår. Se ikke tiden an, og prøv ikke selv at få katten til at kaste op.",
-    "fi": "Ota heti yhteyttä eläinlääkäriin, jos kissasi nieli luun, tukehtuu tai oksentaa. Kirjaa ylös, millainen luu oli ja milloin se tapahtui. Älä jää odottamaan, mitä tapahtuu, äläkä yritä itse oksennuttaa kissaasi."
+    "fi": "Ota heti yhteyttä eläinlääkäriin, jos kissasi nieli luun, tukehtuu tai oksentaa. Kirjaa ylös, millainen luu oli ja milloin se tapahtui. Älä jää odottamaan, mitä tapahtuu, äläkä yritä itse oksennuttaa kissaasi.",
+    "nb": "Kontakt dyrlegen med en gang hvis katten har svelget et bein, holder på å bli kvalt eller kaster opp. Skriv ned hva slags bein det var og når. Ikke vent og se, og ikke prøv å få katten til å kaste opp selv."
   },
   "serving": null,
   "child": {
@@ -185,7 +196,8 @@
     "hr": "Kosti mogu zapeti maci u grlu ili trbuščiću. Ne stavljaj kosti u macinu zdjelicu i reci odrasloj osobi ako maca neku pronađe.",
     "sv": "Ben kan fastna i kattens hals eller mage. Lägg inga ben i kattens skål och säg till en vuxen om katten hittar ett.",
     "da": "Knogler kan sætte sig fast i en kats hals eller mave. Hold knogler væk fra kattens skål, og sig det til en voksen hvis katten finder en.",
-    "fi": "Luut voivat juuttua kissan kurkkuun tai vatsaan. Älä laita luita kisun kuppiin ja kerro aikuiselle, jos se löytää luun."
+    "fi": "Luut voivat juuttua kissan kurkkuun tai vatsaan. Älä laita luita kisun kuppiin ja kerro aikuiselle, jos se löytää luun.",
+    "nb": "Bein kan sette seg fast i halsen eller magen til en katt. Hold bein unna matskålen til pusen, og si fra til en voksen hvis den finner et."
   },
   "faq": [],
   "sources": [
@@ -299,6 +311,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c890dfea3d22cb0f03565531b51a0628c91cf647d526123554021c011b1fbe64"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b45b50c667462a96c2d8470720f74b0f81d40c1574aca0e3ef459d2c1a62d7fc"
     }
   }
 }

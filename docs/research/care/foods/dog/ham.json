@@ -15,7 +15,8 @@
     "hr": "Šunka",
     "sv": "Skinka",
     "da": "Skinke",
-    "fi": "Kinkku"
+    "fi": "Kinkku",
+    "nb": "Skinke"
   },
   "question": {
     "en": "Can dogs eat ham?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti šunku?",
     "sv": "Får hundar äta skinka?",
     "da": "Må hunde spise skinke?",
-    "fi": "Saako koira syödä kinkkua?"
+    "fi": "Saako koira syödä kinkkua?",
+    "nb": "Kan hunder spise skinke?"
   },
   "url_slug": {
     "en": "ham",
@@ -47,7 +49,8 @@
     "hr": "sunka",
     "sv": "skinka",
     "da": "skinke",
-    "fi": "kinkku"
+    "fi": "kinkku",
+    "nb": "skinke"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne preporučuje se. Šunka nije otrovna za pse, ali sadrži mnogo masti i natrija. Kupovna šunka sadrži mnogo soli, a previše masti može dovesti do upale gušterače i drugih probavnih smetnji. Zdravija pseća poslastica bolji je izbor.",
     "sv": "Nej, det rekommenderas inte. Skinka är inte giftig för hundar, men den innehåller mycket fett och natrium. Köpt skinka är mycket salt, och för mycket fett kan leda till bukspottkörtelinflammation (pankreatit) och andra matsmältningsbesvär. En nyttigare hundgodbit är ett bättre val.",
     "da": "Det frarådes. Skinke er ikke giftigt for hunde, men det har et højt indhold af fedt og natrium. Købt skinke indeholder meget salt, og for meget fedt kan føre til betændelse i bugspytkirtlen (pankreatitis) og andre fordøjelsesproblemer. En sundere hundegodbid er det bedre valg.",
-    "fi": "Ei suositella. Kinkku ei ole koirille myrkyllistä, mutta siinä on paljon rasvaa ja natriumia. Kaupan kinkussa on paljon suolaa, ja liika rasva voi johtaa haimatulehdukseen ja muihin ruoansulatusvaivoihin. Terveellisempi koiranherkku on parempi valinta."
+    "fi": "Ei suositella. Kinkku ei ole koirille myrkyllistä, mutta siinä on paljon rasvaa ja natriumia. Kaupan kinkussa on paljon suolaa, ja liika rasva voi johtaa haimatulehdukseen ja muihin ruoansulatusvaivoihin. Terveellisempi koiranherkku on parempi valinta.",
+    "nb": "Anbefales ikke. Skinke er ikke giftig for hunder, men den inneholder mye fett og natrium. Skinke fra butikken inneholder mye salt, og for mye fett kan føre til betennelse i bukspyttkjertelen og andre fordøyelsesplager. En sunnere hundegodbit er et bedre valg."
   },
   "why": {
     "en": "Ham has a higher fat content than many other meats, and fatty meals are a known trigger of pancreatitis. Most ham is also very salty, and excess salt can be harmful to dogs.",
@@ -80,7 +84,8 @@
     "hr": "Šunka ima više masti od mnogih drugih vrsta mesa, a masni obroci poznati su okidač upale gušterače. Većina šunke uz to je vrlo slana, a višak soli može psima naštetiti.",
     "sv": "Skinka har högre fetthalt än många andra köttsorter, och feta måltider är en känd utlösande faktor för bukspottkörtelinflammation. Den mesta skinkan är dessutom mycket salt, och för mycket salt kan skada hundar.",
     "da": "Skinke har et højere fedtindhold end mange andre kødtyper, og fede måltider er en kendt udløser af betændelse i bugspytkirtlen. Det meste skinke er også meget salt, og for meget salt kan være skadeligt for hunde.",
-    "fi": "Kinkussa on enemmän rasvaa kuin monessa muussa lihassa, ja rasvaiset ateriat ovat tunnettu haimatulehduksen laukaisija. Useimmat kinkut ovat myös hyvin suolaisia, ja liika suola voi olla koirille haitallista."
+    "fi": "Kinkussa on enemmän rasvaa kuin monessa muussa lihassa, ja rasvaiset ateriat ovat tunnettu haimatulehduksen laukaisija. Useimmat kinkut ovat myös hyvin suolaisia, ja liika suola voi olla koirille haitallista.",
+    "nb": "Skinke har høyere fettinnhold enn mange andre kjøttslag, og fete måltider er en kjent utløser av betennelse i bukspyttkjertelen. De fleste skinker er dessuten svært salte, og for mye salt kan være skadelig for hunder."
   },
   "signs": {
     "en": [
@@ -180,6 +185,13 @@
       "Ripuli",
       "Haluttomuus syödä",
       "Väsymys, kuume"
+    ],
+    "nb": [
+      "Oppkast, noen ganger først 1–4 dager etter det fete måltidet",
+      "Vondt i magen (hunden kan strekke seg i «bønnestilling»)",
+      "Diaré",
+      "Vil ikke spise",
+      "Sløvhet, feber"
     ]
   },
   "what_to_do": {
@@ -196,7 +208,8 @@
     "hr": "Ako je pas pojeo mnogo masne hrane ili sljedećih dana povraća, ima bolove u trbuhu ili je umoran, obrati se veterinaru. Zapiši što je pojeo i otprilike koliko. Znakovi upale gušterače mogu se pojaviti tek nakon nekoliko dana.",
     "sv": "Kontakta veterinären om hunden ätit mycket fet mat eller får kräkningar, ont i magen eller blir trött under de följande dagarna. Notera vad den åt och ungefär hur mycket. Tecken på bukspottkörtelinflammation (pankreatit) kan dröja några dagar.",
     "da": "Kontakt din dyrlæge hvis hunden har spist meget fed mad eller får opkast, mavesmerter eller bliver træt i dagene efter. Skriv ned hvad hunden har spist og omtrent hvor meget. Symptomer på betændelse i bugspytkirtlen kan først vise sig nogle dage senere.",
-    "fi": "Jos koirasi söi paljon rasvaista ruokaa tai jos sillä on seuraavina päivinä oksentelua, vatsakipua tai väsymystä, ota yhteyttä eläinlääkäriin. Kirjaa ylös, mitä koira söi ja suunnilleen kuinka paljon. Haimatulehduksen oireet voivat ilmaantua vasta muutaman päivän viiveellä."
+    "fi": "Jos koirasi söi paljon rasvaista ruokaa tai jos sillä on seuraavina päivinä oksentelua, vatsakipua tai väsymystä, ota yhteyttä eläinlääkäriin. Kirjaa ylös, mitä koira söi ja suunnilleen kuinka paljon. Haimatulehduksen oireet voivat ilmaantua vasta muutaman päivän viiveellä.",
+    "nb": "Hvis hunden har spist mye fet mat, eller får oppkast, vondt i magen eller blir sløv de nærmeste dagene, må du kontakte dyrlegen. Skriv ned hva den spiste, og omtrent hvor mye. Symptomer på betennelse i bukspyttkjertelen kan komme først etter noen dager."
   },
   "serving": null,
   "child": {
@@ -213,7 +226,8 @@
     "hr": "Šunka je hrana za ljude i preslana je i premasna za pse. Ostavi je za svoj sendvič, a psu daj pseću poslasticu.",
     "sv": "Skinka är människomat som är för salt och fet för hundar. Spara den till din smörgås och ge hunden en hundgodbit.",
     "da": "Skinke er menneskemad, der er for salt og fed til hunde. Gem den til din sandwich, og giv din hund en hundegodbid.",
-    "fi": "Kinkku on ihmisten ruokaa, ja se on koirille liian suolaista ja rasvaista. Pidä se omassa voileivässäsi ja anna koirallesi koiranherkku."
+    "fi": "Kinkku on ihmisten ruokaa, ja se on koirille liian suolaista ja rasvaista. Pidä se omassa voileivässäsi ja anna koirallesi koiranherkku.",
+    "nb": "Skinke er menneskemat som er for salt og fet for hunder. Spar den til brødskiven din, og gi hunden en hundegodbit."
   },
   "faq": [
     {
@@ -231,7 +245,8 @@
         "hr": "Zašto je šunka gora od drugog mesa?",
         "sv": "Varför är skinka sämre än annat kött?",
         "da": "Hvorfor er skinke værre end andet kød?",
-        "fi": "Miksi kinkku on huonompi kuin muu liha?"
+        "fi": "Miksi kinkku on huonompi kuin muu liha?",
+        "nb": "Hvorfor er skinke verre enn annet kjøtt?"
       },
       "a": {
         "en": "It has more fat than many meats and store-bought ham contains a great deal of sodium.",
@@ -247,7 +262,8 @@
         "hr": "Ima više masti od mnogih vrsta mesa, a kupovna šunka sadrži jako mnogo natrija.",
         "sv": "Den innehåller mer fett än många köttsorter, och köpt skinka innehåller väldigt mycket natrium.",
         "da": "Skinke har mere fedt end mange andre kødtyper, og købt skinke indeholder rigtig meget natrium.",
-        "fi": "Siinä on enemmän rasvaa kuin monessa muussa lihassa, ja kaupan kinkussa on hyvin paljon natriumia."
+        "fi": "Siinä on enemmän rasvaa kuin monessa muussa lihassa, ja kaupan kinkussa on hyvin paljon natriumia.",
+        "nb": "Den har mer fett enn mange kjøttslag, og skinke fra butikken inneholder svært mye natrium."
       }
     }
   ],
@@ -386,6 +402,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b5a1002909d4f6d75ace1a828ceea1f61028df8cc51f55d2790748987ac44626"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "92b8de19e546332473987467053267be4526ca2fcada0961bb24b175d6885255"
     }
   }
 }

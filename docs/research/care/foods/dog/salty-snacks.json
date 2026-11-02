@@ -15,7 +15,8 @@
     "hr": "Slane grickalice",
     "sv": "Salta snacks",
     "da": "Salte snacks",
-    "fi": "Suolaiset naposteltavat"
+    "fi": "Suolaiset naposteltavat",
+    "nb": "Salte snacks"
   },
   "question": {
     "en": "Can dogs eat salty snacks?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti slane grickalice?",
     "sv": "Får hundar äta salta snacks?",
     "da": "Må hunde spise salte snacks?",
-    "fi": "Saako koira syödä suolaisia naposteltavia?"
+    "fi": "Saako koira syödä suolaisia naposteltavia?",
+    "nb": "Kan hunder spise salte snacks?"
   },
   "url_slug": {
     "en": "salty-snacks",
@@ -47,7 +49,8 @@
     "hr": "slane-grickalice",
     "sv": "salta-snacks",
     "da": "salte-snacks",
-    "fi": "suolaiset-naposteltavat"
+    "fi": "suolaiset-naposteltavat",
+    "nb": "salte-snacks"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne preporučuje se. Nekoliko slanih grickalica teško da će izazvati trovanje solju kod zdravog psa koji ima svježu vodu, ali slana hrana općenito nije dobra za pse, osobito za one sa srčanom bolešću. Velika količina može izazvati žeđ, povraćanje i ozbiljnije tegobe.",
     "sv": "Nej, det rekommenderas inte. Några salta snacks orsakar sannolikt inte saltförgiftning hos en frisk hund med tillgång till färskt vatten, men salt mat är i allmänhet inte bra för hundar, särskilt inte för hundar med hjärtsjukdom. Stora mängder kan orsaka törst, kräkningar och ännu allvarligare besvär.",
     "da": "Det frarådes. Nogle få salte snacks giver næppe saltforgiftning hos en rask hund med adgang til frisk vand, men salt mad er generelt ikke godt for hunde, især ikke for hunde med hjertesygdom. Store mængder kan give tørst, opkast og værre.",
-    "fi": "Ei suositella. Muutama suolainen naposteltava tuskin aiheuttaa suolamyrkytystä terveelle koiralle, jolla on raikasta vettä saatavilla, mutta suolaiset ruoat eivät yleensä ole hyväksi koirille, etenkään sydänsairaille. Suuri määrä voi aiheuttaa janoa, oksentelua ja vakavampiakin oireita."
+    "fi": "Ei suositella. Muutama suolainen naposteltava tuskin aiheuttaa suolamyrkytystä terveelle koiralle, jolla on raikasta vettä saatavilla, mutta suolaiset ruoat eivät yleensä ole hyväksi koirille, etenkään sydänsairaille. Suuri määrä voi aiheuttaa janoa, oksentelua ja vakavampiakin oireita.",
+    "nb": "Anbefales ikke. Noen få salte snacks gir neppe saltforgiftning hos en frisk hund som har friskt vann, men salt mat er generelt ikke bra for hunder, særlig ikke for hunder med hjertesykdom. Mye kan gi tørst, oppkast og verre."
   },
   "why": {
     "en": "Salty food in moderation should not cause salt toxicity, but too much salt can lead to fluid retention and, in large amounts, salt poisoning. Small dogs with health issues are more at risk when fresh water isn't available. Dog foods are best served without added salt or seasoning.",
@@ -80,7 +84,8 @@
     "hr": "Slana hrana u umjerenim količinama ne bi trebala izazvati trovanje solju, ali previše soli može dovesti do zadržavanja tekućine u tijelu, a u velikim količinama i do trovanja solju. Mali psi sa zdravstvenim tegobama izloženiji su riziku kad nemaju svježe vode. Hranu za pse najbolje je davati bez dodane soli i začina.",
     "sv": "Salt mat med måtta bör inte orsaka saltförgiftning, men för mycket salt kan leda till vätskeansamling och i stora mängder till saltförgiftning. Små hundar med hälsoproblem löper större risk när de saknar tillgång till färskt vatten. Mat till hundar serveras helst utan tillsatt salt eller kryddor.",
     "da": "Salt mad med måde bør ikke give saltforgiftning, men for meget salt kan føre til væskeophobning og i store mængder til saltforgiftning. Små hunde med helbredsproblemer er mere udsatte når de ikke har adgang til frisk vand. Hundens mad serveres bedst uden tilsat salt eller krydderier.",
-    "fi": "Kohtuullisen määrän suolaista ruokaa ei pitäisi aiheuttaa suolamyrkytystä, mutta liika suola voi johtaa nesteen kertymiseen elimistöön ja suurina määrinä suolamyrkytykseen. Pienet koirat, joilla on terveysongelmia, ovat suuremmassa vaarassa, jos raikasta vettä ei ole saatavilla. Koiralle annettava ruoka on parasta tarjota ilman lisättyä suolaa tai mausteita."
+    "fi": "Kohtuullisen määrän suolaista ruokaa ei pitäisi aiheuttaa suolamyrkytystä, mutta liika suola voi johtaa nesteen kertymiseen elimistöön ja suurina määrinä suolamyrkytykseen. Pienet koirat, joilla on terveysongelmia, ovat suuremmassa vaarassa, jos raikasta vettä ei ole saatavilla. Koiralle annettava ruoka on parasta tarjota ilman lisättyä suolaa tai mausteita.",
+    "nb": "Salt mat med måte bør ikke gi saltforgiftning, men for mye salt kan føre til at kroppen holder på væske, og store mengder kan gi saltforgiftning. Små hunder med helseproblemer er mer utsatt når de ikke har tilgang til friskt vann. Mat til hunder bør serveres uten tilsatt salt eller krydder."
   },
   "signs": {
     "en": [
@@ -180,6 +185,13 @@
       "Ripuli",
       "Horjuminen, väsymys",
       "Vapina tai kouristukset"
+    ],
+    "nb": [
+      "Sterk tørst og mye tissing",
+      "Oppkast, ofte innen noen timer",
+      "Diaré",
+      "Ustøhet, sløvhet",
+      "Skjelvinger eller kramper"
     ]
   },
   "what_to_do": {
@@ -196,7 +208,8 @@
     "hr": "Ako je tvoj pas pojeo veliku količinu slanih grickalica, obrati se veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je i koliko pojeo. Svježa voda uvijek mora biti dostupna.",
     "sv": "Om hunden ätit en stor mängd salta snacks, kontakta veterinären eller en giftrådgivning för djur. Notera vad och hur mycket den åt. Färskt vatten ska alltid finnas tillgängligt.",
     "da": "Kontakt din dyrlæge eller en giftrådgivning for dyr hvis din hund har spist en stor mængde salte snacks. Skriv ned hvad og hvor meget hunden har spist. Der skal altid være frisk vand til rådighed.",
-    "fi": "Jos koirasi söi suuren määrän suolaisia naposteltavia, ota yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä koira söi ja kuinka paljon. Raikasta vettä pitää aina olla saatavilla."
+    "fi": "Jos koirasi söi suuren määrän suolaisia naposteltavia, ota yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä koira söi ja kuinka paljon. Raikasta vettä pitää aina olla saatavilla.",
+    "nb": "Hvis hunden har spist mye salte snacks, må du kontakte dyrlegen eller giftinformasjon for dyr. Skriv ned hva og hvor mye hunden har spist. Hunden skal alltid ha tilgang til friskt vann."
   },
   "serving": {
     "en": "Better not to share. If you give people food, serve it plain, without salt or seasoning.",
@@ -212,7 +225,8 @@
     "hr": "Bolje ih ne dijeli. Ako psu daješ ljudsku hranu, daj je bez dodataka, bez soli i začina.",
     "sv": "Dela helst inte med dig. Om du ger människomat, servera den naturell, utan salt eller kryddor.",
     "da": "Del helst ikke. Hvis du giver menneskemad, så server den uden tilsætning, salt eller krydderier.",
-    "fi": "Parempi olla jakamatta. Jos annat ihmisten ruokaa, tarjoa se maustamattomana, ilman suolaa tai mausteita."
+    "fi": "Parempi olla jakamatta. Jos annat ihmisten ruokaa, tarjoa se maustamattomana, ilman suolaa tai mausteita.",
+    "nb": "Det er bedre å la være å dele. Hvis du gir menneskemat, bør den være uten salt eller krydder."
   },
   "child": {
     "en": "Salty snacks are for people. Too much salt makes dogs thirsty and sick, so give your dog its own treats.",
@@ -228,7 +242,8 @@
     "hr": "Slane grickalice su za ljude. Od previše soli psi postanu žedni i bolesni, zato svom psu daj njegove poslastice.",
     "sv": "Salta snacks är för människor. För mycket salt gör hundar törstiga och sjuka, så ge din hund dess egna godbitar.",
     "da": "Salte snacks er til mennesker. For meget salt gør hunde tørstige og syge, så giv din hund dens egne godbidder.",
-    "fi": "Suolaiset naposteltavat ovat ihmisille. Liiasta suolasta koira tulee janoiseksi ja sairaaksi, joten anna koirallesi sen omia herkkuja."
+    "fi": "Suolaiset naposteltavat ovat ihmisille. Liiasta suolasta koira tulee janoiseksi ja sairaaksi, joten anna koirallesi sen omia herkkuja.",
+    "nb": "Salte snacks er for mennesker. For mye salt gjør hunder tørste og syke, så la hunden din få sine egne godbiter."
   },
   "faq": [
     {
@@ -246,7 +261,8 @@
         "hr": "Treba li mom psu voda nakon slane hrane?",
         "sv": "Behöver min hund vatten efter salt mat?",
         "da": "Har min hund brug for vand efter salt mad?",
-        "fi": "Tarvitseeko koirani vettä suolaisen ruoan jälkeen?"
+        "fi": "Tarvitseeko koirani vettä suolaisen ruoan jälkeen?",
+        "nb": "Trenger hunden vann etter salt mat?"
       },
       "a": {
         "en": "Yes. Fresh drinking water helps a dog flush out salt; salt poisoning is unlikely when fresh water is available.",
@@ -262,7 +278,8 @@
         "hr": "Treba. Svježa voda za piće pomaže psu da izbaci sol iz tijela; trovanje solju malo je vjerojatno kad je svježa voda dostupna.",
         "sv": "Ja. Färskt dricksvatten hjälper hunden att skölja ut saltet; saltförgiftning är osannolik när färskt vatten finns tillgängligt.",
         "da": "Ja. Frisk drikkevand hjælper hunden med at skylle saltet ud; saltforgiftning er usandsynlig når der er frisk vand til rådighed.",
-        "fi": "Tarvitsee. Raikas juomavesi auttaa koiraa huuhtomaan suolan elimistöstään; suolamyrkytys on epätodennäköinen, kun raikasta vettä on saatavilla."
+        "fi": "Tarvitsee. Raikas juomavesi auttaa koiraa huuhtomaan suolan elimistöstään; suolamyrkytys on epätodennäköinen, kun raikasta vettä on saatavilla.",
+        "nb": "Ja. Friskt drikkevann hjelper hunden å skylle ut salt; saltforgiftning er lite sannsynlig når hunden har tilgang til friskt vann."
       }
     }
   ],
@@ -405,6 +422,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "752bb2f6853d5e0b000c017deaee6f61fdad63da19f1559d067027ad4099cbdb"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "144ef355bac30768270ff986b1a4236d9ab1d56212ce02524f3c839ce328b67a"
     }
   }
 }

@@ -15,7 +15,8 @@
     "hr": "Marelice",
     "sv": "Aprikoser",
     "da": "Abrikoser",
-    "fi": "Aprikoosit"
+    "fi": "Aprikoosit",
+    "nb": "Aprikoser"
   },
   "question": {
     "en": "Can cats eat apricots?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti marelice?",
     "sv": "Får katter äta aprikoser?",
     "da": "Må katte spise abrikoser?",
-    "fi": "Saako kissa syödä aprikooseja?"
+    "fi": "Saako kissa syödä aprikooseja?",
+    "nb": "Kan katter spise aprikoser?"
   },
   "url_slug": {
     "en": "apricots",
@@ -47,7 +49,8 @@
     "hr": "marelice",
     "sv": "aprikoser",
     "da": "abrikoser",
-    "fi": "aprikoosit"
+    "fi": "aprikoosit",
+    "nb": "aprikoser"
   },
   "level": "dangerous",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne, bolje ne. ASPCA navodi biljku marelice kao otrovnu za mačke: njezine peteljke, listovi i sjemenke (koštica) sadrže cijanid. Ne nudi marelice svojoj mački, koštice i dijelove biljke drži izvan njezina dosega, a ako je mačka nešto od toga žvakala, nazovi veterinara.",
     "sv": "Nej, helst inte. ASPCA anger att aprikosträdet är giftigt för katter: skaft, blad och kärnor (stenen) innehåller cyanid. Ge inte katten aprikoser, håll stenar och växtdelar utom räckhåll, och ring veterinären om katten tuggar på något av dem.",
     "da": "Nej, det er bedst at lade være. ASPCA opfører abrikosplanten som giftig for katte: Dens stilke, blade og kerner (stenen) indeholder cyanid. Giv ikke abrikoser til din kat, hold sten og plantedele uden for rækkevidde, og ring til din dyrlæge hvis din kat tygger på noget af det.",
-    "fi": "Ei kannata. ASPCA luokittelee aprikoosikasvin kissoille myrkylliseksi: sen varret, lehdet ja siemenet (kivi) sisältävät syanidia. Älä tarjoa aprikooseja kissallesi, pidä kivet ja kasvinosat sen ulottumattomissa ja soita eläinlääkärille, jos kissasi pureskelee niitä."
+    "fi": "Ei kannata. ASPCA luokittelee aprikoosikasvin kissoille myrkylliseksi: sen varret, lehdet ja siemenet (kivi) sisältävät syanidia. Älä tarjoa aprikooseja kissallesi, pidä kivet ja kasvinosat sen ulottumattomissa ja soita eläinlääkärille, jos kissasi pureskelee niitä.",
+    "nb": "Nei, helst ikke. ASPCA regner aprikostreet som giftig for katter: Stilkene, bladene og frøene (steinen) inneholder cyanid. Ikke gi katten aprikoser, hold steiner og plantedeler utenfor rekkevidde, og ring dyrlegen hvis katten tygger på noe av det."
   },
   "why": {
     "en": "The stems, leaves and seeds contain cyanide (as cyanogenic glycosides) and are particularly toxic while wilting. The sources we found describe the risk from these plant parts and do not say the fruit flesh is safe for cats, so we do not recommend sharing it.",
@@ -80,7 +84,8 @@
     "hr": "Peteljke, listovi i sjemenke sadrže cijanid (u obliku cijanogenih glikozida) i posebno su otrovni dok venu. Izvori koje smo pronašli opisuju opasnost od tih dijelova biljke i ne navode da je meso ploda sigurno za mačke, pa ga ne preporučujemo dijeliti s mačkom.",
     "sv": "Skaft, blad och kärnor innehåller cyanid (i form av cyanogena glykosider) och är särskilt giftiga när de vissnar. Källorna vi har hittat beskriver risken med dessa växtdelar och säger inte att fruktköttet är säkert för katter, så vi avråder från att ge katten fruktköttet.",
     "da": "Stilkene, bladene og kernerne indeholder cyanid (i form af cyanogene glykosider) og er særligt giftige mens de visner. De kilder vi har fundet, beskriver risikoen ved disse plantedele og siger ikke at frugtkødet er sikkert for katte, så vi anbefaler ikke at dele det.",
-    "fi": "Varret, lehdet ja siemenet sisältävät syanidia (syanogeenisina glykosideina), ja ne ovat erityisen myrkyllisiä kuihtuessaan. Löytämämme lähteet kuvaavat näiden kasvinosien riskiä eivätkä sano, että hedelmäliha olisi kissoille turvallista, joten emme suosittele sen antamista."
+    "fi": "Varret, lehdet ja siemenet sisältävät syanidia (syanogeenisina glykosideina), ja ne ovat erityisen myrkyllisiä kuihtuessaan. Löytämämme lähteet kuvaavat näiden kasvinosien riskiä eivätkä sano, että hedelmäliha olisi kissoille turvallista, joten emme suosittele sen antamista.",
+    "nb": "Stilkene, bladene og frøene inneholder cyanid (som cyanogene glykosider) og er særlig giftige når de visner. Kildene vi fant, beskriver risikoen ved disse plantedelene og sier ikke at fruktkjøttet er trygt for katter, så vi anbefaler ikke å dele det."
   },
   "signs": {
     "en": [
@@ -180,6 +185,13 @@
       "Hengitysvaikeudet",
       "Läähätys",
       "Sokki"
+    ],
+    "nb": [
+      "Teglrødt tannkjøtt",
+      "Utvidede pupiller",
+      "Pustevansker",
+      "Pesing",
+      "Sjokk"
     ]
   },
   "what_to_do": {
@@ -196,7 +208,8 @@
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja ako je mačka žvakala košticu, peteljku ili listove. Zapiši što je pojedeno, koliko i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur om katten har tuggat på en sten, ett skaft eller blad. Notera vad den åt, hur mycket och när. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
     "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr hvis din kat har tygget på en sten, en stilk eller blade. Skriv ned hvad der blev spist, hvor meget og hvornår. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
-    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, jos kissasi pureskeli kiveä, vartta tai lehtiä. Kirjaa ylös, mitä kissa söi, kuinka paljon ja milloin. Älä odota oireita äläkä yritä itse oksennuttaa kissaasi."
+    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, jos kissasi pureskeli kiveä, vartta tai lehtiä. Kirjaa ylös, mitä kissa söi, kuinka paljon ja milloin. Älä odota oireita äläkä yritä itse oksennuttaa kissaasi.",
+    "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang hvis katten har tygget på en stein, en stilk eller blader. Skriv ned hva den har spist, hvor mye og når. Ikke vent på symptomer, og ikke prøv å få katten til å kaste opp selv."
   },
   "serving": null,
   "child": {
@@ -213,7 +226,8 @@
     "hr": "Marelice su grickalica za ljude. Njihove koštice i listovi nisu sigurni za mace, zato reci odrasloj osobi ako maca neku žvače.",
     "sv": "Aprikoser är mellanmål för människor. Stenarna och bladen är inte säkra för katter, så säg till en vuxen om katten tuggar på något av dem.",
     "da": "Abrikoser er en snack for mennesker. Stenene og bladene er ikke sikre for katte, så sig det til en voksen hvis din kat tygger på en af dem.",
-    "fi": "Aprikoosit ovat ihmisten naposteltavaa. Niiden kivet ja lehdet eivät ole turvallisia kissoille, joten kerro aikuiselle, jos kisu pureskelee niitä."
+    "fi": "Aprikoosit ovat ihmisten naposteltavaa. Niiden kivet ja lehdet eivät ole turvallisia kissoille, joten kerro aikuiselle, jos kisu pureskelee niitä.",
+    "nb": "Aprikoser er snacks for mennesker. Steinene og bladene er ikke trygge for katter, så si fra til en voksen hvis pusen tygger på en."
   },
   "faq": [
     {
@@ -231,7 +245,8 @@
         "hr": "Koji je dio problem?",
         "sv": "Vilken del är problemet?",
         "da": "Hvilken del er problemet?",
-        "fi": "Mikä osa on ongelma?"
+        "fi": "Mikä osa on ongelma?",
+        "nb": "Hvilken del er problemet?"
       },
       "a": {
         "en": "The ASPCA says the stems, leaves and seeds contain cyanide, and that they are particularly toxic while wilting.",
@@ -247,7 +262,8 @@
         "hr": "ASPCA navodi da peteljke, listovi i sjemenke sadrže cijanid te da su posebno otrovni dok venu.",
         "sv": "Enligt ASPCA innehåller skaft, blad och kärnor cyanid, och de är särskilt giftiga när de vissnar.",
         "da": "ASPCA skriver at stilkene, bladene og kernerne indeholder cyanid, og at de er særligt giftige mens de visner.",
-        "fi": "ASPCA:n mukaan varret, lehdet ja siemenet sisältävät syanidia, ja ne ovat erityisen myrkyllisiä kuihtuessaan."
+        "fi": "ASPCA:n mukaan varret, lehdet ja siemenet sisältävät syanidia, ja ne ovat erityisen myrkyllisiä kuihtuessaan.",
+        "nb": "ASPCA skriver at stilkene, bladene og frøene inneholder cyanid, og at de er særlig giftige når de visner."
       }
     }
   ],
@@ -362,6 +378,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e5d01e21d8783536b2f7d7c8294cc6582e2c482531e0696a9ebd5aebc05edbb7"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6eb7c6234f5bcf6f1e2a9e53e8090762f1d29242e1f7bcf1915b339d132db53e"
     }
   }
 }

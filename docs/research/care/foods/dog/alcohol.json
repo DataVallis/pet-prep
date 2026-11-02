@@ -15,7 +15,8 @@
     "hr": "Alkohol",
     "sv": "Alkohol",
     "da": "Alkohol",
-    "fi": "Alkoholi"
+    "fi": "Alkoholi",
+    "nb": "Alkohol"
   },
   "question": {
     "en": "Can dogs drink alcohol?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi piti alkohol?",
     "sv": "Får hundar dricka alkohol?",
     "da": "Må hunde drikke alkohol?",
-    "fi": "Saako koira juoda alkoholia?"
+    "fi": "Saako koira juoda alkoholia?",
+    "nb": "Kan hunder drikke alkohol?"
   },
   "url_slug": {
     "en": "alcohol",
@@ -47,7 +49,8 @@
     "hr": "alkohol",
     "sv": "alkohol",
     "da": "alkohol",
-    "fi": "alkoholi"
+    "fi": "alkoholi",
+    "nb": "alkohol"
   },
   "level": "toxic",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne. Alkohol je otrovan za pse. Pića i hrana s alkoholom mogu izazvati povraćanje, teturanje, otežano disanje i drhtanje. Alkohol se brzo upija, a znakovi se obično pojave unutar 15–90 minuta, zato djeluj brzo.",
     "sv": "Nej. Alkohol är giftig för hundar. Drycker och mat som innehåller alkohol kan ge kräkningar, vinglighet, andningsproblem och darrningar. Alkohol tas upp snabbt och symtomen börjar oftast inom 15–90 minuter, så agera snabbt.",
     "da": "Nej. Alkohol er giftigt for hunde. Drikkevarer og mad med alkohol kan give opkast, usikker gang, vejrtrækningsbesvær og rysten. Alkohol optages hurtigt, og symptomerne begynder som regel inden for 15–90 minutter, så handl hurtigt.",
-    "fi": "Ei saa. Alkoholi on koiralle myrkyllistä. Alkoholia sisältävät juomat ja ruoat voivat aiheuttaa oksentelua, horjumista, hengitysvaikeuksia ja vapinaa. Alkoholi imeytyy nopeasti, ja oireet alkavat yleensä 15–90 minuutin kuluessa, joten toimi nopeasti."
+    "fi": "Ei saa. Alkoholi on koiralle myrkyllistä. Alkoholia sisältävät juomat ja ruoat voivat aiheuttaa oksentelua, horjumista, hengitysvaikeuksia ja vapinaa. Alkoholi imeytyy nopeasti, ja oireet alkavat yleensä 15–90 minuutin kuluessa, joten toimi nopeasti.",
+    "nb": "Nei. Alkohol er giftig for hunder. Drikke og mat som inneholder alkohol, kan gi oppkast, ustøhet, pusteproblemer og skjelvinger. Alkohol tas raskt opp i kroppen, og symptomene starter vanligvis innen 15–90 minutter, så handle raskt."
   },
   "why": {
     "en": "Alcohol (ethanol) is rapidly absorbed into the blood and depresses the nervous system. It is not only in drinks: it is also in liquor-filled sweets, raw rising bread dough, hand sanitiser and mouthwash. All animals are at risk.",
@@ -80,7 +84,8 @@
     "hr": "Alkohol (etanol) brzo prelazi u krv i usporava rad živčanog sustava. Nema ga samo u pićima: ima ga i u slatkišima punjenima likerom, sirovom tijestu za kruh koje se diže, sredstvu za dezinfekciju ruku i vodici za ispiranje usta. Ugrožene su sve životinje.",
     "sv": "Alkohol (etanol) tas snabbt upp i blodet och dämpar nervsystemet. Den finns inte bara i drycker utan också i godis med spritfyllning, rå jäsande bröddeg, handsprit och munskölj. Alla djur är i riskzonen.",
     "da": "Alkohol (ethanol) optages hurtigt i blodet og dæmper nervesystemet. Det findes ikke kun i drikkevarer, men også i slik med spiritusfyld, rå gærdej, håndsprit og mundskyl. Alle dyr er i fare.",
-    "fi": "Alkoholi (etanoli) imeytyy nopeasti vereen ja lamaa hermostoa. Sitä ei ole vain juomissa: sitä on myös likööritäytteisissä makeisissa, raa’assa kohoavassa leipätaikinassa, käsidesissä ja suuvedessä. Alkoholimyrkytys uhkaa kaikkia eläimiä."
+    "fi": "Alkoholi (etanoli) imeytyy nopeasti vereen ja lamaa hermostoa. Sitä ei ole vain juomissa: sitä on myös likööritäytteisissä makeisissa, raa’assa kohoavassa leipätaikinassa, käsidesissä ja suuvedessä. Alkoholimyrkytys uhkaa kaikkia eläimiä.",
+    "nb": "Alkohol (etanol) tas raskt opp i blodet og demper nervesystemet. Det finnes ikke bare i drikke, men også i likørfylt godteri, rå brøddeig som hever, håndsprit og munnskyll. Alle dyr er utsatt."
   },
   "signs": {
     "en": [
@@ -194,6 +199,14 @@
       "Hengitysvaikeudet",
       "Vapina",
       "Oireet alkavat yleensä 15–90 minuutin kuluessa"
+    ],
+    "nb": [
+      "Oppkast og diaré",
+      "Ustøhet og dårlig koordinasjon",
+      "Døsighet, nedstemthet",
+      "Pustevansker",
+      "Skjelvinger",
+      "Symptomene starter vanligvis innen 15–90 minutter"
     ]
   },
   "what_to_do": {
@@ -210,7 +223,8 @@
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je pas popio ili pojeo i otprilike koliko. Ne čekaj da se pojave znakovi: alkohol djeluje brzo, a rano liječenje je ključno.",
     "sv": "Kontakta veterinären eller en giftrådgivning för djur omedelbart. Notera vad hunden drack eller åt och ungefär hur mycket. Vänta inte på symtom: alkohol verkar snabbt, och tidig behandling är avgörande.",
     "da": "Kontakt din dyrlæge eller en giftrådgivning for dyr med det samme. Skriv ned hvad hunden har drukket eller spist og omtrent hvor meget. Vent ikke på symptomer: alkohol virker hurtigt, og tidlig behandling er afgørende.",
-    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä koirasi joi tai söi ja suunnilleen kuinka paljon. Älä odota oireita: alkoholi vaikuttaa nopeasti, ja varhainen hoito on ratkaisevaa."
+    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä koirasi joi tai söi ja suunnilleen kuinka paljon. Älä odota oireita: alkoholi vaikuttaa nopeasti, ja varhainen hoito on ratkaisevaa.",
+    "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang. Skriv ned hva hunden drakk eller spiste, og omtrent hvor mye. Ikke vent på symptomer – alkohol virker raskt, og tidlig behandling er avgjørende."
   },
   "serving": null,
   "child": {
@@ -227,7 +241,8 @@
     "hr": "Pića za odrasle nikad nisu za pse. Ako pas popije malo, može se brzo jako razboljeti, zato odmah reci odrasloj osobi.",
     "sv": "Vuxendrycker är aldrig för hundar. Om en hund dricker sådant kan den snabbt bli mycket sjuk, så säg till en vuxen direkt.",
     "da": "Voksendrikke er aldrig til hunde. Hvis en hund drikker noget af det, kan den hurtigt blive meget syg, så sig det til en voksen med det samme.",
-    "fi": "Aikuisten juomat eivät ole koskaan koirille. Jos koira juo niitä, se voi tulla nopeasti hyvin kipeäksi, joten kerro heti aikuiselle."
+    "fi": "Aikuisten juomat eivät ole koskaan koirille. Jos koira juo niitä, se voi tulla nopeasti hyvin kipeäksi, joten kerro heti aikuiselle.",
+    "nb": "Voksendrikker er aldri for hunder. Hvis en hund drikker noe av det, kan den fort bli veldig syk, så si fra til en voksen med en gang."
   },
   "faq": [
     {
@@ -245,7 +260,8 @@
         "hr": "Smije li pas liznuti malo piva?",
         "sv": "Är det okej om hunden slickar i sig lite öl?",
         "da": "Er det okay hvis hunden slikker lidt øl?",
-        "fi": "Saako koira nuolaista vähän olutta?"
+        "fi": "Saako koira nuolaista vähän olutta?",
+        "nb": "Er det greit om hunden slikker litt øl?"
       },
       "a": {
         "en": "No. Drinks and foods containing alcohol are toxic to dogs. Never offer alcohol, and call your vet if your dog drinks some.",
@@ -261,7 +277,8 @@
         "hr": "Ne. Pića i hrana s alkoholom otrovni su za pse. Nikad ne nudi psu alkohol, a ako ga pas popije, nazovi veterinara.",
         "sv": "Nej. Drycker och mat som innehåller alkohol är giftiga för hundar. Ge aldrig alkohol, och ring veterinären om hunden har druckit något.",
         "da": "Nej. Drikkevarer og mad med alkohol er giftige for hunde. Giv aldrig hunden alkohol, og ring til din dyrlæge hvis den drikker noget.",
-        "fi": "Ei saa. Alkoholia sisältävät juomat ja ruoat ovat koiralle myrkyllisiä. Älä koskaan tarjoa alkoholia, ja soita eläinlääkärille, jos koirasi juo sitä."
+        "fi": "Ei saa. Alkoholia sisältävät juomat ja ruoat ovat koiralle myrkyllisiä. Älä koskaan tarjoa alkoholia, ja soita eläinlääkärille, jos koirasi juo sitä.",
+        "nb": "Nei. Drikke og mat som inneholder alkohol, er giftig for hunder. Gi aldri hunden alkohol, og ring dyrlegen hvis hunden har drukket noe."
       }
     },
     {
@@ -279,7 +296,8 @@
         "hr": "Gdje još pas kod kuće može naći alkohol?",
         "sv": "Var mer kan en hund hitta alkohol hemma?",
         "da": "Hvor kan en hund ellers finde alkohol i hjemmet?",
-        "fi": "Mistä muualta koira voi kotona löytää alkoholia?"
+        "fi": "Mistä muualta koira voi kotona löytää alkoholia?",
+        "nb": "Hvor ellers kan en hund finne alkohol hjemme?"
       },
       "a": {
         "en": "In liquor-filled sweets, raw rising bread dough, hand sanitiser and mouthwash.",
@@ -295,7 +313,8 @@
         "hr": "U slatkišima punjenima likerom, sirovom tijestu za kruh koje se diže, sredstvu za dezinfekciju ruku i vodici za ispiranje usta.",
         "sv": "I godis med spritfyllning, rå jäsande bröddeg, handsprit och munskölj.",
         "da": "I slik med spiritusfyld, rå gærdej, håndsprit og mundskyl.",
-        "fi": "Likööritäytteisistä makeisista, raa’asta kohoavasta leipätaikinasta, käsidesistä ja suuvedestä."
+        "fi": "Likööritäytteisistä makeisista, raa’asta kohoavasta leipätaikinasta, käsidesistä ja suuvedestä.",
+        "nb": "I likørfylt godteri, rå brøddeig som hever, håndsprit og munnskyll."
       }
     }
   ],
@@ -430,6 +449,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "12c6458d04742b3d5440701778fea5aac393aae3468e4adf24c00ea9b13a9e87"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "19a082fc8b9860fdb88dea9d76199031aec12407142004c8fce2d8e8b27b0887"
     }
   }
 }

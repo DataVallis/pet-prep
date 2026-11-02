@@ -15,7 +15,8 @@
     "hr": "Kuhane kosti",
     "sv": "Kokta ben",
     "da": "Kogte knogler",
-    "fi": "Keitetyt luut"
+    "fi": "Keitetyt luut",
+    "nb": "Kokte bein"
   },
   "question": {
     "en": "Can dogs eat cooked bones?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti kuhane kosti?",
     "sv": "Får hundar äta kokta ben?",
     "da": "Må hunde spise kogte knogler?",
-    "fi": "Saako koira syödä keitettyjä luita?"
+    "fi": "Saako koira syödä keitettyjä luita?",
+    "nb": "Kan hunder spise kokte bein?"
   },
   "url_slug": {
     "en": "cooked-bones",
@@ -47,7 +49,8 @@
     "hr": "kuhane-kosti",
     "sv": "kokta-ben",
     "da": "kogte-knogler",
-    "fi": "keitetyt-luut"
+    "fi": "keitetyt-luut",
+    "nb": "kokte-bein"
   },
   "level": "dangerous",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne. Nikad ne daj psu termički obrađene kosti. One se lome u oštre krhotine koje mogu porezati usta, izazvati gušenje ili začepiti crijeva. Termički obrađene kosti peradi osobito su krhke i mogu dovesti do hitnog slučaja kod veterinara.",
     "sv": "Nej. Ge aldrig en hund tillagade ben. Tillagade ben splittras i vassa flisor som kan skära i munnen, orsaka kvävning eller ge stopp i tarmen. Tillagade fågelben är särskilt sköra och kan kräva akut veterinärvård.",
     "da": "Nej. Giv aldrig en hund tilberedte knogler. Tilberedte knogler splintrer i skarpe stykker, som kan skære i munden, sætte sig fast i halsen eller blokere tarmen. Tilberedte fjerkræknogler er særligt skøre og kan ende som et akut tilfælde hos dyrlægen.",
-    "fi": "Ei saa. Älä koskaan anna koiralle kypsennettyjä luita. Kypsennetyt luut hajoavat teräviksi sirpaleiksi, jotka voivat haavoittaa suuta, aiheuttaa tukehtumisen tai tukkia suoliston. Kypsennetyt siipikarjan luut ovat erityisen hauraita, ja niistä voi seurata eläinlääkärin hoitoa vaativa hätätilanne."
+    "fi": "Ei saa. Älä koskaan anna koiralle kypsennettyjä luita. Kypsennetyt luut hajoavat teräviksi sirpaleiksi, jotka voivat haavoittaa suuta, aiheuttaa tukehtumisen tai tukkia suoliston. Kypsennetyt siipikarjan luut ovat erityisen hauraita, ja niistä voi seurata eläinlääkärin hoitoa vaativa hätätilanne.",
+    "nb": "Nei. Gi aldri en hund tilberedte bein. Tilberedte bein splintres til skarpe biter som kan kutte munnen, sette seg fast i halsen eller blokkere tarmen. Tilberedte bein fra fjærfe er særlig skjøre og kan føre til at du må oppsøke dyrlegevakt."
   },
   "why": {
     "en": "Cooking makes bones brittle, so they break into sharp splinters. Chicken and turkey bones are the classic example, but any bones from the kitchen table can injure a dog. The FDA has received reports of choking, mouth wounds, vomiting, diarrhoea, rectal bleeding and gut blockages in dogs that ate bones or bone treats.",
@@ -80,7 +84,8 @@
     "hr": "Termičkom obradom kosti postaju krhke pa se lome u oštre krhotine. Pileće i pureće kosti klasičan su primjer, ali svaka kost sa stola može ozlijediti psa. FDA je zaprimila prijave gušenja, rana u ustima, povraćanja, proljeva, krvarenja iz rektuma i začepljenja crijeva kod pasa koji su jeli kosti ili poslastice od kostiju.",
     "sv": "Tillagning gör benen sköra, så de bryts i vassa flisor. Kyckling- och kalkonben är det klassiska exemplet, men alla ben från matbordet kan skada en hund. FDA har fått rapporter om kvävning, sår i munnen, kräkningar, diarré, blödning från ändtarmen och tarmstopp hos hundar som ätit ben eller godbitar av ben.",
     "da": "Tilberedning gør knogler skøre, så de brækker i skarpe splinter. Kyllinge- og kalkunknogler er det klassiske eksempel, men alle knogler fra middagsbordet kan skade en hund. FDA har modtaget indberetninger om kvælningstilfælde, sår i munden, opkast, diarré, blødning fra endetarmen og tarmblokeringer hos hunde der havde spist knogler eller knoglegodbidder.",
-    "fi": "Kypsentäminen tekee luista hauraita, joten ne murtuvat teräviksi sirpaleiksi. Kanan- ja kalkkunanluut ovat tunnetuin esimerkki, mutta mitkä tahansa ruokapöydän luut voivat vahingoittaa koiraa. Yhdysvaltain elintarvike- ja lääkevirasto FDA on saanut ilmoituksia tukehtumisesta, suun haavoista, oksentelusta, ripulista, peräsuolen verenvuodosta ja suolitukoksista koirilla, jotka olivat syöneet luita tai luuherkkuja."
+    "fi": "Kypsentäminen tekee luista hauraita, joten ne murtuvat teräviksi sirpaleiksi. Kanan- ja kalkkunanluut ovat tunnetuin esimerkki, mutta mitkä tahansa ruokapöydän luut voivat vahingoittaa koiraa. Yhdysvaltain elintarvike- ja lääkevirasto FDA on saanut ilmoituksia tukehtumisesta, suun haavoista, oksentelusta, ripulista, peräsuolen verenvuodosta ja suolitukoksista koirilla, jotka olivat syöneet luita tai luuherkkuja.",
+    "nb": "Tilberedning gjør bein skjøre, så de brekker i skarpe splinter. Kylling- og kalkunbein er det klassiske eksempelet, men alle bein fra middagsbordet kan skade en hund. FDA har fått meldinger om kvelning, sår i munnen, oppkast, diaré, blødning fra endetarmen og tarmblokkering hos hunder som har spist bein eller beingodbiter."
   },
   "signs": {
     "en": [
@@ -180,6 +185,13 @@
       "Oksentelu",
       "Ripuli",
       "Verenvuoto peräaukosta"
+    ],
+    "nb": [
+      "Kvelning eller brekninger",
+      "Kutt eller blødning i munnen",
+      "Oppkast",
+      "Diaré",
+      "Blødning fra endetarmen"
     ]
   },
   "what_to_do": {
@@ -196,7 +208,8 @@
     "hr": "Odmah se obrati veterinaru ako je pas pojeo termički obrađene kosti, čak i ako se čini da je dobro. Zapiši o kakvoj je kosti riječ i otprilike koliko je pojeo. Ne čekaj da se pojave znakovi začepljenja.",
     "sv": "Kontakta veterinären direkt om hunden har ätit tillagade ben, även om den verkar må bra. Notera vilken sorts ben det var och ungefär hur mycket den åt. Vänta inte på tecken på stopp.",
     "da": "Kontakt din dyrlæge med det samme hvis hunden har spist tilberedte knogler, også selvom den virker upåvirket. Skriv ned hvilken slags knogle det var og omtrent hvor meget hunden har spist. Vent ikke på tegn på blokering.",
-    "fi": "Ota heti yhteyttä eläinlääkäriin, jos koirasi on syönyt kypsennettyjä luita, vaikka se vaikuttaisi voivan hyvin. Kirjaa ylös, millainen luu se oli ja suunnilleen kuinka paljon koira söi. Älä odota suolitukoksen oireita."
+    "fi": "Ota heti yhteyttä eläinlääkäriin, jos koirasi on syönyt kypsennettyjä luita, vaikka se vaikuttaisi voivan hyvin. Kirjaa ylös, millainen luu se oli ja suunnilleen kuinka paljon koira söi. Älä odota suolitukoksen oireita.",
+    "nb": "Kontakt dyrlegen med en gang hvis hunden har spist tilberedte bein, selv om den virker helt fin. Skriv ned hva slags bein det var, og omtrent hvor mye den spiste. Ikke vent på tegn på tarmblokkering."
   },
   "serving": null,
   "child": {
@@ -213,7 +226,8 @@
     "hr": "Kosti s naših tanjura nisu za pse. Lome se na oštre komadiće. Ako pas nađe kost, reci odrasloj osobi.",
     "sv": "Ben från våra tallrikar är inte för hundar. De går sönder i vassa bitar. Säg till en vuxen om hunden hittar ett.",
     "da": "Knogler fra vores tallerkener er ikke til hunde. De brækker i skarpe stykker. Sig det til en voksen hvis din hund finder en.",
-    "fi": "Lautasilta jääneet luut eivät ole koirille. Ne hajoavat teräviksi paloiksi. Kerro aikuiselle, jos koirasi löytää luun."
+    "fi": "Lautasilta jääneet luut eivät ole koirille. Ne hajoavat teräviksi paloiksi. Kerro aikuiselle, jos koirasi löytää luun.",
+    "nb": "Bein fra tallerkenene våre er ikke for hunder. De brekker i skarpe biter. Si fra til en voksen hvis hunden din finner et bein."
   },
   "faq": [
     {
@@ -231,7 +245,8 @@
         "hr": "Jesu li pileće kosti najgore?",
         "sv": "Är kycklingben värst?",
         "da": "Er kyllingeknogler de værste?",
-        "fi": "Ovatko kananluut pahimpia?"
+        "fi": "Ovatko kananluut pahimpia?",
+        "nb": "Er kyllingbein verst?"
       },
       "a": {
         "en": "Cooked poultry bones are especially brittle and splinter easily, but any cooked bone from the table can cause injury.",
@@ -247,7 +262,8 @@
         "hr": "Termički obrađene kosti peradi osobito su krhke i lako se lome u krhotine, ali svaka termički obrađena kost sa stola može izazvati ozljedu.",
         "sv": "Tillagade fågelben är särskilt sköra och splittras lätt, men alla tillagade ben från matbordet kan orsaka skador.",
         "da": "Tilberedte fjerkræknogler er særligt skøre og splintrer let, men alle tilberedte knogler fra bordet kan give skader.",
-        "fi": "Kypsennetyt siipikarjan luut ovat erityisen hauraita ja sirpaloituvat helposti, mutta mikä tahansa ruokapöydän kypsennetty luu voi aiheuttaa vamman."
+        "fi": "Kypsennetyt siipikarjan luut ovat erityisen hauraita ja sirpaloituvat helposti, mutta mikä tahansa ruokapöydän kypsennetty luu voi aiheuttaa vamman.",
+        "nb": "Tilberedte bein fra fjærfe er særlig skjøre og splintres lett, men alle tilberedte bein fra bordet kan gi skader."
       }
     },
     {
@@ -265,7 +281,8 @@
         "hr": "Kako spriječiti da pas dođe do kostiju?",
         "sv": "Hur hindrar jag att hunden får tag på ben?",
         "da": "Hvordan forhindrer jeg at min hund får fat i knogler?",
-        "fi": "Miten estän koiraani saamasta luita?"
+        "fi": "Miten estän koiraani saamasta luita?",
+        "nb": "Hvordan hindrer jeg at hunden får tak i bein?"
       },
       "a": {
         "en": "Keep platters out of reach while cooking and eating, and be careful what goes in the bin: dogs often raid the trash for carcasses and steak bones.",
@@ -281,7 +298,8 @@
         "hr": "Dok se kuha i jede, drži pladnjeve izvan njegova dosega i pazi što bacaš u smeće: psi često prekapaju po smeću tražeći ostatke peradi i kosti od odrezaka.",
         "sv": "Ställ fat utom räckhåll när du lagar mat och äter, och tänk på vad du slänger i soporna: hundar letar ofta i soporna efter kycklingskrov och benbitar från stekar.",
         "da": "Hold fade uden for rækkevidde, mens du laver mad og spiser, og pas på med hvad der ryger i skraldespanden: hunde roder ofte i skraldet efter skrog og bøfben.",
-        "fi": "Pidä tarjoiluvadit koiran ulottumattomissa ruoanlaiton ja ruokailun aikana ja mieti, mitä heität roskiin: koirat penkovat usein roskiksesta linnunruhoja ja pihvin luita."
+        "fi": "Pidä tarjoiluvadit koiran ulottumattomissa ruoanlaiton ja ruokailun aikana ja mieti, mitä heität roskiin: koirat penkovat usein roskiksesta linnunruhoja ja pihvin luita.",
+        "nb": "Hold fat utenfor rekkevidde mens du lager mat og når dere spiser, og vær forsiktig med hva du kaster i søppelbøtten: Hunder roter ofte i søppelet etter skrotter og biffbein."
       }
     }
   ],
@@ -432,6 +450,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a79d20082cfaebbb2720ed90747d64e4bac74cbf74357010ce50686cd27682a6"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9c9772d2f1b952ee2389076d3586d7d55cc3eb8d5c46a368a3516a55f67d68f4"
     }
   }
 }

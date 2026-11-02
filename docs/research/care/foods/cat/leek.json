@@ -15,7 +15,8 @@
     "hr": "Poriluk",
     "sv": "Purjolök",
     "da": "Porre",
-    "fi": "Purjo"
+    "fi": "Purjo",
+    "nb": "Purre"
   },
   "question": {
     "en": "Can cats eat leek?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti poriluk?",
     "sv": "Får katter äta purjolök?",
     "da": "Må katte spise porre?",
-    "fi": "Saako kissa syödä purjoa?"
+    "fi": "Saako kissa syödä purjoa?",
+    "nb": "Kan katter spise purre?"
   },
   "url_slug": {
     "en": "leek",
@@ -47,7 +49,8 @@
     "hr": "poriluk",
     "sv": "purjolok",
     "da": "porre",
-    "fi": "purjo"
+    "fi": "purjo",
+    "nb": "purre"
   },
   "level": "toxic",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne. Poriluk je u istoj porodici kao luk i češnjak i otrovan je za mačke, sirov ili termički obrađen. Može oštetiti crvene krvne stanice i uzrokovati anemiju. Ako mačka pojede imalo poriluka, nazovi veterinara.",
     "sv": "Nej. Purjolök hör till samma familj som lök och vitlök och är giftig för katter, både rå och tillagad. Den kan skada de röda blodkropparna och orsaka blodbrist (anemi). Ring veterinären om katten äter någon purjolök.",
     "da": "Nej. Porre hører til samme familie som løg og hvidløg og er giftig for katte, både rå og tilberedt. Den kan skade de røde blodlegemer og give blodmangel (anæmi). Ring til din dyrlæge hvis din kat spiser noget af den.",
-    "fi": "Ei saa. Purjo kuuluu samaan heimoon kuin sipuli ja valkosipuli, ja se on kissalle myrkyllinen raakana ja kypsennettynä. Se voi vaurioittaa punasoluja ja aiheuttaa anemiaa. Soita eläinlääkärille, jos kissasi syö sitä vähänkin."
+    "fi": "Ei saa. Purjo kuuluu samaan heimoon kuin sipuli ja valkosipuli, ja se on kissalle myrkyllinen raakana ja kypsennettynä. Se voi vaurioittaa punasoluja ja aiheuttaa anemiaa. Soita eläinlääkärille, jos kissasi syö sitä vähänkin.",
+    "nb": "Nei. Purre er i samme familie som løk og hvitløk og er giftig for katter, både rå og tilberedt. Den kan skade de røde blodcellene og gi blodmangel (anemi). Ring dyrlegen hvis katten spiser noe purre."
   },
   "why": {
     "en": "Leek belongs to the allium family (the onion family). Alliums damage red blood cells and can lead to anaemia, and they also irritate the stomach and gut. Cats are the most sensitive species. All forms are poisonous to cats — raw, cooked, dried, powdered and liquid.",
@@ -80,7 +84,8 @@
     "hr": "Poriluk pripada biljkama iz roda Allium (porodici luka). Biljke iz roda Allium oštećuju crvene krvne stanice i mogu dovesti do anemije, a uz to nadražuju želudac i crijeva. Mačke su najosjetljivija vrsta. Svi su oblici otrovni za mačke – sirov, termički obrađen, sušen, u prahu i tekući.",
     "sv": "Purjolök hör till släktet Allium (lökfamiljen). Lökväxter skadar de röda blodkropparna och kan leda till blodbrist (anemi), och de irriterar också magen och tarmarna. Katter är den känsligaste arten. Alla former är giftiga för katter – rå, tillagad, torkad, i pulverform och i flytande form.",
     "da": "Porre hører til løgplanterne (Allium, løgfamilien). Løgplanter skader de røde blodlegemer og kan føre til blodmangel, og de irriterer også mave og tarm. Katte er den mest følsomme dyreart. Alle former er giftige for katte – rå, tilberedte, tørrede, i pulverform og flydende.",
-    "fi": "Purjo kuuluu sipulikasveihin eli sipulin sukuun. Sipulikasvit vaurioittavat punasoluja ja voivat johtaa anemiaan, ja ne myös ärsyttävät mahaa ja suolistoa. Kissat ovat eläinlajeista herkimpiä. Kaikki muodot ovat kissalle myrkyllisiä – raaka, kypsennetty, kuivattu, jauhettu ja nestemäinen."
+    "fi": "Purjo kuuluu sipulikasveihin eli sipulin sukuun. Sipulikasvit vaurioittavat punasoluja ja voivat johtaa anemiaan, ja ne myös ärsyttävät mahaa ja suolistoa. Kissat ovat eläinlajeista herkimpiä. Kaikki muodot ovat kissalle myrkyllisiä – raaka, kypsennetty, kuivattu, jauhettu ja nestemäinen.",
+    "nb": "Purre hører til løkplantene (Allium). Løkplanter skader de røde blodcellene og kan føre til blodmangel (anemi), og de irriterer også magen og tarmen. Katter er den mest følsomme arten. Alle former er giftige for katter – rå, tilberedt, tørket, som pulver og i flytende form."
   },
   "signs": {
     "en": [
@@ -208,6 +213,15 @@
       "Kalpeat ikenet",
       "Punertava virtsa",
       "Nopeutunut tai raskas hengitys"
+    ],
+    "nb": [
+      "Oppkast",
+      "Diaré",
+      "Nedsatt matlyst",
+      "Svakhet",
+      "Blekt tannkjøtt",
+      "Rødfarget urin",
+      "Raskere eller tyngre pust"
     ]
   },
   "what_to_do": {
@@ -224,7 +238,8 @@
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako se čini da je mačka dobro – znakovi anemije mogu se pokazati tek nakon nekoliko dana. Zapiši što je mačka pojela (sirovo, termički obrađeno, u prahu ili jelo koje ga sadrži), koliko i kada. Ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur, även om katten verkar må bra – tecken på blodbrist kan dröja flera dagar. Notera vad katten åt (rått, tillagat, pulver eller en maträtt som innehöll det), hur mycket och när. Försök inte få katten att kräkas hemma.",
     "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr, også selvom din kat virker rask – tegn på blodmangel kan først vise sig efter flere dage. Skriv ned hvad din kat har spist (råt, tilberedt, pulver eller en ret med porre), hvor meget og hvornår. Prøv ikke selv at få katten til at kaste op.",
-    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, vaikka kissasi vaikuttaisi voivan hyvin – anemian oireet voivat näkyä vasta usean päivän kuluttua. Kirjaa ylös, mitä kissasi söi (raakaa, kypsennettyä, jauhetta vai ruokaa, jossa sitä oli), kuinka paljon ja milloin. Älä yritä itse oksennuttaa kissaasi."
+    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, vaikka kissasi vaikuttaisi voivan hyvin – anemian oireet voivat näkyä vasta usean päivän kuluttua. Kirjaa ylös, mitä kissasi söi (raakaa, kypsennettyä, jauhetta vai ruokaa, jossa sitä oli), kuinka paljon ja milloin. Älä yritä itse oksennuttaa kissaasi.",
+    "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang, selv om katten virker frisk – det kan ta flere dager før tegn på blodmangel viser seg. Skriv ned hva katten har spist (rå, tilberedt, som pulver eller i en rett med purre), hvor mye og når. Ikke prøv å få katten til å kaste opp selv."
   },
   "serving": null,
   "child": {
@@ -241,7 +256,8 @@
     "hr": "Poriluk je rođak luka, pa nije siguran za mace. Ako ga maca malo grickne, reci odrasloj osobi.",
     "sv": "Purjolök är släkt med vanlig lök, så den är inte säker för katter. Säg till en vuxen om katten smakar på den.",
     "da": "Porrer er i familie med løg, så de er ikke sikre for katte. Sig det til en voksen hvis katten smager på en porre.",
-    "fi": "Purjo on sipulin serkku, joten se ei ole turvallista kissoille. Kerro aikuiselle, jos kisu näykkii sitä."
+    "fi": "Purjo on sipulin serkku, joten se ei ole turvallista kissoille. Kerro aikuiselle, jos kisu näykkii sitä.",
+    "nb": "Purre er i slekt med løk, så den er ikke trygg for katter. Si fra til en voksen hvis pusen smaker på litt."
   },
   "faq": [
     {
@@ -259,7 +275,8 @@
         "hr": "Je li termički obrađen ili sušen poriluk siguran za mačke?",
         "sv": "Är tillagad eller torkad purjolök säker för katter?",
         "da": "Er tilberedt eller tørret porre sikkert for katte?",
-        "fi": "Onko kypsennetty tai kuivattu purjo kissalle turvallista?"
+        "fi": "Onko kypsennetty tai kuivattu purjo kissalle turvallista?",
+        "nb": "Er tilberedt eller tørket purre trygt for katter?"
       },
       "a": {
         "en": "No. All forms are poisonous to cats, including raw, cooked and dried leek. Be careful with leftovers, sauces, soups and gravy that may contain it.",
@@ -275,7 +292,8 @@
         "hr": "Nije. Za mačke su otrovni svi oblici, uključujući sirov, termički obrađen i sušen poriluk. Pripazi na ostatke hrane, umake, juhe i sok od pečenja koji ga mogu sadržavati.",
         "sv": "Nej. Alla former är giftiga för katter, även rå, tillagad och torkad purjolök. Var försiktig med rester, såser, soppor och sky som kan innehålla den.",
         "da": "Nej. Alle former er giftige for katte, også rå, tilberedt og tørret porre. Pas på med rester, saucer, supper og sovs der kan indeholde porre.",
-        "fi": "Ei ole. Kaikki muodot ovat kissalle myrkyllisiä, myös raaka, kypsennetty ja kuivattu purjo. Ole varovainen ruoantähteiden, kastikkeiden ja keittojen kanssa, sillä niissä voi olla purjoa."
+        "fi": "Ei ole. Kaikki muodot ovat kissalle myrkyllisiä, myös raaka, kypsennetty ja kuivattu purjo. Ole varovainen ruoantähteiden, kastikkeiden ja keittojen kanssa, sillä niissä voi olla purjoa.",
+        "nb": "Nei. Alle former er giftige for katter, også rå, tilberedt og tørket purre. Vær forsiktig med matrester, sauser, supper og brun saus som kan inneholde purre."
       }
     }
   ],
@@ -445,6 +463,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e3e73017bb13834d34b595df6f18742f471eba036fbd6997293d457042b772e2"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "25ba7979ac59b3c0e0a9083e0dca40c4681ad1e051db722d6c8dc0061e833cd3"
     }
   }
 }

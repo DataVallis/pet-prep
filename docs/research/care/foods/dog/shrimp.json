@@ -15,7 +15,8 @@
     "hr": "Kozice",
     "sv": "Räkor",
     "da": "Rejer",
-    "fi": "Katkaravut"
+    "fi": "Katkaravut",
+    "nb": "Reker"
   },
   "question": {
     "en": "Can dogs eat shrimp?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti kozice?",
     "sv": "Får hundar äta räkor?",
     "da": "Må hunde spise rejer?",
-    "fi": "Saako koira syödä katkarapuja?"
+    "fi": "Saako koira syödä katkarapuja?",
+    "nb": "Kan hunder spise reker?"
   },
   "url_slug": {
     "en": "shrimp",
@@ -47,7 +49,8 @@
     "hr": "kozice",
     "sv": "rakor",
     "da": "rejer",
-    "fi": "katkaravut"
+    "fi": "katkaravut",
+    "nb": "reker"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Da, nekoliko komada običnih, potpuno termički obrađenih kozica u redu je za pse. Prije toga ukloni oklop, glavu, nožice i rep. Sirove kozice mogu sadržavati štetne klice, a pržene, pohane ili začinjene kozice nisu prikladne.",
     "sv": "Ja, några bitar naturella, helt tillagade räkor går bra för hundar. Ta först bort skal, huvud, ben och stjärt. Råa räkor kan bära på skadliga bakterier, och friterade, panerade eller kryddade räkor passar inte.",
     "da": "Ja, nogle få stykker almindelige, gennemtilberedte rejer er fine til hunde. Fjern først skal, hoved, ben og hale. Rå rejer kan indeholde skadelige smitstoffer, og friturestegte, panerede eller krydrede rejer er ikke egnede.",
-    "fi": "Saa, muutama pala maustamatonta, täysin kypsennettyä katkarapua sopii koiralle. Poista ensin kuori, pää, jalat ja pyrstö. Raa’assa katkaravussa voi olla haitallisia taudinaiheuttajia, eivätkä friteeratut, leivitetyt tai maustetut katkaravut sovi koiralle."
+    "fi": "Saa, muutama pala maustamatonta, täysin kypsennettyä katkarapua sopii koiralle. Poista ensin kuori, pää, jalat ja pyrstö. Raa’assa katkaravussa voi olla haitallisia taudinaiheuttajia, eivätkä friteeratut, leivitetyt tai maustetut katkaravut sovi koiralle.",
+    "nb": "Ja, noen få biter gjennomkokte reker uten noe tilsatt er greit for hunder. Fjern skall, hode, bein og hale først. Rå reker kan inneholde skadelige smittestoffer, og frityrstekte, panerte eller krydrede reker passer ikke."
   },
   "why": {
     "en": "Raw shellfish contain harmful pathogens that cooking avoids. Shrimp shells are a choking hazard and can cause blockages. Fried or breaded shrimp add unnecessary fats and oils. Shrimp are low in fat and calories but high in cholesterol, so moderation is key.",
@@ -80,7 +84,8 @@
     "hr": "Sirovi plodovi mora sadrže štetne uzročnike bolesti, koje termička obrada uklanja. Oklop kozice može izazvati gušenje i začepljenje. Pržene ili pohane kozice donose nepotrebne masti i ulja. Kozice imaju malo masti i kalorija, ali puno kolesterola, pa je umjerenost ključna.",
     "sv": "Råa skaldjur innehåller skadliga smittämnen, som man undviker genom att tillaga dem. Räkskal kan orsaka kvävning och tarmstopp. Friterade eller panerade räkor tillför onödigt fett och olja. Räkor innehåller lite fett och kalorier men mycket kolesterol, så ge dem bara med måtta.",
     "da": "Rå skaldyr indeholder skadelige smitstoffer, som man undgår ved tilberedning. Rejeskaller kan sætte sig fast i halsen og give blokeringer. Friturestegte eller panerede rejer tilfører unødvendigt fedt og olie. Rejer indeholder lidt fedt og få kalorier, men meget kolesterol, så det vigtigste er at give dem med måde.",
-    "fi": "Raa’oissa äyriäisissä on haitallisia taudinaiheuttajia, jotka kypsentäminen poistaa. Katkaravun kuoret aiheuttavat tukehtumisvaaran ja voivat johtaa tukoksiin. Friteeratuissa tai leivitetyissä katkaravuissa on tarpeettomia rasvoja ja öljyjä. Katkaravuissa on vähän rasvaa ja kaloreita mutta paljon kolesterolia, joten kohtuus on tärkeää."
+    "fi": "Raa’oissa äyriäisissä on haitallisia taudinaiheuttajia, jotka kypsentäminen poistaa. Katkaravun kuoret aiheuttavat tukehtumisvaaran ja voivat johtaa tukoksiin. Friteeratuissa tai leivitetyissä katkaravuissa on tarpeettomia rasvoja ja öljyjä. Katkaravuissa on vähän rasvaa ja kaloreita mutta paljon kolesterolia, joten kohtuus on tärkeää.",
+    "nb": "Rå skalldyr inneholder skadelige smittestoffer som du unngår ved å tilberede dem. Rekeskall kan sette seg fast i halsen og gi blokkering. Frityrstekte eller panerte reker gir unødvendig fett og olje. Reker inneholder lite fett og kalorier, men mye kolesterol, så det viktigste er måtehold."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "hr": "Prestani davati kozice ako pas pokazuje nelagodu u trbuhu ili se čini da mu nije dobro i nazovi veterinara ako se znakovi pogoršaju. Nazovi veterinara i ako je pas progutao oklope i čini se da se guši.",
     "sv": "Sluta ge räkor om hunden visar obehag i magen eller verkar må dåligt, och ring veterinären om symtomen blir värre. Ring också veterinären om hunden svalt skal och verkar ha satt något i halsen.",
     "da": "Stop med at give rejer hvis din hund får ubehag i maven eller virker utilpas, og kontakt din dyrlæge hvis symptomerne bliver værre. Kontakt også din dyrlæge hvis hunden har slugt skaller og ser ud til at være ved at blive kvalt.",
-    "fi": "Lopeta katkarapujen antaminen, jos koirallasi on vatsavaivoja tai se vaikuttaa sairaalta, ja soita eläinlääkärille, jos oireet pahenevat. Soita eläinlääkärille myös, jos koirasi nieli kuoria ja näyttää olevan tukehtumassa."
+    "fi": "Lopeta katkarapujen antaminen, jos koirallasi on vatsavaivoja tai se vaikuttaa sairaalta, ja soita eläinlääkärille, jos oireet pahenevat. Soita eläinlääkärille myös, jos koirasi nieli kuoria ja näyttää olevan tukehtumassa.",
+    "nb": "Slutt å gi reker hvis hunden får ubehag i magen eller virker uvel, og ring dyrlegen hvis symptomene blir verre. Ring også dyrlegen hvis hunden har svelget skall og ser ut til å ha satt noe i halsen."
   },
   "serving": {
     "en": "A few pieces, fully cooked (steamed is best), plain, with shell, head, legs and tail removed; not fried, breaded or seasoned.",
@@ -113,7 +119,8 @@
     "hr": "Nekoliko komada, potpuno termički obrađenih (najbolje kuhanih na pari), bez dodataka, bez oklopa, glave, nožica i repa; ne pržene, pohane ni začinjene.",
     "sv": "Några bitar, helt tillagade (helst ångkokta), naturella, utan skal, huvud, ben och stjärt; inte friterade, panerade eller kryddade.",
     "da": "Nogle få stykker, gennemtilberedte (helst dampede), uden tilsætning og med skal, hoved, ben og hale fjernet; ikke friturestegte, panerede eller krydrede.",
-    "fi": "Muutama pala täysin kypsennettynä (mieluiten höyrytettynä), maustamattomana, kuori, pää, jalat ja pyrstö poistettuina; ei friteerattuna, leivitettynä tai maustettuna."
+    "fi": "Muutama pala täysin kypsennettynä (mieluiten höyrytettynä), maustamattomana, kuori, pää, jalat ja pyrstö poistettuina; ei friteerattuna, leivitettynä tai maustettuna.",
+    "nb": "Noen få biter, gjennomkokt (dampet er best), uten noe tilsatt, med skall, hode, bein og hale fjernet; ikke frityrstekt, panert eller krydret."
   },
   "child": {
     "en": "A dog may have a couple of cooked, peeled shrimp. The shells and tails are not for dogs.",
@@ -129,7 +136,8 @@
     "hr": "Pas smije pojesti jednu ili dvije kuhane, očišćene kozice. Oklopi i repovi nisu za pse.",
     "sv": "En hund får äta ett par kokta, skalade räkor. Skalen och stjärtarna är inte för hundar.",
     "da": "En hund må gerne få et par kogte, pillede rejer. Skallerne og halerne er ikke til hunde.",
-    "fi": "Koira saa syödä pari keitettyä, kuorittua katkarapua. Kuoret ja pyrstöt eivät sovi koirille."
+    "fi": "Koira saa syödä pari keitettyä, kuorittua katkarapua. Kuoret ja pyrstöt eivät sovi koirille.",
+    "nb": "En hund kan få et par kokte, pillede reker. Skallene og halene er ikke noe for hunder."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "hr": "Smiju li psi jesti repove kozica?",
         "sv": "Får hundar äta räkstjärtar?",
         "da": "Må hunde spise rejehaler?",
-        "fi": "Saako koira syödä katkarapujen pyrstöjä?"
+        "fi": "Saako koira syödä katkarapujen pyrstöjä?",
+        "nb": "Kan hunder spise rekehaler?"
       },
       "a": {
         "en": "No. Remove the shell, head, legs and tail, as shells are a choking hazard and can cause blockages.",
@@ -163,7 +172,8 @@
         "hr": "Ne smiju. Ukloni oklop, glavu, nožice i rep jer oklop može izazvati gušenje i začepljenje.",
         "sv": "Nej. Ta bort skal, huvud, ben och stjärt, eftersom skalen kan orsaka kvävning och tarmstopp.",
         "da": "Nej. Fjern skal, hoved, ben og hale, da skaller kan sætte sig fast i halsen og give blokeringer.",
-        "fi": "Ei saa. Poista kuori, pää, jalat ja pyrstö, koska kuoret aiheuttavat tukehtumisvaaran ja voivat johtaa tukoksiin."
+        "fi": "Ei saa. Poista kuori, pää, jalat ja pyrstö, koska kuoret aiheuttavat tukehtumisvaaran ja voivat johtaa tukoksiin.",
+        "nb": "Nei. Fjern skall, hode, bein og hale, for skallene kan sette seg fast i halsen og gi blokkering."
       }
     }
   ],
@@ -288,6 +298,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "beb0c2456524af6bcb5be1909c90a8c91e4b2348d1d4bd0a48771aa927828ac3"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a67e0dcb206d28b3fb5973538992ccf6b3d24177a5e9602869956270dc0730f3"
     }
   }
 }

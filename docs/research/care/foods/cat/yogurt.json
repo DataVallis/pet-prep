@@ -15,7 +15,8 @@
     "hr": "Jogurt",
     "sv": "Yoghurt",
     "da": "Yoghurt",
-    "fi": "Jogurtti"
+    "fi": "Jogurtti",
+    "nb": "Yoghurt"
   },
   "question": {
     "en": "Can cats eat yogurt?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti jogurt?",
     "sv": "Får katter äta yoghurt?",
     "da": "Må katte spise yoghurt?",
-    "fi": "Saako kissa syödä jogurttia?"
+    "fi": "Saako kissa syödä jogurttia?",
+    "nb": "Kan katter spise yoghurt?"
   },
   "url_slug": {
     "en": "yogurt",
@@ -47,7 +49,8 @@
     "hr": "jogurt",
     "sv": "yoghurt",
     "da": "yoghurt",
-    "fi": "jogurtti"
+    "fi": "jogurtti",
+    "nb": "yoghurt"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne, jogurt je bolje izbjegavati. Mliječni je proizvod, a odrasle mačke imaju malo enzima koji probavlja mliječni šećer, pa mliječni proizvodi mogu izazvati proljev ili želučane tegobe. Veterinarski vodiči savjetuju da se mačkama ne daju mliječni proizvodi.",
     "sv": "Nej, yoghurt är bäst att undvika. Det är en mejeriprodukt, och vuxna katter har lite av enzymet som bryter ner mjölksocker, så mejeriprodukter kan ge diarré eller orolig mage. Veterinära guider avråder från att ge katter mejeriprodukter.",
     "da": "Nej, yoghurt bør undgås. Yoghurt er et mejeriprodukt, og voksne katte har kun lidt af det enzym der fordøjer mælkesukker, så mejeriprodukter kan give diarré eller dårlig mave. Veterinære vejledninger fraråder at give katte mejeriprodukter.",
-    "fi": "Ei, jogurttia on parasta välttää. Se on maitotuote, ja aikuisilla kissoilla on vähän maitosokeria pilkkovaa entsyymiä, joten maitotuotteet voivat aiheuttaa ripulia tai vatsavaivoja. Eläinlääkäreiden oppaat neuvovat olemaan antamatta kissoille maitotuotteita."
+    "fi": "Ei, jogurttia on parasta välttää. Se on maitotuote, ja aikuisilla kissoilla on vähän maitosokeria pilkkovaa entsyymiä, joten maitotuotteet voivat aiheuttaa ripulia tai vatsavaivoja. Eläinlääkäreiden oppaat neuvovat olemaan antamatta kissoille maitotuotteita.",
+    "nb": "Nei, yoghurt bør unngås. Den er et meieriprodukt, og voksne katter har lite av enzymet som fordøyer melkesukker, så meieriprodukter kan gi diaré eller urolig mage. Veterinærmedisinske veiledninger fraråder å gi katter meieriprodukter."
   },
   "why": {
     "en": "Adult cats have little lactase, the enzyme that breaks down lactose, so milk and other dairy-based products can cause diarrhoea or other digestive upset. Many cats are lactose intolerant. Dairy products are also high in fat and can add to weight gain. Plant-based alternatives are not automatically safe, as some contain ingredients that could be toxic to cats.",
@@ -80,7 +84,8 @@
     "hr": "Odrasle mačke imaju malo laktaze, enzima koji razgrađuje laktozu, pa mlijeko i drugi proizvodi na bazi mlijeka mogu izazvati proljev ili druge probavne smetnje. Mnoge mačke ne podnose laktozu. Mliječni proizvodi imaju i puno masti i mogu pridonijeti debljanju. Biljne zamjene nisu automatski sigurne jer neke sadrže sastojke koji bi mogli biti otrovni za mačke.",
     "sv": "Vuxna katter har lite laktas, enzymet som bryter ner laktos, så mjölk och andra mejeribaserade produkter kan ge diarré eller andra magbesvär. Många katter är laktosintoleranta. Mejeriprodukter är dessutom feta och kan bidra till viktökning. Växtbaserade alternativ är inte automatiskt säkra, eftersom en del innehåller ingredienser som kan vara giftiga för katter.",
     "da": "Voksne katte har kun lidt laktase, det enzym der nedbryder laktose, så mælk og andre mejeribaserede produkter kan give diarré eller andre fordøjelsesproblemer. Mange katte er laktoseintolerante. Mejeriprodukter er også meget fede og kan bidrage til vægtøgning. Plantebaserede alternativer er ikke automatisk sikre da nogle indeholder ingredienser der kan være giftige for katte.",
-    "fi": "Aikuisilla kissoilla on vähän laktaasia, laktoosia pilkkovaa entsyymiä, joten maito ja muut maitopohjaiset tuotteet voivat aiheuttaa ripulia tai muita ruoansulatusvaivoja. Monet kissat ovat laktoosi-intolerantteja. Maitotuotteet ovat myös rasvaisia ja voivat edistää painonnousua. Kasvipohjaiset vaihtoehdot eivät ole automaattisesti turvallisia, sillä joissakin on ainesosia, jotka voivat olla kissoille myrkyllisiä."
+    "fi": "Aikuisilla kissoilla on vähän laktaasia, laktoosia pilkkovaa entsyymiä, joten maito ja muut maitopohjaiset tuotteet voivat aiheuttaa ripulia tai muita ruoansulatusvaivoja. Monet kissat ovat laktoosi-intolerantteja. Maitotuotteet ovat myös rasvaisia ja voivat edistää painonnousua. Kasvipohjaiset vaihtoehdot eivät ole automaattisesti turvallisia, sillä joissakin on ainesosia, jotka voivat olla kissoille myrkyllisiä.",
+    "nb": "Voksne katter har lite laktase, enzymet som bryter ned laktose, så melk og andre meieribaserte produkter kan gi diaré eller andre fordøyelsesplager. Mange katter er laktoseintolerante. Meieriprodukter har også mye fett og kan bidra til vektøkning. Plantebaserte alternativer er ikke automatisk trygge, siden noen inneholder ingredienser som kan være giftige for katter."
   },
   "signs": {
     "en": [
@@ -166,6 +171,12 @@
       "Oksentelu",
       "Vatsavaivat",
       "Ilmavaivat tai turvotus"
+    ],
+    "nb": [
+      "Diaré",
+      "Oppkast",
+      "Urolig mage",
+      "Luft i magen eller oppblåsthet"
     ]
   },
   "what_to_do": {
@@ -182,7 +193,8 @@
     "hr": "Ako je mačka pojela jogurt, prati pojavu proljeva, povraćanja ili promjene u ponašanju i obrati se veterinaru za savjet ako ti se čini da joj nije dobro.",
     "sv": "Om katten har ätit yoghurt: håll utkik efter diarré, kräkningar eller ändrat beteende, och kontakta veterinären för råd om den verkar må dåligt.",
     "da": "Hvis din kat har spist yoghurt, så hold øje med diarré, opkast eller ændret adfærd, og kontakt din dyrlæge for at få råd hvis den virker utilpas.",
-    "fi": "Jos kissasi söi jogurttia, seuraa, ilmeneekö ripulia, oksentelua tai käytöksen muutoksia, ja kysy neuvoa eläinlääkäriltä, jos kissa vaikuttaa sairaalta."
+    "fi": "Jos kissasi söi jogurttia, seuraa, ilmeneekö ripulia, oksentelua tai käytöksen muutoksia, ja kysy neuvoa eläinlääkäriltä, jos kissa vaikuttaa sairaalta.",
+    "nb": "Hvis katten har spist yoghurt, bør du følge med på diaré, oppkast eller endret oppførsel og kontakte dyrlegen for råd hvis den virker dårlig."
   },
   "serving": null,
   "child": {
@@ -199,7 +211,8 @@
     "hr": "Jogurt je hrana za ljude. Od njega maci može zaboljeti trbuščić, zato neka ostane u tvojoj zdjelici, a ne u macinoj.",
     "sv": "Yoghurt är mat för människor. Den kan ge katten ont i magen, så låt den stanna i din skål, inte i kattens.",
     "da": "Yoghurt er menneskemad. Den kan give en kat ondt i maven, så hold den i din skål og ikke i kattens.",
-    "fi": "Jogurtti on ihmisten ruokaa. Se voi tehdä kissan masun kipeäksi, joten pidä se omassa kulhossasi äläkä kissan kupissa."
+    "fi": "Jogurtti on ihmisten ruokaa. Se voi tehdä kissan masun kipeäksi, joten pidä se omassa kulhossasi äläkä kissan kupissa.",
+    "nb": "Yoghurt er menneskemat. Den kan gi en katt vondt i magen, så la den bli i din skål, ikke i kattens."
   },
   "faq": [
     {
@@ -217,7 +230,8 @@
         "hr": "Je li jogurt bez mliječnih sastojaka bolji za mačke?",
         "sv": "Är mejerifri yoghurt bättre för katter?",
         "da": "Er mælkefri yoghurt bedre for katte?",
-        "fi": "Onko maidoton jogurtti parempi kissoille?"
+        "fi": "Onko maidoton jogurtti parempi kissoille?",
+        "nb": "Er meierifri yoghurt bedre for katter?"
       },
       "a": {
         "en": "Not necessarily. Many dairy alternatives contain ingredients that could be toxic to cats, so they are best avoided too.",
@@ -233,7 +247,8 @@
         "hr": "Ne nužno. Mnoge zamjene za mliječne proizvode sadrže sastojke koji bi mogli biti otrovni za mačke, pa je i njih bolje izbjegavati.",
         "sv": "Inte nödvändigtvis. Många mejerifria alternativ innehåller ingredienser som kan vara giftiga för katter, så de är också bäst att undvika.",
         "da": "Ikke nødvendigvis. Mange mejerifrie alternativer indeholder ingredienser der kan være giftige for katte, så dem bør du også undgå.",
-        "fi": "Ei välttämättä. Monissa maitotuotteiden korvikkeissa on ainesosia, jotka voivat olla kissoille myrkyllisiä, joten niitäkin on parasta välttää."
+        "fi": "Ei välttämättä. Monissa maitotuotteiden korvikkeissa on ainesosia, jotka voivat olla kissoille myrkyllisiä, joten niitäkin on parasta välttää.",
+        "nb": "Ikke nødvendigvis. Mange meierifrie alternativer inneholder ingredienser som kan være giftige for katter, så de bør også unngås."
       }
     }
   ],
@@ -356,6 +371,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "913145ffc7f80a4aefde80b585a0b7ab2831d3bdb2e9cad920557f3a69bab377"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dc8d9837506bc4443826cc0866dfee7f04c866c415aab35bbb7f350078807549"
     }
   }
 }

@@ -15,7 +15,8 @@
     "hr": "Kuhana jaja",
     "sv": "Kokta ägg",
     "da": "Kogte æg",
-    "fi": "Keitetyt kananmunat"
+    "fi": "Keitetyt kananmunat",
+    "nb": "Kokte egg"
   },
   "question": {
     "en": "Can cats eat cooked eggs?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti kuhana jaja?",
     "sv": "Får katter äta kokta ägg?",
     "da": "Må katte spise kogte æg?",
-    "fi": "Saako kissa syödä keitettyjä kananmunia?"
+    "fi": "Saako kissa syödä keitettyjä kananmunia?",
+    "nb": "Kan katter spise kokte egg?"
   },
   "url_slug": {
     "en": "cooked-eggs",
@@ -47,7 +49,8 @@
     "hr": "kuhana-jaja",
     "sv": "kokta-agg",
     "da": "kogte-aeg",
-    "fi": "keitetyt-kananmunat"
+    "fi": "keitetyt-kananmunat",
+    "nb": "kokte-egg"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Da, u malim količinama. Malo potpuno termički obrađenog, običnog jajeta u redu je kao povremena poslastica. Jaja su čest izvor bjelančevina u hrani za mačke, ali treba ih davati samo umjereno i nikad sirova.",
     "sv": "Ja, i små mängder. Lite helt genomtillagat, naturellt ägg går bra som godbit någon gång ibland. Ägg är ett vanligt protein i kattmat, men de ska bara ges med måtta och aldrig råa.",
     "da": "Ja, i små mængder. Lidt helt gennemkogt, naturelt æg er fint som en godbid en gang imellem. Æg er en almindelig proteinkilde i kattefoder, men de bør kun gives med måde og aldrig rå.",
-    "fi": "Saa, pieninä määrinä. Vähän kokonaan kypsennettyä, maustamatonta kananmunaa sopii satunnaiseksi herkuksi. Kananmuna on yleinen proteiininlähde kissanruoassa, mutta sitä pitäisi antaa vain kohtuudella eikä koskaan raakana."
+    "fi": "Saa, pieninä määrinä. Vähän kokonaan kypsennettyä, maustamatonta kananmunaa sopii satunnaiseksi herkuksi. Kananmuna on yleinen proteiininlähde kissanruoassa, mutta sitä pitäisi antaa vain kohtuudella eikä koskaan raakana.",
+    "nb": "Ja, i små mengder. Litt gjennomkokt egg uten noe tilsatt er greit som en godbit en gang iblant. Egg er en vanlig proteinkilde i kattefôr, men de bør bare gis med måte og aldri rå."
   },
   "why": {
     "en": "Cornell lists eggs among the protein sources most commonly used in cat food, and PDSA says eggs suit pets, but only in moderation. Cooking matters: raw eggs can carry Salmonella and raw egg white blocks the vitamin biotin. Treats should be a small part of a cat's diet.",
@@ -80,7 +84,8 @@
     "hr": "Cornell navodi jaja među najčešćim izvorima bjelančevina u hrani za mačke, a PDSA navodi da su jaja prikladna za ljubimce, ali samo umjereno. Termička obrada je važna: sirova jaja mogu prenositi salmonelu, a sirovi bjelanjak sprječava iskorištavanje vitamina biotina. Poslastice trebaju biti mali dio mačje prehrane.",
     "sv": "Cornell räknar ägg till de proteinkällor som oftast används i kattmat, och PDSA skriver att ägg passar husdjur, men bara med måtta. Tillagningen spelar roll: råa ägg kan bära på salmonella, och rå äggvita blockerar vitaminet biotin. Godbitar ska bara vara en liten del av kattens kost.",
     "da": "Cornell nævner æg blandt de proteinkilder der oftest bruges i kattefoder, og PDSA skriver at æg passer til kæledyr, men kun med måde. Tilberedningen er vigtig: Rå æg kan indeholde salmonella, og rå æggehvide blokerer vitaminet biotin. Godbidder bør kun udgøre en lille del af en kats kost.",
-    "fi": "Cornellin yliopisto mainitsee kananmunat kissanruoan yleisimpien proteiininlähteiden joukossa, ja PDSA:n mukaan kananmunat sopivat lemmikeille, mutta vain kohtuudella. Kypsentäminen on tärkeää: raa’assa kananmunassa voi olla salmonellaa, ja raaka munanvalkuainen estää biotiini-vitamiinin imeytymisen. Herkkujen pitäisi olla vain pieni osa kissan ruokavaliota."
+    "fi": "Cornellin yliopisto mainitsee kananmunat kissanruoan yleisimpien proteiininlähteiden joukossa, ja PDSA:n mukaan kananmunat sopivat lemmikeille, mutta vain kohtuudella. Kypsentäminen on tärkeää: raa’assa kananmunassa voi olla salmonellaa, ja raaka munanvalkuainen estää biotiini-vitamiinin imeytymisen. Herkkujen pitäisi olla vain pieni osa kissan ruokavaliota.",
+    "nb": "Cornell regner egg blant proteinkildene som brukes mest i kattefôr, og PDSA skriver at egg passer for kjæledyr, men bare med måte. Tilberedningen er viktig: Rå egg kan inneholde salmonella, og rå eggehvite hindrer opptaket av vitaminet biotin. Godbiter bør være en liten del av kattens kosthold."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili dobije proljev, prestani i pitaj veterinara prije nego što pokušaš ponovno.",
     "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären innan du försöker igen.",
     "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, så stop og spørg din dyrlæge før du prøver igen.",
-    "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai sille tulee ripuli sen jälkeen, lopeta ja kysy neuvoa eläinlääkäriltä, ennen kuin kokeilet uudelleen."
+    "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai sille tulee ripuli sen jälkeen, lopeta ja kysy neuvoa eläinlääkäriltä, ennen kuin kokeilet uudelleen.",
+    "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt og spør dyrlegen før du prøver igjen."
   },
   "serving": {
     "en": "Fully cooked and plain, with nothing added; a small piece as an occasional treat.",
@@ -113,7 +119,8 @@
     "hr": "Potpuno termički obrađeno i obično, bez ičega dodanog; mali komadić kao povremena poslastica.",
     "sv": "Helt genomtillagat och naturellt, utan tillsatser; en liten bit som godbit någon gång ibland.",
     "da": "Helt gennemkogt og naturelt, uden noget tilsat; et lille stykke som en godbid en gang imellem.",
-    "fi": "Kokonaan kypsennettynä ja maustamattomana, ilman lisäyksiä; pieni pala satunnaisena herkkuna."
+    "fi": "Kokonaan kypsennettynä ja maustamattomana, ilman lisäyksiä; pieni pala satunnaisena herkkuna.",
+    "nb": "Gjennomkokt og naturelt, uten noe tilsatt; en liten bit som en godbit en gang iblant."
   },
   "child": {
     "en": "A tiny bit of plain cooked egg can be a treat for a cat. Ask a grown-up to cook it first.",
@@ -129,7 +136,8 @@
     "hr": "Malo običnog kuhanog jajeta može biti poslastica za macu. Zamoli odraslu osobu da ga najprije skuha.",
     "sv": "En pytteliten bit kokt ägg utan kryddor kan bli en godbit för en katt. Be en vuxen att koka det först.",
     "da": "En lille smule almindeligt kogt æg kan være en godbid til en kat. Bed en voksen om at koge det først.",
-    "fi": "Pikkuinen pala maustamatonta keitettyä kananmunaa voi olla kissan herkku. Pyydä aikuista keittämään se ensin."
+    "fi": "Pikkuinen pala maustamatonta keitettyä kananmunaa voi olla kissan herkku. Pyydä aikuista keittämään se ensin.",
+    "nb": "En bitteliten bit kokt egg uten noe på kan være en godbit for en katt. Be en voksen om å koke det først."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "hr": "Zašto ne sirova?",
         "sv": "Varför inte rått?",
         "da": "Hvorfor ikke rå?",
-        "fi": "Miksei raakana?"
+        "fi": "Miksei raakana?",
+        "nb": "Hvorfor ikke rå?"
       },
       "a": {
         "en": "Raw eggs can carry bacteria such as Salmonella, and raw egg white contains avidin, which stops the vitamin biotin being absorbed.",
@@ -163,7 +172,8 @@
         "hr": "Sirova jaja mogu prenositi bakterije poput salmonele, a sirovi bjelanjak sadrži avidin, koji sprječava apsorpciju vitamina biotina.",
         "sv": "Råa ägg kan bära på bakterier som salmonella, och rå äggvita innehåller avidin, som hindrar att vitaminet biotin tas upp.",
         "da": "Rå æg kan indeholde bakterier som salmonella, og rå æggehvide indeholder avidin, som forhindrer at vitaminet biotin bliver optaget.",
-        "fi": "Raa’assa kananmunassa voi olla bakteereja, kuten salmonellaa, ja raa’assa munanvalkuaisessa on avidiinia, joka estää biotiini-vitamiinin imeytymisen."
+        "fi": "Raa’assa kananmunassa voi olla bakteereja, kuten salmonellaa, ja raa’assa munanvalkuaisessa on avidiinia, joka estää biotiini-vitamiinin imeytymisen.",
+        "nb": "Rå egg kan inneholde bakterier som salmonella, og rå eggehvite inneholder avidin, som hindrer at vitaminet biotin blir tatt opp."
       }
     }
   ],
@@ -272,6 +282,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5ad13c8ba9a9e68555b3ce943e41c2e0aafd446331ba7b1ee9ebb11e1264a26f"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8cf666f94a2a9841ef3982a2940dbcef3e8bd474776e3c1ae16c48e06ff0074d"
     }
   }
 }

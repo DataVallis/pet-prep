@@ -15,7 +15,8 @@
     "hr": "Slanina",
     "sv": "Bacon",
     "da": "Bacon",
-    "fi": "Pekoni"
+    "fi": "Pekoni",
+    "nb": "Bacon"
   },
   "question": {
     "en": "Can dogs eat bacon?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti slaninu?",
     "sv": "Får hundar äta bacon?",
     "da": "Må hunde spise bacon?",
-    "fi": "Saako koira syödä pekonia?"
+    "fi": "Saako koira syödä pekonia?",
+    "nb": "Kan hunder spise bacon?"
   },
   "url_slug": {
     "en": "bacon",
@@ -47,7 +49,8 @@
     "hr": "slanina",
     "sv": "bacon",
     "da": "bacon",
-    "fi": "pekoni"
+    "fi": "pekoni",
+    "nb": "bacon"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne preporučuje se. Slanina nije otrovna, ali je masna hrana sa stola koja može izazvati povraćanje i proljev ili potaknuti upalu gušterače, koja može biti teška. Ako nisi siguran, ne dijeli hranu sa stola sa psom.",
     "sv": "Rekommenderas inte. Bacon är inte giftigt, men det är fet bordsmat som kan ge kräkningar och diarré eller utlösa bukspottkörtelinflammation, som kan vara allvarlig. Är du osäker, dela inte bordsmat med hunden.",
     "da": "Det frarådes. Bacon er ikke giftigt, men det er fed mad fra bordet, som kan give opkast og diarré eller udløse betændelse i bugspytkirtlen (pankreatitis), der kan være alvorlig. Er du i tvivl, så del ikke mad fra bordet med din hund.",
-    "fi": "Ei suositella. Pekoni ei ole myrkyllistä, mutta se on rasvaista ihmisten ruokaa, joka voi aiheuttaa oksentelua ja ripulia tai laukaista haimatulehduksen, joka voi olla vakava. Jos olet epävarma, älä jaa ihmisten ruokaa koirasi kanssa."
+    "fi": "Ei suositella. Pekoni ei ole myrkyllistä, mutta se on rasvaista ihmisten ruokaa, joka voi aiheuttaa oksentelua ja ripulia tai laukaista haimatulehduksen, joka voi olla vakava. Jos olet epävarma, älä jaa ihmisten ruokaa koirasi kanssa.",
+    "nb": "Anbefales ikke. Bacon er ikke giftig, men det er fet menneskemat som kan gi oppkast og diaré eller utløse betennelse i bukspyttkjertelen, som kan bli alvorlig. Er du i tvil, bør du ikke dele mat fra bordet med hunden."
   },
   "why": {
     "en": "Pet Poison Helpline names bacon among fatty table foods that cause problems ranging from mild stomach upset to severe pancreatitis. A fatty meal is a known pancreatitis trigger, and some breeds, such as Miniature Schnauzers, are more prone to it.",
@@ -80,7 +84,8 @@
     "hr": "Pet Poison Helpline slaninu ubraja u masnu hranu sa stola koja izaziva tegobe od blagih želučanih smetnji do teške upale gušterače. Masan obrok poznat je okidač upale gušterače, a neke su joj pasmine, poput patuljastog šnaucera, sklonije.",
     "sv": "Pet Poison Helpline nämner bacon bland fet bordsmat som ger problem alltifrån lindriga magbesvär till allvarlig bukspottkörtelinflammation (pankreatit). En fet måltid är en känd utlösande faktor, och vissa raser, som dvärgschnauzer, är mer benägna att drabbas.",
     "da": "Pet Poison Helpline nævner bacon blandt fed mad fra bordet, der giver problemer fra let dårlig mave til alvorlig betændelse i bugspytkirtlen. Et fedt måltid er en kendt udløser af betændelse i bugspytkirtlen, og nogle racer, fx dværgschnauzer, er mere tilbøjelige til at få det.",
-    "fi": "Pet Poison Helpline mainitsee pekonin rasvaisten ihmisruokien joukossa, jotka aiheuttavat ongelmia lievistä vatsavaivoista vakavaan haimatulehdukseen. Rasvainen ateria on tunnettu haimatulehduksen laukaisija, ja jotkin rodut, kuten kääpiösnautserit, ovat sille alttiimpia."
+    "fi": "Pet Poison Helpline mainitsee pekonin rasvaisten ihmisruokien joukossa, jotka aiheuttavat ongelmia lievistä vatsavaivoista vakavaan haimatulehdukseen. Rasvainen ateria on tunnettu haimatulehduksen laukaisija, ja jotkin rodut, kuten kääpiösnautserit, ovat sille alttiimpia.",
+    "nb": "Pet Poison Helpline nevner bacon blant fet menneskemat som gir problemer – fra lett urolig mage til alvorlig betennelse i bukspyttkjertelen. Et fett måltid er en kjent utløser av betennelse i bukspyttkjertelen, og noen raser, som dvergschnauzer, er mer utsatt."
   },
   "signs": {
     "en": [
@@ -180,6 +185,13 @@
       "Ripuli",
       "Haluttomuus syödä",
       "Väsymys, kuume"
+    ],
+    "nb": [
+      "Oppkast, noen ganger først 1–4 dager etter det fete måltidet",
+      "Vondt i magen (hunden kan strekke seg i «bønnestilling»)",
+      "Diaré",
+      "Vil ikke spise",
+      "Sløvhet, feber"
     ]
   },
   "what_to_do": {
@@ -196,7 +208,8 @@
     "hr": "Ako je pas pojeo mnogo masne hrane ili sljedećih dana povraća, ima bolove u trbuhu ili je umoran, obrati se veterinaru. Zapiši što je pojeo i otprilike koliko. Znakovi upale gušterače mogu se pojaviti tek nakon nekoliko dana.",
     "sv": "Om hunden har ätit mycket fet mat, eller får kräkningar, ont i magen eller blir trött under de närmaste dagarna, kontakta veterinären. Notera vad den åt och ungefär hur mycket. Symtom på bukspottkörtelinflammation kan dröja några dagar.",
     "da": "Kontakt din dyrlæge hvis hunden har spist meget fed mad eller får opkast, mavesmerter eller bliver træt i dagene efter. Skriv ned hvad hunden har spist og omtrent hvor meget. Symptomer på betændelse i bugspytkirtlen kan først vise sig nogle dage senere.",
-    "fi": "Jos koirasi söi paljon rasvaista ruokaa tai sillä ilmenee seuraavina päivinä oksentelua, vatsakipua tai väsymystä, ota yhteyttä eläinlääkäriin. Kirjaa ylös, mitä koira söi ja suunnilleen kuinka paljon. Haimatulehduksen oireet voivat ilmetä muutaman päivän viiveellä."
+    "fi": "Jos koirasi söi paljon rasvaista ruokaa tai sillä ilmenee seuraavina päivinä oksentelua, vatsakipua tai väsymystä, ota yhteyttä eläinlääkäriin. Kirjaa ylös, mitä koira söi ja suunnilleen kuinka paljon. Haimatulehduksen oireet voivat ilmetä muutaman päivän viiveellä.",
+    "nb": "Hvis hunden har spist mye fet mat, eller får oppkast, vondt i magen eller blir sløv de nærmeste dagene, må du kontakte dyrlegen. Skriv ned hva den spiste, og omtrent hvor mye. Symptomer på betennelse i bukspyttkjertelen kan komme først etter noen dager."
   },
   "serving": null,
   "child": {
@@ -213,7 +226,8 @@
     "hr": "Slanina fino miriše, ali je premasna za pse i može ih zaboljeti trbuščić. Radije izaberi pseću poslasticu.",
     "sv": "Bacon luktar gott, men det är för fett för hundar och kan ge dem ont i magen. Välj en hundgodbit i stället.",
     "da": "Bacon dufter lækkert, men det er for fedt til hunde og kan give dem ondt i maven. Vælg en hundegodbid i stedet.",
-    "fi": "Pekoni tuoksuu herkulliselta, mutta se on koirille liian rasvaista ja voi tehdä niiden mahalle kipeää. Valitse mieluummin koiranherkku."
+    "fi": "Pekoni tuoksuu herkulliselta, mutta se on koirille liian rasvaista ja voi tehdä niiden mahalle kipeää. Valitse mieluummin koiranherkku.",
+    "nb": "Bacon lukter godt, men det er for fett for hunder og kan gi dem vondt i magen. Velg heller en hundegodbit."
   },
   "faq": [
     {
@@ -231,7 +245,8 @@
         "hr": "Je li maleni komadić slanine opasan?",
         "sv": "Är en liten bit bacon farlig?",
         "da": "Er et lille stykke bacon farligt?",
-        "fi": "Onko pikkuinen pala pekonia vaarallinen?"
+        "fi": "Onko pikkuinen pala pekonia vaarallinen?",
+        "nb": "Er en ørliten bit bacon farlig?"
       },
       "a": {
         "en": "Bacon is not toxic, but fatty table food can upset a dog's stomach or trigger pancreatitis, so it's best not to share it.",
@@ -247,7 +262,8 @@
         "hr": "Slanina nije otrovna, ali masna hrana sa stola može psu uznemiriti želudac ili potaknuti upalu gušterače, zato je bolje ne dijeliti je.",
         "sv": "Bacon är inte giftigt, men fet bordsmat kan ge hunden orolig mage eller utlösa bukspottkörtelinflammation, så det är bäst att inte dela med sig.",
         "da": "Bacon er ikke giftigt, men fed mad fra bordet kan give hunden dårlig mave eller udløse betændelse i bugspytkirtlen, så det er bedst ikke at dele det.",
-        "fi": "Pekoni ei ole myrkyllistä, mutta rasvainen ihmisruoka voi aiheuttaa koiralle vatsavaivoja tai laukaista haimatulehduksen, joten sitä on parasta olla jakamatta."
+        "fi": "Pekoni ei ole myrkyllistä, mutta rasvainen ihmisruoka voi aiheuttaa koiralle vatsavaivoja tai laukaista haimatulehduksen, joten sitä on parasta olla jakamatta.",
+        "nb": "Bacon er ikke giftig, men fet menneskemat kan gi hunden urolig mage eller utløse betennelse i bukspyttkjertelen, så det er best å ikke dele."
       }
     }
   ],
@@ -378,6 +394,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "75ba4e203a7e5a4c1c1d2e398c4537f02f0adb2b3ff3e17683a1a65845bd418b"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f2083afc1ea5c11d5379cc43abaac9a43e61a41e5c2b7abe2c4c10b01ca88a19"
     }
   }
 }

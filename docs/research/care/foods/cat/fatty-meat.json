@@ -15,7 +15,8 @@
     "hr": "Masno meso",
     "sv": "Fett kött",
     "da": "Fedt kød",
-    "fi": "Rasvainen liha"
+    "fi": "Rasvainen liha",
+    "nb": "Fett kjøtt"
   },
   "question": {
     "en": "Can cats eat fatty meat?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti masno meso?",
     "sv": "Får katter äta fett kött?",
     "da": "Må katte spise fedt kød?",
-    "fi": "Saako kissa syödä rasvaista lihaa?"
+    "fi": "Saako kissa syödä rasvaista lihaa?",
+    "nb": "Kan katter spise fett kjøtt?"
   },
   "url_slug": {
     "en": "fatty-meat",
@@ -47,7 +49,8 @@
     "hr": "masno-meso",
     "sv": "fett-kott",
     "da": "fedt-koed",
-    "fi": "rasvainen-liha"
+    "fi": "rasvainen-liha",
+    "nb": "fett-kjott"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Bolje ne. Masno meso i koža peradi mogu poremetiti mačju probavu, a kod osjetljivih mačaka čak dovesti do upale gušterače. Ako dijeliš meso s mačkom, daj joj malo običnog, nemasnog, termički obrađenog mesa bez kože, kostiju i začina.",
     "sv": "Helst inte. Fett kött och fågelskinn kan störa kattens matsmältning och hos känsliga katter till och med leda till bukspottkörtelinflammation (pankreatit). Om du delar med dig av kött, ge lite naturellt, magert, tillagat kött utan skinn, ben och kryddor.",
     "da": "Det er bedst at lade være. Fedt kød og skind fra fjerkræ kan give en kat fordøjelsesproblemer og hos følsomme katte endda føre til betændelse i bugspytkirtlen (pankreatitis). Hvis du deler kød, så giv lidt naturelt, magert, tilberedt kød uden skind, knogler eller krydderier.",
-    "fi": "Ei kannata. Rasvainen liha ja linnun nahka voivat aiheuttaa kissalle ruoansulatusvaivoja, ja herkillä kissoilla ne voivat johtaa jopa haimatulehdukseen. Jos annat kissalle lihaa, anna vähän pelkkää, vähärasvaista, kypsennettyä lihaa ilman nahkaa, luita ja mausteita."
+    "fi": "Ei kannata. Rasvainen liha ja linnun nahka voivat aiheuttaa kissalle ruoansulatusvaivoja, ja herkillä kissoilla ne voivat johtaa jopa haimatulehdukseen. Jos annat kissalle lihaa, anna vähän pelkkää, vähärasvaista, kypsennettyä lihaa ilman nahkaa, luita ja mausteita.",
+    "nb": "Helst ikke. Fett kjøtt og skinn fra fjærfe kan gi katten fordøyelsesplager og hos følsomme katter til og med føre til betennelse i bukspyttkjertelen (pankreatitt). Hvis du deler kjøtt, gi litt naturelt, magert, tilberedt kjøtt uten skinn, bein eller krydder."
   },
   "why": {
     "en": "Too much fat can affect a cat's digestive tract, especially the pancreas. Cats Protection warns that turkey skin is high in fat and can cause digestive upset or even pancreatitis in sensitive cats, and a University of Georgia vet advises avoiding the fattier pieces of ham altogether.",
@@ -80,7 +84,8 @@
     "hr": "Previše masti može utjecati na mačji probavni sustav, osobito na gušteraču. Cats Protection upozorava da pureća koža ima mnogo masti i kod osjetljivih mačaka može izazvati probavne smetnje ili čak upalu gušterače, a jedan veterinar sa Sveučilišta Georgia savjetuje da se masniji komadi šunke potpuno izbjegavaju.",
     "sv": "För mycket fett kan påverka kattens matsmältningskanal, särskilt bukspottkörteln. Cats Protection varnar för att kalkonskinn är mycket fett och kan ge magbesvär eller till och med bukspottkörtelinflammation hos känsliga katter, och en veterinär vid University of Georgia råder till att helt undvika de fetare bitarna av skinka.",
     "da": "For meget fedt kan påvirke kattens fordøjelseskanal, især bugspytkirtlen. Cats Protection advarer om at kalkunskind har et højt fedtindhold og kan give fordøjelsesbesvær eller endda betændelse i bugspytkirtlen hos følsomme katte, og en dyrlæge fra University of Georgia råder til helt at undgå de fedeste stykker skinke.",
-    "fi": "Liika rasva voi vaikuttaa kissan ruoansulatuskanavaan, etenkin haimaan. Cats Protection varoittaa, että kalkkunan nahassa on paljon rasvaa ja se voi aiheuttaa herkille kissoille ruoansulatusvaivoja tai jopa haimatulehduksen, ja Georgian yliopiston eläinlääkäri neuvoo välttämään kinkun rasvaisempia paloja kokonaan."
+    "fi": "Liika rasva voi vaikuttaa kissan ruoansulatuskanavaan, etenkin haimaan. Cats Protection varoittaa, että kalkkunan nahassa on paljon rasvaa ja se voi aiheuttaa herkille kissoille ruoansulatusvaivoja tai jopa haimatulehduksen, ja Georgian yliopiston eläinlääkäri neuvoo välttämään kinkun rasvaisempia paloja kokonaan.",
+    "nb": "For mye fett kan påvirke kattens fordøyelse, særlig bukspyttkjertelen. Cats Protection advarer om at kalkunskinn inneholder mye fett og kan gi fordøyelsesplager eller til og med pankreatitt hos følsomme katter, og en dyrlege ved University of Georgia anbefaler å unngå de fetere bitene av skinke helt."
   },
   "signs": {
     "en": [
@@ -152,6 +157,11 @@
       "Oksentelu",
       "Ripuli",
       "Vatsavaivat"
+    ],
+    "nb": [
+      "Oppkast",
+      "Diaré",
+      "Urolig mage"
     ]
   },
   "what_to_do": {
@@ -168,7 +178,8 @@
     "hr": "Ako je tvoja mačka pojela mnogo masne hrane ili nakon toga povraća, ima proljev ili se čini da je nešto boli, obrati se veterinaru za savjet.",
     "sv": "Om katten har ätit mycket fet mat, eller kräks, har diarré eller verkar ha ont efteråt, kontakta veterinären för råd.",
     "da": "Hvis din kat har spist meget fed mad, eller hvis den kaster op, har diarré eller ser ud til at have ondt bagefter, så kontakt din dyrlæge for at få råd.",
-    "fi": "Jos kissasi söi paljon rasvaista ruokaa tai jos se sen jälkeen oksentaa, sillä on ripulia tai sillä näyttää olevan kipuja, ota yhteyttä eläinlääkäriin ja kysy neuvoa."
+    "fi": "Jos kissasi söi paljon rasvaista ruokaa tai jos se sen jälkeen oksentaa, sillä on ripulia tai sillä näyttää olevan kipuja, ota yhteyttä eläinlääkäriin ja kysy neuvoa.",
+    "nb": "Hvis katten har spist mye fet mat, eller kaster opp, har diaré eller ser ut til å ha vondt etterpå, kontakt dyrlegen for råd."
   },
   "serving": {
     "en": "Only plain, cooked, lean meat as an occasional treat: no skin, fat, bones or seasoning.",
@@ -184,7 +195,8 @@
     "hr": "Samo obično, termički obrađeno, nemasno meso kao povremena poslastica: bez kože, masnoće, kostiju i začina.",
     "sv": "Bara naturellt, tillagat, magert kött som godbit någon gång ibland: utan skinn, fett, ben och kryddor.",
     "da": "Kun naturelt, tilberedt, magert kød som en godbid en gang imellem: uden skind, fedt, knogler eller krydderier.",
-    "fi": "Vain pelkkää, kypsennettyä, vähärasvaista lihaa satunnaisena herkkuna: ei nahkaa, rasvaa, luita eikä mausteita."
+    "fi": "Vain pelkkää, kypsennettyä, vähärasvaista lihaa satunnaisena herkkuna: ei nahkaa, rasvaa, luita eikä mausteita.",
+    "nb": "Bare naturelt, tilberedt, magert kjøtt som en godbit en gang iblant: uten skinn, fett, bein eller krydder."
   },
   "child": {
     "en": "Fatty bits can give a cat a sore tummy. If a grown-up says yes, kitty can have a tiny bit of plain lean meat.",
@@ -200,7 +212,8 @@
     "hr": "Od masnih komadića macu može zaboljeti trbuščić. Ako odrasla osoba kaže da smije, maca može dobiti sićušan komadić običnog nemasnog mesa.",
     "sv": "Feta bitar kan ge en katt ont i magen. Om en vuxen säger ja, kan katten få en pytteliten bit magert kött utan kryddor.",
     "da": "Fede stykker kan give en kat ondt i maven. Hvis en voksen siger ja, kan din kat få en lille smule almindeligt magert kød.",
-    "fi": "Rasvaiset palat voivat tehdä kissan masun kipeäksi. Jos aikuinen antaa luvan, kisu saa pikkuisen palan pelkkää vähärasvaista lihaa."
+    "fi": "Rasvaiset palat voivat tehdä kissan masun kipeäksi. Jos aikuinen antaa luvan, kisu saa pikkuisen palan pelkkää vähärasvaista lihaa.",
+    "nb": "Fete biter kan gi en katt vondt i magen. Hvis en voksen sier ja, kan pusen få en bitteliten bit magert kjøtt uten krydder."
   },
   "faq": [
     {
@@ -218,7 +231,8 @@
         "hr": "Je li pileća ili pureća koža u redu?",
         "sv": "Går kyckling- eller kalkonskinn bra?",
         "da": "Er skind fra kylling eller kalkun okay?",
-        "fi": "Saako kissa kanan tai kalkkunan nahkaa?"
+        "fi": "Saako kissa kanan tai kalkkunan nahkaa?",
+        "nb": "Er kylling- eller kalkunskinn greit?"
       },
       "a": {
         "en": "No. Cats Protection says turkey skin is high in fat and can cause digestive upset or even pancreatitis in sensitive cats. Give skinless meat instead.",
@@ -234,7 +248,8 @@
         "hr": "Ne. Cats Protection navodi da pureća koža ima mnogo masti i kod osjetljivih mačaka može izazvati probavne smetnje ili čak upalu gušterače. Umjesto toga daj meso bez kože.",
         "sv": "Nej. Enligt Cats Protection är kalkonskinn mycket fett och kan ge magbesvär eller till och med bukspottkörtelinflammation (pankreatit) hos känsliga katter. Ge kött utan skinn i stället.",
         "da": "Nej. Cats Protection skriver at kalkunskind har et højt fedtindhold og kan give fordøjelsesbesvær eller endda betændelse i bugspytkirtlen hos følsomme katte. Giv hellere kød uden skind.",
-        "fi": "Ei saa. Cats Protectionin mukaan kalkkunan nahassa on paljon rasvaa ja se voi aiheuttaa herkille kissoille ruoansulatusvaivoja tai jopa haimatulehduksen. Anna mieluummin nahatonta lihaa."
+        "fi": "Ei saa. Cats Protectionin mukaan kalkkunan nahassa on paljon rasvaa ja se voi aiheuttaa herkille kissoille ruoansulatusvaivoja tai jopa haimatulehduksen. Anna mieluummin nahatonta lihaa.",
+        "nb": "Nei. Cats Protection skriver at kalkunskinn inneholder mye fett og kan gi fordøyelsesplager eller til og med pankreatitt hos følsomme katter. Gi heller kjøtt uten skinn."
       }
     }
   ],
@@ -342,6 +357,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4572f746a30f18105fc2f235c03f14281c5960f4b45dbb04c3dadc62ea7df4db"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "07d2b89db8823d02def7a83a8a46817d9ec2129a64c6cf81ac4f808dd3420912"
     }
   }
 }

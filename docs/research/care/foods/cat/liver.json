@@ -15,7 +15,8 @@
     "hr": "Jetra",
     "sv": "Lever",
     "da": "Lever",
-    "fi": "Maksa"
+    "fi": "Maksa",
+    "nb": "Lever"
   },
   "question": {
     "en": "Can cats eat liver?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti jetru?",
     "sv": "Får katter äta lever?",
     "da": "Må katte spise lever?",
-    "fi": "Saako kissa syödä maksaa?"
+    "fi": "Saako kissa syödä maksaa?",
+    "nb": "Kan katter spise lever?"
   },
   "url_slug": {
     "en": "liver",
@@ -47,7 +49,8 @@
     "hr": "jetra",
     "sv": "lever",
     "da": "lever",
-    "fi": "maksa"
+    "fi": "maksa",
+    "nb": "lever"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne kao domaća poslastica. Jetra je vrlo bogata vitaminom A, a mačke koje jedu sirovu jetru ili hranu s puno jetre mogu se otrovati vitaminom A. Jetra u potpunoj, uravnoteženoj hrani za mačke je u redu.",
     "sv": "Inte som godbit hemma. Lever är mycket rik på A-vitamin, och katter som får rå lever eller en kost med mycket lever kan få A-vitaminförgiftning. Lever i ett komplett, balanserat kattfoder går bra.",
     "da": "Ikke som hjemmelavet godbid. Lever er meget rig på A-vitamin, og katte der får rå lever eller en kost med meget lever, kan få A-vitaminforgiftning. Lever i et komplet, balanceret kattefoder er i orden.",
-    "fi": "Ei kotona annettavaksi herkuksi. Maksassa on erittäin paljon A-vitamiinia, ja kissa, jolle syötetään raakaa maksaa tai paljon maksaa sisältävää ruokaa, voi saada A-vitamiinimyrkytyksen. Tasapainoisen kissan täysravinnon sisältämä maksa ei ole ongelma."
+    "fi": "Ei kotona annettavaksi herkuksi. Maksassa on erittäin paljon A-vitamiinia, ja kissa, jolle syötetään raakaa maksaa tai paljon maksaa sisältävää ruokaa, voi saada A-vitamiinimyrkytyksen. Tasapainoisen kissan täysravinnon sisältämä maksa ei ole ongelma.",
+    "nb": "Ikke som godbit hjemme. Lever er svært rik på vitamin A, og katter som får rå lever eller et kosthold med mye lever, kan få A-vitaminforgiftning. Lever i et komplett, balansert kattefôr er greit."
   },
   "why": {
     "en": "VCA says vitamin A poisoning most commonly occurs when pets are fed raw liver or vitamin A-rich supplements over weeks to months. The Merck Veterinary Manual notes that in cats it can occur when growing kittens are fed a diet high in liver, and that feeding only liver can cause it. VCA recommends a commercially prepared, balanced diet instead.",
@@ -80,7 +84,8 @@
     "hr": "VCA navodi da se otrovanje vitaminom A najčešće javlja kad ljubimci tjednima do mjesecima dobivaju sirovu jetru ili dodatke prehrani bogate vitaminom A. Priručnik Merck Veterinary Manual navodi da se kod mačaka može javiti kad mačići u rastu jedu hranu s puno jetre te da ga može izazvati hranjenje samo jetrom. VCA umjesto toga preporučuje komercijalno pripremljenu, uravnoteženu hranu.",
     "sv": "Enligt VCA uppstår A-vitaminförgiftning oftast när husdjur under veckor till månader får rå lever eller kosttillskott rika på A-vitamin. Merck Veterinary Manual påpekar att det hos katter kan hända när kattungar som växer får en kost med mycket lever, och att en kost med bara lever kan orsaka det. VCA rekommenderar i stället ett färdigt, balanserat kattfoder.",
     "da": "Ifølge VCA opstår A-vitaminforgiftning oftest når kæledyr får rå lever eller A-vitaminrige kosttilskud i uger til måneder. Merck Veterinary Manual skriver at det hos katte kan ske når killinger i vækst får en kost med meget lever, og at det kan give A-vitaminforgiftning udelukkende at fodre med lever. VCA anbefaler i stedet en færdigfremstillet, balanceret kost.",
-    "fi": "VCA:n mukaan A-vitamiinimyrkytys syntyy useimmiten, kun lemmikeille syötetään raakaa maksaa tai runsaasti A-vitamiinia sisältäviä lisäravinteita viikkojen tai kuukausien ajan. Merck Veterinary Manualin mukaan kissoilla sitä voi esiintyä, kun kasvaville kissanpennuille syötetään paljon maksaa sisältävää ruokaa, ja pelkkä maksa ruokana voi aiheuttaa sen. VCA suosittelee sen sijaan tasapainoista valmisruokaa."
+    "fi": "VCA:n mukaan A-vitamiinimyrkytys syntyy useimmiten, kun lemmikeille syötetään raakaa maksaa tai runsaasti A-vitamiinia sisältäviä lisäravinteita viikkojen tai kuukausien ajan. Merck Veterinary Manualin mukaan kissoilla sitä voi esiintyä, kun kasvaville kissanpennuille syötetään paljon maksaa sisältävää ruokaa, ja pelkkä maksa ruokana voi aiheuttaa sen. VCA suosittelee sen sijaan tasapainoista valmisruokaa.",
+    "nb": "Ifølge VCA oppstår A-vitaminforgiftning oftest når dyr får rå lever eller kosttilskudd rike på vitamin A over uker til måneder. Merck Veterinary Manual skriver at det hos katter kan oppstå når kattunger i vekst får et kosthold med mye lever, og at det å bare gi lever kan føre til forgiftningen. VCA anbefaler i stedet et ferdiglaget, balansert fôr."
   },
   "signs": {
     "en": [
@@ -194,6 +199,14 @@
       "Heikkous",
       "Kivulias tai rajoittunut liikkuminen",
       "Oksentelu tai uneliaisuus hyvin suuren määrän jälkeen"
+    ],
+    "nb": [
+      "Dårlig eller ru pels",
+      "Tørr hud",
+      "Vekttap",
+      "Svakhet",
+      "Smertefulle eller begrensede bevegelser",
+      "Oppkast eller døsighet etter en svært stor mengde"
     ]
   },
   "what_to_do": {
@@ -210,7 +223,8 @@
     "hr": "Otrovanje vitaminom A obično se razvija tjednima do mjesecima, zato kod kuće nemoj redovito davati jetru. Ako je mačka jela puno jetre, a ti primijetiš grubu dlaku, gubitak težine, slabost ili bolno kretanje, razgovaraj s veterinarom.",
     "sv": "A-vitaminförgiftning byggs oftast upp under veckor till månader, så ge inte lever regelbundet hemma. Om katten har ätit mycket lever och du märker sträv päls, viktnedgång, svaghet eller smärtsamma rörelser, prata med veterinären.",
     "da": "A-vitaminforgiftning udvikler sig som regel over uger til måneder, så giv ikke lever regelmæssigt derhjemme. Hvis din kat har spist meget lever, og du ser ru pels, vægttab, svaghed eller smertefulde bevægelser, skal du tale med din dyrlæge.",
-    "fi": "A-vitamiinimyrkytys kehittyy yleensä viikkojen tai kuukausien aikana, joten älä anna maksaa kotona säännöllisesti. Jos kissasi on syönyt paljon maksaa ja huomaat karhean turkin, laihtumista, heikkoutta tai kivuliasta liikkumista, keskustele eläinlääkärin kanssa."
+    "fi": "A-vitamiinimyrkytys kehittyy yleensä viikkojen tai kuukausien aikana, joten älä anna maksaa kotona säännöllisesti. Jos kissasi on syönyt paljon maksaa ja huomaat karhean turkin, laihtumista, heikkoutta tai kivuliasta liikkumista, keskustele eläinlääkärin kanssa.",
+    "nb": "A-vitaminforgiftning bygger seg vanligvis opp over uker til måneder, så ikke gi lever regelmessig hjemme. Hvis katten har spist mye lever og du merker ru pels, vekttap, svakhet eller smertefulle bevegelser, bør du snakke med dyrlegen."
   },
   "serving": null,
   "child": {
@@ -227,7 +241,8 @@
     "hr": "Jetra ima jako puno jednog vitamina, a previše tog vitamina nije dobro za mace. U njihovoj hrani za mačke već ga ima baš koliko treba.",
     "sv": "Lever har jättemycket av ett visst vitamin, och för mycket är inte bra för katter. Kattmaten har redan precis lagom mycket.",
     "da": "Lever indeholder meget af ét bestemt vitamin, og for meget af det er ikke godt for katte. Deres kattemad har allerede den rigtige mængde.",
-    "fi": "Maksassa on paljon yhtä vitamiinia, ja liian paljon sitä ei ole hyväksi kissoille. Kissanruoassa sitä on jo juuri sopivasti."
+    "fi": "Maksassa on paljon yhtä vitamiinia, ja liian paljon sitä ei ole hyväksi kissoille. Kissanruoassa sitä on jo juuri sopivasti.",
+    "nb": "Lever har veldig mye av ett vitamin, og for mye av det er ikke bra for katter. Kattematen har allerede passe mengde."
   },
   "faq": [
     {
@@ -245,7 +260,8 @@
         "hr": "Hrana moje mačke sadrži jetru. Je li to problem?",
         "sv": "Det står lever på mitt kattfoder. Är det ett problem?",
         "da": "Der står lever på ingredienslisten til mit kattefoder. Er det et problem?",
-        "fi": "Kissani ruoan ainesosaluettelossa on maksaa. Onko se ongelma?"
+        "fi": "Kissani ruoan ainesosaluettelossa on maksaa. Onko se ongelma?",
+        "nb": "Kattefôret mitt inneholder lever. Er det et problem?"
       },
       "a": {
         "en": "No. Liver is a common ingredient in canned cat foods, and a complete, balanced cat food is what vets recommend.",
@@ -261,7 +277,8 @@
         "hr": "Nije. Jetra je čest sastojak konzervirane hrane za mačke, a veterinari preporučuju upravo potpunu, uravnoteženu hranu za mačke.",
         "sv": "Nej. Lever är en vanlig ingrediens i kattmat på burk, och ett komplett, balanserat kattfoder är det som veterinärer rekommenderar.",
         "da": "Nej. Lever er en almindelig ingrediens i kattefoder på dåse, og et komplet, balanceret kattefoder er netop det dyrlæger anbefaler.",
-        "fi": "Ei ole. Maksa on tavallinen ainesosa kissojen märkäruoissa, ja eläinlääkärit suosittelevat tasapainoista täysravintoa."
+        "fi": "Ei ole. Maksa on tavallinen ainesosa kissojen märkäruoissa, ja eläinlääkärit suosittelevat tasapainoista täysravintoa.",
+        "nb": "Nei. Lever er en vanlig ingrediens i kattefôr på boks, og et komplett, balansert kattefôr er det dyrleger anbefaler."
       }
     }
   ],
@@ -371,6 +388,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "038bbf906e9d3a22991feced477eac9febe0ccdf99879c6cf5f928feb88f8db6"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0ea1cd290f4493a211f586cb531bdd217a9b0409e2e4dbc0034b34a120dff599"
     }
   }
 }

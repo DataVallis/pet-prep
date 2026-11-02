@@ -15,7 +15,8 @@
     "hr": "Srdele",
     "sv": "Sardiner",
     "da": "Sardiner",
-    "fi": "Sardiinit"
+    "fi": "Sardiinit",
+    "nb": "Sardiner"
   },
   "question": {
     "en": "Can dogs eat sardines?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti srdele?",
     "sv": "Får hundar äta sardiner?",
     "da": "Må hunde spise sardiner?",
-    "fi": "Saako koira syödä sardiineja?"
+    "fi": "Saako koira syödä sardiineja?",
+    "nb": "Kan hunder spise sardiner?"
   },
   "url_slug": {
     "en": "sardines",
@@ -47,7 +49,8 @@
     "hr": "srdele",
     "sv": "sardiner",
     "da": "sardiner",
-    "fi": "sardiinit"
+    "fi": "sardiinit",
+    "nb": "sardiner"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Da, umjereno. Srdele iz konzerve u vodi, neslane i bez začina, prikladna su riblja poslastica, a njihove sitne kosti nakon konzerviranja postanu mekane i jestive. Svježe srdele moraju biti potpuno termički obrađene. Izbjegavaj slanu, začinjenu ili sirovu ribu.",
     "sv": "Ja, med måtta. Sardiner på burk i vatten, osaltade och okryddade, är en passande fiskgodbit, och de små benen är mjuka och ätbara efter konserveringen. Färska sardiner måste vara helt tillagade. Undvik salt, kryddad eller rå fisk.",
     "da": "Ja, med måde. Sardiner på dåse i vand, usaltede og ukrydrede, er en passende fiskegodbid, og de små ben er bløde og spiselige efter konserveringen. Friske sardiner skal være gennemtilberedte. Undgå salt, krydret eller rå fisk.",
-    "fi": "Saa, kohtuudella. Veteen säilötyt, suolaamattomat ja maustamattomat purkkisardiinit sopivat kalaherkuksi, ja niiden pienet ruodot ovat säilönnän jälkeen pehmeitä ja syötäviä. Tuoreet sardiinit pitää kypsentää täysin. Vältä suolattua, maustettua tai raakaa kalaa."
+    "fi": "Saa, kohtuudella. Veteen säilötyt, suolaamattomat ja maustamattomat purkkisardiinit sopivat kalaherkuksi, ja niiden pienet ruodot ovat säilönnän jälkeen pehmeitä ja syötäviä. Tuoreet sardiinit pitää kypsentää täysin. Vältä suolattua, maustettua tai raakaa kalaa.",
+    "nb": "Ja, med måte. Hermetiske sardiner i vann, usaltede og ukrydrede, er en passende fiskegodbit, og de bitte små beina er myke og spiselige etter hermetiseringen. Ferske sardiner må være gjennomstekte. Unngå salt, krydret eller rå fisk."
   },
   "why": {
     "en": "Plain, fully cooked fish provides protein and fatty acids. Cooking fully reduces the risk from parasites and bacteria. Canned sardines are the exception to the bones rule because their bones soften during canning; for other fish, bones must be removed. Canned fish should be unsalted and unseasoned.",
@@ -80,7 +84,8 @@
     "hr": "Obična, potpuno termički obrađena riba daje bjelančevine i masne kiseline. Potpuna termička obrada smanjuje rizik od parazita i bakterija. Srdele iz konzerve iznimka su od pravila o kostima jer im kosti tijekom konzerviranja omekšaju; drugoj ribi kosti treba ukloniti. Riba iz konzerve treba biti neslana i bez začina.",
     "sv": "Helt tillagad fisk utan kryddor ger protein och fettsyror. Att tillaga fisken helt minskar risken för parasiter och bakterier. Sardiner på burk är undantaget från regeln om ben, eftersom benen mjuknar vid konserveringen; i annan fisk måste benen tas bort. Fisk på burk ska vara osaltad och okryddad.",
     "da": "Almindelig, gennemtilberedt fisk giver protein og fedtsyrer. Gennemtilberedning mindsker risikoen fra parasitter og bakterier. Sardiner på dåse er undtagelsen fra reglen om ben, fordi benene bliver bløde under konserveringen; i anden fisk skal benene fjernes. Fisk på dåse bør være usaltet og ukrydret.",
-    "fi": "Maustamaton, täysin kypsennetty kala antaa proteiinia ja rasvahappoja. Täysi kypsentäminen pienentää loisten ja bakteerien aiheuttamaa riskiä. Purkkisardiinit ovat poikkeus ruotosääntöön, koska niiden ruodot pehmenevät säilönnässä; muista kaloista ruodot pitää poistaa. Purkkikalan pitää olla suolaamatonta ja maustamatonta."
+    "fi": "Maustamaton, täysin kypsennetty kala antaa proteiinia ja rasvahappoja. Täysi kypsentäminen pienentää loisten ja bakteerien aiheuttamaa riskiä. Purkkisardiinit ovat poikkeus ruotosääntöön, koska niiden ruodot pehmenevät säilönnässä; muista kaloista ruodot pitää poistaa. Purkkikalan pitää olla suolaamatonta ja maustamatonta.",
+    "nb": "Gjennomstekt fisk uten noe tilsatt gir protein og fettsyrer. Når fisken tilberedes helt, reduseres risikoen for parasitter og bakterier. Hermetiske sardiner er unntaket fra regelen om bein, fordi beina blir myke under hermetiseringen; for annen fisk må beina fjernes. Hermetisk fisk bør være usaltet og ukrydret."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "hr": "Ako je tvoj pas pojeo slane ili začinjene srdele ili sirovu ribu, prati pojavljuju li se povraćanje, proljev ili manjak energije i nazovi veterinara ako su jaki ili ne prestaju.",
     "sv": "Om hunden ätit salta eller kryddade sardiner eller rå fisk, håll utkik efter kräkningar, diarré eller orkeslöshet och ring veterinären om symtomen är svåra eller inte går över.",
     "da": "Hvis din hund har spist salte eller krydrede sardiner eller rå fisk, så hold øje med opkast, diarré eller lavt energiniveau, og kontakt din dyrlæge hvis det er voldsomt eller ikke holder op.",
-    "fi": "Jos koirasi söi suolattuja tai maustettuja sardiineja tai raakaa kalaa, seuraa, oksenteleeko se, onko sillä ripulia tai onko se väsynyt, ja soita eläinlääkärille, jos oireet ovat voimakkaita tai eivät mene ohi."
+    "fi": "Jos koirasi söi suolattuja tai maustettuja sardiineja tai raakaa kalaa, seuraa, oksenteleeko se, onko sillä ripulia tai onko se väsynyt, ja soita eläinlääkärille, jos oireet ovat voimakkaita tai eivät mene ohi.",
+    "nb": "Hvis hunden har spist salte eller krydrede sardiner eller rå fisk, må du følge med på oppkast, diaré eller lite energi og ringe dyrlegen hvis det er kraftig eller ikke går over."
   },
   "serving": {
     "en": "Canned in water, unsalted and unseasoned; or fresh sardines fully cooked (steamed, baked or poached) and plain; in moderation.",
@@ -113,7 +119,8 @@
     "hr": "Iz konzerve u vodi, neslane i bez začina; ili svježe srdele, potpuno termički obrađene (kuhane na pari, pečene u pećnici ili poširane) i bez dodataka; umjereno.",
     "sv": "På burk i vatten, osaltade och okryddade; eller färska sardiner, helt tillagade (ångkokta, ugnsbakade eller pocherade) och utan kryddor; med måtta.",
     "da": "På dåse i vand, usaltede og ukrydrede, eller friske sardiner, gennemtilberedte (dampede, bagte eller pocherede) og uden tilsætning; med måde.",
-    "fi": "Veteen säilöttyinä, suolaamattomina ja maustamattomina tai tuoreina täysin kypsennettyinä (höyrytettyinä, uunissa paistettuina tai haudutettuina) ja maustamattomina; kohtuudella."
+    "fi": "Veteen säilöttyinä, suolaamattomina ja maustamattomina tai tuoreina täysin kypsennettyinä (höyrytettyinä, uunissa paistettuina tai haudutettuina) ja maustamattomina; kohtuudella.",
+    "nb": "Hermetiske i vann, usaltede og ukrydrede; eller ferske sardiner som er helt tilberedt (dampet, bakt eller posjert) og uten noe tilsatt; med måte."
   },
   "child": {
     "en": "Sardines in water can be a fishy treat for a dog, now and then. Salty fish is not for dogs.",
@@ -129,7 +136,8 @@
     "hr": "Srdele u vodi mogu biti riblja poslastica za psa, s vremena na vrijeme. Slana riba nije za pse.",
     "sv": "Sardiner i vatten kan vara en fiskig godbit för en hund ibland. Salt fisk är inte för hundar.",
     "da": "Sardiner i vand kan være en lækker fiskegodbid til en hund en gang imellem. Salt fisk er ikke til hunde.",
-    "fi": "Veteen säilötyt sardiinit voivat olla koiralle kalaherkku silloin tällöin. Suolainen kala ei sovi koirille."
+    "fi": "Veteen säilötyt sardiinit voivat olla koiralle kalaherkku silloin tällöin. Suolainen kala ei sovi koirille.",
+    "nb": "Sardiner i vann kan være en fiskegodbit for en hund av og til. Salt fisk er ikke noe for hunder."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "hr": "Trebam li srdelama iz konzerve ukloniti kosti?",
         "sv": "Måste jag ta bort benen ur sardiner på burk?",
         "da": "Skal jeg fjerne benene fra sardiner på dåse?",
-        "fi": "Pitääkö purkkisardiineista poistaa ruodot?"
+        "fi": "Pitääkö purkkisardiineista poistaa ruodot?",
+        "nb": "Må jeg fjerne beina fra hermetiske sardiner?"
       },
       "a": {
         "en": "No. The tiny bones are soft and fully edible after canning, so sardines canned in water can be fed without deboning.",
@@ -163,7 +172,8 @@
         "hr": "Ne trebaš. Sitne kosti nakon konzerviranja postanu mekane i potpuno jestive, pa psu možeš dati srdele iz konzerve u vodi bez uklanjanja kostiju.",
         "sv": "Nej. De små benen är mjuka och helt ätbara efter konserveringen, så sardiner i vatten kan ges utan att benen tas bort.",
         "da": "Nej. De små ben er bløde og helt spiselige efter konserveringen, så sardiner på dåse i vand kan gives uden at fjerne benene.",
-        "fi": "Ei. Pienet ruodot ovat säilönnän jälkeen pehmeitä ja täysin syötäviä, joten veteen säilöttyjä sardiineja voi antaa ruotoja poistamatta."
+        "fi": "Ei. Pienet ruodot ovat säilönnän jälkeen pehmeitä ja täysin syötäviä, joten veteen säilöttyjä sardiineja voi antaa ruotoja poistamatta.",
+        "nb": "Nei. De bitte små beina er myke og helt spiselige etter hermetiseringen, så sardiner hermetisert i vann kan gis uten at du fjerner beina."
       }
     }
   ],
@@ -286,6 +296,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d0ddcc2c62e14820054047355463dc1ce6f8699940653349db436d8c5c6ebb52"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6255ab1e31514fcdf7b5c4f3c38914f8e3a48c07b01313b835053ec0a07ca3cd"
     }
   }
 }

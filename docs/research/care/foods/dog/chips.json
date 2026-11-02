@@ -15,7 +15,8 @@
     "hr": "Čips",
     "sv": "Potatischips",
     "da": "Chips",
-    "fi": "Perunalastut"
+    "fi": "Perunalastut",
+    "nb": "Potetgull (chips)"
   },
   "question": {
     "en": "Can dogs eat chips?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti čips?",
     "sv": "Får hundar äta chips?",
     "da": "Må hunde spise chips?",
-    "fi": "Saako koira syödä perunalastuja?"
+    "fi": "Saako koira syödä perunalastuja?",
+    "nb": "Kan hunder spise chips?"
   },
   "url_slug": {
     "en": "chips",
@@ -47,7 +49,8 @@
     "hr": "cips",
     "sv": "chips",
     "da": "chips",
-    "fi": "perunalastut"
+    "fi": "perunalastut",
+    "nb": "chips"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne preporučuje se. Nekoliko listića čipsa vjerojatno neće izazvati otrovanje solju, ali čips je slan, a previše slane hrane nije dobro za pse, osobito za one sa srčanim tegobama. Čips s okusom luka ili češnjaka donosi dodatni rizik, jer su luk i češnjak otrovni za pse.",
     "sv": "Rekommenderas inte. Några få chips ger knappast saltförgiftning, men chips är salta och för mycket salt mat är inte bra för hundar, särskilt inte för hundar med hjärtproblem. Chips med lök- eller vitlökssmak ger en extra risk, eftersom lök och vitlök är giftiga för hundar.",
     "da": "Det frarådes. Nogle få chips giver næppe saltforgiftning, men chips er salte, og for meget salt mad er ikke godt for hunde, især ikke for hunde med hjerteproblemer. Chips med løg- eller hvidløgssmag giver en ekstra risiko, fordi løg og hvidløg er giftige for hunde.",
-    "fi": "Ei suositella. Muutama perunalastu tuskin aiheuttaa suolamyrkytystä, mutta lastut ovat suolaisia, eikä suolaisen ruoan liiallinen syöminen ole hyväksi koirille, etenkään niille, joilla on sydänongelmia. Sipulin- tai valkosipulinmakuiset lastut lisäävät riskiä, koska sipuli ja valkosipuli ovat koirille myrkyllisiä."
+    "fi": "Ei suositella. Muutama perunalastu tuskin aiheuttaa suolamyrkytystä, mutta lastut ovat suolaisia, eikä suolaisen ruoan liiallinen syöminen ole hyväksi koirille, etenkään niille, joilla on sydänongelmia. Sipulin- tai valkosipulinmakuiset lastut lisäävät riskiä, koska sipuli ja valkosipuli ovat koirille myrkyllisiä.",
+    "nb": "Anbefales ikke. Noen få potetgullbiter gir neppe saltforgiftning, men chips er salt, og mye salt mat er ikke bra for hunder, særlig ikke for hunder med hjerteproblemer. Chips med løk- eller hvitløkssmak gir ekstra risiko, fordi løk og hvitløk er giftig for hunder."
   },
   "why": {
     "en": "AKC says a dog can have salty foods like potato chips in limited amounts, but excess salt is not good for dogs and can cause fluid retention. Large amounts of salt can lead to salt poisoning. Onion and garlic are toxic to dogs in every form, including powders.",
@@ -80,7 +84,8 @@
     "hr": "AKC navodi da pas može dobiti slanu hranu poput čipsa u ograničenim količinama, ali da višak soli nije dobar za pse i može izazvati zadržavanje tekućine. Velike količine soli mogu dovesti do otrovanja solju. Luk i češnjak otrovni su za pse u svakom obliku, i u prahu.",
     "sv": "AKC skriver att en hund kan få salt mat som potatischips i begränsade mängder, men för mycket salt är inte bra för hundar och kan ge vätskeansamling. Stora mängder salt kan leda till saltförgiftning. Lök och vitlök är giftiga för hundar i alla former, även som pulver.",
     "da": "AKC skriver at en hund kan få salt mad som chips i begrænsede mængder, men for meget salt er ikke godt for hunde og kan give væskeophobning. Store mængder salt kan føre til saltforgiftning. Løg og hvidløg er giftige for hunde i alle former, også som pulver.",
-    "fi": "AKC:n mukaan koira voi syödä suolaisia ruokia, kuten perunalastuja, rajoitetusti, mutta liika suola ei ole koirille hyväksi ja voi aiheuttaa nesteen kertymistä elimistöön. Suuret määrät suolaa voivat johtaa suolamyrkytykseen. Sipuli ja valkosipuli ovat koirille myrkyllisiä kaikissa muodoissa, myös jauheina."
+    "fi": "AKC:n mukaan koira voi syödä suolaisia ruokia, kuten perunalastuja, rajoitetusti, mutta liika suola ei ole koirille hyväksi ja voi aiheuttaa nesteen kertymistä elimistöön. Suuret määrät suolaa voivat johtaa suolamyrkytykseen. Sipuli ja valkosipuli ovat koirille myrkyllisiä kaikissa muodoissa, myös jauheina.",
+    "nb": "AKC skriver at en hund kan få salt mat som potetgull i begrensede mengder, men for mye salt er ikke bra for hunder og kan gi væskeansamling. Store mengder salt kan føre til saltforgiftning. Løk og hvitløk er giftig for hunder i alle former, også som pulver."
   },
   "signs": {
     "en": [
@@ -180,6 +185,13 @@
       "Ripuli",
       "Horjuminen, väsymys",
       "Vapina tai kouristukset"
+    ],
+    "nb": [
+      "Sterk tørst og mye tissing",
+      "Oppkast, ofte innen noen timer",
+      "Diaré",
+      "Ustøhet, sløvhet",
+      "Skjelvinger eller kramper"
     ]
   },
   "what_to_do": {
@@ -196,7 +208,8 @@
     "hr": "Ako je pas pojeo mnogo čipsa, osobito s okusom luka ili češnjaka, obrati se veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši okus i otprilike koliko je pojeo.",
     "sv": "Om hunden har ätit mycket chips, särskilt med lök- eller vitlökssmak, kontakta veterinären eller en giftrådgivning för djur. Notera smaken och ungefär hur mycket den åt.",
     "da": "Hvis hunden har spist mange chips, især med løg- eller hvidløgssmag, skal du kontakte din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvilken smag det var og omtrent hvor meget hunden har spist.",
-    "fi": "Jos koirasi söi paljon perunalastuja, etenkin sipulin- tai valkosipulinmakuisia, ota yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös maku ja suunnilleen kuinka paljon koira söi."
+    "fi": "Jos koirasi söi paljon perunalastuja, etenkin sipulin- tai valkosipulinmakuisia, ota yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös maku ja suunnilleen kuinka paljon koira söi.",
+    "nb": "Hvis hunden har spist mye chips, særlig med løk- eller hvitløkssmak, må du kontakte dyrlegen eller giftinformasjon for dyr. Skriv ned smaken og omtrent hvor mye den spiste."
   },
   "serving": null,
   "child": {
@@ -213,7 +226,8 @@
     "hr": "Čips je slana grickalica za ljude. Nije dobar za pse, zato drži vrećicu zatvorenom i daj psu njegovu poslasticu.",
     "sv": "Chips är ett salt mellanmål för människor. De är inte bra för hundar, så håll påsen stängd och ge hunden en egen godbit.",
     "da": "Chips er en salt snack til mennesker. De er ikke gode for hunde, så hold posen lukket, og giv din hund dens egen godbid.",
-    "fi": "Perunalastut ovat suolaista ihmisten naposteltavaa. Ne eivät ole hyväksi koirille, joten pidä pussi kiinni ja anna koirallesi sen omaa herkkua."
+    "fi": "Perunalastut ovat suolaista ihmisten naposteltavaa. Ne eivät ole hyväksi koirille, joten pidä pussi kiinni ja anna koirallesi sen omaa herkkua.",
+    "nb": "Chips er salt snacks for mennesker. Det er ikke bra for hunder, så hold posen lukket og gi hunden sin egen godbit."
   },
   "faq": [
     {
@@ -231,7 +245,8 @@
         "hr": "Je li čips s okusima gori?",
         "sv": "Är chips med smak värre?",
         "da": "Er chips med smag værre?",
-        "fi": "Ovatko maustetut perunalastut pahempia?"
+        "fi": "Ovatko maustetut perunalastut pahempia?",
+        "nb": "Er chips med smak verre?"
       },
       "a": {
         "en": "They can be. Onion and garlic are toxic to dogs in every form, including powders, so check the flavour.",
@@ -247,7 +262,8 @@
         "hr": "Može biti. Luk i češnjak otrovni su za pse u svakom obliku, i u prahu, zato provjeri okus.",
         "sv": "Det kan de vara. Lök och vitlök är giftiga för hundar i alla former, även som pulver, så kolla smaken.",
         "da": "Det kan de være. Løg og hvidløg er giftige for hunde i alle former, også som pulver, så tjek smagen.",
-        "fi": "Voivat olla. Sipuli ja valkosipuli ovat koirille myrkyllisiä kaikissa muodoissa, myös jauheina, joten tarkista maku."
+        "fi": "Voivat olla. Sipuli ja valkosipuli ovat koirille myrkyllisiä kaikissa muodoissa, myös jauheina, joten tarkista maku.",
+        "nb": "Det kan de være. Løk og hvitløk er giftig for hunder i alle former, også som pulver, så sjekk smaken."
       }
     }
   ],
@@ -390,6 +406,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7914d8c0f5a3b778b0b31c5b0fb609d28441ac9c1b5ea6c9aa2932fc3c7e2347"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2ad1842bdb4eb4ae32faf1f70d9b6f5597fedd1b2404313f452b161ad43c084f"
     }
   }
 }

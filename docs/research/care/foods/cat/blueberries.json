@@ -8,7 +8,8 @@
     "hr": "Borovnice",
     "sv": "Blåbär",
     "da": "Blåbær",
-    "fi": "Mustikat"
+    "fi": "Mustikat",
+    "nb": "Blåbær"
   },
   "question": {
     "en": "Can cats eat blueberries?",
@@ -17,7 +18,8 @@
     "hr": "Smiju li mačke jesti borovnice?",
     "sv": "Får katter äta blåbär?",
     "da": "Må katte spise blåbær?",
-    "fi": "Saako kissa syödä mustikoita?"
+    "fi": "Saako kissa syödä mustikoita?",
+    "nb": "Kan katter spise blåbær?"
   },
   "url_slug": {
     "en": "blueberries",
@@ -26,7 +28,8 @@
     "hr": "borovnice",
     "sv": "blabar",
     "da": "blaabaer",
-    "fi": "mustikat"
+    "fi": "mustikat",
+    "nb": "blabaer"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "hr": "Da, nekoliko borovnica u redu je kao povremena poslastica. Jedna sveučilišna veterinarska bolnica navodi ih među zdravim poslasticama iz ljudske hrane za mačke i pse, ali mačke su mesojedi i ne trebaju voće, pa neka ostanu mali dodatak.",
     "sv": "Ja, några blåbär går bra som godbit någon gång ibland. Ett universitetsdjursjukhus räknar dem till de hälsosamma godbitarna från människomat för katter och hundar, men katter är köttätare och behöver inte frukt, så låt det bara vara något litet extra.",
     "da": "Ja, nogle få blåbær er fine som en godbid en gang imellem. Et universitetsdyrehospital nævner dem blandt sunde godbidder fra menneskemad til katte og hunde, men katte er kødædere og har ikke brug for frugt, så lad det kun være et lille ekstra.",
-    "fi": "Kyllä, muutama mustikka sopii satunnaiseksi herkuksi. Yliopistollinen eläinsairaala mainitsee ne terveellisten ihmisruokien joukossa, joita voi antaa herkkuina kissoille ja koirille, mutta kissat ovat lihansyöjiä eivätkä tarvitse hedelmiä, joten pidä ne pienenä lisänä."
+    "fi": "Kyllä, muutama mustikka sopii satunnaiseksi herkuksi. Yliopistollinen eläinsairaala mainitsee ne terveellisten ihmisruokien joukossa, joita voi antaa herkkuina kissoille ja koirille, mutta kissat ovat lihansyöjiä eivätkä tarvitse hedelmiä, joten pidä ne pienenä lisänä.",
+    "nb": "Ja, noen få blåbær er greit som en godbit en gang iblant. Et dyresykehus ved et universitet oppgir dem blant sunne godbiter fra menneskemat for katter og hunder, men katter er kjøttetere og trenger ikke frukt, så la det bare være litt ekstra."
   },
   "why": {
     "en": "NC State's veterinary hospital lists blueberries among healthy human-food treats for cats and dogs, given in measured amounts and counted in the daily calories. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
@@ -45,7 +49,8 @@
     "hr": "Veterinarska bolnica sveučilišta NC State navodi borovnice među zdravim poslasticama iz ljudske hrane za mačke i pse, koje se daju u odmjerenim količinama i uračunavaju u dnevni unos kalorija. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
     "sv": "NC States djursjukhus räknar blåbär till de hälsosamma godbitarna från människomat för katter och hundar, i avvägda mängder som räknas in i det dagliga kaloriintaget. Katter är obligata köttätare och behöver inte frukt, godbitar ska bara vara en liten del av den dagliga maten, och allt växtmaterial kan ge kräkningar eller orolig mage.",
     "da": "Dyrehospitalet ved NC State nævner blåbær blandt sunde godbidder fra menneskemad til katte og hunde, givet i afmålte mængder og regnet med i de daglige kalorier. Katte er obligate kødædere og har ikke brug for frugt, godbidder bør kun udgøre en lille del af den daglige mad, og alt plantemateriale kan give opkast eller dårlig mave.",
-    "fi": "NC Staten eläinsairaala mainitsee mustikat terveellisten ihmisruokien joukossa, joita voi antaa herkkuina kissoille ja koirille mitattuina määrinä ja päivän kaloreihin laskettuina. Kissat ovat pakollisia lihansyöjiä eivätkä tarvitse hedelmiä, herkkujen pitää pysyä pienenä osana päivittäistä ruokaa, ja mikä tahansa kasvimateriaali voi aiheuttaa oksentelua tai vatsavaivoja."
+    "fi": "NC Staten eläinsairaala mainitsee mustikat terveellisten ihmisruokien joukossa, joita voi antaa herkkuina kissoille ja koirille mitattuina määrinä ja päivän kaloreihin laskettuina. Kissat ovat pakollisia lihansyöjiä eivätkä tarvitse hedelmiä, herkkujen pitää pysyä pienenä osana päivittäistä ruokaa, ja mikä tahansa kasvimateriaali voi aiheuttaa oksentelua tai vatsavaivoja.",
+    "nb": "Dyresykehuset ved NC State oppgir blåbær blant sunne godbiter fra menneskemat for katter og hunder, gitt i avmålte mengder og regnet med i det daglige kaloriinntaket. Katter er obligate kjøttetere og trenger ikke frukt, godbiter bør være en liten del av den daglige maten, og alt plantemateriale kan gi oppkast eller urolig mage."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "hr": "Najprije ponudi samo malo. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
     "sv": "Ge bara lite först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären.",
     "da": "Giv først bare en lille smule. Hvis din kat kaster op eller får dårlig mave bagefter, så stop og spørg din dyrlæge.",
-    "fi": "Tarjoa ensin vain vähän. Jos kissasi oksentaa tai sille tulee vatsavaivoja, lopeta ja kysy neuvoa eläinlääkäriltä."
+    "fi": "Tarjoa ensin vain vähän. Jos kissasi oksentaa tai sille tulee vatsavaivoja, lopeta ja kysy neuvoa eläinlääkäriltä.",
+    "nb": "Gi bare litt først. Hvis katten kaster opp eller får urolig mage etterpå, slutt og spør dyrlegen."
   },
   "serving": {
     "en": "A few berries now and then, counted in your cat's daily food.",
@@ -64,7 +70,8 @@
     "hr": "Nekoliko bobica povremeno, uračunato u dnevni obrok tvoje mačke.",
     "sv": "Några bär då och då, inräknade i kattens dagliga matranson.",
     "da": "Nogle få bær en gang imellem, regnet med i kattens daglige mad.",
-    "fi": "Muutama marja silloin tällöin, laskettuna mukaan kissasi päivittäiseen ruokamäärään."
+    "fi": "Muutama marja silloin tällöin, laskettuna mukaan kissasi päivittäiseen ruokamäärään.",
+    "nb": "Noen få bær nå og da, regnet med i kattens daglige matmengde."
   },
   "child": {
     "en": "A few blueberries can be a cat treat now and then. Cats mostly need meat, so fruit is only a small extra.",
@@ -73,7 +80,8 @@
     "hr": "Nekoliko borovnica povremeno može biti poslastica za macu. Mačkama uglavnom treba meso, pa je voće samo mali dodatak.",
     "sv": "Några blåbär kan bli en godbit för katten då och då. Katter behöver mest kött, så frukt är bara något litet extra.",
     "da": "Nogle få blåbær kan være en godbid til en kat en gang imellem. Katte har mest brug for kød, så frugt er kun et lille ekstra.",
-    "fi": "Muutama mustikka voi olla kissan herkku silloin tällöin. Kissat tarvitsevat enimmäkseen lihaa, joten marjat ovat vain pieni lisä."
+    "fi": "Muutama mustikka voi olla kissan herkku silloin tällöin. Kissat tarvitsevat enimmäkseen lihaa, joten marjat ovat vain pieni lisä.",
+    "nb": "Noen få blåbær kan være en godbit for katten nå og da. Katter trenger mest kjøtt, så frukt er bare litt ekstra."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "hr": "Trebaju li mačke voće?",
         "sv": "Behöver katter frukt?",
         "da": "Har katte brug for frugt?",
-        "fi": "Tarvitsevatko kissat hedelmiä?"
+        "fi": "Tarvitsevatko kissat hedelmiä?",
+        "nb": "Trenger katter frukt?"
       },
       "a": {
         "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
@@ -93,7 +102,8 @@
         "hr": "Ne. Mačke su mesojedi: trebaju hranjive tvari koje se nalaze u mesu i u prehrani im ne treba ni voće ni povrće. Voće može biti samo mali dodatak.",
         "sv": "Nej. Katter är köttätare: de behöver näringsämnen som finns i kött och behöver inte frukt eller grönsaker i maten. Frukt kan bara vara något litet extra.",
         "da": "Nej. Katte er kødædere: De har brug for næringsstoffer der findes i kød, og har ikke brug for frugt eller grøntsager i deres kost. Frugt kan aldrig være mere end et lille ekstra.",
-        "fi": "Eivät. Kissat ovat lihansyöjiä: ne tarvitsevat lihassa olevia ravintoaineita eivätkä tarvitse ruokavalioonsa hedelmiä tai vihanneksia. Hedelmät voivat olla korkeintaan pieni lisä."
+        "fi": "Eivät. Kissat ovat lihansyöjiä: ne tarvitsevat lihassa olevia ravintoaineita eivätkä tarvitse ruokavalioonsa hedelmiä tai vihanneksia. Hedelmät voivat olla korkeintaan pieni lisä.",
+        "nb": "Nei. Katter er kjøttetere: De trenger næringsstoffer som finnes i kjøtt, og trenger ikke frukt eller grønnsaker i kostholdet. Frukt kan aldri være mer enn litt ekstra."
       }
     }
   ],
@@ -173,6 +183,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c0762c72548838d58d9bfd50e585d2e71bef3cf16c498b3b222ba54524c4c9ba"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3158990725a0768cea32ae3a719676d63a07193913eddbae7f7ca9f72257dc25"
     }
   }
 }

@@ -15,7 +15,8 @@
     "hr": "Kuhane kosti",
     "sv": "Kokta ben",
     "da": "Kogte knogler",
-    "fi": "Keitetyt luut"
+    "fi": "Keitetyt luut",
+    "nb": "Kokte bein"
   },
   "question": {
     "en": "Can cats eat cooked bones?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti kuhane kosti?",
     "sv": "Får katter äta kokta ben?",
     "da": "Må katte spise kogte knogler?",
-    "fi": "Saako kissa syödä keitettyjä luita?"
+    "fi": "Saako kissa syödä keitettyjä luita?",
+    "nb": "Kan katter spise kokte bein?"
   },
   "url_slug": {
     "en": "cooked-bones",
@@ -47,7 +49,8 @@
     "hr": "kuhane-kosti",
     "sv": "kokta-ben",
     "da": "kogte-knogler",
-    "fi": "keitetyt-luut"
+    "fi": "keitetyt-luut",
+    "nb": "kokte-bein"
   },
   "level": "dangerous",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne. Termički obrađene kosti, poput pilećih ili purećih, mogu se rascijepiti i kod mačaka izazvati gušenje, unutarnje ozljede ili začepljenje. Prije nego što podijeliš meso s mačkom, uvijek ga skini s kosti, a ostatke peradi baci ondje gdje ih mačka ne može dohvatiti.",
     "sv": "Nej. Tillagade ben, till exempel kyckling- eller kalkonben, kan splittras och orsaka kvävning, inre skador eller tarmstopp hos katter. Ta alltid bort köttet från benet innan du delar med dig, och släng skrovet där katten inte kommer åt det.",
     "da": "Nej. Tilberedte knogler, for eksempel fra kylling eller kalkun, kan splintre og sætte sig fast i halsen, give indre skader eller blokeringer hos katte. Tag altid kødet af knoglen før du deler, og smid skrogene ud et sted hvor din kat ikke kan nå dem.",
-    "fi": "Ei saa. Kypsennetyt luut, kuten kanan- tai kalkkunanluut, voivat sirpaloitua ja aiheuttaa kissalle tukehtumisen, sisäisiä vammoja tai tukoksia. Irrota liha aina luista, ennen kuin annat sitä kissalle, ja hävitä ruhot paikkaan, johon kissasi ei ylety."
+    "fi": "Ei saa. Kypsennetyt luut, kuten kanan- tai kalkkunanluut, voivat sirpaloitua ja aiheuttaa kissalle tukehtumisen, sisäisiä vammoja tai tukoksia. Irrota liha aina luista, ennen kuin annat sitä kissalle, ja hävitä ruhot paikkaan, johon kissasi ei ylety.",
+    "nb": "Nei. Tilberedte bein, som kylling- eller kalkunbein, kan splintres og føre til kvelning, indre skader eller blokkeringer hos katter. Ta alltid kjøttet av beinet før du deler, og kvitt deg med skrotter der katten ikke når dem."
   },
   "why": {
     "en": "Cooked bones can splinter into sharp pieces. Swallowed bones can injure or block a cat's gut, which can be serious and may need surgery.",
@@ -80,7 +84,8 @@
     "hr": "Termički obrađene kosti mogu se rascijepiti na oštre komadiće. Progutane kosti mogu ozlijediti ili začepiti mačja crijeva, što može biti ozbiljno i možda zahtijevati operaciju.",
     "sv": "Tillagade ben kan splittras i vassa bitar. Ben som katten sväljer kan skada eller blockera tarmen, vilket kan vara allvarligt och kräva operation.",
     "da": "Tilberedte knogler kan splintre i skarpe stykker. Slugte knogler kan skade eller blokere kattens mave-tarm-kanal, hvilket kan være alvorligt og kræve en operation.",
-    "fi": "Kypsennetyt luut voivat hajota teräviksi sirpaleiksi. Nielaistut luut voivat vahingoittaa tai tukkia kissan suoliston, mikä voi olla vakavaa ja vaatia leikkausta."
+    "fi": "Kypsennetyt luut voivat hajota teräviksi sirpaleiksi. Nielaistut luut voivat vahingoittaa tai tukkia kissan suoliston, mikä voi olla vakavaa ja vaatia leikkausta.",
+    "nb": "Tilberedte bein kan splintres i skarpe biter. Bein som svelges, kan skade eller blokkere kattens mage og tarm, noe som kan være alvorlig og kreve operasjon."
   },
   "signs": {
     "en": [
@@ -152,6 +157,11 @@
       "Tukehtuminen",
       "Oksentelu",
       "Vatsakipu (piiloutuminen, murina, haluttomuus tulla kosketetuksi)"
+    ],
+    "nb": [
+      "Kvelning",
+      "Oppkast",
+      "Vondt i magen (gjemmer seg, knurrer, vil ikke bli tatt på)"
     ]
   },
   "what_to_do": {
@@ -168,7 +178,8 @@
     "hr": "Odmah se obrati veterinaru ako je tvoja mačka progutala termički obrađenu kost, čak i ako se čini da je dobro. Zapiši o kakvoj je kosti riječ i kada ju je progutala. Ne čekaj da vidiš što će se dogoditi i ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Kontakta veterinären direkt om katten har svalt ett tillagat ben, även om den verkar må bra. Notera vilken sorts ben det var och när. Vänta inte och se vad som händer, och försök inte få katten att kräkas hemma.",
     "da": "Kontakt straks din dyrlæge hvis din kat har slugt en tilberedt knogle, også selvom den virker upåvirket. Skriv ned hvilken slags knogle det var, og hvornår. Se ikke tiden an, og prøv ikke selv at få katten til at kaste op.",
-    "fi": "Ota heti yhteyttä eläinlääkäriin, jos kissasi nielaisi kypsennetyn luun, vaikka se vaikuttaisi voivan hyvin. Kirjaa ylös, millainen luu se oli ja milloin se tapahtui. Älä jää odottamaan, mitä tapahtuu, äläkä yritä itse oksennuttaa kissaasi."
+    "fi": "Ota heti yhteyttä eläinlääkäriin, jos kissasi nielaisi kypsennetyn luun, vaikka se vaikuttaisi voivan hyvin. Kirjaa ylös, millainen luu se oli ja milloin se tapahtui. Älä jää odottamaan, mitä tapahtuu, äläkä yritä itse oksennuttaa kissaasi.",
+    "nb": "Kontakt dyrlegen med en gang hvis katten har svelget et tilberedt bein, selv om den virker helt fin. Skriv ned hva slags bein det var og når. Ikke vent og se, og ikke prøv å få katten til å kaste opp selv."
   },
   "serving": {
     "en": "If you share plain cooked chicken or turkey, give only boneless meat.",
@@ -184,7 +195,8 @@
     "hr": "Ako s mačkom dijeliš običnu termički obrađenu piletinu ili puretinu, daj joj samo meso bez kostiju.",
     "sv": "Om du delar med dig av naturell tillagad kyckling eller kalkon, ge bara benfritt kött.",
     "da": "Hvis du deler naturel, tilberedt kylling eller kalkun, så giv kun kød uden knogler.",
-    "fi": "Jos annat kissalle maustamatonta kypsennettyä kanaa tai kalkkunaa, anna vain luutonta lihaa."
+    "fi": "Jos annat kissalle maustamatonta kypsennettyä kanaa tai kalkkunaa, anna vain luutonta lihaa.",
+    "nb": "Hvis du deler naturell, tilberedt kylling eller kalkun, gi bare kjøtt uten bein."
   },
   "child": {
     "en": "Bones can hurt a cat's tummy. Give kitty only boneless meat, and tell a grown-up if she grabs a bone.",
@@ -200,7 +212,8 @@
     "hr": "Kosti mogu macu zaboljeti u trbuščiću. Maci daj samo meso bez kostiju i reci odrasloj osobi ako zgrabi kost.",
     "sv": "Ben kan göra ont i kattens mage. Ge katten bara kött utan ben, och säg till en vuxen om katten tar ett ben.",
     "da": "Knogler kan gøre ondt i en kats mave. Giv kun din kat kød uden knogler, og sig det til en voksen hvis den snupper en knogle.",
-    "fi": "Luut voivat satuttaa kissan masua. Anna kisulle vain luutonta lihaa ja kerro aikuiselle, jos kisu nappaa luun."
+    "fi": "Luut voivat satuttaa kissan masua. Anna kisulle vain luutonta lihaa ja kerro aikuiselle, jos kisu nappaa luun.",
+    "nb": "Bein kan gi en katt vondt i magen. Gi pusen bare kjøtt uten bein, og si fra til en voksen hvis den tar et bein."
   },
   "faq": [
     {
@@ -218,7 +231,8 @@
         "hr": "Smijem li mački dati puretinu od pečenja?",
         "sv": "Kan jag ge katten lite av kalkonsteken?",
         "da": "Må jeg give min kat lidt af kalkunstegen?",
-        "fi": "Voinko antaa kissalleni kalkkunaa paistista?"
+        "fi": "Voinko antaa kissalleni kalkkunaa paistista?",
+        "nb": "Kan jeg gi katten kalkun fra steken?"
       },
       "a": {
         "en": "Cats Protection says plain, cooked turkey is fine as an occasional treat if it is boneless, unseasoned and skinless. Dispose of the carcass safely out of your cat's reach.",
@@ -234,7 +248,8 @@
         "hr": "Cats Protection navodi da je obična termički obrađena puretina u redu kao povremena poslastica ako je bez kostiju, bez začina i bez kože. Ostatke purice baci na sigurno mjesto izvan dosega mačke.",
         "sv": "Enligt Cats Protection går naturell, tillagad kalkon bra som godbit någon gång ibland om den är benfri, okryddad och utan skinn. Släng skrovet säkert, utom räckhåll för katten.",
         "da": "Cats Protection skriver at naturel, tilberedt kalkun er fin som en godbid en gang imellem hvis den er uden knogler, krydderier og skind. Smid skroget ud et sted hvor din kat ikke kan nå det.",
-        "fi": "Cats Protectionin mukaan pelkkä kypsennetty kalkkuna sopii satunnaiseksi herkuksi, jos se on luutonta, maustamatonta ja nahatonta. Hävitä kalkkunan ruho turvallisesti paikkaan, johon kissasi ei ylety."
+        "fi": "Cats Protectionin mukaan pelkkä kypsennetty kalkkuna sopii satunnaiseksi herkuksi, jos se on luutonta, maustamatonta ja nahatonta. Hävitä kalkkunan ruho turvallisesti paikkaan, johon kissasi ei ylety.",
+        "nb": "Cats Protection skriver at naturell, tilberedt kalkun er greit som en godbit en gang iblant hvis den er uten bein, uten krydder og uten skinn. Kvitt deg med skrotten på en trygg måte, utenfor kattens rekkevidde."
       }
     }
   ],
@@ -362,6 +377,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2b552f58599b4eaed1496cf11e7e1315576176a61f7d1e6667e0d29e8ee4bd20"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c5ddff415dc51c34ac2001142b013a6a9cbe56becfb97d6eb74abc486236d5d1"
     }
   }
 }

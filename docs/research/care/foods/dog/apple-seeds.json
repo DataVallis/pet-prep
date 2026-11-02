@@ -8,7 +8,8 @@
     "hr": "Sjemenke jabuke",
     "sv": "Äppelkärnor",
     "da": "Æblekerner",
-    "fi": "Omenansiemenet"
+    "fi": "Omenansiemenet",
+    "nb": "Eplekjerner"
   },
   "question": {
     "en": "Can dogs eat apple seeds?",
@@ -17,7 +18,8 @@
     "hr": "Smiju li psi jesti sjemenke jabuke?",
     "sv": "Får hundar äta äppelkärnor?",
     "da": "Må hunde spise æblekerner?",
-    "fi": "Saako koira syödä omenansiemeniä?"
+    "fi": "Saako koira syödä omenansiemeniä?",
+    "nb": "Kan hunder spise eplekjerner?"
   },
   "url_slug": {
     "en": "apple-seeds",
@@ -26,7 +28,8 @@
     "hr": "sjemenke-jabuke",
     "sv": "appelkarnor",
     "da": "aeblekerner",
-    "fi": "omenansiemenet"
+    "fi": "omenansiemenet",
+    "nb": "eplekjerner"
   },
   "level": "dangerous",
   "answer": {
@@ -36,7 +39,8 @@
     "hr": "Ne, sjemenke jabuke treba izbjegavati. Sadrže cijanid, a sjemena kućica i peteljka oko njih mogu izazvati gušenje. Malo sjemenki vjerojatno neće naštetiti, ali prije nego što psu daš jabuku, ukloni sjemenke i sjemenu kućicu.",
     "sv": "Nej, äppelkärnor ska undvikas. De innehåller cyanid, och kärnhuset och skaftet runt dem kan få hunden att sätta i halsen. Några få kärnor gör troligen ingen skada, men ta bort kärnor och kärnhus innan du delar med dig av äpplet.",
     "da": "Nej, æblekerner bør undgås. De indeholder cyanid, og kernehuset og stilken omkring dem kan sætte sig fast i halsen på hunden. Nogle få kerner gør sandsynligvis ikke skade, men fjern kerner og kernehus før du deler æble med hunden.",
-    "fi": "Ei, omenansiemeniä on syytä välttää. Ne sisältävät syanidia, ja niitä ympäröivä siemenkota ja varsi voivat tukehduttaa koirasi. Muutama siemen tuskin aiheuttaa haittaa, mutta poista siemenet ja siemenkota, ennen kuin annat koirallesi omenaa."
+    "fi": "Ei, omenansiemeniä on syytä välttää. Ne sisältävät syanidia, ja niitä ympäröivä siemenkota ja varsi voivat tukehduttaa koirasi. Muutama siemen tuskin aiheuttaa haittaa, mutta poista siemenet ja siemenkota, ennen kuin annat koirallesi omenaa.",
+    "nb": "Nei, eplekjerner bør unngås. De inneholder cyanid, og kjernehuset og stilken rundt dem kan sette seg fast i halsen på hunden. Noen få kjerner gjør neppe skade, men fjern kjerner og kjernehus før du deler eple med hunden."
   },
   "why": {
     "en": "The ASPCA lists the apple plant as toxic to dogs: its stems, leaves and seeds contain cyanide (from cyanogenic glycosides). AKC says a small number of seeds is unlikely to cause harm, and Pet Poison Helpline says a pet would need to eat massive amounts to be of concern. We follow the stricter view because the seeds contain cyanide and the core can also cause choking or intestinal obstruction.",
@@ -45,7 +49,8 @@
     "hr": "ASPCA navodi da je jabuka kao biljka otrovna za pse: njezine peteljke, listovi i sjemenke sadrže cijanid (iz cijanogenih glikozida). AKC navodi da malo sjemenki vjerojatno neće naštetiti, a Pet Poison Helpline da bi ljubimac morao pojesti ogromne količine da bi to bilo zabrinjavajuće. Držimo se strožeg stajališta jer sjemenke sadrže cijanid, a sjemena kućica može izazvati i gušenje ili začepljenje crijeva.",
     "sv": "ASPCA anger att äppelträdet är giftigt för hundar: skaft, blad och kärnor innehåller cyanid (från cyanogena glykosider). AKC skriver att några få kärnor troligen inte gör någon skada, och Pet Poison Helpline skriver att ett djur måste äta enorma mängder för att det ska vara oroande. Vi följer den strängare hållningen eftersom kärnorna innehåller cyanid och kärnhuset dessutom kan orsaka kvävning eller tarmstopp.",
     "da": "ASPCA opfører æbleplanten som giftig for hunde: stilke, blade og kerner indeholder cyanid (fra cyanogene glykosider). AKC skriver at nogle få kerner sandsynligvis ikke gør skade, og Pet Poison Helpline skriver at et dyr skal spise meget store mængder, før det giver grund til bekymring. Vi følger den strengere vurdering, fordi kernerne indeholder cyanid og kernehuset også kan sætte sig fast i halsen eller give tarmblokering.",
-    "fi": "ASPCA luokittelee omenakasvin koirille myrkylliseksi: sen varret, lehdet ja siemenet sisältävät syanidia (peräisin syanogeenisista glykosideista). AKC:n mukaan muutama siemen tuskin aiheuttaa haittaa, ja Pet Poison Helplinen mukaan lemmikin pitäisi syödä valtavia määriä, jotta siitä olisi syytä huolestua. Noudatamme tiukempaa linjaa, koska siemenet sisältävät syanidia ja siemenkota voi myös aiheuttaa tukehtumisen tai suolitukoksen."
+    "fi": "ASPCA luokittelee omenakasvin koirille myrkylliseksi: sen varret, lehdet ja siemenet sisältävät syanidia (peräisin syanogeenisista glykosideista). AKC:n mukaan muutama siemen tuskin aiheuttaa haittaa, ja Pet Poison Helplinen mukaan lemmikin pitäisi syödä valtavia määriä, jotta siitä olisi syytä huolestua. Noudatamme tiukempaa linjaa, koska siemenet sisältävät syanidia ja siemenkota voi myös aiheuttaa tukehtumisen tai suolitukoksen.",
+    "nb": "ASPCA oppgir epleplanten som giftig for hunder: Stilker, blader og kjerner inneholder cyanid (fra cyanogene glykosider). AKC skriver at noen få kjerner neppe gjør skade, og Pet Poison Helpline skriver at et dyr må spise enorme mengder før det blir grunn til bekymring. Vi følger det strengeste synet fordi kjernene inneholder cyanid og kjernehuset også kan føre til kvelning eller tarmblokkering."
   },
   "signs": {
     "en": [
@@ -96,6 +101,13 @@
       "Hengitysvaikeudet, läähätys",
       "Sokki",
       "Ruoansulatusvaivojen tai tukoksen merkit"
+    ],
+    "nb": [
+      "Teglrødt tannkjøtt eller andre slimhinner",
+      "Store (utvidede) pupiller",
+      "Pustevansker, pesing",
+      "Sjokk",
+      "Tegn på fordøyelsesproblemer eller blokkering"
     ]
   },
   "what_to_do": {
@@ -105,7 +117,8 @@
     "hr": "Ako je pas pojeo sjemenu kućicu ili sjemenke jabuke, prati pojavljuju li se znakovi probavnih tegoba ili začepljenja i obrati se veterinaru ako pas ima tegobe.",
     "sv": "Om hunden äter ett kärnhus eller kärnor: håll utkik efter tecken på magbesvär eller stopp, och kontakta en veterinär om hunden får problem.",
     "da": "Hvis hunden spiser et kernehus eller kerner, skal du holde øje med tegn på fordøjelsesproblemer eller blokering og kontakte en dyrlæge hvis hunden får problemer.",
-    "fi": "Jos koirasi syö omenan siemenkodan tai siemeniä, seuraa, ilmeneekö ruoansulatusvaivojen tai tukoksen merkkejä, ja ota yhteyttä eläinlääkäriin, jos koiralla on ongelmia."
+    "fi": "Jos koirasi syö omenan siemenkodan tai siemeniä, seuraa, ilmeneekö ruoansulatusvaivojen tai tukoksen merkkejä, ja ota yhteyttä eläinlääkäriin, jos koiralla on ongelmia.",
+    "nb": "Hvis hunden spiser et kjernehus eller eplekjerner, må du følge med på tegn på fordøyelsesproblemer eller blokkering og kontakte dyrlege hvis hunden får problemer."
   },
   "serving": null,
   "child": {
@@ -115,7 +128,8 @@
     "hr": "Sjemenke jabuke nisu za pse. Odrasla osoba izvadi sjemenu kućicu i sjemenke prije nego što tvoj pas dobije komadić jabuke.",
     "sv": "Äppelkärnor är inte för hundar. En vuxen tar bort kärnhuset och kärnorna innan hunden får en bit äpple.",
     "da": "Æblekerner er ikke til hunde. En voksen fjerner kernehuset og kernerne, før din hund får et stykke æble.",
-    "fi": "Omenansiemenet eivät ole koirille. Aikuinen poistaa siemenkodan ja siemenet, ennen kuin koirasi saa palan omenaa."
+    "fi": "Omenansiemenet eivät ole koirille. Aikuinen poistaa siemenkodan ja siemenet, ennen kuin koirasi saa palan omenaa.",
+    "nb": "Eplekjerner er ikke for hunder. En voksen fjerner kjernehuset og kjernene før hunden din får en eplebit."
   },
   "faq": [
     {
@@ -126,7 +140,8 @@
         "hr": "Moj je pas pojeo cijelu jabuku sa sjemenkama. Je li to hitan slučaj?",
         "sv": "Min hund åt ett helt äpple med kärnor. Är det akut?",
         "da": "Min hund har spist et helt æble med kerner. Er det akut?",
-        "fi": "Koirani söi kokonaisen omenan siemenineen. Onko se hätätilanne?"
+        "fi": "Koirani söi kokonaisen omenan siemenineen. Onko se hätätilanne?",
+        "nb": "Hunden min spiste et helt eple med kjerner. Er det akutt?"
       },
       "a": {
         "en": "A small number of seeds is unlikely to cause harm. Watch your dog for signs of digestive trouble or blockage from the core, and contact a vet if your dog has problems.",
@@ -135,7 +150,8 @@
         "hr": "Malo sjemenki vjerojatno neće naštetiti. Prati ima li pas znakove probavnih tegoba ili začepljenja zbog sjemene kućice i obrati se veterinaru ako pas ima tegobe.",
         "sv": "Några få kärnor gör troligen ingen skada. Håll utkik efter tecken på magbesvär eller stopp från kärnhuset, och kontakta en veterinär om hunden får problem.",
         "da": "Nogle få kerner gør sandsynligvis ikke skade. Hold øje med tegn på fordøjelsesproblemer eller blokering fra kernehuset, og kontakt en dyrlæge hvis hunden får problemer.",
-        "fi": "Muutama siemen tuskin aiheuttaa haittaa. Seuraa, ilmeneekö koirallasi siemenkodan aiheuttamien ruoansulatusvaivojen tai tukoksen merkkejä, ja ota yhteyttä eläinlääkäriin, jos koiralla on ongelmia."
+        "fi": "Muutama siemen tuskin aiheuttaa haittaa. Seuraa, ilmeneekö koirallasi siemenkodan aiheuttamien ruoansulatusvaivojen tai tukoksen merkkejä, ja ota yhteyttä eläinlääkäriin, jos koiralla on ongelmia.",
+        "nb": "Noen få kjerner gjør neppe skade. Følg med på tegn på fordøyelsesproblemer eller blokkering fra kjernehuset, og kontakt dyrlege hvis hunden får problemer."
       }
     }
   ],
@@ -232,6 +248,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7f3c2139a5d1847c4c3d9a50fe3f50bf311aa4fcd1b3bc59436cd2584e26c613"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "71d04da5b377f8819c79eb601cceb14253b608f7e02520c8f5960a8285f46ada"
     }
   }
 }

@@ -15,7 +15,8 @@
     "hr": "Orasi",
     "sv": "Valnötter",
     "da": "Valnødder",
-    "fi": "Saksanpähkinät"
+    "fi": "Saksanpähkinät",
+    "nb": "Valnøtter"
   },
   "question": {
     "en": "Can dogs eat walnuts?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti orahe?",
     "sv": "Får hundar äta valnötter?",
     "da": "Må hunde spise valnødder?",
-    "fi": "Saako koira syödä saksanpähkinöitä?"
+    "fi": "Saako koira syödä saksanpähkinöitä?",
+    "nb": "Kan hunder spise valnøtter?"
   },
   "url_slug": {
     "en": "walnuts",
@@ -47,7 +49,8 @@
     "hr": "orasi",
     "sv": "valnotter",
     "da": "valnoedder",
-    "fi": "saksanpahkinat"
+    "fi": "saksanpahkinat",
+    "nb": "valnotter"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne, bolje ne. Jedan ili dva oraha vjerojatno neće naštetiti, ali orasi su masni i mogu izazvati gušenje. Pljesnivi orasi, poput starih plodova koji su pali u vrtu, i crni orasi mnogo su opasniji.",
     "sv": "Nej, helst inte. En eller två valnötter skadar sannolikt inte, men valnötter är feta och kan orsaka kvävning. Möglade valnötter, till exempel gamla som fallit ner i trädgården, och svarta valnötter är mycket farligare.",
     "da": "Nej, det er bedst at lade være. En valnød eller to gør næppe skade, men valnødder er fede og kan sætte sig fast i halsen. Mugne valnødder, for eksempel gamle nødder der er faldet ned i haven, og sorte valnødder er langt farligere.",
-    "fi": "Ei, niitä on parasta olla antamatta. Yksi tai kaksi saksanpähkinää tuskin vahingoittaa, mutta saksanpähkinät ovat rasvaisia ja voivat aiheuttaa tukehtumisvaaran. Homeiset saksanpähkinät, kuten puutarhaan pudonneet vanhat pähkinät, ja mustapähkinät ovat paljon vaarallisempia."
+    "fi": "Ei, niitä on parasta olla antamatta. Yksi tai kaksi saksanpähkinää tuskin vahingoittaa, mutta saksanpähkinät ovat rasvaisia ja voivat aiheuttaa tukehtumisvaaran. Homeiset saksanpähkinät, kuten puutarhaan pudonneet vanhat pähkinät, ja mustapähkinät ovat paljon vaarallisempia.",
+    "nb": "Nei, det er best å la være. En valnøtt eller to gjør neppe skade, men valnøtter er fete og kan sette seg fast i halsen. Mugne valnøtter, for eksempel gamle nøtter som har falt ned i hagen, og svarte valnøtter er mye farligere."
   },
   "why": {
     "en": "Walnuts are high in fat, which can cause vomiting, diarrhoea and possibly pancreatitis. Mould can grow on the shell or kernel and produce toxins that can cause tremors, seizures and vomiting. Black walnuts are very toxic to dogs and may contain juglone.",
@@ -80,7 +84,8 @@
     "hr": "Orasi imaju puno masti, što može izazvati povraćanje, proljev i moguće upalu gušterače. Na ljusci ili jezgri može narasti plijesan koja stvara otrove, a oni mogu izazvati drhtanje mišića, napadaje i povraćanje. Crni orasi vrlo su otrovni za pse i mogu sadržavati juglon.",
     "sv": "Valnötter innehåller mycket fett, som kan orsaka kräkningar, diarré och kanske bukspottkörtelinflammation (pankreatit). Mögel kan växa på skalet eller kärnan och bilda gifter som kan orsaka darrningar, kramper och kräkningar. Svarta valnötter är mycket giftiga för hundar och kan innehålla juglon.",
     "da": "Valnødder indeholder meget fedt, som kan give opkast, diarré og muligvis betændelse i bugspytkirtlen. Der kan gro skimmel på skallen eller kernen, og skimmelen kan danne giftstoffer der kan give rysten, kramper og opkast. Sorte valnødder er meget giftige for hunde og kan indeholde juglon.",
-    "fi": "Saksanpähkinöissä on paljon rasvaa, joka voi aiheuttaa oksentelua, ripulia ja mahdollisesti haimatulehduksen. Kuoreen tai ytimeen voi kasvaa hometta, joka tuottaa myrkkyjä; ne voivat aiheuttaa vapinaa, kouristuksia ja oksentelua. Mustapähkinät ovat koirille erittäin myrkyllisiä, ja niissä voi olla juglonia."
+    "fi": "Saksanpähkinöissä on paljon rasvaa, joka voi aiheuttaa oksentelua, ripulia ja mahdollisesti haimatulehduksen. Kuoreen tai ytimeen voi kasvaa hometta, joka tuottaa myrkkyjä; ne voivat aiheuttaa vapinaa, kouristuksia ja oksentelua. Mustapähkinät ovat koirille erittäin myrkyllisiä, ja niissä voi olla juglonia.",
+    "nb": "Valnøtter inneholder mye fett, som kan gi oppkast, diaré og muligens betennelse i bukspyttkjertelen. Det kan vokse mugg på skallet eller kjernen, og muggen kan danne giftstoffer som kan gi skjelvinger, kramper og oppkast. Svarte valnøtter er svært giftige for hunder og kan inneholde juglon."
   },
   "signs": {
     "en": [
@@ -166,6 +171,12 @@
       "Ripuli",
       "Lihasvapina tai kouristukset (homeiset pähkinät)",
       "Tukehtuminen"
+    ],
+    "nb": [
+      "Oppkast",
+      "Diaré",
+      "Muskelskjelvinger eller kramper (mugne nøtter)",
+      "Kvelning"
     ]
   },
   "what_to_do": {
@@ -182,7 +193,8 @@
     "hr": "Nakon jednog ili dva oraha prati pojavljuju li se povraćanje ili proljev. Ako je tvoj pas pojeo crni orah ili pljesnive orahe, odmah se obrati veterinaru i ne čekaj da se pojave znakovi; nazovi ga i ako se pojave drhtanje, napadaji ili gušenje.",
     "sv": "Har hunden ätit en eller två valnötter, håll utkik efter kräkningar eller diarré. Om hunden ätit en svart valnöt eller möglade valnötter, kontakta veterinären direkt och vänta inte på symtom; ring också om darrningar, kramper eller kvävning uppstår.",
     "da": "Efter en valnød eller to skal du holde øje med opkast eller diarré. Hvis din hund har spist en sort valnød eller mugne valnødder, så kontakt straks din dyrlæge, og vent ikke på symptomer; kontakt også dyrlægen hvis der opstår rysten, kramper eller tegn på kvælning.",
-    "fi": "Jos koira söi yhden tai kaksi saksanpähkinää, seuraa, ilmeneekö oksentelua tai ripulia. Jos koirasi söi mustapähkinän tai homeisia saksanpähkinöitä, ota heti yhteyttä eläinlääkäriin äläkä odota oireita; soita myös, jos ilmenee vapinaa, kouristuksia tai tukehtumista."
+    "fi": "Jos koira söi yhden tai kaksi saksanpähkinää, seuraa, ilmeneekö oksentelua tai ripulia. Jos koirasi söi mustapähkinän tai homeisia saksanpähkinöitä, ota heti yhteyttä eläinlääkäriin äläkä odota oireita; soita myös, jos ilmenee vapinaa, kouristuksia tai tukehtumista.",
+    "nb": "Etter en valnøtt eller to bør du følge med på oppkast eller diaré. Hvis hunden har spist en svart valnøtt eller mugne valnøtter, må du kontakte dyrlegen med en gang og ikke vente på symptomer; ring også hvis det oppstår skjelvinger, kramper eller kvelning."
   },
   "serving": null,
   "child": {
@@ -199,7 +211,8 @@
     "hr": "Orasi nisu grickalica za pse. Od starih oraha na tlu psi se mogu razboljeti, zato reci odrasloj osobi ako ih tvoj pas nađe.",
     "sv": "Valnötter är inget mellanmål för hundar. Gamla valnötter på marken kan göra hundar sjuka, så säg till en vuxen om din hund hittar några.",
     "da": "Valnødder er ikke en hundesnack. Gamle valnødder på jorden kan gøre hunde syge, så sig det til en voksen hvis din hund finder nogle.",
-    "fi": "Saksanpähkinät eivät ole koiran naposteltavaa. Maassa olevat vanhat pähkinät voivat sairastuttaa koiran, joten kerro aikuiselle, jos koirasi löytää niitä."
+    "fi": "Saksanpähkinät eivät ole koiran naposteltavaa. Maassa olevat vanhat pähkinät voivat sairastuttaa koiran, joten kerro aikuiselle, jos koirasi löytää niitä.",
+    "nb": "Valnøtter er ikke hundesnacks. Gamle valnøtter på bakken kan gjøre hunder syke, så si fra til en voksen hvis hunden din finner noen."
   },
   "faq": [
     {
@@ -217,7 +230,8 @@
         "hr": "Zašto su orasi koji su pali u vrtu rizični?",
         "sv": "Varför är nedfallna valnötter i trädgården en risk?",
         "da": "Hvorfor er nedfaldne valnødder i haven en risiko?",
-        "fi": "Miksi puutarhaan pudonneet saksanpähkinät ovat riski?"
+        "fi": "Miksi puutarhaan pudonneet saksanpähkinät ovat riski?",
+        "nb": "Hvorfor er nedfalne valnøtter i hagen en risiko?"
       },
       "a": {
         "en": "Nuts lying on the ground can get damp and grow mould, which can be toxic to dogs.",
@@ -233,7 +247,8 @@
         "hr": "Plodovi koji leže na tlu mogu postati vlažni i na njima može narasti plijesan, koja može biti otrovna za pse.",
         "sv": "Nötter som ligger på marken kan bli fuktiga och mögla, och möglet kan vara giftigt för hundar.",
         "da": "Nødder der ligger på jorden, kan blive fugtige og mugne, og skimmelen kan være giftig for hunde.",
-        "fi": "Maassa olevat pähkinät voivat kostua ja homehtua, ja home voi olla koirille myrkyllistä."
+        "fi": "Maassa olevat pähkinät voivat kostua ja homehtua, ja home voi olla koirille myrkyllistä.",
+        "nb": "Nøtter som ligger på bakken, kan bli fuktige og mugne, og muggen kan være giftig for hunder."
       }
     },
     {
@@ -251,7 +266,8 @@
         "hr": "A crni orasi?",
         "sv": "Hur är det med svarta valnötter?",
         "da": "Hvad med sorte valnødder?",
-        "fi": "Entä mustapähkinät?"
+        "fi": "Entä mustapähkinät?",
+        "nb": "Hva med svarte valnøtter?"
       },
       "a": {
         "en": "Black walnuts are very toxic to dogs. Contact your vet immediately if your dog eats one.",
@@ -267,7 +283,8 @@
         "hr": "Crni orasi vrlo su otrovni za pse. Odmah se obrati veterinaru ako tvoj pas pojede crni orah.",
         "sv": "Svarta valnötter är mycket giftiga för hundar. Kontakta veterinären omedelbart om din hund äter en.",
         "da": "Sorte valnødder er meget giftige for hunde. Kontakt straks din dyrlæge hvis din hund spiser en.",
-        "fi": "Mustapähkinät ovat koirille erittäin myrkyllisiä. Ota heti yhteyttä eläinlääkäriin, jos koirasi syö sellaisen."
+        "fi": "Mustapähkinät ovat koirille erittäin myrkyllisiä. Ota heti yhteyttä eläinlääkäriin, jos koirasi syö sellaisen.",
+        "nb": "Svarte valnøtter er svært giftige for hunder. Kontakt dyrlegen med en gang hvis hunden din spiser en."
       }
     }
   ],
@@ -398,6 +415,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9af1c39ad34a7b2274356b1cac9c9b6c51acff7131eaf9c3db8c2d6532c8d573"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fe68c209ae7cdb3f14ce43be061fa20632a83190abc6239449c8b9cfe247e68f"
     }
   }
 }

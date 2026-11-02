@@ -15,7 +15,8 @@
     "hr": "Sirovo tijesto s kvascem",
     "sv": "Rå jäsdeg",
     "da": "Rå gærdej",
-    "fi": "Raaka hiivataikina"
+    "fi": "Raaka hiivataikina",
+    "nb": "Rå gjærdeig"
   },
   "question": {
     "en": "Can dogs eat raw yeast dough?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti sirovo tijesto s kvascem?",
     "sv": "Får hundar äta rå jäsdeg?",
     "da": "Må hunde spise rå gærdej?",
-    "fi": "Saako koira syödä raakaa hiivataikinaa?"
+    "fi": "Saako koira syödä raakaa hiivataikinaa?",
+    "nb": "Kan hunder spise rå gjærdeig?"
   },
   "url_slug": {
     "en": "raw-yeast-dough",
@@ -47,7 +49,8 @@
     "hr": "sirovo-tijesto-s-kvascem",
     "sv": "ra-jasdeg",
     "da": "raa-gaerdej",
-    "fi": "raaka-hiivataikina"
+    "fi": "raaka-hiivataikina",
+    "nb": "ra-gjaerdeig"
   },
   "level": "toxic",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne. Sirovo, nepečeno tijesto s kvascem opasno je za pse. U toplom želucu nastavlja rasti i nadima ga, što može dovesti do torzije želuca. Kvasac stvara i alkohol, koji može izazvati trovanje alkoholom. Opasno je nepečeno tijesto.",
     "sv": "Nej. Rå, ogräddad deg med jäst är farlig för hundar. Den fortsätter att jäsa i den varma magen och orsakar uppblåsthet som kan leda till magomvridning. Jästen bildar också alkohol, som kan orsaka alkoholförgiftning. Faran är den ogräddade degen.",
     "da": "Nej. Rå, ubagt gærdej er farlig for hunde. Den fortsætter med at hæve i den varme mave og giver oppustethed, som kan føre til mavedrejning. Gæren danner også alkohol, som kan give alkoholforgiftning. Faren er den ubagte dej.",
-    "fi": "Ei saa. Raaka, paistamaton hiivataikina on vaarallista koiralle. Se jatkaa kohoamistaan lämpimässä mahalaukussa ja aiheuttaa turvotusta, joka voi johtaa mahalaukun kiertymään. Hiiva tuottaa myös alkoholia, joka voi aiheuttaa alkoholimyrkytyksen. Vaarallista on nimenomaan paistamaton taikina."
+    "fi": "Ei saa. Raaka, paistamaton hiivataikina on vaarallista koiralle. Se jatkaa kohoamistaan lämpimässä mahalaukussa ja aiheuttaa turvotusta, joka voi johtaa mahalaukun kiertymään. Hiiva tuottaa myös alkoholia, joka voi aiheuttaa alkoholimyrkytyksen. Vaarallista on nimenomaan paistamaton taikina.",
+    "nb": "Nei. Rå, ustekt gjærdeig er farlig for hunder. Den fortsetter å heve i den varme magen og gir oppblåsthet som kan føre til magedreining. Gjæren lager også alkohol, som kan gi alkoholforgiftning. Det er den ustekte deigen som er farlig."
   },
   "why": {
     "en": "Yeast keeps working in the warm, moist stomach: the dough expands and gas builds up, which can block the gut or, less often, twist the stomach (bloat). At the same time the yeast produces alcohol, which is quickly absorbed into the blood. Dogs are affected most often because they eat whatever they find.",
@@ -80,7 +84,8 @@
     "hr": "Kvasac nastavlja djelovati u toplom i vlažnom želucu: tijesto se širi i nakupljaju se plinovi, što može začepiti probavni sustav ili, rjeđe, izazvati torziju želuca. Istodobno kvasac stvara alkohol, koji se brzo upija u krv. Najčešće stradaju psi jer pojedu sve što nađu.",
     "sv": "Jästen fortsätter att arbeta i den varma, fuktiga magen: degen sväller och gas samlas, vilket kan orsaka stopp i mag-tarmkanalen eller, mer sällan, magomvridning. Samtidigt bildar jästen alkohol, som snabbt tas upp i blodet. Hundar drabbas oftast eftersom de äter vad de än hittar.",
     "da": "Gæren arbejder videre i den varme, fugtige mave: Dejen udvider sig, og der ophobes gas, som kan blokere tarmen eller, sjældnere, få mavesækken til at dreje (mavedrejning). Samtidig danner gæren alkohol, som hurtigt optages i blodet. Hunde rammes oftest, fordi de spiser hvad som helst de finder.",
-    "fi": "Hiiva jatkaa toimintaansa lämpimässä ja kosteassa mahalaukussa: taikina laajenee ja kaasua kertyy, mikä voi tukkia ruoansulatuskanavan tai harvemmin aiheuttaa mahalaukun kiertymän. Samalla hiiva tuottaa alkoholia, joka imeytyy nopeasti vereen. Koirilla tätä esiintyy useimmin, koska ne syövät kaiken, mitä löytävät."
+    "fi": "Hiiva jatkaa toimintaansa lämpimässä ja kosteassa mahalaukussa: taikina laajenee ja kaasua kertyy, mikä voi tukkia ruoansulatuskanavan tai harvemmin aiheuttaa mahalaukun kiertymän. Samalla hiiva tuottaa alkoholia, joka imeytyy nopeasti vereen. Koirilla tätä esiintyy useimmin, koska ne syövät kaiken, mitä löytävät.",
+    "nb": "Gjæren fortsetter å virke i den varme, fuktige magen: Deigen utvider seg, og det samler seg gass, som kan blokkere tarmen eller, sjeldnere, få magen til å vri seg (magedreining). Samtidig lager gjæren alkohol, som raskt tas opp i blodet. Hunder rammes oftest fordi de spiser alt de finner."
   },
   "signs": {
     "en": [
@@ -166,6 +171,12 @@
       "Oksentelu tai yökkäily ilman, että mitään tulee ulos",
       "Horjuminen ja sekavuus",
       "Uneliaisuus tai vaisuus"
+    ],
+    "nb": [
+      "Oppsvulmet, stram mage",
+      "Oppkast eller brekninger uten at noe kommer opp",
+      "Ustøhet og forvirring",
+      "Døsighet eller nedstemthet"
     ]
   },
   "what_to_do": {
@@ -182,7 +193,8 @@
     "hr": "Odmah se obrati veterinaru. Zapiši otprilike koliko je tijesta pas pojeo i kada. Ne čekaj da se pojave znakovi: i želudac koji se nadima i trovanje alkoholom zahtijevaju brzu pomoć.",
     "sv": "Kontakta veterinären direkt. Notera ungefär hur mycket deg hunden åt och när. Vänta inte på symtom: både en svällande mage och alkoholförgiftning kräver snabb vård.",
     "da": "Kontakt straks din dyrlæge. Skriv ned omtrent hvor meget dej hunden har spist, og hvornår. Vent ikke på symptomer: Både en mave der svulmer op, og alkoholforgiftning kræver hurtig behandling.",
-    "fi": "Ota heti yhteyttä eläinlääkäriin. Kirjaa ylös, suunnilleen kuinka paljon taikinaa koira söi ja milloin. Älä odota oireita: laajeneva mahalaukku ja alkoholimyrkytys vaativat kumpikin nopeaa hoitoa."
+    "fi": "Ota heti yhteyttä eläinlääkäriin. Kirjaa ylös, suunnilleen kuinka paljon taikinaa koira söi ja milloin. Älä odota oireita: laajeneva mahalaukku ja alkoholimyrkytys vaativat kumpikin nopeaa hoitoa.",
+    "nb": "Kontakt dyrlegen med en gang. Skriv ned omtrent hvor mye deig hunden har spist, og når. Ikke vent på symptomer – både en mage som svulmer opp og alkoholforgiftning krever rask behandling."
   },
   "serving": null,
   "child": {
@@ -199,7 +211,8 @@
     "hr": "Tijesto za kruh koje još raste nije za pse. U njihovu trbuhu nastavi rasti. Reci odrasloj osobi ako ga tvoj pas pojede.",
     "sv": "Bröddeg som fortfarande jäser är inte för hundar. Den fortsätter att växa i magen. Säg till en vuxen om din hund äter deg.",
     "da": "Brøddej der stadig hæver, er ikke til hunde. Den bliver ved med at vokse i maven. Sig det til en voksen hvis din hund spiser noget.",
-    "fi": "Kohoava leipätaikina ei sovi koirille. Se jatkaa kasvamista koiran mahassa. Kerro aikuiselle, jos koirasi syö sitä."
+    "fi": "Kohoava leipätaikina ei sovi koirille. Se jatkaa kasvamista koiran mahassa. Kerro aikuiselle, jos koirasi syö sitä.",
+    "nb": "Brøddeig som fortsatt hever, er ikke noe for hunder. Den fortsetter å vokse i magen deres. Si fra til en voksen hvis hunden din spiser litt."
   },
   "faq": [
     {
@@ -217,7 +230,8 @@
         "hr": "Je li i pečeni kruh opasan?",
         "sv": "Är gräddat bröd också farligt?",
         "da": "Er bagt brød også farligt?",
-        "fi": "Onko paistettu leipäkin vaarallista?"
+        "fi": "Onko paistettu leipäkin vaarallista?",
+        "nb": "Er stekt brød også farlig?"
       },
       "a": {
         "en": "The danger described here is raw, unbaked yeast dough, because the yeast is still alive and keeps working in the stomach.",
@@ -233,7 +247,8 @@
         "hr": "Ovdje opisana opasnost odnosi se na sirovo, nepečeno tijesto s kvascem, jer je kvasac još živ i nastavlja djelovati u želucu.",
         "sv": "Faran som beskrivs här gäller rå, ogräddad deg med jäst, eftersom jästen fortfarande lever och fortsätter att arbeta i magen.",
         "da": "Faren der beskrives her, gælder rå, ubagt gærdej, fordi gæren stadig er levende og arbejder videre i maven.",
-        "fi": "Tässä kuvattu vaara koskee raakaa, paistamatonta hiivataikinaa, koska siinä hiiva on vielä elävää ja jatkaa toimintaansa mahalaukussa."
+        "fi": "Tässä kuvattu vaara koskee raakaa, paistamatonta hiivataikinaa, koska siinä hiiva on vielä elävää ja jatkaa toimintaansa mahalaukussa.",
+        "nb": "Faren som beskrives her, gjelder rå, ustekt gjærdeig, fordi gjæren fortsatt lever og fortsetter å virke i magen."
       }
     },
     {
@@ -251,7 +266,8 @@
         "hr": "Zašto tijesto izaziva trovanje alkoholom?",
         "sv": "Varför orsakar deg alkoholförgiftning?",
         "da": "Hvorfor giver dej alkoholforgiftning?",
-        "fi": "Miksi taikina aiheuttaa alkoholimyrkytyksen?"
+        "fi": "Miksi taikina aiheuttaa alkoholimyrkytyksen?",
+        "nb": "Hvorfor gir deig alkoholforgiftning?"
       },
       "a": {
         "en": "Fermenting yeast produces alcohol in the stomach, and it is rapidly absorbed into the bloodstream.",
@@ -267,7 +283,8 @@
         "hr": "Kvasac koji fermentira stvara alkohol u želucu, a on se brzo upija u krvotok.",
         "sv": "Jästen jäser och bildar alkohol i magen, och alkoholen tas snabbt upp i blodet.",
         "da": "Gær der gærer, danner alkohol i maven, og alkoholen optages hurtigt i blodet.",
-        "fi": "Käyvä hiiva tuottaa mahalaukussa alkoholia, joka imeytyy nopeasti verenkiertoon."
+        "fi": "Käyvä hiiva tuottaa mahalaukussa alkoholia, joka imeytyy nopeasti verenkiertoon.",
+        "nb": "Gjæren som gjærer, lager alkohol i magen, og alkoholen tas raskt opp i blodet."
       }
     }
   ],
@@ -393,6 +410,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "fec41d12b4e9e0404d610e5830b79d37b8efc02a5604753d774efbfb5a0616b6"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4d247a7dbf482a33cce937e4f8d89d1ada391fd469dd3cc0901aea0022a5ac47"
     }
   }
 }

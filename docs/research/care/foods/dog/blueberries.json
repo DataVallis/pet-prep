@@ -8,7 +8,8 @@
     "hr": "Borovnice",
     "sv": "Blåbär",
     "da": "Blåbær",
-    "fi": "Mustikat"
+    "fi": "Mustikat",
+    "nb": "Blåbær"
   },
   "question": {
     "en": "Can dogs eat blueberries?",
@@ -17,7 +18,8 @@
     "hr": "Smiju li psi jesti borovnice?",
     "sv": "Får hundar äta blåbär?",
     "da": "Må hunde spise blåbær?",
-    "fi": "Saako koira syödä mustikoita?"
+    "fi": "Saako koira syödä mustikoita?",
+    "nb": "Kan hunder spise blåbær?"
   },
   "url_slug": {
     "en": "blueberries",
@@ -26,7 +28,8 @@
     "hr": "borovnice",
     "sv": "blabar",
     "da": "blaabaer",
-    "fi": "mustikat"
+    "fi": "mustikat",
+    "nb": "blabaer"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "hr": "Da, umjereno. Borovnice imaju malo kalorija i daju vlakna, vitamin C i antioksidanse, ali trebaju biti povremena poslastica, a ne velik dio prehrane tvog psa.",
     "sv": "Ja, med måtta. Blåbär har få kalorier och ger fibrer, C-vitamin och antioxidanter, men de ska vara en godbit ibland och inte en stor del av hundens kost.",
     "da": "Ja, med måde. Blåbær har få kalorier og giver fibre, C-vitamin og antioxidanter, men de bør være en godbid en gang imellem og ikke en stor del af hundens kost.",
-    "fi": "Kyllä, kohtuudella. Mustikat ovat vähäkalorisia, ja niissä on kuitua, C-vitamiinia ja antioksidantteja, mutta niiden pitäisi olla satunnainen herkku eikä suuri osa koirasi ruokavaliota."
+    "fi": "Kyllä, kohtuudella. Mustikat ovat vähäkalorisia, ja niissä on kuitua, C-vitamiinia ja antioksidantteja, mutta niiden pitäisi olla satunnainen herkku eikä suuri osa koirasi ruokavaliota.",
+    "nb": "Ja, med måte. Blåbær har få kalorier og gir fiber, vitamin C og antioksidanter, men de bør være en godbit av og til og ikke en stor del av hundens kost."
   },
   "why": {
     "en": "Their size and shape can pose a choking risk, particularly for very small dogs. As with any new food, start with a small amount and watch how your dog reacts.",
@@ -45,7 +49,8 @@
     "hr": "Zbog veličine i oblika mogu izazvati gušenje, osobito kod vrlo malih pasa. Kao i kod svake nove hrane, počni s malom količinom i prati kako pas reagira.",
     "sv": "Storleken och formen kan ge kvävningsrisk, särskilt för mycket små hundar. Som med all ny mat: börja med en liten mängd och se hur hunden reagerar.",
     "da": "Deres størrelse og form kan udgøre en kvælningsfare, især for meget små hunde. Som med al ny mad skal du starte med en lille mængde og se hvordan hunden reagerer.",
-    "fi": "Niiden koko ja muoto voivat aiheuttaa tukehtumisvaaran etenkin hyvin pienille koirille. Kuten minkä tahansa uuden ruoan kanssa, aloita pienellä määrällä ja seuraa, miten koirasi reagoi."
+    "fi": "Niiden koko ja muoto voivat aiheuttaa tukehtumisvaaran etenkin hyvin pienille koirille. Kuten minkä tahansa uuden ruoan kanssa, aloita pienellä määrällä ja seuraa, miten koirasi reagoi.",
+    "nb": "Størrelsen og formen kan gi kvelningsfare, særlig for svært små hunder. Som med all ny mat bør du starte med en liten mengde og se hvordan hunden reagerer."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "hr": "Počni s malom količinom i promatraj psa. Ako nisi siguran jesu li borovnice prikladne za tvog psa, pitaj veterinara.",
     "sv": "Börja med en liten mängd och håll koll på hunden. Om du är osäker på om blåbär passar din hund, fråga veterinären.",
     "da": "Start med en lille mængde, og hold øje med hunden. Spørg din dyrlæge hvis du er i tvivl om blåbær er gode for din hund.",
-    "fi": "Aloita pienellä määrällä ja tarkkaile koiraasi. Jos et ole varma, sopivatko mustikat koirallesi, kysy eläinlääkäriltä."
+    "fi": "Aloita pienellä määrällä ja tarkkaile koiraasi. Jos et ole varma, sopivatko mustikat koirallesi, kysy eläinlääkäriltä.",
+    "nb": "Start med en liten mengde og følg med på hunden. Er du usikker på om blåbær passer for hunden din, kan du spørre dyrlegen."
   },
   "serving": {
     "en": "Washed thoroughly, fresh or frozen; cut in halves for very small dogs; as an occasional treat.",
@@ -64,7 +70,8 @@
     "hr": "Dobro oprane, svježe ili zamrznute; za vrlo male pse prepolovljene; kao povremena poslastica.",
     "sv": "Ordentligt sköljda, färska eller frysta; halverade för mycket små hundar; som en godbit ibland.",
     "da": "Grundigt vaskede, friske eller frosne; skåret i halve til meget små hunde; som en godbid en gang imellem.",
-    "fi": "Huolellisesti pestyinä, tuoreina tai pakastettuina; hyvin pienille koirille puolitettuina; satunnaisena herkkuna."
+    "fi": "Huolellisesti pestyinä, tuoreina tai pakastettuina; hyvin pienille koirille puolitettuina; satunnaisena herkkuna.",
+    "nb": "Grundig vasket, ferske eller frosne; delt i to for svært små hunder; som en godbit av og til."
   },
   "child": {
     "en": "Blueberries can be a yummy little treat for dogs! A grown-up washes them first and gives just a few.",
@@ -73,7 +80,8 @@
     "hr": "Borovnice mogu biti fina mala poslastica za pse! Odrasla osoba ih prvo opere i ponudi samo nekoliko.",
     "sv": "Blåbär kan vara en liten smaskig godbit för hundar! En vuxen sköljer dem först och ger bara några få.",
     "da": "Blåbær kan være en lækker lille godbid til hunde! En voksen vasker dem først og giver kun nogle få.",
-    "fi": "Mustikat voivat olla koiralle ihana pieni herkku! Aikuinen pesee ne ensin ja antaa vain muutaman."
+    "fi": "Mustikat voivat olla koiralle ihana pieni herkku! Aikuinen pesee ne ensin ja antaa vain muutaman.",
+    "nb": "Blåbær kan være en liten, god godbit for hunder! En voksen vasker dem først og gir bare noen få."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "hr": "Svježe ili zamrznute borovnice?",
         "sv": "Färska eller frysta blåbär?",
         "da": "Friske eller frosne blåbær?",
-        "fi": "Tuoreita vai pakastettuja mustikoita?"
+        "fi": "Tuoreita vai pakastettuja mustikoita?",
+        "nb": "Ferske eller frosne blåbær?"
       },
       "a": {
         "en": "Both are fine. You can offer your dog either fresh or frozen blueberries.",
@@ -93,7 +102,8 @@
         "hr": "Obje su u redu. Psu možeš ponuditi svježe ili zamrznute borovnice.",
         "sv": "Båda går bra. Du kan ge hunden antingen färska eller frysta blåbär.",
         "da": "Begge dele er fint. Du kan give din hund både friske og frosne blåbær.",
-        "fi": "Molemmat käyvät. Voit tarjota koirallesi joko tuoreita tai pakastettuja mustikoita."
+        "fi": "Molemmat käyvät. Voit tarjota koirallesi joko tuoreita tai pakastettuja mustikoita.",
+        "nb": "Begge deler går fint. Du kan gi hunden enten ferske eller frosne blåbær."
       }
     }
   ],
@@ -181,6 +191,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b0102b2af9dab348a627bc45a815524b1bcff482cc92e81a83c75f7e3bf47c64"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2cb3254cb6ef7fef0b4b27ff2e135299d712accff0835cc9c1ffea614b484412"
     }
   }
 }

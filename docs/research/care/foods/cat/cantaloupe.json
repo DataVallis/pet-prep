@@ -8,7 +8,8 @@
     "hr": "Dinja",
     "sv": "Cantaloupemelon",
     "da": "Cantaloupemelon",
-    "fi": "Cantaloupe-meloni"
+    "fi": "Cantaloupe-meloni",
+    "nb": "Cantaloupemelon"
   },
   "question": {
     "en": "Can cats eat cantaloupe?",
@@ -17,7 +18,8 @@
     "hr": "Smiju li mačke jesti dinju?",
     "sv": "Får katter äta cantaloupemelon?",
     "da": "Må katte spise cantaloupemelon?",
-    "fi": "Saako kissa syödä cantaloupe-melonia?"
+    "fi": "Saako kissa syödä cantaloupe-melonia?",
+    "nb": "Kan katter spise cantaloupemelon?"
   },
   "url_slug": {
     "en": "cantaloupe",
@@ -26,7 +28,8 @@
     "hr": "dinja",
     "sv": "cantaloupemelon",
     "da": "cantaloupemelon",
-    "fi": "cantaloupe-meloni"
+    "fi": "cantaloupe-meloni",
+    "nb": "cantaloupemelon"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "hr": "Da, mali komadić dinje u redu je kao povremena poslastica. ASPCA navodi dinju kao neotrovnu za mačke, ali mačke su mesojedi i ne trebaju voće, a bilo koja biljka može izazvati želučane tegobe, pa neka ostane samo sitan dodatak.",
     "sv": "Ja, en liten bit cantaloupemelon går bra som godbit någon gång ibland. ASPCA anger att cantaloupemelon inte är giftig för katter, men katter är köttätare och behöver inte frukt, och alla växter kan ge orolig mage, så låt det bara vara något pyttelitet extra.",
     "da": "Ja, et lille stykke cantaloupemelon er fint som en godbid en gang imellem. ASPCA opfører cantaloupemelon som ikke giftig for katte, men katte er kødædere og har ikke brug for frugt, og alle planter kan give dårlig mave, så lad det kun være et bitte lille ekstra.",
-    "fi": "Kyllä, pieni pala cantaloupe-melonia sopii satunnaiseksi herkuksi. ASPCA luokittelee cantaloupe-melonin kissoille myrkyttömäksi, mutta kissat ovat lihansyöjiä eivätkä tarvitse hedelmiä, ja mikä tahansa kasvi voi aiheuttaa vatsavaivoja, joten pidä se pikkuisena lisänä."
+    "fi": "Kyllä, pieni pala cantaloupe-melonia sopii satunnaiseksi herkuksi. ASPCA luokittelee cantaloupe-melonin kissoille myrkyttömäksi, mutta kissat ovat lihansyöjiä eivätkä tarvitse hedelmiä, ja mikä tahansa kasvi voi aiheuttaa vatsavaivoja, joten pidä se pikkuisena lisänä.",
+    "nb": "Ja, en liten bit cantaloupemelon er greit som en godbit en gang iblant. ASPCA oppgir cantaloupe som ikke giftig for katter, men katter er kjøttetere og trenger ikke frukt, og alle planter kan gi urolig mage, så la det bare være litt ekstra."
   },
   "why": {
     "en": "The ASPCA lists true cantaloupe (Cucumis melo) as non-toxic to cats. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
@@ -45,7 +49,8 @@
     "hr": "ASPCA navodi pravu dinju kantalupu (Cucumis melo) kao neotrovnu za mačke. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
     "sv": "ASPCA anger att äkta cantaloupemelon (Cucumis melo) inte är giftig för katter. Katter är obligata köttätare och behöver inte frukt, godbitar ska bara vara en liten del av den dagliga maten, och allt växtmaterial kan ge kräkningar eller orolig mage.",
     "da": "ASPCA opfører ægte cantaloupemelon (Cucumis melo) som ikke giftig for katte. Katte er obligate kødædere og har ikke brug for frugt, godbidder bør kun udgøre en lille del af den daglige mad, og alt plantemateriale kan give opkast eller dårlig mave.",
-    "fi": "ASPCA luokittelee aidon cantaloupe-melonin (Cucumis melo) kissoille myrkyttömäksi. Kissat ovat pakollisia lihansyöjiä eivätkä tarvitse hedelmiä, herkkujen pitää pysyä pienenä osana päivittäistä ruokaa, ja mikä tahansa kasvimateriaali voi aiheuttaa oksentelua tai vatsavaivoja."
+    "fi": "ASPCA luokittelee aidon cantaloupe-melonin (Cucumis melo) kissoille myrkyttömäksi. Kissat ovat pakollisia lihansyöjiä eivätkä tarvitse hedelmiä, herkkujen pitää pysyä pienenä osana päivittäistä ruokaa, ja mikä tahansa kasvimateriaali voi aiheuttaa oksentelua tai vatsavaivoja.",
+    "nb": "ASPCA oppgir ekte cantaloupe (Cucumis melo) som ikke giftig for katter. Katter er obligate kjøttetere og trenger ikke frukt, godbiter bør være en liten del av den daglige maten, og alt plantemateriale kan gi oppkast eller urolig mage."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
     "sv": "Ge en liten bit först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären.",
     "da": "Giv først et lille stykke. Hvis din kat kaster op eller får dårlig mave bagefter, så stop og spørg din dyrlæge.",
-    "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai sille tulee vatsavaivoja, lopeta ja kysy neuvoa eläinlääkäriltä."
+    "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai sille tulee vatsavaivoja, lopeta ja kysy neuvoa eläinlääkäriltä.",
+    "nb": "Gi en liten bit først. Hvis katten kaster opp eller får urolig mage etterpå, slutt og spør dyrlegen."
   },
   "serving": {
     "en": "A small piece now and then, counted in your cat's daily food.",
@@ -64,7 +70,8 @@
     "hr": "Mali komadić povremeno, uračunat u dnevni obrok tvoje mačke.",
     "sv": "En liten bit då och då, inräknad i kattens dagliga matranson.",
     "da": "Et lille stykke en gang imellem, regnet med i kattens daglige mad.",
-    "fi": "Pieni pala silloin tällöin, laskettuna mukaan kissasi päivittäiseen ruokamäärään."
+    "fi": "Pieni pala silloin tällöin, laskettuna mukaan kissasi päivittäiseen ruokamäärään.",
+    "nb": "En liten bit nå og da, regnet med i kattens daglige matmengde."
   },
   "child": {
     "en": "A tiny piece of cantaloupe is OK for a cat now and then. Cats mostly need meat, so fruit is only a small extra.",
@@ -73,7 +80,8 @@
     "hr": "Sićušan komadić dinje povremeno je u redu za macu. Mačkama uglavnom treba meso, pa je voće samo mali dodatak.",
     "sv": "En pytteliten bit melon går bra för en katt då och då. Katter behöver mest kött, så frukt är bara något litet extra.",
     "da": "Et bitte lille stykke cantaloupemelon er okay for en kat en gang imellem. Katte har mest brug for kød, så frugt er kun et lille ekstra.",
-    "fi": "Pikkuinen pala cantaloupe-melonia sopii kissalle silloin tällöin. Kissat tarvitsevat enimmäkseen lihaa, joten hedelmä on vain pieni lisä."
+    "fi": "Pikkuinen pala cantaloupe-melonia sopii kissalle silloin tällöin. Kissat tarvitsevat enimmäkseen lihaa, joten hedelmä on vain pieni lisä.",
+    "nb": "En bitteliten bit cantaloupemelon er greit for en katt nå og da. Katter trenger mest kjøtt, så frukt er bare litt ekstra."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "hr": "Trebaju li mačke voće?",
         "sv": "Behöver katter frukt?",
         "da": "Har katte brug for frugt?",
-        "fi": "Tarvitsevatko kissat hedelmiä?"
+        "fi": "Tarvitsevatko kissat hedelmiä?",
+        "nb": "Trenger katter frukt?"
       },
       "a": {
         "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
@@ -93,7 +102,8 @@
         "hr": "Ne. Mačke su mesojedi: trebaju hranjive tvari koje se nalaze u mesu i u prehrani im ne treba ni voće ni povrće. Voće može biti samo mali dodatak.",
         "sv": "Nej. Katter är köttätare: de behöver näringsämnen som finns i kött och behöver inte frukt eller grönsaker i maten. Frukt kan bara vara något litet extra.",
         "da": "Nej. Katte er kødædere: De har brug for næringsstoffer der findes i kød, og har ikke brug for frugt eller grøntsager i deres kost. Frugt kan aldrig være mere end et lille ekstra.",
-        "fi": "Eivät. Kissat ovat lihansyöjiä: ne tarvitsevat lihassa olevia ravintoaineita eivätkä tarvitse ruokavalioonsa hedelmiä tai vihanneksia. Hedelmät voivat olla korkeintaan pieni lisä."
+        "fi": "Eivät. Kissat ovat lihansyöjiä: ne tarvitsevat lihassa olevia ravintoaineita eivätkä tarvitse ruokavalioonsa hedelmiä tai vihanneksia. Hedelmät voivat olla korkeintaan pieni lisä.",
+        "nb": "Nei. Katter er kjøttetere: De trenger næringsstoffer som finnes i kjøtt, og trenger ikke frukt eller grønnsaker i kostholdet. Frukt kan aldri være mer enn litt ekstra."
       }
     }
   ],
@@ -172,6 +182,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "237db0b923c9da98ca5a517de7dd9b6e74d6accd24b35e8ed47eddf6a5d33d0e"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0dd99f3615ac9787b691ecd5c231f9c0f91f5f512907197271d54b63bc532b54"
     }
   }
 }

@@ -15,7 +15,8 @@
     "hr": "Sir",
     "sv": "Ost",
     "da": "Ost",
-    "fi": "Juusto"
+    "fi": "Juusto",
+    "nb": "Ost"
   },
   "question": {
     "en": "Can dogs eat cheese?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti sir?",
     "sv": "Får hundar äta ost?",
     "da": "Må hunde spise ost?",
-    "fi": "Saako koira syödä juustoa?"
+    "fi": "Saako koira syödä juustoa?",
+    "nb": "Kan hunder spise ost?"
   },
   "url_slug": {
     "en": "cheese",
@@ -47,7 +49,8 @@
     "hr": "sir",
     "sv": "ost",
     "da": "ost",
-    "fi": "juusto"
+    "fi": "juusto",
+    "nb": "ost"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne kao redovitu poslasticu. Neki veterinarski izvori dopuštaju komadiće običnog sira s manje masti, ali sir je mastan, mnogi psi slabo probavljaju mliječne proizvode, a neki sirevi sadrže luk, češnjak ili vlasac. Posebno su zabrinjavajući sirevi s plavom plijesni.",
     "sv": "Inte som vanlig godbit. Vissa veterinärkällor tillåter små bitar naturell, mager ost, men ost är fet, många hundar har svårt att smälta mejeriprodukter, och vissa ostar innehåller lök, vitlök eller gräslök. Blåmögelost är särskilt oroande.",
     "da": "Ikke som fast godbid. Nogle dyrlægekilder tillader små stykker almindelig, magrere ost, men ost er fed, mange hunde fordøjer mejeriprodukter dårligt, og nogle oste indeholder løg, hvidløg eller purløg. Blåskimmeloste giver særlig grund til bekymring.",
-    "fi": "Ei säännöllisenä herkkuna. Jotkin eläinlääketieteelliset lähteet sallivat pieniä paloja maustamatonta, vähärasvaisempaa juustoa, mutta juusto on rasvaista, moni koira sulattaa maitotuotteita huonosti, ja joissakin juustoissa on sipulia, valkosipulia tai ruohosipulia. Sinihomejuustot ovat erityinen huolenaihe."
+    "fi": "Ei säännöllisenä herkkuna. Jotkin eläinlääketieteelliset lähteet sallivat pieniä paloja maustamatonta, vähärasvaisempaa juustoa, mutta juusto on rasvaista, moni koira sulattaa maitotuotteita huonosti, ja joissakin juustoissa on sipulia, valkosipulia tai ruohosipulia. Sinihomejuustot ovat erityinen huolenaihe.",
+    "nb": "Ikke som fast godbit. Noen veterinærmedisinske kilder godtar små biter naturell, magrere ost, men ost er fet, mange hunder tåler melkeprodukter dårlig, og noen oster inneholder løk, hvitløk eller gressløk. Blåmuggost er særlig bekymringsfullt."
   },
   "why": {
     "en": "Dogs have little lactase, the enzyme that digests milk sugar, so dairy can upset the stomach. Cheese is high in fat: too much leads to weight gain and can trigger pancreatitis. Flavoured cheeses may contain onion, garlic or chives, and blue cheeses such as Roquefort contain roquefortine C, to which dogs appear sensitive. Sources differ: the AKC and Dogs Trust allow small amounts, while Cornell lists cheese among fatty foods to avoid, so we use the stricter level.",
@@ -80,7 +84,8 @@
     "hr": "Psi imaju malo laktaze, enzima koji razgrađuje mliječni šećer, pa mliječni proizvodi mogu uznemiriti želudac. Sir sadrži mnogo masti: previše sira dovodi do debljanja i može potaknuti upalu gušterače. Sirevi s dodacima mogu sadržavati luk, češnjak ili vlasac, a sirevi s plavom plijesni, poput roqueforta, sadrže roquefortin C, na koji su psi naizgled osjetljivi. Izvori se razlikuju: AKC i Dogs Trust dopuštaju male količine, a Cornell sir ubraja u masnu hranu koju treba izbjegavati, zato primjenjujemo strožu razinu.",
     "sv": "Hundar har lite laktas, enzymet som bryter ner mjölksocker, så mejeriprodukter kan ge orolig mage. Ost är mycket fet: för mycket leder till viktökning och kan utlösa bukspottkörtelinflammation (pankreatit). Smaksatta ostar kan innehålla lök, vitlök eller gräslök, och blåmögelostar som roquefort innehåller roquefortin C, som hundar verkar vara känsliga för. Källorna skiljer sig åt: AKC och Dogs Trust tillåter små mängder, medan Cornell räknar ost till fet mat som ska undvikas, så vi använder den strängare nivån.",
     "da": "Hunde har kun lidt laktase, enzymet der fordøjer mælkesukker, så mejeriprodukter kan give dårlig mave. Ost har et højt fedtindhold: for meget fører til vægtøgning og kan udløse betændelse i bugspytkirtlen (pankreatitis). Oste med smag kan indeholde løg, hvidløg eller purløg, og blåskimmeloste som roquefort indeholder roquefortin C, som hunde ser ud til at være følsomme over for. Kilderne er uenige: AKC og Dogs Trust tillader små mængder, mens Cornell nævner ost blandt fed mad man bør undgå, så vi følger den strengere vurdering.",
-    "fi": "Koirilla on vähän laktaasia, maitosokeria pilkkovaa entsyymiä, joten maitotuotteet voivat aiheuttaa vatsavaivoja. Juustossa on paljon rasvaa: liian suuri määrä johtaa painonnousuun ja voi laukaista haimatulehduksen. Maustetuissa juustoissa voi olla sipulia, valkosipulia tai ruohosipulia, ja sinihomejuustot, kuten roquefort, sisältävät roquefortiini C:tä, jolle koirat vaikuttavat olevan herkkiä. Lähteet ovat eri mieltä: AKC ja Dogs Trust sallivat pieniä määriä, kun taas Cornell mainitsee juuston vältettävien rasvaisten ruokien joukossa, joten käytämme tiukempaa luokitusta."
+    "fi": "Koirilla on vähän laktaasia, maitosokeria pilkkovaa entsyymiä, joten maitotuotteet voivat aiheuttaa vatsavaivoja. Juustossa on paljon rasvaa: liian suuri määrä johtaa painonnousuun ja voi laukaista haimatulehduksen. Maustetuissa juustoissa voi olla sipulia, valkosipulia tai ruohosipulia, ja sinihomejuustot, kuten roquefort, sisältävät roquefortiini C:tä, jolle koirat vaikuttavat olevan herkkiä. Lähteet ovat eri mieltä: AKC ja Dogs Trust sallivat pieniä määriä, kun taas Cornell mainitsee juuston vältettävien rasvaisten ruokien joukossa, joten käytämme tiukempaa luokitusta.",
+    "nb": "Hunder har lite laktase, enzymet som bryter ned melkesukker, så melkeprodukter kan gi urolig mage. Ost inneholder mye fett: For mye fører til vektøkning og kan utløse betennelse i bukspyttkjertelen. Oster med smak kan inneholde løk, hvitløk eller gressløk, og blåmuggoster som roquefort inneholder roquefortin C, som hunder ser ut til å være følsomme for. Kildene er uenige: AKC og Dogs Trust godtar små mengder, mens Cornell nevner ost blant fet mat som bør unngås, så vi bruker det strengeste nivået."
   },
   "signs": {
     "en": [
@@ -166,6 +171,12 @@
       "Oksentelu",
       "Vatsakipu, pahoinvointi, väsymys tai huono ruokahalu (mahdollinen haimatulehdus)",
       "Lihasvapina sinihomejuuston jälkeen"
+    ],
+    "nb": [
+      "Diaré eller annen urolig mage",
+      "Oppkast",
+      "Magesmerter, kvalme, lite energi eller dårlig matlyst (mulig betennelse i bukspyttkjertelen)",
+      "Muskelskjelvinger etter blåmuggost"
     ]
   },
   "what_to_do": {
@@ -182,7 +193,8 @@
     "hr": "Za mali komadić običnog sira obično je dovoljno pratiti ima li pas probavnih smetnji. Nazovi veterinara ako je pas pojeo mnogo sira, sir s plavom plijesni ili sir s lukom, češnjakom ili vlascem, ili ako povraća, ima bolove u trbuhu ili drhti.",
     "sv": "En liten naturell bit kräver oftast inget mer än att du håller utkik efter magbesvär. Ring veterinären om hunden har ätit mycket ost, blåmögelost eller ost med lök, vitlök eller gräslök, eller får kräkningar, ont i magen eller darrningar.",
     "da": "Et lille stykke almindelig ost kræver som regel kun at du holder øje med dårlig mave. Ring til din dyrlæge hvis hunden har spist meget ost, blåskimmelost eller ost med løg, hvidløg eller purløg, eller hvis den får opkast, mavesmerter eller muskelrystelser.",
-    "fi": "Pienen maustamattoman palan jälkeen riittää yleensä, että seuraat, tuleeko vatsavaivoja. Soita eläinlääkärille, jos koirasi söi paljon juustoa, söi sinihomejuustoa tai juustoa, jossa oli sipulia, valkosipulia tai ruohosipulia, tai jos sillä ilmenee oksentelua, vatsakipua tai vapinaa."
+    "fi": "Pienen maustamattoman palan jälkeen riittää yleensä, että seuraat, tuleeko vatsavaivoja. Soita eläinlääkärille, jos koirasi söi paljon juustoa, söi sinihomejuustoa tai juustoa, jossa oli sipulia, valkosipulia tai ruohosipulia, tai jos sillä ilmenee oksentelua, vatsakipua tai vapinaa.",
+    "nb": "En liten, naturell bit krever vanligvis ikke mer enn at du følger med på om hunden får urolig mage. Ring dyrlegen hvis hunden har spist mye ost, har spist blåmuggost eller ost med løk, hvitløk eller gressløk, eller får oppkast, magesmerter eller skjelvinger."
   },
   "serving": {
     "en": "If you share at all: a tiny piece of plain, lower-fat cheese such as mozzarella or cottage cheese, never flavoured or blue cheese.",
@@ -198,7 +210,8 @@
     "hr": "Ako ga uopće dijeliš: maleni komadić običnog sira s manje masti, poput mozzarelle ili zrnatog svježeg sira, nikad sir s dodacima ili s plavom plijesni.",
     "sv": "Om alls: en pytteliten bit naturell, mager ost som mozzarella eller keso, aldrig smaksatt ost eller blåmögelost.",
     "da": "Hvis du overhovedet deler: et bitte lille stykke almindelig, magrere ost som mozzarella eller hytteost, aldrig ost med smag eller blåskimmelost.",
-    "fi": "Jos annat ollenkaan: pikkuinen pala maustamatonta, vähärasvaisempaa juustoa, kuten mozzarellaa tai raejuustoa, ei koskaan maustettua juustoa tai sinihomejuustoa."
+    "fi": "Jos annat ollenkaan: pikkuinen pala maustamatonta, vähärasvaisempaa juustoa, kuten mozzarellaa tai raejuustoa, ei koskaan maustettua juustoa tai sinihomejuustoa.",
+    "nb": "Hvis du i det hele tatt deler: en ørliten bit naturell, magrere ost som mozzarella eller cottage cheese, aldri ost med smak eller blåmuggost."
   },
   "child": {
     "en": "Cheese is very fatty for a dog's tummy. A tiny plain piece now and then is plenty — ask a grown-up first.",
@@ -214,7 +227,8 @@
     "hr": "Sir je jako mastan za pseći trbuščić. Maleni komadić običnog sira tu i tamo sasvim je dovoljan – prvo pitaj odraslu osobu.",
     "sv": "Ost är väldigt fet för en hundmage. En pytteliten vanlig bit ibland räcker gott – fråga en vuxen först.",
     "da": "Ost er meget fed for en hundemave. Et bitte lille stykke almindelig ost en gang imellem er rigeligt – spørg en voksen først.",
-    "fi": "Juusto on koiran mahalle hyvin rasvaista. Pikkuinen maustamaton pala silloin tällöin riittää hyvin – kysy ensin aikuiselta."
+    "fi": "Juusto on koiran mahalle hyvin rasvaista. Pikkuinen maustamaton pala silloin tällöin riittää hyvin – kysy ensin aikuiselta.",
+    "nb": "Ost er veldig fett for magen til en hund. En ørliten, naturell bit en gang iblant er nok – spør en voksen først."
   },
   "faq": [
     {
@@ -232,7 +246,8 @@
         "hr": "Je li sir s plavom plijesni za pse gori od drugih sireva?",
         "sv": "Är blåmögelost värre än annan ost för hundar?",
         "da": "Er blåskimmelost værre end anden ost for hunde?",
-        "fi": "Onko sinihomejuusto koirille pahempaa kuin muut juustot?"
+        "fi": "Onko sinihomejuusto koirille pahempaa kuin muut juustot?",
+        "nb": "Er blåmuggost verre enn annen ost for hunder?"
       },
       "a": {
         "en": "Yes. Roquefort and other blue cheeses contain roquefortine C, and dogs appear sensitive to it; severe cases can bring muscle tremors.",
@@ -248,7 +263,8 @@
         "hr": "Da. Roquefort i drugi sirevi s plavom plijesni sadrže roquefortin C, na koji su psi naizgled osjetljivi; u težim slučajevima može se pojaviti drhtanje mišića.",
         "sv": "Ja. Roquefort och andra blåmögelostar innehåller roquefortin C, och hundar verkar vara känsliga för det; i allvarliga fall kan det ge muskeldarrningar.",
         "da": "Ja. Roquefort og andre blåskimmeloste indeholder roquefortin C, og hunde ser ud til at være følsomme over for det; i alvorlige tilfælde kan det give muskelrystelser.",
-        "fi": "On. Roquefort ja muut sinihomejuustot sisältävät roquefortiini C:tä, ja koirat vaikuttavat olevan sille herkkiä; vakavissa tapauksissa voi ilmetä lihasvapinaa."
+        "fi": "On. Roquefort ja muut sinihomejuustot sisältävät roquefortiini C:tä, ja koirat vaikuttavat olevan sille herkkiä; vakavissa tapauksissa voi ilmetä lihasvapinaa.",
+        "nb": "Ja. Roquefort og andre blåmuggoster inneholder roquefortin C, og hunder ser ut til å være følsomme for det; i alvorlige tilfeller kan det gi muskelskjelvinger."
       }
     },
     {
@@ -266,7 +282,8 @@
         "hr": "Koji je sir najmanje rizičan?",
         "sv": "Vilken ost är minst riskabel?",
         "da": "Hvilken ost er mindst risikabel?",
-        "fi": "Mikä juusto on vähiten riskialtis?"
+        "fi": "Mikä juusto on vähiten riskialtis?",
+        "nb": "Hvilken ost er minst risikabel?"
       },
       "a": {
         "en": "Lower-fat plain cheeses such as mozzarella, cottage cheese or soft goat cheese, in a small amount.",
@@ -282,7 +299,8 @@
         "hr": "Obični sirevi s manje masti, poput mozzarelle, zrnatog svježeg sira ili mekog kozjeg sira, u maloj količini.",
         "sv": "Magra naturella ostar som mozzarella, keso eller mjuk getost, i en liten mängd.",
         "da": "Almindelige, magrere oste som mozzarella, hytteost eller blød gedeost i en lille mængde.",
-        "fi": "Vähärasvaisemmat maustamattomat juustot, kuten mozzarella, raejuusto tai pehmeä vuohenjuusto, pieninä määrinä."
+        "fi": "Vähärasvaisemmat maustamattomat juustot, kuten mozzarella, raejuusto tai pehmeä vuohenjuusto, pieninä määrinä.",
+        "nb": "Magrere, naturelle oster som mozzarella, cottage cheese eller myk ost av geitemelk, i en liten mengde."
       }
     }
   ],
@@ -428,6 +446,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4c8b5e172a36eaa375718af15148f0583401248e7d149037cc6ed4d669bfb375"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "56cdaa67f9ff0d66aa818af0be4b4706c77048c86930b7c27d1abf22b215aebd"
     }
   }
 }
