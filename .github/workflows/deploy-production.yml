@@ -46,6 +46,7 @@ concurrency:
 permissions:
   contents: read
   actions: read # plan: read runs + marker artifacts of this repository
+  pull-requests: read # plan (D28b): the merged PR of a push to main
 
 jobs:
   plan:
@@ -91,6 +92,46 @@ jobs:
           DEPLOY_TARGET: ${{ steps.target.outputs.target }}
           FORCE_TESTS: ${{ inputs.force_tests == true }}
         run: bash scripts/ci-plan.sh
+
+      # D28b: this tree is proven by the merged PR's green run (main moved only elsewhere).
+      - name: Upload derived marker (backend)
+        if: steps.plan.outputs.derived_backend == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-green-backend-${{ steps.plan.outputs.tree }}
+          path: ${{ steps.plan.outputs.derived_dir }}/backend/ci-green.txt
+          retention-days: 14
+          overwrite: true
+
+      # D28b: this tree is proven by the merged PR's green run (main moved only elsewhere).
+      - name: Upload derived marker (mobile)
+        if: steps.plan.outputs.derived_mobile == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-green-mobile-${{ steps.plan.outputs.tree }}
+          path: ${{ steps.plan.outputs.derived_dir }}/mobile/ci-green.txt
+          retention-days: 14
+          overwrite: true
+
+      # D28b: this tree is proven by the merged PR's green run (main moved only elsewhere).
+      - name: Upload derived marker (scripts)
+        if: steps.plan.outputs.derived_scripts == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-green-scripts-${{ steps.plan.outputs.tree }}
+          path: ${{ steps.plan.outputs.derived_dir }}/scripts/ci-green.txt
+          retention-days: 14
+          overwrite: true
+
+      # D28b: this tree is proven by the merged PR's green run (main moved only elsewhere).
+      - name: Upload derived marker (image)
+        if: steps.plan.outputs.derived_image == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-green-image-${{ steps.plan.outputs.tree }}
+          path: ${{ steps.plan.outputs.derived_dir }}/image/ci-green.txt
+          retention-days: 14
+          overwrite: true
 
   backend-tests:
     name: Backend tests (Pest on PostgreSQL)
@@ -192,6 +233,11 @@ jobs:
           tree="$(git rev-parse 'HEAD^{tree}')"
           echo "tree=${tree}" >> "$GITHUB_OUTPUT"
           echo "${tree} ${GITHUB_RUN_ID}" > "${RUNNER_TEMP}/ci-green.txt"
+          # D28b: the PR merge commit's first parent = the main the PR was tested on
+          # (cat-file: the raw parent line also exists in a depth-1 checkout).
+          if [ "$GITHUB_EVENT_NAME" = pull_request ]; then
+            echo "base=$(git cat-file -p HEAD | sed -n 's/^parent //p' | head -n1)" >> "${RUNNER_TEMP}/ci-green.txt"
+          fi
 
       - name: Upload green-tree marker
         uses: actions/upload-artifact@v4
@@ -236,6 +282,11 @@ jobs:
           tree="$(git rev-parse 'HEAD^{tree}')"
           echo "tree=${tree}" >> "$GITHUB_OUTPUT"
           echo "${tree} ${GITHUB_RUN_ID}" > "${RUNNER_TEMP}/ci-green.txt"
+          # D28b: the PR merge commit's first parent = the main the PR was tested on
+          # (cat-file: the raw parent line also exists in a depth-1 checkout).
+          if [ "$GITHUB_EVENT_NAME" = pull_request ]; then
+            echo "base=$(git cat-file -p HEAD | sed -n 's/^parent //p' | head -n1)" >> "${RUNNER_TEMP}/ci-green.txt"
+          fi
 
       - name: Upload green-tree marker
         uses: actions/upload-artifact@v4
@@ -317,6 +368,11 @@ jobs:
           tree="$(git rev-parse 'HEAD^{tree}')"
           echo "tree=${tree}" >> "$GITHUB_OUTPUT"
           echo "${tree} ${GITHUB_RUN_ID}" > "${RUNNER_TEMP}/ci-green.txt"
+          # D28b: the PR merge commit's first parent = the main the PR was tested on
+          # (cat-file: the raw parent line also exists in a depth-1 checkout).
+          if [ "$GITHUB_EVENT_NAME" = pull_request ]; then
+            echo "base=$(git cat-file -p HEAD | sed -n 's/^parent //p' | head -n1)" >> "${RUNNER_TEMP}/ci-green.txt"
+          fi
 
       - name: Upload green-tree marker
         uses: actions/upload-artifact@v4
@@ -520,6 +576,11 @@ jobs:
           tree="$(git rev-parse 'HEAD^{tree}')"
           echo "tree=${tree}" >> "$GITHUB_OUTPUT"
           echo "${tree} ${GITHUB_RUN_ID}" > "${RUNNER_TEMP}/ci-green.txt"
+          # D28b: the PR merge commit's first parent = the main the PR was tested on
+          # (cat-file: the raw parent line also exists in a depth-1 checkout).
+          if [ "$GITHUB_EVENT_NAME" = pull_request ]; then
+            echo "base=$(git cat-file -p HEAD | sed -n 's/^parent //p' | head -n1)" >> "${RUNNER_TEMP}/ci-green.txt"
+          fi
           # D28: the deploy reads the digests from this marker (empty for fork PRs → server build).
           printf 'app=%s\nweb=%s\n' "$APP_DIGEST" "$WEB_DIGEST" >> "${RUNNER_TEMP}/ci-green.txt"
 
