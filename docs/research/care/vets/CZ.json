@@ -56,6 +56,46 @@
       "name": "firmy.cz 'Veterinary emergencies' categories (pointer only)",
       "url": "https://en.firmy.cz/First-aid-and-health-care/Health-care-services/Veterinary-medicine/Veterinary-emergencies/kraj-moravskoslezsky",
       "note": "Aggregator; used only to find clinic names/domains, never as a source of facts."
+    },
+    {
+      "name": "Veterinární klinika LIFE - kontakt",
+      "url": "https://veterinahavirov.cz/kontakt/",
+      "note": "opened"
+    },
+    {
+      "name": "Veterinární klinika LIFE - pohotovost",
+      "url": "https://veterinahavirov.cz/pohotovost/",
+      "note": "opened"
+    },
+    {
+      "name": "CTVET - pohotovost (lists Lískovka, Life, Alfavet)",
+      "url": "https://ctvet.cz/pohotovost/",
+      "note": "opened"
+    },
+    {
+      "name": "Veterina Na Vozovně",
+      "url": "https://veterinanavozovne.cz/kontakt/",
+      "note": "opened"
+    },
+    {
+      "name": "Klinika NISA Liberec",
+      "url": "https://www.klinikanisa.cz/kontakt/",
+      "note": "opened"
+    },
+    {
+      "name": "ALTAVET kontakt + rozpis služeb",
+      "url": "https://www.alta-vet.cz/kontakt",
+      "note": "opened"
+    },
+    {
+      "name": "ABVET Bohumín",
+      "url": "https://www.abvet.cz/kontakty/",
+      "note": "opened"
+    },
+    {
+      "name": "HERRIOVET Hlučín",
+      "url": "https://herriovet.cz/kontakt/",
+      "note": "opened"
     }
   ],
   "entries": [
@@ -1027,7 +1067,113 @@
       "source_url": "https://www.zoovet.cz/oteviraci-doba/",
       "checked": "2026-11-02",
       "note": "Same mobile number is the main line and the on-call doctor; second number +420 495 262 144 (unlabelled)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinární klinika LIFE (Havířov)",
+      "city": "Havířov",
+      "region": "Moravskoslezský kraj",
+      "address": "Dělnická 59, 736 01 Havířov",
+      "phone": "+420 596 440 607",
+      "emergency_24h": false,
+      "duty": "Emergency out of hours for acute patients only, call +420 776 280 984 first; regular hours Mon-Fri 8:00-19:00, Sat-Sun 8:00-12:00 (page lists two differing hour versions).",
+      "small_animals": true,
+      "url": "https://veterinahavirov.cz/",
+      "source_url": "https://veterinahavirov.cz/kontakt/",
+      "checked": "2026-11-02",
+      "note": "No 24 h claim on the page. Pohotovost page lists +420 776 280 984 and also +420 776 289 484 (conflict); ctvet.cz lists the clinic under +420 776 280 741. Branch in Rychvald (Orlovská 404) not added.",
+      "quote": "Pohotovost mimo ordinační dobu pouze pro akutní pacienty."
+    },
+    {
+      "kind": "clinic",
+      "name": "Lískovka (veterinární klinika)",
+      "city": "Frýdek-Místek",
+      "region": "Moravskoslezský kraj",
+      "address": "Nádražní 1097, Frýdek-Místek",
+      "phone": "+420 776 638 104",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://ctvet.cz/pohotovost/",
+      "checked": "2026-11-02",
+      "note": "Only source: CTVET emergency page naming it as a partner clinic in Frýdek-Místek; the clinic's own website could not be found (liskovka.cz is an unrelated bistro). Hours/24 h not verified.",
+      "quote": "Lískovka (Nádražní 1097, +420 776 638 104)"
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterina Na Vozovně",
+      "city": "Ostrava-Poruba",
+      "region": "Moravskoslezský kraj",
+      "address": "Bohuslava Martinů 6090/3, 708 00 Ostrava 8",
+      "phone": "+420 704 704 334",
+      "emergency_24h": false,
+      "duty": "Mon 9-20, Tue 9-14, Wed/Thu 9-14 and 18-20, Fri 9-14 (16-18 by appointment); Sat/Sun by phone arrangement.",
+      "small_animals": true,
+      "url": "https://veterinanavozovne.cz/",
+      "source_url": "https://veterinanavozovne.cz/kontakt/",
+      "checked": "2026-11-02",
+      "note": "No 24 h claim; emergency only by phone arrangement."
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinární klinika NISA",
+      "city": "Liberec",
+      "region": "Liberecký kraj",
+      "address": "Na Zápraží 390/1, 460 01 Liberec 3",
+      "phone": "+420 485 102 277",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 8-18, closed weekends and holidays.",
+      "small_animals": true,
+      "url": "https://www.klinikanisa.cz/",
+      "source_url": "https://www.klinikanisa.cz/kontakt/",
+      "checked": "2026-11-02",
+      "note": "No 24 h or emergency service stated; other numbers +420 722 400 420, +420 602 222 012."
+    },
+    {
+      "kind": "clinic",
+      "name": "ALTAVET",
+      "city": "Praha",
+      "region": "Praha",
+      "address": "Na Universitním statku 623/2a, 108 00 Praha 10 - Malešice",
+      "phone": "+420 274 773 637",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 9:00-22:00 (two shifts per rota page), weekends closed.",
+      "small_animals": true,
+      "url": "https://www.alta-vet.cz/",
+      "source_url": "https://www.alta-vet.cz/kontakt",
+      "checked": "2026-11-02",
+      "note": "No 24 h wording; weekday evening opening until 22:00. Second phone +420 774 103 709."
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinární klinika ABVET Bohumín",
+      "city": "Bohumín",
+      "region": "Moravskoslezský kraj",
+      "address": "Jateční 1202, 735 51 Bohumín",
+      "phone": "+420 555 333 738",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 8-18, Sat 9-12, Sun 9-11; emergency Sat, Sun and holidays until 18:00.",
+      "small_animals": true,
+      "url": "https://www.abvet.cz/",
+      "source_url": "https://www.abvet.cz/kontakty/",
+      "checked": "2026-11-02",
+      "note": "No 24 h wording.",
+      "quote": "Pohotovost Sobota, neděle a svátky do 18.00"
+    },
+    {
+      "kind": "clinic",
+      "name": "HERRIOVET (Veterinární ordinace Hlučín)",
+      "city": "Hlučín",
+      "region": "Moravskoslezský kraj",
+      "address": "Pode Zdí 142/5, 748 01 Hlučín",
+      "phone": "+420 775 935 080",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 8:30-17:00, Sat 9:00-11:30; Pohotovost phone +420 602 743 813 (no hours given); question line +420 775 935 080.",
+      "small_animals": true,
+      "url": "https://herriovet.cz/",
+      "source_url": "https://herriovet.cz/kontakt/",
+      "checked": "2026-11-02",
+      "note": "No 24 h wording; emergency number published without hours."
     }
   ],
-  "notes": "First CZ run 2026-11-02. 24 h (explicit on a page): Praha - Erika, IVET, AAVET, VETNEMO Libuš, Medicanima (night by phone arrangement), Pet-Medic (mobile emergency service), VetPark Praha 9 (only per Praha 11 city page); Český Brod - Vetnem ('24/7', weekend lunch break); Brno - Zvíře+, Seman, Hošek (own site unreachable; Veslařská 25b per Brnolove vs Gellnerova 8 per Avetum), VETUNI small-animal clinic ('non stop'); Olomouc - Mazoch (00-06 by phone); Ostrava - Nytra; Liberec - Hanychov (24-h phone, page also says 'do 22:00'); Trutnov - Horská veterinární klinika (24-h phone on-call, vet comes in), Veterinář s.r.o. ('Nepřetržitá pohotovost'); Jihlava - Okřina (single vet, not during holidays); plus TIS poison line. Not marked 24 h although close: Jaggy Brno and Jaggy Praha (17-09 weekdays + weekend nonstop), HANZA Hradec Králové (weekend nonstop), Mi-Vet Ústí (19-08 + weekend nonstop), VETINO Aesculap Pardubice (contradictory), Vetcentrum Stodůlky (to 24:00 then Pet-Medic), Veterina Helion (meta 'nonstop' but 20-22 hours), Růžodol Liberec (downgraded in the independent check: 24/7 only in the meta description, no visible hours or phone). Duty rotas: Czechia has no national or chamber-run rota; only Karlovarský kraj runs a region-funded weekend/holiday first-aid rota (14-17). Plzeň has no nonstop small-animal service (Zodiacus plans one with the city from 2027). Poison line: TIS Praha (+420 224 919 293 / 224 915 402, 24 h) explicitly handles poisonings of people and animals - added as poison_line. Left / unreachable: sos.vetkom.cz chamber emergency list (fetch blocked - next run should try it first, it may list all emergency workplaces); robots-disallowed: veterinakleisslova.cz (Plzeň, Kleisslova clinic - has emergency service), veterinar-vyskov.cz (VyVet, likely 24 h), veterinapraha.cz (VetPark), veterinarni-klinika-brno.com, veterinarni-klinika-praha.com, klinika-vltava.cz (České Budějovice), veterina-vimperk.cz; hosek-vet.cz redirect loop; kremenny.wixsite.com (Veterinární klinika Nisa Liberec, advertises nonstop) client error; veterinarninemocnice.cz (Hynar Opava) error; fvl.vfu.cz emergency page server error; aroundprague.cz client error; prague.eu rate-limited. Not yet covered: Opava (Hynar), Frýdek-Místek (AlfaVet), Třinec (Lískovka), Kolín (A.A.R.), Tachov, Lanškroun, Mikulov, ZooVET Hradec Králové, VETMED Ostrava, Brno ABClinic / VetPark Brno, Prachatice/Vimperk (Šumava), Špindlerův Mlýn, Liberec Nisa, Teplice/Most/Chomutov/Děčín, Mladá Boleslav, Kladno; Karlovy Vary rota practices could be added as clinics. Independent check 2026-11-02: opened every 24-h entry, the duty rota, the poison line and 7 random other clinics (seed 1102); all confirmed except Růžodol (downgraded); Hošek address set to Veslařská 25b; Nytra url removed (pointed to another practice's site).\n\nFollow-up run 2026-11-02 (CZ follow-up): Follow-up run 2026-11-02. In this environment WebFetch only opens URLs that appeared in search results, so progress was slow; 12 entries added, none 24 h (no opened page used 24 h / nonstop wording). Added: Opava (Hynar poliklinika, Na Kopci), Český Těšín (CTVET), Dolní Lutyně (Veticea), Frýdek-Místek (AlfaVet, emergency to 23:00), Kladno (Veterina Kladno, VETLIFE), Kolín (A.A.R.), Mladá Boleslav (MBvet), Stará Boleslav (Petpoint), Most (VeterinaMost), Hradec Králové (ZOOVET, emergency to 24:00 weekdays). Unreachable / failed twice: sos.vetkom.cz (provenance block, again - not retried further), vetmed.cz (VETMED, Ostrava/other; kontakt and ordinacni-hodiny both client error), veterina-pohotovost.cz Opava page, veterinachomutov.cz (client error), veterinamost.cz/pohotovost and /ord_hodiny sub-pages, veterinadecin.cz (http/https redirect loop), veterina-tachov.cz (http/https redirect loop), veticea.cz/osetreni-mimo-ordinacni-hodiny, veterina-vimperk.cz (robots-disallowed earlier, not retried). Found but no useful visible data: veterina-teplice.cz (hours only in an image, no phone, 'NETELEFONUJTE DO ORDINACE'; not added). Not reached: Třinec (Lískovka clinic site not found - liskovka.cz is a restaurant), Frýdek-Místek Lískovka and Havířov Life (named on ctvet.cz: Lískovka, Nádražní 1097, +420 776 638 104; Life, Dělnická 59, +420 776 280 741 - not opened on their own sites), Prachatice, Špindlerův Mlýn (no clinic found), Teplice Mi-Vet branch (already in notes), more Brno/Ostrava clinics (ABClinic, VetPark Brno, Veterina Na Vozovně Ostrava-Poruba, Veterinární klinika Nisa Liberec), Sonda.cz and Altavet Praha, Český Těšín nearby ABvet Bohumín, Herriovet Hlučín, Veterinární Ošetřovna Nový Jičín. Tip: domain-restricted WebSearch (allowed_domains with guessed clinic domains) is the only way to get a clinic's own pages into the fetchable set. Independent check: 5 of 12 new entries opened (AlfaVet, ZOOVET, CTVET, VETLIFE Kladno, MBvet), all confirmed, 0 fixed, 0 removed; the other 7 are unchecked."
+  "notes": "First CZ run 2026-11-02. 24 h (explicit on a page): Praha - Erika, IVET, AAVET, VETNEMO Libuš, Medicanima (night by phone arrangement), Pet-Medic (mobile emergency service), VetPark Praha 9 (only per Praha 11 city page); Český Brod - Vetnem ('24/7', weekend lunch break); Brno - Zvíře+, Seman, Hošek (own site unreachable; Veslařská 25b per Brnolove vs Gellnerova 8 per Avetum), VETUNI small-animal clinic ('non stop'); Olomouc - Mazoch (00-06 by phone); Ostrava - Nytra; Liberec - Hanychov (24-h phone, page also says 'do 22:00'); Trutnov - Horská veterinární klinika (24-h phone on-call, vet comes in), Veterinář s.r.o. ('Nepřetržitá pohotovost'); Jihlava - Okřina (single vet, not during holidays); plus TIS poison line. Not marked 24 h although close: Jaggy Brno and Jaggy Praha (17-09 weekdays + weekend nonstop), HANZA Hradec Králové (weekend nonstop), Mi-Vet Ústí (19-08 + weekend nonstop), VETINO Aesculap Pardubice (contradictory), Vetcentrum Stodůlky (to 24:00 then Pet-Medic), Veterina Helion (meta 'nonstop' but 20-22 hours), Růžodol Liberec (downgraded in the independent check: 24/7 only in the meta description, no visible hours or phone). Duty rotas: Czechia has no national or chamber-run rota; only Karlovarský kraj runs a region-funded weekend/holiday first-aid rota (14-17). Plzeň has no nonstop small-animal service (Zodiacus plans one with the city from 2027). Poison line: TIS Praha (+420 224 919 293 / 224 915 402, 24 h) explicitly handles poisonings of people and animals - added as poison_line. Left / unreachable: sos.vetkom.cz chamber emergency list (fetch blocked - next run should try it first, it may list all emergency workplaces); robots-disallowed: veterinakleisslova.cz (Plzeň, Kleisslova clinic - has emergency service), veterinar-vyskov.cz (VyVet, likely 24 h), veterinapraha.cz (VetPark), veterinarni-klinika-brno.com, veterinarni-klinika-praha.com, klinika-vltava.cz (České Budějovice), veterina-vimperk.cz; hosek-vet.cz redirect loop; kremenny.wixsite.com (Veterinární klinika Nisa Liberec, advertises nonstop) client error; veterinarninemocnice.cz (Hynar Opava) error; fvl.vfu.cz emergency page server error; aroundprague.cz client error; prague.eu rate-limited. Not yet covered: Opava (Hynar), Frýdek-Místek (AlfaVet), Třinec (Lískovka), Kolín (A.A.R.), Tachov, Lanškroun, Mikulov, ZooVET Hradec Králové, VETMED Ostrava, Brno ABClinic / VetPark Brno, Prachatice/Vimperk (Šumava), Špindlerův Mlýn, Liberec Nisa, Teplice/Most/Chomutov/Děčín, Mladá Boleslav, Kladno; Karlovy Vary rota practices could be added as clinics. Independent check 2026-11-02: opened every 24-h entry, the duty rota, the poison line and 7 random other clinics (seed 1102); all confirmed except Růžodol (downgraded); Hošek address set to Veslařská 25b; Nytra url removed (pointed to another practice's site).\n\nFollow-up run 2026-11-02 (CZ follow-up): Follow-up run 2026-11-02. In this environment WebFetch only opens URLs that appeared in search results, so progress was slow; 12 entries added, none 24 h (no opened page used 24 h / nonstop wording). Added: Opava (Hynar poliklinika, Na Kopci), Český Těšín (CTVET), Dolní Lutyně (Veticea), Frýdek-Místek (AlfaVet, emergency to 23:00), Kladno (Veterina Kladno, VETLIFE), Kolín (A.A.R.), Mladá Boleslav (MBvet), Stará Boleslav (Petpoint), Most (VeterinaMost), Hradec Králové (ZOOVET, emergency to 24:00 weekdays). Unreachable / failed twice: sos.vetkom.cz (provenance block, again - not retried further), vetmed.cz (VETMED, Ostrava/other; kontakt and ordinacni-hodiny both client error), veterina-pohotovost.cz Opava page, veterinachomutov.cz (client error), veterinamost.cz/pohotovost and /ord_hodiny sub-pages, veterinadecin.cz (http/https redirect loop), veterina-tachov.cz (http/https redirect loop), veticea.cz/osetreni-mimo-ordinacni-hodiny, veterina-vimperk.cz (robots-disallowed earlier, not retried). Found but no useful visible data: veterina-teplice.cz (hours only in an image, no phone, 'NETELEFONUJTE DO ORDINACE'; not added). Not reached: Třinec (Lískovka clinic site not found - liskovka.cz is a restaurant), Frýdek-Místek Lískovka and Havířov Life (named on ctvet.cz: Lískovka, Nádražní 1097, +420 776 638 104; Life, Dělnická 59, +420 776 280 741 - not opened on their own sites), Prachatice, Špindlerův Mlýn (no clinic found), Teplice Mi-Vet branch (already in notes), more Brno/Ostrava clinics (ABClinic, VetPark Brno, Veterina Na Vozovně Ostrava-Poruba, Veterinární klinika Nisa Liberec), Sonda.cz and Altavet Praha, Český Těšín nearby ABvet Bohumín, Herriovet Hlučín, Veterinární Ošetřovna Nový Jičín. Tip: domain-restricted WebSearch (allowed_domains with guessed clinic domains) is the only way to get a clinic's own pages into the fetchable set. Independent check: 5 of 12 new entries opened (AlfaVet, ZOOVET, CTVET, VETLIFE Kladno, MBvet), all confirmed, 0 fixed, 0 removed; the other 7 are unchecked.\n\nFollow-up 2 run 2026-11-02: Added 7 entries, 0 x 24 h (no opened page had explicit 24 h/nonstop wording). Skipped: ABClinic Brno (abclinic.com is a human aesthetic/hair clinic, no vet clinic found); VetPark Brno (not found; vetpark.eu is VetPark Ostrava and robots-disallowed); Veterinární ošetřovna Nový Jičín (veterina-nj.cz robots-disallowed, osetrovna.cz redirect not openable twice). Lískovka has no own site found; entry rests on the CTVET partner list (weak, no hours). ctvet.cz itself is already in CZ.json (Český Těšín). Independent check: all 7 new entries opened on their source pages; 5 confirmed, 2 fixed (Na Vozovně duty/quote, Herriovet duty), 0 removed. Lískovka rests on the CTVET partner list only (weak)."
 }
