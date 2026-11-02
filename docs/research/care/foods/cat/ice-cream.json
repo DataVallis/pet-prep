@@ -185,7 +185,7 @@
   "child": {
     "en": "Ice cream is a treat for people. It can give cats a sore tummy, so keep your cone to yourself.",
     "sl": "Sladoled je posladek za ljudi. Muco lahko zaboli trebušček, zato kornet obdrži zase.",
-    "de": "Eis ist ein Leckerli für Menschen. Katzen kann es Bauchweh machen, also behalte deine Eiswaffel lieber für dich.",
+    "de": "Eis ist eine Leckerei für Menschen. Katzen kann es Bauchweh machen, also behalte deine Eiswaffel lieber für dich.",
     "fr": "La glace, c’est une friandise pour les humains. Elle peut donner mal au ventre aux chats, alors garde ton cornet pour toi.",
     "es": "El helado es un capricho para personas. Puede darles dolor de barriga a los gatos, así que el cucurucho, para ti.",
     "it": "Il gelato è un dolce per le persone. Può far venire il mal di pancia ai gatti, quindi il cono tienilo per te.",
@@ -296,7 +296,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "fa4b1461e3eb64a8b70a39b05e81d75b9c62e751296843d2a745f9a3a8ff4d52"
+      "verified_hash": "493a9252ff04ab14232f947822025d23db6562e92652942ee0d39500ad5a016b"
     },
     "fr": {
       "status": "verified",

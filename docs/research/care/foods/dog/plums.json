@@ -56,7 +56,7 @@
   "answer": {
     "en": "Not recommended. A little plum flesh with the pit removed is not the main worry, but plum pits are toxic to dogs and can cause choking or an intestinal blockage. The stems, leaves and seeds of the plum plant contain cyanide.",
     "sl": "Ni priporočljivo. Malo mesa slive brez koščice ni glavna težava, koščice sliv pa so za pse strupene in lahko povzročijo dušenje ali zaporo črevesja. Peclji, listi in semena slive vsebujejo cianid.",
-    "de": "Nicht empfohlen. Ein wenig Pflaumenfruchtfleisch ohne Kern ist nicht die Hauptsorge, aber Pflaumenkerne sind für Hunde giftig und können zum Ersticken oder zu einem Darmverschluss führen. Stiele, Blätter und Samen der Pflaumenpflanze enthalten Cyanid.",
+    "de": "Nicht empfohlen. Ein wenig Pflaumenfruchtfleisch ohne Kern ist nicht das Hauptproblem, aber Pflaumenkerne sind für Hunde giftig und können zum Ersticken oder zu einem Darmverschluss führen. Stiele, Blätter und Samen der Pflaumenpflanze enthalten Cyanid.",
     "fr": "Déconseillé. Un peu de chair de prune sans le noyau n’est pas le principal souci, mais les noyaux de prune sont toxiques pour les chiens et peuvent provoquer un étouffement ou une obstruction intestinale. Les tiges, les feuilles et les graines du prunier contiennent du cyanure.",
     "es": "No se recomienda. Un poco de pulpa de ciruela sin hueso no es la principal preocupación, pero los huesos de ciruela son tóxicos para los perros y pueden provocar atragantamiento u obstrucción intestinal. El rabito, las hojas y las semillas del ciruelo contienen cianuro.",
     "it": "Sconsigliate. Un po’ di polpa di prugna senza nocciolo non è il problema principale, ma i noccioli di prugna sono tossici per i cani e possono causare soffocamento o un’ostruzione intestinale. Piccioli, foglie e semi del susino contengono cianuro.",
@@ -73,7 +73,7 @@
   "why": {
     "en": "The plum plant is listed as toxic to dogs because its stems, leaves and seeds contain cyanogenic glycosides. A pit can also be swallowed and get stuck. Some vets allow plum flesh as an occasional treat with the pit removed; because the plant itself is listed as toxic, we use the stricter rating. Prunes are even higher in sugar.",
     "sl": "Sliva je navedena kot strupena za pse, ker njeni peclji, listi in semena vsebujejo cianogene glikozide. Koščico lahko pes tudi pogoltne in se mu zatakne. Nekateri veterinarji dovolijo meso slive brez koščice kot občasen priboljšek; ker je rastlina sama navedena kot strupena, uporabljamo strožjo oceno. Suhe slive imajo še več sladkorja.",
-    "de": "Die Pflaume ist als für Hunde giftige Pflanze gelistet, weil ihre Stiele, Blätter und Samen cyanogene Glykoside enthalten. Ein Kern kann außerdem verschluckt werden und stecken bleiben. Manche Tierärzte erlauben Pflaumenfruchtfleisch ohne Kern als gelegentliches Leckerli; da die Pflanze selbst als giftig gelistet ist, wählen wir die strengere Einstufung. Trockenpflaumen enthalten noch mehr Zucker.",
+    "de": "Die Pflaumenpflanze gilt als giftig für Hunde, weil ihre Stiele, Blätter und Samen cyanogene Glykoside enthalten. Ein Kern kann außerdem verschluckt werden und stecken bleiben. Manche Tierärzte erlauben Pflaumenfruchtfleisch ohne Kern als gelegentliches Leckerli; da die Pflanze selbst als giftig gilt, wählen wir die strengere Einstufung. Trockenpflaumen enthalten noch mehr Zucker.",
     "fr": "Le prunier est répertorié comme toxique pour les chiens, car ses tiges, ses feuilles et ses graines contiennent des glycosides cyanogènes. Un noyau peut aussi être avalé et rester coincé. Certains vétérinaires autorisent la chair de prune en friandise occasionnelle, sans le noyau ; comme la plante elle-même est répertoriée comme toxique, nous retenons le classement le plus strict. Les pruneaux sont encore plus sucrés.",
     "es": "El ciruelo figura como tóxico para los perros porque su rabito, sus hojas y sus semillas contienen glucósidos cianogénicos. Además, el perro puede tragarse un hueso y que se quede atascado. Algunos veterinarios permiten la pulpa de ciruela como premio ocasional, sin el hueso; como la propia planta figura como tóxica, aplicamos la clasificación más estricta. Las ciruelas pasas tienen todavía más azúcar.",
     "it": "Il susino è classificato come tossico per i cani perché piccioli, foglie e semi contengono glicosidi cianogenici. Un nocciolo può anche essere ingoiato e restare incastrato. Alcuni veterinari permettono la polpa come premio occasionale, senza nocciolo; poiché la pianta stessa è classificata come tossica, adottiamo la valutazione più prudente. Le prugne secche contengono ancora più zucchero.",
@@ -328,7 +328,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2fd11de7d3aaffbd9d2d6237e04b9cfe06f61a6a9136e6831aa45911aa6e4d65"
+      "verified_hash": "c43f015320f1d341f32d88dfb9fae2575909dd8103f8a67737056f9b65c2c846"
     },
     "fr": {
       "status": "verified",

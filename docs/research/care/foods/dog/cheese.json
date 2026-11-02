@@ -199,7 +199,7 @@
   "serving": {
     "en": "If you share at all: a tiny piece of plain, lower-fat cheese such as mozzarella or cottage cheese, never flavoured or blue cheese.",
     "sl": "Če ga sploh ponudite: droben košček navadnega, manj mastnega sira, na primer mocarele ali zrnatega sira (cottage), nikoli aromatiziranega ali modrega sira.",
-    "de": "Wenn überhaupt: ein winziges Stück fettärmerer Käse ohne Zusätze, z. B. Mozzarella oder Hüttenkäse, nie Käse mit Geschmackszusätzen oder Blauschimmelkäse.",
+    "de": "Wenn überhaupt: ein winziges Stück fettärmerer Käse ohne Zusätze, z. B. Mozzarella oder Hüttenkäse, nie Käse mit Geschmackszusätzen oder Blauschimmelkäse.",
     "fr": "Si vous en partagez : un tout petit morceau de fromage nature et moins gras, comme la mozzarella ou le cottage cheese, jamais de fromage aromatisé ou à pâte persillée.",
     "es": "Si lo compartes: un trocito diminuto de queso natural con menos grasa, como mozzarella o requesón, nunca queso con sabores ni queso azul.",
     "it": "Se proprio vuoi condividerlo: un pezzetto di formaggio semplice e meno grasso, come mozzarella o fiocchi di latte, mai aromatizzato né erborinato.",
@@ -216,7 +216,7 @@
   "child": {
     "en": "Cheese is very fatty for a dog's tummy. A tiny plain piece now and then is plenty — ask a grown-up first.",
     "sl": "Sir je za pasji trebušček zelo masten. Občasno droben košček navadnega sira je čisto dovolj – najprej vprašaj odraslega.",
-    "de": "Käse ist sehr fett für den Bauch eines Hundes. Ein winziges Stück ohne Gewürze ab und zu reicht völlig – frag zuerst einen Erwachsenen.",
+    "de": "Käse ist für den Bauch eines Hundes sehr fett. Ein winziges Stück ohne Gewürze ab und zu reicht völlig – frag zuerst einen Erwachsenen.",
     "fr": "Le fromage est très gras pour le ventre d’un chien. Un tout petit morceau nature de temps en temps, c’est bien assez – demande d’abord à un adulte.",
     "es": "El queso es muy graso para la barriga de un perro. Un trocito natural de vez en cuando es más que suficiente: pregunta antes a un adulto.",
     "it": "Il formaggio è molto grasso per la pancia di un cane. Un pezzettino semplice ogni tanto basta e avanza – prima chiedi a un adulto.",
@@ -390,7 +390,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2882413270768eba55dae4a31adfcce6df488d2d66f1a6754c9229e3720fd63b"
+      "verified_hash": "8272a9d894b8179fc48dffa20cf7fa687903dc43a5e1793f056e54493c7c51ff"
     },
     "fr": {
       "status": "verified",

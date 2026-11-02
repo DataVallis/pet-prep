@@ -73,7 +73,7 @@
   "why": {
     "en": "Pet Poison Helpline names bacon among fatty table foods that cause problems ranging from mild stomach upset to severe pancreatitis. A fatty meal is a known pancreatitis trigger, and some breeds, such as Miniature Schnauzers, are more prone to it.",
     "sl": "Pet Poison Helpline slanino navaja med mastno hrano z mize, ki povzroča težave od blagih prebavnih motenj do hudega vnetja trebušne slinavke. Mastni obrok je znan sprožilec tega vnetja, nekatere pasme, na primer pritlikavi šnavcerji, pa so zanj bolj dovzetne.",
-    "de": "Pet Poison Helpline zählt Speck zu den fetten Tischresten, die Probleme von leichter Magenverstimmung bis zu schwerer Pankreatitis verursachen. Eine fette Mahlzeit ist ein bekannter Auslöser für Pankreatitis, und manche Rassen wie der Zwergschnauzer sind dafür anfälliger.",
+    "de": "Pet Poison Helpline zählt Speck zu den fetten Speisen vom Tisch, die Probleme von leichter Magenverstimmung bis zu schwerer Pankreatitis verursachen. Eine fette Mahlzeit ist ein bekannter Auslöser für Pankreatitis, und manche Rassen wie der Zwergschnauzer sind dafür anfälliger.",
     "fr": "Le Pet Poison Helpline cite le bacon parmi les aliments de table gras qui causent des problèmes allant de légers troubles digestifs à une pancréatite grave. Un repas gras est un déclencheur connu de la pancréatite, et certaines races, comme le schnauzer nain, y sont plus sujettes.",
     "es": "Pet Poison Helpline incluye el beicon entre las comidas de mesa grasas que causan problemas, desde un leve malestar de estómago hasta una pancreatitis grave. Una comida grasa es un desencadenante conocido de la pancreatitis, y algunas razas, como el schnauzer miniatura, son más propensas a sufrirla.",
     "it": "Pet Poison Helpline cita il bacon tra i cibi grassi della tavola che causano problemi che vanno da un lieve mal di stomaco a una pancreatite grave. Un pasto grasso è un noto fattore scatenante della pancreatite, e alcune razze, come lo schnauzer nano, sono più predisposte.",
@@ -338,7 +338,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "99bed4f5440c83622feb9f9c5960cf96cbbf18a8504eda44d3e6b88b6a187db6"
+      "verified_hash": "23ba7795e112988665666527b8f4452525fcce6e9cb252724a7ed3905455cbea"
     },
     "fr": {
       "status": "verified",

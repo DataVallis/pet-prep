@@ -101,7 +101,7 @@
       "Hiter srčni utrip ali spremembe srčnega ritma"
     ],
     "de": [
-      "Unruhe, Zittrigkeit, will nicht still liegen",
+      "Unruhe, Nervosität, will nicht still liegen",
       "Überaktivität",
       "Magenverstimmung",
       "Schneller Herzschlag oder Veränderungen des Herzrhythmus"
@@ -294,7 +294,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "65d24de543da9e2d872b2215b43ea42725bfbac4a99f4e9cf0124943ddd05442"
+      "verified_hash": "b7f7985330557a5d98635936ed073b38f5d01f3b5d46a2b1204812abe93ae8a0"
     },
     "fr": {
       "status": "verified",

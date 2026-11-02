@@ -73,7 +73,7 @@
   "why": {
     "en": "Swallowed pieces can block the intestines; in one reported case the blockage restricted the blood supply, and emergency treatment may be needed. Plain kernels in moderation are generally safe; the cob is the danger.",
     "sl": "Pogoltnjeni kosi lahko zamašijo črevesje; v enem opisanem primeru je zapora omejila dotok krvi, zato je lahko potrebno nujno zdravljenje. Navadna zrna so v zmernih količinah na splošno varna; nevaren je storž.",
-    "de": "Verschluckte Stücke können den Darm blockieren; in einem dokumentierten Fall drosselte der Verschluss die Blutversorgung, und eine Notfallbehandlung kann nötig sein. Maiskörner ohne Zusätze sind in Maßen im Allgemeinen unbedenklich – gefährlich ist der Kolben.",
+    "de": "Verschluckte Stücke können den Darm blockieren; in einem beschriebenen Fall drosselte der Verschluss die Blutversorgung, und eine Notfallbehandlung kann nötig sein. Maiskörner ohne Zusätze sind in Maßen im Allgemeinen unbedenklich – gefährlich ist der Kolben.",
     "fr": "Des morceaux avalés peuvent bloquer l’intestin ; dans un cas rapporté, l’obstruction a réduit l’irrigation sanguine, et un traitement d’urgence peut être nécessaire. Les grains nature, avec modération, sont généralement sans danger ; c’est l’épi qui est dangereux.",
     "es": "Los trozos tragados pueden obstruir el intestino; en un caso descrito, la obstrucción reducía el riego sanguíneo, y puede hacer falta un tratamiento de urgencia. Los granos naturales con moderación suelen ser seguros; el peligro es la mazorca.",
     "it": "I pezzi ingoiati possono ostruire l’intestino; in un caso descritto l’ostruzione limitava l’afflusso di sangue, e può essere necessario un trattamento d’urgenza. I chicchi al naturale, con moderazione, sono in genere sicuri; il pericolo è la pannocchia.",
@@ -270,7 +270,7 @@
       "q": {
         "en": "Will a corn cob pass on its own?",
         "sl": "Ali storž pride ven sam od sebe?",
-        "de": "Geht ein Maiskolben von allein ab?",
+        "de": "Wird ein Maiskolben von allein wieder ausgeschieden?",
         "fr": "Un épi de maïs finira-t-il par passer tout seul ?",
         "es": "¿Una mazorca de maíz saldrá sola?",
         "it": "La pannocchia uscirà da sola?",
@@ -385,7 +385,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0c4ff10aa86bead46499493105b12a8012a47ba184679f1ecdced936de074dc3"
+      "verified_hash": "918b648bc48a83d98275b1207617c705e9a4423762564f5878177e242230d628"
     },
     "fr": {
       "status": "verified",

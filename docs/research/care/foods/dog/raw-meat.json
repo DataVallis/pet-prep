@@ -216,7 +216,7 @@
   "child": {
     "en": "Raw meat can have germs. Dogs should only get cooked meat from people food, and everyone washes hands after touching raw meat.",
     "sl": "Surovo meso ima lahko klice. Psi naj od hrane za ljudi dobijo samo kuhano meso, po dotiku surovega mesa pa si vsi umijemo roke.",
-    "de": "Rohes Fleisch kann Keime haben. Hunde sollten vom Essen der Menschen nur gekochtes Fleisch bekommen, und alle waschen sich die Hände, wenn sie rohes Fleisch angefasst haben.",
+    "de": "Rohes Fleisch kann Keime haben. Von unserem Essen sollten Hunde nur gekochtes Fleisch bekommen, und alle waschen sich die Hände, wenn sie rohes Fleisch angefasst haben.",
     "fr": "La viande crue peut avoir des microbes. Quand on partage, un chien n’a droit qu’à la viande cuite. Chacun se lave les mains après avoir touché de la viande crue.",
     "es": "La carne cruda puede tener gérmenes. De la comida de las personas, los perros solo pueden comer carne cocinada, y todos se lavan las manos después de tocar carne cruda.",
     "it": "La carne cruda può avere germi. Tra i cibi delle persone, ai cani si dà solo carne cotta, e dopo aver toccato carne cruda tutti si lavano le mani.",
@@ -288,7 +288,7 @@
       "a": {
         "en": "Not for germs: freeze-drying is not equivalent to cooking when it comes to bacteria and parasites.",
         "sl": "Glede klic ne: sušenje z zamrzovanjem ni enakovredno kuhanju, ko gre za bakterije in zajedavce.",
-        "de": "Nicht, was Keime angeht: Gefriertrocknen ist bei Bakterien und Parasiten nicht gleichwertig mit Kochen.",
+        "de": "Nicht, was Keime angeht: Gefriertrocknen ersetzt bei Bakterien und Parasiten das Garen nicht.",
         "fr": "Pas pour les germes : face aux bactéries et aux parasites, la lyophilisation n’équivaut pas à la cuisson.",
         "es": "No en cuanto a gérmenes: en lo que respecta a bacterias y parásitos, liofilizar no equivale a cocinar.",
         "it": "Non per i germi: per quanto riguarda batteri e parassiti, la liofilizzazione non equivale alla cottura.",
@@ -401,7 +401,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2fbfac0b8bc2bd94d656c2141ea8547decadec7f59732b716b569025df30574d"
+      "verified_hash": "8bf7aaa0d95ad27a0c1b91c6fbe4090132dbf059bcf0b126c28c801ed648e0f9"
     },
     "fr": {
       "status": "verified",

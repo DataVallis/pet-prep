@@ -144,7 +144,7 @@
       "q": {
         "en": "Can I give my dog leftovers from a holiday turkey?",
         "sl": "Ali lahko psu dam ostanke prazničnega purana?",
-        "de": "Darf ich meinem Hund Reste der Festtagspute geben?",
+        "de": "Darf ich meinem Hund Reste von der Festtagspute geben?",
         "fr": "Puis-je donner à mon chien les restes de la dinde des fêtes ?",
         "es": "¿Puedo darle a mi perro las sobras del pavo de una fiesta?",
         "it": "Posso dare al mio cane gli avanzi del tacchino delle feste?",
@@ -258,7 +258,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "6b643fb0e6bd2d43233d1bfd0a1b20411b989577f97378705ea714d2a319e862"
+      "verified_hash": "41868d73318e5f476b5e8daf96b19efc1cb84998435637131a197ab459d4be03"
     },
     "fr": {
       "status": "verified",

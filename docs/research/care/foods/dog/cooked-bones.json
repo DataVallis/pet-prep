@@ -287,7 +287,7 @@
       "a": {
         "en": "Keep platters out of reach while cooking and eating, and be careful what goes in the bin: dogs often raid the trash for carcasses and steak bones.",
         "sl": "Med kuhanjem in jedjo poskrbite, da pes ne more do krožnikov, in pazite, kaj vržete v koš: psi se pogosto lotijo smeti zaradi ostankov perutnine in kosti od zrezkov.",
-        "de": "Stellen Sie Platten beim Kochen und Essen außer Reichweite und achten Sie darauf, was in den Müll kommt: Hunde plündern oft den Mülleimer nach Karkassen und Steakknochen.",
+        "de": "Stellen Sie Platten beim Kochen und Essen außer Reichweite und achten Sie darauf, was in den Müll kommt: Hunde durchwühlen oft den Mülleimer nach Gerippen und Steakknochen.",
         "fr": "Gardez les plats hors de portée pendant la cuisine et les repas, et faites attention à ce que vous jetez : les chiens fouillent souvent la poubelle à la recherche de carcasses et d’os de steak.",
         "es": "Deja las fuentes fuera de su alcance mientras cocinas y durante las comidas, y ten cuidado con lo que tiras a la basura: los perros suelen rebuscar en ella las carcasas y los huesos de chuleta.",
         "it": "Tieni i vassoi lontano dal cane mentre cucini e mentre mangiate, e fai attenzione a cosa butti nella spazzatura: i cani spesso frugano nei rifiuti in cerca di carcasse e ossa di bistecca.",
@@ -394,7 +394,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f24f8924929bf979650cc461c1c668d2e1853d834711975c16a39c7fe34c14d1"
+      "verified_hash": "dacc675b70bbc69ff0f386e83c27d83bdb9c8804a7d1d9fc9faf84d8ca57568b"
     },
     "fr": {
       "status": "verified",

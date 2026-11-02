@@ -56,7 +56,7 @@
   "answer": {
     "en": "No. Even a tiny amount of alcohol can be extremely toxic to cats, and cats are especially sensitive to it. Keep drinks, foods made with alcohol and products like hand sanitiser away from your cat, and call your vet if your cat swallows any.",
     "sl": "Ne. Že zelo majhna količina alkohola je lahko za mačke izjemno strupena, saj so nanj še posebej občutljive. Pijač, hrane z alkoholom in izdelkov, kot je razkužilo za roke, ne puščajte v mačjem dosegu. Če mačka kaj pogoltne, pokličite veterinarja.",
-    "de": "Nein. Schon eine winzige Menge Alkohol kann für Katzen äußerst giftig sein, und Katzen reagieren besonders empfindlich darauf. Halten Sie Getränke, alkoholhaltige Speisen und Produkte wie Handdesinfektionsmittel von Ihrer Katze fern, und rufen Sie Ihren Tierarzt an, wenn Ihre Katze etwas davon verschluckt.",
+    "de": "Nein. Schon eine winzige Menge Alkohol kann für Katzen äußerst giftig sein, und Katzen reagieren besonders empfindlich darauf. Halten Sie Getränke, alkoholhaltige Speisen und Produkte wie Händedesinfektionsmittel von Ihrer Katze fern, und rufen Sie Ihren Tierarzt an, wenn Ihre Katze etwas davon verschluckt.",
     "fr": "Non. Même une infime quantité d’alcool peut être extrêmement toxique pour un chat, et les chats y sont particulièrement sensibles. Tenez les boissons, les aliments contenant de l’alcool et les produits comme le gel hydroalcoolique hors de portée de votre chat, et appelez votre vétérinaire s’il en avale.",
     "es": "No. Incluso una cantidad mínima de alcohol puede ser extremadamente tóxica para los gatos, que son especialmente sensibles a él. Mantén las bebidas, los alimentos elaborados con alcohol y productos como el gel hidroalcohólico lejos de tu gato, y llama a tu veterinario si se traga algo.",
     "it": "No. Anche una minima quantità di alcol può essere estremamente tossica per i gatti, che sono particolarmente sensibili. Tieni lontani dal tuo gatto bevande, cibi preparati con alcol e prodotti come il gel igienizzante per le mani, e chiama il veterinario se ne ingerisce anche solo un po’.",
@@ -73,7 +73,7 @@
   "why": {
     "en": "All animals can get alcohol poisoning, but cats are especially sensitive. Alcohol is not only in drinks: it can also be in liqueur sweets, hand sanitiser, mouthwash and raw, rising bread dough. Signs usually appear quickly after a cat swallows it.",
     "sl": "Zastrupitev z alkoholom lahko doleti vse živali, mačke pa so še posebej občutljive. Alkohol ni le v pijačah: najdemo ga tudi v bonbonih z likerjem, razkužilu za roke, ustni vodici in surovem vzhajajočem testu. Znaki se običajno pokažejo kmalu po zaužitju.",
-    "de": "Alle Tiere können eine Alkoholvergiftung bekommen, Katzen sind aber besonders empfindlich. Alkohol steckt nicht nur in Getränken, sondern auch in Likörpralinen, Handdesinfektionsmittel, Mundspülung und rohem, aufgehendem Brotteig. Die Anzeichen treten meist schnell auf, nachdem eine Katze ihn aufgenommen hat.",
+    "de": "Alle Tiere können eine Alkoholvergiftung bekommen, Katzen sind aber besonders empfindlich. Alkohol steckt nicht nur in Getränken, sondern auch in Likörpralinen, Händedesinfektionsmittel, Mundspülung und rohem, aufgehendem Brotteig. Die Anzeichen treten meist schnell auf, nachdem eine Katze ihn aufgenommen hat.",
     "fr": "Tous les animaux peuvent être intoxiqués par l’alcool, mais les chats sont particulièrement sensibles. L’alcool ne se trouve pas que dans les boissons : il peut aussi être présent dans les bonbons à la liqueur, le gel hydroalcoolique, les bains de bouche et la pâte à pain crue en train de lever. Les signes apparaissent généralement vite après l’ingestion.",
     "es": "Todos los animales pueden sufrir una intoxicación por alcohol, pero los gatos son especialmente sensibles. El alcohol no está solo en las bebidas: también puede haberlo en los bombones de licor, el gel hidroalcohólico, el enjuague bucal y la masa de pan cruda en fermentación. Los signos suelen aparecer poco después de que el gato lo trague.",
     "it": "Tutti gli animali possono subire un’intossicazione da alcol, ma i gatti sono particolarmente sensibili. L’alcol non si trova solo nelle bevande: può essere presente anche nei dolcetti al liquore, nel gel igienizzante per le mani, nel collutorio e nell’impasto crudo del pane in lievitazione. Di solito i sintomi compaiono poco dopo che il gatto lo ha ingerito.",
@@ -236,7 +236,7 @@
       "a": {
         "en": "Besides drinks, alcohol can be found in liqueur sweets, hand sanitiser, mouthwash and raw, rising bread dough.",
         "sl": "Poleg v pijačah se alkohol lahko skriva tudi v bonbonih z likerjem, razkužilu za roke, ustni vodici in surovem vzhajajočem testu.",
-        "de": "Außer in Getränken kann Alkohol auch in Likörpralinen, Handdesinfektionsmittel, Mundspülung und rohem, aufgehendem Brotteig stecken.",
+        "de": "Außer in Getränken kann Alkohol auch in Likörpralinen, Händedesinfektionsmittel, Mundspülung und rohem, aufgehendem Brotteig stecken.",
         "fr": "En plus des boissons, on trouve de l’alcool dans les bonbons à la liqueur, le gel hydroalcoolique, les bains de bouche et la pâte à pain crue en train de lever.",
         "es": "Además de en las bebidas, puede haber alcohol en los bombones de licor, el gel hidroalcohólico, el enjuague bucal y la masa de pan cruda en fermentación.",
         "it": "Oltre che nelle bevande, l’alcol può trovarsi nei dolcetti al liquore, nel gel igienizzante per le mani, nel collutorio e nell’impasto crudo del pane in lievitazione.",
@@ -335,7 +335,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "57e5b47ba04fc6868340dd928de0868c0249aeb10fff8e1e1645d40cb450ed8b"
+      "verified_hash": "9c15eb8e5769e1f44508ad44ab1f016c39bea8f269937872b911fb7b0396a5da"
     },
     "fr": {
       "status": "verified",

@@ -73,7 +73,7 @@
   "why": {
     "en": "Raw dough contains some alcohol and produces carbon dioxide. Once swallowed, the yeast keeps working in the stomach: the dough expands and can cause an obstruction, while the alcohol it produces is absorbed into the blood. Cats are especially sensitive to alcohol.",
     "sl": "Surovo testo vsebuje nekaj alkohola in tvori ogljikov dioksid. Ko mačka testo poje, kvas v želodcu deluje naprej: testo se širi in lahko povzroči zaporo, nastali alkohol pa se absorbira v kri. Mačke so na alkohol še posebej občutljive.",
-    "de": "Roher Teig enthält etwas Alkohol und bildet Kohlendioxid. Nach dem Verschlucken arbeitet die Hefe im Magen weiter: Der Teig dehnt sich aus und kann einen Verschluss verursachen, während der entstehende Alkohol ins Blut aufgenommen wird. Katzen reagieren besonders empfindlich auf Alkohol.",
+    "de": "Roher Teig enthält etwas Alkohol und bildet Kohlendioxid. Nach dem Verschlucken arbeitet die Hefe im Magen weiter: Der Teig dehnt sich aus und kann eine Blockade verursachen, während der entstehende Alkohol ins Blut aufgenommen wird. Katzen reagieren besonders empfindlich auf Alkohol.",
     "fr": "La pâte crue contient un peu d’alcool et produit du dioxyde de carbone. Une fois avalée, la levure continue d’agir dans l’estomac : la pâte gonfle et peut provoquer une obstruction, tandis que l’alcool produit passe dans le sang. Les chats sont particulièrement sensibles à l’alcool.",
     "es": "La masa cruda contiene algo de alcohol y produce dióxido de carbono. Una vez tragada, la levadura sigue actuando en el estómago: la masa crece y puede causar una obstrucción, mientras que el alcohol que produce pasa a la sangre. Los gatos son especialmente sensibles al alcohol.",
     "it": "L’impasto crudo contiene un po’ di alcol e produce anidride carbonica. Una volta ingerito, il lievito continua a lavorare nello stomaco: l’impasto si gonfia e può causare un’ostruzione, mentre l’alcol prodotto viene assorbito nel sangue. I gatti sono particolarmente sensibili all’alcol.",
@@ -330,7 +330,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f5971776b228f539d68f7b0f4fef641333a715ad3ef15cf7a177d102ebce0da0"
+      "verified_hash": "ff2fe9212f4b71c99ccd2eb558be68a49d5477ea77704b1735383c5f79aeeb18"
     },
     "fr": {
       "status": "verified",

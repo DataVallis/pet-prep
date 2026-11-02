@@ -56,7 +56,7 @@
   "answer": {
     "en": "No, it's best not to. The ASPCA lists the plum plant as toxic to cats: its stems, leaves and seeds (the stone) contain cyanide. Don't offer plums to your cat, keep stones and plant parts out of reach, and call your vet if your cat chews any.",
     "sl": "Ne, raje ne. ASPCA navaja slivo kot rastlino, strupeno za mačke: njeni peclji, listi in semena (koščice) vsebujejo cianid. Mački ne ponujajte sliv, koščice in dele rastline hranite zunaj njenega dosega ter pokličite veterinarja, če jih grizlja.",
-    "de": "Nein, besser nicht. Die ASPCA führt die Pflaume als für Katzen giftige Pflanze: Ihre Stiele, Blätter und Samen (der Kern) enthalten Cyanid. Bieten Sie Ihrer Katze keine Pflaumen an, bewahren Sie Kerne und Pflanzenteile außer Reichweite auf, und rufen Sie Ihren Tierarzt an, wenn Ihre Katze darauf kaut.",
+    "de": "Nein, besser nicht. Die ASPCA stuft die Pflaumenpflanze als giftig für Katzen ein: Stiele, Blätter und Samen (der Kern) enthalten Cyanid. Bieten Sie Ihrer Katze keine Pflaumen an, bewahren Sie Kerne und Pflanzenteile außer Reichweite auf, und rufen Sie Ihren Tierarzt an, wenn Ihre Katze darauf kaut.",
     "fr": "Non, mieux vaut s’en abstenir. L’ASPCA classe le prunier parmi les plantes toxiques pour les chats : ses tiges, ses feuilles et ses graines (le noyau) contiennent du cyanure. Ne donnez pas de prunes à votre chat, rangez noyaux et parties de la plante hors de sa portée, et appelez votre vétérinaire s’il en mâchouille.",
     "es": "No, mejor que no. La ASPCA considera la planta del ciruelo tóxica para los gatos: sus tallos, hojas y semillas (el hueso) contienen cianuro. No le ofrezcas ciruelas a tu gato, guarda los huesos y las partes de la planta fuera de su alcance y llama a tu veterinario si tu gato mordisquea alguno.",
     "it": "No, è meglio di no. L’ASPCA classifica la pianta del susino come tossica per i gatti: steli, foglie e semi (il nocciolo) contengono cianuro. Non offrire prugne al tuo gatto, tieni noccioli e parti della pianta fuori dalla sua portata e chiama il veterinario se ne mastica anche solo un pezzo.",
@@ -318,7 +318,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "6246cb8b3b0537261c4c79804cb67f7b1297241c04056065a35fa08a3917c343"
+      "verified_hash": "db5b91c592ceb2e368a5a362e380458e6e9c46e399acab7940d454cf961c4306"
     },
     "fr": {
       "status": "verified",

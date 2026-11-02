@@ -161,7 +161,7 @@
       "a": {
         "en": "Sources differ: Dogs Trust lists cooked eggshells as usually fine, while the AKC warns that shells have sharp edges. Leaving them out is the safer choice.",
         "sl": "Viri se razlikujejo: Dogs Trust kuhane lupine navaja kot običajno primerne, AKC pa opozarja, da imajo lupine ostre robove. Varneje je, da jih ne dajete.",
-        "de": "Die Quellen sind sich nicht einig: Dogs Trust führt gekochte Eierschalen als meist unproblematisch, der AKC warnt dagegen vor ihren scharfen Kanten. Sie wegzulassen ist die sicherere Wahl.",
+        "de": "Die Quellen sind sich nicht einig: der Dogs Trust bezeichnet gekochte Eierschalen als meist unproblematisch, der AKC warnt dagegen vor ihren scharfen Kanten. Sie wegzulassen ist die sicherere Wahl.",
         "fr": "Les sources divergent : Dogs Trust indique que les coquilles cuites ne posent généralement pas de problème, tandis que l’AKC prévient qu’elles ont des bords tranchants. Les retirer est le choix le plus sûr.",
         "es": "Las fuentes no coinciden: Dogs Trust indica que las cáscaras cocinadas suelen estar bien, mientras que el AKC advierte de que tienen bordes afilados. Lo más seguro es no dárselas.",
         "it": "Le fonti non concordano: secondo Dogs Trust i gusci d’uovo cotti di solito vanno bene, mentre l’AKC avverte che hanno bordi taglienti. Toglierli è la scelta più sicura.",
@@ -279,7 +279,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "4645227d20ae110ade098cf07c4675ddc0f9c2a9c7aa8e67631d2c7601b941c1"
+      "verified_hash": "813accb14f4d232f034a98a55ff53abda42de5699ac15eb8922732fd9af1bc03"
     },
     "fr": {
       "status": "verified",

@@ -267,7 +267,7 @@
       "a": {
         "en": "Cooked bones splinter, which is why they should never be given. Raw bones still carry risks of broken teeth, blockages and bacteria, so ask your vet first.",
         "sl": "Kuhane kosti se razcepijo, zato jih nikoli ne dajajte. Tudi pri surovih kosteh obstaja tveganje zlomljenih zob, zapor in bakterij, zato najprej vprašajte veterinarja.",
-        "de": "Gekochte Knochen splittern, deshalb sollten sie nie gegeben werden. Auch rohe Knochen bergen das Risiko von abgebrochenen Zähnen, Blockaden und Bakterien, also fragen Sie zuerst Ihren Tierarzt.",
+        "de": "Gekochte Knochen splittern, deshalb sollten sie nie gegeben werden. Auch rohe Knochen bergen das Risiko von abgebrochenen Zähnen, Blockaden und Bakterien, fragen Sie daher zuerst Ihren Tierarzt.",
         "fr": "Les os cuits éclatent : c’est pourquoi il ne faut jamais en donner. Les os crus présentent quand même des risques de dents cassées, d’obstructions et de bactéries : demandez d’abord l’avis de votre vétérinaire.",
         "es": "Los huesos cocinados se astillan, por eso nunca deben darse. Los crudos siguen teniendo riesgo de dientes rotos, obstrucciones y bacterias, así que pregunta antes a tu veterinario.",
         "it": "Le ossa cotte si scheggiano, ed è per questo che non vanno mai date. Le ossa crude comportano comunque rischi di denti rotti, ostruzioni e batteri, quindi chiedi prima al veterinario.",
@@ -303,7 +303,7 @@
       "a": {
         "en": "A bone should be larger than the length of the dog's muzzle so it can't be swallowed whole, and you should check on your dog while it chews.",
         "sl": "Kost naj bo večja od dolžine pasjega gobca, da je pes ne more pogoltniti cele, med glodanjem pa psa nadzorujte.",
-        "de": "Ein Knochen sollte größer sein als die Länge der Schnauze des Hundes, damit er nicht im Ganzen verschluckt werden kann, und Sie sollten immer wieder nach Ihrem Hund sehen, während er kaut.",
+        "de": "Ein Knochen sollte länger sein als die Schnauze des Hundes, damit er nicht im Ganzen verschluckt werden kann, und Sie sollten immer wieder nach Ihrem Hund sehen, während er kaut.",
         "fr": "Un os doit être plus grand que la longueur du museau du chien pour qu’il ne puisse pas l’avaler entier ; surveillez votre chien pendant qu’il le mâche.",
         "es": "El hueso debe ser más grande que la longitud del hocico del perro para que no pueda tragárselo entero, y conviene echarle un ojo a tu perro mientras lo roe.",
         "it": "L’osso deve essere più grande della lunghezza del muso del cane, così non può ingoiarlo intero, e devi controllare il cane mentre mastica.",
@@ -426,7 +426,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e7838d76f414ee164daa7de313d31d07c3cd5cf14ab32287558d329fa24fe4f2"
+      "verified_hash": "7ff8244576d52b5d46dee20b556dd335600d6da7cecb6e0cab5a16e06a5cd728"
     },
     "fr": {
       "status": "verified",
