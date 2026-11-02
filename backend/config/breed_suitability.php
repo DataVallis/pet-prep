@@ -2161,5 +2161,24 @@ return [
                 ['tag' => 'secure_fencing', 'source_ids' => ['S646'], 'refs' => ['basenji.behaviour.escaping']],
             ],
         ],
+        // M5-R10-85: rat_terrier.* (S647–S651), runbook rules (data.json proposed_game_parameters.rat_terrier.suitability_tags).
+        // No RKC / PDSA page exists for this American breed → chips from the breed club (S650) and PetMD (S648). No apartment
+        // chip (RTCA "do ok in an apartment" is not the RKC key fact), no chases_small_pets (no verbatim high prey drive).
+        'rat_terrier' => [
+            'suits' => [
+                // S650 "Rat Terriers are good with children, especially if they are raised with them from puppyhood."
+                ['tag' => 'children', 'source_ids' => ['S650'], 'refs' => ['rat_terrier.behaviour.family']],
+            ],
+            'consider' => [
+                // S648 "Ratties need plenty of physical and mental stimulation"
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S648'], 'refs' => ['rat_terrier.behaviour.mental_stimulation']],
+                // S648 "this is not a breed that enjoys being left alone for long periods"
+                ['tag' => 'needs_company', 'source_ids' => ['S648'], 'refs' => ['rat_terrier.behaviour.time_alone']],
+                // S648 "they shed mildly throughout the year, with a heavier seasonal shed in the spring and fall."
+                ['tag' => 'sheds', 'source_ids' => ['S648'], 'refs' => ['rat_terrier.suitability.petmd_shedding']],
+                // S648 "Rat Terriers tend to be good eaters, so feed them a measured amount …"
+                ['tag' => 'food_motivated_weight', 'source_ids' => ['S648'], 'refs' => ['rat_terrier.behaviour.food_motivation']],
+            ],
+        ],
     ],
 ];

@@ -693,6 +693,14 @@
 | tip (S643; AKC standard S645 the same). Red and white first with the highest weight (the portrait default, Claude's
 | choice); weights unsourced → `verified => false`.
 |
+| Rat Terrier (M5-R10-85, docs/research/dog-data rat_terrier.appearance):
+| "The Rat Terrier is a well-muscled dog with a deep chest, strong shoulders, solid neck, and powerful legs" (AKC standard
+| as presented by the Rat Terrier Club of America, S650); two size varieties (Miniature 10–13 in, Standard over 13 to 18 in);
+| short, smooth, shiny coat; pied — black, chocolate, red, apricot, blue, fawn, tan or lemon patches with white, with or
+| without tan points; never brindle, merle or a solid colour without white; ears upright, button or tipped; tail docked,
+| bobtail or natural (the portrait shows a natural tail). Black, tan and white first with the highest weight (the portrait
+| default, Claude's choice); weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -3713,6 +3721,47 @@ return [
             'ear_carriage' => ['small, pointed, erect, slightly hooded ears'],
             'eye_color' => ['dark, almond-shaped, obliquely set eyes'],
             'tail' => ['high-set tail curled tightly over the spine'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-85 (docs/research/dog-data/data.json rat_terrier.appearance; runbook rules 2026-10-10: colours the standard lists —
+    // S650 pied patterns of black, chocolate, red, apricot, blue, fawn, tan or lemon with white, with or without tan points;
+    // never brindle, merle or a solid colour without white).
+    'rat_terrier' => [
+        'display_name' => 'Rat Terrier',
+        // Colour frequencies are in no source (rat_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'AKC Rat Terrier standard, ratified 2009, as presented by the Rat Terrier Club of America (S650, https://images.akc.org/judges/Rat_Terrier.pdf) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S650 "STANDARD – over 13 inches, and up to and including 18 inches in height measured at the withers."; S648 "This is a relatively small dog"',
+            'build' => 'S650 "The Rat Terrier is a well-muscled dog with a deep chest, strong shoulders, solid neck, and powerful legs."',
+            'coat_length' => 'S650 "Short, close lying, smooth and shiny coat."',
+            'coat_color' => 'S650 "Acceptable colors with or without \"tan points\", include the predominate Black: or Chocolate, Red, Apricot, Blue, Fawn, Tan, Lemon, or White." "Any variation of Pied patterning is acceptable." (weights unsourced)',
+            'head' => 'S650 "The HEAD resembles a smooth, blunt wedge from a front or profile view."',
+            'ear_carriage' => 'S650 "The ears can be upright, button or tipped."',
+            'eye_color' => 'S650 "They are obliquely set wide apart and are oval in shape."',
+            'tail' => 'S650 "Tails are customarily docked between the second and third joint." (natural long tails accepted — the portrait shows a natural tail)',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'compact, well-muscled small terrier with a deep chest, strong shoulders, a solid neck and powerful legs', 'weight' => 3], 'compact but meaty, athletic build'],
+            'coat_length' => ['short, close-lying, smooth and shiny coat'],
+            // Standard pied colours (S650), always patches of colour with white; black, tan and white first with the highest
+            // weight → the register portrait (Claude's choice: "predominate Black", dark shades preferred).
+            'coat_color' => [
+                ['value' => 'black, tan and white tricolour pied: large black patches with tan points on the cheeks, eyebrows and legs on a white body', 'weight' => 30],
+                ['value' => 'red and white pied: large deep red patches on a white body', 'weight' => 20],
+                ['value' => 'chocolate, tan and white pied: large chocolate-brown patches with tan points on a white body and a brown nose', 'weight' => 12],
+                ['value' => 'black and white pied: large black patches on a white body', 'weight' => 12],
+                ['value' => 'apricot and white pied: large apricot patches on a white body', 'weight' => 8],
+                ['value' => 'lemon and white pied: large pale lemon-yellow patches on a white body', 'weight' => 6],
+                ['value' => 'blue, tan and white pied: large slate blue-grey patches with tan points on a white body', 'weight' => 6],
+                ['value' => 'fawn and white pied: large fawn patches on a white body', 'weight' => 6],
+            ],
+            'head' => ['smooth, blunt wedge-shaped head with a strong muzzle slightly shorter than the skull'],
+            'ear_carriage' => ['upright ears'],
+            'eye_color' => ['small oval dark brown eyes set obliquely and wide apart'],
+            'tail' => ['natural long tail, not docked'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],

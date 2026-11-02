@@ -86,6 +86,7 @@ return [
     'lagotto_romagnolo' => 'Lagotto Romagnolo',
     'alaskan_malamute' => 'Alaskan Malamute',
     'basenji' => 'Basenji',
+    'rat_terrier' => 'Rat Terrier',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',
