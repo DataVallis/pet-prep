@@ -4,6 +4,7 @@
   "name": {
     "en": "Blackberries",
     "sl": "Robide",
+    "de": "Brombeeren",
     "cs": "Ostružiny",
     "hr": "Kupine",
     "sv": "Björnbär",
@@ -14,6 +15,7 @@
   "question": {
     "en": "Can dogs eat blackberries?",
     "sl": "Ali lahko psi jedo robide?",
+    "de": "Dürfen Hunde Brombeeren fressen?",
     "cs": "Mohou psi jíst ostružiny?",
     "hr": "Smiju li psi jesti kupine?",
     "sv": "Får hundar äta björnbär?",
@@ -24,6 +26,7 @@
   "url_slug": {
     "en": "blackberries",
     "sl": "robide",
+    "de": "brombeeren",
     "cs": "ostruziny",
     "hr": "kupine",
     "sv": "bjornbar",
@@ -35,6 +38,7 @@
   "answer": {
     "en": "Yes, in moderation. Blackberries contain lots of vitamins and nutrients and are lower in sugar and calories than some other fruits. Wash them first, and avoid frozen berries, which usually have added sugar or xylitol.",
     "sl": "Da, zmerno. Robide vsebujejo veliko vitaminov in hranil ter imajo manj sladkorja in kalorij kot nekatere druge vrste sadja. Najprej jih operite in se izogibajte zamrznjenemu jagodičju, ki ima običajno dodan sladkor ali ksilitol.",
+    "de": "Ja, in Maßen. Brombeeren enthalten viele Vitamine und Nährstoffe und haben weniger Zucker und Kalorien als manche andere Obstsorten. Waschen Sie sie vorher und verzichten Sie auf tiefgekühlte Beeren, die meist zugesetzten Zucker oder Xylit enthalten.",
     "cs": "Ano, s mírou. Ostružiny obsahují spoustu vitaminů a živin a mají méně cukru a kalorií než některé jiné druhy ovoce. Nejdřív je omyjte a vyhněte se mraženým bobulím, které mívají přidaný cukr nebo xylitol.",
     "hr": "Da, umjereno. Kupine sadrže mnogo vitamina i hranjivih tvari, a imaju manje šećera i kalorija od nekih drugih vrsta voća. Prvo ih operi i izbjegavaj zamrznute bobice, koje obično imaju dodani šećer ili ksilitol.",
     "sv": "Ja, med måtta. Björnbär innehåller många vitaminer och näringsämnen och har mindre socker och färre kalorier än vissa andra frukter. Skölj dem först, och undvik frysta bär, som oftast har tillsatt socker eller xylitol.",
@@ -45,6 +49,7 @@
   "why": {
     "en": "Blackberries contain naturally occurring xylitol in trace amounts, as do other fruits and vegetables. Like any food, too many blackberries can cause stomach upset, and treats should make up only a small part of a dog's diet.",
     "sl": "Robide vsebujejo naravni ksilitol v sledovih, tako kot tudi druge vrste sadja in zelenjave. Kot pri vsaki hrani lahko preveč robid povzroči prebavne težave, priboljški pa naj bodo le majhen del pasje prehrane.",
+    "de": "Brombeeren enthalten – wie andere Obst- und Gemüsesorten auch – natürlich vorkommendes Xylit in Spuren. Wie bei jedem Lebensmittel können zu viele Brombeeren den Magen verstimmen, und Leckerlis sollten nur einen kleinen Teil der Ernährung eines Hundes ausmachen.",
     "cs": "Ostružiny přirozeně obsahují stopové množství xylitolu, stejně jako jiné ovoce a zelenina. Jako u každé potraviny může příliš mnoho ostružin podráždit žaludek a pamlsky by měly tvořit jen malou část psí stravy.",
     "hr": "Kupine prirodno sadrže ksilitol u tragovima, kao i drugo voće i povrće. Kao i kod svake hrane, previše kupina može uznemiriti želudac, a poslastice trebaju činiti samo mali dio pseće prehrane.",
     "sv": "Björnbär innehåller naturligt xylitol i spårmängder, liksom andra frukter och grönsaker. Som med all mat kan för många björnbär ge orolig mage, och godbitar ska bara vara en liten del av hundens kost.",
@@ -56,6 +61,7 @@
   "what_to_do": {
     "en": "If your dog has a reaction after eating blackberries, call your vet immediately.",
     "sl": "Če se pes po robidah odzove s težavami, takoj pokličite veterinarja.",
+    "de": "Zeigt Ihr Hund nach dem Fressen von Brombeeren eine Reaktion, rufen Sie sofort Ihren Tierarzt an.",
     "cs": "Pokud má váš pes po snědení ostružin nějakou reakci, okamžitě zavolejte veterináři.",
     "hr": "Ako pas nakon jedenja kupina ima neku reakciju, odmah nazovi veterinara.",
     "sv": "Om hunden reagerar efter att ha ätit björnbär, ring veterinären omedelbart.",
@@ -66,6 +72,7 @@
   "serving": {
     "en": "Washed, plain fresh blackberries; no frozen berries, which usually have added sugar or xylitol; only wild berries you are sure are blackberries.",
     "sl": "Oprane, navadne sveže robide; brez zamrznjenega jagodičja, ki ima običajno dodan sladkor ali ksilitol; divje le, če ste prepričani, da so robide.",
+    "de": "Gewaschene, frische Brombeeren ohne Zusätze; keine tiefgekühlten Beeren, die meist zugesetzten Zucker oder Xylit enthalten; wild gepflückte Beeren nur, wenn Sie sicher sind, dass es Brombeeren sind.",
     "cs": "Omyté čerstvé ostružiny bez přísad; žádné mražené bobule, které mívají přidaný cukr nebo xylitol; z volně rostoucích plodů jen ty, o kterých víte jistě, že jsou to ostružiny.",
     "hr": "Oprane, obične svježe kupine; bez zamrznutih bobica, koje obično imaju dodani šećer ili ksilitol; divlje bobice samo ako si siguran da su kupine.",
     "sv": "Sköljda, naturella färska björnbär; inga frysta bär, som oftast har tillsatt socker eller xylitol; bara vilda bär som du är säker på är björnbär.",
@@ -76,6 +83,7 @@
   "child": {
     "en": "Dogs can share a few washed blackberries! Ask a grown-up first, especially for berries picked outside.",
     "sl": "Psi lahko dobijo nekaj opranih robid! Najprej vprašaj odraslega, posebej za robide, nabrane v naravi.",
+    "de": "Hunde dürfen ein paar gewaschene Brombeeren mitnaschen! Frag vorher einen Erwachsenen, vor allem bei Beeren, die draußen gepflückt wurden.",
     "cs": "O pár omytých ostružin se se psem můžeš rozdělit! Nejdřív se zeptej dospělého, hlavně u plodů natrhaných venku.",
     "hr": "Psi smiju pojesti nekoliko opranih kupina! Prvo pitaj odraslu osobu, osobito za bobice ubrane vani.",
     "sv": "Hundar kan få några sköljda björnbär! Fråga en vuxen först, särskilt om bären är plockade ute.",
@@ -88,6 +96,7 @@
       "q": {
         "en": "Can dogs eat wild blackberries?",
         "sl": "Ali lahko psi jedo divje robide?",
+        "de": "Dürfen Hunde wilde Brombeeren fressen?",
         "cs": "Mohou psi jíst lesní ostružiny?",
         "hr": "Smiju li psi jesti divlje kupine?",
         "sv": "Får hundar äta vilda björnbär?",
@@ -98,6 +107,7 @@
       "a": {
         "en": "Yes, as long as you are sure they are blackberries.",
         "sl": "Da, če ste prepričani, da so to robide.",
+        "de": "Ja, solange Sie sicher sind, dass es Brombeeren sind.",
         "cs": "Ano, pokud víte jistě, že jsou to ostružiny.",
         "hr": "Da, ako si siguran da su to kupine.",
         "sv": "Ja, så länge du är säker på att det är björnbär.",
@@ -170,6 +180,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "cd26960c5a0af524b70dd200ba9981c2db6d73cf79981b739ae574a1bab9ac67"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "71012e176518b02f89defa67bd2c0e72d4323a2deedfcba6141e86ea01a37fe9"
     },
     "cs": {
       "status": "verified",
