@@ -125,7 +125,7 @@
   "child": {
     "en": "A tiny bit of plain cooked egg can be a treat for a cat. Ask a grown-up to cook it first.",
     "sl": "Košček navadnega kuhanega jajca je lahko priboljšek za mucko. Prosi odraslega, da ga najprej skuha.",
-    "de": "Ein winziges Stück gekochtes Ei ohne alles kann ein Leckerli für eine Katze sein. Bitte einen Erwachsenen, es vorher zu kochen.",
+    "de": "Ein winziges Stück gekochtes Ei ohne Zusätze kann ein Leckerli für eine Katze sein. Bitte einen Erwachsenen, es vorher zu kochen.",
     "fr": "Un tout petit peu d’œuf cuit nature peut être une friandise pour un chat. Demande d’abord à un adulte de le cuire.",
     "es": "Un poquito de huevo cocinado y sin nada puede ser un premio para un gato. Pídele a un adulto que lo cocine primero.",
     "it": "Un pezzettino di uovo cotto e semplice può essere un premio per un gatto. Chiedi a un adulto di cuocerlo prima.",
@@ -226,7 +226,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "5b7f579f120e109fccad4c75d49c1b1f631b61f630fdf4087a4b737d045a933d"
+      "verified_hash": "a7999aeee631cffa98042b39e9608a442643c1c8a6dc7713dc24b02fa18b0a68"
     },
     "fr": {
       "status": "verified",

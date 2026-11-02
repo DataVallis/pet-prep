@@ -200,7 +200,7 @@
   "child": {
     "en": "Pistachios and their shells are not for dogs. They can upset a dog's tummy, so keep the bowl up high.",
     "sl": "Pistacije in njihove lupine niso za pse. Psu lahko zaboli trebušček, zato skledico postavi visoko.",
-    "de": "Pistazien und ihre Schalen sind nichts für Hunde. Sie können einem Hund Bauchweh machen, also stell die Schüssel hoch oben hin.",
+    "de": "Pistazien und ihre Schalen sind nichts für Hunde. Sie können einem Hund Bauchweh machen, also stell die Schüssel ganz weit oben ab.",
     "fr": "Les pistaches et leurs coques ne sont pas pour les chiens. Elles peuvent leur donner mal au ventre, alors range le bol en hauteur.",
     "es": "Los pistachos y sus cáscaras no son para perros. Pueden sentarle mal a la barriguita de un perro, así que deja el cuenco en alto.",
     "it": "I pistacchi e i loro gusci non sono per i cani. Possono fargli venire il mal di pancia, quindi tieni la ciotola in alto.",
@@ -320,7 +320,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "27c45cc7e7df83d4a95db3ae6903b1813e403435e7996bd051884ebf52eb46a7"
+      "verified_hash": "42bb9cb92d36a363c3dfea24ff28cdab1e732969e8723d1ed3d686cd4440927c"
     },
     "fr": {
       "status": "verified",

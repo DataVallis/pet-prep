@@ -108,7 +108,7 @@
   "serving": {
     "en": "A small amount of unsalted peanut butter whose label lists no xylitol; as a treat, not a daily food.",
     "sl": "Malo nesoljenega arašidovega masla, ki na deklaraciji nima ksilitola; kot priboljšek, ne vsak dan.",
-    "de": "Eine kleine Menge ungesalzene Erdnussbutter, auf deren Etikett kein Xylit steht; als Leckerli, nicht als tägliches Futter.",
+    "de": "Eine kleine Menge ungesalzener Erdnussbutter, auf deren Etikett kein Xylit steht; als Leckerli, nicht als tägliches Futter.",
     "fr": "Un peu de beurre de cacahuète sans sel dont l’étiquette ne mentionne pas de xylitol ; en friandise, pas comme aliment quotidien.",
     "es": "Un poco de crema de cacahuete sin sal cuya etiqueta no incluya xilitol; como premio, no como comida diaria.",
     "it": "Una piccola quantità di burro di arachidi senza sale, che in etichetta non riporti xilitolo; come premio, non come cibo quotidiano.",
@@ -307,7 +307,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e8081c1dfdaf39547faa21c8cbaf57399beb1fcbc1fbfe2bcbd6519a0bef07f1"
+      "verified_hash": "514ec795ad953506a9650eda6646572a573189fc98d3c715bae5366209b388ef"
     },
     "fr": {
       "status": "verified",

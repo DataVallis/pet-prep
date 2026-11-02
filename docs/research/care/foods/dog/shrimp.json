@@ -73,7 +73,7 @@
   "why": {
     "en": "Raw shellfish contain harmful pathogens that cooking avoids. Shrimp shells are a choking hazard and can cause blockages. Fried or breaded shrimp add unnecessary fats and oils. Shrimp are low in fat and calories but high in cholesterol, so moderation is key.",
     "sl": "Surovi morski sadeži vsebujejo škodljive klice, ki jih kuhanje uniči. Oklepi kozic lahko povzročijo dušenje in zaporo. Ocvrte ali panirane kozice dodajo nepotrebne maščobe in olja. Kozice imajo malo maščob in kalorij, a veliko holesterola, zato je ključna zmernost.",
-    "de": "Rohe Schalentiere enthalten schädliche Krankheitserreger, die durch das Garen vermieden werden. Garnelenschalen können zum Ersticken führen und einen Darmverschluss verursachen. Frittierte oder panierte Garnelen enthalten unnötige Fette und Öle. Garnelen sind fett- und kalorienarm, aber reich an Cholesterin – deshalb kommt es auf das richtige Maß an.",
+    "de": "Rohe Schalentiere enthalten schädliche Krankheitserreger, vor denen das Garen schützt. Garnelenschalen können zum Ersticken führen und einen Darmverschluss verursachen. Frittierte oder panierte Garnelen enthalten unnötige Fette und Öle. Garnelen sind fett- und kalorienarm, aber reich an Cholesterin – deshalb kommt es auf das richtige Maß an.",
     "fr": "Les crustacés crus contiennent des agents pathogènes nocifs que la cuisson permet d’éviter. Les carapaces de crevettes peuvent provoquer un étouffement et des obstructions. Les crevettes frites ou panées apportent des graisses et des huiles inutiles. Les crevettes sont pauvres en graisses et en calories mais riches en cholestérol : la modération est essentielle.",
     "es": "El marisco crudo contiene patógenos dañinos que se evitan cocinándolo. La cáscara de las gambas puede provocar atragantamiento y obstrucciones. Las gambas fritas o rebozadas añaden grasas y aceites innecesarios. Las gambas tienen poca grasa y pocas calorías, pero mucho colesterol, así que la clave es la moderación.",
     "it": "I crostacei crudi contengono patogeni dannosi che la cottura elimina. Il guscio dei gamberetti può causare soffocamento e ostruzioni. I gamberetti fritti o impanati aggiungono grassi e oli inutili. I gamberetti hanno pochi grassi e poche calorie ma molto colesterolo, quindi la moderazione è fondamentale.",
@@ -242,7 +242,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "959498df8a1c8673729674c38bebf884efe25b9e88f6ac87ce0f4f867cfbd1c3"
+      "verified_hash": "1edec17963948359cf2088e0b5f0cc79354c7b16f8215d753aceb7ed612e80f2"
     },
     "fr": {
       "status": "verified",

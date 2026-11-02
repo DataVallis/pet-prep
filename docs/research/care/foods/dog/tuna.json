@@ -91,7 +91,7 @@
   "what_to_do": {
     "en": "A stolen bite of tuna is nothing to panic about. If your dog has been eating tuna regularly and shows signs such as tremors, loss of coordination, vomiting blood or bloody diarrhoea, take them to the vet immediately.",
     "sl": "Ukraden grižljaj tune ni razlog za paniko. Če pes redno dobiva tuno in se pojavijo znaki, kot so tresenje, slaba koordinacija, bruhanje krvi ali krvava driska, ga takoj odpeljite k veterinarju.",
-    "de": "Ein stibitzter Bissen Thunfisch ist kein Grund zur Panik. Wenn Ihr Hund regelmäßig Thunfisch gefressen hat und Anzeichen wie Zittern, Koordinationsverlust, Bluterbrechen oder blutigen Durchfall zeigt, bringen Sie ihn sofort zum Tierarzt.",
+    "de": "Ein stibitzter Bissen Thunfisch ist kein Grund zur Panik. Wenn Ihr Hund regelmäßig Thunfisch gefressen hat und Anzeichen wie Zittern, Koordinationsverlust, blutiges Erbrechen oder blutigen Durchfall zeigt, bringen Sie ihn sofort zum Tierarzt.",
     "fr": "Une bouchée de thon chapardée n’est pas une raison de paniquer. Si votre chien mange du thon régulièrement et présente des signes comme des tremblements, une perte de coordination, des vomissements de sang ou une diarrhée sanglante, emmenez-le immédiatement chez le vétérinaire.",
     "es": "Que tu perro robe un bocado de atún no es motivo de pánico. Si tu perro ha estado comiendo atún con regularidad y muestra signos como temblores, falta de coordinación, vómitos con sangre o diarrea con sangre, llévalo al veterinario de inmediato.",
     "it": "Un boccone di tonno rubato non è motivo di panico. Se il tuo cane mangia tonno regolarmente e mostra sintomi come tremori, perdita di coordinazione, vomito con sangue o diarrea con sangue, portalo subito dal veterinario.",
@@ -300,7 +300,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "a2740e95b82b8ba933541d12d9c6015f54001f5d56e56a9043a730195925f186"
+      "verified_hash": "aeef805681af36f6c2a5ac37943899d278feeb53a2ee97521e27a26cfba366fb"
     },
     "fr": {
       "status": "verified",

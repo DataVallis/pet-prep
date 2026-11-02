@@ -73,7 +73,7 @@
   "why": {
     "en": "Cats Protection says plain cooked turkey is fine as an occasional treat but shouldn't be given regularly, as turkey alone lacks nutrients cats need. Turkey skin is high in fat and can cause digestive upset or even pancreatitis, and roast skin may carry garlic or herbs. Turkey bones can splinter and cause choking or blockages.",
     "sl": "Cats Protection navaja, da je navadno kuhano puranje meso v redu kot občasen priboljšek, ne pa kot redna hrana, saj samo puranje meso ne vsebuje vseh hranil, ki jih mačke potrebujejo. Puranja koža vsebuje veliko maščob in lahko povzroči prebavne težave ali celo vnetje trebušne slinavke, pečena koža pa je lahko začinjena s česnom ali zelišči. Puranje kosti se lahko razcepijo in povzročijo dušenje ali zamašitev.",
-    "de": "Laut Cats Protection ist pures, gegartes Putenfleisch als gelegentliches Leckerli in Ordnung, sollte aber nicht regelmäßig gegeben werden, da Pute allein nicht alle Nährstoffe enthält, die Katzen brauchen. Putenhaut ist sehr fettreich und kann Verdauungsbeschwerden oder sogar eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen, und die Haut eines Bratens kann Knoblauch oder Kräuter abbekommen haben. Putenknochen können splittern und zum Ersticken oder zu Blockaden im Verdauungstrakt führen.",
+    "de": "Laut Cats Protection ist pures, gegartes Putenfleisch als gelegentliches Leckerli in Ordnung, sollte aber nicht regelmäßig gegeben werden, da Pute allein nicht alle Nährstoffe enthält, die Katzen brauchen. Putenhaut ist sehr fettreich und kann Verdauungsbeschwerden oder sogar eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen, und die Haut eines Bratens kann mit Knoblauch oder Kräutern gewürzt sein. Putenknochen können splittern und zum Ersticken oder zu Blockaden im Verdauungstrakt führen.",
     "fr": "Selon Cats Protection, un peu de dinde cuite nature convient comme friandise occasionnelle, mais ne doit pas être donnée régulièrement, car la dinde seule n’apporte pas tous les nutriments dont les chats ont besoin. La peau de dinde est très grasse et peut provoquer des troubles digestifs, voire une pancréatite, et la peau d’une dinde rôtie peut avoir été en contact avec de l’ail ou des herbes. Les os de dinde peuvent se briser en éclats et provoquer un étouffement ou une occlusion.",
     "es": "Cats Protection dice que el pavo cocinado sin nada añadido está bien como premio ocasional, pero que no hay que darlo de forma habitual, porque el pavo solo no tiene todos los nutrientes que los gatos necesitan. La piel del pavo tiene mucha grasa y puede causar molestias digestivas o incluso pancreatitis, y la piel del pavo asado puede llevar ajo o hierbas. Los huesos de pavo pueden astillarse y causar atragantamiento u obstrucciones.",
     "it": "Secondo Cats Protection un po’ di tacchino cotto e semplice va bene come premio occasionale, ma non andrebbe dato regolarmente, perché il tacchino da solo non contiene tutti i nutrienti di cui i gatti hanno bisogno. La pelle del tacchino è molto grassa e può causare disturbi digestivi o persino una pancreatite, e la pelle dell’arrosto può contenere aglio o erbe aromatiche. Le ossa di tacchino possono scheggiarsi e causare soffocamento od ostruzioni.",
@@ -125,7 +125,7 @@
   "child": {
     "en": "A little plain turkey with no bones can be a cat treat. The skin and gravy stay on your plate.",
     "sl": "Malo navadnega puranjega mesa brez kosti je lahko priboljšek za muce. Koža in omaka ostaneta na tvojem krožniku.",
-    "de": "Ein bisschen Putenfleisch ohne alles und ohne Knochen kann ein Leckerli für Katzen sein. Die Haut und die Soße bleiben auf deinem Teller.",
+    "de": "Ein bisschen Putenfleisch ohne Gewürze und ohne Knochen kann ein Leckerli für Katzen sein. Die Haut und die Soße bleiben auf deinem Teller.",
     "fr": "Un peu de dinde nature sans os peut être une friandise pour chat. La peau et la sauce restent dans ton assiette.",
     "es": "Un poco de pavo sin nada añadido y sin huesos puede ser un premio para gatos. La piel y la salsa se quedan en tu plato.",
     "it": "Un po’ di tacchino semplice e senza ossa può essere un premio per gatti. La pelle e il sugo restano nel tuo piatto.",
@@ -242,7 +242,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "720c829ce225c0ba1d2f7e720cd7f3ef4b608cd1eb8a213fe12cdeab91961149"
+      "verified_hash": "5cec8268d4c225a0275f64188d4fbd16ad9d41a16e260f48a1c09a39ed5350c6"
     },
     "fr": {
       "status": "verified",

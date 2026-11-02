@@ -101,7 +101,7 @@
     "de": [
       "Erstickungsanfall",
       "Erbrechen",
-      "Bauchschmerzen (Verstecken, Knurren, will nicht berührt werden)"
+      "Bauchschmerzen (Katze versteckt sich, knurrt, will nicht angefasst werden)"
     ],
     "fr": [
       "Étouffement",
@@ -255,7 +255,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "10141a23f9d16279fc451eaa5e32fd0a9ec99a3da4e8ab37fcb538a6c8e7eaf0"
+      "verified_hash": "58771e46fa175949db36cdee4487899e36266189f167cdccde89b17657f830ab"
     },
     "fr": {
       "status": "verified",

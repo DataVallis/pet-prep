@@ -56,7 +56,7 @@
   "answer": {
     "en": "Yes, in small amounts, if it is plain and unsweetened and your dog tolerates dairy. Some dogs get tummy upset from lactose. Never give yogurt with xylitol or other sweeteners, or with added sugar.",
     "sl": "Da, v majhnih količinah, če je navaden, nesladkan in pes mlečne izdelke prenaša. Nekaterim psom laktoza razdraži prebavo. Nikoli ne dajte jogurta s ksilitolom ali drugimi sladili ali z dodanim sladkorjem.",
-    "de": "Ja, in kleinen Mengen, wenn es ungesüßter Naturjoghurt ist und Ihr Hund Milchprodukte verträgt. Manche Hunde bekommen von Laktose Bauchbeschwerden. Geben Sie niemals Joghurt mit Xylit (Birkenzucker) oder anderen Süßungsmitteln oder mit zugesetztem Zucker.",
+    "de": "Ja, in kleinen Mengen, wenn es ungesüßter Naturjoghurt ist und Ihr Hund Milchprodukte verträgt. Manche Hunde bekommen von Laktose Bauchbeschwerden. Geben Sie niemals Joghurt mit Xylit (Birkenzucker) oder anderen Süßstoffen oder mit zugesetztem Zucker.",
     "fr": "Oui, en petite quantité, s’il est nature et non sucré et si votre chien tolère les produits laitiers. Certains chiens ont des troubles digestifs à cause du lactose. Ne donnez jamais de yaourt contenant du xylitol ou d’autres édulcorants, ni de yaourt sucré.",
     "es": "Sí, en pequeñas cantidades, si es natural y sin azúcar, y si tu perro tolera los lácteos. A algunos perros la lactosa les sienta mal a la barriga. Nunca le des yogur con xilitol u otros edulcorantes, ni con azúcar añadido.",
     "it": "Sì, in piccole quantità, se è bianco, non zuccherato e il tuo cane tollera i latticini. Ad alcuni cani il lattosio dà disturbi di pancia. Non dargli mai yogurt con xilitolo o altri dolcificanti, o con zucchero aggiunto.",
@@ -73,7 +73,7 @@
   "why": {
     "en": "Many dogs have trouble digesting lactose, which can cause gas, diarrhoea or vomiting. Greek-style yogurt has less lactose, so it is usually the better choice. Some sweeteners, especially xylitol, are toxic to dogs, and too much dairy fat can upset the stomach or cause pancreatitis.",
     "sl": "Mnogi psi laktozo težko prebavljajo, kar lahko povzroči napenjanje, drisko ali bruhanje. Grški jogurt ima manj laktoze, zato je običajno boljša izbira. Nekatera sladila, predvsem ksilitol, so za pse strupena, preveč mlečne maščobe pa lahko razdraži želodec ali povzroči vnetje trebušne slinavke.",
-    "de": "Viele Hunde können Laktose schlecht verdauen, was Blähungen, Durchfall oder Erbrechen verursachen kann. Joghurt nach griechischer Art enthält weniger Laktose und ist daher meist die bessere Wahl. Manche Süßungsmittel, vor allem Xylit, sind für Hunde giftig, und zu viel Milchfett kann auf den Magen schlagen oder eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen.",
+    "de": "Viele Hunde können Laktose schlecht verdauen, was Blähungen, Durchfall oder Erbrechen verursachen kann. Joghurt nach griechischer Art enthält weniger Laktose und ist daher meist die bessere Wahl. Manche Süßstoffe, vor allem Xylit, sind für Hunde giftig, und zu viel Milchfett kann auf den Magen schlagen oder eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen.",
     "fr": "Beaucoup de chiens digèrent mal le lactose, ce qui peut provoquer gaz, diarrhée ou vomissements. Le yaourt à la grecque contient moins de lactose : c’est donc généralement le meilleur choix. Certains édulcorants, en particulier le xylitol, sont toxiques pour les chiens, et trop de matières grasses laitières peuvent dérégler l’estomac ou provoquer une pancréatite.",
     "es": "A muchos perros les cuesta digerir la lactosa, lo que puede causar gases, diarrea o vómitos. El yogur de tipo griego tiene menos lactosa, así que suele ser la mejor opción. Algunos edulcorantes, sobre todo el xilitol, son tóxicos para los perros, y demasiada grasa láctea puede sentar mal al estómago o provocar pancreatitis.",
     "it": "Molti cani digeriscono con difficoltà il lattosio, che può causare gas intestinali, diarrea o vomito. Lo yogurt greco contiene meno lattosio, quindi di solito è la scelta migliore. Alcuni dolcificanti, soprattutto lo xilitolo, sono tossici per i cani, e troppi grassi del latte possono disturbare lo stomaco o causare una pancreatite.",
@@ -108,7 +108,7 @@
   "serving": {
     "en": "Plain yogurt with no added sweeteners, ideally Greek-style; check the label for sugar and xylitol.",
     "sl": "Navaden jogurt brez dodanih sladil, najbolje grški; na deklaraciji preverite, ali vsebuje sladkor ali ksilitol.",
-    "de": "Naturjoghurt ohne zugesetzte Süßungsmittel, am besten nach griechischer Art; prüfen Sie das Etikett auf Zucker und Xylit.",
+    "de": "Naturjoghurt ohne zugesetzte Süßstoffe, am besten nach griechischer Art; prüfen Sie das Etikett auf Zucker und Xylit.",
     "fr": "Yaourt nature sans édulcorant ajouté, de préférence à la grecque ; vérifiez sur l’étiquette l’absence de sucre et de xylitol.",
     "es": "Yogur natural sin edulcorantes añadidos, mejor de tipo griego; revisa en la etiqueta el azúcar y el xilitol.",
     "it": "Yogurt bianco senza dolcificanti aggiunti, meglio se greco; controlla in etichetta zucchero e xilitolo.",
@@ -197,7 +197,7 @@
       "a": {
         "en": "Some yogurts contain sweeteners such as xylitol, which is toxic to dogs, or added sugar.",
         "sl": "Nekateri jogurti vsebujejo sladila, kot je ksilitol, ki je za pse strupen, ali dodan sladkor.",
-        "de": "Manche Joghurts enthalten Süßungsmittel wie Xylit, das für Hunde giftig ist, oder zugesetzten Zucker.",
+        "de": "Manche Joghurts enthalten Süßstoffe wie Xylit, das für Hunde giftig ist, oder zugesetzten Zucker.",
         "fr": "Certains yaourts contiennent des édulcorants comme le xylitol, toxique pour les chiens, ou du sucre ajouté.",
         "es": "Algunos yogures contienen edulcorantes como el xilitol, que es tóxico para los perros, o azúcar añadido.",
         "it": "Alcuni yogurt contengono dolcificanti come lo xilitolo, tossico per i cani, o zucchero aggiunto.",
@@ -288,7 +288,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "a0181104e061f06a00ef046e52bdabcc451c0597ec198f36702a71fd3e8554fe"
+      "verified_hash": "7a846a0d78575923703a32962790a06d280ae2fc41edb9fc101699d81df3d87e"
     },
     "fr": {
       "status": "verified",

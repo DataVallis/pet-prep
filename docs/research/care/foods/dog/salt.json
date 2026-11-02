@@ -73,7 +73,7 @@
   "why": {
     "en": "Common causes of salt poisoning are homemade salt-dough ornaments and play dough, snow with salt de-icer, and drinking a lot of sea water. Salt poisoning is unlikely when a healthy dog has fresh water, but small dogs with health problems are at more risk if they have no fresh water. Salt must never be used to make a dog vomit.",
     "sl": "Pogosti vzroki zastrupitve s soljo so domači okraski iz slanega testa, domača masa za modeliranje, sneg s soljo proti poledici ter pitje večjih količin morske vode. Pri zdravem psu s svežo vodo je zastrupitev s soljo malo verjetna, večje tveganje pa imajo majhni psi z zdravstvenimi težavami, če nimajo sveže vode. Soli psu nikoli ne dajajte, da bi izzvali bruhanje.",
-    "de": "Häufige Ursachen einer Salzvergiftung sind selbst gemachter Salzteig-Schmuck und selbst gemachte Knete, Schnee mit Streusalz und das Trinken von viel Meerwasser. Eine Salzvergiftung ist unwahrscheinlich, wenn ein gesunder Hund frisches Wasser hat; kleine Hunde mit gesundheitlichen Problemen sind ohne frisches Wasser aber stärker gefährdet. Salz darf niemals verwendet werden, um einen Hund zum Erbrechen zu bringen.",
+    "de": "Häufige Ursachen einer Salzvergiftung sind selbst gemachter Salzteig-Schmuck und selbst gemachte Knete, Schnee mit Streusalz und das Trinken von viel Meerwasser. Eine Salzvergiftung ist unwahrscheinlich, wenn ein gesunder Hund frisches Wasser hat; kleine Hunde mit gesundheitlichen Problemen sind ohne frisches Wasser aber stärker gefährdet. Bringen Sie einen Hund niemals mit Salz zum Erbrechen.",
     "fr": "Les causes fréquentes d’intoxication au sel sont les décorations en pâte à sel et la pâte à modeler maison, la neige mêlée de sel de déneigement et l’ingestion de beaucoup d’eau de mer. L’intoxication au sel est peu probable quand un chien en bonne santé a de l’eau fraîche, mais les petits chiens ayant des problèmes de santé sont plus à risque s’ils n’en ont pas. Il ne faut jamais utiliser de sel pour faire vomir un chien.",
     "es": "Causas habituales de intoxicación por sal son los adornos caseros de masa de sal y la plastilina casera, la nieve con sal para deshielo y beber mucha agua de mar. La intoxicación por sal es poco probable cuando un perro sano tiene agua fresca, pero los perros pequeños con problemas de salud corren más riesgo si no tienen agua fresca. Nunca debe usarse sal para hacer vomitar a un perro.",
     "it": "Cause frequenti di avvelenamento da sale sono le decorazioni in pasta di sale e la pasta da modellare fatte in casa, la neve con sale antighiaccio e bere molta acqua di mare. L’avvelenamento da sale è improbabile se un cane sano ha acqua fresca, ma i cani piccoli con problemi di salute sono più a rischio se non hanno acqua fresca. Il sale non va mai usato per far vomitare un cane.",
@@ -287,7 +287,7 @@
       "a": {
         "en": "No. Salt and salt water should never be used to make an animal vomit, because of the high risk of salt poisoning. Call your vet instead.",
         "sl": "Ne. Soli in slane vode nikoli ne uporabljajte za izzivanje bruhanja, ker je tveganje zastrupitve s soljo veliko. Raje pokličite veterinarja.",
-        "de": "Nein. Salz und Salzwasser dürfen wegen der hohen Gefahr einer Salzvergiftung niemals verwendet werden, um ein Tier zum Erbrechen zu bringen. Rufen Sie stattdessen Ihren Tierarzt an.",
+        "de": "Nein. Bringen Sie ein Tier niemals mit Salz oder Salzwasser zum Erbrechen – die Gefahr einer Salzvergiftung ist hoch. Rufen Sie stattdessen Ihren Tierarzt an.",
         "fr": "Non. Il ne faut jamais utiliser de sel ni d’eau salée pour faire vomir un animal, en raison du risque élevé d’intoxication au sel. Appelez plutôt votre vétérinaire.",
         "es": "No. La sal y el agua con sal nunca deben usarse para hacer vomitar a un animal, por el alto riesgo de intoxicación por sal. Llama a tu veterinario.",
         "it": "No. Sale e acqua salata non vanno mai usati per far vomitare un animale, perché il rischio di avvelenamento da sale è alto. Chiama invece il veterinario.",
@@ -398,7 +398,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "4aefd357910db6c46afb481937f1e4defc285dadd0903b3c7cff1dcaf12a3131"
+      "verified_hash": "e9a0c02f05d697911bc2ced7b223423e996141ae7a6df3830bfb0e0b86e81fa5"
     },
     "fr": {
       "status": "verified",

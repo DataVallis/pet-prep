@@ -56,7 +56,7 @@
   "answer": {
     "en": "Yes, plain cooked beef with the fat trimmed can be a healthy source of protein. Leave out salt, spices and toppings such as onion and garlic, never give cooked bones, and avoid raw beef, which can carry bacteria.",
     "sl": "Da, nezačinjena kuhana govedina brez maščobe je lahko zdrav vir beljakovin. Ne uporabljajte soli, začimb in dodatkov, kot sta čebula in česen, nikoli ne dajte kuhanih kosti in se izogibajte surovi govedini, ki lahko vsebuje bakterije.",
-    "de": "Ja, pures, gegartes Rindfleisch ohne Fettrand kann eine gesunde Proteinquelle sein. Verzichten Sie auf Salz, Gewürze und Beläge wie Zwiebeln und Knoblauch, geben Sie niemals gegarte Knochen und meiden Sie rohes Rindfleisch, das Bakterien übertragen kann.",
+    "de": "Ja, pures, gegartes Rindfleisch ohne Fettrand kann eine gesunde Proteinquelle sein. Verzichten Sie auf Salz, Gewürze und Toppings wie Zwiebeln und Knoblauch, geben Sie niemals gegarte Knochen und meiden Sie rohes Rindfleisch, das Bakterien übertragen kann.",
     "fr": "Oui, du bœuf cuit nature, dégraissé, peut être une bonne source de protéines. Évitez le sel, les épices et les garnitures comme l’oignon et l’ail, ne donnez jamais d’os cuits et évitez le bœuf cru, qui peut contenir des bactéries.",
     "es": "Sí, la ternera cocinada, sin nada añadido y sin la grasa, puede ser una fuente sana de proteína. No le pongas sal, especias ni añadidos como cebolla y ajo, no le des nunca huesos cocinados y evita la ternera cruda, que puede contener bacterias.",
     "it": "Sì, il manzo cotto al naturale e privato del grasso può essere una sana fonte di proteine. Niente sale, spezie o aggiunte come cipolla e aglio, mai ossa cotte, ed evita il manzo crudo, che può contenere batteri.",
@@ -73,7 +73,7 @@
   "why": {
     "en": "Unseasoned, cooked beef can be a healthy protein, cut into bite-sized pieces with the fat trimmed. Burgers and steaks often contain salt, spices and toppings that can be dangerous; onions and garlic are toxic to dogs. Raw steak or burger can carry Salmonella and E. coli, and cooked bones of any kind should never be given.",
     "sl": "Nezačinjena kuhana govedina, narezana na grižljaje in brez maščobe, je lahko zdrav vir beljakovin. Burgerji in zrezki pogosto vsebujejo sol, začimbe in dodatke, ki so lahko nevarni; čebula in česen sta za pse strupena. Surov zrezek ali burger lahko vsebuje salmonelo in bakterijo E. coli, kuhanih kosti katere koli vrste pa psu ne dajajte nikoli.",
-    "de": "Ungewürztes, gegartes Rindfleisch kann eine gesunde Proteinquelle sein – in mundgerechte Stücke geschnitten und mit abgeschnittenem Fett. Burger und Steaks enthalten oft Salz, Gewürze und Beläge, die gefährlich sein können; Zwiebeln und Knoblauch sind für Hunde giftig. Rohes Steak oder rohe Burger-Patties können Salmonellen und E. coli übertragen, und gegarte Knochen jeder Art sollten niemals gegeben werden.",
+    "de": "Ungewürztes, gegartes Rindfleisch kann eine gesunde Proteinquelle sein – in mundgerechte Stücke geschnitten und mit abgeschnittenem Fett. Burger und Steaks enthalten oft Salz, Gewürze und Toppings, die gefährlich sein können; Zwiebeln und Knoblauch sind für Hunde giftig. Rohes Steak oder rohe Burger-Patties können Salmonellen und E. coli übertragen, und gegarte Knochen jeder Art dürfen Hunde nie bekommen.",
     "fr": "Cuit et sans assaisonnement, le bœuf peut être une protéine saine, coupé en petits morceaux et dégraissé. Les burgers et les steaks contiennent souvent du sel, des épices et des garnitures qui peuvent être dangereux ; l’oignon et l’ail sont toxiques pour les chiens. Le steak ou le burger cru peut contenir des salmonelles et des E. coli, et il ne faut jamais donner d’os cuits, quels qu’ils soient.",
     "es": "La ternera cocinada y sin condimentar puede ser una proteína sana, cortada en trocitos y sin la grasa. Las hamburguesas y los filetes suelen llevar sal, especias y añadidos que pueden ser peligrosos; la cebolla y el ajo son tóxicos para los perros. Un filete o una hamburguesa crudos pueden contener Salmonella y E. coli, y nunca hay que darle huesos cocinados de ningún tipo.",
     "it": "Il manzo cotto e non condito può essere una proteina sana, tagliato a bocconcini e privato del grasso. Hamburger e bistecche spesso contengono sale, spezie e aggiunte che possono essere pericolose; cipolla e aglio sono tossici per i cani. La bistecca o l’hamburger crudi possono contenere Salmonella ed E. coli, e non bisogna mai dare ossa cotte di nessun tipo.",
@@ -161,7 +161,7 @@
       "a": {
         "en": "Better not: burgers often contain salt, spices and toppings such as onion that can be dangerous. Plain cooked meat is the safer choice.",
         "sl": "Bolje ne: burgerji pogosto vsebujejo sol, začimbe in dodatke, kot je čebula, ki so lahko nevarni. Navadno kuhano meso je varnejša izbira.",
-        "de": "Besser nicht: Burger enthalten oft Salz, Gewürze und Beläge wie Zwiebeln, die gefährlich sein können. Pures, gegartes Fleisch ist die sicherere Wahl.",
+        "de": "Besser nicht: Burger enthalten oft Salz, Gewürze und Toppings wie Zwiebeln, die gefährlich sein können. Pures, gegartes Fleisch ist die sicherere Wahl.",
         "fr": "Mieux vaut éviter : les burgers contiennent souvent du sel, des épices et des garnitures comme l’oignon qui peuvent être dangereux. La viande cuite nature est le choix le plus sûr.",
         "es": "Mejor que no: las hamburguesas suelen llevar sal, especias y añadidos como la cebolla, que pueden ser peligrosos. La carne cocinada sin nada añadido es la opción más segura.",
         "it": "Meglio di no: gli hamburger spesso contengono sale, spezie e aggiunte come la cipolla che possono essere pericolose. La carne cotta al naturale è la scelta più sicura.",
@@ -238,7 +238,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "448645650b4ab235f80dcebf59ffb203ec1d9cf084a3ec8384ac8c25a55383e7"
+      "verified_hash": "2fa9543da0f7513020a9614a6bd1b84e0d1b8db9a6564f95a9145961a64bb19a"
     },
     "fr": {
       "status": "verified",

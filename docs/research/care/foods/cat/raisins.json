@@ -73,7 +73,7 @@
   "why": {
     "en": "Cat welfare charities warn that grapes, raisins and currants can cause kidney failure in cats, with cats that have chronic kidney disease possibly at greater risk. Cats are unlikely to eat many raisins on their own but may be tempted by foods that contain them. Cat cases are rare and not well understood, so we use the stricter level.",
     "sl": "Organizacije za dobrobit mačk opozarjajo, da lahko grozdje, rozine in korintske rozine pri mačkah povzročijo odpoved ledvic, mačke s kronično ledvično boleznijo pa so morda še bolj ogrožene. Mačke same verjetno ne pojedo veliko rozin, lahko pa jih zamika hrana, ki jih vsebuje. Primeri pri mačkah so redki in slabo pojasnjeni, zato uporabljamo strožjo stopnjo.",
-    "de": "Katzenschutzorganisationen warnen, dass Weintrauben, Rosinen und Korinthen bei Katzen Nierenversagen verursachen können; Katzen mit chronischer Nierenerkrankung sind möglicherweise stärker gefährdet. Von sich aus fressen Katzen kaum viele Rosinen, von Lebensmitteln mit Rosinen können sie sich aber verlocken lassen. Fälle bei Katzen sind selten und wenig erforscht, deshalb wählen wir die strengere Einstufung.",
+    "de": "Tierschutzorganisationen für Katzen warnen, dass Weintrauben, Rosinen und Korinthen bei Katzen Nierenversagen verursachen können; Katzen mit chronischer Nierenerkrankung sind möglicherweise stärker gefährdet. Von sich aus fressen Katzen eher selten viele Rosinen, doch von Speisen mit Rosinen können sie sich verlocken lassen. Fälle bei Katzen sind selten und wenig erforscht, deshalb wählen wir die strengere Einstufung.",
     "fr": "Les associations de protection des chats avertissent que le raisin, les raisins secs et les raisins de Corinthe peuvent provoquer une insuffisance rénale chez le chat, les chats atteints d’une maladie rénale chronique pouvant être plus à risque. Un chat a peu de chances de manger beaucoup de raisins secs seuls, mais il peut être tenté par des aliments qui en contiennent. Les cas félins sont rares et mal compris ; nous retenons donc le niveau le plus prudent.",
     "es": "Las organizaciones de bienestar felino advierten de que las uvas, las pasas y las pasas de Corinto pueden causar insuficiencia renal en los gatos, y los gatos con enfermedad renal crónica podrían correr más riesgo. Es poco probable que un gato coma muchas pasas por sí solo, pero puede sentirse atraído por alimentos que las contienen. Los casos en gatos son raros y no se conocen bien, así que aplicamos el nivel más estricto.",
     "it": "Le associazioni per il benessere dei gatti avvertono che uva, uvetta e uva passa di Corinto possono causare insufficienza renale nei gatti, e che i gatti con malattia renale cronica potrebbero essere più a rischio. È improbabile che un gatto mangi molta uvetta da sola, ma può essere attratto dai cibi che la contengono. I casi nei gatti sono rari e poco conosciuti, quindi applichiamo il livello più severo.",
@@ -273,7 +273,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "abfd205e8461ceb9bae9a72d2b516eec26034ec31dda8398241948bf092eca7b"
+      "verified_hash": "d8e6ffd82816aadded7706c4e1a2b87f02e9bb6536bd06a0c1852ef9aae45fe7"
     },
     "fr": {
       "status": "verified",

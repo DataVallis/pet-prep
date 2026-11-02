@@ -106,7 +106,7 @@
       "Erbrechen",
       "Durchfall, manchmal blutig",
       "Fieber",
-      "Will nicht fressen",
+      "Appetitlosigkeit",
       "Teilnahmslosigkeit"
     ],
     "fr": [
@@ -399,7 +399,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "a4626977642691597b657ec6ba884b2cd75464363629617ad33bc882cd1a5980"
+      "verified_hash": "7b3773b97e96ac09088b76962b9e63a2ee3d40eb049404001b59f8d556d69bd3"
     },
     "fr": {
       "status": "verified",
