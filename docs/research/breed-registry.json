@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "39f866e4f4421056a696c820dafbe6f1d6889cfc4975485d5b003bd161d36042"
+      "sha256": "3b0cf2b29eeec69d5a6112f543c3e461c3f40c967ba49e35c5e3a76f807affda"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "5649f12d8a1dade58e8d43291c798c5566459cec89151c681b982a05d263143d"
+      "sha256": "8fb9706eb8ef45b2eb4f6f522e994b3e71641ae25269d2f7704fd09e5cf0e5ea"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "9d8a6e4e82d88b66685d051406abc4b77eb7587051e35313fa887c0ad71fbafd"
+      "sha256": "98fbad5dd19c8acd63452b3f492cc23487355c4d7d0eb32989f197fd88077d58"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,20 +40,20 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "9b5db593abf8515fd3d67c3bab73378cccf2ffd679f14c5d9155fadae8d8af7c"
+      "sha256": "4c42efe4fbe9fc0b2a239874aaee112c8ef059b62383f95eb4a218af9b38b7db"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "8baa84087802abcb716e8ec71c62c5a578d85fdd07c0c171c6a5c6e7654eca82"
+      "sha256": "e509cebfd93fcf4c70c8b3e471b278634c3cd663e3c46c6580ad64adba5ace91"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "3d32899ad42c4bcae51cd199f337b298d36ca7ab7c664160ceaa1d6f63a5b8d4"
+      "sha256": "f1f93f4c501860ea04ff2de56e7c7f2ef878651b3b179ed112de8e387bc3071c"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "5da2f50cee81ae5299825b6c6ad41185c64d6839f9f911da16456e98b897e406"
+      "sha256": "ebece0fa29d1202dbc096e80fa23f932057f1224250183d223b5df023b057eb6"
     },
     "app_release": {
       "path": "docs/research/app-release.json",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "ef2d38cf73f9231289cde2122acb6930c7723db489615dd83c1964124d96790d"
+      "sha256": "40de93143534f7169109e4d208243af86fa2dc189c938374441e218137139865"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -222,7 +222,7 @@
         }
       },
       "status": "available",
-      "breed_count": 78,
+      "breed_count": 79,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -47144,6 +47144,589 @@
       ]
     },
     {
+      "id": "rat_terrier",
+      "species": "dog",
+      "order": 78,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Rat Terrier",
+        "sl": "Rat terier"
+      },
+      "slug": {
+        "en": "rat-terrier",
+        "sl": "rat-terier"
+      },
+      "synonyms": {
+        "en": [
+          "Rattie",
+          "Ratty",
+          "American Rat Terrier"
+        ],
+        "sl": [
+          "rattie",
+          "ameriški rat terier",
+          "terier za podgane"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S648"
+          ],
+          "ref": "rat_terrier.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              25.4,
+              45.7
+            ],
+            "female": [
+              25.4,
+              45.7
+            ]
+          },
+          "source_ids": [
+            "S650"
+          ],
+          "ref": "rat_terrier.height.akc",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              4.5,
+              11.3
+            ],
+            "female": [
+              4.5,
+              11.3
+            ]
+          },
+          "source_ids": [
+            "S648"
+          ],
+          "ref": "rat_terrier.adult_weight.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "rat_terrier.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            12,
+            16
+          ],
+          "source_ids": [
+            "S647"
+          ],
+          "ref": "rat_terrier.lifespan.vca",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            12,
+            18
+          ],
+          "source_ids": [
+            "S648"
+          ],
+          "ref": "rat_terrier.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "at_least",
+          "value": 30,
+          "source_ids": [
+            "S650"
+          ],
+          "ref": "proposed_game_parameters.rat_terrier.exercise_minutes_adult",
+          "confidence": "medium"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S650"
+          ],
+          "ref": "rat_terrier.suitability.rtca_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S647"
+          ],
+          "ref": "rat_terrier.suitability.vca_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "feeding",
+          "field": "food_motivated",
+          "kind": "statement",
+          "value": true,
+          "source_ids": [
+            "S648"
+          ],
+          "ref": "rat_terrier.behaviour.food_motivation",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S648"
+          ],
+          "ref": "rat_terrier.health.hip_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S648"
+          ],
+          "ref": "rat_terrier.health.luxating_patella",
+          "confidence": "high"
+        },
+        {
+          "key": "legg_perthes",
+          "source_ids": [
+            "S648"
+          ],
+          "ref": "rat_terrier.health.legg_perthes",
+          "confidence": "high"
+        },
+        {
+          "key": "primary_lens_luxation",
+          "source_ids": [
+            "S648"
+          ],
+          "ref": "rat_terrier.health.primary_lens_luxation",
+          "confidence": "high"
+        },
+        {
+          "key": "weight_gain",
+          "source_ids": [
+            "S648"
+          ],
+          "ref": "rat_terrier.health.obesity",
+          "confidence": "high"
+        },
+        {
+          "key": "skin_allergies",
+          "source_ids": [
+            "S648"
+          ],
+          "ref": "rat_terrier.health.skin_allergies",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "children",
+            "source_ids": [
+              "S650"
+            ],
+            "refs": [
+              "rat_terrier.behaviour.family"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S648"
+            ],
+            "refs": [
+              "rat_terrier.behaviour.mental_stimulation"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S648"
+            ],
+            "refs": [
+              "rat_terrier.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S648"
+            ],
+            "refs": [
+              "rat_terrier.suitability.petmd_shedding"
+            ]
+          },
+          {
+            "tag": "food_motivated_weight",
+            "source_ids": [
+              "S648"
+            ],
+            "refs": [
+              "rat_terrier.behaviour.food_motivation"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 3000,
+              "cap_month": 3
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 2300
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 3000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 30,
+              "steps": 3000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "nail_trim",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.rat_terrier.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S650"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min/day (RTCA S650 'at least 30 minutes'; no RKC / PDSA page)"
+          },
+          {
+            "ref": "proposed_game_parameters.rat_terrier.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 23 min → 2,300 steps (75 % of 30, half up)"
+          },
+          {
+            "ref": "proposed_game_parameters.rat_terrier.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S647"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 108 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+          },
+          {
+            "ref": "proposed_game_parameters.rat_terrier.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+          },
+          {
+            "ref": "proposed_game_parameters.rat_terrier.grooming",
+            "basis_source_ids": [
+              "S647"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (VCA »Brushing once a week«; PetMD, WebMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.rat_terrier.nail_trimming",
+            "basis_source_ids": [
+              "S648"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »weekly nail trims« → 1× na teden"
+          },
+          {
+            "ref": "proposed_game_parameters.rat_terrier.bathing",
+            "basis_source_ids": [
+              "S649"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »a monthly bath« → vsake 4 tedne"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S647",
+          "S648",
+          "S649",
+          "S650"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "cardiac_exam",
+            "level": "other_scheme",
+            "source_ids": [
+              "K39"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K39"
+            ]
+          },
+          {
+            "key": "patella_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K39"
+            ]
+          },
+          {
+            "key": "dna_pll",
+            "level": "other_scheme",
+            "source_ids": [
+              "K39"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "K39"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S647",
+        "S648",
+        "S649",
+        "S650",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19",
+        "K39"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -52415,6 +52998,34 @@
       "url": "https://webmd.com/pets/dogs/what-to-know-basenjis"
     },
     {
+      "id": "S647",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals (LifeLearn; no author / date shown)",
+      "title": "Rat Terrier — dog breed page",
+      "url": "https://vcahospitals.com/know-your-pet/dog-breeds/rat-terrier"
+    },
+    {
+      "id": "S648",
+      "tier": "B",
+      "publisher": "PetMD — Kristen Seymour, reviewed by Barri J. Morrison, DVM (updated 2023-03-06)",
+      "title": "Rat Terrier Dog Breed Health and Care",
+      "url": "https://www.petmd.com/dog/breeds/rat-terrier"
+    },
+    {
+      "id": "S649",
+      "tier": "B",
+      "publisher": "WebMD Pets — medically reviewed by Amy Flowers, DVM (2022-05-09)",
+      "title": "Rat Terriers: What You Should Know",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-about-rat-terriers"
+    },
+    {
+      "id": "S650",
+      "tier": "B",
+      "publisher": "Rat Terrier Club of America (AKC judges' education, hosted by AKC)",
+      "title": "The Rat Terrier Breed Presented by Rat Terrier Club of America (RTCA) (PDF)",
+      "url": "https://images.akc.org/judges/Rat_Terrier.pdf"
+    },
+    {
       "id": "C1",
       "tier": "A (via B summary)",
       "publisher": "AAHA / AAFP, *JFMS* / *JAAHA* 2021. Read through the AVMA JAVMA News summary of 2021-04-15.",
@@ -52847,6 +53458,13 @@
       "publisher": "Basenji Club of America",
       "title": "Basenji Health",
       "url": "https://basenji.org/basenji/health/"
+    },
+    {
+      "id": "K39",
+      "tier": "B",
+      "publisher": "Rat Terrier Club of America (hosted by AKC)",
+      "title": "Rat Terrier Health Statement (June 2025) (PDF)",
+      "url": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2025/09/24155713/Rat-Terrier-Health-Statement.pdf"
     }
   ]
 }

@@ -192,6 +192,7 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.deepEqual(byId.lagotto_romagnolo.slug, { en: 'lagotto-romagnolo', sl: 'lagotto-romagnolo' });
   assert.deepEqual(byId.alaskan_malamute.slug, { en: 'alaskan-malamute', sl: 'aljaski-malamut' });
   assert.deepEqual(byId.basenji.slug, { en: 'basenji', sl: 'basenji' });
+  assert.deepEqual(byId.rat_terrier.slug, { en: 'rat-terrier', sl: 'rat-terier' });
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.deepEqual(byId.ragdoll.slug, { en: 'ragdoll', sl: 'ragdoll' });
   // M5-R10-16: "Siberian cat" in EN, so the slug never reads as the Siberian Husky's.
@@ -366,6 +367,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     lagotto_romagnolo: { adult: 12000, senior: 9000, seniorFrom: 108, learning: 1.0 },
     alaskan_malamute: { adult: 12000, senior: 9000, seniorFrom: 90, learning: 1.0 },
     basenji: { adult: 6000, senior: 4500, seniorFrom: 108, learning: 0.5 },
+    rat_terrier: { adult: 3000, senior: 2300, seniorFrom: 108, learning: 1.0 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -600,7 +602,7 @@ test('the app\'s brushed-cat and brushed-dog lists equal the seeded grooming row
   assert.deepEqual([...cats, ...dogs].sort(), seeded);
   assert.deepEqual(cats, ['bengal', 'british_shorthair', 'maine_coon', 'norwegian_forest_cat', 'ragdoll', 'siberian_cat']);
   // M5-R13: every dog breed of the app except the mutt and the Border Collie (no grooming statement).
-  assert.equal(dogs.length, 77);
+  assert.equal(dogs.length, 78);
   assert.ok(!dogs.includes('mutt') && !dogs.includes('border_collie'));
 });
 
@@ -822,8 +824,8 @@ test('Havanese (M5-R10-10): up to 30 minutes, PDSA weight, FCI group 9 Cuba, low
   assert.doesNotMatch(json, /merle|mcmillan_2024|hypoallergenic|odds ratio|23-28 kg/i);
 });
 
-test('every dog breed has a Coren rank fact except the explicitly unranked Havanese, Cane Corso, Miniature American Shepherd, Shiba Inu, Portuguese Water Dog, Nova Scotia Duck Tolling Retriever and Lagotto Romagnolo', () => {
-  const unranked = ['havanese', 'cane_corso', 'miniature_american_shepherd', 'shiba_inu', 'portuguese_water_dog', 'nova_scotia_duck_tolling_retriever', 'lagotto_romagnolo'];
+test('every dog breed has a Coren rank fact except the explicitly unranked Havanese, Cane Corso, Miniature American Shepherd, Shiba Inu, Portuguese Water Dog, Nova Scotia Duck Tolling Retriever, Lagotto Romagnolo and Rat Terrier', () => {
+  const unranked = ['havanese', 'cane_corso', 'miniature_american_shepherd', 'shiba_inu', 'portuguese_water_dog', 'nova_scotia_duck_tolling_retriever', 'lagotto_romagnolo', 'rat_terrier'];
   for (const b of registry.breeds.filter((x) => x.species === 'dog')) {
     const has = b.facts.some((f) => f.field === 'coren_rank');
     assert.equal(has, !unranked.includes(b.id), `${b.id} coren_rank fact`);
@@ -2702,4 +2704,35 @@ test('Basenji (M5-R10-84): PDSA at least 1 h, PDSA weight / height, FCI 43 group
   const json = JSON.stringify(d);
   // Never "hypoallergenic", never a percentage.
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)/i);
+});
+
+test('Rat Terrier (M5-R10-85): RTCA at least 30 min, PetMD weight, AKC height, no FCI fact, VCA 12–16 + PetMD 12–18, unranked → 1.0, brushing once a week, nails weekly + bath every 4 weeks, chips, breeder club tests', () => {
+  const d = registry.breeds.find((b) => b.id === 'rat_terrier');
+  assert.deepEqual(d.name, { en: 'Rat Terrier', sl: 'Rat terier' });
+  assert.equal(d.availability, expectedAvailability(d.id));
+  assert.ok(d.synonyms.en.includes('Rattie'));
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[30, 'at_least', ['S650']]]);
+  // An AKC-only breed: no FCI standard → no fci_standard fact (DOG_FACTS fci_standard: false), never a guessed number.
+  assert.equal(d.facts.find((f) => f.field === 'fci_standard'), undefined);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [4.5, 11.3], female: [4.5, 11.3] }, ['S648']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[{ male: [25.4, 45.7], female: [25.4, 45.7] }, ['S650']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value, f.source_ids]), [['span', [12, 16], ['S647']], ['span', [12, 18], ['S648']]]);
+  assert.equal(d.facts.find((f) => f.field === 'coren_rank'), undefined);
+  assert.equal(d.facts.find((f) => f.field === 'grooming_frequency').value, 'once_a_week');
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 3000, cap_month: 3 });
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 108 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 2300 } });
+  assert.deepEqual(d.game.rules.find((r) => r.key === 'learning').params, { multiplier: 1 });
+  assert.deepEqual(d.game.rules.find((r) => r.key === 'grooming_rule').params, { per_week: 1 });
+  assert.deepEqual(d.game.rules.filter((r) => r.key === 'care_task').map((r) => [r.params.task, r.params.times, r.params.period_days]), [
+    ['nail_trim', 1, 7],
+    ['bath', 1, 28],
+  ]);
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['children']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['needs_mental_stimulation', 'needs_company', 'sheds', 'food_motivated_weight']);
+  assert.deepEqual(d.health.map((h) => h.key), ['hip_dysplasia', 'kneecap_luxation', 'legg_perthes', 'primary_lens_luxation', 'weight_gain', 'skin_allergies']);
+  assert.equal(d.breeder_checklist.status, 'listed');
+  assert.deepEqual(d.breeder_checklist.tests.map((t) => t.key), ['cardiac_exam', 'hip_scheme', 'patella_scheme', 'dna_pll']);
+  const json = JSON.stringify(d);
+  // Never "hypoallergenic", never a percentage, never brindle or merle.
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|merle|brindle/i);
 });
