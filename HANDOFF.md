@@ -118,7 +118,7 @@
     4. `cd .. && git add backend/composer.lock && git commit -m "chore(backend): lock Laravel 12 dependencies [M0-07]" && git push`
     5. Če Composer javi napako (»Your requirements could not be resolved…«, konflikt) — **nič ne popravljaj ročno**, celoten izpis ukaza pošlji Claudu. Po pushu Claude počaka zeleni CI (celoten Pest na PHP 8.3 + produkcijska slika), naredi en krog QA (avtentikacija, podpisani URL-ji, Sanctum) in PR združi; v produkcijo gre z naslednjim dnevnim deployem (Reverb in Caddy se enkrat znova zaženeta — aplikacije se same znova povežejo).
 
-18. **Hiter deploy (D28, PR `ci/fast-deploy`) — enkrat, po prvem PR runu, ki pusha image v GHCR:** GitHub → organizacija **DataVallis** → zavihek **Packages** → **petprep-app** → *Package settings* (desno spodaj) → *Danger Zone* → **Change visibility** → **Public** → potrdi z imenom. Isto za **petprep-web**. Zakaj: repo je javen; zasebni paketi štejejo v brezplačnih 500 MB in ko jih zmanjka, push pade in deploy se vrne na počasen build na strežniku (deploy še vedno uspe, le ~5 min dlje). Nič drugega ni treba — strežnik se prijavi z žetonom deploy joba.
+18. **Hiter deploy (D28, PR `ci/D28-fast-deploy`) — enkrat, po prvem PR runu, ki pusha image v GHCR:** GitHub → organizacija **DataVallis** → zavihek **Packages** → **petprep-app** → *Package settings* (desno spodaj) → *Danger Zone* → **Change visibility** → **Public** → potrdi z imenom. Isto za **petprep-web**. Zakaj: repo je javen; zasebni paketi štejejo v brezplačnih 500 MB in ko jih zmanjka, push pade in deploy se vrne na počasen build na strežniku (deploy še vedno uspe, le ~5 min dlje). Nič drugega ni treba — strežnik se prijavi z žetonom deploy joba.
 
 ## 2. Decisions
 
@@ -190,7 +190,7 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
-### 2026-11-02 (cloud) — deploy ≤ 10 min (`ci/fast-deploy`, DEPLOYMENT.md D28)
+### 2026-11-02 (cloud) — deploy ≤ 10 min (`ci/D28-fast-deploy`, DEPLOYMENT.md D28)
 Measured run 41454460832 (37 min): Pest 27.7 min re-run on a tree already green, server image build 5 min 24 s. Now a production dispatch reuses green markers (any event, same tree; `force_tests` overrides) and the server pulls `ghcr.io/datavallis/petprep-{app,web}:be-<backend tree>` pushed by CI (fallback: build). Harnesses: ci-plan 330/330, deploy-production 356/356. Next (C + D): Pest 28 min itself (per-test breed seeding, sharding), merge-to-main re-test when main moved. David step: HANDOFF §1b item 18.
 
 ### 2026-11-02 (cloud, mobile) — fix: cat wand v2 closed the whole app (`fix/cat-wand-crash`, JS only → OTA)
