@@ -29,6 +29,19 @@ Native-level, natural, never word-for-word; the brand voice of `brand/README.md`
 only in the child texts); formal or informal address as is usual for consumer family apps in that language — decide once per
 language, write it in the queue line and keep it everywhere. Keep product names (PetPrep, Curio, #walkyourpet) and URLs; units and number/date formats of the language.
 
+**Meaning, not words (David 2026-11-02: "ne prevajaš gluposti, ampak slovnično smiselnost").** Translate what a
+sentence *means* for a parent or child, then write it the way a native copywriter in that country would — change
+word order, split or merge sentences, swap the image for a local idiom. Each string must pass the test "would a
+native parent write or say exactly this?"; a correct-but-foreign sentence fails. Core glossary — the same everywhere:
+
+| EN | Meaning | sl | hr |
+|---|---|---|---|
+| pet / a pet (to want, get, be ready for) | a companion animal at home, not "an animal" | hišni ljubljenček (*žival* only for species/biology) | kućni ljubimac / ljubimac (*životinja* only for species/biology) |
+| pet care | | skrb za hišnega ljubljenčka / za živali | briga za ljubimca / za životinje |
+| colouring page | | pobarvanka | bojanka |
+
+Add a line for every new language to this table (the queue line's glossary points here).
+
 Website repo (`DataVallis/pet-prep-website`, branch `feat/L-<code>`):
 1. `src/i18n/config.ts`: add the code to `locales`, `localeMeta` (htmlLang, og, label in its own language, short,
    intl, country = home country ISO-2 for the vet directory), and every slug map (`pageSlugs`, `compareSlug`, …):
@@ -52,7 +65,9 @@ quotes**, never adding claims; verification `<code>: draft`.
 - **B — native grammar & style reviewer** for that language: reads every changed string (site, register, care
   copy, emergency, every food) and fixes grammar, spelling, punctuation, agreement, case, gender, idiom, typography
   (quotes, dashes, non-breaking spaces as the language uses them), consistent terminology (one word per concept,
-  glossary at the top of the queue line notes). Lists every fix.
+  glossary at the top of the queue line notes and the core glossary in §2). **Rewrites every string that reads as
+  a translation** (calques, English word order, a literal word where the language uses another, e.g. sl "žival"
+  for "pet") — fixing grammar alone is not enough. Lists every fix.
 - **C — meaning & safety reviewer**: compares the translation with EN (and for foods with the quotes): no meaning
   drift, no stronger claims, no doses, warnings intact, child texts kind. For each food locale it passes it sets
   `verification[<code>] = verified` with the hash from `node scripts/export-care-knowledge.mjs --hashes <file>`
