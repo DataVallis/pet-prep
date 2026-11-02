@@ -15,7 +15,8 @@
     "hr": "Kuhana piletina",
     "sv": "Kokt kyckling",
     "da": "Kogt kylling",
-    "fi": "Keitetty kana"
+    "fi": "Keitetty kana",
+    "nb": "Kokt kylling"
   },
   "question": {
     "en": "Can cats eat cooked chicken?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti kuhanu piletinu?",
     "sv": "Får katter äta kokt kyckling?",
     "da": "Må katte spise kogt kylling?",
-    "fi": "Saako kissa syödä keitettyä kanaa?"
+    "fi": "Saako kissa syödä keitettyä kanaa?",
+    "nb": "Kan katter spise kokt kylling?"
   },
   "url_slug": {
     "en": "cooked-chicken",
@@ -47,7 +49,8 @@
     "hr": "kuhana-piletina",
     "sv": "kokt-kyckling",
     "da": "kogt-kylling",
-    "fi": "keitetty-kana"
+    "fi": "keitetty-kana",
+    "nb": "kokt-kylling"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Da, obična kuhana piletina u redu je kao povremena poslastica za mačke. Skuhaj je, ukloni sve kosti i kožu i ne dodaji začine. Uračunaj je u dnevni obrok svoje mačke – ona ga ne zamjenjuje.",
     "sv": "Ja, naturell kokt kyckling går bra som godbit för katter någon gång ibland. Koka den, ta bort alla ben och skinnet, och krydda inte. Räkna in den i kattens dagliga matranson – den ersätter inte maten.",
     "da": "Ja, naturel, tilberedt kylling er fin som en godbid en gang imellem til katte. Kog den, fjern alle knogler og skindet, og tilsæt ingen krydderier. Regn den med i kattens daglige mad – den erstatter den ikke.",
-    "fi": "Saa, maustamaton kypsennetty kana sopii kissalle satunnaiseksi herkuksi. Keitä se, poista kaikki luut ja nahka äläkä lisää mausteita. Laske se mukaan kissasi päivittäiseen ruoka-annokseen, älä korvaa sillä ruokaa."
+    "fi": "Saa, maustamaton kypsennetty kana sopii kissalle satunnaiseksi herkuksi. Keitä se, poista kaikki luut ja nahka äläkä lisää mausteita. Laske se mukaan kissasi päivittäiseen ruoka-annokseen, älä korvaa sillä ruokaa.",
+    "nb": "Ja, naturell, tilberedt kylling er greit som en godbit en gang iblant for katter. Kok den, fjern alle bein og skinnet, og ikke bruk krydder. Regn den som en del av kattens daglige mat, ikke som en erstatning for den."
   },
   "why": {
     "en": "Cats Protection and RSPCA Australia both say boiled or steamed chicken can be offered occasionally. It must be cooked and boneless, because cooked bones can splinter. Feeding only cooked chicken long-term can lead to nutritional deficiencies, so it stays a treat.",
@@ -80,7 +84,8 @@
     "hr": "Cats Protection i RSPCA Australia navode da se kuhana ili na pari pripremljena piletina može povremeno ponuditi. Mora biti termički obrađena i bez kostiju jer se termički obrađene kosti mogu rascijepiti. Dugotrajno hranjenje isključivo termički obrađenom piletinom može dovesti do nedostatka hranjivih tvari, pa ona ostaje poslastica.",
     "sv": "Både Cats Protection och RSPCA Australia skriver att kokt eller ångkokt kyckling kan ges någon gång ibland. Den måste vara tillagad och benfri, eftersom tillagade ben kan splittras. Om katten under lång tid bara får kokt kyckling kan den få näringsbrist, så kycklingen ska förbli en godbit.",
     "da": "Både Cats Protection og RSPCA Australia skriver at kogt eller dampet kylling kan gives en gang imellem. Den skal være tilberedt og uden knogler fordi tilberedte knogler kan splintre. Hvis katten i længere tid kun får tilberedt kylling, kan det føre til mangel på næringsstoffer, så det forbliver en godbid.",
-    "fi": "Cats Protection ja RSPCA Australia kertovat molemmat, että keitettyä tai höyrytettyä kanaa voi tarjota satunnaisesti. Kanan on oltava kypsennettyä ja luutonta, koska kypsennetyt luut voivat sirpaloitua. Pelkän kypsennetyn kanan syöttäminen pitkään voi johtaa ravintoainepuutoksiin, joten se kannattaa pitää herkkuna."
+    "fi": "Cats Protection ja RSPCA Australia kertovat molemmat, että keitettyä tai höyrytettyä kanaa voi tarjota satunnaisesti. Kanan on oltava kypsennettyä ja luutonta, koska kypsennetyt luut voivat sirpaloitua. Pelkän kypsennetyn kanan syöttäminen pitkään voi johtaa ravintoainepuutoksiin, joten se kannattaa pitää herkkuna.",
+    "nb": "Både Cats Protection og RSPCA Australia skriver at kokt eller dampet kylling kan gis en gang iblant. Den må være tilberedt og uten bein, fordi tilberedte bein kan splintres. Hvis katten bare får tilberedt kylling over lang tid, kan det føre til næringsmangel, så det forblir en godbit."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili dobije proljev, prestani i pitaj veterinara. Ako je mačka progutala termički obrađenu pileću kost, nazovi veterinara.",
     "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären. Om katten har svalt ett tillagat kycklingben, ring veterinären.",
     "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, så stop og spørg din dyrlæge. Hvis din kat har slugt en tilberedt kyllingeknogle, så ring til din dyrlæge.",
-    "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai sille tulee ripuli sen jälkeen, lopeta ja kysy neuvoa eläinlääkäriltä. Jos kissasi nielaisi kypsennetyn kananluun, soita eläinlääkärille."
+    "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai sille tulee ripuli sen jälkeen, lopeta ja kysy neuvoa eläinlääkäriltä. Jos kissasi nielaisi kypsennetyn kananluun, soita eläinlääkärille.",
+    "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt og spør dyrlegen. Hvis katten har svelget et tilberedt kyllingbein, ring dyrlegen."
   },
   "serving": {
     "en": "Boiled or steamed, plain, with no bones, skin or seasoning; small pieces within the daily food allowance.",
@@ -113,7 +119,8 @@
     "hr": "Kuhana ili pripremljena na pari, obična, bez kostiju, kože i začina; mali komadići unutar dnevnog obroka.",
     "sv": "Kokt eller ångkokt, naturell, utan ben, skinn och kryddor; små bitar inom den dagliga matransonen.",
     "da": "Kogt eller dampet, naturel, uden knogler, skind eller krydderier; små stykker inden for den daglige madmængde.",
-    "fi": "Keitettynä tai höyrytettynä, maustamattomana, ilman luita, nahkaa ja mausteita; pieninä paloina osana päivittäistä ruoka-annosta."
+    "fi": "Keitettynä tai höyrytettynä, maustamattomana, ilman luita, nahkaa ja mausteita; pieninä paloina osana päivittäistä ruoka-annosta.",
+    "nb": "Kokt eller dampet, naturell, uten bein, skinn eller krydder; små biter innenfor den daglige matmengden."
   },
   "child": {
     "en": "Plain cooked chicken with no bones is a yummy cat treat. Ask a grown-up to get it ready.",
@@ -129,7 +136,8 @@
     "hr": "Obična kuhana piletina bez kostiju fina je poslastica za macu. Zamoli odraslu osobu da je pripremi.",
     "sv": "Kokt kyckling utan ben och kryddor är en jättegod godbit för katter. Be en vuxen att göra i ordning den.",
     "da": "Almindelig kogt kylling uden knogler er en lækker godbid til katte. Bed en voksen om at gøre den klar.",
-    "fi": "Maustamaton keitetty kana ilman luita on kisulle oikeaa herkkua. Pyydä aikuista valmistamaan se."
+    "fi": "Maustamaton keitetty kana ilman luita on kisulle oikeaa herkkua. Pyydä aikuista valmistamaan se.",
+    "nb": "Kokt kylling uten bein og uten krydder er en god kattegodbit. Be en voksen om å gjøre den klar."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "hr": "Smije li moja mačka jesti samo piletinu?",
         "sv": "Kan min katt äta bara kyckling?",
         "da": "Kan min kat nøjes med kylling?",
-        "fi": "Saako kissani syödä pelkkää kanaa?"
+        "fi": "Saako kissani syödä pelkkää kanaa?",
+        "nb": "Kan katten min spise bare kylling?"
       },
       "a": {
         "en": "No. Feeding only cooked chicken long-term can lead to nutritional deficiencies. Keep it as an extra.",
@@ -163,7 +172,8 @@
         "hr": "Ne. Dugotrajno hranjenje isključivo termički obrađenom piletinom može dovesti do nedostatka hranjivih tvari. Neka ostane dodatak.",
         "sv": "Nej. Om katten under lång tid bara får kokt kyckling kan den få näringsbrist. Låt kycklingen vara något extra.",
         "da": "Nej. Hvis katten i længere tid kun får tilberedt kylling, kan det føre til mangel på næringsstoffer. Lad det være et ekstra.",
-        "fi": "Ei saa. Pelkän kypsennetyn kanan syöttäminen pitkään voi johtaa ravintoainepuutoksiin. Anna sitä vain lisänä."
+        "fi": "Ei saa. Pelkän kypsennetyn kanan syöttäminen pitkään voi johtaa ravintoainepuutoksiin. Anna sitä vain lisänä.",
+        "nb": "Nei. Hvis katten bare får tilberedt kylling over lang tid, kan det føre til næringsmangel. La det være noe ekstra."
       }
     }
   ],
@@ -282,6 +292,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "cfb895524cd0973c96e49887ebfd08f5eabec94c535a428810139a9a1b84878d"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e71430de69aa67876b60e05baf39c36863953018350de938ae80c4190db9f93a"
     }
   }
 }

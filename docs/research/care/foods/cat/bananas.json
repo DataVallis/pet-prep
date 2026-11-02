@@ -8,7 +8,8 @@
     "hr": "Banane",
     "sv": "Bananer",
     "da": "Bananer",
-    "fi": "Banaanit"
+    "fi": "Banaanit",
+    "nb": "Bananer"
   },
   "question": {
     "en": "Can cats eat bananas?",
@@ -17,7 +18,8 @@
     "hr": "Smiju li mačke jesti banane?",
     "sv": "Får katter äta bananer?",
     "da": "Må katte spise bananer?",
-    "fi": "Saako kissa syödä banaania?"
+    "fi": "Saako kissa syödä banaania?",
+    "nb": "Kan katter spise bananer?"
   },
   "url_slug": {
     "en": "bananas",
@@ -26,7 +28,8 @@
     "hr": "banane",
     "sv": "bananer",
     "da": "bananer",
-    "fi": "banaanit"
+    "fi": "banaanit",
+    "nb": "bananer"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "hr": "Da, mali komadić banane u redu je kao povremena poslastica. ASPCA navodi bananu kao neotrovnu za mačke, ali mačke su mesojedi i ne trebaju voće, pa neka ostane samo sitan dodatak.",
     "sv": "Ja, en liten bit banan går bra som godbit någon gång ibland. ASPCA anger att banan inte är giftig för katter, men katter är köttätare och behöver inte frukt, så låt det bara vara något pyttelitet extra.",
     "da": "Ja, et lille stykke banan er fint som en godbid en gang imellem. ASPCA opfører banan som ikke giftig for katte, men katte er kødædere og har ikke brug for frugt, så lad det kun være et bitte lille ekstra.",
-    "fi": "Kyllä, pieni pala banaania sopii satunnaiseksi herkuksi. ASPCA luokittelee banaanin kissoille myrkyttömäksi, mutta kissat ovat lihansyöjiä eivätkä tarvitse hedelmiä, joten pidä se pikkuisena lisänä."
+    "fi": "Kyllä, pieni pala banaania sopii satunnaiseksi herkuksi. ASPCA luokittelee banaanin kissoille myrkyttömäksi, mutta kissat ovat lihansyöjiä eivätkä tarvitse hedelmiä, joten pidä se pikkuisena lisänä.",
+    "nb": "Ja, en liten bit banan er greit som en godbit en gang iblant. ASPCA oppgir banan som ikke giftig for katter, men katter er kjøttetere og trenger ikke frukt, så la det bare være litt ekstra."
   },
   "why": {
     "en": "The ASPCA lists the banana plant as non-toxic to cats, and NC State's veterinary hospital lists banana among healthy human-food treats for cats and dogs, given in measured amounts and counted in the daily calories. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
@@ -45,7 +49,8 @@
     "hr": "ASPCA navodi biljku banane kao neotrovnu za mačke, a veterinarska bolnica sveučilišta NC State navodi bananu među zdravim poslasticama iz ljudske hrane za mačke i pse, koje se daju u odmjerenim količinama i uračunavaju u dnevni unos kalorija. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
     "sv": "ASPCA anger att bananväxten inte är giftig för katter, och NC States djursjukhus räknar banan till de hälsosamma godbitarna från människomat för katter och hundar, i avvägda mängder som räknas in i det dagliga kaloriintaget. Katter är obligata köttätare och behöver inte frukt, godbitar ska bara vara en liten del av den dagliga maten, och allt växtmaterial kan ge kräkningar eller orolig mage.",
     "da": "ASPCA opfører bananplanten som ikke giftig for katte, og dyrehospitalet ved NC State nævner banan blandt sunde godbidder fra menneskemad til katte og hunde, givet i afmålte mængder og regnet med i de daglige kalorier. Katte er obligate kødædere og har ikke brug for frugt, godbidder bør kun udgøre en lille del af den daglige mad, og alt plantemateriale kan give opkast eller dårlig mave.",
-    "fi": "ASPCA luokittelee banaanikasvin kissoille myrkyttömäksi, ja NC Staten eläinsairaala mainitsee banaanin terveellisten ihmisruokien joukossa, joita voi antaa herkkuina kissoille ja koirille mitattuina määrinä ja päivän kaloreihin laskettuina. Kissat ovat pakollisia lihansyöjiä eivätkä tarvitse hedelmiä, herkkujen pitää pysyä pienenä osana päivittäistä ruokaa, ja mikä tahansa kasvimateriaali voi aiheuttaa oksentelua tai vatsavaivoja."
+    "fi": "ASPCA luokittelee banaanikasvin kissoille myrkyttömäksi, ja NC Staten eläinsairaala mainitsee banaanin terveellisten ihmisruokien joukossa, joita voi antaa herkkuina kissoille ja koirille mitattuina määrinä ja päivän kaloreihin laskettuina. Kissat ovat pakollisia lihansyöjiä eivätkä tarvitse hedelmiä, herkkujen pitää pysyä pienenä osana päivittäistä ruokaa, ja mikä tahansa kasvimateriaali voi aiheuttaa oksentelua tai vatsavaivoja.",
+    "nb": "ASPCA oppgir bananplanten som ikke giftig for katter, og dyresykehuset ved NC State oppgir banan blant sunne godbiter fra menneskemat for katter og hunder, gitt i avmålte mengder og regnet med i det daglige kaloriinntaket. Katter er obligate kjøttetere og trenger ikke frukt, godbiter bør være en liten del av den daglige maten, og alt plantemateriale kan gi oppkast eller urolig mage."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
     "sv": "Ge en liten bit först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären.",
     "da": "Giv først et lille stykke. Hvis din kat kaster op eller får dårlig mave bagefter, så stop og spørg din dyrlæge.",
-    "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai sille tulee vatsavaivoja, lopeta ja kysy neuvoa eläinlääkäriltä."
+    "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai sille tulee vatsavaivoja, lopeta ja kysy neuvoa eläinlääkäriltä.",
+    "nb": "Gi en liten bit først. Hvis katten kaster opp eller får urolig mage etterpå, slutt og spør dyrlegen."
   },
   "serving": {
     "en": "A small piece now and then, counted in your cat's daily food.",
@@ -64,7 +70,8 @@
     "hr": "Mali komadić povremeno, uračunat u dnevni obrok tvoje mačke.",
     "sv": "En liten bit då och då, inräknad i kattens dagliga matranson.",
     "da": "Et lille stykke en gang imellem, regnet med i kattens daglige mad.",
-    "fi": "Pieni pala silloin tällöin, laskettuna mukaan kissasi päivittäiseen ruokamäärään."
+    "fi": "Pieni pala silloin tällöin, laskettuna mukaan kissasi päivittäiseen ruokamäärään.",
+    "nb": "En liten bit nå og da, regnet med i kattens daglige matmengde."
   },
   "child": {
     "en": "A tiny bit of banana is OK for a cat now and then. Cats mostly need meat, so fruit is only a small extra.",
@@ -73,7 +80,8 @@
     "hr": "Malo banane povremeno je u redu za macu. Mačkama uglavnom treba meso, pa je voće samo mali dodatak.",
     "sv": "Lite banan går bra för en katt då och då. Katter behöver mest kött, så frukt är bara något litet extra.",
     "da": "En lille smule banan er okay for en kat en gang imellem. Katte har mest brug for kød, så frugt er kun et lille ekstra.",
-    "fi": "Pikkuinen pala banaania sopii kissalle silloin tällöin. Kissat tarvitsevat enimmäkseen lihaa, joten hedelmä on vain pieni lisä."
+    "fi": "Pikkuinen pala banaania sopii kissalle silloin tällöin. Kissat tarvitsevat enimmäkseen lihaa, joten hedelmä on vain pieni lisä.",
+    "nb": "En bitteliten bit banan er greit for en katt nå og da. Katter trenger mest kjøtt, så frukt er bare litt ekstra."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "hr": "Trebaju li mačke voće?",
         "sv": "Behöver katter frukt?",
         "da": "Har katte brug for frugt?",
-        "fi": "Tarvitsevatko kissat hedelmiä?"
+        "fi": "Tarvitsevatko kissat hedelmiä?",
+        "nb": "Trenger katter frukt?"
       },
       "a": {
         "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
@@ -93,7 +102,8 @@
         "hr": "Ne. Mačke su mesojedi: trebaju hranjive tvari koje se nalaze u mesu i u prehrani im ne treba ni voće ni povrće. Voće može biti samo mali dodatak.",
         "sv": "Nej. Katter är köttätare: de behöver näringsämnen som finns i kött och behöver inte frukt eller grönsaker i maten. Frukt kan bara vara något litet extra.",
         "da": "Nej. Katte er kødædere: De har brug for næringsstoffer der findes i kød, og har ikke brug for frugt eller grøntsager i deres kost. Frugt kan aldrig være mere end et lille ekstra.",
-        "fi": "Eivät. Kissat ovat lihansyöjiä: ne tarvitsevat lihassa olevia ravintoaineita eivätkä tarvitse ruokavalioonsa hedelmiä tai vihanneksia. Hedelmät voivat olla korkeintaan pieni lisä."
+        "fi": "Eivät. Kissat ovat lihansyöjiä: ne tarvitsevat lihassa olevia ravintoaineita eivätkä tarvitse ruokavalioonsa hedelmiä tai vihanneksia. Hedelmät voivat olla korkeintaan pieni lisä.",
+        "nb": "Nei. Katter er kjøttetere: De trenger næringsstoffer som finnes i kjøtt, og trenger ikke frukt eller grønnsaker i kostholdet. Frukt kan aldri være mer enn litt ekstra."
       }
     }
   ],
@@ -181,6 +191,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "797de41435f1d69756171df06c8823db7abbdcba68c1210c95806f5681f69260"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fe43b4fd3263f02f29e796557c163dfaeafe1c49ee3e712732d8419f8018167a"
     }
   }
 }

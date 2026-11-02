@@ -15,7 +15,8 @@
     "hr": "Kukuruzni klip",
     "sv": "Majskolv",
     "da": "Majskolber",
-    "fi": "Maissintähkä"
+    "fi": "Maissintähkä",
+    "nb": "Maiskolbe"
   },
   "question": {
     "en": "Can dogs eat corn cobs?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti kukuruzne klipove?",
     "sv": "Får hundar äta majskolvar?",
     "da": "Må hunde spise majskolber?",
-    "fi": "Saako koira syödä maissintähkiä?"
+    "fi": "Saako koira syödä maissintähkiä?",
+    "nb": "Kan hunder spise maiskolber?"
   },
   "url_slug": {
     "en": "corn-cob",
@@ -47,7 +49,8 @@
     "hr": "kukuruzni-klip",
     "sv": "majskolv",
     "da": "majskolber",
-    "fi": "maissintahka"
+    "fi": "maissintahka",
+    "nb": "maiskolbe"
   },
   "level": "dangerous",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne. Nikad ne daj psu kukuruz na klipu. Psi mogu progutati komade ili čak cijeli klip, što može izazvati gušenje ili ozbiljno začepljenje crijeva za koje može biti potrebno hitno liječenje. Obična zrna kukuruza skinuta s klipa nešto su drugo.",
     "sv": "Nej. Ge aldrig en hund majskolv. Hundar kan svälja bitar eller till och med hela kolven, vilket kan orsaka kvävning eller allvarligt tarmstopp som kan kräva akut behandling. Naturella majskorn som tagits av kolven är en annan sak.",
     "da": "Nej. Giv aldrig en hund majs på kolben. Hunde kan sluge stykker eller endda hele kolben, hvilket kan give kvælning eller en alvorlig tarmblokering, der kan kræve akut behandling. Almindelige majskorn uden kolbe er en anden sag.",
-    "fi": "Ei saa. Älä koskaan anna koiralle maissintähkää. Koira voi nielaista paloja tai jopa koko tähkän, mikä voi aiheuttaa tukehtumisen tai vakavan suolitukoksen, joka saattaa vaatia kiireellistä hoitoa. Pelkät tähkästä irrotetut maissinjyvät ovat eri asia."
+    "fi": "Ei saa. Älä koskaan anna koiralle maissintähkää. Koira voi nielaista paloja tai jopa koko tähkän, mikä voi aiheuttaa tukehtumisen tai vakavan suolitukoksen, joka saattaa vaatia kiireellistä hoitoa. Pelkät tähkästä irrotetut maissinjyvät ovat eri asia.",
+    "nb": "Nei. Gi aldri en hund maiskolbe. Hunder kan svelge biter av kolben eller hele kolben, noe som kan føre til kvelning eller alvorlig tarmblokkering som kan kreve akutt behandling. Naturelle maiskorn som er tatt av kolben, er en annen sak."
   },
   "why": {
     "en": "Swallowed pieces can block the intestines; in one reported case the blockage restricted the blood supply, and emergency treatment may be needed. Plain kernels in moderation are generally safe; the cob is the danger.",
@@ -80,7 +84,8 @@
     "hr": "Progutani komadi mogu začepiti crijeva; u jednom opisanom slučaju začepljenje je ograničilo dotok krvi, a može biti potrebno hitno liječenje. Obična zrna kukuruza u umjerenim količinama uglavnom su sigurna; opasan je klip.",
     "sv": "Bitar som sväljs kan blockera tarmarna; i ett rapporterat fall begränsade stoppet blodtillförseln, och akut behandling kan behövas. Naturella majskorn med måtta är i regel säkra; det är kolven som är farlig.",
     "da": "Slugte stykker kan blokere tarmene; i et beskrevet tilfælde hæmmede blokeringen blodforsyningen, og akut behandling kan blive nødvendig. Almindelige majskorn er generelt sikre med måde; det er kolben, der er farlig.",
-    "fi": "Nielaistut palat voivat tukkia suoliston; yhdessä raportoidussa tapauksessa tukos heikensi suolen verenkiertoa, ja kiireellinen hoito voi olla tarpeen. Pelkät maissinjyvät ovat kohtuudella yleensä turvallisia; vaara on tähkässä."
+    "fi": "Nielaistut palat voivat tukkia suoliston; yhdessä raportoidussa tapauksessa tukos heikensi suolen verenkiertoa, ja kiireellinen hoito voi olla tarpeen. Pelkät maissinjyvät ovat kohtuudella yleensä turvallisia; vaara on tähkässä.",
+    "nb": "Biter som svelges, kan blokkere tarmen; i ett omtalt tilfelle hindret blokkeringen blodtilførselen, og det kan bli nødvendig med akutt behandling. Naturelle maiskorn med måte er som regel trygt; det er kolben som er farlig."
   },
   "signs": {
     "en": [
@@ -180,6 +185,13 @@
       "Väsymys ja vähentynyt aktiivisuus",
       "Ripuli",
       "Nestehukka"
+    ],
+    "nb": [
+      "Gjentatt oppkast",
+      "Vil ikke spise",
+      "Sløvhet og mindre aktivitet",
+      "Diaré",
+      "Uttørking"
     ]
   },
   "what_to_do": {
@@ -196,7 +208,8 @@
     "hr": "Odmah se obrati veterinaru ako je pas progutao kukuruzni klip ili njegov dio, čak i ako se čini da je dobro. Zapiši kada se to dogodilo i otprilike koliko je pojeo. Ne čekaj da se pojave znakovi začepljenja.",
     "sv": "Kontakta veterinären direkt om hunden har svalt en majskolv eller en del av en, även om den verkar må bra. Notera när det hände och ungefär hur mycket den åt. Vänta inte på tecken på stopp.",
     "da": "Kontakt din dyrlæge med det samme hvis hunden har slugt en majskolbe eller en del af en, også selvom den virker upåvirket. Skriv ned hvornår det skete og omtrent hvor meget hunden har spist. Vent ikke på tegn på blokering.",
-    "fi": "Ota heti yhteyttä eläinlääkäriin, jos koirasi nielaisi maissintähkän tai osan siitä, vaikka se vaikuttaisi voivan hyvin. Kirjaa ylös, milloin se tapahtui ja suunnilleen kuinka paljon koira söi. Älä odota suolitukoksen oireita."
+    "fi": "Ota heti yhteyttä eläinlääkäriin, jos koirasi nielaisi maissintähkän tai osan siitä, vaikka se vaikuttaisi voivan hyvin. Kirjaa ylös, milloin se tapahtui ja suunnilleen kuinka paljon koira söi. Älä odota suolitukoksen oireita.",
+    "nb": "Kontakt dyrlegen med en gang hvis hunden har svelget en maiskolbe eller en del av en, selv om den virker helt fin. Skriv ned når det skjedde, og omtrent hvor mye den spiste. Ikke vent på tegn på tarmblokkering."
   },
   "serving": null,
   "child": {
@@ -213,7 +226,8 @@
     "hr": "Kukuruzni klipovi mogu psu zapeti u trbuščiću. Klipove odmah baci u zatvorenu kantu, a ako pas pojede klip, reci odrasloj osobi.",
     "sv": "Majskolvar kan fastna i hundens mage. Släng kolvarna direkt i en soptunna med lock, och säg till en vuxen om hunden äter en.",
     "da": "Majskolber kan sætte sig fast i en hunds mave. Smid kolberne direkte i en lukket skraldespand, og sig det til en voksen hvis din hund spiser en.",
-    "fi": "Maissintähkä voi juuttua koiran masuun. Laita tähkät heti suljettuun roskikseen ja kerro aikuiselle, jos koirasi syö sellaisen."
+    "fi": "Maissintähkä voi juuttua koiran masuun. Laita tähkät heti suljettuun roskikseen ja kerro aikuiselle, jos koirasi syö sellaisen.",
+    "nb": "Maiskolber kan sette seg fast i magen til en hund. Kast kolbene rett i en lukket søppelbøtte, og si fra til en voksen hvis hunden spiser en."
   },
   "faq": [
     {
@@ -231,7 +245,8 @@
         "hr": "Smiju li psi jesti zrna kukuruza?",
         "sv": "Får hundar äta majskorn?",
         "da": "Må hunde spise majskorn?",
-        "fi": "Saako koira syödä maissinjyviä?"
+        "fi": "Saako koira syödä maissinjyviä?",
+        "nb": "Kan hunder spise maiskorn?"
       },
       "a": {
         "en": "Plain corn kernels are generally safe for dogs in moderation. It's the cob that is dangerous.",
@@ -247,7 +262,8 @@
         "hr": "Obična zrna kukuruza uglavnom su sigurna za pse u umjerenim količinama. Opasan je klip.",
         "sv": "Naturella majskorn är i regel säkra för hundar med måtta. Det är kolven som är farlig.",
         "da": "Almindelige majskorn er generelt sikre for hunde med måde. Det er kolben, der er farlig.",
-        "fi": "Pelkät maissinjyvät ovat kohtuudella annettuina yleensä turvallisia koirille. Vaarallinen on nimenomaan tähkä."
+        "fi": "Pelkät maissinjyvät ovat kohtuudella annettuina yleensä turvallisia koirille. Vaarallinen on nimenomaan tähkä.",
+        "nb": "Naturelle maiskorn er som regel trygt for hunder med måte. Det er kolben som er farlig."
       }
     },
     {
@@ -265,7 +281,8 @@
         "hr": "Hoće li kukuruzni klip proći sam od sebe?",
         "sv": "Kommer en majskolv ut av sig själv?",
         "da": "Kommer en majskolbe ud af sig selv?",
-        "fi": "Tuleeko maissintähkä ulos itsestään?"
+        "fi": "Tuleeko maissintähkä ulos itsestään?",
+        "nb": "Kommer en maiskolbe ut av seg selv?"
       },
       "a": {
         "en": "Don't wait to find out. A swallowed cob can cause a serious blockage, so contact your vet straight away.",
@@ -281,7 +298,8 @@
         "hr": "Ne čekaj da to saznaš. Progutani klip može izazvati ozbiljno začepljenje, zato se odmah obrati veterinaru.",
         "sv": "Vänta inte och se. En svald kolv kan orsaka allvarligt tarmstopp, så kontakta veterinären direkt.",
         "da": "Se ikke tiden an. En slugt kolbe kan give en alvorlig blokering, så kontakt din dyrlæge med det samme.",
-        "fi": "Älä jää odottamaan. Nielaistu tähkä voi aiheuttaa vakavan tukoksen, joten ota heti yhteyttä eläinlääkäriin."
+        "fi": "Älä jää odottamaan. Nielaistu tähkä voi aiheuttaa vakavan tukoksen, joten ota heti yhteyttä eläinlääkäriin.",
+        "nb": "Ikke vent for å finne det ut. En svelget kolbe kan gi alvorlig tarmblokkering, så kontakt dyrlegen med en gang."
       }
     }
   ],
@@ -423,6 +441,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b5548e5dbbd38e621b69bd6b1bed485860373346dd5fe2ddf2c95d5889b33dc5"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "86dd075a66f8638234ac354c890f805184939426f730b9b0d405c045ca1106dd"
     }
   }
 }

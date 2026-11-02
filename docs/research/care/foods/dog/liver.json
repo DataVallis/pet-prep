@@ -15,7 +15,8 @@
     "hr": "Jetra",
     "sv": "Lever",
     "da": "Lever",
-    "fi": "Maksa"
+    "fi": "Maksa",
+    "nb": "Lever"
   },
   "question": {
     "en": "Can dogs eat liver?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti jetru?",
     "sv": "Får hundar äta lever?",
     "da": "Må hunde spise lever?",
-    "fi": "Saako koira syödä maksaa?"
+    "fi": "Saako koira syödä maksaa?",
+    "nb": "Kan hunder spise lever?"
   },
   "url_slug": {
     "en": "liver",
@@ -47,7 +49,8 @@
     "hr": "jetra",
     "sv": "lever",
     "da": "lever",
-    "fi": "maksa"
+    "fi": "maksa",
+    "nb": "lever"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne kao redovitu hranu i ne sirovu. Otrovanje vitaminom A kod kućnih ljubimaca najčešće nastaje kad ih se hrani sirovom jetrom ili dodacima prehrani bogatima vitaminom A, a sirova jetra nosi iste rizike od mikroba kao i svako sirovo meso. Pitaj veterinara prije nego što psu uvedeš jetru u prehranu.",
     "sv": "Inte som vanlig mat och inte rå. A-vitaminförgiftning hos husdjur uppstår oftast när de får rå lever eller kosttillskott rika på A-vitamin, och rå lever medför samma bakterierisker som allt rått kött. Fråga veterinären innan du ger hunden lever.",
     "da": "Ikke som fast foder og ikke rå. A-vitaminforgiftning hos kæledyr opstår oftest når de fodres med rå lever eller kosttilskud med meget A-vitamin, og rå lever har samme bakterierisiko som alt råt kød. Spørg din dyrlæge før du giver din hund lever som en del af kosten.",
-    "fi": "Ei tavalliseksi ruoaksi eikä raakana. Lemmikit saavat A-vitamiinimyrkytyksen useimmiten, kun niille syötetään raakaa maksaa tai runsaasti A-vitamiinia sisältäviä lisäravinteita, ja raakaan maksaan liittyvät samat bakteeririskit kuin kaikkeen raakaan lihaan. Kysy eläinlääkäriltä ennen kuin lisäät maksaa koirasi ruokavalioon."
+    "fi": "Ei tavalliseksi ruoaksi eikä raakana. Lemmikit saavat A-vitamiinimyrkytyksen useimmiten, kun niille syötetään raakaa maksaa tai runsaasti A-vitamiinia sisältäviä lisäravinteita, ja raakaan maksaan liittyvät samat bakteeririskit kuin kaikkeen raakaan lihaan. Kysy eläinlääkäriltä ennen kuin lisäät maksaa koirasi ruokavalioon.",
+    "nb": "Ikke som fast mat, og ikke rå. A-vitaminforgiftning hos kjæledyr skjer oftest når de får rå lever eller kosttilskudd med mye A-vitamin, og rå lever har den samme smitterisikoen som alt rått kjøtt. Spør dyrlegen før du tar lever inn i hundens kosthold."
   },
   "why": {
     "en": "Vitamin A poisoning most often happens when pets are fed raw liver, cod liver oil or other vitamin A-rich supplements. Too much over weeks or months can lead to a poor coat and dry skin; a large amount at once can cause vomiting, drowsiness and irritability. Raw animal protein can also carry Salmonella and other bacteria.",
@@ -80,7 +84,8 @@
     "hr": "Otrovanje vitaminom A najčešće nastaje kad se ljubimce hrani sirovom jetrom, uljem jetre bakalara ili drugim dodacima prehrani bogatima vitaminom A. Previše tijekom više tjedana ili mjeseci može dovesti do loše dlake i suhe kože; velika količina odjednom može izazvati povraćanje, pospanost i razdražljivost. Sirove bjelančevine životinjskog podrijetla mogu sadržavati i salmonelu i druge bakterije.",
     "sv": "A-vitaminförgiftning uppstår oftast när husdjur får rå lever, levertran eller andra kosttillskott rika på A-vitamin. För mycket under veckor eller månader kan ge glanslös päls och torr hud; en stor mängd på en gång kan orsaka kräkningar, dåsighet och irritabilitet. Rått animaliskt protein kan också bära på salmonella och andra bakterier.",
     "da": "A-vitaminforgiftning opstår oftest når kæledyr fodres med rå lever, levertran eller andre kosttilskud med meget A-vitamin. For meget over uger eller måneder kan give dårlig pels og tør hud; en stor mængde på én gang kan give opkast, døsighed og irritabilitet. Råt animalsk protein kan desuden indeholde salmonella og andre bakterier.",
-    "fi": "A-vitamiinimyrkytys syntyy useimmiten, kun lemmikeille syötetään raakaa maksaa, kalanmaksaöljyä tai muita runsaasti A-vitamiinia sisältäviä lisäravinteita. Liian suuri määrä viikkojen tai kuukausien ajan voi johtaa huonoon turkkiin ja kuivaan ihoon; suuri määrä kerralla voi aiheuttaa oksentelua, uneliaisuutta ja ärtyisyyttä. Raa’assa eläinperäisessä proteiinissa voi myös olla salmonellaa ja muita bakteereja."
+    "fi": "A-vitamiinimyrkytys syntyy useimmiten, kun lemmikeille syötetään raakaa maksaa, kalanmaksaöljyä tai muita runsaasti A-vitamiinia sisältäviä lisäravinteita. Liian suuri määrä viikkojen tai kuukausien ajan voi johtaa huonoon turkkiin ja kuivaan ihoon; suuri määrä kerralla voi aiheuttaa oksentelua, uneliaisuutta ja ärtyisyyttä. Raa’assa eläinperäisessä proteiinissa voi myös olla salmonellaa ja muita bakteereja.",
+    "nb": "A-vitaminforgiftning skjer oftest når kjæledyr får rå lever, tran eller andre kosttilskudd med mye A-vitamin. For mye over uker eller måneder kan gi dårlig pels og tørr hud; en stor mengde på én gang kan gi oppkast, døsighet og irritabilitet. Rått animalsk protein kan også inneholde salmonella og andre bakterier."
   },
   "signs": {
     "en": [
@@ -138,6 +143,10 @@
     "fi": [
       "Oksentelu, uneliaisuus tai ärtyisyys suuren määrän jälkeen",
       "Huono, kuiva turkki tai iho viikkojen tai kuukausien jälkeen"
+    ],
+    "nb": [
+      "Oppkast, døsighet eller irritabilitet etter en stor mengde",
+      "Dårlig, tørr pels eller hud etter uker eller måneder"
     ]
   },
   "what_to_do": {
@@ -154,7 +163,8 @@
     "hr": "Ako je tvoj pas odjednom pojeo veliku količinu jetre ili ga se često hrani jetrom, a ima lošu dlaku ili suhu kožu, nazovi veterinara. Uravnotežena gotova hrana ili domaća prehrana koju je sastavio veterinar sprječava taj problem.",
     "sv": "Ring veterinären om hunden ätit en stor mängd lever på en gång, eller ofta har fått lever och har glanslös päls eller torr hud. Med ett balanserat färdigfoder eller en hemlagad kost som en veterinär har satt ihop undviker du problemet.",
     "da": "Kontakt din dyrlæge hvis din hund har spist en stor mængde lever på én gang eller ofte har fået lever og har dårlig pels eller tør hud. Med et balanceret færdigfoder eller en hjemmelavet kost sammensat af en dyrlæge undgår du problemet.",
-    "fi": "Jos koirasi söi kerralla paljon maksaa tai sille on syötetty maksaa usein ja sen turkki on huono tai iho kuiva, soita eläinlääkärille. Tasapainoisella valmisruoalla tai eläinlääkärin laatimalla kotiruokavaliolla ongelma vältetään."
+    "fi": "Jos koirasi söi kerralla paljon maksaa tai sille on syötetty maksaa usein ja sen turkki on huono tai iho kuiva, soita eläinlääkärille. Tasapainoisella valmisruoalla tai eläinlääkärin laatimalla kotiruokavaliolla ongelma vältetään.",
+    "nb": "Hvis hunden har spist mye lever på én gang, eller ofte har fått lever og har dårlig pels eller tørr hud, bør du ringe dyrlegen. Med et balansert ferdigfôr eller et hjemmelaget kosthold satt sammen av en dyrlege unngår du problemet."
   },
   "serving": null,
   "child": {
@@ -171,7 +181,8 @@
     "hr": "Previše jetre nije dobro za pse. Odrasla osoba i veterinar odlučuju smije li pas jesti jetru.",
     "sv": "För mycket lever är inte bra för hundar. Det är en vuxen och veterinären som bestämmer om en hund får lever.",
     "da": "For meget lever er ikke godt for hunde. En voksen og dyrlægen bestemmer om en hund må få lever.",
-    "fi": "Liika maksa ei ole hyväksi koirille. Aikuinen ja eläinlääkäri päättävät, saako koira maksaa."
+    "fi": "Liika maksa ei ole hyväksi koirille. Aikuinen ja eläinlääkäri päättävät, saako koira maksaa.",
+    "nb": "For mye lever er ikke bra for hunder. En voksen og dyrlegen bestemmer om en hund skal få lever."
   },
   "faq": [
     {
@@ -189,7 +200,8 @@
         "hr": "Zašto je previše jetre problem?",
         "sv": "Varför är för mycket lever ett problem?",
         "da": "Hvorfor er for meget lever et problem?",
-        "fi": "Miksi liika maksa on ongelma?"
+        "fi": "Miksi liika maksa on ongelma?",
+        "nb": "Hvorfor er for mye lever et problem?"
       },
       "a": {
         "en": "Vitamin A poisoning in pets most often happens when they are fed raw liver, cod liver oil or other vitamin A-rich supplements.",
@@ -205,7 +217,8 @@
         "hr": "Otrovanje vitaminom A kod kućnih ljubimaca najčešće nastaje kad ih se hrani sirovom jetrom, uljem jetre bakalara ili drugim dodacima prehrani bogatima vitaminom A.",
         "sv": "A-vitaminförgiftning hos husdjur uppstår oftast när de får rå lever, levertran eller andra kosttillskott rika på A-vitamin.",
         "da": "A-vitaminforgiftning hos kæledyr opstår oftest når de fodres med rå lever, levertran eller andre kosttilskud med meget A-vitamin.",
-        "fi": "Lemmikit saavat A-vitamiinimyrkytyksen useimmiten, kun niille syötetään raakaa maksaa, kalanmaksaöljyä tai muita runsaasti A-vitamiinia sisältäviä lisäravinteita."
+        "fi": "Lemmikit saavat A-vitamiinimyrkytyksen useimmiten, kun niille syötetään raakaa maksaa, kalanmaksaöljyä tai muita runsaasti A-vitamiinia sisältäviä lisäravinteita.",
+        "nb": "A-vitaminforgiftning hos kjæledyr skjer oftest når de får rå lever, tran eller andre kosttilskudd med mye A-vitamin."
       }
     }
   ],
@@ -319,6 +332,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "fc0ac282fd91beb6e8e7d2f2cad260abf2fd74c51c17d1452830b6093076ff79"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7609e7daec8cd559c479e7c240bab20e2db0a18a8813f30d67ef7032f499dc42"
     }
   }
 }

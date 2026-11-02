@@ -8,7 +8,8 @@
     "hr": "Kupine",
     "sv": "Björnbär",
     "da": "Brombær",
-    "fi": "Karhunvatukat"
+    "fi": "Karhunvatukat",
+    "nb": "Bjørnebær"
   },
   "question": {
     "en": "Can dogs eat blackberries?",
@@ -17,7 +18,8 @@
     "hr": "Smiju li psi jesti kupine?",
     "sv": "Får hundar äta björnbär?",
     "da": "Må hunde spise brombær?",
-    "fi": "Saako koira syödä karhunvatukoita?"
+    "fi": "Saako koira syödä karhunvatukoita?",
+    "nb": "Kan hunder spise bjørnebær?"
   },
   "url_slug": {
     "en": "blackberries",
@@ -26,7 +28,8 @@
     "hr": "kupine",
     "sv": "bjornbar",
     "da": "brombaer",
-    "fi": "karhunvatukat"
+    "fi": "karhunvatukat",
+    "nb": "bjornebaer"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "hr": "Da, umjereno. Kupine sadrže mnogo vitamina i hranjivih tvari, a imaju manje šećera i kalorija od nekih drugih vrsta voća. Prvo ih operi i izbjegavaj zamrznute bobice, koje obično imaju dodani šećer ili ksilitol.",
     "sv": "Ja, med måtta. Björnbär innehåller många vitaminer och näringsämnen och har mindre socker och färre kalorier än vissa andra frukter. Skölj dem först, och undvik frysta bär, som oftast har tillsatt socker eller xylitol.",
     "da": "Ja, med måde. Brombær indeholder masser af vitaminer og næringsstoffer og har mindre sukker og færre kalorier end nogle andre frugter. Vask dem først, og undgå frosne bær, der som regel er tilsat sukker eller xylitol.",
-    "fi": "Kyllä, kohtuudella. Karhunvatukoissa on runsaasti vitamiineja ja ravintoaineita, ja niissä on vähemmän sokeria ja kaloreita kuin joissakin muissa hedelmissä. Pese ne ensin ja vältä pakastemarjoja, joihin on yleensä lisätty sokeria tai ksylitolia."
+    "fi": "Kyllä, kohtuudella. Karhunvatukoissa on runsaasti vitamiineja ja ravintoaineita, ja niissä on vähemmän sokeria ja kaloreita kuin joissakin muissa hedelmissä. Pese ne ensin ja vältä pakastemarjoja, joihin on yleensä lisätty sokeria tai ksylitolia.",
+    "nb": "Ja, med måte. Bjørnebær inneholder mange vitaminer og næringsstoffer og har mindre sukker og færre kalorier enn en del andre frukter. Vask dem først, og unngå frosne bær, som vanligvis har tilsatt sukker eller xylitol."
   },
   "why": {
     "en": "Blackberries contain naturally occurring xylitol in trace amounts, as do other fruits and vegetables. Like any food, too many blackberries can cause stomach upset, and treats should make up only a small part of a dog's diet.",
@@ -45,7 +49,8 @@
     "hr": "Kupine prirodno sadrže ksilitol u tragovima, kao i drugo voće i povrće. Kao i kod svake hrane, previše kupina može uznemiriti želudac, a poslastice trebaju činiti samo mali dio pseće prehrane.",
     "sv": "Björnbär innehåller naturligt xylitol i spårmängder, liksom andra frukter och grönsaker. Som med all mat kan för många björnbär ge orolig mage, och godbitar ska bara vara en liten del av hundens kost.",
     "da": "Brombær indeholder naturligt xylitol i meget små mængder, ligesom andre frugter og grøntsager. Som med al mad kan for mange brombær give dårlig mave, og godbidder bør kun udgøre en lille del af hundens kost.",
-    "fi": "Karhunvatukoissa on luonnostaan hivenmääriä ksylitolia, kuten muissakin hedelmissä ja vihanneksissa. Kuten minkä tahansa ruoan, myös karhunvatukoiden liiallinen syöminen voi aiheuttaa vatsavaivoja, ja herkkujen pitäisi olla vain pieni osa koiran ruokavaliota."
+    "fi": "Karhunvatukoissa on luonnostaan hivenmääriä ksylitolia, kuten muissakin hedelmissä ja vihanneksissa. Kuten minkä tahansa ruoan, myös karhunvatukoiden liiallinen syöminen voi aiheuttaa vatsavaivoja, ja herkkujen pitäisi olla vain pieni osa koiran ruokavaliota.",
+    "nb": "Bjørnebær inneholder naturlig xylitol i ørsmå mengder, slik andre frukter og grønnsaker også gjør. Som med all mat kan for mange bjørnebær gi urolig mage, og godbiter bør bare utgjøre en liten del av hundens kost."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "hr": "Ako pas nakon jedenja kupina ima neku reakciju, odmah nazovi veterinara.",
     "sv": "Om hunden reagerar efter att ha ätit björnbär, ring veterinären omedelbart.",
     "da": "Ring straks til din dyrlæge hvis hunden får en reaktion efter at have spist brombær.",
-    "fi": "Jos koirallesi tulee reaktio karhunvatukoiden syömisen jälkeen, soita heti eläinlääkärille."
+    "fi": "Jos koirallesi tulee reaktio karhunvatukoiden syömisen jälkeen, soita heti eläinlääkärille.",
+    "nb": "Hvis hunden får en reaksjon etter å ha spist bjørnebær, må du ringe dyrlegen med en gang."
   },
   "serving": {
     "en": "Washed, plain fresh blackberries; no frozen berries, which usually have added sugar or xylitol; only wild berries you are sure are blackberries.",
@@ -64,7 +70,8 @@
     "hr": "Oprane, obične svježe kupine; bez zamrznutih bobica, koje obično imaju dodani šećer ili ksilitol; divlje bobice samo ako si siguran da su kupine.",
     "sv": "Sköljda, naturella färska björnbär; inga frysta bär, som oftast har tillsatt socker eller xylitol; bara vilda bär som du är säker på är björnbär.",
     "da": "Vaskede, rene, friske brombær; ingen frosne bær, der som regel er tilsat sukker eller xylitol; kun vilde bær som du er sikker på er brombær.",
-    "fi": "Pestyinä, pelkkinä tuoreina karhunvatukoina; ei pakastemarjoja, joihin on yleensä lisätty sokeria tai ksylitolia; luonnosta vain marjoja, jotka tunnistat varmasti karhunvatukoiksi."
+    "fi": "Pestyinä, pelkkinä tuoreina karhunvatukoina; ei pakastemarjoja, joihin on yleensä lisätty sokeria tai ksylitolia; luonnosta vain marjoja, jotka tunnistat varmasti karhunvatukoiksi.",
+    "nb": "Vaskede, naturelle, ferske bjørnebær; ikke frosne bær, som vanligvis har tilsatt sukker eller xylitol; bare ville bær du er sikker på er bjørnebær."
   },
   "child": {
     "en": "Dogs can share a few washed blackberries! Ask a grown-up first, especially for berries picked outside.",
@@ -73,7 +80,8 @@
     "hr": "Psi smiju pojesti nekoliko opranih kupina! Prvo pitaj odraslu osobu, osobito za bobice ubrane vani.",
     "sv": "Hundar kan få några sköljda björnbär! Fråga en vuxen först, särskilt om bären är plockade ute.",
     "da": "Hunde kan godt få et par vaskede brombær! Spørg en voksen først, især hvis bærrene er plukket udenfor.",
-    "fi": "Koira saa maistaa muutaman pestyn karhunvatukan! Kysy ensin aikuiselta, etenkin jos marjat on poimittu luonnosta."
+    "fi": "Koira saa maistaa muutaman pestyn karhunvatukan! Kysy ensin aikuiselta, etenkin jos marjat on poimittu luonnosta.",
+    "nb": "Hunder kan få noen vaskede bjørnebær! Spør en voksen først, særlig når det gjelder bær som er plukket ute."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "hr": "Smiju li psi jesti divlje kupine?",
         "sv": "Får hundar äta vilda björnbär?",
         "da": "Må hunde spise vilde brombær?",
-        "fi": "Saako koira syödä luonnonvaraisia karhunvatukoita?"
+        "fi": "Saako koira syödä luonnonvaraisia karhunvatukoita?",
+        "nb": "Kan hunder spise ville bjørnebær?"
       },
       "a": {
         "en": "Yes, as long as you are sure they are blackberries.",
@@ -93,7 +102,8 @@
         "hr": "Da, ako si siguran da su to kupine.",
         "sv": "Ja, så länge du är säker på att det är björnbär.",
         "da": "Ja, så længe du er sikker på at det er brombær.",
-        "fi": "Saa, kunhan olet varma, että ne ovat karhunvatukoita."
+        "fi": "Saa, kunhan olet varma, että ne ovat karhunvatukoita.",
+        "nb": "Ja, så lenge du er sikker på at det er bjørnebær."
       }
     }
   ],
@@ -185,6 +195,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1b7b411b8a26beb1cf8dae15ea5694175bb0a8cd4ce36d120f1ab0ec788521d1"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bb3a8f12a507438e1b3b92c7486339a92f2b093b8e4e917fdf65f3a1efc053ed"
     }
   }
 }

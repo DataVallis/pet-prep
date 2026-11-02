@@ -15,7 +15,8 @@
     "hr": "Svinjetina",
     "sv": "Fläskkött",
     "da": "Svinekød",
-    "fi": "Sianliha"
+    "fi": "Sianliha",
+    "nb": "Svinekjøtt"
   },
   "question": {
     "en": "Can dogs eat pork?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti svinjetinu?",
     "sv": "Får hundar äta fläskkött?",
     "da": "Må hunde spise svinekød?",
-    "fi": "Saako koira syödä sianlihaa?"
+    "fi": "Saako koira syödä sianlihaa?",
+    "nb": "Kan hunder spise svinekjøtt?"
   },
   "url_slug": {
     "en": "pork",
@@ -47,7 +49,8 @@
     "hr": "svinjetina",
     "sv": "flaskkott",
     "da": "svinekoed",
-    "fi": "sianliha"
+    "fi": "sianliha",
+    "nb": "svinekjott"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne kao redovitu poslasticu. Neki veterinarski izvori dopuštaju malo obične, potpuno termički obrađene posne svinjetine, ali svinjetina je masna i psi je teško probavljaju, a masna hrana može izazvati upalu gušterače. Sirova svinjetina, termički obrađene kosti, šunka i slanina nisu prikladni.",
     "sv": "Inte som vanlig godbit. Vissa veterinärkällor tillåter lite naturellt, helt tillagat magert fläskkött, men fläskkött är fett och svårsmält för hundar, och fet mat kan utlösa bukspottkörtelinflammation (pankreatit). Rått fläskkött, tillagade ben, skinka och bacon passar inte.",
     "da": "Ikke som fast godbid. Nogle dyrlægekilder tillader lidt almindeligt, gennemtilberedt magert svinekød, men svinekød er fedt og svært for hunde at fordøje, og fed mad kan udløse betændelse i bugspytkirtlen (pankreatitis). Råt svinekød, tilberedte knogler, skinke og bacon er ikke egnede.",
-    "fi": "Ei säännöllisenä herkkuna. Joidenkin eläinlääkärilähteiden mukaan koiralle voi antaa vähän maustamatonta, täysin kypsennettyä vähärasvaista sianlihaa, mutta sianliha on rasvaista ja koiralle vaikeasti sulavaa, ja rasvaiset ruoat voivat laukaista haimatulehduksen. Raaka sianliha, kypsennetyt luut, kinkku ja pekoni eivät sovi."
+    "fi": "Ei säännöllisenä herkkuna. Joidenkin eläinlääkärilähteiden mukaan koiralle voi antaa vähän maustamatonta, täysin kypsennettyä vähärasvaista sianlihaa, mutta sianliha on rasvaista ja koiralle vaikeasti sulavaa, ja rasvaiset ruoat voivat laukaista haimatulehduksen. Raaka sianliha, kypsennetyt luut, kinkku ja pekoni eivät sovi.",
+    "nb": "Ikke som fast godbit. Noen veterinærmedisinske kilder godtar litt gjennomstekt, magert svinekjøtt uten noe tilsatt, men svinekjøtt er fett og tungt for hunder å fordøye, og fet mat kan utløse betennelse i bukspyttkjertelen. Rått svinekjøtt, tilberedte bein, skinke og bacon passer ikke."
   },
   "why": {
     "en": "Pork is rich in a type of fat that is difficult for dogs to digest. Raw or undercooked pork can carry the parasite Trichinella. Cooked bones become brittle, and seasonings can be dangerous. Ham is high in salt and fat. Sources differ: the AKC calls plain cooked lean pork safe in moderation, while PDSA lists pork among high-fat foods that can lead to pancreatitis and advises dogs that have had it to avoid high-fat treats like pork, so we use the stricter level.",
@@ -80,7 +84,8 @@
     "hr": "Svinjetina je bogata vrstom masti koju psi teško probavljaju. Sirova ili nedovoljno termički obrađena svinjetina može prenijeti parazita trihinelu. Termički obrađene kosti postaju krhke, a začini mogu biti opasni. Šunka ima puno soli i masti. Izvori se razlikuju: AKC smatra običnu termički obrađenu posnu svinjetinu sigurnom u umjerenim količinama, dok PDSA svinjetinu navodi među masnom hranom koja može dovesti do upale gušterače i psima koji su je već imali savjetuje izbjegavanje masnih poslastica poput svinjetine, pa koristimo strožu ocjenu.",
     "sv": "Fläskkött innehåller en typ av fett som är svår för hundar att smälta. Rått eller otillräckligt tillagat fläskkött kan bära på parasiten Trichinella. Tillagade ben blir sköra, och kryddor kan vara farliga. Skinka innehåller mycket salt och fett. Källorna går isär: AKC kallar naturellt, tillagat magert fläskkött ofarligt med måtta, medan PDSA räknar fläskkött till den feta mat som kan leda till bukspottkörtelinflammation och avråder hundar som haft den från feta godbitar som fläskkött, så vi använder den strängare nivån.",
     "da": "Svinekød indeholder en type fedt som er svær for hunde at fordøje. Råt eller ikke gennemtilberedt svinekød kan indeholde parasitten Trichinella (trikiner). Tilberedte knogler bliver skøre, og krydderier kan være farlige. Skinke indeholder meget salt og fedt. Kilderne er uenige: AKC kalder almindeligt, tilberedt magert svinekød sikkert i moderate mængder, mens PDSA nævner svinekød blandt de fede fødevarer der kan føre til betændelse i bugspytkirtlen, og råder hunde der har haft det, til at undgå fede godbidder som svinekød. Derfor bruger vi det strengeste niveau.",
-    "fi": "Sianlihassa on paljon sellaista rasvaa, jota koiran on vaikea sulattaa. Raa’assa tai riittämättömästi kypsennetyssä sianlihassa voi olla trikiinejä (Trichinella-loisia). Kypsennetyt luut haurastuvat, ja mausteet voivat olla vaarallisia. Kinkussa on paljon suolaa ja rasvaa. Lähteet ovat eri mieltä: AKC:n mukaan maustamaton, kypsennetty vähärasvainen sianliha on kohtuudella turvallista, kun taas PDSA mainitsee sianlihan rasvaisten ruokien joukossa, jotka voivat johtaa haimatulehdukseen, ja neuvoo haimatulehduksen sairastaneita koiria välttämään rasvaisia herkkuja, kuten sianlihaa; siksi käytämme tiukempaa luokitusta."
+    "fi": "Sianlihassa on paljon sellaista rasvaa, jota koiran on vaikea sulattaa. Raa’assa tai riittämättömästi kypsennetyssä sianlihassa voi olla trikiinejä (Trichinella-loisia). Kypsennetyt luut haurastuvat, ja mausteet voivat olla vaarallisia. Kinkussa on paljon suolaa ja rasvaa. Lähteet ovat eri mieltä: AKC:n mukaan maustamaton, kypsennetty vähärasvainen sianliha on kohtuudella turvallista, kun taas PDSA mainitsee sianlihan rasvaisten ruokien joukossa, jotka voivat johtaa haimatulehdukseen, ja neuvoo haimatulehduksen sairastaneita koiria välttämään rasvaisia herkkuja, kuten sianlihaa; siksi käytämme tiukempaa luokitusta.",
+    "nb": "Svinekjøtt er rikt på en type fett som er vanskelig for hunder å fordøye. Rått eller ikke gjennomstekt svinekjøtt kan inneholde parasitten Trichinella. Tilberedte bein blir skjøre, og krydder kan være farlig. Skinke inneholder mye salt og fett. Kildene sier ulike ting: AKC kaller tilberedt, magert svinekjøtt uten noe tilsatt trygt i moderate mengder, mens PDSA regner svinekjøtt blant de fete matvarene som kan føre til betennelse i bukspyttkjertelen, og råder hunder som har hatt det, til å unngå fete godbiter som svinekjøtt. Derfor bruker vi det strengere nivået."
   },
   "signs": {
     "en": [
@@ -166,6 +171,12 @@
       "Ripuli",
       "Vatsakipu",
       "Heikko ruokahalu ja voimattomuus"
+    ],
+    "nb": [
+      "Oppkast, noen ganger først 1–4 dager etter et fett måltid",
+      "Diaré",
+      "Vondt i magen",
+      "Dårlig matlyst og lite energi"
     ]
   },
   "what_to_do": {
@@ -182,7 +193,8 @@
     "hr": "Ako je tvoj pas pojeo masnu ili začinjenu svinjetinu, sljedećih nekoliko dana prati pojavljuju li se povraćanje, proljev ili bolovi u trbuhu i što prije nazovi veterinara ako se pojave. Ako je pojeo sirovu svinjetinu, termički obrađene kosti ili hranu s lukom ili češnjakom, odmah nazovi veterinara.",
     "sv": "Om hunden ätit fett eller kryddat fläskkött, håll utkik efter kräkningar, diarré eller ont i magen de närmaste dagarna och ring veterinären så snart som möjligt om de dyker upp. Om den ätit rått fläskkött, tillagade ben eller mat med lök eller vitlök, ring veterinären direkt.",
     "da": "Hvis din hund har spist fedt eller krydret svinekød, så hold øje med opkast, diarré eller mavesmerter de næste dage, og kontakt din dyrlæge hurtigst muligt hvis de opstår. Hvis den har spist råt svinekød, tilberedte knogler eller mad med løg eller hvidløg, skal du kontakte din dyrlæge med det samme.",
-    "fi": "Jos koirasi söi rasvaista tai maustettua sianlihaa, seuraa muutaman seuraavan päivän ajan, tuleeko oksentelua, ripulia tai vatsakipua, ja soita eläinlääkärille mahdollisimman pian, jos niitä ilmenee. Jos koira söi raakaa sianlihaa, kypsennettyjä luita tai ruokaa, jossa oli sipulia tai valkosipulia, soita eläinlääkärille heti."
+    "fi": "Jos koirasi söi rasvaista tai maustettua sianlihaa, seuraa muutaman seuraavan päivän ajan, tuleeko oksentelua, ripulia tai vatsakipua, ja soita eläinlääkärille mahdollisimman pian, jos niitä ilmenee. Jos koira söi raakaa sianlihaa, kypsennettyjä luita tai ruokaa, jossa oli sipulia tai valkosipulia, soita eläinlääkärille heti.",
+    "nb": "Hvis hunden har spist fett eller krydret svinekjøtt, må du følge med på oppkast, diaré eller vondt i magen de neste dagene og ringe dyrlegen så snart som mulig hvis dette oppstår. Hvis den har spist rått svinekjøtt, tilberedte bein eller mat med løk eller hvitløk, må du ringe dyrlegen med en gang."
   },
   "serving": {
     "en": "If you share at all: a small piece of plain, fully cooked lean pork, fat trimmed, boneless, unseasoned.",
@@ -198,7 +210,8 @@
     "hr": "Ako je uopće daješ: mali komad obične, potpuno termički obrađene posne svinjetine, bez masnoće, bez kostiju i bez začina.",
     "sv": "Om du delar med dig alls: en liten bit naturellt, helt tillagat magert fläskkött, utan fett, ben och kryddor.",
     "da": "Hvis du overhovedet deler: et lille stykke almindeligt, gennemtilberedt magert svinekød med fedtet skåret fra, uden knogler og ukrydret.",
-    "fi": "Jos ylipäätään jaat: pieni pala pelkkää, täysin kypsennettyä vähärasvaista sianlihaa – rasva leikattuna pois, ilman luita ja mausteita."
+    "fi": "Jos ylipäätään jaat: pieni pala pelkkää, täysin kypsennettyä vähärasvaista sianlihaa – rasva leikattuna pois, ilman luita ja mausteita.",
+    "nb": "Hvis du deler i det hele tatt: en liten bit gjennomstekt, magert svinekjøtt med fettet skåret bort, uten bein og uten krydder."
   },
   "child": {
     "en": "Pork is very fatty for a dog's tummy. Only a grown-up should decide if a dog gets a tiny plain piece.",
@@ -214,7 +227,8 @@
     "hr": "Svinjetina je jako masna za pseći trbuh. Samo odrasla osoba smije odlučiti hoće li pas dobiti sićušan običan komadić.",
     "sv": "Fläskkött är väldigt fett för en hundmage. Bara en vuxen ska bestämma om en hund får en pytteliten bit utan kryddor.",
     "da": "Svinekød er meget fedt for en hundemave. Kun en voksen må bestemme om en hund må få et lillebitte stykke helt uden krydderier.",
-    "fi": "Sianliha on koiran vatsalle hyvin rasvaista. Vain aikuinen saa päättää, saako koira pikkuruisen maustamattoman palan."
+    "fi": "Sianliha on koiran vatsalle hyvin rasvaista. Vain aikuinen saa päättää, saako koira pikkuruisen maustamattoman palan.",
+    "nb": "Svinekjøtt er veldig fett for magen til en hund. Bare en voksen skal bestemme om en hund får en liten bit uten krydder."
   },
   "faq": [
     {
@@ -232,7 +246,8 @@
         "hr": "Smiju li psi jesti šunku ili slaninu?",
         "sv": "Får hundar äta skinka eller bacon?",
         "da": "Må hunde spise skinke eller bacon?",
-        "fi": "Saako koira syödä kinkkua tai pekonia?"
+        "fi": "Saako koira syödä kinkkua tai pekonia?",
+        "nb": "Kan hunder spise skinke eller bacon?"
       },
       "a": {
         "en": "They aren't good choices: ham is high in fat and sodium, and eating a lot of bacon can cause pancreatitis.",
@@ -248,7 +263,8 @@
         "hr": "To nije dobar izbor: šunka ima puno masti i natrija, a ako pas pojede puno slanine, može dobiti upalu gušterače.",
         "sv": "De är inga bra val: skinka innehåller mycket fett och natrium, och mycket bacon kan orsaka bukspottkörtelinflammation.",
         "da": "Det er ikke gode valg: Skinke indeholder meget fedt og natrium, og meget bacon kan give betændelse i bugspytkirtlen.",
-        "fi": "Ne eivät ole hyviä valintoja: kinkussa on paljon rasvaa ja natriumia, ja suuri määrä pekonia voi aiheuttaa haimatulehduksen."
+        "fi": "Ne eivät ole hyviä valintoja: kinkussa on paljon rasvaa ja natriumia, ja suuri määrä pekonia voi aiheuttaa haimatulehduksen.",
+        "nb": "Det er ikke noe godt valg: Skinke inneholder mye fett og natrium, og mye bacon kan gi betennelse i bukspyttkjertelen."
       }
     }
   ],
@@ -396,6 +412,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "bbb922cf7c81e2f32cfeae43fe8eef5f6a699f648096b4580c625216e031975a"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0ebee42543bed264bff58fce5ceac102591057b193f5f9057de3d59cfa521a3e"
     }
   }
 }

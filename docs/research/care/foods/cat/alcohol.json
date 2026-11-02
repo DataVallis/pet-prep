@@ -15,7 +15,8 @@
     "hr": "Alkohol",
     "sv": "Alkohol",
     "da": "Alkohol",
-    "fi": "Alkoholi"
+    "fi": "Alkoholi",
+    "nb": "Alkohol"
   },
   "question": {
     "en": "Can cats drink alcohol?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke piti alkohol?",
     "sv": "Får katter dricka alkohol?",
     "da": "Må katte drikke alkohol?",
-    "fi": "Saako kissa juoda alkoholia?"
+    "fi": "Saako kissa juoda alkoholia?",
+    "nb": "Kan katter drikke alkohol?"
   },
   "url_slug": {
     "en": "alcohol",
@@ -47,7 +49,8 @@
     "hr": "alkohol",
     "sv": "alkohol",
     "da": "alkohol",
-    "fi": "alkoholi"
+    "fi": "alkoholi",
+    "nb": "alkohol"
   },
   "level": "toxic",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne. Već i vrlo mala količina alkohola može biti iznimno otrovna za mačke, a mačke su na njega posebno osjetljive. Pića, hranu s alkoholom i proizvode poput sredstva za dezinfekciju ruku drži podalje od mačke, a ako mačka išta od toga proguta, nazovi veterinara.",
     "sv": "Nej. Redan en mycket liten mängd alkohol kan vara extremt giftig för katter, och katter är särskilt känsliga. Håll drycker, mat som innehåller alkohol och produkter som handsprit borta från katten, och ring veterinären om katten har fått i sig något.",
     "da": "Nej. Selv en meget lille mængde alkohol kan være ekstremt giftig for katte, og katte er særligt følsomme over for det. Hold drikkevarer, mad med alkohol og produkter som håndsprit væk fra din kat, og ring til din dyrlæge hvis din kat sluger noget af det.",
-    "fi": "Ei saa. Jo pienikin määrä alkoholia voi olla kissalle erittäin myrkyllistä, ja kissat ovat sille erityisen herkkiä. Pidä juomat, alkoholia sisältävät ruoat ja tuotteet, kuten käsidesi, poissa kissasi ulottuvilta ja soita eläinlääkärille, jos kissasi nielee niitä."
+    "fi": "Ei saa. Jo pienikin määrä alkoholia voi olla kissalle erittäin myrkyllistä, ja kissat ovat sille erityisen herkkiä. Pidä juomat, alkoholia sisältävät ruoat ja tuotteet, kuten käsidesi, poissa kissasi ulottuvilta ja soita eläinlääkärille, jos kissasi nielee niitä.",
+    "nb": "Nei. Selv en bitteliten mengde alkohol kan være svært giftig for katter, og katter er spesielt følsomme for det. Hold drikke, mat laget med alkohol og produkter som håndsprit unna katten, og ring dyrlegen hvis katten får i seg noe."
   },
   "why": {
     "en": "All animals can get alcohol poisoning, but cats are especially sensitive. Alcohol is not only in drinks: it can also be in liqueur sweets, hand sanitiser, mouthwash and raw, rising bread dough. Signs usually appear quickly after a cat swallows it.",
@@ -80,7 +84,8 @@
     "hr": "Otrovanje alkoholom može zadesiti sve životinje, ali mačke su posebno osjetljive. Alkohol nije samo u pićima: može ga biti i u bombonima s likerom, sredstvu za dezinfekciju ruku, vodici za ispiranje usta te u sirovom tijestu za kruh koje se diže. Znakovi se obično pojave brzo nakon što ga mačka proguta.",
     "sv": "Alla djur kan få alkoholförgiftning, men katter är särskilt känsliga. Alkohol finns inte bara i drycker: den kan också finnas i likörfyllt godis, handsprit, munskölj och rå, jäsande bröddeg. Symtomen brukar komma snabbt efter att katten har fått i sig alkohol.",
     "da": "Alle dyr kan få alkoholforgiftning, men katte er særligt følsomme. Alkohol findes ikke kun i drikkevarer: Det kan også være i likørfyldt slik, håndsprit, mundskyl og rå, hævende brøddej. Symptomerne viser sig som regel hurtigt efter at en kat har slugt det.",
-    "fi": "Kaikki eläimet voivat saada alkoholimyrkytyksen, mutta kissat ovat erityisen herkkiä. Alkoholia ei ole vain juomissa: sitä voi olla myös liköörimakeisissa, käsidesissä, suuvedessä ja raa’assa, kohoavassa leipätaikinassa. Oireet ilmenevät yleensä nopeasti sen jälkeen, kun kissa on nielaissut alkoholia."
+    "fi": "Kaikki eläimet voivat saada alkoholimyrkytyksen, mutta kissat ovat erityisen herkkiä. Alkoholia ei ole vain juomissa: sitä voi olla myös liköörimakeisissa, käsidesissä, suuvedessä ja raa’assa, kohoavassa leipätaikinassa. Oireet ilmenevät yleensä nopeasti sen jälkeen, kun kissa on nielaissut alkoholia.",
+    "nb": "Alle dyr kan få alkoholforgiftning, men katter er spesielt følsomme. Alkohol finnes ikke bare i drikke: Den kan også finnes i likørfylt godteri, håndsprit, munnskyll og rå brøddeig som hever. Symptomene kommer som regel raskt etter at katten har fått det i seg."
   },
   "signs": {
     "en": [
@@ -166,6 +171,12 @@
       "Kävelyvaikeudet, horjuminen",
       "Hidas hengitys",
       "Vakavissa tapauksissa: kouristukset tai lyyhistyminen"
+    ],
+    "nb": [
+      "Uvanlig døsighet eller sløvhet",
+      "Vansker med å gå, ustø gange",
+      "Langsom pust",
+      "I alvorlige tilfeller: kramper eller kollaps"
     ]
   },
   "what_to_do": {
@@ -182,7 +193,8 @@
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je mačka progutala, koliko i kada te sačuvaj bocu ili ambalažu. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur. Notera vad katten fick i sig, hur mycket och när, och spara flaskan eller förpackningen. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
     "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvad din kat har slugt, hvor meget og hvornår, og gem flasken eller emballagen. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
-    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä kissasi nieli, kuinka paljon ja milloin, ja säilytä pullo tai pakkaus. Älä odota oireita äläkä yritä itse oksennuttaa kissaasi."
+    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä kissasi nieli, kuinka paljon ja milloin, ja säilytä pullo tai pakkaus. Älä odota oireita äläkä yritä itse oksennuttaa kissaasi.",
+    "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang. Skriv ned hva katten har fått i seg, hvor mye og når, og ta vare på flasken eller emballasjen. Ikke vent på symptomer, og ikke prøv å få katten til å kaste opp selv."
   },
   "serving": null,
   "child": {
@@ -199,7 +211,8 @@
     "hr": "Pića za odrasle nikad nisu za mace. Ako maca poliže čašu ili proliveno piće, odmah reci odrasloj osobi.",
     "sv": "Vuxnas drycker är aldrig för katter. Om katten slickar på ett glas eller en utspilld dryck, säg till en vuxen direkt.",
     "da": "Voksnes drinks er aldrig for katte. Hvis din kat slikker af et glas eller af noget der er spildt, så sig det til en voksen med det samme.",
-    "fi": "Aikuisten juomat eivät ole koskaan kissoille. Jos kisu nuolaisee lasia tai läikkynyttä juomaa, kerro heti aikuiselle."
+    "fi": "Aikuisten juomat eivät ole koskaan kissoille. Jos kisu nuolaisee lasia tai läikkynyttä juomaa, kerro heti aikuiselle.",
+    "nb": "Drikke for voksne er aldri for katter. Hvis pusen slikker på et glass eller noe som er sølt, si fra til en voksen med en gang."
   },
   "faq": [
     {
@@ -217,7 +230,8 @@
         "hr": "Gdje se još može skrivati alkohol?",
         "sv": "Var mer kan alkohol gömma sig?",
         "da": "Hvor kan alkohol ellers gemme sig?",
-        "fi": "Missä muualla alkoholia voi olla?"
+        "fi": "Missä muualla alkoholia voi olla?",
+        "nb": "Hvor kan det ellers skjule seg alkohol?"
       },
       "a": {
         "en": "Besides drinks, alcohol can be found in liqueur sweets, hand sanitiser, mouthwash and raw, rising bread dough.",
@@ -233,7 +247,8 @@
         "hr": "Osim u pićima, alkohola može biti u bombonima s likerom, sredstvu za dezinfekciju ruku, vodici za ispiranje usta i sirovom tijestu za kruh koje se diže.",
         "sv": "Förutom i drycker kan alkohol finnas i likörfyllt godis, handsprit, munskölj och rå, jäsande bröddeg.",
         "da": "Ud over i drikkevarer kan alkohol findes i likørfyldt slik, håndsprit, mundskyl og rå, hævende brøddej.",
-        "fi": "Juomien lisäksi alkoholia voi olla liköörimakeisissa, käsidesissä, suuvedessä ja raa’assa, kohoavassa leipätaikinassa."
+        "fi": "Juomien lisäksi alkoholia voi olla liköörimakeisissa, käsidesissä, suuvedessä ja raa’assa, kohoavassa leipätaikinassa.",
+        "nb": "I tillegg til drikke kan alkohol finnes i likørfylt godteri, håndsprit, munnskyll og rå brøddeig som hever."
       }
     }
   ],
@@ -376,6 +391,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "560cecdd9ecf8c1cdb9a521e8973505ca99b7cee6d0751a199d3b055f69e3ec4"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0b8176defd23de5fbd04ca0fb8cb659834780a75201ca160d5a892f6f449d450"
     }
   }
 }

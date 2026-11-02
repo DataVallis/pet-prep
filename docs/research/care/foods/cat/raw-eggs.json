@@ -15,7 +15,8 @@
     "hr": "Sirova jaja",
     "sv": "Råa ägg",
     "da": "Rå æg",
-    "fi": "Raa’at kananmunat"
+    "fi": "Raa’at kananmunat",
+    "nb": "Rå egg"
   },
   "question": {
     "en": "Can cats eat raw eggs?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti sirova jaja?",
     "sv": "Får katter äta råa ägg?",
     "da": "Må katte spise rå æg?",
-    "fi": "Saako kissa syödä raakoja kananmunia?"
+    "fi": "Saako kissa syödä raakoja kananmunia?",
+    "nb": "Kan katter spise rå egg?"
   },
   "url_slug": {
     "en": "raw-eggs",
@@ -47,7 +49,8 @@
     "hr": "sirova-jaja",
     "sv": "raa-agg",
     "da": "raa-aeg",
-    "fi": "raaka-kananmunat"
+    "fi": "raaka-kananmunat",
+    "nb": "ra-egg"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne, ne daj mački sirova jaja. Sirova jaja mogu sadržavati štetne bakterije poput salmonele (Salmonella), od kojih se mogu razboljeti i mačke i ljudi, a sirovi bjelanjak sadrži bjelančevinu koja može blokirati jedan vitamin.",
     "sv": "Nej, ge inte katter råa ägg. Råa ägg kan bära på skadliga bakterier som salmonella, som kan göra både katter och människor sjuka, och rå äggvita innehåller ett protein som kan blockera ett vitamin.",
     "da": "Nej, giv ikke katte rå æg. Rå æg kan indeholde skadelige bakterier som salmonella, der kan gøre både katte og mennesker syge, og rå æggehvide indeholder et protein der kan blokere et vitamin.",
-    "fi": "Ei saa. Älä anna kissalle raakoja kananmunia. Raaoissa kananmunissa voi olla haitallisia bakteereja, kuten salmonellaa, joista sekä kissat että ihmiset voivat sairastua, ja raa’assa munanvalkuaisessa on proteiinia, joka voi estää erään vitamiinin imeytymisen."
+    "fi": "Ei saa. Älä anna kissalle raakoja kananmunia. Raaoissa kananmunissa voi olla haitallisia bakteereja, kuten salmonellaa, joista sekä kissat että ihmiset voivat sairastua, ja raa’assa munanvalkuaisessa on proteiinia, joka voi estää erään vitamiinin imeytymisen.",
+    "nb": "Nei, ikke gi katter rå egg. Rå egg kan inneholde skadelige bakterier som salmonella, som kan gjøre både katter og mennesker syke, og rå eggehvite inneholder et protein som kan blokkere et vitamin."
   },
   "why": {
     "en": "Raw eggs may contain harmful bacteria and parasites and could mean food poisoning for cats and humans alike. Raw egg white also contains avidin, which binds the vitamin biotin and stops it being absorbed. Cooking food thoroughly protects pets from salmonella.",
@@ -80,7 +84,8 @@
     "hr": "Sirova jaja mogu sadržavati štetne bakterije i parazite i mogu izazvati trovanje hranom i kod mačaka i kod ljudi. Sirovi bjelanjak sadrži i avidin, koji veže vitamin biotin i sprječava njegovu apsorpciju. Temeljita termička obrada hrane štiti ljubimce od salmonele.",
     "sv": "Råa ägg kan innehålla skadliga bakterier och parasiter och kan ge matförgiftning hos både katter och människor. Rå äggvita innehåller också avidin, som binder vitaminet biotin och hindrar att det tas upp. Att tillaga maten ordentligt skyddar husdjur mot salmonella.",
     "da": "Rå æg kan indeholde skadelige bakterier og parasitter og kan give madforgiftning hos både katte og mennesker. Rå æggehvide indeholder desuden avidin, som binder vitaminet biotin og forhindrer at det bliver optaget. Grundig tilberedning af maden beskytter kæledyr mod salmonella.",
-    "fi": "Raaoissa kananmunissa voi olla haitallisia bakteereja ja loisia, ja ne voivat aiheuttaa ruokamyrkytyksen sekä kissoille että ihmisille. Raa’assa munanvalkuaisessa on myös avidiinia, joka sitoo biotiini-nimistä vitamiinia ja estää sen imeytymisen. Ruoan huolellinen kypsentäminen suojaa lemmikkejä salmonellalta."
+    "fi": "Raaoissa kananmunissa voi olla haitallisia bakteereja ja loisia, ja ne voivat aiheuttaa ruokamyrkytyksen sekä kissoille että ihmisille. Raa’assa munanvalkuaisessa on myös avidiinia, joka sitoo biotiini-nimistä vitamiinia ja estää sen imeytymisen. Ruoan huolellinen kypsentäminen suojaa lemmikkejä salmonellalta.",
+    "nb": "Rå egg kan inneholde skadelige bakterier og parasitter og kan gi matforgiftning hos både katter og mennesker. Rå eggehvite inneholder også avidin, som binder vitaminet biotin og hindrer at det blir tatt opp. Grundig tilberedning av maten beskytter dyr mot salmonella."
   },
   "signs": {
     "en": [
@@ -180,6 +185,13 @@
       "Kuume",
       "Haluttomuus syödä",
       "Väsymys"
+    ],
+    "nb": [
+      "Oppkast",
+      "Diaré, noen ganger med blod",
+      "Feber",
+      "Vil ikke spise",
+      "Sløvhet"
     ]
   },
   "what_to_do": {
@@ -196,7 +208,8 @@
     "hr": "Ako je mačka polizala malo sirovog jajeta, prati pojavu povraćanja, proljeva, vrućice ili odbijanja hrane i nazovi veterinara ako se išta od toga pojavi. Operi ruke i sve površine koje su došle u dodir s jajetom.",
     "sv": "Om katten har slickat i sig lite rått ägg, håll utkik efter kräkningar, diarré, feber eller att den inte äter, och ring veterinären om något av det visar sig. Tvätta händerna och alla ytor som ägget har kommit i kontakt med.",
     "da": "Hvis din kat har slikket lidt råt æg, så hold øje med opkast, diarré, feber eller manglende lyst til at spise, og ring til din dyrlæge hvis noget af det viser sig. Vask hænderne og alle overflader ægget har været i kontakt med.",
-    "fi": "Jos kissasi nuoli vähän raakaa kananmunaa, seuraa, tuleeko oksentelua, ripulia, kuumetta tai syömättömyyttä, ja soita eläinlääkärille, jos niitä ilmenee. Pese kätesi ja kaikki pinnat, joihin kananmuna on koskenut."
+    "fi": "Jos kissasi nuoli vähän raakaa kananmunaa, seuraa, tuleeko oksentelua, ripulia, kuumetta tai syömättömyyttä, ja soita eläinlääkärille, jos niitä ilmenee. Pese kätesi ja kaikki pinnat, joihin kananmuna on koskenut.",
+    "nb": "Hvis katten har slikket i seg litt rått egg, bør du følge med på oppkast, diaré, feber eller manglende matlyst og ringe dyrlegen hvis noe av dette oppstår. Vask hendene og alle flater egget har vært borti."
   },
   "serving": null,
   "child": {
@@ -213,7 +226,8 @@
     "hr": "Na sirovim jajima mogu biti klice. Smiju ih dirati samo odrasli, a mace ih ne bi smjele jesti.",
     "sv": "Råa ägg kan ha bakterier på sig. Bara vuxna ska hantera dem, och katter ska inte äta dem.",
     "da": "Rå æg kan have bakterier på sig. Kun voksne skal håndtere dem, og katte skal ikke spise dem.",
-    "fi": "Raaoissa kananmunissa voi olla pöpöjä. Vain aikuiset saavat käsitellä niitä, eikä kissojen pidä syödä niitä."
+    "fi": "Raaoissa kananmunissa voi olla pöpöjä. Vain aikuiset saavat käsitellä niitä, eikä kissojen pidä syödä niitä.",
+    "nb": "Rå egg kan ha bakterier. Bare voksne bør ta i dem, og katter skal ikke spise dem."
   },
   "faq": [
     {
@@ -231,7 +245,8 @@
         "hr": "Jesu li onda kuhana jaja u redu?",
         "sv": "Går tillagade ägg bra i stället?",
         "da": "Er tilberedte æg så i orden i stedet?",
-        "fi": "Sopivatko kypsennetyt kananmunat sen sijaan?"
+        "fi": "Sopivatko kypsennetyt kananmunat sen sijaan?",
+        "nb": "Er kokte egg greit i stedet?"
       },
       "a": {
         "en": "Cooked egg is a different matter: PDSA says eggs can suit pets, but only in moderation. Cook it fully and serve it plain.",
@@ -247,7 +262,8 @@
         "hr": "Termički obrađeno jaje nešto je drugo: PDSA navodi da jaja mogu biti prikladna za ljubimce, ali samo umjereno. Potpuno ga termički obradi i posluži bez dodataka.",
         "sv": "Tillagade ägg är en annan sak: enligt PDSA kan ägg passa husdjur, men bara med måtta. Tillaga ägget helt och servera det naturellt.",
         "da": "Tilberedte æg er en anden sag: Ifølge PDSA kan æg passe til kæledyr, men kun med måde. Tilbered ægget helt igennem, og server det naturelt.",
-        "fi": "Kypsennetty kananmuna on eri asia: PDSA:n mukaan kananmunat voivat sopia lemmikeille, mutta vain kohtuudella. Kypsennä se kunnolla ja tarjoa se pelkkänä."
+        "fi": "Kypsennetty kananmuna on eri asia: PDSA:n mukaan kananmunat voivat sopia lemmikeille, mutta vain kohtuudella. Kypsennä se kunnolla ja tarjoa se pelkkänä.",
+        "nb": "Tilberedt egg er noe annet: Ifølge PDSA kan egg passe for kjæledyr, men bare med måte. Tilbered egget helt gjennom, og gi det uten noe tilsatt."
       }
     }
   ],
@@ -377,6 +393,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5e3df8c2374f09c709b4a7467fc7ded46f1e69a09ec0f05a0ac51f113ffabcc5"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b4b245950e8942a3f4bf7ea5d39740699b5f727ee79ef355673eaad7d80c430b"
     }
   }
 }

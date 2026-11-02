@@ -15,7 +15,8 @@
     "hr": "Kava",
     "sv": "Kaffe",
     "da": "Kaffe",
-    "fi": "Kahvi"
+    "fi": "Kahvi",
+    "nb": "Kaffe"
   },
   "question": {
     "en": "Can cats drink coffee?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke piti kavu?",
     "sv": "Får katter dricka kaffe?",
     "da": "Må katte drikke kaffe?",
-    "fi": "Saako kissa juoda kahvia?"
+    "fi": "Saako kissa juoda kahvia?",
+    "nb": "Kan katter drikke kaffe?"
   },
   "url_slug": {
     "en": "coffee",
@@ -47,7 +49,8 @@
     "hr": "kava",
     "sv": "kaffe",
     "da": "kaffe",
-    "fi": "kahvi"
+    "fi": "kahvi",
+    "nb": "kaffe"
   },
   "level": "toxic",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne. Kava sadrži kofein, a mačke su na kofein osjetljivije od ljudi. Neiskorišteni talog kave i zrna kave mogu izazvati ozbiljno otrovanje. Drži kavu izvan dosega mačke i nazovi veterinara ako mačka išta od toga pojede ili popije.",
     "sv": "Nej. Kaffe innehåller koffein, och katter är känsligare för koffein än människor. Malet kaffe och kaffebönor kan ge allvarlig förgiftning. Håll kaffe utom räckhåll och ring veterinären om katten får i sig något kaffe.",
     "da": "Nej. Kaffe indeholder koffein, og katte er mere følsomme over for koffein end mennesker. Ubrugt kaffegrums og kaffebønner kan give alvorlig forgiftning. Hold kaffe uden for rækkevidde, og ring til din dyrlæge hvis din kat spiser eller drikker noget af det.",
-    "fi": "Ei saa. Kahvissa on kofeiinia, ja kissat ovat kofeiinille herkempiä kuin ihmiset. Käyttämätön jauhettu kahvi ja kahvipavut voivat aiheuttaa vakavan myrkytyksen. Pidä kahvi kissan ulottumattomissa ja soita eläinlääkärille, jos kissasi syö tai juo sitä."
+    "fi": "Ei saa. Kahvissa on kofeiinia, ja kissat ovat kofeiinille herkempiä kuin ihmiset. Käyttämätön jauhettu kahvi ja kahvipavut voivat aiheuttaa vakavan myrkytyksen. Pidä kahvi kissan ulottumattomissa ja soita eläinlääkärille, jos kissasi syö tai juo sitä.",
+    "nb": "Nei. Kaffe inneholder koffein, og katter er mer følsomme for koffein enn mennesker. Ubrukt kaffegrut og kaffebønner kan gi alvorlig forgiftning. Hold kaffe utenfor rekkevidde, og ring dyrlegen hvis katten spiser eller drikker noe."
   },
   "why": {
     "en": "Coffee is one of the main sources of caffeine at home. Cats are more sensitive to caffeine than people. Like chocolate, coffee and other caffeine-containing foods have high levels of stimulants called methylxanthines; caffeine speeds up the heart, makes cats restless and upsets the stomach.",
@@ -80,7 +84,8 @@
     "hr": "Kava je jedan od glavnih izvora kofeina u kućanstvu. Mačke su na kofein osjetljivije od ljudi. Kao i čokolada, kava i druge namirnice s kofeinom sadrže mnogo stimulansa koji se zovu metilksantini; kofein ubrzava rad srca, čini mačke nemirnima i izaziva želučane tegobe.",
     "sv": "Kaffe är en av de största källorna till koffein i hemmet. Katter är känsligare för koffein än människor. Precis som choklad innehåller kaffe och andra livsmedel med koffein höga halter av stimulerande ämnen som kallas metylxantiner; koffein får hjärtat att slå snabbare, gör katter rastlösa och ger orolig mage.",
     "da": "Kaffe er en af de vigtigste kilder til koffein i hjemmet. Katte er mere følsomme over for koffein end mennesker. Ligesom chokolade har kaffe og andre koffeinholdige fødevarer et højt indhold af stimulerende stoffer kaldet methylxanthiner; koffein får hjertet til at slå hurtigere, gør katte urolige og giver dårlig mave.",
-    "fi": "Kahvi on kodin tärkeimpiä kofeiinin lähteitä. Kissat ovat kofeiinille herkempiä kuin ihmiset. Suklaan tavoin kahvissa ja muissa kofeiinia sisältävissä ruoissa on paljon piristäviä aineita, joita kutsutaan metyyliksantiineiksi; kofeiini kiihdyttää sydäntä, tekee kissasta levottoman ja aiheuttaa vatsavaivoja."
+    "fi": "Kahvi on kodin tärkeimpiä kofeiinin lähteitä. Kissat ovat kofeiinille herkempiä kuin ihmiset. Suklaan tavoin kahvissa ja muissa kofeiinia sisältävissä ruoissa on paljon piristäviä aineita, joita kutsutaan metyyliksantiineiksi; kofeiini kiihdyttää sydäntä, tekee kissasta levottoman ja aiheuttaa vatsavaivoja.",
+    "nb": "Kaffe er en av de viktigste kildene til koffein i hjemmet. Katter er mer følsomme for koffein enn mennesker. I likhet med sjokolade har kaffe og annen mat med koffein høye nivåer av sentralstimulerende stoffer som kalles metylxantiner; koffein får hjertet til å slå fortere, gjør katter rastløse og gir urolig mage."
   },
   "signs": {
     "en": [
@@ -166,6 +171,12 @@
       "Ylivilkkaus",
       "Vatsavaivat",
       "Nopea syke tai sydämen rytmin muutokset"
+    ],
+    "nb": [
+      "Uro, rastløshet, vil ikke ligge i ro",
+      "Hyperaktivitet",
+      "Urolig mage",
+      "Rask puls eller endret hjerterytme"
     ]
   },
   "what_to_do": {
@@ -182,7 +193,8 @@
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je mačka progutala (piće, talog, zrna, vrećicu čaja ili tablete), koliko i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur. Notera vad katten fick i sig (dryck, kaffesump, bönor, tepåse eller tabletter), hur mycket och när. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
     "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvad din kat har slugt (drik, kaffegrums, bønner, tebrev eller tabletter), hvor meget og hvornår. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
-    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä kissasi nieli (juomaa, jauhettua kahvia, papuja, teepussin tai tabletteja), kuinka paljon ja milloin. Älä odota oireita äläkä yritä itse oksennuttaa kissaasi."
+    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä kissasi nieli (juomaa, jauhettua kahvia, papuja, teepussin tai tabletteja), kuinka paljon ja milloin. Älä odota oireita äläkä yritä itse oksennuttaa kissaasi.",
+    "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang. Skriv ned hva katten har fått i seg (drikke, kaffegrut, bønner, tepose eller tabletter), hvor mye og når. Ikke vent på symptomer, og ikke prøv å få katten til å kaste opp selv."
   },
   "serving": null,
   "child": {
@@ -199,7 +211,8 @@
     "hr": "Kava je piće za odrasle. Od nje su mace nemirne, zato je nikad ne dijeli s macom i reci odrasloj osobi ako je maca malo polizala.",
     "sv": "Kaffe är en dryck för vuxna. Det gör katter skakiga, så dela aldrig med dig, och säg till en vuxen om katten slickar i sig lite.",
     "da": "Kaffe er noget voksne drikker. Det gør katte urolige, så del det aldrig, og sig det til en voksen hvis din kat slikker noget i sig.",
-    "fi": "Kahvi on aikuisten juoma. Se tekee kissasta levottoman, joten älä koskaan anna sitä kisulle, ja kerro aikuiselle, jos kisu lipittää sitä."
+    "fi": "Kahvi on aikuisten juoma. Se tekee kissasta levottoman, joten älä koskaan anna sitä kisulle, ja kerro aikuiselle, jos kisu lipittää sitä.",
+    "nb": "Kaffe er drikke for voksne. Den gjør katter urolige, så del den aldri, og si fra til en voksen hvis pusen slikker i seg noe."
   },
   "faq": [
     {
@@ -217,7 +230,8 @@
         "hr": "Jesu li talog i zrna kave opasniji od šalice kave?",
         "sv": "Är malet kaffe och kaffebönor värre än en kopp kaffe?",
         "da": "Er kaffegrums og kaffebønner værre end en kop kaffe?",
-        "fi": "Ovatko jauhettu kahvi ja kahvipavut pahempia kuin kupillinen kahvia?"
+        "fi": "Ovatko jauhettu kahvi ja kahvipavut pahempia kuin kupillinen kahvia?",
+        "nb": "Er kaffegrut og kaffebønner verre enn en kopp kaffe?"
       },
       "a": {
         "en": "Yes, they can be. Pet Poison Helpline warns that unused coffee grounds or beans could cause serious toxicity in cats. Keep coffee grounds and beans where your cat can't reach them.",
@@ -233,7 +247,8 @@
         "hr": "Da, mogu biti. Pet Poison Helpline upozorava da neiskorišteni talog kave ili zrna kave mogu kod mačaka izazvati ozbiljno otrovanje. Talog i zrna kave drži ondje gdje ih mačka ne može dohvatiti.",
         "sv": "Ja, det kan de vara. Pet Poison Helpline varnar för att oanvänt malet kaffe eller kaffebönor kan ge allvarlig förgiftning hos katter. Förvara malet kaffe och bönor där katten inte når dem.",
         "da": "Ja, det kan de være. Pet Poison Helpline advarer om at ubrugt kaffegrums eller kaffebønner kan give alvorlig forgiftning hos katte. Opbevar kaffegrums og kaffebønner et sted hvor din kat ikke kan nå dem.",
-        "fi": "Voivat olla. Pet Poison Helpline varoittaa, että käyttämätön jauhettu kahvi tai kahvipavut voivat aiheuttaa kissoille vakavan myrkytyksen. Säilytä jauhettu kahvi ja kahvipavut paikassa, johon kissasi ei ylety."
+        "fi": "Voivat olla. Pet Poison Helpline varoittaa, että käyttämätön jauhettu kahvi tai kahvipavut voivat aiheuttaa kissoille vakavan myrkytyksen. Säilytä jauhettu kahvi ja kahvipavut paikassa, johon kissasi ei ylety.",
+        "nb": "Ja, det kan de være. Pet Poison Helpline advarer om at ubrukt kaffegrut eller ubrukte kaffebønner kan gi alvorlig forgiftning hos katter. Oppbevar kaffegrut og bønner der katten ikke når dem."
       }
     }
   ],
@@ -372,6 +387,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d0278d8b75883e173480f664af17a70d77d0bd583b2c136128958f63eab0c093"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ac6ebe877edf44be8fdbf6fb446537bad09ea12b3082c8119fc82dc1cfb7649d"
     }
   }
 }

@@ -15,7 +15,8 @@
     "hr": "Bademi",
     "sv": "Mandlar",
     "da": "Mandler",
-    "fi": "Mantelit"
+    "fi": "Mantelit",
+    "nb": "Mandler"
   },
   "question": {
     "en": "Can dogs eat almonds?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti bademe?",
     "sv": "Får hundar äta mandlar?",
     "da": "Må hunde spise mandler?",
-    "fi": "Saako koira syödä manteleita?"
+    "fi": "Saako koira syödä manteleita?",
+    "nb": "Kan hunder spise mandler?"
   },
   "url_slug": {
     "en": "almonds",
@@ -47,7 +49,8 @@
     "hr": "bademi",
     "sv": "mandlar",
     "da": "mandler",
-    "fi": "mantelit"
+    "fi": "mantelit",
+    "nb": "mandler"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Bolje ne. Bademi nisu opasni kao makadamija, ali su masni i mogu izazvati povraćanje, proljev, a moguće i upalu gušterače. Cijeli bademi mogu i zapeti, osobito kod malih pasa.",
     "sv": "Nej, helst inte. Mandlar är inte lika farliga som macadamianötter, men de är feta och kan ge kräkningar, diarré och möjligen bukspottkörtelinflammation. Hela mandlar kan också fastna, särskilt hos små hundar.",
     "da": "Nej, helst ikke. Mandler er ikke lige så farlige som macadamianødder, men de er fede og kan give opkast, diarré og muligvis betændelse i bugspytkirtlen (pankreatitis). Hele mandler kan også sætte sig fast, især hos små hunde.",
-    "fi": "Ei kannata. Mantelit eivät ole yhtä vaarallisia kuin makadamiapähkinät, mutta ne ovat rasvaisia ja voivat aiheuttaa oksentelua, ripulia ja mahdollisesti haimatulehduksen. Kokonaiset mantelit voivat myös juuttua kiinni, etenkin pienillä koirilla."
+    "fi": "Ei kannata. Mantelit eivät ole yhtä vaarallisia kuin makadamiapähkinät, mutta ne ovat rasvaisia ja voivat aiheuttaa oksentelua, ripulia ja mahdollisesti haimatulehduksen. Kokonaiset mantelit voivat myös juuttua kiinni, etenkin pienillä koirilla.",
+    "nb": "Nei, helst ikke. Mandler er ikke like farlige som macadamianøtter, men de er fete og kan gi oppkast, diaré og muligens betennelse i bukspyttkjertelen. Hele mandler kan også sette seg fast, særlig hos små hunder."
   },
   "why": {
     "en": "Almonds, like most nuts, are high in fat, which can upset the stomach and put a dog at risk of pancreatitis. Whole almonds can block the food pipe, intestines or windpipe, especially in small breeds. Salted and flavoured almonds bring extra risks from salt and seasonings.",
@@ -80,7 +84,8 @@
     "hr": "Bademi, kao i većina orašastih plodova, sadrže mnogo masti, koja može uznemiriti želudac i izložiti psa riziku od upale gušterače. Cijeli bademi mogu začepiti jednjak, crijeva ili dušnik, osobito kod malih pasmina. Slani bademi i bademi s okusima nose dodatne rizike zbog soli i začina.",
     "sv": "Mandlar är, som de flesta nötter, mycket feta, vilket kan ge orolig mage och göra att hunden riskerar bukspottkörtelinflammation (pankreatit). Hela mandlar kan blockera matstrupen, tarmarna eller luftstrupen, särskilt hos små raser. Saltade och smaksatta mandlar ger extra risker från salt och kryddor.",
     "da": "Mandler har ligesom de fleste nødder et højt fedtindhold, som kan give dårlig mave og øge risikoen for betændelse i bugspytkirtlen. Hele mandler kan blokere spiserøret, tarmene eller luftrøret, især hos små racer. Saltede mandler og mandler med smag giver ekstra risiko på grund af salt og krydderier.",
-    "fi": "Mantelit sisältävät useimpien pähkinöiden tavoin paljon rasvaa, joka voi aiheuttaa vatsavaivoja ja altistaa koiran haimatulehdukselle. Kokonaiset mantelit voivat tukkia ruokatorven, suoliston tai henkitorven etenkin pienillä roduilla. Suolatuissa ja maustetuissa manteleissa lisäriskinä ovat suola ja mausteet."
+    "fi": "Mantelit sisältävät useimpien pähkinöiden tavoin paljon rasvaa, joka voi aiheuttaa vatsavaivoja ja altistaa koiran haimatulehdukselle. Kokonaiset mantelit voivat tukkia ruokatorven, suoliston tai henkitorven etenkin pienillä roduilla. Suolatuissa ja maustetuissa manteleissa lisäriskinä ovat suola ja mausteet.",
+    "nb": "Mandler har, som de fleste nøtter, mye fett, som kan gi urolig mage og gjøre hunden utsatt for betennelse i bukspyttkjertelen. Hele mandler kan blokkere spiserøret, tarmen eller luftrøret, særlig hos små raser. Saltede mandler og mandler med smak gir ekstra risiko på grunn av salt og krydder."
   },
   "signs": {
     "en": [
@@ -166,6 +171,12 @@
       "Ripuli",
       "Vatsakipu, pahoinvointi tai väsymys (mahdollinen haimatulehdus)",
       "Tukehtuminen tai tukoksen merkit"
+    ],
+    "nb": [
+      "Oppkast",
+      "Diaré",
+      "Magesmerter, kvalme eller lite energi (mulig betennelse i bukspyttkjertelen)",
+      "Kvelning eller tegn på blokkering"
     ]
   },
   "what_to_do": {
@@ -182,7 +193,8 @@
     "hr": "Jedan ili dva badema obično nisu razlog za paniku: prati pojavljuju li se kod psa povraćanje, proljev ili bolovi u trbuhu. Nazovi veterinara ako je pas pojeo mnogo badema ili bademe s okusima, ako se čini da se guši ili ako pokazuje neki od ovih znakova.",
     "sv": "En eller två mandlar är oftast ingen anledning till panik: håll utkik efter kräkningar, diarré eller ont i magen. Ring veterinären om hunden har ätit många mandlar eller smaksatta mandlar, verkar kvävas eller visar något av dessa symtom.",
     "da": "En eller to mandler er som regel ingen grund til panik: hold øje med opkast, diarré eller mavesmerter. Ring til din dyrlæge hvis hunden har spist mange mandler eller mandler med smag, ser ud til at være ved at blive kvalt eller viser nogle af disse symptomer.",
-    "fi": "Yksi tai kaksi mantelia ei yleensä ole syy paniikkiin: seuraa, ilmeneekö koirallasi oksentelua, ripulia tai vatsakipua. Soita eläinlääkärille, jos koirasi söi paljon manteleita tai maustettuja manteleita, näyttää tukehtuvan tai sillä on jokin näistä oireista."
+    "fi": "Yksi tai kaksi mantelia ei yleensä ole syy paniikkiin: seuraa, ilmeneekö koirallasi oksentelua, ripulia tai vatsakipua. Soita eläinlääkärille, jos koirasi söi paljon manteleita tai maustettuja manteleita, näyttää tukehtuvan tai sillä on jokin näistä oireista.",
+    "nb": "Én eller to mandler er vanligvis ingen grunn til panikk: Følg med på om hunden får oppkast, diaré eller magesmerter. Ring dyrlegen hvis hunden har spist mange mandler eller mandler med smak, ser ut til å holde på å kveles eller viser noen av disse symptomene."
   },
   "serving": null,
   "child": {
@@ -199,7 +211,8 @@
     "hr": "Bademi su grickalica za ljude. Psi ih teško probavljaju i može ih zaboljeti trbuščić. Radije psu daj pseću poslasticu!",
     "sv": "Mandlar är ett mellanmål för människor. Hundar har svårt att smälta dem och kan få ont i magen. Ge en hundgodbit i stället!",
     "da": "Mandler er en snack til mennesker. De er svære for hunde at fordøje og kan give dem ondt i maven. Giv hellere en hundegodbid!",
-    "fi": "Mantelit ovat ihmisten naposteltavaa. Koiran on vaikea sulattaa niitä, ja ne voivat panna sen mahan sekaisin. Anna mieluummin koiranherkku!"
+    "fi": "Mantelit ovat ihmisten naposteltavaa. Koiran on vaikea sulattaa niitä, ja ne voivat panna sen mahan sekaisin. Anna mieluummin koiranherkku!",
+    "nb": "Mandler er snacks for mennesker. De er vanskelige for hunder å fordøye og kan gi dem vondt i magen. Gi heller hunden en hundegodbit!"
   },
   "faq": [
     {
@@ -217,7 +230,8 @@
         "hr": "Jesu li bademi opasni kao makadamija?",
         "sv": "Är mandlar lika farliga som macadamianötter?",
         "da": "Er mandler lige så farlige som macadamianødder?",
-        "fi": "Ovatko mantelit yhtä vaarallisia kuin makadamiapähkinät?"
+        "fi": "Ovatko mantelit yhtä vaarallisia kuin makadamiapähkinät?",
+        "nb": "Er mandler like farlige som macadamianøtter?"
       },
       "a": {
         "en": "No. Macadamia nuts are toxic to dogs; almonds are a problem mainly because of their fat and the risk of blockage.",
@@ -233,7 +247,8 @@
         "hr": "Ne. Makadamija je otrovna za pse, a bademi su problem uglavnom zbog masti i rizika od začepljenja.",
         "sv": "Nej. Macadamianötter är giftiga för hundar; mandlar är ett problem främst på grund av fettet och risken för stopp.",
         "da": "Nej. Macadamianødder er giftige for hunde; mandler er mest et problem på grund af fedtet og risikoen for blokering.",
-        "fi": "Eivät. Makadamiapähkinät ovat koiralle myrkyllisiä, mantelit taas ovat ongelma lähinnä rasvan ja tukosvaaran vuoksi."
+        "fi": "Eivät. Makadamiapähkinät ovat koiralle myrkyllisiä, mantelit taas ovat ongelma lähinnä rasvan ja tukosvaaran vuoksi.",
+        "nb": "Nei. Macadamianøtter er giftige for hunder; mandler er et problem først og fremst på grunn av fettet og faren for blokkering."
       }
     },
     {
@@ -251,7 +266,8 @@
         "hr": "Moj je pas pojeo jedan badem. Što sad?",
         "sv": "Min hund åt en mandel. Vad gör jag nu?",
         "da": "Min hund har spist én mandel. Hvad nu?",
-        "fi": "Koirani söi yhden mantelin. Mitä nyt?"
+        "fi": "Koirani söi yhden mantelin. Mitä nyt?",
+        "nb": "Hunden min spiste én mandel. Hva nå?"
       },
       "a": {
         "en": "Don't panic. Watch for tummy upset and call your vet if signs appear.",
@@ -267,7 +283,8 @@
         "hr": "Bez panike. Prati ima li pas probavnih tegoba i nazovi veterinara ako se pojave znakovi.",
         "sv": "Ingen panik. Håll utkik efter magbesvär och ring veterinären om symtom dyker upp.",
         "da": "Gå ikke i panik. Hold øje med dårlig mave, og ring til din dyrlæge hvis der kommer symptomer.",
-        "fi": "Älä panikoi. Seuraa, tuleeko vatsavaivoja, ja soita eläinlääkärille, jos oireita ilmenee."
+        "fi": "Älä panikoi. Seuraa, tuleeko vatsavaivoja, ja soita eläinlääkärille, jos oireita ilmenee.",
+        "nb": "Ikke få panikk. Følg med på om hunden får urolig mage, og ring dyrlegen hvis det kommer symptomer."
       }
     }
   ],
@@ -399,6 +416,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "915d0caad1b9ee167b39c6eaca326212410079c9c45a0393080f1d62b1516b2d"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0874d2ca749f3e9df9d626ccecc600d31e3256c53c0543beccb77c56804a187f"
     }
   }
 }

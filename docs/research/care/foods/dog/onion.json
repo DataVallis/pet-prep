@@ -15,7 +15,8 @@
     "hr": "Luk",
     "sv": "Lök",
     "da": "Løg",
-    "fi": "Sipuli"
+    "fi": "Sipuli",
+    "nb": "Løk"
   },
   "question": {
     "en": "Can dogs eat onion?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti luk?",
     "sv": "Får hundar äta lök?",
     "da": "Må hunde spise løg?",
-    "fi": "Saako koira syödä sipulia?"
+    "fi": "Saako koira syödä sipulia?",
+    "nb": "Kan hunder spise løk?"
   },
   "url_slug": {
     "en": "onion",
@@ -47,7 +49,8 @@
     "hr": "luk",
     "sv": "lok",
     "da": "loeg",
-    "fi": "sipuli"
+    "fi": "sipuli",
+    "nb": "lok"
   },
   "level": "toxic",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne. Luk je otrovan za pse u svakom obliku: sirov, termički obrađen, sušen ili u prahu. Oštećuje crvene krvne stanice i može izazvati anemiju, a znakovi se često pojave tek nakon nekoliko dana. To vrijedi i za luk u prahu i mješavine za juhu.",
     "sv": "Nej. Lök är giftig för hundar i alla former: rå, tillagad, torkad eller i pulverform. Den skadar de röda blodkropparna och kan orsaka blodbrist (anemi), och symtomen visar sig ofta först efter några dagar. Lökpulver och soppmixar räknas också.",
     "da": "Nej. Løg er giftigt for hunde i alle former: rå, tilberedt, tørret eller som pulver. Det skader de røde blodlegemer og kan give blodmangel (anæmi), og symptomerne viser sig ofte først efter flere dage. Løgpulver og suppeblandinger tæller også med.",
-    "fi": "Ei saa. Sipuli on koiralle myrkyllistä kaikissa muodoissa: raakana, kypsennettynä, kuivattuna tai jauheena. Se vaurioittaa punasoluja ja voi aiheuttaa anemiaa, ja oireet ilmaantuvat usein vasta päivien kuluttua. Myös sipulijauhe ja pussikeitot kuuluvat tähän."
+    "fi": "Ei saa. Sipuli on koiralle myrkyllistä kaikissa muodoissa: raakana, kypsennettynä, kuivattuna tai jauheena. Se vaurioittaa punasoluja ja voi aiheuttaa anemiaa, ja oireet ilmaantuvat usein vasta päivien kuluttua. Myös sipulijauhe ja pussikeitot kuuluvat tähän.",
+    "nb": "Nei. Løk er giftig for hunder i alle former: rå, tilberedt, tørket eller som pulver. Den skader de røde blodcellene og kan gi blodmangel (anemi), og symptomene viser seg ofte først etter noen dager. Pulver og suppemikser teller også."
   },
   "why": {
     "en": "It belongs to the allium family (onion, garlic, leek, chives), which is toxic to dogs. These plants contain compounds that damage red blood cells and can lead to anaemia. All parts and all forms are harmful: raw, cooked, dried and powdered. Stomach upset can happen with any amount; larger amounts damage the blood.",
@@ -80,7 +84,8 @@
     "hr": "Pripada biljkama iz roda Allium (luk, češnjak, poriluk, vlasac), koje su otrovne za pse. Te biljke sadrže spojeve koji oštećuju crvene krvne stanice i mogu dovesti do anemije. Štetni su svi dijelovi i svi oblici: sirovi, termički obrađeni, sušeni i u prahu. Probavne tegobe mogu se pojaviti nakon bilo koje količine, a veće količine oštećuju krv.",
     "sv": "Den hör till lökväxterna (lök, vitlök, purjolök, gräslök), som är giftiga för hundar. Växterna innehåller ämnen som skadar de röda blodkropparna och kan leda till blodbrist (anemi). Alla delar och alla former är skadliga: råa, tillagade, torkade och i pulverform. Magbesvär kan uppstå efter vilken mängd som helst; större mängder skadar blodet.",
     "da": "Løg hører til løgplanterne (løg, hvidløg, porre, purløg), som er giftige for hunde. Planterne indeholder stoffer der skader de røde blodlegemer og kan føre til blodmangel (anæmi). Alle dele og alle former er skadelige: rå, tilberedte, tørrede og i pulverform. Maveproblemer kan opstå ved enhver mængde; større mængder skader blodet.",
-    "fi": "Sipuli kuuluu sipulikasveihin (sipuli, valkosipuli, purjo, ruohosipuli), jotka ovat koiralle myrkyllisiä. Näissä kasveissa on yhdisteitä, jotka vaurioittavat punasoluja ja voivat johtaa anemiaan. Kaikki osat ja kaikki muodot ovat haitallisia: raaka, kypsennetty, kuivattu ja jauhettu sipuli. Vatsavaivoja voi aiheuttaa mikä tahansa määrä; suuremmat määrät vaurioittavat verta."
+    "fi": "Sipuli kuuluu sipulikasveihin (sipuli, valkosipuli, purjo, ruohosipuli), jotka ovat koiralle myrkyllisiä. Näissä kasveissa on yhdisteitä, jotka vaurioittavat punasoluja ja voivat johtaa anemiaan. Kaikki osat ja kaikki muodot ovat haitallisia: raaka, kypsennetty, kuivattu ja jauhettu sipuli. Vatsavaivoja voi aiheuttaa mikä tahansa määrä; suuremmat määrät vaurioittavat verta.",
+    "nb": "Løk hører til løkplantene (Allium – løk, hvitløk, purre, gressløk), som er giftige for hunder. Disse plantene inneholder stoffer som skader de røde blodcellene og kan føre til blodmangel (anemi). Alle deler og alle former er skadelige: rå, tilberedt, tørket og som pulver. Urolig mage kan oppstå uansett mengde; større mengder skader blodet."
   },
   "signs": {
     "en": [
@@ -166,6 +171,12 @@
       "Heikentynyt ruokahalu",
       "Vatsavaivat, myös pienten määrien jälkeen",
       "Anemian oireet (punasolujen vaurio), yleensä muutaman päivän kuluttua"
+    ],
+    "nb": [
+      "Oppkast og diaré",
+      "Spiser mindre enn vanlig",
+      "Urolig mage, selv etter små mengder",
+      "Tegn på blodmangel (skadde røde blodceller), vanligvis noen dager senere"
     ]
   },
   "what_to_do": {
@@ -182,7 +193,8 @@
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je pas pojeo (luk) i otprilike koliko. Ne čekaj da se pojave znakovi: oštećenje krvi obično se pokaže tek nakon nekoliko dana.",
     "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt. Notera vad hunden åt (lök) och ungefär hur mycket. Vänta inte på symtom: skadorna på blodet syns oftast först några dagar senare.",
     "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvad hunden har spist (løg), og omtrent hvor meget. Vent ikke på symptomer: Skaden på blodet viser sig som regel først efter nogle dage.",
-    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä koira söi (sipulia) ja suunnilleen kuinka paljon. Älä odota oireita: veren vauriot näkyvät yleensä vasta muutaman päivän kuluttua."
+    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä koira söi (sipulia) ja suunnilleen kuinka paljon. Älä odota oireita: veren vauriot näkyvät yleensä vasta muutaman päivän kuluttua.",
+    "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang. Skriv ned hva hunden spiste (løk), og omtrent hvor mye. Ikke vent på symptomer – skader på blodet viser seg vanligvis først etter noen dager."
   },
   "serving": null,
   "child": {
@@ -199,7 +211,8 @@
     "hr": "Luk nije za pse, čak ni kuhan u hrani. Može naštetiti psećoj krvi. Reci odrasloj osobi ako ga tvoj pas pojede.",
     "sv": "Lök är inte för hundar, inte ens stekt eller kokt lök i maten. Den kan göra hundens blod sjukt. Säg till en vuxen om din hund äter lök.",
     "da": "Løg er ikke til hunde – heller ikke kogte løg i maden. De kan skade hundens blod. Sig det til en voksen hvis din hund spiser noget.",
-    "fi": "Sipuli ei sovi koirille, ei edes keitettynä ruoan seassa. Se voi sairastuttaa koiran veren. Kerro aikuiselle, jos koirasi syö sitä."
+    "fi": "Sipuli ei sovi koirille, ei edes keitettynä ruoan seassa. Se voi sairastuttaa koiran veren. Kerro aikuiselle, jos koirasi syö sitä.",
+    "nb": "Løk er ikke noe for hunder, heller ikke kokt løk i maten. Den kan gjøre blodet til hunden sykt. Si fra til en voksen hvis hunden din spiser litt."
   },
   "faq": [
     {
@@ -217,7 +230,8 @@
         "hr": "Je li siguran kad je termički obrađen ili u prahu?",
         "sv": "Är lök ofarlig om den är tillagad eller i pulverform?",
         "da": "Er løg sikkert når det er tilberedt eller i pulverform?",
-        "fi": "Onko sipuli turvallista kypsennettynä tai jauheena?"
+        "fi": "Onko sipuli turvallista kypsennettynä tai jauheena?",
+        "nb": "Er den trygg når den er tilberedt eller i pulverform?"
       },
       "a": {
         "en": "No. Raw, cooked, dried, powdered and liquid forms are all poisonous to dogs.",
@@ -233,7 +247,8 @@
         "hr": "Nije. Otrovan je za pse u svakom obliku: sirov, termički obrađen, sušen, u prahu i u tekućem obliku.",
         "sv": "Nej. Råa, tillagade, torkade, pulveriserade och flytande former är alla giftiga för hundar.",
         "da": "Nej. Alle former er giftige for hunde: rå, tilberedte, tørrede, i pulverform og flydende.",
-        "fi": "Ei ole. Kaikki muodot ovat koiralle myrkyllisiä: raaka, kypsennetty, kuivattu, jauhettu ja nestemäinen."
+        "fi": "Ei ole. Kaikki muodot ovat koiralle myrkyllisiä: raaka, kypsennetty, kuivattu, jauhettu ja nestemäinen.",
+        "nb": "Nei. Rå, tilberedte, tørkede, pulveriserte og flytende former er alle giftige for hunder."
       }
     },
     {
@@ -251,7 +266,8 @@
         "hr": "Zašto se znakovi ne pokažu odmah?",
         "sv": "Varför syns inte symtomen direkt?",
         "da": "Hvorfor viser symptomerne sig ikke med det samme?",
-        "fi": "Miksi oireet eivät näy heti?"
+        "fi": "Miksi oireet eivät näy heti?",
+        "nb": "Hvorfor viser ikke symptomene seg med en gang?"
       },
       "a": {
         "en": "Symptoms can start within 24 hours but more often take a few days to appear; signs of anaemia typically develop several days after eating.",
@@ -267,7 +283,8 @@
         "hr": "Simptomi se mogu pojaviti unutar 24 sata, ali se češće pojave tek nakon nekoliko dana; znakovi anemije obično se razviju nekoliko dana nakon što je pas pojeo luk.",
         "sv": "Symtomen kan börja inom 24 timmar men dröjer oftare några dagar; tecken på blodbrist utvecklas vanligtvis flera dagar efter att hunden ätit.",
         "da": "Symptomerne kan begynde inden for 24 timer, men oftere går der et par dage; tegn på blodmangel viser sig typisk flere dage efter at hunden har spist løg.",
-        "fi": "Oireet voivat alkaa 24 tunnin kuluessa, mutta useammin ne ilmaantuvat vasta muutaman päivän kuluttua; anemian oireet kehittyvät tyypillisesti useita päiviä syömisen jälkeen."
+        "fi": "Oireet voivat alkaa 24 tunnin kuluessa, mutta useammin ne ilmaantuvat vasta muutaman päivän kuluttua; anemian oireet kehittyvät tyypillisesti useita päiviä syömisen jälkeen.",
+        "nb": "Symptomene kan starte innen 24 timer, men oftere tar det noen dager før de viser seg; tegn på blodmangel kommer typisk flere dager etter at hunden har spist løk."
       }
     }
   ],
@@ -430,6 +447,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "de0f1c14d26d297887e98f13966b7c8510e024acea7ac15f321e863f9f132796"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7b23230fb404ecf7cfe92f4c65ce277b09adf378f298d2b5101e2bbf4275fe8e"
     }
   }
 }

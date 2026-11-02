@@ -15,7 +15,8 @@
     "hr": "Sirove kosti",
     "sv": "Råa ben",
     "da": "Rå knogler",
-    "fi": "Raakaluut"
+    "fi": "Raakaluut",
+    "nb": "Rå bein"
   },
   "question": {
     "en": "Can dogs eat raw bones?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti sirove kosti?",
     "sv": "Får hundar äta råa ben?",
     "da": "Må hunde spise rå knogler?",
-    "fi": "Saako koira syödä raakaluita?"
+    "fi": "Saako koira syödä raakaluita?",
+    "nb": "Kan hunder spise rå bein?"
   },
   "url_slug": {
     "en": "raw-bones",
@@ -47,7 +49,8 @@
     "hr": "sirove-kosti",
     "sv": "raa-ben",
     "da": "raa-knogler",
-    "fi": "raakaluut"
+    "fi": "raakaluut",
+    "nb": "ra-bein"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Samo nakon razgovora s veterinarom. Termički obrađene kosti se cijepaju, ali i sirove kosti nose rizike: mogu slomiti zube, mogu izazvati gušenje, mogu začepiti crijeva, a sirovo meso na njima može sadržavati bakterije poput salmonele. Neki veterinari ih dopuštaju uz nadzor, a drugi ne savjetuju kosti.",
     "sv": "Bara efter att du pratat med veterinären. Tillagade ben splittras, men även råa ben innebär risker: de kan bryta av tänder, orsaka kvävning eller tarmstopp, och rått kött på dem kan bära på bakterier som salmonella. Vissa veterinärer tillåter dem under uppsikt; andra avråder från ben.",
     "da": "Kun efter en snak med din dyrlæge. Tilberedte knogler splintrer, men rå knogler har også risici: De kan knække tænder, sætte sig fast i halsen eller blokere tarmen, og råt kød på knoglerne kan indeholde bakterier som salmonella. Nogle dyrlæger tillader dem under opsyn; andre fraråder knogler.",
-    "fi": "Vain, jos olet ensin keskustellut eläinlääkärin kanssa. Kypsennetyt luut sirpaloituvat, mutta myös raakoihin luihin liittyy riskejä: ne voivat rikkoa hampaita, aiheuttaa tukehtumisen tai tukkia suoliston, ja niissä olevassa raa’assa lihassa voi olla bakteereja, kuten salmonellaa. Jotkut eläinlääkärit sallivat ne valvotusti; toiset neuvovat välttämään luita."
+    "fi": "Vain, jos olet ensin keskustellut eläinlääkärin kanssa. Kypsennetyt luut sirpaloituvat, mutta myös raakoihin luihin liittyy riskejä: ne voivat rikkoa hampaita, aiheuttaa tukehtumisen tai tukkia suoliston, ja niissä olevassa raa’assa lihassa voi olla bakteereja, kuten salmonellaa. Jotkut eläinlääkärit sallivat ne valvotusti; toiset neuvovat välttämään luita.",
+    "nb": "Bare etter at du har snakket med dyrlegen. Tilberedte bein splintres, men også rå bein innebærer risiko: De kan knekke tenner, sette seg fast i halsen eller blokkere tarmen, og rått kjøtt på dem kan inneholde bakterier som salmonella. Noen dyrleger godtar dem under tilsyn; andre fraråder bein."
   },
   "why": {
     "en": "Sources differ, so we use the stricter level. The FDA lists blockages, choking and mouth injuries after bones and advises asking your vet about safer chews. AKC notes raw bones may carry Salmonella and very hard bones can damage teeth. Bones can injure or block the gut, and blockages are very serious.",
@@ -80,7 +84,8 @@
     "hr": "Izvori se razlikuju, pa koristimo strožu ocjenu. FDA nakon kostiju navodi začepljenja, gušenje i ozljede usta te savjetuje da veterinara pitaš za sigurnije žvakalice. AKC napominje da sirove kosti mogu sadržavati salmonelu i da vrlo tvrde kosti mogu oštetiti zube. Kosti mogu ozlijediti ili začepiti crijeva, a začepljenja su vrlo ozbiljna.",
     "sv": "Källorna går isär, så vi använder den strängare nivån. FDA nämner tarmstopp, kvävning och skador i munnen efter ben och råder dig att fråga veterinären om säkrare tuggben. AKC påpekar att råa ben kan bära på salmonella och att mycket hårda ben kan skada tänderna. Ben kan skada mag-tarmkanalen eller orsaka stopp i den, och tarmstopp är mycket allvarligt.",
     "da": "Kilderne er uenige, så vi bruger det strengeste niveau. FDA nævner blokeringer, kvælning og skader i munden efter knogler og råder til at spørge dyrlægen om sikrere ting at tygge på. AKC påpeger at rå knogler kan indeholde salmonella, og at meget hårde knogler kan skade tænderne. Knogler kan skade eller blokere tarmen, og blokeringer er meget alvorlige.",
-    "fi": "Lähteet ovat eri mieltä, joten käytämme tiukempaa luokitusta. FDA mainitsee luiden jälkeen ilmenneitä tukoksia, tukehtumistapauksia ja suun vammoja ja neuvoo kysymään eläinlääkäriltä turvallisemmista purutuotteista. AKC:n mukaan raaoissa luissa voi olla salmonellaa, ja hyvin kovat luut voivat vahingoittaa hampaita. Luut voivat vaurioittaa tai tukkia suoliston, ja tukokset ovat erittäin vakavia."
+    "fi": "Lähteet ovat eri mieltä, joten käytämme tiukempaa luokitusta. FDA mainitsee luiden jälkeen ilmenneitä tukoksia, tukehtumistapauksia ja suun vammoja ja neuvoo kysymään eläinlääkäriltä turvallisemmista purutuotteista. AKC:n mukaan raaoissa luissa voi olla salmonellaa, ja hyvin kovat luut voivat vahingoittaa hampaita. Luut voivat vaurioittaa tai tukkia suoliston, ja tukokset ovat erittäin vakavia.",
+    "nb": "Kildene sier ulike ting, så vi bruker det strengere nivået. FDA nevner blokkeringer, kvelning og skader i munnen etter bein og råder deg til å spørre dyrlegen om tryggere ting å tygge på. AKC påpeker at rå bein kan inneholde salmonella, og at svært harde bein kan skade tennene. Bein kan skade eller blokkere tarmen, og blokkeringer er svært alvorlige."
   },
   "signs": {
     "en": [
@@ -180,6 +185,13 @@
       "Oksentelu",
       "Ripuli",
       "Verenvuoto peräaukosta"
+    ],
+    "nb": [
+      "Kvelning eller brekninger",
+      "Kutt eller blødning i munnen",
+      "Oppkast",
+      "Diaré",
+      "Blødning fra endetarmen"
     ]
   },
   "what_to_do": {
@@ -196,7 +208,8 @@
     "hr": "Ako je tvoj pas progutao velik komad kosti ili pokazuje bilo koji od ovih znakova, odmah se obrati veterinaru. Zapiši o kakvoj je kosti riječ i koliko je velika.",
     "sv": "Om hunden har svalt en stor bit ben eller visar något av dessa symtom, kontakta veterinären direkt. Notera vilken sorts ben det var och hur stort det var.",
     "da": "Kontakt straks din dyrlæge hvis din hund har slugt et stort stykke knogle eller viser nogle af disse symptomer. Skriv ned hvilken slags knogle det var, og hvor stor den var.",
-    "fi": "Jos koirasi nieli ison palan luuta tai sillä on jokin näistä oireista, ota heti yhteyttä eläinlääkäriin. Kirjaa ylös luun laatu ja koko."
+    "fi": "Jos koirasi nieli ison palan luuta tai sillä on jokin näistä oireista, ota heti yhteyttä eläinlääkäriin. Kirjaa ylös luun laatu ja koko.",
+    "nb": "Hvis hunden har svelget en stor beinbit eller viser noen av disse symptomene, må du kontakte dyrlegen med en gang. Skriv ned hva slags bein det var, og hvor stort det var."
   },
   "serving": {
     "en": "Ask your vet first. If they agree, choose a bone larger than your dog's muzzle so it can't be swallowed whole, avoid very hard bones, and always supervise chewing.",
@@ -212,7 +225,8 @@
     "hr": "Prvo pitaj veterinara. Ako se složi, odaberi kost veću od njuške tvog psa kako je ne bi mogao progutati cijelu, izbjegavaj vrlo tvrde kosti i uvijek nadziri glodanje.",
     "sv": "Fråga veterinären först. Om veterinären säger ja, välj ett ben som är större än hundens nos så att det inte kan sväljas helt, undvik mycket hårda ben och håll alltid uppsikt när hunden tuggar.",
     "da": "Spørg din dyrlæge først. Hvis dyrlægen siger ja, så vælg en knogle der er større end hundens snude, så den ikke kan sluges hel, undgå meget hårde knogler, og hold altid øje med hunden mens den tygger.",
-    "fi": "Kysy ensin eläinlääkäriltä. Jos hän on samaa mieltä, valitse luu, joka on koirasi kuonoa suurempi, jottei koira voi niellä sitä kokonaisena, vältä hyvin kovia luita ja valvo aina pureskelua."
+    "fi": "Kysy ensin eläinlääkäriltä. Jos hän on samaa mieltä, valitse luu, joka on koirasi kuonoa suurempi, jottei koira voi niellä sitä kokonaisena, vältä hyvin kovia luita ja valvo aina pureskelua.",
+    "nb": "Spør dyrlegen først. Hvis dyrlegen sier ja, velg et bein som er større enn snuten til hunden, så det ikke kan svelges helt, unngå svært harde bein og følg alltid med mens hunden tygger."
   },
   "child": {
     "en": "Bones can hurt a dog's teeth and tummy. Only grown-ups and the vet decide if a dog gets a bone, and someone always watches.",
@@ -228,7 +242,8 @@
     "hr": "Kosti mogu ozlijediti pseće zube i trbuh. Samo odrasli i veterinar odlučuju smije li pas dobiti kost, a netko ga uvijek mora gledati dok je glođe.",
     "sv": "Ben kan skada hundens tänder och mage. Bara vuxna och veterinären bestämmer om en hund får ett ben, och någon håller alltid koll.",
     "da": "Knogler kan skade en hunds tænder og mave. Kun voksne og dyrlægen bestemmer om en hund må få en knogle, og der skal altid være nogen der holder øje.",
-    "fi": "Luut voivat satuttaa koiran hampaita ja vatsaa. Vain aikuiset ja eläinlääkäri päättävät, saako koira luun, ja joku valvoo aina."
+    "fi": "Luut voivat satuttaa koiran hampaita ja vatsaa. Vain aikuiset ja eläinlääkäri päättävät, saako koira luun, ja joku valvoo aina.",
+    "nb": "Bein kan skade tennene og magen til en hund. Bare voksne og dyrlegen bestemmer om en hund får et bein, og noen følger alltid med."
   },
   "faq": [
     {
@@ -246,7 +261,8 @@
         "hr": "Jesu li sirove kosti sigurnije od termički obrađenih?",
         "sv": "Är råa ben säkrare än tillagade?",
         "da": "Er rå knogler mere sikre end tilberedte?",
-        "fi": "Ovatko raa’at luut turvallisempia kuin kypsennetyt?"
+        "fi": "Ovatko raa’at luut turvallisempia kuin kypsennetyt?",
+        "nb": "Er rå bein tryggere enn tilberedte?"
       },
       "a": {
         "en": "Cooked bones splinter, which is why they should never be given. Raw bones still carry risks of broken teeth, blockages and bacteria, so ask your vet first.",
@@ -262,7 +278,8 @@
         "hr": "Termički obrađene kosti se cijepaju i zato ih psu nikad ne treba davati. I sirove kosti nose rizik od slomljenih zuba, začepljenja i bakterija, zato prvo pitaj veterinara.",
         "sv": "Tillagade ben splittras, och därför ska de aldrig ges. Råa ben innebär ändå risk för avbrutna tänder, tarmstopp och bakterier, så fråga veterinären först.",
         "da": "Tilberedte knogler splintrer, og derfor må de aldrig gives. Rå knogler har stadig risiko for knækkede tænder, blokeringer og bakterier, så spørg din dyrlæge først.",
-        "fi": "Kypsennetyt luut sirpaloituvat, ja siksi niitä ei pidä antaa koskaan. Myös raakoihin luihin liittyy hampaiden rikkoutumisen, tukosten ja bakteerien riski, joten kysy ensin eläinlääkäriltä."
+        "fi": "Kypsennetyt luut sirpaloituvat, ja siksi niitä ei pidä antaa koskaan. Myös raakoihin luihin liittyy hampaiden rikkoutumisen, tukosten ja bakteerien riski, joten kysy ensin eläinlääkäriltä.",
+        "nb": "Tilberedte bein splintres, og derfor skal de aldri gis. Rå bein har likevel risiko for knekte tenner, blokkering og bakterier, så spør dyrlegen først."
       }
     },
     {
@@ -280,7 +297,8 @@
         "hr": "Koja je veličina kosti sigurnija?",
         "sv": "Vilken storlek på benet är säkrare?",
         "da": "Hvilken størrelse knogle er mere sikker?",
-        "fi": "Minkä kokoinen luu on turvallisempi?"
+        "fi": "Minkä kokoinen luu on turvallisempi?",
+        "nb": "Hvilken størrelse på beinet er tryggere?"
       },
       "a": {
         "en": "A bone should be larger than the length of the dog's muzzle so it can't be swallowed whole, and you should check on your dog while it chews.",
@@ -296,7 +314,8 @@
         "hr": "Kost treba biti dulja od pseće njuške kako je pas ne bi mogao progutati cijelu, a dok je glođe, povremeno ga provjeri.",
         "sv": "Benet ska vara längre än hundens nos så att det inte kan sväljas helt, och du ska hålla koll på hunden medan den tuggar.",
         "da": "En knogle skal være større end længden af hundens snude, så den ikke kan sluges hel, og du skal holde øje med hunden mens den tygger.",
-        "fi": "Luun pitää olla koiran kuonon pituutta suurempi, jotta koira ei voi niellä sitä kokonaisena, ja koiraa pitää tarkkailla sen pureskellessa luuta."
+        "fi": "Luun pitää olla koiran kuonon pituutta suurempi, jotta koira ei voi niellä sitä kokonaisena, ja koiraa pitää tarkkailla sen pureskellessa luuta.",
+        "nb": "Beinet bør være lengre enn snuten til hunden, så det ikke kan svelges helt, og du bør følge med på hunden mens den tygger."
       }
     }
   ],
@@ -463,6 +482,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "626b26d2d69d9986ba2345d41d747d85998527777063b509251ca490a3e84b5c"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "96bbbc47a1fee53e587d77f50cd2b55c23ea552a2c9f029e447b5177cc4b3161"
     }
   }
 }

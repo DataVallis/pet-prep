@@ -15,7 +15,8 @@
     "hr": "Sirova riba",
     "sv": "Rå fisk",
     "da": "Rå fisk",
-    "fi": "Raaka kala"
+    "fi": "Raaka kala",
+    "nb": "Rå fisk"
   },
   "question": {
     "en": "Can cats eat raw fish?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti sirovu ribu?",
     "sv": "Får katter äta rå fisk?",
     "da": "Må katte spise rå fisk?",
-    "fi": "Saako kissa syödä raakaa kalaa?"
+    "fi": "Saako kissa syödä raakaa kalaa?",
+    "nb": "Kan katter spise rå fisk?"
   },
   "url_slug": {
     "en": "raw-fish",
@@ -47,7 +49,8 @@
     "hr": "sirova-riba",
     "sv": "ra-fisk",
     "da": "raa-fisk",
-    "fi": "raaka-kala"
+    "fi": "raaka-kala",
+    "nb": "ra-fisk"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne, sirova riba nije dobra ideja za mačke. Može sadržavati štetne bakterije i parazite, a neka sirova riba sadrži tiaminazu, enzim koji uništava vitamin B1. Riba za mačke treba biti dobro termički obrađena i bez kostiju.",
     "sv": "Nej, rå fisk är ingen bra idé för katter. Den kan innehålla skadliga bakterier och parasiter, och viss rå fisk innehåller tiaminas, ett enzym som bryter ner B1-vitamin. Fisk till katter ska vara ordentligt tillagad och benfri.",
     "da": "Nej, rå fisk er ikke en god idé til katte. Rå fisk kan indeholde skadelige bakterier og parasitter, og noget rå fisk indeholder thiaminase, et enzym der ødelægger B1-vitamin. Fisk til katte skal være ordentligt tilberedt og uden ben.",
-    "fi": "Ei, raaka kala ei ole hyvä ajatus kissalle. Siinä voi olla haitallisia bakteereja ja loisia, ja osa raa’asta kalasta sisältää tiaminaasia, entsyymiä, joka tuhoaa B1-vitamiinia. Kissalle annettavan kalan pitää olla kunnolla kypsennettyä ja ruodotonta."
+    "fi": "Ei, raaka kala ei ole hyvä ajatus kissalle. Siinä voi olla haitallisia bakteereja ja loisia, ja osa raa’asta kalasta sisältää tiaminaasia, entsyymiä, joka tuhoaa B1-vitamiinia. Kissalle annettavan kalan pitää olla kunnolla kypsennettyä ja ruodotonta.",
+    "nb": "Nei, rå fisk er ikke lurt for katter. Den kan inneholde skadelige bakterier og parasitter, og noe rå fisk inneholder tiaminase, et enzym som ødelegger vitamin B1. Fisk til katter bør være ordentlig tilberedt og uten bein."
   },
   "why": {
     "en": "Cats Protection says uncooked fish may contain harmful bacteria and parasites. The Merck Veterinary Manual notes that thiaminases are found in raw freshwater fish and are destroyed by cooking. Thiamine (vitamin B1) is an essential nutrient, so cooking fish removes this risk.",
@@ -80,7 +84,8 @@
     "hr": "Cats Protection navodi da termički neobrađena riba može sadržavati štetne bakterije i parazite. Priručnik Merck Veterinary Manual navodi da se tiaminaze nalaze u sirovoj slatkovodnoj ribi i da ih termička obrada uništava. Tiamin (vitamin B1) esencijalna je hranjiva tvar, pa se termičkom obradom ribe taj rizik uklanja.",
     "sv": "Cats Protection skriver att otillagad fisk kan innehålla skadliga bakterier och parasiter. Merck Veterinary Manual påpekar att tiaminaser finns i rå sötvattensfisk och förstörs vid tillagning. Tiamin (B1-vitamin) är ett livsviktigt näringsämne, så när fisken tillagas försvinner den här risken.",
     "da": "Ifølge Cats Protection kan rå fisk indeholde skadelige bakterier og parasitter. Merck Veterinary Manual skriver at thiaminaser findes i rå ferskvandsfisk og ødelægges ved tilberedning. Thiamin (B1-vitamin) er et livsnødvendigt næringsstof, så tilberedning af fisken fjerner denne risiko.",
-    "fi": "Cats Protectionin mukaan kypsentämättömässä kalassa voi olla haitallisia bakteereja ja loisia. Merck Veterinary Manual toteaa, että tiaminaaseja on raa’assa makean veden kalassa ja että kypsentäminen tuhoaa ne. Tiamiini (B1-vitamiini) on välttämätön ravintoaine, joten kalan kypsentäminen poistaa tämän riskin."
+    "fi": "Cats Protectionin mukaan kypsentämättömässä kalassa voi olla haitallisia bakteereja ja loisia. Merck Veterinary Manual toteaa, että tiaminaaseja on raa’assa makean veden kalassa ja että kypsentäminen tuhoaa ne. Tiamiini (B1-vitamiini) on välttämätön ravintoaine, joten kalan kypsentäminen poistaa tämän riskin.",
+    "nb": "Cats Protection skriver at rå fisk kan inneholde skadelige bakterier og parasitter. Merck Veterinary Manual skriver at tiaminaser finnes i rå ferskvannsfisk og ødelegges ved tilberedning. Tiamin (vitamin B1) er et livsnødvendig næringsstoff, så tilberedning av fisken fjerner denne risikoen."
   },
   "signs": {
     "en": [
@@ -180,6 +185,13 @@
       "Kuume",
       "Haluttomuus syödä",
       "Väsymys"
+    ],
+    "nb": [
+      "Oppkast",
+      "Diaré, noen ganger med blod",
+      "Feber",
+      "Vil ikke spise",
+      "Sløvhet"
     ]
   },
   "what_to_do": {
@@ -196,7 +208,8 @@
     "hr": "Ako je mačka pojela malo sirove ribe, prati pojavu povraćanja, proljeva, vrućice ili odbijanja hrane i nazovi veterinara ako se išta od toga pojavi. Sirova riba ne bi smjela postati redovita hrana.",
     "sv": "Om katten har ätit lite rå fisk: håll utkik efter kräkningar, diarré, feber eller att den slutar äta, och ring veterinären om något av detta dyker upp. Rå fisk ska inte bli vanlig mat.",
     "da": "Hvis din kat har spist lidt rå fisk, så hold øje med opkast, diarré, feber eller manglende lyst til at spise, og ring til din dyrlæge hvis noget af det viser sig. Rå fisk bør ikke blive en fast del af kosten.",
-    "fi": "Jos kissasi söi vähän raakaa kalaa, seuraa, oksenteleeko se, onko sillä ripulia tai kuumetta tai jättääkö se syömättä, ja soita eläinlääkärille, jos jokin näistä ilmenee. Raa’asta kalasta ei pidä tulla säännöllistä ruokaa."
+    "fi": "Jos kissasi söi vähän raakaa kalaa, seuraa, oksenteleeko se, onko sillä ripulia tai kuumetta tai jättääkö se syömättä, ja soita eläinlääkärille, jos jokin näistä ilmenee. Raa’asta kalasta ei pidä tulla säännöllistä ruokaa.",
+    "nb": "Hvis katten har spist litt rå fisk, bør du følge med på oppkast, diaré, feber eller manglende matlyst og ringe dyrlegen hvis noe av dette oppstår. Rå fisk bør ikke bli vanlig mat."
   },
   "serving": {
     "en": "If you share fish: properly cooked, plain, with all bones removed, a few pieces at a time.",
@@ -212,7 +225,8 @@
     "hr": "Ako s mačkom dijeliš ribu: dobro termički obrađenu, običnu, bez ijedne kosti, nekoliko komadića odjednom.",
     "sv": "Om du delar med dig av fisk: ordentligt tillagad, utan kryddor, med alla ben borttagna och bara några bitar åt gången.",
     "da": "Hvis du deler fisk: ordentligt tilberedt, naturel og med alle ben fjernet, et par stykker ad gangen.",
-    "fi": "Jos annat kalaa: kunnolla kypsennettynä, maustamatta, kaikki ruodot poistettuina ja vain muutama pala kerrallaan."
+    "fi": "Jos annat kalaa: kunnolla kypsennettynä, maustamatta, kaikki ruodot poistettuina ja vain muutama pala kerrallaan.",
+    "nb": "Hvis du deler fisk: ordentlig tilberedt, naturell og helt uten bein, noen få biter om gangen."
   },
   "child": {
     "en": "Cats love fish, but it needs to be cooked by a grown-up first, with no bones.",
@@ -228,7 +242,8 @@
     "hr": "Mace obožavaju ribu, ali odrasla osoba najprije je mora skuhati i izvaditi sve kosti.",
     "sv": "Katter älskar fisk, men en vuxen måste koka den först och ta bort alla ben.",
     "da": "Katte elsker fisk, men fisken skal først koges af en voksen og være helt uden ben.",
-    "fi": "Kissat rakastavat kalaa, mutta aikuisen pitää ensin keittää se ja poistaa ruodot."
+    "fi": "Kissat rakastavat kalaa, mutta aikuisen pitää ensin keittää se ja poistaa ruodot.",
+    "nb": "Katter elsker fisk, men en voksen må koke den først og ta ut alle beina."
   },
   "faq": [
     {
@@ -246,7 +261,8 @@
         "hr": "Što je tiaminaza?",
         "sv": "Vad är tiaminas?",
         "da": "Hvad er thiaminase?",
-        "fi": "Mitä tiaminaasi on?"
+        "fi": "Mitä tiaminaasi on?",
+        "nb": "Hva er tiaminase?"
       },
       "a": {
         "en": "It is an enzyme found in some raw fish that destroys thiamine (vitamin B1). Cooking destroys it.",
@@ -262,7 +278,8 @@
         "hr": "To je enzim koji se nalazi u nekim sirovim ribama i uništava tiamin (vitamin B1). Termička obrada ga uništava.",
         "sv": "Det är ett enzym som finns i viss rå fisk och som bryter ner tiamin (B1-vitamin). Det förstörs när fisken tillagas.",
         "da": "Det er et enzym der findes i noget rå fisk og ødelægger thiamin (B1-vitamin). Tilberedning ødelægger enzymet.",
-        "fi": "Se on entsyymi, jota on joissakin raaoissa kaloissa ja joka tuhoaa tiamiinia (B1-vitamiinia). Kypsentäminen tuhoaa sen."
+        "fi": "Se on entsyymi, jota on joissakin raaoissa kaloissa ja joka tuhoaa tiamiinia (B1-vitamiinia). Kypsentäminen tuhoaa sen.",
+        "nb": "Det er et enzym som finnes i noe rå fisk, og som ødelegger tiamin (vitamin B1). Tilberedning ødelegger enzymet."
       }
     }
   ],
@@ -398,6 +415,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "af259b404febee8783e2a743feda0e1b6fba7465a3a77363313a5653bc7238ea"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "66da95deff54315c50bd55b3677b03b5aba02b7377cb581c006742c7df9318ac"
     }
   }
 }

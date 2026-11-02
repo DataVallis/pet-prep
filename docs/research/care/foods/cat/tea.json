@@ -15,7 +15,8 @@
     "hr": "Čaj",
     "sv": "Te",
     "da": "Te",
-    "fi": "Tee"
+    "fi": "Tee",
+    "nb": "Te"
   },
   "question": {
     "en": "Can cats drink tea?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke piti čaj?",
     "sv": "Får katter dricka te?",
     "da": "Må katte drikke te?",
-    "fi": "Saako kissa juoda teetä?"
+    "fi": "Saako kissa juoda teetä?",
+    "nb": "Kan katter drikke te?"
   },
   "url_slug": {
     "en": "tea",
@@ -47,7 +49,8 @@
     "hr": "caj",
     "sv": "te",
     "da": "te",
-    "fi": "tee"
+    "fi": "tee",
+    "nb": "te"
   },
   "level": "toxic",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne. Mnogi čajevi sadrže kofein, a mačke su na kofein osjetljivije od ljudi. Vrećice čaja posebno su rizične. Ne dijeli svoj čaj s mačkom i nazovi veterinara ako mačka sažvače vrećicu čaja ili popije čaj s kofeinom.",
     "sv": "Nej. Många sorters te innehåller koffein, och katter är känsligare för koffein än människor. Tepåsar är extra riskabla. Dela inte med dig av ditt te, och ring veterinären om katten tuggar på en tepåse eller dricker te med koffein.",
     "da": "Nej. Mange slags te indeholder koffein, og katte er mere følsomme over for koffein end mennesker. Tebreve er særligt risikable. Del ikke din te, og ring til din dyrlæge hvis din kat tygger på et tebrev eller drikker te med koffein.",
-    "fi": "Ei saa. Monissa teelaaduissa on kofeiinia, ja kissat ovat herkempiä kofeiinille kuin ihmiset. Teepussit ovat erityisen riskialttiita. Älä jaa teetäsi kissan kanssa ja soita eläinlääkärille, jos kissasi pureskelee teepussia tai juo kofeiinipitoista teetä."
+    "fi": "Ei saa. Monissa teelaaduissa on kofeiinia, ja kissat ovat herkempiä kofeiinille kuin ihmiset. Teepussit ovat erityisen riskialttiita. Älä jaa teetäsi kissan kanssa ja soita eläinlääkärille, jos kissasi pureskelee teepussia tai juo kofeiinipitoista teetä.",
+    "nb": "Nei. Mange typer te inneholder koffein, og katter er mer følsomme for koffein enn mennesker. Teposer er særlig risikable. Ikke del teen din, og ring dyrlegen hvis katten tygger på en tepose eller drikker te med koffein."
   },
   "why": {
     "en": "Many teas contain caffeine. Cats are more sensitive to caffeine than people. Like chocolate, coffee and other caffeine-containing foods have high levels of stimulants called methylxanthines; caffeine speeds up the heart, makes cats restless and upsets the stomach.",
@@ -80,7 +84,8 @@
     "hr": "Mnogi čajevi sadrže kofein. Mačke su na kofein osjetljivije od ljudi. Kao i čokolada, kava i druge namirnice s kofeinom sadrže mnogo stimulansa koji se zovu metilksantini; kofein ubrzava rad srca, čini mačke nemirnima i izaziva želučane tegobe.",
     "sv": "Många sorters te innehåller koffein. Katter är känsligare för koffein än människor. Precis som choklad innehåller kaffe och andra livsmedel med koffein höga halter av stimulerande ämnen som kallas metylxantiner; koffein får hjärtat att slå snabbare, gör katter rastlösa och ger orolig mage.",
     "da": "Mange slags te indeholder koffein. Katte er mere følsomme over for koffein end mennesker. Ligesom chokolade har kaffe og andre koffeinholdige fødevarer et højt indhold af stimulerende stoffer kaldet methylxanthiner; koffein får hjertet til at slå hurtigere, gør katte urolige og giver dårlig mave.",
-    "fi": "Monissa teelaaduissa on kofeiinia. Kissat ovat herkempiä kofeiinille kuin ihmiset. Suklaan tavoin kahvissa ja muissa kofeiinia sisältävissä ruoissa on paljon metyyliksantiineiksi kutsuttuja piristeitä; kofeiini kiihdyttää sydämen sykettä, tekee kissan levottomaksi ja aiheuttaa vatsavaivoja."
+    "fi": "Monissa teelaaduissa on kofeiinia. Kissat ovat herkempiä kofeiinille kuin ihmiset. Suklaan tavoin kahvissa ja muissa kofeiinia sisältävissä ruoissa on paljon metyyliksantiineiksi kutsuttuja piristeitä; kofeiini kiihdyttää sydämen sykettä, tekee kissan levottomaksi ja aiheuttaa vatsavaivoja.",
+    "nb": "Mange typer te inneholder koffein. Katter er mer følsomme for koffein enn mennesker. I likhet med sjokolade har kaffe og annen mat med koffein høye nivåer av sentralstimulerende stoffer som kalles metylxantiner; koffein får hjertet til å slå fortere, gjør katter rastløse og gir urolig mage."
   },
   "signs": {
     "en": [
@@ -166,6 +171,12 @@
       "Ylivilkkaus",
       "Vatsavaivat",
       "Nopea syke tai sydämen rytmin muutokset"
+    ],
+    "nb": [
+      "Uro, rastløshet, vil ikke ligge i ro",
+      "Hyperaktivitet",
+      "Urolig mage",
+      "Rask puls eller endret hjerterytme"
     ]
   },
   "what_to_do": {
@@ -182,7 +193,8 @@
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je mačka progutala (napitak, talog, zrna, vrećicu čaja ili tablete), koliko i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt. Notera vad katten fick i sig (dryck, kaffesump, bönor, tepåse eller tabletter), hur mycket och när. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
     "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvad din kat har slugt (drik, kaffegrums, bønner, tebrev eller tabletter), hvor meget og hvornår. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
-    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä kissasi nieli (juomaa, kahvinporoja, kahvipapuja, teepussin tai tabletteja), kuinka paljon ja milloin. Älä odota oireita äläkä yritä itse oksennuttaa kissaasi."
+    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä kissasi nieli (juomaa, kahvinporoja, kahvipapuja, teepussin tai tabletteja), kuinka paljon ja milloin. Älä odota oireita äläkä yritä itse oksennuttaa kissaasi.",
+    "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang. Skriv ned hva katten har fått i seg (drikke, kaffegrut, bønner, tepose eller tabletter), hvor mye og når. Ikke vent på symptomer, og ikke prøv å få katten til å kaste opp selv."
   },
   "serving": null,
   "child": {
@@ -199,7 +211,8 @@
     "hr": "Čaj je za ljude. Šalice i iskorištene vrećice čaja drži daleko od mace i reci odrasloj osobi ako ih maca dohvati.",
     "sv": "Te är för människor. Håll koppar och använda tepåsar borta från katten, och säg till en vuxen om den kommer åt dem.",
     "da": "Te er til mennesker. Hold kopper og brugte tebreve væk fra katten, og sig det til en voksen hvis den kommer i dem.",
-    "fi": "Tee on ihmisille. Pidä kupit ja käytetyt teepussit kaukana kissasta ja kerro aikuiselle, jos kissa pääsee niihin käsiksi."
+    "fi": "Tee on ihmisille. Pidä kupit ja käytetyt teepussit kaukana kissasta ja kerro aikuiselle, jos kissa pääsee niihin käsiksi.",
+    "nb": "Te er for mennesker. Hold kopper og brukte teposer unna pusen, og si fra til en voksen hvis den får tak i dem."
   },
   "faq": [
     {
@@ -217,7 +230,8 @@
         "hr": "Jesu li vrećice čaja opasne?",
         "sv": "Är tepåsar farliga?",
         "da": "Er tebreve farlige?",
-        "fi": "Ovatko teepussit vaarallisia?"
+        "fi": "Ovatko teepussit vaarallisia?",
+        "nb": "Er teposer farlige?"
       },
       "a": {
         "en": "Yes. Pet Poison Helpline warns that eating tea bags could cause serious toxicity in cats. Throw used tea bags away where your cat can't reach them.",
@@ -233,7 +247,8 @@
         "hr": "Jesu. Pet Poison Helpline upozorava da jedenje vrećica čaja kod mačaka može izazvati ozbiljno otrovanje. Iskorištene vrećice čaja baci tamo gdje ih mačka ne može dohvatiti.",
         "sv": "Ja. Pet Poison Helpline varnar för att tepåsar kan ge allvarlig förgiftning hos katter. Släng använda tepåsar där katten inte kommer åt dem.",
         "da": "Ja. Pet Poison Helpline advarer om at det kan give katte en alvorlig forgiftning at spise tebreve. Smid brugte tebreve ud et sted hvor din kat ikke kan nå dem.",
-        "fi": "Ovat. Pet Poison Helpline varoittaa, että teepussien syöminen voi aiheuttaa kissoille vakavan myrkytyksen. Heitä käytetyt teepussit roska-astiaan, johon kissasi ei pääse käsiksi."
+        "fi": "Ovat. Pet Poison Helpline varoittaa, että teepussien syöminen voi aiheuttaa kissoille vakavan myrkytyksen. Heitä käytetyt teepussit roska-astiaan, johon kissasi ei pääse käsiksi.",
+        "nb": "Ja. Pet Poison Helpline advarer om at det å spise teposer kan gi alvorlig forgiftning hos katter. Kast brukte teposer der katten ikke når dem."
       }
     }
   ],
@@ -372,6 +387,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "25eadd3611f376103b07aed9f6214e23475d3d32664319f59350603ae0e8eb15"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9e9625ede560ace8e3fe19c85f759d694e4096242390c9316c8e77bf1be4f19f"
     }
   }
 }

@@ -15,7 +15,8 @@
     "hr": "Maslac",
     "sv": "Smör",
     "da": "Smør",
-    "fi": "Voi"
+    "fi": "Voi",
+    "nb": "Smør"
   },
   "question": {
     "en": "Can cats eat butter?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti maslac?",
     "sv": "Får katter äta smör?",
     "da": "Må katte spise smør?",
-    "fi": "Saako kissa syödä voita?"
+    "fi": "Saako kissa syödä voita?",
+    "nb": "Kan katter spise smør?"
   },
   "url_slug": {
     "en": "butter",
@@ -47,7 +49,8 @@
     "hr": "maslac",
     "sv": "smor",
     "da": "smoer",
-    "fi": "voi"
+    "fi": "voi",
+    "nb": "smor"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne, maslac je najbolje izbjegavati. To je masna mliječna namirnica: vodiči za njegu mačaka navode masnu hranu među onim što mačkama nikad ne treba davati, mliječni proizvodi mogu mački izazvati želučane tegobe, a njihova masnoća pridonosi debljanju.",
     "sv": "Nej, smör är bäst att undvika. Det är en fet mejeriprodukt: skötselguider för katter räknar fet mat till sådant man aldrig ska ge katter, mejeriprodukter kan ge katten orolig mage, och fettet ger extra vikt.",
     "da": "Nej, smør bør undgås. Det er et fedt mejeriprodukt: Vejledninger om kattepleje nævner fed mad blandt de ting katte aldrig må få, mejeriprodukter kan give en kat dårlig mave, og fedtet giver ekstra vægt.",
-    "fi": "Ei, voita on parasta välttää. Se on rasvainen maitotuote: kissanhoito-oppaat mainitsevat rasvaiset ruoat ruokina, joita kissoille ei saa koskaan antaa, maitotuotteet voivat aiheuttaa kissalle vatsavaivoja, ja niiden rasva lisää painoa."
+    "fi": "Ei, voita on parasta välttää. Se on rasvainen maitotuote: kissanhoito-oppaat mainitsevat rasvaiset ruoat ruokina, joita kissoille ei saa koskaan antaa, maitotuotteet voivat aiheuttaa kissalle vatsavaivoja, ja niiden rasva lisää painoa.",
+    "nb": "Nei, smør bør du helst unngå. Det er et fett meieriprodukt: Veiledninger om kattestell regner fet mat blant det du aldri skal gi katter, meieriprodukter kan gi katten urolig mage, og fettet gjør at den legger på seg."
   },
   "why": {
     "en": "RSPCA Australia lists fatty trimmings and fatty foods among things never to feed cats, and added fat can lead to a painful condition called pancreatitis. Butter is also a dairy product: many cats are lactose intolerant, milk-based products can cause vomiting or diarrhoea, and dairy products are high in fat and contribute to weight gain.",
@@ -80,7 +84,8 @@
     "hr": "RSPCA Australia navodi masne obreske i masnu hranu među onim što mačkama nikad ne treba davati, a dodana mast može dovesti do bolnog stanja koje se zove upala gušterače. Maslac je ujedno mliječni proizvod: mnoge mačke ne podnose laktozu, proizvodi na bazi mlijeka mogu izazvati povraćanje ili proljev, a mliječni proizvodi imaju mnogo masti i pridonose debljanju.",
     "sv": "RSPCA Australia räknar fettrester och fet mat till sådant man aldrig ska ge katter, och extra fett kan leda till ett smärtsamt tillstånd som kallas bukspottkörtelinflammation (pankreatit). Smör är också en mejeriprodukt: många katter är laktosintoleranta, mjölkbaserade produkter kan ge kräkningar eller diarré, och mejeriprodukter är feta och bidrar till viktuppgång.",
     "da": "RSPCA Australia nævner fedtafskær og fed mad blandt de ting katte aldrig må få, og ekstra fedt kan føre til en smertefuld tilstand der hedder betændelse i bugspytkirtlen (pankreatitis). Smør er også et mejeriprodukt: Mange katte er laktoseintolerante, mælkebaserede produkter kan give opkast eller diarré, og mejeriprodukter har et højt fedtindhold og bidrager til vægtøgning.",
-    "fi": "RSPCA Australia mainitsee rasvaiset lihanpalat ja rasvaiset ruoat ruokina, joita kissoille ei saa koskaan antaa, ja lisätty rasva voi johtaa kivuliaaseen haimatulehdukseen. Voi on myös maitotuote: monet kissat eivät siedä laktoosia, maitopohjaiset tuotteet voivat aiheuttaa oksentelua tai ripulia, ja maitotuotteet ovat rasvaisia ja edistävät painonnousua."
+    "fi": "RSPCA Australia mainitsee rasvaiset lihanpalat ja rasvaiset ruoat ruokina, joita kissoille ei saa koskaan antaa, ja lisätty rasva voi johtaa kivuliaaseen haimatulehdukseen. Voi on myös maitotuote: monet kissat eivät siedä laktoosia, maitopohjaiset tuotteet voivat aiheuttaa oksentelua tai ripulia, ja maitotuotteet ovat rasvaisia ja edistävät painonnousua.",
+    "nb": "RSPCA Australia regner fettrester og fet mat blant det du aldri skal gi katter, og tilsatt fett kan føre til en smertefull tilstand som kalles betennelse i bukspyttkjertelen (pankreatitt). Smør er også et meieriprodukt: Mange katter tåler ikke laktose, melkebaserte produkter kan gi oppkast eller diaré, og meieriprodukter inneholder mye fett og bidrar til vektøkning."
   },
   "signs": {
     "en": [
@@ -152,6 +157,11 @@
       "Oksentelu",
       "Ripuli",
       "Vatsavaivat"
+    ],
+    "nb": [
+      "Oppkast",
+      "Diaré",
+      "Urolig mage"
     ]
   },
   "what_to_do": {
@@ -168,7 +178,8 @@
     "hr": "Ako je tvoja mačka pojela maslac, pripazi na povraćanje ili proljev i obrati se veterinaru za savjet ako se čini da joj nije dobro ili ako je pojela mnogo.",
     "sv": "Om katten har ätit smör, håll utkik efter kräkningar eller diarré och kontakta veterinären för råd om den verkar må dåligt eller har ätit mycket.",
     "da": "Hvis din kat har spist smør, så hold øje med opkast eller diarré, og kontakt din dyrlæge for at få råd hvis den virker utilpas eller har spist meget.",
-    "fi": "Jos kissasi söi voita, seuraa, ilmeneekö oksentelua tai ripulia, ja kysy neuvoa eläinlääkäriltä, jos kissa vaikuttaa huonovointiselta tai söi paljon."
+    "fi": "Jos kissasi söi voita, seuraa, ilmeneekö oksentelua tai ripulia, ja kysy neuvoa eläinlääkäriltä, jos kissa vaikuttaa huonovointiselta tai söi paljon.",
+    "nb": "Hvis katten har spist smør, følg med på oppkast eller diaré, og kontakt dyrlegen for råd hvis den virker dårlig eller har spist mye."
   },
   "serving": null,
   "child": {
@@ -185,7 +196,8 @@
     "hr": "Maslac je premastan za mace. Neka ostane na tvom tostu, a mački daj njezinu hranu.",
     "sv": "Smör är för fett för katter. Ha det på din smörgås och ge katten kattmat i stället.",
     "da": "Smør er for fedt til katte. Lad det blive på din toast, og giv din kat dens egen mad.",
-    "fi": "Voi on kissoille liian rasvaista. Pidä se omalla leivälläsi ja anna kissallesi sen omaa ruokaa."
+    "fi": "Voi on kissoille liian rasvaista. Pidä se omalla leivälläsi ja anna kissallesi sen omaa ruokaa.",
+    "nb": "Smør er for fett for katter. La det bli på brødskiven din, og gi katten sin egen mat."
   },
   "faq": [],
   "sources": [
@@ -298,6 +310,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "91ae448a14aea83980812e5ef100a0d8090dec7d6474a88bf19b11c46f956c60"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3102710d0dd98afc5d4e6e5efbdde128b3d19f9c2be94404b3b61030b5cd6279"
     }
   }
 }

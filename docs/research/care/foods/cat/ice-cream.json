@@ -15,7 +15,8 @@
     "hr": "Sladoled",
     "sv": "Glass",
     "da": "Is",
-    "fi": "Jäätelö"
+    "fi": "Jäätelö",
+    "nb": "Iskrem"
   },
   "question": {
     "en": "Can cats eat ice cream?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti sladoled?",
     "sv": "Får katter äta glass?",
     "da": "Må katte spise is?",
-    "fi": "Saako kissa syödä jäätelöä?"
+    "fi": "Saako kissa syödä jäätelöä?",
+    "nb": "Kan katter spise iskrem?"
   },
   "url_slug": {
     "en": "ice-cream",
@@ -47,7 +49,8 @@
     "hr": "sladoled",
     "sv": "glass",
     "da": "is",
-    "fi": "jaatelo"
+    "fi": "jaatelo",
+    "nb": "iskrem"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne, sladoled nije dobra poslastica za mačke. Napravljen je od mlijeka i vrhnja, koji mački mogu izazvati želučane tegobe, a donosi i mast i šećer koji mačkama ne trebaju.",
     "sv": "Nej, glass är ingen bra godbit för katter. Den görs på mjölk och grädde, som kan ge katten orolig mage, och den tillför fett och socker som katter inte behöver.",
     "da": "Nej, is er ikke en god godbid til katte. Den er lavet af mælk og fløde, som kan give en kat dårlig mave, og den tilfører fedt og sukker som katte ikke har brug for.",
-    "fi": "Ei, jäätelö ei ole hyvä herkku kissoille. Se tehdään maidosta ja kermasta, jotka voivat aiheuttaa kissalle vatsavaivoja, ja siinä on rasvaa ja sokeria, joita kissa ei tarvitse."
+    "fi": "Ei, jäätelö ei ole hyvä herkku kissoille. Se tehdään maidosta ja kermasta, jotka voivat aiheuttaa kissalle vatsavaivoja, ja siinä on rasvaa ja sokeria, joita kissa ei tarvitse.",
+    "nb": "Nei, iskrem er ikke en god godbit for katter. Den er laget av melk og fløte, som kan gi katten urolig mage, og den gir fett og sukker som katter ikke trenger."
   },
   "why": {
     "en": "Adult cats have little lactase, the enzyme that digests milk sugar, so milk and other dairy-based products can cause diarrhoea or other digestive upset. Cream and dairy products are high in fat and can lead to weight gain. Sugar isn't toxic to cats, but it is still unhealthy for them and adds calories they don't need.",
@@ -80,7 +84,8 @@
     "hr": "Odrasle mačke imaju malo laktaze, enzima koji probavlja mliječni šećer, pa mlijeko i drugi mliječni proizvodi mogu izazvati proljev ili druge probavne smetnje. Vrhnje i mliječni proizvodi imaju mnogo masti i mogu dovesti do debljanja. Šećer nije otrovan za mačke, ali im ipak nije zdrav i donosi kalorije koje im ne trebaju.",
     "sv": "Vuxna katter har lite laktas, enzymet som bryter ner mjölksocker, så mjölk och andra mejeribaserade produkter kan ge diarré eller andra magbesvär. Grädde och mejeriprodukter är feta och kan leda till viktuppgång. Socker är inte giftigt för katter, men det är ändå ohälsosamt och ger kalorier som de inte behöver.",
     "da": "Voksne katte har kun lidt laktase, det enzym der fordøjer mælkesukker, så mælk og andre mælkebaserede produkter kan give diarré eller andre fordøjelsesproblemer. Fløde og mejeriprodukter har et højt fedtindhold og kan føre til vægtøgning. Sukker er ikke giftigt for katte, men det er stadig usundt for dem og tilfører kalorier, de ikke har brug for.",
-    "fi": "Aikuisilla kissoilla on vähän laktaasia, maitosokeria pilkkovaa entsyymiä, joten maito ja muut maitopohjaiset tuotteet voivat aiheuttaa ripulia tai muita ruoansulatusvaivoja. Kermassa ja maitotuotteissa on paljon rasvaa, ja ne voivat lihottaa. Sokeri ei ole kissoille myrkyllistä, mutta se on silti niille epäterveellistä ja lisää kaloreita, joita ne eivät tarvitse."
+    "fi": "Aikuisilla kissoilla on vähän laktaasia, maitosokeria pilkkovaa entsyymiä, joten maito ja muut maitopohjaiset tuotteet voivat aiheuttaa ripulia tai muita ruoansulatusvaivoja. Kermassa ja maitotuotteissa on paljon rasvaa, ja ne voivat lihottaa. Sokeri ei ole kissoille myrkyllistä, mutta se on silti niille epäterveellistä ja lisää kaloreita, joita ne eivät tarvitse.",
+    "nb": "Voksne katter har lite laktase, enzymet som fordøyer melkesukker, så melk og andre meieribaserte produkter kan gi diaré eller andre fordøyelsesplager. Fløte og meieriprodukter inneholder mye fett og kan føre til vektøkning. Sukker er ikke giftig for katter, men det er likevel usunt for dem og gir kalorier de ikke trenger."
   },
   "signs": {
     "en": [
@@ -152,6 +157,11 @@
       "Ripuli",
       "Oksentelu",
       "Vatsavaivat"
+    ],
+    "nb": [
+      "Diaré",
+      "Oppkast",
+      "Urolig mage"
     ]
   },
   "what_to_do": {
@@ -168,7 +178,8 @@
     "hr": "Ako je tvoja mačka pojela sladoled, pripazi na proljev ili povraćanje i obrati se veterinaru za savjet ako se čini da joj nije dobro. Ako je sladoled sadržavao čokoladu, odmah se obrati veterinaru.",
     "sv": "Om katten har ätit glass, håll utkik efter diarré eller kräkningar och kontakta veterinären för råd om den verkar må dåligt. Om glassen innehöll choklad, kontakta veterinären direkt.",
     "da": "Hvis din kat har spist is, så hold øje med diarré eller opkast, og kontakt din dyrlæge for at få råd hvis den virker utilpas. Hvis isen indeholdt chokolade, skal du kontakte din dyrlæge med det samme.",
-    "fi": "Jos kissasi söi jäätelöä, seuraa, tuleeko ripulia tai oksentelua, ja kysy neuvoa eläinlääkäriltä, jos kissa vaikuttaa huonovointiselta. Jos jäätelössä oli suklaata, ota heti yhteyttä eläinlääkäriin."
+    "fi": "Jos kissasi söi jäätelöä, seuraa, tuleeko ripulia tai oksentelua, ja kysy neuvoa eläinlääkäriltä, jos kissa vaikuttaa huonovointiselta. Jos jäätelössä oli suklaata, ota heti yhteyttä eläinlääkäriin.",
+    "nb": "Hvis katten har spist iskrem, følg med på diaré eller oppkast, og kontakt dyrlegen for råd hvis den virker dårlig. Hvis iskremen inneholdt sjokolade, kontakt dyrlegen med en gang."
   },
   "serving": null,
   "child": {
@@ -185,7 +196,8 @@
     "hr": "Sladoled je poslastica za ljude. Od njega mace može zaboljeti trbuščić, zato kornet zadrži za sebe.",
     "sv": "Glass är godis för människor. Den kan ge katter ont i magen, så ät upp din glass själv.",
     "da": "Is er en godbid for mennesker. Den kan give katte ondt i maven, så behold din isvaffel selv.",
-    "fi": "Jäätelö on ihmisten herkku. Se voi tehdä kissan masun kipeäksi, joten pidä tötterö itselläsi."
+    "fi": "Jäätelö on ihmisten herkku. Se voi tehdä kissan masun kipeäksi, joten pidä tötterö itselläsi.",
+    "nb": "Iskrem er godteri for mennesker. Den kan gi katter vondt i magen, så behold isen for deg selv."
   },
   "faq": [
     {
@@ -203,7 +215,8 @@
         "hr": "Vole li mačke sladoled zato što je sladak?",
         "sv": "Gillar katter glass för att den är söt?",
         "da": "Kan katte lide is fordi den er sød?",
-        "fi": "Pitävätkö kissat jäätelöstä, koska se on makeaa?"
+        "fi": "Pitävätkö kissat jäätelöstä, koska se on makeaa?",
+        "nb": "Liker katter iskrem fordi den er søt?"
       },
       "a": {
         "en": "No. Cats can't taste sweetness at all, so sugar gives them nothing but extra calories.",
@@ -219,7 +232,8 @@
         "hr": "Ne. Mačke uopće ne osjećaju slatki okus, pa im šećer ne daje ništa osim dodatnih kalorija.",
         "sv": "Nej. Katter kan inte känna söt smak alls, så socker ger dem inget annat än extra kalorier.",
         "da": "Nej. Katte kan slet ikke smage sødt, så sukker giver dem ikke andet end ekstra kalorier.",
-        "fi": "Eivät. Kissat eivät maista makeaa lainkaan, joten sokerista ne saavat vain ylimääräisiä kaloreita."
+        "fi": "Eivät. Kissat eivät maista makeaa lainkaan, joten sokerista ne saavat vain ylimääräisiä kaloreita.",
+        "nb": "Nei. Katter kan ikke kjenne søt smak i det hele tatt, så sukker gir dem ikke noe annet enn ekstra kalorier."
       }
     }
   ],
@@ -338,6 +352,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d130a22a9de5bf9b72f1b1fbbb2eb0e03c98cae97219ca54d0dc381509bd5b4a"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ef3d94b5beb5f16e119f3ba686ca47d31c831fba2a2516415b1ca2a635594e63"
     }
   }
 }

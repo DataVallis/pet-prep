@@ -15,7 +15,8 @@
     "hr": "Grožđe",
     "sv": "Vindruvor",
     "da": "Vindruer",
-    "fi": "Viinirypäleet"
+    "fi": "Viinirypäleet",
+    "nb": "Druer"
   },
   "question": {
     "en": "Can cats eat grapes?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti grožđe?",
     "sv": "Får katter äta vindruvor?",
     "da": "Må katte spise vindruer?",
-    "fi": "Saako kissa syödä viinirypäleitä?"
+    "fi": "Saako kissa syödä viinirypäleitä?",
+    "nb": "Kan katter spise druer?"
   },
   "url_slug": {
     "en": "grapes",
@@ -47,7 +49,8 @@
     "hr": "grozde",
     "sv": "vindruvor",
     "da": "vindruer",
-    "fi": "viinirypaleet"
+    "fi": "viinirypaleet",
+    "nb": "druer"
   },
   "level": "toxic",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne. Grožđe je na popisu namirnica otrovnih za mačke, a može izazvati zatajenje bubrega. Potpuno ga izbjegavaj, čak i u malim količinama, i nazovi veterinara ako tvoja mačka pojede imalo grožđa.",
     "sv": "Nej. Vindruvor finns på listan över livsmedel som är giftiga för katter, och de kan orsaka njursvikt. Undvik dem helt, även i små mängder, och ring veterinären om katten äter någon.",
     "da": "Nej. Vindruer står på listen over fødevarer der er giftige for katte, og de kan give nyresvigt. Undgå dem helt, også i små mængder, og ring til din dyrlæge hvis din kat spiser nogen.",
-    "fi": "Ei saa. Viinirypäleet kuuluvat kissoille myrkyllisiin ruokiin, ja niiden syöminen voi aiheuttaa munuaisten vajaatoiminnan. Vältä niitä kokonaan, pieniäkin määriä, ja soita eläinlääkärille, jos kissasi syö niitä."
+    "fi": "Ei saa. Viinirypäleet kuuluvat kissoille myrkyllisiin ruokiin, ja niiden syöminen voi aiheuttaa munuaisten vajaatoiminnan. Vältä niitä kokonaan, pieniäkin määriä, ja soita eläinlääkärille, jos kissasi syö niitä.",
+    "nb": "Nei. Druer står på listen over matvarer som er giftige for katter, og de kan gi nyresvikt. Unngå dem helt, også i små mengder, og ring dyrlegen hvis katten spiser noen."
   },
   "why": {
     "en": "Cat welfare charities warn that grapes can cause kidney failure in cats, and that cats with chronic kidney disease may be at greater risk. Grape poisoning in cats is rare and not well understood, and some sources only describe it in dogs, so we use the stricter level: treat any amount as an emergency.",
@@ -80,7 +84,8 @@
     "hr": "Udruge za dobrobit mačaka upozoravaju da grožđe kod mačaka može izazvati zatajenje bubrega te da mačke s kroničnom bolešću bubrega mogu biti izložene većem riziku. Otrovanje grožđem kod mačaka rijetko je i nije dobro istraženo, a neki ga izvori opisuju samo kod pasa, pa se držimo strože razine: svaku količinu smatraj hitnim slučajem.",
     "sv": "Djurskyddsorganisationer för katter varnar för att vindruvor kan orsaka njursvikt hos katter, och att katter med kronisk njursjukdom kan löpa större risk. Vindruvsförgiftning hos katter är ovanlig och inte väl utredd, och vissa källor beskriver den bara hos hundar, så vi använder den strängare nivån: behandla alla mängder som ett akutfall.",
     "da": "Organisationer for kattevelfærd advarer om at vindruer kan give nyresvigt hos katte, og at katte med kronisk nyresygdom kan være i større risiko. Vindrueforgiftning hos katte er sjælden, og man ved ikke meget om den, og nogle kilder beskriver den kun hos hunde, så vi bruger det strengeste niveau: Enhver mængde skal behandles som en akut situation.",
-    "fi": "Kissojen hyvinvointijärjestöt varoittavat, että viinirypäleet voivat aiheuttaa kissoille munuaisten vajaatoiminnan ja että kroonista munuaissairautta sairastavat kissat voivat olla suuremmassa vaarassa. Viinirypälemyrkytys on kissoilla harvinainen eikä sitä tunneta hyvin, ja jotkin lähteet kuvaavat sitä vain koirilla, joten käytämme tiukempaa luokitusta: pidä mitä tahansa määrää hätätilanteena."
+    "fi": "Kissojen hyvinvointijärjestöt varoittavat, että viinirypäleet voivat aiheuttaa kissoille munuaisten vajaatoiminnan ja että kroonista munuaissairautta sairastavat kissat voivat olla suuremmassa vaarassa. Viinirypälemyrkytys on kissoilla harvinainen eikä sitä tunneta hyvin, ja jotkin lähteet kuvaavat sitä vain koirilla, joten käytämme tiukempaa luokitusta: pidä mitä tahansa määrää hätätilanteena.",
+    "nb": "Organisasjoner for katters velferd advarer om at druer kan gi nyresvikt hos katter, og at katter med kronisk nyresykdom kan ha større risiko. Drueforgiftning hos katter er sjelden og lite forstått, og noen kilder beskriver den bare hos hunder, så vi bruker det strengere nivået: Behandle enhver mengde som et nødstilfelle."
   },
   "signs": {
     "en": [
@@ -124,6 +129,9 @@
     ],
     "fi": [
       "Oksentelu, usein vuorokauden kuluessa"
+    ],
+    "nb": [
+      "Oppkast, ofte innen et døgn"
     ]
   },
   "what_to_do": {
@@ -140,7 +148,8 @@
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši koliko je bobica grožđa mačka pojela i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur. Notera hur många vindruvor katten åt och när. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
     "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvor mange vindruer din kat har spist, og hvornår. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
-    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, kuinka monta viinirypälettä kissasi söi ja milloin. Älä odota oireita äläkä yritä itse oksennuttaa kissaasi."
+    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, kuinka monta viinirypälettä kissasi söi ja milloin. Älä odota oireita äläkä yritä itse oksennuttaa kissaasi.",
+    "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang. Skriv ned hvor mange druer katten har spist og når. Ikke vent på symptomer, og ikke prøv å få katten til å kaste opp selv."
   },
   "serving": null,
   "child": {
@@ -157,7 +166,8 @@
     "hr": "Grožđe je nama fino, ali za mace nije sigurno. Drži ga na svom tanjuru i reci odrasloj osobi ako maca pojede bobicu grožđa.",
     "sv": "Vindruvor är goda för oss men inte säkra för katter. Låt dem ligga kvar på din tallrik och säg till en vuxen om katten äter en.",
     "da": "Vindruer smager godt for os, men de er ikke sikre for katte. Lad dem blive på din tallerken, og sig det til en voksen hvis din kat spiser en.",
-    "fi": "Viinirypäleet ovat meistä herkullisia, mutta ne eivät ole turvallisia kissoille. Pidä ne lautasellasi ja kerro aikuiselle, jos kisu syö sellaisen."
+    "fi": "Viinirypäleet ovat meistä herkullisia, mutta ne eivät ole turvallisia kissoille. Pidä ne lautasellasi ja kerro aikuiselle, jos kisu syö sellaisen.",
+    "nb": "Druer smaker godt for oss, men de er ikke trygge for katter. La dem ligge på tallerkenen din, og si fra til en voksen hvis pusen spiser en."
   },
   "faq": [
     {
@@ -175,7 +185,8 @@
         "hr": "Jesu li mačke s bolešću bubrega izložene većem riziku?",
         "sv": "Löper katter med njursjukdom större risk?",
         "da": "Er katte med nyresygdom i større risiko?",
-        "fi": "Ovatko munuaissairaat kissat suuremmassa vaarassa?"
+        "fi": "Ovatko munuaissairaat kissat suuremmassa vaarassa?",
+        "nb": "Har katter med nyresykdom større risiko?"
       },
       "a": {
         "en": "Cats Protection says cats with chronic kidney disease may be at greater risk from grapes.",
@@ -191,7 +202,8 @@
         "hr": "Cats Protection navodi da mačke s kroničnom bolešću bubrega mogu biti izložene većem riziku od grožđa.",
         "sv": "Enligt Cats Protection kan katter med kronisk njursjukdom löpa större risk att bli sjuka av vindruvor.",
         "da": "Cats Protection skriver at katte med kronisk nyresygdom kan være i større risiko ved vindruer.",
-        "fi": "Cats Protectionin mukaan kroonista munuaissairautta sairastavat kissat voivat olla suuremmassa vaarassa viinirypäleiden vuoksi."
+        "fi": "Cats Protectionin mukaan kroonista munuaissairautta sairastavat kissat voivat olla suuremmassa vaarassa viinirypäleiden vuoksi.",
+        "nb": "Cats Protection skriver at katter med kronisk nyresykdom kan ha større risiko ved druer."
       }
     }
   ],
@@ -314,6 +326,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "16a922d7280dd5f1f1a00ffa96f9c5153b70252847e791097562f4b8b889dd8a"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dae1f91bfe2c26072c1ee14b1d05ab6ab918ceff2bd7dcf44a9ee3e03e2a96a0"
     }
   }
 }

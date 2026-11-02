@@ -15,7 +15,8 @@
     "hr": "Sirovo tijesto s kvascem",
     "sv": "Rå jäsdeg",
     "da": "Rå gærdej",
-    "fi": "Raaka hiivataikina"
+    "fi": "Raaka hiivataikina",
+    "nb": "Rå gjærdeig"
   },
   "question": {
     "en": "Can cats eat raw yeast dough?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti sirovo tijesto s kvascem?",
     "sv": "Får katter äta rå jäsdeg?",
     "da": "Må katte spise rå gærdej?",
-    "fi": "Saako kissa syödä raakaa hiivataikinaa?"
+    "fi": "Saako kissa syödä raakaa hiivataikinaa?",
+    "nb": "Kan katter spise rå gjærdeig?"
   },
   "url_slug": {
     "en": "raw-yeast-dough",
@@ -47,7 +49,8 @@
     "hr": "sirovo-tijesto-s-kvascem",
     "sv": "ra-jasdeg",
     "da": "raa-gaerdej",
-    "fi": "raaka-hiivataikina"
+    "fi": "raaka-hiivataikina",
+    "nb": "ra-gjaerdeig"
   },
   "level": "toxic",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne. Sirovo tijesto s kvascem opasno je za mačke na dva načina: može se nastaviti širiti u želucu i izazvati začepljenje, a kvasac stvara alkohol, koji je otrovan za mačke. Tijesto koje se diže drži izvan dosega mačke i nazovi veterinara ako ga mačka pojede makar malo.",
     "sv": "Nej. Rå jäsdeg är farlig för katter på två sätt: den kan fortsätta jäsa i magen och orsaka stopp där, och jästen bildar alkohol, som är giftig för katter. Ställ jäsande deg utom räckhåll och ring veterinären om katten äter av den.",
     "da": "Nej. Rå gærdej er farlig for katte på to måder: Den kan blive ved med at hæve i maven og give en blokering, og gæren danner alkohol, som er giftig for katte. Hold dej der hæver, uden for rækkevidde, og ring til din dyrlæge hvis din kat spiser noget.",
-    "fi": "Ei saa. Raaka hiivataikina on kissalle vaarallista kahdella tavalla: se voi jatkaa laajenemistaan mahalaukussa ja aiheuttaa tukoksen, ja hiiva tuottaa alkoholia, joka on kissalle myrkyllistä. Pidä kohoava taikina poissa kissan ulottuvilta ja soita eläinlääkärille, jos kissasi syö sitä."
+    "fi": "Ei saa. Raaka hiivataikina on kissalle vaarallista kahdella tavalla: se voi jatkaa laajenemistaan mahalaukussa ja aiheuttaa tukoksen, ja hiiva tuottaa alkoholia, joka on kissalle myrkyllistä. Pidä kohoava taikina poissa kissan ulottuvilta ja soita eläinlääkärille, jos kissasi syö sitä.",
+    "nb": "Nei. Rå gjærdeig er farlig for katter på to måter: Den kan fortsette å heve seg i magen og gi blokkering, og gjæren lager alkohol, som er giftig for katter. Sett deig som hever, utenfor rekkevidde, og ring dyrlegen hvis katten spiser noe."
   },
   "why": {
     "en": "Raw dough contains some alcohol and produces carbon dioxide. Once swallowed, the yeast keeps working in the stomach: the dough expands and can cause an obstruction, while the alcohol it produces is absorbed into the blood. Cats are especially sensitive to alcohol.",
@@ -80,7 +84,8 @@
     "hr": "Sirovo tijesto sadrži nešto alkohola i stvara ugljikov dioksid. Nakon što ga mačka proguta, kvasac nastavlja djelovati u želucu: tijesto se širi i može izazvati začepljenje, a alkohol koji pritom nastaje upija se u krv. Mačke su posebno osjetljive na alkohol.",
     "sv": "Rå deg innehåller lite alkohol och bildar koldioxid. När degen har svalts fortsätter jästen att arbeta i magen: degen sväller och kan orsaka stopp i magen, samtidigt som alkoholen som bildas tas upp i blodet. Katter är särskilt känsliga för alkohol.",
     "da": "Rå dej indeholder lidt alkohol og danner kuldioxid. Når dejen er slugt, arbejder gæren videre i maven: Dejen udvider sig og kan give en blokering, mens den alkohol der dannes, optages i blodet. Katte er særligt følsomme over for alkohol.",
-    "fi": "Raaka taikina sisältää jonkin verran alkoholia ja tuottaa hiilidioksidia. Nieltynä hiiva jatkaa toimintaansa mahalaukussa: taikina laajenee ja voi aiheuttaa tukoksen, ja sen tuottama alkoholi imeytyy vereen. Kissat ovat erityisen herkkiä alkoholille."
+    "fi": "Raaka taikina sisältää jonkin verran alkoholia ja tuottaa hiilidioksidia. Nieltynä hiiva jatkaa toimintaansa mahalaukussa: taikina laajenee ja voi aiheuttaa tukoksen, ja sen tuottama alkoholi imeytyy vereen. Kissat ovat erityisen herkkiä alkoholille.",
+    "nb": "Rå deig inneholder litt alkohol og danner karbondioksid. Når den er svelget, fortsetter gjæren å virke i magen: Deigen utvider seg og kan gi blokkering, mens alkoholen som dannes, tas opp i blodet. Katter er spesielt følsomme for alkohol."
   },
   "signs": {
     "en": [
@@ -166,6 +171,12 @@
       "Oksennusyritykset ilman, että mitään tulee ulos",
       "Horjuva kävely tai sekavuus",
       "Epätavallinen heikkous tai uneliaisuus"
+    ],
+    "nb": [
+      "Hoven, oppblåst mage",
+      "Prøver å kaste opp uten at noe kommer opp",
+      "Ustø gange eller virker forvirret",
+      "Uvanlig svakhet eller søvnighet"
     ]
   },
   "what_to_do": {
@@ -182,7 +193,8 @@
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši koliko je tijesta mačka pojela i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt. Notera hur mycket deg katten åt och när. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
     "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvor meget dej din kat har spist og hvornår. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
-    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, kuinka paljon taikinaa kissasi söi ja milloin. Älä odota oireita äläkä yritä itse oksennuttaa kissaasi."
+    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, kuinka paljon taikinaa kissasi söi ja milloin. Älä odota oireita äläkä yritä itse oksennuttaa kissaasi.",
+    "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang. Skriv ned hvor mye deig katten har spist og når. Ikke vent på symptomer, og ikke prøv å få katten til å kaste opp selv."
   },
   "serving": null,
   "child": {
@@ -199,7 +211,8 @@
     "hr": "Tijesto za kruh treba se dizati u zdjeli, a ne u trbuščiću. Drži tijesto daleko od mace i reci odrasloj osobi ako ga maca pojede.",
     "sv": "Bröddeg ska jäsa i en skål, inte i en mage. Håll degen borta från katten och säg till en vuxen om den äter av degen.",
     "da": "Brøddej skal hæve i en skål, ikke i en mave. Hold dej væk fra katten, og sig det til en voksen hvis den spiser noget.",
-    "fi": "Leipätaikinan pitää kohota kulhossa, ei mahassa. Pidä taikina kaukana kissasta ja kerro aikuiselle, jos kissa syö sitä."
+    "fi": "Leipätaikinan pitää kohota kulhossa, ei mahassa. Pidä taikina kaukana kissasta ja kerro aikuiselle, jos kissa syö sitä.",
+    "nb": "Brøddeig skal heve i en bolle, ikke i en mage. Hold deigen unna pusen, og si fra til en voksen hvis den spiser litt."
   },
   "faq": [
     {
@@ -217,7 +230,8 @@
         "hr": "Zašto je sirovo tijesto opasno ako samo po sebi nije otrov?",
         "sv": "Varför är rå deg farlig om den inte är ett gift i sig?",
         "da": "Hvorfor er rå dej farlig når den ikke i sig selv er en gift?",
-        "fi": "Miksi raaka taikina on vaarallista, vaikka se ei itsessään ole myrkkyä?"
+        "fi": "Miksi raaka taikina on vaarallista, vaikka se ei itsessään ole myrkkyä?",
+        "nb": "Hvorfor er rå deig farlig når den ikke er en gift i seg selv?"
       },
       "a": {
         "en": "Raw dough contains live yeast. In the stomach it keeps rising and producing alcohol, so it can both cause a blockage and lead to alcohol poisoning.",
@@ -233,7 +247,8 @@
         "hr": "Sirovo tijesto sadrži živi kvasac. U želucu se nastavlja dizati i stvarati alkohol, pa može izazvati i začepljenje i otrovanje alkoholom.",
         "sv": "Rå deg innehåller levande jäst. I magen fortsätter den att jäsa och bilda alkohol, så den kan både orsaka stopp i magen och leda till alkoholförgiftning.",
         "da": "Rå dej indeholder levende gær. I maven bliver den ved med at hæve og danne alkohol, så den både kan give en blokering og føre til alkoholforgiftning.",
-        "fi": "Raa’assa taikinassa on elävää hiivaa. Mahalaukussa se jatkaa kohoamista ja alkoholin tuottamista, joten se voi sekä aiheuttaa tukoksen että johtaa alkoholimyrkytykseen."
+        "fi": "Raa’assa taikinassa on elävää hiivaa. Mahalaukussa se jatkaa kohoamista ja alkoholin tuottamista, joten se voi sekä aiheuttaa tukoksen että johtaa alkoholimyrkytykseen.",
+        "nb": "Rå deig inneholder levende gjær. I magen fortsetter den å heve seg og lage alkohol, så den kan både gi blokkering og føre til alkoholforgiftning."
       }
     }
   ],
@@ -371,6 +386,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1a03233c6cbcbd76ed773e6ae6c7ce27736b5cc5482c14fa4729dac53fa3d32d"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "597d271985b6f0b84ff054502810bd1335ccad02249114bed73ff5c79f9e13d5"
     }
   }
 }

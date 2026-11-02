@@ -15,7 +15,8 @@
     "hr": "Orasi",
     "sv": "Valnötter",
     "da": "Valnødder",
-    "fi": "Saksanpähkinät"
+    "fi": "Saksanpähkinät",
+    "nb": "Valnøtter"
   },
   "question": {
     "en": "Can cats eat walnuts?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti orahe?",
     "sv": "Får katter äta valnötter?",
     "da": "Må katte spise valnødder?",
-    "fi": "Saako kissa syödä saksanpähkinöitä?"
+    "fi": "Saako kissa syödä saksanpähkinöitä?",
+    "nb": "Kan katter spise valnøtter?"
   },
   "url_slug": {
     "en": "walnuts",
@@ -47,7 +49,8 @@
     "hr": "orasi",
     "sv": "valnotter",
     "da": "valnoedder",
-    "fi": "saksanpahkinat"
+    "fi": "saksanpahkinat",
+    "nb": "valnotter"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne, orahe je bolje držati daleko od mačaka. Sadrže puno ulja i masti, zbog kojih mački može pozliti, a mogu izazvati i povraćanje ili proljev.",
     "sv": "Nej, valnötter ska helst hållas borta från katter. De innehåller mycket olja och fett, som kan göra en katt sjuk och ge kräkningar eller diarré.",
     "da": "Nej, valnødder skal helst holdes væk fra katte. De indeholder meget olie og fedt, som kan gøre en kat utilpas og give opkast eller diarré.",
-    "fi": "Ei, saksanpähkinät on parasta pitää poissa kissan ulottuvilta. Niissä on paljon öljyjä ja rasvoja, jotka voivat sairastuttaa kissan ja aiheuttaa oksentelua tai ripulia."
+    "fi": "Ei, saksanpähkinät on parasta pitää poissa kissan ulottuvilta. Niissä on paljon öljyjä ja rasvoja, jotka voivat sairastuttaa kissan ja aiheuttaa oksentelua tai ripulia.",
+    "nb": "Nei, valnøtter bør holdes unna katter. De inneholder mye olje og fett, som kan gjøre katten dårlig og gi oppkast eller diaré."
   },
   "why": {
     "en": "Cats Protection names walnuts among nuts with high amounts of oils and fats that can make a cat unwell. VCA adds that most nuts are very fatty and can cause vomiting and diarrhoea.",
@@ -80,7 +84,8 @@
     "hr": "Cats Protection navodi orahe među orašastim plodovima koji zbog visokog udjela ulja i masti mački mogu naškoditi. VCA dodaje da je većina orašastih plodova vrlo masna i da mogu izazvati povraćanje i proljev.",
     "sv": "Cats Protection nämner valnötter bland nötter med mycket olja och fett som kan göra en katt sjuk. VCA tillägger att de flesta nötter är väldigt feta och kan ge kräkningar och diarré.",
     "da": "Cats Protection nævner valnødder blandt de nødder med et højt indhold af olie og fedt der kan gøre en kat utilpas. VCA tilføjer at de fleste nødder er meget fede og kan give opkast og diarré.",
-    "fi": "Cats Protection mainitsee saksanpähkinät niiden pähkinöiden joukossa, joissa on paljon öljyjä ja rasvoja ja jotka voivat sairastuttaa kissan. VCA lisää, että useimmat pähkinät ovat hyvin rasvaisia ja voivat aiheuttaa oksentelua ja ripulia."
+    "fi": "Cats Protection mainitsee saksanpähkinät niiden pähkinöiden joukossa, joissa on paljon öljyjä ja rasvoja ja jotka voivat sairastuttaa kissan. VCA lisää, että useimmat pähkinät ovat hyvin rasvaisia ja voivat aiheuttaa oksentelua ja ripulia.",
+    "nb": "Cats Protection nevner valnøtter blant nøttene med mye olje og fett som kan gjøre en katt dårlig. VCA legger til at de fleste nøtter er svært fete og kan gi oppkast og diaré."
   },
   "signs": {
     "en": [
@@ -166,6 +171,12 @@
       "Ripuli",
       "Vatsavaivat",
       "Huonovointisuus"
+    ],
+    "nb": [
+      "Oppkast",
+      "Diaré",
+      "Urolig mage",
+      "Virker dårlig"
     ]
   },
   "what_to_do": {
@@ -182,7 +193,8 @@
     "hr": "Ako je mačka pojela orahe, obrati se veterinaru za savjet, osobito ako ih je pojela mnogo ili se čini da joj nije dobro. Zapiši što je pojela, koliko i kada.",
     "sv": "Om katten har ätit valnötter, kontakta veterinären för råd, särskilt om den har ätit mycket eller verkar må dåligt. Notera vad den åt, hur mycket och när.",
     "da": "Hvis din kat har spist valnødder, skal du kontakte din dyrlæge og få råd, især hvis den har spist mange eller virker utilpas. Skriv ned hvad den har spist, hvor meget og hvornår.",
-    "fi": "Jos kissasi söi saksanpähkinöitä, kysy neuvoa eläinlääkäriltä, etenkin jos se söi paljon tai vaikuttaa sairaalta. Kirjaa ylös, mitä kissa söi, kuinka paljon ja milloin."
+    "fi": "Jos kissasi söi saksanpähkinöitä, kysy neuvoa eläinlääkäriltä, etenkin jos se söi paljon tai vaikuttaa sairaalta. Kirjaa ylös, mitä kissa söi, kuinka paljon ja milloin.",
+    "nb": "Hvis katten har spist valnøtter, bør du kontakte dyrlegen for råd, særlig hvis den har spist mye eller virker dårlig. Skriv ned hva den har spist, hvor mye og når."
   },
   "serving": null,
   "child": {
@@ -199,7 +211,8 @@
     "hr": "Orasi su previše masni za macin trbuščić. Ostavi ih ljudima, a maci daj njezine poslastice.",
     "sv": "Valnötter är för oljiga för en kattmage. Spara dem till människor och ge katten kattgodis i stället.",
     "da": "Valnødder er for fede til en kats mave. Gem dem til mennesker, og giv din kat dens egne godbidder.",
-    "fi": "Saksanpähkinät ovat liian öljyisiä kissan masulle. Jätä ne ihmisille ja anna kissallesi sen omia herkkuja."
+    "fi": "Saksanpähkinät ovat liian öljyisiä kissan masulle. Jätä ne ihmisille ja anna kissallesi sen omia herkkuja.",
+    "nb": "Valnøtter er for oljete for magen til en katt. Spar dem til mennesker, og gi katten godbiter laget for katter."
   },
   "faq": [
     {
@@ -217,7 +230,8 @@
         "hr": "Jesu li neki orašasti plodovi opasniji od drugih?",
         "sv": "Är vissa nötter värre än andra?",
         "da": "Er nogle nødder værre end andre?",
-        "fi": "Ovatko jotkin pähkinät muita pahempia?"
+        "fi": "Ovatko jotkin pähkinät muita pahempia?",
+        "nb": "Er noen nøtter verre enn andre?"
       },
       "a": {
         "en": "Yes. Macadamia nuts are fatty and also toxic to cats, so they are the ones to be most careful with.",
@@ -233,7 +247,8 @@
         "hr": "Jesu. Makadamija je masna i uz to otrovna za mačke, pa na nju treba najviše paziti.",
         "sv": "Ja. Macadamianötter är feta och dessutom giftiga för katter, så det är dem du ska vara mest försiktig med.",
         "da": "Ja. Macadamianødder er fede og desuden giftige for katte, så det er dem du skal være mest forsigtig med.",
-        "fi": "Ovat. Makadamiapähkinät ovat rasvaisia ja lisäksi kissoille myrkyllisiä, joten niiden kanssa pitää olla kaikkein varovaisin."
+        "fi": "Ovat. Makadamiapähkinät ovat rasvaisia ja lisäksi kissoille myrkyllisiä, joten niiden kanssa pitää olla kaikkein varovaisin.",
+        "nb": "Ja. Macadamianøtter er fete og i tillegg giftige for katter, så det er dem du må være mest forsiktig med."
       }
     }
   ],
@@ -330,6 +345,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b3d1eb2ab29ee02f31d5af247c7ab792102be295dffbacbbc339db1410d0d8e1"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8618c4520d858f99076c64c63c829971c2db7bfa7b76c148855888cbd9c44127"
     }
   }
 }

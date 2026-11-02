@@ -15,7 +15,8 @@
     "hr": "Srdele",
     "sv": "Sardiner",
     "da": "Sardiner",
-    "fi": "Sardiinit"
+    "fi": "Sardiinit",
+    "nb": "Sardiner"
   },
   "question": {
     "en": "Can cats eat sardines?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti srdele?",
     "sv": "Får katter äta sardiner?",
     "da": "Må katte spise sardiner?",
-    "fi": "Saako kissa syödä sardiineja?"
+    "fi": "Saako kissa syödä sardiineja?",
+    "nb": "Kan katter spise sardiner?"
   },
   "url_slug": {
     "en": "sardines",
@@ -47,7 +49,8 @@
     "hr": "srdele",
     "sv": "sardiner",
     "da": "sardiner",
-    "fi": "sardiinit"
+    "fi": "sardiinit",
+    "nb": "sardiner"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Da, kao povremena poslastica. Srdele iz konzerve u izvorskoj vodi mogu se ponuditi tu i tamo, uz oprez zbog kostiju. Ne bi smjele postati glavni dio mačje prehrane.",
     "sv": "Ja, som en godbit ibland. Konserverade sardiner i vatten kan ges då och då, men se upp med benen. De ska inte bli en huvuddel av kattens kost.",
     "da": "Ja, som en godbid en gang imellem. Sardiner på dåse i vand kan gives nu og da – pas på benene. De bør ikke blive hoveddelen af kattens kost.",
-    "fi": "Saa, satunnaisena herkkuna. Lähdeveteen säilöttyjä purkkisardiineja voi tarjota silloin tällöin, kunhan varoo ruotoja. Niistä ei pidä tulla kissan ruokavalion pääosaa."
+    "fi": "Saa, satunnaisena herkkuna. Lähdeveteen säilöttyjä purkkisardiineja voi tarjota silloin tällöin, kunhan varoo ruotoja. Niistä ei pidä tulla kissan ruokavalion pääosaa.",
+    "nb": "Ja, som en godbit en gang iblant. Hermetiske sardiner i kildevann kan gis nå og da, men pass på beina. De bør ikke bli hoveddelen av kattens kosthold."
   },
   "why": {
     "en": "RSPCA Australia says fish such as tinned sardines in spring water can be offered as an occasional treat, taking care with bones, but are not suitable as the main part of the diet. Cats Protection advises fish be properly cooked, with bones removed, and given only a few pieces at a time.",
@@ -80,7 +84,8 @@
     "hr": "RSPCA Australia navodi da se riba poput srdela iz konzerve u izvorskoj vodi može ponuditi kao povremena poslastica, uz oprez zbog kostiju, ali da nije prikladna kao glavni dio prehrane. Cats Protection savjetuje da riba bude dobro termički obrađena i bez kostiju te da se daje samo nekoliko komadića odjednom.",
     "sv": "RSPCA Australia skriver att fisk som konserverade sardiner i vatten kan ges som en godbit ibland, med försiktighet kring benen, men passar inte som huvuddel av kosten. Cats Protection råder att fisk ska vara ordentligt tillagad och benfri och att katten bara ska få några bitar åt gången.",
     "da": "Ifølge RSPCA Australia kan fisk som sardiner på dåse i vand gives som en godbid en gang imellem hvis man passer på benene, men de egner sig ikke som hoveddelen af kosten. Cats Protection anbefaler at fisk er ordentligt tilberedt og uden ben og kun gives et par stykker ad gangen.",
-    "fi": "RSPCA Australian mukaan kalaa, kuten lähdeveteen säilöttyjä purkkisardiineja, voi tarjota satunnaisena herkkuna ruotoja varoen, mutta se ei sovi ruokavalion pääosaksi. Cats Protection neuvoo, että kala kypsennetään kunnolla, ruodot poistetaan ja kerrallaan annetaan vain muutama pala."
+    "fi": "RSPCA Australian mukaan kalaa, kuten lähdeveteen säilöttyjä purkkisardiineja, voi tarjota satunnaisena herkkuna ruotoja varoen, mutta se ei sovi ruokavalion pääosaksi. Cats Protection neuvoo, että kala kypsennetään kunnolla, ruodot poistetaan ja kerrallaan annetaan vain muutama pala.",
+    "nb": "RSPCA Australia skriver at fisk som hermetiske sardiner i kildevann kan gis som en godbit en gang iblant, med forsiktighet når det gjelder bein, men at de ikke passer som hoveddelen av kostholdet. Cats Protection anbefaler at fisk er ordentlig tilberedt og uten bein, og at katten bare får noen få biter om gangen."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili ima proljev, prestani i pitaj veterinara.",
     "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären.",
     "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, skal du stoppe og spørge din dyrlæge.",
-    "fi": "Tarjoa ensin pieni pala. Jos kissasi alkaa sen jälkeen oksennella tai sille tulee ripuli, lopeta ja kysy eläinlääkäriltä."
+    "fi": "Tarjoa ensin pieni pala. Jos kissasi alkaa sen jälkeen oksennella tai sille tulee ripuli, lopeta ja kysy eläinlääkäriltä.",
+    "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt og spør dyrlegen."
   },
   "serving": {
     "en": "Tinned in spring water, with bones removed; a few pieces now and then.",
@@ -113,7 +119,8 @@
     "hr": "Iz konzerve u izvorskoj vodi, bez kostiju; tu i tamo nekoliko komadića.",
     "sv": "Konserverade i vatten, med benen borttagna; några bitar då och då.",
     "da": "På dåse i vand og med benene fjernet; et par stykker en gang imellem.",
-    "fi": "Lähdeveteen säilöttyinä purkkisardiineina, ruodot poistettuina; muutama pala silloin tällöin."
+    "fi": "Lähdeveteen säilöttyinä purkkisardiineina, ruodot poistettuina; muutama pala silloin tällöin.",
+    "nb": "Hermetisk i kildevann, med beina fjernet; noen biter nå og da."
   },
   "child": {
     "en": "Sardines can be a little fishy treat for cats sometimes. A grown-up should check for bones.",
@@ -129,7 +136,8 @@
     "hr": "Srdele ponekad mogu biti mala riblja poslastica za mace. Neka odrasla osoba provjeri ima li u njima kostiju.",
     "sv": "Sardiner kan ibland vara en liten fiskgodbit för katter. En vuxen ska kolla att det inte finns ben.",
     "da": "Sardiner kan nogle gange være en lille fiskegodbid for katte. En voksen skal tjekke for ben.",
-    "fi": "Sardiinit voivat joskus olla kissalle pieni kalaherkku. Aikuisen pitää tarkistaa, ettei niissä ole ruotoja."
+    "fi": "Sardiinit voivat joskus olla kissalle pieni kalaherkku. Aikuisen pitää tarkistaa, ettei niissä ole ruotoja.",
+    "nb": "Sardiner kan være en liten fiskegodbit for katter av og til. En voksen bør sjekke at det ikke er bein i."
   },
   "faq": [],
   "sources": [
@@ -227,6 +235,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "33e84529feb612ac5144adaf6818b62dce900bde9f154883cf43b111e7c99b6b"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2f169260aae7d7575424b994c099d179b9f0f6207c149ac9a7251323fb3e228d"
     }
   }
 }

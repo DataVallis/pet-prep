@@ -15,7 +15,8 @@
     "hr": "Maslac od kikirikija",
     "sv": "Jordnötssmör",
     "da": "Peanutbutter",
-    "fi": "Maapähkinävoi"
+    "fi": "Maapähkinävoi",
+    "nb": "Peanøttsmør"
   },
   "question": {
     "en": "Can cats eat peanut butter?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti maslac od kikirikija?",
     "sv": "Får katter äta jordnötssmör?",
     "da": "Må katte spise peanutbutter?",
-    "fi": "Saako kissa syödä maapähkinävoita?"
+    "fi": "Saako kissa syödä maapähkinävoita?",
+    "nb": "Kan katter spise peanøttsmør?"
   },
   "url_slug": {
     "en": "peanut-butter",
@@ -47,7 +49,8 @@
     "hr": "maslac-od-kikirikija",
     "sv": "jordnotssmor",
     "da": "peanutbutter",
-    "fi": "maapahkinavoi"
+    "fi": "maapahkinavoi",
+    "nb": "peanottsmor"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Bolje da to ne postane navika. Neki veterinari kažu da prirodni maslac od kikirikija može biti povremena poslastica, ali nikad ne smije sadržavati ksilitol, a Cats Protection savjetuje da se umjesto ljudske hrane držiš poslastica za mačke.",
     "sv": "Gör det helst inte till en vana. Vissa veterinärer menar att naturellt jordnötssmör kan vara en godbit någon gång ibland, men det får aldrig innehålla xylitol, och Cats Protection råder till att hålla sig till kattgodis i stället för människomat.",
     "da": "Helst ikke som en fast vane. Nogle dyrlæger mener at naturel peanutbutter kan være en godbid en gang imellem, men den må aldrig indeholde xylitol, og Cats Protection anbefaler at holde sig til kattegodbidder frem for menneskemad.",
-    "fi": "Siitä ei kannata tehdä tapaa. Joidenkin eläinlääkärien mukaan luonnollinen maapähkinävoi voi olla satunnainen herkku, mutta siinä ei saa koskaan olla ksylitolia, ja Cats Protection neuvoo pysymään kissanherkuissa ihmisten ruokien sijaan."
+    "fi": "Siitä ei kannata tehdä tapaa. Joidenkin eläinlääkärien mukaan luonnollinen maapähkinävoi voi olla satunnainen herkku, mutta siinä ei saa koskaan olla ksylitolia, ja Cats Protection neuvoo pysymään kissanherkuissa ihmisten ruokien sijaan.",
+    "nb": "Det er best å ikke gjøre det til en vane. Noen dyrleger mener at naturlig peanøttsmør kan være en godbit en gang iblant, men det må aldri inneholde xylitol, og Cats Protection anbefaler å holde seg til godbiter for katter i stedet for menneskemat."
   },
   "why": {
     "en": "Sources disagree. VCA describes natural peanut butter as a treat cats love, as long as it is free of preservatives and life-threatening additives such as xylitol. Cats Protection advises sticking to cat treats rather than human foods and warns that nuts can cause problems for cats. We use the stricter level.",
@@ -80,7 +84,8 @@
     "hr": "Izvori se ne slažu. VCA opisuje prirodni maslac od kikirikija kao poslasticu koju mačke obožavaju, pod uvjetom da nema konzervansa ni po život opasnih dodataka kao što je ksilitol. Cats Protection savjetuje držati se poslastica za mačke umjesto ljudske hrane i upozorava da orašasti plodovi mačkama mogu stvarati probleme. Primjenjujemo strožu razinu.",
     "sv": "Källorna är oense. VCA beskriver naturellt jordnötssmör som en godbit som katter älskar, så länge det är fritt från konserveringsmedel och livsfarliga tillsatser som xylitol. Cats Protection råder till att hålla sig till kattgodis i stället för människomat och varnar för att nötter kan ge katter problem. Vi använder den strängare nivån.",
     "da": "Kilderne er uenige. VCA beskriver naturel peanutbutter som en godbid katte elsker så længe den er fri for konserveringsmidler og livsfarlige tilsætningsstoffer som xylitol. Cats Protection anbefaler at holde sig til kattegodbidder frem for menneskemad og advarer om at nødder kan give katte problemer. Vi bruger det strengere niveau.",
-    "fi": "Lähteet ovat eri mieltä. VCA kuvaa luonnollista maapähkinävoita herkuksi, jota kissat rakastavat, kunhan siinä ei ole säilöntäaineita eikä hengenvaarallisia lisäaineita, kuten ksylitolia. Cats Protection neuvoo pysymään kissanherkuissa ihmisten ruokien sijaan ja varoittaa, että pähkinät voivat aiheuttaa kissoille ongelmia. Käytämme tiukempaa luokitusta."
+    "fi": "Lähteet ovat eri mieltä. VCA kuvaa luonnollista maapähkinävoita herkuksi, jota kissat rakastavat, kunhan siinä ei ole säilöntäaineita eikä hengenvaarallisia lisäaineita, kuten ksylitolia. Cats Protection neuvoo pysymään kissanherkuissa ihmisten ruokien sijaan ja varoittaa, että pähkinät voivat aiheuttaa kissoille ongelmia. Käytämme tiukempaa luokitusta.",
+    "nb": "Kildene er uenige. VCA beskriver naturlig peanøttsmør som en godbit katter elsker, så lenge det er fritt for konserveringsmidler og livsfarlige tilsetninger som xylitol. Cats Protection anbefaler å holde seg til kattegodbiter i stedet for menneskemat og advarer om at nøtter kan skape problemer for katter. Vi bruker det strengere nivået."
   },
   "signs": {
     "en": [
@@ -152,6 +157,11 @@
       "Oksentelu",
       "Ripuli",
       "Vatsavaivat"
+    ],
+    "nb": [
+      "Oppkast",
+      "Diaré",
+      "Urolig mage"
     ]
   },
   "what_to_do": {
@@ -168,7 +178,8 @@
     "hr": "Jedno liznuće običnog maslaca od kikirikija vjerojatno nije ozbiljno; prati pojavu povraćanja ili proljeva. Ako maslac od kikirikija sadrži ksilitol, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, zabilježi koliko je pojedeno i ne čekaj da se pojave znakovi.",
     "sv": "Om katten bara har slickat i sig lite naturellt jordnötssmör är det sannolikt inte allvarligt; håll utkik efter kräkningar eller diarré. Om jordnötssmöret innehåller xylitol, vänd dig direkt till din veterinär eller en giftrådgivning för djur, notera hur mycket katten åt och vänta inte på symtom.",
     "da": "Et enkelt slik naturel peanutbutter er næppe alvorligt; hold øje med opkast eller diarré. Hvis peanutbutteren indeholder xylitol, skal du straks kontakte din dyrlæge eller en giftrådgivning for dyr, skrive ned hvor meget der er spist, og ikke vente på symptomer.",
-    "fi": "Yksi nuolaisu maustamatonta maapähkinävoita ei todennäköisesti ole vakava asia; seuraa, tuleeko oksentelua tai ripulia. Jos maapähkinävoissa on ksylitolia, ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, kirjaa ylös syöty määrä äläkä odota oireita."
+    "fi": "Yksi nuolaisu maustamatonta maapähkinävoita ei todennäköisesti ole vakava asia; seuraa, tuleeko oksentelua tai ripulia. Jos maapähkinävoissa on ksylitolia, ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, kirjaa ylös syöty määrä äläkä odota oireita.",
+    "nb": "Et lite slikk naturelt peanøttsmør er neppe alvorlig; følg med på oppkast eller diaré. Hvis peanøttsmøret inneholder xylitol, må du kontakte dyrlegen eller giftinformasjon for dyr med en gang og skrive ned hvor mye som ble spist. Ikke vent på symptomer."
   },
   "serving": {
     "en": "If your vet is happy with it: natural peanut butter only, with no xylitol or preservatives, as a rare lick, not a habit.",
@@ -184,7 +195,8 @@
     "hr": "Ako se veterinar slaže: samo prirodni maslac od kikirikija, bez ksilitola i konzervansa, rijetko i tek za liznuti, a ne kao navika.",
     "sv": "Om veterinären tycker att det går bra: bara naturellt jordnötssmör, utan xylitol och konserveringsmedel, bara lite att slicka på någon enstaka gång, inte som en vana.",
     "da": "Hvis din dyrlæge synes det er i orden: kun naturel peanutbutter uden xylitol og konserveringsmidler, som et sjældent slik – ikke som en vane.",
-    "fi": "Jos eläinlääkäri hyväksyy: vain luonnollista maapähkinävoita ilman ksylitolia ja säilöntäaineita, harvoin pieni nuolaisu, ei tapana."
+    "fi": "Jos eläinlääkäri hyväksyy: vain luonnollista maapähkinävoita ilman ksylitolia ja säilöntäaineita, harvoin pieni nuolaisu, ei tapana.",
+    "nb": "Hvis dyrlegen synes det er greit: bare naturlig peanøttsmør uten xylitol eller konserveringsmidler, som et sjeldent slikk, ikke som en vane."
   },
   "child": {
     "en": "Peanut butter is a people food. Ask a grown-up before sharing anything with your cat.",
@@ -200,7 +212,8 @@
     "hr": "Maslac od kikirikija hrana je za ljude. Prije nego što s macom išta podijeliš, pitaj odraslu osobu.",
     "sv": "Jordnötssmör är mat för människor. Fråga en vuxen innan du delar något med din katt.",
     "da": "Peanutbutter er menneskemad. Spørg en voksen før du deler noget med din kat.",
-    "fi": "Maapähkinävoi on ihmisten ruokaa. Kysy aikuiselta ennen kuin jaat mitään kissasi kanssa."
+    "fi": "Maapähkinävoi on ihmisten ruokaa. Kysy aikuiselta ennen kuin jaat mitään kissasi kanssa.",
+    "nb": "Peanøttsmør er menneskemat. Spør en voksen før du deler noe med katten din."
   },
   "faq": [
     {
@@ -218,7 +231,8 @@
         "hr": "Zašto je ksilitol važan?",
         "sv": "Varför spelar xylitol roll?",
         "da": "Hvorfor er xylitol vigtigt?",
-        "fi": "Miksi ksylitolilla on väliä?"
+        "fi": "Miksi ksylitolilla on väliä?",
+        "nb": "Hvorfor er xylitol viktig?"
       },
       "a": {
         "en": "Xylitol is a sweetener added to some peanut butters. VCA calls it a life-threatening additive, so always check the label.",
@@ -234,7 +248,8 @@
         "hr": "Ksilitol je sladilo koje se dodaje u neke maslace od kikirikija. VCA ga naziva po život opasnim dodatkom, zato uvijek provjeri deklaraciju.",
         "sv": "Xylitol är ett sötningsmedel som tillsätts i vissa jordnötssmör. VCA kallar det en livsfarlig tillsats, så kolla alltid innehållsförteckningen.",
         "da": "Xylitol er et sødemiddel der er tilsat noget peanutbutter. VCA kalder det et livsfarligt tilsætningsstof, så tjek altid varedeklarationen.",
-        "fi": "Ksylitoli on makeutusaine, jota lisätään joihinkin maapähkinävoihin. VCA kutsuu sitä hengenvaaralliseksi lisäaineeksi, joten tarkista aina tuoteseloste."
+        "fi": "Ksylitoli on makeutusaine, jota lisätään joihinkin maapähkinävoihin. VCA kutsuu sitä hengenvaaralliseksi lisäaineeksi, joten tarkista aina tuoteseloste.",
+        "nb": "Xylitol er et søtstoff som tilsettes i noen typer peanøttsmør. VCA kaller det en livsfarlig tilsetning, så sjekk alltid innholdsfortegnelsen."
       }
     }
   ],
@@ -335,6 +350,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8222ecffe72b1175b98ae149b0754ecc315242ab0bcdde82c040d51a91fd3b7b"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d8b25cb43e2cfd8538735998510fd83d86e59bc73227a162fe061687d5fd1c28"
     }
   }
 }

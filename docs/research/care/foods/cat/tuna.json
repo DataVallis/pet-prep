@@ -15,7 +15,8 @@
     "hr": "Tuna",
     "sv": "Tonfisk",
     "da": "Tun",
-    "fi": "Tonnikala"
+    "fi": "Tonnikala",
+    "nb": "Tunfisk"
   },
   "question": {
     "en": "Can cats eat tuna?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti tunu?",
     "sv": "Får katter äta tonfisk?",
     "da": "Må katte spise tun?",
-    "fi": "Saako kissa syödä tonnikalaa?"
+    "fi": "Saako kissa syödä tonnikalaa?",
+    "nb": "Kan katter spise tunfisk?"
   },
   "url_slug": {
     "en": "tuna",
@@ -47,7 +49,8 @@
     "hr": "tuna",
     "sv": "tonfisk",
     "da": "tun",
-    "fi": "tonnikala"
+    "fi": "tonnikala",
+    "nb": "tunfisk"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne redovito. Malo tune možda neće naškoditi, ali tuna iz konzerve namijenjena ljudima nema hranjive tvari koje mačke trebaju, može imati puno soli i žive, a neki veterinari ne savjetuju je ni kao poslasticu. Nikad nije potpuna prehrana.",
     "sv": "Inte regelbundet. Lite tonfisk gör kanske ingen skada, men konserverad tonfisk för människor saknar näringsämnen som katter behöver, kan innehålla mycket salt och kvicksilver, och vissa veterinärer avråder från den även som godbit. Den är aldrig en fullständig kost.",
     "da": "Ikke regelmæssigt. Lidt tun gør måske ingen skade, men tun på dåse til mennesker mangler næringsstoffer som katte har brug for, kan indeholde meget salt og kviksølv, og nogle dyrlæger fraråder tun selv som godbid. Tun er aldrig en komplet kost.",
-    "fi": "Ei säännöllisesti. Pieni määrä tonnikalaa ei välttämättä vahingoita, mutta ihmisille tarkoitetusta purkkitonnikalasta puuttuu ravintoaineita, joita kissa tarvitsee, siinä voi olla paljon suolaa ja elohopeaa, ja jotkut eläinlääkärit eivät suosittele sitä edes herkuksi. Se ei koskaan ole täysravintoa."
+    "fi": "Ei säännöllisesti. Pieni määrä tonnikalaa ei välttämättä vahingoita, mutta ihmisille tarkoitetusta purkkitonnikalasta puuttuu ravintoaineita, joita kissa tarvitsee, siinä voi olla paljon suolaa ja elohopeaa, ja jotkut eläinlääkärit eivät suosittele sitä edes herkuksi. Se ei koskaan ole täysravintoa.",
+    "nb": "Ikke regelmessig. En liten mengde tunfisk gjør ikke nødvendigvis skade, men hermetisk tunfisk til mennesker mangler næringsstoffer katter trenger, kan inneholde mye salt og kvikksølv, og noen dyrleger fraråder det selv som godbit. Det er aldri et komplett kosthold."
   },
   "why": {
     "en": "Sources disagree, so we use the stricter level. RSPCA Australia allows tinned tuna in spring water as an occasional treat. VCA says cats shouldn't eat tuna, not even as a treat, because it lacks essential nutrients and has too much unsaturated fat. Cats Protection warns it can be high in salt and mercury and cause weight gain. The Merck Veterinary Manual notes vitamin E deficiency in cats given large quantities of canned tuna.",
@@ -80,7 +84,8 @@
     "hr": "Izvori se ne slažu, pa primjenjujemo strožu razinu. RSPCA Australia dopušta tunu iz konzerve u izvorskoj vodi kao povremenu poslasticu. VCA navodi da mačke ne bi smjele jesti tunu, čak ni kao poslasticu, jer joj nedostaju esencijalne hranjive tvari i ima previše nezasićenih masti. Cats Protection upozorava da može imati puno soli i žive te uzrokovati debljanje. Priručnik Merck Veterinary Manual navodi nedostatak vitamina E kod mačaka koje su dobivale velike količine tune iz konzerve.",
     "sv": "Källorna är oense, så vi använder den striktare nivån. RSPCA Australia tillåter konserverad tonfisk i vatten som en godbit ibland. VCA skriver att katter inte ska äta tonfisk, inte ens som godbit, eftersom den saknar livsviktiga näringsämnen och innehåller för mycket omättat fett. Cats Protection varnar för att den kan innehålla mycket salt och kvicksilver och leda till viktökning. Merck Veterinary Manual beskriver E-vitaminbrist hos katter som fått stora mängder konserverad tonfisk.",
     "da": "Kilderne er uenige, så vi bruger det strengere niveau. RSPCA Australia tillader tun på dåse i vand som en godbid en gang imellem. Ifølge VCA bør katte ikke spise tun, heller ikke som godbid fordi tun mangler livsnødvendige næringsstoffer og har for meget umættet fedt. Cats Protection advarer om at tun kan indeholde meget salt og kviksølv og give vægtøgning. Merck Veterinary Manual beskriver E-vitaminmangel hos katte der har fået store mængder tun på dåse.",
-    "fi": "Lähteet ovat eri mieltä, joten käytämme tiukempaa luokitusta. RSPCA Australia sallii lähdeveteen säilötyn purkkitonnikalan satunnaisena herkkuna. VCA:n mukaan kissojen ei pidä syödä tonnikalaa edes herkkuna, koska siitä puuttuu välttämättömiä ravintoaineita ja siinä on liikaa tyydyttymätöntä rasvaa. Cats Protection varoittaa, että siinä voi olla paljon suolaa ja elohopeaa ja että se voi lihottaa. Merck Veterinary Manual mainitsee E-vitamiinin puutoksen kissoilla, joille on annettu suuria määriä purkkitonnikalaa."
+    "fi": "Lähteet ovat eri mieltä, joten käytämme tiukempaa luokitusta. RSPCA Australia sallii lähdeveteen säilötyn purkkitonnikalan satunnaisena herkkuna. VCA:n mukaan kissojen ei pidä syödä tonnikalaa edes herkkuna, koska siitä puuttuu välttämättömiä ravintoaineita ja siinä on liikaa tyydyttymätöntä rasvaa. Cats Protection varoittaa, että siinä voi olla paljon suolaa ja elohopeaa ja että se voi lihottaa. Merck Veterinary Manual mainitsee E-vitamiinin puutoksen kissoilla, joille on annettu suuria määriä purkkitonnikalaa.",
+    "nb": "Kildene er uenige, så vi bruker det strengere nivået. RSPCA Australia godtar hermetisk tunfisk i kildevann som en godbit en gang iblant. VCA skriver at katter ikke bør spise tunfisk, ikke engang som godbit, fordi den mangler livsviktige næringsstoffer og har for mye umettet fett. Cats Protection advarer om at den kan inneholde mye salt og kvikksølv og føre til vektøkning. Merck Veterinary Manual beskriver mangel på vitamin E hos katter som har fått store mengder hermetisk tunfisk."
   },
   "signs": {
     "en": [
@@ -124,6 +129,9 @@
     ],
     "fi": [
       "Painonnousu, jos sitä annetaan usein"
+    ],
+    "nb": [
+      "Vektøkning hvis den gis ofte"
     ]
   },
   "what_to_do": {
@@ -140,7 +148,8 @@
     "hr": "Zalogaj tune vjerojatno neće biti problem. Neka to ne postane navika ni glavni obrok. Ako mački nakon tune nije dobro ili često jede mnogo tune, razgovaraj s veterinarom.",
     "sv": "En tugga tonfisk är knappast något problem. Gör det inte till en vana eller ett huvudmål. Om katten verkar må dåligt efter att ha ätit tonfisk, eller ofta äter mycket av den, prata med veterinären.",
     "da": "En bid tun er næppe et problem. Gør det ikke til en vane eller et hovedmåltid. Hvis din kat virker utilpas efter at have spist tun, eller ofte spiser meget af det, skal du tale med din dyrlæge.",
-    "fi": "Tonnikalapala tuskin aiheuttaa ongelmia. Älä tee siitä tapaa tai pääateriaa. Jos kissasi vaikuttaa sairaalta tonnikalan syömisen jälkeen tai syö sitä usein paljon, keskustele eläinlääkärin kanssa."
+    "fi": "Tonnikalapala tuskin aiheuttaa ongelmia. Älä tee siitä tapaa tai pääateriaa. Jos kissasi vaikuttaa sairaalta tonnikalan syömisen jälkeen tai syö sitä usein paljon, keskustele eläinlääkärin kanssa.",
+    "nb": "En bit tunfisk er neppe et problem. Ikke gjør det til en vane eller et hovedmåltid. Hvis katten virker dårlig etter å ha spist tunfisk, eller ofte spiser mye av den, bør du snakke med dyrlegen."
   },
   "serving": {
     "en": "If at all: tinned in spring water with no added salt, a little, rarely, and never instead of cat food.",
@@ -156,7 +165,8 @@
     "hr": "Ako uopće: iz konzerve u izvorskoj vodi bez dodane soli, malo, rijetko i nikad umjesto hrane za mačke.",
     "sv": "Om alls: konserverad i vatten utan tillsatt salt, lite och sällan, och aldrig i stället för kattmat.",
     "da": "Om overhovedet, så kun lidt og sjældent: på dåse i vand uden tilsat salt og aldrig i stedet for kattefoder.",
-    "fi": "Jos ollenkaan: lähdeveteen säilöttynä ilman lisättyä suolaa, vähän, harvoin eikä koskaan kissanruoan sijasta."
+    "fi": "Jos ollenkaan: lähdeveteen säilöttynä ilman lisättyä suolaa, vähän, harvoin eikä koskaan kissanruoan sijasta.",
+    "nb": "Om i det hele tatt: hermetisk i kildevann uten tilsatt salt, litt, sjelden og aldri i stedet for kattefôr."
   },
   "child": {
     "en": "Cats love tuna, but too much isn't healthy. Their own cat food keeps them strong.",
@@ -172,7 +182,8 @@
     "hr": "Mace obožavaju tunu, ali previše tune nije zdravo. Njihova hrana za mačke čini ih jakima.",
     "sv": "Katter älskar tonfisk, men för mycket är inte nyttigt. Deras egen kattmat håller dem starka.",
     "da": "Katte elsker tun, men for meget er ikke sundt. Deres egen kattemad holder dem stærke.",
-    "fi": "Kissat rakastavat tonnikalaa, mutta liika ei ole terveellistä. Oma kissanruoka pitää ne vahvoina."
+    "fi": "Kissat rakastavat tonnikalaa, mutta liika ei ole terveellistä. Oma kissanruoka pitää ne vahvoina.",
+    "nb": "Katter elsker tunfisk, men for mye er ikke sunt. Kattematen deres holder dem sterke."
   },
   "faq": [
     {
@@ -190,7 +201,8 @@
         "hr": "Može li moja mačka živjeti samo na tuni?",
         "sv": "Kan min katt leva på tonfisk?",
         "da": "Kan min kat leve af tun?",
-        "fi": "Voiko kissani elää tonnikalalla?"
+        "fi": "Voiko kissani elää tonnikalalla?",
+        "nb": "Kan katten min leve på tunfisk?"
       },
       "a": {
         "en": "No. Tuna lacks essential nutrients cats need, and cats given large amounts of canned tuna have developed vitamin E deficiency.",
@@ -206,7 +218,8 @@
         "hr": "Ne može. Tuni nedostaju esencijalne hranjive tvari koje mačke trebaju, a kod mačaka koje su dobivale velike količine tune iz konzerve razvio se nedostatak vitamina E.",
         "sv": "Nej. Tonfisk saknar livsviktiga näringsämnen som katter behöver, och katter som fått stora mängder konserverad tonfisk har fått E-vitaminbrist.",
         "da": "Nej. Tun mangler livsnødvendige næringsstoffer som katte har brug for, og katte der har fået store mængder tun på dåse, har udviklet E-vitaminmangel.",
-        "fi": "Ei voi. Tonnikalasta puuttuu välttämättömiä ravintoaineita, joita kissat tarvitsevat, ja kissoille, joille on annettu suuria määriä purkkitonnikalaa, on kehittynyt E-vitamiinin puutos."
+        "fi": "Ei voi. Tonnikalasta puuttuu välttämättömiä ravintoaineita, joita kissat tarvitsevat, ja kissoille, joille on annettu suuria määriä purkkitonnikalaa, on kehittynyt E-vitamiinin puutos.",
+        "nb": "Nei. Tunfisk mangler livsviktige næringsstoffer katter trenger, og katter som har fått store mengder hermetisk tunfisk, har fått mangel på vitamin E."
       }
     }
   ],
@@ -333,6 +346,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "987583af1e31fd36c291df0686f886675b37d91e917d0edfd1fadfd13818906f"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0b025ff3648be367096281183a2a6177575301d100d46c4c653730dd5482edcb"
     }
   }
 }

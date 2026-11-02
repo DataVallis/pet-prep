@@ -15,7 +15,8 @@
     "hr": "Losos",
     "sv": "Lax",
     "da": "Laks",
-    "fi": "Lohi"
+    "fi": "Lohi",
+    "nb": "Laks"
   },
   "question": {
     "en": "Can cats eat salmon?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti losos?",
     "sv": "Får katter äta lax?",
     "da": "Må katte spise laks?",
-    "fi": "Saako kissa syödä lohta?"
+    "fi": "Saako kissa syödä lohta?",
+    "nb": "Kan katter spise laks?"
   },
   "url_slug": {
     "en": "salmon",
@@ -47,7 +49,8 @@
     "hr": "losos",
     "sv": "lax",
     "da": "laks",
-    "fi": "lohi"
+    "fi": "lohi",
+    "nb": "laks"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Da, malo termički obrađenog lososa u redu je kao povremena poslastica. Posluži ga običnog, bez kostiju i začina, i u malim količinama. Riba ne bi smjela zamijeniti mačkinu potpunu hranu.",
     "sv": "Ja, lite tillagad lax går bra som en godbit ibland. Servera den naturell, utan ben och kryddor, och i små mängder. Fisk ska inte ersätta kattens fullfoder.",
     "da": "Ja, lidt tilberedt laks er fin som en godbid en gang imellem. Server den naturel og uden ben og krydderier, og hold portionen lille. Fisk må ikke erstatte kattens komplette foder.",
-    "fi": "Saa, vähän kypsennettyä lohta sopii silloin tällöin herkuksi. Tarjoa se maustamattomana, ilman ruotoja, ja pidä annos pienenä. Kala ei saa korvata kissan täysravintoa."
+    "fi": "Saa, vähän kypsennettyä lohta sopii silloin tällöin herkuksi. Tarjoa se maustamattomana, ilman ruotoja, ja pidä annos pienenä. Kala ei saa korvata kissan täysravintoa.",
+    "nb": "Ja, litt tilberedt laks er greit som en godbit en gang iblant. Gi den naturell, uten bein eller krydder, og hold mengden liten. Fisk skal ikke erstatte kattens komplette fôr."
   },
   "why": {
     "en": "Cats Protection lists cooked salmon with no bones or seasoning among safe festive foods and says small amounts of cooked fish such as salmon are suitable. RSPCA Australia says tinned salmon in spring water can be an occasional treat. Raw fish is different: it may carry bacteria and parasites.",
@@ -80,7 +84,8 @@
     "hr": "Cats Protection navodi termički obrađen losos bez kostiju i začina među sigurnom blagdanskom hranom i kaže da su male količine termički obrađene ribe, poput lososa, prikladne. RSPCA Australia navodi da losos iz konzerve u izvorskoj vodi može biti povremena poslastica. Sirova riba nešto je drugo: može sadržavati bakterije i parazite.",
     "sv": "Cats Protection räknar tillagad lax utan ben och kryddor till säker högtidsmat och skriver att små mängder tillagad fisk som lax passar. RSPCA Australia skriver att konserverad lax i vatten kan vara en godbit ibland. Rå fisk är något annat: den kan innehålla bakterier och parasiter.",
     "da": "Cats Protection nævner tilberedt laks uden ben og krydderier blandt de sikre julefødevarer og skriver at små mængder tilberedt fisk som laks er egnede. Ifølge RSPCA Australia kan laks på dåse i vand være en godbid en gang imellem. Rå fisk er noget andet: Den kan indeholde bakterier og parasitter.",
-    "fi": "Cats Protection mainitsee kypsennetyn, ruodottoman ja maustamattoman lohen turvallisten juhlaruokien joukossa ja kertoo, että pienet määrät kypsennettyä kalaa, kuten lohta, sopivat kissalle. RSPCA Australian mukaan lähdeveteen säilötty purkkilohi voi olla satunnainen herkku. Raaka kala on eri asia: siinä voi olla bakteereja ja loisia."
+    "fi": "Cats Protection mainitsee kypsennetyn, ruodottoman ja maustamattoman lohen turvallisten juhlaruokien joukossa ja kertoo, että pienet määrät kypsennettyä kalaa, kuten lohta, sopivat kissalle. RSPCA Australian mukaan lähdeveteen säilötty purkkilohi voi olla satunnainen herkku. Raaka kala on eri asia: siinä voi olla bakteereja ja loisia.",
+    "nb": "Cats Protection nevner tilberedt laks uten bein eller krydder blant trygg høytidsmat og skriver at små mengder tilberedt fisk, som laks, passer. RSPCA Australia skriver at hermetisk laks i kildevann kan være en godbit en gang iblant. Rå fisk er noe annet: Den kan inneholde bakterier og parasitter."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili ima proljev, prestani i pitaj veterinara. Ukloni sve kosti koje pronađeš.",
     "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären. Ta bort alla ben du hittar.",
     "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, skal du stoppe og spørge din dyrlæge. Fjern de ben du finder.",
-    "fi": "Tarjoa ensin pieni pala. Jos kissasi alkaa sen jälkeen oksennella tai sille tulee ripuli, lopeta ja kysy eläinlääkäriltä. Poista kaikki ruodot, jotka löydät."
+    "fi": "Tarjoa ensin pieni pala. Jos kissasi alkaa sen jälkeen oksennella tai sille tulee ripuli, lopeta ja kysy eläinlääkäriltä. Poista kaikki ruodot, jotka löydät.",
+    "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt og spør dyrlegen. Fjern alle bein du finner."
   },
   "serving": {
     "en": "Cooked, plain, boneless and unseasoned, or tinned in spring water; a few small pieces now and then.",
@@ -113,7 +119,8 @@
     "hr": "Termički obrađen, običan, bez kostiju i nezačinjen ili iz konzerve u izvorskoj vodi; tu i tamo nekoliko malih komadića.",
     "sv": "Tillagad, naturell, benfri och okryddad, eller konserverad i vatten; några små bitar då och då.",
     "da": "Tilberedt, naturel, uden ben og uden krydderier eller på dåse i vand; et par små stykker en gang imellem.",
-    "fi": "Kypsennettynä, maustamattomana ja ruodottomana tai lähdeveteen säilöttynä purkkilohena; muutama pieni pala silloin tällöin."
+    "fi": "Kypsennettynä, maustamattomana ja ruodottomana tai lähdeveteen säilöttynä purkkilohena; muutama pieni pala silloin tällöin.",
+    "nb": "Tilberedt, naturell, uten bein og uten krydder, eller hermetisk i kildevann; noen små biter nå og da."
   },
   "child": {
     "en": "A tiny bit of cooked salmon with no bones can be a special treat. Ask a grown-up first.",
@@ -129,7 +136,8 @@
     "hr": "Mrvica kuhanog lososa bez kostiju može biti posebna poslastica. Najprije pitaj odraslu osobu.",
     "sv": "En pytteliten bit kokt lax utan ben kan vara en extra godbit. Fråga en vuxen först.",
     "da": "En lille smule kogt laks uden ben kan være en særlig godbid. Spørg en voksen først.",
-    "fi": "Pikkuinen pala keitettyä, ruodotonta lohta voi olla kissalle erityinen herkku. Kysy ensin aikuiselta."
+    "fi": "Pikkuinen pala keitettyä, ruodotonta lohta voi olla kissalle erityinen herkku. Kysy ensin aikuiselta.",
+    "nb": "En bitteliten bit kokt laks uten bein kan være en ekstra fin godbit. Spør en voksen først."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "hr": "Smiju li mačke jesti sirovi losos ili sushi?",
         "sv": "Får katter äta rå lax eller sushi?",
         "da": "Må katte spise rå laks eller sushi?",
-        "fi": "Saako kissa syödä raakaa lohta tai sushia?"
+        "fi": "Saako kissa syödä raakaa lohta tai sushia?",
+        "nb": "Kan katter spise rå laks eller sushi?"
       },
       "a": {
         "en": "It's best not to. Uncooked fish may contain harmful bacteria and parasites, so fish for cats should be properly cooked.",
@@ -163,7 +172,8 @@
         "hr": "Bolje ne. Termički neobrađena riba može sadržavati štetne bakterije i parazite, pa riba za mačke treba biti dobro termički obrađena.",
         "sv": "Helst inte. Otillagad fisk kan innehålla skadliga bakterier och parasiter, så fisk till katter ska vara ordentligt tillagad.",
         "da": "Helst ikke. Rå fisk kan indeholde skadelige bakterier og parasitter, så fisk til katte skal være ordentligt tilberedt.",
-        "fi": "Parempi olla antamatta. Kypsentämättömässä kalassa voi olla haitallisia bakteereja ja loisia, joten kissalle annettavan kalan pitää olla kunnolla kypsennettyä."
+        "fi": "Parempi olla antamatta. Kypsentämättömässä kalassa voi olla haitallisia bakteereja ja loisia, joten kissalle annettavan kalan pitää olla kunnolla kypsennettyä.",
+        "nb": "Helst ikke. Rå fisk kan inneholde skadelige bakterier og parasitter, så fisk til katter bør være ordentlig tilberedt."
       }
     }
   ],
@@ -270,6 +280,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "aabc66f4d87a893366123327ab0ef72d192f790ed755a212813b15a235cd255e"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b9a0a422277b2b2e91821891575d43287bb1bb9722d83cb8791150609ca08b48"
     }
   }
 }
