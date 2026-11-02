@@ -7,7 +7,8 @@
     "cs": "Jahody",
     "hr": "Jagode",
     "sv": "Jordgubbar",
-    "da": "Jordbær"
+    "da": "Jordbær",
+    "fi": "Mansikat"
   },
   "question": {
     "en": "Can cats eat strawberries?",
@@ -15,7 +16,8 @@
     "cs": "Mohou kočky jíst jahody?",
     "hr": "Smiju li mačke jesti jagode?",
     "sv": "Får katter äta jordgubbar?",
-    "da": "Må katte spise jordbær?"
+    "da": "Må katte spise jordbær?",
+    "fi": "Saako kissa syödä mansikoita?"
   },
   "url_slug": {
     "en": "strawberries",
@@ -23,7 +25,8 @@
     "cs": "jahody",
     "hr": "jagode",
     "sv": "jordgubbar",
-    "da": "jordbaer"
+    "da": "jordbaer",
+    "fi": "mansikat"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "cs": "Ano, malý kousek jahody je v pořádku jako občasný pamlsek. ASPCA uvádí jahodník jako netoxický pro kočky, ale kočky jsou masožravci a ovoce nepotřebují, takže ho nabízejte jen jako malý doplněk.",
     "hr": "Da, mali komadić jagode u redu je kao povremena poslastica. ASPCA navodi jagodu kao neotrovnu za mačke, ali mačke su mesojedi i ne trebaju voće, pa neka to ostane tek mali dodatak.",
     "sv": "Ja, en liten bit jordgubbe går bra som en godbit ibland. ASPCA anger att jordgubbar inte är giftiga för katter, men katter är köttätare och behöver inte frukt, så låt det bara vara något litet extra.",
-    "da": "Ja, et lille stykke jordbær er fint som en godbid en gang imellem. ASPCA opfører jordbær som ikke giftigt for katte, men katte er kødædere og har ikke brug for frugt, så lad det kun være et lille ekstra."
+    "da": "Ja, et lille stykke jordbær er fint som en godbid en gang imellem. ASPCA opfører jordbær som ikke giftigt for katte, men katte er kødædere og har ikke brug for frugt, så lad det kun være et lille ekstra.",
+    "fi": "Saa, pieni pala mansikkaa sopii satunnaiseksi herkuksi. ASPCA:n mukaan mansikka ei ole myrkyllinen kissoille, mutta kissat ovat lihansyöjiä eivätkä tarvitse hedelmiä, joten pidä mansikka pienenä lisänä."
   },
   "why": {
     "en": "The ASPCA lists the strawberry plant as non-toxic to cats, and NC State's veterinary hospital lists strawberry among healthy human-food treats for cats and dogs, given in measured amounts and counted in the daily calories. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
@@ -40,7 +44,8 @@
     "cs": "ASPCA uvádí jahodník jako rostlinu netoxickou pro kočky a veterinární nemocnice Státní univerzity Severní Karolíny (NC State) řadí jahody mezi zdravé pamlsky z lidské stravy pro kočky a psy, podávané v odměřeném množství a započítané do denního příjmu kalorií. Kočky jsou obligátní masožravci a ovoce nepotřebují, pamlsky by měly tvořit jen malou část denní stravy a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
     "hr": "ASPCA navodi biljku jagode kao neotrovnu za mačke, a veterinarska bolnica sveučilišta NC State navodi jagodu među zdravim poslasticama iz ljudske hrane za mačke i pse, koje se daju u odmjerenim količinama i uračunavaju u dnevni unos kalorija. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
     "sv": "ASPCA anger att jordgubbsplantan inte är giftig för katter, och djursjukhuset vid NC State räknar jordgubbar till nyttiga godbitar från människomat för katter och hundar, i avvägda mängder och inräknade i det dagliga kaloriintaget. Katter är obligata köttätare och behöver inte frukt, godbitar ska vara en liten del av den dagliga maten, och allt växtmaterial kan ge kräkningar eller orolig mage.",
-    "da": "ASPCA opfører jordbærplanten som ikke giftig for katte, og dyrehospitalet ved NC State nævner jordbær blandt de sunde godbidder fra menneskemad til katte og hunde, givet i afmålte mængder og regnet med i det daglige kalorieindtag. Katte er obligate kødædere og har ikke brug for frugt, godbidder bør kun udgøre en lille del af den daglige mad, og alt plantemateriale kan give opkast eller dårlig mave."
+    "da": "ASPCA opfører jordbærplanten som ikke giftig for katte, og dyrehospitalet ved NC State nævner jordbær blandt de sunde godbidder fra menneskemad til katte og hunde, givet i afmålte mængder og regnet med i det daglige kalorieindtag. Katte er obligate kødædere og har ikke brug for frugt, godbidder bør kun udgøre en lille del af den daglige mad, og alt plantemateriale kan give opkast eller dårlig mave.",
+    "fi": "ASPCA luokittelee mansikkakasvin kissoille myrkyttömäksi, ja NC Staten eläinsairaala mainitsee mansikan terveellisten ihmisruokaherkkujen joukossa kissoille ja koirille, kun niitä annetaan harkitusti ja ne lasketaan mukaan päivän kaloreihin. Kissat ovat pakollisia lihansyöjiä eivätkä tarvitse hedelmiä, herkkujen pitää jäädä pieneksi osaksi päivän ruokaa, ja mikä tahansa kasviaines voi aiheuttaa oksentelua tai vatsavaivoja."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "cs": "Nejdřív nabídněte malý kousek. Pokud vaše kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
     "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
     "sv": "Ge en liten bit först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären.",
-    "da": "Giv først et lille stykke. Hvis din kat kaster op eller får dårlig mave bagefter, skal du stoppe og spørge din dyrlæge."
+    "da": "Giv først et lille stykke. Hvis din kat kaster op eller får dårlig mave bagefter, skal du stoppe og spørge din dyrlæge.",
+    "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai sen vatsa menee sen jälkeen sekaisin, lopeta ja kysy eläinlääkäriltä."
   },
   "serving": {
     "en": "A small piece now and then, counted in your cat's daily food.",
@@ -57,7 +63,8 @@
     "cs": "Občas malý kousek, započítaný do denní dávky krmiva vaší kočky.",
     "hr": "Mali komadić povremeno, uračunat u dnevni obrok tvoje mačke.",
     "sv": "En liten bit då och då, inräknad i kattens dagliga matranson.",
-    "da": "Et lille stykke en gang imellem, regnet med i kattens daglige mad."
+    "da": "Et lille stykke en gang imellem, regnet med i kattens daglige mad.",
+    "fi": "Pieni pala silloin tällöin, laskettuna mukaan kissasi päivittäiseen ruokaan."
   },
   "child": {
     "en": "A little piece of strawberry can be a cat treat now and then. Cats mostly need meat, so fruit is only a small extra.",
@@ -65,7 +72,8 @@
     "cs": "Malý kousek jahody může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže ovoce je jen malý přídavek.",
     "hr": "Komadić jagode ponekad može biti poslastica za macu. Mace najviše trebaju meso, pa je voće samo mali dodatak.",
     "sv": "En liten bit jordgubbe kan ibland vara en godbit för katten. Katter behöver mest kött, så frukt är bara något litet extra.",
-    "da": "Et lille stykke jordbær kan være en kattegodbid en gang imellem. Katte har mest brug for kød, så frugt er kun et lille ekstra."
+    "da": "Et lille stykke jordbær kan være en kattegodbid en gang imellem. Katte har mest brug for kød, så frugt er kun et lille ekstra.",
+    "fi": "Pieni pala mansikkaa voi joskus olla kissan herkku. Kissat tarvitsevat ennen kaikkea lihaa, joten hedelmä on vain pieni lisä."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "cs": "Potřebují kočky ovoce?",
         "hr": "Trebaju li mačke voće?",
         "sv": "Behöver katter frukt?",
-        "da": "Har katte brug for frugt?"
+        "da": "Har katte brug for frugt?",
+        "fi": "Tarvitsevatko kissat hedelmiä?"
       },
       "a": {
         "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
@@ -83,7 +92,8 @@
         "cs": "Ne. Kočky jsou masožravci: potřebují živiny, které obsahuje maso, a ovoce ani zeleninu ve stravě nepotřebují. Ovoce může být vždy jen malým doplňkem.",
         "hr": "Ne. Mačke su mesojedi: trebaju hranjive tvari koje se nalaze u mesu i u prehrani im ne treba ni voće ni povrće. Voće može biti samo mali dodatak.",
         "sv": "Nej. Katter är köttätare: de behöver näringsämnen som finns i kött och behöver inte frukt eller grönsaker i kosten. Frukt kan bara vara något litet extra.",
-        "da": "Nej. Katte er kødædere: De har brug for næringsstoffer der findes i kød, og har ikke brug for frugt eller grøntsager i deres kost. Frugt kan aldrig være mere end et lille ekstra."
+        "da": "Nej. Katte er kødædere: De har brug for næringsstoffer der findes i kød, og har ikke brug for frugt eller grøntsager i deres kost. Frugt kan aldrig være mere end et lille ekstra.",
+        "fi": "Eivät. Kissat ovat lihansyöjiä: ne tarvitsevat lihan ravintoaineita eivätkä tarvitse ruokavalioonsa hedelmiä tai vihanneksia. Hedelmä voi olla vain pieni lisä."
       }
     }
   ],
@@ -166,6 +176,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a87cf8466baca7a69c54a6d2831bf584c6e79fd2eb56406b66b899967b5c6b70"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "61520f445414f37da196bedd57bb8927fc8fe7e870f5cc70b17831c57e81ac03"
     }
   }
 }

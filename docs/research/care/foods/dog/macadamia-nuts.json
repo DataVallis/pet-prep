@@ -14,7 +14,8 @@
     "cs": "Makadamové ořechy",
     "hr": "Makadamija",
     "sv": "Macadamianötter",
-    "da": "Macadamianødder"
+    "da": "Macadamianødder",
+    "fi": "Makadamiapähkinät"
   },
   "question": {
     "en": "Can dogs eat macadamia nuts?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst makadamové ořechy?",
     "hr": "Smiju li psi jesti makadamiju?",
     "sv": "Får hundar äta macadamianötter?",
-    "da": "Må hunde spise macadamianødder?"
+    "da": "Må hunde spise macadamianødder?",
+    "fi": "Saako koira syödä makadamiapähkinöitä?"
   },
   "url_slug": {
     "en": "macadamia-nuts",
@@ -44,7 +46,8 @@
     "cs": "makadamove-orechy",
     "hr": "makadamija",
     "sv": "macadamianotter",
-    "da": "macadamianoedder"
+    "da": "macadamianoedder",
+    "fi": "makadamiapahkinat"
   },
   "level": "toxic",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ne. Makadamové ořechy jsou pro psy jedovaté a psi jsou jediný známý živočišný druh, kterému škodí. I malé množství může způsobit slabost, zvracení, třes a vysokou teplotu. Vysoký obsah tuku může navíc vyvolat zánět slinivky břišní.",
     "hr": "Ne. Makadamija je otrovna za pse, a psi su jedina vrsta za koju je poznato da od nje obolijevaju. Već mala količina može izazvati slabost, povraćanje, drhtanje i visoku tjelesnu temperaturu. Zbog velikog udjela masti može izazvati i upalu gušterače.",
     "sv": "Nej. Macadamianötter är giftiga för hundar, och hundar är den enda art man vet blir sjuk av dem. Redan en liten mängd kan orsaka svaghet, kräkningar, darrningar och hög kroppstemperatur. Den höga fetthalten kan också utlösa bukspottkörtelinflammation (pankreatit).",
-    "da": "Nej. Macadamianødder er giftige for hunde, og hunde er den eneste dyreart man ved bliver syg af dem. Selv en lille mængde kan give svaghed, opkast, rysten og høj temperatur. Det høje fedtindhold kan desuden udløse betændelse i bugspytkirtlen (pankreatitis)."
+    "da": "Nej. Macadamianødder er giftige for hunde, og hunde er den eneste dyreart man ved bliver syg af dem. Selv en lille mængde kan give svaghed, opkast, rysten og høj temperatur. Det høje fedtindhold kan desuden udløse betændelse i bugspytkirtlen (pankreatitis).",
+    "fi": "Ei saa. Makadamiapähkinät ovat koiralle myrkyllisiä, ja koira on ainoa eläinlaji, jonka tiedetään sairastuvan niistä. Pienikin määrä voi aiheuttaa heikkoutta, oksentelua, vapinaa ja korkeaa ruumiinlämpöä. Runsas rasvapitoisuus voi myös laukaista haimatulehduksen."
   },
   "why": {
     "en": "How macadamia nuts poison dogs is unknown, but they affect nerve and muscle function. Because they are very oily, some dogs also develop pancreatitis. Signs generally settle within 12–48 hours, but a vet should always be contacted.",
@@ -75,7 +79,8 @@
     "cs": "Jak přesně makadamové ořechy psy otravují, není známo, ovlivňují ale činnost nervů a svalů. Protože jsou velmi tučné, u některých psů se rozvine i zánět slinivky břišní. Příznaky obvykle odezní během 12–48 hodin, přesto se ale vždy obraťte na veterináře.",
     "hr": "Nije poznato kako točno makadamija truje pse, ali utječe na rad živaca i mišića. Budući da je vrlo masna, kod nekih se pasa razvije i upala gušterače. Znakovi uglavnom prođu unutar 12–48 sati, ali uvijek se treba obratiti veterinaru.",
     "sv": "Hur macadamianötter förgiftar hundar är okänt, men de påverkar nervernas och musklernas funktion. Eftersom nötterna är mycket oljiga får vissa hundar också bukspottkörtelinflammation. Symtomen brukar gå över inom 12–48 timmar, men du ska alltid kontakta veterinären.",
-    "da": "Man ved ikke hvordan macadamianødder forgifter hunde, men de påvirker nerve- og muskelfunktionen. Fordi de er meget fede, får nogle hunde også betændelse i bugspytkirtlen. Symptomerne går som regel over inden for 12–48 timer, men du bør altid kontakte en dyrlæge."
+    "da": "Man ved ikke hvordan macadamianødder forgifter hunde, men de påvirker nerve- og muskelfunktionen. Fordi de er meget fede, får nogle hunde også betændelse i bugspytkirtlen. Symptomerne går som regel over inden for 12–48 timer, men du bør altid kontakte en dyrlæge.",
+    "fi": "Ei tiedetä, miten makadamiapähkinät myrkyttävät koiran, mutta ne vaikuttavat hermojen ja lihasten toimintaan. Koska ne ovat hyvin öljyisiä, osalle koirista kehittyy myös haimatulehdus. Oireet häviävät yleensä 12–48 tunnissa, mutta eläinlääkäriin pitää aina ottaa yhteyttä."
   },
   "signs": {
     "en": [
@@ -181,6 +186,14 @@
       "Rysten",
       "Høj kropstemperatur",
       "Usikker, vaklende gang"
+    ],
+    "fi": [
+      "Lihasheikkous",
+      "Väsymys, alakuloisuus",
+      "Oksentelu",
+      "Vapina",
+      "Korkea ruumiinlämpö",
+      "Horjuva kävely"
     ]
   },
   "what_to_do": {
@@ -196,7 +209,8 @@
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, kolik ořechů pes snědl a zda byly v čokoládě nebo smíchané s jinými potravinami. Nečekejte, až se objeví příznaky.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši koliko je plodova pas pojeo i jesu li bili preliveni čokoladom ili pomiješani s drugom hranom. Ne čekaj da se pojave znakovi.",
     "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt. Notera hur många nötter hunden åt och om de var chokladöverdragna eller blandade med annan mat. Vänta inte på symtom.",
-    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvor mange nødder hunden har spist, og om de var overtrukket med chokolade eller blandet med andre fødevarer. Vent ikke på symptomer."
+    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvor mange nødder hunden har spist, og om de var overtrukket med chokolade eller blandet med andre fødevarer. Vent ikke på symptomer.",
+    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, montako pähkinää koira söi ja olivatko ne suklaakuorrutteisia tai muun ruoan seassa. Älä odota oireita."
   },
   "serving": null,
   "child": {
@@ -212,7 +226,8 @@
     "cs": "Makadamové ořechy jsou kulaté oříšky, po kterých může být pes slabý a vrávorat. Dej je tam, kam pes nedosáhne, a když nějaké sní, řekni to dospělému.",
     "hr": "Makadamija je okrugli orašasti plod od kojeg pas može postati slab i nesiguran na nogama. Drži je podalje od psa i reci odrasloj osobi ako je tvoj pas pojede.",
     "sv": "Macadamianötter är runda nötter som kan göra hundar svaga och vingliga. Håll dem borta och säg till en vuxen om din hund äter några.",
-    "da": "Macadamianødder er runde nødder der kan gøre hunde svage og vaklende. Hold dem væk, og sig det til en voksen hvis din hund spiser nogle."
+    "da": "Macadamianødder er runde nødder der kan gøre hunde svage og vaklende. Hold dem væk, og sig det til en voksen hvis din hund spiser nogle.",
+    "fi": "Makadamiapähkinät ovat pyöreitä pähkinöitä, jotka voivat tehdä koirasta heikon ja huteran. Pidä ne poissa koiran ulottuvilta ja kerro aikuiselle, jos koirasi syö niitä."
   },
   "faq": [
     {
@@ -229,7 +244,8 @@
         "cs": "Jsou jedovaté i jiné ořechy?",
         "hr": "Jesu li i drugi orašasti plodovi otrovni?",
         "sv": "Är andra nötter också giftiga?",
-        "da": "Er andre nødder også giftige?"
+        "da": "Er andre nødder også giftige?",
+        "fi": "Ovatko muutkin pähkinät myrkyllisiä?"
       },
       "a": {
         "en": "Macadamias are the toxic ones. Other nuts such as almonds, pecans and walnuts are very fatty and can cause vomiting, diarrhoea and possibly pancreatitis, so they are not a good treat either.",
@@ -244,7 +260,8 @@
         "cs": "Jedovaté jsou makadamové ořechy. Jiné ořechy, například mandle, pekanové a vlašské ořechy, jsou velmi tučné a mohou způsobit zvracení, průjem a případně zánět slinivky břišní, takže ani ony nejsou vhodným pamlskem.",
         "hr": "Otrovna je makadamija. Drugi orašasti plodovi, poput badema, pekan oraha i oraha, vrlo su masni i mogu izazvati povraćanje, proljev, a možda i upalu gušterače, pa ni oni nisu dobra poslastica.",
         "sv": "Det är macadamianötterna som är giftiga. Andra nötter, som mandlar, pekannötter och valnötter, är mycket feta och kan orsaka kräkningar, diarré och kanske bukspottkörtelinflammation, så de är inte heller någon bra godbit.",
-        "da": "Det er macadamianødderne der er giftige. Andre nødder som mandler, pekannødder og valnødder er meget fede og kan give opkast, diarré og muligvis betændelse i bugspytkirtlen, så de er heller ikke en god godbid."
+        "da": "Det er macadamianødderne der er giftige. Andre nødder som mandler, pekannødder og valnødder er meget fede og kan give opkast, diarré og muligvis betændelse i bugspytkirtlen, så de er heller ikke en god godbid.",
+        "fi": "Myrkyllisiä ovat nimenomaan makadamiapähkinät. Muut pähkinät, kuten mantelit, pekaanipähkinät ja saksanpähkinät, ovat hyvin rasvaisia ja voivat aiheuttaa oksentelua, ripulia ja mahdollisesti haimatulehduksen, joten nekään eivät ole hyvä herkku."
       }
     },
     {
@@ -261,7 +278,8 @@
         "cs": "Jak dlouho příznaky trvají?",
         "hr": "Koliko dugo traju znakovi?",
         "sv": "Hur länge håller symtomen i sig?",
-        "da": "Hvor længe varer symptomerne?"
+        "da": "Hvor længe varer symptomerne?",
+        "fi": "Kuinka kauan oireet kestävät?"
       },
       "a": {
         "en": "Signs generally resolve within 12–48 hours, but your vet should still be told straight away.",
@@ -276,7 +294,8 @@
         "cs": "Příznaky obvykle odezní během 12–48 hodin, přesto ale dejte veterináři vědět hned.",
         "hr": "Znakovi uglavnom prođu unutar 12–48 sati, ali svejedno odmah obavijesti veterinara.",
         "sv": "Symtomen brukar gå över inom 12–48 timmar, men du ska ändå kontakta veterinären direkt.",
-        "da": "Symptomerne går som regel over inden for 12–48 timer, men du bør alligevel kontakte din dyrlæge med det samme."
+        "da": "Symptomerne går som regel over inden for 12–48 timer, men du bør alligevel kontakte din dyrlæge med det samme.",
+        "fi": "Oireet häviävät yleensä 12–48 tunnissa, mutta eläinlääkärille pitää silti kertoa heti."
       }
     }
   ],
@@ -406,6 +425,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2632bed095d4660a730eef04f600fd25e36873888936ef90924c918236794f18"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8812902ed114381dccf72ce649e5cb0ea737aba054c6641ab6743209db67828b"
     }
   }
 }

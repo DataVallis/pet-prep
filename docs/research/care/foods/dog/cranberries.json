@@ -7,7 +7,8 @@
     "cs": "Brusinky",
     "hr": "Brusnice",
     "sv": "Tranbär",
-    "da": "Tranebær"
+    "da": "Tranebær",
+    "fi": "Karpalot"
   },
   "question": {
     "en": "Can dogs eat cranberries?",
@@ -15,7 +16,8 @@
     "cs": "Mohou psi jíst brusinky?",
     "hr": "Smiju li psi jesti brusnice?",
     "sv": "Får hundar äta tranbär?",
-    "da": "Må hunde spise tranebær?"
+    "da": "Må hunde spise tranebær?",
+    "fi": "Saako koira syödä karpaloita?"
   },
   "url_slug": {
     "en": "cranberries",
@@ -23,7 +25,8 @@
     "cs": "brusinky",
     "hr": "brusnice",
     "sv": "tranbar",
-    "da": "tranebaer"
+    "da": "tranebaer",
+    "fi": "karpalot"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "cs": "Ano, v malém množství. Čisté čerstvé, tepelně upravené nebo sušené brusinky nejsou pro psy jedovaté, ale příliš mnoho jich může podráždit žaludek. Vyhněte se brusinkové omáčce a směsím sušeného ovoce, které mohou obsahovat cukr, rozinky nebo jiné škodlivé přísady.",
     "hr": "Da, u malim količinama. Obične svježe, termički obrađene ili sušene brusnice nisu otrovne za pse, ali previše njih može uznemiriti želudac. Izbjegavaj umak od brusnica i mješavine sušenog voća, koje mogu sadržavati šećer, grožđice ili druge štetne sastojke.",
     "sv": "Ja, i små mängder. Naturella färska, tillagade eller torkade tranbär är inte giftiga för hundar, men för många kan ge orolig mage. Undvik tranbärssås och torkade fruktblandningar, som kan innehålla socker, russin eller andra skadliga ingredienser.",
-    "da": "Ja, i små mængder. Rene friske, tilberedte eller tørrede tranebær er ikke giftige for hunde, men for mange kan give dårlig mave. Undgå tranebærsauce og blandinger af tørret frugt, som kan indeholde sukker, rosiner eller andre skadelige ingredienser."
+    "da": "Ja, i små mængder. Rene friske, tilberedte eller tørrede tranebær er ikke giftige for hunde, men for mange kan give dårlig mave. Undgå tranebærsauce og blandinger af tørret frugt, som kan indeholde sukker, rosiner eller andre skadelige ingredienser.",
+    "fi": "Saa, pieninä määrinä. Pelkät tuoreet, kypsennetyt tai kuivatut karpalot eivät ole koirille myrkyllisiä, mutta liian suuri määrä voi aiheuttaa vatsavaivoja. Vältä karpalokastiketta ja kuivattuja hedelmäsekoituksia, joissa voi olla sokeria, rusinoita tai muita haitallisia ainesosia."
   },
   "why": {
     "en": "Dried cranberries sometimes come mixed with raisins, and grapes and raisins are very toxic to dogs. Cranberry sauce is high in sugar, which can cause stomach upset, and some recipes include grapes, raisins, currants or alcohol. Many dried cranberries sold for people are sweetened, which adds unneeded sugar.",
@@ -40,7 +44,8 @@
     "cs": "Sušené brusinky se někdy prodávají ve směsi s rozinkami, a hrozny i rozinky jsou pro psy velmi jedovaté. Brusinková omáčka obsahuje hodně cukru, který může podráždit žaludek, a některé recepty obsahují hrozny, rozinky, korintky nebo alkohol. Mnoho sušených brusinek určených pro lidi je slazených, což přidává zbytečný cukr.",
     "hr": "Sušene brusnice ponekad dolaze pomiješane s grožđicama, a grožđe i grožđice vrlo su otrovni za pse. Umak od brusnica sadrži mnogo šećera, koji može uznemiriti želudac, a neki recepti sadrže grožđe, grožđice, korintsko grožđe ili alkohol. Mnoge sušene brusnice koje se prodaju za ljude zaslađene su, što psu donosi nepotreban šećer.",
     "sv": "Torkade tranbär säljs ibland blandade med russin, och vindruvor och russin är mycket giftiga för hundar. Tranbärssås innehåller mycket socker, som kan ge orolig mage, och vissa recept innehåller vindruvor, russin, korinter eller alkohol. Många torkade tranbär för människor är sötade, vilket ger onödigt socker.",
-    "da": "Tørrede tranebær kan være blandet med rosiner, og vindruer og rosiner er meget giftige for hunde. Tranebærsauce har et højt sukkerindhold, som kan give dårlig mave, og nogle opskrifter indeholder vindruer, rosiner, korender eller alkohol. Mange tørrede tranebær der sælges til mennesker, er sødede, hvilket giver unødvendigt sukker."
+    "da": "Tørrede tranebær kan være blandet med rosiner, og vindruer og rosiner er meget giftige for hunde. Tranebærsauce har et højt sukkerindhold, som kan give dårlig mave, og nogle opskrifter indeholder vindruer, rosiner, korender eller alkohol. Mange tørrede tranebær der sælges til mennesker, er sødede, hvilket giver unødvendigt sukker.",
+    "fi": "Kuivattujen karpaloiden joukossa on joskus rusinoita, ja viinirypäleet ja rusinat ovat koirille hyvin myrkyllisiä. Karpalokastikkeessa on paljon sokeria, joka voi aiheuttaa vatsavaivoja, ja joissakin resepteissä on viinirypäleitä, rusinoita, korintteja tai alkoholia. Monet ihmisille myytävät kuivatut karpalot on makeutettu, mikä lisää ruokavalioon tarpeetonta sokeria."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "cs": "Brusinky dávejte s mírou a podle doporučení veterináře. Hrozny a rozinky jsou pro psy velmi jedovaté, proto se vyhněte brusinkovým směsím s rozinkami.",
     "hr": "Brusnice daj umjereno i uz savjet veterinara. Grožđe i grožđice vrlo su otrovni za pse, zato izbjegavaj mješavine brusnica s grožđicama.",
     "sv": "Ge tranbär med måtta och enligt veterinärens råd. Vindruvor och russin är mycket giftiga för hundar, så undvik tranbärsblandningar som innehåller russin.",
-    "da": "Giv tranebær med måde og efter råd fra en dyrlæge. Vindruer og rosiner er meget giftige for hunde, så undgå tranebærblandinger med rosiner."
+    "da": "Giv tranebær med måde og efter råd fra en dyrlæge. Vindruer og rosiner er meget giftige for hunde, så undgå tranebærblandinger med rosiner.",
+    "fi": "Anna karpaloita kohtuudella ja eläinlääkärin ohjeiden mukaan. Viinirypäleet ja rusinat ovat koirille hyvin myrkyllisiä, joten vältä karpalosekoituksia, joissa on rusinoita."
   },
   "serving": {
     "en": "Plain fresh, cooked or dried cranberries without added sugar and without raisins; in small quantities.",
@@ -57,7 +63,8 @@
     "cs": "Čisté čerstvé, tepelně upravené nebo sušené brusinky bez přidaného cukru a bez rozinek; v malém množství.",
     "hr": "Obične svježe, termički obrađene ili sušene brusnice bez dodanog šećera i bez grožđica; u malim količinama.",
     "sv": "Naturella färska, tillagade eller torkade tranbär utan tillsatt socker och utan russin; i små mängder.",
-    "da": "Rene friske, tilberedte eller tørrede tranebær uden tilsat sukker og uden rosiner; i små mængder."
+    "da": "Rene friske, tilberedte eller tørrede tranebær uden tilsat sukker og uden rosiner; i små mængder.",
+    "fi": "Pelkkiä tuoreita, kypsennettyjä tai kuivattuja karpaloita ilman lisättyä sokeria ja ilman rusinoita; pieninä määrinä."
   },
   "child": {
     "en": "A few plain cranberries are okay for dogs. Cranberry sauce and fruit mixes are for people, so ask a grown-up first.",
@@ -65,7 +72,8 @@
     "cs": "Pár obyčejných brusinek je pro psy v pořádku. Brusinková omáčka a ovocné směsi jsou pro lidi, a tak se nejdřív zeptej dospělého.",
     "hr": "Nekoliko običnih brusnica u redu je za pse. Umak od brusnica i voćne mješavine su za ljude, zato prvo pitaj odraslu osobu.",
     "sv": "Några vanliga tranbär går bra för hundar. Tranbärssås och fruktblandningar är för människor, så fråga en vuxen först.",
-    "da": "Et par almindelige tranebær er okay for hunde. Tranebærsauce og frugtblandinger er til mennesker, så spørg en voksen først."
+    "da": "Et par almindelige tranebær er okay for hunde. Tranebærsauce og frugtblandinger er til mennesker, så spørg en voksen først.",
+    "fi": "Muutama pelkkä karpalo sopii koiralle. Karpalokastike ja hedelmäsekoitukset ovat ihmisille, joten kysy ensin aikuiselta."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "cs": "Mohou psi jíst brusinkovou omáčku?",
         "hr": "Smiju li psi jesti umak od brusnica?",
         "sv": "Får hundar äta tranbärssås?",
-        "da": "Må hunde spise tranebærsauce?"
+        "da": "Må hunde spise tranebærsauce?",
+        "fi": "Saako koira syödä karpalokastiketta?"
       },
       "a": {
         "en": "It is best avoided. Cranberry sauce is high in sugar, and some recipes include grapes, raisins, currants, which are toxic to dogs, or brandy, and alcohol is toxic to dogs too.",
@@ -83,7 +92,8 @@
         "cs": "Raději ne. Brusinková omáčka obsahuje hodně cukru a některé recepty obsahují hrozny, rozinky nebo korintky, které jsou pro psy jedovaté, nebo brandy – a alkohol je pro psy také jedovatý.",
         "hr": "Bolje ga je izbjegavati. Umak od brusnica sadrži mnogo šećera, a neki recepti sadrže grožđe, grožđice ili korintsko grožđe, koji su otrovni za pse, ili brendi, a i alkohol je otrovan za pse.",
         "sv": "Den är bäst att undvika. Tranbärssås innehåller mycket socker, och vissa recept innehåller vindruvor, russin eller korinter, som är giftiga för hundar, eller konjak, och alkohol är också giftig för hundar.",
-        "da": "Den er bedst at undgå. Tranebærsauce har et højt sukkerindhold, og nogle opskrifter indeholder vindruer, rosiner eller korender, som er giftige for hunde, eller brandy, og alkohol er også giftigt for hunde."
+        "da": "Den er bedst at undgå. Tranebærsauce har et højt sukkerindhold, og nogle opskrifter indeholder vindruer, rosiner eller korender, som er giftige for hunde, eller brandy, og alkohol er også giftigt for hunde.",
+        "fi": "Sitä on parasta välttää. Karpalokastikkeessa on paljon sokeria, ja joissakin resepteissä on viinirypäleitä, rusinoita tai korintteja, jotka ovat koirille myrkyllisiä, tai brandyä – ja alkoholikin on koirille myrkyllistä."
       }
     },
     {
@@ -93,7 +103,8 @@
         "cs": "Pomáhají brusinky psům při infekcích močových cest?",
         "hr": "Pomažu li brusnice psima kod infekcija mokraćnog sustava?",
         "sv": "Hjälper tranbär mot urinvägsinfektion hos hundar?",
-        "da": "Hjælper tranebær mod urinvejsinfektion hos hunde?"
+        "da": "Hjælper tranebær mod urinvejsinfektion hos hunde?",
+        "fi": "Auttavatko karpalot koiran virtsatietulehdukseen?"
       },
       "a": {
         "en": "Many people believe so, but there have not been enough studies in dogs to confirm it.",
@@ -101,7 +112,8 @@
         "cs": "Mnoho lidí si to myslí, ale u psů zatím nebylo dost studií, které by to potvrdily.",
         "hr": "Mnogi ljudi tako misle, ali nema dovoljno istraživanja na psima koja bi to potvrdila.",
         "sv": "Många tror det, men det finns inte tillräckligt med studier på hundar för att bekräfta det.",
-        "da": "Mange tror det, men der er ikke lavet nok undersøgelser på hunde til at bekræfte det."
+        "da": "Mange tror det, men der er ikke lavet nok undersøgelser på hunde til at bekræfte det.",
+        "fi": "Moni uskoo niin, mutta koirilla ei ole tehty tarpeeksi tutkimuksia asian vahvistamiseksi."
       }
     }
   ],
@@ -208,6 +220,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e4a55f8601fcda873e3384412b34f2f24e67d5092a1477ec62058c1418234518"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2aa04078ada55c7f1b588a8c999cb904e60f59ed5fe2afa824a8242eb4d20d81"
     }
   }
 }

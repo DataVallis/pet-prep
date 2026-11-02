@@ -14,7 +14,8 @@
     "cs": "Mandle",
     "hr": "Bademi",
     "sv": "Mandlar",
-    "da": "Mandler"
+    "da": "Mandler",
+    "fi": "Mantelit"
   },
   "question": {
     "en": "Can cats eat almonds?",
@@ -29,7 +30,8 @@
     "cs": "Mohou kočky jíst mandle?",
     "hr": "Smiju li mačke jesti bademe?",
     "sv": "Får katter äta mandlar?",
-    "da": "Må katte spise mandler?"
+    "da": "Må katte spise mandler?",
+    "fi": "Saako kissa syödä manteleita?"
   },
   "url_slug": {
     "en": "almonds",
@@ -44,7 +46,8 @@
     "cs": "mandle",
     "hr": "bademi",
     "sv": "mandlar",
-    "da": "mandler"
+    "da": "mandler",
+    "fi": "mantelit"
   },
   "level": "not_recommended",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ne, mandle je lepší držet mimo dosah koček. Sladké mandle se nepovažují za toxické, obsahují však hodně olejů a tuků a kočce po nich může být špatně – může mít podrážděný žaludek nebo zvracet.",
     "hr": "Ne, bademe je najbolje držati podalje od mačaka. Slatki bademi ne smatraju se otrovnima, ali imaju mnogo ulja i masti pa mački od njih može pozliti, uz želučane tegobe ili povraćanje.",
     "sv": "Nej, mandlar bör hållas borta från katter. Söta mandlar anses inte giftiga, men de innehåller mycket olja och fett och kan få katten att må dåligt, med orolig mage eller kräkningar.",
-    "da": "Nej, mandler holdes bedst væk fra katte. Søde mandler regnes ikke for giftige, men de indeholder meget olie og fedt og kan gøre en kat utilpas med dårlig mave eller opkast."
+    "da": "Nej, mandler holdes bedst væk fra katte. Søde mandler regnes ikke for giftige, men de indeholder meget olie og fedt og kan gøre en kat utilpas med dårlig mave eller opkast.",
+    "fi": "Ei, mantelit on parasta pitää kissan ulottumattomissa. Makeita manteleita ei pidetä myrkyllisinä, mutta ne sisältävät paljon öljyjä ja rasvaa, ja ne voivat saada kissan voimaan huonosti ja aiheuttaa vatsavaivoja tai oksentelua."
   },
   "why": {
     "en": "Cats Protection lists almonds among nuts that contain high amounts of oils and fats which can make a cat unwell. The ASPCA says sweet almonds sold for eating are not toxic to pets, but because they are not a normal part of a pet's diet they can cause digestive issues. Bitter almonds contain a cyanide compound and are considered toxic.",
@@ -75,7 +79,8 @@
     "cs": "Cats Protection řadí mandle mezi ořechy s vysokým obsahem olejů a tuků, po kterých může být kočce špatně. Podle ASPCA nejsou sladké mandle, které se prodávají k jídlu, pro zvířata toxické, ale protože nejsou běžnou součástí jejich stravy, mohou způsobit trávicí potíže. Hořké mandle obsahují sloučeninu kyanidu a považují se za toxické.",
     "hr": "Cats Protection navodi bademe među orašastim plodovima s mnogo ulja i masti, od kojih mački može pozliti. ASPCA navodi da slatki bademi koji se prodaju za jelo nisu otrovni za kućne ljubimce, ali budući da nisu uobičajen dio prehrane ljubimca, mogu izazvati probavne smetnje. Gorki bademi sadrže spoj cijanida i smatraju se otrovnima.",
     "sv": "Cats Protection räknar mandlar till de nötter som innehåller mycket olja och fett och kan få en katt att må dåligt. ASPCA skriver att söta mandlar som säljs som livsmedel inte är giftiga för husdjur, men eftersom de inte hör till djurens vanliga kost kan de ge matsmältningsbesvär. Bittermandlar innehåller en cyanidförening och anses giftiga.",
-    "da": "Cats Protection nævner mandler blandt de nødder der indeholder store mængder olie og fedt, som kan gøre en kat utilpas. ASPCA skriver at søde mandler til spisebrug ikke er giftige for kæledyr, men fordi de ikke er en normal del af et kæledyrs kost, kan de give fordøjelsesproblemer. Bittermandler indeholder en cyanidforbindelse og regnes for giftige."
+    "da": "Cats Protection nævner mandler blandt de nødder der indeholder store mængder olie og fedt, som kan gøre en kat utilpas. ASPCA skriver at søde mandler til spisebrug ikke er giftige for kæledyr, men fordi de ikke er en normal del af et kæledyrs kost, kan de give fordøjelsesproblemer. Bittermandler indeholder en cyanidforbindelse og regnes for giftige.",
+    "fi": "Cats Protection mainitsee mantelit niiden pähkinöiden joukossa, jotka sisältävät paljon öljyjä ja rasvaa ja voivat saada kissan voimaan huonosti. ASPCA:n mukaan syötäväksi myytävät makeat mantelit eivät ole lemmikeille myrkyllisiä, mutta koska ne eivät kuulu lemmikin tavalliseen ruokavalioon, ne voivat aiheuttaa ruoansulatusvaivoja. Karvasmantelit sisältävät syanidiyhdistettä, ja niitä pidetään myrkyllisinä."
   },
   "signs": {
     "en": [
@@ -155,6 +160,12 @@
       "Diarré",
       "Dårlig mave",
       "Virker utilpas"
+    ],
+    "fi": [
+      "Oksentelu",
+      "Ripuli",
+      "Vatsavaivat",
+      "Huonovointisuus"
     ]
   },
   "what_to_do": {
@@ -170,7 +181,8 @@
     "cs": "Pokud kočka snědla mandle, poraďte se s veterinářem, zejména pokud jich snědla hodně nebo se zdá, že jí není dobře. Poznamenejte si, co snědla, kolik a kdy. Pokud šlo o hořké mandle, okamžitě se obraťte na veterináře.",
     "hr": "Ako je tvoja mačka pojela bademe, obrati se veterinaru za savjet, osobito ako ih je pojela mnogo ili se čini da joj nije dobro. Zapiši što je pojela, koliko i kada. Ako su to bili gorki bademi, odmah se obrati veterinaru.",
     "sv": "Om katten har ätit mandlar, kontakta veterinären för råd, särskilt om den har ätit mycket eller verkar må dåligt. Notera vad den åt, hur mycket och när. Om det var bittermandlar, kontakta veterinären direkt.",
-    "da": "Hvis din kat har spist mandler, så kontakt din dyrlæge for at få råd, især hvis den har spist meget eller virker utilpas. Skriv ned hvad den har spist, hvor meget og hvornår. Hvis det var bittermandler, skal du kontakte din dyrlæge med det samme."
+    "da": "Hvis din kat har spist mandler, så kontakt din dyrlæge for at få råd, især hvis den har spist meget eller virker utilpas. Skriv ned hvad den har spist, hvor meget og hvornår. Hvis det var bittermandler, skal du kontakte din dyrlæge med det samme.",
+    "fi": "Jos kissasi söi manteleita, kysy neuvoa eläinlääkäriltä, etenkin jos se söi paljon tai vaikuttaa huonovointiselta. Kirjaa ylös, mitä se söi, kuinka paljon ja milloin. Jos ne olivat karvasmanteleita, ota heti yhteyttä eläinlääkäriin."
   },
   "serving": null,
   "child": {
@@ -186,7 +198,8 @@
     "cs": "Mandle jsou svačinka pro lidi. Pro kočky jsou moc mastné, tak si je nech ve své krabičce na svačinu.",
     "hr": "Bademi su grickalica za ljude. Za mace su premasni, zato ih čuvaj u svojoj kutiji za užinu.",
     "sv": "Mandlar är mellanmål för människor. De är för oljiga för katter, så låt dem ligga kvar i din matlåda.",
-    "da": "Mandler er en snack for mennesker. De er for fedtede til katte, så lad dem blive i din madpakke."
+    "da": "Mandler er en snack for mennesker. De er for fedtede til katte, så lad dem blive i din madpakke.",
+    "fi": "Mantelit ovat ihmisten naposteltavaa. Ne ovat kissoille liian öljyisiä, joten pidä ne omissa eväissäsi."
   },
   "faq": [
     {
@@ -203,7 +216,8 @@
         "cs": "A co hořké mandle?",
         "hr": "A gorki bademi?",
         "sv": "Hur är det med bittermandlar?",
-        "da": "Hvad med bittermandler?"
+        "da": "Hvad med bittermandler?",
+        "fi": "Entä karvasmantelit?"
       },
       "a": {
         "en": "Bitter almonds contain a cyanide compound and are considered toxic. If your cat ate bitter almonds, contact your vet straight away.",
@@ -218,7 +232,8 @@
         "cs": "Hořké mandle obsahují sloučeninu kyanidu a považují se za toxické. Pokud vaše kočka snědla hořké mandle, okamžitě se obraťte na veterináře.",
         "hr": "Gorki bademi sadrže spoj cijanida i smatraju se otrovnima. Ako je tvoja mačka pojela gorke bademe, odmah se obrati veterinaru.",
         "sv": "Bittermandlar innehåller en cyanidförening och anses giftiga. Om katten har ätit bittermandlar, kontakta veterinären direkt.",
-        "da": "Bittermandler indeholder en cyanidforbindelse og regnes for giftige. Hvis din kat har spist bittermandler, skal du kontakte din dyrlæge med det samme."
+        "da": "Bittermandler indeholder en cyanidforbindelse og regnes for giftige. Hvis din kat har spist bittermandler, skal du kontakte din dyrlæge med det samme.",
+        "fi": "Karvasmantelit sisältävät syanidiyhdistettä, ja niitä pidetään myrkyllisinä. Jos kissasi söi karvasmanteleita, ota heti yhteyttä eläinlääkäriin."
       }
     },
     {
@@ -235,7 +250,8 @@
         "cs": "Jsou některé ořechy horší než jiné?",
         "hr": "Jesu li neki orašasti plodovi opasniji od drugih?",
         "sv": "Är vissa nötter värre än andra?",
-        "da": "Er nogle nødder værre end andre?"
+        "da": "Er nogle nødder værre end andre?",
+        "fi": "Ovatko jotkin pähkinät pahempia kuin toiset?"
       },
       "a": {
         "en": "Yes. Macadamia nuts are fatty and also toxic to cats, so they are the ones to be most careful with.",
@@ -250,7 +266,8 @@
         "cs": "Ano. Makadamové ořechy jsou tučné a pro kočky navíc toxické, takže právě s nimi je třeba být nejopatrnější.",
         "hr": "Da. Makadamija je masna i uz to otrovna za mačke, pa na nju treba najviše paziti.",
         "sv": "Ja. Macadamianötter är feta och dessutom giftiga för katter, så det är dem du ska vara mest försiktig med.",
-        "da": "Ja. Macadamianødder er fede og desuden giftige for katte, så det er dem du skal være mest forsigtig med."
+        "da": "Ja. Macadamianødder er fede og desuden giftige for katte, så det er dem du skal være mest forsigtig med.",
+        "fi": "Ovat. Makadamiapähkinät ovat rasvaisia ja lisäksi kissoille myrkyllisiä, joten niiden kanssa kannattaa olla kaikkein varovaisin."
       }
     }
   ],
@@ -354,6 +371,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "58f541f5c47647a93f65e25c441af0c56c70cd0c3ec62bd6dacc9a1fec6acfb9"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "63b9680c258f209cbd7995c32d972b89a9b79c5ea296b76f62f14dfed483444c"
     }
   }
 }

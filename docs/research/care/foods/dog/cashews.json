@@ -14,7 +14,8 @@
     "cs": "Kešu ořechy",
     "hr": "Indijski oraščići",
     "sv": "Cashewnötter",
-    "da": "Cashewnødder"
+    "da": "Cashewnødder",
+    "fi": "Cashewpähkinät"
   },
   "question": {
     "en": "Can dogs eat cashews?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst kešu ořechy?",
     "hr": "Smiju li psi jesti indijske oraščiće?",
     "sv": "Får hundar äta cashewnötter?",
-    "da": "Må hunde spise cashewnødder?"
+    "da": "Må hunde spise cashewnødder?",
+    "fi": "Saako koira syödä cashewpähkinöitä?"
   },
   "url_slug": {
     "en": "cashews",
@@ -44,7 +46,8 @@
     "cs": "kesu-orechy",
     "hr": "indijski-orascici",
     "sv": "cashewnotter",
-    "da": "cashewnoedder"
+    "da": "cashewnoedder",
+    "fi": "cashewpahkinat"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ano, pár čistých kešu ořechů jako občasný pamlsek je obecně bezpečných: loupaných, nesolených a neochucených. Mají hodně tuku, takže příliš mnoho jich může podráždit žaludek nebo způsobit zánět slinivky břišní. Vyhněte se směsím ořechů, které mohou obsahovat jedovaté makadamové ořechy.",
     "hr": "Da, nekoliko običnih indijskih oraščića kao povremena poslastica uglavnom je sigurno: oljuštenih, neslanih i nezačinjenih. Sadrže mnogo masti, pa previše njih može izazvati probavne smetnje ili upalu gušterače. Izbjegavaj mješavine orašastih plodova, koje mogu sadržavati otrovnu makadamiju.",
     "sv": "Ja, några naturella cashewnötter som en godbit ibland är i regel säkra: skalade, osaltade och okryddade. De är mycket feta, så för många kan ge orolig mage eller bukspottkörtelinflammation. Undvik nötblandningar, som kan innehålla giftiga macadamianötter.",
-    "da": "Ja, nogle få rene cashewnødder som en godbid en gang imellem er generelt sikre: uden skal, usaltede og ukrydrede. De har et højt fedtindhold, så for mange kan give dårlig mave eller betændelse i bugspytkirtlen (pankreatitis). Undgå nøddeblandinger, som kan indeholde giftige macadamianødder."
+    "da": "Ja, nogle få rene cashewnødder som en godbid en gang imellem er generelt sikre: uden skal, usaltede og ukrydrede. De har et højt fedtindhold, så for mange kan give dårlig mave eller betændelse i bugspytkirtlen (pankreatitis). Undgå nøddeblandinger, som kan indeholde giftige macadamianødder.",
+    "fi": "Kyllä, muutama pelkkä cashewpähkinä satunnaisena herkkuna on yleensä turvallinen: kuorittuna, suolaamattomana ja maustamattomana. Niissä on paljon rasvaa, joten liian monet voivat aiheuttaa vatsavaivoja tai haimatulehduksen. Vältä pähkinäsekoituksia, joissa voi olla myrkyllisiä makadamiapähkinöitä."
   },
   "why": {
     "en": "Cashews aren't toxic, but they are a high-fat snack: eating too many can lead to tummy upset, pancreatitis and weight gain. Salted cashews add salt, which in excess is harmful. The biggest risk comes from other nuts in a mix, such as macadamias. Some dogs may react with swelling, itching or hives.",
@@ -75,7 +79,8 @@
     "cs": "Kešu ořechy nejsou jedovaté, ale jsou to velmi tučné pochutiny: když jich pes sní příliš, může mít zažívací potíže, zánět slinivky břišní a přibrat na váze. Solené kešu obsahují navíc sůl, která je v nadbytku škodlivá. Největší riziko představují jiné ořechy ve směsi, například makadamové. Někteří psi mohou reagovat otokem, svěděním nebo kopřivkou.",
     "hr": "Indijski oraščići nisu otrovni, ali su vrlo masna grickalica: previše njih može dovesti do probavnih smetnji, upale gušterače i debljanja. Slani indijski oraščići donose i sol, koja je u višku štetna. Najveći rizik dolazi od drugih orašastih plodova u mješavini, poput makadamije. Neki psi mogu reagirati oticanjem, svrbežom ili koprivnjačom.",
     "sv": "Cashewnötter är inte giftiga, men de är ett fett mellanmål: för många kan leda till orolig mage, bukspottkörtelinflammation (pankreatit) och viktökning. Saltade cashewnötter ger salt, som är skadligt i för stora mängder. Den största risken kommer från andra nötter i en blandning, som macadamianötter. Vissa hundar kan reagera med svullnad, klåda eller nässelutslag.",
-    "da": "Cashewnødder er ikke giftige, men de er en fed snack: for mange kan føre til dårlig mave, betændelse i bugspytkirtlen og vægtøgning. Saltede cashewnødder giver salt, som er skadeligt i store mængder. Den største risiko kommer fra andre nødder i en blanding, fx macadamianødder. Nogle hunde kan reagere med hævelse, kløe eller nældefeber."
+    "da": "Cashewnødder er ikke giftige, men de er en fed snack: for mange kan føre til dårlig mave, betændelse i bugspytkirtlen og vægtøgning. Saltede cashewnødder giver salt, som er skadeligt i store mængder. Den største risiko kommer fra andre nødder i en blanding, fx macadamianødder. Nogle hunde kan reagere med hævelse, kløe eller nældefeber.",
+    "fi": "Cashewpähkinät eivät ole myrkyllisiä, mutta ne ovat rasvainen välipala: liian monen syöminen voi johtaa vatsavaivoihin, haimatulehdukseen ja painonnousuun. Suolatuissa cashewpähkinöissä on suolaa, joka liikaa saatuna on haitallista. Suurin riski tulee sekoituksen muista pähkinöistä, kuten makadamiapähkinöistä. Joillakin koirilla voi esiintyä reaktiona turvotusta, kutinaa tai nokkosihottumaa."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "cs": "Sledujte, zda se neobjeví zvracení, průjem, otok, svědění nebo kopřivka, a pokud ano, zavolejte veterináři. Pokud váš pes snědl velké množství, solené ořechy nebo směs, ve které mohly být makadamové ořechy, zavolejte veterináři hned.",
     "hr": "Prati pojavljuju li se povraćanje, proljev, oticanje, svrbež ili koprivnjača i nazovi veterinara ako se pojave. Ako je pas pojeo veliku količinu, slane oraščiće ili mješavinu koja može sadržavati makadamiju, odmah nazovi veterinara.",
     "sv": "Håll utkik efter kräkningar, diarré, svullnad, klåda eller nässelutslag och ring veterinären om det dyker upp. Om hunden har ätit en stor mängd, saltade nötter eller en blandning som kan innehålla macadamianötter, ring veterinären direkt.",
-    "da": "Hold øje med opkast, diarré, hævelse, kløe eller nældefeber, og ring til din dyrlæge hvis de opstår. Hvis hunden har spist en stor mængde, saltede nødder eller en blanding der kan indeholde macadamianødder, skal du ringe til din dyrlæge med det samme."
+    "da": "Hold øje med opkast, diarré, hævelse, kløe eller nældefeber, og ring til din dyrlæge hvis de opstår. Hvis hunden har spist en stor mængde, saltede nødder eller en blanding der kan indeholde macadamianødder, skal du ringe til din dyrlæge med det samme.",
+    "fi": "Seuraa, ilmeneekö oksentelua, ripulia, turvotusta, kutinaa tai nokkosihottumaa, ja soita eläinlääkärille, jos niitä ilmenee. Jos koirasi söi suuren määrän, suolattuja pähkinöitä tai sekoitusta, jossa voi olla makadamiapähkinöitä, soita heti eläinlääkärille."
   },
   "serving": {
     "en": "Only a few plain cashews, shelled and unsalted, never from a mixed-nut bag.",
@@ -106,7 +112,8 @@
     "cs": "Jen pár čistých kešu ořechů, loupaných a nesolených, nikdy ze sáčku se směsí ořechů.",
     "hr": "Samo nekoliko običnih indijskih oraščića, oljuštenih i neslanih, nikad iz vrećice s mješavinom orašastih plodova.",
     "sv": "Bara några naturella cashewnötter, skalade och osaltade, aldrig ur en påse med nötblandning.",
-    "da": "Kun nogle få rene cashewnødder uden skal og salt, aldrig fra en pose med blandede nødder."
+    "da": "Kun nogle få rene cashewnødder uden skal og salt, aldrig fra en pose med blandede nødder.",
+    "fi": "Vain muutama pelkkä cashewpähkinä, kuorittuna ja suolaamattomana, ei koskaan pähkinäsekoituspussista."
   },
   "child": {
     "en": "A dog may have one or two plain cashews sometimes. Salty nut mixes are not for dogs.",
@@ -121,7 +128,8 @@
     "cs": "Pes může občas dostat jeden nebo dva čisté kešu ořechy. Slané směsi ořechů nejsou pro psy.",
     "hr": "Pas ponekad smije dobiti jedan ili dva obična indijska oraščića. Slane mješavine orašastih plodova nisu za pse.",
     "sv": "En hund kan ibland få en eller två osaltade cashewnötter. Salta nötblandningar är inte för hundar.",
-    "da": "En hund må godt få en eller to almindelige cashewnødder en gang imellem. Saltede nøddeblandinger er ikke til hunde."
+    "da": "En hund må godt få en eller to almindelige cashewnødder en gang imellem. Saltede nøddeblandinger er ikke til hunde.",
+    "fi": "Koira saa joskus syödä yhden tai kaksi pelkkää cashewpähkinää. Suolaiset pähkinäsekoitukset eivät ole koirille."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "cs": "Proč ne směs ořechů?",
         "hr": "Zašto izbjegavati mješavine orašastih plodova?",
         "sv": "Varför inte nötblandningar?",
-        "da": "Hvorfor ikke blandede nødder?"
+        "da": "Hvorfor ikke blandede nødder?",
+        "fi": "Miksi ei pähkinäsekoituksia?"
       },
       "a": {
         "en": "Mixes may contain macadamia nuts, which are very toxic to dogs, and are often salted.",
@@ -153,7 +162,8 @@
         "cs": "Směsi mohou obsahovat makadamové ořechy, které jsou pro psy velmi jedovaté, a často jsou solené.",
         "hr": "Mješavine mogu sadržavati makadamiju, koja je vrlo otrovna za pse, a često su i slane.",
         "sv": "Blandningar kan innehålla macadamianötter, som är mycket giftiga för hundar, och är ofta saltade.",
-        "da": "Blandinger kan indeholde macadamianødder, som er meget giftige for hunde, og de er ofte saltede."
+        "da": "Blandinger kan indeholde macadamianødder, som er meget giftige for hunde, og de er ofte saltede.",
+        "fi": "Sekoituksissa voi olla makadamiapähkinöitä, jotka ovat koirille hyvin myrkyllisiä, ja ne ovat usein suolattuja."
       }
     }
   ],
@@ -280,6 +290,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "65a9cddb03591282f8e465d32c71594ebbc05226a39b26bfbb4d572da651a885"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f85da7b2f5b8865131184a1141e9cec2c77b1aa5b2cc7d89b998b6b4cbdef6aa"
     }
   }
 }

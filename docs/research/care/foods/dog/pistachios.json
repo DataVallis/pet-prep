@@ -14,7 +14,8 @@
     "cs": "Pistácie",
     "hr": "Pistacije",
     "sv": "Pistaschnötter",
-    "da": "Pistacienødder"
+    "da": "Pistacienødder",
+    "fi": "Pistaasipähkinät"
   },
   "question": {
     "en": "Can dogs eat pistachios?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst pistácie?",
     "hr": "Smiju li psi jesti pistacije?",
     "sv": "Får hundar äta pistaschnötter?",
-    "da": "Må hunde spise pistacienødder?"
+    "da": "Må hunde spise pistacienødder?",
+    "fi": "Saako koira syödä pistaasipähkinöitä?"
   },
   "url_slug": {
     "en": "pistachios",
@@ -44,7 +46,8 @@
     "cs": "pistacie",
     "hr": "pistacije",
     "sv": "pistaschnotter",
-    "da": "pistacienoedder"
+    "da": "pistacienoedder",
+    "fi": "pistaasipahkinat"
   },
   "level": "not_recommended",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ne, raději se jim vyhněte. Pistácie samy o sobě jedovaté nejsou, jsou ale tučné a obvykle slané, mohou podráždit žaludek nebo vést k zánětu slinivky břišní a ořechy i skořápky mohou způsobit dušení. Mohou na nich také růst škodlivé plísně.",
     "hr": "Ne, najbolje ih je izbjegavati. Pistacije same po sebi nisu otrovne, ali masne su i obično slane, mogu izazvati probavne tegobe ili upalu gušterače, a plodovi ili ljuske mogu izazvati gušenje. Na njima se može razviti i štetna plijesan.",
     "sv": "Nej, helst inte. Pistaschnötter är inte giftiga i sig, men de är feta och oftast salta, kan ge magbesvär eller leda till bukspottkörtelinflammation (pankreatit), och nötter eller skal kan orsaka kvävning. De kan också mögla, och möglet är skadligt.",
-    "da": "Nej, det er bedst at undgå dem. Pistacienødder er ikke giftige i sig selv, men de er fede og som regel saltede og kan give maveproblemer eller betændelse i bugspytkirtlen, og nødder eller skaller kan sætte sig fast i halsen. Der kan også gro skadelig skimmel på dem."
+    "da": "Nej, det er bedst at undgå dem. Pistacienødder er ikke giftige i sig selv, men de er fede og som regel saltede og kan give maveproblemer eller betændelse i bugspytkirtlen, og nødder eller skaller kan sætte sig fast i halsen. Der kan også gro skadelig skimmel på dem.",
+    "fi": "Ei, niitä on parasta välttää. Pistaasipähkinät eivät sinänsä ole myrkyllisiä, mutta ne ovat rasvaisia ja yleensä suolaisia, voivat aiheuttaa vatsavaivoja tai johtaa haimatulehdukseen, ja pähkinät tai kuoret voivat aiheuttaa tukehtumisen. Niihin voi myös kasvaa haitallista hometta."
   },
   "why": {
     "en": "Pistachios are high in fat and salt, which can cause stomach problems, and fatty, salty snacks can lead to pancreatitis. Even shelled nuts can be a choking hazard. Mould on nut shells can produce aflatoxin, which can make dogs weak and lethargic, upset the stomach and even cause seizures.",
@@ -75,7 +79,8 @@
     "cs": "Pistácie mají hodně tuku a soli, což může způsobit žaludeční potíže, a tučné, slané pochutiny mohou vést k zánětu slinivky břišní. I vyloupané ořechy mohou způsobit dušení. Plíseň na skořápkách ořechů může produkovat aflatoxin, po kterém mohou být psi slabí a malátní, může podráždit žaludek, a dokonce způsobit záchvaty.",
     "hr": "Pistacije imaju puno masti i soli, što može izazvati probavne tegobe, a masne i slane grickalice mogu dovesti do upale gušterače. Čak i oljušteni plodovi mogu izazvati gušenje. Plijesan na ljuskama orašastih plodova može stvarati aflatoksin, od kojeg pas može postati slab i bezvoljan, a može izazvati i probavne tegobe, pa čak i napadaje.",
     "sv": "Pistaschnötter innehåller mycket fett och salt, som kan ge magproblem, och feta, salta snacks kan leda till bukspottkörtelinflammation. Även skalade nötter kan orsaka kvävning. Mögel på nötskal kan bilda aflatoxin, som kan göra hundar svaga och slöa, ge magbesvär och till och med orsaka kramper.",
-    "da": "Pistacienødder indeholder meget fedt og salt, som kan give maveproblemer, og fede, salte snacks kan føre til betændelse i bugspytkirtlen. Selv afskallede nødder kan sætte sig fast i halsen. Skimmel på nøddeskaller kan danne aflatoksin, som kan gøre hunde svage og sløve, give maveproblemer og endda kramper."
+    "da": "Pistacienødder indeholder meget fedt og salt, som kan give maveproblemer, og fede, salte snacks kan føre til betændelse i bugspytkirtlen. Selv afskallede nødder kan sætte sig fast i halsen. Skimmel på nøddeskaller kan danne aflatoksin, som kan gøre hunde svage og sløve, give maveproblemer og endda kramper.",
+    "fi": "Pistaasipähkinöissä on paljon rasvaa ja suolaa, mikä voi aiheuttaa vatsavaivoja, ja rasvaiset, suolaiset naposteltavat voivat johtaa haimatulehdukseen. Kuoritutkin pähkinät voivat aiheuttaa tukehtumisvaaran. Pähkinöiden kuorissa kasvava home voi tuottaa aflatoksiinia, joka voi tehdä koirasta heikon ja väsyneen, aiheuttaa vatsavaivoja ja jopa kouristuksia."
   },
   "signs": {
     "en": [
@@ -155,6 +160,12 @@
       "Mavesmerter, kvalme eller lavt energiniveau (mulig betændelse i bugspytkirtlen)",
       "Svaghed og træthed",
       "Tegn på kvælning"
+    ],
+    "fi": [
+      "Oksentelu tai ripuli",
+      "Vatsakipu, pahoinvointi tai voimattomuus (mahdollinen haimatulehdus)",
+      "Heikkous ja väsymys",
+      "Tukehtuminen"
     ]
   },
   "what_to_do": {
@@ -170,7 +181,8 @@
     "cs": "Pokud váš pes snědl pár pistácií, sledujte, zda nezvrací, nemá průjem nebo bolesti břicha. Zavolejte veterináři, pokud jich snědl hodně nebo snědl skořápky, zdá se, že se dusí, nebo je slabý, malátný či má některý z těchto příznaků.",
     "hr": "Ako je tvoj pas pojeo nekoliko pistacija, prati pojavljuju li se povraćanje, proljev ili bolovi u trbuhu. Nazovi veterinara ako je pojeo puno pistacija ili ljuski, ako se čini da se guši ili ako pokazuje slabost, umor ili bilo koji od ovih znakova.",
     "sv": "Om hunden ätit några pistaschnötter, håll utkik efter kräkningar, diarré eller ont i magen. Ring veterinären om hunden ätit många nötter eller skal, verkar ha satt något i halsen eller visar svaghet, trötthet eller något av dessa symtom.",
-    "da": "Hvis din hund har spist nogle få pistacienødder, så hold øje med opkast, diarré eller mavesmerter. Kontakt din dyrlæge hvis hunden har spist mange nødder eller skaller, ser ud til at være ved at blive kvalt eller viser svaghed, træthed eller et af disse symptomer."
+    "da": "Hvis din hund har spist nogle få pistacienødder, så hold øje med opkast, diarré eller mavesmerter. Kontakt din dyrlæge hvis hunden har spist mange nødder eller skaller, ser ud til at være ved at blive kvalt eller viser svaghed, træthed eller et af disse symptomer.",
+    "fi": "Jos koirasi söi muutaman pistaasipähkinän, seuraa, tuleeko oksentelua, ripulia tai vatsakipua. Soita eläinlääkärille, jos koira söi niitä tai niiden kuoria paljon, näyttää tukehtuvan tai sillä on heikkoutta, väsymystä tai jokin muu näistä oireista."
   },
   "serving": null,
   "child": {
@@ -186,7 +198,8 @@
     "cs": "Pistácie ani jejich skořápky nejsou pro psy. Psa z nich může rozbolet bříško, tak dej misku vysoko.",
     "hr": "Pistacije i njihove ljuske nisu za pse. Od njih psa može zaboljeti trbuh, zato zdjelicu drži visoko.",
     "sv": "Pistaschnötter och deras skal är inte för hundar. De kan ge en hund ont i magen, så ställ skålen högt upp.",
-    "da": "Pistacienødder og deres skaller er ikke til hunde. De kan give hunden ondt i maven, så stil skålen højt op."
+    "da": "Pistacienødder og deres skaller er ikke til hunde. De kan give hunden ondt i maven, så stil skålen højt op.",
+    "fi": "Pistaasipähkinät ja niiden kuoret eivät sovi koirille. Niistä voi tulla koiralle vatsakipu, joten pidä kulho korkealla."
   },
   "faq": [
     {
@@ -203,7 +216,8 @@
         "cs": "Jsou skořápky pistácií nebezpečné?",
         "hr": "Jesu li ljuske pistacija opasne?",
         "sv": "Är pistaschskal farliga?",
-        "da": "Er pistacieskaller farlige?"
+        "da": "Er pistacieskaller farlige?",
+        "fi": "Ovatko pistaasipähkinän kuoret vaarallisia?"
       },
       "a": {
         "en": "Yes. Pistachios and their shells can get lodged in a dog's throat, and mould can grow on nut shells.",
@@ -218,7 +232,8 @@
         "cs": "Ano. Pistácie i jejich skořápky mohou psovi uvíznout v krku a na skořápkách ořechů může růst plíseň.",
         "hr": "Jesu. Pistacije i njihove ljuske mogu zapeti psu u grlu, a na ljuskama orašastih plodova može rasti plijesan.",
         "sv": "Ja. Pistaschnötter och deras skal kan fastna i hundens hals, och mögel kan växa på nötskalen.",
-        "da": "Ja. Pistacienødder og deres skaller kan sætte sig fast i hundens hals, og der kan gro skimmel på nøddeskaller."
+        "da": "Ja. Pistacienødder og deres skaller kan sætte sig fast i hundens hals, og der kan gro skimmel på nøddeskaller.",
+        "fi": "Ovat. Pistaasipähkinät ja niiden kuoret voivat juuttua koiran kurkkuun, ja pähkinöiden kuoriin voi kasvaa hometta."
       }
     }
   ],
@@ -341,6 +356,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1bc68fb57ccacb201a207a1f347f95d09edf442e4f4157036ed54f8a3c9e3124"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "21d25143533003f290ab411b583468d86b9a8bf1439f2646459f982587305fa8"
     }
   }
 }

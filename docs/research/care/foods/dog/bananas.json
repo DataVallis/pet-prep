@@ -7,7 +7,8 @@
     "cs": "Banány",
     "hr": "Banane",
     "sv": "Bananer",
-    "da": "Bananer"
+    "da": "Bananer",
+    "fi": "Banaanit"
   },
   "question": {
     "en": "Can dogs eat bananas?",
@@ -15,7 +16,8 @@
     "cs": "Mohou psi jíst banány?",
     "hr": "Smiju li psi jesti banane?",
     "sv": "Får hundar äta bananer?",
-    "da": "Må hunde spise bananer?"
+    "da": "Må hunde spise bananer?",
+    "fi": "Saako koira syödä banaania?"
   },
   "url_slug": {
     "en": "bananas",
@@ -23,7 +25,8 @@
     "cs": "banany",
     "hr": "banane",
     "sv": "bananer",
-    "da": "bananer"
+    "da": "bananer",
+    "fi": "banaanit"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "cs": "Ano, jako občasný pamlsek. Banány mají hodně draslíku, vitaminu B6 a vitaminu C, ale také hodně cukru, proto je nechte jako pamlsek, ne jako součást každodenní stravy vašeho psa. Vždy odstraňte slupku.",
     "hr": "Da, kao povremenu poslasticu. Banane su bogate kalijem, vitaminom B6 i vitaminom C, ali sadrže mnogo šećera, pa je bolje da budu poslastica, a ne dio svakodnevne prehrane tvog psa. Koru uvijek ukloni.",
     "sv": "Ja, som en godbit ibland. Bananer innehåller mycket kalium, B6-vitamin och C-vitamin, men också mycket socker, så de passar bäst som godbit och inte som en del av hundens dagliga kost. Ta alltid bort skalet.",
-    "da": "Ja, som en godbid en gang imellem. Bananer indeholder meget kalium, B6-vitamin og C-vitamin, men de har et højt sukkerindhold, så de er bedst som godbid og ikke som en del af hundens daglige kost. Fjern altid skrællen."
+    "da": "Ja, som en godbid en gang imellem. Bananer indeholder meget kalium, B6-vitamin og C-vitamin, men de har et højt sukkerindhold, så de er bedst som godbid og ikke som en del af hundens daglige kost. Fjern altid skrællen.",
+    "fi": "Kyllä, satunnaisena herkkuna. Banaanissa on paljon kaliumia, B6-vitamiinia ja C-vitamiinia, mutta myös paljon sokeria, joten se sopii paremmin herkuksi kuin osaksi koirasi päivittäistä ruokavaliota. Poista aina kuori."
   },
   "why": {
     "en": "Too much banana can add extra calories and may cause digestive upset in some dogs. Banana peels are not toxic to dogs, but they are hard to digest and could cause stomach discomfort or, in some cases, an intestinal blockage.",
@@ -40,7 +44,8 @@
     "cs": "Příliš mnoho banánu může přidat kalorie navíc a u některých psů může způsobit zažívací potíže. Banánové slupky nejsou pro psy jedovaté, ale špatně se tráví a mohly by způsobit žaludeční potíže nebo v některých případech ucpání střev.",
     "hr": "Previše banane može donijeti višak kalorija i kod nekih pasa izazvati probavne smetnje. Kora banane nije otrovna za pse, ali se teško probavlja i može izazvati želučane tegobe ili, u nekim slučajevima, začepljenje crijeva.",
     "sv": "För mycket banan kan ge extra kalorier och hos vissa hundar orsaka magbesvär. Bananskal är inte giftiga för hundar, men de är svåra att smälta och kan ge obehag i magen eller i vissa fall tarmstopp.",
-    "da": "For meget banan kan give ekstra kalorier og kan give fordøjelsesproblemer hos nogle hunde. Bananskræller er ikke giftige for hunde, men de er svære at fordøje og kan give ubehag i maven eller i nogle tilfælde tarmblokering."
+    "da": "For meget banan kan give ekstra kalorier og kan give fordøjelsesproblemer hos nogle hunde. Bananskræller er ikke giftige for hunde, men de er svære at fordøje og kan give ubehag i maven eller i nogle tilfælde tarmblokering.",
+    "fi": "Liian suuri määrä banaania voi tuoda ylimääräisiä kaloreita ja aiheuttaa joillekin koirille ruoansulatusvaivoja. Banaanin kuoret eivät ole koirille myrkyllisiä, mutta ne sulavat huonosti ja voivat aiheuttaa vatsavaivoja tai joissakin tapauksissa suolitukoksen."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "cs": "Banánová slupka by mohla způsobit žaludeční potíže nebo v některých případech ucpání střev, proto ji vždy odstraňte. Pokud si nejste jistí, kolik banánu se hodí k velikosti, věku nebo zdraví vašeho psa, zeptejte se veterináře.",
     "hr": "Kora banane može izazvati želučane tegobe ili, u nekim slučajevima, začepljenje crijeva, zato je uvijek ukloni. Ako nisi siguran koliko banane odgovara veličini, dobi ili zdravlju tvog psa, pitaj veterinara.",
     "sv": "Ett bananskal kan ge obehag i magen eller i vissa fall tarmstopp, så ta alltid bort det. Om du är osäker på hur mycket banan som passar hundens storlek, ålder eller hälsa, fråga veterinären.",
-    "da": "En bananskræl kan give ubehag i maven eller i nogle tilfælde tarmblokering, så fjern den altid. Spørg din dyrlæge hvis du er i tvivl om hvor meget banan der passer til din hunds størrelse, alder eller helbred."
+    "da": "En bananskræl kan give ubehag i maven eller i nogle tilfælde tarmblokering, så fjern den altid. Spørg din dyrlæge hvis du er i tvivl om hvor meget banan der passer til din hunds størrelse, alder eller helbred.",
+    "fi": "Banaanin kuori voi aiheuttaa vatsavaivoja tai joissakin tapauksissa suolitukoksen, joten poista se aina. Jos et ole varma, kuinka paljon banaania sopii koirasi koolle, iälle tai terveydentilalle, kysy eläinlääkäriltä."
   },
   "serving": {
     "en": "Peeled, in bite-sized pieces, mashed into food or frozen; as an occasional treat.",
@@ -57,7 +63,8 @@
     "cs": "Oloupané, v malých kouscích, rozmačkané do krmiva nebo zmražené; jako občasný pamlsek.",
     "hr": "Oguljena, u komadićima za jedan zalogaj, zgnječena i umiješana u hranu ili zamrznuta; kao povremena poslastica.",
     "sv": "Skalad, i små bitar, mosad i maten eller fryst; som en godbit ibland.",
-    "da": "Skrællet, i mundrette stykker, moset ned i maden eller frosset; som en godbid en gang imellem."
+    "da": "Skrællet, i mundrette stykker, moset ned i maden eller frosset; som en godbid en gang imellem.",
+    "fi": "Kuorittuna, suupalan kokoisina paloina, ruokaan muussattuna tai pakastettuna; satunnaisena herkkuna."
   },
   "child": {
     "en": "Dogs can have a small piece of banana as a treat! A grown-up takes the peel off first.",
@@ -65,7 +72,8 @@
     "cs": "Psi můžou dostat malý kousek banánu jako pamlsek! Dospělý ho nejdřív oloupe.",
     "hr": "Psi smiju dobiti komadić banane kao poslasticu! Odrasla osoba prvo skine koru.",
     "sv": "Hundar kan få en liten bit banan som godbit! En vuxen tar bort skalet först.",
-    "da": "Hunde kan få et lille stykke banan som godbid! En voksen tager skrællen af først."
+    "da": "Hunde kan få et lille stykke banan som godbid! En voksen tager skrællen af først.",
+    "fi": "Koira saa pienen palan banaania herkuksi! Aikuinen poistaa ensin kuoren."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "cs": "Mohou psi jíst banánové slupky?",
         "hr": "Smiju li psi jesti koru banane?",
         "sv": "Får hundar äta bananskal?",
-        "da": "Må hunde spise bananskræller?"
+        "da": "Må hunde spise bananskræller?",
+        "fi": "Saako koira syödä banaanin kuoria?"
       },
       "a": {
         "en": "No. Peels are not toxic, but they are hard to digest, so always remove the peel first.",
@@ -83,7 +92,8 @@
         "cs": "Ne. Slupky nejsou jedovaté, ale špatně se tráví, proto je vždy nejdřív odstraňte.",
         "hr": "Ne. Kora nije otrovna, ali se teško probavlja, zato je uvijek prvo ukloni.",
         "sv": "Nej. Skalen är inte giftiga, men de är svåra att smälta, så ta alltid bort skalet först.",
-        "da": "Nej. Skrællerne er ikke giftige, men de er svære at fordøje, så fjern altid skrællen først."
+        "da": "Nej. Skrællerne er ikke giftige, men de er svære at fordøje, så fjern altid skrællen først.",
+        "fi": "Ei saa. Kuoret eivät ole myrkyllisiä, mutta ne sulavat huonosti, joten poista kuori aina ensin."
       }
     }
   ],
@@ -169,6 +179,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8104cfd9eb7f075695300e84e4350905530ea274c9799ed86cf4f0513a68ecc8"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b65d2d58ec6b7744b6c82d2ed32cde0c13e7ecd0ca37af8ecd714ae3efefb752"
     }
   }
 }

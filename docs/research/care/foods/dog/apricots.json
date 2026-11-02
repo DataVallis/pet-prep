@@ -14,7 +14,8 @@
     "cs": "Meruňky",
     "hr": "Marelice",
     "sv": "Aprikoser",
-    "da": "Abrikoser"
+    "da": "Abrikoser",
+    "fi": "Aprikoosit"
   },
   "question": {
     "en": "Can dogs eat apricots?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst meruňky?",
     "hr": "Smiju li psi jesti marelice?",
     "sv": "Får hundar äta aprikoser?",
-    "da": "Må hunde spise abrikoser?"
+    "da": "Må hunde spise abrikoser?",
+    "fi": "Saako koira syödä aprikooseja?"
   },
   "url_slug": {
     "en": "apricots",
@@ -44,7 +46,8 @@
     "cs": "merunky",
     "hr": "marelice",
     "sv": "aprikoser",
-    "da": "abrikoser"
+    "da": "abrikoser",
+    "fi": "aprikoosit"
   },
   "level": "not_recommended",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Nedoporučuje se. Meruňka je uváděna jako rostlina jedovatá pro psy: její stonky, listy a semena obsahují kyanid, zvlášť když vadnou. Nikdy nenechte psa kousat meruňkové pecky, listy ani stonky.",
     "hr": "Ne preporučuje se. Marelica je kao biljka navedena kao otrovna za pse: njezine peteljke, listovi i sjemenke sadrže cijanid, osobito dok venu. Nikad ne dopusti psu da žvače koštice, listove ili peteljke marelice.",
     "sv": "Rekommenderas inte. Aprikosträdet anges som giftigt för hundar: skaft, blad och kärnor innehåller cyanid, särskilt när de vissnar. Låt aldrig hunden tugga på aprikoskärnor, blad eller skaft.",
-    "da": "Det frarådes. Abrikosplanten er opført som giftig for hunde: stilke, blade og kerner indeholder cyanid, især når de visner. Lad aldrig hunden tygge på abrikossten, -blade eller -stilke."
+    "da": "Det frarådes. Abrikosplanten er opført som giftig for hunde: stilke, blade og kerner indeholder cyanid, især når de visner. Lad aldrig hunden tygge på abrikossten, -blade eller -stilke.",
+    "fi": "Ei suositella. Aprikoosikasvi on luokiteltu koirille myrkylliseksi: sen varret, lehdet ja siemenet sisältävät syanidia, etenkin kuihtuessaan. Älä koskaan anna koirasi pureskella aprikoosin kiviä, lehtiä tai varsia."
   },
   "why": {
     "en": "Apricot stems, leaves and seeds contain cyanogenic glycosides, which release cyanide. Cyanide reduces the body's ability to use oxygen. Because the plant is listed as toxic to dogs, we do not rate apricots as a safe treat.",
@@ -75,7 +79,8 @@
     "cs": "Stonky, listy a semena meruňky obsahují kyanogenní glykosidy, ze kterých se uvolňuje kyanid. Kyanid snižuje schopnost těla využívat kyslík. Protože je rostlina uváděna jako jedovatá pro psy, nepovažujeme meruňky za bezpečný pamlsek.",
     "hr": "Peteljke, listovi i sjemenke marelice sadrže cijanogene glikozide, iz kojih se oslobađa cijanid. Cijanid smanjuje sposobnost tijela da iskoristi kisik. Budući da je biljka navedena kao otrovna za pse, marelice ne smatramo sigurnom poslasticom.",
     "sv": "Aprikosträdets skaft, blad och kärnor innehåller cyanogena glykosider, som frigör cyanid. Cyanid minskar kroppens förmåga att använda syre. Eftersom trädet anges som giftigt för hundar klassar vi inte aprikoser som en säker godbit.",
-    "da": "Abrikosens stilke, blade og kerner indeholder cyanogene glykosider, som frigiver cyanid. Cyanid nedsætter kroppens evne til at udnytte ilt. Fordi planten er opført som giftig for hunde, vurderer vi ikke abrikoser som en sikker godbid."
+    "da": "Abrikosens stilke, blade og kerner indeholder cyanogene glykosider, som frigiver cyanid. Cyanid nedsætter kroppens evne til at udnytte ilt. Fordi planten er opført som giftig for hunde, vurderer vi ikke abrikoser som en sikker godbid.",
+    "fi": "Aprikoosin varret, lehdet ja siemenet sisältävät syanogeenisia glykosideja, joista vapautuu syanidia. Syanidi heikentää elimistön kykyä käyttää happea. Koska kasvi on luokiteltu koirille myrkylliseksi, emme pidä aprikoosia turvallisena herkkuna."
   },
   "signs": {
     "en": [
@@ -155,6 +160,12 @@
       "Teglstensrødt tandkød",
       "Vejrtrækningsbesvær, hiven efter vejret",
       "Chok"
+    ],
+    "fi": [
+      "Laajentuneet pupillit",
+      "Tiilenpunaiset ikenet",
+      "Hengitysvaikeudet, läähätys",
+      "Sokki"
     ]
   },
   "what_to_do": {
@@ -170,7 +181,8 @@
     "cs": "Pokud váš pes kousal nebo spolkl meruňkové pecky, listy nebo stonky, okamžitě se obraťte na veterináře. Poznamenejte si, co pes snědl a zhruba kolik.",
     "hr": "Ako je pas žvakao ili progutao koštice, listove ili peteljke marelice, odmah se obrati veterinaru za savjet. Zapiši što je pojeo i otprilike koliko.",
     "sv": "Om hunden har tuggat på eller svalt aprikoskärnor, blad eller skaft, kontakta veterinären för råd direkt. Notera vad den åt och ungefär hur mycket.",
-    "da": "Hvis hunden har tygget på eller slugt abrikossten, -blade eller -stilke, skal du straks kontakte din dyrlæge for at få råd. Skriv ned hvad hunden har spist og omtrent hvor meget."
+    "da": "Hvis hunden har tygget på eller slugt abrikossten, -blade eller -stilke, skal du straks kontakte din dyrlæge for at få råd. Skriv ned hvad hunden har spist og omtrent hvor meget.",
+    "fi": "Jos koirasi pureskeli tai nieli aprikoosin kiviä, lehtiä tai varsia, kysy heti neuvoa eläinlääkäriltä. Kirjaa ylös, mitä koira söi ja suunnilleen kuinka paljon."
   },
   "serving": null,
   "child": {
@@ -186,7 +198,8 @@
     "cs": "Meruňkové pecky, listy a stonky psům škodí. Meruňky nech pro lidi, a když pes kouše pecku, řekni to dospělému.",
     "hr": "Koštice, listovi i peteljke marelice štete psima. Marelice ostavi ljudima, a ako pas žvače košticu, reci odrasloj osobi.",
     "sv": "Aprikoskärnor, blad och skaft är dåliga för hundar. Spara aprikoser till människor, och säg till en vuxen om hunden tuggar på en kärna.",
-    "da": "Abrikossten, -blade og -stilke er dårlige for hunde. Lad abrikoserne være til mennesker, og sig det til en voksen hvis din hund tygger på en sten."
+    "da": "Abrikossten, -blade og -stilke er dårlige for hunde. Lad abrikoserne være til mennesker, og sig det til en voksen hvis din hund tygger på en sten.",
+    "fi": "Aprikoosin kivet, lehdet ja varret ovat koirille pahasta. Jätä aprikoosit ihmisille ja kerro aikuiselle, jos koirasi pureskelee kiveä."
   },
   "faq": [
     {
@@ -203,7 +216,8 @@
         "cs": "Které části meruňky jsou jedovaté?",
         "hr": "Koji su dijelovi marelice otrovni?",
         "sv": "Vilka delar av aprikosen är giftiga?",
-        "da": "Hvilke dele af abrikosen er giftige?"
+        "da": "Hvilke dele af abrikosen er giftige?",
+        "fi": "Mitkä aprikoosin osat ovat myrkyllisiä?"
       },
       "a": {
         "en": "The stems, leaves and seeds contain cyanide, and they are particularly toxic as they wilt.",
@@ -218,7 +232,8 @@
         "cs": "Stonky, listy a semena obsahují kyanid a jsou zvlášť jedovaté, když vadnou.",
         "hr": "Peteljke, listovi i sjemenke sadrže cijanid, a osobito su otrovni dok venu.",
         "sv": "Skaften, bladen och kärnorna innehåller cyanid, och de är särskilt giftiga när de vissnar.",
-        "da": "Stilkene, bladene og kernerne indeholder cyanid, og de er særligt giftige når de visner."
+        "da": "Stilkene, bladene og kernerne indeholder cyanid, og de er særligt giftige når de visner.",
+        "fi": "Varret, lehdet ja siemenet sisältävät syanidia, ja ne ovat erityisen myrkyllisiä kuihtuessaan."
       }
     }
   ],
@@ -319,6 +334,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "873284a2fec6f0d2556a725b91c09726b67498e129436d61210713dffbb8feef"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "07a87249a67c01589da0fa81675bc2b45f3fec508ab98a38c77713e043f6c99b"
     }
   }
 }

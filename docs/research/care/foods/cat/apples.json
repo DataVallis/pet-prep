@@ -7,7 +7,8 @@
     "cs": "Jablka",
     "hr": "Jabuke",
     "sv": "Äpplen",
-    "da": "Æbler"
+    "da": "Æbler",
+    "fi": "Omenat"
   },
   "question": {
     "en": "Can cats eat apples?",
@@ -15,7 +16,8 @@
     "cs": "Mohou kočky jíst jablka?",
     "hr": "Smiju li mačke jesti jabuke?",
     "sv": "Får katter äta äpplen?",
-    "da": "Må katte spise æbler?"
+    "da": "Må katte spise æbler?",
+    "fi": "Saako kissa syödä omenaa?"
   },
   "url_slug": {
     "en": "apples",
@@ -23,7 +25,8 @@
     "cs": "jablka",
     "hr": "jabuke",
     "sv": "applen",
-    "da": "aebler"
+    "da": "aebler",
+    "fi": "omenat"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "cs": "Ano, malý kousek jablka je občas v pořádku, pokud předem odstraníte ohryzek, jádra a stopku. Kočky jsou masožravci a ovoce nepotřebují, takže jablko je jen občasný doplněk.",
     "hr": "Da, mali komadić jabuke povremeno je u redu, ako prije toga ukloniš sredinu, sjemenke i peteljku. Mačke su mesojedi i ne trebaju voće, pa je jabuka samo povremeni dodatak.",
     "sv": "Ja, en liten bit äpple då och då går bra, så länge du först tar bort kärnhus, kärnor och skaft. Katter är köttätare och behöver inte frukt, så äpple är bara något extra någon gång ibland.",
-    "da": "Ja, et lille stykke æble er fint en gang imellem så længe du først fjerner kernehus, kerner og stilk. Katte er kødædere og har ikke brug for frugt, så æble er kun et ekstra indimellem."
+    "da": "Ja, et lille stykke æble er fint en gang imellem så længe du først fjerner kernehus, kerner og stilk. Katte er kødædere og har ikke brug for frugt, så æble er kun et ekstra indimellem.",
+    "fi": "Kyllä, pieni pala omenaa silloin tällöin sopii, kunhan poistat ensin siemenkodan, siemenet ja varren. Kissat ovat lihansyöjiä eivätkä tarvitse hedelmiä, joten omena on vain satunnainen lisä."
   },
   "why": {
     "en": "NC State's veterinary hospital lists apple without seeds among healthy human-food treats for cats and dogs, and Pet Poison Helpline says apples are safe raw or cooked once the core and seeds are removed. The ASPCA lists the apple plant as toxic to cats because its stems, leaves and seeds contain cyanide. Cats are obligate carnivores, and any plant material can cause vomiting or stomach upset.",
@@ -40,7 +44,8 @@
     "cs": "Veterinární nemocnice Státní univerzity Severní Karolíny (NC State) uvádí jablko bez jader mezi zdravými pamlsky z lidské stravy pro kočky a psy a podle Pet Poison Helpline jsou jablka bezpečná syrová i tepelně upravená, jakmile se odstraní ohryzek a jádra. ASPCA vede jabloň jako rostlinu toxickou pro kočky, protože její stonky, listy a semena obsahují kyanid. Kočky jsou obligátní masožravci a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
     "hr": "Veterinarska bolnica sveučilišta NC State navodi jabuku bez sjemenki među zdravim poslasticama iz ljudske hrane za mačke i pse, a Pet Poison Helpline navodi da su jabuke sigurne sirove ili termički obrađene kad se uklone sredina i sjemenke. ASPCA navodi biljku jabuke kao otrovnu za mačke jer njezine peteljke, listovi i sjemenke sadrže cijanid. Mačke su obligatni mesojedi, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
     "sv": "NC States djursjukhus räknar äpple utan kärnor till de hälsosamma godbitarna från människomat för katter och hundar, och Pet Poison Helpline skriver att äpplen är säkra råa eller tillagade när kärnhus och kärnor är borttagna. ASPCA anger att äppelträdet är giftigt för katter eftersom skaft, blad och kärnor innehåller cyanid. Katter är obligata köttätare, och allt växtmaterial kan ge kräkningar eller orolig mage.",
-    "da": "Dyrehospitalet ved NC State nævner æble uden kerner blandt sunde godbidder fra menneskemad til katte og hunde, og Pet Poison Helpline skriver at æbler er sikre rå eller tilberedte når kernehus og kerner er fjernet. ASPCA opfører æbleplanten som giftig for katte fordi dens stilke, blade og kerner indeholder cyanid. Katte er obligate kødædere, og alt plantemateriale kan give opkast eller dårlig mave."
+    "da": "Dyrehospitalet ved NC State nævner æble uden kerner blandt sunde godbidder fra menneskemad til katte og hunde, og Pet Poison Helpline skriver at æbler er sikre rå eller tilberedte når kernehus og kerner er fjernet. ASPCA opfører æbleplanten som giftig for katte fordi dens stilke, blade og kerner indeholder cyanid. Katte er obligate kødædere, og alt plantemateriale kan give opkast eller dårlig mave.",
+    "fi": "NC Staten eläinsairaala mainitsee siemenettömän omenan terveellisten ihmisruokien joukossa, joita voi antaa herkkuina kissoille ja koirille, ja Pet Poison Helplinen mukaan omena on turvallinen raakana tai kypsennettynä, kun siemenkota ja siemenet on poistettu. ASPCA luokittelee omenakasvin kissoille myrkylliseksi, koska sen varret, lehdet ja siemenet sisältävät syanidia. Kissat ovat pakollisia lihansyöjiä, ja mikä tahansa kasvimateriaali voi aiheuttaa oksentelua tai vatsavaivoja."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "cs": "Nejdřív nabídněte malý kousek. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem. Pokud kočka okusovala jablečná jádra, stopky nebo listy, co nejdříve se obraťte na veterináře nebo na toxikologickou linku pro zvířata.",
     "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara. Ako je mačka žvakala sjemenke, peteljke ili listove jabuke, što prije se obrati veterinaru ili telefonskoj liniji za otrovanja životinja.",
     "sv": "Ge en liten bit först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären. Om katten har tuggat på äppelkärnor, skaft eller blad, kontakta din veterinär eller en giftrådgivning för djur så snart som möjligt.",
-    "da": "Giv først et lille stykke. Hvis din kat kaster op eller får dårlig mave bagefter, så stop og spørg din dyrlæge. Hvis din kat har tygget på æblekerner, -stilke eller -blade, så kontakt din dyrlæge eller en giftrådgivning for dyr så hurtigt som muligt."
+    "da": "Giv først et lille stykke. Hvis din kat kaster op eller får dårlig mave bagefter, så stop og spørg din dyrlæge. Hvis din kat har tygget på æblekerner, -stilke eller -blade, så kontakt din dyrlæge eller en giftrådgivning for dyr så hurtigt som muligt.",
+    "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai sille tulee vatsavaivoja, lopeta ja kysy neuvoa eläinlääkäriltä. Jos kissasi pureskeli omenansiemeniä, -varsia tai -lehtiä, ota mahdollisimman pian yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan."
   },
   "serving": {
     "en": "Apple flesh only, raw or cooked, with the core, seeds and stem removed; a small piece now and then, counted in your cat's daily food.",
@@ -57,7 +63,8 @@
     "cs": "Pouze dužina jablka, syrová nebo tepelně upravená, bez ohryzku, jader a stopky; občas malý kousek, započítaný do denní dávky krmiva vaší kočky.",
     "hr": "Samo meso jabuke, sirovo ili termički obrađeno, bez sredine, sjemenki i peteljke; mali komadić povremeno, uračunat u dnevni obrok tvoje mačke.",
     "sv": "Bara fruktköttet, rått eller tillagat, med kärnhus, kärnor och skaft borttagna; en liten bit då och då, inräknad i kattens dagliga matranson.",
-    "da": "Kun æblekød, råt eller tilberedt, med kernehus, kerner og stilk fjernet; et lille stykke en gang imellem, regnet med i kattens daglige mad."
+    "da": "Kun æblekød, råt eller tilberedt, med kernehus, kerner og stilk fjernet; et lille stykke en gang imellem, regnet med i kattens daglige mad.",
+    "fi": "Vain omenan hedelmäliha raakana tai kypsennettynä, siemenkota, siemenet ja varsi poistettuina; pieni pala silloin tällöin, laskettuna mukaan kissasi päivittäiseen ruokamäärään."
   },
   "child": {
     "en": "A tiny piece of apple with no seeds can be a cat treat. Cats mostly need meat, so fruit is just a little extra.",
@@ -65,7 +72,8 @@
     "cs": "Malinký kousek jablka bez jadérek může být pro kočku pamlsek. Kočky potřebují hlavně maso, takže ovoce je jen malý přídavek.",
     "hr": "Sićušan komadić jabuke bez sjemenki može biti poslastica za macu. Mačkama uglavnom treba meso, pa je voće samo mali dodatak.",
     "sv": "En pytteliten bit äpple utan kärnor kan bli en godbit för katten. Katter behöver mest kött, så frukt är bara något litet extra.",
-    "da": "Et bitte lille stykke æble uden kerner kan være en godbid til en kat. Katte har mest brug for kød, så frugt er bare et lille ekstra."
+    "da": "Et bitte lille stykke æble uden kerner kan være en godbid til en kat. Katte har mest brug for kød, så frugt er bare et lille ekstra.",
+    "fi": "Pikkuinen pala omenaa ilman siemeniä voi olla kissan herkku. Kissat tarvitsevat enimmäkseen lihaa, joten hedelmä on vain pieni lisä."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "cs": "Proč odstranit ohryzek a jádra?",
         "hr": "Zašto treba ukloniti sredinu i sjemenke?",
         "sv": "Varför ska kärnhus och kärnor tas bort?",
-        "da": "Hvorfor skal kernehus og kerner fjernes?"
+        "da": "Hvorfor skal kernehus og kerner fjernes?",
+        "fi": "Miksi siemenkota ja siemenet pitää poistaa?"
       },
       "a": {
         "en": "The core and seeds can cause choking or a blockage in the gut, and the seeds contain a small amount of cyanide.",
@@ -83,7 +92,8 @@
         "cs": "Ohryzek a jádra mohou způsobit dušení nebo ucpání střev a jádra obsahují malé množství kyanidu.",
         "hr": "Sredina i sjemenke mogu izazvati gušenje ili začepljenje crijeva, a sjemenke sadrže malu količinu cijanida.",
         "sv": "Kärnhus och kärnor kan orsaka kvävning eller tarmstopp, och kärnorna innehåller en liten mängd cyanid.",
-        "da": "Kernehuset og kernerne kan sætte sig fast i halsen eller give blokering i tarmen, og kernerne indeholder en lille mængde cyanid."
+        "da": "Kernehuset og kernerne kan sætte sig fast i halsen eller give blokering i tarmen, og kernerne indeholder en lille mængde cyanid.",
+        "fi": "Siemenkota ja siemenet voivat aiheuttaa tukehtumisen tai suolitukoksen, ja siemenissä on pieni määrä syanidia."
       }
     },
     {
@@ -93,7 +103,8 @@
         "cs": "Potřebují kočky ovoce?",
         "hr": "Trebaju li mačke voće?",
         "sv": "Behöver katter frukt?",
-        "da": "Har katte brug for frugt?"
+        "da": "Har katte brug for frugt?",
+        "fi": "Tarvitsevatko kissat hedelmiä?"
       },
       "a": {
         "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
@@ -101,7 +112,8 @@
         "cs": "Ne. Kočky jsou masožravci: potřebují živiny, které obsahuje maso, a ovoce ani zeleninu ve stravě nepotřebují. Ovoce může být vždy jen malým doplňkem.",
         "hr": "Ne. Mačke su mesojedi: trebaju hranjive tvari koje se nalaze u mesu i u prehrani im ne treba ni voće ni povrće. Voće može biti samo mali dodatak.",
         "sv": "Nej. Katter är köttätare: de behöver näringsämnen som finns i kött och behöver inte frukt eller grönsaker i maten. Frukt kan bara vara något litet extra.",
-        "da": "Nej. Katte er kødædere: De har brug for næringsstoffer der findes i kød, og har ikke brug for frugt eller grøntsager i deres kost. Frugt kan aldrig være mere end et lille ekstra."
+        "da": "Nej. Katte er kødædere: De har brug for næringsstoffer der findes i kød, og har ikke brug for frugt eller grøntsager i deres kost. Frugt kan aldrig være mere end et lille ekstra.",
+        "fi": "Eivät. Kissat ovat lihansyöjiä: ne tarvitsevat lihassa olevia ravintoaineita eivätkä tarvitse ruokavalioonsa hedelmiä tai vihanneksia. Hedelmät voivat olla korkeintaan pieni lisä."
       }
     }
   ],
@@ -204,6 +216,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "adb1e36c4c59caac0fe8486aaff2f4ef0312b8a453e31c3a1340c200fc10a946"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6af92f69a1ba7e84c94f1fe8029e39739d39838e89b0630124292ac612dbf823"
     }
   }
 }

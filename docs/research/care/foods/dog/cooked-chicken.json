@@ -14,7 +14,8 @@
     "cs": "Tepelně upravené kuřecí maso",
     "hr": "Kuhana piletina",
     "sv": "Kokt kyckling",
-    "da": "Kogt kylling"
+    "da": "Kogt kylling",
+    "fi": "Keitetty kana"
   },
   "question": {
     "en": "Can dogs eat cooked chicken?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst tepelně upravené kuřecí maso?",
     "hr": "Smiju li psi jesti kuhanu piletinu?",
     "sv": "Får hundar äta kokt kyckling?",
-    "da": "Må hunde spise kogt kylling?"
+    "da": "Må hunde spise kogt kylling?",
+    "fi": "Saako koira syödä keitettyä kanaa?"
   },
   "url_slug": {
     "en": "cooked-chicken",
@@ -44,7 +46,8 @@
     "cs": "tepelne-upravene-kureci-maso",
     "hr": "kuhana-piletina",
     "sv": "kokt-kyckling",
-    "da": "kogt-kylling"
+    "da": "kogt-kylling",
+    "fi": "keitetty-kana"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ano. Čisté, nekořeněné tepelně upravené kuřecí maso, oddělené od kostí, můžete psovi podávat samotné. Nikdy nedávejte tepelně upravené kuřecí kosti, které se snadno tříští, a vynechte kořeněné, tučné nebo syrové kuřecí maso.",
     "hr": "Da. Obična, nezačinjena, termički obrađena piletina skinuta s kosti može se psu dati i sama, bez dodataka. Nikad ne daj termički obrađene pileće kosti, koje se lako lome u krhotine, i preskoči začinjenu, masnu ili sirovu piletinu.",
     "sv": "Ja. Naturell, okryddad tillagad kyckling, borttagen från benet, kan ges till hunden som den är. Ge aldrig tillagade kycklingben, som splittras lätt, och hoppa över kryddad, fet eller rå kyckling.",
-    "da": "Ja. Ren, ukrydret, tilberedt kylling, taget af benet, kan gives til en hund uden tilbehør. Giv aldrig tilberedte kyllingeknogler, som let splintrer, og spring krydret, fed eller rå kylling over."
+    "da": "Ja. Ren, ukrydret, tilberedt kylling, taget af benet, kan gives til en hund uden tilbehør. Giv aldrig tilberedte kyllingeknogler, som let splintrer, og spring krydret, fed eller rå kylling over.",
+    "fi": "Saa. Maustamatonta kypsennettyä kanaa voi antaa koiralle sellaisenaan, kun liha on irrotettu luista. Älä koskaan anna kypsennettyjä kananluita, jotka sirpaloituvat helposti, ja jätä väliin maustettu, rasvainen tai raaka kana."
   },
   "why": {
     "en": "Unseasoned roasted, poached, grilled or baked chicken is fine on its own. Cooked chicken bones splinter easily and can cause choking or puncture the gut. Raw chicken is not recommended because of Salmonella and other bacteria. Thigh meat has about twice the fat of breast, and fatty foods can upset the stomach.",
@@ -75,7 +79,8 @@
     "cs": "Nekořeněné pečené, pošírované, grilované nebo zapékané kuřecí maso je samotné v pořádku. Tepelně upravené kuřecí kosti se snadno tříští a mohou způsobit dušení nebo protržení střeva. Syrové kuřecí maso se nedoporučuje kvůli salmonele a dalším bakteriím. Stehenní maso má zhruba dvakrát víc tuku než prsa a tučná jídla mohou podráždit žaludek.",
     "hr": "Nezačinjena piletina – pečena, poširana, s roštilja ili iz pećnice – u redu je i sama. Termički obrađene pileće kosti lako se lome u krhotine i mogu izazvati gušenje ili probušiti crijeva. Sirova piletina ne preporučuje se zbog salmonele i drugih bakterija. Meso bataka ima otprilike dvostruko više masti od prsa, a masna hrana može uznemiriti želudac.",
     "sv": "Okryddad kyckling som är ugnsstekt, pocherad, grillad eller ugnsbakad går bra som den är. Tillagade kycklingben splittras lätt och kan orsaka kvävning eller hål på tarmen. Rå kyckling rekommenderas inte på grund av salmonella och andra bakterier. Lårkött har ungefär dubbelt så mycket fett som bröstfilé, och fet mat kan ge orolig mage.",
-    "da": "Ukrydret kylling der er ovnstegt, pocheret, grillet eller bagt, er fint i sig selv. Tilberedte kyllingeknogler splintrer let og kan sætte sig fast i halsen eller lave hul i tarmen. Rå kylling frarådes på grund af salmonella og andre bakterier. Lårkød har omtrent dobbelt så meget fedt som brystkød, og fed mad kan give dårlig mave."
+    "da": "Ukrydret kylling der er ovnstegt, pocheret, grillet eller bagt, er fint i sig selv. Tilberedte kyllingeknogler splintrer let og kan sætte sig fast i halsen eller lave hul i tarmen. Rå kylling frarådes på grund af salmonella og andre bakterier. Lårkød har omtrent dobbelt så meget fedt som brystkød, og fed mad kan give dårlig mave.",
+    "fi": "Maustamaton paahdettu, haudutettu, grillattu tai uunissa paistettu kana sopii sellaisenaan. Kypsennetyt kananluut sirpaloituvat helposti ja voivat aiheuttaa tukehtumisen tai puhkaista suoliston. Raakaa kanaa ei suositella salmonellan ja muiden bakteerien vuoksi. Reisilihassa on noin kaksi kertaa niin paljon rasvaa kuin rintalihassa, ja rasvaiset ruoat voivat aiheuttaa vatsavaivoja."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "cs": "Pokud váš pes spolkl tepelně upravené kuřecí kosti, zavolejte veterináři o radu a nesnažte se psa přimět ke zvracení. Pokud se dusí, zvrací nebo má známky bolesti břicha, volejte hned.",
     "hr": "Ako je pas progutao termički obrađene pileće kosti, nazovi veterinara za savjet i ne pokušavaj sam izazvati povraćanje. Odmah nazovi ako primijetiš gušenje, povraćanje ili znakove bolova u trbuhu.",
     "sv": "Om hunden har svalt tillagade kycklingben, ring veterinären för råd och försök inte få hunden att kräkas. Ring direkt om du ser kvävning, kräkningar eller tecken på ont i magen.",
-    "da": "Hvis hunden har slugt tilberedte kyllingeknogler, skal du ringe til din dyrlæge for at få råd; prøv ikke selv at få hunden til at kaste op. Ring med det samme hvis du ser kvælningstegn, opkast eller tegn på mavesmerter."
+    "da": "Hvis hunden har slugt tilberedte kyllingeknogler, skal du ringe til din dyrlæge for at få råd; prøv ikke selv at få hunden til at kaste op. Ring med det samme hvis du ser kvælningstegn, opkast eller tegn på mavesmerter.",
+    "fi": "Jos koirasi nielaisi kypsennettyjä kananluita, soita eläinlääkärille ja kysy neuvoa äläkä yritä itse oksennuttaa koiraasi. Soita heti, jos huomaat tukehtumista, oksentelua tai vatsakivun merkkejä."
   },
   "serving": {
     "en": "Plain cooked chicken (breast is leanest), no seasoning, fully cooked, taken off the bone, in small pieces.",
@@ -106,7 +112,8 @@
     "cs": "Čisté kuřecí maso (nejlibovější jsou prsa), bez koření, důkladně tepelně upravené, oddělené od kostí, v malých kouscích.",
     "hr": "Obična termički obrađena piletina (prsa su najposnija), bez začina, potpuno termički obrađena, skinuta s kosti, u malim komadićima.",
     "sv": "Naturell tillagad kyckling (bröstfilé är magrast), okryddad, genomstekt eller genomkokt, borttagen från benet, i små bitar.",
-    "da": "Ren, tilberedt kylling (brystkød er magrest), ukrydret, gennemtilberedt, taget af benet, i små stykker."
+    "da": "Ren, tilberedt kylling (brystkød er magrest), ukrydret, gennemtilberedt, taget af benet, i små stykker.",
+    "fi": "Pelkkää, kokonaan kypsennettyä kanaa (rintaliha on vähärasvaisinta) ilman mausteita, luista irrotettuna ja pieninä paloina."
   },
   "child": {
     "en": "Plain cooked chicken with no bones is a tasty dog treat. Chicken bones are never for dogs.",
@@ -121,7 +128,8 @@
     "cs": "Obyčejné uvařené nebo upečené kuřecí maso bez kostí je pro psa dobrý pamlsek. Kuřecí kosti ale psi nesmějí dostat nikdy.",
     "hr": "Obična kuhana piletina bez kostiju fina je poslastica za pse. Pileće kosti nikad nisu za pse.",
     "sv": "Kokt kyckling utan ben och kryddor är en god hundgodbit. Kycklingben är aldrig för hundar.",
-    "da": "Almindelig kogt kylling uden ben er en lækker godbid til hunde. Kyllingeknogler er aldrig til hunde."
+    "da": "Almindelig kogt kylling uden ben er en lækker godbid til hunde. Kyllingeknogler er aldrig til hunde.",
+    "fi": "Maustamaton keitetty kana ilman luita on koiralle maistuva herkku. Kananluut eivät ole koskaan koirille."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "cs": "Proč jsou tepelně upravené kuřecí kosti nebezpečné?",
         "hr": "Zašto su termički obrađene pileće kosti opasne?",
         "sv": "Varför är tillagade kycklingben farliga?",
-        "da": "Hvorfor er tilberedte kyllingeknogler farlige?"
+        "da": "Hvorfor er tilberedte kyllingeknogler farlige?",
+        "fi": "Miksi kypsennetyt kananluut ovat vaarallisia?"
       },
       "a": {
         "en": "Cooked chicken bones splinter easily and can cause choking or a puncture in the gut.",
@@ -153,7 +162,8 @@
         "cs": "Tepelně upravené kuřecí kosti se snadno tříští a mohou způsobit dušení nebo protržení střeva.",
         "hr": "Termički obrađene pileće kosti lako se lome u krhotine i mogu izazvati gušenje ili probušiti crijeva.",
         "sv": "Tillagade kycklingben splittras lätt och kan orsaka kvävning eller hål på tarmen.",
-        "da": "Tilberedte kyllingeknogler splintrer let og kan sætte sig fast i halsen eller lave hul i tarmen."
+        "da": "Tilberedte kyllingeknogler splintrer let og kan sætte sig fast i halsen eller lave hul i tarmen.",
+        "fi": "Kypsennetyt kananluut sirpaloituvat helposti ja voivat aiheuttaa tukehtumisen tai puhkaista suoliston."
       }
     }
   ],
@@ -281,6 +291,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "345b6c1d7ff879279272ba66cc212c0ba0b37a6749b36a40c43976266d38bfca"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fd00360b40bcb6c1d6a04b6cc0d557764e1df3270403e236b560f6b10c1ff2ff"
     }
   }
 }

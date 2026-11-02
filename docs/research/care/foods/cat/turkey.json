@@ -14,7 +14,8 @@
     "cs": "Krůtí maso",
     "hr": "Puretina",
     "sv": "Kalkon",
-    "da": "Kalkun"
+    "da": "Kalkun",
+    "fi": "Kalkkuna"
   },
   "question": {
     "en": "Can cats eat turkey?",
@@ -29,7 +30,8 @@
     "cs": "Mohou kočky jíst krůtí maso?",
     "hr": "Smiju li mačke jesti puretinu?",
     "sv": "Får katter äta kalkon?",
-    "da": "Må katte spise kalkun?"
+    "da": "Må katte spise kalkun?",
+    "fi": "Saako kissa syödä kalkkunaa?"
   },
   "url_slug": {
     "en": "turkey",
@@ -44,7 +46,8 @@
     "cs": "kruti-maso",
     "hr": "puretina",
     "sv": "kalkon",
-    "da": "kalkun"
+    "da": "kalkun",
+    "fi": "kalkkuna"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ano, trocha tepelně upraveného krůtího masa bez přísad je v pořádku jako občasný pamlsek. Odstraňte kosti a kůži a vynechejte koření, nádivku i omáčku. Samotné krůtí maso není kompletní strava.",
     "hr": "Da, malo obične termički obrađene puretine u redu je kao povremena poslastica. Ukloni kosti i kožu i izostavi začine, nadjev i sok od pečenja. Puretina sama po sebi nije potpuna prehrana.",
     "sv": "Ja, lite naturell tillagad kalkon går bra som en godbit ibland. Ta bort ben och skinn och hoppa över kryddor, fyllning och sås. Kalkon ensam är ingen fullständig kost.",
-    "da": "Ja, lidt naturel, tilberedt kalkun er fin som en godbid en gang imellem. Fjern ben og skind, og spring krydderier, fyld og sovs over. Kalkun alene er ikke en komplet kost."
+    "da": "Ja, lidt naturel, tilberedt kalkun er fin som en godbid en gang imellem. Fjern ben og skind, og spring krydderier, fyld og sovs over. Kalkun alene er ikke en komplet kost.",
+    "fi": "Saa, vähän maustamatonta kypsennettyä kalkkunaa sopii satunnaiseksi herkuksi. Poista luut ja nahka äläkä käytä mausteita, täytettä tai kastiketta. Pelkkä kalkkuna ei ole täysipainoista ravintoa."
   },
   "why": {
     "en": "Cats Protection says plain cooked turkey is fine as an occasional treat but shouldn't be given regularly, as turkey alone lacks nutrients cats need. Turkey skin is high in fat and can cause digestive upset or even pancreatitis, and roast skin may carry garlic or herbs. Turkey bones can splinter and cause choking or blockages.",
@@ -75,7 +79,8 @@
     "cs": "Podle Cats Protection je tepelně upravené krůtí maso bez přísad v pořádku jako občasný pamlsek, nemělo by se však dávat pravidelně, protože samotnému krůtímu masu chybějí živiny, které kočky potřebují. Krůtí kůže je velmi tučná a může způsobit trávicí potíže, nebo dokonce zánět slinivky břišní, a kůže z pečeně může obsahovat česnek nebo bylinky. Krůtí kosti se mohou roztříštit a způsobit dušení nebo ucpání trávicího traktu.",
     "hr": "Cats Protection navodi da je obična termički obrađena puretina u redu kao povremena poslastica, ali da je ne treba davati redovito jer sama puretina nema sve hranjive tvari koje mačke trebaju. Pureća koža ima puno masti i može izazvati probavne smetnje ili čak upalu gušterače, a koža pečene purice može sadržavati češnjak ili začinsko bilje. Pureće kosti mogu se rascijepiti i izazvati gušenje ili začepljenje.",
     "sv": "Cats Protection skriver att naturell tillagad kalkon går bra som en godbit ibland men inte ska ges regelbundet, eftersom kalkon ensam saknar näringsämnen som katter behöver. Kalkonskinn är mycket fett och kan ge magbesvär eller till och med bukspottkörtelinflammation (pankreatit), och skinnet på en ugnsstekt kalkon kan ha vitlök eller örter på sig. Kalkonben kan splittras och orsaka kvävning eller tarmstopp.",
-    "da": "Ifølge Cats Protection er naturel, tilberedt kalkun fin som en godbid en gang imellem, men den bør ikke gives regelmæssigt da kalkun alene mangler næringsstoffer som katte har brug for. Kalkunskind er meget fedt og kan give fordøjelsesproblemer eller endda betændelse i bugspytkirtlen (pankreatitis), og skindet fra en stegt kalkun kan have været i kontakt med hvidløg eller krydderurter. Kalkunben kan splintre og give kvælning eller blokeringer."
+    "da": "Ifølge Cats Protection er naturel, tilberedt kalkun fin som en godbid en gang imellem, men den bør ikke gives regelmæssigt da kalkun alene mangler næringsstoffer som katte har brug for. Kalkunskind er meget fedt og kan give fordøjelsesproblemer eller endda betændelse i bugspytkirtlen (pankreatitis), og skindet fra en stegt kalkun kan have været i kontakt med hvidløg eller krydderurter. Kalkunben kan splintre og give kvælning eller blokeringer.",
+    "fi": "Cats Protectionin mukaan maustamaton kypsennetty kalkkuna sopii satunnaiseksi herkuksi, mutta sitä ei pidä antaa säännöllisesti, koska pelkästä kalkkunasta puuttuu ravintoaineita, joita kissa tarvitsee. Kalkkunan nahka on rasvaista ja voi aiheuttaa ruoansulatusvaivoja tai jopa haimatulehduksen, ja paistetun kalkkunan nahassa voi olla valkosipulia tai yrttejä. Kalkkunan luut voivat sirpaloitua ja aiheuttaa tukehtumisen tai tukoksia."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "cs": "Nejdřív nabídněte malý kousek. Pokud vaše kočka potom zvrací nebo má průjem, přestaňte a poraďte se s veterinářem. Pokud vaše kočka snědla krůtí kosti, nádivku nebo omáčku s cibulí či česnekem, okamžitě zavolejte veterináři.",
     "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili ima proljev, prestani i pitaj veterinara. Ako je mačka pojela pureće kosti, nadjev ili sok od pečenja s lukom ili češnjakom, odmah nazovi veterinara.",
     "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären. Om katten har ätit kalkonben, fyllning eller sås med lök eller vitlök, ring veterinären direkt.",
-    "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, skal du stoppe og spørge din dyrlæge. Hvis din kat har spist kalkunben, fyld eller sovs med løg eller hvidløg, skal du straks ringe til din dyrlæge."
+    "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, skal du stoppe og spørge din dyrlæge. Hvis din kat har spist kalkunben, fyld eller sovs med løg eller hvidløg, skal du straks ringe til din dyrlæge.",
+    "fi": "Tarjoa ensin pieni pala. Jos kissasi alkaa sen jälkeen oksennella tai sille tulee ripuli, lopeta ja kysy eläinlääkäriltä. Jos kissasi söi kalkkunan luita tai sipulia tai valkosipulia sisältävää täytettä tai kastiketta, soita eläinlääkärille heti."
   },
   "serving": {
     "en": "Plain cooked meat with no bones, skin or seasoning; a small amount, counted in the daily food.",
@@ -106,7 +112,8 @@
     "cs": "Tepelně upravené maso bez přísad, bez kostí, kůže a koření; malé množství započítané do denní dávky krmiva.",
     "hr": "Obično termički obrađeno meso bez kostiju, kože i začina; mala količina, uračunata u dnevni obrok.",
     "sv": "Naturellt tillagat kött utan ben, skinn eller kryddor; en liten mängd, inräknad i den dagliga maten.",
-    "da": "Naturelt, tilberedt kød uden ben, skind og krydderier; en lille mængde, regnet med i den daglige mad."
+    "da": "Naturelt, tilberedt kød uden ben, skind og krydderier; en lille mængde, regnet med i den daglige mad.",
+    "fi": "Maustamatonta kypsennettyä lihaa ilman luita, nahkaa ja mausteita; pieni määrä, laskettuna mukaan päivän ruokaan."
   },
   "child": {
     "en": "A little plain turkey with no bones can be a cat treat. The skin and gravy stay on your plate.",
@@ -121,7 +128,8 @@
     "cs": "Trocha obyčejného krůtího masa bez kostí může být pro kočku pamlsek. Kůže a omáčka zůstanou na tvém talíři.",
     "hr": "Malo obične puretine bez kostiju može biti poslastica za macu. Koža i sok od pečenja ostaju na tvom tanjuru.",
     "sv": "Lite kokt kalkon utan ben och kryddor kan vara en godbit för katten. Skinnet och såsen stannar på din tallrik.",
-    "da": "Lidt almindelig kalkun uden ben kan være en kattegodbid. Skindet og sovsen bliver på din tallerken."
+    "da": "Lidt almindelig kalkun uden ben kan være en kattegodbid. Skindet og sovsen bliver på din tallerken.",
+    "fi": "Vähän maustamatonta kalkkunaa ilman luita voi olla kissan herkku. Nahka ja kastike jäävät sinun lautasellesi."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "cs": "Mohou kočky jíst krůtí kůži?",
         "hr": "Smiju li mačke jesti pureću kožu?",
         "sv": "Får katter äta kalkonskinn?",
-        "da": "Må katte få kalkunskind?"
+        "da": "Må katte få kalkunskind?",
+        "fi": "Saako kissa syödä kalkkunan nahkaa?"
       },
       "a": {
         "en": "It's best not to. Turkey skin is high in fat and can cause digestive upset or even pancreatitis, and it may have touched seasoning or garlic.",
@@ -153,7 +162,8 @@
         "cs": "Raději ne. Krůtí kůže je velmi tučná a může způsobit trávicí potíže, nebo dokonce zánět slinivky břišní, a mohla přijít do styku s kořením nebo česnekem.",
         "hr": "Bolje ne. Pureća koža ima puno masti i može izazvati probavne smetnje ili čak upalu gušterače, a možda je bila u dodiru sa začinima ili češnjakom.",
         "sv": "Helst inte. Kalkonskinn är mycket fett och kan ge magbesvär eller till och med bukspottkörtelinflammation, och det kan ha varit i kontakt med kryddor eller vitlök.",
-        "da": "Helst ikke. Kalkunskind er meget fedt og kan give fordøjelsesproblemer eller endda betændelse i bugspytkirtlen (pankreatitis), og det kan have været i kontakt med krydderier eller hvidløg."
+        "da": "Helst ikke. Kalkunskind er meget fedt og kan give fordøjelsesproblemer eller endda betændelse i bugspytkirtlen (pankreatitis), og det kan have været i kontakt med krydderier eller hvidløg.",
+        "fi": "Parempi olla antamatta. Kalkkunan nahka on rasvaista ja voi aiheuttaa ruoansulatusvaivoja tai jopa haimatulehduksen, ja se on voinut olla kosketuksissa mausteiden tai valkosipulin kanssa."
       }
     }
   ],
@@ -273,6 +283,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ef63cf229d525f988712b03e34f7f3fb5f93416727324df7ea9be00500693ba7"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "46c2641904ff1b9362a1af3466a2b4b5d909708f9af8f16a58819ea3d3cf80aa"
     }
   }
 }

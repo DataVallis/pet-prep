@@ -14,7 +14,8 @@
     "cs": "Arašídové máslo",
     "hr": "Maslac od kikirikija",
     "sv": "Jordnötssmör",
-    "da": "Peanutbutter"
+    "da": "Peanutbutter",
+    "fi": "Maapähkinävoi"
   },
   "question": {
     "en": "Can dogs eat peanut butter?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst arašídové máslo?",
     "hr": "Smiju li psi jesti maslac od kikirikija?",
     "sv": "Får hundar äta jordnötssmör?",
-    "da": "Må hunde spise peanutbutter?"
+    "da": "Må hunde spise peanutbutter?",
+    "fi": "Saako koira syödä maapähkinävoita?"
   },
   "url_slug": {
     "en": "peanut-butter",
@@ -44,7 +46,8 @@
     "cs": "arasidove-maslo",
     "hr": "maslac-od-kikirikija",
     "sv": "jordnotssmor",
-    "da": "peanutbutter"
+    "da": "peanutbutter",
+    "fi": "maapahkinavoi"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ano, v malém množství, pokud neobsahuje xylitol. Většina arašídových másel je pro psy bezpečná, některé značky ale používají xylitol, sladidlo, které je pro psy jedovaté, proto vždy zkontrolujte etiketu. Nejlepší je arašídové máslo bez soli.",
     "hr": "Da, u malim količinama, ako ne sadrži ksilitol. Većina maslaca od kikirikija sigurna je za pse, ali neki proizvođači koriste ksilitol, sladilo koje je otrovno za pse, zato uvijek provjeri deklaraciju. Najbolji je neslani maslac od kikirikija.",
     "sv": "Ja, i små mängder, om det inte innehåller xylitol. Det mesta jordnötssmöret är ofarligt för hundar, men vissa märken innehåller xylitol, ett sötningsmedel som är giftigt för hundar, så kontrollera alltid innehållsförteckningen. Osaltat jordnötssmör är bäst.",
-    "da": "Ja, i små mængder hvis den ikke indeholder xylitol. De fleste slags peanutbutter er sikre for hunde, men nogle mærker bruger xylitol, et sødemiddel der er giftigt for hunde, så tjek altid varedeklarationen. Usaltet peanutbutter er bedst."
+    "da": "Ja, i små mængder hvis den ikke indeholder xylitol. De fleste slags peanutbutter er sikre for hunde, men nogle mærker bruger xylitol, et sødemiddel der er giftigt for hunde, så tjek altid varedeklarationen. Usaltet peanutbutter er bedst.",
+    "fi": "Saa, pieninä määrinä, jos siinä ei ole ksylitolia. Useimmat maapähkinävoit ovat koirille turvallisia, mutta joissakin merkeissä käytetään ksylitolia, koiralle myrkyllistä makeutusainetta, joten tarkista aina tuoteseloste. Suolaton maapähkinävoi on paras."
   },
   "why": {
     "en": "Peanut butter is rich in fat and can be high in salt, so it suits only as an occasional treat, and it is not ideal for dogs on a diet. The real danger is xylitol: some peanut and nut butters contain it, and in dogs it can cause a sharp drop in blood sugar.",
@@ -75,7 +79,8 @@
     "cs": "Arašídové máslo je bohaté na tuk a může obsahovat hodně soli, proto se hodí jen jako občasný pamlsek a pro psy na dietě není ideální. Skutečným nebezpečím je xylitol: obsahují ho některá arašídová a ořechová másla a u psů může způsobit prudký pokles hladiny cukru v krvi.",
     "hr": "Maslac od kikirikija bogat je mastima i može sadržavati puno soli, pa je prikladan samo kao povremena poslastica i nije idealan za pse na dijeti. Prava opasnost je ksilitol: sadrže ga neki maslaci od kikirikija i drugih orašastih plodova, a kod pasa može izazvati nagli pad šećera u krvi.",
     "sv": "Jordnötssmör innehåller mycket fett och kan vara salt, så det passar bara som en godbit ibland, och det är inte idealiskt för hundar som bantar. Den verkliga faran är xylitol: vissa jordnöts- och nötsmör innehåller det, och hos hundar kan det orsaka ett kraftigt blodsockerfall.",
-    "da": "Peanutbutter er fedtrig og kan indeholde meget salt, så den egner sig kun som en godbid en gang imellem og er ikke ideel til hunde på slankekur. Den egentlige fare er xylitol: Nogle slags peanut- og nøddesmør indeholder det, og hos hunde kan det give et kraftigt fald i blodsukkeret."
+    "da": "Peanutbutter er fedtrig og kan indeholde meget salt, så den egner sig kun som en godbid en gang imellem og er ikke ideel til hunde på slankekur. Den egentlige fare er xylitol: Nogle slags peanut- og nøddesmør indeholder det, og hos hunde kan det give et kraftigt fald i blodsukkeret.",
+    "fi": "Maapähkinävoissa on paljon rasvaa ja siinä voi olla paljon suolaa, joten se sopii vain satunnaiseksi herkuksi eikä ole ihanteellinen laihduttavalle koiralle. Todellinen vaara on ksylitoli: sitä on joissakin maapähkinä- ja pähkinävoissa, ja koiralla se voi aiheuttaa verensokerin jyrkän laskun."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "cs": "Pokud arašídové máslo obsahovalo xylitol, okamžitě se obraťte na veterináře, nonstop veterinární pohotovost nebo toxikologickou linku pro zvířata, poznamenejte si, kolik ho pes snědl, a nečekejte, až se objeví příznaky.",
     "hr": "Ako je maslac od kikirikija sadržavao ksilitol, odmah se obrati veterinaru, dežurnoj veterinarskoj ambulanti ili telefonskoj liniji za otrovanja životinja, zapiši koliko je pas pojeo i ne čekaj da se pojave znakovi.",
     "sv": "Om jordnötssmöret innehöll xylitol, kontakta veterinären, ett djursjukhus med akutjour eller en giftrådgivning för djur direkt, notera hur mycket hunden åt och vänta inte på symtom.",
-    "da": "Hvis peanutbutteren indeholdt xylitol, skal du straks kontakte din dyrlæge, en akut dyreklinik eller en giftrådgivning for dyr. Skriv ned hvor meget hunden har spist, og vent ikke på symptomer."
+    "da": "Hvis peanutbutteren indeholdt xylitol, skal du straks kontakte din dyrlæge, en akut dyreklinik eller en giftrådgivning for dyr. Skriv ned hvor meget hunden har spist, og vent ikke på symptomer.",
+    "fi": "Jos maapähkinävoissa oli ksylitolia, ota heti yhteyttä eläinlääkäriin, eläinlääkäripäivystykseen tai eläinten myrkytysneuvontaan, kirjaa ylös syöty määrä äläkä odota oireita."
   },
   "serving": {
     "en": "A small amount of unsalted peanut butter whose label lists no xylitol; as a treat, not a daily food.",
@@ -106,7 +112,8 @@
     "cs": "Malé množství arašídového másla bez soli, na jehož etiketě není uveden xylitol; jako pamlsek, ne jako každodenní jídlo.",
     "hr": "Malo neslanog maslaca od kikirikija na čijoj deklaraciji nema ksilitola; kao poslastica, a ne kao svakodnevna hrana.",
     "sv": "En liten mängd osaltat jordnötssmör utan xylitol i innehållsförteckningen; som godbit, inte som daglig mat.",
-    "da": "En lille mængde usaltet peanutbutter uden xylitol i ingredienslisten; som godbid, ikke som daglig mad."
+    "da": "En lille mængde usaltet peanutbutter uden xylitol i ingredienslisten; som godbid, ikke som daglig mad.",
+    "fi": "Pieni määrä suolatonta maapähkinävoita, jonka tuoteselosteessa ei mainita ksylitolia; herkkuna, ei päivittäisenä ruokana."
   },
   "child": {
     "en": "Many dogs love a little peanut butter! A grown-up must check the jar first, because some kinds are not safe for dogs.",
@@ -121,7 +128,8 @@
     "cs": "Spousta pejsků miluje trošku arašídového másla! Dospělý ale musí nejdřív zkontrolovat sklenici, protože některé druhy pro psy bezpečné nejsou.",
     "hr": "Mnogi psi obožavaju malo maslaca od kikirikija! Odrasla osoba prvo mora provjeriti staklenku jer neke vrste nisu sigurne za pse.",
     "sv": "Många hundar älskar lite jordnötssmör! En vuxen måste först kolla burken, för vissa sorter kan vara farliga för hundar.",
-    "da": "Mange hunde elsker lidt peanutbutter! En voksen skal tjekke glasset først, for nogle slags er ikke sikre for hunde."
+    "da": "Mange hunde elsker lidt peanutbutter! En voksen skal tjekke glasset først, for nogle slags er ikke sikre for hunde.",
+    "fi": "Moni koira rakastaa vähän maapähkinävoita! Aikuisen pitää ensin tarkistaa purkki, koska jotkin laadut eivät ole turvallisia koirille."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "cs": "Jak poznám, že arašídové máslo obsahuje xylitol?",
         "hr": "Kako znati sadrži li maslac od kikirikija ksilitol?",
         "sv": "Hur vet jag om jordnötssmöret innehåller xylitol?",
-        "da": "Hvordan ved jeg om peanutbutter indeholder xylitol?"
+        "da": "Hvordan ved jeg om peanutbutter indeholder xylitol?",
+        "fi": "Mistä tiedän, onko maapähkinävoissa ksylitolia?"
       },
       "a": {
         "en": "Read the ingredients on the label, especially on products marked sugar-free or low sugar.",
@@ -153,7 +162,8 @@
         "cs": "Přečtěte si složení na etiketě, zejména u výrobků označených jako bez cukru nebo se sníženým obsahem cukru.",
         "hr": "Pročitaj sastojke na deklaraciji, osobito na proizvodima označenima kao „bez šećera“ ili „sa smanjenim udjelom šećera“.",
         "sv": "Läs innehållsförteckningen, särskilt på produkter som är märkta sockerfria eller med lågt sockerinnehåll.",
-        "da": "Læs ingredienslisten, især på produkter mærket »sukkerfri« eller »med lavt sukkerindhold«."
+        "da": "Læs ingredienslisten, især på produkter mærket »sukkerfri« eller »med lavt sukkerindhold«.",
+        "fi": "Lue tuoteselosteen ainesosaluettelo, etenkin jos tuote on merkitty sokerittomaksi tai vähäsokeriseksi."
       }
     },
     {
@@ -170,7 +180,8 @@
         "cs": "Mohu psovi podat tabletku v arašídovém másle?",
         "hr": "Smijem li psu dati tabletu u maslacu od kikirikija?",
         "sv": "Kan jag använda jordnötssmör när jag ger hunden en tablett?",
-        "da": "Kan jeg bruge peanutbutter til at give min hund en pille?"
+        "da": "Kan jeg bruge peanutbutter til at give min hund en pille?",
+        "fi": "Voinko piilottaa koirani tabletin maapähkinävoihin?"
       },
       "a": {
         "en": "Many people do; the FDA advises checking the label first to make sure it doesn't contain xylitol.",
@@ -185,7 +196,8 @@
         "cs": "Mnoho lidí to tak dělá; úřad FDA doporučuje nejdřív zkontrolovat etiketu, zda máslo neobsahuje xylitol.",
         "hr": "Mnogi to rade; FDA savjetuje da prvo provjeriš deklaraciju i uvjeriš se da ne sadrži ksilitol.",
         "sv": "Det gör många; FDA råder dig att först läsa innehållsförteckningen för att försäkra dig om att det inte innehåller xylitol.",
-        "da": "Det gør mange; FDA anbefaler først at tjekke varedeklarationen for at sikre at den ikke indeholder xylitol."
+        "da": "Det gør mange; FDA anbefaler først at tjekke varedeklarationen for at sikre at den ikke indeholder xylitol.",
+        "fi": "Moni tekee niin; FDA neuvoo tarkistamaan ensin tuoteselosteen, ettei siinä ole ksylitolia."
       }
     }
   ],
@@ -334,6 +346,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a15a65e37dad8eb18122ff8ac3e0b486d738c581bf91a0a462fa021ab36145c3"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "85adebab20711b4a49d125251fcf9a9294e728d39f4ff6655070688a3ac99173"
     }
   }
 }

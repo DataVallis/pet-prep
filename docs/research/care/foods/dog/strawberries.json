@@ -7,7 +7,8 @@
     "cs": "Jahody",
     "hr": "Jagode",
     "sv": "Jordgubbar",
-    "da": "Jordbær"
+    "da": "Jordbær",
+    "fi": "Mansikat"
   },
   "question": {
     "en": "Can dogs eat strawberries?",
@@ -15,7 +16,8 @@
     "cs": "Mohou psi jíst jahody?",
     "hr": "Smiju li psi jesti jagode?",
     "sv": "Får hundar äta jordgubbar?",
-    "da": "Må hunde spise jordbær?"
+    "da": "Må hunde spise jordbær?",
+    "fi": "Saako koira syödä mansikoita?"
   },
   "url_slug": {
     "en": "strawberries",
@@ -23,7 +25,8 @@
     "cs": "jahody",
     "hr": "jagode",
     "sv": "jordgubbar",
-    "da": "jordbaer"
+    "da": "jordbaer",
+    "fi": "mansikat"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "cs": "Ano, s mírou. Jahody jsou plné antioxidantů, vlákniny a vitaminu C, obsahují ale přirozený cukr a příliš mnoho najednou může způsobit řidší stolici nebo průjem. Omyjte je, odstraňte stopky a lístky a nakrájejte je na malé kousky.",
     "hr": "Da, umjereno. Jagode su pune antioksidansa, vlakana i vitamina C, ali sadrže prirodni šećer, a previše njih odjednom može izazvati mekanu stolicu ili proljev. Operi ih, ukloni peteljke i listiće i nareži ih na male komadiće.",
     "sv": "Ja, med måtta. Jordgubbar är fulla av antioxidanter, fibrer och C-vitamin, men de innehåller naturligt socker, och för många på en gång kan ge lös avföring eller diarré. Skölj dem, ta bort stjälkar och blad och skär dem i små bitar.",
-    "da": "Ja, med måde. Jordbær er fulde af antioxidanter, fibre og C-vitamin, men de indeholder naturligt sukker, og for mange på én gang kan give tynd mave eller diarré. Vask dem, fjern stilke og blade, og skær dem i små stykker."
+    "da": "Ja, med måde. Jordbær er fulde af antioxidanter, fibre og C-vitamin, men de indeholder naturligt sukker, og for mange på én gang kan give tynd mave eller diarré. Vask dem, fjern stilke og blade, og skær dem i små stykker.",
+    "fi": "Saa, kohtuudella. Mansikoissa on runsaasti antioksidantteja, kuitua ja C-vitamiinia, mutta niissä on luonnollista sokeria, ja liian monta kerralla voi aiheuttaa löysää ulostetta tai ripulia. Pese mansikat, poista kannat ja lehdet ja leikkaa ne pieniksi."
   },
   "why": {
     "en": "The stems and leaves are not toxic but can cause stomach upset, and whole strawberries can be a choking risk, especially for smaller breeds. Avoid strawberries in syrup or canned strawberries, which have too much sugar and may even contain artificial sweeteners that are toxic to dogs.",
@@ -40,7 +44,8 @@
     "cs": "Stopky a lístky nejsou jedovaté, mohou ale podráždit žaludek, a celé jahody mohou způsobit dušení, zejména u menších plemen. Vyhněte se jahodám v sirupu nebo z konzervy, které mají příliš mnoho cukru a mohou dokonce obsahovat umělá sladidla, která jsou pro psy jedovatá.",
     "hr": "Peteljke i listići nisu otrovni, ali mogu izazvati probavne tegobe, a cijela jagoda može izazvati gušenje, osobito kod manjih pasmina. Izbjegavaj jagode u sirupu ili iz konzerve jer imaju previše šećera i mogu sadržavati čak i umjetna sladila koja su otrovna za pse.",
     "sv": "Stjälkarna och bladen är inte giftiga men kan ge magbesvär, och hela jordgubbar kan orsaka kvävning, särskilt hos mindre raser. Undvik jordgubbar i sockerlag eller på burk, som innehåller för mycket socker och till och med kan innehålla konstgjorda sötningsmedel som är giftiga för hundar.",
-    "da": "Stilke og blade er ikke giftige, men kan give maveproblemer, og hele jordbær kan sætte sig fast i halsen, især hos mindre racer. Undgå jordbær i sirup og jordbær på dåse, som indeholder for meget sukker og endda kan indeholde kunstige sødemidler der er giftige for hunde."
+    "da": "Stilke og blade er ikke giftige, men kan give maveproblemer, og hele jordbær kan sætte sig fast i halsen, især hos mindre racer. Undgå jordbær i sirup og jordbær på dåse, som indeholder for meget sukker og endda kan indeholde kunstige sødemidler der er giftige for hunde.",
+    "fi": "Kannat ja lehdet eivät ole myrkyllisiä, mutta ne voivat aiheuttaa vatsavaivoja, ja kokonaiset mansikat voivat aiheuttaa tukehtumisvaaran etenkin pienille roduille. Vältä siirappiin säilöttyjä tai purkitettuja mansikoita, joissa on liikaa sokeria ja joissa voi olla jopa keinotekoisia makeutusaineita, jotka ovat koirille myrkyllisiä."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "cs": "Pokud si po jahodách u svého psa všimnete jakékoli změny, přestaňte mu je dávat a poraďte se s veterinářem.",
     "hr": "Ako primijetiš bilo kakvu promjenu nakon što tvoj pas pojede jagode, prestani mu ih davati i posavjetuj se s veterinarom.",
     "sv": "Om du märker något annorlunda efter att hunden ätit jordgubbar, sluta ge dem och rådfråga veterinären.",
-    "da": "Hvis du bemærker noget anderledes efter at din hund har spist jordbær, så stop med at give dem, og spørg din dyrlæge til råds."
+    "da": "Hvis du bemærker noget anderledes efter at din hund har spist jordbær, så stop med at give dem, og spørg din dyrlæge til råds.",
+    "fi": "Jos huomaat jotain tavallisesta poikkeavaa sen jälkeen, kun koirasi on syönyt mansikoita, lopeta niiden antaminen ja kysy neuvoa eläinlääkäriltä."
   },
   "serving": {
     "en": "Washed thoroughly, stems and leaves removed, cut into small pieces, or mashed for small dogs; fresh or frozen, never in syrup or canned.",
@@ -57,7 +63,8 @@
     "cs": "Důkladně omyté, bez stopek a lístků, nakrájené na malé kousky, pro malé psy rozmačkané; čerstvé nebo mražené, nikdy v sirupu ani z konzervy.",
     "hr": "Temeljito oprane, bez peteljki i listića, narezane na male komadiće ili zgnječene za male pse; svježe ili smrznute, nikad u sirupu ili iz konzerve.",
     "sv": "Noga sköljda, utan stjälkar och blad, skurna i små bitar eller mosade till små hundar; färska eller frysta, aldrig i sockerlag eller på burk.",
-    "da": "Grundigt vasket, uden stilke og blade, skåret i små stykker eller moset til små hunde; friske eller frosne, aldrig i sirup eller fra dåse."
+    "da": "Grundigt vasket, uden stilke og blade, skåret i små stykker eller moset til små hunde; friske eller frosne, aldrig i sirup eller fra dåse.",
+    "fi": "Huolellisesti pestyinä, kannat ja lehdet poistettuina, pieniksi paloiksi leikattuina tai pienille koirille soseutettuina; tuoreina tai pakastettuina, ei koskaan siirapissa tai purkista."
   },
   "child": {
     "en": "Dogs can have a little strawberry! A grown-up washes it, takes off the green leaves and cuts it small.",
@@ -65,7 +72,8 @@
     "cs": "Pejsci můžou dostat kousek jahody! Dospělý ji omyje, utrhne zelené lístky a nakrájí ji na malé kousky.",
     "hr": "Psi smiju pojesti malo jagode! Odrasla osoba je opere, skine zelene listiće i nareže je na male komadiće.",
     "sv": "Hundar får äta lite jordgubbe! En vuxen sköljer den, tar bort de gröna bladen och skär den i små bitar.",
-    "da": "Hunde må gerne få lidt jordbær! En voksen vasker dem, tager de grønne blade af og skærer dem i små stykker."
+    "da": "Hunde må gerne få lidt jordbær! En voksen vasker dem, tager de grønne blade af og skærer dem i små stykker.",
+    "fi": "Koira saa syödä vähän mansikkaa! Aikuinen pesee sen, poistaa vihreät lehdet ja leikkaa sen pieneksi."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "cs": "Mohou psi jíst mražené jahody?",
         "hr": "Smiju li psi jesti smrznute jagode?",
         "sv": "Får hundar äta frysta jordgubbar?",
-        "da": "Må hunde spise frosne jordbær?"
+        "da": "Må hunde spise frosne jordbær?",
+        "fi": "Saako koira syödä pakastettuja mansikoita?"
       },
       "a": {
         "en": "Yes. Frozen strawberries cut into suitably sized pieces can be a safe, refreshing treat.",
@@ -83,7 +92,8 @@
         "cs": "Ano. Mražené jahody nakrájené na vhodně velké kousky mohou být bezpečným, osvěžujícím pamlskem.",
         "hr": "Smiju. Smrznute jagode narezane na komadiće prikladne veličine mogu biti sigurna i osvježavajuća poslastica.",
         "sv": "Ja. Frysta jordgubbar i lagom stora bitar kan vara en ofarlig och svalkande godbit.",
-        "da": "Ja. Frosne jordbær skåret i passende stykker kan være en sikker og forfriskende godbid."
+        "da": "Ja. Frosne jordbær skåret i passende stykker kan være en sikker og forfriskende godbid.",
+        "fi": "Saa. Sopivan kokoisiksi paloiksi leikatut pakastemansikat voivat olla turvallinen ja virkistävä herkku."
       }
     },
     {
@@ -93,7 +103,8 @@
         "cs": "Mám se nejdřív zeptat veterináře?",
         "hr": "Trebam li prvo pitati veterinara?",
         "sv": "Ska jag fråga veterinären först?",
-        "da": "Skal jeg spørge min dyrlæge først?"
+        "da": "Skal jeg spørge min dyrlæge først?",
+        "fi": "Pitäisikö minun kysyä ensin eläinlääkäriltä?"
       },
       "a": {
         "en": "Whenever you introduce a new food to your dog's diet, it is best to talk to your vet first.",
@@ -101,7 +112,8 @@
         "cs": "Kdykoli zařazujete do jídelníčku psa novou potravinu, je nejlepší se nejdřív poradit s veterinářem.",
         "hr": "Kad god psu u prehranu uvodiš novu namirnicu, najbolje je da prvo razgovaraš s veterinarom.",
         "sv": "När du inför ett nytt livsmedel i hundens kost är det bäst att prata med veterinären först.",
-        "da": "Når du introducerer en ny fødevare i hundens kost, er det altid bedst at tale med din dyrlæge først."
+        "da": "Når du introducerer en ny fødevare i hundens kost, er det altid bedst at tale med din dyrlæge først.",
+        "fi": "Aina kun tuot koirasi ruokavalioon uuden ruoan, on parasta keskustella ensin eläinlääkärin kanssa."
       }
     }
   ],
@@ -196,6 +208,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a24ae4deb57fdd853590f97a276eb8e368531035d49ad817c793211c4f5af7e4"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4a09ae7e2b9fe7877ce4617d5016cc6feee22ba64406e07cfecbb0c9095ec611"
     }
   }
 }

@@ -14,7 +14,8 @@
     "cs": "Hovězí maso",
     "hr": "Govedina",
     "sv": "Nötkött",
-    "da": "Oksekød"
+    "da": "Oksekød",
+    "fi": "Naudanliha"
   },
   "question": {
     "en": "Can cats eat beef?",
@@ -29,7 +30,8 @@
     "cs": "Mohou kočky jíst hovězí maso?",
     "hr": "Smiju li mačke jesti govedinu?",
     "sv": "Får katter äta nötkött?",
-    "da": "Må katte spise oksekød?"
+    "da": "Må katte spise oksekød?",
+    "fi": "Saako kissa syödä naudanlihaa?"
   },
   "url_slug": {
     "en": "beef",
@@ -44,7 +46,8 @@
     "cs": "hovezi-maso",
     "hr": "govedina",
     "sv": "notkott",
-    "da": "oksekoed"
+    "da": "oksekoed",
+    "fi": "naudanliha"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ano, trocha obyčejného, důkladně tepelně upraveného hovězího masa je jako občasný pamlsek v pořádku. Odkrojte tuk, odstraňte všechny kosti a maso nekořeňte. Syrové hovězí maso se nedoporučuje.",
     "hr": "Da, malo obične, dobro termički obrađene govedine u redu je kao povremena poslastica. Odreži masnoću, ukloni sve kosti i ne dodaji začine. Sirova se govedina ne preporučuje.",
     "sv": "Ja, lite naturellt, ordentligt tillagat nötkött går bra som godbit någon gång ibland. Skär bort fettet, ta bort alla ben och krydda inte. Rått nötkött rekommenderas inte.",
-    "da": "Ja, lidt naturelt, gennemtilberedt oksekød er fint som en godbid en gang imellem. Skær fedtet fra, fjern alle knogler, og tilsæt ingen krydderier. Råt oksekød anbefales ikke."
+    "da": "Ja, lidt naturelt, gennemtilberedt oksekød er fint som en godbid en gang imellem. Skær fedtet fra, fjern alle knogler, og tilsæt ingen krydderier. Råt oksekød anbefales ikke.",
+    "fi": "Kyllä, vähän maustamatonta, hyvin kypsennettyä naudanlihaa sopii satunnaiseksi herkuksi. Leikkaa rasva pois, poista kaikki luut äläkä lisää mausteita. Raakaa naudanlihaa ei suositella."
   },
   "why": {
     "en": "Beef is one of the most common proteins in cat food. As a home treat it must be properly cooked: International Cat Care warns that raw or undercooked meat such as beef, lamb and pork can carry Toxoplasma, and advises feeding only properly cooked food. Fatty trimmings are on RSPCA Australia's do-not-feed list, and cooked bones can splinter.",
@@ -75,7 +79,8 @@
     "cs": "Hovězí maso patří k nejběžnějším zdrojům bílkovin v kočičím krmivu. Jako domácí pamlsek musí být řádně tepelně upravené: International Cat Care upozorňuje, že syrové nebo nedostatečně tepelně upravené maso, například hovězí, jehněčí a vepřové, může přenášet toxoplazmu, a doporučuje krmit pouze řádně tepelně upraveným jídlem. Tučné odřezky RSPCA Australia řadí mezi potraviny, které se kočkám nemají dávat, a tepelně upravené kosti se mohou tříštit.",
     "hr": "Govedina je jedan od najčešćih izvora bjelančevina u hrani za mačke. Kao domaća poslastica mora biti dobro termički obrađena: International Cat Care upozorava da sirovo ili nedovoljno termički obrađeno meso, poput govedine, janjetine i svinjetine, može prenositi toksoplazmu (Toxoplasma) i savjetuje davanje samo dobro termički obrađene hrane. Masni obresci nalaze se na popisu RSPCA Australia s namirnicama koje se ne smiju davati, a termički obrađene kosti mogu se rascijepiti.",
     "sv": "Nötkött är ett av de vanligaste proteinerna i kattmat. Som godbit hemma måste det vara ordentligt tillagat: International Cat Care varnar för att rått eller otillräckligt tillagat kött, som nöt-, lamm- och fläskkött, kan bära på toxoplasma och råder till att bara ge ordentligt tillagad mat. Fettrester från kött finns på RSPCA Australias lista över sådant man inte ska ge, och tillagade ben kan splittras.",
-    "da": "Oksekød er en af de mest almindelige proteinkilder i kattefoder. Som hjemmelavet godbid skal det være ordentligt tilberedt: International Cat Care advarer om at råt eller utilstrækkeligt tilberedt kød som okse-, lamme- og svinekød kan indeholde Toxoplasma, og anbefaler kun at fodre med ordentligt tilberedt mad. Fedtafskær står på RSPCA Australias liste over ting katte ikke må få, og tilberedte knogler kan splintre."
+    "da": "Oksekød er en af de mest almindelige proteinkilder i kattefoder. Som hjemmelavet godbid skal det være ordentligt tilberedt: International Cat Care advarer om at råt eller utilstrækkeligt tilberedt kød som okse-, lamme- og svinekød kan indeholde Toxoplasma, og anbefaler kun at fodre med ordentligt tilberedt mad. Fedtafskær står på RSPCA Australias liste over ting katte ikke må få, og tilberedte knogler kan splintre.",
+    "fi": "Naudanliha on yksi kissanruoan yleisimmistä proteiininlähteistä. Kotona annettavana herkkuna sen täytyy olla kunnolla kypsennettyä: International Cat Care varoittaa, että raa’assa tai vajaasti kypsennetyssä lihassa, kuten naudan-, lampaan- ja sianlihassa, voi olla Toxoplasma-loisia, ja neuvoo antamaan vain kunnolla kypsennettyä ruokaa. Rasvaiset lihanpalat ovat RSPCA Australian listalla ruoista, joita ei saa antaa, ja kypsennetyt luut voivat sirpaloitua."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "cs": "Nejdřív nabídněte malý kousek. Pokud kočka potom zvrací nebo má průjem, přestaňte a poraďte se s veterinářem. Pokud kočka spolkla tepelně upravenou kost, zavolejte veterináři.",
     "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili dobije proljev, prestani i pitaj veterinara. Ako je mačka progutala termički obrađenu kost, nazovi veterinara.",
     "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären. Om katten har svalt ett tillagat ben, ring veterinären.",
-    "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, så stop og spørg din dyrlæge. Hvis din kat har slugt en tilberedt knogle, så ring til din dyrlæge."
+    "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, så stop og spørg din dyrlæge. Hvis din kat har slugt en tilberedt knogle, så ring til din dyrlæge.",
+    "fi": "Tarjoa ensin pieni pala. Jos kissallesi tulee sen jälkeen oksentelua tai ripulia, lopeta ja kysy neuvoa eläinlääkäriltä. Jos kissasi nieli kypsennetyn luun, soita eläinlääkärille."
   },
   "serving": {
     "en": "Well cooked, plain, lean, boneless and unseasoned; a few small pieces now and then.",
@@ -106,7 +112,8 @@
     "cs": "Důkladně tepelně upravené, bez přísad, libové, bez kostí a nekořeněné; občas několik malých kousků.",
     "hr": "Dobro termički obrađena, obična, nemasna, bez kostiju i bez začina; nekoliko malih komadića povremeno.",
     "sv": "Ordentligt tillagat, naturellt, magert, utan ben och okryddat; några små bitar då och då.",
-    "da": "Gennemtilberedt, naturelt, magert, uden knogler og uden krydderier; nogle få små stykker en gang imellem."
+    "da": "Gennemtilberedt, naturelt, magert, uden knogler og uden krydderier; nogle få små stykker en gang imellem.",
+    "fi": "Hyvin kypsennettynä, pelkkänä, vähärasvaisena, luuttomana ja maustamattomana; muutama pieni pala silloin tällöin."
   },
   "child": {
     "en": "A tiny bit of plain cooked beef can be a treat. A grown-up should cook it and take out the bones.",
@@ -121,7 +128,8 @@
     "cs": "Kousíček obyčejného hovězího může být pamlsek, ale jen dobře uvařený nebo upečený. Připravit ho a vyndat kosti by měl dospělý.",
     "hr": "Sićušan komadić obične kuhane govedine može biti poslastica. Odrasla osoba treba je skuhati i izvaditi kosti.",
     "sv": "En pytteliten bit kokt nötkött utan kryddor kan bli en godbit. En vuxen ska koka köttet och ta bort benen.",
-    "da": "En lille smule almindeligt kogt oksekød kan være en godbid. En voksen skal tilberede det og tage knoglerne ud."
+    "da": "En lille smule almindeligt kogt oksekød kan være en godbid. En voksen skal tilberede det og tage knoglerne ud.",
+    "fi": "Pikkuinen pala maustamatonta keitettyä naudanlihaa voi olla herkku. Aikuisen pitää kypsentää se ja poistaa luut."
   },
   "faq": [],
   "sources": [
@@ -243,6 +251,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "62585ad45d538c9476abc492fdbf88bf796851fec665affde6bb2ab636c67274"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "77bb0934d5cf0c796f3d6b53d8538fce285f2ff9b8a1360a69cfbcf8ba4f42f4"
     }
   }
 }

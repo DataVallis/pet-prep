@@ -14,7 +14,8 @@
     "cs": "Máslo",
     "hr": "Maslac",
     "sv": "Smör",
-    "da": "Smør"
+    "da": "Smør",
+    "fi": "Voi"
   },
   "question": {
     "en": "Can dogs eat butter?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst máslo?",
     "hr": "Smiju li psi jesti maslac?",
     "sv": "Får hundar äta smör?",
-    "da": "Må hunde spise smør?"
+    "da": "Må hunde spise smør?",
+    "fi": "Saako koira syödä voita?"
   },
   "url_slug": {
     "en": "butter",
@@ -44,7 +46,8 @@
     "cs": "maslo",
     "hr": "maslac",
     "sv": "smor",
-    "da": "smoer"
+    "da": "smoer",
+    "fi": "voi"
   },
   "level": "not_recommended",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Raději ne. Máslo není jedovaté, ale je velmi tučné a tučná jídla mohou psovi podráždit žaludek nebo spustit bolestivý zánět slinivky břišní. Jídlo, o které se se psem dělíte, například vejce nebo bramborovou kaši, je lepší připravovat bez másla.",
     "hr": "Bolje ne. Maslac nije otrovan, ali je vrlo mastan, a masna hrana može psu uznemiriti želudac i potaknuti upalu gušterače, koja je bolna. Hranu koju dijeliš sa psom, poput jaja ili pire krumpira, najbolje je pripremiti bez maslaca.",
     "sv": "Nej, helst inte. Smör är inte giftigt, men det är mycket fett, och fet mat kan ge hunden orolig mage och kanske utlösa bukspottkörtelinflammation, en smärtsam inflammation. Mat som du delar med dig av, som ägg eller potatismos, lagas helst utan smör.",
-    "da": "Nej, helst ikke. Smør er ikke giftigt, men det er meget fedt, og fed mad kan give hunden dårlig mave og kan udløse betændelse i bugspytkirtlen (pankreatitis), som er smertefuld. Mad som du deler med hunden, fx æg eller kartoffelmos, er bedst tilberedt uden smør."
+    "da": "Nej, helst ikke. Smør er ikke giftigt, men det er meget fedt, og fed mad kan give hunden dårlig mave og kan udløse betændelse i bugspytkirtlen (pankreatitis), som er smertefuld. Mad som du deler med hunden, fx æg eller kartoffelmos, er bedst tilberedt uden smør.",
+    "fi": "Ei kannata. Voi itsessään ei ole myrkyllistä, mutta se on hyvin rasvaista, ja rasvaiset ruoat voivat aiheuttaa koiralle vatsavaivoja ja mahdollisesti laukaista haimatulehduksen, joka on kivulias tulehdus. Koiran kanssa jaettava ruoka, kuten kananmuna tai perunamuusi, kannattaa valmistaa ilman voita."
   },
   "why": {
     "en": "Fatty table foods are not a toxicity problem, but fatty foods such as butter, oils and meat drippings may cause pancreatitis. Some breeds, especially miniature Schnauzers, are more prone to it. Vets also suggest preparing food for dogs, such as eggs or mashed potato, without butter.",
@@ -75,7 +79,8 @@
     "cs": "Tučná jídla ze stolu nejsou problémem kvůli jedovatosti, ale tučné potraviny jako máslo, oleje a výpek z masa mohou způsobit zánět slinivky břišní. Některá plemena, hlavně knírač malý, jsou k němu náchylnější. Veterináři také doporučují připravovat jídlo pro psy, například vejce nebo bramborovou kaši, bez másla.",
     "hr": "Masna hrana sa stola nije problem otrovnosti, ali masna hrana poput maslaca, ulja i masnoće od pečenja mesa može izazvati upalu gušterače. Neke su joj pasmine, osobito patuljasti šnauceri, sklonije. Veterinari savjetuju i da se hrana za pse, poput jaja ili pire krumpira, priprema bez maslaca.",
     "sv": "Fet bordsmat är inget förgiftningsproblem, men fet mat som smör, oljor och stekflott kan orsaka bukspottkörtelinflammation (pankreatit). Vissa raser, särskilt dvärgschnauzer, är mer benägna att drabbas. Veterinärer föreslår också att mat till hundar, som ägg eller potatismos, lagas utan smör.",
-    "da": "Fed mad fra bordet er ikke et forgiftningsproblem, men fed mad som smør, olie og stegefedt kan give betændelse i bugspytkirtlen. Nogle racer, især dværgschnauzer, er mere tilbøjelige til det. Dyrlæger anbefaler også at tilberede mad til hunde, fx æg eller kartoffelmos, uden smør."
+    "da": "Fed mad fra bordet er ikke et forgiftningsproblem, men fed mad som smør, olie og stegefedt kan give betændelse i bugspytkirtlen. Nogle racer, især dværgschnauzer, er mere tilbøjelige til det. Dyrlæger anbefaler også at tilberede mad til hunde, fx æg eller kartoffelmos, uden smør.",
+    "fi": "Rasvaiset ihmisruoat eivät ole myrkytysongelma, mutta rasvaiset ruoat, kuten voi, öljyt ja paistinrasva, voivat aiheuttaa haimatulehduksen. Jotkin rodut, etenkin kääpiösnautserit, ovat sille alttiimpia. Eläinlääkärit neuvovat myös valmistamaan koiralle tarkoitetun ruoan, kuten kananmunan tai perunamuusin, ilman voita."
   },
   "signs": {
     "en": [
@@ -155,6 +160,12 @@
       "Mavesmerter",
       "Diarré",
       "Dårlig appetit og manglende energi"
+    ],
+    "fi": [
+      "Oksentelu, joka alkaa joskus 1–4 päivää rasvaisen aterian jälkeen",
+      "Vatsakipu",
+      "Ripuli",
+      "Huono ruokahalu ja väsymys"
     ]
   },
   "what_to_do": {
@@ -170,7 +181,8 @@
     "cs": "Pokud váš pes snědl hodně másla nebo se u něj v následujících dnech objeví zvracení, bolest břicha, průjem či malátnost, zavolejte co nejdříve veterináři.",
     "hr": "Ako je pas pojeo mnogo maslaca ili sljedećih dana povraća, ima bolove u trbuhu, proljev ili je malaksao, što prije nazovi veterinara.",
     "sv": "Om hunden har ätit mycket smör, eller får kräkningar, ont i magen, diarré eller låg energi under de närmaste dagarna, ring veterinären så snart som möjligt.",
-    "da": "Ring til din dyrlæge så hurtigt som muligt hvis hunden har spist meget smør eller får opkast, mavesmerter, diarré eller mangler energi de næste par dage."
+    "da": "Ring til din dyrlæge så hurtigt som muligt hvis hunden har spist meget smør eller får opkast, mavesmerter, diarré eller mangler energi de næste par dage.",
+    "fi": "Jos koirasi söi paljon voita tai sillä ilmenee seuraavina päivinä oksentelua, vatsakipua, ripulia tai väsymystä, soita eläinlääkärille mahdollisimman pian."
   },
   "serving": null,
   "child": {
@@ -186,7 +198,8 @@
     "cs": "Máslo je pro psy moc tučné a může je z něj bolet bříško. Dej máslenku tam, kam pes nedosáhne!",
     "hr": "Maslac je premastan za pse i od njega ih može zaboljeti trbuščić. Drži posudu s maslacem izvan njihova dosega!",
     "sv": "Smör är för fett för hundar och kan ge dem ont i magen. Ställ smörasken där hunden inte når den!",
-    "da": "Smør er for fedt til hunde og kan give dem ondt i maven. Hold smørret uden for hundens rækkevidde!"
+    "da": "Smør er for fedt til hunde og kan give dem ondt i maven. Hold smørret uden for hundens rækkevidde!",
+    "fi": "Voi on koirille liian rasvaista, ja ne voivat saada siitä mahakivun. Pidä voirasia poissa koiran ulottuvilta!"
   },
   "faq": [
     {
@@ -203,7 +216,8 @@
         "cs": "Je máslo pro psy jedovaté?",
         "hr": "Je li maslac otrovan za pse?",
         "sv": "Är smör giftigt för hundar?",
-        "da": "Er smør giftigt for hunde?"
+        "da": "Er smør giftigt for hunde?",
+        "fi": "Onko voi koirille myrkyllistä?"
       },
       "a": {
         "en": "Not in the poisonous sense. The problem is the fat, which may cause stomach upset or pancreatitis.",
@@ -218,7 +232,8 @@
         "cs": "Ne v tom smyslu, že by bylo jedem. Problémem je tuk, který může podráždit žaludek nebo způsobit zánět slinivky břišní.",
         "hr": "Ne u smislu otrova. Problem je mast, koja može uznemiriti želudac ili izazvati upalu gušterače.",
         "sv": "Inte i betydelsen förgiftning. Problemet är fettet, som kan ge orolig mage eller bukspottkörtelinflammation.",
-        "da": "Ikke i den forstand at det er giftigt. Problemet er fedtet, som kan give dårlig mave eller betændelse i bugspytkirtlen."
+        "da": "Ikke i den forstand at det er giftigt. Problemet er fedtet, som kan give dårlig mave eller betændelse i bugspytkirtlen.",
+        "fi": "Ei siinä mielessä, että se olisi myrkkyä. Ongelma on rasva, joka voi aiheuttaa vatsavaivoja tai haimatulehduksen."
       }
     }
   ],
@@ -328,6 +343,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "fbbc963d971b9117c3cca0affd45f49f869fd22ba25be1e354469df8615a108d"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ef4e0aac5754fac27e99785f2d79d33aa05dc6ca2de9f85feffafbb53e80a67c"
     }
   }
 }

@@ -14,7 +14,8 @@
     "cs": "Energetické nápoje",
     "hr": "Energetska pića",
     "sv": "Energidrycker",
-    "da": "Energidrikke"
+    "da": "Energidrikke",
+    "fi": "Energiajuomat"
   },
   "question": {
     "en": "Can cats drink energy drinks?",
@@ -29,7 +30,8 @@
     "cs": "Mohou kočky pít energetické nápoje?",
     "hr": "Smiju li mačke piti energetska pića?",
     "sv": "Får katter dricka energidrycker?",
-    "da": "Må katte drikke energidrikke?"
+    "da": "Må katte drikke energidrikke?",
+    "fi": "Saako kissa juoda energiajuomia?"
   },
   "url_slug": {
     "en": "energy-drinks",
@@ -44,7 +46,8 @@
     "cs": "energeticke-napoje",
     "hr": "energetska-pica",
     "sv": "energidrycker",
-    "da": "energidrikke"
+    "da": "energidrikke",
+    "fi": "energiajuomat"
   },
   "level": "toxic",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ne. Energetické nápoje často obsahují hodně kofeinu a kočky jsou na kofein citlivější než lidé. Nikdy nenechte kočku pít z plechovky nebo ze sklenice, a pokud nějaký nápoj spolkne, zavolejte veterináři.",
     "hr": "Ne. Energetska pića često sadrže mnogo kofeina, a mačke su na kofein osjetljivije od ljudi. Nikad ne dopusti mački da pije iz limenke ili čaše i nazovi veterinara ako mačka išta od toga popije.",
     "sv": "Nej. Energidrycker innehåller ofta mycket koffein, och katter är känsligare för koffein än människor. Låt aldrig katten dricka ur en burk eller ett glas, och ring veterinären om katten har fått i sig något.",
-    "da": "Nej. Energidrikke indeholder ofte meget koffein, og katte er mere følsomme over for koffein end mennesker. Lad aldrig din kat drikke af en dåse eller et glas, og ring til din dyrlæge hvis din kat sluger noget af det."
+    "da": "Nej. Energidrikke indeholder ofte meget koffein, og katte er mere følsomme over for koffein end mennesker. Lad aldrig din kat drikke af en dåse eller et glas, og ring til din dyrlæge hvis din kat sluger noget af det.",
+    "fi": "Ei saa. Energiajuomissa on usein paljon kofeiinia, ja kissat ovat kofeiinille herkempiä kuin ihmiset. Älä koskaan anna kissasi juoda tölkistä tai lasista, ja soita eläinlääkärille, jos kissasi nielee sitä yhtään."
   },
   "why": {
     "en": "Energy and sports drinks often contain a lot of caffeine. Cats are more sensitive to caffeine than people. Like chocolate, coffee and other caffeine-containing foods have high levels of stimulants called methylxanthines; caffeine speeds up the heart, makes cats restless and upsets the stomach.",
@@ -75,7 +79,8 @@
     "cs": "Energetické a sportovní nápoje často obsahují hodně kofeinu. Kočky jsou na kofein citlivější než lidé. Káva a další potraviny s kofeinem obsahují stejně jako čokoláda velké množství stimulačních látek zvaných methylxanthiny; kofein zrychluje tep, způsobuje u koček neklid a dráždí žaludek.",
     "hr": "Energetska i sportska pića često sadrže mnogo kofeina. Mačke su na kofein osjetljivije od ljudi. Kao i čokolada, kava i druge namirnice s kofeinom sadrže mnogo stimulansa koji se zovu metilksantini; kofein ubrzava rad srca, čini mačke nemirnima i izaziva želučane tegobe.",
     "sv": "Energi- och sportdrycker innehåller ofta mycket koffein. Katter är känsligare för koffein än människor. Precis som choklad innehåller kaffe och andra livsmedel med koffein höga halter av stimulerande ämnen som kallas metylxantiner; koffein får hjärtat att slå snabbare, gör katter rastlösa och ger orolig mage.",
-    "da": "Energi- og sportsdrikke indeholder ofte meget koffein. Katte er mere følsomme over for koffein end mennesker. Ligesom chokolade har kaffe og andre koffeinholdige fødevarer et højt indhold af stimulerende stoffer kaldet methylxanthiner; koffein får hjertet til at slå hurtigere, gør katte urolige og giver dårlig mave."
+    "da": "Energi- og sportsdrikke indeholder ofte meget koffein. Katte er mere følsomme over for koffein end mennesker. Ligesom chokolade har kaffe og andre koffeinholdige fødevarer et højt indhold af stimulerende stoffer kaldet methylxanthiner; koffein får hjertet til at slå hurtigere, gør katte urolige og giver dårlig mave.",
+    "fi": "Energia- ja urheilujuomissa on usein paljon kofeiinia. Kissat ovat kofeiinille herkempiä kuin ihmiset. Suklaan tavoin kahvissa ja muissa kofeiinia sisältävissä ruoissa on paljon piristäviä aineita, joita kutsutaan metyyliksantiineiksi; kofeiini kiihdyttää sydäntä, tekee kissasta levottoman ja aiheuttaa vatsavaivoja."
   },
   "signs": {
     "en": [
@@ -155,6 +160,12 @@
       "Hyperaktivitet",
       "Dårlig mave",
       "Hurtig puls eller ændret hjerterytme"
+    ],
+    "fi": [
+      "Levottomuus, hermostuneisuus, haluttomuus maata paikallaan",
+      "Ylivilkkaus",
+      "Vatsavaivat",
+      "Nopea syke tai sydämen rytmin muutokset"
     ]
   },
   "what_to_do": {
@@ -170,7 +181,8 @@
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co kočka vypila, kolik a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je mačka popila, koliko i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur. Notera vad katten drack, hur mycket och när. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
-    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvad din kat har drukket, hvor meget og hvornår. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op."
+    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvad din kat har drukket, hvor meget og hvornår. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
+    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä kissasi joi, kuinka paljon ja milloin. Älä odota oireita äläkä yritä itse oksennuttaa kissaasi."
   },
   "serving": null,
   "child": {
@@ -186,7 +198,8 @@
     "cs": "Energetické nápoje jsou pro dospělé, ne pro kočky. Kočička potřebuje jen čerstvou vodu. Když se trochu napije, řekni to dospělému.",
     "hr": "Energetska pića su za odrasle, a ne za mace. Maci treba samo svježa voda. Reci odrasloj osobi ako je malo popila.",
     "sv": "Energidrycker är för vuxna, inte för katter. Katten behöver bara friskt vatten. Säg till en vuxen om katten dricker lite.",
-    "da": "Energidrikke er for voksne, ikke for katte. Din kat har kun brug for frisk vand. Sig det til en voksen hvis den drikker noget af det."
+    "da": "Energidrikke er for voksne, ikke for katte. Din kat har kun brug for frisk vand. Sig det til en voksen hvis den drikker noget af det.",
+    "fi": "Energiajuomat ovat aikuisille, eivät kissoille. Kisu tarvitsee vain raikasta vettä. Kerro aikuiselle, jos kisu juo energiajuomaa."
   },
   "faq": [],
   "sources": [
@@ -319,6 +332,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "540806c47ef28a8ef75c4ea19c447261b1a65b3eccb8d95222e0c1124c392f56"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3844fb68d0857ef0da8b584a9e4683a9a48688c094e4b619a33d35b22efe0c97"
     }
   }
 }
