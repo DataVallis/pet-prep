@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `rat_terrier` (viri S647–S651; ponovno S8, S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: Rat Terrier Club of America (K39) in AKC (K38) |
 | Izvor | ameriška pasma, AKC skupina terierjev (standard ratificiran 2009; S650, S651); **standarda FCI nisem našel** (pasma ni pri RKC; v registru ni podatka FCI) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 81. mesto (S174, prebrano 2026-11-02) |
-| PR-ji | pet-prep #514 (pasma) · portret: glej spodaj · spletna stran: šele s portretom |
+| PR-ji | pet-prep #514 (pasma, združen `09add54`) · portret: čaka produkcijsko namestitev (zagon 41372091995 zavrnjen) · spletna stran: šele s portretom |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -45,7 +45,7 @@
 | Česanje 1× na teden, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-11-02 |
 | Mini igra kremplji (1× na teden), opomnik staršem kopanje (vsake 4 tedne) | 🛠 | 💶 izziv | M5-R19 | 2026-11-02 |
 | Barva (izbirnik: 8 standardnih barv) | 🛠 | 💶 izziv | M5-R21 | 2026-11-02 |
-| AI portret v registru | 🗓 glej »Odprto za Davida« | — | M5-R11-04 | — |
+| AI portret v registru | 🗓 čaka produkcijsko namestitev (Laravel 12) | — | M5-R11-04 | — |
 | Stran na petprep.si (`/animals/dogs/rat-terrier`, `/sl/zivali/psi/rat-terier`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -63,3 +63,4 @@
 - **Ime:** »Rat terier« je predlog (slovenskega imena nisem našel). Potrdite ali popravite.
 - **Dve velikosti:** standard AKC pozna mini (10–13 in) in standard (13–18 in); igra ju vodi kot eno pasmo (višina 25–46 cm), portret kaže standardno velikost.
 - **Ugotovitev za skupne dokumente (ne urejam jih):** prva pasma brez standarda FCI (`fci_standard: false` v izvozu); spletna stran bo pasmo pokazala brez vrstice »FCI«.
+- **Portret čaka produkcijsko namestitev:** zagon `breed-portraits.yml` 41372091995 (koda `09add54`) je zavrnil delo, ker se `composer.lock` na `main` (Laravel 12, PR #496) razlikuje od produkcije. Brez portreta ni strani na petprep.si. Ko dnevna namestitev (03:17) ali ročna namestitev prenese Laravel 12 v produkcijo, naslednji nočni zagon portret naredi sam (korak »catch-up«).
