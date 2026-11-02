@@ -1032,6 +1032,24 @@ class BreedStageParamsSeeder extends Seeder
     public const PROPOSED_R10_BASENJI_SENIOR = 'predlog Claude 2026-10-31 (najbližja vrstica pravila runbooka, M5-R10-84) — čaka Davida';
 
     /**
+     * M5-R10-85 Rat Terrier (unattended run 2026-11-02, data.json proposed_game_parameters.rat_terrier.*.decision): every
+     * value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 30 min (Rat Terrier Club of America S650 "need at least 30 minutes of exercise a day"; no RKC / PDSA page
+     * exists for this American breed), senior 23 min, puppy 10 min × age capped at 30, stages young 9 / adult 36, arrival
+     * 2 / 9 / 36, learning multiplier 1.0 (not ranked by Coren); care rates the Border Collie's. The senior boundary uses the
+     * closest rule row (VCA lower bound "12 - 16 years", S647 — no McMillan 2024 / VetCompass median / RKC band) and is NOT
+     * covered by the confirmation: see PROPOSED_R10_RAT_TERRIER_SENIOR.
+     */
+    public const CONFIRMED_R10_RAT_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-85)';
+
+    /**
+     * M5-R10-85 Rat Terrier senior boundary / senior arrival (108 months): Claude's suggestion from the closest rule row
+     * (0.75 × VCA lower bound 12 y, S647 — Basenji / Alaskan Malamute precedent), verified=false until David decides
+     * (data.json proposed_game_parameters.rat_terrier.senior_boundary_months).
+     */
+    public const PROPOSED_R10_RAT_TERRIER_SENIOR = 'predlog Claude 2026-11-02 (najbližja vrstica pravila runbooka, M5-R10-85) — čaka Davida';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1302,6 +1320,10 @@ class BreedStageParamsSeeder extends Seeder
             'tooth_brushing' => [2, 'week', 'S646', 'Brush their teeth often — daily is best, but at least twice a week', 'proposed_game_parameters.basenji.tooth_brushing', '"at least twice a week" → 2× a week (the stated minimum; "daily is best" is the ideal)'],
             'ear_cleaning' => [1, 'week', 'S646', 'Check their ears for debris and clean them on a weekly basis', 'proposed_game_parameters.basenji.ear_care', '"on a weekly basis" → once a week (nails "as needed", bath only when messy → no task)'],
         ],
+        'rat_terrier' => [
+            'nail_trim' => [1, 'week', 'S648', 'Pet parents need to keep up with weekly nail trims, and Kallas recommends annual dental cleanings.', 'proposed_game_parameters.rat_terrier.nail_trimming', '"weekly nail trims" → once a week (WebMD S649 "monthly or as needed" — alternative; annual dental cleaning is a vet visit, no ear routine → no other child task)'],
+            'bath' => [1, 'month', 'S649', 'a monthly bath is typically enough for most', 'proposed_game_parameters.rat_terrier.bathing', '"a monthly bath" → every 4 weeks (PetMD S648 "not … more frequently than once a month" — the same rhythm)'],
+        ],
     ];
 
     /**
@@ -1403,6 +1425,7 @@ class BreedStageParamsSeeder extends Seeder
         'lagotto_romagnolo' => [2, 'S632', 'Grooming: More than once a week', 'low', true, self::PROPOSED_R13_LAGOTTO_ROMAGNOLO],
         'alaskan_malamute' => [7, 'S639', 'Because their coats are so thick they will need daily brushing', 'high', false],
         'basenji' => [1, 'S644', 'brushing once a week is usually enough to remove any dead hair.', 'high', false],
+        'rat_terrier' => [1, 'S647', 'Brushing once a week will remove dead hair.', 'high', false],
     ];
 
     /**
@@ -1541,13 +1564,14 @@ class BreedStageParamsSeeder extends Seeder
         'american_staffordshire_terrier' => ['S628', 'socialization is important—especially for American Staffordshire puppies.'],
         'lagotto_romagnolo' => ['S635', 'A Lagotto can be remarkably shy and requires extensive socialization'],
         'alaskan_malamute' => ['S639', 'Remember to socialise your Malamute as a puppy with lots of other dogs, different people and types of experiences.'],
+        'rat_terrier' => ['S648', 'Early (and consistent!) socialization and training is a must.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2345,6 +2369,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-84 (docs/research/dog-data/data.json basenji,
             // S642–S646; runbook rules in proposed_game_parameters.basenji).
             BreedType::Basenji => self::basenjiProfile(),
+            // M5-R10-85 (docs/research/dog-data/data.json rat_terrier,
+            // S647–S651; runbook rules in proposed_game_parameters.rat_terrier).
+            BreedType::RatTerrier => self::ratTerrierProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -8207,6 +8234,90 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'basenji.lifespan.pdsa',
                 'quote' => 'Over 12 years',
                 'notes' => 'PDSA lower bound "Over 12 years" (S644); WebMD 13–14 y (S646); no McMillan 2024 / VetCompass median reachable. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Rat Terrier (M5-R10-85). Stage boundaries young / adult, arrival ages, exercise minutes and the learning multiplier
+     * follow the runbook's standing rules (CONFIRMED_R10_RAT_TERRIER); weight, growth and lifespan are sourced; not ranked by
+     * Coren. The senior boundary is Claude's suggestion (PROPOSED_R10_RAT_TERRIER_SENIOR, verified=false).
+     *
+     * @return array<string, mixed>
+     */
+    private static function ratTerrierProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_RAT_TERRIER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S647', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.rat_terrier.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a small dog reaches adult weight at 9–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, [
+                    'unit' => 'months', 'source_id' => 'S11,S647', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.rat_terrier.senior_boundary_months', 'decision' => self::PROPOSED_R10_RAT_TERRIER_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × VCA lower bound "12 - 16 years" (S647; PetMD S648 "12–18 years" starts at 12 too) = 9 y = 108 months. Not RKC-registered, no McMillan 2024 / VetCompass median. Alternatives: the breed club / WebMD lower bound 15 y (S650 / S649) → 135; Dogs Trust > 7 y (S14) → 84.',
+                ]],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.rat_terrier.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.rat_terrier.senior_boundary_months', 'decision' => self::PROPOSED_R10_RAT_TERRIER_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 108 months (0.75 × 12 y, S647).',
+                ],
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (9–12 months for a small dog, S10); capped at the adult 30 minutes, which 10 × age reaches at 3 months.',
+            'adult_minutes' => [30, [
+                'unit' => 'minutes/day', 'source_id' => 'S650', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.rat_terrier.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Rat Terriers do ok in an apartment but need at least 30 minutes of exercise a day.',
+                'notes' => 'Rat Terrier Club of America (S650): "at least 30 minutes" → 30 min = 3,000 steps (runbook rule: "at least N" → N; no RKC / PDSA page exists for this breed). WebMD "at least 20 to 30 minutes" (S649) → 20 — alternative.',
+            ]],
+            'senior_minutes' => [23, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.rat_terrier.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 30 minutes = 22.5 → 23 min (half up) = 2,300 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[4.5, 11.3], [
+                'unit' => 'kg', 'source_id' => 'S648', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'rat_terrier.adult_weight.petmd',
+                'quote' => 'This is a relatively small dog that reaches only 10–25 pounds, both in the standard and the miniature size.',
+                'notes' => 'PetMD (S648): 10–25 lb = 4.5–11.3 kg, both size varieties, one range for both sexes. The AKC standard (S650) gives no weight; WebMD 8–35 lb (S649).',
+            ]],
+            'growth_end' => [[9, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'rat_terrier.growth.adult_weight_reached',
+                'quote' => 'Small (12–24 pounds): 9–12 months',
+                'notes' => 'Size-class value, not breed-specific (10–25 lb, mostly the Small class of S10).',
+            ]],
+            'coren_rank' => [null, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'rat_terrier.trainability.coren_rank',
+                'notes' => 'Not ranked: the Rat Terrier is not in the Wikipedia table of Coren\'s ranking (S35, checked 2026-11-02).',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.rat_terrier.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): not ranked by Coren (S35) → 1.0, the mixed breed\'s speed (AKC standard S650: "easily trained and obedient to command"). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12.0, [
+                'unit' => 'years', 'source_id' => 'S647', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'rat_terrier.lifespan.vca',
+                'quote' => '12 - 16 years',
+                'notes' => 'VCA lower bound "12 - 16 years" (S647); PetMD 12–18 y (S648), WebMD / RTCA 15–18 y (S649 / S650); no McMillan 2024 / VetCompass median. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

@@ -3152,6 +3152,44 @@
         }
       ],
       "notes": "RKC Breeds A–Z page (royalkennelclub.com …/hound/basenji; the thekennelclub.org.uk display.aspx?id=1002 address redirects there) could not be fetched on 2026-10-31 → no minimum / best_practice level. Basenji Club of America health page (K37, 2026-10-31): 'If you are considering a basenji puppy, ask the breeder for these test results.' — 'Fanconi Syndrome', 'PRA-BJ1', 'Eyes / CAER', 'Thyroid', 'Hips and elbows' → other_scheme (new keys dna_fanconi, dna_pra_bj1, thyroid_scheme). The page says the Fanconi and PRA-BJ1 tests and the OFA eye exam are part of the CHIC list (paraphrase). PDSA (dog-data S644): check that the parents were screened (paraphrase)."
+    },
+    "rat_terrier": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K39",
+        "quote": "Cardiac Evaluation"
+      },
+      "tests": [
+        {
+          "key": "cardiac_exam",
+          "level": "other_scheme",
+          "name": "Heart examination of breeding dogs (US breed club requirement)",
+          "source_id": "K39",
+          "quote": "Cardiac Evaluation"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "other_scheme",
+          "name": "Hip evaluation of breeding dogs (US breed club requirement)",
+          "source_id": "K39",
+          "quote": "Hip Dysplasia"
+        },
+        {
+          "key": "patella_scheme",
+          "level": "other_scheme",
+          "name": "Kneecap (patella) evaluation of breeding dogs (US breed club requirement)",
+          "source_id": "K39",
+          "quote": "Patellar Luxation"
+        },
+        {
+          "key": "dna_pll",
+          "level": "other_scheme",
+          "name": "DNA test for primary lens luxation (US breed club requirement)",
+          "source_id": "K39",
+          "quote": "Primary Lens Luxation (DNA)"
+        }
+      ],
+      "notes": "Not RKC-registered → no RKC minimum / best_practice level. Rat Terrier Club of America health statement (K39, June 2025) lists the required tests 'Cardiac Evaluation', 'Hip Dysplasia', 'Patellar Luxation', 'Primary Lens Luxation (DNA)' (the statement does not say verbatim that they apply to breeding dogs — paraphrase), optional tests listed separately (not taken). AKC Terrier Group health-testing page (K38): recommended by the national breed club 'Patella Evaluation', 'Hip Evaluation', 'Cardiac Exam', 'Primary Lens Luxation (PLL) - DNA Test' — the same four. No new key."
     }
   }
 }

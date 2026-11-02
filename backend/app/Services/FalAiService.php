@@ -704,6 +704,13 @@ class FalAiService
                 .'a flat, well-chiselled head with fine wrinkles on the forehead, dark almond-shaped eyes, small pointed erect ears, a tail curled tightly over the back, '
                 .'alert and poised expression, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-85: AKC standard (S650) — a compact, well-muscled small terrier; short, smooth, shiny coat; pied black, tan
+            // and white; smooth blunt wedge head; upright ears; natural tail (docking is not shown).
+            BreedType::RatTerrier => 'A compact, well-muscled small Rat Terrier with a deep chest, strong shoulders and powerful legs, '
+                .'a short, smooth, shiny coat, pied black, tan and white with large black patches and tan points on a white body, '
+                .'a smooth blunt wedge-shaped head, upright ears, small oval dark brown eyes, a natural long tail, '
+                .'keen and alert expression, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1702,6 +1709,17 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'short, sleek, close and very fine coat',
                 'markings' => 'white feet, chest and tail tip, fine forehead wrinkles, tail curled tightly over the back',
+            ],
+            // M5-R10-85: standard pied colours (S650), always patches of colour with white; never brindle or merle.
+            BreedType::RatTerrier => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'black, tan and white tricolour pied with tan points',
+                    1 => 'red and white pied',
+                    2 => 'chocolate, tan and white pied with a brown nose',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'short, close-lying, smooth and shiny coat',
+                'markings' => 'large patches of colour on a white body, upright ears, natural long tail, never brindle or merle',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

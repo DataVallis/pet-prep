@@ -544,6 +544,18 @@ return [
         ['key' => 'tricolour', 'value' => 'black, tan and white tricolour with tan markings on the muzzle and cheeks', 'en' => 'Tricolour (black, tan, white)', 'sl' => 'Trobarven (črn, rjavkast, bel)'],
         ['key' => 'brindle-white', 'value' => 'brindle (black stripes on chestnut red) and white with white feet, chest and tail tip', 'en' => 'Brindle and white', 'sl' => 'Tigrast z belo'],
     ],
+    // M5-R10-85: AKC standard S650 pied colour list (same order as the appearance block; black, tan and white first = the
+    // portrait default).
+    'rat_terrier' => [
+        ['key' => 'black-tan-white', 'value' => 'black, tan and white tricolour pied: large black patches with tan points on the cheeks, eyebrows and legs on a white body', 'en' => 'Tricolour (black, tan, white)', 'sl' => 'Trobarven (črn, rjavkast, bel)'],
+        ['key' => 'red-white', 'value' => 'red and white pied: large deep red patches on a white body', 'en' => 'Red and white', 'sl' => 'Rdeče-bel'],
+        ['key' => 'chocolate-tan-white', 'value' => 'chocolate, tan and white pied: large chocolate-brown patches with tan points on a white body and a brown nose', 'en' => 'Chocolate, tan and white', 'sl' => 'Čokoladno-rjavkasto-bel'],
+        ['key' => 'black-white', 'value' => 'black and white pied: large black patches on a white body', 'en' => 'Black and white', 'sl' => 'Črno-bel'],
+        ['key' => 'apricot-white', 'value' => 'apricot and white pied: large apricot patches on a white body', 'en' => 'Apricot and white', 'sl' => 'Marelično-bel'],
+        ['key' => 'lemon-white', 'value' => 'lemon and white pied: large pale lemon-yellow patches on a white body', 'en' => 'Lemon and white', 'sl' => 'Limonasto-bel'],
+        ['key' => 'blue-tan-white', 'value' => 'blue, tan and white pied: large slate blue-grey patches with tan points on a white body', 'en' => 'Blue, tan and white', 'sl' => 'Modro-rjavkasto-bel'],
+        ['key' => 'fawn-white', 'value' => 'fawn and white pied: large fawn patches on a white body', 'en' => 'Fawn and white', 'sl' => 'Plavo-bel'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

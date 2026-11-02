@@ -468,6 +468,7 @@ const SPECIES = [
       { id: 'lagotto_romagnolo', synonyms: { en: ['Lagotto', 'Romagna Water Dog', 'Truffle dog'], sl: ['lagotto', 'romanjski vodni pes', 'pes za tartufe'] } },
       { id: 'alaskan_malamute', synonyms: { en: ['Malamute', 'Mal'], sl: ['malamut', 'aljaski malamut', 'malamute'] } },
       { id: 'basenji', synonyms: { en: ['African Barkless Dog', 'Congo Dog', 'barkless dog'], sl: ['basendži', 'basendzi', 'pes, ki ne laja'] } },
+      { id: 'rat_terrier', synonyms: { en: ['Rattie', 'Ratty', 'American Rat Terrier'], sl: ['rattie', 'ameriški rat terier', 'terier za podgane'] } },
     ],
   },
   {
@@ -2254,6 +2255,32 @@ const DOG_FACTS = {
       ['bladder_stones', 'health.urolithiasis'],
     ],
   },
+  // M5-R10-85. An American breed: no RKC / PDSA page, no FCI standard → `fci_standard: false` (no FCI fact, never a guessed
+  // number). Exercise = the Rat Terrier Club of America 'at least 30 minutes' (S650); grooming VCA 'Brushing once a week'
+  // (S647, Once a week); coat 'Short' (AKC standard S650); lifespan spans VCA 12–16 y (S647) + PetMD 12–18 y (S648); weight
+  // PetMD 10–25 lb (S648), height the AKC standard 10–18 in (S650, both size varieties). Not ranked by Coren.
+  // Not exported: adult_weight / height alternatives and salt_category, lifespan webmd / rtca spans (the same facts twice),
+  // senior_from, mcmillan_2024 (null), the shedding statement (no register shedding code for 'mildly').
+  rat_terrier: {
+    height: ['height.akc'],
+    weight: [['adult_weight.petmd', null]],
+    lifespan: [['lifespan.vca', 'span'], ['lifespan.petmd', 'span']],
+    exercise: [['@proposed_game_parameters.rat_terrier.exercise_minutes_adult', 'at_least']],
+    coat: ['suitability.rtca_coat_length'],
+    grooming: [['suitability.vca_grooming', 'grooming_frequency']],
+    shedding: [],
+    food_motivation: 'behaviour.food_motivation',
+    coren_rank: false,
+    fci_standard: false,
+    health: [
+      ['hip_dysplasia', 'health.hip_dysplasia'],
+      ['kneecap_luxation', 'health.luxating_patella'],
+      ['legg_perthes', 'health.legg_perthes'],
+      ['primary_lens_luxation', 'health.primary_lens_luxation'],
+      ['weight_gain', 'health.obesity'],
+      ['skin_allergies', 'health.skin_allergies'],
+    ],
+  },
 
 
 };
@@ -2305,6 +2332,7 @@ export const DOG_CARE_TASKS = {
   lagotto_romagnolo: [['groomer_visit', 1, 42, 'proposed_game_parameters.lagotto_romagnolo.professional_grooming'], ['bath', 1, 28, 'proposed_game_parameters.lagotto_romagnolo.bathing']],
   alaskan_malamute: [['ear_cleaning', 1, 7, 'proposed_game_parameters.alaskan_malamute.ear_care'], ['bath', 1, 42, 'proposed_game_parameters.alaskan_malamute.bathing']],
   basenji: [['tooth_brushing', 2, 7, 'proposed_game_parameters.basenji.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.basenji.ear_care']],
+  rat_terrier: [['nail_trim', 1, 7, 'proposed_game_parameters.rat_terrier.nail_trimming'], ['bath', 1, 28, 'proposed_game_parameters.rat_terrier.bathing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -2949,6 +2977,14 @@ const DOG_GAME = {
     step_goal_check: 'proposed_game_parameters.basenji.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.basenji.exercise_minutes_senior',
   },
+  rat_terrier: {
+    adult_minutes: ['proposed_game_parameters.rat_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.rat_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.rat_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.rat_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.rat_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.rat_terrier.exercise_minutes_senior',
+  },
 
 
 };
@@ -2984,21 +3020,27 @@ function dogBreedFacts(R, id) {
   } else if (R.entry(p('trainability.coren_rank'))?.value != null) {
     throw new Error(`${id}: coren_rank: false in DOG_FACTS but data.json has a rank — remove the opt-out`);
   }
-  facts.push(
-    R.fact(p('identity'), { group: 'training', field: 'fci_standard', kind: 'statement' }, (v, ref) => {
-      const s = String(v);
-      const num = (re) => {
-        const m = re.exec(s);
-        if (!m) throw new Error(`cannot read ${re} from ${ref}`);
-        return Number(m[1]);
-      };
-      const origin = Object.entries(FCI_ORIGINS).find(([name]) => s.endsWith(`, ${name}`))?.[1];
-      if (!origin) throw new Error(`unknown origin in ${ref} (add it to FCI_ORIGINS)`);
-      // FCI group 4 (Dachshunds, M5-R10-08) has no numbered section → section null.
-      const section = /Section \d/.test(s) ? num(/Section (\d+)/) : null;
-      return { number: num(/FCI No\. (\d+)/), group: num(/Group (\d+)/), section, origin };
-    }),
-  );
+  // A breed without an FCI standard opts out explicitly (`fci_standard: false` — Rat Terrier, M5-R10-85, an AKC-only breed):
+  // no fci_standard fact, never a guessed number. Every other breed still fails loudly on an unreadable identity.
+  if (spec.fci_standard === false) {
+    if (/FCI No\. \d/.test(String(R.entry(p('identity'))?.value ?? ''))) throw new Error(`${id}: fci_standard: false in DOG_FACTS but data.json has an FCI number — remove the opt-out`);
+  } else {
+    facts.push(
+      R.fact(p('identity'), { group: 'training', field: 'fci_standard', kind: 'statement' }, (v, ref) => {
+        const s = String(v);
+        const num = (re) => {
+          const m = re.exec(s);
+          if (!m) throw new Error(`cannot read ${re} from ${ref}`);
+          return Number(m[1]);
+        };
+        const origin = Object.entries(FCI_ORIGINS).find(([name]) => s.endsWith(`, ${name}`))?.[1];
+        if (!origin) throw new Error(`unknown origin in ${ref} (add it to FCI_ORIGINS)`);
+        // FCI group 4 (Dachshunds, M5-R10-08) has no numbered section → section null.
+        const section = /Section \d/.test(s) ? num(/Section (\d+)/) : null;
+        return { number: num(/FCI No\. (\d+)/), group: num(/Group (\d+)/), section, origin };
+      }),
+    );
+  }
   const health = spec.health.map(([key, rel]) => {
     const f = R.fact(p(rel), { key }, () => null);
     delete f.value;
