@@ -12,7 +12,8 @@
     "nl": "Chips",
     "pl": "Chipsy",
     "cs": "Brambůrky",
-    "hr": "Čips"
+    "hr": "Čips",
+    "sv": "Potatischips"
   },
   "question": {
     "en": "Can dogs eat chips?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden chips eten?",
     "pl": "Czy psy mogą jeść chipsy?",
     "cs": "Mohou psi jíst brambůrky?",
-    "hr": "Smiju li psi jesti čips?"
+    "hr": "Smiju li psi jesti čips?",
+    "sv": "Får hundar äta chips?"
   },
   "url_slug": {
     "en": "chips",
@@ -38,7 +40,8 @@
     "nl": "chips",
     "pl": "chipsy",
     "cs": "bramburky",
-    "hr": "cips"
+    "hr": "cips",
+    "sv": "chips"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Niet aan te raden. Een paar chips veroorzaken waarschijnlijk geen zoutvergiftiging, maar chips zijn zout en te veel zout eten is niet goed voor honden, vooral niet voor honden met hartproblemen. Chips met ui- of knoflooksmaak brengen extra risico, want ui en knoflook zijn giftig voor honden.",
     "pl": "Nie zaleca się. Kilka chipsów ziemniaczanych raczej nie spowoduje zatrucia solą, ale chipsy są słone, a nadmiar słonego jedzenia nie jest dobry dla psów, zwłaszcza tych z problemami z sercem. Chipsy o smaku cebulowym lub czosnkowym to dodatkowe ryzyko, bo cebula i czosnek są toksyczne dla psów.",
     "cs": "Nedoporučuje se. Pár brambůrků pravděpodobně otravu solí nezpůsobí, ale brambůrky jsou slané a nadměrné množství slaných jídel psům nesvědčí, zvlášť psům se srdečními potížemi. Brambůrky s příchutí cibule nebo česneku přinášejí další riziko, protože cibule a česnek jsou pro psy jedovaté.",
-    "hr": "Ne preporučuje se. Nekoliko listića čipsa vjerojatno neće izazvati otrovanje solju, ali čips je slan, a previše slane hrane nije dobro za pse, osobito za one sa srčanim tegobama. Čips s okusom luka ili češnjaka donosi dodatni rizik, jer su luk i češnjak otrovni za pse."
+    "hr": "Ne preporučuje se. Nekoliko listića čipsa vjerojatno neće izazvati otrovanje solju, ali čips je slan, a previše slane hrane nije dobro za pse, osobito za one sa srčanim tegobama. Čips s okusom luka ili češnjaka donosi dodatni rizik, jer su luk i češnjak otrovni za pse.",
+    "sv": "Rekommenderas inte. Några få chips ger knappast saltförgiftning, men chips är salta och för mycket salt mat är inte bra för hundar, särskilt inte för hundar med hjärtproblem. Chips med lök- eller vitlökssmak ger en extra risk, eftersom lök och vitlök är giftiga för hundar."
   },
   "why": {
     "en": "AKC says a dog can have salty foods like potato chips in limited amounts, but excess salt is not good for dogs and can cause fluid retention. Large amounts of salt can lead to salt poisoning. Onion and garlic are toxic to dogs in every form, including powders.",
@@ -65,7 +69,8 @@
     "nl": "Volgens de AKC mag een hond zoute dingen zoals chips in beperkte hoeveelheden, maar te veel zout is niet goed voor honden en kan ervoor zorgen dat het lichaam vocht vasthoudt. Grote hoeveelheden zout kunnen tot zoutvergiftiging leiden. Ui en knoflook zijn in elke vorm giftig voor honden, ook als poeder.",
     "pl": "AKC podaje, że pies może jeść słone produkty, takie jak chipsy ziemniaczane, w ograniczonych ilościach, ale nadmiar soli nie jest dla psów dobry i może powodować zatrzymywanie wody w organizmie. Duże ilości soli mogą prowadzić do zatrucia solą. Cebula i czosnek są toksyczne dla psów w każdej postaci, także w proszku.",
     "cs": "Podle AKC může pes slaná jídla, jako jsou brambůrky, dostat v omezeném množství, ale nadbytek soli psům nesvědčí a může způsobit zadržování tekutin. Velké množství soli může vést k otravě solí. Cibule a česnek jsou pro psy jedovaté v jakékoli podobě, včetně prášku.",
-    "hr": "AKC navodi da pas može dobiti slanu hranu poput čipsa u ograničenim količinama, ali da višak soli nije dobar za pse i može izazvati zadržavanje tekućine. Velike količine soli mogu dovesti do otrovanja solju. Luk i češnjak otrovni su za pse u svakom obliku, i u prahu."
+    "hr": "AKC navodi da pas može dobiti slanu hranu poput čipsa u ograničenim količinama, ali da višak soli nije dobar za pse i može izazvati zadržavanje tekućine. Velike količine soli mogu dovesti do otrovanja solju. Luk i češnjak otrovni su za pse u svakom obliku, i u prahu.",
+    "sv": "AKC skriver att en hund kan få salt mat som potatischips i begränsade mängder, men för mycket salt är inte bra för hundar och kan ge vätskeansamling. Stora mängder salt kan leda till saltförgiftning. Lök och vitlök är giftiga för hundar i alla former, även som pulver."
   },
   "signs": {
     "en": [
@@ -144,6 +149,13 @@
       "Proljev",
       "Teturanje, umor",
       "Drhtanje mišića ili napadaji"
+    ],
+    "sv": [
+      "Stark törst och kissar mycket",
+      "Kräkningar, ofta inom några timmar",
+      "Diarré",
+      "Vinglighet, trötthet",
+      "Darrningar eller kramper"
     ]
   },
   "what_to_do": {
@@ -157,7 +169,8 @@
     "nl": "Heeft je hond veel chips gegeten, vooral met ui- of knoflooksmaak? Neem dan contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op welke smaak het was en ongeveer hoeveel er is gegeten.",
     "pl": "Jeśli twój pies zjadł dużo chipsów, zwłaszcza o smaku cebulowym lub czosnkowym, skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj smak i mniej więcej ile zjadł.",
     "cs": "Pokud váš pes snědl hodně brambůrků, zvlášť s příchutí cibule nebo česneku, obraťte se na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si příchuť a zhruba kolik pes snědl.",
-    "hr": "Ako je pas pojeo mnogo čipsa, osobito s okusom luka ili češnjaka, obrati se veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši okus i otprilike koliko je pojeo."
+    "hr": "Ako je pas pojeo mnogo čipsa, osobito s okusom luka ili češnjaka, obrati se veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši okus i otprilike koliko je pojeo.",
+    "sv": "Om hunden har ätit mycket chips, särskilt med lök- eller vitlökssmak, kontakta veterinären eller en giftrådgivning för djur. Notera smaken och ungefär hur mycket den åt."
   },
   "serving": null,
   "child": {
@@ -171,7 +184,8 @@
     "nl": "Chips zijn een zoute snack voor mensen. Ze zijn niet goed voor honden, dus houd de zak dicht en geef je hond zijn eigen snoepje.",
     "pl": "Chipsy to słona przekąska dla ludzi. Nie są dobre dla psów, więc trzymaj paczkę zamkniętą i daj psu jego własny smakołyk.",
     "cs": "Brambůrky jsou slaná svačinka pro lidi. Psům nesvědčí, a tak sáček zavři a dej psovi jeho vlastní pamlsek.",
-    "hr": "Čips je slana grickalica za ljude. Nije dobar za pse, zato drži vrećicu zatvorenom i daj psu njegovu poslasticu."
+    "hr": "Čips je slana grickalica za ljude. Nije dobar za pse, zato drži vrećicu zatvorenom i daj psu njegovu poslasticu.",
+    "sv": "Chips är ett salt mellanmål för människor. De är inte bra för hundar, så håll påsen stängd och ge hunden en egen godbit."
   },
   "faq": [
     {
@@ -186,7 +200,8 @@
         "nl": "Zijn chips met een smaakje erger?",
         "pl": "Czy chipsy smakowe są gorsze?",
         "cs": "Jsou ochucené brambůrky horší?",
-        "hr": "Je li čips s okusima gori?"
+        "hr": "Je li čips s okusima gori?",
+        "sv": "Är chips med smak värre?"
       },
       "a": {
         "en": "They can be. Onion and garlic are toxic to dogs in every form, including powders, so check the flavour.",
@@ -199,7 +214,8 @@
         "nl": "Dat kan. Ui en knoflook zijn in elke vorm giftig voor honden, ook als poeder, dus kijk goed welke smaak het is.",
         "pl": "Mogą być. Cebula i czosnek są toksyczne dla psów w każdej postaci, także w proszku, więc sprawdź smak.",
         "cs": "Mohou být. Cibule a česnek jsou pro psy jedovaté v jakékoli podobě, včetně prášku, proto zkontrolujte příchuť.",
-        "hr": "Može biti. Luk i češnjak otrovni su za pse u svakom obliku, i u prahu, zato provjeri okus."
+        "hr": "Može biti. Luk i češnjak otrovni su za pse u svakom obliku, i u prahu, zato provjeri okus.",
+        "sv": "Det kan de vara. Lök och vitlök är giftiga för hundar i alla former, även som pulver, så kolla smaken."
       }
     }
   ],
@@ -327,6 +343,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e996074580ba71aedd19ebe6e156b59b3d53b590067c00a47b92b9c23222584b"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d5dab326f25b39920a4d0edcf65b1d9fee1854d3a448d902bc410210d5ade260"
     }
   }
 }

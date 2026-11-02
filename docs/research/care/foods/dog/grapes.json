@@ -12,7 +12,8 @@
     "nl": "Druiven",
     "pl": "Winogrona",
     "cs": "Hrozny",
-    "hr": "Grožđe"
+    "hr": "Grožđe",
+    "sv": "Vindruvor"
   },
   "question": {
     "en": "Can dogs eat grapes?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden druiven eten?",
     "pl": "Czy psy mogą jeść winogrona?",
     "cs": "Mohou psi jíst hrozny?",
-    "hr": "Smiju li psi jesti grožđe?"
+    "hr": "Smiju li psi jesti grožđe?",
+    "sv": "Får hundar äta vindruvor?"
   },
   "url_slug": {
     "en": "grapes",
@@ -38,7 +40,8 @@
     "nl": "druiven",
     "pl": "winogrona",
     "cs": "hrozny",
-    "hr": "grozde"
+    "hr": "grozde",
+    "sv": "vindruvor"
   },
   "level": "toxic",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee. Honden mogen nooit druiven eten. Druiven kunnen bij honden nierfalen veroorzaken, en zelfs een kleine hoeveelheid kan een hond ernstig ziek maken. Niemand kan voorspellen welke honden erop reageren, dus elke druif is een reden om de dierenarts te bellen.",
     "pl": "Nie. Psy nigdy nie powinny jeść winogron. Winogrona mogą wywołać u psów niewydolność nerek, a nawet mała ilość może poważnie zaszkodzić. Nie da się przewidzieć, których psów to dotknie, więc każde zjedzone winogrono to powód, by zadzwonić do weterynarza.",
     "cs": "Ne. Psi by nikdy neměli jíst hroznové víno. Hrozny mohou u psů způsobit selhání ledvin a vážně onemocnět může pes i po malém množství. Nelze předvídat, kterého psa to postihne, proto je každá snědená kulička důvodem zavolat veterináři.",
-    "hr": "Ne. Psi nikad ne smiju jesti grožđe. Grožđe može kod pasa izazvati zatajenje bubrega, a čak i mala količina može psa ozbiljno razboljeti. Nemoguće je predvidjeti koji će psi biti pogođeni, zato je svaka bobica grožđa razlog da nazoveš veterinara."
+    "hr": "Ne. Psi nikad ne smiju jesti grožđe. Grožđe može kod pasa izazvati zatajenje bubrega, a čak i mala količina može psa ozbiljno razboljeti. Nemoguće je predvidjeti koji će psi biti pogođeni, zato je svaka bobica grožđa razlog da nazoveš veterinara.",
+    "sv": "Nej. Hundar ska aldrig äta vindruvor. Vindruvor kan orsaka njursvikt hos hundar, och redan en liten mängd kan göra en hund allvarligt sjuk. Det går inte att förutsäga vilka hundar som påverkas, så varje vindruva är ett skäl att ringa veterinären."
   },
   "why": {
     "en": "Grapes, raisins and currants can damage a dog's kidneys. Tartaric acid is suspected to be the toxic part, and its amount varies between grapes, so the effect is unpredictable. Because the cause is still uncertain, vets treat any amount as a concern. Dogs that survive kidney injury may be left with long-term kidney disease.",
@@ -65,7 +69,8 @@
     "nl": "Druiven, rozijnen en krenten kunnen de nieren van een hond beschadigen. Wijnsteenzuur is vermoedelijk de giftige stof, en de hoeveelheid verschilt per druif, dus het effect is onvoorspelbaar. Omdat de oorzaak nog onzeker is, beschouwen dierenartsen elke hoeveelheid als zorgwekkend. Honden die nierschade overleven, kunnen een blijvende nierziekte overhouden.",
     "pl": "Winogrona, rodzynki i porzeczki koryntki mogą uszkodzić nerki psa. Podejrzewa się, że toksycznym składnikiem jest kwas winowy, a jego ilość różni się w poszczególnych winogronach, więc skutek jest nieprzewidywalny. Ponieważ przyczyna wciąż nie jest pewna, weterynarze traktują każdą ilość jako powód do niepokoju. Psy, które przeżyją uszkodzenie nerek, mogą zostać z przewlekłą chorobą nerek.",
     "cs": "Hrozny, rozinky a korintky mohou psovi poškodit ledviny. Jako jedovatá složka je podezřelá kyselina vinná, jejíž množství se mezi hrozny liší, takže účinek je nepředvídatelný. Protože příčina stále není jistá, veterináři berou vážně jakékoli množství. U psů, kteří poškození ledvin přežijí, může zůstat dlouhodobé onemocnění ledvin.",
-    "hr": "Grožđe, grožđice i korintsko grožđe mogu oštetiti pseće bubrege. Sumnja se da je otrovna tvar vinska kiselina, a njezina količina razlikuje se od bobice do bobice, pa je učinak nepredvidiv. Budući da uzrok još nije siguran, veterinari svaku količinu smatraju zabrinjavajućom. Psi koji prežive oštećenje bubrega mogu ostati s dugotrajnom bolešću bubrega."
+    "hr": "Grožđe, grožđice i korintsko grožđe mogu oštetiti pseće bubrege. Sumnja se da je otrovna tvar vinska kiselina, a njezina količina razlikuje se od bobice do bobice, pa je učinak nepredvidiv. Budući da uzrok još nije siguran, veterinari svaku količinu smatraju zabrinjavajućom. Psi koji prežive oštećenje bubrega mogu ostati s dugotrajnom bolešću bubrega.",
+    "sv": "Vindruvor, russin och korinter kan skada hundens njurar. Man misstänker att vinsyra är det giftiga ämnet, och mängden varierar mellan druvorna, så effekten är oförutsägbar. Eftersom orsaken fortfarande är osäker ser veterinärer allvarligt på varje mängd. Hundar som överlever en njurskada kan få en kronisk njursjukdom."
   },
   "signs": {
     "en": [
@@ -155,6 +160,14 @@
       "Bolovi u trbuhu",
       "Dehidracija i pojačano pijenje vode",
       "Drhtanje"
+    ],
+    "sv": [
+      "Kräkningar eller diarré, ofta inom 6–24 timmar",
+      "Trötthet och svaghet",
+      "Ingen matlust",
+      "Ont i magen",
+      "Uttorkning och stor törst",
+      "Darrningar"
     ]
   },
   "what_to_do": {
@@ -168,7 +181,8 @@
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als je hond maar een of twee druiven heeft gegeten. Schrijf op hoeveel er zijn gegeten en wanneer. Wacht niet op verschijnselen: hoe eerder een hond wordt behandeld, hoe beter de vooruitzichten.",
     "pl": "Od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt, nawet jeśli twój pies zjadł tylko jedno czy dwa winogrona. Zanotuj, ile zjadł i kiedy. Nie czekaj na objawy: im szybciej pies zostanie poddany leczeniu, tym lepsze rokowania.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, i když váš pes snědl jen jednu nebo dvě kuličky. Poznamenejte si, kolik jich snědl a kdy. Nečekejte, až se objeví příznaky: čím dřív je pes léčen, tím lepší je prognóza.",
-    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako je pas pojeo samo jednu ili dvije bobice grožđa. Zapiši koliko ih je pojeo i kada. Ne čekaj da se pojave znakovi: što se pas prije liječi, izgledi su bolji."
+    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako je pas pojeo samo jednu ili dvije bobice grožđa. Zapiši koliko ih je pojeo i kada. Ne čekaj da se pojave znakovi: što se pas prije liječi, izgledi su bolji.",
+    "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt, även om hunden bara ätit en eller två vindruvor. Notera hur många den åt och när. Vänta inte på symtom: ju tidigare hunden får behandling, desto bättre är utsikterna."
   },
   "serving": null,
   "child": {
@@ -182,7 +196,8 @@
     "nl": "Druiven zijn niet voor honden, zelfs niet één. Ze kunnen de nieren van een hond beschadigen. Eet je hond er een? Vertel het meteen aan een volwassene.",
     "pl": "Winogrona nie są dla psów, nawet jedno. Mogą uszkodzić psu nerki. Jeśli twój pies zje winogrono, od razu powiedz dorosłemu.",
     "cs": "Hrozny nejsou pro psy, ani jedna kulička. Můžou psovi poškodit ledviny. Když pes nějakou sní, hned to řekni dospělému.",
-    "hr": "Grožđe nije za pse, ni jedna jedina bobica. Može naštetiti psećim bubrezima. Ako pas pojede bobicu, odmah reci odrasloj osobi."
+    "hr": "Grožđe nije za pse, ni jedna jedina bobica. Može naštetiti psećim bubrezima. Ako pas pojede bobicu, odmah reci odrasloj osobi.",
+    "sv": "Vindruvor är inte för hundar, inte ens en enda. De kan skada hundens njurar. Om din hund äter en, säg till en vuxen direkt."
   },
   "faq": [
     {
@@ -197,7 +212,8 @@
         "nl": "Is één druif gevaarlijk voor een hond?",
         "pl": "Czy jedno winogrono jest niebezpieczne dla psa?",
         "cs": "Je jedna kulička hroznového vína pro psa nebezpečná?",
-        "hr": "Je li jedna bobica grožđa opasna za psa?"
+        "hr": "Je li jedna bobica grožđa opasna za psa?",
+        "sv": "Är en enda vindruva farlig för en hund?"
       },
       "a": {
         "en": "It can be. Nobody can predict which dogs will react, so any grape eaten is a reason to contact your vet.",
@@ -210,7 +226,8 @@
         "nl": "Dat kan. Niemand kan voorspellen welke honden reageren, dus elke gegeten druif is een reden om contact op te nemen met je dierenarts.",
         "pl": "Może być. Nikt nie potrafi przewidzieć, które psy zareagują, więc każde zjedzone winogrono to powód, by skontaktować się z weterynarzem.",
         "cs": "Může být. Nikdo nedokáže předvídat, který pes zareaguje, proto je každá snědená kulička důvodem obrátit se na veterináře.",
-        "hr": "Može biti. Nitko ne može predvidjeti koji će psi reagirati, zato je svaka pojedena bobica grožđa razlog da se obratiš veterinaru."
+        "hr": "Može biti. Nitko ne može predvidjeti koji će psi reagirati, zato je svaka pojedena bobica grožđa razlog da se obratiš veterinaru.",
+        "sv": "Det kan den vara. Ingen kan förutsäga vilka hundar som reagerar, så varje uppäten vindruva är ett skäl att kontakta veterinären."
       }
     },
     {
@@ -225,7 +242,8 @@
         "nl": "Zijn groene en rode druiven even riskant?",
         "pl": "Czy zielone i czerwone winogrona są tak samo ryzykowne?",
         "cs": "Jsou zelené a červené hrozny stejně rizikové?",
-        "hr": "Jesu li bijelo i crno grožđe jednako rizični?"
+        "hr": "Jesu li bijelo i crno grožđe jednako rizični?",
+        "sv": "Är gröna och röda vindruvor lika riskabla?"
       },
       "a": {
         "en": "Sources warn against all grapes, raisins and currants. The amount of the suspected toxin varies between grapes, so no kind is considered safe.",
@@ -238,7 +256,8 @@
         "nl": "Bronnen waarschuwen voor alle druiven, rozijnen en krenten. De hoeveelheid van de vermoedelijk giftige stof verschilt per druif, dus geen enkele soort wordt als veilig beschouwd.",
         "pl": "Źródła ostrzegają przed wszystkimi winogronami, rodzynkami i porzeczkami koryntkami. Ilość podejrzewanej toksyny różni się w poszczególnych winogronach, więc żaden rodzaj nie jest uważany za bezpieczny.",
         "cs": "Zdroje varují před všemi hrozny, rozinkami a korintkami. Množství podezřelé jedovaté látky se mezi hrozny liší, a proto žádný druh není považován za bezpečný.",
-        "hr": "Izvori upozoravaju na svo grožđe, grožđice i korintsko grožđe. Količina tvari za koju se sumnja da je otrovna razlikuje se od bobice do bobice, pa se nijedna vrsta ne smatra sigurnom."
+        "hr": "Izvori upozoravaju na svo grožđe, grožđice i korintsko grožđe. Količina tvari za koju se sumnja da je otrovna razlikuje se od bobice do bobice, pa se nijedna vrsta ne smatra sigurnom.",
+        "sv": "Källorna varnar för alla vindruvor, russin och korinter. Mängden av det misstänkta giftet varierar mellan druvorna, så ingen sort anses ofarlig."
       }
     }
   ],
@@ -358,6 +377,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e953fcc18b9b818feb44154e325db7ff4af13b9b1b937c6e1d43912f840d08d6"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f20961ec25e09dd0c38c31e10e357f19bb23150b7e5b505a32ac654cca2beb18"
     }
   }
 }

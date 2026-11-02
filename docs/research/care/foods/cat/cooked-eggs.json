@@ -12,7 +12,8 @@
     "nl": "Gekookte eieren",
     "pl": "Gotowane jajka",
     "cs": "Tepelně upravená vejce",
-    "hr": "Kuhana jaja"
+    "hr": "Kuhana jaja",
+    "sv": "Kokta ägg"
   },
   "question": {
     "en": "Can cats eat cooked eggs?",
@@ -25,7 +26,8 @@
     "nl": "Mogen katten gekookte eieren eten?",
     "pl": "Czy koty mogą jeść gotowane jajka?",
     "cs": "Mohou kočky jíst tepelně upravená vejce?",
-    "hr": "Smiju li mačke jesti kuhana jaja?"
+    "hr": "Smiju li mačke jesti kuhana jaja?",
+    "sv": "Får katter äta kokta ägg?"
   },
   "url_slug": {
     "en": "cooked-eggs",
@@ -38,7 +40,8 @@
     "nl": "gekookte-eieren",
     "pl": "gotowane-jajka",
     "cs": "tepelne-upravena-vejce",
-    "hr": "kuhana-jaja"
+    "hr": "kuhana-jaja",
+    "sv": "kokta-agg"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Ja, in kleine hoeveelheden. Een beetje goed gaar, onbewerkt ei is af en toe prima als snoepje. Eieren zijn een veelgebruikte eiwitbron in kattenvoer, maar geef ze alleen met mate en nooit rauw.",
     "pl": "Tak, w małych ilościach. Odrobina dobrze ugotowanego jajka bez dodatków jest w porządku jako okazjonalny smakołyk. Jajka to częste źródło białka w karmie dla kotów, ale należy je podawać z umiarem i nigdy na surowo.",
     "cs": "Ano, v malém množství. Trocha důkladně tepelně upraveného vejce bez přísad je jako občasný pamlsek v pořádku. Vejce jsou běžným zdrojem bílkovin v kočičím krmivu, ale měla by se podávat jen s mírou a nikdy syrová.",
-    "hr": "Da, u malim količinama. Malo potpuno termički obrađenog, običnog jajeta u redu je kao povremena poslastica. Jaja su čest izvor bjelančevina u hrani za mačke, ali treba ih davati samo umjereno i nikad sirova."
+    "hr": "Da, u malim količinama. Malo potpuno termički obrađenog, običnog jajeta u redu je kao povremena poslastica. Jaja su čest izvor bjelančevina u hrani za mačke, ali treba ih davati samo umjereno i nikad sirova.",
+    "sv": "Ja, i små mängder. Lite helt genomtillagat, naturellt ägg går bra som godbit någon gång ibland. Ägg är ett vanligt protein i kattmat, men de ska bara ges med måtta och aldrig råa."
   },
   "why": {
     "en": "Cornell lists eggs among the protein sources most commonly used in cat food, and PDSA says eggs suit pets, but only in moderation. Cooking matters: raw eggs can carry Salmonella and raw egg white blocks the vitamin biotin. Treats should be a small part of a cat's diet.",
@@ -65,7 +69,8 @@
     "nl": "Cornell noemt eieren bij de eiwitbronnen die het meest worden gebruikt in kattenvoer, en volgens PDSA zijn eieren geschikt voor huisdieren, maar alleen met mate. Garen is belangrijk: rauwe eieren kunnen Salmonella bevatten en rauw eiwit blokkeert de vitamine biotine. Snoepjes horen maar een klein deel van het eten van een kat te zijn.",
     "pl": "Cornell wymienia jajka wśród źródeł białka najczęściej używanych w karmie dla kotów, a PDSA podaje, że jajka nadają się dla zwierząt, ale tylko z umiarem. Obróbka termiczna ma znaczenie: surowe jajka mogą przenosić bakterie Salmonella, a surowe białko jaja blokuje witaminę biotynę. Smakołyki powinny stanowić niewielką część diety kota.",
     "cs": "Cornellova univerzita uvádí vejce mezi nejčastěji používanými zdroji bílkovin v kočičím krmivu a podle PDSA jsou vejce pro zvířata vhodná, ale jen s mírou. Záleží na tepelné úpravě: syrová vejce mohou přenášet salmonelu a syrový bílek blokuje vitamin biotin. Pamlsky by měly tvořit jen malou část kočičí stravy.",
-    "hr": "Cornell navodi jaja među najčešćim izvorima bjelančevina u hrani za mačke, a PDSA navodi da su jaja prikladna za ljubimce, ali samo umjereno. Termička obrada je važna: sirova jaja mogu prenositi salmonelu, a sirovi bjelanjak sprječava iskorištavanje vitamina biotina. Poslastice trebaju biti mali dio mačje prehrane."
+    "hr": "Cornell navodi jaja među najčešćim izvorima bjelančevina u hrani za mačke, a PDSA navodi da su jaja prikladna za ljubimce, ali samo umjereno. Termička obrada je važna: sirova jaja mogu prenositi salmonelu, a sirovi bjelanjak sprječava iskorištavanje vitamina biotina. Poslastice trebaju biti mali dio mačje prehrane.",
+    "sv": "Cornell räknar ägg till de proteinkällor som oftast används i kattmat, och PDSA skriver att ägg passar husdjur, men bara med måtta. Tillagningen spelar roll: råa ägg kan bära på salmonella, och rå äggvita blockerar vitaminet biotin. Godbitar ska bara vara en liten del av kattens kost."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "nl": "Geef eerst een klein stukje. Krijgt je kat daarna last van braken of diarree, stop dan en vraag je dierenarts om advies voordat je het opnieuw probeert.",
     "pl": "Najpierw podaj mały kawałek. Jeśli potem twój kot wymiotuje lub ma biegunkę, przestań i zapytaj weterynarza, zanim spróbujesz ponownie.",
     "cs": "Nejdřív nabídněte malý kousek. Pokud kočka potom zvrací nebo má průjem, přestaňte, a než to zkusíte znovu, poraďte se s veterinářem.",
-    "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili dobije proljev, prestani i pitaj veterinara prije nego što pokušaš ponovno."
+    "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili dobije proljev, prestani i pitaj veterinara prije nego što pokušaš ponovno.",
+    "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären innan du försöker igen."
   },
   "serving": {
     "en": "Fully cooked and plain, with nothing added; a small piece as an occasional treat.",
@@ -92,7 +98,8 @@
     "nl": "Goed gaar en onbewerkt, zonder toevoegingen; af en toe een klein stukje als snoepje.",
     "pl": "Dobrze ugotowane i bez żadnych dodatków; mały kawałek jako okazjonalny smakołyk.",
     "cs": "Důkladně tepelně upravené a bez jakýchkoli přísad; malý kousek jako občasný pamlsek.",
-    "hr": "Potpuno termički obrađeno i obično, bez ičega dodanog; mali komadić kao povremena poslastica."
+    "hr": "Potpuno termički obrađeno i obično, bez ičega dodanog; mali komadić kao povremena poslastica.",
+    "sv": "Helt genomtillagat och naturellt, utan tillsatser; en liten bit som godbit någon gång ibland."
   },
   "child": {
     "en": "A tiny bit of plain cooked egg can be a treat for a cat. Ask a grown-up to cook it first.",
@@ -105,7 +112,8 @@
     "nl": "Een klein beetje gewoon gekookt ei kan een snoepje zijn voor een kat. Vraag een volwassene om het eerst te koken.",
     "pl": "Odrobina zwykłego gotowanego jajka może być smakołykiem dla kota. Poproś dorosłego, żeby najpierw je ugotował.",
     "cs": "Kousíček obyčejného uvařeného vajíčka může být pro kočku pamlsek. Požádej dospělého, ať ho nejdřív připraví.",
-    "hr": "Malo običnog kuhanog jajeta može biti poslastica za macu. Zamoli odraslu osobu da ga najprije skuha."
+    "hr": "Malo običnog kuhanog jajeta može biti poslastica za macu. Zamoli odraslu osobu da ga najprije skuha.",
+    "sv": "En pytteliten bit kokt ägg utan kryddor kan bli en godbit för en katt. Be en vuxen att koka det först."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "nl": "Waarom niet rauw?",
         "pl": "Dlaczego nie na surowo?",
         "cs": "Proč ne syrová?",
-        "hr": "Zašto ne sirova?"
+        "hr": "Zašto ne sirova?",
+        "sv": "Varför inte rått?"
       },
       "a": {
         "en": "Raw eggs can carry bacteria such as Salmonella, and raw egg white contains avidin, which stops the vitamin biotin being absorbed.",
@@ -133,7 +142,8 @@
         "nl": "Rauwe eieren kunnen bacteriën zoals Salmonella bevatten, en rauw eiwit bevat avidine, waardoor de vitamine biotine niet wordt opgenomen.",
         "pl": "Surowe jajka mogą przenosić bakterie, takie jak Salmonella, a surowe białko jaja zawiera awidynę, która uniemożliwia wchłanianie witaminy biotyny.",
         "cs": "Syrová vejce mohou přenášet bakterie, například salmonelu, a syrový bílek obsahuje avidin, který brání vstřebávání vitaminu biotinu.",
-        "hr": "Sirova jaja mogu prenositi bakterije poput salmonele, a sirovi bjelanjak sadrži avidin, koji sprječava apsorpciju vitamina biotina."
+        "hr": "Sirova jaja mogu prenositi bakterije poput salmonele, a sirovi bjelanjak sadrži avidin, koji sprječava apsorpciju vitamina biotina.",
+        "sv": "Råa ägg kan bära på bakterier som salmonella, och rå äggvita innehåller avidin, som hindrar att vitaminet biotin tas upp."
       }
     }
   ],
@@ -227,6 +237,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7f249faa17db06fadd71cc11746f0aa80ec610c8625808f34f49484091fd03ff"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "67d47e87b602672a211a3173dfa666850857f80b5eebefc9a2127915535cb09a"
     }
   }
 }

@@ -12,7 +12,8 @@
     "nl": "Pindakaas",
     "pl": "Masło orzechowe",
     "cs": "Arašídové máslo",
-    "hr": "Maslac od kikirikija"
+    "hr": "Maslac od kikirikija",
+    "sv": "Jordnötssmör"
   },
   "question": {
     "en": "Can dogs eat peanut butter?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden pindakaas eten?",
     "pl": "Czy psy mogą jeść masło orzechowe?",
     "cs": "Mohou psi jíst arašídové máslo?",
-    "hr": "Smiju li psi jesti maslac od kikirikija?"
+    "hr": "Smiju li psi jesti maslac od kikirikija?",
+    "sv": "Får hundar äta jordnötssmör?"
   },
   "url_slug": {
     "en": "peanut-butter",
@@ -38,7 +40,8 @@
     "nl": "pindakaas",
     "pl": "maslo-orzechowe",
     "cs": "arasidove-maslo",
-    "hr": "maslac-od-kikirikija"
+    "hr": "maslac-od-kikirikija",
+    "sv": "jordnotssmor"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Ja, in kleine hoeveelheden, als er geen xylitol in zit. De meeste pindakaas is veilig voor honden, maar sommige merken gebruiken xylitol, een zoetstof die giftig is voor honden. Controleer dus altijd het etiket. Ongezouten pindakaas is het best.",
     "pl": "Tak, w małych ilościach, jeśli nie zawiera ksylitolu. Większość maseł orzechowych jest bezpieczna dla psów, ale niektóre marki dodają ksylitol, słodzik toksyczny dla psów, więc zawsze sprawdzaj etykietę. Najlepsze jest masło orzechowe niesolone.",
     "cs": "Ano, v malém množství, pokud neobsahuje xylitol. Většina arašídových másel je pro psy bezpečná, některé značky ale používají xylitol, sladidlo, které je pro psy jedovaté, proto vždy zkontrolujte etiketu. Nejlepší je arašídové máslo bez soli.",
-    "hr": "Da, u malim količinama, ako ne sadrži ksilitol. Većina maslaca od kikirikija sigurna je za pse, ali neki proizvođači koriste ksilitol, sladilo koje je otrovno za pse, zato uvijek provjeri deklaraciju. Najbolji je neslani maslac od kikirikija."
+    "hr": "Da, u malim količinama, ako ne sadrži ksilitol. Većina maslaca od kikirikija sigurna je za pse, ali neki proizvođači koriste ksilitol, sladilo koje je otrovno za pse, zato uvijek provjeri deklaraciju. Najbolji je neslani maslac od kikirikija.",
+    "sv": "Ja, i små mängder, om det inte innehåller xylitol. Det mesta jordnötssmöret är ofarligt för hundar, men vissa märken innehåller xylitol, ett sötningsmedel som är giftigt för hundar, så kontrollera alltid innehållsförteckningen. Osaltat jordnötssmör är bäst."
   },
   "why": {
     "en": "Peanut butter is rich in fat and can be high in salt, so it suits only as an occasional treat, and it is not ideal for dogs on a diet. The real danger is xylitol: some peanut and nut butters contain it, and in dogs it can cause a sharp drop in blood sugar.",
@@ -65,7 +69,8 @@
     "nl": "Pindakaas bevat veel vet en kan veel zout bevatten, dus het is alleen geschikt als af en toe een snoepje, en niet ideaal voor honden op dieet. Het echte gevaar is xylitol: sommige pinda- en notenpasta’s bevatten het, en bij honden kan het een sterke daling van de bloedsuiker veroorzaken.",
     "pl": "Masło orzechowe ma dużo tłuszczu i może zawierać dużo soli, więc nadaje się tylko jako okazjonalny smakołyk i nie jest idealne dla psów na diecie. Prawdziwym zagrożeniem jest ksylitol: zawierają go niektóre masła z orzeszków ziemnych i innych orzechów, a u psów może wywołać gwałtowny spadek poziomu cukru we krwi.",
     "cs": "Arašídové máslo je bohaté na tuk a může obsahovat hodně soli, proto se hodí jen jako občasný pamlsek a pro psy na dietě není ideální. Skutečným nebezpečím je xylitol: obsahují ho některá arašídová a ořechová másla a u psů může způsobit prudký pokles hladiny cukru v krvi.",
-    "hr": "Maslac od kikirikija bogat je mastima i može sadržavati puno soli, pa je prikladan samo kao povremena poslastica i nije idealan za pse na dijeti. Prava opasnost je ksilitol: sadrže ga neki maslaci od kikirikija i drugih orašastih plodova, a kod pasa može izazvati nagli pad šećera u krvi."
+    "hr": "Maslac od kikirikija bogat je mastima i može sadržavati puno soli, pa je prikladan samo kao povremena poslastica i nije idealan za pse na dijeti. Prava opasnost je ksilitol: sadrže ga neki maslaci od kikirikija i drugih orašastih plodova, a kod pasa može izazvati nagli pad šećera u krvi.",
+    "sv": "Jordnötssmör innehåller mycket fett och kan vara salt, så det passar bara som en godbit ibland, och det är inte idealiskt för hundar som bantar. Den verkliga faran är xylitol: vissa jordnöts- och nötsmör innehåller det, och hos hundar kan det orsaka ett kraftigt blodsockerfall."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "nl": "Zat er xylitol in de pindakaas? Neem dan meteen contact op met je dierenarts, een spoedkliniek of een vergiftigingenlijn voor dieren, schrijf op hoeveel er is gegeten en wacht niet op verschijnselen.",
     "pl": "Jeśli masło orzechowe zawierało ksylitol, od razu skontaktuj się z weterynarzem lub całodobową przychodnią weterynaryjną albo zadzwoń na telefon informacji toksykologicznej dla zwierząt, zanotuj, ile pies zjadł, i nie czekaj na objawy.",
     "cs": "Pokud arašídové máslo obsahovalo xylitol, okamžitě se obraťte na veterináře, nonstop veterinární pohotovost nebo toxikologickou linku pro zvířata, poznamenejte si, kolik ho pes snědl, a nečekejte, až se objeví příznaky.",
-    "hr": "Ako je maslac od kikirikija sadržavao ksilitol, odmah se obrati veterinaru, dežurnoj veterinarskoj ambulanti ili telefonskoj liniji za otrovanja životinja, zapiši koliko je pas pojeo i ne čekaj da se pojave znakovi."
+    "hr": "Ako je maslac od kikirikija sadržavao ksilitol, odmah se obrati veterinaru, dežurnoj veterinarskoj ambulanti ili telefonskoj liniji za otrovanja životinja, zapiši koliko je pas pojeo i ne čekaj da se pojave znakovi.",
+    "sv": "Om jordnötssmöret innehöll xylitol, kontakta veterinären, ett djursjukhus med akutjour eller en giftrådgivning för djur direkt, notera hur mycket hunden åt och vänta inte på symtom."
   },
   "serving": {
     "en": "A small amount of unsalted peanut butter whose label lists no xylitol; as a treat, not a daily food.",
@@ -92,7 +98,8 @@
     "nl": "Een kleine hoeveelheid ongezouten pindakaas zonder xylitol op het etiket; als snoepje, niet als dagelijks eten.",
     "pl": "Odrobina niesolonego masła orzechowego, w którego składzie na etykiecie nie ma ksylitolu; jako smakołyk, nie codzienne jedzenie.",
     "cs": "Malé množství arašídového másla bez soli, na jehož etiketě není uveden xylitol; jako pamlsek, ne jako každodenní jídlo.",
-    "hr": "Malo neslanog maslaca od kikirikija na čijoj deklaraciji nema ksilitola; kao poslastica, a ne kao svakodnevna hrana."
+    "hr": "Malo neslanog maslaca od kikirikija na čijoj deklaraciji nema ksilitola; kao poslastica, a ne kao svakodnevna hrana.",
+    "sv": "En liten mängd osaltat jordnötssmör utan xylitol i innehållsförteckningen; som godbit, inte som daglig mat."
   },
   "child": {
     "en": "Many dogs love a little peanut butter! A grown-up must check the jar first, because some kinds are not safe for dogs.",
@@ -105,7 +112,8 @@
     "nl": "Veel honden zijn dol op een beetje pindakaas! Een volwassene moet eerst de pot controleren, want sommige soorten zijn niet veilig voor honden.",
     "pl": "Wiele psów uwielbia odrobinę masła orzechowego! Dorosły musi najpierw sprawdzić słoik, bo niektóre rodzaje nie są bezpieczne dla psów.",
     "cs": "Spousta pejsků miluje trošku arašídového másla! Dospělý ale musí nejdřív zkontrolovat sklenici, protože některé druhy pro psy bezpečné nejsou.",
-    "hr": "Mnogi psi obožavaju malo maslaca od kikirikija! Odrasla osoba prvo mora provjeriti staklenku jer neke vrste nisu sigurne za pse."
+    "hr": "Mnogi psi obožavaju malo maslaca od kikirikija! Odrasla osoba prvo mora provjeriti staklenku jer neke vrste nisu sigurne za pse.",
+    "sv": "Många hundar älskar lite jordnötssmör! En vuxen måste först kolla burken, för vissa sorter kan vara farliga för hundar."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "nl": "Hoe weet ik of er xylitol in pindakaas zit?",
         "pl": "Jak sprawdzić, czy masło orzechowe zawiera ksylitol?",
         "cs": "Jak poznám, že arašídové máslo obsahuje xylitol?",
-        "hr": "Kako znati sadrži li maslac od kikirikija ksilitol?"
+        "hr": "Kako znati sadrži li maslac od kikirikija ksilitol?",
+        "sv": "Hur vet jag om jordnötssmöret innehåller xylitol?"
       },
       "a": {
         "en": "Read the ingredients on the label, especially on products marked sugar-free or low sugar.",
@@ -133,7 +142,8 @@
         "nl": "Lees de ingrediënten op het etiket, vooral bij producten die suikervrij of suikerarm heten.",
         "pl": "Przeczytaj skład na etykiecie, zwłaszcza na produktach oznaczonych jako bez cukru lub o obniżonej zawartości cukru.",
         "cs": "Přečtěte si složení na etiketě, zejména u výrobků označených jako bez cukru nebo se sníženým obsahem cukru.",
-        "hr": "Pročitaj sastojke na deklaraciji, osobito na proizvodima označenima kao „bez šećera“ ili „sa smanjenim udjelom šećera“."
+        "hr": "Pročitaj sastojke na deklaraciji, osobito na proizvodima označenima kao „bez šećera“ ili „sa smanjenim udjelom šećera“.",
+        "sv": "Läs innehållsförteckningen, särskilt på produkter som är märkta sockerfria eller med lågt sockerinnehåll."
       }
     },
     {
@@ -148,7 +158,8 @@
         "nl": "Mag ik pindakaas gebruiken om mijn hond een pil te geven?",
         "pl": "Czy mogę podać psu tabletkę w maśle orzechowym?",
         "cs": "Mohu psovi podat tabletku v arašídovém másle?",
-        "hr": "Smijem li psu dati tabletu u maslacu od kikirikija?"
+        "hr": "Smijem li psu dati tabletu u maslacu od kikirikija?",
+        "sv": "Kan jag använda jordnötssmör när jag ger hunden en tablett?"
       },
       "a": {
         "en": "Many people do; the FDA advises checking the label first to make sure it doesn't contain xylitol.",
@@ -161,7 +172,8 @@
         "nl": "Veel mensen doen dat; de FDA raadt aan eerst het etiket te controleren om zeker te weten dat er geen xylitol in zit.",
         "pl": "Wiele osób tak robi; FDA radzi najpierw sprawdzić etykietę, żeby upewnić się, że produkt nie zawiera ksylitolu.",
         "cs": "Mnoho lidí to tak dělá; úřad FDA doporučuje nejdřív zkontrolovat etiketu, zda máslo neobsahuje xylitol.",
-        "hr": "Mnogi to rade; FDA savjetuje da prvo provjeriš deklaraciju i uvjeriš se da ne sadrži ksilitol."
+        "hr": "Mnogi to rade; FDA savjetuje da prvo provjeriš deklaraciju i uvjeriš se da ne sadrži ksilitol.",
+        "sv": "Det gör många; FDA råder dig att först läsa innehållsförteckningen för att försäkra dig om att det inte innehåller xylitol."
       }
     }
   ],
@@ -300,6 +312,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8e8189277aa4259a7aa7b257d3c267e516f9aeed5e963b1f3797db363aea4599"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2059aafd1c13ad3edfaa09a5cee8c2fef5ffbe9aa9a8f075ab24665871379709"
     }
   }
 }

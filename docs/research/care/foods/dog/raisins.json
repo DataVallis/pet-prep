@@ -12,7 +12,8 @@
     "nl": "Rozijnen",
     "pl": "Rodzynki",
     "cs": "Rozinky",
-    "hr": "Grožđice"
+    "hr": "Grožđice",
+    "sv": "Russin"
   },
   "question": {
     "en": "Can dogs eat raisins?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden rozijnen eten?",
     "pl": "Czy psy mogą jeść rodzynki?",
     "cs": "Mohou psi jíst rozinky?",
-    "hr": "Smiju li psi jesti grožđice?"
+    "hr": "Smiju li psi jesti grožđice?",
+    "sv": "Får hundar äta russin?"
   },
   "url_slug": {
     "en": "raisins",
@@ -38,7 +40,8 @@
     "nl": "rozijnen",
     "pl": "rodzynki",
     "cs": "rozinky",
-    "hr": "grozdice"
+    "hr": "grozdice",
+    "sv": "russin"
   },
   "level": "toxic",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee. Rozijnen zijn gedroogde druiven, en honden mogen ze nooit eten. Ze kunnen nierfalen veroorzaken, en zelfs een kleine hoeveelheid kan een hond ernstig ziek maken. Niemand kan voorspellen welke honden erop reageren.",
     "pl": "Nie. Rodzynki to suszone winogrona i psy nigdy nie powinny ich jeść. Mogą wywołać niewydolność nerek, a nawet mała ilość może poważnie zaszkodzić psu. Nie da się przewidzieć, których psów to dotknie.",
     "cs": "Ne. Rozinky jsou sušené hrozny a psi by je nikdy neměli jíst. Mohou způsobit selhání ledvin a i malé množství může psovi vážně uškodit. Nedá se předem odhadnout, kterého psa zasáhnou.",
-    "hr": "Ne. Grožđice su sušeno grožđe i psi ih nikad ne smiju jesti. Mogu izazvati zatajenje bubrega, a već mala količina može psa ozbiljno razboljeti. Ne može se predvidjeti kojim će psima naštetiti."
+    "hr": "Ne. Grožđice su sušeno grožđe i psi ih nikad ne smiju jesti. Mogu izazvati zatajenje bubrega, a već mala količina može psa ozbiljno razboljeti. Ne može se predvidjeti kojim će psima naštetiti.",
+    "sv": "Nej. Russin är torkade vindruvor, och hundar ska aldrig äta dem. De kan orsaka njursvikt, och redan en liten mängd kan göra en hund allvarligt sjuk. Det går inte att förutsäga vilka hundar som påverkas."
   },
   "why": {
     "en": "Raisins, grapes and currants can damage a dog's kidneys. Tartaric acid is suspected to be the toxic part; its amount varies, so effects are unpredictable, and there is no way to tell which dogs are more sensitive. Because the cause is uncertain, any amount is treated as a concern.",
@@ -65,7 +69,8 @@
     "nl": "Rozijnen, druiven en krenten kunnen de nieren van een hond beschadigen. Wijnsteenzuur is vermoedelijk de giftige stof; de hoeveelheid verschilt, dus het effect is onvoorspelbaar, en je kunt niet zien welke honden gevoeliger zijn. Omdat de oorzaak onzeker is, wordt elke hoeveelheid als zorgwekkend beschouwd.",
     "pl": "Rodzynki, winogrona i porzeczki koryntki mogą uszkodzić nerki psa. Podejrzewa się, że toksycznym składnikiem jest kwas winowy; jego ilość bywa różna, więc skutki są nieprzewidywalne i nie da się określić, które psy są bardziej wrażliwe. Ponieważ przyczyna nie jest pewna, każdą ilość traktuje się jako powód do niepokoju.",
     "cs": "Rozinky, hrozny a korintky mohou poškodit psí ledviny. Jako jedovatá složka je podezřelá kyselina vinná; její množství se liší, takže účinky jsou nepředvídatelné a nelze poznat, kteří psi jsou citlivější. Protože příčina není jistá, považuje se za problém jakékoli množství.",
-    "hr": "Grožđice, grožđe i korintsko grožđe mogu oštetiti pseće bubrege. Pretpostavlja se da je otrovni sastojak vinska kiselina; njezina se količina razlikuje, pa su učinci nepredvidljivi i ne može se znati koji su psi osjetljiviji. Budući da uzrok nije siguran, svaka se količina smatra razlogom za zabrinutost."
+    "hr": "Grožđice, grožđe i korintsko grožđe mogu oštetiti pseće bubrege. Pretpostavlja se da je otrovni sastojak vinska kiselina; njezina se količina razlikuje, pa su učinci nepredvidljivi i ne može se znati koji su psi osjetljiviji. Budući da uzrok nije siguran, svaka se količina smatra razlogom za zabrinutost.",
+    "sv": "Russin, vindruvor och korinter kan skada hundens njurar. Man misstänker att vinsyra är det giftiga ämnet; mängden varierar, så effekten är oförutsägbar, och det går inte att avgöra vilka hundar som är känsligare. Eftersom orsaken är osäker ser man allvarligt på varje mängd."
   },
   "signs": {
     "en": [
@@ -155,6 +160,14 @@
       "Bolovi u trbuhu",
       "Dehidracija i pojačano pijenje vode",
       "Drhtanje"
+    ],
+    "sv": [
+      "Kräkningar eller diarré, ofta inom 6–24 timmar",
+      "Trötthet och svaghet",
+      "Ingen matlust",
+      "Ont i magen",
+      "Uttorkning och stor törst",
+      "Darrningar"
     ]
   },
   "what_to_do": {
@@ -168,7 +181,8 @@
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als er maar een paar rozijnen zijn gegeten. Schrijf op hoeveel er ongeveer zijn gegeten. Wacht niet op verschijnselen: hoe eerder de behandeling begint, hoe beter.",
     "pl": "Od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt, nawet jeśli pies zjadł tylko kilka rodzynek. Zanotuj, ile mniej więcej zjadł. Nie czekaj na objawy: im szybciej zacznie się leczenie, tym lepiej.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, i když pes snědl jen pár rozinek. Poznamenejte si, kolik jich zhruba snědl. Nečekejte, až se objeví příznaky: čím dříve léčba začne, tím lépe.",
-    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako je pas pojeo samo nekoliko grožđica. Zapiši otprilike koliko ih je pojeo. Ne čekaj da se pojave znakovi: što prije liječenje počne, to bolje."
+    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako je pas pojeo samo nekoliko grožđica. Zapiši otprilike koliko ih je pojeo. Ne čekaj da se pojave znakovi: što prije liječenje počne, to bolje.",
+    "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt, även om hunden bara ätit några få russin. Notera ungefär hur många den åt. Vänta inte på symtom: ju tidigare behandlingen börjar, desto bättre."
   },
   "serving": null,
   "child": {
@@ -182,7 +196,8 @@
     "nl": "Rozijnen zijn kleine gedroogde druiven, en ze zijn niet voor honden. Eet je hond ervan? Vertel het meteen aan een volwassene.",
     "pl": "Rodzynki to malutkie suszone winogrona i nie są dla psów. Jeśli twój pies jakieś zje, od razu powiedz dorosłemu.",
     "cs": "Rozinky jsou malinké sušené hrozny a pro psy nejsou. Když je pes sní, řekni to hned dospělému.",
-    "hr": "Grožđice su sitne sušene bobice grožđa i nisu za pse. Ako ih tvoj pas pojede, odmah reci odrasloj osobi."
+    "hr": "Grožđice su sitne sušene bobice grožđa i nisu za pse. Ako ih tvoj pas pojede, odmah reci odrasloj osobi.",
+    "sv": "Russin är små torkade vindruvor, och de är inte för hundar. Om din hund äter några, säg till en vuxen direkt."
   },
   "faq": [
     {
@@ -197,7 +212,8 @@
         "nl": "Zijn rozijnen erger dan druiven?",
         "pl": "Czy rodzynki są gorsze niż winogrona?",
         "cs": "Jsou rozinky horší než hrozny?",
-        "hr": "Jesu li grožđice gore od grožđa?"
+        "hr": "Jesu li grožđice gore od grožđa?",
+        "sv": "Är russin värre än vindruvor?"
       },
       "a": {
         "en": "Both are dangerous. Sources treat grapes, raisins and currants as the same risk and advise calling the vet after any amount.",
@@ -210,7 +226,8 @@
         "nl": "Ze zijn allebei gevaarlijk. Bronnen zien druiven, rozijnen en krenten als hetzelfde risico en raden aan na elke hoeveelheid de dierenarts te bellen.",
         "pl": "Jedne i drugie są niebezpieczne. Źródła traktują winogrona, rodzynki i porzeczki koryntki jako takie samo zagrożenie i radzą dzwonić do weterynarza bez względu na zjedzoną ilość.",
         "cs": "Nebezpečné jsou obojí. Zdroje považují hrozny, rozinky i korintky za stejné riziko a po jakémkoli množství doporučují zavolat veterináři.",
-        "hr": "Oboje je opasno. Izvori grožđe, grožđice i korintsko grožđe smatraju jednakim rizikom i savjetuju da nazoveš veterinara nakon bilo koje količine."
+        "hr": "Oboje je opasno. Izvori grožđe, grožđice i korintsko grožđe smatraju jednakim rizikom i savjetuju da nazoveš veterinara nakon bilo koje količine.",
+        "sv": "Båda är farliga. Källorna ser vindruvor, russin och korinter som samma risk och råder dig att ringa veterinären efter vilken mängd som helst."
       }
     },
     {
@@ -225,7 +242,8 @@
         "nl": "En krenten?",
         "pl": "A porzeczki koryntki?",
         "cs": "A co korintky?",
-        "hr": "A korintsko grožđe?"
+        "hr": "A korintsko grožđe?",
+        "sv": "Hur är det med korinter?"
       },
       "a": {
         "en": "Currants are named in the same warnings as grapes and raisins, so they are not safe for dogs either.",
@@ -238,7 +256,8 @@
         "nl": "Krenten worden in dezelfde waarschuwingen genoemd als druiven en rozijnen, dus ook die zijn niet veilig voor honden.",
         "pl": "Porzeczki koryntki wymienia się w tych samych ostrzeżeniach co winogrona i rodzynki, więc one też nie są bezpieczne dla psów.",
         "cs": "Korintky jsou uváděny ve stejných varováních jako hrozny a rozinky, takže ani ony nejsou pro psy bezpečné.",
-        "hr": "Korintsko grožđe navodi se u istim upozorenjima kao grožđe i grožđice, pa ni ono nije sigurno za pse."
+        "hr": "Korintsko grožđe navodi se u istim upozorenjima kao grožđe i grožđice, pa ni ono nije sigurno za pse.",
+        "sv": "Korinter nämns i samma varningar som vindruvor och russin, så de är inte heller ofarliga för hundar."
       }
     }
   ],
@@ -354,6 +373,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "698237b0b4e9f7a1ef2d02cdb21bf75e77e20408f6a0c38f70e4d6ddee6f939a"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "89fe8591f4ee1c56ce65bbd40fda47619acef4fc01c5e4ae748851343546706e"
     }
   }
 }

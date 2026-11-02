@@ -12,7 +12,8 @@
     "nl": "Maïskolf",
     "pl": "Kolby kukurydzy",
     "cs": "Kukuřičný klas",
-    "hr": "Kukuruzni klip"
+    "hr": "Kukuruzni klip",
+    "sv": "Majskolv"
   },
   "question": {
     "en": "Can dogs eat corn cobs?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden maïskolven eten?",
     "pl": "Czy psy mogą jeść kolby kukurydzy?",
     "cs": "Mohou psi jíst kukuřičné klasy?",
-    "hr": "Smiju li psi jesti kukuruzne klipove?"
+    "hr": "Smiju li psi jesti kukuruzne klipove?",
+    "sv": "Får hundar äta majskolvar?"
   },
   "url_slug": {
     "en": "corn-cob",
@@ -38,7 +40,8 @@
     "nl": "maiskolf",
     "pl": "kolby-kukurydzy",
     "cs": "kukuricny-klas",
-    "hr": "kukuruzni-klip"
+    "hr": "kukuruzni-klip",
+    "sv": "majskolv"
   },
   "level": "dangerous",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee. Geef een hond nooit een maïskolf. Honden kunnen stukken of zelfs de hele kolf inslikken, wat verstikking of een ernstige darmverstopping kan veroorzaken waarvoor soms een spoedbehandeling nodig is. Losse, gewone maïskorrels zijn een ander verhaal.",
     "pl": "Nie. Nigdy nie dawaj psu kukurydzy w kolbie. Pies może połknąć kawałki, a nawet całą kolbę, co może spowodować zadławienie lub poważną niedrożność jelit wymagającą pilnego leczenia. Zwykłe ziarna kukurydzy zdjęte z kolby to inna sprawa.",
     "cs": "Ne. Nikdy psovi nedávejte kukuřici na klasu. Pes může spolknout kousky nebo i celý klas, což může způsobit dušení nebo vážné ucpání střev, které může vyžadovat urgentní léčbu. Čistá kukuřičná zrna oddělená od klasu jsou jiná věc.",
-    "hr": "Ne. Nikad ne daj psu kukuruz na klipu. Psi mogu progutati komade ili čak cijeli klip, što može izazvati gušenje ili ozbiljno začepljenje crijeva za koje može biti potrebno hitno liječenje. Obična zrna kukuruza skinuta s klipa nešto su drugo."
+    "hr": "Ne. Nikad ne daj psu kukuruz na klipu. Psi mogu progutati komade ili čak cijeli klip, što može izazvati gušenje ili ozbiljno začepljenje crijeva za koje može biti potrebno hitno liječenje. Obična zrna kukuruza skinuta s klipa nešto su drugo.",
+    "sv": "Nej. Ge aldrig en hund majskolv. Hundar kan svälja bitar eller till och med hela kolven, vilket kan orsaka kvävning eller allvarligt tarmstopp som kan kräva akut behandling. Naturella majskorn som tagits av kolven är en annan sak."
   },
   "why": {
     "en": "Swallowed pieces can block the intestines; in one reported case the blockage restricted the blood supply, and emergency treatment may be needed. Plain kernels in moderation are generally safe; the cob is the danger.",
@@ -65,7 +69,8 @@
     "nl": "Ingeslikte stukken kunnen de darmen verstoppen; in een beschreven geval belemmerde de verstopping de bloedtoevoer, en een spoedbehandeling kan nodig zijn. Gewone maïskorrels zijn met mate over het algemeen veilig; het gevaar zit in de kolf.",
     "pl": "Połknięte kawałki mogą zatkać jelita; w jednym opisanym przypadku niedrożność ograniczyła dopływ krwi i może być potrzebne pilne leczenie. Zwykłe ziarna w umiarkowanej ilości są na ogół bezpieczne; zagrożeniem jest kolba.",
     "cs": "Spolknuté kousky mohou ucpat střeva; v jednom popsaném případě ucpání omezilo prokrvení střeva a může být nutná urgentní léčba. Čistá zrna jsou s mírou obecně bezpečná; nebezpečný je klas.",
-    "hr": "Progutani komadi mogu začepiti crijeva; u jednom opisanom slučaju začepljenje je ograničilo dotok krvi, a može biti potrebno hitno liječenje. Obična zrna kukuruza u umjerenim količinama uglavnom su sigurna; opasan je klip."
+    "hr": "Progutani komadi mogu začepiti crijeva; u jednom opisanom slučaju začepljenje je ograničilo dotok krvi, a može biti potrebno hitno liječenje. Obična zrna kukuruza u umjerenim količinama uglavnom su sigurna; opasan je klip.",
+    "sv": "Bitar som sväljs kan blockera tarmarna; i ett rapporterat fall begränsade stoppet blodtillförseln, och akut behandling kan behövas. Naturella majskorn med måtta är i regel säkra; det är kolven som är farlig."
   },
   "signs": {
     "en": [
@@ -144,6 +149,13 @@
       "Umor i manja aktivnost",
       "Proljev",
       "Dehidracija"
+    ],
+    "sv": [
+      "Upprepade kräkningar",
+      "Ingen matlust",
+      "Trötthet och mindre aktivitet",
+      "Diarré",
+      "Uttorkning"
     ]
   },
   "what_to_do": {
@@ -157,7 +169,8 @@
     "nl": "Neem meteen contact op met je dierenarts als je hond een maïskolf of een deel ervan heeft ingeslikt, ook als hij in orde lijkt. Schrijf op wanneer het gebeurde en ongeveer hoeveel er is gegeten. Wacht niet op tekenen van een verstopping.",
     "pl": "Od razu skontaktuj się z weterynarzem, jeśli twój pies połknął kolbę kukurydzy lub jej część, nawet jeśli wydaje się, że nic mu nie jest. Zanotuj, kiedy to się stało i mniej więcej ile zjadł. Nie czekaj na objawy niedrożności.",
     "cs": "Pokud váš pes spolkl kukuřičný klas nebo jeho část, okamžitě se obraťte na veterináře, i když se zdá, že je v pořádku. Poznamenejte si, kdy se to stalo a zhruba kolik pes snědl. Nečekejte na známky ucpání.",
-    "hr": "Odmah se obrati veterinaru ako je pas progutao kukuruzni klip ili njegov dio, čak i ako se čini da je dobro. Zapiši kada se to dogodilo i otprilike koliko je pojeo. Ne čekaj da se pojave znakovi začepljenja."
+    "hr": "Odmah se obrati veterinaru ako je pas progutao kukuruzni klip ili njegov dio, čak i ako se čini da je dobro. Zapiši kada se to dogodilo i otprilike koliko je pojeo. Ne čekaj da se pojave znakovi začepljenja.",
+    "sv": "Kontakta veterinären direkt om hunden har svalt en majskolv eller en del av en, även om den verkar må bra. Notera när det hände och ungefär hur mycket den åt. Vänta inte på tecken på stopp."
   },
   "serving": null,
   "child": {
@@ -171,7 +184,8 @@
     "nl": "Maïskolven kunnen in het buikje van een hond vast komen te zitten. Gooi kolven meteen in een dichte vuilnisbak. Eet je hond er een? Vertel het aan een volwassene.",
     "pl": "Kolby kukurydzy mogą utknąć psu w brzuszku. Wyrzucaj je od razu do zamkniętego kosza i powiedz dorosłemu, jeśli twój pies jakąś zje.",
     "cs": "Kukuřičné klasy můžou psovi uvíznout v bříšku. Klasy hned vyhoď do zavřeného koše, a když pes nějaký sní, řekni to dospělému.",
-    "hr": "Kukuruzni klipovi mogu psu zapeti u trbuščiću. Klipove odmah baci u zatvorenu kantu, a ako pas pojede klip, reci odrasloj osobi."
+    "hr": "Kukuruzni klipovi mogu psu zapeti u trbuščiću. Klipove odmah baci u zatvorenu kantu, a ako pas pojede klip, reci odrasloj osobi.",
+    "sv": "Majskolvar kan fastna i hundens mage. Släng kolvarna direkt i en soptunna med lock, och säg till en vuxen om hunden äter en."
   },
   "faq": [
     {
@@ -186,7 +200,8 @@
         "nl": "Mogen honden maïskorrels eten?",
         "pl": "Czy psy mogą jeść ziarna kukurydzy?",
         "cs": "Mohou psi jíst kukuřičná zrna?",
-        "hr": "Smiju li psi jesti zrna kukuruza?"
+        "hr": "Smiju li psi jesti zrna kukuruza?",
+        "sv": "Får hundar äta majskorn?"
       },
       "a": {
         "en": "Plain corn kernels are generally safe for dogs in moderation. It's the cob that is dangerous.",
@@ -199,7 +214,8 @@
         "nl": "Gewone maïskorrels zijn met mate over het algemeen veilig voor honden. Het is de kolf die gevaarlijk is.",
         "pl": "Zwykłe ziarna kukurydzy w umiarkowanej ilości są na ogół bezpieczne dla psów. Niebezpieczna jest kolba.",
         "cs": "Čistá kukuřičná zrna jsou pro psy s mírou obecně bezpečná. Nebezpečný je klas.",
-        "hr": "Obična zrna kukuruza uglavnom su sigurna za pse u umjerenim količinama. Opasan je klip."
+        "hr": "Obična zrna kukuruza uglavnom su sigurna za pse u umjerenim količinama. Opasan je klip.",
+        "sv": "Naturella majskorn är i regel säkra för hundar med måtta. Det är kolven som är farlig."
       }
     },
     {
@@ -214,7 +230,8 @@
         "nl": "Komt een maïskolf er vanzelf weer uit?",
         "pl": "Czy kolba kukurydzy sama przejdzie przez jelita?",
         "cs": "Projde kukuřičný klas sám?",
-        "hr": "Hoće li kukuruzni klip proći sam od sebe?"
+        "hr": "Hoće li kukuruzni klip proći sam od sebe?",
+        "sv": "Kommer en majskolv ut av sig själv?"
       },
       "a": {
         "en": "Don't wait to find out. A swallowed cob can cause a serious blockage, so contact your vet straight away.",
@@ -227,7 +244,8 @@
         "nl": "Wacht dat niet af. Een ingeslikte kolf kan een ernstige verstopping veroorzaken, dus neem meteen contact op met je dierenarts.",
         "pl": "Nie czekaj, żeby się przekonać. Połknięta kolba może spowodować poważną niedrożność, więc od razu skontaktuj się z weterynarzem.",
         "cs": "Nečekejte, až to zjistíte. Spolknutý klas může způsobit vážné ucpání, proto se okamžitě obraťte na veterináře.",
-        "hr": "Ne čekaj da to saznaš. Progutani klip može izazvati ozbiljno začepljenje, zato se odmah obrati veterinaru."
+        "hr": "Ne čekaj da to saznaš. Progutani klip može izazvati ozbiljno začepljenje, zato se odmah obrati veterinaru.",
+        "sv": "Vänta inte och se. En svald kolv kan orsaka allvarligt tarmstopp, så kontakta veterinären direkt."
       }
     }
   ],
@@ -354,6 +372,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5a3a2b8cf632bc128727487e937a8e9b4553f9e88502c8b4fc6f1b0000f22358"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "426caa9552ab26daf626e031c1df717424d8f5cc1c827bda5433f74e500d3cf1"
     }
   }
 }

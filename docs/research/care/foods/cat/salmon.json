@@ -12,7 +12,8 @@
     "nl": "Zalm",
     "pl": "Łosoś",
     "cs": "Losos",
-    "hr": "Losos"
+    "hr": "Losos",
+    "sv": "Lax"
   },
   "question": {
     "en": "Can cats eat salmon?",
@@ -25,7 +26,8 @@
     "nl": "Mogen katten zalm eten?",
     "pl": "Czy koty mogą jeść łososia?",
     "cs": "Mohou kočky jíst lososa?",
-    "hr": "Smiju li mačke jesti losos?"
+    "hr": "Smiju li mačke jesti losos?",
+    "sv": "Får katter äta lax?"
   },
   "url_slug": {
     "en": "salmon",
@@ -38,7 +40,8 @@
     "nl": "zalm",
     "pl": "losos",
     "cs": "losos",
-    "hr": "losos"
+    "hr": "losos",
+    "sv": "lax"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Ja, een beetje gekookte zalm is af en toe prima als snoepje. Geef het zonder toevoegingen, zonder graten en zonder kruiden, en houd het klein. Vis hoort het complete voer van een kat niet te vervangen.",
     "pl": "Tak, odrobina gotowanego łososia jest w porządku jako okazjonalny smakołyk. Podawaj go bez dodatków, bez ości i przypraw, w małej ilości. Ryba nie powinna zastępować pełnoporcjowej karmy kota.",
     "cs": "Ano, trocha tepelně upraveného lososa je v pořádku jako občasný pamlsek. Podávejte ho bez přísad, bez kostí a bez koření a jen v malém množství. Ryba by neměla nahrazovat kompletní krmivo pro kočky.",
-    "hr": "Da, malo termički obrađenog lososa u redu je kao povremena poslastica. Posluži ga običnog, bez kostiju i začina, i u malim količinama. Riba ne bi smjela zamijeniti mačkinu potpunu hranu."
+    "hr": "Da, malo termički obrađenog lososa u redu je kao povremena poslastica. Posluži ga običnog, bez kostiju i začina, i u malim količinama. Riba ne bi smjela zamijeniti mačkinu potpunu hranu.",
+    "sv": "Ja, lite tillagad lax går bra som en godbit ibland. Servera den naturell, utan ben och kryddor, och i små mängder. Fisk ska inte ersätta kattens fullfoder."
   },
   "why": {
     "en": "Cats Protection lists cooked salmon with no bones or seasoning among safe festive foods and says small amounts of cooked fish such as salmon are suitable. RSPCA Australia says tinned salmon in spring water can be an occasional treat. Raw fish is different: it may carry bacteria and parasites.",
@@ -65,7 +69,8 @@
     "nl": "Cats Protection noemt gekookte zalm zonder graten of kruiden bij de veilige feestdagenhapjes en zegt dat kleine hoeveelheden gekookte vis zoals zalm geschikt zijn. Volgens RSPCA Australia kan zalm uit blik in bronwater af en toe een snoepje zijn. Rauwe vis is iets anders: die kan bacteriën en parasieten bevatten.",
     "pl": "Cats Protection wymienia gotowanego łososia bez ości i przypraw wśród bezpiecznych potraw świątecznych i podaje, że małe ilości gotowanej ryby, takiej jak łosoś, są odpowiednie. RSPCA Australia podaje, że łosoś z puszki w wodzie źródlanej może być okazjonalnym smakołykiem. Z surową rybą jest inaczej: może przenosić bakterie i pasożyty.",
     "cs": "Cats Protection řadí tepelně upraveného lososa bez kostí a koření mezi bezpečné sváteční pokrmy a uvádí, že malé množství tepelně upravené ryby, například lososa, je vhodné. Podle RSPCA Australia může být losos z konzervy v pramenité vodě občasným pamlskem. Syrové ryby jsou něco jiného: mohou přenášet bakterie a parazity.",
-    "hr": "Cats Protection navodi termički obrađen losos bez kostiju i začina među sigurnom blagdanskom hranom i kaže da su male količine termički obrađene ribe, poput lososa, prikladne. RSPCA Australia navodi da losos iz konzerve u izvorskoj vodi može biti povremena poslastica. Sirova riba nešto je drugo: može sadržavati bakterije i parazite."
+    "hr": "Cats Protection navodi termički obrađen losos bez kostiju i začina među sigurnom blagdanskom hranom i kaže da su male količine termički obrađene ribe, poput lososa, prikladne. RSPCA Australia navodi da losos iz konzerve u izvorskoj vodi može biti povremena poslastica. Sirova riba nešto je drugo: može sadržavati bakterije i parazite.",
+    "sv": "Cats Protection räknar tillagad lax utan ben och kryddor till säker högtidsmat och skriver att små mängder tillagad fisk som lax passar. RSPCA Australia skriver att konserverad lax i vatten kan vara en godbit ibland. Rå fisk är något annat: den kan innehålla bakterier och parasiter."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "nl": "Geef eerst een klein stukje. Krijgt je kat daarna last van braken of diarree, stop dan en vraag je dierenarts om advies. Haal alle graten eruit die je vindt.",
     "pl": "Najpierw podaj mały kawałek. Jeśli potem twój kot wymiotuje lub ma biegunkę, przestań i zapytaj weterynarza. Usuń wszystkie ości, które znajdziesz.",
     "cs": "Nejdřív nabídněte malý kousek. Pokud vaše kočka potom zvrací nebo má průjem, přestaňte a poraďte se s veterinářem. Odstraňte všechny kosti, které najdete.",
-    "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili ima proljev, prestani i pitaj veterinara. Ukloni sve kosti koje pronađeš."
+    "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili ima proljev, prestani i pitaj veterinara. Ukloni sve kosti koje pronađeš.",
+    "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären. Ta bort alla ben du hittar."
   },
   "serving": {
     "en": "Cooked, plain, boneless and unseasoned, or tinned in spring water; a few small pieces now and then.",
@@ -92,7 +98,8 @@
     "nl": "Gekookt, zonder toevoegingen, zonder graten en zonder kruiden, of uit blik in bronwater; af en toe een paar kleine stukjes.",
     "pl": "Gotowany, bez dodatków, bez ości i przypraw albo z puszki w wodzie źródlanej; od czasu do czasu kilka małych kawałków.",
     "cs": "Tepelně upravený, bez přísad, bez kostí a nekořeněný, nebo z konzervy v pramenité vodě; občas několik malých kousků.",
-    "hr": "Termički obrađen, običan, bez kostiju i nezačinjen ili iz konzerve u izvorskoj vodi; tu i tamo nekoliko malih komadića."
+    "hr": "Termički obrađen, običan, bez kostiju i nezačinjen ili iz konzerve u izvorskoj vodi; tu i tamo nekoliko malih komadića.",
+    "sv": "Tillagad, naturell, benfri och okryddad, eller konserverad i vatten; några små bitar då och då."
   },
   "child": {
     "en": "A tiny bit of cooked salmon with no bones can be a special treat. Ask a grown-up first.",
@@ -105,7 +112,8 @@
     "nl": "Een klein beetje gekookte zalm zonder graten kan een extra lekker snoepje zijn. Vraag het eerst aan een volwassene.",
     "pl": "Odrobina gotowanego łososia bez ości może być wyjątkowym smakołykiem. Najpierw zapytaj dorosłego.",
     "cs": "Malinký kousek propečeného lososa bez kostí může být výjimečný pamlsek. Nejdřív se zeptej dospělého.",
-    "hr": "Mrvica kuhanog lososa bez kostiju može biti posebna poslastica. Najprije pitaj odraslu osobu."
+    "hr": "Mrvica kuhanog lososa bez kostiju može biti posebna poslastica. Najprije pitaj odraslu osobu.",
+    "sv": "En pytteliten bit kokt lax utan ben kan vara en extra godbit. Fråga en vuxen först."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "nl": "Mogen katten rauwe zalm of sushi eten?",
         "pl": "Czy koty mogą jeść surowego łososia albo sushi?",
         "cs": "Mohou kočky jíst syrového lososa nebo sushi?",
-        "hr": "Smiju li mačke jesti sirovi losos ili sushi?"
+        "hr": "Smiju li mačke jesti sirovi losos ili sushi?",
+        "sv": "Får katter äta rå lax eller sushi?"
       },
       "a": {
         "en": "It's best not to. Uncooked fish may contain harmful bacteria and parasites, so fish for cats should be properly cooked.",
@@ -133,7 +142,8 @@
         "nl": "Liever niet. Ongekookte vis kan schadelijke bacteriën en parasieten bevatten, dus vis voor katten moet goed gaar zijn.",
         "pl": "Lepiej nie. Niegotowana ryba może zawierać szkodliwe bakterie i pasożyty, więc ryba dla kota powinna być porządnie ugotowana.",
         "cs": "Raději ne. Tepelně neupravené ryby mohou obsahovat škodlivé bakterie a parazity, proto by ryby pro kočky měly být řádně tepelně upravené.",
-        "hr": "Bolje ne. Termički neobrađena riba može sadržavati štetne bakterije i parazite, pa riba za mačke treba biti dobro termički obrađena."
+        "hr": "Bolje ne. Termički neobrađena riba može sadržavati štetne bakterije i parazite, pa riba za mačke treba biti dobro termički obrađena.",
+        "sv": "Helst inte. Otillagad fisk kan innehålla skadliga bakterier och parasiter, så fisk till katter ska vara ordentligt tillagad."
       }
     }
   ],
@@ -225,6 +235,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6938accefffb7b2307e5c7cb93e511884c20c4e4a094256c0026dcc5bc58affa"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "340866bf1d6d7f62d1857a84cf6812074387f6b93b9f55fa9a0e13a1c53ccc35"
     }
   }
 }

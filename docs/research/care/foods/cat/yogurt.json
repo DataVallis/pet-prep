@@ -12,7 +12,8 @@
     "nl": "Yoghurt",
     "pl": "Jogurt",
     "cs": "Jogurt",
-    "hr": "Jogurt"
+    "hr": "Jogurt",
+    "sv": "Yoghurt"
   },
   "question": {
     "en": "Can cats eat yogurt?",
@@ -25,7 +26,8 @@
     "nl": "Mogen katten yoghurt eten?",
     "pl": "Czy koty mogą jeść jogurt?",
     "cs": "Mohou kočky jíst jogurt?",
-    "hr": "Smiju li mačke jesti jogurt?"
+    "hr": "Smiju li mačke jesti jogurt?",
+    "sv": "Får katter äta yoghurt?"
   },
   "url_slug": {
     "en": "yogurt",
@@ -38,7 +40,8 @@
     "nl": "yoghurt",
     "pl": "jogurt",
     "cs": "jogurt",
-    "hr": "jogurt"
+    "hr": "jogurt",
+    "sv": "yoghurt"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee, yoghurt kun je beter vermijden. Het is een zuivelproduct, en volwassen katten hebben weinig van het enzym dat melksuiker verteert, dus zuivel kan diarree of maagklachten veroorzaken. Diergeneeskundige gidsen raden af katten zuivelproducten te geven.",
     "pl": "Nie, lepiej unikać jogurtu. To produkt mleczny, a dorosłe koty mają mało enzymu trawiącego cukier mleczny, więc nabiał może wywołać biegunkę lub rozstrój żołądka. Poradniki weterynaryjne odradzają podawanie kotom produktów mlecznych.",
     "cs": "Ne, jogurtu se raději vyhněte. Je to mléčný výrobek a dospělé kočky mají málo enzymu, který tráví mléčný cukr, takže mléčné výrobky mohou způsobit průjem nebo podráždění žaludku. Veterinární příručky nedoporučují krmit kočky mléčnými výrobky.",
-    "hr": "Ne, jogurt je bolje izbjegavati. Mliječni je proizvod, a odrasle mačke imaju malo enzima koji probavlja mliječni šećer, pa mliječni proizvodi mogu izazvati proljev ili želučane tegobe. Veterinarski vodiči savjetuju da se mačkama ne daju mliječni proizvodi."
+    "hr": "Ne, jogurt je bolje izbjegavati. Mliječni je proizvod, a odrasle mačke imaju malo enzima koji probavlja mliječni šećer, pa mliječni proizvodi mogu izazvati proljev ili želučane tegobe. Veterinarski vodiči savjetuju da se mačkama ne daju mliječni proizvodi.",
+    "sv": "Nej, yoghurt är bäst att undvika. Det är en mejeriprodukt, och vuxna katter har lite av enzymet som bryter ner mjölksocker, så mejeriprodukter kan ge diarré eller orolig mage. Veterinära guider avråder från att ge katter mejeriprodukter."
   },
   "why": {
     "en": "Adult cats have little lactase, the enzyme that breaks down lactose, so milk and other dairy-based products can cause diarrhoea or other digestive upset. Many cats are lactose intolerant. Dairy products are also high in fat and can add to weight gain. Plant-based alternatives are not automatically safe, as some contain ingredients that could be toxic to cats.",
@@ -65,7 +69,8 @@
     "nl": "Volwassen katten hebben weinig lactase, het enzym dat lactose afbreekt, dus melk en andere zuivelproducten kunnen diarree of andere spijsverteringsklachten veroorzaken. Veel katten zijn lactose-intolerant. Zuivelproducten bevatten ook veel vet en kunnen bijdragen aan gewichtstoename. Plantaardige alternatieven zijn niet vanzelf veilig, want sommige bevatten ingrediënten die giftig kunnen zijn voor katten.",
     "pl": "Dorosłe koty mają mało laktazy, czyli enzymu rozkładającego laktozę, więc mleko i inne produkty na bazie mleka mogą wywołać biegunkę lub inne problemy trawienne. Wiele kotów nie toleruje laktozy. Produkty mleczne zawierają też dużo tłuszczu i mogą sprzyjać tyciu. Zamienniki roślinne nie są automatycznie bezpieczne, bo niektóre zawierają składniki, które mogą być dla kotów toksyczne.",
     "cs": "Dospělé kočky mají málo laktázy, enzymu, který štěpí laktózu, takže mléko a další mléčné výrobky mohou způsobit průjem nebo jiné trávicí potíže. Mnoho koček laktózu nesnáší. Mléčné výrobky jsou také tučné a mohou přispívat k přibírání na váze. Rostlinné alternativy nejsou automaticky bezpečné, protože některé obsahují složky, které by mohly být pro kočky toxické.",
-    "hr": "Odrasle mačke imaju malo laktaze, enzima koji razgrađuje laktozu, pa mlijeko i drugi proizvodi na bazi mlijeka mogu izazvati proljev ili druge probavne smetnje. Mnoge mačke ne podnose laktozu. Mliječni proizvodi imaju i puno masti i mogu pridonijeti debljanju. Biljne zamjene nisu automatski sigurne jer neke sadrže sastojke koji bi mogli biti otrovni za mačke."
+    "hr": "Odrasle mačke imaju malo laktaze, enzima koji razgrađuje laktozu, pa mlijeko i drugi proizvodi na bazi mlijeka mogu izazvati proljev ili druge probavne smetnje. Mnoge mačke ne podnose laktozu. Mliječni proizvodi imaju i puno masti i mogu pridonijeti debljanju. Biljne zamjene nisu automatski sigurne jer neke sadrže sastojke koji bi mogli biti otrovni za mačke.",
+    "sv": "Vuxna katter har lite laktas, enzymet som bryter ner laktos, så mjölk och andra mejeribaserade produkter kan ge diarré eller andra magbesvär. Många katter är laktosintoleranta. Mejeriprodukter är dessutom feta och kan bidra till viktökning. Växtbaserade alternativ är inte automatiskt säkra, eftersom en del innehåller ingredienser som kan vara giftiga för katter."
   },
   "signs": {
     "en": [
@@ -133,6 +138,12 @@
       "Povraćanje",
       "Želučane tegobe",
       "Vjetrovi ili nadutost"
+    ],
+    "sv": [
+      "Diarré",
+      "Kräkningar",
+      "Orolig mage",
+      "Gaser eller uppblåsthet"
     ]
   },
   "what_to_do": {
@@ -146,7 +157,8 @@
     "nl": "Heeft je kat yoghurt gegeten? Let op diarree, braken of veranderd gedrag, en vraag je dierenarts om advies als ze ziek lijkt.",
     "pl": "Jeśli twój kot zjadł jogurt, obserwuj, czy nie ma biegunki, wymiotów lub zmian w zachowaniu, i poradź się weterynarza, jeśli źle się czuje.",
     "cs": "Pokud vaše kočka snědla jogurt, sledujte, zda se neobjeví průjem, zvracení nebo změna chování, a pokud se nezdá v pořádku, obraťte se o radu na veterináře.",
-    "hr": "Ako je mačka pojela jogurt, prati pojavu proljeva, povraćanja ili promjene u ponašanju i obrati se veterinaru za savjet ako ti se čini da joj nije dobro."
+    "hr": "Ako je mačka pojela jogurt, prati pojavu proljeva, povraćanja ili promjene u ponašanju i obrati se veterinaru za savjet ako ti se čini da joj nije dobro.",
+    "sv": "Om katten har ätit yoghurt: håll utkik efter diarré, kräkningar eller ändrat beteende, och kontakta veterinären för råd om den verkar må dåligt."
   },
   "serving": null,
   "child": {
@@ -160,7 +172,8 @@
     "nl": "Yoghurt is eten voor mensen. Een kat kan er buikpijn van krijgen, dus houd het in jouw kommetje, niet in dat van je kat.",
     "pl": "Jogurt to jedzenie dla ludzi. Może rozstroić kotu brzuszek, więc niech zostanie w twojej misce, a nie w kociej.",
     "cs": "Jogurt je jídlo pro lidi. Kočce může rozbolet bříško, takže ho nech ve své misce, ne v kočičí.",
-    "hr": "Jogurt je hrana za ljude. Od njega maci može zaboljeti trbuščić, zato neka ostane u tvojoj zdjelici, a ne u macinoj."
+    "hr": "Jogurt je hrana za ljude. Od njega maci može zaboljeti trbuščić, zato neka ostane u tvojoj zdjelici, a ne u macinoj.",
+    "sv": "Yoghurt är mat för människor. Den kan ge katten ont i magen, så låt den stanna i din skål, inte i kattens."
   },
   "faq": [
     {
@@ -175,7 +188,8 @@
         "nl": "Is zuivelvrije yoghurt beter voor katten?",
         "pl": "Czy jogurt bez nabiału jest lepszy dla kotów?",
         "cs": "Je pro kočky lepší rostlinný jogurt?",
-        "hr": "Je li jogurt bez mliječnih sastojaka bolji za mačke?"
+        "hr": "Je li jogurt bez mliječnih sastojaka bolji za mačke?",
+        "sv": "Är mejerifri yoghurt bättre för katter?"
       },
       "a": {
         "en": "Not necessarily. Many dairy alternatives contain ingredients that could be toxic to cats, so they are best avoided too.",
@@ -188,7 +202,8 @@
         "nl": "Niet per se. Veel zuivelvervangers bevatten ingrediënten die giftig kunnen zijn voor katten, dus die kun je ook beter vermijden.",
         "pl": "Niekoniecznie. Wiele zamienników nabiału zawiera składniki, które mogą być dla kotów toksyczne, więc lepiej ich też unikać.",
         "cs": "Ne nutně. Mnoho rostlinných náhražek mléčných výrobků obsahuje složky, které by mohly být pro kočky toxické, proto je lepší se jim také vyhnout.",
-        "hr": "Ne nužno. Mnoge zamjene za mliječne proizvode sadrže sastojke koji bi mogli biti otrovni za mačke, pa je i njih bolje izbjegavati."
+        "hr": "Ne nužno. Mnoge zamjene za mliječne proizvode sadrže sastojke koji bi mogli biti otrovni za mačke, pa je i njih bolje izbjegavati.",
+        "sv": "Inte nödvändigtvis. Många mejerifria alternativ innehåller ingredienser som kan vara giftiga för katter, så de är också bäst att undvika."
       }
     }
   ],
@@ -296,6 +311,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "fe9715bccce87a2ff90ccc9f12e6f529cc5050af2faf74379a4ca2dd69fc7039"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c02ba2ec1cc9a3d9fede8e2e4aa3706e65e69c6e39a62e56cb4e01e5b6245488"
     }
   }
 }

@@ -5,51 +5,59 @@
     "en": "Strawberries",
     "sl": "Jagode",
     "cs": "Jahody",
-    "hr": "Jagode"
+    "hr": "Jagode",
+    "sv": "Jordgubbar"
   },
   "question": {
     "en": "Can dogs eat strawberries?",
     "sl": "Ali lahko psi jedo jagode?",
     "cs": "Mohou psi jíst jahody?",
-    "hr": "Smiju li psi jesti jagode?"
+    "hr": "Smiju li psi jesti jagode?",
+    "sv": "Får hundar äta jordgubbar?"
   },
   "url_slug": {
     "en": "strawberries",
     "sl": "jagode",
     "cs": "jahody",
-    "hr": "jagode"
+    "hr": "jagode",
+    "sv": "jordgubbar"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in moderation. Strawberries are full of antioxidants, fibre and vitamin C, but they contain natural sugar, and too many at once can cause loose stools or diarrhoea. Wash them, remove the stems and leaves, and cut them small.",
     "sl": "Da, zmerno. Jagode so polne antioksidantov, vlaknin in vitamina C, a vsebujejo naravni sladkor, preveč naenkrat pa lahko povzroči mehko blato ali drisko. Operite jih, odstranite peclje in liste ter jih narežite na majhne koščke.",
     "cs": "Ano, s mírou. Jahody jsou plné antioxidantů, vlákniny a vitaminu C, obsahují ale přirozený cukr a příliš mnoho najednou může způsobit řidší stolici nebo průjem. Omyjte je, odstraňte stopky a lístky a nakrájejte je na malé kousky.",
-    "hr": "Da, umjereno. Jagode su pune antioksidansa, vlakana i vitamina C, ali sadrže prirodni šećer, a previše njih odjednom može izazvati mekanu stolicu ili proljev. Operi ih, ukloni peteljke i listiće i nareži ih na male komadiće."
+    "hr": "Da, umjereno. Jagode su pune antioksidansa, vlakana i vitamina C, ali sadrže prirodni šećer, a previše njih odjednom može izazvati mekanu stolicu ili proljev. Operi ih, ukloni peteljke i listiće i nareži ih na male komadiće.",
+    "sv": "Ja, med måtta. Jordgubbar är fulla av antioxidanter, fibrer och C-vitamin, men de innehåller naturligt socker, och för många på en gång kan ge lös avföring eller diarré. Skölj dem, ta bort stjälkar och blad och skär dem i små bitar."
   },
   "why": {
     "en": "The stems and leaves are not toxic but can cause stomach upset, and whole strawberries can be a choking risk, especially for smaller breeds. Avoid strawberries in syrup or canned strawberries, which have too much sugar and may even contain artificial sweeteners that are toxic to dogs.",
     "sl": "Peclji in listi niso strupeni, a lahko povzročijo prebavne težave, cele jagode pa lahko predstavljajo nevarnost zadušitve, zlasti pri manjših pasmah. Izogibajte se jagodam v sirupu ali konzerviranim jagodam, ki imajo preveč sladkorja in lahko celo vsebujejo umetna sladila, strupena za pse.",
     "cs": "Stopky a lístky nejsou jedovaté, mohou ale podráždit žaludek, a celé jahody mohou způsobit dušení, zejména u menších plemen. Vyhněte se jahodám v sirupu nebo z konzervy, které mají příliš mnoho cukru a mohou dokonce obsahovat umělá sladidla, která jsou pro psy jedovatá.",
-    "hr": "Peteljke i listići nisu otrovni, ali mogu izazvati probavne tegobe, a cijela jagoda može izazvati gušenje, osobito kod manjih pasmina. Izbjegavaj jagode u sirupu ili iz konzerve jer imaju previše šećera i mogu sadržavati čak i umjetna sladila koja su otrovna za pse."
+    "hr": "Peteljke i listići nisu otrovni, ali mogu izazvati probavne tegobe, a cijela jagoda može izazvati gušenje, osobito kod manjih pasmina. Izbjegavaj jagode u sirupu ili iz konzerve jer imaju previše šećera i mogu sadržavati čak i umjetna sladila koja su otrovna za pse.",
+    "sv": "Stjälkarna och bladen är inte giftiga men kan ge magbesvär, och hela jordgubbar kan orsaka kvävning, särskilt hos mindre raser. Undvik jordgubbar i sockerlag eller på burk, som innehåller för mycket socker och till och med kan innehålla konstgjorda sötningsmedel som är giftiga för hundar."
   },
   "signs": null,
   "what_to_do": {
     "en": "If you notice anything different after your dog eats strawberries, stop giving them and check with your vet.",
     "sl": "Če po jagodah pri psu opazite kaj nenavadnega, mu jih ne dajajte več in se posvetujte z veterinarjem.",
     "cs": "Pokud si po jahodách u svého psa všimnete jakékoli změny, přestaňte mu je dávat a poraďte se s veterinářem.",
-    "hr": "Ako primijetiš bilo kakvu promjenu nakon što tvoj pas pojede jagode, prestani mu ih davati i posavjetuj se s veterinarom."
+    "hr": "Ako primijetiš bilo kakvu promjenu nakon što tvoj pas pojede jagode, prestani mu ih davati i posavjetuj se s veterinarom.",
+    "sv": "Om du märker något annorlunda efter att hunden ätit jordgubbar, sluta ge dem och rådfråga veterinären."
   },
   "serving": {
     "en": "Washed thoroughly, stems and leaves removed, cut into small pieces, or mashed for small dogs; fresh or frozen, never in syrup or canned.",
     "sl": "Temeljito oprane, brez pecljev in listov, narezane na majhne koščke ali za majhne pse pretlačene; sveže ali zamrznjene, nikoli v sirupu ali iz konzerve.",
     "cs": "Důkladně omyté, bez stopek a lístků, nakrájené na malé kousky, pro malé psy rozmačkané; čerstvé nebo mražené, nikdy v sirupu ani z konzervy.",
-    "hr": "Temeljito oprane, bez peteljki i listića, narezane na male komadiće ili zgnječene za male pse; svježe ili smrznute, nikad u sirupu ili iz konzerve."
+    "hr": "Temeljito oprane, bez peteljki i listića, narezane na male komadiće ili zgnječene za male pse; svježe ili smrznute, nikad u sirupu ili iz konzerve.",
+    "sv": "Noga sköljda, utan stjälkar och blad, skurna i små bitar eller mosade till små hundar; färska eller frysta, aldrig i sockerlag eller på burk."
   },
   "child": {
     "en": "Dogs can have a little strawberry! A grown-up washes it, takes off the green leaves and cuts it small.",
     "sl": "Psi lahko dobijo malo jagode! Odrasel jo opere, odstrani zelene liste in jo nareže na majhne koščke.",
     "cs": "Pejsci můžou dostat kousek jahody! Dospělý ji omyje, utrhne zelené lístky a nakrájí ji na malé kousky.",
-    "hr": "Psi smiju pojesti malo jagode! Odrasla osoba je opere, skine zelene listiće i nareže je na male komadiće."
+    "hr": "Psi smiju pojesti malo jagode! Odrasla osoba je opere, skine zelene listiće i nareže je na male komadiće.",
+    "sv": "Hundar får äta lite jordgubbe! En vuxen sköljer den, tar bort de gröna bladen och skär den i små bitar."
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "Can dogs eat frozen strawberries?",
         "sl": "Ali lahko psi jedo zamrznjene jagode?",
         "cs": "Mohou psi jíst mražené jahody?",
-        "hr": "Smiju li psi jesti smrznute jagode?"
+        "hr": "Smiju li psi jesti smrznute jagode?",
+        "sv": "Får hundar äta frysta jordgubbar?"
       },
       "a": {
         "en": "Yes. Frozen strawberries cut into suitably sized pieces can be a safe, refreshing treat.",
         "sl": "Da. Zamrznjene jagode, narezane na primerno velike koščke, so lahko varen in osvežilen priboljšek.",
         "cs": "Ano. Mražené jahody nakrájené na vhodně velké kousky mohou být bezpečným, osvěžujícím pamlskem.",
-        "hr": "Smiju. Smrznute jagode narezane na komadiće prikladne veličine mogu biti sigurna i osvježavajuća poslastica."
+        "hr": "Smiju. Smrznute jagode narezane na komadiće prikladne veličine mogu biti sigurna i osvježavajuća poslastica.",
+        "sv": "Ja. Frysta jordgubbar i lagom stora bitar kan vara en ofarlig och svalkande godbit."
       }
     },
     {
@@ -71,13 +81,15 @@
         "en": "Should I ask my vet first?",
         "sl": "Naj najprej vprašam veterinarja?",
         "cs": "Mám se nejdřív zeptat veterináře?",
-        "hr": "Trebam li prvo pitati veterinara?"
+        "hr": "Trebam li prvo pitati veterinara?",
+        "sv": "Ska jag fråga veterinären först?"
       },
       "a": {
         "en": "Whenever you introduce a new food to your dog's diet, it is best to talk to your vet first.",
         "sl": "Kadar psu uvajate novo hrano, se je najbolje najprej pogovoriti z veterinarjem.",
         "cs": "Kdykoli zařazujete do jídelníčku psa novou potravinu, je nejlepší se nejdřív poradit s veterinářem.",
-        "hr": "Kad god psu u prehranu uvodiš novu namirnicu, najbolje je da prvo razgovaraš s veterinarom."
+        "hr": "Kad god psu u prehranu uvodiš novu namirnicu, najbolje je da prvo razgovaraš s veterinarom.",
+        "sv": "När du inför ett nytt livsmedel i hundens kost är det bäst att prata med veterinären först."
       }
     }
   ],
@@ -162,6 +174,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2c730ffc5787e6c4581584e6b06e69d48eca4b44075331f7c9fa22ff6d7d0103"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "07385a298e6a56acd8494ab0f4144a568263f5b72c76c26d229eda408e305206"
     }
   }
 }

@@ -12,7 +12,8 @@
     "nl": "Abrikozen",
     "pl": "Morele",
     "cs": "Meruňky",
-    "hr": "Marelice"
+    "hr": "Marelice",
+    "sv": "Aprikoser"
   },
   "question": {
     "en": "Can dogs eat apricots?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden abrikozen eten?",
     "pl": "Czy psy mogą jeść morele?",
     "cs": "Mohou psi jíst meruňky?",
-    "hr": "Smiju li psi jesti marelice?"
+    "hr": "Smiju li psi jesti marelice?",
+    "sv": "Får hundar äta aprikoser?"
   },
   "url_slug": {
     "en": "apricots",
@@ -38,7 +40,8 @@
     "nl": "abrikozen",
     "pl": "morele",
     "cs": "merunky",
-    "hr": "marelice"
+    "hr": "marelice",
+    "sv": "aprikoser"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Niet aan te raden. De abrikozenplant staat te boek als giftig voor honden: de stelen, bladeren en pitten bevatten cyanide, vooral als ze verwelken. Laat je hond nooit op abrikozenpitten, -bladeren of -stelen kauwen.",
     "pl": "Nie zaleca się. Morela figuruje na listach roślin toksycznych dla psów: jej łodygi, liście i nasiona zawierają cyjanek, zwłaszcza gdy więdną. Nigdy nie pozwalaj psu gryźć pestek, liści ani łodyg moreli.",
     "cs": "Nedoporučuje se. Meruňka je uváděna jako rostlina jedovatá pro psy: její stonky, listy a semena obsahují kyanid, zvlášť když vadnou. Nikdy nenechte psa kousat meruňkové pecky, listy ani stonky.",
-    "hr": "Ne preporučuje se. Marelica je kao biljka navedena kao otrovna za pse: njezine peteljke, listovi i sjemenke sadrže cijanid, osobito dok venu. Nikad ne dopusti psu da žvače koštice, listove ili peteljke marelice."
+    "hr": "Ne preporučuje se. Marelica je kao biljka navedena kao otrovna za pse: njezine peteljke, listovi i sjemenke sadrže cijanid, osobito dok venu. Nikad ne dopusti psu da žvače koštice, listove ili peteljke marelice.",
+    "sv": "Rekommenderas inte. Aprikosträdet anges som giftigt för hundar: skaft, blad och kärnor innehåller cyanid, särskilt när de vissnar. Låt aldrig hunden tugga på aprikoskärnor, blad eller skaft."
   },
   "why": {
     "en": "Apricot stems, leaves and seeds contain cyanogenic glycosides, which release cyanide. Cyanide reduces the body's ability to use oxygen. Because the plant is listed as toxic to dogs, we do not rate apricots as a safe treat.",
@@ -65,7 +69,8 @@
     "nl": "Stelen, bladeren en pitten van de abrikoos bevatten cyanogene glycosiden, waaruit cyanide vrijkomt. Cyanide vermindert het vermogen van het lichaam om zuurstof te gebruiken. Omdat de plant als giftig voor honden staat vermeld, beschouwen wij abrikozen niet als een veilig snoepje.",
     "pl": "Łodygi, liście i nasiona moreli zawierają glikozydy cyjanogenne, które uwalniają cyjanek. Cyjanek ogranicza zdolność organizmu do wykorzystywania tlenu. Ponieważ roślina figuruje na listach roślin toksycznych dla psów, nie uznajemy moreli za bezpieczny smakołyk.",
     "cs": "Stonky, listy a semena meruňky obsahují kyanogenní glykosidy, ze kterých se uvolňuje kyanid. Kyanid snižuje schopnost těla využívat kyslík. Protože je rostlina uváděna jako jedovatá pro psy, nepovažujeme meruňky za bezpečný pamlsek.",
-    "hr": "Peteljke, listovi i sjemenke marelice sadrže cijanogene glikozide, iz kojih se oslobađa cijanid. Cijanid smanjuje sposobnost tijela da iskoristi kisik. Budući da je biljka navedena kao otrovna za pse, marelice ne smatramo sigurnom poslasticom."
+    "hr": "Peteljke, listovi i sjemenke marelice sadrže cijanogene glikozide, iz kojih se oslobađa cijanid. Cijanid smanjuje sposobnost tijela da iskoristi kisik. Budući da je biljka navedena kao otrovna za pse, marelice ne smatramo sigurnom poslasticom.",
+    "sv": "Aprikosträdets skaft, blad och kärnor innehåller cyanogena glykosider, som frigör cyanid. Cyanid minskar kroppens förmåga att använda syre. Eftersom trädet anges som giftigt för hundar klassar vi inte aprikoser som en säker godbit."
   },
   "signs": {
     "en": [
@@ -133,6 +138,12 @@
       "Ciglastocrvene desni",
       "Otežano disanje, dahtanje",
       "Šok"
+    ],
+    "sv": [
+      "Vidgade pupiller",
+      "Tegelrött tandkött",
+      "Svårt att andas, flämtning",
+      "Chock"
     ]
   },
   "what_to_do": {
@@ -146,7 +157,8 @@
     "nl": "Heeft je hond op abrikozenpitten, -bladeren of -stelen gekauwd of ze ingeslikt? Neem dan meteen contact op met je dierenarts voor advies. Schrijf op wat er is gegeten en ongeveer hoeveel.",
     "pl": "Jeśli twój pies gryzł lub połknął pestki, liście albo łodygi moreli, od razu poradź się weterynarza. Zanotuj, co zjadł i mniej więcej ile.",
     "cs": "Pokud váš pes kousal nebo spolkl meruňkové pecky, listy nebo stonky, okamžitě se obraťte na veterináře. Poznamenejte si, co pes snědl a zhruba kolik.",
-    "hr": "Ako je pas žvakao ili progutao koštice, listove ili peteljke marelice, odmah se obrati veterinaru za savjet. Zapiši što je pojeo i otprilike koliko."
+    "hr": "Ako je pas žvakao ili progutao koštice, listove ili peteljke marelice, odmah se obrati veterinaru za savjet. Zapiši što je pojeo i otprilike koliko.",
+    "sv": "Om hunden har tuggat på eller svalt aprikoskärnor, blad eller skaft, kontakta veterinären för råd direkt. Notera vad den åt och ungefär hur mycket."
   },
   "serving": null,
   "child": {
@@ -160,7 +172,8 @@
     "nl": "Abrikozenpitten, -bladeren en -stelen zijn slecht voor honden. Abrikozen zijn voor mensen. Vertel het aan een volwassene als je hond op een pit kauwt.",
     "pl": "Pestki, liście i łodyżki moreli szkodzą psom. Morele zostaw dla ludzi i powiedz dorosłemu, jeśli twój pies gryzie pestkę.",
     "cs": "Meruňkové pecky, listy a stonky psům škodí. Meruňky nech pro lidi, a když pes kouše pecku, řekni to dospělému.",
-    "hr": "Koštice, listovi i peteljke marelice štete psima. Marelice ostavi ljudima, a ako pas žvače košticu, reci odrasloj osobi."
+    "hr": "Koštice, listovi i peteljke marelice štete psima. Marelice ostavi ljudima, a ako pas žvače košticu, reci odrasloj osobi.",
+    "sv": "Aprikoskärnor, blad och skaft är dåliga för hundar. Spara aprikoser till människor, och säg till en vuxen om hunden tuggar på en kärna."
   },
   "faq": [
     {
@@ -175,7 +188,8 @@
         "nl": "Welke delen van de abrikoos zijn giftig?",
         "pl": "Które części moreli są toksyczne?",
         "cs": "Které části meruňky jsou jedovaté?",
-        "hr": "Koji su dijelovi marelice otrovni?"
+        "hr": "Koji su dijelovi marelice otrovni?",
+        "sv": "Vilka delar av aprikosen är giftiga?"
       },
       "a": {
         "en": "The stems, leaves and seeds contain cyanide, and they are particularly toxic as they wilt.",
@@ -188,7 +202,8 @@
         "nl": "De stelen, bladeren en pitten bevatten cyanide en zijn vooral giftig als ze aan het verwelken zijn.",
         "pl": "Łodygi, liście i nasiona zawierają cyjanek i są szczególnie toksyczne, gdy więdną.",
         "cs": "Stonky, listy a semena obsahují kyanid a jsou zvlášť jedovaté, když vadnou.",
-        "hr": "Peteljke, listovi i sjemenke sadrže cijanid, a osobito su otrovni dok venu."
+        "hr": "Peteljke, listovi i sjemenke sadrže cijanid, a osobito su otrovni dok venu.",
+        "sv": "Skaften, bladen och kärnorna innehåller cyanid, och de är särskilt giftiga när de vissnar."
       }
     }
   ],
@@ -279,6 +294,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "660bb03002b1ef8671e6297735cfba88a9f432db00114106f84459b4312b2141"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "82ce6367383aeffb18b8c3f539df9db0871cadaf9219944b3533ef9b4c5c67f2"
     }
   }
 }

@@ -12,7 +12,8 @@
     "nl": "Zout",
     "pl": "Sól",
     "cs": "Sůl",
-    "hr": "Sol"
+    "hr": "Sol",
+    "sv": "Salt"
   },
   "question": {
     "en": "Can dogs eat salt?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden zout eten?",
     "pl": "Czy psy mogą jeść sól?",
     "cs": "Mohou psi jíst sůl?",
-    "hr": "Smiju li psi jesti sol?"
+    "hr": "Smiju li psi jesti sol?",
+    "sv": "Får hundar äta salt?"
   },
   "url_slug": {
     "en": "salt",
@@ -38,7 +40,8 @@
     "nl": "zout",
     "pl": "sol",
     "cs": "sul",
-    "hr": "sol"
+    "hr": "sol",
+    "sv": "salt"
   },
   "level": "dangerous",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee, niet in grote hoeveelheden. Zout eten met mate zou geen zoutvergiftiging moeten veroorzaken, maar veel zout eten kan dat wel, bijvoorbeeld van zelfgemaakt zoutdeeg, speelklei of veel zeewater. Verschijnselen zijn onder meer braken, veel dorst, trillingen en toevallen.",
     "pl": "Nie w dużych ilościach. Słone jedzenie w umiarkowanej ilości nie powinno wywołać zatrucia solą, ale zjedzenie dużej ilości soli, np. z domowej masy solnej, ciastoliny lub dużej ilości wody morskiej, już może. Objawy to m.in. wymioty, silne pragnienie, drżenie mięśni i drgawki.",
     "cs": "Ne, ve velkém množství ne. Slané jídlo s mírou by otravu solí způsobit nemělo, velké množství soli však ano – například z domácího slaného těsta, modelíny nebo spousty mořské vody. Mezi příznaky patří zvracení, silná žízeň, třes a záchvaty.",
-    "hr": "Ne u velikim količinama. Slana hrana u umjerenim količinama ne bi trebala izazvati trovanje solju, ali velika količina soli može, na primjer iz domaćeg slanog tijesta, tijesta za modeliranje ili puno morske vode. Znakovi su povraćanje, jaka žeđ, drhtanje mišića i napadaji."
+    "hr": "Ne u velikim količinama. Slana hrana u umjerenim količinama ne bi trebala izazvati trovanje solju, ali velika količina soli može, na primjer iz domaćeg slanog tijesta, tijesta za modeliranje ili puno morske vode. Znakovi su povraćanje, jaka žeđ, drhtanje mišića i napadaji.",
+    "sv": "Nej, inte i stora mängder. Salt mat med måtta bör inte orsaka saltförgiftning, men mycket salt, till exempel från hemgjord saltdeg, lekdeg eller mycket havsvatten, kan göra det. Symtomen är bland annat kräkningar, stor törst, darrningar och kramper."
   },
   "why": {
     "en": "Common causes of salt poisoning are homemade salt-dough ornaments and play dough, snow with salt de-icer, and drinking a lot of sea water. Salt poisoning is unlikely when a healthy dog has fresh water, but small dogs with health problems are at more risk if they have no fresh water. Salt must never be used to make a dog vomit.",
@@ -65,7 +69,8 @@
     "nl": "Bekende oorzaken van zoutvergiftiging zijn zelfgemaakte zoutdeegfiguren en speelklei, sneeuw met strooizout en veel zeewater drinken. Zoutvergiftiging is onwaarschijnlijk als een gezonde hond vers water heeft, maar kleine honden met gezondheidsproblemen lopen meer risico als ze geen vers water hebben. Gebruik nooit zout om een hond te laten braken.",
     "pl": "Częste przyczyny zatrucia solą to domowe ozdoby z masy solnej i ciastolina, śnieg z solą do odladzania i picie dużej ilości wody morskiej. Zatrucie solą jest mało prawdopodobne, gdy zdrowy pies ma dostęp do świeżej wody, ale małe psy z problemami zdrowotnymi są bardziej zagrożone, jeśli nie mają świeżej wody. Nigdy nie wolno używać soli do wywoływania wymiotów u psa.",
     "cs": "Častými příčinami otravy solí jsou domácí ozdoby ze slaného těsta a modelína, sníh s posypovou solí a vypití velkého množství mořské vody. Otrava solí je nepravděpodobná, pokud má zdravý pes k dispozici čerstvou vodu, větší riziko však hrozí malým psům se zdravotními problémy, kteří čerstvou vodu nemají. Sůl se nikdy nesmí používat k vyvolání zvracení u psa.",
-    "hr": "Česti uzroci trovanja solju su domaći ukrasi od slanog tijesta i tijesto za modeliranje, snijeg posut solju protiv poledice i pijenje puno morske vode. Trovanje solju malo je vjerojatno kad zdrav pas ima svježu vodu, ali mali psi sa zdravstvenim tegobama izloženiji su riziku ako nemaju svježe vode. Sol se nikad ne smije koristiti za izazivanje povraćanja kod psa."
+    "hr": "Česti uzroci trovanja solju su domaći ukrasi od slanog tijesta i tijesto za modeliranje, snijeg posut solju protiv poledice i pijenje puno morske vode. Trovanje solju malo je vjerojatno kad zdrav pas ima svježu vodu, ali mali psi sa zdravstvenim tegobama izloženiji su riziku ako nemaju svježe vode. Sol se nikad ne smije koristiti za izazivanje povraćanja kod psa.",
+    "sv": "Vanliga orsaker till saltförgiftning är hemgjort pynt av saltdeg och lekdeg, snö med vägsalt och att hunden dricker mycket havsvatten. Saltförgiftning är osannolik när en frisk hund har tillgång till färskt vatten, men små hundar med hälsoproblem löper större risk om de saknar färskt vatten. Salt får aldrig användas för att få en hund att kräkas."
   },
   "signs": {
     "en": [
@@ -144,6 +149,13 @@
       "Proljev",
       "Teturanje, umor",
       "Drhtanje mišića ili napadaji"
+    ],
+    "sv": [
+      "Stor törst och kissar mycket",
+      "Kräkningar, ofta inom några timmar",
+      "Diarré",
+      "Ostadighet, trötthet",
+      "Darrningar eller kramper"
     ]
   },
   "what_to_do": {
@@ -157,7 +169,8 @@
     "nl": "Heeft je hond veel zout, zoutdeeg of speelklei gegeten, of veel zeewater gedronken? Neem dan meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat en hoeveel er is gegeten. Wacht niet op verschijnselen, en geef nooit zout om een hond te laten braken.",
     "pl": "Jeśli twój pies zjadł dużo soli, masy solnej lub ciastoliny albo wypił dużo wody morskiej, od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co i ile zjadł. Nie czekaj na objawy i nigdy nie podawaj soli, żeby wywołać u psa wymioty.",
     "cs": "Pokud váš pes snědl hodně soli, slaného těsta nebo modelíny nebo vypil hodně mořské vody, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co a kolik pes snědl. Nečekejte, až se objeví příznaky a nikdy psovi nedávejte sůl, abyste vyvolali zvracení.",
-    "hr": "Ako je tvoj pas pojeo puno soli, slanog tijesta ili tijesta za modeliranje ili je popio puno morske vode, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je i koliko pojeo. Ne čekaj da se pojave znakovi i nikad ne daj psu sol da bi povratio."
+    "hr": "Ako je tvoj pas pojeo puno soli, slanog tijesta ili tijesta za modeliranje ili je popio puno morske vode, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je i koliko pojeo. Ne čekaj da se pojave znakovi i nikad ne daj psu sol da bi povratio.",
+    "sv": "Om hunden ätit mycket salt, saltdeg eller lekdeg, eller druckit mycket havsvatten, kontakta veterinären eller en giftrådgivning för djur direkt. Notera vad och hur mycket den fått i sig. Vänta inte på symtom, och ge aldrig salt för att få hunden att kräkas."
   },
   "serving": null,
   "child": {
@@ -171,7 +184,8 @@
     "nl": "Van te veel zout krijgen honden veel dorst en worden ze ziek. Houd zout en zoute speelklei uit de buurt van je hond.",
     "pl": "Od nadmiaru soli psom bardzo chce się pić i rozchorowują się. Trzymaj sól i słoną ciastolinę z dala od psa.",
     "cs": "Po moc velkém množství soli mají psi velkou žízeň a je jim hodně zle. Sůl i slanou modelínu dej tam, kam pes nedosáhne.",
-    "hr": "Od previše soli psi postanu jako žedni i bolesni. Drži sol i slano tijesto za modeliranje podalje od svog psa."
+    "hr": "Od previše soli psi postanu jako žedni i bolesni. Drži sol i slano tijesto za modeliranje podalje od svog psa.",
+    "sv": "För mycket salt gör hundar jättetörstiga och sjuka. Håll salt och salt lekdeg borta från din hund."
   },
   "faq": [
     {
@@ -186,7 +200,8 @@
         "nl": "Is zelfgemaakte speelklei gevaarlijk?",
         "pl": "Czy domowa ciastolina jest niebezpieczna?",
         "cs": "Je domácí modelína nebezpečná?",
-        "hr": "Je li domaće tijesto za modeliranje opasno?"
+        "hr": "Je li domaće tijesto za modeliranje opasno?",
+        "sv": "Är hemgjord lekdeg farlig?"
       },
       "a": {
         "en": "Yes. Because of its high salt content, homemade play dough is highly toxic to dogs. Salt dough ornaments are a risk too.",
@@ -199,7 +214,8 @@
         "nl": "Ja. Door het hoge zoutgehalte is zelfgemaakte speelklei erg giftig voor honden. Zoutdeegfiguren zijn ook een risico.",
         "pl": "Tak. Ze względu na dużą zawartość soli domowa ciastolina jest bardzo toksyczna dla psów. Ozdoby z masy solnej także stanowią zagrożenie.",
         "cs": "Ano. Kvůli vysokému obsahu soli je domácí modelína pro psy vysoce jedovatá. Rizikem jsou i ozdoby ze slaného těsta.",
-        "hr": "Jest. Zbog velike količine soli domaće tijesto za modeliranje vrlo je otrovno za pse. Rizik su i ukrasi od slanog tijesta."
+        "hr": "Jest. Zbog velike količine soli domaće tijesto za modeliranje vrlo je otrovno za pse. Rizik su i ukrasi od slanog tijesta.",
+        "sv": "Ja. På grund av den höga salthalten är hemgjord lekdeg mycket giftig för hundar. Pynt av saltdeg är också en risk."
       }
     },
     {
@@ -214,7 +230,8 @@
         "nl": "Mag ik zout water geven om mijn hond te laten braken?",
         "pl": "Czy mogę podać słoną wodę, żeby pies zwymiotował?",
         "cs": "Mohu psovi dát slanou vodu, aby zvracel?",
-        "hr": "Smijem li psu dati slanu vodu da povrati?"
+        "hr": "Smijem li psu dati slanu vodu da povrati?",
+        "sv": "Kan jag ge saltvatten för att få hunden att kräkas?"
       },
       "a": {
         "en": "No. Salt and salt water should never be used to make an animal vomit, because of the high risk of salt poisoning. Call your vet instead.",
@@ -227,7 +244,8 @@
         "nl": "Nee. Gebruik nooit zout of zout water om een dier te laten braken, want het risico op zoutvergiftiging is groot. Bel in plaats daarvan je dierenarts.",
         "pl": "Nie. Soli i słonej wody nigdy nie wolno używać do wywoływania wymiotów u zwierzęcia ze względu na duże ryzyko zatrucia solą. Zamiast tego zadzwoń do weterynarza.",
         "cs": "Ne. Sůl ani slaná voda se nikdy nesmějí používat k vyvolání zvracení u zvířat, protože hrozí vysoké riziko otravy solí. Místo toho zavolejte veterináři.",
-        "hr": "Ne. Sol i slana voda nikad se ne smiju koristiti za izazivanje povraćanja kod životinje jer je rizik od trovanja solju velik. Umjesto toga nazovi veterinara."
+        "hr": "Ne. Sol i slana voda nikad se ne smiju koristiti za izazivanje povraćanja kod životinje jer je rizik od trovanja solju velik. Umjesto toga nazovi veterinara.",
+        "sv": "Nej. Salt och saltvatten ska aldrig användas för att få ett djur att kräkas, eftersom risken för saltförgiftning är stor. Ring veterinären i stället."
       }
     }
   ],
@@ -367,6 +385,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "df3af25983869ce71b451951ad748b0559075940448eb9467214145071119a2a"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "137a88a9b94225dbd025b0b78f36e31e830f8eaaae82de674702f10011ce91e1"
     }
   }
 }

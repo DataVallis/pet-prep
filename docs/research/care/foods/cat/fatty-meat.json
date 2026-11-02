@@ -12,7 +12,8 @@
     "nl": "Vet vlees",
     "pl": "Tłuste mięso",
     "cs": "Tučné maso",
-    "hr": "Masno meso"
+    "hr": "Masno meso",
+    "sv": "Fett kött"
   },
   "question": {
     "en": "Can cats eat fatty meat?",
@@ -25,7 +26,8 @@
     "nl": "Mogen katten vet vlees eten?",
     "pl": "Czy koty mogą jeść tłuste mięso?",
     "cs": "Mohou kočky jíst tučné maso?",
-    "hr": "Smiju li mačke jesti masno meso?"
+    "hr": "Smiju li mačke jesti masno meso?",
+    "sv": "Får katter äta fett kött?"
   },
   "url_slug": {
     "en": "fatty-meat",
@@ -38,7 +40,8 @@
     "nl": "vet-vlees",
     "pl": "tluste-mieso",
     "cs": "tucne-maso",
-    "hr": "masno-meso"
+    "hr": "masno-meso",
+    "sv": "fett-kott"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Liever niet. Vet vlees en vel van gevogelte kunnen de spijsvertering van een kat verstoren en bij gevoelige katten zelfs tot alvleesklierontsteking (pancreatitis) leiden. Deel je vlees, geef dan een beetje gewoon, mager, gekookt vlees zonder vel, botten of kruiden.",
     "pl": "Lepiej nie. Tłuste mięso i skóra drobiu mogą wywołać u kota problemy trawienne, a u wrażliwych kotów nawet zapalenie trzustki. Jeśli dzielisz się mięsem, daj odrobinę zwykłego, chudego, gotowanego mięsa bez skóry, kości i przypraw.",
     "cs": "Raději ne. Tučné maso a drůbeží kůže mohou kočce narušit trávení a u citlivých koček mohou dokonce vést k zánětu slinivky břišní. Pokud se s kočkou o maso dělíte, dejte jí trochu obyčejného, libového, tepelně upraveného masa bez kůže, kostí a koření.",
-    "hr": "Bolje ne. Masno meso i koža peradi mogu poremetiti mačju probavu, a kod osjetljivih mačaka čak dovesti do upale gušterače. Ako dijeliš meso s mačkom, daj joj malo običnog, nemasnog, termički obrađenog mesa bez kože, kostiju i začina."
+    "hr": "Bolje ne. Masno meso i koža peradi mogu poremetiti mačju probavu, a kod osjetljivih mačaka čak dovesti do upale gušterače. Ako dijeliš meso s mačkom, daj joj malo običnog, nemasnog, termički obrađenog mesa bez kože, kostiju i začina.",
+    "sv": "Helst inte. Fett kött och fågelskinn kan störa kattens matsmältning och hos känsliga katter till och med leda till bukspottkörtelinflammation (pankreatit). Om du delar med dig av kött, ge lite naturellt, magert, tillagat kött utan skinn, ben och kryddor."
   },
   "why": {
     "en": "Too much fat can affect a cat's digestive tract, especially the pancreas. Cats Protection warns that turkey skin is high in fat and can cause digestive upset or even pancreatitis in sensitive cats, and a University of Georgia vet advises avoiding the fattier pieces of ham altogether.",
@@ -65,7 +69,8 @@
     "nl": "Te veel vet kan het spijsverteringskanaal van een kat aantasten, vooral de alvleesklier. Cats Protection waarschuwt dat kalkoenvel veel vet bevat en bij gevoelige katten spijsverteringsproblemen of zelfs alvleesklierontsteking kan veroorzaken, en een dierenarts van de University of Georgia raadt aan de vettere stukken ham helemaal te vermijden.",
     "pl": "Zbyt dużo tłuszczu może zaszkodzić przewodowi pokarmowemu kota, zwłaszcza trzustce. Cats Protection ostrzega, że skóra indyka zawiera dużo tłuszczu i może wywołać problemy trawienne, a u wrażliwych kotów nawet zapalenie trzustki. Z kolei weterynarz z University of Georgia radzi całkowicie unikać tłustszych kawałków szynki.",
     "cs": "Příliš mnoho tuku může ovlivnit kočičí trávicí trakt, zejména slinivku břišní. Cats Protection varuje, že krůtí kůže má vysoký obsah tuku a u citlivých koček může způsobit trávicí potíže, nebo dokonce zánět slinivky břišní, a veterinář z University of Georgia doporučuje se tučnějším kouskům šunky úplně vyhnout.",
-    "hr": "Previše masti može utjecati na mačji probavni sustav, osobito na gušteraču. Cats Protection upozorava da pureća koža ima mnogo masti i kod osjetljivih mačaka može izazvati probavne smetnje ili čak upalu gušterače, a jedan veterinar sa Sveučilišta Georgia savjetuje da se masniji komadi šunke potpuno izbjegavaju."
+    "hr": "Previše masti može utjecati na mačji probavni sustav, osobito na gušteraču. Cats Protection upozorava da pureća koža ima mnogo masti i kod osjetljivih mačaka može izazvati probavne smetnje ili čak upalu gušterače, a jedan veterinar sa Sveučilišta Georgia savjetuje da se masniji komadi šunke potpuno izbjegavaju.",
+    "sv": "För mycket fett kan påverka kattens matsmältningskanal, särskilt bukspottkörteln. Cats Protection varnar för att kalkonskinn är mycket fett och kan ge magbesvär eller till och med bukspottkörtelinflammation hos känsliga katter, och en veterinär vid University of Georgia råder till att helt undvika de fetare bitarna av skinka."
   },
   "signs": {
     "en": [
@@ -122,6 +127,11 @@
       "Povraćanje",
       "Proljev",
       "Probavne smetnje"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Diarré",
+      "Orolig mage"
     ]
   },
   "what_to_do": {
@@ -135,7 +145,8 @@
     "nl": "Heeft je kat veel vet eten gegeten, of braakt ze daarna, heeft ze diarree of lijkt ze pijn te hebben? Vraag dan je dierenarts om advies.",
     "pl": "Jeśli twój kot zjadł dużo tłustego jedzenia albo potem wymiotuje, ma biegunkę lub wydaje się, że coś go boli, poradź się weterynarza.",
     "cs": "Pokud kočka snědla hodně tučného jídla nebo potom zvrací, má průjem či se zdá, že ji něco bolí, poraďte se s veterinářem.",
-    "hr": "Ako je tvoja mačka pojela mnogo masne hrane ili nakon toga povraća, ima proljev ili se čini da je nešto boli, obrati se veterinaru za savjet."
+    "hr": "Ako je tvoja mačka pojela mnogo masne hrane ili nakon toga povraća, ima proljev ili se čini da je nešto boli, obrati se veterinaru za savjet.",
+    "sv": "Om katten har ätit mycket fet mat, eller kräks, har diarré eller verkar ha ont efteråt, kontakta veterinären för råd."
   },
   "serving": {
     "en": "Only plain, cooked, lean meat as an occasional treat: no skin, fat, bones or seasoning.",
@@ -148,7 +159,8 @@
     "nl": "Alleen gewoon, gekookt, mager vlees, af en toe als snoepje: zonder vel, vet, botten of kruiden.",
     "pl": "Tylko zwykłe, gotowane, chude mięso jako okazjonalny smakołyk: bez skóry, tłuszczu, kości i przypraw.",
     "cs": "Jen obyčejné, tepelně upravené, libové maso jako občasný pamlsek: bez kůže, tuku, kostí a koření.",
-    "hr": "Samo obično, termički obrađeno, nemasno meso kao povremena poslastica: bez kože, masnoće, kostiju i začina."
+    "hr": "Samo obično, termički obrađeno, nemasno meso kao povremena poslastica: bez kože, masnoće, kostiju i začina.",
+    "sv": "Bara naturellt, tillagat, magert kött som godbit någon gång ibland: utan skinn, fett, ben och kryddor."
   },
   "child": {
     "en": "Fatty bits can give a cat a sore tummy. If a grown-up says yes, kitty can have a tiny bit of plain lean meat.",
@@ -161,7 +173,8 @@
     "nl": "Van vette stukjes kan een kat buikpijn krijgen. Als een volwassene het goed vindt, mag je poes een klein stukje gewoon mager vlees.",
     "pl": "Od tłustych kawałków kota może boleć brzuszek. Jeśli dorosły się zgodzi, kotek może dostać odrobinę zwykłego chudego mięsa.",
     "cs": "Z tučných kousků může kočku bolet bříško. Když dospělý řekne, že ano, může kočička dostat kousíček obyčejného libového masa.",
-    "hr": "Od masnih komadića macu može zaboljeti trbuščić. Ako odrasla osoba kaže da smije, maca može dobiti sićušan komadić običnog nemasnog mesa."
+    "hr": "Od masnih komadića macu može zaboljeti trbuščić. Ako odrasla osoba kaže da smije, maca može dobiti sićušan komadić običnog nemasnog mesa.",
+    "sv": "Feta bitar kan ge en katt ont i magen. Om en vuxen säger ja, kan katten få en pytteliten bit magert kött utan kryddor."
   },
   "faq": [
     {
@@ -176,7 +189,8 @@
         "nl": "Is vel van kip of kalkoen oké?",
         "pl": "Czy skóra kurczaka lub indyka jest w porządku?",
         "cs": "Je kuřecí nebo krůtí kůže v pořádku?",
-        "hr": "Je li pileća ili pureća koža u redu?"
+        "hr": "Je li pileća ili pureća koža u redu?",
+        "sv": "Går kyckling- eller kalkonskinn bra?"
       },
       "a": {
         "en": "No. Cats Protection says turkey skin is high in fat and can cause digestive upset or even pancreatitis in sensitive cats. Give skinless meat instead.",
@@ -189,7 +203,8 @@
         "nl": "Nee. Volgens Cats Protection bevat kalkoenvel veel vet en kan het bij gevoelige katten spijsverteringsproblemen of zelfs alvleesklierontsteking veroorzaken. Geef liever vlees zonder vel.",
         "pl": "Nie. Według Cats Protection skóra indyka zawiera dużo tłuszczu i może wywołać problemy trawienne, a u wrażliwych kotów nawet zapalenie trzustki. Zamiast tego daj mięso bez skóry.",
         "cs": "Ne. Podle Cats Protection má krůtí kůže vysoký obsah tuku a u citlivých koček může způsobit trávicí potíže, nebo dokonce zánět slinivky břišní. Dávejte raději maso bez kůže.",
-        "hr": "Ne. Cats Protection navodi da pureća koža ima mnogo masti i kod osjetljivih mačaka može izazvati probavne smetnje ili čak upalu gušterače. Umjesto toga daj meso bez kože."
+        "hr": "Ne. Cats Protection navodi da pureća koža ima mnogo masti i kod osjetljivih mačaka može izazvati probavne smetnje ili čak upalu gušterače. Umjesto toga daj meso bez kože.",
+        "sv": "Nej. Enligt Cats Protection är kalkonskinn mycket fett och kan ge magbesvär eller till och med bukspottkörtelinflammation (pankreatit) hos känsliga katter. Ge kött utan skinn i stället."
       }
     }
   ],
@@ -282,6 +297,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "713c29cd1fc1cb5b1a7bf54a11f0b37f38df8e87fa7acd557b873a0df30b3cda"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d7813fb0d2d1f36b33692e4894af4e822dbaecaaf85decf3670b7b626eae080e"
     }
   }
 }

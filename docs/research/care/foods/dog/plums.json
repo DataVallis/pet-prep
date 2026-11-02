@@ -12,7 +12,8 @@
     "nl": "Pruimen",
     "pl": "Śliwki",
     "cs": "Švestky",
-    "hr": "Šljive"
+    "hr": "Šljive",
+    "sv": "Plommon"
   },
   "question": {
     "en": "Can dogs eat plums?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden pruimen eten?",
     "pl": "Czy psy mogą jeść śliwki?",
     "cs": "Mohou psi jíst švestky?",
-    "hr": "Smiju li psi jesti šljive?"
+    "hr": "Smiju li psi jesti šljive?",
+    "sv": "Får hundar äta plommon?"
   },
   "url_slug": {
     "en": "plums",
@@ -38,7 +40,8 @@
     "nl": "pruimen",
     "pl": "sliwki",
     "cs": "svestky",
-    "hr": "sljive"
+    "hr": "sljive",
+    "sv": "plommon"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Niet aan te raden. Een beetje pruimenvruchtvlees zonder pit is niet het grootste probleem, maar pruimenpitten zijn giftig voor honden en kunnen verstikking of een darmverstopping veroorzaken. De stelen, bladeren en pitten van de pruimenplant bevatten cyanide.",
     "pl": "Nie zaleca się. Odrobina miąższu śliwki bez pestki nie jest głównym problemem, ale pestki śliwek są toksyczne dla psów i mogą spowodować zadławienie lub niedrożność jelit. Szypułki, liście i nasiona śliwy zawierają cyjanek.",
     "cs": "Nedoporučuje se. Trocha švestkové dužiny bez pecky není hlavní problém, švestkové pecky jsou ale pro psy jedovaté a mohou způsobit dušení nebo ucpání střev. Stopky, listy a semena švestky obsahují kyanid.",
-    "hr": "Ne preporučuje se. Malo mesa šljive bez koštice nije glavna briga, ali koštice šljive otrovne su za pse, a mogu izazvati gušenje ili začepljenje crijeva. Peteljke, listovi i sjemenke šljive sadrže cijanid."
+    "hr": "Ne preporučuje se. Malo mesa šljive bez koštice nije glavna briga, ali koštice šljive otrovne su za pse, a mogu izazvati gušenje ili začepljenje crijeva. Peteljke, listovi i sjemenke šljive sadrže cijanid.",
+    "sv": "Nej, det rekommenderas inte. Lite plommonkött utan kärna är inte det stora problemet, men plommonkärnor är giftiga för hundar och kan orsaka kvävning eller tarmstopp. Plommonträdets stjälkar, blad och frön innehåller cyanid."
   },
   "why": {
     "en": "The plum plant is listed as toxic to dogs because its stems, leaves and seeds contain cyanogenic glycosides. A pit can also be swallowed and get stuck. Some vets allow plum flesh as an occasional treat with the pit removed; because the plant itself is listed as toxic, we use the stricter rating. Prunes are even higher in sugar.",
@@ -65,7 +69,8 @@
     "nl": "De pruimenplant staat te boek als giftig voor honden, omdat de stelen, bladeren en pitten cyanogene glycosiden bevatten. Een pit kan ook worden ingeslikt en vast komen te zitten. Sommige dierenartsen staan pruimenvruchtvlees zonder pit toe als af en toe een snoepje; omdat de plant zelf als giftig staat vermeld, kiezen wij de strengere beoordeling. Gedroogde pruimen bevatten nog meer suiker.",
     "pl": "Śliwa figuruje na listach roślin toksycznych dla psów, bo jej szypułki, liście i nasiona zawierają glikozydy cyjanogenne. Pies może też połknąć pestkę, a ta może utknąć. Niektórzy weterynarze dopuszczają miąższ śliwki bez pestki jako okazjonalny smakołyk; ponieważ sama roślina figuruje jako toksyczna, przyjmujemy surowszą ocenę. Suszone śliwki zawierają jeszcze więcej cukru.",
     "cs": "Švestka je vedena jako rostlina jedovatá pro psy, protože její stopky, listy a semena obsahují kyanogenní glykosidy. Pes může pecku také spolknout a ta mu může někde uvíznout. Někteří veterináři povolují švestkovou dužinu bez pecky jako občasný pamlsek; protože je ale samotná rostlina vedena jako jedovatá, používáme přísnější hodnocení. Sušené švestky mají ještě více cukru.",
-    "hr": "Šljiva se navodi kao otrovna za pse jer njezine peteljke, listovi i sjemenke sadrže cijanogene glikozide. Pas može progutati i košticu koja mu zapne. Neki veterinari dopuštaju meso šljive kao povremenu poslasticu, bez koštice; budući da se sama biljka navodi kao otrovna, koristimo strožu ocjenu. Suhe šljive imaju još više šećera."
+    "hr": "Šljiva se navodi kao otrovna za pse jer njezine peteljke, listovi i sjemenke sadrže cijanogene glikozide. Pas može progutati i košticu koja mu zapne. Neki veterinari dopuštaju meso šljive kao povremenu poslasticu, bez koštice; budući da se sama biljka navodi kao otrovna, koristimo strožu ocjenu. Suhe šljive imaju još više šećera.",
+    "sv": "Plommonträdet anges som giftigt för hundar eftersom dess stjälkar, blad och frön innehåller cyanogena glykosider. En kärna kan också sväljas och fastna. Vissa veterinärer tillåter plommonkött utan kärna som en godbit ibland; eftersom själva växten anges som giftig använder vi den strängare klassningen. Katrinplommon innehåller ännu mer socker."
   },
   "signs": {
     "en": [
@@ -122,6 +127,11 @@
       "Gušenje ili nagon na povraćanje",
       "Znakovi začepljenja: ponavljano povraćanje, odbijanje hrane, umor",
       "Proširene zjenice, ciglastocrvene desni, otežano disanje (cijanid)"
+    ],
+    "sv": [
+      "Kvävning eller kväljningar",
+      "Tecken på tarmstopp: upprepade kräkningar, ingen matlust, trötthet",
+      "Vidgade pupiller, tegelrött tandkött, andningssvårigheter (cyanid)"
     ]
   },
   "what_to_do": {
@@ -135,7 +145,8 @@
     "nl": "Heeft je hond een pruimenpit gegeten? Neem dan meteen contact op met je dierenarts. Schrijf op wanneer het gebeurde en hoeveel pitten er zijn gegeten.",
     "pl": "Jeśli twój pies zjadł pestkę śliwki, od razu skontaktuj się z weterynarzem. Zanotuj, kiedy to się stało i ile pestek zjadł.",
     "cs": "Pokud váš pes snědl švestkovou pecku, okamžitě se obraťte na veterináře. Poznamenejte si, kdy se to stalo a kolik pecek snědl.",
-    "hr": "Ako je tvoj pas pojeo košticu šljive, odmah se obrati veterinaru. Zapiši kada se to dogodilo i koliko je koštica pojeo."
+    "hr": "Ako je tvoj pas pojeo košticu šljive, odmah se obrati veterinaru. Zapiši kada se to dogodilo i koliko je koštica pojeo.",
+    "sv": "Om hunden ätit en plommonkärna, kontakta veterinären direkt. Notera när det hände och hur många kärnor den åt."
   },
   "serving": {
     "en": "If you share any, give only a little fresh flesh with the pit and stem removed. Skip prunes. Check with your vet first.",
@@ -148,7 +159,8 @@
     "nl": "Deel je toch iets, geef dan alleen een beetje vers vruchtvlees zonder pit en steel. Sla gedroogde pruimen over. Overleg eerst met je dierenarts.",
     "pl": "Jeśli już się dzielisz, daj tylko odrobinę świeżego miąższu bez pestki i szypułki. Pomiń suszone śliwki. Najpierw skonsultuj się z weterynarzem.",
     "cs": "Pokud se o švestku rozdělíte, dejte jen trochu čerstvé dužiny bez pecky a stopky. Sušené švestky vynechte. Nejdřív se poraďte s veterinářem.",
-    "hr": "Ako uopće daješ šljivu, daj samo malo svježeg mesa ploda bez koštice i peteljke. Preskoči suhe šljive. Prije toga se posavjetuj s veterinarom."
+    "hr": "Ako uopće daješ šljivu, daj samo malo svježeg mesa ploda bez koštice i peteljke. Preskoči suhe šljive. Prije toga se posavjetuj s veterinarom.",
+    "sv": "Om du delar med dig: bara lite färskt fruktkött utan kärna och stjälk. Hoppa över katrinplommon. Fråga veterinären först."
   },
   "child": {
     "en": "Plum stones are bad for dogs. Never give your dog a plum stone, and ask a grown-up before sharing any plum.",
@@ -161,7 +173,8 @@
     "nl": "Pruimenpitten zijn slecht voor honden. Geef je hond nooit een pruimenpit, en vraag het eerst aan een volwassene voordat je een stukje pruim deelt.",
     "pl": "Pestki śliwek szkodzą psom. Nigdy nie dawaj psu pestki i zanim podzielisz się śliwką, zapytaj dorosłego.",
     "cs": "Švestkové pecky psům škodí. Nikdy psovi pecku nedávej, a než se s ním o švestku rozdělíš, zeptej se dospělého.",
-    "hr": "Koštice šljive loše su za pse. Nikad ne daj psu košticu šljive i pitaj odraslu osobu prije nego što s njim podijeliš komadić šljive."
+    "hr": "Koštice šljive loše su za pse. Nikad ne daj psu košticu šljive i pitaj odraslu osobu prije nego što s njim podijeliš komadić šljive.",
+    "sv": "Plommonkärnor är dåliga för hundar. Ge aldrig din hund en plommonkärna, och fråga en vuxen innan du delar med dig av ett plommon."
   },
   "faq": [
     {
@@ -176,7 +189,8 @@
         "nl": "Zijn gedroogde pruimen oké voor honden?",
         "pl": "Czy suszone śliwki są w porządku dla psów?",
         "cs": "Mohou psi jíst sušené švestky?",
-        "hr": "Jesu li suhe šljive u redu za pse?"
+        "hr": "Jesu li suhe šljive u redu za pse?",
+        "sv": "Går det bra att ge hundar katrinplommon?"
       },
       "a": {
         "en": "Prunes are even higher in sugar than fresh plums, so they are not a great option for dogs.",
@@ -189,7 +203,8 @@
         "nl": "Gedroogde pruimen bevatten nog meer suiker dan verse pruimen, dus ze zijn geen goede keuze voor honden.",
         "pl": "Suszone śliwki zawierają jeszcze więcej cukru niż świeże, więc nie są dobrym wyborem dla psów.",
         "cs": "Sušené švestky mají ještě více cukru než čerstvé, takže pro psy nejsou dobrou volbou.",
-        "hr": "Suhe šljive imaju još više šećera od svježih, pa nisu dobar izbor za pse."
+        "hr": "Suhe šljive imaju još više šećera od svježih, pa nisu dobar izbor za pse.",
+        "sv": "Katrinplommon innehåller ännu mer socker än färska plommon, så de är inget bra val för hundar."
       }
     }
   ],
@@ -309,6 +324,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1703a40773d745321239702f158eaaf3bae91a8138f1799fddf8afbdda7a6872"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3e4d536f9453c88701f20baa36d59b37d9caeaf0308b158ea50e982e3ed08fde"
     }
   }
 }

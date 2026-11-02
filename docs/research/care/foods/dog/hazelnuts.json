@@ -12,7 +12,8 @@
     "nl": "Hazelnoten",
     "pl": "Orzechy laskowe",
     "cs": "Lískové ořechy",
-    "hr": "Lješnjaci"
+    "hr": "Lješnjaci",
+    "sv": "Hasselnötter"
   },
   "question": {
     "en": "Can dogs eat hazelnuts?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden hazelnoten eten?",
     "pl": "Czy psy mogą jeść orzechy laskowe?",
     "cs": "Mohou psi jíst lískové ořechy?",
-    "hr": "Smiju li psi jesti lješnjake?"
+    "hr": "Smiju li psi jesti lješnjake?",
+    "sv": "Får hundar äta hasselnötter?"
   },
   "url_slug": {
     "en": "hazelnuts",
@@ -38,7 +40,8 @@
     "nl": "hazelnoten",
     "pl": "orzechy-laskowe",
     "cs": "liskove-orechy",
-    "hr": "ljesnjaci"
+    "hr": "ljesnjaci",
+    "sv": "hasselnotter"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee, liever niet. Hazelnoten zijn niet giftig, maar de heel harde doppen kunnen verstikking en verstoppingen veroorzaken. En net als andere noten bevatten ze veel vet, wat de maag van een hond van streek kan maken en tot alvleesklierontsteking kan leiden.",
     "pl": "Lepiej nie. Orzechy laskowe nie są toksyczne, ale ich bardzo twarde łupiny mogą spowodować zadławienie i niedrożność, a jak inne orzechy zawierają dużo tłuszczu, który może podrażnić żołądek psa i prowadzić do zapalenia trzustki.",
     "cs": "Raději ne. Lískové ořechy nejsou jedovaté, ale jejich velmi tvrdé skořápky mohou způsobit dušení a ucpání a stejně jako jiné ořechy mají hodně tuku, který může psovi podráždit žaludek a vést k zánětu slinivky břišní.",
-    "hr": "Bolje ne. Lješnjaci nisu otrovni, ali njihove vrlo tvrde ljuske mogu izazvati gušenje i začepljenje, a kao i drugi orašasti plodovi sadrže mnogo masti, koja psu može uznemiriti želudac i dovesti do upale gušterače."
+    "hr": "Bolje ne. Lješnjaci nisu otrovni, ali njihove vrlo tvrde ljuske mogu izazvati gušenje i začepljenje, a kao i drugi orašasti plodovi sadrže mnogo masti, koja psu može uznemiriti želudac i dovesti do upale gušterače.",
+    "sv": "Nej, helst inte. Hasselnötter är inte giftiga, men de mycket hårda skalen kan orsaka kvävning och tarmstopp, och precis som andra nötter innehåller de mycket fett, vilket kan ge hunden magbesvär och kanske leda till bukspottkörtelinflammation (pankreatit)."
   },
   "why": {
     "en": "Hazelnut shells are extremely hard and can cause choking and gut blockages. Nuts in general are high in fat and calories: they can be too rich for a dog, cause pancreatitis and add to weight gain. Nuts left lying on the ground can also grow mould that can be toxic to dogs.",
@@ -65,7 +69,8 @@
     "nl": "Hazelnootdoppen zijn extreem hard en kunnen verstikking en darmverstoppingen veroorzaken. Noten bevatten in het algemeen veel vet en calorieën: ze kunnen te machtig zijn voor een hond, alvleesklierontsteking veroorzaken en bijdragen aan overgewicht. Op de grond liggende noten kunnen ook schimmel krijgen die giftig kan zijn voor honden.",
     "pl": "Łupiny orzechów laskowych są niezwykle twarde i mogą spowodować zadławienie oraz niedrożność przewodu pokarmowego. Orzechy na ogół mają dużo tłuszczu i kalorii: mogą być dla psa zbyt ciężkie, wywołać zapalenie trzustki i sprzyjać przybieraniu na wadze. Na orzechach leżących na ziemi może też wyrosnąć pleśń, która bywa toksyczna dla psów.",
     "cs": "Skořápky lískových ořechů jsou extrémně tvrdé a mohou způsobit dušení a ucpání střev. Ořechy obecně mají hodně tuku a kalorií: pro psa mohou být příliš těžké, způsobit zánět slinivky břišní a přispět k přibírání na váze. Na ořeších ležících na zemi se navíc může vytvořit plíseň, která může být pro psy jedovatá.",
-    "hr": "Ljuske lješnjaka iznimno su tvrde i mogu izazvati gušenje i začepljenje crijeva. Orašasti plodovi općenito sadrže mnogo masti i kalorija: mogu biti preteški za psa, izazvati upalu gušterače i pridonijeti debljanju. Na orašastim plodovima koji leže na tlu može se razviti i plijesan koja može biti otrovna za pse."
+    "hr": "Ljuske lješnjaka iznimno su tvrde i mogu izazvati gušenje i začepljenje crijeva. Orašasti plodovi općenito sadrže mnogo masti i kalorija: mogu biti preteški za psa, izazvati upalu gušterače i pridonijeti debljanju. Na orašastim plodovima koji leže na tlu može se razviti i plijesan koja može biti otrovna za pse.",
+    "sv": "Hasselnötternas skal är extremt hårda och kan orsaka kvävning och tarmstopp. Nötter i allmänhet innehåller mycket fett och kalorier: de kan vara för mäktiga för en hund, orsaka bukspottkörtelinflammation och bidra till viktökning. Nötter som ligger på marken kan också börja mögla, och mögel kan vara giftigt för hundar."
   },
   "signs": {
     "en": [
@@ -122,6 +127,11 @@
       "Gušenje ili nagon na povraćanje",
       "Povraćanje ili proljev",
       "Probavne smetnje ili znakovi začepljenja"
+    ],
+    "sv": [
+      "Kvävning eller kväljningar",
+      "Kräkningar eller diarré",
+      "Magbesvär eller tecken på tarmstopp"
     ]
   },
   "what_to_do": {
@@ -135,7 +145,8 @@
     "nl": "Let na een of twee noten op braken, diarree of buikpijn. Bel je dierenarts als je hond doppen heeft ingeslikt, veel noten of beschimmelde noten heeft gegeten, lijkt te stikken of een van deze verschijnselen heeft.",
     "pl": "Po jednym czy dwóch orzechach obserwuj, czy nie pojawiają się wymioty, biegunka lub ból brzucha. Zadzwoń do weterynarza, jeśli twój pies połknął łupiny, zjadł dużo orzechów lub orzechy spleśniałe, wygląda, jakby się dławił, albo ma któryś z tych objawów.",
     "cs": "Po jednom nebo dvou ořeších sledujte, zda se neobjeví zvracení, průjem nebo bolest břicha. Zavolejte veterináři, pokud váš pes spolkl skořápky, snědl hodně ořechů nebo ořechy plesnivé, zdá se, že se dusí, nebo má některý z těchto příznaků.",
-    "hr": "Nakon jednog ili dva lješnjaka prati pojavljuju li se povraćanje, proljev ili bolovi u trbuhu. Nazovi veterinara ako je pas progutao ljuske, pojeo mnogo lješnjaka ili pljesnive lješnjake, ako se čini da se guši ili ako pokazuje neki od ovih znakova."
+    "hr": "Nakon jednog ili dva lješnjaka prati pojavljuju li se povraćanje, proljev ili bolovi u trbuhu. Nazovi veterinara ako je pas progutao ljuske, pojeo mnogo lješnjaka ili pljesnive lješnjake, ako se čini da se guši ili ako pokazuje neki od ovih znakova.",
+    "sv": "Har hunden ätit en eller två nötter, håll utkik efter kräkningar, diarré eller ont i magen. Ring veterinären om hunden svalt skal, ätit många nötter eller möglade nötter, verkar ha satt något i halsen eller visar något av dessa symtom."
   },
   "serving": null,
   "child": {
@@ -149,7 +160,8 @@
     "nl": "Hazelnoten zijn een snack voor mensen. De harde doppen kunnen bij een hond vast komen te zitten, dus houd ze uit de buurt van je huisdier.",
     "pl": "Orzechy laskowe to przekąska dla ludzi. Ich twarde łupinki mogą utknąć psu w środku, więc trzymaj je z dala od swojego pupila.",
     "cs": "Lískové ořechy jsou svačinka pro lidi. Jejich tvrdé skořápky můžou psovi uvíznout, a tak je před ním schovej.",
-    "hr": "Lješnjaci su grickalica za ljude. Njihove tvrde ljuske mogu psu zapeti, zato ih drži podalje od svog ljubimca."
+    "hr": "Lješnjaci su grickalica za ljude. Njihove tvrde ljuske mogu psu zapeti, zato ih drži podalje od svog ljubimca.",
+    "sv": "Hasselnötter är ett mellanmål för människor. De hårda skalen kan fastna inuti en hund, så håll dem borta från ditt djur."
   },
   "faq": [
     {
@@ -164,7 +176,8 @@
         "nl": "Zijn hazelnoten giftig voor honden?",
         "pl": "Czy orzechy laskowe są toksyczne dla psów?",
         "cs": "Jsou lískové ořechy pro psy jedovaté?",
-        "hr": "Jesu li lješnjaci otrovni za pse?"
+        "hr": "Jesu li lješnjaci otrovni za pse?",
+        "sv": "Är hasselnötter giftiga för hundar?"
       },
       "a": {
         "en": "No, they aren't toxic; the main risks are the hard shells and the high fat content.",
@@ -177,7 +190,8 @@
         "nl": "Nee, ze zijn niet giftig; de grootste risico’s zijn de harde doppen en het hoge vetgehalte.",
         "pl": "Nie, nie są toksyczne; główne zagrożenia to twarde łupiny i duża zawartość tłuszczu.",
         "cs": "Ne, jedovaté nejsou; hlavním rizikem jsou tvrdé skořápky a vysoký obsah tuku.",
-        "hr": "Ne, nisu otrovni; glavni su rizici tvrde ljuske i velika količina masti."
+        "hr": "Ne, nisu otrovni; glavni su rizici tvrde ljuske i velika količina masti.",
+        "sv": "Nej, de är inte giftiga; de största riskerna är de hårda skalen och den höga fetthalten."
       }
     }
   ],
@@ -277,6 +291,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c970d9c0148197ef48dd1e4d234c549db786c9d084b8252e513e4ff1836c4c2d"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "491ac279c837385713b0c47f95d102ee6b73a578edf6978fc8df2d2df7efa413"
     }
   }
 }

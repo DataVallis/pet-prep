@@ -12,7 +12,8 @@
     "nl": "Melk",
     "pl": "Mleko",
     "cs": "Mléko",
-    "hr": "Mlijeko"
+    "hr": "Mlijeko",
+    "sv": "Mjölk"
   },
   "question": {
     "en": "Can dogs drink milk?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden melk drinken?",
     "pl": "Czy psy mogą pić mleko?",
     "cs": "Mohou psi pít mléko?",
-    "hr": "Smiju li psi piti mlijeko?"
+    "hr": "Smiju li psi piti mlijeko?",
+    "sv": "Får hundar dricka mjölk?"
   },
   "url_slug": {
     "en": "milk",
@@ -38,7 +40,8 @@
     "nl": "melk",
     "pl": "mleko",
     "cs": "mleko",
-    "hr": "mlijeko"
+    "hr": "mlijeko",
+    "sv": "mjolk"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Ja, maar alleen een beetje. Melk is in kleine hoeveelheden een veilige traktatie, maar veel honden zijn lactose-intolerant en krijgen er diarree, winderigheid of braken van. Melk bevat ook veel vet en natuurlijke suikers.",
     "pl": "Tak, ale tylko trochę. Mleko w małych ilościach to bezpieczny smakołyk, ale wiele psów nie toleruje laktozy i dostaje po nim biegunki, wzdęć lub wymiotów. Mleko zawiera też dużo tłuszczu i naturalnych cukrów.",
     "cs": "Ano, ale jen trochu. V malém množství je mléko bezpečný pamlsek, mnoho psů ale špatně snáší laktózu a po mléce mívá průjem, plynatost nebo zvrací. Mléko má navíc hodně tuku a přirozených cukrů.",
-    "hr": "Da, ali samo malo. Mlijeko je u malim količinama sigurna poslastica, ali mnogi psi ne podnose laktozu pa od njega dobiju proljev ili vjetrove ili povraćaju. Mlijeko ima i puno masti i prirodnih šećera."
+    "hr": "Da, ali samo malo. Mlijeko je u malim količinama sigurna poslastica, ali mnogi psi ne podnose laktozu pa od njega dobiju proljev ili vjetrove ili povraćaju. Mlijeko ima i puno masti i prirodnih šećera.",
+    "sv": "Ja, men bara lite. Mjölk är en ofarlig godbit i små mängder, men många hundar är laktosintoleranta och får diarré, gaser eller kräkningar av den. Mjölk innehåller också mycket fett och naturligt socker."
   },
   "why": {
     "en": "Dogs have little lactase, the enzyme that digests the sugar in milk, so milk and dairy often cause diarrhoea or other digestive upset. Individual dogs differ in how well they tolerate dairy.",
@@ -65,7 +69,8 @@
     "nl": "Honden hebben weinig lactase, het enzym dat de suiker in melk verteert, dus melk en zuivel veroorzaken vaak diarree of andere spijsverteringsklachten. Honden verschillen onderling in hoe goed ze zuivel verdragen.",
     "pl": "Psy mają mało laktazy, enzymu trawiącego cukier mleczny, więc mleko i nabiał często wywołują biegunkę lub inne problemy trawienne. Psy różnią się tym, jak dobrze tolerują nabiał.",
     "cs": "Psi mají málo laktázy, enzymu, který tráví cukr v mléce, proto mléko a mléčné výrobky často způsobují průjem nebo jiné zažívací potíže. Jednotliví psi se liší v tom, jak dobře mléčné výrobky snášejí.",
-    "hr": "Psi imaju malo laktaze, enzima koji probavlja šećer iz mlijeka, pa mlijeko i mliječni proizvodi često izazivaju proljev ili druge probavne tegobe. Psi se međusobno razlikuju po tome koliko dobro podnose mliječne proizvode."
+    "hr": "Psi imaju malo laktaze, enzima koji probavlja šećer iz mlijeka, pa mlijeko i mliječni proizvodi često izazivaju proljev ili druge probavne tegobe. Psi se međusobno razlikuju po tome koliko dobro podnose mliječne proizvode.",
+    "sv": "Hundar har lite laktas, enzymet som bryter ner sockret i mjölk, så mjölk och mejeriprodukter orsakar ofta diarré eller andra matsmältningsbesvär. Hur bra hundar tål mejeriprodukter varierar från hund till hund."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "nl": "Krijgt je hond na melk dunne ontlasting, winderigheid, braken of buikpijn? Geef dan geen melk meer. Neem contact op met je dierenarts als je je zorgen maakt.",
     "pl": "Jeśli po mleku twój pies ma luźne stolce, wzdęcia, wymioty lub ból brzucha, przestań mu je dawać. Skontaktuj się z weterynarzem, jeśli się niepokoisz.",
     "cs": "Pokud má váš pes po mléce řídkou stolici, plynatost, zvrací nebo ho bolí břicho, přestaňte mu mléko dávat. Máte-li obavy, obraťte se na veterináře.",
-    "hr": "Ako tvoj pas nakon mlijeka ima mekanu stolicu, vjetrove, povraća ili ga boli trbuh, prestani mu ga davati. Obrati se veterinaru ako te nešto brine."
+    "hr": "Ako tvoj pas nakon mlijeka ima mekanu stolicu, vjetrove, povraća ili ga boli trbuh, prestani mu ga davati. Obrati se veterinaru ako te nešto brine.",
+    "sv": "Sluta ge mjölk om hunden får lös avföring, gaser, kräkningar eller ont i magen av den. Kontakta veterinären om du är orolig."
   },
   "serving": {
     "en": "Only a small amount of plain milk now and then, and none if your dog's tummy reacts.",
@@ -92,7 +98,8 @@
     "nl": "Alleen af en toe een klein beetje gewone melk, en helemaal niet als het buikje van je hond erop reageert.",
     "pl": "Tylko odrobina zwykłego mleka od czasu do czasu, a jeśli brzuch twojego psa źle na nie reaguje – wcale.",
     "cs": "Jen malé množství obyčejného mléka jednou za čas, a vůbec žádné, pokud na něj žaludek vašeho psa reaguje.",
-    "hr": "Samo malo običnog mlijeka s vremena na vrijeme, a nimalo ako trbuh tvog psa reagira."
+    "hr": "Samo malo običnog mlijeka s vremena na vrijeme, a nimalo ako trbuh tvog psa reagira.",
+    "sv": "Bara en liten skvätt vanlig mjölk då och då, och ingen alls om hundens mage reagerar."
   },
   "child": {
     "en": "Some dogs get a tummy ache from milk, so only a little, and only if a grown-up says yes.",
@@ -105,7 +112,8 @@
     "nl": "Sommige honden krijgen buikpijn van melk. Dus maar een klein beetje, en alleen als een volwassene het goed vindt.",
     "pl": "Po mleku niektóre psy boli brzuszek, więc daj tylko trochę i tylko wtedy, gdy dorosły się zgodzi.",
     "cs": "Některé pejsky z mléka bolí bříško, takže jen trošku, a jen když to dospělý dovolí.",
-    "hr": "Neke pse od mlijeka zaboli trbuh, zato samo malo, i to samo ako odrasla osoba kaže da smije."
+    "hr": "Neke pse od mlijeka zaboli trbuh, zato samo malo, i to samo ako odrasla osoba kaže da smije.",
+    "sv": "Vissa hundar får ont i magen av mjölk, så bara lite, och bara om en vuxen säger ja."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "nl": "Waarom krijgen sommige honden diarree van melk?",
         "pl": "Dlaczego niektóre psy dostają biegunki po mleku?",
         "cs": "Proč někteří psi dostanou z mléka průjem?",
-        "hr": "Zašto neki psi od mlijeka dobiju proljev?"
+        "hr": "Zašto neki psi od mlijeka dobiju proljev?",
+        "sv": "Varför får vissa hundar diarré av mjölk?"
       },
       "a": {
         "en": "Many dogs are lactose intolerant: they don't have much lactase, the enzyme that digests milk sugar.",
@@ -133,7 +142,8 @@
         "nl": "Veel honden zijn lactose-intolerant: ze hebben weinig lactase, het enzym dat melksuiker verteert.",
         "pl": "Wiele psów nie toleruje laktozy: mają mało laktazy, enzymu trawiącego cukier mleczny.",
         "cs": "Mnoho psů špatně snáší laktózu: nemá dost laktázy, enzymu, který tráví mléčný cukr.",
-        "hr": "Mnogi psi ne podnose laktozu: nemaju puno laktaze, enzima koji probavlja mliječni šećer."
+        "hr": "Mnogi psi ne podnose laktozu: nemaju puno laktaze, enzima koji probavlja mliječni šećer.",
+        "sv": "Många hundar är laktosintoleranta: de har inte mycket laktas, enzymet som bryter ner mjölksocker."
       }
     }
   ],
@@ -245,6 +255,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f1cbfe5cdb3705ebc9a7ad7451a9c3d14511f85052593fdad75785b28c4fd401"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8dc61d4cfc38efebb32fd46d938e0c74333a3f95ff03dcd5793617ea7deaac2f"
     }
   }
 }

@@ -12,7 +12,8 @@
     "nl": "Kaas",
     "pl": "Ser",
     "cs": "Sýr",
-    "hr": "Sir"
+    "hr": "Sir",
+    "sv": "Ost"
   },
   "question": {
     "en": "Can cats eat cheese?",
@@ -25,7 +26,8 @@
     "nl": "Mogen katten kaas eten?",
     "pl": "Czy koty mogą jeść ser?",
     "cs": "Mohou kočky jíst sýr?",
-    "hr": "Smiju li mačke jesti sir?"
+    "hr": "Smiju li mačke jesti sir?",
+    "sv": "Får katter äta ost?"
   },
   "url_slug": {
     "en": "cheese",
@@ -38,7 +40,8 @@
     "nl": "kaas",
     "pl": "ser",
     "cs": "syr",
-    "hr": "sir"
+    "hr": "sir",
+    "sv": "ost"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee, kaas kun je beter vermijden. Het is niet giftig, maar veel katten zijn lactose-intolerant, dus het kan hun maag van streek maken. Kaas bevat ook veel vet en zout en geeft katten niet de voedingsstoffen die ze nodig hebben.",
     "pl": "Nie, lepiej unikać sera. Nie jest toksyczny, ale wiele kotów nie toleruje laktozy, więc ser może wywołać rozstrój żołądka. Zawiera też dużo tłuszczu i soli i nie dostarcza kotom potrzebnych składników odżywczych.",
     "cs": "Ne, sýru je lepší se vyhnout. Není toxický, ale mnoho koček nesnáší laktózu, takže jim může podráždit žaludek. Navíc má vysoký obsah tuku a soli a nedává kočkám živiny, které potřebují.",
-    "hr": "Ne, sir je najbolje izbjegavati. Nije otrovan, ali mnoge mačke ne podnose laktozu, pa im može izazvati želučane tegobe. Uz to ima mnogo masti i soli i ne daje mačkama hranjive tvari koje im trebaju."
+    "hr": "Ne, sir je najbolje izbjegavati. Nije otrovan, ali mnoge mačke ne podnose laktozu, pa im može izazvati želučane tegobe. Uz to ima mnogo masti i soli i ne daje mačkama hranjive tvari koje im trebaju.",
+    "sv": "Nej, ost är bäst att undvika. Den är inte giftig, men många katter är laktosintoleranta, så osten kan ge dem orolig mage. Den innehåller också mycket fett och salt och ger inte katter de näringsämnen de behöver."
   },
   "why": {
     "en": "Most adult cats can't properly digest lactose, the sugar in milk and in dairy products such as cheese. This can cause vomiting or diarrhoea and make a cat sluggish. Cheese is also high in fat and salt, and eaten regularly it can lead to weight gain. Lactose-free and plant-based cheeses are not a safe swap, because some dairy alternatives contain ingredients that could be toxic to cats.",
@@ -65,7 +69,8 @@
     "nl": "De meeste volwassen katten kunnen lactose, de suiker in melk en in zuivelproducten zoals kaas, niet goed verteren. Dat kan braken of diarree veroorzaken en een kat sloom maken. Kaas bevat ook veel vet en zout, en als een kat het regelmatig eet, kan ze aankomen. Lactosevrije en plantaardige kaas zijn geen veilig alternatief, want sommige zuivelvervangers bevatten ingrediënten die giftig kunnen zijn voor katten.",
     "pl": "Większość dorosłych kotów nie trawi dobrze laktozy, czyli cukru zawartego w mleku i produktach mlecznych, takich jak ser. Może to wywołać wymioty lub biegunkę i sprawić, że kot będzie ospały. Ser zawiera też dużo tłuszczu i soli, a jedzony regularnie może prowadzić do tycia. Sery bez laktozy i roślinne nie są bezpiecznym zamiennikiem, bo niektóre zamienniki nabiału zawierają składniki, które mogą być dla kotów toksyczne.",
     "cs": "Většina dospělých koček nedokáže správně strávit laktózu, cukr obsažený v mléce a v mléčných výrobcích, jako je sýr. To může způsobit zvracení nebo průjem a kočka může být malátná. Sýr má také vysoký obsah tuku a soli, a pokud ho kočka jí pravidelně, může vést k přibírání na váze. Sýry bez laktózy a rostlinné sýry nejsou bezpečnou náhradou, protože některé alternativy mléčných výrobků obsahují složky, které by mohly být pro kočky toxické.",
-    "hr": "Većina odraslih mačaka ne može pravilno probaviti laktozu, šećer iz mlijeka i mliječnih proizvoda poput sira. To može izazvati povraćanje ili proljev i učiniti mačku tromom. Sir ima i mnogo masti i soli, a ako ga mačka jede redovito, može se udebljati. Sirevi bez laktoze i biljni sirevi nisu sigurna zamjena jer neke zamjene za mliječne proizvode sadrže sastojke koji bi mogli biti otrovni za mačke."
+    "hr": "Većina odraslih mačaka ne može pravilno probaviti laktozu, šećer iz mlijeka i mliječnih proizvoda poput sira. To može izazvati povraćanje ili proljev i učiniti mačku tromom. Sir ima i mnogo masti i soli, a ako ga mačka jede redovito, može se udebljati. Sirevi bez laktoze i biljni sirevi nisu sigurna zamjena jer neke zamjene za mliječne proizvode sadrže sastojke koji bi mogli biti otrovni za mačke.",
+    "sv": "De flesta vuxna katter kan inte bryta ner laktos ordentligt, alltså sockret i mjölk och i mejeriprodukter som ost. Det kan ge kräkningar eller diarré och göra katten trög. Ost innehåller också mycket fett och salt, och om katten äter det regelbundet kan det leda till viktuppgång. Laktosfri och växtbaserad ost är inget säkert alternativ, eftersom vissa mejerialternativ innehåller ingredienser som kan vara giftiga för katter."
   },
   "signs": {
     "en": [
@@ -133,6 +138,12 @@
       "Proljev",
       "Tromost ili manjak energije",
       "Vjetrovi ili nadutost"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Diarré",
+      "Trötthet eller orkeslöshet",
+      "Gaser eller uppblåsthet"
     ]
   },
   "what_to_do": {
@@ -146,7 +157,8 @@
     "nl": "Heeft je kat een beetje kaas gegeten? Dan hoef je niet meteen naar de dierenarts. Houd je kat goed in de gaten. Wordt ze ziek of gedraagt ze zich anders, bel dan je dierenarts en vertel hoeveel kaas je kat heeft gegeten.",
     "pl": "Jeśli twój kot zjadł odrobinę sera, nie musisz pędzić do weterynarza. Obserwuj go. Jeśli źle się poczuje lub zacznie się zachowywać inaczej, zadzwoń do weterynarza i powiedz, ile sera zjadł.",
     "cs": "Pokud kočka snědla trochu sýra, není třeba spěchat k veterináři. Sledujte ji. Pokud se jí udělá špatně nebo se začne chovat jinak, zavolejte veterináři a řekněte mu, kolik sýra kočka snědla.",
-    "hr": "Ako je tvoja mačka pojela malo sira, ne moraš žuriti veterinaru. Pripazi na nju. Ako joj pozli ili se počne ponašati drukčije, nazovi veterinara i reci koliko je sira pojela."
+    "hr": "Ako je tvoja mačka pojela malo sira, ne moraš žuriti veterinaru. Pripazi na nju. Ako joj pozli ili se počne ponašati drukčije, nazovi veterinara i reci koliko je sira pojela.",
+    "sv": "Om katten har ätit lite ost behöver du inte skynda till veterinären. Håll ett öga på katten. Om den börjar må dåligt eller beter sig annorlunda, ring veterinären och berätta hur mycket ost katten åt."
   },
   "serving": null,
   "child": {
@@ -160,7 +172,8 @@
     "nl": "Van kaas kan een kat buikpijn krijgen. Geef je kat liever een kattensnoepje en houd de kaas voor mensen.",
     "pl": "Od sera koty może boleć brzuszek. Daj kotu kocią przekąskę, a ser zostaw dla ludzi.",
     "cs": "Ze sýra může kočku bolet bříško. Dej kočce radši kočičí pamlsek a sýr nech pro lidi.",
-    "hr": "Od sira mace može zaboljeti trbuščić. Svojoj maci radije daj poslasticu za mačke, a sir ostavi ljudima."
+    "hr": "Od sira mace može zaboljeti trbuščić. Svojoj maci radije daj poslasticu za mačke, a sir ostavi ljudima.",
+    "sv": "Ost kan ge katter ont i magen. Ge katten kattgodis i stället och spara osten åt människorna."
   },
   "faq": [
     {
@@ -175,7 +188,8 @@
         "nl": "Zijn kattensnoepjes met kaassmaak oké?",
         "pl": "Czy smakołyki dla kotów o smaku sera są w porządku?",
         "cs": "Jsou kočičí pamlsky se sýrovou příchutí v pořádku?",
-        "hr": "Jesu li poslastice za mačke s okusom sira u redu?"
+        "hr": "Jesu li poslastice za mačke s okusom sira u redu?",
+        "sv": "Går kattgodis med ostsmak bra?"
       },
       "a": {
         "en": "Treats made for cats with a little cheese are fine in small amounts now and then. If your cat gets an upset stomach, choose a different treat next time.",
@@ -188,7 +202,8 @@
         "nl": "Snoepjes die voor katten zijn gemaakt en een beetje kaas bevatten, zijn prima in kleine hoeveelheden af en toe. Krijgt je kat er maagklachten van, kies dan de volgende keer een ander snoepje.",
         "pl": "Smakołyki dla kotów z niewielkim dodatkiem sera można podawać w małych ilościach od czasu do czasu. Jeśli kot dostanie rozstroju żołądka, następnym razem wybierz inny smakołyk.",
         "cs": "Pamlsky vyrobené pro kočky s trochou sýra jsou v malém množství občas v pořádku. Pokud má kočka po nich podrážděný žaludek, vyberte příště jiný pamlsek.",
-        "hr": "Poslastice za mačke s malo sira u redu su u malim količinama, povremeno. Ako tvoja mačka dobije želučane tegobe, sljedeći put odaberi drugu poslasticu."
+        "hr": "Poslastice za mačke s malo sira u redu su u malim količinama, povremeno. Ako tvoja mačka dobije želučane tegobe, sljedeći put odaberi drugu poslasticu.",
+        "sv": "Kattgodis med lite ost i går bra i små mängder då och då. Om katten får orolig mage, välj en annan godbit nästa gång."
       }
     },
     {
@@ -203,7 +218,8 @@
         "nl": "Is lactosevrije of vegan kaas veiliger?",
         "pl": "Czy ser bez laktozy albo wegański jest bezpieczniejszy?",
         "cs": "Je sýr bez laktózy nebo veganský sýr bezpečnější?",
-        "hr": "Je li sir bez laktoze ili veganski sir sigurniji?"
+        "hr": "Je li sir bez laktoze ili veganski sir sigurniji?",
+        "sv": "Är laktosfri eller vegansk ost säkrare?"
       },
       "a": {
         "en": "No. Avoid lactose-free and plant-based cheese too, because many dairy alternatives contain ingredients that could be toxic to cats.",
@@ -216,7 +232,8 @@
         "nl": "Nee. Vermijd ook lactosevrije en plantaardige kaas, want veel zuivelvervangers bevatten ingrediënten die giftig kunnen zijn voor katten.",
         "pl": "Nie. Unikaj także serów bez laktozy i roślinnych, bo wiele zamienników nabiału zawiera składniki, które mogą być dla kotów toksyczne.",
         "cs": "Ne. Vyhněte se i sýrům bez laktózy a rostlinným sýrům, protože mnoho alternativ mléčných výrobků obsahuje složky, které by mohly být pro kočky toxické.",
-        "hr": "Ne. Izbjegavaj i sir bez laktoze i biljni sir jer mnoge zamjene za mliječne proizvode sadrže sastojke koji bi mogli biti otrovni za mačke."
+        "hr": "Ne. Izbjegavaj i sir bez laktoze i biljni sir jer mnoge zamjene za mliječne proizvode sadrže sastojke koji bi mogli biti otrovni za mačke.",
+        "sv": "Nej. Undvik även laktosfri och växtbaserad ost, eftersom många mejerialternativ innehåller ingredienser som kan vara giftiga för katter."
       }
     }
   ],
@@ -356,6 +373,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "bcc9fe15b727a0ed5809019e323a82c63a0d0162fbc5d117d3f3502e7a3516e8"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b60d1598523dc28339f80c57511be38c882e070d7ec6a8db636e9adc73521479"
     }
   }
 }

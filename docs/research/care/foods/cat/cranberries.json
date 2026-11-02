@@ -5,51 +5,59 @@
     "en": "Cranberries",
     "sl": "Brusnice",
     "cs": "Brusinky",
-    "hr": "Brusnice"
+    "hr": "Brusnice",
+    "sv": "Tranbär"
   },
   "question": {
     "en": "Can cats eat cranberries?",
     "sl": "Ali lahko mačke jedo brusnice?",
     "cs": "Mohou kočky jíst brusinky?",
-    "hr": "Smiju li mačke jesti brusnice?"
+    "hr": "Smiju li mačke jesti brusnice?",
+    "sv": "Får katter äta tranbär?"
   },
   "url_slug": {
     "en": "cranberries",
     "sl": "brusnice",
     "cs": "brusinky",
-    "hr": "brusnice"
+    "hr": "brusnice",
+    "sv": "tranbar"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a few cranberries are fine as an occasional treat. Pet Poison Helpline calls cranberries pet safe, raw or processed, but dried cranberries, juice, sauce and jelly often have added sugar or sweeteners, so check the label for xylitol or grape ingredients first.",
     "sl": "Da, nekaj brusnic je v redu kot občasen priboljšek. Pet Poison Helpline brusnice navaja kot varne za živali, surove ali predelane, vendar imajo suhe brusnice, sok, omaka in žele pogosto dodan sladkor ali sladila, zato najprej na deklaraciji preverite, ali vsebujejo ksilitol ali sestavine iz grozdja.",
     "cs": "Ano, pár brusinek je jako občasný pamlsek v pořádku. Pet Poison Helpline označuje brusinky za bezpečné pro zvířata, syrové i zpracované. Sušené brusinky, džus, omáčka a želé však často obsahují přidaný cukr nebo sladidla, proto nejdřív zkontrolujte na etiketě, zda neobsahují xylitol nebo složky z hroznů.",
-    "hr": "Da, nekoliko brusnica u redu je kao povremena poslastica. Pet Poison Helpline navodi da su brusnice sigurne za ljubimce, sirove ili prerađene, ali sušene brusnice, sok, umak i žele često imaju dodan šećer ili sladila, pa najprije na deklaraciji provjeri ima li ksilitola ili sastojaka od grožđa."
+    "hr": "Da, nekoliko brusnica u redu je kao povremena poslastica. Pet Poison Helpline navodi da su brusnice sigurne za ljubimce, sirove ili prerađene, ali sušene brusnice, sok, umak i žele često imaju dodan šećer ili sladila, pa najprije na deklaraciji provjeri ima li ksilitola ili sastojaka od grožđa.",
+    "sv": "Ja, några tranbär går bra som godbit någon gång ibland. Pet Poison Helpline kallar tranbär säkra för husdjur, råa eller bearbetade, men torkade tranbär, juice, sås och gelé har ofta tillsatt socker eller sötningsmedel, så kolla först innehållsförteckningen efter xylitol eller ingredienser från vindruvor."
   },
   "why": {
     "en": "Pet Poison Helpline, on a page about pet-safe fall foods that also names cats, says cranberries are pet safe both raw and processed. Dried cranberries, juice, sauce and jelly often contain added sugar or other sweeteners, and some products may contain toxic ingredients such as xylitol or grape derivatives. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
     "sl": "Pet Poison Helpline na strani o jesenskih živilih, varnih za živali, kjer omenja tudi mačke, navaja, da so brusnice za živali varne, surove in predelane. Suhe brusnice, sok, omaka in žele pogosto vsebujejo dodan sladkor ali druga sladila, nekateri izdelki pa lahko vsebujejo strupene sestavine, kot sta ksilitol ali sestavine iz grozdja. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave.",
     "cs": "Pet Poison Helpline na stránce o podzimních potravinách bezpečných pro zvířata, která zmiňuje i kočky, uvádí, že brusinky jsou pro zvířata bezpečné syrové i zpracované. Sušené brusinky, džus, omáčka a želé často obsahují přidaný cukr nebo jiná sladidla a některé výrobky mohou obsahovat toxické složky, jako je xylitol nebo deriváty hroznů. Kočky jsou obligátní masožravci a ovoce nepotřebují, pamlsky by měly tvořit jen malou část denní stravy a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
-    "hr": "Pet Poison Helpline na stranici o jesenskim namirnicama sigurnima za ljubimce, koja spominje i mačke, navodi da su brusnice sigurne za ljubimce i sirove i prerađene. Sušene brusnice, sok, umak i žele često sadrže dodan šećer ili druga sladila, a neki proizvodi mogu sadržavati otrovne sastojke poput ksilitola ili derivata grožđa. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe."
+    "hr": "Pet Poison Helpline na stranici o jesenskim namirnicama sigurnima za ljubimce, koja spominje i mačke, navodi da su brusnice sigurne za ljubimce i sirove i prerađene. Sušene brusnice, sok, umak i žele često sadrže dodan šećer ili druga sladila, a neki proizvodi mogu sadržavati otrovne sastojke poput ksilitola ili derivata grožđa. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
+    "sv": "Pet Poison Helpline skriver på en sida om höstens husdjurssäkra mat, som även nämner katter, att tranbär är säkra för husdjur både råa och bearbetade. Torkade tranbär, juice, sås och gelé innehåller ofta tillsatt socker eller andra sötningsmedel, och vissa produkter kan innehålla giftiga ingredienser som xylitol eller ingredienser från vindruvor. Katter är obligata köttätare och behöver inte frukt, godbitar ska bara vara en liten del av den dagliga maten, och allt växtmaterial kan ge kräkningar eller orolig mage."
   },
   "signs": null,
   "what_to_do": {
     "en": "Offer just a little first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
     "sl": "Najprej ponudite le malo. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
     "cs": "Nejdřív nabídněte jen trochu. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
-    "hr": "Najprije ponudi samo malo. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara."
+    "hr": "Najprije ponudi samo malo. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
+    "sv": "Ge bara lite först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären."
   },
   "serving": {
     "en": "A few berries now and then, counted in your cat's daily food. For dried cranberries, juice, sauce or jelly, check the label first for xylitol or grape ingredients.",
     "sl": "Občasno nekaj brusnic, upoštevanih v dnevnem obroku. Pri suhih brusnicah, soku, omaki ali želeju najprej na deklaraciji preverite, ali vsebujejo ksilitol ali sestavine iz grozdja.",
     "cs": "Občas pár bobulí, započítaných do denní dávky krmiva vaší kočky. U sušených brusinek, džusu, omáčky nebo želé nejdřív zkontrolujte na etiketě, zda neobsahují xylitol nebo složky z hroznů.",
-    "hr": "Nekoliko bobica povremeno, uračunato u dnevni obrok tvoje mačke. Kod sušenih brusnica, soka, umaka ili želea najprije na deklaraciji provjeri ima li ksilitola ili sastojaka od grožđa."
+    "hr": "Nekoliko bobica povremeno, uračunato u dnevni obrok tvoje mačke. Kod sušenih brusnica, soka, umaka ili želea najprije na deklaraciji provjeri ima li ksilitola ili sastojaka od grožđa.",
+    "sv": "Några bär då och då, inräknade i kattens dagliga matranson. För torkade tranbär, juice, sås eller gelé: kolla först innehållsförteckningen efter xylitol eller ingredienser från vindruvor."
   },
   "child": {
     "en": "A few cranberries can be a cat treat now and then. Ask a grown-up to check sweet cranberry snacks first.",
     "sl": "Nekaj brusnic je lahko občasno priboljšek za muco. Sladke brusnične prigrizke naj najprej preveri odrasla oseba.",
     "cs": "Pár brusinek může být pro kočku občas pamlsek. Sladké brusinkové dobroty ať nejdřív zkontroluje dospělý.",
-    "hr": "Nekoliko brusnica povremeno može biti poslastica za macu. Zamoli odraslu osobu da najprije provjeri slatke grickalice od brusnica."
+    "hr": "Nekoliko brusnica povremeno može biti poslastica za macu. Zamoli odraslu osobu da najprije provjeri slatke grickalice od brusnica.",
+    "sv": "Några tranbär kan bli en godbit för katten då och då. Be en vuxen att först kolla söta tranbärsprodukter."
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "Are dried cranberries OK for cats?",
         "sl": "Ali so suhe brusnice primerne za mačke?",
         "cs": "Jsou sušené brusinky pro kočky v pořádku?",
-        "hr": "Jesu li sušene brusnice u redu za mačke?"
+        "hr": "Jesu li sušene brusnice u redu za mačke?",
+        "sv": "Går torkade tranbär bra för katter?"
       },
       "a": {
         "en": "Dried cranberries often have added sugar or sweeteners. Check the label first and skip any product with xylitol or grape ingredients.",
         "sl": "Suhe brusnice imajo pogosto dodan sladkor ali sladila. Najprej preverite deklaracijo in ne dajajte izdelkov s ksilitolom ali sestavinami iz grozdja.",
         "cs": "Sušené brusinky často obsahují přidaný cukr nebo sladidla. Nejdřív zkontrolujte etiketu a vyhněte se všem výrobkům s xylitolem nebo se složkami z hroznů.",
-        "hr": "Sušene brusnice često imaju dodan šećer ili sladila. Najprije provjeri deklaraciju i preskoči svaki proizvod s ksilitolom ili sastojcima od grožđa."
+        "hr": "Sušene brusnice često imaju dodan šećer ili sladila. Najprije provjeri deklaraciju i preskoči svaki proizvod s ksilitolom ili sastojcima od grožđa.",
+        "sv": "Torkade tranbär har ofta tillsatt socker eller sötningsmedel. Kolla först innehållsförteckningen och hoppa över produkter med xylitol eller ingredienser från vindruvor."
       }
     },
     {
@@ -71,13 +81,15 @@
         "en": "Do cats need fruit?",
         "sl": "Ali mačke potrebujejo sadje?",
         "cs": "Potřebují kočky ovoce?",
-        "hr": "Trebaju li mačke voće?"
+        "hr": "Trebaju li mačke voće?",
+        "sv": "Behöver katter frukt?"
       },
       "a": {
         "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
         "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek.",
         "cs": "Ne. Kočky jsou masožravci: potřebují živiny, které obsahuje maso, a ovoce ani zeleninu ve stravě nepotřebují. Ovoce může být vždy jen malým doplňkem.",
-        "hr": "Ne. Mačke su mesojedi: trebaju hranjive tvari koje se nalaze u mesu i u prehrani im ne treba ni voće ni povrće. Voće može biti samo mali dodatak."
+        "hr": "Ne. Mačke su mesojedi: trebaju hranjive tvari koje se nalaze u mesu i u prehrani im ne treba ni voće ni povrće. Voće može biti samo mali dodatak.",
+        "sv": "Nej. Katter är köttätare: de behöver näringsämnen som finns i kött och behöver inte frukt eller grönsaker i maten. Frukt kan bara vara något litet extra."
       }
     }
   ],
@@ -162,6 +174,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8ff4d91cd24eedf1cfeca89d298098310bbda0abb08d30c22085617e9cd579b2"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "be58b47012506d2f5d0c9caa5f17b853daf6171b9d03179336898636b4b5e996"
     }
   }
 }

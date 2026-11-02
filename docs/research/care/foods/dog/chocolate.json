@@ -12,7 +12,8 @@
     "nl": "Chocolade",
     "pl": "Czekolada",
     "cs": "Čokoláda",
-    "hr": "Čokolada"
+    "hr": "Čokolada",
+    "sv": "Choklad"
   },
   "question": {
     "en": "Can dogs eat chocolate?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden chocolade eten?",
     "pl": "Czy psy mogą jeść czekoladę?",
     "cs": "Mohou psi jíst čokoládu?",
-    "hr": "Smiju li psi jesti čokoladu?"
+    "hr": "Smiju li psi jesti čokoladu?",
+    "sv": "Får hundar äta choklad?"
   },
   "url_slug": {
     "en": "chocolate",
@@ -38,7 +40,8 @@
     "nl": "chocolade",
     "pl": "czekolada",
     "cs": "cokolada",
-    "hr": "cokolada"
+    "hr": "cokolada",
+    "sv": "choklad"
   },
   "level": "toxic",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee. Chocolade is giftig voor honden, zelfs in vrij kleine hoeveelheden. Het bevat theobromine en cafeïne, en hoe donkerder de chocolade, hoe groter het risico. Bakchocolade en cacaopoeder zijn het gevaarlijkst; witte chocolade bevat het minst van deze stoffen.",
     "pl": "Nie. Czekolada jest toksyczna dla psów, nawet w dość małych ilościach. Zawiera teobrominę i kofeinę, a im ciemniejsza czekolada, tym większe ryzyko. Najbardziej niebezpieczne są czekolada do pieczenia i kakao; biała czekolada zawiera tych substancji najmniej.",
     "cs": "Ne. Čokoláda je pro psy jedovatá, i v docela malém množství. Obsahuje theobromin a kofein a čím je čokoláda tmavší, tím větší je riziko. Nejnebezpečnější je čokoláda na vaření a kakaový prášek; bílá čokoláda obsahuje těchto látek nejméně.",
-    "hr": "Ne. Čokolada je otrovna za pse, čak i u prilično malim količinama. Sadrži teobromin i kofein, a što je čokolada tamnija, rizik je veći. Najopasniji su čokolada za kuhanje i kakao prah; bijela čokolada ima najmanje tih tvari."
+    "hr": "Ne. Čokolada je otrovna za pse, čak i u prilično malim količinama. Sadrži teobromin i kofein, a što je čokolada tamnija, rizik je veći. Najopasniji su čokolada za kuhanje i kakao prah; bijela čokolada ima najmanje tih tvari.",
+    "sv": "Nej. Choklad är giftig för hundar, även i ganska små mängder. Den innehåller teobromin och koffein, och ju mörkare chokladen är, desto större är risken. Bakchoklad och kakao är farligast; vit choklad innehåller minst av dessa ämnen."
   },
   "why": {
     "en": "Chocolate contains methylxanthines, mainly theobromine and caffeine, which are toxic to dogs. Dark chocolate, cooking chocolate and cocoa powder contain more of them than milk chocolate. Dogs are affected most often because they eat whatever they find and can easily reach chocolate. Sweets and baked goods may also contain other harmful ingredients.",
@@ -65,7 +69,8 @@
     "nl": "Chocolade bevat methylxanthinen, vooral theobromine en cafeïne, die giftig zijn voor honden. Pure chocolade, bakchocolade en cacaopoeder bevatten er meer van dan melkchocolade. Honden worden het vaakst getroffen, omdat ze alles eten wat ze vinden en makkelijk bij chocolade kunnen. Snoep en gebak kunnen ook nog andere schadelijke ingrediënten bevatten.",
     "pl": "Czekolada zawiera metyloksantyny, głównie teobrominę i kofeinę, które są toksyczne dla psów. Gorzka czekolada, czekolada do pieczenia i kakao zawierają ich więcej niż czekolada mleczna. Najczęściej zatruwają się psy, bo jedzą wszystko, co znajdą, i łatwo dosięgają czekolady. Słodycze i wypieki mogą też zawierać inne szkodliwe składniki.",
     "cs": "Čokoláda obsahuje methylxanthiny, hlavně theobromin a kofein, které jsou pro psy jedovaté. Hořká čokoláda, čokoláda na vaření a kakaový prášek jich obsahují víc než mléčná čokoláda. Nejčastěji jsou postiženi psi, protože snědí, co najdou, a k čokoládě se snadno dostanou. Sladkosti a pečivo mohou navíc obsahovat další škodlivé přísady.",
-    "hr": "Čokolada sadrži metilksantine, ponajprije teobromin i kofein, koji su otrovni za pse. Tamna čokolada, čokolada za kuhanje i kakao prah sadrže ih više od mliječne čokolade. Psi su najčešće pogođeni jer jedu sve što nađu, a do čokolade lako dođu. Slatkiši i peciva mogu sadržavati i druge štetne sastojke."
+    "hr": "Čokolada sadrži metilksantine, ponajprije teobromin i kofein, koji su otrovni za pse. Tamna čokolada, čokolada za kuhanje i kakao prah sadrže ih više od mliječne čokolade. Psi su najčešće pogođeni jer jedu sve što nađu, a do čokolade lako dođu. Slatkiši i peciva mogu sadržavati i druge štetne sastojke.",
+    "sv": "Choklad innehåller metylxantiner, främst teobromin och koffein, som är giftiga för hundar. Mörk choklad, matlagningschoklad och kakao innehåller mer av dem än mjölkchoklad. Hundar drabbas oftast eftersom de äter allt de hittar och lätt kommer åt choklad. Godis och bakverk kan dessutom innehålla andra skadliga ingredienser."
   },
   "signs": {
     "en": [
@@ -155,6 +160,14 @@
       "Ubrzan ili nepravilan rad srca",
       "Drhtanje ili napadaji",
       "Znakovi se obično pojave unutar 6–12 sati"
+    ],
+    "sv": [
+      "Kräkningar och diarré",
+      "Flämtning, stark törst och kissar mer",
+      "Rastlöshet och överaktivitet",
+      "Snabb eller oregelbunden puls",
+      "Darrningar eller kramper",
+      "Symtomen visar sig oftast inom 6–12 timmar"
     ]
   },
   "what_to_do": {
@@ -168,7 +181,8 @@
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als je hond maar een beetje heeft gegeten. Schrijf op wat voor chocolade het was en hoeveel er is gegeten. Wacht niet op verschijnselen, want die kunnen uren op zich laten wachten.",
     "pl": "Od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt, nawet jeśli twój pies zjadł tylko trochę. Zanotuj, jaki to był rodzaj czekolady i ile zjadł. Nie czekaj na objawy, bo mogą pojawić się dopiero po kilku godzinach.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, i když váš pes snědl jen trochu. Poznamenejte si, o jakou čokoládu šlo a kolik jí pes snědl. Nečekejte, až se objeví příznaky, protože se mohou projevit až po několika hodinách.",
-    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako je pas pojeo samo malo. Zapiši o kakvoj je čokoladi riječ i koliko je pojeo. Ne čekaj da se pojave znakovi, jer se mogu pojaviti tek nakon nekoliko sati."
+    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako je pas pojeo samo malo. Zapiši o kakvoj je čokoladi riječ i koliko je pojeo. Ne čekaj da se pojave znakovi, jer se mogu pojaviti tek nakon nekoliko sati.",
+    "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt, även om hunden bara åt lite. Notera vilken sorts choklad det var och hur mycket hunden åt. Vänta inte på symtom, eftersom de kan ta flera timmar att visa sig."
   },
   "serving": null,
   "child": {
@@ -182,7 +196,8 @@
     "nl": "Chocolade is voor mensen, niet voor honden. Honden kunnen er heel ziek van worden. Leg het weg en vertel het aan een volwassene als je hond ervan eet.",
     "pl": "Czekolada jest dla ludzi, nie dla psów. Może sprawić, że pies bardzo się rozchoruje. Trzymaj ją z dala od psa i powiedz dorosłemu, jeśli twój pies ją zje.",
     "cs": "Čokoláda je pro lidi, ne pro psy. Psovi z ní může být moc zle. Schovej ji, a když ji pes sní, řekni to dospělému.",
-    "hr": "Čokolada je za ljude, ne za pse. Od nje se psi mogu jako razboljeti. Drži je podalje, a ako je pas pojede, reci odrasloj osobi."
+    "hr": "Čokolada je za ljude, ne za pse. Od nje se psi mogu jako razboljeti. Drži je podalje, a ako je pas pojede, reci odrasloj osobi.",
+    "sv": "Choklad är för människor, inte för hundar. Den kan göra hundar mycket sjuka. Håll den borta och säg till en vuxen om hunden äter av den."
   },
   "faq": [
     {
@@ -197,7 +212,8 @@
         "nl": "Is witte chocolade veilig voor honden?",
         "pl": "Czy biała czekolada jest bezpieczna dla psów?",
         "cs": "Je bílá čokoláda pro psy bezpečná?",
-        "hr": "Je li bijela čokolada sigurna za pse?"
+        "hr": "Je li bijela čokolada sigurna za pse?",
+        "sv": "Är vit choklad säker för hundar?"
       },
       "a": {
         "en": "It is not a safe treat. White chocolate has the lowest content of the harmful substances, but the risk still depends on the type and amount eaten, so call your vet if your dog ate some.",
@@ -210,7 +226,8 @@
         "nl": "Het is geen veilig snoepje. Witte chocolade bevat het minst van de schadelijke stoffen, maar het risico hangt nog steeds af van de soort en de hoeveelheid, dus bel je dierenarts als je hond ervan heeft gegeten.",
         "pl": "To nie jest bezpieczny smakołyk. Biała czekolada zawiera najmniej szkodliwych substancji, ale ryzyko i tak zależy od rodzaju i zjedzonej ilości, więc zadzwoń do weterynarza, jeśli twój pies ją zjadł.",
         "cs": "Není to bezpečný pamlsek. Bílá čokoláda obsahuje nejméně škodlivých látek, ale riziko přesto závisí na druhu a snědeném množství, proto zavolejte veterináři, pokud ji pes snědl.",
-        "hr": "Nije sigurna poslastica. Bijela čokolada ima najmanje štetnih tvari, ali rizik ipak ovisi o vrsti i količini, zato nazovi veterinara ako ju je pas pojeo."
+        "hr": "Nije sigurna poslastica. Bijela čokolada ima najmanje štetnih tvari, ali rizik ipak ovisi o vrsti i količini, zato nazovi veterinara ako ju je pas pojeo.",
+        "sv": "Den är ingen säker godbit. Vit choklad innehåller minst av de skadliga ämnena, men risken beror ändå på sort och mängd, så ring veterinären om hunden har ätit av den."
       }
     },
     {
@@ -225,7 +242,8 @@
         "nl": "Welke chocolade is het gevaarlijkst?",
         "pl": "Która czekolada jest najbardziej niebezpieczna?",
         "cs": "Která čokoláda je nejnebezpečnější?",
-        "hr": "Koja je čokolada najopasnija?"
+        "hr": "Koja je čokolada najopasnija?",
+        "sv": "Vilken choklad är farligast?"
       },
       "a": {
         "en": "Baking chocolate and cocoa powder, followed by dark chocolate. The darker the chocolate, the greater the risk.",
@@ -238,7 +256,8 @@
         "nl": "Bakchocolade en cacaopoeder, daarna pure chocolade. Hoe donkerder de chocolade, hoe groter het risico.",
         "pl": "Czekolada do pieczenia i kakao, a zaraz po nich gorzka czekolada. Im ciemniejsza czekolada, tym większe ryzyko.",
         "cs": "Čokoláda na vaření a kakaový prášek, po nich hořká čokoláda. Čím tmavší čokoláda, tím větší riziko.",
-        "hr": "Čokolada za kuhanje i kakao prah, a zatim tamna čokolada. Što je čokolada tamnija, rizik je veći."
+        "hr": "Čokolada za kuhanje i kakao prah, a zatim tamna čokolada. Što je čokolada tamnija, rizik je veći.",
+        "sv": "Bakchoklad och kakao, följt av mörk choklad. Ju mörkare chokladen är, desto större är risken."
       }
     },
     {
@@ -253,7 +272,8 @@
         "nl": "Wanneer komen de verschijnselen van chocoladevergiftiging?",
         "pl": "Kiedy pojawiają się objawy zatrucia czekoladą?",
         "cs": "Kdy se objeví příznaky otravy čokoládou?",
-        "hr": "Kada se pojavljuju znakovi otrovanja čokoladom?"
+        "hr": "Kada se pojavljuju znakovi otrovanja čokoladom?",
+        "sv": "När visar sig symtomen på chokladförgiftning?"
       },
       "a": {
         "en": "Usually within 6–12 hours after eating it, which is why you should call the vet straight away instead of waiting.",
@@ -266,7 +286,8 @@
         "nl": "Meestal binnen 6–12 uur na het eten. Bel daarom meteen de dierenarts in plaats van af te wachten.",
         "pl": "Zwykle w ciągu 6–12 godzin od zjedzenia, dlatego zadzwoń do weterynarza od razu, zamiast czekać.",
         "cs": "Obvykle do 6–12 hodin po snědení, proto veterináři zavolejte hned a nečekejte.",
-        "hr": "Obično unutar 6–12 sati nakon jedenja, zato odmah nazovi veterinara umjesto da čekaš."
+        "hr": "Obično unutar 6–12 sati nakon jedenja, zato odmah nazovi veterinara umjesto da čekaš.",
+        "sv": "Oftast inom 6–12 timmar efter att hunden ätit, och därför ska du ringa veterinären direkt i stället för att vänta."
       }
     }
   ],
@@ -395,6 +416,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "61b047cde7a9f864e287fe501b938f19e3a19b443f5408104ea13db7c5013f47"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4727656041ce1ffafea56c7b164d8ecd6385ae29cf000e7690aaeb828658868c"
     }
   }
 }

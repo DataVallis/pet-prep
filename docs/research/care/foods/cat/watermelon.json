@@ -5,51 +5,59 @@
     "en": "Watermelon",
     "sl": "Lubenica",
     "cs": "Vodní meloun",
-    "hr": "Lubenica"
+    "hr": "Lubenica",
+    "sv": "Vattenmelon"
   },
   "question": {
     "en": "Can cats eat watermelon?",
     "sl": "Ali lahko mačke jedo lubenico?",
     "cs": "Mohou kočky jíst vodní meloun?",
-    "hr": "Smiju li mačke jesti lubenicu?"
+    "hr": "Smiju li mačke jesti lubenicu?",
+    "sv": "Får katter äta vattenmelon?"
   },
   "url_slug": {
     "en": "watermelon",
     "sl": "lubenica",
     "cs": "vodni-meloun",
-    "hr": "lubenica"
+    "hr": "lubenica",
+    "sv": "vattenmelon"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a small piece of watermelon is fine as an occasional treat. A university vet hospital lists it among healthy human-food treats for cats and dogs, but cats are meat eaters and don't need fruit, so keep it to a small extra.",
     "sl": "Da, majhen košček lubenice je v redu kot občasen priboljšek. Univerzitetna veterinarska bolnišnica jo navaja med zdravimi priboljški iz človeške hrane za mačke in pse, vendar so mačke mesojede in sadja ne potrebujejo, zato naj bo le majhen dodatek.",
     "cs": "Ano, malý kousek vodního melounu je v pořádku jako občasný pamlsek. Jedna univerzitní veterinární nemocnice ho řadí mezi zdravé pamlsky z lidské stravy pro kočky a psy, ale kočky jsou masožravci a ovoce nepotřebují, takže ho nabízejte jen jako malý doplněk.",
-    "hr": "Da, mali komadić lubenice u redu je kao povremena poslastica. Jedna sveučilišna veterinarska bolnica navodi je među zdravim poslasticama iz ljudske hrane za mačke i pse, ali mačke su mesojedi i ne trebaju voće, pa neka to ostane tek mali dodatak."
+    "hr": "Da, mali komadić lubenice u redu je kao povremena poslastica. Jedna sveučilišna veterinarska bolnica navodi je među zdravim poslasticama iz ljudske hrane za mačke i pse, ali mačke su mesojedi i ne trebaju voće, pa neka to ostane tek mali dodatak.",
+    "sv": "Ja, en liten bit vattenmelon går bra som en godbit ibland. Ett universitetsdjursjukhus räknar den till nyttiga godbitar från människomat för katter och hundar, men katter är köttätare och behöver inte frukt, så låt det bara vara något litet extra."
   },
   "why": {
     "en": "NC State's veterinary hospital lists watermelon among healthy human-food treats for cats and dogs, given in measured amounts and counted in the daily calories. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
     "sl": "Veterinarska bolnišnica univerze NC State lubenico navaja med zdravimi priboljški iz človeške hrane za mačke in pse, ki jih dajemo v odmerjenih količinah in upoštevamo v dnevnem vnosu kalorij. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave.",
     "cs": "Veterinární nemocnice Státní univerzity Severní Karolíny (NC State) řadí vodní meloun mezi zdravé pamlsky z lidské stravy pro kočky a psy, podávané v odměřeném množství a započítané do denního příjmu kalorií. Kočky jsou obligátní masožravci a ovoce nepotřebují, pamlsky by měly tvořit jen malou část denní stravy a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
-    "hr": "Veterinarska bolnica sveučilišta NC State navodi lubenicu među zdravim poslasticama iz ljudske hrane za mačke i pse, koje se daju u odmjerenim količinama i uračunavaju u dnevni unos kalorija. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe."
+    "hr": "Veterinarska bolnica sveučilišta NC State navodi lubenicu među zdravim poslasticama iz ljudske hrane za mačke i pse, koje se daju u odmjerenim količinama i uračunavaju u dnevni unos kalorija. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
+    "sv": "Djursjukhuset vid NC State räknar vattenmelon till nyttiga godbitar från människomat för katter och hundar, i avvägda mängder och inräknade i det dagliga kaloriintaget. Katter är obligata köttätare och behöver inte frukt, godbitar ska vara en liten del av den dagliga maten, och allt växtmaterial kan ge kräkningar eller orolig mage."
   },
   "signs": null,
   "what_to_do": {
     "en": "Offer a small piece first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
     "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
     "cs": "Nejdřív nabídněte malý kousek. Pokud vaše kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
-    "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara."
+    "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
+    "sv": "Ge en liten bit först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären."
   },
   "serving": {
     "en": "A small piece now and then, counted in your cat's daily food.",
     "sl": "Občasno majhen košček, upoštevan v dnevnem obroku.",
     "cs": "Občas malý kousek, započítaný do denní dávky krmiva vaší kočky.",
-    "hr": "Mali komadić povremeno, uračunat u dnevni obrok tvoje mačke."
+    "hr": "Mali komadić povremeno, uračunat u dnevni obrok tvoje mačke.",
+    "sv": "En liten bit då och då, inräknad i kattens dagliga matranson."
   },
   "child": {
     "en": "A little piece of watermelon can be a cat treat now and then. Cats mostly need meat, so fruit is only a small extra.",
     "sl": "Majhen košček lubenice je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek.",
     "cs": "Malý kousek vodního melounu může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže ovoce je jen malý přídavek.",
-    "hr": "Komadić lubenice ponekad može biti poslastica za macu. Mace najviše trebaju meso, pa je voće samo mali dodatak."
+    "hr": "Komadić lubenice ponekad može biti poslastica za macu. Mace najviše trebaju meso, pa je voće samo mali dodatak.",
+    "sv": "En liten bit vattenmelon kan ibland vara en godbit för katten. Katter behöver mest kött, så frukt är bara något litet extra."
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "Do cats need fruit?",
         "sl": "Ali mačke potrebujejo sadje?",
         "cs": "Potřebují kočky ovoce?",
-        "hr": "Trebaju li mačke voće?"
+        "hr": "Trebaju li mačke voće?",
+        "sv": "Behöver katter frukt?"
       },
       "a": {
         "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
         "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek.",
         "cs": "Ne. Kočky jsou masožravci: potřebují živiny, které obsahuje maso, a ovoce ani zeleninu ve stravě nepotřebují. Ovoce může být vždy jen malým doplňkem.",
-        "hr": "Ne. Mačke su mesojedi: trebaju hranjive tvari koje se nalaze u mesu i u prehrani im ne treba ni voće ni povrće. Voće može biti samo mali dodatak."
+        "hr": "Ne. Mačke su mesojedi: trebaju hranjive tvari koje se nalaze u mesu i u prehrani im ne treba ni voće ni povrće. Voće može biti samo mali dodatak.",
+        "sv": "Nej. Katter är köttätare: de behöver näringsämnen som finns i kött och behöver inte frukt eller grönsaker i kosten. Frukt kan bara vara något litet extra."
       }
     }
   ],
@@ -128,6 +138,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2376e0cdf59f16cc0371401725f00c3dc8dc8400258df76f89cd21b15997f890"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0a9cddfcab61b03b4dd4c120705b0efb3f779d8c2aaa46acadf74e72bfadc4c2"
     }
   }
 }

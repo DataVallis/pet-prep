@@ -12,7 +12,8 @@
     "nl": "Rauwe vis",
     "pl": "Surowa ryba",
     "cs": "Syrové ryby",
-    "hr": "Sirova riba"
+    "hr": "Sirova riba",
+    "sv": "Rå fisk"
   },
   "question": {
     "en": "Can cats eat raw fish?",
@@ -25,7 +26,8 @@
     "nl": "Mogen katten rauwe vis eten?",
     "pl": "Czy koty mogą jeść surową rybę?",
     "cs": "Mohou kočky jíst syrové ryby?",
-    "hr": "Smiju li mačke jesti sirovu ribu?"
+    "hr": "Smiju li mačke jesti sirovu ribu?",
+    "sv": "Får katter äta rå fisk?"
   },
   "url_slug": {
     "en": "raw-fish",
@@ -38,7 +40,8 @@
     "nl": "rauwe-vis",
     "pl": "surowa-ryba",
     "cs": "syrove-ryby",
-    "hr": "sirova-riba"
+    "hr": "sirova-riba",
+    "sv": "ra-fisk"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee, rauwe vis is geen goed idee voor katten. Het kan schadelijke bacteriën en parasieten bevatten, en sommige rauwe vis bevat thiaminase, een enzym dat vitamine B1 afbreekt. Vis voor katten moet goed gaar zijn en zonder graten.",
     "pl": "Nie, surowa ryba to zły pomysł dla kota. Może przenosić szkodliwe bakterie i pasożyty, a niektóre surowe ryby zawierają tiaminazę – enzym niszczący witaminę B1. Ryba dla kota powinna być porządnie ugotowana i bez ości.",
     "cs": "Ne, syrové ryby nejsou pro kočky dobrý nápad. Mohou přenášet škodlivé bakterie a parazity a některé syrové ryby obsahují thiaminázu, enzym, který ničí vitamin B1. Ryby pro kočky by měly být řádně tepelně upravené a zbavené kostí.",
-    "hr": "Ne, sirova riba nije dobra ideja za mačke. Može sadržavati štetne bakterije i parazite, a neka sirova riba sadrži tiaminazu, enzim koji uništava vitamin B1. Riba za mačke treba biti dobro termički obrađena i bez kostiju."
+    "hr": "Ne, sirova riba nije dobra ideja za mačke. Može sadržavati štetne bakterije i parazite, a neka sirova riba sadrži tiaminazu, enzim koji uništava vitamin B1. Riba za mačke treba biti dobro termički obrađena i bez kostiju.",
+    "sv": "Nej, rå fisk är ingen bra idé för katter. Den kan innehålla skadliga bakterier och parasiter, och viss rå fisk innehåller tiaminas, ett enzym som bryter ner B1-vitamin. Fisk till katter ska vara ordentligt tillagad och benfri."
   },
   "why": {
     "en": "Cats Protection says uncooked fish may contain harmful bacteria and parasites. The Merck Veterinary Manual notes that thiaminases are found in raw freshwater fish and are destroyed by cooking. Thiamine (vitamin B1) is an essential nutrient, so cooking fish removes this risk.",
@@ -65,7 +69,8 @@
     "nl": "Volgens Cats Protection kan ongekookte vis schadelijke bacteriën en parasieten bevatten. De Merck Veterinary Manual vermeldt dat thiaminasen voorkomen in rauwe zoetwatervis en door koken worden vernietigd. Thiamine (vitamine B1) is een essentiële voedingsstof, dus door vis te koken verdwijnt dit risico.",
     "pl": "Cats Protection podaje, że niegotowana ryba może zawierać szkodliwe bakterie i pasożyty. Merck Veterinary Manual zaznacza, że tiaminazy występują w surowych rybach słodkowodnych i są niszczone podczas gotowania. Tiamina (witamina B1) jest niezbędnym składnikiem odżywczym, więc gotowanie ryby usuwa to ryzyko.",
     "cs": "Podle Cats Protection mohou tepelně neupravené ryby obsahovat škodlivé bakterie a parazity. Merck Veterinary Manual uvádí, že thiaminázy se vyskytují v syrových sladkovodních rybách a tepelnou úpravou se ničí. Thiamin (vitamin B1) je nezbytná živina, takže tepelná úprava ryb toto riziko odstraňuje.",
-    "hr": "Cats Protection navodi da termički neobrađena riba može sadržavati štetne bakterije i parazite. Priručnik Merck Veterinary Manual navodi da se tiaminaze nalaze u sirovoj slatkovodnoj ribi i da ih termička obrada uništava. Tiamin (vitamin B1) esencijalna je hranjiva tvar, pa se termičkom obradom ribe taj rizik uklanja."
+    "hr": "Cats Protection navodi da termički neobrađena riba može sadržavati štetne bakterije i parazite. Priručnik Merck Veterinary Manual navodi da se tiaminaze nalaze u sirovoj slatkovodnoj ribi i da ih termička obrada uništava. Tiamin (vitamin B1) esencijalna je hranjiva tvar, pa se termičkom obradom ribe taj rizik uklanja.",
+    "sv": "Cats Protection skriver att otillagad fisk kan innehålla skadliga bakterier och parasiter. Merck Veterinary Manual påpekar att tiaminaser finns i rå sötvattensfisk och förstörs vid tillagning. Tiamin (B1-vitamin) är ett livsviktigt näringsämne, så när fisken tillagas försvinner den här risken."
   },
   "signs": {
     "en": [
@@ -144,6 +149,13 @@
       "Vrućica",
       "Odbijanje hrane",
       "Malaksalost"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Diarré, ibland med blod",
+      "Feber",
+      "Ingen matlust",
+      "Slöhet"
     ]
   },
   "what_to_do": {
@@ -157,7 +169,8 @@
     "nl": "Heeft je kat een beetje rauwe vis gegeten? Let op braken, diarree, koorts of niet eten, en bel je dierenarts als je daar iets van ziet. Rauwe vis hoort geen vast onderdeel van het eten te worden.",
     "pl": "Jeśli twój kot zjadł odrobinę surowej ryby, obserwuj, czy nie pojawią się wymioty, biegunka, gorączka lub brak apetytu, a jeśli tak, zadzwoń do weterynarza. Surowa ryba nie powinna stać się stałym pokarmem.",
     "cs": "Pokud vaše kočka snědla trochu syrové ryby, sledujte, zda se neobjeví zvracení, průjem, horečka nebo nechuť k jídlu, a pokud ano, zavolejte veterináři. Syrové ryby by se neměly stát běžnou součástí jídelníčku.",
-    "hr": "Ako je mačka pojela malo sirove ribe, prati pojavu povraćanja, proljeva, vrućice ili odbijanja hrane i nazovi veterinara ako se išta od toga pojavi. Sirova riba ne bi smjela postati redovita hrana."
+    "hr": "Ako je mačka pojela malo sirove ribe, prati pojavu povraćanja, proljeva, vrućice ili odbijanja hrane i nazovi veterinara ako se išta od toga pojavi. Sirova riba ne bi smjela postati redovita hrana.",
+    "sv": "Om katten har ätit lite rå fisk: håll utkik efter kräkningar, diarré, feber eller att den slutar äta, och ring veterinären om något av detta dyker upp. Rå fisk ska inte bli vanlig mat."
   },
   "serving": {
     "en": "If you share fish: properly cooked, plain, with all bones removed, a few pieces at a time.",
@@ -170,7 +183,8 @@
     "nl": "Als je vis deelt: goed gaar, zonder toevoegingen, met alle graten eruit, steeds maar een paar stukjes.",
     "pl": "Jeśli dzielisz się rybą: porządnie ugotowana, bez dodatków, bez żadnych ości, kilka kawałków naraz.",
     "cs": "Pokud se o rybu dělíte: řádně tepelně upravenou, bez přísad, zbavenou všech kostí, vždy jen pár kousků.",
-    "hr": "Ako s mačkom dijeliš ribu: dobro termički obrađenu, običnu, bez ijedne kosti, nekoliko komadića odjednom."
+    "hr": "Ako s mačkom dijeliš ribu: dobro termički obrađenu, običnu, bez ijedne kosti, nekoliko komadića odjednom.",
+    "sv": "Om du delar med dig av fisk: ordentligt tillagad, utan kryddor, med alla ben borttagna och bara några bitar åt gången."
   },
   "child": {
     "en": "Cats love fish, but it needs to be cooked by a grown-up first, with no bones.",
@@ -183,7 +197,8 @@
     "nl": "Katten zijn dol op vis, maar een volwassene moet hem eerst koken en de graten eruit halen.",
     "pl": "Koty uwielbiają ryby, ale najpierw dorosły musi rybę ugotować i usunąć ości.",
     "cs": "Kočky ryby milují, ale nejdřív je musí dospělý pořádně uvařit nebo upéct a vybrat z nich kosti.",
-    "hr": "Mace obožavaju ribu, ali odrasla osoba najprije je mora skuhati i izvaditi sve kosti."
+    "hr": "Mace obožavaju ribu, ali odrasla osoba najprije je mora skuhati i izvaditi sve kosti.",
+    "sv": "Katter älskar fisk, men en vuxen måste koka den först och ta bort alla ben."
   },
   "faq": [
     {
@@ -198,7 +213,8 @@
         "nl": "Wat is thiaminase?",
         "pl": "Co to jest tiaminaza?",
         "cs": "Co je thiamináza?",
-        "hr": "Što je tiaminaza?"
+        "hr": "Što je tiaminaza?",
+        "sv": "Vad är tiaminas?"
       },
       "a": {
         "en": "It is an enzyme found in some raw fish that destroys thiamine (vitamin B1). Cooking destroys it.",
@@ -211,7 +227,8 @@
         "nl": "Dat is een enzym in sommige rauwe vis dat thiamine (vitamine B1) afbreekt. Door koken wordt het vernietigd.",
         "pl": "To enzym występujący w niektórych surowych rybach, który niszczy tiaminę (witaminę B1). Gotowanie go niszczy.",
         "cs": "Je to enzym, který se vyskytuje v některých syrových rybách a ničí thiamin (vitamin B1). Tepelnou úpravou se zničí.",
-        "hr": "To je enzim koji se nalazi u nekim sirovim ribama i uništava tiamin (vitamin B1). Termička obrada ga uništava."
+        "hr": "To je enzim koji se nalazi u nekim sirovim ribama i uništava tiamin (vitamin B1). Termička obrada ga uništava.",
+        "sv": "Det är ett enzym som finns i viss rå fisk och som bryter ner tiamin (B1-vitamin). Det förstörs när fisken tillagas."
       }
     }
   ],
@@ -332,6 +349,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8ac80e59d73e51051bb8a37af54c0b561a686be8d0aef0e23892c798d1b9a3ec"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a2938590d07b349c63d462dc4d3a98b90509f4851a7099b8e22bcd78b6f022c9"
     }
   }
 }

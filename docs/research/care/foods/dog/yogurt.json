@@ -12,7 +12,8 @@
     "nl": "Yoghurt",
     "pl": "Jogurt",
     "cs": "Jogurt",
-    "hr": "Jogurt"
+    "hr": "Jogurt",
+    "sv": "Yoghurt"
   },
   "question": {
     "en": "Can dogs eat yogurt?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden yoghurt eten?",
     "pl": "Czy psy mogą jeść jogurt?",
     "cs": "Mohou psi jíst jogurt?",
-    "hr": "Smiju li psi jesti jogurt?"
+    "hr": "Smiju li psi jesti jogurt?",
+    "sv": "Får hundar äta yoghurt?"
   },
   "url_slug": {
     "en": "yogurt",
@@ -38,7 +40,8 @@
     "nl": "yoghurt",
     "pl": "jogurt",
     "cs": "jogurt",
-    "hr": "jogurt"
+    "hr": "jogurt",
+    "sv": "yoghurt"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Ja, in kleine hoeveelheden, als het ongezoete yoghurt naturel is en je hond zuivel verdraagt. Sommige honden krijgen maag-darmklachten van lactose. Geef nooit yoghurt met xylitol of andere zoetstoffen, of met toegevoegde suiker.",
     "pl": "Tak, w małych ilościach, jeśli jest naturalny, niesłodzony, a twój pies toleruje nabiał. U niektórych psów laktoza wywołuje dolegliwości żołądkowe. Nigdy nie dawaj jogurtu z ksylitolem, innymi słodzikami ani z dodatkiem cukru.",
     "cs": "Ano, v malém množství, pokud je bílý a neslazený a váš pes snáší mléčné výrobky. Některým psům způsobuje laktóza žaludeční potíže. Nikdy nedávejte jogurt s xylitolem nebo jinými sladidly ani s přidaným cukrem.",
-    "hr": "Da, u malim količinama, ako je običan i nezaslađen i ako tvoj pas podnosi mliječne proizvode. Neki psi od laktoze dobiju probavne tegobe. Nikad ne daj jogurt s ksilitolom ili drugim sladilima ni s dodanim šećerom."
+    "hr": "Da, u malim količinama, ako je običan i nezaslađen i ako tvoj pas podnosi mliječne proizvode. Neki psi od laktoze dobiju probavne tegobe. Nikad ne daj jogurt s ksilitolom ili drugim sladilima ni s dodanim šećerom.",
+    "sv": "Ja, i små mängder, om den är naturell och osötad och hunden tål mejeriprodukter. Vissa hundar får magbesvär av laktos. Ge aldrig yoghurt med xylitol eller andra sötningsmedel, eller med tillsatt socker."
   },
   "why": {
     "en": "Many dogs have trouble digesting lactose, which can cause gas, diarrhoea or vomiting. Greek-style yogurt has less lactose, so it is usually the better choice. Some sweeteners, especially xylitol, are toxic to dogs, and too much dairy fat can upset the stomach or cause pancreatitis.",
@@ -65,7 +69,8 @@
     "nl": "Veel honden kunnen lactose moeilijk verteren, wat winderigheid, diarree of braken kan veroorzaken. Griekse yoghurt bevat minder lactose en is daarom meestal de betere keuze. Sommige zoetstoffen, vooral xylitol, zijn giftig voor honden, en te veel zuivelvet kan de maag van streek maken of alvleesklierontsteking veroorzaken.",
     "pl": "Wiele psów ma kłopot z trawieniem laktozy, co może powodować wzdęcia, biegunkę lub wymioty. Jogurt typu greckiego ma mniej laktozy, więc zwykle jest lepszym wyborem. Niektóre słodziki, zwłaszcza ksylitol, są toksyczne dla psów, a zbyt dużo tłuszczu mlecznego może podrażnić żołądek lub wywołać zapalenie trzustki.",
     "cs": "Mnoho psů špatně tráví laktózu, což může způsobit plynatost, průjem nebo zvracení. Jogurt řeckého typu má méně laktózy, takže je obvykle lepší volbou. Některá sladidla, zejména xylitol, jsou pro psy jedovatá a příliš mnoho mléčného tuku může podráždit žaludek nebo způsobit zánět slinivky břišní.",
-    "hr": "Mnogi psi teško probavljaju laktozu, što može izazvati vjetrove, proljev ili povraćanje. Grčki jogurt ima manje laktoze, pa je obično bolji izbor. Neka sladila, osobito ksilitol, otrovna su za pse, a previše mliječne masti može izazvati probavne tegobe ili upalu gušterače."
+    "hr": "Mnogi psi teško probavljaju laktozu, što može izazvati vjetrove, proljev ili povraćanje. Grčki jogurt ima manje laktoze, pa je obično bolji izbor. Neka sladila, osobito ksilitol, otrovna su za pse, a previše mliječne masti može izazvati probavne tegobe ili upalu gušterače.",
+    "sv": "Många hundar har svårt att bryta ner laktos, vilket kan ge gaser, diarré eller kräkningar. Grekisk yoghurt innehåller mindre laktos, så den är oftast det bättre valet. Vissa sötningsmedel, särskilt xylitol, är giftiga för hundar, och för mycket mjölkfett kan ge magbesvär eller orsaka bukspottkörtelinflammation (pankreatit)."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "nl": "Begin met een kleine hoeveelheid en let op winderigheid, diarree of braken; stop als die optreden. Zat er xylitol in de yoghurt? Neem dan meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren.",
     "pl": "Zacznij od małej ilości i obserwuj, czy nie pojawiają się wzdęcia, biegunka lub wymioty; jeśli wystąpią, przestań go podawać. Jeśli jogurt zawierał ksylitol, od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt.",
     "cs": "Začněte malým množstvím a sledujte, zda se neobjeví plynatost, průjem nebo zvracení; pokud ano, přestaňte jogurt dávat. Pokud jogurt obsahoval xylitol, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata.",
-    "hr": "Počni s malom količinom i prati pojavljuju li se vjetrovi, proljev ili povraćanje; ako se pojave, prestani. Ako je jogurt sadržavao ksilitol, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja."
+    "hr": "Počni s malom količinom i prati pojavljuju li se vjetrovi, proljev ili povraćanje; ako se pojave, prestani. Ako je jogurt sadržavao ksilitol, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja.",
+    "sv": "Börja med en liten mängd och håll utkik efter gaser, diarré eller kräkningar; sluta om de dyker upp. Om yoghurten innehöll xylitol, kontakta veterinären eller en giftrådgivning för djur direkt."
   },
   "serving": {
     "en": "Plain yogurt with no added sweeteners, ideally Greek-style; check the label for sugar and xylitol.",
@@ -92,7 +98,8 @@
     "nl": "Yoghurt naturel zonder toegevoegde zoetstoffen, bij voorkeur Griekse yoghurt; controleer het etiket op suiker en xylitol.",
     "pl": "Jogurt naturalny bez dodatku słodzików, najlepiej typu greckiego; sprawdź na etykiecie cukier i ksylitol.",
     "cs": "Bílý jogurt bez přidaných sladidel, ideálně řeckého typu; na etiketě zkontrolujte cukr a xylitol.",
-    "hr": "Običan jogurt bez dodanih sladila, po mogućnosti grčki; provjeri ima li na deklaraciji šećera i ksilitola."
+    "hr": "Običan jogurt bez dodanih sladila, po mogućnosti grčki; provjeri ima li na deklaraciji šećera i ksilitola.",
+    "sv": "Naturell yoghurt utan tillsatta sötningsmedel, helst grekisk; kontrollera innehållsförteckningen så att den saknar socker och xylitol."
   },
   "child": {
     "en": "A little plain yogurt can be a treat for some dogs. Sweet or flavoured yogurt is not for dogs.",
@@ -105,7 +112,8 @@
     "nl": "Een beetje yoghurt naturel kan voor sommige honden een snoepje zijn. Zoete yoghurt of yoghurt met een smaakje is niet voor honden.",
     "pl": "Odrobina jogurtu naturalnego może być smakołykiem dla niektórych psów. Słodki lub smakowy jogurt nie jest dla psów.",
     "cs": "Trocha bílého jogurtu může být pro některé psy pamlsek. Sladký nebo ochucený jogurt pro psy není.",
-    "hr": "Malo običnog jogurta može biti poslastica za neke pse. Slatki jogurt ili jogurt s okusom nije za pse."
+    "hr": "Malo običnog jogurta može biti poslastica za neke pse. Slatki jogurt ili jogurt s okusom nije za pse.",
+    "sv": "Lite naturell yoghurt kan vara en godbit för vissa hundar. Söt eller smaksatt yoghurt är inte för hundar."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "nl": "Is Griekse yoghurt beter voor honden?",
         "pl": "Czy jogurt grecki jest lepszy dla psów?",
         "cs": "Je řecký jogurt pro psy lepší?",
-        "hr": "Je li grčki jogurt bolji za pse?"
+        "hr": "Je li grčki jogurt bolji za pse?",
+        "sv": "Är grekisk yoghurt bättre för hundar?"
       },
       "a": {
         "en": "Usually yes: plain Greek-style yogurt has lower levels of lactose than regular yogurt.",
@@ -133,7 +142,8 @@
         "nl": "Meestal wel: Griekse yoghurt naturel bevat minder lactose dan gewone yoghurt.",
         "pl": "Zwykle tak: naturalny jogurt typu greckiego ma mniej laktozy niż zwykły jogurt.",
         "cs": "Obvykle ano: bílý jogurt řeckého typu obsahuje méně laktózy než běžný jogurt.",
-        "hr": "Obično jest: nezaslađeni grčki jogurt ima manje laktoze od klasičnog jogurta."
+        "hr": "Obično jest: nezaslađeni grčki jogurt ima manje laktoze od klasičnog jogurta.",
+        "sv": "Oftast ja: naturell grekisk yoghurt innehåller mindre laktos än vanlig yoghurt."
       }
     },
     {
@@ -148,7 +158,8 @@
         "nl": "Waarom het etiket controleren?",
         "pl": "Po co sprawdzać etykietę?",
         "cs": "Proč kontrolovat etiketu?",
-        "hr": "Zašto treba provjeriti deklaraciju?"
+        "hr": "Zašto treba provjeriti deklaraciju?",
+        "sv": "Varför ska jag läsa innehållsförteckningen?"
       },
       "a": {
         "en": "Some yogurts contain sweeteners such as xylitol, which is toxic to dogs, or added sugar.",
@@ -161,7 +172,8 @@
         "nl": "Sommige yoghurts bevatten zoetstoffen zoals xylitol, dat giftig is voor honden, of toegevoegde suiker.",
         "pl": "Niektóre jogurty zawierają słodziki, takie jak ksylitol, który jest toksyczny dla psów, albo dodatek cukru.",
         "cs": "Některé jogurty obsahují sladidla, jako je xylitol, který je pro psy jedovatý, nebo přidaný cukr.",
-        "hr": "Neki jogurti sadrže sladila poput ksilitola, koji je otrovan za pse, ili dodani šećer."
+        "hr": "Neki jogurti sadrže sladila poput ksilitola, koji je otrovan za pse, ili dodani šećer.",
+        "sv": "Vissa yoghurtar innehåller sötningsmedel som xylitol, som är giftigt för hundar, eller tillsatt socker."
       }
     }
   ],
@@ -281,6 +293,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "72e2166d22a3441eba300cc5e93934060e44d393fc5f7d1e217eb3a5b6c97079"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f099bfa82ee0ad3ee935413d5663562704f31ea9c1355f6c2b017a562578068e"
     }
   }
 }

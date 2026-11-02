@@ -12,7 +12,8 @@
     "nl": "Rauwe botten",
     "pl": "Surowe kości",
     "cs": "Syrové kosti",
-    "hr": "Sirove kosti"
+    "hr": "Sirove kosti",
+    "sv": "Råa ben"
   },
   "question": {
     "en": "Can dogs eat raw bones?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden rauwe botten eten?",
     "pl": "Czy psy mogą jeść surowe kości?",
     "cs": "Mohou psi jíst syrové kosti?",
-    "hr": "Smiju li psi jesti sirove kosti?"
+    "hr": "Smiju li psi jesti sirove kosti?",
+    "sv": "Får hundar äta råa ben?"
   },
   "url_slug": {
     "en": "raw-bones",
@@ -38,7 +40,8 @@
     "nl": "rauwe-botten",
     "pl": "surowe-kosci",
     "cs": "syrove-kosti",
-    "hr": "sirove-kosti"
+    "hr": "sirove-kosti",
+    "sv": "raa-ben"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Alleen na overleg met je dierenarts. Gekookte botten splinteren, maar ook rauwe botten brengen risico’s mee: ze kunnen tanden breken, verstikking veroorzaken of de darmen verstoppen, en rauw vlees eraan kan bacteriën zoals salmonella bevatten. Sommige dierenartsen staan ze onder toezicht toe; andere raden botten af.",
     "pl": "Tylko po rozmowie z weterynarzem. Gotowane kości łamią się na odłamki, ale surowe też niosą ryzyko: mogą złamać zęby, spowodować zadławienie lub zatkać przewód pokarmowy, a mięso na nich może przenosić bakterie, takie jak Salmonella. Niektórzy weterynarze dopuszczają je pod nadzorem, inni odradzają kości.",
     "cs": "Jen po poradě s veterinářem. Tepelně upravené kosti se tříští, rizika ale nesou i syrové kosti: mohou zlomit zuby, způsobit dušení nebo ucpat střeva a syrové maso na nich může obsahovat bakterie, například salmonelu. Někteří veterináři je pod dohledem povolují, jiní kosti nedoporučují.",
-    "hr": "Samo nakon razgovora s veterinarom. Termički obrađene kosti se cijepaju, ali i sirove kosti nose rizike: mogu slomiti zube, mogu izazvati gušenje, mogu začepiti crijeva, a sirovo meso na njima može sadržavati bakterije poput salmonele. Neki veterinari ih dopuštaju uz nadzor, a drugi ne savjetuju kosti."
+    "hr": "Samo nakon razgovora s veterinarom. Termički obrađene kosti se cijepaju, ali i sirove kosti nose rizike: mogu slomiti zube, mogu izazvati gušenje, mogu začepiti crijeva, a sirovo meso na njima može sadržavati bakterije poput salmonele. Neki veterinari ih dopuštaju uz nadzor, a drugi ne savjetuju kosti.",
+    "sv": "Bara efter att du pratat med veterinären. Tillagade ben splittras, men även råa ben innebär risker: de kan bryta av tänder, orsaka kvävning eller tarmstopp, och rått kött på dem kan bära på bakterier som salmonella. Vissa veterinärer tillåter dem under uppsikt; andra avråder från ben."
   },
   "why": {
     "en": "Sources differ, so we use the stricter level. The FDA lists blockages, choking and mouth injuries after bones and advises asking your vet about safer chews. AKC notes raw bones may carry Salmonella and very hard bones can damage teeth. Bones can injure or block the gut, and blockages are very serious.",
@@ -65,7 +69,8 @@
     "nl": "De bronnen verschillen, dus kiezen we het strengere niveau. De FDA noemt verstoppingen, verstikking en verwondingen in de bek na het eten van botten en raadt aan je dierenarts te vragen naar veiligere kauwartikelen. De AKC wijst erop dat rauwe botten salmonella kunnen bevatten en dat heel harde botten de tanden kunnen beschadigen. Botten kunnen de darmen verwonden of verstoppen, en verstoppingen zijn heel ernstig.",
     "pl": "Źródła się różnią, dlatego przyjmujemy surowszą ocenę. FDA odnotowuje przypadki niedrożności, zadławień i urazów pyska spowodowanych kośćmi i radzi zapytać weterynarza o bezpieczniejsze gryzaki. AKC zauważa, że surowe kości mogą przenosić bakterie Salmonella, a bardzo twarde kości mogą uszkodzić zęby. Kości mogą zranić lub zatkać przewód pokarmowy, a niedrożność jest bardzo poważna.",
     "cs": "Zdroje se liší, proto používáme přísnější hodnocení. FDA uvádí případy ucpání střev, dušení a poranění tlamy po kostech a doporučuje zeptat se veterináře na bezpečnější pamlsky na žvýkání. AKC upozorňuje, že syrové kosti mohou přenášet salmonelu a velmi tvrdé kosti mohou poškodit zuby. Kosti mohou poranit nebo ucpat trávicí trakt a ucpání je velmi vážné.",
-    "hr": "Izvori se razlikuju, pa koristimo strožu ocjenu. FDA nakon kostiju navodi začepljenja, gušenje i ozljede usta te savjetuje da veterinara pitaš za sigurnije žvakalice. AKC napominje da sirove kosti mogu sadržavati salmonelu i da vrlo tvrde kosti mogu oštetiti zube. Kosti mogu ozlijediti ili začepiti crijeva, a začepljenja su vrlo ozbiljna."
+    "hr": "Izvori se razlikuju, pa koristimo strožu ocjenu. FDA nakon kostiju navodi začepljenja, gušenje i ozljede usta te savjetuje da veterinara pitaš za sigurnije žvakalice. AKC napominje da sirove kosti mogu sadržavati salmonelu i da vrlo tvrde kosti mogu oštetiti zube. Kosti mogu ozlijediti ili začepiti crijeva, a začepljenja su vrlo ozbiljna.",
+    "sv": "Källorna går isär, så vi använder den strängare nivån. FDA nämner tarmstopp, kvävning och skador i munnen efter ben och råder dig att fråga veterinären om säkrare tuggben. AKC påpekar att råa ben kan bära på salmonella och att mycket hårda ben kan skada tänderna. Ben kan skada mag-tarmkanalen eller orsaka stopp i den, och tarmstopp är mycket allvarligt."
   },
   "signs": {
     "en": [
@@ -144,6 +149,13 @@
       "Povraćanje",
       "Proljev",
       "Krvarenje iz anusa"
+    ],
+    "sv": [
+      "Kvävning eller kväljningar",
+      "Sår eller blödning i munnen",
+      "Kräkningar",
+      "Diarré",
+      "Blödning från ändtarmen"
     ]
   },
   "what_to_do": {
@@ -157,7 +169,8 @@
     "nl": "Heeft je hond een groot stuk bot ingeslikt, of heeft hij een van deze verschijnselen? Neem dan meteen contact op met je dierenarts. Schrijf op wat voor bot het was en hoe groot.",
     "pl": "Jeśli twój pies połknął duży kawałek kości lub ma któryś z tych objawów, od razu skontaktuj się z weterynarzem. Zanotuj rodzaj i wielkość kości.",
     "cs": "Pokud váš pes spolkl velký kus kosti nebo má některý z těchto příznaků, okamžitě se obraťte na veterináře. Poznamenejte si druh a velikost kosti.",
-    "hr": "Ako je tvoj pas progutao velik komad kosti ili pokazuje bilo koji od ovih znakova, odmah se obrati veterinaru. Zapiši o kakvoj je kosti riječ i koliko je velika."
+    "hr": "Ako je tvoj pas progutao velik komad kosti ili pokazuje bilo koji od ovih znakova, odmah se obrati veterinaru. Zapiši o kakvoj je kosti riječ i koliko je velika.",
+    "sv": "Om hunden har svalt en stor bit ben eller visar något av dessa symtom, kontakta veterinären direkt. Notera vilken sorts ben det var och hur stort det var."
   },
   "serving": {
     "en": "Ask your vet first. If they agree, choose a bone larger than your dog's muzzle so it can't be swallowed whole, avoid very hard bones, and always supervise chewing.",
@@ -170,7 +183,8 @@
     "nl": "Vraag het eerst aan je dierenarts. Vindt die het goed, kies dan een bot dat groter is dan de snuit van je hond, zodat hij het niet heel kan doorslikken, vermijd heel harde botten en houd altijd toezicht tijdens het kauwen.",
     "pl": "Najpierw zapytaj weterynarza. Jeśli się zgodzi, wybierz kość większą niż kufa psa, żeby nie dało się jej połknąć w całości, unikaj bardzo twardych kości i zawsze pilnuj psa podczas gryzienia.",
     "cs": "Nejdřív se zeptejte veterináře. Pokud souhlasí, vyberte kost větší, než je délka psí tlamy, aby ji pes nemohl spolknout celou, vyhněte se velmi tvrdým kostem a při žvýkání psa vždy hlídejte.",
-    "hr": "Prvo pitaj veterinara. Ako se složi, odaberi kost veću od njuške tvog psa kako je ne bi mogao progutati cijelu, izbjegavaj vrlo tvrde kosti i uvijek nadziri glodanje."
+    "hr": "Prvo pitaj veterinara. Ako se složi, odaberi kost veću od njuške tvog psa kako je ne bi mogao progutati cijelu, izbjegavaj vrlo tvrde kosti i uvijek nadziri glodanje.",
+    "sv": "Fråga veterinären först. Om veterinären säger ja, välj ett ben som är större än hundens nos så att det inte kan sväljas helt, undvik mycket hårda ben och håll alltid uppsikt när hunden tuggar."
   },
   "child": {
     "en": "Bones can hurt a dog's teeth and tummy. Only grown-ups and the vet decide if a dog gets a bone, and someone always watches.",
@@ -183,7 +197,8 @@
     "nl": "Botten kunnen de tanden en het buikje van een hond pijn doen. Alleen volwassenen en de dierenarts beslissen of een hond een bot krijgt, en er kijkt altijd iemand mee.",
     "pl": "Kości mogą zaszkodzić psim zębom i brzuszkowi. Tylko dorośli i weterynarz decydują, czy pies dostanie kość, a ktoś zawsze musi go pilnować.",
     "cs": "Kosti můžou psovi ublížit na zubech i v bříšku. Jestli pes dostane kost, rozhodují jen dospělí a veterinář, a vždycky ho při tom někdo hlídá.",
-    "hr": "Kosti mogu ozlijediti pseće zube i trbuh. Samo odrasli i veterinar odlučuju smije li pas dobiti kost, a netko ga uvijek mora gledati dok je glođe."
+    "hr": "Kosti mogu ozlijediti pseće zube i trbuh. Samo odrasli i veterinar odlučuju smije li pas dobiti kost, a netko ga uvijek mora gledati dok je glođe.",
+    "sv": "Ben kan skada hundens tänder och mage. Bara vuxna och veterinären bestämmer om en hund får ett ben, och någon håller alltid koll."
   },
   "faq": [
     {
@@ -198,7 +213,8 @@
         "nl": "Zijn rauwe botten veiliger dan gekookte?",
         "pl": "Czy surowe kości są bezpieczniejsze niż gotowane?",
         "cs": "Jsou syrové kosti bezpečnější než tepelně upravené?",
-        "hr": "Jesu li sirove kosti sigurnije od termički obrađenih?"
+        "hr": "Jesu li sirove kosti sigurnije od termički obrađenih?",
+        "sv": "Är råa ben säkrare än tillagade?"
       },
       "a": {
         "en": "Cooked bones splinter, which is why they should never be given. Raw bones still carry risks of broken teeth, blockages and bacteria, so ask your vet first.",
@@ -211,7 +227,8 @@
         "nl": "Gekookte botten splinteren, en daarom mag je ze nooit geven. Rauwe botten brengen nog steeds risico’s mee, zoals gebroken tanden, verstoppingen en bacteriën, dus vraag het eerst aan je dierenarts.",
         "pl": "Gotowane kości łamią się na odłamki, dlatego nigdy nie wolno ich podawać. Surowe kości nadal niosą ryzyko złamania zębów, niedrożności i bakterii, więc najpierw zapytaj weterynarza.",
         "cs": "Tepelně upravené kosti se tříští, a proto se nesmějí dávat nikdy. Syrové kosti s sebou ale stále nesou riziko zlomených zubů, ucpání střev a bakterií, proto se nejdřív zeptejte veterináře.",
-        "hr": "Termički obrađene kosti se cijepaju i zato ih psu nikad ne treba davati. I sirove kosti nose rizik od slomljenih zuba, začepljenja i bakterija, zato prvo pitaj veterinara."
+        "hr": "Termički obrađene kosti se cijepaju i zato ih psu nikad ne treba davati. I sirove kosti nose rizik od slomljenih zuba, začepljenja i bakterija, zato prvo pitaj veterinara.",
+        "sv": "Tillagade ben splittras, och därför ska de aldrig ges. Råa ben innebär ändå risk för avbrutna tänder, tarmstopp och bakterier, så fråga veterinären först."
       }
     },
     {
@@ -226,7 +243,8 @@
         "nl": "Welk formaat bot is veiliger?",
         "pl": "Jaka wielkość kości jest bezpieczniejsza?",
         "cs": "Jak velká kost je bezpečnější?",
-        "hr": "Koja je veličina kosti sigurnija?"
+        "hr": "Koja je veličina kosti sigurnija?",
+        "sv": "Vilken storlek på benet är säkrare?"
       },
       "a": {
         "en": "A bone should be larger than the length of the dog's muzzle so it can't be swallowed whole, and you should check on your dog while it chews.",
@@ -239,7 +257,8 @@
         "nl": "Een bot moet groter zijn dan de lengte van de snuit van de hond, zodat hij het niet heel kan doorslikken, en je moet regelmatig bij je hond kijken terwijl hij kauwt.",
         "pl": "Kość powinna być większa niż długość kufy psa, żeby nie dało się jej połknąć w całości, a podczas gryzienia pilnuj psa.",
         "cs": "Kost by měla být větší, než je délka psí tlamy, aby ji pes nemohl spolknout celou, a při žvýkání byste psa měli hlídat.",
-        "hr": "Kost treba biti dulja od pseće njuške kako je pas ne bi mogao progutati cijelu, a dok je glođe, povremeno ga provjeri."
+        "hr": "Kost treba biti dulja od pseće njuške kako je pas ne bi mogao progutati cijelu, a dok je glođe, povremeno ga provjeri.",
+        "sv": "Benet ska vara längre än hundens nos så att det inte kan sväljas helt, och du ska hålla koll på hunden medan den tuggar."
       }
     }
   ],
@@ -391,6 +410,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b7508121e471ed33e4147c0702c025f3f2b6d16bbd1ec1f769ede6f47d23dec0"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d76791315b1b4828e83eda53449e98edc4e5f8839080b3788dea0657a2042683"
     }
   }
 }

@@ -12,7 +12,8 @@
     "nl": "Kersen",
     "pl": "Czereśnie",
     "cs": "Třešně",
-    "hr": "Trešnje"
+    "hr": "Trešnje",
+    "sv": "Körsbär"
   },
   "question": {
     "en": "Can dogs eat cherries?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden kersen eten?",
     "pl": "Czy psy mogą jeść czereśnie?",
     "cs": "Mohou psi jíst třešně?",
-    "hr": "Smiju li psi jesti trešnje?"
+    "hr": "Smiju li psi jesti trešnje?",
+    "sv": "Får hundar äta körsbär?"
   },
   "url_slug": {
     "en": "cherries",
@@ -38,7 +40,8 @@
     "nl": "kersen",
     "pl": "czeresnie",
     "cs": "tresne",
-    "hr": "tresnje"
+    "hr": "tresnje",
+    "sv": "korsbar"
   },
   "level": "dangerous",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee, kersen kun je beter vermijden. Het rijpe vruchtvlees is niet het giftige deel, maar de pitten, stelen en bladeren bevatten stoffen waaruit cyanide kan vrijkomen, en pitten kunnen de darmen van een hond verstoppen. Volgens Pet Poison Helpline weegt het risico zwaarder dan elk voordeel.",
     "pl": "Nie, czereśni lepiej unikać. Sam dojrzały miąższ nie jest toksyczny, ale pestki, szypułki i liście zawierają związki, które mogą uwalniać cyjanek, a pestki mogą zatkać jelita psa. Pet Poison Helpline podaje, że ryzyko przewyższa wszelkie korzyści.",
     "cs": "Ne, třešním je lepší se vyhnout. Zralá dužnina sama jedovatá není, ale pecky, stopky a listy obsahují látky, ze kterých se může uvolnit kyanid, a pecky mohou psovi ucpat střeva. Podle Pet Poison Helpline riziko převažuje nad jakýmkoli přínosem.",
-    "hr": "Ne, trešnje je bolje izbjegavati. Zrelo meso ploda nije otrovni dio, ali koštice, peteljke i listovi sadrže spojeve iz kojih se može osloboditi cijanid, a koštice mogu psu začepiti crijeva. Pet Poison Helpline navodi da rizik nadmašuje svaku korist."
+    "hr": "Ne, trešnje je bolje izbjegavati. Zrelo meso ploda nije otrovni dio, ali koštice, peteljke i listovi sadrže spojeve iz kojih se može osloboditi cijanid, a koštice mogu psu začepiti crijeva. Pet Poison Helpline navodi da rizik nadmašuje svaku korist.",
+    "sv": "Nej, körsbär är bäst att undvika. Det mogna fruktköttet är inte den giftiga delen, men kärnor, skaft och blad innehåller ämnen som kan frigöra cyanid, och kärnorna kan ge stopp i hundens tarmar. Pet Poison Helpline menar att risken väger tyngre än nyttan."
   },
   "why": {
     "en": "Cherry pits, stems and leaves contain cyanogenic glycosides, which can turn into cyanide. Cyanide is released when a pit is chewed and broken; a pit swallowed whole is not expected to poison, but it can get stuck and cause a blockage. One cherry will not cause cyanide poisoning, yet the risk is not worth it.",
@@ -65,7 +69,8 @@
     "nl": "Kersenpitten, -stelen en -bladeren bevatten cyanogene glycosiden, die in cyanide kunnen veranderen. Cyanide komt vrij als een pit wordt stukgekauwd en gebroken; van een heel ingeslikte pit wordt geen vergiftiging verwacht, maar die kan wel vast komen te zitten en een verstopping veroorzaken. Eén kers veroorzaakt geen cyanidevergiftiging, maar het risico is het niet waard.",
     "pl": "Pestki, szypułki i liście czereśni zawierają glikozydy cyjanogenne, które mogą przekształcić się w cyjanek. Cyjanek uwalnia się, gdy pestka zostanie rozgryziona i rozkruszona; połknięta w całości pestka raczej nie wywoła zatrucia, ale może utknąć i spowodować niedrożność. Jedna czereśnia nie spowoduje zatrucia cyjankiem, ale i tak nie warto ryzykować.",
     "cs": "Třešňové pecky, stopky a listy obsahují kyanogenní glykosidy, ze kterých může vznikat kyanid. Kyanid se uvolní, když pes pecku rozkouše nebo rozlomí; u celé spolknuté pecky se otrava nepředpokládá, ale pecka může uvíznout a způsobit ucpání. Jedna třešeň otravu kyanidem nezpůsobí, přesto riziko nestojí za to.",
-    "hr": "Koštice, peteljke i listovi trešnje sadrže cijanogene glikozide, koji se mogu pretvoriti u cijanid. Cijanid se oslobađa kad se koštica sažvače i razbije; od cijele progutane koštice ne očekuje se otrovanje, ali ona može zapeti i izazvati začepljenje. Jedna trešnja neće izazvati otrovanje cijanidom, no rizik se ne isplati."
+    "hr": "Koštice, peteljke i listovi trešnje sadrže cijanogene glikozide, koji se mogu pretvoriti u cijanid. Cijanid se oslobađa kad se koštica sažvače i razbije; od cijele progutane koštice ne očekuje se otrovanje, ali ona može zapeti i izazvati začepljenje. Jedna trešnja neće izazvati otrovanje cijanidom, no rizik se ne isplati.",
+    "sv": "Körsbärens kärnor, skaft och blad innehåller cyanogena glykosider, som kan omvandlas till cyanid. Cyanid frigörs när en kärna tuggas sönder; en kärna som sväljs hel väntas inte ge förgiftning, men den kan fastna och orsaka stopp. Ett körsbär ger ingen cyanidförgiftning, men risken är inte värd det."
   },
   "signs": {
     "en": [
@@ -144,6 +149,13 @@
       "Otežano disanje, dahtanje",
       "Želučane tegobe ili proljev",
       "Šok"
+    ],
+    "sv": [
+      "Vidgade pupiller",
+      "Tegelrött tandkött",
+      "Svårt att andas, flämtning",
+      "Orolig mage eller diarré",
+      "Chock"
     ]
   },
   "what_to_do": {
@@ -157,7 +169,8 @@
     "nl": "Heeft je hond kersenpitten, -stelen of -bladeren gegeten, of veel kersen? Neem dan meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op hoeveel er ongeveer is gegeten en of er pitten zijn stukgekauwd. Wacht niet op verschijnselen.",
     "pl": "Jeśli twój pies zjadł pestki, szypułki lub liście czereśni albo dużo czereśni, od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, ile mniej więcej zjadł i czy rozgryzał pestki. Nie czekaj na objawy.",
     "cs": "Pokud váš pes snědl třešňové pecky, stopky nebo listy nebo hodně třešní, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, zhruba kolik jich snědl a zda pecky rozkousal. Nečekejte, až se objeví příznaky.",
-    "hr": "Ako je pas pojeo koštice, peteljke ili listove trešnje ili mnogo trešanja, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši otprilike koliko ih je pojeo i je li žvakao koštice. Ne čekaj da se pojave znakovi."
+    "hr": "Ako je pas pojeo koštice, peteljke ili listove trešnje ili mnogo trešanja, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši otprilike koliko ih je pojeo i je li žvakao koštice. Ne čekaj da se pojave znakovi.",
+    "sv": "Om hunden har ätit körsbärskärnor, skaft eller blad, eller många körsbär, kontakta veterinären eller en giftrådgivning för djur direkt. Notera ungefär hur många den åt och om kärnorna tuggades sönder. Vänta inte på symtom."
   },
   "serving": null,
   "child": {
@@ -171,7 +184,8 @@
     "nl": "In kersen zitten harde pitten die slecht zijn voor honden. Kersen zijn voor mensen. Vertel het aan een volwassene als je hond er een paar opeet.",
     "pl": "Czereśnie mają w środku twarde pestki, które szkodzą psom. Czereśnie zostaw dla ludzi i powiedz dorosłemu, jeśli twój pies jakieś zje.",
     "cs": "Třešně mají uvnitř tvrdé pecky, které psům škodí. Třešně nech pro lidi, a když je pes sní, řekni to dospělému.",
-    "hr": "Trešnje u sebi imaju tvrde koštice koje štete psima. Trešnje ostavi ljudima, a ako ih pas pojede, reci odrasloj osobi."
+    "hr": "Trešnje u sebi imaju tvrde koštice koje štete psima. Trešnje ostavi ljudima, a ako ih pas pojede, reci odrasloj osobi.",
+    "sv": "Körsbär har hårda kärnor inuti som är dåliga för hundar. Spara körsbär till människor och säg till en vuxen om hunden äter några."
   },
   "faq": [
     {
@@ -186,7 +200,8 @@
         "nl": "Is één kers een noodgeval?",
         "pl": "Czy jedna czereśnia to nagły przypadek?",
         "cs": "Je jedna třešeň důvod k pohotovosti?",
-        "hr": "Je li jedna trešnja hitan slučaj?"
+        "hr": "Je li jedna trešnja hitan slučaj?",
+        "sv": "Är ett körsbär akut?"
       },
       "a": {
         "en": "One cherry will not cause cyanide poisoning, and a healthy dog that eats one or two does not need panic. Still, pits can cause blockages, so ask your vet if you are unsure.",
@@ -199,7 +214,8 @@
         "nl": "Eén kers veroorzaakt geen cyanidevergiftiging, en als een gezonde hond er een of twee eet, hoef je niet in paniek te raken. Toch kunnen pitten een verstopping veroorzaken, dus vraag het je dierenarts als je twijfelt.",
         "pl": "Jedna czereśnia nie spowoduje zatrucia cyjankiem, a zdrowy pies, który zje jedną lub dwie, nie jest powodem do paniki. Pestki mogą jednak powodować niedrożność, więc jeśli nie masz pewności, zapytaj weterynarza.",
         "cs": "Jedna třešeň otravu kyanidem nezpůsobí a u zdravého psa, který sní jednu nebo dvě, není třeba panikařit. Pecky ale mohou způsobit ucpání, proto se v případě nejistoty zeptejte veterináře.",
-        "hr": "Jedna trešnja neće izazvati otrovanje cijanidom, a ako zdrav pas pojede jednu ili dvije, nema razloga za paniku. Ipak, koštice mogu izazvati začepljenje, zato pitaj veterinara ako nisi siguran."
+        "hr": "Jedna trešnja neće izazvati otrovanje cijanidom, a ako zdrav pas pojede jednu ili dvije, nema razloga za paniku. Ipak, koštice mogu izazvati začepljenje, zato pitaj veterinara ako nisi siguran.",
+        "sv": "Ett körsbär ger ingen cyanidförgiftning, och om en frisk hund äter ett eller två finns ingen anledning till panik. Kärnor kan ändå orsaka stopp, så fråga veterinären om du är osäker."
       }
     },
     {
@@ -214,7 +230,8 @@
         "nl": "Mag ik ontpitte kersen geven?",
         "pl": "Czy mogę dawać psu czereśnie bez pestek?",
         "cs": "Mohu dát třešně bez pecek?",
-        "hr": "Smijem li psu dati trešnje bez koštica?"
+        "hr": "Smijem li psu dati trešnje bez koštica?",
+        "sv": "Kan jag ge urkärnade körsbär?"
       },
       "a": {
         "en": "The ripe pulp is not the toxic part, but Pet Poison Helpline advises that the risk of feeding cherries outweighs the benefits.",
@@ -227,7 +244,8 @@
         "nl": "Het rijpe vruchtvlees is niet het giftige deel, maar volgens Pet Poison Helpline weegt het risico van het geven van kersen zwaarder dan de voordelen.",
         "pl": "Sam dojrzały miąższ nie jest toksyczny, ale Pet Poison Helpline podaje, że ryzyko karmienia czereśniami przewyższa korzyści.",
         "cs": "Zralá dužnina sama jedovatá není, ale podle Pet Poison Helpline riziko krmení třešněmi převažuje nad přínosem.",
-        "hr": "Zrelo meso ploda nije otrovni dio, ali Pet Poison Helpline upozorava da rizik od davanja trešanja psu nadmašuje koristi."
+        "hr": "Zrelo meso ploda nije otrovni dio, ali Pet Poison Helpline upozorava da rizik od davanja trešanja psu nadmašuje koristi.",
+        "sv": "Det mogna fruktköttet är inte den giftiga delen, men Pet Poison Helpline menar att risken med att ge körsbär väger tyngre än nyttan."
       }
     }
   ],
@@ -347,6 +365,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5510854f25d8667f8f51a4ec5cbad1300e549a5eda0c18f86f6547f35c726b7b"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a6dd01d6b06f296d86fdda2258bc96d5577a75fa7441ab4e9bc528a96257162d"
     }
   }
 }

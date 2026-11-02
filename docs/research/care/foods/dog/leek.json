@@ -12,7 +12,8 @@
     "nl": "Prei",
     "pl": "Por",
     "cs": "Pórek",
-    "hr": "Poriluk"
+    "hr": "Poriluk",
+    "sv": "Purjolök"
   },
   "question": {
     "en": "Can dogs eat leek?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden prei eten?",
     "pl": "Czy psy mogą jeść pora?",
     "cs": "Mohou psi jíst pórek?",
-    "hr": "Smiju li psi jesti poriluk?"
+    "hr": "Smiju li psi jesti poriluk?",
+    "sv": "Får hundar äta purjolök?"
   },
   "url_slug": {
     "en": "leek",
@@ -38,7 +40,8 @@
     "nl": "prei",
     "pl": "por",
     "cs": "porek",
-    "hr": "poriluk"
+    "hr": "poriluk",
+    "sv": "purjolok"
   },
   "level": "toxic",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee. Prei hoort, net als ui en knoflook, bij de lookfamilie (allium) en is giftig voor honden. Alle delen van de plant zijn schadelijk, ook gekookt of gedroogd. Prei kan rode bloedcellen beschadigen, en verschijnselen komen vaak pas na een paar dagen.",
     "pl": "Nie. Por należy do rodziny czosnkowatych, tak jak cebula i czosnek, i jest toksyczny dla psów. Szkodliwe są wszystkie części rośliny, także po ugotowaniu lub wysuszeniu. Może uszkadzać czerwone krwinki, a objawy często pojawiają się dopiero po kilku dniach.",
     "cs": "Ne. Pórek patří stejně jako cibule a česnek mezi cibuloviny (rod Allium) a je pro psy jedovatý. Škodlivé jsou všechny části rostliny, i tepelně upravené nebo sušené. Může poškodit červené krvinky a příznaky se často objeví až po několika dnech.",
-    "hr": "Ne. Poriluk pripada biljkama iz roda Allium, kao luk i češnjak, i otrovan je za pse. Štetni su svi dijelovi biljke, čak i termički obrađeni ili sušeni. Može oštetiti crvene krvne stanice, a znakovi se često pojave tek nakon nekoliko dana."
+    "hr": "Ne. Poriluk pripada biljkama iz roda Allium, kao luk i češnjak, i otrovan je za pse. Štetni su svi dijelovi biljke, čak i termički obrađeni ili sušeni. Može oštetiti crvene krvne stanice, a znakovi se često pojave tek nakon nekoliko dana.",
+    "sv": "Nej. Purjolök är en lökväxt, precis som lök och vitlök, och den är giftig för hundar. Alla delar av växten är skadliga, även tillagade eller torkade. Den kan skada de röda blodkropparna, och symtomen dröjer ofta några dagar."
   },
   "why": {
     "en": "It belongs to the allium family (onion, garlic, leek, chives), which is toxic to dogs. These plants contain compounds that damage red blood cells and can lead to anaemia. All parts and all forms are harmful: raw, cooked, dried and powdered. Stomach upset can happen with any amount; larger amounts damage the blood.",
@@ -65,7 +69,8 @@
     "nl": "Prei hoort bij de lookfamilie (ui, knoflook, prei, bieslook), die giftig is voor honden. Deze planten bevatten stoffen die rode bloedcellen beschadigen en tot bloedarmoede kunnen leiden. Alle delen en alle vormen zijn schadelijk: rauw, gekookt, gedroogd en als poeder. Maag-darmklachten kunnen bij elke hoeveelheid optreden; grotere hoeveelheden beschadigen het bloed.",
     "pl": "Por należy do rodziny czosnkowatych (cebula, czosnek, por, szczypiorek), toksycznej dla psów. Te rośliny zawierają związki, które uszkadzają czerwone krwinki i mogą prowadzić do anemii. Szkodliwe są wszystkie części i wszystkie postacie: surowa, gotowana, suszona i w proszku. Dolegliwości żołądkowe mogą wystąpić po każdej ilości; większe ilości uszkadzają krew.",
     "cs": "Patří mezi cibuloviny (rod Allium: cibule, česnek, pórek, pažitka), které jsou pro psy jedovaté. Tyto rostliny obsahují látky, které poškozují červené krvinky a mohou vést k chudokrevnosti (anémii). Škodlivé jsou všechny části a všechny podoby: syrová, tepelně upravená, sušená i v prášku. Podrážděný žaludek může způsobit jakékoli množství; větší množství poškozuje krev.",
-    "hr": "Pripada biljkama iz roda Allium (luk, češnjak, poriluk, vlasac), koje su otrovne za pse. Te biljke sadrže spojeve koji oštećuju crvene krvne stanice i mogu dovesti do anemije. Štetni su svi dijelovi i svi oblici: sirovi, termički obrađeni, sušeni i u prahu. Probavne tegobe mogu se pojaviti nakon bilo koje količine, a veće količine oštećuju krv."
+    "hr": "Pripada biljkama iz roda Allium (luk, češnjak, poriluk, vlasac), koje su otrovne za pse. Te biljke sadrže spojeve koji oštećuju crvene krvne stanice i mogu dovesti do anemije. Štetni su svi dijelovi i svi oblici: sirovi, termički obrađeni, sušeni i u prahu. Probavne tegobe mogu se pojaviti nakon bilo koje količine, a veće količine oštećuju krv.",
+    "sv": "Den hör till lökväxterna (lök, vitlök, purjolök, gräslök), som är giftiga för hundar. Växterna innehåller ämnen som skadar de röda blodkropparna och kan leda till blodbrist (anemi). Alla delar och alla former är skadliga: råa, tillagade, torkade och i pulverform. Magbesvär kan uppstå efter vilken mängd som helst; större mängder skadar blodet."
   },
   "signs": {
     "en": [
@@ -133,6 +138,12 @@
       "Pas jede manje nego inače",
       "Probavne tegobe, čak i nakon malih količina",
       "Znakovi anemije (oštećene crvene krvne stanice), obično nekoliko dana kasnije"
+    ],
+    "sv": [
+      "Kräkningar och diarré",
+      "Äter mindre än vanligt",
+      "Magbesvär, även efter små mängder",
+      "Tecken på blodbrist (skadade röda blodkroppar), oftast några dagar senare"
     ]
   },
   "what_to_do": {
@@ -146,7 +157,8 @@
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat er is gegeten (prei) en ongeveer hoeveel. Wacht niet op verschijnselen: schade aan het bloed is meestal pas een paar dagen later te zien.",
     "pl": "Od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co pies zjadł (pora) i mniej więcej ile. Nie czekaj na objawy: uszkodzenie krwi zwykle ujawnia się dopiero po kilku dniach.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co pes snědl (pórek) a zhruba kolik. Nečekejte, až se objeví příznaky: poškození krve se obvykle projeví až po několika dnech.",
-    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je pas pojeo (poriluk) i otprilike koliko. Ne čekaj da se pojave znakovi: oštećenje krvi obično se pokaže tek nakon nekoliko dana."
+    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je pas pojeo (poriluk) i otprilike koliko. Ne čekaj da se pojave znakovi: oštećenje krvi obično se pokaže tek nakon nekoliko dana.",
+    "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt. Notera vad hunden åt (purjolök) och ungefär hur mycket. Vänta inte på symtom: skadorna på blodet syns oftast först några dagar senare."
   },
   "serving": null,
   "child": {
@@ -160,7 +172,8 @@
     "nl": "Prei hoort bij de uienfamilie, dus het is niet voor honden. Vertel het aan een volwassene als je hond ervan eet.",
     "pl": "Por należy do rodziny cebuli, więc nie jest dla psów. Powiedz dorosłemu, jeśli twój pies go zje.",
     "cs": "Pórek patří do stejné rodiny jako cibule, takže není pro psy. Když ho pes sní, řekni to dospělému.",
-    "hr": "Poriluk je iz obitelji luka, zato nije za pse. Reci odrasloj osobi ako ga tvoj pas pojede."
+    "hr": "Poriluk je iz obitelji luka, zato nije za pse. Reci odrasloj osobi ako ga tvoj pas pojede.",
+    "sv": "Purjolök hör till lökfamiljen, så den är inte för hundar. Säg till en vuxen om din hund äter purjolök."
   },
   "faq": [
     {
@@ -175,7 +188,8 @@
         "nl": "Is prei net zo gevaarlijk als ui?",
         "pl": "Czy por jest tak samo niebezpieczny jak cebula?",
         "cs": "Je pórek stejně nebezpečný jako cibule?",
-        "hr": "Je li poriluk jednako opasan kao luk?"
+        "hr": "Je li poriluk jednako opasan kao luk?",
+        "sv": "Är purjolök lika farlig som lök?"
       },
       "a": {
         "en": "Garlic and onion are the most common causes of poisoning, but leek belongs to the same toxic plant family and should be treated the same way.",
@@ -188,7 +202,8 @@
         "nl": "Knoflook en ui zijn de meest voorkomende oorzaken van vergiftiging, maar prei hoort bij dezelfde giftige plantenfamilie en moet je op dezelfde manier behandelen.",
         "pl": "Czosnek i cebula najczęściej powodują zatrucia, ale por należy do tej samej toksycznej rodziny roślin i trzeba go traktować tak samo.",
         "cs": "Nejčastější příčinou otravy jsou česnek a cibule, pórek ale patří do stejné jedovaté skupiny rostlin a je třeba k němu přistupovat stejně.",
-        "hr": "Češnjak i luk najčešći su uzroci otrovanja, ali poriluk pripada istoj skupini otrovnih biljaka i treba ga shvatiti jednako ozbiljno."
+        "hr": "Češnjak i luk najčešći su uzroci otrovanja, ali poriluk pripada istoj skupini otrovnih biljaka i treba ga shvatiti jednako ozbiljno.",
+        "sv": "Vitlök och lök är de vanligaste orsakerna till förgiftning, men purjolök hör till samma giftiga växtfamilj och ska behandlas på samma sätt."
       }
     },
     {
@@ -203,7 +218,8 @@
         "nl": "Is het veilig als het gekookt is of als poeder?",
         "pl": "Czy po ugotowaniu lub w proszku jest bezpieczny?",
         "cs": "Je bezpečný tepelně upravený pórek nebo pórek v prášku?",
-        "hr": "Je li siguran kad je termički obrađen ili u prahu?"
+        "hr": "Je li siguran kad je termički obrađen ili u prahu?",
+        "sv": "Är purjolök ofarlig om den är tillagad eller i pulverform?"
       },
       "a": {
         "en": "No. Raw, cooked, dried, powdered and liquid forms are all poisonous to dogs.",
@@ -216,7 +232,8 @@
         "nl": "Nee. Rauw, gekookt, gedroogd, als poeder en vloeibaar: alle vormen zijn giftig voor honden.",
         "pl": "Nie. Postać surowa, gotowana, suszona, w proszku i płynna – wszystkie są trujące dla psów.",
         "cs": "Ne. Syrová, tepelně upravená, sušená, prášková i tekutá podoba je pro psy jedovatá.",
-        "hr": "Nije. Otrovan je za pse u svakom obliku: sirov, termički obrađen, sušen, u prahu i u tekućem obliku."
+        "hr": "Nije. Otrovan je za pse u svakom obliku: sirov, termički obrađen, sušen, u prahu i u tekućem obliku.",
+        "sv": "Nej. Råa, tillagade, torkade, pulveriserade och flytande former är alla giftiga för hundar."
       }
     }
   ],
@@ -355,6 +372,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0ac0a14acfedc870faec255a70ddf1434ba107cedd32492634c1d16dc8ad226a"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "69e523edec49b75a088b4dedb06e63bc872090d56287f36ff56490c68da515db"
     }
   }
 }

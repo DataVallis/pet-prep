@@ -12,7 +12,8 @@
     "nl": "Avocado",
     "pl": "Awokado",
     "cs": "Avokádo",
-    "hr": "Avokado"
+    "hr": "Avokado",
+    "sv": "Avokado"
   },
   "question": {
     "en": "Can dogs eat avocado?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden avocado eten?",
     "pl": "Czy psy mogą jeść awokado?",
     "cs": "Mohou psi jíst avokádo?",
-    "hr": "Smiju li psi jesti avokado?"
+    "hr": "Smiju li psi jesti avokado?",
+    "sv": "Får hundar äta avokado?"
   },
   "url_slug": {
     "en": "avocado",
@@ -38,7 +40,8 @@
     "nl": "avocado",
     "pl": "awokado",
     "cs": "avokado",
-    "hr": "avokado"
+    "hr": "avokado",
+    "sv": "avokado"
   },
   "level": "dangerous",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee, het is veiliger om avocado bij honden weg te houden. Sommige dierenartsen zeggen dat het vruchtvlees niet giftig is, maar de schil, pit en bladeren bevatten persine, en de grote pit kan verstikking of een darmverstopping veroorzaken. Avocado is ook erg vet, wat tot alvleesklierontsteking kan leiden.",
     "pl": "Nie, bezpieczniej trzymać awokado z dala od psów. Niektórzy weterynarze uważają, że miąższ nie jest toksyczny, ale skórka, pestka i liście zawierają persynę, a duża pestka może zadławić psa lub zatkać jego jelita. Awokado jest też bardzo tłuste, co może prowadzić do zapalenia trzustki.",
     "cs": "Ne, bezpečnější je držet avokádo mimo dosah psů. Někteří veterináři uvádějí, že dužnina jedovatá není, ale slupka, pecka a listy obsahují persin a velká pecka může psa dusit nebo mu ucpat střeva. Avokádo je také velmi tučné, což může vést k zánětu slinivky břišní.",
-    "hr": "Ne, sigurnije je držati avokado podalje od pasa. Neki veterinari kažu da meso ploda nije otrovno, ali kora, koštica i listovi sadrže persin, a velika koštica može izazvati gušenje ili začepljenje crijeva. Avokado je i vrlo mastan, što može dovesti do upale gušterače."
+    "hr": "Ne, sigurnije je držati avokado podalje od pasa. Neki veterinari kažu da meso ploda nije otrovno, ali kora, koštica i listovi sadrže persin, a velika koštica može izazvati gušenje ili začepljenje crijeva. Avokado je i vrlo mastan, što može dovesti do upale gušterače.",
+    "sv": "Nej, det är säkrast att hålla avokado borta från hundar. Vissa veterinärer säger att fruktköttet inte är giftigt, men skal, kärna och blad innehåller persin, och den stora kärnan kan få hunden att kvävas eller ge stopp i tarmen. Avokado är också mycket fet, vilket kan leda till bukspottkörtelinflammation."
   },
   "why": {
     "en": "Sources disagree, so we use the stricter level. The Merck Veterinary Manual says dogs seem relatively resistant compared with other species, the ASPCA names birds and rabbits as the biggest concern, and AKC says the flesh is not toxic. Blue Cross calls persin poisonous to dogs. All agree that the pit can choke a dog or cause a blockage and that the high fat can cause pancreatitis.",
@@ -65,7 +69,8 @@
     "nl": "De bronnen zijn het niet met elkaar eens, dus kiezen we het strengere niveau. Volgens de Merck Veterinary Manual lijken honden vergeleken met andere diersoorten vrij ongevoelig, de ASPCA noemt vogels en konijnen als grootste zorg en de AKC zegt dat het vruchtvlees niet giftig is. Blue Cross noemt persine giftig voor honden. Ze zijn het er allemaal over eens dat een hond in de pit kan stikken of er een verstopping door kan krijgen, en dat het hoge vetgehalte alvleesklierontsteking kan veroorzaken.",
     "pl": "Źródła się różnią, dlatego przyjmujemy surowszą ocenę. Merck Veterinary Manual podaje, że psy wydają się stosunkowo odporne w porównaniu z innymi gatunkami, ASPCA wskazuje, że największe zagrożenie dotyczy ptaków i królików, a AKC twierdzi, że miąższ nie jest toksyczny. Blue Cross uznaje persynę za trującą dla psów. Wszystkie źródła są zgodne, że pestka może zadławić psa lub spowodować niedrożność, a duża zawartość tłuszczu może wywołać zapalenie trzustki.",
     "cs": "Zdroje se neshodují, a proto používáme přísnější úroveň. Podle Merck Veterinary Manual se psi ve srovnání s jinými druhy zdají poměrně odolní, ASPCA za nejohroženější považuje ptáky a králíky a AKC uvádí, že dužnina jedovatá není. Blue Cross označuje persin za jedovatý pro psy. Všechny zdroje se shodují, že pecka může psa dusit nebo způsobit ucpání a že vysoký obsah tuku může vyvolat zánět slinivky břišní.",
-    "hr": "Izvori se ne slažu, zato primjenjujemo strožu razinu. Merck Veterinary Manual navodi da su psi naizgled razmjerno otporni u usporedbi s drugim vrstama, ASPCA kao najveću brigu navodi ptice i kuniće, a AKC kaže da meso ploda nije otrovno. Blue Cross persin naziva otrovnim za pse. Svi se slažu da koštica može izazvati gušenje ili začepljenje i da velika količina masti može izazvati upalu gušterače."
+    "hr": "Izvori se ne slažu, zato primjenjujemo strožu razinu. Merck Veterinary Manual navodi da su psi naizgled razmjerno otporni u usporedbi s drugim vrstama, ASPCA kao najveću brigu navodi ptice i kuniće, a AKC kaže da meso ploda nije otrovno. Blue Cross persin naziva otrovnim za pse. Svi se slažu da koštica može izazvati gušenje ili začepljenje i da velika količina masti može izazvati upalu gušterače.",
+    "sv": "Källorna är oense, så vi använder den strängare nivån. Merck Veterinary Manual skriver att hundar verkar relativt motståndskraftiga jämfört med andra arter, ASPCA pekar ut fåglar och kaniner som mest utsatta, och AKC skriver att fruktköttet inte är giftigt. Blue Cross kallar persin giftigt för hundar. Alla är överens om att kärnan kan få hunden att kvävas eller orsaka stopp och att den höga fetthalten kan ge bukspottkörtelinflammation (pankreatit)."
   },
   "signs": {
     "en": [
@@ -122,6 +127,11 @@
       "Gušenje košticom",
       "Znakovi začepljenja nakon što je pas progutao košticu: ponavljano povraćanje, odbijanje hrane, umor",
       "Pas se loše osjeća zbog velike količine masti, što može dovesti do upale gušterače"
+    ],
+    "sv": [
+      "Kvävning på kärnan",
+      "Tecken på tarmstopp efter att ha svalt kärnan: upprepade kräkningar, ingen matlust, trötthet",
+      "Mår dåligt av den höga fetthalten, som kan leda till bukspottkörtelinflammation"
     ]
   },
   "what_to_do": {
@@ -135,7 +145,8 @@
     "nl": "Heeft je hond op een avocadopit gekauwd of er een ingeslikt? Neem dan meteen contact op met je dierenarts en wacht niet op verschijnselen. Heeft hij guacamole gegeten, bel dan ook je dierenarts of een vergiftigingenlijn voor dieren, want guacamole bevat meestal ui en knoflook. Schrijf op wat er is gegeten en hoeveel.",
     "pl": "Jeśli twój pies gryzł lub połknął pestkę awokado, od razu skontaktuj się z weterynarzem i nie czekaj na objawy. Jeśli zjadł guacamole, także zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, bo guacamole zwykle zawiera cebulę i czosnek. Zanotuj, co i ile zjadł.",
     "cs": "Pokud váš pes kousal nebo spolkl avokádovou pecku, okamžitě se obraťte na veterináře a nečekejte, až se objeví příznaky. Pokud snědl guacamole, zavolejte také veterináři nebo na toxikologickou linku pro zvířata, protože guacamole obvykle obsahuje cibuli a česnek. Poznamenejte si, co a kolik pes snědl.",
-    "hr": "Ako je pas žvakao ili progutao košticu avokada, odmah se obrati veterinaru i ne čekaj da se pojave znakovi. Ako je pojeo guacamole, također nazovi veterinara ili telefonsku liniju za otrovanja životinja, jer guacamole obično sadrži luk i češnjak. Zapiši što je pojeo i koliko."
+    "hr": "Ako je pas žvakao ili progutao košticu avokada, odmah se obrati veterinaru i ne čekaj da se pojave znakovi. Ako je pojeo guacamole, također nazovi veterinara ili telefonsku liniju za otrovanja životinja, jer guacamole obično sadrži luk i češnjak. Zapiši što je pojeo i koliko.",
+    "sv": "Om hunden har tuggat på eller svalt en avokadokärna, kontakta veterinären direkt och vänta inte på symtom. Om den har ätit guacamole, ring också veterinären eller en giftrådgivning för djur, eftersom guacamole oftast innehåller lök och vitlök. Notera vad och hur mycket den åt."
   },
   "serving": null,
   "child": {
@@ -149,7 +160,8 @@
     "nl": "Avocado is geen goed hondensnoepje. De grote pit kan vast komen te zitten in het buikje van een hond, dus houd avocado’s uit de buurt.",
     "pl": "Awokado to nie jest dobra przekąska dla psa. Duża pestka w środku może utknąć mu w brzuszku, więc trzymaj awokado z dala od psa.",
     "cs": "Avokádo není dobrá svačinka pro psa. Velká pecka uvnitř mu může uvíznout v bříšku, a tak avokádo schovej, aby na něj pes nedosáhl.",
-    "hr": "Avokado nije dobra grickalica za pse. Velika koštica u njemu može psu zapeti u trbuščiću, zato drži avokado podalje."
+    "hr": "Avokado nije dobra grickalica za pse. Velika koštica u njemu može psu zapeti u trbuščiću, zato drži avokado podalje.",
+    "sv": "Avokado är inget bra mellanmål för hundar. Den stora kärnan kan fastna i hundens mage, så håll avokado borta."
   },
   "faq": [
     {
@@ -164,7 +176,8 @@
         "nl": "Is guacamole veilig voor honden?",
         "pl": "Czy guacamole jest bezpieczne dla psów?",
         "cs": "Je guacamole pro psy bezpečné?",
-        "hr": "Je li guacamole siguran za pse?"
+        "hr": "Je li guacamole siguran za pse?",
+        "sv": "Är guacamole säkert för hundar?"
       },
       "a": {
         "en": "No. Guacamole usually contains onion and garlic, which are toxic to dogs.",
@@ -177,7 +190,8 @@
         "nl": "Nee. Guacamole bevat meestal ui en knoflook, en die zijn giftig voor honden.",
         "pl": "Nie. Guacamole zwykle zawiera cebulę i czosnek, które są toksyczne dla psów.",
         "cs": "Ne. Guacamole obvykle obsahuje cibuli a česnek, které jsou pro psy jedovaté.",
-        "hr": "Nije. Guacamole obično sadrži luk i češnjak, koji su otrovni za pse."
+        "hr": "Nije. Guacamole obično sadrži luk i češnjak, koji su otrovni za pse.",
+        "sv": "Nej. Guacamole innehåller oftast lök och vitlök, som är giftiga för hundar."
       }
     },
     {
@@ -192,7 +206,8 @@
         "nl": "Wat als mijn hond de pit heeft ingeslikt?",
         "pl": "Co zrobić, jeśli mój pies połknął pestkę?",
         "cs": "Co když pes spolkl pecku?",
-        "hr": "Što ako je moj pas progutao košticu?"
+        "hr": "Što ako je moj pas progutao košticu?",
+        "sv": "Vad gör jag om hunden har svalt kärnan?"
       },
       "a": {
         "en": "Contact your vet right away. The pit can cause a blockage in the gut.",
@@ -205,7 +220,8 @@
         "nl": "Neem meteen contact op met je dierenarts. De pit kan een verstopping in de darmen veroorzaken.",
         "pl": "Od razu skontaktuj się z weterynarzem. Pestka może spowodować niedrożność jelit.",
         "cs": "Okamžitě se obraťte na veterináře. Pecka může ucpat střeva.",
-        "hr": "Odmah se obrati veterinaru. Koštica može izazvati začepljenje crijeva."
+        "hr": "Odmah se obrati veterinaru. Koštica može izazvati začepljenje crijeva.",
+        "sv": "Kontakta veterinären direkt. Kärnan kan orsaka stopp i tarmen."
       }
     },
     {
@@ -220,7 +236,8 @@
         "nl": "Is het vruchtvlees van avocado giftig voor honden?",
         "pl": "Czy miąższ awokado jest trujący dla psów?",
         "cs": "Je dužnina avokáda pro psy jedovatá?",
-        "hr": "Je li meso avokada otrovno za pse?"
+        "hr": "Je li meso avokada otrovno za pse?",
+        "sv": "Är avokadons fruktkött giftigt för hundar?"
       },
       "a": {
         "en": "Sources disagree: some say the flesh is not toxic, others call avocado poisonous to dogs. Because it is also very fatty and the pit is a hazard, we advise keeping it away.",
@@ -233,7 +250,8 @@
         "nl": "De bronnen zijn het niet eens: sommige zeggen dat het vruchtvlees niet giftig is, andere noemen avocado giftig voor honden. Omdat avocado ook erg vet is en de pit gevaarlijk is, raden we aan het uit de buurt te houden.",
         "pl": "Źródła się różnią: według jednych miąższ nie jest toksyczny, inne uznają awokado za trujące dla psów. Ponieważ jest też bardzo tłuste, a pestka stanowi zagrożenie, radzimy trzymać je z dala od psa.",
         "cs": "Zdroje se neshodují: některé uvádějí, že dužnina jedovatá není, jiné označují avokádo za jedovaté pro psy. Protože je navíc velmi tučné a pecka je nebezpečná, doporučujeme držet ho mimo dosah psa.",
-        "hr": "Izvori se ne slažu: neki kažu da meso ploda nije otrovno, drugi avokado nazivaju otrovnim za pse. Budući da je i vrlo mastan, a koštica je opasna, savjetujemo da ga držiš podalje."
+        "hr": "Izvori se ne slažu: neki kažu da meso ploda nije otrovno, drugi avokado nazivaju otrovnim za pse. Budući da je i vrlo mastan, a koštica je opasna, savjetujemo da ga držiš podalje.",
+        "sv": "Källorna är oense: vissa säger att fruktköttet inte är giftigt, andra kallar avokado giftig för hundar. Eftersom den också är mycket fet och kärnan är en fara råder vi dig att hålla den borta."
       }
     }
   ],
@@ -373,6 +391,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a403947d05c472284793eafacc3d40edf9372014f27da153011615ff7aa1246b"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "af8faf8e7fb7aa1811567b3e933e3f64f2bca37157baa6658663e0c967c2fc9d"
     }
   }
 }

@@ -12,7 +12,8 @@
     "nl": "IJs",
     "pl": "Lody",
     "cs": "Zmrzlina",
-    "hr": "Sladoled"
+    "hr": "Sladoled",
+    "sv": "Glass"
   },
   "question": {
     "en": "Can dogs eat ice cream?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden ijs eten?",
     "pl": "Czy psy mogą jeść lody?",
     "cs": "Mohou psi jíst zmrzlinu?",
-    "hr": "Smiju li psi jesti sladoled?"
+    "hr": "Smiju li psi jesti sladoled?",
+    "sv": "Får hundar äta glass?"
   },
   "url_slug": {
     "en": "ice-cream",
@@ -38,7 +40,8 @@
     "nl": "ijs",
     "pl": "lody",
     "cs": "zmrzlina",
-    "hr": "sladoled"
+    "hr": "sladoled",
+    "sv": "glass"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee, liever niet. IJs zit vol lactose, vet en suiker, waar een hond buikpijn van kan krijgen, en sommige smaken bevatten chocolade of de zoetstof xylitol, die giftig zijn voor honden.",
     "pl": "Lepiej nie. Lody są pełne laktozy, tłuszczu i cukru, które mogą podrażnić brzuch psa, a niektóre smaki zawierają czekoladę lub słodzik ksylitol, które są toksyczne dla psów.",
     "cs": "Raději ne. Zmrzlina je plná laktózy, tuku a cukru, které mohou psovi podráždit žaludek, a některé příchutě obsahují čokoládu nebo sladidlo xylitol, které jsou pro psy jedovaté.",
-    "hr": "Bolje ne. Sladoled je pun laktoze, masti i šećera, koji mogu psu uznemiriti trbuh, a neki okusi sadrže čokoladu ili sladilo ksilitol, koji su otrovni za pse."
+    "hr": "Bolje ne. Sladoled je pun laktoze, masti i šećera, koji mogu psu uznemiriti trbuh, a neki okusi sadrže čokoladu ili sladilo ksilitol, koji su otrovni za pse.",
+    "sv": "Nej, helst inte. Glass är full av laktos, fett och socker, som kan ge hunden magbesvär, och vissa smaker innehåller choklad eller sötningsmedlet xylitol, som är giftiga för hundar."
   },
   "why": {
     "en": "Many adult dogs are lactose intolerant to some degree and cannot digest milk products properly. High-fat dairy can cause pancreatitis, and the sugar adds to weight gain. Even 'sugar-free' ice cream may contain xylitol, and chocolate flavours are toxic.",
@@ -65,7 +69,8 @@
     "nl": "Veel volwassen honden zijn in meer of mindere mate lactose-intolerant en kunnen melkproducten niet goed verteren. Vette zuivel kan alvleesklierontsteking veroorzaken, en de suiker draagt bij aan overgewicht. Zelfs “suikervrij” ijs kan xylitol bevatten, en chocoladesmaken zijn giftig.",
     "pl": "Wiele dorosłych psów w pewnym stopniu nie toleruje laktozy i nie potrafi prawidłowo trawić produktów mlecznych. Tłusty nabiał może wywołać zapalenie trzustki, a cukier sprzyja przybieraniu na wadze. Nawet lody „bez cukru” mogą zawierać ksylitol, a smaki czekoladowe są toksyczne.",
     "cs": "Mnoho dospělých psů do jisté míry nesnáší laktózu a neumí mléčné výrobky správně strávit. Tučné mléčné výrobky mohou způsobit zánět slinivky břišní a cukr přispívá k přibírání na váze. I zmrzlina „bez cukru“ může obsahovat xylitol a čokoládové příchutě jsou jedovaté.",
-    "hr": "Mnogi odrasli psi u nekoj mjeri ne podnose laktozu i ne mogu pravilno probaviti mliječne proizvode. Masni mliječni proizvodi mogu izazvati upalu gušterače, a šećer pridonosi debljanju. Čak i sladoled „bez šećera“ može sadržavati ksilitol, a okusi s čokoladom otrovni su."
+    "hr": "Mnogi odrasli psi u nekoj mjeri ne podnose laktozu i ne mogu pravilno probaviti mliječne proizvode. Masni mliječni proizvodi mogu izazvati upalu gušterače, a šećer pridonosi debljanju. Čak i sladoled „bez šećera“ može sadržavati ksilitol, a okusi s čokoladom otrovni su.",
+    "sv": "Många vuxna hundar är i olika grad laktosintoleranta och kan inte smälta mjölkprodukter ordentligt. Feta mejeriprodukter kan orsaka bukspottkörtelinflammation (pankreatit), och sockret bidrar till viktökning. Även ”sockerfri” glass kan innehålla xylitol, och glass med chokladsmak är giftig."
   },
   "signs": {
     "en": [
@@ -122,6 +127,11 @@
       "Proljev ili druge probavne smetnje",
       "Povraćanje",
       "Bolovi u trbuhu, mučnina ili malaksalost (moguća upala gušterače)"
+    ],
+    "sv": [
+      "Diarré eller andra magbesvär",
+      "Kräkningar",
+      "Ont i magen, illamående eller orkeslöshet (möjlig bukspottkörtelinflammation)"
     ]
   },
   "what_to_do": {
@@ -135,7 +145,8 @@
     "nl": "Na een likje gewoon vanille-ijs hoef je meestal alleen op maag-darmklachten te letten. Zat er chocolade of xylitol in het ijs? Neem dan meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, schrijf op wat en hoeveel er is gegeten en wacht niet op verschijnselen.",
     "pl": "Po liźnięciu zwykłych lodów waniliowych zazwyczaj wystarczy obserwować, czy nie pojawiają się dolegliwości żołądkowe. Jeśli lody zawierały czekoladę lub ksylitol, od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt, zanotuj, co i ile pies zjadł, i nie czekaj na objawy.",
     "cs": "Po líznutí obyčejné vanilkové zmrzliny obvykle stačí sledovat, zda se neobjeví zažívací potíže. Pokud zmrzlina obsahovala čokoládu nebo xylitol, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, poznamenejte si, co a kolik pes snědl, a nečekejte, až se objeví příznaky.",
-    "hr": "Nakon što pas lizne običan sladoled od vanilije, obično je dovoljno pratiti ima li probavnih smetnji. Ako je sladoled sadržavao čokoladu ili ksilitol, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, zapiši što je i koliko pojeo i ne čekaj da se pojave znakovi."
+    "hr": "Nakon što pas lizne običan sladoled od vanilije, obično je dovoljno pratiti ima li probavnih smetnji. Ako je sladoled sadržavao čokoladu ili ksilitol, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, zapiši što je i koliko pojeo i ne čekaj da se pojave znakovi.",
+    "sv": "Har hunden bara slickat lite vanlig vaniljglass räcker det oftast att hålla utkik efter magbesvär. Om glassen innehöll choklad eller xylitol, kontakta veterinären eller en giftrådgivning för djur direkt, notera vad och hur mycket hunden åt och vänta inte på symtom."
   },
   "serving": {
     "en": "Instead of ice cream: a little frozen plain fat-free yogurt, if your dog tolerates it.",
@@ -148,7 +159,8 @@
     "nl": "In plaats van ijs: een beetje bevroren magere yoghurt naturel, als je hond dat verdraagt.",
     "pl": "Zamiast lodów: odrobina zamrożonego jogurtu naturalnego bez tłuszczu, jeśli twój pies go toleruje.",
     "cs": "Místo zmrzliny: trochu zmraženého bílého odtučněného jogurtu, pokud ho váš pes snáší.",
-    "hr": "Umjesto sladoleda: malo zamrznutog običnog nemasnog jogurta, ako ga pas podnosi."
+    "hr": "Umjesto sladoleda: malo zamrznutog običnog nemasnog jogurta, ako ga pas podnosi.",
+    "sv": "I stället för glass: lite fryst naturell fettfri yoghurt, om hunden tål det."
   },
   "child": {
     "en": "Ice cream is a people treat. It can give dogs a sore tummy, so keep your cone to yourself.",
@@ -161,7 +173,8 @@
     "nl": "IJs is een traktatie voor mensen. Honden kunnen er buikpijn van krijgen, dus houd je ijsje voor jezelf.",
     "pl": "Lody to przysmak dla ludzi. Od lodów może psa rozboleć brzuszek, więc nie dziel się z psem swoim rożkiem.",
     "cs": "Zmrzlina je dobrota pro lidi. Psa z ní může bolet bříško, a tak si kornout nech pro sebe.",
-    "hr": "Sladoled je poslastica za ljude. Od njega psa može zaboljeti trbuščić, zato svoj kornet zadrži za sebe."
+    "hr": "Sladoled je poslastica za ljude. Od njega psa može zaboljeti trbuščić, zato svoj kornet zadrži za sebe.",
+    "sv": "Glass är godis för människor. Den kan ge hundar ont i magen, så ät upp din glass själv."
   },
   "faq": [
     {
@@ -176,7 +189,8 @@
         "nl": "Is suikervrij ijs veiliger?",
         "pl": "Czy lody bez cukru są bezpieczniejsze?",
         "cs": "Je zmrzlina bez cukru bezpečnější?",
-        "hr": "Je li sladoled bez šećera sigurniji?"
+        "hr": "Je li sladoled bez šećera sigurniji?",
+        "sv": "Är sockerfri glass säkrare?"
       },
       "a": {
         "en": "No. Sugar-free products may contain xylitol, which is toxic to dogs, so always read the label.",
@@ -189,7 +203,8 @@
         "nl": "Nee. Suikervrije producten kunnen xylitol bevatten, en dat is giftig voor honden. Lees dus altijd het etiket.",
         "pl": "Nie. Produkty bez cukru mogą zawierać ksylitol, który jest toksyczny dla psów, więc zawsze czytaj etykietę.",
         "cs": "Ne. Výrobky bez cukru mohou obsahovat xylitol, který je pro psy jedovatý, proto vždy čtěte etiketu.",
-        "hr": "Ne. Proizvodi bez šećera mogu sadržavati ksilitol, koji je otrovan za pse, zato uvijek pročitaj deklaraciju."
+        "hr": "Ne. Proizvodi bez šećera mogu sadržavati ksilitol, koji je otrovan za pse, zato uvijek pročitaj deklaraciju.",
+        "sv": "Nej. Sockerfria produkter kan innehålla xylitol, som är giftigt för hundar, så läs alltid innehållsförteckningen."
       }
     }
   ],
@@ -302,6 +317,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7edd32b18ce96e490cbf59542c67ea03508ed73c4f0621011b910732d051949a"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "712191ce14e9df556f53f310c894717265bab6f2e28bd4468c9c362ffe678013"
     }
   }
 }
