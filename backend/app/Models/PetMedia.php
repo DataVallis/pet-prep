@@ -216,6 +216,9 @@ class PetMedia extends Model
         'compression_note',
         // Frugal clips (David 2026-10-30): the source this target slot is served from (MediaEntitlementService).
         'frugal_source',
+        // David 2026-11-02 (self-healing activity clips, ActivityClipRetryService).
+        'prompt_variant',
+        'recovery_version',
     ];
 
     /**
@@ -236,6 +239,8 @@ class PetMedia extends Model
             'completed_at' => 'datetime',
             'auto_retries' => 'integer',
             'auto_alerted_at' => 'datetime',
+            'prompt_variant' => 'integer',
+            'recovery_version' => 'integer',
             // David 2026-10-30: stored video compression (Media\VideoCompressionService).
             'compression_attempts' => 'integer',
             'compressed_at' => 'datetime',
@@ -337,6 +342,21 @@ class PetMedia extends Model
     public function isPhase(): bool
     {
         return $this->kind === self::KIND_PHASE;
+    }
+
+    /**
+     * fal's `detail[].type` when the model answered without an image / video (HTTP 422 after
+     * the full run, $0) — a DETERMINISTIC refusal of that exact request (incident 2026-11-02:
+     * the empty-room pose refused 7×). Stored in `error` as »fal.ai no_media_generated: …«
+     * (FalAiService::falErrorText / FalGateway::poll).
+     */
+    public const FAL_NO_MEDIA_GENERATED = 'no_media_generated';
+
+    /** Did fal refuse this failed request deterministically (never send it identically again)? */
+    public function isNoMediaRefusal(): bool
+    {
+        return $this->status === self::STATUS_FAILED && is_string($this->error)
+            && str_contains($this->error, self::FAL_NO_MEDIA_GENERATED);
     }
 
     /** A picture (reference image, key image or pose image): sync image call, image mimes. */

@@ -8,6 +8,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-02 — Igre in šola se popravijo same
+
+**Kaj:** pri enem kužku je AI 7-krat zapored zavrnil isto sliko (»prazna soba, kuža je odšel«), zato igra z žogo 4 dni ni bila na voljo. Strežnik zdaj tak primer popravi sam: sliko opiše drugače, po zavrnitvi poskusi z drugo različico (nikoli ista zahteva), in če res ne gre, igro odpre v preprostem načinu (klasična zanka, žoga odleti in se vrne). Ko so posnetki pozneje narejeni, se polna igra vrne sama.
+**Zakaj je pomembno:** otrok nikoli ne obtiči pred zaklenjeno igro; skrbniku ni treba ročno klikati pri tisočih kužkih (David 2. 11. 2026, možnost B). Poraba AI ostane pod istimi omejitvami.
+- 👩 Starši / 🧒 otroci: igra in šola sta vedno na voljo — v najslabšem primeru v preprostejši obliki, ki se sama izboljša.
+- 💼 Investitorji: samozdravilni medijski cevovod — skaliranje brez ročnega dela na izdelek.
+- 🛠 Tehnično: vrsta napake fal se shrani; različice poziva; »preprost način« na strežniku (`phase_groups` brez skupine) uporabi način aplikacije, ki že obstaja — brez nove različice aplikacije.
+
 ## 2026-11-02 — Skupni telefon: obvestila samo za kužka, ki je odprt
 
 **Kaj:** starš, ki na enem telefonu igra kot več otrok (»Igraj kot«), je dobival otroška obvestila (»kuža je naredil nered«, lačen, ven …) za vse kužke, ki so se kdaj igrali na tem telefonu — tap pa je odprl kužka, ki je bil ravno odprt, torej pogosto napačnega. David je odločil: telefon sledi kužku, ki je bil na njem nazadnje odprt; starševska obvestila pa gredo še naprej za vse kužke.

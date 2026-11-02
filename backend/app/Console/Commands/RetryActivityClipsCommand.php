@@ -15,7 +15,7 @@ class RetryActivityClipsCommand extends Command
 {
     protected $signature = 'media:retry-activity-clips {--dry-run : List only, change nothing} {--limit=200 : Actions (retries + reports) per run}';
 
-    protected $description = 'Re-queue failed school / game clips that keep an activity locked; report the ones that need an admin';
+    protected $description = 'Heal failed school / game clips (retry, prompt variant after a refusal); exhausted activities switch to simple mode';
 
     public function handle(ActivityClipRetryService $retry): int
     {
@@ -26,7 +26,8 @@ class RetryActivityClipsCommand extends Command
             $this->table(['pet', 'kind', 'clip', 'reason', 'auto retries', 'action'], array_map(fn (array $i) => array_values($i), $result['items']));
         }
 
-        $this->info(($dry ? '[dry run] ' : '')."Re-queued {$result['retried']}, reported {$result['reported']} to the admin, {$result['skipped_budget']} left for later (today's AI budget).");
+        $this->info(($dry ? '[dry run] ' : '')."Re-queued {$result['retried']}, reported {$result['reported']} (recovery exhausted), {$result['simple']} pet(s) switched to simple mode, "
+            ."{$result['legacy']} earlier report(s) picked up, {$result['restored']} pet(s) back to the full mode, {$result['skipped_budget']} left for later (today's AI budget).");
 
         return self::SUCCESS;
     }

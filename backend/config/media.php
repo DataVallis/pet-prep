@@ -79,9 +79,10 @@ return [
     // them (MediaEntitlementService::phaseClipsFor — state media version 3, both
     // switches on); others keep the list above. `play` needs its list above too (the
     // cuddles share the stage and play the `playing` loop); `wand` only its phases.
-    // David 2026-10-28: a failed phase clip / pose keeps the game LOCKED (never playable without
-    // its clips; ActivityClipRetryService retries it). `school` = the school's clips — since
-    // 2026-10-28 a start condition of training too (422 `media_not_ready`).
+    // David 2026-10-28: a failed phase clip / pose keeps the game locked while
+    // ActivityClipRetryService recovers it; David 2026-11-02: once that is exhausted the game
+    // runs in SIMPLE mode (the list above, GameMediaReadiness::simpleGames()). `school` = the
+    // school's clips — since 2026-10-28 a start condition of training too (422 `media_not_ready`).
     'game_phase_groups' => [
         'play' => ['ball'],
         'wand' => ['wand'],

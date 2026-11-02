@@ -228,13 +228,18 @@ class PetPreparationService
      * M5-T09 (QA m6): a school phase clip of the pet — or a pose image it is made from — is
      * still on its way (not stored, not failed). The app then says »Šola se še pripravlja«;
      * since David 2026-10-28 the school is locked until every clip is shown
-     * (GameMediaReadiness::SCHOOL — a failed clip keeps it locked too, ActivityClipRetryService
-     * retries it). Not part of the preparation (no wait, no push).
+     * (GameMediaReadiness::SCHOOL — a failed clip keeps it locked while ActivityClipRetryService
+     * recovers it; simple mode after that, 2026-11-02). Not part of the preparation (no wait, no push).
      *
      * @param  Collection<int, PetMedia>  $slots
      */
     public function schoolPending(Pet $pet, Collection $slots): bool
     {
+        // David 2026-11-02: a school in simple mode is playable (no »Šola se še pripravlja«).
+        if (is_array($pet->simple_activities) && in_array(GameMediaReadiness::SCHOOL, app(GameMediaReadiness::class)->simpleGames($pet, $slots), true)) {
+            return false;
+        }
+
         foreach ($this->entitlements->phaseClipsFor($pet) as $clip) {
             if ($clip->group() !== PetPhaseClip::GROUP_SCHOOL) {
                 continue;

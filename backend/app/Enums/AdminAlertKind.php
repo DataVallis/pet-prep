@@ -21,7 +21,7 @@ enum AdminAlertKind: string
     case AppErrorSpike = 'app_error_spike';
     /** QA #375 M1: app error posts above the global hourly cap, summed in one post. */
     case AppErrorSuppressed = 'app_error_suppressed';
-    /** David 2026-10-28: a school / game clip failed for good — that activity stays locked until an admin acts. */
+    /** David 2026-10-28: a school / game clip failed for good; since 2026-11-02 the activity then runs in simple mode (informative — no admin action needed). */
     case ActivityMediaStuck = 'activity_media_stuck';
     /** David 2026-10-30 (QA #451 m2): a frugal reversal / ping-pong failed for good — made by fal instead. */
     case FrugalClipFallback = 'frugal_clip_fallback';

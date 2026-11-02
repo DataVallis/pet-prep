@@ -171,14 +171,42 @@ class FalGateway
         }
 
         if (! $result->successful()) {
-            $detail = $result->json('detail');
-
-            return ['state' => 'failed', 'body' => [], 'error' => is_string($detail) ? $detail : 'result HTTP '.$result->status()];
+            // Fix 2026-11-02: keep fal's error TYPE (e.g. `no_media_generated`) — the retry picks
+            // its next strategy from it (ActivityClipRetryService).
+            return ['state' => 'failed', 'body' => [], 'error' => self::describeError($result->json('detail'), 'result HTTP '.$result->status())];
         }
 
         $body = $result->json();
 
         return ['state' => 'completed', 'body' => is_array($body) ? $body : [], 'error' => null];
+    }
+
+    /**
+     * A short, safe text of a fal error answer (fix 2026-11-02 — the stored »Unexpected status
+     * code: 422« lost why fal refused): `fal.ai <type>: <msg>` from fal's validation-style
+     * `detail` (a string, or a list of {loc, msg, type}), else $fallback. URLs are removed (no
+     * signed / media URL in `pet_media.error`), at most 300 characters.
+     */
+    public static function describeError(mixed $detail, string $fallback): string
+    {
+        $text = $fallback;
+
+        if (is_string($detail) && trim($detail) !== '') {
+            $text = trim($detail);
+        } elseif (is_array($detail)) {
+            $first = array_is_list($detail) ? ($detail[0] ?? null) : $detail;
+            if (is_array($first)) {
+                $type = is_string($first['type'] ?? null) ? $first['type'] : null;
+                $msg = is_string($first['msg'] ?? null) ? $first['msg'] : null;
+                if ($type !== null || $msg !== null) {
+                    $text = 'fal.ai '.trim(($type ?? 'error').': '.($msg ?? ''), ': ').' ('.$fallback.')';
+                }
+            }
+        }
+
+        $text = (string) preg_replace('~https?://\S+~i', '[url]', $text);
+
+        return mb_substr($text, 0, 300);
     }
 
     /**

@@ -2099,8 +2099,11 @@ class FalAiService
     {
         if (($body['status'] ?? null) !== 'OK') {
             $error = $body['error'] ?? 'fal.ai reported an error';
+            // Fix 2026-11-02: an ERROR webhook carries fal's `payload.detail` (e.g. type
+            // `no_media_generated`) — keep it, the activity retry picks its strategy from it.
+            $detail = is_array($body['payload'] ?? null) ? ($body['payload']['detail'] ?? null) : null;
 
-            return ['ok' => false, 'url' => null, 'video_url' => null, 'error' => is_string($error) ? $error : 'fal.ai reported an error', 'reason' => AiCallFailure::GenerationFailed];
+            return ['ok' => false, 'url' => null, 'video_url' => null, 'error' => FalGateway::describeError($detail, is_string($error) ? $error : 'fal.ai reported an error'), 'reason' => AiCallFailure::GenerationFailed];
         }
 
         $payload = is_array($body['payload'] ?? null) ? $body['payload'] : [];

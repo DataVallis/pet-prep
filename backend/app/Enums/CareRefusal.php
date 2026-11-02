@@ -239,7 +239,8 @@ enum CareRefusal: string
      * No next_allowed_at (the app learns readiness from PetUpdated).
      * Play endpoint (ball game, cuddles), the cat's wand start and — since
      * David 2026-10-28 (home first, school locked) — the training start
-     * (»Šolo še pripravljamo«). A failed clip keeps it locked until it is made.
+     * (»Šolo še pripravljamo«). A failed clip keeps it locked while its automatic
+     * recovery runs; once that is exhausted the activity is ready in simple mode (2026-11-02).
      */
     case MediaNotReady = 'media_not_ready';
 

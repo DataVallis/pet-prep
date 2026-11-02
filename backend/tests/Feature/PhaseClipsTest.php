@@ -356,7 +356,8 @@ describe('pipeline for a dog with its own media', function () {
         // Pose images: Nano Banana Pro Edit of the reference image, after the key images.
         $edits = phcCalls('https://queue.fal.run/fal-ai/nano-banana-pro/edit')->map(fn (Request $r) => (string) $r['prompt'])->values();
         expect($edits)->toHaveCount(5 + 5)
-            ->and($edits->slice(5)->values()[0])->toContain('WITHOUT the dog')
+            // Fix 2026-11-02: the empty room is described positively (no »WITHOUT the dog«).
+            ->and($edits->slice(5)->values()[0])->toContain('photograph of the empty room')->not->toContain('dog')
             ->and($edits->slice(5)->values()[1])->toContain('sitting upright')
             ->and($edits->implode(' '))->not->toContain('ball');
 
@@ -1003,6 +1004,190 @@ describe('ActivityClipRetryService: no dead end for a locked activity (David 202
             ->and($body)->not->toContain((string) $child->name)
             ->and($body)->not->toContain('"pet_id"')
             ->and($body)->not->toContain('/pets/'.$pet->id);
+    });
+});
+
+describe('self-healing activity clips, simple mode as the last resort (David 2026-11-02, option B)', function () {
+    beforeEach(function () {
+        useUniquePetMedia(true);
+        Queue::fake([GeneratePetKeyframe::class, SubmitPetStateVideo::class, SendActivityMediaAlert::class]);
+    });
+
+    /** fal's ERROR webhook for a request the model answered without an image (incident 2026-11-02). */
+    function shRefuse(PetMedia $slot): void
+    {
+        $requestId = $slot->fresh()->request_id ?? 'refused-'.$slot->id;
+        $slot->update(['status' => 'running', 'request_id' => $requestId]);
+        sendFalWebhook([
+            'request_id' => $requestId,
+            'status' => 'ERROR',
+            'error' => 'Invalid status code: 422',
+            'payload' => ['detail' => [['loc' => ['body'], 'msg' => 'The model did not generate the expected output. See https://fal.ai/docs/errors', 'type' => 'no_media_generated']]],
+        ])->assertOk();
+    }
+
+    function shGroups(Pet $pet): array
+    {
+        return app(PetMediaService::class)->mediaFor($pet->fresh())->phaseGroups;
+    }
+
+    it('keeps fal\'s error type in pet_media.error (webhook + poll), without URLs', function () {
+        phcFakeFal();
+        $pet = phcBirth(phcPet());
+        $slot = app(PetMediaService::class)->slot($pet, PetMedia::KIND_POSE, PetPose::Empty);
+        shRefuse($slot);
+
+        expect($slot->fresh()->status)->toBe('failed')
+            ->and($slot->fresh()->error_reason)->toBe('generation_failed')
+            ->and($slot->fresh()->error)->toContain('no_media_generated')->toContain('did not generate')->not->toContain('https://')
+            ->and($slot->fresh()->isNoMediaRefusal())->toBeTrue()
+            ->and(FalGateway::describeError([['type' => 'no_media_generated', 'msg' => 'nope']], 'result HTTP 422'))->toBe('fal.ai no_media_generated: nope (result HTTP 422)')
+            ->and(FalGateway::describeError('plain text', 'x'))->toBe('plain text')
+            ->and(FalGateway::describeError(null, 'result HTTP 422'))->toBe('result HTTP 422');
+    });
+
+    it('the empty room is described positively, the same for dog and cat; a refused pose has a second, different variant', function () {
+        $prompts = app(PetAppearancePrompt::class);
+        $traits = ['coat_color' => 'black'];
+        $dog = $prompts->posePrompt('labrador_retriever', PetPose::Empty, $traits, LifeStage::Young);
+        $cat = $prompts->posePrompt('maine_coon', PetPose::Empty, $traits, LifeStage::Young);
+        $dog1 = $prompts->posePrompt('labrador_retriever', PetPose::Empty, $traits, LifeStage::Young, 1);
+
+        expect($dog)->toBe($cat)->toContain('photograph of the empty room')->not->toContain('WITHOUT')->not->toContain('dog')
+            ->and($dog1)->not->toBe($dog)->toContain('empty interior')->not->toContain('dog')
+            // Every other pose keeps its variant-0 text byte for byte; variant 1 rewords it.
+            ->and($prompts->posePrompt('labrador_retriever', PetPose::Sit, $traits, LifeStage::Young))->toStartWith('The same dog as in the reference image')
+            ->and($prompts->posePrompt('labrador_retriever', PetPose::Sit, $traits, LifeStage::Young, 1))->toStartWith('A realistic photograph of the same dog')
+            ->and($prompts->posePrompt('labrador_retriever', PetPose::Sit, $traits, LifeStage::Young, 9))->toBe($prompts->posePrompt('labrador_retriever', PetPose::Sit, $traits, LifeStage::Young, 1));
+    });
+
+    it('no_media_generated → the next try uses the prompt variant (never the identical request); refused again → exhausted → simple mode, play ready, no ball group, one alert', function () {
+        phcFakeFal();
+        $pet = phcBirth(phcPet());
+        $media = app(PetMediaService::class);
+        $retry = app(ActivityClipRetryService::class);
+        $slot = $media->slot($pet, PetMedia::KIND_POSE, PetPose::Empty);
+        $readiness = app(GameMediaReadiness::class);
+        expect(shGroups($pet))->toContain('ball')
+            ->and($readiness->requiredClips($pet->fresh(), GameMediaReadiness::PLAY))->toContain('ball_running');
+
+        shRefuse($slot);
+        $this->travel(31)->minutes();
+        $result = $retry->run();
+        expect($result['retried'])->toBe(1)
+            ->and($slot->fresh()->prompt_variant)->toBe(1)
+            ->and($slot->fresh()->status)->toBe('pending');
+        Queue::assertPushed(GeneratePetKeyframe::class, fn ($j) => $j->petMediaId === $slot->id);
+
+        // The job sends the VARIANT prompt (a different request).
+        $before = phcCalls('https://queue.fal.run/fal-ai/nano-banana-pro/edit')->count();
+        expect($media->generateKeyframe($slot->id))->toBeTrue();
+        $sent = phcCalls('https://queue.fal.run/fal-ai/nano-banana-pro/edit')->slice($before)->values();
+        expect($sent)->toHaveCount(1)
+            ->and((string) $sent[0]['prompt'])->toContain('empty interior');
+
+        // Refused again: no variant left → no identical retry, reported, simple mode.
+        $pushed = Queue::pushed(GeneratePetKeyframe::class)->count();
+        shRefuse($slot->fresh());
+        $this->travel(31)->minutes();
+        $result = $retry->run();
+        expect($result['retried'])->toBe(0)
+            ->and($result['reported'])->toBe(1)
+            ->and($result['simple'])->toBe(1)
+            ->and(Queue::pushed(GeneratePetKeyframe::class)->count())->toBe($pushed)
+            ->and($pet->fresh()->simple_activities)->toHaveKey('play')
+            ->and($readiness->simpleGames($pet->fresh()))->toBe(['play'])
+            ->and($readiness->requiredClips($pet->fresh(), GameMediaReadiness::PLAY))->toEqualCanonicalizing(['playing', 'idle'])
+            ->and($readiness->missing($pet->fresh(), GameMediaReadiness::PLAY))->not->toContain('ball_running')
+            ->and(shGroups($pet))->not->toContain('ball')->toContain('school')
+            ->and($readiness->activities($pet->fresh())['play']['simple'])->toBeTrue();
+        Queue::assertPushed(SendActivityMediaAlert::class, fn ($j) => $j->count === 1 && $j->simple === 1);
+
+        // Nothing more to do: no second alert, no spend.
+        $this->travel(2)->hours();
+        $again = $retry->run();
+        expect($again['reported'])->toBe(0)->and($again['simple'])->toBe(0)->and($again['retried'])->toBe(0);
+        Queue::assertPushed(SendActivityMediaAlert::class, 1);
+
+        // Later the clips get made (any path) → the full game returns by itself; the run tidies the switch.
+        $slot->fresh()->update(['status' => 'ready', 'storage_path' => "{$pet->id}/pose-empty.jpg", 'error' => null, 'error_reason' => null]);
+        foreach ([PetPhaseClip::BallWaiting, PetPhaseClip::BallRunning, PetPhaseClip::BallFetching] as $clip) {
+            $media->slot($pet, PetMedia::KIND_PHASE, $clip)->update(['status' => 'ready', 'storage_path' => "{$pet->id}/{$clip->value}.mp4"]);
+        }
+        expect(shGroups($pet))->toContain('ball')
+            ->and($readiness->simpleGames($pet->fresh()))->toBe([])
+            ->and($readiness->requiredClips($pet->fresh(), GameMediaReadiness::PLAY))->toContain('ball_running')
+            ->and($retry->run()['restored'])->toBe(1)
+            ->and($pet->fresh()->simple_activities)->toBeNull();
+    });
+
+    it('a refused phase clip (no prompt variant) is never retried identically — exhausted at once', function () {
+        phcFakeFal();
+        $pet = phcBirth(phcPet());
+        $phase = app(PetMediaService::class)->slot($pet, PetMedia::KIND_PHASE, PetPhaseClip::BallWaiting);
+        $phase->update(['status' => 'failed', 'error_reason' => 'generation_failed', 'error' => 'fal.ai no_media_generated: nope', 'completed_at' => now()->subHour()]);
+
+        $result = app(ActivityClipRetryService::class)->run();
+        expect($result['retried'])->toBe(0)->and($result['reported'])->toBe(1)->and($result['simple'])->toBe(1);
+        Queue::assertNotPushed(SubmitPetStateVideo::class, fn ($j) => $j->petMediaId === $phase->id);
+    });
+
+    it('a school whose recovery is exhausted is playable in simple mode (training media_ready, not pending)', function () {
+        phcFakeFal();
+        $pet = phcBirth(phcPet());
+        $sit = app(PetMediaService::class)->slot($pet, PetMedia::KIND_POSE, PetPose::Sit);
+        $sit->update(['status' => 'failed', 'error_reason' => 'timed_out', 'completed_at' => now()->subHour()]);
+        expect(app(TrainingService::class)->mediaReady($pet->fresh()))->toBeFalse();
+
+        expect(app(ActivityClipRetryService::class)->run()['simple'])->toBe(1)
+            ->and(app(TrainingService::class)->mediaReady($pet->fresh()))->toBeTrue()
+            ->and(shGroups($pet))->not->toContain('school')
+            ->and(app(PetPreparationService::class)->schoolPending($pet->fresh(), $pet->media()->get()))->toBeFalse();
+    });
+
+    it('chains reported before the change are picked up once by the hourly run: simple mode at once, one more try, a shared look counted once', function () {
+        phcFakeFal();
+        useUniquePetMedia(false);
+        $media = app(PetMediaService::class);
+        $a = phcBirth(phcPet('labrador_retriever', 'black'));
+        $b = phcBirth(phcPet('labrador_retriever', 'black'));
+        $look = PetLook::find($a->pet_look_id);
+        $row = $media->lookSlot($look, PetMedia::KIND_POSE, PetPose::Empty, LifeStage::from((string) ($a->life_stage?->value ?? $a->life_stage)));
+        // The incident: 7 refusals stored only as »Unexpected status code: 422«, retries spent, reported.
+        $row->update(['status' => 'failed', 'error_reason' => 'generation_failed', 'error' => 'Unexpected status code: 422', 'auto_retries' => 2, 'completed_at' => now()->subDays(4)]);
+        $petRows = [];
+        foreach ([$a, $b] as $pet) {
+            $petRows[] = $s = $media->slot($pet, PetMedia::KIND_POSE, PetPose::Empty);
+            $s->update(['status' => 'failed', 'error_reason' => 'generation_failed', 'error' => 'Unexpected status code: 422', 'look_media_id' => $row->id, 'completed_at' => now()->subDays(4), 'auto_alerted_at' => now()->subDays(4)]);
+        }
+        $retry = app(ActivityClipRetryService::class);
+
+        // State media switched off → nothing picked up, nothing spent.
+        $pushed = Queue::pushed(GeneratePetKeyframe::class)->count();
+        phcSwitch(false);
+        expect($retry->run()['legacy'])->toBe(0)->and($petRows[0]->fresh()->recovery_version)->toBe(0)
+            ->and(Queue::pushed(GeneratePetKeyframe::class)->count())->toBe($pushed);
+        phcSwitch(true);
+
+        expect($retry->run(dryRun: true)['legacy'])->toBe(2)->and($petRows[0]->fresh()->recovery_version)->toBe(0);
+
+        $result = $retry->run();
+        expect($result['legacy'])->toBe(2)
+            ->and($result['simple'])->toBe(2)
+            ->and($result['retried'])->toBe(2)
+            // One more try on the LOOK row, counted once for both buyers (1 → 2).
+            ->and($row->fresh()->auto_retries)->toBe(2)
+            ->and($row->fresh()->prompt_variant)->toBe(0)
+            ->and($a->fresh()->simple_activities)->toHaveKey('play')
+            ->and(app(GameMediaReadiness::class)->requiredClips($a->fresh(), GameMediaReadiness::PLAY))->toEqualCanonicalizing(['playing', 'idle'])
+            ->and(shGroups($b))->not->toContain('ball');
+        expect(Queue::pushed(GeneratePetKeyframe::class, fn ($j) => in_array($j->petMediaId, [$petRows[0]->id, $petRows[1]->id], true))->count())->toBe(2);
+
+        // Once only: the next run picks up nothing again (no double spend).
+        $this->travel(2)->hours();
+        $next = $retry->run();
+        expect($next['legacy'])->toBe(0)->and($next['simple'])->toBe(0);
+        expect(Queue::pushed(GeneratePetKeyframe::class, fn ($j) => in_array($j->petMediaId, [$petRows[0]->id, $petRows[1]->id], true))->count())->toBe(2);
     });
 });
 

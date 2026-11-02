@@ -670,7 +670,7 @@ class PetMediaService
 
         return $this->submitPoseStill($slot, fn () => $this->fal->submitKeyframe(
             $pose !== null
-                ? $this->prompts->posePrompt($breedKey, $pose, $traits, $pet->life_stage)
+                ? $this->prompts->posePrompt($breedKey, $pose, $traits, $pet->life_stage, (int) $slot->prompt_variant)
                 : $this->prompts->keyframePrompt($breedKey, $state, $traits, $pet->life_stage),
             $this->falFetchUrl($image),
             (int) ($dna['seed'] ?? 0),
@@ -1547,7 +1547,7 @@ class PetMediaService
      * conditional (`WHERE status NOT IN (pending, running)`), so a slot another
      * worker just claimed is never reset under it (PR #24 review m7).
      */
-    public function resetForNewGeneration(PetMedia $slot, bool $bump, ?int $autoRetryBelow = null): bool
+    public function resetForNewGeneration(PetMedia $slot, bool $bump, ?int $autoRetryBelow = null, ?int $variantBelow = null): bool
     {
         $candidate = PetMedia::whereKey($slot->id)->value('candidate_path');
 
@@ -1556,11 +1556,16 @@ class PetMediaService
             ->whereNotIn('status', [PetMedia::STATUS_PENDING, PetMedia::STATUS_RUNNING])
             // David 2026-10-28 (QA #434 M1 / m5): an automatic activity retry counts in the same
             // conditional UPDATE (no race past the cap); every other reset starts a new chain.
-            ->when($autoRetryBelow !== null, fn ($q) => $q->where('auto_retries', '<', $autoRetryBelow))
+            // David 2026-11-02: after a deterministic refusal the retry moves to the next prompt
+            // variant instead (capped by the variants, never the identical request again).
+            ->when($variantBelow !== null, fn ($q) => $q->where('prompt_variant', '<', $variantBelow))
+            ->when($variantBelow === null && $autoRetryBelow !== null, fn ($q) => $q->where('auto_retries', '<', $autoRetryBelow))
             ->update([
-                ...($autoRetryBelow !== null
-                    ? ['auto_retries' => DB::raw('auto_retries + 1')]
-                    : ['auto_retries' => 0, 'auto_alerted_at' => null]),
+                ...($variantBelow !== null
+                    ? ['auto_retries' => DB::raw('auto_retries + 1'), 'prompt_variant' => DB::raw('prompt_variant + 1')]
+                    : ($autoRetryBelow !== null
+                        ? ['auto_retries' => DB::raw('auto_retries + 1')]
+                        : ['auto_retries' => 0, 'auto_alerted_at' => null])),
                 'status' => PetMedia::STATUS_PENDING,
                 'generation' => DB::raw('generation + '.($bump ? 1 : 0)),
                 'request_id' => null,
@@ -1937,7 +1942,9 @@ class PetMediaService
             phaseMeta: $phaseMeta,
             // QA m2: the same switch-aware source as readiness / preparation (phaseClipsFor) —
             // a switch off → [] → the app shows the M5-T08 stage, the server checks the v2 rules.
-            phaseGroups: array_values(array_unique(array_map(fn (PetPhaseClip $c) => $c->group(), $this->entitlements->phaseClipsFor($pet)))),
+            // David 2026-11-02: an activity in simple mode (automatic recovery exhausted) drops its
+            // group, so the app plays its no-phase-group stage (GameMediaReadiness::phaseGroups()).
+            phaseGroups: app(GameMediaReadiness::class)->phaseGroups($pet, $slots),
             // M5-T08b (QA m3): the pet's set, not the switch — off never downgrades stored media.
             stateMedia: $this->entitlements->hasStateMediaSet($pet),
         );
@@ -2207,7 +2214,8 @@ class PetMediaService
             }
 
             if ($poll !== null && $poll['state'] === 'failed') {
-                $this->fail($locked, AiCallFailure::GenerationFailed, 'fal.ai: '.($poll['error'] ?? 'request failed'));
+                $error = (string) ($poll['error'] ?? 'request failed');
+                $this->fail($locked, AiCallFailure::GenerationFailed, str_starts_with($error, 'fal.ai ') ? $error : 'fal.ai: '.$error);
 
                 return 'failed';
             }
@@ -2951,7 +2959,7 @@ class PetMediaService
 
         return $this->submitPoseStill($row, fn () => $this->fal->submitKeyframe(
             $pose !== null
-                ? $this->prompts->posePrompt($look->breed_type->value, $pose, $look->traits(), LifeStage::from((string) $row->life_stage))
+                ? $this->prompts->posePrompt($look->breed_type->value, $pose, $look->traits(), LifeStage::from((string) $row->life_stage), (int) $row->prompt_variant)
                 : $this->prompts->keyframePrompt($look->breed_type->value, $state, $look->traits(), LifeStage::from((string) $row->life_stage)),
             $this->falFetchUrl($image),
             $look->seed(),

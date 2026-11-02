@@ -427,7 +427,7 @@ class PetAppearancePrompt
     public const POSE_ANATOMY = 'Correct, natural %s anatomy: exactly four legs and four paws, one head and one tail; '
         .'the whole body is in the new pose, no part of it is left in the pose of the reference image.';
 
-    public const KEYFRAME_STYLE ='Realistic 35mm photograph, sharp focus, true-to-life fur texture and colours. '
+    public const KEYFRAME_STYLE = 'Realistic 35mm photograph, sharp focus, true-to-life fur texture and colours. '
         .'Only the animal: no people, no children, no hands, no text, no watermark, no logo.';
 
     /**
@@ -508,25 +508,50 @@ class PetAppearancePrompt
     }
 
     /**
+     * Prompt variants of a pose image (David 2026-11-02, self-healing activity clips): variant 0
+     * is the normal prompt; after fal refused a request deterministically (`no_media_generated`)
+     * the next attempt uses the next variant — never the identical request again
+     * (ActivityClipRetryService). Variants beyond the last are exhausted (simple mode).
+     */
+    public const POSE_PROMPT_VARIANTS = 2;
+
+    /**
      * M5-T09 / T10: a POSE image of a school / game phase clip — an edit of the
      * stage's reference image (same animal, room, light, framing); only the pose
-     * changes. The empty-room pose removes the animal. No toy, no person, no text.
+     * changes. No toy, no person, no text.
+     *
+     * The empty room (fix 2026-11-02, pet 19: »now WITHOUT the dog« was refused by Nano Banana
+     * Pro Edit with `no_media_generated` 7× in a row) describes the WANTED photograph positively —
+     * the same room as the reference image with nothing in the middle of the floor — and never
+     * names the species, so the dog and the cat text are the same. `$variant` (0 … POSE_PROMPT_VARIANTS − 1)
+     * is a differently worded request of the same picture for a retry after such a refusal.
      *
      * @param  array<string, string>  $traits
      */
-    public function posePrompt(string $breedKey, PetPose $pose, array $traits = [], ?LifeStage $stage = null): string
+    public function posePrompt(string $breedKey, PetPose $pose, array $traits = [], ?LifeStage $stage = null, int $variant = 0): string
     {
         $species = self::speciesOf($breedKey);
         $this->refuseCatWithoutTraits($species, $traits);
         $noun = $species === Species::Cat ? 'cat' : 'dog';
+        $variant = max(0, min(self::POSE_PROMPT_VARIANTS - 1, $variant));
 
         if ($pose === PetPose::Empty) {
-            return 'The same room as in the reference image, now WITHOUT the '.$noun.': the '.$noun.' has left the frame. '
-                .'Keep the same room, floor, background, natural light, camera position and framing exactly. '
-                .'Realistic 35mm photograph, sharp focus. No animal, no people, no hands, no toys, no text, no watermark, no logo.';
+            return $variant === 0
+                ? 'A realistic 35mm photograph of the empty room from the reference image: the same room, floor, walls, furniture, '
+                    .'natural light, camera position and framing exactly as in the reference image, with nothing standing in the '
+                    .'centre of the floor. Sharp focus. Only the empty room: no animal, no people, no hands, no toys, no text, no watermark, no logo.'
+                : 'A photograph of an empty interior: exactly the room, floor, walls, furniture and lighting seen in the reference image, '
+                    .'from the same camera position and with the same framing, as it looks when nobody is there. The floor in the middle '
+                    .'of the picture is clear. Realistic, natural light, sharp focus. Nothing added: no animals, no people, no toys, no text, no watermark, no logo.';
         }
 
         $subject = $traits !== [] ? $this->describe($breedKey, $traits, $stage) : $this->displayName($breedKey);
+
+        if ($variant > 0) {
+            return 'A realistic photograph of the same '.$noun.' as in the reference image ('.$subject.'), '.$pose->prompt().'. '
+                .sprintf(self::POSE_ANATOMY, $noun).' '
+                .self::KEYFRAME_KEEP.' No toys. '.self::KEYFRAME_STYLE;
+        }
 
         return 'The same '.$noun.' as in the reference image ('.$subject.'), now '.$pose->prompt().'. '
             .sprintf(self::POSE_ANATOMY, $noun).' '
