@@ -161,7 +161,7 @@
       "a": {
         "en": "No. The tiny bones are soft and fully edible after canning, so sardines canned in water can be fed without deboning.",
         "sl": "Ne. Drobne kosti so po konzerviranju mehke in povsem užitne, zato lahko sardine v vodi daste brez odstranjevanja kosti.",
-        "de": "Nein. Die winzigen Gräten sind nach dem Konservieren weich und vollständig essbar, deshalb können Sardinen in Wasser aus der Dose ohne Entgräten gefüttert werden.",
+        "de": "Nein. Die winzigen Gräten sind nach dem Konservieren weich und vollständig essbar, deshalb können Sie Sardinen in Wasser aus der Dose füttern, ohne sie zu entgräten.",
         "fr": "Non. Les minuscules arêtes deviennent molles et entièrement comestibles avec la mise en conserve : les sardines au naturel peuvent être données sans retirer les arêtes.",
         "es": "No. Las diminutas espinas quedan blandas y totalmente comestibles tras el enlatado, así que las sardinas en lata al natural pueden darse sin quitarles las espinas.",
         "it": "No. Le minuscole lische diventano morbide e del tutto commestibili con l’inscatolamento, quindi le sardine in scatola in acqua si possono dare senza spinarle.",
@@ -240,7 +240,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "1d137b85b1788825a44ebff0855c169194a3b56092005a4592831343cff219d6"
+      "verified_hash": "b34dca70014b651a24bd7bb9f8a53847297df17bc6bb61bbf331ea1fad97ba1b"
     },
     "fr": {
       "status": "verified",

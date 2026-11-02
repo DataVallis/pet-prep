@@ -56,7 +56,7 @@
   "answer": {
     "en": "Not recommended. Ham isn't toxic to dogs, but it is high in fat and sodium. Store-bought ham contains a lot of salt, and too much fat can lead to pancreatitis and other digestive upsets. A healthier dog treat is the better choice.",
     "sl": "Ni priporočljivo. Šunka za pse ni strupena, vsebuje pa veliko maščob in natrija. Kupljena šunka je zelo slana, preveč maščobe pa lahko vodi v vnetje trebušne slinavke in druge prebavne težave. Raje izberite bolj zdrav pasji priboljšek.",
-    "de": "Nicht empfohlen. Schinken ist für Hunde nicht giftig, aber reich an Fett und Natrium. Gekaufter Schinken enthält viel Salz, und zu viel Fett kann zu einer Bauchspeicheldrüsenentzündung (Pankreatitis) und anderen Verdauungsproblemen führen. Ein gesünderes Hundeleckerli ist die bessere Wahl.",
+    "de": "Nicht empfohlen. Schinken ist für Hunde nicht giftig, aber reich an Fett und Natrium. Schinken aus dem Handel enthält viel Salz, und zu viel Fett kann zu einer Bauchspeicheldrüsenentzündung (Pankreatitis) und anderen Verdauungsproblemen führen. Ein gesünderes Hundeleckerli ist die bessere Wahl.",
     "fr": "Déconseillé. Le jambon n’est pas toxique pour les chiens, mais il est riche en graisses et en sodium. Le jambon du commerce contient beaucoup de sel, et trop de graisses peuvent entraîner une pancréatite et d’autres troubles digestifs. Une friandise pour chien plus saine est un meilleur choix.",
     "es": "No se recomienda. El jamón no es tóxico para los perros, pero tiene mucha grasa y mucho sodio. El jamón comprado en la tienda lleva mucha sal, y el exceso de grasa puede provocar pancreatitis y otros problemas digestivos. Es mejor elegir un premio más saludable para perros.",
     "it": "Sconsigliato. Il prosciutto non è tossico per i cani, ma è ricco di grassi e di sodio. Il prosciutto del supermercato contiene molto sale, e troppi grassi possono portare a pancreatite e altri disturbi digestivi. Un premio per cani più sano è la scelta migliore.",
@@ -251,7 +251,7 @@
       "a": {
         "en": "It has more fat than many meats and store-bought ham contains a great deal of sodium.",
         "sl": "Vsebuje več maščob kot številne vrste mesa, kupljena šunka pa ima veliko natrija.",
-        "de": "Er hat mehr Fett als viele andere Fleischsorten, und gekaufter Schinken enthält sehr viel Natrium.",
+        "de": "Er hat mehr Fett als viele andere Fleischsorten, und Schinken aus dem Handel enthält sehr viel Natrium.",
         "fr": "Il est plus gras que beaucoup de viandes, et le jambon du commerce contient énormément de sodium.",
         "es": "Tiene más grasa que muchas carnes, y el jamón comprado en la tienda lleva muchísimo sodio.",
         "it": "Ha più grassi di molte carni e il prosciutto del supermercato contiene moltissimo sodio.",
@@ -346,7 +346,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "67e9327b9dba6dcb07ba1ad513ba484cbf5090813e4625f76d6e176d3ef8512c"
+      "verified_hash": "fa17b44e2119e7b53e6c00a8d17dee5952914f1414102a2f3b4f75a8e8d086c2"
     },
     "fr": {
       "status": "verified",

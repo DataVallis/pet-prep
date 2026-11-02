@@ -56,7 +56,7 @@
   "answer": {
     "en": "Yes. Plain, unseasoned cooked chicken, taken off the bone, can be served to a dog on its own. Never give cooked chicken bones, which splinter easily, and skip seasoned, fatty or raw chicken.",
     "sl": "Da. Navadnega, nezačinjenega kuhanega piščanca brez kosti lahko psu ponudite samega. Nikoli ne dajte kuhanih piščančjih kosti, ki se zlahka razcepijo, in se izogibajte začinjenemu, mastnemu ali surovemu piščancu.",
-    "de": "Ja. Pures, ungewürztes, gegartes Hähnchenfleisch ohne Knochen kann einem Hund für sich allein gegeben werden. Geben Sie niemals gekochte Hähnchenknochen, die leicht splittern, und verzichten Sie auf gewürztes, fettes oder rohes Hähnchen.",
+    "de": "Ja. Pures, ungewürztes, gegartes Hähnchenfleisch ohne Knochen können Sie Ihrem Hund ganz für sich allein geben. Geben Sie niemals gekochte Hähnchenknochen, die leicht splittern, und verzichten Sie auf gewürztes, fettes oder rohes Hähnchen.",
     "fr": "Oui. Du poulet cuit nature, sans assaisonnement et désossé, peut être donné tel quel à un chien. Ne donnez jamais d’os de poulet cuits, qui éclatent facilement, et évitez le poulet assaisonné, gras ou cru.",
     "es": "Sí. El pollo cocinado natural, sin condimentos y sin hueso, se le puede dar a un perro tal cual. Nunca le des huesos de pollo cocinados, que se astillan con facilidad, y evita el pollo condimentado, graso o crudo.",
     "it": "Sì. Il pollo cotto al naturale e non condito, staccato dall’osso, si può dare al cane anche da solo, senza altri alimenti. Non dare mai ossa di pollo cotte, che si scheggiano facilmente, ed evita il pollo condito, grasso o crudo.",
@@ -108,7 +108,7 @@
   "serving": {
     "en": "Plain cooked chicken (breast is leanest), no seasoning, fully cooked, taken off the bone, in small pieces.",
     "sl": "Navaden kuhan piščanec (prsi so najbolj puste), brez začimb, do konca kuhan, brez kosti, narezan na majhne koščke.",
-    "de": "Pures gegartes Hähnchen (Brust ist am magersten), ungewürzt, vollständig durchgegart, ohne Knochen, in kleinen Stücken.",
+    "de": "Pures gegartes Hähnchen (die Brust ist am magersten), ungewürzt, vollständig durchgegart, ohne Knochen, in kleinen Stücken.",
     "fr": "Poulet cuit nature (le blanc est le plus maigre), sans assaisonnement, bien cuit, désossé, en petits morceaux.",
     "es": "Pollo cocinado natural (la pechuga es lo más magro), sin condimentos, bien hecho, sin hueso y en trozos pequeños.",
     "it": "Pollo cotto al naturale (il petto è la parte più magra), senza condimenti, ben cotto, staccato dall’osso, a pezzetti.",
@@ -125,7 +125,7 @@
   "child": {
     "en": "Plain cooked chicken with no bones is a tasty dog treat. Chicken bones are never for dogs.",
     "sl": "Navaden kuhan piščanec brez kosti je slasten pasji priboljšek. Piščančje kosti nikoli niso za pse.",
-    "de": "Pures gegartes Hähnchen ohne Knochen ist ein leckeres Hundeleckerli. Hähnchenknochen sind nie etwas für Hunde.",
+    "de": "Pures gegartes Hähnchen ohne Knochen ist ein leckerer Happen für Hunde. Hähnchenknochen sind nie etwas für Hunde.",
     "fr": "Du poulet cuit nature et sans os est une friandise délicieuse pour un chien. Les os de poulet ne sont jamais pour les chiens.",
     "es": "El pollo cocinado natural y sin huesos es un premio muy rico para un perro. Los huesos de pollo nunca son para perros.",
     "it": "Il pollo cotto al naturale e senza ossa è un premio gustoso per un cane. Le ossa di pollo non sono mai per i cani.",
@@ -250,7 +250,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "44d7930f7424859c5503fc1e95a76da80f25d3c6a2d861bca812529de4b5bce2"
+      "verified_hash": "54e9487fd26c899133c72db7514ac1d7742d80c8bc8d8e07fd1a1647c3079807"
     },
     "fr": {
       "status": "verified",

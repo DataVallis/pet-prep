@@ -56,7 +56,7 @@
   "answer": {
     "en": "No. Coffee contains caffeine, which is toxic to dogs; dogs are more sensitive to it than people. A lick or two is unlikely to cause poisoning, but coffee grounds and beans can cause serious toxicity. Chocolate-covered coffee beans are a double threat.",
     "sl": "Ne. Kava vsebuje kofein, ki je za pse strupen; psi so nanj bolj občutljivi kot ljudje. Če pes kavo le poliže enkrat ali dvakrat, verjetno ne pride do zastrupitve, mleta kava in kavna zrna pa lahko povzročijo hudo zastrupitev. Zrna, oblita s čokolado, so dvojna nevarnost.",
-    "de": "Nein. Kaffee enthält Koffein, das für Hunde giftig ist; Hunde reagieren empfindlicher darauf als Menschen. Ein- oder zweimal Lecken führt kaum zu einer Vergiftung, aber Kaffeepulver und Kaffeebohnen können eine schwere Vergiftung verursachen. Schokolierte Kaffeebohnen sind eine doppelte Gefahr.",
+    "de": "Nein. Kaffee enthält Koffein, das für Hunde giftig ist; Hunde reagieren empfindlicher darauf als Menschen. Wenn Ihr Hund nur ein- oder zweimal leckt, ist eine Vergiftung unwahrscheinlich, aber Kaffeepulver und Kaffeebohnen können eine schwere Vergiftung verursachen. Mit Schokolade überzogene Kaffeebohnen sind eine doppelte Gefahr.",
     "fr": "Non. Le café contient de la caféine, toxique pour les chiens, qui y sont plus sensibles que nous. Un ou deux coups de langue ont peu de chances de provoquer une intoxication, mais le marc et les grains de café peuvent causer une intoxication grave. Les grains de café enrobés de chocolat représentent une double menace.",
     "es": "No. El café contiene cafeína, que es tóxica para los perros; los perros son más sensibles a ella que las personas. Es poco probable que un par de lametones causen una intoxicación, pero los posos y los granos de café pueden causar una intoxicación grave. Los granos de café cubiertos de chocolate son una doble amenaza.",
     "it": "No. Il caffè contiene caffeina, che è tossica per i cani; i cani sono più sensibili delle persone. È improbabile che una o due leccate causino un avvelenamento, ma i fondi e i chicchi di caffè possono provocare una grave intossicazione. I chicchi di caffè ricoperti di cioccolato sono una doppia minaccia.",
@@ -73,7 +73,7 @@
   "why": {
     "en": "Caffeine overstimulates the heart and nervous system. It is the same kind of substance that makes chocolate toxic. A lick or two of coffee is unlikely to poison, but unused coffee grounds and beans can cause serious toxicity, and chocolate-covered beans are a double threat.",
     "sl": "Kofein preveč spodbuja srce in živčevje. Gre za isto vrsto snovi, zaradi katere je čokolada strupena. Če pes kavo le poliže enkrat ali dvakrat, verjetno ne bo zastrupljen, neuporabljena mleta kava in kavna zrna pa lahko povzročijo hudo zastrupitev; zrna v čokoladi so dvojna nevarnost.",
-    "de": "Koffein überreizt Herz und Nervensystem. Es ist die gleiche Art von Stoff, die Schokolade giftig macht. Ein- oder zweimal Lecken an Kaffee führt kaum zu einer Vergiftung, aber unbenutztes Kaffeepulver und Kaffeebohnen können eine schwere Vergiftung verursachen, und schokolierte Bohnen sind eine doppelte Gefahr.",
+    "de": "Koffein überreizt Herz und Nervensystem. Es gehört zur selben Stoffgruppe, die auch Schokolade giftig macht. Wenn ein Hund nur ein- oder zweimal an Kaffee leckt, ist eine Vergiftung unwahrscheinlich, aber unbenutztes Kaffeepulver und Kaffeebohnen können eine schwere Vergiftung verursachen, und mit Schokolade überzogene Bohnen sind eine doppelte Gefahr.",
     "fr": "La caféine surstimule le cœur et le système nerveux. C’est le même type de substance qui rend le chocolat toxique. Un ou deux coups de langue de café ont peu de chances d’intoxiquer, mais le marc non utilisé et les grains peuvent causer une intoxication grave, et les grains enrobés de chocolat représentent une double menace.",
     "es": "La cafeína sobreestimula el corazón y el sistema nervioso. Es el mismo tipo de sustancia que hace que el chocolate sea tóxico. Es poco probable que uno o dos lametones de café intoxiquen, pero el café molido sin usar y los granos pueden causar una intoxicación grave, y los granos cubiertos de chocolate son una doble amenaza.",
     "it": "La caffeina sovrastimola il cuore e il sistema nervoso. È lo stesso tipo di sostanza che rende tossico il cioccolato. È improbabile che una o due leccate di caffè causino un avvelenamento, ma i fondi di caffè non usati e i chicchi possono provocare una grave intossicazione, e i chicchi ricoperti di cioccolato sono una doppia minaccia.",
@@ -266,7 +266,7 @@
       "a": {
         "en": "One or two licks are unlikely to poison most dogs. If your dog drank more, or ate grounds, beans or tea bags, call your vet or a pet poison helpline.",
         "sl": "Pri večini psov enkratno ali dvakratno lizanje verjetno ne povzroči zastrupitve. Če je pes popil več kave ali pojedel mleto kavo, zrna ali čajne vrečke, pokličite veterinarja ali telefonsko linijo za zastrupitve živali.",
-        "de": "Ein- oder zweimal Lecken führt bei den meisten Hunden kaum zu einer Vergiftung. Hat Ihr Hund mehr getrunken oder Kaffeepulver, Bohnen oder Teebeutel gefressen, rufen Sie Ihren Tierarzt oder einen Giftnotruf für Tiere an.",
+        "de": "Wenn ein Hund nur ein- oder zweimal leckt, ist bei den meisten eine Vergiftung unwahrscheinlich. Hat Ihr Hund mehr getrunken oder Kaffeepulver, Bohnen oder Teebeutel gefressen, rufen Sie Ihren Tierarzt oder einen Giftnotruf für Tiere an.",
         "fr": "Un ou deux coups de langue ont peu de chances d’intoxiquer la plupart des chiens. Si votre chien en a bu davantage, ou a mangé du marc, des grains ou des sachets de thé, appelez votre vétérinaire ou un centre antipoison vétérinaire.",
         "es": "Es poco probable que uno o dos lametones intoxiquen a la mayoría de los perros. Si ha bebido más, o se ha comido posos, granos o bolsitas de té, llama a tu veterinario o a una línea de información toxicológica para animales.",
         "it": "È improbabile che una o due leccate avvelenino la maggior parte dei cani. Se il tuo cane ne ha bevuto di più, o ha mangiato fondi, chicchi o bustine di tè, chiama il veterinario o un centro antiveleni veterinario.",
@@ -413,7 +413,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "a5042c3014fe401ca70705a338d9fe2b8a82719a7c1d1c744efbfb2f9389ac38"
+      "verified_hash": "c380ae48488f9f8bc3542c5181f5a433983d99d43f8e9206e3a765c8164018f3"
     },
     "fr": {
       "status": "verified",

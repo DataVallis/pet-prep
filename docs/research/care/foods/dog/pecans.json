@@ -56,7 +56,7 @@
   "answer": {
     "en": "No. Pecans aren't good for dogs: even a small number can make a dog very sick. They contain juglone, can carry toxic mould, are fatty, and their hard shells can cause choking or blockages. Call your vet if your dog eats any.",
     "sl": "Ne. Pekan orehi za pse niso dobri: že majhno število lahko psu zelo škodi. Vsebujejo juglon, na njih je lahko strupena plesen, so mastni, njihove trde lupine pa lahko povzročijo dušenje ali zaporo. Če jih pes poje, pokličite veterinarja.",
-    "de": "Nein. Pekannüsse sind nicht gut für Hunde: Schon wenige können einen Hund sehr krank machen. Sie enthalten Juglon, können giftige Schimmelpilze enthalten, sind fettreich, und ihre harten Schalen können zum Ersticken oder zu Darmverschlüssen führen. Rufen Sie Ihren Tierarzt an, wenn Ihr Hund welche frisst.",
+    "de": "Nein. Pekannüsse sind nicht gut für Hunde: Schon wenige können einen Hund sehr krank machen. Sie enthalten Juglon, können mit giftigen Schimmelpilzen belastet sein, sind fettreich, und ihre harten Schalen können zum Ersticken oder zu Darmverschlüssen führen. Rufen Sie Ihren Tierarzt an, wenn Ihr Hund welche frisst.",
     "fr": "Non. Les noix de pécan ne sont pas bonnes pour les chiens : même quelques-unes peuvent rendre un chien très malade. Elles contiennent de la juglone, peuvent porter des moisissures toxiques, sont grasses, et leur coque dure peut provoquer un étouffement ou des obstructions. Appelez votre vétérinaire si votre chien en mange.",
     "es": "No. Las nueces pecanas no son buenas para los perros: incluso unas pocas pueden hacer que un perro enferme gravemente. Contienen juglona, pueden tener moho tóxico, son grasas y su cáscara dura puede provocar atragantamiento u obstrucciones. Llama a tu veterinario si tu perro se come alguna.",
     "it": "No. Le noci pecan non fanno bene ai cani: anche poche possono farli stare molto male. Contengono juglone, possono avere muffe tossiche, sono grasse e il loro guscio duro può causare soffocamento od ostruzioni. Chiama il veterinario se il tuo cane ne mangia.",
@@ -200,7 +200,7 @@
   "child": {
     "en": "Pecans are not for dogs. If a dog eats some, tell a grown-up straight away so they can call the vet.",
     "sl": "Pekan orehi niso za pse. Če jih pes poje, takoj povej odraslemu, da pokliče veterinarja.",
-    "de": "Pekannüsse sind nichts für Hunde. Wenn ein Hund welche frisst, sag sofort einem Erwachsenen Bescheid, damit der Tierarzt angerufen werden kann.",
+    "de": "Pekannüsse sind nichts für Hunde. Wenn ein Hund welche frisst, sag sofort einem Erwachsenen Bescheid, damit er oder sie den Tierarzt anrufen kann.",
     "fr": "Les noix de pécan ne sont pas pour les chiens. Si un chien en mange, préviens tout de suite un adulte pour qu’il appelle le vétérinaire.",
     "es": "Las nueces pecanas no son para perros. Si un perro se come alguna, díselo enseguida a un adulto para que llame al veterinario.",
     "it": "Le noci pecan non sono per i cani. Se un cane ne mangia, avvisa subito un adulto, così può chiamare il veterinario.",
@@ -315,7 +315,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "4f1df138b1503fea13d07246f47423a9342ddeb91662979ee12aee545f2b64eb"
+      "verified_hash": "1d3f5ac910ad3c20bc025fb6cbde831c0c7e805ad371cfe56944c6930926f117"
     },
     "fr": {
       "status": "verified",

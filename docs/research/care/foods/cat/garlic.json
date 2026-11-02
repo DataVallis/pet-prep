@@ -281,7 +281,7 @@
       "a": {
         "en": "No. All forms are poisonous to cats, including raw, cooked, dried, powdered and liquid garlic. Be careful with leftovers, sauces, soups and gravy that may contain it.",
         "sl": "Ne. Za mačke so strupene vse oblike, tudi surov, kuhan, sušen, v prahu in tekoč česen. Bodite previdni pri ostankih hrane, omakah, juhah in mesnih sokovih, ki ga lahko vsebujejo.",
-        "de": "Nein. Alle Formen sind für Katzen giftig, auch roher, gekochter und getrockneter Knoblauch, Pulver und flüssige Zubereitungen. Vorsicht bei Essensresten, Saucen, Suppen und Bratensoße, die ihn enthalten können.",
+        "de": "Nein. Alle Formen sind für Katzen giftig, auch roher, gekochter und getrockneter Knoblauch, Pulver und flüssige Zubereitungen. Vorsicht bei Essensresten, Soßen, Suppen und Bratensoße, die ihn enthalten können.",
         "fr": "Non. L’ail est toxique pour les chats sous toutes ses formes, y compris cru, cuit, séché, en poudre et liquide. Faites attention aux restes, aux sauces, aux soupes et aux jus de viande qui peuvent en contenir.",
         "es": "No. Todas las formas son venenosas para los gatos, también el ajo crudo, cocinado, seco, en polvo y líquido. Ten cuidado con las sobras, las salsas, las sopas y los jugos de asado que puedan llevarlo.",
         "it": "No. Tutte le forme sono velenose per i gatti, compreso l’aglio crudo, cotto, essiccato, in polvere e liquido. Fai attenzione ad avanzi, salse, zuppe e sughi che potrebbero contenerlo.",
@@ -439,7 +439,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "732f547a273b140b453fa3b5cd1e092170b96dda7c4f8d06c253d401daface02"
+      "verified_hash": "dd777d7e9379f74e5de5b28519424c99213b0a932ec61e5659ea6cf077128205"
     },
     "fr": {
       "status": "verified",

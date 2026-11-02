@@ -73,7 +73,7 @@
   "why": {
     "en": "The ASPCA lists the apple plant as toxic to dogs: its stems, leaves and seeds contain cyanide (from cyanogenic glycosides). AKC says a small number of seeds is unlikely to cause harm, and Pet Poison Helpline says a pet would need to eat massive amounts to be of concern. We follow the stricter view because the seeds contain cyanide and the core can also cause choking or intestinal obstruction.",
     "sl": "ASPCA jablano navaja kot strupeno za pse: njeni peclji, listi in pečke vsebujejo cianid (iz cianogenih glikozidov). AKC pravi, da majhno število pečk verjetno ne bo škodilo, Pet Poison Helpline pa, da bi moral hišni ljubljenček pojesti ogromne količine, da bi bilo to zaskrbljujoče. Upoštevamo strožje stališče, ker pečke vsebujejo cianid, ogrizek pa lahko povzroči tudi dušenje ali zaporo črevesja.",
-    "de": "Die ASPCA stuft die Apfelpflanze als giftig für Hunde ein: Stiele, Blätter und Kerne enthalten Cyanid (aus cyanogenen Glykosiden). Laut AKC richten wenige Kerne wahrscheinlich keinen Schaden an, und laut Pet Poison Helpline müsste ein Tier riesige Mengen Kerne fressen, damit sie bedenklich werden. Wir folgen der strengeren Einschätzung, weil die Kerne Cyanid enthalten und das Kerngehäuse außerdem zum Ersticken oder zu einem Darmverschluss führen kann.",
+    "de": "Die ASPCA stuft die Apfelpflanze als giftig für Hunde ein: Stiele, Blätter und Kerne enthalten Cyanid (aus cyanogenen Glykosiden). Laut AKC richten wenige Kerne wahrscheinlich keinen Schaden an, und laut Pet Poison Helpline müsste ein Haustier riesige Mengen Kerne fressen, bevor es bedenklich wird. Wir folgen der strengeren Einschätzung, weil die Kerne Cyanid enthalten und das Kerngehäuse außerdem zum Ersticken oder zu einem Darmverschluss führen kann.",
     "fr": "L’ASPCA répertorie le pommier comme toxique pour les chiens : ses tiges, ses feuilles et ses pépins contiennent du cyanure (issu de glycosides cyanogènes). Selon l’AKC, un petit nombre de pépins ne devrait pas faire de mal, et selon le Pet Poison Helpline, il faudrait qu’un animal en mange des quantités massives pour que cela pose problème. Nous suivons l’avis le plus strict, car les pépins contiennent du cyanure et le trognon peut aussi provoquer un étouffement ou une obstruction intestinale.",
     "es": "La ASPCA considera el manzano tóxico para los perros: sus tallos, hojas y semillas contienen cianuro (procedente de glucósidos cianogénicos). El AKC dice que es poco probable que unas pocas semillas causen daño, y Pet Poison Helpline dice que una mascota tendría que comer cantidades enormes para que fuera preocupante. Seguimos el criterio más estricto porque las semillas contienen cianuro y el corazón también puede provocar atragantamiento u obstrucción intestinal.",
     "it": "L’ASPCA classifica il melo come tossico per i cani: piccioli, foglie e semi contengono cianuro (sotto forma di glicosidi cianogenici). Secondo l’AKC è improbabile che pochi semi facciano male, e secondo Pet Poison Helpline un animale dovrebbe mangiarne quantità enormi perché diventino preoccupanti. Noi seguiamo la posizione più prudente, perché i semi contengono cianuro e il torsolo può anche causare soffocamento o un’ostruzione intestinale.",
@@ -339,7 +339,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "a9d5e928f4d74ae9eb6481baa53d49ef04f074c59b99dae24ff415755f74ff8e"
+      "verified_hash": "4d68df1180ad4b9f3869c1be5456738f84c9c3141af795309aafeb8960cae520"
     },
     "fr": {
       "status": "verified",

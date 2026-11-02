@@ -73,7 +73,7 @@
   "why": {
     "en": "It belongs to the allium family (onion, garlic, leek, chives), which is toxic to dogs. These plants contain compounds that damage red blood cells and can lead to anaemia. All parts and all forms are harmful: raw, cooked, dried and powdered. Stomach upset can happen with any amount; larger amounts damage the blood.",
     "sl": "Česen spada med luke (čebula, česen, por, drobnjak), ki so za pse strupeni. Te rastline vsebujejo snovi, ki poškodujejo rdeče krvničke in lahko povzročijo slabokrvnost. Škodljive so vse oblike in vsi deli rastline: surove, kuhane, posušene in v prahu. Prebavne težave se lahko pojavijo pri vsaki količini, večje količine pa poškodujejo kri.",
-    "de": "Knoblauch gehört zur Gattung Allium (Zwiebel, Knoblauch, Lauch, Schnittlauch), die für Hunde giftig ist. Diese Pflanzen enthalten Stoffe, die die roten Blutkörperchen schädigen und zu Blutarmut führen können. Alle Pflanzenteile und alle Formen sind schädlich: roh, gekocht, getrocknet und als Pulver. Magen-Darm-Beschwerden können bei jeder Menge auftreten; größere Mengen schädigen das Blut.",
+    "de": "Knoblauch gehört zu den Lauchgewächsen (Zwiebeln, Knoblauch, Lauch, Schnittlauch), die für Hunde giftig sind. Diese Pflanzen enthalten Stoffe, die die roten Blutkörperchen schädigen und zu Blutarmut führen können. Alle Pflanzenteile und alle Formen sind schädlich: roh, gekocht, getrocknet und als Pulver. Magen-Darm-Beschwerden können bei jeder Menge auftreten; größere Mengen schädigen das Blut.",
     "fr": "L’ail appartient à la famille des alliums (oignon, ail, poireau, ciboulette), toxique pour les chiens. Ces plantes contiennent des composés qui endommagent les globules rouges et peuvent provoquer une anémie. Toutes les parties et toutes les formes sont nocives : cru, cuit, séché et en poudre. Des troubles digestifs peuvent survenir quelle que soit la quantité ; de plus grandes quantités endommagent le sang.",
     "es": "Pertenece a la familia de las aliáceas (cebolla, ajo, puerro, cebollino), que es tóxica para los perros. Estas plantas contienen compuestos que dañan los glóbulos rojos y pueden provocar anemia. Todas las partes y todas las formas son perjudiciales: crudo, cocinado, seco y en polvo. Cualquier cantidad puede causar malestar de estómago; las cantidades mayores dañan la sangre.",
     "it": "Appartiene alla famiglia degli allium (cipolla, aglio, porro, erba cipollina), tossica per i cani. Queste piante contengono sostanze che danneggiano i globuli rossi e possono portare all’anemia. Sono dannose tutte le parti, in qualsiasi forma: crude, cotte, secche o in polvere. Disturbi di stomaco possono comparire con qualsiasi quantità; quantità maggiori danneggiano il sangue.",
@@ -427,7 +427,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "6a39a6be2a6fc8bf458fe4a00699282c121d5150e0aeee2e365a73410393ff2c"
+      "verified_hash": "dd41d17de6982b09adbe1f5f17bcbc7b75e0371cb468a12bd8d6f9e98e543698"
     },
     "fr": {
       "status": "verified",

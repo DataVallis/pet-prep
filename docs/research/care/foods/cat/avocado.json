@@ -95,7 +95,7 @@
       "Kakršni koli znaki slabega počutja po zaužitju večje količine (naši viri za mačke ne navajajo posebnih znakov)"
     ],
     "de": [
-      "Jedes Anzeichen von Unwohlsein, nachdem sie viel davon gefressen hat (unsere Quellen nennen keine bestimmten Anzeichen bei Katzen)"
+      "Jedes Anzeichen von Unwohlsein, nachdem die Katze viel davon gefressen hat (unsere Quellen nennen keine bestimmten Anzeichen bei Katzen)"
     ],
     "fr": [
       "Tout signe de malaise après en avoir mangé beaucoup (nos sources ne citent pas de signes précis chez le chat)"
@@ -253,7 +253,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "efa0d032d09b3317d77415b0a7effdb29b06a26d9ea60d0d475e9699eb697b78"
+      "verified_hash": "dec83105a929eb5624d4cba89ba92dc28f1f632eac2913771050592c73aa2113"
     },
     "fr": {
       "status": "verified",

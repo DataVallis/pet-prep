@@ -56,7 +56,7 @@
   "answer": {
     "en": "Yes, a few plain peanuts now and then: unsalted, unflavoured, dry-roasted or raw, with the shells removed. Salted, honey-roasted or flavoured peanuts are not suitable, and peanuts are fatty, so keep it to a few.",
     "sl": "Da, občasno nekaj navadnih arašidov: nesoljenih, nearomatiziranih, suho praženih ali surovih, brez lupin. Soljeni, medeni ali aromatizirani arašidi niso primerni, arašidi pa so mastni, zato naj jih bo le nekaj.",
-    "de": "Ja, ab und zu ein paar naturbelassene Erdnüsse: ungesalzen, ohne Aroma, trocken geröstet oder roh und ohne Schale. Gesalzene, honiggeröstete oder aromatisierte Erdnüsse sind nicht geeignet. Erdnüsse sind zudem fettreich – bleiben Sie also bei ein paar wenigen.",
+    "de": "Ja, ab und zu ein paar naturbelassene Erdnüsse: ungesalzen, ohne Aroma, trocken geröstet oder roh und ohne Schale. Gesalzene, honiggeröstete oder aromatisierte Erdnüsse sind nicht geeignet. Erdnüsse sind zudem fettreich – belassen Sie es also bei ein paar Stück.",
     "fr": "Oui, quelques cacahuètes nature de temps en temps : non salées, non aromatisées, grillées à sec ou crues, sans leur coque. Les cacahuètes salées, au miel ou aromatisées ne conviennent pas, et les cacahuètes sont grasses : limitez-vous à quelques-unes.",
     "es": "Sí, unos pocos cacahuetes naturales de vez en cuando: sin sal, sin sabores, tostados sin aceite o crudos, y sin cáscara. Los cacahuetes salados, garrapiñados con miel o con sabores no son adecuados, y los cacahuetes son grasos, así que limítate a unos pocos.",
     "it": "Sì, qualche arachide semplice ogni tanto: senza sale, senza aromi, tostata a secco o cruda e sgusciata. Le arachidi salate, tostate al miele o aromatizzate non sono adatte, e le arachidi sono grasse: dagliene solo poche.",
@@ -241,7 +241,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0b03b8e5765edabc017699058e328116c0765a02adcd06b5b6190054135fdc91"
+      "verified_hash": "1ab8592d89fccc2476777d42503e9775cc121ff3f6477fc931d1f74b13e22677"
     },
     "fr": {
       "status": "verified",

@@ -108,7 +108,7 @@
   "serving": {
     "en": "Wash and scrub the apple, remove the seeds, core and stem, and cut it into slices or small cubes; in moderation, not a whole apple.",
     "sl": "Jabolko dobro operite ali zdrgnite, odstranite pečke, ogrizek in pecelj ter ga narežite na krhlje ali majhne kocke; v zmernih količinah, ne celega jabolka.",
-    "de": "Waschen Sie den Apfel und reiben Sie ihn gründlich ab, entfernen Sie Kerne, Kerngehäuse und Stiel und schneiden Sie ihn in Scheiben oder kleine Würfel; in Maßen, keinen ganzen Apfel.",
+    "de": "Waschen Sie den Apfel und bürsten Sie ihn gründlich ab, entfernen Sie Kerne, Kerngehäuse und Stiel und schneiden Sie ihn in Scheiben oder kleine Würfel; in Maßen, keinen ganzen Apfel.",
     "fr": "Lavez et frottez la pomme, retirez les pépins, le trognon et la queue, puis coupez-la en tranches ou en petits dés ; avec modération, pas une pomme entière.",
     "es": "Lava y frota bien la manzana, quita las semillas, el corazón y el tallo, y córtala en rodajas o en dados pequeños; con moderación, no una manzana entera.",
     "it": "Lava e strofina bene la mela, togli semi, torsolo e picciolo e tagliala a fettine o a cubetti; con moderazione, non una mela intera.",
@@ -197,7 +197,7 @@
       "a": {
         "en": "No. The added sugar and crust are too much for dogs; avoid apple foods with added sugar or spices such as nutmeg.",
         "sl": "Ne. Dodani sladkor in testo sta za pse preveč; izogibajte se jabolčnim jedem z dodanim sladkorjem ali začimbami, kot je muškatni orešček.",
-        "de": "Nein. Der zugesetzte Zucker und der Teig sind zu viel für Hunde; meiden Sie Apfelspeisen mit zugesetztem Zucker oder Gewürzen wie Muskatnuss.",
+        "de": "Nein. Der zugesetzte Zucker und der Teig sind zu viel für Hunde; meiden Sie Apfelprodukte mit zugesetztem Zucker oder Gewürzen wie Muskatnuss.",
         "fr": "Non. Le sucre ajouté et la pâte, c’est trop pour un chien ; évitez les préparations à la pomme contenant du sucre ajouté ou des épices comme la noix de muscade.",
         "es": "No. El azúcar añadido y la masa son demasiado para los perros; evita los productos con manzana que lleven azúcar añadido o especias como la nuez moscada.",
         "it": "No. Lo zucchero aggiunto e l’impasto sono troppo per i cani; evita i cibi a base di mela con zucchero aggiunto o spezie come la noce moscata.",
@@ -307,7 +307,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e5b93deadcf19047de969ddd2f8ea56b503fd15d0eb4c849a92af8427a343d8c"
+      "verified_hash": "1c29c6ff248484fa5605f1b37798162248eb78810ec8a6b713bc8da1b2ed01be"
     },
     "fr": {
       "status": "verified",

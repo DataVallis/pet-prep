@@ -56,7 +56,7 @@
   "answer": {
     "en": "No. Macadamia nuts are toxic to dogs, and dogs are the only species known to get ill from them. Even a small amount can cause weakness, vomiting, trembling and a high temperature. Their high fat content can also trigger pancreatitis.",
     "sl": "Ne. Makadamijini oreščki so za pse strupeni; psi so edina znana vrsta, ki po njih zboli. Že majhna količina lahko povzroči šibkost, bruhanje, tresenje in povišano telesno temperaturo. Zaradi velike količine maščobe lahko sprožijo tudi vnetje trebušne slinavke.",
-    "de": "Nein. Macadamianüsse sind für Hunde giftig, und Hunde sind die einzige Tierart, von der bekannt ist, dass sie davon krank wird. Schon eine kleine Menge kann Schwäche, Erbrechen, Zittern und erhöhte Körpertemperatur verursachen. Ihr hoher Fettgehalt kann außerdem eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen.",
+    "de": "Nein. Macadamianüsse sind für Hunde giftig, und Hunde sind die einzige Tierart, die bekanntermaßen davon krank wird. Schon eine kleine Menge kann Schwäche, Erbrechen, Zittern und erhöhte Körpertemperatur verursachen. Ihr hoher Fettgehalt kann außerdem eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen.",
     "fr": "Non. Les noix de macadamia sont toxiques pour les chiens, la seule espèce connue pour en tomber malade. Même une petite quantité peut provoquer faiblesse, vomissements, tremblements et une température corporelle élevée. Leur forte teneur en graisses peut aussi déclencher une pancréatite.",
     "es": "No. Las nueces de macadamia son tóxicas para los perros, y los perros son la única especie de la que se sabe que enferma con ellas. Incluso una pequeña cantidad puede causar debilidad, vómitos, temblores y una temperatura corporal alta. Su gran cantidad de grasa también puede desencadenar una pancreatitis.",
     "it": "No. Le noci di macadamia sono tossiche per i cani, e il cane è l’unica specie nota che si ammala mangiandole. Anche una piccola quantità può causare debolezza, vomito, tremori e temperatura corporea elevata. Il loro alto contenuto di grassi può anche scatenare una pancreatite.",
@@ -393,7 +393,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b61eeb82a03d5a5709e781bf4e221a21cdfdf3c977355b2eaacd6e9b6733cd08"
+      "verified_hash": "c27ad0568eb28d770718828cdf2d5b9d14e25e114bf024c9c8de3b8b18d60528"
     },
     "fr": {
       "status": "verified",

@@ -73,7 +73,7 @@
   "why": {
     "en": "Peach stems, leaves and seeds contain cyanogenic glycosides. If a pit is thoroughly chewed, cyanide can be released, and a swallowed pit may block the gut, especially in small dogs. Canned or dried peaches often contain extra sugar. Because the plant is listed as toxic to dogs, we rate peaches as not recommended rather than a safe treat.",
     "sl": "Peclji, listi in semena breskve vsebujejo cianogene glikozide. Če pes koščico temeljito prežveči, se lahko sprosti cianid, pogoltnjena koščica pa lahko zamaši prebavila, zlasti pri majhnih psih. Breskve iz konzerve ali posušene pogosto vsebujejo dodan sladkor. Ker je rastlina navedena kot strupena za pse, breskve uvrščamo med odsvetovane in ne med varne priboljške.",
-    "de": "Stiele, Blätter und Samen des Pfirsichs enthalten cyanogene Glykoside. Wird ein Kern gründlich zerkaut, kann Cyanid freigesetzt werden, und ein verschluckter Kern kann den Darm blockieren, besonders bei kleinen Hunden. Pfirsiche aus der Dose oder getrocknete Pfirsiche enthalten oft zusätzlichen Zucker. Weil die Pflanze als giftig für Hunde gilt, stufen wir Pfirsiche als nicht empfohlen ein, nicht als unbedenkliches Leckerli.",
+    "de": "Stiele, Blätter und Samen des Pfirsichs enthalten cyanogene Glykoside. Wird ein Kern gründlich zerkaut, kann Cyanid freigesetzt werden, und ein verschluckter Kern kann den Darm blockieren, besonders bei kleinen Hunden. Pfirsiche aus der Dose oder getrocknete Pfirsiche enthalten oft zusätzlichen Zucker. Weil die Pflanze als giftig für Hunde gilt, stufen wir Pfirsiche als „nicht empfohlen“ ein und nicht als unbedenkliches Leckerli.",
     "fr": "Les tiges, les feuilles et les graines du pêcher contiennent des glycosides cyanogènes. Si un noyau est bien mâché, du cyanure peut être libéré, et un noyau avalé peut bloquer l’intestin, surtout chez les petits chiens. Les pêches en conserve ou séchées contiennent souvent du sucre ajouté. Comme la plante est répertoriée comme toxique pour les chiens, nous classons la pêche comme déconseillée plutôt que comme une friandise sûre.",
     "es": "El rabito, las hojas y las semillas del melocotón contienen glucósidos cianogénicos. Si el perro mastica bien un hueso, puede liberarse cianuro, y un hueso tragado puede obstruir el intestino, sobre todo en perros pequeños. El melocotón en almíbar o deshidratado suele llevar azúcar añadido. Como la planta figura como tóxica para los perros, clasificamos el melocotón como no recomendado y no como un premio seguro.",
     "it": "Piccioli, foglie e semi del pesco contengono glicosidi cianogenici. Se il nocciolo viene masticato a fondo, può liberarsi cianuro, e un nocciolo ingoiato può ostruire l’intestino, soprattutto nei cani di piccola taglia. Le pesche in scatola o essiccate contengono spesso zucchero aggiunto. Poiché la pianta è classificata come tossica per i cani, consideriamo le pesche sconsigliate e non un premio sicuro.",
@@ -372,7 +372,7 @@
     "de": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "d36ca6ea49eb70d05c67e4b6706c3cae980a4fd05f8ad31eddb349ded640057b"
+      "verified_hash": "7c98701722a550b18dbe5f935ba4e6c1d753e5f4a9fd0fc1173dd20a7af9589e"
     },
     "fr": {
       "status": "verified",
