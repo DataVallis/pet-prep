@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `greater_swiss_mountain_dog` (viri S652–S659; ponovno S8, S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: stran RKC (S654) |
 | Izvor | FCI št. 58, skupina 2, sekcija 3 (švicarski planšarski in govedarski psi), Švica (S652, S653); v Veliki Britaniji »Great Swiss Mountain Dog« (S654) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 82. mesto (S174, prebrano 2026-11-02) |
-| PR-ji | pet-prep #519 (pasma) · portret: sledi · spletna stran: šele s portretom |
+| PR-ji | pet-prep #519 (pasma, združen `90d24ac`) · portret: čaka produkcijsko namestitev (zagon 41381262158 zavrnjen) · spletna stran: šele s portretom (besedila na veji `feat/register-greater-swiss-mountain-dog`, brez PR) |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -41,7 +41,7 @@
 | Česanje 1× na teden, »Nova izkušnja« za mladička, opozorilo 60 min po obroku | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R16 | 2026-11-02 |
 | Mini igre: zobje vsak dan, ušesa in kremplji 1× na teden | 🛠 | 💶 izziv | M5-R15 / M5-R20 / M5-R19 | 2026-11-02 |
 | Barva (izbirnik: 1 standardna barva — trobarven) | 🛠 | 💶 izziv | M5-R21 | 2026-11-02 |
-| AI portret v registru | 🗓 sledi | — | M5-R11-04 | — |
+| AI portret v registru | 🗓 čaka produkcijsko namestitev (Laravel 12) | — | M5-R11-04 | — |
 | Stran na petprep.si (`/animals/dogs/greater-swiss-mountain-dog`, `/sl/zivali/psi/veliki-svicarski-plansarski-pes`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -57,3 +57,4 @@
 - **Ime:** »Veliki švicarski planšarski pes« se uporablja v slovenskem tisku; strani KZS nisem preverjal. Potrdite ali popravite.
 - **Oznaka `experienced_owner`:** VCA piše »Needs an assertive owner and a job to do.« — po pravilu brez čipa (čip govori o močnem psu). Če ga želite, povejte.
 - **Nov zdravstveni ključ registra `splenic_torsion`** (zasuk vranice, WebMD) — besedilo na spletni strani je v PR spletne strani.
+- **Portret čaka produkcijsko namestitev:** zagon `breed-portraits.yml` 41381262158 (koda `90d24ac`, skupaj z rat terierjem) je zavrnil delo, ker se `composer.lock` na `main` (Laravel 12, PR #496) razlikuje od produkcije. Brez portreta ni strani na petprep.si. Besedila za spletno stran (uvod v 11 jezikih, imena, zdravstveni ključ `splenic_torsion`) so pripravljena na veji `feat/register-greater-swiss-mountain-dog` v pet-prep-website (brez PR). Ko dnevna (03:17) ali ročna namestitev prenese Laravel 12 v produkcijo, naslednji nočni zagon portret naredi sam (korak »catch-up«).
